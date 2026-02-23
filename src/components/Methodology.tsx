@@ -54,7 +54,8 @@ export default function Methodology() {
                 The highest-confidence evidence. These sources carry either
                 peer-review scrutiny, legal liability for accuracy, or are
                 produced by government statistical agencies with established
-                methodologies.
+                methodologies. The majority of the prediction data on this
+                dashboard comes from Tier 1 sources.
               </p>
               <div className="text-[13px] text-[var(--muted)] leading-relaxed space-y-2">
                 <p>
@@ -62,34 +63,38 @@ export default function Methodology() {
                   &mdash; Experimental studies where workers or firms are randomly
                   assigned to use AI tools vs. a control group. These provide
                   the cleanest causal estimates of productivity and displacement
-                  effects. Key examples include the Noy &amp; Zhang MIT writing
-                  experiment and the Brynjolfsson et al. customer service study.
+                  effects. Key examples in this dashboard include the Noy &amp;
+                  Zhang MIT writing experiment and the Brynjolfsson et al.
+                  customer service study.
                 </p>
                 <p>
-                  <span className="font-semibold text-[var(--foreground)]">Peer-reviewed journal articles</span>{" "}
+                  <span className="font-semibold text-[var(--foreground)]">Peer-reviewed journal articles and NBER working papers</span>{" "}
                   &mdash; Published in top economics and computer science
                   journals (American Economic Review, Quarterly Journal of
-                  Economics, Econometrica, Science, Nature). Includes NBER
-                  working papers, which undergo internal review and are widely
-                  treated as near-publication quality in economics.
+                  Economics, PNAS, Science). NBER working papers undergo
+                  internal review and are widely treated as near-publication
+                  quality in economics. The research pipeline automatically
+                  discovers new NBER papers via their Labor Studies and
+                  Productivity RSS feeds.
                 </p>
                 <p>
                   <span className="font-semibold text-[var(--foreground)]">Government statistical data</span>{" "}
                   &mdash; Bureau of Labor Statistics employment and wage series,
                   Census Bureau surveys (including the Business Trends and
-                  Impact Survey), OECD labor force statistics, and Federal
-                  Reserve economic data. These provide the baseline macro
+                  Impact Survey), OECD labor force statistics, Federal Reserve
+                  economic data (including Dallas Fed CPS analysis), and Yale
+                  Budget Lab research. These provide the baseline macro
                   indicators against which AI-specific effects are measured.
                 </p>
                 <p>
                   <span className="font-semibold text-[var(--foreground)]">SEC filings and earnings transcripts</span>{" "}
                   &mdash; 10-K annual reports, 10-Q quarterly reports, and 8-K
                   current reports filed with the Securities and Exchange
-                  Commission. Companies face legal liability for material
-                  misstatements, making these disclosures about AI investment,
-                  workforce restructuring, and productivity gains unusually
-                  reliable. Earnings call transcripts are included when
-                  executives discuss AI strategy on the record with analysts.
+                  Commission. The pipeline automatically searches SEC EDGAR for
+                  AI and workforce language across all public filings. Companies
+                  face legal liability for material misstatements, making these
+                  disclosures about AI investment, workforce restructuring, and
+                  productivity gains unusually reliable.
                 </p>
               </div>
             </div>
@@ -110,43 +115,45 @@ export default function Methodology() {
               </p>
               <div className="text-[13px] text-[var(--muted)] leading-relaxed space-y-2">
                 <p>
-                  <span className="font-semibold text-[var(--foreground)]">Think tank reports</span>{" "}
-                  &mdash; Brookings Institution, RAND Corporation, McKinsey
-                  Global Institute, and similar organizations that employ
-                  PhD-level researchers and publish with editorial oversight.
-                  Their work often bridges academic research and policy
-                  audiences, translating findings into actionable frameworks.
+                  <span className="font-semibold text-[var(--foreground)]">Think tank and policy research</span>{" "}
+                  &mdash; Brookings Institution (automatically tracked via RSS),
+                  McKinsey Global Institute, Goldman Sachs Research, and similar
+                  organizations that employ PhD-level researchers and publish
+                  with editorial oversight. Their work often bridges academic
+                  research and policy audiences.
                 </p>
                 <p>
-                  <span className="font-semibold text-[var(--foreground)]">International organization forecasts</span>{" "}
-                  &mdash; IMF World Economic Outlook projections, World Bank
-                  development reports, ILO Global Employment Trends, and OECD
-                  Employment Outlook. These carry institutional credibility and
-                  access to proprietary data but are sometimes slower to
-                  incorporate the latest evidence.
+                  <span className="font-semibold text-[var(--foreground)]">International organization research</span>{" "}
+                  &mdash; IMF staff discussion notes and working papers
+                  (automatically tracked via OpenAlex), ILO Global Employment
+                  Trends, World Bank development reports, and OECD Employment
+                  Outlook. The pipeline filters IMF and IZA publications
+                  specifically for AI-labor relevance.
                 </p>
                 <p>
                   <span className="font-semibold text-[var(--foreground)]">Working papers and preprints</span>{" "}
-                  &mdash; Papers posted on arXiv, SSRN, IZA Discussion Paper
-                  Series, and similar repositories before formal journal
-                  publication. The AI-labor field moves fast enough that waiting
-                  for publication would mean ignoring 6&ndash;18 months of
-                  current work. These are included but flagged as pre-review.
+                  &mdash; Papers on arXiv, SSRN, and the IZA Discussion Paper
+                  Series (all automatically tracked). The AI-labor field moves
+                  fast enough that waiting for journal publication would mean
+                  ignoring 6&ndash;18 months of current work. These are included
+                  but flagged as pre-review.
                 </p>
                 <p>
-                  <span className="font-semibold text-[var(--foreground)]">Industry research</span>{" "}
-                  &mdash; Gartner, Forrester, Deloitte, and consulting firm
-                  surveys of enterprise AI adoption. These offer large sample
-                  sizes and practitioner perspectives but may carry selection
-                  bias toward firms already investing in AI.
+                  <span className="font-semibold text-[var(--foreground)]">Industry and consulting research</span>{" "}
+                  &mdash; McKinsey, Deloitte, PwC, J.P. Morgan, and similar
+                  firms that survey enterprise AI adoption at scale. These
+                  appear as curated sources in specific predictions rather than
+                  being programmatically discovered. They offer practitioner
+                  perspectives but may carry selection bias toward firms already
+                  investing in AI.
                 </p>
                 <p>
-                  <span className="font-semibold text-[var(--foreground)]">Prediction markets</span>{" "}
-                  &mdash; Metaculus, Polymarket, and Kalshi forecasts where
-                  participants put money or reputation behind specific
-                  predictions. Useful as a consensus indicator when large
-                  numbers of informed forecasters participate, though markets on
-                  AI-labor questions remain relatively thin.
+                  <span className="font-semibold text-[var(--foreground)]">Job posting data</span>{" "}
+                  &mdash; Aggregate posting volumes from the Adzuna API,
+                  supplemented with published research from Indeed Hiring Lab,
+                  Lightcast, and LinkedIn Economic Graph. Year-over-year changes
+                  in posting volume across AI-exposed occupations serve as an
+                  early signal of labor demand shifts.
                 </p>
               </div>
             </div>
@@ -160,34 +167,31 @@ export default function Methodology() {
                 </p>
               </div>
               <p className="text-[13px] text-[var(--muted)] leading-relaxed mb-3">
-                Professional reporting and informed analysis. These sources
-                often surface new information through investigative work or
-                expert interviews but lack the methodological rigor of
-                peer-reviewed research.
+                Professional reporting and informed analysis. The scrolling
+                news ticker at the top of the dashboard automatically pulls
+                AI-labor headlines from Google News RSS feeds, classified by
+                sentiment. A smaller number of news articles also appear as
+                curated sources within specific predictions.
               </p>
               <div className="text-[13px] text-[var(--muted)] leading-relaxed space-y-2">
                 <p>
                   <span className="font-semibold text-[var(--foreground)]">Major news outlets</span>{" "}
-                  &mdash; New York Times, Wall Street Journal, Financial Times,
-                  Reuters, Bloomberg, and The Economist. These provide real-time
-                  coverage of layoffs, hiring freezes, AI deployment
-                  announcements, and policy developments that often precede
-                  formal data by months.
+                  &mdash; Wall Street Journal, Financial Times, Fortune, CNBC,
+                  Forbes, and The Atlantic. These provide real-time coverage of
+                  layoffs, hiring freezes, AI deployment announcements, and
+                  policy developments that often precede formal data by months.
+                  Cited in predictions when they report original data or
+                  on-the-record corporate disclosures.
                 </p>
                 <p>
-                  <span className="font-semibold text-[var(--foreground)]">Trade publications</span>{" "}
-                  &mdash; TechCrunch, The Information, Wired, MIT Technology
-                  Review, and industry-specific outlets. Valuable for tracking
-                  AI product launches, enterprise adoption trends, and
-                  competitive dynamics that signal where labor impacts are
-                  heading next.
-                </p>
-                <p>
-                  <span className="font-semibold text-[var(--foreground)]">Expert commentary</span>{" "}
-                  &mdash; Op-eds, long-form analysis, and conference
-                  presentations by domain experts. Included when the author has
-                  relevant credentials and the analysis adds interpretive value
-                  beyond what the underlying data shows on its own.
+                  <span className="font-semibold text-[var(--foreground)]">News ticker</span>{" "}
+                  &mdash; The dashboard&apos;s live ticker aggregates from four
+                  Google News RSS keyword feeds (AI jobs, AI layoffs, AI hiring,
+                  AI employment), deduplicates headlines, and classifies each as
+                  displacement, advancement, or neutral using ~80 curated
+                  sentiment terms. This refreshes hourly and provides context
+                  for how the topic is being covered, but ticker headlines are
+                  not used as evidence for predictions.
                 </p>
               </div>
             </div>
@@ -201,36 +205,30 @@ export default function Methodology() {
                 </p>
               </div>
               <p className="text-[13px] text-[var(--muted)] leading-relaxed mb-3">
-                Unvetted, anecdotal, and crowd-sourced signals. These are
-                included because they often capture ground-level workforce
-                sentiment months before it shows up in formal data &mdash; but
-                they carry significant noise and selection bias.
+                Unvetted, anecdotal, and crowd-sourced signals. These are used
+                sparingly &mdash; only a handful of Tier 4 sources currently
+                appear in the prediction data. They are included when they
+                capture ground-level workforce sentiment that hasn&apos;t yet
+                surfaced in formal data, but they carry significant noise and
+                selection bias.
               </p>
               <div className="text-[13px] text-[var(--muted)] leading-relaxed space-y-2">
                 <p>
-                  <span className="font-semibold text-[var(--foreground)]">Social media</span>{" "}
-                  &mdash; Twitter/X threads from researchers, engineers, and
-                  hiring managers; Reddit discussions in r/MachineLearning,
-                  r/cscareerquestions, and similar communities. Individual posts
-                  are unreliable, but patterns across many posts can signal
-                  emerging trends (e.g., widespread reports of entry-level hiring
-                  freezes appeared on Reddit months before showing up in BLS
-                  data).
+                  <span className="font-semibold text-[var(--foreground)]">Social media and blogs</span>{" "}
+                  &mdash; Occasional Twitter/X threads, Substack essays, and
+                  Medium posts from researchers or practitioners. Currently a
+                  very small portion of total sources. Included only when the
+                  author has relevant domain expertise or when the analysis
+                  cites primary data that can be independently verified.
                 </p>
                 <p>
-                  <span className="font-semibold text-[var(--foreground)]">Blogs and newsletters</span>{" "}
-                  &mdash; Substack essays, personal blogs, and independent
-                  analysis. Quality varies enormously. Included when the author
-                  has domain expertise or when the analysis cites primary
-                  sources that can be independently verified.
-                </p>
-                <p>
-                  <span className="font-semibold text-[var(--foreground)]">Podcasts and video</span>{" "}
-                  &mdash; YouTube commentary, podcast interviews, and conference
-                  talks. These occasionally surface original information
-                  (particularly executive interviews) but are difficult to
-                  fact-check systematically and are weighted lowest in the
-                  scoring system.
+                  <span className="font-semibold text-[var(--foreground)]">Weighted lowest in scoring</span>{" "}
+                  &mdash; Tier 4 sources receive the lowest composite score
+                  weight, meaning they appear at the bottom of ranked lists and
+                  can be filtered out entirely using the evidence tier controls.
+                  The dashboard is designed to work without them &mdash;
+                  filtering to Tiers 1&ndash;2 still covers the vast majority
+                  of the evidence base.
                 </p>
               </div>
             </div>
