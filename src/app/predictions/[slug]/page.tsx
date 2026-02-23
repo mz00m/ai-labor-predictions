@@ -12,9 +12,9 @@ import SourceList from "@/components/SourceList";
 
 const CONTEXT_MAP: Record<string, (v: number) => string> = {
   "overall-us-displacement": (v) =>
-    `This means roughly ${v}% of all US jobs are projected to be eliminated or fundamentally restructured by AI and automation by 2030. "Net displacement" accounts for both jobs lost and the fact that some affected roles are restructured rather than fully eliminated. For context, 1% of the US labor force is about 1.67 million workers.`,
+    `This means roughly ${v}% of all US jobs are projected to be eliminated or fundamentally restructured by AI and automation by 2030. "Net displacement" accounts for both jobs lost and the fact that some affected roles are restructured rather than fully eliminated. For context, 1% of the US labor force is about 1.69 million workers.`,
   "total-us-jobs-lost": (v) =>
-    `Of the approximately 167 million people in the US civilian labor force, about ${Math.round(167 * v / 100)} million are projected to lose their jobs outright due to AI. This differs from "displacement" in that it counts only roles fully eliminated, not those that are transformed. This figure is net of new jobs created by AI adoption.`,
+    `Of the approximately 168.5 million people in the US civilian labor force, about ${Math.round(168.5 * v / 100)} million are projected to lose their jobs outright due to AI. This differs from "displacement" in that it counts only roles fully eliminated, not those that are transformed. This figure is net of new jobs created by AI adoption.`,
   "customer-service-automation": (v) =>
     `${v}% of all customer service interactions — phone calls, chat messages, emails — are projected to be resolved entirely by AI without a human agent ever getting involved. This doesn't mean ${v}% of CS jobs disappear, since the remaining interactions may need more skilled human agents, but headcount reductions are widely expected.`,
   "tech-sector-displacement": (v) =>

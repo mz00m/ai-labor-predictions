@@ -55,10 +55,10 @@ const metrics = [
   },
   {
     label: "Earnings Call Mentions",
-    value: "52%",
+    value: "61%",
     sub: "of S&P 500 companies",
     color: "#3b82f6",
-    trend: [20, 25, 28, 30, 34, 38, 40, 42, 44, 48, 52],
+    trend: [20, 25, 28, 30, 34, 38, 40, 42, 48, 55, 61],
     direction: "up" as const,
   },
 ];

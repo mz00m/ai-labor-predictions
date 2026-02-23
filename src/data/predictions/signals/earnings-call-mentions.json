@@ -5,7 +5,7 @@
   "description": "Percentage of S&P 500 companies mentioning AI in the context of workforce efficiency, headcount, or restructuring during quarterly earnings calls.",
   "category": "signals",
   "unit": "% of S&P 500",
-  "currentValue": 52,
+  "currentValue": 61,
   "timeHorizon": "Latest quarter",
   "history": [
     {
@@ -90,9 +90,9 @@
     },
     {
       "date": "2025-12-01",
-      "value": 52,
-      "confidenceLow": 46,
-      "confidenceHigh": 60,
+      "value": 61,
+      "confidenceLow": 56,
+      "confidenceHigh": 66,
       "sourceIds": ["factset-earnings-q3-2025"],
       "evidenceTier": 1
     },
@@ -212,7 +212,7 @@
       "publisher": "FactSet",
       "evidenceTier": 1,
       "datePublished": "2025-11-15",
-      "excerpt": "Record 306 S&P 500 companies cited AI in Q3 2025 earnings calls, surpassing prior record of 292. 95% of IT and Communications sectors mentioned AI. AI-citing companies outperformed 13.9% vs. 5.7%."
+      "excerpt": "Record 306 S&P 500 companies (61%) cited AI in Q3 2025 earnings calls — a new 10-year high, surpassing the prior record of 292. 95% of IT and Communications sectors mentioned AI. AI-citing companies outperformed 13.9% vs. 5.7%."
     },
     {
       "id": "fortune-ai-earnings-surge-2026",

@@ -2,7 +2,7 @@
   "id": "displacement-total",
   "slug": "total-us-jobs-lost",
   "title": "Total US Jobs Lost to AI as % of Labor Force",
-  "description": "Projected net jobs eliminated by AI and automation as a share of the total US civilian labor force (~167 million), accounting for both direct displacement and partial task automation that eliminates full roles.",
+  "description": "Projected net jobs eliminated by AI and automation as a share of the total US civilian labor force (~168.5 million), accounting for both direct displacement and partial task automation that eliminates full roles.",
   "category": "displacement",
   "unit": "% of US labor force",
   "currentValue": 5,
