@@ -5,11 +5,13 @@ import { format, parseISO } from "date-fns";
 interface SourceListProps {
   sources: Source[];
   selectedTiers: EvidenceTier[];
+  highlightedSourceIds?: string[];
 }
 
 export default function SourceList({
   sources,
   selectedTiers,
+  highlightedSourceIds = [],
 }: SourceListProps) {
   const filtered = sources
     .filter((s) => selectedTiers.includes(s.evidenceTier))
@@ -31,10 +33,24 @@ export default function SourceList({
       <div className="space-y-0">
         {filtered.map((source) => {
           const config = getTierConfig(source.evidenceTier);
+          const isHighlighted = highlightedSourceIds.includes(source.id);
           return (
             <div
               key={source.id}
-              className="flex items-start gap-3 py-4 border-b border-black/[0.04]"
+              id={`source-${source.id}`}
+              className="flex items-start gap-3 py-4 border-b border-black/[0.04] transition-all duration-700 rounded-lg"
+              style={
+                isHighlighted
+                  ? {
+                      backgroundColor: "rgba(124, 58, 237, 0.07)",
+                      marginLeft: -16,
+                      marginRight: -16,
+                      paddingLeft: 16,
+                      paddingRight: 16,
+                      boxShadow: "0 0 0 1px rgba(124, 58, 237, 0.2)",
+                    }
+                  : undefined
+              }
             >
               <span
                 className="mt-1.5 inline-block w-2 h-2 rounded-full shrink-0"

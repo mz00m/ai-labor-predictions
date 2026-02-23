@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback, useRef } from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import { EvidenceTier } from "@/lib/types";
@@ -49,6 +49,32 @@ export default function PredictionDetailPage() {
   const prediction = getPredictionBySlug(slug);
 
   const [selectedTiers, setSelectedTiers] = useState<EvidenceTier[]>([1, 2, 3, 4]);
+  const [highlightedSourceIds, setHighlightedSourceIds] = useState<string[]>([]);
+  const highlightTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const handleDotClick = useCallback((sourceIds: string[]) => {
+    // Clear any existing highlight timeout
+    if (highlightTimeoutRef.current) {
+      clearTimeout(highlightTimeoutRef.current);
+    }
+
+    // Set highlighted sources
+    setHighlightedSourceIds(sourceIds);
+
+    // Scroll to the first matching source
+    const firstSourceId = sourceIds[0];
+    if (firstSourceId) {
+      const el = document.getElementById(`source-${firstSourceId}`);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    }
+
+    // Clear highlight after 4 seconds
+    highlightTimeoutRef.current = setTimeout(() => {
+      setHighlightedSourceIds([]);
+    }, 4000);
+  }, []);
 
   if (!prediction) {
     return (
@@ -209,13 +235,14 @@ export default function PredictionDetailPage() {
           How This Prediction Has Evolved
         </h2>
         <p className="text-[14px] text-[var(--muted)] mb-8">
-          Each data point is from a different source. Dots are color-coded by evidence tier.
+          Each data point is from a different source. Dots are color-coded by evidence tier. Click any dot to jump to its source.
         </p>
         <PredictionChart
           history={prediction.history}
           sources={prediction.sources}
           selectedTiers={selectedTiers}
           unit={prediction.unit.includes("%") ? "%" : ""}
+          onDotClick={handleDotClick}
         />
       </section>
 
@@ -227,6 +254,7 @@ export default function PredictionDetailPage() {
         <SourceList
           sources={prediction.sources}
           selectedTiers={selectedTiers}
+          highlightedSourceIds={highlightedSourceIds}
         />
       </section>
 

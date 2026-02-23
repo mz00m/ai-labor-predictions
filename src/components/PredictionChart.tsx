@@ -21,6 +21,7 @@ interface PredictionChartProps {
   selectedTiers: EvidenceTier[];
   unit: string;
   compact?: boolean;
+  onDotClick?: (sourceIds: string[]) => void;
 }
 
 interface ChartDataPoint {
@@ -79,6 +80,9 @@ function CustomTooltip({
               {s.title.length > 55 ? "..." : ""}
             </p>
           ))}
+          <p className="text-[10px] text-[var(--muted)] mt-1.5 opacity-60">
+            Click to view source ↓
+          </p>
         </div>
       )}
     </div>
@@ -91,6 +95,7 @@ export default function PredictionChart({
   selectedTiers,
   unit,
   compact = false,
+  onDotClick,
 }: PredictionChartProps) {
   const filtered = history.filter((d) =>
     selectedTiers.includes(d.evidenceTier)
@@ -149,6 +154,13 @@ export default function PredictionChart({
       <ComposedChart
         data={chartData}
         margin={{ top: 10, right: 10, left: 0, bottom: 0 }}
+        onClick={(state) => {
+          if (onDotClick && state?.activePayload?.[0]?.payload) {
+            const point = state.activePayload[0].payload as ChartDataPoint;
+            onDotClick(point.sourceIds);
+          }
+        }}
+        style={{ cursor: onDotClick ? "pointer" : undefined }}
       >
         <CartesianGrid strokeDasharray="3 3" opacity={0.2} />
         <XAxis
@@ -202,10 +214,32 @@ export default function PredictionChart({
                 fill={config.color}
                 stroke="white"
                 strokeWidth={2}
+                style={{ cursor: onDotClick ? "pointer" : undefined }}
+                onClick={() => onDotClick?.(payload.sourceIds)}
               />
             );
           }}
-          activeDot={{ r: 7, strokeWidth: 2 }}
+          activeDot={(props: unknown) => {
+            const { cx, cy, payload } = props as {
+              cx: number;
+              cy: number;
+              payload: ChartDataPoint;
+            };
+            const config = getTierConfig(payload.evidenceTier);
+            return (
+              <circle
+                key={`active-${payload.date}`}
+                cx={cx}
+                cy={cy}
+                r={7}
+                fill={config.color}
+                stroke="white"
+                strokeWidth={2}
+                style={{ cursor: onDotClick ? "pointer" : undefined }}
+                onClick={() => onDotClick?.(payload.sourceIds)}
+              />
+            );
+          }}
         />
       </ComposedChart>
     </ResponsiveContainer>
