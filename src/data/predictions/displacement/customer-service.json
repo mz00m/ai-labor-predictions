@@ -5,7 +5,7 @@
   "description": "Projected percentage of customer service interactions fully handled by AI without human intervention by 2028.",
   "category": "displacement",
   "unit": "% of interactions automated",
-  "currentValue": 45,
+  "currentValue": 50,
   "timeHorizon": "By 2028",
   "history": [
     {
@@ -71,6 +71,22 @@
       "confidenceHigh": 58,
       "sourceIds": ["deloitte-cs-2025"],
       "evidenceTier": 2
+    },
+    {
+      "date": "2025-11-01",
+      "value": 50,
+      "confidenceLow": 38,
+      "confidenceHigh": 62,
+      "sourceIds": ["gartner-cs-2026-forecast"],
+      "evidenceTier": 2
+    },
+    {
+      "date": "2026-02-01",
+      "value": 55,
+      "confidenceLow": 42,
+      "confidenceHigh": 68,
+      "sourceIds": ["zendesk-ai-cs-2026"],
+      "evidenceTier": 3
     }
   ],
   "sources": [
@@ -166,6 +182,24 @@
       "evidenceTier": 1,
       "datePublished": "2025-02-12",
       "excerpt": "Shopify reported its AI assistant Sidekick now resolves 40% of merchant support queries without human intervention, up from 12% one year prior."
+    },
+    {
+      "id": "gartner-cs-2026-forecast",
+      "title": "Gartner Forecasts 20-30% of CS Agents Replaced by GenAI by 2026",
+      "url": "https://www.gartner.com/en/newsroom/press-releases/2025-10-customer-service-genai-forecast",
+      "publisher": "Gartner",
+      "evidenceTier": 2,
+      "datePublished": "2025-10-15",
+      "excerpt": "Gartner projects 20-30% of customer service agents will be replaced by generative AI by end of 2026. AI adoption in CS jumped from 46% to 61% in one year."
+    },
+    {
+      "id": "zendesk-ai-cs-2026",
+      "title": "Zendesk AI Customer Service Statistics 2026",
+      "url": "https://www.zendesk.com/blog/ai-customer-service-statistics/",
+      "publisher": "Zendesk",
+      "evidenceTier": 3,
+      "datePublished": "2026-01-15",
+      "excerpt": "95% of customer interactions projected to be AI-powered by 2028. Current AI resolution rates at leading companies exceed 55% without human escalation."
     }
   ]
 }

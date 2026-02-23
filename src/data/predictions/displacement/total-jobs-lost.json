@@ -5,7 +5,7 @@
   "description": "Projected net jobs eliminated by AI and automation as a share of the total US civilian labor force (~167 million), accounting for both direct displacement and partial task automation that eliminates full roles.",
   "category": "displacement",
   "unit": "% of US labor force",
-  "currentValue": 4.5,
+  "currentValue": 5,
   "timeHorizon": "By 2030",
   "history": [
     {
@@ -79,6 +79,22 @@
       "confidenceHigh": 8,
       "sourceIds": ["bls-projections-2025"],
       "evidenceTier": 1
+    },
+    {
+      "date": "2025-11-01",
+      "value": 4,
+      "confidenceLow": 1.5,
+      "confidenceHigh": 7,
+      "sourceIds": ["nber-csuite-survey-2025"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2026-01-15",
+      "value": 5.5,
+      "confidenceLow": 3,
+      "confidenceHigh": 9.5,
+      "sourceIds": ["challenger-ai-layoffs-2025"],
+      "evidenceTier": 3
     }
   ],
   "sources": [
@@ -179,6 +195,24 @@
       "evidenceTier": 2,
       "datePublished": "2025-01-28",
       "excerpt": "Data entry (-27%), customer service (-18%), and basic admin (-22%) postings saw steepest declines. AI/ML postings +42% YoY."
+    },
+    {
+      "id": "nber-csuite-survey-2025",
+      "title": "C-Suite Survey on AI and Employment: Early Evidence",
+      "url": "https://www.nber.org/papers/w33201",
+      "publisher": "NBER",
+      "evidenceTier": 1,
+      "datePublished": "2025-11-01",
+      "excerpt": "Survey of 2,500 C-suite executives finds 90% report no significant net employment impact from AI adoption as of Q3 2025, though task reallocation is widespread."
+    },
+    {
+      "id": "challenger-ai-layoffs-2025",
+      "title": "Challenger Report: 55,000 AI-Attributed Layoffs in 2025",
+      "url": "https://www.challengergray.com/blog/ai-layoffs-report-2025/",
+      "publisher": "Challenger, Gray & Christmas",
+      "evidenceTier": 3,
+      "datePublished": "2026-01-10",
+      "excerpt": "Employers cited AI as a direct cause for 55,000 job cuts in 2025, concentrated in customer service, data entry, and back-office operations."
     }
   ]
 }

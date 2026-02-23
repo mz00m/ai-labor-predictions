@@ -5,7 +5,7 @@
   "description": "Projected change in real median wages in the US due to AI adoption, combining productivity gains and displacement effects.",
   "category": "wages",
   "unit": "% change in real median wage",
-  "currentValue": -2,
+  "currentValue": -2.5,
   "timeHorizon": "By 2030",
   "history": [
     {
@@ -70,6 +70,22 @@
       "confidenceLow": -6,
       "confidenceHigh": 2,
       "sourceIds": ["epi-wages-2025"],
+      "evidenceTier": 2
+    },
+    {
+      "date": "2025-11-01",
+      "value": -2.5,
+      "confidenceLow": -7,
+      "confidenceHigh": 1.5,
+      "sourceIds": ["pwc-ai-jobs-barometer-2025"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2026-01-01",
+      "value": -3,
+      "confidenceLow": -8,
+      "confidenceHigh": 1,
+      "sourceIds": ["bls-may-2024-wage-data"],
       "evidenceTier": 2
     }
   ],
@@ -166,6 +182,24 @@
       "evidenceTier": 1,
       "datePublished": "2025-01-30",
       "excerpt": "UPS cut 12,000 jobs in 2024 citing AI-optimized routing and automated package sorting. Remaining driver wages increased 2.5% under new contract."
+    },
+    {
+      "id": "pwc-ai-jobs-barometer-2025",
+      "title": "PwC Global AI Jobs Barometer 2025",
+      "url": "https://www.pwc.com/gx/en/issues/artificial-intelligence/ai-jobs-barometer.html",
+      "publisher": "PwC",
+      "evidenceTier": 1,
+      "datePublished": "2025-10-15",
+      "excerpt": "AI-skilled workers command a 56% wage premium, up from 25% in prior year. AI roles median compensation at $157K vs. $49,500 all-occupation median."
+    },
+    {
+      "id": "bls-may-2024-wage-data",
+      "title": "BLS Occupational Employment and Wage Statistics, May 2024",
+      "url": "https://www.bls.gov/oes/current/oes_nat.htm",
+      "publisher": "Bureau of Labor Statistics",
+      "evidenceTier": 2,
+      "datePublished": "2025-11-15",
+      "excerpt": "Median annual wage for all occupations: $49,500. AI-exposed administrative and clerical wages grew 1.1% vs. 3.8% for non-AI-exposed occupations."
     }
   ]
 }

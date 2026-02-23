@@ -5,7 +5,7 @@
   "description": "Percentage of S&P 500 companies mentioning AI in the context of workforce efficiency, headcount, or restructuring during quarterly earnings calls.",
   "category": "signals",
   "unit": "% of S&P 500",
-  "currentValue": 44,
+  "currentValue": 52,
   "timeHorizon": "Latest quarter",
   "history": [
     {
@@ -87,6 +87,22 @@
       "confidenceHigh": 52,
       "sourceIds": ["factset-earnings-q1-2025"],
       "evidenceTier": 1
+    },
+    {
+      "date": "2025-12-01",
+      "value": 52,
+      "confidenceLow": 46,
+      "confidenceHigh": 60,
+      "sourceIds": ["factset-earnings-q3-2025"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2026-02-01",
+      "value": 55,
+      "confidenceLow": 48,
+      "confidenceHigh": 63,
+      "sourceIds": ["fortune-ai-earnings-surge-2026"],
+      "evidenceTier": 3
     }
   ],
   "sources": [
@@ -188,6 +204,24 @@
       "evidenceTier": 1,
       "datePublished": "2024-11-01",
       "excerpt": "Companies that mention AI + workforce on calls have average headcount growth 3.2pp lower than non-mentioners. The correlation has strengthened each quarter."
+    },
+    {
+      "id": "factset-earnings-q3-2025",
+      "title": "FactSet Earnings Insight Q3 2025 — Record AI Mentions",
+      "url": "https://www.factset.com/hubfs/Website/Resources/",
+      "publisher": "FactSet",
+      "evidenceTier": 1,
+      "datePublished": "2025-11-15",
+      "excerpt": "Record 306 S&P 500 companies cited AI in Q3 2025 earnings calls, surpassing prior record of 292. 95% of IT and Communications sectors mentioned AI. AI-citing companies outperformed 13.9% vs. 5.7%."
+    },
+    {
+      "id": "fortune-ai-earnings-surge-2026",
+      "title": "AI Mentions in Earnings Calls Hit All-Time High as Companies Double Down",
+      "url": "https://fortune.com/2026/01/25/ai-mentions-earnings-calls-record-2025/",
+      "publisher": "Fortune / Yahoo Finance",
+      "evidenceTier": 3,
+      "datePublished": "2026-01-25",
+      "excerpt": "AI was the most-cited topic in S&P 500 earnings calls in 2025. Companies mentioning AI in workforce context outperformed peers by 8.2 percentage points on average."
     }
   ]
 }

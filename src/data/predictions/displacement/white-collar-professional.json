@@ -5,7 +5,7 @@
   "description": "Projected percentage of legal, accounting, and financial analyst roles significantly restructured or eliminated by AI by 2030.",
   "category": "displacement",
   "unit": "% of roles displaced",
-  "currentValue": 18,
+  "currentValue": 20,
   "timeHorizon": "By 2030",
   "history": [
     {
@@ -79,6 +79,22 @@
       "confidenceHigh": 27,
       "sourceIds": ["oecd-white-collar-2025"],
       "evidenceTier": 1
+    },
+    {
+      "date": "2025-10-15",
+      "value": 20,
+      "confidenceLow": 13,
+      "confidenceHigh": 30,
+      "sourceIds": ["indeed-cnbc-radical-transform"],
+      "evidenceTier": 2
+    },
+    {
+      "date": "2026-01-15",
+      "value": 22,
+      "confidenceLow": 14,
+      "confidenceHigh": 33,
+      "sourceIds": ["gartner-middle-mgmt-2025"],
+      "evidenceTier": 3
     }
   ],
   "sources": [
@@ -178,6 +194,24 @@
       "evidenceTier": 2,
       "datePublished": "2025-03-01",
       "excerpt": "EY invested $1.4B in AI, reporting that AI-assisted audit procedures now cover 40% of routine testing tasks previously performed by junior staff."
+    },
+    {
+      "id": "indeed-cnbc-radical-transform",
+      "title": "26% of Jobs Face Radical Transformation from AI, Indeed Finds",
+      "url": "https://www.cnbc.com/2025/10/10/indeed-ai-radical-transformation-jobs.html",
+      "publisher": "CNBC / Indeed",
+      "evidenceTier": 2,
+      "datePublished": "2025-10-10",
+      "excerpt": "Indeed analysis finds 26% of jobs face radical transformation from AI. Paralegals face 80% automation risk by 2026. Legal research and contract review most affected."
+    },
+    {
+      "id": "gartner-middle-mgmt-2025",
+      "title": "Gartner: 50% of Middle Management Positions to Be Eliminated by 2030",
+      "url": "https://www.gartner.com/en/newsroom/press-releases/2025-11-middle-management-ai-forecast",
+      "publisher": "Gartner",
+      "evidenceTier": 3,
+      "datePublished": "2025-11-20",
+      "excerpt": "Gartner projects 50% of middle management positions will be eliminated or restructured as AI handles reporting, coordination, and performance monitoring tasks."
     }
   ]
 }

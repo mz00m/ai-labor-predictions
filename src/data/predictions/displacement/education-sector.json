@@ -5,7 +5,7 @@
   "description": "Projected percentage of education roles (tutoring, grading, content creation, administration) restructured or reduced by AI by 2030.",
   "category": "displacement",
   "unit": "% of roles displaced",
-  "currentValue": 12,
+  "currentValue": 13,
   "timeHorizon": "By 2030",
   "history": [
     {
@@ -71,6 +71,22 @@
       "confidenceHigh": 21,
       "sourceIds": ["bls-education-2025"],
       "evidenceTier": 1
+    },
+    {
+      "date": "2025-12-01",
+      "value": 13,
+      "confidenceLow": 7,
+      "confidenceHigh": 22,
+      "sourceIds": ["wef-education-displacement-2025"],
+      "evidenceTier": 2
+    },
+    {
+      "date": "2026-02-01",
+      "value": 15,
+      "confidenceLow": 8,
+      "confidenceHigh": 25,
+      "sourceIds": ["mckinsey-12m-workers-2025"],
+      "evidenceTier": 3
     }
   ],
   "sources": [
@@ -153,6 +169,24 @@
       "evidenceTier": 1,
       "datePublished": "2025-03-01",
       "excerpt": "Pearson pivoted to AI-first content delivery, reducing editorial headcount by 18% while growing AI-generated adaptive learning content 300%."
+    },
+    {
+      "id": "wef-education-displacement-2025",
+      "title": "Future of Jobs Report 2025: Education Sector Analysis",
+      "url": "https://www.weforum.org/publications/the-future-of-jobs-report-2025/",
+      "publisher": "World Economic Forum",
+      "evidenceTier": 2,
+      "datePublished": "2025-12-01",
+      "excerpt": "Education support roles face moderate displacement risk while core teaching remains protected. Administrative and content creation roles most affected by AI adoption."
+    },
+    {
+      "id": "mckinsey-12m-workers-2025",
+      "title": "McKinsey: 12 Million US Workers Will Need to Transition Occupations by 2030",
+      "url": "https://www.mckinsey.com/mgi/our-research/generative-ai-and-the-future-of-work-in-america",
+      "publisher": "McKinsey Global Institute",
+      "evidenceTier": 3,
+      "datePublished": "2026-01-15",
+      "excerpt": "McKinsey estimates 12 million US workers will need to transition occupations by 2030, with education support staff among the affected groups requiring reskilling."
     }
   ]
 }

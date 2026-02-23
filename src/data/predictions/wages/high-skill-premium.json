@@ -5,7 +5,7 @@
   "description": "Projected change in wages for workers with strong AI/ML skills relative to the median, measuring the emerging 'AI premium' in compensation.",
   "category": "wages",
   "unit": "% wage premium over median",
-  "currentValue": 25,
+  "currentValue": 30,
   "timeHorizon": "By 2030",
   "history": [
     {
@@ -71,6 +71,22 @@
       "confidenceHigh": 36,
       "sourceIds": ["oecd-skills-2025"],
       "evidenceTier": 1
+    },
+    {
+      "date": "2025-10-15",
+      "value": 30,
+      "confidenceLow": 22,
+      "confidenceHigh": 42,
+      "sourceIds": ["pwc-ai-wage-premium-2025"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2026-01-01",
+      "value": 35,
+      "confidenceLow": 25,
+      "confidenceHigh": 48,
+      "sourceIds": ["indexdev-ai-salary-2026"],
+      "evidenceTier": 2
     }
   ],
   "sources": [
@@ -167,6 +183,24 @@
       "evidenceTier": 2,
       "datePublished": "2025-02-01",
       "excerpt": "Job postings requiring AI/ML skills offer 28% higher salaries on average. Postings mentioning 'AI' in title or requirements grew 65% YoY."
+    },
+    {
+      "id": "pwc-ai-wage-premium-2025",
+      "title": "PwC AI Jobs Barometer 2025: The AI Wage Premium",
+      "url": "https://www.pwc.com/gx/en/issues/artificial-intelligence/ai-jobs-barometer.html",
+      "publisher": "PwC",
+      "evidenceTier": 1,
+      "datePublished": "2025-10-15",
+      "excerpt": "Workers with AI skills now command a 56% wage premium over non-AI peers, up from 25% just one year prior. AI roles median compensation reaches $157K."
+    },
+    {
+      "id": "indexdev-ai-salary-2026",
+      "title": "AI Salary Statistics 2026: Global Compensation Trends",
+      "url": "https://index.dev/blog/ai-salary-statistics-2026",
+      "publisher": "Index.dev",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-05",
+      "excerpt": "AI/ML engineers median total compensation reached $185K in 2025, with top-tier researchers commanding $500K-$1M+. The premium over general software roles widened to 35%."
     }
   ]
 }

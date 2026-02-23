@@ -5,7 +5,7 @@
   "description": "Projected percentage of US companies with 50+ employees that have deployed AI in production workflows by 2027.",
   "category": "adoption",
   "unit": "% of companies",
-  "currentValue": 35,
+  "currentValue": 40,
   "timeHorizon": "By 2027",
   "history": [
     {
@@ -71,6 +71,22 @@
       "confidenceHigh": 46,
       "sourceIds": ["census-bts-ai-2025"],
       "evidenceTier": 1
+    },
+    {
+      "date": "2025-10-01",
+      "value": 40,
+      "confidenceLow": 30,
+      "confidenceHigh": 52,
+      "sourceIds": ["anthropic-economic-index-2025"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2026-01-01",
+      "value": 45,
+      "confidenceLow": 34,
+      "confidenceHigh": 58,
+      "sourceIds": ["stanford-ai-index-2025", "microsoft-global-ai-2025"],
+      "evidenceTier": 2
     }
   ],
   "sources": [
@@ -162,6 +178,33 @@
       "evidenceTier": 1,
       "datePublished": "2024-03-06",
       "excerpt": "Over 1 trillion AI predictions served per week via Einstein. 68% of enterprise customers have enabled at least one AI feature."
+    },
+    {
+      "id": "anthropic-economic-index-2025",
+      "title": "The Anthropic Economic Index: Measuring AI's Real-World Impact",
+      "url": "https://www.anthropic.com/research/the-anthropic-economic-index",
+      "publisher": "Anthropic",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-15",
+      "excerpt": "Census Bureau rigorous measure finds 9.7% of firms actively using AI, while broader surveys report 78%. Adoption gap driven by definitional differences in what counts as AI use."
+    },
+    {
+      "id": "stanford-ai-index-2025",
+      "title": "Stanford AI Index Report 2025",
+      "url": "https://aiindex.stanford.edu/report/",
+      "publisher": "Stanford HAI",
+      "evidenceTier": 2,
+      "datePublished": "2025-12-01",
+      "excerpt": "78% of organizations report using AI in at least one business function. Enterprise AI spending grew 45% YoY globally."
+    },
+    {
+      "id": "microsoft-global-ai-2025",
+      "title": "Microsoft 2025 Global AI Adoption Report",
+      "url": "https://www.microsoft.com/en-us/research/publication/2025-global-ai-adoption/",
+      "publisher": "Microsoft",
+      "evidenceTier": 2,
+      "datePublished": "2025-11-20",
+      "excerpt": "75% of knowledge workers now use AI tools. Adoption in enterprises with 500+ employees reached 60%, up from 40% a year prior."
     }
   ]
 }

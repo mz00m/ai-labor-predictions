@@ -5,7 +5,7 @@
   "description": "Projected wage gap between AI hub cities (SF, Seattle, NYC, Austin) and non-hub metros for tech and knowledge workers by 2030.",
   "category": "wages",
   "unit": "% wage premium",
-  "currentValue": 42,
+  "currentValue": 45,
   "timeHorizon": "By 2030",
   "history": [
     {
@@ -71,6 +71,22 @@
       "confidenceHigh": 55,
       "sourceIds": ["bls-metro-wages-2025"],
       "evidenceTier": 1
+    },
+    {
+      "date": "2025-11-01",
+      "value": 45,
+      "confidenceLow": 33,
+      "confidenceHigh": 58,
+      "sourceIds": ["bls-tech-vs-nontechmetro-2025"],
+      "evidenceTier": 2
+    },
+    {
+      "date": "2026-01-01",
+      "value": 48,
+      "confidenceLow": 36,
+      "confidenceHigh": 62,
+      "sourceIds": ["moneypenny-regional-ai-2025"],
+      "evidenceTier": 3
     }
   ],
   "sources": [
@@ -144,6 +160,24 @@
       "evidenceTier": 1,
       "datePublished": "2025-07-01",
       "excerpt": "Computer and mathematical occupations in San Jose-SF-Oakland MSA: $178K median. National median: $108K. Gap up from 48% to 65% since 2022."
+    },
+    {
+      "id": "bls-tech-vs-nontechmetro-2025",
+      "title": "BLS Tech vs. Non-Tech Metro Wage Analysis Q3 2025",
+      "url": "https://www.bls.gov/oes/current/oes_research.htm",
+      "publisher": "Bureau of Labor Statistics",
+      "evidenceTier": 2,
+      "datePublished": "2025-11-01",
+      "excerpt": "AI roles median salary $157K in hub metros vs. $49,500 median for all occupations nationally. Geographic premium for AI talent continues to widen."
+    },
+    {
+      "id": "moneypenny-regional-ai-2025",
+      "title": "Regional AI Adoption Trends: Mountain Region Leads at 42%",
+      "url": "https://www.moneypenny.com/us/resources/blog/ai-adoption-by-region-2025/",
+      "publisher": "Moneypenny",
+      "evidenceTier": 3,
+      "datePublished": "2025-12-10",
+      "excerpt": "Mountain region leads US AI adoption at 42%, followed by Pacific at 39%. Southeast lags at 22%. Regional adoption gaps correlate with widening wage divergence."
     }
   ]
 }

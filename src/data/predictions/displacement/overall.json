@@ -5,7 +5,7 @@
   "description": "Projected net percentage of US jobs displaced by AI and automation by 2030, accounting for both eliminated and restructured roles.",
   "category": "displacement",
   "unit": "% of US jobs",
-  "currentValue": 8,
+  "currentValue": 9,
   "timeHorizon": "By 2030",
   "history": [
     {
@@ -79,6 +79,30 @@
       "confidenceHigh": 14,
       "sourceIds": ["bls-projections-2025"],
       "evidenceTier": 1
+    },
+    {
+      "date": "2025-10-15",
+      "value": 7,
+      "confidenceLow": 3,
+      "confidenceHigh": 12,
+      "sourceIds": ["yale-budget-lab-2025"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2025-12-01",
+      "value": 9,
+      "confidenceLow": 5,
+      "confidenceHigh": 15,
+      "sourceIds": ["wef-future-jobs-2025"],
+      "evidenceTier": 2
+    },
+    {
+      "date": "2026-02-01",
+      "value": 10,
+      "confidenceLow": 6,
+      "confidenceHigh": 18,
+      "sourceIds": ["fortune-altman-2026"],
+      "evidenceTier": 3
     }
   ],
   "sources": [
@@ -185,6 +209,32 @@
       "evidenceTier": 1,
       "datePublished": "2025-02-06",
       "excerpt": "Amazon reported 75% increase in robotic and AI systems in fulfillment centers. Warehouse associate hiring slowed while 'AI specialist' roles grew 3x."
+    },
+    {
+      "id": "yale-budget-lab-2025",
+      "title": "AI and the U.S. Labor Market: No Macro Displacement Yet",
+      "url": "https://budgetlab.yale.edu/research/ai-labor-market-2025",
+      "publisher": "Yale Budget Lab",
+      "evidenceTier": 1,
+      "datePublished": "2025-10-15",
+      "excerpt": "Analysis finds no significant macro-level job displacement from AI as of late 2025, though structural shifts are emerging in specific sectors."
+    },
+    {
+      "id": "wef-future-jobs-2025",
+      "title": "Future of Jobs Report 2025",
+      "url": "https://www.weforum.org/publications/the-future-of-jobs-report-2025/",
+      "publisher": "World Economic Forum",
+      "evidenceTier": 2,
+      "datePublished": "2025-12-01",
+      "excerpt": "40% of employers globally expect to reduce headcount as AI automates tasks. Net displacement estimates range from 5-14% of current roles by 2030."
+    },
+    {
+      "id": "fortune-altman-2026",
+      "title": "Sam Altman warns AI could displace significant share of jobs",
+      "url": "https://fortune.com/2026/01/20/sam-altman-ai-job-displacement-warning/",
+      "publisher": "Fortune",
+      "evidenceTier": 3,
+      "datePublished": "2026-01-20"
     }
   ]
 }

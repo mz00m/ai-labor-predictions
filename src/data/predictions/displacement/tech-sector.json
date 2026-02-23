@@ -5,7 +5,7 @@
   "description": "Projected percentage of current tech sector jobs that will be automated or significantly restructured by AI by 2030.",
   "category": "displacement",
   "unit": "% of jobs displaced",
-  "currentValue": 14,
+  "currentValue": 15,
   "timeHorizon": "By 2030",
   "history": [
     {
@@ -87,6 +87,22 @@
       "confidenceHigh": 22,
       "sourceIds": ["oecd-employment-2025"],
       "evidenceTier": 1
+    },
+    {
+      "date": "2025-10-01",
+      "value": 15,
+      "confidenceLow": 10,
+      "confidenceHigh": 23,
+      "sourceIds": ["challenger-tech-layoffs-2025"],
+      "evidenceTier": 2
+    },
+    {
+      "date": "2026-01-01",
+      "value": 16,
+      "confidenceLow": 11,
+      "confidenceHigh": 25,
+      "sourceIds": ["bls-tech-projections-2026"],
+      "evidenceTier": 3
     }
   ],
   "sources": [
@@ -210,6 +226,24 @@
       "evidenceTier": 2,
       "datePublished": "2025-01-20",
       "excerpt": "Software developer postings declined 14% YoY while AI/ML engineer postings grew 45%. Net tech postings down 6% reflecting structural shift, not just cyclical downturn."
+    },
+    {
+      "id": "challenger-tech-layoffs-2025",
+      "title": "78,000 Tech Jobs Lost to AI in H1 2025",
+      "url": "https://www.challengergray.com/blog/tech-layoffs-ai-h1-2025/",
+      "publisher": "Challenger, Gray & Christmas",
+      "evidenceTier": 2,
+      "datePublished": "2025-10-01",
+      "excerpt": "78,000 tech sector job losses attributed to AI in the first half of 2025, with QA testing, junior development, and IT support roles most affected."
+    },
+    {
+      "id": "bls-tech-projections-2026",
+      "title": "BLS Revised Tech Sector Employment Projections 2024-2034",
+      "url": "https://www.bls.gov/emp/tables/emp-by-detailed-occupation.htm",
+      "publisher": "Bureau of Labor Statistics",
+      "evidenceTier": 3,
+      "datePublished": "2025-12-15",
+      "excerpt": "BLS projects AI will dampen software developer employment growth to 17% through 2034, revised down from prior 25% estimate, as AI coding tools reduce headcount needs."
     }
   ],
   "marketIds": {

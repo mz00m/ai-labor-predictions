@@ -5,7 +5,7 @@
   "description": "Projected percentage of healthcare administrative roles (coding, billing, scheduling, prior auth) automated by AI by 2030.",
   "category": "displacement",
   "unit": "% of roles displaced",
-  "currentValue": 35,
+  "currentValue": 38,
   "timeHorizon": "By 2030",
   "history": [
     {
@@ -71,6 +71,22 @@
       "confidenceHigh": 48,
       "sourceIds": ["bls-health-admin-2025"],
       "evidenceTier": 1
+    },
+    {
+      "date": "2025-11-01",
+      "value": 38,
+      "confidenceLow": 25,
+      "confidenceHigh": 50,
+      "sourceIds": ["healthtech-ai-admin-2025"],
+      "evidenceTier": 2
+    },
+    {
+      "date": "2026-01-15",
+      "value": 40,
+      "confidenceLow": 28,
+      "confidenceHigh": 54,
+      "sourceIds": ["himss-medical-coding-ai-2025"],
+      "evidenceTier": 3
     }
   ],
   "sources": [
@@ -153,6 +169,24 @@
       "evidenceTier": 1,
       "datePublished": "2025-02-15",
       "excerpt": "UnitedHealth reported AI-driven claims processing reduced administrative costs by $1.2B and eliminated 8,000 administrative positions in 2024."
+    },
+    {
+      "id": "healthtech-ai-admin-2025",
+      "title": "AI in Healthcare Administration: 2025 Year in Review",
+      "url": "https://www.healthtechmagazine.net/article/2025/10/ai-healthcare-admin-overview",
+      "publisher": "HealthTech Magazine",
+      "evidenceTier": 2,
+      "datePublished": "2025-10-20",
+      "excerpt": "40% of medical coding is now automated through AI in 2025. Data entry specialists face 95% automation risk. Over 50% of providers use AI for billing and coding."
+    },
+    {
+      "id": "himss-medical-coding-ai-2025",
+      "title": "HIMSS Report: AI Transforms Medical Coding and Revenue Cycle",
+      "url": "https://www.himss.org/resources/ai-medical-coding-revenue-cycle-2025",
+      "publisher": "HIMSS",
+      "evidenceTier": 3,
+      "datePublished": "2025-12-10",
+      "excerpt": "HIMSS survey finds AI medical coding accuracy now exceeds human coders at 97%. Healthcare systems report 30-40% reduction in coding staff since AI deployment."
     }
   ]
 }

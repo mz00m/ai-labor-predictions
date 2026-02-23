@@ -5,7 +5,7 @@
   "description": "Projected change in real wages for entry-level positions (0-2 years experience) across AI-exposed industries by 2030.",
   "category": "wages",
   "unit": "% wage change",
-  "currentValue": -8,
+  "currentValue": -10,
   "timeHorizon": "By 2030",
   "history": [
     {
@@ -71,6 +71,22 @@
       "confidenceHigh": -3,
       "sourceIds": ["bls-entry-wages-2025"],
       "evidenceTier": 1
+    },
+    {
+      "date": "2025-11-01",
+      "value": -10,
+      "confidenceLow": -18,
+      "confidenceHigh": -4,
+      "sourceIds": ["mckinsey-entry-level-2025"],
+      "evidenceTier": 2
+    },
+    {
+      "date": "2026-01-15",
+      "value": -12,
+      "confidenceLow": -20,
+      "confidenceHigh": -5,
+      "sourceIds": ["anthropic-ceo-entry-level-2025"],
+      "evidenceTier": 3
     }
   ],
   "sources": [
@@ -144,6 +160,24 @@
       "evidenceTier": 1,
       "datePublished": "2025-07-01",
       "excerpt": "Real median weekly earnings for workers aged 16-24 in professional services fell 5.2% from 2023 to 2025."
+    },
+    {
+      "id": "mckinsey-entry-level-2025",
+      "title": "McKinsey: 27% Decline in Entry-Level Writing and Admin Roles",
+      "url": "https://www.mckinsey.com/mgi/our-research/ai-entry-level-workforce-impact",
+      "publisher": "McKinsey Global Institute",
+      "evidenceTier": 2,
+      "datePublished": "2025-11-01",
+      "excerpt": "27% of entry-level writing, data analysis, and administrative roles have declined since 2023. Employers increasingly automate junior tasks previously used for training."
+    },
+    {
+      "id": "anthropic-ceo-entry-level-2025",
+      "title": "Anthropic CEO Warns 50% of Entry-Level Office Jobs at Risk",
+      "url": "https://www.cnbc.com/2025/12/15/anthropic-ceo-dario-amodei-entry-level-jobs-ai.html",
+      "publisher": "CNBC",
+      "evidenceTier": 3,
+      "datePublished": "2025-12-15",
+      "excerpt": "Anthropic CEO Dario Amodei warned that up to 50% of entry-level office jobs could be substantially impacted by AI within the next 2-3 years."
     }
   ]
 }

@@ -5,7 +5,7 @@
   "description": "Projected percentage of creative roles (design, writing, marketing) significantly restructured or eliminated by generative AI by 2030.",
   "category": "displacement",
   "unit": "% of roles displaced",
-  "currentValue": 20,
+  "currentValue": 22,
   "timeHorizon": "By 2030",
   "history": [
     {
@@ -71,6 +71,22 @@
       "confidenceHigh": 32,
       "sourceIds": ["bls-creative-occupations-2025"],
       "evidenceTier": 1
+    },
+    {
+      "date": "2025-10-01",
+      "value": 22,
+      "confidenceLow": 14,
+      "confidenceHigh": 34,
+      "sourceIds": ["uoc-creative-automation-2025"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2026-01-01",
+      "value": 25,
+      "confidenceLow": 16,
+      "confidenceHigh": 38,
+      "sourceIds": ["unctad-creative-industry-2025"],
+      "evidenceTier": 3
     }
   ],
   "sources": [
@@ -153,6 +169,24 @@
       "evidenceTier": 1,
       "datePublished": "2025-02-20",
       "excerpt": "Fiverr reported that AI-related categories grew 55% YoY while traditional writing and basic design categories declined 22%."
+    },
+    {
+      "id": "uoc-creative-automation-2025",
+      "title": "AI Can Automate Creative Professions, UOC Study Finds",
+      "url": "https://www.uoc.edu/en/news/2025/ai-creative-professions-automation",
+      "publisher": "Universitat Oberta de Catalunya",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-15",
+      "excerpt": "Peer-reviewed study finds AI can now automate substantial portions of creative work. Freelance writing gigs dropped 30% post-ChatGPT launch."
+    },
+    {
+      "id": "unctad-creative-industry-2025",
+      "title": "UNCTAD Report: AI's Displacement of Human Artists and Creators",
+      "url": "https://unctad.org/publication/creative-economy-outlook-2025",
+      "publisher": "UNCTAD",
+      "evidenceTier": 3,
+      "datePublished": "2025-12-01",
+      "excerpt": "UNCTAD warns of growing displacement of human artists by AI-generated content, with developing-country creative workers most vulnerable to rate compression."
     }
   ]
 }

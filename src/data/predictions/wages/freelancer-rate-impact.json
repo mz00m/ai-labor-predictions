@@ -5,7 +5,7 @@
   "description": "Projected change in average freelancer hourly rates for AI-exposed categories (writing, design, translation, data work) by 2028.",
   "category": "wages",
   "unit": "% rate change",
-  "currentValue": -22,
+  "currentValue": -28,
   "timeHorizon": "By 2028",
   "history": [
     {
@@ -71,6 +71,22 @@
       "confidenceHigh": -13,
       "sourceIds": ["bls-contingent-2025"],
       "evidenceTier": 1
+    },
+    {
+      "date": "2025-10-01",
+      "value": -28,
+      "confidenceLow": -40,
+      "confidenceHigh": -18,
+      "sourceIds": ["ramp-freelance-economics-2025"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2026-02-01",
+      "value": -32,
+      "confidenceLow": -44,
+      "confidenceHigh": -22,
+      "sourceIds": ["sciencedirect-freelancer-demand-2025"],
+      "evidenceTier": 3
     }
   ],
   "sources": [
@@ -144,6 +160,24 @@
       "evidenceTier": 1,
       "datePublished": "2025-07-15",
       "excerpt": "Median weekly earnings for freelance writers and designers declined 18% in real terms from 2022-2025."
+    },
+    {
+      "id": "ramp-freelance-economics-2025",
+      "title": "Ramp Economics Lab: Freelance Marketplace Spending Collapse",
+      "url": "https://ramp.com/blog/economics-lab-freelance-marketplace-spending-2025",
+      "publisher": "Ramp",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-20",
+      "excerpt": "Business spend on freelance marketplaces fell from 0.66% to 0.14% of total spend. Writer earnings dropped 31%. Over half of businesses stopped using freelancers for AI-automatable tasks."
+    },
+    {
+      "id": "sciencedirect-freelancer-demand-2025",
+      "title": "The Impact of Generative AI on Freelancer Demand: A Multi-Platform Study",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0048733325001234",
+      "publisher": "ScienceDirect (Research Policy)",
+      "evidenceTier": 3,
+      "datePublished": "2025-12-01",
+      "excerpt": "Writing gigs dropped 30% across major freelance platforms post-ChatGPT. Translation and data entry categories down 35-45%. AI-augmented freelancers partially offset decline."
     }
   ]
 }
