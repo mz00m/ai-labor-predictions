@@ -39,10 +39,15 @@ export default function RootLayout({
         <footer className="max-w-6xl mx-auto px-6 sm:px-10 pb-16">
           <div className="pt-10 border-t border-black/[0.06]">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-              <p className="text-[13px] text-[var(--muted)]">
-                Data sourced from prediction markets, academic research, corporate filings, and news.
-                Not financial advice.
-              </p>
+              <div className="space-y-1">
+                <p className="text-[13px] text-[var(--muted)] italic">
+                  Work in progress — take everything with a grain of salt.
+                </p>
+                <p className="text-[13px] text-[var(--muted)]">
+                  Data sourced from prediction markets, academic research, corporate filings, and news.
+                  Not financial advice.
+                </p>
+              </div>
               <span className="text-[13px] text-[var(--muted)]">
                 A weekend vibe coding project by{" "}
                 <a
