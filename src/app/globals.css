@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --foreground: #1a1a1a;
+  --background: #ffffff;
+  --muted: #6b7280;
+  --accent: #7c3aed;
+  --accent-light: #f3f0ff;
+  --border: rgba(0, 0, 0, 0.08);
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Disable blanket transitions — only animate what we mean to */
+* {
+  transition: none;
+}
+
+/* Smooth transitions for interactive elements only */
+a, button, [role="button"], input, label {
+  transition: color 0.15s ease, background-color 0.15s ease, opacity 0.15s ease;
+}
+
+/* Custom scrollbar — thinner, more minimal */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+}
+
+/* Number display — tabular for alignment */
+.stat-number {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.03em;
+}
+
+/* Pill badge — minimal */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+/* Section divider */
+.section-divider {
+  border-top: 1px solid var(--border);
+}

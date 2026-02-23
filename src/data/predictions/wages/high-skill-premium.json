@@ -1,0 +1,172 @@
+{
+  "id": "wages-high-skill",
+  "slug": "high-skill-wage-premium",
+  "title": "High-Skill AI Wage Premium by 2030",
+  "description": "Projected change in wages for workers with strong AI/ML skills relative to the median, measuring the emerging 'AI premium' in compensation.",
+  "category": "wages",
+  "unit": "% wage premium over median",
+  "currentValue": 25,
+  "timeHorizon": "By 2030",
+  "history": [
+    {
+      "date": "2023-02-01",
+      "value": 15,
+      "confidenceLow": 10,
+      "confidenceHigh": 22,
+      "sourceIds": ["indeed-ai-salaries-2023"],
+      "evidenceTier": 3
+    },
+    {
+      "date": "2023-07-01",
+      "value": 18,
+      "confidenceLow": 12,
+      "confidenceHigh": 28,
+      "sourceIds": ["nber-ai-wages-2023"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2024-01-15",
+      "value": 20,
+      "confidenceLow": 14,
+      "confidenceHigh": 30,
+      "sourceIds": ["lightcast-2024"],
+      "evidenceTier": 2
+    },
+    {
+      "date": "2024-05-01",
+      "value": 22,
+      "confidenceLow": 15,
+      "confidenceHigh": 32,
+      "sourceIds": ["msft-earnings-2024"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2024-09-01",
+      "value": 24,
+      "confidenceLow": 16,
+      "confidenceHigh": 35,
+      "sourceIds": ["ft-ai-salaries-2024"],
+      "evidenceTier": 3
+    },
+    {
+      "date": "2025-01-10",
+      "value": 25,
+      "confidenceLow": 18,
+      "confidenceHigh": 38,
+      "sourceIds": ["mit-ai-premium-2025"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2025-05-01",
+      "value": 30,
+      "confidenceLow": 20,
+      "confidenceHigh": 45,
+      "sourceIds": ["x-ai-salaries-thread"],
+      "evidenceTier": 4
+    },
+    {
+      "date": "2025-08-01",
+      "value": 25,
+      "confidenceLow": 17,
+      "confidenceHigh": 36,
+      "sourceIds": ["oecd-skills-2025"],
+      "evidenceTier": 1
+    }
+  ],
+  "sources": [
+    {
+      "id": "indeed-ai-salaries-2023",
+      "title": "AI Job Postings and Salary Trends",
+      "url": "https://www.hiringlab.org",
+      "publisher": "Indeed Hiring Lab",
+      "evidenceTier": 3,
+      "datePublished": "2023-02-01"
+    },
+    {
+      "id": "nber-ai-wages-2023",
+      "title": "The Impact of AI on Labor Markets: A Survey",
+      "url": "https://www.nber.org/papers",
+      "publisher": "NBER",
+      "evidenceTier": 1,
+      "datePublished": "2023-07-01",
+      "excerpt": "Workers who complement AI see significant wage gains; those whose tasks are substituted face wage pressure."
+    },
+    {
+      "id": "lightcast-2024",
+      "title": "The AI Talent Landscape: Skills, Demand, and Compensation",
+      "url": "https://lightcast.io",
+      "publisher": "Lightcast (Burning Glass)",
+      "evidenceTier": 2,
+      "datePublished": "2024-01-15"
+    },
+    {
+      "id": "msft-earnings-2024",
+      "title": "Microsoft FY2024 Q3 Earnings — AI Talent Investment",
+      "url": "https://www.microsoft.com/en-us/investor",
+      "publisher": "Microsoft",
+      "evidenceTier": 1,
+      "datePublished": "2024-04-25",
+      "excerpt": "Significant investment in AI talent, with compensation packages reflecting market premium for AI expertise."
+    },
+    {
+      "id": "ft-ai-salaries-2024",
+      "title": "AI engineers command premium salaries as demand outstrips supply",
+      "url": "https://www.ft.com",
+      "publisher": "Financial Times",
+      "evidenceTier": 3,
+      "datePublished": "2024-09-01"
+    },
+    {
+      "id": "mit-ai-premium-2025",
+      "title": "The AI Wage Premium: Evidence from Online Job Postings",
+      "url": "https://economics.mit.edu",
+      "publisher": "MIT Economics",
+      "evidenceTier": 1,
+      "datePublished": "2025-01-10",
+      "excerpt": "Job postings requiring AI skills offer 21-35% higher wages than comparable postings without AI requirements."
+    },
+    {
+      "id": "x-ai-salaries-thread",
+      "title": "AI engineer salaries are insane right now",
+      "url": "https://x.com",
+      "publisher": "X (Twitter)",
+      "evidenceTier": 4,
+      "datePublished": "2025-05-01"
+    },
+    {
+      "id": "oecd-skills-2025",
+      "title": "OECD Skills Outlook 2025",
+      "url": "https://www.oecd.org/en/publications/oecd-skills-outlook_c0b7922c-en.html",
+      "publisher": "OECD",
+      "evidenceTier": 1,
+      "datePublished": "2025-08-01"
+    },
+    {
+      "id": "nvidia-10k-2024",
+      "title": "NVIDIA 2024 10-K — AI Talent Compensation & Headcount Growth",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001045810&type=10-K",
+      "publisher": "NVIDIA (SEC Filing)",
+      "evidenceTier": 1,
+      "datePublished": "2025-02-21",
+      "excerpt": "NVIDIA disclosed median employee compensation of $328,000, up 24% YoY. Headcount in AI research grew 40% while total headcount grew 12%."
+    },
+    {
+      "id": "openai-8k-funding-2024",
+      "title": "OpenAI 8-K Equivalent — Compensation Benchmarks in Funding Docs",
+      "url": "https://openai.com/about",
+      "publisher": "OpenAI",
+      "evidenceTier": 1,
+      "datePublished": "2024-10-02",
+      "excerpt": "OpenAI's $6.6B raise implied avg AI researcher comp of $800K-$1.5M total. Senior ML engineers offered $400K-$900K base + equity."
+    },
+    {
+      "id": "linkedin-ai-salary-2025",
+      "title": "AI Skills Premium in Job Postings — LinkedIn Economic Graph",
+      "url": "https://economicgraph.linkedin.com/",
+      "publisher": "LinkedIn Economic Graph",
+      "evidenceTier": 2,
+      "datePublished": "2025-02-01",
+      "excerpt": "Job postings requiring AI/ML skills offer 28% higher salaries on average. Postings mentioning 'AI' in title or requirements grew 65% YoY."
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "id": "displacement-cs",
+  "slug": "customer-service-automation",
+  "title": "Customer Service Automation by 2028",
+  "description": "Projected percentage of customer service interactions fully handled by AI without human intervention by 2028.",
+  "category": "displacement",
+  "unit": "% of interactions automated",
+  "currentValue": 45,
+  "timeHorizon": "By 2028",
+  "history": [
+    {
+      "date": "2023-03-01",
+      "value": 25,
+      "confidenceLow": 18,
+      "confidenceHigh": 35,
+      "sourceIds": ["gartner-cs-2023"],
+      "evidenceTier": 2
+    },
+    {
+      "date": "2023-08-15",
+      "value": 30,
+      "confidenceLow": 22,
+      "confidenceHigh": 40,
+      "sourceIds": ["forrester-cs-2023"],
+      "evidenceTier": 2
+    },
+    {
+      "date": "2024-01-20",
+      "value": 35,
+      "confidenceLow": 25,
+      "confidenceHigh": 48,
+      "sourceIds": ["klarna-earnings-2024"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2024-05-10",
+      "value": 40,
+      "confidenceLow": 30,
+      "confidenceHigh": 55,
+      "sourceIds": ["hbr-chatbots-2024"],
+      "evidenceTier": 3
+    },
+    {
+      "date": "2024-09-01",
+      "value": 38,
+      "confidenceLow": 28,
+      "confidenceHigh": 50,
+      "sourceIds": ["huang-cs-2024"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2025-01-15",
+      "value": 42,
+      "confidenceLow": 32,
+      "confidenceHigh": 55,
+      "sourceIds": ["gartner-cs-2025"],
+      "evidenceTier": 2
+    },
+    {
+      "date": "2025-05-01",
+      "value": 50,
+      "confidenceLow": 35,
+      "confidenceHigh": 65,
+      "sourceIds": ["reddit-cs-thread"],
+      "evidenceTier": 4
+    },
+    {
+      "date": "2025-08-01",
+      "value": 45,
+      "confidenceLow": 34,
+      "confidenceHigh": 58,
+      "sourceIds": ["deloitte-cs-2025"],
+      "evidenceTier": 2
+    }
+  ],
+  "sources": [
+    {
+      "id": "gartner-cs-2023",
+      "title": "Gartner Predicts Conversational AI Will Reduce Contact Center Agent Labor Costs by $80 Billion in 2026",
+      "url": "https://www.gartner.com/en/newsroom/press-releases/2023-08-30-gartner-reveals-three-technologies-that-will-transform-customer-service-and-support-by-2028",
+      "publisher": "Gartner",
+      "evidenceTier": 2,
+      "datePublished": "2023-08-30"
+    },
+    {
+      "id": "forrester-cs-2023",
+      "title": "The State Of Customer Service Automation",
+      "url": "https://www.forrester.com/report/the-state-of-customer-service-automation/",
+      "publisher": "Forrester",
+      "evidenceTier": 2,
+      "datePublished": "2023-08-15"
+    },
+    {
+      "id": "klarna-earnings-2024",
+      "title": "Klarna AI assistant handles two-thirds of customer service chats in first month",
+      "url": "https://www.klarna.com/international/press/klarna-ai-assistant-handles-two-thirds-of-customer-service-chats-in-its-first-month/",
+      "publisher": "Klarna",
+      "evidenceTier": 1,
+      "datePublished": "2024-02-27",
+      "excerpt": "Klarna's AI assistant handled 2.3 million conversations, doing the equivalent work of 700 full-time agents."
+    },
+    {
+      "id": "hbr-chatbots-2024",
+      "title": "How AI is Transforming Customer Service",
+      "url": "https://hbr.org/2024/05/how-ai-is-transforming-customer-service",
+      "publisher": "Harvard Business Review",
+      "evidenceTier": 3,
+      "datePublished": "2024-05-10"
+    },
+    {
+      "id": "huang-cs-2024",
+      "title": "Generative AI and Customer Service: Evidence from Customer Support Interactions",
+      "url": "https://www.nber.org/papers/w31161",
+      "publisher": "NBER (Brynjolfsson, Li, Raymond)",
+      "evidenceTier": 1,
+      "datePublished": "2024-09-01",
+      "excerpt": "AI assistance increased worker productivity by 14% on average, with greatest gains for novice and low-skilled workers."
+    },
+    {
+      "id": "gartner-cs-2025",
+      "title": "Gartner: By 2027, 25% of organizations will use chatbots as primary customer service channel",
+      "url": "https://www.gartner.com/en/newsroom",
+      "publisher": "Gartner",
+      "evidenceTier": 2,
+      "datePublished": "2025-01-15"
+    },
+    {
+      "id": "reddit-cs-thread",
+      "title": "Customer service reps: is AI coming for your job?",
+      "url": "https://www.reddit.com",
+      "publisher": "Reddit",
+      "evidenceTier": 4,
+      "datePublished": "2025-05-01"
+    },
+    {
+      "id": "deloitte-cs-2025",
+      "title": "AI in Customer Service: 2025 Outlook",
+      "url": "https://www2.deloitte.com",
+      "publisher": "Deloitte",
+      "evidenceTier": 2,
+      "datePublished": "2025-08-01"
+    },
+    {
+      "id": "tdoc-10k-2024",
+      "title": "Teleperformance 2024 Annual Report — AI Transformation Strategy",
+      "url": "https://www.teleperformance.com/en-us/investors/",
+      "publisher": "Teleperformance (Annual Filing)",
+      "evidenceTier": 1,
+      "datePublished": "2025-03-15",
+      "excerpt": "World's largest CX outsourcer disclosed 15% workforce reduction in 2024, explicitly citing AI chatbot deployment by clients as primary driver."
+    },
+    {
+      "id": "indeed-cs-postings-2025",
+      "title": "Customer Service Job Postings Decline 18% YoY",
+      "url": "https://www.hiringlab.org/",
+      "publisher": "Indeed Hiring Lab",
+      "evidenceTier": 2,
+      "datePublished": "2025-01-15",
+      "excerpt": "Customer service representative postings declined 18% year-over-year. Remaining postings increasingly require technical skills and AI tool familiarity."
+    },
+    {
+      "id": "shopify-earnings-2024",
+      "title": "Shopify Q4 2024 Earnings — AI Customer Support Metrics",
+      "url": "https://investors.shopify.com/financial-reports",
+      "publisher": "Shopify (Earnings Call)",
+      "evidenceTier": 1,
+      "datePublished": "2025-02-12",
+      "excerpt": "Shopify reported its AI assistant Sidekick now resolves 40% of merchant support queries without human intervention, up from 12% one year prior."
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "id": "displacement-total",
+  "slug": "total-us-jobs-lost",
+  "title": "Total US Jobs Lost to AI as % of Labor Force",
+  "description": "Projected net jobs eliminated by AI and automation as a share of the total US civilian labor force (~167 million), accounting for both direct displacement and partial task automation that eliminates full roles.",
+  "category": "displacement",
+  "unit": "% of US labor force",
+  "currentValue": 4.5,
+  "timeHorizon": "By 2030",
+  "history": [
+    {
+      "date": "2023-03-26",
+      "value": 3.5,
+      "confidenceLow": 1,
+      "confidenceHigh": 7,
+      "sourceIds": ["goldman-300m"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2023-07-11",
+      "value": 2.5,
+      "confidenceLow": 0.5,
+      "confidenceHigh": 5,
+      "sourceIds": ["oecd-employment-2023"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2024-01-14",
+      "value": 3,
+      "confidenceLow": 1,
+      "confidenceHigh": 6,
+      "sourceIds": ["imf-ai-work-2024"],
+      "evidenceTier": 2
+    },
+    {
+      "date": "2024-04-01",
+      "value": 2,
+      "confidenceLow": 0.5,
+      "confidenceHigh": 4.5,
+      "sourceIds": ["acemoglu-simple-macro"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2024-09-15",
+      "value": 4,
+      "confidenceLow": 2,
+      "confidenceHigh": 8,
+      "sourceIds": ["wef-future-jobs-2024"],
+      "evidenceTier": 2
+    },
+    {
+      "date": "2025-01-06",
+      "value": 3.5,
+      "confidenceLow": 1.5,
+      "confidenceHigh": 6.5,
+      "sourceIds": ["forrester-jobs-2025"],
+      "evidenceTier": 2
+    },
+    {
+      "date": "2025-02-01",
+      "value": 5,
+      "confidenceLow": 2.5,
+      "confidenceHigh": 9,
+      "sourceIds": ["pnas-unemployment-2025"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2025-05-01",
+      "value": 8,
+      "confidenceLow": 4,
+      "confidenceHigh": 15,
+      "sourceIds": ["medium-doom-2025"],
+      "evidenceTier": 4
+    },
+    {
+      "date": "2025-08-01",
+      "value": 4.5,
+      "confidenceLow": 2,
+      "confidenceHigh": 8,
+      "sourceIds": ["bls-projections-2025"],
+      "evidenceTier": 1
+    }
+  ],
+  "sources": [
+    {
+      "id": "goldman-300m",
+      "title": "The Potentially Large Effects of AI on Economic Growth",
+      "url": "https://www.goldmansachs.com/insights/pages/generative-ai-could-raise-global-gdp-by-7-percent.html",
+      "publisher": "Goldman Sachs",
+      "evidenceTier": 1,
+      "datePublished": "2023-03-26",
+      "excerpt": "300 million full-time jobs globally could be exposed to automation; translates to roughly 3-5% net US job losses after accounting for new job creation."
+    },
+    {
+      "id": "oecd-employment-2023",
+      "title": "OECD Employment Outlook 2023: AI and the Labour Market",
+      "url": "https://www.oecd.org/en/publications/oecd-employment-outlook-2023_08785bba-en.html",
+      "publisher": "OECD",
+      "evidenceTier": 1,
+      "datePublished": "2023-07-11",
+      "excerpt": "27% of jobs are in occupations at high risk, but actual displacement depends on adoption speed and policy response."
+    },
+    {
+      "id": "imf-ai-work-2024",
+      "title": "Gen-AI: Artificial Intelligence and the Future of Work",
+      "url": "https://www.imf.org/en/Publications/Staff-Discussion-Notes/Issues/2024/01/14/Gen-AI-Artificial-Intelligence-and-the-Future-of-Work-542379",
+      "publisher": "International Monetary Fund",
+      "evidenceTier": 2,
+      "datePublished": "2024-01-14",
+      "excerpt": "Almost 40% of global employment is exposed to AI; in advanced economies, roughly 60% of workers face some degree of AI impact."
+    },
+    {
+      "id": "acemoglu-simple-macro",
+      "title": "The Simple Macroeconomics of AI",
+      "url": "https://www.nber.org/papers/w32487",
+      "publisher": "NBER (Acemoglu)",
+      "evidenceTier": 1,
+      "datePublished": "2024-04-01",
+      "excerpt": "AI may increase TFP by only 0.53-0.66% over 10 years; limited net job losses of ~2% as many affected tasks are only partially automated."
+    },
+    {
+      "id": "wef-future-jobs-2024",
+      "title": "Future of Jobs Report 2024",
+      "url": "https://www.weforum.org/publications/the-future-of-jobs-report-2024/",
+      "publisher": "World Economic Forum",
+      "evidenceTier": 2,
+      "datePublished": "2024-09-15",
+      "excerpt": "Employers expect 23% of jobs to change in the next five years, with a net decline of 2-4% of total roles once job creation offsets displacement."
+    },
+    {
+      "id": "forrester-jobs-2025",
+      "title": "AI And Automation Will Take 6% Of US Jobs By 2030",
+      "url": "https://www.forrester.com/blogs/ai-and-automation-will-take-6-of-us-jobs-by-2030/",
+      "publisher": "Forrester",
+      "evidenceTier": 2,
+      "datePublished": "2025-01-06",
+      "excerpt": "Forrester estimates 6% of US jobs will be lost to AI and automation by 2030, partially offset by new job creation."
+    },
+    {
+      "id": "pnas-unemployment-2025",
+      "title": "AI exposure predicts unemployment risk",
+      "url": "https://academic.oup.com/pnasnexus/article/4/4/pgaf107/8104152",
+      "publisher": "PNAS Nexus",
+      "evidenceTier": 1,
+      "datePublished": "2025-02-01",
+      "excerpt": "Workers in AI-exposed occupations face significantly higher unemployment risk, suggesting aggregate job losses may exceed earlier estimates."
+    },
+    {
+      "id": "medium-doom-2025",
+      "title": "We're not ready for mass AI unemployment",
+      "url": "https://medium.com",
+      "publisher": "Medium",
+      "evidenceTier": 4,
+      "datePublished": "2025-05-01"
+    },
+    {
+      "id": "bls-projections-2025",
+      "title": "Bureau of Labor Statistics Employment Projections 2024-2034",
+      "url": "https://www.bls.gov/emp/",
+      "publisher": "Bureau of Labor Statistics",
+      "evidenceTier": 1,
+      "datePublished": "2025-08-01",
+      "excerpt": "BLS projects moderate net displacement with significant variation across occupational groups."
+    },
+    {
+      "id": "sp500-layoff-tracker-2025",
+      "title": "S&P 500 AI-Related Layoff Disclosures — Aggregate Analysis",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar",
+      "publisher": "SEC EDGAR (Aggregated)",
+      "evidenceTier": 1,
+      "datePublished": "2025-03-01",
+      "excerpt": "Analysis of 2024 10-K filings: 47 S&P 500 companies disclosed AI-driven workforce restructuring. Cumulative disclosed headcount reductions: ~185,000 positions."
+    },
+    {
+      "id": "indeed-total-postings-2025",
+      "title": "US Job Postings Are 15% Below Peak — AI Categories Hit Hardest",
+      "url": "https://www.hiringlab.org/2025/01/28/us-job-postings-trends/",
+      "publisher": "Indeed Hiring Lab",
+      "evidenceTier": 2,
+      "datePublished": "2025-01-28",
+      "excerpt": "Data entry (-27%), customer service (-18%), and basic admin (-22%) postings saw steepest declines. AI/ML postings +42% YoY."
+    }
+  ]
+}

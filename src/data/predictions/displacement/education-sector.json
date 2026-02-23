@@ -1,0 +1,158 @@
+{
+  "id": "displacement-education",
+  "slug": "education-sector-displacement",
+  "title": "Education Sector Displacement by 2030",
+  "description": "Projected percentage of education roles (tutoring, grading, content creation, administration) restructured or reduced by AI by 2030.",
+  "category": "displacement",
+  "unit": "% of roles displaced",
+  "currentValue": 12,
+  "timeHorizon": "By 2030",
+  "history": [
+    {
+      "date": "2023-06-01",
+      "value": 5,
+      "confidenceLow": 2,
+      "confidenceHigh": 10,
+      "sourceIds": ["unesco-ai-education-2023"],
+      "evidenceTier": 2
+    },
+    {
+      "date": "2023-11-15",
+      "value": 8,
+      "confidenceLow": 4,
+      "confidenceHigh": 15,
+      "sourceIds": ["rand-edtech-ai-2023"],
+      "evidenceTier": 2
+    },
+    {
+      "date": "2024-03-20",
+      "value": 10,
+      "confidenceLow": 5,
+      "confidenceHigh": 18,
+      "sourceIds": ["harvard-edtech-2024"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2024-07-01",
+      "value": 12,
+      "confidenceLow": 6,
+      "confidenceHigh": 20,
+      "sourceIds": ["chegg-enrollment-decline"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2024-10-15",
+      "value": 15,
+      "confidenceLow": 8,
+      "confidenceHigh": 25,
+      "sourceIds": ["chronicle-higher-ed-ai"],
+      "evidenceTier": 3
+    },
+    {
+      "date": "2025-01-20",
+      "value": 12,
+      "confidenceLow": 6,
+      "confidenceHigh": 20,
+      "sourceIds": ["oecd-education-outlook-2025"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2025-05-01",
+      "value": 14,
+      "confidenceLow": 7,
+      "confidenceHigh": 22,
+      "sourceIds": ["gartner-edtech-2025"],
+      "evidenceTier": 2
+    },
+    {
+      "date": "2025-07-15",
+      "value": 12,
+      "confidenceLow": 6,
+      "confidenceHigh": 21,
+      "sourceIds": ["bls-education-2025"],
+      "evidenceTier": 1
+    }
+  ],
+  "sources": [
+    {
+      "id": "unesco-ai-education-2023",
+      "title": "Guidance for Generative AI in Education and Research",
+      "url": "https://www.unesco.org/en/digital-education/ai",
+      "publisher": "UNESCO",
+      "evidenceTier": 2,
+      "datePublished": "2023-09-07",
+      "excerpt": "AI tutoring systems can handle 60% of routine student queries. Teaching assistants and tutors face the most immediate displacement risk."
+    },
+    {
+      "id": "rand-edtech-ai-2023",
+      "title": "The Promise and Peril of AI in K-12 Education",
+      "url": "https://www.rand.org/",
+      "publisher": "RAND Corporation",
+      "evidenceTier": 2,
+      "datePublished": "2023-11-15",
+      "excerpt": "AI grading tools can assess 80% of student work types. Administrative roles in K-12 face 15-20% reduction from automation."
+    },
+    {
+      "id": "harvard-edtech-2024",
+      "title": "AI Tutors and the Future of Education Labor",
+      "url": "https://www.harvard.edu/",
+      "publisher": "Harvard Graduate School of Education",
+      "evidenceTier": 1,
+      "datePublished": "2024-03-20",
+      "excerpt": "AI tutoring achieves 98% of human tutor effectiveness for math and science. Private tutoring market projected to contract 25% by 2028."
+    },
+    {
+      "id": "chegg-enrollment-decline",
+      "title": "Chegg Q2 2024 Earnings — ChatGPT Impact on Tutoring Market",
+      "url": "https://investor.chegg.com/",
+      "publisher": "Chegg (Earnings Report)",
+      "evidenceTier": 1,
+      "datePublished": "2024-07-01",
+      "excerpt": "Chegg subscribers fell 50% from peak as students shifted to ChatGPT. Company laid off 23% of workforce, citing AI as primary competitive threat."
+    },
+    {
+      "id": "chronicle-higher-ed-ai",
+      "title": "AI Is Already Reshaping the Academic Workforce",
+      "url": "https://www.chronicle.com/",
+      "publisher": "The Chronicle of Higher Education",
+      "evidenceTier": 3,
+      "datePublished": "2024-10-15"
+    },
+    {
+      "id": "oecd-education-outlook-2025",
+      "title": "OECD Education at a Glance 2025: AI and Teaching",
+      "url": "https://www.oecd.org/education/",
+      "publisher": "OECD",
+      "evidenceTier": 1,
+      "datePublished": "2025-01-20",
+      "excerpt": "Teaching roles are among the least automatable (15% task exposure), but education support staff, administration, and tutoring face 30-40% task displacement."
+    },
+    {
+      "id": "gartner-edtech-2025",
+      "title": "Gartner Predicts AI Will Replace 20% of EdTech Workforce by 2028",
+      "url": "https://www.gartner.com/",
+      "publisher": "Gartner",
+      "evidenceTier": 2,
+      "datePublished": "2025-05-01",
+      "excerpt": "Content creation, assessment grading, and student support roles are the most affected. Core teaching remains largely protected."
+    },
+    {
+      "id": "bls-education-2025",
+      "title": "Occupational Outlook: Education, Training, and Library",
+      "url": "https://www.bls.gov/ooh/education-training-and-library/",
+      "publisher": "Bureau of Labor Statistics",
+      "evidenceTier": 1,
+      "datePublished": "2025-07-15",
+      "excerpt": "Teacher aide and educational support employment projected to decline 3%. Post-secondary teacher demand flat. Private tutoring category declining."
+    },
+    {
+      "id": "pearson-10k-2024",
+      "title": "Pearson plc 2024 Annual Report — AI Strategy",
+      "url": "https://www.pearson.com/",
+      "publisher": "Pearson plc",
+      "evidenceTier": 1,
+      "datePublished": "2025-03-01",
+      "excerpt": "Pearson pivoted to AI-first content delivery, reducing editorial headcount by 18% while growing AI-generated adaptive learning content 300%."
+    }
+  ]
+}

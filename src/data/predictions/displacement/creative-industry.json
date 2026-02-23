@@ -1,0 +1,158 @@
+{
+  "id": "displacement-creative",
+  "slug": "creative-industry-displacement",
+  "title": "Creative Industry Displacement by 2030",
+  "description": "Projected percentage of creative roles (design, writing, marketing) significantly restructured or eliminated by generative AI by 2030.",
+  "category": "displacement",
+  "unit": "% of roles displaced",
+  "currentValue": 20,
+  "timeHorizon": "By 2030",
+  "history": [
+    {
+      "date": "2023-04-01",
+      "value": 10,
+      "confidenceLow": 5,
+      "confidenceHigh": 20,
+      "sourceIds": ["wef-creative-2023"],
+      "evidenceTier": 2
+    },
+    {
+      "date": "2023-09-15",
+      "value": 14,
+      "confidenceLow": 8,
+      "confidenceHigh": 24,
+      "sourceIds": ["mckinsey-creative-automation"],
+      "evidenceTier": 2
+    },
+    {
+      "date": "2024-02-01",
+      "value": 16,
+      "confidenceLow": 9,
+      "confidenceHigh": 26,
+      "sourceIds": ["adobe-creative-survey-2024"],
+      "evidenceTier": 2
+    },
+    {
+      "date": "2024-05-20",
+      "value": 22,
+      "confidenceLow": 14,
+      "confidenceHigh": 34,
+      "sourceIds": ["upwork-freelancer-impact"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2024-08-15",
+      "value": 18,
+      "confidenceLow": 10,
+      "confidenceHigh": 28,
+      "sourceIds": ["nber-creative-ai-2024"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2024-11-01",
+      "value": 25,
+      "confidenceLow": 16,
+      "confidenceHigh": 38,
+      "sourceIds": ["techcrunch-creative-layoffs"],
+      "evidenceTier": 3
+    },
+    {
+      "date": "2025-02-15",
+      "value": 20,
+      "confidenceLow": 12,
+      "confidenceHigh": 30,
+      "sourceIds": ["forrester-creative-2025"],
+      "evidenceTier": 2
+    },
+    {
+      "date": "2025-06-01",
+      "value": 20,
+      "confidenceLow": 12,
+      "confidenceHigh": 32,
+      "sourceIds": ["bls-creative-occupations-2025"],
+      "evidenceTier": 1
+    }
+  ],
+  "sources": [
+    {
+      "id": "wef-creative-2023",
+      "title": "Future of Jobs Report 2023 — Creative and Media Professions",
+      "url": "https://www.weforum.org/publications/the-future-of-jobs-report-2023/",
+      "publisher": "World Economic Forum",
+      "evidenceTier": 2,
+      "datePublished": "2023-04-30",
+      "excerpt": "Graphic designers, copywriters, and marketing analysts are among the roles employers expect to decline most rapidly due to generative AI."
+    },
+    {
+      "id": "mckinsey-creative-automation",
+      "title": "The economic potential of generative AI — Creative work",
+      "url": "https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier",
+      "publisher": "McKinsey Global Institute",
+      "evidenceTier": 2,
+      "datePublished": "2023-06-14",
+      "excerpt": "Generative AI could automate 25-40% of time spent on creative tasks, fundamentally changing the economics of content production."
+    },
+    {
+      "id": "adobe-creative-survey-2024",
+      "title": "Adobe Future of Creativity Survey 2024",
+      "url": "https://www.adobe.com/",
+      "publisher": "Adobe",
+      "evidenceTier": 2,
+      "datePublished": "2024-02-01",
+      "excerpt": "74% of creative professionals report using AI tools. 30% say AI has reduced the scope of work they're hired for."
+    },
+    {
+      "id": "upwork-freelancer-impact",
+      "title": "Upwork Q2 2024 Earnings — Freelancer Market Trends",
+      "url": "https://investors.upwork.com/",
+      "publisher": "Upwork (Earnings Report)",
+      "evidenceTier": 1,
+      "datePublished": "2024-05-20",
+      "excerpt": "Writing and translation freelancer earnings declined 30% YoY. Graphic design jobs fell 17%. AI-augmented creative roles grew 45%."
+    },
+    {
+      "id": "nber-creative-ai-2024",
+      "title": "Generative AI and Creative Work: Evidence from Freelance Platforms",
+      "url": "https://www.nber.org/",
+      "publisher": "NBER",
+      "evidenceTier": 1,
+      "datePublished": "2024-08-15",
+      "excerpt": "Image generation AI reduced demand for freelance illustrators by 21% within 12 months of widespread availability."
+    },
+    {
+      "id": "techcrunch-creative-layoffs",
+      "title": "Creative studios slash headcount as AI tools mature",
+      "url": "https://techcrunch.com/",
+      "publisher": "TechCrunch",
+      "evidenceTier": 3,
+      "datePublished": "2024-11-01"
+    },
+    {
+      "id": "forrester-creative-2025",
+      "title": "The Impact of Generative AI on Marketing and Creative Roles",
+      "url": "https://www.forrester.com/",
+      "publisher": "Forrester",
+      "evidenceTier": 2,
+      "datePublished": "2025-02-15",
+      "excerpt": "By 2028, 20% of marketing content will be generated entirely by AI. Creative teams will shrink 15-25% but output will increase."
+    },
+    {
+      "id": "bls-creative-occupations-2025",
+      "title": "Occupational Outlook: Arts, Design, Entertainment, Sports, and Media",
+      "url": "https://www.bls.gov/ooh/arts-and-design/",
+      "publisher": "Bureau of Labor Statistics",
+      "evidenceTier": 1,
+      "datePublished": "2025-06-01",
+      "excerpt": "Graphic designer employment projected to decline 4% through 2033. Technical writers projected flat. New AI-creative hybrid roles growing."
+    },
+    {
+      "id": "fiverr-10k-2024",
+      "title": "Fiverr International 2024 10-K — Market Trends",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?company=fiverr&CIK=&type=10-K",
+      "publisher": "Fiverr (SEC Filing)",
+      "evidenceTier": 1,
+      "datePublished": "2025-02-20",
+      "excerpt": "Fiverr reported that AI-related categories grew 55% YoY while traditional writing and basic design categories declined 22%."
+    }
+  ]
+}

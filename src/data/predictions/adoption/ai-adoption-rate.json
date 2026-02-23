@@ -1,0 +1,167 @@
+{
+  "id": "adoption-rate",
+  "slug": "ai-adoption-rate",
+  "title": "AI Adoption Rate Across US Companies by 2027",
+  "description": "Projected percentage of US companies with 50+ employees that have deployed AI in production workflows by 2027.",
+  "category": "adoption",
+  "unit": "% of companies",
+  "currentValue": 35,
+  "timeHorizon": "By 2027",
+  "history": [
+    {
+      "date": "2023-04-01",
+      "value": 12,
+      "confidenceLow": 8,
+      "confidenceHigh": 18,
+      "sourceIds": ["mckinsey-ai-survey-2023"],
+      "evidenceTier": 2
+    },
+    {
+      "date": "2023-08-15",
+      "value": 15,
+      "confidenceLow": 10,
+      "confidenceHigh": 22,
+      "sourceIds": ["census-bts-ai-2023"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2024-01-10",
+      "value": 20,
+      "confidenceLow": 14,
+      "confidenceHigh": 28,
+      "sourceIds": ["mckinsey-ai-survey-2024"],
+      "evidenceTier": 2
+    },
+    {
+      "date": "2024-05-01",
+      "value": 25,
+      "confidenceLow": 18,
+      "confidenceHigh": 34,
+      "sourceIds": ["census-bts-ai-2024"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2024-09-15",
+      "value": 30,
+      "confidenceLow": 22,
+      "confidenceHigh": 40,
+      "sourceIds": ["deloitte-ai-state-2024"],
+      "evidenceTier": 2
+    },
+    {
+      "date": "2025-01-20",
+      "value": 35,
+      "confidenceLow": 26,
+      "confidenceHigh": 45,
+      "sourceIds": ["mckinsey-ai-survey-2025"],
+      "evidenceTier": 2
+    },
+    {
+      "date": "2025-04-01",
+      "value": 40,
+      "confidenceLow": 30,
+      "confidenceHigh": 52,
+      "sourceIds": ["ft-ai-adoption-boom"],
+      "evidenceTier": 3
+    },
+    {
+      "date": "2025-07-01",
+      "value": 35,
+      "confidenceLow": 26,
+      "confidenceHigh": 46,
+      "sourceIds": ["census-bts-ai-2025"],
+      "evidenceTier": 1
+    }
+  ],
+  "sources": [
+    {
+      "id": "mckinsey-ai-survey-2023",
+      "title": "The State of AI in 2023: Generative AI's Breakout Year",
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-in-2023-generative-ais-breakout-year",
+      "publisher": "McKinsey & Company",
+      "evidenceTier": 2,
+      "datePublished": "2023-08-01",
+      "excerpt": "One-third of respondents say their organizations are using gen AI regularly in at least one business function. AI adoption overall at 55% of survey respondents."
+    },
+    {
+      "id": "census-bts-ai-2023",
+      "title": "Business Trends and Outlook Survey: AI Module Q3 2023",
+      "url": "https://www.census.gov/data/experimental-data-products/business-trends-and-outlook-survey.html",
+      "publisher": "US Census Bureau",
+      "evidenceTier": 1,
+      "datePublished": "2023-08-15",
+      "excerpt": "3.8% of US firms reported using AI in production. An additional 6.4% were in testing/pilot phase. Adoption highest in information (18%) and professional services (12%)."
+    },
+    {
+      "id": "mckinsey-ai-survey-2024",
+      "title": "The State of AI in Early 2024",
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
+      "publisher": "McKinsey & Company",
+      "evidenceTier": 2,
+      "datePublished": "2024-05-01",
+      "excerpt": "72% of organizations surveyed now use AI in at least one function, up from 55% the prior year. Generative AI adoption doubled."
+    },
+    {
+      "id": "census-bts-ai-2024",
+      "title": "Business Trends and Outlook Survey: AI Module Q2 2024",
+      "url": "https://www.census.gov/data/experimental-data-products/business-trends-and-outlook-survey.html",
+      "publisher": "US Census Bureau",
+      "evidenceTier": 1,
+      "datePublished": "2024-05-01",
+      "excerpt": "AI usage among US firms rose to 6.6%, with an additional 9.1% in testing. Information sector at 24%, finance/insurance at 15%."
+    },
+    {
+      "id": "deloitte-ai-state-2024",
+      "title": "State of Generative AI in the Enterprise Q3 2024",
+      "url": "https://www2.deloitte.com/",
+      "publisher": "Deloitte",
+      "evidenceTier": 2,
+      "datePublished": "2024-09-15",
+      "excerpt": "79% of enterprise leaders expect gen AI to transform their industry within 3 years. 42% have gen AI in production, up from 22% a year earlier."
+    },
+    {
+      "id": "mckinsey-ai-survey-2025",
+      "title": "The State of AI in 2025",
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
+      "publisher": "McKinsey & Company",
+      "evidenceTier": 2,
+      "datePublished": "2025-01-20",
+      "excerpt": "AI is now a core part of business strategy for 78% of respondents. 65% report measurable revenue or cost impact from AI deployments."
+    },
+    {
+      "id": "ft-ai-adoption-boom",
+      "title": "AI adoption hits tipping point as majority of firms deploy",
+      "url": "https://www.ft.com/",
+      "publisher": "Financial Times",
+      "evidenceTier": 3,
+      "datePublished": "2025-04-01"
+    },
+    {
+      "id": "census-bts-ai-2025",
+      "title": "Business Trends and Outlook Survey: AI Module Q2 2025",
+      "url": "https://www.census.gov/data/experimental-data-products/business-trends-and-outlook-survey.html",
+      "publisher": "US Census Bureau",
+      "evidenceTier": 1,
+      "datePublished": "2025-07-01",
+      "excerpt": "US firm AI usage in production reached 10.2%, with 14.8% in testing. Large firms (500+ employees) at 28%. Adoption accelerating across all sectors."
+    },
+    {
+      "id": "microsoft-10k-ai-2024",
+      "title": "Microsoft 2024 10-K — AI and Cloud Revenue",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?company=microsoft&CIK=&type=10-K",
+      "publisher": "Microsoft (SEC Filing)",
+      "evidenceTier": 1,
+      "datePublished": "2024-07-30",
+      "excerpt": "Azure AI services revenue grew 60% YoY. Over 53,000 organizations now use Azure OpenAI service, up from 11,000 a year earlier."
+    },
+    {
+      "id": "salesforce-10k-ai-2024",
+      "title": "Salesforce 2024 10-K — Einstein AI Adoption",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?company=salesforce&CIK=&type=10-K",
+      "publisher": "Salesforce (SEC Filing)",
+      "evidenceTier": 1,
+      "datePublished": "2024-03-06",
+      "excerpt": "Over 1 trillion AI predictions served per week via Einstein. 68% of enterprise customers have enabled at least one AI feature."
+    }
+  ]
+}

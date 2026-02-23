@@ -1,0 +1,149 @@
+{
+  "id": "wages-freelancer",
+  "slug": "freelancer-rate-impact",
+  "title": "Freelancer/Gig Worker Rate Impact by 2028",
+  "description": "Projected change in average freelancer hourly rates for AI-exposed categories (writing, design, translation, data work) by 2028.",
+  "category": "wages",
+  "unit": "% rate change",
+  "currentValue": -22,
+  "timeHorizon": "By 2028",
+  "history": [
+    {
+      "date": "2023-06-01",
+      "value": -5,
+      "confidenceLow": -12,
+      "confidenceHigh": 2,
+      "sourceIds": ["upwork-trends-2023"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2023-11-01",
+      "value": -10,
+      "confidenceLow": -18,
+      "confidenceHigh": -3,
+      "sourceIds": ["fiverr-market-report-2023"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2024-03-15",
+      "value": -15,
+      "confidenceLow": -24,
+      "confidenceHigh": -8,
+      "sourceIds": ["nber-freelance-ai-2024"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2024-07-01",
+      "value": -20,
+      "confidenceLow": -30,
+      "confidenceHigh": -12,
+      "sourceIds": ["upwork-earnings-q2-2024"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2024-10-15",
+      "value": -25,
+      "confidenceLow": -35,
+      "confidenceHigh": -15,
+      "sourceIds": ["ft-gig-economy-squeeze"],
+      "evidenceTier": 3
+    },
+    {
+      "date": "2025-01-20",
+      "value": -22,
+      "confidenceLow": -32,
+      "confidenceHigh": -14,
+      "sourceIds": ["mckinsey-gig-2025"],
+      "evidenceTier": 2
+    },
+    {
+      "date": "2025-05-01",
+      "value": -18,
+      "confidenceLow": -28,
+      "confidenceHigh": -10,
+      "sourceIds": ["ilo-gig-workers-2025"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2025-07-15",
+      "value": -22,
+      "confidenceLow": -33,
+      "confidenceHigh": -13,
+      "sourceIds": ["bls-contingent-2025"],
+      "evidenceTier": 1
+    }
+  ],
+  "sources": [
+    {
+      "id": "upwork-trends-2023",
+      "title": "Upwork Freelance Forward 2023",
+      "url": "https://www.upwork.com/research/freelance-forward-2023",
+      "publisher": "Upwork",
+      "evidenceTier": 1,
+      "datePublished": "2023-06-01",
+      "excerpt": "Writing freelancers reported 15% fewer job postings; early signs of rate compression in translation and content categories."
+    },
+    {
+      "id": "fiverr-market-report-2023",
+      "title": "Fiverr Business Trends Report H2 2023",
+      "url": "https://www.fiverr.com/",
+      "publisher": "Fiverr",
+      "evidenceTier": 1,
+      "datePublished": "2023-11-01",
+      "excerpt": "Average order value for writing gigs declined 20%. AI-assisted gig categories (AI art, prompt writing) grew 4x but at lower price points."
+    },
+    {
+      "id": "nber-freelance-ai-2024",
+      "title": "The Impact of Generative AI on Freelance Labor Markets",
+      "url": "https://www.nber.org/",
+      "publisher": "NBER (Hui, Reshef, Zhou)",
+      "evidenceTier": 1,
+      "datePublished": "2024-03-15",
+      "excerpt": "ChatGPT's launch caused a 21% decline in freelance writing job postings and a 15% drop in average hourly rates within 6 months."
+    },
+    {
+      "id": "upwork-earnings-q2-2024",
+      "title": "Upwork Q2 2024 Earnings Report",
+      "url": "https://investors.upwork.com/",
+      "publisher": "Upwork (SEC Filing)",
+      "evidenceTier": 1,
+      "datePublished": "2024-07-01",
+      "excerpt": "Gross services volume in writing declined 33% YoY. Translation down 40%. Company pivoting to AI-augmented freelancer model."
+    },
+    {
+      "id": "ft-gig-economy-squeeze",
+      "title": "The AI squeeze on gig economy workers",
+      "url": "https://www.ft.com/",
+      "publisher": "Financial Times",
+      "evidenceTier": 3,
+      "datePublished": "2024-10-15"
+    },
+    {
+      "id": "mckinsey-gig-2025",
+      "title": "Independent Work in the Age of AI",
+      "url": "https://www.mckinsey.com/",
+      "publisher": "McKinsey Global Institute",
+      "evidenceTier": 2,
+      "datePublished": "2025-01-20",
+      "excerpt": "AI-exposed freelance categories face 20-35% rate compression. High-skill freelancers who adopt AI see rates hold or increase."
+    },
+    {
+      "id": "ilo-gig-workers-2025",
+      "title": "World Employment and Social Outlook 2025: Platform Labour",
+      "url": "https://www.ilo.org/",
+      "publisher": "International Labour Organization",
+      "evidenceTier": 1,
+      "datePublished": "2025-05-01",
+      "excerpt": "Platform workers in writing, translation, and data labeling report median earnings declines of 15-25% since 2023."
+    },
+    {
+      "id": "bls-contingent-2025",
+      "title": "Contingent and Alternative Employment Arrangements — 2025",
+      "url": "https://www.bls.gov/",
+      "publisher": "Bureau of Labor Statistics",
+      "evidenceTier": 1,
+      "datePublished": "2025-07-15",
+      "excerpt": "Median weekly earnings for freelance writers and designers declined 18% in real terms from 2022-2025."
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "id": "wages-entry-level",
+  "slug": "entry-level-wage-impact",
+  "title": "Entry-Level Wage Impact from AI by 2030",
+  "description": "Projected change in real wages for entry-level positions (0-2 years experience) across AI-exposed industries by 2030.",
+  "category": "wages",
+  "unit": "% wage change",
+  "currentValue": -8,
+  "timeHorizon": "By 2030",
+  "history": [
+    {
+      "date": "2023-05-01",
+      "value": -3,
+      "confidenceLow": -8,
+      "confidenceHigh": 1,
+      "sourceIds": ["indeed-entry-level-2023"],
+      "evidenceTier": 2
+    },
+    {
+      "date": "2023-10-15",
+      "value": -4,
+      "confidenceLow": -10,
+      "confidenceHigh": 0,
+      "sourceIds": ["nber-entry-wage-2023"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2024-02-01",
+      "value": -6,
+      "confidenceLow": -12,
+      "confidenceHigh": -1,
+      "sourceIds": ["goldman-entry-level-2024"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2024-06-15",
+      "value": -8,
+      "confidenceLow": -15,
+      "confidenceHigh": -3,
+      "sourceIds": ["brookings-entry-level-2024"],
+      "evidenceTier": 2
+    },
+    {
+      "date": "2024-09-01",
+      "value": -7,
+      "confidenceLow": -13,
+      "confidenceHigh": -2,
+      "sourceIds": ["mit-entry-wage-2024"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2025-01-15",
+      "value": -10,
+      "confidenceLow": -18,
+      "confidenceHigh": -4,
+      "sourceIds": ["wsj-entry-level-squeeze"],
+      "evidenceTier": 3
+    },
+    {
+      "date": "2025-04-01",
+      "value": -8,
+      "confidenceLow": -15,
+      "confidenceHigh": -3,
+      "sourceIds": ["oecd-youth-employment-2025"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2025-07-01",
+      "value": -8,
+      "confidenceLow": -14,
+      "confidenceHigh": -3,
+      "sourceIds": ["bls-entry-wages-2025"],
+      "evidenceTier": 1
+    }
+  ],
+  "sources": [
+    {
+      "id": "indeed-entry-level-2023",
+      "title": "Entry-Level Job Market Update — Indeed Hiring Lab",
+      "url": "https://www.hiringlab.org/",
+      "publisher": "Indeed Hiring Lab",
+      "evidenceTier": 2,
+      "datePublished": "2023-05-01",
+      "excerpt": "Entry-level job postings in AI-exposed fields declined 12% YoY. Starting salaries for junior analysts, associates, and coordinators showed early downward pressure."
+    },
+    {
+      "id": "nber-entry-wage-2023",
+      "title": "The Displacement Effects of AI on Entry-Level Workers",
+      "url": "https://www.nber.org/",
+      "publisher": "NBER",
+      "evidenceTier": 1,
+      "datePublished": "2023-10-15",
+      "excerpt": "Entry-level tasks are disproportionately automatable — 35% of junior role tasks vs. 18% of senior role tasks are within current AI capability."
+    },
+    {
+      "id": "goldman-entry-level-2024",
+      "title": "AI and the Entry-Level Workforce: Economic Impacts",
+      "url": "https://www.goldmansachs.com/",
+      "publisher": "Goldman Sachs",
+      "evidenceTier": 1,
+      "datePublished": "2024-02-01",
+      "excerpt": "Entry-level positions face the highest displacement risk per dollar of compensation. Estimated 5-10% real wage decline for new graduates by 2028."
+    },
+    {
+      "id": "brookings-entry-level-2024",
+      "title": "Young Workers and the AI Transition",
+      "url": "https://www.brookings.edu/",
+      "publisher": "Brookings Institution",
+      "evidenceTier": 2,
+      "datePublished": "2024-06-15",
+      "excerpt": "Employers increasingly require AI skills for entry-level roles while offering lower starting salaries for traditional positions."
+    },
+    {
+      "id": "mit-entry-wage-2024",
+      "title": "Entry-Level Labor Markets in the Age of AI",
+      "url": "https://economics.mit.edu/",
+      "publisher": "MIT (Autor, Salomons)",
+      "evidenceTier": 1,
+      "datePublished": "2024-09-01",
+      "excerpt": "AI reduces the return to experience for routine cognitive tasks. Entry-level workers in finance, admin, and customer service face 6-12% real wage pressure."
+    },
+    {
+      "id": "wsj-entry-level-squeeze",
+      "title": "Entry-Level Jobs Are Vanishing — and AI Is a Big Reason",
+      "url": "https://www.wsj.com/",
+      "publisher": "The Wall Street Journal",
+      "evidenceTier": 3,
+      "datePublished": "2025-01-15"
+    },
+    {
+      "id": "oecd-youth-employment-2025",
+      "title": "OECD Youth Employment Outlook 2025",
+      "url": "https://www.oecd.org/",
+      "publisher": "OECD",
+      "evidenceTier": 1,
+      "datePublished": "2025-04-01",
+      "excerpt": "Youth (18-24) employment in OECD countries in AI-exposed sectors declined 4.5% YoY. Real starting salaries fell 3-8% across knowledge-work sectors."
+    },
+    {
+      "id": "bls-entry-wages-2025",
+      "title": "Usual Weekly Earnings — Workers 16-24",
+      "url": "https://www.bls.gov/cps/",
+      "publisher": "Bureau of Labor Statistics",
+      "evidenceTier": 1,
+      "datePublished": "2025-07-01",
+      "excerpt": "Real median weekly earnings for workers aged 16-24 in professional services fell 5.2% from 2023 to 2025."
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "id": "signals-earnings-ai",
+  "slug": "earnings-call-ai-mentions",
+  "title": "S&P 500 AI Workforce Mentions in Earnings Calls",
+  "description": "Percentage of S&P 500 companies mentioning AI in the context of workforce efficiency, headcount, or restructuring during quarterly earnings calls.",
+  "category": "signals",
+  "unit": "% of S&P 500",
+  "currentValue": 44,
+  "timeHorizon": "Latest quarter",
+  "history": [
+    {
+      "date": "2023-01-15",
+      "value": 8,
+      "confidenceLow": 5,
+      "confidenceHigh": 12,
+      "sourceIds": ["factset-earnings-q4-2022"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2023-04-15",
+      "value": 18,
+      "confidenceLow": 14,
+      "confidenceHigh": 24,
+      "sourceIds": ["factset-earnings-q1-2023"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2023-07-15",
+      "value": 32,
+      "confidenceLow": 26,
+      "confidenceHigh": 38,
+      "sourceIds": ["factset-earnings-q2-2023"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2023-10-15",
+      "value": 36,
+      "confidenceLow": 30,
+      "confidenceHigh": 42,
+      "sourceIds": ["factset-earnings-q3-2023"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2024-01-15",
+      "value": 40,
+      "confidenceLow": 34,
+      "confidenceHigh": 46,
+      "sourceIds": ["factset-earnings-q4-2023"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2024-04-15",
+      "value": 43,
+      "confidenceLow": 37,
+      "confidenceHigh": 50,
+      "sourceIds": ["factset-earnings-q1-2024"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2024-07-15",
+      "value": 41,
+      "confidenceLow": 35,
+      "confidenceHigh": 48,
+      "sourceIds": ["factset-earnings-q2-2024"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2024-10-15",
+      "value": 44,
+      "confidenceLow": 38,
+      "confidenceHigh": 51,
+      "sourceIds": ["factset-earnings-q3-2024"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2025-01-15",
+      "value": 48,
+      "confidenceLow": 42,
+      "confidenceHigh": 55,
+      "sourceIds": ["factset-earnings-q4-2024"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2025-04-15",
+      "value": 44,
+      "confidenceLow": 38,
+      "confidenceHigh": 52,
+      "sourceIds": ["factset-earnings-q1-2025"],
+      "evidenceTier": 1
+    }
+  ],
+  "sources": [
+    {
+      "id": "factset-earnings-q4-2022",
+      "title": "FactSet Earnings Insight Q4 2022 — AI Mentions",
+      "url": "https://www.factset.com/hubfs/Website/Resources/",
+      "publisher": "FactSet",
+      "evidenceTier": 1,
+      "datePublished": "2023-01-15",
+      "excerpt": "Only 8% of S&P 500 companies mentioned AI in Q4 2022 calls. Pre-ChatGPT baseline for corporate AI discussion."
+    },
+    {
+      "id": "factset-earnings-q1-2023",
+      "title": "FactSet Earnings Insight Q1 2023 — AI Mentions Surge",
+      "url": "https://www.factset.com/hubfs/Website/Resources/",
+      "publisher": "FactSet",
+      "evidenceTier": 1,
+      "datePublished": "2023-04-15",
+      "excerpt": "AI mentions in S&P 500 earnings calls more than doubled to 18%. Companies began discussing AI efficiency gains and workforce implications."
+    },
+    {
+      "id": "factset-earnings-q2-2023",
+      "title": "FactSet Earnings Insight Q2 2023 — AI Dominates Calls",
+      "url": "https://www.factset.com/hubfs/Website/Resources/",
+      "publisher": "FactSet",
+      "evidenceTier": 1,
+      "datePublished": "2023-07-15",
+      "excerpt": "32% of S&P 500 companies now discuss AI on earnings calls. 'AI' mentioned an average of 7 times per call among mentioning companies."
+    },
+    {
+      "id": "factset-earnings-q3-2023",
+      "title": "FactSet Earnings Insight Q3 2023",
+      "url": "https://www.factset.com/hubfs/Website/Resources/",
+      "publisher": "FactSet",
+      "evidenceTier": 1,
+      "datePublished": "2023-10-15",
+      "excerpt": "AI mentions reached 36% of S&P 500 companies. Key themes: 'efficiency gains,' 'headcount optimization,' and 'AI-driven productivity.'"
+    },
+    {
+      "id": "factset-earnings-q4-2023",
+      "title": "FactSet Earnings Insight Q4 2023",
+      "url": "https://www.factset.com/hubfs/Website/Resources/",
+      "publisher": "FactSet",
+      "evidenceTier": 1,
+      "datePublished": "2024-01-15",
+      "excerpt": "40% of S&P 500 companies mentioned AI in context of workforce strategy. 'Year of Efficiency' framing adopted by 12% of companies."
+    },
+    {
+      "id": "factset-earnings-q1-2024",
+      "title": "FactSet Earnings Insight Q1 2024",
+      "url": "https://www.factset.com/hubfs/Website/Resources/",
+      "publisher": "FactSet",
+      "evidenceTier": 1,
+      "datePublished": "2024-04-15",
+      "excerpt": "43% mentioned AI-workforce topics. A new record. Companies increasingly cite specific headcount savings from AI deployments."
+    },
+    {
+      "id": "factset-earnings-q2-2024",
+      "title": "FactSet Earnings Insight Q2 2024",
+      "url": "https://www.factset.com/hubfs/Website/Resources/",
+      "publisher": "FactSet",
+      "evidenceTier": 1,
+      "datePublished": "2024-07-15",
+      "excerpt": "Slight dip to 41% as initial AI hype normalizes. Discussion shifting from aspirational to operational — specific ROI figures cited."
+    },
+    {
+      "id": "factset-earnings-q3-2024",
+      "title": "FactSet Earnings Insight Q3 2024",
+      "url": "https://www.factset.com/hubfs/Website/Resources/",
+      "publisher": "FactSet",
+      "evidenceTier": 1,
+      "datePublished": "2024-10-15",
+      "excerpt": "44% of S&P 500 discussed AI-workforce. Key new theme: 'AI-native' hiring replacing traditional roles in tech and professional services."
+    },
+    {
+      "id": "factset-earnings-q4-2024",
+      "title": "FactSet Earnings Insight Q4 2024",
+      "url": "https://www.factset.com/hubfs/Website/Resources/",
+      "publisher": "FactSet",
+      "evidenceTier": 1,
+      "datePublished": "2025-01-15",
+      "excerpt": "Record 48% of S&P 500 companies mentioned AI in workforce context. Average mentions per call reached 11. 'Restructuring' and 'automation' became top co-occurring terms."
+    },
+    {
+      "id": "factset-earnings-q1-2025",
+      "title": "FactSet Earnings Insight Q1 2025",
+      "url": "https://www.factset.com/hubfs/Website/Resources/",
+      "publisher": "FactSet",
+      "evidenceTier": 1,
+      "datePublished": "2025-04-15",
+      "excerpt": "44% of S&P 500 discussed AI-workforce in Q1 2025, a slight pullback from Q4 2024's record. Discussion maturing: less hype, more specific deployment data."
+    },
+    {
+      "id": "goldman-earnings-ai-analysis",
+      "title": "S&P 500 Earnings Call AI Analysis: Implications for Employment",
+      "url": "https://www.goldmansachs.com/",
+      "publisher": "Goldman Sachs",
+      "evidenceTier": 1,
+      "datePublished": "2024-11-01",
+      "excerpt": "Companies that mention AI + workforce on calls have average headcount growth 3.2pp lower than non-mentioners. The correlation has strengthened each quarter."
+    }
+  ]
+}

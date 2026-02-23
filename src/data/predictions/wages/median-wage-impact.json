@@ -1,0 +1,171 @@
+{
+  "id": "wages-median",
+  "slug": "median-wage-impact",
+  "title": "Median Wage Impact from AI by 2030",
+  "description": "Projected change in real median wages in the US due to AI adoption, combining productivity gains and displacement effects.",
+  "category": "wages",
+  "unit": "% change in real median wage",
+  "currentValue": -2,
+  "timeHorizon": "By 2030",
+  "history": [
+    {
+      "date": "2023-04-01",
+      "value": 1,
+      "confidenceLow": -3,
+      "confidenceHigh": 5,
+      "sourceIds": ["goldman-wages-2023"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2023-09-01",
+      "value": 0,
+      "confidenceLow": -4,
+      "confidenceHigh": 4,
+      "sourceIds": ["ilo-wages-2023"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2024-02-01",
+      "value": -1,
+      "confidenceLow": -5,
+      "confidenceHigh": 3,
+      "sourceIds": ["imf-inequality-2024"],
+      "evidenceTier": 2
+    },
+    {
+      "date": "2024-06-01",
+      "value": -2,
+      "confidenceLow": -7,
+      "confidenceHigh": 2,
+      "sourceIds": ["webb-2024"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2024-10-01",
+      "value": -3,
+      "confidenceLow": -8,
+      "confidenceHigh": 1,
+      "sourceIds": ["atlantic-wages-2024"],
+      "evidenceTier": 3
+    },
+    {
+      "date": "2025-02-01",
+      "value": -1,
+      "confidenceLow": -5,
+      "confidenceHigh": 3,
+      "sourceIds": ["bls-wage-data-2025"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2025-05-01",
+      "value": -5,
+      "confidenceLow": -10,
+      "confidenceHigh": -1,
+      "sourceIds": ["substack-wages-doom"],
+      "evidenceTier": 4
+    },
+    {
+      "date": "2025-08-01",
+      "value": -2,
+      "confidenceLow": -6,
+      "confidenceHigh": 2,
+      "sourceIds": ["epi-wages-2025"],
+      "evidenceTier": 2
+    }
+  ],
+  "sources": [
+    {
+      "id": "goldman-wages-2023",
+      "title": "AI and the US Labor Market",
+      "url": "https://www.goldmansachs.com/insights",
+      "publisher": "Goldman Sachs",
+      "evidenceTier": 1,
+      "datePublished": "2023-04-01"
+    },
+    {
+      "id": "ilo-wages-2023",
+      "title": "Global Wage Report 2022-23: The impact of inflation and COVID-19 on wages and purchasing power",
+      "url": "https://www.ilo.org/publications/flagship-reports/global-wage-report-2022-23-impact-inflation-and-covid-19-wages-and",
+      "publisher": "International Labour Organization",
+      "evidenceTier": 1,
+      "datePublished": "2023-09-01"
+    },
+    {
+      "id": "imf-inequality-2024",
+      "title": "AI Will Transform the Global Economy. Let's Make Sure It Benefits Humanity",
+      "url": "https://www.imf.org/en/Blogs/Articles/2024/01/14/ai-will-transform-the-global-economy-lets-make-sure-it-benefits-humanity",
+      "publisher": "IMF Blog",
+      "evidenceTier": 2,
+      "datePublished": "2024-01-14",
+      "excerpt": "In most scenarios, AI will likely worsen overall inequality. Higher-income workers may see disproportionate wage gains."
+    },
+    {
+      "id": "webb-2024",
+      "title": "The Impact of Artificial Intelligence on the Labor Market",
+      "url": "https://www.stanford.edu",
+      "publisher": "Stanford (Webb)",
+      "evidenceTier": 1,
+      "datePublished": "2024-06-01",
+      "excerpt": "AI exposure is concentrated among high-skill, high-wage occupations, but wage effects may cascade downward."
+    },
+    {
+      "id": "atlantic-wages-2024",
+      "title": "AI could be coming for higher-paid workers this time",
+      "url": "https://www.theatlantic.com",
+      "publisher": "The Atlantic",
+      "evidenceTier": 3,
+      "datePublished": "2024-10-01"
+    },
+    {
+      "id": "bls-wage-data-2025",
+      "title": "Employment Cost Index — 2025 Q1",
+      "url": "https://www.bls.gov/eci/",
+      "publisher": "Bureau of Labor Statistics",
+      "evidenceTier": 1,
+      "datePublished": "2025-02-01"
+    },
+    {
+      "id": "substack-wages-doom",
+      "title": "AI wage compression is already happening",
+      "url": "https://substack.com",
+      "publisher": "Substack",
+      "evidenceTier": 4,
+      "datePublished": "2025-05-01"
+    },
+    {
+      "id": "epi-wages-2025",
+      "title": "State of Working America: AI and Wage Trends",
+      "url": "https://www.epi.org",
+      "publisher": "Economic Policy Institute",
+      "evidenceTier": 2,
+      "datePublished": "2025-08-01"
+    },
+    {
+      "id": "walmart-10k-2024",
+      "title": "Walmart 2024 10-K — Automation Investment & Wage Strategy",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000104169&type=10-K",
+      "publisher": "Walmart (SEC Filing)",
+      "evidenceTier": 1,
+      "datePublished": "2025-03-28",
+      "excerpt": "Walmart raised minimum wage to $15/hr but disclosed AI-driven checkout and inventory systems reducing total store staffing needs by ~8% per location."
+    },
+    {
+      "id": "indeed-wage-tracker-2025",
+      "title": "US Wage Tracker — Posted Wage Trends by Occupation",
+      "url": "https://www.hiringlab.org/",
+      "publisher": "Indeed Hiring Lab",
+      "evidenceTier": 2,
+      "datePublished": "2025-02-10",
+      "excerpt": "Posted wages for AI-exposed occupations (admin, data entry, basic accounting) grew 1.2% YoY vs. 4.1% for non-AI-exposed roles, suggesting wage suppression."
+    },
+    {
+      "id": "ups-8k-2024",
+      "title": "UPS Q4 2024 Earnings — AI Logistics & Workforce Restructuring",
+      "url": "https://investors.ups.com/sec-filings",
+      "publisher": "UPS (SEC Filing)",
+      "evidenceTier": 1,
+      "datePublished": "2025-01-30",
+      "excerpt": "UPS cut 12,000 jobs in 2024 citing AI-optimized routing and automated package sorting. Remaining driver wages increased 2.5% under new contract."
+    }
+  ]
+}

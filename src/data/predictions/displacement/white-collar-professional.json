@@ -1,0 +1,183 @@
+{
+  "id": "displacement-white-collar",
+  "slug": "white-collar-professional-displacement",
+  "title": "White-Collar Professional Displacement by 2030",
+  "description": "Projected percentage of legal, accounting, and financial analyst roles significantly restructured or eliminated by AI by 2030.",
+  "category": "displacement",
+  "unit": "% of roles displaced",
+  "currentValue": 18,
+  "timeHorizon": "By 2030",
+  "history": [
+    {
+      "date": "2023-03-14",
+      "value": 10,
+      "confidenceLow": 5,
+      "confidenceHigh": 18,
+      "sourceIds": ["goldman-white-collar-2023"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2023-08-01",
+      "value": 12,
+      "confidenceLow": 7,
+      "confidenceHigh": 20,
+      "sourceIds": ["mckinsey-genai-occupations"],
+      "evidenceTier": 2
+    },
+    {
+      "date": "2024-01-15",
+      "value": 15,
+      "confidenceLow": 9,
+      "confidenceHigh": 24,
+      "sourceIds": ["eloundou-openai-2024"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2024-04-20",
+      "value": 14,
+      "confidenceLow": 8,
+      "confidenceHigh": 22,
+      "sourceIds": ["brookings-white-collar-2024"],
+      "evidenceTier": 2
+    },
+    {
+      "date": "2024-07-10",
+      "value": 17,
+      "confidenceLow": 10,
+      "confidenceHigh": 26,
+      "sourceIds": ["stanford-codex-legal-ai"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2024-10-05",
+      "value": 20,
+      "confidenceLow": 12,
+      "confidenceHigh": 30,
+      "sourceIds": ["wsj-white-collar-layoffs"],
+      "evidenceTier": 3
+    },
+    {
+      "date": "2025-01-20",
+      "value": 18,
+      "confidenceLow": 11,
+      "confidenceHigh": 28,
+      "sourceIds": ["deloitte-professional-services-2025"],
+      "evidenceTier": 2
+    },
+    {
+      "date": "2025-05-01",
+      "value": 22,
+      "confidenceLow": 14,
+      "confidenceHigh": 32,
+      "sourceIds": ["x-thread-lawyers-replaced"],
+      "evidenceTier": 4
+    },
+    {
+      "date": "2025-07-15",
+      "value": 18,
+      "confidenceLow": 11,
+      "confidenceHigh": 27,
+      "sourceIds": ["oecd-white-collar-2025"],
+      "evidenceTier": 1
+    }
+  ],
+  "sources": [
+    {
+      "id": "goldman-white-collar-2023",
+      "title": "The Potentially Large Effects of AI on Economic Growth",
+      "url": "https://www.goldmansachs.com/insights/pages/generative-ai-could-raise-global-gdp-by-7-percent.html",
+      "publisher": "Goldman Sachs",
+      "evidenceTier": 1,
+      "datePublished": "2023-03-26",
+      "excerpt": "Two-thirds of US occupations are exposed to some degree of AI automation. Administrative and legal professions face the highest exposure rates at 46%."
+    },
+    {
+      "id": "mckinsey-genai-occupations",
+      "title": "The economic potential of generative AI: The next productivity frontier",
+      "url": "https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier",
+      "publisher": "McKinsey Global Institute",
+      "evidenceTier": 2,
+      "datePublished": "2023-06-14",
+      "excerpt": "Banking, insurance, and capital markets could see up to 50% of current work activities automated. Legal research and contract review are among the most automatable tasks."
+    },
+    {
+      "id": "eloundou-openai-2024",
+      "title": "GPTs are GPTs: An Early Look at the Labor Market Impact Potential of LLMs",
+      "url": "https://arxiv.org/abs/2303.10130",
+      "publisher": "OpenAI / U Penn (Eloundou et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2024-01-15",
+      "excerpt": "~80% of the US workforce could have at least 10% of their tasks affected by GPTs. Legal, accounting, and financial analysis are among the highest-exposure occupations."
+    },
+    {
+      "id": "brookings-white-collar-2024",
+      "title": "Which jobs are most exposed to generative AI?",
+      "url": "https://www.brookings.edu/articles/which-jobs-are-most-exposed-to-generative-ai/",
+      "publisher": "Brookings Institution",
+      "evidenceTier": 2,
+      "datePublished": "2024-04-20",
+      "excerpt": "High-paid, white-collar occupations in business, finance, and law are among the most exposed to generative AI disruption."
+    },
+    {
+      "id": "stanford-codex-legal-ai",
+      "title": "AI and the Legal Profession: Transforming Practice",
+      "url": "https://law.stanford.edu/codex-the-stanford-center-for-legal-informatics/",
+      "publisher": "Stanford CodeX",
+      "evidenceTier": 1,
+      "datePublished": "2024-07-10",
+      "excerpt": "LLMs can now perform contract review, legal research, and document drafting at near-associate quality. Junior associate hiring at major firms has declined 12% since 2022."
+    },
+    {
+      "id": "wsj-white-collar-layoffs",
+      "title": "White-Collar Workers Are Starting to Feel the AI Squeeze",
+      "url": "https://www.wsj.com/",
+      "publisher": "The Wall Street Journal",
+      "evidenceTier": 3,
+      "datePublished": "2024-10-05"
+    },
+    {
+      "id": "deloitte-professional-services-2025",
+      "title": "2025 Professional Services Outlook: AI-Driven Transformation",
+      "url": "https://www2.deloitte.com/",
+      "publisher": "Deloitte",
+      "evidenceTier": 2,
+      "datePublished": "2025-01-20",
+      "excerpt": "Big Four firms project 15-25% workforce restructuring over the next 3 years as AI handles routine audit, tax, and advisory tasks."
+    },
+    {
+      "id": "x-thread-lawyers-replaced",
+      "title": "Thread: AI replacing junior lawyers and paralegals",
+      "url": "https://x.com",
+      "publisher": "X (Twitter)",
+      "evidenceTier": 4,
+      "datePublished": "2025-05-01"
+    },
+    {
+      "id": "oecd-white-collar-2025",
+      "title": "OECD Employment Outlook 2025: AI and High-Skill Occupations",
+      "url": "https://www.oecd.org/en/publications/oecd-employment-outlook_19991266.html",
+      "publisher": "OECD",
+      "evidenceTier": 1,
+      "datePublished": "2025-07-01",
+      "excerpt": "Professional services occupations face the largest task-level AI exposure among high-income economies, with 18-25% of tasks fully automatable by current LLMs."
+    },
+    {
+      "id": "jpmorgan-10k-ai-2024",
+      "title": "JPMorgan Chase 2024 10-K — AI and Workforce",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000019617&type=10-K",
+      "publisher": "JPMorgan Chase (SEC Filing)",
+      "evidenceTier": 1,
+      "datePublished": "2025-02-15",
+      "excerpt": "JPMorgan disclosed deploying LLM-based tools across legal, compliance, and research functions, with estimated productivity gains equivalent to 3,000+ full-time roles."
+    },
+    {
+      "id": "ey-10k-ai-2024",
+      "title": "EY Global — AI Transformation in Professional Services",
+      "url": "https://www.ey.com/",
+      "publisher": "Ernst & Young",
+      "evidenceTier": 2,
+      "datePublished": "2025-03-01",
+      "excerpt": "EY invested $1.4B in AI, reporting that AI-assisted audit procedures now cover 40% of routine testing tasks previously performed by junior staff."
+    }
+  ]
+}

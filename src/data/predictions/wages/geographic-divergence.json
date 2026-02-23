@@ -1,0 +1,149 @@
+{
+  "id": "wages-geo-divergence",
+  "slug": "geographic-wage-divergence",
+  "title": "AI Hub vs. Non-Hub Wage Divergence by 2030",
+  "description": "Projected wage gap between AI hub cities (SF, Seattle, NYC, Austin) and non-hub metros for tech and knowledge workers by 2030.",
+  "category": "wages",
+  "unit": "% wage premium",
+  "currentValue": 42,
+  "timeHorizon": "By 2030",
+  "history": [
+    {
+      "date": "2023-03-01",
+      "value": 28,
+      "confidenceLow": 20,
+      "confidenceHigh": 35,
+      "sourceIds": ["linkedin-econ-graph-2023"],
+      "evidenceTier": 2
+    },
+    {
+      "date": "2023-08-15",
+      "value": 30,
+      "confidenceLow": 22,
+      "confidenceHigh": 38,
+      "sourceIds": ["lightcast-geo-wages-2023"],
+      "evidenceTier": 2
+    },
+    {
+      "date": "2024-01-20",
+      "value": 33,
+      "confidenceLow": 24,
+      "confidenceHigh": 42,
+      "sourceIds": ["brookings-metro-ai-2024"],
+      "evidenceTier": 2
+    },
+    {
+      "date": "2024-05-15",
+      "value": 36,
+      "confidenceLow": 26,
+      "confidenceHigh": 46,
+      "sourceIds": ["nber-spatial-ai-2024"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2024-09-01",
+      "value": 38,
+      "confidenceLow": 28,
+      "confidenceHigh": 50,
+      "sourceIds": ["indeed-geo-premiums-2024"],
+      "evidenceTier": 2
+    },
+    {
+      "date": "2025-01-10",
+      "value": 40,
+      "confidenceLow": 30,
+      "confidenceHigh": 52,
+      "sourceIds": ["glassdoor-ai-salaries-2025"],
+      "evidenceTier": 2
+    },
+    {
+      "date": "2025-04-15",
+      "value": 45,
+      "confidenceLow": 33,
+      "confidenceHigh": 58,
+      "sourceIds": ["techcrunch-ai-salary-gap"],
+      "evidenceTier": 3
+    },
+    {
+      "date": "2025-07-01",
+      "value": 42,
+      "confidenceLow": 31,
+      "confidenceHigh": 55,
+      "sourceIds": ["bls-metro-wages-2025"],
+      "evidenceTier": 1
+    }
+  ],
+  "sources": [
+    {
+      "id": "linkedin-econ-graph-2023",
+      "title": "LinkedIn Economic Graph: AI Talent Concentration 2023",
+      "url": "https://economicgraph.linkedin.com/",
+      "publisher": "LinkedIn Economic Graph",
+      "evidenceTier": 2,
+      "datePublished": "2023-03-01",
+      "excerpt": "60% of AI/ML job postings concentrate in 10 metro areas. AI roles in SF/Bay Area pay 35% more than identical roles in mid-tier cities."
+    },
+    {
+      "id": "lightcast-geo-wages-2023",
+      "title": "Geographic Analysis of AI Labor Markets",
+      "url": "https://lightcast.io/",
+      "publisher": "Lightcast",
+      "evidenceTier": 2,
+      "datePublished": "2023-08-15",
+      "excerpt": "AI engineer median salary in San Francisco: $225K. Same role in Kansas City: $155K. Gap widening as demand concentrates."
+    },
+    {
+      "id": "brookings-metro-ai-2024",
+      "title": "AI and the Geography of Opportunity",
+      "url": "https://www.brookings.edu/",
+      "publisher": "Brookings Institution",
+      "evidenceTier": 2,
+      "datePublished": "2024-01-20",
+      "excerpt": "AI adoption is concentrating economic gains in a handful of superstar cities, widening the already large metro-level wage divergence."
+    },
+    {
+      "id": "nber-spatial-ai-2024",
+      "title": "The Spatial Distribution of AI's Labor Market Effects",
+      "url": "https://www.nber.org/",
+      "publisher": "NBER (Moretti, Faggio)",
+      "evidenceTier": 1,
+      "datePublished": "2024-05-15",
+      "excerpt": "Each AI job in a hub city creates 3-5 local service jobs. Non-hub cities see net job losses. The spatial multiplier amplifies geographic wage divergence."
+    },
+    {
+      "id": "indeed-geo-premiums-2024",
+      "title": "The Geography of AI Jobs — Indeed Hiring Lab",
+      "url": "https://www.hiringlab.org/",
+      "publisher": "Indeed Hiring Lab",
+      "evidenceTier": 2,
+      "datePublished": "2024-09-01",
+      "excerpt": "AI-related roles offer a 38% wage premium in top-10 tech metros vs. national average. Non-AI roles in same metros show only 12% premium."
+    },
+    {
+      "id": "glassdoor-ai-salaries-2025",
+      "title": "Glassdoor AI Salary Trends 2025",
+      "url": "https://www.glassdoor.com/research/",
+      "publisher": "Glassdoor Economic Research",
+      "evidenceTier": 2,
+      "datePublished": "2025-01-10",
+      "excerpt": "Median AI/ML salary in San Francisco reached $245K. In non-hub metros, AI salaries average $162K. The 50% gap is the widest in tech history."
+    },
+    {
+      "id": "techcrunch-ai-salary-gap",
+      "title": "The AI salary gap is creating two Americas",
+      "url": "https://techcrunch.com/",
+      "publisher": "TechCrunch",
+      "evidenceTier": 3,
+      "datePublished": "2025-04-15"
+    },
+    {
+      "id": "bls-metro-wages-2025",
+      "title": "Occupational Employment and Wage Statistics — Metropolitan Areas 2025",
+      "url": "https://www.bls.gov/oes/",
+      "publisher": "Bureau of Labor Statistics",
+      "evidenceTier": 1,
+      "datePublished": "2025-07-01",
+      "excerpt": "Computer and mathematical occupations in San Jose-SF-Oakland MSA: $178K median. National median: $108K. Gap up from 48% to 65% since 2022."
+    }
+  ]
+}
