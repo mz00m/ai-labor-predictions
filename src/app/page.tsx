@@ -47,8 +47,9 @@ export default function Home() {
           <p className="text-[13px] font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
             {predictions.length} predictions &middot; {totalSources} sources
           </p>
-          <h1 className="text-[42px] sm:text-[56px] font-black tracking-tight text-[var(--foreground)] leading-[1.05] max-w-3xl">
-            How is AI reshaping the labor market?
+          <h1 className="text-[42px] sm:text-[56px] font-black tracking-tight text-[var(--foreground)] leading-[1.05] max-w-4xl">
+            How is AI <span className="text-[#2a5280]">reshaping</span>
+            <br className="hidden sm:block" /> the labor market?
           </h1>
           <p className="mt-4 text-[17px] text-[var(--muted)] leading-relaxed max-w-2xl">
             Tracking {predictions.length} predictions across displacement, wages, adoption, and corporate signals
