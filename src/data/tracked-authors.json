@@ -1,0 +1,104 @@
+[
+  {
+    "name": "Erik Brynjolfsson",
+    "openAlexId": "A5038255653",
+    "affiliation": "Stanford Digital Economy Lab",
+    "specialization": "AI & productivity, digital economy"
+  },
+  {
+    "name": "Daron Acemoglu",
+    "openAlexId": "A5012301204",
+    "affiliation": "MIT",
+    "specialization": "AI economics, automation, inequality"
+  },
+  {
+    "name": "David Autor",
+    "openAlexId": "A5029839974",
+    "affiliation": "MIT",
+    "specialization": "Labor economics, task framework, polarization"
+  },
+  {
+    "name": "Tyna Eloundou",
+    "openAlexId": "A5065917408",
+    "affiliation": "OpenAI",
+    "specialization": "AI exposure, GPT labor impacts"
+  },
+  {
+    "name": "Daniel Rock",
+    "openAlexId": "A5018502975",
+    "affiliation": "Wharton, University of Pennsylvania",
+    "specialization": "AI adoption, productivity measurement"
+  },
+  {
+    "name": "Shakked Noy",
+    "openAlexId": "A5032649151",
+    "affiliation": "MIT",
+    "specialization": "AI productivity experiments"
+  },
+  {
+    "name": "Whitney Zhang",
+    "openAlexId": "A5015831591",
+    "affiliation": "MIT",
+    "specialization": "AI productivity experiments"
+  },
+  {
+    "name": "R. Maria del Rio-Chanona",
+    "openAlexId": "A5045698412",
+    "affiliation": "UCL / ILO",
+    "specialization": "AI & jobs, labor market networks"
+  },
+  {
+    "name": "Andrea Filippetti",
+    "openAlexId": "A5022624239",
+    "affiliation": "National Research Council, Italy",
+    "specialization": "Innovation, regional economics"
+  },
+  {
+    "name": "Anna Salomons",
+    "openAlexId": "A5110447170",
+    "affiliation": "Utrecht University",
+    "specialization": "Automation, labor markets, skills"
+  },
+  {
+    "name": "Pascual Restrepo",
+    "openAlexId": "A5011062401",
+    "affiliation": "Boston University",
+    "specialization": "Automation, robots, demographics"
+  },
+  {
+    "name": "Carl Benedikt Frey",
+    "openAlexId": "A5013275181",
+    "affiliation": "Oxford Martin School",
+    "specialization": "Future of employment, automation risk"
+  },
+  {
+    "name": "Michael Osborne",
+    "openAlexId": "A5015026966",
+    "affiliation": "University of Oxford",
+    "specialization": "Machine learning, automation susceptibility"
+  },
+  {
+    "name": "Ed Felten",
+    "openAlexId": "A5108489088",
+    "affiliation": "Princeton University",
+    "specialization": "AI exposure indices, technology policy"
+  },
+  {
+    "name": "Manav Raj",
+    "openAlexId": "A5018390504",
+    "affiliation": "Wharton, University of Pennsylvania",
+    "specialization": "AI impact on work, generative AI"
+  },
+  {
+    "name": "Lindsey Raymond",
+    "openAlexId": "A5088662762",
+    "affiliation": "MIT",
+    "specialization": "AI at work, productivity"
+  },
+  {
+    "name": "Bharat Chandar",
+    "openAlexId": "A5033174181",
+    "affiliation": "Stanford",
+    "specialization": "AI displacement, labor economics"
+  }
+]

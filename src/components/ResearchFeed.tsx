@@ -26,11 +26,27 @@ interface ClassifiedPaper {
   source: string;
   relevanceScore: number;
   linkedPredictions: LinkedPrediction[];
+  isTrackedAuthor?: boolean;
+  trackedAuthorName?: string;
 }
 
 interface ResearchFeedProps {
   selectedTiers: EvidenceTier[];
 }
+
+const SOURCE_LABELS: Record<string, string> = {
+  semantic_scholar: "S2",
+  openalex: "OpenAlex",
+  arxiv: "arXiv",
+  sec_edgar: "SEC",
+  job_postings: "Jobs",
+  scopus: "Scopus",
+  nber: "NBER",
+  brookings: "Brookings",
+  imf: "IMF",
+  iza: "IZA",
+  core: "CORE",
+};
 
 export default function ResearchFeed({ selectedTiers }: ResearchFeedProps) {
   const [papers, setPapers] = useState<ClassifiedPaper[]>([]);
@@ -44,7 +60,7 @@ export default function ResearchFeed({ selectedTiers }: ResearchFeedProps) {
     try {
       const tiersParam = selectedTiers.join(",");
       const res = await fetch(
-        `/api/research?tiers=${tiersParam}&limit=30`
+        `/api/research?tiers=${tiersParam}&limit=50`
       );
       if (!res.ok) throw new Error("Failed to fetch");
       const data = await res.json();
@@ -84,9 +100,10 @@ export default function ResearchFeed({ selectedTiers }: ResearchFeedProps) {
               Discover Papers
             </h2>
             <p className="text-[15px] text-[var(--muted)] leading-relaxed max-w-lg">
-              Search Semantic Scholar, OpenAlex, and arXiv for recent AI + labor
-              market research. Papers are automatically classified by evidence tier
-              and linked to the predictions above.
+              Search 11 academic sources &mdash; Scopus, OpenAlex, Semantic Scholar,
+              arXiv, NBER, Brookings, IMF, IZA, CORE, SEC EDGAR, and job market data &mdash;
+              for recent AI + labor market research. Papers are classified by evidence
+              tier, linked to predictions, and flagged when authored by tracked researchers.
             </p>
           </div>
           <button
@@ -94,7 +111,7 @@ export default function ResearchFeed({ selectedTiers }: ResearchFeedProps) {
             disabled={loading}
             className="shrink-0 px-8 py-3.5 text-[14px] font-bold text-white bg-[var(--accent)] rounded-full hover:opacity-90 disabled:opacity-50 cursor-pointer shadow-sm"
           >
-            {loading ? "Searching..." : "Search Papers"}
+            {loading ? "Searching..." : "Discover Papers"}
           </button>
         </div>
       </div>
@@ -199,17 +216,14 @@ export default function ResearchFeed({ selectedTiers }: ResearchFeedProps) {
                       <span className="text-[11px] font-medium" style={{ color: tierConfig.color }}>
                         Tier {paper.classifiedTier}
                       </span>
-                      <span className="text-[11px] text-[var(--muted)]">
-                        {paper.source === "semantic_scholar"
-                          ? "S2"
-                          : paper.source === "openalex"
-                            ? "OpenAlex"
-                            : paper.source === "sec_edgar"
-                              ? "SEC"
-                              : paper.source === "job_postings"
-                                ? "Jobs"
-                                : "arXiv"}
+                      <span className="text-[11px] text-[var(--muted)] bg-black/[0.04] px-1.5 py-0.5 rounded">
+                        {SOURCE_LABELS[paper.source] || paper.source}
                       </span>
+                      {paper.isTrackedAuthor && (
+                        <span className="text-[11px] font-semibold text-amber-700 bg-amber-50 px-1.5 py-0.5 rounded">
+                          Tracked Author
+                        </span>
+                      )}
                     </div>
 
                     {paper.abstract && (

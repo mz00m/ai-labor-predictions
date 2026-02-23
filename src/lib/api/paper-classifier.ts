@@ -126,6 +126,194 @@ const PREDICTION_KEYWORDS: Record<
       "economic growth",
     ],
   },
+  "white-collar-professional-displacement": {
+    primary: [
+      "white collar",
+      "professional",
+      "legal",
+      "accounting",
+      "finance",
+      "paralegal",
+      "auditor",
+      "management consulting",
+      "analyst",
+      "knowledge worker",
+    ],
+    secondary: [
+      "displacement",
+      "automation",
+      "AI replace",
+      "office work",
+      "cognitive task",
+    ],
+  },
+  "creative-industry-displacement": {
+    primary: [
+      "creative",
+      "design",
+      "graphic",
+      "illustration",
+      "writing",
+      "copywriting",
+      "content creation",
+      "marketing",
+      "advertising",
+      "animation",
+      "photography",
+    ],
+    secondary: [
+      "generative AI",
+      "midjourney",
+      "stable diffusion",
+      "dall-e",
+      "freelance",
+      "gig",
+      "displacement",
+    ],
+  },
+  "education-sector-displacement": {
+    primary: [
+      "education",
+      "teaching",
+      "tutor",
+      "instructor",
+      "grading",
+      "curriculum",
+      "edtech",
+      "chegg",
+      "coursework",
+    ],
+    secondary: [
+      "AI tools",
+      "chatbot",
+      "student",
+      "learning",
+      "academic integrity",
+      "displacement",
+    ],
+  },
+  "healthcare-admin-displacement": {
+    primary: [
+      "healthcare admin",
+      "medical coding",
+      "billing",
+      "claims processing",
+      "prior authorization",
+      "scheduling",
+      "ehr",
+      "health information",
+    ],
+    secondary: [
+      "automation",
+      "AI",
+      "workforce",
+      "administrative",
+      "hospital",
+      "displacement",
+    ],
+  },
+  "geographic-wage-divergence": {
+    primary: [
+      "geographic",
+      "regional",
+      "city",
+      "metro",
+      "hub",
+      "remote work",
+      "spatial",
+      "location premium",
+      "tech hub",
+    ],
+    secondary: [
+      "wage gap",
+      "divergence",
+      "inequality",
+      "migration",
+      "clustering",
+      "AI adoption",
+    ],
+  },
+  "entry-level-wage-impact": {
+    primary: [
+      "entry level",
+      "junior",
+      "early career",
+      "new graduate",
+      "intern",
+      "first job",
+      "starting salary",
+      "young worker",
+    ],
+    secondary: [
+      "wage",
+      "compensation",
+      "income",
+      "AI impact",
+      "hiring",
+      "displacement",
+    ],
+  },
+  "freelancer-rate-impact": {
+    primary: [
+      "freelancer",
+      "freelance",
+      "gig economy",
+      "upwork",
+      "fiverr",
+      "contractor",
+      "independent worker",
+      "platform work",
+    ],
+    secondary: [
+      "rate",
+      "earnings",
+      "income",
+      "AI competition",
+      "pricing",
+      "displacement",
+    ],
+  },
+  "ai-adoption-rate": {
+    primary: [
+      "AI adoption",
+      "deploy AI",
+      "production AI",
+      "enterprise AI",
+      "business AI",
+      "company adoption",
+      "census bureau",
+      "business trends",
+    ],
+    secondary: [
+      "implementation",
+      "rollout",
+      "integration",
+      "workforce",
+      "productivity",
+      "diffusion",
+    ],
+  },
+  "earnings-call-ai-mentions": {
+    primary: [
+      "earnings call",
+      "quarterly earnings",
+      "ceo",
+      "cfo",
+      "investor",
+      "10-k",
+      "10-q",
+      "annual report",
+      "guidance",
+    ],
+    secondary: [
+      "AI",
+      "artificial intelligence",
+      "automation",
+      "workforce",
+      "efficiency",
+      "headcount",
+    ],
+  },
 };
 
 /**
@@ -204,6 +392,12 @@ function classifyTier(paper: ResearchPaper): EvidenceTier {
     "icml",
     "neurips",
     "aaai",
+    "iza",
+    "discussion paper",
+    "international center for law",
+    "icle",
+    "dallas fed",
+    "federal reserve",
   ];
   if (tier2.some((v) => venue.includes(v))) return 2;
   if (paper.citationCount >= 20) return 2;
@@ -225,7 +419,24 @@ function classifyTier(paper: ResearchPaper): EvidenceTier {
   if (paper.source === "job_postings") return 2;
 
   // Default academic papers to Tier 2
-  if (paper.source === "semantic_scholar" || paper.source === "openalex") {
+  if (
+    paper.source === "semantic_scholar" ||
+    paper.source === "openalex" ||
+    paper.source === "scopus" ||
+    paper.source === "core"
+  ) {
+    return 2;
+  }
+
+  // NBER is always Tier 1
+  if (paper.source === "nber") return 1;
+
+  // Think tank / institutional sources = Tier 2
+  if (
+    paper.source === "brookings" ||
+    paper.source === "imf" ||
+    paper.source === "iza"
+  ) {
     return 2;
   }
 
@@ -244,22 +455,26 @@ export interface ClassifiedPaper extends ResearchPaper {
 /**
  * Convert a classified paper into a Source object for a prediction.
  */
+const SOURCE_PUBLISHER_LABELS: Record<string, string> = {
+  semantic_scholar: "Semantic Scholar",
+  openalex: "OpenAlex",
+  sec_edgar: "SEC EDGAR",
+  job_postings: "Job Market Data",
+  arxiv: "arXiv",
+  scopus: "Scopus",
+  nber: "NBER",
+  brookings: "Brookings Institution",
+  imf: "IMF",
+  iza: "IZA",
+  core: "CORE",
+};
+
 export function paperToSource(paper: ClassifiedPaper): Source {
   return {
     id: paper.id,
     title: paper.title,
     url: paper.url,
-    publisher:
-      paper.venue ||
-      (paper.source === "semantic_scholar"
-        ? "Semantic Scholar"
-        : paper.source === "openalex"
-          ? "OpenAlex"
-          : paper.source === "sec_edgar"
-            ? "SEC EDGAR"
-            : paper.source === "job_postings"
-              ? "Job Market Data"
-              : "arXiv"),
+    publisher: paper.venue || SOURCE_PUBLISHER_LABELS[paper.source] || paper.source,
     evidenceTier: paper.classifiedTier,
     datePublished: paper.publishedDate || new Date().toISOString().split("T")[0],
     excerpt: paper.abstract
