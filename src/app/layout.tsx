@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "AI & Labor Market Predictions",
@@ -26,6 +27,7 @@ export default function RootLayout({
         <main className="max-w-6xl mx-auto px-6 sm:px-10 py-16">
           {children}
         </main>
+        <Analytics />
         <footer className="max-w-6xl mx-auto px-6 sm:px-10 pb-16">
           <div className="pt-10 border-t border-black/[0.06]">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
