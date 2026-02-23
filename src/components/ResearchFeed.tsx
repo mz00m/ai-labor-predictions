@@ -102,23 +102,32 @@ export default function ResearchFeed({ selectedTiers }: ResearchFeedProps) {
   }
 
   return (
-    <div>
-      <div className="flex items-center justify-between mb-6">
-        <h2 className="text-[24px] sm:text-[28px] font-extrabold tracking-tight text-[var(--foreground)]">
+    <div className="relative overflow-hidden border border-black/[0.08] rounded-xl">
+      {/* Background accent */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#7c3aed]/[0.02] to-transparent pointer-events-none" aria-hidden="true" />
+
+      <div className="relative px-8 pt-8 pb-4 sm:px-10 sm:pt-10">
+        <div className="flex items-center justify-between mb-1">
+          <p className="text-[13px] font-bold uppercase tracking-widest text-[var(--accent)]">
+            Live research feed
+          </p>
+          <button
+            onClick={fetchPapers}
+            disabled={loading}
+            className="px-4 py-1.5 text-[12px] font-semibold text-[var(--accent)] border border-[var(--accent)]/30 rounded-full hover:bg-[var(--accent)]/[0.05] disabled:opacity-50 cursor-pointer"
+          >
+            {loading ? "Refreshing..." : "Refresh"}
+          </button>
+        </div>
+        <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
           Recent Research
           <span className="text-[var(--muted)] font-normal text-[18px] ml-2">
-            {papers.length}
+            {papers.length} papers
           </span>
         </h2>
-        <button
-          onClick={fetchPapers}
-          disabled={loading}
-          className="text-[13px] font-semibold text-[var(--muted)] hover:text-[var(--foreground)] disabled:opacity-50 cursor-pointer"
-        >
-          {loading ? "Refreshing..." : "Refresh"}
-        </button>
       </div>
 
+      <div className="relative px-8 pb-8 sm:px-10 sm:pb-10">
       {error && (
         <p className="text-[13px] text-red-600 mb-4">{error}</p>
       )}
@@ -169,11 +178,19 @@ export default function ResearchFeed({ selectedTiers }: ResearchFeedProps) {
                         {paper.authors.slice(0, 3).join(", ")}
                         {paper.authors.length > 3 ? ` +${paper.authors.length - 3}` : ""}
                       </span>
-                      {paper.year && (
+                      {paper.publishedDate ? (
+                        <span className="text-[12px] text-[var(--foreground)] font-medium opacity-60">
+                          {new Date(paper.publishedDate).toLocaleDateString("en-US", {
+                            month: "short",
+                            day: "numeric",
+                            year: "numeric",
+                          })}
+                        </span>
+                      ) : paper.year ? (
                         <span className="text-[12px] text-[var(--muted)] opacity-50">
                           {paper.year}
                         </span>
-                      )}
+                      ) : null}
                       {paper.citationCount > 0 && (
                         <span className="text-[12px] text-[var(--muted)] opacity-50">
                           {paper.citationCount} cites
@@ -237,6 +254,7 @@ export default function ResearchFeed({ selectedTiers }: ResearchFeedProps) {
           })}
         </div>
       )}
+      </div>
     </div>
   );
 }
