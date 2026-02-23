@@ -1,9 +1,13 @@
 "use client";
 
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import Link from "next/link";
 import { Prediction, EvidenceTier } from "@/lib/types";
 import { getTierConfig } from "@/lib/evidence-tiers";
+import {
+  getResearchAnnotation,
+  ESTIMATE_TYPE_LABELS,
+} from "@/lib/research-annotations";
 
 interface PredictionSummaryCardProps {
   prediction: Prediction;
@@ -173,9 +177,11 @@ export default function PredictionSummaryCard({
   prediction,
   selectedTiers,
 }: PredictionSummaryCardProps) {
+  const [showNote, setShowNote] = useState(false);
   const best = getBestEstimate(prediction, selectedTiers);
   const trend = computeTrend(prediction, selectedTiers);
   const contextLine = getContextLine(prediction);
+  const annotation = getResearchAnnotation(prediction.slug);
 
   const trendIsBad =
     trend &&
@@ -243,27 +249,88 @@ export default function PredictionSummaryCard({
           )}
 
           {/* Context */}
-          <p className="text-[14px] text-[var(--muted)] leading-relaxed mb-5">
+          <p className="text-[14px] text-[var(--muted)] leading-relaxed mb-4">
             {contextLine}
           </p>
 
-          {/* Source attribution + link */}
-          <div className="flex items-center justify-between">
-            {bestSource && tierConfig ? (
-              <div className="flex items-center gap-2">
+          {/* Research annotation */}
+          {annotation && (
+            <div className="mb-4">
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  setShowNote(!showNote);
+                }}
+                className="inline-flex items-center gap-1.5 text-[12px] font-medium text-[var(--accent)] hover:underline"
+              >
+                <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                </svg>
+                Research note
+                <svg
+                  className={`w-3 h-3 transition-transform duration-150 ${showNote ? "rotate-180" : ""}`}
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="2"
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                </svg>
+              </button>
+              {showNote && (
+                <p className="mt-2 text-[12px] text-[var(--muted)] leading-relaxed border-l-2 border-[var(--accent)]/30 pl-3">
+                  {annotation.note}
+                </p>
+              )}
+            </div>
+          )}
+
+          {/* Estimate type + Source attribution + link */}
+          <div className="flex items-center justify-between gap-2">
+            <div className="flex items-center gap-2.5 min-w-0">
+              {annotation && (
                 <span
-                  className="inline-block w-2 h-2 rounded-full"
-                  style={{ backgroundColor: tierConfig.color }}
-                />
-                <span className="text-[12px] text-[var(--muted)] truncate max-w-[200px]">
-                  {bestSource.publisher}
+                  className="shrink-0 text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full"
+                  style={{
+                    backgroundColor:
+                      annotation.estimateType === "observed"
+                        ? "rgba(22, 163, 74, 0.08)"
+                        : annotation.estimateType === "mixed"
+                          ? "rgba(37, 99, 235, 0.08)"
+                          : "rgba(107, 114, 128, 0.08)",
+                    color:
+                      annotation.estimateType === "observed"
+                        ? "#16a34a"
+                        : annotation.estimateType === "mixed"
+                          ? "#2563eb"
+                          : "#6b7280",
+                  }}
+                  title={
+                    annotation.estimateType === "observed"
+                      ? "Based on RCTs, field experiments, or platform data showing actual changes"
+                      : annotation.estimateType === "mixed"
+                        ? "Combines exposure-based projections with some observed empirical data"
+                        : "Projection based on task overlap and AI capability mapping"
+                  }
+                >
+                  {ESTIMATE_TYPE_LABELS[annotation.estimateType]}
                 </span>
-              </div>
-            ) : (
-              <span />
-            )}
-            <span className="text-[12px] text-[var(--accent)] font-semibold group-hover:underline">
-              View all {prediction.sources.length} sources
+              )}
+              {bestSource && tierConfig && (
+                <div className="flex items-center gap-1.5 min-w-0">
+                  <span
+                    className="inline-block w-2 h-2 rounded-full shrink-0"
+                    style={{ backgroundColor: tierConfig.color }}
+                  />
+                  <span className="text-[12px] text-[var(--muted)] truncate max-w-[140px]">
+                    {bestSource.publisher}
+                  </span>
+                </div>
+              )}
+            </div>
+            <span className="text-[12px] text-[var(--accent)] font-semibold group-hover:underline shrink-0">
+              {prediction.sources.length} sources
             </span>
           </div>
         </div>

@@ -5,6 +5,7 @@ import { EvidenceTier } from "@/lib/types";
 import { getAllPredictions } from "@/lib/data-loader";
 import EvidenceFilter from "@/components/EvidenceFilter";
 import PredictionSummaryCard from "@/components/PredictionSummaryCard";
+import EvidenceSummaryCard from "@/components/EvidenceSummaryCard";
 import ResearchFeed from "@/components/ResearchFeed";
 
 const predictions = getAllPredictions();
@@ -56,6 +57,39 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Research Framing Banner */}
+      <section>
+        <div className="border border-black/[0.08] rounded-xl px-6 py-5 sm:px-8 sm:py-6 bg-[var(--accent-light)]/40">
+          <div className="flex gap-3 sm:gap-4">
+            <div className="shrink-0 mt-0.5">
+              <svg className="w-5 h-5 text-[var(--accent)]" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+              </svg>
+            </div>
+            <div>
+              <p className="text-[13px] font-bold uppercase tracking-widest text-[var(--accent)] mb-2">
+                A note on reading these predictions
+              </p>
+              <p className="text-[14px] sm:text-[15px] text-[var(--foreground)]/80 leading-relaxed">
+                AI &ldquo;exposure&rdquo; is not the same as job loss. Across a growing body of empirical
+                research &mdash; from comprehensive reviews to ADP payroll analysis to firm spending
+                data &mdash; a consistent picture is emerging: no mass displacement at the macro level,
+                but real and growing pressure on entry-level workers in highly AI-exposed occupations.
+                Productivity gains of 20&ndash;60% are reshaping <em>what</em> workers do more
+                than <em>whether</em> they work. The key distinction is
+                between <strong>automation</strong> (replacing tasks) and <strong>augmentation</strong> (enhancing
+                them) &mdash; and the latest data shows augmentation is still the dominant pattern.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What the Evidence Actually Shows */}
+      <section>
+        <EvidenceSummaryCard />
+      </section>
+
       {/* Evidence Filter */}
       <section>
         <EvidenceFilter
@@ -64,14 +98,14 @@ export default function Home() {
         />
       </section>
 
-      {/* Job Displacement */}
+      {/* Job Displacement & Restructuring */}
       <section>
         <div className="mb-8">
           <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
-            Job Displacement
+            Job Displacement &amp; Restructuring
           </h2>
-          <p className="text-[15px] text-[var(--muted)] mt-2 max-w-xl">
-            Projected share of jobs eliminated or restructured by AI, by sector
+          <p className="text-[15px] text-[var(--muted)] mt-2 max-w-2xl">
+            Projected share of jobs eliminated, restructured, or significantly transformed by AI &mdash; most evidence points to task-level transition rather than wholesale replacement
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
