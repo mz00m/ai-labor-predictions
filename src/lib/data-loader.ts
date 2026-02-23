@@ -17,19 +17,22 @@ import aiAdoption from "@/data/predictions/adoption/ai-adoption-rate.json";
 import earningsCallMentions from "@/data/predictions/signals/earnings-call-mentions.json";
 
 const allPredictions: Prediction[] = [
-  techSector as Prediction,
-  customerService as Prediction,
+  // Displacement: broadest population → sector → niche roles
   overall as Prediction,
   totalJobsLost as Prediction,
   whiteCollar as Prediction,
+  techSector as Prediction,
   creative as Prediction,
-  healthcareAdmin as Prediction,
   education as Prediction,
-  highSkillPremium as Prediction,
+  healthcareAdmin as Prediction,
+  customerService as Prediction,
+  // Wages: all workers → regional → demographic → niche
   medianWage as Prediction,
-  freelancerRate as Prediction,
-  entryLevel as Prediction,
   geoDivergence as Prediction,
+  entryLevel as Prediction,
+  highSkillPremium as Prediction,
+  freelancerRate as Prediction,
+  // Adoption & Signals
   aiAdoption as Prediction,
   earningsCallMentions as Prediction,
 ];
