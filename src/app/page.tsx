@@ -6,6 +6,7 @@ import { getAllPredictions } from "@/lib/data-loader";
 import EvidenceFilter from "@/components/EvidenceFilter";
 import PredictionSummaryCard from "@/components/PredictionSummaryCard";
 import EvidenceSummaryCard from "@/components/EvidenceSummaryCard";
+import NewsTicker from "@/components/NewsTicker";
 import ResearchFeed from "@/components/ResearchFeed";
 
 const predictions = getAllPredictions();
@@ -56,6 +57,9 @@ export default function Home() {
           </p>
         </div>
       </div>
+
+      {/* News Ticker */}
+      <NewsTicker />
 
       {/* Research Framing Banner + Filter */}
       <div className="space-y-10">

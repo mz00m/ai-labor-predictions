@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import NewsTicker from "@/components/NewsTicker";
 import Navbar from "@/components/Navbar";
 import { Analytics } from "@vercel/analytics/react";
 
@@ -32,7 +31,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen bg-white text-[var(--foreground)] antialiased">
-        <NewsTicker />
         <Navbar />
         <main className="max-w-6xl mx-auto px-6 sm:px-10 py-16">
           {children}
