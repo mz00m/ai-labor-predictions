@@ -63,8 +63,8 @@ export default function Home() {
         <section>
           <div className="border border-black/[0.08] rounded-lg px-5 py-4 sm:px-6 sm:py-4">
             <p className="text-[14px] text-[var(--muted)] leading-relaxed">
-              <span className="font-semibold text-[var(--foreground)]">AI exposure &ne; job loss.</span>{" "}
-              The evidence so far: sizable productivity gains, no macro displacement, but real and growing
+              <span className="font-semibold text-[var(--foreground)]">Bottom line up front:</span>{" "}
+              AI exposure &ne; job loss. The evidence so far: sizable productivity gains, no macro displacement, but real and growing
               pressure on entry-level workers. Augmentation still outpaces automation.
             </p>
           </div>
