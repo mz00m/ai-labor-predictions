@@ -25,7 +25,7 @@ export default function Home() {
   return (
     <div className="space-y-14">
       {/* Hero */}
-      <div className="relative overflow-hidden -mx-6 sm:-mx-10 px-6 sm:px-10 pt-10 pb-6 sm:pt-14 sm:pb-8">
+      <div className="relative overflow-hidden -mx-6 sm:-mx-10 px-6 sm:px-10 pt-4 pb-0 sm:pt-6 sm:pb-0">
         {/* Background gradient orbs */}
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
           <div className="absolute -top-24 -left-24 w-[500px] h-[500px] rounded-full bg-[#7c3aed]/[0.04] blur-3xl" />
@@ -56,10 +56,12 @@ export default function Home() {
             Filter by evidence quality to see how the picture changes.
           </p>
         </div>
-      </div>
 
-      {/* News Ticker */}
-      <NewsTicker />
+        {/* News Ticker — directly below hero content */}
+        <div className="relative mt-6">
+          <NewsTicker />
+        </div>
+      </div>
 
       {/* Research Framing Banner + Filter */}
       <div className="space-y-10">
@@ -202,7 +204,7 @@ export default function Home() {
       </section>
 
       {/* Research Feed */}
-      <section>
+      <section id="research-feed">
         <ResearchFeed selectedTiers={selectedTiers} />
       </section>
     </div>

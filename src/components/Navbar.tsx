@@ -17,6 +17,12 @@ export default function Navbar() {
           >
             Dashboard
           </Link>
+          <Link
+            href="/#research-feed"
+            className="text-[15px] text-[var(--foreground)] hover:opacity-60 font-bold underline underline-offset-4"
+          >
+            Research Feed
+          </Link>
           <span className="text-[13px] text-[var(--muted)] italic">
             A weekend vibe coding project of{" "}
             <a

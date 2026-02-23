@@ -154,12 +154,12 @@ export default function NewsTicker() {
   // Always render the container to avoid layout shift
   return (
     <div
-      className="relative bg-[#1e3a5f] h-9 sm:h-10 overflow-hidden flex items-center rounded-lg"
+      className="relative bg-[#2a5280] h-9 sm:h-10 overflow-hidden flex items-center rounded-lg"
       role="marquee"
       aria-label="Latest AI labor market headlines"
     >
       {/* LIVE label */}
-      <div className="absolute left-0 top-0 bottom-0 flex items-center gap-1.5 pl-3 pr-2 sm:pl-4 sm:pr-3 bg-[#1e3a5f] z-10">
+      <div className="absolute left-0 top-0 bottom-0 flex items-center gap-1.5 pl-3 pr-2 sm:pl-4 sm:pr-3 bg-[#2a5280] z-10">
         <span className="relative flex h-2 w-2">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" />
           <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500" />
@@ -170,7 +170,7 @@ export default function NewsTicker() {
       </div>
 
       {/* Gradient fade after LIVE label */}
-      <div className="absolute left-[68px] sm:left-[78px] top-0 bottom-0 w-8 bg-gradient-to-r from-[#1e3a5f] to-transparent z-10 pointer-events-none" />
+      <div className="absolute left-[68px] sm:left-[78px] top-0 bottom-0 w-8 bg-gradient-to-r from-[#2a5280] to-transparent z-10 pointer-events-none" />
 
       {/* Scrolling content */}
       {loaded && headlines.length > 0 && (
