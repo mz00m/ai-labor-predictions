@@ -6,9 +6,9 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-6 sm:px-10 h-20 flex items-center justify-between">
         <Link
           href="/"
-          className="text-[18px] font-black tracking-tight text-[var(--foreground)] hover:opacity-70"
+          className="text-[15px] sm:text-[17px] font-black tracking-tight text-[var(--foreground)] hover:opacity-70"
         >
-          AI &amp; Labor
+          AI Impact Early Warning Indicators
         </Link>
         <div className="flex items-center gap-6">
           <Link
