@@ -15,25 +15,18 @@ export default function Methodology() {
       {/* Overview */}
       <div className="space-y-12">
         <div className="max-w-3xl space-y-4">
-          <h3 className="text-[18px] font-bold text-[var(--foreground)]">
-            Overview
-          </h3>
           <p className="text-[14px] text-[var(--muted)] leading-relaxed">
-            This dashboard tracks how AI is affecting jobs, wages, and corporate
-            behavior by synthesizing evidence from academic research, government
-            statistics, institutional reports, corporate filings, job posting
-            data, and real-time news coverage. Every prediction is backed by
-            individually cited sources, each classified into one of four
-            evidence tiers. The goal is not to make forecasts but to surface
-            what the empirical research actually says &mdash; and to make the
-            uncertainty visible.
-          </p>
-          <p className="text-[14px] text-[var(--muted)] leading-relaxed">
-            Predictions are organized into four categories: job displacement and
-            restructuring, wage impacts, AI adoption rates, and leading
-            corporate signals. Each prediction tracks a specific measurable
-            indicator over time, with confidence intervals where the underlying
-            research provides them.
+            Society is trying to figure out what AI means for work &mdash; and
+            the answers keep changing. This dashboard makes that process visible
+            by tracking how predictions about displacement, wages, adoption, and
+            corporate behavior evolve as new research, data, and real-world
+            evidence emerge. Every prediction is backed by individually cited
+            sources across four evidence tiers, from peer-reviewed RCTs to
+            earnings call mentions. You&apos;ll see the estimates shift, the
+            ranges widen or narrow, and the consensus form (or fracture) over
+            time. This isn&apos;t a forecast &mdash; it&apos;s a live map of
+            what we know, what we don&apos;t, and where the evidence is
+            pointing.
           </p>
         </div>
 
@@ -48,61 +41,198 @@ export default function Methodology() {
             the evidence behind any claim. The tier filter on the dashboard lets
             you strip away lower-quality sources to see how the picture changes.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="border border-black/[0.06] rounded-lg px-5 py-4 bg-white">
-              <div className="flex items-center gap-2 mb-2">
+          <div className="space-y-4">
+            {/* Tier 1 */}
+            <div className="border border-black/[0.06] rounded-lg px-5 py-5 bg-white">
+              <div className="flex items-center gap-2 mb-3">
                 <span className="w-2.5 h-2.5 rounded-full bg-green-500" />
                 <p className="text-[14px] font-bold text-[var(--foreground)]">
                   Tier 1 &mdash; Verified Data &amp; Research
                 </p>
               </div>
-              <p className="text-[13px] text-[var(--muted)] leading-snug">
-                Randomized controlled trials, peer-reviewed journal articles
-                (AER, QJE, NBER working papers), government statistical data
-                (BLS, Census, OECD), SEC filings and 10-K/10-Q reports, and
-                corporate investor presentations with disclosed data.
+              <p className="text-[13px] text-[var(--muted)] leading-relaxed mb-3">
+                The highest-confidence evidence. These sources carry either
+                peer-review scrutiny, legal liability for accuracy, or are
+                produced by government statistical agencies with established
+                methodologies.
               </p>
+              <div className="text-[13px] text-[var(--muted)] leading-relaxed space-y-2">
+                <p>
+                  <span className="font-semibold text-[var(--foreground)]">Randomized controlled trials (RCTs)</span>{" "}
+                  &mdash; Experimental studies where workers or firms are randomly
+                  assigned to use AI tools vs. a control group. These provide
+                  the cleanest causal estimates of productivity and displacement
+                  effects. Key examples include the Noy &amp; Zhang MIT writing
+                  experiment and the Brynjolfsson et al. customer service study.
+                </p>
+                <p>
+                  <span className="font-semibold text-[var(--foreground)]">Peer-reviewed journal articles</span>{" "}
+                  &mdash; Published in top economics and computer science
+                  journals (American Economic Review, Quarterly Journal of
+                  Economics, Econometrica, Science, Nature). Includes NBER
+                  working papers, which undergo internal review and are widely
+                  treated as near-publication quality in economics.
+                </p>
+                <p>
+                  <span className="font-semibold text-[var(--foreground)]">Government statistical data</span>{" "}
+                  &mdash; Bureau of Labor Statistics employment and wage series,
+                  Census Bureau surveys (including the Business Trends and
+                  Impact Survey), OECD labor force statistics, and Federal
+                  Reserve economic data. These provide the baseline macro
+                  indicators against which AI-specific effects are measured.
+                </p>
+                <p>
+                  <span className="font-semibold text-[var(--foreground)]">SEC filings and earnings transcripts</span>{" "}
+                  &mdash; 10-K annual reports, 10-Q quarterly reports, and 8-K
+                  current reports filed with the Securities and Exchange
+                  Commission. Companies face legal liability for material
+                  misstatements, making these disclosures about AI investment,
+                  workforce restructuring, and productivity gains unusually
+                  reliable. Earnings call transcripts are included when
+                  executives discuss AI strategy on the record with analysts.
+                </p>
+              </div>
             </div>
-            <div className="border border-black/[0.06] rounded-lg px-5 py-4 bg-white">
-              <div className="flex items-center gap-2 mb-2">
+
+            {/* Tier 2 */}
+            <div className="border border-black/[0.06] rounded-lg px-5 py-5 bg-white">
+              <div className="flex items-center gap-2 mb-3">
                 <span className="w-2.5 h-2.5 rounded-full bg-blue-500" />
                 <p className="text-[14px] font-bold text-[var(--foreground)]">
                   Tier 2 &mdash; Institutional Analysis
                 </p>
               </div>
-              <p className="text-[13px] text-[var(--muted)] leading-snug">
-                Think tank reports (Brookings, RAND, McKinsey Global Institute),
-                international organization forecasts (IMF, World Bank, ILO),
-                prediction markets (Metaculus, Polymarket), working papers and
-                preprints (arXiv, SSRN), and industry research (Gartner,
-                Forrester, Deloitte).
+              <p className="text-[13px] text-[var(--muted)] leading-relaxed mb-3">
+                Expert analysis from credible institutions. These sources apply
+                rigorous methodology but may not have undergone full peer review,
+                or they synthesize existing research rather than producing new
+                empirical data.
               </p>
+              <div className="text-[13px] text-[var(--muted)] leading-relaxed space-y-2">
+                <p>
+                  <span className="font-semibold text-[var(--foreground)]">Think tank reports</span>{" "}
+                  &mdash; Brookings Institution, RAND Corporation, McKinsey
+                  Global Institute, and similar organizations that employ
+                  PhD-level researchers and publish with editorial oversight.
+                  Their work often bridges academic research and policy
+                  audiences, translating findings into actionable frameworks.
+                </p>
+                <p>
+                  <span className="font-semibold text-[var(--foreground)]">International organization forecasts</span>{" "}
+                  &mdash; IMF World Economic Outlook projections, World Bank
+                  development reports, ILO Global Employment Trends, and OECD
+                  Employment Outlook. These carry institutional credibility and
+                  access to proprietary data but are sometimes slower to
+                  incorporate the latest evidence.
+                </p>
+                <p>
+                  <span className="font-semibold text-[var(--foreground)]">Working papers and preprints</span>{" "}
+                  &mdash; Papers posted on arXiv, SSRN, IZA Discussion Paper
+                  Series, and similar repositories before formal journal
+                  publication. The AI-labor field moves fast enough that waiting
+                  for publication would mean ignoring 6&ndash;18 months of
+                  current work. These are included but flagged as pre-review.
+                </p>
+                <p>
+                  <span className="font-semibold text-[var(--foreground)]">Industry research</span>{" "}
+                  &mdash; Gartner, Forrester, Deloitte, and consulting firm
+                  surveys of enterprise AI adoption. These offer large sample
+                  sizes and practitioner perspectives but may carry selection
+                  bias toward firms already investing in AI.
+                </p>
+                <p>
+                  <span className="font-semibold text-[var(--foreground)]">Prediction markets</span>{" "}
+                  &mdash; Metaculus, Polymarket, and Kalshi forecasts where
+                  participants put money or reputation behind specific
+                  predictions. Useful as a consensus indicator when large
+                  numbers of informed forecasters participate, though markets on
+                  AI-labor questions remain relatively thin.
+                </p>
+              </div>
             </div>
-            <div className="border border-black/[0.06] rounded-lg px-5 py-4 bg-white">
-              <div className="flex items-center gap-2 mb-2">
+
+            {/* Tier 3 */}
+            <div className="border border-black/[0.06] rounded-lg px-5 py-5 bg-white">
+              <div className="flex items-center gap-2 mb-3">
                 <span className="w-2.5 h-2.5 rounded-full bg-orange-500" />
                 <p className="text-[14px] font-bold text-[var(--foreground)]">
                   Tier 3 &mdash; Journalism &amp; Commentary
                 </p>
               </div>
-              <p className="text-[13px] text-[var(--muted)] leading-snug">
-                Reporting from major outlets (NYT, WSJ, FT, Reuters), trade
-                publications (TechCrunch, The Information), long-form
-                investigations, and expert opinion columns.
+              <p className="text-[13px] text-[var(--muted)] leading-relaxed mb-3">
+                Professional reporting and informed analysis. These sources
+                often surface new information through investigative work or
+                expert interviews but lack the methodological rigor of
+                peer-reviewed research.
               </p>
+              <div className="text-[13px] text-[var(--muted)] leading-relaxed space-y-2">
+                <p>
+                  <span className="font-semibold text-[var(--foreground)]">Major news outlets</span>{" "}
+                  &mdash; New York Times, Wall Street Journal, Financial Times,
+                  Reuters, Bloomberg, and The Economist. These provide real-time
+                  coverage of layoffs, hiring freezes, AI deployment
+                  announcements, and policy developments that often precede
+                  formal data by months.
+                </p>
+                <p>
+                  <span className="font-semibold text-[var(--foreground)]">Trade publications</span>{" "}
+                  &mdash; TechCrunch, The Information, Wired, MIT Technology
+                  Review, and industry-specific outlets. Valuable for tracking
+                  AI product launches, enterprise adoption trends, and
+                  competitive dynamics that signal where labor impacts are
+                  heading next.
+                </p>
+                <p>
+                  <span className="font-semibold text-[var(--foreground)]">Expert commentary</span>{" "}
+                  &mdash; Op-eds, long-form analysis, and conference
+                  presentations by domain experts. Included when the author has
+                  relevant credentials and the analysis adds interpretive value
+                  beyond what the underlying data shows on its own.
+                </p>
+              </div>
             </div>
-            <div className="border border-black/[0.06] rounded-lg px-5 py-4 bg-white">
-              <div className="flex items-center gap-2 mb-2">
+
+            {/* Tier 4 */}
+            <div className="border border-black/[0.06] rounded-lg px-5 py-5 bg-white">
+              <div className="flex items-center gap-2 mb-3">
                 <span className="w-2.5 h-2.5 rounded-full bg-red-500" />
                 <p className="text-[14px] font-bold text-[var(--foreground)]">
                   Tier 4 &mdash; Informal &amp; Social
                 </p>
               </div>
-              <p className="text-[13px] text-[var(--muted)] leading-snug">
-                Twitter/X threads, Reddit discussions, blog posts, Substack
-                newsletters, podcasts, and YouTube commentary. Included for
-                completeness but weighted accordingly.
+              <p className="text-[13px] text-[var(--muted)] leading-relaxed mb-3">
+                Unvetted, anecdotal, and crowd-sourced signals. These are
+                included because they often capture ground-level workforce
+                sentiment months before it shows up in formal data &mdash; but
+                they carry significant noise and selection bias.
               </p>
+              <div className="text-[13px] text-[var(--muted)] leading-relaxed space-y-2">
+                <p>
+                  <span className="font-semibold text-[var(--foreground)]">Social media</span>{" "}
+                  &mdash; Twitter/X threads from researchers, engineers, and
+                  hiring managers; Reddit discussions in r/MachineLearning,
+                  r/cscareerquestions, and similar communities. Individual posts
+                  are unreliable, but patterns across many posts can signal
+                  emerging trends (e.g., widespread reports of entry-level hiring
+                  freezes appeared on Reddit months before showing up in BLS
+                  data).
+                </p>
+                <p>
+                  <span className="font-semibold text-[var(--foreground)]">Blogs and newsletters</span>{" "}
+                  &mdash; Substack essays, personal blogs, and independent
+                  analysis. Quality varies enormously. Included when the author
+                  has domain expertise or when the analysis cites primary
+                  sources that can be independently verified.
+                </p>
+                <p>
+                  <span className="font-semibold text-[var(--foreground)]">Podcasts and video</span>{" "}
+                  &mdash; YouTube commentary, podcast interviews, and conference
+                  talks. These occasionally surface original information
+                  (particularly executive interviews) but are difficult to
+                  fact-check systematically and are weighted lowest in the
+                  scoring system.
+                </p>
+              </div>
             </div>
           </div>
         </div>
