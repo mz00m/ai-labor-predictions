@@ -81,6 +81,14 @@
       "evidenceTier": 2
     },
     {
+      "date": "2026-01-15",
+      "value": 14,
+      "confidenceLow": 8,
+      "confidenceHigh": 20,
+      "sourceIds": ["imf-skill-gaps-ai-2026"],
+      "evidenceTier": 1
+    },
+    {
       "date": "2026-02-01",
       "value": 15,
       "confidenceLow": 8,
@@ -187,6 +195,15 @@
       "evidenceTier": 3,
       "datePublished": "2026-01-15",
       "excerpt": "McKinsey estimates 12 million US workers will need to transition occupations by 2030, with education support staff among the affected groups requiring reskilling."
+    },
+    {
+      "id": "imf-skill-gaps-ai-2026",
+      "title": "Bridging Skill Gaps for the Future: New Jobs Creation in the AI Age",
+      "url": "https://www.imf.org/-/media/files/publications/sdn/2026/english/sdnea2026001.pdf",
+      "publisher": "IMF (Jaumotte et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-15",
+      "excerpt": "Around 40% of global employment is exposed to AI; in advanced economies 60%. Demand for new skills is rising with 10% of jobs in advanced economies requiring at least one new skill."
     }
   ]
 }

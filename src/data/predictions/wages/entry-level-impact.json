@@ -73,6 +73,14 @@
       "evidenceTier": 1
     },
     {
+      "date": "2025-08-01",
+      "value": -10,
+      "confidenceLow": -15,
+      "confidenceHigh": -5,
+      "sourceIds": ["brynjolfsson-chandar-chen-entry-2025"],
+      "evidenceTier": 1
+    },
+    {
       "date": "2025-11-01",
       "value": -10,
       "confidenceLow": -18,
@@ -87,6 +95,14 @@
       "confidenceHigh": -5,
       "sourceIds": ["anthropic-ceo-entry-level-2025"],
       "evidenceTier": 3
+    },
+    {
+      "date": "2026-01-15",
+      "value": -11,
+      "confidenceLow": -16,
+      "confidenceHigh": -6,
+      "sourceIds": ["imf-skill-gaps-entry-2026"],
+      "evidenceTier": 1
     }
   ],
   "sources": [
@@ -178,6 +194,33 @@
       "evidenceTier": 3,
       "datePublished": "2025-12-15",
       "excerpt": "Anthropic CEO Dario Amodei warned that up to 50% of entry-level office jobs could be substantially impacted by AI within the next 2-3 years."
+    },
+    {
+      "id": "brynjolfsson-chandar-chen-entry-2025",
+      "title": "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of AI",
+      "url": "https://digitaleconomy.stanford.edu/wp-content/uploads/2025/08/Canaries_BrynjolfssonChandarChen.pdf",
+      "publisher": "Stanford Digital Economy Lab (Brynjolfsson, Chandar, Chen)",
+      "evidenceTier": 1,
+      "datePublished": "2025-08-01",
+      "excerpt": "ADP payroll data shows 13% relative decline in employment for ages 22-25 in most AI-exposed occupations. Effects concentrated in automation roles, not augmentation."
+    },
+    {
+      "id": "imf-skill-gaps-entry-2026",
+      "title": "Bridging Skill Gaps for the Future: New Jobs Creation in the AI Age",
+      "url": "https://www.imf.org/-/media/files/publications/sdn/2026/english/sdnea2026001.pdf",
+      "publisher": "IMF (Jaumotte et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-15",
+      "excerpt": "Emerging evidence that generative AI adoption is reducing entry-level hiring, especially where tasks are automatable rather than complementary to humans."
+    },
+    {
+      "id": "hartley-entry-level-2026",
+      "title": "The Labor Market Effects of Generative Artificial Intelligence",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5136877",
+      "publisher": "Stanford / World Bank (Hartley, Jolevski, Melo, Moore)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-01",
+      "excerpt": "35.9% of US workers used generative AI by December 2025; adoption concentrated among younger, college-educated workers. Small positive wage effects overall."
     }
   ]
 }

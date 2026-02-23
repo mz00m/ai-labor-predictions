@@ -89,6 +89,14 @@
       "evidenceTier": 1
     },
     {
+      "date": "2025-08-01",
+      "value": 15,
+      "confidenceLow": 10,
+      "confidenceHigh": 22,
+      "sourceIds": ["brynjolfsson-chandar-chen-2025"],
+      "evidenceTier": 1
+    },
+    {
       "date": "2025-10-01",
       "value": 15,
       "confidenceLow": 10,
@@ -244,6 +252,15 @@
       "evidenceTier": 3,
       "datePublished": "2025-12-15",
       "excerpt": "BLS projects AI will dampen software developer employment growth to 17% through 2034, revised down from prior 25% estimate, as AI coding tools reduce headcount needs."
+    },
+    {
+      "id": "brynjolfsson-chandar-chen-2025",
+      "title": "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of AI",
+      "url": "https://digitaleconomy.stanford.edu/wp-content/uploads/2025/08/Canaries_BrynjolfssonChandarChen.pdf",
+      "publisher": "Stanford Digital Economy Lab (Brynjolfsson, Chandar, Chen)",
+      "evidenceTier": 1,
+      "datePublished": "2025-08-01",
+      "excerpt": "13% relative decline in employment for workers ages 22-25 in most AI-exposed occupations. Software developer employment for ages 22-25 down nearly 20% since ChatGPT's launch."
     }
   ],
   "marketIds": {

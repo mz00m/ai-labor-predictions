@@ -73,11 +73,27 @@
       "evidenceTier": 1
     },
     {
+      "date": "2025-09-08",
+      "value": 40,
+      "confidenceLow": 30,
+      "confidenceHigh": 55,
+      "sourceIds": ["pwbm-ai-adoption-2025"],
+      "evidenceTier": 1
+    },
+    {
       "date": "2025-10-01",
       "value": 40,
       "confidenceLow": 30,
       "confidenceHigh": 52,
       "sourceIds": ["anthropic-economic-index-2025"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2026-01-01",
+      "value": 42,
+      "confidenceLow": 35,
+      "confidenceHigh": 55,
+      "sourceIds": ["hartley-adoption-survey-2026"],
       "evidenceTier": 1
     },
     {
@@ -205,6 +221,42 @@
       "evidenceTier": 2,
       "datePublished": "2025-11-20",
       "excerpt": "75% of knowledge workers now use AI tools. Adoption in enterprises with 500+ employees reached 60%, up from 40% a year prior."
+    },
+    {
+      "id": "hartley-adoption-survey-2026",
+      "title": "The Labor Market Effects of Generative Artificial Intelligence",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5136877",
+      "publisher": "Stanford / World Bank (Hartley, Jolevski, Melo, Moore)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-01",
+      "excerpt": "35.9% of US workers used generative AI by December 2025. Adoption concentrated among younger, college-educated, higher-earning employees."
+    },
+    {
+      "id": "humlum-vestergaard-chatgpt-adoption-2025",
+      "title": "The Unequal Adoption of ChatGPT Exacerbates Existing Inequalities Among Workers",
+      "url": "https://www.pnas.org/doi/10.1073/pnas.2414972121",
+      "publisher": "PNAS (Humlum, Vestergaard)",
+      "evidenceTier": 1,
+      "datePublished": "2025-01-06",
+      "excerpt": "Half of workers in AI-exposed occupations have used ChatGPT; adoption unequal — women 16pp less likely, employer restrictions hinder broader use."
+    },
+    {
+      "id": "korinek-explosive-growth-2026",
+      "title": "When Does Automating AI Research Produce Explosive Growth?",
+      "url": "https://www.basilhalperin.com/papers/shs.pdf",
+      "publisher": "Working Paper (Davidson, Halperin, Houlden, Korinek)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-01",
+      "excerpt": "AI labs increasingly using AI to accelerate AI research. The threshold for a growth take-off from recursive self-improvement is within reach."
+    },
+    {
+      "id": "pwbm-ai-adoption-2025",
+      "title": "The Projected Impact of Generative AI on Future Productivity Growth",
+      "url": "https://budgetmodel.wharton.upenn.edu/issues/2025/9/8/projected-impact-of-generative-ai-on-future-productivity-growth",
+      "publisher": "Penn Wharton Budget Model (Arnon, Smetters)",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-08",
+      "excerpt": "In about 40% of employment in exposed occupations, at least 50% of tasks will be replaceable. Average labor-cost savings ~25% from current tools, potentially 40% as systems improve."
     }
   ]
 }

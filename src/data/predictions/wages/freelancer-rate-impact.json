@@ -178,6 +178,15 @@
       "evidenceTier": 3,
       "datePublished": "2025-12-01",
       "excerpt": "Writing gigs dropped 30% across major freelance platforms post-ChatGPT. Translation and data entry categories down 35-45%. AI-augmented freelancers partially offset decline."
+    },
+    {
+      "id": "humlum-vestergaard-adoption-2025",
+      "title": "The Unequal Adoption of ChatGPT Exacerbates Existing Inequalities Among Workers",
+      "url": "https://www.pnas.org/doi/10.1073/pnas.2414972121",
+      "publisher": "PNAS (Humlum, Vestergaard)",
+      "evidenceTier": 1,
+      "datePublished": "2025-01-06",
+      "excerpt": "Workers see ChatGPT halving working times in about a third of tasks, but employer restrictions and required training hinder adoption."
     }
   ]
 }

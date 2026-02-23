@@ -200,6 +200,15 @@
       "evidenceTier": 3,
       "datePublished": "2026-01-15",
       "excerpt": "95% of customer interactions projected to be AI-powered by 2028. Current AI resolution rates at leading companies exceed 55% without human escalation."
+    },
+    {
+      "id": "brynjolfsson-li-raymond-qje-2025",
+      "title": "Generative AI at Work",
+      "url": "https://academic.oup.com/qje/article/140/2/889/7990658",
+      "publisher": "QJE (Brynjolfsson, Li, Raymond)",
+      "evidenceTier": 1,
+      "datePublished": "2025-05-01",
+      "excerpt": "AI assistance increases customer service worker productivity by 15% on average. Less experienced workers improve most; AI disseminates best practices from top performers."
     }
   ]
 }

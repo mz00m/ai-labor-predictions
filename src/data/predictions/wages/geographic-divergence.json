@@ -87,6 +87,14 @@
       "confidenceHigh": 62,
       "sourceIds": ["moneypenny-regional-ai-2025"],
       "evidenceTier": 3
+    },
+    {
+      "date": "2026-01-21",
+      "value": 47,
+      "confidenceLow": 35,
+      "confidenceHigh": 55,
+      "sourceIds": ["manning-aguirre-adaptive-2026"],
+      "evidenceTier": 1
     }
   ],
   "sources": [
@@ -178,6 +186,24 @@
       "evidenceTier": 3,
       "datePublished": "2025-12-10",
       "excerpt": "Mountain region leads US AI adoption at 42%, followed by Pacific at 39%. Southeast lags at 22%. Regional adoption gaps correlate with widening wage divergence."
+    },
+    {
+      "id": "muro-kinder-geography-2025",
+      "title": "The geography of generative AI's workforce impacts will likely differ from those of previous technologies",
+      "url": "https://www.brookings.edu/articles/the-geography-of-generative-ais-workforce-impacts-will-likely-differ-from-those-of-previous-technologies/",
+      "publisher": "Brookings Metro (Muro, Methkupally, Kinder)",
+      "evidenceTier": 1,
+      "datePublished": "2025-02-01",
+      "excerpt": "43% of workers in San Jose could see AI shift half or more of tasks, vs only 31% in Las Vegas. High-skill metro areas most exposed — reversing prior automation patterns."
+    },
+    {
+      "id": "manning-aguirre-adaptive-2026",
+      "title": "How Adaptable Are American Workers to AI-Induced Job Displacement?",
+      "url": "https://www.nber.org/papers/w34705",
+      "publisher": "NBER (Manning, Aguirre)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-21",
+      "excerpt": "6.1 million workers in AI-exposed roles lack adaptive capacity; 86% are women. Vulnerability concentrated in college towns and state capitals in Mountain West and Midwest."
     }
   ]
 }

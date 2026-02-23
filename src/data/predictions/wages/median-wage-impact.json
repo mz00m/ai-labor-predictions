@@ -73,6 +73,14 @@
       "evidenceTier": 2
     },
     {
+      "date": "2025-09-01",
+      "value": -2,
+      "confidenceLow": -5,
+      "confidenceHigh": 1,
+      "sourceIds": ["korinek-trammell-growth-2025"],
+      "evidenceTier": 1
+    },
+    {
       "date": "2025-11-01",
       "value": -2.5,
       "confidenceLow": -7,
@@ -200,6 +208,33 @@
       "evidenceTier": 2,
       "datePublished": "2025-11-15",
       "excerpt": "Median annual wage for all occupations: $49,500. AI-exposed administrative and clerical wages grew 1.1% vs. 3.8% for non-AI-exposed occupations."
+    },
+    {
+      "id": "korinek-trammell-growth-2025",
+      "title": "Economic Growth under Transformative AI",
+      "url": "https://www.nber.org/papers/w31815",
+      "publisher": "Annual Review of Economics / NBER (Korinek, Trammell)",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-01",
+      "excerpt": "Sufficiently advanced AI could dramatically raise growth rates and lower labor share, breaking Kaldor Facts. Wages may rise or fall depending on returns to scale and direction of technical change."
+    },
+    {
+      "id": "acemoglu-johnson-power-progress-2023",
+      "title": "Power and Progress: Our Thousand-Year Struggle Over Technology and Prosperity",
+      "url": "https://www.publicaffairsbooks.com/titles/daron-acemoglu/power-and-progress/9781541702530",
+      "publisher": "PublicAffairs (Acemoglu, Johnson)",
+      "evidenceTier": 2,
+      "datePublished": "2023-05-16",
+      "excerpt": "Technology does not automatically benefit workers; shared prosperity requires deliberate policy choices. AI could follow historical pattern of concentrating gains among capital owners."
+    },
+    {
+      "id": "stiglitz-korinek-steering-2025",
+      "title": "Steering Technological Progress",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5279584",
+      "publisher": "INET (Korinek, Stiglitz)",
+      "evidenceTier": 1,
+      "datePublished": "2025-05-05",
+      "excerpt": "For the empirically plausible case that capital and labor are gross complements, raising wages requires capital-augmenting innovation rather than labor-augmenting."
     }
   ]
 }

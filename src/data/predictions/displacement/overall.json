@@ -81,6 +81,14 @@
       "evidenceTier": 1
     },
     {
+      "date": "2025-10-01",
+      "value": 7,
+      "confidenceLow": 3,
+      "confidenceHigh": 12,
+      "sourceIds": ["kinder-brookings-2025"],
+      "evidenceTier": 1
+    },
+    {
       "date": "2025-10-15",
       "value": 7,
       "confidenceLow": 3,
@@ -95,6 +103,14 @@
       "confidenceHigh": 15,
       "sourceIds": ["wef-future-jobs-2025"],
       "evidenceTier": 2
+    },
+    {
+      "date": "2026-01-01",
+      "value": 9,
+      "confidenceLow": 5,
+      "confidenceHigh": 15,
+      "sourceIds": ["hartley-genai-labor-2026"],
+      "evidenceTier": 1
     },
     {
       "date": "2026-02-01",
@@ -235,6 +251,33 @@
       "publisher": "Fortune",
       "evidenceTier": 3,
       "datePublished": "2026-01-20"
+    },
+    {
+      "id": "kinder-brookings-2025",
+      "title": "New data show no AI jobs apocalypse — for now",
+      "url": "https://www.brookings.edu/articles/new-data-show-no-ai-jobs-apocalypse-for-now/",
+      "publisher": "Brookings (Kinder)",
+      "evidenceTier": 1,
+      "datePublished": "2025-10-01",
+      "excerpt": "Despite fears of imminent AI jobs apocalypse, the overall labor market shows more continuity than disruption since ChatGPT's launch."
+    },
+    {
+      "id": "hartley-genai-labor-2026",
+      "title": "The Labor Market Effects of Generative Artificial Intelligence",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5136877",
+      "publisher": "Stanford / World Bank (Hartley, Jolevski, Melo, Moore)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-01",
+      "excerpt": "35.9% of US workers used generative AI by December 2025; small positive wage effects, no significant decline in job openings."
+    },
+    {
+      "id": "korinek-stiglitz-steering-2025",
+      "title": "Steering Technological Progress",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5279584",
+      "publisher": "INET (Korinek, Stiglitz)",
+      "evidenceTier": 1,
+      "datePublished": "2025-05-05",
+      "excerpt": "Framework for guiding innovation to increase labor demand; steering technology becomes more desirable the less efficient social safety nets are."
     }
   ]
 }

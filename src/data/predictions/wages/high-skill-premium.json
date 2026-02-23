@@ -201,6 +201,24 @@
       "evidenceTier": 2,
       "datePublished": "2026-01-05",
       "excerpt": "AI/ML engineers median total compensation reached $185K in 2025, with top-tier researchers commanding $500K-$1M+. The premium over general software roles widened to 35%."
+    },
+    {
+      "id": "noy-zhang-productivity-2023",
+      "title": "Experimental Evidence on the Productivity Effects of Generative Artificial Intelligence",
+      "url": "https://www.science.org/doi/10.1126/science.adh2586",
+      "publisher": "Science (Noy, Zhang)",
+      "evidenceTier": 1,
+      "datePublished": "2023-07-14",
+      "excerpt": "ChatGPT compressed productivity distribution — low-ability workers gained most (40% time reduction, 18% quality increase). May reduce skill premium over time."
+    },
+    {
+      "id": "brynjolfsson-li-raymond-qje-2025",
+      "title": "Generative AI at Work",
+      "url": "https://academic.oup.com/qje/article/140/2/889/7990658",
+      "publisher": "QJE (Brynjolfsson, Li, Raymond)",
+      "evidenceTier": 1,
+      "datePublished": "2025-05-01",
+      "excerpt": "Less experienced workers improve most from AI assistance; AI disseminates best practices from top performers. Top workers see smaller or negative quality effects."
     }
   ]
 }

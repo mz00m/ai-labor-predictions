@@ -222,6 +222,15 @@
       "evidenceTier": 3,
       "datePublished": "2026-01-25",
       "excerpt": "AI was the most-cited topic in S&P 500 earnings calls in 2025. Companies mentioning AI in workforce context outperformed peers by 8.2 percentage points on average."
+    },
+    {
+      "id": "korinek-brynjolfsson-agrawal-acm-2026",
+      "title": "The Economics of Transformative AI: A Research Agenda",
+      "url": "https://cepr.org/system/files/2024-12/Korinek%20paper.pdf",
+      "publisher": "Communications of the ACM (Korinek, Brynjolfsson, Agrawal)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-01",
+      "excerpt": "Research agenda for understanding transformative AI's economic implications. Corporate AI discussion intensity serves as leading indicator of deployment and labor market effects."
     }
   ]
 }

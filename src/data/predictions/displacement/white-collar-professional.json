@@ -81,6 +81,14 @@
       "evidenceTier": 1
     },
     {
+      "date": "2025-09-26",
+      "value": 22,
+      "confidenceLow": 15,
+      "confidenceHigh": 30,
+      "sourceIds": ["papanikolaou-bpea-historical-2025"],
+      "evidenceTier": 1
+    },
+    {
       "date": "2025-10-15",
       "value": 20,
       "confidenceLow": 13,
@@ -212,6 +220,33 @@
       "evidenceTier": 3,
       "datePublished": "2025-11-20",
       "excerpt": "Gartner projects 50% of middle management positions will be eliminated or restructured as AI handles reporting, coordination, and performance monitoring tasks."
+    },
+    {
+      "id": "papanikolaou-schmidt-ai-labor-2025",
+      "title": "Artificial Intelligence and the Labor Market",
+      "url": "https://www.nber.org/papers/w33509",
+      "publisher": "NBER (Hampole, Papanikolaou, Schmidt, Seegmiller)",
+      "evidenceTier": 1,
+      "datePublished": "2025-02-01",
+      "excerpt": "Tasks with higher AI exposure subsequently experience reduced labor demand. 1 SD increase in AI exposure reduces relative demand for related skills by 2%."
+    },
+    {
+      "id": "papanikolaou-bpea-historical-2025",
+      "title": "Technology and Labor Markets: Past, Present, and Future; Evidence from Two Centuries of Innovation",
+      "url": "https://www.brookings.edu/articles/technology-and-labor-markets-past-present-and-future/",
+      "publisher": "BPEA (Liu, Papanikolaou, Schmidt, Seegmiller)",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-26",
+      "excerpt": "In sharp contrast to the past two centuries, AI will shift relative demand toward occupations with lower education, lower wages, and a greater share of male workers."
+    },
+    {
+      "id": "noy-zhang-science-2023",
+      "title": "Experimental Evidence on the Productivity Effects of Generative Artificial Intelligence",
+      "url": "https://www.science.org/doi/10.1126/science.adh2586",
+      "publisher": "Science (Noy, Zhang)",
+      "evidenceTier": 1,
+      "datePublished": "2023-07-14",
+      "excerpt": "RCT: ChatGPT reduced task completion time by 40% and raised output quality by 18%. Low-ability workers benefited most, compressing the productivity distribution."
     }
   ]
 }

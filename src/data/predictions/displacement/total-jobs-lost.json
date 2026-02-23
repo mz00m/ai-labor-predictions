@@ -81,6 +81,22 @@
       "evidenceTier": 1
     },
     {
+      "date": "2025-09-08",
+      "value": 5,
+      "confidenceLow": 2,
+      "confidenceHigh": 10,
+      "sourceIds": ["pwbm-ai-productivity-2025"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2025-10-01",
+      "value": 4,
+      "confidenceLow": 1,
+      "confidenceHigh": 8,
+      "sourceIds": ["gimbel-yale-ai-labor-2025"],
+      "evidenceTier": 1
+    },
+    {
       "date": "2025-11-01",
       "value": 4,
       "confidenceLow": 1.5,
@@ -213,6 +229,33 @@
       "evidenceTier": 3,
       "datePublished": "2026-01-10",
       "excerpt": "Employers cited AI as a direct cause for 55,000 job cuts in 2025, concentrated in customer service, data entry, and back-office operations."
+    },
+    {
+      "id": "pwbm-ai-productivity-2025",
+      "title": "The Projected Impact of Generative AI on Future Productivity Growth",
+      "url": "https://budgetmodel.wharton.upenn.edu/issues/2025/9/8/projected-impact-of-generative-ai-on-future-productivity-growth",
+      "publisher": "Penn Wharton Budget Model (Arnon, Smetters)",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-08",
+      "excerpt": "Roughly 10% of US work affected in the short run; AI will increase productivity and GDP by 1.5% by 2035. Jobs that AI can completely replace saw 0.75% employment fall 2021-2024."
+    },
+    {
+      "id": "gimbel-yale-ai-labor-2025",
+      "title": "Evaluating the Impact of AI on the Labor Market: Current State of Affairs",
+      "url": "https://budgetlab.yale.edu/research/evaluating-impact-ai-labor-market-current-state-affairs",
+      "publisher": "Yale Budget Lab (Gimbel, Kinder, Kendall, Lee)",
+      "evidenceTier": 1,
+      "datePublished": "2025-10-01",
+      "excerpt": "No economy-wide employment disruption tied to AI since ChatGPT's debut. Measures of AI exposure show no clear relationship with changes in employment or unemployment."
+    },
+    {
+      "id": "humlum-vestergaard-chatgpt-2025",
+      "title": "The Unequal Adoption of ChatGPT Exacerbates Existing Inequalities Among Workers",
+      "url": "https://www.pnas.org/doi/10.1073/pnas.2414972121",
+      "publisher": "PNAS (Humlum, Vestergaard)",
+      "evidenceTier": 1,
+      "datePublished": "2025-01-06",
+      "excerpt": "Half of workers in exposed occupations have used ChatGPT; younger, male, higher-achieving workers lead adoption. Women 16pp less likely to use for work."
     }
   ]
 }
