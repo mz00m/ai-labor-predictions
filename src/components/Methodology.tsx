@@ -21,11 +21,12 @@ export default function Methodology() {
           <p className="text-[14px] text-[var(--muted)] leading-relaxed">
             This dashboard tracks how AI is affecting jobs, wages, and corporate
             behavior by synthesizing evidence from academic research, government
-            statistics, institutional reports, and corporate filings. Every
-            prediction is backed by individually cited sources, each classified
-            into one of four evidence tiers. The goal is not to make forecasts
-            but to surface what the empirical research actually says &mdash; and
-            to make the uncertainty visible.
+            statistics, institutional reports, corporate filings, job posting
+            data, and real-time news coverage. Every prediction is backed by
+            individually cited sources, each classified into one of four
+            evidence tiers. The goal is not to make forecasts but to surface
+            what the empirical research actually says &mdash; and to make the
+            uncertainty visible.
           </p>
           <p className="text-[14px] text-[var(--muted)] leading-relaxed">
             Predictions are organized into four categories: job displacement and
@@ -135,6 +136,70 @@ export default function Methodology() {
           </div>
         </div>
 
+        {/* News Ticker */}
+        <div>
+          <h3 className="text-[18px] font-bold text-[var(--foreground)] mb-4">
+            News &amp; Headlines
+          </h3>
+          <p className="text-[14px] text-[var(--muted)] leading-relaxed mb-5 max-w-3xl">
+            The scrolling news ticker at the top of the dashboard pulls from
+            four Google News RSS feeds covering AI jobs, layoffs, hiring, and
+            employment. Headlines from the past 7 days are deduplicated and
+            classified by sentiment &mdash; displacement, advancement, or
+            neutral &mdash; using keyword-based scoring against ~80 curated
+            terms. This provides real-time context for how AI-labor topics are
+            being covered in mainstream and trade media. Headlines refresh
+            hourly.
+          </p>
+        </div>
+
+        {/* Corporate & Labor Market Signals */}
+        <div>
+          <h3 className="text-[18px] font-bold text-[var(--foreground)] mb-4">
+            Corporate &amp; Labor Market Signals
+          </h3>
+          <p className="text-[14px] text-[var(--muted)] leading-relaxed mb-5 max-w-3xl">
+            Beyond academic research, the dashboard tracks two real-world data
+            streams that provide leading indicators of how AI is actually
+            affecting employers and workers.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl">
+            <div className="border border-black/[0.06] rounded-lg px-5 py-4 bg-white">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-green-500" />
+                <p className="text-[14px] font-bold text-[var(--foreground)]">
+                  SEC EDGAR Filings
+                </p>
+              </div>
+              <p className="text-[13px] text-[var(--muted)] leading-snug">
+                Full-text search of 10-K, 10-Q, and 8-K filings for AI and
+                workforce language. When public companies disclose workforce
+                restructuring, automation plans, or AI-driven productivity gains
+                in their regulatory filings, those disclosures appear here.
+                Classified as Tier 1 evidence because SEC filings carry legal
+                liability for accuracy.
+              </p>
+            </div>
+            <div className="border border-black/[0.06] rounded-lg px-5 py-4 bg-white">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-blue-500" />
+                <p className="text-[14px] font-bold text-[var(--foreground)]">
+                  Job Posting Data
+                </p>
+              </div>
+              <p className="text-[13px] text-[var(--muted)] leading-snug">
+                Aggregate job posting volumes tracked across AI-exposed
+                occupation categories &mdash; including AI/ML roles, customer
+                service, data entry, AI-augmented engineering, and prompt
+                engineering. Sourced from the Adzuna API and supplemented with
+                published data from Indeed Hiring Lab, Lightcast, and LinkedIn
+                Economic Graph. Year-over-year changes in posting volume serve
+                as an early signal of labor demand shifts.
+              </p>
+            </div>
+          </div>
+        </div>
+
         {/* Author Tracking */}
         <div>
           <h3 className="text-[18px] font-bold text-[var(--foreground)] mb-4">
@@ -230,11 +295,13 @@ export default function Methodology() {
             <span className="font-semibold text-[var(--foreground)]">
               Update schedule:
             </span>{" "}
-            The research digest runs weekly (Mondays) and scans all 11 sources
-            for new publications from the previous 14 days. Prediction data
-            points are updated when new evidence materially changes an estimate.
-            Source counts and confidence intervals are recalculated on each
-            build.
+            The research digest runs weekly (Mondays) and scans all 11 academic
+            and institutional sources for new publications from the previous 14
+            days. The news ticker refreshes hourly with a 7-day lookback. SEC
+            filing searches and job posting data update on each page load.
+            Prediction data points are updated when new evidence materially
+            changes an estimate. Source counts and confidence intervals are
+            recalculated on each build.
           </p>
         </div>
       </div>
