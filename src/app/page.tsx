@@ -22,9 +22,9 @@ export default function Home() {
   const totalSources = predictions.reduce((sum, p) => sum + p.sources.length, 0);
 
   return (
-    <div className="space-y-20">
+    <div className="space-y-14">
       {/* Hero */}
-      <div className="relative overflow-hidden -mx-6 sm:-mx-10 px-6 sm:px-10 py-16 sm:py-20">
+      <div className="relative overflow-hidden -mx-6 sm:-mx-10 px-6 sm:px-10 py-12 sm:py-16">
         {/* Background gradient orbs */}
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
           <div className="absolute -top-24 -left-24 w-[500px] h-[500px] rounded-full bg-[#7c3aed]/[0.04] blur-3xl" />
@@ -57,46 +57,49 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Research Framing Banner */}
-      <section>
-        <div className="border border-black/[0.08] rounded-xl px-6 py-5 sm:px-8 sm:py-6 bg-[var(--accent-light)]/40">
-          <div className="flex gap-3 sm:gap-4">
-            <div className="shrink-0 mt-0.5">
-              <svg className="w-5 h-5 text-[var(--accent)]" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
-              </svg>
-            </div>
-            <div>
-              <p className="text-[13px] font-bold uppercase tracking-widest text-[var(--accent)] mb-2">
-                A note on reading these predictions
-              </p>
-              <p className="text-[14px] sm:text-[15px] text-[var(--foreground)]/80 leading-relaxed">
-                AI &ldquo;exposure&rdquo; is not the same as job loss. Across a growing body of empirical
-                research &mdash; from comprehensive reviews to ADP payroll analysis to firm spending
-                data &mdash; a consistent picture is emerging: no mass displacement at the macro level,
-                but real and growing pressure on entry-level workers in highly AI-exposed occupations.
-                Productivity gains of 20&ndash;60% are reshaping <em>what</em> workers do more
-                than <em>whether</em> they work. The key distinction is
-                between <strong>automation</strong> (replacing tasks) and <strong>augmentation</strong> (enhancing
-                them) &mdash; and the latest data shows augmentation is still the dominant pattern.
-              </p>
+      {/* Research Framing + Evidence + Filter — tighter spacing */}
+      <div className="space-y-10">
+        {/* Research Framing Banner */}
+        <section>
+          <div className="border border-black/[0.08] rounded-xl px-6 py-5 sm:px-8 sm:py-6 bg-[var(--accent-light)]/40">
+            <div className="flex gap-3 sm:gap-4">
+              <div className="shrink-0 mt-0.5">
+                <svg className="w-5 h-5 text-[var(--accent)]" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                </svg>
+              </div>
+              <div>
+                <p className="text-[13px] font-bold uppercase tracking-widest text-[var(--accent)] mb-2">
+                  A note on reading these predictions
+                </p>
+                <p className="text-[14px] sm:text-[15px] text-[var(--foreground)]/80 leading-relaxed">
+                  AI &ldquo;exposure&rdquo; is not the same as job loss. Across a growing body of empirical
+                  research &mdash; from comprehensive reviews to ADP payroll analysis to firm spending
+                  data &mdash; a consistent picture is emerging: no mass displacement at the macro level,
+                  but real and growing pressure on entry-level workers in highly AI-exposed occupations.
+                  Productivity gains of 20&ndash;60% are reshaping <em>what</em> workers do more
+                  than <em>whether</em> they work. The key distinction is
+                  between <strong>automation</strong> (replacing tasks) and <strong>augmentation</strong> (enhancing
+                  them) &mdash; and the latest data shows augmentation is still the dominant pattern.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* What the Evidence Actually Shows */}
-      <section>
-        <EvidenceSummaryCard />
-      </section>
+        {/* What the Evidence Actually Shows */}
+        <section>
+          <EvidenceSummaryCard />
+        </section>
 
-      {/* Evidence Filter */}
-      <section>
-        <EvidenceFilter
-          selectedTiers={selectedTiers}
-          onChange={setSelectedTiers}
-        />
-      </section>
+        {/* Evidence Filter */}
+        <section>
+          <EvidenceFilter
+            selectedTiers={selectedTiers}
+            onChange={setSelectedTiers}
+          />
+        </section>
+      </div>
 
       {/* Job Displacement & Restructuring */}
       <section>
