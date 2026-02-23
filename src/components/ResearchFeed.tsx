@@ -48,7 +48,14 @@ export default function ResearchFeed({ selectedTiers }: ResearchFeedProps) {
       );
       if (!res.ok) throw new Error("Failed to fetch");
       const data = await res.json();
-      setPapers(data.papers || []);
+      const sorted = (data.papers || []).sort(
+        (a: ClassifiedPaper, b: ClassifiedPaper) => {
+          const dateA = a.publishedDate ? new Date(a.publishedDate).getTime() : 0;
+          const dateB = b.publishedDate ? new Date(b.publishedDate).getTime() : 0;
+          return dateB - dateA;
+        }
+      );
+      setPapers(sorted);
       setFetched(true);
     } catch {
       setError("Failed to load research feed. The APIs may be rate-limited.");

@@ -17,17 +17,51 @@ export default function Home() {
   const adoption = predictions.filter((p) => p.category === "adoption");
   const signals = predictions.filter((p) => p.category === "signals");
 
+  // Aggregate stats for the hero
+  const totalSources = predictions.reduce((sum, p) => sum + p.sources.length, 0);
+  const lastUpdated = predictions
+    .flatMap((p) => p.history.map((h) => new Date(h.date).getTime()))
+    .reduce((latest, t) => Math.max(latest, t), 0);
+  const lastUpdatedStr = new Date(lastUpdated).toLocaleDateString("en-US", {
+    month: "short",
+    year: "numeric",
+  });
+
   return (
     <div className="space-y-20">
       {/* Hero */}
-      <div className="max-w-2xl">
-        <h1 className="text-[42px] sm:text-[56px] font-black tracking-tight text-[var(--foreground)] leading-[1.05]">
-          AI &amp; Labor Market Predictions
-        </h1>
-        <p className="mt-5 text-[17px] text-[var(--muted)] leading-relaxed">
-          What does the best available evidence say about AI&apos;s impact on jobs
-          and wages? Filter by evidence quality to see how the picture changes.
+      <div>
+        <p className="text-[13px] font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
+          {predictions.length} predictions &middot; {totalSources} sources &middot; Updated {lastUpdatedStr}
         </p>
+        <h1 className="text-[42px] sm:text-[56px] font-black tracking-tight text-[var(--foreground)] leading-[1.05] max-w-3xl">
+          How is AI reshaping the labor market?
+        </h1>
+        <p className="mt-5 text-[17px] text-[var(--muted)] leading-relaxed max-w-2xl">
+          Tracking {predictions.length} predictions across displacement, wages, adoption, and corporate signals
+          &mdash; sourced from peer-reviewed research, government data, think tanks, and earnings calls.
+          Filter by evidence quality to see how the picture changes.
+        </p>
+
+        {/* Quick stat pills */}
+        <div className="flex flex-wrap gap-3 mt-8">
+          {predictions.slice(0, 5).map((p) => (
+            <a
+              key={p.id}
+              href={`/predictions/${p.slug}`}
+              className="inline-flex items-baseline gap-1.5 px-4 py-2 rounded-full border border-black/[0.08] hover:border-[var(--accent)] hover:bg-[var(--accent)]/[0.03] transition-colors"
+            >
+              <span className="text-[18px] font-black text-[var(--foreground)]">
+                {p.currentValue > 0 && p.category === "wages" ? "+" : ""}
+                {p.currentValue}
+                <span className="text-[12px] font-normal text-[var(--muted)]">%</span>
+              </span>
+              <span className="text-[12px] text-[var(--muted)] max-w-[140px] truncate">
+                {p.title.replace(/by \d{4}/, "").trim()}
+              </span>
+            </a>
+          ))}
+        </div>
       </div>
 
       {/* Evidence Filter */}

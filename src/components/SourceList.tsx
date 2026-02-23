@@ -13,7 +13,7 @@ export default function SourceList({
 }: SourceListProps) {
   const filtered = sources
     .filter((s) => selectedTiers.includes(s.evidenceTier))
-    .sort((a, b) => a.evidenceTier - b.evidenceTier || a.title.localeCompare(b.title));
+    .sort((a, b) => new Date(b.datePublished).getTime() - new Date(a.datePublished).getTime());
 
   if (filtered.length === 0) {
     return (
