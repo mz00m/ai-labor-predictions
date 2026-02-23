@@ -219,6 +219,24 @@
       "evidenceTier": 1,
       "datePublished": "2025-05-01",
       "excerpt": "Less experienced workers improve most from AI assistance; AI disseminates best practices from top performers. Top workers see smaller or negative quality effects."
+    },
+    {
+      "id": "imf-skill-gaps-premium-2026",
+      "title": "Bridging Skill Gaps for the Future: New Jobs Creation in the AI Age",
+      "url": "https://www.imf.org/-/media/files/publications/sdn/2026/english/sdnea2026001.pdf",
+      "publisher": "IMF Staff Discussion Note",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-15",
+      "excerpt": "Job postings with 4+ new skills pay up to 15% more (UK) and 8.5% more (US); middle-skill roles being squeezed while high-skill workers gain."
+    },
+    {
+      "id": "hartley-high-skill-2026",
+      "title": "Labor Market Effects of Generative AI",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5136877",
+      "publisher": "Stanford / World Bank",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-01",
+      "excerpt": "Adoption concentrated among younger, college-educated, higher-earning employees, reinforcing wage premium for AI-complementary skills."
     }
   ]
 }

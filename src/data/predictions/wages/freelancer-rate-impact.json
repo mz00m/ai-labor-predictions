@@ -187,6 +187,33 @@
       "evidenceTier": 1,
       "datePublished": "2025-01-06",
       "excerpt": "Workers see ChatGPT halving working times in about a third of tasks, but employer restrictions and required training hinder adoption."
+    },
+    {
+      "id": "ramp-freelance-velocity-2025",
+      "title": "AI Labor Market Impact: Freelancers",
+      "url": "https://ramp.com/velocity/ai-labor-market-impact-freelancers",
+      "publisher": "Ramp",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-20",
+      "excerpt": "Freelance marketplace spend fell from 0.66% to 0.14% of total business spend (Q4 2021 to Q3 2025); substitution ratio: $1 reduced freelance spend → $0.03 in AI spend."
+    },
+    {
+      "id": "hosseini-brookings-freelancer-2025",
+      "title": "Is Generative AI a Job Killer? Evidence from the Freelance Market",
+      "url": "https://www.brookings.edu/articles/is-generative-ai-a-job-killer-evidence-from-the-freelance-market/",
+      "publisher": "Brookings Institution",
+      "evidenceTier": 1,
+      "datePublished": "2025-07-01",
+      "excerpt": "High-skill freelancers disproportionately affected — top performers impacted most, contradicting conventional wisdom. Some adapted by transitioning from text tasks to programming."
+    },
+    {
+      "id": "del-rio-chanona-freelancer-2025",
+      "title": "AI and jobs: A review of theory, estimates, and evidence",
+      "url": "https://arxiv.org/abs/2509.15265",
+      "publisher": "arXiv (ILO-affiliated researchers)",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-15",
+      "excerpt": "Digital trace data show substitution already occurring in writing and translation tasks; declining demand for novice workers across AI-complementary freelance work."
     }
   ]
 }

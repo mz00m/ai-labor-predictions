@@ -257,6 +257,42 @@
       "evidenceTier": 1,
       "datePublished": "2025-09-08",
       "excerpt": "In about 40% of employment in exposed occupations, at least 50% of tasks will be replaceable. Average labor-cost savings ~25% from current tools, potentially 40% as systems improve."
+    },
+    {
+      "id": "anthropic-econ-primitives-adoption-2026",
+      "title": "The Anthropic Economic Index: Economic Primitives",
+      "url": "https://www.anthropic.com/research/anthropic-economic-index-january-2026-report",
+      "publisher": "Anthropic",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-15",
+      "excerpt": "49% of jobs now use AI for at least 25% of their tasks (up from 36% in early 2025); widespread adoption could boost US labor productivity by 1.0-1.8 percentage points annually."
+    },
+    {
+      "id": "anthropic-geographic-adoption-2025",
+      "title": "Uneven geographic and demographic patterns of AI adoption",
+      "url": "https://www.anthropic.com/research/anthropic-economic-index-september-2025-report",
+      "publisher": "Anthropic",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-15",
+      "excerpt": "Only ~25% of Information sector businesses using AI; ~2.5% in Accommodation/Food — adoption patterns driven more by workforce composition than income."
+    },
+    {
+      "id": "icle-adoption-2026",
+      "title": "AI, Productivity, and Labor Markets: A Review of the Empirical Evidence",
+      "url": "https://laweconcenter.org/resources/ai-productivity-and-labor-markets-a-review-of-the-empirical-evidence/",
+      "publisher": "International Center for Law & Economics",
+      "evidenceTier": 2,
+      "datePublished": "2026-02-01",
+      "excerpt": "35.9% of US workers used generative AI by December 2025; adoption is accelerating but remains unevenly distributed across industries and skill levels."
+    },
+    {
+      "id": "jpmorgan-adoption-2025",
+      "title": "AI's Impact on Job Growth",
+      "url": "https://www.jpmorgan.com/insights/global-research/artificial-intelligence/ai-impact-job-growth",
+      "publisher": "J.P. Morgan Global Research",
+      "evidenceTier": 2,
+      "datePublished": "2025-06-01",
+      "excerpt": "Less than 10% of firms using AI regularly as of mid-2025 (BTOS data); ~20% adoption in professional, scientific, and technical industries."
     }
   ]
 }

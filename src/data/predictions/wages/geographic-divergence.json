@@ -204,6 +204,24 @@
       "evidenceTier": 1,
       "datePublished": "2026-01-21",
       "excerpt": "6.1 million workers in AI-exposed roles lack adaptive capacity; 86% are women. Vulnerability concentrated in college towns and state capitals in Mountain West and Midwest."
+    },
+    {
+      "id": "anthropic-geographic-2025",
+      "title": "Uneven geographic and demographic patterns of AI adoption",
+      "url": "https://www.anthropic.com/research/anthropic-economic-index-september-2025-report",
+      "publisher": "Anthropic",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-15",
+      "excerpt": "AI usage heavily concentrated by income and geography globally; within US, workforce composition matters more than income for adoption patterns."
+    },
+    {
+      "id": "imf-skill-gaps-geo-2026",
+      "title": "Bridging Skill Gaps for the Future: New Jobs Creation in the AI Age",
+      "url": "https://www.imf.org/-/media/files/publications/sdn/2026/english/sdnea2026001.pdf",
+      "publisher": "IMF Staff Discussion Note",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-15",
+      "excerpt": "Employment 3.6% lower in AI-vulnerable occupations in regions with high AI-skill demand after 5 years; geographic divergence driven by skill concentration."
     }
   ]
 }

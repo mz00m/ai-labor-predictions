@@ -278,6 +278,60 @@
       "evidenceTier": 1,
       "datePublished": "2025-05-05",
       "excerpt": "Framework for guiding innovation to increase labor demand; steering technology becomes more desirable the less efficient social safety nets are."
+    },
+    {
+      "id": "chen-hbs-overall-2025",
+      "title": "Displacement or Complementarity? The Labor Market Impact of Generative AI",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-039_05fbec84-1f23-459b-8410-e3cd7ab6c88a.pdf",
+      "publisher": "Harvard Business School",
+      "evidenceTier": 1,
+      "datePublished": "2025-01-15",
+      "excerpt": "17% decrease in job postings for highly automatable occupations, but 22% increase for augmentation-prone ones — net effect depends on occupation mix."
+    },
+    {
+      "id": "anthropic-econ-primitives-overall-2026",
+      "title": "The Anthropic Economic Index: Economic Primitives",
+      "url": "https://www.anthropic.com/research/anthropic-economic-index-january-2026-report",
+      "publisher": "Anthropic",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-15",
+      "excerpt": "49% of jobs now use AI for at least 25% of their tasks (up from 36% in early 2025); augmentation (52%) has overtaken automation (45%) as primary use pattern."
+    },
+    {
+      "id": "dallas-fed-overall-2026",
+      "title": "Young workers' employment drops in occupations with high AI exposure",
+      "url": "https://www.dallasfed.org/research/economics/2026/0106",
+      "publisher": "Federal Reserve Bank of Dallas",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-06",
+      "excerpt": "If fully translated to unemployment, AI-driven employment declines among young workers would explain only 0.1 percentage point rise in aggregate unemployment."
+    },
+    {
+      "id": "goldman-overall-workforce-2025",
+      "title": "How Will AI Affect the Global Workforce?",
+      "url": "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce",
+      "publisher": "Goldman Sachs Research",
+      "evidenceTier": 2,
+      "datePublished": "2025-08-01",
+      "excerpt": "2.5% of US employment at risk of displacement from current AI use cases; unemployment projected to increase by 0.5pp during transition."
+    },
+    {
+      "id": "icle-ai-productivity-2026",
+      "title": "AI, Productivity, and Labor Markets: A Review of the Empirical Evidence",
+      "url": "https://laweconcenter.org/resources/ai-productivity-and-labor-markets-a-review-of-the-empirical-evidence/",
+      "publisher": "International Center for Law & Economics",
+      "evidenceTier": 2,
+      "datePublished": "2026-02-01",
+      "excerpt": "No measurable change in job openings or aggregate employment in AI-exposed occupations; adjustment happening through task reallocation, not broad displacement."
+    },
+    {
+      "id": "del-rio-chanona-ai-jobs-2025",
+      "title": "AI and jobs: A review of theory, estimates, and evidence",
+      "url": "https://arxiv.org/abs/2509.15265",
+      "publisher": "arXiv (ILO-affiliated researchers)",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-15",
+      "excerpt": "Productivity gains 20-60% in controlled RCTs, 15-30% in field experiments; AI exposure measures converge toward high-wage jobs being most exposed."
     }
   ]
 }

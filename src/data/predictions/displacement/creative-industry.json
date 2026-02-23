@@ -196,6 +196,24 @@
       "evidenceTier": 1,
       "datePublished": "2024-08-01",
       "excerpt": "Demand-eroding effects of automation innovations have intensified in past four decades. New work creation has shifted from production to high-paid professional occupations."
+    },
+    {
+      "id": "ramp-freelance-creative-2025",
+      "title": "AI Labor Market Impact: Freelancers",
+      "url": "https://ramp.com/velocity/ai-labor-market-impact-freelancers",
+      "publisher": "Ramp",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-20",
+      "excerpt": "Heaviest pre-ChatGPT freelance spenders shifted to AI tools fastest; substitution ratio of $1 reduced freelance spend to only $0.03 in AI spend."
+    },
+    {
+      "id": "hosseini-brookings-creative-2025",
+      "title": "Is Generative AI a Job Killer? Evidence from the Freelance Market",
+      "url": "https://www.brookings.edu/articles/is-generative-ai-a-job-killer-evidence-from-the-freelance-market/",
+      "publisher": "Brookings Institution",
+      "evidenceTier": 1,
+      "datePublished": "2025-07-01",
+      "excerpt": "Significant decline in job availability and earnings for freelancers in AI-affected creative occupations; some workers adapted by transitioning to programming."
     }
   ]
 }

@@ -261,6 +261,51 @@
       "evidenceTier": 1,
       "datePublished": "2025-08-01",
       "excerpt": "13% relative decline in employment for workers ages 22-25 in most AI-exposed occupations. Software developer employment for ages 22-25 down nearly 20% since ChatGPT's launch."
+    },
+    {
+      "id": "chen-hbs-displacement-2025",
+      "title": "Displacement or Complementarity? The Labor Market Impact of Generative AI",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-039_05fbec84-1f23-459b-8410-e3cd7ab6c88a.pdf",
+      "publisher": "Harvard Business School",
+      "evidenceTier": 1,
+      "datePublished": "2025-01-15",
+      "excerpt": "17% decrease in job postings for occupations in top quartile of automation potential, alongside 22% increase in postings for augmentation-prone occupations."
+    },
+    {
+      "id": "anthropic-econ-primitives-2026",
+      "title": "The Anthropic Economic Index: Economic Primitives",
+      "url": "https://www.anthropic.com/research/anthropic-economic-index-january-2026-report",
+      "publisher": "Anthropic",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-15",
+      "excerpt": "Computer/mathematical tasks account for ~33% of all Claude.ai conversations and ~50% of API traffic, indicating concentrated AI impact on tech-adjacent roles."
+    },
+    {
+      "id": "dallas-fed-young-workers-2026",
+      "title": "Young workers' employment drops in occupations with high AI exposure",
+      "url": "https://www.dallasfed.org/research/economics/2026/0106",
+      "publisher": "Federal Reserve Bank of Dallas",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-06",
+      "excerpt": "Employment share of young workers (20-24) in most AI-exposed occupations fell from 16.4% to 15.5% between November 2022 and September 2025."
+    },
+    {
+      "id": "goldman-ai-workforce-2025",
+      "title": "How Will AI Affect the Global Workforce?",
+      "url": "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce",
+      "publisher": "Goldman Sachs Research",
+      "evidenceTier": 2,
+      "datePublished": "2025-08-01",
+      "excerpt": "Young tech workers (20-30) unemployment risen ~3pp since start of 2025; tech employment share fallen below pre-pandemic trend."
+    },
+    {
+      "id": "jpmorgan-ai-job-growth-2025",
+      "title": "AI's Impact on Job Growth",
+      "url": "https://www.jpmorgan.com/insights/global-research/artificial-intelligence/ai-impact-job-growth",
+      "publisher": "J.P. Morgan Global Research",
+      "evidenceTier": 2,
+      "datePublished": "2025-06-01",
+      "excerpt": "Tech/info/media employment stopped growing at end of 2022, coinciding with ChatGPT release; less than 10% of firms using AI regularly as of mid-2025."
     }
   ],
   "marketIds": {

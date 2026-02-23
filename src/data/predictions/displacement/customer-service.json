@@ -209,6 +209,15 @@
       "evidenceTier": 1,
       "datePublished": "2025-05-01",
       "excerpt": "AI assistance increases customer service worker productivity by 15% on average. Less experienced workers improve most; AI disseminates best practices from top performers."
+    },
+    {
+      "id": "brynjolfsson-chandar-chen-cs-2025",
+      "title": "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of AI",
+      "url": "https://digitaleconomy.stanford.edu/wp-content/uploads/2025/08/Canaries_BrynjolfssonChandarChen.pdf",
+      "publisher": "Stanford Digital Economy Lab",
+      "evidenceTier": 1,
+      "datePublished": "2025-08-01",
+      "excerpt": "~11% decline for early-career customer service workers; declines concentrated in roles where AI automates rather than augments tasks."
     }
   ]
 }

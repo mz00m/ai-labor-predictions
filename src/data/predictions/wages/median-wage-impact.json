@@ -235,6 +235,24 @@
       "evidenceTier": 1,
       "datePublished": "2025-05-05",
       "excerpt": "For the empirically plausible case that capital and labor are gross complements, raising wages requires capital-augmenting innovation rather than labor-augmenting."
+    },
+    {
+      "id": "icle-median-wage-2026",
+      "title": "AI, Productivity, and Labor Markets: A Review of the Empirical Evidence",
+      "url": "https://laweconcenter.org/resources/ai-productivity-and-labor-markets-a-review-of-the-empirical-evidence/",
+      "publisher": "International Center for Law & Economics",
+      "evidenceTier": 2,
+      "datePublished": "2026-02-01",
+      "excerpt": "Small but statistically significant positive wage effects found across AI-exposed occupations; 35.9% of US workers used generative AI by December 2025."
+    },
+    {
+      "id": "hartley-median-wage-2026",
+      "title": "Labor Market Effects of Generative AI",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5136877",
+      "publisher": "Stanford / World Bank",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-01",
+      "excerpt": "Small positive wage effects identified for workers in AI-exposed occupations; adoption concentrated among younger, college-educated, higher-earning employees."
     }
   ]
 }

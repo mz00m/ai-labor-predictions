@@ -247,6 +247,42 @@
       "evidenceTier": 1,
       "datePublished": "2023-07-14",
       "excerpt": "RCT: ChatGPT reduced task completion time by 40% and raised output quality by 18%. Low-ability workers benefited most, compressing the productivity distribution."
+    },
+    {
+      "id": "chen-hbs-white-collar-2025",
+      "title": "Displacement or Complementarity? The Labor Market Impact of Generative AI",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-039_05fbec84-1f23-459b-8410-e3cd7ab6c88a.pdf",
+      "publisher": "Harvard Business School",
+      "evidenceTier": 1,
+      "datePublished": "2025-01-15",
+      "excerpt": "24% decrease in AI-exposed skills required in highly automatable jobs, but 15% increase in AI-exposed skills for augmentation-prone professional roles."
+    },
+    {
+      "id": "hosseini-brookings-freelancer-2025",
+      "title": "Is Generative AI a Job Killer? Evidence from the Freelance Market",
+      "url": "https://www.brookings.edu/articles/is-generative-ai-a-job-killer-evidence-from-the-freelance-market/",
+      "publisher": "Brookings Institution",
+      "evidenceTier": 1,
+      "datePublished": "2025-07-01",
+      "excerpt": "High-skill freelancers disproportionately affected by AI — top performers were impacted most, contradicting conventional wisdom that expertise insulates workers."
+    },
+    {
+      "id": "del-rio-chanona-white-collar-2025",
+      "title": "AI and jobs: A review of theory, estimates, and evidence",
+      "url": "https://arxiv.org/abs/2509.15265",
+      "publisher": "arXiv (ILO-affiliated researchers)",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-15",
+      "excerpt": "AI exposure measures converge toward high-wage jobs being most exposed; digital trace data show substitution already occurring in writing and translation."
+    },
+    {
+      "id": "jpmorgan-white-collar-2025",
+      "title": "AI's Impact on Job Growth",
+      "url": "https://www.jpmorgan.com/insights/global-research/artificial-intelligence/ai-impact-job-growth",
+      "publisher": "J.P. Morgan Global Research",
+      "evidenceTier": 2,
+      "datePublished": "2025-06-01",
+      "excerpt": "Non-routine cognitive job workers now face rising unemployment risk, surpassing non-routine manual workers for the first time."
     }
   ]
 }
