@@ -66,3 +66,27 @@ a, button, [role="button"], input, label {
 .section-divider {
   border-top: 1px solid var(--border);
 }
+
+/* --- News Ticker --- */
+@keyframes ticker-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.ticker-content {
+  animation: ticker-scroll 40s linear infinite;
+}
+
+.ticker-track:hover .ticker-content {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker-content {
+    animation: none;
+  }
+}
