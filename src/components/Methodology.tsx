@@ -334,7 +334,7 @@ export default function Methodology() {
             Tracked Researchers
           </h3>
           <p className="text-[14px] text-[var(--muted)] leading-relaxed mb-5 max-w-3xl">
-            The pipeline monitors 17 leading researchers in AI economics and
+            The pipeline monitors 18 leading researchers in AI economics and
             labor markets. When any of these authors publish new work, their
             papers are automatically surfaced regardless of keyword match. These
             researchers were selected for their sustained contributions to the
@@ -513,6 +513,7 @@ const AUTHORS = [
   { name: "Manav Raj", affiliation: "Wharton" },
   { name: "Lindsey Raymond", affiliation: "MIT" },
   { name: "Bharat Chandar", affiliation: "Stanford" },
+  { name: "Molly Kinder", affiliation: "Brookings" },
 ];
 
 const SCORING = [
@@ -534,7 +535,7 @@ const SCORING = [
   {
     factor: "Tracked Author",
     detail:
-      "Papers from the 17 monitored researchers receive a significant bonus, surfacing new work from leading experts regardless of keyword match.",
+      "Papers from the 18 monitored researchers receive a significant bonus, surfacing new work from leading experts regardless of keyword match.",
   },
 ];
 
