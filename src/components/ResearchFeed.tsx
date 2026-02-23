@@ -72,24 +72,31 @@ export default function ResearchFeed({ selectedTiers }: ResearchFeedProps) {
 
   if (!fetched) {
     return (
-      <div>
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-[24px] sm:text-[28px] font-extrabold tracking-tight text-[var(--foreground)]">
-            Recent Research
-          </h2>
+      <div className="relative overflow-hidden border border-black/[0.08] rounded-xl px-8 py-10 sm:px-10 sm:py-12">
+        {/* Background accent */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#7c3aed]/[0.02] to-transparent pointer-events-none" aria-hidden="true" />
+        <div className="relative flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+          <div className="flex-1">
+            <p className="text-[13px] font-bold uppercase tracking-widest text-[var(--accent)] mb-2">
+              Live research feed
+            </p>
+            <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)] mb-3">
+              Discover Papers
+            </h2>
+            <p className="text-[15px] text-[var(--muted)] leading-relaxed max-w-lg">
+              Search Semantic Scholar, OpenAlex, and arXiv for recent AI + labor
+              market research. Papers are automatically classified by evidence tier
+              and linked to the predictions above.
+            </p>
+          </div>
           <button
             onClick={fetchPapers}
             disabled={loading}
-            className="px-5 py-2.5 text-[13px] font-semibold text-[var(--accent)] border border-[var(--accent)] rounded-full hover:bg-[var(--accent)] hover:text-white disabled:opacity-50 cursor-pointer"
+            className="shrink-0 px-8 py-3.5 text-[14px] font-bold text-white bg-[var(--accent)] rounded-full hover:opacity-90 disabled:opacity-50 cursor-pointer shadow-sm"
           >
-            {loading ? "Searching..." : "Discover Papers"}
+            {loading ? "Searching..." : "Search Papers"}
           </button>
         </div>
-        <p className="text-[14px] text-[var(--muted)] leading-relaxed max-w-xl">
-          Search Semantic Scholar, OpenAlex, and arXiv for recent AI + labor
-          market research. Papers are automatically classified and linked to
-          predictions.
-        </p>
       </div>
     );
   }

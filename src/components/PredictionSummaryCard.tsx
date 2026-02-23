@@ -247,21 +247,34 @@ export default function PredictionSummaryCard({
             {contextLine}
           </p>
 
-          {/* Source attribution + link */}
+          {/* Source attribution + last updated + link */}
           <div className="flex items-center justify-between">
-            {bestSource && tierConfig ? (
-              <div className="flex items-center gap-2">
-                <span
-                  className="inline-block w-2 h-2 rounded-full"
-                  style={{ backgroundColor: tierConfig.color }}
-                />
-                <span className="text-[12px] text-[var(--muted)] truncate max-w-[200px]">
-                  {bestSource.publisher}
-                </span>
-              </div>
-            ) : (
-              <span />
-            )}
+            <div className="flex items-center gap-3">
+              {bestSource && tierConfig ? (
+                <div className="flex items-center gap-2">
+                  <span
+                    className="inline-block w-2 h-2 rounded-full"
+                    style={{ backgroundColor: tierConfig.color }}
+                  />
+                  <span className="text-[12px] text-[var(--muted)] truncate max-w-[200px]">
+                    {bestSource.publisher}
+                  </span>
+                </div>
+              ) : (
+                <span />
+              )}
+              <span className="text-[11px] text-[var(--muted)] opacity-60">
+                Updated{" "}
+                {new Date(
+                  Math.max(
+                    ...prediction.history.map((h) => new Date(h.date).getTime())
+                  )
+                ).toLocaleDateString("en-US", {
+                  month: "short",
+                  year: "numeric",
+                })}
+              </span>
+            </div>
             <span className="text-[12px] text-[var(--accent)] font-semibold group-hover:underline">
               View all {prediction.sources.length} sources
             </span>

@@ -152,6 +152,31 @@ export default function Home() {
         </section>
       )}
 
+      {/* Scenario Callout */}
+      <section className="relative overflow-hidden -mx-6 sm:-mx-10 px-6 sm:px-10 py-12 sm:py-14">
+        <div className="absolute inset-0 bg-gradient-to-r from-[#7c3aed]/[0.03] to-[#3b82f6]/[0.03] pointer-events-none" aria-hidden="true" />
+        <div className="relative max-w-2xl">
+          <p className="text-[13px] font-bold uppercase tracking-widest text-[var(--accent)] mb-3">
+            What if these predictions are right?
+          </p>
+          <p className="text-[17px] text-[var(--foreground)] leading-relaxed font-medium">
+            See how the displacement trends tracked above could cascade into broader economic risk
+            &mdash; from payroll compression to consumer spending declines to mortgage market stress.
+          </p>
+          <a
+            href="https://www.citriniresearch.com/p/2028gic"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 mt-5 text-[14px] font-semibold text-[var(--accent)] hover:underline"
+          >
+            Read &ldquo;The 2028 Global Intelligence Crisis&rdquo;
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+            </svg>
+          </a>
+        </div>
+      </section>
+
       {/* Research Feed */}
       <section>
         <ResearchFeed selectedTiers={selectedTiers} />

@@ -29,6 +29,16 @@ export default function EvidenceFilter({
 
   return (
     <div className="space-y-5">
+      <p className="text-[14px] text-[var(--muted)] leading-relaxed max-w-2xl italic">
+        Most AI-and-jobs claims come from journalism or social media. Toggle to{" "}
+        <button
+          onClick={selectResearchOnly}
+          className="text-emerald-600 font-semibold not-italic hover:underline cursor-pointer"
+        >
+          Research only
+        </button>{" "}
+        to see what the rigorous evidence actually says.
+      </p>
       <div className="flex items-center justify-between">
         <h3 className="text-[13px] font-bold uppercase tracking-widest text-[var(--muted)]">
           Filter by evidence quality
