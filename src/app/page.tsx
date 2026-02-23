@@ -8,6 +8,7 @@ import PredictionSummaryCard from "@/components/PredictionSummaryCard";
 import EvidenceSummaryCard from "@/components/EvidenceSummaryCard";
 import NewsTicker from "@/components/NewsTicker";
 import ResearchFeed from "@/components/ResearchFeed";
+import Methodology from "@/components/Methodology";
 
 const predictions = getAllPredictions();
 
@@ -207,6 +208,11 @@ export default function Home() {
       {/* Research Feed */}
       <section id="research-feed">
         <ResearchFeed selectedTiers={selectedTiers} />
+      </section>
+
+      {/* Methodology & Sources */}
+      <section>
+        <Methodology />
       </section>
     </div>
   );

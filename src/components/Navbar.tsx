@@ -23,6 +23,12 @@ export default function Navbar() {
           >
             Research Feed
           </Link>
+          <Link
+            href="/#methodology"
+            className="text-[15px] text-[var(--foreground)] hover:opacity-60 font-bold underline underline-offset-4"
+          >
+            Methodology
+          </Link>
           <span className="text-[13px] text-[var(--muted)] italic">
             A weekend vibe coding project of{" "}
             <a
