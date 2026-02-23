@@ -52,7 +52,7 @@ function getContextLine(prediction: Prediction): string {
   if (prediction.slug === "overall-us-displacement")
     return `An estimated ${v}% of US jobs face net displacement from AI by 2030 — roles eliminated or fundamentally restructured.`;
   if (prediction.slug === "total-us-jobs-lost")
-    return `Roughly ${Math.round(167 * v / 100)} million US workers are projected to lose their jobs to AI and automation.`;
+    return `Roughly ${Math.round(168.5 * v / 100)} million US workers are projected to lose their jobs to AI and automation.`;
   if (prediction.slug === "customer-service-automation")
     return `${v}% of CS interactions projected to be fully handled by AI without human involvement.`;
   if (prediction.slug === "tech-sector-displacement")
