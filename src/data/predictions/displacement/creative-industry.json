@@ -93,6 +93,20 @@
       "sourceIds": ["queen-mary-turing-freelancer-2025"],
       "evidenceTier": 1,
       "label": "Queen Mary/Turing: 73% of freelancers report reduced job security"
+    },
+    {
+      "date": "2025-01-15",
+      "direction": "down",
+      "sourceIds": ["demirci-jebo-freelance-2025"],
+      "evidenceTier": 1,
+      "label": "JEBO (peer-reviewed): writing postings -30%, graphic design -18% within 8 months of ChatGPT"
+    },
+    {
+      "date": "2024-04-01",
+      "direction": "down",
+      "sourceIds": ["soa-uk-illustrators-2024"],
+      "evidenceTier": 1,
+      "label": "Society of Authors UK: 26% of illustrators, 36% of translators already lost work to AI"
     }
   ],
   "sources": [
@@ -238,6 +252,24 @@
       "evidenceTier": 1,
       "datePublished": "2025-11-15",
       "excerpt": "73% of creative freelancers report AI has reduced their job security. Median freelance income in writing and design fell 15-20% since 2023. 40% considering career changes."
+    },
+    {
+      "id": "demirci-jebo-freelance-2025",
+      "title": "Winners and Losers of Generative AI: Early Evidence of Shifts in Freelancer Demand",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0167268124004591",
+      "publisher": "Journal of Economic Behavior & Organization (Demirci, Jiang, Kartal, Trujillo)",
+      "evidenceTier": 1,
+      "datePublished": "2025-01-15",
+      "excerpt": "Peer-reviewed analysis of 2M job postings: freelance writing postings fell 30.37%, graphic design 18.49%, 3D modeling 15.57% within 8 months of ChatGPT launch. Applications per posting rose 8.57%."
+    },
+    {
+      "id": "soa-uk-illustrators-2024",
+      "title": "Society of Authors UK Survey: Impact of Generative AI on Creative Workers",
+      "url": "https://europeanwriterscouncil.eu/soa-survey-uk-ai-2024/",
+      "publisher": "Society of Authors (UK)",
+      "evidenceTier": 1,
+      "datePublished": "2024-04-01",
+      "excerpt": "26% of illustrators and 36% of translators have already lost work to generative AI. 78% of illustrators and 77% of translators expect further income decline. Survey of 787 creative professionals."
     }
   ]
 }
