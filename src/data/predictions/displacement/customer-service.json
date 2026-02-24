@@ -61,6 +61,34 @@
       "sourceIds": ["gartner-cs-2026-forecast"],
       "evidenceTier": 2,
       "label": "Gartner: 20-30% of CS agents replaced by 2026"
+    },
+    {
+      "date": "2025-10-01",
+      "direction": "up",
+      "sourceIds": ["bofa-erica-ai-2025"],
+      "evidenceTier": 1,
+      "label": "BofA Erica: 2B interactions, 98% resolution rate"
+    },
+    {
+      "date": "2025-06-01",
+      "direction": "neutral",
+      "sourceIds": ["klarna-reversal-2025"],
+      "evidenceTier": 1,
+      "label": "Klarna reversed course, rehiring humans after 22% CSAT drop"
+    },
+    {
+      "date": "2025-03-05",
+      "direction": "up",
+      "sourceIds": ["gartner-agentic-ai-cs-2025"],
+      "evidenceTier": 2,
+      "label": "Gartner: agentic AI to resolve 80% of common CS issues by 2029"
+    },
+    {
+      "date": "2025-05-27",
+      "direction": "up",
+      "sourceIds": ["cisco-agentic-cs-2025"],
+      "evidenceTier": 2,
+      "label": "Cisco: 68% of CS interactions by agentic AI by 2028"
     }
   ],
   "sources": [
@@ -176,6 +204,42 @@
       "evidenceTier": 1,
       "datePublished": "2025-08-01",
       "excerpt": "~11% decline for early-career customer service workers; declines concentrated in roles where AI automates rather than augments tasks."
+    },
+    {
+      "id": "bofa-erica-ai-2025",
+      "title": "Bank of America: Erica AI Assistant Surpasses 2 Billion Interactions",
+      "url": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2025/10/bank-of-america-s-erica-surpasses-2-billion-interactions.html",
+      "publisher": "Bank of America",
+      "evidenceTier": 1,
+      "datePublished": "2025-10-01",
+      "excerpt": "BofA's Erica AI assistant surpassed 2 billion client interactions with a 98% resolution rate. Now handles 56% of all customer inquiries without human escalation."
+    },
+    {
+      "id": "klarna-reversal-2025",
+      "title": "Klarna Reverses Course on AI-Only Customer Service, Rehires Human Agents",
+      "url": "https://www.entrepreneur.com/business-news/klarna-ceo-reverses-course-by-hiring-more-humans-not-ai/491396",
+      "publisher": "Entrepreneur / Klarna",
+      "evidenceTier": 1,
+      "datePublished": "2025-06-01",
+      "excerpt": "Klarna reversed its AI-only CS strategy after customer satisfaction dropped 22%. CEO Siemiatkowski: 'we went too far.' Now operates hybrid model with AI handling ~66% but humans for complex cases."
+    },
+    {
+      "id": "gartner-agentic-ai-cs-2025",
+      "title": "Gartner Predicts Agentic AI Will Resolve 80% of Common Customer Service Issues by 2029",
+      "url": "https://www.gartner.com/en/newsroom/press-releases/2025-03-05-gartner-predicts-agentic-ai-will-autonomously-resolve-80-percent-of-common-customer-service-issues-without-human-intervention-by-20290",
+      "publisher": "Gartner",
+      "evidenceTier": 2,
+      "datePublished": "2025-03-05",
+      "excerpt": "Agentic AI will autonomously resolve 80% of common customer service issues by 2029. Currently only 1.6% of interactions are fully automated end-to-end."
+    },
+    {
+      "id": "cisco-agentic-cs-2025",
+      "title": "The Race to an Agentic Future: Customer Service Interactions",
+      "url": "https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2025/m05/agentic-ai-poised-to-handle-68-of-customer-service-and-support-interactions-by-2028.html",
+      "publisher": "Cisco",
+      "evidenceTier": 2,
+      "datePublished": "2025-05-27",
+      "excerpt": "Survey of 7,950 decision-makers: 68% of all CS interactions expected to be handled by agentic AI by 2028. 56% expected within 12 months."
     }
   ]
 }
