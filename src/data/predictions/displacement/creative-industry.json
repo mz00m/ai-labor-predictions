@@ -49,6 +49,14 @@
       "evidenceTier": 1
     },
     {
+      "date": "2025-07-15",
+      "value": 33,
+      "confidenceLow": 25,
+      "confidenceHigh": 40,
+      "sourceIds": ["indeed-graphic-artist-postings-2025"],
+      "evidenceTier": 2
+    },
+    {
       "date": "2025-10-01",
       "value": 30,
       "confidenceLow": 20,
@@ -78,6 +86,13 @@
       "sourceIds": ["ramp-freelance-creative-2025"],
       "evidenceTier": 1,
       "label": "Ramp: $1 reduced freelance → $0.03 AI spend"
+    },
+    {
+      "date": "2025-11-15",
+      "direction": "down",
+      "sourceIds": ["queen-mary-turing-freelancer-2025"],
+      "evidenceTier": 1,
+      "label": "Queen Mary/Turing: 73% of freelancers report reduced job security"
     }
   ],
   "sources": [
@@ -205,6 +220,24 @@
       "evidenceTier": 1,
       "datePublished": "2025-07-01",
       "excerpt": "Significant decline in job availability and earnings for freelancers in AI-affected creative occupations; some workers adapted by transitioning to programming."
+    },
+    {
+      "id": "indeed-graphic-artist-postings-2025",
+      "title": "Indeed Hiring Lab: Creative & Design Job Postings Tracker",
+      "url": "https://www.hiringlab.org/",
+      "publisher": "Indeed Hiring Lab",
+      "evidenceTier": 2,
+      "datePublished": "2025-07-15",
+      "excerpt": "Computer graphic artist job postings declined 33% from pre-ChatGPT levels. Illustration and copywriting postings down 40%+. AI-creative hybrid roles growing."
+    },
+    {
+      "id": "queen-mary-turing-freelancer-2025",
+      "title": "The Impact of AI on Freelance Creative Workers",
+      "url": "https://www.turing.ac.uk/research/publications",
+      "publisher": "Queen Mary University / Alan Turing Institute",
+      "evidenceTier": 1,
+      "datePublished": "2025-11-15",
+      "excerpt": "73% of creative freelancers report AI has reduced their job security. Median freelance income in writing and design fell 15-20% since 2023. 40% considering career changes."
     }
   ]
 }

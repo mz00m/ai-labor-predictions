@@ -61,6 +61,13 @@
       "sourceIds": ["wef-education-displacement-2025"],
       "evidenceTier": 2,
       "label": "WEF: moderate risk, core teaching protected"
+    },
+    {
+      "date": "2026-01-15",
+      "direction": "down",
+      "sourceIds": ["imf-skill-gaps-ai-2026"],
+      "evidenceTier": 1,
+      "label": "IMF: 60% of advanced-economy jobs exposed to AI"
     }
   ],
   "sources": [

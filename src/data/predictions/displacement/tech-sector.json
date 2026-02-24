@@ -17,11 +17,27 @@
       "evidenceTier": 2
     },
     {
+      "date": "2025-07-15",
+      "value": 33,
+      "confidenceLow": 25,
+      "confidenceHigh": 40,
+      "sourceIds": ["indeed-sw-dev-postings-2025"],
+      "evidenceTier": 2
+    },
+    {
       "date": "2025-08-01",
       "value": 13,
       "confidenceLow": 8,
       "confidenceHigh": 20,
       "sourceIds": ["brynjolfsson-chandar-chen-2025"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2026-01-10",
+      "value": 27.5,
+      "confidenceLow": 20,
+      "confidenceHigh": 35,
+      "sourceIds": ["bls-programmer-employment-2026"],
       "evidenceTier": 1
     }
   ],
@@ -53,6 +69,20 @@
       "sourceIds": ["dallas-fed-young-workers-2026"],
       "evidenceTier": 1,
       "label": "Dallas Fed: young worker share fell 0.9pp"
+    },
+    {
+      "date": "2025-12-01",
+      "direction": "down",
+      "sourceIds": ["challenger-ai-job-cuts-2025"],
+      "evidenceTier": 2,
+      "label": "Challenger: 54,694 AI-cited job cuts in 2025"
+    },
+    {
+      "date": "2025-09-01",
+      "direction": "down",
+      "sourceIds": ["comptia-it-unemployment-2025"],
+      "evidenceTier": 2,
+      "label": "CompTIA: IT unemployment rose from 3.9% to 5.7%"
     }
   ],
   "sources": [
@@ -224,6 +254,42 @@
       "evidenceTier": 2,
       "datePublished": "2025-06-01",
       "excerpt": "Tech/info/media employment stopped growing at end of 2022, coinciding with ChatGPT release; less than 10% of firms using AI regularly as of mid-2025."
+    },
+    {
+      "id": "indeed-sw-dev-postings-2025",
+      "title": "Indeed Hiring Lab: Software Developer Job Postings Tracker",
+      "url": "https://www.hiringlab.org/",
+      "publisher": "Indeed Hiring Lab",
+      "evidenceTier": 2,
+      "datePublished": "2025-07-15",
+      "excerpt": "Software developer job postings declined 33% from pre-ChatGPT levels. Overall tech postings down 36%. AI/ML roles the only growing category."
+    },
+    {
+      "id": "bls-programmer-employment-2026",
+      "title": "BLS Occupational Employment Statistics: Computer Programmers",
+      "url": "https://www.bls.gov/oes/current/oes151251.htm",
+      "publisher": "Bureau of Labor Statistics",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-10",
+      "excerpt": "Computer programmer employment fell 27.5% since 2020. BLS projects continued decline as AI coding tools automate routine programming tasks."
+    },
+    {
+      "id": "challenger-ai-job-cuts-2025",
+      "title": "2025 Year-End Challenger Report: AI-Related Job Cuts",
+      "url": "https://www.challengergray.com/blog/2025-year-end-challenger-report-highest-q4-layoffs-since-2008-lowest-ytd-hiring-since-2010/",
+      "publisher": "Challenger, Gray & Christmas",
+      "evidenceTier": 2,
+      "datePublished": "2025-12-01",
+      "excerpt": "54,694 job cuts cited AI as a reason in 2025, concentrated in tech, finance, and customer service sectors."
+    },
+    {
+      "id": "comptia-it-unemployment-2025",
+      "title": "CompTIA Tech Jobs Report: IT Unemployment Trends",
+      "url": "https://www.comptia.org/content/tech-jobs-report",
+      "publisher": "CompTIA",
+      "evidenceTier": 2,
+      "datePublished": "2025-09-01",
+      "excerpt": "IT unemployment rate rose from 3.9% to 5.7% between late 2024 and mid-2025, the highest level since 2021, driven by AI-related restructuring."
     }
   ],
   "marketIds": {

@@ -41,6 +41,14 @@
       "evidenceTier": 1
     },
     {
+      "date": "2025-08-15",
+      "value": 37.4,
+      "confidenceLow": 32,
+      "confidenceHigh": 43,
+      "sourceIds": ["bick-blandin-deming-nber-2025"],
+      "evidenceTier": 1
+    },
+    {
       "date": "2026-01-01",
       "value": 36,
       "confidenceLow": 30,
@@ -70,6 +78,13 @@
       "sourceIds": ["microsoft-global-ai-2025"],
       "evidenceTier": 2,
       "label": "Microsoft: 75% of knowledge workers use AI tools"
+    },
+    {
+      "date": "2025-12-15",
+      "direction": "up",
+      "sourceIds": ["gallup-worker-ai-adoption-2025"],
+      "evidenceTier": 2,
+      "label": "Gallup: 46% of US workers used AI at work in Q4 2025"
     }
   ],
   "sources": [
@@ -243,6 +258,24 @@
       "evidenceTier": 2,
       "datePublished": "2025-06-01",
       "excerpt": "Less than 10% of firms using AI regularly as of mid-2025 (BTOS data); ~20% adoption in professional, scientific, and technical industries."
+    },
+    {
+      "id": "bick-blandin-deming-nber-2025",
+      "title": "Is AI Already Replacing Jobs? A Large-Scale Survey",
+      "url": "https://www.nber.org/papers/w33734",
+      "publisher": "NBER (Bick, Blandin, Deming)",
+      "evidenceTier": 1,
+      "datePublished": "2025-08-15",
+      "excerpt": "37.4% of US workers used AI on the job in the past week. Adoption highest among college-educated (52%) and workers earning $100K+ (58%). Survey of 25,000 workers."
+    },
+    {
+      "id": "gallup-worker-ai-adoption-2025",
+      "title": "Gallup Workplace AI Adoption Survey Q4 2025",
+      "url": "https://www.gallup.com/workplace/ai-at-work.aspx",
+      "publisher": "Gallup",
+      "evidenceTier": 2,
+      "datePublished": "2025-12-15",
+      "excerpt": "46% of US workers reported using AI tools at work in Q4 2025, up from 33% in Q1 2025. Adoption driven by white-collar professional and technical roles."
     }
   ]
 }

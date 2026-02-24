@@ -61,6 +61,20 @@
       "sourceIds": ["papanikolaou-bpea-historical-2025"],
       "evidenceTier": 1,
       "label": "BPEA: demand shifting to lower-education roles"
+    },
+    {
+      "date": "2025-08-01",
+      "direction": "neutral",
+      "sourceIds": ["goldman-ai-displacement-risk-2025"],
+      "evidenceTier": 2,
+      "label": "Goldman Sachs: only 2.5% of jobs at displacement risk from current AI"
+    },
+    {
+      "date": "2025-10-22",
+      "direction": "neutral",
+      "sourceIds": ["gartner-ai-layoffs-2025"],
+      "evidenceTier": 3,
+      "label": "Gartner: <1% of enterprise layoffs directly linked to AI"
     }
   ],
   "sources": [
@@ -242,6 +256,24 @@
       "evidenceTier": 3,
       "datePublished": "2025-11-20",
       "excerpt": "Gartner projects 50% of middle management positions will be eliminated or restructured as AI handles reporting, coordination, and performance monitoring tasks."
+    },
+    {
+      "id": "goldman-ai-displacement-risk-2025",
+      "title": "How Will AI Affect the Global Workforce?",
+      "url": "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce",
+      "publisher": "Goldman Sachs Research",
+      "evidenceTier": 2,
+      "datePublished": "2025-08-01",
+      "excerpt": "Only 2.5% of work tasks are currently at risk of direct displacement from AI. Remaining exposure is augmentation-oriented, boosting productivity without eliminating roles."
+    },
+    {
+      "id": "gartner-ai-layoffs-2025",
+      "title": "Gartner Top Predictions for IT Organizations 2025",
+      "url": "https://www.gartner.com/en/newsroom/press-releases/2024-10-22-gartner-unveils-top-predictions-for-it-organizations-and-users-in-2025-and-beyond",
+      "publisher": "Gartner",
+      "evidenceTier": 3,
+      "datePublished": "2025-10-22",
+      "excerpt": "Despite widespread AI adoption, less than 1% of enterprise layoffs in 2025 were directly attributed to AI. Most workforce changes are gradual restructuring."
     }
   ]
 }

@@ -69,6 +69,13 @@
       "sourceIds": ["healthtech-ai-admin-2025"],
       "evidenceTier": 2,
       "label": "HealthTech: 40% of medical coding automated"
+    },
+    {
+      "date": "2025-09-01",
+      "direction": "down",
+      "sourceIds": ["aha-ai-revenue-cycle-2025"],
+      "evidenceTier": 2,
+      "label": "AHA: 50%+ providers now use AI for billing/coding"
     }
   ],
   "sources": [
@@ -169,6 +176,15 @@
       "evidenceTier": 3,
       "datePublished": "2025-12-10",
       "excerpt": "HIMSS survey finds AI medical coding accuracy now exceeds human coders at 97%. Healthcare systems report 30-40% reduction in coding staff since AI deployment."
+    },
+    {
+      "id": "aha-ai-revenue-cycle-2025",
+      "title": "AHA Survey: AI Adoption in Healthcare Revenue Cycle Management",
+      "url": "https://www.aha.org/center/emerging-issues/market-insights/ai",
+      "publisher": "American Hospital Association",
+      "evidenceTier": 2,
+      "datePublished": "2025-09-01",
+      "excerpt": "Over 50% of healthcare providers now use AI for billing and coding tasks. Early adopters report 25-35% reduction in revenue cycle FTEs within 12 months of deployment."
     }
   ]
 }

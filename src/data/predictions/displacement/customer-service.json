@@ -61,6 +61,13 @@
       "sourceIds": ["gartner-cs-2026-forecast"],
       "evidenceTier": 2,
       "label": "Gartner: 20-30% of CS agents replaced by 2026"
+    },
+    {
+      "date": "2025-10-01",
+      "direction": "up",
+      "sourceIds": ["bofa-erica-ai-2025"],
+      "evidenceTier": 1,
+      "label": "BofA Erica: 2B interactions, 98% resolution rate"
     }
   ],
   "sources": [
@@ -176,6 +183,15 @@
       "evidenceTier": 1,
       "datePublished": "2025-08-01",
       "excerpt": "~11% decline for early-career customer service workers; declines concentrated in roles where AI automates rather than augments tasks."
+    },
+    {
+      "id": "bofa-erica-ai-2025",
+      "title": "Bank of America: Erica AI Assistant Surpasses 2 Billion Interactions",
+      "url": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2025/10/bank-of-america-s-erica-surpasses-2-billion-interactions.html",
+      "publisher": "Bank of America",
+      "evidenceTier": 1,
+      "datePublished": "2025-10-01",
+      "excerpt": "BofA's Erica AI assistant surpassed 2 billion client interactions with a 98% resolution rate. Now handles 56% of all customer inquiries without human escalation."
     }
   ]
 }
