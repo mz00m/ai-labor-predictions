@@ -152,7 +152,7 @@
     {
       "id": "oecd-skills-2025",
       "title": "OECD Skills Outlook 2025",
-      "url": "https://www.oecd.org/en/publications/oecd-skills-outlook_c0b7922c-en.html",
+      "url": "https://www.oecd.org/en/publications/oecd-skills-outlook-2025_26163cd3-en.html",
       "publisher": "OECD",
       "evidenceTier": 1,
       "datePublished": "2025-08-01"
@@ -160,7 +160,7 @@
     {
       "id": "nvidia-10k-2024",
       "title": "NVIDIA 2024 10-K — AI Talent Compensation & Headcount Growth",
-      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001045810&type=10-K",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=nvidia&CIK=&type=10-K",
       "publisher": "NVIDIA (SEC Filing)",
       "evidenceTier": 1,
       "datePublished": "2025-02-21",
@@ -196,7 +196,7 @@
     {
       "id": "indexdev-ai-salary-2026",
       "title": "AI Salary Statistics 2026: Global Compensation Trends",
-      "url": "https://index.dev/blog/ai-salary-statistics-2026",
+      "url": "https://www.index.dev/blog/ai-developer-salary-trends",
       "publisher": "Index.dev",
       "evidenceTier": 2,
       "datePublished": "2026-01-05",

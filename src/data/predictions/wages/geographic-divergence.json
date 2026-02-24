@@ -163,7 +163,7 @@
     {
       "id": "bls-metro-wages-2025",
       "title": "Occupational Employment and Wage Statistics — Metropolitan Areas 2025",
-      "url": "https://www.bls.gov/oes/",
+      "url": "https://www.bls.gov/oes/current/oessrcma.htm",
       "publisher": "Bureau of Labor Statistics",
       "evidenceTier": 1,
       "datePublished": "2025-07-01",
@@ -172,7 +172,7 @@
     {
       "id": "bls-tech-vs-nontechmetro-2025",
       "title": "BLS Tech vs. Non-Tech Metro Wage Analysis Q3 2025",
-      "url": "https://www.bls.gov/oes/current/oes_research.htm",
+      "url": "https://www.bls.gov/oes/current/oessrcma.htm",
       "publisher": "Bureau of Labor Statistics",
       "evidenceTier": 2,
       "datePublished": "2025-11-01",
@@ -180,8 +180,8 @@
     },
     {
       "id": "moneypenny-regional-ai-2025",
-      "title": "Regional AI Adoption Trends: Mountain Region Leads at 42%",
-      "url": "https://www.moneypenny.com/us/resources/blog/ai-adoption-by-region-2025/",
+      "title": "The State of AI Adoption in U.S. Businesses | 2025 Trends",
+      "url": "https://www.moneypenny.com/us/resources/blog/the-state-of-ai-adoption-in-u-s-businesses/",
       "publisher": "Moneypenny",
       "evidenceTier": 3,
       "datePublished": "2025-12-10",

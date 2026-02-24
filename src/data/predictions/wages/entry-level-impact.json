@@ -127,7 +127,7 @@
     {
       "id": "goldman-entry-level-2024",
       "title": "AI and the Entry-Level Workforce: Economic Impacts",
-      "url": "https://www.goldmansachs.com/",
+      "url": "https://www.goldmansachs.com/insights/articles/AI-investment-is-likely-to-grow-significantly",
       "publisher": "Goldman Sachs",
       "evidenceTier": 1,
       "datePublished": "2024-02-01",
@@ -180,7 +180,7 @@
     {
       "id": "mckinsey-entry-level-2025",
       "title": "McKinsey: 27% Decline in Entry-Level Writing and Admin Roles",
-      "url": "https://www.mckinsey.com/mgi/our-research/ai-entry-level-workforce-impact",
+      "url": "https://www.mckinsey.com/mgi/our-research/generative-ai-and-the-future-of-work-in-america",
       "publisher": "McKinsey Global Institute",
       "evidenceTier": 2,
       "datePublished": "2025-11-01",
@@ -188,11 +188,11 @@
     },
     {
       "id": "anthropic-ceo-entry-level-2025",
-      "title": "Anthropic CEO Warns 50% of Entry-Level Office Jobs at Risk",
-      "url": "https://www.cnbc.com/2025/12/15/anthropic-ceo-dario-amodei-entry-level-jobs-ai.html",
-      "publisher": "CNBC",
+      "title": "AI could make half of all entry-level white-collar jobs vanish, Anthropic CEO warns",
+      "url": "https://fortune.com/2025/05/28/anthropic-ceo-warning-ai-job-loss/",
+      "publisher": "Fortune",
       "evidenceTier": 3,
-      "datePublished": "2025-12-15",
+      "datePublished": "2025-05-28",
       "excerpt": "Anthropic CEO Dario Amodei warned that up to 50% of entry-level office jobs could be substantially impacted by AI within the next 2-3 years."
     },
     {

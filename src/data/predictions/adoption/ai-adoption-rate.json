@@ -145,7 +145,7 @@
     {
       "id": "deloitte-ai-state-2024",
       "title": "State of Generative AI in the Enterprise Q3 2024",
-      "url": "https://www2.deloitte.com/",
+      "url": "https://www.deloitte.com/us/en/what-we-do/capabilities/applied-artificial-intelligence/content/state-of-generative-ai-in-enterprise.html",
       "publisher": "Deloitte",
       "evidenceTier": 2,
       "datePublished": "2024-09-15",
@@ -198,7 +198,7 @@
     {
       "id": "anthropic-economic-index-2025",
       "title": "The Anthropic Economic Index: Measuring AI's Real-World Impact",
-      "url": "https://www.anthropic.com/research/the-anthropic-economic-index",
+      "url": "https://www.anthropic.com/news/the-anthropic-economic-index",
       "publisher": "Anthropic",
       "evidenceTier": 1,
       "datePublished": "2025-09-15",
@@ -207,7 +207,7 @@
     {
       "id": "stanford-ai-index-2025",
       "title": "Stanford AI Index Report 2025",
-      "url": "https://aiindex.stanford.edu/report/",
+      "url": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
       "publisher": "Stanford HAI",
       "evidenceTier": 2,
       "datePublished": "2025-12-01",
@@ -215,8 +215,8 @@
     },
     {
       "id": "microsoft-global-ai-2025",
-      "title": "Microsoft 2025 Global AI Adoption Report",
-      "url": "https://www.microsoft.com/en-us/research/publication/2025-global-ai-adoption/",
+      "title": "AI at Work Is Here. Now Comes the Hard Part",
+      "url": "https://www.microsoft.com/en-us/worklab/work-trend-index/ai-at-work-is-here-now-comes-the-hard-part",
       "publisher": "Microsoft",
       "evidenceTier": 2,
       "datePublished": "2025-11-20",

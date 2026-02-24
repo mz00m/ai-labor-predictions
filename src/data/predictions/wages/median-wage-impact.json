@@ -101,7 +101,7 @@
     {
       "id": "goldman-wages-2023",
       "title": "AI and the US Labor Market",
-      "url": "https://www.goldmansachs.com/insights",
+      "url": "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce",
       "publisher": "Goldman Sachs",
       "evidenceTier": 1,
       "datePublished": "2023-04-01"
@@ -126,7 +126,7 @@
     {
       "id": "webb-2024",
       "title": "The Impact of Artificial Intelligence on the Labor Market",
-      "url": "https://www.stanford.edu",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3482150",
       "publisher": "Stanford (Webb)",
       "evidenceTier": 1,
       "datePublished": "2024-06-01",
@@ -167,7 +167,7 @@
     {
       "id": "walmart-10k-2024",
       "title": "Walmart 2024 10-K — Automation Investment & Wage Strategy",
-      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000104169&type=10-K",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=walmart&CIK=&type=10-K",
       "publisher": "Walmart (SEC Filing)",
       "evidenceTier": 1,
       "datePublished": "2025-03-28",
