@@ -8,6 +8,7 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
+  ReferenceLine,
   ResponsiveContainer,
   TooltipProps,
 } from "recharts";
@@ -28,12 +29,13 @@ interface PredictionChartProps {
 interface ChartDataPoint {
   date: number;
   dateStr: string;
-  value: number;
+  value?: number;
   confidenceLow?: number;
   confidenceHigh?: number;
   confidenceRange?: [number, number];
   evidenceTier: EvidenceTier;
   sourceIds: string[];
+  isPhantom?: boolean;
 }
 
 function CustomTooltip({
@@ -45,7 +47,7 @@ function CustomTooltip({
   if (!active || !payload || payload.length === 0) return null;
 
   const data = payload[0]?.payload as ChartDataPoint;
-  if (!data) return null;
+  if (!data || data.isPhantom) return null;
 
   const tierConfig = getTierConfig(data.evidenceTier);
   const pointSources = sources.filter((s) => data.sourceIds.includes(s.id));
@@ -90,6 +92,14 @@ function CustomTooltip({
   );
 }
 
+function overlayColor(direction: string) {
+  return direction === "down"
+    ? "#dc2626"
+    : direction === "up"
+      ? "#16a34a"
+      : "#6b7280";
+}
+
 export default function PredictionChart({
   history,
   sources,
@@ -111,7 +121,7 @@ export default function PredictionChart({
     );
   }
 
-  const chartData: ChartDataPoint[] = filtered
+  const realPoints: ChartDataPoint[] = filtered
     .map((d) => ({
       date: parseISO(d.date).getTime(),
       dateStr: format(parseISO(d.date), "MMM yyyy"),
@@ -127,10 +137,10 @@ export default function PredictionChart({
     }))
     .sort((a, b) => a.date - b.date);
 
-  const allValues = chartData.flatMap((d) => [
-    d.value,
-    d.confidenceLow ?? d.value,
-    d.confidenceHigh ?? d.value,
+  const allValues = realPoints.flatMap((d) => [
+    d.value!,
+    d.confidenceLow ?? d.value!,
+    d.confidenceHigh ?? d.value!,
   ]);
   const yMin = Math.floor(Math.min(...allValues) - 2);
   const yMax = Math.ceil(Math.max(...allValues) + 2);
@@ -140,6 +150,7 @@ export default function PredictionChart({
     selectedTiers.includes(o.evidenceTier)
   );
   const overlayData = filteredOverlays.map((o) => ({
+    date: parseISO(o.date).getTime(),
     dateStr: format(parseISO(o.date), "MMM yyyy"),
     direction: o.direction,
     label: o.label,
@@ -147,10 +158,28 @@ export default function PredictionChart({
     evidenceTier: o.evidenceTier,
   }));
 
+  // Create phantom data points for overlay dates that don't already exist
+  // in the chart data, so the categorical x-axis recognizes them
+  const existingDateStrs = new Set(realPoints.map((d) => d.dateStr));
+  const phantomPoints: ChartDataPoint[] = overlayData
+    .filter((o) => !existingDateStrs.has(o.dateStr))
+    .map((o) => ({
+      date: o.date,
+      dateStr: o.dateStr,
+      value: undefined,
+      evidenceTier: o.evidenceTier,
+      sourceIds: o.sourceIds,
+      isPhantom: true,
+    }));
+
+  const chartData = [...realPoints, ...phantomPoints].sort(
+    (a, b) => a.date - b.date
+  );
+
   if (compact) {
     return (
       <ResponsiveContainer width="100%" height={80}>
-        <ComposedChart data={chartData}>
+        <ComposedChart data={realPoints}>
           <Line
             type="monotone"
             dataKey="value"
@@ -172,7 +201,9 @@ export default function PredictionChart({
           onClick={(state) => {
             if (onDotClick && state?.activePayload?.[0]?.payload) {
               const point = state.activePayload[0].payload as ChartDataPoint;
-              onDotClick(point.sourceIds);
+              if (!point.isPhantom) {
+                onDotClick(point.sourceIds);
+              }
             }
           }}
           style={{ cursor: onDotClick ? "pointer" : undefined }}
@@ -206,19 +237,34 @@ export default function PredictionChart({
               fill="#7c3aed"
               fillOpacity={0.08}
               stroke="none"
+              connectNulls
             />
           )}
+          {/* Overlay vertical bars — rendered before the Line so they sit behind */}
+          {overlayData.map((o) => (
+            <ReferenceLine
+              key={`overlay-bar-${o.dateStr}-${o.label.slice(0, 20)}`}
+              x={o.dateStr}
+              stroke={overlayColor(o.direction)}
+              strokeWidth={24}
+              strokeOpacity={0.12}
+              onClick={() => onDotClick?.(o.sourceIds)}
+              style={{ cursor: onDotClick ? "pointer" : undefined }}
+            />
+          ))}
           <Line
             type="monotone"
             dataKey="value"
             stroke="#7c3aed"
             strokeWidth={2.5}
+            connectNulls
             dot={(props: Record<string, unknown>) => {
               const { cx, cy, payload } = props as {
                 cx: number;
                 cy: number;
                 payload: ChartDataPoint;
               };
+              if (payload.isPhantom || payload.value == null) return <g key={`phantom-${payload.date}`} />;
               const config = getTierConfig(payload.evidenceTier);
               return (
                 <circle
@@ -240,6 +286,7 @@ export default function PredictionChart({
                 cy: number;
                 payload: ChartDataPoint;
               };
+              if (payload.isPhantom || payload.value == null) return <g key={`phantom-active-${payload.date}`} />;
               const config = getTierConfig(payload.evidenceTier);
               return (
                 <circle
@@ -264,12 +311,7 @@ export default function PredictionChart({
             Additional context
           </p>
           {overlayData.map((o) => {
-            const color =
-              o.direction === "down"
-                ? "#dc2626"
-                : o.direction === "up"
-                  ? "#16a34a"
-                  : "#6b7280";
+            const color = overlayColor(o.direction);
             const arrow =
               o.direction === "down"
                 ? "\u2193"
