@@ -15,6 +15,7 @@ import entryLevel from "@/data/predictions/wages/entry-level-impact.json";
 import geoDivergence from "@/data/predictions/wages/geographic-divergence.json";
 import aiAdoption from "@/data/predictions/adoption/ai-adoption-rate.json";
 import earningsCallMentions from "@/data/predictions/signals/earnings-call-mentions.json";
+import workforceExposure from "@/data/predictions/exposure/workforce-exposure.json";
 
 const allPredictions: Prediction[] = [
   // Displacement: broadest population → sector → niche roles
@@ -32,6 +33,8 @@ const allPredictions: Prediction[] = [
   entryLevel as Prediction,
   highSkillPremium as Prediction,
   freelancerRate as Prediction,
+  // Exposure
+  workforceExposure as Prediction,
   // Adoption & Signals
   aiAdoption as Prediction,
   earningsCallMentions as Prediction,
@@ -46,7 +49,7 @@ export function getPredictionBySlug(slug: string): Prediction | undefined {
 }
 
 export function getPredictionsByCategory(
-  category: "displacement" | "wages" | "adoption" | "signals"
+  category: "displacement" | "wages" | "adoption" | "signals" | "exposure"
 ): Prediction[] {
   return allPredictions.filter((p) => p.category === category);
 }

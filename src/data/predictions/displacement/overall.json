@@ -2,36 +2,12 @@
   "id": "displacement-overall",
   "slug": "overall-us-displacement",
   "title": "Overall US Job Displacement by 2030",
-  "description": "Projected net percentage of US jobs displaced by AI and automation by 2030, accounting for both eliminated and restructured roles.",
+  "description": "Projected net percentage of US jobs displaced by AI and automation by 2030, based on data points where the source directly states a displacement figure.",
   "category": "displacement",
   "unit": "% of US jobs",
   "currentValue": 9,
   "timeHorizon": "By 2030",
   "history": [
-    {
-      "date": "2023-03-26",
-      "value": 7,
-      "confidenceLow": 3,
-      "confidenceHigh": 14,
-      "sourceIds": ["goldman-300m"],
-      "evidenceTier": 1
-    },
-    {
-      "date": "2023-07-01",
-      "value": 5,
-      "confidenceLow": 2,
-      "confidenceHigh": 10,
-      "sourceIds": ["oecd-2023"],
-      "evidenceTier": 1
-    },
-    {
-      "date": "2023-11-01",
-      "value": 6,
-      "confidenceLow": 3,
-      "confidenceHigh": 12,
-      "sourceIds": ["imf-ai-2024"],
-      "evidenceTier": 2
-    },
     {
       "date": "2024-04-01",
       "value": 5,
@@ -39,14 +15,6 @@
       "confidenceHigh": 9,
       "sourceIds": ["acemoglu-macro-2024"],
       "evidenceTier": 1
-    },
-    {
-      "date": "2024-07-15",
-      "value": 8,
-      "confidenceLow": 4,
-      "confidenceHigh": 15,
-      "sourceIds": ["wsj-automation-2024"],
-      "evidenceTier": 3
     },
     {
       "date": "2024-11-01",
@@ -57,50 +25,10 @@
       "evidenceTier": 2
     },
     {
-      "date": "2025-02-01",
-      "value": 9,
-      "confidenceLow": 5,
-      "confidenceHigh": 16,
-      "sourceIds": ["pnas-nexus-2025"],
-      "evidenceTier": 1
-    },
-    {
-      "date": "2025-06-01",
+      "date": "2025-11-01",
       "value": 12,
       "confidenceLow": 6,
-      "confidenceHigh": 20,
-      "sourceIds": ["blog-mass-unemployment"],
-      "evidenceTier": 4
-    },
-    {
-      "date": "2025-08-01",
-      "value": 8,
-      "confidenceLow": 4,
-      "confidenceHigh": 14,
-      "sourceIds": ["bls-projections-2025"],
-      "evidenceTier": 1
-    },
-    {
-      "date": "2025-10-01",
-      "value": 7,
-      "confidenceLow": 3,
-      "confidenceHigh": 12,
-      "sourceIds": ["kinder-brookings-2025"],
-      "evidenceTier": 1
-    },
-    {
-      "date": "2025-10-15",
-      "value": 7,
-      "confidenceLow": 3,
-      "confidenceHigh": 12,
-      "sourceIds": ["yale-budget-lab-2025"],
-      "evidenceTier": 1
-    },
-    {
-      "date": "2025-11-01",
-      "value": 10,
-      "confidenceLow": 6,
-      "confidenceHigh": 16,
+      "confidenceHigh": 18,
       "sourceIds": ["worldbank-liu-wang-yu-2025"],
       "evidenceTier": 1
     },
@@ -108,25 +36,46 @@
       "date": "2025-12-01",
       "value": 9,
       "confidenceLow": 5,
-      "confidenceHigh": 15,
+      "confidenceHigh": 14,
       "sourceIds": ["wef-future-jobs-2025"],
       "evidenceTier": 2
+    }
+  ],
+  "overlays": [
+    {
+      "date": "2025-10-01",
+      "direction": "neutral",
+      "sourceIds": ["kinder-brookings-2025"],
+      "evidenceTier": 1,
+      "label": "Brookings: no apocalypse yet"
+    },
+    {
+      "date": "2025-10-15",
+      "direction": "neutral",
+      "sourceIds": ["yale-budget-lab-2025"],
+      "evidenceTier": 1,
+      "label": "Yale: no macro displacement"
     },
     {
       "date": "2026-01-01",
-      "value": 9,
-      "confidenceLow": 5,
-      "confidenceHigh": 15,
+      "direction": "neutral",
       "sourceIds": ["hartley-genai-labor-2026"],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "label": "Stanford: no decline in openings"
     },
     {
       "date": "2026-02-01",
-      "value": 10,
-      "confidenceLow": 6,
-      "confidenceHigh": 18,
-      "sourceIds": ["fortune-altman-2026"],
-      "evidenceTier": 3
+      "direction": "neutral",
+      "sourceIds": ["icle-ai-productivity-2026"],
+      "evidenceTier": 2,
+      "label": "ICLE: task reallocation, not displacement"
+    },
+    {
+      "date": "2026-01-06",
+      "direction": "down",
+      "sourceIds": ["dallas-fed-overall-2026"],
+      "evidenceTier": 1,
+      "label": "Dallas Fed: 0.1pp unemployment effect"
     }
   ],
   "sources": [

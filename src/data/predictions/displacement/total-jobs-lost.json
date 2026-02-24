@@ -2,35 +2,19 @@
   "id": "displacement-total",
   "slug": "total-us-jobs-lost",
   "title": "Total US Jobs Lost to AI as % of Labor Force",
-  "description": "Projected net jobs eliminated by AI and automation as a share of the total US civilian labor force (~168.5 million), accounting for both direct displacement and partial task automation that eliminates full roles.",
+  "description": "Projected net jobs eliminated by AI and automation as a share of the total US civilian labor force (~168.5 million). Only data points with directly sourced figures are plotted.",
   "category": "displacement",
   "unit": "% of US labor force",
-  "currentValue": 5,
+  "currentValue": 4,
   "timeHorizon": "By 2030",
   "history": [
     {
       "date": "2023-03-26",
       "value": 3.5,
-      "confidenceLow": 1,
-      "confidenceHigh": 7,
+      "confidenceLow": 3,
+      "confidenceHigh": 5,
       "sourceIds": ["goldman-300m"],
       "evidenceTier": 1
-    },
-    {
-      "date": "2023-07-11",
-      "value": 2.5,
-      "confidenceLow": 0.5,
-      "confidenceHigh": 5,
-      "sourceIds": ["oecd-employment-2023"],
-      "evidenceTier": 1
-    },
-    {
-      "date": "2024-01-14",
-      "value": 3,
-      "confidenceLow": 1,
-      "confidenceHigh": 6,
-      "sourceIds": ["imf-ai-work-2024"],
-      "evidenceTier": 2
     },
     {
       "date": "2024-04-01",
@@ -44,73 +28,40 @@
       "date": "2024-09-15",
       "value": 4,
       "confidenceLow": 2,
-      "confidenceHigh": 8,
+      "confidenceHigh": 4,
       "sourceIds": ["wef-future-jobs-2024"],
       "evidenceTier": 2
     },
     {
       "date": "2025-01-06",
-      "value": 3.5,
-      "confidenceLow": 1.5,
-      "confidenceHigh": 6.5,
+      "value": 6,
+      "confidenceLow": 4,
+      "confidenceHigh": 8,
       "sourceIds": ["forrester-jobs-2025"],
       "evidenceTier": 2
-    },
-    {
-      "date": "2025-02-01",
-      "value": 5,
-      "confidenceLow": 2.5,
-      "confidenceHigh": 9,
-      "sourceIds": ["pnas-unemployment-2025"],
-      "evidenceTier": 1
-    },
-    {
-      "date": "2025-05-01",
-      "value": 8,
-      "confidenceLow": 4,
-      "confidenceHigh": 15,
-      "sourceIds": ["medium-doom-2025"],
-      "evidenceTier": 4
-    },
-    {
-      "date": "2025-08-01",
-      "value": 4.5,
-      "confidenceLow": 2,
-      "confidenceHigh": 8,
-      "sourceIds": ["bls-projections-2025"],
-      "evidenceTier": 1
-    },
-    {
-      "date": "2025-09-08",
-      "value": 5,
-      "confidenceLow": 2,
-      "confidenceHigh": 10,
-      "sourceIds": ["pwbm-ai-productivity-2025"],
-      "evidenceTier": 1
-    },
+    }
+  ],
+  "overlays": [
     {
       "date": "2025-10-01",
-      "value": 4,
-      "confidenceLow": 1,
-      "confidenceHigh": 8,
+      "direction": "neutral",
       "sourceIds": ["gimbel-yale-ai-labor-2025"],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "label": "Yale: no economy-wide disruption"
     },
     {
       "date": "2025-11-01",
-      "value": 4,
-      "confidenceLow": 1.5,
-      "confidenceHigh": 7,
+      "direction": "neutral",
       "sourceIds": ["nber-csuite-survey-2025"],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "label": "NBER: 90% report no net impact"
     },
     {
-      "date": "2026-01-15",
-      "value": 5.5,
-      "confidenceLow": 3,
-      "confidenceHigh": 9.5,
-      "sourceIds": ["challenger-ai-layoffs-2025"],
-      "evidenceTier": 3
+      "date": "2025-09-08",
+      "direction": "down",
+      "sourceIds": ["pwbm-ai-productivity-2025"],
+      "evidenceTier": 1,
+      "label": "PWBM: 0.75% fall in replaceable jobs"
     }
   ],
   "sources": [

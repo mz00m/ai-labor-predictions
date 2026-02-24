@@ -1,0 +1,134 @@
+{
+  "id": "exposure-workforce",
+  "slug": "workforce-ai-exposure",
+  "title": "US Workforce AI Exposure",
+  "description": "Share of US jobs with significant task overlap with current AI capabilities. Exposure measures what AI could automate, not what it has. High exposure does not equal displacement.",
+  "category": "exposure",
+  "unit": "% of jobs exposed",
+  "currentValue": 49,
+  "timeHorizon": "Current estimate",
+  "history": [
+    {
+      "date": "2023-03-26",
+      "value": 25,
+      "confidenceLow": 18,
+      "confidenceHigh": 30,
+      "sourceIds": ["goldman-300m"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2023-07-01",
+      "value": 27,
+      "confidenceLow": 20,
+      "confidenceHigh": 35,
+      "sourceIds": ["oecd-2023"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2024-01-14",
+      "value": 40,
+      "confidenceLow": 30,
+      "confidenceHigh": 50,
+      "sourceIds": ["imf-ai-2024"],
+      "evidenceTier": 2
+    },
+    {
+      "date": "2024-03-01",
+      "value": 80,
+      "confidenceLow": 60,
+      "confidenceHigh": 86,
+      "sourceIds": ["eloundou-openai-2024"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2025-09-08",
+      "value": 40,
+      "confidenceLow": 30,
+      "confidenceHigh": 50,
+      "sourceIds": ["pwbm-ai-adoption-2025"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2026-01-15",
+      "value": 49,
+      "confidenceLow": 40,
+      "confidenceHigh": 60,
+      "sourceIds": ["anthropic-econ-primitives-2026"],
+      "evidenceTier": 1
+    }
+  ],
+  "sources": [
+    {
+      "id": "goldman-300m",
+      "title": "The Potentially Large Effects of AI on Economic Growth",
+      "url": "https://www.goldmansachs.com/insights/articles/generative-ai-could-raise-global-gdp-by-7-percent",
+      "publisher": "Goldman Sachs",
+      "evidenceTier": 1,
+      "datePublished": "2023-03-26",
+      "excerpt": "Roughly two-thirds of current jobs are exposed to some degree of AI automation; generative AI could substitute up to one-fourth of current work."
+    },
+    {
+      "id": "oecd-2023",
+      "title": "OECD Employment Outlook 2023: AI and the Labour Market",
+      "url": "https://www.oecd.org/en/publications/oecd-employment-outlook-2023_08785bba-en.html",
+      "publisher": "OECD",
+      "evidenceTier": 1,
+      "datePublished": "2023-07-11",
+      "excerpt": "27% of jobs are in occupations at high risk of automation across OECD countries."
+    },
+    {
+      "id": "imf-ai-2024",
+      "title": "Gen-AI: Artificial Intelligence and the Future of Work",
+      "url": "https://www.imf.org/en/Publications/Staff-Discussion-Notes/Issues/2024/01/14/Gen-AI-Artificial-Intelligence-and-the-Future-of-Work-542379",
+      "publisher": "International Monetary Fund",
+      "evidenceTier": 2,
+      "datePublished": "2024-01-14",
+      "excerpt": "Almost 40% of global employment is exposed to AI, with advanced economies more affected."
+    },
+    {
+      "id": "eloundou-openai-2024",
+      "title": "GPTs are GPTs: An Early Look at the Labor Market Impact Potential of LLMs",
+      "url": "https://arxiv.org/abs/2303.10130",
+      "publisher": "OpenAI / UPenn (Eloundou et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2024-03-01",
+      "excerpt": "~80% of the US workforce could have at least 10% of their tasks affected by GPTs; ~19% of workers may see at least 50% of tasks impacted."
+    },
+    {
+      "id": "pwbm-ai-adoption-2025",
+      "title": "Projected Impact of Generative AI on Future Productivity Growth",
+      "url": "https://budgetmodel.wharton.upenn.edu/issues/2025/9/8/projected-impact-of-generative-ai-on-future-productivity-growth",
+      "publisher": "Penn Wharton Budget Model",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-08",
+      "excerpt": "In about 40% of employment in exposed occupations, at least 50% of tasks will be replaceable by AI within 10 years."
+    },
+    {
+      "id": "anthropic-econ-primitives-2026",
+      "title": "The Anthropic Economic Index: Economic Primitives",
+      "url": "https://www.anthropic.com/research/anthropic-economic-index-january-2026-report",
+      "publisher": "Anthropic",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-15",
+      "excerpt": "49% of jobs now use AI for at least 25% of their tasks (up from 36% in early 2025); augmentation (52%) has overtaken automation (45%) as primary use pattern."
+    },
+    {
+      "id": "pnas-nexus-2025",
+      "title": "AI exposure predicts unemployment risk",
+      "url": "https://academic.oup.com/pnasnexus/article/4/4/pgaf107/8104152",
+      "publisher": "PNAS Nexus",
+      "evidenceTier": 1,
+      "datePublished": "2025-02-01",
+      "excerpt": "Workers in AI-exposed occupations face significantly higher unemployment risk."
+    },
+    {
+      "id": "del-rio-chanona-ai-jobs-2025",
+      "title": "AI and jobs: A review of theory, estimates, and evidence",
+      "url": "https://arxiv.org/abs/2509.15265",
+      "publisher": "arXiv (ILO-affiliated researchers)",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-15",
+      "excerpt": "Productivity gains 20-60% in controlled RCTs, 15-30% in field experiments; AI exposure measures converge toward high-wage jobs being most exposed."
+    }
+  ]
+}

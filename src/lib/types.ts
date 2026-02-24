@@ -26,16 +26,26 @@ export interface HistoricalDataPoint {
   evidenceTier: EvidenceTier;
 }
 
+/** A qualitative/directional study shown as a horizontal band rather than a point */
+export interface DirectionalOverlay {
+  date: string;
+  direction: "up" | "down" | "neutral";
+  sourceIds: string[];
+  evidenceTier: EvidenceTier;
+  label: string;
+}
+
 export interface Prediction {
   id: string;
   slug: string;
   title: string;
   description: string;
-  category: "displacement" | "wages" | "adoption" | "signals";
+  category: "displacement" | "wages" | "adoption" | "signals" | "exposure";
   unit: string;
   currentValue: number;
   timeHorizon: string;
   history: HistoricalDataPoint[];
+  overlays?: DirectionalOverlay[];
   sources: Source[];
   marketIds?: {
     polymarket?: string;
