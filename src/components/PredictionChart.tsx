@@ -159,18 +159,23 @@ export default function PredictionChart({
   }));
 
   // Create phantom data points for overlay dates that don't already exist
-  // in the chart data, so the categorical x-axis recognizes them
-  const existingDateStrs = new Set(realPoints.map((d) => d.dateStr));
-  const phantomPoints: ChartDataPoint[] = overlayData
-    .filter((o) => !existingDateStrs.has(o.dateStr))
-    .map((o) => ({
-      date: o.date,
-      dateStr: o.dateStr,
-      value: undefined,
-      evidenceTier: o.evidenceTier,
-      sourceIds: o.sourceIds,
-      isPhantom: true,
-    }));
+  // in the chart data, so the categorical x-axis recognizes them.
+  // Deduplicate by dateStr to avoid duplicate x-axis categories.
+  const usedDateStrs = new Set(realPoints.map((d) => d.dateStr));
+  const phantomPoints: ChartDataPoint[] = [];
+  for (const o of overlayData) {
+    if (!usedDateStrs.has(o.dateStr)) {
+      usedDateStrs.add(o.dateStr);
+      phantomPoints.push({
+        date: o.date,
+        dateStr: o.dateStr,
+        value: undefined,
+        evidenceTier: o.evidenceTier,
+        sourceIds: o.sourceIds,
+        isPhantom: true,
+      });
+    }
+  }
 
   const chartData = [...realPoints, ...phantomPoints].sort(
     (a, b) => a.date - b.date
@@ -257,7 +262,7 @@ export default function PredictionChart({
               x={o.dateStr}
               stroke={overlayColor(o.direction)}
               strokeWidth={24}
-              strokeOpacity={0.12}
+              strokeOpacity={0.22}
               onClick={() => onDotClick?.(o.sourceIds)}
               style={{ cursor: onDotClick ? "pointer" : undefined }}
             />

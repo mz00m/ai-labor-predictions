@@ -25,6 +25,22 @@
       "evidenceTier": 2
     },
     {
+      "date": "2025-10-01",
+      "value": 0,
+      "confidenceLow": 0,
+      "confidenceHigh": 2,
+      "sourceIds": ["kinder-brookings-2025"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2025-10-15",
+      "value": 0,
+      "confidenceLow": 0,
+      "confidenceHigh": 1,
+      "sourceIds": ["yale-budget-lab-2025"],
+      "evidenceTier": 1
+    },
+    {
       "date": "2025-11-01",
       "value": 12,
       "confidenceLow": 6,
@@ -39,45 +55,33 @@
       "confidenceHigh": 14,
       "sourceIds": ["wef-future-jobs-2025"],
       "evidenceTier": 2
-    }
-  ],
-  "overlays": [
-    {
-      "date": "2025-10-01",
-      "direction": "neutral",
-      "sourceIds": ["kinder-brookings-2025"],
-      "evidenceTier": 1,
-      "label": "Brookings: no apocalypse yet"
-    },
-    {
-      "date": "2025-10-15",
-      "direction": "neutral",
-      "sourceIds": ["yale-budget-lab-2025"],
-      "evidenceTier": 1,
-      "label": "Yale: no macro displacement"
     },
     {
       "date": "2026-01-01",
-      "direction": "neutral",
+      "value": 0,
+      "confidenceLow": 0,
+      "confidenceHigh": 2,
       "sourceIds": ["hartley-genai-labor-2026"],
-      "evidenceTier": 1,
-      "label": "Stanford: no decline in openings"
-    },
-    {
-      "date": "2026-02-01",
-      "direction": "neutral",
-      "sourceIds": ["icle-ai-productivity-2026"],
-      "evidenceTier": 2,
-      "label": "ICLE: task reallocation, not displacement"
+      "evidenceTier": 1
     },
     {
       "date": "2026-01-06",
-      "direction": "down",
+      "value": 0.1,
+      "confidenceLow": 0,
+      "confidenceHigh": 0.5,
       "sourceIds": ["dallas-fed-overall-2026"],
-      "evidenceTier": 1,
-      "label": "Dallas Fed: 0.1pp unemployment effect"
+      "evidenceTier": 1
+    },
+    {
+      "date": "2026-02-01",
+      "value": 0,
+      "confidenceLow": 0,
+      "confidenceHigh": 1,
+      "sourceIds": ["icle-ai-productivity-2026"],
+      "evidenceTier": 2
     }
   ],
+  "overlays": [],
   "sources": [
     {
       "id": "goldman-300m",

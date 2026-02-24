@@ -39,31 +39,33 @@
       "confidenceHigh": 8,
       "sourceIds": ["forrester-jobs-2025"],
       "evidenceTier": 2
-    }
-  ],
-  "overlays": [
-    {
-      "date": "2025-10-01",
-      "direction": "neutral",
-      "sourceIds": ["gimbel-yale-ai-labor-2025"],
-      "evidenceTier": 1,
-      "label": "Yale: no economy-wide disruption"
-    },
-    {
-      "date": "2025-11-01",
-      "direction": "neutral",
-      "sourceIds": ["nber-csuite-survey-2025"],
-      "evidenceTier": 1,
-      "label": "NBER: 90% report no net impact"
     },
     {
       "date": "2025-09-08",
-      "direction": "down",
+      "value": 0.75,
+      "confidenceLow": 0.3,
+      "confidenceHigh": 1.5,
       "sourceIds": ["pwbm-ai-productivity-2025"],
-      "evidenceTier": 1,
-      "label": "PWBM: 0.75% fall in replaceable jobs"
+      "evidenceTier": 1
+    },
+    {
+      "date": "2025-10-01",
+      "value": 0,
+      "confidenceLow": 0,
+      "confidenceHigh": 1,
+      "sourceIds": ["gimbel-yale-ai-labor-2025"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2025-11-01",
+      "value": 0,
+      "confidenceLow": 0,
+      "confidenceHigh": 1,
+      "sourceIds": ["nber-csuite-survey-2025"],
+      "evidenceTier": 1
     }
   ],
+  "overlays": [],
   "sources": [
     {
       "id": "goldman-300m",
