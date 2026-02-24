@@ -33,6 +33,14 @@
       "evidenceTier": 1
     },
     {
+      "date": "2024-03-15",
+      "value": 0,
+      "confidenceLow": 0,
+      "confidenceHigh": 3,
+      "sourceIds": ["brookings-2024"],
+      "evidenceTier": 2
+    },
+    {
       "date": "2026-01-10",
       "value": 27.5,
       "confidenceLow": 20,
@@ -42,13 +50,6 @@
     }
   ],
   "overlays": [
-    {
-      "date": "2024-03-15",
-      "direction": "neutral",
-      "sourceIds": ["brookings-2024"],
-      "evidenceTier": 2,
-      "label": "Brookings: no large-scale displacement yet"
-    },
     {
       "date": "2025-10-01",
       "direction": "down",
