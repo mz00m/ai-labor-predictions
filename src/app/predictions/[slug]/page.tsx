@@ -6,6 +6,7 @@ import Link from "next/link";
 import { EvidenceTier } from "@/lib/types";
 import { getPredictionBySlug } from "@/lib/data-loader";
 import { getTierConfig } from "@/lib/evidence-tiers";
+import { computeAggregate } from "@/lib/prediction-stats";
 import EvidenceFilter from "@/components/EvidenceFilter";
 import PredictionChart from "@/components/PredictionChart";
 import SourceList from "@/components/SourceList";
@@ -101,42 +102,11 @@ export default function PredictionDetailPage() {
   const sortedDesc = [...filteredHistory].reverse();
   const bestEstimate = sortedDesc.find((d) => d.evidenceTier === 1) || sortedDesc[0];
 
-  let trendInfo: { change: number; monthsApart: number } | null = null;
-  if (filteredHistory.length >= 2) {
-    const latest = filteredHistory[filteredHistory.length - 1];
-    const latestTime = new Date(latest.date).getTime();
-    const oneYearAgo = latestTime - 365 * 24 * 60 * 60 * 1000;
-    let closest = filteredHistory[0];
-    let closestDiff = Math.abs(new Date(filteredHistory[0].date).getTime() - oneYearAgo);
-    for (const pt of filteredHistory) {
-      const diff = Math.abs(new Date(pt.date).getTime() - oneYearAgo);
-      if (diff < closestDiff) {
-        closest = pt;
-        closestDiff = diff;
-      }
-    }
-    if (closest !== latest) {
-      trendInfo = {
-        change: latest.value - closest.value,
-        monthsApart: Math.round(
-          (latestTime - new Date(closest.date).getTime()) / (30 * 24 * 60 * 60 * 1000)
-        ),
-      };
-    }
-  }
+  const agg = computeAggregate(prediction, selectedTiers);
 
-  const trendIsBad =
-    trendInfo &&
-    ((prediction.category === "displacement" && trendInfo.change > 0) ||
-      (prediction.category === "wages" && trendInfo.change < 0));
-  const trendIsGood =
-    trendInfo &&
-    ((prediction.category === "displacement" && trendInfo.change < 0) ||
-      (prediction.category === "wages" && trendInfo.change > 0));
-
-  const trendColorClass = trendIsBad
+  const trendColorClass = agg.trendIsBad
     ? "text-red-600"
-    : trendIsGood
+    : agg.trend !== "flat" && !agg.trendIsBad
       ? "text-emerald-600"
       : "text-[var(--muted)]";
 
@@ -147,7 +117,7 @@ export default function PredictionDetailPage() {
 
   const contextFn = CONTEXT_MAP[prediction.slug];
   const contextText = contextFn
-    ? contextFn(prediction.currentValue)
+    ? contextFn(agg.mean)
     : prediction.description;
 
   return (
@@ -172,21 +142,18 @@ export default function PredictionDetailPage() {
           {prediction.title}
         </h1>
 
-        {/* Big number */}
+        {/* Big number + trend arrow */}
         <div className="flex items-baseline gap-4 mb-4">
           <span className="stat-number text-[56px] sm:text-[72px] font-black text-[var(--foreground)] leading-none">
-            {prediction.currentValue > 0 && prediction.category === "wages" ? "+" : ""}
-            {prediction.currentValue}
+            {agg.mean > 0 && prediction.category === "wages" ? "+" : ""}
+            {Number.isInteger(agg.mean) ? agg.mean : agg.mean.toFixed(1)}
             <span className="text-[24px] font-normal text-[var(--muted)] ml-1">
               {prediction.unit.includes("%") ? "%" : ` ${prediction.unit}`}
             </span>
           </span>
-          {trendInfo && (
-            <span className={`text-[15px] font-semibold ${trendColorClass}`}>
-              {trendInfo.change > 0 ? "+" : ""}
-              {trendInfo.change}
-              {prediction.unit.includes("%") ? "pp" : ""}{" "}
-              / {trendInfo.monthsApart}mo
+          {agg.trend !== "flat" && (
+            <span className={`text-[28px] ${trendColorClass}`} style={{ opacity: 0.5 }}>
+              {agg.trend === "up" ? "▲" : "▼"}
             </span>
           )}
         </div>

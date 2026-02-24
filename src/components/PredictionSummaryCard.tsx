@@ -8,6 +8,7 @@ import {
   getResearchAnnotation,
   ESTIMATE_TYPE_LABELS,
 } from "@/lib/research-annotations";
+import { computeAggregate } from "@/lib/prediction-stats";
 
 interface PredictionSummaryCardProps {
   prediction: Prediction;
@@ -47,8 +48,8 @@ function computeTrend(prediction: Prediction, selectedTiers: EvidenceTier[]) {
   return { change, monthsApart, from: closest.value, to: latest.value };
 }
 
-function getContextLine(prediction: Prediction): string {
-  const v = prediction.currentValue;
+function getContextLine(prediction: Prediction, aggregateValue: number): string {
+  const v = aggregateValue;
   if (prediction.slug === "overall-us-displacement")
     return `An estimated ${v}% of US jobs face net displacement from AI by 2030 — roles eliminated or fundamentally restructured.`;
   if (prediction.slug === "total-us-jobs-lost")
@@ -180,21 +181,13 @@ export default function PredictionSummaryCard({
   const [showNote, setShowNote] = useState(false);
   const best = getBestEstimate(prediction, selectedTiers);
   const trend = computeTrend(prediction, selectedTiers);
-  const contextLine = getContextLine(prediction);
+  const agg = computeAggregate(prediction, selectedTiers);
+  const contextLine = getContextLine(prediction, agg.mean);
   const annotation = getResearchAnnotation(prediction.slug);
 
-  const trendIsBad =
-    trend &&
-    ((prediction.category === "displacement" && trend.change > 0) ||
-      (prediction.category === "wages" && trend.change < 0));
-  const trendIsGood =
-    trend &&
-    ((prediction.category === "displacement" && trend.change < 0) ||
-      (prediction.category === "wages" && trend.change > 0));
-
-  const trendColorClass = trendIsBad
+  const trendColorClass = agg.trendIsBad
     ? "text-red-600"
-    : trendIsGood
+    : agg.trend !== "flat" && !agg.trendIsBad
       ? "text-emerald-600"
       : "text-[var(--muted)]";
 
@@ -220,17 +213,22 @@ export default function PredictionSummaryCard({
             {prediction.title}
           </h3>
 
-          {/* Big number + trend */}
+          {/* Big number + trend arrow */}
           <div className="flex items-baseline gap-3 mb-3">
             <span className="stat-number text-[40px] font-black text-[var(--foreground)] leading-none">
-              {prediction.currentValue > 0 && prediction.category === "wages" ? "+" : ""}
-              {prediction.currentValue}
+              {agg.mean > 0 && prediction.category === "wages" ? "+" : ""}
+              {Number.isInteger(agg.mean) ? agg.mean : agg.mean.toFixed(1)}
               <span className="text-[18px] font-normal text-[var(--muted)] ml-0.5">
                 {prediction.unit.includes("%") ? "%" : ` ${prediction.unit}`}
               </span>
             </span>
+            {agg.trend !== "flat" && (
+              <span className={`text-[22px] ${trendColorClass}`} style={{ opacity: 0.6 }}>
+                {agg.trend === "up" ? "▲" : "▼"}
+              </span>
+            )}
             {trend && (
-              <span className={`text-[13px] font-semibold ${trendColorClass}`}>
+              <span className={`text-[12px] font-medium ${trendColorClass}`} style={{ opacity: 0.7 }}>
                 {trend.change > 0 ? "+" : ""}
                 {trend.change}
                 {prediction.unit.includes("%") ? "pp" : ""}{" "}
