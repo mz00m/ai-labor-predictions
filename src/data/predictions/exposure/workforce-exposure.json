@@ -41,6 +41,14 @@
       "evidenceTier": 1
     },
     {
+      "date": "2025-01-15",
+      "value": 36,
+      "confidenceLow": 28,
+      "confidenceHigh": 44,
+      "sourceIds": ["anthropic-econ-primitives-2026"],
+      "evidenceTier": 1
+    },
+    {
       "date": "2025-09-08",
       "value": 40,
       "confidenceLow": 30,
