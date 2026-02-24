@@ -125,7 +125,7 @@
     {
       "id": "goldman-300m",
       "title": "The Potentially Large Effects of AI on Economic Growth",
-      "url": "https://www.goldmansachs.com/insights/pages/generative-ai-could-raise-global-gdp-by-7-percent.html",
+      "url": "https://www.goldmansachs.com/insights/articles/generative-ai-could-raise-global-gdp-by-7-percent",
       "publisher": "Goldman Sachs",
       "evidenceTier": 1,
       "datePublished": "2023-03-26",
@@ -229,7 +229,7 @@
     {
       "id": "yale-budget-lab-2025",
       "title": "AI and the U.S. Labor Market: No Macro Displacement Yet",
-      "url": "https://budgetlab.yale.edu/research/ai-labor-market-2025",
+      "url": "https://budgetlab.yale.edu/research/evaluating-impact-ai-labor-market-current-state-affairs",
       "publisher": "Yale Budget Lab",
       "evidenceTier": 1,
       "datePublished": "2025-10-15",
@@ -247,7 +247,7 @@
     {
       "id": "fortune-altman-2026",
       "title": "Sam Altman warns AI could displace significant share of jobs",
-      "url": "https://fortune.com/2026/01/20/sam-altman-ai-job-displacement-warning/",
+      "url": "https://fortune.com/2026/02/19/sam-altman-confirms-ai-washing-job-displacement-layoffs/",
       "publisher": "Fortune",
       "evidenceTier": 3,
       "datePublished": "2026-01-20"
