@@ -36,6 +36,7 @@ interface ChartDataPoint {
   evidenceTier: EvidenceTier;
   sourceIds: string[];
   isPhantom?: boolean;
+  trendValue?: number;
 }
 
 function CustomTooltip({
@@ -181,6 +182,27 @@ export default function PredictionChart({
     (a, b) => a.date - b.date
   );
 
+  // Linear regression trend line (least-squares on real points)
+  const pointsWithValues = realPoints.filter((d) => d.value != null);
+  if (pointsWithValues.length >= 2) {
+    const n = pointsWithValues.length;
+    const dates = pointsWithValues.map((d) => d.date);
+    const values = pointsWithValues.map((d) => d.value!);
+    const xMean = dates.reduce((s, v) => s + v, 0) / n;
+    const yMean = values.reduce((s, v) => s + v, 0) / n;
+    let num = 0;
+    let den = 0;
+    for (let i = 0; i < n; i++) {
+      num += (dates[i] - xMean) * (values[i] - yMean);
+      den += (dates[i] - xMean) ** 2;
+    }
+    const slope = den !== 0 ? num / den : 0;
+    const intercept = yMean - slope * xMean;
+    for (const d of chartData) {
+      d.trendValue = slope * d.date + intercept;
+    }
+  }
+
   if (compact) {
     return (
       <ResponsiveContainer width="100%" height={80}>
@@ -252,6 +274,19 @@ export default function PredictionChart({
               fill="#7c3aed"
               fillOpacity={0.08}
               stroke="none"
+              connectNulls
+            />
+          )}
+          {/* Linear trend line */}
+          {chartData.some((d) => d.trendValue != null) && (
+            <Line
+              type="linear"
+              dataKey="trendValue"
+              stroke="#9ca3af"
+              strokeWidth={1.5}
+              strokeDasharray="6 4"
+              dot={false}
+              activeDot={false}
               connectNulls
             />
           )}

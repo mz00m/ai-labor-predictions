@@ -237,16 +237,6 @@ export default function PredictionSummaryCard({
             )}
           </div>
 
-          {/* Confidence range */}
-          {best && best.confidenceLow != null && best.confidenceHigh != null && (
-            <p className="text-[13px] text-[var(--muted)] mb-3">
-              Range: {best.confidenceLow}
-              {prediction.unit.includes("%") ? "%" : ""} to {best.confidenceHigh}
-              {prediction.unit.includes("%") ? "%" : ""}
-              <span className="ml-1.5 opacity-60">· weighted avg</span>
-            </p>
-          )}
-
           {/* Context */}
           <p className="text-[14px] text-[var(--muted)] leading-relaxed mb-4">
             {contextLine}
