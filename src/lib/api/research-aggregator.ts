@@ -53,14 +53,130 @@ export interface ResearchPaper {
 }
 
 /**
+ * Check whether a word-boundary match exists for a short term.
+ * For multi-word phrases or terms >= 4 chars, plain includes() is safe.
+ * For short terms like "ai" we need word boundaries to avoid matching
+ * substrings inside words like "cardiac", "anxiety", "brain", etc.
+ */
+function matchesTerm(text: string, term: string): boolean {
+  if (term.length >= 4 || term.includes(" ")) {
+    return text.includes(term);
+  }
+  // Word-boundary match for short terms (e.g. "ai", "gpt")
+  const re = new RegExp(`\\b${term}\\b`);
+  return re.test(text);
+}
+
+/**
+ * Off-topic domains that should be excluded. If a paper's title+abstract
+ * is dominated by these terms it is almost certainly irrelevant.
+ */
+const OFF_TOPIC_SIGNALS = [
+  "cancer",
+  "tumor",
+  "tumour",
+  "oncology",
+  "chemotherapy",
+  "carcinoma",
+  "metastasis",
+  "cardiac",
+  "cardiology",
+  "cardiovascular",
+  "clinical trial",
+  "randomized controlled trial",
+  "patient outcome",
+  "surgical",
+  "pathology",
+  "biomarker",
+  "genomic",
+  "proteomic",
+  "neuroimaging",
+  "drug discovery",
+  "molecular biology",
+  "cell proliferation",
+  "in vitro",
+  "in vivo",
+  "immunotherapy",
+  "radiology",
+  "magnetic resonance",
+  "electroencephalograph",
+  "anxiety disorder",
+  "psychiatric",
+  "dermatology",
+  "ophthalmology",
+  "veterinary",
+];
+
+function isOffTopic(text: string): boolean {
+  let hits = 0;
+  for (const term of OFF_TOPIC_SIGNALS) {
+    if (text.includes(term)) hits++;
+  }
+  return hits >= 2;
+}
+
+/**
  * Score relevance to AI + labor market topic.
+ *
+ * Requires BOTH an AI-related keyword AND a labor-related keyword to score
+ * above the threshold. This prevents medical/clinical papers that
+ * tangentially mention "AI" or "employment" from leaking through.
  */
 function scoreRelevance(title: string, abstract: string | null): number {
   const text = `${title} ${abstract || ""}`.toLowerCase();
+
+  // Reject papers that are clearly about off-topic domains
+  if (isOffTopic(text)) return 0;
+
+  // --- AI-side keywords ---
+  const aiKeywords = [
+    "artificial intelligence",
+    "machine learning",
+    "generative ai",
+    "large language model",
+    "chatgpt",
+    "gpt",
+    "ai",
+  ];
+  // --- Labor-side keywords ---
+  const laborKeywords = [
+    "labor market",
+    "labour market",
+    "job displacement",
+    "wage",
+    "employment",
+    "automation",
+    "workforce",
+    "occupation",
+    "unemployment",
+    "headcount",
+    "layoff",
+    "restructuring",
+    "job postings",
+    "earnings",
+    "10-k",
+    "hiring",
+  ];
+
+  let aiScore = 0;
+  let laborScore = 0;
+
+  for (const term of aiKeywords) {
+    if (matchesTerm(text, term)) aiScore += 1;
+  }
+  for (const term of laborKeywords) {
+    if (matchesTerm(text, term)) laborScore += 1;
+  }
+
+  // Must have at least one keyword from EACH domain
+  if (aiScore === 0 || laborScore === 0) return 0;
+
+  // Now compute the weighted score for ranking purposes
   let score = 0;
 
   const highRelevance = [
     "labor market",
+    "labour market",
     "job displacement",
     "wage",
     "employment",
@@ -87,10 +203,10 @@ function scoreRelevance(title: string, abstract: string | null): number {
   ];
 
   for (const term of highRelevance) {
-    if (text.includes(term)) score += 3;
+    if (matchesTerm(text, term)) score += 3;
   }
   for (const term of medRelevance) {
-    if (text.includes(term)) score += 1;
+    if (matchesTerm(text, term)) score += 1;
   }
 
   return score;
