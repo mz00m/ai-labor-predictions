@@ -8,7 +8,6 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  ReferenceLine,
   ResponsiveContainer,
   TooltipProps,
 } from "recharts";
@@ -165,126 +164,140 @@ export default function PredictionChart({
   }
 
   return (
-    <ResponsiveContainer width="100%" height={360}>
-      <ComposedChart
-        data={chartData}
-        margin={{ top: 10, right: 10, left: 0, bottom: 0 }}
-        onClick={(state) => {
-          if (onDotClick && state?.activePayload?.[0]?.payload) {
-            const point = state.activePayload[0].payload as ChartDataPoint;
-            onDotClick(point.sourceIds);
-          }
-        }}
-        style={{ cursor: onDotClick ? "pointer" : undefined }}
-      >
-        <CartesianGrid strokeDasharray="3 3" opacity={0.2} />
-        <XAxis
-          dataKey="dateStr"
-          tick={{ fontSize: 12, fill: "#6b7280" }}
-          tickLine={false}
-          axisLine={false}
-        />
-        <YAxis
-          domain={[yMin, yMax]}
-          tick={{ fontSize: 12, fill: "#6b7280" }}
-          tickLine={false}
-          axisLine={false}
-          tickFormatter={(v) => `${v}${unit}`}
-        />
-        <Tooltip
-          content={
-            <CustomTooltip
-              sources={sources}
-              unit={unit}
-            />
-          }
-        />
-        {chartData.some((d) => d.confidenceRange) && (
-          <Area
-            type="monotone"
-            dataKey="confidenceRange"
-            fill="#7c3aed"
-            fillOpacity={0.08}
-            stroke="none"
+    <div>
+      <ResponsiveContainer width="100%" height={360}>
+        <ComposedChart
+          data={chartData}
+          margin={{ top: 10, right: 10, left: 0, bottom: 0 }}
+          onClick={(state) => {
+            if (onDotClick && state?.activePayload?.[0]?.payload) {
+              const point = state.activePayload[0].payload as ChartDataPoint;
+              onDotClick(point.sourceIds);
+            }
+          }}
+          style={{ cursor: onDotClick ? "pointer" : undefined }}
+        >
+          <CartesianGrid strokeDasharray="3 3" opacity={0.2} />
+          <XAxis
+            dataKey="dateStr"
+            tick={{ fontSize: 12, fill: "#6b7280" }}
+            tickLine={false}
+            axisLine={false}
           />
-        )}
-        {overlayData.map((o) => {
-          const color =
-            o.direction === "down"
-              ? "#dc2626"
-              : o.direction === "up"
-                ? "#16a34a"
-                : "#6b7280";
-          return (
-            <ReferenceLine
-              key={`overlay-${o.dateStr}`}
-              x={o.dateStr}
-              stroke={color}
-              strokeWidth={2}
-              strokeDasharray="6 4"
-              strokeOpacity={0.45}
-              label={{
-                value: `${o.direction === "down" ? "\u2193" : o.direction === "up" ? "\u2191" : "\u2194"} ${o.label}`,
-                position: "insideTopRight",
-                fill: color,
-                fontSize: 10,
-                fontWeight: 600,
-                offset: 8,
-              }}
-              style={{ cursor: onDotClick ? "pointer" : undefined }}
-              onClick={() => onDotClick?.(o.sourceIds)}
+          <YAxis
+            domain={[yMin, yMax]}
+            tick={{ fontSize: 12, fill: "#6b7280" }}
+            tickLine={false}
+            axisLine={false}
+            tickFormatter={(v) => `${v}${unit}`}
+          />
+          <Tooltip
+            content={
+              <CustomTooltip
+                sources={sources}
+                unit={unit}
+              />
+            }
+          />
+          {chartData.some((d) => d.confidenceRange) && (
+            <Area
+              type="monotone"
+              dataKey="confidenceRange"
+              fill="#7c3aed"
+              fillOpacity={0.08}
+              stroke="none"
             />
-          );
-        })}
-        <Line
-          type="monotone"
-          dataKey="value"
-          stroke="#7c3aed"
-          strokeWidth={2.5}
-          dot={(props: Record<string, unknown>) => {
-            const { cx, cy, payload } = props as {
-              cx: number;
-              cy: number;
-              payload: ChartDataPoint;
-            };
-            const config = getTierConfig(payload.evidenceTier);
+          )}
+          <Line
+            type="monotone"
+            dataKey="value"
+            stroke="#7c3aed"
+            strokeWidth={2.5}
+            dot={(props: Record<string, unknown>) => {
+              const { cx, cy, payload } = props as {
+                cx: number;
+                cy: number;
+                payload: ChartDataPoint;
+              };
+              const config = getTierConfig(payload.evidenceTier);
+              return (
+                <circle
+                  key={`dot-${payload.date}`}
+                  cx={cx}
+                  cy={cy}
+                  r={5}
+                  fill={config.color}
+                  stroke="white"
+                  strokeWidth={2}
+                  style={{ cursor: onDotClick ? "pointer" : undefined }}
+                  onClick={() => onDotClick?.(payload.sourceIds)}
+                />
+              );
+            }}
+            activeDot={(props: unknown) => {
+              const { cx, cy, payload } = props as {
+                cx: number;
+                cy: number;
+                payload: ChartDataPoint;
+              };
+              const config = getTierConfig(payload.evidenceTier);
+              return (
+                <circle
+                  key={`active-${payload.date}`}
+                  cx={cx}
+                  cy={cy}
+                  r={7}
+                  fill={config.color}
+                  stroke="white"
+                  strokeWidth={2}
+                  style={{ cursor: onDotClick ? "pointer" : undefined }}
+                  onClick={() => onDotClick?.(payload.sourceIds)}
+                />
+              );
+            }}
+          />
+        </ComposedChart>
+      </ResponsiveContainer>
+      {overlayData.length > 0 && (
+        <div className="mt-3 flex flex-col gap-1.5 px-1">
+          <p className="text-[11px] font-medium text-[var(--muted)] uppercase tracking-wider">
+            Additional context
+          </p>
+          {overlayData.map((o) => {
+            const color =
+              o.direction === "down"
+                ? "#dc2626"
+                : o.direction === "up"
+                  ? "#16a34a"
+                  : "#6b7280";
+            const arrow =
+              o.direction === "down"
+                ? "\u2193"
+                : o.direction === "up"
+                  ? "\u2191"
+                  : "\u2194";
             return (
-              <circle
-                key={`dot-${payload.date}`}
-                cx={cx}
-                cy={cy}
-                r={5}
-                fill={config.color}
-                stroke="white"
-                strokeWidth={2}
-                style={{ cursor: onDotClick ? "pointer" : undefined }}
-                onClick={() => onDotClick?.(payload.sourceIds)}
-              />
+              <button
+                key={`overlay-${o.dateStr}-${o.label.slice(0, 20)}`}
+                className="flex items-start gap-2 text-left rounded-md px-2 py-1.5 hover:bg-black/[0.03] transition-colors"
+                onClick={() => onDotClick?.(o.sourceIds)}
+              >
+                <span
+                  className="text-[13px] font-bold leading-tight mt-px shrink-0"
+                  style={{ color }}
+                >
+                  {arrow}
+                </span>
+                <span className="text-[12px] leading-snug text-[var(--foreground)]">
+                  <span className="text-[var(--muted)]">{o.dateStr}</span>
+                  {" \u2014 "}
+                  {o.label}
+                </span>
+              </button>
             );
-          }}
-          activeDot={(props: unknown) => {
-            const { cx, cy, payload } = props as {
-              cx: number;
-              cy: number;
-              payload: ChartDataPoint;
-            };
-            const config = getTierConfig(payload.evidenceTier);
-            return (
-              <circle
-                key={`active-${payload.date}`}
-                cx={cx}
-                cy={cy}
-                r={7}
-                fill={config.color}
-                stroke="white"
-                strokeWidth={2}
-                style={{ cursor: onDotClick ? "pointer" : undefined }}
-                onClick={() => onDotClick?.(payload.sourceIds)}
-              />
-            );
-          }}
-        />
-      </ComposedChart>
-    </ResponsiveContainer>
+          })}
+        </div>
+      )}
+    </div>
   );
 }
