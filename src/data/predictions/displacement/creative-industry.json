@@ -2,91 +2,82 @@
   "id": "displacement-creative",
   "slug": "creative-industry-displacement",
   "title": "Creative Industry Displacement by 2030",
-  "description": "Projected percentage of creative roles (design, writing, marketing) significantly restructured or eliminated by generative AI by 2030.",
+  "description": "Projected percentage of creative roles (design, writing, marketing) significantly restructured or eliminated by generative AI by 2030. Only data points where sources directly state a displacement figure are plotted.",
   "category": "displacement",
   "unit": "% of roles displaced",
-  "currentValue": 22,
+  "currentValue": 30,
   "timeHorizon": "By 2030",
   "history": [
     {
-      "date": "2023-04-01",
-      "value": 10,
-      "confidenceLow": 5,
-      "confidenceHigh": 20,
-      "sourceIds": ["wef-creative-2023"],
-      "evidenceTier": 2
-    },
-    {
-      "date": "2023-09-15",
-      "value": 14,
-      "confidenceLow": 8,
-      "confidenceHigh": 24,
-      "sourceIds": ["mckinsey-creative-automation"],
-      "evidenceTier": 2
-    },
-    {
       "date": "2024-02-01",
-      "value": 16,
-      "confidenceLow": 9,
-      "confidenceHigh": 26,
+      "value": 30,
+      "confidenceLow": 20,
+      "confidenceHigh": 40,
       "sourceIds": ["adobe-creative-survey-2024"],
       "evidenceTier": 2
     },
     {
       "date": "2024-05-20",
       "value": 22,
-      "confidenceLow": 14,
-      "confidenceHigh": 34,
+      "confidenceLow": 17,
+      "confidenceHigh": 30,
       "sourceIds": ["upwork-freelancer-impact"],
       "evidenceTier": 1
     },
     {
       "date": "2024-08-15",
-      "value": 18,
-      "confidenceLow": 10,
+      "value": 21,
+      "confidenceLow": 14,
       "confidenceHigh": 28,
       "sourceIds": ["nber-creative-ai-2024"],
       "evidenceTier": 1
     },
     {
-      "date": "2024-11-01",
-      "value": 25,
-      "confidenceLow": 16,
-      "confidenceHigh": 38,
-      "sourceIds": ["techcrunch-creative-layoffs"],
-      "evidenceTier": 3
-    },
-    {
       "date": "2025-02-15",
       "value": 20,
-      "confidenceLow": 12,
-      "confidenceHigh": 30,
+      "confidenceLow": 15,
+      "confidenceHigh": 25,
       "sourceIds": ["forrester-creative-2025"],
       "evidenceTier": 2
     },
     {
-      "date": "2025-06-01",
-      "value": 20,
-      "confidenceLow": 12,
-      "confidenceHigh": 32,
-      "sourceIds": ["bls-creative-occupations-2025"],
+      "date": "2025-02-20",
+      "value": 22,
+      "confidenceLow": 15,
+      "confidenceHigh": 30,
+      "sourceIds": ["fiverr-10k-2024"],
       "evidenceTier": 1
     },
     {
       "date": "2025-10-01",
-      "value": 22,
-      "confidenceLow": 14,
-      "confidenceHigh": 34,
+      "value": 30,
+      "confidenceLow": 20,
+      "confidenceHigh": 40,
       "sourceIds": ["uoc-creative-automation-2025"],
       "evidenceTier": 1
+    }
+  ],
+  "overlays": [
+    {
+      "date": "2023-09-15",
+      "direction": "down",
+      "sourceIds": ["mckinsey-creative-automation"],
+      "evidenceTier": 2,
+      "label": "McKinsey: 25-40% of creative task time automatable"
     },
     {
-      "date": "2026-01-01",
-      "value": 25,
-      "confidenceLow": 16,
-      "confidenceHigh": 38,
-      "sourceIds": ["unctad-creative-industry-2025"],
-      "evidenceTier": 3
+      "date": "2025-06-01",
+      "direction": "down",
+      "sourceIds": ["bls-creative-occupations-2025"],
+      "evidenceTier": 1,
+      "label": "BLS: graphic designer jobs to decline 4%"
+    },
+    {
+      "date": "2025-09-20",
+      "direction": "down",
+      "sourceIds": ["ramp-freelance-creative-2025"],
+      "evidenceTier": 1,
+      "label": "Ramp: $1 reduced freelance → $0.03 AI spend"
     }
   ],
   "sources": [
