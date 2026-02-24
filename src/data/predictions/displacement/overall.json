@@ -97,6 +97,14 @@
       "evidenceTier": 1
     },
     {
+      "date": "2025-11-01",
+      "value": 10,
+      "confidenceLow": 6,
+      "confidenceHigh": 16,
+      "sourceIds": ["worldbank-liu-wang-yu-2025"],
+      "evidenceTier": 1
+    },
+    {
       "date": "2025-12-01",
       "value": 9,
       "confidenceLow": 5,
@@ -125,7 +133,7 @@
     {
       "id": "goldman-300m",
       "title": "The Potentially Large Effects of AI on Economic Growth",
-      "url": "https://www.goldmansachs.com/insights/pages/generative-ai-could-raise-global-gdp-by-7-percent.html",
+      "url": "https://www.goldmansachs.com/insights/articles/generative-ai-could-raise-global-gdp-by-7-percent",
       "publisher": "Goldman Sachs",
       "evidenceTier": 1,
       "datePublished": "2023-03-26",
@@ -229,7 +237,7 @@
     {
       "id": "yale-budget-lab-2025",
       "title": "AI and the U.S. Labor Market: No Macro Displacement Yet",
-      "url": "https://budgetlab.yale.edu/research/ai-labor-market-2025",
+      "url": "https://budgetlab.yale.edu/research/evaluating-impact-ai-labor-market-current-state-affairs",
       "publisher": "Yale Budget Lab",
       "evidenceTier": 1,
       "datePublished": "2025-10-15",
@@ -247,7 +255,7 @@
     {
       "id": "fortune-altman-2026",
       "title": "Sam Altman warns AI could displace significant share of jobs",
-      "url": "https://fortune.com/2026/01/20/sam-altman-ai-job-displacement-warning/",
+      "url": "https://fortune.com/2026/02/19/sam-altman-confirms-ai-washing-job-displacement-layoffs/",
       "publisher": "Fortune",
       "evidenceTier": 3,
       "datePublished": "2026-01-20"
@@ -269,6 +277,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-01-01",
       "excerpt": "35.9% of US workers used generative AI by December 2025; small positive wage effects, no significant decline in job openings."
+    },
+    {
+      "id": "worldbank-liu-wang-yu-2025",
+      "title": "Labor Demand in the Age of Generative AI: Early Evidence from the U.S. Job Posting Data",
+      "url": "https://openknowledge.worldbank.org/server/api/core/bitstreams/e78c18bd-a035-4811-b340-3771ff14ac04/content",
+      "publisher": "World Bank (Liu, Wang, Yu)",
+      "evidenceTier": 1,
+      "datePublished": "2025-11-01",
+      "excerpt": "Job postings for high-AI-substitution occupations fell 12% relative to low-substitution roles post-ChatGPT; effect grew from 6% in year one to 18% by year three. Based on 285 million Lightcast job postings."
     },
     {
       "id": "korinek-stiglitz-steering-2025",

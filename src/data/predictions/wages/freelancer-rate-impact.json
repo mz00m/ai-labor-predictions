@@ -93,7 +93,7 @@
     {
       "id": "upwork-trends-2023",
       "title": "Upwork Freelance Forward 2023",
-      "url": "https://www.upwork.com/research/freelance-forward-2023",
+      "url": "https://www.upwork.com/research/freelance-forward-2023-research-report",
       "publisher": "Upwork",
       "evidenceTier": 1,
       "datePublished": "2023-06-01",
@@ -111,8 +111,8 @@
     {
       "id": "nber-freelance-ai-2024",
       "title": "The Impact of Generative AI on Freelance Labor Markets",
-      "url": "https://www.nber.org/",
-      "publisher": "NBER (Hui, Reshef, Zhou)",
+      "url": "https://pubsonline.informs.org/doi/10.1287/orsc.2023.18441",
+      "publisher": "Organization Science (Hui, Reshef, Zhou)",
       "evidenceTier": 1,
       "datePublished": "2024-03-15",
       "excerpt": "ChatGPT's launch caused a 21% decline in freelance writing job postings and a 15% drop in average hourly rates within 6 months."
@@ -164,20 +164,20 @@
     {
       "id": "ramp-freelance-economics-2025",
       "title": "Ramp Economics Lab: Freelance Marketplace Spending Collapse",
-      "url": "https://ramp.com/blog/economics-lab-freelance-marketplace-spending-2025",
+      "url": "https://ramp.com/velocity/ai-labor-market-impact-freelancers",
       "publisher": "Ramp",
       "evidenceTier": 1,
       "datePublished": "2025-09-20",
-      "excerpt": "Business spend on freelance marketplaces fell from 0.66% to 0.14% of total spend. Writer earnings dropped 31%. Over half of businesses stopped using freelancers for AI-automatable tasks."
+      "excerpt": "Business spend on freelance marketplaces fell from 0.66% to 0.14% of total spend. Writer earnings on these platforms dropped ~31% (based on marketplace spending data; other studies find 5-33% declines depending on metric). Over half of businesses stopped using freelancers for AI-automatable tasks."
     },
     {
       "id": "sciencedirect-freelancer-demand-2025",
       "title": "The Impact of Generative AI on Freelancer Demand: A Multi-Platform Study",
-      "url": "https://www.sciencedirect.com/science/article/pii/S0048733325001234",
-      "publisher": "ScienceDirect (Research Policy)",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0167268124004591",
+      "publisher": "Journal of Economic Behavior & Organization",
       "evidenceTier": 3,
       "datePublished": "2025-12-01",
-      "excerpt": "Writing gigs dropped 30% across major freelance platforms post-ChatGPT. Translation and data entry categories down 35-45%. AI-augmented freelancers partially offset decline."
+      "excerpt": "Writing gig volume dropped ~30% across major freelance platforms post-ChatGPT. Translation and data entry categories down 35-45%. AI-augmented freelancers partially offset decline."
     },
     {
       "id": "humlum-vestergaard-adoption-2025",

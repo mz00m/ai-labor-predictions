@@ -320,6 +320,19 @@ const PREDICTION_KEYWORDS: Record<
  * Score how relevant a paper is to a specific prediction.
  * Returns 0 if not relevant, higher = more relevant.
  */
+/**
+ * Word-boundary match for short terms to avoid false positives
+ * (e.g. "ai" matching "cardiac", "anxiety").
+ */
+function matchesKeyword(text: string, term: string): boolean {
+  const lower = term.toLowerCase();
+  if (lower.length >= 4 || lower.includes(" ")) {
+    return text.includes(lower);
+  }
+  const re = new RegExp(`\\b${lower}\\b`);
+  return re.test(text);
+}
+
 function scorePaperForPrediction(
   paper: ResearchPaper,
   predictionSlug: string
@@ -331,10 +344,10 @@ function scorePaperForPrediction(
   let score = 0;
 
   for (const kw of keywords.primary) {
-    if (text.includes(kw.toLowerCase())) score += 3;
+    if (matchesKeyword(text, kw)) score += 3;
   }
   for (const kw of keywords.secondary) {
-    if (text.includes(kw.toLowerCase())) score += 1;
+    if (matchesKeyword(text, kw)) score += 1;
   }
 
   return score;

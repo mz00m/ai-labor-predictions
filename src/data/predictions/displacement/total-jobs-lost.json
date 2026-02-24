@@ -2,7 +2,7 @@
   "id": "displacement-total",
   "slug": "total-us-jobs-lost",
   "title": "Total US Jobs Lost to AI as % of Labor Force",
-  "description": "Projected net jobs eliminated by AI and automation as a share of the total US civilian labor force (~167 million), accounting for both direct displacement and partial task automation that eliminates full roles.",
+  "description": "Projected net jobs eliminated by AI and automation as a share of the total US civilian labor force (~168.5 million), accounting for both direct displacement and partial task automation that eliminates full roles.",
   "category": "displacement",
   "unit": "% of US labor force",
   "currentValue": 5,
@@ -117,7 +117,7 @@
     {
       "id": "goldman-300m",
       "title": "The Potentially Large Effects of AI on Economic Growth",
-      "url": "https://www.goldmansachs.com/insights/pages/generative-ai-could-raise-global-gdp-by-7-percent.html",
+      "url": "https://www.goldmansachs.com/insights/articles/generative-ai-could-raise-global-gdp-by-7-percent",
       "publisher": "Goldman Sachs",
       "evidenceTier": 1,
       "datePublished": "2023-03-26",
@@ -153,7 +153,7 @@
     {
       "id": "wef-future-jobs-2024",
       "title": "Future of Jobs Report 2024",
-      "url": "https://www.weforum.org/publications/the-future-of-jobs-report-2024/",
+      "url": "https://www.weforum.org/publications/the-future-of-jobs-report-2025/",
       "publisher": "World Economic Forum",
       "evidenceTier": 2,
       "datePublished": "2024-09-15",
@@ -197,7 +197,7 @@
     {
       "id": "sp500-layoff-tracker-2025",
       "title": "S&P 500 AI-Related Layoff Disclosures — Aggregate Analysis",
-      "url": "https://www.sec.gov/cgi-bin/browse-edgar",
+      "url": "https://efts.sec.gov/LATEST/search-index?q=%22artificial+intelligence%22&forms=10-K",
       "publisher": "SEC EDGAR (Aggregated)",
       "evidenceTier": 1,
       "datePublished": "2025-03-01",
@@ -215,7 +215,7 @@
     {
       "id": "nber-csuite-survey-2025",
       "title": "C-Suite Survey on AI and Employment: Early Evidence",
-      "url": "https://www.nber.org/papers/w33201",
+      "url": "https://www.nber.org/papers/w34836",
       "publisher": "NBER",
       "evidenceTier": 1,
       "datePublished": "2025-11-01",
@@ -224,7 +224,7 @@
     {
       "id": "challenger-ai-layoffs-2025",
       "title": "Challenger Report: 55,000 AI-Attributed Layoffs in 2025",
-      "url": "https://www.challengergray.com/blog/ai-layoffs-report-2025/",
+      "url": "https://www.challengergray.com/blog/2025-year-end-challenger-report-highest-q4-layoffs-since-2008-lowest-ytd-hiring-since-2010/",
       "publisher": "Challenger, Gray & Christmas",
       "evidenceTier": 3,
       "datePublished": "2026-01-10",

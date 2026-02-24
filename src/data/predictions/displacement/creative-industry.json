@@ -102,7 +102,7 @@
     {
       "id": "mckinsey-creative-automation",
       "title": "The economic potential of generative AI — Creative work",
-      "url": "https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier",
+      "url": "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier",
       "publisher": "McKinsey Global Institute",
       "evidenceTier": 2,
       "datePublished": "2023-06-14",
@@ -124,7 +124,7 @@
       "publisher": "Upwork (Earnings Report)",
       "evidenceTier": 1,
       "datePublished": "2024-05-20",
-      "excerpt": "Writing and translation freelancer earnings declined 30% YoY. Graphic design jobs fell 17%. AI-augmented creative roles grew 45%."
+      "excerpt": "Writing and translation freelancer job volume declined ~30% YoY. Graphic design jobs fell 17%. AI-augmented creative roles grew 45%."
     },
     {
       "id": "nber-creative-ai-2024",
@@ -173,7 +173,7 @@
     {
       "id": "uoc-creative-automation-2025",
       "title": "AI Can Automate Creative Professions, UOC Study Finds",
-      "url": "https://www.uoc.edu/en/news/2025/ai-creative-professions-automation",
+      "url": "https://www.uoc.edu/en/news/2025/ai-could-automate-creative-professions",
       "publisher": "Universitat Oberta de Catalunya",
       "evidenceTier": 1,
       "datePublished": "2025-09-15",
@@ -182,7 +182,7 @@
     {
       "id": "unctad-creative-industry-2025",
       "title": "UNCTAD Report: AI's Displacement of Human Artists and Creators",
-      "url": "https://unctad.org/publication/creative-economy-outlook-2025",
+      "url": "https://unctad.org/publication/creative-economy-outlook-2024",
       "publisher": "UNCTAD",
       "evidenceTier": 3,
       "datePublished": "2025-12-01",

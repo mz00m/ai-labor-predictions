@@ -89,6 +89,14 @@
       "evidenceTier": 2
     },
     {
+      "date": "2025-11-15",
+      "value": -11,
+      "confidenceLow": -18,
+      "confidenceHigh": -5,
+      "sourceIds": ["worldbank-liu-wang-yu-2025"],
+      "evidenceTier": 1
+    },
+    {
       "date": "2026-01-15",
       "value": -12,
       "confidenceLow": -20,
@@ -127,7 +135,7 @@
     {
       "id": "goldman-entry-level-2024",
       "title": "AI and the Entry-Level Workforce: Economic Impacts",
-      "url": "https://www.goldmansachs.com/",
+      "url": "https://www.goldmansachs.com/insights/articles/AI-investment-is-likely-to-grow-significantly",
       "publisher": "Goldman Sachs",
       "evidenceTier": 1,
       "datePublished": "2024-02-01",
@@ -180,7 +188,7 @@
     {
       "id": "mckinsey-entry-level-2025",
       "title": "McKinsey: 27% Decline in Entry-Level Writing and Admin Roles",
-      "url": "https://www.mckinsey.com/mgi/our-research/ai-entry-level-workforce-impact",
+      "url": "https://www.mckinsey.com/mgi/our-research/generative-ai-and-the-future-of-work-in-america",
       "publisher": "McKinsey Global Institute",
       "evidenceTier": 2,
       "datePublished": "2025-11-01",
@@ -188,11 +196,11 @@
     },
     {
       "id": "anthropic-ceo-entry-level-2025",
-      "title": "Anthropic CEO Warns 50% of Entry-Level Office Jobs at Risk",
-      "url": "https://www.cnbc.com/2025/12/15/anthropic-ceo-dario-amodei-entry-level-jobs-ai.html",
-      "publisher": "CNBC",
+      "title": "AI could make half of all entry-level white-collar jobs vanish, Anthropic CEO warns",
+      "url": "https://fortune.com/2025/05/28/anthropic-ceo-warning-ai-job-loss/",
+      "publisher": "Fortune",
       "evidenceTier": 3,
-      "datePublished": "2025-12-15",
+      "datePublished": "2025-05-28",
       "excerpt": "Anthropic CEO Dario Amodei warned that up to 50% of entry-level office jobs could be substantially impacted by AI within the next 2-3 years."
     },
     {
@@ -212,6 +220,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-01-15",
       "excerpt": "Emerging evidence that generative AI adoption is reducing entry-level hiring, especially where tasks are automatable rather than complementary to humans."
+    },
+    {
+      "id": "worldbank-liu-wang-yu-2025",
+      "title": "Labor Demand in the Age of Generative AI: Early Evidence from the U.S. Job Posting Data",
+      "url": "https://openknowledge.worldbank.org/server/api/core/bitstreams/e78c18bd-a035-4811-b340-3771ff14ac04/content",
+      "publisher": "World Bank (Liu, Wang, Yu)",
+      "evidenceTier": 1,
+      "datePublished": "2025-11-01",
+      "excerpt": "Entry-level positions hit hardest: postings requiring no advanced degree fell 18%, and those requiring no extensive experience fell 20%, relative to less-substitutable roles."
     },
     {
       "id": "hartley-entry-level-2026",
