@@ -243,6 +243,7 @@ export default function PredictionSummaryCard({
               Range: {best.confidenceLow}
               {prediction.unit.includes("%") ? "%" : ""} to {best.confidenceHigh}
               {prediction.unit.includes("%") ? "%" : ""}
+              <span className="ml-1.5 opacity-60">· weighted avg</span>
             </p>
           )}
 

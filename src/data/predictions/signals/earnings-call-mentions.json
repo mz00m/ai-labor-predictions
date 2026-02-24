@@ -113,6 +113,29 @@
       "evidenceTier": 3
     }
   ],
+  "overlays": [
+    {
+      "date": "2024-11-01",
+      "direction": "down",
+      "sourceIds": ["goldman-earnings-ai-analysis"],
+      "evidenceTier": 1,
+      "label": "Goldman: AI-mentioning firms have 3.2pp lower headcount growth"
+    },
+    {
+      "date": "2026-01-01",
+      "direction": "up",
+      "sourceIds": ["korinek-brynjolfsson-agrawal-acm-2026"],
+      "evidenceTier": 1,
+      "label": "ACM: AI discussion intensity is leading deployment indicator"
+    },
+    {
+      "date": "2025-12-15",
+      "direction": "up",
+      "sourceIds": ["fortune-ai-earnings-surge-2026"],
+      "evidenceTier": 3,
+      "label": "Fortune: AI-mentioning companies outperformed by 8.2pp"
+    }
+  ],
   "sources": [
     {
       "id": "factset-earnings-q4-2022",

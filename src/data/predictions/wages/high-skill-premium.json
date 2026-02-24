@@ -89,6 +89,43 @@
       "evidenceTier": 2
     }
   ],
+  "overlays": [
+    {
+      "date": "2025-02-21",
+      "direction": "up",
+      "sourceIds": ["nvidia-10k-2024"],
+      "evidenceTier": 1,
+      "label": "NVIDIA: median comp $328K, up 24% YoY"
+    },
+    {
+      "date": "2024-10-02",
+      "direction": "up",
+      "sourceIds": ["openai-8k-funding-2024"],
+      "evidenceTier": 1,
+      "label": "OpenAI: AI researcher comp $800K–$1.5M total"
+    },
+    {
+      "date": "2023-07-14",
+      "direction": "down",
+      "sourceIds": ["noy-zhang-productivity-2023"],
+      "evidenceTier": 1,
+      "label": "Noy & Zhang: low-ability workers gain most from AI"
+    },
+    {
+      "date": "2025-05-01",
+      "direction": "down",
+      "sourceIds": ["brynjolfsson-li-raymond-qje-2025"],
+      "evidenceTier": 1,
+      "label": "QJE: less experienced workers improve most with AI"
+    },
+    {
+      "date": "2026-01-15",
+      "direction": "up",
+      "sourceIds": ["imf-skill-gaps-premium-2026"],
+      "evidenceTier": 2,
+      "label": "IMF: postings with 4+ new skills pay up to 15% more"
+    }
+  ],
   "sources": [
     {
       "id": "indeed-ai-salaries-2023",

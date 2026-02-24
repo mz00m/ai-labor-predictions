@@ -97,6 +97,36 @@
       "evidenceTier": 1
     }
   ],
+  "overlays": [
+    {
+      "date": "2025-02-01",
+      "direction": "up",
+      "sourceIds": ["muro-kinder-geography-2025"],
+      "evidenceTier": 1,
+      "label": "Brookings: San Jose 43% AI-exposed vs 31% in Las Vegas"
+    },
+    {
+      "date": "2025-09-15",
+      "direction": "up",
+      "sourceIds": ["anthropic-geographic-2025"],
+      "evidenceTier": 1,
+      "label": "Anthropic: AI usage concentrated by income & geography"
+    },
+    {
+      "date": "2026-01-15",
+      "direction": "up",
+      "sourceIds": ["imf-skill-gaps-geo-2026"],
+      "evidenceTier": 2,
+      "label": "IMF: employment 3.6% lower in AI-vulnerable regions"
+    },
+    {
+      "date": "2026-01-21",
+      "direction": "down",
+      "sourceIds": ["manning-aguirre-adaptive-2026"],
+      "evidenceTier": 1,
+      "label": "NBER: 6.1M workers lack adaptive capacity; 86% women"
+    }
+  ],
   "sources": [
     {
       "id": "linkedin-econ-graph-2023",
