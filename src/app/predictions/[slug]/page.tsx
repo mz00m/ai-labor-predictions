@@ -37,6 +37,8 @@ const CONTEXT_MAP: Record<string, (v: number) => string> = {
     `Real wages for entry-level positions (0-2 years experience) across knowledge-work industries are projected to ${v < 0 ? "decline" : "increase"} ${Math.abs(v)}% by 2030. Entry-level workers are disproportionately affected because 35% of junior-role tasks are within current AI capability vs. 18% for senior roles. The traditional career ladder — where you learn by doing routine work — is being compressed as AI handles those learning-stage tasks.`,
   "geographic-wage-divergence": (v) =>
     `Tech and knowledge workers in AI hub cities (San Francisco, Seattle, New York, Austin) now earn ${v}% more than peers in non-hub metros for comparable roles. This gap has widened dramatically since 2022 as AI investment concentrates geographically. Each AI job in a hub city creates 3-5 additional local service jobs, amplifying the divergence through spatial multiplier effects. Remote work was expected to narrow this gap, but AI talent clustering is widening it.`,
+  "workforce-ai-exposure": (v) =>
+    `An estimated ${v}% of US jobs have significant task overlap with current AI capabilities. This is an exposure measure, not a displacement count \u2014 it describes what AI could theoretically do, not what has happened. The gap between exposure and actual displacement has been wide: while exposure estimates have risen from 25% to nearly 50%, observed macro job losses attributable to AI remain near zero. Exposure is a precondition for displacement, not a guarantee of it.`,
   "ai-adoption-rate": (v) =>
     `${v}% of US companies with 50+ employees have deployed AI in production workflows, up from under 4% in early 2023. The Census Bureau's Business Trends survey provides the most rigorous measure, though adoption rates vary dramatically by sector: information and finance lead at 20-30%, while construction and agriculture remain under 5%. The pace of adoption is a key determinant of how fast displacement effects materialize.`,
   "earnings-call-ai-mentions": (v) =>
@@ -125,11 +127,11 @@ export default function PredictionDetailPage() {
 
   const trendIsBad =
     trendInfo &&
-    ((prediction.category === "displacement" && trendInfo.change > 0) ||
+    (((prediction.category === "displacement" || prediction.category === "exposure") && trendInfo.change > 0) ||
       (prediction.category === "wages" && trendInfo.change < 0));
   const trendIsGood =
     trendInfo &&
-    ((prediction.category === "displacement" && trendInfo.change < 0) ||
+    (((prediction.category === "displacement" || prediction.category === "exposure") && trendInfo.change < 0) ||
       (prediction.category === "wages" && trendInfo.change > 0));
 
   const trendColorClass = trendIsBad
@@ -164,7 +166,7 @@ export default function PredictionDetailPage() {
       {/* Header + Summary */}
       <div className="max-w-3xl">
         <p className="text-[13px] font-bold uppercase tracking-widest text-[var(--muted)] mb-4">
-          {prediction.category === "displacement" ? "Job Displacement" : prediction.category === "wages" ? "Wage Impact" : prediction.category === "adoption" ? "AI Adoption" : "Leading Signal"} &mdash; {prediction.timeHorizon}
+          {prediction.category === "displacement" ? "Job Displacement" : prediction.category === "wages" ? "Wage Impact" : prediction.category === "adoption" ? "AI Adoption" : prediction.category === "exposure" ? "AI Exposure & Risk" : "Leading Signal"} &mdash; {prediction.timeHorizon}
         </p>
         <h1 className="text-[36px] sm:text-[48px] font-black tracking-tight text-[var(--foreground)] leading-[1.05] mb-8">
           {prediction.title}
@@ -242,6 +244,7 @@ export default function PredictionDetailPage() {
           sources={prediction.sources}
           selectedTiers={selectedTiers}
           unit={prediction.unit.includes("%") ? "%" : ""}
+          overlays={prediction.overlays}
           onDotClick={handleDotClick}
         />
       </section>

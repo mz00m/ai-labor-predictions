@@ -45,8 +45,8 @@ const ANNOTATIONS: Record<string, ResearchAnnotation> = {
   },
   "overall-us-displacement": {
     note:
-      "Macro data remains reassuring: Yale Budget Lab and ICLE reviews find no clear economy-wide displacement through aggregate unemployment data, though the occupational mix is changing faster than past tech disruptions.",
-    estimateType: "exposure",
+      "Only data points with directly sourced displacement figures are plotted. Directional studies (Brookings, Yale Budget Lab, Stanford/World Bank) appear as overlay markers. Exposure-based estimates (Goldman, OECD, IMF) have been moved to the separate Exposure & Risk tracker.",
+    estimateType: "mixed",
   },
   "total-us-jobs-lost": {
     note:
@@ -87,6 +87,11 @@ const ANNOTATIONS: Record<string, ResearchAnnotation> = {
     note:
       "Directly observed from Census Bureau Business Trends survey data, supplemented by corporate earnings call disclosures and Ramp firm spending analysis.",
     estimateType: "observed",
+  },
+  "workforce-ai-exposure": {
+    note:
+      "Directly from source studies. These measure what share of jobs have tasks that AI could perform \u2014 not how many jobs have actually been affected. Exposure ranges from 27% (OECD, high-risk only) to 80% (OpenAI, any task overlap). The Anthropic Economic Index provides the most current measure at 49% of jobs using AI for 25%+ of tasks.",
+    estimateType: "exposure",
   },
   "earnings-call-ai-mentions": {
     note:

@@ -8,11 +8,12 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
+  ReferenceLine,
   ResponsiveContainer,
   TooltipProps,
 } from "recharts";
 import { format, parseISO } from "date-fns";
-import { EvidenceTier, HistoricalDataPoint, Source } from "@/lib/types";
+import { EvidenceTier, HistoricalDataPoint, DirectionalOverlay, Source } from "@/lib/types";
 import { getTierConfig } from "@/lib/evidence-tiers";
 
 interface PredictionChartProps {
@@ -21,6 +22,7 @@ interface PredictionChartProps {
   selectedTiers: EvidenceTier[];
   unit: string;
   compact?: boolean;
+  overlays?: DirectionalOverlay[];
   onDotClick?: (sourceIds: string[]) => void;
 }
 
@@ -95,6 +97,7 @@ export default function PredictionChart({
   selectedTiers,
   unit,
   compact = false,
+  overlays,
   onDotClick,
 }: PredictionChartProps) {
   const filtered = history.filter((d) =>
@@ -132,6 +135,18 @@ export default function PredictionChart({
   ]);
   const yMin = Math.floor(Math.min(...allValues) - 2);
   const yMax = Math.ceil(Math.max(...allValues) + 2);
+
+  // Process overlay bands (qualitative directional studies)
+  const filteredOverlays = (overlays ?? []).filter((o) =>
+    selectedTiers.includes(o.evidenceTier)
+  );
+  const overlayData = filteredOverlays.map((o) => ({
+    dateStr: format(parseISO(o.date), "MMM yyyy"),
+    direction: o.direction,
+    label: o.label,
+    sourceIds: o.sourceIds,
+    evidenceTier: o.evidenceTier,
+  }));
 
   if (compact) {
     return (
@@ -193,6 +208,34 @@ export default function PredictionChart({
             stroke="none"
           />
         )}
+        {overlayData.map((o) => {
+          const color =
+            o.direction === "down"
+              ? "#dc2626"
+              : o.direction === "up"
+                ? "#16a34a"
+                : "#6b7280";
+          return (
+            <ReferenceLine
+              key={`overlay-${o.dateStr}`}
+              x={o.dateStr}
+              stroke={color}
+              strokeWidth={2}
+              strokeDasharray="6 4"
+              strokeOpacity={0.45}
+              label={{
+                value: `${o.direction === "down" ? "\u2193" : o.direction === "up" ? "\u2191" : "\u2194"} ${o.label}`,
+                position: "insideTopRight",
+                fill: color,
+                fontSize: 10,
+                fontWeight: 600,
+                offset: 8,
+              }}
+              style={{ cursor: onDotClick ? "pointer" : undefined }}
+              onClick={() => onDotClick?.(o.sourceIds)}
+            />
+          );
+        })}
         <Line
           type="monotone"
           dataKey="value"

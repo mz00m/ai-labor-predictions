@@ -16,6 +16,7 @@ export default function Home() {
   const [selectedTiers, setSelectedTiers] = useState<EvidenceTier[]>([1, 2, 3, 4]);
 
   const displacement = predictions.filter((p) => p.category === "displacement");
+  const exposure = predictions.filter((p) => p.category === "exposure");
   const wages = predictions.filter((p) => p.category === "wages");
   const adoption = predictions.filter((p) => p.category === "adoption");
   const signals = predictions.filter((p) => p.category === "signals");
@@ -107,6 +108,30 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {/* AI Exposure & Risk */}
+      {exposure.length > 0 && (
+        <section>
+          <div className="mb-8">
+            <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
+              AI Exposure &amp; Risk
+            </h2>
+            <p className="text-[15px] text-[var(--muted)] mt-2 max-w-2xl">
+              Share of jobs or tasks <em>exposed</em> to AI automation potential &mdash; exposure measures capability overlap,
+              not actual job losses. A high exposure score means AI <em>could</em> perform those tasks, not that it <em>has</em>.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+            {exposure.map((p) => (
+              <PredictionSummaryCard
+                key={p.id}
+                prediction={p}
+                selectedTiers={selectedTiers}
+              />
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Wage Impact */}
       <section>
