@@ -17,6 +17,14 @@
       "evidenceTier": 1
     },
     {
+      "date": "2024-02-01",
+      "value": 12,
+      "confidenceLow": 8,
+      "confidenceHigh": 18,
+      "sourceIds": ["shopify-earnings-2024"],
+      "evidenceTier": 1
+    },
+    {
       "date": "2025-02-12",
       "value": 40,
       "confidenceLow": 30,
