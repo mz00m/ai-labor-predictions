@@ -45,6 +45,7 @@ export default function PredictionCard({
             selectedTiers={selectedTiers}
             unit={prediction.unit.includes("%") ? "%" : ""}
             compact
+            overlays={prediction.overlays}
           />
         </div>
         <div className="flex items-end justify-between">
