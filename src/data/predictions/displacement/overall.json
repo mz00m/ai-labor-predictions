@@ -97,6 +97,14 @@
       "evidenceTier": 1
     },
     {
+      "date": "2025-11-01",
+      "value": 10,
+      "confidenceLow": 6,
+      "confidenceHigh": 16,
+      "sourceIds": ["worldbank-liu-wang-yu-2025"],
+      "evidenceTier": 1
+    },
+    {
       "date": "2025-12-01",
       "value": 9,
       "confidenceLow": 5,
@@ -269,6 +277,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-01-01",
       "excerpt": "35.9% of US workers used generative AI by December 2025; small positive wage effects, no significant decline in job openings."
+    },
+    {
+      "id": "worldbank-liu-wang-yu-2025",
+      "title": "Labor Demand in the Age of Generative AI: Early Evidence from the U.S. Job Posting Data",
+      "url": "https://openknowledge.worldbank.org/server/api/core/bitstreams/e78c18bd-a035-4811-b340-3771ff14ac04/content",
+      "publisher": "World Bank (Liu, Wang, Yu)",
+      "evidenceTier": 1,
+      "datePublished": "2025-11-01",
+      "excerpt": "Job postings for high-AI-substitution occupations fell 12% relative to low-substitution roles post-ChatGPT; effect grew from 6% in year one to 18% by year three. Based on 285 million Lightcast job postings."
     },
     {
       "id": "korinek-stiglitz-steering-2025",

@@ -89,6 +89,14 @@
       "evidenceTier": 2
     },
     {
+      "date": "2025-11-15",
+      "value": -11,
+      "confidenceLow": -18,
+      "confidenceHigh": -5,
+      "sourceIds": ["worldbank-liu-wang-yu-2025"],
+      "evidenceTier": 1
+    },
+    {
       "date": "2026-01-15",
       "value": -12,
       "confidenceLow": -20,
@@ -212,6 +220,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-01-15",
       "excerpt": "Emerging evidence that generative AI adoption is reducing entry-level hiring, especially where tasks are automatable rather than complementary to humans."
+    },
+    {
+      "id": "worldbank-liu-wang-yu-2025",
+      "title": "Labor Demand in the Age of Generative AI: Early Evidence from the U.S. Job Posting Data",
+      "url": "https://openknowledge.worldbank.org/server/api/core/bitstreams/e78c18bd-a035-4811-b340-3771ff14ac04/content",
+      "publisher": "World Bank (Liu, Wang, Yu)",
+      "evidenceTier": 1,
+      "datePublished": "2025-11-01",
+      "excerpt": "Entry-level positions hit hardest: postings requiring no advanced degree fell 18%, and those requiring no extensive experience fell 20%, relative to less-substitutable roles."
     },
     {
       "id": "hartley-entry-level-2026",

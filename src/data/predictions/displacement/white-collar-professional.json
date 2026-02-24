@@ -97,6 +97,14 @@
       "evidenceTier": 2
     },
     {
+      "date": "2025-11-01",
+      "value": 22,
+      "confidenceLow": 14,
+      "confidenceHigh": 32,
+      "sourceIds": ["worldbank-liu-wang-yu-2025"],
+      "evidenceTier": 1
+    },
+    {
       "date": "2026-01-15",
       "value": 22,
       "confidenceLow": 14,
@@ -238,6 +246,15 @@
       "evidenceTier": 1,
       "datePublished": "2025-09-26",
       "excerpt": "In sharp contrast to the past two centuries, AI will shift relative demand toward occupations with lower education, lower wages, and a greater share of male workers."
+    },
+    {
+      "id": "worldbank-liu-wang-yu-2025",
+      "title": "Labor Demand in the Age of Generative AI: Early Evidence from the U.S. Job Posting Data",
+      "url": "https://openknowledge.worldbank.org/server/api/core/bitstreams/e78c18bd-a035-4811-b340-3771ff14ac04/content",
+      "publisher": "World Bank (Liu, Wang, Yu)",
+      "evidenceTier": 1,
+      "datePublished": "2025-11-01",
+      "excerpt": "Professional services postings fell 30% and administrative support fell 40% relative to less-substitutable occupations. Effects accelerated from 6% in year one to 18% by year three post-ChatGPT."
     },
     {
       "id": "noy-zhang-science-2023",
