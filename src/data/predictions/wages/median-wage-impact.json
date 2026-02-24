@@ -97,6 +97,43 @@
       "evidenceTier": 2
     }
   ],
+  "overlays": [
+    {
+      "date": "2025-02-10",
+      "direction": "down",
+      "sourceIds": ["indeed-wage-tracker-2025"],
+      "evidenceTier": 2,
+      "label": "Indeed: AI-exposed wages grew 1.2% vs 4.1% non-exposed"
+    },
+    {
+      "date": "2025-03-28",
+      "direction": "down",
+      "sourceIds": ["walmart-10k-2024"],
+      "evidenceTier": 1,
+      "label": "Walmart: AI checkout reducing staffing ~8% per location"
+    },
+    {
+      "date": "2025-01-30",
+      "direction": "neutral",
+      "sourceIds": ["ups-8k-2024"],
+      "evidenceTier": 1,
+      "label": "UPS: 12K jobs cut, remaining driver wages +2.5%"
+    },
+    {
+      "date": "2025-05-05",
+      "direction": "neutral",
+      "sourceIds": ["stiglitz-korinek-steering-2025"],
+      "evidenceTier": 1,
+      "label": "Korinek & Stiglitz: wage growth requires capital-augmenting AI"
+    },
+    {
+      "date": "2026-01-01",
+      "direction": "up",
+      "sourceIds": ["hartley-median-wage-2026"],
+      "evidenceTier": 1,
+      "label": "Stanford: small positive wage effects in AI-exposed jobs"
+    }
+  ],
   "sources": [
     {
       "id": "goldman-wages-2023",

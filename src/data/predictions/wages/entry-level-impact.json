@@ -113,6 +113,43 @@
       "evidenceTier": 1
     }
   ],
+  "overlays": [
+    {
+      "date": "2025-05-28",
+      "direction": "down",
+      "sourceIds": ["anthropic-ceo-entry-level-2025"],
+      "evidenceTier": 3,
+      "label": "Anthropic CEO: up to 50% of entry-level office jobs impacted"
+    },
+    {
+      "date": "2025-11-01",
+      "direction": "down",
+      "sourceIds": ["worldbank-liu-wang-yu-2025"],
+      "evidenceTier": 1,
+      "label": "World Bank: entry-level postings fell 18-20%"
+    },
+    {
+      "date": "2026-01-06",
+      "direction": "down",
+      "sourceIds": ["dallas-fed-entry-level-2026"],
+      "evidenceTier": 1,
+      "label": "Dallas Fed: young worker share fell 16.4% → 15.5%"
+    },
+    {
+      "date": "2025-09-15",
+      "direction": "down",
+      "sourceIds": ["del-rio-chanona-entry-2025"],
+      "evidenceTier": 1,
+      "label": "ILO review: declining demand for novice workers"
+    },
+    {
+      "date": "2026-01-01",
+      "direction": "up",
+      "sourceIds": ["hartley-entry-level-2026"],
+      "evidenceTier": 1,
+      "label": "Stanford: small positive wage effects overall"
+    }
+  ],
   "sources": [
     {
       "id": "indeed-entry-level-2023",

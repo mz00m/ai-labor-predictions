@@ -65,6 +65,29 @@
       "evidenceTier": 1
     }
   ],
+  "overlays": [
+    {
+      "date": "2025-02-01",
+      "direction": "up",
+      "sourceIds": ["pnas-nexus-2025"],
+      "evidenceTier": 1,
+      "label": "PNAS Nexus: AI-exposed occupations face higher unemployment"
+    },
+    {
+      "date": "2025-09-15",
+      "direction": "up",
+      "sourceIds": ["del-rio-chanona-ai-jobs-2025"],
+      "evidenceTier": 1,
+      "label": "ILO review: exposure converges on high-wage jobs"
+    },
+    {
+      "date": "2024-03-01",
+      "direction": "up",
+      "sourceIds": ["eloundou-openai-2024"],
+      "evidenceTier": 1,
+      "label": "OpenAI/UPenn: 80% of workers have ≥10% tasks affected"
+    }
+  ],
   "sources": [
     {
       "id": "goldman-300m",
