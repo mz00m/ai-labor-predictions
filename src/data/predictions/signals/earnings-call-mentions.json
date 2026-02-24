@@ -3,7 +3,7 @@
   "slug": "earnings-call-ai-mentions",
   "title": "S&P 500 AI Workforce Mentions in Earnings Calls",
   "description": "Percentage of S&P 500 companies mentioning AI in the context of workforce efficiency, headcount, or restructuring during quarterly earnings calls.",
-  "category": "signals",
+  "category": "adoption",
   "unit": "% of S&P 500",
   "currentValue": 61,
   "timeHorizon": "Latest quarter",

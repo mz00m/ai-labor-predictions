@@ -127,11 +127,11 @@ export default function PredictionDetailPage() {
 
   const trendIsBad =
     trendInfo &&
-    (((prediction.category === "displacement" || prediction.category === "exposure") && trendInfo.change > 0) ||
+    ((prediction.category === "displacement" && trendInfo.change > 0) ||
       (prediction.category === "wages" && trendInfo.change < 0));
   const trendIsGood =
     trendInfo &&
-    (((prediction.category === "displacement" || prediction.category === "exposure") && trendInfo.change < 0) ||
+    ((prediction.category === "displacement" && trendInfo.change < 0) ||
       (prediction.category === "wages" && trendInfo.change > 0));
 
   const trendColorClass = trendIsBad
@@ -166,7 +166,7 @@ export default function PredictionDetailPage() {
       {/* Header + Summary */}
       <div className="max-w-3xl">
         <p className="text-[13px] font-bold uppercase tracking-widest text-[var(--muted)] mb-4">
-          {prediction.category === "displacement" ? "Job Displacement" : prediction.category === "wages" ? "Wage Impact" : prediction.category === "adoption" ? "AI Adoption" : prediction.category === "exposure" ? "AI Exposure & Risk" : "Leading Signal"} &mdash; {prediction.timeHorizon}
+          {prediction.category === "displacement" ? "Job Displacement" : prediction.category === "wages" ? "Wage Impact" : prediction.category === "adoption" ? "AI Adoption" : "Other"} &mdash; {prediction.timeHorizon}
         </p>
         <h1 className="text-[36px] sm:text-[48px] font-black tracking-tight text-[var(--foreground)] leading-[1.05] mb-8">
           {prediction.title}
