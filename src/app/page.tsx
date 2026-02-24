@@ -16,10 +16,8 @@ export default function Home() {
   const [selectedTiers, setSelectedTiers] = useState<EvidenceTier[]>([1, 2, 3, 4]);
 
   const displacement = predictions.filter((p) => p.category === "displacement");
-  const exposure = predictions.filter((p) => p.category === "exposure");
   const wages = predictions.filter((p) => p.category === "wages");
   const adoption = predictions.filter((p) => p.category === "adoption");
-  const signals = predictions.filter((p) => p.category === "signals");
 
   // Aggregate stats for the hero
   const totalSources = predictions.reduce((sum, p) => sum + p.sources.length, 0);
@@ -54,7 +52,7 @@ export default function Home() {
             <br className="hidden sm:block" /> the labor market?
           </h1>
           <p className="mt-4 text-[17px] text-[var(--muted)] leading-relaxed max-w-2xl">
-            Tracking {predictions.length} predictions across displacement, wages, adoption, and corporate signals
+            Tracking {predictions.length} predictions across displacement, wages, and adoption
             &mdash; sourced from peer-reviewed research, government data, think tanks, and earnings calls.
             Filter by evidence quality to see how the picture changes.
           </p>
@@ -109,30 +107,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* AI Exposure & Risk */}
-      {exposure.length > 0 && (
-        <section>
-          <div className="mb-8">
-            <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
-              AI Exposure &amp; Risk
-            </h2>
-            <p className="text-[15px] text-[var(--muted)] mt-2 max-w-2xl">
-              Share of jobs or tasks <em>exposed</em> to AI automation potential &mdash; exposure measures capability overlap,
-              not actual job losses. A high exposure score means AI <em>could</em> perform those tasks, not that it <em>has</em>.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
-            {exposure.map((p) => (
-              <PredictionSummaryCard
-                key={p.id}
-                prediction={p}
-                selectedTiers={selectedTiers}
-              />
-            ))}
-          </div>
-        </section>
-      )}
-
       {/* Wage Impact */}
       <section>
         <div className="mb-8">
@@ -161,35 +135,12 @@ export default function Home() {
             <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
               AI Adoption
             </h2>
-            <p className="text-[15px] text-[var(--muted)] mt-2 max-w-xl">
-              How rapidly companies are deploying AI in production workflows
+            <p className="text-[15px] text-[var(--muted)] mt-2 max-w-2xl">
+              How rapidly companies are deploying AI, how much of the workforce is exposed, and corporate signaling on earnings calls
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
             {adoption.map((p) => (
-              <PredictionSummaryCard
-                key={p.id}
-                prediction={p}
-                selectedTiers={selectedTiers}
-              />
-            ))}
-          </div>
-        </section>
-      )}
-
-      {/* Leading Signals */}
-      {signals.length > 0 && (
-        <section>
-          <div className="mb-8">
-            <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
-              Leading Signals
-            </h2>
-            <p className="text-[15px] text-[var(--muted)] mt-2 max-w-xl">
-              Real-time indicators of how corporate America is thinking about AI and workforce
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
-            {signals.map((p) => (
               <PredictionSummaryCard
                 key={p.id}
                 prediction={p}

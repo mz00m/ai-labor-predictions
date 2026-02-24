@@ -3,7 +3,7 @@
   "slug": "workforce-ai-exposure",
   "title": "US Workforce AI Exposure",
   "description": "Share of US jobs with significant task overlap with current AI capabilities. Exposure measures what AI could automate, not what it has. High exposure does not equal displacement.",
-  "category": "exposure",
+  "category": "adoption",
   "unit": "% of jobs exposed",
   "currentValue": 49,
   "timeHorizon": "Current estimate",

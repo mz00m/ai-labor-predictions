@@ -33,10 +33,9 @@ const allPredictions: Prediction[] = [
   entryLevel as Prediction,
   highSkillPremium as Prediction,
   freelancerRate as Prediction,
-  // Exposure
-  workforceExposure as Prediction,
-  // Adoption & Signals
+  // Adoption, Exposure & Signals
   aiAdoption as Prediction,
+  workforceExposure as Prediction,
   earningsCallMentions as Prediction,
 ];
 
