@@ -76,6 +76,27 @@
       "sourceIds": ["aha-ai-revenue-cycle-2025"],
       "evidenceTier": 2,
       "label": "AHA: 50%+ providers now use AI for billing/coding"
+    },
+    {
+      "date": "2025-09-15",
+      "direction": "down",
+      "sourceIds": ["revere-health-ai-layoffs-2025"],
+      "evidenceTier": 1,
+      "label": "Revere Health: 177 billing/coding jobs replaced by AI platform"
+    },
+    {
+      "date": "2024-12-01",
+      "direction": "down",
+      "sourceIds": ["ncbi-hospital-ai-billing-2024"],
+      "evidenceTier": 1,
+      "label": "NCBI: hospital AI billing automation surged 36% → 61% in one year"
+    },
+    {
+      "date": "2025-09-01",
+      "direction": "down",
+      "sourceIds": ["experian-health-claims-2025"],
+      "evidenceTier": 2,
+      "label": "Experian: only 14% of providers have implemented AI for claims"
     }
   ],
   "sources": [
@@ -185,6 +206,33 @@
       "evidenceTier": 2,
       "datePublished": "2025-09-01",
       "excerpt": "Over 50% of healthcare providers now use AI for billing and coding tasks. Early adopters report 25-35% reduction in revenue cycle FTEs within 12 months of deployment."
+    },
+    {
+      "id": "revere-health-ai-layoffs-2025",
+      "title": "Transitions to AI spark mass layoffs at Utah healthcare company",
+      "url": "https://www.abc4.com/news/wasatch-front/transitions-ai-mass-layoffs-healthcare-company/",
+      "publisher": "ABC4 News / Becker's Hospital Review",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-15",
+      "excerpt": "Revere Health eliminated 177 positions (billing, coding, accounts receivable) after partnering with IKS Health for AI-driven claims processing and automated billing. Largest documented healthcare admin AI layoff."
+    },
+    {
+      "id": "ncbi-hospital-ai-billing-2024",
+      "title": "Hospital Trends in the Use, Evaluation, and Governance of Predictive AI, 2023-2024",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK618497/",
+      "publisher": "NCBI / ASTP Health IT Data Brief",
+      "evidenceTier": 1,
+      "datePublished": "2024-12-01",
+      "excerpt": "Hospital use of AI for billing automation surged from 36% to 61% (+25pp) between 2023 and 2024. Scheduling automation grew from 51% to 67%. Fastest-growing AI use cases in healthcare."
+    },
+    {
+      "id": "experian-health-claims-2025",
+      "title": "State of Claims 2025: AI and Claims Processing",
+      "url": "https://www.experian.com/blogs/healthcare/state-of-claims-2025/",
+      "publisher": "Experian Health",
+      "evidenceTier": 2,
+      "datePublished": "2025-09-01",
+      "excerpt": "67% of providers believe AI can improve claims processing, but only 14% have implemented AI tools. Among adopters, 69% report reduced denials. Survey of 250 providers."
     }
   ]
 }
