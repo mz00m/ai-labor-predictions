@@ -2,115 +2,65 @@
   "id": "displacement-white-collar",
   "slug": "white-collar-professional-displacement",
   "title": "White-Collar Professional Displacement by 2030",
-  "description": "Projected percentage of legal, accounting, and financial analyst roles significantly restructured or eliminated by AI by 2030.",
+  "description": "Projected percentage of legal, accounting, and financial analyst roles significantly restructured or eliminated by AI by 2030. Only data points where sources directly state a displacement or restructuring figure are plotted.",
   "category": "displacement",
   "unit": "% of roles displaced",
-  "currentValue": 20,
+  "currentValue": 30,
   "timeHorizon": "By 2030",
   "history": [
     {
-      "date": "2023-03-14",
-      "value": 10,
-      "confidenceLow": 5,
-      "confidenceHigh": 18,
-      "sourceIds": ["goldman-white-collar-2023"],
-      "evidenceTier": 1
-    },
-    {
-      "date": "2023-08-01",
-      "value": 12,
-      "confidenceLow": 7,
-      "confidenceHigh": 20,
-      "sourceIds": ["mckinsey-genai-occupations"],
-      "evidenceTier": 2
-    },
-    {
-      "date": "2024-01-15",
-      "value": 15,
-      "confidenceLow": 9,
-      "confidenceHigh": 24,
-      "sourceIds": ["eloundou-openai-2024"],
-      "evidenceTier": 1
-    },
-    {
-      "date": "2024-04-20",
-      "value": 14,
-      "confidenceLow": 8,
-      "confidenceHigh": 22,
-      "sourceIds": ["brookings-white-collar-2024"],
-      "evidenceTier": 2
-    },
-    {
       "date": "2024-07-10",
-      "value": 17,
-      "confidenceLow": 10,
-      "confidenceHigh": 26,
+      "value": 12,
+      "confidenceLow": 8,
+      "confidenceHigh": 18,
       "sourceIds": ["stanford-codex-legal-ai"],
       "evidenceTier": 1
     },
     {
-      "date": "2024-10-05",
-      "value": 20,
-      "confidenceLow": 12,
-      "confidenceHigh": 30,
-      "sourceIds": ["wsj-white-collar-layoffs"],
-      "evidenceTier": 3
-    },
-    {
       "date": "2025-01-20",
       "value": 18,
-      "confidenceLow": 11,
-      "confidenceHigh": 28,
+      "confidenceLow": 15,
+      "confidenceHigh": 25,
       "sourceIds": ["deloitte-professional-services-2025"],
       "evidenceTier": 2
     },
     {
-      "date": "2025-05-01",
-      "value": 22,
-      "confidenceLow": 14,
-      "confidenceHigh": 32,
-      "sourceIds": ["x-thread-lawyers-replaced"],
-      "evidenceTier": 4
+      "date": "2025-11-01",
+      "value": 30,
+      "confidenceLow": 18,
+      "confidenceHigh": 40,
+      "sourceIds": ["worldbank-liu-wang-yu-2025"],
+      "evidenceTier": 1
+    }
+  ],
+  "overlays": [
+    {
+      "date": "2024-04-20",
+      "direction": "neutral",
+      "sourceIds": ["brookings-white-collar-2024"],
+      "evidenceTier": 2,
+      "label": "Brookings: most exposed to disruption"
     },
     {
-      "date": "2025-07-15",
-      "value": 18,
-      "confidenceLow": 11,
-      "confidenceHigh": 27,
-      "sourceIds": ["oecd-white-collar-2025"],
-      "evidenceTier": 1
+      "date": "2025-01-15",
+      "direction": "down",
+      "sourceIds": ["chen-hbs-white-collar-2025"],
+      "evidenceTier": 1,
+      "label": "HBS: 24% drop in automatable skills demand"
+    },
+    {
+      "date": "2025-07-01",
+      "direction": "down",
+      "sourceIds": ["hosseini-brookings-freelancer-2025"],
+      "evidenceTier": 1,
+      "label": "Brookings: top freelancers hit hardest"
     },
     {
       "date": "2025-09-26",
-      "value": 22,
-      "confidenceLow": 15,
-      "confidenceHigh": 30,
+      "direction": "down",
       "sourceIds": ["papanikolaou-bpea-historical-2025"],
-      "evidenceTier": 1
-    },
-    {
-      "date": "2025-10-15",
-      "value": 20,
-      "confidenceLow": 13,
-      "confidenceHigh": 30,
-      "sourceIds": ["indeed-cnbc-radical-transform"],
-      "evidenceTier": 2
-    },
-    {
-      "date": "2025-11-01",
-      "value": 22,
-      "confidenceLow": 14,
-      "confidenceHigh": 32,
-      "sourceIds": ["worldbank-liu-wang-yu-2025"],
-      "evidenceTier": 1
-    },
-    {
-      "date": "2026-01-15",
-      "value": 22,
-      "confidenceLow": 14,
-      "confidenceHigh": 33,
-      "sourceIds": ["gartner-middle-mgmt-2025"],
-      "evidenceTier": 3
+      "evidenceTier": 1,
+      "label": "BPEA: demand shifting to lower-education roles"
     }
   ],
   "sources": [
@@ -177,14 +127,6 @@
       "excerpt": "Big Four firms project 15-25% workforce restructuring over the next 3 years as AI handles routine audit, tax, and advisory tasks."
     },
     {
-      "id": "x-thread-lawyers-replaced",
-      "title": "Thread: AI replacing junior lawyers and paralegals",
-      "url": "https://x.com",
-      "publisher": "X (Twitter)",
-      "evidenceTier": 4,
-      "datePublished": "2025-05-01"
-    },
-    {
       "id": "oecd-white-collar-2025",
       "title": "OECD Employment Outlook 2025: AI and High-Skill Occupations",
       "url": "https://www.oecd.org/en/publications/oecd-employment-outlook_19991266.html",
@@ -219,15 +161,6 @@
       "evidenceTier": 2,
       "datePublished": "2025-10-10",
       "excerpt": "Indeed analysis finds 26% of jobs face radical transformation from AI. Paralegals face 80% automation risk by 2026. Legal research and contract review most affected."
-    },
-    {
-      "id": "gartner-middle-mgmt-2025",
-      "title": "Gartner: 50% of Middle Management Positions to Be Eliminated by 2030",
-      "url": "https://www.gartner.com/en/newsroom/press-releases/2024-10-22-gartner-unveils-top-predictions-for-it-organizations-and-users-in-2025-and-beyond",
-      "publisher": "Gartner",
-      "evidenceTier": 3,
-      "datePublished": "2025-11-20",
-      "excerpt": "Gartner projects 50% of middle management positions will be eliminated or restructured as AI handles reporting, coordination, and performance monitoring tasks."
     },
     {
       "id": "papanikolaou-schmidt-ai-labor-2025",
@@ -300,6 +233,15 @@
       "evidenceTier": 2,
       "datePublished": "2025-06-01",
       "excerpt": "Non-routine cognitive job workers now face rising unemployment risk, surpassing non-routine manual workers for the first time."
+    },
+    {
+      "id": "gartner-middle-mgmt-2025",
+      "title": "Gartner: 50% of Middle Management Positions to Be Eliminated by 2030",
+      "url": "https://www.gartner.com/en/newsroom/press-releases/2024-10-22-gartner-unveils-top-predictions-for-it-organizations-and-users-in-2025-and-beyond",
+      "publisher": "Gartner",
+      "evidenceTier": 3,
+      "datePublished": "2025-11-20",
+      "excerpt": "Gartner projects 50% of middle management positions will be eliminated or restructured as AI handles reporting, coordination, and performance monitoring tasks."
     }
   ]
 }

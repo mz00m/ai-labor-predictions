@@ -2,91 +2,65 @@
   "id": "displacement-cs",
   "slug": "customer-service-automation",
   "title": "Customer Service Automation by 2028",
-  "description": "Projected percentage of customer service interactions fully handled by AI without human intervention by 2028.",
+  "description": "Percentage of customer service interactions fully handled by AI without human intervention. Only data points where sources directly state an automation rate are plotted.",
   "category": "displacement",
   "unit": "% of interactions automated",
-  "currentValue": 50,
+  "currentValue": 55,
   "timeHorizon": "By 2028",
   "history": [
     {
-      "date": "2023-03-01",
-      "value": 25,
-      "confidenceLow": 18,
-      "confidenceHigh": 35,
-      "sourceIds": ["gartner-cs-2023"],
-      "evidenceTier": 2
-    },
-    {
-      "date": "2023-08-15",
-      "value": 30,
-      "confidenceLow": 22,
-      "confidenceHigh": 40,
-      "sourceIds": ["forrester-cs-2023"],
-      "evidenceTier": 2
-    },
-    {
       "date": "2024-01-20",
-      "value": 35,
-      "confidenceLow": 25,
-      "confidenceHigh": 48,
+      "value": 66,
+      "confidenceLow": 55,
+      "confidenceHigh": 75,
       "sourceIds": ["klarna-earnings-2024"],
       "evidenceTier": 1
     },
     {
-      "date": "2024-05-10",
+      "date": "2025-02-12",
       "value": 40,
       "confidenceLow": 30,
-      "confidenceHigh": 55,
-      "sourceIds": ["hbr-chatbots-2024"],
-      "evidenceTier": 3
-    },
-    {
-      "date": "2024-09-01",
-      "value": 38,
-      "confidenceLow": 28,
       "confidenceHigh": 50,
-      "sourceIds": ["huang-cs-2024"],
+      "sourceIds": ["shopify-earnings-2024"],
       "evidenceTier": 1
-    },
-    {
-      "date": "2025-01-15",
-      "value": 42,
-      "confidenceLow": 32,
-      "confidenceHigh": 55,
-      "sourceIds": ["gartner-cs-2025"],
-      "evidenceTier": 2
-    },
-    {
-      "date": "2025-05-01",
-      "value": 50,
-      "confidenceLow": 35,
-      "confidenceHigh": 65,
-      "sourceIds": ["reddit-cs-thread"],
-      "evidenceTier": 4
-    },
-    {
-      "date": "2025-08-01",
-      "value": 45,
-      "confidenceLow": 34,
-      "confidenceHigh": 58,
-      "sourceIds": ["deloitte-cs-2025"],
-      "evidenceTier": 2
-    },
-    {
-      "date": "2025-11-01",
-      "value": 50,
-      "confidenceLow": 38,
-      "confidenceHigh": 62,
-      "sourceIds": ["gartner-cs-2026-forecast"],
-      "evidenceTier": 2
     },
     {
       "date": "2026-02-01",
       "value": 55,
-      "confidenceLow": 42,
-      "confidenceHigh": 68,
+      "confidenceLow": 45,
+      "confidenceHigh": 65,
       "sourceIds": ["zendesk-ai-cs-2026"],
       "evidenceTier": 3
+    }
+  ],
+  "overlays": [
+    {
+      "date": "2024-09-01",
+      "direction": "up",
+      "sourceIds": ["huang-cs-2024"],
+      "evidenceTier": 1,
+      "label": "NBER: AI boosts CS worker productivity 14%"
+    },
+    {
+      "date": "2025-05-01",
+      "direction": "up",
+      "sourceIds": ["brynjolfsson-li-raymond-qje-2025"],
+      "evidenceTier": 1,
+      "label": "QJE: 15% productivity gain, novices benefit most"
+    },
+    {
+      "date": "2025-08-01",
+      "direction": "down",
+      "sourceIds": ["brynjolfsson-chandar-chen-cs-2025"],
+      "evidenceTier": 1,
+      "label": "Stanford: 11% decline for early-career CS workers"
+    },
+    {
+      "date": "2025-11-01",
+      "direction": "down",
+      "sourceIds": ["gartner-cs-2026-forecast"],
+      "evidenceTier": 2,
+      "label": "Gartner: 20-30% of CS agents replaced by 2026"
     }
   ],
   "sources": [
@@ -139,22 +113,6 @@
       "publisher": "Gartner",
       "evidenceTier": 2,
       "datePublished": "2025-01-15"
-    },
-    {
-      "id": "reddit-cs-thread",
-      "title": "Customer service reps: is AI coming for your job?",
-      "url": "https://www.reddit.com",
-      "publisher": "Reddit",
-      "evidenceTier": 4,
-      "datePublished": "2025-05-01"
-    },
-    {
-      "id": "deloitte-cs-2025",
-      "title": "AI in Customer Service: 2025 Outlook",
-      "url": "https://www2.deloitte.com",
-      "publisher": "Deloitte",
-      "evidenceTier": 2,
-      "datePublished": "2025-08-01"
     },
     {
       "id": "tdoc-10k-2024",

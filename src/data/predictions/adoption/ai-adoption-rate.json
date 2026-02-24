@@ -1,108 +1,75 @@
 {
   "id": "adoption-rate",
   "slug": "ai-adoption-rate",
-  "title": "AI Adoption Rate Across US Companies by 2027",
-  "description": "Projected percentage of US companies with 50+ employees that have deployed AI in production workflows by 2027.",
+  "title": "AI Adoption Rate Across US Companies",
+  "description": "Percentage of US firms using AI in production, measured by the Census Bureau's Business Trends and Outlook Survey (BTOS) — the most rigorous measure available. Survey-based estimates from consultancies run 5-10x higher due to self-selected samples.",
   "category": "adoption",
-  "unit": "% of companies",
-  "currentValue": 40,
-  "timeHorizon": "By 2027",
+  "unit": "% of firms (Census BTOS)",
+  "currentValue": 10,
+  "timeHorizon": "Current measure",
   "history": [
     {
-      "date": "2023-04-01",
-      "value": 12,
-      "confidenceLow": 8,
-      "confidenceHigh": 18,
-      "sourceIds": ["mckinsey-ai-survey-2023"],
-      "evidenceTier": 2
-    },
-    {
       "date": "2023-08-15",
-      "value": 15,
-      "confidenceLow": 10,
-      "confidenceHigh": 22,
+      "value": 3.8,
+      "confidenceLow": 2.5,
+      "confidenceHigh": 5,
       "sourceIds": ["census-bts-ai-2023"],
       "evidenceTier": 1
     },
     {
-      "date": "2024-01-10",
-      "value": 20,
-      "confidenceLow": 14,
-      "confidenceHigh": 28,
-      "sourceIds": ["mckinsey-ai-survey-2024"],
-      "evidenceTier": 2
-    },
-    {
       "date": "2024-05-01",
-      "value": 25,
-      "confidenceLow": 18,
-      "confidenceHigh": 34,
+      "value": 6.6,
+      "confidenceLow": 5,
+      "confidenceHigh": 9,
       "sourceIds": ["census-bts-ai-2024"],
       "evidenceTier": 1
     },
     {
-      "date": "2024-09-15",
-      "value": 30,
-      "confidenceLow": 22,
-      "confidenceHigh": 40,
-      "sourceIds": ["deloitte-ai-state-2024"],
-      "evidenceTier": 2
-    },
-    {
-      "date": "2025-01-20",
-      "value": 35,
-      "confidenceLow": 26,
-      "confidenceHigh": 45,
-      "sourceIds": ["mckinsey-ai-survey-2025"],
-      "evidenceTier": 2
-    },
-    {
-      "date": "2025-04-01",
-      "value": 40,
-      "confidenceLow": 30,
-      "confidenceHigh": 52,
-      "sourceIds": ["ft-ai-adoption-boom"],
-      "evidenceTier": 3
-    },
-    {
       "date": "2025-07-01",
-      "value": 35,
-      "confidenceLow": 26,
-      "confidenceHigh": 46,
+      "value": 10.2,
+      "confidenceLow": 8,
+      "confidenceHigh": 15,
       "sourceIds": ["census-bts-ai-2025"],
       "evidenceTier": 1
     },
     {
-      "date": "2025-09-08",
-      "value": 40,
-      "confidenceLow": 30,
-      "confidenceHigh": 55,
-      "sourceIds": ["pwbm-ai-adoption-2025"],
-      "evidenceTier": 1
-    },
-    {
       "date": "2025-10-01",
-      "value": 40,
-      "confidenceLow": 30,
-      "confidenceHigh": 52,
+      "value": 9.7,
+      "confidenceLow": 7,
+      "confidenceHigh": 12,
       "sourceIds": ["anthropic-economic-index-2025"],
       "evidenceTier": 1
     },
     {
       "date": "2026-01-01",
-      "value": 42,
-      "confidenceLow": 35,
-      "confidenceHigh": 55,
+      "value": 36,
+      "confidenceLow": 30,
+      "confidenceHigh": 42,
       "sourceIds": ["hartley-adoption-survey-2026"],
       "evidenceTier": 1
+    }
+  ],
+  "overlays": [
+    {
+      "date": "2024-09-15",
+      "direction": "up",
+      "sourceIds": ["deloitte-ai-state-2024"],
+      "evidenceTier": 2,
+      "label": "Deloitte survey: 42% of enterprises in production"
     },
     {
-      "date": "2026-01-01",
-      "value": 45,
-      "confidenceLow": 34,
-      "confidenceHigh": 58,
-      "sourceIds": ["stanford-ai-index-2025", "microsoft-global-ai-2025"],
-      "evidenceTier": 2
+      "date": "2025-01-20",
+      "direction": "up",
+      "sourceIds": ["mckinsey-ai-survey-2025"],
+      "evidenceTier": 2,
+      "label": "McKinsey survey: 78% use AI as core strategy"
+    },
+    {
+      "date": "2025-11-20",
+      "direction": "up",
+      "sourceIds": ["microsoft-global-ai-2025"],
+      "evidenceTier": 2,
+      "label": "Microsoft: 75% of knowledge workers use AI tools"
     }
   ],
   "sources": [
@@ -159,14 +126,6 @@
       "evidenceTier": 2,
       "datePublished": "2025-01-20",
       "excerpt": "AI is now a core part of business strategy for 78% of respondents. 65% report measurable revenue or cost impact from AI deployments."
-    },
-    {
-      "id": "ft-ai-adoption-boom",
-      "title": "AI adoption hits tipping point as majority of firms deploy",
-      "url": "https://www.ft.com/",
-      "publisher": "Financial Times",
-      "evidenceTier": 3,
-      "datePublished": "2025-04-01"
     },
     {
       "id": "census-bts-ai-2025",
@@ -239,15 +198,6 @@
       "evidenceTier": 1,
       "datePublished": "2025-01-06",
       "excerpt": "Half of workers in AI-exposed occupations have used ChatGPT; adoption unequal — women 16pp less likely, employer restrictions hinder broader use."
-    },
-    {
-      "id": "korinek-explosive-growth-2026",
-      "title": "When Does Automating AI Research Produce Explosive Growth?",
-      "url": "https://www.basilhalperin.com/papers/shs.pdf",
-      "publisher": "Working Paper (Davidson, Halperin, Houlden, Korinek)",
-      "evidenceTier": 1,
-      "datePublished": "2026-01-01",
-      "excerpt": "AI labs increasingly using AI to accelerate AI research. The threshold for a growth take-off from recursive self-improvement is within reach."
     },
     {
       "id": "pwbm-ai-adoption-2025",

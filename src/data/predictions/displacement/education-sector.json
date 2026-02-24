@@ -2,99 +2,65 @@
   "id": "displacement-education",
   "slug": "education-sector-displacement",
   "title": "Education Sector Displacement by 2030",
-  "description": "Projected percentage of education roles (tutoring, grading, content creation, administration) restructured or reduced by AI by 2030.",
+  "description": "Projected percentage of education roles (tutoring, grading, content creation, administration) restructured or reduced by AI by 2030. Only data points where sources directly state a displacement figure are plotted.",
   "category": "displacement",
   "unit": "% of roles displaced",
-  "currentValue": 13,
+  "currentValue": 18,
   "timeHorizon": "By 2030",
   "history": [
     {
-      "date": "2023-06-01",
-      "value": 5,
-      "confidenceLow": 2,
-      "confidenceHigh": 10,
-      "sourceIds": ["unesco-ai-education-2023"],
-      "evidenceTier": 2
-    },
-    {
-      "date": "2023-11-15",
-      "value": 8,
-      "confidenceLow": 4,
-      "confidenceHigh": 15,
-      "sourceIds": ["rand-edtech-ai-2023"],
-      "evidenceTier": 2
-    },
-    {
-      "date": "2024-03-20",
-      "value": 10,
-      "confidenceLow": 5,
-      "confidenceHigh": 18,
-      "sourceIds": ["harvard-edtech-2024"],
-      "evidenceTier": 1
-    },
-    {
       "date": "2024-07-01",
-      "value": 12,
-      "confidenceLow": 6,
-      "confidenceHigh": 20,
+      "value": 23,
+      "confidenceLow": 15,
+      "confidenceHigh": 30,
       "sourceIds": ["chegg-enrollment-decline"],
       "evidenceTier": 1
     },
     {
-      "date": "2024-10-15",
-      "value": 15,
-      "confidenceLow": 8,
+      "date": "2025-03-01",
+      "value": 18,
+      "confidenceLow": 12,
       "confidenceHigh": 25,
-      "sourceIds": ["chronicle-higher-ed-ai"],
-      "evidenceTier": 3
-    },
-    {
-      "date": "2025-01-20",
-      "value": 12,
-      "confidenceLow": 6,
-      "confidenceHigh": 20,
-      "sourceIds": ["oecd-education-outlook-2025"],
+      "sourceIds": ["pearson-10k-2024"],
       "evidenceTier": 1
-    },
-    {
-      "date": "2025-05-01",
-      "value": 14,
-      "confidenceLow": 7,
-      "confidenceHigh": 22,
-      "sourceIds": ["gartner-edtech-2025"],
-      "evidenceTier": 2
     },
     {
       "date": "2025-07-15",
-      "value": 12,
-      "confidenceLow": 6,
-      "confidenceHigh": 21,
+      "value": 3,
+      "confidenceLow": 1,
+      "confidenceHigh": 6,
       "sourceIds": ["bls-education-2025"],
       "evidenceTier": 1
+    }
+  ],
+  "overlays": [
+    {
+      "date": "2024-03-20",
+      "direction": "down",
+      "sourceIds": ["harvard-edtech-2024"],
+      "evidenceTier": 1,
+      "label": "Harvard: tutoring market to contract 25%"
+    },
+    {
+      "date": "2025-01-20",
+      "direction": "down",
+      "sourceIds": ["oecd-education-outlook-2025"],
+      "evidenceTier": 1,
+      "label": "OECD: 30-40% task displacement for support staff"
+    },
+    {
+      "date": "2025-05-01",
+      "direction": "down",
+      "sourceIds": ["gartner-edtech-2025"],
+      "evidenceTier": 2,
+      "label": "Gartner: 20% of EdTech workforce replaced by 2028"
     },
     {
       "date": "2025-12-01",
-      "value": 13,
-      "confidenceLow": 7,
-      "confidenceHigh": 22,
+      "direction": "neutral",
       "sourceIds": ["wef-education-displacement-2025"],
-      "evidenceTier": 2
-    },
-    {
-      "date": "2026-01-15",
-      "value": 14,
-      "confidenceLow": 8,
-      "confidenceHigh": 20,
-      "sourceIds": ["imf-skill-gaps-ai-2026"],
-      "evidenceTier": 1
-    },
-    {
-      "date": "2026-02-01",
-      "value": 15,
-      "confidenceLow": 8,
-      "confidenceHigh": 25,
-      "sourceIds": ["mckinsey-12m-workers-2025"],
-      "evidenceTier": 3
+      "evidenceTier": 2,
+      "label": "WEF: moderate risk, core teaching protected"
     }
   ],
   "sources": [

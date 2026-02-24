@@ -2,115 +2,57 @@
   "id": "displacement-tech",
   "slug": "tech-sector-displacement",
   "title": "Tech Sector Job Displacement by 2030",
-  "description": "Projected percentage of current tech sector jobs that will be automated or significantly restructured by AI by 2030.",
+  "description": "Projected percentage of current tech sector jobs that will be automated or significantly restructured by AI by 2030. Only data points where sources directly state a displacement figure are plotted.",
   "category": "displacement",
   "unit": "% of jobs displaced",
-  "currentValue": 15,
+  "currentValue": 13,
   "timeHorizon": "By 2030",
   "history": [
     {
-      "date": "2023-01-15",
-      "value": 8,
-      "confidenceLow": 5,
-      "confidenceHigh": 15,
-      "sourceIds": ["mckinsey-2023"],
-      "evidenceTier": 2
-    },
-    {
-      "date": "2023-06-20",
-      "value": 10,
-      "confidenceLow": 6,
-      "confidenceHigh": 18,
-      "sourceIds": ["wef-future-jobs-2023"],
-      "evidenceTier": 2
-    },
-    {
-      "date": "2023-09-05",
-      "value": 12,
-      "confidenceLow": 7,
-      "confidenceHigh": 20,
-      "sourceIds": ["acemoglu-2023"],
-      "evidenceTier": 1
-    },
-    {
-      "date": "2024-01-10",
+      "date": "2025-01-20",
       "value": 14,
-      "confidenceLow": 9,
-      "confidenceHigh": 22,
-      "sourceIds": ["goldman-ai-2024"],
-      "evidenceTier": 1
-    },
-    {
-      "date": "2024-03-15",
-      "value": 13,
       "confidenceLow": 8,
       "confidenceHigh": 20,
-      "sourceIds": ["brookings-2024"],
+      "sourceIds": ["lightcast-tech-postings-2025"],
       "evidenceTier": 2
-    },
-    {
-      "date": "2024-06-01",
-      "value": 15,
-      "confidenceLow": 10,
-      "confidenceHigh": 24,
-      "sourceIds": ["nyt-tech-jobs-2024"],
-      "evidenceTier": 3
-    },
-    {
-      "date": "2024-09-20",
-      "value": 12,
-      "confidenceLow": 8,
-      "confidenceHigh": 19,
-      "sourceIds": ["mit-task-2024"],
-      "evidenceTier": 1
-    },
-    {
-      "date": "2025-01-08",
-      "value": 14,
-      "confidenceLow": 9,
-      "confidenceHigh": 21,
-      "sourceIds": ["metaculus-tech-2025", "forrester-2025"],
-      "evidenceTier": 2
-    },
-    {
-      "date": "2025-04-15",
-      "value": 16,
-      "confidenceLow": 10,
-      "confidenceHigh": 25,
-      "sourceIds": ["x-thread-tech-layoffs"],
-      "evidenceTier": 4
-    },
-    {
-      "date": "2025-07-01",
-      "value": 14,
-      "confidenceLow": 9,
-      "confidenceHigh": 22,
-      "sourceIds": ["oecd-employment-2025"],
-      "evidenceTier": 1
     },
     {
       "date": "2025-08-01",
-      "value": 15,
-      "confidenceLow": 10,
-      "confidenceHigh": 22,
+      "value": 13,
+      "confidenceLow": 8,
+      "confidenceHigh": 20,
       "sourceIds": ["brynjolfsson-chandar-chen-2025"],
       "evidenceTier": 1
+    }
+  ],
+  "overlays": [
+    {
+      "date": "2024-03-15",
+      "direction": "neutral",
+      "sourceIds": ["brookings-2024"],
+      "evidenceTier": 2,
+      "label": "Brookings: no large-scale displacement yet"
     },
     {
       "date": "2025-10-01",
-      "value": 15,
-      "confidenceLow": 10,
-      "confidenceHigh": 23,
+      "direction": "down",
       "sourceIds": ["challenger-tech-layoffs-2025"],
-      "evidenceTier": 2
+      "evidenceTier": 2,
+      "label": "Challenger: 78K tech jobs lost to AI in H1 2025"
     },
     {
       "date": "2026-01-01",
-      "value": 16,
-      "confidenceLow": 11,
-      "confidenceHigh": 25,
+      "direction": "down",
       "sourceIds": ["bls-tech-projections-2026"],
-      "evidenceTier": 3
+      "evidenceTier": 3,
+      "label": "BLS: SW dev growth revised down from 25% to 17%"
+    },
+    {
+      "date": "2026-01-06",
+      "direction": "down",
+      "sourceIds": ["dallas-fed-young-workers-2026"],
+      "evidenceTier": 1,
+      "label": "Dallas Fed: young worker share fell 0.9pp"
     }
   ],
   "sources": [
@@ -160,14 +102,6 @@
       "excerpt": "Current employment data do not yet show large-scale AI-driven displacement."
     },
     {
-      "id": "nyt-tech-jobs-2024",
-      "title": "Tech companies cut thousands of jobs as AI reshapes the industry",
-      "url": "https://www.nytimes.com/2024/06/01/technology/tech-layoffs-ai.html",
-      "publisher": "The New York Times",
-      "evidenceTier": 3,
-      "datePublished": "2024-06-01"
-    },
-    {
       "id": "mit-task-2024",
       "title": "Beyond AI Exposure: Which Tasks are Cost-Effective to Automate with Computer Vision?",
       "url": "https://economics.mit.edu/sites/default/files/2024-01/Beyond_AI_Exposure.pdf",
@@ -177,28 +111,12 @@
       "excerpt": "Only 23% of worker wages for vision tasks would be cost-effective to automate with AI today."
     },
     {
-      "id": "metaculus-tech-2025",
-      "title": "Metaculus: Employment in AI-automatable jobs",
-      "url": "https://www.metaculus.com/questions/21427/employment-in-ai-automatable-jobs/",
-      "publisher": "Metaculus",
-      "evidenceTier": 2,
-      "datePublished": "2025-01-08"
-    },
-    {
       "id": "forrester-2025",
       "title": "AI And Automation Will Take 6% Of US Jobs By 2030",
       "url": "https://www.forrester.com/blogs/ai-and-automation-will-take-6-of-us-jobs-by-2030/",
       "publisher": "Forrester",
       "evidenceTier": 2,
       "datePublished": "2025-01-06"
-    },
-    {
-      "id": "x-thread-tech-layoffs",
-      "title": "Thread on AI replacing software engineers",
-      "url": "https://x.com",
-      "publisher": "X (Twitter)",
-      "evidenceTier": 4,
-      "datePublished": "2025-04-15"
     },
     {
       "id": "oecd-employment-2025",
