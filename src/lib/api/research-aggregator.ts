@@ -68,51 +68,56 @@ function matchesTerm(text: string, term: string): boolean {
 }
 
 /**
- * Off-topic domains that should be excluded. If a paper's title+abstract
- * is dominated by these terms it is almost certainly irrelevant.
+ * Terms that indicate a paper belongs to an unrelated domain (medical,
+ * biological, physical sciences, etc.) and should be excluded from the
+ * AI-labor research feed.  A paper is excluded when it matches 2+ of
+ * these terms AND does not contain any of the strong labor-market signals.
  */
-const OFF_TOPIC_SIGNALS = [
-  "cancer",
-  "tumor",
-  "tumour",
-  "oncology",
-  "chemotherapy",
-  "carcinoma",
-  "metastasis",
-  "cardiac",
-  "cardiology",
-  "cardiovascular",
-  "clinical trial",
-  "randomized controlled trial",
-  "patient outcome",
-  "surgical",
-  "pathology",
-  "biomarker",
-  "genomic",
-  "proteomic",
-  "neuroimaging",
-  "drug discovery",
-  "molecular biology",
-  "cell proliferation",
-  "in vitro",
-  "in vivo",
-  "immunotherapy",
-  "radiology",
-  "magnetic resonance",
-  "electroencephalograph",
-  "anxiety disorder",
-  "psychiatric",
-  "dermatology",
-  "ophthalmology",
-  "veterinary",
+const OFF_TOPIC_TERMS = [
+  // Medical / clinical
+  "cancer", "tumor", "tumour", "oncolog", "carcinoma", "melanoma",
+  "leukemia", "lymphoma", "metastasis", "chemotherapy", "radiotherapy",
+  "patient", "clinical trial", "diagnosis", "pathology", "biomarker",
+  "surgery", "surgical", "cardiac", "cardiovascular", "heart failure",
+  "stroke", "diabetes", "insulin", "hypertension",
+  "anxiety disorder", "psychiatric", "schizophreni",
+  "genomic", "genome", "proteomic", "protein folding",
+  "cell line", "in vitro", "in vivo", "mouse model", "rat model",
+  "drug discovery", "pharmaceutical", "pharmacolog", "toxicolog",
+  "radiology", "mri ", "ct scan", "imaging modality",
+  "mortality", "morbidity", "epidemiolog", "prevalence",
+  // Biological / environmental
+  "species", "ecosystem", "biodiversity", "phylogenet",
+  "crop yield", "soil", "pollinator",
+  // Physical sciences / engineering (non-labor)
+  "fluid dynamics", "quantum", "semiconductor", "photovoltaic",
+  "battery", "alloy", "molecular", "nanomaterial",
 ];
 
-function isOffTopic(text: string): boolean {
-  let hits = 0;
-  for (const term of OFF_TOPIC_SIGNALS) {
-    if (text.includes(term)) hits++;
+const STRONG_LABOR_SIGNALS = [
+  "labor market", "job displacement", "wage", "workforce",
+  "unemployment", "layoff", "headcount", "hiring",
+  "job loss", "occupation", "worker",
+];
+
+function isOffTopicDomain(title: string, abstract: string | null, venue: string | null): boolean {
+  const text = `${title} ${abstract || ""} ${venue || ""}`.toLowerCase();
+
+  // If the paper contains a strong labor-market signal, keep it regardless
+  if (STRONG_LABOR_SIGNALS.some((term) => text.includes(term))) {
+    return false;
   }
-  return hits >= 2;
+
+  // Count how many off-topic terms appear
+  let offTopicHits = 0;
+  for (const term of OFF_TOPIC_TERMS) {
+    if (text.includes(term)) {
+      offTopicHits++;
+      if (offTopicHits >= 2) return true;
+    }
+  }
+
+  return false;
 }
 
 /**
@@ -124,9 +129,6 @@ function isOffTopic(text: string): boolean {
  */
 function scoreRelevance(title: string, abstract: string | null): number {
   const text = `${title} ${abstract || ""}`.toLowerCase();
-
-  // Reject papers that are clearly about off-topic domains
-  if (isOffTopic(text)) return 0;
 
   // --- AI-side keywords ---
   const aiKeywords = [
@@ -518,6 +520,9 @@ export async function getResearchFeed(
 
   // Deduplicate
   let results = deduplicate(allPapers);
+
+  // Exclude off-topic domains (medical, biological, physical sciences)
+  results = results.filter((p) => !isOffTopicDomain(p.title, p.abstract, p.venue));
 
   // Filter by relevance (tracked author papers bypass minimum with their +10 bonus)
   results = results.filter((p) => p.relevanceScore >= minRelevanceScore);

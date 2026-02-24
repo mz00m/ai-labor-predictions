@@ -36,9 +36,9 @@ interface OpenAlexResponse {
 const OPENALEX_BASE = "https://api.openalex.org";
 const MAILTO = "dashboard@example.com"; // polite pool
 
-// OpenAlex concept IDs for relevant fields
+// OpenAlex filter: require AI + labor terms, exclude medical/bio results
 const SEARCH_FILTER =
-  'default.search:"artificial intelligence" AND ("labor market" OR "employment" OR "wages" OR "automation" OR "job displacement")';
+  'default.search:"artificial intelligence" AND ("labor market" OR "employment" OR "wages" OR "automation" OR "job displacement") NOT ("cancer" OR "clinical trial" OR "patient" OR "diagnosis" OR "cardiac")';
 
 /**
  * Reconstruct abstract from OpenAlex inverted index format
