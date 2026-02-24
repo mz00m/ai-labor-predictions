@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { Prediction, EvidenceTier, DirectionalOverlay } from "@/lib/types";
+import { Prediction, EvidenceTier } from "@/lib/types";
 import { getTierConfig } from "@/lib/evidence-tiers";
 import {
   getResearchAnnotation,
@@ -93,31 +93,21 @@ function getCategoryLabel(category: string): string {
   }
 }
 
-function overlayColor(direction: string) {
-  return direction === "down"
-    ? "#dc2626"
-    : direction === "up"
-      ? "#16a34a"
-      : "#6b7280";
-}
-
 function SparklineWatermark({
   id,
   history,
   selectedTiers,
-  overlays,
 }: {
   id: string;
   history: Prediction["history"];
   selectedTiers: EvidenceTier[];
-  overlays?: DirectionalOverlay[];
 }) {
-  const { pathData, overlayBars } = useMemo(() => {
+  const pathData = useMemo(() => {
     const points = history
       .filter((d) => selectedTiers.includes(d.evidenceTier))
       .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
 
-    if (points.length < 2) return { pathData: null, overlayBars: [] };
+    if (points.length < 2) return null;
 
     const values = points.map((p) => p.value);
     const minVal = Math.min(...values);
@@ -148,22 +138,8 @@ function SparklineWatermark({
     // Close for area fill
     const areaPath = `${linePath} L ${coords[coords.length - 1].x},${H} L ${coords[0].x},${H} Z`;
 
-    // Compute overlay bar positions
-    const filteredOverlays = (overlays ?? []).filter((o) =>
-      selectedTiers.includes(o.evidenceTier)
-    );
-    const minDate = new Date(points[0].date).getTime();
-    const maxDate = new Date(points[points.length - 1].date).getTime();
-    const dateRange = maxDate - minDate || 1;
-
-    const bars = filteredOverlays.map((o) => {
-      const t = (new Date(o.date).getTime() - minDate) / dateRange;
-      const x = Math.max(0, Math.min(1, t)) * W;
-      return { x, color: overlayColor(o.direction), key: `${o.date}-${o.label.slice(0, 12)}` };
-    });
-
-    return { pathData: { linePath, areaPath }, overlayBars: bars };
-  }, [history, selectedTiers, overlays]);
+    return { linePath, areaPath };
+  }, [history, selectedTiers]);
 
   if (!pathData) return null;
 
@@ -180,18 +156,6 @@ function SparklineWatermark({
           <stop offset="100%" stopColor="currentColor" stopOpacity="0.01" />
         </linearGradient>
       </defs>
-      {overlayBars.map((bar) => (
-        <rect
-          key={bar.key}
-          x={bar.x - 4}
-          y={0}
-          width={8}
-          height={80}
-          fill={bar.color}
-          opacity={0.18}
-          rx={2}
-        />
-      ))}
       <path
         d={pathData.areaPath}
         fill={`url(#sparkFade-${id})`}
@@ -220,9 +184,6 @@ export default function PredictionSummaryCard({
   const agg = computeAggregate(prediction, selectedTiers);
   const contextLine = getContextLine(prediction, agg.mean);
   const annotation = getResearchAnnotation(prediction.slug);
-  const filteredOverlays = (prediction.overlays ?? []).filter((o) =>
-    selectedTiers.includes(o.evidenceTier)
-  );
 
   const trendColorClass = agg.trendIsBad
     ? "text-red-600"
@@ -243,7 +204,6 @@ export default function PredictionSummaryCard({
           id={prediction.id}
           history={prediction.history}
           selectedTiers={selectedTiers}
-          overlays={prediction.overlays}
         />
 
         {/* Content (above watermark) */}
@@ -291,42 +251,6 @@ export default function PredictionSummaryCard({
           <p className="text-[14px] text-[var(--muted)] leading-relaxed mb-4">
             {contextLine}
           </p>
-
-          {/* Overlay context */}
-          {filteredOverlays.length > 0 && (
-            <div className="mb-4 flex flex-col gap-1">
-              {filteredOverlays.slice(0, 3).map((o) => {
-                const color = overlayColor(o.direction);
-                const arrow =
-                  o.direction === "down"
-                    ? "\u2193"
-                    : o.direction === "up"
-                      ? "\u2191"
-                      : "\u2194";
-                return (
-                  <div
-                    key={`${o.date}-${o.label.slice(0, 20)}`}
-                    className="flex items-start gap-1.5"
-                  >
-                    <span
-                      className="text-[12px] font-bold leading-tight mt-px shrink-0"
-                      style={{ color }}
-                    >
-                      {arrow}
-                    </span>
-                    <span className="text-[11px] leading-snug text-[var(--muted)] line-clamp-1">
-                      {o.label}
-                    </span>
-                  </div>
-                );
-              })}
-              {filteredOverlays.length > 3 && (
-                <span className="text-[11px] text-[var(--muted)] opacity-60 ml-4">
-                  +{filteredOverlays.length - 3} more
-                </span>
-              )}
-            </div>
-          )}
 
           {/* Research annotation */}
           {annotation && (
