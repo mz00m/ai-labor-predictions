@@ -179,13 +179,23 @@ export default function PredictionChart({
   if (compact) {
     return (
       <ResponsiveContainer width="100%" height={80}>
-        <ComposedChart data={realPoints}>
+        <ComposedChart data={chartData}>
+          {overlayData.map((o) => (
+            <ReferenceLine
+              key={`overlay-compact-${o.dateStr}-${o.label.slice(0, 20)}`}
+              x={o.dateStr}
+              stroke={overlayColor(o.direction)}
+              strokeWidth={16}
+              strokeOpacity={0.15}
+            />
+          ))}
           <Line
             type="monotone"
             dataKey="value"
             stroke="#7c3aed"
             strokeWidth={2}
             dot={false}
+            connectNulls
           />
         </ComposedChart>
       </ResponsiveContainer>
