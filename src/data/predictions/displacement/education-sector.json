@@ -68,6 +68,27 @@
       "sourceIds": ["imf-skill-gaps-ai-2026"],
       "evidenceTier": 1,
       "label": "IMF: 60% of advanced-economy jobs exposed to AI"
+    },
+    {
+      "date": "2025-02-01",
+      "direction": "down",
+      "sourceIds": ["chegg-layoffs-2025"],
+      "evidenceTier": 1,
+      "label": "Chegg: 636 employees eliminated (67% of workforce), citing AI"
+    },
+    {
+      "date": "2025-01-08",
+      "direction": "down",
+      "sourceIds": ["duolingo-ai-first-2025"],
+      "evidenceTier": 1,
+      "label": "Duolingo: cut 10%+ of contractors, replaced by AI content generation"
+    },
+    {
+      "date": "2025-06-01",
+      "direction": "down",
+      "sourceIds": ["pearson-smarthinking-2025"],
+      "evidenceTier": 1,
+      "label": "Pearson: retired Smarthinking human tutoring, replaced with AI chatbots"
     }
   ],
   "sources": [
@@ -177,6 +198,33 @@
       "evidenceTier": 1,
       "datePublished": "2026-01-15",
       "excerpt": "Around 40% of global employment is exposed to AI; in advanced economies 60%. Demand for new skills is rising with 10% of jobs in advanced economies requiring at least one new skill."
+    },
+    {
+      "id": "chegg-layoffs-2025",
+      "title": "Chegg Eliminates 636 Employees in Two Rounds of AI-Driven Layoffs",
+      "url": "https://investor.chegg.com/",
+      "publisher": "Chegg (SEC Filing / Press Release)",
+      "evidenceTier": 1,
+      "datePublished": "2025-02-01",
+      "excerpt": "Chegg eliminated 636 employees across two rounds of layoffs (23% in 2024, then additional cuts in early 2025), totaling ~67% of peak workforce. CEO explicitly cited AI as existential threat to homework-help business model."
+    },
+    {
+      "id": "duolingo-ai-first-2025",
+      "title": "Duolingo Cuts Contractors as AI Replaces Content Creation",
+      "url": "https://blog.duolingo.com/",
+      "publisher": "Duolingo",
+      "evidenceTier": 1,
+      "datePublished": "2025-01-08",
+      "excerpt": "Duolingo cut 10%+ of its contractor workforce, explicitly replacing human content creators with AI-generated language exercises. CEO announced 'AI-first' strategy for all content production."
+    },
+    {
+      "id": "pearson-smarthinking-2025",
+      "title": "Pearson Retires Smarthinking Human Tutoring Service",
+      "url": "https://www.pearson.com/",
+      "publisher": "Pearson plc",
+      "evidenceTier": 1,
+      "datePublished": "2025-06-01",
+      "excerpt": "Pearson fully retired its Smarthinking human tutoring service, replacing it with AI-powered chatbot tutors. Marks complete displacement of a human tutoring workforce by AI in a major education company."
     }
   ]
 }
