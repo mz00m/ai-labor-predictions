@@ -79,7 +79,7 @@ export default function FunnelStrip() {
         <h2 className="font-serif text-[22px] sm:text-[26px] font-bold tracking-tight text-[var(--foreground)] leading-tight">
           From exposure to job loss
         </h2>
-        <p className="text-[15px] sm:text-[17px] text-[var(--muted)] mt-1.5 leading-relaxed max-w-xl">
+        <p className="text-[15px] sm:text-[17px] text-[var(--muted)] mt-1.5 leading-relaxed">
           AI adoption is accelerating and reshaping work, but the impact on jobs is less clear.
         </p>
       </div>
