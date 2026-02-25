@@ -477,7 +477,7 @@ function GroupedCategoryCard({
         ))}
 
         {/* Bars */}
-        <div className="absolute inset-0 flex items-end gap-[2px]">
+        <div className="absolute inset-0 flex items-stretch gap-[2px]">
           {INDIVIDUALS.map((r) => (
             <Bar
               key={r.id}
@@ -488,15 +488,13 @@ function GroupedCategoryCard({
             />
           ))}
           {/* Crowd Average — slightly wider */}
-          <div style={{ flex: "1.3 1 0" }}>
-            <div className="h-full flex flex-col justify-end">
-              <Bar
-                respondent={CROWD}
-                categoryId={category.id}
-                catColor={category.color}
-                onClick={() => onBarClick(CROWD.id, category.id)}
-              />
-            </div>
+          <div className="flex flex-col justify-end" style={{ flex: "1.3 1 0" }}>
+            <Bar
+              respondent={CROWD}
+              categoryId={category.id}
+              catColor={category.color}
+              onClick={() => onBarClick(CROWD.id, category.id)}
+            />
           </div>
         </div>
       </div>
