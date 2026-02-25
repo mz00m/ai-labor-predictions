@@ -80,7 +80,7 @@ export default function FunnelStrip() {
           From exposure to job loss
         </h2>
         <p className="text-[15px] sm:text-[17px] text-[var(--muted)] mt-1.5 leading-relaxed">
-          AI adoption is accelerating and reshaping work, but the impact on jobs is less clear.
+          AI adoption is accelerating and changing work, but the impact on jobs is less clear.
         </p>
       </div>
 
