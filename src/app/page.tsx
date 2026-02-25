@@ -9,6 +9,7 @@ import NewsTicker from "@/components/NewsTicker";
 import ResearchFeed from "@/components/ResearchFeed";
 import Methodology from "@/components/Methodology";
 import FunnelStrip from "@/components/FunnelStrip";
+import ProductivityPredictions from "@/components/ProductivityPredictions";
 
 const predictions = getAllPredictions();
 
@@ -141,6 +142,9 @@ export default function Home() {
           </div>
         </section>
       )}
+
+      {/* Productivity Predictions */}
+      <ProductivityPredictions />
 
       {/* Research Feed */}
       <section id="research-feed">

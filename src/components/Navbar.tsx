@@ -24,6 +24,12 @@ export default function Navbar() {
             Research Feed
           </Link>
           <Link
+            href="/#productivity-predictions"
+            className="text-[15px] text-[var(--foreground)] hover:opacity-60 font-bold underline underline-offset-4"
+          >
+            Productivity Forecast
+          </Link>
+          <Link
             href="/#methodology"
             className="text-[15px] text-[var(--foreground)] hover:opacity-60 font-bold underline underline-offset-4"
           >
