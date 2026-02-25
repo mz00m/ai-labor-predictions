@@ -585,6 +585,136 @@ export default function ProductivityPredictions() {
         ))}
       </div>
 
+      {/* Research evidence snapshot */}
+      <div className="mt-8 border border-black/[0.06] rounded-lg bg-white p-5 sm:p-6">
+        <h3 className="text-[15px] font-bold text-[var(--foreground)] mb-4">
+          What peer-reviewed research measures so far
+        </h3>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {/* Task / Employee productivity */}
+          <div>
+            <span className="text-[11px] font-bold uppercase tracking-widest text-emerald-700 mb-3 block">
+              Employee Productivity
+            </span>
+            {[
+              {
+                authors: "Noy & Zhang",
+                year: 2023,
+                journal: "Science",
+                label: "+37%",
+                pct: 37,
+                desc: "Writing tasks completed 0.8 SD faster, quality 0.4 SD higher",
+                url: "https://www.science.org/doi/10.1126/science.adh2586",
+              },
+              {
+                authors: "Brynjolfsson, Li & Raymond",
+                year: 2025,
+                journal: "QJE",
+                label: "+14%",
+                pct: 14,
+                desc: "Customer support issues resolved per hour; 30–35% for junior agents",
+                url: "https://academic.oup.com/qje/article/140/2/889/7990658",
+              },
+            ].map((s) => (
+              <a
+                key={s.authors}
+                href={s.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-3 py-2 px-2 -mx-2 rounded-md hover:bg-black/[0.02] transition-colors"
+              >
+                <span className="text-[13px] font-bold text-emerald-600 w-[48px] shrink-0 text-right">
+                  {s.label}
+                </span>
+                <div
+                  className="h-4 rounded-sm bg-emerald-500/60 group-hover:bg-emerald-500/80 transition-colors"
+                  style={{ width: `${(s.pct / 40) * 100}%`, minWidth: 4 }}
+                />
+                <div className="flex-1 min-w-0">
+                  <span className="text-[12px] font-medium text-[var(--foreground)]">
+                    {s.authors}
+                  </span>
+                  <span className="text-[10px] text-[var(--muted)] ml-1">
+                    ({s.year}, {s.journal})
+                  </span>
+                  <p className="text-[11px] text-[var(--muted)] truncate">
+                    {s.desc}
+                  </p>
+                </div>
+              </a>
+            ))}
+          </div>
+
+          {/* Macro / Economy-wide */}
+          <div>
+            <span className="text-[11px] font-bold uppercase tracking-widest text-blue-700 mb-3 block">
+              Macro Economic Productivity
+            </span>
+            {[
+              {
+                authors: "Bick, Blandin & Deming",
+                year: 2024,
+                journal: "NBER",
+                label: "~1.4%",
+                pct: 1.4,
+                desc: "Aggregate time savings across all US workers (~6.7 extra min/day)",
+                url: "https://www.nber.org/papers/w32966",
+              },
+              {
+                authors: "St. Louis Fed",
+                year: 2025,
+                journal: "Fed Research",
+                label: "+1.1%",
+                pct: 1.1,
+                desc: "Labor productivity gain since ChatGPT release (likely overstated)",
+                url: "https://www.stlouisfed.org/on-the-economy/2025/feb/how-much-has-gen-ai-increased-labor-productivity",
+              },
+            ].map((s) => (
+              <a
+                key={s.authors}
+                href={s.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-3 py-2 px-2 -mx-2 rounded-md hover:bg-black/[0.02] transition-colors"
+              >
+                <span className="text-[13px] font-bold text-blue-600 w-[48px] shrink-0 text-right">
+                  {s.label}
+                </span>
+                <div
+                  className="h-4 rounded-sm bg-blue-500/60 group-hover:bg-blue-500/80 transition-colors"
+                  style={{ width: `${(s.pct / 40) * 100}%`, minWidth: 4 }}
+                />
+                <div className="flex-1 min-w-0">
+                  <span className="text-[12px] font-medium text-[var(--foreground)]">
+                    {s.authors}
+                  </span>
+                  <span className="text-[10px] text-[var(--muted)] ml-1">
+                    ({s.year}, {s.journal})
+                  </span>
+                  <p className="text-[11px] text-[var(--muted)] truncate">
+                    {s.desc}
+                  </p>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+
+        {/* Divider + link */}
+        <div className="mt-4 pt-4 border-t border-black/[0.06] flex items-center justify-between">
+          <p className="text-[12px] text-[var(--muted)]">
+            Showing top peer-reviewed studies &middot; Employee gains are 10–25&times; larger than macro effects measured so far
+          </p>
+          <a
+            href="#research-evidence"
+            className="text-[13px] font-semibold text-[var(--foreground)] hover:text-[var(--accent)] shrink-0 ml-4"
+          >
+            All {17} sources &rarr;
+          </a>
+        </div>
+      </div>
+
       {/* Source attribution */}
       <p className="text-[13px] text-[var(--muted)] mt-4">
         Based on 12 economists &middot; X exercise by{" "}
