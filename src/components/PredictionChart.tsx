@@ -267,16 +267,6 @@ export default function PredictionChart({
               />
             }
           />
-          {chartData.some((d) => d.confidenceRange) && (
-            <Area
-              type="monotone"
-              dataKey="confidenceRange"
-              fill="#7c3aed"
-              fillOpacity={0.08}
-              stroke="none"
-              connectNulls
-            />
-          )}
           {/* Linear trend line */}
           {chartData.some((d) => d.trendValue != null) && (
             <Line

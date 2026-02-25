@@ -158,14 +158,6 @@ export default function PredictionDetailPage() {
           )}
         </div>
 
-        {bestEstimate && bestEstimate.confidenceLow != null && bestEstimate.confidenceHigh != null && (
-          <p className="text-[14px] text-[var(--muted)] mb-6">
-            Confidence range: {bestEstimate.confidenceLow}
-            {prediction.unit.includes("%") ? "%" : ""} to {bestEstimate.confidenceHigh}
-            {prediction.unit.includes("%") ? "%" : ""}
-          </p>
-        )}
-
         <p className="text-[16px] text-[var(--muted)] leading-relaxed mb-6 max-w-2xl">
           {contextText}
         </p>
