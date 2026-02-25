@@ -97,6 +97,13 @@
       "sourceIds": ["cisco-agentic-cs-2025"],
       "evidenceTier": 2,
       "label": "Cisco: 68% of CS interactions by agentic AI by 2028"
+    },
+    {
+      "date": "2025-10-01",
+      "direction": "up",
+      "sourceIds": ["fang-ecommerce-chatbots-2025"],
+      "evidenceTier": 1,
+      "label": "E-commerce field experiment: AI chatbots increased sales 16%"
     }
   ],
   "sources": [
@@ -248,6 +255,15 @@
       "evidenceTier": 2,
       "datePublished": "2025-05-27",
       "excerpt": "Survey of 7,950 decision-makers: 68% of all CS interactions expected to be handled by agentic AI by 2028. 56% expected within 12 months."
+    },
+    {
+      "id": "fang-ecommerce-chatbots-2025",
+      "title": "The Impact of AI on E-Commerce: Field Experiments on Customer Service and Product Descriptions",
+      "url": "https://arxiv.org/abs/2510.12049",
+      "publisher": "arXiv (Fang, Yuan, Zheng, Donati, Sarvary)",
+      "evidenceTier": 1,
+      "datePublished": "2025-10-01",
+      "excerpt": "AI chatbots for customer service increased sales by 16%; AI-generated product descriptions increased sales by 2.05% in field experiments."
     }
   ]
 }

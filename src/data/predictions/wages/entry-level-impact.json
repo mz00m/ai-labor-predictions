@@ -148,6 +148,20 @@
       "sourceIds": ["hartley-entry-level-2026"],
       "evidenceTier": 1,
       "label": "Stanford: small positive wage effects overall"
+    },
+    {
+      "date": "2025-09-01",
+      "direction": "down",
+      "sourceIds": ["hosseini-lichtinger-seniority-2025"],
+      "evidenceTier": 1,
+      "label": "SSRN: junior employment declined sharply at AI-adopting firms"
+    },
+    {
+      "date": "2026-01-15",
+      "direction": "down",
+      "sourceIds": ["frank-ai-unemployment-2026"],
+      "evidenceTier": 1,
+      "label": "Frank et al.: unemployment risk rose in AI-exposed occupations from early 2022"
     }
   ],
   "sources": [
@@ -302,6 +316,24 @@
       "evidenceTier": 1,
       "datePublished": "2025-09-15",
       "excerpt": "Novice workers benefit more from LLMs in simple tasks but face declining demand across AI-complementary work; digital trace data show substitution in writing and translation."
+    },
+    {
+      "id": "hosseini-lichtinger-seniority-2025",
+      "title": "Seniority-Biased Technological Change: Evidence from AI-Adopting Firms",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5050752",
+      "publisher": "SSRN (Hosseini Maasoum, Lichtinger)",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-01",
+      "excerpt": "Analysis of 62M U.S. resumes: junior employment declined sharply at AI-adopting firms while senior employment was largely unchanged — described as 'seniority-biased technological change.'"
+    },
+    {
+      "id": "frank-ai-unemployment-2026",
+      "title": "AI Exposure and Unemployment Risk",
+      "url": "https://arxiv.org/abs/2601.02554",
+      "publisher": "arXiv (Frank et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-15",
+      "excerpt": "Unemployment risk in AI-exposed occupations rose beginning early 2022; graduates with AI-exposed curricula have higher first-job pay and shorter job searches post-ChatGPT."
     }
   ]
 }

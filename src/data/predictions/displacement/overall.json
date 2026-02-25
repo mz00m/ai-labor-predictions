@@ -81,7 +81,22 @@
       "evidenceTier": 2
     }
   ],
-  "overlays": [],
+  "overlays": [
+    {
+      "date": "2025-11-01",
+      "direction": "neutral",
+      "sourceIds": ["humlum-vestergaard-denmark-2025"],
+      "evidenceTier": 1,
+      "label": "Denmark study: zero effects on earnings and hours from AI (11 occupations)"
+    },
+    {
+      "date": "2026-01-15",
+      "direction": "down",
+      "sourceIds": ["frank-ai-unemployment-overall-2026"],
+      "evidenceTier": 1,
+      "label": "Frank et al.: unemployment risk rose in AI-exposed occupations from early 2022"
+    }
+  ],
   "sources": [
     {
       "id": "goldman-300m",
@@ -302,6 +317,24 @@
       "evidenceTier": 1,
       "datePublished": "2025-09-15",
       "excerpt": "Productivity gains 20-60% in controlled RCTs, 15-30% in field experiments; AI exposure measures converge toward high-wage jobs being most exposed."
+    },
+    {
+      "id": "humlum-vestergaard-denmark-2025",
+      "title": "The Adoption of ChatGPT",
+      "url": "https://www.nber.org/papers/w33777",
+      "publisher": "NBER (Humlum, Vestergaard)",
+      "evidenceTier": 1,
+      "datePublished": "2025-11-01",
+      "excerpt": "Study of 11 occupations in Denmark: essentially zero effects on earnings and hours worked; confidence intervals rule out effects larger than 2%. AI adoption linked to ~4% occupational switching."
+    },
+    {
+      "id": "frank-ai-unemployment-overall-2026",
+      "title": "AI Exposure and Unemployment Risk",
+      "url": "https://arxiv.org/abs/2601.02554",
+      "publisher": "arXiv (Frank et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-15",
+      "excerpt": "Unemployment risk in AI-exposed occupations rose beginning early 2022; graduates with AI-exposed curricula have higher first-job pay and shorter job searches post-ChatGPT."
     }
   ]
 }

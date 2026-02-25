@@ -100,6 +100,13 @@
       "sourceIds": ["egon-zehnder-cfo-ai-2025"],
       "evidenceTier": 1,
       "label": "Egon Zehnder: 18% of CFOs already eliminated roles; 88% of cuts in accounting"
+    },
+    {
+      "date": "2023-09-01",
+      "direction": "up",
+      "sourceIds": ["dellacqua-jagged-frontier-2023"],
+      "evidenceTier": 1,
+      "label": "BCG/HBS: consultants 12.2% more tasks, 25.1% faster, 40% higher quality with GPT-4"
     }
   ],
   "sources": [
@@ -326,6 +333,15 @@
       "evidenceTier": 1,
       "datePublished": "2025-12-15",
       "excerpt": "AI chatbots had no statistically significant impact on hours worked or wages earned for lawyers. Law graduate employment in 2024 reached 93.4% — the highest rate on record."
+    },
+    {
+      "id": "dellacqua-jagged-frontier-2023",
+      "title": "Navigating the Jagged Technological Frontier: Field Experimental Evidence of the Effects of AI on Knowledge Worker Productivity and Quality",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/24-013_d9b45b68-9e74-42d6-a1c6-c72fb70c7571.pdf",
+      "publisher": "HBS (Dell'Acqua et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2023-09-01",
+      "excerpt": "RCT with 758 BCG consultants: for tasks within AI's capabilities, 12.2% more tasks completed, 25.1% faster, output rated 40% higher quality. For tasks outside AI's frontier, performance was 19pp worse."
     }
   ]
 }
