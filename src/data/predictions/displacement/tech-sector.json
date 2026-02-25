@@ -92,6 +92,27 @@
       "sourceIds": ["comptia-it-unemployment-2025"],
       "evidenceTier": 2,
       "label": "CompTIA: IT unemployment rose from 3.9% to 5.7%"
+    },
+    {
+      "date": "2025-07-01",
+      "direction": "down",
+      "sourceIds": ["metr-becker-rush-2025"],
+      "evidenceTier": 1,
+      "label": "METR: AI made experienced open-source devs 19% slower"
+    },
+    {
+      "date": "2025-06-01",
+      "direction": "up",
+      "sourceIds": ["cui-microsoft-copilot-2025"],
+      "evidenceTier": 1,
+      "label": "Microsoft/Accenture: 26% more pull requests with Copilot"
+    },
+    {
+      "date": "2023-02-01",
+      "direction": "up",
+      "sourceIds": ["peng-copilot-2023"],
+      "evidenceTier": 1,
+      "label": "GitHub Copilot RCT: developers 55.8% faster"
     }
   ],
   "sources": [
@@ -308,6 +329,33 @@
       "evidenceTier": 2,
       "datePublished": "2025-09-01",
       "excerpt": "IT unemployment rate rose from 3.9% to 5.7% between late 2024 and mid-2025, the highest level since 2021, driven by AI-related restructuring."
+    },
+    {
+      "id": "metr-becker-rush-2025",
+      "title": "Evidence that AI use by experienced open-source developers slows contribution",
+      "url": "https://arxiv.org/abs/2507.09089",
+      "publisher": "METR (Becker, Rush, Barnes, Rein)",
+      "evidenceTier": 1,
+      "datePublished": "2025-07-01",
+      "excerpt": "RCT with experienced open-source developers found AI made them 19% slower. Developers expected a 24% speedup and even after the study believed it helped by 20% — a major perception-reality gap."
+    },
+    {
+      "id": "cui-microsoft-copilot-2025",
+      "title": "The Effects of Generative AI on Computing Workers' Productivity",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5106604",
+      "publisher": "Microsoft/Accenture (Cui, Demirer, Jaffe, Musolff, Peng, Salz)",
+      "evidenceTier": 1,
+      "datePublished": "2025-06-01",
+      "excerpt": "26% increase in completed pull requests, 13.55% increase in commits, 38.38% increase in builds — but build success rate fell by 5.53 percentage points."
+    },
+    {
+      "id": "peng-copilot-2023",
+      "title": "The Impact of AI on Developer Productivity: Evidence from GitHub Copilot",
+      "url": "https://arxiv.org/abs/2302.06590",
+      "publisher": "arXiv (Peng, Kalliamvakou, Cihon, Demirer)",
+      "evidenceTier": 1,
+      "datePublished": "2023-02-01",
+      "excerpt": "RCT: developers completed a coding task 55.8% faster with GitHub Copilot assistance."
     }
   ],
   "marketIds": {
