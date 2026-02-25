@@ -57,6 +57,14 @@
       "evidenceTier": 1
     },
     {
+      "date": "2026-01-01",
+      "value": 38,
+      "confidenceLow": 30,
+      "confidenceHigh": 38,
+      "sourceIds": ["hartley-genai-exposure-2026"],
+      "evidenceTier": 1
+    },
+    {
       "date": "2026-01-15",
       "value": 49,
       "confidenceLow": 40,
@@ -142,6 +150,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-01-15",
       "excerpt": "49% of jobs now use AI for at least 25% of their tasks (up from 36% in early 2025); augmentation (52%) has overtaken automation (45%) as primary use pattern."
+    },
+    {
+      "id": "hartley-genai-exposure-2026",
+      "title": "The Labor Market Effects of Generative Artificial Intelligence",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5136877",
+      "publisher": "Stanford / World Bank (Hartley, Jolevski, Melo, Moore)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-01",
+      "excerpt": "LLM adoption among U.S. workers increased from 30.1% to 38.3% between December 2024 and December 2025. Small effects on wages in exposed occupations; no significant effects on job openings or total jobs."
     },
     {
       "id": "pnas-nexus-2025",

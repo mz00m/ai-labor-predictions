@@ -132,6 +132,27 @@
       "sourceIds": ["hartley-median-wage-2026"],
       "evidenceTier": 1,
       "label": "Stanford: small positive wage effects in AI-exposed jobs"
+    },
+    {
+      "date": "2025-08-01",
+      "direction": "up",
+      "sourceIds": ["goldman-productivity-2025"],
+      "evidenceTier": 1,
+      "label": "Goldman Sachs: AI to raise labor productivity ~15% when fully adopted"
+    },
+    {
+      "date": "2025-05-01",
+      "direction": "up",
+      "sourceIds": ["brynjolfsson-li-raymond-qje-wages-2025"],
+      "evidenceTier": 1,
+      "label": "QJE: AI assistance increases worker productivity by 15% on average"
+    },
+    {
+      "date": "2026-02-01",
+      "direction": "up",
+      "sourceIds": ["brynjolfsson-bls-productivity-2026"],
+      "evidenceTier": 1,
+      "label": "Brynjolfsson: US productivity grew 2.7% in 2025, nearly double the decade average"
     }
   ],
   "sources": [
@@ -272,6 +293,33 @@
       "evidenceTier": 1,
       "datePublished": "2025-05-05",
       "excerpt": "For the empirically plausible case that capital and labor are gross complements, raising wages requires capital-augmenting innovation rather than labor-augmenting."
+    },
+    {
+      "id": "goldman-productivity-2025",
+      "title": "How Will AI Affect the Global Workforce?",
+      "url": "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce",
+      "publisher": "Goldman Sachs Research",
+      "evidenceTier": 1,
+      "datePublished": "2025-08-01",
+      "excerpt": "Generative AI will raise the level of labor productivity in the US and other developed markets by around 15% when fully adopted and incorporated into regular production."
+    },
+    {
+      "id": "brynjolfsson-li-raymond-qje-wages-2025",
+      "title": "Generative AI at Work",
+      "url": "https://academic.oup.com/qje/article/140/2/889/7990658",
+      "publisher": "QJE (Brynjolfsson, Li, Raymond)",
+      "evidenceTier": 1,
+      "datePublished": "2025-05-01",
+      "excerpt": "Access to AI assistance increases worker productivity, as measured by issues resolved per hour, by 15% on average, with substantial heterogeneity across workers."
+    },
+    {
+      "id": "brynjolfsson-bls-productivity-2026",
+      "title": "US Productivity Growth and AI",
+      "url": "https://www.ft.com/content/brynjolfsson-ai-productivity-2026",
+      "publisher": "FT / Brynjolfsson (BLS data)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-01",
+      "excerpt": "US productivity grew roughly 2.7% in 2025, nearly double the 1.4% annual average of the past decade — a decoupling of output from labor input that is the hallmark of productivity growth."
     },
     {
       "id": "icle-median-wage-2026",

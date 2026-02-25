@@ -41,6 +41,14 @@
       "evidenceTier": 2
     },
     {
+      "date": "2025-08-01",
+      "value": 7,
+      "confidenceLow": 3,
+      "confidenceHigh": 14,
+      "sourceIds": ["goldman-total-projected-2025"],
+      "evidenceTier": 2
+    },
+    {
       "date": "2025-09-08",
       "value": 0.75,
       "confidenceLow": 0.3,
@@ -218,6 +226,15 @@
       "evidenceTier": 2,
       "datePublished": "2025-08-01",
       "excerpt": "2.5% of US employment at risk of displacement from current AI use cases; 60% of current US workers in occupations that didn't exist in 1940."
+    },
+    {
+      "id": "goldman-total-projected-2025",
+      "title": "How Will AI Affect the Global Workforce?",
+      "url": "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce",
+      "publisher": "Goldman Sachs Research",
+      "evidenceTier": 2,
+      "datePublished": "2025-08-01",
+      "excerpt": "AI could displace 6-7% of the US workforce if widely adopted. We remain skeptical that AI will lead to large employment reductions over the next decade."
     },
     {
       "id": "ramp-freelance-total-2025",

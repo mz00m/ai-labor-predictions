@@ -55,7 +55,7 @@ export default function Home() {
           </h1>
           <p className="mt-4 text-[17px] text-[var(--muted)] leading-relaxed max-w-2xl">
             250+ sources, one pattern: AI adoption is accelerating, productivity is climbing,
-            entry-level and freelance work is compressing, and jobs are reshaping faster than
+            entry-level and freelance work is compressing, and jobs are changing faster than
             they&apos;re disappearing. No measurable macro displacement &mdash; yet.
           </p>
         </div>

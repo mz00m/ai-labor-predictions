@@ -49,11 +49,27 @@
       "evidenceTier": 1
     },
     {
+      "date": "2025-08-01",
+      "value": 7,
+      "confidenceLow": 3,
+      "confidenceHigh": 14,
+      "sourceIds": ["goldman-overall-workforce-2025"],
+      "evidenceTier": 2
+    },
+    {
       "date": "2025-12-01",
-      "value": 9,
+      "value": 8,
       "confidenceLow": 5,
       "confidenceHigh": 14,
       "sourceIds": ["wef-future-jobs-2025"],
+      "evidenceTier": 2
+    },
+    {
+      "date": "2025-08-15",
+      "value": 0,
+      "confidenceLow": 0,
+      "confidenceHigh": 1,
+      "sourceIds": ["goldman-overall-measured-2025"],
       "evidenceTier": 2
     },
     {
@@ -82,6 +98,20 @@
     }
   ],
   "overlays": [
+    {
+      "date": "2025-01-15",
+      "direction": "down",
+      "sourceIds": ["chen-hbs-overall-2025"],
+      "evidenceTier": 1,
+      "label": "HBS: 13% decline in postings for highly automatable roles"
+    },
+    {
+      "date": "2025-09-01",
+      "direction": "down",
+      "sourceIds": ["adp-stanford-young-workers-2025"],
+      "evidenceTier": 1,
+      "label": "Stanford/ADP: 6% employment decline for ages 22-25 in AI-exposed jobs"
+    },
     {
       "date": "2025-11-01",
       "direction": "neutral",
@@ -144,11 +174,12 @@
     },
     {
       "id": "forrester-6pct",
-      "title": "AI And Automation Will Take 6% Of US Jobs By 2030",
-      "url": "https://www.forrester.com/blogs/ai-and-automation-will-take-6-of-us-jobs-by-2030/",
+      "title": "Forrester: AI And Automation Job Impact Forecast",
+      "url": "https://www.forrester.com/press-newsroom/forrester-impact-ai-jobs-forecast/",
       "publisher": "Forrester",
       "evidenceTier": 2,
-      "datePublished": "2025-01-06"
+      "datePublished": "2025-01-06",
+      "excerpt": "AI and automation could account for 6% of total US job losses by 2030, equating to 10.4 million roles. Widespread AI-driven job replacement remains unlikely. AI will augment 20% of jobs rather than eliminate them."
     },
     {
       "id": "pnas-nexus-2025",
@@ -299,6 +330,24 @@
       "evidenceTier": 2,
       "datePublished": "2025-08-01",
       "excerpt": "2.5% of US employment at risk of displacement from current AI use cases; unemployment projected to increase by 0.5pp during transition."
+    },
+    {
+      "id": "goldman-overall-measured-2025",
+      "title": "How Will AI Affect the Global Workforce?",
+      "url": "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce",
+      "publisher": "Goldman Sachs Research",
+      "evidenceTier": 2,
+      "datePublished": "2025-08-01",
+      "excerpt": "There is no economically or statistically significant correlation between AI exposure and job growth, unemployment, job finding rates, layoff rates, weekly hours, or average hourly earnings."
+    },
+    {
+      "id": "adp-stanford-young-workers-2025",
+      "title": "Yes, AI Is Affecting Employment. Here's the Data",
+      "url": "https://www.adpresearch.com/yes-ai-is-affecting-employment-heres-the-data/",
+      "publisher": "Stanford / ADP Research",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-01",
+      "excerpt": "In jobs with high AI exposure, employment for 22- to 25-year-olds fell 6% between late 2022 and July 2025. Software developers saw a 20% early-career decline. Employment among workers 30 and older grew 6-13%."
     },
     {
       "id": "icle-ai-productivity-2026",
