@@ -65,11 +65,10 @@ export default function FunnelStrip() {
       {/* Title */}
       <div className="mb-5">
         <h2 className="font-serif text-[22px] sm:text-[26px] font-bold tracking-tight text-[var(--foreground)] leading-tight">
-          From exposure to displacement
+          From exposure to job loss
         </h2>
         <p className="text-[13px] sm:text-[14px] text-[var(--muted)] mt-1.5 leading-relaxed max-w-xl">
-          Follow the evidence from broad to specific. The gap between &ldquo;AI could affect this job&rdquo;
-          and &ldquo;this job actually disappeared&rdquo; is the whole story.
+          AI adoption is accelerating and reshaping work, but the impact on jobs is less clear.
         </p>
       </div>
 
