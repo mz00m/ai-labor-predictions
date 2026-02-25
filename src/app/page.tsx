@@ -49,7 +49,7 @@ export default function Home() {
             {predictions.length} predictions &middot; {totalSources} sources
           </p>
           <h1 className="text-[42px] sm:text-[56px] font-black tracking-tight text-[var(--foreground)] leading-[1.05] max-w-4xl">
-            How is AI <span className="text-[#2a5280] italic">reshaping</span>
+            How is AI <span className="text-[#2a5280] italic">changing</span>
             <br className="hidden sm:block" /> the labor market?
           </h1>
           <p className="mt-4 text-[17px] text-[var(--muted)] leading-relaxed max-w-2xl">
