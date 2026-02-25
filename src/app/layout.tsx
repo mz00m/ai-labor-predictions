@@ -40,10 +40,6 @@ export default function RootLayout({
           <div className="pt-10 border-t border-black/[0.06]">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
               <div className="space-y-1">
-                <p className="text-[13px] text-[var(--muted)] italic">
-                  This dashboard was built by an AI, about AI taking jobs, hosted on servers run by AI.
-                  If that doesn&apos;t make you laugh nervously, nothing will.
-                </p>
                 <p className="text-[13px] text-[var(--muted)]">
                   Data sourced from prediction markets, academic research, corporate filings, and news.
                   Not financial advice. Not career advice. Definitely not a reason to panic. (Probably.)
