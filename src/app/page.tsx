@@ -9,6 +9,7 @@ import EvidenceSummaryCard from "@/components/EvidenceSummaryCard";
 import NewsTicker from "@/components/NewsTicker";
 import ResearchFeed from "@/components/ResearchFeed";
 import Methodology from "@/components/Methodology";
+import FunnelStrip from "@/components/FunnelStrip";
 
 const predictions = getAllPredictions();
 
@@ -85,6 +86,11 @@ export default function Home() {
           />
         </section>
       </div>
+
+      {/* Evidence Funnel */}
+      <section>
+        <FunnelStrip />
+      </section>
 
       {/* Job Displacement & Restructuring */}
       <section>
