@@ -1,51 +1,33 @@
 import Link from "next/link";
 
+const NAV_LINKS = [
+  { href: "/", label: "Dashboard" },
+  { href: "/#research-feed", label: "Research" },
+  { href: "/#productivity-predictions", label: "Productivity" },
+  { href: "/#research-evidence", label: "Evidence" },
+  { href: "/#methodology", label: "Methodology" },
+];
+
 export default function Navbar() {
   return (
-    <nav className="sticky top-0 z-50 bg-white">
-      <div className="max-w-6xl mx-auto px-6 sm:px-10 h-20 flex items-center justify-between">
+    <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-black/[0.04]">
+      <div className="max-w-6xl mx-auto px-6 sm:px-10 h-12 flex items-center justify-between">
         <Link
           href="/"
-          className="text-[15px] sm:text-[17px] font-black tracking-tight text-[var(--foreground)] hover:opacity-70"
+          className="text-[13px] sm:text-[14px] font-semibold tracking-[-0.01em] text-[var(--foreground)] hover:opacity-70"
         >
-          AI Impact Early Warning Indicators
+          Early Signals of AI Impact
         </Link>
-        <div className="flex items-center gap-6">
-          <Link
-            href="/"
-            className="text-[15px] text-[var(--foreground)] hover:opacity-60 font-bold underline underline-offset-4"
-          >
-            Dashboard
-          </Link>
-          <Link
-            href="/#research-feed"
-            className="text-[15px] text-[var(--foreground)] hover:opacity-60 font-bold underline underline-offset-4"
-          >
-            Research Feed
-          </Link>
-          <Link
-            href="/#productivity-predictions"
-            className="text-[15px] text-[var(--foreground)] hover:opacity-60 font-bold underline underline-offset-4"
-          >
-            Productivity Forecast
-          </Link>
-          <Link
-            href="/#methodology"
-            className="text-[15px] text-[var(--foreground)] hover:opacity-60 font-bold underline underline-offset-4"
-          >
-            Methodology
-          </Link>
-          <span className="text-[13px] text-[var(--muted)] italic">
-            A weekend vibe coding project of{" "}
-            <a
-              href="https://www.linkedin.com/in/mattzieger"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline hover:text-[var(--foreground)]"
+        <div className="hidden sm:flex items-center gap-0.5">
+          {NAV_LINKS.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="text-[12px] font-medium text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-black/[0.03] px-2.5 py-1.5 rounded-md"
             >
-              Matt Zieger
-            </a>
-          </span>
+              {link.label}
+            </Link>
+          ))}
         </div>
       </div>
     </nav>

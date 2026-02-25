@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "AI Impact Early Warning Indicators — Tracking AI's impact on jobs and wages";
+export const alt = "Early Signals of AI Impact — Tracking AI's impact on jobs and wages";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -164,7 +164,7 @@ export default function OGImage() {
                 letterSpacing: "-0.02em",
               }}
             >
-              AI Impact Early Warning
+              Early Signals of
             </h1>
             <h1
               style={{
@@ -176,7 +176,7 @@ export default function OGImage() {
                 letterSpacing: "-0.02em",
               }}
             >
-              Indicators
+              AI Impact
             </h1>
           </div>
 
