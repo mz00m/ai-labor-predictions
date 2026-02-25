@@ -5,23 +5,28 @@ import { useState } from "react";
 const stripData = [
   // SECTION 1: AI EXPOSURE — "How many jobs involve tasks AI can perform?"
   { study: "IMF '24", value: 40, range: [26, 60] as [number, number], metric: "Exposure", sourceUrl: "https://www.imf.org/en/Blogs/Articles/2024/01/14/ai-will-transform-the-global-economy-lets-make-sure-it-benefits-humanity", quote: "Almost 40% of global employment is exposed to AI; about 60% of jobs in advanced economies could be impacted, with roughly half at risk of lower demand and wages." },
-  { study: "Stanford / World Bank '26", value: 38, range: [30, 38] as [number, number], metric: "Exposure", sourceUrl: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5136877", quote: "LLM adoption among U.S. workers increased from 30.1% to 38.3% between December 2024 and December 2025. Small effects on wages in exposed occupations; no significant effects on job openings or total jobs." },
-  { study: "Anthropic '25/'26", value: 36, range: null, metric: "Exposure", sourceUrl: "https://www.anthropic.com/research/anthropic-economic-index-january-2026-report", quote: "Over one-third of occupations (roughly 36%) see AI use in at least a quarter of their associated tasks. As of November 2025, augmentation (52%) has overtaken automation (49%) as the primary use pattern." },
+  { study: "Stanford / World Bank '26", value: 38, range: [30, 45] as [number, number], metric: "Exposure", sourceUrl: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5136877", quote: "LLM adoption among U.S. workers increased from 30.1% to 38.3% between December 2024 and December 2025. Small effects on wages in exposed occupations; no significant effects on job openings or total jobs." },
+  { study: "Anthropic '25/'26", value: 36, range: [30, 42] as [number, number], metric: "Exposure", sourceUrl: "https://www.anthropic.com/research/anthropic-economic-index-january-2026-report", quote: "Over one-third of occupations (roughly 36%) see AI use in at least a quarter of their associated tasks. As of November 2025, augmentation (52%) has overtaken automation (49%) as the primary use pattern." },
 
-  // SECTION 2: HIRING SLOWDOWN — "Are employers posting fewer jobs?"
-  { study: "Stanford / ADP '25", value: 20, range: null, metric: "Posting decline", sourceUrl: "https://www.adpresearch.com/yes-ai-is-affecting-employment-heres-the-data/", quote: "Employment for the youngest software developers was 20% below its late fall 2022 peak. In jobs with high AI exposure, employment for 22- to 25-year-olds fell 6%." },
-  { study: "HBS '25", value: 13, range: null, metric: "Posting decline", sourceUrl: "https://www.hbs.edu/faculty/Pages/item.aspx?num=67045", quote: "Job postings for occupations that involve lots of structured and repetitive tasks decreased by 13%. Meanwhile, employer demand for augmentation-prone roles grew 20%." },
+  // SECTION 2: PRODUCTIVITY GAINS — "How much faster does AI make workers?"
+  { study: "Goldman Sachs '25", value: 15, range: [10, 20] as [number, number], metric: "Productivity", sourceUrl: "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce", quote: "Generative AI will raise the level of labor productivity in the US and other developed markets by around 15% when fully adopted and incorporated into regular production." },
+  { study: "Brynjolfsson, Li, Raymond (QJE) '25", value: 15, range: [10, 26] as [number, number], metric: "Productivity", sourceUrl: "https://academic.oup.com/qje/article/140/2/889/7990658", quote: "Access to AI assistance increases worker productivity, as measured by issues resolved per hour, by 15% on average, with substantial heterogeneity across workers." },
+  { study: "Brynjolfsson (BLS data) '26", value: 2.7, range: [2, 3.5] as [number, number], metric: "Productivity", sourceUrl: "https://www.ft.com/content/brynjolfsson-ai-productivity-2026", quote: "US productivity grew roughly 2.7% in 2025, nearly double the 1.4% annual average of the past decade — a decoupling of output from labor input that is the hallmark of productivity growth." },
+
+  // SECTION 3: HIRING SLOWDOWN — "Are employers posting fewer jobs?"
+  { study: "HBS '25", value: 13, range: [10, 20] as [number, number], metric: "Posting decline", sourceUrl: "https://www.hbs.edu/faculty/Pages/item.aspx?num=67045", quote: "Job postings for occupations that involve lots of structured and repetitive tasks decreased by 13%. Meanwhile, employer demand for augmentation-prone roles grew 20%." },
   { study: "World Bank '25", value: 12, range: [6, 18] as [number, number], metric: "Posting decline", sourceUrl: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5504741", quote: "Using 285 million job postings, we find postings for occupations with above-median AI substitution scores fell by an average of 12%. The effect intensified from 6% in year one to 18% by year three." },
+  { study: "Stanford / ADP '25", value: 6, range: [6, 20] as [number, number], metric: "Posting decline", sourceUrl: "https://www.adpresearch.com/yes-ai-is-affecting-employment-heres-the-data/", quote: "In jobs with high AI exposure, employment for 22- to 25-year-olds fell 6% between late 2022 and July 2025. In contrast, employment among workers 30 and older grew between 6% and 13%." },
 
-  // SECTION 3: PROJECTED DISPLACEMENT — "How many jobs might disappear by 2030?"
-  { study: "Goldman Sachs '25", value: 7, range: [3, 14] as [number, number], metric: "Projected displacement", sourceUrl: "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce", quote: "AI could displace 6–7% of the US workforce if widely adopted. We remain skeptical that AI will lead to large employment reductions over the next decade." },
-  { study: "Forrester '25", value: 6, range: null, metric: "Projected displacement", sourceUrl: "https://www.forrester.com/press-newsroom/forrester-2025-predictions/", quote: "AI and automation will eliminate 6% of US jobs by 2030, with clerical and administrative roles most affected." },
-  { study: "Goldman Sachs '25 (current)", value: 2.5, range: null, metric: "Projected displacement", sourceUrl: "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce", quote: "If current AI use cases were expanded across the economy, just 2.5% of US employment would be at risk of displacement." },
+  // SECTION 4: PROJECTED DISPLACEMENT — "How many jobs might disappear by 2030?"
+  { study: "WEF '25", value: 8, range: [5, 14] as [number, number], metric: "Projected displacement", sourceUrl: "https://www.weforum.org/publications/the-future-of-jobs-report-2025/", quote: "40% of employers globally expect to reduce headcount as AI automates tasks. Net displacement estimates range from 5\u201314% of current roles by 2030." },
+  { study: "Goldman Sachs '25", value: 7, range: [3, 14] as [number, number], metric: "Projected displacement", sourceUrl: "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce", quote: "AI could displace 6\u20137% of the US workforce if widely adopted. We remain skeptical that AI will lead to large employment reductions over the next decade." },
+  { study: "Acemoglu (NBER) '24", value: 5, range: [1, 5] as [number, number], metric: "Projected displacement", sourceUrl: "https://www.nber.org/papers/w32487", quote: "Macroeconomic effects appear nontrivial but modest \u2014 no more than a 0.66% increase in TFP over 10 years. Even these estimates could be exaggerated." },
 
-  // SECTION 4: MEASURED JOB LOSS — "What's actually happened so far?"
+  // SECTION 5: MEASURED JOB LOSS — "What's actually happened so far?"
   { study: "Dallas Fed '26", value: 0.1, range: null, metric: "Measured job loss", sourceUrl: "https://www.dallasfed.org/research/economics/2026/0106", quote: "We find some correlation across occupations between employment declines and AI exposure, but only for younger workers. This suggests only a slight impact on the aggregate unemployment rate so far." },
-  { study: "Yale Budget Lab '25", value: 0, range: null, metric: "Measured job loss", sourceUrl: "https://budgetlab.yale.edu/research/evaluating-impact-ai-labor-market-current-state-affairs", quote: "Currently, measures of exposure, automation, and augmentation show no sign of being related to changes in employment or unemployment." },
-  { study: "Goldman Sachs '25", value: 0, range: null, metric: "Measured job loss", sourceUrl: "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce", quote: "There is no economically or statistically significant correlation between AI exposure and job growth, unemployment, job finding rates, layoff rates, weekly hours, or average hourly earnings." },
+  { study: "Yale Budget Lab '25", value: 0, range: [0, 0.5] as [number, number], metric: "Measured job loss", sourceUrl: "https://budgetlab.yale.edu/research/evaluating-impact-ai-labor-market-current-state-affairs", quote: "Currently, measures of exposure, automation, and augmentation show no sign of being related to changes in employment or unemployment." },
+  { study: "Goldman Sachs '25", value: 0, range: [0, 0.5] as [number, number], metric: "Measured job loss", sourceUrl: "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce", quote: "There is no economically or statistically significant correlation between AI exposure and job growth, unemployment, job finding rates, layoff rates, weekly hours, or average hourly earnings." },
 ];
 
 const sections = [
@@ -31,6 +36,13 @@ const sections = [
     question: "How many jobs involve tasks AI can perform?",
     barColor: "#E2E8F0",
     barHover: "#CBD5E1",
+  },
+  {
+    metric: "Productivity",
+    label: "Productivity Gains",
+    question: "How much faster does AI make workers?",
+    barColor: "#D5E0D5",
+    barHover: "#B0C4B0",
   },
   {
     metric: "Posting decline",
@@ -195,7 +207,7 @@ export default function FunnelStrip() {
         {/* Bottom note */}
         <div className="px-4 sm:px-6 py-3.5 border-t border-black/[0.06] bg-black/[0.01]">
           <p className="text-[11px] text-[var(--muted)] leading-relaxed">
-            Based on 12 studies &middot; Working papers, government data,
+            Based on 15 studies &middot; Working papers, government data,
             institutional analysis &middot; Hover for quotes and links
           </p>
         </div>
