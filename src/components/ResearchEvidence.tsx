@@ -203,19 +203,6 @@ interface MacroStudy {
 
 const MACRO_STUDIES: MacroStudy[] = [
   {
-    id: "babina-pre-genai-2023",
-    authors: "Babina, Fedyk, He & Hodson",
-    year: 2023,
-    title: "Pre-GenAI AI Investment Study",
-    metric: "TFP",
-    effectPct: 0,
-    effectLabel: "0%",
-    finding: "Firms with more AI workers had ~20% higher sales, 18% higher employment, 22% higher valuations over 8 years — but zero relationship with productivity per worker or TFP. All growth came through product innovation.",
-    citation: "Published study (pre-GenAI era data)",
-    url: "https://www.nber.org/papers/w30400",
-    direction: "neutral",
-  },
-  {
     id: "bick-blandin-deming-2024",
     authors: "Bick, Blandin & Deming",
     year: 2024,
@@ -226,6 +213,19 @@ const MACRO_STUDIES: MacroStudy[] = [
     finding: "~40% of working-age Americans use generative AI; self-reported time savings average 5–6% of work hours among users, implying aggregate savings of ~1.4% across all workers (~6.72 extra minutes/day).",
     citation: "NBER Working Paper 32966",
     url: "https://www.nber.org/papers/w32966",
+    direction: "positive",
+  },
+  {
+    id: "stlouis-fed-2025",
+    authors: "St. Louis Fed",
+    year: 2025,
+    title: "Labor Productivity Estimate",
+    metric: "Labor productivity",
+    effectPct: 1.2,
+    effectLabel: "+1.1–1.3%",
+    finding: "Generative AI may have increased labor productivity by up to 1.1–1.3% since ChatGPT's release (based on self-reported time savings — likely overstated).",
+    citation: "St. Louis Fed, 2025",
+    url: "https://www.stlouisfed.org/on-the-economy/2025/feb/how-much-has-gen-ai-increased-labor-productivity",
     direction: "positive",
   },
   {
@@ -242,82 +242,17 @@ const MACRO_STUDIES: MacroStudy[] = [
     direction: "neutral",
   },
   {
-    id: "stlouis-fed-2025",
-    authors: "St. Louis Fed",
-    year: 2025,
-    title: "Labor Productivity Estimate",
-    metric: "Labor productivity",
-    effectPct: 1.2,
-    effectLabel: "+1.1–1.3%",
-    finding: "Generative AI may have increased labor productivity by up to 1.1–1.3% since ChatGPT's release (based on self-reported time savings — likely overstated).",
-    citation: "St. Louis Fed, 2025",
-    url: "https://www.stlouisfed.org/on-the-economy/2025/feb/how-much-has-gen-ai-increased-labor-productivity",
-    direction: "positive",
-  },
-  {
-    id: "humlum-vestergaard-2025",
-    authors: "Humlum & Vestergaard",
-    year: 2025,
-    title: "Denmark, 11 Occupations",
-    metric: "Earnings & hours",
+    id: "babina-pre-genai-2023",
+    authors: "Babina, Fedyk, He & Hodson",
+    year: 2023,
+    title: "Pre-GenAI AI Investment Study",
+    metric: "TFP",
     effectPct: 0,
-    effectLabel: "~0%",
-    finding: "Essentially zero effects on earnings and hours worked; confidence intervals rule out effects larger than 2%. AI adoption linked to ~4% occupational switching.",
-    citation: "NBER Working Paper 33777",
-    url: "https://www.nber.org/papers/w33777",
+    effectLabel: "0%",
+    finding: "Firms with more AI workers had ~20% higher sales, 18% higher employment, 22% higher valuations over 8 years — but zero relationship with productivity per worker or TFP. All growth came through product innovation.",
+    citation: "Published study (pre-GenAI era data)",
+    url: "https://www.nber.org/papers/w30400",
     direction: "neutral",
-  },
-  {
-    id: "yale-budget-lab-2025",
-    authors: "Yale Budget Lab",
-    year: 2025,
-    title: "U.S. Labor Market Assessment",
-    metric: "Employment",
-    effectPct: 0,
-    effectLabel: "Stable",
-    finding: "AI's impact \"remains largely speculative\" and reflects \"stability, not major disruption at an economy-wide level.\"",
-    citation: "budgetlab.yale.edu",
-    url: "https://budgetlab.yale.edu/research/evaluating-impact-ai-labor-market-current-state-affairs",
-    direction: "neutral",
-  },
-  {
-    id: "hosseini-lichtinger-2025",
-    authors: "Hosseini Maasoum & Lichtinger",
-    year: 2025,
-    title: "U.S. Resume Data / 62M Workers",
-    metric: "Employment",
-    effectPct: -15,
-    effectLabel: "Junior \u2193",
-    finding: "Junior employment declined sharply at AI-adopting firms; senior employment largely unchanged — described as \"seniority-biased technological change.\"",
-    citation: "SSRN Working Paper, 2025",
-    url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5050752",
-    direction: "negative",
-  },
-  {
-    id: "brynjolfsson-chandar-chen-2025",
-    authors: "Brynjolfsson, Chandar & Chen",
-    year: 2025,
-    title: "\"Canaries in the Coal Mine\"",
-    metric: "Employment",
-    effectPct: -15.5,
-    effectLabel: "-15–16%",
-    finding: "Early-career workers (ages 22–25) in AI-exposed occupations show 15–16% relative employment declines.",
-    citation: "Working paper, November 2025",
-    url: "https://digitaleconomy.stanford.edu/publications/canaries-in-the-coal-mine/",
-    direction: "negative",
-  },
-  {
-    id: "frank-2026",
-    authors: "Frank et al.",
-    year: 2026,
-    title: "AI Exposure & Unemployment",
-    metric: "Unemployment",
-    effectPct: -5,
-    effectLabel: "Risk \u2191",
-    finding: "Unemployment risk in AI-exposed occupations rose beginning early 2022; graduates with AI-exposed curricula have higher first-job pay and shorter job searches post-ChatGPT.",
-    citation: "arXiv:2601.02554",
-    url: "https://arxiv.org/abs/2601.02554",
-    direction: "negative",
   },
 ];
 
@@ -718,24 +653,21 @@ export default function ResearchEvidence() {
           {/* Tile header */}
           <div className="mb-5">
             <h3 className="text-[18px] font-bold text-[var(--foreground)]">
-              Macro Productivity &amp; Employment
+              Macro Productivity
             </h3>
             <p className="text-[13px] text-[var(--muted)] mt-1">
-              Economy-wide studies measuring aggregate productivity, employment,
-              and labor market effects
+              Economy-wide studies measuring aggregate productivity gains —
+              TFP, labor productivity, and time savings
             </p>
           </div>
 
           {/* Summary */}
           <div className="flex flex-wrap gap-2 mb-4">
-            <span className="text-[11px] font-bold px-2 py-1 rounded-full bg-gray-100 text-gray-600">
-              {MACRO_STUDIES.filter((s) => s.direction === "neutral").length} null / negligible
-            </span>
             <span className="text-[11px] font-bold px-2 py-1 rounded-full bg-emerald-50 text-emerald-700">
               {MACRO_STUDIES.filter((s) => s.direction === "positive").length} small positive
             </span>
-            <span className="text-[11px] font-bold px-2 py-1 rounded-full bg-red-50 text-red-600">
-              {MACRO_STUDIES.filter((s) => s.direction === "negative").length} negative (employment)
+            <span className="text-[11px] font-bold px-2 py-1 rounded-full bg-gray-100 text-gray-600">
+              {MACRO_STUDIES.filter((s) => s.direction === "neutral").length} negligible
             </span>
           </div>
 
@@ -755,9 +687,9 @@ export default function ResearchEvidence() {
             <p className="text-[12px] text-amber-900 leading-relaxed">
               <span className="font-bold">Key gap:</span>{" "}
               Micro studies show 14–56% individual productivity gains, but
-              macro data shows ~0–1.3% aggregate effect. The gap likely reflects
-              adoption frictions, bottleneck tasks, and the J-curve dynamic of
-              technology investment.
+              macro data shows ~0–1.4% aggregate effect so far. The gap likely
+              reflects adoption frictions, bottleneck tasks, and the J-curve
+              dynamic of technology investment.
             </p>
           </div>
         </div>
