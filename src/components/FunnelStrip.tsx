@@ -3,18 +3,18 @@
 import { useState } from "react";
 
 const stripData = [
-  { study: "Goldman Sachs '23", value: 66, metric: "Exposure", url: "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce" },
   { study: "Anthropic '26", value: 49, metric: "Exposure", url: "https://www.anthropic.com/research/anthropic-economic-index-january-2026-report" },
   { study: "IMF '24", value: 40, metric: "Exposure", url: "https://www.imf.org/en/blogs/articles/2024/01/14/ai-will-transform-the-global-economy-lets-make-sure-it-benefits-humanity" },
   { study: "OECD '23", value: 27, metric: "Exposure", url: "https://www.oecd.org/en/publications/oecd-employment-outlook-2023_08785bba-en.html" },
+  { study: "Goldman Sachs '23", value: 25, metric: "Exposure", url: "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce" },
 
   { study: "HBS '25", value: 17, metric: "Posting decline", url: "https://www.library.hbs.edu/working-knowledge/enhance-or-eliminate-how-ai-will-likely-change-these-jobs" },
   { study: "World Bank '25", value: 12, metric: "Posting decline", url: "https://openknowledge.worldbank.org/entities/publication/b5d5c33c-9419-4dc7-93fb-ec9d6b997c4b" },
 
   { study: "WEF '25", value: 8, metric: "Projected displacement", url: "https://www.weforum.org/press/2025/01/future-of-jobs-report-2025-78-million-new-job-opportunities-by-2030-but-urgent-upskilling-needed-to-prepare-workforces/" },
+  { study: "Goldman Sachs '25", value: 7, metric: "Projected displacement", url: "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce" },
   { study: "Forrester '25", value: 6, metric: "Projected displacement", url: "https://www.forrester.com/blogs/ai-and-automation-will-take-6-of-us-jobs-by-2030/" },
   { study: "Acemoglu (NBER)", value: 5, metric: "Projected displacement", url: "https://www.nber.org/papers/w32487" },
-  { study: "Goldman Sachs '25", value: 2.5, metric: "Projected displacement", url: "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce" },
 
   { study: "Dallas Fed '26", value: 0.1, metric: "Measured job loss", url: "https://www.dallasfed.org/research/economics/2026/0106" },
   { study: "Yale Budget Lab '25", value: 0, metric: "Measured job loss", url: "https://budgetlab.yale.edu/research/evaluating-impact-ai-labor-market-current-state-affairs" },
@@ -54,7 +54,7 @@ const sections = [
   },
 ];
 
-const MAX_VAL = 75;
+const MAX_VAL = 55;
 
 export default function FunnelStrip() {
   const [hovered, setHovered] = useState<string | null>(null);
@@ -171,7 +171,7 @@ export default function FunnelStrip() {
         <div className="px-4 sm:px-6 py-3.5 border-t border-black/[0.06] bg-black/[0.01]">
           <p className="text-[12px] text-[var(--muted)] leading-relaxed">
             <strong className="text-[var(--foreground)]">The pattern:</strong>{" "}
-            Two-thirds of jobs have <em>some</em> AI exposure &mdash; but measured
+            Up to half of jobs have <em>some</em> AI exposure &mdash; but measured
             job loss remains near zero. The question is how fast exposure converts
             to displacement, and whether augmentation absorbs the shock.
           </p>
