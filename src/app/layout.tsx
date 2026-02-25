@@ -6,12 +6,12 @@ import { Analytics } from "@vercel/analytics/react";
 export const metadata: Metadata = {
   title: "AI Impact Early Warning Indicators",
   description:
-    "Track predictions about AI's impact on jobs and wages, with evidence from peer-reviewed research to social media. A weekend vibe coding project by Matt Zieger.",
+    "Track predictions about AI's impact on jobs and wages, with evidence from working papers to social media. A weekend vibe coding project by Matt Zieger.",
   metadataBase: new URL("https://labor.mattzieger.com"),
   openGraph: {
     title: "AI Impact Early Warning Indicators",
     description:
-      "15 predictions tracking AI-driven job displacement, wage impacts, and corporate adoption — filtered by evidence quality from peer-reviewed research to social media.",
+      "15 predictions tracking AI-driven job displacement, wage impacts, and corporate adoption — filtered by evidence quality from working papers to social media.",
     type: "website",
     siteName: "AI Impact Early Warning Indicators",
   },

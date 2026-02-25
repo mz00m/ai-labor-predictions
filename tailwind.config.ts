@@ -10,6 +10,9 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: ["Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"],
+        serif: ["Source Serif 4", "Georgia", "serif"],
+        mono: ["DM Mono", "ui-monospace", "monospace"],
+        dm: ["DM Sans", "Inter", "sans-serif"],
       },
       colors: {
         muted: "var(--muted)",
