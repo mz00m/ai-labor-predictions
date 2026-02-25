@@ -8,10 +8,15 @@ const stripData = [
   { study: "Stanford / World Bank '26", value: 38, range: [30, 38] as [number, number], metric: "Exposure", sourceUrl: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5136877", quote: "LLM adoption among U.S. workers increased from 30.1% to 38.3% between December 2024 and December 2025. Small effects on wages in exposed occupations; no significant effects on job openings or total jobs." },
   { study: "Anthropic '25/'26", value: 36, range: null, metric: "Exposure", sourceUrl: "https://www.anthropic.com/research/anthropic-economic-index-january-2026-report", quote: "Over one-third of occupations (roughly 36%) see AI use in at least a quarter of their associated tasks. As of November 2025, augmentation (52%) has overtaken automation (49%) as the primary use pattern." },
 
-  // SECTION 2: PRODUCTIVITY GAINS — "How much faster does AI make workers?"
-  { study: "Goldman Sachs '25", value: 15, range: null, metric: "Productivity", sourceUrl: "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce", quote: "Generative AI will raise the level of labor productivity in the US and other developed markets by around 15% when fully adopted and incorporated into regular production." },
-  { study: "Brynjolfsson, Li, Raymond (QJE) '25", value: 15, range: null, metric: "Productivity", sourceUrl: "https://academic.oup.com/qje/article/140/2/889/7990658", quote: "Access to AI assistance increases worker productivity, as measured by issues resolved per hour, by 15% on average, with substantial heterogeneity across workers." },
-  { study: "Brynjolfsson (BLS data) '26", value: 2.7, range: null, metric: "Productivity", sourceUrl: "https://www.ft.com/content/brynjolfsson-ai-productivity-2026", quote: "US productivity grew roughly 2.7% in 2025, nearly double the 1.4% annual average of the past decade \u2014 a decoupling of output from labor input that is the hallmark of productivity growth." },
+  // SECTION 2a: EMPLOYEE PRODUCTIVITY — "How much faster does AI make individual workers?"
+  { study: "Noy & Zhang (Science) '23", value: 37, range: null, metric: "Employee productivity", sourceUrl: "https://www.science.org/doi/10.1126/science.adh2586", quote: "Workers completed tasks 0.8 standard deviations faster and produced output rated 0.4 standard deviations higher in quality. Lower-performing workers saw the largest gains." },
+  { study: "Goldman Sachs '25", value: 15, range: null, metric: "Employee productivity", sourceUrl: "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce", quote: "Generative AI will raise the level of labor productivity in the US and other developed markets by around 15% when fully adopted and incorporated into regular production." },
+  { study: "Brynjolfsson, Li, Raymond (QJE) '25", value: 15, range: null, metric: "Employee productivity", sourceUrl: "https://academic.oup.com/qje/article/140/2/889/7990658", quote: "Access to AI assistance increases worker productivity, as measured by issues resolved per hour, by 15% on average, with substantial heterogeneity across workers." },
+
+  // SECTION 2b: MACRO ECONOMIC PRODUCTIVITY — "How much has this moved the needle economy-wide?"
+  { study: "Brynjolfsson (BLS data) '26", value: 2.7, range: null, metric: "Macro productivity", sourceUrl: "https://www.ft.com/content/brynjolfsson-ai-productivity-2026", quote: "US productivity grew roughly 2.7% in 2025, nearly double the 1.4% annual average of the past decade \u2014 a decoupling of output from labor input that is the hallmark of productivity growth." },
+  { study: "Bick, Blandin & Deming (NBER) '24", value: 1.4, range: null, metric: "Macro productivity", sourceUrl: "https://www.nber.org/papers/w32966", quote: "~40% of working-age Americans use generative AI; self-reported time savings average 5\u20136% of work hours among users, implying aggregate savings of ~1.4% across all workers (~6.72 extra minutes/day)." },
+  { study: "St. Louis Fed '25", value: 1.2, range: [1.1, 1.3] as [number, number], metric: "Macro productivity", sourceUrl: "https://www.stlouisfed.org/on-the-economy/2025/feb/how-much-has-gen-ai-increased-labor-productivity", quote: "Generative AI may have increased labor productivity by up to 1.1\u20131.3% since ChatGPT\u2019s release (based on self-reported time savings \u2014 likely overstated)." },
 
   // SECTION 3: HIRING SLOWDOWN — "Are employers posting fewer jobs?"
   { study: "HBS '25", value: 13, range: null, metric: "Posting decline", sourceUrl: "https://www.hbs.edu/faculty/Pages/item.aspx?num=67045", quote: "Job postings for occupations that involve lots of structured and repetitive tasks decreased by 13%. Meanwhile, employer demand for augmentation-prone roles grew 20%." },
@@ -38,11 +43,18 @@ const sections = [
     barHover: "#CBD5E1",
   },
   {
-    metric: "Productivity",
-    label: "Productivity Gains",
-    question: "How much faster does AI make workers?",
-    barColor: "#D5E0D5",
-    barHover: "#B0C4B0",
+    metric: "Employee productivity",
+    label: "Employee Productivity",
+    question: "How much faster does AI make individual workers?",
+    barColor: "#C6F6D5",
+    barHover: "#9AE6B4",
+  },
+  {
+    metric: "Macro productivity",
+    label: "Macro Economic Productivity",
+    question: "How much has this moved the needle economy-wide?",
+    barColor: "#BEE3F8",
+    barHover: "#90CDF4",
   },
   {
     metric: "Posting decline",
@@ -205,11 +217,17 @@ export default function FunnelStrip() {
         })}
 
         {/* Bottom note */}
-        <div className="px-4 sm:px-6 py-3.5 border-t border-black/[0.06] bg-black/[0.01]">
+        <div className="px-4 sm:px-6 py-3.5 border-t border-black/[0.06] bg-black/[0.01] flex items-center justify-between gap-4">
           <p className="text-[11px] text-[var(--muted)] leading-relaxed">
-            Based on 15 studies &middot; Working papers, government data,
+            Based on 18 studies &middot; Working papers, government data,
             institutional analysis &middot; Hover for quotes and links
           </p>
+          <a
+            href="#research-evidence"
+            className="text-[12px] font-semibold text-[var(--foreground)] hover:text-[var(--accent)] whitespace-nowrap shrink-0"
+          >
+            Read more sources &rarr;
+          </a>
         </div>
       </div>
     </div>
