@@ -41,11 +41,19 @@
       "evidenceTier": 2
     },
     {
-      "date": "2026-01-10",
+      "date": "2024-11-01",
       "value": 27.5,
       "confidenceLow": 20,
       "confidenceHigh": 35,
-      "sourceIds": ["bls-programmer-employment-2026"],
+      "sourceIds": ["bls-programmer-employment-observed"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2026-01-10",
+      "value": 6,
+      "confidenceLow": 3,
+      "confidenceHigh": 10,
+      "sourceIds": ["bls-programmer-projections-2034"],
       "evidenceTier": 1
     }
   ],
@@ -266,13 +274,22 @@
       "excerpt": "Software developer job postings declined 33% from pre-ChatGPT levels. Overall tech postings down 36%. AI/ML roles the only growing category."
     },
     {
-      "id": "bls-programmer-employment-2026",
-      "title": "BLS Occupational Employment Statistics: Computer Programmers",
+      "id": "bls-programmer-employment-observed",
+      "title": "BLS Occupational Employment Statistics: Computer Programmers — Observed Decline",
       "url": "https://www.bls.gov/oes/current/oes151251.htm",
       "publisher": "Bureau of Labor Statistics",
       "evidenceTier": 1,
+      "datePublished": "2024-11-01",
+      "excerpt": "Computer programmer employment (routine coding roles) fell ~27.5% in roughly two years following ChatGPT's release — one of the largest two-year drops in any occupation tracked by BLS. Software developer employment remained flat."
+    },
+    {
+      "id": "bls-programmer-projections-2034",
+      "title": "BLS Employment Projections: Computer Programmers 2024–2034",
+      "url": "https://www.bls.gov/ooh/computer-and-information-technology/computer-programmers.htm",
+      "publisher": "Bureau of Labor Statistics",
+      "evidenceTier": 1,
       "datePublished": "2026-01-10",
-      "excerpt": "Computer programmer employment fell 27.5% since 2020. BLS projects continued decline as AI coding tools automate routine programming tasks."
+      "excerpt": "BLS projects a further 6% decline in programmer roles through 2034. Computer programmer employment (routine coding roles) fell ~27.5% in roughly two years following ChatGPT's release — one of the largest two-year drops in any occupation tracked by BLS. Software developer employment remained flat."
     },
     {
       "id": "challenger-ai-job-cuts-2025",
