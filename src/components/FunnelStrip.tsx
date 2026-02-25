@@ -196,7 +196,7 @@ export default function FunnelStrip() {
         {/* Bottom note */}
         <div className="px-4 sm:px-6 py-3.5 border-t border-black/[0.06] bg-black/[0.01]">
           <p className="text-[11px] text-[var(--muted)] leading-relaxed">
-            Based on 12 studies &middot; Peer-reviewed research, government data,
+            Based on 12 studies &middot; Working papers, government data,
             institutional analysis &middot; Hover for detail
           </p>
         </div>
