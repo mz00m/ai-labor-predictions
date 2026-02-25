@@ -42,9 +42,9 @@
     },
     {
       "date": "2025-11-01",
-      "value": 30,
-      "confidenceLow": 18,
-      "confidenceHigh": 40,
+      "value": 18,
+      "confidenceLow": 6,
+      "confidenceHigh": 30,
       "sourceIds": ["worldbank-liu-wang-yu-2025"],
       "evidenceTier": 1
     },
@@ -226,7 +226,7 @@
       "publisher": "World Bank (Liu, Wang, Yu)",
       "evidenceTier": 1,
       "datePublished": "2025-11-01",
-      "excerpt": "Professional services postings fell 30% and administrative support fell 40% relative to less-substitutable occupations. Effects accelerated from 6% in year one to 18% by year three post-ChatGPT."
+      "excerpt": "Job postings for occupations with above-median AI substitution scores fell 18% by year three post-ChatGPT, up from 6% in year one. Professional services postings fell 30% and administrative support fell 40% relative to less-substitutable occupations."
     },
     {
       "id": "noy-zhang-science-2023",
