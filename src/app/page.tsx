@@ -24,7 +24,7 @@ export default function Home() {
   const totalSources = predictions.reduce((sum, p) => sum + p.sources.length, 0);
 
   return (
-    <div className="space-y-14">
+    <div className="space-y-10">
       {/* Hero */}
       <div className="relative overflow-hidden -mx-6 sm:-mx-10 px-6 sm:px-10 pt-4 pb-0 sm:pt-6 sm:pb-0">
         {/* Background gradient orbs */}
@@ -53,9 +53,9 @@ export default function Home() {
             <br className="hidden sm:block" /> the labor market?
           </h1>
           <p className="mt-4 text-[17px] text-[var(--muted)] leading-relaxed max-w-2xl">
-            Tracking {predictions.length} predictions across displacement, wages, and adoption
-            &mdash; sourced from peer-reviewed research, government data, think tanks, and earnings calls.
-            Filter by evidence quality to see how the picture changes.
+            250+ sources, one pattern: AI adoption is accelerating, productivity is climbing,
+            entry-level and freelance work is compressing, and jobs are reshaping faster than
+            they&apos;re disappearing. No measurable macro displacement &mdash; yet.
           </p>
         </div>
 
@@ -64,17 +64,6 @@ export default function Home() {
           <NewsTicker />
         </div>
       </div>
-
-      {/* Research Framing Banner */}
-      <section>
-        <div className="border border-black/[0.08] rounded-lg px-5 py-4 sm:px-6 sm:py-4">
-          <p className="text-[14px] text-[var(--muted)] leading-relaxed">
-            <span className="font-semibold text-[var(--foreground)]">Bottom line up front:</span>{" "}
-            AI exposure &ne; job loss. The evidence so far: sizable productivity gains, no macro displacement, but real and growing
-            pressure on entry-level workers. Augmentation still outpaces automation.
-          </p>
-        </div>
-      </section>
 
       {/* Evidence Funnel */}
       <section>
