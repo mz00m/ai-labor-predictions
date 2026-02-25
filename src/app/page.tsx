@@ -65,31 +65,28 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Research Framing Banner + Filter */}
-      <div className="space-y-10">
-        {/* Research Framing Banner — compact */}
-        <section>
-          <div className="border border-black/[0.08] rounded-lg px-5 py-4 sm:px-6 sm:py-4">
-            <p className="text-[14px] text-[var(--muted)] leading-relaxed">
-              <span className="font-semibold text-[var(--foreground)]">Bottom line up front:</span>{" "}
-              AI exposure &ne; job loss. The evidence so far: sizable productivity gains, no macro displacement, but real and growing
-              pressure on entry-level workers. Augmentation still outpaces automation.
-            </p>
-          </div>
-        </section>
-
-        {/* Evidence Filter */}
-        <section>
-          <EvidenceFilter
-            selectedTiers={selectedTiers}
-            onChange={setSelectedTiers}
-          />
-        </section>
-      </div>
+      {/* Research Framing Banner */}
+      <section>
+        <div className="border border-black/[0.08] rounded-lg px-5 py-4 sm:px-6 sm:py-4">
+          <p className="text-[14px] text-[var(--muted)] leading-relaxed">
+            <span className="font-semibold text-[var(--foreground)]">Bottom line up front:</span>{" "}
+            AI exposure &ne; job loss. The evidence so far: sizable productivity gains, no macro displacement, but real and growing
+            pressure on entry-level workers. Augmentation still outpaces automation.
+          </p>
+        </div>
+      </section>
 
       {/* Evidence Funnel */}
       <section>
         <FunnelStrip />
+      </section>
+
+      {/* Evidence Filter */}
+      <section>
+        <EvidenceFilter
+          selectedTiers={selectedTiers}
+          onChange={setSelectedTiers}
+        />
       </section>
 
       {/* Job Displacement & Restructuring */}

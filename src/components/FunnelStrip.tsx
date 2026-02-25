@@ -3,31 +3,25 @@
 import { useState } from "react";
 
 const stripData = [
-  { study: "Goldman Sachs '23", value: 66, range: [55, 75], metric: "Exposure" },
-  { study: "Anthropic '26", value: 49, range: [40, 55], metric: "Exposure" },
-  { study: "IMF '24", value: 40, range: [35, 50], metric: "Exposure" },
-  { study: "Stanford '26", value: 36, range: [30, 42], metric: "Exposure" },
-  { study: "OECD '23", value: 27, range: [20, 35], metric: "Exposure" },
+  { study: "Goldman Sachs '23", value: 66, metric: "Exposure", url: "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce" },
+  { study: "Anthropic '26", value: 49, metric: "Exposure", url: "https://www.anthropic.com/research/anthropic-economic-index-january-2026-report" },
+  { study: "IMF '24", value: 40, metric: "Exposure", url: "https://www.imf.org/en/blogs/articles/2024/01/14/ai-will-transform-the-global-economy-lets-make-sure-it-benefits-humanity" },
+  { study: "OECD '23", value: 27, metric: "Exposure", url: "https://www.oecd.org/en/publications/oecd-employment-outlook-2023_08785bba-en.html" },
 
-  { study: "HBS '25", value: 17, range: [14, 20], metric: "Posting decline" },
-  { study: "World Bank '25", value: 12, range: [6, 18], metric: "Posting decline" },
+  { study: "HBS '25", value: 17, metric: "Posting decline", url: "https://www.library.hbs.edu/working-knowledge/enhance-or-eliminate-how-ai-will-likely-change-these-jobs" },
+  { study: "World Bank '25", value: 12, metric: "Posting decline", url: "https://openknowledge.worldbank.org/entities/publication/b5d5c33c-9419-4dc7-93fb-ec9d6b997c4b" },
 
-  { study: "WEF '25", value: 9, range: [5, 14], metric: "Projected displacement" },
-  { study: "Forrester '25", value: 6, range: [4, 8], metric: "Projected displacement" },
-  { study: "Acemoglu (NBER)", value: 3, range: [1, 5], metric: "Projected displacement" },
-  { study: "Goldman Sachs '25", value: 2.5, range: [1.5, 4], metric: "Projected displacement" },
+  { study: "WEF '25", value: 8, metric: "Projected displacement", url: "https://www.weforum.org/press/2025/01/future-of-jobs-report-2025-78-million-new-job-opportunities-by-2030-but-urgent-upskilling-needed-to-prepare-workforces/" },
+  { study: "Forrester '25", value: 6, metric: "Projected displacement", url: "https://www.forrester.com/blogs/ai-and-automation-will-take-6-of-us-jobs-by-2030/" },
+  { study: "Acemoglu (NBER)", value: 5, metric: "Projected displacement", url: "https://www.nber.org/papers/w32487" },
+  { study: "Goldman Sachs '25", value: 2.5, metric: "Projected displacement", url: "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce" },
 
-  { study: "Yale Budget Lab '25", value: 0.2, range: [0, 0.5], metric: "Measured job loss" },
-  { study: "Dallas Fed '26", value: 0.1, range: null, metric: "Measured job loss" },
-  { study: "ICLE '26", value: 0, range: [0, 1], metric: "Measured job loss" },
-] as const;
+  { study: "Dallas Fed '26", value: 0.1, metric: "Measured job loss", url: "https://www.dallasfed.org/research/economics/2026/0106" },
+  { study: "Yale Budget Lab '25", value: 0, metric: "Measured job loss", url: "https://budgetlab.yale.edu/research/evaluating-impact-ai-labor-market-current-state-affairs" },
+  { study: "ICLE '26", value: 0, metric: "Measured job loss", url: "https://laweconcenter.org/resources/ai-productivity-and-labor-markets-a-review-of-the-empirical-evidence/" },
+];
 
-type StripItem = {
-  study: string;
-  value: number;
-  range: readonly [number, number] | null;
-  metric: string;
-};
+type StripItem = (typeof stripData)[number];
 
 const sections = [
   {
@@ -81,9 +75,9 @@ export default function FunnelStrip() {
       {/* Chart */}
       <div className="border border-black/[0.06] rounded-lg overflow-hidden">
         {sections.map((section, si) => {
-          const items = (stripData as readonly StripItem[]).filter(
-            (d) => d.metric === section.metric
-          );
+          const items = stripData
+            .filter((d) => d.metric === section.metric)
+            .sort((a, b) => b.value - a.value);
 
           return (
             <div key={si}>
@@ -108,11 +102,14 @@ export default function FunnelStrip() {
                 const barWidth = Math.max((d.value / MAX_VAL) * 100, 0.4);
 
                 return (
-                  <div
+                  <a
                     key={i}
+                    href={d.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     onMouseEnter={() => setHovered(key)}
                     onMouseLeave={() => setHovered(null)}
-                    className="flex items-stretch w-full h-[26px] sm:h-[30px] cursor-default"
+                    className="flex items-stretch w-full h-[26px] sm:h-[30px] cursor-pointer no-underline"
                   >
                     {/* Fixed label column */}
                     <div
@@ -123,7 +120,7 @@ export default function FunnelStrip() {
                       <span
                         className={`text-[11px] sm:text-[12px] whitespace-nowrap overflow-hidden text-ellipsis leading-none transition-colors duration-100 ${
                           isHovered
-                            ? "font-semibold text-[var(--foreground)]"
+                            ? "font-semibold text-[var(--accent)]"
                             : "font-normal text-[var(--muted)]"
                         }`}
                       >
@@ -157,16 +154,13 @@ export default function FunnelStrip() {
                           }`}
                         >
                           {d.value}%
-                          {isHovered && d.range
-                            ? `  \u00b7  ${d.range[0]}\u2013${d.range[1]}%`
-                            : ""}
                         </span>
                       </div>
 
                       {/* Hairline separator */}
                       <div className="absolute bottom-0 left-0 right-0 h-px bg-black/[0.04]" />
                     </div>
-                  </div>
+                  </a>
                 );
               })}
             </div>
@@ -182,8 +176,8 @@ export default function FunnelStrip() {
             to displacement, and whether augmentation absorbs the shock.
           </p>
           <p className="text-[11px] text-[var(--muted)]/50 mt-1.5">
-            Based on 25 sources &middot; Peer-reviewed research, government data,
-            institutional analysis &middot; Hover for ranges
+            Click any bar to view the source &middot; Peer-reviewed research,
+            government data, institutional analysis
           </p>
         </div>
       </div>
