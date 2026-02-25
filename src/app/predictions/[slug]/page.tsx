@@ -158,8 +158,16 @@ export default function PredictionDetailPage() {
           )}
         </div>
 
-        <p className="text-[16px] text-[var(--muted)] leading-relaxed mb-6 max-w-2xl">
+        <p className="text-[16px] text-[var(--muted)] leading-relaxed mb-3 max-w-2xl">
           {contextText}
+        </p>
+        <p className="text-[13px] text-[var(--muted)] opacity-60 mb-6 max-w-2xl">
+          This number is a weighted average across all selected sources, with higher-tier evidence and more recent data weighted more heavily.
+          See the{" "}
+          <Link href="/#how-we-calculate" className="underline hover:text-[var(--foreground)]">
+            full methodology
+          </Link>{" "}
+          for details on weighting, source validity, and recency bias.
         </p>
 
         {bestSource && bestTierConfig && (

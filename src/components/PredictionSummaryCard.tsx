@@ -238,8 +238,17 @@ export default function PredictionSummaryCard({
           </div>
 
           {/* Context */}
-          <p className="text-[14px] text-[var(--muted)] leading-relaxed mb-4">
+          <p className="text-[14px] text-[var(--muted)] leading-relaxed mb-2">
             {contextLine}
+          </p>
+          <p className="text-[11px] text-[var(--muted)] opacity-60 mb-4">
+            Weighted average of all selected sources.{" "}
+            <span
+              className="underline cursor-pointer"
+              onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.location.hash = "how-we-calculate"; }}
+            >
+              Methodology
+            </span>
           </p>
 
           {/* Research annotation */}

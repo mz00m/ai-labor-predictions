@@ -30,6 +30,132 @@ export default function Methodology() {
           </p>
         </div>
 
+        {/* How We Calculate the Headline Number */}
+        <div id="how-we-calculate">
+          <h3 className="text-[18px] font-bold text-[var(--foreground)] mb-4">
+            How We Calculate the Headline Number
+          </h3>
+          <p className="text-[14px] text-[var(--muted)] leading-relaxed mb-5 max-w-3xl">
+            The large number shown on every tile and prediction page is a
+            <strong className="text-[var(--foreground)]"> weighted average </strong>
+            of all historical data points from the selected evidence tiers.
+            It is not a single study&apos;s finding or a simple arithmetic mean &mdash;
+            it accounts for both the quality of each source and how recently it was published.
+          </p>
+
+          <div className="space-y-4 max-w-3xl">
+            {/* Tier weighting */}
+            <div className="border border-black/[0.06] rounded-lg px-5 py-5 bg-white">
+              <p className="text-[14px] font-bold text-[var(--foreground)] mb-2">
+                Evidence Tier Weighting
+              </p>
+              <p className="text-[13px] text-[var(--muted)] leading-relaxed mb-3">
+                Each data point receives a base weight determined by its evidence tier.
+                Higher-quality sources have proportionally more influence on the headline number.
+              </p>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
+                <div className="bg-black/[0.02] rounded px-3 py-2">
+                  <span className="inline-block w-2 h-2 rounded-full bg-green-500 mb-1" />
+                  <p className="text-[13px] font-semibold text-[var(--foreground)]">Tier 1</p>
+                  <p className="text-[12px] text-[var(--muted)]">4&times; weight</p>
+                </div>
+                <div className="bg-black/[0.02] rounded px-3 py-2">
+                  <span className="inline-block w-2 h-2 rounded-full bg-blue-500 mb-1" />
+                  <p className="text-[13px] font-semibold text-[var(--foreground)]">Tier 2</p>
+                  <p className="text-[12px] text-[var(--muted)]">2&times; weight</p>
+                </div>
+                <div className="bg-black/[0.02] rounded px-3 py-2">
+                  <span className="inline-block w-2 h-2 rounded-full bg-orange-500 mb-1" />
+                  <p className="text-[13px] font-semibold text-[var(--foreground)]">Tier 3</p>
+                  <p className="text-[12px] text-[var(--muted)]">1&times; weight</p>
+                </div>
+                <div className="bg-black/[0.02] rounded px-3 py-2">
+                  <span className="inline-block w-2 h-2 rounded-full bg-red-500 mb-1" />
+                  <p className="text-[13px] font-semibold text-[var(--foreground)]">Tier 4</p>
+                  <p className="text-[12px] text-[var(--muted)]">0.5&times; weight</p>
+                </div>
+              </div>
+              <p className="text-[13px] text-[var(--muted)] leading-relaxed mt-3">
+                A single Tier&nbsp;1 peer-reviewed study carries <strong className="text-[var(--foreground)]">8&times;</strong> the
+                influence of a Tier&nbsp;4 social media post. This ensures that
+                the headline number is anchored to the strongest available evidence.
+              </p>
+            </div>
+
+            {/* Recency bias */}
+            <div className="border border-black/[0.06] rounded-lg px-5 py-5 bg-white">
+              <p className="text-[14px] font-bold text-[var(--foreground)] mb-2">
+                Recency Bias
+              </p>
+              <p className="text-[13px] text-[var(--muted)] leading-relaxed">
+                Within each tier, more recent data points are weighted more heavily.
+                The recency multiplier scales linearly from <strong className="text-[var(--foreground)]">1.0&times;</strong> for
+                the oldest data point to <strong className="text-[var(--foreground)]">2.0&times;</strong> for the newest.
+                This means the most recent source of any tier has double the recency
+                weight of the oldest, reflecting the fast-moving nature of AI
+                research where newer studies incorporate better data and methods.
+                If all data points share the same date, no recency adjustment is applied.
+              </p>
+            </div>
+
+            {/* Combined formula */}
+            <div className="border border-black/[0.06] rounded-lg px-5 py-5 bg-white">
+              <p className="text-[14px] font-bold text-[var(--foreground)] mb-2">
+                Combined Formula
+              </p>
+              <p className="text-[13px] text-[var(--muted)] leading-relaxed mb-3">
+                Each data point&apos;s total weight is:<br />
+                <code className="text-[12px] bg-black/[0.04] px-1.5 py-0.5 rounded font-mono">
+                  weight = tierWeight &times; recencyWeight
+                </code>
+              </p>
+              <p className="text-[13px] text-[var(--muted)] leading-relaxed mb-3">
+                The headline number is then the weighted mean:<br />
+                <code className="text-[12px] bg-black/[0.04] px-1.5 py-0.5 rounded font-mono">
+                  mean = &sum;(value &times; weight) / &sum;(weight)
+                </code>
+                , rounded to one decimal place.
+              </p>
+              <p className="text-[13px] text-[var(--muted)] leading-relaxed">
+                For example, a Tier&nbsp;1 study published recently (weight&nbsp;=&nbsp;4&nbsp;&times;&nbsp;2.0&nbsp;=&nbsp;8.0) will
+                have 16&times; the influence of an older Tier&nbsp;4 post
+                (weight&nbsp;=&nbsp;0.5&nbsp;&times;&nbsp;1.0&nbsp;=&nbsp;0.5).
+              </p>
+            </div>
+
+            {/* Source validity */}
+            <div className="border border-black/[0.06] rounded-lg px-5 py-5 bg-white">
+              <p className="text-[14px] font-bold text-[var(--foreground)] mb-2">
+                Source Validity &amp; Filtering
+              </p>
+              <p className="text-[13px] text-[var(--muted)] leading-relaxed">
+                Only data points from your currently selected evidence tiers are
+                included in the calculation. Toggling tiers on or off immediately
+                recalculates the headline number. This lets you see how the
+                estimate changes when restricted to, say, only Tier&nbsp;1
+                peer-reviewed research vs. the full range of sources. When no
+                data points remain after filtering, the number falls back to the
+                prediction&apos;s baseline value.
+              </p>
+            </div>
+
+            {/* Trend */}
+            <div className="border border-black/[0.06] rounded-lg px-5 py-5 bg-white">
+              <p className="text-[14px] font-bold text-[var(--foreground)] mb-2">
+                Trend Arrow
+              </p>
+              <p className="text-[13px] text-[var(--muted)] leading-relaxed">
+                The trend arrow (&#9650;/&#9660;) compares the chronologically
+                first and last data points across selected tiers. A red arrow
+                indicates a &ldquo;bad&rdquo; direction &mdash; rising
+                displacement or falling wages &mdash; while a green arrow
+                indicates a &ldquo;good&rdquo; direction. The arrow reflects the
+                raw trend in the data, not the weighted average.
+              </p>
+            </div>
+          </div>
+        </div>
+
         {/* Evidence Tier Framework */}
         <div>
           <h3 className="text-[18px] font-bold text-[var(--foreground)] mb-4">
