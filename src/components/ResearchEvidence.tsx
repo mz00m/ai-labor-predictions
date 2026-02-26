@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 
 /* ------------------------------------------------------------------ */
-/*  Data: Micro studies (task-specific / individual worker)            */
+/*  Data: Micro studies (task-specific / individual worker / firm)     */
 /* ------------------------------------------------------------------ */
 
 interface MicroStudy {
@@ -167,6 +167,19 @@ const MICRO_STUDIES: MicroStudy[] = [
     citation: "HBS Working Paper 25-043 / NBER 33641",
     url: "https://www.nber.org/papers/w33641",
     note: "Quality improvement; gap reduction",
+  },
+  {
+    id: "bloom-firm-data-ai-2026",
+    authors: "Bloom, Barrero, Davis et al.",
+    year: 2026,
+    title: "Firm Data on AI (4-Country Executive Survey)",
+    domain: "Firm-level (all sectors)",
+    effectPct: 1.4,
+    effectLabel: "+1.4%",
+    finding: "Survey of ~6,000 executives across US, UK, Germany & Australia. Firms expect AI to boost productivity by +1.4% over the next 3 years (US: +2.3%). 89% report no productivity impact so far. Net output expected to rise 0.8% after accounting for a 0.7% employment reduction.",
+    citation: "NBER Working Paper 34836",
+    url: "https://www.nber.org/papers/w34836",
+    note: "Firm-level expectations; 89% report zero impact to date",
   },
   {
     id: "otis-kenya-2023",
@@ -589,7 +602,7 @@ export default function ResearchEvidence() {
           What the research actually shows
         </h2>
         <p className="text-[15px] text-[var(--muted)] mt-2 max-w-2xl">
-          {MICRO_STUDIES.length} micro studies on individual/task productivity and{" "}
+          {MICRO_STUDIES.length} task &amp; firm studies on productivity and{" "}
           {MACRO_STUDIES.length} macro studies on economy-wide effects. The micro
           evidence leans heavily positive; the macro gains have not yet shown up
           in aggregate statistics.{" "}
@@ -603,11 +616,11 @@ export default function ResearchEvidence() {
           {/* Tile header */}
           <div className="mb-5">
             <h3 className="text-[18px] font-bold text-[var(--foreground)]">
-              Task &amp; Individual Productivity
+              Task &amp; Firm Productivity
             </h3>
             <p className="text-[13px] text-[var(--muted)] mt-1">
-              RCTs and field experiments measuring individual or team-level
-              productivity changes with AI tools
+              RCTs, field experiments, and firm-level surveys measuring
+              individual, team, and business productivity changes with AI tools
             </p>
           </div>
 
