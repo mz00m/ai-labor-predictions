@@ -344,7 +344,7 @@ export default function OGImage() {
                 fontWeight: 500,
               }}
             >
-              15 predictions tracked across displacement, wages & adoption
+              17 predictions · 298 sources across displacement, wages & adoption
             </span>
             <span
               style={{

@@ -6,12 +6,12 @@ import { Analytics } from "@vercel/analytics/react";
 export const metadata: Metadata = {
   title: "Early Signals of AI Impact",
   description:
-    "Track predictions about AI's impact on jobs and wages, with evidence from working papers to social media. A weekend vibe coding project by Matt Zieger.",
+    "250+ sources tracking AI's impact on jobs, wages, and adoption. AI adoption is accelerating, productivity is climbing, and jobs are changing faster than they're disappearing.",
   metadataBase: new URL("https://labor.mattzieger.com"),
   openGraph: {
     title: "Early Signals of AI Impact",
     description:
-      "15 predictions tracking AI-driven job displacement, wage impacts, and corporate adoption — filtered by evidence quality from working papers to social media.",
+      "250+ sources, one pattern: AI adoption is accelerating, productivity is climbing, and jobs are changing faster than they're disappearing.",
     type: "website",
     siteName: "Early Signals of AI Impact",
   },
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Early Signals of AI Impact",
     description:
-      "15 predictions tracking AI-driven job displacement, wage impacts, and corporate adoption — filtered by evidence quality.",
+      "250+ sources, one pattern: AI adoption is accelerating, productivity is climbing, and jobs are changing faster than they're disappearing.",
   },
 };
 
