@@ -174,12 +174,12 @@ const MICRO_STUDIES: MicroStudy[] = [
     year: 2026,
     title: "METR Open-Source Devs (Updated)",
     domain: "Software dev",
-    effectPct: -18,
-    effectLabel: "-18%",
-    finding: "For the subset of original developers who participated in the later study, METR now estimates a speedup of -18% (CI: -38% to +9%). Among newly-recruited developers the estimated speedup is -4% (CI: -15% to +9%).",
+    effectPct: 18,
+    effectLabel: "+18%",
+    finding: "For the subset of original developers who participated in the later study, METR now estimates an 18% reduction in task completion time (CI: 9% to 38% faster). Among newly-recruited developers the estimated time reduction is 4% (CI: -9% to +15%).",
     citation: "METR Blog, Feb 2026",
     url: "https://metr.org/blog/2026-02-24-uplift-update/",
-    note: "Updated from initial -19% finding; wide confidence intervals span zero",
+    note: "Updated from initial finding; time reduction = productivity increase; wide confidence intervals",
   },
 ];
 
