@@ -63,9 +63,8 @@ export default function AboutPage() {
             >
               Matt Zieger
             </a>{" "}
-            is a Senior Program Officer at the GitLab Foundation, where he leads global
-            grantmaking and partnerships focused on improving economic mobility. He has over
-            20 years of experience across nonprofits, impact investing, and economic development.
+            is building this as a personal vibe-coding project, as a way to learn and hopefully create something helpful for others. While not affiliated with his day job, he's the Chief Program & Partnership Officer at the GitLab Foundation, 
+            where he wakes up every day trying to help people earn a living wage.
           </p>
         </div>
       </section>
