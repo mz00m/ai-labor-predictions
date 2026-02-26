@@ -14,35 +14,35 @@ export default function AboutPage() {
       </section>
 
       {/* Mission */}
-      <section className="max-w-2xl space-y-5">
-        <p className="text-[17px] text-[var(--foreground)] leading-relaxed">
+      <section className="max-w-3xl space-y-4">
+        <p className="text-[14px] text-[var(--muted)] leading-relaxed">
           For years I&rsquo;ve wanted a single place that synthesizes what we actually know about
           AI&rsquo;s impact on economic opportunity &mdash; not the hype, not the doom, but the evidence.
         </p>
-        <p className="text-[17px] text-[var(--foreground)] leading-relaxed">
+        <p className="text-[14px] text-[var(--muted)] leading-relaxed">
           This project pulls together peer-reviewed research, government data, corporate filings,
           think tank analysis, and journalism into one living dashboard. The goal is to help
           the people who need it most &mdash; leaders in workforce development, education, philanthropy,
           and policy &mdash; have a more thoughtful, evidence-grounded response to what&rsquo;s coming.
         </p>
-        <p className="text-[17px] text-[var(--foreground)] leading-relaxed">
+        <p className="text-[14px] text-[var(--muted)] leading-relaxed">
           It&rsquo;s a weekend project, built in the open, and very much a work in progress.
           If you have ideas on how to make it better, I&rsquo;d love to hear from you.
         </p>
       </section>
 
       {/* About Matt */}
-      <section className="max-w-2xl">
-        <div className="border border-black/[0.06] rounded-lg px-6 py-5">
-          <p className="text-[13px] font-bold uppercase tracking-widest text-[var(--accent)] mb-2">
+      <section className="max-w-3xl">
+        <div className="border border-black/[0.06] rounded-lg px-5 py-5 bg-white">
+          <p className="text-[14px] font-bold text-[var(--foreground)] mb-2">
             Built by
           </p>
-          <p className="text-[17px] text-[var(--foreground)] leading-relaxed">
+          <p className="text-[14px] text-[var(--muted)] leading-relaxed">
             <a
               href="https://linkedin.com/in/mattzieger"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-semibold underline hover:text-[var(--accent)] transition-colors"
+              className="font-semibold text-[var(--foreground)] underline hover:text-[var(--accent)] transition-colors"
             >
               Matt Zieger
             </a>{" "}
