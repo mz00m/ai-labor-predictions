@@ -95,6 +95,14 @@
       "confidenceHigh": 1,
       "sourceIds": ["icle-ai-productivity-2026"],
       "evidenceTier": 2
+    },
+    {
+      "date": "2026-02-15",
+      "value": 1.2,
+      "confidenceLow": 0.5,
+      "confidenceHigh": 2.5,
+      "sourceIds": ["nber-bloom-firm-data-ai-2026"],
+      "evidenceTier": 1
     }
   ],
   "overlays": [
@@ -384,6 +392,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-01-15",
       "excerpt": "Unemployment risk in AI-exposed occupations rose beginning early 2022; graduates with AI-exposed curricula have higher first-job pay and shorter job searches post-ChatGPT."
+    },
+    {
+      "id": "nber-bloom-firm-data-ai-2026",
+      "title": "Firm Data on AI",
+      "url": "https://www.nber.org/papers/w34836",
+      "publisher": "NBER (Bloom, Barrero, Davis et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-15",
+      "excerpt": "Survey of ~6,000 executives across US, UK, Germany, Australia. 90%+ report no employment impact from AI over the past 3 years. Firms expect AI to reduce employment by 0.7% over the next 3 years (US: -1.2%). Employees, by contrast, expect +0.5% job creation."
     }
   ]
 }

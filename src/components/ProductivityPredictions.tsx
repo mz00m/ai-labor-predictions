@@ -599,6 +599,26 @@ export default function ProductivityPredictions() {
         &middot; February 2026 &middot; Click any bar for source
       </p>
 
+      {/* Supporting firm-level evidence */}
+      <div className="mt-4 border-l-2 border-[var(--accent)]/20 pl-4">
+        <p className="text-[12px] text-[var(--muted)]">
+          <span className="font-semibold text-[var(--foreground)]">Firm-level check:</span>{" "}
+          A{" "}
+          <a
+            href="https://www.nber.org/papers/w34836"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-[var(--foreground)]"
+          >
+            Feb 2026 NBER survey
+          </a>{" "}
+          of ~6,000 executives across US, UK, Germany &amp; Australia found firms expect AI to boost
+          productivity by +1.4% over the next 3 years (US: +2.3%), while 89% report no productivity
+          impact so far. Executives also expect AI to reduce employment by 0.7%, implying +0.8% net
+          output growth from AI adoption.
+        </p>
+      </div>
+
       {/* Modal */}
       {modal && modalRespondent && (
         <EconomistModal

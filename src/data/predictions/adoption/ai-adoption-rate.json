@@ -85,6 +85,13 @@
       "sourceIds": ["gallup-worker-ai-adoption-2025"],
       "evidenceTier": 2,
       "label": "Gallup: 46% of US workers used AI at work in Q4 2025"
+    },
+    {
+      "date": "2026-02-15",
+      "direction": "up",
+      "sourceIds": ["nber-bloom-firm-data-adoption-2026"],
+      "evidenceTier": 1,
+      "label": "NBER/Bloom: 78% of US firms use AI (executive survey of ~6K across 4 countries)"
     }
   ],
   "sources": [
@@ -276,6 +283,15 @@
       "evidenceTier": 2,
       "datePublished": "2025-12-15",
       "excerpt": "46% of US workers reported using AI tools at work in Q4 2025, up from 33% in Q1 2025. Adoption driven by white-collar professional and technical roles."
+    },
+    {
+      "id": "nber-bloom-firm-data-adoption-2026",
+      "title": "Firm Data on AI",
+      "url": "https://www.nber.org/papers/w34836",
+      "publisher": "NBER (Bloom, Barrero, Davis et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-15",
+      "excerpt": "69% of firms across US, UK, Germany, and Australia currently use some AI technology (US: 78%). LLM text generation most common (41%). Expected to rise to 75% in 3 years. Larger, more productive, higher-paying firms more likely to adopt."
     }
   ]
 }
