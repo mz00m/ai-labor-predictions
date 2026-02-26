@@ -69,7 +69,11 @@ export default function Home() {
         {/* Essential Reading — compact strip under ticker */}
         <div className="relative mt-4 pb-6">
           <p className="text-[11px] font-bold uppercase tracking-widest text-[var(--accent)] mb-2">
-            This Week
+            Important Reads This Week{" "}
+            <span className="opacity-50">|</span>{" "}
+            <span className="normal-case font-semibold">
+              {new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}
+            </span>
           </p>
           <FeaturedReads />
         </div>
