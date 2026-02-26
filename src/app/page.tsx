@@ -65,6 +65,14 @@ export default function Home() {
         <div className="relative mt-6">
           <NewsTicker />
         </div>
+
+        {/* Essential Reading — compact strip under ticker */}
+        <div className="relative mt-4 pb-6">
+          <p className="text-[11px] font-bold uppercase tracking-widest text-[var(--accent)] mb-2">
+            This Week
+          </p>
+          <FeaturedReads />
+        </div>
       </div>
 
       {/* Evidence Funnel */}
@@ -147,9 +155,6 @@ export default function Home() {
 
       {/* Productivity Predictions */}
       <ProductivityPredictions />
-
-      {/* Essential Reading */}
-      <FeaturedReads />
 
       {/* Research Evidence */}
       <ResearchEvidence />
