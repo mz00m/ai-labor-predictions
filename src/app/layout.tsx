@@ -30,6 +30,58 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Early Signals of AI Impact",
+              url: "https://labor.mattzieger.com",
+              description:
+                "Tracking 17 predictions about AI-driven job displacement, wage impacts, and corporate adoption with 250+ sources filtered by evidence quality.",
+              author: {
+                "@type": "Person",
+                name: "Matt Zieger",
+                url: "https://linkedin.com/in/mattzieger",
+                jobTitle: "Chief Program & Partnership Officer",
+                worksFor: {
+                  "@type": "Organization",
+                  name: "GitLab Foundation",
+                },
+              },
+              mainEntity: {
+                "@type": "Dataset",
+                name: "AI Labor Market Impact Predictions",
+                description:
+                  "A curated dataset of predictions about AI's impact on the labor market, sourced from peer-reviewed research, government data, think tanks, corporate filings, and journalism.",
+                url: "https://labor.mattzieger.com",
+                license: "https://creativecommons.org/licenses/by/4.0/",
+                keywords: [
+                  "artificial intelligence",
+                  "labor market",
+                  "job displacement",
+                  "wages",
+                  "AI adoption",
+                  "workforce",
+                  "economic impact",
+                  "automation",
+                ],
+                variableMeasured: [
+                  "Job displacement rate",
+                  "Wage impact",
+                  "AI adoption rate",
+                  "Earnings call AI mentions",
+                  "Workforce AI exposure",
+                ],
+                temporalCoverage: "2023/..",
+                spatialCoverage: "United States",
+              },
+            }),
+          }}
+        />
+      </head>
       <body className="min-h-screen bg-white text-[var(--foreground)] antialiased">
         <Navbar />
         <main className="max-w-6xl mx-auto px-6 sm:px-10 py-16">

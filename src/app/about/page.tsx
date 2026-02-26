@@ -1,4 +1,18 @@
+import { Metadata } from "next";
 import Methodology from "@/components/Methodology";
+
+export const metadata: Metadata = {
+  title: "About — Early Signals of AI Impact",
+  description:
+    "Why this project exists, how the methodology works, and who built it. A synthesis of AI-and-labor data for workforce, education, philanthropy, and policy leaders.",
+  openGraph: {
+    title: "About — Early Signals of AI Impact",
+    description:
+      "Why this project exists, how the methodology works, and who built it.",
+    type: "website",
+    siteName: "Early Signals of AI Impact",
+  },
+};
 
 export default function AboutPage() {
   return (

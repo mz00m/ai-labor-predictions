@@ -1,0 +1,36 @@
+# Early Signals of AI Impact
+> A live dashboard tracking AI's impact on the labor market with 250+ sources across 17 predictions.
+
+## What this site does
+This project synthesizes peer-reviewed research, government data, corporate filings, think tank analysis, and journalism to track how AI is affecting jobs, wages, and corporate behavior. Predictions are scored by evidence quality across four tiers, from peer-reviewed RCTs to social media commentary.
+
+## Key data tracked
+- Job displacement & restructuring (overall US, tech sector, white-collar, creative, healthcare admin, education, customer service)
+- Wage impact (median wages, entry-level, freelancer rates, high-skill premium, geographic divergence)
+- AI adoption rates (Census Bureau firm-level data, generative AI at work, earnings call mentions, workforce exposure)
+- Productivity predictions from major institutions
+
+## Who this is for
+Workforce development professionals, education leaders, philanthropic funders, policymakers, researchers, and anyone trying to understand AI's real-world economic impact based on evidence rather than hype.
+
+## Data sources
+Sources include: peer-reviewed academic papers, OECD, IMF, World Bank, McKinsey Global Institute, Brookings Institution, US Census Bureau, Bureau of Labor Statistics, SEC EDGAR filings, S&P 500 earnings call transcripts, and leading technology researchers.
+
+## API endpoints
+- /api/predictions — All prediction data as JSON
+- /api/research — Research feed with tier filtering
+- /api/research/digest — Weekly research digest by category
+- /api/ticker — Latest AI-and-labor news headlines
+
+## Key pages
+- / — Main dashboard with all predictions
+- /about — Project mission, author bio, and full methodology
+- /predictions/[slug] — Detail page for each individual prediction with charts and sources
+
+## Author
+Matt Zieger — Chief Program & Partnership Officer at GitLab Foundation
+LinkedIn: https://linkedin.com/in/mattzieger
+X: https://x.com/mattzieger
+
+## Site
+https://labor.mattzieger.com
