@@ -41,11 +41,11 @@ function computeTrend(prediction: Prediction, selectedTiers: EvidenceTier[]) {
     }
   }
   if (closest === latest) return null;
-  const change = latest.value - closest.value;
-  const monthsApart = Math.round(
-    (latestDate - new Date(closest.date).getTime()) / (30 * 24 * 60 * 60 * 1000)
-  );
-  return { change, monthsApart, from: closest.value, to: latest.value };
+  const rawChange = latest.value - closest.value;
+  const monthsApart =
+    (latestDate - new Date(closest.date).getTime()) / (30 * 24 * 60 * 60 * 1000);
+  const annualizedChange = Math.round((rawChange * 12) / monthsApart * 10) / 10;
+  return { change: annualizedChange, from: closest.value, to: latest.value };
 }
 
 function getContextLine(prediction: Prediction, aggregateValue: number): string {
@@ -233,8 +233,7 @@ export default function PredictionSummaryCard({
               <span className={`text-[12px] font-medium ${trendColorClass}`} style={{ opacity: 0.7 }}>
                 {trend.change > 0 ? "+" : ""}
                 {trend.change}
-                {prediction.unit.includes("%") ? "pp" : ""}{" "}
-                / {trend.monthsApart}mo
+                {prediction.unit.includes("%") ? "pp" : ""} YoY
               </span>
             )}
           </div>
