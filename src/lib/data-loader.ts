@@ -14,6 +14,7 @@ import freelancerRate from "@/data/predictions/wages/freelancer-rate-impact.json
 import entryLevel from "@/data/predictions/wages/entry-level-impact.json";
 import geoDivergence from "@/data/predictions/wages/geographic-divergence.json";
 import aiAdoption from "@/data/predictions/adoption/ai-adoption-rate.json";
+import genaiWorkAdoption from "@/data/predictions/adoption/genai-work-adoption.json";
 import earningsCallMentions from "@/data/predictions/signals/earnings-call-mentions.json";
 import workforceExposure from "@/data/predictions/exposure/workforce-exposure.json";
 
@@ -35,6 +36,7 @@ const allPredictions: Prediction[] = [
   freelancerRate as Prediction,
   // Adoption, Exposure & Signals
   aiAdoption as Prediction,
+  genaiWorkAdoption as Prediction,
   workforceExposure as Prediction,
   earningsCallMentions as Prediction,
 ];

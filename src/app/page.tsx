@@ -11,7 +11,6 @@ import Methodology from "@/components/Methodology";
 import FunnelStrip from "@/components/FunnelStrip";
 import ProductivityPredictions from "@/components/ProductivityPredictions";
 import ResearchEvidence from "@/components/ResearchEvidence";
-import AIAdoptionTile from "@/components/AIAdoptionTile";
 
 const predictions = getAllPredictions();
 
@@ -123,28 +122,27 @@ export default function Home() {
       </section>
 
       {/* AI Adoption */}
-      <section>
-        <div className="mb-8">
-          <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
-            AI Adoption
-          </h2>
-          <p className="text-[15px] text-[var(--muted)] mt-2 max-w-2xl">
-            How rapidly companies are deploying AI, how much of the workforce is exposed, and corporate signaling on earnings calls
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
-          {adoption.map((p) => (
-            <PredictionSummaryCard
-              key={p.id}
-              prediction={p}
-              selectedTiers={selectedTiers}
-            />
-          ))}
-        </div>
-        <div className="mt-10">
-          <AIAdoptionTile />
-        </div>
-      </section>
+      {adoption.length > 0 && (
+        <section>
+          <div className="mb-8">
+            <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
+              AI Adoption
+            </h2>
+            <p className="text-[15px] text-[var(--muted)] mt-2 max-w-2xl">
+              How rapidly companies are deploying AI, how much of the workforce is exposed, and corporate signaling on earnings calls
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+            {adoption.map((p) => (
+              <PredictionSummaryCard
+                key={p.id}
+                prediction={p}
+                selectedTiers={selectedTiers}
+              />
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Productivity Predictions */}
       <ProductivityPredictions />

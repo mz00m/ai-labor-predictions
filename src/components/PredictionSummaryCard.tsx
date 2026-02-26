@@ -78,6 +78,8 @@ function getContextLine(prediction: Prediction, aggregateValue: number): string 
     return `AI hub cities (SF, Seattle, NYC) pay ${v}% more than non-hub metros for tech workers — and the gap is accelerating.`;
   if (prediction.slug === "ai-adoption-rate")
     return `${v}% of US companies with 50+ employees have deployed AI in production, up from under 4% in 2023.`;
+  if (prediction.slug === "genai-work-adoption")
+    return `${v}% of U.S. working-age adults now use generative AI at work — overall adoption (55.9%) outpaces the PC and internet at comparable points post-launch.`;
   if (prediction.slug === "earnings-call-ai-mentions")
     return `${v}% of S&P 500 companies now mention AI + workforce on earnings calls, up from 8% pre-ChatGPT.`;
   return `Current estimate: ${v > 0 ? "+" : ""}${v} ${prediction.unit}.`;

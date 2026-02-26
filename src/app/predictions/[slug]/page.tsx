@@ -9,6 +9,7 @@ import { getTierConfig } from "@/lib/evidence-tiers";
 import { computeAggregate } from "@/lib/prediction-stats";
 import EvidenceFilter from "@/components/EvidenceFilter";
 import PredictionChart from "@/components/PredictionChart";
+import AIAdoptionChart from "@/components/AIAdoptionChart";
 import SourceList from "@/components/SourceList";
 
 const CONTEXT_MAP: Record<string, (v: number) => string> = {
@@ -42,6 +43,8 @@ const CONTEXT_MAP: Record<string, (v: number) => string> = {
     `An estimated ${v}% of US jobs have significant task overlap with current AI capabilities. This is an exposure measure, not a displacement count \u2014 it describes what AI could theoretically do, not what has happened. The gap between exposure and actual displacement has been wide: while exposure estimates have risen from 25% to nearly 50%, observed macro job losses attributable to AI remain near zero. Exposure is a precondition for displacement, not a guarantee of it.`,
   "ai-adoption-rate": (v) =>
     `${v}% of US firms use AI in production according to the Census Bureau's Business Trends and Outlook Survey (BTOS), up from 3.8% in mid-2023. This is the most rigorous adoption measure available — consultancy surveys report 5-10x higher rates (55-78%) because they sample self-selected, tech-forward companies. The Census data covers all US firms and provides the ground truth. Adoption varies dramatically by sector: information and finance lead at 20-30%, while construction and agriculture remain under 5%.`,
+  "genai-work-adoption": (v) =>
+    `${v}% of U.S. working-age adults (18–64) now use generative AI at work, according to the St. Louis Fed / Harvard Real-Time Population Survey — a nationally representative quarterly survey of 25,000+ adults. Overall adoption (55.9%) has outpaced both the PC and internet at comparable points post-launch. The gap between overall and work adoption is consistent with workers adopting ahead of their employers. The Nov 2024 dip in work adoption (31.0%) is real survey data, not a data error — it recovered by Feb 2025. This data updates quarterly (roughly Feb, May, Aug, Nov).`,
   "earnings-call-ai-mentions": (v) =>
     `${v}% of S&P 500 companies now mention AI in the context of workforce, efficiency, or restructuring on their quarterly earnings calls. This is up from just 8% before ChatGPT launched in late 2022. Companies that discuss AI + workforce on calls subsequently show headcount growth 3.2 percentage points lower than non-mentioners. This metric serves as a leading indicator of corporate intent — it signals what executives are planning before the layoffs and restructuring happen.`,
 };
@@ -203,17 +206,28 @@ export default function PredictionDetailPage() {
         <h2 className="text-[24px] sm:text-[28px] font-extrabold tracking-tight text-[var(--foreground)] mb-2">
           How This Prediction Has Evolved
         </h2>
-        <p className="text-[14px] text-[var(--muted)] mb-8">
-          Each data point is from a different source. Dots are color-coded by evidence tier. Click any dot to jump to its source.
-        </p>
-        <PredictionChart
-          history={prediction.history}
-          sources={prediction.sources}
-          selectedTiers={selectedTiers}
-          unit={prediction.unit.includes("%") ? "%" : ""}
-          overlays={prediction.overlays}
-          onDotClick={handleDotClick}
-        />
+        {prediction.slug === "genai-work-adoption" ? (
+          <>
+            <p className="text-[14px] text-[var(--muted)] mb-8">
+              Two trend lines from the same quarterly survey: overall generative AI use and use at work. Hollow dots indicate values estimated from the tracker chart.
+            </p>
+            <AIAdoptionChart />
+          </>
+        ) : (
+          <>
+            <p className="text-[14px] text-[var(--muted)] mb-8">
+              Each data point is from a different source. Dots are color-coded by evidence tier. Click any dot to jump to its source.
+            </p>
+            <PredictionChart
+              history={prediction.history}
+              sources={prediction.sources}
+              selectedTiers={selectedTiers}
+              unit={prediction.unit.includes("%") ? "%" : ""}
+              overlays={prediction.overlays}
+              onDotClick={handleDotClick}
+            />
+          </>
+        )}
       </section>
 
       {/* Divider */}
