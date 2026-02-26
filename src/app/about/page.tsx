@@ -14,11 +14,12 @@ export default function AboutPage() {
       <section className="max-w-3xl space-y-4">
         <p className="text-[14px] text-[var(--muted)] leading-relaxed">
           Society is trying to figure out what AI means for work &mdash; and the answers keep
-          changing. For years I&rsquo;ve wanted a single place that synthesizes what we actually
-          know about AI&rsquo;s impact on economic opportunity &mdash; not the hype, not the doom,
-          but the evidence.
+          changing.
         </p>
         <p className="text-[14px] text-[var(--muted)] leading-relaxed">
+          For years I&rsquo;ve wanted a single place that synthesizes what we actually
+          know about AI&rsquo;s impact on economic opportunity &mdash; not the hype, not the doom,
+          but the evidence.
           This dashboard makes that process visible by tracking how predictions about displacement,
           wages, adoption, and corporate behavior evolve as new research, data, and real-world
           evidence emerge. The goal is to help the people who need it most &mdash; leaders in
@@ -27,6 +28,8 @@ export default function AboutPage() {
         </p>
         <p className="text-[14px] text-[var(--muted)] leading-relaxed">
           It&rsquo;s a weekend project, built in the open, and very much a work in progress.
+        </p>
+        <p className="text-[14px] text-[var(--muted)] leading-relaxed">
           If you have ideas on how to make it better, I&rsquo;d love to hear from you:{" "}
           <a
             href="https://www.linkedin.com/in/mattzieger"
