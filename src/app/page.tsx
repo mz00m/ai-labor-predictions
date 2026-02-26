@@ -11,6 +11,7 @@ import Methodology from "@/components/Methodology";
 import FunnelStrip from "@/components/FunnelStrip";
 import ProductivityPredictions from "@/components/ProductivityPredictions";
 import ResearchEvidence from "@/components/ResearchEvidence";
+import FeaturedReads from "@/components/FeaturedReads";
 
 const predictions = getAllPredictions();
 
@@ -146,6 +147,9 @@ export default function Home() {
 
       {/* Productivity Predictions */}
       <ProductivityPredictions />
+
+      {/* Essential Reading */}
+      <FeaturedReads />
 
       {/* Research Evidence */}
       <ResearchEvidence />
