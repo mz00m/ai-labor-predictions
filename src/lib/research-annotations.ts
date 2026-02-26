@@ -88,6 +88,11 @@ const ANNOTATIONS: Record<string, ResearchAnnotation> = {
       "Directly observed from Census Bureau Business Trends survey data, supplemented by corporate earnings call disclosures and Ramp firm spending analysis.",
     estimateType: "observed",
   },
+  "genai-work-adoption": {
+    note:
+      "Directly observed from the St. Louis Fed / Harvard Real-Time Population Survey (RPS), a nationally representative quarterly survey of 25,000+ working-age adults. Feb & May 2025 values estimated from tracker chart; all other values from published working paper.",
+    estimateType: "observed",
+  },
   "workforce-ai-exposure": {
     note:
       "Directly from source studies. These measure what share of jobs have tasks that AI could perform \u2014 not how many jobs have actually been affected. Exposure ranges from 27% (OECD, high-risk only) to 80% (OpenAI, any task overlap). The Anthropic Economic Index provides the most current measure at 49% of jobs using AI for 25%+ of tasks.",

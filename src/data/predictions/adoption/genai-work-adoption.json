@@ -1,0 +1,74 @@
+{
+  "id": "genai-work-adoption",
+  "slug": "genai-work-adoption",
+  "title": "Generative AI Adoption",
+  "description": "Share of U.S. working-age adults (18–64) using generative AI at work, from a nationally representative quarterly survey (Real-Time Population Survey). Work adoption (40.7%) lags overall use (55.9%), consistent with workers adopting ahead of their employers. Overall adoption has outpaced both the PC and internet at comparable points post-launch.",
+  "category": "adoption",
+  "unit": "% of adults at work",
+  "currentValue": 40.7,
+  "timeHorizon": "Current measure",
+  "history": [
+    {
+      "date": "2024-06-01",
+      "value": 32.9,
+      "sourceIds": ["bick-blandin-deming-wp-2025"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2024-08-01",
+      "value": 33.3,
+      "sourceIds": ["bick-blandin-deming-wp-2025"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2024-11-01",
+      "value": 31.0,
+      "sourceIds": ["bick-blandin-deming-wp-2025"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2025-02-01",
+      "value": 33.5,
+      "sourceIds": ["genai-adoption-tracker-2025"],
+      "evidenceTier": 2
+    },
+    {
+      "date": "2025-05-01",
+      "value": 35.5,
+      "sourceIds": ["genai-adoption-tracker-2025"],
+      "evidenceTier": 2
+    },
+    {
+      "date": "2025-08-01",
+      "value": 37.4,
+      "sourceIds": ["bick-blandin-deming-wp-2025"],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2025-11-01",
+      "value": 40.7,
+      "sourceIds": ["bick-blandin-deming-wp-2025"],
+      "evidenceTier": 1
+    }
+  ],
+  "sources": [
+    {
+      "id": "bick-blandin-deming-wp-2025",
+      "title": "The Rapid Adoption of Generative AI",
+      "url": "https://doi.org/10.20955/wp.2024.027",
+      "publisher": "St. Louis Fed (Bick, Blandin & Deming)",
+      "evidenceTier": 1,
+      "datePublished": "2025-10-01",
+      "excerpt": "Nationally representative survey of 25,000+ working-age adults finds generative AI adoption reached 55.9% overall and 40.7% at work by November 2025, outpacing PC and internet adoption at comparable points post-launch."
+    },
+    {
+      "id": "genai-adoption-tracker-2025",
+      "title": "GenAI Adoption Tracker (Harvard / St. Louis Fed)",
+      "url": "http://GenAIAdoptionTracker.com",
+      "publisher": "Harvard / St. Louis Fed RPS",
+      "evidenceTier": 2,
+      "datePublished": "2025-11-01",
+      "excerpt": "Quarterly dashboard tracking generative AI adoption among U.S. working-age adults. Feb & May 2025 values estimated from tracker chart; all other values from published working paper."
+    }
+  ]
+}

@@ -158,26 +158,12 @@ function WorkDot(props: Record<string, unknown>) {
 }
 
 /* ------------------------------------------------------------------ */
-/*  Main Component                                                     */
+/*  Chart Component                                                    */
 /* ------------------------------------------------------------------ */
 
-export default function AIAdoptionTile() {
+export default function AIAdoptionChart() {
   return (
-    <div className="border border-black/[0.06] rounded-lg bg-white px-5 py-6 sm:px-6">
-      {/* Title */}
-      <h3 className="text-[18px] font-bold text-[var(--foreground)] mb-1 leading-snug">
-        Generative AI Adoption
-      </h3>
-
-      {/* Description */}
-      <p className="text-[14px] text-[var(--muted)] leading-relaxed mb-5 max-w-xl">
-        Share of U.S. working-age adults (18&ndash;64) using generative AI, from
-        a nationally representative survey run quarterly since June 2024.
-        Overall adoption has reached 55.9% &mdash; outpacing both the PC and
-        internet at comparable points post-launch. Work adoption (40.7%) lags
-        overall use, consistent with workers adopting ahead of their employers.
-      </p>
-
+    <div>
       {/* Legend */}
       <div className="flex flex-wrap items-center gap-x-5 gap-y-2 mb-4 text-[13px] text-[var(--muted)]">
         <span className="flex items-center gap-1.5">
@@ -185,7 +171,7 @@ export default function AIAdoptionTile() {
             className="inline-block w-3 h-[3px] rounded-full"
             style={{ backgroundColor: OVERALL_COLOR }}
           />
-          Overall
+          Overall adoption
         </span>
         <span className="flex items-center gap-1.5">
           <span
@@ -211,7 +197,7 @@ export default function AIAdoptionTile() {
       </div>
 
       {/* Chart */}
-      <ResponsiveContainer width="100%" height={300}>
+      <ResponsiveContainer width="100%" height={360}>
         <ComposedChart
           data={aiAdoptionData}
           margin={{ top: 10, right: 10, left: 0, bottom: 0 }}
