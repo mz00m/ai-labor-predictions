@@ -28,7 +28,7 @@ export default function Home() {
   return (
     <div className="space-y-10">
       {/* Hero */}
-      <div className="relative overflow-hidden -mx-6 sm:-mx-10 px-6 sm:px-10 pt-4 pb-0 sm:pt-6 sm:pb-0">
+      <div className="relative overflow-hidden -mx-6 sm:-mx-10 px-6 sm:px-10 pt-1 pb-0 sm:pt-2 sm:pb-0">
         {/* Background gradient orbs */}
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
           <div className="absolute -top-24 -left-24 w-[500px] h-[500px] rounded-full bg-[#7c3aed]/[0.04] blur-3xl" />
