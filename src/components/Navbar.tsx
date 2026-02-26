@@ -10,12 +10,25 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-black/[0.04]">
       <div className="max-w-6xl mx-auto px-6 sm:px-10 h-12 flex items-center justify-between">
-        <Link
-          href="/"
-          className="text-[13px] sm:text-[14px] font-semibold tracking-[-0.01em] text-[var(--foreground)] hover:opacity-70"
-        >
-          Early Signals of AI Impact
-        </Link>
+        <div className="flex items-center gap-3">
+          <Link
+            href="/"
+            className="text-[13px] sm:text-[14px] font-semibold tracking-[-0.01em] text-[var(--foreground)] hover:opacity-70"
+          >
+            Early Signals of AI Impact
+          </Link>
+          <span className="text-[10px] text-[var(--muted)]/60">
+            A personal project of{" "}
+            <a
+              href="https://linkedin.com/in/mattzieger"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-[var(--foreground)] transition-colors"
+            >
+              Matt Zieger
+            </a>
+          </span>
+        </div>
         <div className="hidden sm:flex items-center gap-0.5">
           {NAV_LINKS.map((link) => (
             <Link
