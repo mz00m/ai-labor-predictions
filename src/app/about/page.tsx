@@ -66,7 +66,7 @@ export default function AboutPage() {
             >
               Matt Zieger
             </a>{" "}
-            is building this as a personal vibe-coding project, as a way to learn and hopefully create something useful for others. While this is not formally affiliated with his day job, he&rsquo;s the Chief Program &amp; Partnership Officer at the GitLab Foundation,
+            who is building this as a personal project, to learn and create something useful for others. While this is not formally affiliated with his day job, he&rsquo;s the Chief Program &amp; Partnership Officer at the GitLab Foundation,
             where he wakes up every day trying to help people earn a living wage.
           </p>
         </div>
