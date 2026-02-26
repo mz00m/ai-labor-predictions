@@ -41,7 +41,7 @@ function computeTrend(prediction: Prediction, selectedTiers: EvidenceTier[]) {
     }
   }
   if (closest === latest) return null;
-  const change = latest.value - closest.value;
+  const change = Math.round((latest.value - closest.value) * 10) / 10;
   const monthsApart = Math.round(
     (latestDate - new Date(closest.date).getTime()) / (30 * 24 * 60 * 60 * 1000)
   );
