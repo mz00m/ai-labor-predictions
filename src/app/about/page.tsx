@@ -8,26 +8,43 @@ export default function AboutPage() {
         <p className="text-[13px] font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
           About This Project
         </p>
-        <h1 className="text-[36px] sm:text-[46px] font-black tracking-tight text-[var(--foreground)] leading-[1.08] max-w-3xl">
-          See the future before it&rsquo;s here.
-        </h1>
       </section>
 
       {/* Mission */}
       <section className="max-w-3xl space-y-4">
         <p className="text-[14px] text-[var(--muted)] leading-relaxed">
-          For years I&rsquo;ve wanted a single place that synthesizes what we actually know about
-          AI&rsquo;s impact on economic opportunity &mdash; not the hype, not the doom, but the evidence.
+          Society is trying to figure out what AI means for work &mdash; and the answers keep
+          changing. For years I&rsquo;ve wanted a single place that synthesizes what we actually
+          know about AI&rsquo;s impact on economic opportunity &mdash; not the hype, not the doom,
+          but the evidence.
         </p>
         <p className="text-[14px] text-[var(--muted)] leading-relaxed">
-          This project pulls together peer-reviewed research, government data, corporate filings,
-          think tank analysis, and journalism into one living dashboard. The goal is to help
-          the people who need it most &mdash; leaders in workforce development, education, philanthropy,
-          and policy &mdash; have a more thoughtful, evidence-grounded response to what&rsquo;s coming.
+          This dashboard makes that process visible by tracking how predictions about displacement,
+          wages, adoption, and corporate behavior evolve as new research, data, and real-world
+          evidence emerge. The goal is to help the people who need it most &mdash; leaders in
+          workforce development, education, philanthropy, and policy &mdash; have a more thoughtful,
+          evidence-grounded response to what&rsquo;s coming.
         </p>
         <p className="text-[14px] text-[var(--muted)] leading-relaxed">
           It&rsquo;s a weekend project, built in the open, and very much a work in progress.
-          If you have ideas on how to make it better, I&rsquo;d love to hear from you.
+          If you have ideas on how to make it better, I&rsquo;d love to hear from you:{" "}
+          <a
+            href="https://www.linkedin.com/in/mattzieger"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-[var(--foreground)] transition-colors"
+          >
+            LinkedIn
+          </a>
+          {" / "}
+          <a
+            href="https://x.com/mattzieger"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-[var(--foreground)] transition-colors"
+          >
+            X
+          </a>
         </p>
       </section>
 
