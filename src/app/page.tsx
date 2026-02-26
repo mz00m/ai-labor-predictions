@@ -7,7 +7,6 @@ import EvidenceFilter from "@/components/EvidenceFilter";
 import PredictionSummaryCard from "@/components/PredictionSummaryCard";
 import NewsTicker from "@/components/NewsTicker";
 import ResearchFeed from "@/components/ResearchFeed";
-import Methodology from "@/components/Methodology";
 import FunnelStrip from "@/components/FunnelStrip";
 import ProductivityPredictions from "@/components/ProductivityPredictions";
 import ResearchEvidence from "@/components/ResearchEvidence";
@@ -166,11 +165,6 @@ export default function Home() {
       {/* Research Feed */}
       <section id="research-feed">
         <ResearchFeed selectedTiers={selectedTiers} />
-      </section>
-
-      {/* Methodology & Sources */}
-      <section>
-        <Methodology />
       </section>
     </div>
   );
