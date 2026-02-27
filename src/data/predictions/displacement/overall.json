@@ -103,6 +103,14 @@
       "confidenceHigh": 2.5,
       "sourceIds": ["nber-bloom-firm-data-ai-2026"],
       "evidenceTier": 1
+    },
+    {
+      "date": "2026-02-24",
+      "value": 6.5,
+      "confidenceLow": 3,
+      "confidenceHigh": 14,
+      "sourceIds": ["goldman-mei-ai-labor-2026"],
+      "evidenceTier": 2
     }
   ],
   "overlays": [
