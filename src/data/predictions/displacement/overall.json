@@ -133,6 +133,13 @@
       "sourceIds": ["frank-ai-unemployment-overall-2026"],
       "evidenceTier": 1,
       "label": "Frank et al.: unemployment risk rose in AI-exposed occupations from early 2022"
+    },
+    {
+      "date": "2026-01-15",
+      "direction": "neutral",
+      "sourceIds": ["cognizant-new-work-2026"],
+      "evidenceTier": 2,
+      "label": "Cognizant: $4.5T in US labor value could shift to AI; 93% of jobs have exposed tasks"
     }
   ],
   "sources": [
@@ -401,6 +408,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-02-15",
       "excerpt": "Survey of ~6,000 executives across US, UK, Germany, Australia. 90%+ report no employment impact from AI over the past 3 years. Firms expect AI to reduce employment by 0.7% over the next 3 years (US: -1.2%). Employees, by contrast, expect +0.5% job creation."
+    },
+    {
+      "id": "cognizant-new-work-2026",
+      "title": "New Work, New World 2026: How AI is Reshaping Work",
+      "url": "https://www.cognizant.com/us/en/aem-i/ai-and-the-future-of-work-report",
+      "publisher": "Cognizant",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-15",
+      "excerpt": "$4.5T in US labor value ($15T globally) could shift from humans to AI based on current capabilities. 93% of jobs have tasks exposed to AI. Only 32% of tasks are non-automatable (down from 57% in 2023). Exposure measures current capability, not realized displacement."
     }
   ]
 }

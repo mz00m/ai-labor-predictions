@@ -71,6 +71,14 @@
       "confidenceHigh": 60,
       "sourceIds": ["anthropic-econ-primitives-2026"],
       "evidenceTier": 1
+    },
+    {
+      "date": "2026-01-15",
+      "value": 93,
+      "confidenceLow": 85,
+      "confidenceHigh": 95,
+      "sourceIds": ["cognizant-new-work-2026"],
+      "evidenceTier": 2
     }
   ],
   "overlays": [
@@ -94,6 +102,13 @@
       "sourceIds": ["eloundou-openai-2024"],
       "evidenceTier": 1,
       "label": "OpenAI/UPenn: 80% of workers have ≥10% tasks affected"
+    },
+    {
+      "date": "2026-01-15",
+      "direction": "up",
+      "sourceIds": ["cognizant-new-work-2026"],
+      "evidenceTier": 2,
+      "label": "Cognizant: exposure growing 9%/yr (up from 2%); 30% above 2032 projections"
     }
   ],
   "sources": [
@@ -177,6 +192,15 @@
       "evidenceTier": 1,
       "datePublished": "2025-09-15",
       "excerpt": "Productivity gains 20-60% in controlled RCTs, 15-30% in field experiments; AI exposure measures converge toward high-wage jobs being most exposed."
+    },
+    {
+      "id": "cognizant-new-work-2026",
+      "title": "New Work, New World 2026: How AI is Reshaping Work",
+      "url": "https://www.cognizant.com/us/en/aem-i/ai-and-the-future-of-work-report",
+      "publisher": "Cognizant",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-15",
+      "excerpt": "93% of jobs could be impacted by AI today — six years ahead of previous 2032 projections. Average exposure score 39%, growing at 9% annually (up from 2%). Only 32% of tasks remain non-automatable (down from 57% in 2023). Based on reassessment of 18,000 tasks across 1,000 O*NET occupations."
     }
   ]
 }

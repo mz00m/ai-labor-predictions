@@ -89,6 +89,13 @@
       "sourceIds": ["pearson-smarthinking-2025"],
       "evidenceTier": 1,
       "label": "Pearson: retired Smarthinking human tutoring, replaced with AI chatbots"
+    },
+    {
+      "date": "2026-01-15",
+      "direction": "down",
+      "sourceIds": ["cognizant-new-work-2026"],
+      "evidenceTier": 2,
+      "label": "Cognizant: education exposure jumped from 11% to 49% — a 4.5x increase"
     }
   ],
   "sources": [
@@ -225,6 +232,15 @@
       "evidenceTier": 1,
       "datePublished": "2025-06-01",
       "excerpt": "Pearson fully retired its Smarthinking human tutoring service, replacing it with AI-powered chatbot tutors. Marks complete displacement of a human tutoring workforce by AI in a major education company."
+    },
+    {
+      "id": "cognizant-new-work-2026",
+      "title": "New Work, New World 2026: How AI is Reshaping Work",
+      "url": "https://www.cognizant.com/us/en/aem-i/ai-and-the-future-of-work-report",
+      "publisher": "Cognizant",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-15",
+      "excerpt": "Education task exposure jumped from 11% to 49% — a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations."
     }
   ]
 }
