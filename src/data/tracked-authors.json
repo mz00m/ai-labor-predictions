@@ -106,5 +106,29 @@
     "openAlexId": "A5012483390",
     "affiliation": "Brookings Institution",
     "specialization": "AI workforce transitions, essential workers, automation exposure"
+  },
+  {
+    "name": "Simon Johnson",
+    "openAlexId": "A5068909847",
+    "affiliation": "MIT Sloan School of Management",
+    "specialization": "Pro-worker AI, technology and prosperity, institutional economics"
+  },
+  {
+    "name": "John Horton",
+    "openAlexId": "A5042844946",
+    "affiliation": "MIT Sloan School of Management",
+    "specialization": "Online labor markets, AI automation of tasks, labor economics"
+  },
+  {
+    "name": "Menaka Hampole",
+    "openAlexId": "A5092217108",
+    "affiliation": "Yale School of Management",
+    "specialization": "AI task-level exposure, labor demand measurement"
+  },
+  {
+    "name": "Dimitris Papanikolaou",
+    "openAlexId": "A5079889899",
+    "affiliation": "Northwestern Kellogg School of Management",
+    "specialization": "Technology and labor, AI exposure indices, asset pricing"
   }
 ]
