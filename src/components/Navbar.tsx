@@ -43,8 +43,8 @@ export default function Navbar() {
           className="flex items-center hover:opacity-80 transition-opacity"
         >
           <svg
-            width="105"
-            height="17"
+            width="116"
+            height="19"
             viewBox="36 72 400 60"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
