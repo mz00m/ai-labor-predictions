@@ -350,7 +350,7 @@ export default function PredictionChart({
           <p className="text-[11px] font-medium text-[var(--muted)] uppercase tracking-wider">
             Additional context
           </p>
-          {overlayData.map((o) => {
+          {[...overlayData].sort((a, b) => b.date - a.date).map((o) => {
             const color = overlayColor(o.direction);
             const arrow =
               o.direction === "down"
