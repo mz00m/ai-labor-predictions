@@ -140,6 +140,13 @@
       "sourceIds": ["cognizant-new-work-2026"],
       "evidenceTier": 2,
       "label": "Cognizant: $4.5T in US labor value could shift to AI; 93% of jobs have exposed tasks"
+    },
+    {
+      "date": "2026-02-24",
+      "direction": "neutral",
+      "sourceIds": ["goldman-mei-ai-labor-2026"],
+      "evidenceTier": 2,
+      "label": "Goldman (Mei): only 5-10K/mo drag so far; baseline 6-7% displaced; +½pp unemployment"
     }
   ],
   "sources": [
@@ -417,6 +424,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-01-15",
       "excerpt": "$4.5T in US labor value ($15T globally) could shift from humans to AI based on current capabilities. 93% of jobs have tasks exposed to AI. Only 32% of tasks are non-automatable (down from 57% in 2023). Exposure measures current capability, not realized displacement."
+    },
+    {
+      "id": "goldman-mei-ai-labor-2026",
+      "title": "AI and the US Labor Market: Current Impact and Outlook",
+      "url": "https://finance.yahoo.com/news/goldman-sachs-warns-ai-fueled-layoffs-could-raise-the-unemployment-rate-this-year-chart-154251740.html",
+      "publisher": "Goldman Sachs Research (Pierfrancesco Mei)",
+      "evidenceTier": 2,
+      "datePublished": "2026-02-24",
+      "excerpt": "AI's labor market impact still small — only 5-10K/month drag on net job growth. Only 2½% of jobs exposed to automation today. Baseline forecast: 6-7% of workers displaced (range 3-14%), lowering annual hiring by 1M jobs and raising unemployment ~½pp. US creates 30M gross new jobs/year; does not anticipate job apocalypse. Impact so far largely confined to tech sector but expects it to grow materially."
     }
   ]
 }

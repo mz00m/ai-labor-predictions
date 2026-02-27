@@ -120,6 +120,13 @@
       "sourceIds": ["cognizant-new-work-2026"],
       "evidenceTier": 2,
       "label": "Cognizant: computer/math roles 67% task exposure — second highest of all categories"
+    },
+    {
+      "date": "2026-02-24",
+      "direction": "down",
+      "sourceIds": ["goldman-mei-ai-labor-2026"],
+      "evidenceTier": 2,
+      "label": "Goldman (Mei): AI impact 'largely confined to tech sector'; expects it to grow materially"
     }
   ],
   "sources": [
@@ -372,6 +379,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-01-15",
       "excerpt": "Computer and mathematical roles have 67% task exposure to AI — second only to financial managers (84%). Analysis of 18,000 tasks across 1,000 O*NET occupations. Exposure scores are 30% above what was originally projected for 2032."
+    },
+    {
+      "id": "goldman-mei-ai-labor-2026",
+      "title": "AI and the US Labor Market: Current Impact and Outlook",
+      "url": "https://finance.yahoo.com/news/goldman-sachs-warns-ai-fueled-layoffs-could-raise-the-unemployment-rate-this-year-chart-154251740.html",
+      "publisher": "Goldman Sachs Research (Pierfrancesco Mei)",
+      "evidenceTier": 2,
+      "datePublished": "2026-02-24",
+      "excerpt": "AI's labor market impact has so far been 'largely confined to the technology sector itself, where employment trends have weakened materially in the last three years.' Expects impact to grow materially. Net positive hiring impulse from AI-infrastructure builders and AI-proficient workers partially offsets losses."
     }
   ],
   "marketIds": {
