@@ -1,5 +1,7 @@
 # Data Sources
 
+> **Sources last added:** February 27, 2026 | **Total sources tracked:** 23 institutions, 39 key studies, 22 researchers
+
 This document lists every external data source that powers this site — where it comes from, how we access it, and what it's used for. Our goal is full transparency about the evidence behind every chart, prediction, and headline you see here.
 
 We classify sources into **evidence tiers**:
@@ -82,6 +84,83 @@ We classify sources into **evidence tiers**:
 - **Tier:** 1
 - **Auth:** None
 - **Used for:** IZA Discussion Papers on labor economics and AI — one of the world's largest networks of labor economists.
+
+### OECD (Organisation for Economic Co-operation and Development)
+
+- **URL:** https://www.oecd.org/en/topics/sub-issues/ai-and-work.html
+- **Tier:** 1
+- **Auth:** None (public reports and datasets)
+- **Used for:** Cross-country labor market analysis, AI skills demand research, and employment projections. Key publications include the annual *Employment Outlook*, *Skills Outlook*, and targeted reports on AI's changing demand for skills. The OECD's AI Policy Observatory (oecd.ai) tracks AI adoption and workforce policy across 38 member countries.
+
+### ILO (International Labour Organization)
+
+- **URL:** https://www.ilo.org/topics-and-sectors/artificial-intelligence
+- **Tier:** 1
+- **Auth:** None (public reports)
+- **Used for:** Global estimates of occupational exposure to generative AI, gender disparity analysis, and developing-country impacts. The ILO–NASK Global Index of Occupational Exposure provides granular 6-digit occupation-level automation and augmentation scores covering nearly 30,000 tasks. Key finding: 1 in 4 workers globally are in an occupation with GenAI exposure, with significant gender gaps (4.7% female vs. 2.4% male in highest-exposure category).
+
+### McKinsey Global Institute
+
+- **URL:** https://www.mckinsey.com/mgi/overview
+- **Tier:** 2
+- **Auth:** None (public reports)
+- **Used for:** Estimates of technical automation potential, workforce transition modeling, and AI adoption maturity. Their November 2025 analysis found 57% of US work hours could be automated with existing technologies, with up to 40% of jobs in highly automatable roles. McKinsey frames impact in terms of task-level automation potential rather than binary job loss, and emphasizes workflow redesign over simple labor substitution.
+
+### Stanford HAI (Human-Centered AI Institute)
+
+- **URL:** https://hai.stanford.edu/ai-index
+- **Tier:** 1–2
+- **Auth:** None (public reports)
+- **Used for:** The annual *AI Index Report* provides comprehensive data on AI's economic impact, business adoption trends, skills demand, and investment flows. Chapter 4 (Economy) tracks employer demand for AI skills, productivity research, and adoption rates. The 2025 edition found 78% of organizations using AI (up from 55% in 2023) and confirmed AI narrows skill gaps across the workforce.
+
+### RAND Corporation
+
+- **URL:** https://www.rand.org/topics/artificial-intelligence.html
+- **Tier:** 2
+- **Auth:** None (public reports)
+- **Used for:** Macroeconomic modeling of AI-driven labor displacement, fiscal policy implications, and sector-specific workforce analysis. Notable 2025 publications include research on federal revenue impacts of labor-replacing AI, cascading effects of AI adoption across sectors, and policy frameworks using automatic stabilizers to mitigate workforce disruption.
+
+### Georgetown CSET (Center for Security and Emerging Technology)
+
+- **URL:** https://cset.georgetown.edu/research-topic/workforce/
+- **Tier:** 2
+- **Auth:** None (public reports)
+- **Used for:** Data-driven analysis of the US AI workforce pipeline, skills demand tracking via the PATHWISE project, and assessment of federal AI education and training executive orders. CSET provides nonpartisan analysis at the intersection of national security and emerging technology workforce needs.
+
+### Economic Policy Institute (EPI)
+
+- **URL:** https://www.epi.org/
+- **Tier:** 2
+- **Auth:** None (public reports)
+- **Used for:** Worker-centered analysis of AI's labor market effects, wage inequality research, and institutional power dynamics. EPI's key contribution is framing AI's impact through the lens of employer-worker power imbalances rather than treating technology as an autonomous force, arguing that policy and institutional environments — not AI itself — are the decisive factors shaping wage outcomes.
+
+### Oxford Martin Programme on the Future of Work
+
+- **URL:** https://www.oxfordmartin.ox.ac.uk/future-of-work
+- **Tier:** 1–2
+- **Auth:** None (public working papers)
+- **Used for:** The original Frey & Osborne (2013) "47% of jobs at risk" study that launched the modern AI-employment research field. Their 2024 reappraisal with generative AI updated these estimates. Frey's recent work on declining new job creation rates (8.2% in the 1980s → 0.5% in the 2000s) is particularly relevant to understanding whether new AI-enabled roles will absorb displaced workers.
+
+### CEPR (Centre for Economic Policy Research)
+
+- **URL:** https://cepr.org/
+- **Tier:** 1–2
+- **Auth:** None (VoxEU columns are public)
+- **Used for:** European-focused economic research on AI and labor, including analyses suggesting AI may shrink rather than widen earnings inequality by displacing non-routine tasks predominantly performed by high-skill workers.
+
+### AEI (American Enterprise Institute)
+
+- **URL:** https://www.aei.org/
+- **Tier:** 2
+- **Auth:** None (public reports)
+- **Used for:** Free-market perspective on AI labor impacts, including provocative analyses like "AI Will Collapse Wages" (Sept 2025) arguing wages will decline sharply and youth unemployment will soar. AEI co-convened the *Workforce Futures Initiative* with Brookings and Harvard Kennedy School, producing Acemoglu's cross-institutional work on automation and income inequality.
+
+### Center for American Progress (CAP)
+
+- **URL:** https://www.americanprogress.org/
+- **Tier:** 2
+- **Auth:** None (public reports)
+- **Used for:** Worker-centered policy recommendations on AI governance, algorithmic management, and workforce training. CAP emphasizes rebalancing worker bargaining power, regulating automated decision-making, and strengthening social safety nets as preconditions for equitable AI adoption.
 
 ---
 
@@ -170,7 +249,7 @@ We classify sources into **evidence tiers**:
 
 ## Tracked Researchers
 
-We monitor new publications from 18 leading researchers in AI and labor economics via their OpenAlex author profiles:
+We monitor new publications from 22 leading researchers in AI and labor economics via their OpenAlex author profiles:
 
 | Researcher | Affiliation | Focus |
 |------------|-------------|-------|
@@ -192,6 +271,10 @@ We monitor new publications from 18 leading researchers in AI and labor economic
 | Lindsey Raymond | MIT | AI at work, productivity |
 | Bharat Chandar | Stanford | AI displacement, labor economics |
 | Molly Kinder | Brookings Institution | AI workforce transitions, essential workers |
+| Simon Johnson | MIT Sloan School of Management | Pro-worker AI, technology and prosperity |
+| John Horton | MIT Sloan School of Management | Online labor markets, AI task automation |
+| Menaka Hampole | Yale School of Management | AI task-level exposure, labor demand measurement |
+| Dimitris Papanikolaou | Northwestern Kellogg | Technology and labor, AI exposure indices |
 
 ---
 
@@ -219,6 +302,26 @@ These individual studies are prominently cited across the dashboard:
 | [Dallas Fed, 2026](https://www.dallasfed.org/research/economics/2026/0106) | 0.1% actual decline, younger workers only | Funnel strip |
 | [Bick, Blandin & Deming, NBER 2024](https://www.nber.org/papers/w32966) | ~1.4% aggregate time savings across all US workers | Funnel strip |
 | [Forrester, 2026](https://www.forrester.com/press-newsroom/forrester-impact-ai-jobs-forecast/) | 6% of US jobs lost to AI/automation by 2030 | Funnel strip |
+| [Acemoglu, Autor & Johnson, NBER 2026](https://www.nber.org/papers/w34854) | Pro-worker AI framework: 5 categories of tech change; only new-task-creating AI is unambiguously pro-worker | Think tank review |
+| [Hampole et al., NBER 2025](https://www.nber.org/papers/w33509) | 1 SD increase in AI task exposure → ~14% decline in within-firm employment share of affected occupations | Think tank review |
+| [Demirer et al., NBER 2026](https://www.nber.org/papers/w34859) | Theory of AI automation via task chaining; redefines how work decomposes under AI | Think tank review |
+| [McKinsey Global Institute, Nov 2025](https://www.mckinsey.com/mgi/our-research/a-new-future-of-work-the-race-to-deploy-ai-and-raise-skills-in-europe-and-beyond) | 57% of US work hours automatable with current tech; 40% of jobs in highly automatable roles; 30% of hours automated by 2030 (midpoint scenario) | Think tank review |
+| [ILO–NASK Global Index, 2025](https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure) | 1 in 4 workers globally in GenAI-exposed occupations; gender gap: 4.7% female vs. 2.4% male in highest exposure | Think tank review |
+| [OECD, Sept 2025](https://www.oecd.org/en/publications/artificial-intelligence-and-the-changing-demand-for-skills-in-the-labour-market_88684e36-en.html) | AI shifts skill demand toward management and business skills in non-specialist AI jobs; routine cognitive skills see significant drops | Think tank review |
+| [Stanford HAI AI Index, 2025](https://hai.stanford.edu/ai-index/2025-ai-index-report) | 78% of organizations using AI (up from 55%); AI narrows workforce skill gaps; AI skill demand rose from ~1M to ~7M workers (2023–2025) | Think tank review |
+| [MIT Project Iceberg, 2025](https://mitsloan.mit.edu/ideas-made-to-matter/how-artificial-intelligence-impacts-us-labor-market) | 11.7% of wage value ($1.2T) in roles where AI can perform meaningful portions of the skill mix; 16% of classified labor tasks technically automatable | Think tank review |
+| [RAND, Aug 2025](https://www.rand.org/pubs/perspectives/PEA3888-3.html) | Dual macro effects: enhanced productivity gains vs. substantial displacement in high-automation sectors; recommends automatic stabilizers for workforce disruption | Think tank review |
+| [RAND, Nov 2025](https://www.rand.org/pubs/working_papers/WRA4443-1.html) | Labor-replacing AI could disrupt federal tax base; explores policy responses to shrinking labor force and potential AI-induced deflation | Think tank review |
+| [EPI, 2025](https://www.epi.org/publication/ai-unbalanced-labor-markets/) | AI not a direct threat to wages/employment; employer-worker power imbalance is the decisive factor; productivity slowdown suggests limited tech impact | Think tank review |
+| [Brookings, Feb 2026](https://www.brookings.edu/articles/measuring-us-workers-capacity-to-adapt-to-ai-driven-job-displacement/) | AI exposure measures miss non-technological factors (demographics, geography, industry concentration) that determine actual welfare costs of displacement | Think tank review |
+| [Brookings BPEA, Sept 2025](https://www.brookings.edu/articles/technology-and-labor-markets-past-present-and-future/) | Historical adaptation model: AI will shift demand away from occupations previously helped by tech progress | Think tank review |
+| [Brookings/Yale, Oct 2025](https://budgetlab.yale.edu/research/evaluating-impact-ai-labor-market-current-state-affairs) | Little evidence AI has fundamentally transformed the workforce; all three exposure groups stayed roughly constant 2022–2025 | Think tank review |
+| [IMF, Apr 2025](https://www.imf.org/en/publications/wp/issues/2025/04/04/ai-adoption-and-inequality-565729) | AI could reduce wage inequality by displacing high-income tasks, but complementarity and capital returns may offset | Think tank review |
+| [Frey & Osborne Reappraisal, 2024](https://oms-www.files.svdcdn.com/production/downloads/academic/2023-FoW-Working-Paper-Generative-AI-and-the-Future-of-Work-A-Reappraisal-combined.pdf) | GenAI expanded automation scope but also lowers barriers for low-skill workers; new job creation rates declining (8.2% in 1980s → 0.5% in 2000s) | Think tank review |
+| [Brookings, Oct 2025](https://www.brookings.edu/articles/the-geography-of-generative-ais-workforce-impacts-will-likely-differ-from-those-of-previous-technologies/) | 30%+ of workers could see 50%+ of tasks affected; high-paying white-collar metro areas most exposed — opposite of previous automation waves | Think tank review |
+| [Brookings, Jan 2026](https://www.brookings.edu/articles/counting-ai-a-blueprint-to-integrate-ai-investment-and-use-data-into-us-national-statistics/) | 18% of firms using AI as of Dec 2025; 26% of workers using AI daily/frequently; DOL planning AI Workforce Research Hub | Think tank review |
+| [IMF, Jan 2026](https://www.imf.org/en/blogs/articles/2026/01/14/new-skills-and-ai-are-reshaping-the-future-of-work) | 40% of global jobs exposed; employment 3.6% lower after 5 years in high-AI-demand regions; entry-level hiring particularly affected | Think tank review |
+| [OECD Employment Outlook, 2025](https://digital-skills-jobs.europa.eu/en/latest/news/oecd-employment-outlook-2025-can-we-get-through-demographic-crunch) | 27% of OECD jobs at high automation risk; AI increases demand for digital, business & management skills while diminishing routine cognitive skills | Think tank review |
 
 ---
 
