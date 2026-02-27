@@ -219,7 +219,7 @@ export default function PredictionChart({
           <Line
             type="monotone"
             dataKey="value"
-            stroke="#7c3aed"
+            stroke="#5C61F6"
             strokeWidth={2}
             dot={false}
             connectNulls
@@ -295,7 +295,7 @@ export default function PredictionChart({
           <Line
             type="monotone"
             dataKey="value"
-            stroke="#7c3aed"
+            stroke="#5C61F6"
             strokeWidth={2.5}
             connectNulls
             dot={(props: Record<string, unknown>) => {

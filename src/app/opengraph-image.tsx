@@ -49,7 +49,7 @@ const metrics = [
     label: "AI Adoption",
     value: "40%",
     sub: "of companies by 2027",
-    color: "#7c3aed",
+    color: "#5C61F6",
     trend: [20, 22, 25, 28, 30, 32, 33, 35, 36, 38, 40],
     direction: "up" as const,
   },
@@ -101,7 +101,7 @@ export default function OGImage() {
             right: 0,
             height: 4,
             background:
-              "linear-gradient(90deg, #7c3aed 0%, #3b82f6 50%, #ef4444 100%)",
+              "linear-gradient(90deg, #5C61F6 0%, #3b82f6 50%, #ef4444 100%)",
             display: "flex",
           }}
         />
@@ -138,7 +138,7 @@ export default function OGImage() {
                   width: 10,
                   height: 10,
                   borderRadius: "50%",
-                  backgroundColor: "#7c3aed",
+                  backgroundColor: "#5C61F6",
                   display: "flex",
                 }}
               />
@@ -148,7 +148,7 @@ export default function OGImage() {
                   fontWeight: 700,
                   letterSpacing: "0.12em",
                   textTransform: "uppercase",
-                  color: "#7c3aed",
+                  color: "#5C61F6",
                 }}
               >
                 Live Tracker
@@ -349,7 +349,7 @@ export default function OGImage() {
             <span
               style={{
                 fontSize: 14,
-                color: "#7c3aed",
+                color: "#5C61F6",
                 fontWeight: 700,
               }}
             >

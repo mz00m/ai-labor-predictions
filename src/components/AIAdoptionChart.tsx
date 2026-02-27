@@ -25,7 +25,7 @@ const aiAdoptionData = [
   { date: "Nov 2025", overall: 55.9, work: 40.7, estimated: false },
 ];
 
-const OVERALL_COLOR = "#7c3aed";
+const OVERALL_COLOR = "#5C61F6";
 const WORK_COLOR = "#2563eb";
 
 /* ------------------------------------------------------------------ */
