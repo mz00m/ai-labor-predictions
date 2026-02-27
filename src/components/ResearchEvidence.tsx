@@ -267,6 +267,32 @@ const MACRO_STUDIES: MacroStudy[] = [
     url: "https://www.nber.org/papers/w30400",
     direction: "neutral",
   },
+  {
+    id: "atlassian-ai-collab-2025",
+    authors: "Atlassian",
+    year: 2025,
+    title: "AI Collaboration Report (Fortune 100 + 12K workers)",
+    metric: "Organizational ROI",
+    effectPct: 0,
+    effectLabel: "96% no ROI",
+    finding: "96% of organizations have not seen dramatic improvements in efficiency, innovation, or work quality from AI. Only 4% report true ROI. Paradox: individual workers feel 33% more productive, but organizational metrics stay flat. Costing Fortune 500 ~$98B/year in lost returns on AI investments.",
+    citation: "Atlassian AI Collaboration Report 2025",
+    url: "https://www.atlassian.com/blog/ai-collaboration-report-2025",
+    direction: "neutral",
+  },
+  {
+    id: "hbr-workslop-2025",
+    authors: "Niederhoffer, Kellerman et al.",
+    year: 2025,
+    title: "AI 'Workslop' / Stanford + BetterUp",
+    metric: "Productivity drag",
+    effectPct: 0,
+    effectLabel: "−2 hrs/incident",
+    finding: "Survey of 1,150 US workers: 40% received AI-generated 'workslop' in the past month. Each instance cost ~2 hours to address. 18% of AI users admitted sending low-quality AI output. Estimated cost of $186/worker/month. For a 10,000-person org, ~$9M/year in lost productivity.",
+    citation: "HBR, Sep 2025",
+    url: "https://hbr.org/2025/09/ai-generated-workslop-is-destroying-productivity",
+    direction: "negative",
+  },
 ];
 
 /* ------------------------------------------------------------------ */

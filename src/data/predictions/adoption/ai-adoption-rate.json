@@ -70,7 +70,14 @@
       "direction": "up",
       "sourceIds": ["mckinsey-ai-survey-2025"],
       "evidenceTier": 2,
-      "label": "McKinsey survey: 78% use AI as core strategy"
+      "label": "McKinsey survey: 78% use AI in ≥1 function (Mar 2025)"
+    },
+    {
+      "date": "2025-11-01",
+      "direction": "up",
+      "sourceIds": ["mckinsey-ai-survey-nov-2025"],
+      "evidenceTier": 2,
+      "label": "McKinsey Nov 2025: 88% use AI; gen AI at 71%; but only 7% fully scaled"
     },
     {
       "date": "2025-11-20",
@@ -92,6 +99,20 @@
       "sourceIds": ["nber-bloom-firm-data-adoption-2026"],
       "evidenceTier": 1,
       "label": "NBER/Bloom: 78% of US firms use AI (executive survey of ~6K across 4 countries)"
+    },
+    {
+      "date": "2026-02-02",
+      "direction": "up",
+      "sourceIds": ["claude-code-github-2026"],
+      "evidenceTier": 2,
+      "label": "Claude Code: ~4% of all public GitHub commits (135K+/day); 42,896x growth in 13 months"
+    },
+    {
+      "date": "2025-10-01",
+      "direction": "neutral",
+      "sourceIds": ["atlassian-ai-collab-2025"],
+      "evidenceTier": 2,
+      "label": "Atlassian: 96% of orgs not seeing dramatic AI improvements; only 4% report true ROI"
     }
   ],
   "sources": [
@@ -292,6 +313,42 @@
       "evidenceTier": 1,
       "datePublished": "2026-02-15",
       "excerpt": "69% of firms across US, UK, Germany, and Australia currently use some AI technology (US: 78%). LLM text generation most common (41%). Expected to rise to 75% in 3 years. Larger, more productive, higher-paying firms more likely to adopt."
+    },
+    {
+      "id": "mckinsey-ai-survey-nov-2025",
+      "title": "The State of AI: Agents, Innovation, and Transformation (Nov 2025)",
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
+      "publisher": "McKinsey & Company",
+      "evidenceTier": 2,
+      "datePublished": "2025-11-01",
+      "excerpt": "88% of organizations use AI in ≥1 function (up from 78%). Gen AI adoption at 71%. But only 7% fully scaled, and just 6% report EBIT impact ≥5%. 62% experimenting with AI agents."
+    },
+    {
+      "id": "claude-code-github-2026",
+      "title": "Claude Code GitHub Commits Over Time",
+      "url": "https://github.com/search?q=co-authored-by+claude&type=commits",
+      "publisher": "GitHub Search API / Anthropic",
+      "evidenceTier": 2,
+      "datePublished": "2026-02-02",
+      "excerpt": "Claude Code reached 135K+ daily commits on public GitHub (~4% of all public commits). Growth of 42,896x in 13 months from launch. At current trajectory, projected to reach 20%+ of daily commits by end of 2026."
+    },
+    {
+      "id": "atlassian-ai-collab-2025",
+      "title": "Why 96% of Companies Aren't Seeing AI ROI",
+      "url": "https://www.atlassian.com/blog/ai-collaboration-report-2025",
+      "publisher": "Atlassian",
+      "evidenceTier": 2,
+      "datePublished": "2025-10-01",
+      "excerpt": "Survey of 180 Fortune 100 executives and 12,000 knowledge workers. 96% of organizations not seeing dramatic improvements in efficiency, innovation, or work quality from AI. Costing Fortune 500 ~$98B/year in lost returns. Workers report feeling 33% more productive individually, but organizational metrics flat."
+    },
+    {
+      "id": "hbr-ai-workslop-2025",
+      "title": "AI-Generated 'Workslop' Is Destroying Productivity",
+      "url": "https://hbr.org/2025/09/ai-generated-workslop-is-destroying-productivity",
+      "publisher": "Harvard Business Review (Stanford / BetterUp Labs)",
+      "evidenceTier": 2,
+      "datePublished": "2025-09-22",
+      "excerpt": "Survey of 1,150 US workers: 40% received AI-generated 'workslop' in the past month; each instance cost ~2 hours to deal with. 18% of AI users admitted sending low-quality AI output. Estimated cost: $186/worker/month or ~$9M/year for a 10,000-person org."
     }
   ]
 }
