@@ -165,7 +165,9 @@ export default function PredictionDetailPage() {
           {contextText}
         </p>
         <p className="text-[13px] text-[var(--muted)] opacity-60 mb-6 max-w-2xl">
-          This number is a weighted average across all selected sources, with higher-tier evidence and more recent data weighted more heavily.
+          {prediction.timeHorizon.toLowerCase().includes("current")
+            ? "This is observed data from real-world surveys and measurements, not a prediction."
+            : "This number is a weighted average across all selected sources, with higher-tier evidence and more recent data weighted more heavily."}{" "}
           See the{" "}
           <Link href="/#how-we-calculate" className="underline hover:text-[var(--foreground)]">
             full methodology
@@ -204,7 +206,9 @@ export default function PredictionDetailPage() {
       {/* Chart */}
       <section>
         <h2 className="text-[24px] sm:text-[28px] font-extrabold tracking-tight text-[var(--foreground)] mb-2">
-          How This Prediction Has Evolved
+          {prediction.timeHorizon.toLowerCase().includes("current")
+            ? "How This Metric Has Changed"
+            : "How This Prediction Has Evolved"}
         </h2>
         {prediction.slug === "genai-work-adoption" ? (
           <>

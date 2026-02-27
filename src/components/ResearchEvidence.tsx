@@ -736,8 +736,7 @@ export default function ResearchEvidence() {
 
       {/* Source attribution */}
       <p className="text-[13px] text-[var(--muted)] mt-4">
-        {MICRO_STUDIES.length + MACRO_STUDIES.length} studies &middot; Based on
-        synthesis by Alex Imas (behavioral economist) &middot; Studies range from
+        {MICRO_STUDIES.length + MACRO_STUDIES.length} studies &middot; Studies range from
         peer-reviewed (Science, QJE) to working papers &middot; Click any row for
         source
       </p>
