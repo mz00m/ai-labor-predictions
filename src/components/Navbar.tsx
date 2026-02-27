@@ -40,29 +40,38 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-6 sm:px-10 h-12 flex items-center justify-between">
         <Link
           href="/"
-          className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+          className="flex items-center hover:opacity-80 transition-opacity"
         >
           <svg
-            width="24"
-            height="28"
-            viewBox="0 0 58 66"
+            width="215"
+            height="32"
+            viewBox="0 0 430 65"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             className="shrink-0"
           >
-            <rect x="39" y="15" width="10" height="46" fill="#F66B5C" />
-            <rect x="9" y="35" width="10" height="26" fill="#5C61F6" />
-            <rect x="24" y="25" width="10" height="36" fill="#5C61F6" />
-            <rect x="39" y="15" width="5" height="5" fill="white" fillOpacity="0.69" />
-            <rect x="44" y="10" width="5" height="5" fill="#F66B5C" fillOpacity="0.28" />
-            <rect x="24" y="30" width="5" height="5" fill="white" fillOpacity="0.69" />
-            <path d="M39 25.5H44V30.5H39V25.5Z" fill="white" fillOpacity="0.75" />
-            <rect x="44" y="20" width="5" height="5" fill="white" fillOpacity="0.69" />
-            <rect x="29" y="25" width="5" height="5" fill="white" fillOpacity="0.69" />
+            {/* Bar chart logo */}
+            <rect x="33" y="5" width="10" height="46" fill="#F66B5C" />
+            <rect x="3" y="25" width="10" height="26" fill="#5C61F6" />
+            <rect x="18" y="15" width="10" height="36" fill="#5C61F6" />
+            <rect x="33" y="5" width="5" height="5" fill="white" fillOpacity="0.69" />
+            <rect x="38" y="0" width="5" height="5" fill="#F66B5C" fillOpacity="0.28" />
+            <rect x="18" y="20" width="5" height="5" fill="white" fillOpacity="0.69" />
+            <path d="M33 15.5H38V20.5H33V15.5Z" fill="white" fillOpacity="0.75" />
+            <rect x="38" y="10" width="5" height="5" fill="white" fillOpacity="0.69" />
+            <rect x="23" y="15" width="5" height="5" fill="white" fillOpacity="0.69" />
+            {/* Text */}
+            <text
+              x="58"
+              y="40"
+              fontFamily="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+              fontSize="22"
+              fontWeight="500"
+              fill="#6b7280"
+            >
+              Early Signals of AI Impact
+            </text>
           </svg>
-          <span className="text-[12px] font-medium text-[var(--muted)]">
-            Early Signals of AI Impact
-          </span>
         </Link>
 
         {/* Desktop nav */}
