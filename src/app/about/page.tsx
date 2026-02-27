@@ -69,7 +69,7 @@ export default function AboutPage() {
       <section className="max-w-3xl">
         <div className="border border-black/[0.06] rounded-lg px-5 py-5 bg-white">
           <p className="text-[14px] font-bold text-[var(--foreground)] mb-2">
-            Built by
+            Who is behind this?
           </p>
           <p className="text-[14px] text-[var(--muted)] leading-relaxed">
             <a
@@ -80,8 +80,25 @@ export default function AboutPage() {
             >
               Matt Zieger
             </a>{" "}
-            who is building this as a personal project, to learn and create something useful for others. While this is not formally affiliated with his day job, he&rsquo;s the Chief Program &amp; Partnership Officer at the GitLab Foundation,
-            where he wakes up every day trying to help people earn a living wage.
+            is building this as a personal project, to learn and help everyone navigate this new and uncertain world. While this is not formally affiliated with his day job, he&rsquo;s the Chief Program &amp; Partnership Officer at the GitLab Foundation, where he leads the{" "}
+            <a
+              href="https://www.gitlabfoundation.org/futureofwork"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-[var(--foreground)] transition-colors"
+            >
+              AI for Economic Opportunity Fund
+            </a>{" "}
+            and is the co-founder and chair of{" "}
+            <a
+              href="https://www.opportunityai.org/about"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-[var(--foreground)] transition-colors"
+            >
+              OpportunityAI
+            </a>
+            .
           </p>
         </div>
       </section>
