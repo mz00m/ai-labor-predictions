@@ -22,6 +22,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://jobsdata.org/sitemap.xml",
+    sitemap: "https://jobsdata.ai/sitemap.xml",
   };
 }

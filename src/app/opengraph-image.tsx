@@ -353,7 +353,7 @@ export default function OGImage() {
                 fontWeight: 700,
               }}
             >
-              jobsdata.org
+              jobsdata.ai
             </span>
           </div>
         </div>

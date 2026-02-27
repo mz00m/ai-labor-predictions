@@ -5,7 +5,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const predictions = getAllPredictions();
 
   const predictionRoutes = predictions.map((p) => ({
-    url: `https://jobsdata.org/predictions/${p.slug}`,
+    url: `https://jobsdata.ai/predictions/${p.slug}`,
     lastModified: new Date(),
     changeFrequency: "weekly" as const,
     priority: 0.8,
@@ -13,13 +13,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     {
-      url: "https://jobsdata.org",
+      url: "https://jobsdata.ai",
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 1,
     },
     {
-      url: "https://jobsdata.org/about",
+      url: "https://jobsdata.ai/about",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.6,
