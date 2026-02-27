@@ -215,9 +215,17 @@ export default function PredictionDetailPage() {
           </>
         ) : (
           <>
-            <p className="text-[14px] text-[var(--muted)] mb-8">
+            <p className="text-[14px] text-[var(--muted)] mb-2">
               Each data point is from a different source. Dots are color-coded by evidence tier. Click any dot to jump to its source.
             </p>
+            {prediction.overlays && prediction.overlays.length > 0 && (
+              <p className="text-[13px] text-[var(--muted)] opacity-60 mb-8">
+                Colored overlay bars represent relevant studies or data points that provide directional (but not exact) guidance. Click a bar to see its source.
+              </p>
+            )}
+            {(!prediction.overlays || prediction.overlays.length === 0) && (
+              <div className="mb-8" />
+            )}
             <PredictionChart
               history={prediction.history}
               sources={prediction.sources}
