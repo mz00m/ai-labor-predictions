@@ -40,9 +40,29 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-6 sm:px-10 h-12 flex items-center justify-between">
         <Link
           href="/"
-          className="text-[13px] sm:text-[14px] font-semibold tracking-[-0.01em] text-[var(--foreground)] hover:opacity-70"
+          className="flex items-center gap-2 hover:opacity-80 transition-opacity"
         >
-          Early Signals of AI Impact
+          <svg
+            width="24"
+            height="28"
+            viewBox="0 0 58 66"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="shrink-0"
+          >
+            <rect x="39" y="15" width="10" height="46" fill="#F66B5C" />
+            <rect x="9" y="35" width="10" height="26" fill="#5C61F6" />
+            <rect x="24" y="25" width="10" height="36" fill="#5C61F6" />
+            <rect x="39" y="15" width="5" height="5" fill="white" fillOpacity="0.69" />
+            <rect x="44" y="10" width="5" height="5" fill="#F66B5C" fillOpacity="0.28" />
+            <rect x="24" y="30" width="5" height="5" fill="white" fillOpacity="0.69" />
+            <path d="M39 25.5H44V30.5H39V25.5Z" fill="white" fillOpacity="0.75" />
+            <rect x="44" y="20" width="5" height="5" fill="white" fillOpacity="0.69" />
+            <rect x="29" y="25" width="5" height="5" fill="white" fillOpacity="0.69" />
+          </svg>
+          <span className="text-[13px] sm:text-[14px] font-semibold tracking-[-0.01em] text-[var(--foreground)]">
+            Early Signals of AI Impact
+          </span>
         </Link>
 
         {/* Desktop nav */}
