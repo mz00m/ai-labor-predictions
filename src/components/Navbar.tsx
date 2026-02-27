@@ -60,7 +60,7 @@ export default function Navbar() {
             <rect x="44" y="20" width="5" height="5" fill="white" fillOpacity="0.69" />
             <rect x="29" y="25" width="5" height="5" fill="white" fillOpacity="0.69" />
           </svg>
-          <span className="text-[13px] sm:text-[14px] font-semibold tracking-[-0.01em] text-[var(--foreground)]">
+          <span className="text-[12px] font-medium text-[var(--muted)]">
             Early Signals of AI Impact
           </span>
         </Link>
