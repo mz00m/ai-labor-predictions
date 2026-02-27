@@ -1,5 +1,5 @@
 # Early Signals of AI Impact
-> A live dashboard tracking AI's impact on the labor market with 250+ sources across 17 predictions.
+> A live dashboard tracking AI's impact on the labor market with 300+ sources across 17 predictions.
 
 ## What this site does
 This project synthesizes peer-reviewed research, government data, corporate filings, think tank analysis, and journalism to track how AI is affecting jobs, wages, and corporate behavior. Predictions are scored by evidence quality across four tiers, from peer-reviewed RCTs to social media commentary.

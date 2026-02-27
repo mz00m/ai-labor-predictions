@@ -6,12 +6,12 @@ import { Analytics } from "@vercel/analytics/react";
 export const metadata: Metadata = {
   title: "Early Signals of AI Impact",
   description:
-    "250+ sources tracking AI's impact on jobs, wages, and adoption. AI adoption is accelerating, productivity is climbing, and jobs are changing faster than they're disappearing.",
+    "300+ sources tracking AI's impact on jobs, wages, and adoption. AI adoption is accelerating, productivity is climbing, and jobs are changing faster than they're disappearing.",
   metadataBase: new URL("https://labor.mattzieger.com"),
   openGraph: {
     title: "Early Signals of AI Impact",
     description:
-      "250+ sources, one pattern: AI adoption is accelerating, productivity is climbing, and jobs are changing faster than they're disappearing.",
+      "300+ sources, one pattern: AI adoption is accelerating, productivity is climbing, and jobs are changing faster than they're disappearing.",
     type: "website",
     siteName: "Early Signals of AI Impact",
   },
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Early Signals of AI Impact",
     description:
-      "250+ sources, one pattern: AI adoption is accelerating, productivity is climbing, and jobs are changing faster than they're disappearing.",
+      "300+ sources, one pattern: AI adoption is accelerating, productivity is climbing, and jobs are changing faster than they're disappearing.",
   },
 };
 
@@ -40,7 +40,7 @@ export default function RootLayout({
               name: "Early Signals of AI Impact",
               url: "https://labor.mattzieger.com",
               description:
-                "Tracking 17 predictions about AI-driven job displacement, wage impacts, and corporate adoption with 250+ sources filtered by evidence quality.",
+                "Tracking 17 predictions about AI-driven job displacement, wage impacts, and corporate adoption with 300+ sources filtered by evidence quality.",
               author: {
                 "@type": "Person",
                 name: "Matt Zieger",
