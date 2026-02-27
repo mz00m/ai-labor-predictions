@@ -1,5 +1,7 @@
 # Data Sources
 
+> **Sources last added:** February 27, 2026 | **Total sources tracked:** 23 institutions, 39 key studies, 22 researchers
+
 This document lists every external data source that powers this site — where it comes from, how we access it, and what it's used for. Our goal is full transparency about the evidence behind every chart, prediction, and headline you see here.
 
 We classify sources into **evidence tiers**:
