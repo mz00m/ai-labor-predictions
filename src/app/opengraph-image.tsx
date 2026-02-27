@@ -353,7 +353,7 @@ export default function OGImage() {
                 fontWeight: 700,
               }}
             >
-              labor.mattzieger.com
+              jobsdata.org
             </span>
           </div>
         </div>

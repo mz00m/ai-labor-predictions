@@ -22,6 +22,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://labor.mattzieger.com/sitemap.xml",
+    sitemap: "https://jobsdata.org/sitemap.xml",
   };
 }

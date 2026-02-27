@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Early Signals of AI Impact",
   description:
     "300+ sources tracking AI's impact on jobs, wages, and adoption. AI adoption is accelerating, productivity is climbing, and jobs are changing faster than they're disappearing.",
-  metadataBase: new URL("https://labor.mattzieger.com"),
+  metadataBase: new URL("https://jobsdata.org"),
   openGraph: {
     title: "Early Signals of AI Impact",
     description:
@@ -38,7 +38,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               name: "Early Signals of AI Impact",
-              url: "https://labor.mattzieger.com",
+              url: "https://jobsdata.org",
               description:
                 "Tracking 17 predictions about AI-driven job displacement, wage impacts, and corporate adoption with 300+ sources filtered by evidence quality.",
               author: {
@@ -56,7 +56,7 @@ export default function RootLayout({
                 name: "AI Labor Market Impact Predictions",
                 description:
                   "A curated dataset of predictions about AI's impact on the labor market, sourced from peer-reviewed research, government data, think tanks, corporate filings, and journalism.",
-                url: "https://labor.mattzieger.com",
+                url: "https://jobsdata.org",
                 license: "https://creativecommons.org/licenses/by/4.0/",
                 keywords: [
                   "artificial intelligence",
