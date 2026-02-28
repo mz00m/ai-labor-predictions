@@ -9,16 +9,6 @@
   "timeHorizon": "By 2030",
   "history": [
     {
-      "date": "2025-01-20",
-      "value": 18,
-      "confidenceLow": 15,
-      "confidenceHigh": 25,
-      "sourceIds": [
-        "deloitte-professional-services-2025"
-      ],
-      "evidenceTier": 2
-    },
-    {
       "date": "2025-08-01",
       "value": 2.5,
       "confidenceLow": 1,
@@ -190,12 +180,12 @@
     },
     {
       "id": "deloitte-professional-services-2025",
-      "title": "2025 Professional Services Outlook: AI-Driven Transformation",
+      "title": "Strategies for Workforce Evolution",
       "url": "https://www.deloitte.com/us/en/insights/topics/talent/strategies-for-workforce-evolution.html",
-      "publisher": "Deloitte",
+      "publisher": "Deloitte Insights",
       "evidenceTier": 2,
-      "datePublished": "2025-01-20",
-      "excerpt": "Big Four firms project 15-25% workforce restructuring over the next 3 years as AI handles routine audit, tax, and advisory tasks."
+      "datePublished": "2025-12-24",
+      "excerpt": "A Deloitte survey reveals how AI and human collaboration can help close talent gaps, speed upskilling, and transfer knowledge as demographic changes reshape the workforce."
     },
     {
       "id": "oecd-white-collar-2025",

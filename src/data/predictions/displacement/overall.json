@@ -294,12 +294,12 @@
     },
     {
       "id": "amazon-8k-2024",
-      "title": "Amazon Q4 2024 8-K — AI Fulfillment & Workforce Impact",
-      "url": "https://ir.aboutamazon.com/sec-filings",
-      "publisher": "Amazon (SEC Filing)",
-      "evidenceTier": 1,
-      "datePublished": "2025-02-06",
-      "excerpt": "Amazon reported 75% increase in robotic and AI systems in fulfillment centers. Warehouse associate hiring slowed while 'AI specialist' roles grew 3x."
+      "title": "Amazon deploys its 1 millionth robot in a sign of more job automation",
+      "url": "https://www.cnbc.com/2025/07/02/amazon-deploys-its-1-millionth-robot-in-a-sign-of-more-job-automation.html",
+      "publisher": "CNBC",
+      "evidenceTier": 2,
+      "datePublished": "2025-07-02",
+      "excerpt": "Amazon deployed its 1 millionth robot across over 300 fulfillment centers worldwide. CEO Andy Jassy acknowledged that AI will result in fewer people doing some automated jobs, while new roles in robotics maintenance grew 30% at next-generation sites."
     },
     {
       "id": "yale-budget-lab-2025",

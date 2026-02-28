@@ -29,36 +29,6 @@
       "evidenceTier": 2
     },
     {
-      "date": "2024-05-01",
-      "value": 22,
-      "confidenceLow": 15,
-      "confidenceHigh": 32,
-      "sourceIds": [
-        "msft-earnings-2024"
-      ],
-      "evidenceTier": 1
-    },
-    {
-      "date": "2024-09-01",
-      "value": 24,
-      "confidenceLow": 16,
-      "confidenceHigh": 35,
-      "sourceIds": [
-        "ft-ai-salaries-2024"
-      ],
-      "evidenceTier": 3
-    },
-    {
-      "date": "2025-01-10",
-      "value": 25,
-      "confidenceLow": 18,
-      "confidenceHigh": 38,
-      "sourceIds": [
-        "mit-ai-premium-2025"
-      ],
-      "evidenceTier": 1
-    },
-    {
       "date": "2025-07-23",
       "value": 28,
       "confidenceLow": 20,
@@ -107,7 +77,7 @@
         "nvidia-10k-2024"
       ],
       "evidenceTier": 1,
-      "label": "NVIDIA: median comp $328K, up 24% YoY"
+      "label": "NVIDIA: median comp $301K, headcount up 21.6% YoY"
     },
     {
       "date": "2024-10-02",
@@ -115,8 +85,8 @@
       "sourceIds": [
         "openai-8k-funding-2024"
       ],
-      "evidenceTier": 1,
-      "label": "OpenAI: AI researcher comp $800K–$1.5M total"
+      "evidenceTier": 2,
+      "label": "OpenAI: avg stock comp $1.5M; researcher total comp $763K–$1.44M"
     },
     {
       "date": "2023-07-14",
@@ -174,29 +144,30 @@
     },
     {
       "id": "msft-earnings-2024",
-      "title": "Microsoft FY2024 Q3 Earnings — AI Talent Investment",
-      "url": "https://www.microsoft.com/en-us/investor",
-      "publisher": "Microsoft",
+      "title": "Microsoft FY24 Q3 Press Release",
+      "url": "https://www.microsoft.com/en-us/investor/earnings/fy-2024-q3/press-release-webcast",
+      "publisher": "Microsoft Investor Relations",
       "evidenceTier": 1,
       "datePublished": "2024-04-25",
-      "excerpt": "Significant investment in AI talent, with compensation packages reflecting market premium for AI expertise."
+      "excerpt": "Microsoft Cloud revenue was $35.1 billion, up 23%. More than 65% of the Fortune 500 now use Azure OpenAI Service, and $100M+ Azure deals increased over 80% YoY."
     },
     {
       "id": "ft-ai-salaries-2024",
-      "title": "AI engineers command premium salaries as demand outstrips supply",
-      "url": "https://www.ft.com/ai-at-work",
-      "publisher": "Financial Times",
-      "evidenceTier": 3,
-      "datePublished": "2024-09-01"
+      "title": "AI talent comes at a 30% salary premium",
+      "url": "https://fortune.com/2025/08/11/ai-talent-salary-premium/",
+      "publisher": "Fortune",
+      "evidenceTier": 2,
+      "datePublished": "2025-08-11",
+      "excerpt": "Companies hiring AI talent face a 30% salary premium as demand far outstrips supply, with experts warning that the cost of delayed AI hiring will only increase over time."
     },
     {
       "id": "mit-ai-premium-2025",
-      "title": "The AI Wage Premium: Evidence from Online Job Postings",
-      "url": "https://economics.mit.edu/sites/default/files/2025-01/ai-wage-premium.pdf",
-      "publisher": "MIT Economics",
+      "title": "Artificial Intelligence and Jobs: Evidence from Online Vacancies",
+      "url": "https://www.journals.uchicago.edu/doi/abs/10.1086/718327",
+      "publisher": "Journal of Labor Economics (Acemoglu, Autor, Hazell, Restrepo)",
       "evidenceTier": 1,
-      "datePublished": "2025-01-10",
-      "excerpt": "Job postings requiring AI skills offer 21-35% higher wages than comparable postings without AI requirements."
+      "datePublished": "2022-01-01",
+      "excerpt": "AI-exposed establishments reduce hiring in non-AI positions. A wage premium of 11% exists for job postings requiring AI skills within the same firm."
     },
     {
       "id": "lightcast-beyond-buzz-2025",
@@ -217,30 +188,30 @@
     },
     {
       "id": "nvidia-10k-2024",
-      "title": "NVIDIA 2024 10-K — AI Talent Compensation & Headcount Growth",
-      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=nvidia&CIK=&type=10-K",
+      "title": "NVIDIA 2025 Proxy Statement",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000098/finalforfiling-2025xannual.pdf",
       "publisher": "NVIDIA (SEC Filing)",
       "evidenceTier": 1,
-      "datePublished": "2025-02-21",
-      "excerpt": "NVIDIA disclosed median employee compensation of $328,000, up 24% YoY. Headcount in AI research grew 40% while total headcount grew 12%."
+      "datePublished": "2025-05-01",
+      "excerpt": "NVIDIA median employee total compensation was $301,233 in FY2025 (ending January 2025), with CEO-to-median pay ratio of 166:1. Total headcount reached 36,000, a 21.6% increase YoY."
     },
     {
       "id": "openai-8k-funding-2024",
-      "title": "OpenAI 8-K Equivalent — Compensation Benchmarks in Funding Docs",
-      "url": "https://openai.com/about",
-      "publisher": "OpenAI",
-      "evidenceTier": 1,
-      "datePublished": "2024-10-02",
-      "excerpt": "OpenAI's $6.6B raise implied avg AI researcher comp of $800K-$1.5M total. Senior ML engineers offered $400K-$900K base + equity."
+      "title": "OpenAI is paying workers $1.5 million in stock-based compensation on average",
+      "url": "https://fortune.com/2026/02/18/openai-chatgpt-creator-record-million-dollar-equity-compensation-ai-tech-talent-war-career-retention-sam-altman-millionaire-staff/",
+      "publisher": "Fortune",
+      "evidenceTier": 2,
+      "datePublished": "2026-02-18",
+      "excerpt": "OpenAI average stock-based compensation reached $1.5M per employee in 2025. Research scientist total compensation ranges from $763K to $1.44M. The company raised $6.6B in October 2024 at a $157B valuation."
     },
     {
       "id": "linkedin-ai-salary-2025",
-      "title": "AI Skills Premium in Job Postings — LinkedIn Economic Graph",
-      "url": "https://economicgraph.linkedin.com/resources/linkedin-ai-talent-report",
+      "title": "AI reports and resources",
+      "url": "https://economicgraph.linkedin.com/research/ai-skills-resources",
       "publisher": "LinkedIn Economic Graph",
       "evidenceTier": 2,
       "datePublished": "2025-02-01",
-      "excerpt": "Job postings requiring AI/ML skills offer 28% higher salaries on average. Postings mentioning 'AI' in title or requirements grew 65% YoY."
+      "excerpt": "LinkedIn's AI skills resources hub tracking AI engineering talent growth (130% increase since 2016). 7 out of every 1,000 LinkedIn members globally are AI engineering talent."
     },
     {
       "id": "pwc-ai-wage-premium-2025",

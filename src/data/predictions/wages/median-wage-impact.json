@@ -135,8 +135,8 @@
       "sourceIds": [
         "walmart-10k-2024"
       ],
-      "evidenceTier": 1,
-      "label": "Walmart: AI checkout reducing staffing ~8% per location"
+      "evidenceTier": 2,
+      "label": "Walmart: investing in checkout/inventory automation; min wage $14/hr"
     },
     {
       "date": "2025-01-30",
@@ -145,7 +145,7 @@
         "ups-8k-2024"
       ],
       "evidenceTier": 1,
-      "label": "UPS: 12K jobs cut, remaining driver wages +2.5%"
+      "label": "UPS: 12K management jobs cut; driver top rate $49/hr under new contract"
     },
     {
       "date": "2025-05-05",
@@ -253,12 +253,12 @@
     },
     {
       "id": "walmart-10k-2024",
-      "title": "Walmart 2024 10-K — Automation Investment & Wage Strategy",
-      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=walmart&CIK=&type=10-K",
-      "publisher": "Walmart (SEC Filing)",
-      "evidenceTier": 1,
-      "datePublished": "2025-03-28",
-      "excerpt": "Walmart raised minimum wage to $15/hr but disclosed AI-driven checkout and inventory systems reducing total store staffing needs by ~8% per location."
+      "title": "Walmart Lowers Starting Pay for New Hires",
+      "url": "https://worldatwork.org/workspan/articles/walmart-lowers-starting-pay-for-new-hires",
+      "publisher": "WorldatWork",
+      "evidenceTier": 2,
+      "datePublished": "2024-10-01",
+      "excerpt": "Walmart's minimum starting wage is $14/hr while average U.S. associate wage reached $18.25 by 2025. The company invested in checkout and inventory automation but has not disclosed specific per-location staffing reduction figures."
     },
     {
       "id": "indeed-wage-tracker-2025",
@@ -271,12 +271,12 @@
     },
     {
       "id": "ups-8k-2024",
-      "title": "UPS Q4 2024 Earnings — AI Logistics & Workforce Restructuring",
-      "url": "https://investors.ups.com/sec-filings",
-      "publisher": "UPS (SEC Filing)",
+      "title": "UPS cuts 12,000 jobs, citing softer demand and higher union labor costs",
+      "url": "https://www.nbcnews.com/business/business-news/ups-cutting-12000-jobs-citing-softer-demand-higher-union-labor-costs-rcna136350",
+      "publisher": "NBC News",
       "evidenceTier": 1,
-      "datePublished": "2025-01-30",
-      "excerpt": "UPS cut 12,000 jobs in 2024 citing AI-optimized routing and automated package sorting. Remaining driver wages increased 2.5% under new contract."
+      "datePublished": "2024-01-30",
+      "excerpt": "UPS announced 12,000 job cuts, primarily management and salaried positions, as part of a $1 billion cost-reduction effort. Full-time driver pay raised to $49/hr top rate under 2023 Teamsters contract."
     },
     {
       "id": "pwc-ai-jobs-barometer-2025",

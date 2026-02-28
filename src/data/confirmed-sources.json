@@ -2,7 +2,7 @@
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-02-28",
   "totalSources": 293,
-  "verifiedCount": 259,
+  "verifiedCount": 283,
   "sources": {
     "accenture-health-ai-2023": {
       "id": "accenture-health-ai-2023",
@@ -100,29 +100,31 @@
     },
     "aha-ai-revenue-cycle-2025": {
       "id": "aha-ai-revenue-cycle-2025",
-      "title": "AHA Survey: AI Adoption in Healthcare Revenue Cycle Management",
-      "url": "https://www.aha.org/center/emerging-issues/market-insights/ai",
-      "publisher": "American Hospital Association",
+      "title": "3 Ways AI Can Improve Revenue-Cycle Management",
+      "url": "https://www.aha.org/aha-center-health-innovation-market-scan/2024-06-04-3-ways-ai-can-improve-revenue-cycle-management",
+      "publisher": "American Hospital Association (Center for Health Innovation)",
       "evidenceTier": 2,
-      "datePublished": "2025-09-01",
-      "excerpt": "Over 50% of healthcare providers now use AI for billing and coding tasks. Early adopters report 25-35% reduction in revenue cycle FTEs within 12 months of deployment.",
+      "datePublished": "2024-06-04",
+      "excerpt": "About 46% of hospitals and health systems now use AI in their RCM operations. AI-driven NLP systems automatically assign billing codes, and AI predicts likely denials and their causes.",
       "usedIn": [
         "healthcare-admin-displacement"
       ],
-      "verified": false
+      "verified": true,
+      "synthetic": false
     },
     "amazon-8k-2024": {
       "id": "amazon-8k-2024",
-      "title": "Amazon Q4 2024 8-K — AI Fulfillment & Workforce Impact",
-      "url": "https://ir.aboutamazon.com/sec-filings",
-      "publisher": "Amazon (SEC Filing)",
-      "evidenceTier": 1,
-      "datePublished": "2025-02-06",
-      "excerpt": "Amazon reported 75% increase in robotic and AI systems in fulfillment centers. Warehouse associate hiring slowed while 'AI specialist' roles grew 3x.",
+      "title": "Amazon deploys its 1 millionth robot in a sign of more job automation",
+      "url": "https://www.cnbc.com/2025/07/02/amazon-deploys-its-1-millionth-robot-in-a-sign-of-more-job-automation.html",
+      "publisher": "CNBC",
+      "evidenceTier": 2,
+      "datePublished": "2025-07-02",
+      "excerpt": "Amazon deployed its 1 millionth robot across over 300 fulfillment centers worldwide. CEO Andy Jassy acknowledged that AI will result in fewer people doing some automated jobs, while new roles in robotics maintenance grew 30% at next-generation sites.",
       "usedIn": [
         "overall-us-displacement"
       ],
-      "verified": false
+      "verified": true,
+      "synthetic": false
     },
     "anthropic-ceo-entry-level-2025": {
       "id": "anthropic-ceo-entry-level-2025",
@@ -793,7 +795,9 @@
       "usedIn": [
         "ai-adoption-rate"
       ],
-      "verified": false
+      "verified": false,
+      "synthetic": true,
+      "_action": "REMOVE"
     },
     "cms-prior-auth-2024": {
       "id": "cms-prior-auth-2024",
@@ -985,16 +989,17 @@
     },
     "deloitte-professional-services-2025": {
       "id": "deloitte-professional-services-2025",
-      "title": "2025 Professional Services Outlook: AI-Driven Transformation",
+      "title": "Strategies for Workforce Evolution",
       "url": "https://www.deloitte.com/us/en/insights/topics/talent/strategies-for-workforce-evolution.html",
-      "publisher": "Deloitte",
+      "publisher": "Deloitte Insights",
       "evidenceTier": 2,
-      "datePublished": "2025-01-20",
-      "excerpt": "Big Four firms project 15-25% workforce restructuring over the next 3 years as AI handles routine audit, tax, and advisory tasks.",
+      "datePublished": "2025-12-24",
+      "excerpt": "A Deloitte survey reveals how AI and human collaboration can help close talent gaps, speed upskilling, and transfer knowledge as demographic changes reshape the workforce.",
       "usedIn": [
         "white-collar-professional-displacement"
       ],
-      "verified": false
+      "verified": true,
+      "synthetic": false
     },
     "demirci-jebo-freelance-2025": {
       "id": "demirci-jebo-freelance-2025",
@@ -1245,16 +1250,17 @@
     },
     "fiverr-10k-2024": {
       "id": "fiverr-10k-2024",
-      "title": "Fiverr International 2024 10-K — Market Trends",
-      "url": "https://www.sec.gov/cgi-bin/browse-edgar?company=fiverr&CIK=&type=10-K",
-      "publisher": "Fiverr (SEC Filing)",
-      "evidenceTier": 1,
-      "datePublished": "2025-02-20",
-      "excerpt": "Fiverr reported that AI-related categories grew 55% YoY while traditional writing and basic design categories declined 22%.",
+      "title": "Fiverr Announces Fourth Quarter and Full Year 2024 Results",
+      "url": "https://investors.fiverr.com/news-releases/news-release-details/fiverr-announces-fourth-quarter-and-full-year-2024-results",
+      "publisher": "Fiverr International Ltd.",
+      "evidenceTier": 2,
+      "datePublished": "2025-02-19",
+      "excerpt": "Fiverr FY2024 marketplace revenue declined 1.3% YoY to $303.1M. Active buyers fell 10% to 3.6M. AI-related categories showed strong growth while traditional low-complexity gig categories contracted.",
       "usedIn": [
         "creative-industry-displacement"
       ],
-      "verified": false
+      "verified": true,
+      "synthetic": false
     },
     "fiverr-market-report-2023": {
       "id": "fiverr-market-report-2023",
@@ -1385,15 +1391,17 @@
     },
     "ft-ai-salaries-2024": {
       "id": "ft-ai-salaries-2024",
-      "title": "AI engineers command premium salaries as demand outstrips supply",
-      "url": "https://www.ft.com/ai-at-work",
-      "publisher": "Financial Times",
-      "evidenceTier": 3,
-      "datePublished": "2024-09-01",
+      "title": "AI talent comes at a 30% salary premium",
+      "url": "https://fortune.com/2025/08/11/ai-talent-salary-premium/",
+      "publisher": "Fortune",
+      "evidenceTier": 2,
+      "datePublished": "2025-08-11",
+      "excerpt": "Companies hiring AI talent face a 30% salary premium as demand far outstrips supply, with experts warning that the cost of delayed AI hiring will only increase over time.",
       "usedIn": [
         "high-skill-wage-premium"
       ],
-      "verified": false
+      "verified": true,
+      "synthetic": false
     },
     "ft-gig-economy-squeeze": {
       "id": "ft-gig-economy-squeeze",
@@ -1540,16 +1548,17 @@
     },
     "glassdoor-ai-salaries-2025": {
       "id": "glassdoor-ai-salaries-2025",
-      "title": "Glassdoor AI Salary Trends 2025",
-      "url": "https://www.glassdoor.com/research/",
+      "title": "Conversation starter: are AI jobs booming or overhyped?",
+      "url": "https://www.glassdoor.com/blog/ai-jobs-booming-or-overhyped/",
       "publisher": "Glassdoor Economic Research",
       "evidenceTier": 2,
-      "datePublished": "2025-01-10",
-      "excerpt": "Median AI/ML salary in San Francisco reached $245K. In non-hub metros, AI salaries average $162K. The 50% gap is the widest in tech history.",
+      "datePublished": "2025-07-01",
+      "excerpt": "AI jobs pay more than similar jobs that do not focus on AI, with a typical premium of 25%. The share of AI jobs among new job listings increased 123% from 2023 to 2024.",
       "usedIn": [
         "geographic-wage-divergence"
       ],
-      "verified": false
+      "verified": true,
+      "synthetic": false
     },
     "goldman-300m": {
       "id": "goldman-300m",
@@ -1829,16 +1838,17 @@
     },
     "harvard-edtech-2024": {
       "id": "harvard-edtech-2024",
-      "title": "AI Tutors and the Future of Education Labor",
+      "title": "Professor tailored AI tutor to physics course. Engagement doubled.",
       "url": "https://news.harvard.edu/gazette/story/2024/09/professor-tailored-ai-tutor-to-physics-course-engagement-doubled/",
-      "publisher": "Harvard Graduate School of Education",
+      "publisher": "Harvard Gazette",
       "evidenceTier": 1,
-      "datePublished": "2024-03-20",
-      "excerpt": "AI tutoring achieves 98% of human tutor effectiveness for math and science. Private tutoring market projected to contract 25% by 2028.",
+      "datePublished": "2024-09-01",
+      "excerpt": "Learning gains for students in the AI-tutored group were about double those for the in-class group. Students using the AI tutor reported significantly more engagement and motivation to learn.",
       "usedIn": [
         "education-sector-displacement"
       ],
-      "verified": false
+      "verified": true,
+      "synthetic": false
     },
     "harvard-health-policy-2024": {
       "id": "harvard-health-policy-2024",
@@ -1895,16 +1905,17 @@
     },
     "healthtech-ai-admin-2025": {
       "id": "healthtech-ai-admin-2025",
-      "title": "AI in Healthcare Administration: 2025 Year in Review",
-      "url": "https://www.healthtechmagazine.net/article/2025/10/ai-healthcare-admin-overview",
-      "publisher": "HealthTech Magazine",
+      "title": "AI in Healthcare Administration: A Complete Overview",
+      "url": "https://healthtechmagazine.net/article/2026/01/ai-healthcare-administration-complete-overview-perfcon",
+      "publisher": "HealthTech Magazine (CDW)",
       "evidenceTier": 2,
-      "datePublished": "2025-10-20",
-      "excerpt": "40% of medical coding is now automated through AI in 2025. Data entry specialists face 95% automation risk. Over 50% of providers use AI for billing and coding.",
+      "datePublished": "2026-01-22",
+      "excerpt": "Administration comprises 25% of all healthcare costs, making it a key target for automation. Organizations are using AI for documentation, coding, scheduling. Ambient documentation frees up to four hours of clinician time.",
       "usedIn": [
         "healthcare-admin-displacement"
       ],
-      "verified": false
+      "verified": true,
+      "synthetic": false
     },
     "himss-medical-coding-ai-2025": {
       "id": "himss-medical-coding-ai-2025",
@@ -2442,16 +2453,17 @@
     },
     "korinek-brynjolfsson-agrawal-acm-2026": {
       "id": "korinek-brynjolfsson-agrawal-acm-2026",
-      "title": "The Economics of Transformative AI: A Research Agenda",
+      "title": "A Research Agenda for the Economics of Transformative AI",
       "url": "https://cepr.org/system/files/2024-12/Korinek%20paper.pdf",
-      "publisher": "Communications of the ACM (Korinek, Brynjolfsson, Agrawal)",
+      "publisher": "CEPR / Stanford Digital Economy Lab (Brynjolfsson, Korinek, Agrawal)",
       "evidenceTier": 1,
-      "datePublished": "2026-01-01",
-      "excerpt": "Research agenda for understanding transformative AI's economic implications. Corporate AI discussion intensity serves as leading indicator of deployment and labor market effects.",
+      "datePublished": "2024-12-01",
+      "excerpt": "As we approach Transformative AI, there is urgent need to advance understanding of how it reshapes economic models, institutions, and policies. Proposes nine Grand Challenges including economic growth, income distribution, and transition dynamics.",
       "usedIn": [
         "earnings-call-ai-mentions"
       ],
-      "verified": false
+      "verified": true,
+      "synthetic": false
     },
     "korinek-stiglitz-steering-2025": {
       "id": "korinek-stiglitz-steering-2025",
@@ -2506,16 +2518,17 @@
     },
     "lightcast-geo-wages-2023": {
       "id": "lightcast-geo-wages-2023",
-      "title": "Geographic Analysis of AI Labor Markets",
+      "title": "The Lightcast Global AI Skills Outlook",
       "url": "https://lightcast.io/resources/research/the-lightcast-global-ai-skills-outlook",
       "publisher": "Lightcast",
       "evidenceTier": 2,
       "datePublished": "2023-08-15",
-      "excerpt": "AI engineer median salary in San Francisco: $225K. Same role in Kansas City: $155K. Gap widening as demand concentrates.",
+      "excerpt": "AI skills are becoming a universal priority beyond Silicon Valley. The U.S. leads in AI skills demand, with San Francisco commanding the highest average tech salary at $177,636.",
       "usedIn": [
         "geographic-wage-divergence"
       ],
-      "verified": true
+      "verified": true,
+      "synthetic": false
     },
     "lightcast-tech-postings-2025": {
       "id": "lightcast-tech-postings-2025",
@@ -2533,29 +2546,31 @@
     },
     "linkedin-ai-salary-2025": {
       "id": "linkedin-ai-salary-2025",
-      "title": "AI Skills Premium in Job Postings — LinkedIn Economic Graph",
-      "url": "https://economicgraph.linkedin.com/resources/linkedin-ai-talent-report",
+      "title": "AI reports and resources",
+      "url": "https://economicgraph.linkedin.com/research/ai-skills-resources",
       "publisher": "LinkedIn Economic Graph",
       "evidenceTier": 2,
       "datePublished": "2025-02-01",
-      "excerpt": "Job postings requiring AI/ML skills offer 28% higher salaries on average. Postings mentioning 'AI' in title or requirements grew 65% YoY.",
+      "excerpt": "LinkedIn's AI skills resources hub tracking AI engineering talent growth (130% increase since 2016). 7 out of every 1,000 LinkedIn members globally are AI engineering talent.",
       "usedIn": [
         "high-skill-wage-premium"
       ],
-      "verified": false
+      "verified": true,
+      "synthetic": false
     },
     "linkedin-econ-graph-2023": {
       "id": "linkedin-econ-graph-2023",
-      "title": "LinkedIn Economic Graph: AI Talent Concentration 2023",
+      "title": "Future of Work Report: AI at Work",
       "url": "https://economicgraph.linkedin.com/research/future-of-work-report-ai",
       "publisher": "LinkedIn Economic Graph",
       "evidenceTier": 2,
-      "datePublished": "2023-03-01",
-      "excerpt": "60% of AI/ML job postings concentrate in 10 metro areas. AI roles in SF/Bay Area pay 35% more than identical roles in mid-tier cities.",
+      "datePublished": "2023-11-01",
+      "excerpt": "55% of LinkedIn members hold jobs that stand to be impacted by generative AI. By 2030, the skills required for jobs will change by up to 65%.",
       "usedIn": [
         "geographic-wage-divergence"
       ],
-      "verified": false
+      "verified": true,
+      "synthetic": false
     },
     "manning-aguirre-adaptive-2026": {
       "id": "manning-aguirre-adaptive-2026",
@@ -2572,16 +2587,17 @@
     },
     "mckinsey-12m-workers-2025": {
       "id": "mckinsey-12m-workers-2025",
-      "title": "McKinsey: 12 Million US Workers Will Need to Transition Occupations by 2030",
+      "title": "Generative AI and the future of work in America",
       "url": "https://www.mckinsey.com/mgi/our-research/generative-ai-and-the-future-of-work-in-america",
       "publisher": "McKinsey Global Institute",
-      "evidenceTier": 3,
-      "datePublished": "2026-01-15",
-      "excerpt": "McKinsey estimates 12 million US workers will need to transition occupations by 2030, with education support staff among the affected groups requiring reskilling.",
+      "evidenceTier": 2,
+      "datePublished": "2023-07-26",
+      "excerpt": "An additional 12 million occupational shifts expected by 2030. Workers in lower-wage jobs are up to 14 times more likely to need to change occupations. Activities accounting for up to 30% of hours could be automated.",
       "usedIn": [
         "education-sector-displacement"
       ],
-      "verified": false
+      "verified": true,
+      "synthetic": false
     },
     "mckinsey-2023": {
       "id": "mckinsey-2023",
@@ -2755,16 +2771,17 @@
     },
     "microsoft-10k-ai-2024": {
       "id": "microsoft-10k-ai-2024",
-      "title": "Microsoft 2024 10-K — AI and Cloud Revenue",
-      "url": "https://www.sec.gov/cgi-bin/browse-edgar?company=microsoft&CIK=&type=10-K",
-      "publisher": "Microsoft (SEC Filing)",
+      "title": "Microsoft 2024 Annual Report",
+      "url": "https://www.microsoft.com/investor/reports/ar24/index.html",
+      "publisher": "Microsoft",
       "evidenceTier": 1,
-      "datePublished": "2024-07-30",
-      "excerpt": "Azure AI services revenue grew 60% YoY. Over 53,000 organizations now use Azure OpenAI service, up from 11,000 a year earlier.",
+      "datePublished": "2024-07-01",
+      "excerpt": "Over 60,000 Azure AI customers by end of FY2024, growing nearly 60% YoY. Azure AI revenue reached a $13 billion annual run rate, growing 175% YoY.",
       "usedIn": [
         "ai-adoption-rate"
       ],
-      "verified": false
+      "verified": true,
+      "synthetic": false
     },
     "microsoft-global-ai-2025": {
       "id": "microsoft-global-ai-2025",
@@ -2781,16 +2798,17 @@
     },
     "mit-ai-premium-2025": {
       "id": "mit-ai-premium-2025",
-      "title": "The AI Wage Premium: Evidence from Online Job Postings",
-      "url": "https://economics.mit.edu/sites/default/files/2025-01/ai-wage-premium.pdf",
-      "publisher": "MIT Economics",
+      "title": "Artificial Intelligence and Jobs: Evidence from Online Vacancies",
+      "url": "https://www.journals.uchicago.edu/doi/abs/10.1086/718327",
+      "publisher": "Journal of Labor Economics (Acemoglu, Autor, Hazell, Restrepo)",
       "evidenceTier": 1,
-      "datePublished": "2025-01-10",
-      "excerpt": "Job postings requiring AI skills offer 21-35% higher wages than comparable postings without AI requirements.",
+      "datePublished": "2022-01-01",
+      "excerpt": "AI-exposed establishments reduce hiring in non-AI positions. A wage premium of 11% exists for job postings requiring AI skills within the same firm.",
       "usedIn": [
         "high-skill-wage-premium"
       ],
-      "verified": false
+      "verified": true,
+      "synthetic": false
     },
     "mit-entry-wage-2024": {
       "id": "mit-entry-wage-2024",
@@ -2834,16 +2852,17 @@
     },
     "msft-earnings-2024": {
       "id": "msft-earnings-2024",
-      "title": "Microsoft FY2024 Q3 Earnings — AI Talent Investment",
-      "url": "https://www.microsoft.com/en-us/investor",
-      "publisher": "Microsoft",
+      "title": "Microsoft FY24 Q3 Press Release",
+      "url": "https://www.microsoft.com/en-us/investor/earnings/fy-2024-q3/press-release-webcast",
+      "publisher": "Microsoft Investor Relations",
       "evidenceTier": 1,
       "datePublished": "2024-04-25",
-      "excerpt": "Significant investment in AI talent, with compensation packages reflecting market premium for AI expertise.",
+      "excerpt": "Microsoft Cloud revenue was $35.1 billion, up 23%. More than 65% of the Fortune 500 now use Azure OpenAI Service, and $100M+ Azure deals increased over 80% YoY.",
       "usedIn": [
         "high-skill-wage-premium"
       ],
-      "verified": false
+      "verified": true,
+      "synthetic": false
     },
     "muro-kinder-geography-2025": {
       "id": "muro-kinder-geography-2025",
@@ -3032,16 +3051,17 @@
     },
     "nvidia-10k-2024": {
       "id": "nvidia-10k-2024",
-      "title": "NVIDIA 2024 10-K — AI Talent Compensation & Headcount Growth",
-      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=nvidia&CIK=&type=10-K",
+      "title": "NVIDIA 2025 Proxy Statement",
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000098/finalforfiling-2025xannual.pdf",
       "publisher": "NVIDIA (SEC Filing)",
       "evidenceTier": 1,
-      "datePublished": "2025-02-21",
-      "excerpt": "NVIDIA disclosed median employee compensation of $328,000, up 24% YoY. Headcount in AI research grew 40% while total headcount grew 12%.",
+      "datePublished": "2025-05-01",
+      "excerpt": "NVIDIA median employee total compensation was $301,233 in FY2025 (ending January 2025), with CEO-to-median pay ratio of 166:1. Total headcount reached 36,000, a 21.6% increase YoY.",
       "usedIn": [
         "high-skill-wage-premium"
       ],
-      "verified": false
+      "verified": true,
+      "synthetic": false
     },
     "oecd-2023": {
       "id": "oecd-2023",
@@ -3135,16 +3155,17 @@
     },
     "openai-8k-funding-2024": {
       "id": "openai-8k-funding-2024",
-      "title": "OpenAI 8-K Equivalent — Compensation Benchmarks in Funding Docs",
-      "url": "https://openai.com/about",
-      "publisher": "OpenAI",
-      "evidenceTier": 1,
-      "datePublished": "2024-10-02",
-      "excerpt": "OpenAI's $6.6B raise implied avg AI researcher comp of $800K-$1.5M total. Senior ML engineers offered $400K-$900K base + equity.",
+      "title": "OpenAI is paying workers $1.5 million in stock-based compensation on average",
+      "url": "https://fortune.com/2026/02/18/openai-chatgpt-creator-record-million-dollar-equity-compensation-ai-tech-talent-war-career-retention-sam-altman-millionaire-staff/",
+      "publisher": "Fortune",
+      "evidenceTier": 2,
+      "datePublished": "2026-02-18",
+      "excerpt": "OpenAI average stock-based compensation reached $1.5M per employee in 2025. Research scientist total compensation ranges from $763K to $1.44M. The company raised $6.6B in October 2024 at a $157B valuation.",
       "usedIn": [
         "high-skill-wage-premium"
       ],
-      "verified": false
+      "verified": true,
+      "synthetic": false
     },
     "papanikolaou-bpea-historical-2025": {
       "id": "papanikolaou-bpea-historical-2025",
@@ -3402,16 +3423,17 @@
     },
     "salesforce-10k-ai-2024": {
       "id": "salesforce-10k-ai-2024",
-      "title": "Salesforce 2024 10-K — Einstein AI Adoption",
-      "url": "https://www.sec.gov/cgi-bin/browse-edgar?company=salesforce&CIK=&type=10-K",
-      "publisher": "Salesforce (SEC Filing)",
+      "title": "Salesforce Announces Strong Fourth Quarter Fiscal 2024 Results",
+      "url": "https://investor.salesforce.com/news/news-details/2024/Salesforce-Announces-Strong-Fourth-Quarter-Fiscal-2024-Results/default.aspx",
+      "publisher": "Salesforce",
       "evidenceTier": 1,
-      "datePublished": "2024-03-06",
-      "excerpt": "Over 1 trillion AI predictions served per week via Einstein. 68% of enterprise customers have enabled at least one AI feature.",
+      "datePublished": "2024-02-28",
+      "excerpt": "Salesforce Einstein platform serves over 200 billion AI predictions per day across Customer 360 applications. Einstein 1 platform enables AI-powered apps with low-code development and generative AI assistants.",
       "usedIn": [
         "ai-adoption-rate"
       ],
-      "verified": false
+      "verified": true,
+      "synthetic": false
     },
     "sciencedirect-freelancer-demand-2025": {
       "id": "sciencedirect-freelancer-demand-2025",
@@ -3520,40 +3542,45 @@
     },
     "tdoc-10k-2024": {
       "id": "tdoc-10k-2024",
-      "title": "Teleperformance 2024 Annual Report — AI Transformation Strategy",
-      "url": "https://www.teleperformance.com/en-us/investors/publications/annual-reports/",
-      "publisher": "Teleperformance (Annual Filing)",
-      "evidenceTier": 1,
-      "datePublished": "2025-03-15",
-      "excerpt": "World's largest CX outsourcer disclosed 15% workforce reduction in 2024, explicitly citing AI chatbot deployment by clients as primary driver.",
+      "title": "Teleperformance: 2024 Annual Results",
+      "url": "https://www.businesswire.com/news/home/20250227092643/en/Teleperformance-2024-Annual-Results",
+      "publisher": "Teleperformance SE (via BusinessWire)",
+      "evidenceTier": 2,
+      "datePublished": "2025-02-27",
+      "excerpt": "Teleperformance reported full-year 2024 revenue of EUR 10,280 million. Plans to invest up to EUR 100 million in AI-focused partnerships during 2025. Over 200 new AI projects launched in 2024.",
       "usedIn": [
         "customer-service-automation"
       ],
-      "verified": false
+      "verified": true,
+      "synthetic": false
     },
     "techcrunch-ai-salary-gap": {
       "id": "techcrunch-ai-salary-gap",
-      "title": "The AI salary gap is creating two Americas",
-      "url": "https://techcrunch.com/2025/04/15/the-ai-salary-gap-is-creating-two-americas/",
-      "publisher": "TechCrunch",
-      "evidenceTier": 3,
-      "datePublished": "2025-04-15",
+      "title": "AI is driving mass layoffs in tech, but it's boosting salaries by $18,000 a year everywhere else, study says",
+      "url": "https://fortune.com/2025/07/27/artificial-intelligence-skills-18000-salaries-28-percent/",
+      "publisher": "Fortune",
+      "evidenceTier": 2,
+      "datePublished": "2025-07-27",
+      "excerpt": "Job postings for non-tech roles that require AI skills offer 28% higher salaries — an average of nearly $18,000 more per year. The divide between AI-skilled and non-AI-skilled workers is widening.",
       "usedIn": [
         "geographic-wage-divergence"
       ],
-      "verified": false
+      "verified": true,
+      "synthetic": false
     },
     "techcrunch-creative-layoffs": {
       "id": "techcrunch-creative-layoffs",
-      "title": "Creative studios slash headcount as AI tools mature",
+      "title": "As layoffs deepen, AI's role in the cuts is murky — but it definitely has one",
       "url": "https://techcrunch.com/2024/01/29/as-layoffs-deepen-ais-role-in-the-cuts-is-murky-but-it-definitely-has-one/",
       "publisher": "TechCrunch",
       "evidenceTier": 3,
-      "datePublished": "2024-11-01",
+      "datePublished": "2024-01-29",
+      "excerpt": "The advent and uptake of AI is playing some part in the scope of tech layoffs. Companies have signaled sizeable investments in AI to augment or replace work currently done by people.",
       "usedIn": [
         "creative-industry-displacement"
       ],
-      "verified": false
+      "verified": true,
+      "synthetic": false
     },
     "unctad-creative-industry-2025": {
       "id": "unctad-creative-industry-2025",
@@ -3584,16 +3611,17 @@
     },
     "unitedhealth-10k-2024": {
       "id": "unitedhealth-10k-2024",
-      "title": "UnitedHealth Group 2024 10-K — AI Operational Efficiency",
-      "url": "https://www.sec.gov/cgi-bin/browse-edgar?company=unitedhealth&CIK=&type=10-K",
-      "publisher": "UnitedHealth Group (SEC Filing)",
-      "evidenceTier": 1,
-      "datePublished": "2025-02-15",
-      "excerpt": "UnitedHealth reported AI-driven claims processing reduced administrative costs by $1.2B and eliminated 8,000 administrative positions in 2024.",
+      "title": "From claims to care: How AI could give health care its fast track",
+      "url": "https://www.unitedhealthgroup.com/newsroom/posts/2025/2025-11-13-how-ai-could-give-health-care-fast-track.html",
+      "publisher": "UnitedHealth Group Newsroom",
+      "evidenceTier": 2,
+      "datePublished": "2025-11-13",
+      "excerpt": "UnitedHealth deployed over 1,000 AI applications across insurance, care delivery, and pharmacy. AI chatbots handled over 65 million customer calls in 2024. Invested $1.5B in AI targeting ~$1B in annual operating cost savings.",
       "usedIn": [
         "healthcare-admin-displacement"
       ],
-      "verified": false
+      "verified": true,
+      "synthetic": false
     },
     "uoc-creative-automation-2025": {
       "id": "uoc-creative-automation-2025",
@@ -3610,16 +3638,17 @@
     },
     "ups-8k-2024": {
       "id": "ups-8k-2024",
-      "title": "UPS Q4 2024 Earnings — AI Logistics & Workforce Restructuring",
-      "url": "https://investors.ups.com/sec-filings",
-      "publisher": "UPS (SEC Filing)",
+      "title": "UPS cuts 12,000 jobs, citing softer demand and higher union labor costs",
+      "url": "https://www.nbcnews.com/business/business-news/ups-cutting-12000-jobs-citing-softer-demand-higher-union-labor-costs-rcna136350",
+      "publisher": "NBC News",
       "evidenceTier": 1,
-      "datePublished": "2025-01-30",
-      "excerpt": "UPS cut 12,000 jobs in 2024 citing AI-optimized routing and automated package sorting. Remaining driver wages increased 2.5% under new contract.",
+      "datePublished": "2024-01-30",
+      "excerpt": "UPS announced 12,000 job cuts, primarily management and salaried positions, as part of a $1 billion cost-reduction effort. Full-time driver pay raised to $49/hr top rate under 2023 Teamsters contract.",
       "usedIn": [
         "median-wage-impact"
       ],
-      "verified": false
+      "verified": true,
+      "synthetic": false
     },
     "upwork-earnings-q2-2024": {
       "id": "upwork-earnings-q2-2024",
@@ -3662,16 +3691,17 @@
     },
     "walmart-10k-2024": {
       "id": "walmart-10k-2024",
-      "title": "Walmart 2024 10-K — Automation Investment & Wage Strategy",
-      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=walmart&CIK=&type=10-K",
-      "publisher": "Walmart (SEC Filing)",
-      "evidenceTier": 1,
-      "datePublished": "2025-03-28",
-      "excerpt": "Walmart raised minimum wage to $15/hr but disclosed AI-driven checkout and inventory systems reducing total store staffing needs by ~8% per location.",
+      "title": "Walmart Lowers Starting Pay for New Hires",
+      "url": "https://worldatwork.org/workspan/articles/walmart-lowers-starting-pay-for-new-hires",
+      "publisher": "WorldatWork",
+      "evidenceTier": 2,
+      "datePublished": "2024-10-01",
+      "excerpt": "Walmart's minimum starting wage is $14/hr while average U.S. associate wage reached $18.25 by 2025. The company invested in checkout and inventory automation but has not disclosed specific per-location staffing reduction figures.",
       "usedIn": [
         "median-wage-impact"
       ],
-      "verified": false
+      "verified": true,
+      "synthetic": false
     },
     "webb-2024": {
       "id": "webb-2024",

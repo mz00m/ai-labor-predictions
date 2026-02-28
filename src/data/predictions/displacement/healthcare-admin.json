@@ -58,22 +58,22 @@
       "label": "NEJM: 20-35% admin cost reduction"
     },
     {
-      "date": "2025-11-01",
+      "date": "2026-01-22",
       "direction": "down",
       "sourceIds": [
         "healthtech-ai-admin-2025"
       ],
       "evidenceTier": 2,
-      "label": "HealthTech: 40% of medical coding automated"
+      "label": "HealthTech: admin is 25% of healthcare costs, key automation target"
     },
     {
-      "date": "2025-09-01",
+      "date": "2024-06-04",
       "direction": "down",
       "sourceIds": [
         "aha-ai-revenue-cycle-2025"
       ],
       "evidenceTier": 2,
-      "label": "AHA: 50%+ providers now use AI for billing/coding"
+      "label": "AHA: 46% of hospitals use AI in revenue cycle management"
     },
     {
       "date": "2025-09-15",
@@ -178,21 +178,21 @@
     },
     {
       "id": "unitedhealth-10k-2024",
-      "title": "UnitedHealth Group 2024 10-K — AI Operational Efficiency",
-      "url": "https://www.sec.gov/cgi-bin/browse-edgar?company=unitedhealth&CIK=&type=10-K",
-      "publisher": "UnitedHealth Group (SEC Filing)",
-      "evidenceTier": 1,
-      "datePublished": "2025-02-15",
-      "excerpt": "UnitedHealth reported AI-driven claims processing reduced administrative costs by $1.2B and eliminated 8,000 administrative positions in 2024."
+      "title": "From claims to care: How AI could give health care its fast track",
+      "url": "https://www.unitedhealthgroup.com/newsroom/posts/2025/2025-11-13-how-ai-could-give-health-care-fast-track.html",
+      "publisher": "UnitedHealth Group Newsroom",
+      "evidenceTier": 2,
+      "datePublished": "2025-11-13",
+      "excerpt": "UnitedHealth deployed over 1,000 AI applications across insurance, care delivery, and pharmacy. AI chatbots handled over 65 million customer calls in 2024. Invested $1.5B in AI targeting ~$1B in annual operating cost savings."
     },
     {
       "id": "healthtech-ai-admin-2025",
-      "title": "AI in Healthcare Administration: 2025 Year in Review",
-      "url": "https://www.healthtechmagazine.net/article/2025/10/ai-healthcare-admin-overview",
-      "publisher": "HealthTech Magazine",
+      "title": "AI in Healthcare Administration: A Complete Overview",
+      "url": "https://healthtechmagazine.net/article/2026/01/ai-healthcare-administration-complete-overview-perfcon",
+      "publisher": "HealthTech Magazine (CDW)",
       "evidenceTier": 2,
-      "datePublished": "2025-10-20",
-      "excerpt": "40% of medical coding is now automated through AI in 2025. Data entry specialists face 95% automation risk. Over 50% of providers use AI for billing and coding."
+      "datePublished": "2026-01-22",
+      "excerpt": "Administration comprises 25% of all healthcare costs, making it a key target for automation. Organizations are using AI for documentation, coding, scheduling. Ambient documentation frees up to four hours of clinician time."
     },
     {
       "id": "himss-medical-coding-ai-2025",
@@ -205,12 +205,12 @@
     },
     {
       "id": "aha-ai-revenue-cycle-2025",
-      "title": "AHA Survey: AI Adoption in Healthcare Revenue Cycle Management",
-      "url": "https://www.aha.org/center/emerging-issues/market-insights/ai",
-      "publisher": "American Hospital Association",
+      "title": "3 Ways AI Can Improve Revenue-Cycle Management",
+      "url": "https://www.aha.org/aha-center-health-innovation-market-scan/2024-06-04-3-ways-ai-can-improve-revenue-cycle-management",
+      "publisher": "American Hospital Association (Center for Health Innovation)",
       "evidenceTier": 2,
-      "datePublished": "2025-09-01",
-      "excerpt": "Over 50% of healthcare providers now use AI for billing and coding tasks. Early adopters report 25-35% reduction in revenue cycle FTEs within 12 months of deployment."
+      "datePublished": "2024-06-04",
+      "excerpt": "About 46% of hospitals and health systems now use AI in their RCM operations. AI-driven NLP systems automatically assign billing codes, and AI predicts likely denials and their causes."
     },
     {
       "id": "revere-health-ai-layoffs-2025",

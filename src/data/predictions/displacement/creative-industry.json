@@ -39,16 +39,6 @@
       "evidenceTier": 2
     },
     {
-      "date": "2025-02-20",
-      "value": 22,
-      "confidenceLow": 15,
-      "confidenceHigh": 30,
-      "sourceIds": [
-        "fiverr-10k-2024"
-      ],
-      "evidenceTier": 1
-    },
-    {
       "date": "2025-07-15",
       "value": 33,
       "confidenceLow": 25,
@@ -164,11 +154,12 @@
     },
     {
       "id": "techcrunch-creative-layoffs",
-      "title": "Creative studios slash headcount as AI tools mature",
+      "title": "As layoffs deepen, AI's role in the cuts is murky — but it definitely has one",
       "url": "https://techcrunch.com/2024/01/29/as-layoffs-deepen-ais-role-in-the-cuts-is-murky-but-it-definitely-has-one/",
       "publisher": "TechCrunch",
       "evidenceTier": 3,
-      "datePublished": "2024-11-01"
+      "datePublished": "2024-01-29",
+      "excerpt": "The advent and uptake of AI is playing some part in the scope of tech layoffs. Companies have signaled sizeable investments in AI to augment or replace work currently done by people."
     },
     {
       "id": "forrester-creative-2025",
@@ -190,12 +181,12 @@
     },
     {
       "id": "fiverr-10k-2024",
-      "title": "Fiverr International 2024 10-K — Market Trends",
-      "url": "https://www.sec.gov/cgi-bin/browse-edgar?company=fiverr&CIK=&type=10-K",
-      "publisher": "Fiverr (SEC Filing)",
-      "evidenceTier": 1,
-      "datePublished": "2025-02-20",
-      "excerpt": "Fiverr reported that AI-related categories grew 55% YoY while traditional writing and basic design categories declined 22%."
+      "title": "Fiverr Announces Fourth Quarter and Full Year 2024 Results",
+      "url": "https://investors.fiverr.com/news-releases/news-release-details/fiverr-announces-fourth-quarter-and-full-year-2024-results",
+      "publisher": "Fiverr International Ltd.",
+      "evidenceTier": 2,
+      "datePublished": "2025-02-19",
+      "excerpt": "Fiverr FY2024 marketplace revenue declined 1.3% YoY to $303.1M. Active buyers fell 10% to 3.6M. AI-related categories showed strong growth while traditional low-complexity gig categories contracted."
     },
     {
       "id": "uoc-creative-automation-2025",

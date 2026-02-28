@@ -13,7 +13,9 @@
       "value": 3.8,
       "confidenceLow": 2.5,
       "confidenceHigh": 5,
-      "sourceIds": ["census-bts-ai-2023"],
+      "sourceIds": [
+        "census-bts-ai-2023"
+      ],
       "evidenceTier": 1
     },
     {
@@ -21,7 +23,9 @@
       "value": 6.6,
       "confidenceLow": 5,
       "confidenceHigh": 9,
-      "sourceIds": ["census-bts-ai-2024"],
+      "sourceIds": [
+        "census-bts-ai-2024"
+      ],
       "evidenceTier": 1
     },
     {
@@ -29,7 +33,9 @@
       "value": 10.2,
       "confidenceLow": 8,
       "confidenceHigh": 15,
-      "sourceIds": ["census-bts-ai-2025"],
+      "sourceIds": [
+        "census-bts-ai-2025"
+      ],
       "evidenceTier": 1
     },
     {
@@ -37,7 +43,9 @@
       "value": 9.7,
       "confidenceLow": 7,
       "confidenceHigh": 12,
-      "sourceIds": ["anthropic-economic-index-2025"],
+      "sourceIds": [
+        "anthropic-economic-index-2025"
+      ],
       "evidenceTier": 1
     },
     {
@@ -45,7 +53,9 @@
       "value": 37.4,
       "confidenceLow": 32,
       "confidenceHigh": 43,
-      "sourceIds": ["bick-blandin-deming-nber-2025"],
+      "sourceIds": [
+        "bick-blandin-deming-nber-2025"
+      ],
       "evidenceTier": 1
     },
     {
@@ -53,7 +63,9 @@
       "value": 36,
       "confidenceLow": 30,
       "confidenceHigh": 42,
-      "sourceIds": ["hartley-adoption-survey-2026"],
+      "sourceIds": [
+        "hartley-adoption-survey-2026"
+      ],
       "evidenceTier": 1
     }
   ],
@@ -61,56 +73,63 @@
     {
       "date": "2024-09-15",
       "direction": "up",
-      "sourceIds": ["deloitte-ai-state-2024"],
+      "sourceIds": [
+        "deloitte-ai-state-2024"
+      ],
       "evidenceTier": 2,
       "label": "Deloitte survey: 42% of enterprises in production"
     },
     {
       "date": "2025-01-20",
       "direction": "up",
-      "sourceIds": ["mckinsey-ai-survey-2025"],
+      "sourceIds": [
+        "mckinsey-ai-survey-2025"
+      ],
       "evidenceTier": 2,
       "label": "McKinsey survey: 78% use AI in ≥1 function (Mar 2025)"
     },
     {
       "date": "2025-11-01",
       "direction": "up",
-      "sourceIds": ["mckinsey-ai-survey-nov-2025"],
+      "sourceIds": [
+        "mckinsey-ai-survey-nov-2025"
+      ],
       "evidenceTier": 2,
       "label": "McKinsey Nov 2025: 88% use AI; gen AI at 71%; but only 7% fully scaled"
     },
     {
       "date": "2025-11-20",
       "direction": "up",
-      "sourceIds": ["microsoft-global-ai-2025"],
+      "sourceIds": [
+        "microsoft-global-ai-2025"
+      ],
       "evidenceTier": 2,
       "label": "Microsoft: 75% of knowledge workers use AI tools"
     },
     {
       "date": "2025-12-15",
       "direction": "up",
-      "sourceIds": ["gallup-worker-ai-adoption-2025"],
+      "sourceIds": [
+        "gallup-worker-ai-adoption-2025"
+      ],
       "evidenceTier": 2,
       "label": "Gallup: 46% of US workers used AI at work in Q4 2025"
     },
     {
       "date": "2026-02-15",
       "direction": "up",
-      "sourceIds": ["nber-bloom-firm-data-adoption-2026"],
+      "sourceIds": [
+        "nber-bloom-firm-data-adoption-2026"
+      ],
       "evidenceTier": 1,
       "label": "NBER/Bloom: 78% of US firms use AI (executive survey of ~6K across 4 countries)"
     },
     {
-      "date": "2026-02-02",
-      "direction": "up",
-      "sourceIds": ["claude-code-github-2026"],
-      "evidenceTier": 2,
-      "label": "Claude Code: ~4% of all public GitHub commits (135K+/day); 42,896x growth in 13 months"
-    },
-    {
       "date": "2025-10-01",
       "direction": "neutral",
-      "sourceIds": ["atlassian-ai-collab-2025"],
+      "sourceIds": [
+        "atlassian-ai-collab-2025"
+      ],
       "evidenceTier": 2,
       "label": "Atlassian: 96% of orgs not seeing dramatic AI improvements; only 4% report true ROI"
     }
@@ -181,21 +200,21 @@
     },
     {
       "id": "microsoft-10k-ai-2024",
-      "title": "Microsoft 2024 10-K — AI and Cloud Revenue",
-      "url": "https://www.sec.gov/cgi-bin/browse-edgar?company=microsoft&CIK=&type=10-K",
-      "publisher": "Microsoft (SEC Filing)",
+      "title": "Microsoft 2024 Annual Report",
+      "url": "https://www.microsoft.com/investor/reports/ar24/index.html",
+      "publisher": "Microsoft",
       "evidenceTier": 1,
-      "datePublished": "2024-07-30",
-      "excerpt": "Azure AI services revenue grew 60% YoY. Over 53,000 organizations now use Azure OpenAI service, up from 11,000 a year earlier."
+      "datePublished": "2024-07-01",
+      "excerpt": "Over 60,000 Azure AI customers by end of FY2024, growing nearly 60% YoY. Azure AI revenue reached a $13 billion annual run rate, growing 175% YoY."
     },
     {
       "id": "salesforce-10k-ai-2024",
-      "title": "Salesforce 2024 10-K — Einstein AI Adoption",
-      "url": "https://www.sec.gov/cgi-bin/browse-edgar?company=salesforce&CIK=&type=10-K",
-      "publisher": "Salesforce (SEC Filing)",
+      "title": "Salesforce Announces Strong Fourth Quarter Fiscal 2024 Results",
+      "url": "https://investor.salesforce.com/news/news-details/2024/Salesforce-Announces-Strong-Fourth-Quarter-Fiscal-2024-Results/default.aspx",
+      "publisher": "Salesforce",
       "evidenceTier": 1,
-      "datePublished": "2024-03-06",
-      "excerpt": "Over 1 trillion AI predictions served per week via Einstein. 68% of enterprise customers have enabled at least one AI feature."
+      "datePublished": "2024-02-28",
+      "excerpt": "Salesforce Einstein platform serves over 200 billion AI predictions per day across Customer 360 applications. Einstein 1 platform enables AI-powered apps with low-code development and generative AI assistants."
     },
     {
       "id": "anthropic-economic-index-2025",
@@ -322,15 +341,6 @@
       "evidenceTier": 2,
       "datePublished": "2025-11-01",
       "excerpt": "88% of organizations use AI in ≥1 function (up from 78%). Gen AI adoption at 71%. But only 7% fully scaled, and just 6% report EBIT impact ≥5%. 62% experimenting with AI agents."
-    },
-    {
-      "id": "claude-code-github-2026",
-      "title": "Claude Code GitHub Commits Over Time",
-      "url": "https://github.com/search?q=co-authored-by+claude&type=commits",
-      "publisher": "GitHub Search API / Anthropic",
-      "evidenceTier": 2,
-      "datePublished": "2026-02-02",
-      "excerpt": "Claude Code reached 135K+ daily commits on public GitHub (~4% of all public commits). Growth of 42,896x in 13 months from launch. At current trajectory, projected to reach 20%+ of daily commits by end of 2026."
     },
     {
       "id": "atlassian-ai-collab-2025",

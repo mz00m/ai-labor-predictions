@@ -13,7 +13,9 @@
       "value": 66,
       "confidenceLow": 55,
       "confidenceHigh": 75,
-      "sourceIds": ["klarna-earnings-2024"],
+      "sourceIds": [
+        "klarna-earnings-2024"
+      ],
       "evidenceTier": 1
     },
     {
@@ -21,7 +23,9 @@
       "value": 12,
       "confidenceLow": 8,
       "confidenceHigh": 18,
-      "sourceIds": ["shopify-earnings-2024"],
+      "sourceIds": [
+        "shopify-earnings-2024"
+      ],
       "evidenceTier": 1
     },
     {
@@ -29,7 +33,9 @@
       "value": 40,
       "confidenceLow": 30,
       "confidenceHigh": 50,
-      "sourceIds": ["shopify-earnings-2024"],
+      "sourceIds": [
+        "shopify-earnings-2024"
+      ],
       "evidenceTier": 1
     },
     {
@@ -37,7 +43,9 @@
       "value": 55,
       "confidenceLow": 45,
       "confidenceHigh": 65,
-      "sourceIds": ["zendesk-ai-cs-2026"],
+      "sourceIds": [
+        "zendesk-ai-cs-2026"
+      ],
       "evidenceTier": 3
     }
   ],
@@ -45,63 +53,81 @@
     {
       "date": "2024-09-01",
       "direction": "up",
-      "sourceIds": ["huang-cs-2024"],
+      "sourceIds": [
+        "huang-cs-2024"
+      ],
       "evidenceTier": 1,
       "label": "NBER: AI boosts CS worker productivity 14%"
     },
     {
       "date": "2025-05-01",
       "direction": "up",
-      "sourceIds": ["brynjolfsson-li-raymond-qje-2025"],
+      "sourceIds": [
+        "brynjolfsson-li-raymond-qje-2025"
+      ],
       "evidenceTier": 1,
       "label": "QJE: 15% productivity gain, novices benefit most"
     },
     {
       "date": "2025-08-01",
       "direction": "down",
-      "sourceIds": ["brynjolfsson-chandar-chen-cs-2025"],
+      "sourceIds": [
+        "brynjolfsson-chandar-chen-cs-2025"
+      ],
       "evidenceTier": 1,
       "label": "Stanford: 11% decline for early-career CS workers"
     },
     {
       "date": "2025-11-01",
       "direction": "down",
-      "sourceIds": ["gartner-cs-2026-forecast"],
+      "sourceIds": [
+        "gartner-cs-2026-forecast"
+      ],
       "evidenceTier": 2,
       "label": "Gartner: 20-30% of CS agents replaced by 2026"
     },
     {
       "date": "2025-10-01",
       "direction": "up",
-      "sourceIds": ["bofa-erica-ai-2025"],
+      "sourceIds": [
+        "bofa-erica-ai-2025"
+      ],
       "evidenceTier": 1,
       "label": "BofA Erica: 2B interactions, 98% resolution rate"
     },
     {
       "date": "2025-06-01",
       "direction": "neutral",
-      "sourceIds": ["klarna-reversal-2025"],
+      "sourceIds": [
+        "klarna-reversal-2025"
+      ],
       "evidenceTier": 1,
       "label": "Klarna reversed course, rehiring humans after 22% CSAT drop"
     },
     {
       "date": "2025-03-05",
       "direction": "up",
-      "sourceIds": ["gartner-agentic-ai-cs-2025"],
+      "sourceIds": [
+        "gartner-agentic-ai-cs-2025"
+      ],
       "evidenceTier": 2,
       "label": "Gartner: agentic AI to resolve 80% of common CS issues by 2029"
     },
     {
       "date": "2025-05-27",
       "direction": "up",
-      "sourceIds": ["cisco-agentic-cs-2025"],
+      "sourceIds": [
+        "cisco-agentic-cs-2025"
+      ],
       "evidenceTier": 2,
       "label": "Cisco: 68% of CS interactions by agentic AI by 2028"
     },
     {
       "date": "2025-10-01",
       "direction": "up",
-      "sourceIds": ["fang-ecommerce-chatbots-2025"],
+      "sourceIds": [
+        "fang-ecommerce-chatbots-2025"
+      ],
       "evidenceTier": 1,
       "label": "E-commerce field experiment: AI chatbots increased sales 16%"
     }
@@ -159,12 +185,12 @@
     },
     {
       "id": "tdoc-10k-2024",
-      "title": "Teleperformance 2024 Annual Report — AI Transformation Strategy",
-      "url": "https://www.teleperformance.com/en-us/investors/publications/annual-reports/",
-      "publisher": "Teleperformance (Annual Filing)",
-      "evidenceTier": 1,
-      "datePublished": "2025-03-15",
-      "excerpt": "World's largest CX outsourcer disclosed 15% workforce reduction in 2024, explicitly citing AI chatbot deployment by clients as primary driver."
+      "title": "Teleperformance: 2024 Annual Results",
+      "url": "https://www.businesswire.com/news/home/20250227092643/en/Teleperformance-2024-Annual-Results",
+      "publisher": "Teleperformance SE (via BusinessWire)",
+      "evidenceTier": 2,
+      "datePublished": "2025-02-27",
+      "excerpt": "Teleperformance reported full-year 2024 revenue of EUR 10,280 million. Plans to invest up to EUR 100 million in AI-focused partnerships during 2025. Over 200 new AI projects launched in 2024."
     },
     {
       "id": "indeed-cs-postings-2025",
