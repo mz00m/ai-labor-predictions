@@ -13,7 +13,9 @@
       "value": 28,
       "confidenceLow": 20,
       "confidenceHigh": 35,
-      "sourceIds": ["linkedin-econ-graph-2023"],
+      "sourceIds": [
+        "linkedin-econ-graph-2023"
+      ],
       "evidenceTier": 2
     },
     {
@@ -21,7 +23,9 @@
       "value": 30,
       "confidenceLow": 22,
       "confidenceHigh": 38,
-      "sourceIds": ["lightcast-geo-wages-2023"],
+      "sourceIds": [
+        "lightcast-geo-wages-2023"
+      ],
       "evidenceTier": 2
     },
     {
@@ -29,7 +33,9 @@
       "value": 33,
       "confidenceLow": 24,
       "confidenceHigh": 42,
-      "sourceIds": ["brookings-metro-ai-2024"],
+      "sourceIds": [
+        "brookings-metro-ai-2024"
+      ],
       "evidenceTier": 2
     },
     {
@@ -37,7 +43,9 @@
       "value": 36,
       "confidenceLow": 26,
       "confidenceHigh": 46,
-      "sourceIds": ["nber-spatial-ai-2024"],
+      "sourceIds": [
+        "nber-spatial-ai-2024"
+      ],
       "evidenceTier": 1
     },
     {
@@ -45,7 +53,9 @@
       "value": 38,
       "confidenceLow": 28,
       "confidenceHigh": 50,
-      "sourceIds": ["indeed-geo-premiums-2024"],
+      "sourceIds": [
+        "indeed-geo-premiums-2024"
+      ],
       "evidenceTier": 2
     },
     {
@@ -53,7 +63,9 @@
       "value": 40,
       "confidenceLow": 30,
       "confidenceHigh": 52,
-      "sourceIds": ["glassdoor-ai-salaries-2025"],
+      "sourceIds": [
+        "glassdoor-ai-salaries-2025"
+      ],
       "evidenceTier": 2
     },
     {
@@ -61,7 +73,9 @@
       "value": 45,
       "confidenceLow": 33,
       "confidenceHigh": 58,
-      "sourceIds": ["techcrunch-ai-salary-gap"],
+      "sourceIds": [
+        "techcrunch-ai-salary-gap"
+      ],
       "evidenceTier": 3
     },
     {
@@ -69,23 +83,19 @@
       "value": 42,
       "confidenceLow": 31,
       "confidenceHigh": 55,
-      "sourceIds": ["bls-metro-wages-2025"],
+      "sourceIds": [
+        "bls-metro-wages-2025"
+      ],
       "evidenceTier": 1
-    },
-    {
-      "date": "2025-11-01",
-      "value": 45,
-      "confidenceLow": 33,
-      "confidenceHigh": 58,
-      "sourceIds": ["bls-tech-vs-nontechmetro-2025"],
-      "evidenceTier": 2
     },
     {
       "date": "2026-01-01",
       "value": 48,
       "confidenceLow": 36,
       "confidenceHigh": 62,
-      "sourceIds": ["moneypenny-regional-ai-2025"],
+      "sourceIds": [
+        "moneypenny-regional-ai-2025"
+      ],
       "evidenceTier": 3
     },
     {
@@ -93,7 +103,9 @@
       "value": 47,
       "confidenceLow": 35,
       "confidenceHigh": 55,
-      "sourceIds": ["manning-aguirre-adaptive-2026"],
+      "sourceIds": [
+        "manning-aguirre-adaptive-2026"
+      ],
       "evidenceTier": 1
     }
   ],
@@ -101,28 +113,36 @@
     {
       "date": "2025-02-01",
       "direction": "up",
-      "sourceIds": ["muro-kinder-geography-2025"],
+      "sourceIds": [
+        "muro-kinder-geography-2025"
+      ],
       "evidenceTier": 1,
       "label": "Brookings: San Jose 43% AI-exposed vs 31% in Las Vegas"
     },
     {
       "date": "2025-09-15",
       "direction": "up",
-      "sourceIds": ["anthropic-geographic-2025"],
+      "sourceIds": [
+        "anthropic-geographic-2025"
+      ],
       "evidenceTier": 1,
       "label": "Anthropic: AI usage concentrated by income & geography"
     },
     {
       "date": "2026-01-15",
       "direction": "up",
-      "sourceIds": ["imf-skill-gaps-geo-2026"],
+      "sourceIds": [
+        "imf-skill-gaps-geo-2026"
+      ],
       "evidenceTier": 2,
       "label": "IMF: employment 3.6% lower in AI-vulnerable regions"
     },
     {
       "date": "2026-01-21",
       "direction": "down",
-      "sourceIds": ["manning-aguirre-adaptive-2026"],
+      "sourceIds": [
+        "manning-aguirre-adaptive-2026"
+      ],
       "evidenceTier": 1,
       "label": "NBER: 6.1M workers lack adaptive capacity; 86% women"
     }
@@ -198,15 +218,6 @@
       "evidenceTier": 1,
       "datePublished": "2025-07-01",
       "excerpt": "Computer and mathematical occupations in San Jose-SF-Oakland MSA: $178K median. National median: $108K. Gap up from 48% to 65% since 2022."
-    },
-    {
-      "id": "bls-tech-vs-nontechmetro-2025",
-      "title": "BLS Tech vs. Non-Tech Metro Wage Analysis Q3 2025",
-      "url": "https://www.bls.gov/oes/current/oessrcma.htm",
-      "publisher": "Bureau of Labor Statistics",
-      "evidenceTier": 2,
-      "datePublished": "2025-11-01",
-      "excerpt": "AI roles median salary $157K in hub metros vs. $49,500 median for all occupations nationally. Geographic premium for AI talent continues to widen."
     },
     {
       "id": "moneypenny-regional-ai-2025",

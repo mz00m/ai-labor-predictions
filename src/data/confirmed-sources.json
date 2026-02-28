@@ -1,0 +1,3846 @@
+{
+  "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
+  "lastUpdated": "2026-02-28",
+  "totalSources": 293,
+  "verifiedCount": 259,
+  "sources": {
+    "accenture-health-ai-2023": {
+      "id": "accenture-health-ai-2023",
+      "title": "Accenture Technology Vision 2023: Healthcare Applications",
+      "url": "https://www.accenture.com/us-en/insights/technology/technology-trends-2023",
+      "publisher": "Accenture",
+      "evidenceTier": 2,
+      "datePublished": "2023-04-16",
+      "excerpt": "Accenture estimated that 40% of all working hours in healthcare could be supported or augmented by language-based AI.",
+      "usedIn": [
+        "healthcare-admin-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "acemoglu-2023": {
+      "id": "acemoglu-2023",
+      "title": "The Simple Macroeconomics of AI",
+      "url": "https://www.nber.org/papers/w32487",
+      "publisher": "NBER (Acemoglu)",
+      "evidenceTier": 1,
+      "datePublished": "2024-04-01",
+      "excerpt": "AI will increase productivity but impact on jobs more modest than often claimed; estimates ~5% of tasks fully automatable.",
+      "usedIn": [
+        "tech-sector-displacement"
+      ],
+      "verified": true
+    },
+    "acemoglu-johnson-power-progress-2023": {
+      "id": "acemoglu-johnson-power-progress-2023",
+      "title": "Power and Progress: Our Thousand-Year Struggle Over Technology and Prosperity",
+      "url": "https://www.publicaffairsbooks.com/titles/daron-acemoglu/power-and-progress/9781541702530",
+      "publisher": "PublicAffairs (Acemoglu, Johnson)",
+      "evidenceTier": 2,
+      "datePublished": "2023-05-16",
+      "excerpt": "Technology does not automatically benefit workers; shared prosperity requires deliberate policy choices. AI could follow historical pattern of concentrating gains among capital owners.",
+      "usedIn": [
+        "median-wage-impact"
+      ],
+      "verified": true
+    },
+    "acemoglu-macro-2024": {
+      "id": "acemoglu-macro-2024",
+      "title": "The Simple Macroeconomics of AI",
+      "url": "https://www.nber.org/papers/w32487",
+      "publisher": "NBER (Acemoglu)",
+      "evidenceTier": 1,
+      "datePublished": "2024-04-01",
+      "excerpt": "AI may increase TFP by only 0.53-0.66% over 10 years, with limited job displacement effects.",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true
+    },
+    "acemoglu-simple-macro": {
+      "id": "acemoglu-simple-macro",
+      "title": "The Simple Macroeconomics of AI",
+      "url": "https://www.nber.org/papers/w32487",
+      "publisher": "NBER (Acemoglu)",
+      "evidenceTier": 1,
+      "datePublished": "2024-04-01",
+      "excerpt": "AI may increase TFP by only 0.53-0.66% over 10 years; limited net job losses of ~2% as many affected tasks are only partially automated.",
+      "usedIn": [
+        "total-us-jobs-lost"
+      ],
+      "verified": true
+    },
+    "adobe-creative-survey-2024": {
+      "id": "adobe-creative-survey-2024",
+      "title": "Adobe Future of Creativity Survey 2024",
+      "url": "https://www.adobe.com/content/dam/cc/us/en/ai-assistant/pdfs/adobe-future-of-creativity-study.pdf",
+      "publisher": "Adobe",
+      "evidenceTier": 2,
+      "datePublished": "2024-02-01",
+      "excerpt": "74% of creative professionals report using AI tools. 30% say AI has reduced the scope of work they're hired for.",
+      "usedIn": [
+        "creative-industry-displacement"
+      ],
+      "verified": false,
+      "synthetic": true,
+      "_action": "REMOVE"
+    },
+    "adp-stanford-young-workers-2025": {
+      "id": "adp-stanford-young-workers-2025",
+      "title": "Yes, AI Is Affecting Employment. Here's the Data",
+      "url": "https://www.adpresearch.com/yes-ai-is-affecting-employment-heres-the-data/",
+      "publisher": "Stanford / ADP Research",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-01",
+      "excerpt": "In jobs with high AI exposure, employment for 22- to 25-year-olds fell 6% between late 2022 and July 2025. Software developers saw a 20% early-career decline. Employment among workers 30 and older grew 6-13%.",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true
+    },
+    "aha-ai-revenue-cycle-2025": {
+      "id": "aha-ai-revenue-cycle-2025",
+      "title": "AHA Survey: AI Adoption in Healthcare Revenue Cycle Management",
+      "url": "https://www.aha.org/center/emerging-issues/market-insights/ai",
+      "publisher": "American Hospital Association",
+      "evidenceTier": 2,
+      "datePublished": "2025-09-01",
+      "excerpt": "Over 50% of healthcare providers now use AI for billing and coding tasks. Early adopters report 25-35% reduction in revenue cycle FTEs within 12 months of deployment.",
+      "usedIn": [
+        "healthcare-admin-displacement"
+      ],
+      "verified": false
+    },
+    "amazon-8k-2024": {
+      "id": "amazon-8k-2024",
+      "title": "Amazon Q4 2024 8-K — AI Fulfillment & Workforce Impact",
+      "url": "https://ir.aboutamazon.com/sec-filings",
+      "publisher": "Amazon (SEC Filing)",
+      "evidenceTier": 1,
+      "datePublished": "2025-02-06",
+      "excerpt": "Amazon reported 75% increase in robotic and AI systems in fulfillment centers. Warehouse associate hiring slowed while 'AI specialist' roles grew 3x.",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": false
+    },
+    "anthropic-ceo-entry-level-2025": {
+      "id": "anthropic-ceo-entry-level-2025",
+      "title": "AI could make half of all entry-level white-collar jobs vanish, Anthropic CEO warns",
+      "url": "https://fortune.com/2025/05/28/anthropic-ceo-warning-ai-job-loss/",
+      "publisher": "Fortune",
+      "evidenceTier": 3,
+      "datePublished": "2025-05-28",
+      "excerpt": "Anthropic CEO Dario Amodei warned that up to 50% of entry-level office jobs could be substantially impacted by AI within the next 2-3 years.",
+      "usedIn": [
+        "entry-level-wage-impact"
+      ],
+      "verified": true
+    },
+    "anthropic-econ-primitives-2026": {
+      "id": "anthropic-econ-primitives-2026",
+      "title": "The Anthropic Economic Index: Economic Primitives",
+      "url": "https://www.anthropic.com/research/anthropic-economic-index-january-2026-report",
+      "publisher": "Anthropic",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-15",
+      "excerpt": "Computer/mathematical tasks account for ~33% of all Claude.ai conversations and ~50% of API traffic, indicating concentrated AI impact on tech-adjacent roles.",
+      "usedIn": [
+        "tech-sector-displacement",
+        "workforce-ai-exposure"
+      ],
+      "verified": true
+    },
+    "anthropic-econ-primitives-adoption-2026": {
+      "id": "anthropic-econ-primitives-adoption-2026",
+      "title": "The Anthropic Economic Index: Economic Primitives",
+      "url": "https://www.anthropic.com/research/anthropic-economic-index-january-2026-report",
+      "publisher": "Anthropic",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-15",
+      "excerpt": "49% of jobs now use AI for at least 25% of their tasks (up from 36% in early 2025); widespread adoption could boost US labor productivity by 1.0-1.8 percentage points annually.",
+      "usedIn": [
+        "ai-adoption-rate"
+      ],
+      "verified": true
+    },
+    "anthropic-econ-primitives-overall-2026": {
+      "id": "anthropic-econ-primitives-overall-2026",
+      "title": "The Anthropic Economic Index: Economic Primitives",
+      "url": "https://www.anthropic.com/research/anthropic-economic-index-january-2026-report",
+      "publisher": "Anthropic",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-15",
+      "excerpt": "49% of jobs now use AI for at least 25% of their tasks (up from 36% in early 2025); augmentation (52%) has overtaken automation (45%) as primary use pattern.",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true
+    },
+    "anthropic-economic-index-2025": {
+      "id": "anthropic-economic-index-2025",
+      "title": "The Anthropic Economic Index: Measuring AI's Real-World Impact",
+      "url": "https://www.anthropic.com/news/the-anthropic-economic-index",
+      "publisher": "Anthropic",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-15",
+      "excerpt": "Census Bureau rigorous measure finds 9.7% of firms actively using AI, while broader surveys report 78%. Adoption gap driven by definitional differences in what counts as AI use.",
+      "usedIn": [
+        "ai-adoption-rate"
+      ],
+      "verified": true
+    },
+    "anthropic-geographic-2025": {
+      "id": "anthropic-geographic-2025",
+      "title": "Uneven geographic and demographic patterns of AI adoption",
+      "url": "https://www.anthropic.com/research/anthropic-economic-index-september-2025-report",
+      "publisher": "Anthropic",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-15",
+      "excerpt": "AI usage heavily concentrated by income and geography globally; within US, workforce composition matters more than income for adoption patterns.",
+      "usedIn": [
+        "geographic-wage-divergence"
+      ],
+      "verified": true
+    },
+    "anthropic-geographic-adoption-2025": {
+      "id": "anthropic-geographic-adoption-2025",
+      "title": "Uneven geographic and demographic patterns of AI adoption",
+      "url": "https://www.anthropic.com/research/anthropic-economic-index-september-2025-report",
+      "publisher": "Anthropic",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-15",
+      "excerpt": "Only ~25% of Information sector businesses using AI; ~2.5% in Accommodation/Food — adoption patterns driven more by workforce composition than income.",
+      "usedIn": [
+        "ai-adoption-rate"
+      ],
+      "verified": true
+    },
+    "atlantic-wages-2024": {
+      "id": "atlantic-wages-2024",
+      "title": "AI could be coming for higher-paid workers this time",
+      "url": "https://www.theatlantic.com/ideas/archive/2023/01/chatgpt-ai-economy-automation-jobs/672767/",
+      "publisher": "The Atlantic",
+      "evidenceTier": 3,
+      "datePublished": "2024-10-01",
+      "usedIn": [
+        "median-wage-impact"
+      ],
+      "verified": true
+    },
+    "atlassian-ai-collab-2025": {
+      "id": "atlassian-ai-collab-2025",
+      "title": "Why 96% of Companies Aren't Seeing AI ROI",
+      "url": "https://www.atlassian.com/blog/ai-collaboration-report-2025",
+      "publisher": "Atlassian",
+      "evidenceTier": 2,
+      "datePublished": "2025-10-01",
+      "excerpt": "Survey of 180 Fortune 100 executives and 12,000 knowledge workers. 96% of organizations not seeing dramatic improvements in efficiency, innovation, or work quality from AI. Costing Fortune 500 ~$98B/year in lost returns. Workers report feeling 33% more productive individually, but organizational metrics flat.",
+      "usedIn": [
+        "ai-adoption-rate"
+      ],
+      "verified": true
+    },
+    "autor-new-frontiers-qje-2024": {
+      "id": "autor-new-frontiers-qje-2024",
+      "title": "New Frontiers: The Origins and Content of New Work, 1940–2018",
+      "url": "https://academic.oup.com/qje/article-abstract/139/3/1399/7630187",
+      "publisher": "QJE (Autor, Chin, Salomons, Seegmiller)",
+      "evidenceTier": 1,
+      "datePublished": "2024-08-01",
+      "excerpt": "Demand-eroding effects of automation innovations have intensified in past four decades. New work creation has shifted from production to high-paid professional occupations.",
+      "usedIn": [
+        "creative-industry-displacement"
+      ],
+      "verified": true
+    },
+    "bick-blandin-deming-nber-2025": {
+      "id": "bick-blandin-deming-nber-2025",
+      "title": "Is AI Already Replacing Jobs? A Large-Scale Survey",
+      "url": "https://www.nber.org/papers/w33734",
+      "publisher": "NBER (Bick, Blandin, Deming)",
+      "evidenceTier": 1,
+      "datePublished": "2025-08-15",
+      "excerpt": "37.4% of US workers used AI on the job in the past week. Adoption highest among college-educated (52%) and workers earning $100K+ (58%). Survey of 25,000 workers.",
+      "usedIn": [
+        "ai-adoption-rate"
+      ],
+      "verified": true
+    },
+    "bick-blandin-deming-wp-2025": {
+      "id": "bick-blandin-deming-wp-2025",
+      "title": "The Rapid Adoption of Generative AI",
+      "url": "https://doi.org/10.20955/wp.2024.027",
+      "publisher": "St. Louis Fed (Bick, Blandin & Deming)",
+      "evidenceTier": 1,
+      "datePublished": "2025-10-01",
+      "excerpt": "Nationally representative survey of 25,000+ working-age adults finds generative AI adoption reached 55.9% overall and 40.7% at work by November 2025, outpacing PC and internet adoption at comparable points post-launch.",
+      "usedIn": [
+        "genai-work-adoption"
+      ],
+      "verified": true
+    },
+    "blog-mass-unemployment": {
+      "id": "blog-mass-unemployment",
+      "title": "We're not ready for mass AI unemployment",
+      "url": "https://medium.com/@jamiebulloch/were-not-ready-for-mass-ai-unemployment-f54d39a4c08d",
+      "publisher": "Medium",
+      "evidenceTier": 4,
+      "datePublished": "2025-06-01",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true
+    },
+    "bls-contingent-2025": {
+      "id": "bls-contingent-2025",
+      "title": "Contingent and Alternative Employment Arrangements — 2025",
+      "url": "https://www.bls.gov/news.release/conemp.nr0.htm",
+      "publisher": "Bureau of Labor Statistics",
+      "evidenceTier": 1,
+      "datePublished": "2025-07-15",
+      "excerpt": "Median weekly earnings for freelance writers and designers declined 18% in real terms from 2022-2025.",
+      "usedIn": [
+        "freelancer-rate-impact"
+      ],
+      "verified": false,
+      "synthetic": true,
+      "_action": "REMOVE"
+    },
+    "bls-creative-occupations-2025": {
+      "id": "bls-creative-occupations-2025",
+      "title": "Occupational Outlook: Arts, Design, Entertainment, Sports, and Media",
+      "url": "https://www.bls.gov/ooh/arts-and-design/",
+      "publisher": "Bureau of Labor Statistics",
+      "evidenceTier": 1,
+      "datePublished": "2025-06-01",
+      "excerpt": "Graphic designer employment projected to decline 4% through 2033. Technical writers projected flat. New AI-creative hybrid roles growing.",
+      "usedIn": [
+        "creative-industry-displacement"
+      ],
+      "verified": true
+    },
+    "bls-education-2025": {
+      "id": "bls-education-2025",
+      "title": "Occupational Outlook: Education, Training, and Library",
+      "url": "https://www.bls.gov/ooh/education-training-and-library/",
+      "publisher": "Bureau of Labor Statistics",
+      "evidenceTier": 1,
+      "datePublished": "2025-07-15",
+      "excerpt": "Teacher aide and educational support employment projected to decline 3%. Post-secondary teacher demand flat. Private tutoring category declining.",
+      "usedIn": [
+        "education-sector-displacement"
+      ],
+      "verified": true
+    },
+    "bls-entry-wages-2025": {
+      "id": "bls-entry-wages-2025",
+      "title": "Usual Weekly Earnings — Workers 16-24",
+      "url": "https://www.bls.gov/cps/",
+      "publisher": "Bureau of Labor Statistics",
+      "evidenceTier": 1,
+      "datePublished": "2025-07-01",
+      "excerpt": "Real median weekly earnings for workers aged 16-24 in professional services fell 5.2% from 2023 to 2025.",
+      "usedIn": [
+        "entry-level-wage-impact"
+      ],
+      "verified": true
+    },
+    "bls-health-admin-2025": {
+      "id": "bls-health-admin-2025",
+      "title": "Occupational Outlook: Healthcare Support and Administrative",
+      "url": "https://www.bls.gov/ooh/healthcare/",
+      "publisher": "Bureau of Labor Statistics",
+      "evidenceTier": 1,
+      "datePublished": "2025-07-01",
+      "excerpt": "Medical records, billing, and coding specialist employment projected to decline 8% through 2033, the steepest decline among healthcare occupations.",
+      "usedIn": [
+        "healthcare-admin-displacement"
+      ],
+      "verified": true
+    },
+    "bls-may-2024-wage-data": {
+      "id": "bls-may-2024-wage-data",
+      "title": "BLS Occupational Employment and Wage Statistics, May 2024",
+      "url": "https://www.bls.gov/oes/current/oes_nat.htm",
+      "publisher": "Bureau of Labor Statistics",
+      "evidenceTier": 2,
+      "datePublished": "2025-11-15",
+      "excerpt": "Median annual wage for all occupations: $49,500. AI-exposed administrative and clerical wages grew 1.1% vs. 3.8% for non-AI-exposed occupations.",
+      "usedIn": [
+        "median-wage-impact"
+      ],
+      "verified": true
+    },
+    "bls-metro-wages-2025": {
+      "id": "bls-metro-wages-2025",
+      "title": "Occupational Employment and Wage Statistics — Metropolitan Areas 2025",
+      "url": "https://www.bls.gov/oes/current/oessrcma.htm",
+      "publisher": "Bureau of Labor Statistics",
+      "evidenceTier": 1,
+      "datePublished": "2025-07-01",
+      "excerpt": "Computer and mathematical occupations in San Jose-SF-Oakland MSA: $178K median. National median: $108K. Gap up from 48% to 65% since 2022.",
+      "usedIn": [
+        "geographic-wage-divergence"
+      ],
+      "verified": true
+    },
+    "bls-programmer-employment-observed": {
+      "id": "bls-programmer-employment-observed",
+      "title": "BLS Occupational Employment Statistics: Computer Programmers — Observed Decline",
+      "url": "https://www.bls.gov/oes/current/oes151251.htm",
+      "publisher": "Bureau of Labor Statistics",
+      "evidenceTier": 1,
+      "datePublished": "2024-11-01",
+      "excerpt": "Computer programmer employment (routine coding roles) fell ~27.5% in roughly two years following ChatGPT's release — one of the largest two-year drops in any occupation tracked by BLS. Software developer employment remained flat.",
+      "usedIn": [
+        "tech-sector-displacement"
+      ],
+      "verified": true
+    },
+    "bls-programmer-projections-2034": {
+      "id": "bls-programmer-projections-2034",
+      "title": "BLS Employment Projections: Computer Programmers 2024–2034",
+      "url": "https://www.bls.gov/ooh/computer-and-information-technology/computer-programmers.htm",
+      "publisher": "Bureau of Labor Statistics",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-10",
+      "excerpt": "BLS projects a further 6% decline in programmer roles through 2034. Computer programmer employment (routine coding roles) fell ~27.5% in roughly two years following ChatGPT's release — one of the largest two-year drops in any occupation tracked by BLS. Software developer employment remained flat.",
+      "usedIn": [
+        "tech-sector-displacement"
+      ],
+      "verified": true
+    },
+    "bls-projections-2025": {
+      "id": "bls-projections-2025",
+      "title": "Bureau of Labor Statistics Employment Projections 2024-2034",
+      "url": "https://www.bls.gov/emp/",
+      "publisher": "Bureau of Labor Statistics",
+      "evidenceTier": 1,
+      "datePublished": "2025-08-01",
+      "usedIn": [
+        "overall-us-displacement",
+        "total-us-jobs-lost"
+      ],
+      "verified": true
+    },
+    "bls-tech-projections-2026": {
+      "id": "bls-tech-projections-2026",
+      "title": "AI impacts in BLS employment projections",
+      "url": "https://www.bls.gov/opub/ted/2025/ai-impacts-in-bls-employment-projections.htm",
+      "publisher": "Bureau of Labor Statistics (The Economics Daily)",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-01",
+      "excerpt": "Software developer employment projected to grow 17.9% (2023-2033). Despite AI exposure, this occupation is unlikely to experience employment decline because robust software needs are expected to support continued demand.",
+      "usedIn": [
+        "tech-sector-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "bls-tech-vs-nontechmetro-2025": {
+      "id": "bls-tech-vs-nontechmetro-2025",
+      "title": "BLS Tech vs. Non-Tech Metro Wage Analysis Q3 2025",
+      "url": "https://www.bls.gov/oes/current/oessrcma.htm",
+      "publisher": "Bureau of Labor Statistics",
+      "evidenceTier": 2,
+      "datePublished": "2025-11-01",
+      "excerpt": "AI roles median salary $157K in hub metros vs. $49,500 median for all occupations nationally. Geographic premium for AI talent continues to widen.",
+      "usedIn": [
+        "geographic-wage-divergence"
+      ],
+      "verified": false,
+      "synthetic": true,
+      "_action": "REMOVE"
+    },
+    "bls-wage-data-2025": {
+      "id": "bls-wage-data-2025",
+      "title": "Employment Cost Index — 2025 Q1",
+      "url": "https://www.bls.gov/eci/",
+      "publisher": "Bureau of Labor Statistics",
+      "evidenceTier": 1,
+      "datePublished": "2025-02-01",
+      "usedIn": [
+        "median-wage-impact"
+      ],
+      "verified": true
+    },
+    "bofa-erica-ai-2025": {
+      "id": "bofa-erica-ai-2025",
+      "title": "Bank of America: Erica AI Assistant Surpasses 2 Billion Interactions",
+      "url": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2025/10/bank-of-america-s-erica-surpasses-2-billion-interactions.html",
+      "publisher": "Bank of America",
+      "evidenceTier": 1,
+      "datePublished": "2025-10-01",
+      "excerpt": "BofA's Erica AI assistant surpassed 2 billion client interactions with a 98% resolution rate. Now handles 56% of all customer inquiries without human escalation.",
+      "usedIn": [
+        "customer-service-automation"
+      ],
+      "verified": true
+    },
+    "brookings-2024": {
+      "id": "brookings-2024",
+      "title": "New data show no AI jobs apocalypse — for now",
+      "url": "https://www.brookings.edu/articles/new-data-show-no-ai-jobs-apocalypse-for-now/",
+      "publisher": "Brookings Institution",
+      "evidenceTier": 2,
+      "datePublished": "2024-03-15",
+      "excerpt": "Current employment data do not yet show large-scale AI-driven displacement.",
+      "usedIn": [
+        "tech-sector-displacement"
+      ],
+      "verified": true
+    },
+    "brookings-entry-level-2024": {
+      "id": "brookings-entry-level-2024",
+      "title": "To prepare young people for the AI workplace, focus on the fundamentals",
+      "url": "https://www.brookings.edu/articles/to-prepare-young-people-for-the-ai-workplace-focus-on-the-fundamentals/",
+      "publisher": "Brookings Institution",
+      "evidenceTier": 2,
+      "datePublished": "2025-10-28",
+      "excerpt": "Whether AI destroys jobs or transforms them, young people still need fundamental supports: skill-building, career navigation, and mentorship.",
+      "usedIn": [
+        "entry-level-wage-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "brookings-metro-ai-2024": {
+      "id": "brookings-metro-ai-2024",
+      "title": "AI and the Geography of Opportunity",
+      "url": "https://www.brookings.edu/articles/the-geography-of-generative-ais-workforce-impacts-will-likely-differ-from-those-of-previous-technologies/",
+      "publisher": "Brookings Institution",
+      "evidenceTier": 2,
+      "datePublished": "2024-01-20",
+      "excerpt": "AI adoption is concentrating economic gains in a handful of superstar cities, widening the already large metro-level wage divergence.",
+      "usedIn": [
+        "geographic-wage-divergence"
+      ],
+      "verified": true
+    },
+    "brookings-white-collar-2024": {
+      "id": "brookings-white-collar-2024",
+      "title": "Which jobs are most exposed to generative AI?",
+      "url": "https://www.brookings.edu/articles/generative-ai-the-american-worker-and-the-future-of-work/",
+      "publisher": "Brookings Institution",
+      "evidenceTier": 2,
+      "datePublished": "2024-04-20",
+      "excerpt": "High-paid, white-collar occupations in business, finance, and law are among the most exposed to generative AI disruption.",
+      "usedIn": [
+        "white-collar-professional-displacement"
+      ],
+      "verified": true
+    },
+    "brynjolfsson-bls-productivity-2026": {
+      "id": "brynjolfsson-bls-productivity-2026",
+      "title": "US Productivity Growth and AI",
+      "url": "https://www.ft.com/content/brynjolfsson-ai-productivity-2026",
+      "publisher": "FT / Brynjolfsson (BLS data)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-01",
+      "excerpt": "US productivity grew roughly 2.7% in 2025, nearly double the 1.4% annual average of the past decade — a decoupling of output from labor input that is the hallmark of productivity growth.",
+      "usedIn": [
+        "median-wage-impact"
+      ],
+      "verified": false,
+      "synthetic": true,
+      "_action": "REMOVE"
+    },
+    "brynjolfsson-chandar-chen-2025": {
+      "id": "brynjolfsson-chandar-chen-2025",
+      "title": "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of AI",
+      "url": "https://digitaleconomy.stanford.edu/publications/canaries-in-the-coal-mine/",
+      "publisher": "Stanford Digital Economy Lab (Brynjolfsson, Chandar, Chen)",
+      "evidenceTier": 1,
+      "datePublished": "2025-08-01",
+      "excerpt": "13% relative decline in employment for workers ages 22-25 in most AI-exposed occupations. Software developer employment for ages 22-25 down nearly 20% since ChatGPT's launch.",
+      "usedIn": [
+        "tech-sector-displacement"
+      ],
+      "verified": true
+    },
+    "brynjolfsson-chandar-chen-cs-2025": {
+      "id": "brynjolfsson-chandar-chen-cs-2025",
+      "title": "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of AI",
+      "url": "https://digitaleconomy.stanford.edu/wp-content/uploads/2025/08/Canaries_BrynjolfssonChandarChen.pdf",
+      "publisher": "Stanford Digital Economy Lab",
+      "evidenceTier": 1,
+      "datePublished": "2025-08-01",
+      "excerpt": "~11% decline for early-career customer service workers; declines concentrated in roles where AI automates rather than augments tasks.",
+      "usedIn": [
+        "customer-service-automation"
+      ],
+      "verified": true
+    },
+    "brynjolfsson-chandar-chen-entry-2025": {
+      "id": "brynjolfsson-chandar-chen-entry-2025",
+      "title": "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of AI",
+      "url": "https://digitaleconomy.stanford.edu/wp-content/uploads/2025/08/Canaries_BrynjolfssonChandarChen.pdf",
+      "publisher": "Stanford Digital Economy Lab (Brynjolfsson, Chandar, Chen)",
+      "evidenceTier": 1,
+      "datePublished": "2025-08-01",
+      "excerpt": "ADP payroll data shows 13% relative decline in employment for ages 22-25 in most AI-exposed occupations. Effects concentrated in automation roles, not augmentation.",
+      "usedIn": [
+        "entry-level-wage-impact"
+      ],
+      "verified": true
+    },
+    "brynjolfsson-li-raymond-qje-2025": {
+      "id": "brynjolfsson-li-raymond-qje-2025",
+      "title": "Generative AI at Work",
+      "url": "https://academic.oup.com/qje/article/140/2/889/7990658",
+      "publisher": "QJE (Brynjolfsson, Li, Raymond)",
+      "evidenceTier": 1,
+      "datePublished": "2025-05-01",
+      "excerpt": "AI assistance increases customer service worker productivity by 15% on average. Less experienced workers improve most; AI disseminates best practices from top performers.",
+      "usedIn": [
+        "customer-service-automation",
+        "high-skill-wage-premium"
+      ],
+      "verified": true
+    },
+    "brynjolfsson-li-raymond-qje-wages-2025": {
+      "id": "brynjolfsson-li-raymond-qje-wages-2025",
+      "title": "Generative AI at Work",
+      "url": "https://academic.oup.com/qje/article/140/2/889/7990658",
+      "publisher": "QJE (Brynjolfsson, Li, Raymond)",
+      "evidenceTier": 1,
+      "datePublished": "2025-05-01",
+      "excerpt": "Access to AI assistance increases worker productivity, as measured by issues resolved per hour, by 15% on average, with substantial heterogeneity across workers.",
+      "usedIn": [
+        "median-wage-impact"
+      ],
+      "verified": true
+    },
+    "census-bts-ai-2023": {
+      "id": "census-bts-ai-2023",
+      "title": "Business Trends and Outlook Survey: AI Module Q3 2023",
+      "url": "https://www.census.gov/data/experimental-data-products/business-trends-and-outlook-survey.html",
+      "publisher": "US Census Bureau",
+      "evidenceTier": 1,
+      "datePublished": "2023-08-15",
+      "excerpt": "3.8% of US firms reported using AI in production. An additional 6.4% were in testing/pilot phase. Adoption highest in information (18%) and professional services (12%).",
+      "usedIn": [
+        "ai-adoption-rate"
+      ],
+      "verified": true
+    },
+    "census-bts-ai-2024": {
+      "id": "census-bts-ai-2024",
+      "title": "Business Trends and Outlook Survey: AI Module Q2 2024",
+      "url": "https://www.census.gov/data/experimental-data-products/business-trends-and-outlook-survey.html",
+      "publisher": "US Census Bureau",
+      "evidenceTier": 1,
+      "datePublished": "2024-05-01",
+      "excerpt": "AI usage among US firms rose to 6.6%, with an additional 9.1% in testing. Information sector at 24%, finance/insurance at 15%.",
+      "usedIn": [
+        "ai-adoption-rate"
+      ],
+      "verified": true
+    },
+    "census-bts-ai-2025": {
+      "id": "census-bts-ai-2025",
+      "title": "Business Trends and Outlook Survey: AI Module Q2 2025",
+      "url": "https://www.census.gov/data/experimental-data-products/business-trends-and-outlook-survey.html",
+      "publisher": "US Census Bureau",
+      "evidenceTier": 1,
+      "datePublished": "2025-07-01",
+      "excerpt": "US firm AI usage in production reached 10.2%, with 14.8% in testing. Large firms (500+ employees) at 28%. Adoption accelerating across all sectors.",
+      "usedIn": [
+        "ai-adoption-rate"
+      ],
+      "verified": true
+    },
+    "challenger-ai-job-cuts-2025": {
+      "id": "challenger-ai-job-cuts-2025",
+      "title": "2025 Year-End Challenger Report: AI-Related Job Cuts",
+      "url": "https://www.challengergray.com/blog/2025-year-end-challenger-report-highest-q4-layoffs-since-2008-lowest-ytd-hiring-since-2010/",
+      "publisher": "Challenger, Gray & Christmas",
+      "evidenceTier": 2,
+      "datePublished": "2025-12-01",
+      "excerpt": "54,694 job cuts cited AI as a reason in 2025, concentrated in tech, finance, and customer service sectors.",
+      "usedIn": [
+        "tech-sector-displacement"
+      ],
+      "verified": true
+    },
+    "challenger-ai-layoffs-2025": {
+      "id": "challenger-ai-layoffs-2025",
+      "title": "Challenger Report: 55,000 AI-Attributed Layoffs in 2025",
+      "url": "https://www.challengergray.com/blog/2025-year-end-challenger-report-highest-q4-layoffs-since-2008-lowest-ytd-hiring-since-2010/",
+      "publisher": "Challenger, Gray & Christmas",
+      "evidenceTier": 3,
+      "datePublished": "2026-01-10",
+      "excerpt": "Employers cited AI as a direct cause for 55,000 job cuts in 2025, concentrated in customer service, data entry, and back-office operations.",
+      "usedIn": [
+        "total-us-jobs-lost"
+      ],
+      "verified": true
+    },
+    "challenger-tech-layoffs-2025": {
+      "id": "challenger-tech-layoffs-2025",
+      "title": "78,000 Tech Jobs Lost to AI in H1 2025",
+      "url": "https://www.challengergray.com/blog/2025-year-end-challenger-report-highest-q4-layoffs-since-2008-lowest-ytd-hiring-since-2010/",
+      "publisher": "Challenger, Gray & Christmas",
+      "evidenceTier": 2,
+      "datePublished": "2025-10-01",
+      "excerpt": "78,000 tech sector job losses attributed to AI in the first half of 2025, with QA testing, junior development, and IT support roles most affected.",
+      "usedIn": [
+        "tech-sector-displacement"
+      ],
+      "verified": true
+    },
+    "chegg-enrollment-decline": {
+      "id": "chegg-enrollment-decline",
+      "title": "Chegg Q2 2024 Earnings — ChatGPT Impact on Tutoring Market",
+      "url": "https://investor.chegg.com/press-releases/news-details/2024/Chegg-Reports-Q2-2024-Financial-Results/",
+      "publisher": "Chegg (Earnings Report)",
+      "evidenceTier": 1,
+      "datePublished": "2024-07-01",
+      "excerpt": "Chegg subscribers fell 50% from peak as students shifted to ChatGPT. Company laid off 23% of workforce, citing AI as primary competitive threat.",
+      "usedIn": [
+        "education-sector-displacement"
+      ],
+      "verified": true
+    },
+    "chegg-layoffs-2025": {
+      "id": "chegg-layoffs-2025",
+      "title": "Chegg Eliminates 636 Employees in Two Rounds of AI-Driven Layoffs",
+      "url": "https://investor.chegg.com/press-releases/news-details/2025/Chegg-Announces-Restructuring-Plan-to-Accelerate-AI-Transformation/",
+      "publisher": "Chegg (SEC Filing / Press Release)",
+      "evidenceTier": 1,
+      "datePublished": "2025-02-01",
+      "excerpt": "Chegg eliminated 636 employees across two rounds of layoffs (23% in 2024, then additional cuts in early 2025), totaling ~67% of peak workforce. CEO explicitly cited AI as existential threat to homework-help business model.",
+      "usedIn": [
+        "education-sector-displacement"
+      ],
+      "verified": true
+    },
+    "chen-hbs-displacement-2025": {
+      "id": "chen-hbs-displacement-2025",
+      "title": "Displacement or Complementarity? The Labor Market Impact of Generative AI",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-039_05fbec84-1f23-459b-8410-e3cd7ab6c88a.pdf",
+      "publisher": "Harvard Business School",
+      "evidenceTier": 1,
+      "datePublished": "2025-01-15",
+      "excerpt": "17% decrease in job postings for occupations in top quartile of automation potential, alongside 22% increase in postings for augmentation-prone occupations.",
+      "usedIn": [
+        "tech-sector-displacement"
+      ],
+      "verified": true
+    },
+    "chen-hbs-overall-2025": {
+      "id": "chen-hbs-overall-2025",
+      "title": "Displacement or Complementarity? The Labor Market Impact of Generative AI",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-039_05fbec84-1f23-459b-8410-e3cd7ab6c88a.pdf",
+      "publisher": "Harvard Business School",
+      "evidenceTier": 1,
+      "datePublished": "2025-01-15",
+      "excerpt": "17% decrease in job postings for highly automatable occupations, but 22% increase for augmentation-prone ones — net effect depends on occupation mix.",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true
+    },
+    "chen-hbs-white-collar-2025": {
+      "id": "chen-hbs-white-collar-2025",
+      "title": "Displacement or Complementarity? The Labor Market Impact of Generative AI",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-039_05fbec84-1f23-459b-8410-e3cd7ab6c88a.pdf",
+      "publisher": "Harvard Business School",
+      "evidenceTier": 1,
+      "datePublished": "2025-01-15",
+      "excerpt": "24% decrease in AI-exposed skills required in highly automatable jobs, but 15% increase in AI-exposed skills for augmentation-prone professional roles.",
+      "usedIn": [
+        "white-collar-professional-displacement"
+      ],
+      "verified": true
+    },
+    "chronicle-higher-ed-ai": {
+      "id": "chronicle-higher-ed-ai",
+      "title": "Are You Ready for the AI University?",
+      "url": "https://www.chronicle.com/article/are-you-ready-for-the-ai-university",
+      "publisher": "The Chronicle of Higher Education",
+      "evidenceTier": 3,
+      "datePublished": "2025-04-25",
+      "excerpt": "Over the next decade AI will decimate faculty ranks; TAs will be first casualties, then non-tenured faculty, then tenured positions via attrition. Predicts significant culling of doctoral programs.",
+      "usedIn": [
+        "education-sector-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "cisco-agentic-cs-2025": {
+      "id": "cisco-agentic-cs-2025",
+      "title": "The Race to an Agentic Future: Customer Service Interactions",
+      "url": "https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2025/m05/agentic-ai-poised-to-handle-68-of-customer-service-and-support-interactions-by-2028.html",
+      "publisher": "Cisco",
+      "evidenceTier": 2,
+      "datePublished": "2025-05-27",
+      "excerpt": "Survey of 7,950 decision-makers: 68% of all CS interactions expected to be handled by agentic AI by 2028. 56% expected within 12 months.",
+      "usedIn": [
+        "customer-service-automation"
+      ],
+      "verified": true
+    },
+    "claude-code-github-2026": {
+      "id": "claude-code-github-2026",
+      "title": "Claude Code GitHub Commits Over Time",
+      "url": "https://github.com/search?q=co-authored-by+claude&type=commits",
+      "publisher": "GitHub Search API / Anthropic",
+      "evidenceTier": 2,
+      "datePublished": "2026-02-02",
+      "excerpt": "Claude Code reached 135K+ daily commits on public GitHub (~4% of all public commits). Growth of 42,896x in 13 months from launch. At current trajectory, projected to reach 20%+ of daily commits by end of 2026.",
+      "usedIn": [
+        "ai-adoption-rate"
+      ],
+      "verified": false
+    },
+    "cms-prior-auth-2024": {
+      "id": "cms-prior-auth-2024",
+      "title": "CMS Final Rule on Prior Authorization and AI Automation",
+      "url": "https://www.cms.gov/newsroom/fact-sheets/cms-interoperability-and-prior-authorization-final-rule-cms-0057-f",
+      "publisher": "Centers for Medicare & Medicaid Services",
+      "evidenceTier": 1,
+      "datePublished": "2024-03-01",
+      "excerpt": "CMS rules now allow electronic prior auth with AI-assisted review, enabling automation of an estimated 60% of prior authorization workflows.",
+      "usedIn": [
+        "healthcare-admin-displacement"
+      ],
+      "verified": true
+    },
+    "cognizant-new-work-2026": {
+      "id": "cognizant-new-work-2026",
+      "title": "New Work, New World 2026: How AI is Reshaping Work",
+      "url": "https://www.cognizant.com/us/en/aem-i/ai-and-the-future-of-work-report",
+      "publisher": "Cognizant",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-15",
+      "excerpt": "Education task exposure jumped from 11% to 49% — a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations.",
+      "usedIn": [
+        "education-sector-displacement",
+        "healthcare-admin-displacement",
+        "overall-us-displacement",
+        "tech-sector-displacement",
+        "white-collar-professional-displacement",
+        "workforce-ai-exposure"
+      ],
+      "verified": true
+    },
+    "comptia-it-unemployment-2025": {
+      "id": "comptia-it-unemployment-2025",
+      "title": "CompTIA Tech Jobs Report: IT Unemployment Trends",
+      "url": "https://www.comptia.org/content/tech-jobs-report",
+      "publisher": "CompTIA",
+      "evidenceTier": 2,
+      "datePublished": "2025-09-01",
+      "excerpt": "IT unemployment rate rose from 3.9% to 5.7% between late 2024 and mid-2025, the highest level since 2021, driven by AI-related restructuring.",
+      "usedIn": [
+        "tech-sector-displacement"
+      ],
+      "verified": true
+    },
+    "cui-microsoft-copilot-2025": {
+      "id": "cui-microsoft-copilot-2025",
+      "title": "The Effects of Generative AI on Computing Workers' Productivity",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5106604",
+      "publisher": "Microsoft/Accenture (Cui, Demirer, Jaffe, Musolff, Peng, Salz)",
+      "evidenceTier": 1,
+      "datePublished": "2025-06-01",
+      "excerpt": "26% increase in completed pull requests, 13.55% increase in commits, 38.38% increase in builds — but build success rate fell by 5.53 percentage points.",
+      "usedIn": [
+        "tech-sector-displacement"
+      ],
+      "verified": true
+    },
+    "dallas-fed-entry-level-2026": {
+      "id": "dallas-fed-entry-level-2026",
+      "title": "Young workers' employment drops in occupations with high AI exposure",
+      "url": "https://www.dallasfed.org/research/economics/2026/0106",
+      "publisher": "Federal Reserve Bank of Dallas",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-06",
+      "excerpt": "Employment share of young workers (20-24) in most AI-exposed occupations fell from 16.4% to 15.5%; decline driven by fewer people transitioning into employment, not layoffs.",
+      "usedIn": [
+        "entry-level-wage-impact"
+      ],
+      "verified": true
+    },
+    "dallas-fed-overall-2026": {
+      "id": "dallas-fed-overall-2026",
+      "title": "Young workers' employment drops in occupations with high AI exposure",
+      "url": "https://www.dallasfed.org/research/economics/2026/0106",
+      "publisher": "Federal Reserve Bank of Dallas",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-06",
+      "excerpt": "If fully translated to unemployment, AI-driven employment declines among young workers would explain only 0.1 percentage point rise in aggregate unemployment.",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true
+    },
+    "dallas-fed-young-workers-2026": {
+      "id": "dallas-fed-young-workers-2026",
+      "title": "Young workers' employment drops in occupations with high AI exposure",
+      "url": "https://www.dallasfed.org/research/economics/2026/0106",
+      "publisher": "Federal Reserve Bank of Dallas",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-06",
+      "excerpt": "Employment share of young workers (20-24) in most AI-exposed occupations fell from 16.4% to 15.5% between November 2022 and September 2025.",
+      "usedIn": [
+        "tech-sector-displacement"
+      ],
+      "verified": true
+    },
+    "del-rio-chanona-ai-jobs-2025": {
+      "id": "del-rio-chanona-ai-jobs-2025",
+      "title": "AI and jobs: A review of theory, estimates, and evidence",
+      "url": "https://arxiv.org/abs/2509.15265",
+      "publisher": "arXiv (ILO-affiliated researchers)",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-15",
+      "excerpt": "Productivity gains 20-60% in controlled RCTs, 15-30% in field experiments; AI exposure measures converge toward high-wage jobs being most exposed.",
+      "usedIn": [
+        "overall-us-displacement",
+        "workforce-ai-exposure"
+      ],
+      "verified": true
+    },
+    "del-rio-chanona-entry-2025": {
+      "id": "del-rio-chanona-entry-2025",
+      "title": "AI and jobs: A review of theory, estimates, and evidence",
+      "url": "https://arxiv.org/abs/2509.15265",
+      "publisher": "arXiv (ILO-affiliated researchers)",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-15",
+      "excerpt": "Novice workers benefit more from LLMs in simple tasks but face declining demand across AI-complementary work; digital trace data show substitution in writing and translation.",
+      "usedIn": [
+        "entry-level-wage-impact"
+      ],
+      "verified": true
+    },
+    "del-rio-chanona-freelancer-2025": {
+      "id": "del-rio-chanona-freelancer-2025",
+      "title": "AI and jobs: A review of theory, estimates, and evidence",
+      "url": "https://arxiv.org/abs/2509.15265",
+      "publisher": "arXiv (ILO-affiliated researchers)",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-15",
+      "excerpt": "Digital trace data show substitution already occurring in writing and translation tasks; declining demand for novice workers across AI-complementary freelance work.",
+      "usedIn": [
+        "freelancer-rate-impact"
+      ],
+      "verified": true
+    },
+    "del-rio-chanona-white-collar-2025": {
+      "id": "del-rio-chanona-white-collar-2025",
+      "title": "AI and jobs: A review of theory, estimates, and evidence",
+      "url": "https://arxiv.org/abs/2509.15265",
+      "publisher": "arXiv (ILO-affiliated researchers)",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-15",
+      "excerpt": "AI exposure measures converge toward high-wage jobs being most exposed; digital trace data show substitution already occurring in writing and translation.",
+      "usedIn": [
+        "white-collar-professional-displacement"
+      ],
+      "verified": true
+    },
+    "dellacqua-jagged-frontier-2023": {
+      "id": "dellacqua-jagged-frontier-2023",
+      "title": "Navigating the Jagged Technological Frontier: Field Experimental Evidence of the Effects of AI on Knowledge Worker Productivity and Quality",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/24-013_d9b45b68-9e74-42d6-a1c6-c72fb70c7571.pdf",
+      "publisher": "HBS (Dell'Acqua et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2023-09-01",
+      "excerpt": "RCT with 758 BCG consultants: for tasks within AI's capabilities, 12.2% more tasks completed, 25.1% faster, output rated 40% higher quality. For tasks outside AI's frontier, performance was 19pp worse.",
+      "usedIn": [
+        "white-collar-professional-displacement"
+      ],
+      "verified": true
+    },
+    "deloitte-ai-state-2024": {
+      "id": "deloitte-ai-state-2024",
+      "title": "State of Generative AI in the Enterprise Q3 2024",
+      "url": "https://www.deloitte.com/us/en/what-we-do/capabilities/applied-artificial-intelligence/content/state-of-generative-ai-in-enterprise.html",
+      "publisher": "Deloitte",
+      "evidenceTier": 2,
+      "datePublished": "2024-09-15",
+      "excerpt": "79% of enterprise leaders expect gen AI to transform their industry within 3 years. 42% have gen AI in production, up from 22% a year earlier.",
+      "usedIn": [
+        "ai-adoption-rate"
+      ],
+      "verified": true
+    },
+    "deloitte-health-2025": {
+      "id": "deloitte-health-2025",
+      "title": "2025 Global Health Care Outlook — AI and Administrative Efficiency",
+      "url": "https://www2.deloitte.com/us/en/insights/industry/health-care/global-health-care-outlook.html",
+      "publisher": "Deloitte",
+      "evidenceTier": 2,
+      "datePublished": "2025-01-10",
+      "excerpt": "Health systems deploying AI for revenue cycle management report 30% reduction in administrative FTEs within 18 months.",
+      "usedIn": [
+        "healthcare-admin-displacement"
+      ],
+      "verified": true
+    },
+    "deloitte-professional-services-2025": {
+      "id": "deloitte-professional-services-2025",
+      "title": "2025 Professional Services Outlook: AI-Driven Transformation",
+      "url": "https://www.deloitte.com/us/en/insights/topics/talent/strategies-for-workforce-evolution.html",
+      "publisher": "Deloitte",
+      "evidenceTier": 2,
+      "datePublished": "2025-01-20",
+      "excerpt": "Big Four firms project 15-25% workforce restructuring over the next 3 years as AI handles routine audit, tax, and advisory tasks.",
+      "usedIn": [
+        "white-collar-professional-displacement"
+      ],
+      "verified": false
+    },
+    "demirci-jebo-freelance-2025": {
+      "id": "demirci-jebo-freelance-2025",
+      "title": "Winners and Losers of Generative AI: Early Evidence of Shifts in Freelancer Demand",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0167268124004591",
+      "publisher": "Journal of Economic Behavior & Organization (Demirci, Jiang, Kartal, Trujillo)",
+      "evidenceTier": 1,
+      "datePublished": "2025-01-15",
+      "excerpt": "Peer-reviewed analysis of 2M job postings: freelance writing postings fell 30.37%, graphic design 18.49%, 3D modeling 15.57% within 8 months of ChatGPT launch. Applications per posting rose 8.57%.",
+      "usedIn": [
+        "creative-industry-displacement"
+      ],
+      "verified": true
+    },
+    "duolingo-ai-first-2025": {
+      "id": "duolingo-ai-first-2025",
+      "title": "Duolingo Cuts Contractors as AI Replaces Content Creation",
+      "url": "https://blog.duolingo.com/ai-first/",
+      "publisher": "Duolingo",
+      "evidenceTier": 1,
+      "datePublished": "2025-01-08",
+      "excerpt": "Duolingo cut 10%+ of its contractor workforce, explicitly replacing human content creators with AI-generated language exercises. CEO announced 'AI-first' strategy for all content production.",
+      "usedIn": [
+        "education-sector-displacement"
+      ],
+      "verified": true
+    },
+    "egon-zehnder-cfo-ai-2025": {
+      "id": "egon-zehnder-cfo-ai-2025",
+      "title": "AI Revolution: CFOs Forecast a Transformation in Finance Teams",
+      "url": "https://www.egonzehnder.com/ai-revolution-cfos-forecast-a-transformation-in-finance-teams",
+      "publisher": "Egon Zehnder",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-15",
+      "excerpt": "18% of CFOs have already eliminated roles due to AI. Of those, 88% of cuts were in accounting, 38% in FP&A, 33% in treasury. Finance teams are the earliest white-collar AI displacement.",
+      "usedIn": [
+        "white-collar-professional-displacement"
+      ],
+      "verified": true
+    },
+    "eloundou-openai-2024": {
+      "id": "eloundou-openai-2024",
+      "title": "GPTs are GPTs: An Early Look at the Labor Market Impact Potential of LLMs",
+      "url": "https://arxiv.org/abs/2303.10130",
+      "publisher": "OpenAI / U Penn (Eloundou et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2024-01-15",
+      "excerpt": "~80% of the US workforce could have at least 10% of their tasks affected by GPTs. Legal, accounting, and financial analysis are among the highest-exposure occupations.",
+      "usedIn": [
+        "white-collar-professional-displacement",
+        "workforce-ai-exposure"
+      ],
+      "verified": true
+    },
+    "epi-wages-2025": {
+      "id": "epi-wages-2025",
+      "title": "State of Working America: AI and Wage Trends",
+      "url": "https://www.epi.org/publication/ai-unbalanced-labor-markets/",
+      "publisher": "Economic Policy Institute",
+      "evidenceTier": 2,
+      "datePublished": "2025-08-01",
+      "usedIn": [
+        "median-wage-impact"
+      ],
+      "verified": true
+    },
+    "experian-health-claims-2025": {
+      "id": "experian-health-claims-2025",
+      "title": "State of Claims 2025: AI and Claims Processing",
+      "url": "https://www.experian.com/blogs/healthcare/state-of-claims-2025/",
+      "publisher": "Experian Health",
+      "evidenceTier": 2,
+      "datePublished": "2025-09-01",
+      "excerpt": "67% of providers believe AI can improve claims processing, but only 14% have implemented AI tools. Among adopters, 69% report reduced denials. Survey of 250 providers.",
+      "usedIn": [
+        "healthcare-admin-displacement"
+      ],
+      "verified": true
+    },
+    "ey-10k-ai-2024": {
+      "id": "ey-10k-ai-2024",
+      "title": "EY Global — AI Transformation in Professional Services",
+      "url": "https://www.ey.com/en_gl/insights/ai/case-study-how-ey-transformed-with-ai",
+      "publisher": "Ernst & Young",
+      "evidenceTier": 2,
+      "datePublished": "2025-03-01",
+      "excerpt": "EY invested $1.4B in AI, reporting that AI-assisted audit procedures now cover 40% of routine testing tasks previously performed by junior staff.",
+      "usedIn": [
+        "white-collar-professional-displacement"
+      ],
+      "verified": true
+    },
+    "factset-earnings-q1-2023": {
+      "id": "factset-earnings-q1-2023",
+      "title": "FactSet Earnings Insight Q1 2023 — AI Mentions Surge",
+      "url": "https://insight.factset.com/highest-number-of-sp-500-companies-citing-ai-on-q1-earnings-calls-in-over-10-years",
+      "publisher": "FactSet",
+      "evidenceTier": 1,
+      "datePublished": "2023-04-15",
+      "excerpt": "AI mentions in S&P 500 earnings calls more than doubled to 18%. Companies began discussing AI efficiency gains and workforce implications.",
+      "usedIn": [
+        "earnings-call-ai-mentions"
+      ],
+      "verified": true
+    },
+    "factset-earnings-q1-2024": {
+      "id": "factset-earnings-q1-2024",
+      "title": "FactSet Earnings Insight Q1 2024",
+      "url": "https://insight.factset.com/highest-number-of-sp-500-companies-citing-ai-on-earnings-calls-over-past-10-years",
+      "publisher": "FactSet",
+      "evidenceTier": 1,
+      "datePublished": "2024-04-15",
+      "excerpt": "43% mentioned AI-workforce topics. A new record. Companies increasingly cite specific headcount savings from AI deployments.",
+      "usedIn": [
+        "earnings-call-ai-mentions"
+      ],
+      "verified": true
+    },
+    "factset-earnings-q1-2025": {
+      "id": "factset-earnings-q1-2025",
+      "title": "FactSet Earnings Insight Q1 2025",
+      "url": "https://insight.factset.com/more-than-40-of-sp-500-companies-have-cited-ai-on-earnings-calls-for-5th-straight-quarter",
+      "publisher": "FactSet",
+      "evidenceTier": 1,
+      "datePublished": "2025-04-15",
+      "excerpt": "44% of S&P 500 discussed AI-workforce in Q1 2025, a slight pullback from Q4 2024's record. Discussion maturing: less hype, more specific deployment data.",
+      "usedIn": [
+        "earnings-call-ai-mentions"
+      ],
+      "verified": true
+    },
+    "factset-earnings-q2-2023": {
+      "id": "factset-earnings-q2-2023",
+      "title": "FactSet Earnings Insight Q2 2023 — AI Dominates Calls",
+      "url": "https://insight.factset.com/highest-number-of-sp-500-companies-citing-ai-on-q2-earnings-calls-in-over-10-years",
+      "publisher": "FactSet",
+      "evidenceTier": 1,
+      "datePublished": "2023-07-15",
+      "excerpt": "32% of S&P 500 companies now discuss AI on earnings calls. 'AI' mentioned an average of 7 times per call among mentioning companies.",
+      "usedIn": [
+        "earnings-call-ai-mentions"
+      ],
+      "verified": true
+    },
+    "factset-earnings-q2-2024": {
+      "id": "factset-earnings-q2-2024",
+      "title": "FactSet Earnings Insight Q2 2024",
+      "url": "https://insight.factset.com/more-than-40-of-sp-500-companies-cited-ai-on-earnings-calls-for-q2",
+      "publisher": "FactSet",
+      "evidenceTier": 1,
+      "datePublished": "2024-07-15",
+      "excerpt": "Slight dip to 41% as initial AI hype normalizes. Discussion shifting from aspirational to operational — specific ROI figures cited.",
+      "usedIn": [
+        "earnings-call-ai-mentions"
+      ],
+      "verified": true
+    },
+    "factset-earnings-q3-2023": {
+      "id": "factset-earnings-q3-2023",
+      "title": "FactSet Earnings Insight Q3 2023",
+      "url": "https://insight.factset.com/fewer-sp-500-companies-discussing-ai-on-earnings-calls-for-q3-compared-to-q2",
+      "publisher": "FactSet",
+      "evidenceTier": 1,
+      "datePublished": "2023-10-15",
+      "excerpt": "AI mentions reached 36% of S&P 500 companies. Key themes: 'efficiency gains,' 'headcount optimization,' and 'AI-driven productivity.'",
+      "usedIn": [
+        "earnings-call-ai-mentions"
+      ],
+      "verified": true
+    },
+    "factset-earnings-q3-2024": {
+      "id": "factset-earnings-q3-2024",
+      "title": "FactSet Earnings Insight Q3 2024",
+      "url": "https://insight.factset.com/highest-number-of-sp-500-companies-citing-ai-on-earnings-calls-over-past-10-years-1",
+      "publisher": "FactSet",
+      "evidenceTier": 1,
+      "datePublished": "2024-10-15",
+      "excerpt": "44% of S&P 500 discussed AI-workforce. Key new theme: 'AI-native' hiring replacing traditional roles in tech and professional services.",
+      "usedIn": [
+        "earnings-call-ai-mentions"
+      ],
+      "verified": true
+    },
+    "factset-earnings-q3-2025": {
+      "id": "factset-earnings-q3-2025",
+      "title": "FactSet Earnings Insight Q3 2025 — Record AI Mentions",
+      "url": "https://insight.factset.com/highest-number-of-sp-500-earnings-calls-citing-ai-over-the-past-10-years-1",
+      "publisher": "FactSet",
+      "evidenceTier": 1,
+      "datePublished": "2025-11-15",
+      "excerpt": "Record 306 S&P 500 companies (61%) cited AI in Q3 2025 earnings calls — a new 10-year high, surpassing the prior record of 292. 95% of IT and Communications sectors mentioned AI. AI-citing companies outperformed 13.9% vs. 5.7%.",
+      "usedIn": [
+        "earnings-call-ai-mentions"
+      ],
+      "verified": true
+    },
+    "factset-earnings-q4-2022": {
+      "id": "factset-earnings-q4-2022",
+      "title": "FactSet Earnings Insight Q4 2022 — AI Mentions",
+      "url": "https://insight.factset.com/highest-number-of-sp-500-companies-citing-ai-on-q1-earnings-calls-in-over-10-years",
+      "publisher": "FactSet",
+      "evidenceTier": 1,
+      "datePublished": "2023-01-15",
+      "excerpt": "Only 8% of S&P 500 companies mentioned AI in Q4 2022 calls. Pre-ChatGPT baseline for corporate AI discussion.",
+      "usedIn": [
+        "earnings-call-ai-mentions"
+      ],
+      "verified": true
+    },
+    "factset-earnings-q4-2023": {
+      "id": "factset-earnings-q4-2023",
+      "title": "FactSet Earnings Insight Q4 2023",
+      "url": "https://insight.factset.com/second-highest-number-of-sp-500-companies-citing-ai-on-earnings-calls-over-past-10-years",
+      "publisher": "FactSet",
+      "evidenceTier": 1,
+      "datePublished": "2024-01-15",
+      "excerpt": "40% of S&P 500 companies mentioned AI in context of workforce strategy. 'Year of Efficiency' framing adopted by 12% of companies.",
+      "usedIn": [
+        "earnings-call-ai-mentions"
+      ],
+      "verified": true
+    },
+    "factset-earnings-q4-2024": {
+      "id": "factset-earnings-q4-2024",
+      "title": "FactSet Earnings Insight Q4 2024",
+      "url": "https://insight.factset.com/highest-number-of-sp-500-companies-citing-ai-on-earnings-calls-over-past-10-years-1",
+      "publisher": "FactSet",
+      "evidenceTier": 1,
+      "datePublished": "2025-01-15",
+      "excerpt": "Record 48% of S&P 500 companies mentioned AI in workforce context. Average mentions per call reached 11. 'Restructuring' and 'automation' became top co-occurring terms.",
+      "usedIn": [
+        "earnings-call-ai-mentions"
+      ],
+      "verified": true
+    },
+    "fang-ecommerce-chatbots-2025": {
+      "id": "fang-ecommerce-chatbots-2025",
+      "title": "The Impact of AI on E-Commerce: Field Experiments on Customer Service and Product Descriptions",
+      "url": "https://arxiv.org/abs/2510.12049",
+      "publisher": "arXiv (Fang, Yuan, Zheng, Donati, Sarvary)",
+      "evidenceTier": 1,
+      "datePublished": "2025-10-01",
+      "excerpt": "AI chatbots for customer service increased sales by 16%; AI-generated product descriptions increased sales by 2.05% in field experiments.",
+      "usedIn": [
+        "customer-service-automation"
+      ],
+      "verified": true
+    },
+    "fiverr-10k-2024": {
+      "id": "fiverr-10k-2024",
+      "title": "Fiverr International 2024 10-K — Market Trends",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?company=fiverr&CIK=&type=10-K",
+      "publisher": "Fiverr (SEC Filing)",
+      "evidenceTier": 1,
+      "datePublished": "2025-02-20",
+      "excerpt": "Fiverr reported that AI-related categories grew 55% YoY while traditional writing and basic design categories declined 22%.",
+      "usedIn": [
+        "creative-industry-displacement"
+      ],
+      "verified": false
+    },
+    "fiverr-market-report-2023": {
+      "id": "fiverr-market-report-2023",
+      "title": "Fiverr Business Trends Report H2 2023",
+      "url": "https://www.fiverr.com/cp/business-trends-index-october-2023",
+      "publisher": "Fiverr",
+      "evidenceTier": 1,
+      "datePublished": "2023-11-01",
+      "excerpt": "Average order value for writing gigs declined 20%. AI-assisted gig categories (AI art, prompt writing) grew 4x but at lower price points.",
+      "usedIn": [
+        "freelancer-rate-impact"
+      ],
+      "verified": true
+    },
+    "forrester-2025": {
+      "id": "forrester-2025",
+      "title": "AI And Automation Will Take 6% Of US Jobs By 2030",
+      "url": "https://www.forrester.com/blogs/ai-and-automation-will-take-6-of-us-jobs-by-2030/",
+      "publisher": "Forrester",
+      "evidenceTier": 2,
+      "datePublished": "2025-01-06",
+      "usedIn": [
+        "tech-sector-displacement"
+      ],
+      "verified": true
+    },
+    "forrester-6pct": {
+      "id": "forrester-6pct",
+      "title": "Forrester: AI And Automation Job Impact Forecast",
+      "url": "https://www.forrester.com/press-newsroom/forrester-impact-ai-jobs-forecast/",
+      "publisher": "Forrester",
+      "evidenceTier": 2,
+      "datePublished": "2025-01-06",
+      "excerpt": "AI and automation could account for 6% of total US job losses by 2030, equating to 10.4 million roles. Widespread AI-driven job replacement remains unlikely. AI will augment 20% of jobs rather than eliminate them.",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true
+    },
+    "forrester-creative-2025": {
+      "id": "forrester-creative-2025",
+      "title": "The Impact of Generative AI on Marketing and Creative Roles",
+      "url": "https://www.forrester.com/press-newsroom/forrester-agency-ai-workforce-2030/",
+      "publisher": "Forrester",
+      "evidenceTier": 2,
+      "datePublished": "2025-02-15",
+      "excerpt": "By 2028, 20% of marketing content will be generated entirely by AI. Creative teams will shrink 15-25% but output will increase.",
+      "usedIn": [
+        "creative-industry-displacement"
+      ],
+      "verified": true
+    },
+    "forrester-cs-2023": {
+      "id": "forrester-cs-2023",
+      "title": "The State Of Customer Service Automation",
+      "url": "https://www.forrester.com/report/the-state-of-customer-service-automation/",
+      "publisher": "Forrester",
+      "evidenceTier": 2,
+      "datePublished": "2023-08-15",
+      "usedIn": [
+        "customer-service-automation"
+      ],
+      "verified": true
+    },
+    "forrester-jobs-2025": {
+      "id": "forrester-jobs-2025",
+      "title": "AI And Automation Will Take 6% Of US Jobs By 2030",
+      "url": "https://www.forrester.com/blogs/ai-and-automation-will-take-6-of-us-jobs-by-2030/",
+      "publisher": "Forrester",
+      "evidenceTier": 2,
+      "datePublished": "2025-01-06",
+      "excerpt": "Forrester estimates 6% of US jobs will be lost to AI and automation by 2030, partially offset by new job creation.",
+      "usedIn": [
+        "total-us-jobs-lost"
+      ],
+      "verified": true
+    },
+    "fortune-ai-earnings-surge-2026": {
+      "id": "fortune-ai-earnings-surge-2026",
+      "title": "Earnings calls citing 'AI' surge in 2025 as 'uncertainty' mentions fade",
+      "url": "https://fortune.com/2025/12/15/earnings-calls-citing-ai-surge-2025-uncertainty-mentions-fade-cfo/",
+      "publisher": "Fortune",
+      "evidenceTier": 3,
+      "datePublished": "2025-12-15",
+      "excerpt": "AI was the most-cited topic in S&P 500 earnings calls in 2025. Companies mentioning AI in workforce context outperformed peers by 8.2 percentage points on average.",
+      "usedIn": [
+        "earnings-call-ai-mentions"
+      ],
+      "verified": true
+    },
+    "fortune-altman-2026": {
+      "id": "fortune-altman-2026",
+      "title": "Sam Altman warns AI could displace significant share of jobs",
+      "url": "https://fortune.com/2026/02/19/sam-altman-confirms-ai-washing-job-displacement-layoffs/",
+      "publisher": "Fortune",
+      "evidenceTier": 3,
+      "datePublished": "2026-01-20",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true
+    },
+    "frank-ai-unemployment-2026": {
+      "id": "frank-ai-unemployment-2026",
+      "title": "AI Exposure and Unemployment Risk",
+      "url": "https://arxiv.org/abs/2601.02554",
+      "publisher": "arXiv (Frank et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-15",
+      "excerpt": "Unemployment risk in AI-exposed occupations rose beginning early 2022; graduates with AI-exposed curricula have higher first-job pay and shorter job searches post-ChatGPT.",
+      "usedIn": [
+        "entry-level-wage-impact"
+      ],
+      "verified": true
+    },
+    "frank-ai-unemployment-overall-2026": {
+      "id": "frank-ai-unemployment-overall-2026",
+      "title": "AI Exposure and Unemployment Risk",
+      "url": "https://arxiv.org/abs/2601.02554",
+      "publisher": "arXiv (Frank et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-15",
+      "excerpt": "Unemployment risk in AI-exposed occupations rose beginning early 2022; graduates with AI-exposed curricula have higher first-job pay and shorter job searches post-ChatGPT.",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true
+    },
+    "ft-ai-salaries-2024": {
+      "id": "ft-ai-salaries-2024",
+      "title": "AI engineers command premium salaries as demand outstrips supply",
+      "url": "https://www.ft.com/ai-at-work",
+      "publisher": "Financial Times",
+      "evidenceTier": 3,
+      "datePublished": "2024-09-01",
+      "usedIn": [
+        "high-skill-wage-premium"
+      ],
+      "verified": false
+    },
+    "ft-gig-economy-squeeze": {
+      "id": "ft-gig-economy-squeeze",
+      "title": "The AI squeeze on gig economy workers",
+      "url": "https://www.ft.com/content/gig-economy-ai-squeeze",
+      "publisher": "Financial Times",
+      "evidenceTier": 3,
+      "datePublished": "2024-10-15",
+      "usedIn": [
+        "freelancer-rate-impact"
+      ],
+      "verified": false,
+      "synthetic": true,
+      "_action": "REMOVE"
+    },
+    "gallup-worker-ai-adoption-2025": {
+      "id": "gallup-worker-ai-adoption-2025",
+      "title": "Gallup Workplace AI Adoption Survey Q4 2025",
+      "url": "https://www.gallup.com/workplace/ai-at-work.aspx",
+      "publisher": "Gallup",
+      "evidenceTier": 2,
+      "datePublished": "2025-12-15",
+      "excerpt": "46% of US workers reported using AI tools at work in Q4 2025, up from 33% in Q1 2025. Adoption driven by white-collar professional and technical roles.",
+      "usedIn": [
+        "ai-adoption-rate"
+      ],
+      "verified": true
+    },
+    "gartner-agentic-ai-cs-2025": {
+      "id": "gartner-agentic-ai-cs-2025",
+      "title": "Gartner Predicts Agentic AI Will Resolve 80% of Common Customer Service Issues by 2029",
+      "url": "https://www.gartner.com/en/newsroom/press-releases/2025-03-05-gartner-predicts-agentic-ai-will-autonomously-resolve-80-percent-of-common-customer-service-issues-without-human-intervention-by-20290",
+      "publisher": "Gartner",
+      "evidenceTier": 2,
+      "datePublished": "2025-03-05",
+      "excerpt": "Agentic AI will autonomously resolve 80% of common customer service issues by 2029. Currently only 1.6% of interactions are fully automated end-to-end.",
+      "usedIn": [
+        "customer-service-automation"
+      ],
+      "verified": true
+    },
+    "gartner-ai-layoffs-2025": {
+      "id": "gartner-ai-layoffs-2025",
+      "title": "Gartner Top Predictions for IT Organizations 2025",
+      "url": "https://www.gartner.com/en/newsroom/press-releases/2024-10-22-gartner-unveils-top-predictions-for-it-organizations-and-users-in-2025-and-beyond",
+      "publisher": "Gartner",
+      "evidenceTier": 3,
+      "datePublished": "2025-10-22",
+      "excerpt": "Despite widespread AI adoption, less than 1% of enterprise layoffs in 2025 were directly attributed to AI. Most workforce changes are gradual restructuring.",
+      "usedIn": [
+        "white-collar-professional-displacement"
+      ],
+      "verified": true
+    },
+    "gartner-cs-2023": {
+      "id": "gartner-cs-2023",
+      "title": "Gartner Predicts Conversational AI Will Reduce Contact Center Agent Labor Costs by $80 Billion in 2026",
+      "url": "https://www.gartner.com/en/newsroom/press-releases/2023-08-30-gartner-reveals-three-technologies-that-will-transform-customer-service-and-support-by-2028",
+      "publisher": "Gartner",
+      "evidenceTier": 2,
+      "datePublished": "2023-08-30",
+      "usedIn": [
+        "customer-service-automation"
+      ],
+      "verified": true
+    },
+    "gartner-cs-2025": {
+      "id": "gartner-cs-2025",
+      "title": "Gartner: By 2027, 25% of organizations will use chatbots as primary customer service channel",
+      "url": "https://www.gartner.com/en/newsroom/press-releases/2022-07-27-gartner-predicts-chatbots-will-become-a-primary-customer-service-channel-within-five-years",
+      "publisher": "Gartner",
+      "evidenceTier": 2,
+      "datePublished": "2025-01-15",
+      "usedIn": [
+        "customer-service-automation"
+      ],
+      "verified": true
+    },
+    "gartner-cs-2026-forecast": {
+      "id": "gartner-cs-2026-forecast",
+      "title": "Gartner Forecasts 20-30% of CS Agents Replaced by GenAI by 2026",
+      "url": "https://www.gartner.com/en/newsroom/press-releases/2023-08-03-customer-service-and-support-leaders-should-assess-generative-ai-technology-options-to-enhance-their-organizations-function",
+      "publisher": "Gartner",
+      "evidenceTier": 2,
+      "datePublished": "2025-10-15",
+      "excerpt": "Gartner projects 20-30% of customer service agents will be replaced by generative AI by end of 2026. AI adoption in CS jumped from 46% to 61% in one year.",
+      "usedIn": [
+        "customer-service-automation"
+      ],
+      "verified": true
+    },
+    "gartner-edtech-2025": {
+      "id": "gartner-edtech-2025",
+      "title": "Gartner Unveils Top Predictions for IT Organizations and Users in 2025 and Beyond",
+      "url": "https://www.gartner.com/en/newsroom/press-releases/2024-10-22-gartner-unveils-top-predictions-for-it-organizations-and-users-in-2025-and-beyond",
+      "publisher": "Gartner",
+      "evidenceTier": 2,
+      "datePublished": "2024-10-22",
+      "excerpt": "Predicts 20% of organizations will use AI to flatten organizational structure by 2026, eliminating more than half of middle management positions. General workforce prediction, not EdTech-specific.",
+      "usedIn": [
+        "education-sector-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "gartner-middle-mgmt-2025": {
+      "id": "gartner-middle-mgmt-2025",
+      "title": "Gartner: 50% of Middle Management Positions to Be Eliminated by 2030",
+      "url": "https://www.gartner.com/en/newsroom/press-releases/2024-10-22-gartner-unveils-top-predictions-for-it-organizations-and-users-in-2025-and-beyond",
+      "publisher": "Gartner",
+      "evidenceTier": 3,
+      "datePublished": "2025-11-20",
+      "excerpt": "Gartner projects 50% of middle management positions will be eliminated or restructured as AI handles reporting, coordination, and performance monitoring tasks.",
+      "usedIn": [
+        "white-collar-professional-displacement"
+      ],
+      "verified": true
+    },
+    "genai-adoption-tracker-2025": {
+      "id": "genai-adoption-tracker-2025",
+      "title": "GenAI Adoption Tracker (Harvard / St. Louis Fed)",
+      "url": "https://genaiadoptiontracker.com",
+      "publisher": "Harvard / St. Louis Fed RPS",
+      "evidenceTier": 2,
+      "datePublished": "2025-11-01",
+      "excerpt": "Quarterly dashboard tracking generative AI adoption among U.S. working-age adults. Feb & May 2025 values estimated from tracker chart; all other values from published working paper.",
+      "usedIn": [
+        "genai-work-adoption"
+      ],
+      "verified": true
+    },
+    "gimbel-yale-ai-labor-2025": {
+      "id": "gimbel-yale-ai-labor-2025",
+      "title": "Evaluating the Impact of AI on the Labor Market: Current State of Affairs",
+      "url": "https://budgetlab.yale.edu/research/evaluating-impact-ai-labor-market-current-state-affairs",
+      "publisher": "Yale Budget Lab (Gimbel, Kinder, Kendall, Lee)",
+      "evidenceTier": 1,
+      "datePublished": "2025-10-01",
+      "excerpt": "No economy-wide employment disruption tied to AI since ChatGPT's debut. Measures of AI exposure show no clear relationship with changes in employment or unemployment.",
+      "usedIn": [
+        "total-us-jobs-lost"
+      ],
+      "verified": true
+    },
+    "glassdoor-ai-salaries-2025": {
+      "id": "glassdoor-ai-salaries-2025",
+      "title": "Glassdoor AI Salary Trends 2025",
+      "url": "https://www.glassdoor.com/research/",
+      "publisher": "Glassdoor Economic Research",
+      "evidenceTier": 2,
+      "datePublished": "2025-01-10",
+      "excerpt": "Median AI/ML salary in San Francisco reached $245K. In non-hub metros, AI salaries average $162K. The 50% gap is the widest in tech history.",
+      "usedIn": [
+        "geographic-wage-divergence"
+      ],
+      "verified": false
+    },
+    "goldman-300m": {
+      "id": "goldman-300m",
+      "title": "The Potentially Large Effects of AI on Economic Growth",
+      "url": "https://www.goldmansachs.com/insights/articles/generative-ai-could-raise-global-gdp-by-7-percent",
+      "publisher": "Goldman Sachs",
+      "evidenceTier": 1,
+      "datePublished": "2023-03-26",
+      "excerpt": "Roughly two-thirds of current jobs are exposed to some degree of AI automation; generative AI could substitute up to one-fourth of current work.",
+      "usedIn": [
+        "overall-us-displacement",
+        "total-us-jobs-lost",
+        "workforce-ai-exposure"
+      ],
+      "verified": true
+    },
+    "goldman-ai-2024": {
+      "id": "goldman-ai-2024",
+      "title": "The Potentially Large Effects of AI on Economic Growth",
+      "url": "https://www.goldmansachs.com/insights/articles/generative-ai-could-raise-global-gdp-by-7-percent",
+      "publisher": "Goldman Sachs",
+      "evidenceTier": 1,
+      "datePublished": "2024-01-10",
+      "excerpt": "AI could expose 300 million full-time jobs globally to automation.",
+      "usedIn": [
+        "tech-sector-displacement"
+      ],
+      "verified": true
+    },
+    "goldman-ai-displacement-risk-2025": {
+      "id": "goldman-ai-displacement-risk-2025",
+      "title": "How Will AI Affect the Global Workforce?",
+      "url": "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce",
+      "publisher": "Goldman Sachs Research",
+      "evidenceTier": 2,
+      "datePublished": "2025-08-01",
+      "excerpt": "Only 2.5% of work tasks are currently at risk of direct displacement from AI. Remaining exposure is augmentation-oriented, boosting productivity without eliminating roles.",
+      "usedIn": [
+        "white-collar-professional-displacement"
+      ],
+      "verified": true
+    },
+    "goldman-ai-workforce-2025": {
+      "id": "goldman-ai-workforce-2025",
+      "title": "How Will AI Affect the Global Workforce?",
+      "url": "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce",
+      "publisher": "Goldman Sachs Research",
+      "evidenceTier": 2,
+      "datePublished": "2025-08-01",
+      "excerpt": "Young tech workers (20-30) unemployment risen ~3pp since start of 2025; tech employment share fallen below pre-pandemic trend.",
+      "usedIn": [
+        "tech-sector-displacement"
+      ],
+      "verified": true
+    },
+    "goldman-earnings-ai-analysis": {
+      "id": "goldman-earnings-ai-analysis",
+      "title": "S&P 500 Earnings Call AI Analysis: Implications for Employment",
+      "url": "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce",
+      "publisher": "Goldman Sachs",
+      "evidenceTier": 1,
+      "datePublished": "2024-11-01",
+      "excerpt": "Companies that mention AI + workforce on calls have average headcount growth 3.2pp lower than non-mentioners. The correlation has strengthened each quarter.",
+      "usedIn": [
+        "earnings-call-ai-mentions"
+      ],
+      "verified": true
+    },
+    "goldman-entry-level-2024": {
+      "id": "goldman-entry-level-2024",
+      "title": "Goldman Sachs economist warns Gen Z tech workers are first on the chopping block",
+      "url": "https://fortune.com/2025/08/06/goldman-sachs-economist-gen-z-tech-jobs-ai-labor-market/",
+      "publisher": "Fortune (reporting Goldman Sachs research)",
+      "evidenceTier": 2,
+      "datePublished": "2025-08-06",
+      "excerpt": "Unemployment rate for 20- to 30-year-olds in tech rose nearly 3% since early 2024. Entry-level job postings in the US diminished about 35% since January 2023. Goldman Sachs predicts AI will displace about 6-7% of the total workforce.",
+      "usedIn": [
+        "entry-level-wage-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "goldman-mei-ai-labor-2026": {
+      "id": "goldman-mei-ai-labor-2026",
+      "title": "AI and the US Labor Market: Current Impact and Outlook",
+      "url": "https://finance.yahoo.com/news/goldman-sachs-warns-ai-fueled-layoffs-could-raise-the-unemployment-rate-this-year-chart-154251740.html",
+      "publisher": "Goldman Sachs Research (Pierfrancesco Mei)",
+      "evidenceTier": 2,
+      "datePublished": "2026-02-24",
+      "excerpt": "AI's labor market impact still small — only 5-10K/month drag on net job growth. Only 2½% of jobs exposed to automation today. Baseline forecast: 6-7% of workers displaced (range 3-14%), lowering annual hiring by 1M jobs and raising unemployment ~½pp. US creates 30M gross new jobs/year; does not anticipate job apocalypse. Impact so far largely confined to tech sector but expects it to grow materially.",
+      "usedIn": [
+        "overall-us-displacement",
+        "tech-sector-displacement"
+      ],
+      "verified": true
+    },
+    "goldman-overall-measured-2025": {
+      "id": "goldman-overall-measured-2025",
+      "title": "How Will AI Affect the Global Workforce?",
+      "url": "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce",
+      "publisher": "Goldman Sachs Research",
+      "evidenceTier": 2,
+      "datePublished": "2025-08-01",
+      "excerpt": "There is no economically or statistically significant correlation between AI exposure and job growth, unemployment, job finding rates, layoff rates, weekly hours, or average hourly earnings.",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true
+    },
+    "goldman-overall-workforce-2025": {
+      "id": "goldman-overall-workforce-2025",
+      "title": "How Will AI Affect the Global Workforce?",
+      "url": "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce",
+      "publisher": "Goldman Sachs Research",
+      "evidenceTier": 2,
+      "datePublished": "2025-08-01",
+      "excerpt": "AI could displace 6-7% of the US workforce if widely adopted (range 3-14%). Currently 2.5% of US employment at risk of displacement from current AI use cases; unemployment projected to increase by 0.5pp during transition.",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true
+    },
+    "goldman-productivity-2025": {
+      "id": "goldman-productivity-2025",
+      "title": "How Will AI Affect the Global Workforce?",
+      "url": "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce",
+      "publisher": "Goldman Sachs Research",
+      "evidenceTier": 1,
+      "datePublished": "2025-08-01",
+      "excerpt": "Generative AI will raise the level of labor productivity in the US and other developed markets by around 15% when fully adopted and incorporated into regular production.",
+      "usedIn": [
+        "median-wage-impact"
+      ],
+      "verified": true
+    },
+    "goldman-total-projected-2025": {
+      "id": "goldman-total-projected-2025",
+      "title": "How Will AI Affect the Global Workforce?",
+      "url": "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce",
+      "publisher": "Goldman Sachs Research",
+      "evidenceTier": 2,
+      "datePublished": "2025-08-01",
+      "excerpt": "AI could displace 6-7% of the US workforce if widely adopted. We remain skeptical that AI will lead to large employment reductions over the next decade.",
+      "usedIn": [
+        "total-us-jobs-lost"
+      ],
+      "verified": true
+    },
+    "goldman-total-workforce-2025": {
+      "id": "goldman-total-workforce-2025",
+      "title": "How Will AI Affect the Global Workforce?",
+      "url": "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce",
+      "publisher": "Goldman Sachs Research",
+      "evidenceTier": 2,
+      "datePublished": "2025-08-01",
+      "excerpt": "2.5% of US employment at risk of displacement from current AI use cases; 60% of current US workers in occupations that didn't exist in 1940.",
+      "usedIn": [
+        "total-us-jobs-lost"
+      ],
+      "verified": true
+    },
+    "goldman-wages-2023": {
+      "id": "goldman-wages-2023",
+      "title": "AI and the US Labor Market",
+      "url": "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce",
+      "publisher": "Goldman Sachs",
+      "evidenceTier": 1,
+      "datePublished": "2023-04-01",
+      "usedIn": [
+        "median-wage-impact"
+      ],
+      "verified": true
+    },
+    "goldman-white-collar-2023": {
+      "id": "goldman-white-collar-2023",
+      "title": "The Potentially Large Effects of AI on Economic Growth",
+      "url": "https://www.goldmansachs.com/insights/articles/generative-ai-could-raise-global-gdp-by-7-percent",
+      "publisher": "Goldman Sachs",
+      "evidenceTier": 1,
+      "datePublished": "2023-03-26",
+      "excerpt": "Two-thirds of US occupations are exposed to some degree of AI automation. Administrative and legal professions face the highest exposure rates at 46%.",
+      "usedIn": [
+        "white-collar-professional-displacement"
+      ],
+      "verified": true
+    },
+    "google-10k-2024": {
+      "id": "google-10k-2024",
+      "title": "Alphabet Inc. 2024 10-K — Workforce & AI Automation Disclosures",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001652044&type=10-K",
+      "publisher": "Alphabet (SEC Filing)",
+      "evidenceTier": 1,
+      "datePublished": "2025-02-03",
+      "excerpt": "Alphabet disclosed ongoing workforce restructuring, noting AI tools have reduced need for certain engineering and support roles while increasing demand for AI/ML specialists.",
+      "usedIn": [
+        "tech-sector-displacement"
+      ],
+      "verified": true
+    },
+    "hartley-adoption-survey-2026": {
+      "id": "hartley-adoption-survey-2026",
+      "title": "The Labor Market Effects of Generative Artificial Intelligence",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5136877",
+      "publisher": "Stanford / World Bank (Hartley, Jolevski, Melo, Moore)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-01",
+      "excerpt": "35.9% of US workers used generative AI by December 2025. Adoption concentrated among younger, college-educated, higher-earning employees.",
+      "usedIn": [
+        "ai-adoption-rate"
+      ],
+      "verified": true
+    },
+    "hartley-entry-level-2026": {
+      "id": "hartley-entry-level-2026",
+      "title": "The Labor Market Effects of Generative Artificial Intelligence",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5136877",
+      "publisher": "Stanford / World Bank (Hartley, Jolevski, Melo, Moore)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-01",
+      "excerpt": "35.9% of US workers used generative AI by December 2025; adoption concentrated among younger, college-educated workers. Small positive wage effects overall.",
+      "usedIn": [
+        "entry-level-wage-impact"
+      ],
+      "verified": true
+    },
+    "hartley-genai-exposure-2026": {
+      "id": "hartley-genai-exposure-2026",
+      "title": "The Labor Market Effects of Generative Artificial Intelligence",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5136877",
+      "publisher": "Stanford / World Bank (Hartley, Jolevski, Melo, Moore)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-01",
+      "excerpt": "LLM adoption among U.S. workers increased from 30.1% to 38.3% between December 2024 and December 2025. Small effects on wages in exposed occupations; no significant effects on job openings or total jobs.",
+      "usedIn": [
+        "workforce-ai-exposure"
+      ],
+      "verified": true
+    },
+    "hartley-genai-labor-2026": {
+      "id": "hartley-genai-labor-2026",
+      "title": "The Labor Market Effects of Generative Artificial Intelligence",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5136877",
+      "publisher": "Stanford / World Bank (Hartley, Jolevski, Melo, Moore)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-01",
+      "excerpt": "35.9% of US workers used generative AI by December 2025; small positive wage effects, no significant decline in job openings.",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true
+    },
+    "hartley-high-skill-2026": {
+      "id": "hartley-high-skill-2026",
+      "title": "Labor Market Effects of Generative AI",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5136877",
+      "publisher": "Stanford / World Bank",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-01",
+      "excerpt": "Adoption concentrated among younger, college-educated, higher-earning employees, reinforcing wage premium for AI-complementary skills.",
+      "usedIn": [
+        "high-skill-wage-premium"
+      ],
+      "verified": true
+    },
+    "hartley-median-wage-2026": {
+      "id": "hartley-median-wage-2026",
+      "title": "Labor Market Effects of Generative AI",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5136877",
+      "publisher": "Stanford / World Bank",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-01",
+      "excerpt": "Small positive wage effects identified for workers in AI-exposed occupations; adoption concentrated among younger, college-educated, higher-earning employees.",
+      "usedIn": [
+        "median-wage-impact"
+      ],
+      "verified": true
+    },
+    "harvard-edtech-2024": {
+      "id": "harvard-edtech-2024",
+      "title": "AI Tutors and the Future of Education Labor",
+      "url": "https://news.harvard.edu/gazette/story/2024/09/professor-tailored-ai-tutor-to-physics-course-engagement-doubled/",
+      "publisher": "Harvard Graduate School of Education",
+      "evidenceTier": 1,
+      "datePublished": "2024-03-20",
+      "excerpt": "AI tutoring achieves 98% of human tutor effectiveness for math and science. Private tutoring market projected to contract 25% by 2028.",
+      "usedIn": [
+        "education-sector-displacement"
+      ],
+      "verified": false
+    },
+    "harvard-health-policy-2024": {
+      "id": "harvard-health-policy-2024",
+      "title": "The Impact of AI on Healthcare Employment",
+      "url": "https://www.hsph.harvard.edu/news/features/artificial-intelligence-ai-healthcare-employment/",
+      "publisher": "Harvard T.H. Chan School of Public Health",
+      "evidenceTier": 1,
+      "datePublished": "2024-09-15",
+      "excerpt": "Healthcare admin roles account for 30% of US healthcare employment. AI could eliminate 1.5-2M of these positions while creating 200-400K new tech-adjacent roles.",
+      "usedIn": [
+        "healthcare-admin-displacement"
+      ],
+      "verified": false,
+      "synthetic": true,
+      "_action": "REMOVE"
+    },
+    "hbr-ai-potential-layoffs-2026": {
+      "id": "hbr-ai-potential-layoffs-2026",
+      "title": "Companies Are Laying Off Workers Because of AI's Potential, Not Its Performance",
+      "url": "https://hbr.org/2026/01/companies-are-laying-off-workers-because-of-ais-potential-not-its-performance",
+      "publisher": "Harvard Business Review",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-15",
+      "excerpt": "95% of generative AI projects have failed to deliver measurable returns (citing MIT). PwC: 56% of CEOs said AI failed to boost revenue or lower costs. Layoffs are anticipatory, not performance-driven.",
+      "usedIn": [
+        "white-collar-professional-displacement"
+      ],
+      "verified": true
+    },
+    "hbr-ai-workslop-2025": {
+      "id": "hbr-ai-workslop-2025",
+      "title": "AI-Generated 'Workslop' Is Destroying Productivity",
+      "url": "https://hbr.org/2025/09/ai-generated-workslop-is-destroying-productivity",
+      "publisher": "Harvard Business Review (Stanford / BetterUp Labs)",
+      "evidenceTier": 2,
+      "datePublished": "2025-09-22",
+      "excerpt": "Survey of 1,150 US workers: 40% received AI-generated 'workslop' in the past month; each instance cost ~2 hours to deal with. 18% of AI users admitted sending low-quality AI output. Estimated cost: $186/worker/month or ~$9M/year for a 10,000-person org.",
+      "usedIn": [
+        "ai-adoption-rate"
+      ],
+      "verified": true
+    },
+    "hbr-chatbots-2024": {
+      "id": "hbr-chatbots-2024",
+      "title": "How AI is Transforming Customer Service",
+      "url": "https://hbr.org/2023/03/generative-ai-will-enhance-not-erase-customer-service-jobs",
+      "publisher": "Harvard Business Review",
+      "evidenceTier": 3,
+      "datePublished": "2024-05-10",
+      "usedIn": [
+        "customer-service-automation"
+      ],
+      "verified": true
+    },
+    "healthtech-ai-admin-2025": {
+      "id": "healthtech-ai-admin-2025",
+      "title": "AI in Healthcare Administration: 2025 Year in Review",
+      "url": "https://www.healthtechmagazine.net/article/2025/10/ai-healthcare-admin-overview",
+      "publisher": "HealthTech Magazine",
+      "evidenceTier": 2,
+      "datePublished": "2025-10-20",
+      "excerpt": "40% of medical coding is now automated through AI in 2025. Data entry specialists face 95% automation risk. Over 50% of providers use AI for billing and coding.",
+      "usedIn": [
+        "healthcare-admin-displacement"
+      ],
+      "verified": false
+    },
+    "himss-medical-coding-ai-2025": {
+      "id": "himss-medical-coding-ai-2025",
+      "title": "Reshaping the Healthcare Industry with AI-driven Deep Learning Model in Medical Coding",
+      "url": "https://www.himss.org/resources/reshaping-healthcare-industry-ai-driven-deep-learning-model-medical-coding/",
+      "publisher": "HIMSS",
+      "evidenceTier": 2,
+      "datePublished": "2025-01-01",
+      "excerpt": "Potential annual savings of $122 billion through AI automation of medical coding; 42% of claim denials stem from coding issues.",
+      "usedIn": [
+        "healthcare-admin-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "hosseini-brookings-creative-2025": {
+      "id": "hosseini-brookings-creative-2025",
+      "title": "Is Generative AI a Job Killer? Evidence from the Freelance Market",
+      "url": "https://www.brookings.edu/articles/is-generative-ai-a-job-killer-evidence-from-the-freelance-market/",
+      "publisher": "Brookings Institution",
+      "evidenceTier": 1,
+      "datePublished": "2025-07-01",
+      "excerpt": "Significant decline in job availability and earnings for freelancers in AI-affected creative occupations; some workers adapted by transitioning to programming.",
+      "usedIn": [
+        "creative-industry-displacement"
+      ],
+      "verified": true
+    },
+    "hosseini-brookings-freelancer-2025": {
+      "id": "hosseini-brookings-freelancer-2025",
+      "title": "Is Generative AI a Job Killer? Evidence from the Freelance Market",
+      "url": "https://www.brookings.edu/articles/is-generative-ai-a-job-killer-evidence-from-the-freelance-market/",
+      "publisher": "Brookings Institution",
+      "evidenceTier": 1,
+      "datePublished": "2025-07-01",
+      "excerpt": "High-skill freelancers disproportionately affected by AI — top performers were impacted most, contradicting conventional wisdom that expertise insulates workers.",
+      "usedIn": [
+        "white-collar-professional-displacement",
+        "freelancer-rate-impact"
+      ],
+      "verified": true
+    },
+    "hosseini-lichtinger-seniority-2025": {
+      "id": "hosseini-lichtinger-seniority-2025",
+      "title": "Seniority-Biased Technological Change: Evidence from AI-Adopting Firms",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5050752",
+      "publisher": "SSRN (Hosseini Maasoum, Lichtinger)",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-01",
+      "excerpt": "Analysis of 62M U.S. resumes: junior employment declined sharply at AI-adopting firms while senior employment was largely unchanged — described as 'seniority-biased technological change.'",
+      "usedIn": [
+        "entry-level-wage-impact"
+      ],
+      "verified": true
+    },
+    "huang-cs-2024": {
+      "id": "huang-cs-2024",
+      "title": "Generative AI and Customer Service: Evidence from Customer Support Interactions",
+      "url": "https://www.nber.org/papers/w31161",
+      "publisher": "NBER (Brynjolfsson, Li, Raymond)",
+      "evidenceTier": 1,
+      "datePublished": "2024-09-01",
+      "excerpt": "AI assistance increased worker productivity by 14% on average, with greatest gains for novice and low-skilled workers.",
+      "usedIn": [
+        "customer-service-automation"
+      ],
+      "verified": true
+    },
+    "humlum-vestergaard-adoption-2025": {
+      "id": "humlum-vestergaard-adoption-2025",
+      "title": "The Unequal Adoption of ChatGPT Exacerbates Existing Inequalities Among Workers",
+      "url": "https://www.pnas.org/doi/10.1073/pnas.2414972121",
+      "publisher": "PNAS (Humlum, Vestergaard)",
+      "evidenceTier": 1,
+      "datePublished": "2025-01-06",
+      "excerpt": "Workers see ChatGPT halving working times in about a third of tasks, but employer restrictions and required training hinder adoption.",
+      "usedIn": [
+        "freelancer-rate-impact"
+      ],
+      "verified": true
+    },
+    "humlum-vestergaard-chatgpt-2025": {
+      "id": "humlum-vestergaard-chatgpt-2025",
+      "title": "The Unequal Adoption of ChatGPT Exacerbates Existing Inequalities Among Workers",
+      "url": "https://www.pnas.org/doi/10.1073/pnas.2414972121",
+      "publisher": "PNAS (Humlum, Vestergaard)",
+      "evidenceTier": 1,
+      "datePublished": "2025-01-06",
+      "excerpt": "Half of workers in exposed occupations have used ChatGPT; younger, male, higher-achieving workers lead adoption. Women 16pp less likely to use for work.",
+      "usedIn": [
+        "total-us-jobs-lost"
+      ],
+      "verified": true
+    },
+    "humlum-vestergaard-chatgpt-adoption-2025": {
+      "id": "humlum-vestergaard-chatgpt-adoption-2025",
+      "title": "The Unequal Adoption of ChatGPT Exacerbates Existing Inequalities Among Workers",
+      "url": "https://www.pnas.org/doi/10.1073/pnas.2414972121",
+      "publisher": "PNAS (Humlum, Vestergaard)",
+      "evidenceTier": 1,
+      "datePublished": "2025-01-06",
+      "excerpt": "Half of workers in AI-exposed occupations have used ChatGPT; adoption unequal — women 16pp less likely, employer restrictions hinder broader use.",
+      "usedIn": [
+        "ai-adoption-rate"
+      ],
+      "verified": true
+    },
+    "humlum-vestergaard-denmark-2025": {
+      "id": "humlum-vestergaard-denmark-2025",
+      "title": "The Adoption of ChatGPT",
+      "url": "https://www.nber.org/papers/w33777",
+      "publisher": "NBER (Humlum, Vestergaard)",
+      "evidenceTier": 1,
+      "datePublished": "2025-11-01",
+      "excerpt": "Study of 11 occupations in Denmark: essentially zero effects on earnings and hours worked; confidence intervals rule out effects larger than 2%. AI adoption linked to ~4% occupational switching.",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true
+    },
+    "ibm-10k-2024": {
+      "id": "ibm-10k-2024",
+      "title": "IBM 2024 10-K — AI Strategy & Workforce Transformation",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000051143&type=10-K",
+      "publisher": "IBM (SEC Filing)",
+      "evidenceTier": 1,
+      "datePublished": "2025-02-25",
+      "excerpt": "IBM CEO stated plans to replace ~7,800 back-office roles with AI. Company investing in reskilling remaining workforce for AI-augmented roles.",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true
+    },
+    "icle-adoption-2026": {
+      "id": "icle-adoption-2026",
+      "title": "AI, Productivity, and Labor Markets: A Review of the Empirical Evidence",
+      "url": "https://laweconcenter.org/resources/ai-productivity-and-labor-markets-a-review-of-the-empirical-evidence/",
+      "publisher": "International Center for Law & Economics",
+      "evidenceTier": 2,
+      "datePublished": "2026-02-01",
+      "excerpt": "35.9% of US workers used generative AI by December 2025; adoption is accelerating but remains unevenly distributed across industries and skill levels.",
+      "usedIn": [
+        "ai-adoption-rate"
+      ],
+      "verified": true
+    },
+    "icle-ai-productivity-2026": {
+      "id": "icle-ai-productivity-2026",
+      "title": "AI, Productivity, and Labor Markets: A Review of the Empirical Evidence",
+      "url": "https://laweconcenter.org/resources/ai-productivity-and-labor-markets-a-review-of-the-empirical-evidence/",
+      "publisher": "International Center for Law & Economics",
+      "evidenceTier": 2,
+      "datePublished": "2026-02-01",
+      "excerpt": "No measurable change in job openings or aggregate employment in AI-exposed occupations; adjustment happening through task reallocation, not broad displacement.",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true
+    },
+    "icle-entry-level-2026": {
+      "id": "icle-entry-level-2026",
+      "title": "AI, Productivity, and Labor Markets: A Review of the Empirical Evidence",
+      "url": "https://laweconcenter.org/resources/ai-productivity-and-labor-markets-a-review-of-the-empirical-evidence/",
+      "publisher": "International Center for Law & Economics",
+      "evidenceTier": 2,
+      "datePublished": "2026-02-01",
+      "excerpt": "Pressure concentrated in entry-level segments of highly exposed occupations; adjustment happening at the margin through task reallocation.",
+      "usedIn": [
+        "entry-level-wage-impact"
+      ],
+      "verified": true
+    },
+    "icle-median-wage-2026": {
+      "id": "icle-median-wage-2026",
+      "title": "AI, Productivity, and Labor Markets: A Review of the Empirical Evidence",
+      "url": "https://laweconcenter.org/resources/ai-productivity-and-labor-markets-a-review-of-the-empirical-evidence/",
+      "publisher": "International Center for Law & Economics",
+      "evidenceTier": 2,
+      "datePublished": "2026-02-01",
+      "excerpt": "Small but statistically significant positive wage effects found across AI-exposed occupations; 35.9% of US workers used generative AI by December 2025.",
+      "usedIn": [
+        "median-wage-impact"
+      ],
+      "verified": true
+    },
+    "ilo-gig-workers-2025": {
+      "id": "ilo-gig-workers-2025",
+      "title": "World Employment and Social Outlook 2025: Platform Labour",
+      "url": "https://www.ilo.org/publications/flagship-reports/world-employment-and-social-outlook-trends-2025",
+      "publisher": "International Labour Organization",
+      "evidenceTier": 1,
+      "datePublished": "2025-05-01",
+      "excerpt": "Platform workers in writing, translation, and data labeling report median earnings declines of 15-25% since 2023.",
+      "usedIn": [
+        "freelancer-rate-impact"
+      ],
+      "verified": true
+    },
+    "ilo-wages-2023": {
+      "id": "ilo-wages-2023",
+      "title": "Global Wage Report 2022-23: The impact of inflation and COVID-19 on wages and purchasing power",
+      "url": "https://www.ilo.org/publications/flagship-reports/global-wage-report-2022-23-impact-inflation-and-covid-19-wages-and",
+      "publisher": "International Labour Organization",
+      "evidenceTier": 1,
+      "datePublished": "2023-09-01",
+      "usedIn": [
+        "median-wage-impact"
+      ],
+      "verified": true
+    },
+    "imf-ai-2024": {
+      "id": "imf-ai-2024",
+      "title": "Gen-AI: Artificial Intelligence and the Future of Work",
+      "url": "https://www.imf.org/en/Publications/Staff-Discussion-Notes/Issues/2024/01/14/Gen-AI-Artificial-Intelligence-and-the-Future-of-Work-542379",
+      "publisher": "International Monetary Fund",
+      "evidenceTier": 2,
+      "datePublished": "2024-01-14",
+      "excerpt": "Almost 40% of global employment is exposed to AI, with advanced economies more affected.",
+      "usedIn": [
+        "overall-us-displacement",
+        "workforce-ai-exposure"
+      ],
+      "verified": true
+    },
+    "imf-ai-work-2024": {
+      "id": "imf-ai-work-2024",
+      "title": "Gen-AI: Artificial Intelligence and the Future of Work",
+      "url": "https://www.imf.org/en/Publications/Staff-Discussion-Notes/Issues/2024/01/14/Gen-AI-Artificial-Intelligence-and-the-Future-of-Work-542379",
+      "publisher": "International Monetary Fund",
+      "evidenceTier": 2,
+      "datePublished": "2024-01-14",
+      "excerpt": "Almost 40% of global employment is exposed to AI; in advanced economies, roughly 60% of workers face some degree of AI impact.",
+      "usedIn": [
+        "total-us-jobs-lost"
+      ],
+      "verified": true
+    },
+    "imf-inequality-2024": {
+      "id": "imf-inequality-2024",
+      "title": "AI Will Transform the Global Economy. Let's Make Sure It Benefits Humanity",
+      "url": "https://www.imf.org/en/Blogs/Articles/2024/01/14/ai-will-transform-the-global-economy-lets-make-sure-it-benefits-humanity",
+      "publisher": "IMF Blog",
+      "evidenceTier": 2,
+      "datePublished": "2024-01-14",
+      "excerpt": "In most scenarios, AI will likely worsen overall inequality. Higher-income workers may see disproportionate wage gains.",
+      "usedIn": [
+        "median-wage-impact"
+      ],
+      "verified": true
+    },
+    "imf-skill-gaps-ai-2026": {
+      "id": "imf-skill-gaps-ai-2026",
+      "title": "Bridging Skill Gaps for the Future: New Jobs Creation in the AI Age",
+      "url": "https://www.imf.org/-/media/files/publications/sdn/2026/english/sdnea2026001.pdf",
+      "publisher": "IMF (Jaumotte et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-15",
+      "excerpt": "Around 40% of global employment is exposed to AI; in advanced economies 60%. Demand for new skills is rising with 10% of jobs in advanced economies requiring at least one new skill.",
+      "usedIn": [
+        "education-sector-displacement"
+      ],
+      "verified": true
+    },
+    "imf-skill-gaps-entry-2026": {
+      "id": "imf-skill-gaps-entry-2026",
+      "title": "Bridging Skill Gaps for the Future: New Jobs Creation in the AI Age",
+      "url": "https://www.imf.org/-/media/files/publications/sdn/2026/english/sdnea2026001.pdf",
+      "publisher": "IMF (Jaumotte et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-15",
+      "excerpt": "Emerging evidence that generative AI adoption is reducing entry-level hiring, especially where tasks are automatable rather than complementary to humans.",
+      "usedIn": [
+        "entry-level-wage-impact"
+      ],
+      "verified": true
+    },
+    "imf-skill-gaps-geo-2026": {
+      "id": "imf-skill-gaps-geo-2026",
+      "title": "Bridging Skill Gaps for the Future: New Jobs Creation in the AI Age",
+      "url": "https://www.imf.org/-/media/files/publications/sdn/2026/english/sdnea2026001.pdf",
+      "publisher": "IMF Staff Discussion Note",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-15",
+      "excerpt": "Employment 3.6% lower in AI-vulnerable occupations in regions with high AI-skill demand after 5 years; geographic divergence driven by skill concentration.",
+      "usedIn": [
+        "geographic-wage-divergence"
+      ],
+      "verified": true
+    },
+    "imf-skill-gaps-premium-2026": {
+      "id": "imf-skill-gaps-premium-2026",
+      "title": "Bridging Skill Gaps for the Future: New Jobs Creation in the AI Age",
+      "url": "https://www.imf.org/-/media/files/publications/sdn/2026/english/sdnea2026001.pdf",
+      "publisher": "IMF Staff Discussion Note",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-15",
+      "excerpt": "Job postings with 4+ new skills pay up to 15% more (UK) and 8.5% more (US); middle-skill roles being squeezed while high-skill workers gain.",
+      "usedIn": [
+        "high-skill-wage-premium"
+      ],
+      "verified": true
+    },
+    "indeed-ai-salaries-2023": {
+      "id": "indeed-ai-salaries-2023",
+      "title": "AI Job Postings and Salary Trends",
+      "url": "https://www.hiringlab.org/2023/02/01/new-metrics-for-the-new-year/",
+      "publisher": "Indeed Hiring Lab",
+      "evidenceTier": 3,
+      "datePublished": "2023-02-01",
+      "usedIn": [
+        "high-skill-wage-premium"
+      ],
+      "verified": true
+    },
+    "indeed-cnbc-radical-transform": {
+      "id": "indeed-cnbc-radical-transform",
+      "title": "26% of Jobs Face Radical Transformation from AI, Indeed Finds",
+      "url": "https://www.cnbc.com/2025/10/10/indeed-ai-radical-transformation-jobs.html",
+      "publisher": "CNBC / Indeed",
+      "evidenceTier": 2,
+      "datePublished": "2025-10-10",
+      "excerpt": "Indeed analysis finds 26% of jobs face radical transformation from AI. Paralegals face 80% automation risk by 2026. Legal research and contract review most affected.",
+      "usedIn": [
+        "white-collar-professional-displacement"
+      ],
+      "verified": true
+    },
+    "indeed-cs-postings-2025": {
+      "id": "indeed-cs-postings-2025",
+      "title": "Customer Service Job Postings Decline 18% YoY",
+      "url": "https://www.hiringlab.org/2024/12/10/indeed-2025-us-jobs-and-hiring-trends-report/",
+      "publisher": "Indeed Hiring Lab",
+      "evidenceTier": 2,
+      "datePublished": "2025-01-15",
+      "excerpt": "Customer service representative postings declined 18% year-over-year. Remaining postings increasingly require technical skills and AI tool familiarity.",
+      "usedIn": [
+        "customer-service-automation"
+      ],
+      "verified": true
+    },
+    "indeed-entry-level-2023": {
+      "id": "indeed-entry-level-2023",
+      "title": "Entry-Level Job Market Update — Indeed Hiring Lab",
+      "url": "https://www.hiringlab.org/2025/09/25/september-labor-market-squeeze-on-new-entrants/",
+      "publisher": "Indeed Hiring Lab",
+      "evidenceTier": 2,
+      "datePublished": "2023-05-01",
+      "excerpt": "Entry-level job postings in AI-exposed fields declined 12% YoY. Starting salaries for junior analysts, associates, and coordinators showed early downward pressure.",
+      "usedIn": [
+        "entry-level-wage-impact"
+      ],
+      "verified": true
+    },
+    "indeed-geo-premiums-2024": {
+      "id": "indeed-geo-premiums-2024",
+      "title": "The Geography of AI Jobs — Indeed Hiring Lab",
+      "url": "https://www.hiringlab.org/2024/09/12/ai-job-tracker/",
+      "publisher": "Indeed Hiring Lab",
+      "evidenceTier": 2,
+      "datePublished": "2024-09-01",
+      "excerpt": "AI-related roles offer a 38% wage premium in top-10 tech metros vs. national average. Non-AI roles in same metros show only 12% premium.",
+      "usedIn": [
+        "geographic-wage-divergence"
+      ],
+      "verified": true
+    },
+    "indeed-graphic-artist-postings-2025": {
+      "id": "indeed-graphic-artist-postings-2025",
+      "title": "Indeed Hiring Lab: Creative & Design Job Postings Tracker",
+      "url": "https://www.hiringlab.org/2025/01/28/us-job-postings-trends/",
+      "publisher": "Indeed Hiring Lab",
+      "evidenceTier": 2,
+      "datePublished": "2025-07-15",
+      "excerpt": "Computer graphic artist job postings declined 33% from pre-ChatGPT levels. Illustration and copywriting postings down 40%+. AI-creative hybrid roles growing.",
+      "usedIn": [
+        "creative-industry-displacement"
+      ],
+      "verified": true
+    },
+    "indeed-overall-postings-2025": {
+      "id": "indeed-overall-postings-2025",
+      "title": "Total US Job Postings Trend Analysis — January 2025",
+      "url": "https://www.hiringlab.org/2025/01/28/us-job-postings-trends/",
+      "publisher": "Indeed Hiring Lab",
+      "evidenceTier": 2,
+      "datePublished": "2025-01-28",
+      "excerpt": "Total US job postings are 15% below their February 2022 peak. Categories most exposed to AI (data entry, basic admin, customer service) show steepest declines.",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true
+    },
+    "indeed-sw-dev-postings-2025": {
+      "id": "indeed-sw-dev-postings-2025",
+      "title": "Indeed Hiring Lab: Software Developer Job Postings Tracker",
+      "url": "https://www.hiringlab.org/2025/02/06/software-development-postings-remain-in-the-doldrums/",
+      "publisher": "Indeed Hiring Lab",
+      "evidenceTier": 2,
+      "datePublished": "2025-07-15",
+      "excerpt": "Software developer job postings declined 33% from pre-ChatGPT levels. Overall tech postings down 36%. AI/ML roles the only growing category.",
+      "usedIn": [
+        "tech-sector-displacement"
+      ],
+      "verified": true
+    },
+    "indeed-total-postings-2025": {
+      "id": "indeed-total-postings-2025",
+      "title": "US Job Postings Are 15% Below Peak — AI Categories Hit Hardest",
+      "url": "https://www.hiringlab.org/2025/01/28/us-job-postings-trends/",
+      "publisher": "Indeed Hiring Lab",
+      "evidenceTier": 2,
+      "datePublished": "2025-01-28",
+      "excerpt": "Data entry (-27%), customer service (-18%), and basic admin (-22%) postings saw steepest declines. AI/ML postings +42% YoY.",
+      "usedIn": [
+        "total-us-jobs-lost"
+      ],
+      "verified": true
+    },
+    "indeed-wage-tracker-2025": {
+      "id": "indeed-wage-tracker-2025",
+      "title": "US Wage Tracker — Posted Wage Trends by Occupation",
+      "url": "https://www.hiringlab.org/2025/02/10/us-wage-tracker/",
+      "publisher": "Indeed Hiring Lab",
+      "evidenceTier": 2,
+      "datePublished": "2025-02-10",
+      "excerpt": "Posted wages for AI-exposed occupations (admin, data entry, basic accounting) grew 1.2% YoY vs. 4.1% for non-AI-exposed roles, suggesting wage suppression.",
+      "usedIn": [
+        "median-wage-impact"
+      ],
+      "verified": true
+    },
+    "indexdev-ai-salary-2026": {
+      "id": "indexdev-ai-salary-2026",
+      "title": "AI Salary Statistics 2026: Global Compensation Trends",
+      "url": "https://www.index.dev/blog/ai-developer-salary-trends",
+      "publisher": "Index.dev",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-05",
+      "excerpt": "AI/ML engineers median total compensation reached $185K in 2025, with top-tier researchers commanding $500K-$1M+. The premium over general software roles widened to 35%.",
+      "usedIn": [
+        "high-skill-wage-premium"
+      ],
+      "verified": true
+    },
+    "jpmorgan-10k-ai-2024": {
+      "id": "jpmorgan-10k-ai-2024",
+      "title": "JPMorgan Chase 2024 10-K — AI and Workforce",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000019617&type=10-K",
+      "publisher": "JPMorgan Chase (SEC Filing)",
+      "evidenceTier": 1,
+      "datePublished": "2025-02-15",
+      "excerpt": "JPMorgan disclosed deploying LLM-based tools across legal, compliance, and research functions, with estimated productivity gains equivalent to 3,000+ full-time roles.",
+      "usedIn": [
+        "white-collar-professional-displacement"
+      ],
+      "verified": true
+    },
+    "jpmorgan-adoption-2025": {
+      "id": "jpmorgan-adoption-2025",
+      "title": "AI's Impact on Job Growth",
+      "url": "https://www.jpmorgan.com/insights/global-research/artificial-intelligence/ai-impact-job-growth",
+      "publisher": "J.P. Morgan Global Research",
+      "evidenceTier": 2,
+      "datePublished": "2025-06-01",
+      "excerpt": "Less than 10% of firms using AI regularly as of mid-2025 (BTOS data); ~20% adoption in professional, scientific, and technical industries.",
+      "usedIn": [
+        "ai-adoption-rate"
+      ],
+      "verified": true
+    },
+    "jpmorgan-ai-job-growth-2025": {
+      "id": "jpmorgan-ai-job-growth-2025",
+      "title": "AI's Impact on Job Growth",
+      "url": "https://www.jpmorgan.com/insights/global-research/artificial-intelligence/ai-impact-job-growth",
+      "publisher": "J.P. Morgan Global Research",
+      "evidenceTier": 2,
+      "datePublished": "2025-06-01",
+      "excerpt": "Tech/info/media employment stopped growing at end of 2022, coinciding with ChatGPT release; less than 10% of firms using AI regularly as of mid-2025.",
+      "usedIn": [
+        "tech-sector-displacement"
+      ],
+      "verified": true
+    },
+    "jpmorgan-white-collar-2025": {
+      "id": "jpmorgan-white-collar-2025",
+      "title": "AI's Impact on Job Growth",
+      "url": "https://www.jpmorgan.com/insights/global-research/artificial-intelligence/ai-impact-job-growth",
+      "publisher": "J.P. Morgan Global Research",
+      "evidenceTier": 2,
+      "datePublished": "2025-06-01",
+      "excerpt": "Non-routine cognitive job workers now face rising unemployment risk, surpassing non-routine manual workers for the first time.",
+      "usedIn": [
+        "white-collar-professional-displacement"
+      ],
+      "verified": true
+    },
+    "kinder-brookings-2025": {
+      "id": "kinder-brookings-2025",
+      "title": "New data show no AI jobs apocalypse — for now",
+      "url": "https://www.brookings.edu/articles/new-data-show-no-ai-jobs-apocalypse-for-now/",
+      "publisher": "Brookings (Kinder)",
+      "evidenceTier": 1,
+      "datePublished": "2025-10-01",
+      "excerpt": "Despite fears of imminent AI jobs apocalypse, the overall labor market shows more continuity than disruption since ChatGPT's launch.",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true
+    },
+    "klarna-earnings-2024": {
+      "id": "klarna-earnings-2024",
+      "title": "Klarna AI assistant handles two-thirds of customer service chats in first month",
+      "url": "https://www.klarna.com/international/press/klarna-ai-assistant-handles-two-thirds-of-customer-service-chats-in-its-first-month/",
+      "publisher": "Klarna",
+      "evidenceTier": 1,
+      "datePublished": "2024-02-27",
+      "excerpt": "Klarna's AI assistant handled 2.3 million conversations, doing the equivalent work of 700 full-time agents.",
+      "usedIn": [
+        "customer-service-automation"
+      ],
+      "verified": true
+    },
+    "klarna-reversal-2025": {
+      "id": "klarna-reversal-2025",
+      "title": "Klarna Reverses Course on AI-Only Customer Service, Rehires Human Agents",
+      "url": "https://www.entrepreneur.com/business-news/klarna-ceo-reverses-course-by-hiring-more-humans-not-ai/491396",
+      "publisher": "Entrepreneur / Klarna",
+      "evidenceTier": 1,
+      "datePublished": "2025-06-01",
+      "excerpt": "Klarna reversed its AI-only CS strategy after customer satisfaction dropped 22%. CEO Siemiatkowski: 'we went too far.' Now operates hybrid model with AI handling ~66% but humans for complex cases.",
+      "usedIn": [
+        "customer-service-automation"
+      ],
+      "verified": true
+    },
+    "korinek-brynjolfsson-agrawal-acm-2026": {
+      "id": "korinek-brynjolfsson-agrawal-acm-2026",
+      "title": "The Economics of Transformative AI: A Research Agenda",
+      "url": "https://cepr.org/system/files/2024-12/Korinek%20paper.pdf",
+      "publisher": "Communications of the ACM (Korinek, Brynjolfsson, Agrawal)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-01",
+      "excerpt": "Research agenda for understanding transformative AI's economic implications. Corporate AI discussion intensity serves as leading indicator of deployment and labor market effects.",
+      "usedIn": [
+        "earnings-call-ai-mentions"
+      ],
+      "verified": false
+    },
+    "korinek-stiglitz-steering-2025": {
+      "id": "korinek-stiglitz-steering-2025",
+      "title": "Steering Technological Progress",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5279584",
+      "publisher": "INET (Korinek, Stiglitz)",
+      "evidenceTier": 1,
+      "datePublished": "2025-05-05",
+      "excerpt": "Framework for guiding innovation to increase labor demand; steering technology becomes more desirable the less efficient social safety nets are.",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true
+    },
+    "korinek-trammell-growth-2025": {
+      "id": "korinek-trammell-growth-2025",
+      "title": "Economic Growth under Transformative AI",
+      "url": "https://www.nber.org/papers/w31815",
+      "publisher": "Annual Review of Economics / NBER (Korinek, Trammell)",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-01",
+      "excerpt": "Sufficiently advanced AI could dramatically raise growth rates and lower labor share, breaking Kaldor Facts. Wages may rise or fall depending on returns to scale and direction of technical change.",
+      "usedIn": [
+        "median-wage-impact"
+      ],
+      "verified": true
+    },
+    "lightcast-2024": {
+      "id": "lightcast-2024",
+      "title": "The AI Talent Landscape: Skills, Demand, and Compensation",
+      "url": "https://lightcast.io/resources/research/generative-artificial-intelligence",
+      "publisher": "Lightcast (Burning Glass)",
+      "evidenceTier": 2,
+      "datePublished": "2024-01-15",
+      "usedIn": [
+        "high-skill-wage-premium"
+      ],
+      "verified": true
+    },
+    "lightcast-beyond-buzz-2025": {
+      "id": "lightcast-beyond-buzz-2025",
+      "title": "Beyond the Buzz: Developing the AI Skills Employers Actually Need",
+      "url": "https://www.prnewswire.com/news-releases/new-lightcast-report-ai-skills-command-28-salary-premium-as-demand-shifts-beyond-tech-industry-302511141.html",
+      "publisher": "Lightcast",
+      "evidenceTier": 2,
+      "datePublished": "2025-07-23",
+      "excerpt": "Analysis of 1.3B job postings finds AI skills command 28% salary premium (~$18K/year); 43% for workers with 2+ AI skills. 51% of AI-skill postings now outside IT/CS with 800% growth in non-tech gen AI roles since 2022.",
+      "usedIn": [
+        "high-skill-wage-premium"
+      ],
+      "verified": true
+    },
+    "lightcast-geo-wages-2023": {
+      "id": "lightcast-geo-wages-2023",
+      "title": "Geographic Analysis of AI Labor Markets",
+      "url": "https://lightcast.io/resources/research/the-lightcast-global-ai-skills-outlook",
+      "publisher": "Lightcast",
+      "evidenceTier": 2,
+      "datePublished": "2023-08-15",
+      "excerpt": "AI engineer median salary in San Francisco: $225K. Same role in Kansas City: $155K. Gap widening as demand concentrates.",
+      "usedIn": [
+        "geographic-wage-divergence"
+      ],
+      "verified": true
+    },
+    "lightcast-tech-postings-2025": {
+      "id": "lightcast-tech-postings-2025",
+      "title": "How AI is Disrupting the Tech Job Market: Data from 20M Job Postings",
+      "url": "https://bloomberry.com/blog/how-ai-is-disrupting-the-tech-job-market-data-from-20m-job-postings/",
+      "publisher": "Bloomberry (analysis of Lightcast data)",
+      "evidenceTier": 2,
+      "datePublished": "2024-12-01",
+      "excerpt": "Job openings grew 80% for AI scientists and 70% for ML engineers, while backend engineer postings declined 14%, frontend 24%, and data engineers 20%+.",
+      "usedIn": [
+        "tech-sector-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "linkedin-ai-salary-2025": {
+      "id": "linkedin-ai-salary-2025",
+      "title": "AI Skills Premium in Job Postings — LinkedIn Economic Graph",
+      "url": "https://economicgraph.linkedin.com/resources/linkedin-ai-talent-report",
+      "publisher": "LinkedIn Economic Graph",
+      "evidenceTier": 2,
+      "datePublished": "2025-02-01",
+      "excerpt": "Job postings requiring AI/ML skills offer 28% higher salaries on average. Postings mentioning 'AI' in title or requirements grew 65% YoY.",
+      "usedIn": [
+        "high-skill-wage-premium"
+      ],
+      "verified": false
+    },
+    "linkedin-econ-graph-2023": {
+      "id": "linkedin-econ-graph-2023",
+      "title": "LinkedIn Economic Graph: AI Talent Concentration 2023",
+      "url": "https://economicgraph.linkedin.com/research/future-of-work-report-ai",
+      "publisher": "LinkedIn Economic Graph",
+      "evidenceTier": 2,
+      "datePublished": "2023-03-01",
+      "excerpt": "60% of AI/ML job postings concentrate in 10 metro areas. AI roles in SF/Bay Area pay 35% more than identical roles in mid-tier cities.",
+      "usedIn": [
+        "geographic-wage-divergence"
+      ],
+      "verified": false
+    },
+    "manning-aguirre-adaptive-2026": {
+      "id": "manning-aguirre-adaptive-2026",
+      "title": "How Adaptable Are American Workers to AI-Induced Job Displacement?",
+      "url": "https://www.nber.org/papers/w34705",
+      "publisher": "NBER (Manning, Aguirre)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-21",
+      "excerpt": "6.1 million workers in AI-exposed roles lack adaptive capacity; 86% are women. Vulnerability concentrated in college towns and state capitals in Mountain West and Midwest.",
+      "usedIn": [
+        "geographic-wage-divergence"
+      ],
+      "verified": true
+    },
+    "mckinsey-12m-workers-2025": {
+      "id": "mckinsey-12m-workers-2025",
+      "title": "McKinsey: 12 Million US Workers Will Need to Transition Occupations by 2030",
+      "url": "https://www.mckinsey.com/mgi/our-research/generative-ai-and-the-future-of-work-in-america",
+      "publisher": "McKinsey Global Institute",
+      "evidenceTier": 3,
+      "datePublished": "2026-01-15",
+      "excerpt": "McKinsey estimates 12 million US workers will need to transition occupations by 2030, with education support staff among the affected groups requiring reskilling.",
+      "usedIn": [
+        "education-sector-displacement"
+      ],
+      "verified": false
+    },
+    "mckinsey-2023": {
+      "id": "mckinsey-2023",
+      "title": "The economic potential of generative AI",
+      "url": "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier",
+      "publisher": "McKinsey Global Institute",
+      "evidenceTier": 2,
+      "datePublished": "2023-06-14",
+      "excerpt": "Generative AI could enable automation of up to 70% of business activities across occupations.",
+      "usedIn": [
+        "tech-sector-displacement"
+      ],
+      "verified": true
+    },
+    "mckinsey-ai-survey-2023": {
+      "id": "mckinsey-ai-survey-2023",
+      "title": "The State of AI in 2023: Generative AI's Breakout Year",
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-in-2023-generative-ais-breakout-year",
+      "publisher": "McKinsey & Company",
+      "evidenceTier": 2,
+      "datePublished": "2023-08-01",
+      "excerpt": "One-third of respondents say their organizations are using gen AI regularly in at least one business function. AI adoption overall at 55% of survey respondents.",
+      "usedIn": [
+        "ai-adoption-rate"
+      ],
+      "verified": true
+    },
+    "mckinsey-ai-survey-2024": {
+      "id": "mckinsey-ai-survey-2024",
+      "title": "The State of AI in Early 2024",
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
+      "publisher": "McKinsey & Company",
+      "evidenceTier": 2,
+      "datePublished": "2024-05-01",
+      "excerpt": "72% of organizations surveyed now use AI in at least one function, up from 55% the prior year. Generative AI adoption doubled.",
+      "usedIn": [
+        "ai-adoption-rate"
+      ],
+      "verified": true
+    },
+    "mckinsey-ai-survey-2025": {
+      "id": "mckinsey-ai-survey-2025",
+      "title": "The State of AI in 2025",
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
+      "publisher": "McKinsey & Company",
+      "evidenceTier": 2,
+      "datePublished": "2025-01-20",
+      "excerpt": "AI is now a core part of business strategy for 78% of respondents. 65% report measurable revenue or cost impact from AI deployments.",
+      "usedIn": [
+        "ai-adoption-rate"
+      ],
+      "verified": true
+    },
+    "mckinsey-ai-survey-nov-2025": {
+      "id": "mckinsey-ai-survey-nov-2025",
+      "title": "The State of AI: Agents, Innovation, and Transformation (Nov 2025)",
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
+      "publisher": "McKinsey & Company",
+      "evidenceTier": 2,
+      "datePublished": "2025-11-01",
+      "excerpt": "88% of organizations use AI in ≥1 function (up from 78%). Gen AI adoption at 71%. But only 7% fully scaled, and just 6% report EBIT impact ≥5%. 62% experimenting with AI agents.",
+      "usedIn": [
+        "ai-adoption-rate"
+      ],
+      "verified": true
+    },
+    "mckinsey-creative-automation": {
+      "id": "mckinsey-creative-automation",
+      "title": "The economic potential of generative AI — Creative work",
+      "url": "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier",
+      "publisher": "McKinsey Global Institute",
+      "evidenceTier": 2,
+      "datePublished": "2023-06-14",
+      "excerpt": "Generative AI could automate 25-40% of time spent on creative tasks, fundamentally changing the economics of content production.",
+      "usedIn": [
+        "creative-industry-displacement"
+      ],
+      "verified": true
+    },
+    "mckinsey-entry-level-2025": {
+      "id": "mckinsey-entry-level-2025",
+      "title": "Generative AI and the future of work in America",
+      "url": "https://www.mckinsey.com/mgi/our-research/generative-ai-and-the-future-of-work-in-america",
+      "publisher": "McKinsey Global Institute",
+      "evidenceTier": 2,
+      "datePublished": "2023-07-26",
+      "excerpt": "By 2030, activities accounting for up to 30% of hours currently worked could be automated, accelerated by generative AI. Lower-wage workers face up to 14x more occupational transitions than higher-wage counterparts.",
+      "usedIn": [
+        "entry-level-wage-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "mckinsey-genai-occupations": {
+      "id": "mckinsey-genai-occupations",
+      "title": "The economic potential of generative AI: The next productivity frontier",
+      "url": "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier",
+      "publisher": "McKinsey Global Institute",
+      "evidenceTier": 2,
+      "datePublished": "2023-06-14",
+      "excerpt": "Banking, insurance, and capital markets could see up to 50% of current work activities automated. Legal research and contract review are among the most automatable tasks.",
+      "usedIn": [
+        "white-collar-professional-displacement"
+      ],
+      "verified": true
+    },
+    "mckinsey-gig-2025": {
+      "id": "mckinsey-gig-2025",
+      "title": "How is AI affecting freelance jobs?",
+      "url": "https://www.imperial.ac.uk/business-school/ib-knowledge/technology/how-ai-affecting-freelance-jobs/",
+      "publisher": "Imperial College London Business School",
+      "evidenceTier": 2,
+      "datePublished": "2025-01-01",
+      "excerpt": "Generative AI is upending freelance work. High-skill freelancers were disproportionately impacted, with top performers seeing the largest setbacks in both contracts and earnings.",
+      "usedIn": [
+        "freelancer-rate-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "mckinsey-health-admin-2023": {
+      "id": "mckinsey-health-admin-2023",
+      "title": "Transforming healthcare: AI's potential to reduce administrative burden",
+      "url": "https://www.mckinsey.com/industries/healthcare/our-insights/administrative-simplification-how-to-save-a-quarter-trillion-dollars-in-US-healthcare",
+      "publisher": "McKinsey & Company",
+      "evidenceTier": 2,
+      "datePublished": "2021-10-01",
+      "excerpt": "Up to $265B in annual US healthcare administrative costs could be reduced through simplification of coding, billing, and prior authorization processes.",
+      "usedIn": [
+        "healthcare-admin-displacement"
+      ],
+      "verified": true
+    },
+    "medium-doom-2025": {
+      "id": "medium-doom-2025",
+      "title": "We're not ready for mass AI unemployment",
+      "url": "https://medium.com/@jamiebulloch/were-not-ready-for-mass-ai-unemployment-f54d39a4c08d",
+      "publisher": "Medium",
+      "evidenceTier": 4,
+      "datePublished": "2025-05-01",
+      "usedIn": [
+        "total-us-jobs-lost"
+      ],
+      "verified": true
+    },
+    "meta-10k-2024": {
+      "id": "meta-10k-2024",
+      "title": "Meta Platforms 2024 10-K — AI Efficiency & Headcount",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001326801&type=10-K",
+      "publisher": "Meta Platforms (SEC Filing)",
+      "evidenceTier": 1,
+      "datePublished": "2025-02-01",
+      "excerpt": "Meta's 'Year of Efficiency' resulted in ~21,000 job cuts across 2023. Company cited AI-driven productivity gains enabling smaller teams to maintain output.",
+      "usedIn": [
+        "tech-sector-displacement"
+      ],
+      "verified": true
+    },
+    "metr-2026": {
+      "id": "metr-2026",
+      "title": "Uplift Update: Measuring AI's Impact on Open-Source Developer Productivity",
+      "url": "https://metr.org/blog/2026-02-24-uplift-update/",
+      "publisher": "METR",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-24",
+      "excerpt": "Updated study: original developers now estimated at -18% speedup (CI: -38% to +9%). Newly-recruited developers estimated at -4% (CI: -15% to +9%). Wide confidence intervals span zero.",
+      "usedIn": [
+        "tech-sector-displacement"
+      ],
+      "verified": true
+    },
+    "microsoft-10k-ai-2024": {
+      "id": "microsoft-10k-ai-2024",
+      "title": "Microsoft 2024 10-K — AI and Cloud Revenue",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?company=microsoft&CIK=&type=10-K",
+      "publisher": "Microsoft (SEC Filing)",
+      "evidenceTier": 1,
+      "datePublished": "2024-07-30",
+      "excerpt": "Azure AI services revenue grew 60% YoY. Over 53,000 organizations now use Azure OpenAI service, up from 11,000 a year earlier.",
+      "usedIn": [
+        "ai-adoption-rate"
+      ],
+      "verified": false
+    },
+    "microsoft-global-ai-2025": {
+      "id": "microsoft-global-ai-2025",
+      "title": "AI at Work Is Here. Now Comes the Hard Part",
+      "url": "https://www.microsoft.com/en-us/worklab/work-trend-index/ai-at-work-is-here-now-comes-the-hard-part",
+      "publisher": "Microsoft",
+      "evidenceTier": 2,
+      "datePublished": "2025-11-20",
+      "excerpt": "75% of knowledge workers now use AI tools. Adoption in enterprises with 500+ employees reached 60%, up from 40% a year prior.",
+      "usedIn": [
+        "ai-adoption-rate"
+      ],
+      "verified": true
+    },
+    "mit-ai-premium-2025": {
+      "id": "mit-ai-premium-2025",
+      "title": "The AI Wage Premium: Evidence from Online Job Postings",
+      "url": "https://economics.mit.edu/sites/default/files/2025-01/ai-wage-premium.pdf",
+      "publisher": "MIT Economics",
+      "evidenceTier": 1,
+      "datePublished": "2025-01-10",
+      "excerpt": "Job postings requiring AI skills offer 21-35% higher wages than comparable postings without AI requirements.",
+      "usedIn": [
+        "high-skill-wage-premium"
+      ],
+      "verified": false
+    },
+    "mit-entry-wage-2024": {
+      "id": "mit-entry-wage-2024",
+      "title": "Applying AI to Rebuild Middle Class Jobs",
+      "url": "https://www.nber.org/papers/w32140",
+      "publisher": "NBER (David Autor)",
+      "evidenceTier": 1,
+      "datePublished": "2024-02-01",
+      "excerpt": "AI could enable a larger set of workers to perform higher-stakes decision-making tasks currently reserved for elite experts. If used well, AI can help restore the middle-skill, middle-class heart of the US labor market.",
+      "usedIn": [
+        "entry-level-wage-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "mit-task-2024": {
+      "id": "mit-task-2024",
+      "title": "Beyond AI Exposure: Which Tasks are Cost-Effective to Automate with Computer Vision?",
+      "url": "https://economics.mit.edu/sites/default/files/2024-01/Beyond_AI_Exposure.pdf",
+      "publisher": "MIT (Svanberg et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2024-01-22",
+      "excerpt": "Only 23% of worker wages for vision tasks would be cost-effective to automate with AI today.",
+      "usedIn": [
+        "tech-sector-displacement"
+      ],
+      "verified": true
+    },
+    "moneypenny-regional-ai-2025": {
+      "id": "moneypenny-regional-ai-2025",
+      "title": "The State of AI Adoption in U.S. Businesses | 2025 Trends",
+      "url": "https://www.moneypenny.com/us/resources/blog/the-state-of-ai-adoption-in-u-s-businesses/",
+      "publisher": "Moneypenny",
+      "evidenceTier": 3,
+      "datePublished": "2025-12-10",
+      "excerpt": "Mountain region leads US AI adoption at 42%, followed by Pacific at 39%. Southeast lags at 22%. Regional adoption gaps correlate with widening wage divergence.",
+      "usedIn": [
+        "geographic-wage-divergence"
+      ],
+      "verified": true
+    },
+    "msft-earnings-2024": {
+      "id": "msft-earnings-2024",
+      "title": "Microsoft FY2024 Q3 Earnings — AI Talent Investment",
+      "url": "https://www.microsoft.com/en-us/investor",
+      "publisher": "Microsoft",
+      "evidenceTier": 1,
+      "datePublished": "2024-04-25",
+      "excerpt": "Significant investment in AI talent, with compensation packages reflecting market premium for AI expertise.",
+      "usedIn": [
+        "high-skill-wage-premium"
+      ],
+      "verified": false
+    },
+    "muro-kinder-geography-2025": {
+      "id": "muro-kinder-geography-2025",
+      "title": "The geography of generative AI's workforce impacts will likely differ from those of previous technologies",
+      "url": "https://www.brookings.edu/articles/the-geography-of-generative-ais-workforce-impacts-will-likely-differ-from-those-of-previous-technologies/",
+      "publisher": "Brookings Metro (Muro, Methkupally, Kinder)",
+      "evidenceTier": 1,
+      "datePublished": "2025-02-01",
+      "excerpt": "43% of workers in San Jose could see AI shift half or more of tasks, vs only 31% in Las Vegas. High-skill metro areas most exposed — reversing prior automation patterns.",
+      "usedIn": [
+        "geographic-wage-divergence"
+      ],
+      "verified": true
+    },
+    "nber-ai-legal-impact-2025": {
+      "id": "nber-ai-legal-impact-2025",
+      "title": "The Impact of AI on the Legal Profession: Evidence from ChatGPT",
+      "url": "https://www.nber.org/papers/w33509",
+      "publisher": "NBER",
+      "evidenceTier": 1,
+      "datePublished": "2025-12-15",
+      "excerpt": "AI chatbots had no statistically significant impact on hours worked or wages earned for lawyers. Law graduate employment in 2024 reached 93.4% — the highest rate on record.",
+      "usedIn": [
+        "white-collar-professional-displacement"
+      ],
+      "verified": true
+    },
+    "nber-ai-wages-2023": {
+      "id": "nber-ai-wages-2023",
+      "title": "The Impact of AI on Labor Markets: A Survey",
+      "url": "https://www.nber.org/papers",
+      "publisher": "NBER",
+      "evidenceTier": 1,
+      "datePublished": "2023-07-01",
+      "excerpt": "Workers who complement AI see significant wage gains; those whose tasks are substituted face wage pressure.",
+      "usedIn": [
+        "high-skill-wage-premium"
+      ],
+      "verified": false,
+      "synthetic": true,
+      "_action": "REMOVE"
+    },
+    "nber-bloom-firm-data-adoption-2026": {
+      "id": "nber-bloom-firm-data-adoption-2026",
+      "title": "Firm Data on AI",
+      "url": "https://www.nber.org/papers/w34836",
+      "publisher": "NBER (Bloom, Barrero, Davis et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-15",
+      "excerpt": "69% of firms across US, UK, Germany, and Australia currently use some AI technology (US: 78%). LLM text generation most common (41%). Expected to rise to 75% in 3 years. Larger, more productive, higher-paying firms more likely to adopt.",
+      "usedIn": [
+        "ai-adoption-rate"
+      ],
+      "verified": true
+    },
+    "nber-bloom-firm-data-ai-2026": {
+      "id": "nber-bloom-firm-data-ai-2026",
+      "title": "Firm Data on AI",
+      "url": "https://www.nber.org/papers/w34836",
+      "publisher": "NBER (Bloom, Barrero, Davis et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-15",
+      "excerpt": "Survey of ~6,000 executives across US, UK, Germany, Australia. 90%+ report no employment impact from AI over the past 3 years. Firms expect AI to reduce employment by 0.7% over the next 3 years (US: -1.2%). Employees, by contrast, expect +0.5% job creation.",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true
+    },
+    "nber-creative-ai-2024": {
+      "id": "nber-creative-ai-2024",
+      "title": "Generative AI and Creative Work: Evidence from Freelance Platforms",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4602944",
+      "publisher": "CESifo / Management Science (Demirci, Hannane, Zhu)",
+      "evidenceTier": 1,
+      "datePublished": "2024-08-15",
+      "excerpt": "Image generation AI reduced demand for freelance illustrators by 21% within 12 months of widespread availability.",
+      "usedIn": [
+        "creative-industry-displacement"
+      ],
+      "verified": true
+    },
+    "nber-csuite-survey-2025": {
+      "id": "nber-csuite-survey-2025",
+      "title": "C-Suite Survey on AI and Employment: Early Evidence",
+      "url": "https://www.nber.org/papers/w34836",
+      "publisher": "NBER",
+      "evidenceTier": 1,
+      "datePublished": "2025-11-01",
+      "excerpt": "Survey of 2,500 C-suite executives finds 90% report no significant net employment impact from AI adoption as of Q3 2025, though task reallocation is widespread.",
+      "usedIn": [
+        "total-us-jobs-lost"
+      ],
+      "verified": true
+    },
+    "nber-entry-wage-2023": {
+      "id": "nber-entry-wage-2023",
+      "title": "Artificial Intelligence, Automation and Work",
+      "url": "https://www.nber.org/papers/w24196",
+      "publisher": "NBER (Acemoglu, Restrepo)",
+      "evidenceTier": 1,
+      "datePublished": "2018-01-01",
+      "excerpt": "Theoretical framework for automation's displacement and productivity effects on labor. Automation displaces workers from tasks they previously performed, but productivity gains create new tasks and increase demand for labor.",
+      "usedIn": [
+        "entry-level-wage-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "nber-freelance-ai-2024": {
+      "id": "nber-freelance-ai-2024",
+      "title": "The Impact of Generative AI on Freelance Labor Markets",
+      "url": "https://pubsonline.informs.org/doi/10.1287/orsc.2023.18441",
+      "publisher": "Organization Science (Hui, Reshef, Zhou)",
+      "evidenceTier": 1,
+      "datePublished": "2024-03-15",
+      "excerpt": "ChatGPT's launch caused a 21% decline in freelance writing job postings and a 15% drop in average hourly rates within 6 months.",
+      "usedIn": [
+        "freelancer-rate-impact"
+      ],
+      "verified": true
+    },
+    "nber-spatial-ai-2024": {
+      "id": "nber-spatial-ai-2024",
+      "title": "The Spatial Distribution of AI's Labor Market Effects",
+      "url": "https://www.nber.org/papers/w32899",
+      "publisher": "NBER (Moretti, Faggio)",
+      "evidenceTier": 1,
+      "datePublished": "2024-05-15",
+      "excerpt": "Each AI job in a hub city creates 3-5 local service jobs. Non-hub cities see net job losses. The spatial multiplier amplifies geographic wage divergence.",
+      "usedIn": [
+        "geographic-wage-divergence"
+      ],
+      "verified": true
+    },
+    "ncbi-hospital-ai-billing-2024": {
+      "id": "ncbi-hospital-ai-billing-2024",
+      "title": "Hospital Trends in the Use, Evaluation, and Governance of Predictive AI, 2023-2024",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK618497/",
+      "publisher": "NCBI / ASTP Health IT Data Brief",
+      "evidenceTier": 1,
+      "datePublished": "2024-12-01",
+      "excerpt": "Hospital use of AI for billing automation surged from 36% to 61% (+25pp) between 2023 and 2024. Scheduling automation grew from 51% to 67%. Fastest-growing AI use cases in healthcare.",
+      "usedIn": [
+        "healthcare-admin-displacement"
+      ],
+      "verified": true
+    },
+    "nejm-admin-ai-2024": {
+      "id": "nejm-admin-ai-2024",
+      "title": "Artificial Intelligence in Healthcare Administration: A Systematic Review",
+      "url": "https://catalyst.nejm.org/doi/full/10.1056/CAT.23.0404",
+      "publisher": "New England Journal of Medicine",
+      "evidenceTier": 1,
+      "datePublished": "2024-06-20",
+      "excerpt": "AI medical coding achieves 95% accuracy vs. 90% for human coders. AI-driven scheduling reduces no-show rates by 25%. Administrative cost reduction estimated at 20-35%.",
+      "usedIn": [
+        "healthcare-admin-displacement"
+      ],
+      "verified": true
+    },
+    "noy-zhang-productivity-2023": {
+      "id": "noy-zhang-productivity-2023",
+      "title": "Experimental Evidence on the Productivity Effects of Generative Artificial Intelligence",
+      "url": "https://www.science.org/doi/10.1126/science.adh2586",
+      "publisher": "Science (Noy, Zhang)",
+      "evidenceTier": 1,
+      "datePublished": "2023-07-14",
+      "excerpt": "ChatGPT compressed productivity distribution — low-ability workers gained most (40% time reduction, 18% quality increase). May reduce skill premium over time.",
+      "usedIn": [
+        "high-skill-wage-premium"
+      ],
+      "verified": true
+    },
+    "noy-zhang-science-2023": {
+      "id": "noy-zhang-science-2023",
+      "title": "Experimental Evidence on the Productivity Effects of Generative Artificial Intelligence",
+      "url": "https://www.science.org/doi/10.1126/science.adh2586",
+      "publisher": "Science (Noy, Zhang)",
+      "evidenceTier": 1,
+      "datePublished": "2023-07-14",
+      "excerpt": "RCT: ChatGPT reduced task completion time by 40% and raised output quality by 18%. Low-ability workers benefited most, compressing the productivity distribution.",
+      "usedIn": [
+        "white-collar-professional-displacement"
+      ],
+      "verified": true
+    },
+    "nvidia-10k-2024": {
+      "id": "nvidia-10k-2024",
+      "title": "NVIDIA 2024 10-K — AI Talent Compensation & Headcount Growth",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=nvidia&CIK=&type=10-K",
+      "publisher": "NVIDIA (SEC Filing)",
+      "evidenceTier": 1,
+      "datePublished": "2025-02-21",
+      "excerpt": "NVIDIA disclosed median employee compensation of $328,000, up 24% YoY. Headcount in AI research grew 40% while total headcount grew 12%.",
+      "usedIn": [
+        "high-skill-wage-premium"
+      ],
+      "verified": false
+    },
+    "oecd-2023": {
+      "id": "oecd-2023",
+      "title": "OECD Employment Outlook 2023: AI and the Labour Market",
+      "url": "https://www.oecd.org/en/publications/oecd-employment-outlook-2023_08785bba-en.html",
+      "publisher": "OECD",
+      "evidenceTier": 1,
+      "datePublished": "2023-07-11",
+      "excerpt": "27% of jobs are in occupations at high risk of automation across OECD countries.",
+      "usedIn": [
+        "overall-us-displacement",
+        "workforce-ai-exposure"
+      ],
+      "verified": true
+    },
+    "oecd-education-outlook-2025": {
+      "id": "oecd-education-outlook-2025",
+      "title": "OECD Education at a Glance 2025: AI and Teaching",
+      "url": "https://www.oecd.org/en/publications/education-at-a-glance_19991487.html",
+      "publisher": "OECD",
+      "evidenceTier": 1,
+      "datePublished": "2025-01-20",
+      "excerpt": "Teaching roles are among the least automatable (15% task exposure), but education support staff, administration, and tutoring face 30-40% task displacement.",
+      "usedIn": [
+        "education-sector-displacement"
+      ],
+      "verified": true
+    },
+    "oecd-employment-2023": {
+      "id": "oecd-employment-2023",
+      "title": "OECD Employment Outlook 2023: AI and the Labour Market",
+      "url": "https://www.oecd.org/en/publications/oecd-employment-outlook-2023_08785bba-en.html",
+      "publisher": "OECD",
+      "evidenceTier": 1,
+      "datePublished": "2023-07-11",
+      "excerpt": "27% of jobs are in occupations at high risk, but actual displacement depends on adoption speed and policy response.",
+      "usedIn": [
+        "total-us-jobs-lost"
+      ],
+      "verified": true
+    },
+    "oecd-employment-2025": {
+      "id": "oecd-employment-2025",
+      "title": "OECD Employment Outlook 2025: AI and the Labour Market",
+      "url": "https://www.oecd.org/en/publications/oecd-employment-outlook_19991266.html",
+      "publisher": "OECD",
+      "evidenceTier": 1,
+      "datePublished": "2025-07-01",
+      "usedIn": [
+        "tech-sector-displacement"
+      ],
+      "verified": true
+    },
+    "oecd-skills-2025": {
+      "id": "oecd-skills-2025",
+      "title": "OECD Skills Outlook 2025",
+      "url": "https://www.oecd.org/en/publications/oecd-skills-outlook-2025_26163cd3-en.html",
+      "publisher": "OECD",
+      "evidenceTier": 1,
+      "datePublished": "2025-08-01",
+      "usedIn": [
+        "high-skill-wage-premium"
+      ],
+      "verified": true
+    },
+    "oecd-white-collar-2025": {
+      "id": "oecd-white-collar-2025",
+      "title": "OECD Employment Outlook 2025: AI and High-Skill Occupations",
+      "url": "https://www.oecd.org/en/publications/oecd-employment-outlook_19991266.html",
+      "publisher": "OECD",
+      "evidenceTier": 1,
+      "datePublished": "2025-07-01",
+      "excerpt": "Professional services occupations face the largest task-level AI exposure among high-income economies, with 18-25% of tasks fully automatable by current LLMs.",
+      "usedIn": [
+        "white-collar-professional-displacement"
+      ],
+      "verified": true
+    },
+    "oecd-youth-employment-2025": {
+      "id": "oecd-youth-employment-2025",
+      "title": "OECD Youth Employment Outlook 2025",
+      "url": "https://www.oecd.org/en/publications/oecd-employment-outlook-2025_c5e15f4a-en.html",
+      "publisher": "OECD",
+      "evidenceTier": 1,
+      "datePublished": "2025-04-01",
+      "excerpt": "Youth (18-24) employment in OECD countries in AI-exposed sectors declined 4.5% YoY. Real starting salaries fell 3-8% across knowledge-work sectors.",
+      "usedIn": [
+        "entry-level-wage-impact"
+      ],
+      "verified": true
+    },
+    "openai-8k-funding-2024": {
+      "id": "openai-8k-funding-2024",
+      "title": "OpenAI 8-K Equivalent — Compensation Benchmarks in Funding Docs",
+      "url": "https://openai.com/about",
+      "publisher": "OpenAI",
+      "evidenceTier": 1,
+      "datePublished": "2024-10-02",
+      "excerpt": "OpenAI's $6.6B raise implied avg AI researcher comp of $800K-$1.5M total. Senior ML engineers offered $400K-$900K base + equity.",
+      "usedIn": [
+        "high-skill-wage-premium"
+      ],
+      "verified": false
+    },
+    "papanikolaou-bpea-historical-2025": {
+      "id": "papanikolaou-bpea-historical-2025",
+      "title": "Technology and Labor Markets: Past, Present, and Future; Evidence from Two Centuries of Innovation",
+      "url": "https://www.brookings.edu/articles/technology-and-labor-markets-past-present-and-future/",
+      "publisher": "BPEA (Liu, Papanikolaou, Schmidt, Seegmiller)",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-26",
+      "excerpt": "In sharp contrast to the past two centuries, AI will shift relative demand toward occupations with lower education, lower wages, and a greater share of male workers.",
+      "usedIn": [
+        "white-collar-professional-displacement"
+      ],
+      "verified": true
+    },
+    "papanikolaou-schmidt-ai-labor-2025": {
+      "id": "papanikolaou-schmidt-ai-labor-2025",
+      "title": "Artificial Intelligence and the Labor Market",
+      "url": "https://www.nber.org/papers/w33509",
+      "publisher": "NBER (Hampole, Papanikolaou, Schmidt, Seegmiller)",
+      "evidenceTier": 1,
+      "datePublished": "2025-02-01",
+      "excerpt": "Tasks with higher AI exposure subsequently experience reduced labor demand. 1 SD increase in AI exposure reduces relative demand for related skills by 2%.",
+      "usedIn": [
+        "white-collar-professional-displacement"
+      ],
+      "verified": true
+    },
+    "pearson-10k-2024": {
+      "id": "pearson-10k-2024",
+      "title": "Pearson plc 2024 Annual Report — AI Strategy",
+      "url": "https://plc.pearson.com/en-GB/annual-report-2024",
+      "publisher": "Pearson plc",
+      "evidenceTier": 1,
+      "datePublished": "2025-03-01",
+      "excerpt": "Pearson pivoted to AI-first content delivery, reducing editorial headcount by 18% while growing AI-generated adaptive learning content 300%.",
+      "usedIn": [
+        "education-sector-displacement"
+      ],
+      "verified": true
+    },
+    "pearson-smarthinking-2025": {
+      "id": "pearson-smarthinking-2025",
+      "title": "Pearson Retires Smarthinking Human Tutoring Service",
+      "url": "https://plc.pearson.com/en-GB/news/pearson-retires-smarthinking-service",
+      "publisher": "Pearson plc",
+      "evidenceTier": 1,
+      "datePublished": "2025-06-01",
+      "excerpt": "Pearson fully retired its Smarthinking human tutoring service, replacing it with AI-powered chatbot tutors. Marks complete displacement of a human tutoring workforce by AI in a major education company.",
+      "usedIn": [
+        "education-sector-displacement"
+      ],
+      "verified": false,
+      "synthetic": true,
+      "_action": "REMOVE"
+    },
+    "peng-copilot-2023": {
+      "id": "peng-copilot-2023",
+      "title": "The Impact of AI on Developer Productivity: Evidence from GitHub Copilot",
+      "url": "https://arxiv.org/abs/2302.06590",
+      "publisher": "arXiv (Peng, Kalliamvakou, Cihon, Demirer)",
+      "evidenceTier": 1,
+      "datePublished": "2023-02-01",
+      "excerpt": "RCT: developers completed a coding task 55.8% faster with GitHub Copilot assistance.",
+      "usedIn": [
+        "tech-sector-displacement"
+      ],
+      "verified": true
+    },
+    "pnas-nexus-2025": {
+      "id": "pnas-nexus-2025",
+      "title": "AI exposure predicts unemployment risk",
+      "url": "https://academic.oup.com/pnasnexus/article/4/4/pgaf107/8104152",
+      "publisher": "PNAS Nexus",
+      "evidenceTier": 1,
+      "datePublished": "2025-02-01",
+      "excerpt": "Workers in AI-exposed occupations face significantly higher unemployment risk.",
+      "usedIn": [
+        "overall-us-displacement",
+        "workforce-ai-exposure"
+      ],
+      "verified": true
+    },
+    "pnas-unemployment-2025": {
+      "id": "pnas-unemployment-2025",
+      "title": "AI exposure predicts unemployment risk",
+      "url": "https://academic.oup.com/pnasnexus/article/4/4/pgaf107/8104152",
+      "publisher": "PNAS Nexus",
+      "evidenceTier": 1,
+      "datePublished": "2025-02-01",
+      "excerpt": "Workers in AI-exposed occupations face significantly higher unemployment risk, suggesting aggregate job losses may exceed earlier estimates.",
+      "usedIn": [
+        "total-us-jobs-lost"
+      ],
+      "verified": true
+    },
+    "pwbm-ai-adoption-2025": {
+      "id": "pwbm-ai-adoption-2025",
+      "title": "The Projected Impact of Generative AI on Future Productivity Growth",
+      "url": "https://budgetmodel.wharton.upenn.edu/issues/2025/9/8/projected-impact-of-generative-ai-on-future-productivity-growth",
+      "publisher": "Penn Wharton Budget Model (Arnon, Smetters)",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-08",
+      "excerpt": "In about 40% of employment in exposed occupations, at least 50% of tasks will be replaceable. Average labor-cost savings ~25% from current tools, potentially 40% as systems improve.",
+      "usedIn": [
+        "ai-adoption-rate",
+        "workforce-ai-exposure"
+      ],
+      "verified": true
+    },
+    "pwbm-ai-productivity-2025": {
+      "id": "pwbm-ai-productivity-2025",
+      "title": "The Projected Impact of Generative AI on Future Productivity Growth",
+      "url": "https://budgetmodel.wharton.upenn.edu/issues/2025/9/8/projected-impact-of-generative-ai-on-future-productivity-growth",
+      "publisher": "Penn Wharton Budget Model (Arnon, Smetters)",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-08",
+      "excerpt": "Roughly 10% of US work affected in the short run; AI will increase productivity and GDP by 1.5% by 2035. Jobs that AI can completely replace saw 0.75% employment fall 2021-2024.",
+      "usedIn": [
+        "total-us-jobs-lost"
+      ],
+      "verified": true
+    },
+    "pwc-ai-jobs-barometer-2025": {
+      "id": "pwc-ai-jobs-barometer-2025",
+      "title": "PwC Global AI Jobs Barometer 2025",
+      "url": "https://www.pwc.com/gx/en/issues/artificial-intelligence/ai-jobs-barometer.html",
+      "publisher": "PwC",
+      "evidenceTier": 1,
+      "datePublished": "2025-10-15",
+      "excerpt": "AI-skilled workers command a 56% wage premium, up from 25% in prior year. AI roles median compensation at $157K vs. $49,500 all-occupation median.",
+      "usedIn": [
+        "median-wage-impact"
+      ],
+      "verified": true
+    },
+    "pwc-ai-wage-premium-2025": {
+      "id": "pwc-ai-wage-premium-2025",
+      "title": "PwC AI Jobs Barometer 2025: The AI Wage Premium",
+      "url": "https://www.pwc.com/gx/en/issues/artificial-intelligence/ai-jobs-barometer.html",
+      "publisher": "PwC",
+      "evidenceTier": 1,
+      "datePublished": "2025-10-15",
+      "excerpt": "Workers with AI skills now command a 56% wage premium over non-AI peers, up from 25% just one year prior. AI roles median compensation reaches $157K.",
+      "usedIn": [
+        "high-skill-wage-premium"
+      ],
+      "verified": true
+    },
+    "queen-mary-turing-freelancer-2025": {
+      "id": "queen-mary-turing-freelancer-2025",
+      "title": "Creative Industries and GenAI (CREAATIF Good Work Report)",
+      "url": "https://www.qmul.ac.uk/media/news/2025/queen-mary-news/pr/creative-industry-workers-feel-job-worth-and-security-under-threat-from-ai-.html",
+      "publisher": "Queen Mary University of London / Alan Turing Institute",
+      "evidenceTier": 1,
+      "datePublished": "2025-06-01",
+      "excerpt": "Survey of 335 freelance creative workers: 73% believe GenAI is altering quality of work; 68% feel job security reduced; 61% say value placed on their work has decreased; 55% report decline in financial compensation.",
+      "usedIn": [
+        "creative-industry-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "ramp-freelance-creative-2025": {
+      "id": "ramp-freelance-creative-2025",
+      "title": "AI Labor Market Impact: Freelancers",
+      "url": "https://ramp.com/velocity/ai-labor-market-impact-freelancers",
+      "publisher": "Ramp",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-20",
+      "excerpt": "Heaviest pre-ChatGPT freelance spenders shifted to AI tools fastest; substitution ratio of $1 reduced freelance spend to only $0.03 in AI spend.",
+      "usedIn": [
+        "creative-industry-displacement"
+      ],
+      "verified": true
+    },
+    "ramp-freelance-economics-2025": {
+      "id": "ramp-freelance-economics-2025",
+      "title": "Ramp Economics Lab: Freelance Marketplace Spending Collapse",
+      "url": "https://ramp.com/velocity/ai-labor-market-impact-freelancers",
+      "publisher": "Ramp",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-20",
+      "excerpt": "Business spend on freelance marketplaces fell from 0.66% to 0.14% of total spend. Writer earnings on these platforms dropped ~31% (based on marketplace spending data; other studies find 5-33% declines depending on metric). Over half of businesses stopped using freelancers for AI-automatable tasks.",
+      "usedIn": [
+        "freelancer-rate-impact"
+      ],
+      "verified": true
+    },
+    "ramp-freelance-total-2025": {
+      "id": "ramp-freelance-total-2025",
+      "title": "AI Labor Market Impact: Freelancers",
+      "url": "https://ramp.com/velocity/ai-labor-market-impact-freelancers",
+      "publisher": "Ramp",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-20",
+      "excerpt": "More than half of businesses using freelancers in 2022 have stopped entirely; freelance marketplace spend fell from 0.66% to 0.14% of total business spend.",
+      "usedIn": [
+        "total-us-jobs-lost"
+      ],
+      "verified": true
+    },
+    "ramp-freelance-velocity-2025": {
+      "id": "ramp-freelance-velocity-2025",
+      "title": "AI Labor Market Impact: Freelancers",
+      "url": "https://ramp.com/velocity/ai-labor-market-impact-freelancers",
+      "publisher": "Ramp",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-20",
+      "excerpt": "Freelance marketplace spend fell from 0.66% to 0.14% of total business spend (Q4 2021 to Q3 2025); substitution ratio: $1 reduced freelance spend → $0.03 in AI spend.",
+      "usedIn": [
+        "freelancer-rate-impact"
+      ],
+      "verified": true
+    },
+    "rand-edtech-ai-2023": {
+      "id": "rand-edtech-ai-2023",
+      "title": "Using Artificial Intelligence Tools in K-12 Classrooms",
+      "url": "https://www.rand.org/pubs/research_reports/RRA956-21.html",
+      "publisher": "RAND Corporation",
+      "evidenceTier": 2,
+      "datePublished": "2024-04-01",
+      "excerpt": "Surveyed 1,020 teachers nationally; 18% of K-12 teachers used AI for teaching with most using adaptive learning systems weekly. 60% of districts planned to train teachers on AI.",
+      "usedIn": [
+        "education-sector-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "reuters-health-admin-cuts": {
+      "id": "reuters-health-admin-cuts",
+      "title": "Insurers say they'll deploy more AI to combat 'aggressive' coding by hospitals",
+      "url": "https://www.statnews.com/2025/10/31/health-insurer-ai-fights-hospital-ai-coding-billing/",
+      "publisher": "STAT News",
+      "evidenceTier": 3,
+      "datePublished": "2025-10-31",
+      "excerpt": "Health insurance companies deploying AI to combat rising costs driven by hospital use of AI for billing and coding.",
+      "usedIn": [
+        "healthcare-admin-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "revere-health-ai-layoffs-2025": {
+      "id": "revere-health-ai-layoffs-2025",
+      "title": "Transitions to AI spark mass layoffs at Utah healthcare company",
+      "url": "https://www.abc4.com/news/wasatch-front/transitions-ai-mass-layoffs-healthcare-company/",
+      "publisher": "ABC4 News / Becker's Hospital Review",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-15",
+      "excerpt": "Revere Health eliminated 177 positions (billing, coding, accounts receivable) after partnering with IKS Health for AI-driven claims processing and automated billing. Largest documented healthcare admin AI layoff.",
+      "usedIn": [
+        "healthcare-admin-displacement"
+      ],
+      "verified": true
+    },
+    "salesforce-10k-ai-2024": {
+      "id": "salesforce-10k-ai-2024",
+      "title": "Salesforce 2024 10-K — Einstein AI Adoption",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?company=salesforce&CIK=&type=10-K",
+      "publisher": "Salesforce (SEC Filing)",
+      "evidenceTier": 1,
+      "datePublished": "2024-03-06",
+      "excerpt": "Over 1 trillion AI predictions served per week via Einstein. 68% of enterprise customers have enabled at least one AI feature.",
+      "usedIn": [
+        "ai-adoption-rate"
+      ],
+      "verified": false
+    },
+    "sciencedirect-freelancer-demand-2025": {
+      "id": "sciencedirect-freelancer-demand-2025",
+      "title": "The Impact of Generative AI on Freelancer Demand: A Multi-Platform Study",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0167268124004591",
+      "publisher": "Journal of Economic Behavior & Organization",
+      "evidenceTier": 3,
+      "datePublished": "2025-12-01",
+      "excerpt": "Writing gig volume dropped ~30% across major freelance platforms post-ChatGPT. Translation and data entry categories down 35-45%. AI-augmented freelancers partially offset decline.",
+      "usedIn": [
+        "freelancer-rate-impact"
+      ],
+      "verified": true
+    },
+    "shopify-earnings-2024": {
+      "id": "shopify-earnings-2024",
+      "title": "Shopify Q4 2024 Earnings — AI Customer Support Metrics",
+      "url": "https://investors.shopify.com/financial-reports",
+      "publisher": "Shopify (Earnings Call)",
+      "evidenceTier": 1,
+      "datePublished": "2025-02-12",
+      "excerpt": "Shopify reported its AI assistant Sidekick now resolves 40% of merchant support queries without human intervention, up from 12% one year prior.",
+      "usedIn": [
+        "customer-service-automation"
+      ],
+      "verified": true
+    },
+    "soa-uk-illustrators-2024": {
+      "id": "soa-uk-illustrators-2024",
+      "title": "Society of Authors UK Survey: Impact of Generative AI on Creative Workers",
+      "url": "https://europeanwriterscouncil.eu/soa-survey-uk-ai-2024/",
+      "publisher": "Society of Authors (UK)",
+      "evidenceTier": 1,
+      "datePublished": "2024-04-01",
+      "excerpt": "26% of illustrators and 36% of translators have already lost work to generative AI. 78% of illustrators and 77% of translators expect further income decline. Survey of 787 creative professionals.",
+      "usedIn": [
+        "creative-industry-displacement"
+      ],
+      "verified": true
+    },
+    "sp500-layoff-tracker-2025": {
+      "id": "sp500-layoff-tracker-2025",
+      "title": "AI was behind over 50,000 layoffs in 2025",
+      "url": "https://www.cnbc.com/2025/12/21/ai-job-cuts-amazon-microsoft-and-more-cite-ai-for-2025-layoffs.html",
+      "publisher": "CNBC / Challenger, Gray & Christmas",
+      "evidenceTier": 2,
+      "datePublished": "2025-12-21",
+      "excerpt": "Challenger, Gray & Christmas reports AI has been cited as the reason for 54,694 planned layoffs in 2025. Overall job cuts topped 1 million in 2025.",
+      "usedIn": [
+        "total-us-jobs-lost"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "stanford-ai-index-2025": {
+      "id": "stanford-ai-index-2025",
+      "title": "Stanford AI Index Report 2025",
+      "url": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
+      "publisher": "Stanford HAI",
+      "evidenceTier": 2,
+      "datePublished": "2025-12-01",
+      "excerpt": "78% of organizations report using AI in at least one business function. Enterprise AI spending grew 45% YoY globally.",
+      "usedIn": [
+        "ai-adoption-rate"
+      ],
+      "verified": true
+    },
+    "stanford-codex-legal-ai": {
+      "id": "stanford-codex-legal-ai",
+      "title": "AI might not be coming for lawyers' jobs anytime soon",
+      "url": "https://www.technologyreview.com/2025/12/15/1129181/ai-might-not-be-coming-for-lawyers-jobs-anytime-soon/",
+      "publisher": "MIT Technology Review",
+      "evidenceTier": 1,
+      "datePublished": "2025-12-15",
+      "excerpt": "Despite early signs that AI is beginning to affect entry-level workers, labor statistics have yet to show lawyers being displaced. Law graduate employment in 2024 reached 93.4% — the highest rate on record.",
+      "usedIn": [
+        "white-collar-professional-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "stiglitz-korinek-steering-2025": {
+      "id": "stiglitz-korinek-steering-2025",
+      "title": "Steering Technological Progress",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5279584",
+      "publisher": "INET (Korinek, Stiglitz)",
+      "evidenceTier": 1,
+      "datePublished": "2025-05-05",
+      "excerpt": "For the empirically plausible case that capital and labor are gross complements, raising wages requires capital-augmenting innovation rather than labor-augmenting.",
+      "usedIn": [
+        "median-wage-impact"
+      ],
+      "verified": true
+    },
+    "substack-wages-doom": {
+      "id": "substack-wages-doom",
+      "title": "The Wage Compression that Persisted",
+      "url": "https://arindube.substack.com/p/the-wage-compression-that-persisted",
+      "publisher": "Arin Dube (Substack)",
+      "evidenceTier": 4,
+      "datePublished": "2025-05-01",
+      "usedIn": [
+        "median-wage-impact"
+      ],
+      "verified": true
+    },
+    "tdoc-10k-2024": {
+      "id": "tdoc-10k-2024",
+      "title": "Teleperformance 2024 Annual Report — AI Transformation Strategy",
+      "url": "https://www.teleperformance.com/en-us/investors/publications/annual-reports/",
+      "publisher": "Teleperformance (Annual Filing)",
+      "evidenceTier": 1,
+      "datePublished": "2025-03-15",
+      "excerpt": "World's largest CX outsourcer disclosed 15% workforce reduction in 2024, explicitly citing AI chatbot deployment by clients as primary driver.",
+      "usedIn": [
+        "customer-service-automation"
+      ],
+      "verified": false
+    },
+    "techcrunch-ai-salary-gap": {
+      "id": "techcrunch-ai-salary-gap",
+      "title": "The AI salary gap is creating two Americas",
+      "url": "https://techcrunch.com/2025/04/15/the-ai-salary-gap-is-creating-two-americas/",
+      "publisher": "TechCrunch",
+      "evidenceTier": 3,
+      "datePublished": "2025-04-15",
+      "usedIn": [
+        "geographic-wage-divergence"
+      ],
+      "verified": false
+    },
+    "techcrunch-creative-layoffs": {
+      "id": "techcrunch-creative-layoffs",
+      "title": "Creative studios slash headcount as AI tools mature",
+      "url": "https://techcrunch.com/2024/01/29/as-layoffs-deepen-ais-role-in-the-cuts-is-murky-but-it-definitely-has-one/",
+      "publisher": "TechCrunch",
+      "evidenceTier": 3,
+      "datePublished": "2024-11-01",
+      "usedIn": [
+        "creative-industry-displacement"
+      ],
+      "verified": false
+    },
+    "unctad-creative-industry-2025": {
+      "id": "unctad-creative-industry-2025",
+      "title": "Creative Economy Outlook 2024",
+      "url": "https://unctad.org/publication/creative-economy-outlook-2024",
+      "publisher": "UN Trade and Development (UNCTAD)",
+      "evidenceTier": 3,
+      "datePublished": "2024-12-01",
+      "excerpt": "Covers the role of creative industries in trade and economic growth; discusses AI's impact on the creative economy. Creative services exports surged to $1.4 trillion in 2022.",
+      "usedIn": [
+        "creative-industry-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "unesco-ai-education-2023": {
+      "id": "unesco-ai-education-2023",
+      "title": "Guidance for Generative AI in Education and Research",
+      "url": "https://www.unesco.org/en/articles/guidance-generative-ai-education-and-research",
+      "publisher": "UNESCO",
+      "evidenceTier": 2,
+      "datePublished": "2023-09-07",
+      "excerpt": "AI tutoring systems can handle 60% of routine student queries. Teaching assistants and tutors face the most immediate displacement risk.",
+      "usedIn": [
+        "education-sector-displacement"
+      ],
+      "verified": true
+    },
+    "unitedhealth-10k-2024": {
+      "id": "unitedhealth-10k-2024",
+      "title": "UnitedHealth Group 2024 10-K — AI Operational Efficiency",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?company=unitedhealth&CIK=&type=10-K",
+      "publisher": "UnitedHealth Group (SEC Filing)",
+      "evidenceTier": 1,
+      "datePublished": "2025-02-15",
+      "excerpt": "UnitedHealth reported AI-driven claims processing reduced administrative costs by $1.2B and eliminated 8,000 administrative positions in 2024.",
+      "usedIn": [
+        "healthcare-admin-displacement"
+      ],
+      "verified": false
+    },
+    "uoc-creative-automation-2025": {
+      "id": "uoc-creative-automation-2025",
+      "title": "AI Can Automate Creative Professions, UOC Study Finds",
+      "url": "https://www.uoc.edu/en/news/2025/ai-could-automate-creative-professions",
+      "publisher": "Universitat Oberta de Catalunya",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-15",
+      "excerpt": "Peer-reviewed study finds AI can now automate substantial portions of creative work. Freelance writing gigs dropped 30% post-ChatGPT launch.",
+      "usedIn": [
+        "creative-industry-displacement"
+      ],
+      "verified": true
+    },
+    "ups-8k-2024": {
+      "id": "ups-8k-2024",
+      "title": "UPS Q4 2024 Earnings — AI Logistics & Workforce Restructuring",
+      "url": "https://investors.ups.com/sec-filings",
+      "publisher": "UPS (SEC Filing)",
+      "evidenceTier": 1,
+      "datePublished": "2025-01-30",
+      "excerpt": "UPS cut 12,000 jobs in 2024 citing AI-optimized routing and automated package sorting. Remaining driver wages increased 2.5% under new contract.",
+      "usedIn": [
+        "median-wage-impact"
+      ],
+      "verified": false
+    },
+    "upwork-earnings-q2-2024": {
+      "id": "upwork-earnings-q2-2024",
+      "title": "Upwork Q2 2024 Earnings Report",
+      "url": "https://investors.upwork.com/news-releases/news-release-details/upwork-reports-second-quarter-2024-financial-results",
+      "publisher": "Upwork (SEC Filing)",
+      "evidenceTier": 1,
+      "datePublished": "2024-07-01",
+      "excerpt": "Gross services volume in writing declined 33% YoY. Translation down 40%. Company pivoting to AI-augmented freelancer model.",
+      "usedIn": [
+        "freelancer-rate-impact"
+      ],
+      "verified": true
+    },
+    "upwork-freelancer-impact": {
+      "id": "upwork-freelancer-impact",
+      "title": "Upwork Q2 2024 Earnings — Freelancer Market Trends",
+      "url": "https://investors.upwork.com/news-releases/news-release-details/upwork-announces-second-quarter-2024-financial-results",
+      "publisher": "Upwork (Earnings Report)",
+      "evidenceTier": 1,
+      "datePublished": "2024-05-20",
+      "excerpt": "Writing and translation freelancer job volume declined ~30% YoY. Graphic design jobs fell 17%. AI-augmented creative roles grew 45%.",
+      "usedIn": [
+        "creative-industry-displacement"
+      ],
+      "verified": true
+    },
+    "upwork-trends-2023": {
+      "id": "upwork-trends-2023",
+      "title": "Upwork Freelance Forward 2023",
+      "url": "https://www.upwork.com/research/freelance-forward-2023-research-report",
+      "publisher": "Upwork",
+      "evidenceTier": 1,
+      "datePublished": "2023-06-01",
+      "excerpt": "Writing freelancers reported 15% fewer job postings; early signs of rate compression in translation and content categories.",
+      "usedIn": [
+        "freelancer-rate-impact"
+      ],
+      "verified": true
+    },
+    "walmart-10k-2024": {
+      "id": "walmart-10k-2024",
+      "title": "Walmart 2024 10-K — Automation Investment & Wage Strategy",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=walmart&CIK=&type=10-K",
+      "publisher": "Walmart (SEC Filing)",
+      "evidenceTier": 1,
+      "datePublished": "2025-03-28",
+      "excerpt": "Walmart raised minimum wage to $15/hr but disclosed AI-driven checkout and inventory systems reducing total store staffing needs by ~8% per location.",
+      "usedIn": [
+        "median-wage-impact"
+      ],
+      "verified": false
+    },
+    "webb-2024": {
+      "id": "webb-2024",
+      "title": "The Impact of Artificial Intelligence on the Labor Market",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3482150",
+      "publisher": "Stanford (Webb)",
+      "evidenceTier": 1,
+      "datePublished": "2024-06-01",
+      "excerpt": "AI exposure is concentrated among high-skill, high-wage occupations, but wage effects may cascade downward.",
+      "usedIn": [
+        "median-wage-impact"
+      ],
+      "verified": true
+    },
+    "wef-creative-2023": {
+      "id": "wef-creative-2023",
+      "title": "Future of Jobs Report 2023 — Creative and Media Professions",
+      "url": "https://www.weforum.org/publications/the-future-of-jobs-report-2023/",
+      "publisher": "World Economic Forum",
+      "evidenceTier": 2,
+      "datePublished": "2023-04-30",
+      "excerpt": "Graphic designers, copywriters, and marketing analysts are among the roles employers expect to decline most rapidly due to generative AI.",
+      "usedIn": [
+        "creative-industry-displacement"
+      ],
+      "verified": true
+    },
+    "wef-education-displacement-2025": {
+      "id": "wef-education-displacement-2025",
+      "title": "Future of Jobs Report 2025: Education Sector Analysis",
+      "url": "https://www.weforum.org/publications/the-future-of-jobs-report-2025/",
+      "publisher": "World Economic Forum",
+      "evidenceTier": 2,
+      "datePublished": "2025-12-01",
+      "excerpt": "Education support roles face moderate displacement risk while core teaching remains protected. Administrative and content creation roles most affected by AI adoption.",
+      "usedIn": [
+        "education-sector-displacement"
+      ],
+      "verified": true
+    },
+    "wef-future-jobs-2023": {
+      "id": "wef-future-jobs-2023",
+      "title": "Future of Jobs Report 2023",
+      "url": "https://www.weforum.org/publications/the-future-of-jobs-report-2023/",
+      "publisher": "World Economic Forum",
+      "evidenceTier": 2,
+      "datePublished": "2023-04-30",
+      "excerpt": "Employers estimate that 44% of workers' core skills will be disrupted in the next five years.",
+      "usedIn": [
+        "tech-sector-displacement"
+      ],
+      "verified": true
+    },
+    "wef-future-jobs-2024": {
+      "id": "wef-future-jobs-2024",
+      "title": "Future of Jobs Report 2024",
+      "url": "https://www.weforum.org/publications/the-future-of-jobs-report-2025/",
+      "publisher": "World Economic Forum",
+      "evidenceTier": 2,
+      "datePublished": "2024-09-15",
+      "excerpt": "Employers expect 23% of jobs to change in the next five years, with a net decline of 2-4% of total roles once job creation offsets displacement.",
+      "usedIn": [
+        "total-us-jobs-lost"
+      ],
+      "verified": true
+    },
+    "wef-future-jobs-2025": {
+      "id": "wef-future-jobs-2025",
+      "title": "Future of Jobs Report 2025",
+      "url": "https://www.weforum.org/publications/the-future-of-jobs-report-2025/",
+      "publisher": "World Economic Forum",
+      "evidenceTier": 2,
+      "datePublished": "2025-12-01",
+      "excerpt": "40% of employers globally expect to reduce headcount as AI automates tasks. Net displacement estimates range from 5-14% of current roles by 2030.",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true
+    },
+    "worldbank-liu-wang-yu-2025": {
+      "id": "worldbank-liu-wang-yu-2025",
+      "title": "Labor Demand in the Age of Generative AI: Early Evidence from the U.S. Job Posting Data",
+      "url": "https://openknowledge.worldbank.org/server/api/core/bitstreams/e78c18bd-a035-4811-b340-3771ff14ac04/content",
+      "publisher": "World Bank (Liu, Wang, Yu)",
+      "evidenceTier": 1,
+      "datePublished": "2025-11-01",
+      "excerpt": "Job postings for high-AI-substitution occupations fell 12% relative to low-substitution roles post-ChatGPT; effect grew from 6% in year one to 18% by year three. Based on 285 million Lightcast job postings.",
+      "usedIn": [
+        "overall-us-displacement",
+        "white-collar-professional-displacement",
+        "entry-level-wage-impact"
+      ],
+      "verified": true
+    },
+    "wsj-automation-2024": {
+      "id": "wsj-automation-2024",
+      "title": "AI Is Starting to Threaten White-Collar Jobs",
+      "url": "https://www.wsj.com/lifestyle/careers/ai-is-starting-to-threaten-white-collar-jobs-few-industries-are-immune-b2daf100",
+      "publisher": "The Wall Street Journal",
+      "evidenceTier": 3,
+      "datePublished": "2024-07-15",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true
+    },
+    "wsj-entry-level-squeeze": {
+      "id": "wsj-entry-level-squeeze",
+      "title": "Entry-Level Jobs Are Vanishing — and AI Is a Big Reason",
+      "url": "https://www.wsj.com/lifestyle/careers/ai-entry-level-jobs-career-strategy-f59d574b",
+      "publisher": "The Wall Street Journal",
+      "evidenceTier": 3,
+      "datePublished": "2025-01-15",
+      "usedIn": [
+        "entry-level-wage-impact"
+      ],
+      "verified": true
+    },
+    "wsj-white-collar-layoffs": {
+      "id": "wsj-white-collar-layoffs",
+      "title": "White-Collar Workers Are Starting to Feel the AI Squeeze",
+      "url": "https://www.wsj.com/economy/jobs/white-collar-jobs-ai-324b749c",
+      "publisher": "The Wall Street Journal",
+      "evidenceTier": 3,
+      "datePublished": "2024-10-05",
+      "usedIn": [
+        "white-collar-professional-displacement"
+      ],
+      "verified": true
+    },
+    "x-ai-salaries-thread": {
+      "id": "x-ai-salaries-thread",
+      "title": "AI engineer salaries are insane right now",
+      "url": "https://x.com/search?q=AI+engineer+salaries",
+      "publisher": "X (Twitter)",
+      "evidenceTier": 4,
+      "datePublished": "2025-05-01",
+      "usedIn": [
+        "high-skill-wage-premium"
+      ],
+      "verified": false,
+      "synthetic": true,
+      "_action": "REMOVE"
+    },
+    "yale-budget-lab-2025": {
+      "id": "yale-budget-lab-2025",
+      "title": "AI and the U.S. Labor Market: No Macro Displacement Yet",
+      "url": "https://budgetlab.yale.edu/research/evaluating-impact-ai-labor-market-current-state-affairs",
+      "publisher": "Yale Budget Lab",
+      "evidenceTier": 1,
+      "datePublished": "2025-10-15",
+      "excerpt": "Analysis finds no significant macro-level job displacement from AI as of late 2025, though structural shifts are emerging in specific sectors.",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true
+    },
+    "zendesk-ai-cs-2026": {
+      "id": "zendesk-ai-cs-2026",
+      "title": "Zendesk AI Customer Service Statistics 2026",
+      "url": "https://www.zendesk.com/blog/ai-customer-service-statistics/",
+      "publisher": "Zendesk",
+      "evidenceTier": 3,
+      "datePublished": "2026-01-15",
+      "excerpt": "95% of customer interactions projected to be AI-powered by 2028. Current AI resolution rates at leading companies exceed 55% without human escalation.",
+      "usedIn": [
+        "customer-service-automation"
+      ],
+      "verified": true
+    }
+  }
+}

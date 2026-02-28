@@ -13,23 +13,19 @@
       "value": 15,
       "confidenceLow": 10,
       "confidenceHigh": 22,
-      "sourceIds": ["indeed-ai-salaries-2023"],
+      "sourceIds": [
+        "indeed-ai-salaries-2023"
+      ],
       "evidenceTier": 3
-    },
-    {
-      "date": "2023-07-01",
-      "value": 18,
-      "confidenceLow": 12,
-      "confidenceHigh": 28,
-      "sourceIds": ["nber-ai-wages-2023"],
-      "evidenceTier": 1
     },
     {
       "date": "2024-01-15",
       "value": 20,
       "confidenceLow": 14,
       "confidenceHigh": 30,
-      "sourceIds": ["lightcast-2024"],
+      "sourceIds": [
+        "lightcast-2024"
+      ],
       "evidenceTier": 2
     },
     {
@@ -37,7 +33,9 @@
       "value": 22,
       "confidenceLow": 15,
       "confidenceHigh": 32,
-      "sourceIds": ["msft-earnings-2024"],
+      "sourceIds": [
+        "msft-earnings-2024"
+      ],
       "evidenceTier": 1
     },
     {
@@ -45,7 +43,9 @@
       "value": 24,
       "confidenceLow": 16,
       "confidenceHigh": 35,
-      "sourceIds": ["ft-ai-salaries-2024"],
+      "sourceIds": [
+        "ft-ai-salaries-2024"
+      ],
       "evidenceTier": 3
     },
     {
@@ -53,23 +53,19 @@
       "value": 25,
       "confidenceLow": 18,
       "confidenceHigh": 38,
-      "sourceIds": ["mit-ai-premium-2025"],
+      "sourceIds": [
+        "mit-ai-premium-2025"
+      ],
       "evidenceTier": 1
-    },
-    {
-      "date": "2025-05-01",
-      "value": 30,
-      "confidenceLow": 20,
-      "confidenceHigh": 45,
-      "sourceIds": ["x-ai-salaries-thread"],
-      "evidenceTier": 4
     },
     {
       "date": "2025-07-23",
       "value": 28,
       "confidenceLow": 20,
       "confidenceHigh": 43,
-      "sourceIds": ["lightcast-beyond-buzz-2025"],
+      "sourceIds": [
+        "lightcast-beyond-buzz-2025"
+      ],
       "evidenceTier": 2
     },
     {
@@ -77,7 +73,9 @@
       "value": 25,
       "confidenceLow": 17,
       "confidenceHigh": 36,
-      "sourceIds": ["oecd-skills-2025"],
+      "sourceIds": [
+        "oecd-skills-2025"
+      ],
       "evidenceTier": 1
     },
     {
@@ -85,7 +83,9 @@
       "value": 30,
       "confidenceLow": 22,
       "confidenceHigh": 42,
-      "sourceIds": ["pwc-ai-wage-premium-2025"],
+      "sourceIds": [
+        "pwc-ai-wage-premium-2025"
+      ],
       "evidenceTier": 1
     },
     {
@@ -93,7 +93,9 @@
       "value": 35,
       "confidenceLow": 25,
       "confidenceHigh": 48,
-      "sourceIds": ["indexdev-ai-salary-2026"],
+      "sourceIds": [
+        "indexdev-ai-salary-2026"
+      ],
       "evidenceTier": 2
     }
   ],
@@ -101,42 +103,54 @@
     {
       "date": "2025-02-21",
       "direction": "up",
-      "sourceIds": ["nvidia-10k-2024"],
+      "sourceIds": [
+        "nvidia-10k-2024"
+      ],
       "evidenceTier": 1,
       "label": "NVIDIA: median comp $328K, up 24% YoY"
     },
     {
       "date": "2024-10-02",
       "direction": "up",
-      "sourceIds": ["openai-8k-funding-2024"],
+      "sourceIds": [
+        "openai-8k-funding-2024"
+      ],
       "evidenceTier": 1,
       "label": "OpenAI: AI researcher comp $800K–$1.5M total"
     },
     {
       "date": "2023-07-14",
       "direction": "down",
-      "sourceIds": ["noy-zhang-productivity-2023"],
+      "sourceIds": [
+        "noy-zhang-productivity-2023"
+      ],
       "evidenceTier": 1,
       "label": "Noy & Zhang: low-ability workers gain most from AI"
     },
     {
       "date": "2025-05-01",
       "direction": "down",
-      "sourceIds": ["brynjolfsson-li-raymond-qje-2025"],
+      "sourceIds": [
+        "brynjolfsson-li-raymond-qje-2025"
+      ],
       "evidenceTier": 1,
       "label": "QJE: less experienced workers improve most with AI"
     },
     {
       "date": "2025-07-23",
       "direction": "up",
-      "sourceIds": ["lightcast-beyond-buzz-2025"],
+      "sourceIds": [
+        "lightcast-beyond-buzz-2025"
+      ],
       "evidenceTier": 2,
       "label": "Lightcast: 51% of AI job postings now outside IT; 800% growth in non-tech gen AI roles since 2022"
     },
     {
       "date": "2026-01-15",
       "direction": "up",
-      "sourceIds": ["imf-skill-gaps-premium-2026"],
+      "sourceIds": [
+        "imf-skill-gaps-premium-2026"
+      ],
       "evidenceTier": 2,
       "label": "IMF: postings with 4+ new skills pay up to 15% more"
     }
@@ -149,15 +163,6 @@
       "publisher": "Indeed Hiring Lab",
       "evidenceTier": 3,
       "datePublished": "2023-02-01"
-    },
-    {
-      "id": "nber-ai-wages-2023",
-      "title": "The Impact of AI on Labor Markets: A Survey",
-      "url": "https://www.nber.org/papers",
-      "publisher": "NBER",
-      "evidenceTier": 1,
-      "datePublished": "2023-07-01",
-      "excerpt": "Workers who complement AI see significant wage gains; those whose tasks are substituted face wage pressure."
     },
     {
       "id": "lightcast-2024",
@@ -192,14 +197,6 @@
       "evidenceTier": 1,
       "datePublished": "2025-01-10",
       "excerpt": "Job postings requiring AI skills offer 21-35% higher wages than comparable postings without AI requirements."
-    },
-    {
-      "id": "x-ai-salaries-thread",
-      "title": "AI engineer salaries are insane right now",
-      "url": "https://x.com/search?q=AI+engineer+salaries",
-      "publisher": "X (Twitter)",
-      "evidenceTier": 4,
-      "datePublished": "2025-05-01"
     },
     {
       "id": "lightcast-beyond-buzz-2025",
@@ -279,7 +276,7 @@
       "publisher": "QJE (Brynjolfsson, Li, Raymond)",
       "evidenceTier": 1,
       "datePublished": "2025-05-01",
-      "excerpt": "Less experienced workers improve most from AI assistance; AI disseminates best practices from top performers. Top workers see smaller or negative quality effects."
+      "excerpt": "AI assistance increases customer service worker productivity by 15% on average. Less experienced workers improve most; AI disseminates best practices from top performers."
     },
     {
       "id": "imf-skill-gaps-premium-2026",

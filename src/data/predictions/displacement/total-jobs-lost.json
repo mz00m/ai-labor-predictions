@@ -13,7 +13,9 @@
       "value": 3.5,
       "confidenceLow": 3,
       "confidenceHigh": 5,
-      "sourceIds": ["goldman-300m"],
+      "sourceIds": [
+        "goldman-300m"
+      ],
       "evidenceTier": 1
     },
     {
@@ -21,7 +23,9 @@
       "value": 2,
       "confidenceLow": 0.5,
       "confidenceHigh": 4.5,
-      "sourceIds": ["acemoglu-simple-macro"],
+      "sourceIds": [
+        "acemoglu-simple-macro"
+      ],
       "evidenceTier": 1
     },
     {
@@ -29,7 +33,9 @@
       "value": 4,
       "confidenceLow": 2,
       "confidenceHigh": 4,
-      "sourceIds": ["wef-future-jobs-2024"],
+      "sourceIds": [
+        "wef-future-jobs-2024"
+      ],
       "evidenceTier": 2
     },
     {
@@ -37,7 +43,9 @@
       "value": 6,
       "confidenceLow": 4,
       "confidenceHigh": 8,
-      "sourceIds": ["forrester-jobs-2025"],
+      "sourceIds": [
+        "forrester-jobs-2025"
+      ],
       "evidenceTier": 2
     },
     {
@@ -45,7 +53,9 @@
       "value": 7,
       "confidenceLow": 3,
       "confidenceHigh": 14,
-      "sourceIds": ["goldman-total-projected-2025"],
+      "sourceIds": [
+        "goldman-total-projected-2025"
+      ],
       "evidenceTier": 2
     },
     {
@@ -53,7 +63,9 @@
       "value": 0.75,
       "confidenceLow": 0.3,
       "confidenceHigh": 1.5,
-      "sourceIds": ["pwbm-ai-productivity-2025"],
+      "sourceIds": [
+        "pwbm-ai-productivity-2025"
+      ],
       "evidenceTier": 1
     },
     {
@@ -61,7 +73,9 @@
       "value": 0,
       "confidenceLow": 0,
       "confidenceHigh": 1,
-      "sourceIds": ["gimbel-yale-ai-labor-2025"],
+      "sourceIds": [
+        "gimbel-yale-ai-labor-2025"
+      ],
       "evidenceTier": 1
     },
     {
@@ -69,7 +83,9 @@
       "value": 0,
       "confidenceLow": 0,
       "confidenceHigh": 1,
-      "sourceIds": ["nber-csuite-survey-2025"],
+      "sourceIds": [
+        "nber-csuite-survey-2025"
+      ],
       "evidenceTier": 1
     }
   ],
@@ -82,7 +98,7 @@
       "publisher": "Goldman Sachs",
       "evidenceTier": 1,
       "datePublished": "2023-03-26",
-      "excerpt": "300 million full-time jobs globally could be exposed to automation; translates to roughly 3-5% net US job losses after accounting for new job creation."
+      "excerpt": "Roughly two-thirds of current jobs are exposed to some degree of AI automation; generative AI could substitute up to one-fourth of current work."
     },
     {
       "id": "oecd-employment-2023",
@@ -152,17 +168,16 @@
       "url": "https://www.bls.gov/emp/",
       "publisher": "Bureau of Labor Statistics",
       "evidenceTier": 1,
-      "datePublished": "2025-08-01",
-      "excerpt": "BLS projects moderate net displacement with significant variation across occupational groups."
+      "datePublished": "2025-08-01"
     },
     {
       "id": "sp500-layoff-tracker-2025",
-      "title": "S&P 500 AI-Related Layoff Disclosures — Aggregate Analysis",
-      "url": "https://efts.sec.gov/LATEST/search-index?q=%22artificial+intelligence%22&forms=10-K",
-      "publisher": "SEC EDGAR (Aggregated)",
-      "evidenceTier": 1,
-      "datePublished": "2025-03-01",
-      "excerpt": "Analysis of 2024 10-K filings: 47 S&P 500 companies disclosed AI-driven workforce restructuring. Cumulative disclosed headcount reductions: ~185,000 positions."
+      "title": "AI was behind over 50,000 layoffs in 2025",
+      "url": "https://www.cnbc.com/2025/12/21/ai-job-cuts-amazon-microsoft-and-more-cite-ai-for-2025-layoffs.html",
+      "publisher": "CNBC / Challenger, Gray & Christmas",
+      "evidenceTier": 2,
+      "datePublished": "2025-12-21",
+      "excerpt": "Challenger, Gray & Christmas reports AI has been cited as the reason for 54,694 planned layoffs in 2025. Overall job cuts topped 1 million in 2025."
     },
     {
       "id": "indeed-total-postings-2025",

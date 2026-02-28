@@ -13,7 +13,9 @@
       "value": 14,
       "confidenceLow": 8,
       "confidenceHigh": 20,
-      "sourceIds": ["lightcast-tech-postings-2025"],
+      "sourceIds": [
+        "lightcast-tech-postings-2025"
+      ],
       "evidenceTier": 2
     },
     {
@@ -21,7 +23,9 @@
       "value": 33,
       "confidenceLow": 25,
       "confidenceHigh": 40,
-      "sourceIds": ["indeed-sw-dev-postings-2025"],
+      "sourceIds": [
+        "indeed-sw-dev-postings-2025"
+      ],
       "evidenceTier": 2
     },
     {
@@ -29,7 +33,9 @@
       "value": 13,
       "confidenceLow": 8,
       "confidenceHigh": 20,
-      "sourceIds": ["brynjolfsson-chandar-chen-2025"],
+      "sourceIds": [
+        "brynjolfsson-chandar-chen-2025"
+      ],
       "evidenceTier": 1
     },
     {
@@ -37,7 +43,9 @@
       "value": 0,
       "confidenceLow": 0,
       "confidenceHigh": 3,
-      "sourceIds": ["brookings-2024"],
+      "sourceIds": [
+        "brookings-2024"
+      ],
       "evidenceTier": 2
     },
     {
@@ -45,7 +53,9 @@
       "value": 27.5,
       "confidenceLow": 20,
       "confidenceHigh": 35,
-      "sourceIds": ["bls-programmer-employment-observed"],
+      "sourceIds": [
+        "bls-programmer-employment-observed"
+      ],
       "evidenceTier": 1
     },
     {
@@ -53,7 +63,9 @@
       "value": 6,
       "confidenceLow": 3,
       "confidenceHigh": 10,
-      "sourceIds": ["bls-programmer-projections-2034"],
+      "sourceIds": [
+        "bls-programmer-projections-2034"
+      ],
       "evidenceTier": 1
     }
   ],
@@ -61,70 +73,90 @@
     {
       "date": "2025-10-01",
       "direction": "down",
-      "sourceIds": ["challenger-tech-layoffs-2025"],
+      "sourceIds": [
+        "challenger-tech-layoffs-2025"
+      ],
       "evidenceTier": 2,
       "label": "Challenger: 78K tech jobs lost to AI in H1 2025"
     },
     {
       "date": "2026-01-01",
       "direction": "down",
-      "sourceIds": ["bls-tech-projections-2026"],
+      "sourceIds": [
+        "bls-tech-projections-2026"
+      ],
       "evidenceTier": 3,
       "label": "BLS: SW dev growth revised down from 25% to 17%"
     },
     {
       "date": "2026-01-06",
       "direction": "down",
-      "sourceIds": ["dallas-fed-young-workers-2026"],
+      "sourceIds": [
+        "dallas-fed-young-workers-2026"
+      ],
       "evidenceTier": 1,
       "label": "Dallas Fed: young worker share fell 0.9pp"
     },
     {
       "date": "2025-12-01",
       "direction": "down",
-      "sourceIds": ["challenger-ai-job-cuts-2025"],
+      "sourceIds": [
+        "challenger-ai-job-cuts-2025"
+      ],
       "evidenceTier": 2,
       "label": "Challenger: 54,694 AI-cited job cuts in 2025"
     },
     {
       "date": "2025-09-01",
       "direction": "down",
-      "sourceIds": ["comptia-it-unemployment-2025"],
+      "sourceIds": [
+        "comptia-it-unemployment-2025"
+      ],
       "evidenceTier": 2,
       "label": "CompTIA: IT unemployment rose from 3.9% to 5.7%"
     },
     {
       "date": "2026-02-24",
       "direction": "down",
-      "sourceIds": ["metr-2026"],
+      "sourceIds": [
+        "metr-2026"
+      ],
       "evidenceTier": 1,
       "label": "METR (updated): AI made experienced open-source devs 18% slower (CI: -38% to +9%)"
     },
     {
       "date": "2025-06-01",
       "direction": "up",
-      "sourceIds": ["cui-microsoft-copilot-2025"],
+      "sourceIds": [
+        "cui-microsoft-copilot-2025"
+      ],
       "evidenceTier": 1,
       "label": "Microsoft/Accenture: 26% more pull requests with Copilot"
     },
     {
       "date": "2023-02-01",
       "direction": "up",
-      "sourceIds": ["peng-copilot-2023"],
+      "sourceIds": [
+        "peng-copilot-2023"
+      ],
       "evidenceTier": 1,
       "label": "GitHub Copilot RCT: developers 55.8% faster"
     },
     {
       "date": "2026-01-15",
       "direction": "down",
-      "sourceIds": ["cognizant-new-work-2026"],
+      "sourceIds": [
+        "cognizant-new-work-2026"
+      ],
       "evidenceTier": 2,
       "label": "Cognizant: computer/math roles 67% task exposure — second highest of all categories"
     },
     {
       "date": "2026-02-24",
       "direction": "down",
-      "sourceIds": ["goldman-mei-ai-labor-2026"],
+      "sourceIds": [
+        "goldman-mei-ai-labor-2026"
+      ],
       "evidenceTier": 2,
       "label": "Goldman (Mei): AI impact 'largely confined to tech sector'; expects it to grow materially"
     }
@@ -220,12 +252,12 @@
     },
     {
       "id": "lightcast-tech-postings-2025",
-      "title": "Tech Sector Job Postings Analysis Q4 2024",
-      "url": "https://lightcast.io/resources",
-      "publisher": "Lightcast",
+      "title": "How AI is Disrupting the Tech Job Market: Data from 20M Job Postings",
+      "url": "https://bloomberry.com/blog/how-ai-is-disrupting-the-tech-job-market-data-from-20m-job-postings/",
+      "publisher": "Bloomberry (analysis of Lightcast data)",
       "evidenceTier": 2,
-      "datePublished": "2025-01-20",
-      "excerpt": "Software developer postings declined 14% YoY while AI/ML engineer postings grew 45%. Net tech postings down 6% reflecting structural shift, not just cyclical downturn."
+      "datePublished": "2024-12-01",
+      "excerpt": "Job openings grew 80% for AI scientists and 70% for ML engineers, while backend engineer postings declined 14%, frontend 24%, and data engineers 20%+."
     },
     {
       "id": "challenger-tech-layoffs-2025",
@@ -238,12 +270,12 @@
     },
     {
       "id": "bls-tech-projections-2026",
-      "title": "BLS Revised Tech Sector Employment Projections 2024-2034",
-      "url": "https://www.bls.gov/emp/tables/emp-by-detailed-occupation.htm",
-      "publisher": "Bureau of Labor Statistics",
-      "evidenceTier": 3,
-      "datePublished": "2025-12-15",
-      "excerpt": "BLS projects AI will dampen software developer employment growth to 17% through 2034, revised down from prior 25% estimate, as AI coding tools reduce headcount needs."
+      "title": "AI impacts in BLS employment projections",
+      "url": "https://www.bls.gov/opub/ted/2025/ai-impacts-in-bls-employment-projections.htm",
+      "publisher": "Bureau of Labor Statistics (The Economics Daily)",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-01",
+      "excerpt": "Software developer employment projected to grow 17.9% (2023-2033). Despite AI exposure, this occupation is unlikely to experience employment decline because robust software needs are expected to support continued demand."
     },
     {
       "id": "brynjolfsson-chandar-chen-2025",
@@ -378,7 +410,7 @@
       "publisher": "Cognizant",
       "evidenceTier": 2,
       "datePublished": "2026-01-15",
-      "excerpt": "Computer and mathematical roles have 67% task exposure to AI — second only to financial managers (84%). Analysis of 18,000 tasks across 1,000 O*NET occupations. Exposure scores are 30% above what was originally projected for 2032."
+      "excerpt": "Education task exposure jumped from 11% to 49% — a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations."
     },
     {
       "id": "goldman-mei-ai-labor-2026",
@@ -387,7 +419,7 @@
       "publisher": "Goldman Sachs Research (Pierfrancesco Mei)",
       "evidenceTier": 2,
       "datePublished": "2026-02-24",
-      "excerpt": "AI's labor market impact has so far been 'largely confined to the technology sector itself, where employment trends have weakened materially in the last three years.' Expects impact to grow materially. Net positive hiring impulse from AI-infrastructure builders and AI-proficient workers partially offsets losses."
+      "excerpt": "AI's labor market impact still small — only 5-10K/month drag on net job growth. Only 2½% of jobs exposed to automation today. Baseline forecast: 6-7% of workers displaced (range 3-14%), lowering annual hiring by 1M jobs and raising unemployment ~½pp. US creates 30M gross new jobs/year; does not anticipate job apocalypse. Impact so far largely confined to tech sector but expects it to grow materially."
     }
   ],
   "marketIds": {

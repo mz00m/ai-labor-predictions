@@ -13,7 +13,9 @@
       "value": 25,
       "confidenceLow": 18,
       "confidenceHigh": 30,
-      "sourceIds": ["goldman-300m"],
+      "sourceIds": [
+        "goldman-300m"
+      ],
       "evidenceTier": 1
     },
     {
@@ -21,7 +23,9 @@
       "value": 27,
       "confidenceLow": 20,
       "confidenceHigh": 35,
-      "sourceIds": ["oecd-2023"],
+      "sourceIds": [
+        "oecd-2023"
+      ],
       "evidenceTier": 1
     },
     {
@@ -29,7 +33,9 @@
       "value": 40,
       "confidenceLow": 30,
       "confidenceHigh": 50,
-      "sourceIds": ["imf-ai-2024"],
+      "sourceIds": [
+        "imf-ai-2024"
+      ],
       "evidenceTier": 2
     },
     {
@@ -37,7 +43,9 @@
       "value": 80,
       "confidenceLow": 60,
       "confidenceHigh": 86,
-      "sourceIds": ["eloundou-openai-2024"],
+      "sourceIds": [
+        "eloundou-openai-2024"
+      ],
       "evidenceTier": 1
     },
     {
@@ -45,7 +53,9 @@
       "value": 36,
       "confidenceLow": 28,
       "confidenceHigh": 44,
-      "sourceIds": ["anthropic-econ-primitives-2026"],
+      "sourceIds": [
+        "anthropic-econ-primitives-2026"
+      ],
       "evidenceTier": 1
     },
     {
@@ -53,7 +63,9 @@
       "value": 40,
       "confidenceLow": 30,
       "confidenceHigh": 50,
-      "sourceIds": ["pwbm-ai-adoption-2025"],
+      "sourceIds": [
+        "pwbm-ai-adoption-2025"
+      ],
       "evidenceTier": 1
     },
     {
@@ -61,7 +73,9 @@
       "value": 38,
       "confidenceLow": 30,
       "confidenceHigh": 38,
-      "sourceIds": ["hartley-genai-exposure-2026"],
+      "sourceIds": [
+        "hartley-genai-exposure-2026"
+      ],
       "evidenceTier": 1
     },
     {
@@ -69,7 +83,9 @@
       "value": 49,
       "confidenceLow": 40,
       "confidenceHigh": 60,
-      "sourceIds": ["anthropic-econ-primitives-2026"],
+      "sourceIds": [
+        "anthropic-econ-primitives-2026"
+      ],
       "evidenceTier": 1
     },
     {
@@ -77,7 +93,9 @@
       "value": 93,
       "confidenceLow": 85,
       "confidenceHigh": 95,
-      "sourceIds": ["cognizant-new-work-2026"],
+      "sourceIds": [
+        "cognizant-new-work-2026"
+      ],
       "evidenceTier": 2
     }
   ],
@@ -85,28 +103,36 @@
     {
       "date": "2025-02-01",
       "direction": "up",
-      "sourceIds": ["pnas-nexus-2025"],
+      "sourceIds": [
+        "pnas-nexus-2025"
+      ],
       "evidenceTier": 1,
       "label": "PNAS Nexus: AI-exposed occupations face higher unemployment"
     },
     {
       "date": "2025-09-15",
       "direction": "up",
-      "sourceIds": ["del-rio-chanona-ai-jobs-2025"],
+      "sourceIds": [
+        "del-rio-chanona-ai-jobs-2025"
+      ],
       "evidenceTier": 1,
       "label": "ILO review: exposure converges on high-wage jobs"
     },
     {
       "date": "2024-03-01",
       "direction": "up",
-      "sourceIds": ["eloundou-openai-2024"],
+      "sourceIds": [
+        "eloundou-openai-2024"
+      ],
       "evidenceTier": 1,
       "label": "OpenAI/UPenn: 80% of workers have ≥10% tasks affected"
     },
     {
       "date": "2026-01-15",
       "direction": "up",
-      "sourceIds": ["cognizant-new-work-2026"],
+      "sourceIds": [
+        "cognizant-new-work-2026"
+      ],
       "evidenceTier": 2,
       "label": "Cognizant: exposure growing 9%/yr (up from 2%); 30% above 2032 projections"
     }
@@ -143,19 +169,19 @@
       "id": "eloundou-openai-2024",
       "title": "GPTs are GPTs: An Early Look at the Labor Market Impact Potential of LLMs",
       "url": "https://arxiv.org/abs/2303.10130",
-      "publisher": "OpenAI / UPenn (Eloundou et al.)",
+      "publisher": "OpenAI / U Penn (Eloundou et al.)",
       "evidenceTier": 1,
-      "datePublished": "2024-03-01",
-      "excerpt": "~80% of the US workforce could have at least 10% of their tasks affected by GPTs; ~19% of workers may see at least 50% of tasks impacted."
+      "datePublished": "2024-01-15",
+      "excerpt": "~80% of the US workforce could have at least 10% of their tasks affected by GPTs. Legal, accounting, and financial analysis are among the highest-exposure occupations."
     },
     {
       "id": "pwbm-ai-adoption-2025",
-      "title": "Projected Impact of Generative AI on Future Productivity Growth",
+      "title": "The Projected Impact of Generative AI on Future Productivity Growth",
       "url": "https://budgetmodel.wharton.upenn.edu/issues/2025/9/8/projected-impact-of-generative-ai-on-future-productivity-growth",
-      "publisher": "Penn Wharton Budget Model",
+      "publisher": "Penn Wharton Budget Model (Arnon, Smetters)",
       "evidenceTier": 1,
       "datePublished": "2025-09-08",
-      "excerpt": "In about 40% of employment in exposed occupations, at least 50% of tasks will be replaceable by AI within 10 years."
+      "excerpt": "In about 40% of employment in exposed occupations, at least 50% of tasks will be replaceable. Average labor-cost savings ~25% from current tools, potentially 40% as systems improve."
     },
     {
       "id": "anthropic-econ-primitives-2026",
@@ -164,7 +190,7 @@
       "publisher": "Anthropic",
       "evidenceTier": 1,
       "datePublished": "2026-01-15",
-      "excerpt": "49% of jobs now use AI for at least 25% of their tasks (up from 36% in early 2025); augmentation (52%) has overtaken automation (45%) as primary use pattern."
+      "excerpt": "Computer/mathematical tasks account for ~33% of all Claude.ai conversations and ~50% of API traffic, indicating concentrated AI impact on tech-adjacent roles."
     },
     {
       "id": "hartley-genai-exposure-2026",
@@ -200,7 +226,7 @@
       "publisher": "Cognizant",
       "evidenceTier": 2,
       "datePublished": "2026-01-15",
-      "excerpt": "93% of jobs could be impacted by AI today — six years ahead of previous 2032 projections. Average exposure score 39%, growing at 9% annually (up from 2%). Only 32% of tasks remain non-automatable (down from 57% in 2023). Based on reassessment of 18,000 tasks across 1,000 O*NET occupations."
+      "excerpt": "Education task exposure jumped from 11% to 49% — a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations."
     }
   ]
 }

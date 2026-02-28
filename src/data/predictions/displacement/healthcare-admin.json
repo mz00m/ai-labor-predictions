@@ -9,19 +9,13 @@
   "timeHorizon": "By 2030",
   "history": [
     {
-      "date": "2024-09-15",
-      "value": 28,
-      "confidenceLow": 18,
-      "confidenceHigh": 35,
-      "sourceIds": ["harvard-health-policy-2024"],
-      "evidenceTier": 1
-    },
-    {
       "date": "2025-01-10",
       "value": 30,
       "confidenceLow": 22,
       "confidenceHigh": 38,
-      "sourceIds": ["deloitte-health-2025"],
+      "sourceIds": [
+        "deloitte-health-2025"
+      ],
       "evidenceTier": 2
     },
     {
@@ -29,79 +23,91 @@
       "value": 8,
       "confidenceLow": 5,
       "confidenceHigh": 12,
-      "sourceIds": ["bls-health-admin-2025"],
+      "sourceIds": [
+        "bls-health-admin-2025"
+      ],
       "evidenceTier": 1
-    },
-    {
-      "date": "2025-12-10",
-      "value": 35,
-      "confidenceLow": 30,
-      "confidenceHigh": 40,
-      "sourceIds": ["himss-medical-coding-ai-2025"],
-      "evidenceTier": 3
     }
   ],
   "overlays": [
     {
       "date": "2023-05-01",
       "direction": "down",
-      "sourceIds": ["mckinsey-health-admin-2023"],
+      "sourceIds": [
+        "mckinsey-health-admin-2023"
+      ],
       "evidenceTier": 2,
       "label": "McKinsey: $265B admin costs reducible"
     },
     {
       "date": "2024-03-01",
       "direction": "down",
-      "sourceIds": ["cms-prior-auth-2024"],
+      "sourceIds": [
+        "cms-prior-auth-2024"
+      ],
       "evidenceTier": 1,
       "label": "CMS: 60% of prior auth workflows automatable"
     },
     {
       "date": "2024-06-20",
       "direction": "down",
-      "sourceIds": ["nejm-admin-ai-2024"],
+      "sourceIds": [
+        "nejm-admin-ai-2024"
+      ],
       "evidenceTier": 1,
       "label": "NEJM: 20-35% admin cost reduction"
     },
     {
       "date": "2025-11-01",
       "direction": "down",
-      "sourceIds": ["healthtech-ai-admin-2025"],
+      "sourceIds": [
+        "healthtech-ai-admin-2025"
+      ],
       "evidenceTier": 2,
       "label": "HealthTech: 40% of medical coding automated"
     },
     {
       "date": "2025-09-01",
       "direction": "down",
-      "sourceIds": ["aha-ai-revenue-cycle-2025"],
+      "sourceIds": [
+        "aha-ai-revenue-cycle-2025"
+      ],
       "evidenceTier": 2,
       "label": "AHA: 50%+ providers now use AI for billing/coding"
     },
     {
       "date": "2025-09-15",
       "direction": "down",
-      "sourceIds": ["revere-health-ai-layoffs-2025"],
+      "sourceIds": [
+        "revere-health-ai-layoffs-2025"
+      ],
       "evidenceTier": 1,
       "label": "Revere Health: 177 billing/coding jobs replaced by AI platform"
     },
     {
       "date": "2024-12-01",
       "direction": "down",
-      "sourceIds": ["ncbi-hospital-ai-billing-2024"],
+      "sourceIds": [
+        "ncbi-hospital-ai-billing-2024"
+      ],
       "evidenceTier": 1,
       "label": "NCBI: hospital AI billing automation surged 36% → 61% in one year"
     },
     {
       "date": "2025-09-01",
       "direction": "down",
-      "sourceIds": ["experian-health-claims-2025"],
+      "sourceIds": [
+        "experian-health-claims-2025"
+      ],
       "evidenceTier": 2,
       "label": "Experian: only 14% of providers have implemented AI for claims"
     },
     {
       "date": "2026-01-15",
       "direction": "down",
-      "sourceIds": ["cognizant-new-work-2026"],
+      "sourceIds": [
+        "cognizant-new-work-2026"
+      ],
       "evidenceTier": 2,
       "label": "Cognizant: healthcare practitioner exposure jumped from 10% to 39%"
     }
@@ -118,12 +124,12 @@
     },
     {
       "id": "accenture-health-ai-2023",
-      "title": "Healthcare AI: Administrative Transformation",
-      "url": "https://www.accenture.com/us-en/insights/health/artificial-intelligence-healthcare",
+      "title": "Accenture Technology Vision 2023: Healthcare Applications",
+      "url": "https://www.accenture.com/us-en/insights/technology/technology-trends-2023",
       "publisher": "Accenture",
       "evidenceTier": 2,
-      "datePublished": "2023-10-15",
-      "excerpt": "AI can automate 40-50% of healthcare administrative tasks. Medical coding and claims processing are the most immediately automatable."
+      "datePublished": "2023-04-16",
+      "excerpt": "Accenture estimated that 40% of all working hours in healthcare could be supported or augmented by language-based AI."
     },
     {
       "id": "cms-prior-auth-2024",
@@ -144,15 +150,6 @@
       "excerpt": "AI medical coding achieves 95% accuracy vs. 90% for human coders. AI-driven scheduling reduces no-show rates by 25%. Administrative cost reduction estimated at 20-35%."
     },
     {
-      "id": "harvard-health-policy-2024",
-      "title": "The Impact of AI on Healthcare Employment",
-      "url": "https://www.hsph.harvard.edu/news/features/artificial-intelligence-ai-healthcare-employment/",
-      "publisher": "Harvard T.H. Chan School of Public Health",
-      "evidenceTier": 1,
-      "datePublished": "2024-09-15",
-      "excerpt": "Healthcare admin roles account for 30% of US healthcare employment. AI could eliminate 1.5-2M of these positions while creating 200-400K new tech-adjacent roles."
-    },
-    {
       "id": "deloitte-health-2025",
       "title": "2025 Global Health Care Outlook — AI and Administrative Efficiency",
       "url": "https://www2.deloitte.com/us/en/insights/industry/health-care/global-health-care-outlook.html",
@@ -163,11 +160,12 @@
     },
     {
       "id": "reuters-health-admin-cuts",
-      "title": "Major US health systems cut admin staff as AI takes over billing",
-      "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/us-health-systems-cut-admin-staff-ai-billing-2025-04-01/",
-      "publisher": "Reuters",
+      "title": "Insurers say they'll deploy more AI to combat 'aggressive' coding by hospitals",
+      "url": "https://www.statnews.com/2025/10/31/health-insurer-ai-fights-hospital-ai-coding-billing/",
+      "publisher": "STAT News",
       "evidenceTier": 3,
-      "datePublished": "2025-04-01"
+      "datePublished": "2025-10-31",
+      "excerpt": "Health insurance companies deploying AI to combat rising costs driven by hospital use of AI for billing and coding."
     },
     {
       "id": "bls-health-admin-2025",
@@ -198,12 +196,12 @@
     },
     {
       "id": "himss-medical-coding-ai-2025",
-      "title": "HIMSS Report: AI Transforms Medical Coding and Revenue Cycle",
-      "url": "https://www.himss.org/resources/ai-medical-coding-revenue-cycle-2025",
+      "title": "Reshaping the Healthcare Industry with AI-driven Deep Learning Model in Medical Coding",
+      "url": "https://www.himss.org/resources/reshaping-healthcare-industry-ai-driven-deep-learning-model-medical-coding/",
       "publisher": "HIMSS",
-      "evidenceTier": 3,
-      "datePublished": "2025-12-10",
-      "excerpt": "HIMSS survey finds AI medical coding accuracy now exceeds human coders at 97%. Healthcare systems report 30-40% reduction in coding staff since AI deployment."
+      "evidenceTier": 2,
+      "datePublished": "2025-01-01",
+      "excerpt": "Potential annual savings of $122 billion through AI automation of medical coding; 42% of claim denials stem from coding issues."
     },
     {
       "id": "aha-ai-revenue-cycle-2025",
@@ -248,7 +246,7 @@
       "publisher": "Cognizant",
       "evidenceTier": 2,
       "datePublished": "2026-01-15",
-      "excerpt": "Healthcare practitioner task exposure jumped from 10% to 39% — a nearly 4x increase. Driven by multimodal AI (interpreting images, diagrams) and advanced reasoning models. Physical-presence roles like construction (12%) and mechanics (17%) remain least exposed."
+      "excerpt": "Education task exposure jumped from 11% to 49% — a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations."
     }
   ]
 }
