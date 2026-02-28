@@ -138,6 +138,23 @@ export default function PredictionChart({
     }))
     .sort((a, b) => a.date - b.date);
 
+  // Disambiguate duplicate dateStr values so the categorical x-axis has
+  // unique categories.  Recharts' band scale silently drops duplicate keys,
+  // which can cause ReferenceLine x-lookups to fail.
+  const dateStrCount: Record<string, number> = {};
+  const dateStrToUnique = new Map<number, string>(); // timestamp → unique label
+  for (const pt of realPoints) {
+    const n = (dateStrCount[pt.dateStr] ?? 0) + 1;
+    dateStrCount[pt.dateStr] = n;
+    if (n > 1) {
+      const day = format(parseISO(filtered.find(
+        (d) => parseISO(d.date).getTime() === pt.date
+      )!.date), "d");
+      pt.dateStr = `${pt.dateStr} (${day})`;
+    }
+    dateStrToUnique.set(pt.date, pt.dateStr);
+  }
+
   const allValues = realPoints.flatMap((d) => [
     d.value!,
     d.confidenceLow ?? d.value!,
@@ -150,14 +167,23 @@ export default function PredictionChart({
   const filteredOverlays = (overlays ?? []).filter((o) =>
     selectedTiers.includes(o.evidenceTier)
   );
-  const overlayData = filteredOverlays.map((o) => ({
-    date: parseISO(o.date).getTime(),
-    dateStr: format(parseISO(o.date), "MMM yyyy"),
-    direction: o.direction,
-    label: o.label,
-    sourceIds: o.sourceIds,
-    evidenceTier: o.evidenceTier,
-  }));
+  const overlayData = filteredOverlays.map((o) => {
+    const ts = parseISO(o.date).getTime();
+    const baseStr = format(parseISO(o.date), "MMM yyyy");
+    // If a real data point already occupies this month, reuse its unique key
+    // so the ReferenceLine x value matches the axis category exactly.
+    const matchingReal = realPoints.find(
+      (rp) => rp.dateStr === baseStr || rp.dateStr.startsWith(baseStr + " (")
+    );
+    return {
+      date: ts,
+      dateStr: dateStrToUnique.get(ts) ?? matchingReal?.dateStr ?? baseStr,
+      direction: o.direction,
+      label: o.label,
+      sourceIds: o.sourceIds,
+      evidenceTier: o.evidenceTier,
+    };
+  });
 
   // Create phantom data points for overlay dates that don't already exist
   // in the chart data, so the categorical x-axis recognizes them.
@@ -207,13 +233,16 @@ export default function PredictionChart({
     return (
       <ResponsiveContainer width="100%" height={80}>
         <ComposedChart data={chartData}>
-          {overlayData.map((o) => (
+          {/* Hidden categorical axis so ReferenceLine can resolve x values */}
+          <XAxis dataKey="dateStr" hide />
+          {overlayData.map((o, i) => (
             <ReferenceLine
-              key={`overlay-compact-${o.dateStr}-${o.label.slice(0, 20)}`}
+              key={`overlay-compact-${i}-${o.dateStr}`}
               x={o.dateStr}
               stroke={overlayColor(o.direction)}
               strokeWidth={16}
               strokeOpacity={0.15}
+              ifOverflow="visible"
             />
           ))}
           <Line
@@ -281,13 +310,14 @@ export default function PredictionChart({
             />
           )}
           {/* Overlay vertical bars — rendered before the Line so they sit behind */}
-          {overlayData.map((o) => (
+          {overlayData.map((o, i) => (
             <ReferenceLine
-              key={`overlay-bar-${o.dateStr}-${o.label.slice(0, 20)}`}
+              key={`overlay-bar-${i}-${o.dateStr}`}
               x={o.dateStr}
               stroke={overlayColor(o.direction)}
               strokeWidth={24}
               strokeOpacity={0.22}
+              ifOverflow="visible"
               onClick={() => onDotClick?.(o.sourceIds)}
               style={{ cursor: onDotClick ? "pointer" : undefined }}
             />
