@@ -66,9 +66,9 @@
     },
     {
       "date": "2025-07-15",
-      "value": -22,
-      "confidenceLow": -33,
-      "confidenceHigh": -13,
+      "value": -18,
+      "confidenceLow": -28,
+      "confidenceHigh": -10,
       "sourceIds": ["bls-contingent-2025"],
       "evidenceTier": 1
     },
