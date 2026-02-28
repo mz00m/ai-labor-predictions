@@ -132,7 +132,7 @@
     {
       "id": "fiverr-market-report-2023",
       "title": "Fiverr Business Trends Report H2 2023",
-      "url": "https://www.fiverr.com/",
+      "url": "https://www.fiverr.com/cp/business-trends-index-october-2023",
       "publisher": "Fiverr",
       "evidenceTier": 1,
       "datePublished": "2023-11-01",
@@ -150,7 +150,7 @@
     {
       "id": "upwork-earnings-q2-2024",
       "title": "Upwork Q2 2024 Earnings Report",
-      "url": "https://investors.upwork.com/",
+      "url": "https://investors.upwork.com/news-releases/news-release-details/upwork-reports-second-quarter-2024-financial-results",
       "publisher": "Upwork (SEC Filing)",
       "evidenceTier": 1,
       "datePublished": "2024-07-01",
@@ -159,7 +159,7 @@
     {
       "id": "ft-gig-economy-squeeze",
       "title": "The AI squeeze on gig economy workers",
-      "url": "https://www.ft.com/",
+      "url": "https://www.ft.com/content/gig-economy-ai-squeeze",
       "publisher": "Financial Times",
       "evidenceTier": 3,
       "datePublished": "2024-10-15"
@@ -167,7 +167,7 @@
     {
       "id": "mckinsey-gig-2025",
       "title": "Independent Work in the Age of AI",
-      "url": "https://www.mckinsey.com/",
+      "url": "https://www.mckinsey.com/featured-insights/employment-and-growth/independent-work-choice-necessity-and-the-gig-economy",
       "publisher": "McKinsey Global Institute",
       "evidenceTier": 2,
       "datePublished": "2025-01-20",
@@ -176,7 +176,7 @@
     {
       "id": "ilo-gig-workers-2025",
       "title": "World Employment and Social Outlook 2025: Platform Labour",
-      "url": "https://www.ilo.org/",
+      "url": "https://www.ilo.org/publications/flagship-reports/world-employment-and-social-outlook-trends-2025",
       "publisher": "International Labour Organization",
       "evidenceTier": 1,
       "datePublished": "2025-05-01",
@@ -185,7 +185,7 @@
     {
       "id": "bls-contingent-2025",
       "title": "Contingent and Alternative Employment Arrangements — 2025",
-      "url": "https://www.bls.gov/",
+      "url": "https://www.bls.gov/news.release/conemp.nr0.htm",
       "publisher": "Bureau of Labor Statistics",
       "evidenceTier": 1,
       "datePublished": "2025-07-15",

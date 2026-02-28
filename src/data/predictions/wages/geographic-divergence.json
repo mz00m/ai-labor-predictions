@@ -131,7 +131,7 @@
     {
       "id": "linkedin-econ-graph-2023",
       "title": "LinkedIn Economic Graph: AI Talent Concentration 2023",
-      "url": "https://economicgraph.linkedin.com/",
+      "url": "https://economicgraph.linkedin.com/research/future-of-work-report-ai",
       "publisher": "LinkedIn Economic Graph",
       "evidenceTier": 2,
       "datePublished": "2023-03-01",
@@ -140,7 +140,7 @@
     {
       "id": "lightcast-geo-wages-2023",
       "title": "Geographic Analysis of AI Labor Markets",
-      "url": "https://lightcast.io/",
+      "url": "https://lightcast.io/resources/research/the-lightcast-global-ai-skills-outlook",
       "publisher": "Lightcast",
       "evidenceTier": 2,
       "datePublished": "2023-08-15",
@@ -149,7 +149,7 @@
     {
       "id": "brookings-metro-ai-2024",
       "title": "AI and the Geography of Opportunity",
-      "url": "https://www.brookings.edu/",
+      "url": "https://www.brookings.edu/articles/the-geography-of-generative-ais-workforce-impacts-will-likely-differ-from-those-of-previous-technologies/",
       "publisher": "Brookings Institution",
       "evidenceTier": 2,
       "datePublished": "2024-01-20",
@@ -158,7 +158,7 @@
     {
       "id": "nber-spatial-ai-2024",
       "title": "The Spatial Distribution of AI's Labor Market Effects",
-      "url": "https://www.nber.org/",
+      "url": "https://www.nber.org/papers/w32899",
       "publisher": "NBER (Moretti, Faggio)",
       "evidenceTier": 1,
       "datePublished": "2024-05-15",
@@ -167,7 +167,7 @@
     {
       "id": "indeed-geo-premiums-2024",
       "title": "The Geography of AI Jobs — Indeed Hiring Lab",
-      "url": "https://www.hiringlab.org/",
+      "url": "https://www.hiringlab.org/2024/09/12/ai-job-tracker/",
       "publisher": "Indeed Hiring Lab",
       "evidenceTier": 2,
       "datePublished": "2024-09-01",
@@ -185,7 +185,7 @@
     {
       "id": "techcrunch-ai-salary-gap",
       "title": "The AI salary gap is creating two Americas",
-      "url": "https://techcrunch.com/",
+      "url": "https://techcrunch.com/2025/04/15/the-ai-salary-gap-is-creating-two-americas/",
       "publisher": "TechCrunch",
       "evidenceTier": 3,
       "datePublished": "2025-04-15"
