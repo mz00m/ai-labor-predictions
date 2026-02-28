@@ -11,6 +11,7 @@ import FunnelStrip from "@/components/FunnelStrip";
 import ProductivityPredictions from "@/components/ProductivityPredictions";
 import ResearchEvidence from "@/components/ResearchEvidence";
 import FeaturedReads from "@/components/FeaturedReads";
+import AgeUsageTile from "@/components/AgeUsageTile";
 
 const predictions = getAllPredictions();
 
@@ -157,6 +158,9 @@ export default function Home() {
           </div>
         </section>
       )}
+
+      {/* ChatGPT Usage by Age */}
+      <AgeUsageTile />
 
       {/* Productivity Predictions */}
       <ProductivityPredictions />
