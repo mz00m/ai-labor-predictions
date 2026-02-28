@@ -65,6 +65,14 @@
       "evidenceTier": 4
     },
     {
+      "date": "2025-07-23",
+      "value": 28,
+      "confidenceLow": 20,
+      "confidenceHigh": 43,
+      "sourceIds": ["lightcast-beyond-buzz-2025"],
+      "evidenceTier": 2
+    },
+    {
       "date": "2025-08-01",
       "value": 25,
       "confidenceLow": 17,
@@ -117,6 +125,13 @@
       "sourceIds": ["brynjolfsson-li-raymond-qje-2025"],
       "evidenceTier": 1,
       "label": "QJE: less experienced workers improve most with AI"
+    },
+    {
+      "date": "2025-07-23",
+      "direction": "up",
+      "sourceIds": ["lightcast-beyond-buzz-2025"],
+      "evidenceTier": 2,
+      "label": "Lightcast: 51% of AI job postings now outside IT; 800% growth in non-tech gen AI roles since 2022"
     },
     {
       "date": "2026-01-15",
@@ -185,6 +200,15 @@
       "publisher": "X (Twitter)",
       "evidenceTier": 4,
       "datePublished": "2025-05-01"
+    },
+    {
+      "id": "lightcast-beyond-buzz-2025",
+      "title": "Beyond the Buzz: Developing the AI Skills Employers Actually Need",
+      "url": "https://www.prnewswire.com/news-releases/new-lightcast-report-ai-skills-command-28-salary-premium-as-demand-shifts-beyond-tech-industry-302511141.html",
+      "publisher": "Lightcast",
+      "evidenceTier": 2,
+      "datePublished": "2025-07-23",
+      "excerpt": "Analysis of 1.3B job postings finds AI skills command 28% salary premium (~$18K/year); 43% for workers with 2+ AI skills. 51% of AI-skill postings now outside IT/CS with 800% growth in non-tech gen AI roles since 2022."
     },
     {
       "id": "oecd-skills-2025",
