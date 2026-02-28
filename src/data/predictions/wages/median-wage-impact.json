@@ -13,7 +13,9 @@
       "value": 1,
       "confidenceLow": -3,
       "confidenceHigh": 5,
-      "sourceIds": ["goldman-wages-2023"],
+      "sourceIds": [
+        "goldman-wages-2023"
+      ],
       "evidenceTier": 1
     },
     {
@@ -21,7 +23,9 @@
       "value": 0,
       "confidenceLow": -4,
       "confidenceHigh": 4,
-      "sourceIds": ["ilo-wages-2023"],
+      "sourceIds": [
+        "ilo-wages-2023"
+      ],
       "evidenceTier": 1
     },
     {
@@ -29,7 +33,9 @@
       "value": -1,
       "confidenceLow": -5,
       "confidenceHigh": 3,
-      "sourceIds": ["imf-inequality-2024"],
+      "sourceIds": [
+        "imf-inequality-2024"
+      ],
       "evidenceTier": 2
     },
     {
@@ -37,7 +43,9 @@
       "value": -2,
       "confidenceLow": -7,
       "confidenceHigh": 2,
-      "sourceIds": ["webb-2024"],
+      "sourceIds": [
+        "webb-2024"
+      ],
       "evidenceTier": 1
     },
     {
@@ -45,7 +53,9 @@
       "value": -3,
       "confidenceLow": -8,
       "confidenceHigh": 1,
-      "sourceIds": ["atlantic-wages-2024"],
+      "sourceIds": [
+        "atlantic-wages-2024"
+      ],
       "evidenceTier": 3
     },
     {
@@ -53,7 +63,9 @@
       "value": -1,
       "confidenceLow": -5,
       "confidenceHigh": 3,
-      "sourceIds": ["bls-wage-data-2025"],
+      "sourceIds": [
+        "bls-wage-data-2025"
+      ],
       "evidenceTier": 1
     },
     {
@@ -61,7 +73,9 @@
       "value": -5,
       "confidenceLow": -10,
       "confidenceHigh": -1,
-      "sourceIds": ["substack-wages-doom"],
+      "sourceIds": [
+        "substack-wages-doom"
+      ],
       "evidenceTier": 4
     },
     {
@@ -69,7 +83,9 @@
       "value": -2,
       "confidenceLow": -6,
       "confidenceHigh": 2,
-      "sourceIds": ["epi-wages-2025"],
+      "sourceIds": [
+        "epi-wages-2025"
+      ],
       "evidenceTier": 2
     },
     {
@@ -77,7 +93,9 @@
       "value": -2,
       "confidenceLow": -5,
       "confidenceHigh": 1,
-      "sourceIds": ["korinek-trammell-growth-2025"],
+      "sourceIds": [
+        "korinek-trammell-growth-2025"
+      ],
       "evidenceTier": 1
     },
     {
@@ -85,7 +103,9 @@
       "value": -2.5,
       "confidenceLow": -7,
       "confidenceHigh": 1.5,
-      "sourceIds": ["pwc-ai-jobs-barometer-2025"],
+      "sourceIds": [
+        "pwc-ai-jobs-barometer-2025"
+      ],
       "evidenceTier": 1
     },
     {
@@ -93,7 +113,9 @@
       "value": -3,
       "confidenceLow": -8,
       "confidenceHigh": 1,
-      "sourceIds": ["bls-may-2024-wage-data"],
+      "sourceIds": [
+        "bls-may-2024-wage-data"
+      ],
       "evidenceTier": 2
     }
   ],
@@ -101,58 +123,65 @@
     {
       "date": "2025-02-10",
       "direction": "down",
-      "sourceIds": ["indeed-wage-tracker-2025"],
+      "sourceIds": [
+        "indeed-wage-tracker-2025"
+      ],
       "evidenceTier": 2,
       "label": "Indeed: AI-exposed wages grew 1.2% vs 4.1% non-exposed"
     },
     {
       "date": "2025-03-28",
       "direction": "down",
-      "sourceIds": ["walmart-10k-2024"],
-      "evidenceTier": 1,
-      "label": "Walmart: AI checkout reducing staffing ~8% per location"
+      "sourceIds": [
+        "walmart-10k-2024"
+      ],
+      "evidenceTier": 2,
+      "label": "Walmart: investing in checkout/inventory automation; min wage $14/hr"
     },
     {
       "date": "2025-01-30",
       "direction": "neutral",
-      "sourceIds": ["ups-8k-2024"],
+      "sourceIds": [
+        "ups-8k-2024"
+      ],
       "evidenceTier": 1,
-      "label": "UPS: 12K jobs cut, remaining driver wages +2.5%"
+      "label": "UPS: 12K management jobs cut; driver top rate $49/hr under new contract"
     },
     {
       "date": "2025-05-05",
       "direction": "neutral",
-      "sourceIds": ["stiglitz-korinek-steering-2025"],
+      "sourceIds": [
+        "stiglitz-korinek-steering-2025"
+      ],
       "evidenceTier": 1,
       "label": "Korinek & Stiglitz: wage growth requires capital-augmenting AI"
     },
     {
       "date": "2026-01-01",
       "direction": "up",
-      "sourceIds": ["hartley-median-wage-2026"],
+      "sourceIds": [
+        "hartley-median-wage-2026"
+      ],
       "evidenceTier": 1,
       "label": "Stanford: small positive wage effects in AI-exposed jobs"
     },
     {
       "date": "2025-08-01",
       "direction": "up",
-      "sourceIds": ["goldman-productivity-2025"],
+      "sourceIds": [
+        "goldman-productivity-2025"
+      ],
       "evidenceTier": 1,
       "label": "Goldman Sachs: AI to raise labor productivity ~15% when fully adopted"
     },
     {
       "date": "2025-05-01",
       "direction": "up",
-      "sourceIds": ["brynjolfsson-li-raymond-qje-wages-2025"],
+      "sourceIds": [
+        "brynjolfsson-li-raymond-qje-wages-2025"
+      ],
       "evidenceTier": 1,
       "label": "QJE: AI assistance increases worker productivity by 15% on average"
-    },
-    {
-      "date": "2026-02-01",
-      "direction": "up",
-      "sourceIds": ["brynjolfsson-bls-productivity-2026"],
-      "evidenceTier": 1,
-      "label": "Brynjolfsson: US productivity grew 2.7% in 2025, nearly double the decade average"
     }
   ],
   "sources": [
@@ -193,7 +222,7 @@
     {
       "id": "atlantic-wages-2024",
       "title": "AI could be coming for higher-paid workers this time",
-      "url": "https://www.theatlantic.com/ideas/archive/2024/01/ai-technology-replace-white-collar-work/677202/",
+      "url": "https://www.theatlantic.com/ideas/archive/2023/01/chatgpt-ai-economy-automation-jobs/672767/",
       "publisher": "The Atlantic",
       "evidenceTier": 3,
       "datePublished": "2024-10-01"
@@ -217,19 +246,19 @@
     {
       "id": "epi-wages-2025",
       "title": "State of Working America: AI and Wage Trends",
-      "url": "https://www.epi.org/publication/swa-wages-2024/",
+      "url": "https://www.epi.org/publication/ai-unbalanced-labor-markets/",
       "publisher": "Economic Policy Institute",
       "evidenceTier": 2,
       "datePublished": "2025-08-01"
     },
     {
       "id": "walmart-10k-2024",
-      "title": "Walmart 2024 10-K — Automation Investment & Wage Strategy",
-      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=walmart&CIK=&type=10-K",
-      "publisher": "Walmart (SEC Filing)",
-      "evidenceTier": 1,
-      "datePublished": "2025-03-28",
-      "excerpt": "Walmart raised minimum wage to $15/hr but disclosed AI-driven checkout and inventory systems reducing total store staffing needs by ~8% per location."
+      "title": "Walmart Lowers Starting Pay for New Hires",
+      "url": "https://worldatwork.org/workspan/articles/walmart-lowers-starting-pay-for-new-hires",
+      "publisher": "WorldatWork",
+      "evidenceTier": 2,
+      "datePublished": "2024-10-01",
+      "excerpt": "Walmart's minimum starting wage is $14/hr while average U.S. associate wage reached $18.25 by 2025. The company invested in checkout and inventory automation but has not disclosed specific per-location staffing reduction figures."
     },
     {
       "id": "indeed-wage-tracker-2025",
@@ -242,12 +271,12 @@
     },
     {
       "id": "ups-8k-2024",
-      "title": "UPS Q4 2024 Earnings — AI Logistics & Workforce Restructuring",
-      "url": "https://investors.ups.com/sec-filings",
-      "publisher": "UPS (SEC Filing)",
+      "title": "UPS cuts 12,000 jobs, citing softer demand and higher union labor costs",
+      "url": "https://www.nbcnews.com/business/business-news/ups-cutting-12000-jobs-citing-softer-demand-higher-union-labor-costs-rcna136350",
+      "publisher": "NBC News",
       "evidenceTier": 1,
-      "datePublished": "2025-01-30",
-      "excerpt": "UPS cut 12,000 jobs in 2024 citing AI-optimized routing and automated package sorting. Remaining driver wages increased 2.5% under new contract."
+      "datePublished": "2024-01-30",
+      "excerpt": "UPS announced 12,000 job cuts, primarily management and salaried positions, as part of a $1 billion cost-reduction effort. Full-time driver pay raised to $49/hr top rate under 2023 Teamsters contract."
     },
     {
       "id": "pwc-ai-jobs-barometer-2025",
@@ -311,15 +340,6 @@
       "evidenceTier": 1,
       "datePublished": "2025-05-01",
       "excerpt": "Access to AI assistance increases worker productivity, as measured by issues resolved per hour, by 15% on average, with substantial heterogeneity across workers."
-    },
-    {
-      "id": "brynjolfsson-bls-productivity-2026",
-      "title": "US Productivity Growth and AI",
-      "url": "https://www.ft.com/content/brynjolfsson-ai-productivity-2026",
-      "publisher": "FT / Brynjolfsson (BLS data)",
-      "evidenceTier": 1,
-      "datePublished": "2026-02-01",
-      "excerpt": "US productivity grew roughly 2.7% in 2025, nearly double the 1.4% annual average of the past decade — a decoupling of output from labor input that is the hallmark of productivity growth."
     },
     {
       "id": "icle-median-wage-2026",

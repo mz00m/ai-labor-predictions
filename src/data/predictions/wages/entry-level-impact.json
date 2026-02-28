@@ -13,47 +13,19 @@
       "value": -3,
       "confidenceLow": -8,
       "confidenceHigh": 1,
-      "sourceIds": ["indeed-entry-level-2023"],
+      "sourceIds": [
+        "indeed-entry-level-2023"
+      ],
       "evidenceTier": 2
-    },
-    {
-      "date": "2023-10-15",
-      "value": -4,
-      "confidenceLow": -10,
-      "confidenceHigh": 0,
-      "sourceIds": ["nber-entry-wage-2023"],
-      "evidenceTier": 1
-    },
-    {
-      "date": "2024-02-01",
-      "value": -6,
-      "confidenceLow": -12,
-      "confidenceHigh": -1,
-      "sourceIds": ["goldman-entry-level-2024"],
-      "evidenceTier": 1
-    },
-    {
-      "date": "2024-06-15",
-      "value": -8,
-      "confidenceLow": -15,
-      "confidenceHigh": -3,
-      "sourceIds": ["brookings-entry-level-2024"],
-      "evidenceTier": 2
-    },
-    {
-      "date": "2024-09-01",
-      "value": -7,
-      "confidenceLow": -13,
-      "confidenceHigh": -2,
-      "sourceIds": ["mit-entry-wage-2024"],
-      "evidenceTier": 1
     },
     {
       "date": "2025-01-15",
       "value": -10,
       "confidenceLow": -18,
       "confidenceHigh": -4,
-      "sourceIds": ["wsj-entry-level-squeeze"],
+      "sourceIds": [
+        "wsj-entry-level-squeeze"
+      ],
       "evidenceTier": 3
     },
     {
@@ -61,15 +33,19 @@
       "value": -8,
       "confidenceLow": -15,
       "confidenceHigh": -3,
-      "sourceIds": ["oecd-youth-employment-2025"],
+      "sourceIds": [
+        "oecd-youth-employment-2025"
+      ],
       "evidenceTier": 1
     },
     {
       "date": "2025-07-01",
-      "value": -8,
-      "confidenceLow": -14,
-      "confidenceHigh": -3,
-      "sourceIds": ["bls-entry-wages-2025"],
+      "value": -5,
+      "confidenceLow": -10,
+      "confidenceHigh": -2,
+      "sourceIds": [
+        "bls-entry-wages-2025"
+      ],
       "evidenceTier": 1
     },
     {
@@ -77,23 +53,19 @@
       "value": -10,
       "confidenceLow": -15,
       "confidenceHigh": -5,
-      "sourceIds": ["brynjolfsson-chandar-chen-entry-2025"],
+      "sourceIds": [
+        "brynjolfsson-chandar-chen-entry-2025"
+      ],
       "evidenceTier": 1
-    },
-    {
-      "date": "2025-11-01",
-      "value": -10,
-      "confidenceLow": -18,
-      "confidenceHigh": -4,
-      "sourceIds": ["mckinsey-entry-level-2025"],
-      "evidenceTier": 2
     },
     {
       "date": "2025-11-15",
       "value": -11,
       "confidenceLow": -18,
       "confidenceHigh": -5,
-      "sourceIds": ["worldbank-liu-wang-yu-2025"],
+      "sourceIds": [
+        "worldbank-liu-wang-yu-2025"
+      ],
       "evidenceTier": 1
     },
     {
@@ -101,7 +73,9 @@
       "value": -12,
       "confidenceLow": -20,
       "confidenceHigh": -5,
-      "sourceIds": ["anthropic-ceo-entry-level-2025"],
+      "sourceIds": [
+        "anthropic-ceo-entry-level-2025"
+      ],
       "evidenceTier": 3
     },
     {
@@ -109,7 +83,9 @@
       "value": -11,
       "confidenceLow": -16,
       "confidenceHigh": -6,
-      "sourceIds": ["imf-skill-gaps-entry-2026"],
+      "sourceIds": [
+        "imf-skill-gaps-entry-2026"
+      ],
       "evidenceTier": 1
     }
   ],
@@ -117,49 +93,63 @@
     {
       "date": "2025-05-28",
       "direction": "down",
-      "sourceIds": ["anthropic-ceo-entry-level-2025"],
+      "sourceIds": [
+        "anthropic-ceo-entry-level-2025"
+      ],
       "evidenceTier": 3,
       "label": "Anthropic CEO: up to 50% of entry-level office jobs impacted"
     },
     {
       "date": "2025-11-01",
       "direction": "down",
-      "sourceIds": ["worldbank-liu-wang-yu-2025"],
+      "sourceIds": [
+        "worldbank-liu-wang-yu-2025"
+      ],
       "evidenceTier": 1,
       "label": "World Bank: entry-level postings fell 18-20%"
     },
     {
       "date": "2026-01-06",
       "direction": "down",
-      "sourceIds": ["dallas-fed-entry-level-2026"],
+      "sourceIds": [
+        "dallas-fed-entry-level-2026"
+      ],
       "evidenceTier": 1,
       "label": "Dallas Fed: young worker share fell 16.4% → 15.5%"
     },
     {
       "date": "2025-09-15",
       "direction": "down",
-      "sourceIds": ["del-rio-chanona-entry-2025"],
+      "sourceIds": [
+        "del-rio-chanona-entry-2025"
+      ],
       "evidenceTier": 1,
       "label": "ILO review: declining demand for novice workers"
     },
     {
       "date": "2026-01-01",
       "direction": "up",
-      "sourceIds": ["hartley-entry-level-2026"],
+      "sourceIds": [
+        "hartley-entry-level-2026"
+      ],
       "evidenceTier": 1,
       "label": "Stanford: small positive wage effects overall"
     },
     {
       "date": "2025-09-01",
       "direction": "down",
-      "sourceIds": ["hosseini-lichtinger-seniority-2025"],
+      "sourceIds": [
+        "hosseini-lichtinger-seniority-2025"
+      ],
       "evidenceTier": 1,
       "label": "SSRN: junior employment declined sharply at AI-adopting firms"
     },
     {
       "date": "2026-01-15",
       "direction": "down",
-      "sourceIds": ["frank-ai-unemployment-2026"],
+      "sourceIds": [
+        "frank-ai-unemployment-2026"
+      ],
       "evidenceTier": 1,
       "label": "Frank et al.: unemployment risk rose in AI-exposed occupations from early 2022"
     }
@@ -176,39 +166,39 @@
     },
     {
       "id": "nber-entry-wage-2023",
-      "title": "The Displacement Effects of AI on Entry-Level Workers",
+      "title": "Artificial Intelligence, Automation and Work",
       "url": "https://www.nber.org/papers/w24196",
-      "publisher": "NBER",
+      "publisher": "NBER (Acemoglu, Restrepo)",
       "evidenceTier": 1,
-      "datePublished": "2023-10-15",
-      "excerpt": "Entry-level tasks are disproportionately automatable — 35% of junior role tasks vs. 18% of senior role tasks are within current AI capability."
+      "datePublished": "2018-01-01",
+      "excerpt": "Theoretical framework for automation's displacement and productivity effects on labor. Automation displaces workers from tasks they previously performed, but productivity gains create new tasks and increase demand for labor."
     },
     {
       "id": "goldman-entry-level-2024",
-      "title": "AI and the Entry-Level Workforce: Economic Impacts",
-      "url": "https://www.goldmansachs.com/insights/articles/AI-investment-is-likely-to-grow-significantly",
-      "publisher": "Goldman Sachs",
-      "evidenceTier": 1,
-      "datePublished": "2024-02-01",
-      "excerpt": "Entry-level positions face the highest displacement risk per dollar of compensation. Estimated 5-10% real wage decline for new graduates by 2028."
+      "title": "Goldman Sachs economist warns Gen Z tech workers are first on the chopping block",
+      "url": "https://fortune.com/2025/08/06/goldman-sachs-economist-gen-z-tech-jobs-ai-labor-market/",
+      "publisher": "Fortune (reporting Goldman Sachs research)",
+      "evidenceTier": 2,
+      "datePublished": "2025-08-06",
+      "excerpt": "Unemployment rate for 20- to 30-year-olds in tech rose nearly 3% since early 2024. Entry-level job postings in the US diminished about 35% since January 2023. Goldman Sachs predicts AI will displace about 6-7% of the total workforce."
     },
     {
       "id": "brookings-entry-level-2024",
-      "title": "Young Workers and the AI Transition",
+      "title": "To prepare young people for the AI workplace, focus on the fundamentals",
       "url": "https://www.brookings.edu/articles/to-prepare-young-people-for-the-ai-workplace-focus-on-the-fundamentals/",
       "publisher": "Brookings Institution",
       "evidenceTier": 2,
-      "datePublished": "2024-06-15",
-      "excerpt": "Employers increasingly require AI skills for entry-level roles while offering lower starting salaries for traditional positions."
+      "datePublished": "2025-10-28",
+      "excerpt": "Whether AI destroys jobs or transforms them, young people still need fundamental supports: skill-building, career navigation, and mentorship."
     },
     {
       "id": "mit-entry-wage-2024",
-      "title": "Entry-Level Labor Markets in the Age of AI",
+      "title": "Applying AI to Rebuild Middle Class Jobs",
       "url": "https://www.nber.org/papers/w32140",
-      "publisher": "MIT (Autor, Salomons)",
+      "publisher": "NBER (David Autor)",
       "evidenceTier": 1,
-      "datePublished": "2024-09-01",
-      "excerpt": "AI reduces the return to experience for routine cognitive tasks. Entry-level workers in finance, admin, and customer service face 6-12% real wage pressure."
+      "datePublished": "2024-02-01",
+      "excerpt": "AI could enable a larger set of workers to perform higher-stakes decision-making tasks currently reserved for elite experts. If used well, AI can help restore the middle-skill, middle-class heart of the US labor market."
     },
     {
       "id": "wsj-entry-level-squeeze",
@@ -238,12 +228,12 @@
     },
     {
       "id": "mckinsey-entry-level-2025",
-      "title": "McKinsey: 27% Decline in Entry-Level Writing and Admin Roles",
+      "title": "Generative AI and the future of work in America",
       "url": "https://www.mckinsey.com/mgi/our-research/generative-ai-and-the-future-of-work-in-america",
       "publisher": "McKinsey Global Institute",
       "evidenceTier": 2,
-      "datePublished": "2025-11-01",
-      "excerpt": "27% of entry-level writing, data analysis, and administrative roles have declined since 2023. Employers increasingly automate junior tasks previously used for training."
+      "datePublished": "2023-07-26",
+      "excerpt": "By 2030, activities accounting for up to 30% of hours currently worked could be automated, accelerated by generative AI. Lower-wage workers face up to 14x more occupational transitions than higher-wage counterparts."
     },
     {
       "id": "anthropic-ceo-entry-level-2025",
@@ -279,7 +269,7 @@
       "publisher": "World Bank (Liu, Wang, Yu)",
       "evidenceTier": 1,
       "datePublished": "2025-11-01",
-      "excerpt": "Entry-level positions hit hardest: postings requiring no advanced degree fell 18%, and those requiring no extensive experience fell 20%, relative to less-substitutable roles."
+      "excerpt": "Job postings for high-AI-substitution occupations fell 12% relative to low-substitution roles post-ChatGPT; effect grew from 6% in year one to 18% by year three. Based on 285 million Lightcast job postings."
     },
     {
       "id": "hartley-entry-level-2026",

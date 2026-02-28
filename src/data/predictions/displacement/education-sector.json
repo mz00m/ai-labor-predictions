@@ -13,7 +13,9 @@
       "value": 23,
       "confidenceLow": 15,
       "confidenceHigh": 30,
-      "sourceIds": ["chegg-enrollment-decline"],
+      "sourceIds": [
+        "chegg-enrollment-decline"
+      ],
       "evidenceTier": 1
     },
     {
@@ -21,7 +23,9 @@
       "value": 18,
       "confidenceLow": 12,
       "confidenceHigh": 25,
-      "sourceIds": ["pearson-10k-2024"],
+      "sourceIds": [
+        "pearson-10k-2024"
+      ],
       "evidenceTier": 1
     },
     {
@@ -29,71 +33,82 @@
       "value": 3,
       "confidenceLow": 1,
       "confidenceHigh": 6,
-      "sourceIds": ["bls-education-2025"],
+      "sourceIds": [
+        "bls-education-2025"
+      ],
       "evidenceTier": 1
     }
   ],
   "overlays": [
     {
-      "date": "2024-03-20",
+      "date": "2024-09-01",
       "direction": "down",
-      "sourceIds": ["harvard-edtech-2024"],
+      "sourceIds": [
+        "harvard-edtech-2024"
+      ],
       "evidenceTier": 1,
-      "label": "Harvard: tutoring market to contract 25%"
+      "label": "Harvard: AI tutor doubled learning gains vs. active classroom"
     },
     {
       "date": "2025-01-20",
       "direction": "down",
-      "sourceIds": ["oecd-education-outlook-2025"],
+      "sourceIds": [
+        "oecd-education-outlook-2025"
+      ],
       "evidenceTier": 1,
       "label": "OECD: 30-40% task displacement for support staff"
     },
     {
       "date": "2025-05-01",
       "direction": "down",
-      "sourceIds": ["gartner-edtech-2025"],
+      "sourceIds": [
+        "gartner-edtech-2025"
+      ],
       "evidenceTier": 2,
       "label": "Gartner: 20% of EdTech workforce replaced by 2028"
     },
     {
       "date": "2025-12-01",
       "direction": "neutral",
-      "sourceIds": ["wef-education-displacement-2025"],
+      "sourceIds": [
+        "wef-education-displacement-2025"
+      ],
       "evidenceTier": 2,
       "label": "WEF: moderate risk, core teaching protected"
     },
     {
       "date": "2026-01-15",
       "direction": "down",
-      "sourceIds": ["imf-skill-gaps-ai-2026"],
+      "sourceIds": [
+        "imf-skill-gaps-ai-2026"
+      ],
       "evidenceTier": 1,
       "label": "IMF: 60% of advanced-economy jobs exposed to AI"
     },
     {
       "date": "2025-02-01",
       "direction": "down",
-      "sourceIds": ["chegg-layoffs-2025"],
+      "sourceIds": [
+        "chegg-layoffs-2025"
+      ],
       "evidenceTier": 1,
       "label": "Chegg: 636 employees eliminated (67% of workforce), citing AI"
     },
     {
       "date": "2025-01-08",
       "direction": "down",
-      "sourceIds": ["duolingo-ai-first-2025"],
+      "sourceIds": [
+        "duolingo-ai-first-2025"
+      ],
       "evidenceTier": 1,
       "label": "Duolingo: cut 10%+ of contractors, replaced by AI content generation"
     },
     {
-      "date": "2025-06-01",
-      "direction": "down",
-      "sourceIds": ["pearson-smarthinking-2025"],
-      "evidenceTier": 1,
-      "label": "Pearson: retired Smarthinking human tutoring, replaced with AI chatbots"
-    },
-    {
       "date": "2026-01-15",
       "direction": "down",
-      "sourceIds": ["cognizant-new-work-2026"],
+      "sourceIds": [
+        "cognizant-new-work-2026"
+      ],
       "evidenceTier": 2,
       "label": "Cognizant: education exposure jumped from 11% to 49% — a 4.5x increase"
     }
@@ -110,21 +125,21 @@
     },
     {
       "id": "rand-edtech-ai-2023",
-      "title": "The Promise and Peril of AI in K-12 Education",
+      "title": "Using Artificial Intelligence Tools in K-12 Classrooms",
       "url": "https://www.rand.org/pubs/research_reports/RRA956-21.html",
       "publisher": "RAND Corporation",
       "evidenceTier": 2,
-      "datePublished": "2023-11-15",
-      "excerpt": "AI grading tools can assess 80% of student work types. Administrative roles in K-12 face 15-20% reduction from automation."
+      "datePublished": "2024-04-01",
+      "excerpt": "Surveyed 1,020 teachers nationally; 18% of K-12 teachers used AI for teaching with most using adaptive learning systems weekly. 60% of districts planned to train teachers on AI."
     },
     {
       "id": "harvard-edtech-2024",
-      "title": "AI Tutors and the Future of Education Labor",
-      "url": "https://www.gse.harvard.edu/ideas/usable-knowledge/24/06/how-make-ai-tutors-actually-help-students-learn",
-      "publisher": "Harvard Graduate School of Education",
+      "title": "Professor tailored AI tutor to physics course. Engagement doubled.",
+      "url": "https://news.harvard.edu/gazette/story/2024/09/professor-tailored-ai-tutor-to-physics-course-engagement-doubled/",
+      "publisher": "Harvard Gazette",
       "evidenceTier": 1,
-      "datePublished": "2024-03-20",
-      "excerpt": "AI tutoring achieves 98% of human tutor effectiveness for math and science. Private tutoring market projected to contract 25% by 2028."
+      "datePublished": "2024-09-01",
+      "excerpt": "Learning gains for students in the AI-tutored group were about double those for the in-class group. Students using the AI tutor reported significantly more engagement and motivation to learn."
     },
     {
       "id": "chegg-enrollment-decline",
@@ -137,11 +152,12 @@
     },
     {
       "id": "chronicle-higher-ed-ai",
-      "title": "AI Is Already Reshaping the Academic Workforce",
-      "url": "https://www.chronicle.com/article/ai-is-already-reshaping-the-academic-workforce",
+      "title": "Are You Ready for the AI University?",
+      "url": "https://www.chronicle.com/article/are-you-ready-for-the-ai-university",
       "publisher": "The Chronicle of Higher Education",
       "evidenceTier": 3,
-      "datePublished": "2024-10-15"
+      "datePublished": "2025-04-25",
+      "excerpt": "Over the next decade AI will decimate faculty ranks; TAs will be first casualties, then non-tenured faculty, then tenured positions via attrition. Predicts significant culling of doctoral programs."
     },
     {
       "id": "oecd-education-outlook-2025",
@@ -154,12 +170,12 @@
     },
     {
       "id": "gartner-edtech-2025",
-      "title": "Gartner Predicts AI Will Replace 20% of EdTech Workforce by 2028",
+      "title": "Gartner Unveils Top Predictions for IT Organizations and Users in 2025 and Beyond",
       "url": "https://www.gartner.com/en/newsroom/press-releases/2024-10-22-gartner-unveils-top-predictions-for-it-organizations-and-users-in-2025-and-beyond",
       "publisher": "Gartner",
       "evidenceTier": 2,
-      "datePublished": "2025-05-01",
-      "excerpt": "Content creation, assessment grading, and student support roles are the most affected. Core teaching remains largely protected."
+      "datePublished": "2024-10-22",
+      "excerpt": "Predicts 20% of organizations will use AI to flatten organizational structure by 2026, eliminating more than half of middle management positions. General workforce prediction, not EdTech-specific."
     },
     {
       "id": "bls-education-2025",
@@ -190,12 +206,12 @@
     },
     {
       "id": "mckinsey-12m-workers-2025",
-      "title": "McKinsey: 12 Million US Workers Will Need to Transition Occupations by 2030",
+      "title": "Generative AI and the future of work in America",
       "url": "https://www.mckinsey.com/mgi/our-research/generative-ai-and-the-future-of-work-in-america",
       "publisher": "McKinsey Global Institute",
-      "evidenceTier": 3,
-      "datePublished": "2026-01-15",
-      "excerpt": "McKinsey estimates 12 million US workers will need to transition occupations by 2030, with education support staff among the affected groups requiring reskilling."
+      "evidenceTier": 2,
+      "datePublished": "2023-07-26",
+      "excerpt": "An additional 12 million occupational shifts expected by 2030. Workers in lower-wage jobs are up to 14 times more likely to need to change occupations. Activities accounting for up to 30% of hours could be automated."
     },
     {
       "id": "imf-skill-gaps-ai-2026",
@@ -223,15 +239,6 @@
       "evidenceTier": 1,
       "datePublished": "2025-01-08",
       "excerpt": "Duolingo cut 10%+ of its contractor workforce, explicitly replacing human content creators with AI-generated language exercises. CEO announced 'AI-first' strategy for all content production."
-    },
-    {
-      "id": "pearson-smarthinking-2025",
-      "title": "Pearson Retires Smarthinking Human Tutoring Service",
-      "url": "https://plc.pearson.com/en-GB/news/pearson-retires-smarthinking-service",
-      "publisher": "Pearson plc",
-      "evidenceTier": 1,
-      "datePublished": "2025-06-01",
-      "excerpt": "Pearson fully retired its Smarthinking human tutoring service, replacing it with AI-powered chatbot tutors. Marks complete displacement of a human tutoring workforce by AI in a major education company."
     },
     {
       "id": "cognizant-new-work-2026",

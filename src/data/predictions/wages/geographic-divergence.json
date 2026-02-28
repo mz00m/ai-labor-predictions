@@ -9,27 +9,13 @@
   "timeHorizon": "By 2030",
   "history": [
     {
-      "date": "2023-03-01",
-      "value": 28,
-      "confidenceLow": 20,
-      "confidenceHigh": 35,
-      "sourceIds": ["linkedin-econ-graph-2023"],
-      "evidenceTier": 2
-    },
-    {
-      "date": "2023-08-15",
-      "value": 30,
-      "confidenceLow": 22,
-      "confidenceHigh": 38,
-      "sourceIds": ["lightcast-geo-wages-2023"],
-      "evidenceTier": 2
-    },
-    {
       "date": "2024-01-20",
       "value": 33,
       "confidenceLow": 24,
       "confidenceHigh": 42,
-      "sourceIds": ["brookings-metro-ai-2024"],
+      "sourceIds": [
+        "brookings-metro-ai-2024"
+      ],
       "evidenceTier": 2
     },
     {
@@ -37,7 +23,9 @@
       "value": 36,
       "confidenceLow": 26,
       "confidenceHigh": 46,
-      "sourceIds": ["nber-spatial-ai-2024"],
+      "sourceIds": [
+        "nber-spatial-ai-2024"
+      ],
       "evidenceTier": 1
     },
     {
@@ -45,47 +33,29 @@
       "value": 38,
       "confidenceLow": 28,
       "confidenceHigh": 50,
-      "sourceIds": ["indeed-geo-premiums-2024"],
+      "sourceIds": [
+        "indeed-geo-premiums-2024"
+      ],
       "evidenceTier": 2
-    },
-    {
-      "date": "2025-01-10",
-      "value": 40,
-      "confidenceLow": 30,
-      "confidenceHigh": 52,
-      "sourceIds": ["glassdoor-ai-salaries-2025"],
-      "evidenceTier": 2
-    },
-    {
-      "date": "2025-04-15",
-      "value": 45,
-      "confidenceLow": 33,
-      "confidenceHigh": 58,
-      "sourceIds": ["techcrunch-ai-salary-gap"],
-      "evidenceTier": 3
     },
     {
       "date": "2025-07-01",
       "value": 42,
       "confidenceLow": 31,
       "confidenceHigh": 55,
-      "sourceIds": ["bls-metro-wages-2025"],
+      "sourceIds": [
+        "bls-metro-wages-2025"
+      ],
       "evidenceTier": 1
-    },
-    {
-      "date": "2025-11-01",
-      "value": 45,
-      "confidenceLow": 33,
-      "confidenceHigh": 58,
-      "sourceIds": ["bls-tech-vs-nontechmetro-2025"],
-      "evidenceTier": 2
     },
     {
       "date": "2026-01-01",
       "value": 48,
       "confidenceLow": 36,
       "confidenceHigh": 62,
-      "sourceIds": ["moneypenny-regional-ai-2025"],
+      "sourceIds": [
+        "moneypenny-regional-ai-2025"
+      ],
       "evidenceTier": 3
     },
     {
@@ -93,7 +63,9 @@
       "value": 47,
       "confidenceLow": 35,
       "confidenceHigh": 55,
-      "sourceIds": ["manning-aguirre-adaptive-2026"],
+      "sourceIds": [
+        "manning-aguirre-adaptive-2026"
+      ],
       "evidenceTier": 1
     }
   ],
@@ -101,28 +73,36 @@
     {
       "date": "2025-02-01",
       "direction": "up",
-      "sourceIds": ["muro-kinder-geography-2025"],
+      "sourceIds": [
+        "muro-kinder-geography-2025"
+      ],
       "evidenceTier": 1,
       "label": "Brookings: San Jose 43% AI-exposed vs 31% in Las Vegas"
     },
     {
       "date": "2025-09-15",
       "direction": "up",
-      "sourceIds": ["anthropic-geographic-2025"],
+      "sourceIds": [
+        "anthropic-geographic-2025"
+      ],
       "evidenceTier": 1,
       "label": "Anthropic: AI usage concentrated by income & geography"
     },
     {
       "date": "2026-01-15",
       "direction": "up",
-      "sourceIds": ["imf-skill-gaps-geo-2026"],
+      "sourceIds": [
+        "imf-skill-gaps-geo-2026"
+      ],
       "evidenceTier": 2,
       "label": "IMF: employment 3.6% lower in AI-vulnerable regions"
     },
     {
       "date": "2026-01-21",
       "direction": "down",
-      "sourceIds": ["manning-aguirre-adaptive-2026"],
+      "sourceIds": [
+        "manning-aguirre-adaptive-2026"
+      ],
       "evidenceTier": 1,
       "label": "NBER: 6.1M workers lack adaptive capacity; 86% women"
     }
@@ -130,21 +110,21 @@
   "sources": [
     {
       "id": "linkedin-econ-graph-2023",
-      "title": "LinkedIn Economic Graph: AI Talent Concentration 2023",
+      "title": "Future of Work Report: AI at Work",
       "url": "https://economicgraph.linkedin.com/research/future-of-work-report-ai",
       "publisher": "LinkedIn Economic Graph",
       "evidenceTier": 2,
-      "datePublished": "2023-03-01",
-      "excerpt": "60% of AI/ML job postings concentrate in 10 metro areas. AI roles in SF/Bay Area pay 35% more than identical roles in mid-tier cities."
+      "datePublished": "2023-11-01",
+      "excerpt": "55% of LinkedIn members hold jobs that stand to be impacted by generative AI. By 2030, the skills required for jobs will change by up to 65%."
     },
     {
       "id": "lightcast-geo-wages-2023",
-      "title": "Geographic Analysis of AI Labor Markets",
+      "title": "The Lightcast Global AI Skills Outlook",
       "url": "https://lightcast.io/resources/research/the-lightcast-global-ai-skills-outlook",
       "publisher": "Lightcast",
       "evidenceTier": 2,
       "datePublished": "2023-08-15",
-      "excerpt": "AI engineer median salary in San Francisco: $225K. Same role in Kansas City: $155K. Gap widening as demand concentrates."
+      "excerpt": "AI skills are becoming a universal priority beyond Silicon Valley. The U.S. leads in AI skills demand, with San Francisco commanding the highest average tech salary at $177,636."
     },
     {
       "id": "brookings-metro-ai-2024",
@@ -175,20 +155,21 @@
     },
     {
       "id": "glassdoor-ai-salaries-2025",
-      "title": "Glassdoor AI Salary Trends 2025",
-      "url": "https://www.glassdoor.com/research/",
+      "title": "Conversation starter: are AI jobs booming or overhyped?",
+      "url": "https://www.glassdoor.com/blog/ai-jobs-booming-or-overhyped/",
       "publisher": "Glassdoor Economic Research",
       "evidenceTier": 2,
-      "datePublished": "2025-01-10",
-      "excerpt": "Median AI/ML salary in San Francisco reached $245K. In non-hub metros, AI salaries average $162K. The 50% gap is the widest in tech history."
+      "datePublished": "2025-07-01",
+      "excerpt": "AI jobs pay more than similar jobs that do not focus on AI, with a typical premium of 25%. The share of AI jobs among new job listings increased 123% from 2023 to 2024."
     },
     {
       "id": "techcrunch-ai-salary-gap",
-      "title": "The AI salary gap is creating two Americas",
-      "url": "https://techcrunch.com/2025/04/15/the-ai-salary-gap-is-creating-two-americas/",
-      "publisher": "TechCrunch",
-      "evidenceTier": 3,
-      "datePublished": "2025-04-15"
+      "title": "AI is driving mass layoffs in tech, but it's boosting salaries by $18,000 a year everywhere else, study says",
+      "url": "https://fortune.com/2025/07/27/artificial-intelligence-skills-18000-salaries-28-percent/",
+      "publisher": "Fortune",
+      "evidenceTier": 2,
+      "datePublished": "2025-07-27",
+      "excerpt": "Job postings for non-tech roles that require AI skills offer 28% higher salaries — an average of nearly $18,000 more per year. The divide between AI-skilled and non-AI-skilled workers is widening."
     },
     {
       "id": "bls-metro-wages-2025",
@@ -198,15 +179,6 @@
       "evidenceTier": 1,
       "datePublished": "2025-07-01",
       "excerpt": "Computer and mathematical occupations in San Jose-SF-Oakland MSA: $178K median. National median: $108K. Gap up from 48% to 65% since 2022."
-    },
-    {
-      "id": "bls-tech-vs-nontechmetro-2025",
-      "title": "BLS Tech vs. Non-Tech Metro Wage Analysis Q3 2025",
-      "url": "https://www.bls.gov/oes/current/oessrcma.htm",
-      "publisher": "Bureau of Labor Statistics",
-      "evidenceTier": 2,
-      "datePublished": "2025-11-01",
-      "excerpt": "AI roles median salary $157K in hub metros vs. $49,500 median for all occupations nationally. Geographic premium for AI talent continues to widen."
     },
     {
       "id": "moneypenny-regional-ai-2025",

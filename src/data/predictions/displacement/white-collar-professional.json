@@ -9,27 +9,13 @@
   "timeHorizon": "By 2030",
   "history": [
     {
-      "date": "2024-07-10",
-      "value": 12,
-      "confidenceLow": 8,
-      "confidenceHigh": 18,
-      "sourceIds": ["stanford-codex-legal-ai"],
-      "evidenceTier": 1
-    },
-    {
-      "date": "2025-01-20",
-      "value": 18,
-      "confidenceLow": 15,
-      "confidenceHigh": 25,
-      "sourceIds": ["deloitte-professional-services-2025"],
-      "evidenceTier": 2
-    },
-    {
       "date": "2025-08-01",
       "value": 2.5,
       "confidenceLow": 1,
       "confidenceHigh": 5,
-      "sourceIds": ["goldman-ai-displacement-risk-2025"],
+      "sourceIds": [
+        "goldman-ai-displacement-risk-2025"
+      ],
       "evidenceTier": 2
     },
     {
@@ -37,7 +23,9 @@
       "value": 1,
       "confidenceLow": 0,
       "confidenceHigh": 3,
-      "sourceIds": ["gartner-ai-layoffs-2025"],
+      "sourceIds": [
+        "gartner-ai-layoffs-2025"
+      ],
       "evidenceTier": 3
     },
     {
@@ -45,7 +33,9 @@
       "value": 18,
       "confidenceLow": 6,
       "confidenceHigh": 30,
-      "sourceIds": ["worldbank-liu-wang-yu-2025"],
+      "sourceIds": [
+        "worldbank-liu-wang-yu-2025"
+      ],
       "evidenceTier": 1
     },
     {
@@ -53,7 +43,9 @@
       "value": 0,
       "confidenceLow": 0,
       "confidenceHigh": 2,
-      "sourceIds": ["nber-ai-legal-impact-2025"],
+      "sourceIds": [
+        "nber-ai-legal-impact-2025"
+      ],
       "evidenceTier": 1
     },
     {
@@ -61,7 +53,9 @@
       "value": 0,
       "confidenceLow": 0,
       "confidenceHigh": 2,
-      "sourceIds": ["hbr-ai-potential-layoffs-2026"],
+      "sourceIds": [
+        "hbr-ai-potential-layoffs-2026"
+      ],
       "evidenceTier": 1
     }
   ],
@@ -69,49 +63,63 @@
     {
       "date": "2024-04-20",
       "direction": "neutral",
-      "sourceIds": ["brookings-white-collar-2024"],
+      "sourceIds": [
+        "brookings-white-collar-2024"
+      ],
       "evidenceTier": 2,
       "label": "Brookings: most exposed to disruption"
     },
     {
       "date": "2025-01-15",
       "direction": "down",
-      "sourceIds": ["chen-hbs-white-collar-2025"],
+      "sourceIds": [
+        "chen-hbs-white-collar-2025"
+      ],
       "evidenceTier": 1,
       "label": "HBS: 24% drop in automatable skills demand"
     },
     {
       "date": "2025-07-01",
       "direction": "down",
-      "sourceIds": ["hosseini-brookings-freelancer-2025"],
+      "sourceIds": [
+        "hosseini-brookings-freelancer-2025"
+      ],
       "evidenceTier": 1,
       "label": "Brookings: top freelancers hit hardest"
     },
     {
       "date": "2025-09-26",
       "direction": "down",
-      "sourceIds": ["papanikolaou-bpea-historical-2025"],
+      "sourceIds": [
+        "papanikolaou-bpea-historical-2025"
+      ],
       "evidenceTier": 1,
       "label": "BPEA: demand shifting to lower-education roles"
     },
     {
       "date": "2025-09-15",
       "direction": "down",
-      "sourceIds": ["egon-zehnder-cfo-ai-2025"],
+      "sourceIds": [
+        "egon-zehnder-cfo-ai-2025"
+      ],
       "evidenceTier": 1,
       "label": "Egon Zehnder: 18% of CFOs already eliminated roles; 88% of cuts in accounting"
     },
     {
       "date": "2023-09-01",
       "direction": "up",
-      "sourceIds": ["dellacqua-jagged-frontier-2023"],
+      "sourceIds": [
+        "dellacqua-jagged-frontier-2023"
+      ],
       "evidenceTier": 1,
       "label": "BCG/HBS: consultants 12.2% more tasks, 25.1% faster, 40% higher quality with GPT-4"
     },
     {
       "date": "2026-01-15",
       "direction": "down",
-      "sourceIds": ["cognizant-new-work-2026"],
+      "sourceIds": [
+        "cognizant-new-work-2026"
+      ],
       "evidenceTier": 2,
       "label": "Cognizant: financial managers 84% exposed; legal 63% (up from 9%); C-suite 60% (up from 25%)"
     }
@@ -155,12 +163,12 @@
     },
     {
       "id": "stanford-codex-legal-ai",
-      "title": "AI and the Legal Profession: Transforming Practice",
-      "url": "https://law.stanford.edu/codex-the-stanford-center-for-legal-informatics/",
-      "publisher": "Stanford CodeX",
+      "title": "AI might not be coming for lawyers' jobs anytime soon",
+      "url": "https://www.technologyreview.com/2025/12/15/1129181/ai-might-not-be-coming-for-lawyers-jobs-anytime-soon/",
+      "publisher": "MIT Technology Review",
       "evidenceTier": 1,
-      "datePublished": "2024-07-10",
-      "excerpt": "LLMs can now perform contract review, legal research, and document drafting at near-associate quality. Junior associate hiring at major firms has declined 12% since 2022."
+      "datePublished": "2025-12-15",
+      "excerpt": "Despite early signs that AI is beginning to affect entry-level workers, labor statistics have yet to show lawyers being displaced. Law graduate employment in 2024 reached 93.4% — the highest rate on record."
     },
     {
       "id": "wsj-white-collar-layoffs",
@@ -172,12 +180,12 @@
     },
     {
       "id": "deloitte-professional-services-2025",
-      "title": "2025 Professional Services Outlook: AI-Driven Transformation",
-      "url": "https://www2.deloitte.com/us/en/insights/industry/technology/technology-industry-outlook.html",
-      "publisher": "Deloitte",
+      "title": "Strategies for Workforce Evolution",
+      "url": "https://www.deloitte.com/us/en/insights/topics/talent/strategies-for-workforce-evolution.html",
+      "publisher": "Deloitte Insights",
       "evidenceTier": 2,
-      "datePublished": "2025-01-20",
-      "excerpt": "Big Four firms project 15-25% workforce restructuring over the next 3 years as AI handles routine audit, tax, and advisory tasks."
+      "datePublished": "2025-12-24",
+      "excerpt": "A Deloitte survey reveals how AI and human collaboration can help close talent gaps, speed upskilling, and transfer knowledge as demographic changes reshape the workforce."
     },
     {
       "id": "oecd-white-collar-2025",
@@ -240,7 +248,7 @@
       "publisher": "World Bank (Liu, Wang, Yu)",
       "evidenceTier": 1,
       "datePublished": "2025-11-01",
-      "excerpt": "Job postings for occupations with above-median AI substitution scores fell 18% by year three post-ChatGPT, up from 6% in year one. Professional services postings fell 30% and administrative support fell 40% relative to less-substitutable occupations."
+      "excerpt": "Job postings for high-AI-substitution occupations fell 12% relative to low-substitution roles post-ChatGPT; effect grew from 6% in year one to 18% by year three. Based on 285 million Lightcast job postings."
     },
     {
       "id": "noy-zhang-science-2023",
@@ -357,7 +365,7 @@
       "publisher": "Cognizant",
       "evidenceTier": 2,
       "datePublished": "2026-01-15",
-      "excerpt": "Financial managers have the highest AI exposure at 84% of tasks. Legal occupations jumped from 9% to 63% exposure. Business/financial operations 60-68%. C-suite/CEO roles rose from 25% to 60%. 40%+ of management tasks still cannot be automated."
+      "excerpt": "Education task exposure jumped from 11% to 49% — a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations."
     }
   ]
 }

@@ -9,19 +9,13 @@
   "timeHorizon": "By 2030",
   "history": [
     {
-      "date": "2024-02-01",
-      "value": 30,
-      "confidenceLow": 20,
-      "confidenceHigh": 40,
-      "sourceIds": ["adobe-creative-survey-2024"],
-      "evidenceTier": 2
-    },
-    {
       "date": "2024-05-20",
       "value": 22,
       "confidenceLow": 17,
       "confidenceHigh": 30,
-      "sourceIds": ["upwork-freelancer-impact"],
+      "sourceIds": [
+        "upwork-freelancer-impact"
+      ],
       "evidenceTier": 1
     },
     {
@@ -29,7 +23,9 @@
       "value": 21,
       "confidenceLow": 14,
       "confidenceHigh": 28,
-      "sourceIds": ["nber-creative-ai-2024"],
+      "sourceIds": [
+        "nber-creative-ai-2024"
+      ],
       "evidenceTier": 1
     },
     {
@@ -37,23 +33,19 @@
       "value": 20,
       "confidenceLow": 15,
       "confidenceHigh": 25,
-      "sourceIds": ["forrester-creative-2025"],
+      "sourceIds": [
+        "forrester-creative-2025"
+      ],
       "evidenceTier": 2
-    },
-    {
-      "date": "2025-02-20",
-      "value": 22,
-      "confidenceLow": 15,
-      "confidenceHigh": 30,
-      "sourceIds": ["fiverr-10k-2024"],
-      "evidenceTier": 1
     },
     {
       "date": "2025-07-15",
       "value": 33,
       "confidenceLow": 25,
       "confidenceHigh": 40,
-      "sourceIds": ["indeed-graphic-artist-postings-2025"],
+      "sourceIds": [
+        "indeed-graphic-artist-postings-2025"
+      ],
       "evidenceTier": 2
     },
     {
@@ -61,7 +53,9 @@
       "value": 30,
       "confidenceLow": 20,
       "confidenceHigh": 40,
-      "sourceIds": ["uoc-creative-automation-2025"],
+      "sourceIds": [
+        "uoc-creative-automation-2025"
+      ],
       "evidenceTier": 1
     }
   ],
@@ -69,42 +63,54 @@
     {
       "date": "2023-09-15",
       "direction": "down",
-      "sourceIds": ["mckinsey-creative-automation"],
+      "sourceIds": [
+        "mckinsey-creative-automation"
+      ],
       "evidenceTier": 2,
       "label": "McKinsey: 25-40% of creative task time automatable"
     },
     {
       "date": "2025-06-01",
       "direction": "down",
-      "sourceIds": ["bls-creative-occupations-2025"],
+      "sourceIds": [
+        "bls-creative-occupations-2025"
+      ],
       "evidenceTier": 1,
       "label": "BLS: graphic designer jobs to decline 4%"
     },
     {
       "date": "2025-09-20",
       "direction": "down",
-      "sourceIds": ["ramp-freelance-creative-2025"],
+      "sourceIds": [
+        "ramp-freelance-creative-2025"
+      ],
       "evidenceTier": 1,
       "label": "Ramp: $1 reduced freelance → $0.03 AI spend"
     },
     {
       "date": "2025-11-15",
       "direction": "down",
-      "sourceIds": ["queen-mary-turing-freelancer-2025"],
+      "sourceIds": [
+        "queen-mary-turing-freelancer-2025"
+      ],
       "evidenceTier": 1,
       "label": "Queen Mary/Turing: 73% of freelancers report reduced job security"
     },
     {
       "date": "2025-01-15",
       "direction": "down",
-      "sourceIds": ["demirci-jebo-freelance-2025"],
+      "sourceIds": [
+        "demirci-jebo-freelance-2025"
+      ],
       "evidenceTier": 1,
       "label": "JEBO (peer-reviewed): writing postings -30%, graphic design -18% within 8 months of ChatGPT"
     },
     {
       "date": "2024-04-01",
       "direction": "down",
-      "sourceIds": ["soa-uk-illustrators-2024"],
+      "sourceIds": [
+        "soa-uk-illustrators-2024"
+      ],
       "evidenceTier": 1,
       "label": "Society of Authors UK: 26% of illustrators, 36% of translators already lost work to AI"
     }
@@ -129,15 +135,6 @@
       "excerpt": "Generative AI could automate 25-40% of time spent on creative tasks, fundamentally changing the economics of content production."
     },
     {
-      "id": "adobe-creative-survey-2024",
-      "title": "Adobe Future of Creativity Survey 2024",
-      "url": "https://www.adobe.com/content/dam/cc/us/en/ai-assistant/pdfs/adobe-future-of-creativity-study.pdf",
-      "publisher": "Adobe",
-      "evidenceTier": 2,
-      "datePublished": "2024-02-01",
-      "excerpt": "74% of creative professionals report using AI tools. 30% say AI has reduced the scope of work they're hired for."
-    },
-    {
       "id": "upwork-freelancer-impact",
       "title": "Upwork Q2 2024 Earnings — Freelancer Market Trends",
       "url": "https://investors.upwork.com/news-releases/news-release-details/upwork-announces-second-quarter-2024-financial-results",
@@ -149,24 +146,25 @@
     {
       "id": "nber-creative-ai-2024",
       "title": "Generative AI and Creative Work: Evidence from Freelance Platforms",
-      "url": "https://www.nber.org/papers/w33077",
-      "publisher": "NBER",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4602944",
+      "publisher": "CESifo / Management Science (Demirci, Hannane, Zhu)",
       "evidenceTier": 1,
       "datePublished": "2024-08-15",
       "excerpt": "Image generation AI reduced demand for freelance illustrators by 21% within 12 months of widespread availability."
     },
     {
       "id": "techcrunch-creative-layoffs",
-      "title": "Creative studios slash headcount as AI tools mature",
-      "url": "https://techcrunch.com/2024/09/25/ai-is-being-used-more-in-creative-work-but-not-replacing-humans-report-finds/",
+      "title": "As layoffs deepen, AI's role in the cuts is murky — but it definitely has one",
+      "url": "https://techcrunch.com/2024/01/29/as-layoffs-deepen-ais-role-in-the-cuts-is-murky-but-it-definitely-has-one/",
       "publisher": "TechCrunch",
       "evidenceTier": 3,
-      "datePublished": "2024-11-01"
+      "datePublished": "2024-01-29",
+      "excerpt": "The advent and uptake of AI is playing some part in the scope of tech layoffs. Companies have signaled sizeable investments in AI to augment or replace work currently done by people."
     },
     {
       "id": "forrester-creative-2025",
       "title": "The Impact of Generative AI on Marketing and Creative Roles",
-      "url": "https://www.forrester.com/blogs/generative-ai-will-reshape-creative-and-marketing-roles/",
+      "url": "https://www.forrester.com/press-newsroom/forrester-agency-ai-workforce-2030/",
       "publisher": "Forrester",
       "evidenceTier": 2,
       "datePublished": "2025-02-15",
@@ -183,12 +181,12 @@
     },
     {
       "id": "fiverr-10k-2024",
-      "title": "Fiverr International 2024 10-K — Market Trends",
-      "url": "https://www.sec.gov/cgi-bin/browse-edgar?company=fiverr&CIK=&type=10-K",
-      "publisher": "Fiverr (SEC Filing)",
-      "evidenceTier": 1,
-      "datePublished": "2025-02-20",
-      "excerpt": "Fiverr reported that AI-related categories grew 55% YoY while traditional writing and basic design categories declined 22%."
+      "title": "Fiverr Announces Fourth Quarter and Full Year 2024 Results",
+      "url": "https://investors.fiverr.com/news-releases/news-release-details/fiverr-announces-fourth-quarter-and-full-year-2024-results",
+      "publisher": "Fiverr International Ltd.",
+      "evidenceTier": 2,
+      "datePublished": "2025-02-19",
+      "excerpt": "Fiverr FY2024 marketplace revenue declined 1.3% YoY to $303.1M. Active buyers fell 10% to 3.6M. AI-related categories showed strong growth while traditional low-complexity gig categories contracted."
     },
     {
       "id": "uoc-creative-automation-2025",
@@ -201,12 +199,12 @@
     },
     {
       "id": "unctad-creative-industry-2025",
-      "title": "UNCTAD Report: AI's Displacement of Human Artists and Creators",
+      "title": "Creative Economy Outlook 2024",
       "url": "https://unctad.org/publication/creative-economy-outlook-2024",
-      "publisher": "UNCTAD",
+      "publisher": "UN Trade and Development (UNCTAD)",
       "evidenceTier": 3,
-      "datePublished": "2025-12-01",
-      "excerpt": "UNCTAD warns of growing displacement of human artists by AI-generated content, with developing-country creative workers most vulnerable to rate compression."
+      "datePublished": "2024-12-01",
+      "excerpt": "Covers the role of creative industries in trade and economic growth; discusses AI's impact on the creative economy. Creative services exports surged to $1.4 trillion in 2022."
     },
     {
       "id": "autor-new-frontiers-qje-2024",
@@ -246,12 +244,12 @@
     },
     {
       "id": "queen-mary-turing-freelancer-2025",
-      "title": "The Impact of AI on Freelance Creative Workers",
-      "url": "https://www.turing.ac.uk/research/publications",
-      "publisher": "Queen Mary University / Alan Turing Institute",
+      "title": "Creative Industries and GenAI (CREAATIF Good Work Report)",
+      "url": "https://www.qmul.ac.uk/media/news/2025/queen-mary-news/pr/creative-industry-workers-feel-job-worth-and-security-under-threat-from-ai-.html",
+      "publisher": "Queen Mary University of London / Alan Turing Institute",
       "evidenceTier": 1,
-      "datePublished": "2025-11-15",
-      "excerpt": "73% of creative freelancers report AI has reduced their job security. Median freelance income in writing and design fell 15-20% since 2023. 40% considering career changes."
+      "datePublished": "2025-06-01",
+      "excerpt": "Survey of 335 freelance creative workers: 73% believe GenAI is altering quality of work; 68% feel job security reduced; 61% say value placed on their work has decreased; 55% report decline in financial compensation."
     },
     {
       "id": "demirci-jebo-freelance-2025",

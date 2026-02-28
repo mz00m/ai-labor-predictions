@@ -13,7 +13,9 @@
       "value": 5,
       "confidenceLow": 1,
       "confidenceHigh": 9,
-      "sourceIds": ["acemoglu-macro-2024"],
+      "sourceIds": [
+        "acemoglu-macro-2024"
+      ],
       "evidenceTier": 1
     },
     {
@@ -21,7 +23,9 @@
       "value": 6,
       "confidenceLow": 3,
       "confidenceHigh": 11,
-      "sourceIds": ["forrester-6pct"],
+      "sourceIds": [
+        "forrester-6pct"
+      ],
       "evidenceTier": 2
     },
     {
@@ -29,7 +33,9 @@
       "value": 0,
       "confidenceLow": 0,
       "confidenceHigh": 2,
-      "sourceIds": ["kinder-brookings-2025"],
+      "sourceIds": [
+        "kinder-brookings-2025"
+      ],
       "evidenceTier": 1
     },
     {
@@ -37,7 +43,9 @@
       "value": 0,
       "confidenceLow": 0,
       "confidenceHigh": 1,
-      "sourceIds": ["yale-budget-lab-2025"],
+      "sourceIds": [
+        "yale-budget-lab-2025"
+      ],
       "evidenceTier": 1
     },
     {
@@ -45,7 +53,9 @@
       "value": 12,
       "confidenceLow": 6,
       "confidenceHigh": 18,
-      "sourceIds": ["worldbank-liu-wang-yu-2025"],
+      "sourceIds": [
+        "worldbank-liu-wang-yu-2025"
+      ],
       "evidenceTier": 1
     },
     {
@@ -53,7 +63,9 @@
       "value": 7,
       "confidenceLow": 3,
       "confidenceHigh": 14,
-      "sourceIds": ["goldman-overall-workforce-2025"],
+      "sourceIds": [
+        "goldman-overall-workforce-2025"
+      ],
       "evidenceTier": 2
     },
     {
@@ -61,7 +73,9 @@
       "value": 8,
       "confidenceLow": 5,
       "confidenceHigh": 14,
-      "sourceIds": ["wef-future-jobs-2025"],
+      "sourceIds": [
+        "wef-future-jobs-2025"
+      ],
       "evidenceTier": 2
     },
     {
@@ -69,7 +83,9 @@
       "value": 0,
       "confidenceLow": 0,
       "confidenceHigh": 1,
-      "sourceIds": ["goldman-overall-measured-2025"],
+      "sourceIds": [
+        "goldman-overall-measured-2025"
+      ],
       "evidenceTier": 2
     },
     {
@@ -77,7 +93,9 @@
       "value": 0,
       "confidenceLow": 0,
       "confidenceHigh": 2,
-      "sourceIds": ["hartley-genai-labor-2026"],
+      "sourceIds": [
+        "hartley-genai-labor-2026"
+      ],
       "evidenceTier": 1
     },
     {
@@ -85,7 +103,9 @@
       "value": 0.1,
       "confidenceLow": 0,
       "confidenceHigh": 0.5,
-      "sourceIds": ["dallas-fed-overall-2026"],
+      "sourceIds": [
+        "dallas-fed-overall-2026"
+      ],
       "evidenceTier": 1
     },
     {
@@ -93,7 +113,9 @@
       "value": 0,
       "confidenceLow": 0,
       "confidenceHigh": 1,
-      "sourceIds": ["icle-ai-productivity-2026"],
+      "sourceIds": [
+        "icle-ai-productivity-2026"
+      ],
       "evidenceTier": 2
     },
     {
@@ -101,7 +123,9 @@
       "value": 1.2,
       "confidenceLow": 0.5,
       "confidenceHigh": 2.5,
-      "sourceIds": ["nber-bloom-firm-data-ai-2026"],
+      "sourceIds": [
+        "nber-bloom-firm-data-ai-2026"
+      ],
       "evidenceTier": 1
     },
     {
@@ -109,7 +133,9 @@
       "value": 6.5,
       "confidenceLow": 3,
       "confidenceHigh": 14,
-      "sourceIds": ["goldman-mei-ai-labor-2026"],
+      "sourceIds": [
+        "goldman-mei-ai-labor-2026"
+      ],
       "evidenceTier": 2
     }
   ],
@@ -117,42 +143,54 @@
     {
       "date": "2025-01-15",
       "direction": "down",
-      "sourceIds": ["chen-hbs-overall-2025"],
+      "sourceIds": [
+        "chen-hbs-overall-2025"
+      ],
       "evidenceTier": 1,
       "label": "HBS: 13% decline in postings for highly automatable roles"
     },
     {
       "date": "2025-09-01",
       "direction": "down",
-      "sourceIds": ["adp-stanford-young-workers-2025"],
+      "sourceIds": [
+        "adp-stanford-young-workers-2025"
+      ],
       "evidenceTier": 1,
       "label": "Stanford/ADP: 6% employment decline for ages 22-25 in AI-exposed jobs"
     },
     {
       "date": "2025-11-01",
       "direction": "neutral",
-      "sourceIds": ["humlum-vestergaard-denmark-2025"],
+      "sourceIds": [
+        "humlum-vestergaard-denmark-2025"
+      ],
       "evidenceTier": 1,
       "label": "Denmark study: zero effects on earnings and hours from AI (11 occupations)"
     },
     {
       "date": "2026-01-15",
       "direction": "down",
-      "sourceIds": ["frank-ai-unemployment-overall-2026"],
+      "sourceIds": [
+        "frank-ai-unemployment-overall-2026"
+      ],
       "evidenceTier": 1,
       "label": "Frank et al.: unemployment risk rose in AI-exposed occupations from early 2022"
     },
     {
       "date": "2026-01-15",
       "direction": "neutral",
-      "sourceIds": ["cognizant-new-work-2026"],
+      "sourceIds": [
+        "cognizant-new-work-2026"
+      ],
       "evidenceTier": 2,
       "label": "Cognizant: $4.5T in US labor value could shift to AI; 93% of jobs have exposed tasks"
     },
     {
       "date": "2026-02-24",
       "direction": "neutral",
-      "sourceIds": ["goldman-mei-ai-labor-2026"],
+      "sourceIds": [
+        "goldman-mei-ai-labor-2026"
+      ],
       "evidenceTier": 2,
       "label": "Goldman (Mei): only 5-10K/mo drag so far; baseline 6-7% displaced; +½pp unemployment"
     }
@@ -256,12 +294,12 @@
     },
     {
       "id": "amazon-8k-2024",
-      "title": "Amazon Q4 2024 8-K — AI Fulfillment & Workforce Impact",
-      "url": "https://ir.aboutamazon.com/sec-filings",
-      "publisher": "Amazon (SEC Filing)",
-      "evidenceTier": 1,
-      "datePublished": "2025-02-06",
-      "excerpt": "Amazon reported 75% increase in robotic and AI systems in fulfillment centers. Warehouse associate hiring slowed while 'AI specialist' roles grew 3x."
+      "title": "Amazon deploys its 1 millionth robot in a sign of more job automation",
+      "url": "https://www.cnbc.com/2025/07/02/amazon-deploys-its-1-millionth-robot-in-a-sign-of-more-job-automation.html",
+      "publisher": "CNBC",
+      "evidenceTier": 2,
+      "datePublished": "2025-07-02",
+      "excerpt": "Amazon deployed its 1 millionth robot across over 300 fulfillment centers worldwide. CEO Andy Jassy acknowledged that AI will result in fewer people doing some automated jobs, while new roles in robotics maintenance grew 30% at next-generation sites."
     },
     {
       "id": "yale-budget-lab-2025",
@@ -359,7 +397,7 @@
       "publisher": "Goldman Sachs Research",
       "evidenceTier": 2,
       "datePublished": "2025-08-01",
-      "excerpt": "2.5% of US employment at risk of displacement from current AI use cases; unemployment projected to increase by 0.5pp during transition."
+      "excerpt": "AI could displace 6-7% of the US workforce if widely adopted (range 3-14%). Currently 2.5% of US employment at risk of displacement from current AI use cases; unemployment projected to increase by 0.5pp during transition."
     },
     {
       "id": "goldman-overall-measured-2025",
@@ -431,7 +469,7 @@
       "publisher": "Cognizant",
       "evidenceTier": 2,
       "datePublished": "2026-01-15",
-      "excerpt": "$4.5T in US labor value ($15T globally) could shift from humans to AI based on current capabilities. 93% of jobs have tasks exposed to AI. Only 32% of tasks are non-automatable (down from 57% in 2023). Exposure measures current capability, not realized displacement."
+      "excerpt": "Education task exposure jumped from 11% to 49% — a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations."
     },
     {
       "id": "goldman-mei-ai-labor-2026",

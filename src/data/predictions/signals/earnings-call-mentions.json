@@ -13,7 +13,9 @@
       "value": 8,
       "confidenceLow": 5,
       "confidenceHigh": 12,
-      "sourceIds": ["factset-earnings-q4-2022"],
+      "sourceIds": [
+        "factset-earnings-q4-2022"
+      ],
       "evidenceTier": 1
     },
     {
@@ -21,7 +23,9 @@
       "value": 18,
       "confidenceLow": 14,
       "confidenceHigh": 24,
-      "sourceIds": ["factset-earnings-q1-2023"],
+      "sourceIds": [
+        "factset-earnings-q1-2023"
+      ],
       "evidenceTier": 1
     },
     {
@@ -29,7 +33,9 @@
       "value": 32,
       "confidenceLow": 26,
       "confidenceHigh": 38,
-      "sourceIds": ["factset-earnings-q2-2023"],
+      "sourceIds": [
+        "factset-earnings-q2-2023"
+      ],
       "evidenceTier": 1
     },
     {
@@ -37,7 +43,9 @@
       "value": 36,
       "confidenceLow": 30,
       "confidenceHigh": 42,
-      "sourceIds": ["factset-earnings-q3-2023"],
+      "sourceIds": [
+        "factset-earnings-q3-2023"
+      ],
       "evidenceTier": 1
     },
     {
@@ -45,7 +53,9 @@
       "value": 40,
       "confidenceLow": 34,
       "confidenceHigh": 46,
-      "sourceIds": ["factset-earnings-q4-2023"],
+      "sourceIds": [
+        "factset-earnings-q4-2023"
+      ],
       "evidenceTier": 1
     },
     {
@@ -53,7 +63,9 @@
       "value": 43,
       "confidenceLow": 37,
       "confidenceHigh": 50,
-      "sourceIds": ["factset-earnings-q1-2024"],
+      "sourceIds": [
+        "factset-earnings-q1-2024"
+      ],
       "evidenceTier": 1
     },
     {
@@ -61,7 +73,9 @@
       "value": 41,
       "confidenceLow": 35,
       "confidenceHigh": 48,
-      "sourceIds": ["factset-earnings-q2-2024"],
+      "sourceIds": [
+        "factset-earnings-q2-2024"
+      ],
       "evidenceTier": 1
     },
     {
@@ -69,7 +83,9 @@
       "value": 44,
       "confidenceLow": 38,
       "confidenceHigh": 51,
-      "sourceIds": ["factset-earnings-q3-2024"],
+      "sourceIds": [
+        "factset-earnings-q3-2024"
+      ],
       "evidenceTier": 1
     },
     {
@@ -77,7 +93,9 @@
       "value": 48,
       "confidenceLow": 42,
       "confidenceHigh": 55,
-      "sourceIds": ["factset-earnings-q4-2024"],
+      "sourceIds": [
+        "factset-earnings-q4-2024"
+      ],
       "evidenceTier": 1
     },
     {
@@ -85,7 +103,9 @@
       "value": 44,
       "confidenceLow": 38,
       "confidenceHigh": 52,
-      "sourceIds": ["factset-earnings-q1-2025"],
+      "sourceIds": [
+        "factset-earnings-q1-2025"
+      ],
       "evidenceTier": 1
     },
     {
@@ -93,7 +113,9 @@
       "value": 58,
       "confidenceLow": 53,
       "confidenceHigh": 63,
-      "sourceIds": ["factset-earnings-q3-2025"],
+      "sourceIds": [
+        "factset-earnings-q3-2025"
+      ],
       "evidenceTier": 1
     },
     {
@@ -101,7 +123,9 @@
       "value": 61,
       "confidenceLow": 56,
       "confidenceHigh": 66,
-      "sourceIds": ["factset-earnings-q3-2025"],
+      "sourceIds": [
+        "factset-earnings-q3-2025"
+      ],
       "evidenceTier": 1
     },
     {
@@ -109,7 +133,9 @@
       "value": 55,
       "confidenceLow": 48,
       "confidenceHigh": 63,
-      "sourceIds": ["fortune-ai-earnings-surge-2026"],
+      "sourceIds": [
+        "fortune-ai-earnings-surge-2026"
+      ],
       "evidenceTier": 3
     }
   ],
@@ -117,21 +143,27 @@
     {
       "date": "2024-11-01",
       "direction": "down",
-      "sourceIds": ["goldman-earnings-ai-analysis"],
+      "sourceIds": [
+        "goldman-earnings-ai-analysis"
+      ],
       "evidenceTier": 1,
       "label": "Goldman: AI-mentioning firms have 3.2pp lower headcount growth"
     },
     {
       "date": "2026-01-01",
       "direction": "up",
-      "sourceIds": ["korinek-brynjolfsson-agrawal-acm-2026"],
+      "sourceIds": [
+        "korinek-brynjolfsson-agrawal-acm-2026"
+      ],
       "evidenceTier": 1,
       "label": "ACM: AI discussion intensity is leading deployment indicator"
     },
     {
       "date": "2025-12-15",
       "direction": "up",
-      "sourceIds": ["fortune-ai-earnings-surge-2026"],
+      "sourceIds": [
+        "fortune-ai-earnings-surge-2026"
+      ],
       "evidenceTier": 3,
       "label": "Fortune: AI-mentioning companies outperformed by 8.2pp"
     }
@@ -256,12 +288,12 @@
     },
     {
       "id": "korinek-brynjolfsson-agrawal-acm-2026",
-      "title": "The Economics of Transformative AI: A Research Agenda",
+      "title": "A Research Agenda for the Economics of Transformative AI",
       "url": "https://cepr.org/system/files/2024-12/Korinek%20paper.pdf",
-      "publisher": "Communications of the ACM (Korinek, Brynjolfsson, Agrawal)",
+      "publisher": "CEPR / Stanford Digital Economy Lab (Brynjolfsson, Korinek, Agrawal)",
       "evidenceTier": 1,
-      "datePublished": "2026-01-01",
-      "excerpt": "Research agenda for understanding transformative AI's economic implications. Corporate AI discussion intensity serves as leading indicator of deployment and labor market effects."
+      "datePublished": "2024-12-01",
+      "excerpt": "As we approach Transformative AI, there is urgent need to advance understanding of how it reshapes economic models, institutions, and policies. Proposes nine Grand Challenges including economic growth, income distribution, and transition dynamics."
     }
   ]
 }
