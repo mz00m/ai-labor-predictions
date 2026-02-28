@@ -2,7 +2,6 @@
 
 import {
   ComposedChart,
-  Area,
   Line,
   XAxis,
   YAxis,
@@ -155,13 +154,11 @@ export default function PredictionChart({
     dateStrToUnique.set(pt.date, pt.dateStr);
   }
 
-  const allValues = realPoints.flatMap((d) => [
-    d.value!,
-    d.confidenceLow ?? d.value!,
-    d.confidenceHigh ?? d.value!,
-  ]);
-  const yMin = Math.floor(Math.min(...allValues) - 2);
-  const yMax = Math.ceil(Math.max(...allValues) + 2);
+  const displayedValues = realPoints
+    .filter((d) => d.value != null)
+    .map((d) => d.value!);
+  const yMin = Math.floor(Math.min(...displayedValues) - 2);
+  const yMax = Math.ceil(Math.max(...displayedValues) + 2);
 
   // Process overlay bands (qualitative directional studies)
   const filteredOverlays = (overlays ?? []).filter((o) =>
