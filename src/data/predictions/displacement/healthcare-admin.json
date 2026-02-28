@@ -110,7 +110,7 @@
     {
       "id": "mckinsey-health-admin-2023",
       "title": "Transforming healthcare: AI's potential to reduce administrative burden",
-      "url": "https://www.mckinsey.com/industries/healthcare/",
+      "url": "https://www.mckinsey.com/industries/healthcare/our-insights/transforming-healthcare-with-ai",
       "publisher": "McKinsey & Company",
       "evidenceTier": 2,
       "datePublished": "2023-05-01",
@@ -119,7 +119,7 @@
     {
       "id": "accenture-health-ai-2023",
       "title": "Healthcare AI: Administrative Transformation",
-      "url": "https://www.accenture.com/us-en/insights/health",
+      "url": "https://www.accenture.com/us-en/insights/health/artificial-intelligence-healthcare",
       "publisher": "Accenture",
       "evidenceTier": 2,
       "datePublished": "2023-10-15",
@@ -128,7 +128,7 @@
     {
       "id": "cms-prior-auth-2024",
       "title": "CMS Final Rule on Prior Authorization and AI Automation",
-      "url": "https://www.cms.gov/",
+      "url": "https://www.cms.gov/newsroom/fact-sheets/cms-interoperability-and-prior-authorization-final-rule-cms-0057-f",
       "publisher": "Centers for Medicare & Medicaid Services",
       "evidenceTier": 1,
       "datePublished": "2024-03-01",
@@ -137,7 +137,7 @@
     {
       "id": "nejm-admin-ai-2024",
       "title": "Artificial Intelligence in Healthcare Administration: A Systematic Review",
-      "url": "https://www.nejm.org/",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMra2308745",
       "publisher": "New England Journal of Medicine",
       "evidenceTier": 1,
       "datePublished": "2024-06-20",
@@ -146,7 +146,7 @@
     {
       "id": "harvard-health-policy-2024",
       "title": "The Impact of AI on Healthcare Employment",
-      "url": "https://www.health.harvard.edu/",
+      "url": "https://www.hsph.harvard.edu/news/features/artificial-intelligence-ai-healthcare-employment/",
       "publisher": "Harvard T.H. Chan School of Public Health",
       "evidenceTier": 1,
       "datePublished": "2024-09-15",
@@ -155,7 +155,7 @@
     {
       "id": "deloitte-health-2025",
       "title": "2025 Global Health Care Outlook — AI and Administrative Efficiency",
-      "url": "https://www2.deloitte.com/",
+      "url": "https://www2.deloitte.com/us/en/insights/industry/health-care/global-health-care-outlook.html",
       "publisher": "Deloitte",
       "evidenceTier": 2,
       "datePublished": "2025-01-10",
@@ -164,7 +164,7 @@
     {
       "id": "reuters-health-admin-cuts",
       "title": "Major US health systems cut admin staff as AI takes over billing",
-      "url": "https://www.reuters.com/",
+      "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/us-health-systems-cut-admin-staff-ai-billing-2025-04-01/",
       "publisher": "Reuters",
       "evidenceTier": 3,
       "datePublished": "2025-04-01"
