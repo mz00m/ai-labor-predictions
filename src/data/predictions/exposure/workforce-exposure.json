@@ -135,6 +135,15 @@
       ],
       "evidenceTier": 2,
       "label": "Cognizant: exposure growing 9%/yr (up from 2%); 30% above 2032 projections"
+    },
+    {
+      "date": "2026-01-21",
+      "direction": "up",
+      "sourceIds": [
+        "brookings-adaptive-capacity-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Brookings: Admin support has highest exposure (52.5%) + lowest adaptability"
     }
   ],
   "sources": [
@@ -227,6 +236,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-01-15",
       "excerpt": "Education task exposure jumped from 11% to 49% — a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations."
+    },
+    {
+      "id": "brookings-adaptive-capacity-2026",
+      "title": "Measuring US workers' capacity to adapt to AI-driven job displacement",
+      "url": "https://www.brookings.edu/articles/measuring-us-workers-capacity-to-adapt-to-ai-driven-job-displacement/",
+      "publisher": "Brookings Institution (Manning, Aguirre, Muro, Methkupally)",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-21",
+      "excerpt": "Administrative support occupations have lower adaptive capacity (0.360) combined with the highest AI exposure of any major occupation group (0.525)."
     }
   ]
 }
