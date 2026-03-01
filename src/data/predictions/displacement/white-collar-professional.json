@@ -9,6 +9,16 @@
   "timeHorizon": "By 2030",
   "history": [
     {
+      "date": "2025-07-01",
+      "value": 21.5,
+      "confidenceLow": 18,
+      "confidenceHigh": 25,
+      "sourceIds": [
+        "oecd-white-collar-2025"
+      ],
+      "evidenceTier": 1
+    },
+    {
       "date": "2025-08-01",
       "value": 2.5,
       "confidenceLow": 1,

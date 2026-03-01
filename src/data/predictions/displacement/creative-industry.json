@@ -9,6 +9,16 @@
   "timeHorizon": "By 2030",
   "history": [
     {
+      "date": "2023-06-14",
+      "value": 32.5,
+      "confidenceLow": 25,
+      "confidenceHigh": 40,
+      "sourceIds": [
+        "mckinsey-creative-automation"
+      ],
+      "evidenceTier": 2
+    },
+    {
       "date": "2024-05-20",
       "value": 22,
       "confidenceLow": 17,
