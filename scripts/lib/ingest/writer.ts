@@ -153,5 +153,12 @@ export function applyChanges(
     }
   }
 
+  // Update the last-updated timestamp if any files were modified
+  if (written.length > 0) {
+    const metaPath = path.join(process.cwd(), "src/data/last-updated.json");
+    const today = new Date().toISOString().split("T")[0];
+    fs.writeFileSync(metaPath, JSON.stringify({ lastUpdated: today }, null, 2) + "\n");
+  }
+
   return { written, skipped };
 }

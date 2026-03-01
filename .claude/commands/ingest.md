@@ -180,7 +180,8 @@ After applying changes to prediction files, also update `src/data/confirmed-sour
 After all file changes are applied:
 
 1. **Update** the `lastUpdated` field in `src/data/confirmed-sources.json` to today's date (`YYYY-MM-DD`)
-2. This ensures the site header reflects the most recent ingestion
+2. **Update** `src/data/last-updated.json` to `{ "lastUpdated": "YYYY-MM-DD" }` with today's date — this is what the site Hero reads to display "Updated ..."
+3. This ensures the site header reflects the most recent ingestion
 
 ### Critical Rules
 
