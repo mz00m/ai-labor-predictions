@@ -221,8 +221,12 @@ export default function PredictionChart({
     }
     const slope = den !== 0 ? num / den : 0;
     const intercept = yMean - slope * xMean;
+    const minDate = Math.min(...dates);
+    const maxDate = Math.max(...dates);
     for (const d of chartData) {
-      d.trendValue = slope * d.date + intercept;
+      if (d.date >= minDate && d.date <= maxDate) {
+        d.trendValue = slope * d.date + intercept;
+      }
     }
   }
 
@@ -280,6 +284,7 @@ export default function PredictionChart({
           />
           <YAxis
             domain={[yMin, yMax]}
+            allowDataOverflow
             tick={{ fontSize: 12, fill: "#6b7280" }}
             tickLine={false}
             axisLine={false}
