@@ -132,6 +132,15 @@
       ],
       "evidenceTier": 1,
       "label": "Althoff & Reichardt: Architects, engineers, executives see absolute wage declines"
+    },
+    {
+      "date": "2026-02-17",
+      "direction": "up",
+      "sourceIds": [
+        "cepr-ai-productivity-jobs-europe-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "CEPR/BIS: wage gains may accrue disproportionately to highly skilled workers"
     }
   ],
   "sources": [
@@ -284,6 +293,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-01-01",
       "excerpt": "Adoption concentrated among younger, college-educated, higher-earning employees, reinforcing wage premium for AI-complementary skills."
+    },
+    {
+      "id": "cepr-ai-productivity-jobs-europe-2026",
+      "title": "How AI is affecting productivity and jobs in Europe",
+      "url": "https://cepr.org/voxeu/columns/how-ai-affecting-productivity-and-jobs-europe",
+      "publisher": "CEPR VoxEU (Aldasoro, Gambacorta, Pál, Revoltella, Weiss, Wolski)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-17",
+      "excerpt": "The wage gains observed may accrue disproportionately to highly skilled workers, potentially widening income inequality."
     }
   ]
 }

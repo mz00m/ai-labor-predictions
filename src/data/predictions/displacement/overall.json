@@ -210,6 +210,15 @@
       ],
       "evidenceTier": 2,
       "label": "Brookings: 70% of 37.1M highly AI-exposed workers are resilient"
+    },
+    {
+      "date": "2026-02-17",
+      "direction": "neutral",
+      "sourceIds": [
+        "cepr-ai-productivity-jobs-europe-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "CEPR/BIS: no evidence AI reduces employment in EU firms (12K firm study)"
     }
   ],
   "sources": [
@@ -514,6 +523,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-01-21",
       "excerpt": "Of the 37.1 million workers in the top quartile of AI exposure, 26.5 million are in occupations that also have above-median adaptive capacity."
+    },
+    {
+      "id": "cepr-ai-productivity-jobs-europe-2026",
+      "title": "How AI is affecting productivity and jobs in Europe",
+      "url": "https://cepr.org/voxeu/columns/how-ai-affecting-productivity-and-jobs-europe",
+      "publisher": "CEPR VoxEU (Aldasoro, Gambacorta, Pál, Revoltella, Weiss, Wolski)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-17",
+      "excerpt": "No evidence that AI reduces employment in the short run. AI augments worker output — enabling employees to complete tasks faster and make better decisions — without displacing labour."
     }
   ]
 }

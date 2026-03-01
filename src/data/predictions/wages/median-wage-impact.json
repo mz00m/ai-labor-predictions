@@ -174,6 +174,15 @@
       "label": "Stanford: small positive wage effects in AI-exposed jobs"
     },
     {
+      "date": "2026-02-17",
+      "direction": "up",
+      "sourceIds": [
+        "cepr-ai-productivity-jobs-europe-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "CEPR/BIS: AI boosts EU firm productivity 4%; higher wages per employee"
+    },
+    {
       "date": "2025-08-01",
       "direction": "up",
       "sourceIds": [
@@ -375,6 +384,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-01-01",
       "excerpt": "Small positive wage effects identified for workers in AI-exposed occupations; adoption concentrated among younger, college-educated, higher-earning employees."
+    },
+    {
+      "id": "cepr-ai-productivity-jobs-europe-2026",
+      "title": "How AI is affecting productivity and jobs in Europe",
+      "url": "https://cepr.org/voxeu/columns/how-ai-affecting-productivity-and-jobs-europe",
+      "publisher": "CEPR VoxEU (Aldasoro, Gambacorta, Pál, Revoltella, Weiss, Wolski)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-17",
+      "excerpt": "AI adoption causally increases labour productivity levels by 4% on average. Employees in AI-using companies benefit through higher wages, both in total and per employee."
     }
   ]
 }

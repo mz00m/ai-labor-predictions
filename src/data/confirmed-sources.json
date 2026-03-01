@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-01",
-  "totalSources": 295,
-  "verifiedCount": 285,
+  "totalSources": 296,
+  "verifiedCount": 286,
   "sources": {
     "accenture-health-ai-2023": {
       "id": "accenture-health-ai-2023",
@@ -735,6 +735,22 @@
         "education-sector-displacement"
       ],
       "verified": true
+    },
+    "cepr-ai-productivity-jobs-europe-2026": {
+      "id": "cepr-ai-productivity-jobs-europe-2026",
+      "title": "How AI is affecting productivity and jobs in Europe",
+      "url": "https://cepr.org/voxeu/columns/how-ai-affecting-productivity-and-jobs-europe",
+      "publisher": "CEPR VoxEU (Aldasoro, Gambacorta, Pál, Revoltella, Weiss, Wolski)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-17",
+      "excerpt": "AI adoption causally increases labour productivity levels by 4% on average in the EU, with no evidence of reduced employment in the short run. Wage gains may accrue disproportionately to highly skilled workers.",
+      "usedIn": [
+        "median-wage-impact",
+        "overall-us-displacement",
+        "high-skill-wage-premium"
+      ],
+      "verified": true,
+      "synthetic": false
     },
     "chen-hbs-displacement-2025": {
       "id": "chen-hbs-displacement-2025",
