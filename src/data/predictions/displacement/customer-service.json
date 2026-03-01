@@ -39,6 +39,16 @@
       "evidenceTier": 1
     },
     {
+      "date": "2025-10-15",
+      "value": 25,
+      "confidenceLow": 20,
+      "confidenceHigh": 30,
+      "sourceIds": [
+        "gartner-cs-2026-forecast"
+      ],
+      "evidenceTier": 2
+    },
+    {
       "date": "2026-02-01",
       "value": 55,
       "confidenceLow": 45,

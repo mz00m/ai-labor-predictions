@@ -9,6 +9,16 @@
   "timeHorizon": "By 2030",
   "history": [
     {
+      "date": "2024-06-20",
+      "value": 27.5,
+      "confidenceLow": 20,
+      "confidenceHigh": 35,
+      "sourceIds": [
+        "nejm-admin-ai-2024"
+      ],
+      "evidenceTier": 1
+    },
+    {
       "date": "2025-01-10",
       "value": 30,
       "confidenceLow": 22,

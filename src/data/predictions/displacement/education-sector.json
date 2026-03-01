@@ -9,6 +9,16 @@
   "timeHorizon": "By 2030",
   "history": [
     {
+      "date": "2025-01-20",
+      "value": 35,
+      "confidenceLow": 30,
+      "confidenceHigh": 40,
+      "sourceIds": [
+        "oecd-education-outlook-2025"
+      ],
+      "evidenceTier": 1
+    },
+    {
       "date": "2024-07-01",
       "value": 23,
       "confidenceLow": 15,
