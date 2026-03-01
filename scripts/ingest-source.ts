@@ -203,7 +203,7 @@ function displayReport(
     byFile.set(c.filePath, existing);
   }
 
-  for (const [filePath, fileChanges] of byFile) {
+  for (const [filePath, fileChanges] of Array.from(byFile.entries())) {
     const relPath = path.relative(process.cwd(), filePath);
     console.log(`  ${relPath}:`);
 
