@@ -1,5 +1,3 @@
-import RecentSources from "@/components/RecentSources";
-
 export default function Methodology() {
   return (
     <div id="methodology">
@@ -13,10 +11,6 @@ export default function Methodology() {
           behind every prediction
         </p>
       </div>
-
-      <div className="flex flex-col lg:flex-row lg:gap-12">
-      {/* Left column — Methodology content */}
-      <div className="lg:flex-1 min-w-0">
 
       {/* Overview */}
       <div className="space-y-12">
@@ -565,15 +559,6 @@ export default function Methodology() {
           </p>
         </div>
       </div>
-      </div>{/* end left column */}
-
-      {/* Right column — compact recent sources feed */}
-      <div className="mt-12 lg:mt-0 lg:w-64 shrink-0">
-        <div className="lg:sticky lg:top-16 lg:max-h-[calc(100vh-5rem)] lg:overflow-y-auto">
-          <RecentSources />
-        </div>
-      </div>
-      </div>{/* end flex row */}
     </div>
   );
 }
