@@ -31,12 +31,19 @@ jobs:
           GOOGLE_CSE_ID: ${{ secrets.GOOGLE_CSE_ID }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
+      - name: Configure git identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
       - name: Check for changes
         id: changes
         run: |
-          if git diff --quiet -- 'src/data/digests/'; then
+          git add src/data/digests/
+          if git diff --cached --quiet -- 'src/data/digests/'; then
             echo "has_changes=false" >> "$GITHUB_OUTPUT"
           else
+            git reset -- src/data/digests/
             echo "has_changes=true" >> "$GITHUB_OUTPUT"
           fi
 
