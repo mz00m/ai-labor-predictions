@@ -141,6 +141,15 @@
       ],
       "evidenceTier": 2,
       "label": "Brookings: 56.9M professionals highly adaptive (73%) despite 40% AI exposure"
+    },
+    {
+      "date": "2026-01-21",
+      "direction": "up",
+      "sourceIds": [
+        "althoff-reichardt-task-specific-technical-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Althoff & Reichardt: Admin roles (financial clerks) see large employment decline"
     }
   ],
   "sources": [
@@ -385,6 +394,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-01-15",
       "excerpt": "Education task exposure jumped from 11% to 49% — a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations."
+    },
+    {
+      "id": "althoff-reichardt-task-specific-technical-2026",
+      "title": "Task-Specific Technical Change and Comparative Advantage",
+      "url": "https://hugoreichardt.com/pdf/tstc_compadvantage.pdf",
+      "publisher": "CESifo (Althoff, Reichardt)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-21",
+      "excerpt": "administrative occupations (e.g., financial clerks) see a large decline in employment, while science occupations (e.g., life scientists) expand"
     },
     {
       "id": "brookings-adaptive-capacity-2026",
