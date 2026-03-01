@@ -79,54 +79,85 @@ function matchesTerm(text: string, term: string): boolean {
 /**
  * Terms that indicate a paper belongs to an unrelated domain (medical,
  * biological, physical sciences, etc.) and should be excluded from the
- * AI-labor research feed.  A paper is excluded when it matches 2+ of
- * these terms AND does not contain any of the strong labor-market signals.
+ * AI-labor research feed.
+ *
+ * A paper is excluded when it matches ANY of these terms, UNLESS it also
+ * contains a strong labor-market signal (multi-word phrases that are
+ * unambiguously about labor economics).
  */
 const OFF_TOPIC_TERMS = [
   // Medical / clinical
   "cancer", "tumor", "tumour", "oncolog", "carcinoma", "melanoma",
   "leukemia", "lymphoma", "metastasis", "chemotherapy", "radiotherapy",
-  "patient", "clinical trial", "diagnosis", "pathology", "biomarker",
+  "patient", "clinical trial", "clinical indication", "diagnosis",
+  "pathology", "biomarker", "prognosis",
   "surgery", "surgical", "cardiac", "cardiovascular", "heart failure",
-  "stroke", "diabetes", "insulin", "hypertension",
+  "myocardial", "perfusion", "tomography", "positron emission",
+  "stroke", "diabetes", "insulin", "hypertension", "therapeutic",
   "anxiety disorder", "psychiatric", "schizophreni",
   "genomic", "genome", "proteomic", "protein folding",
   "cell line", "in vitro", "in vivo", "mouse model", "rat model",
   "drug discovery", "pharmaceutical", "pharmacolog", "toxicolog",
   "radiology", "mri ", "ct scan", "imaging modality",
   "mortality", "morbidity", "epidemiolog", "prevalence",
+  "medical imaging", "segmentation", "lesion", "biopsy",
+  "clinical outcome", "randomized control", "placebo",
   // Biological / environmental
   "species", "ecosystem", "biodiversity", "phylogenet",
   "crop yield", "soil", "pollinator",
   // Physical sciences / engineering (non-labor)
   "fluid dynamics", "quantum", "semiconductor", "photovoltaic",
   "battery", "alloy", "molecular", "nanomaterial",
+  // Robotics / hardware (non-labor-economics)
+  "lidar", "point cloud", "autonomous vehicle",
 ];
 
-const STRONG_LABOR_SIGNALS = [
-  "labor market", "job displacement", "wage", "workforce",
-  "unemployment", "layoff", "headcount", "hiring",
-  "job loss", "occupation", "worker",
+/**
+ * Signals that a paper is genuinely about labor/economic topics.
+ * These override the off-topic filter ONLY when 2+ signals match,
+ * providing confidence the paper is truly labor-relevant despite
+ * containing a medical/science term.
+ */
+const LABOR_SIGNALS = [
+  // Strong multi-word phrases (unambiguous)
+  "labor market", "labour market", "job displacement", "job loss",
+  "wage gap", "wage effect", "wage impact", "wage inequality",
+  "workforce displacement", "workforce impact", "workforce transition",
+  "unemployment rate", "layoff", "headcount reduction",
+  "hiring trend", "hiring freeze", "job postings",
+  "occupational displacement", "worker displacement",
+  "labor economics", "labour economics",
+  // Single terms that indicate labor/economic focus
+  "workforce", "wages",  "jobs", "labor", "labour", "economy",
+  "workers",  "employer", "occupation",
 ];
 
 function isOffTopicDomain(title: string, abstract: string | null, venue: string | null): boolean {
   const text = `${title} ${abstract || ""} ${venue || ""}`.toLowerCase();
 
-  // If the paper contains a strong labor-market signal, keep it regardless
-  if (STRONG_LABOR_SIGNALS.some((term) => text.includes(term))) {
-    return false;
-  }
-
-  // Count how many off-topic terms appear
+  // Count off-topic hits
   let offTopicHits = 0;
   for (const term of OFF_TOPIC_TERMS) {
     if (text.includes(term)) {
       offTopicHits++;
-      if (offTopicHits >= 2) return true;
     }
   }
 
-  return false;
+  if (offTopicHits === 0) return false;
+
+  // Count labor signal hits — need 2+ to override off-topic content
+  let laborHits = 0;
+  for (const term of LABOR_SIGNALS) {
+    if (text.includes(term)) {
+      laborHits++;
+      if (laborHits >= 2) break;
+    }
+  }
+
+  // Off-topic paper rescued only if it has strong labor presence
+  if (laborHits >= 2) return false;
+
+  return true;
 }
 
 /**

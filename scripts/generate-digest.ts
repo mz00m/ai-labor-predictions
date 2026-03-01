@@ -116,9 +116,9 @@ async function main() {
   console.log(`Generating digest for the past ${days} days...`);
   console.log("Fetching from all sources...");
 
-  // Fetch papers with a low relevance threshold so we get more candidates
+  // Require meaningful relevance — must match AI + labor keywords
   const papers = await getResearchFeed({
-    minRelevanceScore: 2,
+    minRelevanceScore: 4,
     maxResults: 200,
     tiers: undefined,
   });
