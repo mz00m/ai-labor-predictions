@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-01",
-  "totalSources": 294,
-  "verifiedCount": 284,
+  "totalSources": 295,
+  "verifiedCount": 285,
   "sources": {
     "accenture-health-ai-2023": {
       "id": "accenture-health-ai-2023",
@@ -3889,6 +3889,23 @@
         "customer-service-automation"
       ],
       "verified": true
+    },
+    "althoff-reichardt-task-specific-technical-2026": {
+      "id": "althoff-reichardt-task-specific-technical-2026",
+      "title": "Task-Specific Technical Change and Comparative Advantage",
+      "url": "https://hugoreichardt.com/pdf/tstc_compadvantage.pdf",
+      "publisher": "CESifo (Althoff, Reichardt)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-21",
+      "excerpt": "raising average wages by 21 percent",
+      "usedIn": [
+        "median-wage-impact",
+        "entry-level-wage-impact",
+        "high-skill-wage-premium",
+        "white-collar-professional-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
     }
   }
 }

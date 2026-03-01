@@ -152,6 +152,15 @@
       ],
       "evidenceTier": 1,
       "label": "Frank et al.: unemployment risk rose in AI-exposed occupations from early 2022"
+    },
+    {
+      "date": "2026-01-21",
+      "direction": "up",
+      "sourceIds": [
+        "althoff-reichardt-task-specific-technical-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Althoff & Reichardt: AI simplification boosts lower-skill worker productivity"
     }
   ],
   "sources": [
@@ -315,6 +324,15 @@
       "evidenceTier": 1,
       "datePublished": "2025-09-01",
       "excerpt": "Analysis of 62M U.S. resumes: junior employment declined sharply at AI-adopting firms while senior employment was largely unchanged — described as 'seniority-biased technological change.'"
+    },
+    {
+      "id": "althoff-reichardt-task-specific-technical-2026",
+      "title": "Task-Specific Technical Change and Comparative Advantage",
+      "url": "https://hugoreichardt.com/pdf/tstc_compadvantage.pdf",
+      "publisher": "CESifo (Althoff, Reichardt)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-21",
+      "excerpt": "increases the relative productivity of lower-skill workers in tasks and occupations that were previously the territory of higher skilled workers... this lowering of skill-based barriers is the key force reducing inequality"
     },
     {
       "id": "frank-ai-unemployment-2026",

@@ -117,6 +117,14 @@
         "bls-may-2024-wage-data"
       ],
       "evidenceTier": 2
+    },
+    {
+      "date": "2026-01-21",
+      "value": 21,
+      "sourceIds": [
+        "althoff-reichardt-task-specific-technical-2026"
+      ],
+      "evidenceTier": 1
     }
   ],
   "overlays": [
@@ -349,6 +357,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-02-01",
       "excerpt": "Small but statistically significant positive wage effects found across AI-exposed occupations; 35.9% of US workers used generative AI by December 2025."
+    },
+    {
+      "id": "althoff-reichardt-task-specific-technical-2026",
+      "title": "Task-Specific Technical Change and Comparative Advantage",
+      "url": "https://hugoreichardt.com/pdf/tstc_compadvantage.pdf",
+      "publisher": "CESifo (Althoff, Reichardt)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-21",
+      "excerpt": "raising average wages by 21 percent"
     },
     {
       "id": "hartley-median-wage-2026",

@@ -123,6 +123,15 @@
       ],
       "evidenceTier": 2,
       "label": "IMF: postings with 4+ new skills pay up to 15% more"
+    },
+    {
+      "date": "2026-01-21",
+      "direction": "down",
+      "sourceIds": [
+        "althoff-reichardt-task-specific-technical-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Althoff & Reichardt: Architects, engineers, executives see absolute wage declines"
     }
   ],
   "sources": [
@@ -257,6 +266,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-01-15",
       "excerpt": "Job postings with 4+ new skills pay up to 15% more (UK) and 8.5% more (US); middle-skill roles being squeezed while high-skill workers gain."
+    },
+    {
+      "id": "althoff-reichardt-task-specific-technical-2026",
+      "title": "Task-Specific Technical Change and Comparative Advantage",
+      "url": "https://hugoreichardt.com/pdf/tstc_compadvantage.pdf",
+      "publisher": "CESifo (Althoff, Reichardt)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-21",
+      "excerpt": "some occupations — such as architects, engineers, and executives — see absolute wage declines"
     },
     {
       "id": "hartley-high-skill-2026",
