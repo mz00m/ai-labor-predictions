@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-02-28",
-  "totalSources": 293,
-  "verifiedCount": 283,
+  "lastUpdated": "2026-03-01",
+  "totalSources": 294,
+  "verifiedCount": 284,
   "sources": {
     "accenture-health-ai-2023": {
       "id": "accenture-health-ai-2023",
@@ -492,6 +492,24 @@
         "tech-sector-displacement"
       ],
       "verified": true
+    },
+    "brookings-adaptive-capacity-2026": {
+      "id": "brookings-adaptive-capacity-2026",
+      "title": "Measuring US workers' capacity to adapt to AI-driven job displacement",
+      "url": "https://www.brookings.edu/articles/measuring-us-workers-capacity-to-adapt-to-ai-driven-job-displacement/",
+      "publisher": "Brookings Institution (Manning, Aguirre, Muro, Methkupally)",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-21",
+      "excerpt": "Of the 37.1 million workers in the top quartile of AI exposure, 26.5 million are in occupations that also have above-median adaptive capacity. 6.1 million workers (4.2%) face high exposure + low adaptive capacity; 86% are women.",
+      "usedIn": [
+        "total-us-jobs-lost",
+        "overall-us-displacement",
+        "workforce-ai-exposure",
+        "white-collar-professional-displacement",
+        "customer-service-automation"
+      ],
+      "verified": true,
+      "synthetic": false
     },
     "brookings-entry-level-2024": {
       "id": "brookings-entry-level-2024",

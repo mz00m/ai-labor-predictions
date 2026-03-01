@@ -100,16 +100,18 @@ URL:       [url if available]
   + source: [source-id]
 ```
 
-### Step 5: Ask for Confirmation
+### Step 5: Ask for Confirmation (Per-Statistic)
 
-After presenting the report, ask the user if they want to apply the changes. Offer options:
-- Apply all changes
-- Skip specific statistics
-- Modify values or graph assignments
+After presenting the report, ask the user to approve **each extracted statistic individually**. For each statistic, use `AskUserQuestion` to let the user:
+- **Accept** — apply as proposed
+- **Skip** — do not add this statistic
+- **Modify** — change the graph assignment, direction, value, or label
 
-### Step 6: Apply Changes
+Walk through each statistic one at a time (or in small batches of 2-3 if there are many). Only apply statistics the user explicitly approves. If the user rejects all statistics, stop — do not make any file changes.
 
-When confirmed, for each prediction JSON file that needs changes:
+### Step 6: Apply Approved Changes
+
+For each **approved** prediction JSON file that needs changes:
 
 1. **Read** the current file
 2. **Add the Source entry** to the `sources` array:
@@ -147,6 +149,38 @@ When confirmed, for each prediction JSON file that needs changes:
    ```
 5. **Keep arrays sorted by date** (ascending)
 6. **Check for duplicates** — skip if source ID or URL already exists
+
+### Step 7: Add to Verified Source List
+
+After applying changes to prediction files, also update `src/data/confirmed-sources.json`:
+
+1. **Read** the current file
+2. **Add a source entry** to the `sources` object for each approved source (keyed by source ID):
+   ```json
+   "[source-id]": {
+     "id": "[source-id]",
+     "title": "[source title]",
+     "url": "[url]",
+     "publisher": "[publisher]",
+     "evidenceTier": [tier],
+     "datePublished": "[YYYY-MM-DD]",
+     "excerpt": "[primary excerpt from this source]",
+     "usedIn": ["[graph-slug-1]", "[graph-slug-2]"],
+     "verified": true,
+     "synthetic": false
+   }
+   ```
+   - The `usedIn` array should list **every** prediction graph slug this source was added to
+   - Set `verified: true` and `synthetic: false` for all ingested sources
+   - Skip if the source ID already exists in the file
+3. **Increment** `totalSources` and `verifiedCount` by the number of new sources added (usually 1)
+
+### Step 8: Update Last Updated Date
+
+After all file changes are applied:
+
+1. **Update** the `lastUpdated` field in `src/data/confirmed-sources.json` to today's date (`YYYY-MM-DD`)
+2. This ensures the site header reflects the most recent ingestion
 
 ### Critical Rules
 
