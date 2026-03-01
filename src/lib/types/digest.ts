@@ -24,6 +24,23 @@ export interface DigestPaper {
   compositeScore: number;
 }
 
+export interface SuggestedDataPoint {
+  predictionSlug: string;
+  predictionTitle: string;
+  date: string;
+  value: number;
+  confidenceLow?: number;
+  confidenceHigh?: number;
+  unit: string;
+  sourceId: string;
+  sourceTitle: string;
+  sourceUrl: string;
+  evidenceTier: EvidenceTier;
+  excerpt: string;
+  digestPaperId: string;
+  confidence: "high" | "medium" | "low";
+}
+
 export interface WeeklyDigest {
   weekId: string; // "2026-W08"
   generatedAt: string; // ISO timestamp
@@ -46,4 +63,5 @@ export interface WeeklyDigest {
     byTier: Record<string, number>;
     trackedAuthorCount: number;
   };
+  suggestedDataPoints?: SuggestedDataPoint[];
 }

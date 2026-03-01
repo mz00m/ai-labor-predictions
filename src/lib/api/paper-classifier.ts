@@ -453,6 +453,19 @@ function classifyTier(paper: ResearchPaper): EvidenceTier {
     return 2;
   }
 
+  // Social media sources: use evidence tier set by mapper
+  // (Tier 3 if linking to research, Tier 4 otherwise)
+  if (
+    paper.source === "reddit" ||
+    paper.source === "bluesky" ||
+    paper.source === "twitter"
+  ) {
+    return paper.evidenceTier;
+  }
+
+  // Web search results: Tier 3 by default (published web content)
+  if (paper.source === "web_search") return paper.evidenceTier;
+
   return 3;
 }
 
@@ -480,6 +493,10 @@ const SOURCE_PUBLISHER_LABELS: Record<string, string> = {
   imf: "IMF",
   iza: "IZA",
   core: "CORE",
+  reddit: "Reddit",
+  bluesky: "Bluesky",
+  twitter: "Twitter/X",
+  web_search: "Web Search",
 };
 
 export function paperToSource(paper: ClassifiedPaper): Source {

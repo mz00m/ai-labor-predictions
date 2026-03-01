@@ -19,6 +19,11 @@ import { discoverCOREPapers, COREWork } from "./core-api";
 import { discoverIMFPapers } from "./imf";
 import { discoverIZAPapers } from "./iza";
 import { fetchTrackedAuthorPapers } from "./author-tracker";
+import { discoverRedditPosts, RedditPost } from "./reddit";
+import { discoverBlueskyPosts, BlueskyPost } from "./bluesky";
+import { discoverTwitterPosts, TwitterPost } from "./twitter";
+import { discoverWebSearchResults, WebSearchResult } from "./web-search";
+import { isResearchUrl, truncateText, extractUrls } from "./social-utils";
 
 export type ResearchSource =
   | "semantic_scholar"
@@ -31,7 +36,11 @@ export type ResearchSource =
   | "brookings"
   | "imf"
   | "iza"
-  | "core";
+  | "core"
+  | "reddit"
+  | "bluesky"
+  | "twitter"
+  | "web_search";
 
 export interface ResearchPaper {
   id: string;
@@ -408,6 +417,92 @@ function fromOpenAlexIZA(work: OpenAlexWork): ResearchPaper {
   return { ...paper, source: "iza", id: `iza-${work.id.split("/").pop()}` };
 }
 
+function fromReddit(post: RedditPost): ResearchPaper {
+  const hasResearchLink = post.linkedUrls.some(isResearchUrl);
+  return {
+    id: `reddit-${post.id}`,
+    title: post.title,
+    abstract: truncateText(post.selftext || post.title, 500),
+    authors: [`u/${post.author}`],
+    publishedDate: new Date(post.createdUtc * 1000).toISOString().split("T")[0],
+    year: new Date(post.createdUtc * 1000).getFullYear(),
+    venue: `Reddit r/${post.subreddit}`,
+    url: `https://www.reddit.com${post.permalink}`,
+    pdfUrl: null,
+    citationCount: post.score,
+    evidenceTier: hasResearchLink ? 3 : 4,
+    source: "reddit",
+    relevanceScore: scoreRelevance(post.title, post.selftext || null),
+    doi: null,
+    isTrackedAuthor: false,
+  };
+}
+
+function fromBluesky(post: BlueskyPost): ResearchPaper {
+  const hasResearchLink = post.linkedUrls.some(isResearchUrl);
+  return {
+    id: `bsky-${post.uri.split("/").pop() || post.cid}`,
+    title: post.text.length > 120 ? post.text.slice(0, 117) + "..." : post.text,
+    abstract: truncateText(post.text, 500),
+    authors: [post.authorDisplayName || post.authorHandle],
+    publishedDate: post.createdAt ? post.createdAt.split("T")[0] : null,
+    year: post.createdAt ? new Date(post.createdAt).getFullYear() : null,
+    venue: "Bluesky",
+    url: post.url,
+    pdfUrl: null,
+    citationCount: post.likeCount + post.repostCount,
+    evidenceTier: hasResearchLink ? 3 : 4,
+    source: "bluesky",
+    relevanceScore: scoreRelevance(post.text, null),
+    doi: null,
+    isTrackedAuthor: false,
+  };
+}
+
+function fromTwitter(post: TwitterPost): ResearchPaper {
+  const hasResearchLink = post.linkedUrls.some(isResearchUrl);
+  return {
+    id: `twit-${post.id}`,
+    title: post.text.length > 120 ? post.text.slice(0, 117) + "..." : post.text,
+    abstract: truncateText(post.text, 500),
+    authors: [post.authorName || `@${post.authorUsername}`],
+    publishedDate: post.createdAt ? post.createdAt.split("T")[0] : null,
+    year: post.createdAt ? new Date(post.createdAt).getFullYear() : null,
+    venue: "Twitter/X",
+    url: post.url,
+    pdfUrl: null,
+    citationCount: post.metrics.likeCount + post.metrics.retweetCount,
+    evidenceTier: hasResearchLink ? 3 : 4,
+    source: "twitter",
+    relevanceScore: scoreRelevance(post.text, null),
+    doi: null,
+    isTrackedAuthor: false,
+  };
+}
+
+function fromWebSearch(result: WebSearchResult): ResearchPaper {
+  const urls = extractUrls(result.snippet || "");
+  const hasResearchLink = isResearchUrl(result.url) || urls.some(isResearchUrl);
+  const domain = new URL(result.url).hostname.replace("www.", "");
+  return {
+    id: `web-${result.url.replace(/[^a-z0-9]/gi, "").slice(0, 40)}`,
+    title: result.title,
+    abstract: truncateText(result.snippet, 500),
+    authors: [domain],
+    publishedDate: result.publishedDate,
+    year: result.publishedDate ? new Date(result.publishedDate).getFullYear() : null,
+    venue: domain,
+    url: result.url,
+    pdfUrl: null,
+    citationCount: 0,
+    evidenceTier: hasResearchLink ? 3 : 4,
+    source: "web_search",
+    relevanceScore: scoreRelevance(result.title, result.snippet),
+    doi: null,
+    isTrackedAuthor: false,
+  };
+}
+
 /**
  * Deduplicate papers by DOI first, then fuzzy title matching.
  */
@@ -487,6 +582,10 @@ export async function getResearchFeed(
     imfPapers,
     izaPapers,
     trackedAuthorPapers,
+    redditPosts,
+    blueskyPosts,
+    twitterPosts,
+    webSearchResults,
   ] = await Promise.all([
     discoverRecentPapers(10).catch(() => [] as SemanticScholarPaper[]),
     discoverOpenAlexPapers(50).catch(() => [] as OpenAlexWork[]),
@@ -500,6 +599,10 @@ export async function getResearchFeed(
     discoverIMFPapers(15).catch(() => [] as OpenAlexWork[]),
     discoverIZAPapers(15).catch(() => [] as OpenAlexWork[]),
     fetchTrackedAuthorPapers(90).catch(() => [] as ResearchPaper[]),
+    discoverRedditPosts().catch(() => [] as RedditPost[]),
+    discoverBlueskyPosts().catch(() => [] as BlueskyPost[]),
+    discoverTwitterPosts().catch(() => [] as TwitterPost[]),
+    discoverWebSearchResults().catch(() => [] as WebSearchResult[]),
   ]);
 
   // Normalize to unified format
@@ -516,6 +619,10 @@ export async function getResearchFeed(
     ...imfPapers.map(fromOpenAlexIMF),
     ...izaPapers.map(fromOpenAlexIZA),
     ...trackedAuthorPapers, // Already in ResearchPaper format
+    ...redditPosts.map(fromReddit),
+    ...blueskyPosts.map(fromBluesky),
+    ...twitterPosts.map(fromTwitter),
+    ...webSearchResults.map(fromWebSearch),
   ];
 
   // Deduplicate

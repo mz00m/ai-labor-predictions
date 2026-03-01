@@ -31,6 +31,8 @@ import { getResearchFeed, ResearchPaper } from "../src/lib/api/research-aggregat
 import { ClassifiedPaper } from "../src/lib/api/paper-classifier";
 import { computeCompositeScore } from "../src/lib/api/digest-scorer";
 import { DigestPaper, WeeklyDigest } from "../src/lib/types/digest";
+import { analyzeSuggestedDataPoints } from "../src/lib/api/digest-analyzer";
+import { getAllPredictions } from "../src/lib/data-loader";
 
 // Parse --days argument
 const daysArg = process.argv.find((a) => a.startsWith("--days="));
@@ -156,6 +158,10 @@ async function main() {
     if (paper.isTrackedAuthor) trackedAuthorCount++;
   }
 
+  // LLM analysis: extract suggested data points from papers
+  const predictions = getAllPredictions();
+  const suggestedDataPoints = await analyzeSuggestedDataPoints(topPapers, predictions);
+
   const now = new Date();
   const weekId = getWeekId(now);
   const from = new Date(now);
@@ -177,6 +183,7 @@ async function main() {
       byTier,
       trackedAuthorCount,
     },
+    suggestedDataPoints,
   };
 
   // Write digest
@@ -211,6 +218,13 @@ async function main() {
   console.log(`Top 5 papers:`);
   for (const p of topPapers.slice(0, 5)) {
     console.log(`  [${p.compositeScore}pts] ${p.title.slice(0, 80)}`);
+  }
+  if (suggestedDataPoints.length > 0) {
+    const uniqueSlugs = new Set(suggestedDataPoints.map((dp) => dp.predictionSlug));
+    console.log(`\nSuggested data points: ${suggestedDataPoints.length} across ${uniqueSlugs.size} predictions`);
+    for (const dp of suggestedDataPoints) {
+      console.log(`  [${dp.confidence}] ${dp.predictionSlug}: ${dp.value} ${dp.unit} — "${dp.excerpt.slice(0, 60)}..."`);
+    }
   }
 }
 

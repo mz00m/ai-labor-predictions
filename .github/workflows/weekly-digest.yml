@@ -23,6 +23,10 @@ jobs:
         env:
           SCOPUS_API_KEY: ${{ secrets.SCOPUS_API_KEY }}
           CORE_API_KEY: ${{ secrets.CORE_API_KEY }}
+          TWITTER_BEARER_TOKEN: ${{ secrets.TWITTER_BEARER_TOKEN }}
+          GOOGLE_CSE_KEY: ${{ secrets.GOOGLE_CSE_KEY }}
+          GOOGLE_CSE_ID: ${{ secrets.GOOGLE_CSE_ID }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
       - name: Commit and push digest
         uses: stefanzweifel/git-auto-commit-action@v5
