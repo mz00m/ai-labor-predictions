@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { EvidenceTier } from "@/lib/types";
-import { getAllPredictions } from "@/lib/data-loader";
+import { getAllPredictions, getLastUpdated } from "@/lib/data-loader";
 import EvidenceFilter from "@/components/EvidenceFilter";
 import PredictionSummaryCard from "@/components/PredictionSummaryCard";
 import NewsTicker from "@/components/NewsTicker";
@@ -14,6 +14,13 @@ import FeaturedReads from "@/components/FeaturedReads";
 import AgeUsageTile from "@/components/AgeUsageTile";
 
 const predictions = getAllPredictions();
+const lastUpdated = getLastUpdated();
+
+function formatUpdatedDate(iso: string): string {
+  const [y, m, d] = iso.split("-");
+  const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  return `Updated ${months[parseInt(m, 10) - 1]} ${parseInt(d, 10)}, ${y}`;
+}
 
 export default function Home() {
   const [selectedTiers, setSelectedTiers] = useState<EvidenceTier[]>([1, 2, 3, 4]);
@@ -50,7 +57,7 @@ export default function Home() {
           <p className="text-[13px] font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
             {predictions.length} predictions &middot; {totalSources} sources
             <span className="opacity-50 mx-1">&middot;</span>
-            <span className="normal-case font-semibold opacity-70">Updated Feb 28, 2026</span>
+            <span className="normal-case font-semibold opacity-70">{formatUpdatedDate(lastUpdated)}</span>
           </p>
           <h1 className="text-[42px] sm:text-[56px] font-black tracking-tight text-[var(--foreground)] leading-[1.05] max-w-4xl">
             How is AI <span className="text-[#F66B5C] italic">reshaping</span>

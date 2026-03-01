@@ -1,4 +1,5 @@
 import { Prediction } from "./types";
+import lastUpdatedMeta from "@/data/last-updated.json";
 
 import techSector from "@/data/predictions/displacement/tech-sector.json";
 import customerService from "@/data/predictions/displacement/customer-service.json";
@@ -53,4 +54,8 @@ export function getPredictionsByCategory(
   category: "displacement" | "wages" | "adoption" | "signals" | "exposure"
 ): Prediction[] {
   return allPredictions.filter((p) => p.category === category);
+}
+
+export function getLastUpdated(): string {
+  return lastUpdatedMeta.lastUpdated;
 }
