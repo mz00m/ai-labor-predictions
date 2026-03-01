@@ -123,6 +123,15 @@
       ],
       "evidenceTier": 1,
       "label": "Society of Authors UK: 26% of illustrators, 36% of translators already lost work to AI"
+    },
+    {
+      "date": "2025-10-30",
+      "direction": "down",
+      "sourceIds": [
+        "cais-scale-remote-labor-index-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "CAIS/Scale AI: AI succeeds at audio/image/logo tasks but fails most creative projects (2.5% overall)"
     }
   ],
   "sources": [
@@ -278,6 +287,15 @@
       "evidenceTier": 1,
       "datePublished": "2024-04-01",
       "excerpt": "26% of illustrators and 36% of translators have already lost work to generative AI. 78% of illustrators and 77% of translators expect further income decline. Survey of 787 creative professionals."
+    },
+    {
+      "id": "cais-scale-remote-labor-index-2025",
+      "title": "Remote Labor Index: Measuring AI Automation of Remote Work",
+      "url": "https://arxiv.org/abs/2510.26787",
+      "publisher": "Center for AI Safety / Scale AI (Mazeika et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2025-10-30",
+      "excerpt": "Successful AI automations were concentrated in specific creative domains, particularly audio tasks (sound effects, vocal separation), image generation (logos, ads), report writing, and data retrieval. Overall automation rate only 2.5%."
     }
   ]
 }

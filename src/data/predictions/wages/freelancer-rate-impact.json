@@ -115,6 +115,15 @@
       ],
       "evidenceTier": 1,
       "label": "Ramp: freelance spend fell 0.66% → 0.14% of total"
+    },
+    {
+      "date": "2025-10-30",
+      "direction": "up",
+      "sourceIds": [
+        "cais-scale-remote-labor-index-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "CAIS/Scale AI: Best AI agent captures only $1,720 of $143,991 freelance value (1.2%)"
     }
   ],
   "sources": [
@@ -225,6 +234,15 @@
       "evidenceTier": 1,
       "datePublished": "2025-09-15",
       "excerpt": "Digital trace data show substitution already occurring in writing and translation tasks; declining demand for novice workers across AI-complementary freelance work."
+    },
+    {
+      "id": "cais-scale-remote-labor-index-2025",
+      "title": "Remote Labor Index: Measuring AI Automation of Remote Work",
+      "url": "https://arxiv.org/abs/2510.26787",
+      "publisher": "Center for AI Safety / Scale AI (Mazeika et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2025-10-30",
+      "excerpt": "Best AI agent (Manus) earned $1,720 out of a possible $143,991 across 240 real freelance projects — capturing only 1.2% of economic value. Automation rate: 2.5%."
     }
   ]
 }

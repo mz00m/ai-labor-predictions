@@ -159,6 +159,15 @@
       ],
       "evidenceTier": 2,
       "label": "Goldman (Mei): AI impact 'largely confined to tech sector'; expects it to grow materially"
+    },
+    {
+      "date": "2025-10-30",
+      "direction": "down",
+      "sourceIds": [
+        "cais-scale-remote-labor-index-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "CAIS/Scale AI: AI fails 97.5% of real-world remote work projects at professional quality"
     }
   ],
   "sources": [
@@ -420,6 +429,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-02-24",
       "excerpt": "AI's labor market impact still small — only 5-10K/month drag on net job growth. Only 2½% of jobs exposed to automation today. Baseline forecast: 6-7% of workers displaced (range 3-14%), lowering annual hiring by 1M jobs and raising unemployment ~½pp. US creates 30M gross new jobs/year; does not anticipate job apocalypse. Impact so far largely confined to tech sector but expects it to grow materially."
+    },
+    {
+      "id": "cais-scale-remote-labor-index-2025",
+      "title": "Remote Labor Index: Measuring AI Automation of Remote Work",
+      "url": "https://arxiv.org/abs/2510.26787",
+      "publisher": "Center for AI Safety / Scale AI (Mazeika et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2025-10-30",
+      "excerpt": "Failures predominantly stem from file errors (18%), incompleteness (36%), sub-professional quality (46%), and inconsistencies (15%). Best agent (Manus) achieved only 2.5% automation rate across 240 real freelance projects."
     }
   ],
   "marketIds": {

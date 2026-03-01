@@ -49,6 +49,14 @@
       "evidenceTier": 1
     },
     {
+      "date": "2025-10-30",
+      "value": 2.5,
+      "sourceIds": [
+        "cais-scale-remote-labor-index-2025"
+      ],
+      "evidenceTier": 1
+    },
+    {
       "date": "2025-11-01",
       "value": 12,
       "confidenceLow": 6,
@@ -479,6 +487,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-02-24",
       "excerpt": "AI's labor market impact still small — only 5-10K/month drag on net job growth. Only 2½% of jobs exposed to automation today. Baseline forecast: 6-7% of workers displaced (range 3-14%), lowering annual hiring by 1M jobs and raising unemployment ~½pp. US creates 30M gross new jobs/year; does not anticipate job apocalypse. Impact so far largely confined to tech sector but expects it to grow materially."
+    },
+    {
+      "id": "cais-scale-remote-labor-index-2025",
+      "title": "Remote Labor Index: Measuring AI Automation of Remote Work",
+      "url": "https://arxiv.org/abs/2510.26787",
+      "publisher": "Center for AI Safety / Scale AI (Mazeika et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2025-10-30",
+      "excerpt": "AI agents perform near the floor on RLI, with the highest-performing agent achieving an automation rate of 2.5%. 240 real freelance projects across game dev, design, architecture, data analysis, and animation. Best agent earned $1,720 of $143,991 total project value."
     }
   ]
 }
