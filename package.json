@@ -8,9 +8,11 @@
     "start": "next start",
     "lint": "next lint",
     "digest": "tsx scripts/generate-digest.ts",
-    "digest:14": "tsx scripts/generate-digest.ts --days 14"
+    "digest:14": "tsx scripts/generate-digest.ts --days 14",
+    "ingest": "tsx scripts/ingest-source.ts"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.78.0",
     "@vercel/analytics": "^1.6.1",
     "date-fns": "^3.6.0",
     "next": "^14.2.0",
