@@ -132,6 +132,15 @@
       ],
       "evidenceTier": 2,
       "label": "Cognizant: financial managers 84% exposed; legal 63% (up from 9%); C-suite 60% (up from 25%)"
+    },
+    {
+      "date": "2026-01-21",
+      "direction": "neutral",
+      "sourceIds": [
+        "brookings-adaptive-capacity-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Brookings: 56.9M professionals highly adaptive (73%) despite 40% AI exposure"
     }
   ],
   "sources": [
@@ -376,6 +385,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-01-15",
       "excerpt": "Education task exposure jumped from 11% to 49% — a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations."
+    },
+    {
+      "id": "brookings-adaptive-capacity-2026",
+      "title": "Measuring US workers' capacity to adapt to AI-driven job displacement",
+      "url": "https://www.brookings.edu/articles/measuring-us-workers-capacity-to-adapt-to-ai-driven-job-displacement/",
+      "publisher": "Brookings Institution (Manning, Aguirre, Muro, Methkupally)",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-21",
+      "excerpt": "Professional and managerial occupations (56.9 million workers) have relatively higher adaptive capacity on average (0.734) despite substantial exposure (0.400)."
     }
   ]
 }

@@ -140,6 +140,15 @@
       ],
       "evidenceTier": 1,
       "label": "E-commerce field experiment: AI chatbots increased sales 16%"
+    },
+    {
+      "date": "2026-01-21",
+      "direction": "up",
+      "sourceIds": [
+        "brookings-adaptive-capacity-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Brookings: CS reps face high AI exposure + low adaptive capacity"
     }
   ],
   "sources": [
@@ -300,6 +309,15 @@
       "evidenceTier": 1,
       "datePublished": "2025-10-01",
       "excerpt": "AI chatbots for customer service increased sales by 16%; AI-generated product descriptions increased sales by 2.05% in field experiments."
+    },
+    {
+      "id": "brookings-adaptive-capacity-2026",
+      "title": "Measuring US workers' capacity to adapt to AI-driven job displacement",
+      "url": "https://www.brookings.edu/articles/measuring-us-workers-capacity-to-adapt-to-ai-driven-job-displacement/",
+      "publisher": "Brookings Institution (Manning, Aguirre, Muro, Methkupally)",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-21",
+      "excerpt": "Customer service representatives get the short end of the stick in both categories [high AI exposure and low adaptive capacity]."
     }
   ]
 }

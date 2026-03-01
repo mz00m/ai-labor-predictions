@@ -201,6 +201,15 @@
       ],
       "evidenceTier": 2,
       "label": "Goldman (Mei): only 5-10K/mo drag so far; baseline 6-7% displaced; +½pp unemployment"
+    },
+    {
+      "date": "2026-01-21",
+      "direction": "neutral",
+      "sourceIds": [
+        "brookings-adaptive-capacity-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Brookings: 70% of 37.1M highly AI-exposed workers are resilient"
     }
   ],
   "sources": [
@@ -496,6 +505,15 @@
       "evidenceTier": 1,
       "datePublished": "2025-10-30",
       "excerpt": "AI agents perform near the floor on RLI, with the highest-performing agent achieving an automation rate of 2.5%. 240 real freelance projects across game dev, design, architecture, data analysis, and animation. Best agent earned $1,720 of $143,991 total project value."
+    },
+    {
+      "id": "brookings-adaptive-capacity-2026",
+      "title": "Measuring US workers' capacity to adapt to AI-driven job displacement",
+      "url": "https://www.brookings.edu/articles/measuring-us-workers-capacity-to-adapt-to-ai-driven-job-displacement/",
+      "publisher": "Brookings Institution (Manning, Aguirre, Muro, Methkupally)",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-21",
+      "excerpt": "Of the 37.1 million workers in the top quartile of AI exposure, 26.5 million are in occupations that also have above-median adaptive capacity."
     }
   ]
 }
