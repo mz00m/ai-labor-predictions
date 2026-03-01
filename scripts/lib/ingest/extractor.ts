@@ -351,7 +351,7 @@ function slugSimilarity(a: string, b: string): number {
   const aSet = new Set(a.split("-"));
   const bSet = new Set(b.split("-"));
   let overlap = 0;
-  for (const word of aSet) {
+  for (const word of Array.from(aSet)) {
     if (bSet.has(word)) overlap++;
   }
   return overlap / Math.max(aSet.size, bSet.size);

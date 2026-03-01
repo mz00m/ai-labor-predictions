@@ -71,7 +71,7 @@ export function applyChanges(
     byFile.set(change.filePath, existing);
   }
 
-  for (const [filePath, fileChanges] of byFile) {
+  for (const [filePath, fileChanges] of Array.from(byFile.entries())) {
     const raw = fs.readFileSync(filePath, "utf-8");
     const prediction = JSON.parse(raw);
     let fileModified = false;
