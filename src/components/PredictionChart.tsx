@@ -24,6 +24,7 @@ interface PredictionChartProps {
   overlays?: DirectionalOverlay[];
   onDotClick?: (sourceIds: string[]) => void;
   yAxisMax?: number;
+  yAxisMin?: number;
 }
 
 interface ChartDataPoint {
@@ -194,6 +195,7 @@ export default function PredictionChart({
   overlays,
   onDotClick,
   yAxisMax = 50,
+  yAxisMin = -5,
 }: PredictionChartProps) {
   const filtered = history.filter((d) =>
     selectedTiers.includes(d.evidenceTier)
@@ -236,7 +238,7 @@ export default function PredictionChart({
     dateStrToUnique.set(pt.date, pt.dateStr);
   }
 
-  const yMin = -5;
+  const yMin = yAxisMin;
   const yMax = yAxisMax;
 
   // Process overlay bands (qualitative directional studies)
