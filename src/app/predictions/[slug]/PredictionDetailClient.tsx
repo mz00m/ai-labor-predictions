@@ -193,9 +193,9 @@ export default function PredictionDetailPage() {
       </div>
 
       {/* Section break — Indicators & Predictions */}
-      <div className="relative -mx-6 sm:-mx-8 lg:-mx-12">
+      <div className="relative -mx-6 sm:-mx-10">
         <div className="h-1 bg-gradient-to-r from-emerald-500 via-blue-500 to-violet-500" />
-        <div className="px-6 sm:px-8 lg:px-12 pt-10 pb-2">
+        <div className="px-6 sm:px-10 pt-10 pb-2">
           <h2 className="text-[28px] sm:text-[36px] font-black tracking-tight text-[var(--foreground)] leading-tight mb-3">
             {prediction.timeHorizon.toLowerCase().includes("current")
               ? "Indicators Over Time"
