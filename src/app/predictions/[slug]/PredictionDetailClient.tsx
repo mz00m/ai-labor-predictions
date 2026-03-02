@@ -202,7 +202,7 @@ export default function PredictionDetailPage() {
               : "Predictions Over Time"}
           </h2>
           <p className="text-[15px] text-[var(--muted)] leading-relaxed max-w-2xl">
-            Every source is color-coded by evidence quality. Use the tiers below to filter what appears on the chart and in the weighted average above.
+            The chart below tracks how this estimate has shifted over time as new research and data emerge. Every source is color-coded by evidence quality; use the tiers below to filter what appears on the chart and in the weighted average above.
           </p>
         </div>
       </div>

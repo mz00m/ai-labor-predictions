@@ -101,7 +101,7 @@ export default function Home() {
             Predictions Over Time
           </h2>
           <p className="text-[15px] text-[var(--muted)] leading-relaxed max-w-2xl">
-            Every source is color-coded by evidence quality. Use the tiers below to filter what appears on the charts and in the weighted averages.
+            {predictions.length} predictions across job displacement, wages, and AI adoption — each with its own trend chart, source list, and weighted estimate built from {totalSources}+ sources. Click any tile to explore. Every source is color-coded by evidence quality; use the tiers below to filter what appears.
           </p>
         </div>
       </div>
