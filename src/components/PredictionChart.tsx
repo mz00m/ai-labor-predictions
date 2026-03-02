@@ -362,6 +362,7 @@ export default function PredictionChart({
             tick={{ fontSize: 12, fill: "#6b7280" }}
             tickLine={false}
             axisLine={false}
+            padding={{ left: 30, right: 30 }}
           />
           <YAxis
             domain={[yMin, yMax]}
