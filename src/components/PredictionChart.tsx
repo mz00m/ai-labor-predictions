@@ -234,11 +234,8 @@ export default function PredictionChart({
     dateStrToUnique.set(pt.date, pt.dateStr);
   }
 
-  const displayedValues = realPoints
-    .filter((d) => d.value != null)
-    .map((d) => d.value!);
-  const yMin = Math.floor(Math.min(...displayedValues) - 2);
-  const yMax = Math.ceil(Math.max(...displayedValues) + 2);
+  const yMin = 0;
+  const yMax = 50;
 
   // Process overlay bands (qualitative directional studies)
   const filteredOverlays = (overlays ?? []).filter((o) =>
