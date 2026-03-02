@@ -90,16 +90,17 @@ export default function ForecastColumns() {
             Historical calibration:
           </span>{" "}
           In prior GPT transitions, the total timeline from meaningful
-          diffusion to new equilibrium ranged from 40 to 70 years. AI&rsquo;s
-          adoption speed is 10&ndash;25x faster than any prior GPT by consumer
-          metrics (100M users in 2 months vs. years or decades), and enterprise
-          adoption surged from 33% to 78% in under two years. The timelines
-          above are compressed by roughly 2&ndash;3x from historical baselines
-          to reflect this acceleration &mdash; but organizational and
-          institutional adaptation still operates at human speed. The
-          &ldquo;eventually&rdquo; in &ldquo;jobs eventually come
-          back&rdquo; may mean one generation rather than three, but it
-          still won&rsquo;t mean years.
+          diffusion to new equilibrium ranged from 40 to 70 years. AI
+          adoption is 2&ndash;5x faster than the internet or PC at equivalent
+          population thresholds (NBER, Bick et al. 2024; Microsoft AI
+          Diffusion Report, 2025), and enterprise adoption surged from 33%
+          to 88% of organizations in roughly two years (McKinsey). The
+          timelines above are compressed by roughly 2&ndash;3x from
+          historical baselines to reflect this acceleration &mdash; but
+          organizational and institutional adaptation still operates at
+          human speed. The &ldquo;eventually&rdquo; in &ldquo;jobs
+          eventually come back&rdquo; may mean one generation rather than
+          three, but it still won&rsquo;t mean years.
         </p>
       </div>
     </div>

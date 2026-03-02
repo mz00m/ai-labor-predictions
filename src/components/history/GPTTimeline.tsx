@@ -27,7 +27,7 @@ const PHASES = [
     example:
       "By 1900, electric motors were spreading across US factories but most still used shaft-and-belt power. Early adopters saw enormous gains.",
     aiNote:
-      "For AI: ChatGPT hit 100M users in 2 months. Enterprise adoption surged from 33% to 78% in under 2 years (McKinsey). This phase that took electricity 25 years is happening in 2–5 for AI — built on PCs and internet already in place.",
+      "For AI: ChatGPT hit 100M users in 2 months; 54.6% of US adults used gen AI by 2025 (St. Louis Fed). Enterprise adoption surged from 33% to 88% in ~2 years (McKinsey). Microsoft quantifies this as '5x faster than the internet.' This phase that took electricity 25 years is happening in 2–5 for AI — built on PCs and internet already in place.",
     workerEffect: "Spreads across sectors; high-skill workers benefit most",
   },
   {
