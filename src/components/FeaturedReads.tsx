@@ -1,12 +1,23 @@
-const articles = [
+interface Article {
+  author: string;
+  title: string;
+  summary: string;
+  date: string;
+  url: string;
+  accent: string;
+  internal?: boolean;
+}
+
+const articles: Article[] = [
   {
-    author: "Krugman",
-    title: "When Extraterrestrials Attacked the Stock Market",
+    author: "jobsdata.ai",
+    title: "On Tap Intelligence: Historical Context for AI Labor Impact",
     summary:
-      "A viral AI scenario may have moved markets despite containing no new facts.",
-    date: "Feb 26",
-    url: "https://paulkrugman.substack.com/p/when-extraterrestrials-attacked-the",
+      "How past technological revolutions reshaped labor — and what they tell us about AI's trajectory.",
+    date: "",
+    url: "/history",
     accent: "border-l-amber-500",
+    internal: true,
   },
   {
     author: "Thompson",
@@ -44,12 +55,11 @@ export default function FeaturedReads() {
         <a
           key={a.url}
           href={a.url}
-          target="_blank"
-          rel="noopener noreferrer"
+          {...(a.internal ? {} : { target: "_blank", rel: "noopener noreferrer" })}
           className={`group border-l-2 ${a.accent} rounded-r-md bg-black/[0.02] dark:bg-white/[0.03] px-3 py-2.5 transition-all hover:bg-black/[0.04] dark:hover:bg-white/[0.06]`}
         >
           <p className="text-[11px] font-semibold text-[var(--muted)] uppercase tracking-wide">
-            {a.author} <span className="opacity-50">&middot; {a.date}</span>
+            {a.author}{a.date && <span className="opacity-50"> &middot; {a.date}</span>}
           </p>
           <h3 className="text-[13px] font-bold text-[var(--foreground)] leading-snug mt-0.5 group-hover:text-[var(--accent)] transition-colors line-clamp-2">
             {a.title}
