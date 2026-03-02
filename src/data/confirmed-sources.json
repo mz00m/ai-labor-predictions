@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-01",
-  "totalSources": 296,
-  "verifiedCount": 286,
+  "totalSources": 297,
+  "verifiedCount": 287,
   "sources": {
     "accenture-health-ai-2023": {
       "id": "accenture-health-ai-2023",
@@ -3919,6 +3919,24 @@
         "entry-level-wage-impact",
         "high-skill-wage-premium",
         "white-collar-professional-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "indeed-hiringlab-ai-jobs-labor-2026": {
+      "id": "indeed-hiringlab-ai-jobs-labor-2026",
+      "title": "January 2026 US Labor Market Update: Jobs Mentioning AI Are Growing Amid Broader Hiring Weakness",
+      "url": "https://www.hiringlab.org/2026/01/22/january-labor-market-update-jobs-mentioning-ai-are-growing-amid-broader-hiring-weakness/",
+      "publisher": "Indeed Hiring Lab",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-22",
+      "excerpt": "Only about 43% of US workers reported regularly using AI at work last year",
+      "usedIn": [
+        "genai-work-adoption",
+        "tech-sector-displacement",
+        "ai-adoption-rate",
+        "workforce-ai-exposure",
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false

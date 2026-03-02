@@ -132,6 +132,15 @@
       ],
       "evidenceTier": 2,
       "label": "Atlassian: 96% of orgs not seeing dramatic AI improvements; only 4% report true ROI"
+    },
+    {
+      "date": "2026-01-22",
+      "direction": "up",
+      "sourceIds": [
+        "indeed-hiringlab-ai-jobs-labor-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Indeed: AI Tracker hit 4.2% of postings; AI postings 134% above 2020 baseline"
     }
   ],
   "sources": [
@@ -359,6 +368,15 @@
       "evidenceTier": 2,
       "datePublished": "2025-09-22",
       "excerpt": "Survey of 1,150 US workers: 40% received AI-generated 'workslop' in the past month; each instance cost ~2 hours to deal with. 18% of AI users admitted sending low-quality AI output. Estimated cost: $186/worker/month or ~$9M/year for a 10,000-person org."
+    },
+    {
+      "id": "indeed-hiringlab-ai-jobs-labor-2026",
+      "title": "January 2026 US Labor Market Update: Jobs Mentioning AI Are Growing Amid Broader Hiring Weakness",
+      "url": "https://www.hiringlab.org/2026/01/22/january-labor-market-update-jobs-mentioning-ai-are-growing-amid-broader-hiring-weakness/",
+      "publisher": "Indeed Hiring Lab",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-22",
+      "excerpt": "The Indeed AI Tracker reached a high of 4.2% in December 2025...the number of postings mentioning AI measured 134% above February 2020 levels"
     }
   ]
 }

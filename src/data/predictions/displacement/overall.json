@@ -219,6 +219,15 @@
       ],
       "evidenceTier": 1,
       "label": "CEPR/BIS: no evidence AI reduces employment in EU firms (12K firm study)"
+    },
+    {
+      "date": "2026-01-22",
+      "direction": "up",
+      "sourceIds": [
+        "indeed-hiringlab-ai-jobs-labor-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Indeed: Job postings down 5.2% YoY; AI postings diverging sharply upward"
     }
   ],
   "sources": [
@@ -532,6 +541,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-02-17",
       "excerpt": "No evidence that AI reduces employment in the short run. AI augments worker output — enabling employees to complete tasks faster and make better decisions — without displacing labour."
+    },
+    {
+      "id": "indeed-hiringlab-ai-jobs-labor-2026",
+      "title": "January 2026 US Labor Market Update: Jobs Mentioning AI Are Growing Amid Broader Hiring Weakness",
+      "url": "https://www.hiringlab.org/2026/01/22/january-labor-market-update-jobs-mentioning-ai-are-growing-amid-broader-hiring-weakness/",
+      "publisher": "Indeed Hiring Lab",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-22",
+      "excerpt": "the Indeed Job Postings Index, which was down 5.2% year-over-year as of December 31"
     }
   ]
 }

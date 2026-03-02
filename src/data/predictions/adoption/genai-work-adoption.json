@@ -5,7 +5,7 @@
   "description": "Share of U.S. working-age adults (18–64) using generative AI at work, from a nationally representative quarterly survey (Real-Time Population Survey). Work adoption (40.7%) lags overall use (55.9%), consistent with workers adopting ahead of their employers. Overall adoption has outpaced both the PC and internet at comparable points post-launch.",
   "category": "adoption",
   "unit": "% of adults at work",
-  "currentValue": 40.7,
+  "currentValue": 43,
   "timeHorizon": "Current measure",
   "history": [
     {
@@ -49,6 +49,12 @@
       "value": 40.7,
       "sourceIds": ["bick-blandin-deming-wp-2025"],
       "evidenceTier": 1
+    },
+    {
+      "date": "2026-01-22",
+      "value": 43,
+      "sourceIds": ["indeed-hiringlab-ai-jobs-labor-2026"],
+      "evidenceTier": 2
     }
   ],
   "sources": [
@@ -69,6 +75,15 @@
       "evidenceTier": 2,
       "datePublished": "2025-11-01",
       "excerpt": "Quarterly dashboard tracking generative AI adoption among U.S. working-age adults. Feb & May 2025 values estimated from tracker chart; all other values from published working paper."
+    },
+    {
+      "id": "indeed-hiringlab-ai-jobs-labor-2026",
+      "title": "January 2026 US Labor Market Update: Jobs Mentioning AI Are Growing Amid Broader Hiring Weakness",
+      "url": "https://www.hiringlab.org/2026/01/22/january-labor-market-update-jobs-mentioning-ai-are-growing-amid-broader-hiring-weakness/",
+      "publisher": "Indeed Hiring Lab",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-22",
+      "excerpt": "Only about 43% of US workers reported regularly using AI at work last year"
     }
   ]
 }

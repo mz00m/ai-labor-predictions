@@ -168,6 +168,15 @@
       ],
       "evidenceTier": 1,
       "label": "CAIS/Scale AI: AI fails 97.5% of real-world remote work projects at professional quality"
+    },
+    {
+      "date": "2026-01-22",
+      "direction": "up",
+      "sourceIds": [
+        "indeed-hiringlab-ai-jobs-labor-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Indeed: Tech postings 34% below pre-pandemic; AI tech postings 45% above"
     }
   ],
   "sources": [
@@ -438,6 +447,15 @@
       "evidenceTier": 1,
       "datePublished": "2025-10-30",
       "excerpt": "Failures predominantly stem from file errors (18%), incompleteness (36%), sub-professional quality (46%), and inconsistencies (15%). Best agent (Manus) achieved only 2.5% automation rate across 240 real freelance projects."
+    },
+    {
+      "id": "indeed-hiringlab-ai-jobs-labor-2026",
+      "title": "January 2026 US Labor Market Update: Jobs Mentioning AI Are Growing Amid Broader Hiring Weakness",
+      "url": "https://www.hiringlab.org/2026/01/22/january-labor-market-update-jobs-mentioning-ai-are-growing-amid-broader-hiring-weakness/",
+      "publisher": "Indeed Hiring Lab",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-22",
+      "excerpt": "the number of tech postings that mentioned AI was about 45% higher than in February 2020, while total tech postings were 34% below pre-pandemic levels"
     }
   ],
   "marketIds": {

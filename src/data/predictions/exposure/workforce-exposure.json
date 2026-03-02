@@ -144,6 +144,15 @@
       ],
       "evidenceTier": 2,
       "label": "Brookings: Admin support has highest exposure (52.5%) + lowest adaptability"
+    },
+    {
+      "date": "2026-01-22",
+      "direction": "up",
+      "sourceIds": [
+        "indeed-hiringlab-ai-jobs-labor-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Indeed: 45% of data/analytics postings and 20%+ of dev/IT/R&D now mention AI"
     }
   ],
   "sources": [
@@ -245,6 +254,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-01-21",
       "excerpt": "Administrative support occupations have lower adaptive capacity (0.360) combined with the highest AI exposure of any major occupation group (0.525)."
+    },
+    {
+      "id": "indeed-hiringlab-ai-jobs-labor-2026",
+      "title": "January 2026 US Labor Market Update: Jobs Mentioning AI Are Growing Amid Broader Hiring Weakness",
+      "url": "https://www.hiringlab.org/2026/01/22/january-labor-market-update-jobs-mentioning-ai-are-growing-amid-broader-hiring-weakness/",
+      "publisher": "Indeed Hiring Lab",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-22",
+      "excerpt": "45% of data & analytics job postings mentioned AI, the highest among all sectors analyzed...software development, IT systems & solutions, and scientific research & development each mentioned AI 20% or more of the time"
     }
   ]
 }

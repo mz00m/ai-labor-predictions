@@ -113,7 +113,7 @@ export default function AboutPage() {
         <div className="border-t border-black/[0.06]" />
 
         {/* Methodology */}
-        <section id="methodology">
+        <section id="methodology" className="scroll-mt-16">
           <Methodology />
         </section>
       </div>
