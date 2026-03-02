@@ -276,6 +276,15 @@
       ],
       "evidenceTier": 1,
       "label": "Althoff & Reichardt: Admin roles (financial clerks) see large employment decline"
+    },
+    {
+      "date": "2025-11-01",
+      "direction": "down",
+      "sourceIds": [
+        "fri-white-collar-expert-survey-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "FRI: experts predict 2% white-collar job growth 2025-2030 vs 6.8% trend; 25% expect losses"
     }
   ],
   "sources": [
@@ -538,6 +547,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-01-21",
       "excerpt": "Professional and managerial occupations (56.9 million workers) have relatively higher adaptive capacity on average (0.734) despite substantial exposure (0.400)."
+    },
+    {
+      "id": "fri-white-collar-expert-survey-2025",
+      "title": "AI and the Future of White-Collar Work: Expert Survey Results",
+      "url": "https://windfalltrust.substack.com/p/brief-4-ais-2025-labor-market-impacts",
+      "publisher": "Forecasting Research Institute",
+      "evidenceTier": 2,
+      "datePublished": "2025-11-01",
+      "excerpt": "the median expert predicted 2% growth in white-collar jobs between January 2025 and December 2030, compared to 6.8% pre-existing trend; one in four experts foreseeing net job losses"
     }
   ]
 }

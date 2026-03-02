@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-02",
-  "totalSources": 299,
-  "verifiedCount": 289,
+  "totalSources": 300,
+  "verifiedCount": 290,
   "sources": {
     "accenture-health-ai-2023": {
       "id": "accenture-health-ai-2023",
@@ -1308,6 +1308,20 @@
         "freelancer-rate-impact"
       ],
       "verified": true
+    },
+    "fri-white-collar-expert-survey-2025": {
+      "id": "fri-white-collar-expert-survey-2025",
+      "title": "AI and the Future of White-Collar Work: Expert Survey Results",
+      "url": "https://windfalltrust.substack.com/p/brief-4-ais-2025-labor-market-impacts",
+      "publisher": "Forecasting Research Institute",
+      "evidenceTier": 2,
+      "datePublished": "2025-11-01",
+      "excerpt": "the median expert predicted 2% growth in white-collar jobs between January 2025 and December 2030, compared to 6.8% pre-existing trend; one in four experts foreseeing net job losses",
+      "usedIn": [
+        "white-collar-professional-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
     },
     "forrester-2025": {
       "id": "forrester-2025",
