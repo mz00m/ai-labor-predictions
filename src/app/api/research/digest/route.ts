@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { getLatestDigest } from "@/lib/digest-loader";
 import { EvidenceTier } from "@/lib/types";
 
-export const revalidate = 3600; // 1 hour ISR
+export const dynamic = "force-dynamic";
 
 export async function GET(request: NextRequest) {
   try {
