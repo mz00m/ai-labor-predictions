@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { getResearchFeed } from "@/lib/api/research-aggregator";
 import { EvidenceTier } from "@/lib/types";
 
-export const revalidate = 86400; // revalidate once per day
+export const dynamic = "force-dynamic";
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
