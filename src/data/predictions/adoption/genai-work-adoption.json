@@ -57,7 +57,25 @@
       "evidenceTier": 2
     }
   ],
+  "overlays": [
+    {
+      "date": "2026-03-02",
+      "direction": "up",
+      "sourceIds": ["apoorv03-consumer-ai-usage-2026"],
+      "evidenceTier": 4,
+      "label": "@apoorv03: AI apps cross 1B WAU; ChatGPT at 900M (Sensortower)"
+    }
+  ],
   "sources": [
+    {
+      "id": "apoorv03-consumer-ai-usage-2026",
+      "title": "The State of Consumer AI. Part 1 - Usage",
+      "url": "https://x.com/apoorv03/status/2028492786832753011",
+      "publisher": "Apoorv Agrawal (@apoorv03)",
+      "evidenceTier": 4,
+      "datePublished": "2026-03-02",
+      "excerpt": "Today, AI apps have crossed 1 billion weekly active users and ChatGPT alone accounts for 900M of that."
+    },
     {
       "id": "bick-blandin-deming-wp-2025",
       "title": "The Rapid Adoption of Generative AI",

@@ -276,9 +276,25 @@
       ],
       "evidenceTier": 1,
       "label": "NBER/Bloom: 78% of US firms use AI (executive survey of ~6K across 4 countries)"
+    },
+    {
+      "date": "2026-03-02",
+      "direction": "up",
+      "sourceIds": ["apoorv03-consumer-ai-usage-2026"],
+      "evidenceTier": 4,
+      "label": "@apoorv03: AI app WAUs grew 20x in 2 years to 1.2B (Sensortower)"
     }
   ],
   "sources": [
+    {
+      "id": "apoorv03-consumer-ai-usage-2026",
+      "title": "The State of Consumer AI. Part 1 - Usage",
+      "url": "https://x.com/apoorv03/status/2028492786832753011",
+      "publisher": "Apoorv Agrawal (@apoorv03)",
+      "evidenceTier": 4,
+      "datePublished": "2026-03-02",
+      "excerpt": "Total AI app WAUs have gone from ~100M in January 2024 to over 1.2 billion in February 2026. That is a roughly 20x increase in two years. No app category in history has scaled this fast."
+    },
     {
       "id": "mckinsey-ai-survey-2023",
       "title": "The State of AI in 2023: Generative AI's Breakout Year",
