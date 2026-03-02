@@ -29,12 +29,12 @@ const articles: Article[] = [
     accent: "border-l-blue-500",
   },
   {
-    author: "Citrini & Shah",
-    title: "The 2028 Global Intelligence Crisis",
+    author: "Kinder (Brookings)",
+    title: "What Deindustrialization Did to Men, AI May Do to Women",
     summary:
-      "AI displacement triggers a self-reinforcing loop: job losses collapse spending, forcing deeper automation.",
-    date: "Feb 22",
-    url: "https://www.citriniresearch.com/p/2028gic",
+      "Millions of women in clerical and customer service roles face AI exposure — echoing manufacturing's toll on men.",
+    date: "Mar 2",
+    url: "https://humanistxyz.substack.com/p/what-deindustrialization-did-to-men",
     accent: "border-l-rose-500",
   },
   {
