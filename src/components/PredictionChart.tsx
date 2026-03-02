@@ -292,6 +292,7 @@ export default function PredictionChart({
   const filteredOverlays = (overlays ?? []).filter((o) =>
     selectedTiers.includes(o.evidenceTier)
   );
+  const directionOrder: Record<string, number> = { down: 0, neutral: 1, up: 2 };
   const overlayData = filteredOverlays.map((o) => {
     const ts = parseISO(o.date).getTime();
     const baseStr = format(parseISO(o.date), "MMM yyyy");
@@ -308,7 +309,7 @@ export default function PredictionChart({
       sourceIds: o.sourceIds,
       evidenceTier: o.evidenceTier,
     };
-  });
+  }).sort((a, b) => (directionOrder[a.direction] ?? 1) - (directionOrder[b.direction] ?? 1));
 
   // Create phantom data points for overlay dates that don't already exist
   // in the chart data, so the categorical x-axis recognizes them.
@@ -369,7 +370,7 @@ export default function PredictionChart({
               key={`overlay-compact-${i}-${o.dateStr}`}
               x={o.dateStr}
               stroke={overlayColor(o.direction)}
-              strokeWidth={16}
+              strokeWidth={8}
               strokeOpacity={0.15}
               ifOverflow="visible"
             />
@@ -420,6 +421,7 @@ export default function PredictionChart({
             tickFormatter={(v) => `${v}${unit}`}
           />
           <Tooltip
+            cursor={false}
             allowEscapeViewBox={{ x: true, y: false }}
             content={
               <CustomTooltip
@@ -450,7 +452,7 @@ export default function PredictionChart({
               key={`overlay-bar-${i}-${o.dateStr}`}
               x={o.dateStr}
               stroke={overlayColor(o.direction)}
-              strokeWidth={24}
+              strokeWidth={12}
               strokeOpacity={0.22}
               ifOverflow="visible"
               onClick={() => onDotClick?.(o.sourceIds)}

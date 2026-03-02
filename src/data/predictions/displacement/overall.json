@@ -362,6 +362,15 @@
       ],
       "evidenceTier": 2,
       "label": "Goldman (Mei): only 5-10K/mo drag so far; baseline 6-7% displaced; +½pp unemployment"
+    },
+    {
+      "date": "2026-02-01",
+      "direction": "up",
+      "sourceIds": [
+        "nber-brynjolfsson-minwage-robots-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER (Brynjolfsson et al.): 10% min-wage hike → ~8% rise in robot adoption"
     }
   ],
   "sources": [
@@ -693,6 +702,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-02-24",
       "excerpt": "employment has declined 1 percent since late 2022 in the 10 percent of sectors most exposed to AI"
+    },
+    {
+      "id": "nber-brynjolfsson-minwage-robots-2026",
+      "title": "Minimum Wages and Rise of the Robots",
+      "url": "https://www.nber.org/papers/w34895",
+      "publisher": "NBER (Brynjolfsson, Li, Miranda, Seamans, Wang)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-01",
+      "excerpt": "a 10 percent increase in the minimum wage increases robot adoption by roughly 8 percent relative to the mean"
     }
   ]
 }

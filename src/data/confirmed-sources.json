@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-03-01",
-  "totalSources": 298,
-  "verifiedCount": 288,
+  "lastUpdated": "2026-03-02",
+  "totalSources": 299,
+  "verifiedCount": 289,
   "sources": {
     "accenture-health-ai-2023": {
       "id": "accenture-health-ai-2023",
@@ -2964,6 +2964,20 @@
         "overall-us-displacement"
       ],
       "verified": true
+    },
+    "nber-brynjolfsson-minwage-robots-2026": {
+      "id": "nber-brynjolfsson-minwage-robots-2026",
+      "title": "Minimum Wages and Rise of the Robots",
+      "url": "https://www.nber.org/papers/w34895",
+      "publisher": "NBER (Brynjolfsson, Li, Miranda, Seamans, Wang)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-01",
+      "excerpt": "a 10 percent increase in the minimum wage increases robot adoption by roughly 8 percent relative to the mean",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
     },
     "nber-creative-ai-2024": {
       "id": "nber-creative-ai-2024",
