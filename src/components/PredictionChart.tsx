@@ -224,17 +224,23 @@ export default function PredictionChart({
   // Disambiguate duplicate dateStr values so the categorical x-axis has
   // unique categories.  Recharts' band scale silently drops duplicate keys,
   // which can cause ReferenceLine x-lookups to fail.
-  const dateStrCount: Record<string, number> = {};
+  const usedLabels = new Set<string>();
   const dateStrToUnique = new Map<number, string>(); // timestamp → unique label
   for (const pt of realPoints) {
-    const n = (dateStrCount[pt.dateStr] ?? 0) + 1;
-    dateStrCount[pt.dateStr] = n;
-    if (n > 1) {
+    if (usedLabels.has(pt.dateStr)) {
       const day = format(parseISO(filtered.find(
         (d) => parseISO(d.date).getTime() === pt.date
       )!.date), "d");
-      pt.dateStr = `${pt.dateStr} (${day})`;
+      let candidate = `${pt.dateStr} (${day})`;
+      // If still not unique (same-date different-source), add letter suffix
+      let suffix = 2;
+      while (usedLabels.has(candidate)) {
+        candidate = `${pt.dateStr} (${day}.${suffix})`;
+        suffix++;
+      }
+      pt.dateStr = candidate;
     }
+    usedLabels.add(pt.dateStr);
     dateStrToUnique.set(pt.date, pt.dateStr);
   }
 
