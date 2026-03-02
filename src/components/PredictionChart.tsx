@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useRef, useCallback } from "react";
 import {
   ComposedChart,
   Line,
@@ -197,6 +198,46 @@ export default function PredictionChart({
   yAxisMax = 50,
   yAxisMin = -5,
 }: PredictionChartProps) {
+  const chartWrapperRef = useRef<HTMLDivElement>(null);
+  const [hoverOverlay, setHoverOverlay] = useState<{
+    overlay: OverlayTooltipData;
+    x: number;
+    y: number;
+  } | null>(null);
+
+  const handleOverlayMouseEnter = useCallback(
+    (overlay: OverlayTooltipData, e: React.MouseEvent) => {
+      const rect = chartWrapperRef.current?.getBoundingClientRect();
+      if (rect) {
+        setHoverOverlay({
+          overlay,
+          x: e.clientX - rect.left,
+          y: e.clientY - rect.top,
+        });
+      }
+    },
+    []
+  );
+
+  const handleOverlayMouseMove = useCallback(
+    (e: React.MouseEvent) => {
+      if (!hoverOverlay) return;
+      const rect = chartWrapperRef.current?.getBoundingClientRect();
+      if (rect) {
+        setHoverOverlay((prev) =>
+          prev
+            ? { ...prev, x: e.clientX - rect.left, y: e.clientY - rect.top }
+            : null
+        );
+      }
+    },
+    [hoverOverlay]
+  );
+
+  const handleOverlayMouseLeave = useCallback(() => {
+    setHoverOverlay(null);
+  }, []);
+
   const filtered = history.filter((d) =>
     selectedTiers.includes(d.evidenceTier)
   );
@@ -347,7 +388,7 @@ export default function PredictionChart({
   }
 
   return (
-    <div>
+    <div ref={chartWrapperRef} style={{ position: "relative" }}>
       <ResponsiveContainer width="100%" height={360}>
         <ComposedChart
           data={chartData}
@@ -413,6 +454,9 @@ export default function PredictionChart({
               strokeOpacity={0.22}
               ifOverflow="visible"
               onClick={() => onDotClick?.(o.sourceIds)}
+              onMouseEnter={(e: React.MouseEvent) => handleOverlayMouseEnter(o, e)}
+              onMouseMove={handleOverlayMouseMove}
+              onMouseLeave={handleOverlayMouseLeave}
               style={{ cursor: onDotClick ? "pointer" : undefined }}
             />
           ))}
@@ -469,6 +513,56 @@ export default function PredictionChart({
           />
         </ComposedChart>
       </ResponsiveContainer>
+      {/* Custom overlay tooltip — works at chart edges where Recharts tooltip doesn't activate */}
+      {hoverOverlay && (
+        <div
+          style={{
+            position: "absolute",
+            left: Math.min(hoverOverlay.x + 12, (chartWrapperRef.current?.offsetWidth ?? 600) - 280),
+            top: Math.max(hoverOverlay.y - 20, 0),
+            zIndex: 50,
+            pointerEvents: "none",
+          }}
+        >
+          <div className="bg-white border border-black/[0.08] rounded-lg p-3.5 max-w-xs shadow-sm">
+            <p className="text-[12px] font-medium text-[var(--foreground)] mb-1.5">
+              {hoverOverlay.overlay.dateStr}
+            </p>
+            {(() => {
+              const o = hoverOverlay.overlay;
+              const color = overlayColor(o.direction);
+              const arrow = o.direction === "down" ? "\u2193" : o.direction === "up" ? "\u2191" : "\u2194";
+              const oTierConfig = getTierConfig(o.evidenceTier);
+              const overlaySources = sources.filter((s) => o.sourceIds.includes(s.id));
+              return (
+                <>
+                  <div className="flex items-start gap-1.5">
+                    <span className="text-[14px] font-bold leading-tight mt-px shrink-0" style={{ color }}>
+                      {arrow}
+                    </span>
+                    <p className="text-[12px] leading-snug text-[var(--foreground)]">{o.label}</p>
+                  </div>
+                  <div className="mt-1 flex items-center gap-1.5">
+                    <span className="inline-block w-2 h-2 rounded-full" style={{ backgroundColor: oTierConfig.color }} />
+                    <span className="text-[11px] text-[var(--muted)]">{oTierConfig.label}</span>
+                  </div>
+                  {overlaySources.length > 0 && (
+                    <div className="mt-1">
+                      {overlaySources.map((s) => (
+                        <p key={s.id} className="text-[11px] text-[var(--accent)]">
+                          {s.publisher}: {s.title.slice(0, 55)}
+                          {s.title.length > 55 ? "..." : ""}
+                        </p>
+                      ))}
+                    </div>
+                  )}
+                </>
+              );
+            })()}
+            <p className="text-[10px] text-[var(--muted)] mt-1.5 opacity-60">Click to view source ↓</p>
+          </div>
+        </div>
+      )}
       {overlayData.length > 0 && (
         <div className="mt-3 flex flex-col gap-1.5 px-1">
           <p className="text-[11px] font-medium text-[var(--muted)] uppercase tracking-wider">
