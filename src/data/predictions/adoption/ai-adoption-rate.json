@@ -242,6 +242,33 @@
       "label": "ICLE review: 35.9% of workers use gen AI; adoption accelerating"
     },
     {
+      "date": "2026-02-01",
+      "direction": "up",
+      "sourceIds": [
+        "lightcast-fault-lines-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Lightcast: US AI job postings grew 50% YoY, now 2.5% of all postings"
+    },
+    {
+      "date": "2026-02-01",
+      "direction": "up",
+      "sourceIds": [
+        "lightcast-fault-lines-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Lightcast: 56% of AI job postings now in non-tech roles, up from 41% in 2019"
+    },
+    {
+      "date": "2026-02-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "lightcast-fault-lines-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Lightcast: Hospitality (0.4%) and healthcare (0.7%) have lowest AI adoption"
+    },
+    {
       "date": "2026-02-15",
       "direction": "up",
       "sourceIds": [
@@ -485,6 +512,16 @@
       "evidenceTier": 2,
       "datePublished": "2026-01-22",
       "excerpt": "The Indeed AI Tracker reached a high of 4.2% in December 2025...the number of postings mentioning AI measured 134% above February 2020 levels"
+    },
+    {
+      "id": "lightcast-fault-lines-2026",
+      "title": "Fault Lines",
+      "url": "https://lightcast.io/resources/research/fault-lines",
+      "publisher": "Lightcast",
+      "evidenceTier": 2,
+      "datePublished": "2026-02-01",
+      "dateAdded": "2026-03-02",
+      "excerpt": "The United States has seen 50% growth in AI-related postings over the past year, with AI now appearing in 2.5% of all job postings."
     }
   ]
 }

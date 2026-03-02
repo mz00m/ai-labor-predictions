@@ -153,6 +153,15 @@
       ],
       "evidenceTier": 2,
       "label": "Indeed: 45% of data/analytics postings and 20%+ of dev/IT/R&D now mention AI"
+    },
+    {
+      "date": "2026-02-01",
+      "direction": "up",
+      "sourceIds": [
+        "lightcast-fault-lines-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Lightcast: Most-exposed roles 70-78% (office/editorial); least 6-14% (healthcare)"
     }
   ],
   "sources": [
@@ -263,6 +272,16 @@
       "evidenceTier": 2,
       "datePublished": "2026-01-22",
       "excerpt": "45% of data & analytics job postings mentioned AI, the highest among all sectors analyzed...software development, IT systems & solutions, and scientific research & development each mentioned AI 20% or more of the time"
+    },
+    {
+      "id": "lightcast-fault-lines-2026",
+      "title": "Fault Lines",
+      "url": "https://lightcast.io/resources/research/fault-lines",
+      "publisher": "Lightcast",
+      "evidenceTier": 2,
+      "datePublished": "2026-02-01",
+      "dateAdded": "2026-03-02",
+      "excerpt": "Many kinds of writing and editing jobs are among those most exposed, with over 70% of their core skills potentially affected. On the other end of the spectrum, healthcare and first responder jobs dominate the low end of the rankings."
     }
   ]
 }

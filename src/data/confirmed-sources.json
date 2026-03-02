@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-02",
-  "totalSources": 300,
-  "verifiedCount": 290,
+  "totalSources": 301,
+  "verifiedCount": 291,
   "sources": {
     "accenture-health-ai-2023": {
       "id": "accenture-health-ai-2023",
@@ -3984,6 +3984,22 @@
         "ai-adoption-rate",
         "workforce-ai-exposure",
         "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "lightcast-fault-lines-2026": {
+      "id": "lightcast-fault-lines-2026",
+      "title": "Fault Lines",
+      "url": "https://lightcast.io/resources/research/fault-lines",
+      "publisher": "Lightcast",
+      "evidenceTier": 2,
+      "datePublished": "2026-02-01",
+      "excerpt": "The United States has seen 50% growth in AI-related postings over the past year, with AI now appearing in 2.5% of all job postings.",
+      "usedIn": [
+        "ai-adoption-rate",
+        "white-collar-professional-displacement",
+        "workforce-ai-exposure"
       ],
       "verified": true,
       "synthetic": false
