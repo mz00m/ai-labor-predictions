@@ -237,6 +237,7 @@ export default function PredictionDetailPage() {
               unit={prediction.unit.includes("%") ? "%" : ""}
               overlays={prediction.overlays}
               onDotClick={handleDotClick}
+              yAxisMax={prediction.slug === "workforce-ai-exposure" ? 100 : undefined}
             />
           </>
         )}
