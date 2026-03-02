@@ -7,7 +7,7 @@ const PHASES = [
     phase: "I",
     name: "Emergence",
     duration: "5–20 yrs",
-    aiDuration: "~10 yrs (2012–2022)",
+    aiDuration: "~10 yrs (2012–2022) — complete",
     description:
       "Technology arrives; specialists created; little aggregate effect on total employment.",
     example:
@@ -21,26 +21,26 @@ const PHASES = [
     phase: "II",
     name: "Rapid Diffusion",
     duration: "10–25 yrs",
-    aiDuration: "~2–5 yrs (2022–now)",
+    aiDuration: "~1–3 yrs (2022–2025) — nearly complete",
     description:
       "Spreads across sectors; high-skill workers who adopt early benefit most. Productivity rises faster than wages.",
     example:
       "By 1900, electric motors were spreading across US factories but most still used shaft-and-belt power. Early adopters saw enormous gains.",
     aiNote:
-      "For AI: ChatGPT hit 100M users in 2 months; 54.6% of US adults used gen AI by 2025 (St. Louis Fed). Enterprise adoption surged from 33% to 88% in ~2 years (McKinsey). Microsoft quantifies this as '5x faster than the internet.' This phase that took electricity 25 years is happening in 2–5 for AI — built on PCs and internet already in place.",
+      "For AI: ChatGPT hit 100M users in 2 months; 54.6% of US adults used gen AI by 2025 (St. Louis Fed). Enterprise adoption surged from 33% to 88% in ~2 years (McKinsey). A phase that took electricity 25 years effectively completed in under 3 for AI — 10x compression of the diffusion timeline.",
     workerEffect: "Spreads across sectors; high-skill workers benefit most",
   },
   {
     phase: "III",
     name: "Displacement",
     duration: "10–30 yrs",
-    aiDuration: "~5–15 yrs (beginning now)",
+    aiDuration: "~1–3 yrs (beginning now)",
     description:
       "Routine-task workers face wage pressure and job loss. The technology is now cheap and reliable enough to substitute for labor at scale.",
     example:
       "Power looms destroyed 250,000+ handloom weaving jobs. Telephone operators, bank tellers, and typists were decimated by computers.",
     aiNote:
-      "For AI: early displacement signals are already visible — content writing, customer service, and junior coding roles are seeing wage pressure. The acceleration factor compresses what historically took decades into years.",
+      "For AI: displacement signals are already visible — content writing, customer service, and junior coding roles are seeing wage pressure in 2024–2025. At 10x speed, the acute displacement window that historically lasted decades could compress to 1–3 years.",
     workerEffect:
       "Routine-task workers face wage pressure and job loss",
   },
@@ -48,13 +48,13 @@ const PHASES = [
     phase: "IV",
     name: "Reorganization",
     duration: "15–40 yrs",
-    aiDuration: "~7–20 yrs",
+    aiDuration: "~3–7 yrs",
     description:
       "New industries emerge; organizations restructure around the technology. The 'productivity paradox' resolves as complements develop.",
     example:
       "Factories redesigned around electric motors (1920s). The web spawned e-commerce, social media, and the app economy (2000s).",
     aiNote:
-      "For AI: this phase is constrained by human/institutional speed — education systems, regulations, and corporate culture can't be updated via software. Expect some compression but not as dramatic as the adoption phase.",
+      "For AI: organizational restructuring is partially constrained by human speed — but AI itself accelerates institutional adaptation (automated compliance, AI-assisted education, rapid prototyping of new business models). The productivity paradox could resolve by the early 2030s.",
     workerEffect:
       "New industries emerge; productivity paradox resolves",
   },
@@ -62,13 +62,13 @@ const PHASES = [
     phase: "V",
     name: "New Equilibrium",
     duration: "Ongoing",
-    aiDuration: "~20–40 yrs out",
+    aiDuration: "~7–15 yrs out",
     description:
       "Higher average wages; completely different job distribution. The economy has absorbed the GPT and a new normal emerges.",
     example:
       "By 1950, electrification was invisible infrastructure. By 2020, 'using a computer' was not a skill — it was assumed.",
     aiNote:
-      "For AI: if the pattern holds at 2–3x compression, a new equilibrium could emerge by the 2050s–2060s rather than the 2080s–2090s that a historical baseline would predict.",
+      "For AI: at 10x compression, a new occupational equilibrium could emerge by the mid-2030s to early 2040s — within the careers of workers being displaced today, not their grandchildren's.",
     workerEffect:
       "Higher avg wages; completely different job distribution",
   },

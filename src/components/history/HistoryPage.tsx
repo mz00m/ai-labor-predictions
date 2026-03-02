@@ -64,57 +64,64 @@ export default function HistoryPage() {
           </p>
           <GPTTimeline />
 
-          {/* Acceleration callout */}
+          {/* 10x Acceleration callout */}
           <div className="mt-8 border border-[var(--accent)]/20 bg-[var(--accent-light)] rounded-lg p-5">
             <div className="flex items-start gap-3">
               <span className="text-[11px] font-bold uppercase tracking-wider text-white bg-[var(--accent)] px-2.5 py-1 rounded-full shrink-0">
-                But faster
+                10x faster
               </span>
               <div>
                 <p className="text-[13px] text-[var(--foreground)] leading-relaxed font-semibold mb-2">
-                  AI is the fastest-adopted technology in human history.
+                  AI is diffusing at roughly 10x the speed of prior
+                  general-purpose technologies.
                 </p>
                 <p className="text-[12px] text-[var(--muted)] leading-relaxed mb-3">
-                  ChatGPT reached 100 million users in 2 months. But raw
-                  signup speed overstates the comparison &mdash; it&rsquo;s
-                  a free app on existing infrastructure, not a telephone
-                  requiring physical installation. The more rigorous measure
-                  is population penetration at equivalent thresholds: by late
-                  2024, 39% of US working-age adults had used generative AI,
-                  a rate the internet didn&rsquo;t reach for 5+ years and the
-                  PC didn&rsquo;t reach for over a decade (NBER, Bick et al.
-                  2024). By 2025, 54.6% of US adults 18&ndash;64 had used it
-                  (St. Louis Fed). Enterprise adoption surged from 33% to 88%
-                  of organizations in roughly two years (McKinsey, 2023&ndash;2025).
-                </p>
-                <p className="text-[12px] text-[var(--muted)] leading-relaxed mb-3">
-                  Microsoft&rsquo;s AI Diffusion Report quantifies this as{" "}
+                  ChatGPT reached 100 million users in 2 months &mdash; the
+                  internet took 7 years, the PC took over a decade. By 2025,
+                  54.6% of US working-age adults had used generative AI (St.
+                  Louis Fed), a penetration the internet didn&rsquo;t reach
+                  for 5+ years and the PC didn&rsquo;t reach for 15. Enterprise
+                  adoption surged from 33% to 88% of organizations in roughly
+                  two years (McKinsey, 2023&ndash;2025). Microsoft&rsquo;s AI
+                  Diffusion Report calls it{" "}
                   <strong>&ldquo;twice the pace of smartphones, five times
-                  faster than the internet.&rdquo;</strong> One key reason:
-                  AI is built on top of two prior GPTs (computers and the
-                  internet) that already saturated the economy. There is no new
-                  infrastructure to build &mdash; every smartphone is already
-                  an AI terminal. By rigorous academic metrics, AI adoption is{" "}
-                  <strong>2&ndash;5x faster</strong> than the internet or PC
-                  at equivalent adoption thresholds.
+                  faster than the internet&rdquo;</strong> &mdash; and those
+                  technologies were themselves orders of magnitude faster than
+                  steam or electricity.{" "}
+                  <a
+                    href="/predictions/genai-work-adoption"
+                    className="text-[var(--accent)] underline underline-offset-2 font-medium"
+                  >
+                    See live adoption data &rarr;
+                  </a>
                 </p>
                 <p className="text-[12px] text-[var(--muted)] leading-relaxed mb-3">
-                  However, adoption is not integration. Only 5.7% of total
-                  work hours currently involve AI (St. Louis Fed, 2025), and
-                  only 39% of organizations report any bottom-line impact
-                  (McKinsey, 2025). GitHub Copilot has 20 million users with
-                  46% of active users&rsquo; code being AI-generated &mdash;
-                  deep integration in one domain, but the exception not the
-                  rule.
+                  The compounding is staggering: electricity took{" "}
+                  <strong>40 years</strong> from dynamo to productivity gains.
+                  The PC took <strong>30+ years</strong> from mainframe to the
+                  Solow Paradox resolving. AI went from GPT-3 to 88%
+                  enterprise adoption in <strong>5 years</strong>. This is not
+                  incremental acceleration &mdash; it is an order-of-magnitude
+                  compression of the diffusion phase. One reason: AI is built
+                  on top of two prior GPTs (computers and the internet) that
+                  already saturated the economy. Every smartphone is already an
+                  AI terminal.{" "}
+                  <a
+                    href="/predictions/ai-adoption-rate"
+                    className="text-[var(--accent)] underline underline-offset-2 font-medium"
+                  >
+                    See enterprise adoption data &rarr;
+                  </a>
                 </p>
                 <p className="text-[12px] text-[var(--foreground)]/70 leading-relaxed italic">
-                  The forecasts on this page adjust for this acceleration.
-                  However, organizational restructuring, institutional
-                  adaptation, and new industry creation remain partially
-                  constrained by human speed &mdash; laws, education systems,
-                  and corporate culture cannot be updated via software patch.
-                  The full arc will likely compress by 2&ndash;3x from
-                  historical baselines.
+                  The forecasts on this page extrapolate from this 10x
+                  adoption speed. If the diffusion phase that historically
+                  took 10&ndash;25 years is happening in 1&ndash;3, the
+                  displacement and reorganization phases will compress
+                  proportionally. The constraint: organizational
+                  restructuring, education systems, and policy still operate
+                  at human speed &mdash; but even these are being accelerated
+                  by AI itself.
                 </p>
               </div>
             </div>
