@@ -34,9 +34,12 @@ export function getRecentSources(limit = 20): SourceWithContext[] {
     }
   }
 
+  // Sort by dateAdded (when ingested into the tracker) first,
+  // falling back to datePublished for older entries without dateAdded.
   allSources.sort(
     (a, b) =>
-      new Date(b.datePublished).getTime() - new Date(a.datePublished).getTime()
+      new Date(b.dateAdded ?? b.datePublished).getTime() -
+      new Date(a.dateAdded ?? a.datePublished).getTime()
   );
 
   return allSources.slice(0, limit);

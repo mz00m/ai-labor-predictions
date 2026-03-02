@@ -71,7 +71,9 @@ export default function RecentSources({ sources }: RecentSourcesProps) {
                   {source.title}
                 </p>
                 <p className="text-[11px] text-[var(--muted)] opacity-60 mt-0.5">
-                  {format(parseISO(source.datePublished), "MMM d, yyyy")}
+                  {source.dateAdded
+                    ? `Added ${format(parseISO(source.dateAdded), "MMM d, yyyy")}`
+                    : format(parseISO(source.datePublished), "MMM d, yyyy")}
                 </p>
               </div>
             </a>

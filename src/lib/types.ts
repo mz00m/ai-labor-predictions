@@ -14,6 +14,7 @@ export interface Source {
   publisher: string;
   evidenceTier: EvidenceTier;
   datePublished: string;
+  dateAdded?: string;
   excerpt?: string;
 }
 
