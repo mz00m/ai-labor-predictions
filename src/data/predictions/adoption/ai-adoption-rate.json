@@ -71,6 +71,42 @@
   ],
   "overlays": [
     {
+      "date": "2023-08-01",
+      "direction": "up",
+      "sourceIds": [
+        "mckinsey-ai-survey-2023"
+      ],
+      "evidenceTier": 2,
+      "label": "McKinsey: 55% of respondents use AI; 1/3 using gen AI regularly"
+    },
+    {
+      "date": "2024-02-28",
+      "direction": "up",
+      "sourceIds": [
+        "salesforce-10k-ai-2024"
+      ],
+      "evidenceTier": 1,
+      "label": "Salesforce: Einstein platform serving 200B AI predictions daily"
+    },
+    {
+      "date": "2024-05-01",
+      "direction": "up",
+      "sourceIds": [
+        "mckinsey-ai-survey-2024"
+      ],
+      "evidenceTier": 2,
+      "label": "McKinsey 2024: 72% use AI in ≥1 function, up from 55%"
+    },
+    {
+      "date": "2024-07-01",
+      "direction": "up",
+      "sourceIds": [
+        "microsoft-10k-ai-2024"
+      ],
+      "evidenceTier": 1,
+      "label": "Microsoft: 60K+ Azure AI customers, growing 60% YoY"
+    },
+    {
       "date": "2024-09-15",
       "direction": "up",
       "sourceIds": [
@@ -80,6 +116,15 @@
       "label": "Deloitte survey: 42% of enterprises in production"
     },
     {
+      "date": "2025-01-06",
+      "direction": "down",
+      "sourceIds": [
+        "humlum-vestergaard-chatgpt-adoption-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "PNAS: ChatGPT adoption unequal; women 16pp less likely to use"
+    },
+    {
       "date": "2025-01-20",
       "direction": "up",
       "sourceIds": [
@@ -87,6 +132,51 @@
       ],
       "evidenceTier": 2,
       "label": "McKinsey survey: 78% use AI in ≥1 function (Mar 2025)"
+    },
+    {
+      "date": "2025-06-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "jpmorgan-adoption-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "JP Morgan: <10% of firms using AI regularly; adoption by industry"
+    },
+    {
+      "date": "2025-09-08",
+      "direction": "up",
+      "sourceIds": [
+        "pwbm-ai-adoption-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Penn Wharton: 40% of exposed jobs replaceable; 25% labor savings"
+    },
+    {
+      "date": "2025-09-15",
+      "direction": "neutral",
+      "sourceIds": [
+        "anthropic-geographic-adoption-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Anthropic: Only 25% of Info sector using AI; adoption uneven"
+    },
+    {
+      "date": "2025-09-22",
+      "direction": "down",
+      "sourceIds": [
+        "hbr-ai-workslop-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "HBR: 40% received AI workslop; 96% not seeing productivity gains"
+    },
+    {
+      "date": "2025-10-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "atlassian-ai-collab-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Atlassian: 96% of orgs not seeing dramatic AI improvements; only 4% report true ROI"
     },
     {
       "date": "2025-11-01",
@@ -107,6 +197,15 @@
       "label": "Microsoft: 75% of knowledge workers use AI tools"
     },
     {
+      "date": "2025-12-01",
+      "direction": "up",
+      "sourceIds": [
+        "stanford-ai-index-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Stanford AI Index: 78% using AI; enterprise AI spending +45% YoY"
+    },
+    {
       "date": "2025-12-15",
       "direction": "up",
       "sourceIds": [
@@ -116,22 +215,13 @@
       "label": "Gallup: 46% of US workers used AI at work in Q4 2025"
     },
     {
-      "date": "2026-02-15",
+      "date": "2026-01-15",
       "direction": "up",
       "sourceIds": [
-        "nber-bloom-firm-data-adoption-2026"
+        "anthropic-econ-primitives-adoption-2026"
       ],
       "evidenceTier": 1,
-      "label": "NBER/Bloom: 78% of US firms use AI (executive survey of ~6K across 4 countries)"
-    },
-    {
-      "date": "2025-10-01",
-      "direction": "neutral",
-      "sourceIds": [
-        "atlassian-ai-collab-2025"
-      ],
-      "evidenceTier": 2,
-      "label": "Atlassian: 96% of orgs not seeing dramatic AI improvements; only 4% report true ROI"
+      "label": "Anthropic: 49% of jobs use AI for ≥25% of tasks; productivity +1.0-1.8pp"
     },
     {
       "date": "2026-01-22",
@@ -141,6 +231,24 @@
       ],
       "evidenceTier": 2,
       "label": "Indeed: AI Tracker hit 4.2% of postings; AI postings 134% above 2020 baseline"
+    },
+    {
+      "date": "2026-02-01",
+      "direction": "up",
+      "sourceIds": [
+        "icle-adoption-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "ICLE review: 35.9% of workers use gen AI; adoption accelerating"
+    },
+    {
+      "date": "2026-02-15",
+      "direction": "up",
+      "sourceIds": [
+        "nber-bloom-firm-data-adoption-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER/Bloom: 78% of US firms use AI (executive survey of ~6K across 4 countries)"
     }
   ],
   "sources": [

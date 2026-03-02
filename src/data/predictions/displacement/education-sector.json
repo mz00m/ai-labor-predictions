@@ -51,6 +51,33 @@
   ],
   "overlays": [
     {
+      "date": "2023-07-26",
+      "direction": "down",
+      "sourceIds": [
+        "mckinsey-12m-workers-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "McKinsey: 12M+ occupational shifts by 2030; up to 30% of hours could be automated"
+    },
+    {
+      "date": "2023-09-07",
+      "direction": "down",
+      "sourceIds": [
+        "unesco-ai-education-2023"
+      ],
+      "evidenceTier": 2,
+      "label": "UNESCO: AI tutoring handles 60% of routine queries; TAs face most displacement risk"
+    },
+    {
+      "date": "2024-04-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "rand-edtech-ai-2023"
+      ],
+      "evidenceTier": 2,
+      "label": "RAND: 18% of K-12 teachers used AI; 60% of districts planned AI training"
+    },
+    {
       "date": "2024-09-01",
       "direction": "down",
       "sourceIds": [
@@ -60,6 +87,15 @@
       "label": "Harvard: AI tutor doubled learning gains vs. active classroom"
     },
     {
+      "date": "2025-01-08",
+      "direction": "down",
+      "sourceIds": [
+        "duolingo-ai-first-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Duolingo: cut 10%+ of contractors, replaced by AI content generation"
+    },
+    {
       "date": "2025-01-20",
       "direction": "down",
       "sourceIds": [
@@ -67,6 +103,24 @@
       ],
       "evidenceTier": 1,
       "label": "OECD: 30-40% task displacement for support staff"
+    },
+    {
+      "date": "2025-02-01",
+      "direction": "down",
+      "sourceIds": [
+        "chegg-layoffs-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Chegg: 636 employees eliminated (67% of workforce), citing AI"
+    },
+    {
+      "date": "2025-04-25",
+      "direction": "down",
+      "sourceIds": [
+        "chronicle-higher-ed-ai"
+      ],
+      "evidenceTier": 3,
+      "label": "Chronicle: AI will decimate faculty ranks; TAs first, then non-tenured, then tenured"
     },
     {
       "date": "2025-05-01",
@@ -94,24 +148,6 @@
       ],
       "evidenceTier": 1,
       "label": "IMF: 60% of advanced-economy jobs exposed to AI"
-    },
-    {
-      "date": "2025-02-01",
-      "direction": "down",
-      "sourceIds": [
-        "chegg-layoffs-2025"
-      ],
-      "evidenceTier": 1,
-      "label": "Chegg: 636 employees eliminated (67% of workforce), citing AI"
-    },
-    {
-      "date": "2025-01-08",
-      "direction": "down",
-      "sourceIds": [
-        "duolingo-ai-first-2025"
-      ],
-      "evidenceTier": 1,
-      "label": "Duolingo: cut 10%+ of contractors, replaced by AI content generation"
     },
     {
       "date": "2026-01-15",

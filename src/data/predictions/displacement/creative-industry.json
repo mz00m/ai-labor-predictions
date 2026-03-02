@@ -71,6 +71,15 @@
   ],
   "overlays": [
     {
+      "date": "2023-04-30",
+      "direction": "down",
+      "sourceIds": [
+        "wef-creative-2023"
+      ],
+      "evidenceTier": 2,
+      "label": "WEF: Graphic designers, copywriters, marketing analysts expected to decline most rapidly"
+    },
+    {
       "date": "2023-09-15",
       "direction": "down",
       "sourceIds": [
@@ -80,40 +89,13 @@
       "label": "McKinsey: 25-40% of creative task time automatable"
     },
     {
-      "date": "2025-06-01",
+      "date": "2024-01-29",
       "direction": "down",
       "sourceIds": [
-        "bls-creative-occupations-2025"
+        "techcrunch-creative-layoffs"
       ],
-      "evidenceTier": 1,
-      "label": "BLS: graphic designer jobs to decline 4%"
-    },
-    {
-      "date": "2025-09-20",
-      "direction": "down",
-      "sourceIds": [
-        "ramp-freelance-creative-2025"
-      ],
-      "evidenceTier": 1,
-      "label": "Ramp: $1 reduced freelance → $0.03 AI spend"
-    },
-    {
-      "date": "2025-11-15",
-      "direction": "down",
-      "sourceIds": [
-        "queen-mary-turing-freelancer-2025"
-      ],
-      "evidenceTier": 1,
-      "label": "Queen Mary/Turing: 73% of freelancers report reduced job security"
-    },
-    {
-      "date": "2025-01-15",
-      "direction": "down",
-      "sourceIds": [
-        "demirci-jebo-freelance-2025"
-      ],
-      "evidenceTier": 1,
-      "label": "JEBO (peer-reviewed): writing postings -30%, graphic design -18% within 8 months of ChatGPT"
+      "evidenceTier": 3,
+      "label": "TechCrunch: AI playing a role in scope of tech layoffs; firms investing to replace workers"
     },
     {
       "date": "2024-04-01",
@@ -125,6 +107,69 @@
       "label": "Society of Authors UK: 26% of illustrators, 36% of translators already lost work to AI"
     },
     {
+      "date": "2024-08-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "autor-new-frontiers-qje-2024"
+      ],
+      "evidenceTier": 1,
+      "label": "QJE (Autor): Automation effects intensifying; new work shifting to professional roles"
+    },
+    {
+      "date": "2024-12-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "unctad-creative-industry-2025"
+      ],
+      "evidenceTier": 3,
+      "label": "UNCTAD: Creative services exports surged to $1.4T; discusses AI's impact on creative economy"
+    },
+    {
+      "date": "2025-01-15",
+      "direction": "down",
+      "sourceIds": [
+        "demirci-jebo-freelance-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "JEBO (peer-reviewed): writing postings -30%, graphic design -18% within 8 months of ChatGPT"
+    },
+    {
+      "date": "2025-02-19",
+      "direction": "down",
+      "sourceIds": [
+        "fiverr-10k-2024"
+      ],
+      "evidenceTier": 2,
+      "label": "Fiverr: Active buyers fell 10%; traditional low-complexity gig categories contracted"
+    },
+    {
+      "date": "2025-06-01",
+      "direction": "down",
+      "sourceIds": [
+        "bls-creative-occupations-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "BLS: graphic designer jobs to decline 4%"
+    },
+    {
+      "date": "2025-07-01",
+      "direction": "down",
+      "sourceIds": [
+        "hosseini-brookings-creative-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Brookings: Significant decline in freelancer job availability and earnings in AI-affected roles"
+    },
+    {
+      "date": "2025-09-20",
+      "direction": "down",
+      "sourceIds": [
+        "ramp-freelance-creative-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Ramp: $1 reduced freelance → $0.03 AI spend"
+    },
+    {
       "date": "2025-10-30",
       "direction": "down",
       "sourceIds": [
@@ -132,6 +177,15 @@
       ],
       "evidenceTier": 1,
       "label": "CAIS/Scale AI: AI succeeds at audio/image/logo tasks but fails most creative projects (2.5% overall)"
+    },
+    {
+      "date": "2025-11-15",
+      "direction": "down",
+      "sourceIds": [
+        "queen-mary-turing-freelancer-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Queen Mary/Turing: 73% of freelancers report reduced job security"
     },
     {
       "date": "2026-02-24",

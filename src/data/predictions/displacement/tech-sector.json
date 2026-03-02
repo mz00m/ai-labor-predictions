@@ -71,6 +71,141 @@
   ],
   "overlays": [
     {
+      "date": "2023-02-01",
+      "direction": "up",
+      "sourceIds": [
+        "peng-copilot-2023"
+      ],
+      "evidenceTier": 1,
+      "label": "GitHub Copilot RCT: developers 55.8% faster"
+    },
+    {
+      "date": "2023-04-30",
+      "direction": "down",
+      "sourceIds": [
+        "wef-future-jobs-2023"
+      ],
+      "evidenceTier": 2,
+      "label": "WEF: 44% of workers' core skills will be disrupted in the next five years"
+    },
+    {
+      "date": "2023-06-14",
+      "direction": "down",
+      "sourceIds": [
+        "mckinsey-2023"
+      ],
+      "evidenceTier": 2,
+      "label": "McKinsey: GenAI could automate up to 70% of business activities across occupations"
+    },
+    {
+      "date": "2024-01-10",
+      "direction": "down",
+      "sourceIds": [
+        "goldman-ai-2024"
+      ],
+      "evidenceTier": 1,
+      "label": "Goldman Sachs: AI could expose 300M full-time jobs globally to automation"
+    },
+    {
+      "date": "2024-01-22",
+      "direction": "up",
+      "sourceIds": [
+        "mit-task-2024"
+      ],
+      "evidenceTier": 1,
+      "label": "MIT: Only 23% of vision-task wages cost-effective to automate with AI today"
+    },
+    {
+      "date": "2024-04-01",
+      "direction": "up",
+      "sourceIds": [
+        "acemoglu-2023"
+      ],
+      "evidenceTier": 1,
+      "label": "Acemoglu: ~5% of tasks fully automatable; job impact more modest than claimed"
+    },
+    {
+      "date": "2025-01-06",
+      "direction": "down",
+      "sourceIds": [
+        "forrester-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Forrester: AI and automation will take 6% of US jobs by 2030"
+    },
+    {
+      "date": "2025-01-15",
+      "direction": "down",
+      "sourceIds": [
+        "chen-hbs-displacement-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "HBS: 17% decrease in postings for top-quartile automation-potential occupations"
+    },
+    {
+      "date": "2025-02-01",
+      "direction": "down",
+      "sourceIds": [
+        "meta-10k-2024"
+      ],
+      "evidenceTier": 1,
+      "label": "Meta: 'Year of Efficiency' cut ~21K jobs; AI-driven productivity enables smaller teams"
+    },
+    {
+      "date": "2025-02-03",
+      "direction": "down",
+      "sourceIds": [
+        "google-10k-2024"
+      ],
+      "evidenceTier": 1,
+      "label": "Alphabet: AI tools reduced need for certain engineering and support roles"
+    },
+    {
+      "date": "2025-06-01",
+      "direction": "up",
+      "sourceIds": [
+        "cui-microsoft-copilot-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Microsoft/Accenture: 26% more pull requests with Copilot"
+    },
+    {
+      "date": "2025-06-01",
+      "direction": "down",
+      "sourceIds": [
+        "jpmorgan-ai-job-growth-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "JPMorgan: Tech/info/media employment stopped growing at end of 2022"
+    },
+    {
+      "date": "2025-07-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "oecd-employment-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "OECD: Employment Outlook 2025 on AI and the labour market"
+    },
+    {
+      "date": "2025-08-01",
+      "direction": "down",
+      "sourceIds": [
+        "goldman-ai-workforce-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Goldman: Young tech workers (20-30) unemployment risen ~3pp since start of 2025"
+    },
+    {
+      "date": "2025-09-01",
+      "direction": "down",
+      "sourceIds": [
+        "comptia-it-unemployment-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "CompTIA: IT unemployment rose from 3.9% to 5.7%"
+    },
+    {
       "date": "2025-10-01",
       "direction": "down",
       "sourceIds": [
@@ -78,6 +213,24 @@
       ],
       "evidenceTier": 2,
       "label": "Challenger: 78K tech jobs lost to AI in H1 2025"
+    },
+    {
+      "date": "2025-10-30",
+      "direction": "down",
+      "sourceIds": [
+        "cais-scale-remote-labor-index-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "CAIS/Scale AI: AI fails 97.5% of real-world remote work projects at professional quality"
+    },
+    {
+      "date": "2025-12-01",
+      "direction": "down",
+      "sourceIds": [
+        "challenger-ai-job-cuts-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Challenger: 54,694 AI-cited job cuts in 2025"
     },
     {
       "date": "2026-01-01",
@@ -98,22 +251,31 @@
       "label": "Dallas Fed: young worker share fell 0.9pp"
     },
     {
-      "date": "2025-12-01",
+      "date": "2026-01-15",
       "direction": "down",
       "sourceIds": [
-        "challenger-ai-job-cuts-2025"
+        "cognizant-new-work-2026"
       ],
       "evidenceTier": 2,
-      "label": "Challenger: 54,694 AI-cited job cuts in 2025"
+      "label": "Cognizant: computer/math roles 67% task exposure — second highest of all categories"
     },
     {
-      "date": "2025-09-01",
-      "direction": "down",
+      "date": "2026-01-15",
+      "direction": "neutral",
       "sourceIds": [
-        "comptia-it-unemployment-2025"
+        "anthropic-econ-primitives-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Anthropic: Computer/math tasks ~33% of Claude.ai conversations, ~50% of API traffic"
+    },
+    {
+      "date": "2026-01-22",
+      "direction": "up",
+      "sourceIds": [
+        "indeed-hiringlab-ai-jobs-labor-2026"
       ],
       "evidenceTier": 2,
-      "label": "CompTIA: IT unemployment rose from 3.9% to 5.7%"
+      "label": "Indeed: Tech postings 34% below pre-pandemic; AI tech postings 45% above"
     },
     {
       "date": "2026-02-24",
@@ -125,33 +287,6 @@
       "label": "METR (updated): AI made experienced open-source devs 18% slower (CI: -38% to +9%)"
     },
     {
-      "date": "2025-06-01",
-      "direction": "up",
-      "sourceIds": [
-        "cui-microsoft-copilot-2025"
-      ],
-      "evidenceTier": 1,
-      "label": "Microsoft/Accenture: 26% more pull requests with Copilot"
-    },
-    {
-      "date": "2023-02-01",
-      "direction": "up",
-      "sourceIds": [
-        "peng-copilot-2023"
-      ],
-      "evidenceTier": 1,
-      "label": "GitHub Copilot RCT: developers 55.8% faster"
-    },
-    {
-      "date": "2026-01-15",
-      "direction": "down",
-      "sourceIds": [
-        "cognizant-new-work-2026"
-      ],
-      "evidenceTier": 2,
-      "label": "Cognizant: computer/math roles 67% task exposure — second highest of all categories"
-    },
-    {
       "date": "2026-02-24",
       "direction": "down",
       "sourceIds": [
@@ -159,24 +294,6 @@
       ],
       "evidenceTier": 2,
       "label": "Goldman (Mei): AI impact 'largely confined to tech sector'; expects it to grow materially"
-    },
-    {
-      "date": "2025-10-30",
-      "direction": "down",
-      "sourceIds": [
-        "cais-scale-remote-labor-index-2025"
-      ],
-      "evidenceTier": 1,
-      "label": "CAIS/Scale AI: AI fails 97.5% of real-world remote work projects at professional quality"
-    },
-    {
-      "date": "2026-01-22",
-      "direction": "up",
-      "sourceIds": [
-        "indeed-hiringlab-ai-jobs-labor-2026"
-      ],
-      "evidenceTier": 2,
-      "label": "Indeed: Tech postings 34% below pre-pandemic; AI tech postings 45% above"
     },
     {
       "date": "2026-02-24",

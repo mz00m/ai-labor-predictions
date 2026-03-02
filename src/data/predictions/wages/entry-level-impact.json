@@ -91,6 +91,33 @@
   ],
   "overlays": [
     {
+      "date": "2018-01-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "nber-entry-wage-2023"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER: automation displaces workers but productivity gains create new tasks"
+    },
+    {
+      "date": "2023-07-26",
+      "direction": "down",
+      "sourceIds": [
+        "mckinsey-entry-level-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "McKinsey: up to 30% of hours automated; lower-wage face 14x more transitions"
+    },
+    {
+      "date": "2024-02-01",
+      "direction": "up",
+      "sourceIds": [
+        "mit-entry-wage-2024"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER/Autor: AI could help restore middle-skill, middle-class jobs"
+    },
+    {
       "date": "2025-05-28",
       "direction": "down",
       "sourceIds": [
@@ -100,22 +127,22 @@
       "label": "Anthropic CEO: up to 50% of entry-level office jobs impacted"
     },
     {
-      "date": "2025-11-01",
+      "date": "2025-08-06",
       "direction": "down",
       "sourceIds": [
-        "worldbank-liu-wang-yu-2025"
+        "goldman-entry-level-2024"
       ],
-      "evidenceTier": 1,
-      "label": "World Bank: entry-level postings fell 18-20%"
+      "evidenceTier": 2,
+      "label": "Goldman Sachs: entry-level tech postings down ~35% since Jan 2023"
     },
     {
-      "date": "2026-01-06",
+      "date": "2025-09-01",
       "direction": "down",
       "sourceIds": [
-        "dallas-fed-entry-level-2026"
+        "hosseini-lichtinger-seniority-2025"
       ],
       "evidenceTier": 1,
-      "label": "Dallas Fed: young worker share fell 16.4% → 15.5%"
+      "label": "SSRN: junior employment declined sharply at AI-adopting firms"
     },
     {
       "date": "2025-09-15",
@@ -127,6 +154,24 @@
       "label": "ILO review: declining demand for novice workers"
     },
     {
+      "date": "2025-10-28",
+      "direction": "neutral",
+      "sourceIds": [
+        "brookings-entry-level-2024"
+      ],
+      "evidenceTier": 2,
+      "label": "Brookings: young people need skill-building and mentorship for AI workplace"
+    },
+    {
+      "date": "2025-11-01",
+      "direction": "down",
+      "sourceIds": [
+        "worldbank-liu-wang-yu-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "World Bank: entry-level postings fell 18-20%"
+    },
+    {
       "date": "2026-01-01",
       "direction": "up",
       "sourceIds": [
@@ -136,13 +181,13 @@
       "label": "Stanford: small positive wage effects overall"
     },
     {
-      "date": "2025-09-01",
+      "date": "2026-01-06",
       "direction": "down",
       "sourceIds": [
-        "hosseini-lichtinger-seniority-2025"
+        "dallas-fed-entry-level-2026"
       ],
       "evidenceTier": 1,
-      "label": "SSRN: junior employment declined sharply at AI-adopting firms"
+      "label": "Dallas Fed: young worker share fell 16.4% → 15.5%"
     },
     {
       "date": "2026-01-15",
@@ -161,6 +206,15 @@
       ],
       "evidenceTier": 1,
       "label": "Althoff & Reichardt: AI simplification boosts lower-skill worker productivity"
+    },
+    {
+      "date": "2026-02-01",
+      "direction": "down",
+      "sourceIds": [
+        "icle-entry-level-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "ICLE: pressure concentrated in entry-level segments of exposed occupations"
     },
     {
       "date": "2026-02-24",

@@ -71,6 +71,24 @@
   ],
   "overlays": [
     {
+      "date": "2023-08-15",
+      "direction": "up",
+      "sourceIds": [
+        "lightcast-geo-wages-2023"
+      ],
+      "evidenceTier": 2,
+      "label": "Lightcast: SF commands highest avg tech salary at $177K; AI demand US-led"
+    },
+    {
+      "date": "2023-11-01",
+      "direction": "up",
+      "sourceIds": [
+        "linkedin-econ-graph-2023"
+      ],
+      "evidenceTier": 2,
+      "label": "LinkedIn: skills for jobs will change up to 65% by 2030; 55% impacted by AI"
+    },
+    {
       "date": "2025-02-01",
       "direction": "up",
       "sourceIds": [
@@ -78,6 +96,24 @@
       ],
       "evidenceTier": 1,
       "label": "Brookings: San Jose 43% AI-exposed vs 31% in Las Vegas"
+    },
+    {
+      "date": "2025-07-01",
+      "direction": "up",
+      "sourceIds": [
+        "glassdoor-ai-salaries-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Glassdoor: AI jobs pay 25% premium; AI job listings up 123% YoY"
+    },
+    {
+      "date": "2025-07-27",
+      "direction": "up",
+      "sourceIds": [
+        "techcrunch-ai-salary-gap"
+      ],
+      "evidenceTier": 2,
+      "label": "Fortune: non-tech AI-skilled roles pay 28% more (~$18K/year extra)"
     },
     {
       "date": "2025-09-15",

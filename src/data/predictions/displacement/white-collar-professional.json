@@ -71,6 +71,51 @@
   ],
   "overlays": [
     {
+      "date": "2023-03-26",
+      "direction": "down",
+      "sourceIds": [
+        "goldman-white-collar-2023"
+      ],
+      "evidenceTier": 1,
+      "label": "Goldman Sachs: Administrative and legal professions face highest exposure at 46%"
+    },
+    {
+      "date": "2023-06-14",
+      "direction": "down",
+      "sourceIds": [
+        "mckinsey-genai-occupations"
+      ],
+      "evidenceTier": 2,
+      "label": "McKinsey: Banking/insurance could see up to 50% of work activities automated"
+    },
+    {
+      "date": "2023-07-14",
+      "direction": "up",
+      "sourceIds": [
+        "noy-zhang-science-2023"
+      ],
+      "evidenceTier": 1,
+      "label": "Science RCT: ChatGPT cut task time 40%, raised quality 18%; low-ability workers gain most"
+    },
+    {
+      "date": "2023-09-01",
+      "direction": "up",
+      "sourceIds": [
+        "dellacqua-jagged-frontier-2023"
+      ],
+      "evidenceTier": 1,
+      "label": "BCG/HBS: consultants 12.2% more tasks, 25.1% faster, 40% higher quality with GPT-4"
+    },
+    {
+      "date": "2024-01-15",
+      "direction": "down",
+      "sourceIds": [
+        "eloundou-openai-2024"
+      ],
+      "evidenceTier": 1,
+      "label": "OpenAI/UPenn: ~80% of US workforce could have 10%+ tasks affected; legal among highest"
+    },
+    {
       "date": "2024-04-20",
       "direction": "neutral",
       "sourceIds": [
@@ -78,6 +123,15 @@
       ],
       "evidenceTier": 2,
       "label": "Brookings: most exposed to disruption"
+    },
+    {
+      "date": "2024-10-05",
+      "direction": "down",
+      "sourceIds": [
+        "wsj-white-collar-layoffs"
+      ],
+      "evidenceTier": 3,
+      "label": "WSJ: White-collar workers starting to feel the AI squeeze"
     },
     {
       "date": "2025-01-15",
@@ -89,6 +143,42 @@
       "label": "HBS: 24% drop in automatable skills demand"
     },
     {
+      "date": "2025-02-01",
+      "direction": "down",
+      "sourceIds": [
+        "papanikolaou-schmidt-ai-labor-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER: 1 SD increase in AI exposure reduces related skill demand by 2%"
+    },
+    {
+      "date": "2025-02-15",
+      "direction": "down",
+      "sourceIds": [
+        "jpmorgan-10k-ai-2024"
+      ],
+      "evidenceTier": 1,
+      "label": "JPMorgan: AI in legal/compliance/research yields productivity gains of 3,000+ FTE roles"
+    },
+    {
+      "date": "2025-03-01",
+      "direction": "down",
+      "sourceIds": [
+        "ey-10k-ai-2024"
+      ],
+      "evidenceTier": 2,
+      "label": "EY: $1.4B AI investment; AI-assisted audit covers 40% of routine testing tasks"
+    },
+    {
+      "date": "2025-06-01",
+      "direction": "down",
+      "sourceIds": [
+        "jpmorgan-white-collar-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "JPMorgan: Non-routine cognitive workers now face rising unemployment risk"
+    },
+    {
       "date": "2025-07-01",
       "direction": "down",
       "sourceIds": [
@@ -96,15 +186,6 @@
       ],
       "evidenceTier": 1,
       "label": "Brookings: top freelancers hit hardest"
-    },
-    {
-      "date": "2025-09-26",
-      "direction": "down",
-      "sourceIds": [
-        "papanikolaou-bpea-historical-2025"
-      ],
-      "evidenceTier": 1,
-      "label": "BPEA: demand shifting to lower-education roles"
     },
     {
       "date": "2025-09-15",
@@ -116,13 +197,58 @@
       "label": "Egon Zehnder: 18% of CFOs already eliminated roles; 88% of cuts in accounting"
     },
     {
-      "date": "2023-09-01",
-      "direction": "up",
+      "date": "2025-09-15",
+      "direction": "neutral",
       "sourceIds": [
-        "dellacqua-jagged-frontier-2023"
+        "del-rio-chanona-white-collar-2025"
       ],
       "evidenceTier": 1,
-      "label": "BCG/HBS: consultants 12.2% more tasks, 25.1% faster, 40% higher quality with GPT-4"
+      "label": "ILO review: AI exposure highest in high-wage jobs; substitution in writing/translation"
+    },
+    {
+      "date": "2025-09-26",
+      "direction": "down",
+      "sourceIds": [
+        "papanikolaou-bpea-historical-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "BPEA: demand shifting to lower-education roles"
+    },
+    {
+      "date": "2025-10-10",
+      "direction": "down",
+      "sourceIds": [
+        "indeed-cnbc-radical-transform"
+      ],
+      "evidenceTier": 2,
+      "label": "Indeed/CNBC: 26% of jobs face radical transformation; paralegals 80% automation risk"
+    },
+    {
+      "date": "2025-11-20",
+      "direction": "down",
+      "sourceIds": [
+        "gartner-middle-mgmt-2025"
+      ],
+      "evidenceTier": 3,
+      "label": "Gartner: 50% of middle management positions to be eliminated by 2030"
+    },
+    {
+      "date": "2025-12-15",
+      "direction": "up",
+      "sourceIds": [
+        "stanford-codex-legal-ai"
+      ],
+      "evidenceTier": 1,
+      "label": "MIT Tech Review: No displacement of lawyers yet; law grad employment at record 93.4%"
+    },
+    {
+      "date": "2025-12-24",
+      "direction": "neutral",
+      "sourceIds": [
+        "deloitte-professional-services-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Deloitte: AI and human collaboration can close talent gaps and speed upskilling"
     },
     {
       "date": "2026-01-15",

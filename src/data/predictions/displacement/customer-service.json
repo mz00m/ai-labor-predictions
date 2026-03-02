@@ -61,6 +61,33 @@
   ],
   "overlays": [
     {
+      "date": "2023-08-15",
+      "direction": "down",
+      "sourceIds": [
+        "forrester-cs-2023"
+      ],
+      "evidenceTier": 2,
+      "label": "Forrester: Report on the state of customer service automation"
+    },
+    {
+      "date": "2023-08-30",
+      "direction": "down",
+      "sourceIds": [
+        "gartner-cs-2023"
+      ],
+      "evidenceTier": 2,
+      "label": "Gartner: Conversational AI will reduce contact center labor costs by $80B in 2026"
+    },
+    {
+      "date": "2024-05-10",
+      "direction": "up",
+      "sourceIds": [
+        "hbr-chatbots-2024"
+      ],
+      "evidenceTier": 3,
+      "label": "HBR: GenAI will enhance, not erase, customer service jobs"
+    },
+    {
       "date": "2024-09-01",
       "direction": "up",
       "sourceIds": [
@@ -70,49 +97,31 @@
       "label": "NBER: AI boosts CS worker productivity 14%"
     },
     {
-      "date": "2025-05-01",
-      "direction": "up",
-      "sourceIds": [
-        "brynjolfsson-li-raymond-qje-2025"
-      ],
-      "evidenceTier": 1,
-      "label": "QJE: 15% productivity gain, novices benefit most"
-    },
-    {
-      "date": "2025-08-01",
+      "date": "2025-01-15",
       "direction": "down",
       "sourceIds": [
-        "brynjolfsson-chandar-chen-cs-2025"
-      ],
-      "evidenceTier": 1,
-      "label": "Stanford: 11% decline for early-career CS workers"
-    },
-    {
-      "date": "2025-11-01",
-      "direction": "down",
-      "sourceIds": [
-        "gartner-cs-2026-forecast"
+        "gartner-cs-2025"
       ],
       "evidenceTier": 2,
-      "label": "Gartner: 20-30% of CS agents replaced by 2026"
+      "label": "Gartner: By 2027, 25% of orgs will use chatbots as primary CS channel"
     },
     {
-      "date": "2025-10-01",
-      "direction": "up",
+      "date": "2025-01-15",
+      "direction": "down",
       "sourceIds": [
-        "bofa-erica-ai-2025"
+        "indeed-cs-postings-2025"
       ],
-      "evidenceTier": 1,
-      "label": "BofA Erica: 2B interactions, 98% resolution rate"
+      "evidenceTier": 2,
+      "label": "Indeed: Customer service postings declined 18% YoY; now require AI tool familiarity"
     },
     {
-      "date": "2025-06-01",
+      "date": "2025-02-27",
       "direction": "neutral",
       "sourceIds": [
-        "klarna-reversal-2025"
+        "tdoc-10k-2024"
       ],
-      "evidenceTier": 1,
-      "label": "Klarna reversed course, rehiring humans after 22% CSAT drop"
+      "evidenceTier": 2,
+      "label": "Teleperformance: 200+ new AI projects launched; investing EUR 100M in AI partnerships"
     },
     {
       "date": "2025-03-05",
@@ -124,6 +133,15 @@
       "label": "Gartner: agentic AI to resolve 80% of common CS issues by 2029"
     },
     {
+      "date": "2025-05-01",
+      "direction": "up",
+      "sourceIds": [
+        "brynjolfsson-li-raymond-qje-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "QJE: 15% productivity gain, novices benefit most"
+    },
+    {
       "date": "2025-05-27",
       "direction": "up",
       "sourceIds": [
@@ -133,6 +151,33 @@
       "label": "Cisco: 68% of CS interactions by agentic AI by 2028"
     },
     {
+      "date": "2025-06-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "klarna-reversal-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Klarna reversed course, rehiring humans after 22% CSAT drop"
+    },
+    {
+      "date": "2025-08-01",
+      "direction": "down",
+      "sourceIds": [
+        "brynjolfsson-chandar-chen-cs-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Stanford: 11% decline for early-career CS workers"
+    },
+    {
+      "date": "2025-10-01",
+      "direction": "up",
+      "sourceIds": [
+        "bofa-erica-ai-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "BofA Erica: 2B interactions, 98% resolution rate"
+    },
+    {
       "date": "2025-10-01",
       "direction": "up",
       "sourceIds": [
@@ -140,6 +185,15 @@
       ],
       "evidenceTier": 1,
       "label": "E-commerce field experiment: AI chatbots increased sales 16%"
+    },
+    {
+      "date": "2025-11-01",
+      "direction": "down",
+      "sourceIds": [
+        "gartner-cs-2026-forecast"
+      ],
+      "evidenceTier": 2,
+      "label": "Gartner: 20-30% of CS agents replaced by 2026"
     },
     {
       "date": "2026-01-21",

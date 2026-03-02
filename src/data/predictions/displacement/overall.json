@@ -157,6 +157,42 @@
   ],
   "overlays": [
     {
+      "date": "2023-03-26",
+      "direction": "down",
+      "sourceIds": [
+        "goldman-300m"
+      ],
+      "evidenceTier": 1,
+      "label": "Goldman Sachs: GenAI could substitute up to one-fourth of current work"
+    },
+    {
+      "date": "2023-07-11",
+      "direction": "down",
+      "sourceIds": [
+        "oecd-2023"
+      ],
+      "evidenceTier": 1,
+      "label": "OECD: 27% of jobs at high risk of automation across OECD countries"
+    },
+    {
+      "date": "2024-01-14",
+      "direction": "down",
+      "sourceIds": [
+        "imf-ai-2024"
+      ],
+      "evidenceTier": 2,
+      "label": "IMF: Almost 40% of global employment exposed to AI"
+    },
+    {
+      "date": "2024-07-15",
+      "direction": "down",
+      "sourceIds": [
+        "wsj-automation-2024"
+      ],
+      "evidenceTier": 3,
+      "label": "WSJ: AI starting to threaten white-collar jobs; few industries immune"
+    },
+    {
       "date": "2025-01-15",
       "direction": "down",
       "sourceIds": [
@@ -166,6 +202,69 @@
       "label": "HBS: 13% decline in postings for highly automatable roles"
     },
     {
+      "date": "2025-01-28",
+      "direction": "down",
+      "sourceIds": [
+        "indeed-overall-postings-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Indeed: Total US postings 15% below peak; AI-exposed categories steepest declines"
+    },
+    {
+      "date": "2025-02-01",
+      "direction": "down",
+      "sourceIds": [
+        "pnas-nexus-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "PNAS Nexus: Workers in AI-exposed occupations face higher unemployment risk"
+    },
+    {
+      "date": "2025-02-25",
+      "direction": "down",
+      "sourceIds": [
+        "ibm-10k-2024"
+      ],
+      "evidenceTier": 1,
+      "label": "IBM: Plans to replace ~7,800 back-office roles with AI"
+    },
+    {
+      "date": "2025-05-05",
+      "direction": "neutral",
+      "sourceIds": [
+        "korinek-stiglitz-steering-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Korinek/Stiglitz: Framework for steering innovation to increase labor demand"
+    },
+    {
+      "date": "2025-06-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "blog-mass-unemployment"
+      ],
+      "evidenceTier": 4,
+      "label": "Medium: Commentary on unpreparedness for mass AI unemployment"
+    },
+    {
+      "date": "2025-07-02",
+      "direction": "down",
+      "sourceIds": [
+        "amazon-8k-2024"
+      ],
+      "evidenceTier": 2,
+      "label": "CNBC: Amazon deploys 1 millionth robot; CEO says AI will reduce some jobs"
+    },
+    {
+      "date": "2025-08-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "bls-projections-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "BLS: Official employment projections 2024-2034"
+    },
+    {
       "date": "2025-09-01",
       "direction": "down",
       "sourceIds": [
@@ -173,6 +272,15 @@
       ],
       "evidenceTier": 1,
       "label": "Stanford/ADP: 6% employment decline for ages 22-25 in AI-exposed jobs"
+    },
+    {
+      "date": "2025-09-15",
+      "direction": "neutral",
+      "sourceIds": [
+        "del-rio-chanona-ai-jobs-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "ILO review: Productivity gains 20-60% in RCTs; AI exposure highest in high-wage jobs"
     },
     {
       "date": "2025-11-01",
@@ -202,13 +310,22 @@
       "label": "Cognizant: $4.5T in US labor value could shift to AI; 93% of jobs have exposed tasks"
     },
     {
-      "date": "2026-02-24",
+      "date": "2026-01-15",
       "direction": "neutral",
       "sourceIds": [
-        "goldman-mei-ai-labor-2026"
+        "anthropic-econ-primitives-overall-2026"
       ],
-      "evidenceTier": 2,
-      "label": "Goldman (Mei): only 5-10K/mo drag so far; baseline 6-7% displaced; +½pp unemployment"
+      "evidenceTier": 1,
+      "label": "Anthropic: 49% of jobs now use AI for 25%+ tasks; augmentation overtakes automation"
+    },
+    {
+      "date": "2026-01-20",
+      "direction": "down",
+      "sourceIds": [
+        "fortune-altman-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Fortune: Sam Altman warns AI could displace significant share of jobs"
     },
     {
       "date": "2026-01-21",
@@ -220,6 +337,15 @@
       "label": "Brookings: 70% of 37.1M highly AI-exposed workers are resilient"
     },
     {
+      "date": "2026-01-22",
+      "direction": "up",
+      "sourceIds": [
+        "indeed-hiringlab-ai-jobs-labor-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Indeed: Job postings down 5.2% YoY; AI postings diverging sharply upward"
+    },
+    {
       "date": "2026-02-17",
       "direction": "neutral",
       "sourceIds": [
@@ -229,13 +355,13 @@
       "label": "CEPR/BIS: no evidence AI reduces employment in EU firms (12K firm study)"
     },
     {
-      "date": "2026-01-22",
-      "direction": "up",
+      "date": "2026-02-24",
+      "direction": "neutral",
       "sourceIds": [
-        "indeed-hiringlab-ai-jobs-labor-2026"
+        "goldman-mei-ai-labor-2026"
       ],
       "evidenceTier": 2,
-      "label": "Indeed: Job postings down 5.2% YoY; AI postings diverging sharply upward"
+      "label": "Goldman (Mei): only 5-10K/mo drag so far; baseline 6-7% displaced; +½pp unemployment"
     }
   ],
   "sources": [

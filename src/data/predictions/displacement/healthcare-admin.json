@@ -41,6 +41,15 @@
   ],
   "overlays": [
     {
+      "date": "2023-04-16",
+      "direction": "down",
+      "sourceIds": [
+        "accenture-health-ai-2023"
+      ],
+      "evidenceTier": 2,
+      "label": "Accenture: 40% of healthcare working hours could be supported by language-based AI"
+    },
+    {
       "date": "2023-05-01",
       "direction": "down",
       "sourceIds": [
@@ -59,24 +68,6 @@
       "label": "CMS: 60% of prior auth workflows automatable"
     },
     {
-      "date": "2024-06-20",
-      "direction": "down",
-      "sourceIds": [
-        "nejm-admin-ai-2024"
-      ],
-      "evidenceTier": 1,
-      "label": "NEJM: 20-35% admin cost reduction"
-    },
-    {
-      "date": "2026-01-22",
-      "direction": "down",
-      "sourceIds": [
-        "healthtech-ai-admin-2025"
-      ],
-      "evidenceTier": 2,
-      "label": "HealthTech: admin is 25% of healthcare costs, key automation target"
-    },
-    {
       "date": "2024-06-04",
       "direction": "down",
       "sourceIds": [
@@ -86,13 +77,13 @@
       "label": "AHA: 46% of hospitals use AI in revenue cycle management"
     },
     {
-      "date": "2025-09-15",
+      "date": "2024-06-20",
       "direction": "down",
       "sourceIds": [
-        "revere-health-ai-layoffs-2025"
+        "nejm-admin-ai-2024"
       ],
       "evidenceTier": 1,
-      "label": "Revere Health: 177 billing/coding jobs replaced by AI platform"
+      "label": "NEJM: 20-35% admin cost reduction"
     },
     {
       "date": "2024-12-01",
@@ -104,6 +95,15 @@
       "label": "NCBI: hospital AI billing automation surged 36% → 61% in one year"
     },
     {
+      "date": "2025-01-01",
+      "direction": "down",
+      "sourceIds": [
+        "himss-medical-coding-ai-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "HIMSS: Potential $122B savings from AI medical coding automation; 42% of denials from coding"
+    },
+    {
       "date": "2025-09-01",
       "direction": "down",
       "sourceIds": [
@@ -113,6 +113,33 @@
       "label": "Experian: only 14% of providers have implemented AI for claims"
     },
     {
+      "date": "2025-09-15",
+      "direction": "down",
+      "sourceIds": [
+        "revere-health-ai-layoffs-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Revere Health: 177 billing/coding jobs replaced by AI platform"
+    },
+    {
+      "date": "2025-10-31",
+      "direction": "neutral",
+      "sourceIds": [
+        "reuters-health-admin-cuts"
+      ],
+      "evidenceTier": 3,
+      "label": "STAT News: Insurers deploying AI to combat hospital AI-driven billing/coding"
+    },
+    {
+      "date": "2025-11-13",
+      "direction": "down",
+      "sourceIds": [
+        "unitedhealth-10k-2024"
+      ],
+      "evidenceTier": 2,
+      "label": "UnitedHealth: 1,000+ AI apps deployed; AI chatbots handled 65M customer calls in 2024"
+    },
+    {
       "date": "2026-01-15",
       "direction": "down",
       "sourceIds": [
@@ -120,6 +147,15 @@
       ],
       "evidenceTier": 2,
       "label": "Cognizant: healthcare practitioner exposure jumped from 10% to 39%"
+    },
+    {
+      "date": "2026-01-22",
+      "direction": "down",
+      "sourceIds": [
+        "healthtech-ai-admin-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "HealthTech: admin is 25% of healthcare costs, key automation target"
     }
   ],
   "sources": [

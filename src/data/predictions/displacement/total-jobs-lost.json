@@ -91,6 +91,105 @@
   ],
   "overlays": [
     {
+      "date": "2023-07-11",
+      "direction": "down",
+      "sourceIds": [
+        "oecd-employment-2023"
+      ],
+      "evidenceTier": 1,
+      "label": "OECD: 27% of jobs at high risk; displacement depends on adoption speed and policy"
+    },
+    {
+      "date": "2024-01-14",
+      "direction": "down",
+      "sourceIds": [
+        "imf-ai-work-2024"
+      ],
+      "evidenceTier": 2,
+      "label": "IMF: ~40% of global employment exposed; ~60% of advanced-economy workers affected"
+    },
+    {
+      "date": "2025-01-06",
+      "direction": "neutral",
+      "sourceIds": [
+        "humlum-vestergaard-chatgpt-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "PNAS: Half of exposed workers use ChatGPT; younger/male/higher-achieving lead adoption"
+    },
+    {
+      "date": "2025-01-28",
+      "direction": "down",
+      "sourceIds": [
+        "indeed-total-postings-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Indeed: Data entry -27%, CS -18%, basic admin -22% postings; AI/ML +42% YoY"
+    },
+    {
+      "date": "2025-02-01",
+      "direction": "down",
+      "sourceIds": [
+        "pnas-unemployment-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "PNAS Nexus: AI-exposed occupations face significantly higher unemployment risk"
+    },
+    {
+      "date": "2025-05-01",
+      "direction": "down",
+      "sourceIds": [
+        "medium-doom-2025"
+      ],
+      "evidenceTier": 4,
+      "label": "Medium: Commentary on unpreparedness for mass AI unemployment"
+    },
+    {
+      "date": "2025-08-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "bls-projections-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "BLS: Official employment projections 2024-2034"
+    },
+    {
+      "date": "2025-08-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "goldman-total-workforce-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Goldman: 2.5% of jobs at risk now; 60% of current workers in occupations from post-1940"
+    },
+    {
+      "date": "2025-09-20",
+      "direction": "down",
+      "sourceIds": [
+        "ramp-freelance-total-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Ramp: 50%+ of businesses using freelancers in 2022 have stopped entirely"
+    },
+    {
+      "date": "2025-12-21",
+      "direction": "down",
+      "sourceIds": [
+        "sp500-layoff-tracker-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "CNBC/Challenger: AI cited as reason for 54,694 planned layoffs in 2025"
+    },
+    {
+      "date": "2026-01-10",
+      "direction": "down",
+      "sourceIds": [
+        "challenger-ai-layoffs-2025"
+      ],
+      "evidenceTier": 3,
+      "label": "Challenger: 55K AI-attributed layoffs in 2025; CS, data entry, back-office most affected"
+    },
+    {
       "date": "2026-01-21",
       "direction": "down",
       "sourceIds": [

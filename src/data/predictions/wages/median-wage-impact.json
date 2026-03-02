@@ -129,6 +129,24 @@
   ],
   "overlays": [
     {
+      "date": "2023-05-16",
+      "direction": "neutral",
+      "sourceIds": [
+        "acemoglu-johnson-power-progress-2023"
+      ],
+      "evidenceTier": 2,
+      "label": "Acemoglu & Johnson: shared prosperity requires deliberate policy choices"
+    },
+    {
+      "date": "2025-01-30",
+      "direction": "neutral",
+      "sourceIds": [
+        "ups-8k-2024"
+      ],
+      "evidenceTier": 1,
+      "label": "UPS: 12K management jobs cut; driver top rate $49/hr under new contract"
+    },
+    {
       "date": "2025-02-10",
       "direction": "down",
       "sourceIds": [
@@ -147,13 +165,13 @@
       "label": "Walmart: investing in checkout/inventory automation; min wage $14/hr"
     },
     {
-      "date": "2025-01-30",
-      "direction": "neutral",
+      "date": "2025-05-01",
+      "direction": "up",
       "sourceIds": [
-        "ups-8k-2024"
+        "brynjolfsson-li-raymond-qje-wages-2025"
       ],
       "evidenceTier": 1,
-      "label": "UPS: 12K management jobs cut; driver top rate $49/hr under new contract"
+      "label": "QJE: AI assistance increases worker productivity by 15% on average"
     },
     {
       "date": "2025-05-05",
@@ -165,24 +183,6 @@
       "label": "Korinek & Stiglitz: wage growth requires capital-augmenting AI"
     },
     {
-      "date": "2026-01-01",
-      "direction": "up",
-      "sourceIds": [
-        "hartley-median-wage-2026"
-      ],
-      "evidenceTier": 1,
-      "label": "Stanford: small positive wage effects in AI-exposed jobs"
-    },
-    {
-      "date": "2026-02-17",
-      "direction": "up",
-      "sourceIds": [
-        "cepr-ai-productivity-jobs-europe-2026"
-      ],
-      "evidenceTier": 1,
-      "label": "CEPR/BIS: AI boosts EU firm productivity 4%; higher wages per employee"
-    },
-    {
       "date": "2025-08-01",
       "direction": "up",
       "sourceIds": [
@@ -192,13 +192,31 @@
       "label": "Goldman Sachs: AI to raise labor productivity ~15% when fully adopted"
     },
     {
-      "date": "2025-05-01",
+      "date": "2026-01-01",
       "direction": "up",
       "sourceIds": [
-        "brynjolfsson-li-raymond-qje-wages-2025"
+        "hartley-median-wage-2026"
       ],
       "evidenceTier": 1,
-      "label": "QJE: AI assistance increases worker productivity by 15% on average"
+      "label": "Stanford: small positive wage effects in AI-exposed jobs"
+    },
+    {
+      "date": "2026-02-01",
+      "direction": "up",
+      "sourceIds": [
+        "icle-median-wage-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "ICLE: small but significant positive wage effects in AI-exposed occupations"
+    },
+    {
+      "date": "2026-02-17",
+      "direction": "up",
+      "sourceIds": [
+        "cepr-ai-productivity-jobs-europe-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "CEPR/BIS: AI boosts EU firm productivity 4%; higher wages per employee"
     },
     {
       "date": "2026-02-24",

@@ -79,13 +79,31 @@
   ],
   "overlays": [
     {
-      "date": "2025-02-21",
+      "date": "2022-01-01",
       "direction": "up",
       "sourceIds": [
-        "nvidia-10k-2024"
+        "mit-ai-premium-2025"
       ],
       "evidenceTier": 1,
-      "label": "NVIDIA: median comp $301K, headcount up 21.6% YoY"
+      "label": "JLE: 11% wage premium for job postings requiring AI skills within same firm"
+    },
+    {
+      "date": "2023-07-14",
+      "direction": "down",
+      "sourceIds": [
+        "noy-zhang-productivity-2023"
+      ],
+      "evidenceTier": 1,
+      "label": "Noy & Zhang: low-ability workers gain most from AI"
+    },
+    {
+      "date": "2024-04-25",
+      "direction": "up",
+      "sourceIds": [
+        "msft-earnings-2024"
+      ],
+      "evidenceTier": 1,
+      "label": "Microsoft: Cloud revenue $35.1B, up 23%; 65%+ of Fortune 500 use Azure OpenAI"
     },
     {
       "date": "2024-10-02",
@@ -97,13 +115,22 @@
       "label": "OpenAI: avg stock comp $1.5M; researcher total comp $763K–$1.44M"
     },
     {
-      "date": "2023-07-14",
-      "direction": "down",
+      "date": "2025-02-01",
+      "direction": "up",
       "sourceIds": [
-        "noy-zhang-productivity-2023"
+        "linkedin-ai-salary-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "LinkedIn: AI engineering talent grew 130% since 2016; 7 per 1,000 members"
+    },
+    {
+      "date": "2025-02-21",
+      "direction": "up",
+      "sourceIds": [
+        "nvidia-10k-2024"
       ],
       "evidenceTier": 1,
-      "label": "Noy & Zhang: low-ability workers gain most from AI"
+      "label": "NVIDIA: median comp $301K, headcount up 21.6% YoY"
     },
     {
       "date": "2025-05-01",
@@ -122,6 +149,24 @@
       ],
       "evidenceTier": 2,
       "label": "Lightcast: 51% of AI job postings now outside IT; 800% growth in non-tech gen AI roles since 2022"
+    },
+    {
+      "date": "2025-08-11",
+      "direction": "up",
+      "sourceIds": [
+        "ft-ai-salaries-2024"
+      ],
+      "evidenceTier": 2,
+      "label": "Fortune: AI talent commands 30% salary premium as demand outstrips supply"
+    },
+    {
+      "date": "2026-01-01",
+      "direction": "up",
+      "sourceIds": [
+        "hartley-high-skill-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Stanford: adoption concentrated among higher-earning, college-educated workers"
     },
     {
       "date": "2026-01-15",

@@ -81,6 +81,15 @@
   ],
   "overlays": [
     {
+      "date": "2025-01-01",
+      "direction": "down",
+      "sourceIds": [
+        "mckinsey-gig-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Imperial College: high-skill freelancers hit hardest; top performers saw largest setbacks"
+    },
+    {
       "date": "2025-01-06",
       "direction": "down",
       "sourceIds": [
