@@ -345,7 +345,7 @@ export default function PredictionChart({
       <ResponsiveContainer width="100%" height={360}>
         <ComposedChart
           data={chartData}
-          margin={{ top: 10, right: 10, left: 0, bottom: 0 }}
+          margin={{ top: 10, right: 30, left: 10, bottom: 0 }}
           onClick={(state) => {
             if (onDotClick && state?.activePayload?.[0]?.payload) {
               const point = state.activePayload[0].payload as ChartDataPoint;
@@ -373,6 +373,7 @@ export default function PredictionChart({
             tickFormatter={(v) => `${v}${unit}`}
           />
           <Tooltip
+            allowEscapeViewBox={{ x: true, y: false }}
             content={
               <CustomTooltip
                 sources={sources}
