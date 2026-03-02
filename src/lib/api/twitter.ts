@@ -25,6 +25,7 @@ export interface TwitterPost {
 
 const TWITTER_BEARER = process.env.TWITTER_BEARER_TOKEN || "";
 const TWITTER_SEARCH_BASE = "https://api.twitter.com/2/tweets/search/recent";
+const TWITTER_TWEET_BASE = "https://api.twitter.com/2/tweets";
 
 const SEARCH_QUERIES = SOCIAL_SEARCH_QUERIES.map((q) => `${q} -is:retweet`);
 
@@ -130,4 +131,43 @@ export async function discoverTwitterPosts(
       (a.metrics.likeCount + a.metrics.retweetCount)
   );
   return allPosts.slice(0, maxResults);
+}
+
+/**
+ * Extract a tweet ID from a Twitter/X URL.
+ * Handles x.com, twitter.com, and mobile variants.
+ */
+export function parseTweetUrl(url: string): string | null {
+  const match = url.match(
+    /(?:twitter\.com|x\.com)\/(?:#!\/)?\w+\/status(?:es)?\/(\d+)/
+  );
+  return match?.[1] ?? null;
+}
+
+/**
+ * Fetch a single tweet by ID using the Twitter API v2.
+ * Returns null if no bearer token or if the request fails.
+ */
+export async function fetchTweetById(
+  tweetId: string
+): Promise<TwitterPost | null> {
+  if (!TWITTER_BEARER) return null;
+
+  const url = `${TWITTER_TWEET_BASE}/${tweetId}?tweet.fields=created_at,public_metrics,entities,author_id,note_tweet&expansions=author_id&user.fields=username,name`;
+
+  try {
+    const resp = await fetch(url, {
+      headers: { Authorization: `Bearer ${TWITTER_BEARER}` },
+    });
+    if (!resp.ok) {
+      console.error(`Twitter fetch tweet failed (${resp.status}): ${tweetId}`);
+      return null;
+    }
+    const json = await resp.json();
+    const posts = parseTwitterResponse(json);
+    return posts[0] ?? null;
+  } catch (err) {
+    console.error(`Twitter fetch tweet error: ${tweetId}`, err);
+    return null;
+  }
 }
