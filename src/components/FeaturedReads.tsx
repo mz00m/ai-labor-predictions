@@ -10,14 +10,13 @@ interface Article {
 
 const articles: Article[] = [
   {
-    author: "jobsdata.ai",
-    title: "On Tap Intelligence: Historical Context for AI Labor Impact",
+    author: "Kinder (Brookings)",
+    title: "What Deindustrialization Did to Men, AI May Do to Women",
     summary:
-      "How past technological revolutions reshaped labor — and what they tell us about AI's trajectory.",
-    date: "",
-    url: "/history",
-    accent: "border-l-amber-500",
-    internal: true,
+      "Millions of women in clerical and customer service roles face AI exposure — echoing manufacturing's toll on men.",
+    date: "Mar 2",
+    url: "https://humanistxyz.substack.com/p/what-deindustrialization-did-to-men",
+    accent: "border-l-rose-500",
   },
   {
     author: "Thompson",
@@ -29,15 +28,6 @@ const articles: Article[] = [
     accent: "border-l-blue-500",
   },
   {
-    author: "Kinder (Brookings)",
-    title: "What Deindustrialization Did to Men, AI May Do to Women",
-    summary:
-      "Millions of women in clerical and customer service roles face AI exposure — echoing manufacturing's toll on men.",
-    date: "Mar 2",
-    url: "https://humanistxyz.substack.com/p/what-deindustrialization-did-to-men",
-    accent: "border-l-rose-500",
-  },
-  {
     author: "Citadel",
     title: "The 2026 Global Intelligence Crisis",
     summary:
@@ -45,6 +35,16 @@ const articles: Article[] = [
     date: "Feb 24",
     url: "https://www.citadelsecurities.com/news-and-insights/2026-global-intelligence-crisis/",
     accent: "border-l-emerald-500",
+  },
+  {
+    author: "jobsdata.ai",
+    title: "On Tap Intelligence: Historical Context for AI Labor Impact",
+    summary:
+      "How past technological revolutions reshaped labor — and what they tell us about AI's trajectory.",
+    date: "",
+    url: "/history",
+    accent: "border-l-amber-500",
+    internal: true,
   },
 ];
 
