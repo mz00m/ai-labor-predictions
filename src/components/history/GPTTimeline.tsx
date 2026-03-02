@@ -7,10 +7,13 @@ const PHASES = [
     phase: "I",
     name: "Emergence",
     duration: "5–20 yrs",
+    aiDuration: "~10 yrs (2012–2022)",
     description:
       "Technology arrives; specialists created; little aggregate effect on total employment.",
     example:
       "Steam engines existed for decades before anyone built a railway. Early electricity powered arc lamps, not factories.",
+    aiNote:
+      "For AI: deep learning breakthroughs (2012) through GPT-3 (2020). Specialists created, but little aggregate labor market effect. This phase is complete.",
     workerEffect:
       "Technology arrives; specialists created; little aggregate effect",
   },
@@ -18,20 +21,26 @@ const PHASES = [
     phase: "II",
     name: "Rapid Diffusion",
     duration: "10–25 yrs",
+    aiDuration: "~2–5 yrs (2022–now)",
     description:
       "Spreads across sectors; high-skill workers who adopt early benefit most. Productivity rises faster than wages.",
     example:
       "By 1900, electric motors were spreading across US factories but most still used shaft-and-belt power. Early adopters saw enormous gains.",
+    aiNote:
+      "For AI: ChatGPT hit 100M users in 2 months. Enterprise adoption surged from 33% to 78% in under 2 years (McKinsey). This phase that took electricity 25 years is happening in 2–5 for AI — built on PCs and internet already in place.",
     workerEffect: "Spreads across sectors; high-skill workers benefit most",
   },
   {
     phase: "III",
     name: "Displacement",
     duration: "10–30 yrs",
+    aiDuration: "~5–15 yrs (beginning now)",
     description:
       "Routine-task workers face wage pressure and job loss. The technology is now cheap and reliable enough to substitute for labor at scale.",
     example:
       "Power looms destroyed 250,000+ handloom weaving jobs. Telephone operators, bank tellers, and typists were decimated by computers.",
+    aiNote:
+      "For AI: early displacement signals are already visible — content writing, customer service, and junior coding roles are seeing wage pressure. The acceleration factor compresses what historically took decades into years.",
     workerEffect:
       "Routine-task workers face wage pressure and job loss",
   },
@@ -39,10 +48,13 @@ const PHASES = [
     phase: "IV",
     name: "Reorganization",
     duration: "15–40 yrs",
+    aiDuration: "~7–20 yrs",
     description:
       "New industries emerge; organizations restructure around the technology. The 'productivity paradox' resolves as complements develop.",
     example:
       "Factories redesigned around electric motors (1920s). The web spawned e-commerce, social media, and the app economy (2000s).",
+    aiNote:
+      "For AI: this phase is constrained by human/institutional speed — education systems, regulations, and corporate culture can't be updated via software. Expect some compression but not as dramatic as the adoption phase.",
     workerEffect:
       "New industries emerge; productivity paradox resolves",
   },
@@ -50,10 +62,13 @@ const PHASES = [
     phase: "V",
     name: "New Equilibrium",
     duration: "Ongoing",
+    aiDuration: "~20–40 yrs out",
     description:
       "Higher average wages; completely different job distribution. The economy has absorbed the GPT and a new normal emerges.",
     example:
       "By 1950, electrification was invisible infrastructure. By 2020, 'using a computer' was not a skill — it was assumed.",
+    aiNote:
+      "For AI: if the pattern holds at 2–3x compression, a new equilibrium could emerge by the 2050s–2060s rather than the 2080s–2090s that a historical baseline would predict.",
     workerEffect:
       "Higher avg wages; completely different job distribution",
   },
@@ -204,7 +219,7 @@ export default function GPTTimeline() {
       {/* Active phase detail card */}
       {activePhase !== null && (
         <div className="border border-black/[0.06] rounded-lg p-5 bg-[var(--accent-light)]/30">
-          <div className="flex items-baseline gap-2 mb-2">
+          <div className="flex items-baseline gap-2 mb-2 flex-wrap">
             <span className="text-[12px] font-bold text-[var(--accent)] uppercase tracking-wider">
               Phase {PHASES[activePhase].phase}
             </span>
@@ -212,17 +227,23 @@ export default function GPTTimeline() {
               {PHASES[activePhase].name}
             </span>
             <span className="text-[12px] text-[var(--muted)]">
-              ({PHASES[activePhase].duration})
+              Historical: {PHASES[activePhase].duration}
+            </span>
+            <span className="text-[11px] font-semibold text-[var(--accent)] bg-[var(--accent)]/10 px-2 py-0.5 rounded-full">
+              AI: {PHASES[activePhase].aiDuration}
             </span>
           </div>
           <p className="text-[13px] text-[var(--muted)] leading-relaxed mb-3">
             {PHASES[activePhase].description}
           </p>
-          <p className="text-[12px] text-[var(--foreground)]/70 leading-relaxed italic">
+          <p className="text-[12px] text-[var(--foreground)]/70 leading-relaxed italic mb-3">
             <span className="font-semibold not-italic text-[var(--foreground)]">
               Historical example:
             </span>{" "}
             {PHASES[activePhase].example}
+          </p>
+          <p className="text-[12px] text-[var(--accent)] leading-relaxed">
+            {PHASES[activePhase].aiNote}
           </p>
         </div>
       )}

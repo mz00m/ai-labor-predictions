@@ -63,6 +63,46 @@ export default function HistoryPage() {
             displacement, reorganization, and new equilibrium.
           </p>
           <GPTTimeline />
+
+          {/* Acceleration callout */}
+          <div className="mt-8 border border-[var(--accent)]/20 bg-[var(--accent-light)] rounded-lg p-5">
+            <div className="flex items-start gap-3">
+              <span className="text-[11px] font-bold uppercase tracking-wider text-white bg-[var(--accent)] px-2.5 py-1 rounded-full shrink-0">
+                But faster
+              </span>
+              <div>
+                <p className="text-[13px] text-[var(--foreground)] leading-relaxed font-semibold mb-2">
+                  AI is moving through these phases at unprecedented speed.
+                </p>
+                <p className="text-[12px] text-[var(--muted)] leading-relaxed mb-3">
+                  ChatGPT reached 100 million users in 2 months &mdash;
+                  the telephone took 75 years, the internet took 7 years, and
+                  even Instagram took 2.5 years to reach the same milestone. By
+                  2024, nearly 40% of US working-age adults had used generative
+                  AI, a penetration rate the personal computer didn&rsquo;t
+                  achieve for over a decade. Enterprise adoption surged from 33%
+                  to 78% of organizations in under two years (McKinsey, 2023&ndash;2025).
+                </p>
+                <p className="text-[12px] text-[var(--muted)] leading-relaxed mb-3">
+                  One key reason: AI is built on top of two prior GPTs
+                  (computers and the internet) that already saturated the
+                  economy. There is no new infrastructure to build &mdash; every
+                  smartphone is already an AI terminal. This means the adoption
+                  phase is roughly <strong>10&ndash;25x faster</strong> than
+                  prior GPTs by consumer metrics, and <strong>2&ndash;5x
+                  faster</strong> by enterprise penetration metrics.
+                </p>
+                <p className="text-[12px] text-[var(--foreground)]/70 leading-relaxed italic">
+                  The forecasts on this page adjust for this acceleration.
+                  However, organizational restructuring, institutional
+                  adaptation, and new industry creation remain partially
+                  constrained by human speed &mdash; laws, education systems,
+                  and corporate culture cannot be updated via software patch.
+                  The full arc will likely compress by 2&ndash;3x, not 10x.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
