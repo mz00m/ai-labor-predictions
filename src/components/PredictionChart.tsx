@@ -31,12 +31,18 @@ interface ChartDataPoint {
   value?: number;
   confidenceLow?: number;
   confidenceHigh?: number;
-  confidenceRange?: [number, number];
-  rangeMidpoint?: number;
   evidenceTier: EvidenceTier;
   sourceIds: string[];
   isPhantom?: boolean;
   trendValue?: number;
+}
+
+interface OverlayTooltipData {
+  dateStr: string;
+  direction: string;
+  label: string;
+  sourceIds: string[];
+  evidenceTier: EvidenceTier;
 }
 
 function CustomTooltip({
@@ -44,52 +50,128 @@ function CustomTooltip({
   payload,
   sources,
   unit,
-}: TooltipProps<number, string> & { sources: Source[]; unit: string }) {
+  overlays,
+}: TooltipProps<number, string> & {
+  sources: Source[];
+  unit: string;
+  overlays?: OverlayTooltipData[];
+}) {
   if (!active || !payload || payload.length === 0) return null;
 
   const data = payload[0]?.payload as ChartDataPoint;
-  if (!data || data.isPhantom) return null;
+  if (!data) return null;
+
+  // Find overlays matching this x-axis position
+  const matchingOverlays = (overlays ?? []).filter(
+    (o) => o.dateStr === data.dateStr
+  );
+
+  // If phantom point with no overlays, nothing to show
+  if (data.isPhantom && matchingOverlays.length === 0) return null;
 
   const tierConfig = getTierConfig(data.evidenceTier);
   const pointSources = sources.filter((s) => data.sourceIds.includes(s.id));
 
   return (
     <div className="bg-white border border-black/[0.08] rounded-lg p-3.5 max-w-xs shadow-sm">
-      <p className="text-[12px] font-medium text-[var(--foreground)]">
-        {data.dateStr}
-      </p>
-      <p className="text-[20px] font-bold text-[var(--foreground)] stat-number">
-        {data.value}
-        {unit}
-      </p>
-      {data.confidenceLow != null && data.confidenceHigh != null && (
-        <p className="text-[11px] text-[var(--muted)]">
-          Range: {data.confidenceLow}
-          {unit} — {data.confidenceHigh}
-          {unit}
-          {" "}(midpoint: {((data.confidenceLow + data.confidenceHigh) / 2).toFixed(1)}{unit})
-        </p>
-      )}
-      <div className="mt-1.5 flex items-center gap-1.5">
-        <span
-          className="inline-block w-2 h-2 rounded-full"
-          style={{ backgroundColor: tierConfig.color }}
-        />
-        <span className="text-[11px] text-[var(--muted)]">{tierConfig.label}</span>
-      </div>
-      {pointSources.length > 0 && (
-        <div className="mt-2 border-t border-black/[0.06] pt-1.5">
-          {pointSources.map((s) => (
-            <p key={s.id} className="text-[11px] text-[var(--accent)]">
-              {s.publisher}: {s.title.slice(0, 55)}
-              {s.title.length > 55 ? "..." : ""}
-            </p>
-          ))}
-          <p className="text-[10px] text-[var(--muted)] mt-1.5 opacity-60">
-            Click to view source ↓
+      {/* Data point section (only for real points) */}
+      {!data.isPhantom && data.value != null && (
+        <>
+          <p className="text-[12px] font-medium text-[var(--foreground)]">
+            {data.dateStr}
           </p>
+          <p className="text-[20px] font-bold text-[var(--foreground)] stat-number">
+            {data.value}
+            {unit}
+          </p>
+          {data.confidenceLow != null && data.confidenceHigh != null && (
+            <p className="text-[11px] text-[var(--muted)]">
+              Range: {data.confidenceLow}
+              {unit} — {data.confidenceHigh}
+              {unit}
+            </p>
+          )}
+          <div className="mt-1.5 flex items-center gap-1.5">
+            <span
+              className="inline-block w-2 h-2 rounded-full"
+              style={{ backgroundColor: tierConfig.color }}
+            />
+            <span className="text-[11px] text-[var(--muted)]">{tierConfig.label}</span>
+          </div>
+          {pointSources.length > 0 && (
+            <div className="mt-2 border-t border-black/[0.06] pt-1.5">
+              {pointSources.map((s) => (
+                <p key={s.id} className="text-[11px] text-[var(--accent)]">
+                  {s.publisher}: {s.title.slice(0, 55)}
+                  {s.title.length > 55 ? "..." : ""}
+                </p>
+              ))}
+            </div>
+          )}
+        </>
+      )}
+
+      {/* Overlay section */}
+      {matchingOverlays.length > 0 && (
+        <div className={!data.isPhantom && data.value != null ? "mt-2 border-t border-black/[0.06] pt-2" : ""}>
+          {data.isPhantom && (
+            <p className="text-[12px] font-medium text-[var(--foreground)] mb-1.5">
+              {data.dateStr}
+            </p>
+          )}
+          {matchingOverlays.map((o, i) => {
+            const color = overlayColor(o.direction);
+            const arrow =
+              o.direction === "down"
+                ? "\u2193"
+                : o.direction === "up"
+                  ? "\u2191"
+                  : "\u2194";
+            const oTierConfig = getTierConfig(o.evidenceTier);
+            const overlaySources = sources.filter((s) =>
+              o.sourceIds.includes(s.id)
+            );
+            return (
+              <div key={`overlay-tip-${i}`} className={i > 0 ? "mt-2 border-t border-black/[0.06] pt-2" : ""}>
+                <div className="flex items-start gap-1.5">
+                  <span
+                    className="text-[14px] font-bold leading-tight mt-px shrink-0"
+                    style={{ color }}
+                  >
+                    {arrow}
+                  </span>
+                  <p className="text-[12px] leading-snug text-[var(--foreground)]">
+                    {o.label}
+                  </p>
+                </div>
+                <div className="mt-1 flex items-center gap-1.5">
+                  <span
+                    className="inline-block w-2 h-2 rounded-full"
+                    style={{ backgroundColor: oTierConfig.color }}
+                  />
+                  <span className="text-[11px] text-[var(--muted)]">
+                    {oTierConfig.label}
+                  </span>
+                </div>
+                {overlaySources.length > 0 && (
+                  <div className="mt-1">
+                    {overlaySources.map((s) => (
+                      <p key={s.id} className="text-[11px] text-[var(--accent)]">
+                        {s.publisher}: {s.title.slice(0, 55)}
+                        {s.title.length > 55 ? "..." : ""}
+                      </p>
+                    ))}
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </div>
       )}
+
+      <p className="text-[10px] text-[var(--muted)] mt-1.5 opacity-60">
+        Click to view source ↓
+      </p>
     </div>
   );
 }
@@ -130,14 +212,6 @@ export default function PredictionChart({
       value: d.value,
       confidenceLow: d.confidenceLow,
       confidenceHigh: d.confidenceHigh,
-      confidenceRange:
-        d.confidenceLow != null && d.confidenceHigh != null
-          ? ([d.confidenceLow, d.confidenceHigh] as [number, number])
-          : undefined,
-      rangeMidpoint:
-        d.confidenceLow != null && d.confidenceHigh != null
-          ? (d.confidenceLow + d.confidenceHigh) / 2
-          : undefined,
       evidenceTier: d.evidenceTier,
       sourceIds: d.sourceIds,
     }))
@@ -162,9 +236,7 @@ export default function PredictionChart({
 
   const displayedValues = realPoints
     .filter((d) => d.value != null)
-    .flatMap((d) =>
-      d.rangeMidpoint != null ? [d.value!, d.rangeMidpoint] : [d.value!]
-    );
+    .map((d) => d.value!);
   const yMin = Math.floor(Math.min(...displayedValues) - 2);
   const yMax = Math.ceil(Math.max(...displayedValues) + 2);
 
@@ -303,6 +375,7 @@ export default function PredictionChart({
               <CustomTooltip
                 sources={sources}
                 unit={unit}
+                overlays={overlayData}
               />
             }
           />
@@ -332,49 +405,6 @@ export default function PredictionChart({
               style={{ cursor: onDotClick ? "pointer" : undefined }}
             />
           ))}
-          {/* Range midpoint markers */}
-          {chartData.some((d) => d.rangeMidpoint != null) && (
-            <Line
-              type="monotone"
-              dataKey="rangeMidpoint"
-              stroke="none"
-              strokeWidth={0}
-              connectNulls={false}
-              dot={(props: Record<string, unknown>) => {
-                const { cx, cy, payload } = props as {
-                  cx: number;
-                  cy: number;
-                  payload: ChartDataPoint;
-                };
-                if (
-                  payload.isPhantom ||
-                  payload.rangeMidpoint == null
-                )
-                  return <g key={`mid-empty-${payload.date}`} />;
-                return (
-                  <g key={`mid-${payload.date}`}>
-                    <line
-                      x1={cx - 4}
-                      y1={cy - 4}
-                      x2={cx + 4}
-                      y2={cy + 4}
-                      stroke="#9ca3af"
-                      strokeWidth={1.5}
-                    />
-                    <line
-                      x1={cx + 4}
-                      y1={cy - 4}
-                      x2={cx - 4}
-                      y2={cy + 4}
-                      stroke="#9ca3af"
-                      strokeWidth={1.5}
-                    />
-                  </g>
-                );
-              }}
-              activeDot={false}
-            />
-          )}
           <Line
             type="monotone"
             dataKey="value"
@@ -428,17 +458,6 @@ export default function PredictionChart({
           />
         </ComposedChart>
       </ResponsiveContainer>
-      {chartData.some((d) => d.rangeMidpoint != null) && (
-        <div className="mt-1.5 flex items-center gap-3 px-1">
-          <span className="flex items-center gap-1.5 text-[11px] text-[var(--muted)]">
-            <svg width="10" height="10" viewBox="0 0 10 10">
-              <line x1="1" y1="1" x2="9" y2="9" stroke="#9ca3af" strokeWidth="1.5" />
-              <line x1="9" y1="1" x2="1" y2="9" stroke="#9ca3af" strokeWidth="1.5" />
-            </svg>
-            Range midpoint
-          </span>
-        </div>
-      )}
       {overlayData.length > 0 && (
         <div className="mt-3 flex flex-col gap-1.5 px-1">
           <p className="text-[11px] font-medium text-[var(--muted)] uppercase tracking-wider">
