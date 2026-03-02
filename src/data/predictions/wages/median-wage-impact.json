@@ -199,6 +199,15 @@
       ],
       "evidenceTier": 1,
       "label": "QJE: AI assistance increases worker productivity by 15% on average"
+    },
+    {
+      "date": "2026-02-24",
+      "direction": "neutral",
+      "sourceIds": [
+        "dallas-fed-davis-ai-wages-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Dallas Fed: AI exposure has ~zero effect on wages at median experience premium (CI includes 0)"
     }
   ],
   "sources": [
@@ -393,6 +402,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-02-17",
       "excerpt": "AI adoption causally increases labour productivity levels by 4% on average. Employees in AI-using companies benefit through higher wages, both in total and per employee."
+    },
+    {
+      "id": "dallas-fed-davis-ai-wages-2026",
+      "title": "AI is simultaneously aiding and replacing workers, wage data suggest",
+      "url": "https://www.dallasfed.org/research/economics/2026/0224",
+      "publisher": "Federal Reserve Bank of Dallas (J. Scott Davis)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-24",
+      "excerpt": "For occupations with the median experience premium (40 percent), a one-standard-deviation increase in AI exposure is associated with a 0.05 percentage point decline in wage growth."
     }
   ]
 }

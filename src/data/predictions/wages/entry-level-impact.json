@@ -161,6 +161,15 @@
       ],
       "evidenceTier": 1,
       "label": "Althoff & Reichardt: AI simplification boosts lower-skill worker productivity"
+    },
+    {
+      "date": "2026-02-24",
+      "direction": "down",
+      "sourceIds": [
+        "dallas-fed-davis-ai-wages-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Dallas Fed: AI exposure → 0.28pp wage growth reduction in low-experience-premium jobs"
     }
   ],
   "sources": [
@@ -342,6 +351,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-01-15",
       "excerpt": "Unemployment risk in AI-exposed occupations rose beginning early 2022; graduates with AI-exposed curricula have higher first-job pay and shorter job searches post-ChatGPT."
+    },
+    {
+      "id": "dallas-fed-davis-ai-wages-2026",
+      "title": "AI is simultaneously aiding and replacing workers, wage data suggest",
+      "url": "https://www.dallasfed.org/research/economics/2026/0224",
+      "publisher": "Federal Reserve Bank of Dallas (J. Scott Davis)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-24",
+      "excerpt": "For an occupation with a 0 percent experience premium, increased AI exposure is associated with a 0.28 percentage point reduction in wage growth."
     }
   ]
 }

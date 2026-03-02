@@ -132,6 +132,15 @@
       ],
       "evidenceTier": 1,
       "label": "CAIS/Scale AI: AI succeeds at audio/image/logo tasks but fails most creative projects (2.5% overall)"
+    },
+    {
+      "date": "2026-02-24",
+      "direction": "up",
+      "sourceIds": [
+        "dallas-fed-davis-ai-wages-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Dallas Fed: CS design wages up 16.7% vs 7.5% national; AI augments experienced workers"
     }
   ],
   "sources": [
@@ -296,6 +305,15 @@
       "evidenceTier": 1,
       "datePublished": "2025-10-30",
       "excerpt": "Successful AI automations were concentrated in specific creative domains, particularly audio tasks (sound effects, vocal separation), image generation (logos, ads), report writing, and data retrieval. Overall automation rate only 2.5%."
+    },
+    {
+      "id": "dallas-fed-davis-ai-wages-2026",
+      "title": "AI is simultaneously aiding and replacing workers, wage data suggest",
+      "url": "https://www.dallasfed.org/research/economics/2026/0224",
+      "publisher": "Federal Reserve Bank of Dallas (J. Scott Davis)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-24",
+      "excerpt": "nominal average weekly wages nationwide have increased 7.5 percent, while the computer systems design sector has risen 16.7 percent"
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-01",
-  "totalSources": 297,
-  "verifiedCount": 287,
+  "totalSources": 298,
+  "verifiedCount": 288,
   "sources": {
     "accenture-health-ai-2023": {
       "id": "accenture-health-ai-2023",
@@ -3919,6 +3919,25 @@
         "entry-level-wage-impact",
         "high-skill-wage-premium",
         "white-collar-professional-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "dallas-fed-davis-ai-wages-2026": {
+      "id": "dallas-fed-davis-ai-wages-2026",
+      "title": "AI is simultaneously aiding and replacing workers, wage data suggest",
+      "url": "https://www.dallasfed.org/research/economics/2026/0224",
+      "publisher": "Federal Reserve Bank of Dallas (J. Scott Davis)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-24",
+      "excerpt": "Employment in the computer systems design and related services sector has declined 5 percent. AI exposure associated with 0.28pp wage growth reduction for low-experience-premium jobs but 0.2pp increase for high-experience-premium occupations.",
+      "usedIn": [
+        "tech-sector-displacement",
+        "overall-us-displacement",
+        "entry-level-wage-impact",
+        "high-skill-wage-premium",
+        "creative-industry-displacement",
+        "median-wage-impact"
       ],
       "verified": true,
       "synthetic": false

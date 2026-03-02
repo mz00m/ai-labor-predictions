@@ -145,6 +145,14 @@
         "goldman-mei-ai-labor-2026"
       ],
       "evidenceTier": 2
+    },
+    {
+      "date": "2025-12-01",
+      "value": -0.1,
+      "sourceIds": [
+        "dallas-fed-davis-ai-wages-2026"
+      ],
+      "evidenceTier": 1
     }
   ],
   "overlays": [
@@ -550,6 +558,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-01-22",
       "excerpt": "the Indeed Job Postings Index, which was down 5.2% year-over-year as of December 31"
+    },
+    {
+      "id": "dallas-fed-davis-ai-wages-2026",
+      "title": "AI is simultaneously aiding and replacing workers, wage data suggest",
+      "url": "https://www.dallasfed.org/research/economics/2026/0224",
+      "publisher": "Federal Reserve Bank of Dallas (J. Scott Davis)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-24",
+      "excerpt": "employment has declined 1 percent since late 2022 in the 10 percent of sectors most exposed to AI"
     }
   ]
 }

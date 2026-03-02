@@ -177,6 +177,15 @@
       ],
       "evidenceTier": 2,
       "label": "Indeed: Tech postings 34% below pre-pandemic; AI tech postings 45% above"
+    },
+    {
+      "date": "2026-02-24",
+      "direction": "down",
+      "sourceIds": [
+        "dallas-fed-davis-ai-wages-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Dallas Fed: Computer systems design employment down 5% since ChatGPT release"
     }
   ],
   "sources": [
@@ -456,6 +465,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-01-22",
       "excerpt": "the number of tech postings that mentioned AI was about 45% higher than in February 2020, while total tech postings were 34% below pre-pandemic levels"
+    },
+    {
+      "id": "dallas-fed-davis-ai-wages-2026",
+      "title": "AI is simultaneously aiding and replacing workers, wage data suggest",
+      "url": "https://www.dallasfed.org/research/economics/2026/0224",
+      "publisher": "Federal Reserve Bank of Dallas (J. Scott Davis)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-24",
+      "excerpt": "Employment in the computer systems design and related services sector has declined 5 percent."
     }
   ],
   "marketIds": {

@@ -67,6 +67,14 @@
         "indexdev-ai-salary-2026"
       ],
       "evidenceTier": 2
+    },
+    {
+      "date": "2026-02-24",
+      "value": 9.2,
+      "sourceIds": [
+        "dallas-fed-davis-ai-wages-2026"
+      ],
+      "evidenceTier": 1
     }
   ],
   "overlays": [
@@ -302,6 +310,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-02-17",
       "excerpt": "The wage gains observed may accrue disproportionately to highly skilled workers, potentially widening income inequality."
+    },
+    {
+      "id": "dallas-fed-davis-ai-wages-2026",
+      "title": "AI is simultaneously aiding and replacing workers, wage data suggest",
+      "url": "https://www.dallasfed.org/research/economics/2026/0224",
+      "publisher": "Federal Reserve Bank of Dallas (J. Scott Davis)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-24",
+      "excerpt": "nominal average weekly wages nationwide have increased 7.5 percent, while the computer systems design sector has risen 16.7 percent"
     }
   ]
 }
