@@ -3,32 +3,32 @@
 const FORECASTS = [
   {
     term: "Near Term",
-    range: "5–15 years",
+    range: "2–7 years",
     color: "#dc2626",
     colorLight: "#fef2f2",
     points: [
-      "Labor market polarization accelerates",
+      "Labor market polarization accelerates \u2014 already visible in 2024\u20132025 hiring data for content, coding, and customer service roles",
       "Routine cognitive work faces displacement pressure first: document review, standard writing, basic code, data analysis, customer service",
       "This shows as wage compression and employment decline in these categories, even before significant job losses, as AI-assisted workers handle more volume",
       "New roles in AI oversight, training, and application emerge \u2014 but won\u2019t immediately compensate for losses",
-      "The Solow Observation applies: macro productivity effects won\u2019t yet be visible in statistics",
+      "The Solow Observation may resolve faster than expected: with 78% of organizations already adopting AI (McKinsey, 2025), macro productivity effects could appear within years, not decades",
     ],
   },
   {
     term: "Medium Term",
-    range: "15–30 years",
+    range: "7–20 years",
     color: "#d97706",
     colorLight: "#fffbeb",
     points: [
       "The productivity paradox resolves \u2014 organizational complements to AI develop (new business models, new processes, new educational pathways, new regulatory frameworks)",
       "Aggregate productivity growth becomes visible and accelerates",
       "Whether this growth translates to broadly shared wages depends entirely on institutional choices made now",
-      "Geographic concentration of both benefits and disruption will be extreme",
+      "Geographic concentration of both benefits and disruption will be extreme \u2014 but AI\u2019s low infrastructure requirements could spread gains more broadly than prior GPTs",
     ],
   },
   {
     term: "Long Term",
-    range: "30–50 years",
+    range: "20–40 years",
     color: "#059669",
     colorLight: "#ecfdf5",
     points: [
@@ -90,10 +90,16 @@ export default function ForecastColumns() {
             Historical calibration:
           </span>{" "}
           In prior GPT transitions, the total timeline from meaningful
-          diffusion to new equilibrium ranged from 40 to 70 years. The
+          diffusion to new equilibrium ranged from 40 to 70 years. AI&rsquo;s
+          adoption speed is 10&ndash;25x faster than any prior GPT by consumer
+          metrics (100M users in 2 months vs. years or decades), and enterprise
+          adoption surged from 33% to 78% in under two years. The timelines
+          above are compressed by roughly 2&ndash;3x from historical baselines
+          to reflect this acceleration &mdash; but organizational and
+          institutional adaptation still operates at human speed. The
           &ldquo;eventually&rdquo; in &ldquo;jobs eventually come
-          back&rdquo; has historically meant multiple generations, not
-          years.
+          back&rdquo; may mean one generation rather than three, but it
+          still won&rsquo;t mean years.
         </p>
       </div>
     </div>
