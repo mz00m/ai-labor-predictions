@@ -151,7 +151,10 @@ export function parseTweetUrl(url: string): string | null {
 export async function fetchTweetById(
   tweetId: string
 ): Promise<TwitterPost | null> {
-  if (!TWITTER_BEARER) return null;
+  if (!TWITTER_BEARER) {
+    console.error("Twitter API: No TWITTER_BEARER_TOKEN set");
+    return null;
+  }
 
   const url = `${TWITTER_TWEET_BASE}/${tweetId}?tweet.fields=created_at,public_metrics,entities,author_id,note_tweet&expansions=author_id&user.fields=username,name`;
 
@@ -160,14 +163,17 @@ export async function fetchTweetById(
       headers: { Authorization: `Bearer ${TWITTER_BEARER}` },
     });
     if (!resp.ok) {
-      console.error(`Twitter fetch tweet failed (${resp.status}): ${tweetId}`);
+      const body = await resp.text().catch(() => "");
+      console.error(
+        `Twitter API error (${resp.status}) for tweet ${tweetId}: ${body}`
+      );
       return null;
     }
     const json = await resp.json();
     const posts = parseTwitterResponse(json);
     return posts[0] ?? null;
   } catch (err) {
-    console.error(`Twitter fetch tweet error: ${tweetId}`, err);
+    console.error(`Twitter API network error for tweet ${tweetId}:`, err);
     return null;
   }
 }
