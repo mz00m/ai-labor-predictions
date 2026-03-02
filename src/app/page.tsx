@@ -93,6 +93,19 @@ export default function Home() {
         <FunnelStrip />
       </section>
 
+      {/* Section break — Predictions Over Time */}
+      <div className="relative -mx-6 sm:-mx-8 lg:-mx-12">
+        <div className="h-1 bg-gradient-to-r from-emerald-500 via-blue-500 to-violet-500" />
+        <div className="px-6 sm:px-8 lg:px-12 pt-10 pb-2">
+          <h2 className="text-[28px] sm:text-[36px] font-black tracking-tight text-[var(--foreground)] leading-tight mb-3">
+            Predictions Over Time
+          </h2>
+          <p className="text-[15px] text-[var(--muted)] leading-relaxed max-w-2xl">
+            Every source is color-coded by evidence quality. Use the tiers below to filter what appears on the charts and in the weighted averages.
+          </p>
+        </div>
+      </div>
+
       {/* Evidence Filter */}
       <section>
         <EvidenceFilter
