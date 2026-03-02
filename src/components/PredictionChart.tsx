@@ -378,6 +378,8 @@ export default function PredictionChart({
               />
             }
           />
+          {/* Zero baseline */}
+          <ReferenceLine y={0} stroke="#d1d5db" strokeWidth={1} />
           {/* Linear trend line */}
           {chartData.some((d) => d.trendValue != null) && (
             <Line
