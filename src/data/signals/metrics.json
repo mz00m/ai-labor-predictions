@@ -1,127 +1,135 @@
 {
-  "calculatedAt": "2026-03-03T13:38:32Z",
-  "currentAAI": 0.878,
+  "calculatedAt": "2026-03-03T13:42:57Z",
+  "currentAAI": 0.582,
   "aaiTrend": "accelerating",
   "aaiHistory": [
     {
       "month": "2024-11",
-      "aai": 10.0,
-      "tier2AvgGrowth": 0.0791,
+      "aai": 2.457,
+      "tier2AvgGrowth": 0.0025,
       "tier1AvgGrowth": -0.0381
     },
     {
       "month": "2024-12",
       "aai": 10.0,
-      "tier2AvgGrowth": 0.6558,
+      "tier2AvgGrowth": 0.4387,
       "tier1AvgGrowth": -0.0028
     },
     {
       "month": "2025-01",
-      "aai": 1.344,
-      "tier2AvgGrowth": 0.2823,
+      "aai": 2.55,
+      "tier2AvgGrowth": 0.5354,
       "tier1AvgGrowth": 0.21
     },
     {
       "month": "2025-02",
-      "aai": 1.202,
-      "tier2AvgGrowth": 0.2133,
+      "aai": 0.682,
+      "tier2AvgGrowth": 0.121,
       "tier1AvgGrowth": 0.1774
     },
     {
       "month": "2025-03",
-      "aai": 3.028,
-      "tier2AvgGrowth": 0.5367,
+      "aai": 2.867,
+      "tier2AvgGrowth": 0.5083,
       "tier1AvgGrowth": 0.1773
     },
     {
       "month": "2025-04",
-      "aai": 2.169,
-      "tier2AvgGrowth": 0.2194,
+      "aai": 1.791,
+      "tier2AvgGrowth": 0.1811,
       "tier1AvgGrowth": 0.1012
     },
     {
       "month": "2025-05",
-      "aai": 4.622,
-      "tier2AvgGrowth": 0.5463,
+      "aai": 3.323,
+      "tier2AvgGrowth": 0.3927,
       "tier1AvgGrowth": 0.1182
     },
     {
       "month": "2025-06",
-      "aai": 0.431,
-      "tier2AvgGrowth": 0.0883,
+      "aai": 0.439,
+      "tier2AvgGrowth": 0.0898,
       "tier1AvgGrowth": 0.2047
     },
     {
       "month": "2025-07",
-      "aai": 0.909,
-      "tier2AvgGrowth": 0.1216,
+      "aai": 1.027,
+      "tier2AvgGrowth": 0.1373,
       "tier1AvgGrowth": 0.1338
     },
     {
       "month": "2025-08",
-      "aai": 0.451,
-      "tier2AvgGrowth": 0.0574,
+      "aai": 0.425,
+      "tier2AvgGrowth": 0.0541,
       "tier1AvgGrowth": 0.1273
     },
     {
       "month": "2025-09",
-      "aai": 2.112,
-      "tier2AvgGrowth": 0.1306,
+      "aai": 2.517,
+      "tier2AvgGrowth": 0.1555,
       "tier1AvgGrowth": 0.0618
     },
     {
       "month": "2025-10",
-      "aai": 0.86,
-      "tier2AvgGrowth": 0.1153,
-      "tier1AvgGrowth": 0.1341
+      "aai": 1.166,
+      "tier2AvgGrowth": 0.1933,
+      "tier1AvgGrowth": 0.1658
     },
     {
       "month": "2025-11",
-      "aai": 0.282,
-      "tier2AvgGrowth": 0.0132,
+      "aai": 0.59,
+      "tier2AvgGrowth": 0.0276,
       "tier1AvgGrowth": 0.0467
     },
     {
       "month": "2025-12",
-      "aai": 0.318,
-      "tier2AvgGrowth": 0.0177,
+      "aai": -0.164,
+      "tier2AvgGrowth": -0.0091,
       "tier1AvgGrowth": 0.0557
     },
     {
       "month": "2026-01",
-      "aai": 0.937,
-      "tier2AvgGrowth": 0.1785,
+      "aai": 1.104,
+      "tier2AvgGrowth": 0.2104,
       "tier1AvgGrowth": 0.1905
     },
     {
       "month": "2026-02",
-      "aai": 0.878,
-      "tier2AvgGrowth": 0.1892,
+      "aai": 0.582,
+      "tier2AvgGrowth": 0.1255,
       "tier1AvgGrowth": 0.2156
     }
   ],
   "industries": [
     {
-      "industry": "sales_marketing",
-      "label": "Sales & Marketing",
-      "color": "#ea580c",
-      "toolGrowth3m": 0.3206,
-      "employmentChangeSinceNov2022": null,
-      "employmentChangeYoY": null,
-      "toolCount": 1,
-      "surgingCount": 0,
+      "industry": "creative",
+      "label": "Creative & Media",
+      "color": "#d97706",
+      "toolGrowth3m": 0.2062,
+      "employmentChangeSinceNov2022": -0.0361,
+      "employmentChangeYoY": -0.014,
+      "toolCount": 9,
+      "surgingCount": 2,
       "packages": [
-        "langchain"
+        "diffusers",
+        "replicate",
+        "stability-sdk",
+        "faster-whisper",
+        "openai-whisper",
+        "replicate-npm",
+        "fal-client",
+        "audiocraft",
+        "yt-dlp"
       ]
     },
     {
       "industry": "software_it",
       "label": "Software & IT",
       "color": "#5C61F6",
-      "toolGrowth3m": 0.1777,
+      "toolGrowth3m": 0.173,
       "employmentChangeSinceNov2022": -0.0991,
       "employmentChangeYoY": -0.0196,
-      "toolCount": 14,
+      "toolCount": 15,
       "surgingCount": 6,
       "packages": [
         "openai",
@@ -137,7 +145,8 @@
         "@ai-sdk/anthropic",
         "@modelcontextprotocol/sdk",
         "playwright-npm",
-        "puppeteer-npm"
+        "puppeteer-npm",
+        "continuedev"
       ]
     },
     {
@@ -180,44 +189,30 @@
       ]
     },
     {
-      "industry": "education",
-      "label": "Education & Training",
-      "color": "#2563eb",
-      "toolGrowth3m": 0.0923,
-      "employmentChangeSinceNov2022": null,
-      "employmentChangeYoY": null,
-      "toolCount": 1,
+      "industry": "sales_marketing",
+      "label": "Sales & Marketing",
+      "color": "#ea580c",
+      "toolGrowth3m": 0.1075,
+      "employmentChangeSinceNov2022": -0.0363,
+      "employmentChangeYoY": -0.0146,
+      "toolCount": 5,
       "surgingCount": 0,
       "packages": [
-        "openai"
-      ]
-    },
-    {
-      "industry": "creative",
-      "label": "Creative & Media",
-      "color": "#d97706",
-      "toolGrowth3m": 0.0884,
-      "employmentChangeSinceNov2022": -0.0361,
-      "employmentChangeYoY": -0.014,
-      "toolCount": 6,
-      "surgingCount": 1,
-      "packages": [
-        "diffusers",
-        "replicate",
-        "stability-sdk",
-        "faster-whisper",
-        "openai-whisper",
-        "replicate-npm"
+        "langchain",
+        "instructor",
+        "outlines",
+        "posthog-js",
+        "@hubspot/api-client"
       ]
     },
     {
       "industry": "finance",
       "label": "Finance & Insurance",
       "color": "#16a34a",
-      "toolGrowth3m": 0.0546,
+      "toolGrowth3m": 0.0737,
       "employmentChangeSinceNov2022": 0.0055,
       "employmentChangeYoY": -0.0136,
-      "toolCount": 8,
+      "toolCount": 11,
       "surgingCount": 1,
       "packages": [
         "unstructured",
@@ -227,45 +222,79 @@
         "pandasai",
         "dataprep",
         "llama-index",
-        "chromadb"
+        "chromadb",
+        "ta-lib",
+        "yfinance",
+        "pyod"
       ]
     },
     {
       "industry": "healthcare",
       "label": "Healthcare",
       "color": "#0891b2",
-      "toolGrowth3m": 0.0135,
+      "toolGrowth3m": 0.0641,
       "employmentChangeSinceNov2022": 0.0972,
       "employmentChangeYoY": 0.0248,
-      "toolCount": 3,
+      "toolCount": 5,
       "surgingCount": 0,
       "packages": [
         "transformers",
         "medspacy",
-        "scispacy"
+        "scispacy",
+        "monai",
+        "biopython"
+      ]
+    },
+    {
+      "industry": "education",
+      "label": "Education & Training",
+      "color": "#2563eb",
+      "toolGrowth3m": 0.0425,
+      "employmentChangeSinceNov2022": 0.0374,
+      "employmentChangeYoY": -0.0081,
+      "toolCount": 5,
+      "surgingCount": 0,
+      "packages": [
+        "openai",
+        "gradio",
+        "streamlit",
+        "nbgrader",
+        "sentence-transformers"
+      ]
+    },
+    {
+      "industry": "manufacturing",
+      "label": "Manufacturing & Logistics",
+      "color": "#475569",
+      "toolGrowth3m": -0.0111,
+      "employmentChangeSinceNov2022": -0.028,
+      "employmentChangeYoY": -0.0179,
+      "toolCount": 5,
+      "surgingCount": 0,
+      "packages": [
+        "ultralytics",
+        "opencv-python",
+        "supervision",
+        "open3d",
+        "robotframework"
       ]
     },
     {
       "industry": "customer_service",
       "label": "Customer Service & Support",
       "color": "#ec4899",
-      "toolGrowth3m": 0.0,
-      "employmentChangeSinceNov2022": null,
-      "employmentChangeYoY": null,
-      "toolCount": 0,
+      "toolGrowth3m": -0.0355,
+      "employmentChangeSinceNov2022": -0.2086,
+      "employmentChangeYoY": -0.0635,
+      "toolCount": 5,
       "surgingCount": 0,
-      "packages": []
-    },
-    {
-      "industry": "manufacturing",
-      "label": "Manufacturing & Logistics",
-      "color": "#475569",
-      "toolGrowth3m": 0.0,
-      "employmentChangeSinceNov2022": null,
-      "employmentChangeYoY": null,
-      "toolCount": 0,
-      "surgingCount": 0,
-      "packages": []
+      "packages": [
+        "botpress",
+        "rasa",
+        "vocode",
+        "chainlit",
+        "gradio"
+      ]
     }
   ],
   "packages": [
@@ -281,10 +310,10 @@
       "latestMonthlyDownloads": 168184674,
       "momGrowth": 0.2017,
       "rollingAvg3mGrowth": 0.0923,
-      "rollingAvg6mGrowth": 0.0988,
+      "rollingAvg6mGrowth": 0.1081,
       "isSurging": false,
       "sparkline": [
-        106918934,
+        102949522,
         129619290,
         130212629,
         129568626,
@@ -310,10 +339,10 @@
       "latestMonthlyDownloads": 52518902,
       "momGrowth": 0.3076,
       "rollingAvg3mGrowth": 0.1965,
-      "rollingAvg6mGrowth": 0.1528,
+      "rollingAvg6mGrowth": 0.1623,
       "isSurging": false,
       "sparkline": [
-        26232706,
+        25208696,
         30526670,
         30859896,
         34863493,
@@ -339,10 +368,10 @@
       "latestMonthlyDownloads": 207375245,
       "momGrowth": 0.2867,
       "rollingAvg3mGrowth": 0.3206,
-      "rollingAvg6mGrowth": 0.2339,
+      "rollingAvg6mGrowth": 0.2421,
       "isSurging": false,
       "sparkline": [
-        77084030,
+        74362093,
         86330829,
         93895536,
         100283076,
@@ -366,10 +395,10 @@
       "latestMonthlyDownloads": 84374597,
       "momGrowth": 0.073,
       "rollingAvg3mGrowth": 0.0472,
-      "rollingAvg6mGrowth": 0.0647,
+      "rollingAvg6mGrowth": 0.0729,
       "isSurging": false,
       "sparkline": [
-        62071674,
+        59962713,
         71964526,
         73577266,
         73624136,
@@ -395,10 +424,10 @@
       "latestMonthlyDownloads": 106402430,
       "momGrowth": 0.0573,
       "rollingAvg3mGrowth": -0.0163,
-      "rollingAvg6mGrowth": 0.0241,
+      "rollingAvg6mGrowth": 0.0333,
       "isSurging": false,
       "sparkline": [
-        96039666,
+        91924391,
         98566222,
         112695381,
         113380690,
@@ -480,10 +509,10 @@
       "latestMonthlyDownloads": 607342,
       "momGrowth": 0.4557,
       "rollingAvg3mGrowth": 0.4055,
-      "rollingAvg6mGrowth": 0.2738,
+      "rollingAvg6mGrowth": 0.2813,
       "isSurging": false,
       "sparkline": [
-        218420,
+        210744,
         225815,
         252552,
         221453,
@@ -510,10 +539,10 @@
       "latestMonthlyDownloads": 3027849,
       "momGrowth": 0.5366,
       "rollingAvg3mGrowth": 0.3229,
-      "rollingAvg6mGrowth": 0.2027,
+      "rollingAvg6mGrowth": 0.2107,
       "isSurging": true,
       "sparkline": [
-        1274806,
+        1227564,
         1319816,
         1332640,
         1610588,
@@ -541,10 +570,10 @@
       "latestMonthlyDownloads": 4794228,
       "momGrowth": 0.3827,
       "rollingAvg3mGrowth": 0.2526,
-      "rollingAvg6mGrowth": 0.2329,
+      "rollingAvg6mGrowth": 0.242,
       "isSurging": false,
       "sparkline": [
-        1706491,
+        1644728,
         2079763,
         2470565,
         2729794,
@@ -570,10 +599,10 @@
       "latestMonthlyDownloads": 153718,
       "momGrowth": 0.1162,
       "rollingAvg3mGrowth": 0.0095,
-      "rollingAvg6mGrowth": 0.0077,
+      "rollingAvg6mGrowth": 0.0162,
       "isSurging": false,
       "sparkline": [
-        152792,
+        147126,
         169971,
         152543,
         162109,
@@ -599,10 +628,10 @@
       "latestMonthlyDownloads": 347843,
       "momGrowth": 0.0247,
       "rollingAvg3mGrowth": -0.0071,
-      "rollingAvg6mGrowth": -0.0109,
+      "rollingAvg6mGrowth": -0.0031,
       "isSurging": false,
       "sparkline": [
-        379742,
+        364666,
         355779,
         366437,
         419621,
@@ -628,10 +657,10 @@
       "latestMonthlyDownloads": 392793,
       "momGrowth": 0.2929,
       "rollingAvg3mGrowth": 0.0551,
-      "rollingAvg6mGrowth": 0.0793,
+      "rollingAvg6mGrowth": 0.0892,
       "isSurging": false,
       "sparkline": [
-        280788,
+        267750,
         286604,
         346857,
         316321,
@@ -839,10 +868,10 @@
       "latestMonthlyDownloads": 4135817,
       "momGrowth": 0.593,
       "rollingAvg3mGrowth": 0.323,
-      "rollingAvg6mGrowth": 0.2827,
+      "rollingAvg6mGrowth": 0.2905,
       "isSurging": false,
       "sparkline": [
-        1368505,
+        1324738,
         1615515,
         2041789,
         1662426,
@@ -868,10 +897,10 @@
       "latestMonthlyDownloads": 239217,
       "momGrowth": 0.1464,
       "rollingAvg3mGrowth": 0.1579,
-      "rollingAvg6mGrowth": 0.1143,
+      "rollingAvg6mGrowth": 0.1233,
       "isSurging": false,
       "sparkline": [
-        143040,
+        137868,
         171698,
         154150,
         176884,
@@ -899,10 +928,10 @@
       "latestMonthlyDownloads": 4292919,
       "momGrowth": 0.1134,
       "rollingAvg3mGrowth": 0.0644,
-      "rollingAvg6mGrowth": 0.0257,
+      "rollingAvg6mGrowth": 0.034,
       "isSurging": false,
       "sparkline": [
-        3902616,
+        3755403,
         4170583,
         3613936,
         3324457,
@@ -929,10 +958,10 @@
       "latestMonthlyDownloads": 32568064,
       "momGrowth": 0.1716,
       "rollingAvg3mGrowth": 0.0559,
-      "rollingAvg6mGrowth": 0.1076,
+      "rollingAvg6mGrowth": 0.1173,
       "isSurging": false,
       "sparkline": [
-        19909203,
+        19149441,
         24276106,
         27938541,
         26905705,
@@ -1050,10 +1079,10 @@
       "latestMonthlyDownloads": 286752,
       "momGrowth": 0.3967,
       "rollingAvg3mGrowth": 0.1081,
-      "rollingAvg6mGrowth": -0.0157,
+      "rollingAvg6mGrowth": -0.0101,
       "isSurging": false,
       "sparkline": [
-        348428,
+        337246,
         298142,
         221000,
         212574,
@@ -1079,10 +1108,10 @@
       "latestMonthlyDownloads": 12438,
       "momGrowth": -0.1682,
       "rollingAvg3mGrowth": -0.1205,
-      "rollingAvg6mGrowth": -0.0945,
+      "rollingAvg6mGrowth": -0.0829,
       "isSurging": false,
       "sparkline": [
-        22328,
+        20575,
         15164,
         18348,
         15992,
@@ -1109,10 +1138,10 @@
       "latestMonthlyDownloads": 8592754,
       "momGrowth": 0.2644,
       "rollingAvg3mGrowth": 0.057,
-      "rollingAvg6mGrowth": 0.1207,
+      "rollingAvg6mGrowth": 0.1325,
       "isSurging": false,
       "sparkline": [
-        5216602,
+        5011219,
         7454768,
         7483116,
         6965656,
@@ -1138,10 +1167,10 @@
       "latestMonthlyDownloads": 11188322,
       "momGrowth": 0.0843,
       "rollingAvg3mGrowth": 0.0752,
-      "rollingAvg6mGrowth": 0.0921,
+      "rollingAvg6mGrowth": 0.1007,
       "isSurging": false,
       "sparkline": [
-        7343259,
+        7048554,
         7556618,
         9110763,
         8685232,
@@ -1167,10 +1196,10 @@
       "latestMonthlyDownloads": 6725,
       "momGrowth": 0.0483,
       "rollingAvg3mGrowth": 0.0224,
-      "rollingAvg6mGrowth": 0.0179,
+      "rollingAvg6mGrowth": 0.0266,
       "isSurging": false,
       "sparkline": [
-        6718,
+        6408,
         6085,
         6793,
         5001,
@@ -1196,10 +1225,10 @@
       "latestMonthlyDownloads": 52541,
       "momGrowth": 0.2161,
       "rollingAvg3mGrowth": 0.0343,
-      "rollingAvg6mGrowth": 0.0451,
+      "rollingAvg6mGrowth": 0.0533,
       "isSurging": false,
       "sparkline": [
-        44587,
+        42806,
         44099,
         49992,
         55183,
@@ -1225,10 +1254,10 @@
       "latestMonthlyDownloads": 6399540,
       "momGrowth": -0.3298,
       "rollingAvg3mGrowth": -0.0253,
-      "rollingAvg6mGrowth": 0.122,
+      "rollingAvg6mGrowth": 0.1328,
       "isSurging": false,
       "sparkline": [
-        4545438,
+        4404923,
         7739319,
         7609344,
         7641497,
@@ -1254,10 +1283,10 @@
       "latestMonthlyDownloads": 904230,
       "momGrowth": 0.1287,
       "rollingAvg3mGrowth": 0.0103,
-      "rollingAvg6mGrowth": 0.0096,
+      "rollingAvg6mGrowth": 0.0161,
       "isSurging": false,
       "sparkline": [
-        884949,
+        856319,
         861415,
         899325,
         750204,
@@ -1283,10 +1312,10 @@
       "latestMonthlyDownloads": 26037,
       "momGrowth": -0.045,
       "rollingAvg3mGrowth": 0.0534,
-      "rollingAvg6mGrowth": -0.078,
+      "rollingAvg6mGrowth": -0.0682,
       "isSurging": false,
       "sparkline": [
-        82682,
+        79499,
         101408,
         22651,
         22487,
@@ -1312,10 +1341,10 @@
       "latestMonthlyDownloads": 2780975,
       "momGrowth": 0.2689,
       "rollingAvg3mGrowth": 0.1606,
-      "rollingAvg6mGrowth": 0.132,
+      "rollingAvg6mGrowth": 0.1398,
       "isSurging": false,
       "sparkline": [
-        1624765,
+        1579575,
         2237352,
         1792069,
         2047695,
@@ -1341,10 +1370,10 @@
       "latestMonthlyDownloads": 1438235,
       "momGrowth": 0.1794,
       "rollingAvg3mGrowth": 0.1539,
-      "rollingAvg6mGrowth": 0.0612,
+      "rollingAvg6mGrowth": 0.0673,
       "isSurging": false,
       "sparkline": [
-        1157994,
+        1127207,
         1298736,
         938474,
         1021468,
@@ -1388,6 +1417,762 @@
       "githubWeeklyCommits": null,
       "soMonthlyQuestions": 0,
       "signalQuality": "moderate"
+    },
+    {
+      "package": "continuedev",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "software_it"
+      ],
+      "label": "Open-source AI code assistant (like Copilot but extensible) \u2014 tracks developer adoption of AI pair programming beyond GitHub Copilot. Supports multiple LLM backends and IDE integrations.",
+      "latestMonthlyDownloads": 2257,
+      "momGrowth": 0.043,
+      "rollingAvg3mGrowth": 0.1073,
+      "rollingAvg6mGrowth": 0.115,
+      "isSurging": false,
+      "sparkline": [
+        1419,
+        1477,
+        1790,
+        1504,
+        2164,
+        2257
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "fal-client",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "creative"
+      ],
+      "label": "Client for fal.ai's inference platform \u2014 used for fast image and video generation, signaling creative production automation and the shift toward API-driven media creation workflows.",
+      "latestMonthlyDownloads": 1131177,
+      "momGrowth": 0.167,
+      "rollingAvg3mGrowth": 0.1541,
+      "rollingAvg6mGrowth": 0.1166,
+      "isSurging": false,
+      "sparkline": [
+        679372,
+        855487,
+        736756,
+        817046,
+        969309,
+        1131177
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "audiocraft",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "creative"
+      ],
+      "label": "Meta's audio and music generation library \u2014 signals AI displacement in music production, sound design, and audio content creation. Includes MusicGen and AudioGen models.",
+      "latestMonthlyDownloads": 145126,
+      "momGrowth": 1.7254,
+      "rollingAvg3mGrowth": 0.9786,
+      "rollingAvg6mGrowth": 0.724,
+      "isSurging": true,
+      "sparkline": [
+        13166,
+        23991,
+        20672,
+        32540,
+        53249,
+        145126
+      ],
+      "surgingReason": "3+ consecutive months of >20% growth",
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "yt-dlp",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "creative"
+      ],
+      "label": "Media download tool heavily used in AI training data pipelines and automated content processing workflows. Its growth reflects the expanding infrastructure for AI-powered media analysis and content creation.",
+      "latestMonthlyDownloads": 10162679,
+      "momGrowth": -0.2449,
+      "rollingAvg3mGrowth": 0.1924,
+      "rollingAvg6mGrowth": 0.1989,
+      "isSurging": false,
+      "sparkline": [
+        5305078,
+        8576703,
+        6865526,
+        8482731,
+        13458125,
+        10162679
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "monai",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "healthcare"
+      ],
+      "label": "PyTorch framework for medical imaging AI \u2014 used in radiology, pathology, and diagnostic imaging automation. Its adoption signals how quickly AI is entering clinical diagnostic workflows.",
+      "latestMonthlyDownloads": 305270,
+      "momGrowth": 0.216,
+      "rollingAvg3mGrowth": -0.0828,
+      "rollingAvg6mGrowth": -0.02,
+      "isSurging": false,
+      "sparkline": [
+        382901,
+        351866,
+        432596,
+        290641,
+        251050,
+        305270
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "biopython",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "healthcare"
+      ],
+      "label": "Bioinformatics toolkit \u2014 signals AI-assisted genomics, drug discovery, and clinical research automation. A foundational library for computational biology workflows increasingly augmented by ML.",
+      "latestMonthlyDownloads": 7488243,
+      "momGrowth": -0.3241,
+      "rollingAvg3mGrowth": 0.3628,
+      "rollingAvg6mGrowth": 0.212,
+      "isSurging": false,
+      "sparkline": [
+        5891325,
+        8711486,
+        4295978,
+        4853483,
+        11078776,
+        7488243
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "ta-lib",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "finance"
+      ],
+      "label": "Technical analysis library for financial markets \u2014 when combined with ML frameworks, signals AI-driven trading strategy automation and algorithmic decision-making in finance.",
+      "latestMonthlyDownloads": 618160,
+      "momGrowth": 0.189,
+      "rollingAvg3mGrowth": 0.0578,
+      "rollingAvg6mGrowth": 0.0603,
+      "isSurging": false,
+      "sparkline": [
+        471779,
+        554390,
+        528441,
+        511148,
+        519891,
+        618160
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "yfinance",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "finance"
+      ],
+      "label": "Yahoo Finance data API \u2014 growth reflects automated financial data ingestion for AI-powered analysis, trading bots, and portfolio management systems.",
+      "latestMonthlyDownloads": 11754510,
+      "momGrowth": -0.1356,
+      "rollingAvg3mGrowth": 0.2725,
+      "rollingAvg6mGrowth": 0.1933,
+      "isSurging": false,
+      "sparkline": [
+        5584403,
+        6135110,
+        6442837,
+        7813402,
+        13598861,
+        11754510
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "pyod",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "finance"
+      ],
+      "label": "Python Outlier Detection library with 40+ algorithms \u2014 signals AI automation of fraud detection, financial compliance monitoring, and risk assessment workflows that previously required manual review.",
+      "latestMonthlyDownloads": 1055792,
+      "momGrowth": 0.1191,
+      "rollingAvg3mGrowth": 0.0435,
+      "rollingAvg6mGrowth": 0.0661,
+      "isSurging": false,
+      "sparkline": [
+        771778,
+        878555,
+        932804,
+        940077,
+        943448,
+        1055792
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "botpress",
+      "source": "npm",
+      "tier": "tier2",
+      "industries": [
+        "customer_service"
+      ],
+      "label": "Open-source chatbot and conversational AI platform used to build customer-facing virtual agents that replace live chat and phone support. Its growth tracks enterprise adoption of AI-powered customer service.",
+      "latestMonthlyDownloads": 3452,
+      "momGrowth": -0.2022,
+      "rollingAvg3mGrowth": -0.2879,
+      "rollingAvg6mGrowth": 0.1858,
+      "isSurging": false,
+      "sparkline": [
+        2575,
+        4379,
+        9765,
+        7218,
+        4327,
+        3452
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "rasa",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "customer_service"
+      ],
+      "label": "Open-source conversational AI framework for building contextual AI assistants \u2014 used heavily in enterprise customer service automation for intent classification, dialogue management, and entity extraction.",
+      "latestMonthlyDownloads": 112493,
+      "momGrowth": -0.0608,
+      "rollingAvg3mGrowth": 0.0105,
+      "rollingAvg6mGrowth": 0.0148,
+      "isSurging": false,
+      "sparkline": [
+        106788,
+        107744,
+        111390,
+        131913,
+        119776,
+        112493
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "vocode",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "customer_service"
+      ],
+      "label": "Open-source library for building voice-based AI agents (phone bots, IVR replacements) \u2014 signals automation of call center work and the shift from human to AI voice interactions.",
+      "latestMonthlyDownloads": 2992,
+      "momGrowth": -0.2804,
+      "rollingAvg3mGrowth": 0.1596,
+      "rollingAvg6mGrowth": -0.0328,
+      "isSurging": false,
+      "sparkline": [
+        6325,
+        2554,
+        2435,
+        2282,
+        4158,
+        2992
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "chainlit",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "customer_service"
+      ],
+      "label": "Framework for building conversational AI interfaces \u2014 used to create customer-facing chat support tools powered by LLMs, enabling rapid deployment of AI support agents.",
+      "latestMonthlyDownloads": 791400,
+      "momGrowth": -0.1091,
+      "rollingAvg3mGrowth": -0.0237,
+      "rollingAvg6mGrowth": 0.0973,
+      "isSurging": false,
+      "sparkline": [
+        539362,
+        795038,
+        861562,
+        804356,
+        888266,
+        791400
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "gradio",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "customer_service",
+        "education"
+      ],
+      "label": "Builds interactive web UIs for AI models \u2014 increasingly used for customer-facing AI tools, internal support dashboards, and educational AI interfaces like student-facing tutors and interactive demos.",
+      "latestMonthlyDownloads": 11489621,
+      "momGrowth": -0.109,
+      "rollingAvg3mGrowth": -0.0361,
+      "rollingAvg6mGrowth": 0.0691,
+      "isSurging": false,
+      "sparkline": [
+        8667888,
+        11550182,
+        12953334,
+        12023020,
+        12895355,
+        11489621
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "streamlit",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "education"
+      ],
+      "label": "Turns Python scripts into interactive web apps \u2014 widely used to build AI-powered learning tools, tutoring interfaces, and training dashboards in educational settings.",
+      "latestMonthlyDownloads": 28842087,
+      "momGrowth": 0.0751,
+      "rollingAvg3mGrowth": 0.0828,
+      "rollingAvg6mGrowth": 0.1432,
+      "isSurging": false,
+      "sparkline": [
+        15243106,
+        20432426,
+        23033110,
+        22109863,
+        26826679,
+        28842087
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "nbgrader",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "education"
+      ],
+      "label": "Jupyter-based auto-grading tool \u2014 signals AI-assisted assessment automation in education. Used by universities and online course platforms to automate homework and exam grading.",
+      "latestMonthlyDownloads": 20353,
+      "momGrowth": 0.5063,
+      "rollingAvg3mGrowth": 0.0753,
+      "rollingAvg6mGrowth": 0.1133,
+      "isSurging": false,
+      "sparkline": [
+        16167,
+        16862,
+        21880,
+        11178,
+        13512,
+        20353
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "sentence-transformers",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "education"
+      ],
+      "label": "Produces text embeddings used in educational search, plagiarism detection, and adaptive learning systems. Growth signals AI-powered content understanding in edtech applications.",
+      "latestMonthlyDownloads": 17793525,
+      "momGrowth": 0.0899,
+      "rollingAvg3mGrowth": -0.0018,
+      "rollingAvg6mGrowth": 0.0352,
+      "isSurging": false,
+      "sparkline": [
+        15202086,
+        17655867,
+        18007144,
+        16885949,
+        16325448,
+        17793525
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "ultralytics",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "manufacturing"
+      ],
+      "label": "YOLO object detection framework \u2014 the dominant tool for visual inspection, defect detection, and warehouse automation in manufacturing. Its growth directly tracks computer vision deployment in industrial settings.",
+      "latestMonthlyDownloads": 6648470,
+      "momGrowth": -0.059,
+      "rollingAvg3mGrowth": -0.0891,
+      "rollingAvg6mGrowth": 0.0139,
+      "isSurging": false,
+      "sparkline": [
+        6511392,
+        8154503,
+        8841094,
+        7395371,
+        7065677,
+        6648470
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "opencv-python",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "manufacturing"
+      ],
+      "label": "The foundational computer vision library \u2014 used in quality control, robotics guidance, and logistics tracking systems. A baseline indicator of computer vision adoption across manufacturing and logistics.",
+      "latestMonthlyDownloads": 39712763,
+      "momGrowth": -0.0335,
+      "rollingAvg3mGrowth": 0.0661,
+      "rollingAvg6mGrowth": 0.1034,
+      "isSurging": false,
+      "sparkline": [
+        25062132,
+        30855908,
+        33558382,
+        32595228,
+        41087793,
+        39712763
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "supervision",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "manufacturing"
+      ],
+      "label": "Computer vision utilities for detection, tracking, and annotation \u2014 used in manufacturing line monitoring and warehouse automation. Simplifies building production-ready CV pipelines.",
+      "latestMonthlyDownloads": 1000798,
+      "momGrowth": -0.2057,
+      "rollingAvg3mGrowth": 0.002,
+      "rollingAvg6mGrowth": 0.008,
+      "isSurging": false,
+      "sparkline": [
+        1000645,
+        982409,
+        1033578,
+        1079513,
+        1259917,
+        1000798
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "open3d",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "manufacturing"
+      ],
+      "label": "3D data processing library used in robotic manipulation, warehouse mapping, and manufacturing digital twins. Growth signals increasing adoption of 3D perception in industrial automation.",
+      "latestMonthlyDownloads": 1209589,
+      "momGrowth": -0.0986,
+      "rollingAvg3mGrowth": -0.068,
+      "rollingAvg6mGrowth": -0.0086,
+      "isSurging": false,
+      "sparkline": [
+        1363776,
+        1326482,
+        1576591,
+        1154406,
+        1341933,
+        1209589
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "robotframework",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "manufacturing"
+      ],
+      "label": "Generic test and RPA automation framework increasingly used for manufacturing process automation and logistics workflow orchestration. Its growth in industrial contexts signals process automation beyond software.",
+      "latestMonthlyDownloads": 4263270,
+      "momGrowth": 0.0524,
+      "rollingAvg3mGrowth": 0.0333,
+      "rollingAvg6mGrowth": 0.0405,
+      "isSurging": false,
+      "sparkline": [
+        3519628,
+        3987493,
+        3867169,
+        3870742,
+        4050830,
+        4263270
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "instructor",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "sales_marketing"
+      ],
+      "label": "Structured output extraction from LLMs \u2014 used in sales and marketing for parsing leads, extracting intent from customer messages, and generating structured campaign data at scale.",
+      "latestMonthlyDownloads": 8068291,
+      "momGrowth": 0.07,
+      "rollingAvg3mGrowth": 0.1148,
+      "rollingAvg6mGrowth": 0.1698,
+      "isSurging": false,
+      "sparkline": [
+        3823767,
+        5410687,
+        5895657,
+        5998771,
+        7540374,
+        8068291
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "outlines",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "sales_marketing"
+      ],
+      "label": "Structured text generation from LLMs \u2014 used for generating marketing copy, product descriptions, and sales collateral at scale with guaranteed output formats.",
+      "latestMonthlyDownloads": 1177092,
+      "momGrowth": -0.1932,
+      "rollingAvg3mGrowth": -0.0705,
+      "rollingAvg6mGrowth": 0.0591,
+      "isSurging": false,
+      "sparkline": [
+        1758467,
+        3666320,
+        1548658,
+        1226286,
+        1458949,
+        1177092
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "posthog-js",
+      "source": "npm",
+      "tier": "tier2",
+      "industries": [
+        "sales_marketing"
+      ],
+      "label": "PostHog product analytics SDK with AI features \u2014 signals AI-driven marketing optimization, user segmentation, and campaign targeting. Tracks how companies use behavioral data to automate marketing decisions.",
+      "latestMonthlyDownloads": 12851662,
+      "momGrowth": -0.0853,
+      "rollingAvg3mGrowth": 0.054,
+      "rollingAvg6mGrowth": 0.1911,
+      "isSurging": false,
+      "sparkline": [
+        10312900,
+        14489463,
+        13651650,
+        8743635,
+        14049923,
+        12851662
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "@hubspot/api-client",
+      "source": "npm",
+      "tier": "tier2",
+      "industries": [
+        "sales_marketing"
+      ],
+      "label": "HubSpot CRM SDK \u2014 growth signals AI-powered CRM automation for sales pipeline management and marketing workflow orchestration. Tracks programmatic integration of AI into sales processes.",
+      "latestMonthlyDownloads": 3015150,
+      "momGrowth": 0.1758,
+      "rollingAvg3mGrowth": 0.1184,
+      "rollingAvg6mGrowth": 0.0612,
+      "isSurging": false,
+      "sparkline": [
+        2218291,
+        2316805,
+        2169501,
+        2203700,
+        2564409,
+        3015150
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
     }
   ],
   "surgingPackages": [
@@ -1401,7 +2186,8 @@
     "puppeteer-npm",
     "llamaindex",
     "@langchain/openai",
-    "replicate-npm"
+    "replicate-npm",
+    "audiocraft"
   ],
-  "totalToolCount": 31
+  "totalToolCount": 57
 }
