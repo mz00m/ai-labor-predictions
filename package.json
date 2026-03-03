@@ -9,7 +9,10 @@
     "lint": "next lint",
     "digest": "tsx scripts/generate-digest.ts",
     "digest:14": "tsx scripts/generate-digest.ts --days 14",
-    "ingest": "tsx scripts/ingest-source.ts"
+    "ingest": "tsx scripts/ingest-source.ts",
+    "pypi:fetch": "python3 scripts/pypi/fetch_pypistats.py",
+    "pypi:calc": "python3 scripts/pypi/calculate_metrics.py",
+    "pypi:update": "python3 scripts/pypi/fetch_pypistats.py && python3 scripts/pypi/calculate_metrics.py"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.78.0",
