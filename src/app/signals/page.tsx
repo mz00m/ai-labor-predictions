@@ -13,6 +13,7 @@ import IndustryGrid from "@/components/signals/IndustryGrid";
 import PackageTable from "@/components/signals/PackageTable";
 import MethodologyNote from "@/components/signals/MethodologyNote";
 import AutomationExplainer from "@/components/signals/AutomationExplainer";
+import ProductivityPaths from "@/components/signals/ProductivityPaths";
 
 const metrics = getSignalMetrics();
 const taxonomy = getSignalTaxonomy();
@@ -78,6 +79,9 @@ export default function SignalsPage() {
           }}
         />
       </section>
+
+      {/* What happens when workers get more productive — 3-path framework */}
+      <ProductivityPaths />
 
       {/* Methodology */}
       <MethodologyNote />
