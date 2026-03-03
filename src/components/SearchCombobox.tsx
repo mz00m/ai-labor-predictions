@@ -72,9 +72,13 @@ export default function SearchCombobox({ mobile }: SearchComboboxProps) {
   /* ---- Navigate to a result ---- */
   const navigateTo = useCallback(
     (result: SearchResult) => {
-      const slug = result.usedIn[0];
-      if (slug) {
-        router.push(`/predictions/${slug}`);
+      if (result.url) {
+        window.open(result.url, "_blank", "noopener,noreferrer");
+      } else {
+        const slug = result.usedIn[0];
+        if (slug) {
+          router.push(`/predictions/${slug}`);
+        }
       }
       setIsOpen(false);
       setQuery("");
@@ -257,8 +261,26 @@ export default function SearchCombobox({ mobile }: SearchComboboxProps) {
 
                   <div className="min-w-0 flex-1">
                     {/* Title */}
-                    <p className="text-[12px] font-medium text-[var(--foreground)] leading-snug truncate">
-                      {highlight(result.title)}
+                    <p className="text-[12px] font-medium text-[var(--foreground)] leading-snug truncate flex items-center gap-1">
+                      <span className="truncate">{highlight(result.title)}</span>
+                      {result.url && (
+                        <svg
+                          width="10"
+                          height="10"
+                          viewBox="0 0 12 12"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="shrink-0 text-[var(--muted)] opacity-60"
+                          aria-label="Opens in new tab"
+                        >
+                          <path d="M5 1H1v10h10V7" />
+                          <path d="M7 1h4v4" />
+                          <path d="M11 1L5.5 6.5" />
+                        </svg>
+                      )}
                     </p>
 
                     {/* Publisher + date */}

@@ -28,6 +28,7 @@ export interface SearchResult {
   evidenceTier: EvidenceTier;
   usedIn: string[];
   datePublished: string;
+  url?: string;
 }
 
 /* ------------------------------------------------------------------ */
@@ -46,6 +47,7 @@ const allSources: SearchResult[] = Object.values(
     evidenceTier: s.evidenceTier as EvidenceTier,
     usedIn: s.usedIn,
     datePublished: s.datePublished,
+    url: s.url,
   }));
 
 const slugToTitle: Record<string, string> = {};
