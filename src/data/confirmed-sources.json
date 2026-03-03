@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-03",
-  "totalSources": 302,
-  "verifiedCount": 292,
+  "totalSources": 303,
+  "verifiedCount": 293,
   "sources": {
     "accenture-health-ai-2023": {
       "id": "accenture-health-ai-2023",
@@ -631,6 +631,21 @@
         "median-wage-impact"
       ],
       "verified": true
+    },
+    "causalinf-research-publishing-ai-2026": {
+      "id": "causalinf-research-publishing-ai-2026",
+      "title": "Claude Code 27: Research and Publishing Are Now Two Different Things",
+      "url": "https://causalinf.substack.com/p/claude-code-27-research-and-publishing",
+      "publisher": "CausalInf Substack (Scott Cunningham)",
+      "evidenceTier": 4,
+      "datePublished": "2026-03-02",
+      "excerpt": "Project APE — Autonomous Policy Evaluation... has produced 204 papers — with 60 added in a single week... These are fully automated papers, like a version 1.0, with no human iteration whatsoever.",
+      "usedIn": [
+        "white-collar-professional-displacement",
+        "creative-industry-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
     },
     "census-bts-ai-2023": {
       "id": "census-bts-ai-2023",

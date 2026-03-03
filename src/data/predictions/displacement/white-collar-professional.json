@@ -294,6 +294,33 @@
       ],
       "evidenceTier": 2,
       "label": "Lightcast: Exec assistants, editors, interpreters 70%+ AI skill exposure"
+    },
+    {
+      "date": "2026-03-02",
+      "direction": "up",
+      "sourceIds": [
+        "causalinf-research-publishing-ai-2026"
+      ],
+      "evidenceTier": 4,
+      "label": "CausalInf: Romance novelist reports 10-20x cognitive output increase with LLMs"
+    },
+    {
+      "date": "2026-03-02",
+      "direction": "up",
+      "sourceIds": [
+        "causalinf-research-publishing-ai-2026"
+      ],
+      "evidenceTier": 4,
+      "label": "CausalInf: Project APE produces 204 fully autonomous economics papers, 60 in one week"
+    },
+    {
+      "date": "2026-03-02",
+      "direction": "up",
+      "sourceIds": [
+        "causalinf-research-publishing-ai-2026"
+      ],
+      "evidenceTier": 4,
+      "label": "CausalInf: AI paper win rate vs human papers improves from 4.7% to 7.6%"
     }
   ],
   "sources": [
@@ -576,6 +603,15 @@
       "datePublished": "2026-02-01",
       "dateAdded": "2026-03-02",
       "excerpt": "the jobs most vulnerable to AI are elsewhere—including executive assistants, editors, and interpreters/translators (where over 70% of their skills are exposed to AI)."
+    },
+    {
+      "id": "causalinf-research-publishing-ai-2026",
+      "title": "Claude Code 27: Research and Publishing Are Now Two Different Things",
+      "url": "https://causalinf.substack.com/p/claude-code-27-research-and-publishing",
+      "publisher": "CausalInf Substack (Scott Cunningham)",
+      "evidenceTier": 4,
+      "datePublished": "2026-03-02",
+      "excerpt": "Project APE — Autonomous Policy Evaluation... has produced 204 papers — with 60 added in a single week... These are fully automated papers, like a version 1.0, with no human iteration whatsoever."
     }
   ]
 }
