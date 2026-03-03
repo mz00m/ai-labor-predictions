@@ -395,8 +395,8 @@ def calculate_industry_metrics(package_metrics, taxonomy, employment_changes):
     industry_packages: dict[str, list[dict]] = {}
 
     for pm in package_metrics:
-        # Skip tier1 packages (they have no industry assignment)
-        if pm["tier"] == "tier1":
+        # Include any package that has explicit industry tags (tier1 or tier2)
+        if not pm["industries"]:
             continue
         for ind in pm["industries"]:
             if ind not in industry_packages:

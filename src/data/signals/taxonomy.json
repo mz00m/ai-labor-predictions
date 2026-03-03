@@ -61,14 +61,53 @@
         { "id": "CEU6056130001", "name": "Employment services" },
         { "id": "CEU6054160001", "name": "Management & technical consulting" }
       ]
+    },
+    "customer_service": {
+      "label": "Customer Service & Support",
+      "icon": "headphones",
+      "color": "#ec4899",
+      "explainer": "When conversational AI and voice agent frameworks surge, it signals that companies are building systems to automate customer interactions — chatbots replacing live chat, voice agents replacing call center workers, and AI copilots handling tier-1 support tickets. Call center employment (BLS NAICS 56142) has been declining steadily, and the rapid growth of open-source chatbot frameworks confirms the trend: enterprises are deploying AI agents that handle customer queries 24/7 at a fraction of the cost of human agents.",
+      "blsSeries": [
+        { "id": "CEU6056140001", "name": "Business support services" },
+        { "id": "CEU6056142001", "name": "Telephone call centers" }
+      ]
+    },
+    "education": {
+      "label": "Education & Training",
+      "icon": "graduation-cap",
+      "color": "#2563eb",
+      "explainer": "AI is entering education through multiple vectors: automated grading tools, AI-powered tutoring systems, and interactive learning platforms built on LLMs. When tools like nbgrader (auto-grading) and AI SDKs surge in edtech contexts, it signals that educational institutions and edtech companies are building systems that can personalize instruction, assess student work, and generate curriculum content — tasks currently performed by teachers, tutors, and instructional designers.",
+      "blsSeries": [
+        { "id": "CEU6561000001", "name": "Educational services" },
+        { "id": "CEU6561130001", "name": "Colleges, universities, and professional schools" }
+      ]
+    },
+    "manufacturing": {
+      "label": "Manufacturing & Logistics",
+      "icon": "factory",
+      "color": "#475569",
+      "explainer": "Computer vision and robotics frameworks are the key AI signals for manufacturing and logistics. When tools like YOLO (ultralytics) and OpenCV surge, it means companies are deploying automated visual inspection, defect detection, warehouse robotics, and logistics tracking systems. Unlike white-collar AI tools, these directly automate physical-world tasks — quality control on production lines, autonomous warehouse navigation, and robotic manipulation.",
+      "blsSeries": [
+        { "id": "CEU3000000001", "name": "Manufacturing" },
+        { "id": "CEU4349300001", "name": "Warehousing and storage" }
+      ]
+    },
+    "sales_marketing": {
+      "label": "Sales & Marketing",
+      "icon": "megaphone",
+      "color": "#ea580c",
+      "explainer": "AI is rapidly transforming sales and marketing through automated lead scoring, personalized email generation, AI-powered CRM workflows, and data-driven campaign optimization. When LLM orchestration tools and CRM SDKs surge together, it signals that sales teams are building AI pipelines that can qualify leads, draft outreach, analyze customer intent, and optimize marketing spend — replacing work done by SDRs, copywriters, and marketing analysts.",
+      "blsSeries": [
+        { "id": "CEU6054180001", "name": "Advertising, PR, and related services" }
+      ]
     }
   },
   "packages": [
-    { "name": "openai", "source": "pypi", "tier": "tier1", "industries": [], "label": "The core Python SDK for calling OpenAI models (GPT-4, o1, DALL-E). Used as the foundation for most AI applications — when this grows, overall AI adoption is growing.", "githubRepo": "openai/openai-python", "stackOverflowTag": "openai-api" },
-    { "name": "anthropic", "source": "pypi", "tier": "tier1", "industries": [], "label": "Python SDK for Anthropic's Claude models. Growing rapidly as Claude gains market share in enterprise AI, especially for long-document analysis and coding tasks.", "githubRepo": "anthropics/anthropic-sdk-python", "stackOverflowTag": "anthropic" },
-    { "name": "langchain", "source": "pypi", "tier": "tier1", "industries": [], "label": "The most popular framework for building AI-powered applications. Provides the plumbing that connects LLMs to databases, APIs, and documents — a general indicator of AI app development activity.", "githubRepo": "langchain-ai/langchain", "stackOverflowTag": "langchain" },
+    { "name": "openai", "source": "pypi", "tier": "tier1", "industries": ["software_it", "education"], "label": "The core Python SDK for calling OpenAI models (GPT-4, o1, DALL-E). Used as the foundation for most AI applications — when this grows, overall AI adoption is growing.", "githubRepo": "openai/openai-python", "stackOverflowTag": "openai-api" },
+    { "name": "anthropic", "source": "pypi", "tier": "tier1", "industries": ["software_it"], "label": "Python SDK for Anthropic's Claude models. Growing rapidly as Claude gains market share in enterprise AI, especially for long-document analysis and coding tasks.", "githubRepo": "anthropics/anthropic-sdk-python", "stackOverflowTag": "anthropic" },
+    { "name": "langchain", "source": "pypi", "tier": "tier1", "industries": ["sales_marketing"], "label": "The most popular framework for building AI-powered applications. Provides the plumbing that connects LLMs to databases, APIs, and documents — a general indicator of AI app development activity.", "githubRepo": "langchain-ai/langchain", "stackOverflowTag": "langchain" },
     { "name": "langchain-core", "source": "pypi", "tier": "tier1", "industries": [], "label": "The foundational building blocks of LangChain — chains, prompts, output parsers. Installed as a dependency by virtually every LangChain-based project.", "githubRepo": "langchain-ai/langchain", "stackOverflowTag": "langchain" },
-    { "name": "transformers", "source": "pypi", "tier": "tier1", "industries": [], "label": "Hugging Face's library for running open-source AI models locally. The default choice for teams that need to self-host models rather than use cloud APIs — common in regulated industries.", "githubRepo": "huggingface/transformers", "stackOverflowTag": "huggingface-transformers" },
+    { "name": "transformers", "source": "pypi", "tier": "tier1", "industries": ["healthcare"], "label": "Hugging Face's library for running open-source AI models locally. The default choice for teams that need to self-host models rather than use cloud APIs — common in regulated industries.", "githubRepo": "huggingface/transformers", "stackOverflowTag": "huggingface-transformers" },
     { "name": "openai-npm", "source": "npm", "tier": "tier1", "industries": [], "label": "JavaScript SDK for OpenAI. Used to add GPT-4 and other OpenAI models to web applications, chatbots, and Node.js backends.", "npmName": "openai", "githubRepo": "openai/openai-node", "stackOverflowTag": "openai-api" },
     { "name": "@anthropic-ai/sdk", "source": "npm", "tier": "tier1", "industries": [], "label": "JavaScript SDK for Anthropic's Claude. Used by web developers building Claude-powered features into websites and web applications.", "githubRepo": "anthropics/anthropic-sdk-typescript", "stackOverflowTag": "anthropic" },
 
@@ -106,6 +145,37 @@
     { "name": "stability-sdk", "source": "pypi", "tier": "tier2", "industries": ["creative"], "label": "Stability AI's official SDK for their image generation models (Stable Diffusion). Used by developers building AI-powered design tools, marketing asset generators, and creative automation pipelines.", "githubRepo": "Stability-AI/stability-sdk" },
     { "name": "faster-whisper", "source": "pypi", "tier": "tier2", "industries": ["creative"], "label": "An optimized implementation of OpenAI's Whisper speech-to-text model that runs 4x faster. Used to transcribe podcasts, meetings, video content, and interviews — automating work done by human transcriptionists.", "githubRepo": "SYSTRAN/faster-whisper", "stackOverflowTag": "faster-whisper" },
     { "name": "openai-whisper", "source": "pypi", "tier": "tier2", "industries": ["creative"], "label": "OpenAI's original Whisper model for speech recognition and transcription. Supports 99 languages and is used for subtitling, podcast transcription, voice-to-text features, and accessibility tools.", "githubRepo": "openai/whisper", "stackOverflowTag": "openai-whisper" },
-    { "name": "replicate-npm", "source": "npm", "tier": "tier2", "industries": ["creative"], "label": "JavaScript client for Replicate's AI model platform. Used by web developers to add AI image generation, video processing, and audio tools directly into websites and web applications.", "npmName": "replicate", "githubRepo": "replicate/replicate-javascript", "stackOverflowTag": "replicate" }
+    { "name": "replicate-npm", "source": "npm", "tier": "tier2", "industries": ["creative"], "label": "JavaScript client for Replicate's AI model platform. Used by web developers to add AI image generation, video processing, and audio tools directly into websites and web applications.", "npmName": "replicate", "githubRepo": "replicate/replicate-javascript", "stackOverflowTag": "replicate" },
+
+    { "name": "continuedev", "source": "pypi", "tier": "tier2", "industries": ["software_it"], "label": "Open-source AI code assistant (like Copilot but extensible) — tracks developer adoption of AI pair programming beyond GitHub Copilot. Supports multiple LLM backends and IDE integrations.", "githubRepo": "continuedev/continue" },
+    { "name": "fal-client", "source": "pypi", "tier": "tier2", "industries": ["creative"], "label": "Client for fal.ai's inference platform — used for fast image and video generation, signaling creative production automation and the shift toward API-driven media creation workflows.", "githubRepo": "fal-ai/fal" },
+    { "name": "audiocraft", "source": "pypi", "tier": "tier2", "industries": ["creative"], "label": "Meta's audio and music generation library — signals AI displacement in music production, sound design, and audio content creation. Includes MusicGen and AudioGen models.", "githubRepo": "facebookresearch/audiocraft" },
+    { "name": "yt-dlp", "source": "pypi", "tier": "tier2", "industries": ["creative"], "label": "Media download tool heavily used in AI training data pipelines and automated content processing workflows. Its growth reflects the expanding infrastructure for AI-powered media analysis and content creation.", "githubRepo": "yt-dlp/yt-dlp", "stackOverflowTag": "yt-dlp" },
+    { "name": "monai", "source": "pypi", "tier": "tier2", "industries": ["healthcare"], "label": "PyTorch framework for medical imaging AI — used in radiology, pathology, and diagnostic imaging automation. Its adoption signals how quickly AI is entering clinical diagnostic workflows.", "githubRepo": "Project-MONAI/MONAI" },
+    { "name": "biopython", "source": "pypi", "tier": "tier2", "industries": ["healthcare"], "label": "Bioinformatics toolkit — signals AI-assisted genomics, drug discovery, and clinical research automation. A foundational library for computational biology workflows increasingly augmented by ML.", "githubRepo": "biopython/biopython", "stackOverflowTag": "biopython" },
+    { "name": "ta-lib", "source": "pypi", "tier": "tier2", "industries": ["finance"], "label": "Technical analysis library for financial markets — when combined with ML frameworks, signals AI-driven trading strategy automation and algorithmic decision-making in finance.", "githubRepo": "TA-Lib/ta-lib-python", "stackOverflowTag": "ta-lib" },
+    { "name": "yfinance", "source": "pypi", "tier": "tier2", "industries": ["finance"], "label": "Yahoo Finance data API — growth reflects automated financial data ingestion for AI-powered analysis, trading bots, and portfolio management systems.", "githubRepo": "ranaroussi/yfinance", "stackOverflowTag": "yfinance" },
+    { "name": "pyod", "source": "pypi", "tier": "tier2", "industries": ["finance"], "label": "Python Outlier Detection library with 40+ algorithms — signals AI automation of fraud detection, financial compliance monitoring, and risk assessment workflows that previously required manual review.", "githubRepo": "yzhao062/pyod", "stackOverflowTag": "pyod" },
+
+    { "name": "botpress", "source": "npm", "tier": "tier2", "industries": ["customer_service"], "label": "Open-source chatbot and conversational AI platform used to build customer-facing virtual agents that replace live chat and phone support. Its growth tracks enterprise adoption of AI-powered customer service.", "githubRepo": "botpress/botpress", "stackOverflowTag": "botpress" },
+    { "name": "rasa", "source": "pypi", "tier": "tier2", "industries": ["customer_service"], "label": "Open-source conversational AI framework for building contextual AI assistants — used heavily in enterprise customer service automation for intent classification, dialogue management, and entity extraction.", "githubRepo": "RasaHQ/rasa", "stackOverflowTag": "rasa" },
+    { "name": "vocode", "source": "pypi", "tier": "tier2", "industries": ["customer_service"], "label": "Open-source library for building voice-based AI agents (phone bots, IVR replacements) — signals automation of call center work and the shift from human to AI voice interactions.", "githubRepo": "vocodedev/vocode-core" },
+    { "name": "chainlit", "source": "pypi", "tier": "tier2", "industries": ["customer_service"], "label": "Framework for building conversational AI interfaces — used to create customer-facing chat support tools powered by LLMs, enabling rapid deployment of AI support agents.", "githubRepo": "Chainlit/chainlit", "stackOverflowTag": "chainlit" },
+    { "name": "gradio", "source": "pypi", "tier": "tier2", "industries": ["customer_service", "education"], "label": "Builds interactive web UIs for AI models — increasingly used for customer-facing AI tools, internal support dashboards, and educational AI interfaces like student-facing tutors and interactive demos.", "githubRepo": "gradio-app/gradio", "stackOverflowTag": "gradio" },
+
+    { "name": "streamlit", "source": "pypi", "tier": "tier2", "industries": ["education"], "label": "Turns Python scripts into interactive web apps — widely used to build AI-powered learning tools, tutoring interfaces, and training dashboards in educational settings.", "githubRepo": "streamlit/streamlit", "stackOverflowTag": "streamlit" },
+    { "name": "nbgrader", "source": "pypi", "tier": "tier2", "industries": ["education"], "label": "Jupyter-based auto-grading tool — signals AI-assisted assessment automation in education. Used by universities and online course platforms to automate homework and exam grading.", "githubRepo": "jupyter/nbgrader", "stackOverflowTag": "nbgrader" },
+    { "name": "sentence-transformers", "source": "pypi", "tier": "tier2", "industries": ["education"], "label": "Produces text embeddings used in educational search, plagiarism detection, and adaptive learning systems. Growth signals AI-powered content understanding in edtech applications.", "githubRepo": "UKPLab/sentence-transformers", "stackOverflowTag": "sentence-transformers" },
+
+    { "name": "ultralytics", "source": "pypi", "tier": "tier2", "industries": ["manufacturing"], "label": "YOLO object detection framework — the dominant tool for visual inspection, defect detection, and warehouse automation in manufacturing. Its growth directly tracks computer vision deployment in industrial settings.", "githubRepo": "ultralytics/ultralytics", "stackOverflowTag": "ultralytics" },
+    { "name": "opencv-python", "source": "pypi", "tier": "tier2", "industries": ["manufacturing"], "label": "The foundational computer vision library — used in quality control, robotics guidance, and logistics tracking systems. A baseline indicator of computer vision adoption across manufacturing and logistics.", "githubRepo": "opencv/opencv-python", "stackOverflowTag": "opencv" },
+    { "name": "supervision", "source": "pypi", "tier": "tier2", "industries": ["manufacturing"], "label": "Computer vision utilities for detection, tracking, and annotation — used in manufacturing line monitoring and warehouse automation. Simplifies building production-ready CV pipelines.", "githubRepo": "roboflow/supervision" },
+    { "name": "open3d", "source": "pypi", "tier": "tier2", "industries": ["manufacturing"], "label": "3D data processing library used in robotic manipulation, warehouse mapping, and manufacturing digital twins. Growth signals increasing adoption of 3D perception in industrial automation.", "githubRepo": "isl-org/Open3D", "stackOverflowTag": "open3d" },
+    { "name": "robotframework", "source": "pypi", "tier": "tier2", "industries": ["manufacturing"], "label": "Generic test and RPA automation framework increasingly used for manufacturing process automation and logistics workflow orchestration. Its growth in industrial contexts signals process automation beyond software.", "githubRepo": "robotframework/robotframework", "stackOverflowTag": "robotframework" },
+
+    { "name": "instructor", "source": "pypi", "tier": "tier2", "industries": ["sales_marketing"], "label": "Structured output extraction from LLMs — used in sales and marketing for parsing leads, extracting intent from customer messages, and generating structured campaign data at scale.", "githubRepo": "jxnl/instructor" },
+    { "name": "outlines", "source": "pypi", "tier": "tier2", "industries": ["sales_marketing"], "label": "Structured text generation from LLMs — used for generating marketing copy, product descriptions, and sales collateral at scale with guaranteed output formats.", "githubRepo": "dottxt-ai/outlines" },
+    { "name": "posthog-js", "source": "npm", "tier": "tier2", "industries": ["sales_marketing"], "label": "PostHog product analytics SDK with AI features — signals AI-driven marketing optimization, user segmentation, and campaign targeting. Tracks how companies use behavioral data to automate marketing decisions.", "githubRepo": "PostHog/posthog-js" },
+    { "name": "@hubspot/api-client", "source": "npm", "tier": "tier2", "industries": ["sales_marketing"], "label": "HubSpot CRM SDK — growth signals AI-powered CRM automation for sales pipeline management and marketing workflow orchestration. Tracks programmatic integration of AI into sales processes.", "githubRepo": "HubSpot/hubspot-api-nodejs", "stackOverflowTag": "hubspot" }
   ]
 }

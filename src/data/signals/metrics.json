@@ -1,5 +1,5 @@
 {
-  "calculatedAt": "2026-03-03T11:39:41Z",
+  "calculatedAt": "2026-03-03T13:38:32Z",
   "currentAAI": 0.878,
   "aaiTrend": "accelerating",
   "aaiHistory": [
@@ -102,15 +102,30 @@
   ],
   "industries": [
     {
+      "industry": "sales_marketing",
+      "label": "Sales & Marketing",
+      "color": "#ea580c",
+      "toolGrowth3m": 0.3206,
+      "employmentChangeSinceNov2022": null,
+      "employmentChangeYoY": null,
+      "toolCount": 1,
+      "surgingCount": 0,
+      "packages": [
+        "langchain"
+      ]
+    },
+    {
       "industry": "software_it",
       "label": "Software & IT",
       "color": "#5C61F6",
-      "toolGrowth3m": 0.1833,
+      "toolGrowth3m": 0.1777,
       "employmentChangeSinceNov2022": -0.0991,
       "employmentChangeYoY": -0.0196,
-      "toolCount": 12,
+      "toolCount": 14,
       "surgingCount": 6,
       "packages": [
+        "openai",
+        "anthropic",
         "aider-chat",
         "browser-use",
         "crewai",
@@ -165,6 +180,19 @@
       ]
     },
     {
+      "industry": "education",
+      "label": "Education & Training",
+      "color": "#2563eb",
+      "toolGrowth3m": 0.0923,
+      "employmentChangeSinceNov2022": null,
+      "employmentChangeYoY": null,
+      "toolCount": 1,
+      "surgingCount": 0,
+      "packages": [
+        "openai"
+      ]
+    },
+    {
       "industry": "creative",
       "label": "Creative & Media",
       "color": "#d97706",
@@ -186,7 +214,7 @@
       "industry": "finance",
       "label": "Finance & Insurance",
       "color": "#16a34a",
-      "toolGrowth3m": 0.0545,
+      "toolGrowth3m": 0.0546,
       "employmentChangeSinceNov2022": 0.0055,
       "employmentChangeYoY": -0.0136,
       "toolCount": 8,
@@ -206,15 +234,38 @@
       "industry": "healthcare",
       "label": "Healthcare",
       "color": "#0891b2",
-      "toolGrowth3m": 0.0284,
+      "toolGrowth3m": 0.0135,
       "employmentChangeSinceNov2022": 0.0972,
       "employmentChangeYoY": 0.0248,
-      "toolCount": 2,
+      "toolCount": 3,
       "surgingCount": 0,
       "packages": [
+        "transformers",
         "medspacy",
         "scispacy"
       ]
+    },
+    {
+      "industry": "customer_service",
+      "label": "Customer Service & Support",
+      "color": "#ec4899",
+      "toolGrowth3m": 0.0,
+      "employmentChangeSinceNov2022": null,
+      "employmentChangeYoY": null,
+      "toolCount": 0,
+      "surgingCount": 0,
+      "packages": []
+    },
+    {
+      "industry": "manufacturing",
+      "label": "Manufacturing & Logistics",
+      "color": "#475569",
+      "toolGrowth3m": 0.0,
+      "employmentChangeSinceNov2022": null,
+      "employmentChangeYoY": null,
+      "toolCount": 0,
+      "surgingCount": 0,
+      "packages": []
     }
   ],
   "packages": [
@@ -222,7 +273,10 @@
       "package": "openai",
       "source": "pypi",
       "tier": "tier1",
-      "industries": [],
+      "industries": [
+        "software_it",
+        "education"
+      ],
       "label": "The core Python SDK for calling OpenAI models (GPT-4, o1, DALL-E). Used as the foundation for most AI applications \u2014 when this grows, overall AI adoption is growing.",
       "latestMonthlyDownloads": 168184674,
       "momGrowth": 0.2017,
@@ -249,7 +303,9 @@
       "package": "anthropic",
       "source": "pypi",
       "tier": "tier1",
-      "industries": [],
+      "industries": [
+        "software_it"
+      ],
       "label": "Python SDK for Anthropic's Claude models. Growing rapidly as Claude gains market share in enterprise AI, especially for long-document analysis and coding tasks.",
       "latestMonthlyDownloads": 52518902,
       "momGrowth": 0.3076,
@@ -276,7 +332,9 @@
       "package": "langchain",
       "source": "pypi",
       "tier": "tier1",
-      "industries": [],
+      "industries": [
+        "sales_marketing"
+      ],
       "label": "The most popular framework for building AI-powered applications. Provides the plumbing that connects LLMs to databases, APIs, and documents \u2014 a general indicator of AI app development activity.",
       "latestMonthlyDownloads": 207375245,
       "momGrowth": 0.2867,
@@ -330,7 +388,9 @@
       "package": "transformers",
       "source": "pypi",
       "tier": "tier1",
-      "industries": [],
+      "industries": [
+        "healthcare"
+      ],
       "label": "Hugging Face's library for running open-source AI models locally. The default choice for teams that need to self-host models rather than use cloud APIs \u2014 common in regulated industries.",
       "latestMonthlyDownloads": 106402430,
       "momGrowth": 0.0573,
