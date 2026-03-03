@@ -29,8 +29,12 @@ export default function Home() {
   const wages = predictions.filter((p) => p.category === "wages");
   const adoption = predictions.filter((p) => p.category === "adoption");
 
-  // Aggregate stats for the hero
-  const totalSources = predictions.reduce((sum, p) => sum + p.sources.length, 0);
+  // Aggregate stats for the hero — deduplicated source count
+  const seenIds = new Set<string>();
+  for (const p of predictions) {
+    for (const s of p.sources) seenIds.add(s.id);
+  }
+  const totalSources = seenIds.size;
 
   return (
     <div className="space-y-10">
@@ -64,7 +68,7 @@ export default function Home() {
             <br className="hidden sm:block" /> the labor market?
           </h1>
           <p className="mt-4 text-[17px] text-[var(--muted)] leading-relaxed max-w-2xl">
-            300+ sources, one pattern: AI adoption is accelerating, productivity is climbing,
+            ~300 sources, one pattern. AI adoption is accelerating, productivity is climbing,
             entry-level and freelance work is compressing, and jobs are changing faster than
             they&apos;re disappearing. No measurable macro displacement &mdash; yet.
           </p>
