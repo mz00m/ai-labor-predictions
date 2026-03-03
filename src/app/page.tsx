@@ -185,6 +185,28 @@ export default function Home() {
       {/* Productivity Predictions */}
       <ProductivityPredictions />
 
+      {/* Link → signals productivity paths */}
+      <a
+        href="/signals#productivity-paths"
+        className="group flex items-center gap-2 text-[15px] font-semibold text-[var(--accent)] hover:text-[#5C61F6] transition-colors -mt-4"
+      >
+        What happens when workers get more productive?
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 18 18"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="opacity-50 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all"
+          aria-hidden="true"
+        >
+          <path d="M4 9h10m0 0l-4-4m4 4l-4 4" />
+        </svg>
+      </a>
+
       {/* Research Evidence */}
       <ResearchEvidence />
 
