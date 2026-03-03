@@ -31,8 +31,9 @@ const TIMELINE_GROUPS: TimelineGroup[] = [
     description: "Automation tools surging, employment already shifting",
     color: "#dc2626",
     test: (ind) =>
-      ind.toolGrowth3m > 0.10 &&
-      (ind.employmentChangeSinceNov2022 ?? 0) < -0.05,
+      (ind.toolGrowth3m > 0.10 &&
+        (ind.employmentChangeSinceNov2022 ?? 0) < -0.05) ||
+      (ind.employmentChangeSinceNov2022 ?? 0) < -0.15,
   },
   {
     id: "next",
