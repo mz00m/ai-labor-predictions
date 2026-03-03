@@ -87,23 +87,28 @@ function DetailTooltip({
   return (
     <div className="bg-white border border-black/[0.08] rounded-lg p-3 shadow-sm text-[12px]">
       <p className="font-medium text-[var(--foreground)] mb-1.5">{label}</p>
-      {payload.map((entry) => (
-        <div
-          key={entry.dataKey}
-          className="flex items-center justify-between gap-4"
-        >
-          <div className="flex items-center gap-1.5">
-            <span
-              className="inline-block w-2 h-2 rounded-full"
-              style={{ backgroundColor: entry.color }}
-            />
-            <span className="text-[var(--muted)]">{entry.name}</span>
+      {payload.map((entry) => {
+        const val = entry.value as number;
+        const change = val - 100;
+        const sign = change >= 0 ? "+" : "";
+        return (
+          <div
+            key={entry.dataKey}
+            className="flex items-center justify-between gap-4"
+          >
+            <div className="flex items-center gap-1.5">
+              <span
+                className="inline-block w-2 h-2 rounded-full"
+                style={{ backgroundColor: entry.color }}
+              />
+              <span className="text-[var(--muted)]">{entry.name}</span>
+            </div>
+            <span className="font-mono font-medium text-[var(--foreground)]">
+              {sign}{change.toFixed(1)}%
+            </span>
           </div>
-          <span className="font-mono font-medium text-[var(--foreground)]">
-            {(entry.value as number).toFixed(1)}
-          </span>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
 }
@@ -200,24 +205,24 @@ export default function IndustryDetail({
 
       {/* Dual-axis chart */}
       <div className="mb-6">
-        <div className="flex items-center gap-4 mb-3">
+        <div className="flex items-center gap-4 mb-3 flex-wrap">
           <div className="flex items-center gap-1.5">
             <span
               className="w-3 h-0.5 rounded-full"
               style={{ backgroundColor: industry.color }}
             />
             <span className="text-[11px] text-[var(--muted)]">
-              Tool adoption
+              Tool adoption (left axis)
             </span>
           </div>
           <div className="flex items-center gap-1.5">
             <span className="w-3 h-0.5 rounded-full bg-[#94a3b8]" />
             <span className="text-[11px] text-[var(--muted)]">
-              Employment (BLS)
+              Employment / BLS (right axis)
             </span>
           </div>
           <span className="text-[10px] text-[var(--muted)] ml-auto">
-            Normalized to 100 at Nov 2022
+            Indexed to 0% at Nov 2022
           </span>
         </div>
 
@@ -225,7 +230,7 @@ export default function IndustryDetail({
           <ResponsiveContainer width="100%" height={300}>
             <ComposedChart
               data={chartData}
-              margin={{ top: 10, right: 10, left: 0, bottom: 0 }}
+              margin={{ top: 10, right: 50, left: 0, bottom: 0 }}
             >
               <CartesianGrid strokeDasharray="3 3" opacity={0.15} />
               <XAxis
@@ -236,15 +241,41 @@ export default function IndustryDetail({
                 interval="preserveStartEnd"
               />
               <YAxis
-                tick={{ fontSize: 10, fill: "#6b7280" }}
+                yAxisId="tool"
+                orientation="left"
+                tick={{ fontSize: 10, fill: industry.color }}
                 tickLine={false}
                 axisLine={false}
-                width={40}
+                width={50}
+                tickFormatter={(v: number) => {
+                  const change = v - 100;
+                  return `${change >= 0 ? "+" : ""}${change.toFixed(0)}%`;
+                }}
+              />
+              <YAxis
+                yAxisId="employment"
+                orientation="right"
+                tick={{ fontSize: 10, fill: "#94a3b8" }}
+                tickLine={false}
+                axisLine={false}
+                width={50}
+                tickFormatter={(v: number) => {
+                  const change = v - 100;
+                  return `${change >= 0 ? "+" : ""}${change.toFixed(0)}%`;
+                }}
+              />
+              <ReferenceLine
+                yAxisId="tool"
+                y={100}
+                stroke="#d1d5db"
+                strokeDasharray="3 3"
+                strokeWidth={1}
               />
               <Tooltip content={<DetailTooltip />} />
               {EVENT_LINES.map((evt) => (
                 <ReferenceLine
                   key={evt.month}
+                  yAxisId="tool"
                   x={evt.month}
                   stroke="#d1d5db"
                   strokeDasharray="3 3"
@@ -257,6 +288,7 @@ export default function IndustryDetail({
                 />
               ))}
               <Line
+                yAxisId="tool"
                 type="monotone"
                 dataKey="toolAdoption"
                 name="Tool adoption"
@@ -266,9 +298,10 @@ export default function IndustryDetail({
                 connectNulls
               />
               <Line
+                yAxisId="employment"
                 type="monotone"
                 dataKey="employment"
-                name="Employment"
+                name="Employment (BLS)"
                 stroke="#94a3b8"
                 strokeWidth={2}
                 strokeDasharray="6 3"
