@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { EvidenceTier } from "@/lib/types";
 import { getAllPredictions, getLastUpdated } from "@/lib/data-loader";
+import { getSourceCount } from "@/lib/search-sources";
 import EvidenceFilter from "@/components/EvidenceFilter";
 import PredictionSummaryCard from "@/components/PredictionSummaryCard";
 import NewsTicker from "@/components/NewsTicker";
@@ -29,12 +30,7 @@ export default function Home() {
   const wages = predictions.filter((p) => p.category === "wages");
   const adoption = predictions.filter((p) => p.category === "adoption");
 
-  // Aggregate stats for the hero — deduplicated source count
-  const seenIds = new Set<string>();
-  for (const p of predictions) {
-    for (const s of p.sources) seenIds.add(s.id);
-  }
-  const totalSources = seenIds.size;
+  const totalSources = getSourceCount();
 
   return (
     <div className="space-y-10">
