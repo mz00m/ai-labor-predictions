@@ -12,6 +12,7 @@ import SignalHero from "@/components/signals/SignalHero";
 import IndustryGrid from "@/components/signals/IndustryGrid";
 import PackageTable from "@/components/signals/PackageTable";
 import MethodologyNote from "@/components/signals/MethodologyNote";
+import AutomationExplainer from "@/components/signals/AutomationExplainer";
 
 const metrics = getSignalMetrics();
 const taxonomy = getSignalTaxonomy();
@@ -27,6 +28,9 @@ export default function SignalsPage() {
     <div className="space-y-10">
       {/* Hero: AAI number + trend + industries to watch */}
       <SignalHero metrics={metrics} />
+
+      {/* How AI Automation Works — interactive explainer */}
+      <AutomationExplainer metrics={metrics} />
 
       {/* Section: Industry Cards */}
       <section>
