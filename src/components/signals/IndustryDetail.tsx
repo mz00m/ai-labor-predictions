@@ -2,11 +2,10 @@
 
 import { useMemo } from "react";
 import {
-  ComposedChart,
-  Line,
+  AreaChart,
+  Area,
   XAxis,
   YAxis,
-  CartesianGrid,
   Tooltip,
   ResponsiveContainer,
   ReferenceLine,
@@ -80,37 +79,36 @@ const EVENT_LINES = [
   { month: "2024-03", label: "Claude 3" },
 ];
 
-function DetailTooltip({
+function ToolAdoptionTooltip({
   active,
   payload,
   label,
 }: TooltipProps<number, string>) {
   if (!active || !payload || payload.length === 0) return null;
+  const val = payload[0]?.value as number;
   return (
-    <div className="bg-white border border-black/[0.08] rounded-lg p-3 shadow-sm text-[12px]">
-      <p className="font-medium text-[var(--foreground)] mb-1.5">{label}</p>
-      {payload.map((entry) => {
-        const val = entry.value as number;
-        const change = val - 100;
-        const sign = change >= 0 ? "+" : "";
-        return (
-          <div
-            key={entry.dataKey}
-            className="flex items-center justify-between gap-4"
-          >
-            <div className="flex items-center gap-1.5">
-              <span
-                className="inline-block w-2 h-2 rounded-full"
-                style={{ backgroundColor: entry.color }}
-              />
-              <span className="text-[var(--muted)]">{entry.name}</span>
-            </div>
-            <span className="font-mono font-medium text-[var(--foreground)]">
-              {sign}{change.toFixed(1)}%
-            </span>
-          </div>
-        );
-      })}
+    <div className="bg-white border border-black/[0.08] rounded-lg px-3 py-2 shadow-sm text-[12px]">
+      <p className="text-[var(--muted)] mb-0.5">{label}</p>
+      <p className="font-mono font-medium text-[var(--foreground)]">
+        {formatDownloads(val)} downloads
+      </p>
+    </div>
+  );
+}
+
+function EmploymentTooltip({
+  active,
+  payload,
+  label,
+}: TooltipProps<number, string>) {
+  if (!active || !payload || payload.length === 0) return null;
+  const val = payload[0]?.value as number;
+  return (
+    <div className="bg-white border border-black/[0.08] rounded-lg px-3 py-2 shadow-sm text-[12px]">
+      <p className="text-[var(--muted)] mb-0.5">{label}</p>
+      <p className="font-mono font-medium text-[var(--foreground)]">
+        {val.toLocaleString(undefined, { maximumFractionDigits: 1 })}K jobs
+      </p>
     </div>
   );
 }
@@ -132,66 +130,88 @@ export default function IndustryDetail({
     );
   }, [metrics.packages, industry.industry]);
 
-  // Build dual-axis chart data: tool downloads + BLS employment, both normalized to 100 at Nov 2022
-  const chartData = useMemo(() => {
-    // Aggregate tool downloads for this industry by month
+  // Aggregate tool downloads for this industry by month
+  const toolAdoptionData = useMemo(() => {
     const toolMonthly: Record<string, number> = {};
+    let packageCount = 0;
+
     for (const dl of downloads.packages) {
       const pkgConfig = taxonomy.packages.find((p) => p.name === dl.package);
       if (!pkgConfig || pkgConfig.tier !== "tier2") continue;
       if (!pkgConfig.industries.includes(industry.industry)) continue;
+      packageCount++;
       for (const d of dl.data) {
         toolMonthly[d.month] = (toolMonthly[d.month] || 0) + d.downloads;
       }
     }
 
-    // Aggregate BLS employment for this industry by month
-    const blsMonthly: Record<string, number> = {};
-    const blsSeriesIds = new Set(
-      industryConfig?.blsSeries?.map((s) => s.id) || []
-    );
-    for (const series of bls.series) {
-      if (!blsSeriesIds.has(series.id)) continue;
-      if (series.data.length === 0) continue;
-      for (const d of series.data) {
-        // Average across series for this industry
-        if (!blsMonthly[d.month]) blsMonthly[d.month] = 0;
-        blsMonthly[d.month] += d.value;
-      }
-    }
-    // Divide by number of series with data
-    const activeSeries = bls.series.filter(
-      (s) => blsSeriesIds.has(s.id) && s.data.length > 0
-    ).length;
-    if (activeSeries > 0) {
-      for (const month of Object.keys(blsMonthly)) {
-        blsMonthly[month] /= activeSeries;
-      }
-    }
+    const sortedMonths = Object.keys(toolMonthly).sort();
+    if (sortedMonths.length === 0)
+      return { data: [] as { month: string; downloads: number }[], packageCount: 0, current: 0, baselineMonth: "", delta: 0 };
 
-    // Normalize to 100 at Nov 2022
-    const toolBase = toolMonthly["2022-11"] || toolMonthly[Object.keys(toolMonthly).sort()[0]];
-    const blsBase = blsMonthly["2022-11"] || blsMonthly[Object.keys(blsMonthly).sort()[0]];
-
-    // Get all months
-    const allMonths = new Set([
-      ...Object.keys(toolMonthly),
-      ...Object.keys(blsMonthly),
-    ]);
-    const sortedMonths = Array.from(allMonths).sort();
-
-    return sortedMonths.map((month) => ({
+    const data = sortedMonths.map((month) => ({
       month,
-      toolAdoption:
-        toolBase && toolMonthly[month]
-          ? (toolMonthly[month] / toolBase) * 100
-          : undefined,
-      employment:
-        blsBase && blsMonthly[month]
-          ? (blsMonthly[month] / blsBase) * 100
-          : undefined,
+      downloads: toolMonthly[month],
     }));
-  }, [downloads, bls, taxonomy, industry.industry, industryConfig]);
+
+    const current = data[data.length - 1].downloads;
+    const baseline = data[0].downloads;
+    const baselineMonth = data[0].month;
+    const delta = baseline > 0 ? ((current - baseline) / baseline) * 100 : 0;
+
+    return { data, packageCount, current, baselineMonth, delta };
+  }, [downloads, taxonomy, industry.industry]);
+
+  // Per-series BLS employment data with 3-month trailing average
+  const employmentSeriesData = useMemo(() => {
+    const blsSeriesConfigs = industryConfig?.blsSeries || [];
+
+    return blsSeriesConfigs.map((seriesConfig) => {
+      const seriesData = bls.series.find((s) => s.id === seriesConfig.id);
+      if (!seriesData || seriesData.data.length === 0) {
+        return { id: seriesConfig.id, name: seriesConfig.name, data: [] as { month: string; value: number }[], current: 0, baseline: 0, delta: 0 };
+      }
+
+      const sorted = [...seriesData.data].sort((a, b) =>
+        a.month.localeCompare(b.month)
+      );
+
+      // Compute 3-month trailing average
+      const withAvg = sorted.map((d, i) => {
+        const window = sorted.slice(Math.max(0, i - 2), i + 1);
+        const avg = window.reduce((s, w) => s + w.value, 0) / window.length;
+        return { month: d.month, value: d.value, avg3m: avg };
+      });
+
+      // Baseline: average of Oct, Nov, Dec 2022
+      const baselineMonths = withAvg.filter((d) =>
+        ["2022-10", "2022-11", "2022-12"].includes(d.month)
+      );
+      const baseline =
+        baselineMonths.length > 0
+          ? baselineMonths.reduce((s, d) => s + d.value, 0) /
+            baselineMonths.length
+          : 0;
+
+      // Filter to Nov 2022 onwards
+      const filtered = withAvg.filter((d) => d.month >= "2022-11");
+
+      // Current value and delta
+      const current =
+        filtered.length > 0 ? filtered[filtered.length - 1].avg3m : 0;
+      const delta =
+        baseline > 0 ? ((current - baseline) / baseline) * 100 : 0;
+
+      return {
+        id: seriesConfig.id,
+        name: seriesConfig.name,
+        data: filtered.map((d) => ({ month: d.month, value: d.avg3m })),
+        current,
+        baseline,
+        delta,
+      };
+    });
+  }, [bls, industryConfig]);
 
   return (
     <div className="mt-3 rounded-xl border border-black/[0.06] bg-white p-4 sm:p-6">
@@ -205,166 +225,208 @@ export default function IndustryDetail({
         </p>
       </div>
 
-      {/* BLS Methodology */}
-      {industryConfig?.blsSeries && industryConfig.blsSeries.length > 0 && (
-        <div className="mb-6 p-4 rounded-lg bg-black/[0.02] border border-black/[0.04]">
-          <p className="text-[13px] font-semibold text-[var(--foreground)] mb-1">
-            Employment data methodology
+      {/* Sparkline cards: Tool Adoption + Employment */}
+      <div className="mb-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+        {/* Card 1: Tool Adoption */}
+        <div className="rounded-lg border border-black/[0.04] p-4">
+          <p className="text-[10px] font-bold uppercase tracking-[0.08em] text-[var(--muted)] mb-2">
+            AI Tool Adoption
           </p>
-          <p className="text-[12px] text-[var(--muted)] leading-relaxed mb-2">
-            The employment percentage is derived from{" "}
-            <a
-              href="https://www.bls.gov/ces/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline hover:text-[var(--foreground)]"
-            >
-              BLS Current Employment Statistics
-            </a>{" "}
-            (monthly, not seasonally adjusted). To eliminate seasonal
-            distortion, we compare a 3-month trailing average of the most
-            recent data against the Oct&ndash;Dec 2022 average (centered on
-            ChatGPT&apos;s launch). The per-series percentage changes are then
-            simple-averaged across the series below.
-          </p>
-          <div className="space-y-1">
-            {industryConfig.blsSeries.map((s) => {
-              const seriesData = bls.series.find((bs) => bs.id === s.id);
-              const latestVal = seriesData?.data?.[seriesData.data.length - 1];
-              return (
-                <div
-                  key={s.id}
-                  className="flex items-center justify-between text-[11px]"
+
+          {toolAdoptionData.data.length > 0 ? (
+            <>
+              <div className="flex items-baseline gap-2 mb-1">
+                <span className="text-[22px] font-black font-mono text-[var(--foreground)] stat-number">
+                  {formatDownloads(toolAdoptionData.current)}
+                </span>
+                <span className="text-[11px] text-[var(--muted)]">/ month</span>
+              </div>
+
+              <div className="flex items-center gap-1 mb-3">
+                <span
+                  className="text-[12px] font-mono font-medium"
+                  style={{ color: growthColor(toolAdoptionData.delta) }}
                 >
-                  <span className="text-[var(--muted)]">
-                    <span className="font-mono text-[10px] mr-1.5 opacity-60">
-                      {s.id}
-                    </span>
-                    {s.name}
-                  </span>
-                  {latestVal && (
-                    <span className="font-mono text-[var(--foreground)] shrink-0 ml-2">
-                      {latestVal.value.toLocaleString()}K
-                      <span className="text-[var(--muted)] ml-1">
-                        ({latestVal.month})
+                  {toolAdoptionData.delta >= 0 ? "\u25B2" : "\u25BC"}
+                  {toolAdoptionData.delta >= 0 ? "+" : ""}
+                  {toolAdoptionData.delta.toFixed(1)}%
+                </span>
+                <span className="text-[10px] text-[var(--muted)]">
+                  since {toolAdoptionData.baselineMonth}
+                </span>
+              </div>
+
+              <ResponsiveContainer width="100%" height={120}>
+                <AreaChart
+                  data={toolAdoptionData.data}
+                  margin={{ top: 5, right: 5, left: 5, bottom: 0 }}
+                >
+                  <defs>
+                    <linearGradient
+                      id={`toolGrad-${industry.industry}`}
+                      x1="0"
+                      y1="0"
+                      x2="0"
+                      y2="1"
+                    >
+                      <stop
+                        offset="5%"
+                        stopColor={industry.color}
+                        stopOpacity={0.2}
+                      />
+                      <stop
+                        offset="95%"
+                        stopColor={industry.color}
+                        stopOpacity={0.02}
+                      />
+                    </linearGradient>
+                  </defs>
+                  <XAxis dataKey="month" hide />
+                  <YAxis hide domain={["dataMin", "dataMax"]} />
+                  <Tooltip content={<ToolAdoptionTooltip />} />
+                  {EVENT_LINES.filter((evt) =>
+                    toolAdoptionData.data.some((d) => d.month === evt.month)
+                  ).map((evt) => (
+                    <ReferenceLine
+                      key={evt.month}
+                      x={evt.month}
+                      stroke="#d1d5db"
+                      strokeDasharray="3 3"
+                      label={{
+                        value: evt.label,
+                        position: "top",
+                        fontSize: 8,
+                        fill: "#9ca3af",
+                      }}
+                    />
+                  ))}
+                  <Area
+                    type="monotone"
+                    dataKey="downloads"
+                    stroke={industry.color}
+                    strokeWidth={1.5}
+                    fill={`url(#toolGrad-${industry.industry})`}
+                  />
+                </AreaChart>
+              </ResponsiveContainer>
+
+              <p className="text-[10px] text-[var(--muted)] mt-2 leading-snug opacity-70">
+                Aggregate monthly downloads of {toolAdoptionData.packageCount}{" "}
+                industry-specific tools
+              </p>
+            </>
+          ) : (
+            <p className="text-[12px] text-[var(--muted)] py-8 text-center">
+              No download data available
+            </p>
+          )}
+        </div>
+
+        {/* Card 2: Employment per BLS series */}
+        {employmentSeriesData.length > 0 && (
+          <div className="rounded-lg border border-black/[0.04] p-4">
+            <p className="text-[10px] font-bold uppercase tracking-[0.08em] text-[var(--muted)] mb-3">
+              Employment in AI-Exposed Sectors
+            </p>
+
+            <div className="space-y-4">
+              {employmentSeriesData.map((series) =>
+                series.data.length > 0 ? (
+                  <div key={series.id}>
+                    <div className="flex items-center justify-between mb-1">
+                      <div className="min-w-0">
+                        <span className="text-[12px] font-semibold text-[var(--foreground)]">
+                          {series.name}
+                        </span>
+                        <span className="text-[10px] font-mono text-[var(--muted)] ml-1.5 opacity-60">
+                          {series.id}
+                        </span>
+                      </div>
+                      <span className="text-[14px] font-bold font-mono text-[var(--foreground)] stat-number shrink-0 ml-2">
+                        {series.current.toFixed(1)}K
                       </span>
-                    </span>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      )}
+                    </div>
 
-      {/* Dual-axis chart */}
-      <div className="mb-6">
-        <div className="flex items-center gap-4 mb-3 flex-wrap">
-          <div className="flex items-center gap-1.5">
-            <span
-              className="w-3 h-0.5 rounded-full"
-              style={{ backgroundColor: industry.color }}
-            />
-            <span className="text-[11px] text-[var(--muted)]">
-              Tool adoption (left axis)
-            </span>
-          </div>
-          <div className="flex items-center gap-1.5">
-            <span className="w-3 h-0.5 rounded-full bg-[#94a3b8]" />
-            <span className="text-[11px] text-[var(--muted)]">
-              Employment / BLS (right axis)
-            </span>
-          </div>
-          <span className="text-[10px] text-[var(--muted)] ml-auto">
-            Indexed to 0% at Nov 2022
-          </span>
-        </div>
+                    <div className="flex items-center gap-1 mb-2">
+                      <span
+                        className="text-[11px] font-mono font-medium"
+                        style={{ color: growthColor(series.delta) }}
+                      >
+                        {series.delta >= 0 ? "\u25B2" : "\u25BC"}
+                        {series.delta >= 0 ? "+" : ""}
+                        {series.delta.toFixed(1)}%
+                      </span>
+                      <span className="text-[10px] text-[var(--muted)]">
+                        vs Oct&ndash;Dec 2022
+                      </span>
+                    </div>
 
-        <div className="rounded-lg border border-black/[0.04] p-3">
-          <ResponsiveContainer width="100%" height={300}>
-            <ComposedChart
-              data={chartData}
-              margin={{ top: 10, right: 50, left: 0, bottom: 0 }}
-            >
-              <CartesianGrid strokeDasharray="3 3" opacity={0.15} />
-              <XAxis
-                dataKey="month"
-                tick={{ fontSize: 10, fill: "#6b7280" }}
-                tickLine={false}
-                axisLine={false}
-                interval="preserveStartEnd"
-              />
-              <YAxis
-                yAxisId="tool"
-                orientation="left"
-                tick={{ fontSize: 10, fill: industry.color }}
-                tickLine={false}
-                axisLine={false}
-                width={50}
-                tickFormatter={(v: number) => {
-                  const change = v - 100;
-                  return `${change >= 0 ? "+" : ""}${change.toFixed(0)}%`;
-                }}
-              />
-              <YAxis
-                yAxisId="employment"
-                orientation="right"
-                tick={{ fontSize: 10, fill: "#94a3b8" }}
-                tickLine={false}
-                axisLine={false}
-                width={50}
-                tickFormatter={(v: number) => {
-                  const change = v - 100;
-                  return `${change >= 0 ? "+" : ""}${change.toFixed(0)}%`;
-                }}
-              />
-              <ReferenceLine
-                yAxisId="tool"
-                y={100}
-                stroke="#d1d5db"
-                strokeDasharray="3 3"
-                strokeWidth={1}
-              />
-              <Tooltip content={<DetailTooltip />} />
-              {EVENT_LINES.map((evt) => (
-                <ReferenceLine
-                  key={evt.month}
-                  yAxisId="tool"
-                  x={evt.month}
-                  stroke="#d1d5db"
-                  strokeDasharray="3 3"
-                  label={{
-                    value: evt.label,
-                    position: "top",
-                    fontSize: 9,
-                    fill: "#9ca3af",
-                  }}
-                />
-              ))}
-              <Line
-                yAxisId="tool"
-                type="monotone"
-                dataKey="toolAdoption"
-                name="Tool adoption"
-                stroke={industry.color}
-                strokeWidth={2}
-                dot={false}
-                connectNulls
-              />
-              <Line
-                yAxisId="employment"
-                type="monotone"
-                dataKey="employment"
-                name="Employment (BLS)"
-                stroke="#94a3b8"
-                strokeWidth={2}
-                strokeDasharray="6 3"
-                dot={false}
-                connectNulls
-              />
-            </ComposedChart>
-          </ResponsiveContainer>
-        </div>
+                    <ResponsiveContainer width="100%" height={60}>
+                      <AreaChart
+                        data={series.data}
+                        margin={{ top: 2, right: 2, left: 2, bottom: 0 }}
+                      >
+                        <defs>
+                          <linearGradient
+                            id={`empGrad-${series.id}`}
+                            x1="0"
+                            y1="0"
+                            x2="0"
+                            y2="1"
+                          >
+                            <stop
+                              offset="5%"
+                              stopColor="#94a3b8"
+                              stopOpacity={0.15}
+                            />
+                            <stop
+                              offset="95%"
+                              stopColor="#94a3b8"
+                              stopOpacity={0.02}
+                            />
+                          </linearGradient>
+                        </defs>
+                        <XAxis dataKey="month" hide />
+                        <YAxis hide domain={["dataMin", "dataMax"]} />
+                        <Tooltip content={<EmploymentTooltip />} />
+                        {EVENT_LINES.filter((evt) =>
+                          series.data.some((d) => d.month === evt.month)
+                        ).map((evt) => (
+                          <ReferenceLine
+                            key={evt.month}
+                            x={evt.month}
+                            stroke="#d1d5db"
+                            strokeDasharray="2 2"
+                          />
+                        ))}
+                        <Area
+                          type="monotone"
+                          dataKey="value"
+                          stroke="#94a3b8"
+                          strokeWidth={1.5}
+                          fill={`url(#empGrad-${series.id})`}
+                        />
+                      </AreaChart>
+                    </ResponsiveContainer>
+                  </div>
+                ) : null
+              )}
+            </div>
+
+            <p className="text-[10px] text-[var(--muted)] mt-3 leading-snug opacity-70">
+              <a
+                href="https://www.bls.gov/ces/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-[var(--foreground)]"
+              >
+                BLS CES
+              </a>
+              , not seasonally adjusted. 3-month trailing average indexed to
+              Oct&ndash;Dec 2022.
+            </p>
+          </div>
+        )}
       </div>
 
       {/* HuggingFace corroborating signals */}
