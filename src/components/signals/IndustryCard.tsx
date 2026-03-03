@@ -83,7 +83,7 @@ export default function IndustryCard({
         {/* Employment trend */}
         <div>
           <p className="text-[10px] font-bold uppercase tracking-[0.08em] text-[var(--muted)] mb-0.5">
-            Employment trend
+            Employment (BLS)
           </p>
           <p
             className="text-[22px] sm:text-[26px] font-black stat-number leading-none"

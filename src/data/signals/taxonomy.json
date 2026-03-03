@@ -8,7 +8,7 @@
       "explainer": "When AI coding assistants and agent frameworks surge, it signals that the tools developers use daily are becoming more autonomous. Research from Stanford and ADP shows that entry-level software developer roles contracted between late 2022 and mid-2025, while demand for senior developers remained stable or grew. These tools amplify experienced developers while reducing demand for junior ones.",
       "blsSeries": [
         { "id": "CEU5051200001", "name": "Software publishers" },
-        { "id": "CEU6054151001", "name": "Computer systems design" },
+        { "id": "CEU6054150001", "name": "Computer systems design" },
         { "id": "CEU5051800001", "name": "Computing infrastructure & data processing" }
       ]
     },
@@ -18,7 +18,7 @@
       "color": "#dc2626",
       "explainer": "These tools convert stacks of documents into structured data that AI can analyze. When adoption accelerates, it means companies are building systems to automate document review, contract analysis, regulatory compliance checks, and due diligence — tasks currently done by paralegals, junior associates, and compliance staff. Harvey AI (a legal AI startup) has raised $300M+, signaling major venture capital conviction that these workflows will be automated.",
       "blsSeries": [
-        { "id": "CEU6554110001", "name": "Legal services" }
+        { "id": "CEU6054110001", "name": "Legal services" }
       ]
     },
     "finance": {
@@ -51,8 +51,7 @@
       "explainer": "AI image generation had explosive growth in 2022-2023 but has recently stabilized (diffusers actually declined recently). Meanwhile, speech-to-text tools continue growing steadily. The creative industry signal is nuanced: the initial wave of AI image generation disrupted stock photography and simple illustration, but more complex creative work has been harder to automate. The stabilization in image generation tools may reflect market maturation rather than declining impact.",
       "blsSeries": [
         { "id": "CEU6054140001", "name": "Specialized design services" },
-        { "id": "CEU5051210001", "name": "Software publishers (creative)" },
-        { "id": "CEU5051913001", "name": "Internet publishing & broadcasting" }
+        { "id": "CEU5051900001", "name": "Internet publishing & web search" }
       ]
     },
     "office": {
@@ -63,51 +62,51 @@
       "blsSeries": [
         { "id": "CEU6056100001", "name": "Administrative & support services" },
         { "id": "CEU6056130001", "name": "Employment services" },
-        { "id": "CEU6554160001", "name": "Management & technical consulting" }
+        { "id": "CEU6054160001", "name": "Management & technical consulting" }
       ]
     }
   },
   "packages": [
-    { "name": "openai", "source": "pypi", "tier": "tier1", "industries": [], "label": "OpenAI API client" },
-    { "name": "anthropic", "source": "pypi", "tier": "tier1", "industries": [], "label": "Anthropic API client" },
-    { "name": "langchain", "source": "pypi", "tier": "tier1", "industries": [], "label": "LLM application framework" },
-    { "name": "langchain-core", "source": "pypi", "tier": "tier1", "industries": [], "label": "LangChain core primitives" },
-    { "name": "transformers", "source": "pypi", "tier": "tier1", "industries": [], "label": "HuggingFace model hub" },
-    { "name": "openai-npm", "source": "npm", "tier": "tier1", "industries": [], "label": "OpenAI JavaScript client", "npmName": "openai" },
-    { "name": "@anthropic-ai/sdk", "source": "npm", "tier": "tier1", "industries": [], "label": "Anthropic JavaScript client" },
+    { "name": "openai", "source": "pypi", "tier": "tier1", "industries": [], "label": "The core Python SDK for calling OpenAI models (GPT-4, o1, DALL-E). Used as the foundation for most AI applications — when this grows, overall AI adoption is growing." },
+    { "name": "anthropic", "source": "pypi", "tier": "tier1", "industries": [], "label": "Python SDK for Anthropic's Claude models. Growing rapidly as Claude gains market share in enterprise AI, especially for long-document analysis and coding tasks." },
+    { "name": "langchain", "source": "pypi", "tier": "tier1", "industries": [], "label": "The most popular framework for building AI-powered applications. Provides the plumbing that connects LLMs to databases, APIs, and documents — a general indicator of AI app development activity." },
+    { "name": "langchain-core", "source": "pypi", "tier": "tier1", "industries": [], "label": "The foundational building blocks of LangChain — chains, prompts, output parsers. Installed as a dependency by virtually every LangChain-based project." },
+    { "name": "transformers", "source": "pypi", "tier": "tier1", "industries": [], "label": "Hugging Face's library for running open-source AI models locally. The default choice for teams that need to self-host models rather than use cloud APIs — common in regulated industries." },
+    { "name": "openai-npm", "source": "npm", "tier": "tier1", "industries": [], "label": "JavaScript SDK for OpenAI. Used to add GPT-4 and other OpenAI models to web applications, chatbots, and Node.js backends.", "npmName": "openai" },
+    { "name": "@anthropic-ai/sdk", "source": "npm", "tier": "tier1", "industries": [], "label": "JavaScript SDK for Anthropic's Claude. Used by web developers building Claude-powered features into websites and web applications." },
 
-    { "name": "aider-chat", "source": "pypi", "tier": "tier2", "industries": ["software_it"], "label": "AI that writes code alongside developers" },
-    { "name": "browser-use", "source": "pypi", "tier": "tier2", "industries": ["software_it", "office"], "label": "AI that operates web browsers like a person would" },
-    { "name": "crewai", "source": "pypi", "tier": "tier2", "industries": ["software_it", "office"], "label": "Framework for teams of AI agents working together" },
-    { "name": "autogen", "source": "pypi", "tier": "tier2", "industries": ["software_it"], "label": "Microsoft's AI agent coordination framework" },
-    { "name": "pyautogen", "source": "pypi", "tier": "tier2", "industries": ["software_it"], "label": "Microsoft AutoGen (alternate package)" },
-    { "name": "smolagents", "source": "pypi", "tier": "tier2", "industries": ["software_it"], "label": "Lightweight AI task automation" },
-    { "name": "ai", "source": "npm", "tier": "tier2", "industries": ["software_it", "office"], "label": "The leading framework for adding AI to web apps" },
-    { "name": "@ai-sdk/openai", "source": "npm", "tier": "tier2", "industries": ["software_it"], "label": "Connects Vercel AI SDK to OpenAI" },
-    { "name": "@ai-sdk/anthropic", "source": "npm", "tier": "tier2", "industries": ["software_it"], "label": "Connects Vercel AI SDK to Anthropic" },
-    { "name": "@modelcontextprotocol/sdk", "source": "npm", "tier": "tier2", "industries": ["software_it"], "label": "MCP — the emerging standard for AI tool integration" },
+    { "name": "aider-chat", "source": "pypi", "tier": "tier2", "industries": ["software_it"], "label": "An AI pair programmer that runs in your terminal and edits code directly in your repo. Developers use it to write features, fix bugs, and refactor code through natural language — replacing some of the work junior developers do." },
+    { "name": "browser-use", "source": "pypi", "tier": "tier2", "industries": ["software_it", "office"], "label": "Lets AI agents control a web browser — clicking buttons, filling forms, navigating pages. Used to automate repetitive web-based tasks that currently require a human at a keyboard." },
+    { "name": "crewai", "source": "pypi", "tier": "tier2", "industries": ["software_it", "office"], "label": "A framework for orchestrating multiple AI agents that collaborate on complex tasks. Each agent has a role (researcher, writer, reviewer) and they pass work between each other — mimicking how human teams operate." },
+    { "name": "autogen", "source": "pypi", "tier": "tier2", "industries": ["software_it"], "label": "Microsoft's framework for building multi-agent AI systems where agents can have conversations, write code, and coordinate to solve complex problems without human intervention." },
+    { "name": "pyautogen", "source": "pypi", "tier": "tier2", "industries": ["software_it"], "label": "Alternate distribution of Microsoft AutoGen. Same multi-agent capabilities — tracked separately because both package names see significant download volume." },
+    { "name": "smolagents", "source": "pypi", "tier": "tier2", "industries": ["software_it"], "label": "Hugging Face's lightweight agent framework. Designed for quick automation tasks where a full multi-agent system is overkill — one AI agent that can call tools and take actions." },
+    { "name": "ai", "source": "npm", "tier": "tier2", "industries": ["software_it", "office"], "label": "Vercel's AI SDK — the most popular way to add streaming AI chat, text generation, and tool use to React and Next.js web apps. Its growth tracks how fast AI is being embedded into production web products." },
+    { "name": "@ai-sdk/openai", "source": "npm", "tier": "tier2", "industries": ["software_it"], "label": "Connects Vercel's AI SDK to OpenAI models. When developers build AI features into web apps using the AI SDK, this is one of the most common provider packages they install." },
+    { "name": "@ai-sdk/anthropic", "source": "npm", "tier": "tier2", "industries": ["software_it"], "label": "Connects Vercel's AI SDK to Anthropic Claude models. Growth here reflects Claude adoption specifically within production web applications." },
+    { "name": "@modelcontextprotocol/sdk", "source": "npm", "tier": "tier2", "industries": ["software_it"], "label": "The official SDK for Model Context Protocol — an emerging open standard that lets AI models connect to external tools, databases, and APIs. Its explosive growth signals that AI tool integration is being standardized." },
 
-    { "name": "docling", "source": "pypi", "tier": "tier2", "industries": ["legal"], "label": "Converts legal documents and filings into AI-readable data" },
-    { "name": "marker-pdf", "source": "pypi", "tier": "tier2", "industries": ["legal"], "label": "Extracts text and structure from PDFs" },
-    { "name": "unstructured", "source": "pypi", "tier": "tier2", "industries": ["legal", "finance", "office"], "label": "Turns any document into AI-ready data" },
-    { "name": "pypdf", "source": "pypi", "tier": "tier2", "industries": ["legal", "finance"], "label": "PDF processing library widely used in legal tech" },
-    { "name": "llamaindex", "source": "npm", "tier": "tier2", "industries": ["legal"], "label": "AI that answers questions about documents" },
-    { "name": "@langchain/core", "source": "npm", "tier": "tier2", "industries": ["legal", "finance", "office"], "label": "Building blocks for AI document processing" },
-    { "name": "@langchain/openai", "source": "npm", "tier": "tier2", "industries": ["finance", "office"], "label": "OpenAI integration for document workflows" },
+    { "name": "docling", "source": "pypi", "tier": "tier2", "industries": ["legal"], "label": "IBM's document conversion library that turns PDFs, Word docs, and scanned images into structured data an AI can analyze. Heavily used in legal tech for processing contracts, court filings, and regulatory documents." },
+    { "name": "marker-pdf", "source": "pypi", "tier": "tier2", "industries": ["legal"], "label": "Converts PDFs into clean Markdown text while preserving structure like headings, tables, and lists. Critical for legal and compliance workflows where document formatting carries meaning." },
+    { "name": "unstructured", "source": "pypi", "tier": "tier2", "industries": ["legal", "finance", "office"], "label": "An ETL pipeline for documents — ingests PDFs, emails, HTML, images, and Office files, then outputs clean structured data for AI processing. Used across industries wherever large document backlogs need to be made AI-readable." },
+    { "name": "pypdf", "source": "pypi", "tier": "tier2", "industries": ["legal", "finance"], "label": "The standard Python library for reading and manipulating PDF files. A foundational dependency in any workflow that processes contracts, financial statements, or regulatory filings at scale." },
+    { "name": "llamaindex", "source": "npm", "tier": "tier2", "industries": ["legal"], "label": "JavaScript SDK for LlamaIndex — builds AI systems that can search, summarize, and answer questions across large document collections. Used in legal tech for contract review and research automation." },
+    { "name": "@langchain/core", "source": "npm", "tier": "tier2", "industries": ["legal", "finance", "office"], "label": "The JavaScript core of LangChain — provides chains, agents, and retrieval tools for building AI document processing pipelines in web applications. A cross-industry building block for AI-powered workflows." },
+    { "name": "@langchain/openai", "source": "npm", "tier": "tier2", "industries": ["finance", "office"], "label": "Connects LangChain's JavaScript framework to OpenAI models. Used in production web apps that need GPT-4 for document analysis, data extraction, and automated decision-making workflows." },
 
-    { "name": "pandasai", "source": "pypi", "tier": "tier2", "industries": ["finance"], "label": "AI that analyzes spreadsheets and financial data conversationally" },
-    { "name": "dataprep", "source": "pypi", "tier": "tier2", "industries": ["finance"], "label": "Automated data cleaning and preparation" },
-    { "name": "llama-index", "source": "pypi", "tier": "tier2", "industries": ["finance", "office"], "label": "AI-powered search across document collections" },
-    { "name": "chromadb", "source": "pypi", "tier": "tier2", "industries": ["finance"], "label": "Database for AI search across thousands of documents" },
+    { "name": "pandasai", "source": "pypi", "tier": "tier2", "industries": ["finance"], "label": "Lets users query spreadsheets and databases using plain English instead of writing code. An analyst can ask 'show me Q3 revenue by region' and get the answer — automating work that previously required SQL or Excel expertise." },
+    { "name": "dataprep", "source": "pypi", "tier": "tier2", "industries": ["finance"], "label": "Automates the tedious work of cleaning, validating, and preparing datasets for analysis. Handles missing values, type conversions, and formatting — tasks that data analysts and junior quants spend hours on manually." },
+    { "name": "llama-index", "source": "pypi", "tier": "tier2", "industries": ["finance", "office"], "label": "Python framework for building 'retrieval-augmented generation' (RAG) systems — AI that answers questions by searching through your own documents first. Used in finance for research, compliance, and due diligence automation." },
+    { "name": "chromadb", "source": "pypi", "tier": "tier2", "industries": ["finance"], "label": "An open-source vector database that stores document embeddings for AI-powered search. When financial firms build AI systems to search across thousands of research reports or filings, ChromaDB is a common backend choice." },
 
-    { "name": "medspacy", "source": "pypi", "tier": "tier2", "industries": ["healthcare"], "label": "AI for reading medical records and clinical notes" },
-    { "name": "scispacy", "source": "pypi", "tier": "tier2", "industries": ["healthcare"], "label": "AI for processing biomedical research and drug info" },
+    { "name": "medspacy", "source": "pypi", "tier": "tier2", "industries": ["healthcare"], "label": "A clinical NLP toolkit built on spaCy that extracts structured data from unstructured medical records — identifying diagnoses, medications, and procedures from doctor's notes and discharge summaries." },
+    { "name": "scispacy", "source": "pypi", "tier": "tier2", "industries": ["healthcare"], "label": "NLP models trained on biomedical text — can identify drug names, gene references, and disease mentions in research papers and clinical documents. Used in pharmaceutical research and clinical data extraction." },
 
-    { "name": "diffusers", "source": "pypi", "tier": "tier2", "industries": ["creative"], "label": "The main framework for AI image generation" },
-    { "name": "replicate", "source": "pypi", "tier": "tier2", "industries": ["creative"], "label": "Platform for running AI image and video models" },
-    { "name": "stability-sdk", "source": "pypi", "tier": "tier2", "industries": ["creative"], "label": "Stability AI image generation tools" },
-    { "name": "faster-whisper", "source": "pypi", "tier": "tier2", "industries": ["creative"], "label": "Fast speech-to-text transcription" },
-    { "name": "openai-whisper", "source": "pypi", "tier": "tier2", "industries": ["creative"], "label": "OpenAI's speech recognition model" },
-    { "name": "replicate-npm", "source": "npm", "tier": "tier2", "industries": ["creative"], "label": "JavaScript client for AI image/video generation", "npmName": "replicate" }
+    { "name": "diffusers", "source": "pypi", "tier": "tier2", "industries": ["creative"], "label": "Hugging Face's library for running Stable Diffusion, FLUX, and other AI image generation models. The main open-source tool that lets developers generate, edit, and transform images with AI — widely used in design and media production." },
+    { "name": "replicate", "source": "pypi", "tier": "tier2", "industries": ["creative"], "label": "A cloud platform for running AI models via API — especially popular for image generation, video creation, and audio processing. Developers use it when they want AI creative tools without managing GPU infrastructure." },
+    { "name": "stability-sdk", "source": "pypi", "tier": "tier2", "industries": ["creative"], "label": "Stability AI's official SDK for their image generation models (Stable Diffusion). Used by developers building AI-powered design tools, marketing asset generators, and creative automation pipelines." },
+    { "name": "faster-whisper", "source": "pypi", "tier": "tier2", "industries": ["creative"], "label": "An optimized implementation of OpenAI's Whisper speech-to-text model that runs 4x faster. Used to transcribe podcasts, meetings, video content, and interviews — automating work done by human transcriptionists." },
+    { "name": "openai-whisper", "source": "pypi", "tier": "tier2", "industries": ["creative"], "label": "OpenAI's original Whisper model for speech recognition and transcription. Supports 99 languages and is used for subtitling, podcast transcription, voice-to-text features, and accessibility tools." },
+    { "name": "replicate-npm", "source": "npm", "tier": "tier2", "industries": ["creative"], "label": "JavaScript client for Replicate's AI model platform. Used by web developers to add AI image generation, video processing, and audio tools directly into websites and web applications.", "npmName": "replicate" }
   ]
 }
