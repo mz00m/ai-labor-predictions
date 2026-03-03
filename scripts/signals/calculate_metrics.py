@@ -316,9 +316,16 @@ def determine_aai_trend(aai_history: list[dict]) -> str:
 def calculate_employment_changes(bls_data, taxonomy):
     """
     Calculate employment change per industry:
-    - % change since Nov 2022 (ChatGPT launch)
+    - % change since late 2022 (ChatGPT launch era)
     - Year-over-year % change
-    Average across all BLS series for each industry.
+
+    Uses 3-month rolling averages to eliminate seasonal distortion from
+    non-seasonally-adjusted (CEU) BLS data. Comparing single months across
+    different calendar periods (e.g., Jan 2026 vs Nov 2022) introduces
+    seasonal bias that can overstate or understate actual employment trends.
+
+    Baseline: average of Oct-Nov-Dec 2022 (centered on ChatGPT launch)
+    Latest:   average of the most recent 3 months of available data
     """
     if not bls_data:
         return {}
@@ -343,18 +350,26 @@ def calculate_employment_changes(bls_data, taxonomy):
 
             # Build lookup
             by_month = {d["month"]: d["value"] for d in data}
+            sorted_months = sorted(by_month.keys())
 
-            # Latest month
-            latest_month = max(by_month.keys())
+            # Baseline: 3-month average around Nov 2022 (Oct, Nov, Dec 2022)
+            baseline_months = ["2022-10", "2022-11", "2022-12"]
+            baseline_vals = [by_month[m] for m in baseline_months if m in by_month]
+
+            # Latest: trailing 3-month average
+            latest_3_months = sorted_months[-3:]
+            latest_vals = [by_month[m] for m in latest_3_months]
+
+            if baseline_vals and latest_vals:
+                baseline_avg = sum(baseline_vals) / len(baseline_vals)
+                latest_avg = sum(latest_vals) / len(latest_vals)
+                if baseline_avg > 0:
+                    change = (latest_avg - baseline_avg) / baseline_avg
+                    since_nov2022_changes.append(change)
+
+            # YoY: compare latest month to same month previous year
+            latest_month = sorted_months[-1]
             latest_value = by_month[latest_month]
-
-            # Nov 2022 baseline
-            nov2022 = by_month.get("2022-11")
-            if nov2022 and nov2022 > 0:
-                change = (latest_value - nov2022) / nov2022
-                since_nov2022_changes.append(change)
-
-            # YoY: compare latest to same month previous year
             latest_year = int(latest_month[:4])
             latest_mo = latest_month[5:]
             prev_year_month = f"{latest_year - 1}-{latest_mo}"
