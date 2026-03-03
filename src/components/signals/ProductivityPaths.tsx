@@ -468,7 +468,7 @@ export default function ProductivityPaths() {
   };
 
   return (
-    <section>
+    <section id="productivity-paths">
       {/* Subtle pulse animation for starting node */}
       <style>{`
         @keyframes node-pulse {

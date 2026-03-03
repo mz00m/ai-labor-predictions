@@ -43,6 +43,20 @@ export default function SignalsPage() {
             Click any industry to see the full breakdown: tool adoption trends,
             employment data, and which specific tools are driving growth.
           </p>
+          <p className="text-[13px] text-[var(--muted)] mt-2">
+            Each industry follows one of three paths:{" "}
+            <a
+              href="#productivity-paths"
+              className="text-[var(--accent)] hover:underline"
+            >
+              <span className="font-semibold" style={{ color: "#dc2626" }}>Reduce</span>
+              {", "}
+              <span className="font-semibold" style={{ color: "#16a34a" }}>Amplify</span>
+              {", or "}
+              <span className="font-semibold" style={{ color: "#5C61F6" }}>Expand</span>
+            </a>
+            .
+          </p>
         </div>
         <IndustryGrid
           metrics={metrics}
