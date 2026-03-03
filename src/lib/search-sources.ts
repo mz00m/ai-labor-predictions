@@ -84,3 +84,10 @@ export function searchSources(query: string, limit = 8): SearchResult[] {
 export function getPredictionTitle(slug: string): string {
   return slugToTitle[slug] ?? slug;
 }
+
+/**
+ * Total number of searchable sources.
+ */
+export function getSourceCount(): number {
+  return allSources.length;
+}

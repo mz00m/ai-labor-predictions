@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import { useRouter, usePathname } from "next/navigation";
-import { searchSources, getPredictionTitle } from "@/lib/search-sources";
+import { searchSources, getPredictionTitle, getSourceCount } from "@/lib/search-sources";
 import { getTierConfig } from "@/lib/evidence-tiers";
 import type { SearchResult } from "@/lib/search-sources";
 
@@ -192,7 +192,7 @@ export default function SearchCombobox({ mobile }: SearchComboboxProps) {
             activeIndex >= 0 ? `search-result-${activeIndex}` : undefined
           }
           aria-label="Search sources"
-          placeholder="Search sources..."
+          placeholder={`Search ${getSourceCount()} sources...`}
           value={query}
           onChange={(e) => handleChange(e.target.value)}
           onKeyDown={handleKeyDown}
