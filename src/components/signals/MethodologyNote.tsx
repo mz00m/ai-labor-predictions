@@ -4,67 +4,70 @@ export default function MethodologyNote() {
   return (
     <section className="border-t border-black/[0.06] pt-8">
       <h2 className="text-[22px] font-bold text-[var(--foreground)] mb-4">
-        Methodology &amp; Caveats
+        How to Read This Data
       </h2>
 
       <div className="grid gap-6 sm:grid-cols-2 text-[13px] text-[var(--muted)] leading-relaxed">
         <div>
           <h3 className="text-[14px] font-semibold text-[var(--foreground)] mb-1">
-            What is the AAI?
+            The construction permits analogy
           </h3>
           <p>
-            The Automation Acceleration Index is the ratio of average
-            month-over-month download growth for automation-focused packages
-            (Tier 2 + Tier 3) to the average growth of general AI infrastructure
-            packages (Tier 1). An AAI above 1.0 means automation tooling is
-            growing faster than the underlying AI platform it builds on.
+            Before a building goes up, construction permits spike in that
+            neighborhood. This page works the same way: before AI replaces tasks
+            in an industry, developers start downloading the tools to build
+            those automation systems. We track both Python and JavaScript
+            package downloads as a leading indicator of where AI automation
+            is heading.
           </p>
         </div>
 
         <div>
           <h3 className="text-[14px] font-semibold text-[var(--foreground)] mb-1">
-            Package Tiers
+            What is the Automation Acceleration Index?
           </h3>
           <p>
-            <strong>Tier 1 (Infrastructure)</strong> includes core AI libraries
-            like openai, anthropic, and transformers &mdash; these track general
-            AI adoption.{" "}
-            <strong>Tier 2 (Automation Enablers)</strong> covers agent
-            frameworks, browser automation, and document processing tools.{" "}
-            <strong>Tier 3 (Domain-Specific)</strong> targets specific
-            industries like healthcare, data analysis, and creative work.
+            The AAI compares how fast industry-specific automation tools are
+            growing versus general AI infrastructure (like the OpenAI or
+            Anthropic SDKs). When the AAI is above 1.0, it means the tools
+            that automate specific jobs are growing faster than the underlying
+            AI platform &mdash; a signal that we&apos;re moving from
+            &ldquo;people using AI&rdquo; to &ldquo;AI doing the work.&rdquo;
           </p>
         </div>
 
         <div>
           <h3 className="text-[14px] font-semibold text-[var(--foreground)] mb-1">
-            Breakout Detection
+            What counts as &ldquo;surging&rdquo;?
           </h3>
           <p>
-            A package is flagged as a &ldquo;breakout&rdquo; if it shows 3 or
-            more consecutive months of &gt;20% month-over-month growth, or if
-            its recent 3-month average growth rate has at least doubled compared
-            to the prior quarter.
+            A tool gets flagged as surging if it shows 3 or more consecutive
+            months of greater than 20% month-over-month growth, or if its recent
+            growth rate has at least doubled compared to the prior quarter.
+            These are the tools gaining adoption fastest &mdash; and the
+            industries they serve are worth watching.
           </p>
         </div>
 
         <div>
           <h3 className="text-[14px] font-semibold text-[var(--foreground)] mb-1">
-            Important Caveats
+            Important caveats
           </h3>
           <p>
-            PyPI downloads &ne; production usage. CI/CD pipelines, Docker
-            builds, and dependency resolution inflate counts. The signal is in
-            relative growth rates, not absolute numbers. New packages with small
-            bases can show extreme growth percentages. This is a leading
-            indicator, not a direct measure of job displacement.
+            Package downloads do not equal production use. CI/CD pipelines,
+            Docker builds, and dependency resolution inflate counts. The signal
+            is in the relative growth rates across industries, not the absolute
+            numbers. New tools with small user bases can show extreme growth
+            percentages. And correlation is not causation &mdash; rising tool
+            adoption doesn&apos;t prove job displacement, but it does indicate
+            where investment and capability are concentrating.
           </p>
         </div>
       </div>
 
       <div className="mt-6 pt-4 border-t border-black/[0.04] text-[11px] text-[var(--muted)]">
         <p>
-          Data source:{" "}
+          Data sources:{" "}
           <a
             href="https://pypistats.org"
             target="_blank"
@@ -73,12 +76,25 @@ export default function MethodologyNote() {
           >
             pypistats.org
           </a>{" "}
-          (last 180 days of daily download data, excluding mirrors). Historical
-          backfill available via Google BigQuery&apos;s{" "}
-          <code className="text-[10px] bg-black/[0.04] px-1 py-0.5 rounded">
-            bigquery-public-data.pypi.file_downloads
-          </code>{" "}
-          dataset. Updated monthly.
+          (Python packages),{" "}
+          <a
+            href="https://www.npmjs.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--accent)] hover:underline"
+          >
+            npm registry
+          </a>{" "}
+          (JavaScript packages),{" "}
+          <a
+            href="https://www.bls.gov/ces/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--accent)] hover:underline"
+          >
+            Bureau of Labor Statistics CES
+          </a>{" "}
+          (employment data). Updated monthly.
         </p>
       </div>
     </section>

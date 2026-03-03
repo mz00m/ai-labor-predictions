@@ -10,9 +10,9 @@
     "digest": "tsx scripts/generate-digest.ts",
     "digest:14": "tsx scripts/generate-digest.ts --days 14",
     "ingest": "tsx scripts/ingest-source.ts",
-    "pypi:fetch": "python3 scripts/pypi/fetch_pypistats.py",
-    "pypi:calc": "python3 scripts/pypi/calculate_metrics.py",
-    "pypi:update": "python3 scripts/pypi/fetch_pypistats.py && python3 scripts/pypi/calculate_metrics.py"
+    "signals:fetch": "python3 scripts/signals/fetch_all.py",
+    "signals:calc": "python3 scripts/signals/calculate_metrics.py",
+    "signals:update": "python3 scripts/signals/fetch_all.py"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.78.0",

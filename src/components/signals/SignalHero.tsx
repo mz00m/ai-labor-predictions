@@ -1,6 +1,6 @@
 "use client";
 
-import type { SignalMetrics } from "@/lib/pypi-types";
+import type { SignalMetrics, IndustryMetrics } from "@/lib/signal-types";
 
 interface SignalHeroProps {
   metrics: SignalMetrics;
@@ -21,9 +21,20 @@ const TREND_CONFIG = {
   decelerating: { label: "Decelerating", arrow: "\u2193", color: "#dc2626" },
 };
 
+function getTopIndustries(industries: IndustryMetrics[]): IndustryMetrics[] {
+  return [...industries]
+    .filter((i) => i.toolGrowth3m > 0)
+    .sort((a, b) => b.toolGrowth3m - a.toolGrowth3m)
+    .slice(0, 3);
+}
+
 export default function SignalHero({ metrics }: SignalHeroProps) {
   const trend = TREND_CONFIG[metrics.aaiTrend];
-  const breakoutCount = metrics.breakoutPackages.length;
+  const surgingCount = metrics.surgingPackages.length;
+  const topIndustries = getTopIndustries(metrics.industries);
+
+  const pypiCount = metrics.packages.filter((p) => p.source === "pypi").length;
+  const npmCount = metrics.packages.filter((p) => p.source === "npm").length;
 
   return (
     <div className="relative overflow-hidden -mx-6 sm:-mx-10 px-6 sm:px-10 pt-1 pb-6 sm:pt-2 sm:pb-8">
@@ -56,7 +67,7 @@ export default function SignalHero({ metrics }: SignalHeroProps) {
 
       <div className="relative">
         <p className="text-[13px] font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
-          PyPI Labor Signal Index
+          AI Automation Signals
           <span className="opacity-50 mx-1">&middot;</span>
           <span className="normal-case font-semibold opacity-70">
             Updated {formatDate(metrics.calculatedAt)}
@@ -64,15 +75,16 @@ export default function SignalHero({ metrics }: SignalHeroProps) {
         </p>
 
         <h1 className="text-[42px] sm:text-[56px] font-black tracking-tight text-[var(--foreground)] leading-[1.05] max-w-4xl">
-          Automation Acceleration{" "}
-          <span className="text-[#F66B5C] italic">Index</span>
+          Where is AI automation{" "}
+          <span className="text-[#F66B5C] italic">heading?</span>
         </h1>
 
         <p className="mt-4 text-[17px] text-[var(--muted)] leading-relaxed max-w-2xl">
-          Tracking where AI automation investment is flowing by monitoring
-          open-source package adoption. When automation-focused libraries grow
-          faster than general AI infrastructure, it signals the shift from
-          augmentation to automation.
+          Think of this page like construction permits for AI automation.
+          Before a building goes up, permits spike. Before AI replaces tasks
+          in an industry, developers start downloading the tools to build
+          those systems. We track {metrics.totalToolCount} automation tools
+          across {metrics.industries.length} industries.
         </p>
 
         {/* AAI Big Number + Stats */}
@@ -80,7 +92,7 @@ export default function SignalHero({ metrics }: SignalHeroProps) {
           {/* AAI */}
           <div>
             <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-[var(--muted)] mb-1">
-              Current AAI
+              Automation Acceleration Index
             </p>
             <div className="flex items-baseline gap-3">
               <span className="text-[48px] sm:text-[64px] font-black tracking-tight text-[var(--foreground)] leading-none stat-number">
@@ -94,7 +106,7 @@ export default function SignalHero({ metrics }: SignalHeroProps) {
               </span>
             </div>
             <p className="text-[12px] text-[var(--muted)] mt-1">
-              Ratio of automation package growth to AI infrastructure growth
+              Above 1.0 = automation tools growing faster than general AI
             </p>
           </div>
 
@@ -102,32 +114,70 @@ export default function SignalHero({ metrics }: SignalHeroProps) {
           <div className="flex gap-6 sm:gap-8">
             <div>
               <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-[var(--muted)] mb-1">
-                Packages Tracked
+                Tools Tracked
               </p>
               <p className="text-[28px] font-black text-[var(--foreground)] stat-number">
-                {metrics.packages.length}
+                {metrics.totalToolCount}
+              </p>
+              <p className="text-[10px] text-[var(--muted)]">
+                {pypiCount} Python + {npmCount} JavaScript
               </p>
             </div>
             <div>
               <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-[var(--muted)] mb-1">
-                Domains
+                Industries
               </p>
               <p className="text-[28px] font-black text-[var(--foreground)] stat-number">
-                {metrics.domains.length}
+                {metrics.industries.length}
               </p>
             </div>
-            {breakoutCount > 0 && (
+            {surgingCount > 0 && (
               <div>
                 <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-[var(--muted)] mb-1">
-                  Breakouts
+                  Surging
                 </p>
                 <p className="text-[28px] font-black text-[#dc2626] stat-number">
-                  {breakoutCount}
+                  {surgingCount}
                 </p>
               </div>
             )}
           </div>
         </div>
+
+        {/* Industries to Watch */}
+        {topIndustries.length > 0 && (
+          <div className="mt-8 p-4 rounded-xl bg-black/[0.02] border border-black/[0.05]">
+            <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-[var(--muted)] mb-3">
+              Industries to Watch
+            </p>
+            <div className="flex flex-wrap gap-3">
+              {topIndustries.map((ind) => (
+                <div
+                  key={ind.industry}
+                  className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white border border-black/[0.06]"
+                >
+                  <span
+                    className="w-2.5 h-2.5 rounded-full shrink-0"
+                    style={{ backgroundColor: ind.color }}
+                  />
+                  <div>
+                    <span className="text-[13px] font-semibold text-[var(--foreground)]">
+                      {ind.label}
+                    </span>
+                    <span className="text-[12px] text-[var(--muted)] ml-2">
+                      +{(ind.toolGrowth3m * 100).toFixed(0)}% tool growth
+                    </span>
+                    {ind.surgingCount > 0 && (
+                      <span className="text-[10px] text-[#d97706] ml-1.5">
+                        ({ind.surgingCount} surging)
+                      </span>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

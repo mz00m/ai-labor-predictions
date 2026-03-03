@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 2,
+  "industries": {
+    "software_it": {
+      "label": "Software & IT",
+      "icon": "monitor",
+      "color": "#5C61F6",
+      "explainer": "When AI coding assistants and agent frameworks surge, it signals that the tools developers use daily are becoming more autonomous. Research from Stanford and ADP shows that entry-level software developer roles contracted between late 2022 and mid-2025, while demand for senior developers remained stable or grew. These tools amplify experienced developers while reducing demand for junior ones.",
+      "blsSeries": [
+        { "id": "CEU5051200001", "name": "Software publishers" },
+        { "id": "CEU6054151001", "name": "Computer systems design" },
+        { "id": "CEU5051800001", "name": "Computing infrastructure & data processing" }
+      ]
+    },
+    "legal": {
+      "label": "Legal & Compliance",
+      "icon": "scale",
+      "color": "#dc2626",
+      "explainer": "These tools convert stacks of documents into structured data that AI can analyze. When adoption accelerates, it means companies are building systems to automate document review, contract analysis, regulatory compliance checks, and due diligence — tasks currently done by paralegals, junior associates, and compliance staff. Harvey AI (a legal AI startup) has raised $300M+, signaling major venture capital conviction that these workflows will be automated.",
+      "blsSeries": [
+        { "id": "CEU6554110001", "name": "Legal services" }
+      ]
+    },
+    "finance": {
+      "label": "Finance & Insurance",
+      "icon": "banknote",
+      "color": "#16a34a",
+      "explainer": "Financial services runs on documents — loan applications, insurance claims, regulatory filings, tax returns. When AI document processing tools accelerate, it signals automation of the workflows that employ millions of back-office workers in banking, insurance, and accounting. J.P. Morgan research found a mildly negative correlation between AI usage and employment trends in financial services subsectors.",
+      "blsSeries": [
+        { "id": "CEU5552000001", "name": "Finance and insurance" },
+        { "id": "CEU5552410001", "name": "Insurance carriers" },
+        { "id": "CEU5552300001", "name": "Securities & investments" },
+        { "id": "CEU5552100001", "name": "Credit intermediation" }
+      ]
+    },
+    "healthcare": {
+      "label": "Healthcare",
+      "icon": "heart-pulse",
+      "color": "#0891b2",
+      "explainer": "Healthcare AI tools are growing slowly compared to other industries. This makes sense — healthcare has high regulatory barriers (HIPAA, FDA), requires clinical validation, and stakes are literally life and death. The slow signal here suggests healthcare workers face less near-term automation pressure from open-source AI tools. However, proprietary tools (like ambient clinical documentation from Abridge or Nuance/DAX) are growing fast — they just don't show up in this open-source data.",
+      "blsSeries": [
+        { "id": "CEU6562000001", "name": "Health care" },
+        { "id": "CEU6562100001", "name": "Ambulatory health care" },
+        { "id": "CEU6562200001", "name": "Hospitals" }
+      ]
+    },
+    "creative": {
+      "label": "Creative & Media",
+      "icon": "palette",
+      "color": "#d97706",
+      "explainer": "AI image generation had explosive growth in 2022-2023 but has recently stabilized (diffusers actually declined recently). Meanwhile, speech-to-text tools continue growing steadily. The creative industry signal is nuanced: the initial wave of AI image generation disrupted stock photography and simple illustration, but more complex creative work has been harder to automate. The stabilization in image generation tools may reflect market maturation rather than declining impact.",
+      "blsSeries": [
+        { "id": "CEU6054140001", "name": "Specialized design services" },
+        { "id": "CEU5051210001", "name": "Software publishers (creative)" },
+        { "id": "CEU5051913001", "name": "Internet publishing & broadcasting" }
+      ]
+    },
+    "office": {
+      "label": "Office & Administrative",
+      "icon": "building",
+      "color": "#7c3aed",
+      "explainer": "These are the broadest signals — general-purpose AI agents and automation tools that can be applied to any office workflow. When browser automation (browser-use) or multi-agent frameworks (crewai) surge, it signals that developers are building tools to replace repetitive tasks across all administrative functions. This is the category most aligned with the \"AI is coming for white-collar work\" narrative, and the one where employment data is most worth watching.",
+      "blsSeries": [
+        { "id": "CEU6056100001", "name": "Administrative & support services" },
+        { "id": "CEU6056130001", "name": "Employment services" },
+        { "id": "CEU6554160001", "name": "Management & technical consulting" }
+      ]
+    }
+  },
+  "packages": [
+    { "name": "openai", "source": "pypi", "tier": "tier1", "industries": [], "label": "OpenAI API client" },
+    { "name": "anthropic", "source": "pypi", "tier": "tier1", "industries": [], "label": "Anthropic API client" },
+    { "name": "langchain", "source": "pypi", "tier": "tier1", "industries": [], "label": "LLM application framework" },
+    { "name": "langchain-core", "source": "pypi", "tier": "tier1", "industries": [], "label": "LangChain core primitives" },
+    { "name": "transformers", "source": "pypi", "tier": "tier1", "industries": [], "label": "HuggingFace model hub" },
+    { "name": "openai-npm", "source": "npm", "tier": "tier1", "industries": [], "label": "OpenAI JavaScript client", "npmName": "openai" },
+    { "name": "@anthropic-ai/sdk", "source": "npm", "tier": "tier1", "industries": [], "label": "Anthropic JavaScript client" },
+
+    { "name": "aider-chat", "source": "pypi", "tier": "tier2", "industries": ["software_it"], "label": "AI that writes code alongside developers" },
+    { "name": "browser-use", "source": "pypi", "tier": "tier2", "industries": ["software_it", "office"], "label": "AI that operates web browsers like a person would" },
+    { "name": "crewai", "source": "pypi", "tier": "tier2", "industries": ["software_it", "office"], "label": "Framework for teams of AI agents working together" },
+    { "name": "autogen", "source": "pypi", "tier": "tier2", "industries": ["software_it"], "label": "Microsoft's AI agent coordination framework" },
+    { "name": "pyautogen", "source": "pypi", "tier": "tier2", "industries": ["software_it"], "label": "Microsoft AutoGen (alternate package)" },
+    { "name": "smolagents", "source": "pypi", "tier": "tier2", "industries": ["software_it"], "label": "Lightweight AI task automation" },
+    { "name": "ai", "source": "npm", "tier": "tier2", "industries": ["software_it", "office"], "label": "The leading framework for adding AI to web apps" },
+    { "name": "@ai-sdk/openai", "source": "npm", "tier": "tier2", "industries": ["software_it"], "label": "Connects Vercel AI SDK to OpenAI" },
+    { "name": "@ai-sdk/anthropic", "source": "npm", "tier": "tier2", "industries": ["software_it"], "label": "Connects Vercel AI SDK to Anthropic" },
+    { "name": "@modelcontextprotocol/sdk", "source": "npm", "tier": "tier2", "industries": ["software_it"], "label": "MCP — the emerging standard for AI tool integration" },
+
+    { "name": "docling", "source": "pypi", "tier": "tier2", "industries": ["legal"], "label": "Converts legal documents and filings into AI-readable data" },
+    { "name": "marker-pdf", "source": "pypi", "tier": "tier2", "industries": ["legal"], "label": "Extracts text and structure from PDFs" },
+    { "name": "unstructured", "source": "pypi", "tier": "tier2", "industries": ["legal", "finance", "office"], "label": "Turns any document into AI-ready data" },
+    { "name": "pypdf", "source": "pypi", "tier": "tier2", "industries": ["legal", "finance"], "label": "PDF processing library widely used in legal tech" },
+    { "name": "llamaindex", "source": "npm", "tier": "tier2", "industries": ["legal"], "label": "AI that answers questions about documents" },
+    { "name": "@langchain/core", "source": "npm", "tier": "tier2", "industries": ["legal", "finance", "office"], "label": "Building blocks for AI document processing" },
+    { "name": "@langchain/openai", "source": "npm", "tier": "tier2", "industries": ["finance", "office"], "label": "OpenAI integration for document workflows" },
+
+    { "name": "pandasai", "source": "pypi", "tier": "tier2", "industries": ["finance"], "label": "AI that analyzes spreadsheets and financial data conversationally" },
+    { "name": "dataprep", "source": "pypi", "tier": "tier2", "industries": ["finance"], "label": "Automated data cleaning and preparation" },
+    { "name": "llama-index", "source": "pypi", "tier": "tier2", "industries": ["finance", "office"], "label": "AI-powered search across document collections" },
+    { "name": "chromadb", "source": "pypi", "tier": "tier2", "industries": ["finance"], "label": "Database for AI search across thousands of documents" },
+
+    { "name": "medspacy", "source": "pypi", "tier": "tier2", "industries": ["healthcare"], "label": "AI for reading medical records and clinical notes" },
+    { "name": "scispacy", "source": "pypi", "tier": "tier2", "industries": ["healthcare"], "label": "AI for processing biomedical research and drug info" },
+
+    { "name": "diffusers", "source": "pypi", "tier": "tier2", "industries": ["creative"], "label": "The main framework for AI image generation" },
+    { "name": "replicate", "source": "pypi", "tier": "tier2", "industries": ["creative"], "label": "Platform for running AI image and video models" },
+    { "name": "stability-sdk", "source": "pypi", "tier": "tier2", "industries": ["creative"], "label": "Stability AI image generation tools" },
+    { "name": "faster-whisper", "source": "pypi", "tier": "tier2", "industries": ["creative"], "label": "Fast speech-to-text transcription" },
+    { "name": "openai-whisper", "source": "pypi", "tier": "tier2", "industries": ["creative"], "label": "OpenAI's speech recognition model" },
+    { "name": "replicate-npm", "source": "npm", "tier": "tier2", "industries": ["creative"], "label": "JavaScript client for AI image/video generation", "npmName": "replicate" }
+  ]
+}

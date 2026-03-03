@@ -1,0 +1,1029 @@
+{
+  "calculatedAt": "2026-03-03T00:45:29Z",
+  "currentAAI": 0.933,
+  "aaiTrend": "accelerating",
+  "aaiHistory": [
+    {
+      "month": "2024-11",
+      "aai": 10.0,
+      "tier2AvgGrowth": 0.0825,
+      "tier1AvgGrowth": -0.0381
+    },
+    {
+      "month": "2024-12",
+      "aai": 10.0,
+      "tier2AvgGrowth": 0.8291,
+      "tier1AvgGrowth": -0.0028
+    },
+    {
+      "month": "2025-01",
+      "aai": 1.502,
+      "tier2AvgGrowth": 0.3155,
+      "tier1AvgGrowth": 0.21
+    },
+    {
+      "month": "2025-02",
+      "aai": 1.499,
+      "tier2AvgGrowth": 0.266,
+      "tier1AvgGrowth": 0.1774
+    },
+    {
+      "month": "2025-03",
+      "aai": 3.597,
+      "tier2AvgGrowth": 0.6377,
+      "tier1AvgGrowth": 0.1773
+    },
+    {
+      "month": "2025-04",
+      "aai": 2.436,
+      "tier2AvgGrowth": 0.2465,
+      "tier1AvgGrowth": 0.1012
+    },
+    {
+      "month": "2025-05",
+      "aai": 5.552,
+      "tier2AvgGrowth": 0.6562,
+      "tier1AvgGrowth": 0.1182
+    },
+    {
+      "month": "2025-06",
+      "aai": 0.405,
+      "tier2AvgGrowth": 0.0828,
+      "tier1AvgGrowth": 0.2047
+    },
+    {
+      "month": "2025-07",
+      "aai": 1.106,
+      "tier2AvgGrowth": 0.1479,
+      "tier1AvgGrowth": 0.1338
+    },
+    {
+      "month": "2025-08",
+      "aai": 0.674,
+      "tier2AvgGrowth": 0.0859,
+      "tier1AvgGrowth": 0.1273
+    },
+    {
+      "month": "2025-09",
+      "aai": 2.358,
+      "tier2AvgGrowth": 0.1458,
+      "tier1AvgGrowth": 0.0618
+    },
+    {
+      "month": "2025-10",
+      "aai": 0.886,
+      "tier2AvgGrowth": 0.1188,
+      "tier1AvgGrowth": 0.1341
+    },
+    {
+      "month": "2025-11",
+      "aai": 0.229,
+      "tier2AvgGrowth": 0.0107,
+      "tier1AvgGrowth": 0.0467
+    },
+    {
+      "month": "2025-12",
+      "aai": 0.331,
+      "tier2AvgGrowth": 0.0184,
+      "tier1AvgGrowth": 0.0557
+    },
+    {
+      "month": "2026-01",
+      "aai": 0.939,
+      "tier2AvgGrowth": 0.179,
+      "tier1AvgGrowth": 0.1905
+    },
+    {
+      "month": "2026-02",
+      "aai": 0.933,
+      "tier2AvgGrowth": 0.201,
+      "tier1AvgGrowth": 0.2156
+    }
+  ],
+  "industries": [
+    {
+      "industry": "software_it",
+      "label": "Software & IT",
+      "color": "#5C61F6",
+      "toolGrowth3m": 0.2069,
+      "employmentChangeSinceNov2022": -0.1493,
+      "employmentChangeYoY": -0.0202,
+      "toolCount": 10,
+      "surgingCount": 5,
+      "packages": [
+        "aider-chat",
+        "browser-use",
+        "crewai",
+        "autogen",
+        "pyautogen",
+        "smolagents",
+        "ai",
+        "@ai-sdk/openai",
+        "@ai-sdk/anthropic",
+        "@modelcontextprotocol/sdk"
+      ]
+    },
+    {
+      "industry": "legal",
+      "label": "Legal & Compliance",
+      "color": "#dc2626",
+      "toolGrowth3m": 0.1665,
+      "employmentChangeSinceNov2022": null,
+      "employmentChangeYoY": null,
+      "toolCount": 6,
+      "surgingCount": 1,
+      "packages": [
+        "docling",
+        "marker-pdf",
+        "unstructured",
+        "pypdf",
+        "llamaindex",
+        "@langchain/core"
+      ]
+    },
+    {
+      "industry": "office",
+      "label": "Office & Administrative",
+      "color": "#7c3aed",
+      "toolGrowth3m": 0.1524,
+      "employmentChangeSinceNov2022": -0.1725,
+      "employmentChangeYoY": -0.0136,
+      "toolCount": 7,
+      "surgingCount": 3,
+      "packages": [
+        "browser-use",
+        "crewai",
+        "ai",
+        "unstructured",
+        "@langchain/core",
+        "@langchain/openai",
+        "llama-index"
+      ]
+    },
+    {
+      "industry": "creative",
+      "label": "Creative & Media",
+      "color": "#d97706",
+      "toolGrowth3m": 0.0884,
+      "employmentChangeSinceNov2022": -0.0368,
+      "employmentChangeYoY": -0.0061,
+      "toolCount": 6,
+      "surgingCount": 1,
+      "packages": [
+        "diffusers",
+        "replicate",
+        "stability-sdk",
+        "faster-whisper",
+        "openai-whisper",
+        "replicate-npm"
+      ]
+    },
+    {
+      "industry": "finance",
+      "label": "Finance & Insurance",
+      "color": "#16a34a",
+      "toolGrowth3m": 0.0546,
+      "employmentChangeSinceNov2022": -0.0008,
+      "employmentChangeYoY": -0.0106,
+      "toolCount": 8,
+      "surgingCount": 1,
+      "packages": [
+        "unstructured",
+        "pypdf",
+        "@langchain/core",
+        "@langchain/openai",
+        "pandasai",
+        "dataprep",
+        "llama-index",
+        "chromadb"
+      ]
+    },
+    {
+      "industry": "healthcare",
+      "label": "Healthcare",
+      "color": "#0891b2",
+      "toolGrowth3m": 0.0284,
+      "employmentChangeSinceNov2022": 0.1062,
+      "employmentChangeYoY": 0.0278,
+      "toolCount": 2,
+      "surgingCount": 0,
+      "packages": [
+        "medspacy",
+        "scispacy"
+      ]
+    }
+  ],
+  "packages": [
+    {
+      "package": "openai",
+      "source": "pypi",
+      "tier": "tier1",
+      "industries": [],
+      "label": "OpenAI API client",
+      "latestMonthlyDownloads": 168184674,
+      "momGrowth": 0.2017,
+      "rollingAvg3mGrowth": 0.0923,
+      "rollingAvg6mGrowth": 0.0988,
+      "isSurging": false,
+      "sparkline": [
+        106918934,
+        129619290,
+        130212629,
+        129568626,
+        139951736,
+        168184674
+      ]
+    },
+    {
+      "package": "anthropic",
+      "source": "pypi",
+      "tier": "tier1",
+      "industries": [],
+      "label": "Anthropic API client",
+      "latestMonthlyDownloads": 52518902,
+      "momGrowth": 0.3076,
+      "rollingAvg3mGrowth": 0.1965,
+      "rollingAvg6mGrowth": 0.1528,
+      "isSurging": false,
+      "sparkline": [
+        26232706,
+        30526670,
+        30859896,
+        34863493,
+        40163314,
+        52518902
+      ]
+    },
+    {
+      "package": "langchain",
+      "source": "pypi",
+      "tier": "tier1",
+      "industries": [],
+      "label": "LLM application framework",
+      "latestMonthlyDownloads": 207375245,
+      "momGrowth": 0.2867,
+      "rollingAvg3mGrowth": 0.3206,
+      "rollingAvg6mGrowth": 0.2339,
+      "isSurging": false,
+      "sparkline": [
+        77084030,
+        86330829,
+        93895536,
+        100283076,
+        161171268,
+        207375245
+      ]
+    },
+    {
+      "package": "langchain-core",
+      "source": "pypi",
+      "tier": "tier1",
+      "industries": [],
+      "label": "LangChain core primitives",
+      "latestMonthlyDownloads": 84374597,
+      "momGrowth": 0.073,
+      "rollingAvg3mGrowth": 0.0472,
+      "rollingAvg6mGrowth": 0.0647,
+      "isSurging": false,
+      "sparkline": [
+        62071674,
+        71964526,
+        73577266,
+        73624136,
+        78631959,
+        84374597
+      ]
+    },
+    {
+      "package": "transformers",
+      "source": "pypi",
+      "tier": "tier1",
+      "industries": [],
+      "label": "HuggingFace model hub",
+      "latestMonthlyDownloads": 106402430,
+      "momGrowth": 0.0573,
+      "rollingAvg3mGrowth": -0.0163,
+      "rollingAvg6mGrowth": 0.0241,
+      "isSurging": false,
+      "sparkline": [
+        96039666,
+        98566222,
+        112695381,
+        113380690,
+        100637248,
+        106402430
+      ]
+    },
+    {
+      "package": "openai-npm",
+      "source": "npm",
+      "tier": "tier1",
+      "industries": [],
+      "label": "OpenAI JavaScript client",
+      "latestMonthlyDownloads": 50093720,
+      "momGrowth": 0.1862,
+      "rollingAvg3mGrowth": 0.167,
+      "rollingAvg6mGrowth": 0.1156,
+      "isSurging": true,
+      "sparkline": [
+        28571807,
+        32838066,
+        31705142,
+        33952403,
+        42229601,
+        50093720
+      ],
+      "surgingReason": "Growth rate doubled: 17% vs prior 6%"
+    },
+    {
+      "package": "@anthropic-ai/sdk",
+      "source": "npm",
+      "tier": "tier1",
+      "industries": [],
+      "label": "Anthropic JavaScript client",
+      "latestMonthlyDownloads": 24055363,
+      "momGrowth": 0.3964,
+      "rollingAvg3mGrowth": 0.2703,
+      "rollingAvg6mGrowth": 0.1762,
+      "isSurging": true,
+      "sparkline": [
+        9816552,
+        10874996,
+        11884122,
+        13301274,
+        17226666,
+        24055363
+      ],
+      "surgingReason": "Growth rate doubled: 27% vs prior 8%"
+    },
+    {
+      "package": "aider-chat",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "software_it"
+      ],
+      "label": "AI that writes code alongside developers",
+      "latestMonthlyDownloads": 607342,
+      "momGrowth": 0.4557,
+      "rollingAvg3mGrowth": 0.4055,
+      "rollingAvg6mGrowth": 0.2738,
+      "isSurging": false,
+      "sparkline": [
+        218420,
+        225815,
+        252552,
+        221453,
+        417229,
+        607342
+      ]
+    },
+    {
+      "package": "browser-use",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "software_it",
+        "office"
+      ],
+      "label": "AI that operates web browsers like a person would",
+      "latestMonthlyDownloads": 3027849,
+      "momGrowth": 0.5366,
+      "rollingAvg3mGrowth": 0.3229,
+      "rollingAvg6mGrowth": 0.2027,
+      "isSurging": true,
+      "sparkline": [
+        1274806,
+        1319816,
+        1332640,
+        1610588,
+        1970483,
+        3027849
+      ],
+      "surgingReason": "3+ consecutive months of >20% growth"
+    },
+    {
+      "package": "crewai",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "software_it",
+        "office"
+      ],
+      "label": "Framework for teams of AI agents working together",
+      "latestMonthlyDownloads": 4794228,
+      "momGrowth": 0.3827,
+      "rollingAvg3mGrowth": 0.2526,
+      "rollingAvg6mGrowth": 0.2329,
+      "isSurging": false,
+      "sparkline": [
+        1706491,
+        2079763,
+        2470565,
+        2729794,
+        3467322,
+        4794228
+      ]
+    },
+    {
+      "package": "autogen",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "software_it"
+      ],
+      "label": "Microsoft's AI agent coordination framework",
+      "latestMonthlyDownloads": 153718,
+      "momGrowth": 0.1162,
+      "rollingAvg3mGrowth": 0.0095,
+      "rollingAvg6mGrowth": 0.0077,
+      "isSurging": false,
+      "sparkline": [
+        152792,
+        169971,
+        152543,
+        162109,
+        137714,
+        153718
+      ]
+    },
+    {
+      "package": "pyautogen",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "software_it"
+      ],
+      "label": "Microsoft AutoGen (alternate package)",
+      "latestMonthlyDownloads": 347843,
+      "momGrowth": 0.0247,
+      "rollingAvg3mGrowth": -0.0071,
+      "rollingAvg6mGrowth": -0.0109,
+      "isSurging": false,
+      "sparkline": [
+        379742,
+        355779,
+        366437,
+        419621,
+        339451,
+        347843
+      ]
+    },
+    {
+      "package": "smolagents",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "software_it"
+      ],
+      "label": "Lightweight AI task automation",
+      "latestMonthlyDownloads": 392793,
+      "momGrowth": 0.2929,
+      "rollingAvg3mGrowth": 0.0551,
+      "rollingAvg6mGrowth": 0.0793,
+      "isSurging": false,
+      "sparkline": [
+        280788,
+        286604,
+        346857,
+        316321,
+        303798,
+        392793
+      ]
+    },
+    {
+      "package": "ai",
+      "source": "npm",
+      "tier": "tier2",
+      "industries": [
+        "software_it",
+        "office"
+      ],
+      "label": "The leading framework for adding AI to web apps",
+      "latestMonthlyDownloads": 31880725,
+      "momGrowth": 0.2237,
+      "rollingAvg3mGrowth": 0.1738,
+      "rollingAvg6mGrowth": 0.2208,
+      "isSurging": true,
+      "sparkline": [
+        12166333,
+        17214554,
+        19965492,
+        20497387,
+        26052688,
+        31880725
+      ],
+      "surgingReason": "3+ consecutive months of >20% growth"
+    },
+    {
+      "package": "@ai-sdk/openai",
+      "source": "npm",
+      "tier": "tier2",
+      "industries": [
+        "software_it"
+      ],
+      "label": "Connects Vercel AI SDK to OpenAI",
+      "latestMonthlyDownloads": 16003574,
+      "momGrowth": 0.1985,
+      "rollingAvg3mGrowth": 0.2375,
+      "rollingAvg6mGrowth": 0.1859,
+      "isSurging": true,
+      "sparkline": [
+        6715072,
+        7986452,
+        8518754,
+        9750336,
+        13353114,
+        16003574
+      ],
+      "surgingReason": "3+ consecutive months of >20% growth"
+    },
+    {
+      "package": "@ai-sdk/anthropic",
+      "source": "npm",
+      "tier": "tier2",
+      "industries": [
+        "software_it"
+      ],
+      "label": "Connects Vercel AI SDK to Anthropic",
+      "latestMonthlyDownloads": 12927302,
+      "momGrowth": 0.3357,
+      "rollingAvg3mGrowth": 0.3419,
+      "rollingAvg6mGrowth": 0.291,
+      "isSurging": true,
+      "sparkline": [
+        3670686,
+        4528819,
+        5432466,
+        6403902,
+        9678497,
+        12927302
+      ],
+      "surgingReason": "3+ consecutive months of >20% growth"
+    },
+    {
+      "package": "@modelcontextprotocol/sdk",
+      "source": "npm",
+      "tier": "tier2",
+      "industries": [
+        "software_it"
+      ],
+      "label": "MCP \u2014 the emerging standard for AI tool integration",
+      "latestMonthlyDownloads": 71656771,
+      "momGrowth": 0.426,
+      "rollingAvg3mGrowth": 0.2769,
+      "rollingAvg6mGrowth": 0.2028,
+      "isSurging": true,
+      "sparkline": [
+        31258519,
+        31805028,
+        35008987,
+        38516712,
+        50249918,
+        71656771
+      ],
+      "surgingReason": "3+ consecutive months of >20% growth"
+    },
+    {
+      "package": "docling",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "legal"
+      ],
+      "label": "Converts legal documents and filings into AI-readable data",
+      "latestMonthlyDownloads": 4135817,
+      "momGrowth": 0.593,
+      "rollingAvg3mGrowth": 0.323,
+      "rollingAvg6mGrowth": 0.2827,
+      "isSurging": false,
+      "sparkline": [
+        1368505,
+        1615515,
+        2041789,
+        1662426,
+        2596323,
+        4135817
+      ]
+    },
+    {
+      "package": "marker-pdf",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "legal"
+      ],
+      "label": "Extracts text and structure from PDFs",
+      "latestMonthlyDownloads": 239217,
+      "momGrowth": 0.1464,
+      "rollingAvg3mGrowth": 0.1579,
+      "rollingAvg6mGrowth": 0.1143,
+      "isSurging": false,
+      "sparkline": [
+        143040,
+        171698,
+        154150,
+        176884,
+        208671,
+        239217
+      ]
+    },
+    {
+      "package": "unstructured",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "legal",
+        "finance",
+        "office"
+      ],
+      "label": "Turns any document into AI-ready data",
+      "latestMonthlyDownloads": 4292919,
+      "momGrowth": 0.1134,
+      "rollingAvg3mGrowth": 0.0644,
+      "rollingAvg6mGrowth": 0.0257,
+      "isSurging": false,
+      "sparkline": [
+        3902616,
+        4170583,
+        3613936,
+        3324457,
+        3855657,
+        4292919
+      ]
+    },
+    {
+      "package": "pypdf",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "legal",
+        "finance"
+      ],
+      "label": "PDF processing library widely used in legal tech",
+      "latestMonthlyDownloads": 32568064,
+      "momGrowth": 0.1716,
+      "rollingAvg3mGrowth": 0.0559,
+      "rollingAvg6mGrowth": 0.1076,
+      "isSurging": false,
+      "sparkline": [
+        19909203,
+        24276106,
+        27938541,
+        26905705,
+        27798931,
+        32568064
+      ]
+    },
+    {
+      "package": "llamaindex",
+      "source": "npm",
+      "tier": "tier2",
+      "industries": [
+        "legal"
+      ],
+      "label": "AI that answers questions about documents",
+      "latestMonthlyDownloads": 373339,
+      "momGrowth": 0.4941,
+      "rollingAvg3mGrowth": 0.2788,
+      "rollingAvg6mGrowth": 0.1533,
+      "isSurging": true,
+      "sparkline": [
+        190548,
+        196690,
+        186384,
+        185470,
+        249876,
+        373339
+      ],
+      "surgingReason": "Growth rate doubled: 28% vs prior 3%"
+    },
+    {
+      "package": "@langchain/core",
+      "source": "npm",
+      "tier": "tier2",
+      "industries": [
+        "legal",
+        "finance",
+        "office"
+      ],
+      "label": "Building blocks for AI document processing",
+      "latestMonthlyDownloads": 11307512,
+      "momGrowth": 0.0826,
+      "rollingAvg3mGrowth": 0.1192,
+      "rollingAvg6mGrowth": 0.0926,
+      "isSurging": false,
+      "sparkline": [
+        7132182,
+        7865850,
+        8097350,
+        8694254,
+        10445182,
+        11307512
+      ]
+    },
+    {
+      "package": "@langchain/openai",
+      "source": "npm",
+      "tier": "tier2",
+      "industries": [
+        "finance",
+        "office"
+      ],
+      "label": "OpenAI integration for document workflows",
+      "latestMonthlyDownloads": 8596302,
+      "momGrowth": 0.0838,
+      "rollingAvg3mGrowth": 0.0771,
+      "rollingAvg6mGrowth": 0.0564,
+      "isSurging": true,
+      "sparkline": [
+        6415521,
+        6886081,
+        6886137,
+        7161486,
+        7931467,
+        8596302
+      ],
+      "surgingReason": "Growth rate doubled: 8% vs prior 4%"
+    },
+    {
+      "package": "pandasai",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "finance"
+      ],
+      "label": "AI that analyzes spreadsheets and financial data conversationally",
+      "latestMonthlyDownloads": 286752,
+      "momGrowth": 0.3967,
+      "rollingAvg3mGrowth": 0.1081,
+      "rollingAvg6mGrowth": -0.0157,
+      "isSurging": false,
+      "sparkline": [
+        348428,
+        298142,
+        221000,
+        212574,
+        205308,
+        286752
+      ]
+    },
+    {
+      "package": "dataprep",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "finance"
+      ],
+      "label": "Automated data cleaning and preparation",
+      "latestMonthlyDownloads": 12438,
+      "momGrowth": -0.1682,
+      "rollingAvg3mGrowth": -0.1205,
+      "rollingAvg6mGrowth": -0.0945,
+      "isSurging": false,
+      "sparkline": [
+        22328,
+        15164,
+        18348,
+        15992,
+        14953,
+        12438
+      ]
+    },
+    {
+      "package": "llama-index",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "finance",
+        "office"
+      ],
+      "label": "AI-powered search across document collections",
+      "latestMonthlyDownloads": 8592754,
+      "momGrowth": 0.2644,
+      "rollingAvg3mGrowth": 0.057,
+      "rollingAvg6mGrowth": 0.1207,
+      "isSurging": false,
+      "sparkline": [
+        5216602,
+        7454768,
+        7483116,
+        6965656,
+        6795790,
+        8592754
+      ]
+    },
+    {
+      "package": "chromadb",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "finance"
+      ],
+      "label": "Database for AI search across thousands of documents",
+      "latestMonthlyDownloads": 11188322,
+      "momGrowth": 0.0843,
+      "rollingAvg3mGrowth": 0.0752,
+      "rollingAvg6mGrowth": 0.0921,
+      "isSurging": false,
+      "sparkline": [
+        7343259,
+        7556618,
+        9110763,
+        8685232,
+        10318057,
+        11188322
+      ]
+    },
+    {
+      "package": "medspacy",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "healthcare"
+      ],
+      "label": "AI for reading medical records and clinical notes",
+      "latestMonthlyDownloads": 6725,
+      "momGrowth": 0.0483,
+      "rollingAvg3mGrowth": 0.0224,
+      "rollingAvg6mGrowth": 0.0179,
+      "isSurging": false,
+      "sparkline": [
+        6718,
+        6085,
+        6793,
+        5001,
+        6415,
+        6725
+      ]
+    },
+    {
+      "package": "scispacy",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "healthcare"
+      ],
+      "label": "AI for processing biomedical research and drug info",
+      "latestMonthlyDownloads": 52541,
+      "momGrowth": 0.2161,
+      "rollingAvg3mGrowth": 0.0343,
+      "rollingAvg6mGrowth": 0.0451,
+      "isSurging": false,
+      "sparkline": [
+        44587,
+        44099,
+        49992,
+        55183,
+        43206,
+        52541
+      ]
+    },
+    {
+      "package": "diffusers",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "creative"
+      ],
+      "label": "The main framework for AI image generation",
+      "latestMonthlyDownloads": 6399540,
+      "momGrowth": -0.3298,
+      "rollingAvg3mGrowth": -0.0253,
+      "rollingAvg6mGrowth": 0.122,
+      "isSurging": false,
+      "sparkline": [
+        4545438,
+        7739319,
+        7609344,
+        7641497,
+        9549132,
+        6399540
+      ]
+    },
+    {
+      "package": "replicate",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "creative"
+      ],
+      "label": "Platform for running AI image and video models",
+      "latestMonthlyDownloads": 904230,
+      "momGrowth": 0.1287,
+      "rollingAvg3mGrowth": 0.0103,
+      "rollingAvg6mGrowth": 0.0096,
+      "isSurging": false,
+      "sparkline": [
+        884949,
+        861415,
+        899325,
+        750204,
+        801139,
+        904230
+      ]
+    },
+    {
+      "package": "stability-sdk",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "creative"
+      ],
+      "label": "Stability AI image generation tools",
+      "latestMonthlyDownloads": 26037,
+      "momGrowth": -0.045,
+      "rollingAvg3mGrowth": 0.0534,
+      "rollingAvg6mGrowth": -0.078,
+      "isSurging": false,
+      "sparkline": [
+        82682,
+        101408,
+        22651,
+        22487,
+        27263,
+        26037
+      ]
+    },
+    {
+      "package": "faster-whisper",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "creative"
+      ],
+      "label": "Fast speech-to-text transcription",
+      "latestMonthlyDownloads": 2780975,
+      "momGrowth": 0.2689,
+      "rollingAvg3mGrowth": 0.1606,
+      "rollingAvg6mGrowth": 0.132,
+      "isSurging": false,
+      "sparkline": [
+        1624765,
+        2237352,
+        1792069,
+        2047695,
+        2191686,
+        2780975
+      ]
+    },
+    {
+      "package": "openai-whisper",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "creative"
+      ],
+      "label": "OpenAI's speech recognition model",
+      "latestMonthlyDownloads": 1438235,
+      "momGrowth": 0.1794,
+      "rollingAvg3mGrowth": 0.1539,
+      "rollingAvg6mGrowth": 0.0612,
+      "isSurging": false,
+      "sparkline": [
+        1157994,
+        1298736,
+        938474,
+        1021468,
+        1219488,
+        1438235
+      ]
+    },
+    {
+      "package": "replicate-npm",
+      "source": "npm",
+      "tier": "tier2",
+      "industries": [
+        "creative"
+      ],
+      "label": "JavaScript client for AI image/video generation",
+      "latestMonthlyDownloads": 1315839,
+      "momGrowth": 0.1086,
+      "rollingAvg3mGrowth": 0.1774,
+      "rollingAvg6mGrowth": 0.1032,
+      "isSurging": true,
+      "sparkline": [
+        767660,
+        817602,
+        808318,
+        970672,
+        1186921,
+        1315839
+      ],
+      "surgingReason": "Growth rate doubled: 18% vs prior 3%"
+    }
+  ],
+  "surgingPackages": [
+    "openai-npm",
+    "@anthropic-ai/sdk",
+    "browser-use",
+    "ai",
+    "@ai-sdk/openai",
+    "@ai-sdk/anthropic",
+    "@modelcontextprotocol/sdk",
+    "llamaindex",
+    "@langchain/openai",
+    "replicate-npm"
+  ],
+  "totalToolCount": 29
+}

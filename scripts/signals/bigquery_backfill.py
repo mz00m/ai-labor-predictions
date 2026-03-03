@@ -18,7 +18,7 @@ Setup:
           pip install google-cloud-bigquery
 
 Usage:
-    python3 scripts/pypi/bigquery_backfill.py
+    python3 scripts/signals/bigquery_backfill.py
 
 Notes:
     - Each month of PyPI data is ~100GB to scan
@@ -30,7 +30,7 @@ Notes:
 
 import json
 import sys
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 try:
@@ -42,18 +42,17 @@ except ImportError:
     sys.exit(1)
 
 ROOT = Path(__file__).resolve().parent.parent.parent
-PACKAGES_PATH = ROOT / "src" / "data" / "pypi" / "packages.json"
-OUTPUT_PATH = ROOT / "src" / "data" / "pypi" / "monthly_downloads.json"
+TAXONOMY_PATH = ROOT / "src" / "data" / "signals" / "taxonomy.json"
+OUTPUT_PATH = ROOT / "src" / "data" / "signals" / "monthly_downloads.json"
 
 
-def load_package_list() -> list[str]:
-    with open(PACKAGES_PATH) as f:
+def load_pypi_packages() -> list[str]:
+    with open(TAXONOMY_PATH) as f:
         taxonomy = json.load(f)
-    return [p["name"] for p in taxonomy["packages"]]
+    return [p["name"] for p in taxonomy["packages"] if p["source"] == "pypi"]
 
 
 def build_query(packages: list[str], start_date: str = "2022-01-01") -> str:
-    """Build the BigQuery SQL query for monthly download aggregation."""
     package_list = ", ".join(f"'{p}'" for p in packages)
 
     return f"""
@@ -71,20 +70,21 @@ def build_query(packages: list[str], start_date: str = "2022-01-01") -> str:
 
 
 def merge_with_existing(bq_data: list[dict], existing_path: Path) -> dict:
-    """
-    Merge BigQuery historical data with existing pypistats data.
-    BigQuery is authoritative for older months; pypistats wins for recent months.
-    """
-    # Load existing data if it exists
-    existing: dict[str, dict[str, int]] = {}
+    """Merge BigQuery historical data with existing data (preserves npm entries too)."""
+    existing_pypi: dict[str, dict[str, int]] = {}
+    existing_npm: list[dict] = []
+
     if existing_path.exists():
         with open(existing_path) as f:
             existing_json = json.load(f)
         for pkg_data in existing_json.get("packages", []):
-            name = pkg_data["package"]
-            existing[name] = {d["month"]: d["downloads"] for d in pkg_data["data"]}
+            if pkg_data.get("source") == "npm":
+                existing_npm.append(pkg_data)
+            else:
+                name = pkg_data["package"]
+                existing_pypi[name] = {d["month"]: d["downloads"] for d in pkg_data["data"]}
 
-    # Build merged data: start with BigQuery, overlay existing (pypistats) for recent months
+    # Start with BigQuery data
     merged: dict[str, dict[str, int]] = {}
     for row in bq_data:
         name = row["package"]
@@ -94,30 +94,29 @@ def merge_with_existing(bq_data: list[dict], existing_path: Path) -> dict:
             merged[name] = {}
         merged[name][month] = downloads
 
-    # Overlay pypistats data for recent months (it's more accurate for recent data)
-    for name, months in existing.items():
+    # Overlay pypistats data for recent months
+    for name, months in existing_pypi.items():
         if name not in merged:
             merged[name] = {}
         for month, downloads in months.items():
-            # pypistats wins for the last 6 months
             merged[name][month] = downloads
 
-    # Format output
-    packages = []
+    # Format PyPI output
+    pypi_packages = []
     for name in sorted(merged.keys()):
         months = merged[name]
         data = [{"month": m, "downloads": d} for m, d in sorted(months.items())]
-        packages.append({"package": name, "data": data})
+        pypi_packages.append({"package": name, "source": "pypi", "data": data})
 
     return {
-        "fetchedAt": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "packages": packages,
+        "fetchedAt": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "packages": pypi_packages + existing_npm,
     }
 
 
 def main():
-    packages = load_package_list()
-    print(f"Querying BigQuery for {len(packages)} packages...")
+    packages = load_pypi_packages()
+    print(f"Querying BigQuery for {len(packages)} PyPI packages...")
 
     client = bigquery.Client()
     query = build_query(packages)
@@ -130,20 +129,17 @@ def main():
 
     print(f"Received {len(rows)} rows")
 
-    # Convert to list of dicts
     bq_data = [{"package": row.package, "month": row.month, "downloads": row.downloads} for row in rows]
 
-    # Merge with existing pypistats data
     output = merge_with_existing(bq_data, OUTPUT_PATH)
 
-    # Write output
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     with open(OUTPUT_PATH, "w") as f:
         json.dump(output, f, indent=2)
 
-    total_packages = len(output["packages"])
-    total_months = sum(len(p["data"]) for p in output["packages"])
-    print(f"\nWrote {total_packages} packages ({total_months} total data points) to {OUTPUT_PATH}")
+    total_packages = len([p for p in output["packages"] if p.get("source") != "npm"])
+    total_months = sum(len(p["data"]) for p in output["packages"] if p.get("source") != "npm")
+    print(f"\nWrote {total_packages} PyPI packages ({total_months} total data points) to {OUTPUT_PATH}")
 
 
 if __name__ == "__main__":

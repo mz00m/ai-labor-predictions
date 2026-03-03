@@ -1,13 +1,13 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "PyPI Labor Signal Index — Early Signals of AI Impact",
+  title: "AI Automation Signals — Where is AI Automation Heading?",
   description:
-    "Tracking AI automation acceleration through PyPI package download trends. The Automation Acceleration Index (AAI) measures how fast AI agent and automation libraries are growing relative to foundational AI packages.",
+    "Track AI automation acceleration across 6 industries by monitoring open-source package downloads and BLS employment data. Like construction permits for the AI economy.",
   openGraph: {
-    title: "PyPI Labor Signal Index",
+    title: "AI Automation Signals",
     description:
-      "AI automation packages are growing faster than the general AI ecosystem. Track the acceleration in real-time.",
+      "Where is AI automation heading? Track tool adoption and employment trends across Software, Legal, Finance, Healthcare, Creative, and Office industries.",
     type: "website",
     siteName: "Early Signals of AI Impact",
   },
