@@ -15,7 +15,7 @@ interface StepConfig {
   id: string;
   label: string;
   icon: JSX.Element;
-  statLabel?: string;
+  statLabel?: string | JSX.Element;
   description: string;
   color: string;
 }
@@ -99,17 +99,6 @@ const PeopleIcon = (
 /* ------------------------------------------------------------------ */
 
 function getSteps(metrics: SignalMetrics): StepConfig[] {
-  const industriesWithBLS = metrics.industries.filter(
-    (ind) => ind.employmentChangeSinceNov2022 !== null
-  );
-  const avgChange =
-    industriesWithBLS.length > 0
-      ? industriesWithBLS.reduce(
-          (sum, ind) => sum + (ind.employmentChangeSinceNov2022 ?? 0),
-          0
-        ) / industriesWithBLS.length
-      : 0;
-
   return [
     {
       id: "tools",
@@ -135,10 +124,18 @@ function getSteps(metrics: SignalMetrics): StepConfig[] {
     },
     {
       id: "jobs",
-      label: "Employment Impact",
+      label: "Firm Response",
       icon: PeopleIcon,
-      statLabel: `${avgChange >= 0 ? "+" : ""}${(avgChange * 100).toFixed(1)}% avg since Nov 2022`,
-      description: "Headcount adjusts to new reality",
+      statLabel: (
+        <span className="flex items-center gap-1 justify-center flex-wrap">
+          <span style={{ color: "#dc2626" }}>Reduce</span>
+          <span className="text-[var(--muted)]">/</span>
+          <span style={{ color: "#16a34a" }}>Amplify</span>
+          <span className="text-[var(--muted)]">/</span>
+          <span style={{ color: "#5C61F6" }}>Expand</span>
+        </span>
+      ),
+      description: "Firms reduce, amplify, or expand",
       color: "#dc2626",
     },
   ];
