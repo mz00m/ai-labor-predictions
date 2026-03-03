@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-03",
-  "totalSources": 303,
-  "verifiedCount": 293,
+  "totalSources": 304,
+  "verifiedCount": 294,
   "sources": {
     "accenture-health-ai-2023": {
       "id": "accenture-health-ai-2023",
@@ -3857,6 +3857,22 @@
         "overall-us-displacement"
       ],
       "verified": true
+    },
+    "wang-neubig-agent-benchmarks-2026": {
+      "id": "wang-neubig-agent-benchmarks-2026",
+      "title": "How Well Does Agent Development Reflect Real-World Work?",
+      "url": "https://arxiv.org/abs/2603.01203",
+      "publisher": "Carnegie Mellon / Stanford (Wang, Neubig, Fried, Yang et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-01",
+      "excerpt": "Across all benchmarks, examples collectively cover a limited 56.5% of the domain taxonomy but a substantially broader 85.4% of the skill taxonomy.",
+      "usedIn": [
+        "workforce-ai-exposure",
+        "tech-sector-displacement",
+        "white-collar-professional-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
     },
     "worldbank-liu-wang-yu-2025": {
       "id": "worldbank-liu-wang-yu-2025",

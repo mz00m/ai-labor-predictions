@@ -303,6 +303,15 @@
       ],
       "evidenceTier": 1,
       "label": "Dallas Fed: Computer systems design employment down 5% since ChatGPT release"
+    },
+    {
+      "date": "2026-03-01",
+      "direction": "up",
+      "sourceIds": [
+        "wang-neubig-agent-benchmarks-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Wang et al.: AI development heavily concentrated on CS/Math — 7.6% of employment"
     }
   ],
   "sources": [
@@ -591,6 +600,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-02-24",
       "excerpt": "Employment in the computer systems design and related services sector has declined 5 percent."
+    },
+    {
+      "id": "wang-neubig-agent-benchmarks-2026",
+      "title": "How Well Does Agent Development Reflect Real-World Work?",
+      "url": "https://arxiv.org/abs/2603.01203",
+      "publisher": "Carnegie Mellon / Stanford (Wang, Neubig, Fried, Yang et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-01",
+      "excerpt": "software engineering abilities has the potential to accelerate other varieties of work. However, this concentrated focus significantly overrepresents a domain that accounts for only 7.6% of total employment."
     }
   ],
   "marketIds": {

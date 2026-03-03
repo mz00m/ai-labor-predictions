@@ -162,6 +162,15 @@
       ],
       "evidenceTier": 2,
       "label": "Lightcast: Most-exposed roles 70-78% (office/editorial); least 6-14% (healthcare)"
+    },
+    {
+      "date": "2026-03-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "wang-neubig-agent-benchmarks-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Wang et al.: AI benchmarks cover 85% of work skills but only 57% of job domains"
     }
   ],
   "sources": [
@@ -282,6 +291,15 @@
       "datePublished": "2026-02-01",
       "dateAdded": "2026-03-02",
       "excerpt": "Many kinds of writing and editing jobs are among those most exposed, with over 70% of their core skills potentially affected. On the other end of the spectrum, healthcare and first responder jobs dominate the low end of the rankings."
+    },
+    {
+      "id": "wang-neubig-agent-benchmarks-2026",
+      "title": "How Well Does Agent Development Reflect Real-World Work?",
+      "url": "https://arxiv.org/abs/2603.01203",
+      "publisher": "Carnegie Mellon / Stanford (Wang, Neubig, Fried, Yang et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-01",
+      "excerpt": "Across all benchmarks, examples collectively cover a limited 56.5% of the domain taxonomy but a substantially broader 85.4% of the skill taxonomy."
     }
   ]
 }

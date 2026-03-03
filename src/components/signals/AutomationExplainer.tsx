@@ -127,15 +127,26 @@ function getSteps(metrics: SignalMetrics): StepConfig[] {
       label: "Firm Response",
       icon: PeopleIcon,
       statLabel: (
-        <span className="flex items-center gap-1 justify-center flex-wrap">
-          <span style={{ color: "#dc2626" }}>Reduce</span>
+        <span
+          className="flex items-center gap-1 justify-center flex-wrap underline-offset-2 hover:underline decoration-[var(--muted)]"
+          onClick={(e) => {
+            e.stopPropagation();
+            document.getElementById("productivity-paths")?.scrollIntoView({ behavior: "smooth" });
+          }}
+        >
+          <span className="flex items-center gap-0.5" style={{ color: "#dc2626" }}>
+            <span className="text-[11px]">↓</span> Reduce
+          </span>
           <span className="text-[var(--muted)]">/</span>
           <span style={{ color: "#16a34a" }}>Amplify</span>
           <span className="text-[var(--muted)]">/</span>
-          <span style={{ color: "#5C61F6" }}>Expand</span>
+          <span className="flex items-center gap-0.5">
+            <span className="text-[11px]" style={{ color: "#16a34a" }}>↑</span>
+            <span style={{ color: "#5C61F6" }}>Expand</span>
+          </span>
         </span>
       ),
-      description: "Firms reduce, amplify, or expand",
+      description: "Firms reduce jobs, amplify output, or expand offerings",
       color: "#dc2626",
     },
   ];

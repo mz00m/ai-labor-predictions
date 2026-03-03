@@ -321,6 +321,15 @@
       ],
       "evidenceTier": 4,
       "label": "CausalInf: AI paper win rate vs human papers improves from 4.7% to 7.6%"
+    },
+    {
+      "date": "2026-03-01",
+      "direction": "up",
+      "sourceIds": [
+        "wang-neubig-agent-benchmarks-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Wang et al.: Legal 70%, Management 88% digital work — high automation potential"
     }
   ],
   "sources": [
@@ -612,6 +621,15 @@
       "evidenceTier": 4,
       "datePublished": "2026-03-02",
       "excerpt": "Project APE — Autonomous Policy Evaluation... has produced 204 papers — with 60 added in a single week... These are fully automated papers, like a version 1.0, with no human iteration whatsoever."
+    },
+    {
+      "id": "wang-neubig-agent-benchmarks-2026",
+      "title": "How Well Does Agent Development Reflect Real-World Work?",
+      "url": "https://arxiv.org/abs/2603.01203",
+      "publisher": "Carnegie Mellon / Stanford (Wang, Neubig, Fried, Yang et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-01",
+      "excerpt": "Management, Legal, and Architecture and Engineering exhibit high ratios of digital work (88%, 70%, and 71%, respectively). Management and Legal are sparsely covered by existing benchmarks (1.4%, 0.3% among all 19179 examples)."
     }
   ]
 }
