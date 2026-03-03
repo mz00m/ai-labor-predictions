@@ -18,6 +18,7 @@ import type {
   SignalMetrics,
   MonthlyDownloadsData,
   BLSEmploymentData,
+  HuggingFaceData,
 } from "@/lib/signal-types";
 
 interface IndustryDetailProps {
@@ -26,6 +27,7 @@ interface IndustryDetailProps {
   metrics: SignalMetrics;
   downloads: MonthlyDownloadsData;
   bls: BLSEmploymentData;
+  huggingface: HuggingFaceData;
 }
 
 function formatDownloads(val: number): string {
@@ -119,9 +121,9 @@ export default function IndustryDetail({
   metrics,
   downloads,
   bls,
+  huggingface,
 }: IndustryDetailProps) {
   const industryConfig = taxonomy.industries[industry.industry];
-  const allIndustryKeys = Object.keys(taxonomy.industries);
 
   // Get packages for this industry
   const industryPackages = useMemo(() => {
@@ -312,6 +314,59 @@ export default function IndustryDetail({
           </ResponsiveContainer>
         </div>
       </div>
+
+      {/* HuggingFace corroborating signals */}
+      {huggingface.categories.filter((c) =>
+        c.industries.includes(industry.industry)
+      ).length > 0 && (
+        <div className="mb-6">
+          <h4 className="text-[14px] font-bold text-[var(--foreground)] mb-3">
+            HuggingFace Model Activity
+          </h4>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {huggingface.categories
+              .filter((c) => c.industries.includes(industry.industry))
+              .map((cat) => (
+                <div
+                  key={cat.pipelineTag}
+                  className="rounded-lg border border-black/[0.04] p-4"
+                >
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-[12px] font-semibold text-[var(--foreground)]">
+                      {cat.label}
+                    </span>
+                    <span className="text-[10px] text-[var(--muted)]">
+                      {cat.modelCount} models tracked
+                    </span>
+                  </div>
+                  <div className="text-[20px] font-bold font-mono text-[var(--foreground)] stat-number">
+                    {formatDownloads(cat.totalDownloads)}
+                    <span className="text-[11px] font-normal text-[var(--muted)] ml-1">
+                      downloads
+                    </span>
+                  </div>
+                  {cat.models.length > 0 && (
+                    <div className="mt-2 space-y-1">
+                      {cat.models.slice(0, 3).map((m) => (
+                        <div
+                          key={m.id}
+                          className="flex items-center justify-between text-[10px]"
+                        >
+                          <span className="text-[var(--muted)] truncate mr-2">
+                            {m.id}
+                          </span>
+                          <span className="font-mono text-[var(--foreground)] stat-number shrink-0">
+                            {formatDownloads(m.downloads)}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+          </div>
+        </div>
+      )}
 
       {/* Tool breakdown table */}
       <div>

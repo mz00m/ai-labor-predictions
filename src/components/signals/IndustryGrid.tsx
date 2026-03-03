@@ -6,6 +6,7 @@ import type {
   SignalTaxonomy,
   MonthlyDownloadsData,
   BLSEmploymentData,
+  HuggingFaceData,
 } from "@/lib/signal-types";
 import IndustryCard from "./IndustryCard";
 import IndustryDetail from "./IndustryDetail";
@@ -15,6 +16,7 @@ interface IndustryGridProps {
   taxonomy: SignalTaxonomy;
   downloads: MonthlyDownloadsData;
   bls: BLSEmploymentData;
+  huggingface: HuggingFaceData;
 }
 
 export default function IndustryGrid({
@@ -22,6 +24,7 @@ export default function IndustryGrid({
   taxonomy,
   downloads,
   bls,
+  huggingface,
 }: IndustryGridProps) {
   const [expandedIndustry, setExpandedIndustry] = useState<string | null>(null);
 
@@ -53,6 +56,7 @@ export default function IndustryGrid({
                 metrics={metrics}
                 downloads={downloads}
                 bls={bls}
+                huggingface={huggingface}
               />
             )}
           </div>

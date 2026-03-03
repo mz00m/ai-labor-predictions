@@ -1,102 +1,102 @@
 {
-  "calculatedAt": "2026-03-03T01:28:23Z",
-  "currentAAI": 0.933,
+  "calculatedAt": "2026-03-03T03:21:42Z",
+  "currentAAI": 0.878,
   "aaiTrend": "accelerating",
   "aaiHistory": [
     {
       "month": "2024-11",
       "aai": 10.0,
-      "tier2AvgGrowth": 0.0825,
+      "tier2AvgGrowth": 0.0791,
       "tier1AvgGrowth": -0.0381
     },
     {
       "month": "2024-12",
       "aai": 10.0,
-      "tier2AvgGrowth": 0.8291,
+      "tier2AvgGrowth": 0.6558,
       "tier1AvgGrowth": -0.0028
     },
     {
       "month": "2025-01",
-      "aai": 1.502,
-      "tier2AvgGrowth": 0.3155,
+      "aai": 1.344,
+      "tier2AvgGrowth": 0.2823,
       "tier1AvgGrowth": 0.21
     },
     {
       "month": "2025-02",
-      "aai": 1.499,
-      "tier2AvgGrowth": 0.266,
+      "aai": 1.202,
+      "tier2AvgGrowth": 0.2133,
       "tier1AvgGrowth": 0.1774
     },
     {
       "month": "2025-03",
-      "aai": 3.597,
-      "tier2AvgGrowth": 0.6377,
+      "aai": 3.028,
+      "tier2AvgGrowth": 0.5367,
       "tier1AvgGrowth": 0.1773
     },
     {
       "month": "2025-04",
-      "aai": 2.436,
-      "tier2AvgGrowth": 0.2465,
+      "aai": 2.169,
+      "tier2AvgGrowth": 0.2194,
       "tier1AvgGrowth": 0.1012
     },
     {
       "month": "2025-05",
-      "aai": 5.552,
-      "tier2AvgGrowth": 0.6562,
+      "aai": 4.622,
+      "tier2AvgGrowth": 0.5463,
       "tier1AvgGrowth": 0.1182
     },
     {
       "month": "2025-06",
-      "aai": 0.405,
-      "tier2AvgGrowth": 0.0828,
+      "aai": 0.431,
+      "tier2AvgGrowth": 0.0883,
       "tier1AvgGrowth": 0.2047
     },
     {
       "month": "2025-07",
-      "aai": 1.106,
-      "tier2AvgGrowth": 0.1479,
+      "aai": 0.909,
+      "tier2AvgGrowth": 0.1216,
       "tier1AvgGrowth": 0.1338
     },
     {
       "month": "2025-08",
-      "aai": 0.674,
-      "tier2AvgGrowth": 0.0859,
+      "aai": 0.451,
+      "tier2AvgGrowth": 0.0574,
       "tier1AvgGrowth": 0.1273
     },
     {
       "month": "2025-09",
-      "aai": 2.358,
-      "tier2AvgGrowth": 0.1458,
+      "aai": 2.112,
+      "tier2AvgGrowth": 0.1306,
       "tier1AvgGrowth": 0.0618
     },
     {
       "month": "2025-10",
-      "aai": 0.886,
-      "tier2AvgGrowth": 0.1188,
+      "aai": 0.86,
+      "tier2AvgGrowth": 0.1153,
       "tier1AvgGrowth": 0.1341
     },
     {
       "month": "2025-11",
-      "aai": 0.229,
-      "tier2AvgGrowth": 0.0107,
+      "aai": 0.282,
+      "tier2AvgGrowth": 0.0132,
       "tier1AvgGrowth": 0.0467
     },
     {
       "month": "2025-12",
-      "aai": 0.331,
-      "tier2AvgGrowth": 0.0184,
+      "aai": 0.318,
+      "tier2AvgGrowth": 0.0177,
       "tier1AvgGrowth": 0.0557
     },
     {
       "month": "2026-01",
-      "aai": 0.939,
-      "tier2AvgGrowth": 0.179,
+      "aai": 0.937,
+      "tier2AvgGrowth": 0.1785,
       "tier1AvgGrowth": 0.1905
     },
     {
       "month": "2026-02",
-      "aai": 0.933,
-      "tier2AvgGrowth": 0.201,
+      "aai": 0.878,
+      "tier2AvgGrowth": 0.1892,
       "tier1AvgGrowth": 0.2156
     }
   ],
@@ -105,11 +105,11 @@
       "industry": "software_it",
       "label": "Software & IT",
       "color": "#5C61F6",
-      "toolGrowth3m": 0.2069,
+      "toolGrowth3m": 0.1833,
       "employmentChangeSinceNov2022": -0.1149,
       "employmentChangeYoY": -0.0196,
-      "toolCount": 10,
-      "surgingCount": 5,
+      "toolCount": 12,
+      "surgingCount": 6,
       "packages": [
         "aider-chat",
         "browser-use",
@@ -120,7 +120,9 @@
         "ai",
         "@ai-sdk/openai",
         "@ai-sdk/anthropic",
-        "@modelcontextprotocol/sdk"
+        "@modelcontextprotocol/sdk",
+        "playwright-npm",
+        "puppeteer-npm"
       ]
     },
     {
@@ -145,15 +147,17 @@
       "industry": "office",
       "label": "Office & Administrative",
       "color": "#7c3aed",
-      "toolGrowth3m": 0.1524,
-      "employmentChangeSinceNov2022": -0.1093,
-      "employmentChangeYoY": -0.0056,
-      "toolCount": 7,
-      "surgingCount": 3,
+      "toolGrowth3m": 0.1331,
+      "employmentChangeSinceNov2022": -0.1046,
+      "employmentChangeYoY": -0.0046,
+      "toolCount": 9,
+      "surgingCount": 4,
       "packages": [
         "browser-use",
         "crewai",
         "ai",
+        "playwright-npm",
+        "puppeteer-npm",
         "unstructured",
         "@langchain/core",
         "@langchain/openai",
@@ -183,8 +187,8 @@
       "label": "Finance & Insurance",
       "color": "#16a34a",
       "toolGrowth3m": 0.0546,
-      "employmentChangeSinceNov2022": -0.0008,
-      "employmentChangeYoY": -0.0106,
+      "employmentChangeSinceNov2022": -0.0005,
+      "employmentChangeYoY": -0.0136,
       "toolCount": 8,
       "surgingCount": 1,
       "packages": [
@@ -203,8 +207,8 @@
       "label": "Healthcare",
       "color": "#0891b2",
       "toolGrowth3m": 0.0284,
-      "employmentChangeSinceNov2022": 0.1062,
-      "employmentChangeYoY": 0.0278,
+      "employmentChangeSinceNov2022": 0.0967,
+      "employmentChangeYoY": 0.0248,
       "toolCount": 2,
       "surgingCount": 0,
       "packages": [
@@ -232,7 +236,14 @@
         129568626,
         139951736,
         168184674
-      ]
+      ],
+      "githubStars": 30098,
+      "githubMonthlyIssues": 22,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 6,
+      "signalQuality": "noisy"
     },
     {
       "package": "anthropic",
@@ -252,7 +263,14 @@
         34863493,
         40163314,
         52518902
-      ]
+      ],
+      "githubStars": 2853,
+      "githubMonthlyIssues": 25,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 1,
+      "signalQuality": "noisy"
     },
     {
       "package": "langchain",
@@ -272,7 +290,14 @@
         100283076,
         161171268,
         207375245
-      ]
+      ],
+      "githubStars": 127963,
+      "githubMonthlyIssues": 90,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 6,
+      "signalQuality": "moderate"
     },
     {
       "package": "langchain-core",
@@ -292,7 +317,14 @@
         73624136,
         78631959,
         84374597
-      ]
+      ],
+      "githubStars": 127963,
+      "githubMonthlyIssues": 90,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 6,
+      "signalQuality": "moderate"
     },
     {
       "package": "transformers",
@@ -312,7 +344,14 @@
         113380690,
         100637248,
         106402430
-      ]
+      ],
+      "githubStars": 157259,
+      "githubMonthlyIssues": 138,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 1,
+      "signalQuality": "moderate"
     },
     {
       "package": "openai-npm",
@@ -333,7 +372,14 @@
         42229601,
         50093720
       ],
-      "surgingReason": "Growth rate doubled: 17% vs prior 6%"
+      "surgingReason": "Growth rate doubled: 17% vs prior 6%",
+      "githubStars": 10684,
+      "githubMonthlyIssues": 4,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 6,
+      "signalQuality": "moderate"
     },
     {
       "package": "@anthropic-ai/sdk",
@@ -354,7 +400,14 @@
         17226666,
         24055363
       ],
-      "surgingReason": "Growth rate doubled: 27% vs prior 8%"
+      "surgingReason": "Growth rate doubled: 27% vs prior 8%",
+      "githubStars": 1660,
+      "githubMonthlyIssues": 12,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 1,
+      "signalQuality": "noisy"
     },
     {
       "package": "aider-chat",
@@ -376,7 +429,14 @@
         221453,
         417229,
         607342
-      ]
+      ],
+      "githubStars": 41120,
+      "githubMonthlyIssues": 36,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 0,
+      "signalQuality": "strong"
     },
     {
       "package": "browser-use",
@@ -400,7 +460,14 @@
         1970483,
         3027849
       ],
-      "surgingReason": "3+ consecutive months of >20% growth"
+      "surgingReason": "3+ consecutive months of >20% growth",
+      "githubStars": 79409,
+      "githubMonthlyIssues": 44,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": "strong"
     },
     {
       "package": "crewai",
@@ -423,7 +490,14 @@
         2729794,
         3467322,
         4794228
-      ]
+      ],
+      "githubStars": 44994,
+      "githubMonthlyIssues": 68,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 0,
+      "signalQuality": "strong"
     },
     {
       "package": "autogen",
@@ -445,7 +519,14 @@
         162109,
         137714,
         153718
-      ]
+      ],
+      "githubStars": 55080,
+      "githubMonthlyIssues": 23,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 0,
+      "signalQuality": "strong"
     },
     {
       "package": "pyautogen",
@@ -467,7 +548,14 @@
         419621,
         339451,
         347843
-      ]
+      ],
+      "githubStars": 55080,
+      "githubMonthlyIssues": 23,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 0,
+      "signalQuality": "strong"
     },
     {
       "package": "smolagents",
@@ -489,7 +577,14 @@
         316321,
         303798,
         392793
-      ]
+      ],
+      "githubStars": 25704,
+      "githubMonthlyIssues": 10,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": "strong"
     },
     {
       "package": "ai",
@@ -513,7 +608,14 @@
         26052688,
         31880725
       ],
-      "surgingReason": "3+ consecutive months of >20% growth"
+      "surgingReason": "3+ consecutive months of >20% growth",
+      "githubStars": 22240,
+      "githubMonthlyIssues": 171,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 0,
+      "signalQuality": "moderate"
     },
     {
       "package": "@ai-sdk/openai",
@@ -536,7 +638,14 @@
         13353114,
         16003574
       ],
-      "surgingReason": "3+ consecutive months of >20% growth"
+      "surgingReason": "3+ consecutive months of >20% growth",
+      "githubStars": 22240,
+      "githubMonthlyIssues": 171,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 0,
+      "signalQuality": "moderate"
     },
     {
       "package": "@ai-sdk/anthropic",
@@ -559,7 +668,14 @@
         9678497,
         12927302
       ],
-      "surgingReason": "3+ consecutive months of >20% growth"
+      "surgingReason": "3+ consecutive months of >20% growth",
+      "githubStars": 22240,
+      "githubMonthlyIssues": 171,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 0,
+      "signalQuality": "moderate"
     },
     {
       "package": "@modelcontextprotocol/sdk",
@@ -582,7 +698,75 @@
         50249918,
         71656771
       ],
-      "surgingReason": "3+ consecutive months of >20% growth"
+      "surgingReason": "3+ consecutive months of >20% growth",
+      "githubStars": 11728,
+      "githubMonthlyIssues": 27,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": "noisy"
+    },
+    {
+      "package": "playwright-npm",
+      "source": "npm",
+      "tier": "tier2",
+      "industries": [
+        "software_it",
+        "office"
+      ],
+      "label": "Microsoft's browser automation framework \u2014 the backbone of AI agent systems that need to interact with web pages. When AI agents need to click, type, and navigate websites, Playwright is the most common tool under the hood.",
+      "latestMonthlyDownloads": 129038302,
+      "momGrowth": -0.0462,
+      "rollingAvg3mGrowth": 0.071,
+      "rollingAvg6mGrowth": 0.0846,
+      "isSurging": false,
+      "sparkline": [
+        88986700,
+        97385877,
+        107489051,
+        107289041,
+        135291426,
+        129038302
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "puppeteer-npm",
+      "source": "npm",
+      "tier": "tier2",
+      "industries": [
+        "software_it",
+        "office"
+      ],
+      "label": "Google's browser automation library for Chrome/Chromium. A predecessor to Playwright that remains widely used for web scraping, testing, and building AI-powered browser agents.",
+      "latestMonthlyDownloads": 30053620,
+      "momGrowth": 0.0822,
+      "rollingAvg3mGrowth": 0.0598,
+      "rollingAvg6mGrowth": 0.042,
+      "isSurging": true,
+      "sparkline": [
+        24553358,
+        25415852,
+        25278235,
+        25700814,
+        27770073,
+        30053620
+      ],
+      "surgingReason": "Growth rate doubled: 6% vs prior 2%",
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
     },
     {
       "package": "docling",
@@ -604,7 +788,14 @@
         1662426,
         2596323,
         4135817
-      ]
+      ],
+      "githubStars": 54625,
+      "githubMonthlyIssues": 0,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": "strong"
     },
     {
       "package": "marker-pdf",
@@ -626,7 +817,14 @@
         176884,
         208671,
         239217
-      ]
+      ],
+      "githubStars": 32086,
+      "githubMonthlyIssues": 0,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": "strong"
     },
     {
       "package": "unstructured",
@@ -650,7 +848,14 @@
         3324457,
         3855657,
         4292919
-      ]
+      ],
+      "githubStars": 14101,
+      "githubMonthlyIssues": 4,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": "strong"
     },
     {
       "package": "pypdf",
@@ -673,7 +878,14 @@
         26905705,
         27798931,
         32568064
-      ]
+      ],
+      "githubStars": 9845,
+      "githubMonthlyIssues": 10,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 1,
+      "signalQuality": "moderate"
     },
     {
       "package": "llamaindex",
@@ -696,7 +908,14 @@
         249876,
         373339
       ],
-      "surgingReason": "Growth rate doubled: 28% vs prior 3%"
+      "surgingReason": "Growth rate doubled: 28% vs prior 3%",
+      "githubStars": 3063,
+      "githubMonthlyIssues": 1,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 0,
+      "signalQuality": "strong"
     },
     {
       "package": "@langchain/core",
@@ -720,7 +939,14 @@
         8694254,
         10445182,
         11307512
-      ]
+      ],
+      "githubStars": 17065,
+      "githubMonthlyIssues": 57,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 6,
+      "signalQuality": "moderate"
     },
     {
       "package": "@langchain/openai",
@@ -744,7 +970,14 @@
         7931467,
         8596302
       ],
-      "surgingReason": "Growth rate doubled: 8% vs prior 4%"
+      "surgingReason": "Growth rate doubled: 8% vs prior 4%",
+      "githubStars": 17065,
+      "githubMonthlyIssues": 57,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 6,
+      "signalQuality": "moderate"
     },
     {
       "package": "pandasai",
@@ -766,7 +999,14 @@
         212574,
         205308,
         286752
-      ]
+      ],
+      "githubStars": 23287,
+      "githubMonthlyIssues": 6,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 0,
+      "signalQuality": "strong"
     },
     {
       "package": "dataprep",
@@ -788,7 +1028,14 @@
         15992,
         14953,
         12438
-      ]
+      ],
+      "githubStars": 2237,
+      "githubMonthlyIssues": 0,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": "strong"
     },
     {
       "package": "llama-index",
@@ -811,7 +1058,14 @@
         6965656,
         6795790,
         8592754
-      ]
+      ],
+      "githubStars": 47315,
+      "githubMonthlyIssues": 43,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 0,
+      "signalQuality": "strong"
     },
     {
       "package": "chromadb",
@@ -833,7 +1087,14 @@
         8685232,
         10318057,
         11188322
-      ]
+      ],
+      "githubStars": 26414,
+      "githubMonthlyIssues": 10,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 0,
+      "signalQuality": "strong"
     },
     {
       "package": "medspacy",
@@ -855,7 +1116,14 @@
         5001,
         6415,
         6725
-      ]
+      ],
+      "githubStars": 634,
+      "githubMonthlyIssues": 0,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": "strong"
     },
     {
       "package": "scispacy",
@@ -877,7 +1145,14 @@
         55183,
         43206,
         52541
-      ]
+      ],
+      "githubStars": 1926,
+      "githubMonthlyIssues": 0,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": "strong"
     },
     {
       "package": "diffusers",
@@ -899,7 +1174,14 @@
         7641497,
         9549132,
         6399540
-      ]
+      ],
+      "githubStars": 32907,
+      "githubMonthlyIssues": 29,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 0,
+      "signalQuality": "strong"
     },
     {
       "package": "replicate",
@@ -921,7 +1203,14 @@
         750204,
         801139,
         904230
-      ]
+      ],
+      "githubStars": 895,
+      "githubMonthlyIssues": 0,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 0,
+      "signalQuality": "moderate"
     },
     {
       "package": "stability-sdk",
@@ -943,7 +1232,14 @@
         22487,
         27263,
         26037
-      ]
+      ],
+      "githubStars": 2439,
+      "githubMonthlyIssues": 0,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": "strong"
     },
     {
       "package": "faster-whisper",
@@ -965,7 +1261,14 @@
         2047695,
         2191686,
         2780975
-      ]
+      ],
+      "githubStars": 21216,
+      "githubMonthlyIssues": 1,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 0,
+      "signalQuality": "strong"
     },
     {
       "package": "openai-whisper",
@@ -987,7 +1290,14 @@
         1021468,
         1219488,
         1438235
-      ]
+      ],
+      "githubStars": 95328,
+      "githubMonthlyIssues": 0,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 0,
+      "signalQuality": "strong"
     },
     {
       "package": "replicate-npm",
@@ -1010,7 +1320,14 @@
         1186921,
         1315839
       ],
-      "surgingReason": "Growth rate doubled: 18% vs prior 3%"
+      "surgingReason": "Growth rate doubled: 18% vs prior 3%",
+      "githubStars": 596,
+      "githubMonthlyIssues": 0,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 0,
+      "signalQuality": "moderate"
     }
   ],
   "surgingPackages": [
@@ -1021,9 +1338,10 @@
     "@ai-sdk/openai",
     "@ai-sdk/anthropic",
     "@modelcontextprotocol/sdk",
+    "puppeteer-npm",
     "llamaindex",
     "@langchain/openai",
     "replicate-npm"
   ],
-  "totalToolCount": 29
+  "totalToolCount": 31
 }

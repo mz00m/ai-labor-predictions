@@ -20,6 +20,8 @@ export interface PackageConfig {
   industries: string[];
   label: string;
   npmName?: string; // for packages where npm name differs from our key
+  githubRepo?: string; // "owner/repo" format
+  stackOverflowTag?: string; // exact SO tag name
 }
 
 export interface SignalTaxonomy {
@@ -65,6 +67,79 @@ export interface BLSEmploymentData {
   series: BLSSeriesData[];
 }
 
+// --- GitHub activity data ---
+
+export interface MonthlyStarPoint {
+  month: string;
+  stars: number;
+}
+
+export interface MonthlyIssuePoint {
+  month: string;
+  issues: number;
+}
+
+export interface WeeklyCommitPoint {
+  week: string; // "YYYY-MM-DD"
+  commits: number;
+}
+
+export interface GitHubRepoData {
+  repo: string;
+  packages: string[];
+  totalStars: number;
+  forks: number;
+  openIssues: number;
+  weeklyCommits: WeeklyCommitPoint[];
+  monthlyIssues: MonthlyIssuePoint[];
+}
+
+export interface GitHubActivityData {
+  fetchedAt: string;
+  repos: GitHubRepoData[];
+}
+
+// --- StackOverflow activity data ---
+
+export interface MonthlyQuestionPoint {
+  month: string;
+  questions: number;
+}
+
+export interface SOTagData {
+  tag: string;
+  packages: string[];
+  monthlyQuestions: MonthlyQuestionPoint[];
+}
+
+export interface StackOverflowActivityData {
+  fetchedAt: string;
+  tags: SOTagData[];
+}
+
+// --- HuggingFace model data ---
+
+export interface HFModelEntry {
+  id: string;
+  downloads: number;
+  likes: number;
+}
+
+export interface HFCategory {
+  pipelineTag: string;
+  label: string;
+  industries: string[];
+  totalDownloads: number;
+  totalLikes: number;
+  modelCount: number;
+  models: HFModelEntry[];
+}
+
+export interface HuggingFaceData {
+  fetchedAt: string;
+  categories: HFCategory[];
+}
+
 // --- Calculated metrics ---
 
 export interface PackageMetrics {
@@ -80,6 +155,18 @@ export interface PackageMetrics {
   isSurging: boolean;
   surgingReason?: string;
   sparkline: number[];
+  // GitHub community signals (null when no repo mapping)
+  githubStars?: number | null;
+  githubStarGrowthMoM?: number | null;
+  githubMonthlyIssues?: number | null;
+  githubForks?: number | null;
+  githubOpenIssues?: number | null;
+  githubWeeklyCommits?: number | null; // avg commits/week over last 4 weeks
+  // StackOverflow signal (null when no tag mapping)
+  soMonthlyQuestions?: number | null;
+  soQuestionGrowthMoM?: number | null;
+  // Signal quality: downloads-to-stars ratio (lower = stronger community signal)
+  signalQuality?: "strong" | "moderate" | "noisy" | null;
 }
 
 export interface IndustryMetrics {

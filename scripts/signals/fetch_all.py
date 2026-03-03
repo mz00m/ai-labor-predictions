@@ -4,7 +4,9 @@ Run the full signals data pipeline:
   1. Fetch PyPI download stats
   2. Fetch npm download stats
   3. Fetch BLS employment data
-  4. Calculate derived metrics
+  4. Fetch GitHub activity (stars, issues)
+  5. Fetch StackOverflow question volume
+  6. Calculate derived metrics
 
 Usage:
     python3 scripts/signals/fetch_all.py
@@ -39,6 +41,9 @@ def main():
         "fetch_pypistats.py",
         "fetch_npm.py",
         "fetch_bls.py",
+        "fetch_github.py",
+        "fetch_stackoverflow.py",
+        "fetch_huggingface.py",
         "calculate_metrics.py",
     ]
 

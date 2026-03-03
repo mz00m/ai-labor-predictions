@@ -51,6 +51,20 @@ export default function MethodologyNote() {
 
         <div>
           <h3 className="text-[14px] font-semibold text-[var(--foreground)] mb-1">
+            Community signals
+          </h3>
+          <p>
+            GitHub stars and issues, plus StackOverflow question volume, provide
+            supplementary context alongside download data. Stars indicate
+            developer interest, issues reflect active development and bug
+            reports, and SO questions show how many people are trying to use a
+            tool. These are shown as compact indicators on each tool but are
+            not factored into the AAI calculation.
+          </p>
+        </div>
+
+        <div>
+          <h3 className="text-[14px] font-semibold text-[var(--foreground)] mb-1">
             Important caveats
           </h3>
           <p>
@@ -94,7 +108,25 @@ export default function MethodologyNote() {
           >
             Bureau of Labor Statistics CES
           </a>{" "}
-          (employment data). Updated monthly.
+          (employment data),{" "}
+          <a
+            href="https://docs.github.com/en/rest"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--accent)] hover:underline"
+          >
+            GitHub API
+          </a>{" "}
+          (stars &amp; issues),{" "}
+          <a
+            href="https://api.stackexchange.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--accent)] hover:underline"
+          >
+            Stack Exchange API
+          </a>{" "}
+          (question volume). Updated monthly.
         </p>
       </div>
     </section>

@@ -1226,6 +1226,154 @@
       ]
     },
     {
+      "package": "playwright-npm",
+      "source": "npm",
+      "data": [
+        {
+          "month": "2024-10",
+          "downloads": 36766340
+        },
+        {
+          "month": "2024-11",
+          "downloads": 43671104
+        },
+        {
+          "month": "2024-12",
+          "downloads": 42239205
+        },
+        {
+          "month": "2025-01",
+          "downloads": 49563644
+        },
+        {
+          "month": "2025-02",
+          "downloads": 50071329
+        },
+        {
+          "month": "2025-03",
+          "downloads": 57024677
+        },
+        {
+          "month": "2025-04",
+          "downloads": 67444604
+        },
+        {
+          "month": "2025-05",
+          "downloads": 81698805
+        },
+        {
+          "month": "2025-06",
+          "downloads": 91977911
+        },
+        {
+          "month": "2025-07",
+          "downloads": 89783688
+        },
+        {
+          "month": "2025-08",
+          "downloads": 81136889
+        },
+        {
+          "month": "2025-09",
+          "downloads": 88986700
+        },
+        {
+          "month": "2025-10",
+          "downloads": 97385877
+        },
+        {
+          "month": "2025-11",
+          "downloads": 107489051
+        },
+        {
+          "month": "2025-12",
+          "downloads": 107289041
+        },
+        {
+          "month": "2026-01",
+          "downloads": 135291426
+        },
+        {
+          "month": "2026-02",
+          "downloads": 129038302
+        }
+      ]
+    },
+    {
+      "package": "puppeteer-npm",
+      "source": "npm",
+      "data": [
+        {
+          "month": "2024-10",
+          "downloads": 17386060
+        },
+        {
+          "month": "2024-11",
+          "downloads": 16455331
+        },
+        {
+          "month": "2024-12",
+          "downloads": 15772595
+        },
+        {
+          "month": "2025-01",
+          "downloads": 17753281
+        },
+        {
+          "month": "2025-02",
+          "downloads": 17658653
+        },
+        {
+          "month": "2025-03",
+          "downloads": 19896884
+        },
+        {
+          "month": "2025-04",
+          "downloads": 20682984
+        },
+        {
+          "month": "2025-05",
+          "downloads": 20722470
+        },
+        {
+          "month": "2025-06",
+          "downloads": 22676612
+        },
+        {
+          "month": "2025-07",
+          "downloads": 23949058
+        },
+        {
+          "month": "2025-08",
+          "downloads": 23547845
+        },
+        {
+          "month": "2025-09",
+          "downloads": 24553358
+        },
+        {
+          "month": "2025-10",
+          "downloads": 25415852
+        },
+        {
+          "month": "2025-11",
+          "downloads": 25278235
+        },
+        {
+          "month": "2025-12",
+          "downloads": 25700814
+        },
+        {
+          "month": "2026-01",
+          "downloads": 27770073
+        },
+        {
+          "month": "2026-02",
+          "downloads": 30053620
+        }
+      ]
+    },
+    {
       "package": "llamaindex",
       "source": "npm",
       "data": [

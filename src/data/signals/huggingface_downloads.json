@@ -1,0 +1,276 @@
+{
+  "fetchedAt": "2026-03-03T03:20:43Z",
+  "categories": [
+    {
+      "pipelineTag": "automatic-speech-recognition",
+      "label": "Speech-to-Text",
+      "industries": [
+        "creative"
+      ],
+      "totalDownloads": 48501160,
+      "totalLikes": 10621,
+      "modelCount": 10,
+      "models": [
+        {
+          "id": "pyannote/speaker-diarization-3.1",
+          "downloads": 13584236,
+          "likes": 1593
+        },
+        {
+          "id": "openai/whisper-large-v3",
+          "downloads": 6066762,
+          "likes": 5437
+        },
+        {
+          "id": "argmaxinc/whisperkit-coreml",
+          "downloads": 5450474,
+          "likes": 161
+        },
+        {
+          "id": "jonatasgrosman/wav2vec2-large-xlsr-53-russian",
+          "downloads": 4279845,
+          "likes": 64
+        },
+        {
+          "id": "openai/whisper-large-v3-turbo",
+          "downloads": 4015573,
+          "likes": 2849
+        },
+        {
+          "id": "facebook/wav2vec2-base-960h",
+          "downloads": 3571553,
+          "likes": 390
+        },
+        {
+          "id": "jonatasgrosman/wav2vec2-large-xlsr-53-portuguese",
+          "downloads": 3280140,
+          "likes": 38
+        },
+        {
+          "id": "MahmoudAshraf/mms-300m-1130-forced-aligner",
+          "downloads": 2976611,
+          "likes": 74
+        },
+        {
+          "id": "jonatasgrosman/wav2vec2-large-xlsr-53-polish",
+          "downloads": 2710328,
+          "likes": 12
+        },
+        {
+          "id": "jonatasgrosman/wav2vec2-large-xlsr-53-greek",
+          "downloads": 2565638,
+          "likes": 3
+        }
+      ]
+    },
+    {
+      "pipelineTag": "document-question-answering",
+      "label": "Document QA",
+      "industries": [
+        "legal",
+        "finance"
+      ],
+      "totalDownloads": 35967,
+      "totalLikes": 1760,
+      "modelCount": 10,
+      "models": [
+        {
+          "id": "naver-clova-ix/donut-base-finetuned-docvqa",
+          "downloads": 15529,
+          "likes": 271
+        },
+        {
+          "id": "impira/layoutlm-document-qa",
+          "downloads": 14298,
+          "likes": 1166
+        },
+        {
+          "id": "impira/layoutlm-invoices",
+          "downloads": 1853,
+          "likes": 223
+        },
+        {
+          "id": "fxmarty/tiny-doc-qa-vision-encoder-decoder",
+          "downloads": 1365,
+          "likes": 16
+        },
+        {
+          "id": "tiennvcs/layoutlmv2-base-uncased-finetuned-docvqa",
+          "downloads": 840,
+          "likes": 14
+        },
+        {
+          "id": "zpm/Llama-3.1-PersianQA",
+          "downloads": 627,
+          "likes": 19
+        },
+        {
+          "id": "nikravan/glm-4vq",
+          "downloads": 585,
+          "likes": 36
+        },
+        {
+          "id": "rubentito/layoutlmv3-base-mpdocvqa",
+          "downloads": 465,
+          "likes": 10
+        },
+        {
+          "id": "vkrnsn/layoutlmv2-base-uncased_finetuned_docvqa",
+          "downloads": 248,
+          "likes": 0
+        },
+        {
+          "id": "xhyi/layoutlmv3_docvqa_t11c5000",
+          "downloads": 157,
+          "likes": 5
+        }
+      ]
+    },
+    {
+      "pipelineTag": "text-to-image",
+      "label": "Image Generation",
+      "industries": [
+        "creative"
+      ],
+      "totalDownloads": 10202246,
+      "totalLikes": 37823,
+      "modelCount": 10,
+      "models": [
+        {
+          "id": "stabilityai/stable-diffusion-xl-base-1.0",
+          "downloads": 2311125,
+          "likes": 7499
+        },
+        {
+          "id": "stable-diffusion-v1-5/stable-diffusion-v1-5",
+          "downloads": 1558226,
+          "likes": 1022
+        },
+        {
+          "id": "Tongyi-MAI/Z-Image-Turbo",
+          "downloads": 1081708,
+          "likes": 4197
+        },
+        {
+          "id": "crynux-network/sdxl-turbo",
+          "downloads": 941700,
+          "likes": 2
+        },
+        {
+          "id": "crynux-network/stable-diffusion-v1-5",
+          "downloads": 795091,
+          "likes": 1
+        },
+        {
+          "id": "stabilityai/sd-turbo",
+          "downloads": 767262,
+          "likes": 440
+        },
+        {
+          "id": "black-forest-labs/FLUX.1-dev",
+          "downloads": 747806,
+          "likes": 12380
+        },
+        {
+          "id": "black-forest-labs/FLUX.1-schnell",
+          "downloads": 730634,
+          "likes": 4655
+        },
+        {
+          "id": "tencent/HunyuanImage-3.0",
+          "downloads": 691820,
+          "likes": 645
+        },
+        {
+          "id": "CompVis/stable-diffusion-v1-4",
+          "downloads": 576874,
+          "likes": 6982
+        }
+      ]
+    },
+    {
+      "pipelineTag": "text-generation",
+      "label": "Code Generation",
+      "industries": [
+        "software_it"
+      ],
+      "totalDownloads": 11549466,
+      "totalLikes": 2993,
+      "modelCount": 10,
+      "models": [
+        {
+          "id": "Qwen/Qwen2.5-Coder-1.5B-Instruct",
+          "downloads": 1742767,
+          "likes": 107
+        },
+        {
+          "id": "Qwen/Qwen2.5-Coder-0.5B-Instruct",
+          "downloads": 1608316,
+          "likes": 65
+        },
+        {
+          "id": "Qwen/Qwen2.5-Coder-7B-Instruct",
+          "downloads": 1501681,
+          "likes": 658
+        },
+        {
+          "id": "bullpoint/Qwen3-Coder-Next-AWQ-4bit",
+          "downloads": 1104006,
+          "likes": 14
+        },
+        {
+          "id": "Qwen/Qwen2.5-Coder-7B-Instruct-AWQ",
+          "downloads": 1047382,
+          "likes": 19
+        },
+        {
+          "id": "Qwen/Qwen2.5-Coder-7B-Instruct-GPTQ-Int4",
+          "downloads": 979471,
+          "likes": 13
+        },
+        {
+          "id": "Qwen/Qwen2.5-Coder-32B-Instruct-AWQ",
+          "downloads": 933008,
+          "likes": 33
+        },
+        {
+          "id": "Qwen/Qwen3-Coder-30B-A3B-Instruct",
+          "downloads": 882213,
+          "likes": 960
+        },
+        {
+          "id": "Qwen/Qwen3-Coder-Next",
+          "downloads": 880596,
+          "likes": 1041
+        },
+        {
+          "id": "Qwen/Qwen2.5-Coder-1.5B",
+          "downloads": 870026,
+          "likes": 83
+        }
+      ]
+    },
+    {
+      "pipelineTag": "text-classification",
+      "label": "Biomedical NLP",
+      "industries": [
+        "healthcare"
+      ],
+      "totalDownloads": 88262,
+      "totalLikes": 117,
+      "modelCount": 2,
+      "models": [
+        {
+          "id": "ahmedrachid/FinancialBERT-Sentiment-Analysis",
+          "downloads": 51588,
+          "likes": 96
+        },
+        {
+          "id": "ncbi/MedCPT-Cross-Encoder",
+          "downloads": 36674,
+          "likes": 21
+        }
+      ]
+    }
+  ]
+}

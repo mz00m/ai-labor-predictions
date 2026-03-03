@@ -6,6 +6,7 @@ import {
   getSignalTaxonomy,
   getMonthlyDownloads,
   getBLSEmployment,
+  getHuggingFaceData,
 } from "@/lib/signal-data-loader";
 import SignalHero from "@/components/signals/SignalHero";
 import IndustryGrid from "@/components/signals/IndustryGrid";
@@ -16,6 +17,7 @@ const metrics = getSignalMetrics();
 const taxonomy = getSignalTaxonomy();
 const downloads = getMonthlyDownloads();
 const bls = getBLSEmployment();
+const huggingface = getHuggingFaceData();
 
 export default function SignalsPage() {
   const [sortField, setSortField] = useState("rollingAvg3mGrowth");
@@ -42,6 +44,7 @@ export default function SignalsPage() {
           taxonomy={taxonomy}
           downloads={downloads}
           bls={bls}
+          huggingface={huggingface}
         />
       </section>
 

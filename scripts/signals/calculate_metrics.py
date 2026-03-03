@@ -23,6 +23,8 @@ ROOT = Path(__file__).resolve().parent.parent.parent
 TAXONOMY_PATH = ROOT / "src" / "data" / "signals" / "taxonomy.json"
 DOWNLOADS_PATH = ROOT / "src" / "data" / "signals" / "monthly_downloads.json"
 BLS_PATH = ROOT / "src" / "data" / "signals" / "bls_employment.json"
+GITHUB_PATH = ROOT / "src" / "data" / "signals" / "github_activity.json"
+SO_PATH = ROOT / "src" / "data" / "signals" / "stackoverflow_activity.json"
 OUTPUT_PATH = ROOT / "src" / "data" / "signals" / "metrics.json"
 
 
@@ -39,7 +41,25 @@ def load_data():
     else:
         print("WARNING: No BLS employment data found. Employment metrics will be null.")
 
-    return taxonomy, downloads, bls
+    github = None
+    if GITHUB_PATH.exists():
+        with open(GITHUB_PATH) as f:
+            github = json.load(f)
+        if github.get("repos"):
+            print(f"Loaded GitHub data: {len(github['repos'])} repos")
+        else:
+            github = None
+
+    so = None
+    if SO_PATH.exists():
+        with open(SO_PATH) as f:
+            so = json.load(f)
+        if so.get("tags"):
+            print(f"Loaded StackOverflow data: {len(so['tags'])} tags")
+        else:
+            so = None
+
+    return taxonomy, downloads, bls, github, so
 
 
 def calc_mom_growth(values: list[int]) -> list[float]:
@@ -87,6 +107,73 @@ def detect_surging(growth_rates: list[float]) -> tuple[bool, str | None]:
             return True, f"Growth rate doubled: {recent_avg:.0%} vs prior {prior_avg:.0%}"
 
     return False, None
+
+
+def build_community_lookups(taxonomy, github, so):
+    """Build package-level lookups for GitHub stars/issues/commits and SO questions."""
+    gh_by_package = {}
+    so_by_package = {}
+
+    if github:
+        for repo_data in github.get("repos", []):
+            total_stars = repo_data.get("totalStars", 0)
+            forks = repo_data.get("forks", 0)
+            open_issues = repo_data.get("openIssues", 0)
+            monthly_issues = repo_data.get("monthlyIssues", [])
+            weekly_commits = repo_data.get("weeklyCommits", [])
+
+            latest_issues = None
+            issue_growth = None
+            if len(monthly_issues) >= 2:
+                # Use second-to-last month (latest may be incomplete)
+                idx = -2 if len(monthly_issues) >= 2 else -1
+                latest_issues = monthly_issues[idx]["issues"]
+                if len(monthly_issues) >= 3:
+                    prev = monthly_issues[idx - 1]["issues"]
+                    if prev > 0:
+                        issue_growth = (latest_issues - prev) / prev
+            elif len(monthly_issues) == 1:
+                latest_issues = monthly_issues[0]["issues"]
+
+            # Average weekly commits over the last 4 weeks
+            avg_weekly_commits = None
+            if len(weekly_commits) >= 4:
+                recent = [w["commits"] for w in weekly_commits[-4:]]
+                avg_weekly_commits = round(sum(recent) / len(recent), 1)
+
+            for pkg_name in repo_data.get("packages", []):
+                gh_by_package[pkg_name] = {
+                    "totalStars": total_stars,
+                    "forks": forks,
+                    "openIssues": open_issues,
+                    "latestMonthlyIssues": latest_issues,
+                    "issueGrowthMoM": issue_growth,
+                    "avgWeeklyCommits": avg_weekly_commits,
+                }
+
+    if so:
+        for tag_data in so.get("tags", []):
+            monthly_q = tag_data.get("monthlyQuestions", [])
+
+            latest_q = None
+            q_growth = None
+            if len(monthly_q) >= 2:
+                idx = -2 if len(monthly_q) >= 2 else -1
+                latest_q = monthly_q[idx]["questions"]
+                if len(monthly_q) >= 3:
+                    prev = monthly_q[idx - 1]["questions"]
+                    if prev > 0:
+                        q_growth = (latest_q - prev) / prev
+            elif len(monthly_q) == 1:
+                latest_q = monthly_q[0]["questions"]
+
+            for pkg_name in tag_data.get("packages", []):
+                so_by_package[pkg_name] = {
+                    "latestMonthlyQuestions": latest_q,
+                    "questionGrowthMoM": q_growth,
+                }
+
+    return gh_by_package, so_by_package
 
 
 def calculate_package_metrics(pkg_name, pkg_data, pkg_config):
@@ -328,13 +415,17 @@ def calculate_industry_metrics(package_metrics, taxonomy, employment_changes):
 
 
 def main():
-    taxonomy, downloads, bls = load_data()
+    taxonomy, downloads, bls, github, so = load_data()
 
     # Build config lookup
     pkg_config_map = {p["name"]: p for p in taxonomy["packages"]}
 
     # Build downloads lookup
     pkg_downloads_map = {p["package"]: p for p in downloads["packages"]}
+
+    # Build community data lookups
+    gh_by_package, so_by_package = build_community_lookups(taxonomy, github, so)
+    print(f"Community data: {len(gh_by_package)} packages with GitHub, {len(so_by_package)} with SO\n")
 
     # Calculate per-package metrics
     print("Calculating per-package metrics...")
@@ -346,10 +437,48 @@ def main():
             print(f"  SKIP {name}: no download data")
             continue
         metrics = calculate_package_metrics(name, pkg_data, pkg_config)
+
+        # Attach community signals
+        gh = gh_by_package.get(name)
+        if gh:
+            metrics["githubStars"] = gh["totalStars"]
+            metrics["githubMonthlyIssues"] = gh["latestMonthlyIssues"]
+            metrics["githubForks"] = gh["forks"]
+            metrics["githubOpenIssues"] = gh["openIssues"]
+            metrics["githubWeeklyCommits"] = gh["avgWeeklyCommits"]
+        else:
+            metrics["githubStars"] = None
+            metrics["githubMonthlyIssues"] = None
+            metrics["githubForks"] = None
+            metrics["githubOpenIssues"] = None
+            metrics["githubWeeklyCommits"] = None
+
+        so_data = so_by_package.get(name)
+        if so_data:
+            metrics["soMonthlyQuestions"] = so_data["latestMonthlyQuestions"]
+        else:
+            metrics["soMonthlyQuestions"] = None
+
+        # Signal quality: compare download volume to GitHub community size
+        # Low ratio = strong community signal; high ratio = likely CI/CD noise
+        stars = metrics.get("githubStars") or 0
+        dl_count = metrics.get("latestMonthlyDownloads") or 0
+        if stars > 0 and dl_count > 0:
+            ratio = dl_count / stars
+            if ratio < 500:
+                metrics["signalQuality"] = "strong"
+            elif ratio < 5000:
+                metrics["signalQuality"] = "moderate"
+            else:
+                metrics["signalQuality"] = "noisy"
+        else:
+            metrics["signalQuality"] = None
+
         package_metrics.append(metrics)
         growth_pct = metrics["momGrowth"] * 100
+        stars = f"  GH:{gh['totalStars']:,}" if gh else ""
         surging = " ** SURGING **" if metrics["isSurging"] else ""
-        print(f"  {name}: {metrics['latestMonthlyDownloads']:>12,}/mo  MoM: {growth_pct:+.1f}%{surging}")
+        print(f"  {name}: {metrics['latestMonthlyDownloads']:>12,}/mo  MoM: {growth_pct:+.1f}%{stars}{surging}")
 
     # Calculate AAI history
     print("\nCalculating AAI history...")

@@ -11,7 +11,7 @@ interface PackageTableProps {
   onSort: (field: string) => void;
 }
 
-function formatDownloads(val: number): string {
+function formatNumber(val: number): string {
   if (val >= 1_000_000_000) return `${(val / 1_000_000_000).toFixed(1)}B`;
   if (val >= 1_000_000) return `${(val / 1_000_000).toFixed(1)}M`;
   if (val >= 1_000) return `${(val / 1_000).toFixed(1)}K`;
@@ -118,11 +118,62 @@ function PackageRow({
           <p className="text-[11px] text-[var(--muted)] leading-snug mt-1 max-w-md">
             {pkg.label}
           </p>
-          {otherIndustries.length > 0 && (
-            <p className="text-[10px] text-[var(--accent)] mt-1">
-              Also in: {otherIndustries.join(", ")}
-            </p>
-          )}
+          <div className="flex items-center gap-3 mt-1.5 flex-wrap">
+            {pkg.githubStars != null && pkg.githubStars > 0 && (
+              <span className="text-[10px] text-[var(--muted)] font-mono inline-flex items-center gap-0.5" title="GitHub stars">
+                <span className="text-amber-500">&#9733;</span> {formatNumber(pkg.githubStars)}
+              </span>
+            )}
+            {pkg.githubForks != null && pkg.githubForks > 0 && (
+              <span className="text-[10px] text-[var(--muted)] font-mono inline-flex items-center gap-0.5" title="GitHub forks">
+                <span className="text-[var(--muted)]">&#9906;</span> {formatNumber(pkg.githubForks)}
+              </span>
+            )}
+            {pkg.githubWeeklyCommits != null && pkg.githubWeeklyCommits > 0 && (
+              <span className="text-[10px] text-[var(--muted)] font-mono inline-flex items-center gap-0.5" title="Avg weekly commits (last 4 weeks)">
+                <span className="text-blue-500">&#9998;</span> {Math.round(pkg.githubWeeklyCommits)}/wk
+              </span>
+            )}
+            {pkg.githubMonthlyIssues != null && pkg.githubMonthlyIssues > 0 && (
+              <span className="text-[10px] text-[var(--muted)] font-mono inline-flex items-center gap-0.5" title="Monthly GitHub issues">
+                <span className="text-green-600">&#9679;</span> {pkg.githubMonthlyIssues} issues/mo
+              </span>
+            )}
+            {pkg.soMonthlyQuestions != null && pkg.soMonthlyQuestions > 0 && (
+              <span className="text-[10px] text-[var(--muted)] font-mono inline-flex items-center gap-0.5" title="Monthly StackOverflow questions">
+                <span className="text-orange-500">Q</span> {pkg.soMonthlyQuestions} questions/mo
+              </span>
+            )}
+            {pkg.signalQuality && (
+              <span
+                className={`text-[10px] font-semibold px-1.5 py-0.5 rounded-full ${
+                  pkg.signalQuality === "strong"
+                    ? "bg-green-500/10 text-green-700"
+                    : pkg.signalQuality === "moderate"
+                      ? "bg-amber-500/10 text-amber-700"
+                      : "bg-red-500/10 text-red-600"
+                }`}
+                title={
+                  pkg.signalQuality === "strong"
+                    ? "Low download-to-stars ratio — strong community signal"
+                    : pkg.signalQuality === "moderate"
+                      ? "Moderate download-to-stars ratio"
+                      : "High download-to-stars ratio — likely CI/CD noise"
+                }
+              >
+                {pkg.signalQuality === "strong"
+                  ? "Strong signal"
+                  : pkg.signalQuality === "moderate"
+                    ? "Moderate signal"
+                    : "Noisy signal"}
+              </span>
+            )}
+            {otherIndustries.length > 0 && (
+              <span className="text-[10px] text-[var(--accent)]">
+                Also in: {otherIndustries.join(", ")}
+              </span>
+            )}
+          </div>
         </div>
       </td>
 
@@ -141,7 +192,7 @@ function PackageRow({
 
       {/* Monthly Usage */}
       <td className="px-4 py-3 text-[13px] font-mono font-medium text-[var(--foreground)] stat-number">
-        {formatDownloads(pkg.latestMonthlyDownloads)}
+        {formatNumber(pkg.latestMonthlyDownloads)}
       </td>
 
       {/* Monthly Change */}
@@ -370,7 +421,7 @@ export default function PackageTable({
                       </span>
                     </td>
                     <td className="px-4 py-3 text-[13px] font-mono font-medium text-[var(--foreground)] stat-number">
-                      {formatDownloads(pkg.latestMonthlyDownloads)}
+                      {formatNumber(pkg.latestMonthlyDownloads)}
                     </td>
                     <td
                       className="px-4 py-3 text-[13px] font-mono font-medium stat-number"
