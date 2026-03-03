@@ -38,8 +38,8 @@ function formatDownloads(val: number): string {
 }
 
 function growthColor(val: number): string {
-  if (val > 0.05) return "#16a34a";
-  if (val < -0.05) return "#dc2626";
+  if (val > 0) return "#16a34a";
+  if (val < 0) return "#dc2626";
   return "var(--foreground)";
 }
 
@@ -526,9 +526,9 @@ export default function IndustryDetail({
                         <Sparkline
                           data={pkg.sparkline}
                           color={
-                            pkg.rollingAvg3mGrowth > 0.05
+                            pkg.rollingAvg3mGrowth > 0
                               ? "#16a34a"
-                              : pkg.rollingAvg3mGrowth < -0.05
+                              : pkg.rollingAvg3mGrowth < 0
                                 ? "#dc2626"
                                 : "#6b7280"
                           }
