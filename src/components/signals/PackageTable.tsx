@@ -64,7 +64,7 @@ const SORTABLE_COLUMNS = [
   { key: "sparkline", label: "Trend", sortable: false },
 ];
 
-// Industry display order
+// Industry display order — all 10 industries
 const INDUSTRY_ORDER = [
   "software_it",
   "legal",
@@ -72,14 +72,51 @@ const INDUSTRY_ORDER = [
   "healthcare",
   "creative",
   "office",
+  "customer_service",
+  "education",
+  "manufacturing",
+  "sales_marketing",
 ];
+
+/* ------------------------------------------------------------------ */
+/*  Aggregate stats interface                                          */
+/* ------------------------------------------------------------------ */
 
 interface IndustryGroup {
   industryKey: string;
   label: string;
   color: string;
   packages: PackageMetrics[];
+  totalDownloads: number;
+  weightedMomGrowth: number;
+  weightedAvg3mGrowth: number;
+  surgingCount: number;
+  aggregateSparkline: number[];
 }
+
+/* ------------------------------------------------------------------ */
+/*  Chevron icon                                                       */
+/* ------------------------------------------------------------------ */
+
+function ChevronIcon({ expanded }: { expanded: boolean }) {
+  return (
+    <svg
+      width="10"
+      height="10"
+      viewBox="0 0 10 10"
+      fill="currentColor"
+      className={`shrink-0 text-[var(--muted)] ${expanded ? "rotate-90" : ""}`}
+      style={{ transition: "transform 150ms ease" }}
+      aria-hidden="true"
+    >
+      <path d="M3 1L8 5L3 9Z" />
+    </svg>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/*  Package row                                                        */
+/* ------------------------------------------------------------------ */
 
 function PackageRow({
   pkg,
@@ -97,7 +134,7 @@ function PackageRow({
   return (
     <tr className="border-b border-black/[0.03] hover:bg-black/[0.015] transition-colors">
       {/* Tool */}
-      <td className="px-4 py-3">
+      <td className="px-4 py-3 pl-10">
         <div>
           <div className="flex items-center gap-2 flex-wrap">
             <span className="text-[13px] font-semibold text-[var(--foreground)]">
@@ -230,6 +267,79 @@ function PackageRow({
   );
 }
 
+/* ------------------------------------------------------------------ */
+/*  Helper: sort packages                                              */
+/* ------------------------------------------------------------------ */
+
+function sortPackages(
+  pkgs: PackageMetrics[],
+  sortField: string,
+  sortDirection: "asc" | "desc",
+): PackageMetrics[] {
+  return [...pkgs].sort((a, b) => {
+    const aVal = (a as unknown as Record<string, unknown>)[sortField];
+    const bVal = (b as unknown as Record<string, unknown>)[sortField];
+    if (typeof aVal === "string" && typeof bVal === "string") {
+      return sortDirection === "asc"
+        ? aVal.localeCompare(bVal)
+        : bVal.localeCompare(aVal);
+    }
+    const aNum = (aVal as number) ?? 0;
+    const bNum = (bVal as number) ?? 0;
+    return sortDirection === "asc" ? aNum - bNum : bNum - aNum;
+  });
+}
+
+/* ------------------------------------------------------------------ */
+/*  Helper: compute aggregate stats for a group                        */
+/* ------------------------------------------------------------------ */
+
+function computeAggregates(pkgs: PackageMetrics[]) {
+  const totalDownloads = pkgs.reduce(
+    (sum, p) => sum + p.latestMonthlyDownloads,
+    0,
+  );
+
+  const weightedMomGrowth =
+    totalDownloads > 0
+      ? pkgs.reduce(
+          (sum, p) => sum + p.momGrowth * p.latestMonthlyDownloads,
+          0,
+        ) / totalDownloads
+      : 0;
+
+  const weightedAvg3mGrowth =
+    totalDownloads > 0
+      ? pkgs.reduce(
+          (sum, p) => sum + p.rollingAvg3mGrowth * p.latestMonthlyDownloads,
+          0,
+        ) / totalDownloads
+      : 0;
+
+  const surgingCount = pkgs.filter((p) => p.isSurging).length;
+
+  // Sum sparklines point-by-point
+  const sparklineLength = pkgs[0]?.sparkline?.length || 0;
+  const aggregateSparkline: number[] = [];
+  for (let i = 0; i < sparklineLength; i++) {
+    aggregateSparkline.push(
+      pkgs.reduce((sum, p) => sum + (p.sparkline?.[i] ?? 0), 0),
+    );
+  }
+
+  return {
+    totalDownloads,
+    weightedMomGrowth,
+    weightedAvg3mGrowth,
+    surgingCount,
+    aggregateSparkline,
+  };
+}
+
+/* ------------------------------------------------------------------ */
+/*  Main component                                                     */
+/* ------------------------------------------------------------------ */
+
 export default function PackageTable({
   packages,
   taxonomy,
@@ -238,8 +348,14 @@ export default function PackageTable({
   onSort,
 }: PackageTableProps) {
   const [showTier1, setShowTier1] = useState(false);
+  const [expandedGroups, setExpandedGroups] = useState<Record<string, boolean>>(
+    {},
+  );
 
-  // Group tier2 packages by their primary industry (first in their list)
+  const toggleGroup = (key: string) =>
+    setExpandedGroups((prev) => ({ ...prev, [key]: !prev[key] }));
+
+  // Group tier2 packages by their primary industry, compute aggregates
   const industryGroups: IndustryGroup[] = useMemo(() => {
     const tier2 = packages.filter((p) => p.tier === "tier2");
 
@@ -250,48 +366,31 @@ export default function PackageTable({
       groupMap[primaryIndustry].push(pkg);
     }
 
-    // Sort packages within each group
-    for (const key of Object.keys(groupMap)) {
-      groupMap[key].sort((a, b) => {
-        const aVal = (a as unknown as Record<string, unknown>)[sortField];
-        const bVal = (b as unknown as Record<string, unknown>)[sortField];
-        if (typeof aVal === "string" && typeof bVal === "string") {
-          return sortDirection === "asc"
-            ? aVal.localeCompare(bVal)
-            : bVal.localeCompare(aVal);
-        }
-        const aNum = (aVal as number) ?? 0;
-        const bNum = (bVal as number) ?? 0;
-        return sortDirection === "asc" ? aNum - bNum : bNum - aNum;
-      });
-    }
-
-    return INDUSTRY_ORDER
-      .filter((key) => groupMap[key] && groupMap[key].length > 0)
-      .map((key) => ({
+    return INDUSTRY_ORDER.filter(
+      (key) => groupMap[key] && groupMap[key].length > 0,
+    ).map((key) => {
+      const sorted = sortPackages(groupMap[key], sortField, sortDirection);
+      const agg = computeAggregates(sorted);
+      return {
         industryKey: key,
         label: taxonomy.industries[key]?.label || key,
         color: taxonomy.industries[key]?.color || "#6b7280",
-        packages: groupMap[key],
-      }));
+        packages: sorted,
+        ...agg,
+      };
+    });
   }, [packages, taxonomy, sortField, sortDirection]);
 
   // Tier 1 baseline packages (sorted)
-  const tier1Sorted = useMemo(() => {
-    const tier1 = packages.filter((p) => p.tier === "tier1");
-    return [...tier1].sort((a, b) => {
-      const aVal = (a as unknown as Record<string, unknown>)[sortField];
-      const bVal = (b as unknown as Record<string, unknown>)[sortField];
-      if (typeof aVal === "string" && typeof bVal === "string") {
-        return sortDirection === "asc"
-          ? aVal.localeCompare(bVal)
-          : bVal.localeCompare(aVal);
-      }
-      const aNum = (aVal as number) ?? 0;
-      const bNum = (bVal as number) ?? 0;
-      return sortDirection === "asc" ? aNum - bNum : bNum - aNum;
-    });
-  }, [packages, sortField, sortDirection]);
+  const tier1Sorted = useMemo(
+    () =>
+      sortPackages(
+        packages.filter((p) => p.tier === "tier1"),
+        sortField,
+        sortDirection,
+      ),
+    [packages, sortField, sortDirection],
+  );
 
   return (
     <div>
@@ -322,39 +421,18 @@ export default function PackageTable({
             </tr>
           </thead>
           <tbody>
-            {industryGroups.map((group) => (
-              <>
-                {/* Industry section header */}
-                <tr key={`header-${group.industryKey}`}>
-                  <td
-                    colSpan={6}
-                    className="px-4 pt-6 pb-2 border-b border-black/[0.06]"
-                  >
-                    <div className="flex items-center gap-2.5">
-                      <span
-                        className="w-2.5 h-2.5 rounded-full shrink-0"
-                        style={{ backgroundColor: group.color }}
-                      />
-                      <span className="text-[15px] font-bold text-[var(--foreground)]">
-                        {group.label}
-                      </span>
-                      <span className="text-[11px] text-[var(--muted)]">
-                        {group.packages.length} tool
-                        {group.packages.length !== 1 ? "s" : ""}
-                      </span>
-                    </div>
-                  </td>
-                </tr>
-                {group.packages.map((pkg) => (
-                  <PackageRow
-                    key={pkg.package}
-                    pkg={pkg}
-                    taxonomy={taxonomy}
-                    currentIndustry={group.industryKey}
-                  />
-                ))}
-              </>
-            ))}
+            {industryGroups.map((group) => {
+              const isExpanded = !!expandedGroups[group.industryKey];
+              return (
+                <GroupRows
+                  key={group.industryKey}
+                  group={group}
+                  isExpanded={isExpanded}
+                  onToggle={() => toggleGroup(group.industryKey)}
+                  taxonomy={taxonomy}
+                />
+              );
+            })}
 
             {/* Tier 1 baseline section */}
             {showTier1 && (
@@ -474,5 +552,114 @@ export default function PackageTable({
         </span>
       </div>
     </div>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/*  Group rows: header + conditionally expanded package rows           */
+/* ------------------------------------------------------------------ */
+
+function GroupRows({
+  group,
+  isExpanded,
+  onToggle,
+  taxonomy,
+}: {
+  group: IndustryGroup;
+  isExpanded: boolean;
+  onToggle: () => void;
+  taxonomy: SignalTaxonomy;
+}) {
+  return (
+    <>
+      {/* Clickable aggregate header row */}
+      <tr
+        className="border-b border-black/[0.06] cursor-pointer hover:bg-black/[0.03] select-none"
+        style={{
+          backgroundColor: isExpanded ? "rgba(0,0,0,0.02)" : undefined,
+        }}
+        onClick={onToggle}
+      >
+        {/* Industry name + tool count */}
+        <td className="px-4 py-3">
+          <div className="flex items-center gap-2.5">
+            <ChevronIcon expanded={isExpanded} />
+            <span
+              className="w-2.5 h-2.5 rounded-full shrink-0"
+              style={{ backgroundColor: group.color }}
+            />
+            <span className="text-[14px] font-bold text-[var(--foreground)]">
+              {group.label}
+            </span>
+            <span className="text-[11px] text-[var(--muted)]">
+              {group.packages.length} tool
+              {group.packages.length !== 1 ? "s" : ""}
+            </span>
+            {group.surgingCount > 0 && (
+              <span
+                className="text-[10px] font-semibold uppercase tracking-wider px-1.5 py-0.5 rounded-full"
+                style={{
+                  backgroundColor: "rgba(245, 158, 11, 0.12)",
+                  color: "#d97706",
+                }}
+              >
+                {group.surgingCount} surging
+              </span>
+            )}
+          </div>
+        </td>
+
+        {/* Type — empty */}
+        <td className="px-4 py-3" />
+
+        {/* Aggregate monthly usage */}
+        <td className="px-4 py-3 text-[13px] font-mono font-bold text-[var(--foreground)] stat-number">
+          {formatNumber(group.totalDownloads)}
+        </td>
+
+        {/* Aggregate monthly change (download-weighted) */}
+        <td
+          className="px-4 py-3 text-[13px] font-mono font-bold stat-number"
+          style={{ color: growthColor(group.weightedMomGrowth) }}
+        >
+          {group.weightedMomGrowth >= 0 ? "+" : ""}
+          {(group.weightedMomGrowth * 100).toFixed(1)}%
+        </td>
+
+        {/* Aggregate 3-month trend (download-weighted) */}
+        <td
+          className="px-4 py-3 text-[13px] font-mono font-bold stat-number"
+          style={{ color: growthColor(group.weightedAvg3mGrowth) }}
+        >
+          {group.weightedAvg3mGrowth >= 0 ? "+" : ""}
+          {(group.weightedAvg3mGrowth * 100).toFixed(1)}%
+        </td>
+
+        {/* Aggregate sparkline */}
+        <td className="px-4 py-3">
+          <Sparkline
+            data={group.aggregateSparkline}
+            color={
+              group.weightedAvg3mGrowth > 0
+                ? "#16a34a"
+                : group.weightedAvg3mGrowth < 0
+                  ? "#dc2626"
+                  : "#6b7280"
+            }
+          />
+        </td>
+      </tr>
+
+      {/* Expanded: individual package rows */}
+      {isExpanded &&
+        group.packages.map((pkg) => (
+          <PackageRow
+            key={pkg.package}
+            pkg={pkg}
+            taxonomy={taxonomy}
+            currentIndustry={group.industryKey}
+          />
+        ))}
+    </>
   );
 }
