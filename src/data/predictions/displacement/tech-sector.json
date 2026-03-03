@@ -312,6 +312,24 @@
       ],
       "evidenceTier": 1,
       "label": "Wang et al.: AI development heavily concentrated on CS/Math — 7.6% of employment"
+    },
+    {
+      "date": "2026-02-18",
+      "direction": "up",
+      "sourceIds": [
+        "cio-it-jobs-ai-skills-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "CIO/Survey: 37% of tech professionals restructured due to gen AI in past 2 years"
+    },
+    {
+      "date": "2026-02-18",
+      "direction": "down",
+      "sourceIds": [
+        "cio-it-jobs-ai-skills-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "CIO/Robert Half: 61% of IT leaders plan to increase permanent headcount in H1 2026"
     }
   ],
   "sources": [
@@ -609,6 +627,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-03-01",
       "excerpt": "software engineering abilities has the potential to accelerate other varieties of work. However, this concentrated focus significantly overrepresents a domain that accounts for only 7.6% of total employment."
+    },
+    {
+      "id": "cio-it-jobs-ai-skills-2026",
+      "title": "State of IT jobs: AI sparks rapidly changing market for skills",
+      "url": "https://www.cio.com/article/4134254/state-of-it-jobs-ai-sparks-rapidly-changing-market-for-skills.html",
+      "publisher": "CIO.com",
+      "evidenceTier": 3,
+      "datePublished": "2026-02-18",
+      "excerpt": "37% of tech professionals say their role has been 'redefined or restructured due to gen AI in the past two years.' 61% of IT leaders say they plan to increase permanent headcount in the first half of 2026."
     }
   ],
   "marketIds": {

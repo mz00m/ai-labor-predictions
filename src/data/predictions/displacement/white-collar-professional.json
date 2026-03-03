@@ -330,6 +330,15 @@
       ],
       "evidenceTier": 1,
       "label": "Wang et al.: Legal 70%, Management 88% digital work — high automation potential"
+    },
+    {
+      "date": "2026-02-18",
+      "direction": "up",
+      "sourceIds": [
+        "cio-it-jobs-ai-skills-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "CIO/WEF: 40% of employers plan to reduce staff as AI skills become redundant"
     }
   ],
   "sources": [
@@ -630,6 +639,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-03-01",
       "excerpt": "Management, Legal, and Architecture and Engineering exhibit high ratios of digital work (88%, 70%, and 71%, respectively). Management and Legal are sparsely covered by existing benchmarks (1.4%, 0.3% among all 19179 examples)."
+    },
+    {
+      "id": "cio-it-jobs-ai-skills-2026",
+      "title": "State of IT jobs: AI sparks rapidly changing market for skills",
+      "url": "https://www.cio.com/article/4134254/state-of-it-jobs-ai-sparks-rapidly-changing-market-for-skills.html",
+      "publisher": "CIO.com",
+      "evidenceTier": 3,
+      "datePublished": "2026-02-18",
+      "excerpt": "40% plan to reduce staff as skills become redundant"
     }
   ]
 }
