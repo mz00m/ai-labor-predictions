@@ -371,6 +371,15 @@
       ],
       "evidenceTier": 1,
       "label": "NBER (Brynjolfsson et al.): 10% min-wage hike → ~8% rise in robot adoption"
+    },
+    {
+      "date": "2026-03-03",
+      "direction": "neutral",
+      "sourceIds": [
+        "goldman-ai-nxiety-earnings-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "GS: No measurable economywide productivity-AI relationship yet"
     }
   ],
   "sources": [
@@ -712,6 +721,15 @@
       "datePublished": "2026-02-01",
       "dateAdded": "2026-03-02",
       "excerpt": "a 10 percent increase in the minimum wage increases robot adoption by roughly 8 percent relative to the mean"
+    },
+    {
+      "id": "goldman-ai-nxiety-earnings-2026",
+      "title": "US Economics Analyst: Earnings Season Takeaways: AI-nxiety",
+      "url": "",
+      "publisher": "Goldman Sachs Research",
+      "evidenceTier": 2,
+      "datePublished": "2026-03-03",
+      "excerpt": "While we still do not find a meaningful relationship between productivity and AI adoption at the economywide level, companies that quantified productivity impacts of AI on specific tasks reported a median productivity gain of around 30%."
     }
   ]
 }

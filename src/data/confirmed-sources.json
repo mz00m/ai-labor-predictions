@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-03-02",
-  "totalSources": 301,
-  "verifiedCount": 291,
+  "lastUpdated": "2026-03-03",
+  "totalSources": 302,
+  "verifiedCount": 292,
   "sources": {
     "accenture-health-ai-2023": {
       "id": "accenture-health-ai-2023",
@@ -4000,6 +4000,20 @@
         "ai-adoption-rate",
         "white-collar-professional-displacement",
         "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "goldman-ai-nxiety-earnings-2026": {
+      "id": "goldman-ai-nxiety-earnings-2026",
+      "title": "US Economics Analyst: Earnings Season Takeaways: AI-nxiety",
+      "url": "",
+      "publisher": "Goldman Sachs Research",
+      "evidenceTier": 2,
+      "datePublished": "2026-03-03",
+      "excerpt": "While we still do not find a meaningful relationship between productivity and AI adoption at the economywide level, companies that quantified productivity impacts of AI on specific tasks reported a median productivity gain of around 30%.",
+      "usedIn": [
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false
