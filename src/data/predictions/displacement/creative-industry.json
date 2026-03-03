@@ -195,6 +195,15 @@
       ],
       "evidenceTier": 1,
       "label": "Dallas Fed: CS design wages up 16.7% vs 7.5% national; AI augments experienced workers"
+    },
+    {
+      "date": "2026-03-02",
+      "direction": "up",
+      "sourceIds": [
+        "causalinf-research-publishing-ai-2026"
+      ],
+      "evidenceTier": 4,
+      "label": "CausalInf: Amazon book titles tripled post-ChatGPT, average quality fell"
     }
   ],
   "sources": [
@@ -368,6 +377,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-02-24",
       "excerpt": "nominal average weekly wages nationwide have increased 7.5 percent, while the computer systems design sector has risen 16.7 percent"
+    },
+    {
+      "id": "causalinf-research-publishing-ai-2026",
+      "title": "Claude Code 27: Research and Publishing Are Now Two Different Things",
+      "url": "https://causalinf.substack.com/p/claude-code-27-research-and-publishing",
+      "publisher": "CausalInf Substack (Scott Cunningham)",
+      "evidenceTier": 4,
+      "datePublished": "2026-03-02",
+      "excerpt": "Reimers and Waldfogel studied what happened to book publishing after ChatGPT launched. The number of new titles on Amazon tripled. Average quality fell."
     }
   ]
 }
