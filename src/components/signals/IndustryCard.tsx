@@ -94,7 +94,7 @@ export default function IndustryCard({
             {formatEmployment(industry.employmentChangeSinceNov2022)}
           </p>
           <p className="text-[10px] text-[var(--muted)] mt-0.5">
-            since Nov 2022
+            vs late 2022
           </p>
         </div>
       </div>

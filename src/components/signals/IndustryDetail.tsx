@@ -205,6 +205,58 @@ export default function IndustryDetail({
         </p>
       </div>
 
+      {/* BLS Methodology */}
+      {industryConfig?.blsSeries && industryConfig.blsSeries.length > 0 && (
+        <div className="mb-6 p-4 rounded-lg bg-black/[0.02] border border-black/[0.04]">
+          <p className="text-[13px] font-semibold text-[var(--foreground)] mb-1">
+            Employment data methodology
+          </p>
+          <p className="text-[12px] text-[var(--muted)] leading-relaxed mb-2">
+            The employment percentage is derived from{" "}
+            <a
+              href="https://www.bls.gov/ces/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-[var(--foreground)]"
+            >
+              BLS Current Employment Statistics
+            </a>{" "}
+            (monthly, not seasonally adjusted). To eliminate seasonal
+            distortion, we compare a 3-month trailing average of the most
+            recent data against the Oct&ndash;Dec 2022 average (centered on
+            ChatGPT&apos;s launch). The per-series percentage changes are then
+            simple-averaged across the series below.
+          </p>
+          <div className="space-y-1">
+            {industryConfig.blsSeries.map((s) => {
+              const seriesData = bls.series.find((bs) => bs.id === s.id);
+              const latestVal = seriesData?.data?.[seriesData.data.length - 1];
+              return (
+                <div
+                  key={s.id}
+                  className="flex items-center justify-between text-[11px]"
+                >
+                  <span className="text-[var(--muted)]">
+                    <span className="font-mono text-[10px] mr-1.5 opacity-60">
+                      {s.id}
+                    </span>
+                    {s.name}
+                  </span>
+                  {latestVal && (
+                    <span className="font-mono text-[var(--foreground)] shrink-0 ml-2">
+                      {latestVal.value.toLocaleString()}K
+                      <span className="text-[var(--muted)] ml-1">
+                        ({latestVal.month})
+                      </span>
+                    </span>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
       {/* Dual-axis chart */}
       <div className="mb-6">
         <div className="flex items-center gap-4 mb-3 flex-wrap">
