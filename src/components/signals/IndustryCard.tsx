@@ -9,12 +9,12 @@ interface IndustryCardProps {
 }
 
 function getHeatBg(growth: number): string {
-  if (growth <= 0) return "rgba(59, 130, 246, 0.06)";
-  if (growth <= 0.05) return "rgba(245, 158, 11, 0.06)";
-  if (growth <= 0.10) return "rgba(245, 158, 11, 0.10)";
-  if (growth <= 0.20) return "rgba(239, 68, 68, 0.08)";
-  if (growth <= 0.40) return "rgba(239, 68, 68, 0.12)";
-  return "rgba(239, 68, 68, 0.18)";
+  if (growth <= 0) return "rgba(220, 38, 38, 0.06)";
+  if (growth <= 0.05) return "rgba(22, 163, 74, 0.06)";
+  if (growth <= 0.10) return "rgba(22, 163, 74, 0.08)";
+  if (growth <= 0.20) return "rgba(22, 163, 74, 0.10)";
+  if (growth <= 0.40) return "rgba(22, 163, 74, 0.14)";
+  return "rgba(22, 163, 74, 0.18)";
 }
 
 function formatEmployment(val: number | null): string {
@@ -71,7 +71,7 @@ export default function IndustryCard({
           <p
             className="text-[22px] sm:text-[26px] font-black stat-number leading-none"
             style={{
-              color: growth > 0.05 ? "#dc2626" : growth > 0 ? "#d97706" : "#2563eb",
+              color: growth > 0 ? "#16a34a" : growth < 0 ? "#dc2626" : "var(--muted)",
             }}
           >
             {growth >= 0 ? "+" : ""}
@@ -105,7 +105,7 @@ export default function IndustryCard({
           className="h-full rounded-full transition-all"
           style={{
             width: `${heatWidth}%`,
-            background: `linear-gradient(to right, #3b82f6, #f59e0b, #ef4444)`,
+            background: `linear-gradient(to right, #bbf7d0, #16a34a)`,
             opacity: 0.7,
           }}
         />
