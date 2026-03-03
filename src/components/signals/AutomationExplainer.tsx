@@ -135,14 +135,14 @@ function getSteps(metrics: SignalMetrics): StepConfig[] {
           }}
         >
           <span className="flex items-center gap-0.5" style={{ color: "#dc2626" }}>
-            <span className="text-[11px]">↓</span> Reduce
+            <span className="text-[13px] leading-none" style={{ opacity: 0.6 }}>▼</span> Reduce
           </span>
           <span className="text-[var(--muted)]">/</span>
-          <span style={{ color: "#16a34a" }}>Amplify</span>
+          <span style={{ color: "#5C61F6" }}>Amplify</span>
           <span className="text-[var(--muted)]">/</span>
-          <span className="flex items-center gap-0.5">
-            <span className="text-[11px]" style={{ color: "#16a34a" }}>↑</span>
-            <span style={{ color: "#5C61F6" }}>Expand</span>
+          <span className="flex items-center gap-0.5" style={{ color: "#16a34a" }}>
+            <span className="text-[13px] leading-none" style={{ opacity: 0.6 }}>▲</span>
+            Expand
           </span>
         </span>
       ),
