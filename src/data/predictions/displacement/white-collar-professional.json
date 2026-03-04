@@ -278,7 +278,7 @@
     },
     {
       "date": "2026-01-21",
-      "direction": "up",
+      "direction": "down",
       "sourceIds": [
         "althoff-reichardt-task-specific-technical-2026"
       ],
@@ -296,7 +296,7 @@
     },
     {
       "date": "2026-02-01",
-      "direction": "up",
+      "direction": "down",
       "sourceIds": [
         "lightcast-fault-lines-2026"
       ],
@@ -305,7 +305,7 @@
     },
     {
       "date": "2026-03-02",
-      "direction": "up",
+      "direction": "down",
       "sourceIds": [
         "causalinf-research-publishing-ai-2026"
       ],
@@ -314,7 +314,7 @@
     },
     {
       "date": "2026-03-02",
-      "direction": "up",
+      "direction": "down",
       "sourceIds": [
         "causalinf-research-publishing-ai-2026"
       ],
@@ -323,7 +323,7 @@
     },
     {
       "date": "2026-03-02",
-      "direction": "up",
+      "direction": "down",
       "sourceIds": [
         "causalinf-research-publishing-ai-2026"
       ],
@@ -332,7 +332,7 @@
     },
     {
       "date": "2026-03-01",
-      "direction": "up",
+      "direction": "down",
       "sourceIds": [
         "wang-neubig-agent-benchmarks-2026"
       ],
@@ -341,7 +341,7 @@
     },
     {
       "date": "2026-02-18",
-      "direction": "up",
+      "direction": "down",
       "sourceIds": [
         "cio-it-jobs-ai-skills-2026"
       ],
@@ -350,7 +350,7 @@
     },
     {
       "date": "2025-02-10",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "bls-mlr-ai-employment-projections-2025"
       ],
