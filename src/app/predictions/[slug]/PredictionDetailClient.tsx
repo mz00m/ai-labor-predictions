@@ -244,8 +244,8 @@ export default function PredictionDetailPage() {
               unit={prediction.unit.includes("%") ? "%" : ""}
               overlays={prediction.overlays}
               onDotClick={handleDotClick}
-              yAxisMax={prediction.slug === "workforce-ai-exposure" ? 100 : prediction.slug === "customer-service-automation" ? 75 : prediction.slug === "entry-level-wage-impact" || prediction.slug === "freelancer-rate-impact" ? 5 : undefined}
-              yAxisMin={prediction.slug === "entry-level-wage-impact" || prediction.slug === "freelancer-rate-impact" ? -50 : undefined}
+              yAxisMax={prediction.slug === "workforce-ai-exposure" ? 100 : prediction.slug === "customer-service-automation" ? 75 : prediction.slug === "entry-level-wage-impact" || prediction.slug === "freelancer-rate-impact" ? 5 : prediction.slug === "tech-sector-displacement" ? 35 : undefined}
+              yAxisMin={prediction.slug === "entry-level-wage-impact" || prediction.slug === "freelancer-rate-impact" ? -50 : prediction.slug === "tech-sector-displacement" ? -20 : undefined}
             />
           </>
         )}
