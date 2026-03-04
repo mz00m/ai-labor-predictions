@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-04",
-  "totalSources": 314,
-  "verifiedCount": 304,
+  "totalSources": 316,
+  "verifiedCount": 306,
   "sources": {
     "accenture-health-ai-2023": {
       "id": "accenture-health-ai-2023",
@@ -4119,7 +4119,7 @@
       "publisher": "U.S. Bureau of Labor Statistics (Monthly Labor Review)",
       "evidenceTier": 1,
       "datePublished": "2025-02-10",
-      "excerpt": "Employment of computer programmers is projected to decline by 9.6 percent from 2023 to 2033. Customer service representatives projected to decline 5.0 percent. Medical transcriptionists projected to decline 4.7 percent. Software developers projected to grow 17.9 percent. Paralegals projected to grow 1.2 percent. All-occupation average growth 4.0 percent.",
+      "excerpt": "BLS projects employment of software developers to increase 17.9 percent between 2023 and 2033. Despite its exposure to GenAI applications, this occupation is unlikely to experience a decline in employment. Customer service representatives projected to decline 5.0 percent. Medical transcriptionists projected to decline 4.7 percent. Paralegals projected to grow 1.2 percent.",
       "usedIn": [
         "tech-sector-displacement",
         "customer-service-automation",
@@ -4215,6 +4215,35 @@
         "overall-us-displacement",
         "white-collar-professional-displacement",
         "healthcare-admin-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "citadel-intelligence-crisis-2026": {
+      "id": "citadel-intelligence-crisis-2026",
+      "title": "The 2026 Global Intelligence Crisis",
+      "url": "https://www.citadelsecurities.com/news-and-insights/2026-global-intelligence-crisis/",
+      "publisher": "Citadel Securities (Frank Flight)",
+      "evidenceTier": 2,
+      "datePublished": "2026-03-04",
+      "excerpt": "In spite of the current displacement narrative – job postings for software engineers are rising rapidly, up 11% YoY. There is little evidence of AI disruption in labor market data as of today.",
+      "usedIn": [
+        "tech-sector-displacement",
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "bls-ooh-programmer-decline-2023-2033": {
+      "id": "bls-ooh-programmer-decline-2023-2033",
+      "title": "BLS Occupational Outlook Handbook: Computer Programmers (2023-2033)",
+      "url": "https://www.bls.gov/ooh/computer-and-information-technology/computer-programmers.htm",
+      "publisher": "Bureau of Labor Statistics",
+      "evidenceTier": 1,
+      "datePublished": "2025-02-10",
+      "excerpt": "Overall employment of computer programmers is projected to decline 9.6 percent from 2023 to 2033.",
+      "usedIn": [
+        "tech-sector-displacement"
       ],
       "verified": true,
       "synthetic": false
