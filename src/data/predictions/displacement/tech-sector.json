@@ -9,96 +9,98 @@
   "timeHorizon": "By 2030",
   "history": [
     {
-      "date": "2025-01-20",
-      "value": 14,
-      "confidenceLow": 8,
-      "confidenceHigh": 20,
-      "sourceIds": [
-        "lightcast-tech-postings-2025"
-      ],
-      "evidenceTier": 2
-    },
-    {
-      "date": "2025-07-15",
-      "value": 33,
-      "confidenceLow": 25,
-      "confidenceHigh": 40,
-      "sourceIds": [
-        "indeed-sw-dev-postings-2025"
-      ],
-      "evidenceTier": 2
-    },
-    {
-      "date": "2025-08-01",
-      "value": 13,
-      "confidenceLow": 8,
-      "confidenceHigh": 20,
-      "sourceIds": [
-        "brynjolfsson-chandar-chen-2025"
-      ],
-      "evidenceTier": 1
-    },
-    {
       "date": "2024-03-15",
       "value": 0,
       "confidenceLow": 0,
       "confidenceHigh": 3,
-      "sourceIds": [
-        "brookings-2024"
-      ],
-      "evidenceTier": 2
+      "sourceIds": ["brookings-2024"],
+      "evidenceTier": 2,
+      "dataType": "observed"
     },
     {
       "date": "2024-11-01",
       "value": 27.5,
       "confidenceLow": 20,
       "confidenceHigh": 35,
-      "sourceIds": [
-        "bls-programmer-employment-observed"
-      ],
-      "evidenceTier": 1
+      "sourceIds": ["bls-programmer-employment-observed"],
+      "evidenceTier": 1,
+      "dataType": "observed"
     },
     {
-      "date": "2026-01-10",
-      "value": 6,
-      "confidenceLow": 3,
-      "confidenceHigh": 10,
-      "sourceIds": [
-        "bls-programmer-projections-2034"
-      ],
-      "evidenceTier": 1
+      "date": "2025-01-20",
+      "value": 14,
+      "confidenceLow": 8,
+      "confidenceHigh": 20,
+      "sourceIds": ["lightcast-tech-postings-2025"],
+      "evidenceTier": 2,
+      "dataType": "observed"
     },
     {
-      "date": "2025-02-10",
-      "value": 9.6,
-      "sourceIds": [
-        "bls-mlr-ai-employment-projections-2025"
-      ],
-      "evidenceTier": 1
+      "date": "2025-07-15",
+      "value": 33,
+      "confidenceLow": 25,
+      "confidenceHigh": 40,
+      "sourceIds": ["indeed-sw-dev-postings-2025"],
+      "evidenceTier": 2,
+      "dataType": "observed"
     },
     {
-      "date": "2025-02-10",
-      "value": -17.9,
-      "sourceIds": [
-        "bls-mlr-ai-employment-projections-2025"
-      ],
-      "evidenceTier": 1
+      "date": "2025-08-01",
+      "value": 13,
+      "confidenceLow": 8,
+      "confidenceHigh": 20,
+      "sourceIds": ["brynjolfsson-chandar-chen-2025"],
+      "evidenceTier": 1,
+      "dataType": "observed"
     },
     {
       "date": "2026-03-04",
       "value": -8,
-      "sourceIds": [
-        "cooper-cs-majors-labor-2026"
-      ],
-      "evidenceTier": 4
+      "sourceIds": ["cooper-cs-majors-labor-2026"],
+      "evidenceTier": 4,
+      "dataType": "observed"
     },
     {
-      "date": "2026-03-04",
-      "value": -15,
-      "sourceIds": [
-        "cooper-cs-majors-labor-2026"
-      ],
-      "evidenceTier": 4
+      "date": "2025-02-10",
+      "value": 0,
+      "sourceIds": ["bls-mlr-ai-employment-projections-2025"],
+      "evidenceTier": 1,
+      "dataType": "projected"
+    },
+    {
+      "date": "2026-02-10",
+      "value": -1.8,
+      "sourceIds": ["bls-mlr-ai-employment-projections-2025"],
+      "evidenceTier": 1,
+      "dataType": "projected"
+    },
+    {
+      "date": "2027-02-10",
+      "value": -3.6,
+      "sourceIds": ["bls-mlr-ai-employment-projections-2025"],
+      "evidenceTier": 1,
+      "dataType": "projected"
+    },
+    {
+      "date": "2028-02-10",
+      "value": -5.4,
+      "sourceIds": ["bls-mlr-ai-employment-projections-2025"],
+      "evidenceTier": 1,
+      "dataType": "projected"
+    },
+    {
+      "date": "2029-02-10",
+      "value": -7.2,
+      "sourceIds": ["bls-mlr-ai-employment-projections-2025"],
+      "evidenceTier": 1,
+      "dataType": "projected"
+    },
+    {
+      "date": "2030-02-10",
+      "value": -9.0,
+      "sourceIds": ["bls-mlr-ai-employment-projections-2025"],
+      "evidenceTier": 1,
+      "dataType": "projected"
     }
   ],
   "overlays": [
@@ -380,6 +382,24 @@
       ],
       "evidenceTier": 4,
       "label": "Cooper/ACS: 7.2% unemployment for early-career CS grads vs 4.5% overall (2024)"
+    },
+    {
+      "date": "2025-02-10",
+      "direction": "down",
+      "sourceIds": [
+        "bls-mlr-ai-employment-projections-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "BLS MLR: Computer programmer employment projected to decline 9.6% (2023-2033)"
+    },
+    {
+      "date": "2026-01-10",
+      "direction": "down",
+      "sourceIds": [
+        "bls-programmer-projections-2034"
+      ],
+      "evidenceTier": 1,
+      "label": "BLS: Computer programmer roles projected to decline further 6% (2024-2034)"
     }
   ],
   "sources": [

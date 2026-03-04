@@ -32,6 +32,9 @@ interface ChartDataPoint {
   date: number;
   dateStr: string;
   value?: number;
+  observedValue?: number;
+  projectedValue?: number;
+  dataType: "observed" | "projected";
   confidenceLow?: number;
   confidenceHigh?: number;
   evidenceTier: EvidenceTier;
@@ -61,7 +64,9 @@ function CustomTooltip({
 }) {
   if (!active || !payload || payload.length === 0) return null;
 
-  const data = payload[0]?.payload as ChartDataPoint;
+  // Pick the first non-null payload — when two Lines exist, Recharts may
+  // return multiple entries.  We only need the underlying ChartDataPoint.
+  const data = (payload.find((p) => p.payload)?.payload ?? payload[0]?.payload) as ChartDataPoint;
   if (!data) return null;
 
   // Find overlays matching this x-axis position
@@ -83,6 +88,11 @@ function CustomTooltip({
           <p className="text-[12px] font-medium text-[var(--foreground)]">
             {data.dateStr}
           </p>
+          {data.dataType === "projected" && (
+            <span className="inline-block text-[10px] font-medium text-white bg-[#5C61F6]/70 rounded px-1.5 py-0.5 mb-1">
+              Projected / Forecast
+            </span>
+          )}
           <p className="text-[20px] font-bold text-[var(--foreground)] stat-number">
             {data.value}
             {unit}
@@ -250,17 +260,42 @@ export default function PredictionChart({
     );
   }
 
+  const hasProjectedData = filtered.some((d) => d.dataType === "projected");
+
   const realPoints: ChartDataPoint[] = filtered
-    .map((d) => ({
-      date: parseISO(d.date).getTime(),
-      dateStr: format(parseISO(d.date), "MMM yyyy"),
-      value: d.value,
-      confidenceLow: d.confidenceLow,
-      confidenceHigh: d.confidenceHigh,
-      evidenceTier: d.evidenceTier,
-      sourceIds: d.sourceIds,
-    }))
+    .map((d) => {
+      const dt = d.dataType ?? "observed";
+      const val = d.value;
+      return {
+        date: parseISO(d.date).getTime(),
+        dateStr: format(parseISO(d.date), "MMM yyyy"),
+        value: val,
+        observedValue: dt === "observed" ? val : undefined,
+        projectedValue: dt === "projected" ? val : undefined,
+        dataType: dt,
+        confidenceLow: d.confidenceLow,
+        confidenceHigh: d.confidenceHigh,
+        evidenceTier: d.evidenceTier,
+        sourceIds: d.sourceIds,
+      };
+    })
     .sort((a, b) => a.date - b.date);
+
+  // Bridge point: connect the observed line to the projected line by giving the
+  // last observed point (chronologically before the first projected point) a
+  // projectedValue as well, so both Line segments share that connecting point.
+  if (hasProjectedData) {
+    const firstProjectedIdx = realPoints.findIndex((p) => p.dataType === "projected");
+    if (firstProjectedIdx > 0) {
+      // Find the last observed point before the first projected point
+      for (let i = firstProjectedIdx - 1; i >= 0; i--) {
+        if (realPoints[i].dataType === "observed" && realPoints[i].value != null) {
+          realPoints[i].projectedValue = realPoints[i].value;
+          break;
+        }
+      }
+    }
+  }
 
   // Disambiguate duplicate dateStr values so the categorical x-axis has
   // unique categories.  Recharts' band scale silently drops duplicate keys,
@@ -323,6 +358,7 @@ export default function PredictionChart({
         date: o.date,
         dateStr: o.dateStr,
         value: undefined,
+        dataType: "observed",
         evidenceTier: o.evidenceTier,
         sourceIds: o.sourceIds,
         isPhantom: true,
@@ -334,8 +370,8 @@ export default function PredictionChart({
     (a, b) => a.date - b.date
   );
 
-  // Linear regression trend line (least-squares on real points)
-  const pointsWithValues = realPoints.filter((d) => d.value != null);
+  // Linear regression trend line (least-squares on observed points only)
+  const pointsWithValues = realPoints.filter((d) => d.value != null && d.dataType === "observed");
   if (pointsWithValues.length >= 2) {
     const n = pointsWithValues.length;
     const dates = pointsWithValues.map((d) => d.date);
@@ -377,12 +413,25 @@ export default function PredictionChart({
           ))}
           <Line
             type="monotone"
-            dataKey="value"
+            dataKey="observedValue"
             stroke="#5C61F6"
             strokeWidth={2}
             dot={false}
             connectNulls
           />
+          {hasProjectedData && (
+            <Line
+              type="monotone"
+              dataKey="projectedValue"
+              stroke="#5C61F6"
+              strokeWidth={2}
+              strokeDasharray="6 3"
+              strokeOpacity={0.6}
+              dot={false}
+              connectNulls
+              isAnimationActive={false}
+            />
+          )}
         </ComposedChart>
       </ResponsiveContainer>
     );
@@ -390,6 +439,18 @@ export default function PredictionChart({
 
   return (
     <div ref={chartWrapperRef} style={{ position: "relative" }}>
+      {hasProjectedData && (
+        <div className="flex items-center gap-4 mb-2 px-1">
+          <div className="flex items-center gap-1.5">
+            <svg width="24" height="2"><line x1="0" y1="1" x2="24" y2="1" stroke="#5C61F6" strokeWidth="2.5" /></svg>
+            <span className="text-[11px] text-[var(--muted)]">Observed data</span>
+          </div>
+          <div className="flex items-center gap-1.5">
+            <svg width="24" height="2"><line x1="0" y1="1" x2="24" y2="1" stroke="#5C61F6" strokeWidth="2.5" strokeDasharray="6 3" strokeOpacity="0.7" /></svg>
+            <span className="text-[11px] text-[var(--muted)]">Projected / Forecast</span>
+          </div>
+        </div>
+      )}
       <ResponsiveContainer width="100%" height={360}>
         <ComposedChart
           data={chartData}
@@ -444,6 +505,7 @@ export default function PredictionChart({
               dot={false}
               activeDot={false}
               connectNulls
+              isAnimationActive={false}
             />
           )}
           {/* Overlay vertical bars — rendered before the Line so they sit behind */}
@@ -462,23 +524,25 @@ export default function PredictionChart({
               style={{ cursor: onDotClick ? "pointer" : undefined }}
             />
           ))}
+          {/* Observed data line (solid) */}
           <Line
             type="monotone"
-            dataKey="value"
+            dataKey="observedValue"
             stroke="#5C61F6"
             strokeWidth={2.5}
             connectNulls
+            isAnimationActive={false}
             dot={(props: Record<string, unknown>) => {
               const { cx, cy, payload } = props as {
                 cx: number;
                 cy: number;
                 payload: ChartDataPoint;
               };
-              if (payload.isPhantom || payload.value == null) return <g key={`phantom-${payload.date}`} />;
+              if (payload.isPhantom || payload.observedValue == null) return <g key={`phantom-${payload.date}`} />;
               const config = getTierConfig(payload.evidenceTier);
               return (
                 <circle
-                  key={`dot-${payload.date}`}
+                  key={`dot-obs-${payload.date}`}
                   cx={cx}
                   cy={cy}
                   r={5}
@@ -496,11 +560,11 @@ export default function PredictionChart({
                 cy: number;
                 payload: ChartDataPoint;
               };
-              if (payload.isPhantom || payload.value == null) return <g key={`phantom-active-${payload.date}`} />;
+              if (payload.isPhantom || payload.observedValue == null) return <g key={`phantom-active-${payload.date}`} />;
               const config = getTierConfig(payload.evidenceTier);
               return (
                 <circle
-                  key={`active-${payload.date}`}
+                  key={`active-obs-${payload.date}`}
                   cx={cx}
                   cy={cy}
                   r={7}
@@ -513,6 +577,64 @@ export default function PredictionChart({
               );
             }}
           />
+          {/* Projected data line (dashed) */}
+          {hasProjectedData && (
+            <Line
+              type="monotone"
+              dataKey="projectedValue"
+              stroke="#5C61F6"
+              strokeWidth={2.5}
+              strokeDasharray="8 4"
+              strokeOpacity={0.7}
+              connectNulls
+              isAnimationActive={false}
+              dot={(props: Record<string, unknown>) => {
+                const { cx, cy, payload } = props as {
+                  cx: number;
+                  cy: number;
+                  payload: ChartDataPoint;
+                };
+                // Skip dot on bridge points (they already have an observed dot)
+                if (payload.isPhantom || payload.projectedValue == null || payload.dataType === "observed") return <g key={`phantom-proj-${payload.date}`} />;
+                const config = getTierConfig(payload.evidenceTier);
+                return (
+                  <circle
+                    key={`dot-proj-${payload.date}`}
+                    cx={cx}
+                    cy={cy}
+                    r={4}
+                    fill={config.color}
+                    stroke="white"
+                    strokeWidth={2}
+                    style={{ cursor: onDotClick ? "pointer" : undefined }}
+                    onClick={() => onDotClick?.(payload.sourceIds)}
+                  />
+                );
+              }}
+              activeDot={(props: unknown) => {
+                const { cx, cy, payload } = props as {
+                  cx: number;
+                  cy: number;
+                  payload: ChartDataPoint;
+                };
+                if (payload.isPhantom || payload.projectedValue == null || payload.dataType === "observed") return <g key={`phantom-active-proj-${payload.date}`} />;
+                const config = getTierConfig(payload.evidenceTier);
+                return (
+                  <circle
+                    key={`active-proj-${payload.date}`}
+                    cx={cx}
+                    cy={cy}
+                    r={6}
+                    fill={config.color}
+                    stroke="white"
+                    strokeWidth={2}
+                    style={{ cursor: onDotClick ? "pointer" : undefined }}
+                    onClick={() => onDotClick?.(payload.sourceIds)}
+                  />
+                );
+              }}
+            />
+          )}
         </ComposedChart>
       </ResponsiveContainer>
       {/* Custom overlay tooltip — works at chart edges where Recharts tooltip doesn't activate */}

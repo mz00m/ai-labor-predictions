@@ -25,6 +25,7 @@ export interface HistoricalDataPoint {
   confidenceHigh?: number;
   sourceIds: string[];
   evidenceTier: EvidenceTier;
+  dataType?: "observed" | "projected";
 }
 
 /** A qualitative/directional study shown as a horizontal band rather than a point */
