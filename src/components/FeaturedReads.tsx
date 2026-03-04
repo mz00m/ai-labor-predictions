@@ -10,6 +10,15 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Chung",
+    title: "Introducing AIR: The AI Resilience Report",
+    summary:
+      "The first canonical aggregator of research on how AI is impacting jobs at the occupational level — with implications and actions for job seekers.",
+    date: "Mar 4",
+    url: "https://www.linkedin.com/pulse/introducing-air-ai-resilience-report-jared-chung-gxfec",
+    accent: "border-l-purple-500",
+  },
+  {
     author: "Kinder (Brookings)",
     title: "What Deindustrialization Did to Men, AI May Do to Women",
     summary:
@@ -35,16 +44,6 @@ const articles: Article[] = [
     date: "Mar 4",
     url: "https://x.com/brexton/status/2028947633323094019",
     accent: "border-l-emerald-500",
-  },
-  {
-    author: "jobsdata.ai",
-    title: "On Tap Intelligence: Historical Context for AI Labor Impact",
-    summary:
-      "How past technological revolutions reshaped labor — and what they tell us about AI's trajectory.",
-    date: "",
-    url: "/history",
-    accent: "border-l-amber-500",
-    internal: true,
   },
 ];
 
