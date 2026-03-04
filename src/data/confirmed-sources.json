@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-04",
-  "totalSources": 309,
-  "verifiedCount": 299,
+  "totalSources": 310,
+  "verifiedCount": 300,
   "sources": {
     "accenture-health-ai-2023": {
       "id": "accenture-health-ai-2023",
@@ -4137,6 +4137,20 @@
       "usedIn": [
         "tech-sector-displacement",
         "genai-work-adoption"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "theargument-hiring-rate-chatgpt-2026": {
+      "id": "theargument-hiring-rate-chatgpt-2026",
+      "title": "The Tinder-ization of the Job Market",
+      "url": "https://open.substack.com/pub/theargument/p/the-tinder-ization-of-the-job-market",
+      "publisher": "The Argument (Substack)",
+      "evidenceTier": 4,
+      "datePublished": "2026-03-04",
+      "excerpt": "In December 2025 (the most recent data), the hiring rate was just 3.3%. This is among the lowest values ever recorded. In Q3 2025, the most recent quarter we have data on, the hiring rate was almost 20% lower than we would expect it to be given historical data.",
+      "usedIn": [
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false
