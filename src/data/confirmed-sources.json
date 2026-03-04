@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-04",
-  "totalSources": 310,
-  "verifiedCount": 300,
+  "totalSources": 311,
+  "verifiedCount": 301,
   "sources": {
     "accenture-health-ai-2023": {
       "id": "accenture-health-ai-2023",
@@ -3901,6 +3901,22 @@
         "workforce-ai-exposure",
         "tech-sector-displacement",
         "white-collar-professional-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "workday-ai-productivity-rework-2026": {
+      "id": "workday-ai-productivity-rework-2026",
+      "title": "Beyond Productivity: Measuring the Real Value of AI",
+      "url": "https://investor.workday.com/news-and-events/press-releases/news-details/2026/New-Workday-Research-Companies-Are-Leaving-AI-Gains-on-the-Table/default.aspx",
+      "publisher": "Workday / Hanover Research",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-14",
+      "excerpt": "Nearly 40% of AI time savings are lost to rework, including correcting errors, rewriting content, and verifying outputs from one-size-fits-all AI tools. Only 14% of employees consistently get clear, positive net outcomes from AI.",
+      "usedIn": [
+        "genai-work-adoption",
+        "white-collar-professional-displacement",
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false

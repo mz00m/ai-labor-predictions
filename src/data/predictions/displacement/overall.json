@@ -425,6 +425,15 @@
       ],
       "evidenceTier": 1,
       "label": "ECB SAFE: Only 15% of AI-using firms cite reducing labour costs"
+    },
+    {
+      "date": "2026-01-14",
+      "direction": "down",
+      "sourceIds": [
+        "workday-ai-productivity-rework-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Workday: ~40% of AI time savings lost to rework; only 14% get clear net gains"
     }
   ],
   "sources": [
@@ -793,6 +802,15 @@
       "evidenceTier": 2,
       "datePublished": "2025-06-05",
       "excerpt": "27.1% of companies expect artificial intelligence to lead to job cuts in the next five years. Only 5.2% of companies anticipate additional jobs, while two-thirds expect no change."
+    },
+    {
+      "id": "workday-ai-productivity-rework-2026",
+      "title": "Beyond Productivity: Measuring the Real Value of AI",
+      "url": "https://investor.workday.com/news-and-events/press-releases/news-details/2026/New-Workday-Research-Companies-Are-Leaving-AI-Gains-on-the-Table/default.aspx",
+      "publisher": "Workday / Hanover Research",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-14",
+      "excerpt": "Nearly 40% of AI time savings are lost to rework, including correcting errors, rewriting content, and verifying outputs from one-size-fits-all AI tools. Only 14% of employees consistently get clear, positive net outcomes from AI."
     },
     {
       "id": "ecb-safe-ai-hiring-2026",

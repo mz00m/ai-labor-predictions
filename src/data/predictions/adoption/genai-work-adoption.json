@@ -59,6 +59,24 @@
   ],
   "overlays": [
     {
+      "date": "2026-01-14",
+      "direction": "up",
+      "sourceIds": [
+        "workday-ai-productivity-rework-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Workday: 85% of employees save 1–7 hrs/wk with AI (n=3,200)"
+    },
+    {
+      "date": "2026-01-14",
+      "direction": "up",
+      "sourceIds": [
+        "workday-ai-productivity-rework-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Workday: >90% of daily AI users believe it will help them succeed"
+    },
+    {
       "date": "2026-03-04",
       "direction": "up",
       "sourceIds": [
@@ -95,6 +113,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-01-22",
       "excerpt": "Only about 43% of US workers reported regularly using AI at work last year"
+    },
+    {
+      "id": "workday-ai-productivity-rework-2026",
+      "title": "Beyond Productivity: Measuring the Real Value of AI",
+      "url": "https://investor.workday.com/news-and-events/press-releases/news-details/2026/New-Workday-Research-Companies-Are-Leaving-AI-Gains-on-the-Table/default.aspx",
+      "publisher": "Workday / Hanover Research",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-14",
+      "excerpt": "85% of employees report saving one to seven hours per week using AI. Employees who use AI every day are overwhelmingly optimistic – more than 90% believe it will help them succeed."
     },
     {
       "id": "creatoreconomy-ai-native-ops-2026",
