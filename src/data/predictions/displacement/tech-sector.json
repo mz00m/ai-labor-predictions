@@ -346,6 +346,15 @@
       ],
       "evidenceTier": 3,
       "label": "CIO/Robert Half: 61% of IT leaders plan to increase permanent headcount in H1 2026"
+    },
+    {
+      "date": "2026-03-04",
+      "direction": "down",
+      "sourceIds": [
+        "creatoreconomy-ai-native-ops-2026"
+      ],
+      "evidenceTier": 4,
+      "label": "Ramp CPO: 500+ features shipped in 2025 with only 25 PMs"
     }
   ],
   "sources": [
@@ -661,6 +670,15 @@
       "evidenceTier": 1,
       "datePublished": "2025-02-10",
       "excerpt": "Employment of computer programmers is projected to decline by 9.6 percent from 2023 to 2033. BLS projects employment of software developers to increase 17.9 percent, much faster than the average for all occupations (4.0 percent)."
+    },
+    {
+      "id": "creatoreconomy-ai-native-ops-2026",
+      "title": "Your New Job Is to Onboard AI Agents: How AI Native Companies Actually Operate",
+      "url": "https://creatoreconomy.so/p/your-new-job-is-to-onboard-ai-agents",
+      "publisher": "Creator Economy (Peter Yang)",
+      "evidenceTier": 4,
+      "datePublished": "2026-03-04",
+      "excerpt": "In 2025, Ramp shipped 500+ features, reached $1B revenue, and did it all with 25 PMs."
     }
   ],
   "marketIds": {

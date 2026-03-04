@@ -302,6 +302,15 @@
       ],
       "evidenceTier": 3,
       "label": "CIO/LinkedIn: AI literacy job postings growing 70%+ year over year"
+    },
+    {
+      "date": "2026-03-02",
+      "direction": "up",
+      "sourceIds": [
+        "citadel-ai-capex-neutral-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Citadel: AI capex ~$650B in 2026, ~$2T over 3 years"
     }
   ],
   "sources": [
@@ -566,6 +575,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-03-04",
       "excerpt": "Two-thirds of the 3,500 firms that took part in the survey reported that their employees use AI."
+    },
+    {
+      "id": "citadel-ai-capex-neutral-2026",
+      "title": "AI Will Displace…The Fed's View of Neutral",
+      "url": "https://www.citadelsecurities.com/news-and-insights/ai-will-displacethe-feds-view-of-neutral/",
+      "publisher": "Citadel Securities (Nohshad Shah)",
+      "evidenceTier": 3,
+      "datePublished": "2026-03-02",
+      "excerpt": "AI capex – roughly $650bn this year and potentially ~$2tn over three years – materially alters the equilibrium."
     }
   ]
 }

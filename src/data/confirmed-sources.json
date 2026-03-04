@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-04",
-  "totalSources": 307,
-  "verifiedCount": 297,
+  "totalSources": 309,
+  "verifiedCount": 299,
   "sources": {
     "accenture-health-ai-2023": {
       "id": "accenture-health-ai-2023",
@@ -4108,6 +4108,35 @@
       "usedIn": [
         "overall-us-displacement",
         "ai-adoption-rate"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "citadel-ai-capex-neutral-2026": {
+      "id": "citadel-ai-capex-neutral-2026",
+      "title": "AI Will Displace…The Fed's View of Neutral",
+      "url": "https://www.citadelsecurities.com/news-and-insights/ai-will-displacethe-feds-view-of-neutral/",
+      "publisher": "Citadel Securities (Nohshad Shah)",
+      "evidenceTier": 3,
+      "datePublished": "2026-03-02",
+      "excerpt": "AI capex – roughly $650bn this year and potentially ~$2tn over three years – materially alters the equilibrium.",
+      "usedIn": [
+        "ai-adoption-rate"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "creatoreconomy-ai-native-ops-2026": {
+      "id": "creatoreconomy-ai-native-ops-2026",
+      "title": "Your New Job Is to Onboard AI Agents: How AI Native Companies Actually Operate",
+      "url": "https://creatoreconomy.so/p/your-new-job-is-to-onboard-ai-agents",
+      "publisher": "Creator Economy (Peter Yang)",
+      "evidenceTier": 4,
+      "datePublished": "2026-03-04",
+      "excerpt": "In 2025, Ramp shipped 500+ features, reached $1B revenue, and did it all with 25 PMs.",
+      "usedIn": [
+        "tech-sector-displacement",
+        "genai-work-adoption"
       ],
       "verified": true,
       "synthetic": false
