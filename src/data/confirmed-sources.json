@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-04",
-  "totalSources": 316,
-  "verifiedCount": 306,
+  "totalSources": 318,
+  "verifiedCount": 308,
   "sources": {
     "accenture-health-ai-2023": {
       "id": "accenture-health-ai-2023",
@@ -2402,18 +2402,47 @@
       ],
       "verified": true
     },
-    "indeed-sw-dev-postings-2025": {
-      "id": "indeed-sw-dev-postings-2025",
-      "title": "Indeed Hiring Lab: Software Developer Job Postings Tracker",
-      "url": "https://www.hiringlab.org/2025/02/06/software-development-postings-remain-in-the-doldrums/",
+    "indeed-tech-postings-feb-2024": {
+      "id": "indeed-tech-postings-feb-2024",
+      "title": "US Labor Market Update: Tech Jobs May Be Below Pre-Pandemic Levels",
+      "url": "https://www.hiringlab.org/2024/02/20/labor-market-update-tech-jobs-below-pre-pandemic-levels/",
       "publisher": "Indeed Hiring Lab",
       "evidenceTier": 2,
-      "datePublished": "2025-07-15",
-      "excerpt": "Software developer job postings declined 33% from pre-ChatGPT levels. Overall tech postings down 36%. AI/ML roles the only growing category.",
+      "datePublished": "2024-02-20",
+      "excerpt": "Software development postings 28% below pre-pandemic baseline. Overall tech postings 25% below. Tech postings first fell below pre-pandemic levels in May 2023.",
       "usedIn": [
         "tech-sector-displacement"
       ],
-      "verified": true
+      "verified": true,
+      "synthetic": false
+    },
+    "indeed-sw-dev-postings-2025": {
+      "id": "indeed-sw-dev-postings-2025",
+      "title": "Software Development Postings Remain in the Doldrums",
+      "url": "https://www.hiringlab.org/2025/02/06/software-development-postings-remain-in-the-doldrums/",
+      "publisher": "Indeed Hiring Lab",
+      "evidenceTier": 2,
+      "datePublished": "2025-02-06",
+      "excerpt": "Software developer job postings 33% below pre-pandemic baseline as of November 2024. AI/ML roles the only growing category.",
+      "usedIn": [
+        "tech-sector-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "indeed-tech-hiring-freeze-2025": {
+      "id": "indeed-tech-hiring-freeze-2025",
+      "title": "The US Tech Hiring Freeze Continues",
+      "url": "https://www.hiringlab.org/2025/07/30/the-us-tech-hiring-freeze-continues/",
+      "publisher": "Indeed Hiring Lab",
+      "evidenceTier": 2,
+      "datePublished": "2025-07-30",
+      "excerpt": "Overall tech postings 36% below pre-pandemic baseline. Software engineer postings down 49%. Of 149 tech titles, only 19% exceeded pre-pandemic levels.",
+      "usedIn": [
+        "tech-sector-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
     },
     "indeed-total-postings-2025": {
       "id": "indeed-total-postings-2025",
