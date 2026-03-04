@@ -9,6 +9,7 @@ import {
   CartesianGrid,
   Tooltip,
   ReferenceLine,
+  ReferenceArea,
   ResponsiveContainer,
   TooltipProps,
 } from "recharts";
@@ -26,6 +27,8 @@ interface PredictionChartProps {
   onDotClick?: (sourceIds: string[]) => void;
   yAxisMax?: number;
   yAxisMin?: number;
+  category?: string;
+  showTrendLine?: boolean;
 }
 
 interface ChartDataPoint {
@@ -207,6 +210,8 @@ export default function PredictionChart({
   onDotClick,
   yAxisMax = 50,
   yAxisMin = -5,
+  category,
+  showTrendLine = true,
 }: PredictionChartProps) {
   const chartWrapperRef = useRef<HTMLDivElement>(null);
   const [hoverOverlay, setHoverOverlay] = useState<{
@@ -372,7 +377,7 @@ export default function PredictionChart({
 
   // Linear regression trend line (least-squares on observed points only)
   const pointsWithValues = realPoints.filter((d) => d.value != null && d.dataType === "observed");
-  if (pointsWithValues.length >= 2) {
+  if (showTrendLine && pointsWithValues.length >= 2) {
     const n = pointsWithValues.length;
     const dates = pointsWithValues.map((d) => d.date);
     const values = pointsWithValues.map((d) => d.value!);
@@ -439,18 +444,33 @@ export default function PredictionChart({
 
   return (
     <div ref={chartWrapperRef} style={{ position: "relative" }}>
-      {hasProjectedData && (
-        <div className="flex items-center gap-4 mb-2 px-1">
-          <div className="flex items-center gap-1.5">
-            <svg width="24" height="2"><line x1="0" y1="1" x2="24" y2="1" stroke="#5C61F6" strokeWidth="2.5" /></svg>
-            <span className="text-[11px] text-[var(--muted)]">Observed data</span>
-          </div>
-          <div className="flex items-center gap-1.5">
-            <svg width="24" height="2"><line x1="0" y1="1" x2="24" y2="1" stroke="#5C61F6" strokeWidth="2.5" strokeDasharray="6 3" strokeOpacity="0.7" /></svg>
-            <span className="text-[11px] text-[var(--muted)]">Projected / Forecast</span>
-          </div>
-        </div>
-      )}
+      {/* Chart legend row */}
+      <div className="flex items-center gap-4 mb-2 px-1 flex-wrap">
+        {hasProjectedData && (
+          <>
+            <div className="flex items-center gap-1.5">
+              <svg width="24" height="2"><line x1="0" y1="1" x2="24" y2="1" stroke="#5C61F6" strokeWidth="2.5" /></svg>
+              <span className="text-[11px] text-[var(--muted)]">Observed data</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <svg width="24" height="2"><line x1="0" y1="1" x2="24" y2="1" stroke="#5C61F6" strokeWidth="2.5" strokeDasharray="6 3" strokeOpacity="0.7" /></svg>
+              <span className="text-[11px] text-[var(--muted)]">Projected / Forecast</span>
+            </div>
+          </>
+        )}
+        {category === "displacement" && yMin < 0 && (
+          <>
+            <div className="flex items-center gap-1">
+              <span className="text-[11px]" style={{ color: "#dc2626" }}>{"\u2191"}</span>
+              <span className="text-[11px] text-[var(--muted)]">More displacement</span>
+            </div>
+            <div className="flex items-center gap-1">
+              <span className="text-[11px]" style={{ color: "#16a34a" }}>{"\u2193"}</span>
+              <span className="text-[11px] text-[var(--muted)]">Growth / Recovery</span>
+            </div>
+          </>
+        )}
+      </div>
       <ResponsiveContainer width="100%" height={360}>
         <ComposedChart
           data={chartData}
@@ -466,6 +486,13 @@ export default function PredictionChart({
           style={{ cursor: onDotClick ? "pointer" : undefined }}
         >
           <CartesianGrid strokeDasharray="3 3" opacity={0.2} />
+          {/* Direction zones for displacement charts with negative values */}
+          {category === "displacement" && yMin < 0 && (
+            <>
+              <ReferenceArea y1={0} y2={yMax} fill="#dc2626" fillOpacity={0.04} ifOverflow="hidden" />
+              <ReferenceArea y1={yMin} y2={0} fill="#16a34a" fillOpacity={0.04} ifOverflow="hidden" />
+            </>
+          )}
           <XAxis
             dataKey="dateStr"
             tick={{ fontSize: 12, fill: "#6b7280" }}
