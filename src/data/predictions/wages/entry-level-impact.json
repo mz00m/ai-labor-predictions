@@ -224,6 +224,15 @@
       ],
       "evidenceTier": 1,
       "label": "Dallas Fed: AI exposure → 0.28pp wage growth reduction in low-experience-premium jobs"
+    },
+    {
+      "date": "2026-01-14",
+      "direction": "down",
+      "sourceIds": [
+        "eig-entry-level-ai-displacement-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "EIG/LinkedIn: Entry-level hiring rates -23% vs pre-pandemic (vs -18% overall)"
     }
   ],
   "sources": [
@@ -414,6 +423,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-02-24",
       "excerpt": "For an occupation with a 0 percent experience premium, increased AI exposure is associated with a 0.28 percentage point reduction in wage growth."
+    },
+    {
+      "id": "eig-entry-level-ai-displacement-2026",
+      "title": "Looking for the Ladder: Is AI Impacting Entry-Level Jobs?",
+      "url": "https://eig.org/wp-content/uploads/2026/01/TAWP-Iscenko-Millet.pdf",
+      "publisher": "Economic Innovation Group (Iscenko & Curto Millet)",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-14",
+      "excerpt": "entry-level hiring rates have declined 23 percent compared to pre-pandemic levels, a steeper drop than the 18 percent decline for overall hiring"
     }
   ]
 }

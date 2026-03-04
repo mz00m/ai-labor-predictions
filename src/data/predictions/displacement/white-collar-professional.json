@@ -356,6 +356,15 @@
       ],
       "evidenceTier": 1,
       "label": "BLS MLR: Financial advisor employment projected to grow 17.1% (2023-33)"
+    },
+    {
+      "date": "2026-01-14",
+      "direction": "up",
+      "sourceIds": [
+        "eig-entry-level-ai-displacement-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "EIG: No evidence junior AI-exposed roles declined more than senior roles"
     }
   ],
   "sources": [
@@ -674,6 +683,15 @@
       "evidenceTier": 1,
       "datePublished": "2025-02-10",
       "excerpt": "Employment of personal financial advisors is projected to grow 17.1 percent from 2023 to 2033, much faster than average. Employment of paralegals and legal assistants is projected to grow only 1.2 percent, slower than the average for all occupations."
+    },
+    {
+      "id": "eig-entry-level-ai-displacement-2026",
+      "title": "Looking for the Ladder: Is AI Impacting Entry-Level Jobs?",
+      "url": "https://eig.org/wp-content/uploads/2026/01/TAWP-Iscenko-Millet.pdf",
+      "publisher": "Economic Innovation Group (Iscenko & Curto Millet)",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-14",
+      "excerpt": "There is no evidence that job postings for junior roles within occupations most exposed to AI have declined more than postings for senior positions. Postings for both levels of seniority have been falling roughly in parallel since their peak in Spring 2022, with the decline in junior positions stabilizing faster."
     }
   ]
 }
