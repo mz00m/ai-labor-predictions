@@ -9,7 +9,6 @@ import {
   CartesianGrid,
   Tooltip,
   ReferenceLine,
-  ReferenceArea,
   ResponsiveContainer,
   TooltipProps,
 } from "recharts";
@@ -486,13 +485,6 @@ export default function PredictionChart({
           style={{ cursor: onDotClick ? "pointer" : undefined }}
         >
           <CartesianGrid strokeDasharray="3 3" opacity={0.2} />
-          {/* Direction zones for displacement charts with negative values */}
-          {category === "displacement" && yMin < 0 && (
-            <>
-              <ReferenceArea y1={0} y2={yMax} fill="#dc2626" fillOpacity={0.04} ifOverflow="hidden" />
-              <ReferenceArea y1={yMin} y2={0} fill="#16a34a" fillOpacity={0.04} ifOverflow="hidden" />
-            </>
-          )}
           <XAxis
             dataKey="dateStr"
             tick={{ fontSize: 12, fill: "#6b7280" }}
