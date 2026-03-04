@@ -4,6 +4,7 @@ import { useState, useRef, useCallback } from "react";
 import {
   ComposedChart,
   Line,
+  Area,
   XAxis,
   YAxis,
   CartesianGrid,
@@ -13,8 +14,9 @@ import {
   TooltipProps,
 } from "recharts";
 import { format, parseISO } from "date-fns";
-import { EvidenceTier, HistoricalDataPoint, DirectionalOverlay, Source } from "@/lib/types";
+import { EvidenceTier, MetricType, HistoricalDataPoint, DirectionalOverlay, Source } from "@/lib/types";
 import { getTierConfig } from "@/lib/evidence-tiers";
+import { getMetricTypeConfig, METRIC_TYPE_CONFIGS } from "@/lib/metric-types";
 
 interface PredictionChartProps {
   history: HistoricalDataPoint[];
@@ -39,7 +41,10 @@ interface ChartDataPoint {
   dataType: "observed" | "projected";
   confidenceLow?: number;
   confidenceHigh?: number;
+  confidenceBandBase?: number;
+  confidenceBandWidth?: number;
   evidenceTier: EvidenceTier;
+  metricType?: MetricType;
   sourceIds: string[];
   isPhantom?: boolean;
   trendValue?: number;
@@ -113,6 +118,17 @@ function CustomTooltip({
             />
             <span className="text-[11px] text-[var(--muted)]">{tierConfig.label}</span>
           </div>
+          {(data as ChartDataPoint & { metricType?: MetricType }).metricType && (
+            <div className="mt-1 flex items-center gap-1.5">
+              <span
+                className="inline-block w-2 h-2 rounded-sm"
+                style={{ backgroundColor: getMetricTypeConfig((data as ChartDataPoint & { metricType: MetricType }).metricType).color }}
+              />
+              <span className="text-[11px] text-[var(--muted)]">
+                {getMetricTypeConfig((data as ChartDataPoint & { metricType: MetricType }).metricType).label}
+              </span>
+            </div>
+          )}
           {pointSources.length > 0 && (
             <div className="mt-2 border-t border-black/[0.06] pt-1.5">
               {pointSources.map((s) => (
@@ -199,6 +215,99 @@ function overlayColor(direction: string) {
       : "#6b7280";
 }
 
+/** Render a dot shape based on metricType. Falls back to circle with tier color. */
+function renderDotShape(
+  cx: number,
+  cy: number,
+  r: number,
+  fillColor: string,
+  metricType?: MetricType,
+  strokeColor = "white",
+  strokeWidth = 2,
+  style?: React.CSSProperties,
+  onClick?: () => void,
+  keyPrefix = "dot",
+  date = 0,
+): React.ReactElement {
+  const shape = metricType
+    ? getMetricTypeConfig(metricType).shape
+    : "circle";
+  const key = `${keyPrefix}-${date}`;
+  const commonProps = { style, onClick };
+
+  switch (shape) {
+    case "diamond":
+      return (
+        <g key={key} {...commonProps}>
+          <polygon
+            points={`${cx},${cy - r} ${cx + r},${cy} ${cx},${cy + r} ${cx - r},${cy}`}
+            fill={fillColor}
+            stroke={strokeColor}
+            strokeWidth={strokeWidth}
+          />
+        </g>
+      );
+    case "square":
+      return (
+        <g key={key} {...commonProps}>
+          <rect
+            x={cx - r * 0.8}
+            y={cy - r * 0.8}
+            width={r * 1.6}
+            height={r * 1.6}
+            fill={fillColor}
+            stroke={strokeColor}
+            strokeWidth={strokeWidth}
+          />
+        </g>
+      );
+    case "triangle":
+      return (
+        <g key={key} {...commonProps}>
+          <polygon
+            points={`${cx},${cy - r} ${cx + r},${cy + r * 0.7} ${cx - r},${cy + r * 0.7}`}
+            fill={fillColor}
+            stroke={strokeColor}
+            strokeWidth={strokeWidth}
+          />
+        </g>
+      );
+    case "star": {
+      const pts: string[] = [];
+      for (let i = 0; i < 5; i++) {
+        const outerAngle = (Math.PI / 2) + (2 * Math.PI * i) / 5;
+        const innerAngle = outerAngle + Math.PI / 5;
+        pts.push(`${cx + r * Math.cos(outerAngle)},${cy - r * Math.sin(outerAngle)}`);
+        pts.push(`${cx + r * 0.45 * Math.cos(innerAngle)},${cy - r * 0.45 * Math.sin(innerAngle)}`);
+      }
+      return (
+        <g key={key} {...commonProps}>
+          <polygon
+            points={pts.join(" ")}
+            fill={fillColor}
+            stroke={strokeColor}
+            strokeWidth={strokeWidth}
+          />
+        </g>
+      );
+    }
+    case "circle":
+    default:
+      return (
+        <circle
+          key={key}
+          cx={cx}
+          cy={cy}
+          r={r}
+          fill={fillColor}
+          stroke={strokeColor}
+          strokeWidth={strokeWidth}
+          {...commonProps}
+        />
+      );
+  }
+}
+
 export default function PredictionChart({
   history,
   sources,
@@ -279,7 +388,16 @@ export default function PredictionChart({
         dataType: dt,
         confidenceLow: d.confidenceLow,
         confidenceHigh: d.confidenceHigh,
+        confidenceBandBase:
+          d.confidenceLow != null && d.confidenceHigh != null
+            ? d.confidenceLow
+            : undefined,
+        confidenceBandWidth:
+          d.confidenceLow != null && d.confidenceHigh != null
+            ? d.confidenceHigh - d.confidenceLow
+            : undefined,
         evidenceTier: d.evidenceTier,
+        metricType: d.metricType,
         sourceIds: d.sourceIds,
       };
     })
@@ -441,6 +559,18 @@ export default function PredictionChart({
     );
   }
 
+  // Determine which metric types are present in chart data
+  const presentMetricTypes = Array.from(
+    new Set(
+      realPoints
+        .filter((d) => d.metricType != null)
+        .map((d) => d.metricType!)
+    )
+  );
+  const hasConfidenceBands = chartData.some(
+    (d) => d.confidenceBandBase != null && d.confidenceBandWidth != null
+  );
+
   return (
     <div ref={chartWrapperRef} style={{ position: "relative" }}>
       {/* Chart legend row */}
@@ -457,6 +587,14 @@ export default function PredictionChart({
             </div>
           </>
         )}
+        {hasConfidenceBands && (
+          <div className="flex items-center gap-1.5">
+            <svg width="16" height="10">
+              <rect x="0" y="0" width="16" height="10" fill="#5C61F6" fillOpacity="0.15" rx="2" />
+            </svg>
+            <span className="text-[11px] text-[var(--muted)]">Confidence range</span>
+          </div>
+        )}
         {category === "displacement" && yMin < 0 && (
           <>
             <div className="flex items-center gap-1">
@@ -470,6 +608,46 @@ export default function PredictionChart({
           </>
         )}
       </div>
+      {/* Metric type legend (only when metricType tags are present) */}
+      {presentMetricTypes.length > 0 && (
+        <div className="flex items-center gap-3 mb-2 px-1 flex-wrap">
+          <span className="text-[10px] font-medium text-[var(--muted)] uppercase tracking-wider">
+            Data type
+          </span>
+          {presentMetricTypes.map((mt) => {
+            const cfg = getMetricTypeConfig(mt);
+            return (
+              <div key={mt} className="flex items-center gap-1.5">
+                <svg width="12" height="12" viewBox="-6 -6 12 12">
+                  {cfg.shape === "circle" && (
+                    <circle r="4" fill={cfg.color} />
+                  )}
+                  {cfg.shape === "diamond" && (
+                    <polygon points="0,-5 5,0 0,5 -5,0" fill={cfg.color} />
+                  )}
+                  {cfg.shape === "square" && (
+                    <rect x="-4" y="-4" width="8" height="8" fill={cfg.color} />
+                  )}
+                  {cfg.shape === "triangle" && (
+                    <polygon points="0,-5 5,4 -5,4" fill={cfg.color} />
+                  )}
+                  {cfg.shape === "star" && (
+                    <polygon
+                      points={Array.from({ length: 5 }, (_, i) => {
+                        const outerAngle = (Math.PI / 2) + (2 * Math.PI * i) / 5;
+                        const innerAngle = outerAngle + Math.PI / 5;
+                        return `${5 * Math.cos(outerAngle)},${-5 * Math.sin(outerAngle)} ${2.25 * Math.cos(innerAngle)},${-2.25 * Math.sin(innerAngle)}`;
+                      }).join(" ")}
+                      fill={cfg.color}
+                    />
+                  )}
+                </svg>
+                <span className="text-[11px] text-[var(--muted)]">{cfg.shortLabel}</span>
+              </div>
+            );
+          })}
+        </div>
+      )}
       <ResponsiveContainer width="100%" height={360}>
         <ComposedChart
           data={chartData}
@@ -513,6 +691,34 @@ export default function PredictionChart({
           />
           {/* Zero baseline */}
           <ReferenceLine y={0} stroke="#d1d5db" strokeWidth={1} />
+          {/* Confidence band (stacked area trick: transparent base + visible width) */}
+          {chartData.some((d) => d.confidenceBandBase != null && d.confidenceBandWidth != null) && (
+            <>
+              <Area
+                type="monotone"
+                dataKey="confidenceBandBase"
+                stackId="confidence"
+                fill="transparent"
+                stroke="none"
+                isAnimationActive={false}
+                dot={false}
+                activeDot={false}
+                connectNulls={false}
+              />
+              <Area
+                type="monotone"
+                dataKey="confidenceBandWidth"
+                stackId="confidence"
+                fill="#5C61F6"
+                fillOpacity={0.1}
+                stroke="none"
+                isAnimationActive={false}
+                dot={false}
+                activeDot={false}
+                connectNulls={false}
+              />
+            </>
+          )}
           {/* Linear trend line */}
           {chartData.some((d) => d.trendValue != null) && (
             <Line
@@ -558,19 +764,15 @@ export default function PredictionChart({
                 payload: ChartDataPoint;
               };
               if (payload.isPhantom || payload.observedValue == null) return <g key={`phantom-${payload.date}`} />;
-              const config = getTierConfig(payload.evidenceTier);
-              return (
-                <circle
-                  key={`dot-obs-${payload.date}`}
-                  cx={cx}
-                  cy={cy}
-                  r={5}
-                  fill={config.color}
-                  stroke="white"
-                  strokeWidth={2}
-                  style={{ cursor: onDotClick ? "pointer" : undefined }}
-                  onClick={() => onDotClick?.(payload.sourceIds)}
-                />
+              const fillColor = payload.metricType
+                ? getMetricTypeConfig(payload.metricType).color
+                : getTierConfig(payload.evidenceTier).color;
+              return renderDotShape(
+                cx, cy, 5, fillColor, payload.metricType,
+                "white", 2,
+                { cursor: onDotClick ? "pointer" : undefined },
+                () => onDotClick?.(payload.sourceIds),
+                "dot-obs", payload.date,
               );
             }}
             activeDot={(props: unknown) => {
@@ -580,19 +782,15 @@ export default function PredictionChart({
                 payload: ChartDataPoint;
               };
               if (payload.isPhantom || payload.observedValue == null) return <g key={`phantom-active-${payload.date}`} />;
-              const config = getTierConfig(payload.evidenceTier);
-              return (
-                <circle
-                  key={`active-obs-${payload.date}`}
-                  cx={cx}
-                  cy={cy}
-                  r={7}
-                  fill={config.color}
-                  stroke="white"
-                  strokeWidth={2}
-                  style={{ cursor: onDotClick ? "pointer" : undefined }}
-                  onClick={() => onDotClick?.(payload.sourceIds)}
-                />
+              const fillColor = payload.metricType
+                ? getMetricTypeConfig(payload.metricType).color
+                : getTierConfig(payload.evidenceTier).color;
+              return renderDotShape(
+                cx, cy, 7, fillColor, payload.metricType,
+                "white", 2,
+                { cursor: onDotClick ? "pointer" : undefined },
+                () => onDotClick?.(payload.sourceIds),
+                "active-obs", payload.date,
               );
             }}
           />
@@ -615,19 +813,15 @@ export default function PredictionChart({
                 };
                 // Skip dot on bridge points (they already have an observed dot)
                 if (payload.isPhantom || payload.projectedValue == null || payload.dataType === "observed") return <g key={`phantom-proj-${payload.date}`} />;
-                const config = getTierConfig(payload.evidenceTier);
-                return (
-                  <circle
-                    key={`dot-proj-${payload.date}`}
-                    cx={cx}
-                    cy={cy}
-                    r={4}
-                    fill={config.color}
-                    stroke="white"
-                    strokeWidth={2}
-                    style={{ cursor: onDotClick ? "pointer" : undefined }}
-                    onClick={() => onDotClick?.(payload.sourceIds)}
-                  />
+                const fillColor = payload.metricType
+                  ? getMetricTypeConfig(payload.metricType).color
+                  : getTierConfig(payload.evidenceTier).color;
+                return renderDotShape(
+                  cx, cy, 4, fillColor, payload.metricType,
+                  "white", 2,
+                  { cursor: onDotClick ? "pointer" : undefined },
+                  () => onDotClick?.(payload.sourceIds),
+                  "dot-proj", payload.date,
                 );
               }}
               activeDot={(props: unknown) => {
@@ -637,19 +831,15 @@ export default function PredictionChart({
                   payload: ChartDataPoint;
                 };
                 if (payload.isPhantom || payload.projectedValue == null || payload.dataType === "observed") return <g key={`phantom-active-proj-${payload.date}`} />;
-                const config = getTierConfig(payload.evidenceTier);
-                return (
-                  <circle
-                    key={`active-proj-${payload.date}`}
-                    cx={cx}
-                    cy={cy}
-                    r={6}
-                    fill={config.color}
-                    stroke="white"
-                    strokeWidth={2}
-                    style={{ cursor: onDotClick ? "pointer" : undefined }}
-                    onClick={() => onDotClick?.(payload.sourceIds)}
-                  />
+                const fillColor = payload.metricType
+                  ? getMetricTypeConfig(payload.metricType).color
+                  : getTierConfig(payload.evidenceTier).color;
+                return renderDotShape(
+                  cx, cy, 6, fillColor, payload.metricType,
+                  "white", 2,
+                  { cursor: onDotClick ? "pointer" : undefined },
+                  () => onDotClick?.(payload.sourceIds),
+                  "active-proj", payload.date,
                 );
               }}
             />

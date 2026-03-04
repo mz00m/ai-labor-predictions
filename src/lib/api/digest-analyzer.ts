@@ -7,8 +7,9 @@
  */
 
 import Anthropic from "@anthropic-ai/sdk";
-import { Prediction } from "../types";
+import { EvidenceTier, Prediction } from "../types";
 import { DigestPaper, SuggestedDataPoint } from "../types/digest";
+import { computeAggregate } from "../prediction-stats";
 
 // Read lazily so .env loading in generate-digest.ts has time to run
 function getApiKey(): string {
@@ -16,10 +17,11 @@ function getApiKey(): string {
 }
 
 function buildPredictionContext(predictions: Prediction[]): string {
+  const allTiers: EvidenceTier[] = [1, 2, 3, 4];
   return predictions
     .map(
       (p) =>
-        `- slug: "${p.slug}" | title: "${p.title}" | unit: "${p.unit}" | current: ${p.currentValue} | horizon: "${p.timeHorizon}"`
+        `- slug: "${p.slug}" | title: "${p.title}" | unit: "${p.unit}" | current: ${computeAggregate(p, allTiers).mean} | horizon: "${p.timeHorizon}"`
     )
     .join("\n");
 }

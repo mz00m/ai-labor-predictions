@@ -16,7 +16,8 @@
       "sourceIds": [
         "klarna-earnings-2024"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "corporate"
     },
     {
       "date": "2024-02-01",
@@ -26,7 +27,8 @@
       "sourceIds": [
         "shopify-earnings-2024"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "corporate"
     },
     {
       "date": "2025-02-12",
@@ -36,7 +38,8 @@
       "sourceIds": [
         "shopify-earnings-2024"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "corporate"
     },
     {
       "date": "2025-10-15",
@@ -46,7 +49,8 @@
       "sourceIds": [
         "gartner-cs-2026-forecast"
       ],
-      "evidenceTier": 2
+      "evidenceTier": 2,
+      "metricType": "survey"
     },
     {
       "date": "2026-02-01",
@@ -56,7 +60,8 @@
       "sourceIds": [
         "zendesk-ai-cs-2026"
       ],
-      "evidenceTier": 3
+      "evidenceTier": 3,
+      "metricType": "survey"
     },
     {
       "date": "2025-02-10",
@@ -64,7 +69,8 @@
       "sourceIds": [
         "bls-mlr-ai-employment-projections-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "employment"
     }
   ],
   "overlays": [
@@ -284,7 +290,7 @@
     },
     {
       "id": "shopify-earnings-2024",
-      "title": "Shopify Q4 2024 Earnings — AI Customer Support Metrics",
+      "title": "Shopify Q4 2024 Earnings \u2014 AI Customer Support Metrics",
       "url": "https://investors.shopify.com/financial-reports",
       "publisher": "Shopify (Earnings Call)",
       "evidenceTier": 1,

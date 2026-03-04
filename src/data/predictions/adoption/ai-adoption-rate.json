@@ -2,7 +2,7 @@
   "id": "adoption-rate",
   "slug": "ai-adoption-rate",
   "title": "AI Adoption Rate Across US Companies",
-  "description": "Percentage of US firms using AI in production, measured by the Census Bureau's Business Trends and Outlook Survey (BTOS) — the most rigorous measure available. Survey-based estimates from consultancies run 5-10x higher due to self-selected samples.",
+  "description": "Percentage of US firms using AI in production, measured by the Census Bureau's Business Trends and Outlook Survey (BTOS) \u2014 the most rigorous measure available. Survey-based estimates from consultancies run 5-10x higher due to self-selected samples.",
   "category": "adoption",
   "unit": "% of firms (Census BTOS)",
   "currentValue": 10,
@@ -16,7 +16,8 @@
       "sourceIds": [
         "census-bts-ai-2023"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "survey"
     },
     {
       "date": "2024-05-01",
@@ -26,7 +27,8 @@
       "sourceIds": [
         "census-bts-ai-2024"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "survey"
     },
     {
       "date": "2025-07-01",
@@ -36,7 +38,8 @@
       "sourceIds": [
         "census-bts-ai-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "survey"
     },
     {
       "date": "2025-10-01",
@@ -46,7 +49,8 @@
       "sourceIds": [
         "anthropic-economic-index-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "survey"
     },
     {
       "date": "2025-08-15",
@@ -56,7 +60,8 @@
       "sourceIds": [
         "bick-blandin-deming-nber-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "survey"
     },
     {
       "date": "2026-01-01",
@@ -64,9 +69,10 @@
       "confidenceLow": 30,
       "confidenceHigh": 42,
       "sourceIds": [
-        "hartley-adoption-survey-2026"
+        "hartley-genai-labor-2026"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "survey"
     },
     {
       "date": "2026-03-04",
@@ -74,7 +80,8 @@
       "sourceIds": [
         "ecb-safe-ai-hiring-2026"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "survey"
     }
   ],
   "overlays": [
@@ -103,7 +110,7 @@
         "mckinsey-ai-survey-2024"
       ],
       "evidenceTier": 2,
-      "label": "McKinsey 2024: 72% use AI in ≥1 function, up from 55%"
+      "label": "McKinsey 2024: 72% use AI in \u22651 function, up from 55%"
     },
     {
       "date": "2024-07-01",
@@ -139,7 +146,7 @@
         "mckinsey-ai-survey-2025"
       ],
       "evidenceTier": 2,
-      "label": "McKinsey survey: 78% use AI in ≥1 function (Mar 2025)"
+      "label": "McKinsey survey: 78% use AI in \u22651 function (Mar 2025)"
     },
     {
       "date": "2025-06-01",
@@ -229,7 +236,7 @@
         "anthropic-econ-primitives-adoption-2026"
       ],
       "evidenceTier": 1,
-      "label": "Anthropic: 49% of jobs use AI for ≥25% of tasks; productivity +1.0-1.8pp"
+      "label": "Anthropic: 49% of jobs use AI for \u226525% of tasks; productivity +1.0-1.8pp"
     },
     {
       "date": "2026-01-22",
@@ -292,7 +299,7 @@
         "cio-it-jobs-ai-skills-2026"
       ],
       "evidenceTier": 3,
-      "label": "CIO/Indeed: 80% of workers save ≥1 hour/day using generative AI"
+      "label": "CIO/Indeed: 80% of workers save \u22651 hour/day using generative AI"
     },
     {
       "date": "2026-02-18",
@@ -423,7 +430,7 @@
       "excerpt": "75% of knowledge workers now use AI tools. Adoption in enterprises with 500+ employees reached 60%, up from 40% a year prior."
     },
     {
-      "id": "hartley-adoption-survey-2026",
+      "id": "hartley-genai-labor-2026",
       "title": "The Labor Market Effects of Generative Artificial Intelligence",
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5136877",
       "publisher": "Stanford / World Bank (Hartley, Jolevski, Melo, Moore)",
@@ -438,7 +445,7 @@
       "publisher": "PNAS (Humlum, Vestergaard)",
       "evidenceTier": 1,
       "datePublished": "2025-01-06",
-      "excerpt": "Half of workers in AI-exposed occupations have used ChatGPT; adoption unequal — women 16pp less likely, employer restrictions hinder broader use."
+      "excerpt": "Half of workers in AI-exposed occupations have used ChatGPT; adoption unequal \u2014 women 16pp less likely, employer restrictions hinder broader use."
     },
     {
       "id": "pwbm-ai-adoption-2025",
@@ -465,7 +472,7 @@
       "publisher": "Anthropic",
       "evidenceTier": 1,
       "datePublished": "2025-09-15",
-      "excerpt": "Only ~25% of Information sector businesses using AI; ~2.5% in Accommodation/Food — adoption patterns driven more by workforce composition than income."
+      "excerpt": "Only ~25% of Information sector businesses using AI; ~2.5% in Accommodation/Food \u2014 adoption patterns driven more by workforce composition than income."
     },
     {
       "id": "icle-adoption-2026",
@@ -519,7 +526,7 @@
       "publisher": "McKinsey & Company",
       "evidenceTier": 2,
       "datePublished": "2025-11-01",
-      "excerpt": "88% of organizations use AI in ≥1 function (up from 78%). Gen AI adoption at 71%. But only 7% fully scaled, and just 6% report EBIT impact ≥5%. 62% experimenting with AI agents."
+      "excerpt": "88% of organizations use AI in \u22651 function (up from 78%). Gen AI adoption at 71%. But only 7% fully scaled, and just 6% report EBIT impact \u22655%. 62% experimenting with AI agents."
     },
     {
       "id": "atlassian-ai-collab-2025",
@@ -578,12 +585,12 @@
     },
     {
       "id": "citadel-ai-capex-neutral-2026",
-      "title": "AI Will Displace…The Fed's View of Neutral",
+      "title": "AI Will Displace\u2026The Fed's View of Neutral",
       "url": "https://www.citadelsecurities.com/news-and-insights/ai-will-displacethe-feds-view-of-neutral/",
       "publisher": "Citadel Securities (Nohshad Shah)",
       "evidenceTier": 3,
       "datePublished": "2026-03-02",
-      "excerpt": "AI capex – roughly $650bn this year and potentially ~$2tn over three years – materially alters the equilibrium."
+      "excerpt": "AI capex \u2013 roughly $650bn this year and potentially ~$2tn over three years \u2013 materially alters the equilibrium."
     }
   ]
 }

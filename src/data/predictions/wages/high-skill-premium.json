@@ -16,7 +16,8 @@
       "sourceIds": [
         "indeed-ai-salaries-2023"
       ],
-      "evidenceTier": 3
+      "evidenceTier": 3,
+      "metricType": "postings"
     },
     {
       "date": "2024-01-15",
@@ -26,7 +27,8 @@
       "sourceIds": [
         "lightcast-2024"
       ],
-      "evidenceTier": 2
+      "evidenceTier": 2,
+      "metricType": "postings"
     },
     {
       "date": "2025-07-23",
@@ -36,7 +38,8 @@
       "sourceIds": [
         "lightcast-beyond-buzz-2025"
       ],
-      "evidenceTier": 2
+      "evidenceTier": 2,
+      "metricType": "postings"
     },
     {
       "date": "2025-08-01",
@@ -46,7 +49,8 @@
       "sourceIds": [
         "oecd-skills-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "employment"
     },
     {
       "date": "2025-10-15",
@@ -56,7 +60,8 @@
       "sourceIds": [
         "pwc-ai-wage-premium-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "survey"
     },
     {
       "date": "2026-01-01",
@@ -66,7 +71,8 @@
       "sourceIds": [
         "indexdev-ai-salary-2026"
       ],
-      "evidenceTier": 2
+      "evidenceTier": 2,
+      "metricType": "postings"
     },
     {
       "date": "2026-02-24",
@@ -74,7 +80,8 @@
       "sourceIds": [
         "dallas-fed-davis-ai-wages-2026"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "employment"
     }
   ],
   "overlays": [
@@ -112,7 +119,7 @@
         "openai-8k-funding-2024"
       ],
       "evidenceTier": 2,
-      "label": "OpenAI: avg stock comp $1.5M; researcher total comp $763K–$1.44M"
+      "label": "OpenAI: avg stock comp $1.5M; researcher total comp $763K\u2013$1.44M"
     },
     {
       "date": "2025-02-01",
@@ -163,7 +170,7 @@
       "date": "2026-01-01",
       "direction": "up",
       "sourceIds": [
-        "hartley-high-skill-2026"
+        "hartley-genai-labor-2026"
       ],
       "evidenceTier": 1,
       "label": "Stanford: adoption concentrated among higher-earning, college-educated workers"
@@ -318,7 +325,7 @@
       "publisher": "Science (Noy, Zhang)",
       "evidenceTier": 1,
       "datePublished": "2023-07-14",
-      "excerpt": "ChatGPT compressed productivity distribution — low-ability workers gained most (40% time reduction, 18% quality increase). May reduce skill premium over time."
+      "excerpt": "ChatGPT compressed productivity distribution \u2014 low-ability workers gained most (40% time reduction, 18% quality increase). May reduce skill premium over time."
     },
     {
       "id": "brynjolfsson-li-raymond-qje-2025",
@@ -345,10 +352,10 @@
       "publisher": "CESifo (Althoff, Reichardt)",
       "evidenceTier": 1,
       "datePublished": "2026-01-21",
-      "excerpt": "some occupations — such as architects, engineers, and executives — see absolute wage declines"
+      "excerpt": "some occupations \u2014 such as architects, engineers, and executives \u2014 see absolute wage declines"
     },
     {
-      "id": "hartley-high-skill-2026",
+      "id": "hartley-genai-labor-2026",
       "title": "Labor Market Effects of Generative AI",
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5136877",
       "publisher": "Stanford / World Bank",
@@ -360,7 +367,7 @@
       "id": "cepr-ai-productivity-jobs-europe-2026",
       "title": "How AI is affecting productivity and jobs in Europe",
       "url": "https://cepr.org/voxeu/columns/how-ai-affecting-productivity-and-jobs-europe",
-      "publisher": "CEPR VoxEU (Aldasoro, Gambacorta, Pál, Revoltella, Weiss, Wolski)",
+      "publisher": "CEPR VoxEU (Aldasoro, Gambacorta, P\u00e1l, Revoltella, Weiss, Wolski)",
       "evidenceTier": 1,
       "datePublished": "2026-02-17",
       "excerpt": "The wage gains observed may accrue disproportionately to highly skilled workers, potentially widening income inequality."

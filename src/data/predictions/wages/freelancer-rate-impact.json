@@ -16,7 +16,8 @@
       "sourceIds": [
         "upwork-trends-2023"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "corporate"
     },
     {
       "date": "2023-11-01",
@@ -26,7 +27,8 @@
       "sourceIds": [
         "fiverr-market-report-2023"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "corporate"
     },
     {
       "date": "2024-03-15",
@@ -36,7 +38,8 @@
       "sourceIds": [
         "nber-freelance-ai-2024"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "projection"
     },
     {
       "date": "2024-07-01",
@@ -46,7 +49,8 @@
       "sourceIds": [
         "upwork-earnings-q2-2024"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "corporate"
     },
     {
       "date": "2025-05-01",
@@ -56,7 +60,8 @@
       "sourceIds": [
         "ilo-gig-workers-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "projection"
     },
     {
       "date": "2025-10-01",
@@ -64,9 +69,10 @@
       "confidenceLow": -40,
       "confidenceHigh": -18,
       "sourceIds": [
-        "ramp-freelance-economics-2025"
+        "ramp-freelance-velocity-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "corporate"
     },
     {
       "date": "2026-02-01",
@@ -76,7 +82,8 @@
       "sourceIds": [
         "sciencedirect-freelancer-demand-2025"
       ],
-      "evidenceTier": 3
+      "evidenceTier": 3,
+      "metricType": "projection"
     }
   ],
   "overlays": [
@@ -111,7 +118,7 @@
       "date": "2025-09-15",
       "direction": "down",
       "sourceIds": [
-        "del-rio-chanona-freelancer-2025"
+        "del-rio-chanona-ai-jobs-2025"
       ],
       "evidenceTier": 1,
       "label": "ILO review: substitution already occurring in writing & translation"
@@ -123,7 +130,7 @@
         "ramp-freelance-velocity-2025"
       ],
       "evidenceTier": 1,
-      "label": "Ramp: freelance spend fell 0.66% → 0.14% of total"
+      "label": "Ramp: freelance spend fell 0.66% \u2192 0.14% of total"
     },
     {
       "date": "2025-10-30",
@@ -191,7 +198,7 @@
       "excerpt": "Platform workers in writing, translation, and data labeling report median earnings declines of 15-25% since 2023."
     },
     {
-      "id": "ramp-freelance-economics-2025",
+      "id": "ramp-freelance-velocity-2025",
       "title": "Ramp Economics Lab: Freelance Marketplace Spending Collapse",
       "url": "https://ramp.com/velocity/ai-labor-market-impact-freelancers",
       "publisher": "Ramp",
@@ -218,25 +225,16 @@
       "excerpt": "Workers see ChatGPT halving working times in about a third of tasks, but employer restrictions and required training hinder adoption."
     },
     {
-      "id": "ramp-freelance-velocity-2025",
-      "title": "AI Labor Market Impact: Freelancers",
-      "url": "https://ramp.com/velocity/ai-labor-market-impact-freelancers",
-      "publisher": "Ramp",
-      "evidenceTier": 1,
-      "datePublished": "2025-09-20",
-      "excerpt": "Freelance marketplace spend fell from 0.66% to 0.14% of total business spend (Q4 2021 to Q3 2025); substitution ratio: $1 reduced freelance spend → $0.03 in AI spend."
-    },
-    {
       "id": "hosseini-brookings-freelancer-2025",
       "title": "Is Generative AI a Job Killer? Evidence from the Freelance Market",
       "url": "https://www.brookings.edu/articles/is-generative-ai-a-job-killer-evidence-from-the-freelance-market/",
       "publisher": "Brookings Institution",
       "evidenceTier": 1,
       "datePublished": "2025-07-01",
-      "excerpt": "High-skill freelancers disproportionately affected by AI — top performers were impacted most, contradicting conventional wisdom that expertise insulates workers."
+      "excerpt": "High-skill freelancers disproportionately affected by AI \u2014 top performers were impacted most, contradicting conventional wisdom that expertise insulates workers."
     },
     {
-      "id": "del-rio-chanona-freelancer-2025",
+      "id": "del-rio-chanona-ai-jobs-2025",
       "title": "AI and jobs: A review of theory, estimates, and evidence",
       "url": "https://arxiv.org/abs/2509.15265",
       "publisher": "arXiv (ILO-affiliated researchers)",
@@ -251,7 +249,7 @@
       "publisher": "Center for AI Safety / Scale AI (Mazeika et al.)",
       "evidenceTier": 1,
       "datePublished": "2025-10-30",
-      "excerpt": "Best AI agent (Manus) earned $1,720 out of a possible $143,991 across 240 real freelance projects — capturing only 1.2% of economic value. Automation rate: 2.5%."
+      "excerpt": "Best AI agent (Manus) earned $1,720 out of a possible $143,991 across 240 real freelance projects \u2014 capturing only 1.2% of economic value. Automation rate: 2.5%."
     }
   ]
 }

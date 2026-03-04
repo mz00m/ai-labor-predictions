@@ -14,9 +14,10 @@
       "confidenceLow": -3,
       "confidenceHigh": 5,
       "sourceIds": [
-        "goldman-wages-2023"
+        "goldman-ai-workforce-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "projection"
     },
     {
       "date": "2023-09-01",
@@ -26,7 +27,8 @@
       "sourceIds": [
         "ilo-wages-2023"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "projection"
     },
     {
       "date": "2024-02-01",
@@ -36,7 +38,8 @@
       "sourceIds": [
         "imf-inequality-2024"
       ],
-      "evidenceTier": 2
+      "evidenceTier": 2,
+      "metricType": "projection"
     },
     {
       "date": "2024-06-01",
@@ -46,7 +49,8 @@
       "sourceIds": [
         "webb-2024"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "projection"
     },
     {
       "date": "2024-10-01",
@@ -56,7 +60,8 @@
       "sourceIds": [
         "atlantic-wages-2024"
       ],
-      "evidenceTier": 3
+      "evidenceTier": 3,
+      "metricType": "projection"
     },
     {
       "date": "2025-02-01",
@@ -66,7 +71,8 @@
       "sourceIds": [
         "bls-wage-data-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "employment"
     },
     {
       "date": "2025-05-01",
@@ -76,7 +82,8 @@
       "sourceIds": [
         "substack-wages-doom"
       ],
-      "evidenceTier": 4
+      "evidenceTier": 4,
+      "metricType": "projection"
     },
     {
       "date": "2025-08-01",
@@ -86,7 +93,8 @@
       "sourceIds": [
         "epi-wages-2025"
       ],
-      "evidenceTier": 2
+      "evidenceTier": 2,
+      "metricType": "projection"
     },
     {
       "date": "2025-09-01",
@@ -96,7 +104,8 @@
       "sourceIds": [
         "korinek-trammell-growth-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "projection"
     },
     {
       "date": "2025-11-01",
@@ -106,7 +115,8 @@
       "sourceIds": [
         "pwc-ai-jobs-barometer-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "survey"
     },
     {
       "date": "2026-01-01",
@@ -116,7 +126,8 @@
       "sourceIds": [
         "bls-may-2024-wage-data"
       ],
-      "evidenceTier": 2
+      "evidenceTier": 2,
+      "metricType": "employment"
     },
     {
       "date": "2026-01-21",
@@ -124,7 +135,8 @@
       "sourceIds": [
         "althoff-reichardt-task-specific-technical-2026"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "projection"
     }
   ],
   "overlays": [
@@ -186,7 +198,7 @@
       "date": "2025-08-01",
       "direction": "up",
       "sourceIds": [
-        "goldman-productivity-2025"
+        "goldman-ai-workforce-2025"
       ],
       "evidenceTier": 1,
       "label": "Goldman Sachs: AI to raise labor productivity ~15% when fully adopted"
@@ -195,7 +207,7 @@
       "date": "2026-01-01",
       "direction": "up",
       "sourceIds": [
-        "hartley-median-wage-2026"
+        "hartley-genai-labor-2026"
       ],
       "evidenceTier": 1,
       "label": "Stanford: small positive wage effects in AI-exposed jobs"
@@ -230,7 +242,7 @@
   ],
   "sources": [
     {
-      "id": "goldman-wages-2023",
+      "id": "goldman-ai-workforce-2025",
       "title": "AI and the US Labor Market",
       "url": "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce",
       "publisher": "Goldman Sachs",
@@ -273,7 +285,7 @@
     },
     {
       "id": "bls-wage-data-2025",
-      "title": "Employment Cost Index — 2025 Q1",
+      "title": "Employment Cost Index \u2014 2025 Q1",
       "url": "https://www.bls.gov/eci/",
       "publisher": "Bureau of Labor Statistics",
       "evidenceTier": 1,
@@ -306,7 +318,7 @@
     },
     {
       "id": "indeed-wage-tracker-2025",
-      "title": "US Wage Tracker — Posted Wage Trends by Occupation",
+      "title": "US Wage Tracker \u2014 Posted Wage Trends by Occupation",
       "url": "https://www.hiringlab.org/2025/02/10/us-wage-tracker/",
       "publisher": "Indeed Hiring Lab",
       "evidenceTier": 2,
@@ -368,15 +380,6 @@
       "excerpt": "For the empirically plausible case that capital and labor are gross complements, raising wages requires capital-augmenting innovation rather than labor-augmenting."
     },
     {
-      "id": "goldman-productivity-2025",
-      "title": "How Will AI Affect the Global Workforce?",
-      "url": "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce",
-      "publisher": "Goldman Sachs Research",
-      "evidenceTier": 1,
-      "datePublished": "2025-08-01",
-      "excerpt": "Generative AI will raise the level of labor productivity in the US and other developed markets by around 15% when fully adopted and incorporated into regular production."
-    },
-    {
       "id": "brynjolfsson-li-raymond-qje-wages-2025",
       "title": "Generative AI at Work",
       "url": "https://academic.oup.com/qje/article/140/2/889/7990658",
@@ -404,7 +407,7 @@
       "excerpt": "raising average wages by 21 percent"
     },
     {
-      "id": "hartley-median-wage-2026",
+      "id": "hartley-genai-labor-2026",
       "title": "Labor Market Effects of Generative AI",
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5136877",
       "publisher": "Stanford / World Bank",
@@ -416,7 +419,7 @@
       "id": "cepr-ai-productivity-jobs-europe-2026",
       "title": "How AI is affecting productivity and jobs in Europe",
       "url": "https://cepr.org/voxeu/columns/how-ai-affecting-productivity-and-jobs-europe",
-      "publisher": "CEPR VoxEU (Aldasoro, Gambacorta, Pál, Revoltella, Weiss, Wolski)",
+      "publisher": "CEPR VoxEU (Aldasoro, Gambacorta, P\u00e1l, Revoltella, Weiss, Wolski)",
       "evidenceTier": 1,
       "datePublished": "2026-02-17",
       "excerpt": "AI adoption causally increases labour productivity levels by 4% on average. Employees in AI-using companies benefit through higher wages, both in total and per employee."

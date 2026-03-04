@@ -16,7 +16,8 @@
       "sourceIds": [
         "goldman-300m"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "projection"
     },
     {
       "date": "2023-07-01",
@@ -26,7 +27,8 @@
       "sourceIds": [
         "oecd-2023"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "projection"
     },
     {
       "date": "2024-01-14",
@@ -36,7 +38,8 @@
       "sourceIds": [
         "imf-ai-2024"
       ],
-      "evidenceTier": 2
+      "evidenceTier": 2,
+      "metricType": "projection"
     },
     {
       "date": "2024-03-01",
@@ -46,7 +49,8 @@
       "sourceIds": [
         "eloundou-openai-2024"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "projection"
     },
     {
       "date": "2025-01-15",
@@ -56,7 +60,8 @@
       "sourceIds": [
         "anthropic-econ-primitives-2026"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "survey"
     },
     {
       "date": "2025-09-08",
@@ -66,7 +71,8 @@
       "sourceIds": [
         "pwbm-ai-adoption-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "projection"
     },
     {
       "date": "2026-01-01",
@@ -74,9 +80,10 @@
       "confidenceLow": 30,
       "confidenceHigh": 38,
       "sourceIds": [
-        "hartley-genai-exposure-2026"
+        "hartley-genai-labor-2026"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "survey"
     },
     {
       "date": "2026-01-15",
@@ -86,7 +93,8 @@
       "sourceIds": [
         "anthropic-econ-primitives-2026"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "survey"
     },
     {
       "date": "2026-01-15",
@@ -96,7 +104,8 @@
       "sourceIds": [
         "cognizant-new-work-2026"
       ],
-      "evidenceTier": 2
+      "evidenceTier": 2,
+      "metricType": "survey"
     }
   ],
   "overlays": [
@@ -125,7 +134,7 @@
         "eloundou-openai-2024"
       ],
       "evidenceTier": 1,
-      "label": "OpenAI/UPenn: 80% of workers have ≥10% tasks affected"
+      "label": "OpenAI/UPenn: 80% of workers have \u226510% tasks affected"
     },
     {
       "date": "2026-01-15",
@@ -229,7 +238,7 @@
       "excerpt": "Computer/mathematical tasks account for ~33% of all Claude.ai conversations and ~50% of API traffic, indicating concentrated AI impact on tech-adjacent roles."
     },
     {
-      "id": "hartley-genai-exposure-2026",
+      "id": "hartley-genai-labor-2026",
       "title": "The Labor Market Effects of Generative Artificial Intelligence",
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5136877",
       "publisher": "Stanford / World Bank (Hartley, Jolevski, Melo, Moore)",
@@ -262,7 +271,7 @@
       "publisher": "Cognizant",
       "evidenceTier": 2,
       "datePublished": "2026-01-15",
-      "excerpt": "Education task exposure jumped from 11% to 49% — a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations."
+      "excerpt": "Education task exposure jumped from 11% to 49% \u2014 a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations."
     },
     {
       "id": "brookings-adaptive-capacity-2026",

@@ -13,106 +13,148 @@
       "value": 0,
       "confidenceLow": 0,
       "confidenceHigh": 3,
-      "sourceIds": ["brookings-2024"],
+      "sourceIds": [
+        "brookings-2024"
+      ],
       "evidenceTier": 2,
-      "dataType": "observed"
+      "dataType": "observed",
+      "metricType": "projection"
     },
     {
       "date": "2024-11-01",
       "value": 13.8,
       "confidenceLow": 10,
       "confidenceHigh": 17.5,
-      "sourceIds": ["bls-programmer-employment-observed"],
+      "sourceIds": [
+        "bls-programmer-employment-observed"
+      ],
       "evidenceTier": 1,
-      "dataType": "observed"
+      "dataType": "observed",
+      "metricType": "employment"
     },
     {
       "date": "2025-01-20",
       "value": 14,
       "confidenceLow": 8,
       "confidenceHigh": 20,
-      "sourceIds": ["lightcast-tech-postings-2025"],
+      "sourceIds": [
+        "lightcast-tech-postings-2025"
+      ],
       "evidenceTier": 2,
-      "dataType": "observed"
+      "dataType": "observed",
+      "metricType": "postings"
     },
     {
       "date": "2024-02-20",
       "value": 22,
-      "sourceIds": ["indeed-tech-postings-feb-2024"],
+      "sourceIds": [
+        "indeed-tech-postings-feb-2024"
+      ],
       "evidenceTier": 2,
-      "dataType": "observed"
+      "dataType": "observed",
+      "metricType": "postings"
     },
     {
       "date": "2024-11-29",
       "value": 16.5,
-      "sourceIds": ["indeed-sw-dev-postings-2025"],
+      "sourceIds": [
+        "indeed-sw-dev-postings-2025"
+      ],
       "evidenceTier": 2,
-      "dataType": "observed"
+      "dataType": "observed",
+      "metricType": "postings"
     },
     {
       "date": "2025-07-30",
       "value": 13.5,
-      "sourceIds": ["indeed-tech-hiring-freeze-2025"],
+      "sourceIds": [
+        "indeed-tech-hiring-freeze-2025"
+      ],
       "evidenceTier": 2,
-      "dataType": "observed"
+      "dataType": "observed",
+      "metricType": "postings"
     },
     {
       "date": "2025-08-01",
       "value": 13,
       "confidenceLow": 8,
       "confidenceHigh": 20,
-      "sourceIds": ["brynjolfsson-chandar-chen-2025"],
+      "sourceIds": [
+        "brynjolfsson-chandar-chen-2025"
+      ],
       "evidenceTier": 1,
-      "dataType": "observed"
+      "dataType": "observed",
+      "metricType": "employment"
     },
     {
       "date": "2024-07-01",
       "value": 2.7,
-      "sourceIds": ["cooper-cs-majors-labor-2026"],
+      "sourceIds": [
+        "cooper-cs-majors-labor-2026"
+      ],
       "evidenceTier": 4,
-      "dataType": "observed"
+      "dataType": "observed",
+      "metricType": "employment"
     },
     {
       "date": "2025-02-10",
       "value": 0,
-      "sourceIds": ["bls-mlr-ai-employment-projections-2025"],
+      "sourceIds": [
+        "bls-mlr-ai-employment-projections-2025"
+      ],
       "evidenceTier": 1,
-      "dataType": "projected"
+      "dataType": "projected",
+      "metricType": "projection"
     },
     {
       "date": "2026-02-10",
       "value": -1.8,
-      "sourceIds": ["bls-mlr-ai-employment-projections-2025"],
+      "sourceIds": [
+        "bls-mlr-ai-employment-projections-2025"
+      ],
       "evidenceTier": 1,
-      "dataType": "projected"
+      "dataType": "projected",
+      "metricType": "projection"
     },
     {
       "date": "2027-02-10",
       "value": -3.6,
-      "sourceIds": ["bls-mlr-ai-employment-projections-2025"],
+      "sourceIds": [
+        "bls-mlr-ai-employment-projections-2025"
+      ],
       "evidenceTier": 1,
-      "dataType": "projected"
+      "dataType": "projected",
+      "metricType": "projection"
     },
     {
       "date": "2028-02-10",
       "value": -5.4,
-      "sourceIds": ["bls-mlr-ai-employment-projections-2025"],
+      "sourceIds": [
+        "bls-mlr-ai-employment-projections-2025"
+      ],
       "evidenceTier": 1,
-      "dataType": "projected"
+      "dataType": "projected",
+      "metricType": "projection"
     },
     {
       "date": "2029-02-10",
       "value": -7.2,
-      "sourceIds": ["bls-mlr-ai-employment-projections-2025"],
+      "sourceIds": [
+        "bls-mlr-ai-employment-projections-2025"
+      ],
       "evidenceTier": 1,
-      "dataType": "projected"
+      "dataType": "projected",
+      "metricType": "projection"
     },
     {
       "date": "2030-02-10",
       "value": -9.0,
-      "sourceIds": ["bls-mlr-ai-employment-projections-2025"],
+      "sourceIds": [
+        "bls-mlr-ai-employment-projections-2025"
+      ],
       "evidenceTier": 1,
-      "dataType": "projected"
+      "dataType": "projected",
+      "metricType": "projection"
     }
   ],
   "overlays": [
@@ -147,7 +189,7 @@
       "date": "2024-01-10",
       "direction": "down",
       "sourceIds": [
-        "goldman-ai-2024"
+        "goldman-300m"
       ],
       "evidenceTier": 1,
       "label": "Goldman Sachs: AI could expose 300M full-time jobs globally to automation"
@@ -165,7 +207,7 @@
       "date": "2024-04-01",
       "direction": "up",
       "sourceIds": [
-        "acemoglu-2023"
+        "acemoglu-macro-2024"
       ],
       "evidenceTier": 1,
       "label": "Acemoglu: ~5% of tasks fully automatable; job impact more modest than claimed"
@@ -303,7 +345,7 @@
         "cognizant-new-work-2026"
       ],
       "evidenceTier": 2,
-      "label": "Cognizant: computer/math roles 67% task exposure — second highest of all categories"
+      "label": "Cognizant: computer/math roles 67% task exposure \u2014 second highest of all categories"
     },
     {
       "date": "2026-01-15",
@@ -357,7 +399,7 @@
         "wang-neubig-agent-benchmarks-2026"
       ],
       "evidenceTier": 1,
-      "label": "Wang et al.: AI development heavily concentrated on CS/Math — 7.6% of employment"
+      "label": "Wang et al.: AI development heavily concentrated on CS/Math \u2014 7.6% of employment"
     },
     {
       "date": "2026-02-18",
@@ -443,7 +485,7 @@
       "excerpt": "Employers estimate that 44% of workers' core skills will be disrupted in the next five years."
     },
     {
-      "id": "acemoglu-2023",
+      "id": "acemoglu-macro-2024",
       "title": "The Simple Macroeconomics of AI",
       "url": "https://www.nber.org/papers/w32487",
       "publisher": "NBER (Acemoglu)",
@@ -452,7 +494,7 @@
       "excerpt": "AI will increase productivity but impact on jobs more modest than often claimed; estimates ~5% of tasks fully automatable."
     },
     {
-      "id": "goldman-ai-2024",
+      "id": "goldman-300m",
       "title": "The Potentially Large Effects of AI on Economic Growth",
       "url": "https://www.goldmansachs.com/insights/articles/generative-ai-could-raise-global-gdp-by-7-percent",
       "publisher": "Goldman Sachs",
@@ -462,7 +504,7 @@
     },
     {
       "id": "brookings-2024",
-      "title": "New data show no AI jobs apocalypse — for now",
+      "title": "New data show no AI jobs apocalypse \u2014 for now",
       "url": "https://www.brookings.edu/articles/new-data-show-no-ai-jobs-apocalypse-for-now/",
       "publisher": "Brookings Institution",
       "evidenceTier": 2,
@@ -496,7 +538,7 @@
     },
     {
       "id": "google-10k-2024",
-      "title": "Alphabet Inc. 2024 10-K — Workforce & AI Automation Disclosures",
+      "title": "Alphabet Inc. 2024 10-K \u2014 Workforce & AI Automation Disclosures",
       "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001652044&type=10-K",
       "publisher": "Alphabet (SEC Filing)",
       "evidenceTier": 1,
@@ -505,7 +547,7 @@
     },
     {
       "id": "meta-10k-2024",
-      "title": "Meta Platforms 2024 10-K — AI Efficiency & Headcount",
+      "title": "Meta Platforms 2024 10-K \u2014 AI Efficiency & Headcount",
       "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001326801&type=10-K",
       "publisher": "Meta Platforms (SEC Filing)",
       "evidenceTier": 1,
@@ -622,21 +664,21 @@
     },
     {
       "id": "bls-programmer-employment-observed",
-      "title": "BLS Occupational Employment Statistics: Computer Programmers — Observed Decline",
+      "title": "BLS Occupational Employment Statistics: Computer Programmers \u2014 Observed Decline",
       "url": "https://www.bls.gov/oes/current/oes151251.htm",
       "publisher": "Bureau of Labor Statistics",
       "evidenceTier": 1,
       "datePublished": "2024-11-01",
-      "excerpt": "Computer programmer employment (routine coding roles) fell ~27.5% in roughly two years following ChatGPT's release (~13.8%/year annualized) — one of the largest two-year drops in any occupation tracked by BLS. Software developer employment remained flat."
+      "excerpt": "Computer programmer employment (routine coding roles) fell ~27.5% in roughly two years following ChatGPT's release (~13.8%/year annualized) \u2014 one of the largest two-year drops in any occupation tracked by BLS. Software developer employment remained flat."
     },
     {
       "id": "bls-programmer-projections-2034",
-      "title": "BLS Employment Projections: Computer Programmers 2024–2034",
+      "title": "BLS Employment Projections: Computer Programmers 2024\u20132034",
       "url": "https://www.bls.gov/ooh/computer-and-information-technology/computer-programmers.htm",
       "publisher": "Bureau of Labor Statistics",
       "evidenceTier": 1,
       "datePublished": "2026-01-10",
-      "excerpt": "BLS projects a further 6% decline in programmer roles through 2034. Computer programmer employment (routine coding roles) fell ~27.5% in roughly two years following ChatGPT's release — one of the largest two-year drops in any occupation tracked by BLS. Software developer employment remained flat."
+      "excerpt": "BLS projects a further 6% decline in programmer roles through 2034. Computer programmer employment (routine coding roles) fell ~27.5% in roughly two years following ChatGPT's release \u2014 one of the largest two-year drops in any occupation tracked by BLS. Software developer employment remained flat."
     },
     {
       "id": "challenger-ai-job-cuts-2025",
@@ -672,7 +714,7 @@
       "publisher": "Microsoft/Accenture (Cui, Demirer, Jaffe, Musolff, Peng, Salz)",
       "evidenceTier": 1,
       "datePublished": "2025-06-01",
-      "excerpt": "26% increase in completed pull requests, 13.55% increase in commits, 38.38% increase in builds — but build success rate fell by 5.53 percentage points."
+      "excerpt": "26% increase in completed pull requests, 13.55% increase in commits, 38.38% increase in builds \u2014 but build success rate fell by 5.53 percentage points."
     },
     {
       "id": "peng-copilot-2023",
@@ -690,7 +732,7 @@
       "publisher": "Cognizant",
       "evidenceTier": 2,
       "datePublished": "2026-01-15",
-      "excerpt": "Education task exposure jumped from 11% to 49% — a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations."
+      "excerpt": "Education task exposure jumped from 11% to 49% \u2014 a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations."
     },
     {
       "id": "goldman-mei-ai-labor-2026",
@@ -699,7 +741,7 @@
       "publisher": "Goldman Sachs Research (Pierfrancesco Mei)",
       "evidenceTier": 2,
       "datePublished": "2026-02-24",
-      "excerpt": "AI's labor market impact still small — only 5-10K/month drag on net job growth. Only 2½% of jobs exposed to automation today. Baseline forecast: 6-7% of workers displaced (range 3-14%), lowering annual hiring by 1M jobs and raising unemployment ~½pp. US creates 30M gross new jobs/year; does not anticipate job apocalypse. Impact so far largely confined to tech sector but expects it to grow materially."
+      "excerpt": "AI's labor market impact still small \u2014 only 5-10K/month drag on net job growth. Only 2\u00bd% of jobs exposed to automation today. Baseline forecast: 6-7% of workers displaced (range 3-14%), lowering annual hiring by 1M jobs and raising unemployment ~\u00bdpp. US creates 30M gross new jobs/year; does not anticipate job apocalypse. Impact so far largely confined to tech sector but expects it to grow materially."
     },
     {
       "id": "cais-scale-remote-labor-index-2025",
@@ -780,7 +822,7 @@
       "publisher": "Citadel Securities (Frank Flight)",
       "evidenceTier": 2,
       "datePublished": "2026-03-04",
-      "excerpt": "In spite of the current displacement narrative – job postings for software engineers are rising rapidly, up 11% YoY."
+      "excerpt": "In spite of the current displacement narrative \u2013 job postings for software engineers are rising rapidly, up 11% YoY."
     },
     {
       "id": "cooper-cs-majors-labor-2026",
@@ -789,7 +831,7 @@
       "publisher": "Preston Cooper (Substack)",
       "evidenceTier": 4,
       "datePublished": "2026-03-04",
-      "excerpt": "According to the American Community Survey, 7.2 percent of early-career college graduates who majored in CS were unemployed in 2024—well above the 4.5 percent rate for all early-career graduates."
+      "excerpt": "According to the American Community Survey, 7.2 percent of early-career college graduates who majored in CS were unemployed in 2024\u2014well above the 4.5 percent rate for all early-career graduates."
     }
   ],
   "marketIds": {

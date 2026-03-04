@@ -16,7 +16,8 @@
       "sourceIds": [
         "goldman-300m"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "projection"
     },
     {
       "date": "2024-04-01",
@@ -24,9 +25,10 @@
       "confidenceLow": 0.5,
       "confidenceHigh": 4.5,
       "sourceIds": [
-        "acemoglu-simple-macro"
+        "acemoglu-macro-2024"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "projection"
     },
     {
       "date": "2024-09-15",
@@ -36,7 +38,8 @@
       "sourceIds": [
         "wef-future-jobs-2024"
       ],
-      "evidenceTier": 2
+      "evidenceTier": 2,
+      "metricType": "projection"
     },
     {
       "date": "2025-01-06",
@@ -46,7 +49,8 @@
       "sourceIds": [
         "forrester-jobs-2025"
       ],
-      "evidenceTier": 2
+      "evidenceTier": 2,
+      "metricType": "survey"
     },
     {
       "date": "2025-08-01",
@@ -54,9 +58,10 @@
       "confidenceLow": 3,
       "confidenceHigh": 14,
       "sourceIds": [
-        "goldman-total-projected-2025"
+        "goldman-ai-workforce-2025"
       ],
-      "evidenceTier": 2
+      "evidenceTier": 2,
+      "metricType": "projection"
     },
     {
       "date": "2025-09-08",
@@ -66,7 +71,8 @@
       "sourceIds": [
         "pwbm-ai-productivity-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "projection"
     },
     {
       "date": "2025-10-01",
@@ -76,7 +82,8 @@
       "sourceIds": [
         "gimbel-yale-ai-labor-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "employment"
     },
     {
       "date": "2025-11-01",
@@ -86,7 +93,8 @@
       "sourceIds": [
         "nber-csuite-survey-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "survey"
     }
   ],
   "overlays": [
@@ -157,7 +165,7 @@
       "date": "2025-08-01",
       "direction": "neutral",
       "sourceIds": [
-        "goldman-total-workforce-2025"
+        "goldman-ai-workforce-2025"
       ],
       "evidenceTier": 2,
       "label": "Goldman: 2.5% of jobs at risk now; 60% of current workers in occupations from post-1940"
@@ -166,7 +174,7 @@
       "date": "2025-09-20",
       "direction": "down",
       "sourceIds": [
-        "ramp-freelance-total-2025"
+        "ramp-freelance-velocity-2025"
       ],
       "evidenceTier": 1,
       "label": "Ramp: 50%+ of businesses using freelancers in 2022 have stopped entirely"
@@ -228,7 +236,7 @@
       "excerpt": "Almost 40% of global employment is exposed to AI; in advanced economies, roughly 60% of workers face some degree of AI impact."
     },
     {
-      "id": "acemoglu-simple-macro",
+      "id": "acemoglu-macro-2024",
       "title": "The Simple Macroeconomics of AI",
       "url": "https://www.nber.org/papers/w32487",
       "publisher": "NBER (Acemoglu)",
@@ -290,7 +298,7 @@
     },
     {
       "id": "indeed-total-postings-2025",
-      "title": "US Job Postings Are 15% Below Peak — AI Categories Hit Hardest",
+      "title": "US Job Postings Are 15% Below Peak \u2014 AI Categories Hit Hardest",
       "url": "https://www.hiringlab.org/2025/01/28/us-job-postings-trends/",
       "publisher": "Indeed Hiring Lab",
       "evidenceTier": 2,
@@ -343,7 +351,7 @@
       "excerpt": "Half of workers in exposed occupations have used ChatGPT; younger, male, higher-achieving workers lead adoption. Women 16pp less likely to use for work."
     },
     {
-      "id": "goldman-total-workforce-2025",
+      "id": "goldman-ai-workforce-2025",
       "title": "How Will AI Affect the Global Workforce?",
       "url": "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce",
       "publisher": "Goldman Sachs Research",
@@ -352,16 +360,7 @@
       "excerpt": "2.5% of US employment at risk of displacement from current AI use cases; 60% of current US workers in occupations that didn't exist in 1940."
     },
     {
-      "id": "goldman-total-projected-2025",
-      "title": "How Will AI Affect the Global Workforce?",
-      "url": "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce",
-      "publisher": "Goldman Sachs Research",
-      "evidenceTier": 2,
-      "datePublished": "2025-08-01",
-      "excerpt": "AI could displace 6-7% of the US workforce if widely adopted. We remain skeptical that AI will lead to large employment reductions over the next decade."
-    },
-    {
-      "id": "ramp-freelance-total-2025",
+      "id": "ramp-freelance-velocity-2025",
       "title": "AI Labor Market Impact: Freelancers",
       "url": "https://ramp.com/velocity/ai-labor-market-impact-freelancers",
       "publisher": "Ramp",

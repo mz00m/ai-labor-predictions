@@ -16,7 +16,8 @@
       "sourceIds": [
         "brookings-metro-ai-2024"
       ],
-      "evidenceTier": 2
+      "evidenceTier": 2,
+      "metricType": "projection"
     },
     {
       "date": "2024-05-15",
@@ -26,7 +27,8 @@
       "sourceIds": [
         "nber-spatial-ai-2024"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "projection"
     },
     {
       "date": "2024-09-01",
@@ -36,7 +38,8 @@
       "sourceIds": [
         "indeed-geo-premiums-2024"
       ],
-      "evidenceTier": 2
+      "evidenceTier": 2,
+      "metricType": "postings"
     },
     {
       "date": "2025-07-01",
@@ -46,7 +49,8 @@
       "sourceIds": [
         "bls-metro-wages-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "employment"
     },
     {
       "date": "2026-01-01",
@@ -56,7 +60,8 @@
       "sourceIds": [
         "moneypenny-regional-ai-2025"
       ],
-      "evidenceTier": 3
+      "evidenceTier": 3,
+      "metricType": "survey"
     },
     {
       "date": "2026-01-21",
@@ -66,7 +71,8 @@
       "sourceIds": [
         "manning-aguirre-adaptive-2026"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "projection"
     }
   ],
   "overlays": [
@@ -182,7 +188,7 @@
     },
     {
       "id": "indeed-geo-premiums-2024",
-      "title": "The Geography of AI Jobs — Indeed Hiring Lab",
+      "title": "The Geography of AI Jobs \u2014 Indeed Hiring Lab",
       "url": "https://www.hiringlab.org/2024/09/12/ai-job-tracker/",
       "publisher": "Indeed Hiring Lab",
       "evidenceTier": 2,
@@ -205,11 +211,11 @@
       "publisher": "Fortune",
       "evidenceTier": 2,
       "datePublished": "2025-07-27",
-      "excerpt": "Job postings for non-tech roles that require AI skills offer 28% higher salaries — an average of nearly $18,000 more per year. The divide between AI-skilled and non-AI-skilled workers is widening."
+      "excerpt": "Job postings for non-tech roles that require AI skills offer 28% higher salaries \u2014 an average of nearly $18,000 more per year. The divide between AI-skilled and non-AI-skilled workers is widening."
     },
     {
       "id": "bls-metro-wages-2025",
-      "title": "Occupational Employment and Wage Statistics — Metropolitan Areas 2025",
+      "title": "Occupational Employment and Wage Statistics \u2014 Metropolitan Areas 2025",
       "url": "https://www.bls.gov/oes/current/oessrcma.htm",
       "publisher": "Bureau of Labor Statistics",
       "evidenceTier": 1,
@@ -232,7 +238,7 @@
       "publisher": "Brookings Metro (Muro, Methkupally, Kinder)",
       "evidenceTier": 1,
       "datePublished": "2025-02-01",
-      "excerpt": "43% of workers in San Jose could see AI shift half or more of tasks, vs only 31% in Las Vegas. High-skill metro areas most exposed — reversing prior automation patterns."
+      "excerpt": "43% of workers in San Jose could see AI shift half or more of tasks, vs only 31% in Las Vegas. High-skill metro areas most exposed \u2014 reversing prior automation patterns."
     },
     {
       "id": "manning-aguirre-adaptive-2026",

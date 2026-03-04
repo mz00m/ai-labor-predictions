@@ -16,7 +16,8 @@
       "sourceIds": [
         "indeed-entry-level-2023"
       ],
-      "evidenceTier": 2
+      "evidenceTier": 2,
+      "metricType": "postings"
     },
     {
       "date": "2025-01-15",
@@ -26,7 +27,8 @@
       "sourceIds": [
         "wsj-entry-level-squeeze"
       ],
-      "evidenceTier": 3
+      "evidenceTier": 3,
+      "metricType": "projection"
     },
     {
       "date": "2025-04-01",
@@ -36,7 +38,8 @@
       "sourceIds": [
         "oecd-youth-employment-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "employment"
     },
     {
       "date": "2025-07-01",
@@ -46,7 +49,8 @@
       "sourceIds": [
         "bls-entry-wages-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "employment"
     },
     {
       "date": "2025-08-01",
@@ -56,7 +60,8 @@
       "sourceIds": [
         "brynjolfsson-chandar-chen-entry-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "employment"
     },
     {
       "date": "2025-11-15",
@@ -66,7 +71,8 @@
       "sourceIds": [
         "worldbank-liu-wang-yu-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "postings"
     },
     {
       "date": "2026-01-15",
@@ -76,7 +82,8 @@
       "sourceIds": [
         "anthropic-ceo-entry-level-2025"
       ],
-      "evidenceTier": 3
+      "evidenceTier": 3,
+      "metricType": "projection"
     },
     {
       "date": "2026-01-15",
@@ -86,7 +93,8 @@
       "sourceIds": [
         "imf-skill-gaps-entry-2026"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "projection"
     }
   ],
   "overlays": [
@@ -148,7 +156,7 @@
       "date": "2025-09-15",
       "direction": "down",
       "sourceIds": [
-        "del-rio-chanona-entry-2025"
+        "del-rio-chanona-ai-jobs-2025"
       ],
       "evidenceTier": 1,
       "label": "ILO review: declining demand for novice workers"
@@ -175,7 +183,7 @@
       "date": "2026-01-01",
       "direction": "up",
       "sourceIds": [
-        "hartley-entry-level-2026"
+        "hartley-genai-labor-2026"
       ],
       "evidenceTier": 1,
       "label": "Stanford: small positive wage effects overall"
@@ -187,7 +195,7 @@
         "dallas-fed-entry-level-2026"
       ],
       "evidenceTier": 1,
-      "label": "Dallas Fed: young worker share fell 16.4% → 15.5%"
+      "label": "Dallas Fed: young worker share fell 16.4% \u2192 15.5%"
     },
     {
       "date": "2026-01-15",
@@ -223,7 +231,7 @@
         "dallas-fed-davis-ai-wages-2026"
       ],
       "evidenceTier": 1,
-      "label": "Dallas Fed: AI exposure → 0.28pp wage growth reduction in low-experience-premium jobs"
+      "label": "Dallas Fed: AI exposure \u2192 0.28pp wage growth reduction in low-experience-premium jobs"
     },
     {
       "date": "2026-01-14",
@@ -238,7 +246,7 @@
   "sources": [
     {
       "id": "indeed-entry-level-2023",
-      "title": "Entry-Level Job Market Update — Indeed Hiring Lab",
+      "title": "Entry-Level Job Market Update \u2014 Indeed Hiring Lab",
       "url": "https://www.hiringlab.org/2025/09/25/september-labor-market-squeeze-on-new-entrants/",
       "publisher": "Indeed Hiring Lab",
       "evidenceTier": 2,
@@ -283,7 +291,7 @@
     },
     {
       "id": "wsj-entry-level-squeeze",
-      "title": "Entry-Level Jobs Are Vanishing — and AI Is a Big Reason",
+      "title": "Entry-Level Jobs Are Vanishing \u2014 and AI Is a Big Reason",
       "url": "https://www.wsj.com/lifestyle/careers/ai-entry-level-jobs-career-strategy-f59d574b",
       "publisher": "The Wall Street Journal",
       "evidenceTier": 3,
@@ -300,7 +308,7 @@
     },
     {
       "id": "bls-entry-wages-2025",
-      "title": "Usual Weekly Earnings — Workers 16-24",
+      "title": "Usual Weekly Earnings \u2014 Workers 16-24",
       "url": "https://www.bls.gov/cps/",
       "publisher": "Bureau of Labor Statistics",
       "evidenceTier": 1,
@@ -353,7 +361,7 @@
       "excerpt": "Job postings for high-AI-substitution occupations fell 12% relative to low-substitution roles post-ChatGPT; effect grew from 6% in year one to 18% by year three. Based on 285 million Lightcast job postings."
     },
     {
-      "id": "hartley-entry-level-2026",
+      "id": "hartley-genai-labor-2026",
       "title": "The Labor Market Effects of Generative Artificial Intelligence",
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5136877",
       "publisher": "Stanford / World Bank (Hartley, Jolevski, Melo, Moore)",
@@ -380,7 +388,7 @@
       "excerpt": "Pressure concentrated in entry-level segments of highly exposed occupations; adjustment happening at the margin through task reallocation."
     },
     {
-      "id": "del-rio-chanona-entry-2025",
+      "id": "del-rio-chanona-ai-jobs-2025",
       "title": "AI and jobs: A review of theory, estimates, and evidence",
       "url": "https://arxiv.org/abs/2509.15265",
       "publisher": "arXiv (ILO-affiliated researchers)",
@@ -395,7 +403,7 @@
       "publisher": "SSRN (Hosseini Maasoum, Lichtinger)",
       "evidenceTier": 1,
       "datePublished": "2025-09-01",
-      "excerpt": "Analysis of 62M U.S. resumes: junior employment declined sharply at AI-adopting firms while senior employment was largely unchanged — described as 'seniority-biased technological change.'"
+      "excerpt": "Analysis of 62M U.S. resumes: junior employment declined sharply at AI-adopting firms while senior employment was largely unchanged \u2014 described as 'seniority-biased technological change.'"
     },
     {
       "id": "althoff-reichardt-task-specific-technical-2026",

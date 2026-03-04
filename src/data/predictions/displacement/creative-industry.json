@@ -16,7 +16,8 @@
       "sourceIds": [
         "mckinsey-creative-automation"
       ],
-      "evidenceTier": 2
+      "evidenceTier": 2,
+      "metricType": "survey"
     },
     {
       "date": "2024-05-20",
@@ -26,7 +27,8 @@
       "sourceIds": [
         "upwork-freelancer-impact"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "corporate"
     },
     {
       "date": "2024-08-15",
@@ -36,7 +38,8 @@
       "sourceIds": [
         "nber-creative-ai-2024"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "projection"
     },
     {
       "date": "2025-02-15",
@@ -46,7 +49,8 @@
       "sourceIds": [
         "forrester-creative-2025"
       ],
-      "evidenceTier": 2
+      "evidenceTier": 2,
+      "metricType": "survey"
     },
     {
       "date": "2025-07-15",
@@ -56,7 +60,8 @@
       "sourceIds": [
         "indeed-graphic-artist-postings-2025"
       ],
-      "evidenceTier": 2
+      "evidenceTier": 2,
+      "metricType": "postings"
     },
     {
       "date": "2025-10-01",
@@ -66,7 +71,8 @@
       "sourceIds": [
         "uoc-creative-automation-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "projection"
     }
   ],
   "overlays": [
@@ -164,10 +170,10 @@
       "date": "2025-09-20",
       "direction": "down",
       "sourceIds": [
-        "ramp-freelance-creative-2025"
+        "ramp-freelance-velocity-2025"
       ],
       "evidenceTier": 1,
-      "label": "Ramp: $1 reduced freelance → $0.03 AI spend"
+      "label": "Ramp: $1 reduced freelance \u2192 $0.03 AI spend"
     },
     {
       "date": "2025-10-30",
@@ -209,7 +215,7 @@
   "sources": [
     {
       "id": "wef-creative-2023",
-      "title": "Future of Jobs Report 2023 — Creative and Media Professions",
+      "title": "Future of Jobs Report 2023 \u2014 Creative and Media Professions",
       "url": "https://www.weforum.org/publications/the-future-of-jobs-report-2023/",
       "publisher": "World Economic Forum",
       "evidenceTier": 2,
@@ -218,7 +224,7 @@
     },
     {
       "id": "mckinsey-creative-automation",
-      "title": "The economic potential of generative AI — Creative work",
+      "title": "The economic potential of generative AI \u2014 Creative work",
       "url": "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier",
       "publisher": "McKinsey Global Institute",
       "evidenceTier": 2,
@@ -227,7 +233,7 @@
     },
     {
       "id": "upwork-freelancer-impact",
-      "title": "Upwork Q2 2024 Earnings — Freelancer Market Trends",
+      "title": "Upwork Q2 2024 Earnings \u2014 Freelancer Market Trends",
       "url": "https://investors.upwork.com/news-releases/news-release-details/upwork-announces-second-quarter-2024-financial-results",
       "publisher": "Upwork (Earnings Report)",
       "evidenceTier": 1,
@@ -245,7 +251,7 @@
     },
     {
       "id": "techcrunch-creative-layoffs",
-      "title": "As layoffs deepen, AI's role in the cuts is murky — but it definitely has one",
+      "title": "As layoffs deepen, AI's role in the cuts is murky \u2014 but it definitely has one",
       "url": "https://techcrunch.com/2024/01/29/as-layoffs-deepen-ais-role-in-the-cuts-is-murky-but-it-definitely-has-one/",
       "publisher": "TechCrunch",
       "evidenceTier": 3,
@@ -299,7 +305,7 @@
     },
     {
       "id": "autor-new-frontiers-qje-2024",
-      "title": "New Frontiers: The Origins and Content of New Work, 1940–2018",
+      "title": "New Frontiers: The Origins and Content of New Work, 1940\u20132018",
       "url": "https://academic.oup.com/qje/article-abstract/139/3/1399/7630187",
       "publisher": "QJE (Autor, Chin, Salomons, Seegmiller)",
       "evidenceTier": 1,
@@ -307,7 +313,7 @@
       "excerpt": "Demand-eroding effects of automation innovations have intensified in past four decades. New work creation has shifted from production to high-paid professional occupations."
     },
     {
-      "id": "ramp-freelance-creative-2025",
+      "id": "ramp-freelance-velocity-2025",
       "title": "AI Labor Market Impact: Freelancers",
       "url": "https://ramp.com/velocity/ai-labor-market-impact-freelancers",
       "publisher": "Ramp",

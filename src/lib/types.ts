@@ -1,5 +1,7 @@
 export type EvidenceTier = 1 | 2 | 3 | 4;
 
+export type MetricType = "employment" | "postings" | "survey" | "projection" | "corporate";
+
 export const EVIDENCE_TIER_LABELS: Record<EvidenceTier, string> = {
   1: "Verified Data & Research",
   2: "Institutional Analysis",
@@ -26,6 +28,7 @@ export interface HistoricalDataPoint {
   sourceIds: string[];
   evidenceTier: EvidenceTier;
   dataType?: "observed" | "projected";
+  metricType?: MetricType;
 }
 
 /** A qualitative/directional study shown as a horizontal band rather than a point */
@@ -44,7 +47,9 @@ export interface Prediction {
   description: string;
   category: "displacement" | "wages" | "adoption" | "signals" | "exposure";
   unit: string;
-  currentValue: number;
+  currentValue?: number;
+  currentValueSource?: string;
+  currentValueMethodology?: string;
   timeHorizon: string;
   history: HistoricalDataPoint[];
   overlays?: DirectionalOverlay[];

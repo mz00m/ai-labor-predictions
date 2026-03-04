@@ -16,7 +16,8 @@
       "sourceIds": [
         "acemoglu-macro-2024"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "projection"
     },
     {
       "date": "2024-11-01",
@@ -26,7 +27,8 @@
       "sourceIds": [
         "forrester-6pct"
       ],
-      "evidenceTier": 2
+      "evidenceTier": 2,
+      "metricType": "survey"
     },
     {
       "date": "2025-10-01",
@@ -36,7 +38,8 @@
       "sourceIds": [
         "kinder-brookings-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "employment"
     },
     {
       "date": "2025-10-15",
@@ -46,7 +49,8 @@
       "sourceIds": [
         "yale-budget-lab-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "employment"
     },
     {
       "date": "2025-10-30",
@@ -54,7 +58,8 @@
       "sourceIds": [
         "cais-scale-remote-labor-index-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "projection"
     },
     {
       "date": "2025-11-01",
@@ -64,7 +69,8 @@
       "sourceIds": [
         "worldbank-liu-wang-yu-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "projection"
     },
     {
       "date": "2025-08-01",
@@ -72,9 +78,10 @@
       "confidenceLow": 3,
       "confidenceHigh": 14,
       "sourceIds": [
-        "goldman-overall-workforce-2025"
+        "goldman-ai-workforce-2025"
       ],
-      "evidenceTier": 2
+      "evidenceTier": 2,
+      "metricType": "projection"
     },
     {
       "date": "2025-12-01",
@@ -84,7 +91,8 @@
       "sourceIds": [
         "wef-future-jobs-2025"
       ],
-      "evidenceTier": 2
+      "evidenceTier": 2,
+      "metricType": "projection"
     },
     {
       "date": "2025-08-15",
@@ -92,9 +100,10 @@
       "confidenceLow": 0,
       "confidenceHigh": 1,
       "sourceIds": [
-        "goldman-overall-measured-2025"
+        "goldman-ai-workforce-2025"
       ],
-      "evidenceTier": 2
+      "evidenceTier": 2,
+      "metricType": "projection"
     },
     {
       "date": "2026-01-01",
@@ -104,7 +113,8 @@
       "sourceIds": [
         "hartley-genai-labor-2026"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "projection"
     },
     {
       "date": "2026-01-06",
@@ -114,7 +124,8 @@
       "sourceIds": [
         "dallas-fed-overall-2026"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "employment"
     },
     {
       "date": "2026-02-01",
@@ -124,7 +135,8 @@
       "sourceIds": [
         "icle-ai-productivity-2026"
       ],
-      "evidenceTier": 2
+      "evidenceTier": 2,
+      "metricType": "projection"
     },
     {
       "date": "2026-02-15",
@@ -134,7 +146,8 @@
       "sourceIds": [
         "nber-bloom-firm-data-ai-2026"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "survey"
     },
     {
       "date": "2026-02-24",
@@ -144,7 +157,8 @@
       "sourceIds": [
         "goldman-mei-ai-labor-2026"
       ],
-      "evidenceTier": 2
+      "evidenceTier": 2,
+      "metricType": "projection"
     },
     {
       "date": "2025-12-01",
@@ -152,7 +166,8 @@
       "sourceIds": [
         "dallas-fed-davis-ai-wages-2026"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "employment"
     }
   ],
   "overlays": [
@@ -379,7 +394,7 @@
         "goldman-mei-ai-labor-2026"
       ],
       "evidenceTier": 2,
-      "label": "Goldman (Mei): only 5-10K/mo drag so far; baseline 6-7% displaced; +½pp unemployment"
+      "label": "Goldman (Mei): only 5-10K/mo drag so far; baseline 6-7% displaced; +\u00bdpp unemployment"
     },
     {
       "date": "2026-02-01",
@@ -388,7 +403,7 @@
         "nber-brynjolfsson-minwage-robots-2026"
       ],
       "evidenceTier": 1,
-      "label": "NBER (Brynjolfsson et al.): 10% min-wage hike → ~8% rise in robot adoption"
+      "label": "NBER (Brynjolfsson et al.): 10% min-wage hike \u2192 ~8% rise in robot adoption"
     },
     {
       "date": "2026-03-03",
@@ -460,7 +475,7 @@
         "bls-jolts-december-2025"
       ],
       "evidenceTier": 1,
-      "label": "BLS JOLTS: Job openings fell to 6.5M (Dec 2025) — lowest since 2017"
+      "label": "BLS JOLTS: Job openings fell to 6.5M (Dec 2025) \u2014 lowest since 2017"
     },
     {
       "date": "2026-02-05",
@@ -469,7 +484,7 @@
         "bls-jolts-december-2025"
       ],
       "evidenceTier": 1,
-      "label": "BLS JOLTS: Quits rate at 2.0% — below 2019 average"
+      "label": "BLS JOLTS: Quits rate at 2.0% \u2014 below 2019 average"
     },
     {
       "date": "2026-03-04",
@@ -571,7 +586,7 @@
     },
     {
       "id": "ibm-10k-2024",
-      "title": "IBM 2024 10-K — AI Strategy & Workforce Transformation",
+      "title": "IBM 2024 10-K \u2014 AI Strategy & Workforce Transformation",
       "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000051143&type=10-K",
       "publisher": "IBM (SEC Filing)",
       "evidenceTier": 1,
@@ -580,7 +595,7 @@
     },
     {
       "id": "indeed-overall-postings-2025",
-      "title": "Total US Job Postings Trend Analysis — January 2025",
+      "title": "Total US Job Postings Trend Analysis \u2014 January 2025",
       "url": "https://www.hiringlab.org/2025/01/28/us-job-postings-trends/",
       "publisher": "Indeed Hiring Lab",
       "evidenceTier": 2,
@@ -624,7 +639,7 @@
     },
     {
       "id": "kinder-brookings-2025",
-      "title": "New data show no AI jobs apocalypse — for now",
+      "title": "New data show no AI jobs apocalypse \u2014 for now",
       "url": "https://www.brookings.edu/articles/new-data-show-no-ai-jobs-apocalypse-for-now/",
       "publisher": "Brookings (Kinder)",
       "evidenceTier": 1,
@@ -665,7 +680,7 @@
       "publisher": "Harvard Business School",
       "evidenceTier": 1,
       "datePublished": "2025-01-15",
-      "excerpt": "17% decrease in job postings for highly automatable occupations, but 22% increase for augmentation-prone ones — net effect depends on occupation mix."
+      "excerpt": "17% decrease in job postings for highly automatable occupations, but 22% increase for augmentation-prone ones \u2014 net effect depends on occupation mix."
     },
     {
       "id": "anthropic-econ-primitives-overall-2026",
@@ -686,22 +701,13 @@
       "excerpt": "If fully translated to unemployment, AI-driven employment declines among young workers would explain only 0.1 percentage point rise in aggregate unemployment."
     },
     {
-      "id": "goldman-overall-workforce-2025",
+      "id": "goldman-ai-workforce-2025",
       "title": "How Will AI Affect the Global Workforce?",
       "url": "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce",
       "publisher": "Goldman Sachs Research",
       "evidenceTier": 2,
       "datePublished": "2025-08-01",
       "excerpt": "AI could displace 6-7% of the US workforce if widely adopted (range 3-14%). Currently 2.5% of US employment at risk of displacement from current AI use cases; unemployment projected to increase by 0.5pp during transition."
-    },
-    {
-      "id": "goldman-overall-measured-2025",
-      "title": "How Will AI Affect the Global Workforce?",
-      "url": "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce",
-      "publisher": "Goldman Sachs Research",
-      "evidenceTier": 2,
-      "datePublished": "2025-08-01",
-      "excerpt": "There is no economically or statistically significant correlation between AI exposure and job growth, unemployment, job finding rates, layoff rates, weekly hours, or average hourly earnings."
     },
     {
       "id": "adp-stanford-young-workers-2025",
@@ -764,7 +770,7 @@
       "publisher": "Cognizant",
       "evidenceTier": 2,
       "datePublished": "2026-01-15",
-      "excerpt": "Education task exposure jumped from 11% to 49% — a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations."
+      "excerpt": "Education task exposure jumped from 11% to 49% \u2014 a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations."
     },
     {
       "id": "goldman-mei-ai-labor-2026",
@@ -773,7 +779,7 @@
       "publisher": "Goldman Sachs Research (Pierfrancesco Mei)",
       "evidenceTier": 2,
       "datePublished": "2026-02-24",
-      "excerpt": "AI's labor market impact still small — only 5-10K/month drag on net job growth. Only 2½% of jobs exposed to automation today. Baseline forecast: 6-7% of workers displaced (range 3-14%), lowering annual hiring by 1M jobs and raising unemployment ~½pp. US creates 30M gross new jobs/year; does not anticipate job apocalypse. Impact so far largely confined to tech sector but expects it to grow materially."
+      "excerpt": "AI's labor market impact still small \u2014 only 5-10K/month drag on net job growth. Only 2\u00bd% of jobs exposed to automation today. Baseline forecast: 6-7% of workers displaced (range 3-14%), lowering annual hiring by 1M jobs and raising unemployment ~\u00bdpp. US creates 30M gross new jobs/year; does not anticipate job apocalypse. Impact so far largely confined to tech sector but expects it to grow materially."
     },
     {
       "id": "cais-scale-remote-labor-index-2025",
@@ -797,10 +803,10 @@
       "id": "cepr-ai-productivity-jobs-europe-2026",
       "title": "How AI is affecting productivity and jobs in Europe",
       "url": "https://cepr.org/voxeu/columns/how-ai-affecting-productivity-and-jobs-europe",
-      "publisher": "CEPR VoxEU (Aldasoro, Gambacorta, Pál, Revoltella, Weiss, Wolski)",
+      "publisher": "CEPR VoxEU (Aldasoro, Gambacorta, P\u00e1l, Revoltella, Weiss, Wolski)",
       "evidenceTier": 1,
       "datePublished": "2026-02-17",
-      "excerpt": "No evidence that AI reduces employment in the short run. AI augments worker output — enabling employees to complete tasks faster and make better decisions — without displacing labour."
+      "excerpt": "No evidence that AI reduces employment in the short run. AI augments worker output \u2014 enabling employees to complete tasks faster and make better decisions \u2014 without displacing labour."
     },
     {
       "id": "indeed-hiringlab-ai-jobs-labor-2026",
@@ -886,7 +892,7 @@
     },
     {
       "id": "bls-jolts-december-2025",
-      "title": "Job Openings and Labor Turnover — December 2025",
+      "title": "Job Openings and Labor Turnover \u2014 December 2025",
       "url": "https://www.bls.gov/news.release/jolts.nr0.htm",
       "publisher": "U.S. Bureau of Labor Statistics",
       "evidenceTier": 1,

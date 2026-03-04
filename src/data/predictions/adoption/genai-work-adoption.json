@@ -2,7 +2,7 @@
   "id": "genai-work-adoption",
   "slug": "genai-work-adoption",
   "title": "Generative AI Adoption",
-  "description": "Share of U.S. working-age adults (18–64) using generative AI at work, from a nationally representative quarterly survey (Real-Time Population Survey). Work adoption (40.7%) lags overall use (55.9%), consistent with workers adopting ahead of their employers. Overall adoption has outpaced both the PC and internet at comparable points post-launch.",
+  "description": "Share of U.S. working-age adults (18\u201364) using generative AI at work, from a nationally representative quarterly survey (Real-Time Population Survey). Work adoption (40.7%) lags overall use (55.9%), consistent with workers adopting ahead of their employers. Overall adoption has outpaced both the PC and internet at comparable points post-launch.",
   "category": "adoption",
   "unit": "% of adults at work",
   "currentValue": 43,
@@ -11,50 +11,74 @@
     {
       "date": "2024-06-01",
       "value": 32.9,
-      "sourceIds": ["bick-blandin-deming-wp-2025"],
-      "evidenceTier": 1
+      "sourceIds": [
+        "bick-blandin-deming-wp-2025"
+      ],
+      "evidenceTier": 1,
+      "metricType": "survey"
     },
     {
       "date": "2024-08-01",
       "value": 33.3,
-      "sourceIds": ["bick-blandin-deming-wp-2025"],
-      "evidenceTier": 1
+      "sourceIds": [
+        "bick-blandin-deming-wp-2025"
+      ],
+      "evidenceTier": 1,
+      "metricType": "survey"
     },
     {
       "date": "2024-11-01",
       "value": 31.0,
-      "sourceIds": ["bick-blandin-deming-wp-2025"],
-      "evidenceTier": 1
+      "sourceIds": [
+        "bick-blandin-deming-wp-2025"
+      ],
+      "evidenceTier": 1,
+      "metricType": "survey"
     },
     {
       "date": "2025-02-01",
       "value": 33.5,
-      "sourceIds": ["genai-adoption-tracker-2025"],
-      "evidenceTier": 2
+      "sourceIds": [
+        "genai-adoption-tracker-2025"
+      ],
+      "evidenceTier": 2,
+      "metricType": "survey"
     },
     {
       "date": "2025-05-01",
       "value": 35.5,
-      "sourceIds": ["genai-adoption-tracker-2025"],
-      "evidenceTier": 2
+      "sourceIds": [
+        "genai-adoption-tracker-2025"
+      ],
+      "evidenceTier": 2,
+      "metricType": "survey"
     },
     {
       "date": "2025-08-01",
       "value": 37.4,
-      "sourceIds": ["bick-blandin-deming-wp-2025"],
-      "evidenceTier": 1
+      "sourceIds": [
+        "bick-blandin-deming-wp-2025"
+      ],
+      "evidenceTier": 1,
+      "metricType": "survey"
     },
     {
       "date": "2025-11-01",
       "value": 40.7,
-      "sourceIds": ["bick-blandin-deming-wp-2025"],
-      "evidenceTier": 1
+      "sourceIds": [
+        "bick-blandin-deming-wp-2025"
+      ],
+      "evidenceTier": 1,
+      "metricType": "survey"
     },
     {
       "date": "2026-01-22",
       "value": 43,
-      "sourceIds": ["indeed-hiringlab-ai-jobs-labor-2026"],
-      "evidenceTier": 2
+      "sourceIds": [
+        "indeed-hiringlab-ai-jobs-labor-2026"
+      ],
+      "evidenceTier": 2,
+      "metricType": "postings"
     }
   ],
   "overlays": [
@@ -74,7 +98,7 @@
         "workday-ai-productivity-rework-2026"
       ],
       "evidenceTier": 2,
-      "label": "Workday: 85% of employees save 1–7 hrs/wk with AI (n=3,200)"
+      "label": "Workday: 85% of employees save 1\u20137 hrs/wk with AI (n=3,200)"
     },
     {
       "date": "2026-01-14",
@@ -130,7 +154,7 @@
       "publisher": "Workday / Hanover Research",
       "evidenceTier": 2,
       "datePublished": "2026-01-14",
-      "excerpt": "85% of employees report saving one to seven hours per week using AI. Employees who use AI every day are overwhelmingly optimistic – more than 90% believe it will help them succeed."
+      "excerpt": "85% of employees report saving one to seven hours per week using AI. Employees who use AI every day are overwhelmingly optimistic \u2013 more than 90% believe it will help them succeed."
     },
     {
       "id": "workday-ai-skills-revolution-2025",

@@ -45,7 +45,18 @@ export function computeAggregate(
     .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
 
   if (points.length === 0) {
-    return { mean: prediction.currentValue, trend: "flat", trendIsBad: false };
+    // No points matched selected tiers — re-run with ALL tiers before falling back to 0
+    const allTiers: EvidenceTier[] = [1, 2, 3, 4];
+    const allPoints = prediction.history
+      .filter((d) => allTiers.includes(d.evidenceTier))
+      .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+
+    if (allPoints.length === 0) {
+      return { mean: prediction.currentValue ?? 0, trend: "flat", trendIsBad: false };
+    }
+
+    // Recurse with all tiers
+    return computeAggregate(prediction, allTiers);
   }
 
   const timestamps = points.map((p) => new Date(p.date).getTime());
