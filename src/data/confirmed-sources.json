@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-03-03",
-  "totalSources": 305,
-  "verifiedCount": 295,
+  "lastUpdated": "2026-03-04",
+  "totalSources": 307,
+  "verifiedCount": 297,
   "sources": {
     "accenture-health-ai-2023": {
       "id": "accenture-health-ai-2023",
@@ -4079,6 +4079,35 @@
         "healthcare-admin-displacement",
         "white-collar-professional-displacement",
         "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "ifo-ai-job-cuts-germany-2025": {
+      "id": "ifo-ai-job-cuts-germany-2025",
+      "title": "A Quarter of Companies in Germany Expect Job Cuts Due to Artificial Intelligence",
+      "url": "https://www.ifo.de/en/press-release/2025-06-05/quarter-companies-germany-expect-job-cuts-due-artificial-intelligence",
+      "publisher": "ifo Institute",
+      "evidenceTier": 2,
+      "datePublished": "2025-06-05",
+      "excerpt": "27.1% of companies expect artificial intelligence to lead to job cuts in the next five years. Only 5.2% of companies anticipate additional jobs, while two-thirds expect no change.",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "ecb-safe-ai-hiring-2026": {
+      "id": "ecb-safe-ai-hiring-2026",
+      "title": "Artificial Intelligence: friend or foe for hiring in Europe today?",
+      "url": "https://www.ecb.europa.eu/press/blog/date/2026/html/ecb.blog20260304~d9e34fc95f.en.html",
+      "publisher": "European Central Bank",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-04",
+      "excerpt": "Companies with frequent AI use are about 4% more likely to take on additional staff. Two-thirds of the 3,500 firms that took part in the survey reported that their employees use AI.",
+      "usedIn": [
+        "overall-us-displacement",
+        "ai-adoption-rate"
       ],
       "verified": true,
       "synthetic": false

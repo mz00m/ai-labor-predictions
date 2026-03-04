@@ -67,6 +67,14 @@
         "hartley-adoption-survey-2026"
       ],
       "evidenceTier": 1
+    },
+    {
+      "date": "2026-03-04",
+      "value": 66,
+      "sourceIds": [
+        "ecb-safe-ai-hiring-2026"
+      ],
+      "evidenceTier": 1
     }
   ],
   "overlays": [
@@ -549,6 +557,15 @@
       "evidenceTier": 3,
       "datePublished": "2026-02-18",
       "excerpt": "80% of respondents in the 2025 Indeed Workforce Insights Report report they save at least one hour per day using generative AI. Job postings that require AI literacy skills are growing at a rate of more than 70% year over year."
+    },
+    {
+      "id": "ecb-safe-ai-hiring-2026",
+      "title": "Artificial Intelligence: friend or foe for hiring in Europe today?",
+      "url": "https://www.ecb.europa.eu/press/blog/date/2026/html/ecb.blog20260304~d9e34fc95f.en.html",
+      "publisher": "European Central Bank",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-04",
+      "excerpt": "Two-thirds of the 3,500 firms that took part in the survey reported that their employees use AI."
     }
   ]
 }

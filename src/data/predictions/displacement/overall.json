@@ -389,6 +389,42 @@
       ],
       "evidenceTier": 1,
       "label": "BLS MLR: All-occupation employment projected to grow 4.0% average (2023-33)"
+    },
+    {
+      "date": "2025-06-05",
+      "direction": "up",
+      "sourceIds": [
+        "ifo-ai-job-cuts-germany-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Ifo: 27% of German firms expect AI job cuts in 5 years"
+    },
+    {
+      "date": "2025-06-05",
+      "direction": "down",
+      "sourceIds": [
+        "ifo-ai-job-cuts-germany-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Ifo: Two-thirds of German firms expect no AI employment change"
+    },
+    {
+      "date": "2026-03-04",
+      "direction": "down",
+      "sourceIds": [
+        "ecb-safe-ai-hiring-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "ECB SAFE: AI-intensive euro-area firms 4% more likely to hire"
+    },
+    {
+      "date": "2026-03-04",
+      "direction": "neutral",
+      "sourceIds": [
+        "ecb-safe-ai-hiring-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "ECB SAFE: Only 15% of AI-using firms cite reducing labour costs"
     }
   ],
   "sources": [
@@ -748,6 +784,24 @@
       "evidenceTier": 1,
       "datePublished": "2025-02-10",
       "excerpt": "BLS projects employment of software developers to increase 17.9 percent between 2023 and 2033, much faster than the average for all occupations (4.0 percent)."
+    },
+    {
+      "id": "ifo-ai-job-cuts-germany-2025",
+      "title": "A Quarter of Companies in Germany Expect Job Cuts Due to Artificial Intelligence",
+      "url": "https://www.ifo.de/en/press-release/2025-06-05/quarter-companies-germany-expect-job-cuts-due-artificial-intelligence",
+      "publisher": "ifo Institute",
+      "evidenceTier": 2,
+      "datePublished": "2025-06-05",
+      "excerpt": "27.1% of companies expect artificial intelligence to lead to job cuts in the next five years. Only 5.2% of companies anticipate additional jobs, while two-thirds expect no change."
+    },
+    {
+      "id": "ecb-safe-ai-hiring-2026",
+      "title": "Artificial Intelligence: friend or foe for hiring in Europe today?",
+      "url": "https://www.ecb.europa.eu/press/blog/date/2026/html/ecb.blog20260304~d9e34fc95f.en.html",
+      "publisher": "European Central Bank",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-04",
+      "excerpt": "Companies with frequent AI use are about 4% more likely to take on additional staff. Only 15% of firms that use AI cite reducing labour costs as a factor."
     }
   ]
 }
