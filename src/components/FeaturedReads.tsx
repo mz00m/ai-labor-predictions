@@ -13,7 +13,7 @@ const articles: Article[] = [
     author: "Chung",
     title: "Introducing AIR: The AI Resilience Report",
     summary:
-      "A new framework for measuring workforce resilience in the age of AI — tracking how workers and organizations adapt to AI-driven disruption.",
+      "The first canonical aggregator of research on how AI is impacting jobs at the occupational level — with implications and actions for job seekers.",
     date: "Mar 4",
     url: "https://www.linkedin.com/pulse/introducing-air-ai-resilience-report-jared-chung-gxfec",
     accent: "border-l-purple-500",
