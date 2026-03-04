@@ -28,12 +28,12 @@ const articles: Article[] = [
     accent: "border-l-blue-500",
   },
   {
-    author: "Citadel",
-    title: "The 2026 Global Intelligence Crisis",
+    author: "brexton",
+    title: "AI Is for the Rich",
     summary:
-      "AI adoption follows S-curve constraints — productivity gains will boost real incomes, not cause contraction.",
-    date: "Feb 24",
-    url: "https://www.citadelsecurities.com/news-and-insights/2026-global-intelligence-crisis/",
+      "AI is socioeconomically gated — tokens are expensive, and only the wealthy can explore the frontier. Compounding advantage widens the divide.",
+    date: "Mar 4",
+    url: "https://x.com/brexton/status/2028947633323094019",
     accent: "border-l-emerald-500",
   },
   {
