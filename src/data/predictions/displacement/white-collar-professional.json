@@ -383,6 +383,24 @@
       ],
       "evidenceTier": 2,
       "label": "Workday: 89% of orgs have <50% of roles updated for AI"
+    },
+    {
+      "date": "2026-02-05",
+      "direction": "down",
+      "sourceIds": [
+        "bls-jolts-december-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "BLS JOLTS: Prof/biz services openings down 21.8% (-284K)"
+    },
+    {
+      "date": "2026-02-05",
+      "direction": "down",
+      "sourceIds": [
+        "bls-jolts-december-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "BLS JOLTS: Financial activities openings down 25.1% (-86K)"
     }
   ],
   "sources": [
@@ -728,6 +746,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-01-14",
       "excerpt": "There is no evidence that job postings for junior roles within occupations most exposed to AI have declined more than postings for senior positions. Postings for both levels of seniority have been falling roughly in parallel since their peak in Spring 2022, with the decline in junior positions stabilizing faster."
+    },
+    {
+      "id": "bls-jolts-december-2025",
+      "title": "Job Openings and Labor Turnover — December 2025",
+      "url": "https://www.bls.gov/news.release/jolts.nr0.htm",
+      "publisher": "U.S. Bureau of Labor Statistics",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-05",
+      "excerpt": "Professional & business services openings down 21.8% (-284,000). Financial activities openings down 25.1% (-86,000)."
     }
   ]
 }

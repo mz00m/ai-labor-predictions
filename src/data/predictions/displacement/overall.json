@@ -452,6 +452,24 @@
       ],
       "evidenceTier": 2,
       "label": "Workday: ~40% of AI time savings lost to rework; only 14% get clear net gains"
+    },
+    {
+      "date": "2026-02-05",
+      "direction": "down",
+      "sourceIds": [
+        "bls-jolts-december-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "BLS JOLTS: Job openings fell to 6.5M (Dec 2025) — lowest since 2017"
+    },
+    {
+      "date": "2026-02-05",
+      "direction": "down",
+      "sourceIds": [
+        "bls-jolts-december-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "BLS JOLTS: Quits rate at 2.0% — below 2019 average"
     }
   ],
   "sources": [
@@ -847,6 +865,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-03-04",
       "excerpt": "Companies with frequent AI use are about 4% more likely to take on additional staff. Only 15% of firms that use AI cite reducing labour costs as a factor."
+    },
+    {
+      "id": "bls-jolts-december-2025",
+      "title": "Job Openings and Labor Turnover — December 2025",
+      "url": "https://www.bls.gov/news.release/jolts.nr0.htm",
+      "publisher": "U.S. Bureau of Labor Statistics",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-05",
+      "excerpt": "Job openings fell to their lowest level since December 2017. Quits rate held steady at 2%, remaining below its 2019 average."
     }
   ]
 }

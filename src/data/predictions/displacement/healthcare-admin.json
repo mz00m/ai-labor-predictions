@@ -164,6 +164,15 @@
       ],
       "evidenceTier": 2,
       "label": "HealthTech: admin is 25% of healthcare costs, key automation target"
+    },
+    {
+      "date": "2026-02-05",
+      "direction": "down",
+      "sourceIds": [
+        "bls-jolts-december-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "BLS JOLTS: Healthcare openings down 10.8% (-152K) since Oct"
     }
   ],
   "sources": [
@@ -310,6 +319,15 @@
       "evidenceTier": 1,
       "datePublished": "2025-02-10",
       "excerpt": "Medical transcriptionists, whose employment is projected to decline by 4.7 percent through 2033."
+    },
+    {
+      "id": "bls-jolts-december-2025",
+      "title": "Job Openings and Labor Turnover — December 2025",
+      "url": "https://www.bls.gov/news.release/jolts.nr0.htm",
+      "publisher": "U.S. Bureau of Labor Statistics",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-05",
+      "excerpt": "Healthcare and social assistance openings down 10.8% (-152,000) since October."
     }
   ]
 }
