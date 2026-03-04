@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-03",
-  "totalSources": 304,
-  "verifiedCount": 294,
+  "totalSources": 305,
+  "verifiedCount": 295,
   "sources": {
     "accenture-health-ai-2023": {
       "id": "accenture-health-ai-2023",
@@ -860,6 +860,22 @@
         "healthcare-admin-displacement"
       ],
       "verified": true
+    },
+    "cio-it-jobs-ai-skills-2026": {
+      "id": "cio-it-jobs-ai-skills-2026",
+      "title": "State of IT jobs: AI sparks rapidly changing market for skills",
+      "url": "https://www.cio.com/article/4134254/state-of-it-jobs-ai-sparks-rapidly-changing-market-for-skills.html",
+      "publisher": "CIO.com",
+      "evidenceTier": 3,
+      "datePublished": "2026-02-18",
+      "excerpt": "37% of tech professionals say their role has been 'redefined or restructured due to gen AI in the past two years.' 80% of respondents save at least one hour per day using generative AI. AI literacy job postings growing 70%+ year over year.",
+      "usedIn": [
+        "ai-adoption-rate",
+        "tech-sector-displacement",
+        "white-collar-professional-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
     },
     "cognizant-new-work-2026": {
       "id": "cognizant-new-work-2026",
