@@ -194,6 +194,15 @@
       ],
       "evidenceTier": 1,
       "label": "CEPR/BIS: wage gains may accrue disproportionately to highly skilled workers"
+    },
+    {
+      "date": "2026-03-04",
+      "direction": "up",
+      "sourceIds": [
+        "cooper-cs-majors-labor-2026"
+      ],
+      "evidenceTier": 4,
+      "label": "Cooper/ACS: Early-career CS salary $90K vs $55K all grads (2024)"
     }
   ],
   "sources": [
@@ -364,6 +373,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-02-24",
       "excerpt": "nominal average weekly wages nationwide have increased 7.5 percent, while the computer systems design sector has risen 16.7 percent"
+    },
+    {
+      "id": "cooper-cs-majors-labor-2026",
+      "title": "Should you still major in computer science?",
+      "url": "https://prestoncooper93.substack.com/p/should-you-still-major-in-computer",
+      "publisher": "Preston Cooper (Substack)",
+      "evidenceTier": 4,
+      "datePublished": "2026-03-04",
+      "excerpt": "The median salary for early-career CS majors was $90,000 in 2024. The median salary for all recent college graduates was just $55,000."
     }
   ]
 }

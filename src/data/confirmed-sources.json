@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-04",
-  "totalSources": 311,
-  "verifiedCount": 301,
+  "totalSources": 313,
+  "verifiedCount": 303,
   "sources": {
     "accenture-health-ai-2023": {
       "id": "accenture-health-ai-2023",
@@ -3905,6 +3905,22 @@
       "verified": true,
       "synthetic": false
     },
+    "workday-ai-skills-revolution-2025": {
+      "id": "workday-ai-skills-revolution-2025",
+      "title": "Elevating Human Potential: The AI Skills Revolution",
+      "url": "https://forms.workday.com/en-us/reports/elevating-human-potential/form.html",
+      "publisher": "Workday / Hanover Research",
+      "evidenceTier": 2,
+      "datePublished": "2025-01-08",
+      "excerpt": "Among respondents actively using or experimenting with AI, 93% agree that it allows them to focus more on higher-level responsibilities. The leading response (53%) was 'AI will augment human capabilities, leading to increased productivity and new forms of innovation.'",
+      "usedIn": [
+        "genai-work-adoption",
+        "overall-us-displacement",
+        "white-collar-professional-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
     "workday-ai-productivity-rework-2026": {
       "id": "workday-ai-productivity-rework-2026",
       "title": "Beyond Productivity: Measuring the Real Value of AI",
@@ -4168,6 +4184,21 @@
       "usedIn": [
         "tech-sector-displacement",
         "genai-work-adoption"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "cooper-cs-majors-labor-2026": {
+      "id": "cooper-cs-majors-labor-2026",
+      "title": "Should you still major in computer science?",
+      "url": "https://prestoncooper93.substack.com/p/should-you-still-major-in-computer",
+      "publisher": "Preston Cooper (Substack)",
+      "evidenceTier": 4,
+      "datePublished": "2026-03-04",
+      "excerpt": "According to the American Community Survey, 7.2 percent of early-career college graduates who majored in CS were unemployed in 2024—well above the 4.5 percent rate for all early-career graduates.",
+      "usedIn": [
+        "tech-sector-displacement",
+        "high-skill-wage-premium"
       ],
       "verified": true,
       "synthetic": false

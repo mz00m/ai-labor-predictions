@@ -142,6 +142,15 @@
       "label": "WSJ: White-collar workers starting to feel the AI squeeze"
     },
     {
+      "date": "2025-01-08",
+      "direction": "down",
+      "sourceIds": [
+        "workday-ai-skills-revolution-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Workday Davos: Top AI uses are data analysis (51%), fraud (43%), HR (39%)"
+    },
+    {
       "date": "2025-01-15",
       "direction": "down",
       "sourceIds": [
@@ -403,6 +412,15 @@
       "evidenceTier": 1,
       "datePublished": "2024-01-15",
       "excerpt": "~80% of the US workforce could have at least 10% of their tasks affected by GPTs. Legal, accounting, and financial analysis are among the highest-exposure occupations."
+    },
+    {
+      "id": "workday-ai-skills-revolution-2025",
+      "title": "Elevating Human Potential: The AI Skills Revolution",
+      "url": "https://forms.workday.com/en-us/reports/elevating-human-potential/form.html",
+      "publisher": "Workday / Hanover Research",
+      "evidenceTier": 2,
+      "datePublished": "2025-01-08",
+      "excerpt": "top three uses of AI today. 51% Data analysis. 43% Fraud detection and security monitoring. 39% Human resources and recruiting processes"
     },
     {
       "id": "brookings-white-collar-2024",

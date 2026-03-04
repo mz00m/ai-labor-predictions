@@ -83,6 +83,22 @@
         "bls-mlr-ai-employment-projections-2025"
       ],
       "evidenceTier": 1
+    },
+    {
+      "date": "2026-03-04",
+      "value": -8,
+      "sourceIds": [
+        "cooper-cs-majors-labor-2026"
+      ],
+      "evidenceTier": 4
+    },
+    {
+      "date": "2026-03-04",
+      "value": -15,
+      "sourceIds": [
+        "cooper-cs-majors-labor-2026"
+      ],
+      "evidenceTier": 4
     }
   ],
   "overlays": [
@@ -355,6 +371,15 @@
       ],
       "evidenceTier": 4,
       "label": "Ramp CPO: 500+ features shipped in 2025 with only 25 PMs"
+    },
+    {
+      "date": "2026-03-04",
+      "direction": "down",
+      "sourceIds": [
+        "cooper-cs-majors-labor-2026"
+      ],
+      "evidenceTier": 4,
+      "label": "Cooper/ACS: 7.2% unemployment for early-career CS grads vs 4.5% overall (2024)"
     }
   ],
   "sources": [
@@ -679,6 +704,15 @@
       "evidenceTier": 4,
       "datePublished": "2026-03-04",
       "excerpt": "In 2025, Ramp shipped 500+ features, reached $1B revenue, and did it all with 25 PMs."
+    },
+    {
+      "id": "cooper-cs-majors-labor-2026",
+      "title": "Should you still major in computer science?",
+      "url": "https://prestoncooper93.substack.com/p/should-you-still-major-in-computer",
+      "publisher": "Preston Cooper (Substack)",
+      "evidenceTier": 4,
+      "datePublished": "2026-03-04",
+      "excerpt": "According to the American Community Survey, 7.2 percent of early-career college graduates who majored in CS were unemployed in 2024—well above the 4.5 percent rate for all early-career graduates."
     }
   ],
   "marketIds": {
