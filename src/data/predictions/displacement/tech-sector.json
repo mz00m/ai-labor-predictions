@@ -67,6 +67,22 @@
         "bls-programmer-projections-2034"
       ],
       "evidenceTier": 1
+    },
+    {
+      "date": "2025-02-10",
+      "value": 9.6,
+      "sourceIds": [
+        "bls-mlr-ai-employment-projections-2025"
+      ],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2025-02-10",
+      "value": -17.9,
+      "sourceIds": [
+        "bls-mlr-ai-employment-projections-2025"
+      ],
+      "evidenceTier": 1
     }
   ],
   "overlays": [
@@ -636,6 +652,15 @@
       "evidenceTier": 3,
       "datePublished": "2026-02-18",
       "excerpt": "37% of tech professionals say their role has been 'redefined or restructured due to gen AI in the past two years.' 61% of IT leaders say they plan to increase permanent headcount in the first half of 2026."
+    },
+    {
+      "id": "bls-mlr-ai-employment-projections-2025",
+      "title": "Incorporating AI impacts in BLS employment projections: occupational case studies",
+      "url": "https://www.bls.gov/opub/mlr/2025/article/incorporating-ai-impacts-in-bls-employment-projections.htm",
+      "publisher": "U.S. Bureau of Labor Statistics (Monthly Labor Review)",
+      "evidenceTier": 1,
+      "datePublished": "2025-02-10",
+      "excerpt": "Employment of computer programmers is projected to decline by 9.6 percent from 2023 to 2033. BLS projects employment of software developers to increase 17.9 percent, much faster than the average for all occupations (4.0 percent)."
     }
   ],
   "marketIds": {

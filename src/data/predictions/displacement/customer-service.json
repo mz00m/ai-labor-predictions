@@ -57,6 +57,14 @@
         "zendesk-ai-cs-2026"
       ],
       "evidenceTier": 3
+    },
+    {
+      "date": "2025-02-10",
+      "value": 5,
+      "sourceIds": [
+        "bls-mlr-ai-employment-projections-2025"
+      ],
+      "evidenceTier": 1
     }
   ],
   "overlays": [
@@ -372,6 +380,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-01-21",
       "excerpt": "Customer service representatives get the short end of the stick in both categories [high AI exposure and low adaptive capacity]."
+    },
+    {
+      "id": "bls-mlr-ai-employment-projections-2025",
+      "title": "Incorporating AI impacts in BLS employment projections: occupational case studies",
+      "url": "https://www.bls.gov/opub/mlr/2025/article/incorporating-ai-impacts-in-bls-employment-projections.htm",
+      "publisher": "U.S. Bureau of Labor Statistics (Monthly Labor Review)",
+      "evidenceTier": 1,
+      "datePublished": "2025-02-10",
+      "excerpt": "Customer service representatives, whose employment is projected to decline by 5.0 percent through 2033."
     }
   ]
 }

@@ -4064,6 +4064,24 @@
       ],
       "verified": true,
       "synthetic": false
+    },
+    "bls-mlr-ai-employment-projections-2025": {
+      "id": "bls-mlr-ai-employment-projections-2025",
+      "title": "Incorporating AI impacts in BLS employment projections: occupational case studies",
+      "url": "https://www.bls.gov/opub/mlr/2025/article/incorporating-ai-impacts-in-bls-employment-projections.htm",
+      "publisher": "U.S. Bureau of Labor Statistics (Monthly Labor Review)",
+      "evidenceTier": 1,
+      "datePublished": "2025-02-10",
+      "excerpt": "Employment of computer programmers is projected to decline by 9.6 percent from 2023 to 2033. Customer service representatives projected to decline 5.0 percent. Medical transcriptionists projected to decline 4.7 percent. Software developers projected to grow 17.9 percent. Paralegals projected to grow 1.2 percent. All-occupation average growth 4.0 percent.",
+      "usedIn": [
+        "tech-sector-displacement",
+        "customer-service-automation",
+        "healthcare-admin-displacement",
+        "white-collar-professional-displacement",
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
     }
   }
 }

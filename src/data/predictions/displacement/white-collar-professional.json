@@ -67,6 +67,14 @@
         "hbr-ai-potential-layoffs-2026"
       ],
       "evidenceTier": 1
+    },
+    {
+      "date": "2025-02-10",
+      "value": -1.2,
+      "sourceIds": [
+        "bls-mlr-ai-employment-projections-2025"
+      ],
+      "evidenceTier": 1
     }
   ],
   "overlays": [
@@ -339,6 +347,15 @@
       ],
       "evidenceTier": 3,
       "label": "CIO/WEF: 40% of employers plan to reduce staff as AI skills become redundant"
+    },
+    {
+      "date": "2025-02-10",
+      "direction": "down",
+      "sourceIds": [
+        "bls-mlr-ai-employment-projections-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "BLS MLR: Financial advisor employment projected to grow 17.1% (2023-33)"
     }
   ],
   "sources": [
@@ -648,6 +665,15 @@
       "evidenceTier": 3,
       "datePublished": "2026-02-18",
       "excerpt": "40% plan to reduce staff as skills become redundant"
+    },
+    {
+      "id": "bls-mlr-ai-employment-projections-2025",
+      "title": "Incorporating AI impacts in BLS employment projections: occupational case studies",
+      "url": "https://www.bls.gov/opub/mlr/2025/article/incorporating-ai-impacts-in-bls-employment-projections.htm",
+      "publisher": "U.S. Bureau of Labor Statistics (Monthly Labor Review)",
+      "evidenceTier": 1,
+      "datePublished": "2025-02-10",
+      "excerpt": "Employment of personal financial advisors is projected to grow 17.1 percent from 2023 to 2033, much faster than average. Employment of paralegals and legal assistants is projected to grow only 1.2 percent, slower than the average for all occupations."
     }
   ]
 }

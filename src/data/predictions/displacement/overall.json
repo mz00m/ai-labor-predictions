@@ -380,6 +380,15 @@
       ],
       "evidenceTier": 2,
       "label": "GS: No measurable economywide productivity-AI relationship yet"
+    },
+    {
+      "date": "2025-02-10",
+      "direction": "down",
+      "sourceIds": [
+        "bls-mlr-ai-employment-projections-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "BLS MLR: All-occupation employment projected to grow 4.0% average (2023-33)"
     }
   ],
   "sources": [
@@ -730,6 +739,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-03-03",
       "excerpt": "While we still do not find a meaningful relationship between productivity and AI adoption at the economywide level, companies that quantified productivity impacts of AI on specific tasks reported a median productivity gain of around 30%."
+    },
+    {
+      "id": "bls-mlr-ai-employment-projections-2025",
+      "title": "Incorporating AI impacts in BLS employment projections: occupational case studies",
+      "url": "https://www.bls.gov/opub/mlr/2025/article/incorporating-ai-impacts-in-bls-employment-projections.htm",
+      "publisher": "U.S. Bureau of Labor Statistics (Monthly Labor Review)",
+      "evidenceTier": 1,
+      "datePublished": "2025-02-10",
+      "excerpt": "BLS projects employment of software developers to increase 17.9 percent between 2023 and 2033, much faster than the average for all occupations (4.0 percent)."
     }
   ]
 }
