@@ -5,7 +5,7 @@
   "description": "Percentage of US firms using AI in production, measured by the Census Bureau's Business Trends and Outlook Survey (BTOS) \u2014 the most rigorous measure available. Survey-based estimates from consultancies run 5-10x higher due to self-selected samples.",
   "category": "adoption",
   "unit": "% of firms (Census BTOS)",
-  "currentValue": 10,
+  "currentValue": 17.5,
   "timeHorizon": "Current measure",
   "history": [
     {
@@ -64,12 +64,34 @@
       "metricType": "survey"
     },
     {
+      "date": "2025-12-04",
+      "value": 17.3,
+      "confidenceLow": 16,
+      "confidenceHigh": 22,
+      "sourceIds": [
+        "census-btos-ai-biweekly-2026"
+      ],
+      "evidenceTier": 1,
+      "metricType": "survey"
+    },
+    {
       "date": "2026-01-01",
       "value": 36,
       "confidenceLow": 30,
       "confidenceHigh": 42,
       "sourceIds": [
         "hartley-genai-labor-2026"
+      ],
+      "evidenceTier": 1,
+      "metricType": "survey"
+    },
+    {
+      "date": "2026-02-26",
+      "value": 17.5,
+      "confidenceLow": 16,
+      "confidenceHigh": 22,
+      "sourceIds": [
+        "census-btos-ai-biweekly-2026"
       ],
       "evidenceTier": 1,
       "metricType": "survey"
@@ -591,6 +613,15 @@
       "evidenceTier": 3,
       "datePublished": "2026-03-02",
       "excerpt": "AI capex \u2013 roughly $650bn this year and potentially ~$2tn over three years \u2013 materially alters the equilibrium."
+    },
+    {
+      "id": "census-btos-ai-biweekly-2026",
+      "title": "Business Trends and Outlook Survey: Biweekly National Data Tables (AI Question)",
+      "url": "https://www.census.gov/hfp/btos/data",
+      "publisher": "US Census Bureau",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-26",
+      "excerpt": "In the last two weeks, did this business use Artificial Intelligence (AI) in any of its business functions? Yes: 17.5%, No: 73.1%, Do not know: 9.4% (Cycle 202604, ref period Jan 26\u2013Feb 8, 2026). First biweekly reading (Cycle 202524, Nov 2025): Yes: 17.3%."
     }
   ]
 }
