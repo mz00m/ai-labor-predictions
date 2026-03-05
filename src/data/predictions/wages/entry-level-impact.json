@@ -250,6 +250,15 @@
       ],
       "evidenceTier": 1,
       "label": "Cruces et al.: AI closes 75% of education-based productivity gap (RCT)"
+    },
+    {
+      "date": "2026-03-05",
+      "direction": "down",
+      "sourceIds": [
+        "shih-ai-shock-china-shock-2026"
+      ],
+      "evidenceTier": 4,
+      "label": "Shih: New grad tech hiring -50% since 2019; underemployment 42.5% (NY Fed Q4 2025)"
     }
   ],
   "sources": [
@@ -440,6 +449,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-02-24",
       "excerpt": "For an occupation with a 0 percent experience premium, increased AI exposure is associated with a 0.28 percentage point reduction in wage growth."
+    },
+    {
+      "id": "shih-ai-shock-china-shock-2026",
+      "title": "The AI Shock and Path Forward: What We Can Learn from the Past to Save Our Future",
+      "url": "https://x.com/clarashih/status/2026831820608909332",
+      "publisher": "Clara Shih (CEO, Salesforce AI) via X",
+      "evidenceTier": 4,
+      "datePublished": "2026-03-05",
+      "excerpt": "new grad hiring in large tech is down over 50% since 2019. For the first time in over decades, recent college grads have a higher unemployment rate than the national average. In addition, the 'underemployment rate' for recent graduates has risen to 42.5% (Q4 2025, New York Federal Reserve)."
     },
     {
       "id": "eig-entry-level-ai-displacement-2026",

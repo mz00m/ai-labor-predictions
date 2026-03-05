@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-05",
-  "totalSources": 311,
-  "verifiedCount": 301,
+  "totalSources": 312,
+  "verifiedCount": 302,
   "sources": {
     "accenture-health-ai-2023": {
       "id": "accenture-health-ai-2023",
@@ -3324,6 +3324,20 @@
         "freelancer-rate-impact"
       ],
       "verified": true
+    },
+    "shih-ai-shock-china-shock-2026": {
+      "id": "shih-ai-shock-china-shock-2026",
+      "title": "The AI Shock and Path Forward: What We Can Learn from the Past to Save Our Future",
+      "url": "https://x.com/clarashih/status/2026831820608909332",
+      "publisher": "Clara Shih (CEO, Salesforce AI) via X",
+      "evidenceTier": 4,
+      "datePublished": "2026-03-05",
+      "excerpt": "new grad hiring in large tech is down over 50% since 2019. For the first time in over decades, recent college grads have a higher unemployment rate than the national average. In addition, the 'underemployment rate' for recent graduates has risen to 42.5% (Q4 2025, New York Federal Reserve).",
+      "usedIn": [
+        "entry-level-wage-impact"
+      ],
+      "verified": true,
+      "synthetic": false
     },
     "shopify-earnings-2024": {
       "id": "shopify-earnings-2024",
