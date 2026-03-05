@@ -483,6 +483,24 @@
       ],
       "evidenceTier": 2,
       "label": "Citadel: Little evidence of AI disruption in labor data; tracking improved"
+    },
+    {
+      "date": "2025-12-31",
+      "direction": "up",
+      "sourceIds": [
+        "challenger-ai-layoffs-feb-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Challenger: AI cited in 5% of 2025 layoff announcements (54,836 cuts)"
+    },
+    {
+      "date": "2026-03-05",
+      "direction": "up",
+      "sourceIds": [
+        "challenger-ai-layoffs-feb-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Challenger: AI cited in 8% of Jan\u2013Feb 2026 layoff plans (12,304 cuts)"
     }
   ],
   "sources": [
@@ -887,6 +905,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-02-05",
       "excerpt": "Job openings fell to their lowest level since December 2017. Quits rate held steady at 2%, remaining below its 2019 average."
+    },
+    {
+      "id": "challenger-ai-layoffs-feb-2026",
+      "title": "Challenger Report: February Cuts Plunge, YTD Hiring Falls 56%",
+      "url": "https://www.challengergray.com/blog/challenger-report-february-cuts-plunge-hiring-falls-56-percent/",
+      "publisher": "Challenger, Gray & Christmas",
+      "evidenceTier": 2,
+      "datePublished": "2026-03-05",
+      "excerpt": "So far in 2026, AI has been cited for 12,304 job cut announcements, or 8% of job cut plans. In 2025, companies referenced AI for 54,836 announced layoff plans, 5% of total cuts during the year."
     }
   ]
 }

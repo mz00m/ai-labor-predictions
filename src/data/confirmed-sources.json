@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-05",
-  "totalSources": 297,
-  "verifiedCount": 287,
+  "totalSources": 298,
+  "verifiedCount": 288,
   "sources": {
     "accenture-health-ai-2023": {
       "id": "accenture-health-ai-2023",
@@ -4008,6 +4008,21 @@
       "excerpt": "In the last two weeks, did this business use Artificial Intelligence (AI) in any of its business functions? Yes: 17.5%, No: 73.1%, Do not know: 9.4% (Cycle 202604, ref period Jan 26–Feb 8, 2026). First biweekly reading (Cycle 202524, Nov 2025): Yes: 17.3%.",
       "usedIn": [
         "ai-adoption-rate"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "challenger-ai-layoffs-feb-2026": {
+      "id": "challenger-ai-layoffs-feb-2026",
+      "title": "Challenger Report: February Cuts Plunge, YTD Hiring Falls 56%",
+      "url": "https://www.challengergray.com/blog/challenger-report-february-cuts-plunge-hiring-falls-56-percent/",
+      "publisher": "Challenger, Gray & Christmas",
+      "evidenceTier": 2,
+      "datePublished": "2026-03-05",
+      "excerpt": "So far in 2026, AI has been cited for 12,304 job cut announcements, or 8% of job cut plans. In 2025, companies referenced AI for 54,836 announced layoff plans, 5% of total cuts during the year.",
+      "usedIn": [
+        "overall-us-displacement",
+        "tech-sector-displacement"
       ],
       "verified": true,
       "synthetic": false

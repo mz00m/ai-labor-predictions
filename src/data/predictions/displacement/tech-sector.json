@@ -437,6 +437,15 @@
       "label": "Citadel/Indeed: SW engineer job postings up 11% YoY (2026)"
     },
     {
+      "date": "2026-03-05",
+      "direction": "up",
+      "sourceIds": [
+        "challenger-ai-layoffs-feb-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Challenger: Tech layoffs up 51% YoY in Jan\u2013Feb 2026; AI cited as primary driver"
+    },
+    {
       "date": "2025-02-10",
       "direction": "down",
       "sourceIds": [
@@ -831,6 +840,15 @@
       "evidenceTier": 4,
       "datePublished": "2026-03-04",
       "excerpt": "According to the American Community Survey, 7.2 percent of early-career college graduates who majored in CS were unemployed in 2024\u2014well above the 4.5 percent rate for all early-career graduates."
+    },
+    {
+      "id": "challenger-ai-layoffs-feb-2026",
+      "title": "Challenger Report: February Cuts Plunge, YTD Hiring Falls 56%",
+      "url": "https://www.challengergray.com/blog/challenger-report-february-cuts-plunge-hiring-falls-56-percent/",
+      "publisher": "Challenger, Gray & Christmas",
+      "evidenceTier": 2,
+      "datePublished": "2026-03-05",
+      "excerpt": "Technology announced 11,039 job cuts in February for a total of 33,330 in 2026. That is an increase of 51% from the 22,042 cuts in this sector announced in the same period last year."
     }
   ],
   "marketIds": {
