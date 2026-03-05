@@ -247,6 +247,15 @@
       ],
       "evidenceTier": 1,
       "label": "Jones & Tonetti (Stanford/NBER): AI output gains modest near-term — only 4% above trend by 2040"
+    },
+    {
+      "date": "2026-03-05",
+      "direction": "up",
+      "sourceIds": [
+        "furman-bls-productivity-above-forecast-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Furman (BLS): productivity 2.2% above CBO forecast; 2.8% annual growth"
     }
   ],
   "sources": [
@@ -450,6 +459,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-01-15",
       "excerpt": "Despite the accelerating growth, the effects of A.I. on GDP per person are remarkably small for the next 20 to 40 years."
+    },
+    {
+      "id": "furman-bls-productivity-above-forecast-2026",
+      "title": "Nonfarm Business Sector Labor Productivity: 2.2% Above CBO Pre-Pandemic Forecast",
+      "url": "https://x.com/jasonfurman/status/2029559853706842426",
+      "publisher": "Jason Furman (Harvard / former CEA Chair)",
+      "evidenceTier": 3,
+      "datePublished": "2026-03-05",
+      "excerpt": "Are we finally seeing AI in the productivity data? A big upward revision to earlier data and strong Q4 bring us 2.2% above CBO's pre-pandemic forecast. Annual rates: 1 year: 2.8%, 2 years: 2.5%, 6 years: 2.2%"
     }
   ]
 }

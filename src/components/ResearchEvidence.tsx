@@ -294,6 +294,19 @@ const MACRO_STUDIES: MacroStudy[] = [
     direction: "positive",
   },
   {
+    id: "furman-bls-productivity-2026",
+    authors: "BLS via Furman",
+    year: 2026,
+    title: "Nonfarm Business Sector Labor Productivity",
+    metric: "Labor productivity",
+    effectPct: 2.2,
+    effectLabel: "+2.2%",
+    finding: "Nonfarm business sector labor productivity is 2.2% above CBO's pre-pandemic (Jan 2020) forecast as of Q4 2025. Annual growth rates: 1-year: 2.8%, 2-year: 2.5%, 6-year: 2.2%. Furman asks: 'Are we finally seeing AI in the productivity data?'",
+    citation: "BLS via Macrobond; CBO; Furman calculations, Mar 2026",
+    url: "https://x.com/jasonfurman/status/2029559853706842426",
+    direction: "positive",
+  },
+  {
     id: "pwbm-2025",
     authors: "Penn Wharton Budget Model",
     year: 2025,
@@ -643,8 +656,8 @@ export default function ResearchEvidence() {
         <p className="text-[15px] text-[var(--muted)] mt-2 max-w-2xl">
           {MICRO_STUDIES.length} task &amp; firm studies on productivity and{" "}
           {MACRO_STUDIES.length} macro studies on economy-wide effects. The micro
-          evidence leans heavily positive; the macro gains have not yet shown up
-          in aggregate statistics.{" "}
+          evidence leans heavily positive; early signs of macro gains are now
+          appearing in BLS data.{" "}
           <span className="opacity-60">Click any row for details and source.</span>
         </p>
       </div>
@@ -737,11 +750,11 @@ export default function ResearchEvidence() {
           {/* Key takeaway box */}
           <div className="mt-5 p-3 rounded-md bg-amber-50/50 border border-amber-200/30">
             <p className="text-[12px] text-amber-900 leading-relaxed">
-              <span className="font-bold">Key gap:</span>{" "}
-              Micro studies show 14–56% individual productivity gains, but
-              macro data shows ~0–1.4% aggregate effect so far. The gap likely
-              reflects adoption frictions, bottleneck tasks, and the J-curve
-              dynamic of technology investment.
+              <span className="font-bold">Key gap narrowing:</span>{" "}
+              Micro studies show 14–56% individual productivity gains. BLS
+              data now shows labor productivity 2.2% above pre-pandemic
+              forecast — but how much is AI vs. other factors remains an
+              open question.
             </p>
           </div>
         </div>
