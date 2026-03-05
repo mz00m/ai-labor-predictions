@@ -91,7 +91,7 @@ export default function Home() {
             </a>
           </div>
           <p className="mt-4 text-[14px] text-[var(--muted)] italic opacity-80 text-right">
-            The gap between projection and reality defines this moment.
+            The gap between the near future and the present reality defines this moment.
           </p>
         </div>
 
