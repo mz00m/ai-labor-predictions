@@ -67,6 +67,45 @@ a, button, [role="button"], input, label {
   border-top: 1px solid var(--border);
 }
 
+/* Card hover elevation */
+.card-hover {
+  transition: box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.card-hover:hover {
+  background-color: rgba(0, 0, 0, 0.008);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.03);
+}
+
+/* Scroll-triggered chart draw animation */
+.sparkline-draw path.spark-line {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+
+.sparkline-draw.visible path.spark-line {
+  animation: draw-line 1.2s ease-out forwards;
+}
+
+.sparkline-draw path.spark-area {
+  opacity: 0;
+}
+
+.sparkline-draw.visible path.spark-area {
+  animation: fade-in-area 0.8s ease-out 0.4s forwards;
+}
+
+@keyframes draw-line {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fade-in-area {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 /* --- News Ticker --- */
 @keyframes ticker-scroll {
   0% {
@@ -87,6 +126,17 @@ a, button, [role="button"], input, label {
 
 @media (prefers-reduced-motion: reduce) {
   .ticker-content {
+    animation: none;
+  }
+  .sparkline-draw path.spark-line {
+    stroke-dasharray: none;
+    stroke-dashoffset: 0;
+  }
+  .sparkline-draw path.spark-area {
+    opacity: 1;
+  }
+  .sparkline-draw.visible path.spark-line,
+  .sparkline-draw.visible path.spark-area {
     animation: none;
   }
 }

@@ -172,6 +172,9 @@ export default function NewsTicker() {
       {/* Gradient fade after LIVE label */}
       <div className="absolute left-[68px] sm:left-[78px] top-0 bottom-0 w-8 bg-gradient-to-r from-[#2a5280] to-transparent z-10 pointer-events-none" />
 
+      {/* Gradient fade on right edge */}
+      <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-[#2a5280] to-transparent z-10 pointer-events-none" />
+
       {/* Scrolling content */}
       {loaded && headlines.length > 0 && (
         <div className="ticker-track flex items-center ml-[76px] sm:ml-[86px]">

@@ -93,10 +93,9 @@ export default function RootLayout({
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
               <div className="space-y-1">
                 <p className="text-[13px] text-[var(--muted)]">
-                  Personal project, not affiliated with my day job. Not sponsored and definitely not perfect.
-                  Data sourced from academic research, corporate filings, news sources and any other reputable source I can find.
-                  Not financial advice. Not career advice. Please don&apos;t sue me.
-                  Please share ideas on how to improve:{" "}
+                  Independent analysis, not affiliated with my employer. Data sourced from academic research,
+                  government statistics, corporate filings, and journalism. Not investment or career advice.
+                  Corrections and ideas welcome:{" "}
                   <a href="https://www.linkedin.com/in/mattzieger" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">LinkedIn</a>
                   {" "}/{" "}
                   <a href="https://x.com/mattzieger" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">X</a>

@@ -497,7 +497,7 @@ function MicroBar({
         {isNeg ? (
           <div className="flex items-center justify-end w-full">
             <span
-              className="text-[11px] font-bold mr-1.5 opacity-0 group-hover:opacity-100 transition-opacity"
+              className="text-[11px] font-bold mr-1.5 opacity-60 group-hover:opacity-100 transition-opacity"
               style={{ color }}
             >
               {study.effectLabel}
@@ -523,7 +523,7 @@ function MicroBar({
               }}
             />
             <span
-              className="text-[11px] font-bold ml-1.5 opacity-0 group-hover:opacity-100 transition-opacity"
+              className="text-[11px] font-bold ml-1.5 opacity-60 group-hover:opacity-100 transition-opacity"
               style={{ color }}
             >
               {study.effectLabel}

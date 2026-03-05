@@ -33,7 +33,7 @@ export default function Home() {
   const totalSources = getSourceCount();
 
   return (
-    <div className="space-y-10">
+    <div className="space-y-16">
       {/* Hero */}
       <div className="relative overflow-hidden -mx-6 sm:-mx-10 px-6 sm:px-10 pt-1 pb-0 sm:pt-2 sm:pb-0">
         {/* Background gradient orbs */}
@@ -64,14 +64,39 @@ export default function Home() {
             <br className="hidden sm:block" /> the labor market?
           </h1>
           <p className="mt-4 text-[17px] text-[var(--muted)] leading-relaxed max-w-2xl">
-            ~300 sources, one pattern. AI adoption is accelerating, productivity is climbing,
+            ~{totalSources} sources, one pattern. AI adoption is accelerating, productivity is climbing,
             entry-level and freelance work is compressing, and jobs are changing faster than
-            they&apos;re disappearing. No measurable macro displacement &mdash; yet.
+            they&apos;re disappearing.
+          </p>
+          <p className="mt-3 text-[20px] sm:text-[22px] font-bold text-[var(--foreground)] leading-snug max-w-2xl">
+            No measurable macro displacement &mdash; <span className="text-[#F66B5C] italic">yet.</span>
+          </p>
+
+          {/* Hero data triad */}
+          <div className="mt-6 grid grid-cols-3 max-w-2xl border-t border-black/[0.06]">
+            <a href="#displacement" className="group/stat relative overflow-hidden py-6 px-4 no-underline text-center">
+              <span className="absolute inset-0 flex items-center justify-center stat-number text-[100px] sm:text-[130px] font-black leading-none text-black/[0.04] group-hover/stat:text-black/[0.10] transition-colors duration-200 pointer-events-none select-none">7<span className="text-[40px] sm:text-[50px] font-normal opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 ml-0.5">%</span></span>
+              <p className="relative text-[10px] font-bold uppercase tracking-widest text-[var(--muted)] mb-1.5"><span className="text-[9px] font-light opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 mr-0.5">~</span>Projected job loss</p>
+              <p className="relative text-[11px] text-[var(--muted)] opacity-50 leading-snug">WEF, Goldman, Forrester</p>
+            </a>
+            <a href="#displacement" className="group/stat relative overflow-hidden py-6 px-4 border-l border-black/[0.06] no-underline text-center">
+              <span className="absolute inset-0 flex items-center justify-center stat-number text-[100px] sm:text-[130px] font-black leading-none text-emerald-600/[0.06] group-hover/stat:text-emerald-600/[0.18] transition-colors duration-200 pointer-events-none select-none">0<span className="text-[40px] sm:text-[50px] font-normal opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 ml-0.5">%</span></span>
+              <p className="relative text-[10px] font-bold uppercase tracking-widest text-[var(--muted)] mb-1.5"><span className="text-[9px] font-light opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 mr-0.5">~</span>Measured job loss</p>
+              <p className="relative text-[11px] text-[var(--muted)] opacity-50 leading-snug">Yale, Goldman, Dallas Fed</p>
+            </a>
+            <a href="#productivity" className="group/stat relative overflow-hidden py-6 px-4 border-l border-black/[0.06] no-underline text-center">
+              <span className="absolute inset-0 flex items-center justify-center stat-number text-[100px] sm:text-[130px] font-black leading-none pointer-events-none select-none transition-opacity duration-200 opacity-[0.06] group-hover/stat:opacity-[0.18]" style={{ color: 'var(--accent)', letterSpacing: '-0.09em' }}>15<span className="text-[40px] sm:text-[50px] font-normal opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 ml-0.5">%</span></span>
+              <p className="relative text-[10px] font-bold uppercase tracking-widest text-[var(--muted)] mb-1.5"><span className="text-[9px] font-light opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 mr-0.5">~</span>Productivity boost</p>
+              <p className="relative text-[11px] text-[var(--muted)] opacity-50 leading-snug">Noy &amp; Zhang, Goldman</p>
+            </a>
+          </div>
+          <p className="mt-4 text-[13px] text-[var(--muted)] italic opacity-60 max-w-2xl">
+            The gap between projection and reality defines this moment.
           </p>
         </div>
 
         {/* News Ticker — directly below hero content */}
-        <div className="relative mt-6">
+        <div className="relative mt-8">
           <NewsTicker />
         </div>
 
@@ -106,7 +131,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Evidence Filter */}
+      {/* Evidence Filter — full version in-flow */}
       <section>
         <EvidenceFilter
           selectedTiers={selectedTiers}
@@ -114,15 +139,84 @@ export default function Home() {
         />
       </section>
 
+      {/* Compact sticky tier bar */}
+      <div className="sticky top-12 z-40 bg-white/95 backdrop-blur-sm -mx-6 sm:-mx-10 px-6 sm:px-10 py-0 border-b border-black/[0.06] flex items-center justify-between gap-4">
+        <div className="flex items-center gap-0">
+          {([1, 2, 3, 4] as EvidenceTier[]).map((tier) => {
+            const checked = selectedTiers.includes(tier);
+            const colors: Record<number, string> = { 1: "#16a34a", 2: "#2563eb", 3: "#ea580c", 4: "#dc2626" };
+            const labels: Record<number, string> = { 1: "Research", 2: "Institutional", 3: "Journalism", 4: "Social" };
+            return (
+              <button
+                key={tier}
+                onClick={() => {
+                  if (checked && selectedTiers.length === 1) return;
+                  setSelectedTiers(
+                    checked
+                      ? selectedTiers.filter((t) => t !== tier)
+                      : [...selectedTiers, tier].sort((a, b) => a - b)
+                  );
+                }}
+                className={`relative px-3 sm:px-4 py-2.5 text-[11px] sm:text-[12px] font-medium cursor-pointer transition-colors duration-150 ${
+                  checked
+                    ? "text-[var(--foreground)]"
+                    : "text-[var(--muted)] opacity-40 hover:opacity-70"
+                }`}
+              >
+                <span className="inline-flex items-center gap-1.5">
+                  <span
+                    className="inline-block w-1.5 h-1.5 rounded-full shrink-0"
+                    style={{ backgroundColor: colors[tier] }}
+                  />
+                  <span className="hidden sm:inline">{labels[tier]}</span>
+                </span>
+                {checked && (
+                  <span
+                    className="absolute bottom-0 left-3 right-3 sm:left-4 sm:right-4 h-[2px] rounded-full"
+                    style={{ backgroundColor: colors[tier] }}
+                  />
+                )}
+              </button>
+            );
+          })}
+        </div>
+        <div className="flex items-center gap-3">
+          <button
+            onClick={() => setSelectedTiers([1] as EvidenceTier[])}
+            className={`text-[11px] font-medium cursor-pointer transition-colors duration-150 ${
+              selectedTiers.length === 1 && selectedTiers[0] === 1
+                ? "text-[var(--foreground)]"
+                : "text-[var(--muted)] hover:text-[var(--foreground)]"
+            }`}
+          >
+            Research only
+          </button>
+          <span className="text-black/[0.1]">|</span>
+          <button
+            onClick={() => setSelectedTiers([1, 2, 3, 4] as EvidenceTier[])}
+            className={`text-[11px] font-medium cursor-pointer transition-colors duration-150 ${
+              selectedTiers.length === 4
+                ? "text-[var(--foreground)]"
+                : "text-[var(--muted)] hover:text-[var(--foreground)]"
+            }`}
+          >
+            All
+          </button>
+        </div>
+      </div>
+
       {/* Job Displacement & Restructuring */}
-      <section>
-        <div className="mb-8">
-          <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
-            Job Displacement &amp; Restructuring
-          </h2>
-          <p className="text-[15px] text-[var(--muted)] mt-2 max-w-2xl">
-            Projected share of jobs eliminated, restructured, or significantly transformed by AI &mdash; most evidence points to task-level transition rather than wholesale replacement
-          </p>
+      <section id="displacement">
+        <div className="mb-8 flex items-start gap-3">
+          <div className="w-1 self-stretch rounded-full bg-red-400/60 shrink-0" />
+          <div>
+            <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
+              Job Displacement &amp; Restructuring
+            </h2>
+            <p className="text-[15px] text-[var(--muted)] mt-2 max-w-2xl">
+              Projected share of jobs eliminated, restructured, or significantly transformed by AI &mdash; most evidence points to task-level transition rather than wholesale replacement
+            </p>
+          </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
           {displacement.map((p) => (
@@ -136,14 +230,17 @@ export default function Home() {
       </section>
 
       {/* Wage Impact */}
-      <section>
-        <div className="mb-8">
-          <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
-            Wage Impact
-          </h2>
-          <p className="text-[15px] text-[var(--muted)] mt-2 max-w-xl">
-            How AI adoption is projected to affect compensation across worker segments
-          </p>
+      <section id="wages">
+        <div className="mb-8 flex items-start gap-3">
+          <div className="w-1 self-stretch rounded-full bg-blue-400/60 shrink-0" />
+          <div>
+            <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
+              Wage Impact
+            </h2>
+            <p className="text-[15px] text-[var(--muted)] mt-2 max-w-xl">
+              How AI adoption is projected to affect compensation across worker segments
+            </p>
+          </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
           {wages.map((p) => (
@@ -159,13 +256,16 @@ export default function Home() {
       {/* AI Adoption */}
       {adoption.length > 0 && (
         <section>
-          <div className="mb-8">
-            <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
-              AI Adoption
-            </h2>
-            <p className="text-[15px] text-[var(--muted)] mt-2 max-w-2xl">
-              How rapidly companies are deploying AI, how much of the workforce is exposed, and corporate signaling on earnings calls
-            </p>
+          <div className="mb-8 flex items-start gap-3">
+            <div className="w-1 self-stretch rounded-full bg-emerald-400/60 shrink-0" />
+            <div>
+              <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
+                AI Adoption
+              </h2>
+              <p className="text-[15px] text-[var(--muted)] mt-2 max-w-2xl">
+                How rapidly companies are deploying AI, how much of the workforce is exposed, and corporate signaling on earnings calls
+              </p>
+            </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
             {adoption.map((p) => (

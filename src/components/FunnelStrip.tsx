@@ -84,6 +84,17 @@ const MAX_VAL = 50;
 export default function FunnelStrip() {
   const [hovered, setHovered] = useState<string | null>(null);
 
+  // Find the hovered item data for the detail panel
+  const hoveredData = (() => {
+    if (!hovered) return null;
+    const [si, ii] = hovered.split("-").map(Number);
+    const section = sections[si];
+    const items = stripData
+      .filter((d) => d.metric === section.metric)
+      .sort((a, b) => b.value - a.value);
+    return items[ii] || null;
+  })();
+
   return (
     <div>
       {/* Title */}
@@ -191,30 +202,34 @@ export default function FunnelStrip() {
                         <div className="absolute bottom-0 left-0 right-0 h-px bg-[#F1F5F9]" />
                       </div>
                     </a>
-
-                    {/* Hover quote */}
-                    {isHovered && d.quote && (
-                      <div className="px-4 sm:px-6 py-2 bg-black/[0.02] flex items-baseline gap-3">
-                        <p className="text-[11px] sm:text-[12px] text-[var(--muted)] leading-relaxed italic flex-1">
-                          &ldquo;{d.quote}&rdquo;
-                        </p>
-                        <a
-                          href={d.sourceUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-[11px] font-medium text-[var(--accent)] whitespace-nowrap hover:underline shrink-0"
-                          onClick={(e) => e.stopPropagation()}
-                        >
-                          View source &rarr;
-                        </a>
-                      </div>
-                    )}
                   </div>
                 );
               })}
             </div>
           );
         })}
+
+        {/* Detail panel — shown below chart, no layout shift */}
+        <div
+          className="px-4 sm:px-6 border-t border-black/[0.06] overflow-hidden transition-all duration-150"
+          style={{ height: hoveredData?.quote ? 'auto' : 0, padding: hoveredData?.quote ? undefined : 0, borderTopWidth: hoveredData?.quote ? undefined : 0 }}
+        >
+          {hoveredData?.quote && (
+            <div className="py-2.5 flex items-baseline gap-3">
+              <p className="text-[11px] sm:text-[12px] text-[var(--muted)] leading-relaxed italic flex-1">
+                &ldquo;{hoveredData.quote}&rdquo;
+              </p>
+              <a
+                href={hoveredData.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[11px] font-medium text-[var(--accent)] whitespace-nowrap hover:underline shrink-0"
+              >
+                View source &rarr;
+              </a>
+            </div>
+          )}
+        </div>
 
         {/* Bottom note */}
         <div className="px-4 sm:px-6 py-3.5 border-t border-black/[0.06] bg-black/[0.01] flex items-center justify-between gap-4">

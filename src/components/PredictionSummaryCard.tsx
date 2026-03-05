@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { Prediction, EvidenceTier } from "@/lib/types";
 import { getTierConfig } from "@/lib/evidence-tiers";
@@ -80,6 +80,20 @@ function SparklineWatermark({
   history: Prediction["history"];
   selectedTiers: EvidenceTier[];
 }) {
+  const svgRef = useRef<SVGSVGElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = svgRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { setVisible(true); observer.disconnect(); } },
+      { threshold: 0.3 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   const points = history
     .filter((d) => selectedTiers.includes(d.evidenceTier))
     .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
@@ -115,9 +129,7 @@ function SparklineWatermark({
     const cpx2 = prev.x + (curr.x - prev.x) * 0.6;
 
     if (curr.isProjected !== currentIsProjected) {
-      // End the current segment
       segments.push({ path: currentSegment, projected: currentIsProjected });
-      // Start a new segment from previous point (for continuity)
       currentSegment = `M ${prev.x},${prev.y}`;
       currentIsProjected = curr.isProjected;
     }
@@ -137,9 +149,10 @@ function SparklineWatermark({
 
   return (
     <svg
+      ref={svgRef}
       viewBox="0 0 200 80"
       preserveAspectRatio="none"
-      className="absolute bottom-0 right-0 w-[55%] h-[70%] pointer-events-none"
+      className={`sparkline-draw absolute bottom-0 right-0 w-[55%] h-[70%] pointer-events-none ${visible ? "visible" : ""}`}
       aria-hidden="true"
     >
       <defs>
@@ -151,7 +164,7 @@ function SparklineWatermark({
       <path
         d={areaPath}
         fill={`url(#sparkFade-${id})`}
-        className="text-[var(--foreground)]"
+        className="text-[var(--foreground)] spark-area"
       />
       {segments.map((seg, i) => (
         <path
@@ -163,7 +176,7 @@ function SparklineWatermark({
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeDasharray={seg.projected ? "4 3" : "none"}
-          className="text-black/[0.15]"
+          className="text-black/[0.15] spark-line"
         />
       ))}
     </svg>
@@ -194,9 +207,18 @@ export default function PredictionSummaryCard({
     : null;
   const tierConfig = best ? getTierConfig(best.evidenceTier) : null;
 
+  const tierBorderColor = tierConfig
+    ? tierConfig.color
+    : best
+      ? getTierConfig(best.evidenceTier).color
+      : "rgba(0,0,0,0.06)";
+
   return (
     <Link href={`/predictions/${prediction.slug}`} className="group block">
-      <div className="relative pb-8 border-b border-black/[0.06] overflow-hidden">
+      <div
+        className="card-hover relative pb-8 border-b border-black/[0.06] overflow-hidden rounded-lg pl-3 border-l-[3px]"
+        style={{ borderLeftColor: tierBorderColor }}
+      >
         {/* Sparkline watermark */}
         <SparklineWatermark
           id={prediction.id}
@@ -208,7 +230,7 @@ export default function PredictionSummaryCard({
         <div className="relative z-10">
           {/* Estimate type badge + Title */}
           {annotation && (
-            <div className="mb-2">
+            <div className="mb-1">
               <span
                 className="inline-block text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full"
                 style={{
@@ -237,16 +259,16 @@ export default function PredictionSummaryCard({
               </span>
             </div>
           )}
-          <h3 className="text-[18px] font-bold text-[var(--foreground)] mb-4 leading-snug group-hover:text-[var(--accent)]">
+          <h3 className="text-[18px] font-bold text-[var(--foreground)] mb-6 leading-snug group-hover:text-[var(--accent)]">
             {prediction.title}
           </h3>
 
           {/* Big number + source range + trend */}
           <div className="flex items-baseline gap-3 mb-3">
-            <span className="stat-number text-[40px] font-black text-[var(--foreground)] leading-none">
+            <span className="stat-number text-[44px] font-black text-[var(--foreground)] leading-none">
               {agg.mean > 0 && prediction.category === "wages" ? "+" : ""}
               {Number.isInteger(agg.mean) ? agg.mean : agg.mean.toFixed(1)}
-              <span className="text-[18px] font-normal text-[var(--muted)] ml-0.5">
+              <span className="text-[18px] font-normal text-[var(--muted)] opacity-50 ml-0.5">
                 {prediction.unit.includes("%") ? "%" : ` ${prediction.unit}`}
               </span>
             </span>
