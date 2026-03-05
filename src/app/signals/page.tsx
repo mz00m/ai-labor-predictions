@@ -8,6 +8,7 @@ import {
   getBLSEmployment,
   getHuggingFaceData,
 } from "@/lib/signal-data-loader";
+import { getLastUpdated } from "@/lib/data-loader";
 import SignalHero from "@/components/signals/SignalHero";
 import IndustryGrid from "@/components/signals/IndustryGrid";
 import PackageTable from "@/components/signals/PackageTable";
@@ -20,6 +21,7 @@ const taxonomy = getSignalTaxonomy();
 const downloads = getMonthlyDownloads();
 const bls = getBLSEmployment();
 const huggingface = getHuggingFaceData();
+const lastUpdated = getLastUpdated();
 
 export default function SignalsPage() {
   const [sortField, setSortField] = useState("rollingAvg3mGrowth");
@@ -28,7 +30,7 @@ export default function SignalsPage() {
   return (
     <div className="space-y-10">
       {/* Hero: AAI number + trend + industries to watch */}
-      <SignalHero metrics={metrics} />
+      <SignalHero metrics={metrics} lastUpdated={lastUpdated} />
 
       {/* Jump link → productivity-paths */}
       <a

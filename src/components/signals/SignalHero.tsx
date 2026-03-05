@@ -4,6 +4,7 @@ import type { SignalMetrics } from "@/lib/signal-types";
 
 interface SignalHeroProps {
   metrics: SignalMetrics;
+  lastUpdated: string;
 }
 
 function formatDate(iso: string): string {
@@ -15,7 +16,7 @@ function formatDate(iso: string): string {
   return `${months[d.getUTCMonth()]} ${d.getUTCDate()}, ${d.getUTCFullYear()}`;
 }
 
-export default function SignalHero({ metrics }: SignalHeroProps) {
+export default function SignalHero({ metrics, lastUpdated }: SignalHeroProps) {
 
   return (
     <div className="relative overflow-hidden -mx-6 sm:-mx-10 px-6 sm:px-10 pt-1 pb-6 sm:pt-2 sm:pb-8">
@@ -51,7 +52,7 @@ export default function SignalHero({ metrics }: SignalHeroProps) {
           AI Automation Signals
           <span className="opacity-50 mx-1">&middot;</span>
           <span className="normal-case font-semibold opacity-70">
-            Updated {formatDate(metrics.calculatedAt)}
+            Updated {formatDate(lastUpdated)}
           </span>
         </p>
 
