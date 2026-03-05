@@ -87,16 +87,6 @@
       "metricType": "employment"
     },
     {
-      "date": "2024-07-01",
-      "value": 2.7,
-      "sourceIds": [
-        "cooper-cs-majors-labor-2026"
-      ],
-      "evidenceTier": 4,
-      "dataType": "observed",
-      "metricType": "employment"
-    },
-    {
       "date": "2025-02-10",
       "value": 0,
       "sourceIds": [
@@ -463,6 +453,15 @@
       ],
       "evidenceTier": 1,
       "label": "BLS: Computer programmer roles projected to decline further 6% (2024-2034)"
+    },
+    {
+      "date": "2024-07-01",
+      "direction": "down",
+      "sourceIds": [
+        "cooper-cs-majors-labor-2026"
+      ],
+      "evidenceTier": 4,
+      "label": "CS grads: 7.2% unemployed vs 4.5% overall (2.7pp gap)"
     }
   ],
   "sources": [
@@ -642,7 +641,7 @@
       "publisher": "Indeed Hiring Lab",
       "evidenceTier": 2,
       "datePublished": "2024-02-20",
-      "excerpt": "Software development postings 28% below pre-pandemic baseline. Overall tech postings 25% below. Tech postings first fell below pre-pandemic levels in May 2023."
+      "excerpt": "Software development postings 28% below pre-pandemic baseline (Feb 2024). Annualized over ~1.3 years since ChatGPT launch: ~22%/yr decline rate."
     },
     {
       "id": "indeed-sw-dev-postings-2025",
@@ -651,7 +650,7 @@
       "publisher": "Indeed Hiring Lab",
       "evidenceTier": 2,
       "datePublished": "2025-02-06",
-      "excerpt": "Software developer job postings 33% below pre-pandemic baseline as of November 2024. AI/ML roles the only growing category."
+      "excerpt": "Software developer job postings 33% below pre-pandemic baseline as of November 2024. Annualized over ~2 years since ChatGPT launch: ~16.5%/yr decline rate."
     },
     {
       "id": "indeed-tech-hiring-freeze-2025",
@@ -660,7 +659,7 @@
       "publisher": "Indeed Hiring Lab",
       "evidenceTier": 2,
       "datePublished": "2025-07-30",
-      "excerpt": "Overall tech postings 36% below pre-pandemic baseline. Software engineer postings down 49%. Of 149 tech titles, only 19% exceeded pre-pandemic levels."
+      "excerpt": "Overall tech postings 36% below pre-pandemic baseline as of July 2025. Software engineer postings down 49%. Annualized over ~2.7 years: ~13.5%/yr decline rate."
     },
     {
       "id": "bls-programmer-employment-observed",
@@ -790,12 +789,12 @@
     },
     {
       "id": "bls-mlr-ai-employment-projections-2025",
-      "title": "Incorporating AI impacts in BLS employment projections: occupational case studies",
+      "title": "BLS Monthly Labor Review: Occupational employment projections to 2033",
       "url": "https://www.bls.gov/opub/mlr/2025/article/incorporating-ai-impacts-in-bls-employment-projections.htm",
       "publisher": "U.S. Bureau of Labor Statistics (Monthly Labor Review)",
       "evidenceTier": 1,
       "datePublished": "2025-02-10",
-      "excerpt": "BLS projects employment of software developers to increase 17.9 percent between 2023 and 2033, much faster than the average for all occupations (4.0 percent). Despite its exposure to GenAI applications, this occupation is unlikely to experience a decline in employment, because robust software needs are expected to support continued demand."
+      "excerpt": "BLS projects computer programmer employment to decline 9.6% from 2023-2033 (~1% per year). Software developers projected to grow 17.9% over the same period."
     },
     {
       "id": "bls-ooh-programmer-decline-2023-2033",

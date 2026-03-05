@@ -128,15 +128,6 @@
       ],
       "evidenceTier": 2,
       "metricType": "employment"
-    },
-    {
-      "date": "2026-01-21",
-      "value": 21,
-      "sourceIds": [
-        "althoff-reichardt-task-specific-technical-2026"
-      ],
-      "evidenceTier": 1,
-      "metricType": "projection"
     }
   ],
   "overlays": [
@@ -238,6 +229,15 @@
       ],
       "evidenceTier": 1,
       "label": "Dallas Fed: AI exposure has ~zero effect on wages at median experience premium (CI includes 0)"
+    },
+    {
+      "date": "2026-01-21",
+      "direction": "up",
+      "sourceIds": [
+        "althoff-reichardt-task-specific-technical-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Althoff & Reichardt model: +21% long-run average wage increase from AI productivity"
     }
   ],
   "sources": [

@@ -74,7 +74,7 @@
     },
     {
       "date": "2025-08-01",
-      "value": 7,
+      "value": 6.5,
       "confidenceLow": 3,
       "confidenceHigh": 14,
       "sourceIds": [
@@ -90,17 +90,6 @@
       "confidenceHigh": 14,
       "sourceIds": [
         "wef-future-jobs-2025"
-      ],
-      "evidenceTier": 2,
-      "metricType": "projection"
-    },
-    {
-      "date": "2025-08-15",
-      "value": 0,
-      "confidenceLow": 0,
-      "confidenceHigh": 1,
-      "sourceIds": [
-        "goldman-ai-workforce-2025"
       ],
       "evidenceTier": 2,
       "metricType": "projection"
@@ -159,15 +148,6 @@
       ],
       "evidenceTier": 2,
       "metricType": "projection"
-    },
-    {
-      "date": "2025-12-01",
-      "value": -0.1,
-      "sourceIds": [
-        "dallas-fed-davis-ai-wages-2026"
-      ],
-      "evidenceTier": 1,
-      "metricType": "employment"
     }
   ],
   "overlays": [
@@ -531,7 +511,7 @@
       "publisher": "NBER (Acemoglu)",
       "evidenceTier": 1,
       "datePublished": "2024-04-01",
-      "excerpt": "AI may increase TFP by only 0.53-0.66% over 10 years, with limited job displacement effects."
+      "excerpt": "AI may increase TFP by only 0.53-0.66% over 10 years. Only about 5% of all tasks are fully automatable by AI, implying limited net job displacement effects."
     },
     {
       "id": "wsj-automation-2024",
@@ -662,7 +642,7 @@
       "publisher": "World Bank (Liu, Wang, Yu)",
       "evidenceTier": 1,
       "datePublished": "2025-11-01",
-      "excerpt": "Job postings for high-AI-substitution occupations fell 12% relative to low-substitution roles post-ChatGPT; effect grew from 6% in year one to 18% by year three. Based on 285 million Lightcast job postings."
+      "excerpt": "Job postings for high-AI-substitution occupations fell 12% relative to low-substitution roles post-ChatGPT. Effect grew from 6% in year one to 18% by year three. This measures posting-level demand shifts, not direct employment changes."
     },
     {
       "id": "korinek-stiglitz-steering-2025",

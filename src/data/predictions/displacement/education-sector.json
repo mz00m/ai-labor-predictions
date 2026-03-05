@@ -10,9 +10,9 @@
   "history": [
     {
       "date": "2025-01-20",
-      "value": 35,
-      "confidenceLow": 30,
-      "confidenceHigh": 40,
+      "value": 20,
+      "confidenceLow": 15,
+      "confidenceHigh": 35,
       "sourceIds": [
         "oecd-education-outlook-2025"
       ],
@@ -27,7 +27,7 @@
       "sourceIds": [
         "chegg-enrollment-decline"
       ],
-      "evidenceTier": 1,
+      "evidenceTier": 4,
       "metricType": "corporate"
     },
     {
@@ -38,7 +38,7 @@
       "sourceIds": [
         "pearson-10k-2024"
       ],
-      "evidenceTier": 1,
+      "evidenceTier": 4,
       "metricType": "corporate"
     },
     {
@@ -216,7 +216,7 @@
       "publisher": "OECD",
       "evidenceTier": 1,
       "datePublished": "2025-01-20",
-      "excerpt": "Teaching roles are among the least automatable (15% task exposure), but education support staff, administration, and tutoring face 30-40% task displacement."
+      "excerpt": "Teaching roles are among the least automatable (15% task exposure), but education support staff, administration, and tutoring face 30-40% task displacement. Blended estimate across the full education workforce: ~20%."
     },
     {
       "id": "gartner-edtech-2025",

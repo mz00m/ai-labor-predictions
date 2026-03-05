@@ -76,7 +76,7 @@
     },
     {
       "date": "2025-02-10",
-      "value": -1.2,
+      "value": 1.2,
       "sourceIds": [
         "bls-mlr-ai-employment-projections-2025"
       ],
@@ -543,7 +543,7 @@
       "publisher": "World Bank (Liu, Wang, Yu)",
       "evidenceTier": 1,
       "datePublished": "2025-11-01",
-      "excerpt": "Job postings for high-AI-substitution occupations fell 12% relative to low-substitution roles post-ChatGPT; effect grew from 6% in year one to 18% by year three. Based on 285 million Lightcast job postings."
+      "excerpt": "Job postings for high-AI-substitution occupations fell 18% relative to low-substitution roles by year three post-ChatGPT. This measures posting-level demand shifts in white-collar occupations."
     },
     {
       "id": "noy-zhang-science-2023",

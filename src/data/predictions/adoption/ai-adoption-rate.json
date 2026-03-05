@@ -80,7 +80,7 @@
       "sourceIds": [
         "ecb-safe-ai-hiring-2026"
       ],
-      "evidenceTier": 1,
+      "evidenceTier": 3,
       "metricType": "survey"
     }
   ],
@@ -579,9 +579,9 @@
       "title": "Artificial Intelligence: friend or foe for hiring in Europe today?",
       "url": "https://www.ecb.europa.eu/press/blog/date/2026/html/ecb.blog20260304~d9e34fc95f.en.html",
       "publisher": "European Central Bank",
-      "evidenceTier": 1,
+      "evidenceTier": 3,
       "datePublished": "2026-03-04",
-      "excerpt": "Two-thirds of the 3,500 firms that took part in the survey reported that their employees use AI."
+      "excerpt": "Two-thirds of the 3,500 euro-area firms surveyed reported that their employees use AI in their jobs (ECB SAFE survey, Q4 2025). Note: European firms; not directly comparable to US Census BTOS figures."
     },
     {
       "id": "citadel-ai-capex-neutral-2026",
