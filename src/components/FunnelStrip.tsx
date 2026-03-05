@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 const stripData = [
   // SECTION 1: AI EXPOSURE — "How many jobs involve tasks AI can perform?"
@@ -79,12 +80,19 @@ const sections = [
   },
 ];
 
+// Stage markers between section groups — no causal language
+const stageGroups = [
+  { stage: "What AI can do", sectionIndices: [0] },
+  { stage: "What it\u2019s doing", sectionIndices: [1, 2], productivityLink: true },
+  { stage: "Second-order effects", sectionIndices: [3] },
+  { stage: "Bottom line", sectionIndices: [4, 5] },
+];
+
 const MAX_VAL = 50;
 
 export default function FunnelStrip() {
   const [hovered, setHovered] = useState<string | null>(null);
 
-  // Find the hovered item data for the detail panel
   const hoveredData = (() => {
     if (!hovered) return null;
     const [si, ii] = hovered.split("-").map(Number);
@@ -107,107 +115,139 @@ export default function FunnelStrip() {
         </p>
       </div>
 
-      {/* Chart */}
-      <div className="border border-black/[0.06] rounded-lg overflow-hidden">
-        {sections.map((section, si) => {
-          const items = stripData
-            .filter((d) => d.metric === section.metric)
-            .sort((a, b) => b.value - a.value);
+      {/* Chart with narrowing funnel gradient */}
+      <div className="relative border border-black/[0.06] rounded-lg overflow-hidden">
+        {/* Narrowing left-edge gradient — wide/light at top, thin/dark at bottom */}
+        <div
+          className="absolute left-0 top-0 bottom-0 pointer-events-none z-0 hidden sm:block"
+          style={{
+            width: "3px",
+            background: "linear-gradient(to bottom, rgba(148,163,184,0.30) 0%, rgba(71,85,105,0.50) 100%)",
+          }}
+        />
 
-          return (
-            <div key={si}>
-              {/* Section header */}
-              <div
-                className={`flex items-baseline gap-2 px-4 sm:px-6 pt-3 pb-1.5 ${
-                  si > 0 ? "border-t border-black/[0.06]" : ""
-                }`}
-              >
-                <span className="text-[11px] font-bold uppercase tracking-[0.08em] text-[var(--foreground)] whitespace-nowrap">
-                  {section.label}
+        {stageGroups.map((group, gi) => (
+          <div key={gi}>
+            {/* Stage marker between groups */}
+            {gi > 0 && (
+              <div className="flex items-center gap-3 px-4 sm:px-5 py-1.5 border-t border-black/[0.06] bg-black/[0.015]">
+                <span className="text-[9px] font-semibold uppercase tracking-[0.10em] text-[var(--muted)]">
+                  {group.stage}
                 </span>
-                <span className="text-[11px] text-[var(--muted)] italic">
-                  {section.question}
-                </span>
+                <div className="flex-1 h-px bg-black/[0.04]" />
               </div>
+            )}
 
-              {/* Rows */}
-              {items.map((d, i) => {
-                const key = `${si}-${i}`;
-                const isHovered = hovered === key;
-                const barWidth = Math.max((d.value / MAX_VAL) * 100, 0.4);
+            {/* Sections in this group */}
+            {group.sectionIndices.map((si, idx) => {
+              const section = sections[si];
+              const items = stripData
+                .filter((d) => d.metric === section.metric)
+                .sort((a, b) => b.value - a.value);
 
-                return (
+              return (
+                <div key={si}>
+                  {/* Section header */}
                   <div
-                    key={i}
-                    onMouseEnter={() => setHovered(key)}
-                    onMouseLeave={() => setHovered(null)}
+                    className={`flex items-baseline gap-2 px-4 sm:px-5 pt-2 pb-1 ${
+                      gi === 0 && idx === 0 ? "" : idx > 0 ? "border-t border-black/[0.06]" : ""
+                    }`}
                   >
-                    <a
-                      href={d.sourceUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-stretch w-full h-[26px] sm:h-[30px] cursor-pointer no-underline"
-                    >
-                      {/* Fixed label column */}
+                    <span className="text-[11px] font-bold uppercase tracking-[0.08em] text-[var(--foreground)] whitespace-nowrap">
+                      {section.label}
+                    </span>
+                    <span className="text-[11px] text-[var(--muted)] italic">
+                      {section.question}
+                    </span>
+                  </div>
+
+                  {/* Rows — compressed height */}
+                  {items.map((d, i) => {
+                    const key = `${si}-${i}`;
+                    const isHovered = hovered === key;
+                    const barWidth = Math.max((d.value / MAX_VAL) * 100, 0.4);
+
+                    return (
                       <div
-                        className={`w-[120px] sm:w-[160px] min-w-[120px] sm:min-w-[160px] flex items-center justify-end pr-3 transition-colors duration-100 ${
-                          isHovered ? "bg-black/[0.02]" : ""
-                        }`}
+                        key={i}
+                        onMouseEnter={() => setHovered(key)}
+                        onMouseLeave={() => setHovered(null)}
                       >
-                        <span
-                          className={`text-[11px] sm:text-[12px] whitespace-nowrap overflow-hidden text-ellipsis leading-none transition-colors duration-100 ${
-                            isHovered
-                              ? "font-semibold text-[var(--foreground)]"
-                              : "font-normal text-[var(--muted)]"
-                          }`}
+                        <a
+                          href={d.sourceUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-stretch w-full h-[24px] sm:h-[26px] cursor-pointer no-underline"
                         >
-                          {d.study}
-                        </span>
-                      </div>
-
-                      {/* Bar area */}
-                      <div className="flex-1 relative">
-                        {/* Bar fill */}
-                        <div
-                          className="absolute left-0 top-0 bottom-0 transition-colors duration-100"
-                          style={{
-                            width: `${barWidth}%`,
-                            minWidth: d.value === 0 ? 3 : undefined,
-                            backgroundColor: isHovered ? section.barHover : section.barColor,
-                          }}
-                        />
-
-                        {/* Value at end of bar */}
-                        <div
-                          className="absolute top-0 bottom-0 flex items-center pl-2"
-                          style={{ left: `${barWidth}%` }}
-                        >
-                          <span
-                            className={`font-mono text-[11px] font-medium whitespace-nowrap leading-none tabular-nums transition-colors duration-100 ${
-                              isHovered
-                                ? "text-[var(--foreground)]"
-                                : "text-[var(--muted)]/60"
+                          {/* Fixed label column */}
+                          <div
+                            className={`w-[100px] sm:w-[150px] min-w-[100px] sm:min-w-[150px] flex items-center justify-end pr-3 transition-colors duration-100 ${
+                              isHovered ? "bg-black/[0.02]" : ""
                             }`}
                           >
-                            {d.value}%
-                            {isHovered && d.range && (
-                              <span className="text-[var(--muted)]">
-                                {" "}&middot; {d.range[0]}&ndash;{d.range[1]}%
-                              </span>
-                            )}
-                          </span>
-                        </div>
+                            <span
+                              className={`text-[10px] sm:text-[11px] whitespace-nowrap overflow-hidden text-ellipsis leading-none transition-colors duration-100 ${
+                                isHovered
+                                  ? "font-semibold text-[var(--foreground)]"
+                                  : "font-normal text-[var(--muted)]"
+                              }`}
+                            >
+                              {d.study}
+                            </span>
+                          </div>
 
-                        {/* Hairline separator */}
-                        <div className="absolute bottom-0 left-0 right-0 h-px bg-[#F1F5F9]" />
+                          {/* Bar area */}
+                          <div className="flex-1 relative">
+                            <div
+                              className="absolute left-0 top-0 bottom-0 transition-colors duration-100"
+                              style={{
+                                width: `${barWidth}%`,
+                                minWidth: d.value === 0 ? 3 : undefined,
+                                backgroundColor: isHovered ? section.barHover : section.barColor,
+                              }}
+                            />
+                            <div
+                              className="absolute top-0 bottom-0 flex items-center pl-2"
+                              style={{ left: `${barWidth}%` }}
+                            >
+                              <span
+                                className={`font-mono text-[10px] sm:text-[11px] font-medium whitespace-nowrap leading-none tabular-nums transition-colors duration-100 ${
+                                  isHovered
+                                    ? "text-[var(--foreground)]"
+                                    : "text-[var(--muted)]/60"
+                                }`}
+                              >
+                                {d.value}%
+                                {isHovered && d.range && (
+                                  <span className="text-[var(--muted)]">
+                                    {" "}&middot; {d.range[0]}&ndash;{d.range[1]}%
+                                  </span>
+                                )}
+                              </span>
+                            </div>
+                            <div className="absolute bottom-0 left-0 right-0 h-px bg-[#F1F5F9]" />
+                          </div>
+                        </a>
                       </div>
-                    </a>
-                  </div>
-                );
-              })}
-            </div>
-          );
-        })}
+                    );
+                  })}
+                </div>
+              );
+            })}
+
+            {/* Productivity link after macro section */}
+            {group.productivityLink && (
+              <div className="px-4 sm:px-5 py-1.5 border-t border-black/[0.06]">
+                <Link
+                  href="/signals#productivity-paths"
+                  className="text-[11px] text-[var(--accent)] hover:underline"
+                >
+                  How productivity translates to jobs &rarr;
+                </Link>
+              </div>
+            )}
+          </div>
+        ))}
 
         {/* Detail panel — shown below chart, no layout shift */}
         <div
@@ -215,7 +255,7 @@ export default function FunnelStrip() {
           style={{ height: hoveredData?.quote ? 'auto' : 0, padding: hoveredData?.quote ? undefined : 0, borderTopWidth: hoveredData?.quote ? undefined : 0 }}
         >
           {hoveredData?.quote && (
-            <div className="py-2.5 flex items-baseline gap-3">
+            <div className="py-2 flex items-baseline gap-3">
               <p className="text-[11px] sm:text-[12px] text-[var(--muted)] leading-relaxed italic flex-1">
                 &ldquo;{hoveredData.quote}&rdquo;
               </p>
@@ -232,7 +272,7 @@ export default function FunnelStrip() {
         </div>
 
         {/* Bottom note */}
-        <div className="px-4 sm:px-6 py-3.5 border-t border-black/[0.06] bg-black/[0.01] flex items-center justify-between gap-4">
+        <div className="px-4 sm:px-6 py-2.5 border-t border-black/[0.06] bg-black/[0.01] flex items-center justify-between gap-4">
           <p className="text-[11px] text-[var(--muted)] leading-relaxed">
             Based on 18 studies &middot; Working papers, government data,
             institutional analysis &middot; Hover for quotes and links

@@ -114,30 +114,9 @@ function SparklineWatermark({
   const coords = points.map((p, i) => ({
     x: (i / (points.length - 1)) * W,
     y: padTop + usableH - ((p.value - minVal) / range) * usableH,
-    isProjected: p.dataType === "projected",
   }));
 
-  // Build separate observed and projected path segments
-  const segments: { path: string; projected: boolean }[] = [];
-  let currentSegment = `M ${coords[0].x},${coords[0].y}`;
-  let currentIsProjected = coords[0].isProjected;
-
-  for (let i = 1; i < coords.length; i++) {
-    const prev = coords[i - 1];
-    const curr = coords[i];
-    const cpx1 = prev.x + (curr.x - prev.x) * 0.4;
-    const cpx2 = prev.x + (curr.x - prev.x) * 0.6;
-
-    if (curr.isProjected !== currentIsProjected) {
-      segments.push({ path: currentSegment, projected: currentIsProjected });
-      currentSegment = `M ${prev.x},${prev.y}`;
-      currentIsProjected = curr.isProjected;
-    }
-    currentSegment += ` C ${cpx1},${prev.y} ${cpx2},${curr.y} ${curr.x},${curr.y}`;
-  }
-  segments.push({ path: currentSegment, projected: currentIsProjected });
-
-  // Full path for area fill
+  // Area fill path
   const fullPath = coords.reduce((acc, c, i) => {
     if (i === 0) return `M ${c.x},${c.y}`;
     const prev = coords[i - 1];
@@ -152,33 +131,20 @@ function SparklineWatermark({
       ref={svgRef}
       viewBox="0 0 200 80"
       preserveAspectRatio="none"
-      className={`sparkline-draw absolute bottom-0 right-0 w-[55%] h-[70%] pointer-events-none ${visible ? "visible" : ""}`}
+      className={`sparkline-draw absolute inset-0 w-full h-full pointer-events-none ${visible ? "visible" : ""}`}
       aria-hidden="true"
     >
       <defs>
         <linearGradient id={`sparkFade-${id}`} x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="currentColor" stopOpacity="0.15" />
-          <stop offset="100%" stopColor="currentColor" stopOpacity="0.03" />
+          <stop offset="0%" stopColor="#93C5FD" stopOpacity="0.18" />
+          <stop offset="100%" stopColor="#93C5FD" stopOpacity="0.03" />
         </linearGradient>
       </defs>
       <path
         d={areaPath}
         fill={`url(#sparkFade-${id})`}
-        className="text-[var(--foreground)] spark-area"
+        className="spark-area"
       />
-      {segments.map((seg, i) => (
-        <path
-          key={`spark-seg-${i}`}
-          d={seg.path}
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeDasharray={seg.projected ? "4 3" : "none"}
-          className="text-black/[0.15] spark-line"
-        />
-      ))}
     </svg>
   );
 }
@@ -207,16 +173,20 @@ export default function PredictionSummaryCard({
     : null;
   const tierConfig = best ? getTierConfig(best.evidenceTier) : null;
 
-  const tierBorderColor = tierConfig
+  // Soften tier border color to 30% opacity
+  const rawColor = tierConfig
     ? tierConfig.color
     : best
       ? getTierConfig(best.evidenceTier).color
-      : "rgba(0,0,0,0.06)";
+      : null;
+  const tierBorderColor = rawColor
+    ? rawColor + "4D" // ~30% opacity hex suffix
+    : "rgba(0,0,0,0.06)";
 
   return (
     <Link href={`/predictions/${prediction.slug}`} className="group block">
       <div
-        className="card-hover relative pb-8 border-b border-black/[0.06] overflow-hidden rounded-lg pl-3 border-l-[3px]"
+        className="card-hover relative pb-8 border-b border-black/[0.06] overflow-hidden rounded-lg pl-3 border-l-[2px]"
         style={{ borderLeftColor: tierBorderColor }}
       >
         {/* Sparkline watermark */}
