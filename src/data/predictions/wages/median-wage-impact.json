@@ -238,6 +238,15 @@
       ],
       "evidenceTier": 1,
       "label": "Althoff & Reichardt model: +21% long-run average wage increase from AI productivity"
+    },
+    {
+      "date": "2026-01-15",
+      "direction": "up",
+      "sourceIds": [
+        "jones-tonetti-weak-links-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Jones & Tonetti (Stanford/NBER): AI output gains modest near-term — only 4% above trend by 2040"
     }
   ],
   "sources": [
@@ -432,6 +441,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-02-24",
       "excerpt": "For occupations with the median experience premium (40 percent), a one-standard-deviation increase in AI exposure is associated with a 0.05 percentage point decline in wage growth."
+    },
+    {
+      "id": "jones-tonetti-weak-links-2026",
+      "title": "Past Automation and Future A.I.: How Weak Links Tame the Growth Explosion",
+      "url": "https://web.stanford.edu/~chadj/JonesTonetti_Automation.pdf",
+      "publisher": "Stanford GSB / NBER (Jones, Tonetti)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-15",
+      "excerpt": "Despite the accelerating growth, the effects of A.I. on GDP per person are remarkably small for the next 20 to 40 years."
     }
   ]
 }

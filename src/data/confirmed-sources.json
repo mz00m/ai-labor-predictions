@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-05",
-  "totalSources": 298,
-  "verifiedCount": 288,
+  "totalSources": 299,
+  "verifiedCount": 289,
   "sources": {
     "accenture-health-ai-2023": {
       "id": "accenture-health-ai-2023",
@@ -4023,6 +4023,22 @@
       "usedIn": [
         "overall-us-displacement",
         "tech-sector-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "jones-tonetti-weak-links-2026": {
+      "id": "jones-tonetti-weak-links-2026",
+      "title": "Past Automation and Future A.I.: How Weak Links Tame the Growth Explosion",
+      "url": "https://web.stanford.edu/~chadj/JonesTonetti_Automation.pdf",
+      "publisher": "Stanford GSB / NBER (Jones, Tonetti)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-15",
+      "excerpt": "By 2040, output is only 4% higher than it would have been without the growth acceleration, and by 2060 the gain is still only 19%. A key reason for the slow acceleration is the prominence of 'weak links' (an elasticity of substitution among tasks less than one).",
+      "usedIn": [
+        "overall-us-displacement",
+        "median-wage-impact",
+        "workforce-ai-exposure"
       ],
       "verified": true,
       "synthetic": false
