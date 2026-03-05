@@ -58,24 +58,28 @@ const leftGroups: {
 }[] = [
   {
     label: "Exposure",
-    context: "What AI can do",
+    context: "% of jobs impacted by AI",
     startBar: 0, barCount: 3,
   },
   {
     label: "Productivity",
-    context: "What it\u2019s doing",
+    context: "% faster AI makes us",
     startBar: 3, barCount: 3, link: true,
   },
   {
     label: "Hiring",
-    context: "Fewer postings in exposed roles",
+    context: "% fewer job postings",
     startBar: 6, barCount: 3,
   },
   {
-    label: "Bottom line",
-    context: "Projected vs. measured",
-    detail: "6\u20138% of jobs projected lost by 2030. Measured so far: near zero.",
-    startBar: 9, barCount: 6,
+    label: "Projected",
+    context: "% of jobs lost by 2030",
+    startBar: 9, barCount: 3,
+  },
+  {
+    label: "Measured",
+    context: "Actual job loss so far",
+    startBar: 12, barCount: 3,
   },
 ];
 
