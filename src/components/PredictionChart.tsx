@@ -590,7 +590,7 @@ export default function PredictionChart({
         {hasConfidenceBands && (
           <div className="flex items-center gap-1.5">
             <svg width="16" height="10">
-              <rect x="0" y="0" width="16" height="10" fill="#5C61F6" fillOpacity="0.15" rx="2" />
+              <rect x="0" y="0" width="16" height="10" fill="#5C61F6" fillOpacity="0.22" rx="2" />
             </svg>
             <span className="text-[11px] text-[var(--muted)]">Confidence range</span>
           </div>
@@ -710,7 +710,7 @@ export default function PredictionChart({
                 dataKey="confidenceBandWidth"
                 stackId="confidence"
                 fill="#5C61F6"
-                fillOpacity={0.1}
+                fillOpacity={0.22}
                 stroke="none"
                 isAnimationActive={false}
                 dot={false}

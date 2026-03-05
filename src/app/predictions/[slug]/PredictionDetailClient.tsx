@@ -10,6 +10,7 @@ import { computeAggregate } from "@/lib/prediction-stats";
 import EvidenceFilter from "@/components/EvidenceFilter";
 import PredictionChart from "@/components/PredictionChart";
 import AIAdoptionChart from "@/components/AIAdoptionChart";
+import AdoptionLadder from "@/components/AdoptionLadder";
 import SourceList from "@/components/SourceList";
 
 const CONTEXT_MAP: Record<string, (v: number) => string> = {
@@ -145,7 +146,7 @@ export default function PredictionDetailPage() {
           {prediction.title}
         </h1>
 
-        {/* Big number + trend arrow */}
+        {/* Big number + source range + trend arrow */}
         <div className="flex items-baseline gap-4 mb-4">
           <span className="stat-number text-[56px] sm:text-[72px] font-black text-[var(--foreground)] leading-none">
             {agg.mean > 0 && prediction.category === "wages" ? "+" : ""}
@@ -154,6 +155,11 @@ export default function PredictionDetailPage() {
               {prediction.unit.includes("%") ? "%" : ` ${prediction.unit}`}
             </span>
           </span>
+          {agg.min !== agg.max && (
+            <span className="text-[18px] font-medium text-[var(--muted)]" style={{ opacity: 0.7 }}>
+              {agg.min}–{agg.max}{prediction.unit.includes("%") ? "%" : ""}
+            </span>
+          )}
           {agg.trend !== "flat" && (
             <span className={`text-[28px] ${trendColorClass}`} style={{ opacity: 0.5 }}>
               {agg.trend === "up" ? "▲" : "▼"}
@@ -167,7 +173,7 @@ export default function PredictionDetailPage() {
         <p className="text-[13px] text-[var(--muted)] opacity-60 mb-6 max-w-2xl">
           {prediction.timeHorizon.toLowerCase().includes("current")
             ? "This is observed data from real-world surveys and measurements, not a prediction."
-            : "This number is a weighted average across all selected sources, with higher-tier evidence and more recent data weighted more heavily."}{" "}
+            : `Blended estimate across ${filteredHistory.length} sources${agg.min !== agg.max ? ` ranging ${agg.min}–${agg.max}${prediction.unit.includes("%") ? "%" : ""}` : ""}. Higher-tier evidence and more recent data are weighted more heavily.`}{" "}
           See the{" "}
           <Link href="/#how-we-calculate" className="underline hover:text-[var(--foreground)]">
             full methodology
@@ -251,6 +257,8 @@ export default function PredictionDetailPage() {
             />
           </>
         )}
+        {/* Adoption Ladder — directly below chart */}
+        {prediction.slug === "ai-adoption-rate" && <AdoptionLadder />}
       </section>
 
       {/* Divider */}

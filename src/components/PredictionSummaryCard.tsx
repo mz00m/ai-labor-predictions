@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { Prediction, EvidenceTier } from "@/lib/types";
 import { getTierConfig } from "@/lib/evidence-tiers";
@@ -23,37 +23,13 @@ function getBestEstimate(prediction: Prediction, selectedTiers: EvidenceTier[]) 
   return bestTier || filtered[0] || null;
 }
 
-function computeTrend(prediction: Prediction, selectedTiers: EvidenceTier[]) {
-  const sorted = prediction.history
-    .filter((d) => selectedTiers.includes(d.evidenceTier))
-    .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
-  if (sorted.length < 2) return null;
-  const latest = sorted[sorted.length - 1];
-  const latestDate = new Date(latest.date).getTime();
-  const oneYearAgo = latestDate - 365 * 24 * 60 * 60 * 1000;
-  let closest = sorted[0];
-  let closestDiff = Math.abs(new Date(sorted[0].date).getTime() - oneYearAgo);
-  for (const point of sorted) {
-    const diff = Math.abs(new Date(point.date).getTime() - oneYearAgo);
-    if (diff < closestDiff) {
-      closest = point;
-      closestDiff = diff;
-    }
-  }
-  if (closest === latest) return null;
-  const rawChange = latest.value - closest.value;
-  const monthsApart =
-    (latestDate - new Date(closest.date).getTime()) / (30 * 24 * 60 * 60 * 1000);
-  const annualizedChange = Math.round((rawChange * 12) / monthsApart * 10) / 10;
-  return { change: annualizedChange, from: closest.value, to: latest.value };
-}
 
 function getContextLine(prediction: Prediction, aggregateValue: number): string {
   const v = aggregateValue;
   if (prediction.slug === "overall-us-displacement")
     return `An estimated ${v}% of US jobs face net displacement from AI by 2030 — roles eliminated or fundamentally restructured.`;
   if (prediction.slug === "total-us-jobs-lost")
-    return `Roughly ${Math.round(168.5 * v / 100)} million US workers are projected to lose their jobs to AI and automation.`;
+    return `Models project ~${Math.round(168.5 * v / 100)}M US workers displaced by AI — but observed employment data so far shows near-zero net loss.`;
   if (prediction.slug === "customer-service-automation")
     return `${v}% of CS interactions projected to be fully handled by AI without human involvement.`;
   if (prediction.slug === "tech-sector-displacement")
@@ -104,46 +80,60 @@ function SparklineWatermark({
   history: Prediction["history"];
   selectedTiers: EvidenceTier[];
 }) {
-  const pathData = useMemo(() => {
-    const points = history
-      .filter((d) => selectedTiers.includes(d.evidenceTier))
-      .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+  const points = history
+    .filter((d) => selectedTiers.includes(d.evidenceTier))
+    .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
 
-    if (points.length < 2) return null;
+  if (points.length < 2) return null;
 
-    const values = points.map((p) => p.value);
-    const minVal = Math.min(...values);
-    const maxVal = Math.max(...values);
-    const range = maxVal - minVal || 1;
+  const values = points.map((p) => p.value);
+  const minVal = Math.min(...values);
+  const maxVal = Math.max(...values);
+  const range = maxVal - minVal || 1;
 
-    const W = 200;
-    const H = 80;
-    const padTop = 8;
-    const padBot = 4;
-    const usableH = H - padTop - padBot;
+  const W = 200;
+  const H = 80;
+  const padTop = 8;
+  const padBot = 4;
+  const usableH = H - padTop - padBot;
 
-    const coords = points.map((p, i) => ({
-      x: (i / (points.length - 1)) * W,
-      y: padTop + usableH - ((p.value - minVal) / range) * usableH,
-    }));
+  const coords = points.map((p, i) => ({
+    x: (i / (points.length - 1)) * W,
+    y: padTop + usableH - ((p.value - minVal) / range) * usableH,
+    isProjected: p.dataType === "projected",
+  }));
 
-    // Smooth curve using cubic bezier
-    let linePath = `M ${coords[0].x},${coords[0].y}`;
-    for (let i = 1; i < coords.length; i++) {
-      const prev = coords[i - 1];
-      const curr = coords[i];
-      const cpx1 = prev.x + (curr.x - prev.x) * 0.4;
-      const cpx2 = prev.x + (curr.x - prev.x) * 0.6;
-      linePath += ` C ${cpx1},${prev.y} ${cpx2},${curr.y} ${curr.x},${curr.y}`;
+  // Build separate observed and projected path segments
+  const segments: { path: string; projected: boolean }[] = [];
+  let currentSegment = `M ${coords[0].x},${coords[0].y}`;
+  let currentIsProjected = coords[0].isProjected;
+
+  for (let i = 1; i < coords.length; i++) {
+    const prev = coords[i - 1];
+    const curr = coords[i];
+    const cpx1 = prev.x + (curr.x - prev.x) * 0.4;
+    const cpx2 = prev.x + (curr.x - prev.x) * 0.6;
+
+    if (curr.isProjected !== currentIsProjected) {
+      // End the current segment
+      segments.push({ path: currentSegment, projected: currentIsProjected });
+      // Start a new segment from previous point (for continuity)
+      currentSegment = `M ${prev.x},${prev.y}`;
+      currentIsProjected = curr.isProjected;
     }
+    currentSegment += ` C ${cpx1},${prev.y} ${cpx2},${curr.y} ${curr.x},${curr.y}`;
+  }
+  segments.push({ path: currentSegment, projected: currentIsProjected });
 
-    // Close for area fill
-    const areaPath = `${linePath} L ${coords[coords.length - 1].x},${H} L ${coords[0].x},${H} Z`;
-
-    return { linePath, areaPath };
-  }, [history, selectedTiers]);
-
-  if (!pathData) return null;
+  // Full path for area fill
+  const fullPath = coords.reduce((acc, c, i) => {
+    if (i === 0) return `M ${c.x},${c.y}`;
+    const prev = coords[i - 1];
+    const cpx1 = prev.x + (c.x - prev.x) * 0.4;
+    const cpx2 = prev.x + (c.x - prev.x) * 0.6;
+    return acc + ` C ${cpx1},${prev.y} ${cpx2},${c.y} ${c.x},${c.y}`;
+  }, "");
+  const areaPath = `${fullPath} L ${coords[coords.length - 1].x},${H} L ${coords[0].x},${H} Z`;
 
   return (
     <svg
@@ -154,24 +144,28 @@ function SparklineWatermark({
     >
       <defs>
         <linearGradient id={`sparkFade-${id}`} x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="currentColor" stopOpacity="0.07" />
-          <stop offset="100%" stopColor="currentColor" stopOpacity="0.01" />
+          <stop offset="0%" stopColor="currentColor" stopOpacity="0.15" />
+          <stop offset="100%" stopColor="currentColor" stopOpacity="0.03" />
         </linearGradient>
       </defs>
       <path
-        d={pathData.areaPath}
+        d={areaPath}
         fill={`url(#sparkFade-${id})`}
         className="text-[var(--foreground)]"
       />
-      <path
-        d={pathData.linePath}
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className="text-black/[0.06]"
-      />
+      {segments.map((seg, i) => (
+        <path
+          key={`spark-seg-${i}`}
+          d={seg.path}
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeDasharray={seg.projected ? "4 3" : "none"}
+          className="text-black/[0.15]"
+        />
+      ))}
     </svg>
   );
 }
@@ -182,10 +176,12 @@ export default function PredictionSummaryCard({
 }: PredictionSummaryCardProps) {
   const [showNote, setShowNote] = useState(false);
   const best = getBestEstimate(prediction, selectedTiers);
-  const trend = computeTrend(prediction, selectedTiers);
   const agg = computeAggregate(prediction, selectedTiers);
   const contextLine = getContextLine(prediction, agg.mean);
   const annotation = getResearchAnnotation(prediction.slug);
+  const filteredHistory = prediction.history.filter((d) =>
+    selectedTiers.includes(d.evidenceTier)
+  );
 
   const trendColorClass = agg.trendIsBad
     ? "text-red-600"
@@ -210,12 +206,42 @@ export default function PredictionSummaryCard({
 
         {/* Content (above watermark) */}
         <div className="relative z-10">
-          {/* Title */}
+          {/* Estimate type badge + Title */}
+          {annotation && (
+            <div className="mb-2">
+              <span
+                className="inline-block text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full"
+                style={{
+                  backgroundColor:
+                    annotation.estimateType === "observed"
+                      ? "rgba(22, 163, 74, 0.10)"
+                      : annotation.estimateType === "mixed"
+                        ? "rgba(37, 99, 235, 0.10)"
+                        : "rgba(107, 114, 128, 0.10)",
+                  color:
+                    annotation.estimateType === "observed"
+                      ? "#16a34a"
+                      : annotation.estimateType === "mixed"
+                        ? "#2563eb"
+                        : "#6b7280",
+                }}
+                title={
+                  annotation.estimateType === "observed"
+                    ? "Based on RCTs, field experiments, or platform data showing actual changes"
+                    : annotation.estimateType === "mixed"
+                      ? "Combines exposure-based projections with some observed empirical data"
+                      : "Projection based on task overlap and AI capability mapping"
+                }
+              >
+                {ESTIMATE_TYPE_LABELS[annotation.estimateType]}
+              </span>
+            </div>
+          )}
           <h3 className="text-[18px] font-bold text-[var(--foreground)] mb-4 leading-snug group-hover:text-[var(--accent)]">
             {prediction.title}
           </h3>
 
-          {/* Big number + trend arrow */}
+          {/* Big number + source range + trend */}
           <div className="flex items-baseline gap-3 mb-3">
             <span className="stat-number text-[40px] font-black text-[var(--foreground)] leading-none">
               {agg.mean > 0 && prediction.category === "wages" ? "+" : ""}
@@ -224,16 +250,14 @@ export default function PredictionSummaryCard({
                 {prediction.unit.includes("%") ? "%" : ` ${prediction.unit}`}
               </span>
             </span>
+            {agg.min !== agg.max && (
+              <span className="text-[13px] font-medium text-[var(--muted)]" style={{ opacity: 0.7 }}>
+                {agg.min}–{agg.max}{prediction.unit.includes("%") ? "%" : ""}
+              </span>
+            )}
             {agg.trend !== "flat" && (
               <span className={`text-[22px] ${trendColorClass}`} style={{ opacity: 0.6 }}>
                 {agg.trend === "up" ? "▲" : "▼"}
-              </span>
-            )}
-            {trend && (
-              <span className={`text-[12px] font-medium ${trendColorClass}`} style={{ opacity: 0.7 }}>
-                {trend.change > 0 ? "+" : ""}
-                {trend.change}
-                {prediction.unit.includes("%") ? "pp" : ""} YoY
               </span>
             )}
           </div>
@@ -243,7 +267,7 @@ export default function PredictionSummaryCard({
             {contextLine}
           </p>
           <p className="text-[11px] text-[var(--muted)] opacity-60 mb-4">
-            Weighted average of all selected sources.{" "}
+            Blended estimate across {filteredHistory.length} source{filteredHistory.length !== 1 ? "s" : ""}{agg.min !== agg.max ? ` ranging ${agg.min}–${agg.max}${prediction.unit.includes("%") ? "%" : ""}` : ""}.{" "}
             <span
               className="underline cursor-pointer"
               onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.location.hash = "how-we-calculate"; }}
@@ -252,7 +276,7 @@ export default function PredictionSummaryCard({
             </span>
           </p>
 
-          {/* Research annotation */}
+          {/* Research annotation — note expandable, badge always visible */}
           {annotation && (
             <div className="mb-4">
               <button
@@ -261,7 +285,7 @@ export default function PredictionSummaryCard({
                   e.stopPropagation();
                   setShowNote(!showNote);
                 }}
-                className="inline-flex items-center gap-1.5 text-[12px] font-medium text-[var(--accent)] hover:underline"
+                className="inline-flex items-center gap-1.5 text-[12px] font-medium text-[var(--muted)] hover:text-[var(--accent)]"
               >
                 <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
@@ -285,37 +309,9 @@ export default function PredictionSummaryCard({
             </div>
           )}
 
-          {/* Estimate type + Source attribution + link */}
+          {/* Source attribution + link */}
           <div className="flex items-center justify-between gap-2">
             <div className="flex items-center gap-2.5 min-w-0">
-              {annotation && (
-                <span
-                  className="shrink-0 text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full"
-                  style={{
-                    backgroundColor:
-                      annotation.estimateType === "observed"
-                        ? "rgba(22, 163, 74, 0.08)"
-                        : annotation.estimateType === "mixed"
-                          ? "rgba(37, 99, 235, 0.08)"
-                          : "rgba(107, 114, 128, 0.08)",
-                    color:
-                      annotation.estimateType === "observed"
-                        ? "#16a34a"
-                        : annotation.estimateType === "mixed"
-                          ? "#2563eb"
-                          : "#6b7280",
-                  }}
-                  title={
-                    annotation.estimateType === "observed"
-                      ? "Based on RCTs, field experiments, or platform data showing actual changes"
-                      : annotation.estimateType === "mixed"
-                        ? "Combines exposure-based projections with some observed empirical data"
-                        : "Projection based on task overlap and AI capability mapping"
-                  }
-                >
-                  {ESTIMATE_TYPE_LABELS[annotation.estimateType]}
-                </span>
-              )}
               {bestSource && tierConfig && (
                 <div className="flex items-center gap-1.5 min-w-0">
                   <span

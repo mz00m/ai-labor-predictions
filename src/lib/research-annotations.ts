@@ -50,7 +50,7 @@ const ANNOTATIONS: Record<string, ResearchAnnotation> = {
   },
   "total-us-jobs-lost": {
     note:
-      "Projection based on exposure models. Empirical data from ADP payroll analysis and job postings so far show occupational restructuring rather than net job destruction at the macro level.",
+      "Mostly projection-based. Of 8 data points, 6 are model projections (0.75\u20137%) while 2 are employment-observed (both ~0%). The gap between projected losses and measured reality is the key signal: models predict 2\u20137% displacement, but macro employment data hasn't shown it yet.",
     estimateType: "exposure",
   },
   "white-collar-professional-displacement": {

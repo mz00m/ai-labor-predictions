@@ -29,6 +29,8 @@ export interface HistoricalDataPoint {
   evidenceTier: EvidenceTier;
   dataType?: "observed" | "projected";
   metricType?: MetricType;
+  /** Approximate sample size for within-tier quality weighting (optional) */
+  sampleSize?: number;
 }
 
 /** A qualitative/directional study shown as a horizontal band rather than a point */
