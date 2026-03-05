@@ -90,7 +90,7 @@ export default function Home() {
               <p className="relative text-[11px] text-[var(--muted)] opacity-50 leading-snug">Yale, Goldman, Dallas Fed</p>
             </a>
           </div>
-          <p className="mt-4 text-[13px] text-[var(--muted)] italic opacity-60">
+          <p className="mt-4 text-[14px] text-[var(--muted)] italic opacity-80 text-right">
             The gap between projection and reality defines this moment.
           </p>
         </div>
