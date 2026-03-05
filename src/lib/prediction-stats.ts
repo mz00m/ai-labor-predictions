@@ -11,6 +11,8 @@ export interface AggregateStats {
   trend: "up" | "down" | "flat";
   /** Whether the trend is "bad" given the prediction category */
   trendIsBad: boolean;
+  /** True when selected tiers had no data and we fell back to all tiers */
+  tierFallback?: boolean;
 }
 
 /** Weight multiplier for evidence tier (higher = more trusted) */
@@ -78,8 +80,9 @@ export function computeAggregate(
       return { mean: v, min: v, max: v, trend: "flat", trendIsBad: false };
     }
 
-    // Recurse with all tiers
-    return computeAggregate(prediction, allTiers);
+    // Recurse with all tiers and flag the fallback
+    const fallbackResult = computeAggregate(prediction, allTiers);
+    return { ...fallbackResult, tierFallback: true };
   }
 
   const values = points.map((p) => p.value);

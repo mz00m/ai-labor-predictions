@@ -72,8 +72,10 @@ export default function HistoryPage() {
               </span>
               <div>
                 <p className="text-[13px] text-[var(--foreground)] leading-relaxed font-semibold mb-2">
-                  AI is diffusing at roughly 10x the speed of prior
-                  general-purpose technologies.
+                  AI adoption metrics suggest 5&ndash;10x faster diffusion
+                  than prior general-purpose technologies. Whether displacement
+                  and reorganization compress proportionally is the central
+                  open question.
                 </p>
                 <p className="text-[12px] text-[var(--muted)] leading-relaxed mb-3">
                   ChatGPT reached 100 million users in 2 months &mdash; the
@@ -82,7 +84,10 @@ export default function HistoryPage() {
                   Louis Fed), a penetration the internet didn&rsquo;t reach
                   for 5+ years and the PC didn&rsquo;t reach for 15. Enterprise
                   adoption surged from 33% to 88% of organizations in roughly
-                  two years (McKinsey, 2023&ndash;2025). Microsoft&rsquo;s AI
+                  two years (McKinsey, 2023&ndash;2025), though deep workflow
+                  integration remains much lower &mdash; Census Bureau data
+                  shows only ~6% of firms report AI as material to operations.
+                  Microsoft&rsquo;s AI
                   Diffusion Report calls it{" "}
                   <strong>&ldquo;twice the pace of smartphones, five times
                   faster than the internet&rdquo;</strong> &mdash; and those
@@ -114,14 +119,16 @@ export default function HistoryPage() {
                   </a>
                 </p>
                 <p className="text-[12px] text-[var(--foreground)]/70 leading-relaxed italic">
-                  The forecasts on this page extrapolate from this 10x
-                  adoption speed. If the diffusion phase that historically
-                  took 10&ndash;25 years is happening in 1&ndash;3, the
-                  displacement and reorganization phases will compress
-                  proportionally. The constraint: organizational
-                  restructuring, education systems, and policy still operate
-                  at human speed &mdash; but even these are being accelerated
-                  by AI itself.
+                  The forecasts on this page extrapolate from this adoption
+                  speed. If the diffusion phase that historically took
+                  10&ndash;25 years is happening in 1&ndash;3, the
+                  displacement and reorganization phases may compress
+                  as well &mdash; though prior GPTs show that adoption speed
+                  does not reliably predict impact speed. The internet
+                  reached 50% of households by 2000 but didn&rsquo;t show
+                  clear labor market effects for another decade.
+                  Organizational restructuring, education systems, and policy
+                  still operate at human speed.
                 </p>
               </div>
             </div>

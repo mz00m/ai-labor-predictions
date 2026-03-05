@@ -310,6 +310,15 @@ function ExpandedContent({ metrics }: { metrics: SignalMetrics }) {
             this page is, roughly, a measure of how long the productivity
             absorption phase lasts in each industry.
           </p>
+          <p>
+            <strong className="text-[var(--foreground)]">Important caveat:</strong>{" "}
+            Historical technology transitions suggest a 2&ndash;10 year lag
+            between tool adoption and measurable employment effects. For AI,
+            this timeline is unknown. Downloads are a signal of builder intent,
+            not a guarantee of labor market impact &mdash; many tools are
+            exploratory, and organizational adoption lags developer
+            experimentation significantly.
+          </p>
         </>
       ),
     },

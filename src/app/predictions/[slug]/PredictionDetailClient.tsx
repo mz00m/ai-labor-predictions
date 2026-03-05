@@ -170,6 +170,11 @@ export default function PredictionDetailPage() {
         <p className="text-[16px] text-[var(--muted)] leading-relaxed mb-3 max-w-2xl">
           {contextText}
         </p>
+        {agg.tierFallback && (
+          <p className="text-[12px] text-[#d97706] bg-[#d97706]/[0.06] border border-[#d97706]/20 rounded px-3 py-2 mb-4 max-w-2xl">
+            No sources match your selected tiers for this prediction. Showing all-tier average instead.
+          </p>
+        )}
         <p className="text-[13px] text-[var(--muted)] opacity-60 mb-6 max-w-2xl">
           {prediction.timeHorizon.toLowerCase().includes("current")
             ? "This is observed data from real-world surveys and measurements, not a prediction."

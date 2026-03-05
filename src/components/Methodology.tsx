@@ -183,18 +183,48 @@ export default function Methodology() {
           </div>
         </div>
 
-        {/* Limitations */}
+        {/* Known Limitations */}
         <div className="max-w-3xl">
           <h3 className="text-[18px] font-bold text-[var(--foreground)] mb-3">
-            Limitations
+            Known Limitations
           </h3>
-          <p className="text-[14px] text-[var(--muted)] leading-relaxed">
-            This is not a forecast model &mdash; it reflects published research
-            estimates, not proprietary predictions. Coverage is English-language
-            only and relies on keyword matching, which can miss or misclassify
-            papers. Citation data lags publication, so new work may be
-            underranked. Estimates can shift significantly as new studies emerge.
-          </p>
+          <ul className="text-[14px] text-[var(--muted)] leading-relaxed space-y-3 list-disc pl-5">
+            <li>
+              <strong className="text-[var(--foreground)]">Definitional heterogeneity:</strong>{" "}
+              Sources within a single prediction may define the metric differently.
+              &ldquo;Displacement&rdquo; can mean roles eliminated, tasks automated,
+              or jobs restructured depending on the study. The weighted average
+              treats these as equivalent, which may overstate or understate the
+              true range.
+            </li>
+            <li>
+              <strong className="text-[var(--foreground)]">Trend arrows reflect source mix, not real-world change:</strong>{" "}
+              The trend indicator compares the first and last data points
+              chronologically. A downward arrow may mean &ldquo;newer sources
+              estimate lower&rdquo; rather than &ldquo;the real-world metric is
+              declining.&rdquo; Adding or removing a source can shift the trend.
+            </li>
+            <li>
+              <strong className="text-[var(--foreground)]">Point estimates from wide ranges:</strong>{" "}
+              The headline number is a weighted average that can mask significant
+              disagreement. When the source range is wide (e.g., 0&ndash;12%),
+              the range itself is often more informative than the midpoint.
+            </li>
+            <li>
+              <strong className="text-[var(--foreground)]">Tier fallback:</strong>{" "}
+              When your selected evidence tiers have no matching data for a
+              prediction, the system silently shows the all-tier average instead.
+              A warning badge appears when this happens.
+            </li>
+            <li>
+              <strong className="text-[var(--foreground)]">Coverage gaps:</strong>{" "}
+              This is not a forecast model &mdash; it reflects published
+              research estimates, not proprietary predictions. Coverage is
+              English-language only and relies on keyword matching, which can
+              miss or misclassify papers. Citation data lags publication, so new
+              work may be underranked.
+            </li>
+          </ul>
         </div>
 
         {/* Update Schedule */}

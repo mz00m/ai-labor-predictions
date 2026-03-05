@@ -243,8 +243,8 @@ export default function PredictionSummaryCard({
               </span>
             </span>
             {agg.min !== agg.max && (
-              <span className="text-[13px] font-medium text-[var(--muted)]" style={{ opacity: 0.7 }}>
-                {agg.min}–{agg.max}{prediction.unit.includes("%") ? "%" : ""}
+              <span className="text-[14px] font-semibold text-[var(--muted)]">
+                {agg.min}&ndash;{agg.max}{prediction.unit.includes("%") ? "%" : ""}
               </span>
             )}
             {agg.trend !== "flat" && (
@@ -259,7 +259,7 @@ export default function PredictionSummaryCard({
             {contextLine}
           </p>
           <p className="text-[11px] text-[var(--muted)] opacity-60 mb-4">
-            Blended estimate across {filteredHistory.length} source{filteredHistory.length !== 1 ? "s" : ""}{agg.min !== agg.max ? ` ranging ${agg.min}–${agg.max}${prediction.unit.includes("%") ? "%" : ""}` : ""}.{" "}
+            {filteredHistory.length} source{filteredHistory.length !== 1 ? "s" : ""}{agg.min !== agg.max ? ` ranging ${agg.min}–${agg.max}${prediction.unit.includes("%") ? "%" : ""}` : ""}{agg.max - agg.min > 10 ? " — significant disagreement" : ""}.{" "}
             <span
               className="underline cursor-pointer"
               onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.location.href = "/about#how-we-calculate"; }}
