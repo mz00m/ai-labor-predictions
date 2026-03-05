@@ -63,7 +63,7 @@ export default function Home() {
             How is AI <span className="text-[#F66B5C] italic">reshaping</span>
             <br className="hidden sm:block" /> the labor market?
           </h1>
-          <p className="mt-4 text-[17px] text-[var(--muted)] leading-relaxed max-w-2xl">
+          <p className="mt-4 text-[15px] text-[var(--muted)] leading-relaxed max-w-2xl">
             ~{totalSources} sources, one pattern. AI adoption is accelerating, productivity is climbing,
             entry-level and freelance work is compressing, and jobs are changing faster than
             they&apos;re disappearing.
@@ -73,8 +73,13 @@ export default function Home() {
           </p>
 
           {/* Hero data triad */}
-          <div className="mt-6 grid grid-cols-3 max-w-2xl border-t border-black/[0.06]">
-            <a href="#displacement" className="group/stat relative overflow-hidden py-6 px-4 no-underline text-center">
+          <div className="mt-6 grid grid-cols-3 border-t border-black/[0.06]">
+            <a href="#productivity" className="group/stat relative overflow-hidden py-6 px-4 no-underline text-center">
+              <span className="absolute inset-0 flex items-center justify-center stat-number text-[100px] sm:text-[130px] font-black leading-none pointer-events-none select-none transition-opacity duration-200 opacity-[0.06] group-hover/stat:opacity-[0.18]" style={{ color: 'var(--accent)', letterSpacing: '-0.09em' }}>15<span className="text-[40px] sm:text-[50px] font-normal opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 ml-0.5">%</span></span>
+              <p className="relative text-[10px] font-bold uppercase tracking-widest text-[var(--muted)] mb-1.5"><span className="text-[9px] font-light opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 mr-0.5">~</span>Productivity boost</p>
+              <p className="relative text-[11px] text-[var(--muted)] opacity-50 leading-snug">Noy &amp; Zhang, Goldman</p>
+            </a>
+            <a href="#displacement" className="group/stat relative overflow-hidden py-6 px-4 border-l border-black/[0.06] no-underline text-center">
               <span className="absolute inset-0 flex items-center justify-center stat-number text-[100px] sm:text-[130px] font-black leading-none text-black/[0.04] group-hover/stat:text-black/[0.10] transition-colors duration-200 pointer-events-none select-none">7<span className="text-[40px] sm:text-[50px] font-normal opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 ml-0.5">%</span></span>
               <p className="relative text-[10px] font-bold uppercase tracking-widest text-[var(--muted)] mb-1.5"><span className="text-[9px] font-light opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 mr-0.5">~</span>Projected job loss</p>
               <p className="relative text-[11px] text-[var(--muted)] opacity-50 leading-snug">WEF, Goldman, Forrester</p>
@@ -84,13 +89,8 @@ export default function Home() {
               <p className="relative text-[10px] font-bold uppercase tracking-widest text-[var(--muted)] mb-1.5"><span className="text-[9px] font-light opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 mr-0.5">~</span>Measured job loss</p>
               <p className="relative text-[11px] text-[var(--muted)] opacity-50 leading-snug">Yale, Goldman, Dallas Fed</p>
             </a>
-            <a href="#productivity" className="group/stat relative overflow-hidden py-6 px-4 border-l border-black/[0.06] no-underline text-center">
-              <span className="absolute inset-0 flex items-center justify-center stat-number text-[100px] sm:text-[130px] font-black leading-none pointer-events-none select-none transition-opacity duration-200 opacity-[0.06] group-hover/stat:opacity-[0.18]" style={{ color: 'var(--accent)', letterSpacing: '-0.09em' }}>15<span className="text-[40px] sm:text-[50px] font-normal opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 ml-0.5">%</span></span>
-              <p className="relative text-[10px] font-bold uppercase tracking-widest text-[var(--muted)] mb-1.5"><span className="text-[9px] font-light opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 mr-0.5">~</span>Productivity boost</p>
-              <p className="relative text-[11px] text-[var(--muted)] opacity-50 leading-snug">Noy &amp; Zhang, Goldman</p>
-            </a>
           </div>
-          <p className="mt-4 text-[13px] text-[var(--muted)] italic opacity-60 max-w-2xl">
+          <p className="mt-4 text-[13px] text-[var(--muted)] italic opacity-60">
             The gap between projection and reality defines this moment.
           </p>
         </div>
