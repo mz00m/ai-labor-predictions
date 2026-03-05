@@ -408,6 +408,15 @@
       ],
       "evidenceTier": 1,
       "label": "BLS JOLTS: Financial activities openings down 25.1% (-86K)"
+    },
+    {
+      "date": "2026-03-05",
+      "direction": "neutral",
+      "sourceIds": [
+        "anthropic-labor-market-impacts-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Anthropic: Most AI-exposed workers are educated, higher-paid \u2014 no unemployment rise found"
     }
   ],
   "sources": [
@@ -753,6 +762,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-01-14",
       "excerpt": "There is no evidence that job postings for junior roles within occupations most exposed to AI have declined more than postings for senior positions. Postings for both levels of seniority have been falling roughly in parallel since their peak in Spring 2022, with the decline in junior positions stabilizing faster."
+    },
+    {
+      "id": "anthropic-labor-market-impacts-2026",
+      "title": "Labor market impacts of AI: A new measure and early evidence",
+      "url": "https://cdn.sanity.io/files/4zrzovbb/website/dc7bcd0224644fce97cecb7f9e68dcd8434b35f1.pdf",
+      "publisher": "Anthropic (Massenkoff, McCrory)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-05",
+      "excerpt": "Workers in the most exposed professions are more likely to be older, female, more educated, and higher-paid. They earn 47% more, on average."
     },
     {
       "id": "bls-jolts-december-2025",

@@ -10,13 +10,22 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Anthropic (Massenkoff, McCrory)",
+    title: "Labor Market Impacts of AI: A New Measure and Early Evidence",
+    summary:
+      "Introduces 'observed exposure' combining LLM capability with real usage data. No unemployment rise found — but young worker hiring is slowing in exposed jobs.",
+    date: "Mar 5",
+    url: "https://www.anthropic.com/research/labor-market-impacts",
+    accent: "border-l-purple-500",
+  },
+  {
     author: "Chung",
     title: "Introducing AIR: The AI Resilience Report",
     summary:
       "The first canonical aggregator of research on how AI is impacting jobs at the occupational level — with implications and actions for job seekers.",
     date: "Mar 4",
     url: "https://www.linkedin.com/pulse/introducing-air-ai-resilience-report-jared-chung-gxfec",
-    accent: "border-l-purple-500",
+    accent: "border-l-rose-500",
   },
   {
     author: "Kinder (Brookings)",
@@ -25,7 +34,7 @@ const articles: Article[] = [
       "Millions of women in clerical and customer service roles face AI exposure — echoing manufacturing's toll on men.",
     date: "Mar 2",
     url: "https://humanistxyz.substack.com/p/what-deindustrialization-did-to-men",
-    accent: "border-l-rose-500",
+    accent: "border-l-blue-500",
   },
   {
     author: "Thompson",
@@ -34,15 +43,6 @@ const articles: Article[] = [
       "The knowledge vacuum around AI's effects allows speculative narratives to drive markets.",
     date: "Feb 25",
     url: "https://www.derekthompson.org/p/nobody-knows-anything",
-    accent: "border-l-blue-500",
-  },
-  {
-    author: "brexton",
-    title: "AI Is for the Rich",
-    summary:
-      "AI is socioeconomically gated — tokens are expensive, and only the wealthy can explore the frontier. Compounding advantage widens the divide.",
-    date: "Mar 4",
-    url: "https://x.com/brexton/status/2028947633323094019",
     accent: "border-l-emerald-500",
   },
 ];

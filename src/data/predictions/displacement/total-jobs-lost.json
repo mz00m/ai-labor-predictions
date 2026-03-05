@@ -205,6 +205,15 @@
       ],
       "evidenceTier": 2,
       "label": "Brookings: 6.1M workers (4.2%) face high AI exposure + low adaptive capacity"
+    },
+    {
+      "date": "2026-03-05",
+      "direction": "down",
+      "sourceIds": [
+        "anthropic-labor-market-impacts-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Anthropic: Young workers (22\u201325) see 14% hiring rate drop in AI-exposed occupations"
     }
   ],
   "sources": [
@@ -376,6 +385,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-01-21",
       "excerpt": "6.1 million workers (4.2% of the workforce in our sample) work in occupations that are both highly exposed and where workers have low expected adaptive capacity."
+    },
+    {
+      "id": "anthropic-labor-market-impacts-2026",
+      "title": "Labor market impacts of AI: A new measure and early evidence",
+      "url": "https://cdn.sanity.io/files/4zrzovbb/website/dc7bcd0224644fce97cecb7f9e68dcd8434b35f1.pdf",
+      "publisher": "Anthropic (Massenkoff, McCrory)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-05",
+      "excerpt": "The averaged estimate in the post-ChatGPT era is a 14% drop in the job finding rate compared to that in 2022 in the exposed occupations, although this is just barely statistically significant. (There is no such decrease for workers older than 25.)"
     }
   ]
 }

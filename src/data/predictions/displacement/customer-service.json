@@ -217,6 +217,15 @@
       ],
       "evidenceTier": 2,
       "label": "Brookings: CS reps face high AI exposure + low adaptive capacity"
+    },
+    {
+      "date": "2026-03-05",
+      "direction": "up",
+      "sourceIds": [
+        "anthropic-labor-market-impacts-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Anthropic: Customer service reps 70.1% observed AI task exposure, rising in API traffic"
     }
   ],
   "sources": [
@@ -395,6 +404,15 @@
       "evidenceTier": 1,
       "datePublished": "2025-02-10",
       "excerpt": "Customer service representatives, whose employment is projected to decline by 5.0 percent through 2033."
+    },
+    {
+      "id": "anthropic-labor-market-impacts-2026",
+      "title": "Labor market impacts of AI: A new measure and early evidence",
+      "url": "https://cdn.sanity.io/files/4zrzovbb/website/dc7bcd0224644fce97cecb7f9e68dcd8434b35f1.pdf",
+      "publisher": "Anthropic (Massenkoff, McCrory)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-05",
+      "excerpt": "Customer service representatives at 70.1% observed exposure, whose main tasks we increasingly see in first-party API traffic."
     }
   ]
 }

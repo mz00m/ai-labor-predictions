@@ -155,6 +155,25 @@
       ],
       "verified": true
     },
+    "anthropic-labor-market-impacts-2026": {
+      "id": "anthropic-labor-market-impacts-2026",
+      "title": "Labor market impacts of AI: A new measure and early evidence",
+      "url": "https://cdn.sanity.io/files/4zrzovbb/website/dc7bcd0224644fce97cecb7f9e68dcd8434b35f1.pdf",
+      "publisher": "Anthropic (Massenkoff, McCrory)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-05",
+      "excerpt": "We find no systematic increase in unemployment for highly exposed workers since late 2022, though we find suggestive evidence that hiring of younger workers has slowed in exposed occupations",
+      "usedIn": [
+        "overall-us-displacement",
+        "total-us-jobs-lost",
+        "workforce-ai-exposure",
+        "customer-service-automation",
+        "tech-sector-displacement",
+        "white-collar-professional-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
     "anthropic-economic-index-2025": {
       "id": "anthropic-economic-index-2025",
       "title": "The Anthropic Economic Index: Measuring AI's Real-World Impact",

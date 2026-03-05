@@ -191,6 +191,15 @@
       ],
       "evidenceTier": 1,
       "label": "Wang et al.: AI benchmarks cover 85% of work skills but only 57% of job domains"
+    },
+    {
+      "date": "2026-03-05",
+      "direction": "up",
+      "sourceIds": [
+        "anthropic-labor-market-impacts-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Anthropic: ~70% of workers have some observed AI task coverage; theoretical far exceeds actual"
     }
   ],
   "sources": [
@@ -329,6 +338,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-01-15",
       "excerpt": "In recent years, retail trade has the lowest share of tasks that have been automated — around 50% — whereas computers/electronics has the highest share — more than 85%."
+    },
+    {
+      "id": "anthropic-labor-market-impacts-2026",
+      "title": "Labor market impacts of AI: A new measure and early evidence",
+      "url": "https://cdn.sanity.io/files/4zrzovbb/website/dc7bcd0224644fce97cecb7f9e68dcd8434b35f1.pdf",
+      "publisher": "Anthropic (Massenkoff, McCrory)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-05",
+      "excerpt": "At the bottom end, 30% of workers have zero coverage, as their tasks appeared too infrequently in our data to meet the minimum threshold."
     }
   ]
 }

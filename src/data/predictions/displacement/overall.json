@@ -510,6 +510,15 @@
       ],
       "evidenceTier": 2,
       "label": "Challenger: AI cited in 8% of Jan\u2013Feb 2026 layoff plans (12,304 cuts)"
+    },
+    {
+      "date": "2026-03-05",
+      "direction": "neutral",
+      "sourceIds": [
+        "anthropic-labor-market-impacts-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Anthropic: No systematic unemployment increase for AI-exposed workers (DiD +0.20pp, n.s.)"
     }
   ],
   "sources": [
@@ -923,6 +932,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-03-05",
       "excerpt": "So far in 2026, AI has been cited for 12,304 job cut announcements, or 8% of job cut plans. In 2025, companies referenced AI for 54,836 announced layoff plans, 5% of total cuts during the year."
+    },
+    {
+      "id": "anthropic-labor-market-impacts-2026",
+      "title": "Labor market impacts of AI: A new measure and early evidence",
+      "url": "https://cdn.sanity.io/files/4zrzovbb/website/dc7bcd0224644fce97cecb7f9e68dcd8434b35f1.pdf",
+      "publisher": "Anthropic (Massenkoff, McCrory)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-05",
+      "excerpt": "We find no systematic increase in unemployment for highly exposed workers since late 2022, though we find suggestive evidence that hiring of younger workers has slowed in exposed occupations"
     },
     {
       "id": "jones-tonetti-weak-links-2026",
