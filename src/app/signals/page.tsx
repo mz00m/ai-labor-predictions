@@ -71,7 +71,7 @@ export default function SignalsPage() {
               href="#productivity-paths"
               className="text-[var(--accent)] hover:underline"
             >
-              <span className="font-semibold" style={{ color: "#dc2626" }}>Reduce</span>
+              <span className="font-semibold" style={{ color: "#F66B5C" }}>Reduce</span>
               {", "}
               <span className="font-semibold" style={{ color: "#16a34a" }}>Amplify</span>
               {", or "}

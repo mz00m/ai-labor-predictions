@@ -262,7 +262,7 @@ export default function PredictionSummaryCard({
             Blended estimate across {filteredHistory.length} source{filteredHistory.length !== 1 ? "s" : ""}{agg.min !== agg.max ? ` ranging ${agg.min}–${agg.max}${prediction.unit.includes("%") ? "%" : ""}` : ""}.{" "}
             <span
               className="underline cursor-pointer"
-              onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.location.hash = "how-we-calculate"; }}
+              onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.location.href = "/about#how-we-calculate"; }}
             >
               Methodology
             </span>

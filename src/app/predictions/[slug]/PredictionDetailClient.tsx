@@ -109,9 +109,9 @@ export default function PredictionDetailPage() {
   const agg = computeAggregate(prediction, selectedTiers);
 
   const trendColorClass = agg.trendIsBad
-    ? "text-red-600"
+    ? "text-[#F66B5C]"
     : agg.trend !== "flat" && !agg.trendIsBad
-      ? "text-emerald-600"
+      ? "text-[#16a34a]"
       : "text-[var(--muted)]";
 
   const bestSource = bestEstimate
@@ -175,7 +175,7 @@ export default function PredictionDetailPage() {
             ? "This is observed data from real-world surveys and measurements, not a prediction."
             : `Blended estimate across ${filteredHistory.length} sources${agg.min !== agg.max ? ` ranging ${agg.min}–${agg.max}${prediction.unit.includes("%") ? "%" : ""}` : ""}. Higher-tier evidence and more recent data are weighted more heavily.`}{" "}
           See the{" "}
-          <Link href="/#how-we-calculate" className="underline hover:text-[var(--foreground)]">
+          <Link href="/about#how-we-calculate" className="underline hover:text-[var(--foreground)]">
             full methodology
           </Link>{" "}
           for details on weighting, source validity, and recency bias.
@@ -200,7 +200,7 @@ export default function PredictionDetailPage() {
 
       {/* Section break — Indicators & Predictions */}
       <div className="relative -mx-6 sm:-mx-10">
-        <div className="h-1 bg-gradient-to-r from-emerald-500 via-blue-500 to-violet-500" />
+        <div className="h-1 bg-gradient-to-r from-[#5C61F6] via-[#E8A090] to-[#F66B5C]" />
         <div className="px-6 sm:px-10 pt-10 pb-2">
           <h2 className="text-[28px] sm:text-[36px] font-black tracking-tight text-[var(--foreground)] leading-tight mb-3">
             {prediction.timeHorizon.toLowerCase().includes("current")
