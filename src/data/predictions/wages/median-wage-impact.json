@@ -256,6 +256,15 @@
       ],
       "evidenceTier": 3,
       "label": "Furman (BLS): productivity 2.2% above CBO forecast; 2.8% annual growth"
+    },
+    {
+      "date": "2023-12-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "otis-kenyan-entrepreneurs-2023"
+      ],
+      "evidenceTier": 1,
+      "label": "Otis et al.: No avg AI effect on Kenyan SME revenue; high performers +15%, low -8%"
     }
   ],
   "sources": [
@@ -468,6 +477,15 @@
       "evidenceTier": 3,
       "datePublished": "2026-03-05",
       "excerpt": "Are we finally seeing AI in the productivity data? A big upward revision to earlier data and strong Q4 bring us 2.2% above CBO's pre-pandemic forecast. Annual rates: 1 year: 2.8%, 2 years: 2.5%, 6 years: 2.2%"
+    },
+    {
+      "id": "otis-kenyan-entrepreneurs-2023",
+      "title": "The Uneven Impact of Generative AI on Entrepreneurial Performance",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/24-042_05d87e28-7543-4644-b5a4-cba80e69c3e9.pdf",
+      "publisher": "HBS Working Paper (Otis, Clarke, Delecourt, Holtz, Koning)",
+      "evidenceTier": 1,
+      "datePublished": "2023-12-01",
+      "excerpt": "The paper reports no statistically significant average effect on revenues or profits. But effects are highly heterogeneous: high‑performing businesses at baseline appear to improve (roughly 15 percent), while low performers do worse (roughly 8-10 percent worse)"
     }
   ]
 }

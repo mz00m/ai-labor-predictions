@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-05",
-  "totalSources": 300,
-  "verifiedCount": 290,
+  "totalSources": 311,
+  "verifiedCount": 301,
   "sources": {
     "accenture-health-ai-2023": {
       "id": "accenture-health-ai-2023",
@@ -4070,6 +4070,146 @@
       "evidenceTier": 3,
       "datePublished": "2026-03-05",
       "excerpt": "Are we finally seeing AI in the productivity data? A big upward revision to earlier data and strong Q4 bring us 2.2% above CBO's pre-pandemic forecast. Annual rates: 1 year: 2.8%, 2 years: 2.5%, 6 years: 2.2%",
+      "usedIn": [
+        "median-wage-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "yotzov-firm-data-ai-2026": {
+      "id": "yotzov-firm-data-ai-2026",
+      "title": "Firm Data on AI",
+      "url": "https://www.nber.org/papers/w34836",
+      "publisher": "NBER (Yotzov, Barrero, Bloom, Bunn, Davis et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-15",
+      "excerpt": "Looking ahead three years, executives predict a 1.4 percent productivity boost and 0.8 percent output increase alongside a 0.7 percent employment reduction—while employees forecast a 0.5 percent employment increase.",
+      "usedIn": [
+        "total-us-jobs-lost"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "eisfeldt-genai-exposure-2025": {
+      "id": "eisfeldt-genai-exposure-2025",
+      "title": "Generative AI and Firm Values",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4375282",
+      "publisher": "SSRN (Eisfeldt, Schubert, Taska, Zhang)",
+      "evidenceTier": 1,
+      "datePublished": "2025-06-01",
+      "excerpt": "678 occupations having on average 23% of their tasks exposed to Generative AI",
+      "usedIn": [
+        "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "gommers-masai-lancet-2026": {
+      "id": "gommers-masai-lancet-2026",
+      "title": "Interval Cancer, Sensitivity, and Specificity Comparing AI-Supported Mammography Screening with Standard Double Reading without AI in the MASAI Study",
+      "url": "https://doi.org/10.1016/S0140-6736(25)00120-X",
+      "publisher": "The Lancet (Gommers, Hernström, Josefsson et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-15",
+      "excerpt": "In the AI group, screen readings fell from 109,692 to 61,248—a 44 percent workload reduction—while screen-detected cancers rose from 262 to 338, a 29 percent increase in detection.",
+      "usedIn": [
+        "healthcare-admin-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "cruces-galiani-education-gap-2026": {
+      "id": "cruces-galiani-education-gap-2026",
+      "title": "Does Generative AI Narrow Education-Based Productivity Gaps? Evidence from a Randomized Experiment",
+      "url": "https://www.nber.org/papers/w34851",
+      "publisher": "NBER (Cruces, Fernández Meijide, Galiani, Gálvez, Lombardi)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-01",
+      "excerpt": "Without AI, higher-education participants outperformed lower-education participants by 0.548 standard deviations. With AI access, this gap fell to 0.139 standard deviations—closing about 75 percent of the baseline productivity difference.",
+      "usedIn": [
+        "entry-level-wage-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "reimers-waldfogel-books-2026": {
+      "id": "reimers-waldfogel-books-2026",
+      "title": "AI and the Quantity and Quality of Creative Products: Have LLMs Boosted Creation of Valuable Books?",
+      "url": "https://www.nber.org/papers/w34777",
+      "publisher": "NBER (Reimers, Waldfogel)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-15",
+      "excerpt": "New book releases tripled over this period, but average quality declined... the authors estimate a potential steady-state consumer surplus gain of 25–50 percent from market expansion.",
+      "usedIn": [
+        "creative-industry-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "ju-aral-ai-teamwork-2025": {
+      "id": "ju-aral-ai-teamwork-2025",
+      "title": "Collaborating with AI Agents: Field Experiments on Teamwork, Productivity, and Performance",
+      "url": "https://arxiv.org/abs/2503.18238",
+      "publisher": "arXiv (Ju, Aral)",
+      "evidenceTier": 1,
+      "datePublished": "2025-06-01",
+      "excerpt": "Human-AI teams show roughly 73 percent higher productivity per worker for ad copy, though human-human teams remained superior for images.",
+      "usedIn": [
+        "creative-industry-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "yeverechyahu-copilot-languages-2024": {
+      "id": "yeverechyahu-copilot-languages-2024",
+      "title": "The Impact of Large Language Models on Open-source Innovation: Evidence from GitHub Copilot",
+      "url": "https://arxiv.org/abs/2409.08379",
+      "publisher": "arXiv (Yeverechyahu, Mayya, Oestreicher-Singer)",
+      "evidenceTier": 1,
+      "datePublished": "2024-09-01",
+      "excerpt": "They found a 37-55 percent increase in commits, mainly through contributions building on others' work like debugging or small edits.",
+      "usedIn": [
+        "tech-sector-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "gambacorta-codefuse-2024": {
+      "id": "gambacorta-codefuse-2024",
+      "title": "AI and Productivity: Evidence from CodeFuse",
+      "url": "https://www.bis.org/publ/work1208.htm",
+      "publisher": "BIS Working Paper (Gambacorta, Qiu, Shan, Rees)",
+      "evidenceTier": 1,
+      "datePublished": "2024-06-01",
+      "excerpt": "They show that 20 percent of the 55 percent total increase was directly attributable to AI-generated lines, suggesting genuine productivity effects beyond simple code generation.",
+      "usedIn": [
+        "tech-sector-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "paradis-google-ai-coding-2024": {
+      "id": "paradis-google-ai-coding-2024",
+      "title": "How much does AI impact development speed? An enterprise-based randomized controlled trial",
+      "url": "https://arxiv.org/abs/2410.12944",
+      "publisher": "Google (Paradis, Grey, Madison et al.)",
+      "evidenceTier": 2,
+      "datePublished": "2024-10-01",
+      "excerpt": "They found a 21 percent reduction in time spent per task. Interestingly, more experienced developers saw bigger effects, possibly because AI requires substantial verification and judgment rather than simply accepting generated code.",
+      "usedIn": [
+        "tech-sector-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "otis-kenyan-entrepreneurs-2023": {
+      "id": "otis-kenyan-entrepreneurs-2023",
+      "title": "The Uneven Impact of Generative AI on Entrepreneurial Performance",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/24-042_05d87e28-7543-4644-b5a4-cba80e69c3e9.pdf",
+      "publisher": "HBS Working Paper (Otis, Clarke, Delecourt, Holtz, Koning)",
+      "evidenceTier": 1,
+      "datePublished": "2023-12-01",
+      "excerpt": "The paper reports no statistically significant average effect on revenues or profits. But effects are highly heterogeneous: high‑performing businesses at baseline appear to improve (roughly 15 percent), while low performers do worse (roughly 8-10 percent worse)",
       "usedIn": [
         "median-wage-impact"
       ],

@@ -241,6 +241,15 @@
       ],
       "evidenceTier": 2,
       "label": "EIG/LinkedIn: Entry-level hiring rates -23% vs pre-pandemic (vs -18% overall)"
+    },
+    {
+      "date": "2026-02-01",
+      "direction": "up",
+      "sourceIds": [
+        "cruces-galiani-education-gap-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Cruces et al.: AI closes 75% of education-based productivity gap (RCT)"
     }
   ],
   "sources": [
@@ -440,6 +449,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-01-14",
       "excerpt": "entry-level hiring rates have declined 23 percent compared to pre-pandemic levels, a steeper drop than the 18 percent decline for overall hiring"
+    },
+    {
+      "id": "cruces-galiani-education-gap-2026",
+      "title": "Does Generative AI Narrow Education-Based Productivity Gaps? Evidence from a Randomized Experiment",
+      "url": "https://www.nber.org/papers/w34851",
+      "publisher": "NBER (Cruces, Fernández Meijide, Galiani, Gálvez, Lombardi)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-01",
+      "excerpt": "Without AI, higher-education participants outperformed lower-education participants by 0.548 standard deviations. With AI access, this gap fell to 0.139 standard deviations—closing about 75 percent of the baseline productivity difference."
     }
   ]
 }
