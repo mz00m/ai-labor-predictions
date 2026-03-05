@@ -214,6 +214,15 @@
       ],
       "evidenceTier": 1,
       "label": "Anthropic: Young workers (22\u201325) see 14% hiring rate drop in AI-exposed occupations"
+    },
+    {
+      "date": "2026-02-15",
+      "direction": "up",
+      "sourceIds": [
+        "yotzov-firm-data-ai-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Yotzov et al.: Executives predict 0.7% employment reduction in 3 years"
     }
   ],
   "sources": [
@@ -394,6 +403,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-03-05",
       "excerpt": "The averaged estimate in the post-ChatGPT era is a 14% drop in the job finding rate compared to that in 2022 in the exposed occupations, although this is just barely statistically significant. (There is no such decrease for workers older than 25.)"
+    },
+    {
+      "id": "yotzov-firm-data-ai-2026",
+      "title": "Firm Data on AI",
+      "url": "https://www.nber.org/papers/w34836",
+      "publisher": "NBER (Yotzov, Barrero, Bloom, Bunn, Davis et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-15",
+      "excerpt": "Looking ahead three years, executives predict a 1.4 percent productivity boost and 0.8 percent output increase alongside a 0.7 percent employment reduction—while employees forecast a 0.5 percent employment increase."
     }
   ]
 }

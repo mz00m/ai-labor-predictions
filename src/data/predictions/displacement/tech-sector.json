@@ -455,6 +455,33 @@
       "label": "Anthropic: Programmers highest AI exposure (74.5%) but no unemployment impact detected"
     },
     {
+      "date": "2024-09-01",
+      "direction": "up",
+      "sourceIds": [
+        "yeverechyahu-copilot-languages-2024"
+      ],
+      "evidenceTier": 1,
+      "label": "Yeverechyahu et al.: GitHub Copilot \u2192 37-55% increase in commits"
+    },
+    {
+      "date": "2024-06-01",
+      "direction": "up",
+      "sourceIds": [
+        "gambacorta-codefuse-2024"
+      ],
+      "evidenceTier": 1,
+      "label": "Gambacorta et al.: CodeFuse \u2192 55% increase in code output at Ant Group"
+    },
+    {
+      "date": "2024-10-01",
+      "direction": "up",
+      "sourceIds": [
+        "paradis-google-ai-coding-2024"
+      ],
+      "evidenceTier": 2,
+      "label": "Paradis et al. (Google): 21% reduction in coding time per task"
+    },
+    {
       "date": "2025-02-10",
       "direction": "down",
       "sourceIds": [
@@ -867,6 +894,33 @@
       "evidenceTier": 2,
       "datePublished": "2026-03-05",
       "excerpt": "Technology announced 11,039 job cuts in February for a total of 33,330 in 2026. That is an increase of 51% from the 22,042 cuts in this sector announced in the same period last year."
+    },
+    {
+      "id": "yeverechyahu-copilot-languages-2024",
+      "title": "The Impact of Large Language Models on Open-source Innovation: Evidence from GitHub Copilot",
+      "url": "https://arxiv.org/abs/2409.08379",
+      "publisher": "arXiv (Yeverechyahu, Mayya, Oestreicher-Singer)",
+      "evidenceTier": 1,
+      "datePublished": "2024-09-01",
+      "excerpt": "They found a 37-55 percent increase in commits, mainly through contributions building on others' work like debugging or small edits."
+    },
+    {
+      "id": "gambacorta-codefuse-2024",
+      "title": "AI and Productivity: Evidence from CodeFuse",
+      "url": "https://www.bis.org/publ/work1208.htm",
+      "publisher": "BIS Working Paper (Gambacorta, Qiu, Shan, Rees)",
+      "evidenceTier": 1,
+      "datePublished": "2024-06-01",
+      "excerpt": "They show that 20 percent of the 55 percent total increase was directly attributable to AI-generated lines, suggesting genuine productivity effects beyond simple code generation."
+    },
+    {
+      "id": "paradis-google-ai-coding-2024",
+      "title": "How much does AI impact development speed? An enterprise-based randomized controlled trial",
+      "url": "https://arxiv.org/abs/2410.12944",
+      "publisher": "Google (Paradis, Grey, Madison et al.)",
+      "evidenceTier": 2,
+      "datePublished": "2024-10-01",
+      "excerpt": "They found a 21 percent reduction in time spent per task. Interestingly, more experienced developers saw bigger effects, possibly because AI requires substantial verification and judgment rather than simply accepting generated code."
     }
   ],
   "marketIds": {

@@ -64,6 +64,17 @@
       "metricType": "survey"
     },
     {
+      "date": "2025-06-01",
+      "value": 23,
+      "confidenceLow": 18,
+      "confidenceHigh": 28,
+      "sourceIds": [
+        "eisfeldt-genai-exposure-2025"
+      ],
+      "evidenceTier": 1,
+      "metricType": "projection"
+    },
+    {
       "date": "2025-09-08",
       "value": 40,
       "confidenceLow": 30,
@@ -347,6 +358,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-03-05",
       "excerpt": "At the bottom end, 30% of workers have zero coverage, as their tasks appeared too infrequently in our data to meet the minimum threshold."
+    },
+    {
+      "id": "eisfeldt-genai-exposure-2025",
+      "title": "Generative AI and Firm Values",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4375282",
+      "publisher": "SSRN (Eisfeldt, Schubert, Taska, Zhang)",
+      "evidenceTier": 1,
+      "datePublished": "2025-06-01",
+      "excerpt": "678 occupations having on average 23% of their tasks exposed to Generative AI"
     }
   ]
 }

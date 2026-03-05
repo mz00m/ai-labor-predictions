@@ -210,6 +210,24 @@
       ],
       "evidenceTier": 4,
       "label": "CausalInf: Amazon book titles tripled post-ChatGPT, average quality fell"
+    },
+    {
+      "date": "2026-01-15",
+      "direction": "up",
+      "sourceIds": [
+        "reimers-waldfogel-books-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Reimers & Waldfogel: Book releases tripled 2022-2025; consumer surplus +25-50%"
+    },
+    {
+      "date": "2025-06-01",
+      "direction": "up",
+      "sourceIds": [
+        "ju-aral-ai-teamwork-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Ju & Aral: Human-AI teams 73% more productive per worker for ad copy"
     }
   ],
   "sources": [
@@ -392,6 +410,24 @@
       "evidenceTier": 4,
       "datePublished": "2026-03-02",
       "excerpt": "Reimers and Waldfogel studied what happened to book publishing after ChatGPT launched. The number of new titles on Amazon tripled. Average quality fell."
+    },
+    {
+      "id": "reimers-waldfogel-books-2026",
+      "title": "AI and the Quantity and Quality of Creative Products: Have LLMs Boosted Creation of Valuable Books?",
+      "url": "https://www.nber.org/papers/w34777",
+      "publisher": "NBER (Reimers, Waldfogel)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-15",
+      "excerpt": "New book releases tripled over this period, but average quality declined... the authors estimate a potential steady-state consumer surplus gain of 25–50 percent from market expansion."
+    },
+    {
+      "id": "ju-aral-ai-teamwork-2025",
+      "title": "Collaborating with AI Agents: Field Experiments on Teamwork, Productivity, and Performance",
+      "url": "https://arxiv.org/abs/2503.18238",
+      "publisher": "arXiv (Ju, Aral)",
+      "evidenceTier": 1,
+      "datePublished": "2025-06-01",
+      "excerpt": "Human-AI teams show roughly 73 percent higher productivity per worker for ad copy, though human-human teams remained superior for images."
     }
   ]
 }

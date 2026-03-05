@@ -177,6 +177,15 @@
       ],
       "evidenceTier": 1,
       "label": "BLS JOLTS: Healthcare openings down 10.8% (-152K) since Oct"
+    },
+    {
+      "date": "2026-01-15",
+      "direction": "down",
+      "sourceIds": [
+        "gommers-masai-lancet-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "MASAI trial (Lancet): 44% workload reduction in mammography screening"
     }
   ],
   "sources": [
@@ -332,6 +341,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-02-05",
       "excerpt": "Healthcare and social assistance openings down 10.8% (-152,000) since October."
+    },
+    {
+      "id": "gommers-masai-lancet-2026",
+      "title": "Interval Cancer, Sensitivity, and Specificity Comparing AI-Supported Mammography Screening with Standard Double Reading without AI in the MASAI Study",
+      "url": "https://doi.org/10.1016/S0140-6736(25)00120-X",
+      "publisher": "The Lancet (Gommers, Hernström, Josefsson et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-15",
+      "excerpt": "In the AI group, screen readings fell from 109,692 to 61,248—a 44 percent workload reduction—while screen-detected cancers rose from 262 to 338, a 29 percent increase in detection."
     }
   ]
 }
