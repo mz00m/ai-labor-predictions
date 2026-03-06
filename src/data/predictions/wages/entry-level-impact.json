@@ -198,6 +198,15 @@
       "label": "Dallas Fed: young worker share fell 16.4% \u2192 15.5%"
     },
     {
+      "date": "2026-01-14",
+      "direction": "down",
+      "sourceIds": [
+        "eig-entry-level-ai-displacement-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "EIG/LinkedIn: Entry-level hiring rates -23% vs pre-pandemic (vs -18% overall)"
+    },
+    {
       "date": "2026-01-15",
       "direction": "down",
       "sourceIds": [
@@ -225,24 +234,6 @@
       "label": "ICLE: pressure concentrated in entry-level segments of exposed occupations"
     },
     {
-      "date": "2026-02-24",
-      "direction": "down",
-      "sourceIds": [
-        "dallas-fed-davis-ai-wages-2026"
-      ],
-      "evidenceTier": 1,
-      "label": "Dallas Fed: AI exposure \u2192 0.28pp wage growth reduction in low-experience-premium jobs"
-    },
-    {
-      "date": "2026-01-14",
-      "direction": "down",
-      "sourceIds": [
-        "eig-entry-level-ai-displacement-2026"
-      ],
-      "evidenceTier": 2,
-      "label": "EIG/LinkedIn: Entry-level hiring rates -23% vs pre-pandemic (vs -18% overall)"
-    },
-    {
       "date": "2026-02-01",
       "direction": "up",
       "sourceIds": [
@@ -252,6 +243,15 @@
       "label": "Cruces et al.: AI closes 75% of education-based productivity gap (RCT)"
     },
     {
+      "date": "2026-02-24",
+      "direction": "down",
+      "sourceIds": [
+        "dallas-fed-davis-ai-wages-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Dallas Fed: AI exposure \u2192 0.28pp wage growth reduction in low-experience-premium jobs"
+    },
+    {
       "date": "2026-03-05",
       "direction": "down",
       "sourceIds": [
@@ -259,6 +259,15 @@
       ],
       "evidenceTier": 4,
       "label": "Shih: New grad tech hiring -50% since 2019; underemployment 42.5% (NY Fed Q4 2025)"
+    },
+    {
+      "date": "2026-03-05",
+      "direction": "down",
+      "sourceIds": [
+        "anthropic-labor-market-impacts-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Anthropic: AI exposure concentrates in credentialed roles (17.4% vs 4.5% grad degrees)"
     }
   ],
   "sources": [
@@ -472,10 +481,19 @@
       "id": "cruces-galiani-education-gap-2026",
       "title": "Does Generative AI Narrow Education-Based Productivity Gaps? Evidence from a Randomized Experiment",
       "url": "https://www.nber.org/papers/w34851",
-      "publisher": "NBER (Cruces, Fernández Meijide, Galiani, Gálvez, Lombardi)",
+      "publisher": "NBER (Cruces, Fern\u00e1ndez Meijide, Galiani, G\u00e1lvez, Lombardi)",
       "evidenceTier": 1,
       "datePublished": "2026-02-01",
-      "excerpt": "Without AI, higher-education participants outperformed lower-education participants by 0.548 standard deviations. With AI access, this gap fell to 0.139 standard deviations—closing about 75 percent of the baseline productivity difference."
+      "excerpt": "Without AI, higher-education participants outperformed lower-education participants by 0.548 standard deviations. With AI access, this gap fell to 0.139 standard deviations\u2014closing about 75 percent of the baseline productivity difference."
+    },
+    {
+      "id": "anthropic-labor-market-impacts-2026",
+      "title": "Labor market impacts of AI: A new measure and early evidence",
+      "url": "https://www.anthropic.com/research/labor-market-impacts",
+      "publisher": "Anthropic (Massenkoff, McCrory)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-05",
+      "excerpt": "Graduate degree holders comprise 17.4% of the most AI-exposed workers vs 4.5% of the unexposed group"
     }
   ]
 }

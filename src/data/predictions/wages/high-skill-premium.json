@@ -219,6 +219,15 @@
       ],
       "evidenceTier": 4,
       "label": "Cooper/ACS: Early-career CS salary $90K vs $55K all grads (2024)"
+    },
+    {
+      "date": "2026-03-05",
+      "direction": "up",
+      "sourceIds": [
+        "anthropic-labor-market-impacts-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Anthropic: AI-exposed workers earn 47% more than unexposed workers"
     }
   ],
   "sources": [
@@ -398,6 +407,15 @@
       "evidenceTier": 4,
       "datePublished": "2026-03-04",
       "excerpt": "The median salary for early-career CS majors was $90,000 in 2024. The median salary for all recent college graduates was just $55,000."
+    },
+    {
+      "id": "anthropic-labor-market-impacts-2026",
+      "title": "Labor market impacts of AI: A new measure and early evidence",
+      "url": "https://www.anthropic.com/research/labor-market-impacts",
+      "publisher": "Anthropic (Massenkoff, McCrory)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-05",
+      "excerpt": "Workers in the most exposed professions earn 47% more, on average, and are 16 percentage points more likely to be female"
     }
   ]
 }
