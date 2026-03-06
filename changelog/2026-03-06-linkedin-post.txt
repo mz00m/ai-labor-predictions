@@ -1,0 +1,28 @@
+📊 jobsdata.ai Weekly Update — Founding Week (March 1-6, 2026)
+
+This week we launched jobsdata.ai, a public dashboard tracking what the research actually says about AI's impact on jobs, wages, and workforce exposure across 17 prediction graphs. In five days we ingested 46 new peer-reviewed and institutional sources, and the data is already surfacing a pattern worth watching: the gap between projected displacement (6-8% of jobs by 2030) and measured displacement (effectively 0% so far) remains wide, but the leading indicators are accelerating.
+
+What's new this week:
+
+🔬 Research & data
+→ 46 new sources added (25 peer-reviewed, 14 think tank/intl org, 3 major press, 4 blog/opinion)
+→ Anthropic's labor market study found observed AI exposure across occupations but no aggregate unemployment rise yet, with young worker hiring showing the earliest slowdown
+→ A batch ingest of 10 studies from Imas's AI productivity review brought in randomized trials from Google (-21% coding time), The Lancet (44% radiology workload reduction), and NBER (book output tripled post-ChatGPT, quality declined)
+→ 23 new data points and 206 directional signals added across 16 prediction graphs
+
+📈 Data movements
+→ AI adoption rate updated from 10% to 17.5% based on Census Bureau BTOS biweekly data, a significant upward revision from prior survey-based estimates
+→ Tech-sector chart now splits observed vs projected trajectories: BLS projects programmer employment falling 9.6% through 2033 while software developer roles grow 17.9%, with Indeed posting data showing continued tech hiring freeze
+
+🛠️ Site updates
+→ New /signals page tracks 64 AI tool packages across 10 industries with BLS employment overlay, organized into a Now/Next/Later impact timeline
+→ New /history page contextualizes AI within four industrial revolutions, with compressed timelines reflecting 2-5x faster adoption than prior general-purpose technologies
+→ Global source search across all 316 tracked studies, searchable by title, publisher, and excerpt
+
+By the numbers: 149 commits · 476 files changed · 23 new data points · 206 directional signals · 46 sources added
+
+The founding week data raises a question that will define the next year of this initiative: if AI tool adoption is running at 2-5x the speed of prior general-purpose technologies, and entry-level hiring signals are already deteriorating (new grad tech hiring down 50% per Shih, entry-level postings down 23% per EIG), why hasn't aggregate employment moved? The answer likely sits in the Reduce/Amplify/Expand framework now on the signals page: most firms are amplifying output rather than reducing headcount. The question is how long that holds as AI capabilities compound.
+
+🔗 jobsdata.ai — tracking AI's real impact on work and wages
+
+#AIandWork #FutureOfWork #LaborMarket #EconomicMobility #WorkforceDevelopment #OpportunityAI
