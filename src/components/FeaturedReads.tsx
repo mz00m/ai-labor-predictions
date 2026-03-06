@@ -10,6 +10,15 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Raimondo (NYT Opinion)",
+    title: "America Cannot Withstand the Economic Shock That's Coming",
+    summary:
+      "Former Commerce Secretary calls for a new grand bargain between public and private sectors to prevent AI-driven mass unemployment.",
+    date: "Mar 6",
+    url: "https://www.nytimes.com/2026/03/06/opinion/ai-labor-unemployment.html",
+    accent: "border-l-emerald-500",
+  },
+  {
     author: "Anthropic (Massenkoff, McCrory)",
     title: "Labor Market Impacts of AI: A New Measure and Early Evidence",
     summary:
@@ -35,15 +44,6 @@ const articles: Article[] = [
     date: "Mar 2",
     url: "https://humanistxyz.substack.com/p/what-deindustrialization-did-to-men",
     accent: "border-l-blue-500",
-  },
-  {
-    author: "Thompson",
-    title: "Nobody Knows Anything",
-    summary:
-      "The knowledge vacuum around AI's effects allows speculative narratives to drive markets.",
-    date: "Feb 25",
-    url: "https://www.derekthompson.org/p/nobody-knows-anything",
-    accent: "border-l-emerald-500",
   },
 ];
 
