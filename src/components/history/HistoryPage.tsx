@@ -56,7 +56,14 @@ export default function HistoryPage() {
             Every GPT Follows the Same Arc
           </h2>
           <p className="text-[14px] text-[var(--muted)] leading-[1.75] mb-8">
-            Every major general-purpose technology follows a predictable
+            Every major general-purpose technology (
+            <a
+              href="https://en.wikipedia.org/wiki/General-purpose_technology"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline decoration-[var(--accent)]/40 hover:decoration-[var(--accent)] transition-colors"
+            >GPT</a>
+            ) follows a predictable
             five-phase arc. The names change, but the shape is the same.
             Steam, electricity, computers &mdash; each transformed the
             labor market through the same sequence of emergence, diffusion,
