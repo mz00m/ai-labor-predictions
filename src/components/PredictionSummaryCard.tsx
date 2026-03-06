@@ -156,7 +156,8 @@ export default function PredictionSummaryCard({
   const [showNote, setShowNote] = useState(false);
   const best = getBestEstimate(prediction, selectedTiers);
   const agg = computeAggregate(prediction, selectedTiers);
-  const contextLine = getContextLine(prediction, agg.mean);
+  const headlineValue = prediction.currentValue ?? agg.mean;
+  const contextLine = getContextLine(prediction, headlineValue);
   const annotation = getResearchAnnotation(prediction.slug);
   const filteredHistory = prediction.history.filter((d) =>
     selectedTiers.includes(d.evidenceTier)
@@ -236,8 +237,8 @@ export default function PredictionSummaryCard({
           {/* Big number + source range + trend */}
           <div className="flex items-baseline gap-3 mb-3">
             <span className="stat-number text-[44px] font-black text-[var(--foreground)] leading-none">
-              {agg.mean > 0 && prediction.category === "wages" ? "+" : ""}
-              {Number.isInteger(agg.mean) ? agg.mean : agg.mean.toFixed(1)}
+              {headlineValue > 0 && prediction.category === "wages" ? "+" : ""}
+              {Number.isInteger(headlineValue) ? headlineValue : headlineValue.toFixed(1)}
               <span className="text-[18px] font-normal text-[var(--muted)] opacity-50 ml-0.5">
                 {prediction.unit.includes("%") ? "%" : ` ${prediction.unit}`}
               </span>

@@ -107,6 +107,7 @@ export default function PredictionDetailPage() {
   const bestEstimate = sortedDesc.find((d) => d.evidenceTier === 1) || sortedDesc[0];
 
   const agg = computeAggregate(prediction, selectedTiers);
+  const headlineValue = prediction.currentValue ?? agg.mean;
 
   const trendColorClass = agg.trendIsBad
     ? "text-[#F66B5C]"
@@ -121,7 +122,7 @@ export default function PredictionDetailPage() {
 
   const contextFn = CONTEXT_MAP[prediction.slug];
   const contextText = contextFn
-    ? contextFn(agg.mean)
+    ? contextFn(headlineValue)
     : prediction.description;
 
   return (
@@ -149,8 +150,8 @@ export default function PredictionDetailPage() {
         {/* Big number + source range + trend arrow */}
         <div className="flex items-baseline gap-4 mb-4">
           <span className="stat-number text-[56px] sm:text-[72px] font-black text-[var(--foreground)] leading-none">
-            {agg.mean > 0 && prediction.category === "wages" ? "+" : ""}
-            {Number.isInteger(agg.mean) ? agg.mean : agg.mean.toFixed(1)}
+            {headlineValue > 0 && prediction.category === "wages" ? "+" : ""}
+            {Number.isInteger(headlineValue) ? headlineValue : headlineValue.toFixed(1)}
             <span className="text-[24px] font-normal text-[var(--muted)] ml-1">
               {prediction.unit.includes("%") ? "%" : ` ${prediction.unit}`}
             </span>
