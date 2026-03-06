@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-05",
-  "totalSources": 312,
-  "verifiedCount": 302,
+  "totalSources": 313,
+  "verifiedCount": 303,
   "sources": {
     "accenture-health-ai-2023": {
       "id": "accenture-health-ai-2023",
@@ -250,6 +250,20 @@
         "creative-industry-displacement"
       ],
       "verified": true
+    },
+    "autor-kausik-automation-paradox-2026": {
+      "id": "autor-kausik-automation-paradox-2026",
+      "title": "Resolving the Automation Paradox: Falling Labor Share, Rising Wages",
+      "url": "https://arxiv.org/abs/2601.06343",
+      "publisher": "NBER / arXiv (Autor, Kausik)",
+      "evidenceTier": 1,
+      "datePublished": "2025-12-30",
+      "excerpt": "falling labor share accounted for 16% of U.S. real wage growth between 1954 and 2019",
+      "usedIn": [
+        "median-wage-impact"
+      ],
+      "verified": true,
+      "synthetic": false
     },
     "bick-blandin-deming-nber-2025": {
       "id": "bick-blandin-deming-nber-2025",

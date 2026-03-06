@@ -195,6 +195,24 @@
       "label": "Goldman Sachs: AI to raise labor productivity ~15% when fully adopted"
     },
     {
+      "date": "2025-12-30",
+      "direction": "up",
+      "sourceIds": [
+        "autor-kausik-automation-paradox-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Autor (NBER): Falling labor share drove 16% of US real wage growth; automation paradoxically raises wages"
+    },
+    {
+      "date": "2025-12-30",
+      "direction": "up",
+      "sourceIds": [
+        "autor-kausik-automation-paradox-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Autor (NBER): Further automation should raise wages in all 12 industrialized countries studied"
+    },
+    {
       "date": "2026-01-01",
       "direction": "up",
       "sourceIds": [
@@ -486,6 +504,15 @@
       "evidenceTier": 1,
       "datePublished": "2023-12-01",
       "excerpt": "The paper reports no statistically significant average effect on revenues or profits. But effects are highly heterogeneous: high‑performing businesses at baseline appear to improve (roughly 15 percent), while low performers do worse (roughly 8-10 percent worse)"
+    },
+    {
+      "id": "autor-kausik-automation-paradox-2026",
+      "title": "Resolving the Automation Paradox: Falling Labor Share, Rising Wages",
+      "url": "https://arxiv.org/abs/2601.06343",
+      "publisher": "NBER / arXiv (Autor, Kausik)",
+      "evidenceTier": 1,
+      "datePublished": "2025-12-30",
+      "excerpt": "falling labor share accounted for 16% of U.S. real wage growth between 1954 and 2019"
     }
   ]
 }
