@@ -9,7 +9,13 @@
     "lint": "next lint",
     "digest": "tsx scripts/generate-digest.ts",
     "digest:14": "tsx scripts/generate-digest.ts --days 14",
+    "digest:fetch": "tsx scripts/fetch-sources.ts",
+    "digest:synthesize": "tsx scripts/synthesize-digest.ts",
+    "digest:pipeline": "tsx scripts/fetch-sources.ts && tsx scripts/synthesize-digest.ts",
+    "digest:dry-run": "tsx scripts/fetch-sources.ts && tsx scripts/synthesize-digest.ts --dry-run",
     "ingest": "tsx scripts/ingest-source.ts",
+    "ingest:from-digest": "tsx scripts/ingest-from-digest.ts",
+    "ingest:apply": "tsx scripts/apply-ingestion.ts",
     "signals:fetch": "python3 scripts/signals/fetch_all.py",
     "signals:calc": "python3 scripts/signals/calculate_metrics.py",
     "signals:update": "python3 scripts/signals/fetch_all.py"

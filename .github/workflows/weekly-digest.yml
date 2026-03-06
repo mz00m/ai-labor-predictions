@@ -2,8 +2,17 @@ name: Weekly Research Digest
 
 on:
   schedule:
-    - cron: '0 8 * * 1' # Monday 8am UTC
-  workflow_dispatch: {} # Manual trigger
+    - cron: '0 8 * * 1'  # Monday 8am UTC
+  workflow_dispatch:
+    inputs:
+      auto_ingest:
+        description: 'Auto-ingest top highlights into jobsdata.ai prediction files'
+        type: boolean
+        default: false
+      use_cache:
+        description: 'Use cached source data from last run (skip fetch)'
+        type: boolean
+        default: false
 
 jobs:
   generate:
@@ -11,8 +20,11 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
+
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - uses: actions/setup-node@v4
         with:
@@ -21,15 +33,53 @@ jobs:
 
       - run: npm ci
 
-      - name: Generate weekly digest
-        run: npx tsx scripts/generate-digest.ts --days 14
+      # Phase 1: Fetch sources (skip if use_cache is true)
+      - name: Fetch sources
+        if: inputs.use_cache != true
+        run: npx tsx scripts/fetch-sources.ts --days 14 --output .digest-cache/latest.json
         env:
           SCOPUS_API_KEY: ${{ secrets.SCOPUS_API_KEY }}
           CORE_API_KEY: ${{ secrets.CORE_API_KEY }}
           TWITTER_BEARER_TOKEN: ${{ secrets.TWITTER_BEARER_TOKEN }}
           GOOGLE_CSE_KEY: ${{ secrets.GOOGLE_CSE_KEY }}
           GOOGLE_CSE_ID: ${{ secrets.GOOGLE_CSE_ID }}
+          SEMANTIC_SCHOLAR_API_KEY: ${{ secrets.SEMANTIC_SCHOLAR_API_KEY }}
+          BLS_API_KEY: ${{ secrets.BLS_API_KEY }}
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+
+      # Phase 2: Synthesize digest via Claude
+      - name: Synthesize digest
+        run: npx tsx scripts/synthesize-digest.ts --input .digest-cache/latest.json
+        env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      # Phase 3 (optional): Stage ingestion candidates
+      - name: Stage ingestion candidates
+        if: inputs.auto_ingest == true || github.event_name == 'schedule'
+        run: |
+          WEEK_ID=$(date -u +%Y-W%V)
+          DIGEST_FILE="src/data/digests/${WEEK_ID}.json"
+          if [ -f "$DIGEST_FILE" ]; then
+            npx tsx scripts/ingest-from-digest.ts "$DIGEST_FILE"
+          else
+            echo "Digest file not found: $DIGEST_FILE — skipping ingestion staging"
+          fi
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      # Phase 3b (optional): Apply ingestion for fully automated runs
+      - name: Apply ingestion
+        if: inputs.auto_ingest == true
+        run: |
+          WEEK_ID=$(date -u +%Y-W%V)
+          STAGING_FILE="src/data/digests/${WEEK_ID}.ingest-staging.json"
+          if [ -f "$STAGING_FILE" ]; then
+            npx tsx scripts/apply-ingestion.ts "$STAGING_FILE" --approve-all
+          else
+            echo "Staging file not found: $STAGING_FILE — skipping ingestion apply"
+          fi
 
       - name: Configure git identity
         run: |
@@ -39,11 +89,11 @@ jobs:
       - name: Check for changes
         id: changes
         run: |
-          git add src/data/digests/
-          if git diff --cached --quiet -- 'src/data/digests/'; then
+          git add src/data/digests/ src/data/predictions/ src/data/confirmed-sources.json src/data/last-updated.json 2>/dev/null || true
+          if git diff --cached --quiet; then
             echo "has_changes=false" >> "$GITHUB_OUTPUT"
           else
-            git reset -- src/data/digests/
+            git reset 2>/dev/null || true
             echo "has_changes=true" >> "$GITHUB_OUTPUT"
           fi
 
@@ -55,13 +105,22 @@ jobs:
           WEEK_ID=$(date -u +%Y-W%V)
           BRANCH="digest/${WEEK_ID}"
           DIGEST_FILE="src/data/digests/${WEEK_ID}.json"
-          SUMMARY=$(npx tsx scripts/digest-summary.ts "$DIGEST_FILE")
+          META_FILE="src/data/digests/${WEEK_ID}.meta.json"
+
+          SUMMARY=$(npx tsx scripts/digest-summary.ts "$DIGEST_FILE" "$META_FILE")
+
           git checkout -b "$BRANCH"
-          git add src/data/digests/
+          git add src/data/digests/ src/data/predictions/ src/data/confirmed-sources.json src/data/last-updated.json 2>/dev/null || true
           git commit -m "chore: weekly research digest ${WEEK_ID} [automated]"
           git push -u origin "$BRANCH"
+
           gh pr create \
             --title "Weekly Digest: ${WEEK_ID}" \
             --body "$SUMMARY" \
             --draft \
-            --assignee "${{ github.repository_owner }}"
+            --assignee "${{ github.repository_owner }}" \
+            --label "automated,digest"
+
+      - name: Skip message
+        if: steps.changes.outputs.has_changes == 'false'
+        run: echo "No new digest content this week — skipping PR creation."
