@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-03-05",
-  "totalSources": 313,
-  "verifiedCount": 303,
+  "lastUpdated": "2026-03-06",
+  "totalSources": 316,
+  "verifiedCount": 306,
   "sources": {
     "accenture-health-ai-2023": {
       "id": "accenture-health-ai-2023",
@@ -4240,6 +4240,51 @@
       "excerpt": "The paper reports no statistically significant average effect on revenues or profits. But effects are highly heterogeneous: high‑performing businesses at baseline appear to improve (roughly 15 percent), while low performers do worse (roughly 8-10 percent worse)",
       "usedIn": [
         "median-wage-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "arxiv-how-well-does-2026": {
+      "id": "arxiv-how-well-does-2026",
+      "title": "How Well Does Agent Development Reflect Real-World Work?",
+      "url": "http://arxiv.org/abs/2603.01203v1",
+      "publisher": "arxiv.org",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-01",
+      "excerpt": "We first analyze 43 benchmarks and 72,342 tasks, measuring their alignment with human employment and capital allocation across all 1,016 real-world occupations in the U.S. labor market.",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "arxiv-ai-skills-improve-2026": {
+      "id": "arxiv-ai-skills-improve-2026",
+      "title": "AI Skills Improve Job Prospects: Causal Evidence from a Hiring Experiment",
+      "url": "http://arxiv.org/abs/2601.13286v2",
+      "publisher": "arxiv.org",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-19",
+      "excerpt": "AI skills significantly increase interview invitation probabilities by approximately 8 to 15 percentage points, compared with candidates without such skills",
+      "usedIn": [
+        "overall-us-displacement",
+        "genai-work-adoption"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "arxiv-what-do-professional-2025": {
+      "id": "arxiv-what-do-professional-2025",
+      "title": "What do professional software developers need to know to succeed in an age of Artificial Intelligence?",
+      "url": "http://arxiv.org/abs/2506.00202v3",
+      "publisher": "arxiv.org",
+      "evidenceTier": 1,
+      "datePublished": "2025-05-30",
+      "excerpt": "We describe our research with 21 developers at the cutting edge of using AI",
+      "usedIn": [
+        "overall-us-displacement",
+        "genai-work-adoption",
+        "ai-adoption-rate"
       ],
       "verified": true,
       "synthetic": false

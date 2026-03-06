@@ -2,7 +2,7 @@
   "id": "genai-work-adoption",
   "slug": "genai-work-adoption",
   "title": "Generative AI Adoption",
-  "description": "Share of U.S. working-age adults (18\u201364) using generative AI at work, from a nationally representative quarterly survey (Real-Time Population Survey). Work adoption (40.7%) lags overall use (55.9%), consistent with workers adopting ahead of their employers. Overall adoption has outpaced both the PC and internet at comparable points post-launch.",
+  "description": "Share of U.S. working-age adults (18–64) using generative AI at work, from a nationally representative quarterly survey (Real-Time Population Survey). Work adoption (40.7%) lags overall use (55.9%), consistent with workers adopting ahead of their employers. Overall adoption has outpaced both the PC and internet at comparable points post-launch.",
   "category": "adoption",
   "unit": "% of adults at work",
   "currentValue": 43,
@@ -28,7 +28,7 @@
     },
     {
       "date": "2024-11-01",
-      "value": 31.0,
+      "value": 31,
       "sourceIds": [
         "bick-blandin-deming-wp-2025"
       ],
@@ -92,13 +92,22 @@
       "label": "Workday Davos: 59% of depts using AI + 31% experimenting (n=2,500)"
     },
     {
+      "date": "2025-05-30",
+      "direction": "up",
+      "sourceIds": [
+        "arxiv-what-do-professional-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "21 developers studied at cutting edge of AI use in software development"
+    },
+    {
       "date": "2026-01-14",
       "direction": "up",
       "sourceIds": [
         "workday-ai-productivity-rework-2026"
       ],
       "evidenceTier": 2,
-      "label": "Workday: 85% of employees save 1\u20137 hrs/wk with AI (n=3,200)"
+      "label": "Workday: 85% of employees save 1–7 hrs/wk with AI (n=3,200)"
     },
     {
       "date": "2026-01-14",
@@ -108,6 +117,15 @@
       ],
       "evidenceTier": 2,
       "label": "Workday: >90% of daily AI users believe it will help them succeed"
+    },
+    {
+      "date": "2026-01-19",
+      "direction": "up",
+      "sourceIds": [
+        "arxiv-ai-skills-improve-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "AI skills increase interview invitations by 8-15 percentage points"
     },
     {
       "date": "2026-03-04",
@@ -154,7 +172,7 @@
       "publisher": "Workday / Hanover Research",
       "evidenceTier": 2,
       "datePublished": "2026-01-14",
-      "excerpt": "85% of employees report saving one to seven hours per week using AI. Employees who use AI every day are overwhelmingly optimistic \u2013 more than 90% believe it will help them succeed."
+      "excerpt": "85% of employees report saving one to seven hours per week using AI. Employees who use AI every day are overwhelmingly optimistic – more than 90% believe it will help them succeed."
     },
     {
       "id": "workday-ai-skills-revolution-2025",
@@ -173,6 +191,24 @@
       "evidenceTier": 4,
       "datePublished": "2026-03-04",
       "excerpt": "PMs and marketers should default to an AI interface. These functions should be doing 80-100% of their work through a chat interface."
+    },
+    {
+      "id": "arxiv-ai-skills-improve-2026",
+      "title": "AI Skills Improve Job Prospects: Causal Evidence from a Hiring Experiment",
+      "url": "http://arxiv.org/abs/2601.13286v2",
+      "publisher": "arxiv.org",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-19",
+      "excerpt": "AI skills significantly increase interview invitation probabilities by approximately 8 to 15 percentage points, compared with candidates without such skills"
+    },
+    {
+      "id": "arxiv-what-do-professional-2025",
+      "title": "What do professional software developers need to know to succeed in an age of Artificial Intelligence?",
+      "url": "http://arxiv.org/abs/2506.00202v3",
+      "publisher": "arxiv.org",
+      "evidenceTier": 1,
+      "datePublished": "2025-05-30",
+      "excerpt": "We describe our research with 21 developers at the cutting edge of using AI"
     }
   ]
 }

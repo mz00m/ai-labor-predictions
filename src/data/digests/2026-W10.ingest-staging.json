@@ -1,0 +1,128 @@
+{
+  "week": "2026-W10",
+  "generatedAt": "2026-03-06T02:52:56.807Z",
+  "candidates": [
+    {
+      "highlight": {
+        "title": "How Well Does Agent Development Reflect Real-World Work?",
+        "summary": "AI agents are increasingly developed and evaluated on benchmarks relevant to human work, yet it remains unclear how representative these benchmarking efforts are of the labor market as a whole. In this work, we systematically study the relationship between agent development efforts and the distribution of real-world human work by mapping benchmark instances to work domains and skills. We first analyze 43 benchmarks and 72,342 tasks, measuring their alignment with human employment and capital all",
+        "source": "http://arxiv.org/abs/2603.01203v1",
+        "authors": [
+          "Zora Zhiruo Wang",
+          "Sanidhya Vijayvargiya",
+          "Aspen Chen",
+          "Hanmo Zhang",
+          "Venu Arvind Arangarajan",
+          "Jett Chen",
+          "Valerie Chen",
+          "Diyi Yang",
+          "Daniel Fried",
+          "Graham Neubig"
+        ],
+        "publishedAt": "2026-03-01",
+        "score": 0.45,
+        "sourceAdapter": "arxiv",
+        "graphSlug": {
+          "slug": "overall-us-displacement",
+          "title": "Overall US Job Displacement by 2030",
+          "relevanceScore": 6
+        }
+      },
+      "sourceId": "arxiv-how-well-does-2026",
+      "evidenceTier": 1,
+      "extractedStats": [
+        {
+          "graphSlug": "overall-us-displacement",
+          "type": "overlay",
+          "direction": "neutral",
+          "overlayLabel": "Agent development analyzed across 43 benchmarks and 72,342 tasks vs 1,016 jobs",
+          "quote": "We first analyze 43 benchmarks and 72,342 tasks, measuring their alignment with human employment and capital allocation across all 1,016 real-world occupations in the U.S. labor market."
+        },
+        {
+          "graphSlug": "overall-us-displacement",
+          "type": "overlay",
+          "direction": "neutral",
+          "overlayLabel": "Substantial mismatches found between agent development and human labor focus",
+          "quote": "We reveal substantial mismatches between agent development that tends to be programming-centric, and the categories in which human labor and economic value are concentrated."
+        }
+      ]
+    },
+    {
+      "highlight": {
+        "title": "AI Skills Improve Job Prospects: Causal Evidence from a Hiring Experiment",
+        "summary": "The growing adoption of artificial intelligence (AI) technologies has heightened interest in the labor market value of AI related skills, yet causal evidence on their role in hiring decisions remains scarce. This study examines whether AI skills serve as a positive hiring signal and whether they can offset conventional disadvantages such as older age or lower formal education. We conducted an experimental survey with 1,725 recruiters from the United Kingdom, the United States and Germany. Using ",
+        "source": "http://arxiv.org/abs/2601.13286v2",
+        "authors": [
+          "Fabian Stephany",
+          "Ole Teutloff",
+          "Angelo Leone"
+        ],
+        "publishedAt": "2026-01-19",
+        "score": 0.43,
+        "sourceAdapter": "arxiv",
+        "graphSlug": {
+          "slug": "creative-industry-displacement",
+          "title": "Creative Industry Displacement by 2030",
+          "relevanceScore": 9
+        }
+      },
+      "sourceId": "arxiv-ai-skills-improve-2026",
+      "evidenceTier": 1,
+      "extractedStats": [
+        {
+          "graphSlug": "genai-work-adoption",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "AI skills increase interview invitations by 8-15 percentage points",
+          "quote": "AI skills significantly increase interview invitation probabilities by approximately 8 to 15 percentage points, compared with candidates without such skills"
+        }
+      ]
+    },
+    {
+      "highlight": {
+        "title": "What do professional software developers need to know to succeed in an age of Artificial Intelligence?",
+        "summary": "Generative AI is showing early evidence of productivity gains for software developers, but concerns persist regarding workforce disruption and deskilling. We describe our research with 21 developers at the cutting edge of using AI, summarizing 12 of their work goals we uncovered, together with 75 associated tasks and the skills &amp; knowledge for each, illustrating how developers use AI at work. From all of these, we distilled our findings in the form of 5 insights. We found that the skills &am",
+        "source": "http://arxiv.org/abs/2506.00202v3",
+        "authors": [
+          "Matthew Kam",
+          "Cody Miller",
+          "Miaoxin Wang",
+          "Abey Tidwell",
+          "Irene A. Lee",
+          "Joyce Malyn-Smith",
+          "Beatriz Perez",
+          "Vikram Tiwari",
+          "Joshua Kenitzer",
+          "Andrew Macvean",
+          "Erin Barrar"
+        ],
+        "publishedAt": "2025-05-30",
+        "score": 0.37,
+        "sourceAdapter": "arxiv",
+        "graphSlug": {
+          "slug": "tech-sector-displacement",
+          "title": "Tech Sector Job Displacement by 2030",
+          "relevanceScore": 6
+        }
+      },
+      "sourceId": "arxiv-what-do-professional-2025",
+      "evidenceTier": 1,
+      "extractedStats": [
+        {
+          "graphSlug": "genai-work-adoption",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "21 developers studied at cutting edge of AI use in software development",
+          "quote": "We describe our research with 21 developers at the cutting edge of using AI"
+        },
+        {
+          "graphSlug": "ai-adoption-rate",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "Generative AI showing early productivity gains for software developers",
+          "quote": "Generative AI is showing early evidence of productivity gains for software developers"
+        }
+      ]
+    }
+  ]
+}
