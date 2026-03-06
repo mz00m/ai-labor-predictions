@@ -111,12 +111,12 @@ export default function RevolutionCards() {
   return (
     <div>
       {/* Tab buttons */}
-      <div className="flex flex-wrap gap-2 mb-6">
+      <div className="flex gap-2 mb-6">
         {REVOLUTIONS.map((r) => (
           <button
             key={r.id}
             onClick={() => setActiveTab(r.id)}
-            className={`px-3 py-1.5 rounded-md text-[12px] font-medium border transition-colors duration-150 ${
+            className={`px-2.5 py-1.5 rounded-md text-[11px] sm:text-[12px] font-medium border transition-colors duration-150 whitespace-nowrap ${
               activeTab === r.id
                 ? "text-white border-transparent"
                 : "text-[var(--muted)] border-black/[0.08] hover:border-black/[0.15] bg-white"
@@ -131,7 +131,7 @@ export default function RevolutionCards() {
               <span className="mr-1">&#11088;</span>
             )}
             {r.title}
-            <span className="ml-1 opacity-70">{r.period}</span>
+            <span className="ml-1 opacity-70 hidden lg:inline">{r.period}</span>
           </button>
         ))}
       </div>

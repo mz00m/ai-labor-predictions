@@ -171,9 +171,12 @@ export default function CompressionComparison() {
       {/* ---- Header ---- */}
       <div>
         <div className="flex items-center gap-2 mb-2">
-          <span className="text-[11px] font-bold uppercase tracking-wider text-white bg-[var(--accent)] px-2.5 py-1 rounded-full">
-            10× faster
-          </span>
+          <a
+            href="#diffusion-comparison"
+            className="text-[11px] font-bold uppercase tracking-wider text-white bg-[var(--accent)] px-2.5 py-1 rounded-full hover:bg-[var(--accent)]/90 transition-colors cursor-pointer no-underline"
+          >
+            5–12× faster ↓
+          </a>
           <span className="text-[11px] font-bold uppercase tracking-widest text-[var(--accent)]">
             Historical Compression
           </span>
@@ -814,18 +817,20 @@ export default function CompressionComparison() {
             className="text-[28px] font-extrabold text-[var(--accent)]"
             style={{ fontVariantNumeric: "tabular-nums" }}
           >
-            10×
+            5–12×
           </div>
           <div className="text-[12px] font-semibold text-[var(--foreground)] mt-1">
             Faster Diffusion
           </div>
           <div className="text-[11px] text-[var(--muted)] mt-1 leading-relaxed">
-            ChatGPT: 100M users in 2 months
+            Range depends on comparison
             <br />
-            Internet: 7 yrs &middot; PC: 10+ yrs
+            <a href="#diffusion-comparison" className="text-[var(--accent)] underline underline-offset-2">
+              See methodology &darr;
+            </a>
           </div>
           <div className="text-[10px] text-[var(--muted)] mt-1 italic">
-            McKinsey; Microsoft AI Diffusion Report
+            Multiple sources; see table below
           </div>
         </div>
 

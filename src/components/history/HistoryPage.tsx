@@ -6,6 +6,7 @@ import RevolutionCards from "./RevolutionCards";
 import ComparisonMatrix from "./ComparisonMatrix";
 import ForecastColumns from "./ForecastColumns";
 import VulnerabilityTable from "./VulnerabilityTable";
+import DiffusionComparison from "./DiffusionComparison";
 
 export default function HistoryPage() {
   return (
@@ -282,6 +283,13 @@ export default function HistoryPage() {
               does not decide. We do.
             </p>
           </blockquote>
+        </div>
+      </section>
+
+      {/* ───── Section: Diffusion Comparison Source ───── */}
+      <section className="mb-12">
+        <div className="border-t border-black/[0.06] pt-8">
+          <DiffusionComparison />
         </div>
       </section>
     </article>
