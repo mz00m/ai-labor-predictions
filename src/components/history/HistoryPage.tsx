@@ -63,14 +63,13 @@ export default function HistoryPage() {
               rel="noopener noreferrer"
               className="underline decoration-[var(--accent)]/40 hover:decoration-[var(--accent)] transition-colors"
             >general-purpose technology</a>{" "}
-            (GPT &mdash; not to be confused with{" "}
+            (GPT, not to be confused with{" "}
             <a
               href="https://en.wikipedia.org/wiki/Generative_pre-trained_transformer"
               target="_blank"
               rel="noopener noreferrer"
               className="underline decoration-[var(--accent)]/40 hover:decoration-[var(--accent)] transition-colors"
-            >Generative Pre-trained Transformer</a>
-            , though that one may be the most important GPT of all)
+            >Generative Pre-trained Transformer</a>)
             follows a predictable five-phase arc. The names change, but the shape is the same.
             Steam, electricity, computers &mdash; each transformed the
             labor market through the same sequence of emergence, diffusion,
