@@ -1,13 +1,32 @@
 {
   "weekId": "2026-W10",
-  "generatedAt": "2026-03-02T08:43:52.354Z",
+  "generatedAt": "2026-03-06T01:22:09.437Z",
   "dateRange": {
-    "from": "2026-02-16",
-    "to": "2026-03-02"
+    "from": "2026-02-20",
+    "to": "2026-03-06"
   },
-  "totalPapersDiscovered": 44,
-  "totalAfterDedup": 44,
+  "totalPapersDiscovered": 48,
+  "totalAfterDedup": 48,
   "papers": [
+    {
+      "id": "reddit-1rawfdn",
+      "title": "Can a \"useless class\" of humans actually happen because of automation and AI?",
+      "abstract": "Disclaimer: I want to clarify that the term \"useless class\" is not my personal opinion. I do not believe people are useless. That is simply how the system views human labor. Unfortunately it is the cold logic of our current materialistic system. I think the mechanism is simpler than we think. The thing bothering me the most lately is this: will a \"useless class\" of humans actually emerge or is this just dystopian exaggeration? (TL;DR: AI and automation are eliminating jobs much faster than so...",
+      "authors": [
+        "u/Curiousresearcher_06"
+      ],
+      "publishedDate": "2026-02-21",
+      "url": "https://www.reddit.com/r/Futurology/comments/1rawfdn/can_a_useless_class_of_humans_actually_happen/",
+      "pdfUrl": null,
+      "doi": null,
+      "citationCount": 296,
+      "classifiedTier": 1,
+      "source": "reddit",
+      "relevanceScore": 13,
+      "linkedPredictions": [],
+      "isTrackedAuthor": false,
+      "compositeScore": 96
+    },
     {
       "id": "oa-W4383913712",
       "title": "Human resource management in the age of generative artificial intelligence: Perspectives and research directions on ChatGPT",
@@ -41,7 +60,7 @@
       "url": "https://doi.org/10.1111/1748-8583.12524",
       "pdfUrl": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/1748-8583.12524",
       "doi": "10.1111/1748-8583.12524",
-      "citationCount": 677,
+      "citationCount": 679,
       "classifiedTier": 1,
       "source": "openalex",
       "relevanceScore": 10,
@@ -61,51 +80,29 @@
       "compositeScore": 90
     },
     {
-      "id": "oa-W4390583258",
-      "title": "Navigating the confluence of artificial intelligence and education for sustainable development in the era of industry 4.0: Challenges, opportunities, and ethical dimensions",
-      "abstract": "The emergence of Industry 4.0 marks a transformative era for businesses and industries, characterized by advanced technologies like automation, Internet of Things (IoT), artificial intelligence (AI), smart factories, and cyber-physical systems. This revolution promises significant advantages, including enhanced productivity, sustainable progress, and heightened resilience. However, the integration of Industry 4.0 is challenged by the need for a skilled workforce with expertise in areas such as information technology and data analytics. Higher education institutions (HEIs) play a vital role in equipping future professionals with these skills, necessitating curriculum updates and infrastructure enhancements. Simultaneously, the importance of education for sustainable development (ESD) has been underscored by global initiatives like the Sustainable Development Goals (SDGs). ESD instills a sense of responsibility for economic, ecological, and equitable well-being. As digital technologies blur the lines between industries, education faces the challenge of adapting to evolving demands. The integration of AI tools in education has emerged as a catalyst for reshaping learning experiences, fostering innovation, and preparing individuals for the digital age. AI chatbots such as ChatGPT have garnered widespread attention and possess the potential to revolutionize various aspects of education. However, their integration raises ethical concerns, necessitates curriculum redesign, requires strategies for continuous learning, and demands alignment with industry standards. While the potential of AI integration in education is promising, there is a notable gap in the existing literature when it comes to exploring the ethical implications, the influence of AI on ESD, the impact on the structure of Blooms Taxonomy, collaboration between academia and industry, strategies for continuous learning, and the effective integration of AI tools for personalized learning. This paper aims to critically examine the integration of AI tools, with a specific emphasis on ChatGPT, in education within the context of ESD. It delves into the transformative potential, ethical considerations, imperatives for continuous learning, and the role of industry partnerships. By providing insights and strategies, this paper contributes to the ongoing discussion about the evolving nature of education in a technologically driven world, equipping academic institutions to navigate the complexities and opportunities associated with AI integration in education more effectively.",
+      "id": "reddit-1rhx6i4",
+      "title": "The 2028 Global Intelligence Crisis: What happens as AI displaces workers.",
+      "abstract": "This is an interesting piece of research that has been doing the rounds. It speculates about the financial effects of AI displacing workers. In essence, what happens when AI-induced unemployment and wage reduction lead to reduced demand in the economy, even as AI makes some sectors more productive. This kind of speculation is nothing new; people have been wondering about this scenario for years. What interests me about this particular piece of research is the reaction to it. Predictably, Big ...",
       "authors": [
-        "Ammar Abulibdeh",
-        "Esmat Zaidan",
-        "Rawan Abulibdeh"
+        "u/lughnasadh"
       ],
-      "publishedDate": "2024-01-01",
-      "url": "https://doi.org/10.1016/j.jclepro.2023.140527",
+      "publishedDate": "2026-03-01",
+      "url": "https://www.reddit.com/r/Futurology/comments/1rhx6i4/the_2028_global_intelligence_crisis_what_happens/",
       "pdfUrl": null,
-      "doi": "10.1016/j.jclepro.2023.140527",
-      "citationCount": 513,
+      "doi": null,
+      "citationCount": 108,
       "classifiedTier": 1,
-      "source": "openalex",
-      "relevanceScore": 9,
+      "source": "reddit",
+      "relevanceScore": 10,
       "linkedPredictions": [
-        {
-          "slug": "education-sector-displacement",
-          "title": "Education Sector Displacement by 2030",
-          "relevanceScore": 9
-        },
         {
           "slug": "overall-us-displacement",
           "title": "Overall US Job Displacement by 2030",
-          "relevanceScore": 5
-        },
-        {
-          "slug": "white-collar-professional-displacement",
-          "title": "White-Collar Professional Displacement by 2030",
-          "relevanceScore": 4
-        },
-        {
-          "slug": "customer-service-automation",
-          "title": "Customer Service Automation by 2028",
-          "relevanceScore": 4
-        },
-        {
-          "slug": "earnings-call-ai-mentions",
-          "title": "S&P 500 AI Workforce Mentions in Earnings Calls",
-          "relevanceScore": 4
+          "relevanceScore": 6
         }
       ],
       "isTrackedAuthor": false,
-      "compositeScore": 88
+      "compositeScore": 90
     },
     {
       "id": "tracked-W7116709838",
@@ -186,25 +183,25 @@
       "compositeScore": 85
     },
     {
-      "id": "scopus-85210379086",
-      "title": "The Short-Term Effects of Generative Artificial Intelligence on Employment: Evidence from an Online Labor Market",
-      "abstract": null,
+      "id": "reddit-1rkavqr",
+      "title": "CEO Of Palantir: You're Stupid If You Do Not Think AI Will Be Nationalized",
+      "abstract": "His actual quote was actually a lot more offensive, but I didn't want to this thread to be deleted so I used the word stupid. But he actually said these people are \"retarded.\" The audience erupted in laughter right after he said the word retarded. https://x.com/SulkinMaya/status/2028866859756408867#m Full Quote: &gt;Alex Karp, CEO of Palantir:“If Silicon Valley believes we’re going to take everyone’s white collar jobs…AND screw the military…If you don’t think that’s going to lead to the natio...",
       "authors": [
-        "Hui X."
+        "u/Neurogence"
       ],
-      "publishedDate": "2024-11-01",
-      "url": "https://www.scopus.com/record/display.uri?eid=SCOPUS_ID:85210379086",
+      "publishedDate": "2026-03-04",
+      "url": "https://www.reddit.com/r/singularity/comments/1rkavqr/ceo_of_palantir_youre_stupid_if_you_do_not_think/",
       "pdfUrl": null,
-      "doi": "10.1287/orsc.2023.18441",
-      "citationCount": 70,
+      "doi": null,
+      "citationCount": 1071,
       "classifiedTier": 1,
-      "source": "scopus",
+      "source": "reddit",
       "relevanceScore": 7,
       "linkedPredictions": [
         {
-          "slug": "overall-us-displacement",
-          "title": "Overall US Job Displacement by 2030",
-          "relevanceScore": 7
+          "slug": "earnings-call-ai-mentions",
+          "title": "S&P 500 AI Workforce Mentions in Earnings Calls",
+          "relevanceScore": 4
         }
       ],
       "isTrackedAuthor": false,
@@ -238,28 +235,6 @@
       "compositeScore": 84
     },
     {
-      "id": "oa-W4389991792",
-      "title": "Autonomous chemical research with large language models",
-      "abstract": "Transformer-based large language models are making significant strides in various fields, such as natural language processing<sup>1-5</sup>, biology<sup>6,7</sup>, chemistry<sup>8-10</sup> and computer programming<sup>11,12</sup>. Here, we show the development and capabilities of Coscientist, an artificial intelligence system driven by GPT-4 that autonomously designs, plans and performs complex experiments by incorporating large language models empowered by tools such as internet and documentation search, code execution and experimental automation. Coscientist showcases its potential for accelerating research across six diverse tasks, including the successful reaction optimization of palladium-catalysed cross-couplings, while exhibiting advanced capabilities for (semi-)autonomous experimental design and execution. Our findings demonstrate the versatility, efficacy and explainability of artificial intelligence systems like Coscientist in advancing research.",
-      "authors": [
-        "Daniil A. Boiko",
-        "Robert MacKnight",
-        "Ben Kline",
-        "Gabriel dos Passos Gomes"
-      ],
-      "publishedDate": "2023-12-20",
-      "url": "https://doi.org/10.1038/s41586-023-06792-0",
-      "pdfUrl": "https://www.nature.com/articles/s41586-023-06792-0.pdf",
-      "doi": "10.1038/s41586-023-06792-0",
-      "citationCount": 672,
-      "classifiedTier": 1,
-      "source": "openalex",
-      "relevanceScore": 6,
-      "linkedPredictions": [],
-      "isTrackedAuthor": false,
-      "compositeScore": 82
-    },
-    {
       "id": "oa-W4385452929",
       "title": "From ChatGPT to ThreatGPT: Impact of Generative AI in Cybersecurity and Privacy",
       "abstract": "Undoubtedly, the evolution of Generative AI (GenAI) models has been the highlight of digital transformation in the year 2022. As the different GenAI models like ChatGPT and Google Bard continue to foster their complexity and capability, it’s critical to understand its consequences from a cybersecurity perspective. Several instances recently have demonstrated the use of GenAI tools in both the defensive and offensive side of cybersecurity, and focusing on the social, ethical and privacy implications this technology possesses. This research paper highlights the limitations, challenges, potential risks, and opportunities of GenAI in the domain of cybersecurity and privacy. The work presents the vulnerabilities of ChatGPT, which can be exploited by malicious users to exfiltrate malicious information bypassing the ethical constraints on the model. This paper demonstrates successful example attacks like Jailbreaks, reverse psychology, and prompt injection attacks on the ChatGPT. The paper also investigates how cyber offenders can use the GenAI tools in developing cyber attacks, and explore the scenarios where ChatGPT can be used by adversaries to create social engineering attacks, phishing attacks, automated hacking, attack payload generation, malware creation, and polymorphic malware. This paper then examines defense techniques and uses GenAI tools to improve security measures, including cyber defense automation, reporting, threat intelligence, secure code generation and detection, attack identification, developing ethical guidelines, incidence response plans, and malware detection. We will also discuss the social, legal, and ethical implications of ChatGPT. In conclusion, the paper highlights open challenges and future directions to make this GenAI secure, safe, trustworthy, and ethical as the community understands its cybersecurity impacts.",
@@ -274,7 +249,7 @@
       "url": "https://doi.org/10.1109/access.2023.3300381",
       "pdfUrl": "https://ieeexplore.ieee.org/ielx7/6287639/6514899/10198233.pdf",
       "doi": "10.1109/access.2023.3300381",
-      "citationCount": 624,
+      "citationCount": 627,
       "classifiedTier": 1,
       "source": "openalex",
       "relevanceScore": 6,
@@ -306,7 +281,7 @@
       "url": "https://doi.org/10.15678/eber.2023.110201",
       "pdfUrl": "https://eber.uek.krakow.pl/index.php/eber/article/view/2113/852",
       "doi": "10.15678/eber.2023.110201",
-      "citationCount": 462,
+      "citationCount": 463,
       "classifiedTier": 1,
       "source": "openalex",
       "relevanceScore": 6,
@@ -323,7 +298,7 @@
         },
         {
           "slug": "total-us-jobs-lost",
-          "title": "Total US Jobs Lost to AI as % of Labor Force",
+          "title": "Estimated Net US Job Loss from AI (% of Labor Force)",
           "relevanceScore": 4
         }
       ],
@@ -345,7 +320,7 @@
       "url": "https://doi.org/10.1002/job.2735",
       "pdfUrl": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/job.2735",
       "doi": "10.1002/job.2735",
-      "citationCount": 427,
+      "citationCount": 430,
       "classifiedTier": 1,
       "source": "openalex",
       "relevanceScore": 6,
@@ -378,7 +353,7 @@
       "url": "https://doi.org/10.3389/feduc.2023.1206936",
       "pdfUrl": "https://www.frontiersin.org/articles/10.3389/feduc.2023.1206936/pdf?isPublishedV2=False",
       "doi": "10.3389/feduc.2023.1206936",
-      "citationCount": 370,
+      "citationCount": 372,
       "classifiedTier": 1,
       "source": "openalex",
       "relevanceScore": 6,
@@ -430,29 +405,130 @@
       "compositeScore": 82
     },
     {
-      "id": "scopus-85182629525",
-      "title": "The impact of artificial intelligence on employment: the role of virtual agglomeration",
-      "abstract": null,
+      "id": "reddit-1rga39a",
+      "title": "The problem with Dorsey's Block layoffs and the veiled nature of AI productivity growth",
+      "abstract": "Jack Dorsey just laid off half of Block's workforce, framing it around AI. The stock went up. This should make you uneasy, and not for the reasons most people are talking about. There's a fundamental information problem at the heart of all this. Genuine AI integration, actually embedding it into workflows and organisation, is slow, expensive, and largely invisible to the outside world. Productivity gains from AI take time to show up in the numbers, and even then they're hard to attribute prop...",
       "authors": [
-        "Shen Y."
+        "u/spacetwice2021"
       ],
-      "publishedDate": "2024-12-01",
-      "url": "https://www.scopus.com/record/display.uri?eid=SCOPUS_ID:85182629525",
+      "publishedDate": "2026-02-27",
+      "url": "https://www.reddit.com/r/artificial/comments/1rga39a/the_problem_with_dorseys_block_layoffs_and_the/",
       "pdfUrl": null,
-      "doi": "10.1057/s41599-024-02647-9",
-      "citationCount": 145,
+      "doi": null,
+      "citationCount": 40,
+      "classifiedTier": 2,
+      "source": "reddit",
+      "relevanceScore": 13,
+      "linkedPredictions": [],
+      "isTrackedAuthor": false,
+      "compositeScore": 81
+    },
+    {
+      "id": "reddit-1rieork",
+      "title": "Jamie Dimon says AI is already reshaping JPMorgan Chase's workforce as bank plans 'huge redeployment’",
+      "abstract": "Jamie Dimon says AI is already reshaping JPMorgan Chase's workforce as bank plans 'huge redeployment’",
+      "authors": [
+        "u/Gari_305"
+      ],
+      "publishedDate": "2026-03-02",
+      "url": "https://www.reddit.com/r/Futurology/comments/1rieork/jamie_dimon_says_ai_is_already_reshaping_jpmorgan/",
+      "pdfUrl": null,
+      "doi": null,
+      "citationCount": 477,
       "classifiedTier": 1,
-      "source": "scopus",
+      "source": "reddit",
+      "relevanceScore": 4,
+      "linkedPredictions": [],
+      "isTrackedAuthor": false,
+      "compositeScore": 78
+    },
+    {
+      "id": "reddit-1rahca8",
+      "title": "What should I tell the students about job opportunities?",
+      "abstract": "I am a data scientist with almost two years of experience. I mainly work on SQL, Pandas, Power BI dashboards, credit risk modeling, MLOps, and a small part of GenAI architecture using Redis workers. I have been invited to my college, where I completed my Masters in Data Science, to give a guest lecture in the first week of March. I chose the topic “end to end ML building” where I plan to talk about: * Data validation using pandera * Feature store * Model training * Model serving using fastapi...",
+      "authors": [
+        "u/guna1o0"
+      ],
+      "publishedDate": "2026-02-21",
+      "url": "https://www.reddit.com/r/datascience/comments/1rahca8/what_should_i_tell_the_students_about_job/",
+      "pdfUrl": null,
+      "doi": null,
+      "citationCount": 178,
+      "classifiedTier": 1,
+      "source": "reddit",
+      "relevanceScore": 4,
+      "linkedPredictions": [],
+      "isTrackedAuthor": false,
+      "compositeScore": 78
+    },
+    {
+      "id": "reddit-1ri0ocx",
+      "title": "So what do y’all think of the Block layoffs?",
+      "abstract": "My upcoming interview with Block got canceled, and I am in a bit of relief but at the same time it made me question where is the industry in general headed to. Block CEO is attributing the layoffs to AI. As an active job seeker and currently in a “safe” job, I am questioning my decision to whether this is the right time for a job switch, but at the same time is there ever a right time? Do you think we will see more layoffs in the future because of AI?",
+      "authors": [
+        "u/Fig_Towel_379"
+      ],
+      "publishedDate": "2026-03-01",
+      "url": "https://www.reddit.com/r/datascience/comments/1ri0ocx/so_what_do_yall_think_of_the_block_layoffs/",
+      "pdfUrl": null,
+      "doi": null,
+      "citationCount": 110,
+      "classifiedTier": 1,
+      "source": "reddit",
       "relevanceScore": 4,
       "linkedPredictions": [
         {
-          "slug": "overall-us-displacement",
-          "title": "Overall US Job Displacement by 2030",
+          "slug": "earnings-call-ai-mentions",
+          "title": "S&P 500 AI Workforce Mentions in Earnings Calls",
           "relevanceScore": 4
         }
       ],
       "isTrackedAuthor": false,
       "compositeScore": 78
+    },
+    {
+      "id": "reddit-1rj2l96",
+      "title": "Is the endgame of AI just a shift from \"Skills\" to \"Capital\"? A Junior Dev’s perspective.",
+      "abstract": "Hi, I’m a junior full-stack dev and I’ve been looking at the rate of AI evolution over the last few months. If we project this forward 5 years, I’ve come to a conclusion that’s honestly a bit terrifying, and I want to see if I’m missing something or if others see the same writing on the wall. My Logic: * The Senior AI: Within 5 years, AI won't just be a \"copilot\"; it will likely perform at or above the level of a Senior Engineer. It will be faster, cheaper, and won't need sleep or benefits. *...",
+      "authors": [
+        "u/Fijoza"
+      ],
+      "publishedDate": "2026-03-02",
+      "url": "https://www.reddit.com/r/singularity/comments/1rj2l96/is_the_endgame_of_ai_just_a_shift_from_skills_to/",
+      "pdfUrl": null,
+      "doi": null,
+      "citationCount": 102,
+      "classifiedTier": 1,
+      "source": "reddit",
+      "relevanceScore": 4,
+      "linkedPredictions": [],
+      "isTrackedAuthor": false,
+      "compositeScore": 78
+    },
+    {
+      "id": "reddit-1rfnvky",
+      "title": "You'll Know AGI Is Here When Unemployment Rate Hits 25%",
+      "abstract": "The current unemployment rate in the US is 4% and 6% in Europe. The debates about what constitutes AGI are largely a waste of time. People argue endlessly over definitions and benchmarks, when there exists a very clear metric available, the ultimate benchmark, and the only benchmark that cannot be hacked: Unemployment Rate. If the unemployment rate is rising sharply and we're not in the middle of a recession or depression, we'd know something unprecedented is happening. The problem with bench...",
+      "authors": [
+        "u/Neurogence"
+      ],
+      "publishedDate": "2026-02-26",
+      "url": "https://www.reddit.com/r/singularity/comments/1rfnvky/youll_know_agi_is_here_when_unemployment_rate/",
+      "pdfUrl": null,
+      "doi": null,
+      "citationCount": 91,
+      "classifiedTier": 2,
+      "source": "reddit",
+      "relevanceScore": 10,
+      "linkedPredictions": [
+        {
+          "slug": "overall-us-displacement",
+          "title": "Overall US Job Displacement by 2030",
+          "relevanceScore": 6
+        }
+      ],
+      "isTrackedAuthor": false,
+      "compositeScore": 75
     },
     {
       "id": "tracked-W7131126748",
@@ -554,6 +630,53 @@
       "compositeScore": 72
     },
     {
+      "id": "reddit-1rc5kh9",
+      "title": "Incumbents do not get re-elected if Employment is dropping",
+      "abstract": "There is no reality where the political system will accept Employment dropping. Employment dropped during election years: 2024 (Small amount, Biden), 2020 (Covid, Trump), 2008 (GFC, Bush), 2000 (start of dotcom bubble burst, Clinton), 1992 (Bush Sr), 1980 (Carter), 1960 (Eisenhower). Each time the incumbent party got booted. It's the one rock solid rule in elections - increasing unemployment means political failure. If AI induced unemployment occurs without new types of jobs being created, th...",
+      "authors": [
+        "u/kaggleqrdl"
+      ],
+      "publishedDate": "2026-02-23",
+      "url": "https://www.reddit.com/r/singularity/comments/1rc5kh9/incumbents_do_not_get_reelected_if_employment_is/",
+      "pdfUrl": null,
+      "doi": null,
+      "citationCount": 30,
+      "classifiedTier": 2,
+      "source": "reddit",
+      "relevanceScore": 8,
+      "linkedPredictions": [
+        {
+          "slug": "overall-us-displacement",
+          "title": "Overall US Job Displacement by 2030",
+          "relevanceScore": 6
+        }
+      ],
+      "isTrackedAuthor": false,
+      "compositeScore": 71
+    },
+    {
+      "id": "tracked-W7133189672",
+      "title": "Multidimensional Signaling and the Rise of Cultural Politics",
+      "abstract": null,
+      "authors": [
+        "Daron Acemoğlu",
+        "Georgy Egorov",
+        "Konstantin Sonin"
+      ],
+      "publishedDate": "2026-01-01",
+      "url": "https://doi.org/10.2139/ssrn.6326697",
+      "pdfUrl": null,
+      "doi": "10.2139/ssrn.6326697",
+      "citationCount": 0,
+      "classifiedTier": 2,
+      "source": "openalex",
+      "relevanceScore": 10,
+      "linkedPredictions": [],
+      "isTrackedAuthor": true,
+      "trackedAuthorName": "Daron Acemoglu",
+      "compositeScore": 70
+    },
+    {
       "id": "tracked-W7131227265",
       "title": "Multidimensional Signaling and the Rise of Cultural Politics",
       "abstract": null,
@@ -576,151 +699,42 @@
       "compositeScore": 70
     },
     {
-      "id": "scopus-85208149449",
-      "title": "Artificial Intelligence: Intensifying or mitigating unemployment?",
-      "abstract": null,
+      "id": "reddit-1rfij3h",
+      "title": "Marx nailed the AI jobs issue before AI was a pipe dream",
+      "abstract": "People are scared AI will take their jobs, but miss the crucial point. What \"AI takes jobs\" actually means at a structural level: Machines produce the goods and services, so humans don't need to labor to survive. The problem isn't the automation, because even before automated post-scarcity was a dream, OWNERSHIP *has been the problem:* who owns the means of production. With AI and robots the problem just gets a new name: who owns the automation. We have already been facing this contradiction....",
       "authors": [
-        "Qin M."
+        "u/Zalameda"
       ],
-      "publishedDate": "2024-12-01",
-      "url": "https://www.scopus.com/record/display.uri?eid=SCOPUS_ID:85208149449",
+      "publishedDate": "2026-02-26",
+      "url": "https://www.reddit.com/r/singularity/comments/1rfij3h/marx_nailed_the_ai_jobs_issue_before_ai_was_a/",
       "pdfUrl": null,
-      "doi": "10.1016/j.techsoc.2024.102755",
-      "citationCount": 48,
+      "doi": null,
+      "citationCount": 98,
       "classifiedTier": 2,
-      "source": "scopus",
-      "relevanceScore": 7,
-      "linkedPredictions": [
-        {
-          "slug": "overall-us-displacement",
-          "title": "Overall US Job Displacement by 2030",
-          "relevanceScore": 7
-        }
-      ],
-      "isTrackedAuthor": false,
-      "compositeScore": 69
-    },
-    {
-      "id": "scopus-85191773886",
-      "title": "Digital twin simulation modeling, artificial intelligence-based Internet of Manufacturing Things systems, and virtual machine and cognitive computing algorithms in the Industry 4.0-based Slovak labor market",
-      "abstract": null,
-      "authors": [
-        "Valaskova K."
-      ],
-      "publishedDate": "2024-03-30",
-      "url": "https://www.scopus.com/record/display.uri?eid=SCOPUS_ID:85191773886",
-      "pdfUrl": null,
-      "doi": "10.24136/oc.2814",
-      "citationCount": 68,
-      "classifiedTier": 2,
-      "source": "scopus",
-      "relevanceScore": 4,
-      "linkedPredictions": [
-        {
-          "slug": "overall-us-displacement",
-          "title": "Overall US Job Displacement by 2030",
-          "relevanceScore": 4
-        }
-      ],
-      "isTrackedAuthor": false,
-      "compositeScore": 63
-    },
-    {
-      "id": "scopus-85184027069",
-      "title": "Trustworthy AI in the public sector: An empirical analysis of a Swedish labor market decision-support system",
-      "abstract": null,
-      "authors": [
-        "Berman A."
-      ],
-      "publishedDate": "2024-03-01",
-      "url": "https://www.scopus.com/record/display.uri?eid=SCOPUS_ID:85184027069",
-      "pdfUrl": null,
-      "doi": "10.1016/j.techsoc.2024.102471",
-      "citationCount": 59,
-      "classifiedTier": 2,
-      "source": "scopus",
+      "source": "reddit",
       "relevanceScore": 4,
       "linkedPredictions": [],
       "isTrackedAuthor": false,
       "compositeScore": 63
     },
     {
-      "id": "scopus-85208568998",
-      "title": "Digital twin-based cyber-physical manufacturing systems, extended reality metaverse enterprise and production management algorithms, and Internet of Things financial and labor market technologies in generative artificial intelligence economics",
-      "abstract": null,
+      "id": "reddit-1rk0w5r",
+      "title": "So, basically, I'm still employed because I've mastered working with AI.",
+      "abstract": "Just random ramblings of a bored contemplating employee. I'm with the crowd who don't think AI will be replacing the workforce soon. Nope. But the workers who do know how to use AI to their best interests will definitely have the upper hand. Me included. So in my current job, it's a WFH setup and doesn't require much invasive privacy trackers at all. So I'm free to use AI to *\"do x for me\"* basically. It runs code, walks me through tools/software I have to familiarize myself with. But I would...",
       "authors": [
-        "Lăzăroiu G."
+        "u/IndependenceLeast966"
       ],
-      "publishedDate": "2024-09-01",
-      "url": "https://www.scopus.com/record/display.uri?eid=SCOPUS_ID:85208568998",
+      "publishedDate": "2026-03-03",
+      "url": "https://www.reddit.com/r/singularity/comments/1rk0w5r/so_basically_im_still_employed_because_ive/",
       "pdfUrl": null,
-      "doi": "10.24136/oc.3183",
-      "citationCount": 44,
+      "doi": null,
+      "citationCount": 64,
       "classifiedTier": 2,
-      "source": "scopus",
+      "source": "reddit",
       "relevanceScore": 4,
-      "linkedPredictions": [
-        {
-          "slug": "overall-us-displacement",
-          "title": "Overall US Job Displacement by 2030",
-          "relevanceScore": 4
-        }
-      ],
+      "linkedPredictions": [],
       "isTrackedAuthor": false,
       "compositeScore": 63
-    },
-    {
-      "id": "scopus-105002685233",
-      "title": "AI exposure predicts unemployment risk: A new approach to technology-driven job loss",
-      "abstract": null,
-      "authors": [
-        "Frank M.R."
-      ],
-      "publishedDate": "2025-04-01",
-      "url": "https://www.scopus.com/record/display.uri?eid=SCOPUS_ID:105002685233",
-      "pdfUrl": null,
-      "doi": "10.1093/pnasnexus/pgaf107",
-      "citationCount": 2,
-      "classifiedTier": 1,
-      "source": "scopus",
-      "relevanceScore": 7,
-      "linkedPredictions": [
-        {
-          "slug": "overall-us-displacement",
-          "title": "Overall US Job Displacement by 2030",
-          "relevanceScore": 6
-        }
-      ],
-      "isTrackedAuthor": false,
-      "compositeScore": 58
-    },
-    {
-      "id": "arxiv-2512.23059v2",
-      "title": "Artificial Intelligence and Employment Exposure: A Territorial and Gender Perspective",
-      "abstract": "The diffusion of artificial intelligence, particularly generative models, is expected to transform labor markets in uneven ways across sectors, territories, and social groups. This paper proposes a methodological framework to estimate the potential exposure of employment to AI using sector based data, addressing the limitations of occupation centered approaches in the Spanish context. By constructing an AI CNAE incidence matrix and applying it to provincial employment data for the period 2021 to 2023, we provide a territorial and gender disaggregated assessment of AI exposure across Spain. The results reveal stable structural patterns, with higher exposure in metropolitan and service oriented regions and a consistent gender gap, as female employment exhibits higher exposure in all territories. Rather than predicting job displacement, the framework offers a structural perspective on where AI is most likely to reshape work and skill demands, supporting evidence based policy and strategic planning.",
-      "authors": [
-        "Antoni Mestre",
-        "Xavier Naya",
-        "Manoli Albert",
-        "Vicente Pelechano"
-      ],
-      "publishedDate": "2025-12-28",
-      "url": "http://arxiv.org/abs/2512.23059v2",
-      "pdfUrl": "https://arxiv.org/pdf/2512.23059v2",
-      "doi": null,
-      "citationCount": 0,
-      "classifiedTier": 2,
-      "source": "arxiv",
-      "relevanceScore": 14,
-      "linkedPredictions": [
-        {
-          "slug": "overall-us-displacement",
-          "title": "Overall US Job Displacement by 2030",
-          "relevanceScore": 10
-        }
-      ],
-      "isTrackedAuthor": false,
-      "compositeScore": 53
     },
     {
       "id": "arxiv-2601.06129v2",
@@ -797,17 +811,56 @@
       "compositeScore": 47
     },
     {
-      "id": "arxiv-2512.04988v1",
-      "title": "Strategic Self-Improvement for Competitive Agents in AI Labour Markets",
-      "abstract": "As artificial intelligence (AI) agents are deployed across economic domains, understanding their strategic behavior and market-level impact becomes critical. This paper puts forward a groundbreaking new framework that is the first to capture the real-world economic forces that shape agentic labor markets: adverse selection, moral hazard, and reputation dynamics. Our framework encapsulates three core capabilities that successful LLM-agents will need: \\textbf{metacognition} (accurate self-assessment of skills), \\textbf{competitive awareness} (modeling rivals and market dynamics), and \\textbf{long-horizon strategic planning}. We illustrate our framework through a tractable simulated gig economy where agentic Large Language Models (LLMs) compete for jobs, develop skills, and adapt their strategies under competitive pressure. Our simulations illustrate how LLM agents explicitly prompted with reasoning capabilities learn to strategically self-improve and demonstrate superior adaptability to changing market conditions. At the market level, our simulations reproduce classic macroeconomic phenomena found in human labor markets, while controlled experiments reveal potential AI-driven economic trends, such as rapid monopolization and systemic price deflation. This work provides a foundation to further explore the economic properties of AI-driven labour markets, and a conceptual framework to study the strategic reasoning capabilities in agents competing in the emerging economy.",
+      "id": "arxiv-2603.01203v1",
+      "title": "How Well Does Agent Development Reflect Real-World Work?",
+      "abstract": "AI agents are increasingly developed and evaluated on benchmarks relevant to human work, yet it remains unclear how representative these benchmarking efforts are of the labor market as a whole. In this work, we systematically study the relationship between agent development efforts and the distribution of real-world human work by mapping benchmark instances to work domains and skills. We first analyze 43 benchmarks and 72,342 tasks, measuring their alignment with human employment and capital allocation across all 1,016 real-world occupations in the U.S. labor market. We reveal substantial mismatches between agent development that tends to be programming-centric, and the categories in which human labor and economic value are concentrated. Within work areas that agents currently target, we further characterize current agent utility by measuring their autonomy levels, providing practical guidance for agent interaction strategies across work scenarios. Building on these findings, we propose three measurable principles for designing benchmarks that better capture socially important and technically challenging forms of work: coverage, realism, and granular evaluation.",
       "authors": [
-        "Christopher Chiu",
-        "Simpson Zhang",
-        "Mihaela van der Schaar"
+        "Zora Zhiruo Wang",
+        "Sanidhya Vijayvargiya",
+        "Aspen Chen",
+        "Hanmo Zhang",
+        "Venu Arvind Arangarajan",
+        "Jett Chen",
+        "Valerie Chen",
+        "Diyi Yang",
+        "Daniel Fried",
+        "Graham Neubig"
       ],
-      "publishedDate": "2025-12-04",
-      "url": "http://arxiv.org/abs/2512.04988v1",
-      "pdfUrl": "https://arxiv.org/pdf/2512.04988v1",
+      "publishedDate": "2026-03-01",
+      "url": "http://arxiv.org/abs/2603.01203v1",
+      "pdfUrl": "https://arxiv.org/pdf/2603.01203v1",
+      "doi": null,
+      "citationCount": 0,
+      "classifiedTier": 2,
+      "source": "arxiv",
+      "relevanceScore": 10,
+      "linkedPredictions": [
+        {
+          "slug": "overall-us-displacement",
+          "title": "Overall US Job Displacement by 2030",
+          "relevanceScore": 6
+        },
+        {
+          "slug": "earnings-call-ai-mentions",
+          "title": "S&P 500 AI Workforce Mentions in Earnings Calls",
+          "relevanceScore": 4
+        }
+      ],
+      "isTrackedAuthor": false,
+      "compositeScore": 45
+    },
+    {
+      "id": "arxiv-2601.13286v2",
+      "title": "AI Skills Improve Job Prospects: Causal Evidence from a Hiring Experiment",
+      "abstract": "The growing adoption of artificial intelligence (AI) technologies has heightened interest in the labor market value of AI related skills, yet causal evidence on their role in hiring decisions remains scarce. This study examines whether AI skills serve as a positive hiring signal and whether they can offset conventional disadvantages such as older age or lower formal education. We conducted an experimental survey with 1,725 recruiters from the United Kingdom, the United States and Germany. Using a paired conjoint design, recruiters evaluated hypothetical candidates represented by synthetically designed resumes. Across three occupations of graphic design, office assistance, and software engineering, AI skills significantly increase interview invitation probabilities by approximately 8 to 15 percentage points, compared with candidates without such skills. AI credentials, such as university or company backed skill certificates, only lead to a moderate increase in invitation probabilities compared with self declaration of AI skills. AI skills also partially or fully offset disadvantages related to age and lower education, with effects strongest for office assistants, for whom formal AI certificates play a significant additional compensatory role. Effects are weaker for graphic designers, consistent with more skeptical recruiter attitudes toward AI in creative work. Finally, recruiters own background and AI usage significantly moderate these effects. Overall, the findings demonstrate that AI skills function as a powerful hiring signal and can mitigate traditional labor market disadvantages, with implications for workers skill acquisition strategies and firms recruitment practices.",
+      "authors": [
+        "Fabian Stephany",
+        "Ole Teutloff",
+        "Angelo Leone"
+      ],
+      "publishedDate": "2026-01-19",
+      "url": "http://arxiv.org/abs/2601.13286v2",
+      "pdfUrl": "https://arxiv.org/pdf/2601.13286v2",
       "doi": null,
       "citationCount": 0,
       "classifiedTier": 2,
@@ -815,13 +868,13 @@
       "relevanceScore": 9,
       "linkedPredictions": [
         {
-          "slug": "overall-us-displacement",
-          "title": "Overall US Job Displacement by 2030",
-          "relevanceScore": 4
+          "slug": "creative-industry-displacement",
+          "title": "Creative Industry Displacement by 2030",
+          "relevanceScore": 9
         },
         {
-          "slug": "freelancer-rate-impact",
-          "title": "Freelancer/Gig Worker Rate Impact by 2028",
+          "slug": "overall-us-displacement",
+          "title": "Overall US Job Displacement by 2030",
           "relevanceScore": 4
         }
       ],
@@ -1364,7 +1417,7 @@
         "url": "https://doi.org/10.1111/1748-8583.12524",
         "pdfUrl": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/1748-8583.12524",
         "doi": "10.1111/1748-8583.12524",
-        "citationCount": 677,
+        "citationCount": 679,
         "classifiedTier": 1,
         "source": "openalex",
         "relevanceScore": 10,
@@ -1384,51 +1437,29 @@
         "compositeScore": 90
       },
       {
-        "id": "oa-W4390583258",
-        "title": "Navigating the confluence of artificial intelligence and education for sustainable development in the era of industry 4.0: Challenges, opportunities, and ethical dimensions",
-        "abstract": "The emergence of Industry 4.0 marks a transformative era for businesses and industries, characterized by advanced technologies like automation, Internet of Things (IoT), artificial intelligence (AI), smart factories, and cyber-physical systems. This revolution promises significant advantages, including enhanced productivity, sustainable progress, and heightened resilience. However, the integration of Industry 4.0 is challenged by the need for a skilled workforce with expertise in areas such as information technology and data analytics. Higher education institutions (HEIs) play a vital role in equipping future professionals with these skills, necessitating curriculum updates and infrastructure enhancements. Simultaneously, the importance of education for sustainable development (ESD) has been underscored by global initiatives like the Sustainable Development Goals (SDGs). ESD instills a sense of responsibility for economic, ecological, and equitable well-being. As digital technologies blur the lines between industries, education faces the challenge of adapting to evolving demands. The integration of AI tools in education has emerged as a catalyst for reshaping learning experiences, fostering innovation, and preparing individuals for the digital age. AI chatbots such as ChatGPT have garnered widespread attention and possess the potential to revolutionize various aspects of education. However, their integration raises ethical concerns, necessitates curriculum redesign, requires strategies for continuous learning, and demands alignment with industry standards. While the potential of AI integration in education is promising, there is a notable gap in the existing literature when it comes to exploring the ethical implications, the influence of AI on ESD, the impact on the structure of Blooms Taxonomy, collaboration between academia and industry, strategies for continuous learning, and the effective integration of AI tools for personalized learning. This paper aims to critically examine the integration of AI tools, with a specific emphasis on ChatGPT, in education within the context of ESD. It delves into the transformative potential, ethical considerations, imperatives for continuous learning, and the role of industry partnerships. By providing insights and strategies, this paper contributes to the ongoing discussion about the evolving nature of education in a technologically driven world, equipping academic institutions to navigate the complexities and opportunities associated with AI integration in education more effectively.",
+        "id": "reddit-1rhx6i4",
+        "title": "The 2028 Global Intelligence Crisis: What happens as AI displaces workers.",
+        "abstract": "This is an interesting piece of research that has been doing the rounds. It speculates about the financial effects of AI displacing workers. In essence, what happens when AI-induced unemployment and wage reduction lead to reduced demand in the economy, even as AI makes some sectors more productive. This kind of speculation is nothing new; people have been wondering about this scenario for years. What interests me about this particular piece of research is the reaction to it. Predictably, Big ...",
         "authors": [
-          "Ammar Abulibdeh",
-          "Esmat Zaidan",
-          "Rawan Abulibdeh"
+          "u/lughnasadh"
         ],
-        "publishedDate": "2024-01-01",
-        "url": "https://doi.org/10.1016/j.jclepro.2023.140527",
+        "publishedDate": "2026-03-01",
+        "url": "https://www.reddit.com/r/Futurology/comments/1rhx6i4/the_2028_global_intelligence_crisis_what_happens/",
         "pdfUrl": null,
-        "doi": "10.1016/j.jclepro.2023.140527",
-        "citationCount": 513,
+        "doi": null,
+        "citationCount": 108,
         "classifiedTier": 1,
-        "source": "openalex",
-        "relevanceScore": 9,
+        "source": "reddit",
+        "relevanceScore": 10,
         "linkedPredictions": [
-          {
-            "slug": "education-sector-displacement",
-            "title": "Education Sector Displacement by 2030",
-            "relevanceScore": 9
-          },
           {
             "slug": "overall-us-displacement",
             "title": "Overall US Job Displacement by 2030",
-            "relevanceScore": 5
-          },
-          {
-            "slug": "white-collar-professional-displacement",
-            "title": "White-Collar Professional Displacement by 2030",
-            "relevanceScore": 4
-          },
-          {
-            "slug": "customer-service-automation",
-            "title": "Customer Service Automation by 2028",
-            "relevanceScore": 4
-          },
-          {
-            "slug": "earnings-call-ai-mentions",
-            "title": "S&P 500 AI Workforce Mentions in Earnings Calls",
-            "relevanceScore": 4
+            "relevanceScore": 6
           }
         ],
         "isTrackedAuthor": false,
-        "compositeScore": 88
+        "compositeScore": 90
       },
       {
         "id": "oa-W4366489368",
@@ -1467,31 +1498,6 @@
         "compositeScore": 86
       },
       {
-        "id": "scopus-85210379086",
-        "title": "The Short-Term Effects of Generative Artificial Intelligence on Employment: Evidence from an Online Labor Market",
-        "abstract": null,
-        "authors": [
-          "Hui X."
-        ],
-        "publishedDate": "2024-11-01",
-        "url": "https://www.scopus.com/record/display.uri?eid=SCOPUS_ID:85210379086",
-        "pdfUrl": null,
-        "doi": "10.1287/orsc.2023.18441",
-        "citationCount": 70,
-        "classifiedTier": 1,
-        "source": "scopus",
-        "relevanceScore": 7,
-        "linkedPredictions": [
-          {
-            "slug": "overall-us-displacement",
-            "title": "Overall US Job Displacement by 2030",
-            "relevanceScore": 7
-          }
-        ],
-        "isTrackedAuthor": false,
-        "compositeScore": 84
-      },
-      {
         "id": "oa-W4385452929",
         "title": "From ChatGPT to ThreatGPT: Impact of Generative AI in Cybersecurity and Privacy",
         "abstract": "Undoubtedly, the evolution of Generative AI (GenAI) models has been the highlight of digital transformation in the year 2022. As the different GenAI models like ChatGPT and Google Bard continue to foster their complexity and capability, it’s critical to understand its consequences from a cybersecurity perspective. Several instances recently have demonstrated the use of GenAI tools in both the defensive and offensive side of cybersecurity, and focusing on the social, ethical and privacy implications this technology possesses. This research paper highlights the limitations, challenges, potential risks, and opportunities of GenAI in the domain of cybersecurity and privacy. The work presents the vulnerabilities of ChatGPT, which can be exploited by malicious users to exfiltrate malicious information bypassing the ethical constraints on the model. This paper demonstrates successful example attacks like Jailbreaks, reverse psychology, and prompt injection attacks on the ChatGPT. The paper also investigates how cyber offenders can use the GenAI tools in developing cyber attacks, and explore the scenarios where ChatGPT can be used by adversaries to create social engineering attacks, phishing attacks, automated hacking, attack payload generation, malware creation, and polymorphic malware. This paper then examines defense techniques and uses GenAI tools to improve security measures, including cyber defense automation, reporting, threat intelligence, secure code generation and detection, attack identification, developing ethical guidelines, incidence response plans, and malware detection. We will also discuss the social, legal, and ethical implications of ChatGPT. In conclusion, the paper highlights open challenges and future directions to make this GenAI secure, safe, trustworthy, and ethical as the community understands its cybersecurity impacts.",
@@ -1506,7 +1512,7 @@
         "url": "https://doi.org/10.1109/access.2023.3300381",
         "pdfUrl": "https://ieeexplore.ieee.org/ielx7/6287639/6514899/10198233.pdf",
         "doi": "10.1109/access.2023.3300381",
-        "citationCount": 624,
+        "citationCount": 627,
         "classifiedTier": 1,
         "source": "openalex",
         "relevanceScore": 6,
@@ -1538,7 +1544,7 @@
         "url": "https://doi.org/10.15678/eber.2023.110201",
         "pdfUrl": "https://eber.uek.krakow.pl/index.php/eber/article/view/2113/852",
         "doi": "10.15678/eber.2023.110201",
-        "citationCount": 462,
+        "citationCount": 463,
         "classifiedTier": 1,
         "source": "openalex",
         "relevanceScore": 6,
@@ -1555,7 +1561,7 @@
           },
           {
             "slug": "total-us-jobs-lost",
-            "title": "Total US Jobs Lost to AI as % of Labor Force",
+            "title": "Estimated Net US Job Loss from AI (% of Labor Force)",
             "relevanceScore": 4
           }
         ],
@@ -1577,7 +1583,7 @@
         "url": "https://doi.org/10.1002/job.2735",
         "pdfUrl": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/job.2735",
         "doi": "10.1002/job.2735",
-        "citationCount": 427,
+        "citationCount": 430,
         "classifiedTier": 1,
         "source": "openalex",
         "relevanceScore": 6,
@@ -1610,7 +1616,7 @@
         "url": "https://doi.org/10.3389/feduc.2023.1206936",
         "pdfUrl": "https://www.frontiersin.org/articles/10.3389/feduc.2023.1206936/pdf?isPublishedV2=False",
         "doi": "10.3389/feduc.2023.1206936",
-        "citationCount": 370,
+        "citationCount": 372,
         "classifiedTier": 1,
         "source": "openalex",
         "relevanceScore": 6,
@@ -1635,120 +1641,20 @@
         "compositeScore": 82
       },
       {
-        "id": "scopus-85182629525",
-        "title": "The impact of artificial intelligence on employment: the role of virtual agglomeration",
-        "abstract": null,
+        "id": "reddit-1rfnvky",
+        "title": "You'll Know AGI Is Here When Unemployment Rate Hits 25%",
+        "abstract": "The current unemployment rate in the US is 4% and 6% in Europe. The debates about what constitutes AGI are largely a waste of time. People argue endlessly over definitions and benchmarks, when there exists a very clear metric available, the ultimate benchmark, and the only benchmark that cannot be hacked: Unemployment Rate. If the unemployment rate is rising sharply and we're not in the middle of a recession or depression, we'd know something unprecedented is happening. The problem with bench...",
         "authors": [
-          "Shen Y."
+          "u/Neurogence"
         ],
-        "publishedDate": "2024-12-01",
-        "url": "https://www.scopus.com/record/display.uri?eid=SCOPUS_ID:85182629525",
+        "publishedDate": "2026-02-26",
+        "url": "https://www.reddit.com/r/singularity/comments/1rfnvky/youll_know_agi_is_here_when_unemployment_rate/",
         "pdfUrl": null,
-        "doi": "10.1057/s41599-024-02647-9",
-        "citationCount": 145,
-        "classifiedTier": 1,
-        "source": "scopus",
-        "relevanceScore": 4,
-        "linkedPredictions": [
-          {
-            "slug": "overall-us-displacement",
-            "title": "Overall US Job Displacement by 2030",
-            "relevanceScore": 4
-          }
-        ],
-        "isTrackedAuthor": false,
-        "compositeScore": 78
-      },
-      {
-        "id": "scopus-85208149449",
-        "title": "Artificial Intelligence: Intensifying or mitigating unemployment?",
-        "abstract": null,
-        "authors": [
-          "Qin M."
-        ],
-        "publishedDate": "2024-12-01",
-        "url": "https://www.scopus.com/record/display.uri?eid=SCOPUS_ID:85208149449",
-        "pdfUrl": null,
-        "doi": "10.1016/j.techsoc.2024.102755",
-        "citationCount": 48,
+        "doi": null,
+        "citationCount": 91,
         "classifiedTier": 2,
-        "source": "scopus",
-        "relevanceScore": 7,
-        "linkedPredictions": [
-          {
-            "slug": "overall-us-displacement",
-            "title": "Overall US Job Displacement by 2030",
-            "relevanceScore": 7
-          }
-        ],
-        "isTrackedAuthor": false,
-        "compositeScore": 69
-      },
-      {
-        "id": "scopus-85191773886",
-        "title": "Digital twin simulation modeling, artificial intelligence-based Internet of Manufacturing Things systems, and virtual machine and cognitive computing algorithms in the Industry 4.0-based Slovak labor market",
-        "abstract": null,
-        "authors": [
-          "Valaskova K."
-        ],
-        "publishedDate": "2024-03-30",
-        "url": "https://www.scopus.com/record/display.uri?eid=SCOPUS_ID:85191773886",
-        "pdfUrl": null,
-        "doi": "10.24136/oc.2814",
-        "citationCount": 68,
-        "classifiedTier": 2,
-        "source": "scopus",
-        "relevanceScore": 4,
-        "linkedPredictions": [
-          {
-            "slug": "overall-us-displacement",
-            "title": "Overall US Job Displacement by 2030",
-            "relevanceScore": 4
-          }
-        ],
-        "isTrackedAuthor": false,
-        "compositeScore": 63
-      },
-      {
-        "id": "scopus-85208568998",
-        "title": "Digital twin-based cyber-physical manufacturing systems, extended reality metaverse enterprise and production management algorithms, and Internet of Things financial and labor market technologies in generative artificial intelligence economics",
-        "abstract": null,
-        "authors": [
-          "Lăzăroiu G."
-        ],
-        "publishedDate": "2024-09-01",
-        "url": "https://www.scopus.com/record/display.uri?eid=SCOPUS_ID:85208568998",
-        "pdfUrl": null,
-        "doi": "10.24136/oc.3183",
-        "citationCount": 44,
-        "classifiedTier": 2,
-        "source": "scopus",
-        "relevanceScore": 4,
-        "linkedPredictions": [
-          {
-            "slug": "overall-us-displacement",
-            "title": "Overall US Job Displacement by 2030",
-            "relevanceScore": 4
-          }
-        ],
-        "isTrackedAuthor": false,
-        "compositeScore": 63
-      },
-      {
-        "id": "scopus-105002685233",
-        "title": "AI exposure predicts unemployment risk: A new approach to technology-driven job loss",
-        "abstract": null,
-        "authors": [
-          "Frank M.R."
-        ],
-        "publishedDate": "2025-04-01",
-        "url": "https://www.scopus.com/record/display.uri?eid=SCOPUS_ID:105002685233",
-        "pdfUrl": null,
-        "doi": "10.1093/pnasnexus/pgaf107",
-        "citationCount": 2,
-        "classifiedTier": 1,
-        "source": "scopus",
-        "relevanceScore": 7,
+        "source": "reddit",
+        "relevanceScore": 10,
         "linkedPredictions": [
           {
             "slug": "overall-us-displacement",
@@ -1757,35 +1663,32 @@
           }
         ],
         "isTrackedAuthor": false,
-        "compositeScore": 58
+        "compositeScore": 75
       },
       {
-        "id": "arxiv-2512.23059v2",
-        "title": "Artificial Intelligence and Employment Exposure: A Territorial and Gender Perspective",
-        "abstract": "The diffusion of artificial intelligence, particularly generative models, is expected to transform labor markets in uneven ways across sectors, territories, and social groups. This paper proposes a methodological framework to estimate the potential exposure of employment to AI using sector based data, addressing the limitations of occupation centered approaches in the Spanish context. By constructing an AI CNAE incidence matrix and applying it to provincial employment data for the period 2021 to 2023, we provide a territorial and gender disaggregated assessment of AI exposure across Spain. The results reveal stable structural patterns, with higher exposure in metropolitan and service oriented regions and a consistent gender gap, as female employment exhibits higher exposure in all territories. Rather than predicting job displacement, the framework offers a structural perspective on where AI is most likely to reshape work and skill demands, supporting evidence based policy and strategic planning.",
+        "id": "reddit-1rc5kh9",
+        "title": "Incumbents do not get re-elected if Employment is dropping",
+        "abstract": "There is no reality where the political system will accept Employment dropping. Employment dropped during election years: 2024 (Small amount, Biden), 2020 (Covid, Trump), 2008 (GFC, Bush), 2000 (start of dotcom bubble burst, Clinton), 1992 (Bush Sr), 1980 (Carter), 1960 (Eisenhower). Each time the incumbent party got booted. It's the one rock solid rule in elections - increasing unemployment means political failure. If AI induced unemployment occurs without new types of jobs being created, th...",
         "authors": [
-          "Antoni Mestre",
-          "Xavier Naya",
-          "Manoli Albert",
-          "Vicente Pelechano"
+          "u/kaggleqrdl"
         ],
-        "publishedDate": "2025-12-28",
-        "url": "http://arxiv.org/abs/2512.23059v2",
-        "pdfUrl": "https://arxiv.org/pdf/2512.23059v2",
+        "publishedDate": "2026-02-23",
+        "url": "https://www.reddit.com/r/singularity/comments/1rc5kh9/incumbents_do_not_get_reelected_if_employment_is/",
+        "pdfUrl": null,
         "doi": null,
-        "citationCount": 0,
+        "citationCount": 30,
         "classifiedTier": 2,
-        "source": "arxiv",
-        "relevanceScore": 14,
+        "source": "reddit",
+        "relevanceScore": 8,
         "linkedPredictions": [
           {
             "slug": "overall-us-displacement",
             "title": "Overall US Job Displacement by 2030",
-            "relevanceScore": 10
+            "relevanceScore": 6
           }
         ],
         "isTrackedAuthor": false,
-        "compositeScore": 53
+        "compositeScore": 71
       },
       {
         "id": "arxiv-2601.06129v2",
@@ -1862,17 +1765,56 @@
         "compositeScore": 47
       },
       {
-        "id": "arxiv-2512.04988v1",
-        "title": "Strategic Self-Improvement for Competitive Agents in AI Labour Markets",
-        "abstract": "As artificial intelligence (AI) agents are deployed across economic domains, understanding their strategic behavior and market-level impact becomes critical. This paper puts forward a groundbreaking new framework that is the first to capture the real-world economic forces that shape agentic labor markets: adverse selection, moral hazard, and reputation dynamics. Our framework encapsulates three core capabilities that successful LLM-agents will need: \\textbf{metacognition} (accurate self-assessment of skills), \\textbf{competitive awareness} (modeling rivals and market dynamics), and \\textbf{long-horizon strategic planning}. We illustrate our framework through a tractable simulated gig economy where agentic Large Language Models (LLMs) compete for jobs, develop skills, and adapt their strategies under competitive pressure. Our simulations illustrate how LLM agents explicitly prompted with reasoning capabilities learn to strategically self-improve and demonstrate superior adaptability to changing market conditions. At the market level, our simulations reproduce classic macroeconomic phenomena found in human labor markets, while controlled experiments reveal potential AI-driven economic trends, such as rapid monopolization and systemic price deflation. This work provides a foundation to further explore the economic properties of AI-driven labour markets, and a conceptual framework to study the strategic reasoning capabilities in agents competing in the emerging economy.",
+        "id": "arxiv-2603.01203v1",
+        "title": "How Well Does Agent Development Reflect Real-World Work?",
+        "abstract": "AI agents are increasingly developed and evaluated on benchmarks relevant to human work, yet it remains unclear how representative these benchmarking efforts are of the labor market as a whole. In this work, we systematically study the relationship between agent development efforts and the distribution of real-world human work by mapping benchmark instances to work domains and skills. We first analyze 43 benchmarks and 72,342 tasks, measuring their alignment with human employment and capital allocation across all 1,016 real-world occupations in the U.S. labor market. We reveal substantial mismatches between agent development that tends to be programming-centric, and the categories in which human labor and economic value are concentrated. Within work areas that agents currently target, we further characterize current agent utility by measuring their autonomy levels, providing practical guidance for agent interaction strategies across work scenarios. Building on these findings, we propose three measurable principles for designing benchmarks that better capture socially important and technically challenging forms of work: coverage, realism, and granular evaluation.",
         "authors": [
-          "Christopher Chiu",
-          "Simpson Zhang",
-          "Mihaela van der Schaar"
+          "Zora Zhiruo Wang",
+          "Sanidhya Vijayvargiya",
+          "Aspen Chen",
+          "Hanmo Zhang",
+          "Venu Arvind Arangarajan",
+          "Jett Chen",
+          "Valerie Chen",
+          "Diyi Yang",
+          "Daniel Fried",
+          "Graham Neubig"
         ],
-        "publishedDate": "2025-12-04",
-        "url": "http://arxiv.org/abs/2512.04988v1",
-        "pdfUrl": "https://arxiv.org/pdf/2512.04988v1",
+        "publishedDate": "2026-03-01",
+        "url": "http://arxiv.org/abs/2603.01203v1",
+        "pdfUrl": "https://arxiv.org/pdf/2603.01203v1",
+        "doi": null,
+        "citationCount": 0,
+        "classifiedTier": 2,
+        "source": "arxiv",
+        "relevanceScore": 10,
+        "linkedPredictions": [
+          {
+            "slug": "overall-us-displacement",
+            "title": "Overall US Job Displacement by 2030",
+            "relevanceScore": 6
+          },
+          {
+            "slug": "earnings-call-ai-mentions",
+            "title": "S&P 500 AI Workforce Mentions in Earnings Calls",
+            "relevanceScore": 4
+          }
+        ],
+        "isTrackedAuthor": false,
+        "compositeScore": 45
+      },
+      {
+        "id": "arxiv-2601.13286v2",
+        "title": "AI Skills Improve Job Prospects: Causal Evidence from a Hiring Experiment",
+        "abstract": "The growing adoption of artificial intelligence (AI) technologies has heightened interest in the labor market value of AI related skills, yet causal evidence on their role in hiring decisions remains scarce. This study examines whether AI skills serve as a positive hiring signal and whether they can offset conventional disadvantages such as older age or lower formal education. We conducted an experimental survey with 1,725 recruiters from the United Kingdom, the United States and Germany. Using a paired conjoint design, recruiters evaluated hypothetical candidates represented by synthetically designed resumes. Across three occupations of graphic design, office assistance, and software engineering, AI skills significantly increase interview invitation probabilities by approximately 8 to 15 percentage points, compared with candidates without such skills. AI credentials, such as university or company backed skill certificates, only lead to a moderate increase in invitation probabilities compared with self declaration of AI skills. AI skills also partially or fully offset disadvantages related to age and lower education, with effects strongest for office assistants, for whom formal AI certificates play a significant additional compensatory role. Effects are weaker for graphic designers, consistent with more skeptical recruiter attitudes toward AI in creative work. Finally, recruiters own background and AI usage significantly moderate these effects. Overall, the findings demonstrate that AI skills function as a powerful hiring signal and can mitigate traditional labor market disadvantages, with implications for workers skill acquisition strategies and firms recruitment practices.",
+        "authors": [
+          "Fabian Stephany",
+          "Ole Teutloff",
+          "Angelo Leone"
+        ],
+        "publishedDate": "2026-01-19",
+        "url": "http://arxiv.org/abs/2601.13286v2",
+        "pdfUrl": "https://arxiv.org/pdf/2601.13286v2",
         "doi": null,
         "citationCount": 0,
         "classifiedTier": 2,
@@ -1880,13 +1822,13 @@
         "relevanceScore": 9,
         "linkedPredictions": [
           {
-            "slug": "overall-us-displacement",
-            "title": "Overall US Job Displacement by 2030",
-            "relevanceScore": 4
+            "slug": "creative-industry-displacement",
+            "title": "Creative Industry Displacement by 2030",
+            "relevanceScore": 9
           },
           {
-            "slug": "freelancer-rate-impact",
-            "title": "Freelancer/Gig Worker Rate Impact by 2028",
+            "slug": "overall-us-displacement",
+            "title": "Overall US Job Displacement by 2030",
             "relevanceScore": 4
           }
         ],
@@ -2373,8 +2315,78 @@
         "compositeScore": 35
       }
     ],
-    "signals": [],
+    "signals": [
+      {
+        "id": "reddit-1rkavqr",
+        "title": "CEO Of Palantir: You're Stupid If You Do Not Think AI Will Be Nationalized",
+        "abstract": "His actual quote was actually a lot more offensive, but I didn't want to this thread to be deleted so I used the word stupid. But he actually said these people are \"retarded.\" The audience erupted in laughter right after he said the word retarded. https://x.com/SulkinMaya/status/2028866859756408867#m Full Quote: &gt;Alex Karp, CEO of Palantir:“If Silicon Valley believes we’re going to take everyone’s white collar jobs…AND screw the military…If you don’t think that’s going to lead to the natio...",
+        "authors": [
+          "u/Neurogence"
+        ],
+        "publishedDate": "2026-03-04",
+        "url": "https://www.reddit.com/r/singularity/comments/1rkavqr/ceo_of_palantir_youre_stupid_if_you_do_not_think/",
+        "pdfUrl": null,
+        "doi": null,
+        "citationCount": 1071,
+        "classifiedTier": 1,
+        "source": "reddit",
+        "relevanceScore": 7,
+        "linkedPredictions": [
+          {
+            "slug": "earnings-call-ai-mentions",
+            "title": "S&P 500 AI Workforce Mentions in Earnings Calls",
+            "relevanceScore": 4
+          }
+        ],
+        "isTrackedAuthor": false,
+        "compositeScore": 84
+      },
+      {
+        "id": "reddit-1ri0ocx",
+        "title": "So what do y’all think of the Block layoffs?",
+        "abstract": "My upcoming interview with Block got canceled, and I am in a bit of relief but at the same time it made me question where is the industry in general headed to. Block CEO is attributing the layoffs to AI. As an active job seeker and currently in a “safe” job, I am questioning my decision to whether this is the right time for a job switch, but at the same time is there ever a right time? Do you think we will see more layoffs in the future because of AI?",
+        "authors": [
+          "u/Fig_Towel_379"
+        ],
+        "publishedDate": "2026-03-01",
+        "url": "https://www.reddit.com/r/datascience/comments/1ri0ocx/so_what_do_yall_think_of_the_block_layoffs/",
+        "pdfUrl": null,
+        "doi": null,
+        "citationCount": 110,
+        "classifiedTier": 1,
+        "source": "reddit",
+        "relevanceScore": 4,
+        "linkedPredictions": [
+          {
+            "slug": "earnings-call-ai-mentions",
+            "title": "S&P 500 AI Workforce Mentions in Earnings Calls",
+            "relevanceScore": 4
+          }
+        ],
+        "isTrackedAuthor": false,
+        "compositeScore": 78
+      }
+    ],
     "unlinked": [
+      {
+        "id": "reddit-1rawfdn",
+        "title": "Can a \"useless class\" of humans actually happen because of automation and AI?",
+        "abstract": "Disclaimer: I want to clarify that the term \"useless class\" is not my personal opinion. I do not believe people are useless. That is simply how the system views human labor. Unfortunately it is the cold logic of our current materialistic system. I think the mechanism is simpler than we think. The thing bothering me the most lately is this: will a \"useless class\" of humans actually emerge or is this just dystopian exaggeration? (TL;DR: AI and automation are eliminating jobs much faster than so...",
+        "authors": [
+          "u/Curiousresearcher_06"
+        ],
+        "publishedDate": "2026-02-21",
+        "url": "https://www.reddit.com/r/Futurology/comments/1rawfdn/can_a_useless_class_of_humans_actually_happen/",
+        "pdfUrl": null,
+        "doi": null,
+        "citationCount": 296,
+        "classifiedTier": 1,
+        "source": "reddit",
+        "relevanceScore": 13,
+        "linkedPredictions": [],
+        "isTrackedAuthor": false,
+        "compositeScore": 96
+      },
       {
         "id": "tracked-W7116709838",
         "title": "Online Information and Offline Competition: The Emergence of Broadband Internet and Brick-and-Mortar Retailer Survival",
@@ -2418,26 +2430,80 @@
         "compositeScore": 85
       },
       {
-        "id": "oa-W4389991792",
-        "title": "Autonomous chemical research with large language models",
-        "abstract": "Transformer-based large language models are making significant strides in various fields, such as natural language processing<sup>1-5</sup>, biology<sup>6,7</sup>, chemistry<sup>8-10</sup> and computer programming<sup>11,12</sup>. Here, we show the development and capabilities of Coscientist, an artificial intelligence system driven by GPT-4 that autonomously designs, plans and performs complex experiments by incorporating large language models empowered by tools such as internet and documentation search, code execution and experimental automation. Coscientist showcases its potential for accelerating research across six diverse tasks, including the successful reaction optimization of palladium-catalysed cross-couplings, while exhibiting advanced capabilities for (semi-)autonomous experimental design and execution. Our findings demonstrate the versatility, efficacy and explainability of artificial intelligence systems like Coscientist in advancing research.",
+        "id": "reddit-1rga39a",
+        "title": "The problem with Dorsey's Block layoffs and the veiled nature of AI productivity growth",
+        "abstract": "Jack Dorsey just laid off half of Block's workforce, framing it around AI. The stock went up. This should make you uneasy, and not for the reasons most people are talking about. There's a fundamental information problem at the heart of all this. Genuine AI integration, actually embedding it into workflows and organisation, is slow, expensive, and largely invisible to the outside world. Productivity gains from AI take time to show up in the numbers, and even then they're hard to attribute prop...",
         "authors": [
-          "Daniil A. Boiko",
-          "Robert MacKnight",
-          "Ben Kline",
-          "Gabriel dos Passos Gomes"
+          "u/spacetwice2021"
         ],
-        "publishedDate": "2023-12-20",
-        "url": "https://doi.org/10.1038/s41586-023-06792-0",
-        "pdfUrl": "https://www.nature.com/articles/s41586-023-06792-0.pdf",
-        "doi": "10.1038/s41586-023-06792-0",
-        "citationCount": 672,
-        "classifiedTier": 1,
-        "source": "openalex",
-        "relevanceScore": 6,
+        "publishedDate": "2026-02-27",
+        "url": "https://www.reddit.com/r/artificial/comments/1rga39a/the_problem_with_dorseys_block_layoffs_and_the/",
+        "pdfUrl": null,
+        "doi": null,
+        "citationCount": 40,
+        "classifiedTier": 2,
+        "source": "reddit",
+        "relevanceScore": 13,
         "linkedPredictions": [],
         "isTrackedAuthor": false,
-        "compositeScore": 82
+        "compositeScore": 81
+      },
+      {
+        "id": "reddit-1rieork",
+        "title": "Jamie Dimon says AI is already reshaping JPMorgan Chase's workforce as bank plans 'huge redeployment’",
+        "abstract": "Jamie Dimon says AI is already reshaping JPMorgan Chase's workforce as bank plans 'huge redeployment’",
+        "authors": [
+          "u/Gari_305"
+        ],
+        "publishedDate": "2026-03-02",
+        "url": "https://www.reddit.com/r/Futurology/comments/1rieork/jamie_dimon_says_ai_is_already_reshaping_jpmorgan/",
+        "pdfUrl": null,
+        "doi": null,
+        "citationCount": 477,
+        "classifiedTier": 1,
+        "source": "reddit",
+        "relevanceScore": 4,
+        "linkedPredictions": [],
+        "isTrackedAuthor": false,
+        "compositeScore": 78
+      },
+      {
+        "id": "reddit-1rahca8",
+        "title": "What should I tell the students about job opportunities?",
+        "abstract": "I am a data scientist with almost two years of experience. I mainly work on SQL, Pandas, Power BI dashboards, credit risk modeling, MLOps, and a small part of GenAI architecture using Redis workers. I have been invited to my college, where I completed my Masters in Data Science, to give a guest lecture in the first week of March. I chose the topic “end to end ML building” where I plan to talk about: * Data validation using pandera * Feature store * Model training * Model serving using fastapi...",
+        "authors": [
+          "u/guna1o0"
+        ],
+        "publishedDate": "2026-02-21",
+        "url": "https://www.reddit.com/r/datascience/comments/1rahca8/what_should_i_tell_the_students_about_job/",
+        "pdfUrl": null,
+        "doi": null,
+        "citationCount": 178,
+        "classifiedTier": 1,
+        "source": "reddit",
+        "relevanceScore": 4,
+        "linkedPredictions": [],
+        "isTrackedAuthor": false,
+        "compositeScore": 78
+      },
+      {
+        "id": "reddit-1rj2l96",
+        "title": "Is the endgame of AI just a shift from \"Skills\" to \"Capital\"? A Junior Dev’s perspective.",
+        "abstract": "Hi, I’m a junior full-stack dev and I’ve been looking at the rate of AI evolution over the last few months. If we project this forward 5 years, I’ve come to a conclusion that’s honestly a bit terrifying, and I want to see if I’m missing something or if others see the same writing on the wall. My Logic: * The Senior AI: Within 5 years, AI won't just be a \"copilot\"; it will likely perform at or above the level of a Senior Engineer. It will be faster, cheaper, and won't need sleep or benefits. *...",
+        "authors": [
+          "u/Fijoza"
+        ],
+        "publishedDate": "2026-03-02",
+        "url": "https://www.reddit.com/r/singularity/comments/1rj2l96/is_the_endgame_of_ai_just_a_shift_from_skills_to/",
+        "pdfUrl": null,
+        "doi": null,
+        "citationCount": 102,
+        "classifiedTier": 1,
+        "source": "reddit",
+        "relevanceScore": 4,
+        "linkedPredictions": [],
+        "isTrackedAuthor": false,
+        "compositeScore": 78
       },
       {
         "id": "tracked-W7131126748",
@@ -2539,6 +2605,28 @@
         "compositeScore": 72
       },
       {
+        "id": "tracked-W7133189672",
+        "title": "Multidimensional Signaling and the Rise of Cultural Politics",
+        "abstract": null,
+        "authors": [
+          "Daron Acemoğlu",
+          "Georgy Egorov",
+          "Konstantin Sonin"
+        ],
+        "publishedDate": "2026-01-01",
+        "url": "https://doi.org/10.2139/ssrn.6326697",
+        "pdfUrl": null,
+        "doi": "10.2139/ssrn.6326697",
+        "citationCount": 0,
+        "classifiedTier": 2,
+        "source": "openalex",
+        "relevanceScore": 10,
+        "linkedPredictions": [],
+        "isTrackedAuthor": true,
+        "trackedAuthorName": "Daron Acemoglu",
+        "compositeScore": 70
+      },
+      {
         "id": "tracked-W7131227265",
         "title": "Multidimensional Signaling and the Rise of Cultural Politics",
         "abstract": null,
@@ -2561,19 +2649,38 @@
         "compositeScore": 70
       },
       {
-        "id": "scopus-85184027069",
-        "title": "Trustworthy AI in the public sector: An empirical analysis of a Swedish labor market decision-support system",
-        "abstract": null,
+        "id": "reddit-1rfij3h",
+        "title": "Marx nailed the AI jobs issue before AI was a pipe dream",
+        "abstract": "People are scared AI will take their jobs, but miss the crucial point. What \"AI takes jobs\" actually means at a structural level: Machines produce the goods and services, so humans don't need to labor to survive. The problem isn't the automation, because even before automated post-scarcity was a dream, OWNERSHIP *has been the problem:* who owns the means of production. With AI and robots the problem just gets a new name: who owns the automation. We have already been facing this contradiction....",
         "authors": [
-          "Berman A."
+          "u/Zalameda"
         ],
-        "publishedDate": "2024-03-01",
-        "url": "https://www.scopus.com/record/display.uri?eid=SCOPUS_ID:85184027069",
+        "publishedDate": "2026-02-26",
+        "url": "https://www.reddit.com/r/singularity/comments/1rfij3h/marx_nailed_the_ai_jobs_issue_before_ai_was_a/",
         "pdfUrl": null,
-        "doi": "10.1016/j.techsoc.2024.102471",
-        "citationCount": 59,
+        "doi": null,
+        "citationCount": 98,
         "classifiedTier": 2,
-        "source": "scopus",
+        "source": "reddit",
+        "relevanceScore": 4,
+        "linkedPredictions": [],
+        "isTrackedAuthor": false,
+        "compositeScore": 63
+      },
+      {
+        "id": "reddit-1rk0w5r",
+        "title": "So, basically, I'm still employed because I've mastered working with AI.",
+        "abstract": "Just random ramblings of a bored contemplating employee. I'm with the crowd who don't think AI will be replacing the workforce soon. Nope. But the workers who do know how to use AI to their best interests will definitely have the upper hand. Me included. So in my current job, it's a WFH setup and doesn't require much invasive privacy trackers at all. So I'm free to use AI to *\"do x for me\"* basically. It runs code, walks me through tools/software I have to familiarize myself with. But I would...",
+        "authors": [
+          "u/IndependenceLeast966"
+        ],
+        "publishedDate": "2026-03-03",
+        "url": "https://www.reddit.com/r/singularity/comments/1rk0w5r/so_basically_im_still_employed_because_ive/",
+        "pdfUrl": null,
+        "doi": null,
+        "citationCount": 64,
+        "classifiedTier": 2,
+        "source": "reddit",
         "relevanceScore": 4,
         "linkedPredictions": [],
         "isTrackedAuthor": false,
@@ -2662,16 +2769,16 @@
   },
   "stats": {
     "bySource": {
-      "openalex": 16,
-      "scopus": 7,
+      "reddit": 12,
+      "openalex": 15,
       "arxiv": 18,
       "job_postings": 3
     },
     "byTier": {
-      "1": 13,
-      "2": 31
+      "1": 15,
+      "2": 33
     },
-    "trackedAuthorCount": 8
+    "trackedAuthorCount": 9
   },
   "suggestedDataPoints": [
     {
@@ -2680,21 +2787,21 @@
       "date": "2024-01-01",
       "value": 20.9,
       "unit": "% of jobs",
-      "sourceId": "arxiv-graph-based-egyptian-jobs-2025",
+      "sourceId": "arxiv-graph-based-egypt-2025",
       "sourceTitle": "Graph-Based Analysis of AI-Driven Labor Market Transitions: Evidence from 10,000 Egyptian Jobs and Policy Implications",
       "sourceUrl": "http://arxiv.org/abs/2601.06129v2",
       "evidenceTier": 2,
       "excerpt": "While 20.9% of jobs face high automation risk, we find that only 24.4% of at-risk workers have viable transition pathways",
       "digestPaperId": "arxiv-2601.06129v2",
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "predictionSlug": "customer-service-automation",
       "predictionTitle": "Customer Service Automation by 2028",
       "date": "2025-01-01",
       "value": 18,
-      "unit": "% decline in postings",
-      "sourceId": "indeed-customer-service-2025",
+      "unit": "% decline in job postings",
+      "sourceId": "indeed-cs-postings-2025",
       "sourceTitle": "Customer Service Job Postings Decline — Indeed",
       "sourceUrl": "https://www.hiringlab.org/",
       "evidenceTier": 2,
