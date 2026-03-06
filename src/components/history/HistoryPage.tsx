@@ -71,7 +71,11 @@ export default function HistoryPage() {
               rel="noopener noreferrer"
               className="underline decoration-[var(--accent)]/40 hover:decoration-[var(--accent)] transition-colors"
             >Generative Pre-trained Transformer</a>)
-            follows a predictable five-phase arc. The names change, but the shape is the same.
+            follows a predictable{" "}
+            <Tooltip
+              label="five-phase arc"
+              tip="This framework synthesizes several academic models of how general-purpose technologies reshape economies. The closest single source is Carlota Perez (2002), Technological Revolutions and Financial Capital, which models technology waves in recurring phases. The definitive academic treatment of GPT theory is Lipsey, Carlaw &amp; Bekar (2005), Economic Transformations: General Purpose Technologies and Long-Term Economic Growth. The specific five phases here — emergence, diffusion, displacement, reorganization, new equilibrium — are an editorial synthesis, not a direct citation from any single paper."
+            />. The names change, but the shape is the same.
             Steam, electricity, computers &mdash; each transformed the
             labor market through the same sequence of emergence, diffusion,
             displacement, reorganization, and new equilibrium.
@@ -288,6 +292,20 @@ function SectionLabel({ number }: { number: string }) {
   return (
     <span className="text-[11px] font-bold uppercase tracking-widest text-[var(--accent)] mb-3 block">
       {number}
+    </span>
+  );
+}
+
+function Tooltip({ label, tip }: { label: string; tip: string }) {
+  return (
+    <span className="relative inline-block group">
+      <span className="underline decoration-dotted decoration-[var(--accent)]/50 underline-offset-2 cursor-help">
+        {label}
+      </span>
+      <span className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-[320px] rounded-lg bg-[var(--foreground)] text-white text-[11px] leading-[1.6] px-4 py-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-50 shadow-lg">
+        {tip}
+        <span className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-[var(--foreground)]" />
+      </span>
     </span>
   );
 }

@@ -854,18 +854,18 @@ export default function CompressionComparison() {
             className="text-[28px] font-extrabold text-[var(--foreground)]"
             style={{ fontVariantNumeric: "tabular-nums" }}
           >
-            54.6%
+            ~70%
           </div>
           <div className="text-[12px] font-semibold text-[var(--foreground)] mt-1">
-            Adult Adoption by Year 3
+            Workers With AI Task Coverage
           </div>
           <div className="text-[11px] text-[var(--muted)] mt-1 leading-relaxed">
-            US working-age adults using gen AI
+            Observed in first-party API traffic
             <br />
-            Internet took 5+ yrs for same reach
+            No systematic unemployment yet
           </div>
           <div className="text-[10px] text-[var(--muted)] mt-1 italic">
-            St. Louis Fed (2025)
+            Anthropic / Massenkoff &amp; McCrory (2026)
           </div>
         </div>
       </div>
