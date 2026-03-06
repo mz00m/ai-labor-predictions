@@ -80,9 +80,9 @@ export default function Home() {
               <p className="relative text-[11px] text-[var(--muted)] opacity-50 leading-snug">Median of 18 studies</p>
             </a>
             <a href="#displacement" className="group/stat relative overflow-hidden py-6 px-4 border-l border-black/[0.06] no-underline text-center">
-              <span className="absolute inset-0 flex items-center justify-center stat-number text-[100px] sm:text-[130px] font-black leading-none text-black/[0.04] group-hover/stat:text-black/[0.10] transition-colors duration-200 pointer-events-none select-none">9<span className="text-[40px] sm:text-[50px] font-normal opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 ml-0.5">%</span></span>
+              <span className="absolute inset-0 flex items-center justify-center stat-number text-[100px] sm:text-[130px] font-black leading-none text-black/[0.04] group-hover/stat:text-black/[0.10] transition-colors duration-200 pointer-events-none select-none">3<span className="text-[40px] sm:text-[50px] font-normal opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 ml-0.5">%</span></span>
               <p className="relative text-[10px] font-bold uppercase tracking-widest text-[var(--muted)] mb-1.5"><span className="text-[9px] font-light opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 mr-0.5">~</span>Projected job loss</p>
-              <p className="relative text-[11px] text-[var(--muted)] opacity-50 leading-snug">WEF, Goldman, Forrester</p>
+              <p className="relative text-[11px] text-[var(--muted)] opacity-50 leading-snug">Weighted avg of 14 estimates</p>
             </a>
             <a href="#displacement" className="group/stat relative overflow-hidden py-6 px-4 border-l border-black/[0.06] no-underline text-center">
               <span className="absolute inset-0 flex items-center justify-center stat-number text-[100px] sm:text-[130px] font-black leading-none text-emerald-600/[0.06] group-hover/stat:text-emerald-600/[0.18] transition-colors duration-200 pointer-events-none select-none">0<span className="text-[40px] sm:text-[50px] font-normal opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 ml-0.5">%</span></span>

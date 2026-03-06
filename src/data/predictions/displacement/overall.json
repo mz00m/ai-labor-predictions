@@ -5,7 +5,7 @@
   "description": "Projected net percentage of US jobs displaced by AI and automation by 2030, based on data points where the source directly states a displacement figure.",
   "category": "displacement",
   "unit": "% of US jobs",
-  "currentValue": 9,
+  "currentValue": 3,
   "timeHorizon": "By 2030",
   "history": [
     {
