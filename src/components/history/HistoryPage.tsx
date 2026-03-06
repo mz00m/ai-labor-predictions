@@ -11,7 +11,7 @@ export default function HistoryPage() {
   return (
     <article className="max-w-[740px] mx-auto">
       {/* ───── Section 1: Hero / Thesis Statement ───── */}
-      <header className="mb-16">
+      <header className="mb-10">
         <p className="text-[12px] font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
           Historical Context
         </p>
@@ -22,7 +22,7 @@ export default function HistoryPage() {
           On Tap Intelligence
         </h1>
         <p
-          className="text-[18px] sm:text-[20px] text-[var(--muted)] leading-relaxed mb-8"
+          className="text-[18px] sm:text-[20px] text-[var(--muted)] leading-relaxed mb-5"
           style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
         >
           Every great technology has transformed work. Here&rsquo;s what
@@ -50,13 +50,13 @@ export default function HistoryPage() {
       </header>
 
       {/* ───── Section 2: The Pattern ───── */}
-      <section className="mb-16">
-        <div className="border-t border-black/[0.06] pt-10">
+      <section className="mb-12">
+        <div className="border-t border-black/[0.06] pt-8">
           <SectionLabel number="01" />
           <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
             Every GPT Follows the Same Arc
           </h2>
-          <p className="text-[14px] text-[var(--muted)] leading-[1.75] mb-8">
+          <p className="text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
             Every major{" "}
             <a
               href="https://en.wikipedia.org/wiki/General-purpose_technology"
@@ -84,13 +84,13 @@ export default function HistoryPage() {
       </section>
 
       {/* ───── Section 3: The Four Revolutions ───── */}
-      <section className="mb-16">
-        <div className="border-t border-black/[0.06] pt-10">
+      <section className="mb-12">
+        <div className="border-t border-black/[0.06] pt-8">
           <SectionLabel number="02" />
           <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
             The Four Revolutions
           </h2>
-          <p className="text-[14px] text-[var(--muted)] leading-[1.75] mb-8">
+          <p className="text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
             Four technologies. Four massive disruptions. All eventually
             created more jobs than they destroyed &mdash; but the path was
             never smooth or quick.
@@ -100,8 +100,8 @@ export default function HistoryPage() {
       </section>
 
       {/* ───── Section 4: The Central Insight ───── */}
-      <section className="mb-16">
-        <div className="border-t border-black/[0.06] pt-10">
+      <section className="mb-12">
+        <div className="border-t border-black/[0.06] pt-8">
           <SectionLabel number="03" />
           <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
             The On-Tap Intelligence Shift
@@ -162,13 +162,13 @@ export default function HistoryPage() {
       </section>
 
       {/* ───── Section 5: The Honest Forecast ───── */}
-      <section className="mb-16">
-        <div className="border-t border-black/[0.06] pt-10">
+      <section className="mb-12">
+        <div className="border-t border-black/[0.06] pt-8">
           <SectionLabel number="04" />
           <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
             What the Pattern Predicts
           </h2>
-          <p className="text-[14px] text-[var(--muted)] leading-[1.75] mb-8">
+          <p className="text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
             History doesn&rsquo;t tell us the outcome &mdash; it tells us
             the shape. Here is what the pattern predicts, offered not as
             certainties but as the most historically-grounded expectations.
@@ -178,13 +178,13 @@ export default function HistoryPage() {
       </section>
 
       {/* ───── Section 6: Vulnerability Snapshot ───── */}
-      <section className="mb-16">
-        <div className="border-t border-black/[0.06] pt-10">
+      <section className="mb-12">
+        <div className="border-t border-black/[0.06] pt-8">
           <SectionLabel number="05" />
           <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
             Occupational Vulnerability Snapshot
           </h2>
-          <p className="text-[14px] text-[var(--muted)] leading-[1.75] mb-8">
+          <p className="text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
             Five vulnerability categories, grounded in the historical
             pattern of how general-purpose technologies reshape
             occupational structures.
@@ -195,7 +195,7 @@ export default function HistoryPage() {
 
       {/* ───── Section 7: The Policy Question ───── */}
       <section className="mb-8">
-        <div className="border-t border-black/[0.06] pt-10">
+        <div className="border-t border-black/[0.06] pt-8">
           <SectionLabel number="06" />
           <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-6">
             What History Actually Proves
