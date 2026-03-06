@@ -56,15 +56,22 @@ export default function HistoryPage() {
             Every GPT Follows the Same Arc
           </h2>
           <p className="text-[14px] text-[var(--muted)] leading-[1.75] mb-8">
-            Every major general-purpose technology (
+            Every major{" "}
             <a
               href="https://en.wikipedia.org/wiki/General-purpose_technology"
               target="_blank"
               rel="noopener noreferrer"
               className="underline decoration-[var(--accent)]/40 hover:decoration-[var(--accent)] transition-colors"
-            >GPT</a>
-            ) follows a predictable
-            five-phase arc. The names change, but the shape is the same.
+            >general-purpose technology</a>{" "}
+            (GPT &mdash; not to be confused with{" "}
+            <a
+              href="https://en.wikipedia.org/wiki/Generative_pre-trained_transformer"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline decoration-[var(--accent)]/40 hover:decoration-[var(--accent)] transition-colors"
+            >Generative Pre-trained Transformer</a>
+            , though that one may be the most important GPT of all)
+            follows a predictable five-phase arc. The names change, but the shape is the same.
             Steam, electricity, computers &mdash; each transformed the
             labor market through the same sequence of emergence, diffusion,
             displacement, reorganization, and new equilibrium.
