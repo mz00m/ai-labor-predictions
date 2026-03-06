@@ -1,6 +1,7 @@
 "use client";
 
 import GPTTimeline from "./GPTTimeline";
+import CompressionComparison from "./CompressionComparison";
 import RevolutionCards from "./RevolutionCards";
 import ComparisonMatrix from "./ComparisonMatrix";
 import ForecastColumns from "./ForecastColumns";
@@ -77,75 +78,8 @@ export default function HistoryPage() {
           </p>
           <GPTTimeline />
 
-          {/* 10x Acceleration callout */}
-          <div className="mt-8 border border-[var(--accent)]/20 bg-[var(--accent-light)] rounded-lg p-5">
-            <div className="flex items-start gap-3">
-              <span className="text-[11px] font-bold uppercase tracking-wider text-white bg-[var(--accent)] px-2.5 py-1 rounded-full shrink-0">
-                10x faster
-              </span>
-              <div>
-                <p className="text-[13px] text-[var(--foreground)] leading-relaxed font-semibold mb-2">
-                  AI adoption metrics suggest 5&ndash;10x faster diffusion
-                  than prior general-purpose technologies. Whether displacement
-                  and reorganization compress proportionally is the central
-                  open question.
-                </p>
-                <p className="text-[12px] text-[var(--muted)] leading-relaxed mb-3">
-                  ChatGPT reached 100 million users in 2 months &mdash; the
-                  internet took 7 years, the PC took over a decade. By 2025,
-                  54.6% of US working-age adults had used generative AI (St.
-                  Louis Fed), a penetration the internet didn&rsquo;t reach
-                  for 5+ years and the PC didn&rsquo;t reach for 15. Enterprise
-                  adoption surged from 33% to 88% of organizations in roughly
-                  two years (McKinsey, 2023&ndash;2025), though deep workflow
-                  integration remains much lower &mdash; Census Bureau data
-                  shows only ~6% of firms report AI as material to operations.
-                  Microsoft&rsquo;s AI
-                  Diffusion Report calls it{" "}
-                  <strong>&ldquo;twice the pace of smartphones, five times
-                  faster than the internet&rdquo;</strong> &mdash; and those
-                  technologies were themselves orders of magnitude faster than
-                  steam or electricity.{" "}
-                  <a
-                    href="/predictions/genai-work-adoption"
-                    className="text-[var(--accent)] underline underline-offset-2 font-medium"
-                  >
-                    See live adoption data &rarr;
-                  </a>
-                </p>
-                <p className="text-[12px] text-[var(--muted)] leading-relaxed mb-3">
-                  The compounding is staggering: electricity took{" "}
-                  <strong>40 years</strong> from dynamo to productivity gains.
-                  The PC took <strong>30+ years</strong> from mainframe to the
-                  Solow Paradox resolving. AI went from GPT-3 to 88%
-                  enterprise adoption in <strong>5 years</strong>. This is not
-                  incremental acceleration &mdash; it is an order-of-magnitude
-                  compression of the diffusion phase. One reason: AI is built
-                  on top of two prior GPTs (computers and the internet) that
-                  already saturated the economy. Every smartphone is already an
-                  AI terminal.{" "}
-                  <a
-                    href="/predictions/ai-adoption-rate"
-                    className="text-[var(--accent)] underline underline-offset-2 font-medium"
-                  >
-                    See enterprise adoption data &rarr;
-                  </a>
-                </p>
-                <p className="text-[12px] text-[var(--foreground)]/70 leading-relaxed italic">
-                  The forecasts on this page extrapolate from this adoption
-                  speed. If the diffusion phase that historically took
-                  10&ndash;25 years is happening in 1&ndash;3, the
-                  displacement and reorganization phases may compress
-                  as well &mdash; though prior GPTs show that adoption speed
-                  does not reliably predict impact speed. The internet
-                  reached 50% of households by 2000 but didn&rsquo;t show
-                  clear labor market effects for another decade.
-                  Organizational restructuring, education systems, and policy
-                  still operate at human speed.
-                </p>
-              </div>
-            </div>
-          </div>
+          {/* Speed compression visualization */}
+          <CompressionComparison />
         </div>
       </section>
 
