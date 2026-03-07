@@ -4,8 +4,17 @@
  * Visual diagram showing why intangible investment creates the J-curve:
  * the accounting gap between what firms actually produce and what statistics measure.
  */
+
+interface BarItem {
+  text: string;
+  color: string;
+  width: string;
+  dashed?: boolean;
+  strikethrough?: boolean;
+}
+
 export default function IntangibleDiagram() {
-  const rows = [
+  const rows: { label: string; items: BarItem[]; annotation: string }[] = [
     {
       label: "What firms produce",
       items: [

@@ -100,6 +100,7 @@ export default function JCurvePage() {
               label="AI's lag"
               sublabel="2020s to ???"
               color="#ef4444"
+              emphasis
             />
           </div>
         </div>
@@ -160,7 +161,19 @@ export default function JCurvePage() {
 
           <IntangibleDiagram />
 
-          <div className="mt-6 space-y-4 text-[14px] text-[var(--muted)] leading-[1.75]">
+          {/* Pull-quote */}
+          <blockquote className="my-8 border-l-3 border-[var(--accent)] pl-5 py-1">
+            <p
+              className="text-[16px] text-[var(--foreground)] leading-[1.7] font-medium"
+              style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
+            >
+              The economy looks like it&rsquo;s stagnating when it&rsquo;s
+              actually building up an enormous stock of unmeasured intangible
+              capital.
+            </p>
+          </blockquote>
+
+          <div className="space-y-4 text-[14px] text-[var(--muted)] leading-[1.75]">
             <p>
               <strong className="text-[var(--foreground)]">Early on</strong>,
               measured productivity is <em>understated</em> because firms
@@ -180,57 +193,56 @@ export default function JCurvePage() {
         </div>
       </section>
 
-      {/* ───── Section 4: The Math (Simplified) ───── */}
-      <section className="mb-12">
-        <div className="border-t border-black/[0.06] pt-8">
-          <SectionLabel number="04" />
-          <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
-            The Core Accounting Identity
-          </h2>
-          <p className="text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
-            The mechanism can be expressed in a simple accounting identity.
-            Standard productivity measurement uses only measured inputs
-            (physical capital and labor). But when firms adopt a
-            general-purpose technology, they also build unmeasured
-            intangible capital:
-          </p>
-
-          {/* Equation cards */}
-          <div className="space-y-3 mb-6">
-            <EquationCard
-              label="True output"
-              equation="Y* = GDP + Investment in intangibles"
-              note="What the economy actually produces"
-              color="#22c55e"
-            />
-            <EquationCard
-              label="Measured output"
-              equation="Y = GDP"
-              note="Intangible investment is subtracted as expense"
-              color="#ef4444"
-            />
-            <EquationCard
-              label="The gap"
-              equation="Y* - Y = Unmeasured intangible investment"
-              note="This gap follows the J-curve shape over time"
-              color="#f59e0b"
-            />
-          </div>
-
-          <p className="text-[14px] text-[var(--muted)] leading-[1.75]">
-            Three factors make the J-curve deeper: large capital adjustment
-            costs (reorganization is expensive), correlated intangible
-            investments (many types happen simultaneously), and high
-            investment shares (a large fraction of output goes to
-            intangibles during adoption).
-          </p>
+      {/* ───── Aside: The Math (Simplified) ───── */}
+      <aside className="mb-12 rounded-lg border border-black/[0.08] bg-[var(--accent-light)] px-5 py-5">
+        <div className="flex items-center gap-2 mb-3">
+          <span className="text-[11px] font-bold uppercase tracking-widest text-[var(--accent)]">
+            The accounting identity
+          </span>
+          <span className="text-[10px] text-[var(--muted)] opacity-60">
+            &mdash; optional detail
+          </span>
         </div>
-      </section>
+        <p className="text-[13px] text-[var(--muted)] leading-[1.75] mb-4">
+          Standard productivity measurement uses only measured inputs.
+          When firms adopt a general-purpose technology, they also build
+          unmeasured intangible capital &mdash; creating a systematic gap:
+        </p>
+
+        {/* Equation cards */}
+        <div className="space-y-2.5 mb-4">
+          <EquationCard
+            label="True output"
+            equation="Y* = GDP + Investment in intangibles"
+            note="What the economy actually produces"
+            color="#22c55e"
+          />
+          <EquationCard
+            label="Measured output"
+            equation="Y = GDP"
+            note="Intangible investment is subtracted as expense"
+            color="#ef4444"
+          />
+          <EquationCard
+            label="The gap"
+            equation="Y* - Y = Unmeasured intangible investment"
+            note="This gap follows the J-curve shape over time"
+            color="#f59e0b"
+          />
+        </div>
+
+        <p className="text-[13px] text-[var(--muted)] leading-[1.75]">
+          Three factors deepen the J-curve: large adjustment costs
+          (reorganization is expensive), correlated investments (many
+          types happen at once), and high investment shares during
+          adoption.
+        </p>
+      </aside>
 
       {/* ───── Section 5: Historical Evidence ───── */}
       <section className="mb-12">
         <div className="border-t border-black/[0.06] pt-8">
-          <SectionLabel number="05" />
+          <SectionLabel number="04" />
           <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
             Three Waves, One Pattern
           </h2>
@@ -248,7 +260,7 @@ export default function JCurvePage() {
       {/* ───── Section 6: What This Means for AI ───── */}
       <section className="mb-12">
         <div className="border-t border-black/[0.06] pt-8">
-          <SectionLabel number="06" />
+          <SectionLabel number="05" />
           <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
             What This Means for AI Today
           </h2>
@@ -399,18 +411,35 @@ function StatCard({
   label,
   sublabel,
   color,
+  emphasis,
 }: {
   value: string;
   label: string;
   sublabel: string;
   color: string;
+  emphasis?: boolean;
 }) {
   return (
     <div
-      className="text-center rounded-lg px-3 py-3 border"
-      style={{ borderColor: color + "30", backgroundColor: color + "08" }}
+      className={`text-center rounded-lg px-3 border${emphasis ? " py-4 relative" : " py-3"}`}
+      style={{
+        borderColor: emphasis ? color + "50" : color + "30",
+        backgroundColor: emphasis ? color + "12" : color + "08",
+        ...(emphasis ? { boxShadow: `0 0 16px ${color}15` } : {}),
+      }}
     >
-      <p className="text-[24px] font-black" style={{ color }}>
+      {emphasis && (
+        <span
+          className="absolute top-2 right-2 text-[8px] font-bold uppercase tracking-widest px-1.5 py-0.5 rounded-full"
+          style={{ backgroundColor: color + "20", color }}
+        >
+          Now
+        </span>
+      )}
+      <p
+        className={emphasis ? "text-[30px] font-black" : "text-[24px] font-black"}
+        style={{ color }}
+      >
         {value}
       </p>
       <p className="text-[11px] font-bold text-[var(--foreground)] mt-0.5">

@@ -87,7 +87,17 @@ const EXAMPLES: Example[] = [
 
 export default function HistoricalExamples() {
   const [active, setActive] = useState("electricity");
+  const [visible, setVisible] = useState(true);
   const example = EXAMPLES.find((e) => e.id === active)!;
+
+  function switchTab(id: string) {
+    if (id === active) return;
+    setVisible(false);
+    setTimeout(() => {
+      setActive(id);
+      setVisible(true);
+    }, 150);
+  }
 
   return (
     <div className="space-y-4">
@@ -96,7 +106,7 @@ export default function HistoricalExamples() {
         {EXAMPLES.map((ex) => (
           <button
             key={ex.id}
-            onClick={() => setActive(ex.id)}
+            onClick={() => switchTab(ex.id)}
             className="flex-1 text-center py-2 px-3 rounded-md text-[12px] font-bold uppercase tracking-wider transition-all"
             style={{
               backgroundColor:
@@ -115,8 +125,11 @@ export default function HistoricalExamples() {
 
       {/* Content card */}
       <div
-        className="rounded-lg border overflow-hidden"
-        style={{ borderColor: example.color + "30" }}
+        className="rounded-lg border overflow-hidden transition-opacity duration-150"
+        style={{
+          borderColor: example.color + "30",
+          opacity: visible ? 1 : 0,
+        }}
       >
         {/* Key fact banner */}
         <div

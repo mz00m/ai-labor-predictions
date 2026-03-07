@@ -430,9 +430,14 @@ export default function JCurveChart() {
         )}
       </div>
 
-      <p className="text-[11px] text-[var(--muted)] text-center italic">
-        Click or hover on a phase region to learn more
-      </p>
+      <div className="flex items-center justify-between">
+        <p className="text-[10px] text-[var(--muted)] italic opacity-60">
+          Conceptual illustration based on Brynjolfsson, Rock &amp; Syverson (2021)
+        </p>
+        <p className="text-[11px] text-[var(--muted)] italic">
+          Click or hover on a phase to learn more
+        </p>
+      </div>
     </div>
   );
 }
