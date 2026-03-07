@@ -99,7 +99,7 @@ const REVOLUTIONS: Revolution[] = [
         rel="noopener noreferrer"
         className="underline decoration-[var(--muted)]/30 underline-offset-2 hover:decoration-[var(--muted)]"
       >
-        Software developers, network engineers, UX designers, social media managers, e-commerce — industries generating trillions that didn&apos;t exist in 1990
+        Software developers, network engineers, UX designers, social media managers, e-commerce — industries generating trillions that didn{"\u2019"}t exist in 1990
       </a>
     ),
     painfulPart:
