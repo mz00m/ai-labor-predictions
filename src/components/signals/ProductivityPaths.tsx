@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -544,17 +545,28 @@ export default function ProductivityPaths() {
               workers before reaping the gains. The same pattern played out with
               electricity and computers.
             </p>
-            <p className="text-[11px] text-[var(--muted)] mt-2">
-              <a
-                href="https://www.nber.org/papers/w24001"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[var(--accent)] hover:underline"
+            <div className="flex items-center gap-3 mt-2 flex-wrap">
+              <p className="text-[11px] text-[var(--muted)]">
+                <a
+                  href="https://www.nber.org/papers/w24001"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[var(--accent)] hover:underline"
+                >
+                  Brynjolfsson, Rock &amp; Syverson (2021)
+                </a>{" "}
+                &mdash; NBER Working Paper 24001
+              </p>
+              <Link
+                href="/j-curve"
+                className="inline-flex items-center gap-1 text-[11px] font-medium text-[var(--accent)] hover:underline"
               >
-                Brynjolfsson, Rock &amp; Syverson (2021)
-              </a>{" "}
-              &mdash; NBER Working Paper 24001
-            </p>
+                Read the full explainer
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M4.5 2.5L8 6L4.5 9.5" />
+                </svg>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
