@@ -12,24 +12,21 @@ const PATHS = [
     subtitle: "Same output, fewer workers",
     color: "#dc2626",
     icon: "↓",
-    stat: "−16%",
-    statLabel: "entry-level roles in AI-exposed jobs",
+    description: "Firms maintain output while cutting headcount — entry-level roles hit hardest.",
   },
   {
     title: "Amplify",
     subtitle: "Same team, more output",
     color: "#16a34a",
     icon: "×",
-    stat: "+26%",
-    statLabel: "completed pull requests with AI",
+    description: "Existing workers become dramatically more productive with AI tools.",
   },
   {
     title: "Expand",
     subtitle: "New work, new roles, new markets",
     color: "#5C61F6",
     icon: "⑂",
-    stat: "Jevons",
-    statLabel: "efficiency grows demand, not shrinks it",
+    description: "When the cost of work drops, firms discover more work worth doing.",
   },
 ];
 
@@ -219,45 +216,26 @@ export default function OGImage() {
                 {/* Subtitle */}
                 <span
                   style={{
-                    fontSize: 14,
-                    fontWeight: 500,
+                    fontSize: 15,
+                    fontWeight: 600,
                     color: "#374151",
-                    marginBottom: 16,
+                    marginBottom: 12,
                   }}
                 >
                   {path.subtitle}
                 </span>
 
-                {/* Stat */}
-                <div
+                {/* Description */}
+                <span
                   style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    marginTop: "auto",
+                    fontSize: 13,
+                    fontWeight: 400,
+                    color: "#6b7280",
+                    lineHeight: 1.5,
                   }}
                 >
-                  <span
-                    style={{
-                      fontSize: 28,
-                      fontWeight: 900,
-                      color: path.color,
-                      lineHeight: 1,
-                      marginBottom: 4,
-                    }}
-                  >
-                    {path.stat}
-                  </span>
-                  <span
-                    style={{
-                      fontSize: 11,
-                      fontWeight: 500,
-                      color: "#9ca3af",
-                      lineHeight: 1.3,
-                    }}
-                  >
-                    {path.statLabel}
-                  </span>
-                </div>
+                  {path.description}
+                </span>
               </div>
             ))}
           </div>
