@@ -24,7 +24,7 @@ const EXAMPLES: Example[] = [
     color: "#f59e0b",
     investmentPhase:
       "Factories initially just swapped steam engines for electric motors, keeping the same layout. The real gains required complete factory redesign: individual motors on each machine, single-story layouts, assembly lines.",
-    investmentYears: "~30 years",
+    investmentYears: "~40 years",
     paradox:
       "Total factor productivity was essentially flat from 1890 to 1920 despite widespread electrification.",
     payoff:
@@ -50,7 +50,7 @@ const EXAMPLES: Example[] = [
     paradox:
       "Robert Solow's 1987 observation: \"You can see the computer age everywhere but in the productivity statistics.\"",
     payoff:
-      "The productivity boom arrived in the late 1990s-2000s. Adjusted TFP was 11.3% higher than official measures by 2004, and 15.9% higher by 2017.",
+      "The productivity boom arrived in the late 1990s-2000s. The authors estimate adjusted TFP was 11.3% higher than official measures by 2004, and 15.9% higher by 2017.",
     payoffYears: "~20-30 years after widespread adoption",
     intangibles: [
       "Enterprise software development",
@@ -152,7 +152,7 @@ export default function HistoricalExamples() {
             <span className="text-[11px] text-[var(--muted)]">
               {example.id === "ai"
                 ? "investment phase"
-                : "from introduction to productivity payoff"}
+                : "from introduction to productivity surge"}
             </span>
           </div>
 

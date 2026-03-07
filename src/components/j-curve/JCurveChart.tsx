@@ -43,7 +43,7 @@ export default function JCurveChart() {
   const W = 720;
   const H = 340;
   const padL = 60;
-  const padR = 30;
+  const padR = 80;
   const padT = 40;
   const padB = 60;
   const chartW = W - padL - padR;
@@ -204,20 +204,20 @@ export default function JCurveChart() {
           y={padT + 0.25 * chartH + 4}
           textAnchor="end"
           fill="var(--muted)"
-          fontSize="9"
+          fontSize="8"
           opacity="0.6"
         >
-          +
+          Above
         </text>
         <text
           x={padL - 8}
           y={padT + 0.75 * chartH + 4}
           textAnchor="end"
           fill="var(--muted)"
-          fontSize="9"
+          fontSize="8"
           opacity="0.6"
         >
-          &minus;
+          Below
         </text>
 
         {/* Y-axis label */}
@@ -230,7 +230,7 @@ export default function JCurveChart() {
           fontWeight="500"
           transform={`rotate(-90, 14, ${H / 2})`}
         >
-          TFP Measurement Error
+          Productivity
         </text>
 
         {/* X-axis label */}
@@ -242,7 +242,7 @@ export default function JCurveChart() {
           fontSize="10"
           fontWeight="500"
         >
-          Time since GPT introduction
+          Time since technology introduction
         </text>
 
         {/* X-axis markers */}
@@ -267,24 +267,44 @@ export default function JCurveChart() {
 
         {/* Understated / Overstated annotations */}
         <text
-          x={padL + chartW + 8}
-          y={padT + 0.3 * chartH}
+          x={padL + chartW + 10}
+          y={padT + 0.28 * chartH}
           fill="#22c55e"
           fontSize="9"
           fontWeight="600"
           opacity="0.7"
         >
-          Overstated
+          Measured
         </text>
         <text
-          x={padL + chartW + 8}
-          y={padT + 0.72 * chartH}
+          x={padL + chartW + 10}
+          y={padT + 0.28 * chartH + 11}
+          fill="#22c55e"
+          fontSize="9"
+          fontWeight="600"
+          opacity="0.7"
+        >
+          overstates
+        </text>
+        <text
+          x={padL + chartW + 10}
+          y={padT + 0.7 * chartH}
           fill="#ef4444"
           fontSize="9"
           fontWeight="600"
           opacity="0.7"
         >
-          Understated
+          Measured
+        </text>
+        <text
+          x={padL + chartW + 10}
+          y={padT + 0.7 * chartH + 11}
+          fill="#ef4444"
+          fontSize="9"
+          fontWeight="600"
+          opacity="0.7"
+        >
+          understates
         </text>
 
         {/* True TFP line (dashed) */}

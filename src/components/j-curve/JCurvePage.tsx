@@ -43,7 +43,7 @@ export default function JCurvePage() {
 
         <div className="mt-4 flex items-center gap-2">
           <span className="pill bg-black/[0.04] text-[var(--muted)]">
-            6 min read
+            8 min read
           </span>
           <span className="pill bg-black/[0.04] text-[var(--muted)]">
             Brynjolfsson, Rock &amp; Syverson (2021)
@@ -85,14 +85,14 @@ export default function JCurvePage() {
           <div className="grid grid-cols-3 gap-3 mb-6">
             <StatCard
               value="~40 yrs"
-              label="Electricity's lag"
-              sublabel="1880s to 1920s payoff"
+              label="Electricity"
+              sublabel="Introduction to productivity surge"
               color="#f59e0b"
             />
             <StatCard
               value="~25 yrs"
-              label="IT's lag"
-              sublabel="1970s to late 1990s"
+              label="Computers"
+              sublabel="Adoption to productivity boom"
               color="#5C61F6"
             />
             <StatCard
@@ -114,9 +114,13 @@ export default function JCurvePage() {
           </h2>
           <p className="text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
             The J-Curve describes the systematic error in how we measure
-            productivity when a general-purpose technology (GPT) is
-            adopted. Measured Total Factor Productivity (TFP) initially
-            drops below true TFP &mdash; then later overshoots it. The
+            productivity when a{" "}
+            <Tooltip
+              label="general-purpose technology"
+              tip="A transformative technology that reshapes entire economies — steam, electricity, computers, AI. Economists abbreviate this &quot;GPT&quot; (not to be confused with the AI model &quot;Generative Pre-trained Transformer&quot;)."
+            />{" "}
+            is adopted. Measured productivity initially
+            drops below true productivity &mdash; then later overshoots it. The
             result is a J-shaped curve in the measurement error over time.
           </p>
 
@@ -184,10 +188,11 @@ export default function JCurvePage() {
             The Core Accounting Identity
           </h2>
           <p className="text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
-            The mechanism can be expressed in a simple equation.
+            The mechanism can be expressed in a simple accounting identity.
             Standard productivity measurement uses only measured inputs
-            (physical capital K and labor L). But when firms adopt a GPT,
-            they also build unmeasured intangible capital (U):
+            (physical capital and labor). But when firms adopt a
+            general-purpose technology, they also build unmeasured
+            intangible capital:
           </p>
 
           {/* Equation cards */}
@@ -292,7 +297,7 @@ export default function JCurvePage() {
             <ImplicationCard
               icon="&#x1F4CA;"
               title="For measurement"
-              body="Current productivity statistics may systematically understate AI's actual contribution, by approximately 11-16% based on the IT precedent."
+              body="Current productivity statistics may systematically understate AI's actual contribution. The authors' IT calibration estimated a gap of 11-16%."
               color="#5C61F6"
             />
             <ImplicationCard
@@ -366,6 +371,20 @@ export default function JCurvePage() {
 }
 
 /* ── Utility components ── */
+
+function Tooltip({ label, tip }: { label: string; tip: string }) {
+  return (
+    <span className="relative inline-block group">
+      <span className="underline decoration-dotted decoration-[var(--accent)]/50 underline-offset-2 cursor-help">
+        {label}
+      </span>
+      <span className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-[320px] rounded-lg bg-[var(--foreground)] text-white text-[11px] leading-[1.6] px-4 py-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-50 shadow-lg">
+        {tip}
+        <span className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-[var(--foreground)]" />
+      </span>
+    </span>
+  );
+}
 
 function SectionLabel({ number }: { number: string }) {
   return (
