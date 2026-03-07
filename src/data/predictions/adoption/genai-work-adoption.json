@@ -6,6 +6,7 @@
   "category": "adoption",
   "unit": "% of adults at work",
   "currentValue": 43,
+  "aggregationMethod": "latest",
   "timeHorizon": "Current measure",
   "history": [
     {

@@ -52,6 +52,8 @@ export interface Prediction {
   currentValue?: number;
   currentValueSource?: string;
   currentValueMethodology?: string;
+  /** "weighted" (default) averages competing estimates; "latest" uses the most recent data point (for time-series observed data like adoption rates) */
+  aggregationMethod?: "weighted" | "latest";
   timeHorizon: string;
   history: HistoricalDataPoint[];
   overlays?: DirectionalOverlay[];

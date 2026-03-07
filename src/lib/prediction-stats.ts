@@ -89,22 +89,34 @@ export function computeAggregate(
   const min = Math.round(Math.min(...values) * 10) / 10;
   const max = Math.round(Math.max(...values) * 10) / 10;
 
-  const timestamps = points.map((p) => new Date(p.date).getTime());
-  const minMs = timestamps[0];
-  const maxMs = timestamps[timestamps.length - 1];
+  // For time-series observed data (e.g. adoption rates), use the latest value
+  // instead of averaging all historical measurements together.
+  const useLatest = prediction.aggregationMethod === "latest";
 
-  let weightedSum = 0;
-  let totalWeight = 0;
-  for (let i = 0; i < points.length; i++) {
-    const w =
-      TIER_WEIGHT[points[i].evidenceTier] *
-      recencyWeight(timestamps[i], minMs, maxMs) *
-      sampleSizeWeight(points[i]);
-    weightedSum += points[i].value * w;
-    totalWeight += w;
+  let mean: number;
+
+  if (useLatest) {
+    // Pick the most recent data point, preferring Tier 1 if available at the latest date
+    const latest = points[points.length - 1];
+    mean = Math.round(latest.value * 10) / 10;
+  } else {
+    const timestamps = points.map((p) => new Date(p.date).getTime());
+    const minMs = timestamps[0];
+    const maxMs = timestamps[timestamps.length - 1];
+
+    let weightedSum = 0;
+    let totalWeight = 0;
+    for (let i = 0; i < points.length; i++) {
+      const w =
+        TIER_WEIGHT[points[i].evidenceTier] *
+        recencyWeight(timestamps[i], minMs, maxMs) *
+        sampleSizeWeight(points[i]);
+      weightedSum += points[i].value * w;
+      totalWeight += w;
+    }
+
+    mean = Math.round((weightedSum / totalWeight) * 10) / 10;
   }
-
-  const mean = Math.round((weightedSum / totalWeight) * 10) / 10;
 
   let trend: "up" | "down" | "flat" = "flat";
   if (points.length >= 2) {
