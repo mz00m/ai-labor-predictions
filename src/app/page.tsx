@@ -287,7 +287,7 @@ export default function Home() {
 
       {/* Link → signals productivity paths */}
       <a
-        href="/signals#productivity-paths"
+        href="/signals#firm-response"
         className="group flex items-center gap-2 text-[15px] font-semibold text-[var(--accent)] hover:text-[#5C61F6] transition-colors -mt-4"
       >
         What happens when workers get more productive?

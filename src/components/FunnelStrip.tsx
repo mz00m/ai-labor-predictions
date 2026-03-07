@@ -132,7 +132,7 @@ export default function FunnelStrip() {
                 )}
                 {group.link && (
                   <Link
-                    href="/signals#productivity-paths"
+                    href="/signals#firm-response"
                     className="text-[9px] text-[var(--accent)] hover:underline mt-0.5 leading-snug"
                   >
                     How this translates to jobs &rarr;
@@ -232,7 +232,7 @@ export default function FunnelStrip() {
                   {showMobileProductivityLink && (
                     <div className="sm:hidden px-3 py-1.5 bg-black/[0.015]">
                       <Link
-                        href="/signals#productivity-paths"
+                        href="/signals#firm-response"
                         className="text-[10px] text-[var(--accent)] hover:underline"
                       >
                         How this translates to jobs &rarr;
