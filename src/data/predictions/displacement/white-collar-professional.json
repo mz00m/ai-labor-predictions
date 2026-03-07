@@ -417,6 +417,15 @@
       ],
       "evidenceTier": 1,
       "label": "Anthropic: Most AI-exposed workers are educated, higher-paid \u2014 no unemployment rise found"
+    },
+    {
+      "date": "2026-03-07",
+      "direction": "down",
+      "sourceIds": [
+        "wsj-ai-military-iran-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "WSJ: U.S. Army targeting ops achieved with 20 staff vs. 2,000 pre-AI (99% reduction)"
     }
   ],
   "sources": [
@@ -780,6 +789,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-02-05",
       "excerpt": "Professional & business services openings down 21.8% (-284,000). Financial activities openings down 25.1% (-86,000)."
+    },
+    {
+      "id": "wsj-ai-military-iran-2026",
+      "title": "How AI Is Turbocharging the War in Iran",
+      "url": "https://www.wsj.com/tech/ai/how-ai-is-turbocharging-the-war-in-iran-aca59002",
+      "publisher": "The Wall Street Journal",
+      "evidenceTier": 3,
+      "datePublished": "2026-03-07",
+      "excerpt": "The U.S. Army's 18th Airborne Corps, using software from data company Palantir Technologies in a continuing string of exercises dubbed Scarlet Dragon, matched its own record from Iraq as the military's most efficient targeting operation ever, according to Emelia Probasco, a senior fellow at Georgetown University's Center for Security and Emerging Technology. Thanks to AI, the corps achieved that with only 20 people, compared with more than 2,000 staffers employed in Iraq, she said."
     }
   ]
 }

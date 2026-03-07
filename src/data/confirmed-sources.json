@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-03-06",
-  "totalSources": 316,
-  "verifiedCount": 306,
+  "lastUpdated": "2026-03-07",
+  "totalSources": 317,
+  "verifiedCount": 307,
   "sources": {
     "accenture-health-ai-2023": {
       "id": "accenture-health-ai-2023",
@@ -3786,6 +3786,20 @@
         "white-collar-professional-displacement"
       ],
       "verified": true
+    },
+    "wsj-ai-military-iran-2026": {
+      "id": "wsj-ai-military-iran-2026",
+      "title": "How AI Is Turbocharging the War in Iran",
+      "url": "https://www.wsj.com/tech/ai/how-ai-is-turbocharging-the-war-in-iran-aca59002",
+      "publisher": "The Wall Street Journal",
+      "evidenceTier": 3,
+      "datePublished": "2026-03-07",
+      "excerpt": "The U.S. Army's 18th Airborne Corps, using software from data company Palantir Technologies in a continuing string of exercises dubbed Scarlet Dragon, matched its own record from Iraq as the military's most efficient targeting operation ever. Thanks to AI, the corps achieved that with only 20 people, compared with more than 2,000 staffers employed in Iraq.",
+      "usedIn": [
+        "white-collar-professional-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
     },
     "x-ai-salaries-thread": {
       "id": "x-ai-salaries-thread",
