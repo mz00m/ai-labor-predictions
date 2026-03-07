@@ -97,7 +97,7 @@ const REVOLUTIONS: Revolution[] = [
         href="https://www.wsj.com/articles/wesurvived-spreadsheets-and-well-survive-ai-1501688765"
         target="_blank"
         rel="noopener noreferrer"
-        className="underline decoration-[var(--muted)]/30 underline-offset-2 hover:decoration-[var(--muted)]"
+        className="text-[#7c3aed] underline decoration-[#7c3aed]/40 underline-offset-2 hover:decoration-[#7c3aed]"
       >
         Software developers, network engineers, UX designers, social media managers, e-commerce — industries generating trillions that didn{"\u2019"}t exist in 1990
       </a>
