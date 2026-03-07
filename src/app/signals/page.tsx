@@ -34,7 +34,7 @@ export default function SignalsPage() {
 
       {/* Jump link → productivity-paths */}
       <a
-        href="#firm-response"
+        href="#productivity-paths"
         className="group flex items-center gap-2 text-[15px] font-semibold text-[var(--accent)] hover:text-[#5C61F6] transition-colors -mt-4"
       >
         What happens when workers get more productive?
@@ -109,7 +109,7 @@ export default function SignalsPage() {
           <p className="text-[13px] text-[var(--muted)] mt-2">
             Each industry follows one of three paths:{" "}
             <a
-              href="#firm-response"
+              href="#productivity-paths"
               className="text-[var(--accent)] hover:underline"
             >
               <span className="font-semibold" style={{ color: "#F66B5C" }}>Reduce</span>

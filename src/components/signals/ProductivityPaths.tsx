@@ -468,7 +468,7 @@ export default function ProductivityPaths() {
   };
 
   return (
-    <section id="firm-response" style={{ scrollMarginTop: "4rem" }}>
+    <section id="productivity-paths" style={{ scrollMarginTop: "4rem" }}>
       {/* Subtle pulse animation for starting node */}
       <style>{`
         @keyframes node-pulse {
