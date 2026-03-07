@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 
 interface Revolution {
   id: string;
@@ -11,7 +11,7 @@ interface Revolution {
   innovation: string;
   automated: string;
   destroyed: string;
-  created: string;
+  created: ReactNode;
   painfulPart: string;
   lesson: string;
   aiParallel: string;
@@ -92,8 +92,16 @@ const REVOLUTIONS: Revolution[] = [
       "Clerical labor (typing, filing, bookkeeping); routine cognitive tasks; then logistics and coordination",
     destroyed:
       "Telephone operators, bank tellers, travel agents, filing clerks, typists — many roles reduced 80\u201390%",
-    created:
-      "Software developers, network engineers, UX designers, social media managers, e-commerce — industries generating trillions that didn\u2019t exist in 1990",
+    created: (
+      <a
+        href="https://www.wsj.com/articles/wesurvived-spreadsheets-and-well-survive-ai-1501688765"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-[#7c3aed] underline decoration-[#7c3aed]/40 underline-offset-2 hover:decoration-[#7c3aed]"
+      >
+        Software developers, network engineers, UX designers, social media managers, e-commerce — industries generating trillions that didn{"\u2019"}t exist in 1990
+      </a>
+    ),
     painfulPart:
       '\u201cLabor market polarization\u201d — growth at the top (knowledge workers) and bottom (personal services) of wages, hollowing out of the middle. College wage premium rose from ~40% to ~70% between 1980\u20132000. Workers without degrees saw real wages stagnate or fall for 40 years. Robert Solow\u2019s observation (1987): "You can see the computer age everywhere but in the productivity statistics."',
     lesson:
@@ -199,7 +207,7 @@ export default function RevolutionCards() {
   );
 }
 
-function Row({ label, value }: { label: string; value: string }) {
+function Row({ label, value }: { label: string; value: ReactNode }) {
   return (
     <div>
       <dt className="text-[11px] font-bold uppercase tracking-wider text-[var(--muted)] mb-1">
