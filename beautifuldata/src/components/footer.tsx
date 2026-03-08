@@ -1,23 +1,28 @@
 export function Footer() {
   return (
-    <footer className="border-t border-gray-800/50 px-6 py-12">
-      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 sm:flex-row">
-        <div>
-          <span className="text-sm font-semibold">
-            <span className="text-brand-400">Beautiful</span>Data
-          </span>
-          <p className="mt-1 text-xs text-gray-600">
-            Interactive data visualization for research & policy.
-          </p>
+    <footer className="border-t border-white/[0.04] px-6 py-12">
+      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 sm:flex-row">
+        <a href="#" className="text-[14px] font-semibold text-white">
+          beautiful<span className="text-brand-400">data</span>
+        </a>
+        <div className="flex gap-8">
+          {[
+            { label: "Services", href: "#services" },
+            { label: "Work", href: "#work" },
+            { label: "Pricing", href: "#pricing" },
+            { label: "Contact", href: "#contact" },
+          ].map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="text-[13px] text-gray-600 transition-colors hover:text-gray-400"
+            >
+              {link.label}
+            </a>
+          ))}
         </div>
-        <div className="flex gap-6">
-          <a href="#services" className="text-xs text-gray-500 hover:text-gray-300 transition">Services</a>
-          <a href="#work" className="text-xs text-gray-500 hover:text-gray-300 transition">Work</a>
-          <a href="#pricing" className="text-xs text-gray-500 hover:text-gray-300 transition">Pricing</a>
-          <a href="#contact" className="text-xs text-gray-500 hover:text-gray-300 transition">Contact</a>
-        </div>
-        <p className="text-xs text-gray-700">
-          &copy; {new Date().getFullYear()} Beautiful Data
+        <p className="text-[13px] text-gray-700">
+          &copy; {new Date().getFullYear()}
         </p>
       </div>
     </footer>

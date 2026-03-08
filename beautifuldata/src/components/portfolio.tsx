@@ -1,77 +1,78 @@
-const projects = [
-  {
-    title: "AI Labor Market Predictions",
-    url: "https://jobsdata.ai",
-    description:
-      "17 interactive prediction graphs tracking AI's impact on the US labor market. Synthesizes 300+ research sources across displacement, wages, and adoption metrics.",
-    tags: ["Next.js", "Recharts", "17 interactive charts", "300+ sources"],
-    stats: [
-      { label: "Prediction graphs", value: "17" },
-      { label: "Verified sources", value: "300+" },
-      { label: "Evidence tiers", value: "4" },
-    ],
-  },
-];
-
 export function Portfolio() {
   return (
-    <section id="work" className="px-6 py-24">
+    <section id="work" className="px-6 py-28">
       <div className="mx-auto max-w-6xl">
-        <p className="text-sm font-medium uppercase tracking-widest text-brand-400">
-          Our Work
-        </p>
-        <h2 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
-          Data stories in production
-        </h2>
-        <p className="mt-4 max-w-2xl text-lg text-gray-400">
-          Real projects, live on the web. Not concept art.
-        </p>
-
-        <div className="mt-12 space-y-8">
-          {projects.map((project) => (
-            <a
-              key={project.title}
-              href={project.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group block rounded-xl border border-gray-800 bg-gray-900/50 p-8 transition hover:border-brand-600/50 hover:bg-gray-900 sm:p-10"
-            >
-              <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
-                <div className="flex-1">
-                  <h3 className="text-xl font-semibold group-hover:text-brand-400 transition">
-                    {project.title}
-                  </h3>
-                  <p className="mt-2 text-gray-400 max-w-xl">
-                    {project.description}
-                  </p>
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="rounded-full bg-gray-800 px-3 py-1 text-xs text-gray-400"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="flex gap-8 lg:gap-12">
-                  {project.stats.map((s) => (
-                    <div key={s.label} className="text-center">
-                      <p className="text-2xl font-bold text-white">{s.value}</p>
-                      <p className="mt-1 text-xs text-gray-500">{s.label}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <p className="mt-6 text-sm text-brand-400 opacity-0 transition group-hover:opacity-100">
-                Visit live site &rarr;
-              </p>
-            </a>
-          ))}
+        <div className="max-w-2xl">
+          <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
+            Case study
+          </h2>
+          <p className="mt-4 text-[17px] leading-relaxed text-gray-400">
+            A production site, live on the web. Not a concept.
+          </p>
         </div>
+
+        <a
+          href="https://jobsdata.ai"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group mt-12 block overflow-hidden rounded-2xl border border-white/[0.06] bg-surface-1 transition-all hover:border-brand-600/30 hover:shadow-2xl hover:shadow-brand-600/5"
+        >
+          {/* Header bar */}
+          <div className="border-b border-white/[0.06] bg-surface-2/50 px-8 py-4 sm:px-10">
+            <div className="flex items-center justify-between">
+              <span className="text-[13px] text-gray-500">jobsdata.ai</span>
+              <span className="text-[13px] text-brand-400 opacity-0 transition-opacity group-hover:opacity-100">
+                Visit live site &rarr;
+              </span>
+            </div>
+          </div>
+
+          <div className="p-8 sm:p-10">
+            <h3 className="text-xl font-semibold text-white">
+              AI Labor Market Predictions
+            </h3>
+            <p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-gray-400">
+              A public dashboard tracking AI&apos;s impact on the US labor market.
+              17 interactive prediction graphs synthesizing 300+ research
+              sources — academic papers, government data, and institutional
+              analysis — into a single navigable interface with a 4-tier
+              evidence system.
+            </p>
+
+            {/* Stats row */}
+            <div className="mt-8 flex flex-wrap gap-x-12 gap-y-4 border-t border-white/[0.06] pt-8">
+              {[
+                { value: "17", label: "Interactive graphs" },
+                { value: "300+", label: "Verified sources" },
+                { value: "4-tier", label: "Evidence system" },
+                { value: "5", label: "Data categories" },
+              ].map((stat) => (
+                <div key={stat.label}>
+                  <p className="text-lg font-semibold text-white tabular-nums">
+                    {stat.value}
+                  </p>
+                  <p className="mt-0.5 text-[13px] text-gray-600">
+                    {stat.label}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            {/* Tech tags */}
+            <div className="mt-6 flex flex-wrap gap-2">
+              {["Next.js", "React", "Recharts", "TypeScript", "Tailwind CSS"].map(
+                (tag) => (
+                  <span
+                    key={tag}
+                    className="rounded-full border border-white/[0.06] bg-surface-2 px-3 py-1 text-[12px] text-gray-500"
+                  >
+                    {tag}
+                  </span>
+                )
+              )}
+            </div>
+          </div>
+        </a>
       </div>
     </section>
   );

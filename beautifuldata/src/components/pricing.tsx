@@ -1,24 +1,26 @@
 const tiers = [
   {
     name: "Starter",
-    price: "$5,000",
-    description: "A single focused interactive visualization or dashboard.",
+    price: "$5k",
+    unit: "project",
+    description: "One focused interactive visualization, deployed to your domain.",
     features: [
-      "1 interactive visualization",
+      "Single interactive visualization",
       "Up to 3 chart types",
       "Responsive design",
       "Deployed to your domain",
       "2-3 week delivery",
     ],
-    cta: "Start a Starter Project",
+    cta: "Get started",
     href: "#contact",
     highlight: false,
   },
   {
     name: "Standard",
-    price: "$12,000",
+    price: "$12k",
+    unit: "project",
     description:
-      "A multi-view interactive site or scrollytelling data experience.",
+      "A multi-page interactive site with scrollytelling narrative.",
     features: [
       "Multi-page interactive site",
       "Scrollytelling narrative",
@@ -26,16 +28,16 @@ const tiers = [
       "Source verification system",
       "4-6 week delivery",
     ],
-    cta: "Start a Standard Project",
-    // Replace with your Stripe payment link when ready
+    cta: "Get started",
     href: "#contact",
     highlight: true,
   },
   {
     name: "Premium",
-    price: "$20,000+",
+    price: "$20k+",
+    unit: "project",
     description:
-      "A full interactive data platform — like our jobsdata.ai project.",
+      "A full interactive data platform with automated pipelines.",
     features: [
       "Full interactive data site",
       "Custom chart components",
@@ -43,7 +45,7 @@ const tiers = [
       "Evidence tier system",
       "6-10 week delivery",
     ],
-    cta: "Discuss a Premium Project",
+    cta: "Let\u2019s talk",
     href: "#contact",
     highlight: false,
   },
@@ -51,67 +53,71 @@ const tiers = [
 
 export function Pricing() {
   return (
-    <section id="pricing" className="px-6 py-24">
+    <section id="pricing" className="px-6 py-28">
       <div className="mx-auto max-w-6xl">
-        <p className="text-sm font-medium uppercase tracking-widest text-brand-400">
-          Pricing
-        </p>
-        <h2 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
-          Transparent, project-based pricing
-        </h2>
-        <p className="mt-4 max-w-2xl text-lg text-gray-400">
-          No hourly billing surprises. Fixed scope, fixed price.
-        </p>
+        <div className="max-w-2xl">
+          <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
+            Pricing
+          </h2>
+          <p className="mt-4 text-[17px] leading-relaxed text-gray-400">
+            Fixed scope, fixed price. No hourly billing surprises.
+          </p>
+        </div>
 
-        <div className="mt-16 grid gap-8 lg:grid-cols-3">
+        <div className="mt-16 grid gap-6 lg:grid-cols-3">
           {tiers.map((tier) => (
             <div
               key={tier.name}
-              className={`relative rounded-xl border p-8 transition ${
+              className={`relative flex flex-col rounded-2xl border p-8 transition-all ${
                 tier.highlight
-                  ? "border-brand-600 bg-gray-900 shadow-lg shadow-brand-600/10"
-                  : "border-gray-800 bg-gray-900/50 hover:border-gray-700"
+                  ? "border-brand-600/40 bg-surface-1 shadow-xl shadow-brand-600/[0.06]"
+                  : "border-white/[0.06] bg-surface-1 hover:border-white/[0.1]"
               }`}
             >
-              {tier.highlight && (
-                <span className="absolute -top-3 left-6 rounded-full bg-brand-600 px-3 py-1 text-xs font-medium text-white">
-                  Most Popular
-                </span>
-              )}
+              <div>
+                <h3 className="text-[15px] font-semibold text-white">
+                  {tier.name}
+                </h3>
+                <div className="mt-4 flex items-baseline gap-1">
+                  <span className="text-3xl font-semibold tracking-tight text-white">
+                    {tier.price}
+                  </span>
+                  <span className="text-[13px] text-gray-600">
+                    / {tier.unit}
+                  </span>
+                </div>
+                <p className="mt-3 text-[14px] leading-relaxed text-gray-500">
+                  {tier.description}
+                </p>
+              </div>
 
-              <h3 className="text-lg font-semibold">{tier.name}</h3>
-              <p className="mt-4">
-                <span className="text-3xl font-bold">{tier.price}</span>
-              </p>
-              <p className="mt-2 text-sm text-gray-400">{tier.description}</p>
-
-              <ul className="mt-8 space-y-3">
+              <ul className="mt-8 flex-1 space-y-3">
                 {tier.features.map((f) => (
-                  <li key={f} className="flex items-start gap-3 text-sm">
+                  <li key={f} className="flex items-start gap-3">
                     <svg
                       className="mt-0.5 h-4 w-4 flex-shrink-0 text-brand-400"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
+                      strokeWidth={2}
                     >
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        strokeWidth={2}
                         d="M5 13l4 4L19 7"
                       />
                     </svg>
-                    <span className="text-gray-300">{f}</span>
+                    <span className="text-[14px] text-gray-400">{f}</span>
                   </li>
                 ))}
               </ul>
 
               <a
                 href={tier.href}
-                className={`mt-8 block rounded-lg px-6 py-3 text-center text-sm font-medium transition ${
+                className={`mt-8 block rounded-full px-6 py-3 text-center text-[14px] font-medium transition-all ${
                   tier.highlight
-                    ? "bg-brand-600 text-white hover:bg-brand-500"
-                    : "border border-gray-700 text-gray-300 hover:border-gray-500 hover:text-white"
+                    ? "bg-brand-600 text-white hover:bg-brand-500 hover:shadow-md hover:shadow-brand-600/20"
+                    : "border border-white/[0.1] text-gray-300 hover:border-white/20 hover:text-white"
                 }`}
               >
                 {tier.cta}
@@ -120,8 +126,14 @@ export function Pricing() {
           ))}
         </div>
 
-        <p className="mt-8 text-center text-sm text-gray-600">
-          Need something custom? <a href="#contact" className="text-brand-400 hover:underline">Let&apos;s talk.</a>
+        <p className="mt-10 text-center text-[14px] text-gray-600">
+          Need something different?{" "}
+          <a
+            href="#contact"
+            className="text-brand-400 transition-colors hover:text-brand-300"
+          >
+            Tell us what you&apos;re building.
+          </a>
         </p>
       </div>
     </section>
