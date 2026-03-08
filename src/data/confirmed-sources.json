@@ -4338,7 +4338,10 @@
       "datePublished": "2025-10-30",
       "excerpt": "AI agents perform near the floor on RLI, with the highest-performing agent achieving an automation rate of 2.5%. 240 real freelance projects across game dev, design, architecture, data analysis, and animation.",
       "usedIn": [
-        "overall-us-displacement"
+        "overall-us-displacement",
+        "creative-industry-displacement",
+        "tech-sector-displacement",
+        "freelancer-rate-impact"
       ],
       "verified": true,
       "synthetic": false

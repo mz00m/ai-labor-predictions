@@ -104,6 +104,15 @@
       "label": "Brookings: San Jose 43% AI-exposed vs 31% in Las Vegas"
     },
     {
+      "date": "2025-05-01",
+      "direction": "up",
+      "sourceIds": [
+        "epj-ai-economic-divide-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "EPJ: AI impact concentrates in economically undiversified MSAs"
+    },
+    {
       "date": "2025-07-01",
       "direction": "up",
       "sourceIds": [
@@ -147,15 +156,6 @@
       ],
       "evidenceTier": 1,
       "label": "NBER: 6.1M workers lack adaptive capacity; 86% women"
-    },
-    {
-      "date": "2025-05-01",
-      "direction": "up",
-      "sourceIds": [
-        "epj-ai-economic-divide-2025"
-      ],
-      "evidenceTier": 1,
-      "label": "EPJ: AI impact concentrates in economically undiversified MSAs"
     }
   ],
   "sources": [

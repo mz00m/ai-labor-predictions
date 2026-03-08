@@ -204,6 +204,15 @@
       "label": "Goldman Sachs: AI to raise labor productivity ~15% when fully adopted"
     },
     {
+      "date": "2025-12-01",
+      "direction": "down",
+      "sourceIds": [
+        "revelio-labs-wage-divide-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Revelio Labs: top-quartile salaries +30% vs bottom-quartile +10% since Jan 2023"
+    },
+    {
       "date": "2025-12-30",
       "direction": "up",
       "sourceIds": [
@@ -283,15 +292,6 @@
       ],
       "evidenceTier": 3,
       "label": "Furman (BLS): productivity 2.2% above CBO forecast; 2.8% annual growth"
-    },
-    {
-      "date": "2025-12-01",
-      "direction": "down",
-      "sourceIds": [
-        "revelio-labs-wage-divide-2025"
-      ],
-      "evidenceTier": 2,
-      "label": "Revelio Labs: top-quartile salaries +30% vs bottom-quartile +10% since Jan 2023"
     }
   ],
   "sources": [

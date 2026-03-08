@@ -180,6 +180,15 @@
       "label": "World Bank: entry-level postings fell 18-20%"
     },
     {
+      "date": "2025-12-01",
+      "direction": "down",
+      "sourceIds": [
+        "revelio-labs-wage-divide-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Revelio Labs: automation suppressing wage gains in lower-paid roles"
+    },
+    {
       "date": "2026-01-01",
       "direction": "up",
       "sourceIds": [
@@ -268,15 +277,6 @@
       ],
       "evidenceTier": 1,
       "label": "Anthropic: AI exposure concentrates in credentialed roles (17.4% vs 4.5% grad degrees)"
-    },
-    {
-      "date": "2025-12-01",
-      "direction": "down",
-      "sourceIds": [
-        "revelio-labs-wage-divide-2025"
-      ],
-      "evidenceTier": 2,
-      "label": "Revelio Labs: automation suppressing wage gains in lower-paid roles"
     }
   ],
   "sources": [

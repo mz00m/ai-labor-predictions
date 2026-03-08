@@ -5,7 +5,7 @@
   "description": "Projected change in wages for workers with strong AI/ML skills relative to the median, measuring the emerging 'AI premium' in compensation.",
   "category": "wages",
   "unit": "% wage premium over median",
-  "currentValue": 23.0,
+  "currentValue": 23,
   "timeHorizon": "By 2030",
   "history": [
     {
@@ -167,6 +167,15 @@
       "label": "Fortune: AI talent commands 30% salary premium as demand outstrips supply"
     },
     {
+      "date": "2025-12-01",
+      "direction": "up",
+      "sourceIds": [
+        "revelio-labs-wage-divide-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Revelio Labs: demand for $100K+ jobs up ~150% in 2 years; K-shaped recovery"
+    },
+    {
       "date": "2026-01-01",
       "direction": "up",
       "sourceIds": [
@@ -228,15 +237,6 @@
       ],
       "evidenceTier": 1,
       "label": "Anthropic: AI-exposed workers earn 47% more than unexposed workers"
-    },
-    {
-      "date": "2025-12-01",
-      "direction": "up",
-      "sourceIds": [
-        "revelio-labs-wage-divide-2025"
-      ],
-      "evidenceTier": 2,
-      "label": "Revelio Labs: demand for $100K+ jobs up ~150% in 2 years; K-shaped recovery"
     }
   ],
   "sources": [
