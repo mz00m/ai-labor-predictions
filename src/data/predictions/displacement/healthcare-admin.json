@@ -179,6 +179,15 @@
       "label": "HealthTech: admin is 25% of healthcare costs, key automation target"
     },
     {
+      "date": "2026-01-22",
+      "direction": "down",
+      "sourceIds": [
+        "brookings-ai-adaptive-capacity-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Brookings/GovAI: 831K medical secretaries among largest high-exposure/low-adaptability occupations"
+    },
+    {
       "date": "2026-02-05",
       "direction": "down",
       "sourceIds": [
@@ -341,6 +350,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-02-05",
       "excerpt": "Healthcare and social assistance openings down 10.8% (-152,000) since October."
+    },
+    {
+      "id": "brookings-ai-adaptive-capacity-2026",
+      "title": "Measuring US workers' capacity to adapt to AI-driven job displacement",
+      "url": "https://www.brookings.edu/articles/measuring-us-workers-capacity-to-adapt-to-ai-driven-job-displacement/",
+      "publisher": "Brookings Metro / GovAI (Manning, Muro, Aguirre)",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-22",
+      "excerpt": "6.1 million U.S. workers face both high AI exposure and low adaptive capacity. Medical secretaries and administrative assistants (831,000 workers) stand out as one of the largest occupations in this high-risk category. About 86% of these workers are women."
     },
     {
       "id": "gommers-masai-lancet-2026",
