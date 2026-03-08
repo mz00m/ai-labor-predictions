@@ -161,6 +161,15 @@
       ],
       "evidenceTier": 2,
       "label": "Cognizant: education exposure jumped from 11% to 49% — a 4.5x increase"
+    },
+    {
+      "date": "2026-02-01",
+      "direction": "up",
+      "sourceIds": [
+        "shrm-automation-education-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "SHRM: only 7.3% of education jobs highly automated — lowest of any sector (n=20,262)"
     }
   ],
   "sources": [
@@ -289,6 +298,15 @@
       "evidenceTier": 1,
       "datePublished": "2025-01-08",
       "excerpt": "Duolingo cut 10%+ of its contractor workforce, explicitly replacing human content creators with AI-generated language exercises. CEO announced 'AI-first' strategy for all content production."
+    },
+    {
+      "id": "shrm-automation-education-2025",
+      "title": "Automation, Generative AI, and Job Displacement Risk in U.S. Employment",
+      "url": "https://www.shrm.org/topics-tools/research/automation-generative-ai-and-job-displacement-risk-in-u-s--employment",
+      "publisher": "SHRM (Society for Human Resource Management)",
+      "evidenceTier": 2,
+      "datePublished": "2025-10-01",
+      "excerpt": "At least 50% of tasks are automated in only 7.3% of education and library occupations — the lowest of any occupational group. Survey of 20,262 U.S. workers fielded March-April 2025."
     },
     {
       "id": "cognizant-new-work-2026",

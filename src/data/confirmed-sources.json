@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-08",
-  "totalSources": 320,
-  "verifiedCount": 310,
+  "totalSources": 321,
+  "verifiedCount": 311,
   "sources": {
     "revelio-labs-wage-divide-2025": {
       "id": "revelio-labs-wage-divide-2025",
@@ -3375,6 +3375,20 @@
       "excerpt": "new grad hiring in large tech is down over 50% since 2019. For the first time in over decades, recent college grads have a higher unemployment rate than the national average. In addition, the 'underemployment rate' for recent graduates has risen to 42.5% (Q4 2025, New York Federal Reserve).",
       "usedIn": [
         "entry-level-wage-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "shrm-automation-education-2025": {
+      "id": "shrm-automation-education-2025",
+      "title": "Automation, Generative AI, and Job Displacement Risk in U.S. Employment",
+      "url": "https://www.shrm.org/topics-tools/research/automation-generative-ai-and-job-displacement-risk-in-u-s--employment",
+      "publisher": "SHRM (Society for Human Resource Management)",
+      "evidenceTier": 2,
+      "datePublished": "2025-10-01",
+      "excerpt": "At least 50% of tasks are automated in only 7.3% of education and library occupations — the lowest of any occupational group. Survey of 20,262 U.S. workers fielded March-April 2025.",
+      "usedIn": [
+        "education-sector-displacement"
       ],
       "verified": true,
       "synthetic": false
