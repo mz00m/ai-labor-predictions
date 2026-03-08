@@ -156,6 +156,15 @@
       ],
       "evidenceTier": 1,
       "label": "NBER: 6.1M workers lack adaptive capacity; 86% women"
+    },
+    {
+      "date": "2026-02-24",
+      "direction": "up",
+      "sourceIds": [
+        "dallas-fed-davis-ai-wages-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Dallas Fed: AI-exposed sector wages +16.7% vs +7.5% national since fall 2022"
     }
   ],
   "sources": [
@@ -284,6 +293,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-01-15",
       "excerpt": "Employment 3.6% lower in AI-vulnerable occupations in regions with high AI-skill demand after 5 years; geographic divergence driven by skill concentration."
+    },
+    {
+      "id": "dallas-fed-davis-ai-wages-2026",
+      "title": "AI is simultaneously aiding and replacing workers, wage data suggest",
+      "url": "https://www.dallasfed.org/research/economics/2026/0224",
+      "publisher": "Federal Reserve Bank of Dallas (J. Scott Davis)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-24",
+      "excerpt": "Since fall 2022, nominal average weekly wages nationwide have increased 7.5 percent, while the computer systems design sector has risen 16.7 percent. Among the top 10 percent of AI-exposed industries, wages grew 8.5 percent."
     }
   ]
 }
