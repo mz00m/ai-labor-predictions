@@ -85,6 +85,38 @@ export default function HistoryPage() {
 
           {/* Speed compression visualization */}
           <CompressionComparison />
+
+          {/* "This time might be different" counterpoint */}
+          <div className="mt-6 rounded-xl border border-amber-200/80 bg-amber-50/50 p-4 sm:p-5">
+            <p className="text-[13px] font-bold text-[var(--foreground)] mb-1.5">
+              But what if this time is different?
+            </p>
+            <p className="text-[13px] text-[var(--muted)] leading-relaxed">
+              Previous technologies automated tasks &mdash; sometimes many
+              tasks &mdash; but none could emulate the full range of human
+              cognition. If AI progresses toward general intelligence, the
+              historical pattern may break down. The relevant question shifts
+              from <em className="text-[var(--foreground)]">which tasks get
+              automated</em> to <em className="text-[var(--foreground)]">where
+              humans retain comparative advantage</em>: efficiency gaps,
+              roles where the human element <em>is</em> the value, and
+              complementarities between cognitive and physical work. Just
+              because AI <em>can</em> do something doesn&rsquo;t mean human
+              labor involving it disappears &mdash; but it will probably
+              look very different.
+            </p>
+            <p className="text-[11px] text-[var(--muted)] mt-2">
+              Adapted from{" "}
+              <a
+                href="https://x.com/alexolegimas"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[var(--accent)] hover:underline"
+              >
+                Alex Imas
+              </a>
+            </p>
+          </div>
         </div>
       </section>
 
