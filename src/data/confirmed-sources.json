@@ -1,7 +1,7 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-07",
-  "totalSources": 318,
+  "totalSources": 308,
   "verifiedCount": 308,
   "sources": {
     "accenture-health-ai-2023": {
@@ -45,21 +45,6 @@
         "total-us-jobs-lost"
       ],
       "verified": true
-    },
-    "adobe-creative-survey-2024": {
-      "id": "adobe-creative-survey-2024",
-      "title": "Adobe Future of Creativity Survey 2024",
-      "url": "https://www.adobe.com/content/dam/cc/us/en/ai-assistant/pdfs/adobe-future-of-creativity-study.pdf",
-      "publisher": "Adobe",
-      "evidenceTier": 2,
-      "datePublished": "2024-02-01",
-      "excerpt": "74% of creative professionals report using AI tools. 30% say AI has reduced the scope of work they're hired for.",
-      "usedIn": [
-        "creative-industry-displacement"
-      ],
-      "verified": false,
-      "synthetic": true,
-      "_action": "REMOVE"
     },
     "adp-stanford-young-workers-2025": {
       "id": "adp-stanford-young-workers-2025",
@@ -305,21 +290,6 @@
       ],
       "verified": true
     },
-    "bls-contingent-2025": {
-      "id": "bls-contingent-2025",
-      "title": "Contingent and Alternative Employment Arrangements — 2025",
-      "url": "https://www.bls.gov/news.release/conemp.nr0.htm",
-      "publisher": "Bureau of Labor Statistics",
-      "evidenceTier": 1,
-      "datePublished": "2025-07-15",
-      "excerpt": "Median weekly earnings for freelance writers and designers declined 18% in real terms from 2022-2025.",
-      "usedIn": [
-        "freelancer-rate-impact"
-      ],
-      "verified": false,
-      "synthetic": true,
-      "_action": "REMOVE"
-    },
     "bls-creative-occupations-2025": {
       "id": "bls-creative-occupations-2025",
       "title": "Occupational Outlook: Arts, Design, Entertainment, Sports, and Media",
@@ -451,21 +421,6 @@
       "verified": true,
       "synthetic": false
     },
-    "bls-tech-vs-nontechmetro-2025": {
-      "id": "bls-tech-vs-nontechmetro-2025",
-      "title": "BLS Tech vs. Non-Tech Metro Wage Analysis Q3 2025",
-      "url": "https://www.bls.gov/oes/current/oessrcma.htm",
-      "publisher": "Bureau of Labor Statistics",
-      "evidenceTier": 2,
-      "datePublished": "2025-11-01",
-      "excerpt": "AI roles median salary $157K in hub metros vs. $49,500 median for all occupations nationally. Geographic premium for AI talent continues to widen.",
-      "usedIn": [
-        "geographic-wage-divergence"
-      ],
-      "verified": false,
-      "synthetic": true,
-      "_action": "REMOVE"
-    },
     "bls-wage-data-2025": {
       "id": "bls-wage-data-2025",
       "title": "Employment Cost Index — 2025 Q1",
@@ -561,21 +516,6 @@
         "white-collar-professional-displacement"
       ],
       "verified": true
-    },
-    "brynjolfsson-bls-productivity-2026": {
-      "id": "brynjolfsson-bls-productivity-2026",
-      "title": "US Productivity Growth and AI",
-      "url": "https://www.ft.com/content/brynjolfsson-ai-productivity-2026",
-      "publisher": "FT / Brynjolfsson (BLS data)",
-      "evidenceTier": 1,
-      "datePublished": "2026-02-01",
-      "excerpt": "US productivity grew roughly 2.7% in 2025, nearly double the 1.4% annual average of the past decade — a decoupling of output from labor input that is the hallmark of productivity growth.",
-      "usedIn": [
-        "median-wage-impact"
-      ],
-      "verified": false,
-      "synthetic": true,
-      "_action": "REMOVE"
     },
     "brynjolfsson-chandar-chen-2025": {
       "id": "brynjolfsson-chandar-chen-2025",
@@ -843,21 +783,6 @@
         "customer-service-automation"
       ],
       "verified": true
-    },
-    "claude-code-github-2026": {
-      "id": "claude-code-github-2026",
-      "title": "Claude Code GitHub Commits Over Time",
-      "url": "https://github.com/search?q=co-authored-by+claude&type=commits",
-      "publisher": "GitHub Search API / Anthropic",
-      "evidenceTier": 2,
-      "datePublished": "2026-02-02",
-      "excerpt": "Claude Code reached 135K+ daily commits on public GitHub (~4% of all public commits). Growth of 42,896x in 13 months from launch. At current trajectory, projected to reach 20%+ of daily commits by end of 2026.",
-      "usedIn": [
-        "ai-adoption-rate"
-      ],
-      "verified": false,
-      "synthetic": true,
-      "_action": "REMOVE"
     },
     "cms-prior-auth-2024": {
       "id": "cms-prior-auth-2024",
@@ -1472,20 +1397,6 @@
       "verified": true,
       "synthetic": false
     },
-    "ft-gig-economy-squeeze": {
-      "id": "ft-gig-economy-squeeze",
-      "title": "The AI squeeze on gig economy workers",
-      "url": "https://www.ft.com/content/gig-economy-ai-squeeze",
-      "publisher": "Financial Times",
-      "evidenceTier": 3,
-      "datePublished": "2024-10-15",
-      "usedIn": [
-        "freelancer-rate-impact"
-      ],
-      "verified": false,
-      "synthetic": true,
-      "_action": "REMOVE"
-    },
     "gallup-worker-ai-adoption-2025": {
       "id": "gallup-worker-ai-adoption-2025",
       "title": "Gallup Workplace AI Adoption Survey Q4 2025",
@@ -1736,21 +1647,6 @@
       ],
       "verified": true,
       "synthetic": false
-    },
-    "harvard-health-policy-2024": {
-      "id": "harvard-health-policy-2024",
-      "title": "The Impact of AI on Healthcare Employment",
-      "url": "https://www.hsph.harvard.edu/news/features/artificial-intelligence-ai-healthcare-employment/",
-      "publisher": "Harvard T.H. Chan School of Public Health",
-      "evidenceTier": 1,
-      "datePublished": "2024-09-15",
-      "excerpt": "Healthcare admin roles account for 30% of US healthcare employment. AI could eliminate 1.5-2M of these positions while creating 200-400K new tech-adjacent roles.",
-      "usedIn": [
-        "healthcare-admin-displacement"
-      ],
-      "verified": false,
-      "synthetic": true,
-      "_action": "REMOVE"
     },
     "hbr-ai-potential-layoffs-2026": {
       "id": "hbr-ai-potential-layoffs-2026",
@@ -2806,21 +2702,6 @@
       ],
       "verified": true
     },
-    "nber-ai-wages-2023": {
-      "id": "nber-ai-wages-2023",
-      "title": "The Impact of AI on Labor Markets: A Survey",
-      "url": "https://www.nber.org/papers",
-      "publisher": "NBER",
-      "evidenceTier": 1,
-      "datePublished": "2023-07-01",
-      "excerpt": "Workers who complement AI see significant wage gains; those whose tasks are substituted face wage pressure.",
-      "usedIn": [
-        "high-skill-wage-premium"
-      ],
-      "verified": false,
-      "synthetic": true,
-      "_action": "REMOVE"
-    },
     "nber-bloom-firm-data-adoption-2026": {
       "id": "nber-bloom-firm-data-adoption-2026",
       "title": "Firm Data on AI",
@@ -3135,21 +3016,6 @@
         "education-sector-displacement"
       ],
       "verified": true
-    },
-    "pearson-smarthinking-2025": {
-      "id": "pearson-smarthinking-2025",
-      "title": "Pearson Retires Smarthinking Human Tutoring Service",
-      "url": "https://plc.pearson.com/en-GB/news/pearson-retires-smarthinking-service",
-      "publisher": "Pearson plc",
-      "evidenceTier": 1,
-      "datePublished": "2025-06-01",
-      "excerpt": "Pearson fully retired its Smarthinking human tutoring service, replacing it with AI-powered chatbot tutors. Marks complete displacement of a human tutoring workforce by AI in a major education company.",
-      "usedIn": [
-        "education-sector-displacement"
-      ],
-      "verified": false,
-      "synthetic": true,
-      "_action": "REMOVE"
     },
     "peng-copilot-2023": {
       "id": "peng-copilot-2023",
@@ -3801,20 +3667,6 @@
       "verified": true,
       "synthetic": false
     },
-    "x-ai-salaries-thread": {
-      "id": "x-ai-salaries-thread",
-      "title": "AI engineer salaries are insane right now",
-      "url": "https://x.com/search?q=AI+engineer+salaries",
-      "publisher": "X (Twitter)",
-      "evidenceTier": 4,
-      "datePublished": "2025-05-01",
-      "usedIn": [
-        "high-skill-wage-premium"
-      ],
-      "verified": false,
-      "synthetic": true,
-      "_action": "REMOVE"
-    },
     "yale-budget-lab-2025": {
       "id": "yale-budget-lab-2025",
       "title": "AI and the U.S. Labor Market: No Macro Displacement Yet",
@@ -4283,7 +4135,6 @@
       "datePublished": "2026-01-19",
       "excerpt": "AI skills significantly increase interview invitation probabilities by approximately 8 to 15 percentage points, compared with candidates without such skills",
       "usedIn": [
-        "overall-us-displacement",
         "genai-work-adoption"
       ],
       "verified": true,
@@ -4298,9 +4149,8 @@
       "datePublished": "2025-05-30",
       "excerpt": "We describe our research with 21 developers at the cutting edge of using AI",
       "usedIn": [
-        "overall-us-displacement",
-        "genai-work-adoption",
-        "ai-adoption-rate"
+        "ai-adoption-rate",
+        "genai-work-adoption"
       ],
       "verified": true,
       "synthetic": false
@@ -4314,7 +4164,10 @@
       "datePublished": "2025-10-30",
       "excerpt": "AI agents perform near the floor on RLI, with the highest-performing agent achieving an automation rate of 2.5%. 240 real freelance projects across game dev, design, architecture, data analysis, and animation.",
       "usedIn": [
-        "overall-us-displacement"
+        "creative-industry-displacement",
+        "freelancer-rate-impact",
+        "overall-us-displacement",
+        "tech-sector-displacement"
       ],
       "verified": true,
       "synthetic": false
