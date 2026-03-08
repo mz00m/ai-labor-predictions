@@ -104,6 +104,15 @@
       "label": "Brookings: San Jose 43% AI-exposed vs 31% in Las Vegas"
     },
     {
+      "date": "2025-05-01",
+      "direction": "up",
+      "sourceIds": [
+        "epj-ai-economic-divide-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "EPJ: AI impact concentrates in economically undiversified MSAs"
+    },
+    {
       "date": "2025-07-01",
       "direction": "up",
       "sourceIds": [
@@ -150,6 +159,15 @@
     }
   ],
   "sources": [
+    {
+      "id": "epj-ai-economic-divide-2025",
+      "title": "AI and the economic divide: How Artificial Intelligence could widen the divide in the U.S.",
+      "url": "https://epjdatascience.springeropen.com/articles/10.1140/epjds/s13688-025-00547-9",
+      "publisher": "EPJ Data Science (Septiandri, Constantinides, Quercia)",
+      "evidenceTier": 1,
+      "datePublished": "2025-05-01",
+      "excerpt": "MSAs that will be more likely to be impacted by AI are not just hubs of creative industries but will also be characterized by a lack of economic diversity. Mid-sized cities whose economies hinge on a single sector are most at risk."
+    },
     {
       "id": "linkedin-econ-graph-2023",
       "title": "Future of Work Report: AI at Work",
