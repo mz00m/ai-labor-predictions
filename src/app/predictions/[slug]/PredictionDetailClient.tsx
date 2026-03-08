@@ -10,6 +10,7 @@ import { computeAggregate } from "@/lib/prediction-stats";
 import EvidenceFilter from "@/components/EvidenceFilter";
 import PredictionChart from "@/components/PredictionChart";
 import AIAdoptionChart from "@/components/AIAdoptionChart";
+import AdoptionLadder from "@/components/AdoptionLadder";
 import SourceList from "@/components/SourceList";
 
 const CONTEXT_MAP: Record<string, (v: number) => string> = {
@@ -108,9 +109,9 @@ export default function PredictionDetailPage() {
   const agg = computeAggregate(prediction, selectedTiers);
 
   const trendColorClass = agg.trendIsBad
-    ? "text-red-600"
+    ? "text-[#F66B5C]"
     : agg.trend !== "flat" && !agg.trendIsBad
-      ? "text-emerald-600"
+      ? "text-[#16a34a]"
       : "text-[var(--muted)]";
 
   const bestSource = bestEstimate
@@ -145,7 +146,7 @@ export default function PredictionDetailPage() {
           {prediction.title}
         </h1>
 
-        {/* Big number + trend arrow */}
+        {/* Big number + source range + trend arrow */}
         <div className="flex items-baseline gap-4 mb-4">
           <span className="stat-number text-[56px] sm:text-[72px] font-black text-[var(--foreground)] leading-none">
             {agg.mean > 0 && prediction.category === "wages" ? "+" : ""}
@@ -154,6 +155,11 @@ export default function PredictionDetailPage() {
               {prediction.unit.includes("%") ? "%" : ` ${prediction.unit}`}
             </span>
           </span>
+          {agg.min !== agg.max && (
+            <span className="text-[18px] font-medium text-[var(--muted)]" style={{ opacity: 0.7 }}>
+              {agg.min}–{agg.max}{prediction.unit.includes("%") ? "%" : ""}
+            </span>
+          )}
           {agg.trend !== "flat" && (
             <span className={`text-[28px] ${trendColorClass}`} style={{ opacity: 0.5 }}>
               {agg.trend === "up" ? "▲" : "▼"}
@@ -164,12 +170,17 @@ export default function PredictionDetailPage() {
         <p className="text-[16px] text-[var(--muted)] leading-relaxed mb-3 max-w-2xl">
           {contextText}
         </p>
+        {agg.tierFallback && (
+          <p className="text-[12px] text-[#d97706] bg-[#d97706]/[0.06] border border-[#d97706]/20 rounded px-3 py-2 mb-4 max-w-2xl">
+            No sources match your selected tiers for this prediction. Showing all-tier average instead.
+          </p>
+        )}
         <p className="text-[13px] text-[var(--muted)] opacity-60 mb-6 max-w-2xl">
           {prediction.timeHorizon.toLowerCase().includes("current")
             ? "This is observed data from real-world surveys and measurements, not a prediction."
-            : "This number is a weighted average across all selected sources, with higher-tier evidence and more recent data weighted more heavily."}{" "}
+            : `Blended estimate across ${filteredHistory.length} sources${agg.min !== agg.max ? ` ranging ${agg.min}–${agg.max}${prediction.unit.includes("%") ? "%" : ""}` : ""}. Higher-tier evidence and more recent data are weighted more heavily.`}{" "}
           See the{" "}
-          <Link href="/#how-we-calculate" className="underline hover:text-[var(--foreground)]">
+          <Link href="/about#how-we-calculate" className="underline hover:text-[var(--foreground)]">
             full methodology
           </Link>{" "}
           for details on weighting, source validity, and recency bias.
@@ -194,7 +205,7 @@ export default function PredictionDetailPage() {
 
       {/* Section break — Indicators & Predictions */}
       <div className="relative -mx-6 sm:-mx-10">
-        <div className="h-1 bg-gradient-to-r from-emerald-500 via-blue-500 to-violet-500" />
+        <div className="h-1 bg-gradient-to-r from-[#5C61F6] via-[#E8A090] to-[#F66B5C]" />
         <div className="px-6 sm:px-10 pt-10 pb-2">
           <h2 className="text-[28px] sm:text-[36px] font-black tracking-tight text-[var(--foreground)] leading-tight mb-3">
             {prediction.timeHorizon.toLowerCase().includes("current")
@@ -244,11 +255,15 @@ export default function PredictionDetailPage() {
               unit={prediction.unit.includes("%") ? "%" : ""}
               overlays={prediction.overlays}
               onDotClick={handleDotClick}
-              yAxisMax={prediction.slug === "workforce-ai-exposure" ? 100 : prediction.slug === "customer-service-automation" ? 75 : prediction.slug === "entry-level-wage-impact" || prediction.slug === "freelancer-rate-impact" ? 5 : undefined}
-              yAxisMin={prediction.slug === "entry-level-wage-impact" || prediction.slug === "freelancer-rate-impact" ? -50 : undefined}
+              yAxisMax={prediction.slug === "workforce-ai-exposure" ? 100 : prediction.slug === "customer-service-automation" ? 75 : prediction.slug === "ai-adoption-rate" ? 75 : prediction.slug === "entry-level-wage-impact" || prediction.slug === "freelancer-rate-impact" ? 5 : prediction.slug === "tech-sector-displacement" ? 35 : prediction.slug === "median-wage-impact" ? 10 : undefined}
+              yAxisMin={prediction.slug === "entry-level-wage-impact" || prediction.slug === "freelancer-rate-impact" ? -50 : prediction.slug === "tech-sector-displacement" ? -20 : prediction.slug === "median-wage-impact" ? -10 : undefined}
+              category={prediction.category}
+              showTrendLine={prediction.slug !== "tech-sector-displacement"}
             />
           </>
         )}
+        {/* Adoption Ladder — directly below chart */}
+        {prediction.slug === "ai-adoption-rate" && <AdoptionLadder />}
       </section>
 
       {/* Divider */}

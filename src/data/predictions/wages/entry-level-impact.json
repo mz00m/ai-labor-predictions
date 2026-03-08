@@ -5,7 +5,7 @@
   "description": "Projected change in real wages for entry-level positions (0-2 years experience) across AI-exposed industries by 2030.",
   "category": "wages",
   "unit": "% wage change",
-  "currentValue": -10,
+  "currentValue": -8.9,
   "timeHorizon": "By 2030",
   "history": [
     {
@@ -16,7 +16,8 @@
       "sourceIds": [
         "indeed-entry-level-2023"
       ],
-      "evidenceTier": 2
+      "evidenceTier": 2,
+      "metricType": "postings"
     },
     {
       "date": "2025-01-15",
@@ -26,7 +27,8 @@
       "sourceIds": [
         "wsj-entry-level-squeeze"
       ],
-      "evidenceTier": 3
+      "evidenceTier": 3,
+      "metricType": "projection"
     },
     {
       "date": "2025-04-01",
@@ -36,7 +38,8 @@
       "sourceIds": [
         "oecd-youth-employment-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "employment"
     },
     {
       "date": "2025-07-01",
@@ -46,7 +49,8 @@
       "sourceIds": [
         "bls-entry-wages-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "employment"
     },
     {
       "date": "2025-08-01",
@@ -56,7 +60,8 @@
       "sourceIds": [
         "brynjolfsson-chandar-chen-entry-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "employment"
     },
     {
       "date": "2025-11-15",
@@ -66,7 +71,8 @@
       "sourceIds": [
         "worldbank-liu-wang-yu-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "postings"
     },
     {
       "date": "2026-01-15",
@@ -76,7 +82,8 @@
       "sourceIds": [
         "anthropic-ceo-entry-level-2025"
       ],
-      "evidenceTier": 3
+      "evidenceTier": 3,
+      "metricType": "projection"
     },
     {
       "date": "2026-01-15",
@@ -86,7 +93,8 @@
       "sourceIds": [
         "imf-skill-gaps-entry-2026"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "projection"
     }
   ],
   "overlays": [
@@ -148,7 +156,7 @@
       "date": "2025-09-15",
       "direction": "down",
       "sourceIds": [
-        "del-rio-chanona-entry-2025"
+        "del-rio-chanona-ai-jobs-2025"
       ],
       "evidenceTier": 1,
       "label": "ILO review: declining demand for novice workers"
@@ -172,10 +180,19 @@
       "label": "World Bank: entry-level postings fell 18-20%"
     },
     {
+      "date": "2025-12-01",
+      "direction": "down",
+      "sourceIds": [
+        "revelio-labs-wage-divide-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Revelio Labs: automation suppressing wage gains in lower-paid roles"
+    },
+    {
       "date": "2026-01-01",
       "direction": "up",
       "sourceIds": [
-        "hartley-entry-level-2026"
+        "hartley-genai-labor-2026"
       ],
       "evidenceTier": 1,
       "label": "Stanford: small positive wage effects overall"
@@ -188,6 +205,15 @@
       ],
       "evidenceTier": 1,
       "label": "Dallas Fed: young worker share fell 16.4% → 15.5%"
+    },
+    {
+      "date": "2026-01-14",
+      "direction": "down",
+      "sourceIds": [
+        "eig-entry-level-ai-displacement-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "EIG/LinkedIn: Entry-level hiring rates -23% vs pre-pandemic (vs -18% overall)"
     },
     {
       "date": "2026-01-15",
@@ -217,6 +243,15 @@
       "label": "ICLE: pressure concentrated in entry-level segments of exposed occupations"
     },
     {
+      "date": "2026-02-01",
+      "direction": "up",
+      "sourceIds": [
+        "cruces-galiani-education-gap-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Cruces et al.: AI closes 75% of education-based productivity gap (RCT)"
+    },
+    {
       "date": "2026-02-24",
       "direction": "down",
       "sourceIds": [
@@ -224,6 +259,24 @@
       ],
       "evidenceTier": 1,
       "label": "Dallas Fed: AI exposure → 0.28pp wage growth reduction in low-experience-premium jobs"
+    },
+    {
+      "date": "2026-03-05",
+      "direction": "down",
+      "sourceIds": [
+        "shih-ai-shock-china-shock-2026"
+      ],
+      "evidenceTier": 4,
+      "label": "Shih: New grad tech hiring -50% since 2019; underemployment 42.5% (NY Fed Q4 2025)"
+    },
+    {
+      "date": "2026-03-05",
+      "direction": "down",
+      "sourceIds": [
+        "anthropic-labor-market-impacts-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Anthropic: AI exposure concentrates in credentialed roles (17.4% vs 4.5% grad degrees)"
     }
   ],
   "sources": [
@@ -235,6 +288,15 @@
       "evidenceTier": 2,
       "datePublished": "2023-05-01",
       "excerpt": "Entry-level job postings in AI-exposed fields declined 12% YoY. Starting salaries for junior analysts, associates, and coordinators showed early downward pressure."
+    },
+    {
+      "id": "revelio-labs-wage-divide-2025",
+      "title": "The Wage Divide is Widening Again and AI May Be to Blame",
+      "url": "https://www.reveliolabs.com/news/macro/the-wage-divide-is-widening-again-and-ai-may-be-to-blame/",
+      "publisher": "Revelio Labs",
+      "evidenceTier": 2,
+      "datePublished": "2025-12-01",
+      "excerpt": "Automation pressures are disproportionately suppressing wage gains in lower-paid roles, which is contrary to narratives that AI is mostly impacting high-earning, white-collar jobs."
     },
     {
       "id": "nber-entry-wage-2023",
@@ -344,7 +406,7 @@
       "excerpt": "Job postings for high-AI-substitution occupations fell 12% relative to low-substitution roles post-ChatGPT; effect grew from 6% in year one to 18% by year three. Based on 285 million Lightcast job postings."
     },
     {
-      "id": "hartley-entry-level-2026",
+      "id": "hartley-genai-labor-2026",
       "title": "The Labor Market Effects of Generative Artificial Intelligence",
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5136877",
       "publisher": "Stanford / World Bank (Hartley, Jolevski, Melo, Moore)",
@@ -371,7 +433,7 @@
       "excerpt": "Pressure concentrated in entry-level segments of highly exposed occupations; adjustment happening at the margin through task reallocation."
     },
     {
-      "id": "del-rio-chanona-entry-2025",
+      "id": "del-rio-chanona-ai-jobs-2025",
       "title": "AI and jobs: A review of theory, estimates, and evidence",
       "url": "https://arxiv.org/abs/2509.15265",
       "publisher": "arXiv (ILO-affiliated researchers)",
@@ -414,6 +476,42 @@
       "evidenceTier": 1,
       "datePublished": "2026-02-24",
       "excerpt": "For an occupation with a 0 percent experience premium, increased AI exposure is associated with a 0.28 percentage point reduction in wage growth."
+    },
+    {
+      "id": "shih-ai-shock-china-shock-2026",
+      "title": "The AI Shock and Path Forward: What We Can Learn from the Past to Save Our Future",
+      "url": "https://x.com/clarashih/status/2026831820608909332",
+      "publisher": "Clara Shih (CEO, Salesforce AI) via X",
+      "evidenceTier": 4,
+      "datePublished": "2026-03-05",
+      "excerpt": "new grad hiring in large tech is down over 50% since 2019. For the first time in over decades, recent college grads have a higher unemployment rate than the national average. In addition, the 'underemployment rate' for recent graduates has risen to 42.5% (Q4 2025, New York Federal Reserve)."
+    },
+    {
+      "id": "eig-entry-level-ai-displacement-2026",
+      "title": "Looking for the Ladder: Is AI Impacting Entry-Level Jobs?",
+      "url": "https://eig.org/wp-content/uploads/2026/01/TAWP-Iscenko-Millet.pdf",
+      "publisher": "Economic Innovation Group (Iscenko & Curto Millet)",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-14",
+      "excerpt": "entry-level hiring rates have declined 23 percent compared to pre-pandemic levels, a steeper drop than the 18 percent decline for overall hiring"
+    },
+    {
+      "id": "cruces-galiani-education-gap-2026",
+      "title": "Does Generative AI Narrow Education-Based Productivity Gaps? Evidence from a Randomized Experiment",
+      "url": "https://www.nber.org/papers/w34851",
+      "publisher": "NBER (Cruces, Fernández Meijide, Galiani, Gálvez, Lombardi)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-01",
+      "excerpt": "Without AI, higher-education participants outperformed lower-education participants by 0.548 standard deviations. With AI access, this gap fell to 0.139 standard deviations—closing about 75 percent of the baseline productivity difference."
+    },
+    {
+      "id": "anthropic-labor-market-impacts-2026",
+      "title": "Labor market impacts of AI: A new measure and early evidence",
+      "url": "https://www.anthropic.com/research/labor-market-impacts",
+      "publisher": "Anthropic (Massenkoff, McCrory)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-05",
+      "excerpt": "Graduate degree holders comprise 17.4% of the most AI-exposed workers vs 4.5% of the unexposed group"
     }
   ]
 }

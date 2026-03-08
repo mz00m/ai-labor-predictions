@@ -4,15 +4,24 @@ import RecentSources from "@/components/RecentSources";
 import { getRecentSources } from "@/lib/sources";
 
 export const metadata: Metadata = {
-  title: "About — Early Signals of AI Impact",
+  title: "About",
   description:
     "Why this project exists, how the methodology works, and who built it. A synthesis of AI-and-labor data for workforce, education, philanthropy, and policy leaders.",
+  alternates: {
+    canonical: "/about",
+  },
   openGraph: {
     title: "About — Early Signals of AI Impact",
     description:
       "Why this project exists, how the methodology works, and who built it.",
     type: "website",
     siteName: "Early Signals of AI Impact",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About — Early Signals of AI Impact",
+    description:
+      "Why this project exists, how the methodology works, and who built it.",
   },
 };
 
@@ -24,10 +33,13 @@ export default function AboutPage() {
       {/* Left column — all About + Methodology content */}
       <div className="lg:flex-1 min-w-0 space-y-14">
         {/* Header */}
-        <section>
+        <section className="mb-2">
           <p className="text-[13px] font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
             About This Project
           </p>
+          <h1 className="text-[36px] sm:text-[44px] font-extrabold tracking-tight text-[var(--foreground)] leading-[1.1]">
+            Evidence Over Narrative
+          </h1>
         </section>
 
         {/* Mission */}
@@ -73,7 +85,7 @@ export default function AboutPage() {
 
         {/* About Matt */}
         <section className="max-w-3xl">
-          <div className="border border-black/[0.06] rounded-lg px-5 py-5 bg-white">
+          <div className="border border-black/[0.06] rounded-lg px-5 py-5 bg-[var(--background)]">
             <p className="text-[14px] font-bold text-[var(--foreground)] mb-2">
               Who is behind this?
             </p>

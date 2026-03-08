@@ -5,7 +5,7 @@
   "description": "Percentage of customer service interactions fully handled by AI without human intervention. Only data points where sources directly state an automation rate are plotted.",
   "category": "displacement",
   "unit": "% of interactions automated",
-  "currentValue": 55,
+  "currentValue": 31.0,
   "timeHorizon": "By 2028",
   "history": [
     {
@@ -16,7 +16,8 @@
       "sourceIds": [
         "klarna-earnings-2024"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "corporate"
     },
     {
       "date": "2024-02-01",
@@ -26,7 +27,17 @@
       "sourceIds": [
         "shopify-earnings-2024"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "corporate"
+    },
+    {
+      "date": "2025-02-10",
+      "value": 5,
+      "sourceIds": [
+        "bls-mlr-ai-employment-projections-2025"
+      ],
+      "evidenceTier": 1,
+      "metricType": "employment"
     },
     {
       "date": "2025-02-12",
@@ -36,7 +47,19 @@
       "sourceIds": [
         "shopify-earnings-2024"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "corporate"
+    },
+    {
+      "date": "2025-09-02",
+      "value": 50,
+      "confidenceLow": 45,
+      "confidenceHigh": 55,
+      "sourceIds": [
+        "salesforce-cs-ai-agents-2025"
+      ],
+      "evidenceTier": 1,
+      "metricType": "corporate"
     },
     {
       "date": "2025-10-15",
@@ -46,7 +69,8 @@
       "sourceIds": [
         "gartner-cs-2026-forecast"
       ],
-      "evidenceTier": 2
+      "evidenceTier": 2,
+      "metricType": "survey"
     },
     {
       "date": "2026-02-01",
@@ -56,7 +80,8 @@
       "sourceIds": [
         "zendesk-ai-cs-2026"
       ],
-      "evidenceTier": 3
+      "evidenceTier": 3,
+      "metricType": "survey"
     }
   ],
   "overlays": [
@@ -169,6 +194,15 @@
       "label": "Stanford: 11% decline for early-career CS workers"
     },
     {
+      "date": "2025-09-02",
+      "direction": "down",
+      "sourceIds": [
+        "salesforce-cs-ai-agents-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Salesforce: Cut CS workforce 44% (9K to 5K); AI agents handle 50% of conversations"
+    },
+    {
       "date": "2025-10-01",
       "direction": "up",
       "sourceIds": [
@@ -203,6 +237,15 @@
       ],
       "evidenceTier": 2,
       "label": "Brookings: CS reps face high AI exposure + low adaptive capacity"
+    },
+    {
+      "date": "2026-03-05",
+      "direction": "up",
+      "sourceIds": [
+        "anthropic-labor-market-impacts-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Anthropic: Customer service reps 70.1% observed AI task exposure, rising in API traffic"
     }
   ],
   "sources": [
@@ -229,7 +272,7 @@
       "publisher": "Klarna",
       "evidenceTier": 1,
       "datePublished": "2024-02-27",
-      "excerpt": "Klarna's AI assistant handled 2.3 million conversations, doing the equivalent work of 700 full-time agents."
+      "excerpt": "Klarna's AI assistant handled two-thirds of customer service chats within one month of launch — 2.3 million conversations, doing the equivalent work of 700 full-time agents."
     },
     {
       "id": "hbr-chatbots-2024",
@@ -273,6 +316,15 @@
       "evidenceTier": 2,
       "datePublished": "2025-01-15",
       "excerpt": "Customer service representative postings declined 18% year-over-year. Remaining postings increasingly require technical skills and AI tool familiarity."
+    },
+    {
+      "id": "salesforce-cs-ai-agents-2025",
+      "title": "Salesforce CEO Marc Benioff says his company has cut 4,000 customer service jobs as AI steps in",
+      "url": "https://fortune.com/2025/09/02/salesforce-ceo-billionaire-marc-benioff-ai-agents-jobs-layoffs-customer-service-sales/",
+      "publisher": "Fortune (Benioff interview on The Logan Bartlett Show)",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-02",
+      "excerpt": "50% are with agents, 50% are with humans. From 9,000 heads to about 5,000 because I need less heads. Support costs reduced by 17%."
     },
     {
       "id": "shopify-earnings-2024",
@@ -372,6 +424,24 @@
       "evidenceTier": 2,
       "datePublished": "2026-01-21",
       "excerpt": "Customer service representatives get the short end of the stick in both categories [high AI exposure and low adaptive capacity]."
+    },
+    {
+      "id": "bls-mlr-ai-employment-projections-2025",
+      "title": "Incorporating AI impacts in BLS employment projections: occupational case studies",
+      "url": "https://www.bls.gov/opub/mlr/2025/article/incorporating-ai-impacts-in-bls-employment-projections.htm",
+      "publisher": "U.S. Bureau of Labor Statistics (Monthly Labor Review)",
+      "evidenceTier": 1,
+      "datePublished": "2025-02-10",
+      "excerpt": "Customer service representatives, whose employment is projected to decline by 5.0 percent through 2033."
+    },
+    {
+      "id": "anthropic-labor-market-impacts-2026",
+      "title": "Labor market impacts of AI: A new measure and early evidence",
+      "url": "https://cdn.sanity.io/files/4zrzovbb/website/dc7bcd0224644fce97cecb7f9e68dcd8434b35f1.pdf",
+      "publisher": "Anthropic (Massenkoff, McCrory)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-05",
+      "excerpt": "Customer service representatives at 70.1% observed exposure, whose main tasks we increasingly see in first-party API traffic."
     }
   ]
 }

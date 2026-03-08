@@ -2,22 +2,12 @@
   "id": "displacement-education",
   "slug": "education-sector-displacement",
   "title": "Education Sector Displacement by 2030",
-  "description": "Projected percentage of education roles (tutoring, grading, content creation, administration) restructured or reduced by AI by 2030. Only data points where sources directly state a displacement figure are plotted.",
+  "description": "Projected percentage of education roles (tutoring, grading, content creation, administration) restructured or reduced by AI by 2030. Only data points where sources directly state a displacement figure are plotted. Note: most recent research focuses on AI adoption rates and task exposure in education rather than role elimination rates, making direct displacement estimates unusually sparse for this sector.",
   "category": "displacement",
   "unit": "% of roles displaced",
-  "currentValue": 18,
+  "currentValue": 12.2,
   "timeHorizon": "By 2030",
   "history": [
-    {
-      "date": "2025-01-20",
-      "value": 35,
-      "confidenceLow": 30,
-      "confidenceHigh": 40,
-      "sourceIds": [
-        "oecd-education-outlook-2025"
-      ],
-      "evidenceTier": 1
-    },
     {
       "date": "2024-07-01",
       "value": 23,
@@ -26,7 +16,19 @@
       "sourceIds": [
         "chegg-enrollment-decline"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 4,
+      "metricType": "corporate"
+    },
+    {
+      "date": "2025-01-20",
+      "value": 20,
+      "confidenceLow": 15,
+      "confidenceHigh": 35,
+      "sourceIds": [
+        "oecd-education-outlook-2025"
+      ],
+      "evidenceTier": 1,
+      "metricType": "projection"
     },
     {
       "date": "2025-03-01",
@@ -36,7 +38,8 @@
       "sourceIds": [
         "pearson-10k-2024"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 4,
+      "metricType": "corporate"
     },
     {
       "date": "2025-07-15",
@@ -46,7 +49,8 @@
       "sourceIds": [
         "bls-education-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "employment"
     }
   ],
   "overlays": [
@@ -157,6 +161,24 @@
       ],
       "evidenceTier": 2,
       "label": "Cognizant: education exposure jumped from 11% to 49% — a 4.5x increase"
+    },
+    {
+      "date": "2026-01-13",
+      "direction": "down",
+      "sourceIds": [
+        "educause-ai-higher-ed-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "EDUCAUSE: 94% of higher ed workers use AI; 67% flag job loss as urgent risk (n=1,960)"
+    },
+    {
+      "date": "2026-02-01",
+      "direction": "up",
+      "sourceIds": [
+        "shrm-automation-education-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "SHRM: only 7.3% of education jobs highly automated — lowest of any sector (n=20,262)"
     }
   ],
   "sources": [
@@ -212,7 +234,7 @@
       "publisher": "OECD",
       "evidenceTier": 1,
       "datePublished": "2025-01-20",
-      "excerpt": "Teaching roles are among the least automatable (15% task exposure), but education support staff, administration, and tutoring face 30-40% task displacement."
+      "excerpt": "Teaching roles are among the least automatable (15% task exposure), but education support staff, administration, and tutoring face 30-40% task displacement. Blended estimate across the full education workforce: ~20%."
     },
     {
       "id": "gartner-edtech-2025",
@@ -285,6 +307,24 @@
       "evidenceTier": 1,
       "datePublished": "2025-01-08",
       "excerpt": "Duolingo cut 10%+ of its contractor workforce, explicitly replacing human content creators with AI-generated language exercises. CEO announced 'AI-first' strategy for all content production."
+    },
+    {
+      "id": "shrm-automation-education-2025",
+      "title": "Automation, Generative AI, and Job Displacement Risk in U.S. Employment",
+      "url": "https://www.shrm.org/topics-tools/research/automation-generative-ai-and-job-displacement-risk-in-u-s--employment",
+      "publisher": "SHRM (Society for Human Resource Management)",
+      "evidenceTier": 2,
+      "datePublished": "2025-10-01",
+      "excerpt": "At least 50% of tasks are automated in only 7.3% of education and library occupations — the lowest of any occupational group. Survey of 20,262 U.S. workers fielded March-April 2025."
+    },
+    {
+      "id": "educause-ai-higher-ed-2026",
+      "title": "The Impact of AI on Work in Higher Education",
+      "url": "https://www.educause.edu/research/2026/the-impact-of-ai-on-work-in-higher-education",
+      "publisher": "EDUCAUSE (with AIR, NACUBO, CUPA-HR)",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-13",
+      "excerpt": "94% of higher education workers use AI tools for work, but only 54% are aware of institutional AI policies. 67% identified six or more urgent AI-related risks, including job loss. Survey of 1,960 staff and faculty across 1,800+ institutions."
     },
     {
       "id": "cognizant-new-work-2026",

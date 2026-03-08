@@ -5,7 +5,7 @@
   "description": "Projected percentage of creative roles (design, writing, marketing) significantly restructured or eliminated by generative AI by 2030. Only data points where sources directly state a displacement figure are plotted.",
   "category": "displacement",
   "unit": "% of roles displaced",
-  "currentValue": 30,
+  "currentValue": 25.8,
   "timeHorizon": "By 2030",
   "history": [
     {
@@ -16,7 +16,8 @@
       "sourceIds": [
         "mckinsey-creative-automation"
       ],
-      "evidenceTier": 2
+      "evidenceTier": 2,
+      "metricType": "survey"
     },
     {
       "date": "2024-05-20",
@@ -26,7 +27,8 @@
       "sourceIds": [
         "upwork-freelancer-impact"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "corporate"
     },
     {
       "date": "2024-08-15",
@@ -36,7 +38,8 @@
       "sourceIds": [
         "nber-creative-ai-2024"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "projection"
     },
     {
       "date": "2025-02-15",
@@ -46,7 +49,8 @@
       "sourceIds": [
         "forrester-creative-2025"
       ],
-      "evidenceTier": 2
+      "evidenceTier": 2,
+      "metricType": "survey"
     },
     {
       "date": "2025-07-15",
@@ -56,7 +60,8 @@
       "sourceIds": [
         "indeed-graphic-artist-postings-2025"
       ],
-      "evidenceTier": 2
+      "evidenceTier": 2,
+      "metricType": "postings"
     },
     {
       "date": "2025-10-01",
@@ -66,7 +71,8 @@
       "sourceIds": [
         "uoc-creative-automation-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "projection"
     }
   ],
   "overlays": [
@@ -152,6 +158,15 @@
       "label": "BLS: graphic designer jobs to decline 4%"
     },
     {
+      "date": "2025-06-01",
+      "direction": "up",
+      "sourceIds": [
+        "ju-aral-ai-teamwork-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Ju & Aral: Human-AI teams 73% more productive per worker for ad copy"
+    },
+    {
       "date": "2025-07-01",
       "direction": "down",
       "sourceIds": [
@@ -164,7 +179,7 @@
       "date": "2025-09-20",
       "direction": "down",
       "sourceIds": [
-        "ramp-freelance-creative-2025"
+        "ramp-freelance-velocity-2025"
       ],
       "evidenceTier": 1,
       "label": "Ramp: $1 reduced freelance → $0.03 AI spend"
@@ -188,6 +203,15 @@
       "label": "Queen Mary/Turing: 73% of freelancers report reduced job security"
     },
     {
+      "date": "2026-01-15",
+      "direction": "up",
+      "sourceIds": [
+        "reimers-waldfogel-books-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Reimers & Waldfogel: Book releases tripled 2022-2025; consumer surplus +25-50%"
+    },
+    {
       "date": "2026-02-24",
       "direction": "up",
       "sourceIds": [
@@ -195,6 +219,15 @@
       ],
       "evidenceTier": 1,
       "label": "Dallas Fed: CS design wages up 16.7% vs 7.5% national; AI augments experienced workers"
+    },
+    {
+      "date": "2026-03-02",
+      "direction": "up",
+      "sourceIds": [
+        "causalinf-research-publishing-ai-2026"
+      ],
+      "evidenceTier": 4,
+      "label": "CausalInf: Amazon book titles tripled post-ChatGPT, average quality fell"
     }
   ],
   "sources": [
@@ -298,7 +331,7 @@
       "excerpt": "Demand-eroding effects of automation innovations have intensified in past four decades. New work creation has shifted from production to high-paid professional occupations."
     },
     {
-      "id": "ramp-freelance-creative-2025",
+      "id": "ramp-freelance-velocity-2025",
       "title": "AI Labor Market Impact: Freelancers",
       "url": "https://ramp.com/velocity/ai-labor-market-impact-freelancers",
       "publisher": "Ramp",
@@ -368,6 +401,33 @@
       "evidenceTier": 1,
       "datePublished": "2026-02-24",
       "excerpt": "nominal average weekly wages nationwide have increased 7.5 percent, while the computer systems design sector has risen 16.7 percent"
+    },
+    {
+      "id": "causalinf-research-publishing-ai-2026",
+      "title": "Claude Code 27: Research and Publishing Are Now Two Different Things",
+      "url": "https://causalinf.substack.com/p/claude-code-27-research-and-publishing",
+      "publisher": "CausalInf Substack (Scott Cunningham)",
+      "evidenceTier": 4,
+      "datePublished": "2026-03-02",
+      "excerpt": "Reimers and Waldfogel studied what happened to book publishing after ChatGPT launched. The number of new titles on Amazon tripled. Average quality fell."
+    },
+    {
+      "id": "reimers-waldfogel-books-2026",
+      "title": "AI and the Quantity and Quality of Creative Products: Have LLMs Boosted Creation of Valuable Books?",
+      "url": "https://www.nber.org/papers/w34777",
+      "publisher": "NBER (Reimers, Waldfogel)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-15",
+      "excerpt": "New book releases tripled over this period, but average quality declined... the authors estimate a potential steady-state consumer surplus gain of 25–50 percent from market expansion."
+    },
+    {
+      "id": "ju-aral-ai-teamwork-2025",
+      "title": "Collaborating with AI Agents: Field Experiments on Teamwork, Productivity, and Performance",
+      "url": "https://arxiv.org/abs/2503.18238",
+      "publisher": "arXiv (Ju, Aral)",
+      "evidenceTier": 1,
+      "datePublished": "2025-06-01",
+      "excerpt": "Human-AI teams show roughly 73 percent higher productivity per worker for ad copy, though human-human teams remained superior for images."
     }
   ]
 }

@@ -5,38 +5,18 @@
   "description": "Projected percentage of current tech sector jobs that will be automated or significantly restructured by AI by 2030. Only data points where sources directly state a displacement figure are plotted.",
   "category": "displacement",
   "unit": "% of jobs displaced",
-  "currentValue": 13,
+  "currentValue": 2.0,
   "timeHorizon": "By 2030",
   "history": [
     {
-      "date": "2025-01-20",
-      "value": 14,
-      "confidenceLow": 8,
-      "confidenceHigh": 20,
+      "date": "2024-02-20",
+      "value": 22,
       "sourceIds": [
-        "lightcast-tech-postings-2025"
+        "indeed-tech-postings-feb-2024"
       ],
-      "evidenceTier": 2
-    },
-    {
-      "date": "2025-07-15",
-      "value": 33,
-      "confidenceLow": 25,
-      "confidenceHigh": 40,
-      "sourceIds": [
-        "indeed-sw-dev-postings-2025"
-      ],
-      "evidenceTier": 2
-    },
-    {
-      "date": "2025-08-01",
-      "value": 13,
-      "confidenceLow": 8,
-      "confidenceHigh": 20,
-      "sourceIds": [
-        "brynjolfsson-chandar-chen-2025"
-      ],
-      "evidenceTier": 1
+      "evidenceTier": 2,
+      "dataType": "observed",
+      "metricType": "postings"
     },
     {
       "date": "2024-03-15",
@@ -46,27 +26,125 @@
       "sourceIds": [
         "brookings-2024"
       ],
-      "evidenceTier": 2
+      "evidenceTier": 2,
+      "dataType": "observed",
+      "metricType": "projection"
     },
     {
       "date": "2024-11-01",
-      "value": 27.5,
-      "confidenceLow": 20,
-      "confidenceHigh": 35,
+      "value": 13.8,
+      "confidenceLow": 10,
+      "confidenceHigh": 17.5,
       "sourceIds": [
         "bls-programmer-employment-observed"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "dataType": "observed",
+      "metricType": "employment"
     },
     {
-      "date": "2026-01-10",
-      "value": 6,
-      "confidenceLow": 3,
-      "confidenceHigh": 10,
+      "date": "2024-11-29",
+      "value": 16.5,
       "sourceIds": [
-        "bls-programmer-projections-2034"
+        "indeed-sw-dev-postings-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 2,
+      "dataType": "observed",
+      "metricType": "postings"
+    },
+    {
+      "date": "2025-01-20",
+      "value": 14,
+      "confidenceLow": 8,
+      "confidenceHigh": 20,
+      "sourceIds": [
+        "lightcast-tech-postings-2025"
+      ],
+      "evidenceTier": 2,
+      "dataType": "observed",
+      "metricType": "postings"
+    },
+    {
+      "date": "2025-02-10",
+      "value": 0,
+      "sourceIds": [
+        "bls-mlr-ai-employment-projections-2025"
+      ],
+      "evidenceTier": 1,
+      "dataType": "projected",
+      "metricType": "projection"
+    },
+    {
+      "date": "2025-07-30",
+      "value": 13.5,
+      "sourceIds": [
+        "indeed-tech-hiring-freeze-2025"
+      ],
+      "evidenceTier": 2,
+      "dataType": "observed",
+      "metricType": "postings"
+    },
+    {
+      "date": "2025-08-01",
+      "value": 13,
+      "confidenceLow": 8,
+      "confidenceHigh": 20,
+      "sourceIds": [
+        "brynjolfsson-chandar-chen-2025"
+      ],
+      "evidenceTier": 1,
+      "dataType": "observed",
+      "metricType": "employment"
+    },
+    {
+      "date": "2026-02-10",
+      "value": -1.8,
+      "sourceIds": [
+        "bls-mlr-ai-employment-projections-2025"
+      ],
+      "evidenceTier": 1,
+      "dataType": "projected",
+      "metricType": "projection"
+    },
+    {
+      "date": "2027-02-10",
+      "value": -3.6,
+      "sourceIds": [
+        "bls-mlr-ai-employment-projections-2025"
+      ],
+      "evidenceTier": 1,
+      "dataType": "projected",
+      "metricType": "projection"
+    },
+    {
+      "date": "2028-02-10",
+      "value": -5.4,
+      "sourceIds": [
+        "bls-mlr-ai-employment-projections-2025"
+      ],
+      "evidenceTier": 1,
+      "dataType": "projected",
+      "metricType": "projection"
+    },
+    {
+      "date": "2029-02-10",
+      "value": -7.2,
+      "sourceIds": [
+        "bls-mlr-ai-employment-projections-2025"
+      ],
+      "evidenceTier": 1,
+      "dataType": "projected",
+      "metricType": "projection"
+    },
+    {
+      "date": "2030-02-10",
+      "value": -9.0,
+      "sourceIds": [
+        "bls-mlr-ai-employment-projections-2025"
+      ],
+      "evidenceTier": 1,
+      "dataType": "projected",
+      "metricType": "projection"
     }
   ],
   "overlays": [
@@ -101,7 +179,7 @@
       "date": "2024-01-10",
       "direction": "down",
       "sourceIds": [
-        "goldman-ai-2024"
+        "goldman-300m"
       ],
       "evidenceTier": 1,
       "label": "Goldman Sachs: AI could expose 300M full-time jobs globally to automation"
@@ -119,10 +197,46 @@
       "date": "2024-04-01",
       "direction": "up",
       "sourceIds": [
-        "acemoglu-2023"
+        "acemoglu-macro-2024"
       ],
       "evidenceTier": 1,
       "label": "Acemoglu: ~5% of tasks fully automatable; job impact more modest than claimed"
+    },
+    {
+      "date": "2024-06-01",
+      "direction": "up",
+      "sourceIds": [
+        "gambacorta-codefuse-2024"
+      ],
+      "evidenceTier": 1,
+      "label": "Gambacorta et al.: CodeFuse → 55% increase in code output at Ant Group"
+    },
+    {
+      "date": "2024-07-01",
+      "direction": "down",
+      "sourceIds": [
+        "cooper-cs-majors-labor-2026"
+      ],
+      "evidenceTier": 4,
+      "label": "CS grads: 7.2% unemployed vs 4.5% overall (2.7pp gap)"
+    },
+    {
+      "date": "2024-09-01",
+      "direction": "up",
+      "sourceIds": [
+        "yeverechyahu-copilot-languages-2024"
+      ],
+      "evidenceTier": 1,
+      "label": "Yeverechyahu et al.: GitHub Copilot → 37-55% increase in commits"
+    },
+    {
+      "date": "2024-10-01",
+      "direction": "up",
+      "sourceIds": [
+        "paradis-google-ai-coding-2024"
+      ],
+      "evidenceTier": 2,
+      "label": "Paradis et al. (Google): 21% reduction in coding time per task"
     },
     {
       "date": "2025-01-06",
@@ -159,6 +273,15 @@
       ],
       "evidenceTier": 1,
       "label": "Alphabet: AI tools reduced need for certain engineering and support roles"
+    },
+    {
+      "date": "2025-02-10",
+      "direction": "down",
+      "sourceIds": [
+        "bls-ooh-programmer-decline-2023-2033"
+      ],
+      "evidenceTier": 1,
+      "label": "BLS OOH: Computer programmer employment projected to decline 9.6% (2023-2033)"
     },
     {
       "date": "2025-06-01",
@@ -251,6 +374,15 @@
       "label": "Dallas Fed: young worker share fell 0.9pp"
     },
     {
+      "date": "2026-01-10",
+      "direction": "down",
+      "sourceIds": [
+        "bls-programmer-projections-2034"
+      ],
+      "evidenceTier": 1,
+      "label": "BLS: Computer programmer roles projected to decline further 6% (2024-2034)"
+    },
+    {
       "date": "2026-01-15",
       "direction": "down",
       "sourceIds": [
@@ -278,6 +410,24 @@
       "label": "Indeed: Tech postings 34% below pre-pandemic; AI tech postings 45% above"
     },
     {
+      "date": "2026-02-18",
+      "direction": "up",
+      "sourceIds": [
+        "cio-it-jobs-ai-skills-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "CIO/Survey: 37% of tech professionals restructured due to gen AI in past 2 years"
+    },
+    {
+      "date": "2026-02-18",
+      "direction": "down",
+      "sourceIds": [
+        "cio-it-jobs-ai-skills-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "CIO/Robert Half: 61% of IT leaders plan to increase permanent headcount in H1 2026"
+    },
+    {
       "date": "2026-02-24",
       "direction": "down",
       "sourceIds": [
@@ -303,6 +453,60 @@
       ],
       "evidenceTier": 1,
       "label": "Dallas Fed: Computer systems design employment down 5% since ChatGPT release"
+    },
+    {
+      "date": "2026-03-01",
+      "direction": "up",
+      "sourceIds": [
+        "wang-neubig-agent-benchmarks-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Wang et al.: AI development heavily concentrated on CS/Math — 7.6% of employment"
+    },
+    {
+      "date": "2026-03-04",
+      "direction": "down",
+      "sourceIds": [
+        "creatoreconomy-ai-native-ops-2026"
+      ],
+      "evidenceTier": 4,
+      "label": "Ramp CPO: 500+ features shipped in 2025 with only 25 PMs"
+    },
+    {
+      "date": "2026-03-04",
+      "direction": "down",
+      "sourceIds": [
+        "cooper-cs-majors-labor-2026"
+      ],
+      "evidenceTier": 4,
+      "label": "Cooper/ACS: 7.2% unemployment for early-career CS grads vs 4.5% overall (2024)"
+    },
+    {
+      "date": "2026-03-04",
+      "direction": "down",
+      "sourceIds": [
+        "citadel-intelligence-crisis-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Citadel/Indeed: SW engineer job postings up 11% YoY (2026)"
+    },
+    {
+      "date": "2026-03-05",
+      "direction": "up",
+      "sourceIds": [
+        "challenger-ai-layoffs-feb-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Challenger: Tech layoffs up 51% YoY in Jan–Feb 2026; AI cited as primary driver"
+    },
+    {
+      "date": "2026-03-05",
+      "direction": "neutral",
+      "sourceIds": [
+        "anthropic-labor-market-impacts-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Anthropic: Programmers highest AI exposure (74.5%) but no unemployment impact detected"
     }
   ],
   "sources": [
@@ -325,7 +529,7 @@
       "excerpt": "Employers estimate that 44% of workers' core skills will be disrupted in the next five years."
     },
     {
-      "id": "acemoglu-2023",
+      "id": "acemoglu-macro-2024",
       "title": "The Simple Macroeconomics of AI",
       "url": "https://www.nber.org/papers/w32487",
       "publisher": "NBER (Acemoglu)",
@@ -334,7 +538,7 @@
       "excerpt": "AI will increase productivity but impact on jobs more modest than often claimed; estimates ~5% of tasks fully automatable."
     },
     {
-      "id": "goldman-ai-2024",
+      "id": "goldman-300m",
       "title": "The Potentially Large Effects of AI on Economic Growth",
       "url": "https://www.goldmansachs.com/insights/articles/generative-ai-could-raise-global-gdp-by-7-percent",
       "publisher": "Goldman Sachs",
@@ -476,13 +680,31 @@
       "excerpt": "Tech/info/media employment stopped growing at end of 2022, coinciding with ChatGPT release; less than 10% of firms using AI regularly as of mid-2025."
     },
     {
+      "id": "indeed-tech-postings-feb-2024",
+      "title": "US Labor Market Update: Tech Jobs May Be Below Pre-Pandemic Levels",
+      "url": "https://www.hiringlab.org/2024/02/20/labor-market-update-tech-jobs-below-pre-pandemic-levels/",
+      "publisher": "Indeed Hiring Lab",
+      "evidenceTier": 2,
+      "datePublished": "2024-02-20",
+      "excerpt": "Software development postings 28% below pre-pandemic baseline (Feb 2024). Annualized over ~1.3 years since ChatGPT launch: ~22%/yr decline rate."
+    },
+    {
       "id": "indeed-sw-dev-postings-2025",
-      "title": "Indeed Hiring Lab: Software Developer Job Postings Tracker",
+      "title": "Software Development Postings Remain in the Doldrums",
       "url": "https://www.hiringlab.org/2025/02/06/software-development-postings-remain-in-the-doldrums/",
       "publisher": "Indeed Hiring Lab",
       "evidenceTier": 2,
-      "datePublished": "2025-07-15",
-      "excerpt": "Software developer job postings declined 33% from pre-ChatGPT levels. Overall tech postings down 36%. AI/ML roles the only growing category."
+      "datePublished": "2025-02-06",
+      "excerpt": "Software developer job postings 33% below pre-pandemic baseline as of November 2024. Annualized over ~2 years since ChatGPT launch: ~16.5%/yr decline rate."
+    },
+    {
+      "id": "indeed-tech-hiring-freeze-2025",
+      "title": "The US Tech Hiring Freeze Continues",
+      "url": "https://www.hiringlab.org/2025/07/30/the-us-tech-hiring-freeze-continues/",
+      "publisher": "Indeed Hiring Lab",
+      "evidenceTier": 2,
+      "datePublished": "2025-07-30",
+      "excerpt": "Overall tech postings 36% below pre-pandemic baseline as of July 2025. Software engineer postings down 49%. Annualized over ~2.7 years: ~13.5%/yr decline rate."
     },
     {
       "id": "bls-programmer-employment-observed",
@@ -491,7 +713,7 @@
       "publisher": "Bureau of Labor Statistics",
       "evidenceTier": 1,
       "datePublished": "2024-11-01",
-      "excerpt": "Computer programmer employment (routine coding roles) fell ~27.5% in roughly two years following ChatGPT's release — one of the largest two-year drops in any occupation tracked by BLS. Software developer employment remained flat."
+      "excerpt": "Computer programmer employment (routine coding roles) fell ~27.5% in roughly two years following ChatGPT's release (~13.8%/year annualized) — one of the largest two-year drops in any occupation tracked by BLS. Software developer employment remained flat."
     },
     {
       "id": "bls-programmer-projections-2034",
@@ -591,6 +813,114 @@
       "evidenceTier": 1,
       "datePublished": "2026-02-24",
       "excerpt": "Employment in the computer systems design and related services sector has declined 5 percent."
+    },
+    {
+      "id": "wang-neubig-agent-benchmarks-2026",
+      "title": "How Well Does Agent Development Reflect Real-World Work?",
+      "url": "https://arxiv.org/abs/2603.01203",
+      "publisher": "Carnegie Mellon / Stanford (Wang, Neubig, Fried, Yang et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-01",
+      "excerpt": "software engineering abilities has the potential to accelerate other varieties of work. However, this concentrated focus significantly overrepresents a domain that accounts for only 7.6% of total employment."
+    },
+    {
+      "id": "cio-it-jobs-ai-skills-2026",
+      "title": "State of IT jobs: AI sparks rapidly changing market for skills",
+      "url": "https://www.cio.com/article/4134254/state-of-it-jobs-ai-sparks-rapidly-changing-market-for-skills.html",
+      "publisher": "CIO.com",
+      "evidenceTier": 3,
+      "datePublished": "2026-02-18",
+      "excerpt": "37% of tech professionals say their role has been 'redefined or restructured due to gen AI in the past two years.' 61% of IT leaders say they plan to increase permanent headcount in the first half of 2026."
+    },
+    {
+      "id": "bls-mlr-ai-employment-projections-2025",
+      "title": "BLS Monthly Labor Review: Occupational employment projections to 2033",
+      "url": "https://www.bls.gov/opub/mlr/2025/article/incorporating-ai-impacts-in-bls-employment-projections.htm",
+      "publisher": "U.S. Bureau of Labor Statistics (Monthly Labor Review)",
+      "evidenceTier": 1,
+      "datePublished": "2025-02-10",
+      "excerpt": "BLS projects computer programmer employment to decline 9.6% from 2023-2033 (~1% per year). Software developers projected to grow 17.9% over the same period."
+    },
+    {
+      "id": "bls-ooh-programmer-decline-2023-2033",
+      "title": "BLS Occupational Outlook Handbook: Computer Programmers (2023-2033)",
+      "url": "https://www.bls.gov/ooh/computer-and-information-technology/computer-programmers.htm",
+      "publisher": "Bureau of Labor Statistics",
+      "evidenceTier": 1,
+      "datePublished": "2025-02-10",
+      "excerpt": "Overall employment of computer programmers is projected to decline 9.6 percent from 2023 to 2033."
+    },
+    {
+      "id": "creatoreconomy-ai-native-ops-2026",
+      "title": "Your New Job Is to Onboard AI Agents: How AI Native Companies Actually Operate",
+      "url": "https://creatoreconomy.so/p/your-new-job-is-to-onboard-ai-agents",
+      "publisher": "Creator Economy (Peter Yang)",
+      "evidenceTier": 4,
+      "datePublished": "2026-03-04",
+      "excerpt": "In 2025, Ramp shipped 500+ features, reached $1B revenue, and did it all with 25 PMs."
+    },
+    {
+      "id": "citadel-intelligence-crisis-2026",
+      "title": "The 2026 Global Intelligence Crisis",
+      "url": "https://www.citadelsecurities.com/news-and-insights/2026-global-intelligence-crisis/",
+      "publisher": "Citadel Securities (Frank Flight)",
+      "evidenceTier": 2,
+      "datePublished": "2026-03-04",
+      "excerpt": "In spite of the current displacement narrative – job postings for software engineers are rising rapidly, up 11% YoY."
+    },
+    {
+      "id": "cooper-cs-majors-labor-2026",
+      "title": "Should you still major in computer science?",
+      "url": "https://prestoncooper93.substack.com/p/should-you-still-major-in-computer",
+      "publisher": "Preston Cooper (Substack)",
+      "evidenceTier": 4,
+      "datePublished": "2026-03-04",
+      "excerpt": "According to the American Community Survey, 7.2 percent of early-career college graduates who majored in CS were unemployed in 2024—well above the 4.5 percent rate for all early-career graduates."
+    },
+    {
+      "id": "anthropic-labor-market-impacts-2026",
+      "title": "Labor market impacts of AI: A new measure and early evidence",
+      "url": "https://cdn.sanity.io/files/4zrzovbb/website/dc7bcd0224644fce97cecb7f9e68dcd8434b35f1.pdf",
+      "publisher": "Anthropic (Massenkoff, McCrory)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-05",
+      "excerpt": "Computer Programmers are at the top, with 75% coverage, followed by Customer Service Representatives"
+    },
+    {
+      "id": "challenger-ai-layoffs-feb-2026",
+      "title": "Challenger Report: February Cuts Plunge, YTD Hiring Falls 56%",
+      "url": "https://www.challengergray.com/blog/challenger-report-february-cuts-plunge-hiring-falls-56-percent/",
+      "publisher": "Challenger, Gray & Christmas",
+      "evidenceTier": 2,
+      "datePublished": "2026-03-05",
+      "excerpt": "Technology announced 11,039 job cuts in February for a total of 33,330 in 2026. That is an increase of 51% from the 22,042 cuts in this sector announced in the same period last year."
+    },
+    {
+      "id": "yeverechyahu-copilot-languages-2024",
+      "title": "The Impact of Large Language Models on Open-source Innovation: Evidence from GitHub Copilot",
+      "url": "https://arxiv.org/abs/2409.08379",
+      "publisher": "arXiv (Yeverechyahu, Mayya, Oestreicher-Singer)",
+      "evidenceTier": 1,
+      "datePublished": "2024-09-01",
+      "excerpt": "They found a 37-55 percent increase in commits, mainly through contributions building on others' work like debugging or small edits."
+    },
+    {
+      "id": "gambacorta-codefuse-2024",
+      "title": "AI and Productivity: Evidence from CodeFuse",
+      "url": "https://www.bis.org/publ/work1208.htm",
+      "publisher": "BIS Working Paper (Gambacorta, Qiu, Shan, Rees)",
+      "evidenceTier": 1,
+      "datePublished": "2024-06-01",
+      "excerpt": "They show that 20 percent of the 55 percent total increase was directly attributable to AI-generated lines, suggesting genuine productivity effects beyond simple code generation."
+    },
+    {
+      "id": "paradis-google-ai-coding-2024",
+      "title": "How much does AI impact development speed? An enterprise-based randomized controlled trial",
+      "url": "https://arxiv.org/abs/2410.12944",
+      "publisher": "Google (Paradis, Grey, Madison et al.)",
+      "evidenceTier": 2,
+      "datePublished": "2024-10-01",
+      "excerpt": "They found a 21 percent reduction in time spent per task. Interestingly, more experienced developers saw bigger effects, possibly because AI requires substantial verification and judgment rather than simply accepting generated code."
     }
   ],
   "marketIds": {

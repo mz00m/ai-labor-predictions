@@ -1,22 +1,32 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Chatbot from "@/components/Chatbot";
 import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
-  title: "Early Signals of AI Impact",
+  title: {
+    default: "Early Signals of AI Impact — jobsdata.ai",
+    template: "%s — jobsdata.ai",
+  },
   description:
     "300+ sources tracking AI's impact on jobs, wages, and adoption. AI adoption is accelerating, productivity is climbing, and jobs are changing faster than they're disappearing.",
   metadataBase: new URL("https://jobsdata.ai"),
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Early Signals of AI Impact",
     description:
       "300+ sources, one pattern: AI adoption is accelerating, productivity is climbing, and jobs are changing faster than they're disappearing.",
     type: "website",
     siteName: "Early Signals of AI Impact",
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
+    site: "@mattzieger",
+    creator: "@mattzieger",
     title: "Early Signals of AI Impact",
     description:
       "300+ sources, one pattern: AI adoption is accelerating, productivity is climbing, and jobs are changing faster than they're disappearing.",
@@ -87,16 +97,16 @@ export default function RootLayout({
         <main className="max-w-6xl mx-auto px-6 sm:px-10 py-16">
           {children}
         </main>
+        <Chatbot />
         <Analytics />
         <footer className="max-w-6xl mx-auto px-6 sm:px-10 pb-16">
           <div className="pt-10 border-t border-black/[0.06]">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
               <div className="space-y-1">
                 <p className="text-[13px] text-[var(--muted)]">
-                  Personal project, not affiliated with my day job. Not sponsored and definitely not perfect.
-                  Data sourced from academic research, corporate filings, news sources and any other reputable source I can find.
-                  Not financial advice. Not career advice. Please don&apos;t sue me.
-                  Please share ideas on how to improve:{" "}
+                  Independent analysis, not affiliated with my employer. Data sourced from academic research,
+                  government statistics, corporate filings, and journalism. Not investment or career advice.
+                  Corrections and ideas welcome:{" "}
                   <a href="https://www.linkedin.com/in/mattzieger" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">LinkedIn</a>
                   {" "}/{" "}
                   <a href="https://x.com/mattzieger" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">X</a>

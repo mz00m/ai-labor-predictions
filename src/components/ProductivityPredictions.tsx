@@ -529,7 +529,7 @@ export default function ProductivityPredictions() {
     : null;
 
   return (
-    <section id="productivity-predictions">
+    <section id="productivity">
       {/* Bridge text */}
       <p className="text-[15px] text-[var(--muted)] mb-6 max-w-3xl leading-relaxed">
         The labor market effects above depend fundamentally on how much AI

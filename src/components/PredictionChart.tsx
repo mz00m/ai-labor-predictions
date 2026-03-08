@@ -4,6 +4,7 @@ import { useState, useRef, useCallback } from "react";
 import {
   ComposedChart,
   Line,
+  Area,
   XAxis,
   YAxis,
   CartesianGrid,
@@ -13,8 +14,9 @@ import {
   TooltipProps,
 } from "recharts";
 import { format, parseISO } from "date-fns";
-import { EvidenceTier, HistoricalDataPoint, DirectionalOverlay, Source } from "@/lib/types";
+import { EvidenceTier, MetricType, HistoricalDataPoint, DirectionalOverlay, Source } from "@/lib/types";
 import { getTierConfig } from "@/lib/evidence-tiers";
+import { getMetricTypeConfig, METRIC_TYPE_CONFIGS } from "@/lib/metric-types";
 
 interface PredictionChartProps {
   history: HistoricalDataPoint[];
@@ -26,15 +28,23 @@ interface PredictionChartProps {
   onDotClick?: (sourceIds: string[]) => void;
   yAxisMax?: number;
   yAxisMin?: number;
+  category?: string;
+  showTrendLine?: boolean;
 }
 
 interface ChartDataPoint {
   date: number;
   dateStr: string;
   value?: number;
+  observedValue?: number;
+  projectedValue?: number;
+  dataType: "observed" | "projected";
   confidenceLow?: number;
   confidenceHigh?: number;
+  confidenceBandBase?: number;
+  confidenceBandWidth?: number;
   evidenceTier: EvidenceTier;
+  metricType?: MetricType;
   sourceIds: string[];
   isPhantom?: boolean;
   trendValue?: number;
@@ -61,7 +71,9 @@ function CustomTooltip({
 }) {
   if (!active || !payload || payload.length === 0) return null;
 
-  const data = payload[0]?.payload as ChartDataPoint;
+  // Pick the first non-null payload — when two Lines exist, Recharts may
+  // return multiple entries.  We only need the underlying ChartDataPoint.
+  const data = (payload.find((p) => p.payload)?.payload ?? payload[0]?.payload) as ChartDataPoint;
   if (!data) return null;
 
   // Find overlays matching this x-axis position
@@ -83,6 +95,11 @@ function CustomTooltip({
           <p className="text-[12px] font-medium text-[var(--foreground)]">
             {data.dateStr}
           </p>
+          {data.dataType === "projected" && (
+            <span className="inline-block text-[10px] font-medium text-white bg-[#5C61F6]/70 rounded px-1.5 py-0.5 mb-1">
+              Projected / Forecast
+            </span>
+          )}
           <p className="text-[20px] font-bold text-[var(--foreground)] stat-number">
             {data.value}
             {unit}
@@ -101,6 +118,17 @@ function CustomTooltip({
             />
             <span className="text-[11px] text-[var(--muted)]">{tierConfig.label}</span>
           </div>
+          {(data as ChartDataPoint & { metricType?: MetricType }).metricType && (
+            <div className="mt-1 flex items-center gap-1.5">
+              <span
+                className="inline-block w-2 h-2 rounded-sm"
+                style={{ backgroundColor: getMetricTypeConfig((data as ChartDataPoint & { metricType: MetricType }).metricType).color }}
+              />
+              <span className="text-[11px] text-[var(--muted)]">
+                {getMetricTypeConfig((data as ChartDataPoint & { metricType: MetricType }).metricType).label}
+              </span>
+            </div>
+          )}
           {pointSources.length > 0 && (
             <div className="mt-2 border-t border-black/[0.06] pt-1.5">
               {pointSources.map((s) => (
@@ -179,12 +207,118 @@ function CustomTooltip({
   );
 }
 
+/** Pick a single color for a group of overlays sharing the same date. */
+function groupedOverlayColor(directions: string[]): string {
+  const ups = directions.filter((d) => d === "up").length;
+  const downs = directions.filter((d) => d === "down").length;
+  // Pure positive / negative — use green / red
+  if (ups > 0 && downs === 0) return "#22c55e";
+  if (downs > 0 && ups === 0) return "#ef4444";
+  // Mixed — dominant direction wins, neutral if tied
+  if (ups > downs) return "#22c55e";
+  if (downs > ups) return "#ef4444";
+  return "#94a3b8"; // tied or all neutral
+}
+
 function overlayColor(direction: string) {
   return direction === "down"
-    ? "#dc2626"
+    ? "#ef4444"   // red-500 — negative / risk signal
     : direction === "up"
-      ? "#16a34a"
-      : "#6b7280";
+      ? "#22c55e" // green-500 — positive / growth signal
+      : "#94a3b8"; // slate-400 — neutral / mixed signal
+}
+
+/** Render a dot shape based on metricType. Falls back to circle with tier color. */
+function renderDotShape(
+  cx: number,
+  cy: number,
+  r: number,
+  fillColor: string,
+  metricType?: MetricType,
+  strokeColor = "white",
+  strokeWidth = 2,
+  style?: React.CSSProperties,
+  onClick?: () => void,
+  keyPrefix = "dot",
+  date = 0,
+): React.ReactElement {
+  const shape = metricType
+    ? getMetricTypeConfig(metricType).shape
+    : "circle";
+  const key = `${keyPrefix}-${date}`;
+  const commonProps = { style, onClick };
+
+  switch (shape) {
+    case "diamond":
+      return (
+        <g key={key} {...commonProps}>
+          <polygon
+            points={`${cx},${cy - r} ${cx + r},${cy} ${cx},${cy + r} ${cx - r},${cy}`}
+            fill={fillColor}
+            stroke={strokeColor}
+            strokeWidth={strokeWidth}
+          />
+        </g>
+      );
+    case "square":
+      return (
+        <g key={key} {...commonProps}>
+          <rect
+            x={cx - r * 0.8}
+            y={cy - r * 0.8}
+            width={r * 1.6}
+            height={r * 1.6}
+            fill={fillColor}
+            stroke={strokeColor}
+            strokeWidth={strokeWidth}
+          />
+        </g>
+      );
+    case "triangle":
+      return (
+        <g key={key} {...commonProps}>
+          <polygon
+            points={`${cx},${cy - r} ${cx + r},${cy + r * 0.7} ${cx - r},${cy + r * 0.7}`}
+            fill={fillColor}
+            stroke={strokeColor}
+            strokeWidth={strokeWidth}
+          />
+        </g>
+      );
+    case "star": {
+      const pts: string[] = [];
+      for (let i = 0; i < 5; i++) {
+        const outerAngle = (Math.PI / 2) + (2 * Math.PI * i) / 5;
+        const innerAngle = outerAngle + Math.PI / 5;
+        pts.push(`${cx + r * Math.cos(outerAngle)},${cy - r * Math.sin(outerAngle)}`);
+        pts.push(`${cx + r * 0.45 * Math.cos(innerAngle)},${cy - r * 0.45 * Math.sin(innerAngle)}`);
+      }
+      return (
+        <g key={key} {...commonProps}>
+          <polygon
+            points={pts.join(" ")}
+            fill={fillColor}
+            stroke={strokeColor}
+            strokeWidth={strokeWidth}
+          />
+        </g>
+      );
+    }
+    case "circle":
+    default:
+      return (
+        <circle
+          key={key}
+          cx={cx}
+          cy={cy}
+          r={r}
+          fill={fillColor}
+          stroke={strokeColor}
+          strokeWidth={strokeWidth}
+          {...commonProps}
+        />
+      );
+  }
 }
 
 export default function PredictionChart({
@@ -197,6 +331,8 @@ export default function PredictionChart({
   onDotClick,
   yAxisMax = 50,
   yAxisMin = -5,
+  category,
+  showTrendLine = true,
 }: PredictionChartProps) {
   const chartWrapperRef = useRef<HTMLDivElement>(null);
   const [hoverOverlay, setHoverOverlay] = useState<{
@@ -250,17 +386,51 @@ export default function PredictionChart({
     );
   }
 
+  const hasProjectedData = filtered.some((d) => d.dataType === "projected");
+
   const realPoints: ChartDataPoint[] = filtered
-    .map((d) => ({
-      date: parseISO(d.date).getTime(),
-      dateStr: format(parseISO(d.date), "MMM yyyy"),
-      value: d.value,
-      confidenceLow: d.confidenceLow,
-      confidenceHigh: d.confidenceHigh,
-      evidenceTier: d.evidenceTier,
-      sourceIds: d.sourceIds,
-    }))
+    .map((d) => {
+      const dt = d.dataType ?? "observed";
+      const val = d.value;
+      return {
+        date: parseISO(d.date).getTime(),
+        dateStr: format(parseISO(d.date), "MMM yyyy"),
+        value: val,
+        observedValue: dt === "observed" ? val : undefined,
+        projectedValue: dt === "projected" ? val : undefined,
+        dataType: dt,
+        confidenceLow: d.confidenceLow,
+        confidenceHigh: d.confidenceHigh,
+        confidenceBandBase:
+          d.confidenceLow != null && d.confidenceHigh != null
+            ? d.confidenceLow
+            : undefined,
+        confidenceBandWidth:
+          d.confidenceLow != null && d.confidenceHigh != null
+            ? d.confidenceHigh - d.confidenceLow
+            : undefined,
+        evidenceTier: d.evidenceTier,
+        metricType: d.metricType,
+        sourceIds: d.sourceIds,
+      };
+    })
     .sort((a, b) => a.date - b.date);
+
+  // Bridge point: connect the observed line to the projected line by giving the
+  // last observed point (chronologically before the first projected point) a
+  // projectedValue as well, so both Line segments share that connecting point.
+  if (hasProjectedData) {
+    const firstProjectedIdx = realPoints.findIndex((p) => p.dataType === "projected");
+    if (firstProjectedIdx > 0) {
+      // Find the last observed point before the first projected point
+      for (let i = firstProjectedIdx - 1; i >= 0; i--) {
+        if (realPoints[i].dataType === "observed" && realPoints[i].value != null) {
+          realPoints[i].projectedValue = realPoints[i].value;
+          break;
+        }
+      }
+    }
+  }
 
   // Disambiguate duplicate dateStr values so the categorical x-axis has
   // unique categories.  Recharts' band scale silently drops duplicate keys,
@@ -323,6 +493,7 @@ export default function PredictionChart({
         date: o.date,
         dateStr: o.dateStr,
         value: undefined,
+        dataType: "observed",
         evidenceTier: o.evidenceTier,
         sourceIds: o.sourceIds,
         isPhantom: true,
@@ -334,9 +505,9 @@ export default function PredictionChart({
     (a, b) => a.date - b.date
   );
 
-  // Linear regression trend line (least-squares on real points)
-  const pointsWithValues = realPoints.filter((d) => d.value != null);
-  if (pointsWithValues.length >= 2) {
+  // Linear regression trend line (least-squares on observed points only)
+  const pointsWithValues = realPoints.filter((d) => d.value != null && d.dataType === "observed");
+  if (showTrendLine && pointsWithValues.length >= 2) {
     const n = pointsWithValues.length;
     const dates = pointsWithValues.map((d) => d.date);
     const values = pointsWithValues.map((d) => d.value!);
@@ -365,31 +536,143 @@ export default function PredictionChart({
         <ComposedChart data={chartData}>
           {/* Hidden categorical axis so ReferenceLine can resolve x values */}
           <XAxis dataKey="dateStr" hide />
-          {overlayData.map((o, i) => (
-            <ReferenceLine
-              key={`overlay-compact-${i}-${o.dateStr}`}
-              x={o.dateStr}
-              stroke={overlayColor(o.direction)}
-              strokeWidth={8}
-              strokeOpacity={0.15}
-              ifOverflow="visible"
-            />
-          ))}
+          {(() => {
+            const byDate = new Map<string, typeof overlayData>();
+            for (const o of overlayData) {
+              const group = byDate.get(o.dateStr) ?? [];
+              group.push(o);
+              byDate.set(o.dateStr, group);
+            }
+            return Array.from(byDate.entries()).map(([dateStr, group]) => (
+              <ReferenceLine
+                key={`overlay-compact-${dateStr}`}
+                x={dateStr}
+                stroke={groupedOverlayColor(group.map((g) => g.direction))}
+                strokeWidth={6}
+                strokeOpacity={0.15}
+                ifOverflow="visible"
+              />
+            ));
+          })()}
           <Line
             type="monotone"
-            dataKey="value"
+            dataKey="observedValue"
             stroke="#5C61F6"
             strokeWidth={2}
             dot={false}
             connectNulls
           />
+          {hasProjectedData && (
+            <Line
+              type="monotone"
+              dataKey="projectedValue"
+              stroke="#5C61F6"
+              strokeWidth={2}
+              strokeDasharray="6 3"
+              strokeOpacity={0.6}
+              dot={false}
+              connectNulls
+              isAnimationActive={false}
+            />
+          )}
         </ComposedChart>
       </ResponsiveContainer>
     );
   }
 
+  // Determine which metric types are present in chart data
+  const presentMetricTypes = Array.from(
+    new Set(
+      realPoints
+        .filter((d) => d.metricType != null)
+        .map((d) => d.metricType!)
+    )
+  );
+  const hasConfidenceBands = chartData.some(
+    (d) => d.confidenceBandBase != null && d.confidenceBandWidth != null
+  );
+
   return (
     <div ref={chartWrapperRef} style={{ position: "relative" }}>
+      {/* Chart legend row */}
+      <div className="flex items-center gap-4 mb-2 px-1 flex-wrap">
+        {hasProjectedData && (
+          <>
+            <div className="flex items-center gap-1.5">
+              <svg width="24" height="2"><line x1="0" y1="1" x2="24" y2="1" stroke="#5C61F6" strokeWidth="2.5" /></svg>
+              <span className="text-[11px] text-[var(--muted)]">Observed data</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <svg width="24" height="2"><line x1="0" y1="1" x2="24" y2="1" stroke="#5C61F6" strokeWidth="2.5" strokeDasharray="6 3" strokeOpacity="0.7" /></svg>
+              <span className="text-[11px] text-[var(--muted)]">Projected / Forecast</span>
+            </div>
+          </>
+        )}
+        {hasConfidenceBands && (
+          <div className="flex items-center gap-1.5">
+            <svg width="16" height="10">
+              <rect x="0" y="0" width="16" height="10" fill="#5C61F6" fillOpacity="0.22" rx="2" />
+            </svg>
+            <span className="text-[11px] text-[var(--muted)]">Confidence range</span>
+          </div>
+        )}
+        {overlayData.length > 0 && (
+          <>
+            <div className="flex items-center gap-1.5">
+              <svg width="6" height="10">
+                <rect x="0" y="0" width="6" height="10" fill="#ef4444" fillOpacity="0.32" rx="1" />
+              </svg>
+              <span className="text-[11px] text-[var(--muted)]">Negative signal</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <svg width="6" height="10">
+                <rect x="0" y="0" width="6" height="10" fill="#22c55e" fillOpacity="0.32" rx="1" />
+              </svg>
+              <span className="text-[11px] text-[var(--muted)]">Positive signal</span>
+            </div>
+          </>
+        )}
+      </div>
+      {/* Metric type legend (only when metricType tags are present) */}
+      {presentMetricTypes.length > 0 && (
+        <div className="flex items-center gap-3 mb-2 px-1 flex-wrap">
+          <span className="text-[10px] font-medium text-[var(--muted)] uppercase tracking-wider">
+            Data type
+          </span>
+          {presentMetricTypes.map((mt) => {
+            const cfg = getMetricTypeConfig(mt);
+            return (
+              <div key={mt} className="flex items-center gap-1.5">
+                <svg width="12" height="12" viewBox="-6 -6 12 12">
+                  {cfg.shape === "circle" && (
+                    <circle r="4" fill={cfg.color} />
+                  )}
+                  {cfg.shape === "diamond" && (
+                    <polygon points="0,-5 5,0 0,5 -5,0" fill={cfg.color} />
+                  )}
+                  {cfg.shape === "square" && (
+                    <rect x="-4" y="-4" width="8" height="8" fill={cfg.color} />
+                  )}
+                  {cfg.shape === "triangle" && (
+                    <polygon points="0,-5 5,4 -5,4" fill={cfg.color} />
+                  )}
+                  {cfg.shape === "star" && (
+                    <polygon
+                      points={Array.from({ length: 5 }, (_, i) => {
+                        const outerAngle = (Math.PI / 2) + (2 * Math.PI * i) / 5;
+                        const innerAngle = outerAngle + Math.PI / 5;
+                        return `${5 * Math.cos(outerAngle)},${-5 * Math.sin(outerAngle)} ${2.25 * Math.cos(innerAngle)},${-2.25 * Math.sin(innerAngle)}`;
+                      }).join(" ")}
+                      fill={cfg.color}
+                    />
+                  )}
+                </svg>
+                <span className="text-[11px] text-[var(--muted)]">{cfg.shortLabel}</span>
+              </div>
+            );
+          })}
+        </div>
+      )}
       <ResponsiveContainer width="100%" height={360}>
         <ComposedChart
           data={chartData}
@@ -433,6 +716,34 @@ export default function PredictionChart({
           />
           {/* Zero baseline */}
           <ReferenceLine y={0} stroke="#d1d5db" strokeWidth={1} />
+          {/* Confidence band (stacked area trick: transparent base + visible width) */}
+          {chartData.some((d) => d.confidenceBandBase != null && d.confidenceBandWidth != null) && (
+            <>
+              <Area
+                type="monotone"
+                dataKey="confidenceBandBase"
+                stackId="confidence"
+                fill="transparent"
+                stroke="none"
+                isAnimationActive={false}
+                dot={false}
+                activeDot={false}
+                connectNulls={false}
+              />
+              <Area
+                type="monotone"
+                dataKey="confidenceBandWidth"
+                stackId="confidence"
+                fill="#5C61F6"
+                fillOpacity={0.22}
+                stroke="none"
+                isAnimationActive={false}
+                dot={false}
+                activeDot={false}
+                connectNulls={false}
+              />
+            </>
+          )}
           {/* Linear trend line */}
           {chartData.some((d) => d.trendValue != null) && (
             <Line
@@ -444,50 +755,58 @@ export default function PredictionChart({
               dot={false}
               activeDot={false}
               connectNulls
+              isAnimationActive={false}
             />
           )}
-          {/* Overlay vertical bars — rendered before the Line so they sit behind */}
-          {overlayData.map((o, i) => (
-            <ReferenceLine
-              key={`overlay-bar-${i}-${o.dateStr}`}
-              x={o.dateStr}
-              stroke={overlayColor(o.direction)}
-              strokeWidth={12}
-              strokeOpacity={0.22}
-              ifOverflow="visible"
-              onClick={() => onDotClick?.(o.sourceIds)}
-              onMouseEnter={(e: React.MouseEvent) => handleOverlayMouseEnter(o, e)}
-              onMouseMove={handleOverlayMouseMove}
-              onMouseLeave={handleOverlayMouseLeave}
-              style={{ cursor: onDotClick ? "pointer" : undefined }}
-            />
-          ))}
+          {/* Overlay vertical bars — one per date, color from grouped direction */}
+          {(() => {
+            // Group overlays by dateStr so overlapping bars don't blend to brown
+            const byDate = new Map<string, typeof overlayData>();
+            for (const o of overlayData) {
+              const group = byDate.get(o.dateStr) ?? [];
+              group.push(o);
+              byDate.set(o.dateStr, group);
+            }
+            return Array.from(byDate.entries()).map(([dateStr, group]) => (
+              <ReferenceLine
+                key={`overlay-bar-${dateStr}`}
+                x={dateStr}
+                stroke={groupedOverlayColor(group.map((g) => g.direction))}
+                strokeWidth={10}
+                strokeOpacity={0.18}
+                ifOverflow="visible"
+                onClick={() => onDotClick?.(group.flatMap((g) => g.sourceIds))}
+                onMouseEnter={(e: React.MouseEvent) => handleOverlayMouseEnter(group[0], e)}
+                onMouseMove={handleOverlayMouseMove}
+                onMouseLeave={handleOverlayMouseLeave}
+                style={{ cursor: onDotClick ? "pointer" : undefined }}
+              />
+            ));
+          })()}
+          {/* Observed data line (solid) */}
           <Line
             type="monotone"
-            dataKey="value"
+            dataKey="observedValue"
             stroke="#5C61F6"
             strokeWidth={2.5}
             connectNulls
+            isAnimationActive={false}
             dot={(props: Record<string, unknown>) => {
               const { cx, cy, payload } = props as {
                 cx: number;
                 cy: number;
                 payload: ChartDataPoint;
               };
-              if (payload.isPhantom || payload.value == null) return <g key={`phantom-${payload.date}`} />;
-              const config = getTierConfig(payload.evidenceTier);
-              return (
-                <circle
-                  key={`dot-${payload.date}`}
-                  cx={cx}
-                  cy={cy}
-                  r={5}
-                  fill={config.color}
-                  stroke="white"
-                  strokeWidth={2}
-                  style={{ cursor: onDotClick ? "pointer" : undefined }}
-                  onClick={() => onDotClick?.(payload.sourceIds)}
-                />
+              if (payload.isPhantom || payload.observedValue == null) return <g key={`phantom-${payload.date}`} />;
+              const fillColor = payload.metricType
+                ? getMetricTypeConfig(payload.metricType).color
+                : getTierConfig(payload.evidenceTier).color;
+              return renderDotShape(
+                cx, cy, 5, fillColor, payload.metricType,
+                "white", 2,
+                { cursor: onDotClick ? "pointer" : undefined },
+                () => onDotClick?.(payload.sourceIds),
+                "dot-obs", payload.date,
               );
             }}
             activeDot={(props: unknown) => {
@@ -496,23 +815,69 @@ export default function PredictionChart({
                 cy: number;
                 payload: ChartDataPoint;
               };
-              if (payload.isPhantom || payload.value == null) return <g key={`phantom-active-${payload.date}`} />;
-              const config = getTierConfig(payload.evidenceTier);
-              return (
-                <circle
-                  key={`active-${payload.date}`}
-                  cx={cx}
-                  cy={cy}
-                  r={7}
-                  fill={config.color}
-                  stroke="white"
-                  strokeWidth={2}
-                  style={{ cursor: onDotClick ? "pointer" : undefined }}
-                  onClick={() => onDotClick?.(payload.sourceIds)}
-                />
+              if (payload.isPhantom || payload.observedValue == null) return <g key={`phantom-active-${payload.date}`} />;
+              const fillColor = payload.metricType
+                ? getMetricTypeConfig(payload.metricType).color
+                : getTierConfig(payload.evidenceTier).color;
+              return renderDotShape(
+                cx, cy, 7, fillColor, payload.metricType,
+                "white", 2,
+                { cursor: onDotClick ? "pointer" : undefined },
+                () => onDotClick?.(payload.sourceIds),
+                "active-obs", payload.date,
               );
             }}
           />
+          {/* Projected data line (dashed) */}
+          {hasProjectedData && (
+            <Line
+              type="monotone"
+              dataKey="projectedValue"
+              stroke="#5C61F6"
+              strokeWidth={2.5}
+              strokeDasharray="8 4"
+              strokeOpacity={0.7}
+              connectNulls
+              isAnimationActive={false}
+              dot={(props: Record<string, unknown>) => {
+                const { cx, cy, payload } = props as {
+                  cx: number;
+                  cy: number;
+                  payload: ChartDataPoint;
+                };
+                // Skip dot on bridge points (they already have an observed dot)
+                if (payload.isPhantom || payload.projectedValue == null || payload.dataType === "observed") return <g key={`phantom-proj-${payload.date}`} />;
+                const fillColor = payload.metricType
+                  ? getMetricTypeConfig(payload.metricType).color
+                  : getTierConfig(payload.evidenceTier).color;
+                return renderDotShape(
+                  cx, cy, 4, fillColor, payload.metricType,
+                  "white", 2,
+                  { cursor: onDotClick ? "pointer" : undefined },
+                  () => onDotClick?.(payload.sourceIds),
+                  "dot-proj", payload.date,
+                );
+              }}
+              activeDot={(props: unknown) => {
+                const { cx, cy, payload } = props as {
+                  cx: number;
+                  cy: number;
+                  payload: ChartDataPoint;
+                };
+                if (payload.isPhantom || payload.projectedValue == null || payload.dataType === "observed") return <g key={`phantom-active-proj-${payload.date}`} />;
+                const fillColor = payload.metricType
+                  ? getMetricTypeConfig(payload.metricType).color
+                  : getTierConfig(payload.evidenceTier).color;
+                return renderDotShape(
+                  cx, cy, 6, fillColor, payload.metricType,
+                  "white", 2,
+                  { cursor: onDotClick ? "pointer" : undefined },
+                  () => onDotClick?.(payload.sourceIds),
+                  "active-proj", payload.date,
+                );
+              }}
+            />
+          )}
         </ComposedChart>
       </ResponsiveContainer>
       {/* Custom overlay tooltip — works at chart edges where Recharts tooltip doesn't activate */}

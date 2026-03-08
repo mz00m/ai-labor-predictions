@@ -1,0 +1,2193 @@
+{
+  "calculatedAt": "2026-03-03T13:42:57Z",
+  "currentAAI": 0.582,
+  "aaiTrend": "accelerating",
+  "aaiHistory": [
+    {
+      "month": "2024-11",
+      "aai": 2.457,
+      "tier2AvgGrowth": 0.0025,
+      "tier1AvgGrowth": -0.0381
+    },
+    {
+      "month": "2024-12",
+      "aai": 10.0,
+      "tier2AvgGrowth": 0.4387,
+      "tier1AvgGrowth": -0.0028
+    },
+    {
+      "month": "2025-01",
+      "aai": 2.55,
+      "tier2AvgGrowth": 0.5354,
+      "tier1AvgGrowth": 0.21
+    },
+    {
+      "month": "2025-02",
+      "aai": 0.682,
+      "tier2AvgGrowth": 0.121,
+      "tier1AvgGrowth": 0.1774
+    },
+    {
+      "month": "2025-03",
+      "aai": 2.867,
+      "tier2AvgGrowth": 0.5083,
+      "tier1AvgGrowth": 0.1773
+    },
+    {
+      "month": "2025-04",
+      "aai": 1.791,
+      "tier2AvgGrowth": 0.1811,
+      "tier1AvgGrowth": 0.1012
+    },
+    {
+      "month": "2025-05",
+      "aai": 3.323,
+      "tier2AvgGrowth": 0.3927,
+      "tier1AvgGrowth": 0.1182
+    },
+    {
+      "month": "2025-06",
+      "aai": 0.439,
+      "tier2AvgGrowth": 0.0898,
+      "tier1AvgGrowth": 0.2047
+    },
+    {
+      "month": "2025-07",
+      "aai": 1.027,
+      "tier2AvgGrowth": 0.1373,
+      "tier1AvgGrowth": 0.1338
+    },
+    {
+      "month": "2025-08",
+      "aai": 0.425,
+      "tier2AvgGrowth": 0.0541,
+      "tier1AvgGrowth": 0.1273
+    },
+    {
+      "month": "2025-09",
+      "aai": 2.517,
+      "tier2AvgGrowth": 0.1555,
+      "tier1AvgGrowth": 0.0618
+    },
+    {
+      "month": "2025-10",
+      "aai": 1.166,
+      "tier2AvgGrowth": 0.1933,
+      "tier1AvgGrowth": 0.1658
+    },
+    {
+      "month": "2025-11",
+      "aai": 0.59,
+      "tier2AvgGrowth": 0.0276,
+      "tier1AvgGrowth": 0.0467
+    },
+    {
+      "month": "2025-12",
+      "aai": -0.164,
+      "tier2AvgGrowth": -0.0091,
+      "tier1AvgGrowth": 0.0557
+    },
+    {
+      "month": "2026-01",
+      "aai": 1.104,
+      "tier2AvgGrowth": 0.2104,
+      "tier1AvgGrowth": 0.1905
+    },
+    {
+      "month": "2026-02",
+      "aai": 0.582,
+      "tier2AvgGrowth": 0.1255,
+      "tier1AvgGrowth": 0.2156
+    }
+  ],
+  "industries": [
+    {
+      "industry": "creative",
+      "label": "Creative & Media",
+      "color": "#d97706",
+      "toolGrowth3m": 0.2062,
+      "employmentChangeSinceNov2022": -0.0361,
+      "employmentChangeYoY": -0.014,
+      "toolCount": 9,
+      "surgingCount": 2,
+      "packages": [
+        "diffusers",
+        "replicate",
+        "stability-sdk",
+        "faster-whisper",
+        "openai-whisper",
+        "replicate-npm",
+        "fal-client",
+        "audiocraft",
+        "yt-dlp"
+      ]
+    },
+    {
+      "industry": "software_it",
+      "label": "Software & IT",
+      "color": "#5C61F6",
+      "toolGrowth3m": 0.173,
+      "employmentChangeSinceNov2022": -0.0991,
+      "employmentChangeYoY": -0.0196,
+      "toolCount": 15,
+      "surgingCount": 6,
+      "packages": [
+        "openai",
+        "anthropic",
+        "aider-chat",
+        "browser-use",
+        "crewai",
+        "autogen",
+        "pyautogen",
+        "smolagents",
+        "ai",
+        "@ai-sdk/openai",
+        "@ai-sdk/anthropic",
+        "@modelcontextprotocol/sdk",
+        "playwright-npm",
+        "puppeteer-npm",
+        "continuedev"
+      ]
+    },
+    {
+      "industry": "legal",
+      "label": "Legal & Compliance",
+      "color": "#dc2626",
+      "toolGrowth3m": 0.1665,
+      "employmentChangeSinceNov2022": 0.0405,
+      "employmentChangeYoY": 0.0227,
+      "toolCount": 6,
+      "surgingCount": 1,
+      "packages": [
+        "docling",
+        "marker-pdf",
+        "unstructured",
+        "pypdf",
+        "llamaindex",
+        "@langchain/core"
+      ]
+    },
+    {
+      "industry": "office",
+      "label": "Office & Administrative",
+      "color": "#7c3aed",
+      "toolGrowth3m": 0.1331,
+      "employmentChangeSinceNov2022": -0.084,
+      "employmentChangeYoY": -0.0046,
+      "toolCount": 9,
+      "surgingCount": 4,
+      "packages": [
+        "browser-use",
+        "crewai",
+        "ai",
+        "playwright-npm",
+        "puppeteer-npm",
+        "unstructured",
+        "@langchain/core",
+        "@langchain/openai",
+        "llama-index"
+      ]
+    },
+    {
+      "industry": "sales_marketing",
+      "label": "Sales & Marketing",
+      "color": "#ea580c",
+      "toolGrowth3m": 0.1075,
+      "employmentChangeSinceNov2022": -0.0363,
+      "employmentChangeYoY": -0.0146,
+      "toolCount": 5,
+      "surgingCount": 0,
+      "packages": [
+        "langchain",
+        "instructor",
+        "outlines",
+        "posthog-js",
+        "@hubspot/api-client"
+      ]
+    },
+    {
+      "industry": "finance",
+      "label": "Finance & Insurance",
+      "color": "#16a34a",
+      "toolGrowth3m": 0.0737,
+      "employmentChangeSinceNov2022": 0.0055,
+      "employmentChangeYoY": -0.0136,
+      "toolCount": 11,
+      "surgingCount": 1,
+      "packages": [
+        "unstructured",
+        "pypdf",
+        "@langchain/core",
+        "@langchain/openai",
+        "pandasai",
+        "dataprep",
+        "llama-index",
+        "chromadb",
+        "ta-lib",
+        "yfinance",
+        "pyod"
+      ]
+    },
+    {
+      "industry": "healthcare",
+      "label": "Healthcare",
+      "color": "#0891b2",
+      "toolGrowth3m": 0.0641,
+      "employmentChangeSinceNov2022": 0.0972,
+      "employmentChangeYoY": 0.0248,
+      "toolCount": 5,
+      "surgingCount": 0,
+      "packages": [
+        "transformers",
+        "medspacy",
+        "scispacy",
+        "monai",
+        "biopython"
+      ]
+    },
+    {
+      "industry": "education",
+      "label": "Education & Training",
+      "color": "#2563eb",
+      "toolGrowth3m": 0.0425,
+      "employmentChangeSinceNov2022": 0.0374,
+      "employmentChangeYoY": -0.0081,
+      "toolCount": 5,
+      "surgingCount": 0,
+      "packages": [
+        "openai",
+        "gradio",
+        "streamlit",
+        "nbgrader",
+        "sentence-transformers"
+      ]
+    },
+    {
+      "industry": "manufacturing",
+      "label": "Manufacturing & Logistics",
+      "color": "#475569",
+      "toolGrowth3m": -0.0111,
+      "employmentChangeSinceNov2022": -0.028,
+      "employmentChangeYoY": -0.0179,
+      "toolCount": 5,
+      "surgingCount": 0,
+      "packages": [
+        "ultralytics",
+        "opencv-python",
+        "supervision",
+        "open3d",
+        "robotframework"
+      ]
+    },
+    {
+      "industry": "customer_service",
+      "label": "Customer Service & Support",
+      "color": "#ec4899",
+      "toolGrowth3m": -0.0355,
+      "employmentChangeSinceNov2022": -0.2086,
+      "employmentChangeYoY": -0.0635,
+      "toolCount": 5,
+      "surgingCount": 0,
+      "packages": [
+        "botpress",
+        "rasa",
+        "vocode",
+        "chainlit",
+        "gradio"
+      ]
+    }
+  ],
+  "packages": [
+    {
+      "package": "openai",
+      "source": "pypi",
+      "tier": "tier1",
+      "industries": [
+        "software_it",
+        "education"
+      ],
+      "label": "The core Python SDK for calling OpenAI models (GPT-4, o1, DALL-E). Used as the foundation for most AI applications \u2014 when this grows, overall AI adoption is growing.",
+      "latestMonthlyDownloads": 168184674,
+      "momGrowth": 0.2017,
+      "rollingAvg3mGrowth": 0.0923,
+      "rollingAvg6mGrowth": 0.1081,
+      "isSurging": false,
+      "sparkline": [
+        102949522,
+        129619290,
+        130212629,
+        129568626,
+        139951736,
+        168184674
+      ],
+      "githubStars": 30098,
+      "githubMonthlyIssues": 22,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 6,
+      "signalQuality": "noisy"
+    },
+    {
+      "package": "anthropic",
+      "source": "pypi",
+      "tier": "tier1",
+      "industries": [
+        "software_it"
+      ],
+      "label": "Python SDK for Anthropic's Claude models. Growing rapidly as Claude gains market share in enterprise AI, especially for long-document analysis and coding tasks.",
+      "latestMonthlyDownloads": 52518902,
+      "momGrowth": 0.3076,
+      "rollingAvg3mGrowth": 0.1965,
+      "rollingAvg6mGrowth": 0.1623,
+      "isSurging": false,
+      "sparkline": [
+        25208696,
+        30526670,
+        30859896,
+        34863493,
+        40163314,
+        52518902
+      ],
+      "githubStars": 2853,
+      "githubMonthlyIssues": 25,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 1,
+      "signalQuality": "noisy"
+    },
+    {
+      "package": "langchain",
+      "source": "pypi",
+      "tier": "tier1",
+      "industries": [
+        "sales_marketing"
+      ],
+      "label": "The most popular framework for building AI-powered applications. Provides the plumbing that connects LLMs to databases, APIs, and documents \u2014 a general indicator of AI app development activity.",
+      "latestMonthlyDownloads": 207375245,
+      "momGrowth": 0.2867,
+      "rollingAvg3mGrowth": 0.3206,
+      "rollingAvg6mGrowth": 0.2421,
+      "isSurging": false,
+      "sparkline": [
+        74362093,
+        86330829,
+        93895536,
+        100283076,
+        161171268,
+        207375245
+      ],
+      "githubStars": 127963,
+      "githubMonthlyIssues": 90,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 6,
+      "signalQuality": "moderate"
+    },
+    {
+      "package": "langchain-core",
+      "source": "pypi",
+      "tier": "tier1",
+      "industries": [],
+      "label": "The foundational building blocks of LangChain \u2014 chains, prompts, output parsers. Installed as a dependency by virtually every LangChain-based project.",
+      "latestMonthlyDownloads": 84374597,
+      "momGrowth": 0.073,
+      "rollingAvg3mGrowth": 0.0472,
+      "rollingAvg6mGrowth": 0.0729,
+      "isSurging": false,
+      "sparkline": [
+        59962713,
+        71964526,
+        73577266,
+        73624136,
+        78631959,
+        84374597
+      ],
+      "githubStars": 127963,
+      "githubMonthlyIssues": 90,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 6,
+      "signalQuality": "moderate"
+    },
+    {
+      "package": "transformers",
+      "source": "pypi",
+      "tier": "tier1",
+      "industries": [
+        "healthcare"
+      ],
+      "label": "Hugging Face's library for running open-source AI models locally. The default choice for teams that need to self-host models rather than use cloud APIs \u2014 common in regulated industries.",
+      "latestMonthlyDownloads": 106402430,
+      "momGrowth": 0.0573,
+      "rollingAvg3mGrowth": -0.0163,
+      "rollingAvg6mGrowth": 0.0333,
+      "isSurging": false,
+      "sparkline": [
+        91924391,
+        98566222,
+        112695381,
+        113380690,
+        100637248,
+        106402430
+      ],
+      "githubStars": 157259,
+      "githubMonthlyIssues": 138,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 1,
+      "signalQuality": "moderate"
+    },
+    {
+      "package": "openai-npm",
+      "source": "npm",
+      "tier": "tier1",
+      "industries": [],
+      "label": "JavaScript SDK for OpenAI. Used to add GPT-4 and other OpenAI models to web applications, chatbots, and Node.js backends.",
+      "latestMonthlyDownloads": 50093720,
+      "momGrowth": 0.1862,
+      "rollingAvg3mGrowth": 0.167,
+      "rollingAvg6mGrowth": 0.1156,
+      "isSurging": true,
+      "sparkline": [
+        28571807,
+        32838066,
+        31705142,
+        33952403,
+        42229601,
+        50093720
+      ],
+      "surgingReason": "Growth rate doubled: 17% vs prior 6%",
+      "githubStars": 10684,
+      "githubMonthlyIssues": 4,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 6,
+      "signalQuality": "moderate"
+    },
+    {
+      "package": "@anthropic-ai/sdk",
+      "source": "npm",
+      "tier": "tier1",
+      "industries": [],
+      "label": "JavaScript SDK for Anthropic's Claude. Used by web developers building Claude-powered features into websites and web applications.",
+      "latestMonthlyDownloads": 24055363,
+      "momGrowth": 0.3964,
+      "rollingAvg3mGrowth": 0.2703,
+      "rollingAvg6mGrowth": 0.1762,
+      "isSurging": true,
+      "sparkline": [
+        9816552,
+        10874996,
+        11884122,
+        13301274,
+        17226666,
+        24055363
+      ],
+      "surgingReason": "Growth rate doubled: 27% vs prior 8%",
+      "githubStars": 1660,
+      "githubMonthlyIssues": 12,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 1,
+      "signalQuality": "noisy"
+    },
+    {
+      "package": "aider-chat",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "software_it"
+      ],
+      "label": "An AI pair programmer that runs in your terminal and edits code directly in your repo. Developers use it to write features, fix bugs, and refactor code through natural language \u2014 replacing some of the work junior developers do.",
+      "latestMonthlyDownloads": 607342,
+      "momGrowth": 0.4557,
+      "rollingAvg3mGrowth": 0.4055,
+      "rollingAvg6mGrowth": 0.2813,
+      "isSurging": false,
+      "sparkline": [
+        210744,
+        225815,
+        252552,
+        221453,
+        417229,
+        607342
+      ],
+      "githubStars": 41120,
+      "githubMonthlyIssues": 36,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 0,
+      "signalQuality": "strong"
+    },
+    {
+      "package": "browser-use",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "software_it",
+        "office"
+      ],
+      "label": "Lets AI agents control a web browser \u2014 clicking buttons, filling forms, navigating pages. Used to automate repetitive web-based tasks that currently require a human at a keyboard.",
+      "latestMonthlyDownloads": 3027849,
+      "momGrowth": 0.5366,
+      "rollingAvg3mGrowth": 0.3229,
+      "rollingAvg6mGrowth": 0.2107,
+      "isSurging": true,
+      "sparkline": [
+        1227564,
+        1319816,
+        1332640,
+        1610588,
+        1970483,
+        3027849
+      ],
+      "surgingReason": "3+ consecutive months of >20% growth",
+      "githubStars": 79409,
+      "githubMonthlyIssues": 44,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": "strong"
+    },
+    {
+      "package": "crewai",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "software_it",
+        "office"
+      ],
+      "label": "A framework for orchestrating multiple AI agents that collaborate on complex tasks. Each agent has a role (researcher, writer, reviewer) and they pass work between each other \u2014 mimicking how human teams operate.",
+      "latestMonthlyDownloads": 4794228,
+      "momGrowth": 0.3827,
+      "rollingAvg3mGrowth": 0.2526,
+      "rollingAvg6mGrowth": 0.242,
+      "isSurging": false,
+      "sparkline": [
+        1644728,
+        2079763,
+        2470565,
+        2729794,
+        3467322,
+        4794228
+      ],
+      "githubStars": 44994,
+      "githubMonthlyIssues": 68,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 0,
+      "signalQuality": "strong"
+    },
+    {
+      "package": "autogen",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "software_it"
+      ],
+      "label": "Microsoft's framework for building multi-agent AI systems where agents can have conversations, write code, and coordinate to solve complex problems without human intervention.",
+      "latestMonthlyDownloads": 153718,
+      "momGrowth": 0.1162,
+      "rollingAvg3mGrowth": 0.0095,
+      "rollingAvg6mGrowth": 0.0162,
+      "isSurging": false,
+      "sparkline": [
+        147126,
+        169971,
+        152543,
+        162109,
+        137714,
+        153718
+      ],
+      "githubStars": 55080,
+      "githubMonthlyIssues": 23,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 0,
+      "signalQuality": "strong"
+    },
+    {
+      "package": "pyautogen",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "software_it"
+      ],
+      "label": "Alternate distribution of Microsoft AutoGen. Same multi-agent capabilities \u2014 tracked separately because both package names see significant download volume.",
+      "latestMonthlyDownloads": 347843,
+      "momGrowth": 0.0247,
+      "rollingAvg3mGrowth": -0.0071,
+      "rollingAvg6mGrowth": -0.0031,
+      "isSurging": false,
+      "sparkline": [
+        364666,
+        355779,
+        366437,
+        419621,
+        339451,
+        347843
+      ],
+      "githubStars": 55080,
+      "githubMonthlyIssues": 23,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 0,
+      "signalQuality": "strong"
+    },
+    {
+      "package": "smolagents",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "software_it"
+      ],
+      "label": "Hugging Face's lightweight agent framework. Designed for quick automation tasks where a full multi-agent system is overkill \u2014 one AI agent that can call tools and take actions.",
+      "latestMonthlyDownloads": 392793,
+      "momGrowth": 0.2929,
+      "rollingAvg3mGrowth": 0.0551,
+      "rollingAvg6mGrowth": 0.0892,
+      "isSurging": false,
+      "sparkline": [
+        267750,
+        286604,
+        346857,
+        316321,
+        303798,
+        392793
+      ],
+      "githubStars": 25704,
+      "githubMonthlyIssues": 10,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": "strong"
+    },
+    {
+      "package": "ai",
+      "source": "npm",
+      "tier": "tier2",
+      "industries": [
+        "software_it",
+        "office"
+      ],
+      "label": "Vercel's AI SDK \u2014 the most popular way to add streaming AI chat, text generation, and tool use to React and Next.js web apps. Its growth tracks how fast AI is being embedded into production web products.",
+      "latestMonthlyDownloads": 31880725,
+      "momGrowth": 0.2237,
+      "rollingAvg3mGrowth": 0.1738,
+      "rollingAvg6mGrowth": 0.2208,
+      "isSurging": true,
+      "sparkline": [
+        12166333,
+        17214554,
+        19965492,
+        20497387,
+        26052688,
+        31880725
+      ],
+      "surgingReason": "3+ consecutive months of >20% growth",
+      "githubStars": 22240,
+      "githubMonthlyIssues": 171,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 0,
+      "signalQuality": "moderate"
+    },
+    {
+      "package": "@ai-sdk/openai",
+      "source": "npm",
+      "tier": "tier2",
+      "industries": [
+        "software_it"
+      ],
+      "label": "Connects Vercel's AI SDK to OpenAI models. When developers build AI features into web apps using the AI SDK, this is one of the most common provider packages they install.",
+      "latestMonthlyDownloads": 16003574,
+      "momGrowth": 0.1985,
+      "rollingAvg3mGrowth": 0.2375,
+      "rollingAvg6mGrowth": 0.1859,
+      "isSurging": true,
+      "sparkline": [
+        6715072,
+        7986452,
+        8518754,
+        9750336,
+        13353114,
+        16003574
+      ],
+      "surgingReason": "3+ consecutive months of >20% growth",
+      "githubStars": 22240,
+      "githubMonthlyIssues": 171,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 0,
+      "signalQuality": "moderate"
+    },
+    {
+      "package": "@ai-sdk/anthropic",
+      "source": "npm",
+      "tier": "tier2",
+      "industries": [
+        "software_it"
+      ],
+      "label": "Connects Vercel's AI SDK to Anthropic Claude models. Growth here reflects Claude adoption specifically within production web applications.",
+      "latestMonthlyDownloads": 12927302,
+      "momGrowth": 0.3357,
+      "rollingAvg3mGrowth": 0.3419,
+      "rollingAvg6mGrowth": 0.291,
+      "isSurging": true,
+      "sparkline": [
+        3670686,
+        4528819,
+        5432466,
+        6403902,
+        9678497,
+        12927302
+      ],
+      "surgingReason": "3+ consecutive months of >20% growth",
+      "githubStars": 22240,
+      "githubMonthlyIssues": 171,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 0,
+      "signalQuality": "moderate"
+    },
+    {
+      "package": "@modelcontextprotocol/sdk",
+      "source": "npm",
+      "tier": "tier2",
+      "industries": [
+        "software_it"
+      ],
+      "label": "The official SDK for Model Context Protocol \u2014 an emerging open standard that lets AI models connect to external tools, databases, and APIs. Its explosive growth signals that AI tool integration is being standardized.",
+      "latestMonthlyDownloads": 71656771,
+      "momGrowth": 0.426,
+      "rollingAvg3mGrowth": 0.2769,
+      "rollingAvg6mGrowth": 0.2028,
+      "isSurging": true,
+      "sparkline": [
+        31258519,
+        31805028,
+        35008987,
+        38516712,
+        50249918,
+        71656771
+      ],
+      "surgingReason": "3+ consecutive months of >20% growth",
+      "githubStars": 11728,
+      "githubMonthlyIssues": 27,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": "noisy"
+    },
+    {
+      "package": "playwright-npm",
+      "source": "npm",
+      "tier": "tier2",
+      "industries": [
+        "software_it",
+        "office"
+      ],
+      "label": "Microsoft's browser automation framework \u2014 the backbone of AI agent systems that need to interact with web pages. When AI agents need to click, type, and navigate websites, Playwright is the most common tool under the hood.",
+      "latestMonthlyDownloads": 129038302,
+      "momGrowth": -0.0462,
+      "rollingAvg3mGrowth": 0.071,
+      "rollingAvg6mGrowth": 0.0846,
+      "isSurging": false,
+      "sparkline": [
+        88986700,
+        97385877,
+        107489051,
+        107289041,
+        135291426,
+        129038302
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "puppeteer-npm",
+      "source": "npm",
+      "tier": "tier2",
+      "industries": [
+        "software_it",
+        "office"
+      ],
+      "label": "Google's browser automation library for Chrome/Chromium. A predecessor to Playwright that remains widely used for web scraping, testing, and building AI-powered browser agents.",
+      "latestMonthlyDownloads": 30053620,
+      "momGrowth": 0.0822,
+      "rollingAvg3mGrowth": 0.0598,
+      "rollingAvg6mGrowth": 0.042,
+      "isSurging": true,
+      "sparkline": [
+        24553358,
+        25415852,
+        25278235,
+        25700814,
+        27770073,
+        30053620
+      ],
+      "surgingReason": "Growth rate doubled: 6% vs prior 2%",
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "docling",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "legal"
+      ],
+      "label": "IBM's document conversion library that turns PDFs, Word docs, and scanned images into structured data an AI can analyze. Heavily used in legal tech for processing contracts, court filings, and regulatory documents.",
+      "latestMonthlyDownloads": 4135817,
+      "momGrowth": 0.593,
+      "rollingAvg3mGrowth": 0.323,
+      "rollingAvg6mGrowth": 0.2905,
+      "isSurging": false,
+      "sparkline": [
+        1324738,
+        1615515,
+        2041789,
+        1662426,
+        2596323,
+        4135817
+      ],
+      "githubStars": 54625,
+      "githubMonthlyIssues": 0,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": "strong"
+    },
+    {
+      "package": "marker-pdf",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "legal"
+      ],
+      "label": "Converts PDFs into clean Markdown text while preserving structure like headings, tables, and lists. Critical for legal and compliance workflows where document formatting carries meaning.",
+      "latestMonthlyDownloads": 239217,
+      "momGrowth": 0.1464,
+      "rollingAvg3mGrowth": 0.1579,
+      "rollingAvg6mGrowth": 0.1233,
+      "isSurging": false,
+      "sparkline": [
+        137868,
+        171698,
+        154150,
+        176884,
+        208671,
+        239217
+      ],
+      "githubStars": 32086,
+      "githubMonthlyIssues": 0,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": "strong"
+    },
+    {
+      "package": "unstructured",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "legal",
+        "finance",
+        "office"
+      ],
+      "label": "An ETL pipeline for documents \u2014 ingests PDFs, emails, HTML, images, and Office files, then outputs clean structured data for AI processing. Used across industries wherever large document backlogs need to be made AI-readable.",
+      "latestMonthlyDownloads": 4292919,
+      "momGrowth": 0.1134,
+      "rollingAvg3mGrowth": 0.0644,
+      "rollingAvg6mGrowth": 0.034,
+      "isSurging": false,
+      "sparkline": [
+        3755403,
+        4170583,
+        3613936,
+        3324457,
+        3855657,
+        4292919
+      ],
+      "githubStars": 14101,
+      "githubMonthlyIssues": 4,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": "strong"
+    },
+    {
+      "package": "pypdf",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "legal",
+        "finance"
+      ],
+      "label": "The standard Python library for reading and manipulating PDF files. A foundational dependency in any workflow that processes contracts, financial statements, or regulatory filings at scale.",
+      "latestMonthlyDownloads": 32568064,
+      "momGrowth": 0.1716,
+      "rollingAvg3mGrowth": 0.0559,
+      "rollingAvg6mGrowth": 0.1173,
+      "isSurging": false,
+      "sparkline": [
+        19149441,
+        24276106,
+        27938541,
+        26905705,
+        27798931,
+        32568064
+      ],
+      "githubStars": 9845,
+      "githubMonthlyIssues": 10,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 1,
+      "signalQuality": "moderate"
+    },
+    {
+      "package": "llamaindex",
+      "source": "npm",
+      "tier": "tier2",
+      "industries": [
+        "legal"
+      ],
+      "label": "JavaScript SDK for LlamaIndex \u2014 builds AI systems that can search, summarize, and answer questions across large document collections. Used in legal tech for contract review and research automation.",
+      "latestMonthlyDownloads": 373339,
+      "momGrowth": 0.4941,
+      "rollingAvg3mGrowth": 0.2788,
+      "rollingAvg6mGrowth": 0.1533,
+      "isSurging": true,
+      "sparkline": [
+        190548,
+        196690,
+        186384,
+        185470,
+        249876,
+        373339
+      ],
+      "surgingReason": "Growth rate doubled: 28% vs prior 3%",
+      "githubStars": 3063,
+      "githubMonthlyIssues": 1,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 0,
+      "signalQuality": "strong"
+    },
+    {
+      "package": "@langchain/core",
+      "source": "npm",
+      "tier": "tier2",
+      "industries": [
+        "legal",
+        "finance",
+        "office"
+      ],
+      "label": "The JavaScript core of LangChain \u2014 provides chains, agents, and retrieval tools for building AI document processing pipelines in web applications. A cross-industry building block for AI-powered workflows.",
+      "latestMonthlyDownloads": 11307512,
+      "momGrowth": 0.0826,
+      "rollingAvg3mGrowth": 0.1192,
+      "rollingAvg6mGrowth": 0.0926,
+      "isSurging": false,
+      "sparkline": [
+        7132182,
+        7865850,
+        8097350,
+        8694254,
+        10445182,
+        11307512
+      ],
+      "githubStars": 17065,
+      "githubMonthlyIssues": 57,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 6,
+      "signalQuality": "moderate"
+    },
+    {
+      "package": "@langchain/openai",
+      "source": "npm",
+      "tier": "tier2",
+      "industries": [
+        "finance",
+        "office"
+      ],
+      "label": "Connects LangChain's JavaScript framework to OpenAI models. Used in production web apps that need GPT-4 for document analysis, data extraction, and automated decision-making workflows.",
+      "latestMonthlyDownloads": 8596302,
+      "momGrowth": 0.0838,
+      "rollingAvg3mGrowth": 0.0771,
+      "rollingAvg6mGrowth": 0.0564,
+      "isSurging": true,
+      "sparkline": [
+        6415521,
+        6886081,
+        6886137,
+        7161486,
+        7931467,
+        8596302
+      ],
+      "surgingReason": "Growth rate doubled: 8% vs prior 4%",
+      "githubStars": 17065,
+      "githubMonthlyIssues": 57,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 6,
+      "signalQuality": "moderate"
+    },
+    {
+      "package": "pandasai",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "finance"
+      ],
+      "label": "Lets users query spreadsheets and databases using plain English instead of writing code. An analyst can ask 'show me Q3 revenue by region' and get the answer \u2014 automating work that previously required SQL or Excel expertise.",
+      "latestMonthlyDownloads": 286752,
+      "momGrowth": 0.3967,
+      "rollingAvg3mGrowth": 0.1081,
+      "rollingAvg6mGrowth": -0.0101,
+      "isSurging": false,
+      "sparkline": [
+        337246,
+        298142,
+        221000,
+        212574,
+        205308,
+        286752
+      ],
+      "githubStars": 23287,
+      "githubMonthlyIssues": 6,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 0,
+      "signalQuality": "strong"
+    },
+    {
+      "package": "dataprep",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "finance"
+      ],
+      "label": "Automates the tedious work of cleaning, validating, and preparing datasets for analysis. Handles missing values, type conversions, and formatting \u2014 tasks that data analysts and junior quants spend hours on manually.",
+      "latestMonthlyDownloads": 12438,
+      "momGrowth": -0.1682,
+      "rollingAvg3mGrowth": -0.1205,
+      "rollingAvg6mGrowth": -0.0829,
+      "isSurging": false,
+      "sparkline": [
+        20575,
+        15164,
+        18348,
+        15992,
+        14953,
+        12438
+      ],
+      "githubStars": 2237,
+      "githubMonthlyIssues": 0,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": "strong"
+    },
+    {
+      "package": "llama-index",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "finance",
+        "office"
+      ],
+      "label": "Python framework for building 'retrieval-augmented generation' (RAG) systems \u2014 AI that answers questions by searching through your own documents first. Used in finance for research, compliance, and due diligence automation.",
+      "latestMonthlyDownloads": 8592754,
+      "momGrowth": 0.2644,
+      "rollingAvg3mGrowth": 0.057,
+      "rollingAvg6mGrowth": 0.1325,
+      "isSurging": false,
+      "sparkline": [
+        5011219,
+        7454768,
+        7483116,
+        6965656,
+        6795790,
+        8592754
+      ],
+      "githubStars": 47315,
+      "githubMonthlyIssues": 43,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 0,
+      "signalQuality": "strong"
+    },
+    {
+      "package": "chromadb",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "finance"
+      ],
+      "label": "An open-source vector database that stores document embeddings for AI-powered search. When financial firms build AI systems to search across thousands of research reports or filings, ChromaDB is a common backend choice.",
+      "latestMonthlyDownloads": 11188322,
+      "momGrowth": 0.0843,
+      "rollingAvg3mGrowth": 0.0752,
+      "rollingAvg6mGrowth": 0.1007,
+      "isSurging": false,
+      "sparkline": [
+        7048554,
+        7556618,
+        9110763,
+        8685232,
+        10318057,
+        11188322
+      ],
+      "githubStars": 26414,
+      "githubMonthlyIssues": 10,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 0,
+      "signalQuality": "strong"
+    },
+    {
+      "package": "medspacy",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "healthcare"
+      ],
+      "label": "A clinical NLP toolkit built on spaCy that extracts structured data from unstructured medical records \u2014 identifying diagnoses, medications, and procedures from doctor's notes and discharge summaries.",
+      "latestMonthlyDownloads": 6725,
+      "momGrowth": 0.0483,
+      "rollingAvg3mGrowth": 0.0224,
+      "rollingAvg6mGrowth": 0.0266,
+      "isSurging": false,
+      "sparkline": [
+        6408,
+        6085,
+        6793,
+        5001,
+        6415,
+        6725
+      ],
+      "githubStars": 634,
+      "githubMonthlyIssues": 0,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": "strong"
+    },
+    {
+      "package": "scispacy",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "healthcare"
+      ],
+      "label": "NLP models trained on biomedical text \u2014 can identify drug names, gene references, and disease mentions in research papers and clinical documents. Used in pharmaceutical research and clinical data extraction.",
+      "latestMonthlyDownloads": 52541,
+      "momGrowth": 0.2161,
+      "rollingAvg3mGrowth": 0.0343,
+      "rollingAvg6mGrowth": 0.0533,
+      "isSurging": false,
+      "sparkline": [
+        42806,
+        44099,
+        49992,
+        55183,
+        43206,
+        52541
+      ],
+      "githubStars": 1926,
+      "githubMonthlyIssues": 0,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": "strong"
+    },
+    {
+      "package": "diffusers",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "creative"
+      ],
+      "label": "Hugging Face's library for running Stable Diffusion, FLUX, and other AI image generation models. The main open-source tool that lets developers generate, edit, and transform images with AI \u2014 widely used in design and media production.",
+      "latestMonthlyDownloads": 6399540,
+      "momGrowth": -0.3298,
+      "rollingAvg3mGrowth": -0.0253,
+      "rollingAvg6mGrowth": 0.1328,
+      "isSurging": false,
+      "sparkline": [
+        4404923,
+        7739319,
+        7609344,
+        7641497,
+        9549132,
+        6399540
+      ],
+      "githubStars": 32907,
+      "githubMonthlyIssues": 29,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 0,
+      "signalQuality": "strong"
+    },
+    {
+      "package": "replicate",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "creative"
+      ],
+      "label": "A cloud platform for running AI models via API \u2014 especially popular for image generation, video creation, and audio processing. Developers use it when they want AI creative tools without managing GPU infrastructure.",
+      "latestMonthlyDownloads": 904230,
+      "momGrowth": 0.1287,
+      "rollingAvg3mGrowth": 0.0103,
+      "rollingAvg6mGrowth": 0.0161,
+      "isSurging": false,
+      "sparkline": [
+        856319,
+        861415,
+        899325,
+        750204,
+        801139,
+        904230
+      ],
+      "githubStars": 895,
+      "githubMonthlyIssues": 0,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 0,
+      "signalQuality": "moderate"
+    },
+    {
+      "package": "stability-sdk",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "creative"
+      ],
+      "label": "Stability AI's official SDK for their image generation models (Stable Diffusion). Used by developers building AI-powered design tools, marketing asset generators, and creative automation pipelines.",
+      "latestMonthlyDownloads": 26037,
+      "momGrowth": -0.045,
+      "rollingAvg3mGrowth": 0.0534,
+      "rollingAvg6mGrowth": -0.0682,
+      "isSurging": false,
+      "sparkline": [
+        79499,
+        101408,
+        22651,
+        22487,
+        27263,
+        26037
+      ],
+      "githubStars": 2439,
+      "githubMonthlyIssues": 0,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": "strong"
+    },
+    {
+      "package": "faster-whisper",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "creative"
+      ],
+      "label": "An optimized implementation of OpenAI's Whisper speech-to-text model that runs 4x faster. Used to transcribe podcasts, meetings, video content, and interviews \u2014 automating work done by human transcriptionists.",
+      "latestMonthlyDownloads": 2780975,
+      "momGrowth": 0.2689,
+      "rollingAvg3mGrowth": 0.1606,
+      "rollingAvg6mGrowth": 0.1398,
+      "isSurging": false,
+      "sparkline": [
+        1579575,
+        2237352,
+        1792069,
+        2047695,
+        2191686,
+        2780975
+      ],
+      "githubStars": 21216,
+      "githubMonthlyIssues": 1,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 0,
+      "signalQuality": "strong"
+    },
+    {
+      "package": "openai-whisper",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "creative"
+      ],
+      "label": "OpenAI's original Whisper model for speech recognition and transcription. Supports 99 languages and is used for subtitling, podcast transcription, voice-to-text features, and accessibility tools.",
+      "latestMonthlyDownloads": 1438235,
+      "momGrowth": 0.1794,
+      "rollingAvg3mGrowth": 0.1539,
+      "rollingAvg6mGrowth": 0.0673,
+      "isSurging": false,
+      "sparkline": [
+        1127207,
+        1298736,
+        938474,
+        1021468,
+        1219488,
+        1438235
+      ],
+      "githubStars": 95328,
+      "githubMonthlyIssues": 0,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 0,
+      "signalQuality": "strong"
+    },
+    {
+      "package": "replicate-npm",
+      "source": "npm",
+      "tier": "tier2",
+      "industries": [
+        "creative"
+      ],
+      "label": "JavaScript client for Replicate's AI model platform. Used by web developers to add AI image generation, video processing, and audio tools directly into websites and web applications.",
+      "latestMonthlyDownloads": 1315839,
+      "momGrowth": 0.1086,
+      "rollingAvg3mGrowth": 0.1774,
+      "rollingAvg6mGrowth": 0.1032,
+      "isSurging": true,
+      "sparkline": [
+        767660,
+        817602,
+        808318,
+        970672,
+        1186921,
+        1315839
+      ],
+      "surgingReason": "Growth rate doubled: 18% vs prior 3%",
+      "githubStars": 596,
+      "githubMonthlyIssues": 0,
+      "githubForks": 0,
+      "githubOpenIssues": 0,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": 0,
+      "signalQuality": "moderate"
+    },
+    {
+      "package": "continuedev",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "software_it"
+      ],
+      "label": "Open-source AI code assistant (like Copilot but extensible) \u2014 tracks developer adoption of AI pair programming beyond GitHub Copilot. Supports multiple LLM backends and IDE integrations.",
+      "latestMonthlyDownloads": 2257,
+      "momGrowth": 0.043,
+      "rollingAvg3mGrowth": 0.1073,
+      "rollingAvg6mGrowth": 0.115,
+      "isSurging": false,
+      "sparkline": [
+        1419,
+        1477,
+        1790,
+        1504,
+        2164,
+        2257
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "fal-client",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "creative"
+      ],
+      "label": "Client for fal.ai's inference platform \u2014 used for fast image and video generation, signaling creative production automation and the shift toward API-driven media creation workflows.",
+      "latestMonthlyDownloads": 1131177,
+      "momGrowth": 0.167,
+      "rollingAvg3mGrowth": 0.1541,
+      "rollingAvg6mGrowth": 0.1166,
+      "isSurging": false,
+      "sparkline": [
+        679372,
+        855487,
+        736756,
+        817046,
+        969309,
+        1131177
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "audiocraft",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "creative"
+      ],
+      "label": "Meta's audio and music generation library \u2014 signals AI displacement in music production, sound design, and audio content creation. Includes MusicGen and AudioGen models.",
+      "latestMonthlyDownloads": 145126,
+      "momGrowth": 1.7254,
+      "rollingAvg3mGrowth": 0.9786,
+      "rollingAvg6mGrowth": 0.724,
+      "isSurging": true,
+      "sparkline": [
+        13166,
+        23991,
+        20672,
+        32540,
+        53249,
+        145126
+      ],
+      "surgingReason": "3+ consecutive months of >20% growth",
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "yt-dlp",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "creative"
+      ],
+      "label": "Media download tool heavily used in AI training data pipelines and automated content processing workflows. Its growth reflects the expanding infrastructure for AI-powered media analysis and content creation.",
+      "latestMonthlyDownloads": 10162679,
+      "momGrowth": -0.2449,
+      "rollingAvg3mGrowth": 0.1924,
+      "rollingAvg6mGrowth": 0.1989,
+      "isSurging": false,
+      "sparkline": [
+        5305078,
+        8576703,
+        6865526,
+        8482731,
+        13458125,
+        10162679
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "monai",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "healthcare"
+      ],
+      "label": "PyTorch framework for medical imaging AI \u2014 used in radiology, pathology, and diagnostic imaging automation. Its adoption signals how quickly AI is entering clinical diagnostic workflows.",
+      "latestMonthlyDownloads": 305270,
+      "momGrowth": 0.216,
+      "rollingAvg3mGrowth": -0.0828,
+      "rollingAvg6mGrowth": -0.02,
+      "isSurging": false,
+      "sparkline": [
+        382901,
+        351866,
+        432596,
+        290641,
+        251050,
+        305270
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "biopython",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "healthcare"
+      ],
+      "label": "Bioinformatics toolkit \u2014 signals AI-assisted genomics, drug discovery, and clinical research automation. A foundational library for computational biology workflows increasingly augmented by ML.",
+      "latestMonthlyDownloads": 7488243,
+      "momGrowth": -0.3241,
+      "rollingAvg3mGrowth": 0.3628,
+      "rollingAvg6mGrowth": 0.212,
+      "isSurging": false,
+      "sparkline": [
+        5891325,
+        8711486,
+        4295978,
+        4853483,
+        11078776,
+        7488243
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "ta-lib",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "finance"
+      ],
+      "label": "Technical analysis library for financial markets \u2014 when combined with ML frameworks, signals AI-driven trading strategy automation and algorithmic decision-making in finance.",
+      "latestMonthlyDownloads": 618160,
+      "momGrowth": 0.189,
+      "rollingAvg3mGrowth": 0.0578,
+      "rollingAvg6mGrowth": 0.0603,
+      "isSurging": false,
+      "sparkline": [
+        471779,
+        554390,
+        528441,
+        511148,
+        519891,
+        618160
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "yfinance",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "finance"
+      ],
+      "label": "Yahoo Finance data API \u2014 growth reflects automated financial data ingestion for AI-powered analysis, trading bots, and portfolio management systems.",
+      "latestMonthlyDownloads": 11754510,
+      "momGrowth": -0.1356,
+      "rollingAvg3mGrowth": 0.2725,
+      "rollingAvg6mGrowth": 0.1933,
+      "isSurging": false,
+      "sparkline": [
+        5584403,
+        6135110,
+        6442837,
+        7813402,
+        13598861,
+        11754510
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "pyod",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "finance"
+      ],
+      "label": "Python Outlier Detection library with 40+ algorithms \u2014 signals AI automation of fraud detection, financial compliance monitoring, and risk assessment workflows that previously required manual review.",
+      "latestMonthlyDownloads": 1055792,
+      "momGrowth": 0.1191,
+      "rollingAvg3mGrowth": 0.0435,
+      "rollingAvg6mGrowth": 0.0661,
+      "isSurging": false,
+      "sparkline": [
+        771778,
+        878555,
+        932804,
+        940077,
+        943448,
+        1055792
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "botpress",
+      "source": "npm",
+      "tier": "tier2",
+      "industries": [
+        "customer_service"
+      ],
+      "label": "Open-source chatbot and conversational AI platform used to build customer-facing virtual agents that replace live chat and phone support. Its growth tracks enterprise adoption of AI-powered customer service.",
+      "latestMonthlyDownloads": 3452,
+      "momGrowth": -0.2022,
+      "rollingAvg3mGrowth": -0.2879,
+      "rollingAvg6mGrowth": 0.1858,
+      "isSurging": false,
+      "sparkline": [
+        2575,
+        4379,
+        9765,
+        7218,
+        4327,
+        3452
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "rasa",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "customer_service"
+      ],
+      "label": "Open-source conversational AI framework for building contextual AI assistants \u2014 used heavily in enterprise customer service automation for intent classification, dialogue management, and entity extraction.",
+      "latestMonthlyDownloads": 112493,
+      "momGrowth": -0.0608,
+      "rollingAvg3mGrowth": 0.0105,
+      "rollingAvg6mGrowth": 0.0148,
+      "isSurging": false,
+      "sparkline": [
+        106788,
+        107744,
+        111390,
+        131913,
+        119776,
+        112493
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "vocode",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "customer_service"
+      ],
+      "label": "Open-source library for building voice-based AI agents (phone bots, IVR replacements) \u2014 signals automation of call center work and the shift from human to AI voice interactions.",
+      "latestMonthlyDownloads": 2992,
+      "momGrowth": -0.2804,
+      "rollingAvg3mGrowth": 0.1596,
+      "rollingAvg6mGrowth": -0.0328,
+      "isSurging": false,
+      "sparkline": [
+        6325,
+        2554,
+        2435,
+        2282,
+        4158,
+        2992
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "chainlit",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "customer_service"
+      ],
+      "label": "Framework for building conversational AI interfaces \u2014 used to create customer-facing chat support tools powered by LLMs, enabling rapid deployment of AI support agents.",
+      "latestMonthlyDownloads": 791400,
+      "momGrowth": -0.1091,
+      "rollingAvg3mGrowth": -0.0237,
+      "rollingAvg6mGrowth": 0.0973,
+      "isSurging": false,
+      "sparkline": [
+        539362,
+        795038,
+        861562,
+        804356,
+        888266,
+        791400
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "gradio",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "customer_service",
+        "education"
+      ],
+      "label": "Builds interactive web UIs for AI models \u2014 increasingly used for customer-facing AI tools, internal support dashboards, and educational AI interfaces like student-facing tutors and interactive demos.",
+      "latestMonthlyDownloads": 11489621,
+      "momGrowth": -0.109,
+      "rollingAvg3mGrowth": -0.0361,
+      "rollingAvg6mGrowth": 0.0691,
+      "isSurging": false,
+      "sparkline": [
+        8667888,
+        11550182,
+        12953334,
+        12023020,
+        12895355,
+        11489621
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "streamlit",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "education"
+      ],
+      "label": "Turns Python scripts into interactive web apps \u2014 widely used to build AI-powered learning tools, tutoring interfaces, and training dashboards in educational settings.",
+      "latestMonthlyDownloads": 28842087,
+      "momGrowth": 0.0751,
+      "rollingAvg3mGrowth": 0.0828,
+      "rollingAvg6mGrowth": 0.1432,
+      "isSurging": false,
+      "sparkline": [
+        15243106,
+        20432426,
+        23033110,
+        22109863,
+        26826679,
+        28842087
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "nbgrader",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "education"
+      ],
+      "label": "Jupyter-based auto-grading tool \u2014 signals AI-assisted assessment automation in education. Used by universities and online course platforms to automate homework and exam grading.",
+      "latestMonthlyDownloads": 20353,
+      "momGrowth": 0.5063,
+      "rollingAvg3mGrowth": 0.0753,
+      "rollingAvg6mGrowth": 0.1133,
+      "isSurging": false,
+      "sparkline": [
+        16167,
+        16862,
+        21880,
+        11178,
+        13512,
+        20353
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "sentence-transformers",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "education"
+      ],
+      "label": "Produces text embeddings used in educational search, plagiarism detection, and adaptive learning systems. Growth signals AI-powered content understanding in edtech applications.",
+      "latestMonthlyDownloads": 17793525,
+      "momGrowth": 0.0899,
+      "rollingAvg3mGrowth": -0.0018,
+      "rollingAvg6mGrowth": 0.0352,
+      "isSurging": false,
+      "sparkline": [
+        15202086,
+        17655867,
+        18007144,
+        16885949,
+        16325448,
+        17793525
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "ultralytics",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "manufacturing"
+      ],
+      "label": "YOLO object detection framework \u2014 the dominant tool for visual inspection, defect detection, and warehouse automation in manufacturing. Its growth directly tracks computer vision deployment in industrial settings.",
+      "latestMonthlyDownloads": 6648470,
+      "momGrowth": -0.059,
+      "rollingAvg3mGrowth": -0.0891,
+      "rollingAvg6mGrowth": 0.0139,
+      "isSurging": false,
+      "sparkline": [
+        6511392,
+        8154503,
+        8841094,
+        7395371,
+        7065677,
+        6648470
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "opencv-python",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "manufacturing"
+      ],
+      "label": "The foundational computer vision library \u2014 used in quality control, robotics guidance, and logistics tracking systems. A baseline indicator of computer vision adoption across manufacturing and logistics.",
+      "latestMonthlyDownloads": 39712763,
+      "momGrowth": -0.0335,
+      "rollingAvg3mGrowth": 0.0661,
+      "rollingAvg6mGrowth": 0.1034,
+      "isSurging": false,
+      "sparkline": [
+        25062132,
+        30855908,
+        33558382,
+        32595228,
+        41087793,
+        39712763
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "supervision",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "manufacturing"
+      ],
+      "label": "Computer vision utilities for detection, tracking, and annotation \u2014 used in manufacturing line monitoring and warehouse automation. Simplifies building production-ready CV pipelines.",
+      "latestMonthlyDownloads": 1000798,
+      "momGrowth": -0.2057,
+      "rollingAvg3mGrowth": 0.002,
+      "rollingAvg6mGrowth": 0.008,
+      "isSurging": false,
+      "sparkline": [
+        1000645,
+        982409,
+        1033578,
+        1079513,
+        1259917,
+        1000798
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "open3d",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "manufacturing"
+      ],
+      "label": "3D data processing library used in robotic manipulation, warehouse mapping, and manufacturing digital twins. Growth signals increasing adoption of 3D perception in industrial automation.",
+      "latestMonthlyDownloads": 1209589,
+      "momGrowth": -0.0986,
+      "rollingAvg3mGrowth": -0.068,
+      "rollingAvg6mGrowth": -0.0086,
+      "isSurging": false,
+      "sparkline": [
+        1363776,
+        1326482,
+        1576591,
+        1154406,
+        1341933,
+        1209589
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "robotframework",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "manufacturing"
+      ],
+      "label": "Generic test and RPA automation framework increasingly used for manufacturing process automation and logistics workflow orchestration. Its growth in industrial contexts signals process automation beyond software.",
+      "latestMonthlyDownloads": 4263270,
+      "momGrowth": 0.0524,
+      "rollingAvg3mGrowth": 0.0333,
+      "rollingAvg6mGrowth": 0.0405,
+      "isSurging": false,
+      "sparkline": [
+        3519628,
+        3987493,
+        3867169,
+        3870742,
+        4050830,
+        4263270
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "instructor",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "sales_marketing"
+      ],
+      "label": "Structured output extraction from LLMs \u2014 used in sales and marketing for parsing leads, extracting intent from customer messages, and generating structured campaign data at scale.",
+      "latestMonthlyDownloads": 8068291,
+      "momGrowth": 0.07,
+      "rollingAvg3mGrowth": 0.1148,
+      "rollingAvg6mGrowth": 0.1698,
+      "isSurging": false,
+      "sparkline": [
+        3823767,
+        5410687,
+        5895657,
+        5998771,
+        7540374,
+        8068291
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "outlines",
+      "source": "pypi",
+      "tier": "tier2",
+      "industries": [
+        "sales_marketing"
+      ],
+      "label": "Structured text generation from LLMs \u2014 used for generating marketing copy, product descriptions, and sales collateral at scale with guaranteed output formats.",
+      "latestMonthlyDownloads": 1177092,
+      "momGrowth": -0.1932,
+      "rollingAvg3mGrowth": -0.0705,
+      "rollingAvg6mGrowth": 0.0591,
+      "isSurging": false,
+      "sparkline": [
+        1758467,
+        3666320,
+        1548658,
+        1226286,
+        1458949,
+        1177092
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "posthog-js",
+      "source": "npm",
+      "tier": "tier2",
+      "industries": [
+        "sales_marketing"
+      ],
+      "label": "PostHog product analytics SDK with AI features \u2014 signals AI-driven marketing optimization, user segmentation, and campaign targeting. Tracks how companies use behavioral data to automate marketing decisions.",
+      "latestMonthlyDownloads": 12851662,
+      "momGrowth": -0.0853,
+      "rollingAvg3mGrowth": 0.054,
+      "rollingAvg6mGrowth": 0.1911,
+      "isSurging": false,
+      "sparkline": [
+        10312900,
+        14489463,
+        13651650,
+        8743635,
+        14049923,
+        12851662
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    },
+    {
+      "package": "@hubspot/api-client",
+      "source": "npm",
+      "tier": "tier2",
+      "industries": [
+        "sales_marketing"
+      ],
+      "label": "HubSpot CRM SDK \u2014 growth signals AI-powered CRM automation for sales pipeline management and marketing workflow orchestration. Tracks programmatic integration of AI into sales processes.",
+      "latestMonthlyDownloads": 3015150,
+      "momGrowth": 0.1758,
+      "rollingAvg3mGrowth": 0.1184,
+      "rollingAvg6mGrowth": 0.0612,
+      "isSurging": false,
+      "sparkline": [
+        2218291,
+        2316805,
+        2169501,
+        2203700,
+        2564409,
+        3015150
+      ],
+      "githubStars": null,
+      "githubMonthlyIssues": null,
+      "githubForks": null,
+      "githubOpenIssues": null,
+      "githubWeeklyCommits": null,
+      "soMonthlyQuestions": null,
+      "signalQuality": null
+    }
+  ],
+  "surgingPackages": [
+    "openai-npm",
+    "@anthropic-ai/sdk",
+    "browser-use",
+    "ai",
+    "@ai-sdk/openai",
+    "@ai-sdk/anthropic",
+    "@modelcontextprotocol/sdk",
+    "puppeteer-npm",
+    "llamaindex",
+    "@langchain/openai",
+    "replicate-npm",
+    "audiocraft"
+  ],
+  "totalToolCount": 57
+}

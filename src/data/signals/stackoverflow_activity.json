@@ -1,0 +1,911 @@
+{
+  "fetchedAt": "2026-03-03T02:16:09Z",
+  "tags": [
+    {
+      "tag": "openai-api",
+      "packages": [
+        "openai",
+        "openai-npm"
+      ],
+      "monthlyQuestions": [
+        {
+          "month": "2025-04",
+          "questions": 25
+        },
+        {
+          "month": "2025-05",
+          "questions": 22
+        },
+        {
+          "month": "2025-06",
+          "questions": 16
+        },
+        {
+          "month": "2025-07",
+          "questions": 11
+        },
+        {
+          "month": "2025-08",
+          "questions": 10
+        },
+        {
+          "month": "2025-09",
+          "questions": 12
+        },
+        {
+          "month": "2025-10",
+          "questions": 11
+        },
+        {
+          "month": "2025-11",
+          "questions": 12
+        },
+        {
+          "month": "2025-12",
+          "questions": 7
+        },
+        {
+          "month": "2026-01",
+          "questions": 6
+        },
+        {
+          "month": "2026-02",
+          "questions": 6
+        },
+        {
+          "month": "2026-03",
+          "questions": 1
+        }
+      ]
+    },
+    {
+      "tag": "anthropic",
+      "packages": [
+        "anthropic",
+        "@anthropic-ai/sdk"
+      ],
+      "monthlyQuestions": [
+        {
+          "month": "2025-04",
+          "questions": 0
+        },
+        {
+          "month": "2025-05",
+          "questions": 0
+        },
+        {
+          "month": "2025-06",
+          "questions": 0
+        },
+        {
+          "month": "2025-07",
+          "questions": 0
+        },
+        {
+          "month": "2025-08",
+          "questions": 0
+        },
+        {
+          "month": "2025-09",
+          "questions": 0
+        },
+        {
+          "month": "2025-10",
+          "questions": 0
+        },
+        {
+          "month": "2025-11",
+          "questions": 0
+        },
+        {
+          "month": "2025-12",
+          "questions": 0
+        },
+        {
+          "month": "2026-01",
+          "questions": 1
+        },
+        {
+          "month": "2026-02",
+          "questions": 1
+        },
+        {
+          "month": "2026-03",
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "tag": "langchain",
+      "packages": [
+        "langchain",
+        "langchain-core",
+        "@langchain/core",
+        "@langchain/openai"
+      ],
+      "monthlyQuestions": [
+        {
+          "month": "2025-04",
+          "questions": 29
+        },
+        {
+          "month": "2025-05",
+          "questions": 19
+        },
+        {
+          "month": "2025-06",
+          "questions": 15
+        },
+        {
+          "month": "2025-07",
+          "questions": 15
+        },
+        {
+          "month": "2025-08",
+          "questions": 10
+        },
+        {
+          "month": "2025-09",
+          "questions": 13
+        },
+        {
+          "month": "2025-10",
+          "questions": 13
+        },
+        {
+          "month": "2025-11",
+          "questions": 13
+        },
+        {
+          "month": "2025-12",
+          "questions": 6
+        },
+        {
+          "month": "2026-01",
+          "questions": 6
+        },
+        {
+          "month": "2026-02",
+          "questions": 6
+        },
+        {
+          "month": "2026-03",
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "tag": "huggingface-transformers",
+      "packages": [
+        "transformers"
+      ],
+      "monthlyQuestions": [
+        {
+          "month": "2025-04",
+          "questions": 29
+        },
+        {
+          "month": "2025-05",
+          "questions": 13
+        },
+        {
+          "month": "2025-06",
+          "questions": 14
+        },
+        {
+          "month": "2025-07",
+          "questions": 15
+        },
+        {
+          "month": "2025-08",
+          "questions": 9
+        },
+        {
+          "month": "2025-09",
+          "questions": 13
+        },
+        {
+          "month": "2025-10",
+          "questions": 9
+        },
+        {
+          "month": "2025-11",
+          "questions": 6
+        },
+        {
+          "month": "2025-12",
+          "questions": 5
+        },
+        {
+          "month": "2026-01",
+          "questions": 3
+        },
+        {
+          "month": "2026-02",
+          "questions": 1
+        },
+        {
+          "month": "2026-03",
+          "questions": 1
+        }
+      ]
+    },
+    {
+      "tag": "aider",
+      "packages": [
+        "aider-chat"
+      ],
+      "monthlyQuestions": [
+        {
+          "month": "2025-04",
+          "questions": 0
+        },
+        {
+          "month": "2025-05",
+          "questions": 0
+        },
+        {
+          "month": "2025-06",
+          "questions": 0
+        },
+        {
+          "month": "2025-07",
+          "questions": 0
+        },
+        {
+          "month": "2025-08",
+          "questions": 0
+        },
+        {
+          "month": "2025-09",
+          "questions": 0
+        },
+        {
+          "month": "2025-10",
+          "questions": 0
+        },
+        {
+          "month": "2025-11",
+          "questions": 0
+        },
+        {
+          "month": "2025-12",
+          "questions": 0
+        },
+        {
+          "month": "2026-01",
+          "questions": 0
+        },
+        {
+          "month": "2026-02",
+          "questions": 0
+        },
+        {
+          "month": "2026-03",
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "tag": "crewai",
+      "packages": [
+        "crewai"
+      ],
+      "monthlyQuestions": [
+        {
+          "month": "2025-04",
+          "questions": 1
+        },
+        {
+          "month": "2025-05",
+          "questions": 1
+        },
+        {
+          "month": "2025-06",
+          "questions": 2
+        },
+        {
+          "month": "2025-07",
+          "questions": 1
+        },
+        {
+          "month": "2025-08",
+          "questions": 0
+        },
+        {
+          "month": "2025-09",
+          "questions": 1
+        },
+        {
+          "month": "2025-10",
+          "questions": 3
+        },
+        {
+          "month": "2025-11",
+          "questions": 0
+        },
+        {
+          "month": "2025-12",
+          "questions": 0
+        },
+        {
+          "month": "2026-01",
+          "questions": 0
+        },
+        {
+          "month": "2026-02",
+          "questions": 0
+        },
+        {
+          "month": "2026-03",
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "tag": "autogen",
+      "packages": [
+        "autogen",
+        "pyautogen"
+      ],
+      "monthlyQuestions": [
+        {
+          "month": "2025-04",
+          "questions": 0
+        },
+        {
+          "month": "2025-05",
+          "questions": 0
+        },
+        {
+          "month": "2025-06",
+          "questions": 0
+        },
+        {
+          "month": "2025-07",
+          "questions": 0
+        },
+        {
+          "month": "2025-08",
+          "questions": 0
+        },
+        {
+          "month": "2025-09",
+          "questions": 0
+        },
+        {
+          "month": "2025-10",
+          "questions": 0
+        },
+        {
+          "month": "2025-11",
+          "questions": 0
+        },
+        {
+          "month": "2025-12",
+          "questions": 0
+        },
+        {
+          "month": "2026-01",
+          "questions": 0
+        },
+        {
+          "month": "2026-02",
+          "questions": 0
+        },
+        {
+          "month": "2026-03",
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "tag": "vercel-ai",
+      "packages": [
+        "ai",
+        "@ai-sdk/openai",
+        "@ai-sdk/anthropic"
+      ],
+      "monthlyQuestions": [
+        {
+          "month": "2025-04",
+          "questions": 2
+        },
+        {
+          "month": "2025-05",
+          "questions": 1
+        },
+        {
+          "month": "2025-06",
+          "questions": 0
+        },
+        {
+          "month": "2025-07",
+          "questions": 0
+        },
+        {
+          "month": "2025-08",
+          "questions": 1
+        },
+        {
+          "month": "2025-09",
+          "questions": 0
+        },
+        {
+          "month": "2025-10",
+          "questions": 0
+        },
+        {
+          "month": "2025-11",
+          "questions": 0
+        },
+        {
+          "month": "2025-12",
+          "questions": 0
+        },
+        {
+          "month": "2026-01",
+          "questions": 0
+        },
+        {
+          "month": "2026-02",
+          "questions": 0
+        },
+        {
+          "month": "2026-03",
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "tag": "pypdf",
+      "packages": [
+        "pypdf"
+      ],
+      "monthlyQuestions": [
+        {
+          "month": "2025-04",
+          "questions": 1
+        },
+        {
+          "month": "2025-05",
+          "questions": 1
+        },
+        {
+          "month": "2025-06",
+          "questions": 2
+        },
+        {
+          "month": "2025-07",
+          "questions": 1
+        },
+        {
+          "month": "2025-08",
+          "questions": 1
+        },
+        {
+          "month": "2025-09",
+          "questions": 1
+        },
+        {
+          "month": "2025-10",
+          "questions": 0
+        },
+        {
+          "month": "2025-11",
+          "questions": 0
+        },
+        {
+          "month": "2025-12",
+          "questions": 1
+        },
+        {
+          "month": "2026-01",
+          "questions": 0
+        },
+        {
+          "month": "2026-02",
+          "questions": 1
+        },
+        {
+          "month": "2026-03",
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "tag": "llama-index",
+      "packages": [
+        "llamaindex",
+        "llama-index"
+      ],
+      "monthlyQuestions": [
+        {
+          "month": "2025-04",
+          "questions": 1
+        },
+        {
+          "month": "2025-05",
+          "questions": 5
+        },
+        {
+          "month": "2025-06",
+          "questions": 1
+        },
+        {
+          "month": "2025-07",
+          "questions": 0
+        },
+        {
+          "month": "2025-08",
+          "questions": 3
+        },
+        {
+          "month": "2025-09",
+          "questions": 2
+        },
+        {
+          "month": "2025-10",
+          "questions": 2
+        },
+        {
+          "month": "2025-11",
+          "questions": 3
+        },
+        {
+          "month": "2025-12",
+          "questions": 1
+        },
+        {
+          "month": "2026-01",
+          "questions": 0
+        },
+        {
+          "month": "2026-02",
+          "questions": 0
+        },
+        {
+          "month": "2026-03",
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "tag": "pandas-ai",
+      "packages": [
+        "pandasai"
+      ],
+      "monthlyQuestions": [
+        {
+          "month": "2025-04",
+          "questions": 0
+        },
+        {
+          "month": "2025-05",
+          "questions": 0
+        },
+        {
+          "month": "2025-06",
+          "questions": 0
+        },
+        {
+          "month": "2025-07",
+          "questions": 0
+        },
+        {
+          "month": "2025-08",
+          "questions": 0
+        },
+        {
+          "month": "2025-09",
+          "questions": 0
+        },
+        {
+          "month": "2025-10",
+          "questions": 0
+        },
+        {
+          "month": "2025-11",
+          "questions": 0
+        },
+        {
+          "month": "2025-12",
+          "questions": 0
+        },
+        {
+          "month": "2026-01",
+          "questions": 0
+        },
+        {
+          "month": "2026-02",
+          "questions": 0
+        },
+        {
+          "month": "2026-03",
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "tag": "chromadb",
+      "packages": [
+        "chromadb"
+      ],
+      "monthlyQuestions": [
+        {
+          "month": "2025-04",
+          "questions": 2
+        },
+        {
+          "month": "2025-05",
+          "questions": 4
+        },
+        {
+          "month": "2025-06",
+          "questions": 2
+        },
+        {
+          "month": "2025-07",
+          "questions": 2
+        },
+        {
+          "month": "2025-08",
+          "questions": 2
+        },
+        {
+          "month": "2025-09",
+          "questions": 2
+        },
+        {
+          "month": "2025-10",
+          "questions": 0
+        },
+        {
+          "month": "2025-11",
+          "questions": 1
+        },
+        {
+          "month": "2025-12",
+          "questions": 0
+        },
+        {
+          "month": "2026-01",
+          "questions": 2
+        },
+        {
+          "month": "2026-02",
+          "questions": 0
+        },
+        {
+          "month": "2026-03",
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "tag": "diffusers",
+      "packages": [
+        "diffusers"
+      ],
+      "monthlyQuestions": [
+        {
+          "month": "2025-04",
+          "questions": 0
+        },
+        {
+          "month": "2025-05",
+          "questions": 0
+        },
+        {
+          "month": "2025-06",
+          "questions": 0
+        },
+        {
+          "month": "2025-07",
+          "questions": 0
+        },
+        {
+          "month": "2025-08",
+          "questions": 2
+        },
+        {
+          "month": "2025-09",
+          "questions": 2
+        },
+        {
+          "month": "2025-10",
+          "questions": 0
+        },
+        {
+          "month": "2025-11",
+          "questions": 1
+        },
+        {
+          "month": "2025-12",
+          "questions": 0
+        },
+        {
+          "month": "2026-01",
+          "questions": 0
+        },
+        {
+          "month": "2026-02",
+          "questions": 0
+        },
+        {
+          "month": "2026-03",
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "tag": "replicate",
+      "packages": [
+        "replicate",
+        "replicate-npm"
+      ],
+      "monthlyQuestions": [
+        {
+          "month": "2025-04",
+          "questions": 0
+        },
+        {
+          "month": "2025-05",
+          "questions": 0
+        },
+        {
+          "month": "2025-06",
+          "questions": 0
+        },
+        {
+          "month": "2025-07",
+          "questions": 1
+        },
+        {
+          "month": "2025-08",
+          "questions": 0
+        },
+        {
+          "month": "2025-09",
+          "questions": 0
+        },
+        {
+          "month": "2025-10",
+          "questions": 0
+        },
+        {
+          "month": "2025-11",
+          "questions": 0
+        },
+        {
+          "month": "2025-12",
+          "questions": 0
+        },
+        {
+          "month": "2026-01",
+          "questions": 0
+        },
+        {
+          "month": "2026-02",
+          "questions": 0
+        },
+        {
+          "month": "2026-03",
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "tag": "faster-whisper",
+      "packages": [
+        "faster-whisper"
+      ],
+      "monthlyQuestions": [
+        {
+          "month": "2025-04",
+          "questions": 0
+        },
+        {
+          "month": "2025-05",
+          "questions": 0
+        },
+        {
+          "month": "2025-06",
+          "questions": 0
+        },
+        {
+          "month": "2025-07",
+          "questions": 0
+        },
+        {
+          "month": "2025-08",
+          "questions": 0
+        },
+        {
+          "month": "2025-09",
+          "questions": 0
+        },
+        {
+          "month": "2025-10",
+          "questions": 0
+        },
+        {
+          "month": "2025-11",
+          "questions": 0
+        },
+        {
+          "month": "2025-12",
+          "questions": 0
+        },
+        {
+          "month": "2026-01",
+          "questions": 0
+        },
+        {
+          "month": "2026-02",
+          "questions": 0
+        },
+        {
+          "month": "2026-03",
+          "questions": 0
+        }
+      ]
+    },
+    {
+      "tag": "openai-whisper",
+      "packages": [
+        "openai-whisper"
+      ],
+      "monthlyQuestions": [
+        {
+          "month": "2025-04",
+          "questions": 3
+        },
+        {
+          "month": "2025-05",
+          "questions": 2
+        },
+        {
+          "month": "2025-06",
+          "questions": 4
+        },
+        {
+          "month": "2025-07",
+          "questions": 1
+        },
+        {
+          "month": "2025-08",
+          "questions": 2
+        },
+        {
+          "month": "2025-09",
+          "questions": 1
+        },
+        {
+          "month": "2025-10",
+          "questions": 0
+        },
+        {
+          "month": "2025-11",
+          "questions": 0
+        },
+        {
+          "month": "2025-12",
+          "questions": 3
+        },
+        {
+          "month": "2026-01",
+          "questions": 0
+        },
+        {
+          "month": "2026-02",
+          "questions": 0
+        },
+        {
+          "month": "2026-03",
+          "questions": 0
+        }
+      ]
+    }
+  ]
+}

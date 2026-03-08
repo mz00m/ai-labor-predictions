@@ -14,9 +14,10 @@
       "confidenceLow": -3,
       "confidenceHigh": 5,
       "sourceIds": [
-        "goldman-wages-2023"
+        "goldman-ai-workforce-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "projection"
     },
     {
       "date": "2023-09-01",
@@ -26,7 +27,8 @@
       "sourceIds": [
         "ilo-wages-2023"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "projection"
     },
     {
       "date": "2024-02-01",
@@ -36,7 +38,8 @@
       "sourceIds": [
         "imf-inequality-2024"
       ],
-      "evidenceTier": 2
+      "evidenceTier": 2,
+      "metricType": "projection"
     },
     {
       "date": "2024-06-01",
@@ -46,7 +49,8 @@
       "sourceIds": [
         "webb-2024"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "projection"
     },
     {
       "date": "2024-10-01",
@@ -56,7 +60,8 @@
       "sourceIds": [
         "atlantic-wages-2024"
       ],
-      "evidenceTier": 3
+      "evidenceTier": 3,
+      "metricType": "projection"
     },
     {
       "date": "2025-02-01",
@@ -66,7 +71,8 @@
       "sourceIds": [
         "bls-wage-data-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "employment"
     },
     {
       "date": "2025-05-01",
@@ -76,7 +82,8 @@
       "sourceIds": [
         "substack-wages-doom"
       ],
-      "evidenceTier": 4
+      "evidenceTier": 4,
+      "metricType": "projection"
     },
     {
       "date": "2025-08-01",
@@ -86,7 +93,8 @@
       "sourceIds": [
         "epi-wages-2025"
       ],
-      "evidenceTier": 2
+      "evidenceTier": 2,
+      "metricType": "projection"
     },
     {
       "date": "2025-09-01",
@@ -96,7 +104,8 @@
       "sourceIds": [
         "korinek-trammell-growth-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "projection"
     },
     {
       "date": "2025-11-01",
@@ -106,7 +115,8 @@
       "sourceIds": [
         "pwc-ai-jobs-barometer-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "survey"
     },
     {
       "date": "2026-01-01",
@@ -116,15 +126,8 @@
       "sourceIds": [
         "bls-may-2024-wage-data"
       ],
-      "evidenceTier": 2
-    },
-    {
-      "date": "2026-01-21",
-      "value": 21,
-      "sourceIds": [
-        "althoff-reichardt-task-specific-technical-2026"
-      ],
-      "evidenceTier": 1
+      "evidenceTier": 2,
+      "metricType": "employment"
     }
   ],
   "overlays": [
@@ -136,6 +139,15 @@
       ],
       "evidenceTier": 2,
       "label": "Acemoglu & Johnson: shared prosperity requires deliberate policy choices"
+    },
+    {
+      "date": "2023-12-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "otis-kenyan-entrepreneurs-2023"
+      ],
+      "evidenceTier": 1,
+      "label": "Otis et al.: No avg AI effect on Kenyan SME revenue; high performers +15%, low -8%"
     },
     {
       "date": "2025-01-30",
@@ -186,19 +198,64 @@
       "date": "2025-08-01",
       "direction": "up",
       "sourceIds": [
-        "goldman-productivity-2025"
+        "goldman-ai-workforce-2025"
       ],
       "evidenceTier": 1,
       "label": "Goldman Sachs: AI to raise labor productivity ~15% when fully adopted"
     },
     {
+      "date": "2025-12-01",
+      "direction": "down",
+      "sourceIds": [
+        "revelio-labs-wage-divide-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Revelio Labs: top-quartile salaries +30% vs bottom-quartile +10% since Jan 2023"
+    },
+    {
+      "date": "2025-12-30",
+      "direction": "up",
+      "sourceIds": [
+        "autor-kausik-automation-paradox-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Autor (NBER): Falling labor share drove 16% of US real wage growth; automation paradoxically raises wages"
+    },
+    {
+      "date": "2025-12-30",
+      "direction": "up",
+      "sourceIds": [
+        "autor-kausik-automation-paradox-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Autor (NBER): Further automation should raise wages in all 12 industrialized countries studied"
+    },
+    {
       "date": "2026-01-01",
       "direction": "up",
       "sourceIds": [
-        "hartley-median-wage-2026"
+        "hartley-genai-labor-2026"
       ],
       "evidenceTier": 1,
       "label": "Stanford: small positive wage effects in AI-exposed jobs"
+    },
+    {
+      "date": "2026-01-15",
+      "direction": "up",
+      "sourceIds": [
+        "jones-tonetti-weak-links-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Jones & Tonetti (Stanford/NBER): AI output gains modest near-term — only 4% above trend by 2040"
+    },
+    {
+      "date": "2026-01-21",
+      "direction": "up",
+      "sourceIds": [
+        "althoff-reichardt-task-specific-technical-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Althoff & Reichardt model: +21% long-run average wage increase from AI productivity"
     },
     {
       "date": "2026-02-01",
@@ -226,11 +283,20 @@
       ],
       "evidenceTier": 1,
       "label": "Dallas Fed: AI exposure has ~zero effect on wages at median experience premium (CI includes 0)"
+    },
+    {
+      "date": "2026-03-05",
+      "direction": "up",
+      "sourceIds": [
+        "furman-bls-productivity-above-forecast-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Furman (BLS): productivity 2.2% above CBO forecast; 2.8% annual growth"
     }
   ],
   "sources": [
     {
-      "id": "goldman-wages-2023",
+      "id": "goldman-ai-workforce-2025",
       "title": "AI and the US Labor Market",
       "url": "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce",
       "publisher": "Goldman Sachs",
@@ -368,15 +434,6 @@
       "excerpt": "For the empirically plausible case that capital and labor are gross complements, raising wages requires capital-augmenting innovation rather than labor-augmenting."
     },
     {
-      "id": "goldman-productivity-2025",
-      "title": "How Will AI Affect the Global Workforce?",
-      "url": "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce",
-      "publisher": "Goldman Sachs Research",
-      "evidenceTier": 1,
-      "datePublished": "2025-08-01",
-      "excerpt": "Generative AI will raise the level of labor productivity in the US and other developed markets by around 15% when fully adopted and incorporated into regular production."
-    },
-    {
       "id": "brynjolfsson-li-raymond-qje-wages-2025",
       "title": "Generative AI at Work",
       "url": "https://academic.oup.com/qje/article/140/2/889/7990658",
@@ -404,7 +461,7 @@
       "excerpt": "raising average wages by 21 percent"
     },
     {
-      "id": "hartley-median-wage-2026",
+      "id": "hartley-genai-labor-2026",
       "title": "Labor Market Effects of Generative AI",
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5136877",
       "publisher": "Stanford / World Bank",
@@ -429,6 +486,51 @@
       "evidenceTier": 1,
       "datePublished": "2026-02-24",
       "excerpt": "For occupations with the median experience premium (40 percent), a one-standard-deviation increase in AI exposure is associated with a 0.05 percentage point decline in wage growth."
+    },
+    {
+      "id": "jones-tonetti-weak-links-2026",
+      "title": "Past Automation and Future A.I.: How Weak Links Tame the Growth Explosion",
+      "url": "https://web.stanford.edu/~chadj/JonesTonetti_Automation.pdf",
+      "publisher": "Stanford GSB / NBER (Jones, Tonetti)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-15",
+      "excerpt": "Despite the accelerating growth, the effects of A.I. on GDP per person are remarkably small for the next 20 to 40 years."
+    },
+    {
+      "id": "furman-bls-productivity-above-forecast-2026",
+      "title": "Nonfarm Business Sector Labor Productivity: 2.2% Above CBO Pre-Pandemic Forecast",
+      "url": "https://x.com/jasonfurman/status/2029559853706842426",
+      "publisher": "Jason Furman (Harvard / former CEA Chair)",
+      "evidenceTier": 3,
+      "datePublished": "2026-03-05",
+      "excerpt": "Are we finally seeing AI in the productivity data? A big upward revision to earlier data and strong Q4 bring us 2.2% above CBO's pre-pandemic forecast. Annual rates: 1 year: 2.8%, 2 years: 2.5%, 6 years: 2.2%"
+    },
+    {
+      "id": "revelio-labs-wage-divide-2025",
+      "title": "The Wage Divide is Widening Again and AI May Be to Blame",
+      "url": "https://www.reveliolabs.com/news/macro/the-wage-divide-is-widening-again-and-ai-may-be-to-blame/",
+      "publisher": "Revelio Labs",
+      "evidenceTier": 2,
+      "datePublished": "2025-12-01",
+      "excerpt": "Since January 2023, salaries at the top quartile of the wage distribution have grown by more than 30%. Over the same period, salaries at the bottom quartile have risen by only around 10%."
+    },
+    {
+      "id": "otis-kenyan-entrepreneurs-2023",
+      "title": "The Uneven Impact of Generative AI on Entrepreneurial Performance",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/24-042_05d87e28-7543-4644-b5a4-cba80e69c3e9.pdf",
+      "publisher": "HBS Working Paper (Otis, Clarke, Delecourt, Holtz, Koning)",
+      "evidenceTier": 1,
+      "datePublished": "2023-12-01",
+      "excerpt": "The paper reports no statistically significant average effect on revenues or profits. But effects are highly heterogeneous: high‑performing businesses at baseline appear to improve (roughly 15 percent), while low performers do worse (roughly 8-10 percent worse)"
+    },
+    {
+      "id": "autor-kausik-automation-paradox-2026",
+      "title": "Resolving the Automation Paradox: Falling Labor Share, Rising Wages",
+      "url": "https://arxiv.org/abs/2601.06343",
+      "publisher": "NBER / arXiv (Autor, Kausik)",
+      "evidenceTier": 1,
+      "datePublished": "2025-12-30",
+      "excerpt": "falling labor share accounted for 16% of U.S. real wage growth between 1954 and 2019"
     }
   ]
 }

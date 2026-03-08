@@ -5,7 +5,7 @@
   "description": "Projected percentage of healthcare administrative roles (coding, billing, scheduling, prior auth) automated by AI by 2030. Only data points where sources directly state a displacement or reduction figure are plotted.",
   "category": "displacement",
   "unit": "% of roles displaced",
-  "currentValue": 35,
+  "currentValue": 14.5,
   "timeHorizon": "By 2030",
   "history": [
     {
@@ -16,7 +16,8 @@
       "sourceIds": [
         "nejm-admin-ai-2024"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "survey"
     },
     {
       "date": "2025-01-10",
@@ -26,7 +27,17 @@
       "sourceIds": [
         "deloitte-health-2025"
       ],
-      "evidenceTier": 2
+      "evidenceTier": 2,
+      "metricType": "survey"
+    },
+    {
+      "date": "2025-02-10",
+      "value": 4.7,
+      "sourceIds": [
+        "bls-mlr-ai-employment-projections-2025"
+      ],
+      "evidenceTier": 1,
+      "metricType": "employment"
     },
     {
       "date": "2025-07-01",
@@ -36,7 +47,8 @@
       "sourceIds": [
         "bls-health-admin-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "employment"
     }
   ],
   "overlays": [
@@ -149,6 +161,15 @@
       "label": "Cognizant: healthcare practitioner exposure jumped from 10% to 39%"
     },
     {
+      "date": "2026-01-15",
+      "direction": "down",
+      "sourceIds": [
+        "gommers-masai-lancet-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "MASAI trial (Lancet): 44% workload reduction in mammography screening"
+    },
+    {
       "date": "2026-01-22",
       "direction": "down",
       "sourceIds": [
@@ -156,6 +177,24 @@
       ],
       "evidenceTier": 2,
       "label": "HealthTech: admin is 25% of healthcare costs, key automation target"
+    },
+    {
+      "date": "2026-01-22",
+      "direction": "down",
+      "sourceIds": [
+        "brookings-ai-adaptive-capacity-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Brookings/GovAI: 831K medical secretaries among largest high-exposure/low-adaptability occupations"
+    },
+    {
+      "date": "2026-02-05",
+      "direction": "down",
+      "sourceIds": [
+        "bls-jolts-december-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "BLS JOLTS: Healthcare openings down 10.8% (-152K) since Oct"
     }
   ],
   "sources": [
@@ -293,6 +332,42 @@
       "evidenceTier": 2,
       "datePublished": "2026-01-15",
       "excerpt": "Education task exposure jumped from 11% to 49% — a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations."
+    },
+    {
+      "id": "bls-mlr-ai-employment-projections-2025",
+      "title": "Incorporating AI impacts in BLS employment projections: occupational case studies",
+      "url": "https://www.bls.gov/opub/mlr/2025/article/incorporating-ai-impacts-in-bls-employment-projections.htm",
+      "publisher": "U.S. Bureau of Labor Statistics (Monthly Labor Review)",
+      "evidenceTier": 1,
+      "datePublished": "2025-02-10",
+      "excerpt": "Medical transcriptionists, whose employment is projected to decline by 4.7 percent through 2033."
+    },
+    {
+      "id": "bls-jolts-december-2025",
+      "title": "Job Openings and Labor Turnover — December 2025",
+      "url": "https://www.bls.gov/news.release/jolts.nr0.htm",
+      "publisher": "U.S. Bureau of Labor Statistics",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-05",
+      "excerpt": "Healthcare and social assistance openings down 10.8% (-152,000) since October."
+    },
+    {
+      "id": "brookings-ai-adaptive-capacity-2026",
+      "title": "Measuring US workers' capacity to adapt to AI-driven job displacement",
+      "url": "https://www.brookings.edu/articles/measuring-us-workers-capacity-to-adapt-to-ai-driven-job-displacement/",
+      "publisher": "Brookings Metro / GovAI (Manning, Muro, Aguirre)",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-22",
+      "excerpt": "6.1 million U.S. workers face both high AI exposure and low adaptive capacity. Medical secretaries and administrative assistants (831,000 workers) stand out as one of the largest occupations in this high-risk category. About 86% of these workers are women."
+    },
+    {
+      "id": "gommers-masai-lancet-2026",
+      "title": "Interval Cancer, Sensitivity, and Specificity Comparing AI-Supported Mammography Screening with Standard Double Reading without AI in the MASAI Study",
+      "url": "https://doi.org/10.1016/S0140-6736(25)00120-X",
+      "publisher": "The Lancet (Gommers, Hernström, Josefsson et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-15",
+      "excerpt": "In the AI group, screen readings fell from 109,692 to 61,248—a 44 percent workload reduction—while screen-detected cancers rose from 262 to 338, a 29 percent increase in detection."
     }
   ]
 }

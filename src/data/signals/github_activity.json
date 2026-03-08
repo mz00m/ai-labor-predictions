@@ -1,0 +1,1808 @@
+{
+  "fetchedAt": "2026-03-03T02:57:19Z",
+  "repos": [
+    {
+      "repo": "openai/openai-python",
+      "packages": [
+        "openai"
+      ],
+      "totalStars": 30098,
+      "monthlyStars": [],
+      "monthlyIssues": [
+        {
+          "month": "2025-04",
+          "issues": 37
+        },
+        {
+          "month": "2025-05",
+          "issues": 27
+        },
+        {
+          "month": "2025-06",
+          "issues": 14
+        },
+        {
+          "month": "2025-07",
+          "issues": 28
+        },
+        {
+          "month": "2025-08",
+          "issues": 47
+        },
+        {
+          "month": "2025-09",
+          "issues": 42
+        },
+        {
+          "month": "2025-10",
+          "issues": 24
+        },
+        {
+          "month": "2025-11",
+          "issues": 11
+        },
+        {
+          "month": "2025-12",
+          "issues": 12
+        },
+        {
+          "month": "2026-01",
+          "issues": 9
+        },
+        {
+          "month": "2026-02",
+          "issues": 22
+        },
+        {
+          "month": "2026-03",
+          "issues": 2
+        }
+      ]
+    },
+    {
+      "repo": "anthropics/anthropic-sdk-python",
+      "packages": [
+        "anthropic"
+      ],
+      "totalStars": 2853,
+      "monthlyStars": [],
+      "monthlyIssues": [
+        {
+          "month": "2025-04",
+          "issues": 15
+        },
+        {
+          "month": "2025-05",
+          "issues": 6
+        },
+        {
+          "month": "2025-06",
+          "issues": 12
+        },
+        {
+          "month": "2025-07",
+          "issues": 7
+        },
+        {
+          "month": "2025-08",
+          "issues": 10
+        },
+        {
+          "month": "2025-09",
+          "issues": 6
+        },
+        {
+          "month": "2025-10",
+          "issues": 5
+        },
+        {
+          "month": "2025-11",
+          "issues": 10
+        },
+        {
+          "month": "2025-12",
+          "issues": 11
+        },
+        {
+          "month": "2026-01",
+          "issues": 7
+        },
+        {
+          "month": "2026-02",
+          "issues": 25
+        },
+        {
+          "month": "2026-03",
+          "issues": 1
+        }
+      ]
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "packages": [
+        "langchain",
+        "langchain-core"
+      ],
+      "totalStars": 127963,
+      "monthlyStars": [],
+      "monthlyIssues": [
+        {
+          "month": "2025-04",
+          "issues": 66
+        },
+        {
+          "month": "2025-05",
+          "issues": 50
+        },
+        {
+          "month": "2025-06",
+          "issues": 74
+        },
+        {
+          "month": "2025-07",
+          "issues": 80
+        },
+        {
+          "month": "2025-08",
+          "issues": 42
+        },
+        {
+          "month": "2025-09",
+          "issues": 54
+        },
+        {
+          "month": "2025-10",
+          "issues": 80
+        },
+        {
+          "month": "2025-11",
+          "issues": 106
+        },
+        {
+          "month": "2025-12",
+          "issues": 83
+        },
+        {
+          "month": "2026-01",
+          "issues": 85
+        },
+        {
+          "month": "2026-02",
+          "issues": 90
+        },
+        {
+          "month": "2026-03",
+          "issues": 6
+        }
+      ]
+    },
+    {
+      "repo": "huggingface/transformers",
+      "packages": [
+        "transformers"
+      ],
+      "totalStars": 157259,
+      "monthlyStars": [],
+      "monthlyIssues": [
+        {
+          "month": "2025-04",
+          "issues": 206
+        },
+        {
+          "month": "2025-05",
+          "issues": 179
+        },
+        {
+          "month": "2025-06",
+          "issues": 167
+        },
+        {
+          "month": "2025-07",
+          "issues": 184
+        },
+        {
+          "month": "2025-08",
+          "issues": 195
+        },
+        {
+          "month": "2025-09",
+          "issues": 150
+        },
+        {
+          "month": "2025-10",
+          "issues": 141
+        },
+        {
+          "month": "2025-11",
+          "issues": 118
+        },
+        {
+          "month": "2025-12",
+          "issues": 139
+        },
+        {
+          "month": "2026-01",
+          "issues": 120
+        },
+        {
+          "month": "2026-02",
+          "issues": 138
+        },
+        {
+          "month": "2026-03",
+          "issues": 13
+        }
+      ]
+    },
+    {
+      "repo": "openai/openai-node",
+      "packages": [
+        "openai-npm"
+      ],
+      "totalStars": 10684,
+      "monthlyStars": [],
+      "monthlyIssues": [
+        {
+          "month": "2025-04",
+          "issues": 18
+        },
+        {
+          "month": "2025-05",
+          "issues": 15
+        },
+        {
+          "month": "2025-06",
+          "issues": 22
+        },
+        {
+          "month": "2025-07",
+          "issues": 13
+        },
+        {
+          "month": "2025-08",
+          "issues": 9
+        },
+        {
+          "month": "2025-09",
+          "issues": 15
+        },
+        {
+          "month": "2025-10",
+          "issues": 14
+        },
+        {
+          "month": "2025-11",
+          "issues": 9
+        },
+        {
+          "month": "2025-12",
+          "issues": 7
+        },
+        {
+          "month": "2026-01",
+          "issues": 7
+        },
+        {
+          "month": "2026-02",
+          "issues": 4
+        },
+        {
+          "month": "2026-03",
+          "issues": 1
+        }
+      ]
+    },
+    {
+      "repo": "anthropics/anthropic-sdk-typescript",
+      "packages": [
+        "@anthropic-ai/sdk"
+      ],
+      "totalStars": 1660,
+      "monthlyStars": [],
+      "monthlyIssues": [
+        {
+          "month": "2025-04",
+          "issues": 3
+        },
+        {
+          "month": "2025-05",
+          "issues": 8
+        },
+        {
+          "month": "2025-06",
+          "issues": 6
+        },
+        {
+          "month": "2025-07",
+          "issues": 6
+        },
+        {
+          "month": "2025-08",
+          "issues": 6
+        },
+        {
+          "month": "2025-09",
+          "issues": 4
+        },
+        {
+          "month": "2025-10",
+          "issues": 7
+        },
+        {
+          "month": "2025-11",
+          "issues": 8
+        },
+        {
+          "month": "2025-12",
+          "issues": 10
+        },
+        {
+          "month": "2026-01",
+          "issues": 13
+        },
+        {
+          "month": "2026-02",
+          "issues": 12
+        },
+        {
+          "month": "2026-03",
+          "issues": 0
+        }
+      ]
+    },
+    {
+      "repo": "Aider-AI/aider",
+      "packages": [
+        "aider-chat"
+      ],
+      "totalStars": 41120,
+      "monthlyStars": [],
+      "monthlyIssues": [
+        {
+          "month": "2025-04",
+          "issues": 177
+        },
+        {
+          "month": "2025-05",
+          "issues": 170
+        },
+        {
+          "month": "2025-06",
+          "issues": 104
+        },
+        {
+          "month": "2025-07",
+          "issues": 76
+        },
+        {
+          "month": "2025-08",
+          "issues": 73
+        },
+        {
+          "month": "2025-09",
+          "issues": 42
+        },
+        {
+          "month": "2025-10",
+          "issues": 44
+        },
+        {
+          "month": "2025-11",
+          "issues": 43
+        },
+        {
+          "month": "2025-12",
+          "issues": 49
+        },
+        {
+          "month": "2026-01",
+          "issues": 51
+        },
+        {
+          "month": "2026-02",
+          "issues": 36
+        },
+        {
+          "month": "2026-03",
+          "issues": 5
+        }
+      ]
+    },
+    {
+      "repo": "browser-use/browser-use",
+      "packages": [
+        "browser-use"
+      ],
+      "totalStars": 79409,
+      "monthlyStars": [],
+      "monthlyIssues": [
+        {
+          "month": "2025-04",
+          "issues": 125
+        },
+        {
+          "month": "2025-05",
+          "issues": 144
+        },
+        {
+          "month": "2025-06",
+          "issues": 108
+        },
+        {
+          "month": "2025-07",
+          "issues": 113
+        },
+        {
+          "month": "2025-08",
+          "issues": 66
+        },
+        {
+          "month": "2025-09",
+          "issues": 109
+        },
+        {
+          "month": "2025-10",
+          "issues": 48
+        },
+        {
+          "month": "2025-11",
+          "issues": 41
+        },
+        {
+          "month": "2025-12",
+          "issues": 43
+        },
+        {
+          "month": "2026-01",
+          "issues": 33
+        },
+        {
+          "month": "2026-02",
+          "issues": 44
+        },
+        {
+          "month": "2026-03",
+          "issues": 3
+        }
+      ]
+    },
+    {
+      "repo": "crewAIInc/crewAI",
+      "packages": [
+        "crewai"
+      ],
+      "totalStars": 44994,
+      "monthlyStars": [],
+      "monthlyIssues": [
+        {
+          "month": "2025-04",
+          "issues": 84
+        },
+        {
+          "month": "2025-05",
+          "issues": 60
+        },
+        {
+          "month": "2025-06",
+          "issues": 55
+        },
+        {
+          "month": "2025-07",
+          "issues": 41
+        },
+        {
+          "month": "2025-08",
+          "issues": 44
+        },
+        {
+          "month": "2025-09",
+          "issues": 33
+        },
+        {
+          "month": "2025-10",
+          "issues": 44
+        },
+        {
+          "month": "2025-11",
+          "issues": 46
+        },
+        {
+          "month": "2025-12",
+          "issues": 36
+        },
+        {
+          "month": "2026-01",
+          "issues": 35
+        },
+        {
+          "month": "2026-02",
+          "issues": 68
+        },
+        {
+          "month": "2026-03",
+          "issues": 6
+        }
+      ]
+    },
+    {
+      "repo": "microsoft/autogen",
+      "packages": [
+        "autogen",
+        "pyautogen"
+      ],
+      "totalStars": 55080,
+      "monthlyStars": [],
+      "monthlyIssues": [
+        {
+          "month": "2025-04",
+          "issues": 76
+        },
+        {
+          "month": "2025-05",
+          "issues": 53
+        },
+        {
+          "month": "2025-06",
+          "issues": 32
+        },
+        {
+          "month": "2025-07",
+          "issues": 42
+        },
+        {
+          "month": "2025-08",
+          "issues": 27
+        },
+        {
+          "month": "2025-09",
+          "issues": 28
+        },
+        {
+          "month": "2025-10",
+          "issues": 6
+        },
+        {
+          "month": "2025-11",
+          "issues": 8
+        },
+        {
+          "month": "2025-12",
+          "issues": 4
+        },
+        {
+          "month": "2026-01",
+          "issues": 5
+        },
+        {
+          "month": "2026-02",
+          "issues": 23
+        },
+        {
+          "month": "2026-03",
+          "issues": 2
+        }
+      ]
+    },
+    {
+      "repo": "huggingface/smolagents",
+      "packages": [
+        "smolagents"
+      ],
+      "totalStars": 25704,
+      "monthlyStars": [],
+      "monthlyIssues": [
+        {
+          "month": "2025-04",
+          "issues": 65
+        },
+        {
+          "month": "2025-05",
+          "issues": 53
+        },
+        {
+          "month": "2025-06",
+          "issues": 33
+        },
+        {
+          "month": "2025-07",
+          "issues": 41
+        },
+        {
+          "month": "2025-08",
+          "issues": 37
+        },
+        {
+          "month": "2025-09",
+          "issues": 16
+        },
+        {
+          "month": "2025-10",
+          "issues": 14
+        },
+        {
+          "month": "2025-11",
+          "issues": 22
+        },
+        {
+          "month": "2025-12",
+          "issues": 13
+        },
+        {
+          "month": "2026-01",
+          "issues": 6
+        },
+        {
+          "month": "2026-02",
+          "issues": 10
+        },
+        {
+          "month": "2026-03",
+          "issues": 0
+        }
+      ]
+    },
+    {
+      "repo": "vercel/ai",
+      "packages": [
+        "ai",
+        "@ai-sdk/openai",
+        "@ai-sdk/anthropic"
+      ],
+      "totalStars": 22240,
+      "monthlyStars": [],
+      "monthlyIssues": [
+        {
+          "month": "2025-04",
+          "issues": 122
+        },
+        {
+          "month": "2025-05",
+          "issues": 132
+        },
+        {
+          "month": "2025-06",
+          "issues": 109
+        },
+        {
+          "month": "2025-07",
+          "issues": 236
+        },
+        {
+          "month": "2025-08",
+          "issues": 263
+        },
+        {
+          "month": "2025-09",
+          "issues": 264
+        },
+        {
+          "month": "2025-10",
+          "issues": 228
+        },
+        {
+          "month": "2025-11",
+          "issues": 209
+        },
+        {
+          "month": "2025-12",
+          "issues": 225
+        },
+        {
+          "month": "2026-01",
+          "issues": 160
+        },
+        {
+          "month": "2026-02",
+          "issues": 171
+        },
+        {
+          "month": "2026-03",
+          "issues": 11
+        }
+      ]
+    },
+    {
+      "repo": "modelcontextprotocol/typescript-sdk",
+      "packages": [
+        "@modelcontextprotocol/sdk"
+      ],
+      "totalStars": 11728,
+      "monthlyStars": [],
+      "monthlyIssues": [
+        {
+          "month": "2025-04",
+          "issues": 100
+        },
+        {
+          "month": "2025-05",
+          "issues": 66
+        },
+        {
+          "month": "2025-06",
+          "issues": 74
+        },
+        {
+          "month": "2025-07",
+          "issues": 49
+        },
+        {
+          "month": "2025-08",
+          "issues": 41
+        },
+        {
+          "month": "2025-09",
+          "issues": 38
+        },
+        {
+          "month": "2025-10",
+          "issues": 32
+        },
+        {
+          "month": "2025-11",
+          "issues": 39
+        },
+        {
+          "month": "2025-12",
+          "issues": 63
+        },
+        {
+          "month": "2026-01",
+          "issues": 25
+        },
+        {
+          "month": "2026-02",
+          "issues": 27
+        },
+        {
+          "month": "2026-03",
+          "issues": 1
+        }
+      ]
+    },
+    {
+      "repo": "DS4SD/docling",
+      "packages": [
+        "docling"
+      ],
+      "totalStars": 54625,
+      "monthlyStars": [],
+      "monthlyIssues": [
+        {
+          "month": "2025-04",
+          "issues": 0
+        },
+        {
+          "month": "2025-05",
+          "issues": 0
+        },
+        {
+          "month": "2025-06",
+          "issues": 0
+        },
+        {
+          "month": "2025-07",
+          "issues": 0
+        },
+        {
+          "month": "2025-08",
+          "issues": 0
+        },
+        {
+          "month": "2025-09",
+          "issues": 0
+        },
+        {
+          "month": "2025-10",
+          "issues": 0
+        },
+        {
+          "month": "2025-11",
+          "issues": 0
+        },
+        {
+          "month": "2025-12",
+          "issues": 0
+        },
+        {
+          "month": "2026-01",
+          "issues": 0
+        },
+        {
+          "month": "2026-02",
+          "issues": 0
+        },
+        {
+          "month": "2026-03",
+          "issues": 0
+        }
+      ]
+    },
+    {
+      "repo": "VikParuchuri/marker",
+      "packages": [
+        "marker-pdf"
+      ],
+      "totalStars": 32086,
+      "monthlyStars": [],
+      "monthlyIssues": [
+        {
+          "month": "2025-04",
+          "issues": 0
+        },
+        {
+          "month": "2025-05",
+          "issues": 0
+        },
+        {
+          "month": "2025-06",
+          "issues": 0
+        },
+        {
+          "month": "2025-07",
+          "issues": 0
+        },
+        {
+          "month": "2025-08",
+          "issues": 0
+        },
+        {
+          "month": "2025-09",
+          "issues": 0
+        },
+        {
+          "month": "2025-10",
+          "issues": 0
+        },
+        {
+          "month": "2025-11",
+          "issues": 0
+        },
+        {
+          "month": "2025-12",
+          "issues": 0
+        },
+        {
+          "month": "2026-01",
+          "issues": 0
+        },
+        {
+          "month": "2026-02",
+          "issues": 0
+        },
+        {
+          "month": "2026-03",
+          "issues": 0
+        }
+      ]
+    },
+    {
+      "repo": "Unstructured-IO/unstructured",
+      "packages": [
+        "unstructured"
+      ],
+      "totalStars": 14101,
+      "monthlyStars": [],
+      "monthlyIssues": [
+        {
+          "month": "2025-04",
+          "issues": 8
+        },
+        {
+          "month": "2025-05",
+          "issues": 6
+        },
+        {
+          "month": "2025-06",
+          "issues": 5
+        },
+        {
+          "month": "2025-07",
+          "issues": 5
+        },
+        {
+          "month": "2025-08",
+          "issues": 2
+        },
+        {
+          "month": "2025-09",
+          "issues": 7
+        },
+        {
+          "month": "2025-10",
+          "issues": 4
+        },
+        {
+          "month": "2025-11",
+          "issues": 1
+        },
+        {
+          "month": "2025-12",
+          "issues": 7
+        },
+        {
+          "month": "2026-01",
+          "issues": 3
+        },
+        {
+          "month": "2026-02",
+          "issues": 4
+        },
+        {
+          "month": "2026-03",
+          "issues": 0
+        }
+      ]
+    },
+    {
+      "repo": "py-pdf/pypdf",
+      "packages": [
+        "pypdf"
+      ],
+      "totalStars": 9845,
+      "monthlyStars": [],
+      "monthlyIssues": [
+        {
+          "month": "2025-04",
+          "issues": 16
+        },
+        {
+          "month": "2025-05",
+          "issues": 9
+        },
+        {
+          "month": "2025-06",
+          "issues": 17
+        },
+        {
+          "month": "2025-07",
+          "issues": 26
+        },
+        {
+          "month": "2025-08",
+          "issues": 10
+        },
+        {
+          "month": "2025-09",
+          "issues": 16
+        },
+        {
+          "month": "2025-10",
+          "issues": 12
+        },
+        {
+          "month": "2025-11",
+          "issues": 12
+        },
+        {
+          "month": "2025-12",
+          "issues": 11
+        },
+        {
+          "month": "2026-01",
+          "issues": 11
+        },
+        {
+          "month": "2026-02",
+          "issues": 10
+        },
+        {
+          "month": "2026-03",
+          "issues": 0
+        }
+      ]
+    },
+    {
+      "repo": "run-llama/LlamaIndexTS",
+      "packages": [
+        "llamaindex"
+      ],
+      "totalStars": 3063,
+      "monthlyStars": [],
+      "monthlyIssues": [
+        {
+          "month": "2025-04",
+          "issues": 15
+        },
+        {
+          "month": "2025-05",
+          "issues": 24
+        },
+        {
+          "month": "2025-06",
+          "issues": 13
+        },
+        {
+          "month": "2025-07",
+          "issues": 13
+        },
+        {
+          "month": "2025-08",
+          "issues": 14
+        },
+        {
+          "month": "2025-09",
+          "issues": 8
+        },
+        {
+          "month": "2025-10",
+          "issues": 5
+        },
+        {
+          "month": "2025-11",
+          "issues": 0
+        },
+        {
+          "month": "2025-12",
+          "issues": 1
+        },
+        {
+          "month": "2026-01",
+          "issues": 1
+        },
+        {
+          "month": "2026-02",
+          "issues": 1
+        },
+        {
+          "month": "2026-03",
+          "issues": 0
+        }
+      ]
+    },
+    {
+      "repo": "langchain-ai/langchainjs",
+      "packages": [
+        "@langchain/core",
+        "@langchain/openai"
+      ],
+      "totalStars": 17065,
+      "monthlyStars": [],
+      "monthlyIssues": [
+        {
+          "month": "2025-04",
+          "issues": 34
+        },
+        {
+          "month": "2025-05",
+          "issues": 64
+        },
+        {
+          "month": "2025-06",
+          "issues": 42
+        },
+        {
+          "month": "2025-07",
+          "issues": 56
+        },
+        {
+          "month": "2025-08",
+          "issues": 34
+        },
+        {
+          "month": "2025-09",
+          "issues": 49
+        },
+        {
+          "month": "2025-10",
+          "issues": 51
+        },
+        {
+          "month": "2025-11",
+          "issues": 52
+        },
+        {
+          "month": "2025-12",
+          "issues": 51
+        },
+        {
+          "month": "2026-01",
+          "issues": 47
+        },
+        {
+          "month": "2026-02",
+          "issues": 57
+        },
+        {
+          "month": "2026-03",
+          "issues": 4
+        }
+      ]
+    },
+    {
+      "repo": "Sinaptik-AI/pandas-ai",
+      "packages": [
+        "pandasai"
+      ],
+      "totalStars": 23287,
+      "monthlyStars": [],
+      "monthlyIssues": [
+        {
+          "month": "2025-04",
+          "issues": 13
+        },
+        {
+          "month": "2025-05",
+          "issues": 12
+        },
+        {
+          "month": "2025-06",
+          "issues": 17
+        },
+        {
+          "month": "2025-07",
+          "issues": 13
+        },
+        {
+          "month": "2025-08",
+          "issues": 12
+        },
+        {
+          "month": "2025-09",
+          "issues": 4
+        },
+        {
+          "month": "2025-10",
+          "issues": 9
+        },
+        {
+          "month": "2025-11",
+          "issues": 4
+        },
+        {
+          "month": "2025-12",
+          "issues": 11
+        },
+        {
+          "month": "2026-01",
+          "issues": 2
+        },
+        {
+          "month": "2026-02",
+          "issues": 6
+        },
+        {
+          "month": "2026-03",
+          "issues": 1
+        }
+      ]
+    },
+    {
+      "repo": "sfu-db/dataprep",
+      "packages": [
+        "dataprep"
+      ],
+      "totalStars": 2237,
+      "monthlyStars": [],
+      "monthlyIssues": [
+        {
+          "month": "2025-04",
+          "issues": 0
+        },
+        {
+          "month": "2025-05",
+          "issues": 0
+        },
+        {
+          "month": "2025-06",
+          "issues": 0
+        },
+        {
+          "month": "2025-07",
+          "issues": 0
+        },
+        {
+          "month": "2025-08",
+          "issues": 0
+        },
+        {
+          "month": "2025-09",
+          "issues": 0
+        },
+        {
+          "month": "2025-10",
+          "issues": 0
+        },
+        {
+          "month": "2025-11",
+          "issues": 0
+        },
+        {
+          "month": "2025-12",
+          "issues": 0
+        },
+        {
+          "month": "2026-01",
+          "issues": 0
+        },
+        {
+          "month": "2026-02",
+          "issues": 0
+        },
+        {
+          "month": "2026-03",
+          "issues": 0
+        }
+      ]
+    },
+    {
+      "repo": "run-llama/llama_index",
+      "packages": [
+        "llama-index"
+      ],
+      "totalStars": 47315,
+      "monthlyStars": [],
+      "monthlyIssues": [
+        {
+          "month": "2025-04",
+          "issues": 112
+        },
+        {
+          "month": "2025-05",
+          "issues": 106
+        },
+        {
+          "month": "2025-06",
+          "issues": 165
+        },
+        {
+          "month": "2025-07",
+          "issues": 119
+        },
+        {
+          "month": "2025-08",
+          "issues": 67
+        },
+        {
+          "month": "2025-09",
+          "issues": 70
+        },
+        {
+          "month": "2025-10",
+          "issues": 64
+        },
+        {
+          "month": "2025-11",
+          "issues": 46
+        },
+        {
+          "month": "2025-12",
+          "issues": 31
+        },
+        {
+          "month": "2026-01",
+          "issues": 44
+        },
+        {
+          "month": "2026-02",
+          "issues": 43
+        },
+        {
+          "month": "2026-03",
+          "issues": 6
+        }
+      ]
+    },
+    {
+      "repo": "chroma-core/chroma",
+      "packages": [
+        "chromadb"
+      ],
+      "totalStars": 26414,
+      "monthlyStars": [],
+      "monthlyIssues": [
+        {
+          "month": "2025-04",
+          "issues": 43
+        },
+        {
+          "month": "2025-05",
+          "issues": 23
+        },
+        {
+          "month": "2025-06",
+          "issues": 27
+        },
+        {
+          "month": "2025-07",
+          "issues": 22
+        },
+        {
+          "month": "2025-08",
+          "issues": 22
+        },
+        {
+          "month": "2025-09",
+          "issues": 17
+        },
+        {
+          "month": "2025-10",
+          "issues": 10
+        },
+        {
+          "month": "2025-11",
+          "issues": 31
+        },
+        {
+          "month": "2025-12",
+          "issues": 20
+        },
+        {
+          "month": "2026-01",
+          "issues": 12
+        },
+        {
+          "month": "2026-02",
+          "issues": 10
+        },
+        {
+          "month": "2026-03",
+          "issues": 1
+        }
+      ]
+    },
+    {
+      "repo": "medspacy/medspacy",
+      "packages": [
+        "medspacy"
+      ],
+      "totalStars": 634,
+      "monthlyStars": [],
+      "monthlyIssues": [
+        {
+          "month": "2025-04",
+          "issues": 2
+        },
+        {
+          "month": "2025-05",
+          "issues": 1
+        },
+        {
+          "month": "2025-06",
+          "issues": 0
+        },
+        {
+          "month": "2025-07",
+          "issues": 0
+        },
+        {
+          "month": "2025-08",
+          "issues": 0
+        },
+        {
+          "month": "2025-09",
+          "issues": 1
+        },
+        {
+          "month": "2025-10",
+          "issues": 0
+        },
+        {
+          "month": "2025-11",
+          "issues": 0
+        },
+        {
+          "month": "2025-12",
+          "issues": 0
+        },
+        {
+          "month": "2026-01",
+          "issues": 0
+        },
+        {
+          "month": "2026-02",
+          "issues": 0
+        },
+        {
+          "month": "2026-03",
+          "issues": 0
+        }
+      ]
+    },
+    {
+      "repo": "allenai/scispacy",
+      "packages": [
+        "scispacy"
+      ],
+      "totalStars": 1926,
+      "monthlyStars": [],
+      "monthlyIssues": [
+        {
+          "month": "2025-04",
+          "issues": 1
+        },
+        {
+          "month": "2025-05",
+          "issues": 1
+        },
+        {
+          "month": "2025-06",
+          "issues": 0
+        },
+        {
+          "month": "2025-07",
+          "issues": 0
+        },
+        {
+          "month": "2025-08",
+          "issues": 1
+        },
+        {
+          "month": "2025-09",
+          "issues": 1
+        },
+        {
+          "month": "2025-10",
+          "issues": 1
+        },
+        {
+          "month": "2025-11",
+          "issues": 1
+        },
+        {
+          "month": "2025-12",
+          "issues": 0
+        },
+        {
+          "month": "2026-01",
+          "issues": 1
+        },
+        {
+          "month": "2026-02",
+          "issues": 0
+        },
+        {
+          "month": "2026-03",
+          "issues": 0
+        }
+      ]
+    },
+    {
+      "repo": "huggingface/diffusers",
+      "packages": [
+        "diffusers"
+      ],
+      "totalStars": 32907,
+      "monthlyStars": [],
+      "monthlyIssues": [
+        {
+          "month": "2025-04",
+          "issues": 99
+        },
+        {
+          "month": "2025-05",
+          "issues": 39
+        },
+        {
+          "month": "2025-06",
+          "issues": 56
+        },
+        {
+          "month": "2025-07",
+          "issues": 70
+        },
+        {
+          "month": "2025-08",
+          "issues": 73
+        },
+        {
+          "month": "2025-09",
+          "issues": 41
+        },
+        {
+          "month": "2025-10",
+          "issues": 52
+        },
+        {
+          "month": "2025-11",
+          "issues": 72
+        },
+        {
+          "month": "2025-12",
+          "issues": 41
+        },
+        {
+          "month": "2026-01",
+          "issues": 30
+        },
+        {
+          "month": "2026-02",
+          "issues": 29
+        },
+        {
+          "month": "2026-03",
+          "issues": 1
+        }
+      ]
+    },
+    {
+      "repo": "replicate/replicate-python",
+      "packages": [
+        "replicate"
+      ],
+      "totalStars": 895,
+      "monthlyStars": [],
+      "monthlyIssues": [
+        {
+          "month": "2025-04",
+          "issues": 5
+        },
+        {
+          "month": "2025-05",
+          "issues": 6
+        },
+        {
+          "month": "2025-06",
+          "issues": 1
+        },
+        {
+          "month": "2025-07",
+          "issues": 2
+        },
+        {
+          "month": "2025-08",
+          "issues": 1
+        },
+        {
+          "month": "2025-09",
+          "issues": 0
+        },
+        {
+          "month": "2025-10",
+          "issues": 1
+        },
+        {
+          "month": "2025-11",
+          "issues": 1
+        },
+        {
+          "month": "2025-12",
+          "issues": 1
+        },
+        {
+          "month": "2026-01",
+          "issues": 2
+        },
+        {
+          "month": "2026-02",
+          "issues": 0
+        },
+        {
+          "month": "2026-03",
+          "issues": 1
+        }
+      ]
+    },
+    {
+      "repo": "Stability-AI/stability-sdk",
+      "packages": [
+        "stability-sdk"
+      ],
+      "totalStars": 2439,
+      "monthlyStars": [],
+      "monthlyIssues": [
+        {
+          "month": "2025-04",
+          "issues": 0
+        },
+        {
+          "month": "2025-05",
+          "issues": 0
+        },
+        {
+          "month": "2025-06",
+          "issues": 0
+        },
+        {
+          "month": "2025-07",
+          "issues": 0
+        },
+        {
+          "month": "2025-08",
+          "issues": 0
+        },
+        {
+          "month": "2025-09",
+          "issues": 1
+        },
+        {
+          "month": "2025-10",
+          "issues": 0
+        },
+        {
+          "month": "2025-11",
+          "issues": 0
+        },
+        {
+          "month": "2025-12",
+          "issues": 0
+        },
+        {
+          "month": "2026-01",
+          "issues": 0
+        },
+        {
+          "month": "2026-02",
+          "issues": 0
+        },
+        {
+          "month": "2026-03",
+          "issues": 0
+        }
+      ]
+    },
+    {
+      "repo": "SYSTRAN/faster-whisper",
+      "packages": [
+        "faster-whisper"
+      ],
+      "totalStars": 21216,
+      "monthlyStars": [],
+      "monthlyIssues": [
+        {
+          "month": "2025-04",
+          "issues": 12
+        },
+        {
+          "month": "2025-05",
+          "issues": 5
+        },
+        {
+          "month": "2025-06",
+          "issues": 6
+        },
+        {
+          "month": "2025-07",
+          "issues": 8
+        },
+        {
+          "month": "2025-08",
+          "issues": 14
+        },
+        {
+          "month": "2025-09",
+          "issues": 9
+        },
+        {
+          "month": "2025-10",
+          "issues": 6
+        },
+        {
+          "month": "2025-11",
+          "issues": 12
+        },
+        {
+          "month": "2025-12",
+          "issues": 4
+        },
+        {
+          "month": "2026-01",
+          "issues": 8
+        },
+        {
+          "month": "2026-02",
+          "issues": 1
+        },
+        {
+          "month": "2026-03",
+          "issues": 0
+        }
+      ]
+    },
+    {
+      "repo": "openai/whisper",
+      "packages": [
+        "openai-whisper"
+      ],
+      "totalStars": 95328,
+      "monthlyStars": [],
+      "monthlyIssues": [
+        {
+          "month": "2025-04",
+          "issues": 0
+        },
+        {
+          "month": "2025-05",
+          "issues": 0
+        },
+        {
+          "month": "2025-06",
+          "issues": 0
+        },
+        {
+          "month": "2025-07",
+          "issues": 0
+        },
+        {
+          "month": "2025-08",
+          "issues": 0
+        },
+        {
+          "month": "2025-09",
+          "issues": 0
+        },
+        {
+          "month": "2025-10",
+          "issues": 0
+        },
+        {
+          "month": "2025-11",
+          "issues": 0
+        },
+        {
+          "month": "2025-12",
+          "issues": 0
+        },
+        {
+          "month": "2026-01",
+          "issues": 0
+        },
+        {
+          "month": "2026-02",
+          "issues": 0
+        },
+        {
+          "month": "2026-03",
+          "issues": 0
+        }
+      ]
+    },
+    {
+      "repo": "replicate/replicate-javascript",
+      "packages": [
+        "replicate-npm"
+      ],
+      "totalStars": 596,
+      "monthlyStars": [],
+      "monthlyIssues": [
+        {
+          "month": "2025-04",
+          "issues": 0
+        },
+        {
+          "month": "2025-05",
+          "issues": 1
+        },
+        {
+          "month": "2025-06",
+          "issues": 0
+        },
+        {
+          "month": "2025-07",
+          "issues": 0
+        },
+        {
+          "month": "2025-08",
+          "issues": 0
+        },
+        {
+          "month": "2025-09",
+          "issues": 2
+        },
+        {
+          "month": "2025-10",
+          "issues": 0
+        },
+        {
+          "month": "2025-11",
+          "issues": 2
+        },
+        {
+          "month": "2025-12",
+          "issues": 2
+        },
+        {
+          "month": "2026-01",
+          "issues": 4
+        },
+        {
+          "month": "2026-02",
+          "issues": 0
+        },
+        {
+          "month": "2026-03",
+          "issues": 0
+        }
+      ]
+    }
+  ]
+}

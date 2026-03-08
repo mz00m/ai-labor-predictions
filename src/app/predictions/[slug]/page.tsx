@@ -32,8 +32,11 @@ export function generateMetadata({ params }: Props): Metadata {
   const description = `${prediction.description} Tracked with ${prediction.sources.length} sources across ${prediction.timeHorizon}.`;
 
   return {
-    title,
+    title: prediction.title,
     description,
+    alternates: {
+      canonical: `/predictions/${params.slug}`,
+    },
     openGraph: {
       title,
       description,
@@ -51,6 +54,52 @@ export function generateMetadata({ params }: Props): Metadata {
   };
 }
 
-export default function Page() {
-  return <PredictionDetailPage />;
+export default function Page({ params }: Props) {
+  const prediction = getPredictionBySlug(params.slug);
+
+  const categoryLabel =
+    prediction?.category === "displacement"
+      ? "Job Displacement"
+      : prediction?.category === "wages"
+        ? "Wage Impact"
+        : prediction?.category === "adoption"
+          ? "AI Adoption"
+          : prediction?.category === "signals"
+            ? "Corporate Signals"
+            : "Workforce Exposure";
+
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://jobsdata.ai",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: categoryLabel,
+        item: `https://jobsdata.ai/#${prediction?.category ?? "displacement"}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: prediction?.title ?? "Prediction",
+        item: `https://jobsdata.ai/predictions/${params.slug}`,
+      },
+    ],
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
+      <PredictionDetailPage />
+    </>
+  );
 }

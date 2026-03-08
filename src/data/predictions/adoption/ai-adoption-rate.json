@@ -5,7 +5,7 @@
   "description": "Percentage of US firms using AI in production, measured by the Census Bureau's Business Trends and Outlook Survey (BTOS) — the most rigorous measure available. Survey-based estimates from consultancies run 5-10x higher due to self-selected samples.",
   "category": "adoption",
   "unit": "% of firms (Census BTOS)",
-  "currentValue": 10,
+  "currentValue": 19.9,
   "timeHorizon": "Current measure",
   "history": [
     {
@@ -16,7 +16,8 @@
       "sourceIds": [
         "census-bts-ai-2023"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "survey"
     },
     {
       "date": "2024-05-01",
@@ -26,7 +27,8 @@
       "sourceIds": [
         "census-bts-ai-2024"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "survey"
     },
     {
       "date": "2025-07-01",
@@ -36,17 +38,8 @@
       "sourceIds": [
         "census-bts-ai-2025"
       ],
-      "evidenceTier": 1
-    },
-    {
-      "date": "2025-10-01",
-      "value": 9.7,
-      "confidenceLow": 7,
-      "confidenceHigh": 12,
-      "sourceIds": [
-        "anthropic-economic-index-2025"
-      ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "survey"
     },
     {
       "date": "2025-08-15",
@@ -56,7 +49,30 @@
       "sourceIds": [
         "bick-blandin-deming-nber-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "survey"
+    },
+    {
+      "date": "2025-10-01",
+      "value": 9.7,
+      "confidenceLow": 7,
+      "confidenceHigh": 12,
+      "sourceIds": [
+        "anthropic-economic-index-2025"
+      ],
+      "evidenceTier": 1,
+      "metricType": "survey"
+    },
+    {
+      "date": "2025-12-04",
+      "value": 17.3,
+      "confidenceLow": 16,
+      "confidenceHigh": 22,
+      "sourceIds": [
+        "census-btos-ai-biweekly-2026"
+      ],
+      "evidenceTier": 1,
+      "metricType": "survey"
     },
     {
       "date": "2026-01-01",
@@ -64,9 +80,30 @@
       "confidenceLow": 30,
       "confidenceHigh": 42,
       "sourceIds": [
-        "hartley-adoption-survey-2026"
+        "hartley-genai-labor-2026"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "survey"
+    },
+    {
+      "date": "2026-02-26",
+      "value": 17.5,
+      "confidenceLow": 16,
+      "confidenceHigh": 22,
+      "sourceIds": [
+        "census-btos-ai-biweekly-2026"
+      ],
+      "evidenceTier": 1,
+      "metricType": "survey"
+    },
+    {
+      "date": "2026-03-04",
+      "value": 66,
+      "sourceIds": [
+        "ecb-safe-ai-hiring-2026"
+      ],
+      "evidenceTier": 3,
+      "metricType": "survey"
     }
   ],
   "overlays": [
@@ -132,6 +169,15 @@
       ],
       "evidenceTier": 2,
       "label": "McKinsey survey: 78% use AI in ≥1 function (Mar 2025)"
+    },
+    {
+      "date": "2025-05-30",
+      "direction": "up",
+      "sourceIds": [
+        "arxiv-what-do-professional-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Generative AI showing early productivity gains for software developers"
     },
     {
       "date": "2025-06-01",
@@ -276,6 +322,33 @@
       ],
       "evidenceTier": 1,
       "label": "NBER/Bloom: 78% of US firms use AI (executive survey of ~6K across 4 countries)"
+    },
+    {
+      "date": "2026-02-18",
+      "direction": "up",
+      "sourceIds": [
+        "cio-it-jobs-ai-skills-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "CIO/Indeed: 80% of workers save ≥1 hour/day using generative AI"
+    },
+    {
+      "date": "2026-02-18",
+      "direction": "up",
+      "sourceIds": [
+        "cio-it-jobs-ai-skills-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "CIO/LinkedIn: AI literacy job postings growing 70%+ year over year"
+    },
+    {
+      "date": "2026-03-02",
+      "direction": "up",
+      "sourceIds": [
+        "citadel-ai-capex-neutral-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Citadel: AI capex ~$650B in 2026, ~$2T over 3 years"
     }
   ],
   "sources": [
@@ -388,7 +461,7 @@
       "excerpt": "75% of knowledge workers now use AI tools. Adoption in enterprises with 500+ employees reached 60%, up from 40% a year prior."
     },
     {
-      "id": "hartley-adoption-survey-2026",
+      "id": "hartley-genai-labor-2026",
       "title": "The Labor Market Effects of Generative Artificial Intelligence",
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5136877",
       "publisher": "Stanford / World Bank (Hartley, Jolevski, Melo, Moore)",
@@ -522,6 +595,51 @@
       "datePublished": "2026-02-01",
       "dateAdded": "2026-03-02",
       "excerpt": "The United States has seen 50% growth in AI-related postings over the past year, with AI now appearing in 2.5% of all job postings."
+    },
+    {
+      "id": "cio-it-jobs-ai-skills-2026",
+      "title": "State of IT jobs: AI sparks rapidly changing market for skills",
+      "url": "https://www.cio.com/article/4134254/state-of-it-jobs-ai-sparks-rapidly-changing-market-for-skills.html",
+      "publisher": "CIO.com",
+      "evidenceTier": 3,
+      "datePublished": "2026-02-18",
+      "excerpt": "80% of respondents in the 2025 Indeed Workforce Insights Report report they save at least one hour per day using generative AI. Job postings that require AI literacy skills are growing at a rate of more than 70% year over year."
+    },
+    {
+      "id": "ecb-safe-ai-hiring-2026",
+      "title": "Artificial Intelligence: friend or foe for hiring in Europe today?",
+      "url": "https://www.ecb.europa.eu/press/blog/date/2026/html/ecb.blog20260304~d9e34fc95f.en.html",
+      "publisher": "European Central Bank",
+      "evidenceTier": 3,
+      "datePublished": "2026-03-04",
+      "excerpt": "Two-thirds of the 3,500 euro-area firms surveyed reported that their employees use AI in their jobs (ECB SAFE survey, Q4 2025). Note: European firms; not directly comparable to US Census BTOS figures."
+    },
+    {
+      "id": "citadel-ai-capex-neutral-2026",
+      "title": "AI Will Displace…The Fed's View of Neutral",
+      "url": "https://www.citadelsecurities.com/news-and-insights/ai-will-displacethe-feds-view-of-neutral/",
+      "publisher": "Citadel Securities (Nohshad Shah)",
+      "evidenceTier": 3,
+      "datePublished": "2026-03-02",
+      "excerpt": "AI capex – roughly $650bn this year and potentially ~$2tn over three years – materially alters the equilibrium."
+    },
+    {
+      "id": "census-btos-ai-biweekly-2026",
+      "title": "Business Trends and Outlook Survey: Biweekly National Data Tables (AI Question)",
+      "url": "https://www.census.gov/hfp/btos/data",
+      "publisher": "US Census Bureau",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-26",
+      "excerpt": "In the last two weeks, did this business use Artificial Intelligence (AI) in any of its business functions? Yes: 17.5%, No: 73.1%, Do not know: 9.4% (Cycle 202604, ref period Jan 26–Feb 8, 2026). First biweekly reading (Cycle 202524, Nov 2025): Yes: 17.3%."
+    },
+    {
+      "id": "arxiv-what-do-professional-2025",
+      "title": "What do professional software developers need to know to succeed in an age of Artificial Intelligence?",
+      "url": "http://arxiv.org/abs/2506.00202v3",
+      "publisher": "arxiv.org",
+      "evidenceTier": 1,
+      "datePublished": "2025-05-30",
+      "excerpt": "Generative AI is showing early evidence of productivity gains for software developers"
     }
   ]
 }

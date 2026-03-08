@@ -6,55 +6,136 @@
   "category": "adoption",
   "unit": "% of adults at work",
   "currentValue": 43,
+  "aggregationMethod": "latest",
   "timeHorizon": "Current measure",
   "history": [
     {
       "date": "2024-06-01",
       "value": 32.9,
-      "sourceIds": ["bick-blandin-deming-wp-2025"],
-      "evidenceTier": 1
+      "sourceIds": [
+        "bick-blandin-deming-wp-2025"
+      ],
+      "evidenceTier": 1,
+      "metricType": "survey"
     },
     {
       "date": "2024-08-01",
       "value": 33.3,
-      "sourceIds": ["bick-blandin-deming-wp-2025"],
-      "evidenceTier": 1
+      "sourceIds": [
+        "bick-blandin-deming-wp-2025"
+      ],
+      "evidenceTier": 1,
+      "metricType": "survey"
     },
     {
       "date": "2024-11-01",
-      "value": 31.0,
-      "sourceIds": ["bick-blandin-deming-wp-2025"],
-      "evidenceTier": 1
+      "value": 31,
+      "sourceIds": [
+        "bick-blandin-deming-wp-2025"
+      ],
+      "evidenceTier": 1,
+      "metricType": "survey"
     },
     {
       "date": "2025-02-01",
       "value": 33.5,
-      "sourceIds": ["genai-adoption-tracker-2025"],
-      "evidenceTier": 2
+      "sourceIds": [
+        "genai-adoption-tracker-2025"
+      ],
+      "evidenceTier": 2,
+      "metricType": "survey"
     },
     {
       "date": "2025-05-01",
       "value": 35.5,
-      "sourceIds": ["genai-adoption-tracker-2025"],
-      "evidenceTier": 2
+      "sourceIds": [
+        "genai-adoption-tracker-2025"
+      ],
+      "evidenceTier": 2,
+      "metricType": "survey"
     },
     {
       "date": "2025-08-01",
       "value": 37.4,
-      "sourceIds": ["bick-blandin-deming-wp-2025"],
-      "evidenceTier": 1
+      "sourceIds": [
+        "bick-blandin-deming-wp-2025"
+      ],
+      "evidenceTier": 1,
+      "metricType": "survey"
     },
     {
       "date": "2025-11-01",
       "value": 40.7,
-      "sourceIds": ["bick-blandin-deming-wp-2025"],
-      "evidenceTier": 1
+      "sourceIds": [
+        "bick-blandin-deming-wp-2025"
+      ],
+      "evidenceTier": 1,
+      "metricType": "survey"
     },
     {
       "date": "2026-01-22",
       "value": 43,
-      "sourceIds": ["indeed-hiringlab-ai-jobs-labor-2026"],
-      "evidenceTier": 2
+      "sourceIds": [
+        "indeed-hiringlab-ai-jobs-labor-2026"
+      ],
+      "evidenceTier": 2,
+      "metricType": "survey"
+    }
+  ],
+  "overlays": [
+    {
+      "date": "2025-01-08",
+      "direction": "up",
+      "sourceIds": [
+        "workday-ai-skills-revolution-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Workday Davos: 59% of depts using AI + 31% experimenting (n=2,500)"
+    },
+    {
+      "date": "2025-05-30",
+      "direction": "up",
+      "sourceIds": [
+        "arxiv-what-do-professional-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "21 developers studied at cutting edge of AI use in software development"
+    },
+    {
+      "date": "2026-01-14",
+      "direction": "up",
+      "sourceIds": [
+        "workday-ai-productivity-rework-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Workday: 85% of employees save 1–7 hrs/wk with AI (n=3,200)"
+    },
+    {
+      "date": "2026-01-14",
+      "direction": "up",
+      "sourceIds": [
+        "workday-ai-productivity-rework-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Workday: >90% of daily AI users believe it will help them succeed"
+    },
+    {
+      "date": "2026-01-19",
+      "direction": "up",
+      "sourceIds": [
+        "arxiv-ai-skills-improve-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "AI skills increase interview invitations by 8-15 percentage points"
+    },
+    {
+      "date": "2026-03-04",
+      "direction": "up",
+      "sourceIds": [
+        "creatoreconomy-ai-native-ops-2026"
+      ],
+      "evidenceTier": 4,
+      "label": "Linear: PMs/marketers should do 80-100% of work via AI interface"
     }
   ],
   "sources": [
@@ -84,6 +165,51 @@
       "evidenceTier": 2,
       "datePublished": "2026-01-22",
       "excerpt": "Only about 43% of US workers reported regularly using AI at work last year"
+    },
+    {
+      "id": "workday-ai-productivity-rework-2026",
+      "title": "Beyond Productivity: Measuring the Real Value of AI",
+      "url": "https://investor.workday.com/news-and-events/press-releases/news-details/2026/New-Workday-Research-Companies-Are-Leaving-AI-Gains-on-the-Table/default.aspx",
+      "publisher": "Workday / Hanover Research",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-14",
+      "excerpt": "85% of employees report saving one to seven hours per week using AI. Employees who use AI every day are overwhelmingly optimistic – more than 90% believe it will help them succeed."
+    },
+    {
+      "id": "workday-ai-skills-revolution-2025",
+      "title": "Elevating Human Potential: The AI Skills Revolution",
+      "url": "https://forms.workday.com/en-us/reports/elevating-human-potential/form.html",
+      "publisher": "Workday / Hanover Research",
+      "evidenceTier": 2,
+      "datePublished": "2025-01-08",
+      "excerpt": "almost two-thirds (59%) say their department is currently using AI while one-third (31%) of respondents are experimenting with its use"
+    },
+    {
+      "id": "creatoreconomy-ai-native-ops-2026",
+      "title": "Your New Job Is to Onboard AI Agents: How AI Native Companies Actually Operate",
+      "url": "https://creatoreconomy.so/p/your-new-job-is-to-onboard-ai-agents",
+      "publisher": "Creator Economy (Peter Yang)",
+      "evidenceTier": 4,
+      "datePublished": "2026-03-04",
+      "excerpt": "PMs and marketers should default to an AI interface. These functions should be doing 80-100% of their work through a chat interface."
+    },
+    {
+      "id": "arxiv-ai-skills-improve-2026",
+      "title": "AI Skills Improve Job Prospects: Causal Evidence from a Hiring Experiment",
+      "url": "http://arxiv.org/abs/2601.13286v2",
+      "publisher": "arxiv.org",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-19",
+      "excerpt": "AI skills significantly increase interview invitation probabilities by approximately 8 to 15 percentage points, compared with candidates without such skills"
+    },
+    {
+      "id": "arxiv-what-do-professional-2025",
+      "title": "What do professional software developers need to know to succeed in an age of Artificial Intelligence?",
+      "url": "http://arxiv.org/abs/2506.00202v3",
+      "publisher": "arxiv.org",
+      "evidenceTier": 1,
+      "datePublished": "2025-05-30",
+      "excerpt": "We describe our research with 21 developers at the cutting edge of using AI"
     }
   ]
 }

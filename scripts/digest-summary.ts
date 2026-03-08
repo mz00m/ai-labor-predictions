@@ -1,86 +1,191 @@
 /**
- * Reads a weekly digest JSON and prints a Markdown summary to stdout.
- * Used by the GitHub Actions workflow to populate the PR body.
+ * Generates a human-readable Markdown PR body from a digest JSON file.
+ * Designed to work with the DigestSchema output from synthesize-digest.ts.
  *
- * Usage: npx tsx scripts/digest-summary.ts src/data/digests/2026-W09.json
+ * Usage:
+ *   npx tsx scripts/digest-summary.ts <digest.json> [meta.json]
+ *
+ * Accepts an optional second argument for the .meta.json source health file.
+ * Output is capped at ~3000 chars to avoid GitHub PR body truncation.
  */
 
 import fs from "fs";
-import { WeeklyDigest } from "../src/lib/types/digest";
+import path from "path";
 
 const digestPath = process.argv[2];
+const metaPath = process.argv[3];
+
 if (!digestPath || !fs.existsSync(digestPath)) {
-  console.error("Usage: npx tsx scripts/digest-summary.ts <digest.json>");
+  console.error("Usage: npx tsx scripts/digest-summary.ts <digest.json> [meta.json]");
   process.exit(1);
 }
 
-const digest: WeeklyDigest = JSON.parse(fs.readFileSync(digestPath, "utf-8"));
+const digest = JSON.parse(fs.readFileSync(digestPath, "utf-8"));
+
+// Try to load previous week's digest for diffing
+let prevDigest: any = null;
+try {
+  const weekMatch = digest.week.match(/^(\d{4})-W(\d{2})$/);
+  if (weekMatch) {
+    const year = parseInt(weekMatch[1]);
+    const week = parseInt(weekMatch[2]);
+    const prevWeek = week > 1 ? week - 1 : 52;
+    const prevYear = week > 1 ? year : year - 1;
+    const prevWeekId = `${prevYear}-W${String(prevWeek).padStart(2, "0")}`;
+    const prevPath = path.join(path.dirname(digestPath), `${prevWeekId}.json`);
+    if (fs.existsSync(prevPath)) {
+      prevDigest = JSON.parse(fs.readFileSync(prevPath, "utf-8"));
+    }
+  }
+} catch {
+  // Diffing is best-effort
+}
 
 const lines: string[] = [];
 
 // Header
-lines.push(`## Weekly Research Digest: ${digest.weekId}`);
+lines.push(`## Weekly Research Digest: ${digest.week}`);
 lines.push("");
-lines.push(`**${digest.dateRange.from}** to **${digest.dateRange.to}** | ${digest.papers.length} papers selected from ${digest.totalPapersDiscovered} discovered`);
+lines.push(
+  `**${digest.lookbackDays}-day lookback** | ` +
+    `${digest.sources.totalCandidates} candidates discovered | ` +
+    `${digest.sources.afterDedup} after dedup | ` +
+    `${digest.highlights.length} highlights selected`
+);
 lines.push("");
 
-// Suggested data points — the most important section
-const dataPoints = digest.suggestedDataPoints || [];
-if (dataPoints.length > 0) {
-  lines.push(`### Suggested Data Points (${dataPoints.length})`);
-  lines.push("");
-  lines.push("| Prediction | Value | Source | Confidence |");
-  lines.push("|:-----------|------:|:-------|:----------:|");
-  for (const dp of dataPoints) {
-    const excerpt = dp.excerpt.length > 80 ? dp.excerpt.slice(0, 77) + "..." : dp.excerpt;
-    const conf = dp.confidence === "high" ? "🟢" : dp.confidence === "medium" ? "🟡" : "🔴";
-    lines.push(`| ${dp.predictionSlug} | **${dp.value} ${dp.unit}** | [${dp.sourceTitle.slice(0, 50)}](${dp.sourceUrl}) | ${conf} ${dp.confidence} |`);
-  }
-  lines.push("");
-  for (const dp of dataPoints) {
-    lines.push(`> **${dp.predictionSlug}**: "${dp.excerpt}"`);
-    lines.push("");
-  }
-} else {
-  lines.push("### Suggested Data Points");
-  lines.push("");
-  lines.push("_No quantitative data points extracted this week._");
+// Highlights
+lines.push("### Highlights");
+lines.push("");
+
+for (const h of digest.highlights) {
+  const graph = h.graphSlug ? ` \u2192 \`${h.graphSlug}\`` : "";
+  const score = h.score != null ? ` (score: ${h.score.toFixed(2)})` : "";
+  lines.push(`**${h.title}**${graph}${score}`);
+  lines.push(`> ${h.summary}`);
+  lines.push(`> \u2014 [${h.sourceAdapter}](${h.source})`);
   lines.push("");
 }
 
-// Top papers
-lines.push("### Top 10 Papers");
-lines.push("");
-for (const p of digest.papers.slice(0, 10)) {
-  const tier = `T${p.classifiedTier}`;
-  const predictions = p.linkedPredictions.map((lp) => lp.slug).join(", ");
-  const predLabel = predictions ? ` → ${predictions}` : "";
-  lines.push(`1. **[${p.title.slice(0, 100)}](${p.url})** (${tier}, ${p.source}, score: ${p.compositeScore})${predLabel}`);
+// Themes
+if (digest.themes?.length > 0) {
+  lines.push("### Emerging Themes");
+  lines.push("");
+  for (const theme of digest.themes) {
+    lines.push(`- ${theme}`);
+  }
+  lines.push("");
+
+  // Diff vs last week
+  if (prevDigest?.themes) {
+    const prevThemes = new Set(prevDigest.themes.map((t: string) => t.toLowerCase()));
+    const newThemes = digest.themes.filter(
+      (t: string) => !prevThemes.has(t.toLowerCase())
+    );
+    const droppedThemes = prevDigest.themes.filter(
+      (t: string) => !new Set(digest.themes.map((x: string) => x.toLowerCase())).has(t.toLowerCase())
+    );
+    if (newThemes.length > 0 || droppedThemes.length > 0) {
+      lines.push("**Changes from last week:**");
+      for (const t of newThemes) lines.push(`- + ${t}`);
+      for (const t of droppedThemes) lines.push(`- - ${t}`);
+      lines.push("");
+    }
+  }
 }
-lines.push("");
 
-// Category breakdown
-const cats = digest.byCategory;
-lines.push("### By Category");
-lines.push("");
-lines.push(`| Category | Count |`);
-lines.push(`|:---------|------:|`);
-lines.push(`| Displacement | ${cats.displacement.length} |`);
-lines.push(`| Wages | ${cats.wages.length} |`);
-lines.push(`| Adoption | ${cats.adoption.length} |`);
-lines.push(`| Signals | ${cats.signals.length} |`);
-lines.push(`| Unlinked | ${cats.unlinked.length} |`);
-lines.push("");
+// Watching
+if (digest.watching?.length > 0) {
+  lines.push("### Worth Watching");
+  lines.push("");
+  for (const w of digest.watching) {
+    lines.push(`- **[${w.title}](${w.source})**: ${w.reason}`);
+  }
+  lines.push("");
+}
 
-// Sources
+// Ingestion candidates (if staging file exists alongside digest)
+const stagingPath = path.join(
+  path.dirname(digestPath),
+  `${digest.week}.ingest-staging.json`
+);
+if (fs.existsSync(stagingPath)) {
+  try {
+    const staging = JSON.parse(fs.readFileSync(stagingPath, "utf-8"));
+    const candidates = staging.candidates?.filter(
+      (c: any) => c.extractedStats?.length > 0
+    );
+    if (candidates?.length > 0) {
+      lines.push("### Ingestion Candidates");
+      lines.push("");
+      lines.push("| Source | Graph | Type | Value | Tier |");
+      lines.push("|:-------|:------|:-----|------:|:----:|");
+      for (const c of candidates) {
+        for (const stat of c.extractedStats) {
+          const val =
+            stat.type === "data_point"
+              ? `${stat.value}`
+              : stat.direction === "up"
+                ? "\u2191"
+                : stat.direction === "down"
+                  ? "\u2193"
+                  : "\u2194";
+          lines.push(
+            `| ${c.highlight.title.slice(0, 45)} | ${stat.graphSlug} | ${stat.type} | ${val} | ${c.evidenceTier} |`
+          );
+        }
+      }
+      lines.push("");
+      lines.push(
+        `To apply: \`npx tsx scripts/apply-ingestion.ts ${stagingPath}\``
+      );
+      lines.push("");
+    }
+  } catch {
+    // Best-effort staging display
+  }
+}
+
+// Source health
 lines.push("### Sources");
 lines.push("");
-const sources = Object.entries(digest.stats.bySource).sort(([, a], [, b]) => b - a);
-lines.push(sources.map(([src, count]) => `${src}: ${count}`).join(" | "));
+const ok = digest.sources.succeeded ?? [];
+const fail = digest.sources.failed ?? [];
+lines.push(`**OK** (${ok.length}): ${ok.join(", ") || "none"}`);
+if (fail.length > 0) {
+  lines.push(`**Failed** (${fail.length}): ${fail.join(", ")}`);
+}
+
+// Meta file source health details
+if (metaPath && fs.existsSync(metaPath)) {
+  try {
+    const meta = JSON.parse(fs.readFileSync(metaPath, "utf-8"));
+    if (meta.sources) {
+      lines.push("");
+      lines.push("| Source | Status | Items | Duration |");
+      lines.push("|:-------|:------:|------:|---------:|");
+      for (const [name, info] of Object.entries(meta.sources) as any) {
+        const status = info.status === "ok" ? "\u2705" : "\u274c";
+        lines.push(
+          `| ${name} | ${status} | ${info.items ?? 0} | ${info.durationMs ?? "-"}ms |`
+        );
+      }
+    }
+  } catch {
+    // Best-effort meta display
+  }
+}
+
 lines.push("");
-
-// Footer
 lines.push("---");
-lines.push("Merge to accept this digest, or close to discard. _Generated by GitHub Actions._");
+lines.push(
+  "Merge to accept this digest, or close to discard. _Generated by GitHub Actions._"
+);
 
-console.log(lines.join("\n"));
+// Cap output at ~3000 chars
+const output = lines.join("\n");
+if (output.length > 3000) {
+  console.log(output.slice(0, 2950) + "\n\n_[truncated]_");
+} else {
+  console.log(output);
+}

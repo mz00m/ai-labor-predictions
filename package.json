@@ -9,7 +9,18 @@
     "lint": "next lint",
     "digest": "tsx scripts/generate-digest.ts",
     "digest:14": "tsx scripts/generate-digest.ts --days 14",
-    "ingest": "tsx scripts/ingest-source.ts"
+    "digest:fetch": "tsx scripts/fetch-sources.ts",
+    "digest:synthesize": "tsx scripts/synthesize-digest.ts",
+    "digest:pipeline": "tsx scripts/fetch-sources.ts && tsx scripts/synthesize-digest.ts",
+    "digest:dry-run": "tsx scripts/fetch-sources.ts && tsx scripts/synthesize-digest.ts --dry-run",
+    "ingest": "tsx scripts/ingest-source.ts",
+    "ingest:from-digest": "tsx scripts/ingest-from-digest.ts",
+    "ingest:apply": "tsx scripts/apply-ingestion.ts",
+    "backfill:content": "tsx scripts/backfill-source-content.ts --skip-existing",
+    "backfill:content:dry-run": "tsx scripts/backfill-source-content.ts --dry-run",
+    "signals:fetch": "python3 scripts/signals/fetch_all.py",
+    "signals:calc": "python3 scripts/signals/calculate_metrics.py",
+    "signals:update": "python3 scripts/signals/fetch_all.py"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.78.0",
@@ -18,7 +29,8 @@
     "next": "^14.2.0",
     "react": "^18.3.0",
     "react-dom": "^18.3.0",
-    "recharts": "^2.12.0"
+    "recharts": "^2.12.0",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "@types/node": "^20.14.0",

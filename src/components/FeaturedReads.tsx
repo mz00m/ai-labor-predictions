@@ -10,41 +10,40 @@ interface Article {
 
 const articles: Article[] = [
   {
-    author: "jobsdata.ai",
-    title: "On Tap Intelligence: Historical Context for AI Labor Impact",
+    author: "Raimondo (NYT Opinion)",
+    title: "America Cannot Withstand the Economic Shock That's Coming",
     summary:
-      "How past technological revolutions reshaped labor — and what they tell us about AI's trajectory.",
-    date: "",
-    url: "/history",
-    accent: "border-l-amber-500",
-    internal: true,
+      "Former Commerce Secretary calls for a new grand bargain between public and private sectors to prevent AI-driven mass unemployment.",
+    date: "Mar 6",
+    url: "https://www.nytimes.com/2026/03/06/opinion/ai-labor-unemployment.html",
+    accent: "border-l-emerald-500",
   },
   {
-    author: "Thompson",
-    title: "Nobody Knows Anything",
+    author: "Anthropic (Massenkoff, McCrory)",
+    title: "Labor Market Impacts of AI: A New Measure and Early Evidence",
     summary:
-      "The knowledge vacuum around AI's effects allows speculative narratives to drive markets.",
-    date: "Feb 25",
-    url: "https://www.derekthompson.org/p/nobody-knows-anything",
-    accent: "border-l-blue-500",
+      "Introduces 'observed exposure' combining LLM capability with real usage data. No unemployment rise found — but young worker hiring is slowing in exposed jobs.",
+    date: "Mar 5",
+    url: "https://www.anthropic.com/research/labor-market-impacts",
+    accent: "border-l-purple-500",
   },
   {
-    author: "Citrini & Shah",
-    title: "The 2028 Global Intelligence Crisis",
+    author: "Chung",
+    title: "Introducing AIR: The AI Resilience Report",
     summary:
-      "AI displacement triggers a self-reinforcing loop: job losses collapse spending, forcing deeper automation.",
-    date: "Feb 22",
-    url: "https://www.citriniresearch.com/p/2028gic",
+      "The first canonical aggregator of research on how AI is impacting jobs at the occupational level — with implications and actions for job seekers.",
+    date: "Mar 4",
+    url: "https://www.linkedin.com/pulse/introducing-air-ai-resilience-report-jared-chung-gxfec",
     accent: "border-l-rose-500",
   },
   {
-    author: "Citadel",
-    title: "The 2026 Global Intelligence Crisis",
+    author: "Kinder (Brookings)",
+    title: "What Deindustrialization Did to Men, AI May Do to Women",
     summary:
-      "AI adoption follows S-curve constraints — productivity gains will boost real incomes, not cause contraction.",
-    date: "Feb 24",
-    url: "https://www.citadelsecurities.com/news-and-insights/2026-global-intelligence-crisis/",
-    accent: "border-l-emerald-500",
+      "Millions of women in clerical and customer service roles face AI exposure — echoing manufacturing's toll on men.",
+    date: "Mar 2",
+    url: "https://humanistxyz.substack.com/p/what-deindustrialization-did-to-men",
+    accent: "border-l-blue-500",
   },
 ];
 

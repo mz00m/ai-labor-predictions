@@ -1,11 +1,11 @@
 {
   "id": "displacement-total",
   "slug": "total-us-jobs-lost",
-  "title": "Total US Jobs Lost to AI as % of Labor Force",
-  "description": "Projected net jobs eliminated by AI and automation as a share of the total US civilian labor force (~168.5 million). Only data points with directly sourced figures are plotted.",
+  "title": "Estimated Net US Job Loss from AI (% of Labor Force)",
+  "description": "Projected net jobs eliminated by AI and automation as a share of the total US civilian labor force (~168.5 million). Mostly projection-based; observed employment data so far shows near-zero net displacement.",
   "category": "displacement",
   "unit": "% of US labor force",
-  "currentValue": 4,
+  "currentValue": 2.2,
   "timeHorizon": "By 2030",
   "history": [
     {
@@ -16,7 +16,8 @@
       "sourceIds": [
         "goldman-300m"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "projection"
     },
     {
       "date": "2024-04-01",
@@ -24,9 +25,10 @@
       "confidenceLow": 0.5,
       "confidenceHigh": 4.5,
       "sourceIds": [
-        "acemoglu-simple-macro"
+        "acemoglu-macro-2024"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "projection"
     },
     {
       "date": "2024-09-15",
@@ -36,7 +38,8 @@
       "sourceIds": [
         "wef-future-jobs-2024"
       ],
-      "evidenceTier": 2
+      "evidenceTier": 2,
+      "metricType": "projection"
     },
     {
       "date": "2025-01-06",
@@ -46,7 +49,8 @@
       "sourceIds": [
         "forrester-jobs-2025"
       ],
-      "evidenceTier": 2
+      "evidenceTier": 2,
+      "metricType": "survey"
     },
     {
       "date": "2025-08-01",
@@ -54,9 +58,10 @@
       "confidenceLow": 3,
       "confidenceHigh": 14,
       "sourceIds": [
-        "goldman-total-projected-2025"
+        "goldman-ai-workforce-2025"
       ],
-      "evidenceTier": 2
+      "evidenceTier": 2,
+      "metricType": "projection"
     },
     {
       "date": "2025-09-08",
@@ -66,7 +71,8 @@
       "sourceIds": [
         "pwbm-ai-productivity-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "projection"
     },
     {
       "date": "2025-10-01",
@@ -76,7 +82,8 @@
       "sourceIds": [
         "gimbel-yale-ai-labor-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "employment"
     },
     {
       "date": "2025-11-01",
@@ -86,7 +93,8 @@
       "sourceIds": [
         "nber-csuite-survey-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "survey"
     }
   ],
   "overlays": [
@@ -157,7 +165,7 @@
       "date": "2025-08-01",
       "direction": "neutral",
       "sourceIds": [
-        "goldman-total-workforce-2025"
+        "goldman-ai-workforce-2025"
       ],
       "evidenceTier": 2,
       "label": "Goldman: 2.5% of jobs at risk now; 60% of current workers in occupations from post-1940"
@@ -166,7 +174,7 @@
       "date": "2025-09-20",
       "direction": "down",
       "sourceIds": [
-        "ramp-freelance-total-2025"
+        "ramp-freelance-velocity-2025"
       ],
       "evidenceTier": 1,
       "label": "Ramp: 50%+ of businesses using freelancers in 2022 have stopped entirely"
@@ -197,6 +205,24 @@
       ],
       "evidenceTier": 2,
       "label": "Brookings: 6.1M workers (4.2%) face high AI exposure + low adaptive capacity"
+    },
+    {
+      "date": "2026-02-15",
+      "direction": "up",
+      "sourceIds": [
+        "yotzov-firm-data-ai-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Yotzov et al.: Executives predict 0.7% employment reduction in 3 years"
+    },
+    {
+      "date": "2026-03-05",
+      "direction": "down",
+      "sourceIds": [
+        "anthropic-labor-market-impacts-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Anthropic: Young workers (22–25) see 14% hiring rate drop in AI-exposed occupations"
     }
   ],
   "sources": [
@@ -207,7 +233,7 @@
       "publisher": "Goldman Sachs",
       "evidenceTier": 1,
       "datePublished": "2023-03-26",
-      "excerpt": "Roughly two-thirds of current jobs are exposed to some degree of AI automation; generative AI could substitute up to one-fourth of current work."
+      "excerpt": "Generative AI could substitute up to one-fourth of current work. Net impact: estimated 3-7% of total employment displaced after accounting for task reallocation and new job creation."
     },
     {
       "id": "oecd-employment-2023",
@@ -228,7 +254,7 @@
       "excerpt": "Almost 40% of global employment is exposed to AI; in advanced economies, roughly 60% of workers face some degree of AI impact."
     },
     {
-      "id": "acemoglu-simple-macro",
+      "id": "acemoglu-macro-2024",
       "title": "The Simple Macroeconomics of AI",
       "url": "https://www.nber.org/papers/w32487",
       "publisher": "NBER (Acemoglu)",
@@ -343,7 +369,7 @@
       "excerpt": "Half of workers in exposed occupations have used ChatGPT; younger, male, higher-achieving workers lead adoption. Women 16pp less likely to use for work."
     },
     {
-      "id": "goldman-total-workforce-2025",
+      "id": "goldman-ai-workforce-2025",
       "title": "How Will AI Affect the Global Workforce?",
       "url": "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce",
       "publisher": "Goldman Sachs Research",
@@ -352,16 +378,7 @@
       "excerpt": "2.5% of US employment at risk of displacement from current AI use cases; 60% of current US workers in occupations that didn't exist in 1940."
     },
     {
-      "id": "goldman-total-projected-2025",
-      "title": "How Will AI Affect the Global Workforce?",
-      "url": "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce",
-      "publisher": "Goldman Sachs Research",
-      "evidenceTier": 2,
-      "datePublished": "2025-08-01",
-      "excerpt": "AI could displace 6-7% of the US workforce if widely adopted. We remain skeptical that AI will lead to large employment reductions over the next decade."
-    },
-    {
-      "id": "ramp-freelance-total-2025",
+      "id": "ramp-freelance-velocity-2025",
       "title": "AI Labor Market Impact: Freelancers",
       "url": "https://ramp.com/velocity/ai-labor-market-impact-freelancers",
       "publisher": "Ramp",
@@ -377,6 +394,24 @@
       "evidenceTier": 2,
       "datePublished": "2026-01-21",
       "excerpt": "6.1 million workers (4.2% of the workforce in our sample) work in occupations that are both highly exposed and where workers have low expected adaptive capacity."
+    },
+    {
+      "id": "anthropic-labor-market-impacts-2026",
+      "title": "Labor market impacts of AI: A new measure and early evidence",
+      "url": "https://cdn.sanity.io/files/4zrzovbb/website/dc7bcd0224644fce97cecb7f9e68dcd8434b35f1.pdf",
+      "publisher": "Anthropic (Massenkoff, McCrory)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-05",
+      "excerpt": "The averaged estimate in the post-ChatGPT era is a 14% drop in the job finding rate compared to that in 2022 in the exposed occupations, although this is just barely statistically significant. (There is no such decrease for workers older than 25.)"
+    },
+    {
+      "id": "yotzov-firm-data-ai-2026",
+      "title": "Firm Data on AI",
+      "url": "https://www.nber.org/papers/w34836",
+      "publisher": "NBER (Yotzov, Barrero, Bloom, Bunn, Davis et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-15",
+      "excerpt": "Looking ahead three years, executives predict a 1.4 percent productivity boost and 0.8 percent output increase alongside a 0.7 percent employment reduction—while employees forecast a 0.5 percent employment increase."
     }
   ]
 }

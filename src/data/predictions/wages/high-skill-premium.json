@@ -5,7 +5,7 @@
   "description": "Projected change in wages for workers with strong AI/ML skills relative to the median, measuring the emerging 'AI premium' in compensation.",
   "category": "wages",
   "unit": "% wage premium over median",
-  "currentValue": 30,
+  "currentValue": 23,
   "timeHorizon": "By 2030",
   "history": [
     {
@@ -16,7 +16,8 @@
       "sourceIds": [
         "indeed-ai-salaries-2023"
       ],
-      "evidenceTier": 3
+      "evidenceTier": 3,
+      "metricType": "postings"
     },
     {
       "date": "2024-01-15",
@@ -26,7 +27,8 @@
       "sourceIds": [
         "lightcast-2024"
       ],
-      "evidenceTier": 2
+      "evidenceTier": 2,
+      "metricType": "postings"
     },
     {
       "date": "2025-07-23",
@@ -36,7 +38,8 @@
       "sourceIds": [
         "lightcast-beyond-buzz-2025"
       ],
-      "evidenceTier": 2
+      "evidenceTier": 2,
+      "metricType": "postings"
     },
     {
       "date": "2025-08-01",
@@ -46,7 +49,8 @@
       "sourceIds": [
         "oecd-skills-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "employment"
     },
     {
       "date": "2025-10-15",
@@ -56,7 +60,8 @@
       "sourceIds": [
         "pwc-ai-wage-premium-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "survey"
     },
     {
       "date": "2026-01-01",
@@ -66,7 +71,8 @@
       "sourceIds": [
         "indexdev-ai-salary-2026"
       ],
-      "evidenceTier": 2
+      "evidenceTier": 2,
+      "metricType": "postings"
     },
     {
       "date": "2026-02-24",
@@ -74,7 +80,8 @@
       "sourceIds": [
         "dallas-fed-davis-ai-wages-2026"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "employment"
     }
   ],
   "overlays": [
@@ -160,10 +167,19 @@
       "label": "Fortune: AI talent commands 30% salary premium as demand outstrips supply"
     },
     {
+      "date": "2025-12-01",
+      "direction": "up",
+      "sourceIds": [
+        "revelio-labs-wage-divide-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Revelio Labs: demand for $100K+ jobs up ~150% in 2 years; K-shaped recovery"
+    },
+    {
       "date": "2026-01-01",
       "direction": "up",
       "sourceIds": [
-        "hartley-high-skill-2026"
+        "hartley-genai-labor-2026"
       ],
       "evidenceTier": 1,
       "label": "Stanford: adoption concentrated among higher-earning, college-educated workers"
@@ -194,9 +210,45 @@
       ],
       "evidenceTier": 1,
       "label": "CEPR/BIS: wage gains may accrue disproportionately to highly skilled workers"
+    },
+    {
+      "date": "2026-02-24",
+      "direction": "up",
+      "sourceIds": [
+        "dallas-fed-davis-ai-wages-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Dallas Fed: AI exposure → +0.2pp wage growth for high-experience-premium occupations"
+    },
+    {
+      "date": "2026-03-04",
+      "direction": "up",
+      "sourceIds": [
+        "cooper-cs-majors-labor-2026"
+      ],
+      "evidenceTier": 4,
+      "label": "Cooper/ACS: Early-career CS salary $90K vs $55K all grads (2024)"
+    },
+    {
+      "date": "2026-03-05",
+      "direction": "up",
+      "sourceIds": [
+        "anthropic-labor-market-impacts-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Anthropic: AI-exposed workers earn 47% more than unexposed workers"
     }
   ],
   "sources": [
+    {
+      "id": "revelio-labs-wage-divide-2025",
+      "title": "The Wage Divide is Widening Again and AI May Be to Blame",
+      "url": "https://www.reveliolabs.com/news/macro/the-wage-divide-is-widening-again-and-ai-may-be-to-blame/",
+      "publisher": "Revelio Labs",
+      "evidenceTier": 2,
+      "datePublished": "2025-12-01",
+      "excerpt": "Demand for high-wage jobs with salaries over USD $100,000 has grown by about 150% over the past two years. Meanwhile, job postings for low-wage positions have fallen steadily for nearly two years."
+    },
     {
       "id": "indeed-ai-salaries-2023",
       "title": "AI Job Postings and Salary Trends",
@@ -339,7 +391,7 @@
       "excerpt": "some occupations — such as architects, engineers, and executives — see absolute wage declines"
     },
     {
-      "id": "hartley-high-skill-2026",
+      "id": "hartley-genai-labor-2026",
       "title": "Labor Market Effects of Generative AI",
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5136877",
       "publisher": "Stanford / World Bank",
@@ -363,7 +415,25 @@
       "publisher": "Federal Reserve Bank of Dallas (J. Scott Davis)",
       "evidenceTier": 1,
       "datePublished": "2026-02-24",
-      "excerpt": "nominal average weekly wages nationwide have increased 7.5 percent, while the computer systems design sector has risen 16.7 percent"
+      "excerpt": "Nominal average weekly wages nationwide have increased 7.5 percent, while the computer systems design sector has risen 16.7 percent — a 9.2 percentage point gap reflecting the AI-skill wage premium."
+    },
+    {
+      "id": "cooper-cs-majors-labor-2026",
+      "title": "Should you still major in computer science?",
+      "url": "https://prestoncooper93.substack.com/p/should-you-still-major-in-computer",
+      "publisher": "Preston Cooper (Substack)",
+      "evidenceTier": 4,
+      "datePublished": "2026-03-04",
+      "excerpt": "The median salary for early-career CS majors was $90,000 in 2024. The median salary for all recent college graduates was just $55,000."
+    },
+    {
+      "id": "anthropic-labor-market-impacts-2026",
+      "title": "Labor market impacts of AI: A new measure and early evidence",
+      "url": "https://www.anthropic.com/research/labor-market-impacts",
+      "publisher": "Anthropic (Massenkoff, McCrory)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-05",
+      "excerpt": "Workers in the most exposed professions earn 47% more, on average, and are 16 percentage points more likely to be female"
     }
   ]
 }

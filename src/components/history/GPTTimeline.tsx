@@ -27,7 +27,7 @@ const PHASES = [
     example:
       "By 1900, electric motors were spreading across US factories but most still used shaft-and-belt power. Early adopters saw enormous gains.",
     aiNote:
-      "For AI: ChatGPT hit 100M users in 2 months; 54.6% of US adults used gen AI by 2025 (St. Louis Fed). Enterprise adoption surged from 33% to 88% in ~2 years (McKinsey). A phase that took electricity 25 years effectively completed in under 3 for AI — 10x compression of the diffusion timeline.",
+      "For AI: ChatGPT hit 100M users in 2 months; 54.6% of US adults used gen AI by 2025 (St. Louis Fed). Enterprise adoption surged from 33% to 88% in ~2 years (McKinsey). Anthropic's 2026 analysis of first-party API traffic found ~70% of US workers already have observed AI task coverage — and AI-exposed workers earn 47% more than unexposed workers, the classic early-adopter premium. A phase that took electricity 25 years effectively completed in under 3 for AI.",
     workerEffect: "Spreads across sectors; high-skill workers benefit most",
   },
   {
@@ -40,7 +40,7 @@ const PHASES = [
     example:
       "Power looms destroyed 250,000+ handloom weaving jobs. Telephone operators, bank tellers, and typists were decimated by computers.",
     aiNote:
-      "For AI: displacement signals are already visible — content writing, customer service, and junior coding roles are seeing wage pressure in 2024–2025. At 10x speed, the acute displacement window that historically lasted decades could compress to 1–3 years.",
+      "For AI: displacement signals are emerging but not yet systematic. Anthropic (2026) found no statistically significant unemployment increase for highly AI-exposed workers (+0.20pp), but customer service reps show 70.1% and programmers 74.5% observed task exposure. Suggestive evidence that hiring of younger workers has slowed in exposed occupations. The acute displacement window that historically lasted decades could compress to 1–3 years.",
     workerEffect:
       "Routine-task workers face wage pressure and job loss",
   },

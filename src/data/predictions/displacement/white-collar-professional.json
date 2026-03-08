@@ -5,9 +5,18 @@
   "description": "Projected percentage of legal, accounting, and financial analyst roles significantly restructured or eliminated by AI by 2030. Only data points where sources directly state a displacement or restructuring figure are plotted.",
   "category": "displacement",
   "unit": "% of roles displaced",
-  "currentValue": 30,
+  "currentValue": 6.8,
   "timeHorizon": "By 2030",
   "history": [
+    {
+      "date": "2025-02-10",
+      "value": 1.2,
+      "sourceIds": [
+        "bls-mlr-ai-employment-projections-2025"
+      ],
+      "evidenceTier": 1,
+      "metricType": "employment"
+    },
     {
       "date": "2025-07-01",
       "value": 21.5,
@@ -16,7 +25,8 @@
       "sourceIds": [
         "oecd-white-collar-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "projection"
     },
     {
       "date": "2025-08-01",
@@ -24,9 +34,10 @@
       "confidenceLow": 1,
       "confidenceHigh": 5,
       "sourceIds": [
-        "goldman-ai-displacement-risk-2025"
+        "goldman-ai-workforce-2025"
       ],
-      "evidenceTier": 2
+      "evidenceTier": 2,
+      "metricType": "projection"
     },
     {
       "date": "2025-10-22",
@@ -36,7 +47,8 @@
       "sourceIds": [
         "gartner-ai-layoffs-2025"
       ],
-      "evidenceTier": 3
+      "evidenceTier": 3,
+      "metricType": "survey"
     },
     {
       "date": "2025-11-01",
@@ -46,7 +58,8 @@
       "sourceIds": [
         "worldbank-liu-wang-yu-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "projection"
     },
     {
       "date": "2025-12-15",
@@ -56,7 +69,8 @@
       "sourceIds": [
         "nber-ai-legal-impact-2025"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "employment"
     },
     {
       "date": "2026-01-15",
@@ -66,7 +80,8 @@
       "sourceIds": [
         "hbr-ai-potential-layoffs-2026"
       ],
-      "evidenceTier": 1
+      "evidenceTier": 1,
+      "metricType": "survey"
     }
   ],
   "overlays": [
@@ -74,7 +89,7 @@
       "date": "2023-03-26",
       "direction": "down",
       "sourceIds": [
-        "goldman-white-collar-2023"
+        "goldman-300m"
       ],
       "evidenceTier": 1,
       "label": "Goldman Sachs: Administrative and legal professions face highest exposure at 46%"
@@ -134,6 +149,15 @@
       "label": "WSJ: White-collar workers starting to feel the AI squeeze"
     },
     {
+      "date": "2025-01-08",
+      "direction": "down",
+      "sourceIds": [
+        "workday-ai-skills-revolution-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Workday Davos: Top AI uses are data analysis (51%), fraud (43%), HR (39%)"
+    },
+    {
       "date": "2025-01-15",
       "direction": "down",
       "sourceIds": [
@@ -150,6 +174,15 @@
       ],
       "evidenceTier": 1,
       "label": "NBER: 1 SD increase in AI exposure reduces related skill demand by 2%"
+    },
+    {
+      "date": "2025-02-10",
+      "direction": "up",
+      "sourceIds": [
+        "bls-mlr-ai-employment-projections-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "BLS MLR: Financial advisor employment projected to grow 17.1% (2023-33)"
     },
     {
       "date": "2025-02-15",
@@ -200,7 +233,7 @@
       "date": "2025-09-15",
       "direction": "neutral",
       "sourceIds": [
-        "del-rio-chanona-white-collar-2025"
+        "del-rio-chanona-ai-jobs-2025"
       ],
       "evidenceTier": 1,
       "label": "ILO review: AI exposure highest in high-wage jobs; substitution in writing/translation"
@@ -222,6 +255,15 @@
       ],
       "evidenceTier": 2,
       "label": "Indeed/CNBC: 26% of jobs face radical transformation; paralegals 80% automation risk"
+    },
+    {
+      "date": "2025-11-01",
+      "direction": "down",
+      "sourceIds": [
+        "fri-white-collar-expert-survey-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "FRI: experts predict 2% white-collar job growth 2025-2030 vs 6.8% trend; 25% expect losses"
     },
     {
       "date": "2025-11-20",
@@ -251,6 +293,24 @@
       "label": "Deloitte: AI and human collaboration can close talent gaps and speed upskilling"
     },
     {
+      "date": "2026-01-14",
+      "direction": "up",
+      "sourceIds": [
+        "eig-entry-level-ai-displacement-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "EIG: No evidence junior AI-exposed roles declined more than senior roles"
+    },
+    {
+      "date": "2026-01-14",
+      "direction": "down",
+      "sourceIds": [
+        "workday-ai-productivity-rework-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Workday: 89% of orgs have <50% of roles updated for AI"
+    },
+    {
       "date": "2026-01-15",
       "direction": "down",
       "sourceIds": [
@@ -270,7 +330,7 @@
     },
     {
       "date": "2026-01-21",
-      "direction": "up",
+      "direction": "down",
       "sourceIds": [
         "althoff-reichardt-task-specific-technical-2026"
       ],
@@ -278,27 +338,99 @@
       "label": "Althoff & Reichardt: Admin roles (financial clerks) see large employment decline"
     },
     {
-      "date": "2025-11-01",
-      "direction": "down",
-      "sourceIds": [
-        "fri-white-collar-expert-survey-2025"
-      ],
-      "evidenceTier": 2,
-      "label": "FRI: experts predict 2% white-collar job growth 2025-2030 vs 6.8% trend; 25% expect losses"
-    },
-    {
       "date": "2026-02-01",
-      "direction": "up",
+      "direction": "down",
       "sourceIds": [
         "lightcast-fault-lines-2026"
       ],
       "evidenceTier": 2,
       "label": "Lightcast: Exec assistants, editors, interpreters 70%+ AI skill exposure"
+    },
+    {
+      "date": "2026-02-05",
+      "direction": "down",
+      "sourceIds": [
+        "bls-jolts-december-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "BLS JOLTS: Prof/biz services openings down 21.8% (-284K)"
+    },
+    {
+      "date": "2026-02-05",
+      "direction": "down",
+      "sourceIds": [
+        "bls-jolts-december-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "BLS JOLTS: Financial activities openings down 25.1% (-86K)"
+    },
+    {
+      "date": "2026-02-18",
+      "direction": "down",
+      "sourceIds": [
+        "cio-it-jobs-ai-skills-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "CIO/WEF: 40% of employers plan to reduce staff as AI skills become redundant"
+    },
+    {
+      "date": "2026-03-01",
+      "direction": "down",
+      "sourceIds": [
+        "wang-neubig-agent-benchmarks-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Wang et al.: Legal 70%, Management 88% digital work — high automation potential"
+    },
+    {
+      "date": "2026-03-02",
+      "direction": "down",
+      "sourceIds": [
+        "causalinf-research-publishing-ai-2026"
+      ],
+      "evidenceTier": 4,
+      "label": "CausalInf: Romance novelist reports 10-20x cognitive output increase with LLMs"
+    },
+    {
+      "date": "2026-03-02",
+      "direction": "down",
+      "sourceIds": [
+        "causalinf-research-publishing-ai-2026"
+      ],
+      "evidenceTier": 4,
+      "label": "CausalInf: Project APE produces 204 fully autonomous economics papers, 60 in one week"
+    },
+    {
+      "date": "2026-03-02",
+      "direction": "down",
+      "sourceIds": [
+        "causalinf-research-publishing-ai-2026"
+      ],
+      "evidenceTier": 4,
+      "label": "CausalInf: AI paper win rate vs human papers improves from 4.7% to 7.6%"
+    },
+    {
+      "date": "2026-03-05",
+      "direction": "neutral",
+      "sourceIds": [
+        "anthropic-labor-market-impacts-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Anthropic: Most AI-exposed workers are educated, higher-paid — no unemployment rise found"
+    },
+    {
+      "date": "2026-03-07",
+      "direction": "down",
+      "sourceIds": [
+        "wsj-ai-military-iran-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "WSJ: U.S. Army targeting ops achieved with 20 staff vs. 2,000 pre-AI (99% reduction)"
     }
   ],
   "sources": [
     {
-      "id": "goldman-white-collar-2023",
+      "id": "goldman-300m",
       "title": "The Potentially Large Effects of AI on Economic Growth",
       "url": "https://www.goldmansachs.com/insights/articles/generative-ai-could-raise-global-gdp-by-7-percent",
       "publisher": "Goldman Sachs",
@@ -323,6 +455,15 @@
       "evidenceTier": 1,
       "datePublished": "2024-01-15",
       "excerpt": "~80% of the US workforce could have at least 10% of their tasks affected by GPTs. Legal, accounting, and financial analysis are among the highest-exposure occupations."
+    },
+    {
+      "id": "workday-ai-skills-revolution-2025",
+      "title": "Elevating Human Potential: The AI Skills Revolution",
+      "url": "https://forms.workday.com/en-us/reports/elevating-human-potential/form.html",
+      "publisher": "Workday / Hanover Research",
+      "evidenceTier": 2,
+      "datePublished": "2025-01-08",
+      "excerpt": "top three uses of AI today. 51% Data analysis. 43% Fraud detection and security monitoring. 39% Human resources and recruiting processes"
     },
     {
       "id": "brookings-white-collar-2024",
@@ -420,7 +561,7 @@
       "publisher": "World Bank (Liu, Wang, Yu)",
       "evidenceTier": 1,
       "datePublished": "2025-11-01",
-      "excerpt": "Job postings for high-AI-substitution occupations fell 12% relative to low-substitution roles post-ChatGPT; effect grew from 6% in year one to 18% by year three. Based on 285 million Lightcast job postings."
+      "excerpt": "Job postings for high-AI-substitution occupations fell 18% relative to low-substitution roles by year three post-ChatGPT. This measures posting-level demand shifts in white-collar occupations."
     },
     {
       "id": "noy-zhang-science-2023",
@@ -450,7 +591,7 @@
       "excerpt": "High-skill freelancers disproportionately affected by AI — top performers were impacted most, contradicting conventional wisdom that expertise insulates workers."
     },
     {
-      "id": "del-rio-chanona-white-collar-2025",
+      "id": "del-rio-chanona-ai-jobs-2025",
       "title": "AI and jobs: A review of theory, estimates, and evidence",
       "url": "https://arxiv.org/abs/2509.15265",
       "publisher": "arXiv (ILO-affiliated researchers)",
@@ -477,7 +618,7 @@
       "excerpt": "Gartner projects 50% of middle management positions will be eliminated or restructured as AI handles reporting, coordination, and performance monitoring tasks."
     },
     {
-      "id": "goldman-ai-displacement-risk-2025",
+      "id": "goldman-ai-workforce-2025",
       "title": "How Will AI Affect the Global Workforce?",
       "url": "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce",
       "publisher": "Goldman Sachs Research",
@@ -576,6 +717,87 @@
       "datePublished": "2026-02-01",
       "dateAdded": "2026-03-02",
       "excerpt": "the jobs most vulnerable to AI are elsewhere—including executive assistants, editors, and interpreters/translators (where over 70% of their skills are exposed to AI)."
+    },
+    {
+      "id": "causalinf-research-publishing-ai-2026",
+      "title": "Claude Code 27: Research and Publishing Are Now Two Different Things",
+      "url": "https://causalinf.substack.com/p/claude-code-27-research-and-publishing",
+      "publisher": "CausalInf Substack (Scott Cunningham)",
+      "evidenceTier": 4,
+      "datePublished": "2026-03-02",
+      "excerpt": "Project APE — Autonomous Policy Evaluation... has produced 204 papers — with 60 added in a single week... These are fully automated papers, like a version 1.0, with no human iteration whatsoever."
+    },
+    {
+      "id": "wang-neubig-agent-benchmarks-2026",
+      "title": "How Well Does Agent Development Reflect Real-World Work?",
+      "url": "https://arxiv.org/abs/2603.01203",
+      "publisher": "Carnegie Mellon / Stanford (Wang, Neubig, Fried, Yang et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-01",
+      "excerpt": "Management, Legal, and Architecture and Engineering exhibit high ratios of digital work (88%, 70%, and 71%, respectively). Management and Legal are sparsely covered by existing benchmarks (1.4%, 0.3% among all 19179 examples)."
+    },
+    {
+      "id": "cio-it-jobs-ai-skills-2026",
+      "title": "State of IT jobs: AI sparks rapidly changing market for skills",
+      "url": "https://www.cio.com/article/4134254/state-of-it-jobs-ai-sparks-rapidly-changing-market-for-skills.html",
+      "publisher": "CIO.com",
+      "evidenceTier": 3,
+      "datePublished": "2026-02-18",
+      "excerpt": "40% plan to reduce staff as skills become redundant"
+    },
+    {
+      "id": "bls-mlr-ai-employment-projections-2025",
+      "title": "Incorporating AI impacts in BLS employment projections: occupational case studies",
+      "url": "https://www.bls.gov/opub/mlr/2025/article/incorporating-ai-impacts-in-bls-employment-projections.htm",
+      "publisher": "U.S. Bureau of Labor Statistics (Monthly Labor Review)",
+      "evidenceTier": 1,
+      "datePublished": "2025-02-10",
+      "excerpt": "Employment of personal financial advisors is projected to grow 17.1 percent from 2023 to 2033, much faster than average. Employment of paralegals and legal assistants is projected to grow only 1.2 percent, slower than the average for all occupations."
+    },
+    {
+      "id": "workday-ai-productivity-rework-2026",
+      "title": "Beyond Productivity: Measuring the Real Value of AI",
+      "url": "https://investor.workday.com/news-and-events/press-releases/news-details/2026/New-Workday-Research-Companies-Are-Leaving-AI-Gains-on-the-Table/default.aspx",
+      "publisher": "Workday / Hanover Research",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-14",
+      "excerpt": "In most organizations (89%), fewer than half of roles have been updated to reflect AI capabilities."
+    },
+    {
+      "id": "eig-entry-level-ai-displacement-2026",
+      "title": "Looking for the Ladder: Is AI Impacting Entry-Level Jobs?",
+      "url": "https://eig.org/wp-content/uploads/2026/01/TAWP-Iscenko-Millet.pdf",
+      "publisher": "Economic Innovation Group (Iscenko & Curto Millet)",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-14",
+      "excerpt": "There is no evidence that job postings for junior roles within occupations most exposed to AI have declined more than postings for senior positions. Postings for both levels of seniority have been falling roughly in parallel since their peak in Spring 2022, with the decline in junior positions stabilizing faster."
+    },
+    {
+      "id": "anthropic-labor-market-impacts-2026",
+      "title": "Labor market impacts of AI: A new measure and early evidence",
+      "url": "https://cdn.sanity.io/files/4zrzovbb/website/dc7bcd0224644fce97cecb7f9e68dcd8434b35f1.pdf",
+      "publisher": "Anthropic (Massenkoff, McCrory)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-05",
+      "excerpt": "Workers in the most exposed professions are more likely to be older, female, more educated, and higher-paid. They earn 47% more, on average."
+    },
+    {
+      "id": "bls-jolts-december-2025",
+      "title": "Job Openings and Labor Turnover — December 2025",
+      "url": "https://www.bls.gov/news.release/jolts.nr0.htm",
+      "publisher": "U.S. Bureau of Labor Statistics",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-05",
+      "excerpt": "Professional & business services openings down 21.8% (-284,000). Financial activities openings down 25.1% (-86,000)."
+    },
+    {
+      "id": "wsj-ai-military-iran-2026",
+      "title": "How AI Is Turbocharging the War in Iran",
+      "url": "https://www.wsj.com/tech/ai/how-ai-is-turbocharging-the-war-in-iran-aca59002",
+      "publisher": "The Wall Street Journal",
+      "evidenceTier": 3,
+      "datePublished": "2026-03-07",
+      "excerpt": "The U.S. Army's 18th Airborne Corps, using software from data company Palantir Technologies in a continuing string of exercises dubbed Scarlet Dragon, matched its own record from Iraq as the military's most efficient targeting operation ever, according to Emelia Probasco, a senior fellow at Georgetown University's Center for Security and Emerging Technology. Thanks to AI, the corps achieved that with only 20 people, compared with more than 2,000 staffers employed in Iraq, she said."
     }
   ]
 }
