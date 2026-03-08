@@ -25,16 +25,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: "https://jobsdata.ai/about",
+      url: "https://jobsdata.ai/signals/firm-response",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: "https://jobsdata.ai/j-curve",
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.6,
+      priority: 0.7,
     },
     {
       url: "https://jobsdata.ai/history",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
+    },
+    {
+      url: "https://jobsdata.ai/about",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.6,
     },
     ...predictionRoutes,
   ];

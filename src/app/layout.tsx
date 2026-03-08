@@ -4,19 +4,28 @@ import Navbar from "@/components/Navbar";
 import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
-  title: "Early Signals of AI Impact",
+  title: {
+    default: "Early Signals of AI Impact — jobsdata.ai",
+    template: "%s — jobsdata.ai",
+  },
   description:
     "300+ sources tracking AI's impact on jobs, wages, and adoption. AI adoption is accelerating, productivity is climbing, and jobs are changing faster than they're disappearing.",
   metadataBase: new URL("https://jobsdata.ai"),
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Early Signals of AI Impact",
     description:
       "300+ sources, one pattern: AI adoption is accelerating, productivity is climbing, and jobs are changing faster than they're disappearing.",
     type: "website",
     siteName: "Early Signals of AI Impact",
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
+    site: "@mattzieger",
+    creator: "@mattzieger",
     title: "Early Signals of AI Impact",
     description:
       "300+ sources, one pattern: AI adoption is accelerating, productivity is climbing, and jobs are changing faster than they're disappearing.",
