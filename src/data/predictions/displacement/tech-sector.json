@@ -5,9 +5,19 @@
   "description": "Projected percentage of current tech sector jobs that will be automated or significantly restructured by AI by 2030. Only data points where sources directly state a displacement figure are plotted.",
   "category": "displacement",
   "unit": "% of jobs displaced",
-  "currentValue": 13,
+  "currentValue": 2.0,
   "timeHorizon": "By 2030",
   "history": [
+    {
+      "date": "2024-02-20",
+      "value": 22,
+      "sourceIds": [
+        "indeed-tech-postings-feb-2024"
+      ],
+      "evidenceTier": 2,
+      "dataType": "observed",
+      "metricType": "postings"
+    },
     {
       "date": "2024-03-15",
       "value": 0,
@@ -33,6 +43,16 @@
       "metricType": "employment"
     },
     {
+      "date": "2024-11-29",
+      "value": 16.5,
+      "sourceIds": [
+        "indeed-sw-dev-postings-2025"
+      ],
+      "evidenceTier": 2,
+      "dataType": "observed",
+      "metricType": "postings"
+    },
+    {
       "date": "2025-01-20",
       "value": 14,
       "confidenceLow": 8,
@@ -45,24 +65,14 @@
       "metricType": "postings"
     },
     {
-      "date": "2024-02-20",
-      "value": 22,
+      "date": "2025-02-10",
+      "value": 0,
       "sourceIds": [
-        "indeed-tech-postings-feb-2024"
+        "bls-mlr-ai-employment-projections-2025"
       ],
-      "evidenceTier": 2,
-      "dataType": "observed",
-      "metricType": "postings"
-    },
-    {
-      "date": "2024-11-29",
-      "value": 16.5,
-      "sourceIds": [
-        "indeed-sw-dev-postings-2025"
-      ],
-      "evidenceTier": 2,
-      "dataType": "observed",
-      "metricType": "postings"
+      "evidenceTier": 1,
+      "dataType": "projected",
+      "metricType": "projection"
     },
     {
       "date": "2025-07-30",
@@ -85,16 +95,6 @@
       "evidenceTier": 1,
       "dataType": "observed",
       "metricType": "employment"
-    },
-    {
-      "date": "2025-02-10",
-      "value": 0,
-      "sourceIds": [
-        "bls-mlr-ai-employment-projections-2025"
-      ],
-      "evidenceTier": 1,
-      "dataType": "projected",
-      "metricType": "projection"
     },
     {
       "date": "2026-02-10",
@@ -203,6 +203,42 @@
       "label": "Acemoglu: ~5% of tasks fully automatable; job impact more modest than claimed"
     },
     {
+      "date": "2024-06-01",
+      "direction": "up",
+      "sourceIds": [
+        "gambacorta-codefuse-2024"
+      ],
+      "evidenceTier": 1,
+      "label": "Gambacorta et al.: CodeFuse → 55% increase in code output at Ant Group"
+    },
+    {
+      "date": "2024-07-01",
+      "direction": "down",
+      "sourceIds": [
+        "cooper-cs-majors-labor-2026"
+      ],
+      "evidenceTier": 4,
+      "label": "CS grads: 7.2% unemployed vs 4.5% overall (2.7pp gap)"
+    },
+    {
+      "date": "2024-09-01",
+      "direction": "up",
+      "sourceIds": [
+        "yeverechyahu-copilot-languages-2024"
+      ],
+      "evidenceTier": 1,
+      "label": "Yeverechyahu et al.: GitHub Copilot → 37-55% increase in commits"
+    },
+    {
+      "date": "2024-10-01",
+      "direction": "up",
+      "sourceIds": [
+        "paradis-google-ai-coding-2024"
+      ],
+      "evidenceTier": 2,
+      "label": "Paradis et al. (Google): 21% reduction in coding time per task"
+    },
+    {
       "date": "2025-01-06",
       "direction": "down",
       "sourceIds": [
@@ -237,6 +273,15 @@
       ],
       "evidenceTier": 1,
       "label": "Alphabet: AI tools reduced need for certain engineering and support roles"
+    },
+    {
+      "date": "2025-02-10",
+      "direction": "down",
+      "sourceIds": [
+        "bls-ooh-programmer-decline-2023-2033"
+      ],
+      "evidenceTier": 1,
+      "label": "BLS OOH: Computer programmer employment projected to decline 9.6% (2023-2033)"
     },
     {
       "date": "2025-06-01",
@@ -329,13 +374,22 @@
       "label": "Dallas Fed: young worker share fell 0.9pp"
     },
     {
+      "date": "2026-01-10",
+      "direction": "down",
+      "sourceIds": [
+        "bls-programmer-projections-2034"
+      ],
+      "evidenceTier": 1,
+      "label": "BLS: Computer programmer roles projected to decline further 6% (2024-2034)"
+    },
+    {
       "date": "2026-01-15",
       "direction": "down",
       "sourceIds": [
         "cognizant-new-work-2026"
       ],
       "evidenceTier": 2,
-      "label": "Cognizant: computer/math roles 67% task exposure \u2014 second highest of all categories"
+      "label": "Cognizant: computer/math roles 67% task exposure — second highest of all categories"
     },
     {
       "date": "2026-01-15",
@@ -354,6 +408,24 @@
       ],
       "evidenceTier": 2,
       "label": "Indeed: Tech postings 34% below pre-pandemic; AI tech postings 45% above"
+    },
+    {
+      "date": "2026-02-18",
+      "direction": "up",
+      "sourceIds": [
+        "cio-it-jobs-ai-skills-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "CIO/Survey: 37% of tech professionals restructured due to gen AI in past 2 years"
+    },
+    {
+      "date": "2026-02-18",
+      "direction": "down",
+      "sourceIds": [
+        "cio-it-jobs-ai-skills-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "CIO/Robert Half: 61% of IT leaders plan to increase permanent headcount in H1 2026"
     },
     {
       "date": "2026-02-24",
@@ -389,25 +461,7 @@
         "wang-neubig-agent-benchmarks-2026"
       ],
       "evidenceTier": 1,
-      "label": "Wang et al.: AI development heavily concentrated on CS/Math \u2014 7.6% of employment"
-    },
-    {
-      "date": "2026-02-18",
-      "direction": "up",
-      "sourceIds": [
-        "cio-it-jobs-ai-skills-2026"
-      ],
-      "evidenceTier": 3,
-      "label": "CIO/Survey: 37% of tech professionals restructured due to gen AI in past 2 years"
-    },
-    {
-      "date": "2026-02-18",
-      "direction": "down",
-      "sourceIds": [
-        "cio-it-jobs-ai-skills-2026"
-      ],
-      "evidenceTier": 3,
-      "label": "CIO/Robert Half: 61% of IT leaders plan to increase permanent headcount in H1 2026"
+      "label": "Wang et al.: AI development heavily concentrated on CS/Math — 7.6% of employment"
     },
     {
       "date": "2026-03-04",
@@ -443,7 +497,7 @@
         "challenger-ai-layoffs-feb-2026"
       ],
       "evidenceTier": 2,
-      "label": "Challenger: Tech layoffs up 51% YoY in Jan\u2013Feb 2026; AI cited as primary driver"
+      "label": "Challenger: Tech layoffs up 51% YoY in Jan–Feb 2026; AI cited as primary driver"
     },
     {
       "date": "2026-03-05",
@@ -453,60 +507,6 @@
       ],
       "evidenceTier": 1,
       "label": "Anthropic: Programmers highest AI exposure (74.5%) but no unemployment impact detected"
-    },
-    {
-      "date": "2024-09-01",
-      "direction": "up",
-      "sourceIds": [
-        "yeverechyahu-copilot-languages-2024"
-      ],
-      "evidenceTier": 1,
-      "label": "Yeverechyahu et al.: GitHub Copilot \u2192 37-55% increase in commits"
-    },
-    {
-      "date": "2024-06-01",
-      "direction": "up",
-      "sourceIds": [
-        "gambacorta-codefuse-2024"
-      ],
-      "evidenceTier": 1,
-      "label": "Gambacorta et al.: CodeFuse \u2192 55% increase in code output at Ant Group"
-    },
-    {
-      "date": "2024-10-01",
-      "direction": "up",
-      "sourceIds": [
-        "paradis-google-ai-coding-2024"
-      ],
-      "evidenceTier": 2,
-      "label": "Paradis et al. (Google): 21% reduction in coding time per task"
-    },
-    {
-      "date": "2025-02-10",
-      "direction": "down",
-      "sourceIds": [
-        "bls-ooh-programmer-decline-2023-2033"
-      ],
-      "evidenceTier": 1,
-      "label": "BLS OOH: Computer programmer employment projected to decline 9.6% (2023-2033)"
-    },
-    {
-      "date": "2026-01-10",
-      "direction": "down",
-      "sourceIds": [
-        "bls-programmer-projections-2034"
-      ],
-      "evidenceTier": 1,
-      "label": "BLS: Computer programmer roles projected to decline further 6% (2024-2034)"
-    },
-    {
-      "date": "2024-07-01",
-      "direction": "down",
-      "sourceIds": [
-        "cooper-cs-majors-labor-2026"
-      ],
-      "evidenceTier": 4,
-      "label": "CS grads: 7.2% unemployed vs 4.5% overall (2.7pp gap)"
     }
   ],
   "sources": [
@@ -548,7 +548,7 @@
     },
     {
       "id": "brookings-2024",
-      "title": "New data show no AI jobs apocalypse \u2014 for now",
+      "title": "New data show no AI jobs apocalypse — for now",
       "url": "https://www.brookings.edu/articles/new-data-show-no-ai-jobs-apocalypse-for-now/",
       "publisher": "Brookings Institution",
       "evidenceTier": 2,
@@ -582,7 +582,7 @@
     },
     {
       "id": "google-10k-2024",
-      "title": "Alphabet Inc. 2024 10-K \u2014 Workforce & AI Automation Disclosures",
+      "title": "Alphabet Inc. 2024 10-K — Workforce & AI Automation Disclosures",
       "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001652044&type=10-K",
       "publisher": "Alphabet (SEC Filing)",
       "evidenceTier": 1,
@@ -591,7 +591,7 @@
     },
     {
       "id": "meta-10k-2024",
-      "title": "Meta Platforms 2024 10-K \u2014 AI Efficiency & Headcount",
+      "title": "Meta Platforms 2024 10-K — AI Efficiency & Headcount",
       "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001326801&type=10-K",
       "publisher": "Meta Platforms (SEC Filing)",
       "evidenceTier": 1,
@@ -708,21 +708,21 @@
     },
     {
       "id": "bls-programmer-employment-observed",
-      "title": "BLS Occupational Employment Statistics: Computer Programmers \u2014 Observed Decline",
+      "title": "BLS Occupational Employment Statistics: Computer Programmers — Observed Decline",
       "url": "https://www.bls.gov/oes/current/oes151251.htm",
       "publisher": "Bureau of Labor Statistics",
       "evidenceTier": 1,
       "datePublished": "2024-11-01",
-      "excerpt": "Computer programmer employment (routine coding roles) fell ~27.5% in roughly two years following ChatGPT's release (~13.8%/year annualized) \u2014 one of the largest two-year drops in any occupation tracked by BLS. Software developer employment remained flat."
+      "excerpt": "Computer programmer employment (routine coding roles) fell ~27.5% in roughly two years following ChatGPT's release (~13.8%/year annualized) — one of the largest two-year drops in any occupation tracked by BLS. Software developer employment remained flat."
     },
     {
       "id": "bls-programmer-projections-2034",
-      "title": "BLS Employment Projections: Computer Programmers 2024\u20132034",
+      "title": "BLS Employment Projections: Computer Programmers 2024–2034",
       "url": "https://www.bls.gov/ooh/computer-and-information-technology/computer-programmers.htm",
       "publisher": "Bureau of Labor Statistics",
       "evidenceTier": 1,
       "datePublished": "2026-01-10",
-      "excerpt": "BLS projects a further 6% decline in programmer roles through 2034. Computer programmer employment (routine coding roles) fell ~27.5% in roughly two years following ChatGPT's release \u2014 one of the largest two-year drops in any occupation tracked by BLS. Software developer employment remained flat."
+      "excerpt": "BLS projects a further 6% decline in programmer roles through 2034. Computer programmer employment (routine coding roles) fell ~27.5% in roughly two years following ChatGPT's release — one of the largest two-year drops in any occupation tracked by BLS. Software developer employment remained flat."
     },
     {
       "id": "challenger-ai-job-cuts-2025",
@@ -758,7 +758,7 @@
       "publisher": "Microsoft/Accenture (Cui, Demirer, Jaffe, Musolff, Peng, Salz)",
       "evidenceTier": 1,
       "datePublished": "2025-06-01",
-      "excerpt": "26% increase in completed pull requests, 13.55% increase in commits, 38.38% increase in builds \u2014 but build success rate fell by 5.53 percentage points."
+      "excerpt": "26% increase in completed pull requests, 13.55% increase in commits, 38.38% increase in builds — but build success rate fell by 5.53 percentage points."
     },
     {
       "id": "peng-copilot-2023",
@@ -776,7 +776,7 @@
       "publisher": "Cognizant",
       "evidenceTier": 2,
       "datePublished": "2026-01-15",
-      "excerpt": "Education task exposure jumped from 11% to 49% \u2014 a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations."
+      "excerpt": "Education task exposure jumped from 11% to 49% — a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations."
     },
     {
       "id": "goldman-mei-ai-labor-2026",
@@ -785,7 +785,7 @@
       "publisher": "Goldman Sachs Research (Pierfrancesco Mei)",
       "evidenceTier": 2,
       "datePublished": "2026-02-24",
-      "excerpt": "AI's labor market impact still small \u2014 only 5-10K/month drag on net job growth. Only 2\u00bd% of jobs exposed to automation today. Baseline forecast: 6-7% of workers displaced (range 3-14%), lowering annual hiring by 1M jobs and raising unemployment ~\u00bdpp. US creates 30M gross new jobs/year; does not anticipate job apocalypse. Impact so far largely confined to tech sector but expects it to grow materially."
+      "excerpt": "AI's labor market impact still small — only 5-10K/month drag on net job growth. Only 2½% of jobs exposed to automation today. Baseline forecast: 6-7% of workers displaced (range 3-14%), lowering annual hiring by 1M jobs and raising unemployment ~½pp. US creates 30M gross new jobs/year; does not anticipate job apocalypse. Impact so far largely confined to tech sector but expects it to grow materially."
     },
     {
       "id": "cais-scale-remote-labor-index-2025",
@@ -866,7 +866,7 @@
       "publisher": "Citadel Securities (Frank Flight)",
       "evidenceTier": 2,
       "datePublished": "2026-03-04",
-      "excerpt": "In spite of the current displacement narrative \u2013 job postings for software engineers are rising rapidly, up 11% YoY."
+      "excerpt": "In spite of the current displacement narrative – job postings for software engineers are rising rapidly, up 11% YoY."
     },
     {
       "id": "cooper-cs-majors-labor-2026",
@@ -875,7 +875,7 @@
       "publisher": "Preston Cooper (Substack)",
       "evidenceTier": 4,
       "datePublished": "2026-03-04",
-      "excerpt": "According to the American Community Survey, 7.2 percent of early-career college graduates who majored in CS were unemployed in 2024\u2014well above the 4.5 percent rate for all early-career graduates."
+      "excerpt": "According to the American Community Survey, 7.2 percent of early-career college graduates who majored in CS were unemployed in 2024—well above the 4.5 percent rate for all early-career graduates."
     },
     {
       "id": "anthropic-labor-market-impacts-2026",

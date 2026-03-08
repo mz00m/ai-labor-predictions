@@ -5,7 +5,7 @@
   "description": "Projected percentage of healthcare administrative roles (coding, billing, scheduling, prior auth) automated by AI by 2030. Only data points where sources directly state a displacement or reduction figure are plotted.",
   "category": "displacement",
   "unit": "% of roles displaced",
-  "currentValue": 35,
+  "currentValue": 14.5,
   "timeHorizon": "By 2030",
   "history": [
     {
@@ -31,21 +31,21 @@
       "metricType": "survey"
     },
     {
+      "date": "2025-02-10",
+      "value": 4.7,
+      "sourceIds": [
+        "bls-mlr-ai-employment-projections-2025"
+      ],
+      "evidenceTier": 1,
+      "metricType": "employment"
+    },
+    {
       "date": "2025-07-01",
       "value": 8,
       "confidenceLow": 5,
       "confidenceHigh": 12,
       "sourceIds": [
         "bls-health-admin-2025"
-      ],
-      "evidenceTier": 1,
-      "metricType": "employment"
-    },
-    {
-      "date": "2025-02-10",
-      "value": 4.7,
-      "sourceIds": [
-        "bls-mlr-ai-employment-projections-2025"
       ],
       "evidenceTier": 1,
       "metricType": "employment"
@@ -104,7 +104,7 @@
         "ncbi-hospital-ai-billing-2024"
       ],
       "evidenceTier": 1,
-      "label": "NCBI: hospital AI billing automation surged 36% \u2192 61% in one year"
+      "label": "NCBI: hospital AI billing automation surged 36% → 61% in one year"
     },
     {
       "date": "2025-01-01",
@@ -161,6 +161,15 @@
       "label": "Cognizant: healthcare practitioner exposure jumped from 10% to 39%"
     },
     {
+      "date": "2026-01-15",
+      "direction": "down",
+      "sourceIds": [
+        "gommers-masai-lancet-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "MASAI trial (Lancet): 44% workload reduction in mammography screening"
+    },
+    {
       "date": "2026-01-22",
       "direction": "down",
       "sourceIds": [
@@ -177,15 +186,6 @@
       ],
       "evidenceTier": 1,
       "label": "BLS JOLTS: Healthcare openings down 10.8% (-152K) since Oct"
-    },
-    {
-      "date": "2026-01-15",
-      "direction": "down",
-      "sourceIds": [
-        "gommers-masai-lancet-2026"
-      ],
-      "evidenceTier": 1,
-      "label": "MASAI trial (Lancet): 44% workload reduction in mammography screening"
     }
   ],
   "sources": [
@@ -227,7 +227,7 @@
     },
     {
       "id": "deloitte-health-2025",
-      "title": "2025 Global Health Care Outlook \u2014 AI and Administrative Efficiency",
+      "title": "2025 Global Health Care Outlook — AI and Administrative Efficiency",
       "url": "https://www2.deloitte.com/us/en/insights/industry/health-care/global-health-care-outlook.html",
       "publisher": "Deloitte",
       "evidenceTier": 2,
@@ -322,7 +322,7 @@
       "publisher": "Cognizant",
       "evidenceTier": 2,
       "datePublished": "2026-01-15",
-      "excerpt": "Education task exposure jumped from 11% to 49% \u2014 a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations."
+      "excerpt": "Education task exposure jumped from 11% to 49% — a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations."
     },
     {
       "id": "bls-mlr-ai-employment-projections-2025",
@@ -335,7 +335,7 @@
     },
     {
       "id": "bls-jolts-december-2025",
-      "title": "Job Openings and Labor Turnover \u2014 December 2025",
+      "title": "Job Openings and Labor Turnover — December 2025",
       "url": "https://www.bls.gov/news.release/jolts.nr0.htm",
       "publisher": "U.S. Bureau of Labor Statistics",
       "evidenceTier": 1,

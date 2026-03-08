@@ -5,7 +5,7 @@
   "description": "Percentage of US firms using AI in production, measured by the Census Bureau's Business Trends and Outlook Survey (BTOS) — the most rigorous measure available. Survey-based estimates from consultancies run 5-10x higher due to self-selected samples.",
   "category": "adoption",
   "unit": "% of firms (Census BTOS)",
-  "currentValue": 17.5,
+  "currentValue": 19.9,
   "timeHorizon": "Current measure",
   "history": [
     {
@@ -42,23 +42,23 @@
       "metricType": "survey"
     },
     {
-      "date": "2025-10-01",
-      "value": 9.7,
-      "confidenceLow": 7,
-      "confidenceHigh": 12,
-      "sourceIds": [
-        "anthropic-economic-index-2025"
-      ],
-      "evidenceTier": 1,
-      "metricType": "survey"
-    },
-    {
       "date": "2025-08-15",
       "value": 37.4,
       "confidenceLow": 32,
       "confidenceHigh": 43,
       "sourceIds": [
         "bick-blandin-deming-nber-2025"
+      ],
+      "evidenceTier": 1,
+      "metricType": "survey"
+    },
+    {
+      "date": "2025-10-01",
+      "value": 9.7,
+      "confidenceLow": 7,
+      "confidenceHigh": 12,
+      "sourceIds": [
+        "anthropic-economic-index-2025"
       ],
       "evidenceTier": 1,
       "metricType": "survey"

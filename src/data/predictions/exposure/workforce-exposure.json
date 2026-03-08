@@ -5,7 +5,7 @@
   "description": "Share of US jobs with significant task overlap with current AI capabilities. Exposure measures what AI could automate, not what it has. High exposure does not equal displacement.",
   "category": "adoption",
   "unit": "% of jobs exposed",
-  "currentValue": 49,
+  "currentValue": 46.2,
   "timeHorizon": "Current estimate",
   "history": [
     {
@@ -132,6 +132,15 @@
   ],
   "overlays": [
     {
+      "date": "2024-03-01",
+      "direction": "up",
+      "sourceIds": [
+        "eloundou-openai-2024"
+      ],
+      "evidenceTier": 1,
+      "label": "OpenAI/UPenn: 80% of workers have ≥10% tasks affected"
+    },
+    {
       "date": "2025-02-01",
       "direction": "up",
       "sourceIds": [
@@ -148,15 +157,6 @@
       ],
       "evidenceTier": 1,
       "label": "ILO review: exposure converges on high-wage jobs"
-    },
-    {
-      "date": "2024-03-01",
-      "direction": "up",
-      "sourceIds": [
-        "eloundou-openai-2024"
-      ],
-      "evidenceTier": 1,
-      "label": "OpenAI/UPenn: 80% of workers have \u226510% tasks affected"
     },
     {
       "date": "2026-01-15",
@@ -302,7 +302,7 @@
       "publisher": "Cognizant",
       "evidenceTier": 2,
       "datePublished": "2026-01-15",
-      "excerpt": "93% of all occupations analyzed have at least one task with significant AI exposure. Education task exposure jumped from 11% to 49% \u2014 a 4.5x increase. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations."
+      "excerpt": "93% of all occupations analyzed have at least one task with significant AI exposure. Education task exposure jumped from 11% to 49% — a 4.5x increase. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations."
     },
     {
       "id": "brookings-adaptive-capacity-2026",

@@ -5,7 +5,7 @@
   "description": "Projected percentage of creative roles (design, writing, marketing) significantly restructured or eliminated by generative AI by 2030. Only data points where sources directly state a displacement figure are plotted.",
   "category": "displacement",
   "unit": "% of roles displaced",
-  "currentValue": 30,
+  "currentValue": 25.8,
   "timeHorizon": "By 2030",
   "history": [
     {
@@ -158,6 +158,15 @@
       "label": "BLS: graphic designer jobs to decline 4%"
     },
     {
+      "date": "2025-06-01",
+      "direction": "up",
+      "sourceIds": [
+        "ju-aral-ai-teamwork-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Ju & Aral: Human-AI teams 73% more productive per worker for ad copy"
+    },
+    {
       "date": "2025-07-01",
       "direction": "down",
       "sourceIds": [
@@ -173,7 +182,7 @@
         "ramp-freelance-velocity-2025"
       ],
       "evidenceTier": 1,
-      "label": "Ramp: $1 reduced freelance \u2192 $0.03 AI spend"
+      "label": "Ramp: $1 reduced freelance → $0.03 AI spend"
     },
     {
       "date": "2025-10-30",
@@ -194,6 +203,15 @@
       "label": "Queen Mary/Turing: 73% of freelancers report reduced job security"
     },
     {
+      "date": "2026-01-15",
+      "direction": "up",
+      "sourceIds": [
+        "reimers-waldfogel-books-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Reimers & Waldfogel: Book releases tripled 2022-2025; consumer surplus +25-50%"
+    },
+    {
       "date": "2026-02-24",
       "direction": "up",
       "sourceIds": [
@@ -210,30 +228,12 @@
       ],
       "evidenceTier": 4,
       "label": "CausalInf: Amazon book titles tripled post-ChatGPT, average quality fell"
-    },
-    {
-      "date": "2026-01-15",
-      "direction": "up",
-      "sourceIds": [
-        "reimers-waldfogel-books-2026"
-      ],
-      "evidenceTier": 1,
-      "label": "Reimers & Waldfogel: Book releases tripled 2022-2025; consumer surplus +25-50%"
-    },
-    {
-      "date": "2025-06-01",
-      "direction": "up",
-      "sourceIds": [
-        "ju-aral-ai-teamwork-2025"
-      ],
-      "evidenceTier": 1,
-      "label": "Ju & Aral: Human-AI teams 73% more productive per worker for ad copy"
     }
   ],
   "sources": [
     {
       "id": "wef-creative-2023",
-      "title": "Future of Jobs Report 2023 \u2014 Creative and Media Professions",
+      "title": "Future of Jobs Report 2023 — Creative and Media Professions",
       "url": "https://www.weforum.org/publications/the-future-of-jobs-report-2023/",
       "publisher": "World Economic Forum",
       "evidenceTier": 2,
@@ -242,7 +242,7 @@
     },
     {
       "id": "mckinsey-creative-automation",
-      "title": "The economic potential of generative AI \u2014 Creative work",
+      "title": "The economic potential of generative AI — Creative work",
       "url": "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier",
       "publisher": "McKinsey Global Institute",
       "evidenceTier": 2,
@@ -251,7 +251,7 @@
     },
     {
       "id": "upwork-freelancer-impact",
-      "title": "Upwork Q2 2024 Earnings \u2014 Freelancer Market Trends",
+      "title": "Upwork Q2 2024 Earnings — Freelancer Market Trends",
       "url": "https://investors.upwork.com/news-releases/news-release-details/upwork-announces-second-quarter-2024-financial-results",
       "publisher": "Upwork (Earnings Report)",
       "evidenceTier": 1,
@@ -269,7 +269,7 @@
     },
     {
       "id": "techcrunch-creative-layoffs",
-      "title": "As layoffs deepen, AI's role in the cuts is murky \u2014 but it definitely has one",
+      "title": "As layoffs deepen, AI's role in the cuts is murky — but it definitely has one",
       "url": "https://techcrunch.com/2024/01/29/as-layoffs-deepen-ais-role-in-the-cuts-is-murky-but-it-definitely-has-one/",
       "publisher": "TechCrunch",
       "evidenceTier": 3,
@@ -323,7 +323,7 @@
     },
     {
       "id": "autor-new-frontiers-qje-2024",
-      "title": "New Frontiers: The Origins and Content of New Work, 1940\u20132018",
+      "title": "New Frontiers: The Origins and Content of New Work, 1940–2018",
       "url": "https://academic.oup.com/qje/article-abstract/139/3/1399/7630187",
       "publisher": "QJE (Autor, Chin, Salomons, Seegmiller)",
       "evidenceTier": 1,

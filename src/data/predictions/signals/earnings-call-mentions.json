@@ -5,7 +5,7 @@
   "description": "Percentage of S&P 500 companies mentioning AI in the context of workforce efficiency, headcount, or restructuring during quarterly earnings calls.",
   "category": "adoption",
   "unit": "% of S&P 500",
-  "currentValue": 61,
+  "currentValue": 41.2,
   "timeHorizon": "Latest quarter",
   "history": [
     {
@@ -163,15 +163,6 @@
       "label": "Goldman: AI-mentioning firms have 3.2pp lower headcount growth"
     },
     {
-      "date": "2026-01-01",
-      "direction": "up",
-      "sourceIds": [
-        "korinek-brynjolfsson-agrawal-acm-2026"
-      ],
-      "evidenceTier": 1,
-      "label": "ACM: AI discussion intensity is leading deployment indicator"
-    },
-    {
       "date": "2025-12-15",
       "direction": "up",
       "sourceIds": [
@@ -179,12 +170,21 @@
       ],
       "evidenceTier": 3,
       "label": "Fortune: AI-mentioning companies outperformed by 8.2pp"
+    },
+    {
+      "date": "2026-01-01",
+      "direction": "up",
+      "sourceIds": [
+        "korinek-brynjolfsson-agrawal-acm-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "ACM: AI discussion intensity is leading deployment indicator"
     }
   ],
   "sources": [
     {
       "id": "factset-earnings-q4-2022",
-      "title": "FactSet Earnings Insight Q4 2022 \u2014 AI Mentions",
+      "title": "FactSet Earnings Insight Q4 2022 — AI Mentions",
       "url": "https://insight.factset.com/highest-number-of-sp-500-companies-citing-ai-on-q1-earnings-calls-in-over-10-years",
       "publisher": "FactSet",
       "evidenceTier": 1,
@@ -193,7 +193,7 @@
     },
     {
       "id": "factset-earnings-q1-2023",
-      "title": "FactSet Earnings Insight Q1 2023 \u2014 AI Mentions Surge",
+      "title": "FactSet Earnings Insight Q1 2023 — AI Mentions Surge",
       "url": "https://insight.factset.com/highest-number-of-sp-500-companies-citing-ai-on-q1-earnings-calls-in-over-10-years",
       "publisher": "FactSet",
       "evidenceTier": 1,
@@ -202,7 +202,7 @@
     },
     {
       "id": "factset-earnings-q2-2023",
-      "title": "FactSet Earnings Insight Q2 2023 \u2014 AI Dominates Calls",
+      "title": "FactSet Earnings Insight Q2 2023 — AI Dominates Calls",
       "url": "https://insight.factset.com/highest-number-of-sp-500-companies-citing-ai-on-q2-earnings-calls-in-over-10-years",
       "publisher": "FactSet",
       "evidenceTier": 1,
@@ -243,7 +243,7 @@
       "publisher": "FactSet",
       "evidenceTier": 1,
       "datePublished": "2024-07-15",
-      "excerpt": "Slight dip to 41% as initial AI hype normalizes. Discussion shifting from aspirational to operational \u2014 specific ROI figures cited."
+      "excerpt": "Slight dip to 41% as initial AI hype normalizes. Discussion shifting from aspirational to operational — specific ROI figures cited."
     },
     {
       "id": "factset-earnings-q3-2024",
@@ -283,12 +283,12 @@
     },
     {
       "id": "factset-earnings-q3-2025",
-      "title": "FactSet Earnings Insight Q3 2025 \u2014 Record AI Mentions",
+      "title": "FactSet Earnings Insight Q3 2025 — Record AI Mentions",
       "url": "https://insight.factset.com/highest-number-of-sp-500-earnings-calls-citing-ai-over-the-past-10-years-1",
       "publisher": "FactSet",
       "evidenceTier": 1,
       "datePublished": "2025-11-15",
-      "excerpt": "Record 306 S&P 500 companies (61%) cited AI in Q3 2025 earnings calls \u2014 a new 10-year high, surpassing the prior record of 292. 95% of IT and Communications sectors mentioned AI. AI-citing companies outperformed 13.9% vs. 5.7%."
+      "excerpt": "Record 306 S&P 500 companies (61%) cited AI in Q3 2025 earnings calls — a new 10-year high, surpassing the prior record of 292. 95% of IT and Communications sectors mentioned AI. AI-citing companies outperformed 13.9% vs. 5.7%."
     },
     {
       "id": "fortune-ai-earnings-surge-2026",

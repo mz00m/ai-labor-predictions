@@ -141,6 +141,15 @@
       "label": "Acemoglu & Johnson: shared prosperity requires deliberate policy choices"
     },
     {
+      "date": "2023-12-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "otis-kenyan-entrepreneurs-2023"
+      ],
+      "evidenceTier": 1,
+      "label": "Otis et al.: No avg AI effect on Kenyan SME revenue; high performers +15%, low -8%"
+    },
+    {
       "date": "2025-01-30",
       "direction": "neutral",
       "sourceIds": [
@@ -222,6 +231,24 @@
       "label": "Stanford: small positive wage effects in AI-exposed jobs"
     },
     {
+      "date": "2026-01-15",
+      "direction": "up",
+      "sourceIds": [
+        "jones-tonetti-weak-links-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Jones & Tonetti (Stanford/NBER): AI output gains modest near-term — only 4% above trend by 2040"
+    },
+    {
+      "date": "2026-01-21",
+      "direction": "up",
+      "sourceIds": [
+        "althoff-reichardt-task-specific-technical-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Althoff & Reichardt model: +21% long-run average wage increase from AI productivity"
+    },
+    {
       "date": "2026-02-01",
       "direction": "up",
       "sourceIds": [
@@ -249,24 +276,6 @@
       "label": "Dallas Fed: AI exposure has ~zero effect on wages at median experience premium (CI includes 0)"
     },
     {
-      "date": "2026-01-21",
-      "direction": "up",
-      "sourceIds": [
-        "althoff-reichardt-task-specific-technical-2026"
-      ],
-      "evidenceTier": 1,
-      "label": "Althoff & Reichardt model: +21% long-run average wage increase from AI productivity"
-    },
-    {
-      "date": "2026-01-15",
-      "direction": "up",
-      "sourceIds": [
-        "jones-tonetti-weak-links-2026"
-      ],
-      "evidenceTier": 1,
-      "label": "Jones & Tonetti (Stanford/NBER): AI output gains modest near-term — only 4% above trend by 2040"
-    },
-    {
       "date": "2026-03-05",
       "direction": "up",
       "sourceIds": [
@@ -274,15 +283,6 @@
       ],
       "evidenceTier": 3,
       "label": "Furman (BLS): productivity 2.2% above CBO forecast; 2.8% annual growth"
-    },
-    {
-      "date": "2023-12-01",
-      "direction": "neutral",
-      "sourceIds": [
-        "otis-kenyan-entrepreneurs-2023"
-      ],
-      "evidenceTier": 1,
-      "label": "Otis et al.: No avg AI effect on Kenyan SME revenue; high performers +15%, low -8%"
     }
   ],
   "sources": [
@@ -330,7 +330,7 @@
     },
     {
       "id": "bls-wage-data-2025",
-      "title": "Employment Cost Index \u2014 2025 Q1",
+      "title": "Employment Cost Index — 2025 Q1",
       "url": "https://www.bls.gov/eci/",
       "publisher": "Bureau of Labor Statistics",
       "evidenceTier": 1,
@@ -363,7 +363,7 @@
     },
     {
       "id": "indeed-wage-tracker-2025",
-      "title": "US Wage Tracker \u2014 Posted Wage Trends by Occupation",
+      "title": "US Wage Tracker — Posted Wage Trends by Occupation",
       "url": "https://www.hiringlab.org/2025/02/10/us-wage-tracker/",
       "publisher": "Indeed Hiring Lab",
       "evidenceTier": 2,
@@ -464,7 +464,7 @@
       "id": "cepr-ai-productivity-jobs-europe-2026",
       "title": "How AI is affecting productivity and jobs in Europe",
       "url": "https://cepr.org/voxeu/columns/how-ai-affecting-productivity-and-jobs-europe",
-      "publisher": "CEPR VoxEU (Aldasoro, Gambacorta, P\u00e1l, Revoltella, Weiss, Wolski)",
+      "publisher": "CEPR VoxEU (Aldasoro, Gambacorta, Pál, Revoltella, Weiss, Wolski)",
       "evidenceTier": 1,
       "datePublished": "2026-02-17",
       "excerpt": "AI adoption causally increases labour productivity levels by 4% on average. Employees in AI-using companies benefit through higher wages, both in total and per employee."
