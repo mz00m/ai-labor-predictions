@@ -207,72 +207,17 @@ function CustomTooltip({
   );
 }
 
-// --- Evidence balance bar colors (3 green, 3 red by source count) ---
-const GREEN_SHADES = ["#86efac", "#22c55e", "#15803d"] as const; // 1, 2, 3+ up
-const RED_SHADES   = ["#fca5a5", "#ef4444", "#dc2626"] as const; // 1, 2, 3+ down
-const NEUTRAL_BG   = "#334155"; // slate-700 — empty segment
-
-function shadeForCount(direction: "up" | "down", count: number): string {
-  const shades = direction === "up" ? GREEN_SHADES : RED_SHADES;
-  if (count <= 0) return NEUTRAL_BG;
-  if (count === 1) return shades[0];
-  if (count === 2) return shades[1];
-  return shades[2]; // 3+
-}
-
-/** Build the evidence balance bar segments from overlay data. */
-function buildBalanceSegments(
-  overlayItems: { date: number; direction: string }[],
-  numBins: number = 24
-): { fill: string; mixed: boolean }[] {
-  if (overlayItems.length === 0) return [];
-
-  const dates = overlayItems.map((o) => o.date);
-  const minDate = Math.min(...dates);
-  const maxDate = Math.max(...dates);
-  const range = maxDate - minDate;
-
-  // If all overlays on same date, produce a single segment
-  if (range === 0) {
-    const ups = overlayItems.filter((o) => o.direction === "up").length;
-    const downs = overlayItems.filter((o) => o.direction === "down").length;
-    if (ups > 0 && downs > 0) return [{ fill: "", mixed: true }];
-    if (ups > 0) return [{ fill: shadeForCount("up", ups), mixed: false }];
-    if (downs > 0) return [{ fill: shadeForCount("down", downs), mixed: false }];
-    return [{ fill: NEUTRAL_BG, mixed: false }];
-  }
-
-  const segments: { fill: string; mixed: boolean }[] = [];
-
-  for (let i = 0; i < numBins; i++) {
-    const binStart = minDate + (range * i) / numBins;
-    const binEnd = minDate + (range * (i + 1)) / numBins;
-
-    const inBin = overlayItems.filter((o) =>
-      i === numBins - 1 ? o.date >= binStart && o.date <= binEnd : o.date >= binStart && o.date < binEnd
-    );
-
-    if (inBin.length === 0) {
-      segments.push({ fill: NEUTRAL_BG, mixed: false });
-      continue;
-    }
-
-    const ups = inBin.filter((o) => o.direction === "up").length;
-    const downs = inBin.filter((o) => o.direction === "down").length;
-
-    if (ups > 0 && downs > 0) {
-      segments.push({ fill: "", mixed: true });
-    } else if (ups > 0) {
-      segments.push({ fill: shadeForCount("up", ups), mixed: false });
-    } else if (downs > 0) {
-      segments.push({ fill: shadeForCount("down", downs), mixed: false });
-    } else {
-      // only neutrals
-      segments.push({ fill: NEUTRAL_BG, mixed: false });
-    }
-  }
-
-  return segments;
+/** Pick a single color for a group of overlays sharing the same date. */
+function groupedOverlayColor(directions: string[]): string {
+  const ups = directions.filter((d) => d === "up").length;
+  const downs = directions.filter((d) => d === "down").length;
+  // Pure positive / negative — use green / red
+  if (ups > 0 && downs === 0) return "#22c55e";
+  if (downs > 0 && ups === 0) return "#ef4444";
+  // Mixed — dominant direction wins, neutral if tied
+  if (ups > downs) return "#22c55e";
+  if (downs > ups) return "#ef4444";
+  return "#94a3b8"; // tied or all neutral
 }
 
 function overlayColor(direction: string) {
@@ -591,16 +536,24 @@ export default function PredictionChart({
         <ComposedChart data={chartData}>
           {/* Hidden categorical axis so ReferenceLine can resolve x values */}
           <XAxis dataKey="dateStr" hide />
-          {overlayData.map((o, i) => (
-            <ReferenceLine
-              key={`overlay-compact-${i}-${o.dateStr}`}
-              x={o.dateStr}
-              stroke={overlayColor(o.direction)}
-              strokeWidth={6}
-              strokeOpacity={0.15}
-              ifOverflow="visible"
-            />
-          ))}
+          {(() => {
+            const byDate = new Map<string, typeof overlayData>();
+            for (const o of overlayData) {
+              const group = byDate.get(o.dateStr) ?? [];
+              group.push(o);
+              byDate.set(o.dateStr, group);
+            }
+            return Array.from(byDate.entries()).map(([dateStr, group]) => (
+              <ReferenceLine
+                key={`overlay-compact-${dateStr}`}
+                x={dateStr}
+                stroke={groupedOverlayColor(group.map((g) => g.direction))}
+                strokeWidth={6}
+                strokeOpacity={0.15}
+                ifOverflow="visible"
+              />
+            ));
+          })()}
           <Line
             type="monotone"
             dataKey="observedValue"
@@ -666,32 +619,16 @@ export default function PredictionChart({
         {overlayData.length > 0 && (
           <>
             <div className="flex items-center gap-1.5">
-              <svg width="18" height="10">
-                {RED_SHADES.map((c, i) => (
-                  <rect key={c} x={i * 6} y="0" width="6" height="10" fill={c} opacity="0.7" rx={i === 0 ? 1 : i === 2 ? 1 : 0} />
-                ))}
+              <svg width="6" height="10">
+                <rect x="0" y="0" width="6" height="10" fill="#ef4444" fillOpacity="0.32" rx="1" />
               </svg>
-              <span className="text-[11px] text-[var(--muted)]">Negative (1-3+ sources)</span>
+              <span className="text-[11px] text-[var(--muted)]">Negative signal</span>
             </div>
             <div className="flex items-center gap-1.5">
-              <svg width="18" height="10">
-                {GREEN_SHADES.map((c, i) => (
-                  <rect key={c} x={i * 6} y="0" width="6" height="10" fill={c} opacity="0.7" rx={i === 0 ? 1 : i === 2 ? 1 : 0} />
-                ))}
+              <svg width="6" height="10">
+                <rect x="0" y="0" width="6" height="10" fill="#22c55e" fillOpacity="0.32" rx="1" />
               </svg>
-              <span className="text-[11px] text-[var(--muted)]">Positive (1-3+ sources)</span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              <svg width="10" height="10">
-                <defs>
-                  <pattern id="legend-stripe" width="4" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-                    <rect width="2" height="10" fill="#fca5a5" />
-                    <rect x="2" width="2" height="10" fill="#86efac" />
-                  </pattern>
-                </defs>
-                <rect x="0" y="0" width="10" height="10" fill="url(#legend-stripe)" opacity="0.7" rx="1" />
-              </svg>
-              <span className="text-[11px] text-[var(--muted)]">Mixed</span>
+              <span className="text-[11px] text-[var(--muted)]">Positive signal</span>
             </div>
           </>
         )}
@@ -736,57 +673,6 @@ export default function PredictionChart({
           })}
         </div>
       )}
-      {/* Evidence balance bar — visual summary of overlay signal direction */}
-      {overlayData.length > 0 && (() => {
-        const segments = buildBalanceSegments(overlayData);
-        if (segments.length === 0) return null;
-        const barHeight = 6;
-        const segWidth = 100 / segments.length;
-        const patternId = "mixed-stripe-pattern";
-        return (
-          <div className="px-1 mb-1">
-            <div className="flex items-center gap-2">
-              <span className="text-[9px] font-medium text-[var(--muted)] uppercase tracking-wider whitespace-nowrap">
-                Signal balance
-              </span>
-              <svg
-                width="100%"
-                height={barHeight + 2}
-                className="flex-1 rounded-sm overflow-hidden"
-                style={{ minWidth: 0 }}
-              >
-                <defs>
-                  <pattern
-                    id={patternId}
-                    width="6"
-                    height={barHeight + 2}
-                    patternUnits="userSpaceOnUse"
-                    patternTransform="rotate(45)"
-                  >
-                    <rect width="3" height={barHeight + 2} fill="#fca5a5" />
-                    <rect x="3" width="3" height={barHeight + 2} fill="#86efac" />
-                  </pattern>
-                </defs>
-                {segments.map((seg, i) => (
-                  <rect
-                    key={i}
-                    x={`${i * segWidth}%`}
-                    y="1"
-                    width={`${segWidth + 0.1}%`}
-                    height={barHeight}
-                    fill={seg.mixed ? `url(#${patternId})` : seg.fill}
-                    opacity={seg.fill === NEUTRAL_BG && !seg.mixed ? 0.3 : 0.7}
-                  />
-                ))}
-              </svg>
-              <div className="flex items-center gap-1.5 whitespace-nowrap">
-                <span className="text-[9px] text-[#86efac]">+</span>
-                <span className="text-[9px] text-[#ef4444]">{"\u2212"}</span>
-              </div>
-            </div>
-          </div>
-        );
-      })()}
       <ResponsiveContainer width="100%" height={360}>
         <ComposedChart
           data={chartData}
@@ -872,22 +758,31 @@ export default function PredictionChart({
               isAnimationActive={false}
             />
           )}
-          {/* Overlay vertical bars — rendered before the Line so they sit behind */}
-          {overlayData.map((o, i) => (
-            <ReferenceLine
-              key={`overlay-bar-${i}-${o.dateStr}`}
-              x={o.dateStr}
-              stroke={overlayColor(o.direction)}
-              strokeWidth={10}
-              strokeOpacity={0.18}
-              ifOverflow="visible"
-              onClick={() => onDotClick?.(o.sourceIds)}
-              onMouseEnter={(e: React.MouseEvent) => handleOverlayMouseEnter(o, e)}
-              onMouseMove={handleOverlayMouseMove}
-              onMouseLeave={handleOverlayMouseLeave}
-              style={{ cursor: onDotClick ? "pointer" : undefined }}
-            />
-          ))}
+          {/* Overlay vertical bars — one per date, color from grouped direction */}
+          {(() => {
+            // Group overlays by dateStr so overlapping bars don't blend to brown
+            const byDate = new Map<string, typeof overlayData>();
+            for (const o of overlayData) {
+              const group = byDate.get(o.dateStr) ?? [];
+              group.push(o);
+              byDate.set(o.dateStr, group);
+            }
+            return Array.from(byDate.entries()).map(([dateStr, group]) => (
+              <ReferenceLine
+                key={`overlay-bar-${dateStr}`}
+                x={dateStr}
+                stroke={groupedOverlayColor(group.map((g) => g.direction))}
+                strokeWidth={10}
+                strokeOpacity={0.18}
+                ifOverflow="visible"
+                onClick={() => onDotClick?.(group.flatMap((g) => g.sourceIds))}
+                onMouseEnter={(e: React.MouseEvent) => handleOverlayMouseEnter(group[0], e)}
+                onMouseMove={handleOverlayMouseMove}
+                onMouseLeave={handleOverlayMouseLeave}
+                style={{ cursor: onDotClick ? "pointer" : undefined }}
+              />
+            ));
+          })()}
           {/* Observed data line (solid) */}
           <Line
             type="monotone"
