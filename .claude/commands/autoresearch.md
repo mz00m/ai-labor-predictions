@@ -10,19 +10,20 @@ $ARGUMENTS
 
 If no arguments provided, follow the default priority order from `research-program.md`.
 
-## Step 0: Read the Research Program
+## Step 0: Read the Program
 
-Read `research-program.md` in the project root. This is your operating manual — it defines:
+Read `program.md` in the project root. This is the research org code — it defines:
 - The scoring metric for source quality
 - Which graphs are "hungry" for data (fewest data points)
 - Search strategies organized by evidence tier
 - Keep/discard thresholds
+- The full experiment loop and constraints
 
 Also read `scripts/autoresearch/candidates.tsv` to see what has already been attempted (avoid re-searching the same URLs).
 
 ## Step 1: Pick a Search Target
 
-Based on the graph priority list in `research-program.md`, pick the graph with the fewest data points that you haven't recently searched for. If the user provided a focus directive (e.g., "healthcare" or "wages"), prioritize graphs in that category.
+Based on the graph priority list in `program.md`, pick the graph with the fewest data points that you haven't recently searched for. If the user provided a focus directive (e.g., "healthcare" or "wages"), prioritize graphs in that category.
 
 Load the target graph's JSON file from `src/data/predictions/` to understand:
 - What sources already exist (avoid duplicates)
@@ -31,7 +32,7 @@ Load the target graph's JSON file from `src/data/predictions/` to understand:
 
 ## Step 2: Search for Sources
 
-Use `WebSearch` to find recent research. Run 2-3 searches per iteration, rotating through query patterns from `research-program.md`. Prioritize:
+Use `WebSearch` to find recent research. Run 2-3 searches per iteration, rotating through query patterns from `program.md`. Prioritize:
 
 1. **Tier 1 first**: NBER, BLS, peer-reviewed journals, government data
 2. **Tier 2 second**: Brookings, McKinsey, IMF, Gartner

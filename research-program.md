@@ -1,5 +1,7 @@
 # AutoResearch Program — jobsdata.ai
 
+> **Superseded by `program.md`** — the unified research org code. This file is kept for reference but `program.md` is the canonical source of truth for all autonomous agent behavior.
+
 Inspired by [karpathy/autoresearch](https://github.com/karpathy/autoresearch). This document programs the AI agent's autonomous research behavior. The human edits this file; the agent edits the data files.
 
 ## Objective
