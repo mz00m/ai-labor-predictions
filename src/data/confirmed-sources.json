@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-08",
-  "totalSources": 322,
-  "verifiedCount": 312,
+  "totalSources": 323,
+  "verifiedCount": 313,
   "sources": {
     "revelio-labs-wage-divide-2025": {
       "id": "revelio-labs-wage-divide-2025",
@@ -3362,6 +3362,20 @@
       "excerpt": "Salesforce Einstein platform serves over 200 billion AI predictions per day across Customer 360 applications. Einstein 1 platform enables AI-powered apps with low-code development and generative AI assistants.",
       "usedIn": [
         "ai-adoption-rate"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "salesforce-cs-ai-agents-2025": {
+      "id": "salesforce-cs-ai-agents-2025",
+      "title": "Salesforce CEO Marc Benioff says his company has cut 4,000 customer service jobs as AI steps in",
+      "url": "https://fortune.com/2025/09/02/salesforce-ceo-billionaire-marc-benioff-ai-agents-jobs-layoffs-customer-service-sales/",
+      "publisher": "Fortune (Benioff interview on The Logan Bartlett Show)",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-02",
+      "excerpt": "50% are with agents, 50% are with humans. From 9,000 heads to about 5,000 because I need less heads. Support costs reduced by 17%.",
+      "usedIn": [
+        "customer-service-automation"
       ],
       "verified": true,
       "synthetic": false
