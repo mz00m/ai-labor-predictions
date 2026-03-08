@@ -3952,7 +3952,8 @@
         "entry-level-wage-impact",
         "high-skill-wage-premium",
         "creative-industry-displacement",
-        "median-wage-impact"
+        "median-wage-impact",
+        "geographic-wage-divergence"
       ],
       "verified": true,
       "synthetic": false
