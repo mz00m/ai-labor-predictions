@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { getAllPredictions, getPredictionBySlug } from "@/lib/data-loader";
 
-export const runtime = "edge";
+export const runtime = "nodejs";
 export const alt = "AI Labor Market Prediction — Early Signals of AI Impact";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
