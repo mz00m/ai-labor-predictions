@@ -209,10 +209,10 @@ function CustomTooltip({
 
 function overlayColor(direction: string) {
   return direction === "down"
-    ? "#dc2626"
+    ? "#f59e0b"   // amber — warm tone for negative signals
     : direction === "up"
-      ? "#16a34a"
-      : "#6b7280";
+      ? "#06b6d4" // cyan — cool tone for positive signals
+      : "#8b5cf6"; // violet — neutral, harmonizes with chart accent
 }
 
 /** Render a dot shape based on metricType. Falls back to circle with tier color. */
@@ -528,7 +528,7 @@ export default function PredictionChart({
               key={`overlay-compact-${i}-${o.dateStr}`}
               x={o.dateStr}
               stroke={overlayColor(o.direction)}
-              strokeWidth={8}
+              strokeWidth={6}
               strokeOpacity={0.15}
               ifOverflow="visible"
             />
@@ -739,8 +739,8 @@ export default function PredictionChart({
               key={`overlay-bar-${i}-${o.dateStr}`}
               x={o.dateStr}
               stroke={overlayColor(o.direction)}
-              strokeWidth={12}
-              strokeOpacity={0.22}
+              strokeWidth={10}
+              strokeOpacity={0.18}
               ifOverflow="visible"
               onClick={() => onDotClick?.(o.sourceIds)}
               onMouseEnter={(e: React.MouseEvent) => handleOverlayMouseEnter(o, e)}
