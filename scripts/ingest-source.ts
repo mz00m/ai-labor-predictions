@@ -49,6 +49,11 @@ if (fs.existsSync(envPath)) {
 import { fetchSource } from "./lib/ingest/fetcher";
 import { extractStatistics } from "./lib/ingest/extractor";
 import { generateSourceId, applyChanges } from "./lib/ingest/writer";
+import {
+  extractSourceContent,
+  writeSourceContentEntry,
+  hasSourceContent,
+} from "./lib/ingest/content-extractor";
 import type {
   GraphInfo,
   ProposedChange,
@@ -469,6 +474,35 @@ async function main() {
     console.log(
       `\nDone. ${written.length} entries written, ${skipped.length} skipped.\n`
     );
+
+    // Auto-populate chatbot content store for Tier 1+2 sources
+    if (
+      written.length > 0 &&
+      sourceMetadata.evidenceTier <= 2 &&
+      changes.length > 0
+    ) {
+      const sid = changes[0].sourceId;
+      if (!hasSourceContent(sid)) {
+        try {
+          console.log("Extracting rich content for chatbot store...");
+          const contentEntry = await extractSourceContent(sid, content.text, {
+            title: sourceMetadata.title,
+            publisher: sourceMetadata.publisher,
+            datePublished: sourceMetadata.datePublished,
+            evidenceTier: sourceMetadata.evidenceTier,
+            url: sourceMetadata.url,
+            excerpt: statistics[0]?.exactQuote,
+          });
+          writeSourceContentEntry(contentEntry);
+          console.log(
+            `  Stored: ${contentEntry.keyFindings.length} findings, ${contentEntry.abstract.length} char abstract\n`
+          );
+        } catch (err) {
+          const msg = err instanceof Error ? err.message : String(err);
+          console.warn(`  Warning: Content extraction failed: ${msg}\n`);
+        }
+      }
+    }
   } else {
     console.log(
       "This was a dry run — no files were modified.\nRe-run with --apply to write changes to the prediction files.\n"

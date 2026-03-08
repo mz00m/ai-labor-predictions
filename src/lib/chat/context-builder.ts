@@ -8,6 +8,8 @@
 
 import { getAllPredictions, getLastUpdated } from "../data-loader";
 import { Prediction, EVIDENCE_TIER_LABELS } from "../types";
+import { getSourceContents } from "./source-content";
+import type { SourceContentEntry } from "./source-content";
 
 /** Keywords mapped to prediction slugs for relevance matching */
 const KEYWORD_MAP: Record<string, string[]> = {
@@ -108,8 +110,28 @@ function selectRelevantPredictions(
   return selected;
 }
 
+/** Collect all source IDs referenced by a set of predictions */
+function collectSourceIds(predictions: Prediction[]): string[] {
+  const ids = new Set<string>();
+  for (const p of predictions) {
+    for (const s of p.sources) ids.add(s.id);
+    for (const h of p.history) {
+      for (const sid of h.sourceIds) ids.add(sid);
+    }
+    if (p.overlays) {
+      for (const o of p.overlays) {
+        for (const sid of o.sourceIds) ids.add(sid);
+      }
+    }
+  }
+  return Array.from(ids);
+}
+
 /** Format a single prediction into a concise text block for LLM context */
-function formatPrediction(p: Prediction): string {
+function formatPrediction(
+  p: Prediction,
+  contentMap: Map<string, SourceContentEntry>
+): string {
   const lines: string[] = [];
   lines.push(`## ${p.title}`);
   lines.push(`Category: ${p.category} | Unit: ${p.unit} | Horizon: ${p.timeHorizon}`);
@@ -143,14 +165,33 @@ function formatPrediction(p: Prediction): string {
     }
   }
 
-  // Sources (all, for citation)
+  // Sources (all, for citation) — enriched with content store data
   if (p.sources.length > 0) {
     lines.push("\nSources:");
     for (const s of p.sources) {
+      const content = contentMap.get(s.id);
       const excerpt = s.excerpt ? ` — "${s.excerpt}"` : "";
       lines.push(
         `  - [${s.id}] ${s.title} (${s.publisher}, ${s.datePublished}, Tier ${s.evidenceTier})${excerpt}`
       );
+      // Append rich content if available from content store
+      if (content) {
+        if (content.abstract) {
+          lines.push(`    Abstract: ${content.abstract}`);
+        }
+        if (content.keyFindings.length > 0) {
+          lines.push(`    Key findings:`);
+          for (const f of content.keyFindings) {
+            lines.push(`      * ${f}`);
+          }
+        }
+        if (content.methodology && content.methodology !== "Not specified") {
+          lines.push(`    Methodology: ${content.methodology}`);
+        }
+        if (content.qualifiers && content.qualifiers !== "None stated") {
+          lines.push(`    Qualifiers: ${content.qualifiers}`);
+        }
+      }
     }
   }
 
@@ -212,11 +253,15 @@ Your role:
   // Always include the full index so the model knows what exists
   sections.push(buildPredictionIndex(allPredictions));
 
+  // Load rich content for relevant sources
+  const allSourceIds = collectSourceIds(relevant);
+  const contentMap = getSourceContents(allSourceIds);
+
   // Include detailed data for relevant predictions
   if (relevant.length > 0) {
     sections.push("# Detailed Data for Relevant Predictions\n");
     for (const p of relevant) {
-      sections.push(formatPrediction(p));
+      sections.push(formatPrediction(p, contentMap));
       sections.push("");
     }
   }
