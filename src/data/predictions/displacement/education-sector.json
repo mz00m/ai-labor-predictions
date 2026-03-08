@@ -2,7 +2,7 @@
   "id": "displacement-education",
   "slug": "education-sector-displacement",
   "title": "Education Sector Displacement by 2030",
-  "description": "Projected percentage of education roles (tutoring, grading, content creation, administration) restructured or reduced by AI by 2030. Only data points where sources directly state a displacement figure are plotted.",
+  "description": "Projected percentage of education roles (tutoring, grading, content creation, administration) restructured or reduced by AI by 2030. Only data points where sources directly state a displacement figure are plotted. Note: most recent research focuses on AI adoption rates and task exposure in education rather than role elimination rates, making direct displacement estimates unusually sparse for this sector.",
   "category": "displacement",
   "unit": "% of roles displaced",
   "currentValue": 12.2,
@@ -163,6 +163,15 @@
       "label": "Cognizant: education exposure jumped from 11% to 49% — a 4.5x increase"
     },
     {
+      "date": "2026-01-13",
+      "direction": "down",
+      "sourceIds": [
+        "educause-ai-higher-ed-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "EDUCAUSE: 94% of higher ed workers use AI; 67% flag job loss as urgent risk (n=1,960)"
+    },
+    {
       "date": "2026-02-01",
       "direction": "up",
       "sourceIds": [
@@ -307,6 +316,15 @@
       "evidenceTier": 2,
       "datePublished": "2025-10-01",
       "excerpt": "At least 50% of tasks are automated in only 7.3% of education and library occupations — the lowest of any occupational group. Survey of 20,262 U.S. workers fielded March-April 2025."
+    },
+    {
+      "id": "educause-ai-higher-ed-2026",
+      "title": "The Impact of AI on Work in Higher Education",
+      "url": "https://www.educause.edu/research/2026/the-impact-of-ai-on-work-in-higher-education",
+      "publisher": "EDUCAUSE (with AIR, NACUBO, CUPA-HR)",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-13",
+      "excerpt": "94% of higher education workers use AI tools for work, but only 54% are aware of institutional AI policies. 67% identified six or more urgent AI-related risks, including job loss. Survey of 1,960 staff and faculty across 1,800+ institutions."
     },
     {
       "id": "cognizant-new-work-2026",

@@ -51,6 +51,17 @@
       "metricType": "corporate"
     },
     {
+      "date": "2025-09-02",
+      "value": 50,
+      "confidenceLow": 45,
+      "confidenceHigh": 55,
+      "sourceIds": [
+        "salesforce-cs-ai-agents-2025"
+      ],
+      "evidenceTier": 1,
+      "metricType": "corporate"
+    },
+    {
       "date": "2025-10-15",
       "value": 25,
       "confidenceLow": 20,
@@ -183,6 +194,15 @@
       "label": "Stanford: 11% decline for early-career CS workers"
     },
     {
+      "date": "2025-09-02",
+      "direction": "down",
+      "sourceIds": [
+        "salesforce-cs-ai-agents-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Salesforce: Cut CS workforce 44% (9K to 5K); AI agents handle 50% of conversations"
+    },
+    {
       "date": "2025-10-01",
       "direction": "up",
       "sourceIds": [
@@ -296,6 +316,15 @@
       "evidenceTier": 2,
       "datePublished": "2025-01-15",
       "excerpt": "Customer service representative postings declined 18% year-over-year. Remaining postings increasingly require technical skills and AI tool familiarity."
+    },
+    {
+      "id": "salesforce-cs-ai-agents-2025",
+      "title": "Salesforce CEO Marc Benioff says his company has cut 4,000 customer service jobs as AI steps in",
+      "url": "https://fortune.com/2025/09/02/salesforce-ceo-billionaire-marc-benioff-ai-agents-jobs-layoffs-customer-service-sales/",
+      "publisher": "Fortune (Benioff interview on The Logan Bartlett Show)",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-02",
+      "excerpt": "50% are with agents, 50% are with humans. From 9,000 heads to about 5,000 because I need less heads. Support costs reduced by 17%."
     },
     {
       "id": "shopify-earnings-2024",
