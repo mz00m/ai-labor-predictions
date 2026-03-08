@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-08",
-  "totalSources": 323,
-  "verifiedCount": 313,
+  "totalSources": 324,
+  "verifiedCount": 314,
   "sources": {
     "revelio-labs-wage-divide-2025": {
       "id": "revelio-labs-wage-divide-2025",
@@ -1104,6 +1104,20 @@
         "education-sector-displacement"
       ],
       "verified": true
+    },
+    "educause-ai-higher-ed-2026": {
+      "id": "educause-ai-higher-ed-2026",
+      "title": "The Impact of AI on Work in Higher Education",
+      "url": "https://www.educause.edu/research/2026/the-impact-of-ai-on-work-in-higher-education",
+      "publisher": "EDUCAUSE (with AIR, NACUBO, CUPA-HR)",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-13",
+      "excerpt": "94% of higher education workers use AI tools for work, but only 54% are aware of institutional AI policies. 67% identified six or more urgent AI-related risks, including job loss. Survey of 1,960 staff and faculty across 1,800+ institutions.",
+      "usedIn": [
+        "education-sector-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
     },
     "egon-zehnder-cfo-ai-2025": {
       "id": "egon-zehnder-cfo-ai-2025",
