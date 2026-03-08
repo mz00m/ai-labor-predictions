@@ -4,15 +4,24 @@ import RecentSources from "@/components/RecentSources";
 import { getRecentSources } from "@/lib/sources";
 
 export const metadata: Metadata = {
-  title: "About — Early Signals of AI Impact",
+  title: "About",
   description:
     "Why this project exists, how the methodology works, and who built it. A synthesis of AI-and-labor data for workforce, education, philanthropy, and policy leaders.",
+  alternates: {
+    canonical: "/about",
+  },
   openGraph: {
     title: "About — Early Signals of AI Impact",
     description:
       "Why this project exists, how the methodology works, and who built it.",
     type: "website",
     siteName: "Early Signals of AI Impact",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About — Early Signals of AI Impact",
+    description:
+      "Why this project exists, how the methodology works, and who built it.",
   },
 };
 
