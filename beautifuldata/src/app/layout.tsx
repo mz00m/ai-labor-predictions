@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Beautiful Data — Interactive Data Visualization Studio",
@@ -22,7 +25,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
-      <body className="bg-surface-0 font-sans text-gray-100 antialiased">
+      <body
+        className={`${inter.className} bg-surface-0 text-gray-100 antialiased`}
+      >
         {children}
       </body>
     </html>

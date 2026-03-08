@@ -15,8 +15,8 @@ export function Nav() {
   return (
     <nav className="fixed top-0 z-50 w-full border-b border-white/5 bg-surface-0/80 backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="#" className="text-base font-semibold tracking-tight text-white">
-          beautiful<span className="text-brand-400">data</span>
+        <a href="#" className="text-lg font-semibold tracking-tight text-white">
+          Beautiful<span className="font-normal text-brand-400">Data</span>
         </a>
 
         {/* Desktop */}
@@ -25,14 +25,14 @@ export function Nav() {
             <a
               key={l.href}
               href={l.href}
-              className="text-[13px] text-gray-500 transition-colors hover:text-gray-200"
+              className="text-sm text-gray-500 transition-colors hover:text-gray-200"
             >
               {l.label}
             </a>
           ))}
           <a
             href="#contact"
-            className="rounded-full bg-brand-600 px-5 py-2 text-[13px] font-medium text-white transition-all hover:bg-brand-500 hover:shadow-md hover:shadow-brand-600/20"
+            className="rounded-lg bg-brand-600 px-5 py-2 text-sm font-medium text-white transition-all hover:bg-brand-500"
           >
             Start a project
           </a>
@@ -70,7 +70,7 @@ export function Nav() {
           <a
             href="#contact"
             onClick={() => setOpen(false)}
-            className="mt-3 block rounded-full bg-brand-600 px-5 py-2.5 text-center text-sm font-medium text-white"
+            className="mt-3 block rounded-lg bg-brand-600 px-5 py-2.5 text-center text-sm font-medium text-white"
           >
             Start a project
           </a>
