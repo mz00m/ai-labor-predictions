@@ -5,7 +5,7 @@
   "description": "Projected change in average freelancer hourly rates for AI-exposed categories (writing, design, translation, data work) by 2028.",
   "category": "wages",
   "unit": "% rate change",
-  "currentValue": -28,
+  "currentValue": -17.5,
   "timeHorizon": "By 2028",
   "history": [
     {
@@ -130,7 +130,7 @@
         "ramp-freelance-velocity-2025"
       ],
       "evidenceTier": 1,
-      "label": "Ramp: freelance spend fell 0.66% \u2192 0.14% of total"
+      "label": "Ramp: freelance spend fell 0.66% → 0.14% of total"
     },
     {
       "date": "2025-10-30",
@@ -231,7 +231,7 @@
       "publisher": "Brookings Institution",
       "evidenceTier": 1,
       "datePublished": "2025-07-01",
-      "excerpt": "High-skill freelancers disproportionately affected by AI \u2014 top performers were impacted most, contradicting conventional wisdom that expertise insulates workers."
+      "excerpt": "High-skill freelancers disproportionately affected by AI — top performers were impacted most, contradicting conventional wisdom that expertise insulates workers."
     },
     {
       "id": "del-rio-chanona-ai-jobs-2025",
@@ -249,7 +249,7 @@
       "publisher": "Center for AI Safety / Scale AI (Mazeika et al.)",
       "evidenceTier": 1,
       "datePublished": "2025-10-30",
-      "excerpt": "Best AI agent (Manus) earned $1,720 out of a possible $143,991 across 240 real freelance projects \u2014 capturing only 1.2% of economic value. Automation rate: 2.5%."
+      "excerpt": "Best AI agent (Manus) earned $1,720 out of a possible $143,991 across 240 real freelance projects — capturing only 1.2% of economic value. Automation rate: 2.5%."
     }
   ]
 }

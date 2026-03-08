@@ -5,7 +5,7 @@
   "description": "Percentage of customer service interactions fully handled by AI without human intervention. Only data points where sources directly state an automation rate are plotted.",
   "category": "displacement",
   "unit": "% of interactions automated",
-  "currentValue": 55,
+  "currentValue": 31.0,
   "timeHorizon": "By 2028",
   "history": [
     {
@@ -29,6 +29,15 @@
       ],
       "evidenceTier": 1,
       "metricType": "corporate"
+    },
+    {
+      "date": "2025-02-10",
+      "value": 5,
+      "sourceIds": [
+        "bls-mlr-ai-employment-projections-2025"
+      ],
+      "evidenceTier": 1,
+      "metricType": "employment"
     },
     {
       "date": "2025-02-12",
@@ -62,15 +71,6 @@
       ],
       "evidenceTier": 3,
       "metricType": "survey"
-    },
-    {
-      "date": "2025-02-10",
-      "value": 5,
-      "sourceIds": [
-        "bls-mlr-ai-employment-projections-2025"
-      ],
-      "evidenceTier": 1,
-      "metricType": "employment"
     }
   ],
   "overlays": [
@@ -299,7 +299,7 @@
     },
     {
       "id": "shopify-earnings-2024",
-      "title": "Shopify Q4 2024 Earnings \u2014 AI Customer Support Metrics",
+      "title": "Shopify Q4 2024 Earnings — AI Customer Support Metrics",
       "url": "https://investors.shopify.com/financial-reports",
       "publisher": "Shopify (Earnings Call)",
       "evidenceTier": 1,

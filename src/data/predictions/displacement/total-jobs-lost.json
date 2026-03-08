@@ -5,7 +5,7 @@
   "description": "Projected net jobs eliminated by AI and automation as a share of the total US civilian labor force (~168.5 million). Mostly projection-based; observed employment data so far shows near-zero net displacement.",
   "category": "displacement",
   "unit": "% of US labor force",
-  "currentValue": 4,
+  "currentValue": 2.2,
   "timeHorizon": "By 2030",
   "history": [
     {
@@ -207,15 +207,6 @@
       "label": "Brookings: 6.1M workers (4.2%) face high AI exposure + low adaptive capacity"
     },
     {
-      "date": "2026-03-05",
-      "direction": "down",
-      "sourceIds": [
-        "anthropic-labor-market-impacts-2026"
-      ],
-      "evidenceTier": 1,
-      "label": "Anthropic: Young workers (22\u201325) see 14% hiring rate drop in AI-exposed occupations"
-    },
-    {
       "date": "2026-02-15",
       "direction": "up",
       "sourceIds": [
@@ -223,6 +214,15 @@
       ],
       "evidenceTier": 1,
       "label": "Yotzov et al.: Executives predict 0.7% employment reduction in 3 years"
+    },
+    {
+      "date": "2026-03-05",
+      "direction": "down",
+      "sourceIds": [
+        "anthropic-labor-market-impacts-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Anthropic: Young workers (22–25) see 14% hiring rate drop in AI-exposed occupations"
     }
   ],
   "sources": [
@@ -316,7 +316,7 @@
     },
     {
       "id": "indeed-total-postings-2025",
-      "title": "US Job Postings Are 15% Below Peak \u2014 AI Categories Hit Hardest",
+      "title": "US Job Postings Are 15% Below Peak — AI Categories Hit Hardest",
       "url": "https://www.hiringlab.org/2025/01/28/us-job-postings-trends/",
       "publisher": "Indeed Hiring Lab",
       "evidenceTier": 2,
