@@ -2,7 +2,7 @@
   "id": "displacement-education",
   "slug": "education-sector-displacement",
   "title": "Education Sector Displacement by 2030",
-  "description": "Projected percentage of education roles (tutoring, grading, content creation, administration) restructured or reduced by AI by 2030. Only data points where sources directly state a displacement figure are plotted.",
+  "description": "Projected percentage of education roles (tutoring, grading, content creation, administration) restructured or reduced by AI by 2030. Only data points where sources directly state a displacement figure are plotted. Note: most recent research focuses on AI adoption rates and task exposure in education rather than role elimination rates, making direct displacement estimates unusually sparse for this sector.",
   "category": "displacement",
   "unit": "% of roles displaced",
   "currentValue": 12.2,
