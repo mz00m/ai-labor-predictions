@@ -268,6 +268,15 @@
       ],
       "evidenceTier": 1,
       "label": "Anthropic: AI exposure concentrates in credentialed roles (17.4% vs 4.5% grad degrees)"
+    },
+    {
+      "date": "2025-12-01",
+      "direction": "down",
+      "sourceIds": [
+        "revelio-labs-wage-divide-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Revelio Labs: automation suppressing wage gains in lower-paid roles"
     }
   ],
   "sources": [
@@ -279,6 +288,15 @@
       "evidenceTier": 2,
       "datePublished": "2023-05-01",
       "excerpt": "Entry-level job postings in AI-exposed fields declined 12% YoY. Starting salaries for junior analysts, associates, and coordinators showed early downward pressure."
+    },
+    {
+      "id": "revelio-labs-wage-divide-2025",
+      "title": "The Wage Divide is Widening Again and AI May Be to Blame",
+      "url": "https://www.reveliolabs.com/news/macro/the-wage-divide-is-widening-again-and-ai-may-be-to-blame/",
+      "publisher": "Revelio Labs",
+      "evidenceTier": 2,
+      "datePublished": "2025-12-01",
+      "excerpt": "Automation pressures are disproportionately suppressing wage gains in lower-paid roles, which is contrary to narratives that AI is mostly impacting high-earning, white-collar jobs."
     },
     {
       "id": "nber-entry-wage-2023",

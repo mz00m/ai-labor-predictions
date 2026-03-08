@@ -283,6 +283,15 @@
       ],
       "evidenceTier": 3,
       "label": "Furman (BLS): productivity 2.2% above CBO forecast; 2.8% annual growth"
+    },
+    {
+      "date": "2025-12-01",
+      "direction": "down",
+      "sourceIds": [
+        "revelio-labs-wage-divide-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Revelio Labs: top-quartile salaries +30% vs bottom-quartile +10% since Jan 2023"
     }
   ],
   "sources": [
@@ -495,6 +504,15 @@
       "evidenceTier": 3,
       "datePublished": "2026-03-05",
       "excerpt": "Are we finally seeing AI in the productivity data? A big upward revision to earlier data and strong Q4 bring us 2.2% above CBO's pre-pandemic forecast. Annual rates: 1 year: 2.8%, 2 years: 2.5%, 6 years: 2.2%"
+    },
+    {
+      "id": "revelio-labs-wage-divide-2025",
+      "title": "The Wage Divide is Widening Again and AI May Be to Blame",
+      "url": "https://www.reveliolabs.com/news/macro/the-wage-divide-is-widening-again-and-ai-may-be-to-blame/",
+      "publisher": "Revelio Labs",
+      "evidenceTier": 2,
+      "datePublished": "2025-12-01",
+      "excerpt": "Since January 2023, salaries at the top quartile of the wage distribution have grown by more than 30%. Over the same period, salaries at the bottom quartile have risen by only around 10%."
     },
     {
       "id": "otis-kenyan-entrepreneurs-2023",

@@ -228,9 +228,27 @@
       ],
       "evidenceTier": 1,
       "label": "Anthropic: AI-exposed workers earn 47% more than unexposed workers"
+    },
+    {
+      "date": "2025-12-01",
+      "direction": "up",
+      "sourceIds": [
+        "revelio-labs-wage-divide-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Revelio Labs: demand for $100K+ jobs up ~150% in 2 years; K-shaped recovery"
     }
   ],
   "sources": [
+    {
+      "id": "revelio-labs-wage-divide-2025",
+      "title": "The Wage Divide is Widening Again and AI May Be to Blame",
+      "url": "https://www.reveliolabs.com/news/macro/the-wage-divide-is-widening-again-and-ai-may-be-to-blame/",
+      "publisher": "Revelio Labs",
+      "evidenceTier": 2,
+      "datePublished": "2025-12-01",
+      "excerpt": "Demand for high-wage jobs with salaries over USD $100,000 has grown by about 150% over the past two years. Meanwhile, job postings for low-wage positions have fallen steadily for nearly two years."
+    },
     {
       "id": "indeed-ai-salaries-2023",
       "title": "AI Job Postings and Salary Trends",
