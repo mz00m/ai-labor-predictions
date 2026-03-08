@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Chatbot from "@/components/Chatbot";
 import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
@@ -96,6 +97,7 @@ export default function RootLayout({
         <main className="max-w-6xl mx-auto px-6 sm:px-10 py-16">
           {children}
         </main>
+        <Chatbot />
         <Analytics />
         <footer className="max-w-6xl mx-auto px-6 sm:px-10 pb-16">
           <div className="pt-10 border-t border-black/[0.06]">

@@ -16,6 +16,8 @@
     "ingest": "tsx scripts/ingest-source.ts",
     "ingest:from-digest": "tsx scripts/ingest-from-digest.ts",
     "ingest:apply": "tsx scripts/apply-ingestion.ts",
+    "backfill:content": "tsx scripts/backfill-source-content.ts --skip-existing",
+    "backfill:content:dry-run": "tsx scripts/backfill-source-content.ts --dry-run",
     "signals:fetch": "python3 scripts/signals/fetch_all.py",
     "signals:calc": "python3 scripts/signals/calculate_metrics.py",
     "signals:update": "python3 scripts/signals/fetch_all.py"
