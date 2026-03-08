@@ -209,10 +209,10 @@ function CustomTooltip({
 
 function overlayColor(direction: string) {
   return direction === "down"
-    ? "#f59e0b"   // amber — warm tone for negative signals
+    ? "#ef4444"   // red-500 — negative / risk signal
     : direction === "up"
-      ? "#06b6d4" // cyan — cool tone for positive signals
-      : "#8b5cf6"; // violet — neutral, harmonizes with chart accent
+      ? "#22c55e" // green-500 — positive / growth signal
+      : "#94a3b8"; // slate-400 — neutral / mixed signal
 }
 
 /** Render a dot shape based on metricType. Falls back to circle with tier color. */
@@ -595,15 +595,19 @@ export default function PredictionChart({
             <span className="text-[11px] text-[var(--muted)]">Confidence range</span>
           </div>
         )}
-        {category === "displacement" && yMin < 0 && (
+        {overlayData.length > 0 && (
           <>
-            <div className="flex items-center gap-1">
-              <span className="text-[11px]" style={{ color: "#dc2626" }}>{"\u2191"}</span>
-              <span className="text-[11px] text-[var(--muted)]">More displacement</span>
+            <div className="flex items-center gap-1.5">
+              <svg width="6" height="10">
+                <rect x="0" y="0" width="6" height="10" fill="#ef4444" fillOpacity="0.32" rx="1" />
+              </svg>
+              <span className="text-[11px] text-[var(--muted)]">Negative signal</span>
             </div>
-            <div className="flex items-center gap-1">
-              <span className="text-[11px]" style={{ color: "#16a34a" }}>{"\u2193"}</span>
-              <span className="text-[11px] text-[var(--muted)]">Growth / Recovery</span>
+            <div className="flex items-center gap-1.5">
+              <svg width="6" height="10">
+                <rect x="0" y="0" width="6" height="10" fill="#22c55e" fillOpacity="0.32" rx="1" />
+              </svg>
+              <span className="text-[11px] text-[var(--muted)]">Positive signal</span>
             </div>
           </>
         )}
