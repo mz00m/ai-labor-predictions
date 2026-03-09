@@ -195,6 +195,15 @@
       ],
       "evidenceTier": 1,
       "label": "BLS JOLTS: Healthcare openings down 10.8% (-152K) since Oct"
+    },
+    {
+      "date": "2025-05-01",
+      "direction": "up",
+      "sourceIds": [
+        "oecd-health-ai-skills-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "OECD: only 4.3% of health roles potentially automatable; 0.6% high risk (55.5M postings)"
     }
   ],
   "sources": [
@@ -368,6 +377,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-01-15",
       "excerpt": "In the AI group, screen readings fell from 109,692 to 61,248—a 44 percent workload reduction—while screen-detected cancers rose from 262 to 338, a 29 percent increase in detection."
+    },
+    {
+      "id": "oecd-health-ai-skills-2025",
+      "title": "Digital and AI Skills in Health Occupations: What Do We Know About New Demand?",
+      "url": "https://www.oecd.org/en/publications/digital-and-ai-skills-in-health-occupations_5fbd42ab-en.html",
+      "publisher": "OECD (Manca & Eslava)",
+      "evidenceTier": 1,
+      "datePublished": "2025-05-01",
+      "excerpt": "Approximately 32% of health employment is classified under potential augmentation, approximately 4.3% of roles (such as Pharmacy Technicians) are identified as potentially automatable, and the high automation risk category (roles like Orderlies and Medical Transcriptionists) constitutes around 0.6% of the health workforce. Analysis of 55.5 million online job postings from Canada, UK, and US (2018-2023)."
     }
   ]
 }

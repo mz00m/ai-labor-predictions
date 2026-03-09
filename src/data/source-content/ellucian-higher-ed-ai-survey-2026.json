@@ -1,0 +1,15 @@
+{
+  "id": "ellucian-higher-ed-ai-survey-2026",
+  "abstract": "Ellucian's third annual AI survey of 779 higher education faculty and administrators from 300+ institutions in the US and Canada finds institutional AI adoption accelerating sharply, with 66% of institutions currently leveraging AI (up from 49% year-over-year). Personal AI use is nearing saturation at 90%, while 88% expect institutional use to increase over the next two years.",
+  "keyFindings": [
+    "66% of institutions currently leveraging AI, up from 49% year-over-year",
+    "90% of respondents report using AI personally, up from 84% the prior year",
+    "88% expect institutional AI use to increase over the next two years",
+    "43% say their institution's strategic plan includes a focus on AI",
+    "Nearly two-thirds of executive leaders indicate their institution already allocates budget for AI",
+    "83% of Financial Aid respondents indicate they need AI training"
+  ],
+  "methodology": "Online survey open September 15 to November 15, 2025. 779 responses from higher education administrators at 300+ institutions primarily in US and Canada. 68% from public institutions, 32% from private.",
+  "qualifiers": "Survey covers AI adoption patterns, not direct displacement or job elimination. Respondent pool skewed toward administrators rather than faculty. Focuses on institutional strategy rather than labor market outcomes.",
+  "fetchedAt": "2026-03-09"
+}

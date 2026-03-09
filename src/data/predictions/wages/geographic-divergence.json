@@ -165,6 +165,15 @@
       ],
       "evidenceTier": 1,
       "label": "Dallas Fed: AI-exposed sector wages +16.7% vs +7.5% national since fall 2022"
+    },
+    {
+      "date": "2025-11-26",
+      "direction": "up",
+      "sourceIds": [
+        "mit-iceberg-index-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "MIT Iceberg Index: AI exposure distributed across all 50 states; SD, NC, UT higher than CA"
     }
   ],
   "sources": [
@@ -302,6 +311,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-02-24",
       "excerpt": "Since fall 2022, nominal average weekly wages nationwide have increased 7.5 percent, while the computer systems design sector has risen 16.7 percent. Among the top 10 percent of AI-exposed industries, wages grew 8.5 percent."
+    },
+    {
+      "id": "mit-iceberg-index-2025",
+      "title": "The Iceberg Index: Measuring Skills-centered Exposure in the AI Economy",
+      "url": "https://arxiv.org/abs/2510.25137",
+      "publisher": "MIT / Oak Ridge National Laboratory",
+      "evidenceTier": 1,
+      "datePublished": "2025-11-26",
+      "excerpt": "AI exposure is geographically distributed across all 50 states, not confined to coastal tech hubs. South Dakota, North Carolina, and Utah show higher Iceberg Index values than California or Virginia. Tennessee (11.6%) and Ohio (11.8%) show substantial exposure driven by administrative and coordination roles. Washington leads tech-specific exposure at 4.2%."
     }
   ]
 }

@@ -1,0 +1,15 @@
+{
+  "id": "mit-iceberg-index-2025",
+  "abstract": "MIT and Oak Ridge National Laboratory developed the Iceberg Index, a skills-centered metric measuring workforce AI exposure across 151 million US workers, 32,000 skills, and 3,000 counties. The study finds 11.7% of the US workforce is currently replaceable by AI, representing $1.2 trillion in wages, with exposure distributed across all 50 states rather than concentrated in coastal tech hubs.",
+  "keyFindings": [
+    "11.7% of US workforce (151M workers) currently replaceable by AI, worth $1.2 trillion in wages",
+    "Visible tech sector layoffs represent just 2.2% of total wage exposure ($211 billion)",
+    "South Dakota, North Carolina, and Utah show higher Index values than California or Virginia",
+    "Tennessee (11.6%) and Ohio (11.8%) show substantial exposure driven by admin and coordination roles",
+    "Washington leads tech-specific exposure at 4.2%, followed by Virginia (3.6%) and California (3%)",
+    "Northeastern states show exposure led by finance and tech; Manufacturing Belt states show distributed patterns"
+  ],
+  "methodology": "Large Population Models simulating 151 million workers as autonomous agents executing 32,000+ skills across 3,000 counties. Built on MIT Large Population Models and Oak Ridge National Lab Frontier supercomputer. Partnered with Tennessee, North Carolina, and Utah state governments for validation.",
+  "qualifiers": "Measures current AI capability to perform skills, not actual adoption or displacement. Capability does not automatically translate to job losses. Earlier MIT CSAIL work found full replacement often too expensive even where technically feasible. The index measures exposure, not adoption, workforce displacement, or policy impacts.",
+  "fetchedAt": "2026-03-09"
+}

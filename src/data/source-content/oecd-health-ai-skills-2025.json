@@ -1,0 +1,14 @@
+{
+  "id": "oecd-health-ai-skills-2025",
+  "abstract": "OECD analysis of 55.5 million online job postings from Canada, UK, and US (2018-2023) examining how digital technologies and AI are reshaping demand for skills in health occupations. Finds most health roles will be augmented rather than automated, with only a small fraction facing high automation risk.",
+  "keyFindings": [
+    "32% of health employment classified under potential augmentation by AI",
+    "4.3% of health roles (e.g. Pharmacy Technicians) identified as potentially automatable",
+    "0.6% of health workforce in high automation risk category (Orderlies, Medical Transcriptionists)",
+    "AI skills demand in healthcare job postings is 1.0%, below economy-wide average",
+    "Health Information Management demand increased from 24.0% to 25.1% of postings (2018-2023)"
+  ],
+  "methodology": "Analysis of 55.5 million online job postings from Canada, UK, and US between 2018-2023. Categorized health occupations by susceptibility to automation vs augmentation using GenAI and Advanced Robotics exposure frameworks.",
+  "qualifiers": "Covers all health occupations, not limited to administrative roles. Automation potential does not equal actual displacement. Based on job posting analysis, not employer surveys or employment data.",
+  "fetchedAt": "2026-03-09"
+}
