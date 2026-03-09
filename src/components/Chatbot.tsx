@@ -94,9 +94,21 @@ export default function Chatbot() {
     return () => window.removeEventListener("open-chatbot", handleOpenChat);
   }, []);
 
+  // Track last send time to enforce a minimum gap between messages
+  const lastSendRef = useRef<number>(0);
+  const MIN_SEND_GAP_MS = 2000;
+
   const sendMessage = useCallback(
     async (text: string) => {
       if (!text.trim() || streaming) return;
+
+      const now = Date.now();
+      const elapsed = now - lastSendRef.current;
+      if (elapsed < MIN_SEND_GAP_MS) {
+        setError("Hold on — give it a second before sending another message.");
+        return;
+      }
+      lastSendRef.current = now;
 
       setError(null);
       const userMsg: Message = {

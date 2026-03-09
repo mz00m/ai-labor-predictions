@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-09",
-  "totalSources": 326,
-  "verifiedCount": 316,
+  "totalSources": 327,
+  "verifiedCount": 317,
   "sources": {
     "revelio-labs-wage-divide-2025": {
       "id": "revelio-labs-wage-divide-2025",
@@ -197,6 +197,18 @@
         "white-collar-professional-displacement",
         "workforce-ai-exposure"
       ],
+      "verified": true,
+      "synthetic": false
+    },
+    "careervillage-ai-resilience-report-2026": {
+      "id": "careervillage-ai-resilience-report-2026",
+      "title": "The AI Resilience Report",
+      "url": "https://www.airesilience.org/",
+      "publisher": "CareerVillage.org",
+      "evidenceTier": 2,
+      "datePublished": "2026-03-07",
+      "excerpt": "Aggregates multiple AI exposure datasets with employment projections into occupation-specific AI resilience scores for students and entry-level professionals.",
+      "usedIn": [],
       "verified": true,
       "synthetic": false
     },
