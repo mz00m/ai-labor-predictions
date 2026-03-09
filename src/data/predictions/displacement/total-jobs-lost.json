@@ -221,8 +221,8 @@
       "sourceIds": [
         "anthropic-labor-market-impacts-2026"
       ],
-      "evidenceTier": 1,
-      "label": "Anthropic: Young workers (22–25) see 14% hiring rate drop in AI-exposed occupations"
+      "evidenceTier": 2,
+      "label": "Anthropic: Young workers (22\u201325) see 14% hiring rate drop in AI-exposed occupations"
     }
   ],
   "sources": [
@@ -316,7 +316,7 @@
     },
     {
       "id": "indeed-total-postings-2025",
-      "title": "US Job Postings Are 15% Below Peak — AI Categories Hit Hardest",
+      "title": "US Job Postings Are 15% Below Peak \u2014 AI Categories Hit Hardest",
       "url": "https://www.hiringlab.org/2025/01/28/us-job-postings-trends/",
       "publisher": "Indeed Hiring Lab",
       "evidenceTier": 2,
@@ -398,9 +398,9 @@
     {
       "id": "anthropic-labor-market-impacts-2026",
       "title": "Labor market impacts of AI: A new measure and early evidence",
-      "url": "https://cdn.sanity.io/files/4zrzovbb/website/dc7bcd0224644fce97cecb7f9e68dcd8434b35f1.pdf",
+      "url": "https://www.anthropic.com/research/labor-market-impacts",
       "publisher": "Anthropic (Massenkoff, McCrory)",
-      "evidenceTier": 1,
+      "evidenceTier": 2,
       "datePublished": "2026-03-05",
       "excerpt": "The averaged estimate in the post-ChatGPT era is a 14% drop in the job finding rate compared to that in 2022 in the exposed occupations, although this is just barely statistically significant. (There is no such decrease for workers older than 25.)"
     },
@@ -411,7 +411,7 @@
       "publisher": "NBER (Yotzov, Barrero, Bloom, Bunn, Davis et al.)",
       "evidenceTier": 1,
       "datePublished": "2026-02-15",
-      "excerpt": "Looking ahead three years, executives predict a 1.4 percent productivity boost and 0.8 percent output increase alongside a 0.7 percent employment reduction—while employees forecast a 0.5 percent employment increase."
+      "excerpt": "Looking ahead three years, executives predict a 1.4 percent productivity boost and 0.8 percent output increase alongside a 0.7 percent employment reduction\u2014while employees forecast a 0.5 percent employment increase."
     }
   ]
 }
