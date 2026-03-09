@@ -8,12 +8,78 @@ interface ChatMessage {
   content: string;
 }
 
+/**
+ * Simple in-memory rate limiter.
+ * Tracks request timestamps per IP with a sliding window.
+ */
+const rateLimitMap = new Map<string, number[]>();
+const RATE_LIMIT_WINDOW_MS = 60_000; // 1 minute
+const RATE_LIMIT_MAX_REQUESTS = 10; // max requests per window per IP
+const GLOBAL_RATE_LIMIT_MAX = 60; // max total requests per window
+let globalRequestTimestamps: number[] = [];
+
+function cleanTimestamps(timestamps: number[], now: number): number[] {
+  return timestamps.filter((t) => now - t < RATE_LIMIT_WINDOW_MS);
+}
+
+function isRateLimited(ip: string): { limited: boolean; retryAfterMs?: number } {
+  const now = Date.now();
+
+  // Global rate limit
+  globalRequestTimestamps = cleanTimestamps(globalRequestTimestamps, now);
+  if (globalRequestTimestamps.length >= GLOBAL_RATE_LIMIT_MAX) {
+    const oldest = globalRequestTimestamps[0];
+    return { limited: true, retryAfterMs: RATE_LIMIT_WINDOW_MS - (now - oldest) };
+  }
+
+  // Per-IP rate limit
+  const timestamps = cleanTimestamps(rateLimitMap.get(ip) || [], now);
+  rateLimitMap.set(ip, timestamps);
+
+  if (timestamps.length >= RATE_LIMIT_MAX_REQUESTS) {
+    const oldest = timestamps[0];
+    return { limited: true, retryAfterMs: RATE_LIMIT_WINDOW_MS - (now - oldest) };
+  }
+
+  // Record this request
+  timestamps.push(now);
+  globalRequestTimestamps.push(now);
+  return { limited: false };
+}
+
+function getClientIp(request: Request): string {
+  const forwarded = request.headers.get("x-forwarded-for");
+  if (forwarded) return forwarded.split(",")[0].trim();
+  const real = request.headers.get("x-real-ip");
+  if (real) return real;
+  return "unknown";
+}
+
 export async function POST(request: Request) {
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) {
     return new Response(
       JSON.stringify({ error: "Chat is not configured. ANTHROPIC_API_KEY is missing." }),
       { status: 503, headers: { "Content-Type": "application/json" } }
+    );
+  }
+
+  // Rate limit check
+  const clientIp = getClientIp(request);
+  const { limited, retryAfterMs } = isRateLimited(clientIp);
+  if (limited) {
+    const retryAfterSec = Math.ceil((retryAfterMs || RATE_LIMIT_WINDOW_MS) / 1000);
+    return new Response(
+      JSON.stringify({
+        error: "You're asking questions faster than we can keep up! Please wait a moment and try again.",
+      }),
+      {
+        status: 429,
+        headers: {
+          "Content-Type": "application/json",
+          "Retry-After": String(retryAfterSec),
+        },
+      }
     );
   }
 
@@ -54,12 +120,25 @@ export async function POST(request: Request) {
 
   const client = new Anthropic({ apiKey });
 
-  const stream = await client.messages.stream({
-    model: "claude-haiku-4-5-20251001",
-    max_tokens: 1024,
-    system: systemPrompt,
-    messages: trimmedMessages,
-  });
+  let stream;
+  try {
+    stream = await client.messages.stream({
+      model: "claude-haiku-4-5-20251001",
+      max_tokens: 1024,
+      system: systemPrompt,
+      messages: trimmedMessages,
+    });
+  } catch (err) {
+    if (err instanceof Anthropic.RateLimitError) {
+      return new Response(
+        JSON.stringify({
+          error: "The service is experiencing high demand. Please try again in a few seconds.",
+        }),
+        { status: 429, headers: { "Content-Type": "application/json", "Retry-After": "10" } }
+      );
+    }
+    throw err;
+  }
 
   // Stream response as Server-Sent Events
   const encoder = new TextEncoder();
@@ -78,10 +157,19 @@ export async function POST(request: Request) {
         controller.enqueue(encoder.encode(`data: ${JSON.stringify({ type: "done" })}\n\n`));
         controller.close();
       } catch (err) {
-        const msg = err instanceof Error ? err.message : "Stream error";
-        controller.enqueue(
-          encoder.encode(`data: ${JSON.stringify({ type: "error", error: msg })}\n\n`)
-        );
+        // Handle rate limit errors that occur mid-stream
+        if (err instanceof Anthropic.RateLimitError) {
+          controller.enqueue(
+            encoder.encode(
+              `data: ${JSON.stringify({ type: "error", error: "High demand right now — please wait a moment and try again." })}\n\n`
+            )
+          );
+        } else {
+          const msg = err instanceof Error ? err.message : "Stream error";
+          controller.enqueue(
+            encoder.encode(`data: ${JSON.stringify({ type: "error", error: msg })}\n\n`)
+          );
+        }
         controller.close();
       }
     },
