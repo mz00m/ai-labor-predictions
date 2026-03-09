@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-09",
-  "totalSources": 328,
-  "verifiedCount": 318,
+  "totalSources": 329,
+  "verifiedCount": 319,
   "sources": {
     "revelio-labs-wage-divide-2025": {
       "id": "revelio-labs-wage-divide-2025",
@@ -4463,6 +4463,20 @@
       "synthetic": false,
       "usedIn": [
         "education-sector-displacement"
+      ]
+    },
+    "oecd-health-ai-skills-2025": {
+      "id": "oecd-health-ai-skills-2025",
+      "title": "Digital and AI Skills in Health Occupations: What Do We Know About New Demand?",
+      "url": "https://www.oecd.org/en/publications/digital-and-ai-skills-in-health-occupations_5fbd42ab-en.html",
+      "publisher": "OECD (Manca & Eslava)",
+      "evidenceTier": 1,
+      "datePublished": "2025-05-01",
+      "excerpt": "Approximately 32% of health employment is classified under potential augmentation, approximately 4.3% of roles are identified as potentially automatable, and the high automation risk category constitutes around 0.6% of the health workforce. Analysis of 55.5 million online job postings.",
+      "verified": true,
+      "synthetic": false,
+      "usedIn": [
+        "healthcare-admin-displacement"
       ]
     }
   }
