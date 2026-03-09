@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-03-08",
-  "totalSources": 324,
-  "verifiedCount": 314,
+  "lastUpdated": "2026-03-09",
+  "totalSources": 326,
+  "verifiedCount": 316,
   "sources": {
     "revelio-labs-wage-divide-2025": {
       "id": "revelio-labs-wage-divide-2025",
@@ -621,12 +621,13 @@
       "url": "https://digitaleconomy.stanford.edu/publications/canaries-in-the-coal-mine/",
       "publisher": "Stanford Digital Economy Lab (Brynjolfsson, Chandar, Chen)",
       "evidenceTier": 1,
-      "datePublished": "2025-08-01",
-      "excerpt": "13% relative decline in employment for workers ages 22-25 in most AI-exposed occupations. Software developer employment for ages 22-25 down nearly 20% since ChatGPT's launch.",
+      "datePublished": "2025-11-13",
+      "excerpt": "Early-career workers (ages 22-25) in AI-exposed occupations experienced 16% relative employment declines, controlling for firm-level shocks. By September 2025, employment for software developers aged 22-25 declined nearly 20% compared to its peak in late 2022.",
       "usedIn": [
         "tech-sector-displacement"
       ],
-      "verified": true
+      "verified": true,
+      "synthetic": false
     },
     "brynjolfsson-chandar-chen-cs-2025": {
       "id": "brynjolfsson-chandar-chen-cs-2025",
@@ -644,15 +645,44 @@
     "brynjolfsson-chandar-chen-entry-2025": {
       "id": "brynjolfsson-chandar-chen-entry-2025",
       "title": "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of AI",
-      "url": "https://digitaleconomy.stanford.edu/wp-content/uploads/2025/08/Canaries_BrynjolfssonChandarChen.pdf",
+      "url": "https://digitaleconomy.stanford.edu/publications/canaries-in-the-coal-mine/",
       "publisher": "Stanford Digital Economy Lab (Brynjolfsson, Chandar, Chen)",
       "evidenceTier": 1,
-      "datePublished": "2025-08-01",
-      "excerpt": "ADP payroll data shows 13% relative decline in employment for ages 22-25 in most AI-exposed occupations. Effects concentrated in automation roles, not augmentation.",
+      "datePublished": "2025-11-13",
+      "excerpt": "We find little difference in annual salary trends by age or exposure quintile, suggesting possible wage stickiness. Labor market adjustments are visible in employment more than in compensation.",
       "usedIn": [
         "entry-level-wage-impact"
       ],
-      "verified": true
+      "verified": true,
+      "synthetic": false
+    },
+    "brynjolfsson-chandar-chen-wc-2025": {
+      "id": "brynjolfsson-chandar-chen-wc-2025",
+      "title": "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of AI",
+      "url": "https://digitaleconomy.stanford.edu/publications/canaries-in-the-coal-mine/",
+      "publisher": "Stanford Digital Economy Lab (Brynjolfsson, Chandar, Chen)",
+      "evidenceTier": 1,
+      "datePublished": "2025-11-13",
+      "excerpt": "Workers aged 22 to 25 have experienced a 6% decline in employment from late 2022 to September 2025 in the most AI-exposed occupations, compared to a 6-9% increase for older workers.",
+      "usedIn": [
+        "white-collar-professional-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "brynjolfsson-chandar-chen-overall-2025": {
+      "id": "brynjolfsson-chandar-chen-overall-2025",
+      "title": "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of AI",
+      "url": "https://digitaleconomy.stanford.edu/publications/canaries-in-the-coal-mine/",
+      "publisher": "Stanford Digital Economy Lab (Brynjolfsson, Chandar, Chen)",
+      "evidenceTier": 1,
+      "datePublished": "2025-11-13",
+      "excerpt": "Overall employment continues to grow robustly, but employment growth for young workers has been stagnant since late 2022. Declining employment in AI-exposed jobs drives stagnant overall employment growth for 22- to 25-year-olds.",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
     },
     "brynjolfsson-li-raymond-qje-2025": {
       "id": "brynjolfsson-li-raymond-qje-2025",
