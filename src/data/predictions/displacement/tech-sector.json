@@ -2,7 +2,7 @@
   "id": "displacement-tech",
   "slug": "tech-sector-displacement",
   "title": "Tech Sector Job Displacement by 2030",
-  "description": "Projected percentage of current tech sector jobs that will be automated or significantly restructured by AI by 2030. Only data points where sources directly state a displacement figure are plotted.",
+  "description": "Projected percentage of current tech sector jobs that will be automated or significantly restructured by AI by 2030. Only data points where sources directly state a displacement figure are plotted. Note: early-career workers are disproportionately affected — software developers aged 22-25 experienced a ~20% employment decline from late 2022 to Sept 2025 (Brynjolfsson, Chandar, Chen 2025).",
   "category": "displacement",
   "unit": "% of jobs displaced",
   "currentValue": 2.0,
