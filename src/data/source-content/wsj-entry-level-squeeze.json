@@ -1,0 +1,14 @@
+{
+  "id": "wsj-entry-level-squeeze",
+  "abstract": "The Wall Street Journal examines how entry-level jobs are vanishing as AI automates tasks traditionally performed by junior workers. The article highlights that hiring of new graduates by the 15 largest tech companies has fallen by more than 50% since 2019, with entry-level positions bearing the brunt of AI-driven workforce transformation. The piece argues that AI risks creating a fundamentally broken career ladder for college graduates.",
+  "keyFindings": [
+    "Hiring of new graduates by the 15 largest tech companies has fallen by more than 50% since 2019.",
+    "The number of new graduates hired by Big Tech has fallen by 25% since 2023, while mid- and senior-level roles have shown some recovery.",
+    "Entry-level jobs are uniquely vulnerable to automation because they often involve routine, low-risk tasks that generative AI handles well.",
+    "AI risks creating a fundamentally broken career ladder for college graduates by eliminating the roles where professionals traditionally build foundational skills.",
+    "LinkedIn members have increased AI literacy skills by 177% since 2023, reflecting workers adapting to the shifting landscape."
+  ],
+  "methodology": "Investigative journalism drawing on hiring data from SignalFire (venture capital firm), LinkedIn workforce data, World Economic Forum Future of Jobs Report 2025, and interviews with industry executives and labor economists.",
+  "qualifiers": "The article focuses on tech sector hiring trends which may not be representative of all industries. The decline in entry-level hiring may reflect multiple factors beyond AI, including broader economic conditions and post-pandemic workforce restructuring. Some of the cited predictions (e.g., Amodei's 50% estimate) represent individual opinions rather than systematic analysis.",
+  "fetchedAt": "2026-03-09"
+}

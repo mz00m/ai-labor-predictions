@@ -1,0 +1,14 @@
+{
+  "id": "ilo-wages-2023",
+  "abstract": "The ILO Global Wage Report 2022-23 documents how inflation and COVID-19 have impacted wages and purchasing power globally. For the first time in the 21st century, real wage growth fell to negative values, with global monthly wages declining minus 0.9% in real terms in the first half of 2022 (minus 1.4% excluding China). The report finds that low-income workers are disproportionately affected and that the gender pay gap of approximately 20% persists across countries.",
+  "keyFindings": [
+    "Global real wage growth fell to minus 0.9% in the first half of 2022, the first negative reading this century (minus 1.4% excluding China).",
+    "Real wage growth in advanced G20 countries fell by minus 2.2%, while emerging G20 countries experienced slower but still positive growth.",
+    "Low-income earners are hit hardest as they spend most of their disposable income on essential goods experiencing greater price increases.",
+    "Workers lost an average of six weeks of wages during 2020-2021 due to COVID-19, compounding the inflationary erosion.",
+    "The gender pay gap remains approximately 20% globally, with women paid on average 20% less than men."
+  ],
+  "methodology": "ILO flagship report synthesizing wage data from member states, analyzing nominal and real wage trends across advanced and emerging economies. The report uses national statistical office data, labor force surveys, and administrative records from approximately 30 countries for COVID-19 wage loss estimates.",
+  "qualifiers": "The report notes that nominal wages in many countries had not been adjusted sufficiently to offset the rise in cost of living. The purchasing power of minimum wages was eroding in many countries despite nominal adjustments. Data availability and comparability varies across countries and regions.",
+  "fetchedAt": "2026-03-09"
+}

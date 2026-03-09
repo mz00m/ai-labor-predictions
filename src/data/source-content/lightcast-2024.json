@@ -1,0 +1,14 @@
+{
+  "id": "lightcast-2024",
+  "abstract": "Lightcast's analysis of the AI talent landscape examines skills demand and compensation trends across over 1.3 billion job postings. The report finds that job postings demanding generative AI skills soared 1,848% in 2023, with AI-skilled roles commanding a 28% salary premium (nearly $18,000 more per year) over non-AI positions. By 2024, 51% of job postings requiring AI skills were outside IT and computer science occupations.",
+  "keyFindings": [
+    "Job postings demanding generative AI skills soared 1,848% in 2023.",
+    "Job postings including AI skills offer a 28% salary premium, nearly $18,000 more per year than those without AI capabilities.",
+    "51% of job postings requiring AI skills are outside IT and computer science occupations, with 800% growth in generative AI roles across non-tech industries since 2022.",
+    "HR saw 66% growth leading all sectors; finance experienced 40% growth; education/training had 200% growth in generative AI.",
+    "Between the US and Canada, there are approximately 325,000 AI-skilled tech workers, with San Francisco, Seattle, and New York holding 44% of US AI talent."
+  ],
+  "methodology": "Analysis of Lightcast's proprietary database spanning over 2.5 billion job postings, 400 million career profiles, and 100+ government sources across 150+ countries. The compensation premium was calculated from analysis of over 1.3 billion job postings comparing advertised salaries for positions requiring AI skills versus those without.",
+  "qualifiers": "Demand for AI roles grew 21% as a proportion of all postings from 2018 to 2023, while mentions of university education requirements declined by 15%, suggesting a shift toward skill-based hiring. The salary premium reflects advertised compensation in job postings rather than confirmed pay. Data may overrepresent larger employers who post more frequently on tracked platforms.",
+  "fetchedAt": "2026-03-09"
+}

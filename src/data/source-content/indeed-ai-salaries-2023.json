@@ -1,0 +1,14 @@
+{
+  "id": "indeed-ai-salaries-2023",
+  "abstract": "Indeed Hiring Lab's analysis of AI job postings and salary trends tracks the share of job postings containing AI-related keywords. The data shows AI job postings nearly tripled from February 2020 through March 2022, then peaked and declined before surging again in late 2023. AI roles command salary premiums over non-AI positions, with wage growth patterns tracked through Indeed's wage tracker methodology.",
+  "keyFindings": [
+    "The total number of job postings mentioning AI nearly tripled from February 2020 through March 2022.",
+    "AI job postings measured 134% above February 2020 levels by end of 2025, while total job postings finished just 6% above baseline.",
+    "Tech postings mentioning AI were about 45% higher than February 2020 levels, while total tech postings were 34% below pre-pandemic levels.",
+    "AI mention divergence emerged across knowledge work occupations including HR, finance, management, marketing, and accounting.",
+    "57.8% of job postings on Indeed listed pay information as of September 2024, up from 52.2% a year earlier."
+  ],
+  "methodology": "Analysis of Indeed's proprietary job posting database tracking the share of postings containing AI and generative AI keywords (e.g., 'Machine Learning,' 'Data Science,' 'Artificial Intelligence,' 'Large Language Models'). Wage tracking follows an approach similar to the Atlanta Fed US Wage Growth Tracker, monitoring advertised wages by job title rather than individuals.",
+  "qualifiers": "The data reflects job postings rather than actual hiring or employment. Salary figures represent advertised wages, not confirmed compensation. The methodology tracks keyword mentions which may overcount roles that reference AI tangentially. Data is specific to the Indeed platform and may not represent the full labor market.",
+  "fetchedAt": "2026-03-09"
+}

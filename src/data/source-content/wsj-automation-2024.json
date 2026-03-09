@@ -1,0 +1,14 @@
+{
+  "id": "wsj-automation-2024",
+  "abstract": "The Wall Street Journal reports that AI is beginning to threaten white-collar jobs across industries, with few sectors remaining immune. The article documents growing layoffs at major companies linked to AI adoption, including Google, Duolingo, and UPS (which cut 12,000 jobs citing machine learning improvements). While total jobs directly lost to generative AI remains low, executives and consultants signal that the technology could soon upend a much bigger share of white-collar work.",
+  "keyFindings": [
+    "UPS announced 12,000 job cuts citing machine learning improvements to processes like pricing, reducing need for human workers.",
+    "Over 4,600 job cuts since May 2023 have been directly attributed to AI across major companies.",
+    "Generative AI differs from past automation by creating content and synthesizing ideas, threatening knowledge work that millions perform behind computers.",
+    "Managerial roles are at risk, with corporate executives predicting many may never come back as AI reshapes corporate hierarchies.",
+    "Occupations with higher AI exposure experienced greater decreases in online job postings between 2022 and 2023."
+  ],
+  "methodology": "Investigative journalism drawing on interviews with corporate executives, management consultants, and labor market data. References OECD analysis of AI-exposed occupations and proprietary job posting data.",
+  "qualifiers": "The article notes that some job cuts are a direct result of AI while others reflect companies cutting jobs to fund AI investment or operate more efficiently under broader pressure. The total number of jobs directly lost to generative AI remains low relative to the overall labor market. The distinction between AI-driven and recession-driven layoffs is often unclear.",
+  "fetchedAt": "2026-03-09"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "gartner-cs-2023",
+  "abstract": "Gartner predicts that conversational AI deployments within contact centers will reduce agent labor costs by $80 billion by 2026. The report estimates that one in 10 agent interactions will be automated by 2026, up from 1.6% at the time of publication. With approximately 17 million contact center agents worldwide and labor representing up to 95% of contact center costs, the potential for AI-driven cost reduction is substantial.",
+  "keyFindings": [
+    "Conversational AI will reduce contact center agent labor costs by $80 billion by 2026.",
+    "One in 10 agent interactions will be automated by 2026, up from an estimated 1.6% automated using AI in 2022.",
+    "There are approximately 17 million contact center agents worldwide, with labor representing up to 95% of contact center costs.",
+    "Worldwide end-user spending on conversational AI solutions within contact centers was forecast to reach $1.99 billion in 2022.",
+    "Integration pricing estimated at $1,000 to $1,500 per conversational AI agent, with some organizations citing costs up to $2,000."
+  ],
+  "methodology": "Gartner analyst forecast based on market sizing of the global contact center industry, current AI adoption rates, and projected technology maturation curves. The prediction incorporates data on worldwide contact center agent counts, labor cost structures, and conversational AI spending trends.",
+  "qualifiers": "The technology was noted as still maturing at the time of publication, with a fragmented vendor landscape and deployment complexity expected to result in measured adoption. Early adoption was expected to be primarily led by organizations with 2,500 or more agents with budget for requisite technical resources. Implementing conversational AI requires expensive professional resources in data analytics, knowledge graphs, and natural language understanding.",
+  "fetchedAt": "2026-03-09"
+}

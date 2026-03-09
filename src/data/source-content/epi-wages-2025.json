@@ -1,0 +1,14 @@
+{
+  "id": "epi-wages-2025",
+  "abstract": "The Economic Policy Institute argues that the real threat to workers is not AI itself, but the imbalance of power between employers and workers. The report contends that institutional changes such as declining union membership, erosion of the federal minimum wage, and shifts in macroeconomic policy priorities have undercut typical workers' leverage, and that AI's negative effects on wages stem from this power imbalance rather than technological change per se.",
+  "keyFindings": [
+    "Productivity growth has not historically been associated with higher unemployment or higher inequality when labor markets are balanced.",
+    "Institutional changes (union decline, minimum wage erosion, macroeconomic policy shifts) have undercut workers' leverage more than technology.",
+    "AI can be used as a zero-sum tool for increased employer control of work intensity and wages in unbalanced labor markets.",
+    "Most direct measurements of technology's impact on labor markets show a pronounced slowing of technology's influence in recent times, contradicting narratives of accelerating disruption.",
+    "Unemployment is lower and wage growth is faster and broader-based when productivity is rising more quickly."
+  ],
+  "methodology": "Policy analysis drawing on historical labor market data, productivity growth measurements, wage trend analysis, and institutional framework assessment. The report examines the relationship between technology adoption, productivity growth, and wage outcomes across different policy regimes.",
+  "qualifiers": "The report argues from an institutional perspective and focuses on policy recommendations around worker bargaining power rather than direct measurement of AI's impact on specific occupations. The analysis is US-focused and reflects EPI's perspective as a labor-oriented think tank.",
+  "fetchedAt": "2026-03-09"
+}

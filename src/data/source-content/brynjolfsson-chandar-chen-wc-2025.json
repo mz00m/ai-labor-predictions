@@ -1,0 +1,14 @@
+{
+  "id": "brynjolfsson-chandar-chen-wc-2025",
+  "abstract": "This Stanford Digital Economy Lab paper uses ADP payroll microdata to examine the employment effects of AI on white-collar professionals specifically. It finds that workers aged 22 to 25 have experienced a 6% decline in employment from late 2022 to September 2025 in the most AI-exposed occupations, compared to a 6-9% increase for older workers, indicating that early-career white-collar professionals are bearing the brunt of AI-driven displacement.",
+  "keyFindings": [
+    "Workers aged 22 to 25 experienced a 6% decline in employment from late 2022 to September 2025 in the most AI-exposed occupations.",
+    "Older workers in the same AI-exposed occupations saw a 6-9% increase in employment over the same period.",
+    "The pattern is consistent across white-collar professional occupations including software development, customer support, and business analysis.",
+    "Occupations with the highest AI augmentation potential show more positive youth employment trajectories than those with highest automation potential.",
+    "The employment gap between young and older workers in AI-exposed roles represents a historically unprecedented divergence."
+  ],
+  "methodology": "Individual-level payroll records from ADP covering January 2021 to September 2025, linked to GPT-4 Exposure index and Anthropic Economic Index measures of occupational AI exposure. The study distinguishes between AI automation and augmentation effects on different age cohorts within white-collar occupations.",
+  "qualifiers": "The study focuses on employment levels rather than wages or job quality. The authors note that the concentration of effects among young workers may partly reflect reduced hiring rather than outright displacement. Results are specific to the US labor market and firms using ADP payroll services.",
+  "fetchedAt": "2026-03-09"
+}

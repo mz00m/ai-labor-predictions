@@ -1,0 +1,14 @@
+{
+  "id": "gartner-cs-2025",
+  "abstract": "Gartner predicts that by 2027, chatbots will become the primary customer service channel for roughly 25% of organizations. A survey of 50 customer service and support respondents revealed that 54% were already using some form of chatbot, virtual customer assistant, or conversational AI platform for customer-facing applications in 2022.",
+  "keyFindings": [
+    "By 2027, chatbots will become the primary customer service channel for roughly 25% of organizations.",
+    "54% of surveyed organizations were already using some form of chatbot, VCA, or conversational AI platform for customer-facing applications.",
+    "Half of all companies were expected to spend more per fiscal year on bot and chatbot creation than traditional mobile app development.",
+    "By end of 2025, 73% of customer service organizations were expected to have implemented agent assist solutions.",
+    "Gartner subsequently predicted that by 2029, agentic AI will autonomously resolve 80% of common customer service issues without human intervention, leading to a 30% reduction in operational costs."
+  ],
+  "methodology": "Gartner customer service and support (CSS) survey of 50 respondents conducted online in January and February 2022, combined with analysis of chatbot technology maturity, deployment trends, and vendor landscape assessment.",
+  "qualifiers": "Current chatbot deployments were noted as continuing to fall short due to a lack of actionable metrics and maturity of chatbot infrastructure. Benchmarking chatbot performance across organizations was described as ineffective and potentially misleading because chatbot type, design, and complexity vary widely. The survey sample was limited to 50 respondents.",
+  "fetchedAt": "2026-03-09"
+}

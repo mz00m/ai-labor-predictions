@@ -1,0 +1,13 @@
+{
+  "id": "blog-mass-unemployment",
+  "abstract": "A Medium commentary piece arguing that society is unprepared for the potential of mass AI-driven unemployment. The article discusses the pace of AI advancement and the lack of adequate policy responses, institutional preparedness, and social safety net adaptations needed to handle potential large-scale workforce disruption from artificial intelligence.",
+  "keyFindings": [
+    "Society lacks adequate institutional and policy frameworks to handle potential mass AI unemployment.",
+    "The pace of AI advancement may outstrip the ability of workers and institutions to adapt.",
+    "Current retraining and reskilling programs are insufficient for the scale of potential disruption.",
+    "Social safety nets are not designed for rapid, technology-driven workforce transitions."
+  ],
+  "methodology": "Opinion and commentary piece synthesizing publicly available research, news reports, and expert opinions on AI's potential labor market disruption. Not a peer-reviewed study.",
+  "qualifiers": "This is a Tier 4 commentary/opinion piece on Medium, not peer-reviewed research. The arguments represent the author's interpretation of available evidence and expert opinions rather than original data analysis. The article takes a more pessimistic stance on AI displacement than the empirical consensus.",
+  "fetchedAt": "2026-03-09"
+}

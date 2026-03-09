@@ -1,0 +1,14 @@
+{
+  "id": "wsj-white-collar-layoffs",
+  "abstract": "The Wall Street Journal reports that white-collar workers are increasingly feeling the effects of AI-driven displacement, with white-collar payrolls contracting for 29 consecutive months in an unprecedented decline. The article examines how AI technologies are reconfiguring corporate hierarchies, flattening layers of middle management, and redefining professional roles across industries from technology to finance.",
+  "keyFindings": [
+    "White-collar payrolls have contracted for 29 consecutive months, described as without historical precedent.",
+    "AI is expected to reshape workforce structure by flattening layers of middle management and redefining entry-level roles.",
+    "The adoption of AI is reconfiguring management hierarchies across industries from technology to chemicals.",
+    "Companies are integrating AI to reduce reliance on professional and business services workers for analytical and administrative tasks.",
+    "The squeeze on white-collar workers represents a shift from previous automation waves that primarily affected manufacturing and routine manual labor."
+  ],
+  "methodology": "Investigative journalism drawing on Bureau of Labor Statistics payroll data, interviews with corporate executives, labor economists including former Glassdoor chief economist Aaron Terrazas, and analysis of industry workforce restructuring trends.",
+  "qualifiers": "The distinction between AI-driven job losses and broader economic slowdown effects on white-collar employment is difficult to isolate. Some workforce reductions may reflect post-pandemic correction rather than permanent AI displacement. The 29-month contraction figure may include effects of interest rate increases and tech sector correction alongside AI adoption.",
+  "fetchedAt": "2026-03-09"
+}
