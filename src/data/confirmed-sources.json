@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-09",
-  "totalSources": 330,
-  "verifiedCount": 320,
+  "totalSources": 333,
+  "verifiedCount": 323,
   "sources": {
     "revelio-labs-wage-divide-2025": {
       "id": "revelio-labs-wage-divide-2025",
@@ -4496,6 +4496,48 @@
       "usedIn": [
         "overall-us-displacement",
         "geographic-wage-divergence"
+      ]
+    },
+    "jff-ai-economic-opportunity-2026": {
+      "id": "jff-ai-economic-opportunity-2026",
+      "title": "AI for Economic Opportunity and Advancement: A Call to Action",
+      "url": "https://info.jff.org/ai-for-economic-opportunity-and-advancement",
+      "publisher": "Jobs for the Future (JFF)",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-13",
+      "excerpt": "19% of respondents said they are actively pursuing different careers (7%) or considering changing plans in the near future (12%) due to AI-driven transformation.",
+      "verified": true,
+      "synthetic": false,
+      "usedIn": [
+        "overall-us-displacement"
+      ]
+    },
+    "bgi-no-country-young-grads-2025": {
+      "id": "bgi-no-country-young-grads-2025",
+      "title": "No Country for Young Grads: The Structural Forces That Are Reshaping Entry-Level Employment",
+      "url": "https://www.burningglassinstitute.org/research/no-country-for-young-grads",
+      "publisher": "Burning Glass Institute",
+      "evidenceTier": 2,
+      "datePublished": "2025-07-29",
+      "excerpt": "52% of the Class of 2023 was underemployed a year after graduating. Entry-level postings in high-AI-exposure occupations fell from 2022 to 2025, while postings requiring 6+ years of experience held steady or rose.",
+      "verified": true,
+      "synthetic": false,
+      "usedIn": [
+        "entry-level-wage-impact"
+      ]
+    },
+    "wharton-accenture-skills-mismatch-2026": {
+      "id": "wharton-accenture-skills-mismatch-2026",
+      "title": "The Skills Mismatch Economy: Insights from the Wharton-Accenture Skills Index",
+      "url": "https://knowledge.wharton.upenn.edu/wp-content/uploads/2026/01/2026-Wharton-Accenture-Report-FNL.pdf",
+      "publisher": "Wharton AI & Analytics Initiative / Accenture",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-22",
+      "excerpt": "AI is redistributing economic value away from routine cognitive tasks toward judgment, coordination, and specialized knowledge.",
+      "verified": true,
+      "synthetic": false,
+      "usedIn": [
+        "high-skill-wage-premium"
       ]
     }
   }

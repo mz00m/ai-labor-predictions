@@ -1,0 +1,14 @@
+{
+  "id": "bgi-no-country-young-grads-2025",
+  "abstract": "The Burning Glass Institute's July 2025 report finds that for the first time in modern history, a bachelor's degree is no longer a reliable path to professional employment. The report identifies four interlocking structural forces reshaping entry-level work: AI-powered 'Expertise Upheaval' eliminating junior tasks, post-pandemic lean staffing, AI as an accelerant, and a growing graduate glut.",
+  "keyFindings": [
+    "52% of the Class of 2023 was underemployed a year after graduating",
+    "Employment for 22- to 25-year-olds in highly AI-exposed jobs fell by 6% between late 2022 and July 2025",
+    "Entry-level postings (less than 3 years of experience) in high-AI-exposure occupations fell from 2022 to 2025, while postings requiring 6+ years held steady or rose",
+    "Employers reported plans to hire 7.3% more graduates from the Class of 2025; that expectation had been cut to just 0.6%",
+    "By 2034, the U.S. is projected to have nearly 10 million more college-educated workers than jobs that require a degree"
+  ],
+  "methodology": "Analysis of job posting data, employment statistics, and employer hiring surveys. The 6% employment decline figure draws on ADP payroll data (via the Brynjolfsson, Chandar, and Chen Stanford study). The 52% underemployment figure is based on tracking college graduates one year post-graduation.",
+  "qualifiers": "The report identifies four structural forces, not AI alone. The 6% employment decline statistic originates from the Stanford/ADP study rather than independent Burning Glass analysis. The authors note that these changes do not correlate with a larger economic downturn.",
+  "fetchedAt": "2026-03-09"
+}

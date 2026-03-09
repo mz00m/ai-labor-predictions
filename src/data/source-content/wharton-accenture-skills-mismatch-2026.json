@@ -1,0 +1,14 @@
+{
+  "id": "wharton-accenture-skills-mismatch-2026",
+  "abstract": "The Wharton AI & Analytics Initiative and Accenture developed the Wharton-Accenture Skills Index (WAsX), an empirical benchmark tracking more than 150 million unique U.S. profiles and 100 million job postings. The report finds a structural skills mismatch: workers oversupply generalist traits while employers increasingly demand specialized, execution-oriented skills. AI is accelerating this divergence by redistributing economic value from routine cognitive tasks toward judgment, coordination, and specialized knowledge.",
+  "keyFindings": [
+    "WAsX tracks 150 million+ unique U.S. profiles and 100 million+ job postings to measure talent market evolution",
+    "Workers oversupply broad generalist traits (communication, leadership, problem-solving) while employers reward specialized, role-dependent skills",
+    "AI is redistributing economic value away from routine cognitive tasks toward judgment, coordination, and specialized knowledge",
+    "Skill value is not universal: some skills raise wages in one role but reduce them in another",
+    "Generative AI has been described as 'a positively destructive bomb on roles and titles' by making workers able to carry out tasks they previously could not"
+  ],
+  "methodology": "Empirical analysis of 150M+ unique U.S. worker profiles and 100M+ job postings. Accenture's Generative AI exposure metric was applied from O*NET tasks to roles, with skill clusters assigned GenAI exposure terciles. Job posting demand trends analyzed from 2022 onward.",
+  "qualifiers": "The study found no massive wage swings tied to individual skills. The authors note that employers, workers, and universities continue to operate in a role-based world while the economy has shifted to a skills-based system. Specific wage premium figures were not reported in available summaries.",
+  "fetchedAt": "2026-03-09"
+}

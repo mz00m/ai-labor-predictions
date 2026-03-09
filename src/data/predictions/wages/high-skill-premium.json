@@ -237,6 +237,15 @@
       ],
       "evidenceTier": 2,
       "label": "Anthropic: AI-exposed workers earn 47% more than unexposed workers"
+    },
+    {
+      "date": "2026-01-22",
+      "direction": "up",
+      "sourceIds": [
+        "wharton-accenture-skills-mismatch-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Wharton-Accenture: AI shifting value to judgment and specialized skills"
     }
   ],
   "sources": [
@@ -434,6 +443,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-03-05",
       "excerpt": "Workers in the most exposed professions earn 47% more, on average, and are 16 percentage points more likely to be female"
+    },
+    {
+      "id": "wharton-accenture-skills-mismatch-2026",
+      "title": "The Skills Mismatch Economy: Insights from the Wharton-Accenture Skills Index",
+      "url": "https://knowledge.wharton.upenn.edu/wp-content/uploads/2026/01/2026-Wharton-Accenture-Report-FNL.pdf",
+      "publisher": "Wharton AI & Analytics Initiative / Accenture",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-22",
+      "excerpt": "AI is redistributing economic value away from routine cognitive tasks toward judgment, coordination, and specialized knowledge."
     }
   ]
 }
