@@ -228,6 +228,15 @@
       ],
       "evidenceTier": 4,
       "label": "CausalInf: Amazon book titles tripled post-ChatGPT, average quality fell"
+    },
+    {
+      "date": "2025-11-11",
+      "direction": "down",
+      "sourceIds": [
+        "envato-ai-creative-work-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Envato: 49% of creatives use AI daily for client work; 1 in 3 expect design roles to transform (n=1,780)"
     }
   ],
   "sources": [
@@ -428,6 +437,15 @@
       "evidenceTier": 1,
       "datePublished": "2025-06-01",
       "excerpt": "Human-AI teams show roughly 73 percent higher productivity per worker for ad copy, though human-human teams remained superior for images."
+    },
+    {
+      "id": "envato-ai-creative-work-2026",
+      "title": "Beyond Adoption: The State of AI in Creative Work 2026",
+      "url": "https://elements.envato.com/learn/ai-trend-report",
+      "publisher": "Envato",
+      "evidenceTier": 2,
+      "datePublished": "2025-11-11",
+      "excerpt": "Nearly half of all respondents (49%) use AI daily for client work, with 50% using it significantly more than they did just six months ago. 69% don't feel fully prepared for an AI-driven creative industry. 1 in 3 expect design roles to transform this year. 58% have used AI in client work without disclosing it. Survey of 1,780 global creatives."
     }
   ]
 }

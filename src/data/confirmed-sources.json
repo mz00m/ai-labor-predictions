@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-09",
-  "totalSources": 329,
-  "verifiedCount": 319,
+  "totalSources": 330,
+  "verifiedCount": 320,
   "sources": {
     "revelio-labs-wage-divide-2025": {
       "id": "revelio-labs-wage-divide-2025",
@@ -4477,6 +4477,20 @@
       "synthetic": false,
       "usedIn": [
         "healthcare-admin-displacement"
+      ]
+    },
+    "envato-ai-creative-work-2026": {
+      "id": "envato-ai-creative-work-2026",
+      "title": "Beyond Adoption: The State of AI in Creative Work 2026",
+      "url": "https://elements.envato.com/learn/ai-trend-report",
+      "publisher": "Envato",
+      "evidenceTier": 2,
+      "datePublished": "2025-11-11",
+      "excerpt": "Nearly half of all respondents (49%) use AI daily for client work. 69% don't feel fully prepared for an AI-driven creative industry. 1 in 3 expect design roles to transform this year. Survey of 1,780 global creatives.",
+      "verified": true,
+      "synthetic": false,
+      "usedIn": [
+        "creative-industry-displacement"
       ]
     }
   }
