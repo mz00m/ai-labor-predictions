@@ -546,6 +546,15 @@
       ],
       "evidenceTier": 1,
       "label": "Anthropic: Each 10pp AI coverage increase correlates with 0.6pp lower BLS job growth"
+    },
+    {
+      "date": "2025-11-13",
+      "direction": "down",
+      "sourceIds": [
+        "brynjolfsson-chandar-chen-overall-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Stanford/Brynjolfsson: entry-level hiring stagnant; AI-exposed jobs driving decline"
     }
   ],
   "sources": [
@@ -986,6 +995,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-03-01",
       "excerpt": "We first analyze 43 benchmarks and 72,342 tasks, measuring their alignment with human employment and capital allocation across all 1,016 real-world occupations in the U.S. labor market."
+    },
+    {
+      "id": "brynjolfsson-chandar-chen-overall-2025",
+      "title": "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of AI",
+      "url": "https://digitaleconomy.stanford.edu/publications/canaries-in-the-coal-mine/",
+      "publisher": "Stanford Digital Economy Lab (Brynjolfsson, Chandar, Chen)",
+      "evidenceTier": 1,
+      "datePublished": "2025-11-13",
+      "excerpt": "Overall employment continues to grow robustly, but employment growth for young workers has been stagnant since late 2022. Declining employment in AI-exposed jobs drives stagnant overall employment growth for 22- to 25-year-olds."
     }
   ]
 }

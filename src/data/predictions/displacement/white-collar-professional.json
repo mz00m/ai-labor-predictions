@@ -426,6 +426,15 @@
       ],
       "evidenceTier": 3,
       "label": "WSJ: U.S. Army targeting ops achieved with 20 staff vs. 2,000 pre-AI (99% reduction)"
+    },
+    {
+      "date": "2025-11-13",
+      "direction": "down",
+      "sourceIds": [
+        "brynjolfsson-chandar-chen-wc-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Stanford/Brynjolfsson: 6% entry-level decline in AI-exposed white-collar jobs"
     }
   ],
   "sources": [
@@ -798,6 +807,15 @@
       "evidenceTier": 3,
       "datePublished": "2026-03-07",
       "excerpt": "The U.S. Army's 18th Airborne Corps, using software from data company Palantir Technologies in a continuing string of exercises dubbed Scarlet Dragon, matched its own record from Iraq as the military's most efficient targeting operation ever, according to Emelia Probasco, a senior fellow at Georgetown University's Center for Security and Emerging Technology. Thanks to AI, the corps achieved that with only 20 people, compared with more than 2,000 staffers employed in Iraq, she said."
+    },
+    {
+      "id": "brynjolfsson-chandar-chen-wc-2025",
+      "title": "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of AI",
+      "url": "https://digitaleconomy.stanford.edu/publications/canaries-in-the-coal-mine/",
+      "publisher": "Stanford Digital Economy Lab (Brynjolfsson, Chandar, Chen)",
+      "evidenceTier": 1,
+      "datePublished": "2025-11-13",
+      "excerpt": "Workers aged 22 to 25 have experienced a 6% decline in employment from late 2022 to September 2025 in the most AI-exposed occupations, compared to a 6-9% increase for older workers."
     }
   ]
 }

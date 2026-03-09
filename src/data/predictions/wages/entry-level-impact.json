@@ -53,17 +53,6 @@
       "metricType": "employment"
     },
     {
-      "date": "2025-08-01",
-      "value": -10,
-      "confidenceLow": -15,
-      "confidenceHigh": -5,
-      "sourceIds": [
-        "brynjolfsson-chandar-chen-entry-2025"
-      ],
-      "evidenceTier": 1,
-      "metricType": "employment"
-    },
-    {
       "date": "2025-11-15",
       "value": -11,
       "confidenceLow": -18,
@@ -277,6 +266,15 @@
       ],
       "evidenceTier": 1,
       "label": "Anthropic: AI exposure concentrates in credentialed roles (17.4% vs 4.5% grad degrees)"
+    },
+    {
+      "date": "2025-11-13",
+      "direction": "neutral",
+      "sourceIds": [
+        "brynjolfsson-chandar-chen-entry-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Stanford/Brynjolfsson: no significant wage changes despite 16% entry-level employment decline"
     }
   ],
   "sources": [
@@ -381,11 +379,11 @@
     {
       "id": "brynjolfsson-chandar-chen-entry-2025",
       "title": "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of AI",
-      "url": "https://digitaleconomy.stanford.edu/wp-content/uploads/2025/08/Canaries_BrynjolfssonChandarChen.pdf",
+      "url": "https://digitaleconomy.stanford.edu/publications/canaries-in-the-coal-mine/",
       "publisher": "Stanford Digital Economy Lab (Brynjolfsson, Chandar, Chen)",
       "evidenceTier": 1,
-      "datePublished": "2025-08-01",
-      "excerpt": "ADP payroll data shows 13% relative decline in employment for ages 22-25 in most AI-exposed occupations. Effects concentrated in automation roles, not augmentation."
+      "datePublished": "2025-11-13",
+      "excerpt": "We find little difference in annual salary trends by age or exposure quintile, suggesting possible wage stickiness. Labor market adjustments are visible in employment more than in compensation."
     },
     {
       "id": "imf-skill-gaps-entry-2026",
