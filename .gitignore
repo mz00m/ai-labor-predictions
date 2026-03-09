@@ -32,6 +32,9 @@ yarn-error.log*
 # digest cache
 .digest-cache/
 
+# article fetch cache
+.fetch-cache/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
