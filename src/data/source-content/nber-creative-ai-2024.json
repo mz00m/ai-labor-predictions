@@ -1,0 +1,10 @@
+{
+  "id": "nber-creative-ai-2024",
+  "abstract": "This study examines the impact of generative AI on creative work by analyzing freelance platform data. The research finds that image generation AI caused a significant reduction in demand for freelance illustrators, with demand falling 21% within 12 months of widespread AI availability, providing empirical evidence of AI's displacement effects on creative labor markets.",
+  "keyFindings": [
+    "Image generation AI reduced demand for freelance illustrators by 21% within 12 months of widespread availability."
+  ],
+  "methodology": "Analysis of freelance platform data tracking demand for illustrators before and after the widespread availability of image generation AI, measuring changes in demand within a 12-month period following AI deployment.",
+  "qualifiers": "Not specified",
+  "fetchedAt": "2026-03-09"
+}

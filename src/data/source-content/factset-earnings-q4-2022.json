@@ -1,0 +1,14 @@
+{
+  "id": "factset-earnings-q4-2022",
+  "abstract": "FactSet analyzed S&P 500 earnings call transcripts from Q1 2023 (March 15–May 25) and found that 110 companies cited the term \"AI,\" marking the highest number in at least 13 years of available data. This represents a significant increase from the 5-year average of 57 companies and the 10-year average of 34 companies, with particular concentration in Information Technology (38 companies), Industrials (17), and Communication Services (15) sectors.",
+  "keyFindings": [
+    "110 S&P 500 companies mentioned \"AI\" on Q1 2023 earnings calls, the highest number dating back to at least 2010.",
+    "Q1 2023 AI mentions were well above the 5-year average of 57 companies and 10-year average of 34 companies.",
+    "Information Technology sector led with 38 companies citing AI, followed by Industrials with 17 and Communication Services with 15.",
+    "Communication Services (75%) and Information Technology (66%) sectors had the highest percentages of companies citing AI on Q1 earnings calls.",
+    "46 of the S&P 500 companies citing AI also specifically mentioned \"generative AI\" on Q1 earnings calls."
+  ],
+  "methodology": "FactSet Document Search was used to search for the term \"AI\" in earnings conference call transcripts of all S&P 500 companies conducting calls from March 15 through May 25, 2023. Analysis used current S&P 500 index constituents applied retroactively to historical data back to 2010. Results were compared against 5-year and 10-year averages.",
+  "qualifiers": "Analysis uses current S&P 500 index constituents applied backward in time, which may affect historical comparisons due to index composition changes. The study focuses on specific keyword mentions ('AI' and 'generative AI') and does not assess context or depth of discussion. Search period is limited to March 15–May 25, 2023.",
+  "fetchedAt": "2026-03-09"
+}

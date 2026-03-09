@@ -1,0 +1,13 @@
+{
+  "id": "factset-earnings-q4-2023",
+  "abstract": "FactSet analyzed S&P 500 earnings call transcripts from Q4 2023 (December 15, 2023 - March 14, 2024) and found that 179 companies mentioned \"AI,\" the second-highest number in at least 10 years. Companies citing AI averaged 28.6% stock price appreciation over 12 months compared to 16.8% for non-mentioning companies, suggesting market rewards AI-focused corporate strategies.",
+  "keyFindings": [
+    "179 S&P 500 companies cited \"AI\" in Q4 2023 earnings calls, the second-highest on record since at least 2014, compared to 10-year average of 45 and 5-year average of 73 companies.",
+    "The Information Technology sector led with 52 companies (85% of IT firms) mentioning AI, while 9 companies mentioned AI more than 50 times, with NVIDIA leading at 114 mentions.",
+    "Companies citing AI mentioned the term an average of 13 times per call (median of 5 times), reflecting varying levels of emphasis on artificial intelligence strategies.",
+    "S&P 500 companies that cited AI on Q4 earnings calls achieved 28.6% average stock price appreciation over the prior 12 months versus 16.8% for companies that did not mention AI."
+  ],
+  "methodology": "FactSet Document Search analyzed earnings call transcripts of S&P 500 companies conducting calls from December 15, 2023 through March 14, 2024, searching for the term \"AI\" using current index constituents and historical data going back to at least 2014. Stock performance data compared 12-month returns (March 15, 2023 to March 15, 2024) for AI-citing versus non-citing companies.",
+  "qualifiers": "Analysis uses current S&P 500 index constituents applied retrospectively to historical data. Results from FactSet's Transcript Assistant generative AI summaries may vary based on prompts used. The blog post disclaimer notes this is for informational purposes only and not investment advice. The relationship between AI mentions and stock performance is correlational, not causal.",
+  "fetchedAt": "2026-03-09"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "cio-it-jobs-ai-skills-2026",
+  "abstract": "AI is rapidly transforming the IT job market, with 37% of tech professionals reporting their roles have been redefined due to generative AI in the past two years. Organizations are shifting toward skills-first hiring, with demand for AI literacy skills growing over 70% year-over-year, while a significant skills gap persists between what employers seek and what candidates possess. The market is increasingly prioritizing AI/ML expertise, cybersecurity, data analytics, soft skills like critical thinking and adaptability, and employees are saving substantial time through AI tools, though RTO mandates are creating workforce dissatisfaction despite productivity gains.",
+  "keyFindings": [
+    "37% of tech professionals report their role has been 'redefined or restructured due to gen AI' in the past two years, with 80% saving at least one hour per day using generative AI.",
+    "Job postings requiring AI literacy skills are growing more than 70% year-over-year, with AI agents identified as the fastest-growing AI skill of 2025.",
+    "65% of IT leaders report greater difficulty finding skilled IT professionals in 2025 compared to 2024, with the most apparent skills gaps in AI/machine learning (45%), IT operations and infrastructure (36%), and IT governance/compliance (25%).",
+    "Organizations are prioritizing skills-first hiring, with 61% of IT leaders planning to increase permanent headcount and 55% planning to increase contract/temporary hiring in the first half of 2026.",
+    "64% of IT professionals experienced RTO pressure in the past 12 months, yet 82% report being at least as productive working from home, with 75% expressing increased willingness to return to office only if offered higher salaries (69% requiring 10%+ increase)."
+  ],
+  "methodology": "Analysis of multiple survey sources including data from Robert Half's IT leaders surveys, LinkedIn's AI Labor Market Update report, Ivanti's report on RTO impacts, Indeed's 2025 Workforce Insights Report, and World Economic Forum's Future of Jobs Report 2025. The article synthesizes findings from these various studies examining IT hiring trends, skills demand, salary projections, and workforce sentiment regarding AI adoption and workplace policies.",
+  "qualifiers": "The article draws from multiple independent surveys conducted by different organizations (Robert Half, LinkedIn, Ivanti, Indeed, World Economic Forum) with varying methodologies and sample compositions not fully detailed. Specific sample sizes and confidence intervals are not provided. Geographic scope appears primarily US-based though not explicitly stated for all data sources. Survey data reflects respondent self-reports and may be subject to response bias.",
+  "fetchedAt": "2026-03-09"
+}

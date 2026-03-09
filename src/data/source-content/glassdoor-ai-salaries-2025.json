@@ -1,0 +1,11 @@
+{
+  "id": "glassdoor-ai-salaries-2025",
+  "abstract": "Glassdoor Economic Research analyzes whether the AI job market represents genuine growth or hype by examining compensation premiums and job listing trends. The analysis finds that AI-focused positions command a 25% salary premium compared to similar non-AI roles, and AI job listings nearly doubled year-over-year from 2023 to 2024, suggesting significant market expansion in AI employment opportunities.",
+  "keyFindings": [
+    "AI jobs offer a typical salary premium of 25% compared to similar non-AI positions.",
+    "The share of AI jobs among new job listings increased 123% from 2023 to 2024."
+  ],
+  "methodology": "Analysis of Glassdoor job listing data comparing compensation levels and job posting trends between AI-focused and non-AI positions. Specific sample size, geographic scope, and job categories not specified in available excerpt.",
+  "qualifiers": "Limited excerpt available; full methodology and scope restrictions not detailed in provided source text.",
+  "fetchedAt": "2026-03-09"
+}

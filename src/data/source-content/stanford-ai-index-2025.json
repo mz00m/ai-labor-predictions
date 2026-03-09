@@ -1,0 +1,14 @@
+{
+  "id": "stanford-ai-index-2025",
+  "abstract": "The 2025 Stanford AI Index Report provides a comprehensive, data-driven analysis of artificial intelligence's technical progress, economic influence, and societal impact. Key findings show that AI performance on benchmarks continues to improve sharply, business adoption has accelerated to 78% of organizations, the U.S. maintains leadership in AI model production while China closes the performance gap, and AI is becoming more efficient and accessible globally. The report also documents rising government regulation, expanding AI education, but persistent gaps in responsible AI evaluation and regional disparities in public sentiment toward AI.",
+  "keyFindings": [
+    "Performance on demanding benchmarks improved sharply in 2024, with scores rising 18.8, 48.9, and 67.3 percentage points on MMMU, GPQA, and SWE-bench respectively.",
+    "78% of organizations reported using AI in 2024, up from 55% in 2023, while U.S. private AI investment reached $109.1 billion in 2024—nearly 12 times China's $9.3 billion.",
+    "U.S.-based institutions produced 40 notable AI models in 2024 compared to China's 15 and Europe's 3, but Chinese models have closed the quality gap with performance differences shrinking from double digits to near parity.",
+    "Inference costs for systems performing at GPT-3.5 level dropped over 280-fold between November 2022 and October 2024, while hardware costs declined 30% annually and energy efficiency improved 40% yearly.",
+    "U.S. federal agencies introduced 59 AI-related regulations in 2024—more than double 2023—and global legislative mentions of AI rose 21.3% across 75 countries since 2023."
+  ],
+  "methodology": "The AI Index Report is an independent initiative led by the AI Index Steering Committee, an interdisciplinary group of experts from academia and industry at Stanford HAI. The report tracks, collates, distills, and visualizes data relating to artificial intelligence from multiple sources including AI publications, patents, benchmarks, investment data, policy documents, and public opinion surveys. The 2025 edition represents the seventh edition and is described as 'our most comprehensive to date.' Specific data sources include FDA device approvals, company reports (e.g., Waymo autonomous rides data), BLS investment statistics, government policy documents from multiple countries, and public sentiment surveys across 75+ countries.",
+  "qualifiers": "None stated. The report positions itself as providing 'unbiased, rigorous, and comprehensive data' and notes it is 'recognized as a trusted resource by global media, governments, and leading companies,' but does not explicitly acknowledge limitations, preliminary findings, or scope restrictions in the provided excerpts.",
+  "fetchedAt": "2026-03-09"
+}

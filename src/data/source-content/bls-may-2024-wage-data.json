@@ -1,0 +1,12 @@
+{
+  "id": "bls-may-2024-wage-data",
+  "abstract": "The BLS Occupational Employment and Wage Statistics (OEWS) for May 2024 provides comprehensive employment and wage data across U.S. occupations. The data shows a median annual wage of $49,500 across all occupations, with notable wage growth disparities between AI-exposed and non-AI-exposed sectors, where AI-exposed administrative and clerical occupations experienced 1.1% wage growth compared to 3.8% growth in non-AI-exposed occupations.",
+  "keyFindings": [
+    "Median annual wage for all occupations in May 2024 was $49,500",
+    "AI-exposed administrative and clerical occupations experienced wage growth of 1.1%",
+    "Non-AI-exposed occupations experienced wage growth of 3.8%, substantially outpacing AI-exposed sectors"
+  ],
+  "methodology": "BLS Occupational Employment and Wage Statistics (OEWS) survey data collected in May 2024, covering national, state, and metropolitan/nonmetropolitan occupational employment and wage profiles. Data available in multiple formats (HTML, XLSX, TXT) with breakdowns by industry and ownership. Historical data available from 1997 forward.",
+  "qualifiers": "None stated. Note: The provided source is primarily a data portal/index page; specific methodological details and limitations would be found in the actual data tables and documentation files referenced.",
+  "fetchedAt": "2026-03-09"
+}

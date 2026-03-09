@@ -1,0 +1,11 @@
+{
+  "id": "goldman-300m",
+  "abstract": "Goldman Sachs analyzes the potential macroeconomic impact of generative AI, finding that approximately two-thirds of current jobs face some degree of exposure to AI automation. The report estimates that generative AI could substitute for up to one-fourth of current work globally, with significant implications for economic growth and labor market dynamics.",
+  "keyFindings": [
+    "Roughly two-thirds of current jobs are exposed to some degree of AI automation",
+    "Generative AI could substitute up to one-fourth of current work"
+  ],
+  "methodology": "Not specified",
+  "qualifiers": "Not specified",
+  "fetchedAt": "2026-03-09"
+}

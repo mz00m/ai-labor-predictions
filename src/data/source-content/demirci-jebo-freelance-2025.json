@@ -1,0 +1,14 @@
+{
+  "id": "demirci-jebo-freelance-2025",
+  "abstract": "This peer-reviewed study analyzes 2 million freelance job postings to identify which occupations experienced demand shifts following the launch of ChatGPT. The authors find substantial declines in job postings for creative and design-intensive roles, with freelance writing declining 30.37%, graphic design 18.49%, and 3D modeling 15.57% within 8 months of ChatGPT's launch, while applications per posting increased by 8.57%, suggesting increased competition for remaining positions.",
+  "keyFindings": [
+    "Freelance writing job postings fell 30.37% within 8 months of ChatGPT launch",
+    "Graphic design postings declined 18.49% in the same period",
+    "3D modeling postings decreased 15.57% following ChatGPT introduction",
+    "Applications per posting rose 8.57%, indicating increased competition for available freelance work",
+    "Analysis covered 2 million job postings from the freelance market"
+  ],
+  "methodology": "Peer-reviewed analysis of 2 million job postings from the freelance labor market. Time period: 8 months following ChatGPT launch (November 2022 onwards). Specific data source platform not stated in excerpt; analytical approach comparing posting volume changes before and after ChatGPT introduction.",
+  "qualifiers": "None stated",
+  "fetchedAt": "2026-03-09"
+}

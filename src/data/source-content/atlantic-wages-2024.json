@@ -1,0 +1,14 @@
+{
+  "id": "atlantic-wages-2024",
+  "abstract": "Generative AI tools like ChatGPT have the potential to destabilize white-collar work by automating tasks previously thought to require high-level education and skill, particularly affecting copywriters, journalists, paralegals, and programmers. While an Oxford study estimates 47 percent of U.S. jobs might be at risk, historical precedent suggests the employment impact may take decades to fully materialize, and AI's ultimate effect depends on whether it functions like transformative technologies such as automated machine tools or more modest innovations like the internet and smartphones.",
+  "keyFindings": [
+    "In the next five years, AI is likely to begin reducing employment for college-educated workers in industries including copywriting, journalism, customer service, paralegal work, and programming.",
+    "An Oxford study estimates that 47 percent of U.S. jobs might be at risk from AI automation.",
+    "ChatGPT can pass sections of the Multistate Bar Examination and generate legal briefs, essays, and promotional copy, demonstrating its capability to perform high-skill white-collar tasks.",
+    "Historical precedent suggests widespread adoption of transformative technologies takes decades: electricity took over a century to significantly lift GDP, and computers took 50 years to show productivity impacts.",
+    "AI systems are fundamentally different from previous automation technologies because they can improvise and learn from data rather than simply following predetermined procedures, making a wider range of previously automatable tasks possible."
+  ],
+  "methodology": "Not a research study. The source is an opinion/analysis article by Atlantic staff writer Annie Lowrey that synthesizes interviews with technology experts including MIT professor David Autor, references an Oxford study estimating job risk, and discusses case studies such as ClearCOGS, an AI-powered small business application. The article also references historical technology adoption patterns and comparative analysis of previous innovations (electricity, computers, internet, smartphones).",
+  "qualifiers": "The author acknowledges significant uncertainty throughout: 'No one can answer this question, given how new the technology is'; 'Predicting where technology will cause job losses is hard'; the exact extent of AI employment displacement 'is difficult to predict.' The article notes that employment can adjust slowly to technological change and that even demonstrated job displacement risks (such as self-driving vehicles eliminating truck driver jobs) have not materialized as feared. The author emphasizes that AI's ultimate employment impact is unknown and depends on whether it functions like transformative or modest technologies.",
+  "fetchedAt": "2026-03-09"
+}

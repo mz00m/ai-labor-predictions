@@ -1,0 +1,14 @@
+{
+  "id": "acemoglu-macro-2024",
+  "abstract": "This paper evaluates macroeconomic implications of AI advances using a task-based model grounded in Hulten's theorem. The author estimates that AI will increase total factor productivity (TFP) by at most 0.66% over 10 years, or potentially as low as 0.53% when accounting for the difficulty of learning complex tasks. The paper finds that AI is unlikely to substantially reduce labor income inequality compared to previous automation technologies, but will likely widen the gap between capital and labor income, while some newly created AI-related tasks may have negative social value.",
+  "keyFindings": [
+    "AI's macroeconomic productivity gains are predicted to be modest, increasing total factor productivity by no more than 0.66% over 10 years, and potentially less than 0.53% when accounting for hard-to-learn tasks.",
+    "AI advances are unlikely to increase inequality as much as previous automation technologies because their impact is more equally distributed across demographic groups, but there is no evidence that AI will reduce labor income inequality.",
+    "Even when AI improves low-skill worker productivity in certain tasks, this may increase rather than reduce inequality without creation of new tasks.",
+    "AI is predicted to widen the gap between capital and labor income, representing a fundamental shift from labor-focused to capital-focused productivity gains.",
+    "Some new tasks created by AI may have negative social value (such as algorithms for online manipulation), which should be incorporated into macroeconomic effects calculations."
+  ],
+  "methodology": "Task-based theoretical model using Hulten's theorem to estimate macroeconomic effects from microeconomic task-level cost savings. The analysis employs existing estimates on AI exposure and task-level productivity improvements from data sources including Mishkin and Rock's AI exposure data. The author applies theoretical analysis to examine wage and inequality effects across demographic groups and conducts comparative analysis with previous automation technologies.",
+  "qualifiers": "The author acknowledges that current estimates could be exaggerated because early evidence comes from easy-to-learn tasks, whereas future effects will partly derive from hard-to-learn tasks with context-dependent decision-making factors and no objective outcome measures. The analysis is primarily theoretical with empirical application to existing estimates rather than original data collection. Limitations on generalizability across different task types and the difficulty of predicting which new tasks will emerge are implicit in the discussion of hard-to-learn versus easy-to-learn tasks.",
+  "fetchedAt": "2026-03-09"
+}

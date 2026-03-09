@@ -1,0 +1,12 @@
+{
+  "id": "indeed-cnbc-radical-transform",
+  "abstract": "Indeed's analysis of job market data finds that 26% of jobs face radical transformation from AI, with particularly acute impacts in legal professions. Paralegals face an estimated 80% automation risk by 2026, driven primarily by AI capabilities in legal research and contract review tasks.",
+  "keyFindings": [
+    "26% of jobs face radical transformation from AI according to Indeed analysis",
+    "Paralegals face 80% automation risk by 2026",
+    "Legal research and contract review are the most affected job functions"
+  ],
+  "methodology": "Not specified",
+  "qualifiers": "Not specified",
+  "fetchedAt": "2026-03-09"
+}

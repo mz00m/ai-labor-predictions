@@ -1,0 +1,12 @@
+{
+  "id": "fiverr-market-report-2023",
+  "abstract": "The Fiverr Business Trends Report H2 2023 analyzes marketplace dynamics in the second half of 2023, finding that traditional writing gigs experienced significant price compression with a 20% decline in average order value, while AI-assisted service categories like AI art and prompt writing emerged as high-growth segments, expanding 4x despite commanding lower price points.",
+  "keyFindings": [
+    "Average order value for writing gigs declined 20% during H2 2023",
+    "AI-assisted gig categories (AI art and prompt writing) grew 4x year-over-year",
+    "AI-assisted gigs commanded lower price points despite rapid growth"
+  ],
+  "methodology": "Not specified. Analysis appears based on Fiverr platform data and transaction records during H2 2023, but specific methodology, sample definition, and time period comparisons are not detailed in the provided excerpt.",
+  "qualifiers": "Limited excerpt provided; full report scope, data collection methods, and confidence intervals not specified. Growth rates and price metrics are presented without accompanying statistical measures or comparison baselines.",
+  "fetchedAt": "2026-03-09"
+}

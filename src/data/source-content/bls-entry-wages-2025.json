@@ -1,0 +1,14 @@
+{
+  "id": "bls-entry-wages-2025",
+  "abstract": "The Current Population Survey (CPS) is an ongoing monthly survey conducted by the Bureau of Labor Statistics that provides comprehensive data on the nation's labor force, including employment, unemployment, and labor force participation rates across demographic groups. The survey tracks key metrics such as the unemployment rate, labor force participation rate, and employment-population ratio, with data presented by age, race, ethnicity, and gender.",
+  "keyFindings": [
+    "The unemployment rate was 4.4% in February 2026, with total nonfarm payroll employment edging down by 92,000.",
+    "Median weekly earnings for full-time wage and salary workers were $1,204 in 2025.",
+    "Real median weekly earnings for workers aged 16-24 in professional services fell 5.2% from 2023 to 2025.",
+    "Unemployment for teenagers aged 16-19 was 13.0% in February 2026, substantially higher than the overall rate.",
+    "The civilian labor force participation rate was 62.0% in February 2026."
+  ],
+  "methodology": "The Current Population Survey is a monthly survey of approximately 60,000 households conducted by the Bureau of Labor Statistics. Data are presented as seasonally adjusted estimates and cover the period from February 2006 through February 2026, with breakdowns by demographic characteristics including age, sex, race, ethnicity, and industry.",
+  "qualifiers": "Data for October 2025 were not published (indicated by dashes in the table). January 2026 CPS estimates were revised to incorporate updated population controls with the release of February data. The 2025 federal government shutdown impacted CPS data collection.",
+  "fetchedAt": "2026-03-09"
+}

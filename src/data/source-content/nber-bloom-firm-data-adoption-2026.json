@@ -1,0 +1,14 @@
+{
+  "id": "nber-bloom-firm-data-adoption-2026",
+  "abstract": "This NBER working paper presents the first representative international data on firm-level AI adoption, surveying nearly 6,000 CFOs, CEOs, and executives from stratified firm samples in the US, UK, Germany, and Australia. The study finds that approximately 70% of firms actively use AI, with little reported impact on employment or productivity over the past three years. However, firms forecast sizable impacts over the next three years, predicting AI will boost productivity by 1.4%, increase output by 0.8%, and cut employment by 0.7%—a notable contrast to employee expectations of 0.5% net employment growth.",
+  "keyFindings": [
+    "Around 70% of firms actively use AI, with higher adoption rates among younger and more productive firms (US: 78%)",
+    "Over two-thirds of top executives regularly use AI, but average use is only 1.5 hours per week, with one quarter reporting no AI use",
+    "Over 80% of firms report no impact of AI on either employment or productivity over the last three years",
+    "Firms forecast AI will boost productivity by 1.4%, increase output by 0.8%, and reduce employment by 0.7% over the next three years",
+    "A significant gap exists between senior executive expectations of 0.7% employment reduction and employee predictions of 0.5% employment growth from AI"
+  ],
+  "methodology": "Survey of almost 6,000 CFOs, CEOs, and executives from stratified firm samples across four countries (US, UK, Germany, Australia). Additionally surveyed individual employees. Data collection and survey period not explicitly specified in excerpt.",
+  "qualifiers": "None stated",
+  "fetchedAt": "2026-03-09"
+}

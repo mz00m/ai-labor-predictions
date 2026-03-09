@@ -1,0 +1,13 @@
+{
+  "id": "bls-education-2025",
+  "abstract": "The Bureau of Labor Statistics projects that employment in educational instruction and library occupations will grow slower than average for all occupations from 2024 to 2034. Despite limited employment growth, approximately 890,300 job openings are projected annually, primarily driven by the need to replace workers who permanently leave the occupations. The median annual wage for this group was $59,220 in May 2024, exceeding the median for all occupations of $49,500.",
+  "keyFindings": [
+    "Overall employment in educational instruction and library occupations is projected to grow slower than the average for all occupations from 2024 to 2034.",
+    "Approximately 890,300 openings are projected each year on average in these occupations, largely due to replacement needs for workers leaving permanently.",
+    "The median annual wage for this group was $59,220 in May 2024, which was higher than the median annual wage for all occupations of $49,500.",
+    "Postsecondary teachers earn a median annual wage of $83,980, while library technicians and assistants earn $37,540, showing significant wage variation within the sector."
+  ],
+  "methodology": "Bureau of Labor Statistics employment projections from 2024 to 2034 based on the Occupational Employment Statistics survey. Wage data are from the BLS Occupational Employment Statistics survey for May 2024. The analysis covers 14 educational instruction and library occupations with specified entry-level education requirements.",
+  "qualifiers": "The source notes that employment projections are for the 2024-2034 period. BLS employment projections, wage, and data for related occupations not shown in detail are available on a separate Data for Occupations Not Covered in Detail page, suggesting this representation may not be comprehensive for all related roles.",
+  "fetchedAt": "2026-03-09"
+}

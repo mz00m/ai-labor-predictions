@@ -1,0 +1,14 @@
+{
+  "id": "bls-health-admin-2025",
+  "abstract": "The BLS Occupational Outlook Handbook provides comprehensive employment projections and wage data for healthcare occupations from 2024 to 2034. Overall healthcare employment is projected to grow much faster than average for all occupations, with approximately 1.9 million openings projected annually. Healthcare practitioners and technical occupations had a median annual wage of $83,090 in May 2024, while healthcare support occupations had a median wage of $37,180, both reflecting significant variation based on education requirements and specialization.",
+  "keyFindings": [
+    "Overall healthcare occupations employment is projected to grow much faster than the average for all occupations from 2024 to 2034.",
+    "Approximately 1.9 million job openings are projected each year in healthcare occupations due to employment growth and worker replacement needs.",
+    "Healthcare practitioners and technical occupations had a median annual wage of $83,090 in May 2024, exceeding the all-occupation median of $49,500.",
+    "Healthcare support occupations had a median annual wage of $37,180 in May 2024, below the all-occupation median of $49,500.",
+    "Medical records, billing, and coding specialist employment is projected to decline 8% through 2033, the steepest decline among healthcare occupations."
+  ],
+  "methodology": "BLS Occupational Employment Statistics survey data with employment projections from 2024 to 2034 and median wage data from May 2024. Wage data are based on the point at which half of workers earned more and half earned less. Data sourced from BLS Occupational Requirements Survey (ORS) profiles for physical demands, cognitive and mental requirements, and occupational qualifications.",
+  "qualifiers": "None stated",
+  "fetchedAt": "2026-03-09"
+}

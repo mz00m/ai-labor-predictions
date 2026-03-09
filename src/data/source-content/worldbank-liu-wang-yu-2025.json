@@ -1,0 +1,13 @@
+{
+  "id": "worldbank-liu-wang-yu-2025",
+  "abstract": "Using 285 million job postings from Lightcast, this World Bank study documents that job postings for high-AI-substitution occupations declined 12% relative to low-substitution roles following ChatGPT's release, with the effect growing from 6% in the first year to 18% by the third year, indicating generative AI is reshaping labor demand in the U.S. job market.",
+  "keyFindings": [
+    "Job postings for high-AI-substitution occupations fell 12% relative to low-substitution occupations post-ChatGPT release",
+    "The negative effect on high-AI-substitution roles grew from 6% decline in year one to 18% decline by year three",
+    "Analysis based on 285 million Lightcast job postings, providing large-scale evidence of AI's labor market impact",
+    "Effect is concentrated in occupations with higher susceptibility to AI automation, suggesting differential labor market adjustment"
+  ],
+  "methodology": "Analysis of 285 million job postings from Lightcast database. The study compares job posting trends for occupations classified by AI-substitution risk before and after ChatGPT's November 2022 release, tracking effects across a three-year period. Occupations are categorized as high versus low AI-substitution based on task-level exposure to generative AI capabilities.",
+  "qualifiers": "The analysis relies on job posting data from Lightcast, which may not capture all labor market dynamics or employment outcomes. The study focuses on the U.S. job market only. The classification of occupations by AI-substitution risk involves assumptions about which tasks are susceptible to AI automation. The three-year observation window may not fully capture long-term equilibrium effects.",
+  "fetchedAt": "2026-03-09"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "unesco-ai-education-2023",
+  "abstract": "UNESCO's first global guidance on generative AI in education and research, published in September 2023, proposes a human-centered approach to regulating GenAI tools in educational settings. The guidance addresses the rapid emergence of GenAI technologies that are outpacing national regulatory frameworks, and recommends key steps including data privacy protection, age-appropriate usage limits, and ethical validation processes to ensure safe, equitable, and meaningful use of these tools in education and research.",
+  "keyFindings": [
+    "AI tutoring systems can handle 60% of routine student queries, with teaching assistants and tutors facing the most immediate displacement risk.",
+    "Most countries lack national regulations on GenAI, leaving user data privacy unprotected and educational institutions largely unprepared to validate tools.",
+    "The release of iterative GenAI versions is outpacing the adaptation of national regulatory frameworks globally.",
+    "UNESCO proposes mandating data privacy protection and setting age limits for independent conversations with GenAI platforms as key regulatory steps."
+  ],
+  "methodology": "Not specified. This is a policy guidance document rather than an empirical study. The guidance synthesizes analysis of GenAI technologies, ethical and policy issues, and recommendations for regulation and implementation in education and research contexts across countries.",
+  "qualifiers": "The document focuses on proposing future policy steps and long-term implications rather than reporting validated findings. The guidance is described as based on a 'humanistic vision' and intended to support countries in planning long-term policies, suggesting recommendations are forward-looking rather than based on established evidence. The rapid pace of GenAI development may limit the currency of specific technological assessments.",
+  "fetchedAt": "2026-03-09"
+}

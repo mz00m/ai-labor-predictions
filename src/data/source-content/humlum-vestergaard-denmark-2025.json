@@ -1,0 +1,13 @@
+{
+  "id": "humlum-vestergaard-denmark-2025",
+  "abstract": "This study examines the early labor market impacts of AI chatbot adoption in Denmark by linking large-scale adoption surveys to administrative labor records. Using difference-in-differences estimation, the authors find precisely estimated null effects on earnings and recorded hours at both worker and workplace levels two years after adoption, with confidence intervals ruling out effects larger than 2%. While adoption is associated with occupational switching and task restructuring, these changes do not translate into net changes in hours or earnings, challenging narratives of imminent disruption from generative AI.",
+  "keyFindings": [
+    "Difference-in-differences analysis estimates precise null effects on earnings and recorded hours at both worker and workplace levels, ruling out effects larger than 2% two years after adoption.",
+    "Null results hold robustly across intensive users, early adopters, workplaces with substantial investments, workers reporting large gains, flexible-pay occupations, and early-career jobs.",
+    "AI adoption is linked to occupational switching and task restructuring, but without net changes in hours or earnings.",
+    "The findings challenge narratives of imminent disruption from generative AI based on early-stage adoption data from Denmark."
+  ],
+  "methodology": "Study linking large-scale, representative adoption surveys to administrative labor records in Denmark. Difference-in-differences estimation used to measure impacts on earnings and recorded hours. Analysis conducted at both worker and workplace levels, examining impacts two years after adoption. Sample includes 11 occupations; study examines effects across multiple subgroups including intensive users, early adopters, workers in high-investment workplaces, and those in flexible-pay occupations.",
+  "qualifiers": "Early evidence from Denmark only; two-year follow-up period may be insufficient to detect longer-term effects; confidence intervals rule out effects larger than 2%, but study is limited to this specific geographic and temporal context; findings are described as 'early labor market impacts' suggesting the technology's effects may evolve over time.",
+  "fetchedAt": "2026-03-09"
+}

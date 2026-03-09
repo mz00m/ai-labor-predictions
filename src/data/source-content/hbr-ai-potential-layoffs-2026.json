@@ -1,0 +1,13 @@
+{
+  "id": "hbr-ai-potential-layoffs-2026",
+  "abstract": "While U.S. unemployment remains relatively low overall, companies are conducting layoffs and slowing hiring in anticipation of generative AI's potential rather than based on demonstrated performance. Despite 95% of generative AI projects failing to deliver measurable returns and 56% of CEOs reporting that AI failed to boost revenue or lower costs, leading executives from major corporations have publicly stated that many white-collar jobs will soon disappear due to AI adoption.",
+  "keyFindings": [
+    "95% of generative AI projects have failed to deliver measurable returns according to MIT data cited in the source.",
+    "56% of CEOs reported that AI failed to boost revenue or lower costs, according to PwC.",
+    "Recent layoffs and slowed hiring have occurred particularly in the tech industry, entry-level positions, customer service, and programming jobs.",
+    "Leading CEOs from Ford, Amazon, Salesforce, and JP Morgan Chase have publicly proclaimed that many white-collar jobs at their companies will soon disappear."
+  ],
+  "methodology": "Not specified. The article cites MIT data on generative AI project failure rates and PwC CEO survey data, but does not describe a primary research methodology or original data collection.",
+  "qualifiers": "The article notes that 'overall unemployment in the U.S. is still relatively low' and describes job losses as part of 'considerable speculation' about AI's role in recent hiring patterns. The causal link between AI adoption and layoffs is presented as speculative rather than definitively established.",
+  "fetchedAt": "2026-03-09"
+}

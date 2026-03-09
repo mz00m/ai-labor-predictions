@@ -1,0 +1,11 @@
+{
+  "id": "mckinsey-entry-level-2025",
+  "abstract": "McKinsey Global Institute projects that generative AI could automate activities representing up to 30% of current work hours by 2030. The research reveals significant disparities in labor market impacts, with lower-wage workers facing substantially higher rates of occupational transition compared to higher-wage workers, highlighting potential inequality in how AI-driven automation affects different worker segments.",
+  "keyFindings": [
+    "Activities accounting for up to 30% of hours currently worked could be automated by 2030, accelerated by generative AI.",
+    "Lower-wage workers face up to 14x more occupational transitions than higher-wage counterparts."
+  ],
+  "methodology": "Not specified",
+  "qualifiers": "Projections based on 'up to' 30% automation indicate uncertainty about the precise extent of AI-driven automation by 2030.",
+  "fetchedAt": "2026-03-09"
+}

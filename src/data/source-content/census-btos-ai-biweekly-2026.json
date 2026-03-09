@@ -1,0 +1,13 @@
+{
+  "id": "census-btos-ai-biweekly-2026",
+  "abstract": "The US Census Bureau's Business Trends and Outlook Survey tracks AI adoption among US businesses through biweekly national data collection. As of February 2026, 17.5% of surveyed businesses reported using AI in their business functions, with 73.1% indicating no AI use and 9.4% reporting uncertainty, representing a marginal increase from the initial 17.3% adoption rate recorded in November 2025.",
+  "keyFindings": [
+    "17.5% of businesses reported using AI in business functions in the January 26–February 8, 2026 survey period (Cycle 202604)",
+    "73.1% of surveyed businesses indicated they do not use AI in business functions",
+    "9.4% of businesses reported not knowing whether they use AI in business functions",
+    "AI adoption increased slightly from 17.3% in the first biweekly reading (November 2025) to 17.5% in the February 2026 cycle"
+  ],
+  "methodology": "Biweekly national data collection through the US Census Bureau's Business Trends and Outlook Survey, with data cycles covering two-week reference periods. Initial data collection began in November 2025 (Cycle 202524), with ongoing biweekly surveys tracking AI adoption across US businesses.",
+  "qualifiers": "Data represents a single question on AI adoption; specific industry breakdowns, business size categories, and other demographic details are not provided in the excerpt. Sample size and response rates not specified. The 9.4% 'do not know' response rate indicates measurement uncertainty. Data is recent and preliminary, with only two data points available for trend assessment.",
+  "fetchedAt": "2026-03-09"
+}

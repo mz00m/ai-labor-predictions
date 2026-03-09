@@ -1,0 +1,11 @@
+{
+  "id": "indeed-geo-premiums-2024",
+  "abstract": "This analysis examines the geographic distribution of AI-related employment opportunities and wage premiums across major U.S. metropolitan areas. The findings reveal significant wage disparities between AI-related roles and traditional roles, with AI positions commanding substantially higher compensation premiums in top technology hubs compared to the national average.",
+  "keyFindings": [
+    "AI-related roles offer a 38% wage premium in top-10 tech metros compared to the national average.",
+    "Non-AI roles in the same top-10 tech metros show only a 12% wage premium relative to the national average."
+  ],
+  "methodology": "Analysis of Indeed hiring and wage data across geographic regions, focusing on top-10 technology metropolitan areas. Specific sample size, time period details, and analytical methods not specified in available excerpt.",
+  "qualifiers": "Limited content available from source excerpt; full methodology and scope restrictions cannot be fully determined from provided text.",
+  "fetchedAt": "2026-03-09"
+}

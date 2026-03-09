@@ -1,0 +1,14 @@
+{
+  "id": "imf-ai-2024",
+  "abstract": "This IMF Staff Discussion Note examines AI's exposure across global labor markets, finding that approximately 40% of global employment faces AI-related disruption, with advanced economies more significantly affected due to their concentration in cognitive-intensive roles. The analysis shows differential impacts by worker demographics, with women and college-educated workers more exposed but better positioned to benefit, while older workers face greater adaptation challenges. The authors argue that without policy intervention, AI could increase labor income inequality and wealth inequality, though sufficient productivity gains could benefit most workers; they recommend advanced economies focus on regulatory frameworks and labor reallocation support, while emerging and developing economies prioritize digital infrastructure and skills development.",
+  "keyFindings": [
+    "Almost 40% of global employment is exposed to AI, with advanced economies more affected than emerging market and developing economies.",
+    "Women and college-educated individuals are more exposed to AI but also better positioned to reap AI benefits, while older workers are potentially less able to adapt.",
+    "Labor income inequality may increase if complementarity between AI and high-income workers is strong, while capital returns will increase wealth inequality.",
+    "Sufficiently large productivity gains from AI could result in income level surges for most workers, offsetting negative inequality effects.",
+    "Advanced economies should focus on upgrading regulatory frameworks and supporting labor reallocation, while emerging markets should prioritize digital infrastructure and digital skills development."
+  ],
+  "methodology": "Not specified in the excerpt provided. The source is a Staff Discussion Note that appears to analyze AI exposure across global labor markets using employment structure data, likely drawing on labor market datasets across multiple economy types, but specific data sources, sample size, and analytical methodology are not detailed in the available text.",
+  "qualifiers": "This Staff Discussion Note represents the views of the authors and does not necessarily represent IMF views or IMF policy. The analysis acknowledges that outcomes depend on conditional scenarios (e.g., 'if the complementarity between AI and high-income workers is strong' and 'if productivity gains are sufficiently large'), indicating uncertainty about future impacts.",
+  "fetchedAt": "2026-03-09"
+}

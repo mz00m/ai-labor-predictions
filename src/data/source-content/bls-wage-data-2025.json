@@ -1,0 +1,14 @@
+{
+  "id": "bls-wage-data-2025",
+  "abstract": "The Employment Cost Index (ECI) is a Bureau of Labor Statistics measure that tracks the change in hourly labor costs to employers over time using a fixed basket of labor. The ECI includes both wages/salaries and benefits costs, providing a pure measure of compensation change free from compositional shifts in the workforce. As of Q4 2025, total compensation for civilian workers rose 0.7% seasonally adjusted over three months and 3.4% over the previous 12 months, with private industry and state/local government workers showing similar trends.",
+  "keyFindings": [
+    "Total compensation for civilian workers increased 0.7% seasonally adjusted from September 2025 to December 2025, and 3.4% over the 12-month period ending December 2025.",
+    "Private industry compensation costs rose 3.4% over the 12-month period ending December 2025, with wages and salaries increasing 3.3% and benefit costs rising 3.4%.",
+    "State and local government workers saw total compensation increase 0.8% seasonally adjusted from September 2025 to December 2025, and 3.4% on a 12-month basis.",
+    "Compensation costs for private industry workers increased 3.5% from June 2024 to June 2025, with inflation-adjusted wages and salaries increasing only 0.8% over the same period.",
+    "The ECI measures labor cost changes using a fixed employment basket to isolate pure cost changes from occupational and industry compositional shifts."
+  ],
+  "methodology": "The Employment Cost Index is a quarterly measure conducted by the Bureau of Labor Statistics that tracks hourly labor costs to employers. The ECI uses a fixed basket of labor to isolate pure cost changes independent of worker movements between occupations and industries. Data presented includes quarterly seasonally adjusted changes and 12-month not seasonally adjusted changes. Historical data spans from March 2006 through December 2025, covering private industry and state/local government sectors separately.",
+  "qualifiers": "Beginning with the January 2027 release of December 2026 data, the ECI will introduce new 2025 fixed employment weights and remove workers' compensation costs from calculations. Seasonal factors are subject to revision; the 2026 seasonal factors for directly adjusted series and revised seasonally adjusted series for the past five years are scheduled for release with the March 2026 report.",
+  "fetchedAt": "2026-03-09"
+}

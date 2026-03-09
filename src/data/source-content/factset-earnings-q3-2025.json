@@ -1,0 +1,13 @@
+{
+  "id": "factset-earnings-q3-2025",
+  "abstract": "FactSet analyzed S&P 500 earnings conference call transcripts from September 15 through December 4, 2025, finding that a record 306 companies (61%) mentioned \"AI,\" surpassing the previous record of 292 in Q2 2025. Companies citing AI outperformed those that did not, with stock price increases of 13.9% versus 5.7% since year-end 2024, indicating strong market preference for AI-focused companies during the period.",
+  "keyFindings": [
+    "A record 306 S&P 500 companies (61%) cited \"AI\" in Q3 2025 earnings calls, the highest number in the past 10 years, exceeding the prior record of 292 from Q2 2025.",
+    "The 306 AI mentions in Q3 2025 far exceeded the 5-year average of 136 and the 10-year average of 86 mentions.",
+    "Information Technology and Communication Services sectors led with 95% of earnings calls citing \"AI\" in Q3 2025, while IT had the highest absolute number with 63 calls.",
+    "S&P 500 companies citing \"AI\" in Q3 earnings calls outperformed non-AI-citing companies by 8.2 percentage points since December 31 (13.9% vs. 5.7%) and 4.2 percentage points since June 30 (8.1% vs. 3.9%)."
+  ],
+  "methodology": "FactSet Document Search was used to search for the term \"AI\" in earnings conference call transcripts of all S&P 500 companies that conducted earnings calls from September 15 through December 4, 2025. The analysis uses current index constituents going back 10 years for historical comparison. Stock price performance was tracked from multiple dates: December 31, June 30, and September 30.",
+  "qualifiers": "None stated",
+  "fetchedAt": "2026-03-09"
+}

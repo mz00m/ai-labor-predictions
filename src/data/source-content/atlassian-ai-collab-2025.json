@@ -1,0 +1,14 @@
+{
+  "id": "atlassian-ai-collab-2025",
+  "abstract": "Atlassian's 2025 survey of Fortune 100 executives and knowledge workers reveals that 96% of organizations are not seeing dramatic improvements in efficiency, innovation, or work quality from AI investments, despite individual workers reporting 33% higher productivity. The research identifies a critical gap between isolated AI-enabled productivity gains and company-wide transformation, costing Fortune 500 companies approximately $98 billion annually in lost returns, and examines what distinguishes the 4% of companies successfully implementing AI at scale.",
+  "keyFindings": [
+    "96% of organizations report not seeing dramatic improvements in efficiency, innovation, or work quality from AI implementation",
+    "Individual workers report feeling 33% more productive, but organizational metrics remain flat",
+    "AI has improved individual task completion but has not improved cross-team collaboration and collective work outcomes",
+    "Siloed AI use is identified as a key barrier to company-wide transformation",
+    "Lost returns from ineffective AI implementation cost Fortune 500 companies approximately $98 billion annually"
+  ],
+  "methodology": "Survey of 180 Fortune 100 executives and 12,000 knowledge workers conducted by Atlassian in 2025.",
+  "qualifiers": "The source is promotional material for a downloadable report; the full methodology details, confidence intervals, geographic scope, and detailed analytical approach are not provided in the excerpt. The specific composition and selection criteria for the 180 executives and 12,000 workers are not stated.",
+  "fetchedAt": "2026-03-09"
+}

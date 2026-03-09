@@ -1,0 +1,13 @@
+{
+  "id": "otis-kenyan-entrepreneurs-2023",
+  "abstract": "This HBS working paper examines how generative AI adoption affects entrepreneurial business performance. While no statistically significant average effect on revenues or profits is found across all businesses, the impact is highly heterogeneous: high-performing businesses improve by roughly 15 percent, while low-performing businesses decline by roughly 8-10 percent, suggesting AI amplifies existing performance disparities.",
+  "keyFindings": [
+    "No statistically significant average effect of generative AI on revenues or profits across all businesses",
+    "High-performing businesses at baseline improved by approximately 15 percent after generative AI adoption",
+    "Low-performing businesses at baseline declined by approximately 8-10 percent after generative AI adoption",
+    "Effects of generative AI adoption are highly heterogeneous, with impacts dependent on baseline business performance"
+  ],
+  "methodology": "Not specified in provided excerpt",
+  "qualifiers": "The excerpt does not provide sufficient detail on sample size, time period, data sources, or analytical approach to fully characterize the methodology. Results presented are specific to the businesses studied but broader generalizability is unclear from the provided text.",
+  "fetchedAt": "2026-03-09"
+}

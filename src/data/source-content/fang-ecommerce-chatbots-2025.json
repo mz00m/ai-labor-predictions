@@ -1,0 +1,14 @@
+{
+  "id": "fang-ecommerce-chatbots-2025",
+  "abstract": "This paper quantifies the impact of Generative AI on firm productivity through large-scale randomized field experiments at a leading cross-border online retail platform involving millions of users and products over six months in 2023-2024. GenAI-based enhancements integrated into seven consumer-facing business workflows produced sales increases ranging from 0% to 16.3%, with these gains mapping directly into total factor productivity improvements. The primary mechanism operates through higher conversion rates, and the effects show no deterioration in product return rates or customer ratings, with larger gains observed for less experienced consumers.",
+  "keyFindings": [
+    "GenAI adoption significantly increases sales with treatment effects ranging from 0% to 16.3%, depending on GenAI's marginal contribution relative to existing firm practices.",
+    "Across four GenAI applications with positive sales effects, the implied annual incremental value is approximately $5 per consumer.",
+    "Higher conversion rates are the primary mechanism through which GenAI improves sales, consistent with GenAI reducing frictions and improving consumer experience.",
+    "GenAI adoption does not cause worse post-purchase outcomes, as product return rates and customer ratings do not deteriorate.",
+    "Substantial demand-side heterogeneity exists, with larger productivity gains for less experienced consumers."
+  ],
+  "methodology": "Large-scale randomized field experiments conducted over six months in 2023-2024 at a leading cross-border online retail platform involving millions of users and products. GenAI-based enhancements were integrated into seven consumer-facing business workflows. Inputs and prices were held constant across experimental arms to isolate productivity effects. Analysis focused on sales impacts, conversion rates, product return rates, and customer ratings.",
+  "qualifiers": "The study examines GenAI adoption at an early stage. Effects are specific to the online retail platform studied. The six-month experimental period may not capture longer-term effects of GenAI adoption.",
+  "fetchedAt": "2026-03-09"
+}

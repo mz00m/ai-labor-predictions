@@ -1,0 +1,12 @@
+{
+  "id": "chegg-enrollment-decline",
+  "abstract": "Chegg's Q2 2024 earnings report reveals a significant decline in the company's core business as students shifted to ChatGPT for educational support. The company experienced a 50% subscriber decline from peak levels and responded with a 23% workforce reduction, explicitly identifying AI as the primary competitive threat to its tutoring marketplace business model.",
+  "keyFindings": [
+    "Chegg subscribers declined 50% from peak levels as students shifted to using ChatGPT instead.",
+    "The company laid off 23% of its workforce in response to changing market conditions.",
+    "Chegg identified AI as the primary competitive threat to its business."
+  ],
+  "methodology": "Quarterly financial results and operational metrics disclosed in official earnings report.",
+  "qualifiers": "Based on limited excerpt from earnings report; full financial details and comparative analysis not provided in source material.",
+  "fetchedAt": "2026-03-09"
+}

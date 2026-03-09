@@ -1,0 +1,14 @@
+{
+  "id": "challenger-ai-job-cuts-2025",
+  "abstract": "In 2025, U.S. employers announced 1,206,374 job cuts, the seventh highest annual total since 1989 and a 58% increase from 2024. Artificial intelligence was cited as a reason for 54,836 announced layoff plans in 2025, concentrated in the Technology sector which led private-sector cuts with 154,445 job cuts. While overall job cuts peaked in Q1 2025, December saw the lowest monthly total in 17 months, and employers announced their highest December hiring since 2022, suggesting stabilization after a year of elevated workforce reductions.",
+  "keyFindings": [
+    "AI was cited as a reason for 54,836 job cut announcements in 2025, with 142 cuts attributed to AI in December alone.",
+    "Technology sector led private-sector job cuts with 154,445 in 2025, up 15% from 133,988 in 2024, driven by companies pivoting to AI development and implementation alongside over-hiring.",
+    "Government sector recorded 308,167 job cuts in 2025, up 703% from 2024, with 293,753 cuts attributed to DOGE actions.",
+    "Warehousing and Retail sectors saw dramatic increases in job cuts, with Warehousing up 317% to 95,317 cuts and Retail up 123% to 92,989 cuts, driven by automation, supply chain shifts, and changing consumer behavior.",
+    "U.S. employers announced only 507,647 planned hires in 2025, down 34% from 2024 and the lowest year-to-date total since 2010."
+  ],
+  "methodology": "Analysis of announced job cut and hiring plans tracked by Challenger, Gray & Christmas, a global outplacement firm. Data covers U.S.-based employer announcements for full year 2025, with monthly, quarterly, and sectoral breakdowns. Historical comparisons provided for years 1989-2025. AI-related cuts tracked as a separate category since 2023.",
+  "qualifiers": "Data reflects only announced layoff and hiring plans, not actual job cuts or hires realized. Seasonal hiring figure of 372,520 in Q4 2025 noted as lowest since tracking began in 2012. Government sector cuts heavily concentrated in Q1 2025 (279,445 of 308,167 annual cuts). No tariff-related cuts were announced in December despite 7,908 for the year. AI tracking began in 2023, so historical comparison for AI-related cuts limited to 2023-2025.",
+  "fetchedAt": "2026-03-09"
+}

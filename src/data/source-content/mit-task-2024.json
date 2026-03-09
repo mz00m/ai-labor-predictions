@@ -1,0 +1,11 @@
+{
+  "id": "mit-task-2024",
+  "abstract": "This MIT study by Svanberg et al. examines which tasks involving computer vision are economically viable for automation with AI technology. The research moves beyond measuring AI exposure to assessing actual cost-effectiveness of automation, finding that only a small fraction of vision-related work would be profitable to automate with current AI capabilities and costs.",
+  "keyFindings": [
+    "Only 23% of worker wages for vision tasks would be cost-effective to automate with AI today",
+    "The study distinguishes between AI exposure (tasks affected by AI) and economically viable automation (tasks where automation is cost-effective)"
+  ],
+  "methodology": "Not specified in provided excerpt. Full methodology details would be available in the complete PDF document.",
+  "qualifiers": "Analysis limited to vision tasks specifically; cost-effectiveness assessment based on current AI capabilities and pricing as of early 2024; broader labor market implications may vary by sector and geography.",
+  "fetchedAt": "2026-03-09"
+}

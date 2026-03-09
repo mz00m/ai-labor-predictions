@@ -1,0 +1,13 @@
+{
+  "id": "humlum-vestergaard-adoption-2025",
+  "abstract": "This study examines how ChatGPT adoption varies across workers and occupations, finding that while the tool can halve working times for approximately one-third of tasks, unequal access due to employer restrictions and training requirements exacerbates existing labor market inequalities. The research reveals significant disparities in who can benefit from large language model capabilities, with adoption patterns potentially widening gaps between different worker groups.",
+  "keyFindings": [
+    "ChatGPT can reduce working time by approximately 50% for about one-third of tasks across analyzed occupations.",
+    "Employer restrictions and lack of required training create barriers to ChatGPT adoption among workers.",
+    "Unequal adoption of ChatGPT exacerbates existing inequalities among different worker groups.",
+    "Access to AI tools varies significantly based on employment context and organizational policies."
+  ],
+  "methodology": "Not fully specified in excerpt; appears to be an empirical study analyzing ChatGPT's impact on task completion times and adoption patterns across workers and occupations, published in PNAS.",
+  "qualifiers": "The excerpt indicates findings are based on analysis of ChatGPT's effects on approximately one-third of tasks, suggesting not all work tasks show equal time-saving benefits. Scope and generalizability limitations not explicitly stated in provided text.",
+  "fetchedAt": "2026-03-09"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "nber-ai-legal-impact-2025",
+  "abstract": "Using natural language processing to measure task-level AI exposure from 2010-2023, this study finds that tasks with higher AI exposure subsequently experience reduced labor demand. However, despite strong substitution effects at the task level, overall employment effects remain modest because productivity-driven increases in labor demand at AI-adopting firms offset reduced demand in exposed occupations. The authors develop a model distinguishing direct substitution from indirect reallocative effects, and use an instrument based on historical university hiring networks to establish causal evidence.",
+  "keyFindings": [
+    "Tasks with higher AI exposure subsequently experience reduced labor demand within firms.",
+    "Mean exposure of an occupation's tasks depresses labor demand, while concentration of exposure in a few tasks offsets losses by enabling worker reallocation.",
+    "Despite strong task-level substitution effects, overall employment effects are modest as reduced demand in exposed occupations is offset by productivity-driven increases in labor demand at AI-adopting firms.",
+    "Causal evidence using historical university hiring networks as an instrument supports the theoretical model predictions about direct substitution and reallocative effects."
+  ],
+  "methodology": "Natural language processing techniques were used to construct measures of workers' task-level exposure to AI and machine learning from 2010 to 2023, capturing variation across firms, occupations, and time. The authors developed an econometric model separating direct substitution from indirect reallocative effects of labor-saving technologies. Causal identification was achieved using an instrument based on historical university hiring networks.",
+  "qualifiers": "None stated",
+  "fetchedAt": "2026-03-09"
+}

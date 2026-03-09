@@ -1,0 +1,11 @@
+{
+  "id": "oecd-youth-employment-2025",
+  "abstract": "The OECD Youth Employment Outlook 2025 documents significant labor market challenges for young workers in OECD countries, with youth employment in AI-exposed sectors declining 4.5% year-over-year and real starting salaries falling 3-8% across knowledge-work sectors, indicating substantial disruption to early-career employment and compensation.",
+  "keyFindings": [
+    "Youth (18-24) employment in OECD countries in AI-exposed sectors declined 4.5% year-over-year.",
+    "Real starting salaries fell 3-8% across knowledge-work sectors."
+  ],
+  "methodology": "Not specified. Appears to be analysis of OECD employment data for youth ages 18-24 across member countries, with focus on AI-exposed sectors and knowledge-work sectors, but specific data sources, sample scope, and analytical methods are not described in the provided excerpt.",
+  "qualifiers": "Limited excerpt provided; full scope, time period coverage, sectoral definitions, country coverage, and methodological details are not available from the source text provided.",
+  "fetchedAt": "2026-03-09"
+}

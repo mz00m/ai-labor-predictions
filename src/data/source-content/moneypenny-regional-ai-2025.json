@@ -1,0 +1,14 @@
+{
+  "id": "moneypenny-regional-ai-2025",
+  "abstract": "Moneypenny surveyed 750 U.S. business decision-makers in April-May 2025 to assess AI adoption across sectors. The survey found that 34% of U.S. businesses are currently using AI while another 34% are actively considering adoption, indicating two-thirds of companies are either adopting or planning to adopt AI. Regional variations show significant disparities, with the Mountain region leading at 42% full adoption while West North Central states lag at 8%, and adoption correlates with company size, industry type, and local economic ecosystems.",
+  "keyFindings": [
+    "Thirty-four percent of U.S. businesses are already using AI, with an additional 34.27% actively considering adoption, meaning 68% combined are either adopting or planning to adopt AI.",
+    "Regional adoption varies significantly: Mountain region leads at 42% full adoption, while West North Central states show only 8% full adoption, with West North Central also reporting over 60% combined minimal usage and non-adoption.",
+    "Content creation and marketing (39%) and telephone answering (39%) are the most common AI applications, followed by analytics and reporting (37%), productivity tools (36%), and technical support/cybersecurity (34%).",
+    "Large companies with 250-500 employees show 42% full adoption across their organization, compared to only 15% among solo entrepreneurs, with 37% of solo entrepreneurs not considering AI at all.",
+    "Tech & Telecom leads industry adoption at 80% (51% full, 31% selective), followed by Finance (77%), Architecture/Engineering/Construction (74%), while Legal lags significantly at only 7% full adoption with 46% using AI minimally."
+  ],
+  "methodology": "Survey of 750 decision-makers across U.S. businesses conducted April-May 2025 by Moneypenny. Respondents were asked about their AI adoption stage, specific use cases, company size, industry, and region. The study categorized adoption into five stages: fully embracing AI across business, adopting in specific areas, using AI in limited ways, considering AI, or not considering AI.",
+  "qualifiers": "None stated. The source does not explicitly mention limitations, confidence intervals, sampling methods, or response rates.",
+  "fetchedAt": "2026-03-09"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "nejm-admin-ai-2024",
+  "abstract": "This systematic review examines the application of artificial intelligence in healthcare administration, focusing on three key areas: medical coding, patient scheduling, and operational costs. The analysis demonstrates that AI systems significantly outperform human coders in accuracy while simultaneously reducing patient no-show rates and overall administrative expenses.",
+  "keyFindings": [
+    "AI medical coding achieves 95% accuracy compared to 90% for human coders, representing a 5 percentage point improvement.",
+    "AI-driven scheduling systems reduce no-show rates by 25%.",
+    "Administrative cost reduction from AI implementation is estimated at 20-35%."
+  ],
+  "methodology": "Systematic review of AI applications in healthcare administration. Specific data sources, sample size, study selection criteria, and analytical approach not specified in excerpt.",
+  "qualifiers": "None stated",
+  "fetchedAt": "2026-03-09"
+}

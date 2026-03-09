@@ -1,0 +1,13 @@
+{
+  "id": "census-bts-ai-2025",
+  "abstract": "The Business Trends and Outlook Survey (BTOS) is a high-frequency, nationally representative survey of approximately 1.2 million U.S. employer businesses that collects data on business conditions including performance, employment, demand, and prices every two weeks. The survey includes an AI supplement that measures artificial intelligence adoption and usage across U.S. firms, with Q2 2025 data showing 10.2% of firms using AI in production and 14.8% testing AI applications, with significantly higher adoption rates (28%) among large firms with 500+ employees.",
+  "keyFindings": [
+    "US firm AI usage in production reached 10.2% as of Q2 2025, with an additional 14.8% of firms testing AI applications.",
+    "Large firms with 500 or more employees showed substantially higher AI adoption at 28%.",
+    "AI adoption is accelerating across all sectors of the economy.",
+    "As of November 2023, only 3.8% of businesses used AI to produce goods and services, indicating rapid growth in adoption rates between late 2023 and Q2 2025."
+  ],
+  "methodology": "The BTOS sample consists of approximately 1.2 million businesses divided into six panels of roughly 200,000 cases each. Businesses in each panel report once every 12 weeks over the course of one year, with data collection occurring every two weeks. The survey covers all employer businesses (single and multi-location) in the U.S. economy excluding farms, with data collection from September 11, 2023 to present. Data are released biweekly and available by 2017 NAICS sector, state, and the 25 most populous Metropolitan Statistical Areas, with additional tabulations by three-digit NAICS subsector and employment size classes.",
+  "qualifiers": "The AI module data (10.2% production use, 14.8% testing, 28% for large firms) is presented as part of the Q2 2025 survey release. The source document does not explicitly detail limitations or caveats specific to the AI supplement questions. The survey excludes farms and only covers employer businesses.",
+  "fetchedAt": "2026-03-09"
+}

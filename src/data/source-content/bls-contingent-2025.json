@@ -1,0 +1,14 @@
+{
+  "id": "bls-contingent-2025",
+  "abstract": "The July 2023 Current Population Survey found that 4.3% of U.S. workers (6.9 million people) held contingent jobs—temporary positions without implicit or explicit contracts for ongoing employment—up from 3.8% in May 2017. Beyond contingent work, 7.4% were independent contractors, 1.7% were on-call workers, 0.6% were temporary help agency workers, and 0.5% were contract firm workers. Contingent workers earned significantly less and had far lower health insurance coverage than noncontingent workers, and younger workers were substantially more likely to hold contingent positions.",
+  "keyFindings": [
+    "In July 2023, 6.9 million workers (4.3% of employed) held contingent jobs on their sole or main job, an increase from 3.8% in May 2017.",
+    "Workers ages 16-24 were four times more likely to have contingent jobs (12.9%) compared to workers age 25+ (3.1% for ages 25-54 and 2.6% for ages 55+).",
+    "Contingent full-time workers earned median weekly earnings of $838, which was 74% of noncontingent workers' earnings of $1,137, and only 19.9% had employer-provided health insurance versus 51.2% of noncontingent workers.",
+    "Independent contractors represented 11.9 million workers (7.4% of employment), with 80.3% preferring their work arrangement, while 44.8% of contingent workers preferred permanent employment.",
+    "Among multiple jobholders, 12.8% (1.1 million) held contingent second jobs, and alternative arrangements were common on second jobs with 22.8% being independent contractors."
+  ],
+  "methodology": "Data from a supplement to the July 2023 Current Population Survey (CPS), a monthly sample survey of approximately 60,000 households. This was the first comprehensive contingent work survey since May 2017, with prior periodic collections between February 1995 and May 2017. The survey collected information on contingent status and four alternative employment arrangements (independent contractors, on-call workers, temporary help agency workers, and contract firm workers) for both sole/main jobs and second jobs of multiple jobholders. Demographic breakdowns by age, sex, race/ethnicity, education, occupation, and industry were analyzed.",
+  "qualifiers": "Data collected in July 2023 only; comparisons made primarily to May 2017 data. The survey notes that additional estimates from the Contingent Work Supplement regarding digital platform employment (app-based work) would be published at a future undetermined date. Some analysis notes that earnings and employment disparities likely reflect differences in demographic and job characteristics such as age and occupation. The public use microdata file availability was pending completion of all releases from the supplement.",
+  "fetchedAt": "2026-03-09"
+}

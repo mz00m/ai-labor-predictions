@@ -119,7 +119,7 @@
         "openai-8k-funding-2024"
       ],
       "evidenceTier": 2,
-      "label": "OpenAI: avg stock comp $1.5M; researcher total comp $763K–$1.44M"
+      "label": "OpenAI: avg stock comp $1.5M; researcher total comp $763K\u2013$1.44M"
     },
     {
       "date": "2025-02-01",
@@ -218,7 +218,7 @@
         "dallas-fed-davis-ai-wages-2026"
       ],
       "evidenceTier": 1,
-      "label": "Dallas Fed: AI exposure → +0.2pp wage growth for high-experience-premium occupations"
+      "label": "Dallas Fed: AI exposure \u2192 +0.2pp wage growth for high-experience-premium occupations"
     },
     {
       "date": "2026-03-04",
@@ -235,7 +235,7 @@
       "sourceIds": [
         "anthropic-labor-market-impacts-2026"
       ],
-      "evidenceTier": 1,
+      "evidenceTier": 2,
       "label": "Anthropic: AI-exposed workers earn 47% more than unexposed workers"
     }
   ],
@@ -361,7 +361,7 @@
       "publisher": "Science (Noy, Zhang)",
       "evidenceTier": 1,
       "datePublished": "2023-07-14",
-      "excerpt": "ChatGPT compressed productivity distribution — low-ability workers gained most (40% time reduction, 18% quality increase). May reduce skill premium over time."
+      "excerpt": "ChatGPT compressed productivity distribution \u2014 low-ability workers gained most (40% time reduction, 18% quality increase). May reduce skill premium over time."
     },
     {
       "id": "brynjolfsson-li-raymond-qje-2025",
@@ -388,7 +388,7 @@
       "publisher": "CESifo (Althoff, Reichardt)",
       "evidenceTier": 1,
       "datePublished": "2026-01-21",
-      "excerpt": "some occupations — such as architects, engineers, and executives — see absolute wage declines"
+      "excerpt": "some occupations \u2014 such as architects, engineers, and executives \u2014 see absolute wage declines"
     },
     {
       "id": "hartley-genai-labor-2026",
@@ -403,7 +403,7 @@
       "id": "cepr-ai-productivity-jobs-europe-2026",
       "title": "How AI is affecting productivity and jobs in Europe",
       "url": "https://cepr.org/voxeu/columns/how-ai-affecting-productivity-and-jobs-europe",
-      "publisher": "CEPR VoxEU (Aldasoro, Gambacorta, Pál, Revoltella, Weiss, Wolski)",
+      "publisher": "CEPR VoxEU (Aldasoro, Gambacorta, P\u00e1l, Revoltella, Weiss, Wolski)",
       "evidenceTier": 1,
       "datePublished": "2026-02-17",
       "excerpt": "The wage gains observed may accrue disproportionately to highly skilled workers, potentially widening income inequality."
@@ -415,7 +415,7 @@
       "publisher": "Federal Reserve Bank of Dallas (J. Scott Davis)",
       "evidenceTier": 1,
       "datePublished": "2026-02-24",
-      "excerpt": "Nominal average weekly wages nationwide have increased 7.5 percent, while the computer systems design sector has risen 16.7 percent — a 9.2 percentage point gap reflecting the AI-skill wage premium."
+      "excerpt": "Nominal average weekly wages nationwide have increased 7.5 percent, while the computer systems design sector has risen 16.7 percent \u2014 a 9.2 percentage point gap reflecting the AI-skill wage premium."
     },
     {
       "id": "cooper-cs-majors-labor-2026",
@@ -431,7 +431,7 @@
       "title": "Labor market impacts of AI: A new measure and early evidence",
       "url": "https://www.anthropic.com/research/labor-market-impacts",
       "publisher": "Anthropic (Massenkoff, McCrory)",
-      "evidenceTier": 1,
+      "evidenceTier": 2,
       "datePublished": "2026-03-05",
       "excerpt": "Workers in the most exposed professions earn 47% more, on average, and are 16 percentage points more likely to be female"
     }

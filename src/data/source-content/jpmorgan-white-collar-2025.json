@@ -1,0 +1,14 @@
+{
+  "id": "jpmorgan-white-collar-2025",
+  "abstract": "J.P. Morgan Global Research examines early evidence that AI is already impacting job growth, particularly among college-educated workers and in technology sectors. The analysis finds rising unemployment among college graduates (5.8% in March, the highest in four years), with majors exposed to AI such as computer engineering, graphic design, and architecture experiencing significant increases in joblessness. Employment growth has stalled in tech industries including cloud computing, web search, and computer systems design following ChatGPT's release in late 2022, suggesting AI may be displacing knowledge worker roles and could prolong labor market recoveries during future recessions.",
+  "keyFindings": [
+    "College graduate unemployment reached 5.8% in March, the highest in more than four years and trending above the aggregate unemployment rate, which is historically unusual.",
+    "Majors exposed to AI including computer engineering, graphic design, industrial engineering, and architecture have experienced significant increases in graduate unemployment.",
+    "Three tech industries—cloud computing, web search, and computer systems design—stopped growing at the end of 2022, just after ChatGPT's release, after years of steady employment gains.",
+    "Non-routine cognitive occupations (scientists, engineers, designers, lawyers) now face rising unemployment risk that has surpassed that of workers in non-routine manual jobs for the first time.",
+    "As of mid-2025, less than 10% of firms in the overall economy report regularly using AI, rising to just over 20% in professional, scientific and technical industries."
+  ],
+  "methodology": "Cross-sectional analysis of unemployment rates by college major and comparison of employment trends across industries using data from the U.S. Census Bureau's Business Trends and Outlook Survey (BTOS) and Anthropic AI. The analysis examined AI exposure across industries and detailed subsectors of professional employment to identify correlation between AI usage and employment trends. Labor market data from March 2025 and industry employment data from late 2022 through mid-2025 were analyzed.",
+  "qualifiers": "The authors note that the increasing unemployment among college graduates could be partially due to secular rise in relative supply of college graduates and unusually low labor market churn, not solely AI effects. Outside of selected tech industries, the authors find 'little association' between AI intensity and job growth, attributing this partly to AI being 'simply too recent to have materially changed business practices' in non-tech sectors. The analysis does not establish definitive causation, noting 'some hints' and 'signs' rather than conclusive proof of AI displacement.",
+  "fetchedAt": "2026-03-09"
+}

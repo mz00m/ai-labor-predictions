@@ -1,0 +1,14 @@
+{
+  "id": "factset-earnings-q2-2024",
+  "abstract": "FactSet analysis of S&P 500 earnings calls for Q2 2024 found that 210 companies (41%) cited \"AI,\" representing the second-highest number on record since 2014, well above the 5-year average of 88 companies. While discussion is shifting from aspirational to operational with specific ROI figures cited, companies mentioning AI showed lower stock price performance in Q3 (4.1% vs. 6.1%) but higher year-to-date performance since year-end 2023 (12.2% vs. 8.6%) compared to non-AI-mentioning companies.",
+  "keyFindings": [
+    "210 S&P 500 companies cited \"AI\" on Q2 2024 earnings calls, representing 41% of the index and the second-highest number since at least 2014, exceeding the 5-year average of 88 companies.",
+    "The Information Technology sector had the highest AI mentions with 59 companies (91% of the sector) citing AI on Q2 earnings calls.",
+    "Companies citing AI showed lower average stock price performance since June 30 (4.1% change) compared to companies that did not mention AI (6.1% change).",
+    "Companies mentioning AI demonstrated higher year-to-date stock performance since December 31, 2023 (12.2% change) versus non-mentioning companies (8.6% change).",
+    "AI discussion on earnings calls has shifted from aspirational statements to operational focus with specific return-on-investment figures being cited by companies."
+  ],
+  "methodology": "FactSet Document Search was used to search for the term \"AI\" in conference call transcripts of S&P 500 companies that conducted earnings calls from June 15 through September 13, 2024. Historical comparisons were made against 5-year and 10-year averages using current index constituents tracked back to at least 2014. Stock price performance was analyzed for companies mentioning AI versus those that did not, comparing changes since June 30, 2024 and since December 31, 2023.",
+  "qualifiers": "The analysis uses current S&P 500 index constituents tracked back in time, which may not reflect historical index composition. The excerpt indicates that discussion is shifting from aspirational to operational, suggesting the nature and quality of AI mentions may have evolved. Results from the AI Transcript Assistant summarizing Meta's statements note that \"Results may vary based on prompts used.\"",
+  "fetchedAt": "2026-03-09"
+}

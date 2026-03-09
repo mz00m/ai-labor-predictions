@@ -1,0 +1,13 @@
+{
+  "id": "frank-ai-unemployment-2026",
+  "abstract": "Using monthly U.S. unemployment insurance records, the study finds that unemployment risk in AI-exposed occupations began rising in early 2022, months before ChatGPT's release in late 2022. Analysis of LinkedIn profiles and university syllabi reveals that graduate cohorts from 2021 onward entered AI-exposed jobs at lower rates than earlier cohorts, with gaps opening before late 2022, while graduates with AI-exposed curricula subsequently experienced higher first-job pay and shorter job searches after ChatGPT. The findings suggest that labor market deterioration in AI-exposed occupations predates generative AI and that LLM-relevant education provides ongoing economic value.",
+  "keyFindings": [
+    "Unemployment risk in AI-exposed occupations rose beginning in early 2022, months before ChatGPT's late 2022 release.",
+    "Graduate cohorts from 2021 onward entered AI-exposed jobs at lower rates than earlier cohorts, with gaps opening before late 2022.",
+    "Graduates with AI-exposed curricula achieved higher first-job pay and shorter job searches after ChatGPT.",
+    "Labor market deterioration in AI-exposed occupations predates the release of generative AI models."
+  ],
+  "methodology": "Study uses monthly U.S. unemployment insurance records to measure occupation- and location-specific unemployment risk; analyzes millions of LinkedIn profiles to track graduate cohort entry rates into AI-exposed jobs; examines millions of university syllabi to assess AI curriculum exposure and subsequent employment outcomes. Time period spans analysis before and after ChatGPT's late 2022 release, with graduate data from 2021 onward.",
+  "qualifiers": "None stated",
+  "fetchedAt": "2026-03-09"
+}

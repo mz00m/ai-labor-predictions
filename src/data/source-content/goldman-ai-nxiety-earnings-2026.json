@@ -1,0 +1,12 @@
+{
+  "id": "goldman-ai-nxiety-earnings-2026",
+  "abstract": "Goldman Sachs' analysis of 2026 earnings season reveals a disconnect between AI adoption and economy-wide productivity gains, despite individual companies reporting substantial task-specific improvements. While aggregate productivity metrics show no meaningful relationship to AI adoption, companies that quantified AI impacts on specific workflows reported median productivity gains of approximately 30%, suggesting implementation challenges or measurement gaps at the macroeconomic level.",
+  "keyFindings": [
+    "No meaningful relationship between productivity and AI adoption observed at the economy-wide level",
+    "Companies that quantified productivity impacts of AI on specific tasks reported a median productivity gain of around 30%",
+    "Gap exists between company-level AI productivity claims and aggregate economic productivity metrics"
+  ],
+  "methodology": "Analysis of earnings season disclosures and company-reported data from 2026; specific sample size, data sources, and analytical methods not specified in excerpt",
+  "qualifiers": "Analysis is based on earnings season reporting; companies with quantified productivity impacts represent a subset of all companies with AI adoption; economy-wide productivity relationship findings noted as not yet showing 'meaningful' correlation, suggesting ongoing measurement or implementation challenges",
+  "fetchedAt": "2026-03-09"
+}

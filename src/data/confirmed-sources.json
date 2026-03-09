@@ -182,9 +182,9 @@
     "anthropic-labor-market-impacts-2026": {
       "id": "anthropic-labor-market-impacts-2026",
       "title": "Labor market impacts of AI: A new measure and early evidence",
-      "url": "https://cdn.sanity.io/files/4zrzovbb/website/dc7bcd0224644fce97cecb7f9e68dcd8434b35f1.pdf",
+      "url": "https://www.anthropic.com/research/labor-market-impacts",
       "publisher": "Anthropic (Massenkoff, McCrory)",
-      "evidenceTier": 1,
+      "evidenceTier": 2,
       "datePublished": "2026-03-05",
       "excerpt": "We find no systematic increase in unemployment for highly exposed workers since late 2022, though we find suggestive evidence that hiring of younger workers has slowed in exposed occupations",
       "usedIn": [

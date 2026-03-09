@@ -1,0 +1,11 @@
+{
+  "id": "workday-ai-productivity-rework-2026",
+  "abstract": "A Workday-commissioned study examining the actual business value of AI implementations reveals significant inefficiencies in AI deployment. While organizations capture time savings from AI tools, nearly 40% of these gains are negated by rework activities such as error correction and output verification, with only 14% of employees experiencing consistent positive net outcomes from AI use.",
+  "keyFindings": [
+    "Nearly 40% of AI time savings are lost to rework, including correcting errors, rewriting content, and verifying outputs from one-size-fits-all AI tools.",
+    "Only 14% of employees consistently get clear, positive net outcomes from AI."
+  ],
+  "methodology": "Not specified in provided excerpt. Study conducted by Workday in collaboration with Hanover Research; full methodology details not available in source material provided.",
+  "qualifiers": "Limited excerpt provided; full study scope, sample size, geographic coverage, and detailed limitations not available in source material.",
+  "fetchedAt": "2026-03-09"
+}

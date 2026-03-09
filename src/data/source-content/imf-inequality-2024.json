@@ -1,0 +1,14 @@
+{
+  "id": "imf-inequality-2024",
+  "abstract": "According to IMF analysis, artificial intelligence will affect almost 40 percent of global employment, with the potential to both complement human work and replace jobs. While AI presents opportunities for productivity gains and economic growth, it will likely worsen overall inequality, particularly benefiting higher-income workers in advanced economies. Policymakers must implement comprehensive social safety nets, retraining programs, and investments in digital infrastructure to ensure AI benefits are inclusive.",
+  "keyFindings": [
+    "Almost 40 percent of global employment is exposed to AI, with advanced economies facing about 60 percent exposure compared to 40 percent in emerging markets and 26 percent in low-income countries.",
+    "Roughly half of exposed jobs in advanced economies may benefit from AI integration and enhanced productivity, while the other half could experience lower labor demand, reduced wages, and potential job displacement.",
+    "AI will likely worsen overall inequality within countries, with workers who can harness AI seeing increased productivity and wages while those who cannot will fall behind, and gains from AI adoption likely favoring high-income workers and capital holders.",
+    "Younger and less experienced workers may find it easier to adapt to AI and exploit opportunities, while older workers could struggle to adapt to technological changes.",
+    "Advanced economies including Singapore, the United States, and Denmark scored highest on the IMF's AI Preparedness Index, while low-income countries lack the infrastructure and skilled workforces to harness AI benefits."
+  ],
+  "methodology": "IMF staff conducted analysis examining the potential impact of AI on the global labor market, assessing exposure across different economic categories. The IMF developed an AI Preparedness Index measuring readiness across four categories: digital infrastructure, human-capital and labor-market policies, innovation and economic integration, and regulation and ethics. IMF staff assessed the readiness of 125 countries using this index. The analysis captures both job replacement and job complementation forces.",
+  "qualifiers": "The authors note that 'the net effect is difficult to foresee, as AI will ripple through economies in complex ways.' The findings are described as based on scenarios and modeling rather than empirical observation. The document characterizes the AI impact as occurring 'over time' and refers to 'most scenarios' regarding inequality effects, indicating uncertainty about outcomes.",
+  "fetchedAt": "2026-03-09"
+}

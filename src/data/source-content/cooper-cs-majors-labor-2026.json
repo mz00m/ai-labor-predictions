@@ -1,0 +1,14 @@
+{
+  "id": "cooper-cs-majors-labor-2026",
+  "abstract": "Computer science remains a worthwhile college major despite recent headwinds, including an 8 percent decline in CS majors and elevated unemployment of 7.2 percent for early-career CS graduates in 2024. While AI-driven disruption and tech sector layoffs have created challenges, CS graduates who find employment earn substantially higher salaries ($90,000 median) compared to all recent college graduates ($55,000), and the field is projected to grow 15 percent over the next decade. The decision to major in CS should be individualized, weighing higher unemployment risk against superior earnings potential compared to alternative majors.",
+  "keyFindings": [
+    "The unemployment rate for early-career CS graduates reached 7.2 percent in 2024, well above the 4.5 percent rate for all early-career college graduates, as CS major enrollment expanded from less than 70,000 in 2009 to over 250,000 in 2024.",
+    "Median salary for early-career CS graduates was $90,000 in 2024, 64 percent higher than the $55,000 median for all recent college graduates and higher than other high-returning majors like mechanical engineering, nursing, and finance.",
+    "CS majors have experienced strong wage growth since the early 2010s, while other popular majors like psychology, biology, and education have seen only tepid wage increases.",
+    "The Bureau of Labor Statistics projects software development jobs (which employ about half of recent CS graduates) will grow 15 percent over the next decade, much faster than average, with AI potentially enabling higher productivity rather than job elimination.",
+    "Students considering CS should evaluate the tradeoff between higher unemployment risk and superior earnings compared to alternative majors with lower unemployment but substantially lower salaries, such as education (1.5 percent unemployment but $45,000 median salary)."
+  ],
+  "methodology": "Analysis of American Community Survey data on early-career college graduate employment and earnings by major (2024), National Student Clearinghouse data on CS major enrollment trends, and Bureau of Labor Statistics projections for software developer job growth over the next decade. The author synthesizes these data sources with anecdotal evidence from technology sector executives and general discussion of economic pressures affecting the CS job market.",
+  "qualifiers": "The author acknowledges that AI could affect the CS field in ways not yet understood, and notes there is no guarantee that CS jobs will evolve rather than disappear with new technology. The analysis is limited to early-career graduates and does not provide long-term career outcome data. The author explicitly states that hard-and-fast conclusions about whether to major in CS should be met with skepticism, emphasizing this is an individual decision dependent on personal circumstances and risk tolerance.",
+  "fetchedAt": "2026-03-09"
+}

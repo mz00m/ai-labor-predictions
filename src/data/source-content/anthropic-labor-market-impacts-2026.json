@@ -1,13 +1,17 @@
 {
   "id": "anthropic-labor-market-impacts-2026",
-  "abstract": "This paper develops a new measure of occupational exposure to AI and examines labor market impacts for highly exposed workers since late 2022. The authors find no systematic increase in unemployment for workers in AI-exposed occupations, but identify suggestive evidence that hiring of younger workers has slowed in these exposed occupations, indicating potential differential impacts across age groups.",
+  "abstract": "This paper introduces observed exposure, a new measure of AI displacement risk that combines theoretical LLM capability (Eloundou et al. 2023) with real-world Claude usage data from the Anthropic Economic Index, weighting automated and work-related uses more heavily. Using Current Population Survey data, the authors find no systematic increase in unemployment for workers in the most AI-exposed occupations since late 2022, though they find suggestive evidence that hiring of younger workers (ages 22-25) has slowed in exposed occupations. AI is far from reaching its theoretical capability: actual task coverage remains a fraction of what is feasible.",
   "keyFindings": [
-    "No systematic increase in unemployment for highly exposed workers since late 2022, contrary to some automation displacement concerns.",
-    "Suggestive evidence that hiring of younger workers has slowed in occupations with high AI exposure.",
-    "Study develops a new measure of occupational AI exposure to assess labor market vulnerability.",
-    "Differential labor market impacts appear to exist across demographic groups, particularly by age."
+    "Computer programmers have the highest observed AI exposure at 75% task coverage, followed by customer service representatives (70.1%) and data entry keyers (67%).",
+    "30% of US workers have zero observed AI task coverage; 70% have at least some tasks appearing in professional AI usage data.",
+    "No systematic increase in unemployment for workers in the top quartile of AI exposure compared to unexposed workers since ChatGPT's release in late 2022.",
+    "Young workers (ages 22-25) show a 14% drop in job-finding rate in AI-exposed occupations vs. unexposed, though this is barely statistically significant.",
+    "For every 10 percentage point increase in observed AI task coverage, BLS 2024-2034 growth projections drop by 0.6 percentage points.",
+    "Workers in the most AI-exposed professions are 16pp more likely to be female, earn 47% more on average, and are 4x more likely to hold graduate degrees than unexposed workers.",
+    "AI actual usage covers just 33% of Computer & Math tasks vs. 94% theoretical capability, illustrating the gap between what AI could do and what it currently does.",
+    "97% of observed Claude usage falls on tasks rated as theoretically feasible by Eloundou et al., validating the theoretical measures."
   ],
-  "methodology": "Not specified in the provided excerpt. The source is a research paper from Anthropic (Massenkoff, McCrory) dated March 5, 2026, but the methodology section is not visible in the extracted PDF content. Analysis appears to examine labor market data from late 2022 onward using an occupational exposure measure.",
-  "qualifiers": "The paper uses the language 'suggestive evidence' regarding younger worker hiring impacts, indicating preliminary or non-conclusive findings. The full scope and limitations of the study cannot be determined from the available excerpt.",
-  "fetchedAt": "2026-03-08"
+  "methodology": "Combines O*NET task database, Anthropic Economic Index usage data (Aug and Nov 2025), and Eloundou et al. (2023) theoretical exposure scores. Observed exposure weights automated use at full value and augmentative use at half. Task-level measures averaged to occupation level by time fraction. Labor market impacts analyzed via difference-in-differences comparing top quartile of exposure vs. zero-exposure workers using Current Population Survey monthly data from 2016 onward. Job-finding rates for young workers measured using CPS panel dimension tracking new job starts.",
+  "qualifiers": "The authors note their coverage measure relies on Anthropic platform data, which may not represent all AI usage. The 14% hiring rate drop for young workers is 'barely statistically significant' and has alternative explanations (remaining at existing jobs, taking different jobs, returning to school). Survey-measured job transitions may be vulnerable to mismeasurement. The framework is most useful when effects are ambiguous. Differential increases in unemployment on the order of 1 percentage point would be detectable with current data.",
+  "fetchedAt": "2026-03-09"
 }

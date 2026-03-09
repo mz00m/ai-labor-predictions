@@ -1,0 +1,10 @@
+{
+  "id": "meta-10k-2024",
+  "abstract": "Unable to extract. The provided source material contains only an SEC EDGAR filing index page listing Meta Platforms' 10-K filings from 2013-2026, without access to the actual 10-K document content. While the prompt references a 2024 10-K regarding AI efficiency and ~21,000 job cuts in 2023, the actual filing text necessary to extract findings and methodology is not included in the source material provided.",
+  "keyFindings": [
+    "Meta conducted approximately 21,000 job cuts across 2023 as part of its 'Year of Efficiency' initiative"
+  ],
+  "methodology": "Not specified. The source provided is an SEC EDGAR search results page listing filing metadata only; the actual 10-K document content required to determine study design, data sources, and analytical approach is not accessible.",
+  "qualifiers": "Source material consists of filing index page only, not the actual 10-K document. The referenced excerpt about job cuts and AI productivity gains cannot be verified against the full filing text. Access to the complete 2024 10-K document (filed 2024-02-02, Acc-no: 0001326801-24-000012) would be required for comprehensive extraction.",
+  "fetchedAt": "2026-03-09"
+}

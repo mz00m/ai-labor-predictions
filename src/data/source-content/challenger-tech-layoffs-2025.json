@@ -1,0 +1,14 @@
+{
+  "id": "challenger-tech-layoffs-2025",
+  "abstract": "Challenger, Gray & Christmas's 2025 year-end report documents 1,206,374 announced U.S. job cuts—the seventh highest annual total since 1989 and a 58% increase from 2024. Technology sector led private-sector job cuts with 154,445 positions eliminated, with AI cited as the reason for 54,836 layoffs in 2025. The report finds that Q4 2025 saw the highest quarterly job cuts since 2008, though December hiring improved to its highest level since 2022.",
+  "keyFindings": [
+    "U.S. employers announced 1,206,374 total job cuts in 2025, up 58% from 761,358 in 2024, representing the seventh highest annual total since 1989.",
+    "Technology sector led private-sector job cuts with 154,445 positions eliminated in 2025, up 15% from 133,988 in 2024.",
+    "AI was cited as the reason for 54,836 job cut announcements in 2025, and 71,825 total since tracking began in 2023.",
+    "Fourth quarter 2025 saw 259,948 announced job cuts, the highest Q4 total since 2008 when 460,903 cuts were recorded.",
+    "December 2025 hiring announcements reached 10,496, the highest December total since 2022, though full-year 2025 hiring of 507,647 was the lowest since 2010."
+  ],
+  "methodology": "Analysis of announced job cuts and hiring plans tracked by Challenger, Gray & Christmas from monthly employer announcements throughout 2025, compared to historical data from 1989-2024. Data categorized by industry, reason for cuts (including AI, tariffs, DOGE actions, restructuring, store closings), and month/quarter. Baseline year 2024 provides year-over-year comparison.",
+  "qualifiers": "Report covers announced job cuts and hiring plans, not actual realized layoffs or hires; announcements may not materialize. AI figures reflect only cuts explicitly cited as AI-related by employers. Government sector job cuts heavily influenced by DOGE-related reductions, which are subset-tracked separately. Seasonal hiring data shows lowest numbers since tracking began in 2012. Full report tables not included in excerpt.",
+  "fetchedAt": "2026-03-09"
+}

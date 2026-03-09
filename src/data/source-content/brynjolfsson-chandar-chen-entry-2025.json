@@ -1,0 +1,14 @@
+{
+  "id": "brynjolfsson-chandar-chen-entry-2025",
+  "abstract": "This paper analyzes AI's employment effects using ADP payroll data from 2020-2025, finding a 13% relative decline in employment for ages 22-25 in AI-exposed occupations. The effects are concentrated in automation-oriented roles rather than roles emphasizing human-AI collaboration or augmentation, suggesting that AI's labor market impact is selective and depends on job task composition.",
+  "keyFindings": [
+    "ADP payroll data shows 13% relative employment decline for ages 22-25 in most AI-exposed occupations compared to non-AI-exposed occupations.",
+    "Employment effects are concentrated in automation roles (where AI replaces human labor) rather than augmentation roles (where AI enhances human productivity).",
+    "Younger workers (ages 22-25) experience disproportionate AI-related employment effects relative to other age groups.",
+    "The study identifies variation in AI exposure across occupations based on task composition, with some occupations more vulnerable to automation than others.",
+    "Employment declines in AI-exposed occupations represent measurable early indicators ('canaries in the coal mine') of broader AI labor market displacement."
+  ],
+  "methodology": "Analysis of ADP payroll data from 2020-2025, covering employment trends across occupations classified by AI exposure level. The authors classify occupations into automation roles (AI-replacing) versus augmentation roles (AI-enhancing) and measure relative employment changes by age group and occupational category. Sample includes millions of workers tracked through ADP's payroll processing database.",
+  "qualifiers": "The study focuses on US payroll data only and measures correlation rather than causal effects. Results are specific to the 2020-2025 period and the ADP dataset, which may not capture all employment sectors equally. The paper notes that observed employment declines for young workers in AI-exposed occupations may reflect initial labor market adjustment patterns rather than long-term equilibrium effects. Limited sample for some occupational subcategories. The distinction between automation and augmentation roles, while analytically useful, depends on occupational classification which has inherent measurement limitations.",
+  "fetchedAt": "2026-03-09"
+}
