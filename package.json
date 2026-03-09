@@ -18,21 +18,28 @@
     "ingest:apply": "tsx scripts/apply-ingestion.ts",
     "backfill:content": "tsx scripts/backfill-source-content.ts --skip-existing",
     "backfill:content:dry-run": "tsx scripts/backfill-source-content.ts --dry-run",
+    "fetch:article": "tsx scripts/fetch-article.ts",
+    "fetch:pdf": "tsx scripts/fetch-article.ts --pdf",
     "signals:fetch": "python3 scripts/signals/fetch_all.py",
     "signals:calc": "python3 scripts/signals/calculate_metrics.py",
     "signals:update": "python3 scripts/signals/fetch_all.py"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.78.0",
+    "@mozilla/readability": "^0.6.0",
     "@vercel/analytics": "^1.6.1",
     "date-fns": "^3.6.0",
+    "jsdom": "^28.1.0",
     "next": "^14.2.0",
+    "pdf-parse": "^2.4.5",
+    "puppeteer-core": "^24.38.0",
     "react": "^18.3.0",
     "react-dom": "^18.3.0",
     "recharts": "^2.12.0",
     "zod": "^4.3.6"
   },
   "devDependencies": {
+    "@types/jsdom": "^28.0.0",
     "@types/node": "^20.14.0",
     "@types/react": "^18.3.0",
     "@types/react-dom": "^18.3.0",
