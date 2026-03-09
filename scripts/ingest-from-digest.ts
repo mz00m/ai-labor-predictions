@@ -126,9 +126,14 @@ async function main() {
     const tier = SOURCE_TIER_MAP[highlight.sourceAdapter] ?? 3;
 
     // Generate source ID
-    const publisher = new URL(highlight.source).hostname
-      .replace("www.", "")
-      .split(".")[0];
+    let publisher: string;
+    try {
+      publisher = new URL(highlight.source).hostname
+        .replace("www.", "")
+        .split(".")[0];
+    } catch {
+      publisher = "unknown";
+    }
     const year = highlight.publishedAt
       ? new Date(highlight.publishedAt).getFullYear()
       : new Date().getFullYear();
@@ -202,7 +207,7 @@ Schema: [{ "graphSlug": string, "type": "data_point"|"overlay", "value"?: number
 If no stats found, return [].`;
 
     const response = await client.messages.create({
-      model: "claude-sonnet-4-20250514",
+      model: "claude-sonnet-4-6",
       max_tokens: 1000,
       messages: [{ role: "user", content: extractionPrompt }],
     });
