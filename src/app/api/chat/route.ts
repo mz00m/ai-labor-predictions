@@ -1,5 +1,6 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { buildChatContext } from "@/lib/chat/context-builder";
+import { getDb } from "@/lib/db";
 
 export const dynamic = "force-dynamic";
 
@@ -83,7 +84,7 @@ export async function POST(request: Request) {
     );
   }
 
-  let body: { messages: ChatMessage[] };
+  let body: { messages: ChatMessage[]; sessionId?: string; conversationId?: string };
   try {
     body = await request.json();
   } catch {
@@ -93,7 +94,7 @@ export async function POST(request: Request) {
     );
   }
 
-  const { messages } = body;
+  const { messages, sessionId, conversationId } = body;
   if (!messages || !Array.isArray(messages) || messages.length === 0) {
     return new Response(
       JSON.stringify({ error: "Messages array is required" }),
@@ -119,6 +120,10 @@ export async function POST(request: Request) {
   }));
 
   const client = new Anthropic({ apiKey });
+  const startTime = Date.now();
+  const userAgent = request.headers.get("user-agent") || null;
+  const referrer = request.headers.get("referer") || null;
+  let dbConversationId = conversationId || null;
 
   let stream;
   try {
@@ -144,17 +149,59 @@ export async function POST(request: Request) {
   const encoder = new TextEncoder();
   const readable = new ReadableStream({
     async start(controller) {
+      let fullText = "";
       try {
         for await (const event of stream) {
           if (
             event.type === "content_block_delta" &&
             event.delta.type === "text_delta"
           ) {
+            fullText += event.delta.text;
             const data = JSON.stringify({ type: "delta", text: event.delta.text });
             controller.enqueue(encoder.encode(`data: ${data}\n\n`));
           }
         }
-        controller.enqueue(encoder.encode(`data: ${JSON.stringify({ type: "done" })}\n\n`));
+
+        // Log conversation and messages to DB
+        const latencyMs = Date.now() - startTime;
+        let dbMessageId: string | null = null;
+        try {
+          const sql = getDb();
+          if (!dbConversationId) {
+            const sid = sessionId || crypto.randomUUID();
+            const rows = await sql`
+              INSERT INTO chat_conversations (session_id, user_agent, referrer, message_count)
+              VALUES (${sid}, ${userAgent}, ${referrer}, 1)
+              RETURNING id
+            `;
+            dbConversationId = rows[0].id;
+          } else {
+            await sql`
+              UPDATE chat_conversations
+              SET message_count = message_count + 1, ended_at = NOW()
+              WHERE id = ${dbConversationId}::uuid
+            `;
+          }
+          await sql`
+            INSERT INTO chat_messages (conversation_id, role, content)
+            VALUES (${dbConversationId}::uuid, 'user', ${latestUserMessage.content})
+          `;
+          const assistantRows = await sql`
+            INSERT INTO chat_messages (conversation_id, role, content, latency_ms)
+            VALUES (${dbConversationId}::uuid, 'assistant', ${fullText}, ${latencyMs})
+            RETURNING id
+          `;
+          dbMessageId = assistantRows[0].id;
+        } catch (dbErr) {
+          console.error("Failed to log chat analytics:", dbErr);
+        }
+
+        const donePayload = {
+          type: "done",
+          conversationId: dbConversationId,
+          messageId: dbMessageId,
+        };
+        controller.enqueue(encoder.encode(`data: ${JSON.stringify(donePayload)}\n\n`));
         controller.close();
       } catch (err) {
         // Handle rate limit errors that occur mid-stream
