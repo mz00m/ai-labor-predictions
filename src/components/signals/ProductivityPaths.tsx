@@ -203,6 +203,20 @@ const PATHS: PathConfig[] = [
           </a>{" "}
           &mdash; Quarterly Journal of Economics
         </p>
+        <p className="mt-2">
+          Why gains are uneven:{" "}
+          <a
+            href="https://arxiv.org/abs/2601.07573"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--accent)] hover:underline"
+          >
+            Gans (2026)
+          </a>{" "}
+          &mdash; formalizes &ldquo;jagged intelligence&rdquo; &mdash; AI
+          boosts productivity on some tasks while degrading it on
+          similar-looking ones, making local calibration critical.
+        </p>
       </>
     ),
     example:
