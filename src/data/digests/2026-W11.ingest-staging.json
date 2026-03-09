@@ -1,0 +1,117 @@
+{
+  "week": "2026-W11",
+  "generatedAt": "2026-03-09T08:44:03.063Z",
+  "candidates": [
+    {
+      "highlight": {
+        "title": "Enhancing BLS Methodologies for Projecting AI's Impact on Employment",
+        "summary": "Research proposes comprehensive enhancements to U.S. Bureau of Labor Statistics methodologies for measuring AI's labor market transformation, moving beyond traditional extrapolation techniques to capture unprecedented changes. The work addresses fundamental challenges in forecasting employment impacts as AI adoption accelerates.",
+        "source": "https://doi.org/10.20944/preprints202603.0399.v1",
+        "authors": [
+          "Satyadhar Joshi"
+        ],
+        "publishedAt": "2026-03-05",
+        "doi": "10.20944/preprints202603.0399.v1",
+        "score": 0.382,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "overall-us-displacement"
+      },
+      "sourceId": "doi-enhancing-bls-methodologies-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Recent Methodologies on AI and Labour - a Desk Review",
+        "summary": "Comprehensive review of recent methodologies for analyzing AI's effects on employment, wages, and productivity, highlighting a shift from occupation-level to task-level analysis. The research recognizes heterogeneity within occupations and provides updated frameworks for understanding labor market impacts.",
+        "source": "https://napier-repository.worktribe.com/output/4981081",
+        "authors": [
+          "Elena Papagiannaki",
+          "Joana Geisler"
+        ],
+        "publishedAt": "2026-03-06",
+        "doi": "10.5281/zenodo.18801200",
+        "score": 0.522,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "workforce-ai-exposure"
+      },
+      "sourceId": "napier-repository-recent-methodologies-on-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "How students use generative AI for computational modeling in physics",
+        "summary": "Study of 19 students reveals how generative AI affects computational modeling workflows in physics education. Research examines practical implications as AI becomes increasingly prevalent and capable for programming-related academic tasks.",
+        "source": "https://arxiv.org/abs/2603.06342v1",
+        "authors": [
+          "Karl Henrik Fredly",
+          "Tor Ole Odden",
+          "Benjamin M. Zwickl"
+        ],
+        "publishedAt": "2026-03-06",
+        "score": 0.414,
+        "sourceAdapter": "arxiv",
+        "graphSlug": "education-sector-displacement"
+      },
+      "sourceId": "arxiv-how-students-use-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "The DARE framework: a global model for responsible artificial intelligence deployment",
+        "summary": "Addresses the paradox of AI's promise for productivity gains versus current trajectory toward labor market polarization and inequality. Proposes framework for responsible AI deployment to address threats to the social contract from rapid AI proliferation.",
+        "source": "https://doi.org/10.1515/jigs-2025-0014",
+        "authors": [
+          "Jean Claude Izabayo"
+        ],
+        "publishedAt": "2026-03-02",
+        "doi": "10.1515/jigs-2025-0014",
+        "score": 0.239,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "median-wage-impact"
+      },
+      "sourceId": "doi-the-dare-framework-2026",
+      "evidenceTier": 1,
+      "extractedStats": [
+        {
+          "graphSlug": "median-wage-impact",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "Great decoupling: productivity grows while median worker wages stagnate",
+          "quote": "For decades, as Brynjolfsson and McAfee (2014) have argued, a \"great decoupling\" has been underway, where the economic engine roars ahead while the median worker's wages stagnate."
+        }
+      ]
+    },
+    {
+      "highlight": {
+        "title": "No Last Mile: A Theory of the Human Data Market",
+        "summary": "Challenges the standard framing that treats structured human-data work as transitional, arguing instead that human data remains a persistent production input for evaluation, judgment, and auditing tasks. Proposes new theoretical framework for understanding the human-AI labor division.",
+        "source": "http://arxiv.org/abs/2603.00932",
+        "authors": [
+          "Ali Ansari",
+          "Mark Esposito",
+          "Ava Fitoussy",
+          "Liu Zhang"
+        ],
+        "publishedAt": "2026-03-01",
+        "score": 0.323,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "genai-work-adoption"
+      },
+      "sourceId": "arxiv-no-last-mile-2026",
+      "evidenceTier": 1,
+      "extractedStats": [
+        {
+          "graphSlug": "genai-work-adoption",
+          "type": "data_point",
+          "value": 6,
+          "confidenceLow": 5,
+          "confidenceHigh": 7,
+          "quote": "provide a conservative calibration suggesting a 5-7% steady-state structured labor share in the long run"
+        }
+      ]
+    }
+  ]
+}
