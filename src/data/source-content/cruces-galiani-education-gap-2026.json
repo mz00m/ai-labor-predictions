@@ -1,0 +1,13 @@
+{
+  "id": "cruces-galiani-education-gap-2026",
+  "abstract": "This randomized experiment investigates whether generative AI narrows or widens productivity gaps between workers with different education levels. Using 1,174 adults aged 25-45 completing an incentivized workplace-style problem-solving task, the study finds that AI access substantially reduces the education-based productivity gap from 0.548 standard deviations to 0.139 standard deviations—closing approximately 75 percent of the baseline gap—by relaxing cognitive constraints that disproportionately burden lower-education workers.",
+  "keyFindings": [
+    "Without AI access, higher-education participants outperformed lower-education participants by 0.548 standard deviations; with AI access, this gap fell to 0.139 standard deviations.",
+    "Generative AI increased productivity for all participants, with substantially larger productivity gains for lower-education individuals.",
+    "AI narrows effective productivity differences by relaxing cognitive constraints more binding for lower-education individuals, though underlying skill differences persist as reflected in follow-up exercises without AI.",
+    "The gap closure of approximately 75 percent occurred in a general (not domain-specific) workplace-style business problem-solving task conducted outside firm settings."
+  ],
+  "methodology": "Randomized online experiment conducted outside firms with 1,174 adults aged 25-45 with heterogeneous educational backgrounds. Participants completed an incentivized, general workplace-style business problem-solving task either with or without access to a generative-AI assistant. The design targeted between-education-group productivity gaps as the primary estimand and included follow-up exercises to assess persistence of underlying skill differences. Study was registered with AEA-RCT Registry (0016607) and approved by the Nottingham School of Economics Research Ethics Committee and CEDLAS-UNLP Research Ethics Committee.",
+  "qualifiers": "The study was conducted outside firm settings, which may limit generalizability to workplace environments with organizational selection and within-firm task heterogeneity. The task was a general exercise rather than domain-specific, potentially affecting applicability to specialized occupations. The findings reflect performance on a single type of task and time period, and the study notes that underlying education-based skill differences remain despite effective productivity gap closure.",
+  "fetchedAt": "2026-03-09"
+}

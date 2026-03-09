@@ -1,0 +1,14 @@
+{
+  "id": "unitedhealth-10k-2024",
+  "abstract": "UnitedHealth Group's Optum Insight CEO Sandeep Dadlani discusses AI's transformative potential in healthcare, highlighting how artificial intelligence can streamline administrative processes, enable providers to focus on patient care, and create seamless consumer experiences. The organization has deployed over 1,000 AI applications across insurance, care delivery, and pharmacy, with AI chatbots handling over 65 million customer calls in 2024, while targeting approximately $1 billion in annual operating cost savings from a $1.5 billion AI investment.",
+  "keyFindings": [
+    "UnitedHealth Group deployed over 1,000 AI applications across insurance, care delivery, and pharmacy operations.",
+    "AI chatbots handled over 65 million customer calls in 2024.",
+    "UnitedHealth invested $1.5 billion in AI targeting approximately $1 billion in annual operating cost savings.",
+    "AI-powered transcription technology can automatically code claims and enable real-time claim settlement during clinical appointments.",
+    "Hundreds of billions of dollars in healthcare costs are attributed to administrative functions that AI could address."
+  ],
+  "methodology": "Not specified. Source is a newsroom article featuring commentary from Optum Insight CEO Sandeep Dadlani on a Fierce Healthcare podcast, presenting UnitedHealth Group's AI deployment figures and vision rather than a formal research study.",
+  "qualifiers": "The source presents aspirational future scenarios and potential opportunities rather than empirical outcomes. Specific cost savings figures are stated as targets rather than achieved results. The article does not provide detailed methodology for how the $1 billion savings figure was calculated or the timeline for achieving it.",
+  "fetchedAt": "2026-03-09"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "dallas-fed-davis-ai-wages-2026",
+  "abstract": "This analysis examines AI's dual impact on the labor market, finding that while employment in AI-exposed sectors has declined 1 percent since late 2022, wages have actually grown faster than national averages. The key mechanism appears to be that AI automates codifiable knowledge (routine tasks) but complements tacit knowledge gained through experience, leading to job losses for entry-level workers while benefiting experienced workers in high-experience-premium occupations.",
+  "keyFindings": [
+    "Employment in the computer systems design sector has declined 5 percent since fall 2022, with broader AI-exposed industries (top 10 percent) seeing 1 percent employment decline while total U.S. employment grew 2.5 percent.",
+    "Wages in AI-exposed sectors are outpacing national averages, with computer systems design wages rising 16.7 percent compared to 7.5 percent nationwide since fall 2022.",
+    "AI exposure is associated with 0.28 percentage point wage growth reduction for low-experience-premium jobs but 0.2 percentage point increase for high-experience-premium occupations.",
+    "Employment declines in AI-exposed industries are disproportionately affecting workers under age 25, primarily through reduced job-finding rates for new graduates rather than layoffs of existing workers.",
+    "Occupations most exposed to AI typically have higher experience premiums (correlation between AI exposure and experience premium), with experience premiums ranging from under 10 percent for fast-food cooks to over 100 percent for lawyers and insurance underwriters."
+  ],
+  "methodology": "Analysis of Bureau of Labor Statistics wage estimates for 205 occupations, comparing employment and wage trends since ChatGPT's release in fall 2022 against pre-pandemic baselines. AI exposure measured using an index developed by Felten, Raj and Seamans (2021). Regression analysis of post-2022 wage growth on AI exposure with interaction terms for occupation experience premiums. Supporting data from Stanford University researchers Brynjolfsson, Chandar and Chen on age-specific employment trends, and analysis of Federal Reserve employment statistics.",
+  "qualifiers": "Author acknowledges 'considerable variation' in the relationship between experience premiums and AI exposure. Confidence intervals for median experience premium occupations 'clearly include zero,' indicating AI exposure doesn't significantly affect wage growth for this group. Analysis focuses on short-run trends; author notes that the current entry-level job model 'is not sustainable in the long run.' Findings based on early post-ChatGPT data (2022-2026) and may not reflect longer-term labor market adjustments.",
+  "fetchedAt": "2026-03-09"
+}

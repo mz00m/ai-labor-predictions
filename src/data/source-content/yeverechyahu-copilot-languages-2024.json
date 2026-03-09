@@ -1,0 +1,13 @@
+{
+  "id": "yeverechyahu-copilot-languages-2024",
+  "abstract": "This study examines how Large Language Models affect innovation in open-source software development by analyzing GitHub projects before and after the October 2021 rollout of GitHub Copilot, which selectively supported certain programming languages. The researchers found that Copilot significantly increased overall contributions, but notably boosted iterative innovation (maintenance and feature refinement) more than capability innovation (new code development and feature introduction), with this gap widening after the June 2022 model upgrade and in actively developed projects.",
+  "keyFindings": [
+    "GitHub Copilot's launch produced a significant jump in overall contributions to open-source projects, with a 37-55 percent increase in commits observed.",
+    "Iterative innovation focused on maintenance-related or feature-refining contributions increased significantly more than capability innovation through code-development or feature-introducing commits following Copilot's launch.",
+    "The disparity between iterative and capability innovation was more pronounced after the June 2022 model upgrade and was evident primarily in active projects with extensive coding activity.",
+    "LLM improvements and increased contextual information availability appear to widen the gap between capability and iterative innovation over time."
+  ],
+  "methodology": "Natural experiment leveraging the selective rollout of GitHub Copilot in October 2021 across GitHub open-source projects. The study exploited variation in language support (Copilot supported Python and Rust but not R or Haskell) to identify causal effects on innovation types. Analysis examined contribution patterns before and after October 2021, with additional examination following the June 2022 model upgrade.",
+  "qualifiers": "None stated",
+  "fetchedAt": "2026-03-09"
+}

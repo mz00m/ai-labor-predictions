@@ -1,0 +1,14 @@
+{
+  "id": "techcrunch-ai-salary-gap",
+  "abstract": "According to labor market intelligence firm Lightcast's analysis of over 1.3 billion job postings, AI skills are creating divergent labor market outcomes: tech workers face displacement as AI automation accelerates (with up to 80,000 layoffs), while non-tech workers with AI skills command 28% higher salaries (averaging $18,000 more annually). Over half of all AI-skilled job postings now appear outside the tech sector, with demand surging 800% since 2022 in fields like marketing, HR, finance, and customer service, rewarding those who combine technical AI fluency with human skills like communication and problem-solving.",
+  "keyFindings": [
+    "Job postings for non-tech roles requiring AI skills offer 28% higher salaries—an average of nearly $18,000 more per year.",
+    "Workers with two or more AI skills receive a 43% salary premium on advertised positions.",
+    "More than half of all jobs requesting AI skills in 2024 appeared outside the tech sector, reversing previous years when AI was confined to technology roles.",
+    "Job postings mentioning generative AI skills outside IT and computer science surged 800% since 2022, with over 66,000 job postings specifically mentioning generative AI as a skill in 2024.",
+    "The proportion of AI jobs within IT and computer science fell from 61% in 2019 to 49% in 2024, signaling contraction of traditional tech roles."
+  ],
+  "methodology": "Analysis of over 1.3 billion job postings by labor market intelligence firm Lightcast, published in their 'Beyond the Buzz' report and 2025 Artificial Intelligence Index Report. Data covers job postings through 2024, with comparisons to historical periods (2019-2022). Specific sample sizes and statistical methods not detailed.",
+  "qualifiers": "The research does not indicate the income levels where higher postings are concentrated; Lightcast plans follow-up research to determine whether the 28% premium reflects compression with higher-paid tech jobs being phased out and lower-paying positions improving slightly. The exact distribution across income ladder levels remains uncertain. Data based on job postings rather than actual hiring or wage data.",
+  "fetchedAt": "2026-03-09"
+}

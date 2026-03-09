@@ -1,0 +1,14 @@
+{
+  "id": "walmart-10k-2024",
+  "abstract": "Walmart restructured its wage system in mid-July 2023, adjusting how new hourly workers are compensated across different roles. Under the new structure, most new hires receive the lowest possible hourly wage for their store location (minimum $14/hour, varying by region up to $17), whereas previously some roles like online order fulfillment paid slightly more than cashier positions. The company stated this change allows employees to move between work groups without pay impacts and improves staffing flexibility, while over 50,000 existing workers received raises because their pay fell below the new minimums. This shift reflects a cooling labor market after years of wage increases driven by tight labor conditions.",
+  "keyFindings": [
+    "Walmart changed its wage structure in mid-July 2023 to pay most new store workers the minimum hourly wage ($14/hour) for their location rather than varying entry wages by role.",
+    "Previously, some new hires such as those collecting items for online orders made slightly more than cashiers; the new structure eliminates these role-based entry wage differences.",
+    "Over 50,000 existing workers received raises because their pay was below the new wage minimums established by the restructured pay system.",
+    "Walmart's minimum hourly wage remains $14 and varies by region, starting at $17 in some stores, with no pay cuts applied to existing workers.",
+    "The wage structure change comes as the broader U.S. labor market cooled, with unemployment rising to 3.8% in August 2023 and hiring slowing after years of tight labor market conditions that had driven wage increases."
+  ],
+  "methodology": "Not specified. The article reports on Walmart's announced wage policy change based on documents reviewed by the Wall Street Journal and store workers, combined with contextual labor market data from the U.S. Labor Department's August 2023 jobs report.",
+  "qualifiers": "Walmart has not disclosed specific per-location staffing reduction figures. The article notes this reflects conditions in the broader U.S. job market as of August-September 2023. The wage change applies to new hires going forward; existing workers did not receive pay cuts.",
+  "fetchedAt": "2026-03-09"
+}

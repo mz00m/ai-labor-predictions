@@ -1,0 +1,14 @@
+{
+  "id": "stanford-codex-legal-ai",
+  "abstract": "Despite early hype about AI replacing lawyers following GPT-4's bar exam success and predictions that 44% of legal work could be automated, labor statistics and professional benchmarks suggest AI is far from displacing legal jobs. Law school graduate employment reached a record 93.4% in 2024, and large language models continue to struggle with hallucinations, ambiguous legal reasoning, and novel legal questions that require human judgment and institutional expertise.",
+  "keyFindings": [
+    "Law school graduate employment in 2024 reached 93.4%, the highest rate on record, with graduates working in law firms increasing by 13% from 2023 to 2024.",
+    "The Professional Reasoning Benchmark found that the best-performing LLM scored only 37% on the most difficult legal problems, with models frequently making inaccurate legal judgments.",
+    "As of 2024, 47.8% of attorneys at law firms employing 500 or more lawyers used AI tools, but lawyers report the models struggle with hallucinations, gray areas of law, and novel legal questions.",
+    "Institutional barriers including the billable-hours business model, liability concerns, and regulatory constraints may limit how quickly AI displaces legal work even if model capabilities improve.",
+    "Legal reasoning may be fundamentally challenging for current LLMs because it deals with messy, ambiguous real-world problems without clear right answers and requires a mental model of the world."
+  ],
+  "methodology": "Analysis of employment data from the National Association for Law Placement, American Bar Association surveys on AI adoption at law firms, and review of professional benchmarks including the Professional Reasoning Benchmark (ScaleAI, November 2024) and AI Productivity Index (Mercor, September-December 2024). The article also includes interviews with practicing lawyers, law professors, and industry analysts.",
+  "qualifiers": "The article acknowledges that benchmarks 'may still not capture what lawyers actually do' in real life. Economist Mert Demirer notes that 'capabilities may evolve over time, but that's a big unknown.' The piece is framed as a 'Hype Correction' addressing earlier predictions rather than definitive forecasting. One junior associate expresses uncertainty about whether AI adoption could eventually displace his cohort, noting 'I may be the last plane out.'",
+  "fetchedAt": "2026-03-09"
+}

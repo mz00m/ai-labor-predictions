@@ -1,0 +1,14 @@
+{
+  "id": "arxiv-ai-skills-improve-2026",
+  "abstract": "This study examines the causal effect of AI skills on hiring decisions through an experimental survey with 1,725 recruiters from the United Kingdom, the United States, and Germany. Using a paired conjoint design with synthetically designed resumes across graphic design, office assistance, and software engineering roles, the researchers find that AI skills significantly increase interview invitation probabilities by 8 to 15 percentage points. The study demonstrates that AI skills can partially or fully offset traditional labor market disadvantages related to age and lower education, with effects varying by occupation and moderated by recruiters' own AI background and usage.",
+  "keyFindings": [
+    "AI skills increase interview invitation probabilities by approximately 8 to 15 percentage points across three occupations compared with candidates without such skills.",
+    "AI credentials from universities or companies produce only moderate increases in invitation probabilities compared with self-declared AI skills.",
+    "AI skills partially or fully offset disadvantages related to older age and lower formal education, with strongest effects for office assistants.",
+    "Effects are weaker for graphic designers, reflecting more skeptical recruiter attitudes toward AI in creative work.",
+    "Recruiters' own background and AI usage significantly moderate the effects of candidate AI skills on hiring decisions."
+  ],
+  "methodology": "Experimental survey with 1,725 recruiters from the United Kingdom, the United States, and Germany. Paired conjoint design where recruiters evaluated hypothetical candidates represented by synthetically designed resumes across three occupations: graphic design, office assistance, and software engineering.",
+  "qualifiers": "None stated",
+  "fetchedAt": "2026-03-09"
+}

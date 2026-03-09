@@ -1,0 +1,14 @@
+{
+  "id": "aha-ai-revenue-cycle-2025",
+  "abstract": "Artificial intelligence is increasingly being adopted in hospital revenue-cycle management (RCM) operations, with 46% of hospitals and health systems now using AI for RCM functions. AI applications including natural language processing for automated coding, predictive analytics for denial management, and robotic process automation are demonstrating significant improvements in operational efficiency, accuracy, and financial outcomes. Implementation of these technologies can reduce denials, increase coder productivity, and free staff to focus on complex tasks, though widespread adoption of more complex applications remains limited.",
+  "keyFindings": [
+    "46% of hospitals and health systems now use AI in their RCM operations, with 74% implementing some form of revenue-cycle automation overall.",
+    "Auburn Community Hospital achieved a 50% reduction in discharged-not-final-billed cases, a 40% increase in coder productivity, and a 4.6% rise in case mix index using RPA, NLP and machine learning.",
+    "A Fresno-based community health care network experienced a 22% decrease in prior-authorization denials and an 18% decrease in denials for services not covered after deploying an AI claims review tool, saving 30-35 hours per week.",
+    "Call centers have increased productivity by 15% to 30% using generative AI, a trend being adapted in health care RCM operations.",
+    "Current AI applications are limited to specific functions such as appeal letter generation and prior authorization handling, with more complex applications like front-end process improvement not yet ready for widespread use."
+  ],
+  "methodology": "This is a market analysis synthesizing findings from multiple sources including: an AKASA/Healthcare Financial Management Association (HFMA) Pulse Survey on AI adoption rates; a 2023 McKinsey & Company report on AI in health care RCM; a 2024 HIMSS report documenting AI use cases; and an October 2023 HFMA report featuring case studies of three health systems implementing AI technologies. The analysis combines adoption statistics, expert perspectives, and documented implementation examples from health systems across multiple states.",
+  "qualifiers": "The article notes that AI applications in RCM are 'limited to specific functions' and that generative AI for more significant applications like improving front-end processes 'are not yet ready for widespread use.' Experts forecast 'significant adoption within two to five years' as technology matures. The article cautions that new technologies 'come with risks' and recommends establishing 'guardrails in data structuring to minimize bias or inequitable impacts' and having 'humans validate computer-generated outputs to prevent closed-loop automation.' Case study examples are limited to three health systems and may not be representative of broader experiences.",
+  "fetchedAt": "2026-03-08"
+}

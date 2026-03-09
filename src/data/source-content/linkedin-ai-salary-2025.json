@@ -1,0 +1,14 @@
+{
+  "id": "linkedin-ai-salary-2025",
+  "abstract": "LinkedIn's Economic Graph research hub provides real-time labor market insights on AI's impact on work, tracking AI talent growth of 130% since 2016 and showing that 7 of every 1,000 LinkedIn members globally are AI engineering talent. The collection of reports and resources examines how AI is reshaping industries, creating new job opportunities, and driving demand for specialized skills, with emphasis on the need for continuous workforce skilling and gender-inclusive AI adoption across global economies.",
+  "keyFindings": [
+    "AI engineering talent on LinkedIn has grown 130% since 2016, with 7 out of every 1,000 LinkedIn members globally classified as AI engineering talent.",
+    "Small and medium-sized enterprises (SMEs) in Australia are adding employees and digital/AI skills at faster rates than larger firms, demonstrating adaptability and growth potential.",
+    "Women are more likely to work in GAI-disrupted occupations than men across nearly all countries studied, while men are more likely employed in augmented or insulated roles.",
+    "Early evidence shows GitHub Copilot increasing hiring for software engineers, promoting upskilling with higher non-programming skills without decreases in programming skills.",
+    "Workers show a gradual shift away from GAI-disrupted occupations toward augmented or insulated roles over the past six years, particularly pronounced among higher-educated workers."
+  ],
+  "methodology": "LinkedIn Economic Graph real-time dataset updated more than 5 million times per minute from one billion members' labor market activities including job transitions, skill development, and hiring patterns. Multiple studies employ LinkedIn member profile data, employment records, and skill classifications. AI talent metrics developed include Top AI Skills, Fastest Growing AI Skills, AI Talent Concentration, Relative AI Talent Hiring Rate, Relative AI Penetration, Female Representation with AI Talent, AI Talent Migration, and Career Transitions into AI jobs. Analysis spans multiple countries and industries with time periods ranging from six years to historical comparisons since 2016.",
+  "qualifiers": "Research scope varies by report; some findings are country-specific (Australia, UK, EU, Southeast Asia) rather than global. Gender parity analysis acknowledges that disparities in GAI impact 'fluctuate considerably among countries.' Early evidence on GitHub Copilot impact described as 'early evidence' suggesting preliminary status. Some reports note the need for 'urgent investment' suggesting current gaps. No explicit statement of limitations on platform coverage bias or temporal scope for all metrics provided.",
+  "fetchedAt": "2026-03-08"
+}

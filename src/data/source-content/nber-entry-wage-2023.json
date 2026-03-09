@@ -1,0 +1,13 @@
+{
+  "id": "nber-entry-wage-2023",
+  "abstract": "This working paper develops a task-based framework for analyzing automation and artificial intelligence's effects on labor demand, wages, and employment. The authors emphasize that while automation displaces workers from existing tasks, productivity gains, capital accumulation, and the creation of new labor-intensive tasks create countervailing forces. However, these effects are incomplete—automation can increase output per worker while reducing wage growth and labor's income share—and labor market frictions and skill mismatches may slow adjustment and reduce productivity gains.",
+  "keyFindings": [
+    "Automation creates a displacement effect that reduces labor demand and wages, but this is partially counteracted by productivity effects from cost savings that increase demand for non-automated tasks.",
+    "Even when countervailing forces are strong, automation increases output per worker more than wages and reduces labor's share of national income.",
+    "The creation of new labor-intensive tasks is the most powerful countervailing force against automation's negative effects on labor share.",
+    "Labor market frictions, skill mismatches between new technologies and existing workforce, and the possibility of excessive automation rates relative to other productivity-enhancing technologies constrain economy adjustment."
+  ],
+  "methodology": "Theoretical framework paper. The authors develop a task-based model analyzing automation's implications on labor markets through competing displacement and productivity effects, supplemented by analysis of capital accumulation and task creation. Not an empirical study with primary data collection.",
+  "qualifiers": "The paper is theoretical in nature and does not present empirical findings from original data. The authors note that countervailing effects are 'incomplete' and that certain conditions may or may not obtain. The framework identifies constraints and imperfections that 'slow down' and 'weaken' adjustment, without specifying the magnitude of these effects. Prepared for an edited volume rather than as a standalone empirical study.",
+  "fetchedAt": "2026-03-09"
+}

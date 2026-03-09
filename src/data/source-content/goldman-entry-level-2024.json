@@ -1,0 +1,14 @@
+{
+  "id": "goldman-entry-level-2024",
+  "abstract": "According to Goldman Sachs economist Joseph Briggs, Gen Z tech workers face disproportionate displacement risk from AI adoption compared to other young workers and the broader tech sector. While overall AI adoption remains modest at 9% of companies using it regularly for production, unemployment among 20-30-year-olds in tech has risen about 3% since early 2024, entry-level job postings have declined 35% since January 2023, and Goldman Sachs predicts AI will displace 6-7% of the total workforce. The tech industry's broader hiring freeze and structural economic uncertainties compound these challenges for new college graduates.",
+  "keyFindings": [
+    "Unemployment rate for 20-30-year-olds in tech increased by approximately 3% since early 2024, a much larger increase than the tech sector overall or other young workers.",
+    "Entry-level job postings in the U.S. have diminished by about 35% since January 2023, with automation disrupting entry-level positions particularly.",
+    "Goldman Sachs predicts AI will displace about 6-7% of the total workforce overall.",
+    "Only 9% of companies have regularly used AI for production of goods or services in the past two weeks, indicating modest current AI adoption.",
+    "Nearly half of Gen Z job hunters in the U.S. believe AI has reduced the value of their college degrees, according to an April World Economic Forum report."
+  ],
+  "methodology": "Analysis of labor market data by Goldman Sachs research division, led by senior global economist Joseph Briggs. The source cites Goldman Sachs' report 'Quantifying the Risks of AI-Related Job Displacement' and references data on unemployment rates, job postings, and company AI adoption. Additional data sourced from Federal Reserve Bank of New York findings on recent college graduate unemployment rates and World Economic Forum April survey on Gen Z perceptions of AI's impact on college degree value.",
+  "qualifiers": "Briggs notes that 'the overall impacts on young workers in the labor market, speaking from an aggregate perspective, is small,' with significant headwinds emerging only in 'specific industries where we are seeing AI be used to drive efficiency gains.' The source includes counterargument from UC Berkeley economist Brad DeLong suggesting AI is being used as a scapegoat for broader economic uncertainty and hiring freezes unrelated to AI. The article does not specify the sample size or exact time period for Goldman Sachs' AI adoption survey.",
+  "fetchedAt": "2026-03-08"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "challenger-ai-layoffs-feb-2026",
+  "abstract": "In February 2026, U.S. employers announced 48,307 job cuts, down 55% from January but down 72% year-over-year. Through February, announced job cuts totaled 156,742, the lowest January-February total since 2022. AI was cited as a reason for 12,304 job cuts (8% of total) year-to-date in 2026, up from 54,836 cuts (5%) in 2025. Hiring plans are down 56% year-to-date compared to 2025, with only 18,061 new hires announced through February 2026.",
+  "keyFindings": [
+    "February 2026 job cuts plunged 55% to 48,307 from 108,435 in January, and fell 72% compared to February 2025's 172,017 cuts.",
+    "Through February 2026, employers announced 156,742 total job cuts, the lowest January-February total since 2022.",
+    "AI was cited for 12,304 job cut announcements in 2026 year-to-date (8% of cuts), compared to 54,836 cuts (5%) in 2025, and 91,753 total cuts since 2023 when tracking began.",
+    "Technology sector led with 33,330 cuts year-to-date in 2026, a 51% increase from 22,042 cuts in the same period last year.",
+    "Hiring plans are down 56% year-to-date to 18,061 from 40,669 in the same period last year, though they rose 140% in February alone."
+  ],
+  "methodology": "Monthly tracking of announced job cuts and hiring plans by U.S.-based employers reported to Challenger, Gray & Christmas. Data tracked by industry sector and reason for cuts. AI as a reason for job cuts has been tracked since 2023. The report compares February 2026 data to January 2026, February 2025, and year-to-date comparisons.",
+  "qualifiers": "The report focuses on announced job cuts and hiring plans, not actual separations. Data is based on employer announcements to Challenger, Gray & Christmas. The authors note that 'February's dip is a nice reprieve' and acknowledge uncertainty regarding future layoffs due to geopolitical factors ('U.S. involvement in a growing war in Iran'). Hiring plans data shows significant volatility month-to-month, suggesting variability in announcement patterns.",
+  "fetchedAt": "2026-03-09"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "sp500-layoff-tracker-2025",
+  "abstract": "According to Challenger, Gray & Christmas, artificial intelligence was cited as the reason for approximately 54,694 layoffs in the U.S. in 2025, representing a significant portion of the 1.17 million total job cuts that year—the highest level since 2020. Major technology companies including Amazon, Microsoft, Salesforce, IBM, CrowdStrike, and Workday all announced substantial workforce reductions explicitly tied to AI capabilities, though some analysts question whether AI is genuinely driving these cuts or serving as a justification for layoffs resulting from pandemic-era over-hiring.",
+  "keyFindings": [
+    "AI was cited as the reason for 54,694 planned layoffs in the U.S. in 2025, according to Challenger, Gray & Christmas.",
+    "Total job cuts in 2025 reached 1.17 million, the highest level since 2020 when 2.2 million layoffs were announced.",
+    "In November 2025, AI was cited for over 6,000 of the 71,000 total job cuts announced that month.",
+    "MIT research from November 2025 found that AI can already perform the work of 11.7% of the U.S. labor market and could save up to $1.2 trillion in wages across finance, healthcare, and professional services.",
+    "Major companies cut thousands of roles attributed to AI: Amazon eliminated 14,000 corporate positions, Microsoft cut 15,000 total jobs, Salesforce reduced customer support by 4,000 workers, and Salesforce reported AI was already doing up to 50% of company work."
+  ],
+  "methodology": "Analysis of layoff announcements tracked by Challenger, Gray & Christmas consulting firm throughout 2025, supplemented by company press releases and executive statements from major technology firms including Amazon, Microsoft, Salesforce, IBM, CrowdStrike, and Workday. Includes reference to MIT study released in November 2025 on AI labor market impact. Data sources include company blog posts, executive memos, media interviews, and securities filings.",
+  "qualifiers": "Some skepticism is presented regarding whether AI is genuinely the primary driver of layoffs, with Oxford Internet Institute researcher Fabian Stephany suggesting AI may be used as a 'scapegoat' for pandemic-era over-hiring and market corrections. IBM CEO Arvind Krishna noted that while the company cut HR roles through AI chatbots, it simultaneously increased hiring in critical thinking roles such as software engineering and sales. The article does not provide comprehensive data on all companies' AI-related layoffs, focusing primarily on major technology firms.",
+  "fetchedAt": "2026-03-09"
+}

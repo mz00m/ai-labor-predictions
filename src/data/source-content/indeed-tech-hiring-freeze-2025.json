@@ -1,0 +1,14 @@
+{
+  "id": "indeed-tech-hiring-freeze-2025",
+  "abstract": "US tech job postings have declined 36% from pre-pandemic levels as of July 2025, entering their third year of a hiring freeze. While nearly half of the decline occurred before ChatGPT-3's public release, AI may be preventing a rebound by reducing demand for tech workers through automation of existing tasks. The divergence between depressed job postings and still-elevated tech employment levels suggests different conditions for job seekers versus incumbent workers, with AI-related roles being notable exceptions to the broad posting declines.",
+  "keyFindings": [
+    "Tech job postings on Indeed are down 36% from February 2020 levels as of July 2025, with software engineer postings down 49%.",
+    "Of 149 tech job titles analyzed, only 19% exceeded pre-pandemic posting levels, while nearly half declined by over 40%.",
+    "Machine learning engineer postings remain up 59% from early 2020 and are among the few tech roles still above pre-pandemic levels, with median posted salaries of $260,000.",
+    "Tech and non-tech job posting trends have been correlated at the local level, with tech postings declining more sharply in metros like Seattle, San Francisco, and Minneapolis where non-tech postings also fell significantly.",
+    "Employment in computer and mathematics occupations remained up 19% from 2019 levels despite the hiring freeze, but ticked down 2% in 2024, creating diverging conditions for job seekers versus employed tech workers."
+  ],
+  "methodology": "Analysis of Indeed job posting data (7-day moving averages, seasonally adjusted for time series) from February 2020 through July 2025, covering 149 tech job titles classified under software development, information design and technology, IT operations and help desk, and mathematics occupational categories. Bureau of Labor Statistics Current Population Survey data used for employment trends (computer and mathematical occupations, code 15-0000) from 2018-2024. Cross-sectional metropolitan-level analysis of tech versus non-tech posting changes. Comparison with low-AI-exposure occupations (physicians, nursing, food service, manufacturing) as control group.",
+  "qualifiers": "Job postings on Indeed may not be indicative of overall hiring market; some tech-related positions classified under management occupational categories may be missed. The analysis notes difficulty in definitively pinpointing AI's role due to timing—nearly half the decline preceded ChatGPT-3's release. Authors acknowledge diverging trends between job postings and actual employment 'can likely only persist for so long,' suggesting current conditions may be temporary. Local correlation between tech and non-tech posting trends could reflect multiple factors beyond macroeconomic conditions. High-profile tech layoffs noted but not quantified in this analysis.",
+  "fetchedAt": "2026-03-08"
+}

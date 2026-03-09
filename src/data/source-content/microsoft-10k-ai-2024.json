@@ -1,0 +1,14 @@
+{
+  "id": "microsoft-10k-ai-2024",
+  "abstract": "Microsoft's 2024 Annual Report details the company's performance during fiscal year 2024, highlighting record financial results with over $245 billion in revenue (up 16% YoY) and $109 billion in operating income (up 24% YoY). The report emphasizes Microsoft's leadership in the AI platform shift, with over 60,000 Azure AI customers (up 60% YoY) and Azure AI revenue reaching a $13 billion annual run rate (up 175% YoY). Microsoft outlines its strategy to democratize AI access, strengthen security through its Secure Future Initiative, and scale cloud infrastructure while maintaining focus on trustworthy, responsible AI development across its entire product portfolio.",
+  "keyFindings": [
+    "Over 60,000 Azure AI customers by end of FY2024, growing nearly 60% year-over-year, with Azure AI revenue reaching a $13 billion annual run rate, growing 175% year-over-year.",
+    "Microsoft 365 Copilot adoption exceeded forecasts with 29% faster task completion in general tasks and employees at nearly 60% of Fortune 500 companies using Copilot, showing productivity improvements up to 70% for specific work tasks.",
+    "GitHub Copilot reached over 1.8 million paid subscribers and 77,000 enterprise customers (up 180% YoY) with users realizing productivity gains of up to 55% while coding.",
+    "Microsoft delivered record financial performance with over $245 billion in annual revenue (up 16% YoY) and over $109 billion in operating income (up 24% YoY).",
+    "Microsoft trained and certified 12.6 million people in digital skills across 202 countries as of June 2024, exceeding the original goal of 10 million by 2025, with over 80% of learners from underserved communities."
+  ],
+  "methodology": "Annual report providing consolidated financial statements and operational metrics for fiscal year ending June 30, 2024. Data sources include Microsoft's internal business metrics, financial accounting records, and customer engagement tracking systems. Scope covers all three operating segments (Productivity and Business Processes, Intelligent Cloud, More Personal Computing) across global operations.",
+  "qualifiers": "Forward-looking statements in the report are identified and cautioned as subject to risks and uncertainties that may cause actual results to differ materially. Report notes that certain achievements and partnerships are early-stage or ongoing. Some metrics represent run rates or annualized figures rather than actual completed periods. Customer and user counts are as of specific reporting dates and may not represent all current engagement. Environmental sustainability commitments for 2030 are noted as 'on track' for some areas but 'not yet on track' for others, with acknowledgment that security work 'is never complete' and requires continuous improvement.",
+  "fetchedAt": "2026-03-09"
+}

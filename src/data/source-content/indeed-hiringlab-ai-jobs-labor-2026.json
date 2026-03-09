@@ -1,0 +1,14 @@
+{
+  "id": "indeed-hiringlab-ai-jobs-labor-2026",
+  "abstract": "The Indeed Hiring Lab reports that while overall US job hiring remains weak with postings only 6% above pre-pandemic baseline levels, jobs mentioning artificial intelligence or AI-related terms have surged 134% above February 2020 levels, reaching 4.2% of all postings by December 2025. This divergence reflects employers concentrating their limited hiring on AI-related skills across multiple knowledge work sectors, though only about 43% of US workers regularly use AI at work and roughly 40% remain actively disengaged with AI tools.",
+  "keyFindings": [
+    "AI-related job postings reached 4.2% of all US job postings in December 2025, up 134% from February 2020 baseline, while total job postings grew only 6% over the same period.",
+    "Nearly 45% of data & analytics job postings now contain AI-related terms, compared with 14.9% in marketing and 8.8% in human resources as of December 2025.",
+    "Tech postings mentioning AI were 45% higher than February 2020 levels by end of 2025, while total tech postings declined 34% below pre-pandemic levels.",
+    "Job postings with AI mentions have diverged from overall hiring trends since late 2023, growing even as total job postings continued steady decline.",
+    "Only 43% of US workers reported regularly using AI at work in 2025, with approximately 40% actively disengaged with AI despite its increasing prominence in job requirements."
+  ],
+  "methodology": "Analysis of Indeed.com job posting data using the Indeed Job Postings Index (baseline February 1, 2020) and the Indeed AI Tracker, which measures the share of postings mentioning artificial intelligence or AI-related keywords using a seven-day trailing average through December 31, 2025. AI mentions tracked include keywords such as 'Machine Learning', 'Data Science', 'Artificial Intelligence', 'Generative AI', 'Large Language Models', and 'Chat GPT'. Data supplemented by a recent Hiring Lab worker survey regarding AI usage and engagement. Occupational sector analysis includes tech, data & analytics, software development, IT systems & solutions, scientific research & development, human resources, banking & finance, management, marketing, project management, and accounting.",
+  "qualifiers": "The Indeed Hiring Lab notes that job posting numbers on Indeed.com should not be viewed as indicative of Indeed's revenue or performance. The analysis focuses on postings that explicitly mention AI or AI-related terms; the majority of postings even in high-adoption sectors like data & analytics (45%) still do not mention AI. Trends are based on Indeed data specifically and may not fully represent the broader US labor market. The report acknowledges that sectors most prone to AI adoption account for relatively small shares of overall job postings.",
+  "fetchedAt": "2026-03-09"
+}

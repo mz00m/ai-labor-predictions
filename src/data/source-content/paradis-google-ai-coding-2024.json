@@ -1,0 +1,13 @@
+{
+  "id": "paradis-google-ai-coding-2024",
+  "abstract": "This randomized controlled trial examined how AI assistance impacts developer productivity among 96 full-time Google software engineers working on a complex, enterprise-grade task. The study found that AI significantly shortened development time, with a best estimate of approximately 21% reduction in time spent per task, though with a large confidence interval. Notably, developers who spent more hours on code-related activities per day experienced greater productivity gains with AI, suggesting that experience and AI verification requirements interact to shape productivity impacts.",
+  "keyFindings": [
+    "AI assistance reduced developer time on task by approximately 21%, with large confidence intervals around this estimate.",
+    "Developers who spend more hours on code-related activities per day experienced faster task completion with AI assistance.",
+    "The study tested three AI features on a single complex, enterprise-grade task among 96 full-time Google software engineers.",
+    "The authors caution that effect sizes from lab studies may not generalize across different tools, ecosystems, and time periods."
+  ],
+  "methodology": "Randomized controlled trial with 96 full-time Google software engineers. Participants worked on a complex, enterprise-grade task while using three AI features. Analysis controlled for factors known to influence developer time on task. Study conducted during summer 2024 using internal Google tooling.",
+  "qualifiers": "Large confidence interval around the 21% effect estimate. Results limited to internal Google tools tested in summer 2024. Authors explicitly state findings cannot be assumed to apply more broadly across different tools, ecosystems, or time periods. Single task studied; effect sizes may not generalize to multiple suites of AI-enhanced tools or ecosystem-level impacts.",
+  "fetchedAt": "2026-03-09"
+}

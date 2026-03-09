@@ -1,0 +1,11 @@
+{
+  "id": "shrm-automation-education-2025",
+  "abstract": "SHRM surveyed 20,262 U.S. workers in March-April 2025 to assess automation and generative AI's impact on job displacement risk across occupational groups. The research examines the percentage of tasks that can be automated by occupation, finding significant variation in automation exposure, with education and library occupations showing the lowest automation risk at 7.3% of occupations facing 50% or more task automation.",
+  "keyFindings": [
+    "Only 7.3% of education and library occupations face automation of at least 50% of their tasks, representing the lowest automation exposure of any occupational group.",
+    "Significant variation in automation risk exists across different occupational categories in the U.S. labor market."
+  ],
+  "methodology": "Survey of 20,262 U.S. workers fielded March-April 2025. The study assessed automation risk by measuring the percentage of tasks that can be automated across different occupational groups.",
+  "qualifiers": "The source document provided is primarily a landing page with limited substantive content. The abstract and full methodology details are not available in the excerpt provided. Additional limitations of the full study are not specified in the accessible portions of this source.",
+  "fetchedAt": "2026-03-09"
+}

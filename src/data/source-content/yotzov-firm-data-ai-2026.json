@@ -1,0 +1,14 @@
+{
+  "id": "yotzov-firm-data-ai-2026",
+  "abstract": "This NBER working paper presents the first representative international data on firm-level AI adoption and usage across the US, UK, Germany, and Australia, surveying nearly 6,000 executives. The study finds that around 70% of firms actively use AI, though executives use it only 1.5 hours per week on average, and firms report minimal impact over the past three years. However, firms predict significant impacts over the next three years, forecasting productivity gains of 1.4%, output increases of 0.8%, and employment reductions of 0.7%, while employees surveyed separately predict a 0.5% employment increase, revealing a substantial gap in expectations about AI's labor market effects.",
+  "keyFindings": [
+    "Approximately 70% of firms actively use AI, with younger and more productive firms showing higher adoption rates.",
+    "Over two-thirds of top executives regularly use AI, but their average usage is only 1.5 hours per week, with 25% reporting no AI use.",
+    "Over 80% of firms report no impact from AI on employment or productivity over the past 3 years.",
+    "Firms forecast AI will boost productivity by 1.4%, increase output by 0.8%, and reduce employment by 0.7% over the next 3 years.",
+    "A significant expectation gap exists between executives predicting 0.7% employment reduction and employees predicting 0.5% employment growth from AI."
+  ],
+  "methodology": "Survey of almost 6,000 CFOs, CEOs, and executives from stratified firm samples across the US, UK, Germany, and Australia; separate survey of individual employees conducted to capture employment expectations.",
+  "qualifiers": "None stated",
+  "fetchedAt": "2026-03-09"
+}

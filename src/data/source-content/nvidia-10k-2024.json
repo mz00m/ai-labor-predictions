@@ -1,0 +1,12 @@
+{
+  "id": "nvidia-10k-2024",
+  "abstract": "NVIDIA's 2025 proxy statement reports that the company reached a total headcount of 36,000 employees as of January 2025, representing a 21.6% year-over-year increase. Median employee total compensation was $301,233 in FY2025, with a CEO-to-median employee pay ratio of 166:1. This disclosure reflects NVIDIA's rapid expansion during its period of significant growth in AI computing demand.",
+  "keyFindings": [
+    "NVIDIA total headcount reached 36,000 as of January 2025, a 21.6% increase year-over-year.",
+    "Median employee total compensation was $301,233 in FY2025 (fiscal year ending January 2025).",
+    "CEO-to-median employee pay ratio was 166:1 in FY2025."
+  ],
+  "methodology": "SEC proxy statement filing containing compensation and headcount data from NVIDIA's fiscal year 2025 (ending January 2025). The document reports median employee compensation and CEO pay ratio as required disclosures under SEC regulations.",
+  "qualifiers": "None stated",
+  "fetchedAt": "2026-03-09"
+}
