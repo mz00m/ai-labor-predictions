@@ -1,0 +1,113 @@
+{
+  "week": "2026-W11",
+  "generatedAt": "2026-03-09T08:43:22.171Z",
+  "lookbackDays": 14,
+  "highlights": [
+    {
+      "title": "Enhancing BLS Methodologies for Projecting AI's Impact on Employment",
+      "summary": "Research proposes comprehensive enhancements to U.S. Bureau of Labor Statistics methodologies for measuring AI's labor market transformation, moving beyond traditional extrapolation techniques to capture unprecedented changes. The work addresses fundamental challenges in forecasting employment impacts as AI adoption accelerates.",
+      "source": "https://doi.org/10.20944/preprints202603.0399.v1",
+      "authors": [
+        "Satyadhar Joshi"
+      ],
+      "publishedAt": "2026-03-05",
+      "doi": "10.20944/preprints202603.0399.v1",
+      "score": 0.382,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "overall-us-displacement"
+    },
+    {
+      "title": "Recent Methodologies on AI and Labour - a Desk Review",
+      "summary": "Comprehensive review of recent methodologies for analyzing AI's effects on employment, wages, and productivity, highlighting a shift from occupation-level to task-level analysis. The research recognizes heterogeneity within occupations and provides updated frameworks for understanding labor market impacts.",
+      "source": "https://napier-repository.worktribe.com/output/4981081",
+      "authors": [
+        "Elena Papagiannaki",
+        "Joana Geisler"
+      ],
+      "publishedAt": "2026-03-06",
+      "doi": "10.5281/zenodo.18801200",
+      "score": 0.522,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "workforce-ai-exposure"
+    },
+    {
+      "title": "How students use generative AI for computational modeling in physics",
+      "summary": "Study of 19 students reveals how generative AI affects computational modeling workflows in physics education. Research examines practical implications as AI becomes increasingly prevalent and capable for programming-related academic tasks.",
+      "source": "https://arxiv.org/abs/2603.06342v1",
+      "authors": [
+        "Karl Henrik Fredly",
+        "Tor Ole Odden",
+        "Benjamin M. Zwickl"
+      ],
+      "publishedAt": "2026-03-06",
+      "score": 0.414,
+      "sourceAdapter": "arxiv",
+      "graphSlug": "education-sector-displacement"
+    },
+    {
+      "title": "The DARE framework: a global model for responsible artificial intelligence deployment",
+      "summary": "Addresses the paradox of AI's promise for productivity gains versus current trajectory toward labor market polarization and inequality. Proposes framework for responsible AI deployment to address threats to the social contract from rapid AI proliferation.",
+      "source": "https://doi.org/10.1515/jigs-2025-0014",
+      "authors": [
+        "Jean Claude Izabayo"
+      ],
+      "publishedAt": "2026-03-02",
+      "doi": "10.1515/jigs-2025-0014",
+      "score": 0.239,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "median-wage-impact"
+    },
+    {
+      "title": "No Last Mile: A Theory of the Human Data Market",
+      "summary": "Challenges the standard framing that treats structured human-data work as transitional, arguing instead that human data remains a persistent production input for evaluation, judgment, and auditing tasks. Proposes new theoretical framework for understanding the human-AI labor division.",
+      "source": "http://arxiv.org/abs/2603.00932",
+      "authors": [
+        "Ali Ansari",
+        "Mark Esposito",
+        "Ava Fitoussy",
+        "Liu Zhang"
+      ],
+      "publishedAt": "2026-03-01",
+      "score": 0.323,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "genai-work-adoption"
+    }
+  ],
+  "themes": [
+    "• Methodological innovations in measuring AI's labor market impacts moving beyond traditional forecasting",
+    "• Shift from occupation-level to task-level analysis in understanding workforce transformation",
+    "• Recognition of human data work as persistent rather than transitional in AI systems",
+    "• Growing focus on responsible AI deployment frameworks addressing inequality concerns",
+    "• Educational sector adaptation to generative AI capabilities in technical fields"
+  ],
+  "watching": [
+    {
+      "title": "SUREON: A Benchmark and Vision-Language-Model for Surgical Reasoning",
+      "source": "https://arxiv.org/abs/2603.06570v1",
+      "reason": "AI systems interpreting surgical scenes could significantly impact healthcare professional roles and training requirements"
+    },
+    {
+      "title": "Structured Exploration vs. Generative Flexibility in Health Behavior Interventions",
+      "source": "https://arxiv.org/abs/2603.06330v1",
+      "reason": "Field study comparing AI architectures for healthcare delivery could influence employment patterns in digital health sectors"
+    }
+  ],
+  "sources": {
+    "succeeded": [
+      "semanticScholar",
+      "arxiv",
+      "ssrn",
+      "pubmed",
+      "openAlex",
+      "bls",
+      "fred",
+      "googleCse",
+      "hnAlgolia"
+    ],
+    "failed": [
+      "nber"
+    ],
+    "totalCandidates": 55,
+    "afterDedup": 55
+  }
+}
