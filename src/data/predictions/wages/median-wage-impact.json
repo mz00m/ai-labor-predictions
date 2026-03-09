@@ -355,11 +355,12 @@
     },
     {
       "id": "epi-wages-2025",
-      "title": "State of Working America: AI and Wage Trends",
+      "title": "Unbalanced labor market power is what makes technology — including AI — threatening to workers",
       "url": "https://www.epi.org/publication/ai-unbalanced-labor-markets/",
-      "publisher": "Economic Policy Institute",
+      "publisher": "Economic Policy Institute (Bivens, Zipperer)",
       "evidenceTier": 2,
-      "datePublished": "2025-08-01"
+      "datePublished": "2024-03-28",
+      "excerpt": "AI is unlikely to be a direct threat to wages; the root causes of sluggish wage growth are policy decisions that led to imbalanced employer power. Productivity growth has not historically caused higher unemployment or inequality."
     },
     {
       "id": "walmart-10k-2024",
