@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect, useCallback, FormEvent } from "react";
+import { useState, useRef, useEffect, useCallback, useMemo, FormEvent } from "react";
 
 interface Message {
   id: string;
@@ -111,6 +111,7 @@ export default function Chatbot() {
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const abortRef = useRef<AbortController | null>(null);
   const panelRef = useRef<HTMLDivElement>(null);
+  const sessionId = useMemo(() => `chat-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`, []);
 
   // Auto-scroll to bottom on new messages
   useEffect(() => {
@@ -186,7 +187,7 @@ export default function Chatbot() {
       try {
         const res = await fetch("/api/chat", {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
+          headers: { "Content-Type": "application/json", "x-session-id": sessionId },
           body: JSON.stringify({
             messages: updatedMessages.map((m) => ({
               role: m.role,

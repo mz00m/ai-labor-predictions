@@ -1,5 +1,7 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { buildChatContext } from "@/lib/chat/context-builder";
+import { classifyQuery } from "@/lib/chat/classify-query";
+import { logChatQuery } from "@/lib/chat/log-query";
 
 export const dynamic = "force-dynamic";
 
@@ -111,6 +113,15 @@ export async function POST(request: Request) {
   }
 
   const { systemPrompt } = buildChatContext(latestUserMessage.content);
+
+  // Classify and log query (fire-and-forget, never blocks response)
+  const classification = classifyQuery(latestUserMessage.content);
+  const sessionId = request.headers.get("x-session-id") || undefined;
+  logChatQuery({
+    query: latestUserMessage.content,
+    ...classification,
+    sessionId,
+  }).catch(() => {}); // silently ignore logging failures
 
   // Keep conversation history manageable (last 20 messages)
   const trimmedMessages = messages.slice(-20).map((m) => ({
