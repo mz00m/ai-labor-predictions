@@ -1,0 +1,14 @@
+{
+  "id": "bls-programmer-projections-2034",
+  "abstract": "The Bureau of Labor Statistics projects a 6% decline in computer programmer employment from 2024 to 2034, with employment falling from 121,200 to 113,900 positions. Despite overall job decline, approximately 5,500 openings per year are expected due to worker replacement needs. The decline is attributed to automation of repetitive programming tasks through artificial intelligence and related technologies, with some higher-skilled tasks shifting to software developers.",
+  "keyFindings": [
+    "Computer programmer employment is projected to decline 6% from 2024 to 2034, with 7,200 fewer jobs expected.",
+    "Despite declining employment, about 5,500 job openings are projected each year on average, all from replacement of workers who transfer or exit the labor force.",
+    "The median annual wage for computer programmers was $98,670 in May 2024, with the lowest 10% earning less than $52,190 and highest 10% earning more than $162,090.",
+    "Computer programming work is expected to be increasingly automated through artificial intelligence technologies to automate repetitive programming tasks and improve efficiency.",
+    "As of 2024, there were approximately 121,200 computer programmer jobs, with 31% employed in computer systems design and related services."
+  ],
+  "methodology": "Data from the Bureau of Labor Statistics Employment Projections program for 2024–2034, with wage data from the Occupational Employment and Wage Statistics (OEWS) survey for May 2024. The employment projections are developed by the BLS Labor Market Information office using standard occupational classification (SOC code 15-1251).",
+  "qualifiers": "Projections are based on 2024 baseline employment data and extend to 2034. All projected job openings are expected to result solely from worker replacement (transfers to other occupations or retirement), not from net job growth. The wage data represents median earnings and does not include self-employed workers, agriculture workers, or workers in private households.",
+  "fetchedAt": "2026-03-09"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "bls-projections-2025",
+  "abstract": "The Bureau of Labor Statistics Employment Projections program provides 10-year labor market forecasts for the United States. The 2024-2034 projections indicate that total employment is expected to grow by 5.2 million jobs (3.1 percent), reaching 175.2 million, with growth driven mainly by the healthcare and social assistance sector. The projections incorporate potential impacts of artificial intelligence on occupational employment and highlight emerging opportunities in renewable energy, data centers, and electric vehicle infrastructure.",
+  "keyFindings": [
+    "Total employment projected to increase by 5.2 million from 2024 to 2034, growing to 175.2 million with a 3.1 percent increase.",
+    "Growth is driven mainly by the healthcare and social assistance sector.",
+    "Employment of wind turbine service technicians expected to increase 49.9 percent by 2034.",
+    "Projected employment growth is slower than the 13.0-percent growth recorded over the 2014-24 decade.",
+    "Construction employment growth is driven by expansion of renewable energy, artificial intelligence data centers, and electric vehicle infrastructure."
+  ],
+  "methodology": "The Employment Projections program develops 10-year labor market forecasts for the nation as a whole. The program uses industry employment data, occupational data, and incorporates potential labor market impacts of artificial intelligence through occupational case studies. Specific data sources, sample methodology, and analytical techniques are not detailed in this homepage excerpt.",
+  "qualifiers": "The projections are forward-looking estimates for 10 years into the future and subject to economic uncertainty. The article notes that growth projections are 'slower than' historical growth rates, indicating relative comparisons rather than absolute certainty. Methodology details state 'Specific data sources, sample methodology, and analytical techniques are not detailed in this homepage excerpt.'",
+  "fetchedAt": "2026-03-09"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "census-bts-ai-2024",
+  "abstract": "The Business Trends and Outlook Survey (BTOS) is a high-frequency, nationally representative survey of approximately 1.2 million U.S. employer businesses that collects data on business conditions including performance, employment, revenue, and demand. The survey includes supplemental AI modules measuring artificial intelligence adoption and testing across sectors, with findings showing 6.6% of firms using AI and 9.1% testing AI capabilities, with notably higher adoption in information (24%) and finance/insurance (15%) sectors.",
+  "keyFindings": [
+    "AI usage among U.S. firms reached 6.6% with an additional 9.1% actively testing AI applications.",
+    "Information sector leads AI adoption at 24%, followed by finance and insurance at 15%.",
+    "The BTOS sample consists of approximately 1.2 million businesses across six panels, each reporting every 12 weeks over one year.",
+    "Data are released every two weeks and available by 2017 NAICS sector, state, and the 25 most populous Metropolitan Statistical Areas."
+  ],
+  "methodology": "The Business Trends and Outlook Survey uses a nationally representative sample of approximately 1.2 million U.S. employer businesses (excluding farms) split into six panels of approximately 200,000 cases each. Businesses in each panel are asked to report once every 12 weeks over one year, with data collection occurring every two weeks. Surveys collect information on previous two-week performance and six-month outlooks across topics including revenue, employment, hours worked, demand, and prices. Data from September 11, 2023 onward cover all employer businesses (single and multi-location) and are tabulated by 2017 NAICS sector, state, and expanded employment size classes, released biweekly.",
+  "qualifiers": "The source document is a landing page describing the BTOS methodology and data availability rather than a complete findings report. The specific AI adoption figures (6.6% using AI, 9.1% testing) are cited from a Q2 2024 module based on the excerpt provided, but the full methodological details specific to that module are not included in this source text. Data collection began September 11, 2023, so historical comparisons prior to that date are not available. The survey excludes farms from its scope.",
+  "fetchedAt": "2026-03-09"
+}

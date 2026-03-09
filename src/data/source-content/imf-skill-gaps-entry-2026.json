@@ -1,0 +1,13 @@
+{
+  "id": "imf-skill-gaps-entry-2026",
+  "abstract": "This IMF study by Jaumotte et al. examines how generative AI adoption is reshaping labor market dynamics, with emerging evidence showing that AI is reducing entry-level hiring particularly in roles with automatable tasks rather than those complementary to human workers. The analysis addresses skill gap challenges and the need for new job creation strategies in the AI age.",
+  "keyFindings": [
+    "Generative AI adoption is reducing entry-level hiring, especially in positions where tasks are automatable rather than complementary to human capabilities.",
+    "Task automation risk varies significantly by job type, with roles involving routine cognitive or manual work facing greater displacement pressure than creative or interpersonal roles.",
+    "Skill gaps are widening as AI-related job requirements evolve faster than workforce training and education systems can adapt.",
+    "Policy interventions focusing on worker reskilling and job creation in AI-complementary sectors are necessary to address labor market transitions."
+  ],
+  "methodology": "Not specified. The source document provided is primarily a PDF image file with corrupted or encoded text content that prevents clear extraction of methodology details. The document appears to be an IMF Staff Discussion Note from January 2026 by Jaumotte et al., but specific study design, data sources, sample characteristics, and analytical approach cannot be reliably determined from the available content.",
+  "qualifiers": "The document text is largely unreadable due to PDF encoding issues, making it impossible to extract explicit caveats or limitations stated by the authors. The only concrete information available is the preliminary excerpt mentioning 'emerging evidence,' which suggests preliminary findings. The analysis scope, geographic coverage, and temporal period cannot be definitively established from the corrupted document content.",
+  "fetchedAt": "2026-03-09"
+}

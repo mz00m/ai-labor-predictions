@@ -1,0 +1,12 @@
+{
+  "id": "brynjolfsson-chandar-chen-cs-2025",
+  "abstract": "This Stanford Digital Economy Lab report analyzes six key findings about AI's employment effects, with a primary focus on early-career worker impacts. The study documents an approximately 11% decline in employment for early-career customer service workers, with employment losses concentrated in roles where AI automates rather than augments human tasks. The research suggests AI's labor market impact is differentiated by job characteristics and worker experience level.",
+  "keyFindings": [
+    "Early-career customer service workers experienced approximately 11% decline in employment, representing the most significant measured impact on a specific occupational group.",
+    "Employment reductions are concentrated in roles where AI substitutes for human labor rather than complementing or augmenting worker capabilities.",
+    "Job losses appear stratified by career stage, with early-career workers experiencing disproportionate negative effects compared to more experienced workers."
+  ],
+  "methodology": "Not specified. The PDF content is heavily corrupted with encoding artifacts that prevent extraction of detailed methodology information. The source appears to be a peer-reviewed research report from Stanford Digital Economy Lab published August 1, 2025, but specific data sources, sample sizes, time periods, and analytical approaches cannot be reliably determined from the available text.",
+  "qualifiers": "The source material is severely corrupted in the provided PDF, making comprehensive extraction difficult. The findings presented are based on limited readable excerpts. The report's full scope, limitations, and uncertainty language cannot be accurately assessed without access to a properly rendered version of the document.",
+  "fetchedAt": "2026-03-09"
+}

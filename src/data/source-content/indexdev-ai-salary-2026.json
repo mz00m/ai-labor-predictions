@@ -1,0 +1,14 @@
+{
+  "id": "indexdev-ai-salary-2026",
+  "abstract": "AI developer salaries are experiencing rapid growth driven by high demand, specialization premiums, and global competition, with the AI wage premium reaching 25-35% above comparable non-AI technical roles. This analysis identifies eight major compensation trends for 2025-26, including entry-level salary spikes reaching six figures, divergence between base and total compensation at major tech companies, persistent geographic disparities, and emerging signals of selective hiring at large AI labs.",
+  "keyFindings": [
+    "AI/ML engineers command a persistent 25% wage premium over similar technical roles without AI specialization, with median total compensation reaching $185K in 2025 and top-tier researchers earning $500K-$1M+, widening the premium over general software roles to 35%.",
+    "Entry-level AI engineers at major technology companies are receiving six-figure salaries that compete with or exceed mid-level developers in other disciplines, with some companies elevating early-career personnel within their first year.",
+    "Total compensation at major tech companies (Google, Meta, OpenAI) shows significant divergence, with senior AI engineers earning $180K-$220K base but total compensation surpassing $600K-$800K yearly through equity and bonuses.",
+    "Global salary disparities persist with US AI developers earning over $150K median, Western Europe averaging $90K-$120K, and Indian developers earning 70% less than US counterparts despite rising opportunities.",
+    "Specialization in NLP, reinforcement learning, and MLOps commands 10-20% premiums over generalist AI engineering roles, while freelance AI experts charge $75-$250 per hour, with top-tier professionals earning equivalent to or exceeding traditional employment packages."
+  ],
+  "methodology": "Analysis synthesizing multiple data sources including PwC's 2025 Global AI Jobs Barometer, Levels.fyi compensation data, Burtch Works AI & Data Science Compensation Report, Glassdoor salary data, Stack Overflow Developer Survey, Wall Street Journal reporting, and Upwork freelancer rates. Global comparison data presented for USA, India, Western Europe, and Remote LATAM regions with specific median base salary and total compensation figures for 2025-26.",
+  "qualifiers": "The source acknowledges 'early signals' of market cooling and selective hiring at major AI labs in 2025, noting that negotiations may become more difficult outside priority positions. Location-based pay variations are acknowledged as persistent despite remote work normalization. The analysis is forward-looking toward 2026 with some projections based on reported trends rather than confirmed outcomes. Global salary comparisons use approximate currency conversions (India ₹45L ~$54K, Western Europe €95K ~$102K).",
+  "fetchedAt": "2026-03-09"
+}

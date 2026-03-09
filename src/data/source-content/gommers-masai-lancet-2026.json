@@ -1,0 +1,12 @@
+{
+  "id": "gommers-masai-lancet-2026",
+  "abstract": "The MASAI Study compared AI-supported mammography screening with standard double reading to evaluate changes in radiologist workload and cancer detection rates. Results showed that implementing AI support reduced screening workload by 44 percent while simultaneously increasing screen-detected cancers by 29 percent, suggesting potential efficiency gains without compromising diagnostic accuracy.",
+  "keyFindings": [
+    "AI-supported mammography screening reduced radiologist workload by 44 percent, from 109,692 to 61,248 screen readings.",
+    "Screen-detected cancers increased by 29 percent in the AI group, rising from 262 to 338 detected cases.",
+    "AI support improved cancer detection rate while substantially reducing the number of readings required per case."
+  ],
+  "methodology": "Comparative study design examining AI-supported mammography screening versus standard double reading without AI in the MASAI Study. Not specified: total sample size, screening population characteristics, study duration, specific sensitivity/specificity calculation methods, or interval cancer follow-up period.",
+  "qualifiers": "None stated in the provided excerpt. Note: The source title references interval cancer analysis, but interval cancer findings are not detailed in the extracted text.",
+  "fetchedAt": "2026-03-09"
+}

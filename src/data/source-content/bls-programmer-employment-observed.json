@@ -1,0 +1,12 @@
+{
+  "id": "bls-programmer-employment-observed",
+  "abstract": "The BLS Occupational Employment and Wage Statistics (OEWS) program provides comprehensive employment and wage data across all occupations and industries in the United States. According to an excerpt regarding computer programmers, routine coding roles experienced a ~27.5% employment decline over roughly two years following ChatGPT's release, representing one of the largest two-year drops in any occupation tracked by BLS, while software developer employment remained flat.",
+  "keyFindings": [
+    "Computer programmer employment (routine coding roles) fell approximately 27.5% in roughly two years following ChatGPT's release.",
+    "This ~27.5% two-year decline ranks among the largest occupational employment drops tracked by the BLS.",
+    "Software developer employment remained flat during the same period, showing no significant change."
+  ],
+  "methodology": "Data from BLS Occupational Employment and Wage Statistics (OEWS) program, which collects employment and wage data from approximately 200,000 establishments covering 99% of the U.S. workforce. Analysis based on May 2024 OEWS data and historical comparisons tracking the two-year period following ChatGPT's release. National, state, and industry-specific breakdowns available.",
+  "qualifiers": "The source page itself is primarily a data repository index rather than a research report with detailed methodology discussion. The specific findings mentioned in the excerpt require access to the underlying OEWS data tables. The distinction between 'computer programmers (routine coding roles)' and 'software developers' suggests occupational classification nuances that may affect interpretation. US data only.",
+  "fetchedAt": "2026-03-09"
+}

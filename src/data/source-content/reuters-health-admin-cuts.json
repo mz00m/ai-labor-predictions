@@ -1,0 +1,12 @@
+{
+  "id": "reuters-health-admin-cuts",
+  "abstract": "Health insurance companies are deploying artificial intelligence to combat rising medical costs driven by hospitals' use of AI tools for medical coding and billing. Insurers claim that providers have become better organized in applying AI for coding purposes, which has led to increased claims that are cutting into payer profits. Large private insurers are now committed to developing their own AI capabilities to counteract what they characterize as overzealous coding and billing practices by healthcare providers.",
+  "keyFindings": [
+    "Large private insurers blame AI-driven medical coding and billing by hospitals for contributing to rising healthcare costs and shrinking insurer profits.",
+    "Hospital providers have become better organized in applying AI for coding than payers, according to Centene's chief financial officer Andrew Asher.",
+    "Health insurance companies are committing to developing their own AI tools to combat what they view as aggressive coding practices by providers."
+  ],
+  "methodology": "Not specified. Source is a news article featuring a quote from Centene CFO Andrew Asher at the Deutsche Bank Healthcare Summit, without formal research methodology or data analysis described.",
+  "qualifiers": "Article is paywalled (STAT+ exclusive); full content not available. Limited to single attributed quote from industry executive. Characterizations of 'overzealous coding' and 'aggressive' billing reflect insurer perspectives without quantitative evidence presented in the accessible excerpt.",
+  "fetchedAt": "2026-03-09"
+}

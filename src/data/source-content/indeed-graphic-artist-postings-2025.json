@@ -1,0 +1,13 @@
+{
+  "id": "indeed-graphic-artist-postings-2025",
+  "abstract": "Analysis of job posting trends in creative and design roles from Indeed's hiring data shows significant declines in traditional creative positions since the advent of ChatGPT, with computer graphic artist postings down 33% and illustration and copywriting roles declining over 40% from pre-ChatGPT levels. However, emerging AI-creative hybrid roles are experiencing growth, suggesting a shift in labor demand toward positions combining creative skills with AI capabilities.",
+  "keyFindings": [
+    "Computer graphic artist job postings declined 33% from pre-ChatGPT levels",
+    "Illustration job postings declined 40% or more from pre-ChatGPT levels",
+    "Copywriting job postings declined 40% or more from pre-ChatGPT levels",
+    "AI-creative hybrid roles are experiencing growth"
+  ],
+  "methodology": "Analysis of Indeed job postings data tracking trends in creative and design occupations, comparing current levels to pre-ChatGPT baseline periods. Specific sample size, time period scope, and analytical methods not specified in excerpt.",
+  "qualifiers": "Specific time period for comparison and detailed methodology not provided in available excerpt. Data represents Indeed job postings only, which may not capture all labor market activity.",
+  "fetchedAt": "2026-03-09"
+}

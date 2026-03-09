@@ -1,0 +1,14 @@
+{
+  "id": "cisco-agentic-cs-2025",
+  "abstract": "Cisco's survey of 7,950 global business and technical decision-makers across 30 countries reveals that agentic AI is expected to handle 68% of all customer service and support interactions with technology vendors by 2028, with 56% expected within the next 12 months. The research highlights overwhelming organizational demand for agentic AI transformation, with 93% of respondents predicting it will enable more personalized, proactive, and predictive services, though 89% emphasize the importance of combining human connection with AI efficiency.",
+  "keyFindings": [
+    "68% of all customer service and support interactions with technology vendors are expected to be handled by agentic AI by 2028, with 56% expected within 12 months.",
+    "92% of organizations report that the support and services they receive from technology vendors are more important than ever due to growing IT complexity.",
+    "93% of respondents predict that agentic AI will enable more personalized, proactive, and predictive services.",
+    "89% of customers emphasize the need to combine human connection with AI efficiency, and 96% state that human relationships are very important when interacting with B2B technology partners.",
+    "81% of respondents predict that vendors successfully delivering agentic AI-led customer experience will gain a competitive edge, and 99% consider robust governance for ethical AI use non-negotiable."
+  ],
+  "methodology": "Global survey of 7,950 business and technical decision-makers across 30 countries conducted by Cisco. Survey respondents were asked about their expectations for agentic AI adoption in customer service interactions and the benefits and governance requirements for AI-led customer experience.",
+  "qualifiers": "None stated",
+  "fetchedAt": "2026-03-09"
+}

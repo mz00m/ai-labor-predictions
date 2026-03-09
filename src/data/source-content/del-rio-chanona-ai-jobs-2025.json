@@ -1,0 +1,14 @@
+{
+  "id": "del-rio-chanona-ai-jobs-2025",
+  "abstract": "This review synthesizes theoretical frameworks and empirical evidence on generative AI's effects on employment and the macroeconomy across three analytical levels: evolution of production models, comparative analysis of AI exposure measures showing convergence toward high-wage jobs, and ex-post evidence from RCTs, field experiments, and digital trace data. Productivity gains range from 20-60% in controlled RCTs to 15-30% in field experiments, with context-dependent effects on different worker skill levels; digital evidence reveals substitution in writing and translation with mixed findings on skill-level impacts, though surveys and administrative data show declining demand for novice jobs in AI-complementary work.",
+  "keyFindings": [
+    "Productivity gains are sizable and context-dependent, ranging from 20-60% in controlled RCTs and 15-30% in field experiments.",
+    "AI exposure measures from multiple studies converge toward high-wage jobs being most exposed to AI.",
+    "Novice workers tend to benefit more from LLMs in simple tasks, but evidence is mixed on complex tasks regarding whether low or high-skilled workers benefit more.",
+    "Digital trace data show substitution between humans and machines in writing and translation, with mild evidence of declining demand for novice workers and more substantial decreases in demand for novice jobs emerging from surveys and administrative data.",
+    "Research gaps persist regarding focus on simple tasks in experiments, limited diversity of LLMs studied, and technology-centric exposure measures that overlook adoption dynamics and whether exposure translates into actual substitution or productivity gains."
+  ],
+  "methodology": "Systematic review synthesizing theory and empirical evidence at three levels: (1) evolution of aggregate production frameworks to task- and expertise-based models; (2) quantitative review and comparison of ex-ante AI exposure measures across multiple studies; (3) assembly of ex-post evidence from randomized controlled trials (RCTs), field experiments, digital trace data (online labor platforms, software repositories), and surveys. Evidence sources include controlled experiments, real-world field implementations, and observational data from digital platforms and administrative records.",
+  "qualifiers": "The review acknowledges several research gaps and limitations: focus on simple tasks in experiments rather than complex real-world work; limited diversity of LLMs studied; technology-centric AI exposure measures that overlook adoption dynamics; uncertainty about whether exposure to AI actually translates into substitution, productivity gains, or changes to expertise requirements; and only partial coverage of surveys in the assembled evidence base.",
+  "fetchedAt": "2026-03-09"
+}

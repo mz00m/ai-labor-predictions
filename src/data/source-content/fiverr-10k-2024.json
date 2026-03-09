@@ -1,0 +1,13 @@
+{
+  "id": "fiverr-10k-2024",
+  "abstract": "Fiverr's 2024 financial results reveal a marketplace experiencing revenue decline and shrinking buyer base amid significant shifts in service demand. While overall marketplace revenue declined 1.3% year-over-year to $303.1 million and active buyers fell 10% to 3.6 million, AI-related service categories demonstrated strong growth, indicating a structural shift away from traditional low-complexity gig work toward AI-enabled services.",
+  "keyFindings": [
+    "Fiverr marketplace revenue declined 1.3% year-over-year in FY2024 to $303.1 million",
+    "Active buyers decreased 10% to 3.6 million in FY2024",
+    "AI-related service categories showed strong growth during the period",
+    "Traditional low-complexity gig categories experienced contraction"
+  ],
+  "methodology": "Company financial results and marketplace statistics from Fiverr's official earnings announcement for full year 2024; specific data on year-over-year revenue changes, active buyer counts, and category performance metrics.",
+  "qualifiers": "Limited detail provided on specific AI categories, magnitude of growth rates, or definitions of 'low-complexity' categories. Data represents Fiverr platform only and may not reflect broader gig economy trends. Earnings announcement format limits granularity of underlying analysis.",
+  "fetchedAt": "2026-03-09"
+}

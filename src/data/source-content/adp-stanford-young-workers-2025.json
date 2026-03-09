@@ -1,0 +1,14 @@
+{
+  "id": "adp-stanford-young-workers-2025",
+  "abstract": "Using granular ADP payroll data, Stanford researchers found that generative AI is dramatically affecting employment patterns, particularly for early-career workers in AI-exposed occupations. Between late 2022 and July 2025, employment for workers aged 22-25 in high-AI-exposure jobs fell 6%, with software developers experiencing a 20% decline, while workers 30 and older saw 6-13% employment growth in the same roles. The type of AI matters: automation-capable AI disproportionately affects young workers in easily-automatable roles, while augmentation-capable AI may benefit more experienced workers.",
+  "keyFindings": [
+    "Employment for workers aged 22-25 in high-AI-exposure occupations fell 6% between late 2022 and July 2025, while employment for workers 30 and older grew 6-13% in the same jobs.",
+    "Software developers aged 22-25 saw a 20% employment decline from late 2022 to July 2025, and early-career customer service workers experienced an 11% decline from their November 2022 peak.",
+    "Employment in low-AI-exposure occupations like health aides grew for all age groups, demonstrating AI's selective impact across job categories.",
+    "Early-career workers in roles with tasks easily automated by AI are most vulnerable, while augmentation-capable AI tools tend to empower rather than displace more experienced workers.",
+    "The United States employed fewer software developers in January 2024 than it had six years earlier, indicating sustained displacement in technology occupations."
+  ],
+  "methodology": "Analysis of granular, high-frequency ADP payroll data tracking occupations, tasks, and employment of millions of workers at thousands of private companies. Jobs were categorized by AI exposure levels. Employment trends were analyzed by age cohorts (22-25, 26-30, 31-34, 35-49, 50+) across occupations with varying AI exposure (software developers, customer service representatives, health aides) from late 2022 through July 2025. AI tools were segmented into two categories: those that automate work functions and those that augment them.",
+  "qualifiers": "None stated",
+  "fetchedAt": "2026-03-09"
+}

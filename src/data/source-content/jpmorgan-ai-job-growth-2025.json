@@ -1,0 +1,14 @@
+{
+  "id": "jpmorgan-ai-job-growth-2025",
+  "abstract": "This J.P. Morgan Global Research analysis examines early signs that AI is already impacting job growth, particularly in knowledge worker sectors. The research finds rising unemployment among college graduates in AI-exposed fields, stalled employment growth in tech industries since ChatGPT's release in late 2022, and a mildly negative correlation between AI adoption and job growth. The authors caution that during future recessions, AI could accelerate displacement of non-routine cognitive occupations like engineers, scientists, and lawyers, potentially triggering jobless recoveries similar to those experienced by routine task occupations in previous decades.",
+  "keyFindings": [
+    "College graduate unemployment reached 5.8% in March 2025, the highest in over four years, with majors exposed to AI including computer engineering, graphic design, industrial engineering, and architecture experiencing significant increases in graduate unemployment.",
+    "Cloud, web search, and computer systems design industries stopped growing at the end of 2022, coinciding with ChatGPT's release, after years of steady employment gains.",
+    "As of mid-2025, less than 10% of firms in the overall economy use AI regularly, rising to just over 20% in professional, scientific and technical industries.",
+    "A mildly negative correlation exists between employment trends and AI usage across industries, suggesting AI may be depressing job growth.",
+    "Rising unemployment risk among non-routine cognitive occupations (scientists, engineers, designers, lawyers) has surpassed that of workers in non-routine manual jobs, indicating potential for jobless recovery in future downturns."
+  ],
+  "methodology": "Analysis combining U.S. Census Bureau Business Trends and Outlook Survey (BTOS) data with Anthropic AI exposure metrics. Cross-sectional examination of unemployment rates by college major as of March 2025. Comparison of employment trends across detailed subsectors of professional employment and tech industries from 2022-2025, with particular focus on employment changes coinciding with ChatGPT's December 2022 release.",
+  "qualifiers": "The analysis notes that rising college graduate unemployment could be 'partially due to a secular rise in the relative supply of college graduates and unusually low labor market churn' in addition to AI effects. Findings regarding non-tech industries are described as 'non-results,' with authors noting 'AI is simply too recent to have materially changed business practices' outside tech sectors. Future recession scenarios are presented as potential outcomes rather than forecasted events. BTOS data shows low overall AI adoption rates, limiting ability to measure broader economic impacts.",
+  "fetchedAt": "2026-03-09"
+}

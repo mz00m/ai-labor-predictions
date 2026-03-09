@@ -1,0 +1,14 @@
+{
+  "id": "eloundou-openai-2024",
+  "abstract": "This study investigates the labor market implications of large language models (LLMs) like GPT-4 on the U.S. workforce. The authors develop a new rubric to assess occupational exposure to LLM capabilities, finding that approximately 80% of the U.S. workforce could have at least 10% of their tasks affected by LLMs, with around 19% potentially experiencing impacts on 50% or more of their tasks. The analysis reveals that LLM-powered software could accelerate 47-56% of all U.S. worker tasks, suggesting LLMs exhibit characteristics of general-purpose technologies with substantial economic and social implications.",
+  "keyFindings": [
+    "Approximately 80% of the U.S. workforce could have at least 10% of their work tasks affected by LLMs.",
+    "Around 19% of workers may see at least 50% of their tasks impacted by LLM introduction.",
+    "About 15% of all worker tasks in the U.S. could be completed significantly faster with access to an LLM at the same quality level, increasing to 47-56% when incorporating LLM-powered software and tooling.",
+    "Higher-income jobs face potentially greater exposure to LLM capabilities compared to lower-wage positions.",
+    "LLM exposure impacts are not restricted to industries with higher recent productivity growth."
+  ],
+  "methodology": "The study uses a new rubric to assess occupations based on their alignment with LLM capabilities, integrating both human expertise and GPT-4 classifications to evaluate the U.S. labor market. The analysis examines task-level exposure across occupations and wage levels. Specific sample size, data sources, and time period details are not provided in the excerpt available.",
+  "qualifiers": "The authors explicitly state they do not make predictions about the development or adoption timeline of LLMs. The study focuses on capability alignment and potential exposure rather than actual labor market outcomes. Analysis is limited to the U.S. workforce.",
+  "fetchedAt": "2026-03-09"
+}

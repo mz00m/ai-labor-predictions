@@ -1,0 +1,12 @@
+{
+  "id": "brynjolfsson-li-raymond-qje-wages-2025",
+  "abstract": "This study examines the impact of generative AI assistance on worker productivity in a real-world setting. The authors find that access to AI tools increases productivity by 15% on average as measured by issues resolved per hour, with significant variation in effects across different types of workers.",
+  "keyFindings": [
+    "Access to AI assistance increases worker productivity by 15% on average, measured by issues resolved per hour.",
+    "Substantial heterogeneity exists in productivity gains across workers.",
+    "AI adoption shows measurable real-world impacts on task completion rates."
+  ],
+  "methodology": "Not specified in provided excerpt. For full methodology details, refer to the complete QJE publication at https://academic.oup.com/qje/article/140/2/889/7990658",
+  "qualifiers": "The provided excerpt is limited and does not include detailed discussion of caveats or limitations. Full qualifier assessment requires access to the complete paper.",
+  "fetchedAt": "2026-03-09"
+}

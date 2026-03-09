@@ -1,0 +1,13 @@
+{
+  "id": "noy-zhang-science-2023",
+  "abstract": "This randomized controlled trial evaluates the productivity effects of generative AI (ChatGPT) on worker performance. The study finds that ChatGPT reduced task completion time by 40% and increased output quality by 18%, with the largest benefits accruing to lower-ability workers, resulting in compression of the productivity distribution across workers.",
+  "keyFindings": [
+    "ChatGPT reduced task completion time by 40% compared to control conditions",
+    "Output quality increased by 18% with access to ChatGPT",
+    "Low-ability workers experienced the most significant productivity gains from ChatGPT",
+    "ChatGPT compressed the productivity distribution, reducing performance gaps between higher and lower-ability workers"
+  ],
+  "methodology": "Randomized controlled trial (RCT) design comparing worker performance with and without access to ChatGPT. Specific details regarding sample size, task types, worker characteristics, and analytical approach are not provided in the excerpt.",
+  "qualifiers": "Not specified in excerpt provided.",
+  "fetchedAt": "2026-03-09"
+}

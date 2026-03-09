@@ -1,0 +1,13 @@
+{
+  "id": "census-bts-ai-2023",
+  "abstract": "The Business Trends and Outlook Survey (BTOS) is a high-frequency, nationally representative survey of approximately 1.2 million U.S. employer businesses that collects data on business conditions including performance, employment, revenue, and economic outlook. As of Q3 2023, the survey found that 3.8% of U.S. firms reported using AI in production, with an additional 6.4% in testing or pilot phases, and adoption rates varying significantly by sector with information services at 18% and professional services at 12%.",
+  "keyFindings": [
+    "3.8% of U.S. firms reported using AI in production as of Q3 2023",
+    "An additional 6.4% of firms were in AI testing or pilot phase",
+    "AI adoption was highest in the information sector at 18% and professional services at 12%",
+    "The BTOS sample consists of approximately 1.2 million businesses surveyed across six panels with reporting every 12 weeks"
+  ],
+  "methodology": "The Business Trends and Outlook Survey consists of approximately 1.2 million businesses split into six panels (approximately 200,000 cases per panel). Businesses in each panel are asked to report once every 12 weeks over the course of one year, with data collection occurring every two weeks. Data released after September 2023 cover all employer businesses (single location and multi-location) in the U.S. economy, excluding farms. The AI module was administered as a supplemental content addition to the core BTOS questionnaire. Data are released every two weeks and are available by 2017 NAICS sector, state, and the 25 most populous Metropolitan Statistical Areas.",
+  "qualifiers": "The survey excludes farms from coverage. The specific AI adoption figures (3.8% and 6.4%) are from Q3 2023 data collection. The data represent employer businesses only and do not include self-employed individuals or non-employer firms.",
+  "fetchedAt": "2026-03-09"
+}

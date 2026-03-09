@@ -1,0 +1,14 @@
+{
+  "id": "forrester-creative-2025",
+  "abstract": "A Forrester report projects that US advertising agencies will automate 7.5% of jobs (32,000 positions) by 2030, with generative AI accounting for nearly a third of these losses. While process-oriented and clerical roles will shrink significantly, creative problem-solving roles and higher-wage skillsets like editors and writers will thrive, leveraging AI to increase productivity. The report predicts a workforce composition shift toward high-paid creator roles paired with generative AI assistants.",
+  "keyFindings": [
+    "US advertising agencies will lose 32,000 jobs to automation by 2030, representing 7.5% of the total agency workforce.",
+    "Generative AI will account for nearly a third of automated advertising jobs, with 56% of US B2C CMOs already using it and 40% exploring use cases.",
+    "Jobs at highest risk from generative AI include clerical roles (28% of job losses), sales roles (22%), and market research roles (18%).",
+    "Job roles with higher generative AI influence such as editors and writers are harder to automate and will see increased productivity and demand.",
+    "Originality is identified as the most significant factor lowering a job's automation potential, with creative and 'original' agency roles being least likely to be replaced."
+  ],
+  "methodology": "Forrester Agency AI-Powered Workforce Forecast, 2030 (US) report analyzing job automation trends in US advertising agencies and related services companies. Specific data sources, sample sizes, and detailed analytical methods are not described in the source excerpt provided.",
+  "qualifiers": "The forecast is projective in nature (by 2030) based on current trends in AI adoption and automation. The report discusses US advertising agencies specifically. Specific limitations, confidence intervals, or uncertainty measures are not stated in the available text.",
+  "fetchedAt": "2026-03-09"
+}

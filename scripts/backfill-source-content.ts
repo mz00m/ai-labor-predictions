@@ -87,14 +87,9 @@ async function main() {
   const cs = JSON.parse(fs.readFileSync(csPath, "utf-8"));
   const allSources: SourceEntry[] = Object.values(cs.sources);
 
-  // Filter to target tiers
+  // Filter to target tiers — include all sources (verified, synthetic, etc.)
   let targets = allSources.filter(
-    (s) =>
-      tiers.includes(s.evidenceTier) &&
-      s.verified &&
-      s.synthetic === false &&
-      s.url &&
-      s.url.startsWith("http")
+    (s) => tiers.includes(s.evidenceTier)
   );
 
   // Skip already-processed sources
@@ -129,24 +124,45 @@ async function main() {
     const prefix = `[${idx}/${targets.length}]`;
 
     try {
-      // Fetch source content
-      console.log(`${prefix} Fetching: ${source.id} (${source.url.slice(0, 80)}...)`);
-      const content = await fetchSource(source.url, "url");
+      let sourceText: string | null = null;
+      const hasUrl = source.url && source.url.startsWith("http");
 
-      if (!content.text || content.text.trim().length < 100) {
-        console.log(`${prefix} SKIP: Content too short (${content.text?.length || 0} chars)`);
-        failed++;
-        continue;
+      if (hasUrl) {
+        // Try fetching from URL with 15s timeout
+        console.log(`${prefix} Fetching: ${source.id} (${source.url.slice(0, 80)}...)`);
+        try {
+          const timeout = new Promise<never>((_, reject) =>
+            setTimeout(() => reject(new Error("Fetch timeout")), 15000)
+          );
+          const content = await Promise.race([fetchSource(source.url, "url"), timeout]);
+          if (content.text && content.text.trim().length >= 100) {
+            sourceText = content.text;
+          }
+        } catch {
+          // Fall through to excerpt-based extraction
+        }
+      }
+
+      // Fall back to excerpt if URL fetch failed or no URL
+      if (!sourceText) {
+        if (source.excerpt && source.excerpt.length > 10) {
+          console.log(`${prefix} Using excerpt for: ${source.id}`);
+          sourceText = `Title: ${source.title}\nPublisher: ${source.publisher}\nDate: ${source.datePublished}\n\n${source.excerpt}`;
+        } else {
+          console.log(`${prefix} SKIP: No URL and no excerpt for ${source.id}`);
+          failed++;
+          continue;
+        }
       }
 
       // Extract rich content using shared extractor
-      console.log(`${prefix} Extracting content (${content.text.length} chars)...`);
-      const entry = await extractSourceContent(source.id, content.text, {
+      console.log(`${prefix} Extracting content (${sourceText.length} chars)...`);
+      const entry = await extractSourceContent(source.id, sourceText, {
         title: source.title,
         publisher: source.publisher,
         datePublished: source.datePublished,
         evidenceTier: source.evidenceTier,
-        url: source.url,
+        url: source.url || "",
         excerpt: source.excerpt,
       });
 

@@ -1,0 +1,13 @@
+{
+  "id": "indeed-total-postings-2025",
+  "abstract": "Analysis of Indeed job posting data reveals that US job postings have declined 15% from peak levels, with traditional administrative and customer service roles experiencing the steepest declines of 18-27%. Conversely, AI/ML positions have grown 42% year-over-year, indicating a significant shift in labor demand toward artificial intelligence-related skills and away from routine cognitive tasks.",
+  "keyFindings": [
+    "US job postings are 15% below their peak level as of January 2025",
+    "Data entry job postings declined 27%, the steepest category decline",
+    "Customer service postings fell 18% and basic administrative postings declined 22%",
+    "AI/ML job postings increased 42% year-over-year, showing strong growth in AI-related positions"
+  ],
+  "methodology": "Analysis of Indeed job posting data tracking trends in US labor demand across job categories, comparing year-over-year changes and identifying posting volume changes from peak levels.",
+  "qualifiers": "Not specified",
+  "fetchedAt": "2026-03-09"
+}

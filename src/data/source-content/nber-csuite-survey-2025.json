@@ -1,0 +1,14 @@
+{
+  "id": "nber-csuite-survey-2025",
+  "abstract": "This international survey of nearly 6,000 CFOs, CEOs, and executives across the US, UK, Germany, and Australia presents the first representative firm-level data on AI adoption and impact. While approximately 70% of firms actively use AI, over 80% report no impact on employment or productivity over the past three years. However, firms forecast significant future impacts, predicting AI will increase productivity by 1.4%, boost output by 0.8%, and reduce employment by 0.7% over the next three years—a stark contrast to employee predictions of 0.5% net job creation.",
+  "keyFindings": [
+    "Approximately 70% of firms actively use AI, with adoption concentrated among younger and more productive firms.",
+    "Over 80% of firms report no impact on employment or productivity over the past three years, despite widespread AI adoption.",
+    "Top executives average only 1.5 hours per week of AI use, with 25% of executives reporting no AI use.",
+    "Firms forecast AI will reduce employment by 0.7%, increase productivity by 1.4%, and boost output by 0.8% over the next three years.",
+    "A significant expectation gap exists, with senior executives predicting employment reductions from AI while surveyed employees predict 0.5% net job creation."
+  ],
+  "methodology": "Stratified survey of almost 6,000 CFOs, CEOs, and executives from representative firm samples across the US, UK, Germany, and Australia. The survey also includes responses from individual employees. Data collection and time period for the survey are not specified in the excerpt provided.",
+  "qualifiers": "The authors note that views expressed are solely those of the individual authors and cannot be taken to represent those of the Federal Reserve Bank of Atlanta, the Federal Reserve System, Bank of England, or Bundesbank. One author (Steven J. Davis) discloses owning more than $5,000 in stock of Charles River Associates. The precise time period of the survey and detailed methodological limitations are not specified in the available excerpt.",
+  "fetchedAt": "2026-03-09"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "deloitte-ai-state-2024",
+  "abstract": "Deloitte's 2026 State of AI in the Enterprise report reveals that organizations are transitioning from pilot projects to scaled AI deployment, with worker access to AI rising 50% in 2025. While AI is delivering productivity gains (66% of organizations report improvements), only 34% are truly reimagining their business rather than optimizing existing processes. The report identifies critical barriers to AI success including the skills gap, governance challenges for autonomous AI agents, and infrastructure readiness gaps despite growing strategic confidence.",
+  "keyFindings": [
+    "Worker access to AI rose 50% in 2025, with expectations for the number of companies with ≥40% projects in production to double within six months.",
+    "While 66% of organizations achieved productivity and efficiency gains from AI, only 34% are deeply transforming their business by creating new products, services, or reinventing core processes.",
+    "The AI skills gap is identified as the biggest barrier to integration, with 53% of organizations prioritizing broader workforce education on AI fluency over role redesign.",
+    "Only one in five companies has a mature governance model for autonomous AI agents despite agentic AI usage poised to rise sharply in the next two years.",
+    "Physical AI adoption reached 58% of companies with limited to full use, and is projected to reach 80% within two years, with Asia Pacific leading in early implementation."
+  ],
+  "methodology": "Deloitte surveyed 3,235 senior leaders between August and September 2025, including board and C-suite members, presidents, vice presidents, and directors. The survey sample was split equally between IT and line of business leaders across 24 countries. This is part of an ongoing research series by the Deloitte AI Institute exploring trends, practices, and challenges in scaling AI.",
+  "qualifiers": "The full methodology details are referenced as being available in the downloadable report. The survey captures perspectives from leading-edge organizations and may not be representative of all enterprises. Projections about future adoption rates (e.g., reaching 80% physical AI in two years) are expectations based on survey responses, not confirmed outcomes.",
+  "fetchedAt": "2026-03-09"
+}

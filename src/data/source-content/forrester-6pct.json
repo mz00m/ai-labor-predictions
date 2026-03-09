@@ -1,0 +1,14 @@
+{
+  "id": "forrester-6pct",
+  "abstract": "Forrester forecasts that AI and automation will account for 6% of total US job losses by 2030, equating to 10.4 million roles, but widespread AI-driven job replacement remains unlikely. Rather than eliminating jobs, AI will augment 20% of roles over the next five years. The report emphasizes that over half of AI-attributed layoffs will be quietly reversed as companies face operational challenges, and that organizations must invest in employee upskilling rather than replacement to realize AI's value.",
+  "keyFindings": [
+    "AI and automation could account for 6% of total US job losses by 2030, equating to 10.4 million roles.",
+    "AI will augment 20% of jobs rather than eliminate them over the next five years.",
+    "Over half of layoffs attributed to AI will be quietly reversed as companies realize the operational challenges of replacing human talent prematurely.",
+    "Junior positions, software developers, and customer service representatives will experience the most pressure from AI, while widespread replacement remains unlikely without significant acceleration in labor productivity.",
+    "Many companies announcing AI-related layoffs do not have mature, vetted AI applications ready, representing a trend of 'AI washing' where financially motivated cuts are attributed to future AI implementation."
+  ],
+  "methodology": "Forrester's proprietary forecast model analyzing AI job impact across US sectors through 2030. The report, 'The Forrester AI Job Impact Forecast, US, 2025–2030', appears to be based on Forrester's research and advisory expertise, though specific data sources, sample sizes, and detailed analytical methodologies are not disclosed in this press release excerpt.",
+  "qualifiers": "The full report details are behind client access requirements, limiting public transparency of underlying methodology. The press release notes this is a forecast rather than retrospective analysis, inherently subject to prediction uncertainty. The scope is limited to the US market and the 2025-2030 timeframe.",
+  "fetchedAt": "2026-03-09"
+}

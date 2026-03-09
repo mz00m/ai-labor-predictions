@@ -1,0 +1,12 @@
+{
+  "id": "hbr-chatbots-2024",
+  "abstract": "This Harvard Business Review article argues that generative AI technologies like ChatGPT will enhance rather than eliminate customer service jobs. The authors contend that while AI raises important questions about labor market disruption across industries, companies can apply these tools productively and responsibly to transform work rather than replace workers in customer service roles.",
+  "keyFindings": [
+    "Generative AI like ChatGPT has potential to disrupt how humans interact with computers and retrieve information across industries",
+    "Large language models raise significant questions about their impact on employment and job transformation",
+    "Customer service jobs will be enhanced rather than erased by generative AI implementation"
+  ],
+  "methodology": "Not specified. The source appears to be an opinion/analysis piece rather than an empirical study with detailed methodology disclosed.",
+  "qualifiers": "The article frames AI's impact as raising 'big questions' rather than providing definitive conclusions. The authors note the need for companies to apply these technologies 'productively and responsibly,' suggesting uncertainty about outcomes. No specific data, sample sizes, or time periods are provided to validate claims.",
+  "fetchedAt": "2026-03-09"
+}

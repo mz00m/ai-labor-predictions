@@ -1,0 +1,11 @@
+{
+  "id": "mckinsey-health-admin-2023",
+  "abstract": "McKinsey & Company estimates that up to $265 billion in annual US healthcare administrative costs could be reduced through the application of AI and process simplification in coding, billing, and prior authorization. The analysis highlights healthcare's administrative burden as a significant cost driver and identifies AI as a key lever for achieving substantial cost savings across these critical operational functions.",
+  "keyFindings": [
+    "Up to $265 billion in annual US healthcare administrative costs could be reduced through simplification efforts",
+    "Coding, billing, and prior authorization processes represent major opportunities for cost reduction and AI implementation"
+  ],
+  "methodology": "Not specified",
+  "qualifiers": "The figure of $265B represents potential savings 'up to' this amount, indicating an upper bound estimate rather than a definitive projection. Specific implementation feasibility, timeline, and adoption barriers are not discussed in the provided excerpt.",
+  "fetchedAt": "2026-03-09"
+}

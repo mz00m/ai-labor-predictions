@@ -1,0 +1,12 @@
+{
+  "id": "indeed-wage-tracker-2025",
+  "abstract": "This Indeed Hiring Lab analysis of posted wage trends reveals a significant divergence in wage growth between AI-exposed and non-AI-exposed occupations in the US labor market. Posted wages for AI-exposed occupations such as administrative roles, data entry, and basic accounting grew only 1.2% year-over-year, compared to 4.1% growth for non-AI-exposed roles, suggesting that AI exposure may be suppressing wage growth in vulnerable occupational categories.",
+  "keyFindings": [
+    "Posted wages for AI-exposed occupations (administrative, data entry, basic accounting) grew 1.2% year-over-year",
+    "Posted wages for non-AI-exposed occupations grew 4.1% year-over-year",
+    "AI-exposed occupations experienced 2.9 percentage points less wage growth compared to non-AI-exposed roles"
+  ],
+  "methodology": "Analysis of posted wage data by occupation with classification of occupations as AI-exposed or non-AI-exposed. Specific data sources, sample size, and detailed analytical approach not specified in excerpt.",
+  "qualifiers": "Limited excerpt provided; full study methodology and scope not available. Analysis based on posted wages rather than actual wages paid. Specific occupational classifications and time period details not specified.",
+  "fetchedAt": "2026-03-09"
+}

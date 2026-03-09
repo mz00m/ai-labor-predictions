@@ -1,0 +1,14 @@
+{
+  "id": "indeed-entry-level-2023",
+  "abstract": "This September 2025 labor market analysis from Indeed Hiring Lab examines the impact of broader hiring slowdowns on entry-level job seekers. The report finds that while junior-level job postings have declined 7% year-over-year, this decline mirrors the overall 7% decrease in job postings rather than reflecting targeted employer pullback from entry-level hiring. New labor market entrants, particularly recent college graduates aged 22-27, face elevated unemployment rates (4.8%) compared to the overall rate (4.0%), driven primarily by the contraction in total available positions across nearly all sectors.",
+  "keyFindings": [
+    "Job postings overall are 4% above pre-pandemic baseline but 7% lower than September 2024, with junior postings declining 7% year-over-year while senior postings grew 4%.",
+    "Unemployment for college graduates aged 22-27 reached 4.8% as of June 2025, notably higher than the overall unemployment rate of 4.0% at that time.",
+    "Fewer than 2% of tech and engineering sector postings are for junior roles, compared to 29% in retail, indicating sector-specific disparities in entry-level opportunities.",
+    "Only about one-third of sectors show decreased junior roles as a share of total postings, meaning junior positions have held steady or grown proportionally even as overall hiring contracts.",
+    "Positive year-over-year job posting growth occurred in only 2 of 45 tracked sectors (banking & finance and physicians & surgeons), with all others experiencing declines."
+  ],
+  "methodology": "Analysis of Indeed Job Postings Index using non-seasonally adjusted data indexed to February 1, 2020 (pre-pandemic baseline = 100), with seven-day trailing averages. Junior postings identified by keywords 'junior' and 'associate'; senior postings by 'senior,' 'lead,' and 'principal.' Monthly data grouped with 3-month moving averages applied. Study covers August 2024 to August 2025 period across 45 tracked sectors. Missing data from 2021-2022 were interpolated.",
+  "qualifiers": "Analysis notes that junior role declines reflect broader market contraction rather than targeted employer pullback from entry-level hiring. Data missing for several dates in 2021-2022 were interpolated. Job posting numbers are provided for information purposes and should not be viewed as performance indicators for Indeed or parent company Recruit Holdings. The analysis characterizes the market as 'stagnating' rather than in crisis, and findings are specific to Indeed's job posting data.",
+  "fetchedAt": "2026-03-09"
+}

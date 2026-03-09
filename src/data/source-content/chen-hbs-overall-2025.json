@@ -1,0 +1,12 @@
+{
+  "id": "chen-hbs-overall-2025",
+  "abstract": "This Harvard Business School study examines whether generative AI will displace workers or complement their work. The research finds a 17% decrease in job postings for highly automatable occupations but a 22% increase for augmentation-prone roles, with the net labor market effect depending on the occupation mix and skill composition of the workforce.",
+  "keyFindings": [
+    "Job postings for highly automatable occupations decreased by 17%, while postings for augmentation-prone occupations increased by 22%.",
+    "The net effect of generative AI on employment varies significantly by occupation, suggesting both displacement and complementarity dynamics are simultaneously occurring.",
+    "Occupation mix and skill distribution are critical determinants of whether generative AI produces net job growth or decline across the economy."
+  ],
+  "methodology": "Not specified in the provided excerpt. The document appears to be a research paper from Harvard Business School analyzing job posting data to assess AI's labor market impact, but full methodological details including data sources, sample size, time period, and analytical approach are not visible in the available text.",
+  "qualifiers": "The analysis presents preliminary findings based on job posting trends; actual labor market displacement effects may differ from job posting changes. Results are specific to the occupations and time period analyzed and may not generalize to all sectors or geographies.",
+  "fetchedAt": "2026-03-09"
+}

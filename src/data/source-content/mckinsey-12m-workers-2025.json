@@ -1,0 +1,12 @@
+{
+  "id": "mckinsey-12m-workers-2025",
+  "abstract": "This McKinsey Global Institute analysis examines generative AI's impact on the American labor market through 2030. The research projects significant occupational disruption, with 12 million additional occupational shifts expected, highly concentrated among lower-wage workers who face disproportionate risks of needing to change jobs. Generative AI could automate activities representing up to 30% of work hours across the economy.",
+  "keyFindings": [
+    "An additional 12 million occupational shifts are expected by 2030 due to generative AI.",
+    "Workers in lower-wage jobs are up to 14 times more likely to need to change occupations compared to higher-wage workers.",
+    "Activities accounting for up to 30% of work hours across the economy could be automated by generative AI."
+  ],
+  "methodology": "Not specified. The provided excerpt does not detail the study's methodology, data sources, sample size, or analytical approach.",
+  "qualifiers": "The projections use cautious language ('expected', 'up to 30%', 'could be automated'), indicating these are scenarios rather than certainties. The timeframe is limited to 2030. Scope appears to be limited to America based on the title.",
+  "fetchedAt": "2026-03-09"
+}

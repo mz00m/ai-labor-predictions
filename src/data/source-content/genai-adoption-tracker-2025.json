@@ -1,0 +1,13 @@
+{
+  "id": "genai-adoption-tracker-2025",
+  "abstract": "The GenAI Adoption Tracker reports results from nationally representative U.S. surveys tracking generative AI adoption among working-age adults. As of November 2025, 55.9% of the U.S. population aged 18-64 uses generative AI, with 40.7% of employed respondents using it for work, generating an estimated 2% time savings out of total work hours. The tracker visualizes data from five surveys comprising 25,000 respondents from the Real-Time Population Survey (RPS), a national online labor market survey of working-age adults that has run since 2020.",
+  "keyFindings": [
+    "55.9% of U.S. working-age adults (18-64) use generative AI as of November 2025",
+    "40.7% of employed respondents reported using generative AI for work as of November 2025",
+    "Generative AI adoption has generated 2% time savings out of total work hours as of November 2025",
+    "GenAI adoption is reaching similar penetration levels 16 years faster than personal computers did"
+  ],
+  "methodology": "Data from five nationally representative U.S. surveys comprising 25,000 respondents from the Real-Time Population Survey (RPS), a national online labor market survey of working-age adults aged 18-64 that has run since 2020. The RPS is designed and weighted to be nationally representative and complements government surveys such as the Current Population Survey and American Community Survey. February and May 2025 values estimated from tracker chart; all other values from published working paper.",
+  "qualifiers": "The findings are those of the authors and do not necessarily reflect the views of the Federal Reserve Bank of St. Louis, the Federal Reserve System, or the Board of Governors. February and May 2025 values are estimated from tracker visualization rather than published data.",
+  "fetchedAt": "2026-03-09"
+}

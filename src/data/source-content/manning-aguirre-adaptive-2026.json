@@ -1,0 +1,13 @@
+{
+  "id": "manning-aguirre-adaptive-2026",
+  "abstract": "This study constructs an occupation-level adaptive capacity index for 356 occupations representing 95.9% of the U.S. workforce to assess workers' ability to navigate job transitions if displaced by AI. The authors find that AI exposure and adaptive capacity are positively correlated for most workers, with 26.5 million of the 37.1 million highly AI-exposed workers possessing above-median adaptive capacity. However, 6.1 million workers (4.2% of the workforce) face both high AI exposure and low adaptive capacity, concentrated in clerical and administrative roles, representing concentrated pockets of vulnerability.",
+  "keyFindings": [
+    "Of 37.1 million workers in the top quartile of AI exposure, 26.5 million work in occupations with above-median adaptive capacity, leaving them relatively well-equipped for job transitions.",
+    "6.1 million workers (4.2% of the workforce) experience both high AI exposure and low adaptive capacity, primarily in clerical and administrative occupations.",
+    "The analysis reveals that AI exposure reflects potential changes to work tasks rather than inevitable displacement, with only some AI-induced changes resulting in actual job loss.",
+    "Vulnerability from combined high exposure and low adaptive capacity is concentrated in college towns and state capitals in the Mountain West and Midwest regions."
+  ],
+  "methodology": "Construction of an occupation-level adaptive capacity index covering 356 occupations representing 95.9% of the U.S. workforce. The index measures worker characteristics relevant for navigating job transitions, combined with analysis of AI exposure levels by occupation. The study distinguishes between workers with high AI exposure but strong adaptive capacity versus those with limited adaptive capacity.",
+  "qualifiers": "AI exposure reflects potential changes to work tasks, not inevitable displacement; only some AI-induced changes will result in job loss. The analysis focuses on occupation-level characteristics rather than individual worker traits. Geographic concentration data notes vulnerability in specific regions but does not specify whether this represents all vulnerable populations.",
+  "fetchedAt": "2026-03-09"
+}

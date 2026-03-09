@@ -1,0 +1,14 @@
+{
+  "id": "huang-cs-2024",
+  "abstract": "This study examines the impact of generative AI on worker productivity using data from 5,179 customer support agents who received staggered access to an AI-based conversational assistant. The authors find that AI assistance increased overall productivity by 14%, with substantially larger gains of 34% for novice and low-skilled workers but minimal impact on experienced workers. The results suggest AI disseminates best practices, accelerates learning curves for newer workers, improves customer sentiment, and increases employee retention.",
+  "keyFindings": [
+    "AI assistance increased productivity by 14% on average, measured by issues resolved per hour.",
+    "Novice and low-skilled workers experienced a 34% productivity improvement with AI access, while experienced and highly skilled workers saw minimal impact.",
+    "AI assistance improved customer sentiment and increased employee retention.",
+    "The AI model appears to disseminate best practices of more able workers and helps newer workers move down the experience curve.",
+    "Results demonstrate large heterogeneity in AI effects across different worker skill levels."
+  ],
+  "methodology": "Staggered introduction study of a generative AI-based conversational assistant using data from 5,179 customer support agents. Productivity measured by issues resolved per hour. Analysis includes examination of customer sentiment and employee retention outcomes. Study period: April 2023 (initial issue date) with revisions through November 2023.",
+  "qualifiers": "The authors provide 'suggestive evidence' regarding worker learning and skill development. The study focuses on customer support agents in a specific work domain, which may limit generalizability to other occupations. Results show large heterogeneity across workers, indicating effects may not be uniform across different workforce compositions.",
+  "fetchedAt": "2026-03-09"
+}

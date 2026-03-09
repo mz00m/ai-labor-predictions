@@ -1,0 +1,12 @@
+{
+  "id": "wsj-ai-military-iran-2026",
+  "abstract": "This article examines how AI-powered software, specifically Palantir Technologies' tools, is dramatically increasing military operational efficiency. The U.S. Army's 18th Airborne Corps achieved record-matching targeting efficiency in exercises dubbed Scarlet Dragon using AI, requiring only 20 personnel compared to over 2,000 staff deployed in Iraq, demonstrating significant labor force reduction through AI automation in military operations.",
+  "keyFindings": [
+    "The 18th Airborne Corps matched its own Iraq-era record as the military's most efficient targeting operation ever using AI software from Palantir Technologies.",
+    "AI-enabled military operations required only 20 people to achieve efficiency levels that previously required over 2,000 staffers in Iraq.",
+    "The reduction from 2,000+ personnel to 20 represents a 99% decrease in required staff for equivalent targeting operations."
+  ],
+  "methodology": "Not specified. The source appears to be a news article reporting on military exercises dubbed Scarlet Dragon involving the U.S. Army's 18th Airborne Corps using Palantir Technologies software, but does not detail formal study methodology, sample sizes, or analytical approach.",
+  "qualifiers": "None stated. The article does not explicitly mention limitations, caveats, or uncertainty qualifications regarding the findings presented.",
+  "fetchedAt": "2026-03-09"
+}

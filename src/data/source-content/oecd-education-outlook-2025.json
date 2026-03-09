@@ -1,0 +1,13 @@
+{
+  "id": "oecd-education-outlook-2025",
+  "abstract": "The OECD's 2025 Education at a Glance report examines AI's differential impact across education sector roles. Teaching positions demonstrate significant resistance to automation with only 15% task exposure, while related education occupations such as support staff, administration, and tutoring roles face substantially higher displacement risk ranging from 30-40% task exposure to AI automation.",
+  "keyFindings": [
+    "Teaching roles are among the least automatable occupations with 15% task exposure to AI.",
+    "Education support staff face 30-40% task displacement from AI automation.",
+    "Education administration positions face 30-40% task displacement from AI automation.",
+    "Tutoring roles face 30-40% task displacement from AI automation."
+  ],
+  "methodology": "Not specified",
+  "qualifiers": "Limited excerpt available; full methodology, data sources, time period, and analytical approach not provided in source text.",
+  "fetchedAt": "2026-03-09"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "indeed-cs-postings-2025",
+  "abstract": "Indeed's 2025 US Jobs & Hiring Trends Report analyzes labor market conditions and prospects for a potential economic soft landing in 2025. The report finds that while the US labor market showed resilience in 2024 with low unemployment and continued wage growth outpacing inflation, emerging headwinds including slowing job creation, declining labor force growth, aging demographics, and reduced immigration pose significant challenges. GenAI adoption and skills-based hiring practices may help offset labor shortages, but widespread productivity gains require broader technology adoption beyond high-tech sectors.",
+  "keyFindings": [
+    "Customer service representative job postings declined 18% year-over-year, with remaining positions increasingly requiring technical skills and AI tool familiarity.",
+    "Job postings declined 10% year-over-year as of November 2024 but remain 10% above pre-pandemic levels; job gains slowed to 180,000 per month in 2024 compared to 251,000 in 2023.",
+    "Labor force growth averaged only 76,000 workers per month in 2024, well below the pre-pandemic average of 136,000, with declining immigration expected to further constrain labor supply.",
+    "Posted wage growth stabilized at 3.2% annually, down from a 9.4% peak in late 2021 but outpacing inflation; 57.8% of job postings listed pay information as of September 2024, up from 52.2% in September 2023.",
+    "GenAI tool mentions appear in only about 2 in 1,000 job postings nationwide as of October 2024, concentrated in software development and mathematics sectors, indicating limited but growing adoption."
+  ],
+  "methodology": "Analysis of Indeed Job Posting Index data (February 2020-November 2024), Bureau of Labor Statistics JOLTS data, BLS employment data through October 2024, and Indeed's tracking of job posting characteristics including degree requirements, experience requirements, pay transparency, benefits mentions, remote work offerings, and GenAI-related terms. The report synthesizes multiple data sources to assess labor market trends and project conditions for 2025.",
+  "qualifiers": "Authors note significant uncertainty about 2025 outcomes, including dependence on policymaker decisions and immigration policy implementation. The report acknowledges that job postings remain above pre-pandemic levels which could limit the severity of potential slowdowns, and that recent labor market stabilization may prove temporary. Remote work projections assume continued return-to-office policies but note that companies embracing remote work 'wholeheartedly will likely continue doing so.' The analysis is based on data through November 2024, and projections for 2025 are conditional on maintaining current trends.",
+  "fetchedAt": "2026-03-09"
+}

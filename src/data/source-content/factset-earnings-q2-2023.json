@@ -1,0 +1,14 @@
+{
+  "id": "factset-earnings-q2-2023",
+  "abstract": "FactSet analyzed mentions of 'AI' in S&P 500 earnings call transcripts from Q2 2023 (June 15 - September 7, 2023). The study found that 177 S&P 500 companies cited 'AI' during their Q2 earnings calls, marking the highest number in at least 13 years and representing a 51% increase from Q1 2023. Companies mentioning AI showed better stock price performance than non-mentioning companies, with AI-mentioning firms averaging +13.3% returns year-to-date versus +1.5% for non-mentioning firms.",
+  "keyFindings": [
+    "177 S&P 500 companies cited 'AI' on Q2 2023 earnings calls, well above the 5-year average of 60 and 10-year average of 37, and the highest number since at least 2010.",
+    "Information Technology sector led with 56 companies (88%) citing AI, the highest at sector level.",
+    "Q2 2023 represented a 51% quarter-over-quarter increase from Q1 2023's previous record of 117 companies citing AI.",
+    "S&P 500 companies citing AI averaged -0.8% stock price change since June 30 and +13.3% since December 31, compared to -2.3% and +1.5% respectively for non-mentioning companies.",
+    "Even excluding the 'Magnificent Seven' technology companies, S&P 500 firms mentioning AI still outperformed those that did not cite AI on average during both measured periods."
+  ],
+  "methodology": "FactSet Document Search was used to search for the term 'AI' in conference call transcripts of all S&P 500 companies conducting earnings calls from June 15 through September 7, 2023. The analysis compared Q2 2023 results to 5-year and 10-year averages of AI mentions. Stock price performance was tracked from June 30 and December 31 through the analysis date. Analysis included sector-level breakdowns and comparison of mentioning versus non-mentioning companies.",
+  "qualifiers": "Analysis uses current S&P 500 index constituents applied retroactively to historical data (2010 onward), which may not reflect actual historical index composition. The blog post disclaims that it is for informational purposes only and is not legal, tax, or investment advice. The relationship between AI mentions and stock performance is observational and does not imply causation.",
+  "fetchedAt": "2026-03-09"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "hbr-ai-workslop-2025",
+  "abstract": "A study of 1,150 US workers reveals a productivity paradox in AI adoption: while companies have doubled their AI-led processes and workers are complying with AI mandates, 95% of organizations report no measurable return on investment. The research identifies 'workslop'—low-quality AI-generated output—as a key culprit, with 40% of workers receiving such content monthly, costing approximately 2 hours per instance to remediate and totaling $186 per worker monthly across organizations.",
+  "keyFindings": [
+    "40% of surveyed workers received AI-generated 'workslop' in the past month, with each instance requiring approximately 2 hours to address",
+    "18% of AI users admitted to sending low-quality AI output to colleagues",
+    "95% of organizations report no measurable return on investment in generative AI technologies despite widespread adoption",
+    "The estimated cost of AI-generated workslop is $186 per worker per month, or approximately $9 million annually for a 10,000-person organization",
+    "Number of companies with fully AI-led processes nearly doubled in the past year, while AI use at work has doubled since 2023"
+  ],
+  "methodology": "Survey of 1,150 US workers conducted by researchers from Stanford and BetterUp Labs in partnership with Harvard Business Review. Reference also made to MIT Media Lab report examining organizational return on investment in generative AI technologies.",
+  "qualifiers": "The source represents findings from a single survey and related research report; specific sample characteristics, margin of error, and temporal scope of data collection are not detailed in the provided excerpt. The $186/month and $9M/year estimates are projections based on survey findings rather than direct measurements.",
+  "fetchedAt": "2026-03-09"
+}

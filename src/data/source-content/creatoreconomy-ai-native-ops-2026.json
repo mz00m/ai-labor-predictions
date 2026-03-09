@@ -1,0 +1,14 @@
+{
+  "id": "creatoreconomy-ai-native-ops-2026",
+  "abstract": "An analysis of how AI-native companies (Linear, Ramp, and Factory) are restructuring work around AI agents. The article argues that onboarding and managing AI agents has become a core job function across all roles, presenting practical frameworks from three companies: Linear's agent-first workflows where humans remain accountable, Ramp's four-level AI proficiency model that pushed 25 PMs to ship 500+ features and reach $1B revenue, and Factory's day-one AI-native structure that encodes expertise into reusable skills rather than hiring specialists.",
+  "keyFindings": [
+    "Ramp shipped 500+ features, reached $1B revenue, and accomplished this with only 25 PMs by requiring all employees across seven functions to work with AI agents.",
+    "Ramp's four-level AI proficiency framework (L0-L3) shows that L0 users (occasional ChatGPT users) are unlikely to remain at the company long-term, while progression to L3 (systems builders) creates organizational acceleration.",
+    "Factory, a 55-person company valued at $300M, hires product engineers rather than separated PM and engineer roles, with workers spending time examining agent traces, writing governance rules, and reviewing only high-risk PRs.",
+    "Linear's agents now create the majority of tickets, with humans responsible for reviewing work and adjusting context, showing agents can handle increasingly complex projects as models improve.",
+    "Factory uses skills—markdown files encoding expertise—to democratize knowledge so any employee or agent can invoke product management, frontend UI, data analysis, and other specialized knowledge."
+  ],
+  "methodology": "Not specified. This is an opinion/analysis piece based on interviews conducted by the author (Peter Yang) with leaders at three companies (Linear, Ramp, and Factory) over several months. No formal study design, data collection methodology, or statistical analysis is presented. The author shares quotes, frameworks, and operational practices from company leaders rather than conducting original research.",
+  "qualifiers": "None stated. The author presents these as case studies and best practices from specific companies without disclaiming generalizability, sample limitations, or time period constraints. One commenter (Om Prakash Pant) notes in the discussion that these examples represent companies that 'built the culture and structure alongside the tooling' and questions how the advice applies to organizations that didn't start AI-native, suggesting scope limitations not acknowledged in the original text.",
+  "fetchedAt": "2026-03-09"
+}

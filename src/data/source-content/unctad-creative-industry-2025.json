@@ -1,0 +1,14 @@
+{
+  "id": "unctad-creative-industry-2025",
+  "abstract": "The Creative Economy Outlook 2024 by UNCTAD examines the pivotal role of creative industries in global trade and economic growth, revealing that the creative economy contributes 0.5% to 7.3% of GDP across countries and employs 0.5% to 12.5% of the workforce. The report highlights that creative services exports surged to $1.4 trillion in 2022 (a 29% increase since 2017), with AI emerging as a key driver of digital transformation in content creation and distribution. However, the analysis identifies significant challenges including growing market concentration by dominant players, copyright and privacy concerns, and the need for robust regulatory frameworks to ensure competitive markets and inclusive growth.",
+  "keyFindings": [
+    "Creative services exports reached $1.4 trillion in 2022, a 29% increase since 2017, while creative goods exports totaled $713 billion with a 19% increase over the same period.",
+    "AI is widely deployed in creative industries, with 41% of news teams using it for illustrative art, 39% for social media content, and 38% for writing and generating articles.",
+    "Market concentration poses significant challenges, with the 'Big Five' publishers holding about 80% of the USA book market and six movie studios accounting for nearly 90% of recent box office ticket sales.",
+    "Streaming services expanded their share of the global music market by 10.4% year-on-year and now account for 67.3% of global music revenue streams.",
+    "Only 12 out of 36 countries surveyed have specific policy initiatives for creative industries, while another 12 promote sustainable business practices including sustainable design and increased participation of women, youth, and disadvantaged groups."
+  ],
+  "methodology": "UNCTAD's global survey examining economic contributions of the creative economy across different countries; analysis of trade data for creative goods and services; survey of 36 countries regarding creative industry policies and sustainable business practices (results show 12 with specific creative industry initiatives and 12 promoting sustainable practices); assessment of AI usage in newsrooms and creative sectors. Data sources include trade statistics and national agency surveys conducted for the 2024 outlook.",
+  "qualifiers": "None stated",
+  "fetchedAt": "2026-03-09"
+}

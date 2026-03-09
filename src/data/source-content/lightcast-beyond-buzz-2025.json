@@ -1,0 +1,14 @@
+{
+  "id": "lightcast-beyond-buzz-2025",
+  "abstract": "Lightcast's analysis of 1.3 billion job postings reveals that AI skills command a 28% salary premium (~$18,000 annually), with workers possessing 2+ AI skills earning 43% premiums. The report introduces the AI Skills Disruption Matrix™ to categorize skills by growth rate, importance, and AI exposure across five career areas, finding that 51% of AI-skill job postings now exist outside IT/CS, with 800% growth in generative AI roles in non-tech industries since 2022.",
+  "keyFindings": [
+    "Job postings requiring AI skills offer 28% higher salaries (~$18,000 more annually) compared to those without AI skills.",
+    "51% of job postings requiring AI skills are now outside IT and computer science occupations as of 2024.",
+    "Generative AI roles in non-tech industries experienced 800% growth since 2022.",
+    "Human Resources shows the highest growth rate at 66% annually, with talent acquisition roles driving adoption.",
+    "Finance demonstrated 40% growth from a low baseline, creating early-mover advantage concentrated in quantitative analyst roles."
+  ],
+  "methodology": "Analysis of over 1.3 billion job postings from Lightcast's database (spanning 2.5 billion job postings, 400 million career profiles, and 100+ government sources across 150+ countries). The study evaluates AI skills across three metrics: growth rate, overall importance, and exposure to AI, using the proprietary AI Skills Disruption Matrix™. Detailed industry-specific analysis provided for five career areas: Marketing and PR, Human Resources, Finance, Science and Research, and Education and Training.",
+  "qualifiers": "The report focuses on five critical career areas in detail; specialized analysis for other sectors and organizations is offered separately. The report's time frame references 2022-2024 data with projections noted for Education and Training sector. No explicit limitations regarding data recency or geographic scope beyond mention of global coverage are stated.",
+  "fetchedAt": "2026-03-09"
+}

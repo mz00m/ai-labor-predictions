@@ -1,0 +1,14 @@
+{
+  "id": "zendesk-ai-cs-2026",
+  "abstract": "This Zendesk report compiles 59 statistics on AI's impact on customer service in 2026, demonstrating that AI is becoming mission-critical for delivering fast, personalized support. The report projects that 100% of customer interactions will eventually involve AI, with current AI resolution rates exceeding 55% without human escalation, while emphasizing that the most effective customer experiences blend AI capabilities with human expertise rather than replacing human agents.",
+  "keyFindings": [
+    "95% of customer interactions are projected to be AI-powered by 2028, with eventual progression toward 100% of interactions involving AI in some form.",
+    "Current AI resolution rates at leading companies exceed 55% without human escalation, with projections that 80% of all inquiries will be resolved without human agent help.",
+    "75% of CX leaders view AI as amplifying human intelligence rather than replacing it, with 83% of employees citing AI's decision-making capacity as a major highlight of adoption.",
+    "Only around one-fifth of agents have access to generative AI tools despite 72% of CX leaders claiming adequate training provision, while 55% of agents report receiving no training.",
+    "The AI in retail and e-commerce market is projected to grow from $9.4 billion in 2024 to $85.1 billion by 2032 (31.8% CAGR), with similar high growth rates expected across banking, manufacturing, and healthcare sectors."
+  ],
+  "methodology": "Analysis of 59 statistics compiled from multiple sources including Zendesk surveys, Boston Consulting Group, McKinsey, Grand View Research, Market.US, IBM, Bain & Company, and other industry research firms. The report aggregates data on CX leader perspectives, consumer attitudes, and industry-specific projections across banking, manufacturing, hospitality, retail, and healthcare sectors. Specific sample sizes and survey methodologies are not detailed in the source document.",
+  "qualifiers": "The report is primarily a compilation of statistics from various sources with varying methodologies and time periods. Specific data collection dates, sample sizes, and confidence intervals are not provided for individual statistics. The projections (e.g., 2028, 2032 forecasts) are based on market research firms' analyses rather than empirical observations. The article acknowledges that 'not all AI is created equal' and includes promotional content about Zendesk's specific AI solutions. Some statistics reflect leader expectations rather than current implementation rates.",
+  "fetchedAt": "2026-03-09"
+}

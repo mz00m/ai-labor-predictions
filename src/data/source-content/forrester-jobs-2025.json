@@ -1,0 +1,14 @@
+{
+  "id": "forrester-jobs-2025",
+  "abstract": "Forrester forecasts that 6.1% of US jobs (10.4 million) will be lost to AI and automation by 2030, with generative AI accounting for 50% of these losses. However, the analysis distinguishes between financially-driven layoffs attributed to AI and actual AI-displacement, finding that most current layoffs are financially motivated rather than AI-driven. Additionally, AI is expected to strongly influence 20% of jobs through task automation rather than job replacement, representing a nearly fourfold increase from the 2023 forecast.",
+  "keyFindings": [
+    "Forrester predicts 6.1% of US jobs (10.4 million) will be lost to AI and automation by 2030, compared to 8.7 million jobs lost during the Great Recession.",
+    "GenAI is now expected to account for 50% of AI-related job losses, up from 29% in the earlier forecast, including agentic AI solutions leveraging genAI.",
+    "AI will strongly influence 20% of US jobs through workflow and task automation, representing a nearly fourfold increase compared with the 2023 forecast.",
+    "Most current layoffs attributed to AI are financially driven rather than AI-displacement; nine out of ten companies claiming AI-driven layoffs have not yet deployed mature, vetted AI applications.",
+    "Jobs lost to AI are structural and permanent, unlike recession-related job losses which are cyclical and macroeconomic."
+  ],
+  "methodology": "Forrester forecast analysis updated since 2023 based on developments in agentic AI and widespread genAI investments. The forecast incorporates observed successes and failures in generative AI deployment and established patterns of AI influence on jobs. Specific data sources, sample sizes, or detailed analytical methodology not specified in the source text.",
+  "qualifiers": "The analysis is limited to US job market projections. Numbers are not directly comparable to recession job losses due to structural differences. The forecast acknowledges that genAI has not yet positively impacted P&Ls according to MIT researchers. The source notes that predictions about AI job losses have 'run aground on the rocky shores of reality for a long time,' citing the 2016 Geoffrey Hinton radiology prediction as an example of failed forecasting.",
+  "fetchedAt": "2026-03-09"
+}

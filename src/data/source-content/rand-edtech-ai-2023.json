@@ -1,0 +1,12 @@
+{
+  "id": "rand-edtech-ai-2023",
+  "abstract": "This RAND Corporation study examines the current adoption and implementation of artificial intelligence tools in K-12 classrooms through a national survey of teachers. The research finds that while AI usage remains limited, with only 18% of K-12 teachers currently employing AI for teaching, adaptive learning systems are the most commonly used tools. A significant majority of school districts (60%) indicate plans to provide teacher training on AI, suggesting expectations for expanded adoption in the near term.",
+  "keyFindings": [
+    "18% of K-12 teachers reported using AI tools for teaching purposes",
+    "Adaptive learning systems were the most frequently used AI applications, with regular weekly usage among teachers employing them",
+    "60% of school districts planned to provide AI training for their teachers"
+  ],
+  "methodology": "National survey of 1,020 K-12 teachers conducted by RAND Corporation. Specific sampling methodology, survey administration method, and data collection period not detailed in excerpt provided.",
+  "qualifiers": "Limited excerpt provided; full report details and scope limitations not accessible. Results are from a single snapshot in time (April 2024). Survey represents teachers who responded; non-response bias not addressed in excerpt.",
+  "fetchedAt": "2026-03-09"
+}

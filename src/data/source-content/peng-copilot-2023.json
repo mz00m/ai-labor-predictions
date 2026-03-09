@@ -1,0 +1,12 @@
+{
+  "id": "peng-copilot-2023",
+  "abstract": "This paper presents results from a randomized controlled experiment examining the impact of GitHub Copilot, an AI pair programmer, on software developer productivity. Recruited developers completed an HTTP server implementation task in JavaScript, with the treatment group using Copilot finishing 55.8% faster than the control group. The study identifies heterogenous effects suggesting AI pair programmers may help people transition into software development careers.",
+  "keyFindings": [
+    "Developers with access to GitHub Copilot completed a coding task implementing an HTTP server in JavaScript 55.8% faster than developers without AI assistance.",
+    "Heterogenous treatment effects were observed, suggesting differential impacts across subgroups of developers.",
+    "Results indicate promise for AI pair programmers to support career transitions into software development."
+  ],
+  "methodology": "Randomized controlled trial (RCT) with recruited software developers assigned to treatment (GitHub Copilot access) and control (no AI assistance) groups. Participants completed an HTTP server implementation task in JavaScript, with task completion time as the primary outcome measure. Specific details regarding sample size, developer experience levels, and analytical approach not provided in abstract.",
+  "qualifiers": "None stated",
+  "fetchedAt": "2026-03-09"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "factset-earnings-q3-2023",
+  "abstract": "FactSet analyzed S&P 500 earnings call transcripts from Q3 2023 to track mentions of artificial intelligence. Despite heightened market interest in AI, fewer companies discussed AI in Q3 compared to Q2, with 152 companies (16% decline) citing the term during earnings calls. However, this remains substantially above historical 5- and 10-year averages, and represents the second-highest number of AI mentions in at least a decade.",
+  "keyFindings": [
+    "152 S&P 500 companies cited 'AI' on earnings calls in Q3 2023, representing a 16% decline from 180 companies in Q2 2023.",
+    "Q3 2023 AI mentions are the second-highest on record for at least 10 years, substantially above the 5-year average of 67 companies and 10-year average of 41 companies.",
+    "Nine of eleven sectors recorded quarter-over-quarter declines in AI mentions, with Information Technology (-8) and Financials (-7) showing the largest decreases.",
+    "The Information Technology sector led all sectors with 48 companies (79%) discussing AI, despite the decline from the previous quarter.",
+    "Only Communication Services (+4) and Energy (+1) sectors recorded increases in AI mentions from Q2 to Q3 2023."
+  ],
+  "methodology": "FactSet Document Search was used to search for the term 'AI' in conference call transcripts of S&P 500 companies that conducted earnings calls from September 15 through November 30, 2023. Data was analyzed quarter-over-quarter (Q3 vs. Q2 2023) and compared against historical averages (5-year and 10-year), with sectoral breakdown across all eleven S&P 500 sectors.",
+  "qualifiers": "A small number of S&P 500 companies had not yet reported earnings for Q3 at the time of analysis, so the final Q3 count of 152 companies is expected to increase but will not exceed Q2's count of 180. This analysis uses current index constituents projected backward in time.",
+  "fetchedAt": "2026-03-09"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "oecd-employment-2023",
+  "abstract": "The OECD Employment Outlook 2023 examines AI's potential impact on labor markets across member countries. The report finds that 27% of jobs are in occupations at high risk from AI, though actual displacement will depend on the speed of AI adoption and the policy responses implemented by governments to manage labor market transitions.",
+  "keyFindings": [
+    "27% of jobs are in occupations at high risk from AI displacement",
+    "Actual job displacement depends critically on AI adoption speed rather than technological capability alone",
+    "Policy response will be a key determinant of labor market outcomes from AI integration"
+  ],
+  "methodology": "Not specified in provided excerpt. Full methodology would typically include analysis of OECD member country labor force data, occupational classifications, and AI exposure metrics across sectors.",
+  "qualifiers": "The report notes that job displacement is contingent rather than predetermined, suggesting uncertainty about outcomes. Analysis scope limited to OECD member countries. The excerpt does not specify time horizons, sectoral breakdowns, or regional variations within the 27% figure.",
+  "fetchedAt": "2026-03-09"
+}

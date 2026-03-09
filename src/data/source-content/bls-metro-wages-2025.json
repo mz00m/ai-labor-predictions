@@ -1,0 +1,13 @@
+{
+  "id": "bls-metro-wages-2025",
+  "abstract": "This is a directory index from the Bureau of Labor Statistics providing access to May 2024 Occupational Employment and Wage Statistics (OEWS) data for metropolitan and nonmetropolitan areas across the United States. The source presents a comprehensive listing of geographic areas organized by state, allowing users to access detailed occupational employment and wage estimates for their regions of interest.",
+  "keyFindings": [
+    "May 2024 OEWS data is available for all 50 states, Puerto Rico, and the District of Columbia",
+    "Data covers both metropolitan statistical areas and nonmetropolitan areas, with cross-state metropolitan areas listed under each relevant state",
+    "A downloadable XLSX file of May 2024 metropolitan and nonmetropolitan area definitions is available for reference",
+    "The directory provides links to related national, state, and industry-specific occupational employment and wage estimates"
+  ],
+  "methodology": "This is a directory/index document providing access to Bureau of Labor Statistics Occupational Employment and Wage Statistics (OEWS) survey data from May 2024. The OEWS survey is a federal-state cooperative program that produces employment and wage data by occupation for metropolitan and nonmetropolitan areas nationwide. No original analysis or primary data collection is presented in this source; it serves as a navigation tool to access the underlying employment statistics.",
+  "qualifiers": "This is an index page rather than a research report, so it does not contain substantive findings or limitations specific to the underlying data. Users are directed to technical notes for methodological details about the OEWS survey itself. The excerpt about San Jose-SF-Oakland MSA computer and mathematical occupations ($178K median vs. $108K national median) represents information available through this directory but is not part of the main source text provided.",
+  "fetchedAt": "2026-03-09"
+}

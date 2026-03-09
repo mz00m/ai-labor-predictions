@@ -1,0 +1,11 @@
+{
+  "id": "ibm-10k-2024",
+  "abstract": "Unable to extract abstract. The provided source material consists only of an SEC EDGAR search results page listing IBM's 10-K filings from 1994-2026, without access to the actual 10-K document content. While the excerpt indicates IBM's CEO stated plans to replace ~7,800 back-office roles with AI and invest in reskilling the remaining workforce, the full source document text necessary for comprehensive extraction was not provided.",
+  "keyFindings": [
+    "IBM CEO announced plans to replace approximately 7,800 back-office roles with AI",
+    "Company is investing in reskilling remaining workforce for AI-augmented roles"
+  ],
+  "methodology": "SEC 10-K annual report filing (CIK: 0000051143, filed 2025-02-25, accession number 0000051143-25-000015). Document size: 56 MB. Source material provided contains only EDGAR search results page; full 10-K text not accessible for detailed methodology review.",
+  "qualifiers": "Source material is limited to EDGAR filing search results page only; full document content not provided. Information extracted from brief excerpt only. Actual detailed analysis, scope, time period covered, and any methodological caveats contained within the full 10-K document are not accessible from the provided material.",
+  "fetchedAt": "2026-03-09"
+}
