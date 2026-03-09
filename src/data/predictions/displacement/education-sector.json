@@ -127,15 +127,6 @@
       "label": "Chronicle: AI will decimate faculty ranks; TAs first, then non-tenured, then tenured"
     },
     {
-      "date": "2025-05-01",
-      "direction": "down",
-      "sourceIds": [
-        "gartner-edtech-2025"
-      ],
-      "evidenceTier": 2,
-      "label": "Gartner: 20% of EdTech workforce replaced by 2028"
-    },
-    {
       "date": "2025-12-01",
       "direction": "neutral",
       "sourceIds": [
@@ -244,15 +235,6 @@
       "evidenceTier": 1,
       "datePublished": "2025-01-20",
       "excerpt": "Teaching roles are among the least automatable (15% task exposure), but education support staff, administration, and tutoring face 30-40% task displacement. Blended estimate across the full education workforce: ~20%."
-    },
-    {
-      "id": "gartner-edtech-2025",
-      "title": "Gartner Unveils Top Predictions for IT Organizations and Users in 2025 and Beyond",
-      "url": "https://www.gartner.com/en/newsroom/press-releases/2024-10-22-gartner-unveils-top-predictions-for-it-organizations-and-users-in-2025-and-beyond",
-      "publisher": "Gartner",
-      "evidenceTier": 2,
-      "datePublished": "2024-10-22",
-      "excerpt": "Predicts 20% of organizations will use AI to flatten organizational structure by 2026, eliminating more than half of middle management positions. General workforce prediction, not EdTech-specific."
     },
     {
       "id": "bls-education-2025",
