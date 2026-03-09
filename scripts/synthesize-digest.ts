@@ -53,15 +53,15 @@ export const DigestSchema = z.object({
   week: z.string().regex(/^\d{4}-W\d{2}$/),
   generatedAt: z.string(),
   lookbackDays: z.number().int().positive(),
-  highlights: z.array(HighlightSchema).max(5),
-  themes: z.array(z.string()).max(5),
+  highlights: z.array(HighlightSchema),
+  themes: z.array(z.string()),
   watching: z.array(
     z.object({
       title: z.string(),
       source: z.string().url(),
       reason: z.string(),
     })
-  ),
+  ).default([]),
   sources: z.object({
     succeeded: z.array(z.string()),
     failed: z.array(z.string()),
@@ -207,7 +207,7 @@ ${itemsText}`;
   console.log("Synthesizing via Claude API...");
   const client = new Anthropic();
   const response = await client.messages.create({
-    model: "claude-sonnet-4-20250514",
+    model: "claude-sonnet-4-6",
     max_tokens: 4096,
     messages: [{ role: "user", content: synthesisPrompt }],
   });
@@ -225,17 +225,40 @@ ${itemsText}`;
     process.exit(1);
   }
 
+  // Pre-process: fix common LLM response issues before validation
+  const obj = parsed as any;
+  if (Array.isArray(obj.highlights)) {
+    obj.highlights = obj.highlights.slice(0, 5).map((h: any) => ({
+      ...h,
+      // Clamp score to 0-1 (Claude sometimes returns percentages like 85 instead of 0.85)
+      score: typeof h.score === "number"
+        ? Math.min(Math.max(h.score > 1.5 ? h.score / 100 : h.score, 0), 1)
+        : 0,
+      // Default sourceAdapter if missing
+      sourceAdapter: h.sourceAdapter || "unknown",
+    }));
+  }
+  if (Array.isArray(obj.themes)) {
+    obj.themes = obj.themes.slice(0, 5);
+  }
+  if (Array.isArray(obj.watching)) {
+    // Filter out watching items with invalid URLs
+    obj.watching = obj.watching.filter((w: any) => {
+      try { new URL(w.source); return true; } catch { return false; }
+    });
+  }
+
   // Inject source metadata from fetch phase
-  (parsed as any).sources = sourcesInfo;
-  (parsed as any).lookbackDays = lookbackDays;
+  obj.sources = sourcesInfo;
+  obj.lookbackDays = lookbackDays;
 
   // Validate against schema
-  const result = DigestSchema.safeParse(parsed);
+  const result = DigestSchema.safeParse(obj);
   if (!result.success) {
     console.error("Schema validation failed:");
     console.error(JSON.stringify(result.error.format(), null, 2));
     console.error("\nRaw response:");
-    console.error(JSON.stringify(parsed, null, 2));
+    console.error(JSON.stringify(obj, null, 2));
     process.exit(1);
   }
 

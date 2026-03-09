@@ -59,7 +59,7 @@ jobs:
       - name: Stage ingestion candidates
         if: inputs.auto_ingest == true || github.event_name == 'schedule'
         run: |
-          WEEK_ID=$(date -u +%Y-W%V)
+          WEEK_ID=$(date -u +%G-W%V)
           DIGEST_FILE="src/data/digests/${WEEK_ID}.json"
           if [ -f "$DIGEST_FILE" ]; then
             npx tsx scripts/ingest-from-digest.ts "$DIGEST_FILE"
@@ -73,7 +73,7 @@ jobs:
       - name: Apply ingestion
         if: inputs.auto_ingest == true
         run: |
-          WEEK_ID=$(date -u +%Y-W%V)
+          WEEK_ID=$(date -u +%G-W%V)
           STAGING_FILE="src/data/digests/${WEEK_ID}.ingest-staging.json"
           if [ -f "$STAGING_FILE" ]; then
             npx tsx scripts/apply-ingestion.ts "$STAGING_FILE" --approve-all
@@ -102,7 +102,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          WEEK_ID=$(date -u +%Y-W%V)
+          WEEK_ID=$(date -u +%G-W%V)
           BRANCH="digest/${WEEK_ID}"
           DIGEST_FILE="src/data/digests/${WEEK_ID}.json"
           META_FILE="src/data/digests/${WEEK_ID}.meta.json"
