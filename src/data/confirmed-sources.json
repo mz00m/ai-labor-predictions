@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-09",
-  "totalSources": 330,
-  "verifiedCount": 320,
+  "totalSources": 331,
+  "verifiedCount": 321,
   "sources": {
     "revelio-labs-wage-divide-2025": {
       "id": "revelio-labs-wage-divide-2025",
@@ -4491,6 +4491,21 @@
       "synthetic": false,
       "usedIn": [
         "creative-industry-displacement"
+      ]
+    },
+    "mit-iceberg-index-2025": {
+      "id": "mit-iceberg-index-2025",
+      "title": "The Iceberg Index: Measuring Skills-centered Exposure in the AI Economy",
+      "url": "https://arxiv.org/abs/2510.25137",
+      "publisher": "MIT / Oak Ridge National Laboratory",
+      "evidenceTier": 1,
+      "datePublished": "2025-11-26",
+      "excerpt": "AI can already replace 11.7% of the U.S. workforce, worth $1.2 trillion in wages. Exposure is distributed across all 50 states, not confined to coastal tech hubs. South Dakota, NC, Utah show higher values than California.",
+      "verified": true,
+      "synthetic": false,
+      "usedIn": [
+        "overall-us-displacement",
+        "geographic-wage-divergence"
       ]
     }
   }

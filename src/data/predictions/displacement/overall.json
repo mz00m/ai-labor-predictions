@@ -555,6 +555,15 @@
       ],
       "evidenceTier": 1,
       "label": "Stanford/Brynjolfsson: entry-level hiring stagnant; AI-exposed jobs driving decline"
+    },
+    {
+      "date": "2025-11-26",
+      "direction": "down",
+      "sourceIds": [
+        "mit-iceberg-index-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "MIT Iceberg Index: 11.7% of US workforce (151M workers) currently replaceable, worth $1.2T in wages"
     }
   ],
   "sources": [
@@ -1004,6 +1013,15 @@
       "evidenceTier": 1,
       "datePublished": "2025-11-13",
       "excerpt": "Overall employment continues to grow robustly, but employment growth for young workers has been stagnant since late 2022. Declining employment in AI-exposed jobs drives stagnant overall employment growth for 22- to 25-year-olds."
+    },
+    {
+      "id": "mit-iceberg-index-2025",
+      "title": "The Iceberg Index: Measuring Skills-centered Exposure in the AI Economy",
+      "url": "https://arxiv.org/abs/2510.25137",
+      "publisher": "MIT / Oak Ridge National Laboratory",
+      "evidenceTier": 1,
+      "datePublished": "2025-11-26",
+      "excerpt": "AI can already replace 11.7% of the U.S. workforce, or as much as $1.2 trillion in wages across finance, health care, and professional services. The visible tip — tech sector layoffs — represents just 2.2% of total wage exposure ($211B). Simulated 151 million workers across 32,000 skills and 3,000 counties."
     }
   ]
 }
