@@ -71,8 +71,20 @@ For each scored candidate:
 4. Present the extraction report to the user (same format as `/ingest`)
 5. Ask for per-statistic approval before applying
 6. If approved: apply changes to prediction JSONs, update `confirmed-sources.json`, update `last-updated.json`
-7. Validate JSON after each change
-8. Git commit the changes with message: `autoresearch: ingest [source-id] into [graph-slug]`
+7. **Populate chatbot content store**: Write a source content JSON file to `src/data/source-content/[source-id].json` with:
+   ```json
+   {
+     "id": "[source-id]",
+     "abstract": "[2-4 sentence summary, 500-2000 chars]",
+     "keyFindings": ["Finding 1 with numbers and dates", "Finding 2", "Finding 3"],
+     "methodology": "[Study design, data sources, sample size, time period]",
+     "qualifiers": "[Caveats, limitations, uncertainty language]",
+     "fetchedAt": "[today's date YYYY-MM-DD]"
+   }
+   ```
+   This is REQUIRED for every ingested source regardless of evidence tier. Use the authors' own language. Include specific numbers and dates in key findings.
+8. Validate JSON after each change
+9. Git commit the changes (including the source-content file) with message: `autoresearch: ingest [source-id] into [graph-slug]`
 
 ### Score 40-59: LOG FOR REVIEW
 1. Log to `scripts/autoresearch/candidates.tsv` with status "review"
@@ -126,7 +138,8 @@ Then: revert the commit with `git revert HEAD` and log the error to candidates.t
 ## Critical Rules
 
 - **NEVER fabricate statistics.** Every number must come from verbatim source text.
-- **NEVER modify code files.** Only data files (prediction JSONs, confirmed-sources.json, last-updated.json, candidates.tsv).
+- **NEVER modify code files.** Only data files (prediction JSONs, confirmed-sources.json, last-updated.json, candidates.tsv, source-content JSONs).
+- **ALWAYS populate chatbot content store** (`src/data/source-content/[source-id].json`) for every ingested source. The chatbot cannot answer questions about sources without this file.
 - **ALWAYS check for duplicates** before ingesting (match on URL and source ID).
 - **ALWAYS validate JSON** after writing to prediction files.
 - **ONE source per commit.** Atomic changes for clean rollback.

@@ -150,7 +150,27 @@ For each **approved** prediction JSON file that needs changes:
 5. **Keep arrays sorted by date** (ascending)
 6. **Check for duplicates** — skip if source ID or URL already exists
 
-### Step 7: Add to Verified Source List
+### Step 7: Populate Chatbot Content Store
+
+After applying changes to prediction files, populate the chatbot source content store so the chat assistant can answer questions grounded in this source's full text. This is REQUIRED for every ingested source regardless of evidence tier.
+
+1. **Write a source content JSON file** to `src/data/source-content/[source-id].json` with this structure:
+   ```json
+   {
+     "id": "[source-id]",
+     "abstract": "[2-4 sentence summary of the source's main argument and findings, 500-2000 chars]",
+     "keyFindings": ["Finding 1 with specific numbers", "Finding 2", "Finding 3"],
+     "methodology": "[Study design, data sources, sample size, time period, analytical approach. If not a study, describe the evidence basis.]",
+     "qualifiers": "[Caveats, limitations, uncertainty language, scope restrictions mentioned by the authors.]",
+     "fetchedAt": "[today's date YYYY-MM-DD]"
+   }
+   ```
+2. **keyFindings** should have 3-5 items, each a single sentence with specific numbers and dates when available
+3. **Use the authors' own language** where possible — do not editorialize
+4. **Include dates** in findings: e.g., "As of Q1 2026, 12.3% of US firms use AI in production"
+5. If the source file already exists in `src/data/source-content/`, skip this step
+
+### Step 8: Add to Verified Source List
 
 After applying changes to prediction files, also update `src/data/confirmed-sources.json`:
 
@@ -175,7 +195,7 @@ After applying changes to prediction files, also update `src/data/confirmed-sour
    - Skip if the source ID already exists in the file
 3. **Increment** `totalSources` and `verifiedCount` by the number of new sources added (usually 1)
 
-### Step 8: Update Last Updated Date
+### Step 9: Update Last Updated Date
 
 After all file changes are applied:
 
