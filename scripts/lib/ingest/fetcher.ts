@@ -1,8 +1,15 @@
 import fs from "fs";
+import { parseTweetUrl, fetchTweetById } from "../../../src/lib/api/twitter";
 import type { SourceContent } from "./types";
+
+/** Check if a URL points to a Twitter/X post */
+function isTwitterUrl(url: string): boolean {
+  return /(?:twitter\.com|x\.com)\/\w+\/status(?:es)?\/\d+/.test(url);
+}
 
 /**
  * Fetch source content from a URL, local file, or raw text string.
+ * Automatically uses the Twitter API v2 for Twitter/X post URLs.
  */
 export async function fetchSource(
   input: string,
@@ -18,6 +25,11 @@ export async function fetchSource(
     }
 
     case "url": {
+      // Use Twitter API for tweet URLs
+      if (isTwitterUrl(input)) {
+        return fetchTwitterSource(input);
+      }
+
       const res = await fetch(input, {
         headers: {
           "User-Agent":
@@ -50,6 +62,31 @@ export async function fetchSource(
     default:
       return { text: input };
   }
+}
+
+/**
+ * Fetch a Twitter/X post via the API v2 and format it as SourceContent.
+ */
+async function fetchTwitterSource(url: string): Promise<SourceContent> {
+  const tweetId = parseTweetUrl(url);
+  if (!tweetId) {
+    throw new Error(`Could not parse tweet ID from URL: ${url}`);
+  }
+
+  const post = await fetchTweetById(tweetId);
+  if (!post) {
+    throw new Error(
+      `Failed to fetch tweet ${tweetId}. Check that TWITTER_BEARER_TOKEN is set in .env`
+    );
+  }
+
+  const title = `@${post.authorUsername}: ${post.text.slice(0, 80)}${post.text.length > 80 ? "…" : ""}`;
+
+  return {
+    text: post.text,
+    url: post.url,
+    title,
+  };
 }
 
 /** Strip HTML to readable plain text */

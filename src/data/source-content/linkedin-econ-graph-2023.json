@@ -1,0 +1,14 @@
+{
+  "id": "linkedin-econ-graph-2023",
+  "abstract": "LinkedIn's November 2023 Future of Work Report analyzes generative AI's impact on the global labor market using data from one billion professionals and 67 million companies. The report finds that 55% of LinkedIn members globally will see their jobs change due to generative AI, with skills requirements shifting by up to 65% by 2030, while showing differential impacts across education levels, generations, and gender, with professionals holding advanced degrees, Gen Z, and women experiencing higher disruption rates.",
+  "keyFindings": [
+    "Conversations around AI on LinkedIn increased globally by 70% between December 2022 and September 2023.",
+    "55% of LinkedIn members globally stand to see their jobs change to some degree by the rise of generative AI.",
+    "By 2030, the skills required for jobs will change by up to 65%.",
+    "74% of US executives believe that generative AI will benefit their employees.",
+    "Professionals with advanced degrees, Gen Z, and women will see their jobs disrupted at higher rates than other professionals."
+  ],
+  "methodology": "Analysis of LinkedIn Economic Graph data from one billion professionals and 67 million companies, tracking real-time labor market trends and conversation data on the LinkedIn platform between December 2022 and September 2023. Specific sample sizes, statistical methods, and geographic breakdowns beyond US executive data are not detailed in the provided excerpt.",
+  "qualifiers": "The report focuses on LinkedIn members and may not represent the full global workforce. Projections to 2030 are not grounded in explicit methodology. The source indicates differential impacts by demographic groups but detailed breakdowns are not provided in the available excerpt.",
+  "fetchedAt": "2026-03-08"
+}

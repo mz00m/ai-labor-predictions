@@ -1,0 +1,14 @@
+{
+  "id": "openai-8k-funding-2024",
+  "abstract": "OpenAI is distributing an average of $1.5 million in stock-based compensation per employee across its 4,000-person workforce in 2025, the highest equity compensation of any major tech startup in history. The company's aggressive compensation strategy, with nearly half of annual revenue directed toward stock-based pay, reflects intense competition for AI talent among rivals like Anthropic, Meta, Microsoft, and Google. An anticipated IPO at OpenAI's reported $830 billion valuation could create thousands of employee multimillionaires, while CEO Sam Altman maintains zero equity ownership and a $76,000 salary.",
+  "keyFindings": [
+    "OpenAI's average stock-based compensation reached $1.5 million per employee in 2025 across approximately 4,000 employees, the highest of any major tech startup in history.",
+    "Research scientists at OpenAI receive stock grants ranging between $2 million to $4 million at Series D valuation levels.",
+    "Nearly 46.2% of OpenAI's annual revenue is allocated toward stock-based compensation, demonstrating the intensity of the AI talent competition.",
+    "Google's average stock compensation at IPO in the early 2000s was approximately $250,000 when adjusted for inflation, about one-sixth of OpenAI's current average.",
+    "OpenAI currently lists over 450 open positions in the U.S. with salaries typically beginning at over $200,000 plus equity offerings."
+  ],
+  "methodology": "Not specified. Source is a news article reporting figures from Wall Street Journal reporting and statements from venture capital partners; does not present original research data or study design.",
+  "qualifiers": "The $1.5 million figure represents an average, and the article acknowledges that top talent likely receives significantly higher stakes. The piece notes that stock compensation valuation is contingent on a reported IPO 'later this year' at or near the $830 billion valuation from the latest funding round. Some claims derive from third-party expert commentary (Tim Tully from Menlo Ventures) rather than OpenAI direct confirmation. Fortune indicates it 'reached out to OpenAI for comment,' suggesting the company did not provide an official statement for the article.",
+  "fetchedAt": "2026-03-09"
+}

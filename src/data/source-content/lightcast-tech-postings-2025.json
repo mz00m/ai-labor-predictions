@@ -1,0 +1,14 @@
+{
+  "id": "lightcast-tech-postings-2025",
+  "abstract": "This analysis of 20 million job postings from November 2022 to February 2024 reveals a diverging tech labor market shaped by AI adoption. While AI scientist and machine learning engineer positions surged 80% and 70% respectively, demand for backend, frontend, and data engineers declined 14-24%. Salary growth remained flat after inflation adjustment, and there is no evidence that companies are laying off non-AI workers specifically to fund increased AI hiring, though AI is reshaping long-term skill demand.",
+  "keyFindings": [
+    "Job openings for AI scientists grew 80% and for machine learning engineers grew 70% from November 2022-February 2023 to November 2023-February 2024, while backend engineers declined 14%, frontend engineers 24%, and data engineers 20%+.",
+    "Mentions of LLMs in job postings increased 3000% year-over-year, while NLP skills saw a 155% increase in job demand, reflecting the focus on chatbot and customer service applications.",
+    "Engineering salaries remained flat after inflation adjustment despite high demand for AI talent, suggesting an adequate supply of machine learning engineers and scientists with less scarcity than narrative suggests.",
+    "Companies that conducted layoffs in 2023 posted 20% more AI-related jobs post-layoff versus 24% more jobs overall, showing no disproportionate shift toward AI hiring relative to other roles.",
+    "Rust programming language job openings increased 32% despite overall backend engineer positions declining, while Ruby on Rails experienced the steepest decline among traditional programming languages."
+  ],
+  "methodology": "Analysis of 20 million job postings from over 50,000 companies (5,000 enterprises and 45,000 smaller firms, including nearly all public companies with >$1B market cap) provided by Revealera.com, covering November 1, 2022 to February 21, 2024. Machine learning classifier applied to job descriptions/titles to categorize engineering roles; entity extraction algorithm identified skills mentioned. Data indexed in Elasticsearch for time period aggregations. Salary analysis focused on positions in San Francisco, New York, and Seattle using midpoint of posted salary ranges. Layoff company list sourced from TechCrunch.",
+  "qualifiers": "Analysis uses public salary ranges listed in job postings, not actual salaries of currently employed engineers; base salaries only, not total compensation. Salary analysis limited to high cost-of-living cities (SF, NYC, Seattle). ML engineer job openings still 15% lower than 2020-2021 peak hiring period. AI and ML engineers/scientists represent only 5% of all engineering job postings. Study focuses on US-based job postings. Each company counted once with averages taken for multiple listings. Only USD currency salaries included.",
+  "fetchedAt": "2026-03-08"
+}

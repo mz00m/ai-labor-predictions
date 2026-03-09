@@ -1,0 +1,13 @@
+{
+  "id": "autor-kausik-automation-paradox-2026",
+  "abstract": "This paper challenges the conventional concern that automation and AI reduce wages by depressing labor share. The authors prove that in a competitive economy with constant returns to scale, the relationship between labor share and wages is non-monotonic, and when labor share exceeds a wage-maximizing level (as estimated for all twelve industrialized countries studied), further automation should raise wages despite reducing labor's output share. Using data from the U.S. and eleven other countries, they find that declining labor share accounted for 16% of U.S. real wage growth between 1954 and 2019.",
+  "keyFindings": [
+    "In a competitive economy with constant returns to scale, the wage-maximizing labor share depends only on the capital-to-labor ratio, creating a non-monotonic relationship between labor share and wages.",
+    "Labor share is estimated to be too high in all twelve industrialized countries studied, implying that further automation should raise wages.",
+    "Falling labor share accounted for 16% of U.S. real wage growth between 1954 and 2019.",
+    "When labor share exceeds the wage-maximizing level, further automation increases wages even while reducing labor's output share."
+  ],
+  "methodology": "Theoretical analysis using a competitive economy model with constant returns to scale, combined with empirical estimation using data from the United States and eleven other industrialized countries over the period 1954-2019. Specific sample sizes and detailed analytical techniques are not provided in the abstract.",
+  "qualifiers": "The authors note that 'automation-driven shifts in labor share are likely to pose significant social and political challenges' despite wage gains, indicating that wage growth does not preclude other concerns. The paper is a recent arXiv submission (January 2026) and has not yet undergone peer review.",
+  "fetchedAt": "2026-03-08"
+}

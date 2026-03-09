@@ -1,0 +1,13 @@
+{
+  "id": "ft-ai-salaries-2024",
+  "abstract": "Companies hiring for AI-related positions face a 28-30% salary premium due to high demand and limited supply of workers with AI skills. A Lightcast analysis of 1.3 billion job postings found that roles advertising at least one AI or generative AI skill offered $18,000 more in annual compensation on average, with AI skills increasingly required across non-tech industries. Experts warn that delaying AI hiring will result in even higher recruitment costs as the talent gap widens.",
+  "keyFindings": [
+    "Job postings with at least one AI or generative AI skill offered $18,000 more in annual compensation on average, representing a 28% increase in salary requirements.",
+    "51% of roles advertising AI skills were in non-tech industries in 2024, up from 44% in 2022, indicating AI skill demand is spreading across diverse career sectors.",
+    "Recruiters and HR professionals are among the roles seeing the biggest rise in AI skill demand, moving beyond traditional tech and IT positions.",
+    "The workforce supply of employees with AI skills has remained consistent while employer demand for these skills has increased significantly, creating a supply-demand imbalance."
+  ],
+  "methodology": "Analysis by research firm Lightcast of over 1.3 billion job postings in 2024, comparing compensation for positions advertising AI or generative AI skills (including LLMs like ChatGPT, prompt engineering, and text summarization) versus those without such requirements. Longitudinal comparison of industry distribution of AI roles between 2022 and 2024.",
+  "qualifiers": "None stated",
+  "fetchedAt": "2026-03-08"
+}

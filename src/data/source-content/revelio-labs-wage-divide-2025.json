@@ -1,0 +1,14 @@
+{
+  "id": "revelio-labs-wage-divide-2025",
+  "abstract": "Revelio Labs analysis of job posting wages from January 2023 to December 2025 shows the labor market is bifurcating into a K-shaped economy, with top-quartile salaries growing 30% while bottom-quartile salaries rose only 10%. The study finds that AI adoption is negatively correlated with wage growth in lower-paid occupations, suggesting automation is disproportionately suppressing wages for lower-income workers in roles with predictable, repetitive tasks, contrary to narratives about AI primarily impacting high-wage white-collar jobs.",
+  "keyFindings": [
+    "Top-quartile salaries have grown by more than 30% since January 2023, while bottom-quartile salaries have risen only around 10%, reversing post-pandemic wage convergence trends.",
+    "Demand for high-wage jobs over USD 100,000 has grown approximately 150% over two years, while demand for low-wage jobs earning USD 30,000 or below has decreased by over 50% since January 2023.",
+    "AI adoption rates are strongly negatively correlated with wage growth at the bottom of the wage distribution, while showing only weak correlation for top-quartile jobs, indicating automation pressures disproportionately suppress lower-wage gains.",
+    "The highest wage growth in bottom-quartile jobs appears in Sales, Legal, and Protective Services—occupations with low propensity for automation and high labor intensity—growing around 9% year-over-year.",
+    "Top-quartile jobs in Arts, Design, and Entertainment show the strongest salary growth at 53% year-over-year, while legal occupations show stark internal disparity with top-quartile salaries growing 37% versus 6% for bottom-quartile positions."
+  ],
+  "methodology": "Analysis of Revelio Public Labor Statistics (RPLS) wage data derived from job postings covering the period from January 2023 to December 2025. The study examines salary trends across wage quartiles, occupational categories, and correlates AI adoption rates with wage growth patterns. Specific data sources include job postings data used for RPLS job openings reports and salary information from new job postings across various occupations and wage levels.",
+  "qualifiers": "None stated",
+  "fetchedAt": "2026-03-08"
+}

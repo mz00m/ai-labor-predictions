@@ -1,0 +1,14 @@
+{
+  "id": "indeed-sw-dev-postings-2025",
+  "abstract": "The Indeed Hiring Lab's Q4 2024 analysis of business-to-business labor market trends reveals that while overall US job postings remain 10.8% above pre-pandemic baseline levels, software development postings have severely underperformed, remaining 33% below pre-pandemic levels as of November 2024. Software developer wages show the weakest growth among B2B categories at 0.7% year-over-year, reflecting persistent weak demand, while insurance and education sectors show relative strength with insurance postings up 7.4% and education wages growing 4.1% year-over-year.",
+  "keyFindings": [
+    "Overall US job postings as of January 17, 2025 were 10.8% above pre-pandemic baseline but down 8.3% year-over-year from January 17, 2024.",
+    "Software development job postings remain 33% below pre-pandemic baseline as of November 2024, with minimal growth during the second half of 2024.",
+    "Software development wages grew only 0.7% year-over-year in December 2024, the weakest among B2B categories analyzed.",
+    "Insurance job postings emerged as a bright spot, up 7.4% year-over-year and 38.7% above pre-pandemic baseline as of January 17, 2025.",
+    "Education & Instruction job postings showed the strongest wage growth at 4.1% year-over-year through December 2024, well above the labor market average of 3.3%."
+  ],
+  "methodology": "Analysis of Indeed Job Posting Index (JPI) data tracking business-to-business employment trends through January 17, 2025, with wage growth data through December 2024. Data compared against pre-pandemic baseline and year-over-year changes. The Indeed Hiring Lab continuously monitors job posting trends across occupational categories.",
+  "qualifiers": "Analysis is limited to job postings data from Indeed and does not capture the full labor market. Software development posting data noted as of November 2024 in the excerpt (slightly earlier than the January 2025 cutoff for other metrics). Wage growth based on posted salaries, which may not reflect actual compensation offered. No confidence intervals or statistical significance testing mentioned.",
+  "fetchedAt": "2026-03-08"
+}

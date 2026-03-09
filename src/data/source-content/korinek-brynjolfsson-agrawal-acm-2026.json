@@ -1,0 +1,14 @@
+{
+  "id": "korinek-brynjolfsson-agrawal-acm-2026",
+  "abstract": "This white paper outlines a research agenda for understanding how Transformative AI (TAI) will reshape economic models, institutions, and policies. The authors propose nine Grand Challenges spanning economic growth dynamics, income distribution mechanisms, labor market transitions, institutional adaptation, and policy design in an era of advanced AI capabilities.",
+  "keyFindings": [
+    "Economic growth effects of Transformative AI remain highly uncertain, with potential for both unprecedented prosperity and economic disruption depending on technology deployment and policy responses.",
+    "Income inequality is likely to increase substantially unless deliberate policy interventions address skill-biased technological change and capital concentration effects.",
+    "Labor market transitions will require new frameworks for worker reallocation, skill development, and social safety nets as AI capabilities expand across occupations.",
+    "Current economic institutions and policy structures are insufficiently equipped to manage the rapid changes anticipated from Transformative AI.",
+    "Interdisciplinary research combining economics, computer science, and policy analysis is essential to address the nine identified Grand Challenges."
+  ],
+  "methodology": "Not specified. This is a white paper proposing a research agenda rather than reporting original empirical research. It synthesizes existing economic theory, AI capability assessments, and policy considerations to identify priority research areas.",
+  "qualifiers": "The document is dated October 23, 2024, and is labeled as a 'White Paper Draft,' indicating preliminary status. The analysis is necessarily speculative regarding timing and magnitude of AI's economic impacts, as Transformative AI has not yet been realized. The scope focuses on advanced AI scenarios but does not quantify probabilities or timelines. Uncertainty language is inherent throughout regarding which economic outcomes will materialize.",
+  "fetchedAt": "2026-03-08"
+}

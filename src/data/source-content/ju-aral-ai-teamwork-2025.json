@@ -1,0 +1,14 @@
+{
+  "id": "ju-aral-ai-teamwork-2025",
+  "abstract": "This large-scale field experiment examined human-AI team collaboration using 2,234 participants who produced 11,024 ads evaluated through independent human ratings and a field experiment on X with ~5M impressions. Human-AI teams produced 50% more ads per worker with higher text quality, while human-human teams produced higher image quality. The study identified three mechanisms explaining productivity gains: human-AI collaboration was more task-oriented with 25% more task-oriented messages, participants delegated 17% more work to AI agents, and recognition of AI partnership moderated these effects, ultimately reshaping teamwork dynamics.",
+  "keyFindings": [
+    "Human-AI teams produced 50% more ads per worker and higher text quality, while human-human teams produced higher image quality, indicating a jagged frontier of AI agent capability.",
+    "Human-AI collaboration involved 25% more task-oriented messages and 18% fewer interpersonal messages compared to human-human teams.",
+    "Participants delegated 17% more work to AI agents than to human partners and performed 62% fewer direct text edits when working with AI.",
+    "Task-oriented communication improved ad quality when working with AI, while interpersonal communication reduced ad quality; delegation improved text quality but was associated with output homogeneity.",
+    "Field experiment results showed higher text quality improved click-through rates and view-through duration, while higher image quality improved cost-per-click rates."
+  ],
+  "methodology": "Large-scale randomized controlled experiment on Pairit, a custom platform for studying human-AI collaboration. 2,234 participants were randomly assigned to human-human and human-AI teams that produced 11,024 ads for a think tank. Ads were evaluated using independent human ratings and a field experiment on X (Twitter) that generated approximately 5 million impressions. The study analyzed communication patterns, task delegation, and performance outcomes across both conditions.",
+  "qualifiers": "None stated",
+  "fetchedAt": "2026-03-09"
+}

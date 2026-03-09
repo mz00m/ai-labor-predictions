@@ -1,0 +1,14 @@
+{
+  "id": "ifo-ai-job-cuts-germany-2025",
+  "abstract": "A June 2025 ifo Institute survey of German companies finds that 27.1% expect artificial intelligence to lead to job cuts within five years, while only 5.2% anticipate job growth and two-thirds expect no change. If job cuts occur, companies expect an average reduction of around 8%, with significant variation by sector—industrial companies show particular concern at 37.3% expecting cuts, while construction remains largely insulated with over 80% expecting no change.",
+  "keyFindings": [
+    "27.1% of German companies expect AI to lead to job cuts in the next five years, while only 5.2% anticipate additional jobs and 67% expect no employment change.",
+    "In the industrial sector, more than a third of companies (37.3%) expect job cuts due to AI, compared to the economy-wide average of 27.1%.",
+    "Companies expecting job cuts anticipate an average reduction of around 8% of their workforce.",
+    "In the construction industry, over 80% of companies believe AI will not change the number of employees.",
+    "In technology-related services such as IT and information processing, some companies anticipate employment growth exceeding 10%."
+  ],
+  "methodology": "Survey conducted by ifo Institute of German companies regarding AI's expected impact on employment over a five-year period. Specific sample size, sampling methodology, and survey timing details not provided in source text.",
+  "qualifiers": "Employment effects of AI are described as 'still moderate,' with measurable labor market impacts expected to take 'a few years' to materialize. Results are based on company expectations rather than observed outcomes. Detailed data available upon request but not presented in this press release.",
+  "fetchedAt": "2026-03-09"
+}

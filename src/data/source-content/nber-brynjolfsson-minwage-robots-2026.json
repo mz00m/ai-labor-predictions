@@ -1,0 +1,12 @@
+{
+  "id": "nber-brynjolfsson-minwage-robots-2026",
+  "abstract": "This paper examines how minimum wage policy affects firms' adoption of automation technologies in U.S. manufacturing. Using plant-level data on industrial robot imports linked to U.S. Census microdata from 1992–2021 and exploiting discontinuities at state borders, the authors find that minimum wage increases raise robot adoption. A 10 percent increase in the minimum wage increases robot adoption by roughly 8 percent relative to the mean.",
+  "keyFindings": [
+    "A 10 percent increase in the minimum wage increases robot adoption by roughly 8 percent relative to the mean",
+    "Minimum wage increases raise the likelihood of robot adoption in manufacturing across multiple model specifications",
+    "State-border discontinuities provide causal evidence that otherwise similar firms adopt robots differently when exposed to different wage floors"
+  ],
+  "methodology": "Plant-level data on industrial robot imports from 1992–2021 linked to U.S. Census microdata. State-level measures of robot exposure employed. Identification strategy exploits discontinuities at state borders to compare otherwise similar firms exposed to different minimum wage floors. Conducted at the Federal Statistical Research Data Center with Special Sworn Status.",
+  "qualifiers": "None stated",
+  "fetchedAt": "2026-03-09"
+}

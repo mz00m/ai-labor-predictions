@@ -1,0 +1,14 @@
+{
+  "id": "bls-jolts-december-2025",
+  "abstract": "The Job Openings and Labor Turnover Survey (JOLTS) reports that job openings continued to decline to 6.5 million in December 2025, marking the lowest level since December 2017 and down 966,000 from the prior year. Hires and total separations remained stable at 5.3 million each, with quits unchanged at 3.2 million and layoffs and discharges little changed at 1.8 million. Significant declines occurred in professional and business services, retail trade, and finance and insurance sectors.",
+  "keyFindings": [
+    "Job openings fell to 6.5 million in December 2025, down 386,000 over the month and 966,000 over the year, representing the lowest level since December 2017.",
+    "Professional and business services job openings decreased 257,000, retail trade decreased 195,000, and finance and insurance decreased 120,000 in December.",
+    "Hires and total separations remained stable at 5.3 million and 3.3 percent rate in December.",
+    "Quits were unchanged at 3.2 million (2.0 percent rate) while layoffs and discharges remained little changed at 1.8 million (1.1 percent rate).",
+    "Job openings rate declined to 3.9 percent in December with minimal monthly change."
+  ],
+  "methodology": "Monthly survey by the U.S. Bureau of Labor Statistics collecting data on job openings, hires, and separations for the total nonfarm sector by industry and establishment size class. Data collected on the last business day of each month for job openings, with hires and separations tracked throughout the entire month. Estimates are seasonally adjusted, and November 2025 figures were revised based on additional reports received from businesses and government agencies.",
+  "qualifiers": "Estimates subject to annual revision as part of regular BLS process; unadjusted and seasonally adjusted data from January 2021 forward subject to revision with January 2026 release which will incorporate annual updates to employment estimates and seasonal adjustment factors. Monthly revisions result from additional reports received since last published estimates.",
+  "fetchedAt": "2026-03-09"
+}

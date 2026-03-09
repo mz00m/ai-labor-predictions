@@ -1,0 +1,14 @@
+{
+  "id": "accenture-health-ai-2023",
+  "abstract": "Accenture's Technology Vision 2025 report examines the emerging autonomy of AI systems and the critical role of trust in their enterprise adoption. The report identifies four key trends: the 'Binary Big Bang' where AI development costs plummet and systems gain unprecedented autonomy; the need for personified AI to preserve brand differentiation; foundation models transforming robotics into versatile, reasoning machines; and a new learning loop where employees and AI systems co-evolve to drive innovation. The underlying theme emphasizes that while AI capabilities are expanding exponentially, organizations must prioritize trust-building mechanisms through transparency, governance, and employee empowerment to fully capture AI's potential.",
+  "keyFindings": [
+    "77% of executives agree AI agents will reinvent how organizations build digital systems, with 78% believing digital ecosystems must be built for AI agents as much as for humans over the next 3-5 years.",
+    "80% of executives report differentiation challenges from chatbots that sound the same, and 95% believe maintaining consistent personality in customer-facing AI agents will be important over the next 3 years.",
+    "80% of executives believe natural language communication will increase trust and collaboration between humans and robots, with 74% seeing promise in adaptable and intelligent robots.",
+    "68% of executives report a need to upskill or reskill employees in gen AI tools within 3 years, while 95% expect employee tasks will moderately or significantly shift toward innovation roles.",
+    "75% of executives believe organizations can only fully capture automation benefits through building trust with employees."
+  ],
+  "methodology": "Not specified. The document presents executive survey findings and trend analysis from Accenture's Technology Vision 2025 research, but does not detail sample size, data collection methodology, or analytical approach.",
+  "qualifiers": "The report uses forward-looking language ('emerging trends,' 'will be') and executive opinion data rather than empirical outcome measurements. Statements about future adoption, impact, and organizational transformation represent anticipated possibilities rather than demonstrated results. The scope focuses primarily on enterprise and executive perspectives without specifying geographic limitations, though Accenture's historical reports typically emphasize US and developed markets.",
+  "fetchedAt": "2026-03-08"
+}

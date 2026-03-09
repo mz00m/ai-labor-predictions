@@ -1,0 +1,14 @@
+{
+  "id": "bls-ooh-programmer-decline-2023-2033",
+  "abstract": "The Bureau of Labor Statistics projects employment of computer programmers will decline 6 percent from 2024 to 2034, with approximately 7,200 fewer jobs by 2034. Despite this decline, about 5,500 job openings are expected annually, driven entirely by replacement needs as workers retire or transition to other occupations. The decline is attributed to automation of programming tasks through artificial intelligence and other technologies, with some higher-skilled work shifting to software developers.",
+  "keyFindings": [
+    "Employment of computer programmers is projected to decline 6 percent from 2024 to 2034, resulting in a loss of 7,200 jobs (from 121,200 to 113,900).",
+    "Despite declining employment, approximately 5,500 job openings are projected annually over the decade, all resulting from replacement of workers who retire or transfer to other occupations.",
+    "The median annual wage for computer programmers was $98,670 in May 2024, with the lowest 10 percent earning less than $52,190 and the highest 10 percent earning more than $162,090.",
+    "Computer programming work continues to be automated, with companies leveraging artificial intelligence to automate repetitive programming tasks and reduce costs.",
+    "Computer programmers typically require a bachelor's degree in computer science or a related field, with most specializing in several programming languages."
+  ],
+  "methodology": "Data from the Bureau of Labor Statistics Employment Projections program for the 2024-2034 decade, based on occupational employment statistics from May 2024. Wage data derived from the Occupational Employment and Wage Statistics (OEWS) survey. Employment projections developed using standard BLS methodology with a 10-year projection horizon.",
+  "qualifiers": "Employment projections are forward-looking estimates subject to uncertainty. All wage data exclude self-employed workers, agriculture workers, and workers in private households. Projections assume continuation of current economic and technological trends. State and area data available separately through OEWS and Projections Central but specific regional variation is not detailed in this document.",
+  "fetchedAt": "2026-03-09"
+}

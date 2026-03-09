@@ -1,0 +1,13 @@
+{
+  "id": "anthropic-labor-market-impacts-2026",
+  "abstract": "This paper develops a new measure of occupational exposure to AI and examines labor market impacts for highly exposed workers since late 2022. The authors find no systematic increase in unemployment for workers in AI-exposed occupations, but identify suggestive evidence that hiring of younger workers has slowed in these exposed occupations, indicating potential differential impacts across age groups.",
+  "keyFindings": [
+    "No systematic increase in unemployment for highly exposed workers since late 2022, contrary to some automation displacement concerns.",
+    "Suggestive evidence that hiring of younger workers has slowed in occupations with high AI exposure.",
+    "Study develops a new measure of occupational AI exposure to assess labor market vulnerability.",
+    "Differential labor market impacts appear to exist across demographic groups, particularly by age."
+  ],
+  "methodology": "Not specified in the provided excerpt. The source is a research paper from Anthropic (Massenkoff, McCrory) dated March 5, 2026, but the methodology section is not visible in the extracted PDF content. Analysis appears to examine labor market data from late 2022 onward using an occupational exposure measure.",
+  "qualifiers": "The paper uses the language 'suggestive evidence' regarding younger worker hiring impacts, indicating preliminary or non-conclusive findings. The full scope and limitations of the study cannot be determined from the available excerpt.",
+  "fetchedAt": "2026-03-08"
+}

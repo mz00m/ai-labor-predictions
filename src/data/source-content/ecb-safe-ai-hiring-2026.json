@@ -1,0 +1,14 @@
+{
+  "id": "ecb-safe-ai-hiring-2026",
+  "abstract": "This ECB analysis examines AI's impact on European firm hiring decisions using survey data from 5,000 enterprises in 2025. While two-thirds of firms use AI, only one-quarter invest in it. The study finds that companies with frequent AI use are approximately 4% more likely to hire additional staff, and firms investing in AI are nearly 2% more likely to increase employment. Overall, AI-intensive firms tend to hire rather than replace workers, particularly in R&D and innovation roles, though longer-term effects remain uncertain.",
+  "keyFindings": [
+    "Two-thirds of the 5,000 surveyed European firms reported that their employees use AI, with 90% of large firms (250+ employees) using it compared to 60% of small firms (<10 employees).",
+    "Companies with frequent AI use are approximately 4% more likely to take on additional staff, while firms that invest in AI are nearly 2% more likely to hire additional employees.",
+    "The positive employment effect is driven by small firms, while AI shows a neutral impact on large firms' employment levels.",
+    "Firms using AI for research and development and innovation show the strongest employment growth, while only 15% of AI-using firms cite labour cost reduction as a motivation.",
+    "Firms planning to invest in AI over the next year maintain positive employment expectations, with no marked difference in overall hiring intentions between AI investors and non-investors."
+  ],
+  "methodology": "Cross-sectional survey analysis of approximately 5,300 euro area firms drawn from the ECB's Survey on Access to Finance of Enterprises (SAFE) in the second and fourth quarters of 2025. Employment outcomes were analyzed using ordered probit regression models, with control variables including firm size, age, turnover, investment, profitability, economic outlook, sector, and country fixed effects. The analysis compared firms that use and invest in AI with those that do not.",
+  "qualifiers": "The study focuses on current and near-term effects only; longer-term employment impacts remain uncertain as AI has not yet significantly transformed production processes. Results are specific to Europe and may not be comparable to studies on the United States due to differences in scale of investment, extent, and timing of AI adoption. The survey cannot determine the specific types of workers being hired. A longer time horizon (five years) from other studies suggests potential future job cuts that are not captured in this analysis.",
+  "fetchedAt": "2026-03-09"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "arxiv-what-do-professional-2025",
+  "abstract": "Generative AI is showing early evidence of productivity gains for software developers, but concerns persist regarding workforce disruption and deskilling. This research with 21 developers at the cutting edge of AI adoption identified 12 work goals, 75 associated tasks, and the skills and knowledge required for each, revealing that successful AI-enhanced developers need competencies organized into four domains (using Generative AI effectively, core software engineering, adjacent engineering, and adjacent non-engineering) deployed across a 6-step task workflow. The authors conclude that on-the-job learning initiatives and computer science degree programs must target both soft skills and technical knowledge across all four domains to reskill, upskill, and safeguard against deskilling.",
+  "keyFindings": [
+    "Research involved interviews with 21 professional software developers at the cutting edge of using generative AI in their work.",
+    "The study identified 12 distinct work goals with 75 associated tasks that developers perform when using AI.",
+    "Successful AI-enhanced developers require competencies across four domains: using Generative AI effectively, core software engineering, adjacent engineering, and adjacent non-engineering.",
+    "Critical skills and knowledge must be deployed at specific junctures throughout a 6-step task workflow.",
+    "Both on-the-job learning initiatives and computer science degree programs need to target soft skills and technical knowledge across all four domains to prevent deskilling."
+  ],
+  "methodology": "Qualitative research study with 21 professional software developers identified as being at the cutting edge of generative AI adoption. The researchers conducted interviews to uncover work goals, associated tasks, and required skills and knowledge, synthesizing findings into five key insights and a 50-page occupational profile of the AI-enhanced software developer. Published in the software engineering education track of the 2025 ACM international conference on the foundations of software engineering.",
+  "qualifiers": "Research limited to a sample of 21 developers described as 'at the cutting edge' of AI adoption, which may not represent the broader developer population. Early evidence stage regarding productivity gains. Findings presented as emerging insights rather than comprehensive conclusions.",
+  "fetchedAt": "2026-03-09"
+}

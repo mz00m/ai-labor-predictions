@@ -1,0 +1,12 @@
+{
+  "id": "eig-entry-level-ai-displacement-2026",
+  "abstract": "This Economic Innovation Group study examines whether AI's labor market impact disproportionately affects entry-level workers compared to senior positions. Analyzing job posting trends from 2020-2025 across occupations most exposed to AI, the authors find no evidence that junior roles have declined more severely than senior positions, with both declining in parallel since Spring 2022 and junior postings stabilizing faster.",
+  "keyFindings": [
+    "Job postings for junior roles within AI-exposed occupations have declined roughly in parallel with senior-level positions since peaking in Spring 2022, not at a faster rate.",
+    "Junior-level job postings have stabilized more quickly than senior-level postings following their Spring 2022 peak, suggesting differential recovery patterns by seniority level.",
+    "There is no evidence supporting the hypothesis that AI is differentially impacting entry-level jobs more severely than more senior occupational positions in the labor market."
+  ],
+  "methodology": "Analysis of job posting data from 2020-2025 tracking trends across occupations identified as most exposed to AI, comparing posting volume changes for junior and senior level positions over time, with particular focus on the period from Spring 2022 onward.",
+  "qualifiers": "Analysis based on available job posting data; findings specific to posted positions and may not capture all labor market dynamics; scope limited to occupations most exposed to AI; limited information provided on specific data sources or methodological details in excerpt.",
+  "fetchedAt": "2026-03-08"
+}

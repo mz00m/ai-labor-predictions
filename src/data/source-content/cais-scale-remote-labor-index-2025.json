@@ -1,0 +1,12 @@
+{
+  "id": "cais-scale-remote-labor-index-2025",
+  "abstract": "This paper introduces the Remote Labor Index (RLI), a multi-sector benchmark comprising 240 real-world, economically valuable projects across game development, design, architecture, data analysis, and animation, designed to evaluate end-to-end AI agent performance in practical remote work settings. The study finds that AI agents perform near the floor on RLI, with the highest-performing agent achieving only a 2.5% automation rate, providing empirical evidence to ground discussions of AI automation's economic impact and enabling stakeholders to track and proactively navigate AI-driven labor displacement.",
+  "keyFindings": [
+    "The highest-performing AI agent achieved an automation rate of only 2.5% on the Remote Labor Index benchmark.",
+    "AI agents generally perform near the floor on RLI across diverse remote work domains including game development, design, architecture, data analysis, and animation.",
+    "The Remote Labor Index comprises 240 real freelance projects designed to measure end-to-end agent performance in economically valuable, practical settings rather than research-oriented benchmarks."
+  ],
+  "methodology": "Empirical benchmark study using 240 real-world freelance projects across multiple sectors (game dev, design, architecture, data analysis, animation) to evaluate end-to-end AI agent performance on practical remote labor tasks. Specific details regarding data collection procedures, agent models tested, evaluation metrics, and sample characteristics are not provided in the available excerpt.",
+  "qualifiers": "The paper appears to be a recent submission (October 30, 2025) and the full methodology details are not accessible from the provided excerpt. The automation rates reported represent point estimates from tested agents, and generalizability to other AI systems or remote work domains not represented in the benchmark is unclear.",
+  "fetchedAt": "2026-03-09"
+}

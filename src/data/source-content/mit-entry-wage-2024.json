@@ -1,0 +1,13 @@
+{
+  "id": "mit-entry-wage-2024",
+  "abstract": "David Autor argues that AI presents a unique opportunity to restore the middle-skill, middle-class labor market that has been hollowed out by automation and globalization. By extending human expertise and enabling a broader set of workers to perform higher-stakes decision-making tasks currently reserved for elite experts—such as medical diagnosis, legal work, software engineering, and education—AI could democratize expertise across professions. The paper positions this as a normative argument about what is possible with well-designed AI deployment, rather than a forecast.",
+  "keyFindings": [
+    "AI can extend the relevance, reach, and value of human expertise by weaving information, rules, and acquired experience to support decision-making tasks currently concentrated among elite professionals",
+    "Unlike computerization in the Information Age, which concentrated economic power despite promises of democratization, AI has the potential to distribute higher-stakes decision-making authority to a larger set of complementary workers",
+    "AI could enable restoration of the middle-skill, middle-class workforce that has been eroded by automation and globalization if deployed appropriately",
+    "Current economic hierarchies concentrate decision-making authority in elite experts across domains including medicine, law, software engineering, and higher education"
+  ],
+  "methodology": "This is a conceptual and argumentative paper, not an empirical study. It draws on collaborative work with economists including Daron Acemoglu, Joe Hazell, Simon Johnson, and others, as well as the author's solo research on automation and labor markets. The paper was drafted for NOEMA Magazine and informed by participation in the National Academy of Science and Engineering's panel on 'Automation and the U.S. Workforce: An Update.' The analysis builds on prior research examining the relationship between automation, globalization, and labor market stratification.",
+  "qualifiers": "The author explicitly states this is 'not a forecast but an argument about what is possible,' indicating the findings are normative rather than predictive. The outcome depends critically on how AI is 'used well,' suggesting implementation and policy choices are contingent factors. The paper does not present empirical evidence or quantitative analysis to support the claims about AI's potential effects on middle-class labor markets.",
+  "fetchedAt": "2026-03-09"
+}

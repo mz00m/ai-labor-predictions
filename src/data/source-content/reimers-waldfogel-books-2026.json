@@ -1,0 +1,13 @@
+{
+  "id": "reimers-waldfogel-books-2026",
+  "abstract": "This study examines the impact of Large Language Models on book publishing between 2022 and 2025, finding that while new book releases tripled during the LLM influx period, average quality declined overall. However, the top 1,000 monthly releases per category showed higher quality than pre-LLM periods, and a nested logit calibration estimates that LLM-enhanced book production could increase consumer surplus by 25-50 percent in steady state, suggesting net welfare gains despite increased quantity of lower-quality works.",
+  "keyFindings": [
+    "New book releases tripled between 2022 and 2025 during the LLM diffusion period, but average quality of releases declined.",
+    "The top 1,000 monthly releases per category achieved higher quality than pre-LLM vintages, with larger quality improvements in categories experiencing faster title growth.",
+    "Authors entering the market since the LLM influx produce predominantly low-quality work, while pre-LLM author entrants have increased their higher-quality output.",
+    "A nested logit calibration model estimates LLM-enhanced book production could raise consumer surplus by 25-50 percent in steady state."
+  ],
+  "methodology": "The authors developed a ratings-based usage measure comparable across book release vintages and analyzed quality trends for books released between 2022-2025 versus pre-LLM periods. They examined quality patterns across the full distribution of releases (top 1,000 monthly releases per category) and by author cohort (pre-LLM versus post-LLM entrants). A nested logit calibration was used to model steady-state consumer surplus effects. Specific data sources, sample sizes, and detailed analytical procedures are not fully specified in the excerpt provided.",
+  "qualifiers": "The analysis focuses on top 1,000 monthly releases per category rather than top 100, noting this distinction in findings. The consumer surplus estimates represent potential steady-state effects under a calibrated model, which may differ from actual realized outcomes. The study period (2022-2025) is relatively short for assessing long-run equilibrium impacts.",
+  "fetchedAt": "2026-03-09"
+}

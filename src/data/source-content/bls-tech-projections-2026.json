@@ -1,0 +1,14 @@
+{
+  "id": "bls-tech-projections-2026",
+  "abstract": "The Bureau of Labor Statistics analyzes AI's potential impacts on employment projections through 2033, finding that while AI may augment worker productivity in occupations like software development, law, and engineering, most affected occupations are still projected to experience employment growth. Despite AI's ability to automate certain tasks, underlying demand for services in computer, business, financial, legal, and engineering sectors is expected to support continued job growth, with notable exceptions in some claims and insurance roles.",
+  "keyFindings": [
+    "Software developer employment is projected to grow 17.9% from 2023-2033, much faster than the 4.0% average for all occupations, despite AI's potential to automate programming tasks.",
+    "Personal financial advisors face competition from AI-based robo-advisors but are still projected to grow 17.1% through 2033 due to strong underlying demand.",
+    "Database architects and administrators are expected to see increased demand (10.8% and 8.2% growth respectively) as organizations build more complex AI data infrastructure.",
+    "Legal occupations show mixed impacts, with lawyers growing 5.2% but paralegals and legal assistants growing only 1.2%, as AI handles document review tasks.",
+    "Some occupations including credit analysts (-3.9%), claims adjusters (-4.4%), and insurance appraisers (-9.2%) are projected to decline through 2033, suggesting greater AI displacement potential."
+  ],
+  "methodology": "Analysis based on the BLS Employment Projections program data covering the 2023-2033 period. The BLS identified occupations susceptible to AI impacts by examining whether their core tasks can be replicated by generative AI. Employment projections were developed for selected occupations across computer, business, financial, legal, architecture, and engineering occupational groups.",
+  "qualifiers": "The BLS notes that employment trajectories for many occupations affected by AI 'remain uncertain.' The analysis focuses on AI's current form (generative AI) and acknowledges that AI is expected to 'primarily affect' certain occupations while other jobs 'are also potentially susceptible' with uncertain outcomes. The source indicates this is preliminary analysis with inherent uncertainty about future technological and economic developments.",
+  "fetchedAt": "2026-03-08"
+}

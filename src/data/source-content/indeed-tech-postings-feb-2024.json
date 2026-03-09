@@ -1,0 +1,14 @@
+{
+  "id": "indeed-tech-postings-feb-2024",
+  "abstract": "While high-profile tech layoffs dominate headlines, the overall US job market remains relatively healthy with 83% of occupational sectors showing job postings above pre-pandemic levels as of February 2024. Tech-related postings have declined 25% below pre-pandemic baselines, but strong demand persists in in-person sectors including healthcare, beauty and wellness, and childcare, where postings are up 27% from pre-pandemic levels.",
+  "keyFindings": [
+    "Tech-related job postings are 25% below pre-pandemic levels as of February 16, 2024, with software development specifically down 28%.",
+    "Of 47 occupational sectors tracked, 39 (83%) had job postings above pre-pandemic levels in February 2024, with the overall Indeed Job Postings Index at 20% above pre-pandemic baseline.",
+    "Job postings in sectors with high remote-eligible roles are down 8% from pre-pandemic levels, while postings in low and medium remote-eligible sectors remain up 27% from pre-pandemic baselines.",
+    "Physicians & Surgeons postings lead growth at 102% above pre-pandemic levels, while only 8 of 47 sectors show declines compared to February 2020.",
+    "Tech postings peaked at 109% above pre-pandemic baseline in spring 2022, then fell below pre-pandemic levels in May 2023."
+  ],
+  "methodology": "Analysis of seasonally adjusted Indeed job postings data using a seven-day trailing average, with February 1, 2020 as the pre-pandemic baseline (index set to 100). Seasonal adjustment based on historical patterns from 2017-2019. Data tracked across 47 occupational sectors through February 16, 2024. Missing data from 2021-2022 were interpolated.",
+  "qualifiers": "Data covers Indeed.com postings only and may not represent the full job market. The authors note that job posting numbers should not be viewed as indicative of Indeed's revenue or earnings. Analysis is limited to sectors tracked by Indeed and does not capture all occupational categories. Post-holiday seasonal declines in some sectors noted as temporary.",
+  "fetchedAt": "2026-03-08"
+}

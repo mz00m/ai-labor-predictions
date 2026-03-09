@@ -1,0 +1,13 @@
+{
+  "id": "wang-neubig-agent-benchmarks-2026",
+  "abstract": "This study systematically examines the alignment between AI agent development benchmarks and real-world human labor distribution across the U.S. labor market. By mapping 72,342 tasks from 43 benchmarks to 1,016 occupations, the authors reveal substantial mismatches between programming-centric agent development and where human employment and economic value are concentrated. The research measures agent autonomy levels within targeted work areas and proposes three principles—coverage, realism, and granular evaluation—for designing benchmarks that better reflect socially important and technically challenging forms of work.",
+  "keyFindings": [
+    "Analyzed 43 benchmarks containing 72,342 tasks mapped to 1,016 real-world U.S. occupations to measure alignment with human employment and capital allocation.",
+    "Found significant mismatches between agent development focus (programming-centric) and the distribution of human labor and economic value across occupational categories.",
+    "Benchmarks collectively cover only 56.5% of the domain taxonomy but a substantially broader 85.4% of the skill taxonomy.",
+    "Characterized current agent utility by measuring autonomy levels across work scenarios to provide practical guidance for agent interaction strategies."
+  ],
+  "methodology": "Systematic analysis of 43 benchmarks containing 72,342 tasks mapped to work domains and skills. Cross-referenced benchmark instances with the distribution of real-world human employment and capital allocation across all 1,016 occupations in the U.S. labor market. Measured alignment metrics and characterized agent autonomy levels within targeted work areas.",
+  "qualifiers": "None stated",
+  "fetchedAt": "2026-03-09"
+}
