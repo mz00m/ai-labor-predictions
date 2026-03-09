@@ -146,7 +146,7 @@
         "wsj-white-collar-layoffs"
       ],
       "evidenceTier": 3,
-      "label": "WSJ: White-collar workers starting to feel the AI squeeze"
+      "label": "WSJ: Tens of thousands of white-collar jobs disappearing as AI starts to bite"
     },
     {
       "date": "2025-01-08",
@@ -272,7 +272,7 @@
         "gartner-middle-mgmt-2025"
       ],
       "evidenceTier": 3,
-      "label": "Gartner: 50% of middle management positions to be eliminated by 2030"
+      "label": "Gartner: 20% of orgs will use AI to eliminate half of middle mgmt by 2026"
     },
     {
       "date": "2025-12-15",
@@ -494,11 +494,11 @@
     },
     {
       "id": "wsj-white-collar-layoffs",
-      "title": "White-Collar Workers Are Starting to Feel the AI Squeeze",
+      "title": "Tens of Thousands of White-Collar Jobs Are Disappearing as AI Starts to Bite",
       "url": "https://www.wsj.com/economy/jobs/white-collar-jobs-ai-324b749c",
       "publisher": "The Wall Street Journal",
       "evidenceTier": 3,
-      "datePublished": "2024-10-05"
+      "datePublished": "2025-10-29"
     },
     {
       "id": "deloitte-professional-services-2025",
@@ -619,12 +619,12 @@
     },
     {
       "id": "gartner-middle-mgmt-2025",
-      "title": "Gartner: 50% of Middle Management Positions to Be Eliminated by 2030",
+      "title": "Gartner Top Predictions 2025: 20% of Orgs Will Use AI to Flatten Structure by 2026",
       "url": "https://www.gartner.com/en/newsroom/press-releases/2024-10-22-gartner-unveils-top-predictions-for-it-organizations-and-users-in-2025-and-beyond",
       "publisher": "Gartner",
       "evidenceTier": 3,
       "datePublished": "2025-11-20",
-      "excerpt": "Gartner projects 50% of middle management positions will be eliminated or restructured as AI handles reporting, coordination, and performance monitoring tasks."
+      "excerpt": "By 2026, 20% of organizations will use AI to flatten their organizational structure, eliminating more than half of current middle management positions in those organizations."
     },
     {
       "id": "goldman-ai-workforce-2025",
@@ -637,12 +637,12 @@
     },
     {
       "id": "gartner-ai-layoffs-2025",
-      "title": "Gartner Top Predictions for IT Organizations 2025",
-      "url": "https://www.gartner.com/en/newsroom/press-releases/2024-10-22-gartner-unveils-top-predictions-for-it-organizations-and-users-in-2025-and-beyond",
+      "title": "AI Is Coming for Inefficiency, Not People",
+      "url": "https://www.gartner.com/en/articles/ai-is-coming-for-inefficiency",
       "publisher": "Gartner",
       "evidenceTier": 3,
       "datePublished": "2025-10-22",
-      "excerpt": "Despite widespread AI adoption, less than 1% of enterprise layoffs in 2025 were directly attributed to AI. Most workforce changes are gradual restructuring."
+      "excerpt": "Less than 1% of announced layoffs in the first half of 2025 are attributable to productivity gains from AI; most (79%) have been unrelated to AI."
     },
     {
       "id": "egon-zehnder-cfo-ai-2025",

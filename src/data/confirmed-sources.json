@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-09",
-  "totalSources": 334,
-  "verifiedCount": 324,
+  "totalSources": 333,
+  "verifiedCount": 323,
   "sources": {
     "revelio-labs-wage-divide-2025": {
       "id": "revelio-labs-wage-divide-2025",
@@ -1211,11 +1211,12 @@
     },
     "epi-wages-2025": {
       "id": "epi-wages-2025",
-      "title": "State of Working America: AI and Wage Trends",
+      "title": "Unbalanced labor market power is what makes technology — including AI — threatening to workers",
       "url": "https://www.epi.org/publication/ai-unbalanced-labor-markets/",
-      "publisher": "Economic Policy Institute",
+      "publisher": "Economic Policy Institute (Bivens, Zipperer)",
       "evidenceTier": 2,
-      "datePublished": "2025-08-01",
+      "datePublished": "2024-03-28",
+      "excerpt": "AI is unlikely to be a direct threat to wages; the root causes of sluggish wage growth are policy decisions that led to imbalanced employer power. Productivity growth has not historically caused higher unemployment or inequality.",
       "usedIn": [
         "median-wage-impact"
       ],
@@ -1614,12 +1615,12 @@
     },
     "gartner-ai-layoffs-2025": {
       "id": "gartner-ai-layoffs-2025",
-      "title": "Gartner Top Predictions for IT Organizations 2025",
-      "url": "https://www.gartner.com/en/newsroom/press-releases/2024-10-22-gartner-unveils-top-predictions-for-it-organizations-and-users-in-2025-and-beyond",
+      "title": "AI Is Coming for Inefficiency, Not People",
+      "url": "https://www.gartner.com/en/articles/ai-is-coming-for-inefficiency",
       "publisher": "Gartner",
       "evidenceTier": 3,
       "datePublished": "2025-10-22",
-      "excerpt": "Despite widespread AI adoption, less than 1% of enterprise layoffs in 2025 were directly attributed to AI. Most workforce changes are gradual restructuring.",
+      "excerpt": "Less than 1% of announced layoffs in the first half of 2025 are attributable to productivity gains from AI; most (79%) have been unrelated to AI.",
       "usedIn": [
         "white-collar-professional-displacement"
       ],
@@ -1628,7 +1629,7 @@
     "gartner-cs-2023": {
       "id": "gartner-cs-2023",
       "title": "Gartner Predicts Conversational AI Will Reduce Contact Center Agent Labor Costs by $80 Billion in 2026",
-      "url": "https://www.gartner.com/en/newsroom/press-releases/2023-08-30-gartner-reveals-three-technologies-that-will-transform-customer-service-and-support-by-2028",
+      "url": "https://www.gartner.com/en/newsroom/press-releases/2022-08-31-gartner-predicts-conversational-ai-will-reduce-contac",
       "publisher": "Gartner",
       "evidenceTier": 2,
       "datePublished": "2023-08-30",
@@ -1662,28 +1663,14 @@
       ],
       "verified": true
     },
-    "gartner-edtech-2025": {
-      "id": "gartner-edtech-2025",
-      "title": "Gartner Unveils Top Predictions for IT Organizations and Users in 2025 and Beyond",
-      "url": "https://www.gartner.com/en/newsroom/press-releases/2024-10-22-gartner-unveils-top-predictions-for-it-organizations-and-users-in-2025-and-beyond",
-      "publisher": "Gartner",
-      "evidenceTier": 2,
-      "datePublished": "2024-10-22",
-      "excerpt": "Predicts 20% of organizations will use AI to flatten organizational structure by 2026, eliminating more than half of middle management positions. General workforce prediction, not EdTech-specific.",
-      "usedIn": [
-        "education-sector-displacement"
-      ],
-      "verified": true,
-      "synthetic": false
-    },
     "gartner-middle-mgmt-2025": {
       "id": "gartner-middle-mgmt-2025",
-      "title": "Gartner: 50% of Middle Management Positions to Be Eliminated by 2030",
+      "title": "Gartner Top Predictions 2025: 20% of Orgs Will Use AI to Flatten Structure by 2026",
       "url": "https://www.gartner.com/en/newsroom/press-releases/2024-10-22-gartner-unveils-top-predictions-for-it-organizations-and-users-in-2025-and-beyond",
       "publisher": "Gartner",
       "evidenceTier": 3,
       "datePublished": "2025-11-20",
-      "excerpt": "Gartner projects 50% of middle management positions will be eliminated or restructured as AI handles reporting, coordination, and performance monitoring tasks.",
+      "excerpt": "By 2026, 20% of organizations will use AI to flatten their organizational structure, eliminating more than half of current middle management positions in those organizations.",
       "usedIn": [
         "white-collar-professional-displacement"
       ],
@@ -2107,7 +2094,8 @@
       "url": "https://www.ilo.org/publications/flagship-reports/global-wage-report-2022-23-impact-inflation-and-covid-19-wages-and",
       "publisher": "International Labour Organization",
       "evidenceTier": 1,
-      "datePublished": "2023-09-01",
+      "datePublished": "2022-11-30",
+      "excerpt": "Global monthly wages fell in real terms to -0.9% in H1 2022 — first negative real wage growth this century. Among advanced G20 countries, real wages declined to -2.2%.",
       "usedIn": [
         "median-wage-impact"
       ],
@@ -3881,11 +3869,12 @@
     },
     "wsj-automation-2024": {
       "id": "wsj-automation-2024",
-      "title": "AI Is Starting to Threaten White-Collar Jobs",
+      "title": "AI Is Starting to Threaten White-Collar Jobs. Few Industries Are Immune.",
       "url": "https://www.wsj.com/lifestyle/careers/ai-is-starting-to-threaten-white-collar-jobs-few-industries-are-immune-b2daf100",
       "publisher": "The Wall Street Journal",
       "evidenceTier": 3,
-      "datePublished": "2024-07-15",
+      "datePublished": "2024-02-12",
+      "excerpt": "White-collar layoffs growing as companies link cuts to AI. Google, Duolingo, UPS all reduced workforce. Nearly two-thirds of white-collar workers report improved productivity from AI use.",
       "usedIn": [
         "overall-us-displacement"
       ],
@@ -3905,11 +3894,12 @@
     },
     "wsj-white-collar-layoffs": {
       "id": "wsj-white-collar-layoffs",
-      "title": "White-Collar Workers Are Starting to Feel the AI Squeeze",
+      "title": "Tens of Thousands of White-Collar Jobs Are Disappearing as AI Starts to Bite",
       "url": "https://www.wsj.com/economy/jobs/white-collar-jobs-ai-324b749c",
       "publisher": "The Wall Street Journal",
       "evidenceTier": 3,
-      "datePublished": "2024-10-05",
+      "datePublished": "2025-10-29",
+      "excerpt": "Amazon plans to cut 14K corporate jobs (10% of white-collar workforce). UPS reduced management by 14K. Target cut 1,800 corporate roles. Nearly 2M Americans unemployed 27+ weeks.",
       "usedIn": [
         "white-collar-professional-displacement"
       ],
