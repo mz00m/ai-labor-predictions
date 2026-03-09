@@ -6,6 +6,8 @@ interface Message {
   id: string;
   role: "user" | "assistant";
   content: string;
+  dbMessageId?: string;
+  feedback?: 1 | -1;
 }
 
 const SUGGESTED_QUESTIONS = [
@@ -29,6 +31,24 @@ function SendIcon() {
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <line x1="22" y1="2" x2="11" y2="13" />
       <polygon points="22 2 15 22 11 13 2 9 22 2" />
+    </svg>
+  );
+}
+
+function ThumbsUpIcon({ filled }: { filled?: boolean }) {
+  return (
+    <svg width="14" height="14" viewBox="0 0 24 24" fill={filled ? "currentColor" : "none"} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M7 22V11l5-9 2 1-1 5h7a2 2 0 0 1 2 2.2l-1.5 8A2 2 0 0 1 18.5 20H7z" />
+      <path d="M3 11v11h4V11H3z" />
+    </svg>
+  );
+}
+
+function ThumbsDownIcon({ filled }: { filled?: boolean }) {
+  return (
+    <svg width="14" height="14" viewBox="0 0 24 24" fill={filled ? "currentColor" : "none"} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M17 2v11l-5 9-2-1 1-5H4a2 2 0 0 1-2-2.2l1.5-8A2 2 0 0 1 5.5 4H17z" />
+      <path d="M21 2v11h-4V2h4z" />
     </svg>
   );
 }
@@ -107,6 +127,8 @@ export default function Chatbot() {
   const [input, setInput] = useState("");
   const [streaming, setStreaming] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [conversationId, setConversationId] = useState<string | null>(null);
+  const [sessionId] = useState(() => crypto.randomUUID());
   const scrollRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const abortRef = useRef<AbortController | null>(null);
@@ -145,6 +167,23 @@ export default function Chatbot() {
     }
     window.addEventListener("open-chatbot", handleOpenChat);
     return () => window.removeEventListener("open-chatbot", handleOpenChat);
+  }, []);
+
+  const sendFeedback = useCallback(async (messageId: string, rating: 1 | -1) => {
+    setMessages((prev) =>
+      prev.map((m) =>
+        m.dbMessageId === messageId ? { ...m, feedback: rating } : m
+      )
+    );
+    try {
+      await fetch("/api/chat/feedback", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ messageId, rating }),
+      });
+    } catch {
+      // Silently fail — feedback is non-critical
+    }
   }, []);
 
   // Track last send time to enforce a minimum gap between messages
@@ -192,6 +231,8 @@ export default function Chatbot() {
               role: m.role,
               content: m.content,
             })),
+            sessionId,
+            conversationId,
           }),
           signal: controller.signal,
         });
@@ -231,6 +272,18 @@ export default function Chatbot() {
                   }
                   return copy;
                 });
+              } else if (event.type === "done") {
+                if (event.conversationId) setConversationId(event.conversationId);
+                if (event.messageId) {
+                  setMessages((prev) => {
+                    const copy = [...prev];
+                    const last = copy[copy.length - 1];
+                    if (last.role === "assistant") {
+                      copy[copy.length - 1] = { ...last, dbMessageId: event.messageId };
+                    }
+                    return copy;
+                  });
+                }
               } else if (event.type === "error") {
                 throw new Error(event.error);
               }
@@ -257,7 +310,7 @@ export default function Chatbot() {
         abortRef.current = null;
       }
     },
-    [messages, streaming]
+    [messages, streaming, sessionId, conversationId]
   );
 
   const handleSubmit = (e: FormEvent) => {
@@ -335,29 +388,64 @@ export default function Chatbot() {
           )}
 
           {messages.map((msg) => (
-            <div
-              key={msg.id}
-              className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
-            >
+            <div key={msg.id}>
               <div
-                className={`max-w-[85%] rounded-lg px-3 py-2 text-[13px] leading-relaxed ${
-                  msg.role === "user"
-                    ? "bg-[var(--accent)] text-white"
-                    : "bg-black/[0.03] text-[var(--foreground)]"
-                }`}
+                className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
               >
-                {msg.role === "assistant" ? (
-                  <div className="whitespace-pre-wrap">
-                    {msg.content ? (
-                      <Linkify text={msg.content} />
-                    ) : (
-                      <span className="inline-block w-1.5 h-4 bg-[var(--muted)] rounded-sm animate-pulse" />
-                    )}
-                  </div>
-                ) : (
-                  <div className="whitespace-pre-wrap">{msg.content}</div>
-                )}
+                <div
+                  className={`max-w-[85%] rounded-lg px-3 py-2 text-[13px] leading-relaxed ${
+                    msg.role === "user"
+                      ? "bg-[var(--accent)] text-white"
+                      : "bg-black/[0.03] text-[var(--foreground)]"
+                  }`}
+                >
+                  {msg.role === "assistant" ? (
+                    <div className="whitespace-pre-wrap">
+                      {msg.content ? (
+                        <Linkify text={msg.content} />
+                      ) : (
+                        <span className="inline-block w-1.5 h-4 bg-[var(--muted)] rounded-sm animate-pulse" />
+                      )}
+                    </div>
+                  ) : (
+                    <div className="whitespace-pre-wrap">{msg.content}</div>
+                  )}
+                </div>
               </div>
+
+              {msg.role === "assistant" && msg.content && msg.dbMessageId && !streaming && (
+                <div className="flex items-center gap-1 mt-1 ml-1">
+                  <button
+                    onClick={() => sendFeedback(msg.dbMessageId!, 1)}
+                    className={`p-1 rounded transition-colors ${
+                      msg.feedback === 1
+                        ? "text-emerald-600"
+                        : "text-black/20 hover:text-emerald-600"
+                    }`}
+                    aria-label="Helpful"
+                    disabled={!!msg.feedback}
+                  >
+                    <ThumbsUpIcon filled={msg.feedback === 1} />
+                  </button>
+                  <button
+                    onClick={() => sendFeedback(msg.dbMessageId!, -1)}
+                    className={`p-1 rounded transition-colors ${
+                      msg.feedback === -1
+                        ? "text-red-500"
+                        : "text-black/20 hover:text-red-500"
+                    }`}
+                    aria-label="Not helpful"
+                    disabled={!!msg.feedback}
+                  >
+                    <ThumbsDownIcon filled={msg.feedback === -1} />
+                  </button>
+                  {msg.feedback && (
+                    <span className="text-[11px] text-black/30 ml-1">
+                      Thanks for the feedback
+                    </span>
+                  )}
+                </div>
+              )}
             </div>
           ))}
 
