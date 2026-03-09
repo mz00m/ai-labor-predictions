@@ -1,0 +1,13 @@
+{
+  "id": "careervillage-ai-resilience-report-2026",
+  "abstract": "The AI Resilience Report by CareerVillage.org aggregates multiple AI exposure datasets and combines them with employment projections to produce occupation-specific AI resilience scores. Designed for students and entry-level professionals navigating the labor market as AI integrates into work, it contextualizes results through analysis, occupation-specific news feeds, and exploration tools. The project takes a measured stance: skeptical of doomsday timelines while aiming to offer the clearest possible picture of the current moment.",
+  "keyFindings": [
+    "Provides occupation-specific AI resilience scores combining multiple AI exposure datasets with employment projections.",
+    "Targeted at students and entry-level professionals navigating AI-driven labor market changes.",
+    "Contextualizes resilience scores with analysis, occupation-specific news feeds, and exploration opportunities.",
+    "Takes a balanced, evidence-based stance: skeptical of doomsday timelines, focused on current data."
+  ],
+  "methodology": "Aggregates multiple AI exposure datasets and combines with employment projections into AI resilience scores. Specific datasets and weighting methodology not detailed in the about page. Created by CareerVillage.org, a 501(c)(3) nonprofit that has served 7 million learners from 190 countries since 2011.",
+  "qualifiers": "Site is in beta and actively being updated; may contain errors or require improvement. Not affiliated with Anthropic, Microsoft, or any other data provider.",
+  "fetchedAt": "2026-03-09"
+}

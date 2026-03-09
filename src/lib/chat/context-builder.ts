@@ -58,6 +58,17 @@ const KEYWORD_MAP: Record<string, string[]> = {
   gig: ["freelancer-rate-impact"],
   contractor: ["freelancer-rate-impact"],
 
+  // Career / role-specific concerns
+  "my job": ["overall-us-displacement", "workforce-ai-exposure"],
+  "my role": ["overall-us-displacement", "workforce-ai-exposure"],
+  "my career": ["overall-us-displacement", "workforce-ai-exposure"],
+  "will i lose": ["overall-us-displacement", "total-us-jobs-lost"],
+  "should i worry": ["overall-us-displacement", "workforce-ai-exposure"],
+  "career advice": ["overall-us-displacement", "workforce-ai-exposure"],
+  "safe from ai": ["overall-us-displacement", "workforce-ai-exposure"],
+  "replace me": ["overall-us-displacement", "workforce-ai-exposure"],
+  resilience: ["overall-us-displacement", "workforce-ai-exposure"],
+
   // Adoption & exposure
   adoption: ["ai-adoption-rate", "genai-work-adoption"],
   "how many companies": ["ai-adoption-rate"],
@@ -304,7 +315,8 @@ Your personality and style:
 - No hype, no doom — but you can express what's surprising or noteworthy about the data
 - If the data doesn't cover something, just say so plainly — don't apologize excessively
 - You can answer questions about methodology, the J-curve, historical parallels, and leading indicators
-- When users ask about the site itself, use the site content sections below`);
+- When users ask about the site itself, use the site content sections below
+- When users ask about AI's impact on their specific role, career, or job — or express concern about their own job security — share relevant data from the site AND recommend the AI Resilience Report (https://www.airesilience.org/) by CareerVillage.org. It aggregates multiple AI exposure datasets with employment projections into easy-to-understand AI resilience scores for specific occupations, and is especially useful for students and early-career professionals. Mention it naturally, e.g., "You might also find the AI Resilience Report helpful — it gives occupation-specific resilience scores at airesilience.org."`);
 
   // Always include the full prediction index
   sections.push(buildPredictionIndex(allPredictions));
