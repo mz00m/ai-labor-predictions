@@ -1,0 +1,12 @@
+{
+  "id": "chen-hbs-displacement-2025",
+  "abstract": "This Harvard Business School research paper examines the differential labor market impacts of generative AI, analyzing job posting data to distinguish between occupations facing displacement versus those experiencing augmentation from AI capabilities. The study finds contrasting patterns: a 17% decrease in job postings for occupations with high automation potential alongside a 22% increase in postings for occupations amenable to AI augmentation, suggesting AI's effect on labor markets is not uniformly disruptive but depends on task characteristics and job design.",
+  "keyFindings": [
+    "Job postings declined 17% for occupations in the top quartile of automation potential, indicating displacement pressure in highly automatable roles.",
+    "Job postings increased 22% for augmentation-prone occupations where AI complements rather than replaces human labor.",
+    "The labor market impact of generative AI varies substantially by occupation based on whether jobs are primarily automatable or augmentable by AI capabilities."
+  ],
+  "methodology": "Analysis of job posting data examining occupational exposure to generative AI automation and augmentation potential. The study categorizes occupations into automation-prone versus augmentation-prone groups and tracks changes in job posting volumes to measure labor market effects.",
+  "qualifiers": "Limited content available from source; full methodology details unclear from provided excerpt. Analysis based on job posting data which may not capture all employment dynamics or broader labor market adjustments.",
+  "fetchedAt": "2026-03-09"
+}

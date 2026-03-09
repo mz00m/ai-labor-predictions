@@ -1,0 +1,12 @@
+{
+  "id": "mit-ai-premium-2025",
+  "abstract": "This study examines how artificial intelligence adoption affects labor market dynamics by analyzing online job vacancies. The research finds that establishments exposed to AI technology reduce hiring in non-AI positions while simultaneously offering significant wage premiums for AI-skilled workers, suggesting a reallocation of labor demand toward AI-complementary roles within firms.",
+  "keyFindings": [
+    "AI-exposed establishments reduce hiring in non-AI positions.",
+    "Job postings requiring AI skills command an 11% wage premium within the same firm.",
+    "AI adoption appears to create labor market stratification between AI and non-AI roles."
+  ],
+  "methodology": "Analysis of online job vacancy data to measure AI exposure and its effects on hiring patterns and wage structures across establishments. Specific sample size, time period, and detailed analytical approach not provided in excerpt.",
+  "qualifiers": "Not specified",
+  "fetchedAt": "2026-03-09"
+}

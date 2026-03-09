@@ -1,0 +1,12 @@
+{
+  "id": "indeed-overall-postings-2025",
+  "abstract": "Analysis of Indeed job posting data from January 2025 shows that total US job postings remain 15% below their February 2022 peak, with notable variation across occupational categories. Job categories most exposed to AI automation—including data entry, basic administrative work, and customer service—exhibit the steepest declines in postings, suggesting early labor market impacts from AI adoption.",
+  "keyFindings": [
+    "Total US job postings in January 2025 are 15% below their February 2022 peak.",
+    "Data entry, basic administrative, and customer service roles show the steepest declines in job postings.",
+    "Job categories most exposed to AI automation are experiencing disproportionate posting reductions."
+  ],
+  "methodology": "Analysis of Indeed job posting data tracking trends from February 2022 through January 2025. Specific sample size, geographic scope beyond 'US', and analytical methods not detailed in excerpt provided.",
+  "qualifiers": "Source excerpt is limited; full methodology and confidence intervals not specified in provided text. Analysis based on Indeed job postings only, which may not capture all US job openings or hiring activity across all sectors.",
+  "fetchedAt": "2026-03-09"
+}

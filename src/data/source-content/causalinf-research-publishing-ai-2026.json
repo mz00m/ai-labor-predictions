@@ -1,0 +1,13 @@
+{
+  "id": "causalinf-research-publishing-ai-2026",
+  "abstract": "The author argues that AI coding assistants like Claude Code have democratized research production, enabling rapid generation of automated papers, but this capability paradoxically makes publication in traditionally valued venues more difficult. The piece explores how the economics of academic publishing will shift as AI agents can produce research at scale without human iteration, fundamentally separating the act of research from the act of publishing.",
+  "keyFindings": [
+    "Project APE (Autonomous Policy Evaluation) has produced 204 papers with 60 added in a single week, all fully automated without human iteration",
+    "Claude Code has made it easier to conduct research through automation capabilities",
+    "Publication in traditionally valued locations will become harder as AI-generated research proliferates",
+    "The economics of publishing are shifting due to AI agents' ability to produce research at scale"
+  ],
+  "methodology": "Not specified. The source appears to be opinion/commentary with a single illustrative example of automated paper generation via Claude Code prompt engineering, rather than a formal empirical study.",
+  "qualifiers": "The author frames this as 'fan fiction about the economics of publishing with AI agents set in the very near future,' suggesting speculative and forward-looking analysis rather than established fact. The piece is presented as personal reflection ('a thing I've been thinking about') rather than systematic research. Limited details provided on the Project APE papers' quality, scope, or verification.",
+  "fetchedAt": "2026-03-09"
+}

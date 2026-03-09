@@ -1,0 +1,11 @@
+{
+  "id": "himss-medical-coding-ai-2025",
+  "abstract": "HIMSS analyzes the potential for AI-driven deep learning models to transform medical coding processes in healthcare. The research identifies that AI automation of medical coding could generate annual savings of $122 billion, while noting that coding errors are a significant source of operational inefficiency, with 42% of claim denials attributable to coding issues.",
+  "keyFindings": [
+    "AI automation of medical coding could produce potential annual savings of $122 billion across the healthcare industry.",
+    "Coding issues account for 42% of all claim denials in healthcare systems."
+  ],
+  "methodology": "Not specified",
+  "qualifiers": "Only abstract/excerpt available; limited detail on study scope, sample size, data sources, or analytical methods. The term 'potential' indicates these figures represent projections rather than observed results.",
+  "fetchedAt": "2026-03-09"
+}

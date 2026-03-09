@@ -1,0 +1,13 @@
+{
+  "id": "papanikolaou-schmidt-ai-labor-2025",
+  "abstract": "This study constructs measures of workers' task-level exposure to artificial intelligence and machine learning from 2010 to 2023 using natural language processing. The authors find that tasks with higher AI exposure experience reduced labor demand, but develop a model showing that direct substitution effects are offset by indirect reallocative effects within firms. Despite strong task-level substitution, overall employment effects remain modest because productivity-driven increases in labor demand at AI-adopting firms offset reduced demand in exposed occupations.",
+  "keyFindings": [
+    "A one standard deviation increase in AI exposure reduces relative demand for related skills by 2%.",
+    "Two variables summarize AI's impact: mean exposure of an occupation's tasks, which depresses demand, and concentration of exposure in a few tasks, which enables worker reallocation and offsets losses.",
+    "Using an instrumental variable based on historical university hiring networks, the authors find causal evidence consistent with their theoretical predictions.",
+    "Despite strong substitution effects at the task level, overall employment effects are modest as reduced demand in exposed occupations is offset by productivity-driven increases in labor demand at AI-adopting firms."
+  ],
+  "methodology": "The study uses advances in natural language processing to construct measures of task-level AI and machine learning exposure across firms, occupations, and time from 2010 to 2023. The authors develop a theoretical model separating direct substitution from indirect reallocative effects and employ an instrument based on historical university hiring networks to establish causal evidence. Specific sample size and detailed data sources beyond the time period are not provided in the excerpt.",
+  "qualifiers": "None stated",
+  "fetchedAt": "2026-03-09"
+}

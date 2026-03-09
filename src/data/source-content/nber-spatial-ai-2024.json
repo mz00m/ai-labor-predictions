@@ -1,0 +1,13 @@
+{
+  "id": "nber-spatial-ai-2024",
+  "abstract": "A large-scale field experiment (N = 5,324) examining the effectiveness of monetary incentives on vaccination uptake. The study finds that guaranteed incentives of $20 increase vaccination rates by 13 percentage points in the short run and 9 percentage points in the long run, with guaranteed incentives proving more effective than lottery-based, prosocial, or individually-targeted approaches. The research demonstrates substantial positive spillovers to relatives and provides guidance on optimal incentive design for public health interventions.",
+  "keyFindings": [
+    "Guaranteed incentives of $20 increase vaccination uptake by 13 percentage points in the short run and 9 percentage points in the long run.",
+    "Guaranteed incentives are more effective than lottery-based, prosocial, or individually-targeted incentives, though all approaches boost vaccinations.",
+    "There are no unintended consequences on future vaccination behavior or heterogeneous effects based on vaccination attitudes and incentivized economic preferences.",
+    "Administrative data on relatives show substantial positive spillovers from the incentive intervention."
+  ],
+  "methodology": "Large-scale field experiment with N = 5,324 participants using a unique combination of administrative and survey data to overcome typical data limitations in vaccination studies. Study design includes comparison of guaranteed incentives, lottery-based incentives, prosocial incentives, and individually-targeted incentives, with administrative data collection on relatives to measure spillover effects.",
+  "qualifiers": "None stated",
+  "fetchedAt": "2026-03-09"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "imf-skill-gaps-geo-2026",
+  "abstract": "This IMF Staff Discussion Note examines AI's labor market impact, finding that employment in AI-vulnerable occupations is 3.6% lower in regions with high AI-skill demand after 5 years. The analysis reveals significant geographic divergence driven by skill concentration, with implications for labor market inequality and the need for skills-bridging policies in the AI age.",
+  "keyFindings": [
+    "Employment is 3.6% lower in AI-vulnerable occupations in regions with high AI-skill demand after 5 years.",
+    "Geographic divergence in employment outcomes is driven by skill concentration across regions.",
+    "Labor market displacement is concentrated in specific occupations susceptible to AI automation.",
+    "Regions with pre-existing AI expertise and skills infrastructure experience different employment dynamics than those without."
+  ],
+  "methodology": "Not specified.",
+  "qualifiers": "The document appears to be a PDF extraction with significant formatting issues and incomplete content visibility, limiting ability to assess full methodology details and scope limitations. The stated finding of '3.6% lower employment' suggests quantitative analysis, but the complete methodological framework, data sources, sample specifications, and time period details are not clearly presented in the accessible portions of the document.",
+  "fetchedAt": "2026-03-09"
+}

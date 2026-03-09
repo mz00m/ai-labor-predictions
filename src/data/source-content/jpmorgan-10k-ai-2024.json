@@ -1,0 +1,10 @@
+{
+  "id": "jpmorgan-10k-ai-2024",
+  "abstract": "Unable to extract. The provided source is an SEC EDGAR search results page listing JPMorgan Chase & Co's historical 10-K filings, not the actual 10-K document content. While the source references a 2025-02-14 filing (Acc-no: 0000019617-25-000270), the full text discussing AI deployment and workforce impact is not included in the provided excerpt.",
+  "keyFindings": [
+    "JPMorgan deployed LLM-based tools across legal, compliance, and research functions with estimated productivity gains equivalent to 3,000+ full-time roles"
+  ],
+  "methodology": "Not specified. Source is an SEC EDGAR filing index page; the actual 10-K document content and methodology would be found in the full filing document (74 MB, filed 2025-02-14, Acc-no: 0000019617-25-000270).",
+  "qualifiers": "The provided source material is limited to a filing index page and does not contain the substantive content of the 10-K. The AI workforce impact statement appears in the provided excerpt but without full context, methodology details, or scope qualifications from the original filing. Actual document access required for complete analysis.",
+  "fetchedAt": "2026-03-09"
+}

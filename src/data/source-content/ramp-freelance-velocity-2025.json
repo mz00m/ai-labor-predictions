@@ -1,0 +1,14 @@
+{
+  "id": "ramp-freelance-velocity-2025",
+  "abstract": "Using firm-level spending data from 2021 to 2025, Ramp Economics Lab finds that businesses are rapidly substituting freelance workers with AI model providers. Freelance marketplace spend declined from 0.66% to 0.14% of total business spending, while companies achieving the highest cost savings substituted at a rate of $1 in reduced freelance spend for only $0.03 in AI spending—approximately 25x cost savings. The research suggests freelancers, lacking traditional employment protections, are the first labor market segment experiencing significant AI-driven displacement.",
+  "keyFindings": [
+    "Freelance marketplace spending share fell from 0.66% in Q4 2021 to 0.14% in Q3 2025, while AI model provider spending rose from zero to nearly 3% for the same companies.",
+    "More than half of businesses using freelancers in 2022 have stopped entirely, with highest-spending freelancer firms shifting to AI fastest.",
+    "Firms most exposed to AI substituted at approximately $1 in reduced freelance spend for $0.03 in AI spend, representing roughly 25x cost savings.",
+    "Even middle-exposure companies showed $0.30 in AI spending for every $1 saved on freelance labor, indicating AI is not a 1-for-1 replacement but dramatically cheaper.",
+    "Freelancers lack traditional employment protections (benefits, unemployment insurance) and fall outside standard policy toolkit for managing labor market disruptions."
+  ],
+  "methodology": "Firm-level tracking of business spending on freelance marketplaces (Upwork, Fiverr) and AI model providers (OpenAI, Anthropic) from 2021 to Q3 2025. Analysis conducted by Ryan Stevens, Ramp's director of applied science. Full methodology described in accompanying research paper referenced in the article.",
+  "qualifiers": "Authors note this is 'emerging research' and that 'micro substitution doesn't imply macro job loss.' The analysis focuses on freelancers as the 'margin' most likely to be affected first rather than aggregate workforce impact. Authors acknowledge 'the true number is probably somewhere in between' the high-exposure and middle-exposure substitution rates. Findings are limited to firms using Ramp's business spending data and may not represent all freelance market dynamics.",
+  "fetchedAt": "2026-03-09"
+}

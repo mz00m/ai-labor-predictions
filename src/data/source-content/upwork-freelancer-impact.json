@@ -1,0 +1,12 @@
+{
+  "id": "upwork-freelancer-impact",
+  "abstract": "Upwork's Q2 2024 earnings report reveals significant shifts in freelancer demand across creative sectors, with traditional writing, translation, and graphic design roles experiencing substantial declines while AI-augmented creative positions showed strong growth. The data indicates a marked transition in how creative work is being sourced and executed in the gig economy.",
+  "keyFindings": [
+    "Writing and translation freelancer job volume declined approximately 30% year-over-year in Q2 2024.",
+    "Graphic design freelancer jobs fell 17% year-over-year.",
+    "AI-augmented creative roles grew 45% year-over-year, indicating significant demand shift toward AI-enhanced creative services."
+  ],
+  "methodology": "Data from Upwork's Q2 2024 earnings report tracking freelancer job volume trends across platform categories year-over-year.",
+  "qualifiers": "The excerpt provided contains limited detail; full methodology, sample scope, and whether these figures represent global or US-only platform activity are not specified in the provided text.",
+  "fetchedAt": "2026-03-09"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "brynjolfsson-chandar-chen-2025",
+  "abstract": "This paper examines labor market changes in AI-exposed occupations using high-frequency administrative data from the largest U.S. payroll software provider. The authors find that since widespread generative AI adoption, early-career workers (ages 22-25) in the most AI-exposed occupations experienced a 16 percent relative decline in employment, while employment for less-exposed workers and more experienced workers remained stable. Employment adjustments occurred primarily through quantity rather than compensation, with declines concentrated in occupations where AI is likely to automate rather than augment human labor.",
+  "keyFindings": [
+    "Early-career workers ages 22-25 in the most AI-exposed occupations experienced a 16 percent relative decline in employment after controlling for firm-level shocks.",
+    "Software developer employment for workers ages 22-25 declined nearly 20 percent since ChatGPT's launch.",
+    "Employment for less-exposed workers and more experienced workers in the same occupations remained stable or continued to grow.",
+    "Employment adjustments occur primarily through changes in employment levels rather than through compensation changes.",
+    "Employment declines are concentrated in occupations where AI is more likely to automate rather than augment human labor."
+  ],
+  "methodology": "Analysis of high-frequency administrative payroll data from the largest payroll software provider in the United States, examining labor market changes in occupations exposed to generative AI. Results are described as robust to alternative explanations including exclusion of technology-related firms and occupations amenable to remote work.",
+  "qualifiers": "None stated",
+  "fetchedAt": "2026-03-09"
+}

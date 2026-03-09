@@ -1,0 +1,14 @@
+{
+  "id": "klarna-earnings-2024",
+  "abstract": "Klarna announced that its AI assistant, powered by OpenAI, handled 2.3 million conversations (two-thirds of customer service chats) in its first month of global operation, performing the equivalent work of 700 full-time agents. The assistant matches human agents on customer satisfaction, improves errand resolution accuracy by 25%, reduces resolution time from 11 minutes to under 2 minutes, and is projected to drive $40 million in profit improvement to Klarna in 2024 while supporting 35+ languages across 23 markets.",
+  "keyFindings": [
+    "The AI assistant handled 2.3 million conversations, representing two-thirds of Klarna's total customer service chats in its first month",
+    "The assistant performed equivalent work of 700 full-time agents while matching human agents' customer satisfaction scores",
+    "Customer errand resolution accuracy improved by 25%, leading to a 25% drop in repeat inquiries",
+    "Resolution time decreased from 11 minutes to less than 2 minutes per interaction",
+    "The AI assistant is estimated to drive $40 million USD in profit improvement to Klarna in 2024"
+  ],
+  "methodology": "Not specified. Source is a press announcement reporting operational metrics from Klarna's first month of AI assistant deployment (as of February 27, 2024). No detailed methodology, sample documentation, or independent verification process is described.",
+  "qualifiers": "The announcement does not specify whether the 2.3 million conversations figure represents a complete count or a sample. No details provided on how customer satisfaction parity was measured, the timeframe for data collection, or whether the $40 million profit projection is based on modeling or preliminary results. The source is a company press release rather than independent research.",
+  "fetchedAt": "2026-03-09"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "citadel-intelligence-crisis-2026",
+  "abstract": "Citadel Securities analysis challenges the prevailing narrative of AI-driven labor market disruption, presenting evidence that software engineering job postings have increased 11% year-over-year as of March 2026, with limited observable disruption signals in current labor market data.",
+  "keyFindings": [
+    "Software engineer job postings are rising rapidly at 11% year-over-year growth",
+    "There is little evidence of AI disruption in labor market data as of the publication date"
+  ],
+  "methodology": "Not specified. The excerpt suggests analysis of job posting data with year-over-year comparisons, but full methodology details are not provided in the source text.",
+  "qualifiers": "Limited scope - analysis is current only 'as of today' (March 2026) and does not address whether disruption may occur in the future; excerpt notes this is counter to 'the current displacement narrative' suggesting the findings may be preliminary or subject to rapid change.",
+  "fetchedAt": "2026-03-09"
+}

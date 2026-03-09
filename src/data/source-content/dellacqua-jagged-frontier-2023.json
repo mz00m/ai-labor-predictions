@@ -1,0 +1,13 @@
+{
+  "id": "dellacqua-jagged-frontier-2023",
+  "abstract": "This field experimental study examines AI's impact on knowledge worker productivity using a randomized controlled trial of 758 BCG consultants. The research reveals a 'jagged technological frontier' where AI dramatically improves performance on tasks within its capabilities—increasing task completion by 12.2%, speed by 25.1%, and quality ratings by 40%—but significantly degrades performance on tasks outside AI's current frontier, with workers performing 19 percentage points worse on such tasks.",
+  "keyFindings": [
+    "For tasks within AI's capabilities, workers completed 12.2% more tasks when using AI assistance.",
+    "AI-assisted workers completed qualifying tasks 25.1% faster than control group.",
+    "Output quality on AI-suitable tasks was rated 40% higher by evaluators.",
+    "Performance declined by 19 percentage points on tasks outside AI's technological frontier."
+  ],
+  "methodology": "Randomized controlled trial (RCT) with 758 consultants from Boston Consulting Group (BCG), comparing productivity and quality metrics between treatment group (AI access) and control group across tasks varying in alignment with AI capabilities.",
+  "qualifiers": "None stated",
+  "fetchedAt": "2026-03-09"
+}

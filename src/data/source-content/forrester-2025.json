@@ -1,0 +1,14 @@
+{
+  "id": "forrester-2025",
+  "abstract": "Forrester forecasts that AI and automation will eliminate 6.1% of US jobs (10.4 million) by 2030, a more moderate impact than commonly feared. While most current 2025 layoffs are financially motivated rather than AI-driven, the emergence of agentic AI and widespread genAI investments have increased the expected role of AI in job displacement from 29% to 50% of automation-related losses. Critically, AI will influence 20% of jobs through reshaping rather than replacement, suggesting the future of work will remain largely human-centered with AI in a supporting role.",
+  "keyFindings": [
+    "6.1% of US jobs (10.4 million) will be lost to AI and automation by 2030, equivalent to structural job losses during the Great Recession.",
+    "GenAI's role in job losses has increased from 29% to 50% of automation-driven displacement in the updated forecast compared to 2023.",
+    "AI will strongly influence 20% of US jobs through workflow and task reshaping, representing a nearly fourfold increase from the 2023 forecast and 3.25 times the impact of direct job replacement.",
+    "Most current layoffs attributed to AI are actually financially motivated, with nine of ten companies claiming AI replacement lacking mature, vetted AI applications to fill positions.",
+    "Historical AI predictions have been overstated, as evidenced by radiology continuing to grow 55% at Mayo Clinic despite 2016 predictions that deep learning would replace radiologists within five years."
+  ],
+  "methodology": "Forrester forecast analysis based on monitoring of agentic AI emergence, generative AI investments, and market outcomes. Comparison with prior 2023 Forrester forecast. Analysis includes discussions with enterprise clients on AI implementation readiness. Historical comparison with Great Recession job losses and prior failed AI predictions.",
+  "qualifiers": "Jobs lost to AI are characterized as structural and permanent, distinct from cyclical macroeconomic losses. The forecast acknowledges that genAI has not yet positively impacted P&Ls according to MIT researchers. Current agentic AI is described as 'more agent-ish' rather than fully mature. The forecast applies to the US only.",
+  "fetchedAt": "2026-03-09"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "imf-ai-work-2024",
+  "abstract": "This IMF Staff Discussion Note examines generative AI's impact on global labor markets, finding that approximately 40% of global employment is exposed to AI, with roughly 60% of workers in advanced economies facing some degree of AI impact. The analysis reveals that advanced economies will experience AI benefits and challenges sooner than emerging markets, with differential impacts across worker demographics. The study concludes that while productivity gains could improve income levels broadly, risks of increased labor income inequality exist, requiring policymakers in advanced economies to upgrade regulatory frameworks and support labor reallocation, while emerging markets should prioritize digital infrastructure and skills development.",
+  "keyFindings": [
+    "Almost 40% of global employment is exposed to AI, with roughly 60% of workers in advanced economies facing some degree of AI impact.",
+    "Women and college-educated individuals are more exposed to AI but better positioned to reap AI benefits, while older workers face greater adaptation challenges.",
+    "Advanced economies will experience AI impacts sooner than emerging market and developing economies due to their employment structures focused on cognitive-intensive roles.",
+    "Labor income inequality may increase if AI-high-income worker complementarity is strong, though sufficiently large productivity gains could raise income levels for most workers.",
+    "Capital returns will increase wealth inequality, making regulatory frameworks and labor reallocation support critical policy priorities for advanced economies."
+  ],
+  "methodology": "Not specified in excerpt. The source is a Staff Discussion Note analyzing global AI exposure across economies, using employment structure analysis and comparative assessment of advanced versus emerging market labor markets, though detailed data sources and sample specifications are not provided in the available excerpt.",
+  "qualifiers": "This Staff Discussion Note represents the views of the authors and does not necessarily represent IMF views or IMF policy. The analysis distinguishes between advanced economies and emerging market/developing economies, suggesting findings may not apply uniformly across all economies. Outcomes regarding income inequality depend on strength of AI-worker complementarity and magnitude of productivity gains, indicating conditional rather than certain predictions.",
+  "fetchedAt": "2026-03-09"
+}

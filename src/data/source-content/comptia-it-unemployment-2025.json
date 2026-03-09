@@ -1,0 +1,12 @@
+{
+  "id": "comptia-it-unemployment-2025",
+  "abstract": "CompTIA's Tech Jobs Report provides monthly analysis of IT employment trends in the United States, tracking unemployment rates, employer hiring activity, and demand for emerging tech skills across occupations and industries. The report shows that IT unemployment rose from 3.9% to 5.7% between late 2024 and mid-2025, reaching the highest level since 2021, driven by AI-related restructuring in the technology sector.",
+  "keyFindings": [
+    "IT unemployment rate increased from 3.9% to 5.7% between late 2024 and mid-2025.",
+    "The mid-2025 IT unemployment rate of 5.7% represents the highest level since 2021.",
+    "AI-related restructuring is identified as a primary driver of the unemployment increase."
+  ],
+  "methodology": "Monthly analysis coinciding with U.S. Bureau of Labor Statistics Employment Situation reports, tracking IT employment at occupation and industry levels, including historical trends, employer hiring activity by state and metro area, unemployment rates, and employer demand for emerging tech skills.",
+  "qualifiers": "None stated",
+  "fetchedAt": "2026-03-09"
+}

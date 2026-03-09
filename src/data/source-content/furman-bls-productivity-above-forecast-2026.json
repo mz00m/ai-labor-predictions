@@ -1,0 +1,14 @@
+{
+  "id": "furman-bls-productivity-above-forecast-2026",
+  "abstract": "Jason Furman analyzes recent labor productivity data in the nonfarm business sector, noting significant upward revisions and strong fourth-quarter performance that position productivity 2.2% above the Congressional Budget Office's pre-pandemic forecast. The analysis suggests potential evidence of artificial intelligence's contribution to productivity gains, with annual productivity growth rates of 2.8% over one year, 2.5% over two years, and 2.2% over six years.",
+  "keyFindings": [
+    "Nonfarm business sector labor productivity is 2.2% above the CBO's pre-pandemic forecast",
+    "One-year productivity growth rate is 2.8%",
+    "Two-year productivity growth rate is 2.5%",
+    "Six-year productivity growth rate is 2.2%",
+    "Significant upward revisions to earlier data combined with strong Q4 2025 performance contributed to the gains"
+  ],
+  "methodology": "Analysis of official labor productivity data for the nonfarm business sector compared to Congressional Budget Office pre-pandemic forecasts, with annual growth rates calculated for multiple time horizons. Specific data sources and analytical methods not detailed.",
+  "qualifiers": "The source poses productivity gains as a question ('Are we finally seeing AI in the productivity data?'), indicating uncertainty about whether observed gains can be definitively attributed to artificial intelligence. The analysis is based on a social media post with limited methodological detail.",
+  "fetchedAt": "2026-03-09"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "cui-microsoft-copilot-2025",
+  "abstract": "This Microsoft/Accenture study examines the effects of generative AI adoption on software developer productivity through analysis of code repository metrics. The research finds that while developers using AI tools show substantial increases in output volume—including 26% more pull requests and 38% more builds—code quality metrics decline, with build success rates dropping by 5.53 percentage points, suggesting a productivity-quality tradeoff.",
+  "keyFindings": [
+    "Developers using generative AI completed 26% more pull requests compared to non-users.",
+    "AI-assisted developers showed a 13.55% increase in commits.",
+    "Build volume increased by 38.38% with generative AI adoption.",
+    "Build success rate fell by 5.53 percentage points among AI users, indicating potential quality concerns."
+  ],
+  "methodology": "Not specified in excerpt provided. Analysis appears to involve code repository metrics (pull requests, commits, builds, build success rates), likely from a sample of computing workers at Microsoft and/or Accenture, but sample size, time period, and detailed analytical approach are not described in the available text.",
+  "qualifiers": "The excerpt presents productivity measures without context on sample composition, time period, or statistical significance. The apparent tradeoff between quantity and quality metrics warrants caution in interpretation without additional methodological details.",
+  "fetchedAt": "2026-03-09"
+}

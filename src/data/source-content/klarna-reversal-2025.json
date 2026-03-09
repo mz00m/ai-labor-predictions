@@ -1,0 +1,14 @@
+{
+  "id": "klarna-reversal-2025",
+  "abstract": "Klarna, a $14.6 billion buy-now-pay-later company, reversed its AI-only customer service strategy after experiencing a 22% drop in customer satisfaction. CEO Sebastian Siemiatkowski acknowledged that while AI chatbots were cheaper, they produced lower quality outcomes. The company is now hiring human customer service agents again to operate a hybrid model where AI handles approximately 66% of interactions but humans manage complex cases and maintain customer choice.",
+  "keyFindings": [
+    "Klarna experienced a 22% drop in customer satisfaction after implementing AI-only customer service strategy.",
+    "AI chatbots handled 75% of customer chats (approximately 2.3 million conversations) within a month of launch in February 2024.",
+    "The company's headcount dropped 22% during the AI-focused period due to attrition after implementing a hiring freeze in December.",
+    "Klarna is now transitioning to a hybrid model with AI handling approximately 66% of customer interactions while rehiring human agents for complex cases.",
+    "CEO stated that ensuring customers have access to human support is critical from a brand and company perspective."
+  ],
+  "methodology": "Not specified. This is a news article reporting on statements made by Klarna CEO Sebastian Siemiatkowski to Bloomberg and company announcements. No formal study design, sample methodology, or systematic data collection process is described.",
+  "qualifiers": "The article relies on CEO statements and company disclosures rather than independent verification. The exact customer satisfaction measurement methodology and baseline comparison are not specified. The timeframe for the 22% satisfaction drop is not explicitly stated. The claim about AI handling 66% of interactions in the new hybrid model appears to come from the provided excerpt rather than the full article text.",
+  "fetchedAt": "2026-03-09"
+}

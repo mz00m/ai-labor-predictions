@@ -1,0 +1,12 @@
+{
+  "id": "korinek-trammell-growth-2025",
+  "abstract": "This NBER working paper reviews the macroeconomic implications of transformative AI systems capable of automating essentially all work. The authors synthesize multiple strands of economic literature to show that fully automating production would dramatically raise growth rates and lower labor share, breaking the established Kaldor Facts. While automating R&D could accelerate this transformation, the ultimate impact on wages remains uncertain and depends on returns to scale, natural resource constraints, and the direction of technical change.",
+  "keyFindings": [
+    "Fully automating production (enabling machine self-replication) would dramatically raise the growth rate and lower the labor share, breaking the Kaldor Facts that have characterized frontier growth.",
+    "Automating R&D (enabling machine self-improvement) would accelerate the transformation toward fully automated production, but may not produce it in isolation.",
+    "Wages may rise or fall depending on the interaction between exploding output and plummeting labor share, with outcomes contingent on returns to scale, importance of natural resources, and direction of technical change."
+  ],
+  "methodology": "Theoretical framework synthesizing multiple strands of macroeconomic literature on AI and growth. The analysis explores scenarios of full automation of production and R&D using established economic models. Not an empirical study with quantitative data sources.",
+  "qualifiers": "The analysis addresses a speculative scenario of 'sufficiently advanced AI' and 'systems that can automate essentially all work.' The authors note uncertainty regarding wage outcomes, which 'may rise or fall' depending on multiple contingent factors. The work is framed as a review synthesizing existing literature rather than presenting new empirical evidence.",
+  "fetchedAt": "2026-03-09"
+}

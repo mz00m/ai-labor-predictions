@@ -1,0 +1,14 @@
+{
+  "id": "nber-bloom-firm-data-ai-2026",
+  "abstract": "This NBER working paper presents the first representative international data on firm-level AI adoption and impacts, surveying nearly 6,000 executives across the US, UK, Germany, and Australia. While approximately 70% of firms actively use AI, executives report minimal employment or productivity impacts over the past 3 years. However, firms forecast significant future impacts, predicting AI will reduce employment by 0.7% (1.2% in the US) while boosting productivity by 1.4% over the next 3 years—a projection that contrasts sharply with employees' expectations of 0.5% net job creation.",
+  "keyFindings": [
+    "Approximately 70% of firms actively use AI, with adoption concentrated among younger and more productive firms.",
+    "Despite widespread AI adoption, over 80% of firms report no impact on employment or productivity over the past 3 years.",
+    "Top executives use AI an average of only 1.5 hours per week, with one quarter reporting no AI use at all.",
+    "Firms forecast AI will reduce employment by 0.7% overall (−1.2% in the US) while increasing productivity by 1.4% and output by 0.8% over the next 3 years.",
+    "A significant expectation gap exists between senior executives who predict employment reductions from AI and employees who predict a 0.5% increase in employment."
+  ],
+  "methodology": "Survey of approximately 6,000 CFOs, CEOs, and executives from stratified firm samples across the US, UK, Germany, and Australia. The study also includes a parallel survey of individual employees to compare expectations about AI's employment effects. Specific sample sizes per country, response rates, survey instrument details, and temporal scope of data collection are not provided in the available excerpt.",
+  "qualifiers": "Not specified in the provided text. The paper notes that views expressed are those of individual authors and do not represent the Federal Reserve System, Bank of England, Bundesbank, or NBER. One author discloses ownership of more than $5,000 in stock of Charles River Associates.",
+  "fetchedAt": "2026-03-09"
+}

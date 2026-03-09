@@ -1,0 +1,14 @@
+{
+  "id": "factset-earnings-q4-2024",
+  "abstract": "FactSet analysis of S&P 500 earnings conference call transcripts from Q4 2024 (December 15 through March 14) reveals record corporate discussion of artificial intelligence. A total of 241 companies cited the term \"AI\" during their earnings calls, marking the highest frequency over the past 10 years and the fourth consecutive quarter with more than 200 companies mentioning AI. The Information Technology sector leads with 93% of its companies discussing AI.",
+  "keyFindings": [
+    "241 S&P 500 companies cited \"AI\" in Q4 2024 earnings calls, the highest number over the past 10 years, exceeding the previous record of 212 set in Q1 and Q2 2024.",
+    "Q4 2024 AI mentions far exceed the 5-year average of 105 companies and the 10-year average of 67 companies.",
+    "Information Technology sector led with 62 companies (93% of sector) mentioning AI on Q4 earnings calls.",
+    "Nine of eleven sectors increased AI mentions from Q3 to Q4 2024, with Health Care (+7) and Financials (+6) leading gains.",
+    "This marks the fourth consecutive quarter in which more than 200 S&P 500 companies cited \"AI\" on earnings calls."
+  ],
+  "methodology": "FactSet Document Search analysis of conference call transcripts from S&P 500 companies conducting earnings calls from December 15 through March 14 (Q4 2024 earnings period). The search identified all instances of the term \"AI\" across transcripts and tracked citations by sector. Comparisons made to 5-year and 10-year historical averages using current index constituents applied retrospectively.",
+  "qualifiers": "The analysis uses current S&P 500 constituents applied back in time, which may affect historical comparisons due to index composition changes. The exact date range cited (December 15 through March 14) spans the Q4 2024 earnings season. The search term \"AI\" is broad and may capture various uses of the acronym beyond artificial intelligence specifically.",
+  "fetchedAt": "2026-03-09"
+}

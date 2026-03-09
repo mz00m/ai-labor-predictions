@@ -1,0 +1,12 @@
+{
+  "id": "google-10k-2024",
+  "abstract": "Unable to extract. The provided source content consists only of SEC EDGAR filing directory pages listing Alphabet Inc.'s 10-K filings from 2016-2026, without access to the actual 10-K document text. The excerpt references workforce restructuring and AI automation impacts, but the full source document containing detailed disclosures about workforce changes and AI tool implementation is not included in the provided text.",
+  "keyFindings": [
+    "Unable to extract specific findings - full source document not provided",
+    "Referenced excerpt indicates AI tools have reduced need for certain engineering and support roles",
+    "Referenced excerpt indicates increased demand for AI/ML specialist positions"
+  ],
+  "methodology": "Not specified. Source appears to be SEC filing directory pages rather than the complete 10-K document. To extract methodology, the actual 10-K filing document (14-15 MB size) would need to be accessed directly from the SEC EDGAR system.",
+  "qualifiers": "Critical limitation: Only EDGAR directory listing provided, not the actual 10-K filing content. The excerpt provided is third-party summarization, not direct quotation from the source document. Actual disclosures, scope limitations, and caveats in the full 10-K filing are inaccessible from the provided content.",
+  "fetchedAt": "2026-03-09"
+}

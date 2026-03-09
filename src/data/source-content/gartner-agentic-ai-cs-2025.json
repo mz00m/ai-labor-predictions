@@ -1,0 +1,11 @@
+{
+  "id": "gartner-agentic-ai-cs-2025",
+  "abstract": "Gartner predicts that agentic AI will autonomously resolve 80% of common customer service issues by 2029, representing a dramatic increase from the current 1.6% of fully automated end-to-end customer service interactions. This forecast suggests a significant shift in customer service operations toward AI-driven automation over the next four years.",
+  "keyFindings": [
+    "Agentic AI is predicted to autonomously resolve 80% of common customer service issues by 2029.",
+    "Currently only 1.6% of customer service interactions are fully automated end-to-end."
+  ],
+  "methodology": "Not specified. Source is a press release without detailed methodology disclosure.",
+  "qualifiers": "This is a prediction/forecast rather than empirical findings. The term 'common customer service issues' is not precisely defined. No confidence intervals or scenario conditions are specified.",
+  "fetchedAt": "2026-03-09"
+}

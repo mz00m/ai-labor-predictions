@@ -1,0 +1,12 @@
+{
+  "id": "gartner-cs-2026-forecast",
+  "abstract": "Gartner forecasts that generative AI will replace 20-30% of customer service agents by the end of 2026. The analysis reflects rapidly accelerating AI adoption in the customer service sector, which increased from 46% to 61% in a single year, indicating widespread organizational investment in AI-driven customer support solutions.",
+  "keyFindings": [
+    "Gartner projects 20-30% of customer service agents will be replaced by generative AI by end of 2026.",
+    "AI adoption in customer service jumped from 46% to 61% in one year.",
+    "Rapid year-over-year growth in AI adoption indicates accelerating organizational investment in generative AI for customer support functions."
+  ],
+  "methodology": "Not specified. Source appears to be a press release forecasting statement rather than a detailed research study.",
+  "qualifiers": "Forecast projection with a range (20-30%) rather than a point estimate; specific time period for adoption measurement not stated; scope appears limited to customer service function.",
+  "fetchedAt": "2026-03-09"
+}

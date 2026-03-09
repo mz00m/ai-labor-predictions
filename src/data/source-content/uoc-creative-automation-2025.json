@@ -1,0 +1,14 @@
+{
+  "id": "uoc-creative-automation-2025",
+  "abstract": "A UOC peer-reviewed study examines the adoption of generative AI in creative industries, finding that AI can automate up to 26% of tasks in arts, design, entertainment, and media sectors. The research identifies three key drivers of AI adoption (performance expectancy, user support, and brand trust) and barriers including fear of change, financial constraints, and continuous reskilling requirements. The study concludes that AI will significantly transform creative work processes, shifting focus from technical execution toward strategic thinking and conceptual work.",
+  "keyFindings": [
+    "Generative AI could automate up to 26% of tasks in arts, design, entertainment, media, and sports sectors.",
+    "75% of creative professionals find AI useful for tasks like image editing and searches, viewing it primarily as an enabler rather than a creator.",
+    "Three primary factors drive AI adoption in creative industries: performance expectancy (effectiveness), support (resources and training), and brand trust.",
+    "Main barriers to AI adoption include fear of change and cultural resistance, financial constraints especially for freelancers and small studios, and the need for constant reskilling and training.",
+    "Long-term impact will shift creative work toward strategic thinking and conception rather than technical execution, requiring professionals to develop critical thinking and collaboration skills with AI systems."
+  ],
+  "methodology": "PhD research by Dominika Weglarz at UOC involving comparative samples from Spain and the United States examining factors influencing generative AI adoption in creative industries. The study examined multiple factors through the UTAUT model framework to identify adoption drivers and barriers. Published in peer-reviewed journal Retos: Revista de Ciencias de la Administración y Economía (2025).",
+  "qualifiers": "Researchers note that barriers to AI adoption 'vary depending on the context, professional profile, and level of digitalization in each organization' and that it is 'difficult to establish universal barriers.' The study focused specifically on Spain and the United States samples. Financial constraints noted as 'especially for freelancers, small agencies and independent studios with limited funds.' Ethical concerns around originality, authorship, and ownership are mentioned but not detailed.",
+  "fetchedAt": "2026-03-09"
+}

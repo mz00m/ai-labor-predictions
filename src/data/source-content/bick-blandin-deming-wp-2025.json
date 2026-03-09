@@ -1,0 +1,12 @@
+{
+  "id": "bick-blandin-deming-wp-2025",
+  "abstract": "A nationally representative survey of 25,000+ working-age adults conducted by the Federal Reserve Bank of St. Louis finds that generative AI adoption reached 55.9% overall and 40.7% in workplace settings by November 2025. These adoption rates substantially outpace comparable early adoption periods for personal computers and the internet, indicating exceptionally rapid diffusion of generative AI technologies across the U.S. working-age population.",
+  "keyFindings": [
+    "Generative AI adoption reached 55.9% among working-age adults overall by November 2025, compared to 40.7% adoption specifically in work settings.",
+    "Generative AI adoption outpaced personal computer and internet adoption rates at comparable post-launch time periods.",
+    "The survey is nationally representative, drawn from 25,000+ working-age adults in the United States."
+  ],
+  "methodology": "Nationally representative survey of 25,000+ working-age adults in the United States, with data collected by November 2025. Adoption rates are measured for overall generative AI use and workplace-specific use. Comparison benchmarks are provided against PC and internet adoption trajectories at similar stages post-launch.",
+  "qualifiers": "None stated",
+  "fetchedAt": "2026-03-09"
+}

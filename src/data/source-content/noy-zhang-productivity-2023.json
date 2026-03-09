@@ -1,0 +1,13 @@
+{
+  "id": "noy-zhang-productivity-2023",
+  "abstract": "This experimental study examines how ChatGPT affects worker productivity across different skill levels. The research finds that generative AI significantly compresses the productivity distribution, with lower-ability workers experiencing the largest gains in both efficiency and output quality. The authors suggest these effects could reduce skill premiums in the labor market over time.",
+  "keyFindings": [
+    "Low-ability workers experienced a 40% reduction in time-to-completion when using ChatGPT",
+    "Low-ability workers achieved an 18% increase in output quality with ChatGPT assistance",
+    "ChatGPT compressed the overall productivity distribution across the worker ability spectrum",
+    "The differential productivity gains may lead to reduced skill premiums in labor markets over time"
+  ],
+  "methodology": "Experimental study design with workers assigned to complete tasks with and without ChatGPT access, measuring productivity outcomes by worker ability level. Specific sample size, task details, and analytical approach not provided in excerpt.",
+  "qualifiers": "Limited to excerpt provided; full methodology details unavailable. Findings based on experimental conditions that may not fully represent real-world workplace implementation. Skill premium effects described as potential future outcomes ('may reduce') rather than directly measured.",
+  "fetchedAt": "2026-03-09"
+}

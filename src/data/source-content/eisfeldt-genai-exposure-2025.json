@@ -1,0 +1,11 @@
+{
+  "id": "eisfeldt-genai-exposure-2025",
+  "abstract": "This study examines the relationship between generative AI exposure and firm values. The authors analyze 678 occupations and find that generative AI exposes an average of 23% of tasks across these occupations, investigating how this technological exposure affects firm valuations and labor market dynamics.",
+  "keyFindings": [
+    "678 occupations have an average of 23% of their tasks exposed to generative AI",
+    "Generative AI exposure varies across occupations, indicating differential impacts on the labor market"
+  ],
+  "methodology": "Analysis of occupational task exposure to generative AI across 678 occupations, measuring the proportion of tasks susceptible to AI automation. Specific analytical approach and data sources not detailed in the provided excerpt.",
+  "qualifiers": "Limited information available from excerpt. Full methodology, sample details, time period, and comprehensive findings not specified in provided source material.",
+  "fetchedAt": "2026-03-09"
+}

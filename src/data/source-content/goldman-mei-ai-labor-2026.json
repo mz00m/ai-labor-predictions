@@ -1,0 +1,14 @@
+{
+  "id": "goldman-mei-ai-labor-2026",
+  "abstract": "Goldman Sachs research by Pierfrancesco Mei warns that AI-fueled job displacement could raise the US unemployment rate in 2026, with current impact modest at 5-10K jobs per month but baseline forecast expecting 6-7% of workers displaced. While AI currently affects only 2.5% of jobs and job losses remain concentrated in the tech sector, the economist projects unemployment could reach 4.5% by year-end 2026 (up from 4.3%), with upside risks suggesting displacement could add up to an additional 0.3 percentage points if AI adoption accelerates.",
+  "keyFindings": [
+    "AI's current labor market impact is small at 5-10K per month drag on net job growth, with only 2.5% of jobs exposed to automation today.",
+    "Goldman Sachs baseline forecast projects 6-7% of workers will be displaced (range 3-14%), lowering annual hiring by 1 million jobs and raising unemployment approximately 0.5 percentage points.",
+    "Job losses in AI-affected industries are visible but moderate, with growth slowed or turned negative in subindustries where AI is most ready for deployment.",
+    "Unemployment rate expected to drift higher to 4.5% by year-end 2026 from current 4.3%, with upside risks from faster adoption potentially adding up to 0.3 additional percentage points.",
+    "US creates 30 million gross new jobs per year, and Goldman Sachs does not anticipate a job apocalypse despite material expected growth in AI's impact beyond the tech sector."
+  ],
+  "methodology": "Analysis of labor market data and job displacement trends in AI-affected industries by Goldman Sachs global economics team; baseline and risk scenario forecasting; survey data from Harvard Business Review on corporate headcount reductions and hiring intentions in anticipation of AI adoption.",
+  "qualifiers": "Analysis notes 'upside risks' and risks 'might be skewed towards slightly larger effects'; baseline forecast includes wide displacement range (3-14%); impact assessment acknowledges that job displacement effects could be larger if AI adoption accelerates faster than baseline assumptions; current visible job losses described as 'moderate' suggesting incomplete impact assessment at present time.",
+  "fetchedAt": "2026-03-09"
+}

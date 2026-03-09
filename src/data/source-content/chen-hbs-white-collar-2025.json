@@ -1,0 +1,13 @@
+{
+  "id": "chen-hbs-white-collar-2025",
+  "abstract": "This Harvard Business School research examines whether generative AI displaces workers or complements their skills in the labor market. The study finds heterogeneous effects across job types: highly automatable roles experience a 24% decrease in AI-exposed skill requirements, while augmentation-prone professional roles see a 15% increase in demand for AI-related competencies. The findings suggest AI's labor market impact depends critically on job characteristics and adaptability to AI integration.",
+  "keyFindings": [
+    "24% decrease in AI-exposed skills required in highly automatable jobs indicates displacement risk for routine task-heavy positions.",
+    "15% increase in AI-exposed skills for augmentation-prone professional roles demonstrates complementarity and skill-upgrading effects.",
+    "Labor market impact is heterogeneous across occupational categories, with displacement concentrated in automatable roles and skill demand concentration in professional services.",
+    "Workers in roles with higher potential for human-AI collaboration face increased demand for AI-adjacent competencies rather than displacement."
+  ],
+  "methodology": "Not clearly specified in the provided document excerpt. The source appears to be a research paper from Harvard Business School dated January 15, 2025, but the PDF content provided is largely encoded/corrupted, making full methodology details inaccessible. Analysis likely involves occupational data analysis examining skill requirements and AI exposure metrics across job types.",
+  "qualifiers": "The document content is heavily corrupted with embedded PDF encoding, limiting the ability to extract detailed caveats and limitations. Based on the excerpt provided, the findings differentiate between 'highly automatable jobs' and 'augmentation-prone professional roles,' suggesting results may be limited to specific occupational categories and may not generalize across all labor sectors. Geographic scope and time period specificity are not clearly stated in accessible portions of the document.",
+  "fetchedAt": "2026-03-09"
+}

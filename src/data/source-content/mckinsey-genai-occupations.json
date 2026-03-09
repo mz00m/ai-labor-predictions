@@ -1,0 +1,11 @@
+{
+  "id": "mckinsey-genai-occupations",
+  "abstract": "McKinsey Global Institute analysis examines generative AI's potential to automate work activities across economic sectors. The research identifies banking, insurance, and capital markets as particularly susceptible to automation, with up to 50% of current work activities potentially automatable, while highlighting legal research and contract review as among the most automatable task categories.",
+  "keyFindings": [
+    "Banking, insurance, and capital markets could see up to 50% of current work activities automated by generative AI.",
+    "Legal research and contract review are among the most automatable tasks across industries."
+  ],
+  "methodology": "Not specified",
+  "qualifiers": "The excerpt provided is limited; full scope and methodology of the McKinsey Global Institute analysis cannot be determined from the text provided. Findings represent potential automation scenarios rather than demonstrated outcomes.",
+  "fetchedAt": "2026-03-09"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "salesforce-10k-ai-2024",
+  "abstract": "Salesforce reported strong fourth quarter fiscal 2024 results, highlighting the expansion of its Einstein AI platform which processes over 200 billion AI predictions daily across Customer 360 applications. The Einstein 1 platform enables organizations to build AI-powered applications through low-code development tools and integrated generative AI assistants.",
+  "keyFindings": [
+    "Salesforce Einstein platform processes over 200 billion AI predictions per day across Customer 360 applications",
+    "Einstein 1 platform provides low-code development capabilities for building AI-powered applications",
+    "Generative AI assistants are integrated into the Einstein 1 platform offering"
+  ],
+  "methodology": "Company earnings announcement and product capability disclosure. Not a research study.",
+  "qualifiers": "Limited to excerpt provided; full earnings report content not available in source text. Specific metrics limited to platform usage statistics without comparative growth data.",
+  "fetchedAt": "2026-03-09"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "substack-wages-doom",
+  "abstract": "This analysis examines whether wage compression observed during the pandemic—where workers at the bottom of the wage distribution experienced unusually rapid pay increases relative to middle and top earners—persisted through November 2025. Using cross-sectional wage percentiles and demographic-adjusted data, the author finds that most of the pandemic-era wage compression has largely persisted, with the 10th percentile showing substantially higher cumulative growth since 2019 than the median and 90th percentile. However, real wage growth at the bottom slowed significantly in 2025, raising questions about the sustainability of these gains if labor market conditions continue to soften.",
+  "keyFindings": [
+    "Wage compression observed during 2021-2023 has mostly persisted through November 2025, with the 10th percentile showing greater cumulative wage growth since 2019 than both the median and 90th percentile.",
+    "Demographic-adjusted analysis strengthens rather than weakens the compression story, indicating the gains reflect shifts in the wage structure and not merely changes in workforce composition by age, education, or gender.",
+    "Real wage growth at the bottom slowed considerably in 2025, suggesting vulnerability of low-end wage gains to further labor market softening.",
+    "The Atlanta Fed Wage Growth Tracker shows broadly similar patterns of persistence for most of the wage distribution, though the first quartile shows weaker growth more recently.",
+    "Broad-based, compressive wage growth of this type is historically rare in the U.S., occurring only briefly from 1980-2016 aside from a late-1990s period."
+  ],
+  "methodology": "Analysis of cross-sectional wage percentiles (10th, 50th, and 90th) expressed relative to 2019 baseline levels through November 2025. Second analysis adjusts for demographic composition changes (age, education, gender) to isolate wage structure shifts. Comparison to Atlanta Fed Wage Growth Tracker data, which measures within-person wage growth by initial wage level. Data sources and sample specifications not explicitly stated in excerpt.",
+  "qualifiers": "The author notes that composition adjustment is only a 'partial way to address composition concerns' and that the cross-sectional percentile approach and Atlanta Fed Wage Growth Tracker measure different objects (wage distribution levels vs. within-person changes). The slowdown in real wage growth at the bottom in 2025 is described as 'not encouraging' regarding future persistence. Sustainability of compression depends on continued labor market tightness and is vulnerable if unemployment rises materially.",
+  "fetchedAt": "2026-03-09"
+}

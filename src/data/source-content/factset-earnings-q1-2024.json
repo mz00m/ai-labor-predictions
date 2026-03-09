@@ -1,0 +1,14 @@
+{
+  "id": "factset-earnings-q1-2024",
+  "abstract": "FactSet analyzed S&P 500 earnings call transcripts from Q1 2024 (March 15-May 23) and found that 199 companies cited the term \"AI,\" representing the highest number on record since at least 2014. This figure substantially exceeds the 5-year average of 80 and 10-year average of 50 companies. Companies mentioned AI an average of 11 times per call, with the Information Technology sector leading at 91% of companies discussing AI, and companies increasingly citing specific headcount savings from AI deployments.",
+  "keyFindings": [
+    "199 S&P 500 companies cited \"AI\" on Q1 2024 earnings calls, the highest number on record since at least 2014, surpassing the previous record of 182 in Q2 2023.",
+    "AI mentions averaged 11 times per earnings call with a median of 5 mentions, and 12 companies mentioned \"AI\" at least 50 times, led by Meta (95), NVIDIA (86), and Microsoft (74).",
+    "The Information Technology sector had the highest participation with 50 companies (91% of the sector) citing AI on their Q1 earnings calls.",
+    "The 199 companies citing AI in Q1 2024 represent a substantial increase compared to the 5-year average of 80 companies and the 10-year average of 50 companies.",
+    "Companies increasingly cite specific headcount savings from AI deployments in their earnings discussions."
+  ],
+  "methodology": "FactSet Document Search was used to search for the term \"AI\" in conference call transcripts of all S&P 500 companies that conducted earnings calls from March 15 through May 23, 2024. The analysis covers the complete set of companies conducting earnings calls during this period and includes historical comparisons back to at least 2014 using current index constituents.",
+  "qualifiers": "Results may vary based on prompts used in Transcript Assistant. The analysis uses current S&P 500 index constituents applied retrospectively to historical periods. The blog post is for informational purposes only and does not constitute legal, tax, or investment advice.",
+  "fetchedAt": "2026-03-09"
+}

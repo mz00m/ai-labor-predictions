@@ -1,0 +1,14 @@
+{
+  "id": "challenger-ai-layoffs-2025",
+  "abstract": "The Challenger Gray & Christmas 2025 Year-End Report documents 1,206,374 announced job cuts in 2025, a 58% increase from 2024, making it the seventh highest annual total since 1989. Artificial intelligence was cited as a direct cause for 54,836 job cuts during the year, concentrated in technology and support roles. The report shows significant sectoral variation, with government (particularly federal), technology, warehousing, and retail leading in announced layoffs, while hiring plans fell to their lowest level since 2010.",
+  "keyFindings": [
+    "Employers announced 1,206,374 job cuts in 2025, an increase of 58% from 761,358 cuts in 2024, representing the seventh highest annual total since 1989.",
+    "Artificial intelligence was cited as a direct cause for 54,836 job cut announcements in 2025, and 71,825 total since 2023 when this reason was first tracked.",
+    "Government sector led all industries with 308,167 job cuts (up 703% from 2024), followed by Technology with 154,445 cuts (up 15% from 2024).",
+    "U.S. employers announced only 507,647 planned hires in 2025, down 34% from 769,953 in 2024, marking the lowest year-to-date total since 2010.",
+    "Fourth quarter 2025 saw 259,948 announced job cuts, the highest fourth-quarter total since 2008, driven largely by DOGE-related federal workforce reductions (293,753 cuts)."
+  ],
+  "methodology": "Analysis of announced job cut and hiring plans reported to Challenger, Gray & Christmas, a global outplacement and executive coaching firm that tracks employer announcements of layoffs and hiring plans. Data spans full calendar year 2025 with monthly and quarterly breakdowns. Industry classification and reason for cuts (e.g., AI, restructuring, market conditions) based on employer-provided announcements. Historical comparisons to data since 1989 for context.",
+  "qualifiers": "Data represents announced job cuts and hiring plans rather than actual implemented cuts; time lag between announcement and implementation may exist. AI attribution reflects only those cases where employers explicitly cited AI as a direct cause for layoffs. Seasonal hiring plans noted as lowest since tracking began in 2012. Government sector figures heavily influenced by DOGE-related federal workforce actions specific to 2025. Specific job categories for AI-attributed cuts mentioned only in excerpt (customer service, data entry, back-office operations).",
+  "fetchedAt": "2026-03-09"
+}

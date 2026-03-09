@@ -1,0 +1,13 @@
+{
+  "id": "bls-creative-occupations-2025",
+  "abstract": "The Occupational Outlook Handbook reports that overall employment in arts and design occupations is projected to grow slower than average for all occupations from 2024 to 2034. Despite limited employment growth, approximately 84,900 job openings are projected annually, primarily from the need to replace workers leaving the field. The median annual wage for arts and design occupations was $53,180 in May 2024, exceeding the median wage for all occupations.",
+  "keyFindings": [
+    "Arts and design occupations are projected to grow slower than the average for all occupations from 2024 to 2034.",
+    "Approximately 84,900 job openings are projected each year on average, largely due to the need to replace workers who leave permanently.",
+    "The median annual wage for arts and design occupations was $53,180 in May 2024, higher than the median wage for all occupations of $49,500.",
+    "Graphic designer employment is projected to decline 4% through 2033, while technical writers show flat projection."
+  ],
+  "methodology": "Analysis of BLS employment projections, Occupational Employment Statistics survey wage data, and occupational requirements data for the 2024-2034 projection period. Data current as of May 2024.",
+  "qualifiers": "Employment projections are based on 2024-2034 timeframe. The source notes that despite limited employment growth, replacement demand creates openings. Wage data are from May 2024 and may not reflect subsequent changes.",
+  "fetchedAt": "2026-03-09"
+}

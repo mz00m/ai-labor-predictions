@@ -1,0 +1,14 @@
+{
+  "id": "factset-earnings-q1-2025",
+  "abstract": "FactSet analyzed S&P 500 earnings conference call transcripts from Q1 2025 (March 15 - June 4, 2025) to measure the prevalence of AI discussion among major corporations. 210 S&P 500 companies cited the term \"AI\" during their Q1 earnings calls, marking the fifth consecutive quarter where more than 200 companies discussed AI, though this represented a 14% quarter-over-quarter decline from Q4 2024's record of 243 companies. The Information Technology sector led with 94% of companies mentioning AI.",
+  "keyFindings": [
+    "210 S&P 500 companies cited \"AI\" on Q1 2025 earnings calls, well above the 5-year average of 114 and 10-year average of 72 companies.",
+    "Q1 2025 marked the fifth consecutive quarter in which more than 200 S&P 500 companies cited AI on earnings calls.",
+    "The number of companies citing AI declined 14% quarter-over-quarter from Q4 2024 (243 companies) to Q1 2025 (210 companies).",
+    "Information Technology sector had the highest AI mentions with 61 companies (94% of the sector) citing AI on Q1 earnings calls.",
+    "Eight of eleven sectors recorded quarter-over-quarter decreases in AI mentions, with Industrials (-7) and Consumer Staples (-6) leading the declines."
+  ],
+  "methodology": "FactSet Document Search was used to search for the term \"AI\" in earnings conference call transcripts of all S&P 500 companies that conducted earnings calls from March 15 through June 4, 2025. Data was analyzed by sector and compared to historical averages (5-year and 10-year) and prior quarter results.",
+  "qualifiers": "The analysis searches for the specific term \"AI\" only and may not capture all artificial intelligence-related discussions using alternative terminology. Some charts and commentary normally published in the FactSet Earnings Insight report were not available in the published version. The article is for informational purposes only and not investment advice.",
+  "fetchedAt": "2026-03-09"
+}

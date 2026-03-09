@@ -1,0 +1,14 @@
+{
+  "id": "experian-health-claims-2025",
+  "abstract": "Experian Health's State of Claims 2025 report reveals that claim denials continue to rise among U.S. healthcare providers, with 41% reporting denial rates exceeding 10% in 2025, up from 38% in 2024. While 67% of providers believe AI can improve claims processing and 69% of AI adopters report reduced denials, only 14% have implemented AI tools, suggesting a significant gap between optimism and adoption. The report identifies inaccurate patient data collection and fragmented technology systems as primary drivers of denials, recommending integrated AI-powered solutions for denial prevention.",
+  "keyFindings": [
+    "Claim denials are increasing, with 41% of providers reporting denial rates exceeding 10% in 2025, up from 38% in 2024 and 30% in 2022.",
+    "More than half of providers (54%) report that claim errors are increasing, and 68% say submitting clean claims is more challenging than a year ago.",
+    "Only 14% of providers are currently using AI tools to reduce denials, despite 67% believing AI can improve the claims process and 69% of AI adopters reporting reduced denials.",
+    "Incomplete or inaccurate patient information collected during check-in is the third most common cause of denials, with 26% of providers reporting that at least one in ten denials trace back to intake errors.",
+    "Nearly 80% of providers rely on multiple solutions to collect information for claim submission, with only 56% believing their current technology is sufficient to handle revenue cycle demands."
+  ],
+  "methodology": "Quantitative survey of 250 healthcare professionals conducted in June and July 2025. The State of Claims survey has been tracking providers' views on claims management since 2022, allowing for year-over-year trend analysis. The report examines denial rates, technology adoption, AI adoption, and operational challenges in claims processing.",
+  "qualifiers": "The survey reflects providers' beliefs and self-reported experiences rather than independently verified claim data. The findings are specific to healthcare providers' perspectives in the United States. The report includes promotional content for Experian Health's proprietary solutions (Patient Access Curator and AI Advantage), which may introduce bias in recommendations. Exact confidence intervals or margin of error not specified.",
+  "fetchedAt": "2026-03-09"
+}

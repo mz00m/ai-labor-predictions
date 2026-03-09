@@ -1,0 +1,14 @@
+{
+  "id": "cms-prior-auth-2024",
+  "abstract": "CMS released the Interoperability and Prior Authorization final rule (CMS-0057-F) in January 2024, requiring Medicare Advantage organizations, Medicaid and CHIP programs, and health plan issuers to implement standardized Health Level 7 FHIR application programming interfaces (APIs) for exchanging health care data and streamlining prior authorization processes. The rule establishes requirements for Patient Access, Provider Access, Payer-to-Payer, and Prior Authorization APIs with compliance dates beginning January 1, 2026, while also mandating 72-hour turnaround for expedited prior authorization requests and seven calendar days for standard requests, along with specific denial reasons to improve transparency and provider resubmission capability.",
+  "keyFindings": [
+    "Impacted payers must implement Patient Access, Provider Access, Payer-to-Payer, and Prior Authorization APIs using HL7 FHIR standards with compliance dates beginning January 1, 2027.",
+    "Payers must provide prior authorization decisions within 72 hours for expedited requests and seven calendar days for standard requests, excluding drug-related prior authorizations.",
+    "Beginning in 2026, payers must provide specific reasons for denied prior authorization requests regardless of submission method to improve transparency and provider resubmission capability.",
+    "CMS is adding a new Electronic Prior Authorization measure for MIPS eligible clinicians and hospitals/CAHs, requiring attestation of electronic prior authorization requests via Prior Authorization APIs starting with the 2027 performance period.",
+    "HHS will apply enforcement discretion for HIPAA X12 278 standards, allowing covered entities to implement FHIR-only or FHIR and X12 combination APIs for prior authorization without enforcement action."
+  ],
+  "methodology": "CMS final rulemaking process based on the May 2020 CMS Interoperability and Patient Access final rule, extensive stakeholder outreach, and public comment feedback on the proposed rule. The rule applies to Medicare Advantage organizations, state Medicaid and CHIP Fee-for-Service programs, Medicaid managed care plans, CHIP managed care entities, and Qualified Health Plans on Federally Facilitated Exchanges.",
+  "qualifiers": "The rule excludes prior authorizations for drugs from certain API requirements. Exact compliance dates vary by the type of payer. The electronic prior authorization measure is an attestation measure (yes/no response or applicable exclusion) rather than a numerator/denominator measure. The enforcement discretion for HIPAA X12 278 standards indicates HHS will continue to evaluate prior authorization transaction standards for future rulemaking.",
+  "fetchedAt": "2026-03-09"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "mckinsey-ai-survey-nov-2025",
+  "abstract": "McKinsey's November 2025 survey finds that AI adoption has become nearly ubiquitous among organizations, with 88% using AI in at least one function and 71% adopting generative AI. However, the research reveals a significant scaling gap: only 7% of organizations have fully scaled their AI initiatives, and merely 6% report earnings before interest and taxes (EBIT) impact of 5% or more, suggesting that widespread adoption has not yet translated into substantial business value for most enterprises.",
+  "keyFindings": [
+    "88% of organizations use AI in at least one function, up from 78% in prior measurement periods.",
+    "Generative AI adoption reached 71% among surveyed organizations.",
+    "Only 7% of organizations have fully scaled their AI implementations.",
+    "Just 6% of organizations report EBIT impact of 5% or greater from their AI initiatives.",
+    "62% of organizations are experimenting with AI agents."
+  ],
+  "methodology": "Not specified in provided excerpt. Appears to be a quantitative survey of organizations but sample size, sampling methodology, and detailed survey parameters are not detailed in the available text.",
+  "qualifiers": "None stated in provided excerpt.",
+  "fetchedAt": "2026-03-09"
+}
