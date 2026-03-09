@@ -1,0 +1,14 @@
+{
+  "id": "jff-ai-economic-opportunity-2026",
+  "abstract": "Jobs for the Future (JFF) published a call to action for an urgent, cross-sector effort to transform work, empower learners and workers, and adapt education and workforce systems in the age of AI. Based on survey data from AudienceNet, the report highlights widespread worker concern about AI's career impact and growing career pivots driven by AI-related transformation.",
+  "keyFindings": [
+    "77% of respondents believe AI will impact the job or career they expect to have in the next 3-5 years",
+    "19% of respondents are actively pursuing different careers (7%) or considering changing plans in the near future (12%) due to AI-driven transformation",
+    "19% of respondents have already used AI tools to obtain a better job",
+    "JFF proposes Congress pass the Investing in American Workers Act to establish a federal employer tax credit for high-quality worker training",
+    "JFF recommends creating a national network of AI Workforce Centers of Excellence anchored by community colleges"
+  ],
+  "methodology": "Survey commissioned by JFF and conducted by AudienceNet. Specific sample size and methodology details not publicly available from the landing page.",
+  "qualifiers": "The report is a policy-oriented call to action rather than a peer-reviewed study. Survey methodology details (sample size, demographics, margin of error) were not available from the public-facing summary.",
+  "fetchedAt": "2026-03-09"
+}

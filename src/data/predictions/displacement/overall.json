@@ -557,6 +557,15 @@
       "label": "Stanford/Brynjolfsson: entry-level hiring stagnant; AI-exposed jobs driving decline"
     },
     {
+      "date": "2026-01-13",
+      "direction": "down",
+      "sourceIds": [
+        "jff-ai-economic-opportunity-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "JFF: 19% of workers pursuing or considering career changes due to AI"
+    },
+    {
       "date": "2025-11-26",
       "direction": "down",
       "sourceIds": [
@@ -1022,6 +1031,15 @@
       "evidenceTier": 1,
       "datePublished": "2025-11-26",
       "excerpt": "AI can already replace 11.7% of the U.S. workforce, or as much as $1.2 trillion in wages across finance, health care, and professional services. The visible tip — tech sector layoffs — represents just 2.2% of total wage exposure ($211B). Simulated 151 million workers across 32,000 skills and 3,000 counties."
+    },
+    {
+      "id": "jff-ai-economic-opportunity-2026",
+      "title": "AI for Economic Opportunity and Advancement: A Call to Action",
+      "url": "https://info.jff.org/ai-for-economic-opportunity-and-advancement",
+      "publisher": "Jobs for the Future (JFF)",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-13",
+      "excerpt": "19% of respondents said they are actively pursuing different careers (7%) or considering changing plans in the near future (12%) due to AI-driven transformation."
     }
   ]
 }

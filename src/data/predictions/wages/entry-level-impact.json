@@ -268,6 +268,33 @@
       "label": "Anthropic: AI exposure concentrates in credentialed roles (17.4% vs 4.5% grad degrees)"
     },
     {
+      "date": "2025-07-29",
+      "direction": "down",
+      "sourceIds": [
+        "bgi-no-country-young-grads-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Burning Glass: 52% of Class of 2023 underemployed one year out"
+    },
+    {
+      "date": "2025-07-29",
+      "direction": "down",
+      "sourceIds": [
+        "bgi-no-country-young-grads-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Burning Glass: Entry-level postings in AI-exposed jobs fell 2022-2025"
+    },
+    {
+      "date": "2025-07-29",
+      "direction": "down",
+      "sourceIds": [
+        "bgi-no-country-young-grads-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Burning Glass: Grad hiring plans cut from +7.3% to +0.6%"
+    },
+    {
       "date": "2025-11-13",
       "direction": "neutral",
       "sourceIds": [
@@ -483,6 +510,15 @@
       "evidenceTier": 4,
       "datePublished": "2026-03-05",
       "excerpt": "new grad hiring in large tech is down over 50% since 2019. For the first time in over decades, recent college grads have a higher unemployment rate than the national average. In addition, the 'underemployment rate' for recent graduates has risen to 42.5% (Q4 2025, New York Federal Reserve)."
+    },
+    {
+      "id": "bgi-no-country-young-grads-2025",
+      "title": "No Country for Young Grads: The Structural Forces That Are Reshaping Entry-Level Employment",
+      "url": "https://www.burningglassinstitute.org/research/no-country-for-young-grads",
+      "publisher": "Burning Glass Institute",
+      "evidenceTier": 2,
+      "datePublished": "2025-07-29",
+      "excerpt": "52% of the Class of 2023 was underemployed a year after graduating. Entry-level postings in high-AI-exposure occupations fell from 2022 to 2025, while postings requiring 6+ years of experience held steady or rose. Employers reported plans to hire 7.3% more graduates from the Class of 2025; that expectation had been cut to just 0.6%."
     },
     {
       "id": "eig-entry-level-ai-displacement-2026",
