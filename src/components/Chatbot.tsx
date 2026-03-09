@@ -33,29 +33,57 @@ function SendIcon() {
   );
 }
 
-/** Render text with clickable links */
+/** Render text with clickable links (markdown and raw URLs) */
 function Linkify({ text }: { text: string }) {
-  const urlRegex = /(https?:\/\/[^\s),]+)/g;
-  const parts = text.split(urlRegex);
-  return (
-    <>
-      {parts.map((part, i) =>
-        urlRegex.test(part) ? (
-          <a
-            key={i}
-            href={part}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[var(--accent)] underline underline-offset-2 hover:text-[#4b50e5] break-all"
-          >
-            {part}
-          </a>
-        ) : (
-          <span key={i}>{part}</span>
-        )
-      )}
-    </>
-  );
+  // Match markdown links [text](url) or raw URLs
+  const linkRegex = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)|(https?:\/\/[^\s),]+)/g;
+  const elements: React.ReactNode[] = [];
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+
+  while ((match = linkRegex.exec(text)) !== null) {
+    // Add text before this match
+    if (match.index > lastIndex) {
+      elements.push(<span key={`t-${lastIndex}`}>{text.slice(lastIndex, match.index)}</span>);
+    }
+
+    if (match[1] && match[2]) {
+      // Markdown link: [text](url)
+      elements.push(
+        <a
+          key={`l-${match.index}`}
+          href={match[2]}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[var(--accent)] underline underline-offset-2 hover:text-[#4b50e5]"
+        >
+          {match[1]}
+        </a>
+      );
+    } else if (match[3]) {
+      // Raw URL
+      elements.push(
+        <a
+          key={`l-${match.index}`}
+          href={match[3]}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[var(--accent)] underline underline-offset-2 hover:text-[#4b50e5] break-all"
+        >
+          {match[3]}
+        </a>
+      );
+    }
+
+    lastIndex = match.index + match[0].length;
+  }
+
+  // Add remaining text
+  if (lastIndex < text.length) {
+    elements.push(<span key={`t-${lastIndex}`}>{text.slice(lastIndex)}</span>);
+  }
+
+  return <>{elements}</>;
 }
 
 /** Inline trigger button for the navbar */
