@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState, useEffect, useRef, useCallback } from "react";
 import { usePathname } from "next/navigation";
 import SearchCombobox from "./SearchCombobox";
+import { ChatTrigger } from "./Chatbot";
 
 interface NavItem {
   href: string;
@@ -215,10 +216,14 @@ export default function Navbar() {
               </Link>
             )
           )}
+          <div className="ml-1.5 pl-1.5 border-l border-black/[0.06]">
+            <ChatTrigger onClick={() => window.dispatchEvent(new Event("open-chatbot"))} />
+          </div>
         </div>
 
-        {/* Mobile: hamburger */}
+        {/* Mobile: chat + hamburger */}
         <div className="flex sm:hidden items-center gap-2" ref={menuRef}>
+          <ChatTrigger onClick={() => { setMobileOpen(false); window.dispatchEvent(new Event("open-chatbot")); }} />
           <button
             onClick={() => setMobileOpen((prev) => !prev)}
             className="p-1.5 -mr-1.5 rounded-md hover:bg-black/[0.04] transition-colors"

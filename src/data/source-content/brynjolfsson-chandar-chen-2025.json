@@ -1,14 +1,14 @@
 {
   "id": "brynjolfsson-chandar-chen-2025",
-  "abstract": "This paper examines labor market changes in AI-exposed occupations using high-frequency administrative data from the largest U.S. payroll software provider. The authors find that since widespread generative AI adoption, early-career workers (ages 22-25) in the most AI-exposed occupations experienced a 16 percent relative decline in employment, while employment for less-exposed workers and more experienced workers remained stable. Employment adjustments occurred primarily through quantity rather than compensation, with declines concentrated in occupations where AI is likely to automate rather than augment human labor.",
+  "abstract": "Using high-frequency administrative data from ADP (the largest US payroll provider), this paper documents six facts about labor market shifts following the widespread adoption of generative AI. Early-career workers (ages 22-25) in AI-exposed occupations experienced a 16% relative employment decline, controlling for firm-level shocks, while employment for experienced workers remained stable. Adjustments occur primarily via employment rather than compensation, with employment changes concentrated in occupations where AI automates rather than augments labor. The patterns appear most acutely starting in late 2022 and early 2023, around the time of rapid proliferation of generative AI tools.",
   "keyFindings": [
-    "Early-career workers ages 22-25 in the most AI-exposed occupations experienced a 16 percent relative decline in employment after controlling for firm-level shocks.",
-    "Software developer employment for workers ages 22-25 declined nearly 20 percent since ChatGPT's launch.",
-    "Employment for less-exposed workers and more experienced workers in the same occupations remained stable or continued to grow.",
-    "Employment adjustments occur primarily through changes in employment levels rather than through compensation changes.",
-    "Employment declines are concentrated in occupations where AI is more likely to automate rather than augment human labor."
+    "Early-career workers (ages 22-25) in AI-exposed occupations experienced 16% relative employment declines after controlling for firm-level shocks, while employment for older workers remained stable or grew 6-12%",
+    "By September 2025, employment for software developers aged 22-25 declined nearly 20% compared to its peak in late 2022",
+    "Entry-level employment declined in occupations where AI automates work, but not in occupations where AI primarily augments labor",
+    "Labor market adjustments are visible in employment more than in compensation; little difference in annual salary trends by age or exposure quintile",
+    "Workers aged 22-25 experienced a 6% decline in employment from late 2022 to September 2025 in the most AI-exposed occupations, compared to a 6-9% increase for older workers"
   ],
-  "methodology": "Analysis of high-frequency administrative payroll data from the largest payroll software provider in the United States, examining labor market changes in occupations exposed to generative AI. Results are described as robust to alternative explanations including exclusion of technology-related firms and occupations amenable to remote work.",
-  "qualifiers": "None stated",
+  "methodology": "Analysis of monthly individual-level payroll records from ADP covering 3.5 to 5 million workers across tens of thousands of firms, from January 2021 through September 2025. AI exposure measured using Eloundou et al. (2024) GPT-4 beta measures and Anthropic Economic Index (Handa et al., 2025). Poisson event study regression with firm-time and firm-quintile fixed effects to control for confounders. Sample restricted to full-time workers under age 70 in firms with continuous ADP records.",
+  "qualifiers": "The authors caution that the facts documented may in part be influenced by factors other than generative AI. The trend for software developers in particular may not be fully explained by AI given how quickly the employment decline occurs after late 2022. The ADP sample does not exactly match the distribution of firms across the broader US economy. The paper does not claim fully causal identification.",
   "fetchedAt": "2026-03-09"
 }

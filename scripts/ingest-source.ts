@@ -475,10 +475,9 @@ async function main() {
       `\nDone. ${written.length} entries written, ${skipped.length} skipped.\n`
     );
 
-    // Auto-populate chatbot content store for Tier 1+2 sources
+    // Auto-populate chatbot content store for all sources
     if (
       written.length > 0 &&
-      sourceMetadata.evidenceTier <= 2 &&
       changes.length > 0
     ) {
       const sid = changes[0].sourceId;
