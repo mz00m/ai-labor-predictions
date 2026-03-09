@@ -33,6 +33,31 @@ function SendIcon() {
   );
 }
 
+/** Render text with clickable links */
+function Linkify({ text }: { text: string }) {
+  const urlRegex = /(https?:\/\/[^\s),]+)/g;
+  const parts = text.split(urlRegex);
+  return (
+    <>
+      {parts.map((part, i) =>
+        urlRegex.test(part) ? (
+          <a
+            key={i}
+            href={part}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--accent)] underline underline-offset-2 hover:text-[#4b50e5] break-all"
+          >
+            {part}
+          </a>
+        ) : (
+          <span key={i}>{part}</span>
+        )
+      )}
+    </>
+  );
+}
+
 /** Inline trigger button for the navbar */
 export function ChatTrigger({ onClick }: { onClick: () => void }) {
   return (
@@ -295,7 +320,9 @@ export default function Chatbot() {
               >
                 {msg.role === "assistant" ? (
                   <div className="whitespace-pre-wrap">
-                    {msg.content || (
+                    {msg.content ? (
+                      <Linkify text={msg.content} />
+                    ) : (
                       <span className="inline-block w-1.5 h-4 bg-[var(--muted)] rounded-sm animate-pulse" />
                     )}
                   </div>
