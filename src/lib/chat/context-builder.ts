@@ -1,15 +1,23 @@
 /**
- * Builds relevant context from prediction data and sources
+ * Builds relevant context from prediction data, sources, and site content
  * for the chatbot to answer user questions grounded in site content.
  *
  * Uses keyword matching to select the most relevant predictions
- * rather than loading all 17 into every prompt.
+ * and page content sections based on the user's query.
  */
 
 import { getAllPredictions, getLastUpdated } from "../data-loader";
 import { Prediction, EVIDENCE_TIER_LABELS } from "../types";
 import { getSourceContents } from "./source-content";
 import type { SourceContentEntry } from "./source-content";
+import {
+  PREDICTION_CONTEXT,
+  ABOUT_CONTENT,
+  JCURVE_CONTENT,
+  HISTORY_CONTENT,
+  SIGNALS_CONTENT,
+  HERO_CONTENT,
+} from "./site-content";
 
 /** Keywords mapped to prediction slugs for relevance matching */
 const KEYWORD_MAP: Record<string, string[]> = {
@@ -62,6 +70,15 @@ const KEYWORD_MAP: Record<string, string[]> = {
   mention: ["earnings-call-ai-mentions"],
 };
 
+/** Keywords that trigger inclusion of specific site page content */
+const PAGE_CONTENT_KEYWORDS: Record<string, string[]> = {
+  about: ["about", "methodology", "who built", "who made", "evidence tier", "how calculated", "weighted average", "research pipeline", "update schedule", "limitation", "matt zieger"],
+  jcurve: ["j-curve", "j curve", "jcurve", "productivity paradox", "intangible", "brynjolfsson", "solow", "general purpose technology", "gpt pattern"],
+  history: ["history", "historical", "electricity", "steam", "on tap", "on-tap", "revolution", "jevons", "prior technology", "previous technology", "morrill", "gi bill"],
+  signals: ["signal", "leading indicator", "construction permit", "tool adoption", "automation index", "surging", "reduce amplify expand", "firm response", "productivity path", "three paths"],
+  hero: ["headline", "hero stat", "key stat", "main finding", "summary", "overview", "what does the site say", "what does this site"],
+};
+
 /** Select predictions relevant to a user query via keyword matching */
 function selectRelevantPredictions(
   query: string,
@@ -110,6 +127,38 @@ function selectRelevantPredictions(
   return selected;
 }
 
+/** Select which page content sections are relevant to the query */
+function selectRelevantPageContent(query: string): string[] {
+  const lowerQuery = query.toLowerCase();
+  const sections: string[] = [];
+
+  const contentMap: Record<string, string> = {
+    about: ABOUT_CONTENT,
+    jcurve: JCURVE_CONTENT,
+    history: HISTORY_CONTENT,
+    signals: SIGNALS_CONTENT,
+    hero: HERO_CONTENT,
+  };
+
+  for (const [key, keywords] of Object.entries(PAGE_CONTENT_KEYWORDS)) {
+    if (keywords.some((kw) => lowerQuery.includes(kw))) {
+      sections.push(contentMap[key]);
+    }
+  }
+
+  // For broad/general questions with no specific page match, include hero overview
+  if (sections.length === 0) {
+    const isGeneral = ["what", "tell me", "explain", "how", "why", "summary", "overview"].some(
+      (w) => lowerQuery.includes(w)
+    );
+    if (isGeneral) {
+      sections.push(HERO_CONTENT);
+    }
+  }
+
+  return sections;
+}
+
 /** Collect all source IDs referenced by a set of predictions */
 function collectSourceIds(predictions: Prediction[]): string[] {
   const ids = new Set<string>();
@@ -139,6 +188,12 @@ function formatPrediction(
     lines.push(`Current weighted value: ${p.currentValue}${p.unit.includes("%") ? "%" : ""}`);
   }
   lines.push(`Description: ${p.description}`);
+
+  // Include the rich prediction context explanation
+  const contextFn = PREDICTION_CONTEXT[p.slug];
+  if (contextFn && p.currentValue !== undefined) {
+    lines.push(`\nContext: ${contextFn(p.currentValue)}`);
+  }
 
   // Data points (most recent 8)
   if (p.history.length > 0) {
@@ -230,16 +285,16 @@ export function buildChatContext(userQuery: string): ChatContext {
 
   const sections: string[] = [];
 
-  // Site overview
+  // Site overview + role instructions
   sections.push(`You are the research assistant for jobsdata.ai, a dashboard tracking AI's impact on the labor market.
 The site synthesizes 300+ sources from peer-reviewed research, government data, corporate filings, and journalism into 17 interactive prediction graphs across 5 categories: displacement, wages, adoption, signals, and exposure.
 Data last updated: ${lastUpdated}.
 
 Evidence tier system:
-- Tier 1: Verified Data & Research (peer-reviewed journals, government stats, RCTs)
-- Tier 2: Institutional Analysis (think tanks, intl orgs, industry research)
-- Tier 3: Journalism & Commentary (major publications)
-- Tier 4: Informal & Social (blogs, social media)
+- Tier 1: Verified Data & Research (peer-reviewed journals, government stats, RCTs) — weight 4x
+- Tier 2: Institutional Analysis (think tanks, intl orgs, industry research) — weight 2x
+- Tier 3: Journalism & Commentary (major publications) — weight 1x
+- Tier 4: Informal & Social (blogs, social media) — weight 0.5x
 
 Your role:
 - Answer questions about AI's impact on jobs, wages, and adoption using ONLY the data provided below
@@ -248,10 +303,21 @@ Your role:
 - If the data doesn't cover a topic, say so — do not speculate
 - Be concise and practitioner-focused — no hype, no doom
 - Use precise numbers from the data points when available
-- When discussing ranges, mention confidence intervals if available`);
+- When discussing ranges, mention confidence intervals if available
+- You can answer questions about the site's methodology, the J-curve framework, historical technology parallels, and leading indicators
+- When users ask about the site itself, use the site content sections below`);
 
-  // Always include the full index so the model knows what exists
+  // Always include the full prediction index
   sections.push(buildPredictionIndex(allPredictions));
+
+  // Include relevant page content based on query
+  const pageContent = selectRelevantPageContent(userQuery);
+  if (pageContent.length > 0) {
+    sections.push("# Relevant Site Content\n");
+    for (const content of pageContent) {
+      sections.push(content);
+    }
+  }
 
   // Load rich content for relevant sources
   const allSourceIds = collectSourceIds(relevant);

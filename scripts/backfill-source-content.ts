@@ -2,7 +2,7 @@
 /**
  * Backfill source content store for chatbot grounding.
  *
- * Fetches Tier 1 + Tier 2 source URLs, sends text to Claude for
+ * Fetches all tier source URLs, sends text to Claude for
  * rich content extraction (abstract, key findings, methodology,
  * qualifiers), and writes per-source JSON files.
  *
@@ -51,7 +51,7 @@ interface SourceEntry {
 
 function parseArgs() {
   const args = process.argv.slice(2);
-  let tiers = [1, 2];
+  let tiers = [1, 2, 3, 4];
   let limit = Infinity;
   let dryRun = false;
   let skipExisting = false;
