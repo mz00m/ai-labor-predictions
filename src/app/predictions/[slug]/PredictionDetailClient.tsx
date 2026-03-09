@@ -12,6 +12,7 @@ import PredictionChart from "@/components/PredictionChart";
 import AIAdoptionChart from "@/components/AIAdoptionChart";
 import AdoptionLadder from "@/components/AdoptionLadder";
 import SourceList from "@/components/SourceList";
+import AgeWeightedMethodology from "@/components/AgeWeightedMethodology";
 
 const CONTEXT_MAP: Record<string, (v: number) => string> = {
   "overall-us-displacement": (v) =>
@@ -170,6 +171,11 @@ export default function PredictionDetailPage() {
         <p className="text-[16px] text-[var(--muted)] leading-relaxed mb-3 max-w-2xl">
           {contextText}
         </p>
+        {prediction.slug === "tech-sector-displacement" && (
+          <div className="mb-4">
+            <AgeWeightedMethodology />
+          </div>
+        )}
         {agg.tierFallback && (
           <p className="text-[12px] text-[#d97706] bg-[#d97706]/[0.06] border border-[#d97706]/20 rounded px-3 py-2 mb-4 max-w-2xl">
             No sources match your selected tiers for this prediction. Showing all-tier average instead.

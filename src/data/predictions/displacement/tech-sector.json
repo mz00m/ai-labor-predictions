@@ -86,9 +86,9 @@
     },
     {
       "date": "2025-11-13",
-      "value": 16,
-      "confidenceLow": 6,
-      "confidenceHigh": 20,
+      "value": 1.3,
+      "confidenceLow": -1.5,
+      "confidenceHigh": 4.5,
       "sourceIds": [
         "brynjolfsson-chandar-chen-2025"
       ],
