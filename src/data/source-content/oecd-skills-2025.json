@@ -1,0 +1,14 @@
+{
+  "id": "oecd-skills-2025",
+  "abstract": "The OECD Skills Outlook 2025 examines how countries can build 21st-century skills for all, drawing on the 2023 Survey of Adult Skills. The report finds that differences in education and skills between adults with advantaged and disadvantaged backgrounds explain a large share of the wage gap, and that workers with strong numeracy skills reap disproportionately large wage returns from further upskilling. It argues that as AI handles routine information-processing, human value creation increasingly hinges on creative engagement with ambiguous challenges.",
+  "keyFindings": [
+    "Adults with parents who completed tertiary degrees earn 11% more, but this premium falls to less than 1% when comparing adults with similar educational attainment and skills.",
+    "Women earn about 14% less per hour than men, widening to 17% among adults with comparable education and skills.",
+    "Individuals in information/communications, financial/insurance, and real estate can expect to earn around 19% more than similar individuals in administrative/support service activities.",
+    "Workers with strong numeracy skills reap disproportionately large wage returns from further upskilling.",
+    "Generative AI technologies may help reduce disparities in cognitive ability by automating routine intellectual tasks, according to recent research cited in the report."
+  ],
+  "methodology": "264-page OECD report published December 2025, drawing primarily on the 2023 Survey of Adult Skills (PIAAC) across member countries. Analyzes literacy, numeracy, and adaptive problem-solving skills across demographic groups with cross-country comparative methodology.",
+  "qualifiers": "The report focuses on OECD member countries. Wage returns to skills are largely independent of a worker's broader skills profile when comparing individuals with similar socio-demographic characteristics. The relationship between AI adoption and skills demand is evolving faster than policy cycles, introducing uncertainty into projections.",
+  "fetchedAt": "2026-03-09"
+}

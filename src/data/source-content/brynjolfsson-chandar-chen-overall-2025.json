@@ -1,0 +1,15 @@
+{
+  "id": "brynjolfsson-chandar-chen-overall-2025",
+  "abstract": "This Stanford Digital Economy Lab paper analyzes high-frequency, individual-level payroll data from ADP to measure real-world employment effects of generative AI since late 2022. The authors find that overall employment continues to grow robustly, but employment growth for young workers (ages 22-25) has been stagnant since late 2022, with declining employment in AI-exposed jobs driving this stagnation. The study links millions of worker records to established measures of occupational AI exposure to systematically present six facts about recent labor market shifts.",
+  "keyFindings": [
+    "Overall employment continues to grow robustly, but employment growth for young workers has been stagnant since late 2022.",
+    "Workers aged 22-25 experienced a 13% relative decline in employment in the most AI-exposed occupations since ChatGPT's launch.",
+    "Employment for 22-25 year old software developers is down nearly 20% from its peak in late 2022 to July 2025.",
+    "Older workers (26+) show no noticeable negative change in employment trends, with some age groups showing increases of 6-9%.",
+    "Employment declines are concentrated in roles where AI automates tasks rather than augments human capabilities.",
+    "Close to 70% of occupations in the lowest AI exposure quintile see rising early career employment, compared to less than half in the highest exposure quintile."
+  ],
+  "methodology": "Large-scale empirical study using monthly, individual-level payroll records from ADP (January 2021 to July 2025) merged with two measures of occupational AI exposure: a GPT-4 Exposure index from Eloundou et al. (2024) and the Anthropic Economic Index based on real-world Claude LLM conversations. The Anthropic index distinguishes whether AI is used to automate or augment tasks.",
+  "qualifiers": "The study notes that young workers are most at risk because their value comes mainly from codified knowledge, but also shows that AI systems designed to augment rather than replace human labor produce more positive employment trajectories. The effect persists even after controlling for firm-level economic shocks. Correlation with AI exposure does not definitively establish causation.",
+  "fetchedAt": "2026-03-09"
+}

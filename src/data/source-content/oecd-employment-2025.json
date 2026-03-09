@@ -1,0 +1,14 @@
+{
+  "id": "oecd-employment-2025",
+  "abstract": "The OECD Employment Outlook 2025 examines how demographic shifts, AI, and evolving labour market trends are reshaping work across developed countries. While employment and participation are at record highs with OECD unemployment at just under 5%, the report warns that generative AI is fuelling both optimism about productivity growth and concern about job displacement and widening inequalities. The central theme addresses the demographic crunch as old-age dependency ratios reach unprecedented levels.",
+  "keyFindings": [
+    "Employment and participation are at record highs across the OECD, with unemployment at just under 5%, but job creation is decelerating.",
+    "Without policy adaptation, GDP per capita growth is expected to decrease by almost half in the coming decades due to demographic aging.",
+    "AI use can diminish routine cognitive and clerical skills while increasing need for digital, business, and management skills.",
+    "Information-processing skills are 9% lower among 55-59 year-olds and 12% lower among 60-65 year-olds compared to 25-29 year-olds.",
+    "Closing the gender employment gap could increase annual GDP per capita growth by 0.2 percentage points across the OECD."
+  ],
+  "methodology": "OECD flagship publication synthesizing labor market data from member countries, analyzing employment trends, wage dynamics, skills surveys, and demographic projections. Draws on national statistical office data, the OECD Survey of Adult Skills, and cross-country comparative analysis.",
+  "qualifiers": "The report focuses on OECD member countries, which may not fully represent global labor market dynamics. AI impact projections involve substantial uncertainty as the technology is evolving rapidly. The demographic focus means AI's labor market effects are discussed alongside broader workforce aging challenges rather than in isolation.",
+  "fetchedAt": "2026-03-09"
+}
