@@ -11,6 +11,12 @@
 
 import fs from "fs";
 import path from "path";
+import { fetchSource } from "./lib/ingest/fetcher";
+import {
+  extractSourceContent,
+  writeSourceContentEntry,
+  hasSourceContent,
+} from "./lib/ingest/content-extractor";
 
 // ─── Main ─────────────────────────────────────────────────────────────
 
@@ -165,6 +171,32 @@ async function applyIngestion(
       lastUpdatedPath,
       JSON.stringify({ lastUpdated: today }, null, 2)
     );
+  }
+
+  // Auto-populate chatbot content store for newly ingested sources
+  for (const candidate of staging.candidates) {
+    const { highlight, sourceId, evidenceTier } = candidate;
+    if (hasSourceContent(sourceId)) continue;
+
+    try {
+      console.log(`  Extracting chatbot content for ${sourceId}...`);
+      const fetched = await fetchSource(highlight.source);
+      if (fetched.text.length >= 100) {
+        const contentEntry = await extractSourceContent(sourceId, fetched.text, {
+          title: highlight.title,
+          publisher: new URL(highlight.source).hostname.replace("www.", ""),
+          datePublished: highlight.publishedAt ?? new Date().toISOString().split("T")[0],
+          evidenceTier,
+          url: highlight.source,
+          excerpt: candidate.extractedStats?.[0]?.quote,
+        });
+        writeSourceContentEntry(contentEntry);
+        console.log(`  Stored: ${contentEntry.keyFindings.length} findings for chatbot`);
+      }
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err);
+      console.warn(`  Warning: Content extraction failed for ${sourceId}: ${msg}`);
+    }
   }
 
   // Summary
