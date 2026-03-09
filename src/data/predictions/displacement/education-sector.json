@@ -179,6 +179,15 @@
       ],
       "evidenceTier": 2,
       "label": "SHRM: only 7.3% of education jobs highly automated — lowest of any sector (n=20,262)"
+    },
+    {
+      "date": "2026-03-04",
+      "direction": "down",
+      "sourceIds": [
+        "ellucian-higher-ed-ai-survey-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Ellucian: 66% of higher ed institutions leveraging AI, up from 49% YoY (n=779)"
     }
   ],
   "sources": [
@@ -334,6 +343,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-01-15",
       "excerpt": "Education task exposure jumped from 11% to 49% — a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations."
+    },
+    {
+      "id": "ellucian-higher-ed-ai-survey-2026",
+      "title": "Ellucian's 3rd Annual Higher Education AI Survey",
+      "url": "https://www.ellucian.com/newsroom/ellucians-3rd-annual-higher-education-ai-survey-signals-shift-individual-ai-use",
+      "publisher": "Ellucian",
+      "evidenceTier": 2,
+      "datePublished": "2026-03-04",
+      "excerpt": "The survey shows institutional adoption is accelerating, with 66% of respondents reporting their institution is currently leveraging AI, an increase from 49% year over year. Eighty-eight percent of respondents say they expect institutional AI use to increase over the next two years. Survey of 779 higher education faculty and administrators from 300+ institutions."
     }
   ]
 }
