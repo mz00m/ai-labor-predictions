@@ -37,6 +37,7 @@ const NAV_ENTRIES: NavEntry[] = [
     items: [
       { href: "/history", label: "History" },
       { href: "/about#methodology", label: "Methodology" },
+      { href: "/suggest", label: "Suggest Source" },
       { href: "/about", label: "About" },
     ],
   },
