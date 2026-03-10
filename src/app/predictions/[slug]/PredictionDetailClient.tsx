@@ -284,6 +284,22 @@ export default function PredictionDetailPage() {
         />
       </section>
 
+      {/* Suggest a Source */}
+      <div className="border border-black/[0.06] rounded-lg px-5 py-5 bg-[var(--background)] max-w-xl">
+        <p className="text-[14px] text-[var(--muted)] leading-relaxed">
+          <span className="font-semibold text-[var(--foreground)]">
+            Know a study we&rsquo;re missing?
+          </span>{" "}
+          <Link
+            href={`/suggest`}
+            className="underline text-[var(--accent)] hover:opacity-80"
+          >
+            Suggest a source
+          </Link>{" "}
+          for this prediction.
+        </p>
+      </div>
+
       {/* Market Links */}
       {prediction.marketIds && (
         <>

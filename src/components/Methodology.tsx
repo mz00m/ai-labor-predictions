@@ -227,6 +227,22 @@ export default function Methodology() {
           </ul>
         </div>
 
+        {/* Suggest a Source */}
+        <div className="border-t border-black/[0.06] pt-6">
+          <p className="text-[13px] text-[var(--muted)] leading-relaxed max-w-3xl">
+            <span className="font-semibold text-[var(--foreground)]">
+              Know a study we should include?
+            </span>{" "}
+            <a
+              href="/suggest"
+              className="underline hover:text-[var(--foreground)] transition-colors"
+            >
+              Suggest a source
+            </a>{" "}
+            and we&apos;ll review it for inclusion.
+          </p>
+        </div>
+
         {/* Update Schedule */}
         <div className="border-t border-black/[0.06] pt-6">
           <p className="text-[13px] text-[var(--muted)] leading-relaxed max-w-3xl">
