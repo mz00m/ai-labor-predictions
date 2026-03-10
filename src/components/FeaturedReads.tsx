@@ -10,28 +10,37 @@ interface Article {
 
 const articles: Article[] = [
   {
-    author: "Ranganathan & Ye (HBR)",
-    title: "AI Doesn\u2019t Reduce Work \u2014 It Intensifies It",
+    author: "Kolko (PIIE)",
+    title: "AI and the Labor Market Is Still in the First Inning",
     summary:
-      "Eight-month study of 200 employees: 83% said AI increased workload. Workers voluntarily took on more pace, scope, and hours \u2014 leading to burnout and cognitive fatigue.",
-    date: "Feb 9",
-    url: "https://hbr.org/2026/02/ai-doesnt-reduce-work-it-intensifies-it",
-    accent: "border-l-emerald-500",
+      "Evidence inconclusive; disruption pace matches computer & internet eras. Under 1/5 of firms using AI.",
+    date: "Mar 10",
+    url: "https://www.piie.com/blogs/realtime-economics/2026/research-ai-and-labor-market-still-first-inning",
+    accent: "border-l-amber-500",
   },
   {
     author: "Anthropic (Massenkoff, McCrory)",
-    title: "Labor Market Impacts of AI: A New Measure and Early Evidence",
+    title: "Labor Market Impacts of AI: New Measure & Early Evidence",
     summary:
-      "Introduces 'observed exposure' combining LLM capability with real usage data. No unemployment rise found — but young worker hiring is slowing in exposed jobs.",
+      "New 'observed exposure' metric. No unemployment rise yet — but young worker hiring slowing in exposed jobs.",
     date: "Mar 5",
     url: "https://www.anthropic.com/research/labor-market-impacts",
     accent: "border-l-purple-500",
   },
   {
-    author: "Chung",
-    title: "Introducing AIR: The AI Resilience Report",
+    author: "Ranganathan & Ye (HBR)",
+    title: "AI Doesn\u2019t Reduce Work — It Intensifies It",
     summary:
-      "The first canonical aggregator of research on how AI is impacting jobs at the occupational level — with implications and actions for job seekers.",
+      "200-employee study: 83% said AI increased workload via pace, scope, and hours — leading to burnout.",
+    date: "Feb 9",
+    url: "https://hbr.org/2026/02/ai-doesnt-reduce-work-it-intensifies-it",
+    accent: "border-l-emerald-500",
+  },
+  {
+    author: "Chung",
+    title: "AIR: The AI Resilience Report",
+    summary:
+      "First canonical aggregator of AI job-impact research at the occupational level.",
     date: "Mar 4",
     url: "https://www.linkedin.com/pulse/introducing-air-ai-resilience-report-jared-chung-gxfec",
     accent: "border-l-rose-500",
@@ -40,7 +49,7 @@ const articles: Article[] = [
     author: "Kinder (Brookings)",
     title: "What Deindustrialization Did to Men, AI May Do to Women",
     summary:
-      "Millions of women in clerical and customer service roles face AI exposure — echoing manufacturing's toll on men.",
+      "Millions of women in clerical/CS roles face AI exposure — echoing manufacturing\u2019s toll on men.",
     date: "Mar 2",
     url: "https://humanistxyz.substack.com/p/what-deindustrialization-did-to-men",
     accent: "border-l-blue-500",
@@ -49,21 +58,21 @@ const articles: Article[] = [
 
 export default function FeaturedReads() {
   return (
-    <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5">
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2">
       {articles.map((a) => (
         <a
           key={a.url}
           href={a.url}
           {...(a.internal ? {} : { target: "_blank", rel: "noopener noreferrer" })}
-          className={`group border-l-2 ${a.accent} rounded-r-md bg-black/[0.02] dark:bg-white/[0.03] px-3 py-2.5 transition-all hover:bg-black/[0.04] dark:hover:bg-white/[0.06]`}
+          className={`group border-l-2 ${a.accent} rounded-r-md bg-black/[0.02] dark:bg-white/[0.03] px-2.5 py-2 transition-all hover:bg-black/[0.04] dark:hover:bg-white/[0.06]`}
         >
-          <p className="text-[11px] font-semibold text-[var(--muted)] uppercase tracking-wide">
+          <p className="text-[10px] font-semibold text-[var(--muted)] uppercase tracking-wide truncate">
             {a.author}{a.date && <span className="opacity-50"> &middot; {a.date}</span>}
           </p>
-          <h3 className="text-[13px] font-bold text-[var(--foreground)] leading-snug mt-0.5 group-hover:text-[var(--accent)] transition-colors line-clamp-2">
+          <h3 className="text-[12px] font-bold text-[var(--foreground)] leading-snug mt-0.5 group-hover:text-[var(--accent)] transition-colors line-clamp-2">
             {a.title}
           </h3>
-          <p className="text-[11px] text-[var(--muted)] leading-relaxed mt-1 line-clamp-2">
+          <p className="text-[10px] text-[var(--muted)] leading-relaxed mt-0.5 line-clamp-2">
             {a.summary}
           </p>
         </a>

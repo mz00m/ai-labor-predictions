@@ -349,6 +349,15 @@
       ],
       "evidenceTier": 3,
       "label": "Citadel: AI capex ~$650B in 2026, ~$2T over 3 years"
+    },
+    {
+      "date": "2026-03-10",
+      "direction": "neutral",
+      "sourceIds": [
+        "piie-kolko-ai-labor-first-inning-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "PIIE/Kolko: <1/5 of firms using AI; even fewer for production (Census BTOS)"
     }
   ],
   "sources": [
@@ -631,6 +640,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-02-26",
       "excerpt": "In the last two weeks, did this business use Artificial Intelligence (AI) in any of its business functions? Yes: 17.5%, No: 73.1%, Do not know: 9.4% (Cycle 202604, ref period Jan 26–Feb 8, 2026). First biweekly reading (Cycle 202524, Nov 2025): Yes: 17.3%."
+    },
+    {
+      "id": "piie-kolko-ai-labor-first-inning-2026",
+      "title": "Research on AI and the labor market is still in the first inning",
+      "url": "https://www.piie.com/blogs/realtime-economics/2026/research-ai-and-labor-market-still-first-inning",
+      "publisher": "Peterson Institute for International Economics (Jed Kolko)",
+      "evidenceTier": 2,
+      "datePublished": "2026-03-10",
+      "excerpt": "Current data from the Census Bureau's Business Trends and Outlook Survey shows that fewer than one-fifth of firms are using AI in any capacity, and even fewer are using AI directly for producing goods and services."
     },
     {
       "id": "arxiv-what-do-professional-2025",

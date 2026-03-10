@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-10",
-  "totalSources": 358,
-  "verifiedCount": 348,
+  "totalSources": 359,
+  "verifiedCount": 349,
   "sources": {
     "revelio-labs-wage-divide-2025": {
       "id": "revelio-labs-wage-divide-2025",
@@ -4882,6 +4882,21 @@
       "excerpt": "Robots have a mixed effect: replacing jobs that relatively high-wage manufacturing employees used to perform, while also making firms more efficient and productive. One robot per thousand workers replaced about six workers.",
       "usedIn": [
         "robots-physical-automation-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "piie-kolko-ai-labor-first-inning-2026": {
+      "id": "piie-kolko-ai-labor-first-inning-2026",
+      "title": "Research on AI and the labor market is still in the first inning",
+      "url": "https://www.piie.com/blogs/realtime-economics/2026/research-ai-and-labor-market-still-first-inning",
+      "publisher": "Peterson Institute for International Economics (Jed Kolko)",
+      "evidenceTier": 2,
+      "datePublished": "2026-03-10",
+      "excerpt": "The evidence on how AI is affecting the labor market today is inconclusive, and claims about harmful impacts on particular groups of workers are premature. Initial evidence suggests that transitional disruption from AI to date is not outpacing recent technological changes.",
+      "usedIn": [
+        "overall-us-displacement",
+        "ai-adoption-rate"
       ],
       "verified": true,
       "synthetic": false

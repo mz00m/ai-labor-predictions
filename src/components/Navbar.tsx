@@ -35,6 +35,7 @@ const NAV_ENTRIES: NavEntry[] = [
   {
     label: "Learn",
     items: [
+      { href: "/learn/reading-list", label: "Reading List" },
       { href: "/history", label: "History" },
       { href: "/about#methodology", label: "Methodology" },
       { href: "/about", label: "About" },

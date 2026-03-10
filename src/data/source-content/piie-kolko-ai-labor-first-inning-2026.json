@@ -1,0 +1,14 @@
+{
+  "id": "piie-kolko-ai-labor-first-inning-2026",
+  "abstract": "Jed Kolko of PIIE surveys the emerging research on AI's labor market effects and concludes that we are still in the 'first inning' of understanding the impact. He argues that current evidence is inconclusive, that claims about harmful effects on particular groups are premature, and that transitional disruption so far does not appear to outpace previous technological shifts like computers (1984) or the internet (1996). The piece emphasizes the gap between AI adoption (still under 20% of firms per Census BTOS) and the speed at which confident predictions are being made.",
+  "keyFindings": [
+    "As of early 2026, fewer than one-fifth of US firms are using AI in any capacity per Census BTOS data, and even fewer use it directly for producing goods and services.",
+    "The evidence on how AI is affecting the labor market today is inconclusive, and claims about harmful impacts on particular groups of workers are premature.",
+    "Initial evidence suggests that transitional disruption from AI to date is not outpacing recent technological changes like the commercial computer era (1984) or the commercial internet era (1996).",
+    "The occupational mix has changed over the past three years at a similar pace to post-computer and post-internet adoption periods.",
+    "Research is still in early stages — large-scale effects may emerge but are not yet visible in labor market data."
+  ],
+  "methodology": "Literature review and meta-analysis of existing research on AI and labor markets, supplemented by Census BTOS survey data and Bureau of Labor Statistics occupational composition data. Comparison of current occupational mix change rates to historical periods following major technology introductions.",
+  "qualifiers": "The author notes that early-stage evidence is inherently limited and that larger effects may materialize as AI adoption scales. The 'first inning' framing explicitly acknowledges deep uncertainty in both directions.",
+  "fetchedAt": "2026-03-10"
+}
