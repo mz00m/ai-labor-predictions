@@ -609,9 +609,27 @@
       ],
       "evidenceTier": 1,
       "label": "MIT Iceberg Index: 11.7% of US workforce (151M workers) currently replaceable, worth $1.2T in wages"
+    },
+    {
+      "date": "2026-01-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "nber-delfino-unwilling-reskill-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER/Delfino: Identity fit dominates reskilling decisions over wages/demand"
     }
   ],
   "sources": [
+    {
+      "id": "nber-delfino-unwilling-reskill-2026",
+      "title": "Unwilling to Reskill? Experimental Evidence from Real-World Jobseekers",
+      "url": "https://www.nber.org/papers/w34633",
+      "publisher": "NBER (Delfino, Garnero, Inferrera, Leonardi, Sadun)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-01",
+      "excerpt": "Perceived 'identity fit' — whether a new skill feels compatible with a person's sense of self — dominated re-skilling decisions, often outweighing beliefs about wages or employer demand."
+    },
     {
       "id": "goldman-300m",
       "title": "The Potentially Large Effects of AI on Economic Growth",

@@ -507,6 +507,24 @@
       ],
       "evidenceTier": 2,
       "label": "Anthropic: Programmers highest AI exposure (74.5%) but no unemployment impact detected"
+    },
+    {
+      "date": "2025-07-12",
+      "direction": "down",
+      "sourceIds": [
+        "metr-becker-ai-dev-productivity-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "METR RCT: AI increases experienced dev task time by 19% (n=16, 246 tasks)"
+    },
+    {
+      "date": "2026-01-01",
+      "direction": "down",
+      "sourceIds": [
+        "chen-stratton-ai-in-firm-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Chen & Stratton: 8.5% coding boost, 8.7% faster tasks, no employment effects"
     }
   ],
   "sources": [
@@ -912,6 +930,24 @@
       "evidenceTier": 1,
       "datePublished": "2024-06-01",
       "excerpt": "They show that 20 percent of the 55 percent total increase was directly attributable to AI-generated lines, suggesting genuine productivity effects beyond simple code generation."
+    },
+    {
+      "id": "metr-becker-ai-dev-productivity-2025",
+      "title": "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity",
+      "url": "https://arxiv.org/abs/2507.09089",
+      "publisher": "METR (Becker, Rush, Barnes, Rein)",
+      "evidenceTier": 1,
+      "datePublished": "2025-07-12",
+      "excerpt": "16 developers with moderate AI experience complete 246 tasks in mature projects on which they have an average of 5 years of prior experience. Allowing AI actually increases completion time by 19%."
+    },
+    {
+      "id": "chen-stratton-ai-in-firm-2026",
+      "title": "Artificial Intelligence in the Firm",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=chen-stratton-2026",
+      "publisher": "Chen & Stratton (Jellyfish data)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-01",
+      "excerpt": "AI adoption led to moderate productivity increases — an 8.5 percent increase in coding activity and 8.7 percent faster task completion — with no measurable quality declines. These productivity gains did not translate into increased output, changes in task composition, or effects on employment."
     },
     {
       "id": "paradis-google-ai-coding-2024",

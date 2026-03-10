@@ -1,0 +1,14 @@
+{
+  "id": "oecd-ai-skills-gap-2025",
+  "abstract": "This OECD report examines whether training systems across member countries are keeping pace with the growing demand for AI skills in the workplace. It finds that one in three job vacancies across OECD economies have high AI exposure, yet only a small percentage of training courses deliver AI content. The report argues that most workers need general AI literacy rather than specialized AI skills, and that current training supply is insufficient.",
+  "keyFindings": [
+    "One in three job vacancies across OECD countries have high AI exposure as of 2025",
+    "Only about 1% of AI-exposed jobs require specific, complex AI skills",
+    "Among 21 analysed countries, 14 have invested in AI-specific training programmes; 9 focus on AI professionals and 7 on general AI literacy",
+    "Low-skilled adults and workers in high-automation-risk jobs are least likely to access AI training despite being most vulnerable",
+    "Countries rely heavily on financial incentives to promote AI skills, underutilising other policy tools"
+  ],
+  "methodology": "Cross-country analysis of 21 OECD member states. Analysis of job vacancy data for AI exposure, review of national AI training programmes, and assessment of training course content for AI relevance.",
+  "qualifiers": "OECD-wide data, not US-specific. Training course analysis covers a subset of OECD countries. The 'one in three' figure refers to OECD job vacancies, which may differ from US-specific exposure rates.",
+  "fetchedAt": "2026-03-10"
+}

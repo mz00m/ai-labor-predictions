@@ -1,0 +1,13 @@
+{
+  "id": "itrev-beane-human-vibes-2025",
+  "abstract": "This article describes how AI is reshaping the software developer job market into three distinct tiers, with implications for career trajectories over the next decade. The authors identify three key personality dimensions that complement AI access and enable effective AI use: code reading velocity, productive skepticism, and architectural judgment.",
+  "keyFindings": [
+    "The developer job market is polarizing into three tiers: Apex ($250K-$500K+) for strategic systems thinking, Hybrid Middle for work-to-live paths, and an entry level facing compression",
+    "Three dimensions identified for effective AI use: code reading velocity, productive skepticism, and architectural judgment",
+    "These dimensions are not immutable personality traits but are acquired through years of deliberate practice",
+    "Cross-domain expertise is described as a new superpower: a tax attorney who learns prompt engineering may have more value than a purely technical AI engineer"
+  ],
+  "methodology": "Qualitative analysis and framework development based on practitioner experience and industry observation. Published in the Enterprise Technology Leadership Journal (IT Revolution) Fall 2025.",
+  "qualifiers": "This is a qualitative framework paper, not an empirical study. Salary ranges and tier descriptions are based on practitioner observation rather than systematic data collection. The three-tier model is a conceptual framework rather than an empirically validated taxonomy.",
+  "fetchedAt": "2026-03-10"
+}

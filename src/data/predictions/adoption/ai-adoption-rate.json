@@ -358,6 +358,15 @@
       ],
       "evidenceTier": 2,
       "label": "PIIE/Kolko: <1/5 of firms using AI; even fewer for production (Census BTOS)"
+    },
+    {
+      "date": "2026-01-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "chen-stratton-ai-in-firm-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Chen & Stratton: Only ~50% of engineers adopted AI tools 18mo after firm rollout"
     }
   ],
   "sources": [
@@ -640,6 +649,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-02-26",
       "excerpt": "In the last two weeks, did this business use Artificial Intelligence (AI) in any of its business functions? Yes: 17.5%, No: 73.1%, Do not know: 9.4% (Cycle 202604, ref period Jan 26–Feb 8, 2026). First biweekly reading (Cycle 202524, Nov 2025): Yes: 17.3%."
+    },
+    {
+      "id": "chen-stratton-ai-in-firm-2026",
+      "title": "Artificial Intelligence in the Firm",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=chen-stratton-2026",
+      "publisher": "Chen & Stratton (Jellyfish data)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-01",
+      "excerpt": "Even 18 months after firm-level adoption, only about half of engineers had begun using the tools. Individual take-up was not universal."
     },
     {
       "id": "piie-kolko-ai-labor-first-inning-2026",

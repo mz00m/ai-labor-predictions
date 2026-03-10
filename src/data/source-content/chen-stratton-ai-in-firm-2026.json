@@ -1,0 +1,14 @@
+{
+  "id": "chen-stratton-ai-in-firm-2026",
+  "abstract": "This study examines the adoption and productivity effects of GitHub Copilot and Cursor using a proprietary dataset from Jellyfish covering approximately 200 million work events of 100,000 engineers at 500 firms. Using a staggered difference-in-differences design, the authors find moderate productivity increases from AI adoption but no effects on output, task composition, or employment.",
+  "keyFindings": [
+    "AI adoption led to an 8.5% increase in coding activity and 8.7% faster task completion with no measurable quality declines",
+    "These productivity gains did not translate into increased output, changes in task composition, or effects on employment",
+    "Even 18 months after firm-level adoption, only about half of engineers had begun using AI tools",
+    "Point estimates suggested marginally larger effects for senior workers, though differences were not statistically significant",
+    "Firms whose core product is software saw significant increases in output; firms using software as internal input saw no change"
+  ],
+  "methodology": "Staggered difference-in-differences design exploiting variation in timing of firm-level license purchases for GitHub Copilot and Cursor. Dataset: approximately 200 million work events of 100,000 engineers at 500 firms (Jellyfish data).",
+  "qualifiers": "Productivity measures are based on coding activity metrics which may not capture full value of software development. The productivity-to-output gap suggests organizational factors mediate whether individual gains aggregate. Paper not yet widely available online.",
+  "fetchedAt": "2026-03-10"
+}

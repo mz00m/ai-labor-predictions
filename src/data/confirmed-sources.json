@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-10",
-  "totalSources": 359,
-  "verifiedCount": 349,
+  "totalSources": 367,
+  "verifiedCount": 357,
   "sources": {
     "revelio-labs-wage-divide-2025": {
       "id": "revelio-labs-wage-divide-2025",
@@ -4898,6 +4898,115 @@
         "overall-us-displacement",
         "ai-adoption-rate"
       ],
+      "verified": true,
+      "synthetic": false
+    },
+    "metr-becker-ai-dev-productivity-2025": {
+      "id": "metr-becker-ai-dev-productivity-2025",
+      "title": "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity",
+      "url": "https://arxiv.org/abs/2507.09089",
+      "publisher": "METR (Becker, Rush, Barnes, Rein)",
+      "evidenceTier": 1,
+      "datePublished": "2025-07-12",
+      "excerpt": "16 developers with moderate AI experience complete 246 tasks in mature projects on which they have an average of 5 years of prior experience. Allowing AI actually increases completion time by 19%.",
+      "usedIn": [
+        "tech-sector-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "anthropic-shen-ai-skill-formation-2026": {
+      "id": "anthropic-shen-ai-skill-formation-2026",
+      "title": "How AI Impacts Skill Formation",
+      "url": "https://arxiv.org/abs/2601.20245",
+      "publisher": "Anthropic (Shen, Tamkin)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-28",
+      "excerpt": "AI use impairs conceptual understanding, code reading, and debugging abilities. The AI group averaged 50% on the quiz, compared to 67% in the hand-coding group.",
+      "usedIn": [
+        "education-sector-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "oecd-ai-skills-gap-2025": {
+      "id": "oecd-ai-skills-gap-2025",
+      "title": "Bridging the AI Skills Gap: Is Training Keeping Up?",
+      "url": "https://www.oecd.org/en/publications/bridging-the-ai-skills-gap_66d0702e-en.html",
+      "publisher": "OECD Publishing",
+      "evidenceTier": 2,
+      "datePublished": "2025-04-24",
+      "excerpt": "With one in three job vacancies having high AI exposure, a significant share of jobs in OECD economies are influenced by the rise of AI.",
+      "usedIn": [
+        "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "nhh-carvajal-ai-gender-gap-2024": {
+      "id": "nhh-carvajal-ai-gender-gap-2024",
+      "title": "Will Artificial Intelligence Get in the Way of Achieving Gender Equality?",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4758197",
+      "publisher": "NHH Norwegian School of Economics (Carvajal, Franco, Isaksson)",
+      "evidenceTier": 1,
+      "datePublished": "2024-10-01",
+      "excerpt": "Among 595 business school students in Norway, male students were 25 percent more likely to be high AI users, and the gap was widest among the highest-performing women.",
+      "usedIn": [
+        "genai-work-adoption"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "chen-stratton-ai-in-firm-2026": {
+      "id": "chen-stratton-ai-in-firm-2026",
+      "title": "Artificial Intelligence in the Firm",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=chen-stratton-2026",
+      "publisher": "Chen & Stratton (Jellyfish data)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-01",
+      "excerpt": "AI adoption led to moderate productivity increases — an 8.5 percent increase in coding activity and 8.7 percent faster task completion — with no measurable quality declines. These productivity gains did not translate into increased output, changes in task composition, or effects on employment.",
+      "usedIn": [
+        "tech-sector-displacement",
+        "ai-adoption-rate"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "nber-delfino-unwilling-reskill-2026": {
+      "id": "nber-delfino-unwilling-reskill-2026",
+      "title": "Unwilling to Reskill? Experimental Evidence from Real-World Jobseekers",
+      "url": "https://www.nber.org/papers/w34633",
+      "publisher": "NBER (Delfino, Garnero, Inferrera, Leonardi, Sadun)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-01",
+      "excerpt": "Perceived 'identity fit' — whether a new skill feels compatible with a person's sense of self — dominated re-skilling decisions, often outweighing beliefs about wages or employer demand.",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "itrev-beane-human-vibes-2025": {
+      "id": "itrev-beane-human-vibes-2025",
+      "title": "Human Vibes: How Developers Can Navigate a Job Market That's Stretching at Both Ends",
+      "url": "https://itrevolution.com/articles/the-great-developer-divide-how-ai-is-reshaping-the-software-job-market-into-three-tiers/",
+      "publisher": "IT Revolution (Beane, Hassell, Hopper, Yegge)",
+      "evidenceTier": 3,
+      "datePublished": "2025-10-01",
+      "excerpt": "The developer job market is polarizing into three tiers. Three dimensions identified for effective AI use: code reading velocity, productive skepticism, and architectural judgment.",
+      "usedIn": [],
+      "verified": true,
+      "synthetic": false
+    },
+    "nber-diaz-training-within-firms-2025": {
+      "id": "nber-diaz-training-within-firms-2025",
+      "title": "Training within Firms",
+      "url": "https://www.nber.org/papers/w33670",
+      "publisher": "NBER (Diaz, Neyra-Nazarrett, Ramirez, Sadun, Tamayo)",
+      "evidenceTier": 1,
+      "datePublished": "2025-04-14",
+      "excerpt": "Variation in training participation among employees is closely tied to differences in middle managers' behavior and practices. When a high-training manager takes over a team, training participation surges within weeks.",
+      "usedIn": [],
       "verified": true,
       "synthetic": false
     }

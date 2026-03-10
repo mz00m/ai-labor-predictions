@@ -1,0 +1,14 @@
+{
+  "id": "nber-diaz-training-within-firms-2025",
+  "abstract": "This study uses data from three firms — a car manufacturer (1,800 workers), a quick-service restaurant chain (2,500 workers), and a retailer (25,400 workers) in Argentina and Colombia — to show that middle managers play a critical role in determining employee training participation. Managerial differences significantly influence employee performance and absenteeism, especially during periods of organizational change.",
+  "keyFindings": [
+    "Variation in training participation among employees is closely tied to differences in middle managers' behavior and practices",
+    "Middle managers who actively engage with employees and emphasize well-being and development are associated with significantly higher training participation",
+    "When a high-training manager takes over a team from a low-training manager, training participation surges within weeks",
+    "The managerial traits predicting higher training participation include strong social skills and commitment to developing underperformers",
+    "The same training program deployed within the same firm can have different take-up rates depending on an employee's immediate manager"
+  ],
+  "methodology": "Analysis of administrative data from three firms: a car manufacturer (1,800 workers), quick-service restaurant chain (2,500 workers), and retailer (25,400 workers) in Argentina and Colombia. Published as NBER Working Paper 33670 and HBS Strategy Unit Working Paper 25-045.",
+  "qualifiers": "Study is about general workforce training, not AI-specific training. Data is from firms in Argentina and Colombia; organizational dynamics may differ in US context. The study covers three specific firms and may not generalize to all industries.",
+  "fetchedAt": "2026-03-10"
+}

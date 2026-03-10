@@ -1,0 +1,14 @@
+{
+  "id": "anthropic-shen-ai-skill-formation-2026",
+  "abstract": "This randomized experiment studied how developers gained mastery of a new asynchronous programming library with and without AI assistance. The study found that AI use impairs conceptual understanding, code reading, and debugging abilities, without delivering significant efficiency gains on average. Six distinct AI interaction patterns were identified, three of which involve cognitive engagement and preserve learning outcomes.",
+  "keyFindings": [
+    "AI-assisted developers averaged 50% on a comprehension quiz, compared to 67% for hand-coding group (17 percentage point gap, Cohen's d=0.738, p=0.01)",
+    "AI assistance did not make developers significantly faster on average — only about two minutes faster, not statistically significant",
+    "Developers who delegated heavily scored below 40% on mastery tests; those who stayed cognitively engaged preserved learning",
+    "The largest performance gap appeared in debugging questions, suggesting AI particularly undermines ability to identify when code is wrong",
+    "Three of six identified AI interaction patterns preserve learning: asking conceptual questions, requesting explanations, and verifying AI output"
+  ],
+  "methodology": "Randomized controlled trial with 52 (mostly junior) software engineers who had been using Python at least once a week for over a year. Participants learned a new asynchronous programming library with or without AI assistance. Final evaluation contained 14 questions for 27 points total.",
+  "qualifiers": "Study uses a specific learning task (new library), not general coding productivity. Authors note their setup differs from agentic coding products like Claude Code and expect impacts of such programs on skill development to be more pronounced. Sample of 52 developers, mostly junior.",
+  "fetchedAt": "2026-03-10"
+}
