@@ -53,6 +53,19 @@ function sampleSizeWeight(point: HistoricalDataPoint): number {
 }
 
 /**
+ * Proxy metric discount: data points measuring a proxy (e.g., job posting
+ * declines used as evidence for displacement) receive 0.5× weight since the
+ * measurement is indirect. The value has already been converted via the
+ * conversionFactor, but we still want direct measurements to dominate the
+ * weighted average.
+ *
+ * Returns 0.5 for proxy points, 1.0 for direct measurements.
+ */
+function proxyWeight(point: HistoricalDataPoint): number {
+  return point.isProxy ? 0.5 : 1;
+}
+
+/**
  * Compute the headline aggregate and trend from filtered history points.
  *
  * Weighting: each data point's weight = tierWeight × recencyWeight.
@@ -110,7 +123,8 @@ export function computeAggregate(
       const w =
         TIER_WEIGHT[points[i].evidenceTier] *
         recencyWeight(timestamps[i], minMs, maxMs) *
-        sampleSizeWeight(points[i]);
+        sampleSizeWeight(points[i]) *
+        proxyWeight(points[i]);
       weightedSum += points[i].value * w;
       totalWeight += w;
     }

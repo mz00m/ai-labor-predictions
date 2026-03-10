@@ -57,10 +57,49 @@ From the source content, extract EVERY quantitative statistic related to AI's im
    - **Unit compatibility** (most important — does the stat's unit match the graph's unit?)
    - **Topic alignment** (secondary)
 
-4. **DATA TYPE** — Classify as:
-   - `data_point`: Units directly match the graph → plotted on the chart line
+4. **DATA TYPE** — Classify using this decision tree:
+
+   **Step A: Direct unit match?**
+   Does the stat's unit exactly match the graph's unit (e.g., "% of jobs displaced" → displacement graph)?
+   - YES → `data_point` (standard). Proceed to step 5.
+   - NO → Go to Step B.
+
+   **Step B: Known proxy metric with conversion?**
+   Is the stat a recognized proxy for the graph's unit? Check the proxy conversion table:
+
+   | Proxy Metric | Target Unit | Conversion Factor | Range | Rationale |
+   |---|---|---|---|---|
+   | Job posting decline (%) | % jobs displaced | 0.35 | 0.2–0.5 | Posting drops overstate displacement ~2–3x; most reflect hiring freezes, not eliminations (Cajner et al., Davis/Haltiwanger) |
+   | Task automation potential (%) | % jobs displaced | 0.30 | 0.15–0.50 | Not all automatable tasks lead to job cuts; firms redeploy workers (Autor, OECD 2023) |
+   | Relative posting change (%) | % jobs displaced | 0.30 | 0.15–0.45 | Relative comparisons (high-AI vs low-AI occupations) capture substitution patterns but not net displacement |
+   | Productivity gain (%) | % wage change | 0.40 | 0.20–0.60 | Historical pass-through of productivity to wages is partial and lagged (Stansbury/Summers) |
+   | Revenue impact (%) | % jobs displaced | 0.25 | 0.10–0.40 | Revenue automation ≠ headcount reduction; firms often redeploy savings to growth |
+
+   - If proxy match found → `data_point` with `isProxy: true`. Apply conversion:
+     - `value` = rawValue × conversionFactor (use midpoint)
+     - `confidenceLow` = rawValue × conversionLow
+     - `confidenceHigh` = rawValue × conversionHigh
+     - Include `proxyContext` object with `actualUnit`, factors, and `rationale`
+     - The point receives 0.5× weight discount in the weighted average automatically
+   - If no proxy match → Go to Step C.
+
+   **Step C: Outlier check — would plotting this create a statistical outlier?**
+   Compare the proposed value against existing data points on the target graph:
+   - Compute the mean and standard deviation of existing `history[]` values
+   - If |proposedValue - mean| > 2 × stddev → FLAG as potential outlier
+   - Present the flag to the user: "This value (X%) is >2 SD from the graph mean (Y% ± Z%). Recommend: overlay unless you can justify the deviation."
+
+   **Step D: Default to overlay**
    - `overlay`: Provides directional evidence but different units → shown as directional signal
    - When unsure, default to `overlay`
+
+   **Example — World Bank posting study:**
+   Source says: "Job postings for high-AI-substitution occupations fell 12% relative to low-substitution roles"
+   - Unit: "relative job posting decline (%)" ≠ graph unit "% of US jobs" → not a direct match
+   - Proxy table match: "Relative posting change → % jobs displaced" with factor 0.30 [0.15–0.45]
+   - Converted: value = -12 × 0.30 = -3.6, confidenceLow = -12 × 0.45 = -5.4, confidenceHigh = -12 × 0.15 = -1.8
+   - Result: `data_point` with `isProxy: true`, value = -3.6, range [-5.4, -1.8]
+   - This plots sensibly alongside direct displacement estimates (-3% to -6%) instead of appearing as a -12% outlier
 
 5. **EVIDENCE TIER** — Classify the source (not individual stats):
    - **Tier 1**: Peer-reviewed journals (AER, QJE, Science, Nature), NBER/CEPR working papers, government statistics (BLS, Census, OECD data tables), SEC filings, RCTs
@@ -86,9 +125,15 @@ URL:       [url if available]
 --- Extracted Statistics ---
 
 [1] → [Graph Title] ([slug])
-    Type:  DATA POINT / OVERLAY
+    Type:  DATA POINT / OVERLAY / PROXY DATA POINT
     Value: [value] (midpoint of [low]–[high]) — or just the value if not a range
     Quote: "[exact quote from source]"
+
+    (If PROXY DATA POINT):
+    Raw:        [rawValue] [actualUnit]
+    Converted:  [convertedValue] [graphUnit] (×[factor], range [low]–[high])
+    Rationale:  [why this conversion]
+    Outlier?:   [YES/NO — is converted value >2 SD from graph mean?]
 
 [2] → [Graph Title] ([slug])
     ...
@@ -135,6 +180,26 @@ For each **approved** prediction JSON file that needs changes:
      "confidenceHigh": [range_high if range],
      "sourceIds": ["[source-id]"],
      "evidenceTier": [tier]
+   }
+   ```
+   **For proxy data points** (when `isProxy: true`), use the converted value and add proxy metadata:
+   ```json
+   {
+     "date": "[publication date YYYY-MM-DD]",
+     "value": [convertedValue],
+     "confidenceLow": [rawValue × conversionLow],
+     "confidenceHigh": [rawValue × conversionHigh],
+     "sourceIds": ["[source-id]"],
+     "evidenceTier": [tier],
+     "metricType": "[postings|survey|etc]",
+     "isProxy": true,
+     "proxyContext": {
+       "actualUnit": "[what the study actually measured]",
+       "conversionFactor": [factor used],
+       "conversionLow": [low end of range],
+       "conversionHigh": [high end of range],
+       "rationale": "[why this conversion factor, ≤120 chars]"
+     }
    }
    ```
 4. **For overlays**, add to the `overlays` array:

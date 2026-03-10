@@ -2,6 +2,24 @@ export type EvidenceTier = 1 | 2 | 3 | 4;
 
 export type MetricType = "employment" | "postings" | "survey" | "projection" | "corporate";
 
+/**
+ * Known proxy-to-target conversion factors.
+ * Used when a study measures a related but different metric than the graph's unit.
+ * E.g., job posting declines are a proxy for displacement but overstate the effect.
+ */
+export interface ProxyContext {
+  /** What the study actually measures (e.g., "relative job posting decline") */
+  actualUnit: string;
+  /** Conversion factor applied: convertedValue = rawValue × conversionFactor */
+  conversionFactor: number;
+  /** Lower bound of reasonable conversion range */
+  conversionLow: number;
+  /** Upper bound of reasonable conversion range */
+  conversionHigh: number;
+  /** Brief rationale for the conversion (e.g., "posting declines overstate displacement ~2-3x per Cajner et al.") */
+  rationale: string;
+}
+
 export const EVIDENCE_TIER_LABELS: Record<EvidenceTier, string> = {
   1: "Verified Data & Research",
   2: "Institutional Analysis",
@@ -31,6 +49,21 @@ export interface HistoricalDataPoint {
   metricType?: MetricType;
   /** Approximate sample size for within-tier quality weighting (optional) */
   sampleSize?: number;
+  /**
+   * Marks this data point as a proxy measurement — the study measures something
+   * correlated with but not identical to the graph's unit.
+   *
+   * When true:
+   * - `value` should already be the CONVERTED value (rawValue × conversionFactor)
+   * - `confidenceLow`/`confidenceHigh` should reflect conversion uncertainty
+   * - The point receives a 0.5× weight discount in weighted averages
+   * - The chart tooltip shows the proxy label for transparency
+   *
+   * When false/undefined: standard direct measurement.
+   */
+  isProxy?: boolean;
+  /** Conversion metadata — required when isProxy is true */
+  proxyContext?: ProxyContext;
 }
 
 /** A qualitative/directional study shown as a horizontal band rather than a point */

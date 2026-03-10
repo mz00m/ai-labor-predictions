@@ -61,7 +61,29 @@ For each `overlay` entry, verify:
 - `label` is ≤ 120 characters
 - `evidenceTier` is 1, 2, 3, or 4
 
-#### 2f. Required Fields
+#### 2f. Statistical Outlier Detection
+For each prediction's `history[]` array:
+1. Compute the mean and standard deviation of all `value` entries
+2. Flag any data point where |value - mean| > 2 × stddev as a **statistical outlier**
+3. For flagged outliers, check:
+   - Does it have `metricType` different from the majority? (e.g., "postings" on a displacement chart) → likely a **proxy metric** that should have `isProxy: true` or be an overlay
+   - Does it have `isProxy: true`? If yes, is the conversion factor reasonable? (converted value should be within 2 SD)
+   - Is the outlier from a lower evidence tier? (Tier 3-4 outliers are more suspect than Tier 1)
+4. Report format:
+   ```
+   OUTLIER: [slug] — [sourceId] value=[value] is [N]σ from mean=[mean]
+     metricType: [type] | tier: [tier] | isProxy: [yes/no]
+     Recommendation: [CONVERT TO PROXY | MOVE TO OVERLAY | KEEP WITH JUSTIFICATION]
+   ```
+
+#### 2g. Proxy Metric Validation
+For each data point with `isProxy: true`:
+- Verify `proxyContext` object exists and is complete
+- Verify `value` ≈ rawValue × conversionFactor (within rounding tolerance)
+- Verify `confidenceLow` and `confidenceHigh` reflect conversion range bounds
+- Flag if converted value is still >2 SD from the non-proxy mean (conversion factor may be too generous)
+
+#### 2h. Required Fields
 - `id`, `slug`, `title`, `description`, `category`, `unit`, `timeHorizon` all present and non-empty
 
 ### Step 3: Hero Stat Checks
