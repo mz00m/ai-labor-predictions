@@ -9,6 +9,8 @@ import {
   ESTIMATE_TYPE_LABELS,
 } from "@/lib/research-annotations";
 import { computeAggregate } from "@/lib/prediction-stats";
+import { getBlsTrendForSlug } from "@/lib/bls-trends";
+import BLSTrendStrip from "@/components/BLSTrendStrip";
 
 interface PredictionSummaryCardProps {
   prediction: Prediction;
@@ -158,6 +160,7 @@ export default function PredictionSummaryCard({
   const agg = computeAggregate(prediction, selectedTiers);
   const contextLine = getContextLine(prediction, agg.mean);
   const annotation = getResearchAnnotation(prediction.slug);
+  const blsTrend = getBlsTrendForSlug(prediction.slug);
   const filteredHistory = prediction.history.filter((d) =>
     selectedTiers.includes(d.evidenceTier)
   );
@@ -267,6 +270,9 @@ export default function PredictionSummaryCard({
               Methodology
             </span>
           </p>
+
+          {/* BLS Employment Trend */}
+          {blsTrend && <BLSTrendStrip trend={blsTrend} />}
 
           {/* Research annotation — note expandable, badge always visible */}
           {annotation && (
