@@ -1,7 +1,6 @@
 import { neon } from "@neondatabase/serverless";
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-type SqlClient = ReturnType<typeof neon> & Record<string, any>;
+type SqlClient = ReturnType<typeof neon> & Record<string, unknown>;
 
 /**
  * Returns the Neon SQL client, or null if DATABASE_URL is not set.
