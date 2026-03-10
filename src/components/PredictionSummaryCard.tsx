@@ -59,7 +59,7 @@ function getContextLine(prediction: Prediction, aggregateValue: number): string 
   if (prediction.slug === "earnings-call-ai-mentions")
     return `${v}% of S&P 500 companies now mention AI + workforce on earnings calls, up from 8% pre-ChatGPT.`;
   if (prediction.slug === "robots-physical-automation-displacement")
-    return `${Math.abs(v)}% of physical/manual task jobs projected to be displaced by robots and physical automation by 2030 — constrained by hardware costs.`;
+    return `${v}% of physical/manual task jobs projected to be displaced by robots and physical automation by 2030 — constrained by hardware costs.`;
   return `Current estimate: ${v > 0 ? "+" : ""}${v} ${prediction.unit}.`;
 }
 
