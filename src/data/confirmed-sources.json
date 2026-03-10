@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-10",
-  "totalSources": 360,
-  "verifiedCount": 360,
+  "totalSources": 362,
+  "verifiedCount": 362,
   "sources": {
     "revelio-labs-wage-divide-2025": {
       "id": "revelio-labs-wage-divide-2025",
@@ -4902,6 +4902,34 @@
       "usedIn": [
         "overall-us-displacement",
         "white-collar-professional-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "nber-wang-wong-tech-unemployment-2025": {
+      "id": "nber-wang-wong-tech-unemployment-2025",
+      "title": "Artificial Intelligence and Technological Unemployment",
+      "url": "https://www.nber.org/papers/w33867",
+      "publisher": "NBER / Richmond Fed (Ping Wang, Tsz-Nga Wong)",
+      "evidenceTier": 1,
+      "datePublished": "2025-06-03",
+      "excerpt": "Calibrated to U.S. data, the model predicts more than threefold improvements in productivity in the some-AI steady state, alongside a long-run employment loss of 23%, with half this loss occurring over the initial five-year transition.",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "upwork-fy2025-earnings": {
+      "id": "upwork-fy2025-earnings",
+      "title": "Upwork Reports Fourth Quarter and Full Year 2025 Financial Results",
+      "url": "https://investors.upwork.com/news-releases/news-release-details/upwork-reports-fourth-quarter-and-full-year-2025-financial",
+      "publisher": "Upwork (SEC Filing / Press Release)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-10",
+      "excerpt": "Revenue grew 2% year over year to $787.8 million for full year 2025. GSV per active client was $5,129 in Q4 2025, an increase of 7% year over year. AI-related skills grew by 109% year over year. Active clients were 785,000 as of December 31, 2025.",
+      "usedIn": [
+        "freelancer-rate-impact"
       ],
       "verified": true,
       "synthetic": false

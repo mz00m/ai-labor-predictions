@@ -627,9 +627,27 @@
       ],
       "evidenceTier": 2,
       "label": "McKinsey: 57% of US work hours automatable (44% AI agents + 13% robots); ~40% of jobs highly automatable"
+    },
+    {
+      "date": "2025-06-03",
+      "direction": "down",
+      "sourceIds": [
+        "nber-wang-wong-tech-unemployment-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER/Richmond Fed: Calibrated model predicts 23% long-run employment loss; half within 5 years"
     }
   ],
   "sources": [
+    {
+      "id": "nber-wang-wong-tech-unemployment-2025",
+      "title": "Artificial Intelligence and Technological Unemployment",
+      "url": "https://www.nber.org/papers/w33867",
+      "publisher": "NBER / Richmond Fed (Ping Wang, Tsz-Nga Wong)",
+      "evidenceTier": 1,
+      "datePublished": "2025-06-03",
+      "excerpt": "Calibrated to U.S. data, the model predicts more than threefold improvements in productivity in the some-AI steady state, alongside a long-run employment loss of 23%, with half this loss occurring over the initial five-year transition."
+    },
     {
       "id": "mckinsey-agents-robots-us-2025",
       "title": "Agents, robots, and us: Skill partnerships in the age of AI",
