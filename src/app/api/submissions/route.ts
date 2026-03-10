@@ -102,30 +102,3 @@ export async function POST(request: Request) {
 
   return Response.json({ ok: true });
 }
-
-export async function GET(request: Request) {
-  // Admin-only: require SUBMISSIONS_API_KEY
-  const apiKey = process.env.SUBMISSIONS_API_KEY;
-  if (!apiKey) {
-    return Response.json({ error: "Not configured" }, { status: 503 });
-  }
-
-  const auth = request.headers.get("authorization");
-  if (auth !== `Bearer ${apiKey}`) {
-    return Response.json({ error: "Unauthorized" }, { status: 401 });
-  }
-
-  try {
-    const sql = getDb();
-    const rows = await sql`
-      SELECT id, url, note, email, status, created_at, reviewed_at
-      FROM study_submissions
-      ORDER BY created_at DESC
-      LIMIT 100
-    `;
-    return Response.json({ submissions: rows });
-  } catch (err) {
-    console.error("Failed to fetch submissions:", err);
-    return Response.json({ error: "Database error" }, { status: 500 });
-  }
-}
