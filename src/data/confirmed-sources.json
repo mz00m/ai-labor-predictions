@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-10",
-  "totalSources": 358,
-  "verifiedCount": 358,
+  "totalSources": 360,
+  "verifiedCount": 360,
   "sources": {
     "revelio-labs-wage-divide-2025": {
       "id": "revelio-labs-wage-divide-2025",
@@ -4874,6 +4874,35 @@
       "datePublished": "2025-04-14",
       "excerpt": "Variation in training participation among employees is closely tied to differences in middle managers' behavior and practices. When a high-training manager takes over a team, training participation surges within weeks.",
       "usedIn": [],
+      "verified": true,
+      "synthetic": false
+    },
+    "bloomberry-180m-creative-postings-2025": {
+      "id": "bloomberry-180m-creative-postings-2025",
+      "title": "I analyzed 180M jobs to see what jobs AI is actually replacing today",
+      "url": "https://bloomberry.com/blog/i-analyzed-180m-jobs-to-see-what-jobs-ai-is-actually-replacing-today/",
+      "publisher": "Bloomberry/Revealera (Henley Wing Chiu)",
+      "evidenceTier": 2,
+      "datePublished": "2025-11-03",
+      "excerpt": "Computer graphic artist postings down 33% in 2025, photographers and writers down 28%, journalists down 22%, against an 8% overall market decline. Analysis of 180M global job postings from company websites using 650 normalized job titles.",
+      "usedIn": [
+        "creative-industry-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "mckinsey-agents-robots-us-2025": {
+      "id": "mckinsey-agents-robots-us-2025",
+      "title": "Agents, robots, and us: Skill partnerships in the age of AI",
+      "url": "https://www.mckinsey.com/mgi/our-research/agents-robots-and-us-skill-partnerships-in-the-age-of-ai",
+      "publisher": "McKinsey Global Institute (Yee, Madgavkar, Smit et al.)",
+      "evidenceTier": 2,
+      "datePublished": "2025-11-25",
+      "excerpt": "Currently demonstrated technologies could automate activities accounting for about 57 percent of US work hours today. AI agents could perform tasks occupying 44 percent of US work hours, while robots could handle another 13 percent. Roles with the highest potential for automation make up about 40 percent of total jobs.",
+      "usedIn": [
+        "overall-us-displacement",
+        "white-collar-professional-displacement"
+      ],
       "verified": true,
       "synthetic": false
     }

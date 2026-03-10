@@ -237,6 +237,15 @@
       ],
       "evidenceTier": 2,
       "label": "Envato: 49% of creatives use AI daily for client work; 1 in 3 expect design roles to transform (n=1,780)"
+    },
+    {
+      "date": "2025-11-03",
+      "direction": "down",
+      "sourceIds": [
+        "bloomberry-180m-creative-postings-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Bloomberry/Revealera: Graphic artist postings -33%, writers -28% in 2025 (n=180M global)"
     }
   ],
   "sources": [
@@ -437,6 +446,15 @@
       "evidenceTier": 1,
       "datePublished": "2025-06-01",
       "excerpt": "Human-AI teams show roughly 73 percent higher productivity per worker for ad copy, though human-human teams remained superior for images."
+    },
+    {
+      "id": "bloomberry-180m-creative-postings-2025",
+      "title": "I analyzed 180M jobs to see what jobs AI is actually replacing today",
+      "url": "https://bloomberry.com/blog/i-analyzed-180m-jobs-to-see-what-jobs-ai-is-actually-replacing-today/",
+      "publisher": "Bloomberry/Revealera (Henley Wing Chiu)",
+      "evidenceTier": 2,
+      "datePublished": "2025-11-03",
+      "excerpt": "Computer graphic artist postings down 33% in 2025, photographers and writers down 28%, journalists down 22%, against an 8% overall market decline. Analysis of 180M global job postings from company websites using 650 normalized job titles."
     },
     {
       "id": "envato-ai-creative-work-2026",
