@@ -1,50 +1,60 @@
 "use client";
 
-import { Fragment, useState } from "react";
+import { useState } from "react";
 
 const AGE_BANDS = [
-  { band: "22\u201325", change: "\u221220%", changeColor: "text-[#ef4444]", weight: "12%", src: "direct" },
-  { band: "26\u201330", change: "\u2248 0%", changeColor: "text-[#f59e0b]", weight: "22%", src: "direct" },
-  { band: "31\u201334", change: "+6%", changeColor: "text-[#10b981]", weight: "20%", src: "interp." },
-  { band: "35\u201349", change: "+9%", changeColor: "text-[#059669]", weight: "32%", src: "direct" },
-  { band: "50+", change: "+5%", changeColor: "text-[#0d9488]", weight: "14%", src: "direct" },
+  { band: "22\u201325", change: -20, label: "\u221220%", color: "#ef4444", weight: "12%", src: "direct", detail: "Near-zero hiring + AI tool substitution" },
+  { band: "26\u201330", change: 0, label: "\u2248 0%", color: "#f59e0b", weight: "22%", src: "direct", detail: "Flat — caught between junior freeze and senior growth" },
+  { band: "31\u201334", change: 6, label: "+6%", color: "#10b981", weight: "20%", src: "interp.", detail: "Benefiting from AI augmentation, still hiring" },
+  { band: "35\u201349", change: 9, label: "+9%", color: "#059669", weight: "32%", src: "direct", detail: "Peak beneficiaries — experience + AI tools compound" },
+  { band: "50+", change: 5, label: "+5%", color: "#0d9488", weight: "14%", src: "direct", detail: "Stable, moderate AI adoption" },
+] as const;
+
+const CORROBORATING = [
+  { signal: "Tech internship postings", change: "\u221230%", source: "Handshake 2025" },
+  { signal: "Entry-level tech hiring", change: "\u221225%", source: "SignalFire 2025" },
+  { signal: "CS grad unemployment", change: "7.2% vs 4.5%", source: "ACS 2024" },
+  { signal: "CompTIA IT unemployment", change: "3.9% \u2192 5.7%", source: "CompTIA 2025" },
 ] as const;
 
 const DETAILS = [
   {
-    label: "WHY NET \u2260 DISPLACEMENT",
-    text: "The +1.3% nets senior growth against junior decline. Pure displacement (roles eliminated, not restructured) is ~3\u20134% of sector, concentrated in 22\u201325 band.",
+    label: "WHY THE AVERAGE IS MISLEADING",
+    text: "The +1.3% sector-wide figure is a weighted average across all age bands. It is technically correct but practically misleading: a 22-year-old entering tech faces a fundamentally different labor market than a 38-year-old already in it. Policy and career decisions based on the average will be wrong for most individuals.",
   },
   {
-    label: "CAUSAL ID",
-    text: "Paper uses firm fixed-effects and health aides as control group. After controls, 22\u201325 cohort in AI-exposed jobs shows 16% relative decline. The 20% raw figure includes ~4pp from macro conditions (Fed hikes, post-pandemic correction).",
+    label: "CAUSAL IDENTIFICATION",
+    text: "Brynjolfsson, Chandar & Chen use firm fixed-effects and health aides as a control group. After controls, the 22\u201325 cohort in AI-exposed jobs shows a 16% relative decline. The raw 20% figure includes ~4pp from macro conditions (Fed rate hikes, post-pandemic correction). The AI-specific effect is still large: roughly 4x the macro contribution.",
+  },
+  {
+    label: "THE MECHANISM: EVAPORATED ENTRY POINTS",
+    text: "This is not a story about mass layoffs. Firms stopped creating junior roles because senior developers — armed with Copilot, Cursor, Claude — can now absorb routine tasks that previously went to juniors. The traditional career ladder (learn by doing grunt work, get promoted) is being compressed. Junior hiring is a lagging indicator of how firms value human learning vs. AI output.",
   },
   {
     label: "POPULATION WEIGHTS",
-    text: "From BLS SOC 15-1252 (CPS Table 11b, 2024), Stack Overflow 2024 demographics, ACS PUMS via DataUSA. Median US software dev age \u2248 33\u201334.",
+    text: "From BLS SOC 15-1252 (CPS Table 11b, 2024), Stack Overflow 2024 demographics, ACS PUMS via DataUSA. Median US software dev age \u2248 33\u201334. The 22\u201325 band is 12% of the workforce but absorbs the majority of displacement.",
   },
   {
-    label: "MECHANISM",
-    text: "Primary channel is evaporated entry points (hiring freeze), not mass layoffs. Firms stopped creating junior roles; senior devs absorb that work with AI tools. Corroborated by Handshake (\u221230% tech internships), SignalFire (\u221225% entry-level tech hiring).",
-  },
-  {
-    label: "PLOT RECOMMENDATION",
-    text: "On tech-sector-displacement: OVERLAY, direction UP. Unit mismatch prevents data_point classification \u2014 age-stratified employment change \u2260 % of sector jobs displaced.",
+    label: "WHO BENEFITS",
+    text: "Experienced developers (35-49) are seeing the strongest growth. AI tools amplify domain knowledge and judgment — exactly what senior engineers have. The productivity literature (Copilot RCT: +55.8% speed, Microsoft/Accenture: +26% PRs) mostly measures experienced developer gains. Early evidence suggests juniors benefit less from AI tools because effective use requires knowing what good code looks like.",
   },
 ] as const;
 
+// Max absolute value for bar scaling
+const MAX_ABS = 20;
+
 export default function AgeWeightedMethodology() {
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(true);
 
   return (
-    <div className="max-w-lg">
+    <div className="max-w-2xl">
       <div className="border border-[var(--border)] rounded-lg overflow-hidden bg-[var(--background)] shadow-sm">
         {/* Header */}
-        <div className="flex items-center justify-between px-3.5 py-2.5 bg-[var(--accent-light)] border-b border-[var(--border)]">
+        <div className="flex items-center justify-between px-4 py-3 bg-[#ef4444]/[0.06] border-b border-[var(--border)]">
           <div className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)]" />
-            <span className="font-mono text-[11px] font-semibold tracking-wide text-[var(--accent)]">
-              AGE-WEIGHTED DISPLACEMENT METHOD
+            <span className="w-2 h-2 rounded-full bg-[#ef4444]" />
+            <span className="font-mono text-[11px] font-semibold tracking-wide text-[#ef4444]">
+              K-SHAPED DISPLACEMENT: THE AVERAGE HIDES THE STORY
             </span>
           </div>
           <button
@@ -56,36 +66,88 @@ export default function AgeWeightedMethodology() {
         </div>
 
         {/* Summary */}
-        <div className="px-3.5 py-3">
-          <p className="text-[12px] text-[var(--muted)] leading-relaxed">
-            Sector-wide estimate derived by weighting age-band employment
-            changes by each band&apos;s share of the software developer workforce.
-            Source data from{" "}
-            <span className="text-[var(--accent)] font-medium">
-              Brynjolfsson, Chandar &amp; Chen (2025)
-            </span>{" "}
-            using ADP payroll microdata, Oct 2022 &ndash; Jul 2025.
+        <div className="px-4 py-4">
+          <p className="text-[13px] text-[var(--muted)] leading-relaxed">
+            The sector-wide +1.3% average is real but misleading.
+            When broken down by age, the tech labor market reveals a sharp
+            K-shape: early-career workers face steep decline while
+            experienced workers are growing.
           </p>
 
-          {/* Age band table */}
-          <div className="mt-3 grid grid-cols-[auto_1fr_auto_auto] gap-x-3 gap-y-0.5 font-mono text-[10.5px] leading-7">
-            <span className="text-[var(--muted)] font-medium">Band</span>
-            <span className="text-[var(--muted)] font-medium">&Delta; Emp</span>
-            <span className="text-[var(--muted)] font-medium">Wt</span>
-            <span className="text-[var(--muted)] font-medium">Src</span>
-            {AGE_BANDS.map((row) => (
-              <Fragment key={row.band}>
-                <span className={row.changeColor}>{row.band}</span>
-                <span className={row.changeColor}>{row.change}</span>
-                <span className="text-[var(--muted)]">{row.weight}</span>
-                <span className="text-[var(--muted)] opacity-60">{row.src}</span>
-              </Fragment>
-            ))}
+          {/* Visual bar chart */}
+          <div className="mt-5 space-y-2">
+            <div className="flex items-center text-[10px] font-mono text-[var(--muted)] mb-1">
+              <span className="w-14">Age</span>
+              <span className="flex-1 text-center opacity-50">Employment change since late 2022</span>
+              <span className="w-10 text-right">Weight</span>
+            </div>
+            {AGE_BANDS.map((row) => {
+              const barWidth = Math.abs(row.change) / MAX_ABS * 100;
+              const isNegative = row.change < 0;
+              const isZero = row.change === 0;
+
+              return (
+                <div key={row.band} className="flex items-center gap-0">
+                  <span
+                    className="w-14 font-mono text-[12px] font-semibold shrink-0"
+                    style={{ color: row.color }}
+                  >
+                    {row.band}
+                  </span>
+                  <div className="flex-1 flex items-center h-7">
+                    {/* Left half (negative) */}
+                    <div className="w-1/2 flex justify-end pr-0.5">
+                      {isNegative && (
+                        <div
+                          className="h-5 rounded-l-sm flex items-center justify-end pr-1.5"
+                          style={{
+                            width: `${barWidth}%`,
+                            backgroundColor: row.color,
+                            opacity: 0.85,
+                          }}
+                        >
+                          <span className="text-[10px] font-mono font-bold text-white whitespace-nowrap">
+                            {row.label}
+                          </span>
+                        </div>
+                      )}
+                    </div>
+                    {/* Center line */}
+                    <div className="w-px h-7 bg-[var(--muted)] opacity-30 shrink-0" />
+                    {/* Right half (positive) */}
+                    <div className="w-1/2 flex justify-start pl-0.5">
+                      {!isNegative && !isZero && (
+                        <div
+                          className="h-5 rounded-r-sm flex items-center pl-1.5"
+                          style={{
+                            width: `${barWidth}%`,
+                            backgroundColor: row.color,
+                            opacity: 0.85,
+                          }}
+                        >
+                          <span className="text-[10px] font-mono font-bold text-white whitespace-nowrap">
+                            {row.label}
+                          </span>
+                        </div>
+                      )}
+                      {isZero && (
+                        <span className="text-[10px] font-mono font-bold pl-1.5" style={{ color: row.color }}>
+                          {row.label}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                  <span className="w-10 text-right font-mono text-[10px] text-[var(--muted)] shrink-0">
+                    {row.weight}
+                  </span>
+                </div>
+              );
+            })}
           </div>
 
           {/* Result */}
-          <div className="mt-3 flex items-center justify-between bg-[var(--accent-light)] rounded-md px-3 py-1.5">
-            <span className="font-mono text-[10.5px] text-[var(--muted)]">
+          <div className="mt-4 flex items-center justify-between bg-[var(--accent-light)] rounded-md px-3 py-2">
+            <span className="font-mono text-[11px] text-[var(--muted)]">
               Weighted sector net &rarr;
             </span>
             <span className="font-mono text-[13px] font-semibold text-[var(--accent)]">
@@ -95,26 +157,63 @@ export default function AgeWeightedMethodology() {
               </span>
             </span>
           </div>
+
+          {/* Corroborating signals */}
+          <div className="mt-4">
+            <p className="font-mono text-[10px] font-semibold tracking-widest text-[var(--muted)] mb-2">
+              CORROBORATING SIGNALS FOR EARLY-CAREER IMPACT
+            </p>
+            <div className="grid grid-cols-2 gap-x-4 gap-y-1.5">
+              {CORROBORATING.map((s) => (
+                <div key={s.signal} className="flex items-baseline gap-1.5">
+                  <span className="text-[11px] font-mono font-semibold text-[#ef4444]">{s.change}</span>
+                  <span className="text-[10.5px] text-[var(--muted)]">{s.signal}</span>
+                  <span className="text-[9px] text-[var(--muted)] opacity-50">({s.source})</span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* Expanded details */}
         {expanded && (
-          <div className="px-3.5 pb-3.5 border-t border-[var(--border)]">
+          <div className="px-4 pb-4 border-t border-[var(--border)]">
             {DETAILS.map((item) => (
-              <div key={item.label} className="mt-3">
-                <p className="font-mono text-[9.5px] font-semibold tracking-widest text-[var(--accent)] mb-0.5">
+              <div key={item.label} className="mt-4">
+                <p className="font-mono text-[9.5px] font-semibold tracking-widest text-[var(--accent)] mb-1">
                   {item.label}
                 </p>
-                <p className="text-[11.5px] text-[var(--muted)] leading-relaxed">
+                <p className="text-[12px] text-[var(--muted)] leading-relaxed">
                   {item.text}
                 </p>
               </div>
             ))}
+
+            {/* Age-band detail table */}
+            <div className="mt-5">
+              <p className="font-mono text-[9.5px] font-semibold tracking-widest text-[var(--accent)] mb-2">
+                BAND-LEVEL DETAIL
+              </p>
+              <div className="space-y-1.5">
+                {AGE_BANDS.map((row) => (
+                  <div key={row.band} className="flex items-baseline gap-2">
+                    <span className="font-mono text-[11px] font-semibold w-12" style={{ color: row.color }}>
+                      {row.band}
+                    </span>
+                    <span className="text-[11px] text-[var(--muted)]">{row.detail}</span>
+                    <span className="text-[9px] text-[var(--muted)] opacity-40 ml-auto shrink-0">
+                      {row.src}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
             {/* Source footer */}
-            <p className="mt-4 pt-2 border-t border-[var(--border)] text-[9.5px] text-[var(--muted)] opacity-60 leading-snug">
-              Brynjolfsson, Chandar &amp; Chen (2025) &ldquo;Canaries in the Coal Mine?&rdquo;
-              Stanford DEL / ADP Research. Corroborating: Westby &amp; Modestino
-              (2025), BLS OOH 2024, IEEE Spectrum, Stack Overflow 2025.
+            <p className="mt-5 pt-3 border-t border-[var(--border)] text-[10px] text-[var(--muted)] opacity-60 leading-relaxed">
+              Primary: Brynjolfsson, Chandar &amp; Chen (2025) &ldquo;Canaries in the Coal Mine?&rdquo;
+              Stanford DEL / ADP Research. Corroborating: Dallas Fed (2026), Goldman Sachs (2025),
+              CompTIA (2025), Handshake, SignalFire, BLS OOH 2024, ACS via Preston Cooper.
             </p>
           </div>
         )}
