@@ -5,7 +5,7 @@
   "description": "Projected change in average freelancer hourly rates for AI-exposed categories (writing, design, translation, data work) by 2028.",
   "category": "wages",
   "unit": "% rate change",
-  "currentValue": -17.5,
+  "currentValue": -19.5,
   "timeHorizon": "By 2028",
   "history": [
     {
@@ -82,7 +82,7 @@
       "sourceIds": [
         "sciencedirect-freelancer-demand-2025"
       ],
-      "evidenceTier": 3,
+      "evidenceTier": 1,
       "metricType": "projection"
     }
   ],
@@ -140,6 +140,24 @@
       ],
       "evidenceTier": 1,
       "label": "CAIS/Scale AI: Best AI agent captures only $1,720 of $143,991 freelance value (1.2%)"
+    },
+    {
+      "date": "2026-02-10",
+      "direction": "neutral",
+      "sourceIds": [
+        "upwork-fy2025-earnings"
+      ],
+      "evidenceTier": 1,
+      "label": "Upwork FY2025: GSV per client +7% YoY; AI skills +109%; revenue +2% to $787.8M"
+    },
+    {
+      "date": "2026-02-18",
+      "direction": "down",
+      "sourceIds": [
+        "fiverr-fy2025-earnings"
+      ],
+      "evidenceTier": 1,
+      "label": "Fiverr FY2025: Active buyers -13.6%; writing/translation categories -20%; 2026 guidance: revenue -3% to -12%"
     }
   ],
   "sources": [
@@ -208,12 +226,12 @@
     },
     {
       "id": "sciencedirect-freelancer-demand-2025",
-      "title": "The Impact of Generative AI on Freelancer Demand: A Multi-Platform Study",
+      "title": "Winners and losers of generative AI: Early Evidence of Shifts in Freelancer Demand",
       "url": "https://www.sciencedirect.com/science/article/pii/S0167268124004591",
-      "publisher": "Journal of Economic Behavior & Organization",
-      "evidenceTier": 3,
-      "datePublished": "2025-12-01",
-      "excerpt": "Writing gig volume dropped ~30% across major freelance platforms post-ChatGPT. Translation and data entry categories down 35-45%. AI-augmented freelancers partially offset decline."
+      "publisher": "Journal of Economic Behavior & Organization (Teutloff, Einsiedler, Kässi, Braesemann, Mishkin, del Rio-Chanona)",
+      "evidenceTier": 1,
+      "datePublished": "2025-01-29",
+      "excerpt": "Demand for substitutable skills (writing, translation) decreased 20-50% relative to counterfactual after ChatGPT launch. Short-term (1-3 week) jobs saw sharpest decline. ML programming demand grew 24%; AI chatbot development nearly tripled. Novice worker demand declined across complementary skill clusters."
     },
     {
       "id": "humlum-vestergaard-adoption-2025",
@@ -241,6 +259,24 @@
       "evidenceTier": 1,
       "datePublished": "2025-09-15",
       "excerpt": "Digital trace data show substitution already occurring in writing and translation tasks; declining demand for novice workers across AI-complementary freelance work."
+    },
+    {
+      "id": "fiverr-fy2025-earnings",
+      "title": "Fiverr Announces Fourth Quarter and Full Year 2025 Results",
+      "url": "https://investors.fiverr.com/news-releases/news-release-details/fiverr-announces-fourth-quarter-and-full-year-2025-results",
+      "publisher": "Fiverr International Ltd. (SEC Filing / Press Release)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-18",
+      "excerpt": "Full-year 2025 revenue of $430.9M, up 10.1% YoY. Active buyers down 13.6% in 2025. Spend per buyer reached $342, rising 13% YoY. Writing, translation, and simple programming categories declining ~20% due to AI substitution. High-value projects over $1,000 grew 23%. 2026 revenue guidance: $380M-$420M, a decline of 3-12% YoY."
+    },
+    {
+      "id": "upwork-fy2025-earnings",
+      "title": "Upwork Reports Fourth Quarter and Full Year 2025 Financial Results",
+      "url": "https://investors.upwork.com/news-releases/news-release-details/upwork-reports-fourth-quarter-and-full-year-2025-financial",
+      "publisher": "Upwork (SEC Filing / Press Release)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-10",
+      "excerpt": "Revenue grew 2% year over year to $787.8 million for full year 2025. GSV per active client was $5,129 in Q4 2025, an increase of 7% year over year. AI-related skills grew by 109% year over year. Active clients were 785,000 as of December 31, 2025."
     },
     {
       "id": "cais-scale-remote-labor-index-2025",

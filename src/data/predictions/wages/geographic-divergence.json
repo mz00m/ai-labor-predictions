@@ -113,6 +113,15 @@
       "label": "EPJ: AI impact concentrates in economically undiversified MSAs"
     },
     {
+      "date": "2025-06-03",
+      "direction": "up",
+      "sourceIds": [
+        "pwc-ai-jobs-barometer-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "PwC: AI-skilled workers command 56% wage premium (up from 25%); ~1B job ads analyzed"
+    },
+    {
       "date": "2025-07-01",
       "direction": "up",
       "sourceIds": [
@@ -120,6 +129,15 @@
       ],
       "evidenceTier": 2,
       "label": "Glassdoor: AI jobs pay 25% premium; AI job listings up 123% YoY"
+    },
+    {
+      "date": "2025-07-16",
+      "direction": "up",
+      "sourceIds": [
+        "brookings-mapping-ai-economy-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Brookings: Bay Area holds 13% of AI postings; top 30 metros capture 67% of AI hiring"
     },
     {
       "date": "2025-07-27",
@@ -138,6 +156,15 @@
       ],
       "evidenceTier": 1,
       "label": "Anthropic: AI usage concentrated by income & geography"
+    },
+    {
+      "date": "2025-11-26",
+      "direction": "up",
+      "sourceIds": [
+        "mit-iceberg-index-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "MIT Iceberg Index: AI exposure distributed across all 50 states; SD, NC, UT higher than CA"
     },
     {
       "date": "2026-01-15",
@@ -165,15 +192,6 @@
       ],
       "evidenceTier": 1,
       "label": "Dallas Fed: AI-exposed sector wages +16.7% vs +7.5% national since fall 2022"
-    },
-    {
-      "date": "2025-11-26",
-      "direction": "up",
-      "sourceIds": [
-        "mit-iceberg-index-2025"
-      ],
-      "evidenceTier": 1,
-      "label": "MIT Iceberg Index: AI exposure distributed across all 50 states; SD, NC, UT higher than CA"
     }
   ],
   "sources": [
@@ -320,6 +338,24 @@
       "evidenceTier": 1,
       "datePublished": "2025-11-26",
       "excerpt": "AI exposure is geographically distributed across all 50 states, not confined to coastal tech hubs. South Dakota, North Carolina, and Utah show higher Iceberg Index values than California or Virginia. Tennessee (11.6%) and Ohio (11.8%) show substantial exposure driven by administrative and coordination roles. Washington leads tech-specific exposure at 4.2%."
+    },
+    {
+      "id": "pwc-ai-jobs-barometer-2025",
+      "title": "The Fearless Future: 2025 Global AI Jobs Barometer",
+      "url": "https://www.pwc.com/gx/en/issues/artificial-intelligence/job-barometer/2025/report.pdf",
+      "publisher": "PwC",
+      "evidenceTier": 2,
+      "datePublished": "2025-06-03",
+      "excerpt": "AI-skilled workers command a 56% wage premium over similar roles without AI skills, up from 25% last year. Most AI-exposed industries see 3x higher revenue-per-employee growth. Analysis of ~1 billion job ads across six continents."
+    },
+    {
+      "id": "brookings-mapping-ai-economy-2025",
+      "title": "Mapping the AI Economy: Which Regions Are Ready for the Next Technology Leap",
+      "url": "https://www.brookings.edu/articles/mapping-the-ai-economy-which-regions-are-ready-for-the-next-technology-leap/",
+      "publisher": "Brookings Metro (Muro, Methkupally)",
+      "evidenceTier": 2,
+      "datePublished": "2025-07-16",
+      "excerpt": "Bay Area accounts for 13% of national AI job postings. Top 30 metros capture 67% of all AI hiring. AI job postings grew 28.5% annually since 2010 but still only 2.5% of all US openings. More than 200 metros lack significant AI presence."
     }
   ]
 }

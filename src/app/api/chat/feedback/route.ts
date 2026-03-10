@@ -23,6 +23,11 @@ export async function POST(request: Request) {
 
   try {
     const sql = getDb();
+    if (!sql) {
+      return new Response(JSON.stringify({ ok: true }), {
+        headers: { "Content-Type": "application/json" },
+      });
+    }
     await sql`
       INSERT INTO chat_feedback (message_id, rating)
       VALUES (${messageId}::uuid, ${rating})

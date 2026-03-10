@@ -147,7 +147,7 @@
         "eloundou-openai-2024"
       ],
       "evidenceTier": 1,
-      "label": "OpenAI/UPenn: 80% of workers have \u226510% tasks affected"
+      "label": "OpenAI/UPenn: 80% of workers have ≥10% tasks affected"
     },
     {
       "date": "2025-02-01",
@@ -157,6 +157,15 @@
       ],
       "evidenceTier": 1,
       "label": "PNAS Nexus: AI-exposed occupations face higher unemployment"
+    },
+    {
+      "date": "2025-04-24",
+      "direction": "up",
+      "sourceIds": [
+        "oecd-ai-skills-gap-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "OECD: One in three OECD job vacancies have high AI exposure (2025)"
     },
     {
       "date": "2025-09-15",
@@ -220,15 +229,6 @@
       ],
       "evidenceTier": 2,
       "label": "Anthropic: ~70% of workers have some observed AI task coverage; theoretical far exceeds actual"
-    },
-    {
-      "date": "2025-04-24",
-      "direction": "up",
-      "sourceIds": [
-        "oecd-ai-skills-gap-2025"
-      ],
-      "evidenceTier": 2,
-      "label": "OECD: One in three OECD job vacancies have high AI exposure (2025)"
     }
   ],
   "sources": [
@@ -329,7 +329,7 @@
       "publisher": "Cognizant",
       "evidenceTier": 2,
       "datePublished": "2026-01-15",
-      "excerpt": "93% of all occupations analyzed have at least one task with significant AI exposure. Education task exposure jumped from 11% to 49% \u2014 a 4.5x increase. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations."
+      "excerpt": "93% of all occupations analyzed have at least one task with significant AI exposure. Education task exposure jumped from 11% to 49% — a 4.5x increase. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations."
     },
     {
       "id": "brookings-adaptive-capacity-2026",
@@ -375,7 +375,7 @@
       "publisher": "Stanford GSB / NBER (Jones, Tonetti)",
       "evidenceTier": 1,
       "datePublished": "2026-01-15",
-      "excerpt": "In recent years, retail trade has the lowest share of tasks that have been automated \u2014 around 50% \u2014 whereas computers/electronics has the highest share \u2014 more than 85%."
+      "excerpt": "In recent years, retail trade has the lowest share of tasks that have been automated — around 50% — whereas computers/electronics has the highest share — more than 85%."
     },
     {
       "id": "anthropic-labor-market-impacts-2026",

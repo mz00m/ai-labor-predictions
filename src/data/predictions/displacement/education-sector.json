@@ -118,6 +118,15 @@
       "label": "Chegg: 636 employees eliminated (67% of workforce), citing AI"
     },
     {
+      "date": "2025-04-03",
+      "direction": "up",
+      "sourceIds": [
+        "pew-ai-experts-predictions-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Pew: Only 31% of AI experts predict fewer teacher jobs in 20 yrs (n=1,013)"
+    },
+    {
       "date": "2025-04-25",
       "direction": "down",
       "sourceIds": [
@@ -134,6 +143,15 @@
       ],
       "evidenceTier": 2,
       "label": "WEF: moderate risk, core teaching protected"
+    },
+    {
+      "date": "2026-01-13",
+      "direction": "down",
+      "sourceIds": [
+        "educause-ai-higher-ed-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "EDUCAUSE: 94% of higher ed workers use AI; 67% flag job loss as urgent risk (n=1,960)"
     },
     {
       "date": "2026-01-15",
@@ -154,13 +172,13 @@
       "label": "Cognizant: education exposure jumped from 11% to 49% — a 4.5x increase"
     },
     {
-      "date": "2026-01-13",
-      "direction": "down",
+      "date": "2026-01-28",
+      "direction": "neutral",
       "sourceIds": [
-        "educause-ai-higher-ed-2026"
+        "anthropic-shen-ai-skill-formation-2026"
       ],
-      "evidenceTier": 2,
-      "label": "EDUCAUSE: 94% of higher ed workers use AI; 67% flag job loss as urgent risk (n=1,960)"
+      "evidenceTier": 1,
+      "label": "Anthropic/Shen: AI-assisted devs score 17pp lower on comprehension (50% vs 67%, n=52)"
     },
     {
       "date": "2026-02-01",
@@ -179,15 +197,6 @@
       ],
       "evidenceTier": 2,
       "label": "Ellucian: 66% of higher ed institutions leveraging AI, up from 49% YoY (n=779)"
-    },
-    {
-      "date": "2026-01-28",
-      "direction": "neutral",
-      "sourceIds": [
-        "anthropic-shen-ai-skill-formation-2026"
-      ],
-      "evidenceTier": 1,
-      "label": "Anthropic/Shen: AI-assisted devs score 17pp lower on comprehension (50% vs 67%, n=52)"
     }
   ],
   "sources": [
@@ -352,6 +361,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-03-04",
       "excerpt": "The survey shows institutional adoption is accelerating, with 66% of respondents reporting their institution is currently leveraging AI, an increase from 49% year over year. Eighty-eight percent of respondents say they expect institutional AI use to increase over the next two years. Survey of 779 higher education faculty and administrators from 300+ institutions."
+    },
+    {
+      "id": "pew-ai-experts-predictions-2025",
+      "title": "Predictions for AI's Next 20 Years by the US Public and AI Experts",
+      "url": "https://www.pewresearch.org/internet/2025/04/03/public-and-expert-predictions-for-ais-next-20-years/",
+      "publisher": "Pew Research Center",
+      "evidenceTier": 1,
+      "datePublished": "2025-04-03",
+      "excerpt": "31% of AI experts predict AI will lead to fewer teacher jobs in 20 years, vs 43% of general public. Survey of 1,013 AI experts (Aug-Oct 2024) and 5,410 US adults. AI experts far more optimistic: 73% say positive impact on jobs vs 23% of public."
     }
   ]
 }

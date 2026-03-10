@@ -270,6 +270,15 @@
       "label": "Gallup: 46% of US workers used AI at work in Q4 2025"
     },
     {
+      "date": "2026-01-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "chen-stratton-ai-in-firm-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Chen & Stratton: Only ~50% of engineers adopted AI tools 18mo after firm rollout"
+    },
+    {
       "date": "2026-01-15",
       "direction": "up",
       "sourceIds": [
@@ -367,15 +376,6 @@
       ],
       "evidenceTier": 2,
       "label": "PIIE/Kolko: <1/5 of firms using AI; even fewer for production (Census BTOS)"
-    },
-    {
-      "date": "2026-01-01",
-      "direction": "neutral",
-      "sourceIds": [
-        "chen-stratton-ai-in-firm-2026"
-      ],
-      "evidenceTier": 1,
-      "label": "Chen & Stratton: Only ~50% of engineers adopted AI tools 18mo after firm rollout"
     }
   ],
   "sources": [

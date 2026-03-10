@@ -84,74 +84,22 @@
   ],
   "overlays": [
     {
-      "date": "2025-01-08",
-      "direction": "up",
+      "date": "2024-10-01",
+      "direction": "neutral",
       "sourceIds": [
-        "workday-ai-skills-revolution-2025"
-      ],
-      "evidenceTier": 2,
-      "label": "Workday Davos: 59% of depts using AI + 31% experimenting (n=2,500)"
-    },
-    {
-      "date": "2025-05-30",
-      "direction": "up",
-      "sourceIds": [
-        "arxiv-what-do-professional-2025"
+        "nhh-carvajal-ai-gender-gap-2024"
       ],
       "evidenceTier": 1,
-      "label": "21 developers studied at cutting edge of AI use in software development"
+      "label": "NHH/Carvajal: Male students 25% more likely to be high AI users (n=595)"
     },
-    {
-      "date": "2026-01-14",
-      "direction": "up",
-      "sourceIds": [
-        "workday-ai-productivity-rework-2026"
-      ],
-      "evidenceTier": 2,
-      "label": "Workday: 85% of employees save 1–7 hrs/wk with AI (n=3,200)"
-    },
-    {
-      "date": "2026-01-14",
-      "direction": "up",
-      "sourceIds": [
-        "workday-ai-productivity-rework-2026"
-      ],
-      "evidenceTier": 2,
-      "label": "Workday: >90% of daily AI users believe it will help them succeed"
-    },
-    {
-      "date": "2026-01-19",
-      "direction": "up",
-      "sourceIds": [
-        "arxiv-ai-skills-improve-2026"
-      ],
-      "evidenceTier": 1,
-      "label": "AI skills increase interview invitations by 8-15 percentage points"
-    },
-    {
-      "date": "2026-03-04",
-      "direction": "up",
-      "sourceIds": [
-        "creatoreconomy-ai-native-ops-2026"
-      ],
-      "evidenceTier": 4,
-      "label": "Linear: PMs/marketers should do 80-100% of work via AI interface"
-    }
-  ],
-  "overlays": [
     {
       "date": "2026-03-02",
       "direction": "up",
-      "sourceIds": ["apoorv03-consumer-ai-usage-2026"],
+      "sourceIds": [
+        "apoorv03-consumer-ai-usage-2026"
+      ],
       "evidenceTier": 4,
       "label": "@apoorv03: AI apps cross 1B WAU; ChatGPT at 900M (Sensortower)"
-    },
-    {
-      "date": "2024-10-01",
-      "direction": "neutral",
-      "sourceIds": ["nhh-carvajal-ai-gender-gap-2024"],
-      "evidenceTier": 1,
-      "label": "NHH/Carvajal: Male students 25% more likely to be high AI users (n=595)"
     }
   ],
   "sources": [

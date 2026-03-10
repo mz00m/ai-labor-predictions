@@ -167,6 +167,7 @@ export async function POST(request: Request) {
         let dbMessageId: string | null = null;
         try {
           const sql = getDb();
+          if (!sql) throw new Error("DB not configured");
           if (!dbConversationId) {
             const sid = sessionId || crypto.randomUUID();
             const rows = await sql`
@@ -174,7 +175,7 @@ export async function POST(request: Request) {
               VALUES (${sid}, ${userAgent}, ${referrer}, 1)
               RETURNING id
             `;
-            dbConversationId = rows[0].id;
+            dbConversationId = (rows as Record<string, string>[])[0].id;
           } else {
             await sql`
               UPDATE chat_conversations
@@ -191,7 +192,7 @@ export async function POST(request: Request) {
             VALUES (${dbConversationId}::uuid, 'assistant', ${fullText}, ${latencyMs})
             RETURNING id
           `;
-          dbMessageId = assistantRows[0].id;
+          dbMessageId = (assistantRows as Record<string, string>[])[0].id;
         } catch (dbErr) {
           console.error("Failed to log chat analytics:", dbErr);
         }

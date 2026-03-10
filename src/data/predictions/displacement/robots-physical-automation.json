@@ -5,7 +5,7 @@
   "description": "Projected percentage of physical/manual task jobs displaced by industrial robots, warehouse automation, and other physical AI systems by 2030. Synthesizes IFR installation data, academic studies on robot-worker substitution, and institutional forecasts on automation of predictable physical tasks.",
   "category": "displacement",
   "unit": "% of physical-task jobs displaced",
-  "currentValue": 8,
+  "currentValue": 6.1,
   "timeHorizon": "By 2030",
   "history": [
     {
@@ -13,7 +13,9 @@
       "value": 3.3,
       "confidenceLow": 1.3,
       "confidenceHigh": 5.6,
-      "sourceIds": ["acemoglu-restrepo-robots-jpe-2020"],
+      "sourceIds": [
+        "acemoglu-restrepo-robots-jpe-2020"
+      ],
       "evidenceTier": 1,
       "metricType": "employment",
       "sampleSize": 722
@@ -23,7 +25,9 @@
       "value": 5,
       "confidenceLow": 1,
       "confidenceHigh": 9,
-      "sourceIds": ["acemoglu-macro-2024"],
+      "sourceIds": [
+        "acemoglu-macro-2024"
+      ],
       "evidenceTier": 1,
       "metricType": "projection"
     },
@@ -32,7 +36,9 @@
       "value": 5,
       "confidenceLow": 2,
       "confidenceHigh": 8,
-      "sourceIds": ["wef-future-of-jobs-2025"],
+      "sourceIds": [
+        "wef-future-of-jobs-2025"
+      ],
       "evidenceTier": 2,
       "metricType": "survey",
       "sampleSize": 1000
@@ -42,7 +48,9 @@
       "value": 14,
       "confidenceLow": 8,
       "confidenceHigh": 20,
-      "sourceIds": ["oecd-automation-risk-2024"],
+      "sourceIds": [
+        "oecd-automation-risk-2024"
+      ],
       "evidenceTier": 2,
       "metricType": "projection"
     },
@@ -51,7 +59,9 @@
       "value": 15,
       "confidenceLow": 8,
       "confidenceHigh": 20,
-      "sourceIds": ["shrm-automation-risk-2025"],
+      "sourceIds": [
+        "shrm-automation-risk-2025"
+      ],
       "evidenceTier": 2,
       "metricType": "survey"
     },
@@ -60,7 +70,9 @@
       "value": 7,
       "confidenceLow": 3,
       "confidenceHigh": 12,
-      "sourceIds": ["mckinsey-agents-robots-2025"],
+      "sourceIds": [
+        "mckinsey-agents-robots-2025"
+      ],
       "evidenceTier": 2,
       "metricType": "projection"
     },
@@ -69,7 +81,9 @@
       "value": 1.6,
       "confidenceLow": 0,
       "confidenceHigh": 3,
-      "sourceIds": ["bls-employment-projections-2026"],
+      "sourceIds": [
+        "bls-employment-projections-2026"
+      ],
       "evidenceTier": 1,
       "metricType": "projection"
     }
@@ -78,105 +92,135 @@
     {
       "date": "2020-06-01",
       "direction": "down",
-      "sourceIds": ["acemoglu-restrepo-robots-jpe-2020"],
+      "sourceIds": [
+        "acemoglu-restrepo-robots-jpe-2020"
+      ],
       "evidenceTier": 1,
       "label": "Acemoglu & Restrepo: One robot per 1K workers reduces employment 0.39pp"
     },
     {
       "date": "2024-10-01",
       "direction": "down",
-      "sourceIds": ["ifr-world-robotics-2025"],
+      "sourceIds": [
+        "ifr-world-robotics-2025"
+      ],
       "evidenceTier": 2,
       "label": "IFR: 542K industrial robots installed globally in 2024, doubling over 10 years"
     },
     {
       "date": "2024-11-01",
       "direction": "down",
-      "sourceIds": ["ifr-world-robotics-2025"],
+      "sourceIds": [
+        "ifr-world-robotics-2025"
+      ],
       "evidenceTier": 2,
       "label": "IFR: 4.66M industrial robots operational worldwide, up 9% YoY"
     },
     {
       "date": "2025-01-07",
       "direction": "down",
-      "sourceIds": ["wef-future-of-jobs-2025"],
+      "sourceIds": [
+        "wef-future-of-jobs-2025"
+      ],
       "evidenceTier": 2,
       "label": "WEF: Robots and automation to displace 5M more jobs than they create by 2030"
     },
     {
       "date": "2025-01-07",
       "direction": "neutral",
-      "sourceIds": ["wef-future-of-jobs-2025"],
+      "sourceIds": [
+        "wef-future-of-jobs-2025"
+      ],
       "evidenceTier": 2,
       "label": "WEF: 58% of employers expect robotics to transform their business by 2030"
     },
     {
       "date": "2025-03-01",
       "direction": "down",
-      "sourceIds": ["amazon-robotics-2025"],
+      "sourceIds": [
+        "amazon-robotics-2025"
+      ],
       "evidenceTier": 1,
       "label": "Amazon: ~800K mobile robots deployed across fulfillment centers"
     },
     {
       "date": "2025-06-01",
       "direction": "neutral",
-      "sourceIds": ["ifr-world-robotics-2025"],
+      "sourceIds": [
+        "ifr-world-robotics-2025"
+      ],
       "evidenceTier": 2,
       "label": "IFR: Cobot installations up 12% to 64,542 units; 11.9% market share"
     },
     {
       "date": "2025-08-01",
       "direction": "neutral",
-      "sourceIds": ["goldman-physical-ai-2025"],
+      "sourceIds": [
+        "goldman-physical-ai-2025"
+      ],
       "evidenceTier": 2,
       "label": "Goldman: Physically demanding/outdoor work largely insulated from current AI"
     },
     {
       "date": "2025-09-01",
       "direction": "down",
-      "sourceIds": ["oecd-automation-risk-2024"],
+      "sourceIds": [
+        "oecd-automation-risk-2024"
+      ],
       "evidenceTier": 2,
       "label": "OECD: 27% of jobs in OECD countries at high risk from all automation technologies"
     },
     {
       "date": "2025-10-01",
       "direction": "down",
-      "sourceIds": ["bls-manufacturing-decline-2025"],
+      "sourceIds": [
+        "bls-manufacturing-decline-2025"
+      ],
       "evidenceTier": 1,
       "label": "BLS: US manufacturing lost 78K jobs over past year as automation accelerates"
     },
     {
       "date": "2025-11-25",
       "direction": "neutral",
-      "sourceIds": ["mckinsey-agents-robots-2025"],
+      "sourceIds": [
+        "mckinsey-agents-robots-2025"
+      ],
       "evidenceTier": 2,
       "label": "McKinsey: Physical tasks are 50%+ of hours for 40% of US workforce"
     },
     {
       "date": "2025-11-25",
       "direction": "down",
-      "sourceIds": ["mckinsey-agents-robots-2025"],
+      "sourceIds": [
+        "mckinsey-agents-robots-2025"
+      ],
       "evidenceTier": 2,
       "label": "McKinsey: Robot costs must fall from $150-500K to $20-50K for mass adoption"
     },
     {
       "date": "2026-01-01",
       "direction": "down",
-      "sourceIds": ["goldman-physical-ai-2025"],
+      "sourceIds": [
+        "goldman-physical-ai-2025"
+      ],
       "evidenceTier": 2,
       "label": "Goldman: Projects 50-100K humanoid robot shipments in 2026"
     },
     {
       "date": "2026-01-15",
       "direction": "neutral",
-      "sourceIds": ["bls-employment-projections-2026"],
+      "sourceIds": [
+        "bls-employment-projections-2026"
+      ],
       "evidenceTier": 1,
       "label": "BLS: Retail trade employment projected to decline 1.2% due to automation"
     },
     {
       "date": "2026-01-15",
       "direction": "neutral",
-      "sourceIds": ["bls-employment-projections-2026"],
+      "sourceIds": [
+        "bls-employment-projections-2026"
+      ],
       "evidenceTier": 1,
       "label": "BLS: Mining sector declining 1.6%, driven by robotics and drones"
     }

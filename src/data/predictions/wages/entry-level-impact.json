@@ -124,6 +124,33 @@
       "label": "Anthropic CEO: up to 50% of entry-level office jobs impacted"
     },
     {
+      "date": "2025-07-29",
+      "direction": "down",
+      "sourceIds": [
+        "bgi-no-country-young-grads-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Burning Glass: 52% of Class of 2023 underemployed one year out"
+    },
+    {
+      "date": "2025-07-29",
+      "direction": "down",
+      "sourceIds": [
+        "bgi-no-country-young-grads-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Burning Glass: Entry-level postings in AI-exposed jobs fell 2022-2025"
+    },
+    {
+      "date": "2025-07-29",
+      "direction": "down",
+      "sourceIds": [
+        "bgi-no-country-young-grads-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Burning Glass: Grad hiring plans cut from +7.3% to +0.6%"
+    },
+    {
       "date": "2025-08-06",
       "direction": "down",
       "sourceIds": [
@@ -169,6 +196,15 @@
       "label": "World Bank: entry-level postings fell 18-20%"
     },
     {
+      "date": "2025-11-13",
+      "direction": "neutral",
+      "sourceIds": [
+        "brynjolfsson-chandar-chen-entry-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Stanford/Brynjolfsson: no significant wage changes despite 16% entry-level employment decline"
+    },
+    {
       "date": "2025-12-01",
       "direction": "down",
       "sourceIds": [
@@ -193,7 +229,7 @@
         "dallas-fed-entry-level-2026"
       ],
       "evidenceTier": 1,
-      "label": "Dallas Fed: young worker share fell 16.4% \u2192 15.5%"
+      "label": "Dallas Fed: young worker share fell 16.4% → 15.5%"
     },
     {
       "date": "2026-01-14",
@@ -247,7 +283,7 @@
         "dallas-fed-davis-ai-wages-2026"
       ],
       "evidenceTier": 1,
-      "label": "Dallas Fed: AI exposure \u2192 0.28pp wage growth reduction in low-experience-premium jobs"
+      "label": "Dallas Fed: AI exposure → 0.28pp wage growth reduction in low-experience-premium jobs"
     },
     {
       "date": "2026-03-05",
@@ -266,48 +302,12 @@
       ],
       "evidenceTier": 2,
       "label": "Anthropic: AI exposure concentrates in credentialed roles (17.4% vs 4.5% grad degrees)"
-    },
-    {
-      "date": "2025-07-29",
-      "direction": "down",
-      "sourceIds": [
-        "bgi-no-country-young-grads-2025"
-      ],
-      "evidenceTier": 2,
-      "label": "Burning Glass: 52% of Class of 2023 underemployed one year out"
-    },
-    {
-      "date": "2025-07-29",
-      "direction": "down",
-      "sourceIds": [
-        "bgi-no-country-young-grads-2025"
-      ],
-      "evidenceTier": 2,
-      "label": "Burning Glass: Entry-level postings in AI-exposed jobs fell 2022-2025"
-    },
-    {
-      "date": "2025-07-29",
-      "direction": "down",
-      "sourceIds": [
-        "bgi-no-country-young-grads-2025"
-      ],
-      "evidenceTier": 2,
-      "label": "Burning Glass: Grad hiring plans cut from +7.3% to +0.6%"
-    },
-    {
-      "date": "2025-11-13",
-      "direction": "neutral",
-      "sourceIds": [
-        "brynjolfsson-chandar-chen-entry-2025"
-      ],
-      "evidenceTier": 1,
-      "label": "Stanford/Brynjolfsson: no significant wage changes despite 16% entry-level employment decline"
     }
   ],
   "sources": [
     {
       "id": "indeed-entry-level-2023",
-      "title": "Entry-Level Job Market Update \u2014 Indeed Hiring Lab",
+      "title": "Entry-Level Job Market Update — Indeed Hiring Lab",
       "url": "https://www.hiringlab.org/2025/09/25/september-labor-market-squeeze-on-new-entrants/",
       "publisher": "Indeed Hiring Lab",
       "evidenceTier": 2,
@@ -361,7 +361,7 @@
     },
     {
       "id": "wsj-entry-level-squeeze",
-      "title": "Entry-Level Jobs Are Vanishing \u2014 and AI Is a Big Reason",
+      "title": "Entry-Level Jobs Are Vanishing — and AI Is a Big Reason",
       "url": "https://www.wsj.com/lifestyle/careers/ai-entry-level-jobs-career-strategy-f59d574b",
       "publisher": "The Wall Street Journal",
       "evidenceTier": 3,
@@ -378,7 +378,7 @@
     },
     {
       "id": "bls-entry-wages-2025",
-      "title": "Usual Weekly Earnings \u2014 Workers 16-24",
+      "title": "Usual Weekly Earnings — Workers 16-24",
       "url": "https://www.bls.gov/cps/",
       "publisher": "Bureau of Labor Statistics",
       "evidenceTier": 1,
@@ -473,7 +473,7 @@
       "publisher": "SSRN (Hosseini Maasoum, Lichtinger)",
       "evidenceTier": 1,
       "datePublished": "2025-09-01",
-      "excerpt": "Analysis of 62M U.S. resumes: junior employment declined sharply at AI-adopting firms while senior employment was largely unchanged \u2014 described as 'seniority-biased technological change.'"
+      "excerpt": "Analysis of 62M U.S. resumes: junior employment declined sharply at AI-adopting firms while senior employment was largely unchanged — described as 'seniority-biased technological change.'"
     },
     {
       "id": "althoff-reichardt-task-specific-technical-2026",
@@ -533,10 +533,10 @@
       "id": "cruces-galiani-education-gap-2026",
       "title": "Does Generative AI Narrow Education-Based Productivity Gaps? Evidence from a Randomized Experiment",
       "url": "https://www.nber.org/papers/w34851",
-      "publisher": "NBER (Cruces, Fern\u00e1ndez Meijide, Galiani, G\u00e1lvez, Lombardi)",
+      "publisher": "NBER (Cruces, Fernández Meijide, Galiani, Gálvez, Lombardi)",
       "evidenceTier": 1,
       "datePublished": "2026-02-01",
-      "excerpt": "Without AI, higher-education participants outperformed lower-education participants by 0.548 standard deviations. With AI access, this gap fell to 0.139 standard deviations\u2014closing about 75 percent of the baseline productivity difference."
+      "excerpt": "Without AI, higher-education participants outperformed lower-education participants by 0.548 standard deviations. With AI access, this gap fell to 0.139 standard deviations—closing about 75 percent of the baseline productivity difference."
     },
     {
       "id": "anthropic-labor-market-impacts-2026",
