@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-10",
-  "totalSources": 347,
-  "verifiedCount": 337,
+  "totalSources": 358,
+  "verifiedCount": 348,
   "sources": {
     "revelio-labs-wage-divide-2025": {
       "id": "revelio-labs-wage-divide-2025",
@@ -71,7 +71,8 @@
       "excerpt": "AI may increase TFP by only 0.53-0.66% over 10 years, with limited job displacement effects.",
       "usedIn": [
         "overall-us-displacement",
-        "tech-sector-displacement"
+        "tech-sector-displacement",
+        "robots-physical-automation-displacement"
       ],
       "verified": true
     },
@@ -4727,6 +4728,160 @@
       "excerpt": "3% workforce reduction amidst record profits; investment banking revenue up 47%.",
       "usedIn": [
         "financial-services-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "acemoglu-restrepo-robots-jpe-2020": {
+      "id": "acemoglu-restrepo-robots-jpe-2020",
+      "title": "Robots and Jobs: Evidence from US Labor Markets",
+      "url": "https://www.nber.org/papers/w23285",
+      "publisher": "Journal of Political Economy (Acemoglu, Restrepo)",
+      "evidenceTier": 1,
+      "datePublished": "2020-06-01",
+      "excerpt": "One more robot per thousand workers reduces the employment-to-population ratio by 0.2 percentage points and wages by 0.42%. Between 1990 and 2007, the increase in robots reduced employment by about 400,000 workers.",
+      "usedIn": [
+        "robots-physical-automation-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "ifr-world-robotics-2025": {
+      "id": "ifr-world-robotics-2025",
+      "title": "World Robotics 2025 — Industrial Robots",
+      "url": "https://ifr.org/ifr-press-releases/news/global-robot-demand-in-factories-doubles-over-10-years",
+      "publisher": "International Federation of Robotics",
+      "evidenceTier": 2,
+      "datePublished": "2025-10-01",
+      "excerpt": "542,000 industrial robots installed in 2024 — more than double the number 10 years ago. 4,664,000 robots operational worldwide. US installations at 34,200 units. Global market value $16.5 billion.",
+      "usedIn": [
+        "robots-physical-automation-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "wef-future-of-jobs-2025": {
+      "id": "wef-future-of-jobs-2025",
+      "title": "Future of Jobs Report 2025",
+      "url": "https://www.weforum.org/publications/the-future-of-jobs-report-2025/",
+      "publisher": "World Economic Forum",
+      "evidenceTier": 2,
+      "datePublished": "2025-01-07",
+      "excerpt": "Robotics and automation expected to drive business transformation for 58% of employers. Robots and automation forecast to displace 5 million more jobs than they create. 92 million jobs displaced, 170 million created, net +78 million by 2030.",
+      "usedIn": [
+        "robots-physical-automation-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "mckinsey-agents-robots-2025": {
+      "id": "mckinsey-agents-robots-2025",
+      "title": "Agents, Robots, and Us: Skill Partnerships in the Age of AI",
+      "url": "https://www.mckinsey.com/mgi/our-research/agents-robots-and-us-skill-partnerships-in-the-age-of-ai",
+      "publisher": "McKinsey Global Institute",
+      "evidenceTier": 2,
+      "datePublished": "2025-11-25",
+      "excerpt": "57% of US work hours are technically automatable. Physical tasks comprise 50%+ of hours for 40% of the US workforce. Robot unit costs ($150-500K) must fall to $20-50K for mass physical automation adoption. At least 14% of employees globally may need career changes by 2030.",
+      "usedIn": [
+        "robots-physical-automation-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "oecd-automation-risk-2024": {
+      "id": "oecd-automation-risk-2024",
+      "title": "The Risk of Automation for Jobs in OECD Countries",
+      "url": "https://www.oecd.org/en/publications/the-risk-of-automation-for-jobs-in-oecd-countries_5jlz9h56dvq7-en.html",
+      "publisher": "OECD",
+      "evidenceTier": 2,
+      "datePublished": "2024-09-01",
+      "excerpt": "14% of jobs across OECD countries are at high risk of automation. An additional 32% may be significantly changed but not eliminated. 27% of jobs at high risk when including all automation technologies including AI.",
+      "usedIn": [
+        "robots-physical-automation-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "bls-employment-projections-2026": {
+      "id": "bls-employment-projections-2026",
+      "title": "Industry and Occupational Employment Projections Overview 2024-34",
+      "url": "https://www.bls.gov/opub/mlr/2026/article/industry-and-occupational-employment-projections-overview.htm",
+      "publisher": "U.S. Bureau of Labor Statistics",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-15",
+      "excerpt": "Retail trade projected to decline 1.2% as automation and e-commerce reduce sales occupations. Mining/extraction declining 1.6% driven by robotics and drones. Total employment projected to grow 3.1% (2024-34), much slower than prior decade.",
+      "usedIn": [
+        "robots-physical-automation-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "amazon-robotics-2025": {
+      "id": "amazon-robotics-2025",
+      "title": "Amazon Fulfillment Center Robotics Deployment",
+      "url": "https://www.aboutamazon.com/news/operations/amazon-robots",
+      "publisher": "Amazon",
+      "evidenceTier": 1,
+      "datePublished": "2025-03-01",
+      "excerpt": "Amazon deployed roughly 800,000 mobile robots across its fulfillment centers by 2024, making it the largest private deployer of mobile robots globally.",
+      "usedIn": [
+        "robots-physical-automation-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "goldman-physical-ai-2025": {
+      "id": "goldman-physical-ai-2025",
+      "title": "The Dawn of Humanoid Robots and Physical AI",
+      "url": "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce",
+      "publisher": "Goldman Sachs",
+      "evidenceTier": 2,
+      "datePublished": "2025-08-01",
+      "excerpt": "Physically demanding or outdoor work unlikely to be affected by current AI. Projects 50,000-100,000 humanoid robot shipments in 2026. Unit economics expected to reach $15,000-$20,000 per robot.",
+      "usedIn": [
+        "robots-physical-automation-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "shrm-automation-risk-2025": {
+      "id": "shrm-automation-risk-2025",
+      "title": "Jobs at High Risk of Automation in the US",
+      "url": "https://www.shrm.org/topics-tools/news/technology/automation-job-displacement-risk",
+      "publisher": "SHRM",
+      "evidenceTier": 2,
+      "datePublished": "2025-10-01",
+      "excerpt": "15% of US jobs — about 23 million total — are at high risk of displacement due to automation, concentrated in manufacturing, transportation, and food preparation.",
+      "usedIn": [
+        "robots-physical-automation-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "bls-manufacturing-decline-2025": {
+      "id": "bls-manufacturing-decline-2025",
+      "title": "US Manufacturing Employment Declines as Automation Ramps Up",
+      "url": "https://www.manufacturingdive.com/news/us-manufacturing-job-decline-artificial-intelligence-automation/802672/",
+      "publisher": "Manufacturing Dive / BLS data",
+      "evidenceTier": 1,
+      "datePublished": "2025-10-01",
+      "excerpt": "US manufacturing lost 78,000 jobs over the past year with 12,000 cuts in August alone. Manufacturing employment at lowest level since onset of COVID-19 pandemic.",
+      "usedIn": [
+        "robots-physical-automation-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "stl-fed-robots-employment-2024": {
+      "id": "stl-fed-robots-employment-2024",
+      "title": "How Robots Affect Employment",
+      "url": "https://www.stlouisfed.org/open-vault/2024/sep/are-robots-helpers-or-substitutes-for-workers",
+      "publisher": "Federal Reserve Bank of St. Louis",
+      "evidenceTier": 1,
+      "datePublished": "2024-09-01",
+      "excerpt": "Robots have a mixed effect: replacing jobs that relatively high-wage manufacturing employees used to perform, while also making firms more efficient and productive. One robot per thousand workers replaced about six workers.",
+      "usedIn": [
+        "robots-physical-automation-displacement"
       ],
       "verified": true,
       "synthetic": false

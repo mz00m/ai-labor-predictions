@@ -98,6 +98,11 @@ const ANNOTATIONS: Record<string, ResearchAnnotation> = {
       "Directly observed from NLP analysis of S&P 500 earnings call transcripts. Companies mentioning AI + workforce subsequently show headcount growth 3.2pp lower than non-mentioners.",
     estimateType: "observed",
   },
+  "robots-physical-automation-displacement": {
+    note:
+      "Mixed evidence: Acemoglu & Restrepo (2020) provide causal estimates from US labor markets showing modest displacement per robot. IFR data shows accelerating installations but BLS projections remain conservative. Physical task automation is cost-constrained — McKinsey (2025) notes robot unit costs must fall 70-90% for mass adoption.",
+    estimateType: "mixed",
+  },
 };
 
 export function getResearchAnnotation(
