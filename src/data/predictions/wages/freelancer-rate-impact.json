@@ -149,6 +149,15 @@
       ],
       "evidenceTier": 1,
       "label": "Upwork FY2025: GSV per client +7% YoY; AI skills +109%; revenue +2% to $787.8M"
+    },
+    {
+      "date": "2026-02-18",
+      "direction": "down",
+      "sourceIds": [
+        "fiverr-fy2025-earnings"
+      ],
+      "evidenceTier": 1,
+      "label": "Fiverr FY2025: Active buyers -13.6%; writing/translation categories -20%; 2026 guidance: revenue -3% to -12%"
     }
   ],
   "sources": [
@@ -250,6 +259,15 @@
       "evidenceTier": 1,
       "datePublished": "2025-09-15",
       "excerpt": "Digital trace data show substitution already occurring in writing and translation tasks; declining demand for novice workers across AI-complementary freelance work."
+    },
+    {
+      "id": "fiverr-fy2025-earnings",
+      "title": "Fiverr Announces Fourth Quarter and Full Year 2025 Results",
+      "url": "https://investors.fiverr.com/news-releases/news-release-details/fiverr-announces-fourth-quarter-and-full-year-2025-results",
+      "publisher": "Fiverr International Ltd. (SEC Filing / Press Release)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-18",
+      "excerpt": "Full-year 2025 revenue of $430.9M, up 10.1% YoY. Active buyers down 13.6% in 2025. Spend per buyer reached $342, rising 13% YoY. Writing, translation, and simple programming categories declining ~20% due to AI substitution. High-value projects over $1,000 grew 23%. 2026 revenue guidance: $380M-$420M, a decline of 3-12% YoY."
     },
     {
       "id": "upwork-fy2025-earnings",

@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-10",
-  "totalSources": 362,
-  "verifiedCount": 362,
+  "totalSources": 363,
+  "verifiedCount": 363,
   "sources": {
     "revelio-labs-wage-divide-2025": {
       "id": "revelio-labs-wage-divide-2025",
@@ -4928,6 +4928,20 @@
       "evidenceTier": 1,
       "datePublished": "2026-02-10",
       "excerpt": "Revenue grew 2% year over year to $787.8 million for full year 2025. GSV per active client was $5,129 in Q4 2025, an increase of 7% year over year. AI-related skills grew by 109% year over year. Active clients were 785,000 as of December 31, 2025.",
+      "usedIn": [
+        "freelancer-rate-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "fiverr-fy2025-earnings": {
+      "id": "fiverr-fy2025-earnings",
+      "title": "Fiverr Announces Fourth Quarter and Full Year 2025 Results",
+      "url": "https://investors.fiverr.com/news-releases/news-release-details/fiverr-announces-fourth-quarter-and-full-year-2025-results",
+      "publisher": "Fiverr International Ltd. (SEC Filing / Press Release)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-18",
+      "excerpt": "Full-year 2025 revenue of $430.9M, up 10.1% YoY. Active buyers down 13.6% in 2025. Spend per buyer reached $342, rising 13% YoY. Writing, translation, and simple programming categories declining ~20% due to AI substitution. High-value projects over $1,000 grew 23%. 2026 revenue guidance: $380M-$420M, a decline of 3-12% YoY.",
       "usedIn": [
         "freelancer-rate-impact"
       ],
