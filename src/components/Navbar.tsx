@@ -5,6 +5,10 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { usePathname } from "next/navigation";
 import SearchCombobox from "./SearchCombobox";
 import { ChatTrigger } from "./Chatbot";
+import HeaderTicker from "./HeaderTicker";
+import type { Source } from "@/lib/types";
+
+type TickerSource = Pick<Source, "id" | "title" | "url" | "evidenceTier">;
 
 interface NavItem {
   href: string;
@@ -141,7 +145,7 @@ function DesktopDropdown({ group }: { group: NavGroup }) {
   );
 }
 
-export default function Navbar() {
+export default function Navbar({ tickerSources }: { tickerSources?: TickerSource[] }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const menuRef = useRef<HTMLDivElement>(null);
@@ -222,6 +226,13 @@ export default function Navbar() {
             <ChatTrigger onClick={() => window.dispatchEvent(new Event("open-chatbot"))} />
           </div>
         </div>
+
+        {/* Desktop ticker — far right, hidden below lg */}
+        {tickerSources && tickerSources.length > 0 && (
+          <div className="hidden lg:flex items-center ml-auto">
+            <HeaderTicker sources={tickerSources} />
+          </div>
+        )}
 
         {/* Mobile: chat + hamburger */}
         <div className="flex sm:hidden items-center gap-2" ref={menuRef}>
