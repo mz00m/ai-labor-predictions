@@ -194,6 +194,24 @@
       "label": "CAIS/Scale AI: AI succeeds at audio/image/logo tasks but fails most creative projects (2.5% overall)"
     },
     {
+      "date": "2025-11-03",
+      "direction": "down",
+      "sourceIds": [
+        "bloomberry-180m-creative-postings-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Bloomberry/Revealera: Graphic artist postings -33%, writers -28% in 2025 (n=180M global)"
+    },
+    {
+      "date": "2025-11-11",
+      "direction": "down",
+      "sourceIds": [
+        "envato-ai-creative-work-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Envato: 49% of creatives use AI daily for client work; 1 in 3 expect design roles to transform (n=1,780)"
+    },
+    {
       "date": "2025-11-15",
       "direction": "down",
       "sourceIds": [
@@ -228,24 +246,6 @@
       ],
       "evidenceTier": 4,
       "label": "CausalInf: Amazon book titles tripled post-ChatGPT, average quality fell"
-    },
-    {
-      "date": "2025-11-11",
-      "direction": "down",
-      "sourceIds": [
-        "envato-ai-creative-work-2026"
-      ],
-      "evidenceTier": 2,
-      "label": "Envato: 49% of creatives use AI daily for client work; 1 in 3 expect design roles to transform (n=1,780)"
-    },
-    {
-      "date": "2025-11-03",
-      "direction": "down",
-      "sourceIds": [
-        "bloomberry-180m-creative-postings-2025"
-      ],
-      "evidenceTier": 2,
-      "label": "Bloomberry/Revealera: Graphic artist postings -33%, writers -28% in 2025 (n=180M global)"
     }
   ],
   "sources": [

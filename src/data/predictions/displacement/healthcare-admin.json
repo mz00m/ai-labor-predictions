@@ -116,6 +116,15 @@
       "label": "HIMSS: Potential $122B savings from AI medical coding automation; 42% of denials from coding"
     },
     {
+      "date": "2025-05-01",
+      "direction": "up",
+      "sourceIds": [
+        "oecd-health-ai-skills-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "OECD: only 4.3% of health roles potentially automatable; 0.6% high risk (55.5M postings)"
+    },
+    {
       "date": "2025-09-01",
       "direction": "down",
       "sourceIds": [
@@ -195,15 +204,6 @@
       ],
       "evidenceTier": 1,
       "label": "BLS JOLTS: Healthcare openings down 10.8% (-152K) since Oct"
-    },
-    {
-      "date": "2025-05-01",
-      "direction": "up",
-      "sourceIds": [
-        "oecd-health-ai-skills-2025"
-      ],
-      "evidenceTier": 1,
-      "label": "OECD: only 4.3% of health roles potentially automatable; 0.6% high risk (55.5M postings)"
     }
   ],
   "sources": [

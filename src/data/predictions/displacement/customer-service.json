@@ -5,7 +5,7 @@
   "description": "Percentage of customer service interactions fully handled by AI without human intervention. Only data points where sources directly state an automation rate are plotted.",
   "category": "displacement",
   "unit": "% of interactions automated",
-  "currentValue": 31.0,
+  "currentValue": 34.7,
   "timeHorizon": "By 2028",
   "history": [
     {
@@ -272,7 +272,7 @@
       "publisher": "Klarna",
       "evidenceTier": 1,
       "datePublished": "2024-02-27",
-      "excerpt": "Klarna's AI assistant handled two-thirds of customer service chats within one month of launch \u2014 2.3 million conversations, doing the equivalent work of 700 full-time agents."
+      "excerpt": "Klarna's AI assistant handled two-thirds of customer service chats within one month of launch — 2.3 million conversations, doing the equivalent work of 700 full-time agents."
     },
     {
       "id": "hbr-chatbots-2024",
@@ -328,7 +328,7 @@
     },
     {
       "id": "shopify-earnings-2024",
-      "title": "Shopify Q4 2024 Earnings \u2014 AI Customer Support Metrics",
+      "title": "Shopify Q4 2024 Earnings — AI Customer Support Metrics",
       "url": "https://investors.shopify.com/financial-reports",
       "publisher": "Shopify (Earnings Call)",
       "evidenceTier": 1,

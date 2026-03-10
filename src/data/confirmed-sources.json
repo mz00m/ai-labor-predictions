@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-10",
-  "totalSources": 363,
-  "verifiedCount": 363,
+  "totalSources": 364,
+  "verifiedCount": 364,
   "sources": {
     "revelio-labs-wage-divide-2025": {
       "id": "revelio-labs-wage-divide-2025",
@@ -72,7 +72,8 @@
       "usedIn": [
         "overall-us-displacement",
         "tech-sector-displacement",
-        "robots-physical-automation-displacement"
+        "robots-physical-automation-displacement",
+        "total-us-jobs-lost"
       ],
       "verified": true
     },
@@ -185,7 +186,8 @@
         "overall-us-displacement",
         "tech-sector-displacement",
         "white-collar-professional-displacement",
-        "workforce-ai-exposure"
+        "workforce-ai-exposure",
+        "total-us-jobs-lost"
       ],
       "verified": true,
       "synthetic": false
@@ -443,7 +445,8 @@
       "evidenceTier": 1,
       "datePublished": "2025-08-01",
       "usedIn": [
-        "overall-us-displacement"
+        "overall-us-displacement",
+        "total-us-jobs-lost"
       ],
       "verified": true
     },
@@ -511,7 +514,8 @@
         "overall-us-displacement",
         "workforce-ai-exposure",
         "white-collar-professional-displacement",
-        "customer-service-automation"
+        "customer-service-automation",
+        "total-us-jobs-lost"
       ],
       "verified": true,
       "synthetic": false
@@ -742,7 +746,8 @@
       "datePublished": "2026-01-10",
       "excerpt": "Employers cited AI as a direct cause for 55,000 job cuts in 2025, concentrated in customer service, data entry, and back-office operations.",
       "usedIn": [
-        "overall-us-displacement"
+        "overall-us-displacement",
+        "total-us-jobs-lost"
       ],
       "verified": true
     },
@@ -1426,7 +1431,8 @@
       "datePublished": "2025-01-06",
       "excerpt": "Forrester estimates 6% of US jobs will be lost to AI and automation by 2030, partially offset by new job creation.",
       "usedIn": [
-        "overall-us-displacement"
+        "overall-us-displacement",
+        "total-us-jobs-lost"
       ],
       "verified": true
     },
@@ -1606,7 +1612,8 @@
       "datePublished": "2025-10-01",
       "excerpt": "No economy-wide employment disruption tied to AI since ChatGPT's debut. Measures of AI exposure show no clear relationship with changes in employment or unemployment.",
       "usedIn": [
-        "overall-us-displacement"
+        "overall-us-displacement",
+        "total-us-jobs-lost"
       ],
       "verified": true
     },
@@ -1636,7 +1643,8 @@
         "overall-us-displacement",
         "tech-sector-displacement",
         "white-collar-professional-displacement",
-        "workforce-ai-exposure"
+        "workforce-ai-exposure",
+        "total-us-jobs-lost"
       ],
       "verified": true
     },
@@ -1653,7 +1661,8 @@
         "median-wage-impact",
         "overall-us-displacement",
         "tech-sector-displacement",
-        "white-collar-professional-displacement"
+        "white-collar-professional-displacement",
+        "total-us-jobs-lost"
       ],
       "verified": true
     },
@@ -1871,7 +1880,8 @@
       "datePublished": "2025-01-06",
       "excerpt": "Half of workers in exposed occupations have used ChatGPT; younger, male, higher-achieving workers lead adoption. Women 16pp less likely to use for work.",
       "usedIn": [
-        "overall-us-displacement"
+        "overall-us-displacement",
+        "total-us-jobs-lost"
       ],
       "verified": true
     },
@@ -2015,7 +2025,8 @@
       "datePublished": "2024-01-14",
       "excerpt": "Almost 40% of global employment is exposed to AI; in advanced economies, roughly 60% of workers face some degree of AI impact.",
       "usedIn": [
-        "overall-us-displacement"
+        "overall-us-displacement",
+        "total-us-jobs-lost"
       ],
       "verified": true
     },
@@ -2225,7 +2236,8 @@
       "datePublished": "2025-01-28",
       "excerpt": "Data entry (-27%), customer service (-18%), and basic admin (-22%) postings saw steepest declines. AI/ML postings +42% YoY.",
       "usedIn": [
-        "overall-us-displacement"
+        "overall-us-displacement",
+        "total-us-jobs-lost"
       ],
       "verified": true
     },
@@ -2649,7 +2661,8 @@
       "evidenceTier": 4,
       "datePublished": "2025-05-01",
       "usedIn": [
-        "overall-us-displacement"
+        "overall-us-displacement",
+        "total-us-jobs-lost"
       ],
       "verified": true
     },
@@ -2862,7 +2875,8 @@
       "datePublished": "2025-11-01",
       "excerpt": "Survey of 2,500 C-suite executives finds 90% report no significant net employment impact from AI adoption as of Q3 2025, though task reallocation is widespread.",
       "usedIn": [
-        "overall-us-displacement"
+        "overall-us-displacement",
+        "total-us-jobs-lost"
       ],
       "verified": true
     },
@@ -3008,7 +3022,8 @@
       "datePublished": "2023-07-11",
       "excerpt": "27% of jobs are in occupations at high risk, but actual displacement depends on adoption speed and policy response.",
       "usedIn": [
-        "overall-us-displacement"
+        "overall-us-displacement",
+        "total-us-jobs-lost"
       ],
       "verified": true
     },
@@ -3151,7 +3166,8 @@
       "datePublished": "2025-02-01",
       "excerpt": "Workers in AI-exposed occupations face significantly higher unemployment risk, suggesting aggregate job losses may exceed earlier estimates.",
       "usedIn": [
-        "overall-us-displacement"
+        "overall-us-displacement",
+        "total-us-jobs-lost"
       ],
       "verified": true
     },
@@ -3178,7 +3194,8 @@
       "datePublished": "2025-09-08",
       "excerpt": "Roughly 10% of US work affected in the short run; AI will increase productivity and GDP by 1.5% by 2035. Jobs that AI can completely replace saw 0.75% employment fall 2021-2024.",
       "usedIn": [
-        "overall-us-displacement"
+        "overall-us-displacement",
+        "total-us-jobs-lost"
       ],
       "verified": true
     },
@@ -3233,7 +3250,8 @@
       "usedIn": [
         "creative-industry-displacement",
         "freelancer-rate-impact",
-        "overall-us-displacement"
+        "overall-us-displacement",
+        "total-us-jobs-lost"
       ],
       "verified": true
     },
@@ -3382,7 +3400,8 @@
       "datePublished": "2025-12-21",
       "excerpt": "Challenger, Gray & Christmas reports AI has been cited as the reason for 54,694 planned layoffs in 2025. Overall job cuts topped 1 million in 2025.",
       "usedIn": [
-        "overall-us-displacement"
+        "overall-us-displacement",
+        "total-us-jobs-lost"
       ],
       "verified": true,
       "synthetic": false
@@ -3663,7 +3682,8 @@
       "datePublished": "2024-09-15",
       "excerpt": "Employers expect 23% of jobs to change in the next five years, with a net decline of 2-4% of total roles once job creation offsets displacement.",
       "usedIn": [
-        "overall-us-displacement"
+        "overall-us-displacement",
+        "total-us-jobs-lost"
       ],
       "verified": true
     },
@@ -4111,7 +4131,8 @@
       "datePublished": "2026-02-15",
       "excerpt": "Looking ahead three years, executives predict a 1.4 percent productivity boost and 0.8 percent output increase alongside a 0.7 percent employment reduction\u2014while employees forecast a 0.5 percent employment increase.",
       "usedIn": [
-        "overall-us-displacement"
+        "overall-us-displacement",
+        "total-us-jobs-lost"
       ],
       "verified": true,
       "synthetic": false
@@ -4944,6 +4965,20 @@
       "excerpt": "Full-year 2025 revenue of $430.9M, up 10.1% YoY. Active buyers down 13.6% in 2025. Spend per buyer reached $342, rising 13% YoY. Writing, translation, and simple programming categories declining ~20% due to AI substitution. High-value projects over $1,000 grew 23%. 2026 revenue guidance: $380M-$420M, a decline of 3-12% YoY.",
       "usedIn": [
         "freelancer-rate-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "apoorv03-consumer-ai-usage-2026": {
+      "id": "apoorv03-consumer-ai-usage-2026",
+      "title": "The State of Consumer AI. Part 1 - Usage",
+      "url": "https://x.com/apoorv03/status/2028492786832753011",
+      "publisher": "Apoorv Agrawal (@apoorv03)",
+      "evidenceTier": 4,
+      "datePublished": "2026-03-02",
+      "excerpt": "Today, AI apps have crossed 1 billion weekly active users and ChatGPT alone accounts for 900M of that.",
+      "usedIn": [
+        "genai-work-adoption"
       ],
       "verified": true,
       "synthetic": false
