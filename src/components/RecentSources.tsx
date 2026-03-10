@@ -105,11 +105,22 @@ export default function RecentSources({ sources }: RecentSourcesProps) {
                     <p className="text-[12px] text-[var(--foreground)] leading-snug line-clamp-2 opacity-80">
                       {source.title}
                     </p>
-                    <p className="text-[10px] text-[var(--muted)] opacity-40 mt-0.5">
-                      {source.dateAdded
-                        ? `Added ${format(parseISO(source.dateAdded), "MMM d, yyyy")}`
-                        : format(parseISO(source.datePublished), "MMM d, yyyy")}
-                    </p>
+                    <div className="flex items-center gap-1.5 mt-0.5">
+                      <span
+                        className="text-[9px] font-medium opacity-60"
+                        style={{ color: config.color }}
+                      >
+                        {config.shortLabel}
+                      </span>
+                      <span className="text-[9px] text-[var(--muted)] opacity-25">
+                        ·
+                      </span>
+                      <span className="text-[10px] text-[var(--muted)] opacity-40">
+                        {source.dateAdded
+                          ? `Added ${format(parseISO(source.dateAdded), "MMM d, yyyy")}`
+                          : format(parseISO(source.datePublished), "MMM d, yyyy")}
+                      </span>
+                    </div>
                   </div>
                 </a>
               );
