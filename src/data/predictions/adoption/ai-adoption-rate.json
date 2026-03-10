@@ -2,7 +2,7 @@
   "id": "adoption-rate",
   "slug": "ai-adoption-rate",
   "title": "AI Adoption Rate Across US Companies",
-  "description": "Percentage of US firms using AI in production, measured by the Census Bureau's Business Trends and Outlook Survey (BTOS) — the most rigorous measure available. Survey-based estimates from consultancies run 5-10x higher due to self-selected samples.",
+  "description": "Percentage of US firms using AI in production, measured by the Census Bureau's Business Trends and Outlook Survey (BTOS) \u2014 the most rigorous measure available. Survey-based estimates from consultancies run 5-10x higher due to self-selected samples.",
   "category": "adoption",
   "unit": "% of firms (Census BTOS)",
   "currentValue": 19.9,
@@ -141,7 +141,7 @@
         "mckinsey-ai-survey-2024"
       ],
       "evidenceTier": 2,
-      "label": "McKinsey 2024: 72% use AI in ≥1 function, up from 55%"
+      "label": "McKinsey 2024: 72% use AI in \u22651 function, up from 55%"
     },
     {
       "date": "2024-07-01",
@@ -177,7 +177,7 @@
         "mckinsey-ai-survey-2025"
       ],
       "evidenceTier": 2,
-      "label": "McKinsey survey: 78% use AI in ≥1 function (Mar 2025)"
+      "label": "McKinsey survey: 78% use AI in \u22651 function (Mar 2025)"
     },
     {
       "date": "2025-05-30",
@@ -285,7 +285,7 @@
         "anthropic-econ-primitives-adoption-2026"
       ],
       "evidenceTier": 1,
-      "label": "Anthropic: 49% of jobs use AI for ≥25% of tasks; productivity +1.0-1.8pp"
+      "label": "Anthropic: 49% of jobs use AI for \u226525% of tasks; productivity +1.0-1.8pp"
     },
     {
       "date": "2026-01-22",
@@ -348,7 +348,7 @@
         "cio-it-jobs-ai-skills-2026"
       ],
       "evidenceTier": 3,
-      "label": "CIO/Indeed: 80% of workers save ≥1 hour/day using generative AI"
+      "label": "CIO/Indeed: 80% of workers save \u22651 hour/day using generative AI"
     },
     {
       "date": "2026-02-18",
@@ -386,7 +386,8 @@
       "publisher": "Journal of Economics & Management Strategy (McElheran, Li, Brynjolfsson et al.)",
       "evidenceTier": 1,
       "datePublished": "2024-01-24",
-      "excerpt": "Just under 6% of firms nationwide used AI as of 2017. Yet most very large firms (over 5,000 employees) reported at least some AI use. Employment-weighted adoption was just over 18%. Based on the 2018 Annual Business Survey of 850,000 firms linked to the Longitudinal Business Database."
+      "excerpt": "Just under 6% of firms nationwide used AI as of 2017. Yet most very large firms (over 5,000 employees) reported at least some AI use. Employment-weighted adoption was just over 18%. Based on the 2018 Annual Business Survey of 850,000 firms linked to the Longitudinal Business Database.",
+      "dateAdded": "2026-03-10"
     },
     {
       "id": "mckinsey-ai-survey-2023",
@@ -395,7 +396,8 @@
       "publisher": "McKinsey & Company",
       "evidenceTier": 2,
       "datePublished": "2023-08-01",
-      "excerpt": "One-third of respondents say their organizations are using gen AI regularly in at least one business function. AI adoption overall at 55% of survey respondents."
+      "excerpt": "One-third of respondents say their organizations are using gen AI regularly in at least one business function. AI adoption overall at 55% of survey respondents.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "census-bts-ai-2023",
@@ -404,7 +406,8 @@
       "publisher": "US Census Bureau",
       "evidenceTier": 1,
       "datePublished": "2023-08-15",
-      "excerpt": "3.8% of US firms reported using AI in production. An additional 6.4% were in testing/pilot phase. Adoption highest in information (18%) and professional services (12%)."
+      "excerpt": "3.8% of US firms reported using AI in production. An additional 6.4% were in testing/pilot phase. Adoption highest in information (18%) and professional services (12%).",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "mckinsey-ai-survey-2024",
@@ -413,7 +416,8 @@
       "publisher": "McKinsey & Company",
       "evidenceTier": 2,
       "datePublished": "2024-05-01",
-      "excerpt": "72% of organizations surveyed now use AI in at least one function, up from 55% the prior year. Generative AI adoption doubled."
+      "excerpt": "72% of organizations surveyed now use AI in at least one function, up from 55% the prior year. Generative AI adoption doubled.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "census-bts-ai-2024",
@@ -422,7 +426,8 @@
       "publisher": "US Census Bureau",
       "evidenceTier": 1,
       "datePublished": "2024-05-01",
-      "excerpt": "AI usage among US firms rose to 6.6%, with an additional 9.1% in testing. Information sector at 24%, finance/insurance at 15%."
+      "excerpt": "AI usage among US firms rose to 6.6%, with an additional 9.1% in testing. Information sector at 24%, finance/insurance at 15%.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "deloitte-ai-state-2024",
@@ -431,7 +436,8 @@
       "publisher": "Deloitte",
       "evidenceTier": 2,
       "datePublished": "2024-09-15",
-      "excerpt": "79% of enterprise leaders expect gen AI to transform their industry within 3 years. 42% have gen AI in production, up from 22% a year earlier."
+      "excerpt": "79% of enterprise leaders expect gen AI to transform their industry within 3 years. 42% have gen AI in production, up from 22% a year earlier.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "mckinsey-ai-survey-2025",
@@ -440,7 +446,8 @@
       "publisher": "McKinsey & Company",
       "evidenceTier": 2,
       "datePublished": "2025-01-20",
-      "excerpt": "AI is now a core part of business strategy for 78% of respondents. 65% report measurable revenue or cost impact from AI deployments."
+      "excerpt": "AI is now a core part of business strategy for 78% of respondents. 65% report measurable revenue or cost impact from AI deployments.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "census-bts-ai-2025",
@@ -449,7 +456,8 @@
       "publisher": "US Census Bureau",
       "evidenceTier": 1,
       "datePublished": "2025-07-01",
-      "excerpt": "US firm AI usage in production reached 10.2%, with 14.8% in testing. Large firms (500+ employees) at 28%. Adoption accelerating across all sectors."
+      "excerpt": "US firm AI usage in production reached 10.2%, with 14.8% in testing. Large firms (500+ employees) at 28%. Adoption accelerating across all sectors.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "microsoft-10k-ai-2024",
@@ -458,7 +466,8 @@
       "publisher": "Microsoft",
       "evidenceTier": 1,
       "datePublished": "2024-07-01",
-      "excerpt": "Over 60,000 Azure AI customers by end of FY2024, growing nearly 60% YoY. Azure AI revenue reached a $13 billion annual run rate, growing 175% YoY."
+      "excerpt": "Over 60,000 Azure AI customers by end of FY2024, growing nearly 60% YoY. Azure AI revenue reached a $13 billion annual run rate, growing 175% YoY.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "salesforce-10k-ai-2024",
@@ -467,7 +476,8 @@
       "publisher": "Salesforce",
       "evidenceTier": 1,
       "datePublished": "2024-02-28",
-      "excerpt": "Salesforce Einstein platform serves over 200 billion AI predictions per day across Customer 360 applications. Einstein 1 platform enables AI-powered apps with low-code development and generative AI assistants."
+      "excerpt": "Salesforce Einstein platform serves over 200 billion AI predictions per day across Customer 360 applications. Einstein 1 platform enables AI-powered apps with low-code development and generative AI assistants.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "anthropic-economic-index-2025",
@@ -476,7 +486,8 @@
       "publisher": "Anthropic",
       "evidenceTier": 1,
       "datePublished": "2025-09-15",
-      "excerpt": "Census Bureau rigorous measure finds 9.7% of firms actively using AI, while broader surveys report 78%. Adoption gap driven by definitional differences in what counts as AI use."
+      "excerpt": "Census Bureau rigorous measure finds 9.7% of firms actively using AI, while broader surveys report 78%. Adoption gap driven by definitional differences in what counts as AI use.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "stanford-ai-index-2025",
@@ -485,7 +496,8 @@
       "publisher": "Stanford HAI",
       "evidenceTier": 2,
       "datePublished": "2025-12-01",
-      "excerpt": "78% of organizations report using AI in at least one business function. Enterprise AI spending grew 45% YoY globally."
+      "excerpt": "78% of organizations report using AI in at least one business function. Enterprise AI spending grew 45% YoY globally.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "microsoft-global-ai-2025",
@@ -494,7 +506,8 @@
       "publisher": "Microsoft",
       "evidenceTier": 2,
       "datePublished": "2025-11-20",
-      "excerpt": "75% of knowledge workers now use AI tools. Adoption in enterprises with 500+ employees reached 60%, up from 40% a year prior."
+      "excerpt": "75% of knowledge workers now use AI tools. Adoption in enterprises with 500+ employees reached 60%, up from 40% a year prior.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "hartley-genai-labor-2026",
@@ -503,7 +516,8 @@
       "publisher": "Stanford / World Bank (Hartley, Jolevski, Melo, Moore)",
       "evidenceTier": 1,
       "datePublished": "2026-01-01",
-      "excerpt": "35.9% of US workers used generative AI by December 2025. Adoption concentrated among younger, college-educated, higher-earning employees."
+      "excerpt": "35.9% of US workers used generative AI by December 2025. Adoption concentrated among younger, college-educated, higher-earning employees.",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "humlum-vestergaard-chatgpt-adoption-2025",
@@ -512,7 +526,8 @@
       "publisher": "PNAS (Humlum, Vestergaard)",
       "evidenceTier": 1,
       "datePublished": "2025-01-06",
-      "excerpt": "Half of workers in AI-exposed occupations have used ChatGPT; adoption unequal — women 16pp less likely, employer restrictions hinder broader use."
+      "excerpt": "Half of workers in AI-exposed occupations have used ChatGPT; adoption unequal \u2014 women 16pp less likely, employer restrictions hinder broader use.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "pwbm-ai-adoption-2025",
@@ -521,7 +536,8 @@
       "publisher": "Penn Wharton Budget Model (Arnon, Smetters)",
       "evidenceTier": 1,
       "datePublished": "2025-09-08",
-      "excerpt": "In about 40% of employment in exposed occupations, at least 50% of tasks will be replaceable. Average labor-cost savings ~25% from current tools, potentially 40% as systems improve."
+      "excerpt": "In about 40% of employment in exposed occupations, at least 50% of tasks will be replaceable. Average labor-cost savings ~25% from current tools, potentially 40% as systems improve.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "anthropic-econ-primitives-adoption-2026",
@@ -530,7 +546,8 @@
       "publisher": "Anthropic",
       "evidenceTier": 1,
       "datePublished": "2026-01-15",
-      "excerpt": "49% of jobs now use AI for at least 25% of their tasks (up from 36% in early 2025); widespread adoption could boost US labor productivity by 1.0-1.8 percentage points annually."
+      "excerpt": "49% of jobs now use AI for at least 25% of their tasks (up from 36% in early 2025); widespread adoption could boost US labor productivity by 1.0-1.8 percentage points annually.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "anthropic-geographic-adoption-2025",
@@ -539,7 +556,8 @@
       "publisher": "Anthropic",
       "evidenceTier": 1,
       "datePublished": "2025-09-15",
-      "excerpt": "Only ~25% of Information sector businesses using AI; ~2.5% in Accommodation/Food — adoption patterns driven more by workforce composition than income."
+      "excerpt": "Only ~25% of Information sector businesses using AI; ~2.5% in Accommodation/Food \u2014 adoption patterns driven more by workforce composition than income.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "icle-adoption-2026",
@@ -548,7 +566,8 @@
       "publisher": "International Center for Law & Economics",
       "evidenceTier": 2,
       "datePublished": "2026-02-01",
-      "excerpt": "35.9% of US workers used generative AI by December 2025; adoption is accelerating but remains unevenly distributed across industries and skill levels."
+      "excerpt": "35.9% of US workers used generative AI by December 2025; adoption is accelerating but remains unevenly distributed across industries and skill levels.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "jpmorgan-adoption-2025",
@@ -557,7 +576,8 @@
       "publisher": "J.P. Morgan Global Research",
       "evidenceTier": 2,
       "datePublished": "2025-06-01",
-      "excerpt": "Less than 10% of firms using AI regularly as of mid-2025 (BTOS data); ~20% adoption in professional, scientific, and technical industries."
+      "excerpt": "Less than 10% of firms using AI regularly as of mid-2025 (BTOS data); ~20% adoption in professional, scientific, and technical industries.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "bick-blandin-deming-nber-2025",
@@ -566,7 +586,8 @@
       "publisher": "NBER (Bick, Blandin, Deming)",
       "evidenceTier": 1,
       "datePublished": "2025-08-15",
-      "excerpt": "37.4% of US workers used AI on the job in the past week. Adoption highest among college-educated (52%) and workers earning $100K+ (58%). Survey of 25,000 workers."
+      "excerpt": "37.4% of US workers used AI on the job in the past week. Adoption highest among college-educated (52%) and workers earning $100K+ (58%). Survey of 25,000 workers.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "gallup-worker-ai-adoption-2025",
@@ -575,7 +596,8 @@
       "publisher": "Gallup",
       "evidenceTier": 2,
       "datePublished": "2025-12-15",
-      "excerpt": "46% of US workers reported using AI tools at work in Q4 2025, up from 33% in Q1 2025. Adoption driven by white-collar professional and technical roles."
+      "excerpt": "46% of US workers reported using AI tools at work in Q4 2025, up from 33% in Q1 2025. Adoption driven by white-collar professional and technical roles.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "nber-bloom-firm-data-adoption-2026",
@@ -584,7 +606,8 @@
       "publisher": "NBER (Bloom, Barrero, Davis et al.)",
       "evidenceTier": 1,
       "datePublished": "2026-02-15",
-      "excerpt": "69% of firms across US, UK, Germany, and Australia currently use some AI technology (US: 78%). LLM text generation most common (41%). Expected to rise to 75% in 3 years. Larger, more productive, higher-paying firms more likely to adopt."
+      "excerpt": "69% of firms across US, UK, Germany, and Australia currently use some AI technology (US: 78%). LLM text generation most common (41%). Expected to rise to 75% in 3 years. Larger, more productive, higher-paying firms more likely to adopt.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "mckinsey-ai-survey-nov-2025",
@@ -593,7 +616,8 @@
       "publisher": "McKinsey & Company",
       "evidenceTier": 2,
       "datePublished": "2025-11-01",
-      "excerpt": "88% of organizations use AI in ≥1 function (up from 78%). Gen AI adoption at 71%. But only 7% fully scaled, and just 6% report EBIT impact ≥5%. 62% experimenting with AI agents."
+      "excerpt": "88% of organizations use AI in \u22651 function (up from 78%). Gen AI adoption at 71%. But only 7% fully scaled, and just 6% report EBIT impact \u22655%. 62% experimenting with AI agents.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "atlassian-ai-collab-2025",
@@ -602,7 +626,8 @@
       "publisher": "Atlassian",
       "evidenceTier": 2,
       "datePublished": "2025-10-01",
-      "excerpt": "Survey of 180 Fortune 100 executives and 12,000 knowledge workers. 96% of organizations not seeing dramatic improvements in efficiency, innovation, or work quality from AI. Costing Fortune 500 ~$98B/year in lost returns. Workers report feeling 33% more productive individually, but organizational metrics flat."
+      "excerpt": "Survey of 180 Fortune 100 executives and 12,000 knowledge workers. 96% of organizations not seeing dramatic improvements in efficiency, innovation, or work quality from AI. Costing Fortune 500 ~$98B/year in lost returns. Workers report feeling 33% more productive individually, but organizational metrics flat.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "hbr-ai-workslop-2025",
@@ -611,7 +636,8 @@
       "publisher": "Harvard Business Review (Stanford / BetterUp Labs)",
       "evidenceTier": 2,
       "datePublished": "2025-09-22",
-      "excerpt": "Survey of 1,150 US workers: 40% received AI-generated 'workslop' in the past month; each instance cost ~2 hours to deal with. 18% of AI users admitted sending low-quality AI output. Estimated cost: $186/worker/month or ~$9M/year for a 10,000-person org."
+      "excerpt": "Survey of 1,150 US workers: 40% received AI-generated 'workslop' in the past month; each instance cost ~2 hours to deal with. 18% of AI users admitted sending low-quality AI output. Estimated cost: $186/worker/month or ~$9M/year for a 10,000-person org.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "indeed-hiringlab-ai-jobs-labor-2026",
@@ -620,7 +646,8 @@
       "publisher": "Indeed Hiring Lab",
       "evidenceTier": 2,
       "datePublished": "2026-01-22",
-      "excerpt": "The Indeed AI Tracker reached a high of 4.2% in December 2025...the number of postings mentioning AI measured 134% above February 2020 levels"
+      "excerpt": "The Indeed AI Tracker reached a high of 4.2% in December 2025...the number of postings mentioning AI measured 134% above February 2020 levels",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "lightcast-fault-lines-2026",
@@ -639,7 +666,8 @@
       "publisher": "CIO.com",
       "evidenceTier": 3,
       "datePublished": "2026-02-18",
-      "excerpt": "80% of respondents in the 2025 Indeed Workforce Insights Report report they save at least one hour per day using generative AI. Job postings that require AI literacy skills are growing at a rate of more than 70% year over year."
+      "excerpt": "80% of respondents in the 2025 Indeed Workforce Insights Report report they save at least one hour per day using generative AI. Job postings that require AI literacy skills are growing at a rate of more than 70% year over year.",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "ecb-safe-ai-hiring-2026",
@@ -648,16 +676,18 @@
       "publisher": "European Central Bank",
       "evidenceTier": 3,
       "datePublished": "2026-03-04",
-      "excerpt": "Two-thirds of the 3,500 euro-area firms surveyed reported that their employees use AI in their jobs (ECB SAFE survey, Q4 2025). Note: European firms; not directly comparable to US Census BTOS figures."
+      "excerpt": "Two-thirds of the 3,500 euro-area firms surveyed reported that their employees use AI in their jobs (ECB SAFE survey, Q4 2025). Note: European firms; not directly comparable to US Census BTOS figures.",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "citadel-ai-capex-neutral-2026",
-      "title": "AI Will Displace…The Fed's View of Neutral",
+      "title": "AI Will Displace\u2026The Fed's View of Neutral",
       "url": "https://www.citadelsecurities.com/news-and-insights/ai-will-displacethe-feds-view-of-neutral/",
       "publisher": "Citadel Securities (Nohshad Shah)",
       "evidenceTier": 3,
       "datePublished": "2026-03-02",
-      "excerpt": "AI capex – roughly $650bn this year and potentially ~$2tn over three years – materially alters the equilibrium."
+      "excerpt": "AI capex \u2013 roughly $650bn this year and potentially ~$2tn over three years \u2013 materially alters the equilibrium.",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "census-btos-ai-biweekly-2026",
@@ -666,7 +696,8 @@
       "publisher": "US Census Bureau",
       "evidenceTier": 1,
       "datePublished": "2026-02-26",
-      "excerpt": "In the last two weeks, did this business use Artificial Intelligence (AI) in any of its business functions? Yes: 17.5%, No: 73.1%, Do not know: 9.4% (Cycle 202604, ref period Jan 26–Feb 8, 2026). First biweekly reading (Cycle 202524, Nov 2025): Yes: 17.3%."
+      "excerpt": "In the last two weeks, did this business use Artificial Intelligence (AI) in any of its business functions? Yes: 17.5%, No: 73.1%, Do not know: 9.4% (Cycle 202604, ref period Jan 26\u2013Feb 8, 2026). First biweekly reading (Cycle 202524, Nov 2025): Yes: 17.3%.",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "chen-stratton-ai-in-firm-2026",
@@ -675,7 +706,8 @@
       "publisher": "Chen & Stratton (Jellyfish data)",
       "evidenceTier": 1,
       "datePublished": "2026-01-01",
-      "excerpt": "Even 18 months after firm-level adoption, only about half of engineers had begun using the tools. Individual take-up was not universal."
+      "excerpt": "Even 18 months after firm-level adoption, only about half of engineers had begun using the tools. Individual take-up was not universal.",
+      "dateAdded": "2026-03-10"
     },
     {
       "id": "piie-kolko-ai-labor-first-inning-2026",
@@ -684,7 +716,8 @@
       "publisher": "Peterson Institute for International Economics (Jed Kolko)",
       "evidenceTier": 2,
       "datePublished": "2026-03-10",
-      "excerpt": "Current data from the Census Bureau's Business Trends and Outlook Survey shows that fewer than one-fifth of firms are using AI in any capacity, and even fewer are using AI directly for producing goods and services."
+      "excerpt": "Current data from the Census Bureau's Business Trends and Outlook Survey shows that fewer than one-fifth of firms are using AI in any capacity, and even fewer are using AI directly for producing goods and services.",
+      "dateAdded": "2026-03-10"
     },
     {
       "id": "arxiv-what-do-professional-2025",
@@ -693,7 +726,8 @@
       "publisher": "arxiv.org",
       "evidenceTier": 1,
       "datePublished": "2025-05-30",
-      "excerpt": "Generative AI is showing early evidence of productivity gains for software developers"
+      "excerpt": "Generative AI is showing early evidence of productivity gains for software developers",
+      "dateAdded": "2026-03-07"
     }
   ]
 }

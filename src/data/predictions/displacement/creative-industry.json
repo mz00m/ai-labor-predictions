@@ -182,7 +182,7 @@
         "ramp-freelance-velocity-2025"
       ],
       "evidenceTier": 1,
-      "label": "Ramp: $1 reduced freelance → $0.03 AI spend"
+      "label": "Ramp: $1 reduced freelance \u2192 $0.03 AI spend"
     },
     {
       "date": "2025-10-30",
@@ -251,30 +251,33 @@
   "sources": [
     {
       "id": "wef-creative-2023",
-      "title": "Future of Jobs Report 2023 — Creative and Media Professions",
+      "title": "Future of Jobs Report 2023 \u2014 Creative and Media Professions",
       "url": "https://www.weforum.org/publications/the-future-of-jobs-report-2023/",
       "publisher": "World Economic Forum",
       "evidenceTier": 2,
       "datePublished": "2023-04-30",
-      "excerpt": "Graphic designers, copywriters, and marketing analysts are among the roles employers expect to decline most rapidly due to generative AI."
+      "excerpt": "Graphic designers, copywriters, and marketing analysts are among the roles employers expect to decline most rapidly due to generative AI.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "mckinsey-creative-automation",
-      "title": "The economic potential of generative AI — Creative work",
+      "title": "The economic potential of generative AI \u2014 Creative work",
       "url": "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier",
       "publisher": "McKinsey Global Institute",
       "evidenceTier": 2,
       "datePublished": "2023-06-14",
-      "excerpt": "Generative AI could automate 25-40% of time spent on creative tasks, fundamentally changing the economics of content production."
+      "excerpt": "Generative AI could automate 25-40% of time spent on creative tasks, fundamentally changing the economics of content production.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "upwork-freelancer-impact",
-      "title": "Upwork Q2 2024 Earnings — Freelancer Market Trends",
+      "title": "Upwork Q2 2024 Earnings \u2014 Freelancer Market Trends",
       "url": "https://investors.upwork.com/news-releases/news-release-details/upwork-announces-second-quarter-2024-financial-results",
       "publisher": "Upwork (Earnings Report)",
       "evidenceTier": 1,
       "datePublished": "2024-05-20",
-      "excerpt": "Writing and translation freelancer job volume declined ~30% YoY. Graphic design jobs fell 17%. AI-augmented creative roles grew 45%."
+      "excerpt": "Writing and translation freelancer job volume declined ~30% YoY. Graphic design jobs fell 17%. AI-augmented creative roles grew 45%.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "nber-creative-ai-2024",
@@ -283,16 +286,18 @@
       "publisher": "CESifo / Management Science (Demirci, Hannane, Zhu)",
       "evidenceTier": 1,
       "datePublished": "2024-08-15",
-      "excerpt": "Image generation AI reduced demand for freelance illustrators by 21% within 12 months of widespread availability."
+      "excerpt": "Image generation AI reduced demand for freelance illustrators by 21% within 12 months of widespread availability.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "techcrunch-creative-layoffs",
-      "title": "As layoffs deepen, AI's role in the cuts is murky — but it definitely has one",
+      "title": "As layoffs deepen, AI's role in the cuts is murky \u2014 but it definitely has one",
       "url": "https://techcrunch.com/2024/01/29/as-layoffs-deepen-ais-role-in-the-cuts-is-murky-but-it-definitely-has-one/",
       "publisher": "TechCrunch",
       "evidenceTier": 3,
       "datePublished": "2024-01-29",
-      "excerpt": "The advent and uptake of AI is playing some part in the scope of tech layoffs. Companies have signaled sizeable investments in AI to augment or replace work currently done by people."
+      "excerpt": "The advent and uptake of AI is playing some part in the scope of tech layoffs. Companies have signaled sizeable investments in AI to augment or replace work currently done by people.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "forrester-creative-2025",
@@ -301,7 +306,8 @@
       "publisher": "Forrester",
       "evidenceTier": 2,
       "datePublished": "2025-02-15",
-      "excerpt": "By 2028, 20% of marketing content will be generated entirely by AI. Creative teams will shrink 15-25% but output will increase."
+      "excerpt": "By 2028, 20% of marketing content will be generated entirely by AI. Creative teams will shrink 15-25% but output will increase.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "bls-creative-occupations-2025",
@@ -310,7 +316,8 @@
       "publisher": "Bureau of Labor Statistics",
       "evidenceTier": 1,
       "datePublished": "2025-06-01",
-      "excerpt": "Graphic designer employment projected to decline 4% through 2033. Technical writers projected flat. New AI-creative hybrid roles growing."
+      "excerpt": "Graphic designer employment projected to decline 4% through 2033. Technical writers projected flat. New AI-creative hybrid roles growing.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "fiverr-10k-2024",
@@ -319,7 +326,8 @@
       "publisher": "Fiverr International Ltd.",
       "evidenceTier": 2,
       "datePublished": "2025-02-19",
-      "excerpt": "Fiverr FY2024 marketplace revenue declined 1.3% YoY to $303.1M. Active buyers fell 10% to 3.6M. AI-related categories showed strong growth while traditional low-complexity gig categories contracted."
+      "excerpt": "Fiverr FY2024 marketplace revenue declined 1.3% YoY to $303.1M. Active buyers fell 10% to 3.6M. AI-related categories showed strong growth while traditional low-complexity gig categories contracted.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "uoc-creative-automation-2025",
@@ -328,7 +336,8 @@
       "publisher": "Universitat Oberta de Catalunya",
       "evidenceTier": 1,
       "datePublished": "2025-09-15",
-      "excerpt": "Peer-reviewed study finds AI can now automate substantial portions of creative work. Freelance writing gigs dropped 30% post-ChatGPT launch."
+      "excerpt": "Peer-reviewed study finds AI can now automate substantial portions of creative work. Freelance writing gigs dropped 30% post-ChatGPT launch.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "unctad-creative-industry-2025",
@@ -337,16 +346,18 @@
       "publisher": "UN Trade and Development (UNCTAD)",
       "evidenceTier": 3,
       "datePublished": "2024-12-01",
-      "excerpt": "Covers the role of creative industries in trade and economic growth; discusses AI's impact on the creative economy. Creative services exports surged to $1.4 trillion in 2022."
+      "excerpt": "Covers the role of creative industries in trade and economic growth; discusses AI's impact on the creative economy. Creative services exports surged to $1.4 trillion in 2022.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "autor-new-frontiers-qje-2024",
-      "title": "New Frontiers: The Origins and Content of New Work, 1940–2018",
+      "title": "New Frontiers: The Origins and Content of New Work, 1940\u20132018",
       "url": "https://academic.oup.com/qje/article-abstract/139/3/1399/7630187",
       "publisher": "QJE (Autor, Chin, Salomons, Seegmiller)",
       "evidenceTier": 1,
       "datePublished": "2024-08-01",
-      "excerpt": "Demand-eroding effects of automation innovations have intensified in past four decades. New work creation has shifted from production to high-paid professional occupations."
+      "excerpt": "Demand-eroding effects of automation innovations have intensified in past four decades. New work creation has shifted from production to high-paid professional occupations.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "ramp-freelance-velocity-2025",
@@ -355,7 +366,8 @@
       "publisher": "Ramp",
       "evidenceTier": 1,
       "datePublished": "2025-09-20",
-      "excerpt": "Heaviest pre-ChatGPT freelance spenders shifted to AI tools fastest; substitution ratio of $1 reduced freelance spend to only $0.03 in AI spend."
+      "excerpt": "Heaviest pre-ChatGPT freelance spenders shifted to AI tools fastest; substitution ratio of $1 reduced freelance spend to only $0.03 in AI spend.",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "hosseini-brookings-creative-2025",
@@ -364,7 +376,8 @@
       "publisher": "Brookings Institution",
       "evidenceTier": 1,
       "datePublished": "2025-07-01",
-      "excerpt": "Significant decline in job availability and earnings for freelancers in AI-affected creative occupations; some workers adapted by transitioning to programming."
+      "excerpt": "Significant decline in job availability and earnings for freelancers in AI-affected creative occupations; some workers adapted by transitioning to programming.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "indeed-graphic-artist-postings-2025",
@@ -373,7 +386,8 @@
       "publisher": "Indeed Hiring Lab",
       "evidenceTier": 2,
       "datePublished": "2025-07-15",
-      "excerpt": "Computer graphic artist job postings declined 33% from pre-ChatGPT levels. Illustration and copywriting postings down 40%+. AI-creative hybrid roles growing."
+      "excerpt": "Computer graphic artist job postings declined 33% from pre-ChatGPT levels. Illustration and copywriting postings down 40%+. AI-creative hybrid roles growing.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "queen-mary-turing-freelancer-2025",
@@ -382,7 +396,8 @@
       "publisher": "Queen Mary University of London / Alan Turing Institute",
       "evidenceTier": 1,
       "datePublished": "2025-06-01",
-      "excerpt": "Survey of 335 freelance creative workers: 73% believe GenAI is altering quality of work; 68% feel job security reduced; 61% say value placed on their work has decreased; 55% report decline in financial compensation."
+      "excerpt": "Survey of 335 freelance creative workers: 73% believe GenAI is altering quality of work; 68% feel job security reduced; 61% say value placed on their work has decreased; 55% report decline in financial compensation.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "demirci-jebo-freelance-2025",
@@ -391,7 +406,8 @@
       "publisher": "Journal of Economic Behavior & Organization (Demirci, Jiang, Kartal, Trujillo)",
       "evidenceTier": 1,
       "datePublished": "2025-01-15",
-      "excerpt": "Peer-reviewed analysis of 2M job postings: freelance writing postings fell 30.37%, graphic design 18.49%, 3D modeling 15.57% within 8 months of ChatGPT launch. Applications per posting rose 8.57%."
+      "excerpt": "Peer-reviewed analysis of 2M job postings: freelance writing postings fell 30.37%, graphic design 18.49%, 3D modeling 15.57% within 8 months of ChatGPT launch. Applications per posting rose 8.57%.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "soa-uk-illustrators-2024",
@@ -400,7 +416,8 @@
       "publisher": "Society of Authors (UK)",
       "evidenceTier": 1,
       "datePublished": "2024-04-01",
-      "excerpt": "26% of illustrators and 36% of translators have already lost work to generative AI. 78% of illustrators and 77% of translators expect further income decline. Survey of 787 creative professionals."
+      "excerpt": "26% of illustrators and 36% of translators have already lost work to generative AI. 78% of illustrators and 77% of translators expect further income decline. Survey of 787 creative professionals.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "cais-scale-remote-labor-index-2025",
@@ -409,7 +426,8 @@
       "publisher": "Center for AI Safety / Scale AI (Mazeika et al.)",
       "evidenceTier": 1,
       "datePublished": "2025-10-30",
-      "excerpt": "Successful AI automations were concentrated in specific creative domains, particularly audio tasks (sound effects, vocal separation), image generation (logos, ads), report writing, and data retrieval. Overall automation rate only 2.5%."
+      "excerpt": "Successful AI automations were concentrated in specific creative domains, particularly audio tasks (sound effects, vocal separation), image generation (logos, ads), report writing, and data retrieval. Overall automation rate only 2.5%.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "dallas-fed-davis-ai-wages-2026",
@@ -418,7 +436,8 @@
       "publisher": "Federal Reserve Bank of Dallas (J. Scott Davis)",
       "evidenceTier": 1,
       "datePublished": "2026-02-24",
-      "excerpt": "nominal average weekly wages nationwide have increased 7.5 percent, while the computer systems design sector has risen 16.7 percent"
+      "excerpt": "nominal average weekly wages nationwide have increased 7.5 percent, while the computer systems design sector has risen 16.7 percent",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "causalinf-research-publishing-ai-2026",
@@ -427,7 +446,8 @@
       "publisher": "CausalInf Substack (Scott Cunningham)",
       "evidenceTier": 4,
       "datePublished": "2026-03-02",
-      "excerpt": "Reimers and Waldfogel studied what happened to book publishing after ChatGPT launched. The number of new titles on Amazon tripled. Average quality fell."
+      "excerpt": "Reimers and Waldfogel studied what happened to book publishing after ChatGPT launched. The number of new titles on Amazon tripled. Average quality fell.",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "reimers-waldfogel-books-2026",
@@ -436,7 +456,8 @@
       "publisher": "NBER (Reimers, Waldfogel)",
       "evidenceTier": 1,
       "datePublished": "2026-01-15",
-      "excerpt": "New book releases tripled over this period, but average quality declined... the authors estimate a potential steady-state consumer surplus gain of 25–50 percent from market expansion."
+      "excerpt": "New book releases tripled over this period, but average quality declined... the authors estimate a potential steady-state consumer surplus gain of 25\u201350 percent from market expansion.",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "ju-aral-ai-teamwork-2025",
@@ -445,7 +466,8 @@
       "publisher": "arXiv (Ju, Aral)",
       "evidenceTier": 1,
       "datePublished": "2025-06-01",
-      "excerpt": "Human-AI teams show roughly 73 percent higher productivity per worker for ad copy, though human-human teams remained superior for images."
+      "excerpt": "Human-AI teams show roughly 73 percent higher productivity per worker for ad copy, though human-human teams remained superior for images.",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "bloomberry-180m-creative-postings-2025",
@@ -454,7 +476,8 @@
       "publisher": "Bloomberry/Revealera (Henley Wing Chiu)",
       "evidenceTier": 2,
       "datePublished": "2025-11-03",
-      "excerpt": "Computer graphic artist postings down 33% in 2025, photographers and writers down 28%, journalists down 22%, against an 8% overall market decline. Analysis of 180M global job postings from company websites using 650 normalized job titles."
+      "excerpt": "Computer graphic artist postings down 33% in 2025, photographers and writers down 28%, journalists down 22%, against an 8% overall market decline. Analysis of 180M global job postings from company websites using 650 normalized job titles.",
+      "dateAdded": "2026-03-10"
     },
     {
       "id": "envato-ai-creative-work-2026",
@@ -463,7 +486,8 @@
       "publisher": "Envato",
       "evidenceTier": 2,
       "datePublished": "2025-11-11",
-      "excerpt": "Nearly half of all respondents (49%) use AI daily for client work, with 50% using it significantly more than they did just six months ago. 69% don't feel fully prepared for an AI-driven creative industry. 1 in 3 expect design roles to transform this year. 58% have used AI in client work without disclosing it. Survey of 1,780 global creatives."
+      "excerpt": "Nearly half of all respondents (49%) use AI daily for client work, with 50% using it significantly more than they did just six months ago. 69% don't feel fully prepared for an AI-driven creative industry. 1 in 3 expect design roles to transform this year. 58% have used AI in client work without disclosing it. Survey of 1,780 global creatives.",
+      "dateAdded": "2026-03-09"
     }
   ]
 }

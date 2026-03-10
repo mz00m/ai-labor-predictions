@@ -169,7 +169,7 @@
         "cognizant-new-work-2026"
       ],
       "evidenceTier": 2,
-      "label": "Cognizant: education exposure jumped from 11% to 49% — a 4.5x increase"
+      "label": "Cognizant: education exposure jumped from 11% to 49% \u2014 a 4.5x increase"
     },
     {
       "date": "2026-01-28",
@@ -187,7 +187,7 @@
         "shrm-automation-education-2025"
       ],
       "evidenceTier": 2,
-      "label": "SHRM: only 7.3% of education jobs highly automated — lowest of any sector (n=20,262)"
+      "label": "SHRM: only 7.3% of education jobs highly automated \u2014 lowest of any sector (n=20,262)"
     },
     {
       "date": "2026-03-04",
@@ -207,7 +207,8 @@
       "publisher": "UNESCO",
       "evidenceTier": 2,
       "datePublished": "2023-09-07",
-      "excerpt": "AI tutoring systems can handle 60% of routine student queries. Teaching assistants and tutors face the most immediate displacement risk."
+      "excerpt": "AI tutoring systems can handle 60% of routine student queries. Teaching assistants and tutors face the most immediate displacement risk.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "rand-edtech-ai-2023",
@@ -216,7 +217,8 @@
       "publisher": "RAND Corporation",
       "evidenceTier": 2,
       "datePublished": "2024-04-01",
-      "excerpt": "Surveyed 1,020 teachers nationally; 18% of K-12 teachers used AI for teaching with most using adaptive learning systems weekly. 60% of districts planned to train teachers on AI."
+      "excerpt": "Surveyed 1,020 teachers nationally; 18% of K-12 teachers used AI for teaching with most using adaptive learning systems weekly. 60% of districts planned to train teachers on AI.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "harvard-edtech-2024",
@@ -225,16 +227,18 @@
       "publisher": "Harvard Gazette",
       "evidenceTier": 1,
       "datePublished": "2024-09-01",
-      "excerpt": "Learning gains for students in the AI-tutored group were about double those for the in-class group. Students using the AI tutor reported significantly more engagement and motivation to learn."
+      "excerpt": "Learning gains for students in the AI-tutored group were about double those for the in-class group. Students using the AI tutor reported significantly more engagement and motivation to learn.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "chegg-enrollment-decline",
-      "title": "Chegg Q2 2024 Earnings — ChatGPT Impact on Tutoring Market",
+      "title": "Chegg Q2 2024 Earnings \u2014 ChatGPT Impact on Tutoring Market",
       "url": "https://investor.chegg.com/press-releases/news-details/2024/Chegg-Reports-Q2-2024-Financial-Results/",
       "publisher": "Chegg (Earnings Report)",
       "evidenceTier": 1,
       "datePublished": "2024-07-01",
-      "excerpt": "Chegg subscribers fell 50% from peak as students shifted to ChatGPT. Company laid off 23% of workforce, citing AI as primary competitive threat."
+      "excerpt": "Chegg subscribers fell 50% from peak as students shifted to ChatGPT. Company laid off 23% of workforce, citing AI as primary competitive threat.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "chronicle-higher-ed-ai",
@@ -243,7 +247,8 @@
       "publisher": "The Chronicle of Higher Education",
       "evidenceTier": 3,
       "datePublished": "2025-04-25",
-      "excerpt": "Over the next decade AI will decimate faculty ranks; TAs will be first casualties, then non-tenured faculty, then tenured positions via attrition. Predicts significant culling of doctoral programs."
+      "excerpt": "Over the next decade AI will decimate faculty ranks; TAs will be first casualties, then non-tenured faculty, then tenured positions via attrition. Predicts significant culling of doctoral programs.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "oecd-education-outlook-2025",
@@ -252,7 +257,8 @@
       "publisher": "OECD",
       "evidenceTier": 1,
       "datePublished": "2025-01-20",
-      "excerpt": "Teaching roles are among the least automatable (15% task exposure), but education support staff, administration, and tutoring face 30-40% task displacement. Blended estimate across the full education workforce: ~20%."
+      "excerpt": "Teaching roles are among the least automatable (15% task exposure), but education support staff, administration, and tutoring face 30-40% task displacement. Blended estimate across the full education workforce: ~20%.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "bls-education-2025",
@@ -261,16 +267,18 @@
       "publisher": "Bureau of Labor Statistics",
       "evidenceTier": 1,
       "datePublished": "2025-07-15",
-      "excerpt": "Teacher aide and educational support employment projected to decline 3%. Post-secondary teacher demand flat. Private tutoring category declining."
+      "excerpt": "Teacher aide and educational support employment projected to decline 3%. Post-secondary teacher demand flat. Private tutoring category declining.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "pearson-10k-2024",
-      "title": "Pearson plc 2024 Annual Report — AI Strategy",
+      "title": "Pearson plc 2024 Annual Report \u2014 AI Strategy",
       "url": "https://plc.pearson.com/en-GB/annual-report-2024",
       "publisher": "Pearson plc",
       "evidenceTier": 1,
       "datePublished": "2025-03-01",
-      "excerpt": "Pearson pivoted to AI-first content delivery, reducing editorial headcount by 18% while growing AI-generated adaptive learning content 300%."
+      "excerpt": "Pearson pivoted to AI-first content delivery, reducing editorial headcount by 18% while growing AI-generated adaptive learning content 300%.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "wef-education-displacement-2025",
@@ -279,7 +287,8 @@
       "publisher": "World Economic Forum",
       "evidenceTier": 2,
       "datePublished": "2025-12-01",
-      "excerpt": "Education support roles face moderate displacement risk while core teaching remains protected. Administrative and content creation roles most affected by AI adoption."
+      "excerpt": "Education support roles face moderate displacement risk while core teaching remains protected. Administrative and content creation roles most affected by AI adoption.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "mckinsey-12m-workers-2025",
@@ -288,7 +297,8 @@
       "publisher": "McKinsey Global Institute",
       "evidenceTier": 2,
       "datePublished": "2023-07-26",
-      "excerpt": "An additional 12 million occupational shifts expected by 2030. Workers in lower-wage jobs are up to 14 times more likely to need to change occupations. Activities accounting for up to 30% of hours could be automated."
+      "excerpt": "An additional 12 million occupational shifts expected by 2030. Workers in lower-wage jobs are up to 14 times more likely to need to change occupations. Activities accounting for up to 30% of hours could be automated.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "imf-skill-gaps-ai-2026",
@@ -297,7 +307,8 @@
       "publisher": "IMF (Jaumotte et al.)",
       "evidenceTier": 1,
       "datePublished": "2026-01-15",
-      "excerpt": "Around 40% of global employment is exposed to AI; in advanced economies 60%. Demand for new skills is rising with 10% of jobs in advanced economies requiring at least one new skill."
+      "excerpt": "Around 40% of global employment is exposed to AI; in advanced economies 60%. Demand for new skills is rising with 10% of jobs in advanced economies requiring at least one new skill.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "chegg-layoffs-2025",
@@ -306,7 +317,8 @@
       "publisher": "Chegg (SEC Filing / Press Release)",
       "evidenceTier": 1,
       "datePublished": "2025-02-01",
-      "excerpt": "Chegg eliminated 636 employees across two rounds of layoffs (23% in 2024, then additional cuts in early 2025), totaling ~67% of peak workforce. CEO explicitly cited AI as existential threat to homework-help business model."
+      "excerpt": "Chegg eliminated 636 employees across two rounds of layoffs (23% in 2024, then additional cuts in early 2025), totaling ~67% of peak workforce. CEO explicitly cited AI as existential threat to homework-help business model.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "duolingo-ai-first-2025",
@@ -315,7 +327,8 @@
       "publisher": "Duolingo",
       "evidenceTier": 1,
       "datePublished": "2025-01-08",
-      "excerpt": "Duolingo cut 10%+ of its contractor workforce, explicitly replacing human content creators with AI-generated language exercises. CEO announced 'AI-first' strategy for all content production."
+      "excerpt": "Duolingo cut 10%+ of its contractor workforce, explicitly replacing human content creators with AI-generated language exercises. CEO announced 'AI-first' strategy for all content production.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "shrm-automation-education-2025",
@@ -324,7 +337,8 @@
       "publisher": "SHRM (Society for Human Resource Management)",
       "evidenceTier": 2,
       "datePublished": "2025-10-01",
-      "excerpt": "At least 50% of tasks are automated in only 7.3% of education and library occupations — the lowest of any occupational group. Survey of 20,262 U.S. workers fielded March-April 2025."
+      "excerpt": "At least 50% of tasks are automated in only 7.3% of education and library occupations \u2014 the lowest of any occupational group. Survey of 20,262 U.S. workers fielded March-April 2025.",
+      "dateAdded": "2026-03-08"
     },
     {
       "id": "educause-ai-higher-ed-2026",
@@ -333,7 +347,8 @@
       "publisher": "EDUCAUSE (with AIR, NACUBO, CUPA-HR)",
       "evidenceTier": 2,
       "datePublished": "2026-01-13",
-      "excerpt": "94% of higher education workers use AI tools for work, but only 54% are aware of institutional AI policies. 67% identified six or more urgent AI-related risks, including job loss. Survey of 1,960 staff and faculty across 1,800+ institutions."
+      "excerpt": "94% of higher education workers use AI tools for work, but only 54% are aware of institutional AI policies. 67% identified six or more urgent AI-related risks, including job loss. Survey of 1,960 staff and faculty across 1,800+ institutions.",
+      "dateAdded": "2026-03-08"
     },
     {
       "id": "cognizant-new-work-2026",
@@ -342,7 +357,8 @@
       "publisher": "Cognizant",
       "evidenceTier": 2,
       "datePublished": "2026-01-15",
-      "excerpt": "Education task exposure jumped from 11% to 49% — a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations."
+      "excerpt": "Education task exposure jumped from 11% to 49% \u2014 a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "anthropic-shen-ai-skill-formation-2026",
@@ -351,7 +367,8 @@
       "publisher": "Anthropic (Shen, Tamkin)",
       "evidenceTier": 1,
       "datePublished": "2026-01-28",
-      "excerpt": "AI use impairs conceptual understanding, code reading, and debugging abilities. The AI group averaged 50% on the quiz, compared to 67% in the hand-coding group. The AI didn't make developers faster on average."
+      "excerpt": "AI use impairs conceptual understanding, code reading, and debugging abilities. The AI group averaged 50% on the quiz, compared to 67% in the hand-coding group. The AI didn't make developers faster on average.",
+      "dateAdded": "2026-03-10"
     },
     {
       "id": "ellucian-higher-ed-ai-survey-2026",
@@ -360,7 +377,8 @@
       "publisher": "Ellucian",
       "evidenceTier": 2,
       "datePublished": "2026-03-04",
-      "excerpt": "The survey shows institutional adoption is accelerating, with 66% of respondents reporting their institution is currently leveraging AI, an increase from 49% year over year. Eighty-eight percent of respondents say they expect institutional AI use to increase over the next two years. Survey of 779 higher education faculty and administrators from 300+ institutions."
+      "excerpt": "The survey shows institutional adoption is accelerating, with 66% of respondents reporting their institution is currently leveraging AI, an increase from 49% year over year. Eighty-eight percent of respondents say they expect institutional AI use to increase over the next two years. Survey of 779 higher education faculty and administrators from 300+ institutions.",
+      "dateAdded": "2026-03-09"
     },
     {
       "id": "pew-ai-experts-predictions-2025",
@@ -369,7 +387,8 @@
       "publisher": "Pew Research Center",
       "evidenceTier": 1,
       "datePublished": "2025-04-03",
-      "excerpt": "31% of AI experts predict AI will lead to fewer teacher jobs in 20 years, vs 43% of general public. Survey of 1,013 AI experts (Aug-Oct 2024) and 5,410 US adults. AI experts far more optimistic: 73% say positive impact on jobs vs 23% of public."
+      "excerpt": "31% of AI experts predict AI will lead to fewer teacher jobs in 20 years, vs 43% of general public. Survey of 1,013 AI experts (Aug-Oct 2024) and 5,410 US adults. AI experts far more optimistic: 73% say positive impact on jobs vs 23% of public.",
+      "dateAdded": "2026-03-10"
     }
   ]
 }

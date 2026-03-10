@@ -119,7 +119,7 @@
         "openai-8k-funding-2024"
       ],
       "evidenceTier": 2,
-      "label": "OpenAI: avg stock comp $1.5M; researcher total comp $763K–$1.44M"
+      "label": "OpenAI: avg stock comp $1.5M; researcher total comp $763K\u2013$1.44M"
     },
     {
       "date": "2025-02-01",
@@ -227,7 +227,7 @@
         "dallas-fed-davis-ai-wages-2026"
       ],
       "evidenceTier": 1,
-      "label": "Dallas Fed: AI exposure → +0.2pp wage growth for high-experience-premium occupations"
+      "label": "Dallas Fed: AI exposure \u2192 +0.2pp wage growth for high-experience-premium occupations"
     },
     {
       "date": "2026-03-04",
@@ -256,7 +256,8 @@
       "publisher": "Revelio Labs",
       "evidenceTier": 2,
       "datePublished": "2025-12-01",
-      "excerpt": "Demand for high-wage jobs with salaries over USD $100,000 has grown by about 150% over the past two years. Meanwhile, job postings for low-wage positions have fallen steadily for nearly two years."
+      "excerpt": "Demand for high-wage jobs with salaries over USD $100,000 has grown by about 150% over the past two years. Meanwhile, job postings for low-wage positions have fallen steadily for nearly two years.",
+      "dateAdded": "2026-03-08"
     },
     {
       "id": "indeed-ai-salaries-2023",
@@ -264,7 +265,8 @@
       "url": "https://www.hiringlab.org/2023/02/01/new-metrics-for-the-new-year/",
       "publisher": "Indeed Hiring Lab",
       "evidenceTier": 3,
-      "datePublished": "2023-02-01"
+      "datePublished": "2023-02-01",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "lightcast-2024",
@@ -272,7 +274,8 @@
       "url": "https://lightcast.io/resources/research/generative-artificial-intelligence",
       "publisher": "Lightcast (Burning Glass)",
       "evidenceTier": 2,
-      "datePublished": "2024-01-15"
+      "datePublished": "2024-01-15",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "msft-earnings-2024",
@@ -281,7 +284,8 @@
       "publisher": "Microsoft Investor Relations",
       "evidenceTier": 1,
       "datePublished": "2024-04-25",
-      "excerpt": "Microsoft Cloud revenue was $35.1 billion, up 23%. More than 65% of the Fortune 500 now use Azure OpenAI Service, and $100M+ Azure deals increased over 80% YoY."
+      "excerpt": "Microsoft Cloud revenue was $35.1 billion, up 23%. More than 65% of the Fortune 500 now use Azure OpenAI Service, and $100M+ Azure deals increased over 80% YoY.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "ft-ai-salaries-2024",
@@ -290,7 +294,8 @@
       "publisher": "Fortune",
       "evidenceTier": 2,
       "datePublished": "2025-08-11",
-      "excerpt": "Companies hiring AI talent face a 30% salary premium as demand far outstrips supply, with experts warning that the cost of delayed AI hiring will only increase over time."
+      "excerpt": "Companies hiring AI talent face a 30% salary premium as demand far outstrips supply, with experts warning that the cost of delayed AI hiring will only increase over time.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "mit-ai-premium-2025",
@@ -299,7 +304,8 @@
       "publisher": "Journal of Labor Economics (Acemoglu, Autor, Hazell, Restrepo)",
       "evidenceTier": 1,
       "datePublished": "2022-01-01",
-      "excerpt": "AI-exposed establishments reduce hiring in non-AI positions. A wage premium of 11% exists for job postings requiring AI skills within the same firm."
+      "excerpt": "AI-exposed establishments reduce hiring in non-AI positions. A wage premium of 11% exists for job postings requiring AI skills within the same firm.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "lightcast-beyond-buzz-2025",
@@ -308,7 +314,8 @@
       "publisher": "Lightcast",
       "evidenceTier": 2,
       "datePublished": "2025-07-23",
-      "excerpt": "Analysis of 1.3B job postings finds AI skills command 28% salary premium (~$18K/year); 43% for workers with 2+ AI skills. 51% of AI-skill postings now outside IT/CS with 800% growth in non-tech gen AI roles since 2022."
+      "excerpt": "Analysis of 1.3B job postings finds AI skills command 28% salary premium (~$18K/year); 43% for workers with 2+ AI skills. 51% of AI-skill postings now outside IT/CS with 800% growth in non-tech gen AI roles since 2022.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "oecd-skills-2025",
@@ -316,7 +323,8 @@
       "url": "https://www.oecd.org/en/publications/oecd-skills-outlook-2025_26163cd3-en.html",
       "publisher": "OECD",
       "evidenceTier": 1,
-      "datePublished": "2025-08-01"
+      "datePublished": "2025-08-01",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "nvidia-10k-2024",
@@ -325,7 +333,8 @@
       "publisher": "NVIDIA (SEC Filing)",
       "evidenceTier": 1,
       "datePublished": "2025-05-01",
-      "excerpt": "NVIDIA median employee total compensation was $301,233 in FY2025 (ending January 2025), with CEO-to-median pay ratio of 166:1. Total headcount reached 36,000, a 21.6% increase YoY."
+      "excerpt": "NVIDIA median employee total compensation was $301,233 in FY2025 (ending January 2025), with CEO-to-median pay ratio of 166:1. Total headcount reached 36,000, a 21.6% increase YoY.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "openai-8k-funding-2024",
@@ -334,7 +343,8 @@
       "publisher": "Fortune",
       "evidenceTier": 2,
       "datePublished": "2026-02-18",
-      "excerpt": "OpenAI average stock-based compensation reached $1.5M per employee in 2025. Research scientist total compensation ranges from $763K to $1.44M. The company raised $6.6B in October 2024 at a $157B valuation."
+      "excerpt": "OpenAI average stock-based compensation reached $1.5M per employee in 2025. Research scientist total compensation ranges from $763K to $1.44M. The company raised $6.6B in October 2024 at a $157B valuation.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "linkedin-ai-salary-2025",
@@ -343,7 +353,8 @@
       "publisher": "LinkedIn Economic Graph",
       "evidenceTier": 2,
       "datePublished": "2025-02-01",
-      "excerpt": "LinkedIn's AI skills resources hub tracking AI engineering talent growth (130% increase since 2016). 7 out of every 1,000 LinkedIn members globally are AI engineering talent."
+      "excerpt": "LinkedIn's AI skills resources hub tracking AI engineering talent growth (130% increase since 2016). 7 out of every 1,000 LinkedIn members globally are AI engineering talent.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "pwc-ai-wage-premium-2025",
@@ -352,7 +363,8 @@
       "publisher": "PwC",
       "evidenceTier": 1,
       "datePublished": "2025-10-15",
-      "excerpt": "Workers with AI skills now command a 56% wage premium over non-AI peers, up from 25% just one year prior. AI roles median compensation reaches $157K."
+      "excerpt": "Workers with AI skills now command a 56% wage premium over non-AI peers, up from 25% just one year prior. AI roles median compensation reaches $157K.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "indexdev-ai-salary-2026",
@@ -361,7 +373,8 @@
       "publisher": "Index.dev",
       "evidenceTier": 2,
       "datePublished": "2026-01-05",
-      "excerpt": "AI/ML engineers median total compensation reached $185K in 2025, with top-tier researchers commanding $500K-$1M+. The premium over general software roles widened to 35%."
+      "excerpt": "AI/ML engineers median total compensation reached $185K in 2025, with top-tier researchers commanding $500K-$1M+. The premium over general software roles widened to 35%.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "noy-zhang-productivity-2023",
@@ -370,7 +383,8 @@
       "publisher": "Science (Noy, Zhang)",
       "evidenceTier": 1,
       "datePublished": "2023-07-14",
-      "excerpt": "ChatGPT compressed productivity distribution — low-ability workers gained most (40% time reduction, 18% quality increase). May reduce skill premium over time."
+      "excerpt": "ChatGPT compressed productivity distribution \u2014 low-ability workers gained most (40% time reduction, 18% quality increase). May reduce skill premium over time.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "brynjolfsson-li-raymond-qje-2025",
@@ -379,7 +393,8 @@
       "publisher": "QJE (Brynjolfsson, Li, Raymond)",
       "evidenceTier": 1,
       "datePublished": "2025-05-01",
-      "excerpt": "AI assistance increases customer service worker productivity by 15% on average. Less experienced workers improve most; AI disseminates best practices from top performers."
+      "excerpt": "AI assistance increases customer service worker productivity by 15% on average. Less experienced workers improve most; AI disseminates best practices from top performers.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "imf-skill-gaps-premium-2026",
@@ -388,7 +403,8 @@
       "publisher": "IMF Staff Discussion Note",
       "evidenceTier": 2,
       "datePublished": "2026-01-15",
-      "excerpt": "Job postings with 4+ new skills pay up to 15% more (UK) and 8.5% more (US); middle-skill roles being squeezed while high-skill workers gain."
+      "excerpt": "Job postings with 4+ new skills pay up to 15% more (UK) and 8.5% more (US); middle-skill roles being squeezed while high-skill workers gain.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "althoff-reichardt-task-specific-technical-2026",
@@ -397,7 +413,8 @@
       "publisher": "CESifo (Althoff, Reichardt)",
       "evidenceTier": 1,
       "datePublished": "2026-01-21",
-      "excerpt": "some occupations — such as architects, engineers, and executives — see absolute wage declines"
+      "excerpt": "some occupations \u2014 such as architects, engineers, and executives \u2014 see absolute wage declines",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "hartley-genai-labor-2026",
@@ -406,16 +423,18 @@
       "publisher": "Stanford / World Bank",
       "evidenceTier": 1,
       "datePublished": "2026-01-01",
-      "excerpt": "Adoption concentrated among younger, college-educated, higher-earning employees, reinforcing wage premium for AI-complementary skills."
+      "excerpt": "Adoption concentrated among younger, college-educated, higher-earning employees, reinforcing wage premium for AI-complementary skills.",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "cepr-ai-productivity-jobs-europe-2026",
       "title": "How AI is affecting productivity and jobs in Europe",
       "url": "https://cepr.org/voxeu/columns/how-ai-affecting-productivity-and-jobs-europe",
-      "publisher": "CEPR VoxEU (Aldasoro, Gambacorta, Pál, Revoltella, Weiss, Wolski)",
+      "publisher": "CEPR VoxEU (Aldasoro, Gambacorta, P\u00e1l, Revoltella, Weiss, Wolski)",
       "evidenceTier": 1,
       "datePublished": "2026-02-17",
-      "excerpt": "The wage gains observed may accrue disproportionately to highly skilled workers, potentially widening income inequality."
+      "excerpt": "The wage gains observed may accrue disproportionately to highly skilled workers, potentially widening income inequality.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "dallas-fed-davis-ai-wages-2026",
@@ -424,7 +443,8 @@
       "publisher": "Federal Reserve Bank of Dallas (J. Scott Davis)",
       "evidenceTier": 1,
       "datePublished": "2026-02-24",
-      "excerpt": "Nominal average weekly wages nationwide have increased 7.5 percent, while the computer systems design sector has risen 16.7 percent — a 9.2 percentage point gap reflecting the AI-skill wage premium."
+      "excerpt": "Nominal average weekly wages nationwide have increased 7.5 percent, while the computer systems design sector has risen 16.7 percent \u2014 a 9.2 percentage point gap reflecting the AI-skill wage premium.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "cooper-cs-majors-labor-2026",
@@ -433,7 +453,8 @@
       "publisher": "Preston Cooper (Substack)",
       "evidenceTier": 4,
       "datePublished": "2026-03-04",
-      "excerpt": "The median salary for early-career CS majors was $90,000 in 2024. The median salary for all recent college graduates was just $55,000."
+      "excerpt": "The median salary for early-career CS majors was $90,000 in 2024. The median salary for all recent college graduates was just $55,000.",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "anthropic-labor-market-impacts-2026",
@@ -442,7 +463,8 @@
       "publisher": "Anthropic (Massenkoff, McCrory)",
       "evidenceTier": 2,
       "datePublished": "2026-03-05",
-      "excerpt": "Workers in the most exposed professions earn 47% more, on average, and are 16 percentage points more likely to be female"
+      "excerpt": "Workers in the most exposed professions earn 47% more, on average, and are 16 percentage points more likely to be female",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "wharton-accenture-skills-mismatch-2026",
@@ -451,7 +473,8 @@
       "publisher": "Wharton AI & Analytics Initiative / Accenture",
       "evidenceTier": 2,
       "datePublished": "2026-01-22",
-      "excerpt": "AI is redistributing economic value away from routine cognitive tasks toward judgment, coordination, and specialized knowledge."
+      "excerpt": "AI is redistributing economic value away from routine cognitive tasks toward judgment, coordination, and specialized knowledge.",
+      "dateAdded": "2026-03-09"
     }
   ]
 }

@@ -147,7 +147,7 @@
         "eloundou-openai-2024"
       ],
       "evidenceTier": 1,
-      "label": "OpenAI/UPenn: 80% of workers have ≥10% tasks affected"
+      "label": "OpenAI/UPenn: 80% of workers have \u226510% tasks affected"
     },
     {
       "date": "2025-02-01",
@@ -239,7 +239,8 @@
       "publisher": "Journal of Economics & Management Strategy (McElheran, Li, Brynjolfsson et al.)",
       "evidenceTier": 1,
       "datePublished": "2024-01-24",
-      "excerpt": "Employment-weighted adoption was just over 18%. AI use in production was found in every sector of the economy. Manufacturing and information led at roughly 12% each. Based on the 2018 Annual Business Survey of 850,000 firms."
+      "excerpt": "Employment-weighted adoption was just over 18%. AI use in production was found in every sector of the economy. Manufacturing and information led at roughly 12% each. Based on the 2018 Annual Business Survey of 850,000 firms.",
+      "dateAdded": "2026-03-10"
     },
     {
       "id": "goldman-300m",
@@ -248,7 +249,8 @@
       "publisher": "Goldman Sachs",
       "evidenceTier": 1,
       "datePublished": "2023-03-26",
-      "excerpt": "Roughly two-thirds of current jobs are exposed to some degree of AI automation; generative AI could substitute up to one-fourth of current work."
+      "excerpt": "Roughly two-thirds of current jobs are exposed to some degree of AI automation; generative AI could substitute up to one-fourth of current work.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "oecd-2023",
@@ -257,7 +259,8 @@
       "publisher": "OECD",
       "evidenceTier": 1,
       "datePublished": "2023-07-11",
-      "excerpt": "27% of jobs are in occupations at high risk of automation across OECD countries."
+      "excerpt": "27% of jobs are in occupations at high risk of automation across OECD countries.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "imf-ai-2024",
@@ -266,7 +269,8 @@
       "publisher": "International Monetary Fund",
       "evidenceTier": 2,
       "datePublished": "2024-01-14",
-      "excerpt": "Almost 40% of global employment is exposed to AI, with advanced economies more affected."
+      "excerpt": "Almost 40% of global employment is exposed to AI, with advanced economies more affected.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "eloundou-openai-2024",
@@ -275,7 +279,8 @@
       "publisher": "OpenAI / U Penn (Eloundou et al.)",
       "evidenceTier": 1,
       "datePublished": "2024-01-15",
-      "excerpt": "~80% of the US workforce could have at least 10% of their tasks affected by GPTs. Legal, accounting, and financial analysis are among the highest-exposure occupations."
+      "excerpt": "~80% of the US workforce could have at least 10% of their tasks affected by GPTs. Legal, accounting, and financial analysis are among the highest-exposure occupations.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "pwbm-ai-adoption-2025",
@@ -284,7 +289,8 @@
       "publisher": "Penn Wharton Budget Model (Arnon, Smetters)",
       "evidenceTier": 1,
       "datePublished": "2025-09-08",
-      "excerpt": "In about 40% of employment in exposed occupations, at least 50% of tasks will be replaceable. Average labor-cost savings ~25% from current tools, potentially 40% as systems improve."
+      "excerpt": "In about 40% of employment in exposed occupations, at least 50% of tasks will be replaceable. Average labor-cost savings ~25% from current tools, potentially 40% as systems improve.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "anthropic-econ-primitives-2026",
@@ -293,7 +299,8 @@
       "publisher": "Anthropic",
       "evidenceTier": 1,
       "datePublished": "2026-01-15",
-      "excerpt": "Computer/mathematical tasks account for ~33% of all Claude.ai conversations and ~50% of API traffic, indicating concentrated AI impact on tech-adjacent roles."
+      "excerpt": "Computer/mathematical tasks account for ~33% of all Claude.ai conversations and ~50% of API traffic, indicating concentrated AI impact on tech-adjacent roles.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "hartley-genai-labor-2026",
@@ -302,7 +309,8 @@
       "publisher": "Stanford / World Bank (Hartley, Jolevski, Melo, Moore)",
       "evidenceTier": 1,
       "datePublished": "2026-01-01",
-      "excerpt": "LLM adoption among U.S. workers increased from 30.1% to 38.3% between December 2024 and December 2025. Small effects on wages in exposed occupations; no significant effects on job openings or total jobs."
+      "excerpt": "LLM adoption among U.S. workers increased from 30.1% to 38.3% between December 2024 and December 2025. Small effects on wages in exposed occupations; no significant effects on job openings or total jobs.",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "pnas-nexus-2025",
@@ -311,7 +319,8 @@
       "publisher": "PNAS Nexus",
       "evidenceTier": 1,
       "datePublished": "2025-02-01",
-      "excerpt": "Workers in AI-exposed occupations face significantly higher unemployment risk."
+      "excerpt": "Workers in AI-exposed occupations face significantly higher unemployment risk.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "del-rio-chanona-ai-jobs-2025",
@@ -320,7 +329,8 @@
       "publisher": "arXiv (ILO-affiliated researchers)",
       "evidenceTier": 1,
       "datePublished": "2025-09-15",
-      "excerpt": "Productivity gains 20-60% in controlled RCTs, 15-30% in field experiments; AI exposure measures converge toward high-wage jobs being most exposed."
+      "excerpt": "Productivity gains 20-60% in controlled RCTs, 15-30% in field experiments; AI exposure measures converge toward high-wage jobs being most exposed.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "cognizant-new-work-2026",
@@ -329,7 +339,8 @@
       "publisher": "Cognizant",
       "evidenceTier": 2,
       "datePublished": "2026-01-15",
-      "excerpt": "93% of all occupations analyzed have at least one task with significant AI exposure. Education task exposure jumped from 11% to 49% — a 4.5x increase. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations."
+      "excerpt": "93% of all occupations analyzed have at least one task with significant AI exposure. Education task exposure jumped from 11% to 49% \u2014 a 4.5x increase. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "brookings-adaptive-capacity-2026",
@@ -338,7 +349,8 @@
       "publisher": "Brookings Institution (Manning, Aguirre, Muro, Methkupally)",
       "evidenceTier": 2,
       "datePublished": "2026-01-21",
-      "excerpt": "Administrative support occupations have lower adaptive capacity (0.360) combined with the highest AI exposure of any major occupation group (0.525)."
+      "excerpt": "Administrative support occupations have lower adaptive capacity (0.360) combined with the highest AI exposure of any major occupation group (0.525).",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "indeed-hiringlab-ai-jobs-labor-2026",
@@ -347,7 +359,8 @@
       "publisher": "Indeed Hiring Lab",
       "evidenceTier": 2,
       "datePublished": "2026-01-22",
-      "excerpt": "45% of data & analytics job postings mentioned AI, the highest among all sectors analyzed...software development, IT systems & solutions, and scientific research & development each mentioned AI 20% or more of the time"
+      "excerpt": "45% of data & analytics job postings mentioned AI, the highest among all sectors analyzed...software development, IT systems & solutions, and scientific research & development each mentioned AI 20% or more of the time",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "lightcast-fault-lines-2026",
@@ -366,7 +379,8 @@
       "publisher": "Carnegie Mellon / Stanford (Wang, Neubig, Fried, Yang et al.)",
       "evidenceTier": 1,
       "datePublished": "2026-03-01",
-      "excerpt": "Across all benchmarks, examples collectively cover a limited 56.5% of the domain taxonomy but a substantially broader 85.4% of the skill taxonomy."
+      "excerpt": "Across all benchmarks, examples collectively cover a limited 56.5% of the domain taxonomy but a substantially broader 85.4% of the skill taxonomy.",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "jones-tonetti-weak-links-2026",
@@ -375,7 +389,8 @@
       "publisher": "Stanford GSB / NBER (Jones, Tonetti)",
       "evidenceTier": 1,
       "datePublished": "2026-01-15",
-      "excerpt": "In recent years, retail trade has the lowest share of tasks that have been automated — around 50% — whereas computers/electronics has the highest share — more than 85%."
+      "excerpt": "In recent years, retail trade has the lowest share of tasks that have been automated \u2014 around 50% \u2014 whereas computers/electronics has the highest share \u2014 more than 85%.",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "anthropic-labor-market-impacts-2026",
@@ -384,7 +399,8 @@
       "publisher": "Anthropic (Massenkoff, McCrory)",
       "evidenceTier": 2,
       "datePublished": "2026-03-05",
-      "excerpt": "At the bottom end, 30% of workers have zero coverage, as their tasks appeared too infrequently in our data to meet the minimum threshold."
+      "excerpt": "At the bottom end, 30% of workers have zero coverage, as their tasks appeared too infrequently in our data to meet the minimum threshold.",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "oecd-ai-skills-gap-2025",
@@ -393,7 +409,8 @@
       "publisher": "OECD Publishing",
       "evidenceTier": 2,
       "datePublished": "2025-04-24",
-      "excerpt": "With one in three job vacancies having high AI exposure, a significant share of jobs in OECD economies are influenced by the rise of AI. Only a small percentage of training courses currently deliver AI content."
+      "excerpt": "With one in three job vacancies having high AI exposure, a significant share of jobs in OECD economies are influenced by the rise of AI. Only a small percentage of training courses currently deliver AI content.",
+      "dateAdded": "2026-03-10"
     },
     {
       "id": "eisfeldt-genai-exposure-2025",
@@ -402,7 +419,8 @@
       "publisher": "SSRN (Eisfeldt, Schubert, Taska, Zhang)",
       "evidenceTier": 1,
       "datePublished": "2025-06-01",
-      "excerpt": "678 occupations having on average 23% of their tasks exposed to Generative AI"
+      "excerpt": "678 occupations having on average 23% of their tasks exposed to Generative AI",
+      "dateAdded": "2026-03-07"
     }
   ]
 }
