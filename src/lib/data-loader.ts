@@ -4,7 +4,6 @@ import lastUpdatedMeta from "@/data/last-updated.json";
 import techSector from "@/data/predictions/displacement/tech-sector.json";
 import customerService from "@/data/predictions/displacement/customer-service.json";
 import overall from "@/data/predictions/displacement/overall.json";
-import totalJobsLost from "@/data/predictions/displacement/total-jobs-lost.json";
 import whiteCollar from "@/data/predictions/displacement/white-collar-professional.json";
 import creative from "@/data/predictions/displacement/creative-industry.json";
 import healthcareAdmin from "@/data/predictions/displacement/healthcare-admin.json";
@@ -23,7 +22,6 @@ import workforceExposure from "@/data/predictions/exposure/workforce-exposure.js
 const allPredictions: Prediction[] = [
   // Displacement: broadest population → sector → niche roles
   overall as Prediction,
-  totalJobsLost as Prediction,
   whiteCollar as Prediction,
   techSector as Prediction,
   creative as Prediction,

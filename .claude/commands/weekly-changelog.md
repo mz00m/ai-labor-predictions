@@ -130,13 +130,13 @@ For each new entry, note:
 
 | Slug | Title |
 |------|-------|
-| `overall-us-displacement` | Overall US Job Displacement by 2030 |
-| `total-us-jobs-lost` | Total US Jobs Lost to AI as % of Labor Force |
+| `overall-us-displacement` | Projected US Job Displacement from AI by 2030 |
 | `white-collar-professional-displacement` | White-Collar Professional Displacement |
 | `tech-sector-displacement` | Tech Sector Displacement |
 | `creative-industry-displacement` | Creative Industry Displacement |
 | `education-sector-displacement` | Education Sector Displacement |
 | `healthcare-admin-displacement` | Healthcare Admin Displacement |
+| `financial-services-displacement` | Financial Services Displacement |
 | `customer-service-automation` | Customer Service Automation |
 | `median-wage-impact` | Median Wage Impact from AI |
 | `geographic-wage-divergence` | AI Hub vs. Non-Hub Wage Divergence |

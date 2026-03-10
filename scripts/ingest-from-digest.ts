@@ -186,10 +186,11 @@ For each statistic:
 5. Include the VERBATIM quote from the source — never paraphrase
 
 GRAPHS (slug -> unit):
-Displacement: overall-us-displacement (% of US jobs), total-us-jobs-lost (% of labor force),
+Displacement: overall-us-displacement (% of US jobs),
   white-collar-professional-displacement (% roles), tech-sector-displacement (% jobs),
   creative-industry-displacement (% roles), education-sector-displacement (% roles),
-  healthcare-admin-displacement (% roles), customer-service-automation (% interactions)
+  healthcare-admin-displacement (% roles), financial-services-displacement (% roles),
+  customer-service-automation (% interactions)
 Wages: median-wage-impact (% change real median wage), geographic-wage-divergence (% wage premium),
   entry-level-wage-impact (% wage change), high-skill-wage-premium (% premium over median),
   freelancer-rate-impact (% rate change)

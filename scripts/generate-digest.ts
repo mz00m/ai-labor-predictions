@@ -83,12 +83,12 @@ function toDigestPaper(paper: ClassifiedPaper): DigestPaper {
 
 const DISPLACEMENT_SLUGS = new Set([
   "overall-us-displacement",
-  "total-us-jobs-lost",
   "white-collar-professional-displacement",
   "tech-sector-displacement",
   "creative-industry-displacement",
   "education-sector-displacement",
   "healthcare-admin-displacement",
+  "financial-services-displacement",
   "customer-service-automation",
 ]);
 
