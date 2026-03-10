@@ -9,6 +9,7 @@ import whiteCollar from "@/data/predictions/displacement/white-collar-profession
 import creative from "@/data/predictions/displacement/creative-industry.json";
 import healthcareAdmin from "@/data/predictions/displacement/healthcare-admin.json";
 import education from "@/data/predictions/displacement/education-sector.json";
+import financialServices from "@/data/predictions/displacement/financial-services.json";
 import highSkillPremium from "@/data/predictions/wages/high-skill-premium.json";
 import medianWage from "@/data/predictions/wages/median-wage-impact.json";
 import freelancerRate from "@/data/predictions/wages/freelancer-rate-impact.json";
@@ -28,6 +29,7 @@ const allPredictions: Prediction[] = [
   creative as Prediction,
   education as Prediction,
   healthcareAdmin as Prediction,
+  financialServices as Prediction,
   customerService as Prediction,
   // Wages: all workers → regional → demographic → niche
   medianWage as Prediction,
