@@ -1,0 +1,185 @@
+{
+  "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
+  "articles": [
+    {
+      "title": "Research on AI and the labor market is still in the first inning",
+      "author": "Jed Kolko",
+      "publisher": "PIIE",
+      "date": "2026-03-10",
+      "url": "https://www.piie.com/blogs/realtime-economics/2026/research-ai-and-labor-market-still-first-inning",
+      "takeaway": "Evidence on AI labor impact is inconclusive; disruption pace matches prior tech transitions. Under 1/5 of firms using AI per Census BTOS.",
+      "weekFeatured": "2026-03-10",
+      "tier": 2
+    },
+    {
+      "title": "Labor market impacts of AI: A new measure and early evidence",
+      "author": "Massenkoff, McCrory",
+      "publisher": "Anthropic",
+      "date": "2026-03-05",
+      "url": "https://www.anthropic.com/research/labor-market-impacts",
+      "takeaway": "New 'observed exposure' metric combining LLM capability with real usage. No systematic unemployment rise, but young worker hiring slowing in exposed occupations.",
+      "weekFeatured": "2026-03-10",
+      "tier": 2
+    },
+    {
+      "title": "AI Doesn't Reduce Work -- It Intensifies It",
+      "author": "Ranganathan, Ye",
+      "publisher": "Harvard Business Review",
+      "date": "2026-02-09",
+      "url": "https://hbr.org/2026/02/ai-doesnt-reduce-work-it-intensifies-it",
+      "takeaway": "Eight-month study of 200 employees found 83% said AI increased their workload through greater pace, scope, and hours -- leading to burnout and cognitive fatigue.",
+      "weekFeatured": "2026-03-10",
+      "tier": 2
+    },
+    {
+      "title": "Introducing AIR: The AI Resilience Report",
+      "author": "Jared Chung",
+      "publisher": "LinkedIn / AIR",
+      "date": "2026-03-04",
+      "url": "https://www.linkedin.com/pulse/introducing-air-ai-resilience-report-jared-chung-gxfec",
+      "takeaway": "First canonical aggregator of research on how AI is impacting jobs at the occupational level, with implications and actions for job seekers.",
+      "weekFeatured": "2026-03-10",
+      "tier": 3
+    },
+    {
+      "title": "What Deindustrialization Did to Men, AI May Do to Women",
+      "author": "Molly Kinder",
+      "publisher": "Brookings / Humanist",
+      "date": "2026-03-02",
+      "url": "https://humanistxyz.substack.com/p/what-deindustrialization-did-to-men",
+      "takeaway": "Millions of women in clerical and customer service roles face AI exposure, echoing the pattern of manufacturing's toll on men during deindustrialization.",
+      "weekFeatured": "2026-03-10",
+      "tier": 3
+    },
+    {
+      "title": "AI is simultaneously aiding and replacing workers, wage data suggest",
+      "author": "J. Scott Davis",
+      "publisher": "Federal Reserve Bank of Dallas",
+      "date": "2026-02-24",
+      "url": "https://www.dallasfed.org/research/economics/2026/0224",
+      "takeaway": "Employment declined 1% since late 2022 in the 10% of sectors most exposed to AI. Wages in AI-exposed sectors rising faster, suggesting augmentation and displacement happening simultaneously.",
+      "weekFeatured": "2026-03-03",
+      "tier": 1
+    },
+    {
+      "title": "Earnings Season Takeaways: AI-nxiety",
+      "author": "Goldman Sachs Research",
+      "publisher": "Goldman Sachs",
+      "date": "2026-03-03",
+      "url": "https://fortune.com/2026/03/03/goldman-earnings-ai-anxiety-no-meaningful-impact-productivity-economy-30-percent-in-2-areas/",
+      "takeaway": "No meaningful relationship between productivity and AI adoption economy-wide, but companies that quantified task-level AI productivity saw a median 30% gain.",
+      "weekFeatured": "2026-03-03",
+      "tier": 2
+    },
+    {
+      "title": "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of AI",
+      "author": "Brynjolfsson, Chandar, Chen",
+      "publisher": "Stanford Digital Economy Lab",
+      "date": "2025-11-13",
+      "url": "https://digitaleconomy.stanford.edu/publications/canaries-in-the-coal-mine/",
+      "takeaway": "Overall employment growing robustly, but 22-25 year olds' employment stagnant since late 2022. AI-exposed jobs driving the decline for young workers.",
+      "weekFeatured": "2026-03-03",
+      "tier": 1
+    },
+    {
+      "title": "Artificial Intelligence: friend or foe for hiring in Europe today?",
+      "author": "ECB",
+      "publisher": "European Central Bank",
+      "date": "2026-03-04",
+      "url": "https://www.ecb.europa.eu/press/blog/date/2026/html/ecb.blog20260304~d9e34fc95f.en.html",
+      "takeaway": "Two-thirds of 3,500 euro-area firms use AI. Companies with frequent AI use are 4% more likely to hire additional staff. Only 15% cite reducing labour costs as a factor.",
+      "weekFeatured": "2026-03-03",
+      "tier": 1
+    },
+    {
+      "title": "The 2026 Global Intelligence Crisis",
+      "author": "Frank Flight",
+      "publisher": "Citadel Securities",
+      "date": "2026-03-04",
+      "url": "https://www.citadelsecurities.com/news-and-insights/2026-global-intelligence-crisis/",
+      "takeaway": "Little evidence of AI disruption in labor data. Forward-looking labor market components have improved. AI data center construction driving a pick-up in construction hiring.",
+      "weekFeatured": "2026-03-03",
+      "tier": 2
+    },
+    {
+      "title": "Firm Data on AI",
+      "author": "Bloom, Barrero, Davis et al.",
+      "publisher": "NBER",
+      "date": "2026-02-15",
+      "url": "https://www.nber.org/papers/w34836",
+      "takeaway": "Survey of ~6,000 executives: 90%+ report no employment impact from AI over past 3 years. Firms expect only -0.7% employment reduction over next 3 years (US: -1.2%).",
+      "weekFeatured": "2026-02-24",
+      "tier": 1
+    },
+    {
+      "title": "How AI is affecting productivity and jobs in Europe",
+      "author": "Aldasoro, Gambacorta et al.",
+      "publisher": "CEPR VoxEU",
+      "date": "2026-02-17",
+      "url": "https://cepr.org/voxeu/columns/how-ai-affecting-productivity-and-jobs-europe",
+      "takeaway": "No evidence that AI reduces employment in the short run. AI augments worker output -- enabling faster task completion and better decisions -- without displacing labour.",
+      "weekFeatured": "2026-02-24",
+      "tier": 1
+    },
+    {
+      "title": "AI, Productivity, and Labor Markets: A Review of the Empirical Evidence",
+      "author": "ICLE",
+      "publisher": "International Center for Law & Economics",
+      "date": "2026-02-01",
+      "url": "https://laweconcenter.org/resources/ai-productivity-and-labor-markets-a-review-of-the-empirical-evidence/",
+      "takeaway": "Comprehensive review: 35.9% of US workers used generative AI by December 2025. Adoption accelerating but unevenly distributed across industries and skill levels.",
+      "weekFeatured": "2026-02-24",
+      "tier": 2
+    },
+    {
+      "title": "Measuring US workers' capacity to adapt to AI-driven job displacement",
+      "author": "Manning, Aguirre, Muro, Methkupally",
+      "publisher": "Brookings Institution",
+      "date": "2026-01-21",
+      "url": "https://www.brookings.edu/articles/measuring-us-workers-capacity-to-adapt-to-ai-driven-job-displacement/",
+      "takeaway": "Of 37.1 million workers in the top quartile of AI exposure, 26.5 million are in occupations with above-median adaptive capacity. Not all exposed workers are equally vulnerable.",
+      "weekFeatured": "2026-02-24",
+      "tier": 2
+    },
+    {
+      "title": "The Projected Impact of Generative AI on Future Productivity Growth",
+      "author": "Arnon, Smetters",
+      "publisher": "Penn Wharton Budget Model",
+      "date": "2025-09-08",
+      "url": "https://budgetmodel.wharton.upenn.edu/issues/2025/9/8/projected-impact-of-generative-ai-on-future-productivity-growth",
+      "takeaway": "~10% of US work affected short-term. AI will boost productivity and GDP by 1.5% by 2035. Jobs AI can completely replace saw 0.75% employment fall 2021-2024.",
+      "weekFeatured": "2026-02-17",
+      "tier": 1
+    },
+    {
+      "title": "The Iceberg Index: Measuring Skills-centered Exposure in the AI Economy",
+      "author": "MIT / Oak Ridge National Laboratory",
+      "publisher": "arXiv",
+      "date": "2025-11-26",
+      "url": "https://arxiv.org/abs/2510.25137",
+      "takeaway": "AI can already replace 11.7% of the US workforce ($1.2T in wages). Tech layoffs represent just 2.2% of total wage exposure -- the visible tip of the iceberg.",
+      "weekFeatured": "2026-02-17",
+      "tier": 1
+    },
+    {
+      "title": "The Simple Macroeconomics of AI",
+      "author": "Daron Acemoglu",
+      "publisher": "NBER",
+      "date": "2024-04-01",
+      "url": "https://www.nber.org/papers/w32487",
+      "takeaway": "AI will increase TFP by only 0.53-0.66% over 10 years. Much less transformative than the hype suggests, because AI can only automate a fraction of tasks in most occupations.",
+      "weekFeatured": "2026-02-10",
+      "tier": 1
+    },
+    {
+      "title": "Is AI Already Replacing Jobs? A Large-Scale Survey",
+      "author": "Bick, Blandin, Deming",
+      "publisher": "NBER",
+      "date": "2025-08-15",
+      "url": "https://www.nber.org/papers/w33734",
+      "takeaway": "37.4% of US workers used AI on the job in the past week. Adoption highest among college-educated (52%) and workers earning $100K+ (58%). Survey of 25,000 workers.",
+      "weekFeatured": "2026-02-10",
+      "tier": 1
+    }
+  ]
+}

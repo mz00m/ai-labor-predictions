@@ -1,0 +1,122 @@
+import readingListData from "@/data/reading-list.json";
+
+interface Article {
+  title: string;
+  author: string;
+  publisher: string;
+  date: string;
+  url: string;
+  takeaway: string;
+  weekFeatured: string;
+  tier: number;
+}
+
+const TIER_LABELS: Record<number, string> = {
+  1: "Research",
+  2: "Analysis",
+  3: "Commentary",
+  4: "Informal",
+};
+
+const TIER_COLORS: Record<number, string> = {
+  1: "bg-emerald-100 text-emerald-800",
+  2: "bg-blue-100 text-blue-800",
+  3: "bg-amber-100 text-amber-800",
+  4: "bg-gray-100 text-gray-700",
+};
+
+function groupByWeek(articles: Article[]): Map<string, Article[]> {
+  const map = new Map<string, Article[]>();
+  for (const a of articles) {
+    const week = a.weekFeatured;
+    if (!map.has(week)) map.set(week, []);
+    map.get(week)!.push(a);
+  }
+  return map;
+}
+
+function formatWeekLabel(dateStr: string): string {
+  const d = new Date(dateStr + "T00:00:00");
+  return `Week of ${d.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}`;
+}
+
+export const metadata = {
+  title: "Reading List | jobsdata.ai",
+  description:
+    "A rolling roster of must-read articles on AI and labor markets, curated weekly with key takeaways.",
+};
+
+export default function ReadingListPage() {
+  const articles = readingListData.articles as Article[];
+  const grouped = groupByWeek(articles);
+  const weeks = Array.from(grouped.keys()).sort((a, b) => b.localeCompare(a));
+
+  return (
+    <main className="max-w-4xl mx-auto px-6 sm:px-10 py-12">
+      <header className="mb-10">
+        <h1 className="text-2xl font-bold text-[var(--foreground)] tracking-tight">
+          Reading List
+        </h1>
+        <p className="text-sm text-[var(--muted)] mt-2 max-w-2xl leading-relaxed">
+          A rolling roster of must-read articles on AI and labor markets.
+          Curated weekly with key takeaways from each source. Ordered by
+          recency, grouped by the week they were featured.
+        </p>
+      </header>
+
+      <div className="space-y-10">
+        {weeks.map((week) => {
+          const weekArticles = grouped.get(week)!;
+          return (
+            <section key={week}>
+              <h2 className="text-[11px] font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
+                {formatWeekLabel(week)}
+              </h2>
+              <div className="space-y-3">
+                {weekArticles.map((a) => (
+                  <a
+                    key={a.url}
+                    href={a.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group block rounded-lg border border-black/[0.06] bg-black/[0.01] dark:bg-white/[0.02] px-5 py-4 transition-all hover:border-black/[0.12] hover:bg-black/[0.03] dark:hover:bg-white/[0.04]"
+                  >
+                    <div className="flex items-start justify-between gap-4">
+                      <div className="min-w-0 flex-1">
+                        <div className="flex items-center gap-2 mb-1">
+                          <span
+                            className={`text-[10px] font-semibold uppercase tracking-wide px-1.5 py-0.5 rounded ${TIER_COLORS[a.tier] ?? TIER_COLORS[4]}`}
+                          >
+                            {TIER_LABELS[a.tier] ?? "Other"}
+                          </span>
+                          <span className="text-[11px] text-[var(--muted)]">
+                            {a.publisher}
+                          </span>
+                          <span className="text-[11px] text-[var(--muted)] opacity-50">
+                            {new Date(a.date + "T00:00:00").toLocaleDateString(
+                              "en-US",
+                              { month: "short", day: "numeric", year: "numeric" }
+                            )}
+                          </span>
+                        </div>
+                        <h3 className="text-[14px] font-bold text-[var(--foreground)] leading-snug group-hover:text-[var(--accent)] transition-colors">
+                          {a.title}
+                        </h3>
+                        <p className="text-[11px] text-[var(--muted)] mt-0.5">
+                          {a.author}
+                        </p>
+                      </div>
+                    </div>
+                    <p className="text-[12px] text-[var(--foreground)] opacity-80 leading-relaxed mt-2">
+                      {a.takeaway}
+                    </p>
+                  </a>
+                ))}
+              </div>
+            </section>
+          );
+        })}
+      </div>
+    </main>
+  );
+}
