@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-10",
-  "totalSources": 367,
-  "verifiedCount": 357,
+  "totalSources": 368,
+  "verifiedCount": 358,
   "sources": {
     "revelio-labs-wage-divide-2025": {
       "id": "revelio-labs-wage-divide-2025",
@@ -2449,6 +2449,21 @@
         "customer-service-automation"
       ],
       "verified": true
+    },
+    "mcelheran-brynjolfsson-abs-ai-adoption-2024": {
+      "id": "mcelheran-brynjolfsson-abs-ai-adoption-2024",
+      "title": "AI Adoption in America: Who, What, and Where",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/jems.12576",
+      "publisher": "Journal of Economics & Management Strategy (McElheran, Li, Brynjolfsson et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2024-01-24",
+      "excerpt": "Just under 6% of firms nationwide used AI as of 2017. Employment-weighted adoption was just over 18%. Based on the 2018 Annual Business Survey of 850,000 firms across the US. AI use clustered with cloud computing and robotics; most very large firms reported some AI use.",
+      "usedIn": [
+        "ai-adoption-rate",
+        "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
     },
     "korinek-brynjolfsson-agrawal-acm-2026": {
       "id": "korinek-brynjolfsson-agrawal-acm-2026",
