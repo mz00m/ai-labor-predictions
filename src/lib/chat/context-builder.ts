@@ -22,9 +22,9 @@ import {
 /** Keywords mapped to prediction slugs for relevance matching */
 const KEYWORD_MAP: Record<string, string[]> = {
   // Displacement
-  "job loss": ["overall-us-displacement", "total-us-jobs-lost"],
-  displacement: ["overall-us-displacement", "total-us-jobs-lost"],
-  "job market": ["overall-us-displacement", "total-us-jobs-lost"],
+  "job loss": ["overall-us-displacement"],
+  displacement: ["overall-us-displacement"],
+  "job market": ["overall-us-displacement"],
   automation: ["customer-service-automation", "overall-us-displacement"],
   "white collar": ["white-collar-professional-displacement"],
   professional: ["white-collar-professional-displacement"],
@@ -62,7 +62,7 @@ const KEYWORD_MAP: Record<string, string[]> = {
   "my job": ["overall-us-displacement", "workforce-ai-exposure"],
   "my role": ["overall-us-displacement", "workforce-ai-exposure"],
   "my career": ["overall-us-displacement", "workforce-ai-exposure"],
-  "will i lose": ["overall-us-displacement", "total-us-jobs-lost"],
+  "will i lose": ["overall-us-displacement"],
   "should i worry": ["overall-us-displacement", "workforce-ai-exposure"],
   "career advice": ["overall-us-displacement", "workforce-ai-exposure"],
   "safe from ai": ["overall-us-displacement", "workforce-ai-exposure"],

@@ -158,10 +158,11 @@ Given the following ${items.length} research items from the past ${lookbackDays}
 digest. For each highlight, identify which of the following jobsdata.ai prediction
 graphs it is most relevant to (use the slug exactly):
 
-DISPLACEMENT: overall-us-displacement, total-us-jobs-lost,
+DISPLACEMENT: overall-us-displacement,
   white-collar-professional-displacement, tech-sector-displacement,
   creative-industry-displacement, education-sector-displacement,
-  healthcare-admin-displacement, customer-service-automation
+  healthcare-admin-displacement, financial-services-displacement,
+  customer-service-automation
 WAGES: median-wage-impact, geographic-wage-divergence, entry-level-wage-impact,
   high-skill-wage-premium, freelancer-rate-impact
 ADOPTION: ai-adoption-rate, genai-work-adoption, workforce-ai-exposure,

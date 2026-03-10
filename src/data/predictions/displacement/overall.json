@@ -1,8 +1,8 @@
 {
   "id": "displacement-overall",
   "slug": "overall-us-displacement",
-  "title": "Overall US Job Displacement by 2030",
-  "description": "Projected net percentage of US jobs displaced by AI and automation by 2030, based on data points where the source directly states a displacement figure.",
+  "title": "Projected US Job Displacement from AI by 2030",
+  "description": "Projected net percentage of US jobs displaced by AI and automation by 2030, synthesizing displacement estimates, observed employment data, and net-of-job-creation projections.",
   "category": "displacement",
   "unit": "% of US jobs",
   "currentValue": 3,
@@ -323,6 +323,15 @@
       "label": "Stanford/ADP: 6% employment decline for ages 22-25 in AI-exposed jobs"
     },
     {
+      "date": "2025-09-08",
+      "direction": "neutral",
+      "sourceIds": [
+        "pwbm-ai-productivity-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "PWBM: Jobs fully AI-replaceable saw 0.75% employment fall 2021-2024"
+    },
+    {
       "date": "2025-09-15",
       "direction": "neutral",
       "sourceIds": [
@@ -330,6 +339,15 @@
       ],
       "evidenceTier": 1,
       "label": "ILO review: Productivity gains 20-60% in RCTs; AI exposure highest in high-wage jobs"
+    },
+    {
+      "date": "2025-09-20",
+      "direction": "down",
+      "sourceIds": [
+        "ramp-freelance-velocity-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Ramp: 50%+ of businesses using freelancers in 2022 have stopped entirely"
     },
     {
       "date": "2025-11-01",
@@ -1041,6 +1059,24 @@
       "evidenceTier": 2,
       "datePublished": "2026-01-13",
       "excerpt": "19% of respondents said they are actively pursuing different careers (7%) or considering changing plans in the near future (12%) due to AI-driven transformation."
+    },
+    {
+      "id": "pwbm-ai-productivity-2025",
+      "title": "The Projected Impact of Generative AI on Future Productivity Growth",
+      "url": "https://budgetmodel.wharton.upenn.edu/issues/2025/9/8/projected-impact-of-generative-ai-on-future-productivity-growth",
+      "publisher": "Penn Wharton Budget Model (Arnon, Smetters)",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-08",
+      "excerpt": "Roughly 10% of US work affected in the short run; AI will increase productivity and GDP by 1.5% by 2035. Jobs that AI can completely replace saw 0.75% employment fall 2021-2024."
+    },
+    {
+      "id": "ramp-freelance-velocity-2025",
+      "title": "AI Labor Market Impact: Freelancers",
+      "url": "https://ramp.com/velocity/ai-labor-market-impact-freelancers",
+      "publisher": "Ramp",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-20",
+      "excerpt": "More than half of businesses using freelancers in 2022 have stopped entirely; freelance marketplace spend fell from 0.66% to 0.14% of total business spend."
     }
   ]
 }

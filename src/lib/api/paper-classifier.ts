@@ -105,27 +105,6 @@ const PREDICTION_KEYWORDS: Record<
       "economic impact",
     ],
   },
-  "total-us-jobs-lost": {
-    primary: [
-      "job loss",
-      "jobs lost",
-      "net employment",
-      "labor force",
-      "total displacement",
-      "aggregate employment",
-      "mass unemployment",
-      "workforce reduction",
-    ],
-    secondary: [
-      "labor market",
-      "automation",
-      "AI impact",
-      "employment decline",
-      "occupational change",
-      "job creation",
-      "economic growth",
-    ],
-  },
   "white-collar-professional-displacement": {
     primary: [
       "white collar",

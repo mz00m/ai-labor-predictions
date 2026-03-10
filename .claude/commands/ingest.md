@@ -21,13 +21,13 @@ $ARGUMENTS
 Read all 17 prediction JSON files to understand the available graphs. Here is the complete registry for reference:
 
 **Displacement Graphs:**
-- `overall-us-displacement` — "Overall US Job Displacement by 2030" — unit: "% of US jobs"
-- `total-us-jobs-lost` — "Total US Jobs Lost to AI as % of Labor Force" — unit: "% of US labor force"
+- `overall-us-displacement` — "Projected US Job Displacement from AI by 2030" — unit: "% of US jobs"
 - `white-collar-professional-displacement` — "White-Collar Professional Displacement by 2030" — unit: "% of roles displaced"
 - `tech-sector-displacement` — "Tech Sector Job Displacement by 2030" — unit: "% of jobs displaced"
 - `creative-industry-displacement` — "Creative Industry Displacement by 2030" — unit: "% of roles displaced"
 - `education-sector-displacement` — "Education Sector Displacement by 2030" — unit: "% of roles displaced"
 - `healthcare-admin-displacement` — "Healthcare Administrative Displacement by 2030" — unit: "% of roles displaced"
+- `financial-services-displacement` — "Financial Services Displacement by 2030" — unit: "% of roles displaced"
 - `customer-service-automation` — "Customer Service Automation by 2028" — unit: "% of interactions automated"
 
 **Wage Graphs:**

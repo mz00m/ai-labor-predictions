@@ -48,11 +48,6 @@ const ANNOTATIONS: Record<string, ResearchAnnotation> = {
       "Only data points with directly sourced displacement figures are plotted. Directional studies (Brookings, Yale Budget Lab, Stanford/World Bank) appear as overlay markers. Exposure-based estimates (Goldman, OECD, IMF) have been moved to the separate Exposure & Risk tracker.",
     estimateType: "mixed",
   },
-  "total-us-jobs-lost": {
-    note:
-      "Mostly projection-based. Of 8 data points, 6 are model projections (0.75\u20137%) while 2 are employment-observed (both ~0%). The gap between projected losses and measured reality is the key signal: models predict 2\u20137% displacement, but macro employment data hasn't shown it yet.",
-    estimateType: "exposure",
-  },
   "white-collar-professional-displacement": {
     note:
       "Exposure-based projection. Early evidence from HBS shows job postings in automatable professional roles declining 17%, but augmentation-prone professional roles growing 22% (Chen et al., 2025).",
