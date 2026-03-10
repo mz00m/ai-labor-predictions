@@ -76,6 +76,12 @@ export async function POST(request: Request) {
   // Store in DB
   try {
     const sql = getDb();
+    if (!sql) {
+      return Response.json(
+        { error: "Database not configured. Submissions are temporarily unavailable." },
+        { status: 503 },
+      );
+    }
     await sql`
       CREATE TABLE IF NOT EXISTS study_submissions (
         id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
