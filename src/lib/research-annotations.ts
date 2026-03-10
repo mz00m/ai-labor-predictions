@@ -68,6 +68,11 @@ const ANNOTATIONS: Record<string, ResearchAnnotation> = {
       "Exposure-based with early signals. The collapse of Chegg subscribers (~50%) after ChatGPT launch is an observed effect in adjacent education services, though core teaching roles remain among the least automatable.",
     estimateType: "exposure",
   },
+  "financial-services-displacement": {
+    note:
+      "Mixed evidence: Citigroup estimates 54% of banking jobs have high automation potential, and Goldman Sachs surveys project 14% headcount reduction over 3 years. However, observed Big Six bank headcount fell only ~1% in 2025, and Yale/Fortune analysis calls current displacement 'smoke and mirrors.' Major banks (Citi, Morgan Stanley, BofA) are announcing cuts, but net displacement remains well below projections.",
+    estimateType: "mixed",
+  },
   "median-wage-impact": {
     note:
       "Mixed signals: del Rio-Chanona et al. (2025) find productivity gains of 20\u201360% in experiments, which should push wages up, but the Anthropic Economic Index shows automation (45%) competing with augmentation (52%) \u2014 the net wage effect depends on which pattern dominates.",
