@@ -5,7 +5,7 @@
   "description": "Projected change in average freelancer hourly rates for AI-exposed categories (writing, design, translation, data work) by 2028.",
   "category": "wages",
   "unit": "% rate change",
-  "currentValue": -17.5,
+  "currentValue": -19.5,
   "timeHorizon": "By 2028",
   "history": [
     {
@@ -82,7 +82,7 @@
       "sourceIds": [
         "sciencedirect-freelancer-demand-2025"
       ],
-      "evidenceTier": 3,
+      "evidenceTier": 1,
       "metricType": "projection"
     }
   ],
@@ -226,12 +226,12 @@
     },
     {
       "id": "sciencedirect-freelancer-demand-2025",
-      "title": "The Impact of Generative AI on Freelancer Demand: A Multi-Platform Study",
+      "title": "Winners and losers of generative AI: Early Evidence of Shifts in Freelancer Demand",
       "url": "https://www.sciencedirect.com/science/article/pii/S0167268124004591",
-      "publisher": "Journal of Economic Behavior & Organization",
-      "evidenceTier": 3,
-      "datePublished": "2025-12-01",
-      "excerpt": "Writing gig volume dropped ~30% across major freelance platforms post-ChatGPT. Translation and data entry categories down 35-45%. AI-augmented freelancers partially offset decline."
+      "publisher": "Journal of Economic Behavior & Organization (Teutloff, Einsiedler, Kässi, Braesemann, Mishkin, del Rio-Chanona)",
+      "evidenceTier": 1,
+      "datePublished": "2025-01-29",
+      "excerpt": "Demand for substitutable skills (writing, translation) decreased 20-50% relative to counterfactual after ChatGPT launch. Short-term (1-3 week) jobs saw sharpest decline. ML programming demand grew 24%; AI chatbot development nearly tripled. Novice worker demand declined across complementary skill clusters."
     },
     {
       "id": "humlum-vestergaard-adoption-2025",
