@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import HeaderTicker from "@/components/HeaderTicker";
+import { getRecentSources } from "@/lib/sources";
 import Chatbot from "@/components/Chatbot";
 import { Analytics } from "@vercel/analytics/react";
 
@@ -94,6 +96,11 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen bg-white text-[var(--foreground)] antialiased">
         <Navbar />
+        <HeaderTicker
+          sources={getRecentSources(30).map(({ id, title, url, evidenceTier, dateAdded, datePublished }) => ({
+            id, title, url, evidenceTier, dateAdded, datePublished,
+          }))}
+        />
         <main className="max-w-6xl mx-auto px-6 sm:px-10 py-16">
           {children}
         </main>
