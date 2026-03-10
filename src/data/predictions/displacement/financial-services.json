@@ -165,7 +165,8 @@
       "publisher": "Bloomberg Intelligence",
       "evidenceTier": 2,
       "datePublished": "2025-01-09",
-      "excerpt": "Global banks will cut up to 200,000 jobs in next 3-5 years; average expected net workforce cut of 3%. Nearly a quarter of bank CIOs/CTOs foresee 5-10% reduction. Survey of 93 respondents from Citi, JPMorgan, Goldman."
+      "excerpt": "Global banks will cut up to 200,000 jobs in next 3-5 years; average expected net workforce cut of 3%. Nearly a quarter of bank CIOs/CTOs foresee 5-10% reduction. Survey of 93 respondents from Citi, JPMorgan, Goldman.",
+      "dateAdded": "2026-03-10"
     },
     {
       "id": "bls-mlr-ai-employment-projections-2025",
@@ -174,7 +175,8 @@
       "publisher": "U.S. Bureau of Labor Statistics",
       "evidenceTier": 1,
       "datePublished": "2025-02-01",
-      "excerpt": "Credit analysts projected to see 3.9% employment decline (2023-2033) due to AI."
+      "excerpt": "Credit analysts projected to see 3.9% employment decline (2023-2033) due to AI.",
+      "dateAdded": "2026-03-10"
     },
     {
       "id": "goldman-sachs-ai-headcount-survey-2025",
@@ -183,7 +185,8 @@
       "publisher": "Goldman Sachs (via Fortune)",
       "evidenceTier": 2,
       "datePublished": "2025-10-30",
-      "excerpt": "Financial institutions could see 14% headcount reduction over next 3 years (worst of any category surveyed); only 11% of clients actively cutting employees due to AI currently."
+      "excerpt": "Financial institutions could see 14% headcount reduction over next 3 years (worst of any category surveyed); only 11% of clients actively cutting employees due to AI currently.",
+      "dateAdded": "2026-03-10"
     },
     {
       "id": "morgan-stanley-european-banks-2025",
@@ -192,7 +195,8 @@
       "publisher": "Morgan Stanley (via TechCrunch / Financial Times)",
       "evidenceTier": 2,
       "datePublished": "2025-12-01",
-      "excerpt": "200,000+ European banking jobs could vanish by 2030 — roughly 10% of workforce at 35 major European lenders (2.12M staff). Efficiency gains of 30% quoted by banks."
+      "excerpt": "200,000+ European banking jobs could vanish by 2030 \u2014 roughly 10% of workforce at 35 major European lenders (2.12M staff). Efficiency gains of 30% quoted by banks.",
+      "dateAdded": "2026-03-10"
     },
     {
       "id": "big-six-banks-headcount-2025",
@@ -201,7 +205,8 @@
       "publisher": "Multiple financial reporting (via Fortune)",
       "evidenceTier": 1,
       "datePublished": "2025-12-31",
-      "excerpt": "Combined headcount fell to 1.09 million — lowest since 2021, down ~10,600 from prior year, largest annual reduction since 2016."
+      "excerpt": "Combined headcount fell to 1.09 million \u2014 lowest since 2021, down ~10,600 from prior year, largest annual reduction since 2016.",
+      "dateAdded": "2026-03-10"
     },
     {
       "id": "citi-gps-banking-automation-2024",
@@ -210,7 +215,8 @@
       "publisher": "Citigroup Global Perspectives & Solutions",
       "evidenceTier": 2,
       "datePublished": "2024-06-19",
-      "excerpt": "54% of banking jobs have high potential for automation — more than any other sector. Another 12% could be augmented. Insurance at 48%, capital markets at 40%."
+      "excerpt": "54% of banking jobs have high potential for automation \u2014 more than any other sector. Another 12% could be augmented. Insurance at 48%, capital markets at 40%.",
+      "dateAdded": "2026-03-10"
     },
     {
       "id": "accenture-banking-genai-2024",
@@ -219,7 +225,8 @@
       "publisher": "Accenture",
       "evidenceTier": 2,
       "datePublished": "2024-09-01",
-      "excerpt": "73% of working time by US banking employees has high potential to be impacted by GenAI; productivity gains of 22-30% for early adopters over 3 years."
+      "excerpt": "73% of working time by US banking employees has high potential to be impacted by GenAI; productivity gains of 22-30% for early adopters over 3 years.",
+      "dateAdded": "2026-03-10"
     },
     {
       "id": "wef-future-of-jobs-financial-2025",
@@ -228,7 +235,8 @@
       "publisher": "World Economic Forum",
       "evidenceTier": 2,
       "datePublished": "2025-01-08",
-      "excerpt": "Financial services: GenAI has automation potential for 32-39% of tasks; another 34-37% significantly augmented. 86% of financial services orgs cite AI as crucial transformation driver."
+      "excerpt": "Financial services: GenAI has automation potential for 32-39% of tasks; another 34-37% significantly augmented. 86% of financial services orgs cite AI as crucial transformation driver.",
+      "dateAdded": "2026-03-10"
     },
     {
       "id": "pwc-ai-jobs-barometer-finance-2025",
@@ -237,7 +245,8 @@
       "publisher": "PwC",
       "evidenceTier": 2,
       "datePublished": "2025-06-01",
-      "excerpt": "Productivity growth in AI-exposed industries including financial services nearly quadrupled from 7% to 27% (2018-2024); AI-exposed sectors see 3x higher revenue-per-employee growth."
+      "excerpt": "Productivity growth in AI-exposed industries including financial services nearly quadrupled from 7% to 27% (2018-2024); AI-exposed sectors see 3x higher revenue-per-employee growth.",
+      "dateAdded": "2026-03-10"
     },
     {
       "id": "jpmorgan-ops-ai-reduction-2025",
@@ -246,7 +255,8 @@
       "publisher": "CNBC",
       "evidenceTier": 3,
       "datePublished": "2025-10-15",
-      "excerpt": "Operations and support staff to fall by at least 10% over next five years despite growing business volumes."
+      "excerpt": "Operations and support staff to fall by at least 10% over next five years despite growing business volumes.",
+      "dateAdded": "2026-03-10"
     },
     {
       "id": "abn-amro-ai-workforce-2025",
@@ -255,7 +265,8 @@
       "publisher": "ABN Amro (via Financial Times)",
       "evidenceTier": 3,
       "datePublished": "2025-11-01",
-      "excerpt": "Plans to reduce approximately 20% of full-time workforce by 2028, citing AI capabilities in operations and compliance."
+      "excerpt": "Plans to reduce approximately 20% of full-time workforce by 2028, citing AI capabilities in operations and compliance.",
+      "dateAdded": "2026-03-10"
     },
     {
       "id": "fortune-yale-finance-ai-hype-2025",
@@ -264,16 +275,18 @@
       "publisher": "Fortune (citing Yale Budget Lab)",
       "evidenceTier": 3,
       "datePublished": "2025-12-21",
-      "excerpt": "No economy-wide employment disruption detected since ChatGPT's release, but this masks occupation-specific impacts for early-career cognitive workers."
+      "excerpt": "No economy-wide employment disruption detected since ChatGPT's release, but this masks occupation-specific impacts for early-career cognitive workers.",
+      "dateAdded": "2026-03-10"
     },
     {
       "id": "bofa-q4-2025-ai-coding-2026",
-      "title": "Bank of America Q4 2025 Earnings Call — AI Coding Efficiency",
+      "title": "Bank of America Q4 2025 Earnings Call \u2014 AI Coding Efficiency",
       "url": "https://investor.bankofamerica.com/events-and-presentations/events/detail/20260114-q4-2025-bank-of-america-earnings-conference-call",
       "publisher": "Bank of America (Q4 2025 earnings call)",
       "evidenceTier": 1,
       "datePublished": "2026-01-14",
-      "excerpt": "CEO Brian Moynihan: 'We have 18,000 people on the company's payroll who code, and we've — using the AI techniques, we've taken 30% out of the coding part of the stream of introducing a new product or service or change that saved us about 2,000 people.'"
+      "excerpt": "CEO Brian Moynihan: 'We have 18,000 people on the company's payroll who code, and we've \u2014 using the AI techniques, we've taken 30% out of the coding part of the stream of introducing a new product or service or change that saved us about 2,000 people.'",
+      "dateAdded": "2026-03-10"
     },
     {
       "id": "citigroup-restructuring-ai-2026",
@@ -282,7 +295,8 @@
       "publisher": "Business Times Online",
       "evidenceTier": 3,
       "datePublished": "2026-02-04",
-      "excerpt": "Cutting ~20,000 jobs (8% of workforce) by 2026 in restructuring tied to automation; broader plans for 60,000 total reductions including Banamex IPO."
+      "excerpt": "Cutting ~20,000 jobs (8% of workforce) by 2026 in restructuring tied to automation; broader plans for 60,000 total reductions including Banamex IPO.",
+      "dateAdded": "2026-03-10"
     },
     {
       "id": "morgan-stanley-workforce-cut-2026",
@@ -291,7 +305,8 @@
       "publisher": "Market Minute",
       "evidenceTier": 3,
       "datePublished": "2026-03-05",
-      "excerpt": "3% workforce reduction amidst record profits; investment banking revenue up 47%."
+      "excerpt": "3% workforce reduction amidst record profits; investment banking revenue up 47%.",
+      "dateAdded": "2026-03-10"
     }
   ]
 }

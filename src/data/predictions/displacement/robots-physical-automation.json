@@ -233,7 +233,8 @@
       "publisher": "Journal of Political Economy (Acemoglu, Restrepo)",
       "evidenceTier": 1,
       "datePublished": "2020-06-01",
-      "excerpt": "One more robot per thousand workers reduces the employment-to-population ratio by 0.2 percentage points and wages by 0.42%. Between 1990 and 2007, the increase in robots reduced employment by about 400,000 workers."
+      "excerpt": "One more robot per thousand workers reduces the employment-to-population ratio by 0.2 percentage points and wages by 0.42%. Between 1990 and 2007, the increase in robots reduced employment by about 400,000 workers.",
+      "dateAdded": "2026-03-10"
     },
     {
       "id": "acemoglu-macro-2024",
@@ -242,16 +243,18 @@
       "publisher": "NBER (Acemoglu)",
       "evidenceTier": 1,
       "datePublished": "2024-04-01",
-      "excerpt": "Automation always produces a positive productivity effect on wages by reducing costs; simultaneously, it displaces workers from the tasks they used to perform. Net displacement from all AI and automation estimated at 1-5% of employment."
+      "excerpt": "Automation always produces a positive productivity effect on wages by reducing costs; simultaneously, it displaces workers from the tasks they used to perform. Net displacement from all AI and automation estimated at 1-5% of employment.",
+      "dateAdded": "2026-03-10"
     },
     {
       "id": "ifr-world-robotics-2025",
-      "title": "World Robotics 2025 — Industrial Robots",
+      "title": "World Robotics 2025 \u2014 Industrial Robots",
       "url": "https://ifr.org/ifr-press-releases/news/global-robot-demand-in-factories-doubles-over-10-years",
       "publisher": "International Federation of Robotics",
       "evidenceTier": 2,
       "datePublished": "2025-10-01",
-      "excerpt": "542,000 industrial robots installed in 2024 — more than double the number 10 years ago. 4,664,000 robots operational worldwide. US installations at 34,200 units. Global market value $16.5 billion."
+      "excerpt": "542,000 industrial robots installed in 2024 \u2014 more than double the number 10 years ago. 4,664,000 robots operational worldwide. US installations at 34,200 units. Global market value $16.5 billion.",
+      "dateAdded": "2026-03-10"
     },
     {
       "id": "wef-future-of-jobs-2025",
@@ -260,7 +263,8 @@
       "publisher": "World Economic Forum",
       "evidenceTier": 2,
       "datePublished": "2025-01-07",
-      "excerpt": "Robotics and automation expected to drive business transformation for 58% of employers. Robots and automation forecast to displace 5 million more jobs than they create. 92 million jobs displaced, 170 million created, net +78 million by 2030."
+      "excerpt": "Robotics and automation expected to drive business transformation for 58% of employers. Robots and automation forecast to displace 5 million more jobs than they create. 92 million jobs displaced, 170 million created, net +78 million by 2030.",
+      "dateAdded": "2026-03-10"
     },
     {
       "id": "mckinsey-agents-robots-2025",
@@ -269,7 +273,8 @@
       "publisher": "McKinsey Global Institute",
       "evidenceTier": 2,
       "datePublished": "2025-11-25",
-      "excerpt": "57% of US work hours are technically automatable. Physical tasks comprise 50%+ of hours for 40% of the US workforce. Robot unit costs ($150-500K) must fall to $20-50K for mass physical automation adoption. At least 14% of employees globally may need career changes by 2030."
+      "excerpt": "57% of US work hours are technically automatable. Physical tasks comprise 50%+ of hours for 40% of the US workforce. Robot unit costs ($150-500K) must fall to $20-50K for mass physical automation adoption. At least 14% of employees globally may need career changes by 2030.",
+      "dateAdded": "2026-03-10"
     },
     {
       "id": "oecd-automation-risk-2024",
@@ -278,7 +283,8 @@
       "publisher": "OECD",
       "evidenceTier": 2,
       "datePublished": "2024-09-01",
-      "excerpt": "14% of jobs across OECD countries are at high risk of automation. An additional 32% may be significantly changed but not eliminated. 27% of jobs at high risk when including all automation technologies including AI."
+      "excerpt": "14% of jobs across OECD countries are at high risk of automation. An additional 32% may be significantly changed but not eliminated. 27% of jobs at high risk when including all automation technologies including AI.",
+      "dateAdded": "2026-03-10"
     },
     {
       "id": "bls-employment-projections-2026",
@@ -287,7 +293,8 @@
       "publisher": "U.S. Bureau of Labor Statistics",
       "evidenceTier": 1,
       "datePublished": "2026-01-15",
-      "excerpt": "Retail trade projected to decline 1.2% as automation and e-commerce reduce sales occupations. Mining/extraction declining 1.6% driven by robotics and drones. Total employment projected to grow 3.1% (2024-34), much slower than prior decade."
+      "excerpt": "Retail trade projected to decline 1.2% as automation and e-commerce reduce sales occupations. Mining/extraction declining 1.6% driven by robotics and drones. Total employment projected to grow 3.1% (2024-34), much slower than prior decade.",
+      "dateAdded": "2026-03-10"
     },
     {
       "id": "amazon-robotics-2025",
@@ -296,7 +303,8 @@
       "publisher": "Amazon",
       "evidenceTier": 1,
       "datePublished": "2025-03-01",
-      "excerpt": "Amazon deployed roughly 800,000 mobile robots across its fulfillment centers by 2024, making it the largest private deployer of mobile robots globally."
+      "excerpt": "Amazon deployed roughly 800,000 mobile robots across its fulfillment centers by 2024, making it the largest private deployer of mobile robots globally.",
+      "dateAdded": "2026-03-10"
     },
     {
       "id": "goldman-physical-ai-2025",
@@ -305,7 +313,8 @@
       "publisher": "Goldman Sachs",
       "evidenceTier": 2,
       "datePublished": "2025-08-01",
-      "excerpt": "Physically demanding or outdoor work unlikely to be affected by current AI. Projects 50,000-100,000 humanoid robot shipments in 2026. Unit economics expected to reach $15,000-$20,000 per robot."
+      "excerpt": "Physically demanding or outdoor work unlikely to be affected by current AI. Projects 50,000-100,000 humanoid robot shipments in 2026. Unit economics expected to reach $15,000-$20,000 per robot.",
+      "dateAdded": "2026-03-10"
     },
     {
       "id": "shrm-automation-risk-2025",
@@ -314,7 +323,8 @@
       "publisher": "SHRM",
       "evidenceTier": 2,
       "datePublished": "2025-10-01",
-      "excerpt": "15% of US jobs — about 23 million total — are at high risk of displacement due to automation, concentrated in manufacturing, transportation, and food preparation."
+      "excerpt": "15% of US jobs \u2014 about 23 million total \u2014 are at high risk of displacement due to automation, concentrated in manufacturing, transportation, and food preparation.",
+      "dateAdded": "2026-03-10"
     },
     {
       "id": "bls-manufacturing-decline-2025",
@@ -323,7 +333,8 @@
       "publisher": "Manufacturing Dive / BLS data",
       "evidenceTier": 1,
       "datePublished": "2025-10-01",
-      "excerpt": "US manufacturing lost 78,000 jobs over the past year with 12,000 cuts in August alone. Manufacturing employment at lowest level since onset of COVID-19 pandemic."
+      "excerpt": "US manufacturing lost 78,000 jobs over the past year with 12,000 cuts in August alone. Manufacturing employment at lowest level since onset of COVID-19 pandemic.",
+      "dateAdded": "2026-03-10"
     },
     {
       "id": "stl-fed-robots-employment-2024",
@@ -332,7 +343,8 @@
       "publisher": "Federal Reserve Bank of St. Louis",
       "evidenceTier": 1,
       "datePublished": "2024-09-01",
-      "excerpt": "Robots have a mixed effect: replacing jobs that relatively high-wage manufacturing employees used to perform, while also making firms more efficient and productive. One robot per thousand workers replaced about six workers."
+      "excerpt": "Robots have a mixed effect: replacing jobs that relatively high-wage manufacturing employees used to perform, while also making firms more efficient and productive. One robot per thousand workers replaced about six workers.",
+      "dateAdded": "2026-03-10"
     }
   ]
 }

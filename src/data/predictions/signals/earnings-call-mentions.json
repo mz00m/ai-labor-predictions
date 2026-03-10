@@ -184,30 +184,33 @@
   "sources": [
     {
       "id": "factset-earnings-q4-2022",
-      "title": "FactSet Earnings Insight Q4 2022 — AI Mentions",
+      "title": "FactSet Earnings Insight Q4 2022 \u2014 AI Mentions",
       "url": "https://insight.factset.com/highest-number-of-sp-500-companies-citing-ai-on-q1-earnings-calls-in-over-10-years",
       "publisher": "FactSet",
       "evidenceTier": 1,
       "datePublished": "2023-01-15",
-      "excerpt": "Only 8% of S&P 500 companies mentioned AI in Q4 2022 calls. Pre-ChatGPT baseline for corporate AI discussion."
+      "excerpt": "Only 8% of S&P 500 companies mentioned AI in Q4 2022 calls. Pre-ChatGPT baseline for corporate AI discussion.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "factset-earnings-q1-2023",
-      "title": "FactSet Earnings Insight Q1 2023 — AI Mentions Surge",
+      "title": "FactSet Earnings Insight Q1 2023 \u2014 AI Mentions Surge",
       "url": "https://insight.factset.com/highest-number-of-sp-500-companies-citing-ai-on-q1-earnings-calls-in-over-10-years",
       "publisher": "FactSet",
       "evidenceTier": 1,
       "datePublished": "2023-04-15",
-      "excerpt": "AI mentions in S&P 500 earnings calls more than doubled to 18%. Companies began discussing AI efficiency gains and workforce implications."
+      "excerpt": "AI mentions in S&P 500 earnings calls more than doubled to 18%. Companies began discussing AI efficiency gains and workforce implications.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "factset-earnings-q2-2023",
-      "title": "FactSet Earnings Insight Q2 2023 — AI Dominates Calls",
+      "title": "FactSet Earnings Insight Q2 2023 \u2014 AI Dominates Calls",
       "url": "https://insight.factset.com/highest-number-of-sp-500-companies-citing-ai-on-q2-earnings-calls-in-over-10-years",
       "publisher": "FactSet",
       "evidenceTier": 1,
       "datePublished": "2023-07-15",
-      "excerpt": "32% of S&P 500 companies now discuss AI on earnings calls. 'AI' mentioned an average of 7 times per call among mentioning companies."
+      "excerpt": "32% of S&P 500 companies now discuss AI on earnings calls. 'AI' mentioned an average of 7 times per call among mentioning companies.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "factset-earnings-q3-2023",
@@ -216,7 +219,8 @@
       "publisher": "FactSet",
       "evidenceTier": 1,
       "datePublished": "2023-10-15",
-      "excerpt": "AI mentions reached 36% of S&P 500 companies. Key themes: 'efficiency gains,' 'headcount optimization,' and 'AI-driven productivity.'"
+      "excerpt": "AI mentions reached 36% of S&P 500 companies. Key themes: 'efficiency gains,' 'headcount optimization,' and 'AI-driven productivity.'",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "factset-earnings-q4-2023",
@@ -225,7 +229,8 @@
       "publisher": "FactSet",
       "evidenceTier": 1,
       "datePublished": "2024-01-15",
-      "excerpt": "40% of S&P 500 companies mentioned AI in context of workforce strategy. 'Year of Efficiency' framing adopted by 12% of companies."
+      "excerpt": "40% of S&P 500 companies mentioned AI in context of workforce strategy. 'Year of Efficiency' framing adopted by 12% of companies.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "factset-earnings-q1-2024",
@@ -234,7 +239,8 @@
       "publisher": "FactSet",
       "evidenceTier": 1,
       "datePublished": "2024-04-15",
-      "excerpt": "43% mentioned AI-workforce topics. A new record. Companies increasingly cite specific headcount savings from AI deployments."
+      "excerpt": "43% mentioned AI-workforce topics. A new record. Companies increasingly cite specific headcount savings from AI deployments.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "factset-earnings-q2-2024",
@@ -243,7 +249,8 @@
       "publisher": "FactSet",
       "evidenceTier": 1,
       "datePublished": "2024-07-15",
-      "excerpt": "Slight dip to 41% as initial AI hype normalizes. Discussion shifting from aspirational to operational — specific ROI figures cited."
+      "excerpt": "Slight dip to 41% as initial AI hype normalizes. Discussion shifting from aspirational to operational \u2014 specific ROI figures cited.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "factset-earnings-q3-2024",
@@ -252,7 +259,8 @@
       "publisher": "FactSet",
       "evidenceTier": 1,
       "datePublished": "2024-10-15",
-      "excerpt": "44% of S&P 500 discussed AI-workforce. Key new theme: 'AI-native' hiring replacing traditional roles in tech and professional services."
+      "excerpt": "44% of S&P 500 discussed AI-workforce. Key new theme: 'AI-native' hiring replacing traditional roles in tech and professional services.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "factset-earnings-q4-2024",
@@ -261,7 +269,8 @@
       "publisher": "FactSet",
       "evidenceTier": 1,
       "datePublished": "2025-01-15",
-      "excerpt": "Record 48% of S&P 500 companies mentioned AI in workforce context. Average mentions per call reached 11. 'Restructuring' and 'automation' became top co-occurring terms."
+      "excerpt": "Record 48% of S&P 500 companies mentioned AI in workforce context. Average mentions per call reached 11. 'Restructuring' and 'automation' became top co-occurring terms.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "factset-earnings-q1-2025",
@@ -270,7 +279,8 @@
       "publisher": "FactSet",
       "evidenceTier": 1,
       "datePublished": "2025-04-15",
-      "excerpt": "44% of S&P 500 discussed AI-workforce in Q1 2025, a slight pullback from Q4 2024's record. Discussion maturing: less hype, more specific deployment data."
+      "excerpt": "44% of S&P 500 discussed AI-workforce in Q1 2025, a slight pullback from Q4 2024's record. Discussion maturing: less hype, more specific deployment data.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "goldman-ai-workforce-2025",
@@ -279,16 +289,18 @@
       "publisher": "Goldman Sachs",
       "evidenceTier": 1,
       "datePublished": "2024-11-01",
-      "excerpt": "Companies that mention AI + workforce on calls have average headcount growth 3.2pp lower than non-mentioners. The correlation has strengthened each quarter."
+      "excerpt": "Companies that mention AI + workforce on calls have average headcount growth 3.2pp lower than non-mentioners. The correlation has strengthened each quarter.",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "factset-earnings-q3-2025",
-      "title": "FactSet Earnings Insight Q3 2025 — Record AI Mentions",
+      "title": "FactSet Earnings Insight Q3 2025 \u2014 Record AI Mentions",
       "url": "https://insight.factset.com/highest-number-of-sp-500-earnings-calls-citing-ai-over-the-past-10-years-1",
       "publisher": "FactSet",
       "evidenceTier": 1,
       "datePublished": "2025-11-15",
-      "excerpt": "Record 306 S&P 500 companies (61%) cited AI in Q3 2025 earnings calls — a new 10-year high, surpassing the prior record of 292. 95% of IT and Communications sectors mentioned AI. AI-citing companies outperformed 13.9% vs. 5.7%."
+      "excerpt": "Record 306 S&P 500 companies (61%) cited AI in Q3 2025 earnings calls \u2014 a new 10-year high, surpassing the prior record of 292. 95% of IT and Communications sectors mentioned AI. AI-citing companies outperformed 13.9% vs. 5.7%.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "fortune-ai-earnings-surge-2026",
@@ -297,7 +309,8 @@
       "publisher": "Fortune",
       "evidenceTier": 3,
       "datePublished": "2025-12-15",
-      "excerpt": "AI was the most-cited topic in S&P 500 earnings calls in 2025. Companies mentioning AI in workforce context outperformed peers by 8.2 percentage points on average."
+      "excerpt": "AI was the most-cited topic in S&P 500 earnings calls in 2025. Companies mentioning AI in workforce context outperformed peers by 8.2 percentage points on average.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "korinek-brynjolfsson-agrawal-acm-2026",
@@ -306,7 +319,8 @@
       "publisher": "CEPR / Stanford Digital Economy Lab (Brynjolfsson, Korinek, Agrawal)",
       "evidenceTier": 1,
       "datePublished": "2024-12-01",
-      "excerpt": "As we approach Transformative AI, there is urgent need to advance understanding of how it reshapes economic models, institutions, and policies. Proposes nine Grand Challenges including economic growth, income distribution, and transition dynamics."
+      "excerpt": "As we approach Transformative AI, there is urgent need to advance understanding of how it reshapes economic models, institutions, and policies. Proposes nine Grand Challenges including economic growth, income distribution, and transition dynamics.",
+      "dateAdded": "2026-03-01"
     }
   ]
 }

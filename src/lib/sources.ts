@@ -10,7 +10,7 @@ export interface SourceWithContext extends Source {
 /**
  * Aggregates sources from all predictions, enriches each with its parent
  * prediction context, deduplicates by source id, and returns the most
- * recent ones sorted by datePublished descending.
+ * recent ones sorted by dateAdded descending.
  *
  * Auto-updates: because this reads from the same prediction JSON data
  * that powers the rest of the site, any new source added to any

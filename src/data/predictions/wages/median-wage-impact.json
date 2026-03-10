@@ -246,7 +246,7 @@
         "jones-tonetti-weak-links-2026"
       ],
       "evidenceTier": 1,
-      "label": "Jones & Tonetti (Stanford/NBER): AI output gains modest near-term — only 4% above trend by 2040"
+      "label": "Jones & Tonetti (Stanford/NBER): AI output gains modest near-term \u2014 only 4% above trend by 2040"
     },
     {
       "date": "2026-01-21",
@@ -301,7 +301,8 @@
       "url": "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce",
       "publisher": "Goldman Sachs",
       "evidenceTier": 1,
-      "datePublished": "2023-04-01"
+      "datePublished": "2023-04-01",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "ilo-wages-2023",
@@ -309,7 +310,8 @@
       "url": "https://www.ilo.org/publications/flagship-reports/global-wage-report-2022-23-impact-inflation-and-covid-19-wages-and",
       "publisher": "International Labour Organization",
       "evidenceTier": 1,
-      "datePublished": "2023-09-01"
+      "datePublished": "2023-09-01",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "imf-inequality-2024",
@@ -318,7 +320,8 @@
       "publisher": "IMF Blog",
       "evidenceTier": 2,
       "datePublished": "2024-01-14",
-      "excerpt": "In most scenarios, AI will likely worsen overall inequality. Higher-income workers may see disproportionate wage gains."
+      "excerpt": "In most scenarios, AI will likely worsen overall inequality. Higher-income workers may see disproportionate wage gains.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "webb-2024",
@@ -327,7 +330,8 @@
       "publisher": "Stanford (Webb)",
       "evidenceTier": 1,
       "datePublished": "2024-06-01",
-      "excerpt": "AI exposure is concentrated among high-skill, high-wage occupations, but wage effects may cascade downward."
+      "excerpt": "AI exposure is concentrated among high-skill, high-wage occupations, but wage effects may cascade downward.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "atlantic-wages-2024",
@@ -335,15 +339,17 @@
       "url": "https://www.theatlantic.com/ideas/archive/2023/01/chatgpt-ai-economy-automation-jobs/672767/",
       "publisher": "The Atlantic",
       "evidenceTier": 3,
-      "datePublished": "2024-10-01"
+      "datePublished": "2024-10-01",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "bls-wage-data-2025",
-      "title": "Employment Cost Index — 2025 Q1",
+      "title": "Employment Cost Index \u2014 2025 Q1",
       "url": "https://www.bls.gov/eci/",
       "publisher": "Bureau of Labor Statistics",
       "evidenceTier": 1,
-      "datePublished": "2025-02-01"
+      "datePublished": "2025-02-01",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "substack-wages-doom",
@@ -351,16 +357,18 @@
       "url": "https://arindube.substack.com/p/the-wage-compression-that-persisted",
       "publisher": "Arin Dube (Substack)",
       "evidenceTier": 4,
-      "datePublished": "2025-05-01"
+      "datePublished": "2025-05-01",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "epi-wages-2025",
-      "title": "Unbalanced labor market power is what makes technology — including AI — threatening to workers",
+      "title": "Unbalanced labor market power is what makes technology \u2014 including AI \u2014 threatening to workers",
       "url": "https://www.epi.org/publication/ai-unbalanced-labor-markets/",
       "publisher": "Economic Policy Institute (Bivens, Zipperer)",
       "evidenceTier": 2,
       "datePublished": "2024-03-28",
-      "excerpt": "AI is unlikely to be a direct threat to wages; the root causes of sluggish wage growth are policy decisions that led to imbalanced employer power. Productivity growth has not historically caused higher unemployment or inequality."
+      "excerpt": "AI is unlikely to be a direct threat to wages; the root causes of sluggish wage growth are policy decisions that led to imbalanced employer power. Productivity growth has not historically caused higher unemployment or inequality.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "walmart-10k-2024",
@@ -369,16 +377,18 @@
       "publisher": "WorldatWork",
       "evidenceTier": 2,
       "datePublished": "2024-10-01",
-      "excerpt": "Walmart's minimum starting wage is $14/hr while average U.S. associate wage reached $18.25 by 2025. The company invested in checkout and inventory automation but has not disclosed specific per-location staffing reduction figures."
+      "excerpt": "Walmart's minimum starting wage is $14/hr while average U.S. associate wage reached $18.25 by 2025. The company invested in checkout and inventory automation but has not disclosed specific per-location staffing reduction figures.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "indeed-wage-tracker-2025",
-      "title": "US Wage Tracker — Posted Wage Trends by Occupation",
+      "title": "US Wage Tracker \u2014 Posted Wage Trends by Occupation",
       "url": "https://www.hiringlab.org/2025/02/10/us-wage-tracker/",
       "publisher": "Indeed Hiring Lab",
       "evidenceTier": 2,
       "datePublished": "2025-02-10",
-      "excerpt": "Posted wages for AI-exposed occupations (admin, data entry, basic accounting) grew 1.2% YoY vs. 4.1% for non-AI-exposed roles, suggesting wage suppression."
+      "excerpt": "Posted wages for AI-exposed occupations (admin, data entry, basic accounting) grew 1.2% YoY vs. 4.1% for non-AI-exposed roles, suggesting wage suppression.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "ups-8k-2024",
@@ -387,7 +397,8 @@
       "publisher": "NBC News",
       "evidenceTier": 1,
       "datePublished": "2024-01-30",
-      "excerpt": "UPS announced 12,000 job cuts, primarily management and salaried positions, as part of a $1 billion cost-reduction effort. Full-time driver pay raised to $49/hr top rate under 2023 Teamsters contract."
+      "excerpt": "UPS announced 12,000 job cuts, primarily management and salaried positions, as part of a $1 billion cost-reduction effort. Full-time driver pay raised to $49/hr top rate under 2023 Teamsters contract.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "pwc-ai-jobs-barometer-2025",
@@ -396,7 +407,8 @@
       "publisher": "PwC",
       "evidenceTier": 1,
       "datePublished": "2025-10-15",
-      "excerpt": "AI-skilled workers command a 56% wage premium, up from 25% in prior year. AI roles median compensation at $157K vs. $49,500 all-occupation median."
+      "excerpt": "AI-skilled workers command a 56% wage premium, up from 25% in prior year. AI roles median compensation at $157K vs. $49,500 all-occupation median.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "bls-may-2024-wage-data",
@@ -405,7 +417,8 @@
       "publisher": "Bureau of Labor Statistics",
       "evidenceTier": 2,
       "datePublished": "2025-11-15",
-      "excerpt": "Median annual wage for all occupations: $49,500. AI-exposed administrative and clerical wages grew 1.1% vs. 3.8% for non-AI-exposed occupations."
+      "excerpt": "Median annual wage for all occupations: $49,500. AI-exposed administrative and clerical wages grew 1.1% vs. 3.8% for non-AI-exposed occupations.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "korinek-trammell-growth-2025",
@@ -414,7 +427,8 @@
       "publisher": "Annual Review of Economics / NBER (Korinek, Trammell)",
       "evidenceTier": 1,
       "datePublished": "2025-09-01",
-      "excerpt": "Sufficiently advanced AI could dramatically raise growth rates and lower labor share, breaking Kaldor Facts. Wages may rise or fall depending on returns to scale and direction of technical change."
+      "excerpt": "Sufficiently advanced AI could dramatically raise growth rates and lower labor share, breaking Kaldor Facts. Wages may rise or fall depending on returns to scale and direction of technical change.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "acemoglu-johnson-power-progress-2023",
@@ -423,7 +437,8 @@
       "publisher": "PublicAffairs (Acemoglu, Johnson)",
       "evidenceTier": 2,
       "datePublished": "2023-05-16",
-      "excerpt": "Technology does not automatically benefit workers; shared prosperity requires deliberate policy choices. AI could follow historical pattern of concentrating gains among capital owners."
+      "excerpt": "Technology does not automatically benefit workers; shared prosperity requires deliberate policy choices. AI could follow historical pattern of concentrating gains among capital owners.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "stiglitz-korinek-steering-2025",
@@ -432,7 +447,8 @@
       "publisher": "INET (Korinek, Stiglitz)",
       "evidenceTier": 1,
       "datePublished": "2025-05-05",
-      "excerpt": "For the empirically plausible case that capital and labor are gross complements, raising wages requires capital-augmenting innovation rather than labor-augmenting."
+      "excerpt": "For the empirically plausible case that capital and labor are gross complements, raising wages requires capital-augmenting innovation rather than labor-augmenting.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "brynjolfsson-li-raymond-qje-wages-2025",
@@ -441,7 +457,8 @@
       "publisher": "QJE (Brynjolfsson, Li, Raymond)",
       "evidenceTier": 1,
       "datePublished": "2025-05-01",
-      "excerpt": "Access to AI assistance increases worker productivity, as measured by issues resolved per hour, by 15% on average, with substantial heterogeneity across workers."
+      "excerpt": "Access to AI assistance increases worker productivity, as measured by issues resolved per hour, by 15% on average, with substantial heterogeneity across workers.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "icle-median-wage-2026",
@@ -450,7 +467,8 @@
       "publisher": "International Center for Law & Economics",
       "evidenceTier": 2,
       "datePublished": "2026-02-01",
-      "excerpt": "Small but statistically significant positive wage effects found across AI-exposed occupations; 35.9% of US workers used generative AI by December 2025."
+      "excerpt": "Small but statistically significant positive wage effects found across AI-exposed occupations; 35.9% of US workers used generative AI by December 2025.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "althoff-reichardt-task-specific-technical-2026",
@@ -459,7 +477,8 @@
       "publisher": "CESifo (Althoff, Reichardt)",
       "evidenceTier": 1,
       "datePublished": "2026-01-21",
-      "excerpt": "raising average wages by 21 percent"
+      "excerpt": "raising average wages by 21 percent",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "hartley-genai-labor-2026",
@@ -468,16 +487,18 @@
       "publisher": "Stanford / World Bank",
       "evidenceTier": 1,
       "datePublished": "2026-01-01",
-      "excerpt": "Small positive wage effects identified for workers in AI-exposed occupations; adoption concentrated among younger, college-educated, higher-earning employees."
+      "excerpt": "Small positive wage effects identified for workers in AI-exposed occupations; adoption concentrated among younger, college-educated, higher-earning employees.",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "cepr-ai-productivity-jobs-europe-2026",
       "title": "How AI is affecting productivity and jobs in Europe",
       "url": "https://cepr.org/voxeu/columns/how-ai-affecting-productivity-and-jobs-europe",
-      "publisher": "CEPR VoxEU (Aldasoro, Gambacorta, Pál, Revoltella, Weiss, Wolski)",
+      "publisher": "CEPR VoxEU (Aldasoro, Gambacorta, P\u00e1l, Revoltella, Weiss, Wolski)",
       "evidenceTier": 1,
       "datePublished": "2026-02-17",
-      "excerpt": "AI adoption causally increases labour productivity levels by 4% on average. Employees in AI-using companies benefit through higher wages, both in total and per employee."
+      "excerpt": "AI adoption causally increases labour productivity levels by 4% on average. Employees in AI-using companies benefit through higher wages, both in total and per employee.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "dallas-fed-davis-ai-wages-2026",
@@ -486,7 +507,8 @@
       "publisher": "Federal Reserve Bank of Dallas (J. Scott Davis)",
       "evidenceTier": 1,
       "datePublished": "2026-02-24",
-      "excerpt": "For occupations with the median experience premium (40 percent), a one-standard-deviation increase in AI exposure is associated with a 0.05 percentage point decline in wage growth."
+      "excerpt": "For occupations with the median experience premium (40 percent), a one-standard-deviation increase in AI exposure is associated with a 0.05 percentage point decline in wage growth.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "jones-tonetti-weak-links-2026",
@@ -495,7 +517,8 @@
       "publisher": "Stanford GSB / NBER (Jones, Tonetti)",
       "evidenceTier": 1,
       "datePublished": "2026-01-15",
-      "excerpt": "Despite the accelerating growth, the effects of A.I. on GDP per person are remarkably small for the next 20 to 40 years."
+      "excerpt": "Despite the accelerating growth, the effects of A.I. on GDP per person are remarkably small for the next 20 to 40 years.",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "furman-bls-productivity-above-forecast-2026",
@@ -504,7 +527,8 @@
       "publisher": "Jason Furman (Harvard / former CEA Chair)",
       "evidenceTier": 3,
       "datePublished": "2026-03-05",
-      "excerpt": "Are we finally seeing AI in the productivity data? A big upward revision to earlier data and strong Q4 bring us 2.2% above CBO's pre-pandemic forecast. Annual rates: 1 year: 2.8%, 2 years: 2.5%, 6 years: 2.2%"
+      "excerpt": "Are we finally seeing AI in the productivity data? A big upward revision to earlier data and strong Q4 bring us 2.2% above CBO's pre-pandemic forecast. Annual rates: 1 year: 2.8%, 2 years: 2.5%, 6 years: 2.2%",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "revelio-labs-wage-divide-2025",
@@ -513,7 +537,8 @@
       "publisher": "Revelio Labs",
       "evidenceTier": 2,
       "datePublished": "2025-12-01",
-      "excerpt": "Since January 2023, salaries at the top quartile of the wage distribution have grown by more than 30%. Over the same period, salaries at the bottom quartile have risen by only around 10%."
+      "excerpt": "Since January 2023, salaries at the top quartile of the wage distribution have grown by more than 30%. Over the same period, salaries at the bottom quartile have risen by only around 10%.",
+      "dateAdded": "2026-03-08"
     },
     {
       "id": "otis-kenyan-entrepreneurs-2023",
@@ -522,7 +547,8 @@
       "publisher": "HBS Working Paper (Otis, Clarke, Delecourt, Holtz, Koning)",
       "evidenceTier": 1,
       "datePublished": "2023-12-01",
-      "excerpt": "The paper reports no statistically significant average effect on revenues or profits. But effects are highly heterogeneous: high‑performing businesses at baseline appear to improve (roughly 15 percent), while low performers do worse (roughly 8-10 percent worse)"
+      "excerpt": "The paper reports no statistically significant average effect on revenues or profits. But effects are highly heterogeneous: high\u2011performing businesses at baseline appear to improve (roughly 15 percent), while low performers do worse (roughly 8-10 percent worse)",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "autor-kausik-automation-paradox-2026",
@@ -531,7 +557,8 @@
       "publisher": "NBER / arXiv (Autor, Kausik)",
       "evidenceTier": 1,
       "datePublished": "2025-12-30",
-      "excerpt": "falling labor share accounted for 16% of U.S. real wage growth between 1954 and 2019"
+      "excerpt": "falling labor share accounted for 16% of U.S. real wage growth between 1954 and 2019",
+      "dateAdded": "2026-03-07"
     }
   ]
 }

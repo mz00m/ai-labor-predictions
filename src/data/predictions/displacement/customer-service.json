@@ -255,7 +255,8 @@
       "url": "https://www.gartner.com/en/newsroom/press-releases/2022-08-31-gartner-predicts-conversational-ai-will-reduce-contac",
       "publisher": "Gartner",
       "evidenceTier": 2,
-      "datePublished": "2023-08-30"
+      "datePublished": "2023-08-30",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "forrester-cs-2023",
@@ -263,7 +264,8 @@
       "url": "https://www.forrester.com/report/the-state-of-customer-service-automation/",
       "publisher": "Forrester",
       "evidenceTier": 2,
-      "datePublished": "2023-08-15"
+      "datePublished": "2023-08-15",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "klarna-earnings-2024",
@@ -272,7 +274,8 @@
       "publisher": "Klarna",
       "evidenceTier": 1,
       "datePublished": "2024-02-27",
-      "excerpt": "Klarna's AI assistant handled two-thirds of customer service chats within one month of launch — 2.3 million conversations, doing the equivalent work of 700 full-time agents."
+      "excerpt": "Klarna's AI assistant handled two-thirds of customer service chats within one month of launch \u2014 2.3 million conversations, doing the equivalent work of 700 full-time agents.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "hbr-chatbots-2024",
@@ -280,7 +283,8 @@
       "url": "https://hbr.org/2023/03/generative-ai-will-enhance-not-erase-customer-service-jobs",
       "publisher": "Harvard Business Review",
       "evidenceTier": 3,
-      "datePublished": "2024-05-10"
+      "datePublished": "2024-05-10",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "huang-cs-2024",
@@ -289,7 +293,8 @@
       "publisher": "NBER (Brynjolfsson, Li, Raymond)",
       "evidenceTier": 1,
       "datePublished": "2024-09-01",
-      "excerpt": "AI assistance increased worker productivity by 14% on average, with greatest gains for novice and low-skilled workers."
+      "excerpt": "AI assistance increased worker productivity by 14% on average, with greatest gains for novice and low-skilled workers.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "gartner-cs-2025",
@@ -297,7 +302,8 @@
       "url": "https://www.gartner.com/en/newsroom/press-releases/2022-07-27-gartner-predicts-chatbots-will-become-a-primary-customer-service-channel-within-five-years",
       "publisher": "Gartner",
       "evidenceTier": 2,
-      "datePublished": "2025-01-15"
+      "datePublished": "2025-01-15",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "tdoc-10k-2024",
@@ -306,7 +312,8 @@
       "publisher": "Teleperformance SE (via BusinessWire)",
       "evidenceTier": 2,
       "datePublished": "2025-02-27",
-      "excerpt": "Teleperformance reported full-year 2024 revenue of EUR 10,280 million. Plans to invest up to EUR 100 million in AI-focused partnerships during 2025. Over 200 new AI projects launched in 2024."
+      "excerpt": "Teleperformance reported full-year 2024 revenue of EUR 10,280 million. Plans to invest up to EUR 100 million in AI-focused partnerships during 2025. Over 200 new AI projects launched in 2024.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "indeed-cs-postings-2025",
@@ -315,7 +322,8 @@
       "publisher": "Indeed Hiring Lab",
       "evidenceTier": 2,
       "datePublished": "2025-01-15",
-      "excerpt": "Customer service representative postings declined 18% year-over-year. Remaining postings increasingly require technical skills and AI tool familiarity."
+      "excerpt": "Customer service representative postings declined 18% year-over-year. Remaining postings increasingly require technical skills and AI tool familiarity.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "salesforce-cs-ai-agents-2025",
@@ -324,16 +332,18 @@
       "publisher": "Fortune (Benioff interview on The Logan Bartlett Show)",
       "evidenceTier": 1,
       "datePublished": "2025-09-02",
-      "excerpt": "50% are with agents, 50% are with humans. From 9,000 heads to about 5,000 because I need less heads. Support costs reduced by 17%."
+      "excerpt": "50% are with agents, 50% are with humans. From 9,000 heads to about 5,000 because I need less heads. Support costs reduced by 17%.",
+      "dateAdded": "2026-03-08"
     },
     {
       "id": "shopify-earnings-2024",
-      "title": "Shopify Q4 2024 Earnings — AI Customer Support Metrics",
+      "title": "Shopify Q4 2024 Earnings \u2014 AI Customer Support Metrics",
       "url": "https://investors.shopify.com/financial-reports",
       "publisher": "Shopify (Earnings Call)",
       "evidenceTier": 1,
       "datePublished": "2025-02-12",
-      "excerpt": "Shopify reported its AI assistant Sidekick now resolves 40% of merchant support queries without human intervention, up from 12% one year prior."
+      "excerpt": "Shopify reported its AI assistant Sidekick now resolves 40% of merchant support queries without human intervention, up from 12% one year prior.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "gartner-cs-2026-forecast",
@@ -342,7 +352,8 @@
       "publisher": "Gartner",
       "evidenceTier": 2,
       "datePublished": "2025-10-15",
-      "excerpt": "Gartner projects 20-30% of customer service agents will be replaced by generative AI by end of 2026. AI adoption in CS jumped from 46% to 61% in one year."
+      "excerpt": "Gartner projects 20-30% of customer service agents will be replaced by generative AI by end of 2026. AI adoption in CS jumped from 46% to 61% in one year.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "zendesk-ai-cs-2026",
@@ -351,7 +362,8 @@
       "publisher": "Zendesk",
       "evidenceTier": 3,
       "datePublished": "2026-01-15",
-      "excerpt": "95% of customer interactions projected to be AI-powered by 2028. Current AI resolution rates at leading companies exceed 55% without human escalation."
+      "excerpt": "95% of customer interactions projected to be AI-powered by 2028. Current AI resolution rates at leading companies exceed 55% without human escalation.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "brynjolfsson-li-raymond-qje-2025",
@@ -360,7 +372,8 @@
       "publisher": "QJE (Brynjolfsson, Li, Raymond)",
       "evidenceTier": 1,
       "datePublished": "2025-05-01",
-      "excerpt": "AI assistance increases customer service worker productivity by 15% on average. Less experienced workers improve most; AI disseminates best practices from top performers."
+      "excerpt": "AI assistance increases customer service worker productivity by 15% on average. Less experienced workers improve most; AI disseminates best practices from top performers.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "brynjolfsson-chandar-chen-cs-2025",
@@ -369,7 +382,8 @@
       "publisher": "Stanford Digital Economy Lab",
       "evidenceTier": 1,
       "datePublished": "2025-08-01",
-      "excerpt": "~11% decline for early-career customer service workers; declines concentrated in roles where AI automates rather than augments tasks."
+      "excerpt": "~11% decline for early-career customer service workers; declines concentrated in roles where AI automates rather than augments tasks.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "bofa-erica-ai-2025",
@@ -378,7 +392,8 @@
       "publisher": "Bank of America",
       "evidenceTier": 1,
       "datePublished": "2025-10-01",
-      "excerpt": "BofA's Erica AI assistant surpassed 2 billion client interactions with a 98% resolution rate. Now handles 56% of all customer inquiries without human escalation."
+      "excerpt": "BofA's Erica AI assistant surpassed 2 billion client interactions with a 98% resolution rate. Now handles 56% of all customer inquiries without human escalation.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "klarna-reversal-2025",
@@ -387,7 +402,8 @@
       "publisher": "Entrepreneur / Klarna",
       "evidenceTier": 1,
       "datePublished": "2025-06-01",
-      "excerpt": "Klarna reversed its AI-only CS strategy after customer satisfaction dropped 22%. CEO Siemiatkowski: 'we went too far.' Now operates hybrid model with AI handling ~66% but humans for complex cases."
+      "excerpt": "Klarna reversed its AI-only CS strategy after customer satisfaction dropped 22%. CEO Siemiatkowski: 'we went too far.' Now operates hybrid model with AI handling ~66% but humans for complex cases.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "gartner-agentic-ai-cs-2025",
@@ -396,7 +412,8 @@
       "publisher": "Gartner",
       "evidenceTier": 2,
       "datePublished": "2025-03-05",
-      "excerpt": "Agentic AI will autonomously resolve 80% of common customer service issues by 2029. Currently only 1.6% of interactions are fully automated end-to-end."
+      "excerpt": "Agentic AI will autonomously resolve 80% of common customer service issues by 2029. Currently only 1.6% of interactions are fully automated end-to-end.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "cisco-agentic-cs-2025",
@@ -405,7 +422,8 @@
       "publisher": "Cisco",
       "evidenceTier": 2,
       "datePublished": "2025-05-27",
-      "excerpt": "Survey of 7,950 decision-makers: 68% of all CS interactions expected to be handled by agentic AI by 2028. 56% expected within 12 months."
+      "excerpt": "Survey of 7,950 decision-makers: 68% of all CS interactions expected to be handled by agentic AI by 2028. 56% expected within 12 months.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "fang-ecommerce-chatbots-2025",
@@ -414,7 +432,8 @@
       "publisher": "arXiv (Fang, Yuan, Zheng, Donati, Sarvary)",
       "evidenceTier": 1,
       "datePublished": "2025-10-01",
-      "excerpt": "AI chatbots for customer service increased sales by 16%; AI-generated product descriptions increased sales by 2.05% in field experiments."
+      "excerpt": "AI chatbots for customer service increased sales by 16%; AI-generated product descriptions increased sales by 2.05% in field experiments.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "brookings-adaptive-capacity-2026",
@@ -423,7 +442,8 @@
       "publisher": "Brookings Institution (Manning, Aguirre, Muro, Methkupally)",
       "evidenceTier": 2,
       "datePublished": "2026-01-21",
-      "excerpt": "Customer service representatives get the short end of the stick in both categories [high AI exposure and low adaptive capacity]."
+      "excerpt": "Customer service representatives get the short end of the stick in both categories [high AI exposure and low adaptive capacity].",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "bls-mlr-ai-employment-projections-2025",
@@ -432,7 +452,8 @@
       "publisher": "U.S. Bureau of Labor Statistics (Monthly Labor Review)",
       "evidenceTier": 1,
       "datePublished": "2025-02-10",
-      "excerpt": "Customer service representatives, whose employment is projected to decline by 5.0 percent through 2033."
+      "excerpt": "Customer service representatives, whose employment is projected to decline by 5.0 percent through 2033.",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "anthropic-labor-market-impacts-2026",
@@ -441,7 +462,8 @@
       "publisher": "Anthropic (Massenkoff, McCrory)",
       "evidenceTier": 2,
       "datePublished": "2026-03-05",
-      "excerpt": "Customer service representatives at 70.1% observed exposure, whose main tasks we increasingly see in first-party API traffic."
+      "excerpt": "Customer service representatives at 70.1% observed exposure, whose main tasks we increasingly see in first-party API traffic.",
+      "dateAdded": "2026-03-07"
     }
   ]
 }

@@ -229,7 +229,7 @@
         "dallas-fed-entry-level-2026"
       ],
       "evidenceTier": 1,
-      "label": "Dallas Fed: young worker share fell 16.4% → 15.5%"
+      "label": "Dallas Fed: young worker share fell 16.4% \u2192 15.5%"
     },
     {
       "date": "2026-01-14",
@@ -283,7 +283,7 @@
         "dallas-fed-davis-ai-wages-2026"
       ],
       "evidenceTier": 1,
-      "label": "Dallas Fed: AI exposure → 0.28pp wage growth reduction in low-experience-premium jobs"
+      "label": "Dallas Fed: AI exposure \u2192 0.28pp wage growth reduction in low-experience-premium jobs"
     },
     {
       "date": "2026-03-05",
@@ -307,12 +307,13 @@
   "sources": [
     {
       "id": "indeed-entry-level-2023",
-      "title": "Entry-Level Job Market Update — Indeed Hiring Lab",
+      "title": "Entry-Level Job Market Update \u2014 Indeed Hiring Lab",
       "url": "https://www.hiringlab.org/2025/09/25/september-labor-market-squeeze-on-new-entrants/",
       "publisher": "Indeed Hiring Lab",
       "evidenceTier": 2,
       "datePublished": "2023-05-01",
-      "excerpt": "Entry-level job postings in AI-exposed fields declined 12% YoY. Starting salaries for junior analysts, associates, and coordinators showed early downward pressure."
+      "excerpt": "Entry-level job postings in AI-exposed fields declined 12% YoY. Starting salaries for junior analysts, associates, and coordinators showed early downward pressure.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "revelio-labs-wage-divide-2025",
@@ -321,7 +322,8 @@
       "publisher": "Revelio Labs",
       "evidenceTier": 2,
       "datePublished": "2025-12-01",
-      "excerpt": "Automation pressures are disproportionately suppressing wage gains in lower-paid roles, which is contrary to narratives that AI is mostly impacting high-earning, white-collar jobs."
+      "excerpt": "Automation pressures are disproportionately suppressing wage gains in lower-paid roles, which is contrary to narratives that AI is mostly impacting high-earning, white-collar jobs.",
+      "dateAdded": "2026-03-08"
     },
     {
       "id": "nber-entry-wage-2023",
@@ -330,7 +332,8 @@
       "publisher": "NBER (Acemoglu, Restrepo)",
       "evidenceTier": 1,
       "datePublished": "2018-01-01",
-      "excerpt": "Theoretical framework for automation's displacement and productivity effects on labor. Automation displaces workers from tasks they previously performed, but productivity gains create new tasks and increase demand for labor."
+      "excerpt": "Theoretical framework for automation's displacement and productivity effects on labor. Automation displaces workers from tasks they previously performed, but productivity gains create new tasks and increase demand for labor.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "goldman-entry-level-2024",
@@ -339,7 +342,8 @@
       "publisher": "Fortune (reporting Goldman Sachs research)",
       "evidenceTier": 2,
       "datePublished": "2025-08-06",
-      "excerpt": "Unemployment rate for 20- to 30-year-olds in tech rose nearly 3% since early 2024. Entry-level job postings in the US diminished about 35% since January 2023. Goldman Sachs predicts AI will displace about 6-7% of the total workforce."
+      "excerpt": "Unemployment rate for 20- to 30-year-olds in tech rose nearly 3% since early 2024. Entry-level job postings in the US diminished about 35% since January 2023. Goldman Sachs predicts AI will displace about 6-7% of the total workforce.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "brookings-entry-level-2024",
@@ -348,7 +352,8 @@
       "publisher": "Brookings Institution",
       "evidenceTier": 2,
       "datePublished": "2025-10-28",
-      "excerpt": "Whether AI destroys jobs or transforms them, young people still need fundamental supports: skill-building, career navigation, and mentorship."
+      "excerpt": "Whether AI destroys jobs or transforms them, young people still need fundamental supports: skill-building, career navigation, and mentorship.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "mit-entry-wage-2024",
@@ -357,15 +362,17 @@
       "publisher": "NBER (David Autor)",
       "evidenceTier": 1,
       "datePublished": "2024-02-01",
-      "excerpt": "AI could enable a larger set of workers to perform higher-stakes decision-making tasks currently reserved for elite experts. If used well, AI can help restore the middle-skill, middle-class heart of the US labor market."
+      "excerpt": "AI could enable a larger set of workers to perform higher-stakes decision-making tasks currently reserved for elite experts. If used well, AI can help restore the middle-skill, middle-class heart of the US labor market.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "wsj-entry-level-squeeze",
-      "title": "Entry-Level Jobs Are Vanishing — and AI Is a Big Reason",
+      "title": "Entry-Level Jobs Are Vanishing \u2014 and AI Is a Big Reason",
       "url": "https://www.wsj.com/lifestyle/careers/ai-entry-level-jobs-career-strategy-f59d574b",
       "publisher": "The Wall Street Journal",
       "evidenceTier": 3,
-      "datePublished": "2025-01-15"
+      "datePublished": "2025-01-15",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "oecd-youth-employment-2025",
@@ -374,16 +381,18 @@
       "publisher": "OECD",
       "evidenceTier": 1,
       "datePublished": "2025-04-01",
-      "excerpt": "Youth (18-24) employment in OECD countries in AI-exposed sectors declined 4.5% YoY. Real starting salaries fell 3-8% across knowledge-work sectors."
+      "excerpt": "Youth (18-24) employment in OECD countries in AI-exposed sectors declined 4.5% YoY. Real starting salaries fell 3-8% across knowledge-work sectors.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "bls-entry-wages-2025",
-      "title": "Usual Weekly Earnings — Workers 16-24",
+      "title": "Usual Weekly Earnings \u2014 Workers 16-24",
       "url": "https://www.bls.gov/cps/",
       "publisher": "Bureau of Labor Statistics",
       "evidenceTier": 1,
       "datePublished": "2025-07-01",
-      "excerpt": "Real median weekly earnings for workers aged 16-24 in professional services fell 5.2% from 2023 to 2025."
+      "excerpt": "Real median weekly earnings for workers aged 16-24 in professional services fell 5.2% from 2023 to 2025.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "mckinsey-entry-level-2025",
@@ -392,7 +401,8 @@
       "publisher": "McKinsey Global Institute",
       "evidenceTier": 2,
       "datePublished": "2023-07-26",
-      "excerpt": "By 2030, activities accounting for up to 30% of hours currently worked could be automated, accelerated by generative AI. Lower-wage workers face up to 14x more occupational transitions than higher-wage counterparts."
+      "excerpt": "By 2030, activities accounting for up to 30% of hours currently worked could be automated, accelerated by generative AI. Lower-wage workers face up to 14x more occupational transitions than higher-wage counterparts.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "anthropic-ceo-entry-level-2025",
@@ -401,7 +411,8 @@
       "publisher": "Fortune",
       "evidenceTier": 3,
       "datePublished": "2025-05-28",
-      "excerpt": "Anthropic CEO Dario Amodei warned that up to 50% of entry-level office jobs could be substantially impacted by AI within the next 2-3 years."
+      "excerpt": "Anthropic CEO Dario Amodei warned that up to 50% of entry-level office jobs could be substantially impacted by AI within the next 2-3 years.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "brynjolfsson-chandar-chen-entry-2025",
@@ -410,7 +421,8 @@
       "publisher": "Stanford Digital Economy Lab (Brynjolfsson, Chandar, Chen)",
       "evidenceTier": 1,
       "datePublished": "2025-11-13",
-      "excerpt": "We find little difference in annual salary trends by age or exposure quintile, suggesting possible wage stickiness. Labor market adjustments are visible in employment more than in compensation."
+      "excerpt": "We find little difference in annual salary trends by age or exposure quintile, suggesting possible wage stickiness. Labor market adjustments are visible in employment more than in compensation.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "imf-skill-gaps-entry-2026",
@@ -419,7 +431,8 @@
       "publisher": "IMF (Jaumotte et al.)",
       "evidenceTier": 1,
       "datePublished": "2026-01-15",
-      "excerpt": "Emerging evidence that generative AI adoption is reducing entry-level hiring, especially where tasks are automatable rather than complementary to humans."
+      "excerpt": "Emerging evidence that generative AI adoption is reducing entry-level hiring, especially where tasks are automatable rather than complementary to humans.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "worldbank-liu-wang-yu-2025",
@@ -428,7 +441,8 @@
       "publisher": "World Bank (Liu, Wang, Yu)",
       "evidenceTier": 1,
       "datePublished": "2025-11-01",
-      "excerpt": "Job postings for high-AI-substitution occupations fell 12% relative to low-substitution roles post-ChatGPT; effect grew from 6% in year one to 18% by year three. Based on 285 million Lightcast job postings."
+      "excerpt": "Job postings for high-AI-substitution occupations fell 12% relative to low-substitution roles post-ChatGPT; effect grew from 6% in year one to 18% by year three. Based on 285 million Lightcast job postings.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "hartley-genai-labor-2026",
@@ -437,7 +451,8 @@
       "publisher": "Stanford / World Bank (Hartley, Jolevski, Melo, Moore)",
       "evidenceTier": 1,
       "datePublished": "2026-01-01",
-      "excerpt": "35.9% of US workers used generative AI by December 2025; adoption concentrated among younger, college-educated workers. Small positive wage effects overall."
+      "excerpt": "35.9% of US workers used generative AI by December 2025; adoption concentrated among younger, college-educated workers. Small positive wage effects overall.",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "dallas-fed-entry-level-2026",
@@ -446,7 +461,8 @@
       "publisher": "Federal Reserve Bank of Dallas",
       "evidenceTier": 1,
       "datePublished": "2026-01-06",
-      "excerpt": "Employment share of young workers (20-24) in most AI-exposed occupations fell from 16.4% to 15.5%; decline driven by fewer people transitioning into employment, not layoffs."
+      "excerpt": "Employment share of young workers (20-24) in most AI-exposed occupations fell from 16.4% to 15.5%; decline driven by fewer people transitioning into employment, not layoffs.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "icle-entry-level-2026",
@@ -455,7 +471,8 @@
       "publisher": "International Center for Law & Economics",
       "evidenceTier": 2,
       "datePublished": "2026-02-01",
-      "excerpt": "Pressure concentrated in entry-level segments of highly exposed occupations; adjustment happening at the margin through task reallocation."
+      "excerpt": "Pressure concentrated in entry-level segments of highly exposed occupations; adjustment happening at the margin through task reallocation.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "del-rio-chanona-ai-jobs-2025",
@@ -464,7 +481,8 @@
       "publisher": "arXiv (ILO-affiliated researchers)",
       "evidenceTier": 1,
       "datePublished": "2025-09-15",
-      "excerpt": "Novice workers benefit more from LLMs in simple tasks but face declining demand across AI-complementary work; digital trace data show substitution in writing and translation."
+      "excerpt": "Novice workers benefit more from LLMs in simple tasks but face declining demand across AI-complementary work; digital trace data show substitution in writing and translation.",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "hosseini-lichtinger-seniority-2025",
@@ -473,7 +491,8 @@
       "publisher": "SSRN (Hosseini Maasoum, Lichtinger)",
       "evidenceTier": 1,
       "datePublished": "2025-09-01",
-      "excerpt": "Analysis of 62M U.S. resumes: junior employment declined sharply at AI-adopting firms while senior employment was largely unchanged — described as 'seniority-biased technological change.'"
+      "excerpt": "Analysis of 62M U.S. resumes: junior employment declined sharply at AI-adopting firms while senior employment was largely unchanged \u2014 described as 'seniority-biased technological change.'",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "althoff-reichardt-task-specific-technical-2026",
@@ -482,7 +501,8 @@
       "publisher": "CESifo (Althoff, Reichardt)",
       "evidenceTier": 1,
       "datePublished": "2026-01-21",
-      "excerpt": "increases the relative productivity of lower-skill workers in tasks and occupations that were previously the territory of higher skilled workers... this lowering of skill-based barriers is the key force reducing inequality"
+      "excerpt": "increases the relative productivity of lower-skill workers in tasks and occupations that were previously the territory of higher skilled workers... this lowering of skill-based barriers is the key force reducing inequality",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "frank-ai-unemployment-2026",
@@ -491,7 +511,8 @@
       "publisher": "arXiv (Frank et al.)",
       "evidenceTier": 1,
       "datePublished": "2026-01-15",
-      "excerpt": "Unemployment risk in AI-exposed occupations rose beginning early 2022; graduates with AI-exposed curricula have higher first-job pay and shorter job searches post-ChatGPT."
+      "excerpt": "Unemployment risk in AI-exposed occupations rose beginning early 2022; graduates with AI-exposed curricula have higher first-job pay and shorter job searches post-ChatGPT.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "dallas-fed-davis-ai-wages-2026",
@@ -500,7 +521,8 @@
       "publisher": "Federal Reserve Bank of Dallas (J. Scott Davis)",
       "evidenceTier": 1,
       "datePublished": "2026-02-24",
-      "excerpt": "For an occupation with a 0 percent experience premium, increased AI exposure is associated with a 0.28 percentage point reduction in wage growth."
+      "excerpt": "For an occupation with a 0 percent experience premium, increased AI exposure is associated with a 0.28 percentage point reduction in wage growth.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "shih-ai-shock-china-shock-2026",
@@ -509,7 +531,8 @@
       "publisher": "Clara Shih (CEO, Salesforce AI) via X",
       "evidenceTier": 4,
       "datePublished": "2026-03-05",
-      "excerpt": "new grad hiring in large tech is down over 50% since 2019. For the first time in over decades, recent college grads have a higher unemployment rate than the national average. In addition, the 'underemployment rate' for recent graduates has risen to 42.5% (Q4 2025, New York Federal Reserve)."
+      "excerpt": "new grad hiring in large tech is down over 50% since 2019. For the first time in over decades, recent college grads have a higher unemployment rate than the national average. In addition, the 'underemployment rate' for recent graduates has risen to 42.5% (Q4 2025, New York Federal Reserve).",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "bgi-no-country-young-grads-2025",
@@ -518,7 +541,8 @@
       "publisher": "Burning Glass Institute",
       "evidenceTier": 2,
       "datePublished": "2025-07-29",
-      "excerpt": "52% of the Class of 2023 was underemployed a year after graduating. Entry-level postings in high-AI-exposure occupations fell from 2022 to 2025, while postings requiring 6+ years of experience held steady or rose. Employers reported plans to hire 7.3% more graduates from the Class of 2025; that expectation had been cut to just 0.6%."
+      "excerpt": "52% of the Class of 2023 was underemployed a year after graduating. Entry-level postings in high-AI-exposure occupations fell from 2022 to 2025, while postings requiring 6+ years of experience held steady or rose. Employers reported plans to hire 7.3% more graduates from the Class of 2025; that expectation had been cut to just 0.6%.",
+      "dateAdded": "2026-03-09"
     },
     {
       "id": "eig-entry-level-ai-displacement-2026",
@@ -527,16 +551,18 @@
       "publisher": "Economic Innovation Group (Iscenko & Curto Millet)",
       "evidenceTier": 2,
       "datePublished": "2026-01-14",
-      "excerpt": "entry-level hiring rates have declined 23 percent compared to pre-pandemic levels, a steeper drop than the 18 percent decline for overall hiring"
+      "excerpt": "entry-level hiring rates have declined 23 percent compared to pre-pandemic levels, a steeper drop than the 18 percent decline for overall hiring",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "cruces-galiani-education-gap-2026",
       "title": "Does Generative AI Narrow Education-Based Productivity Gaps? Evidence from a Randomized Experiment",
       "url": "https://www.nber.org/papers/w34851",
-      "publisher": "NBER (Cruces, Fernández Meijide, Galiani, Gálvez, Lombardi)",
+      "publisher": "NBER (Cruces, Fern\u00e1ndez Meijide, Galiani, G\u00e1lvez, Lombardi)",
       "evidenceTier": 1,
       "datePublished": "2026-02-01",
-      "excerpt": "Without AI, higher-education participants outperformed lower-education participants by 0.548 standard deviations. With AI access, this gap fell to 0.139 standard deviations—closing about 75 percent of the baseline productivity difference."
+      "excerpt": "Without AI, higher-education participants outperformed lower-education participants by 0.548 standard deviations. With AI access, this gap fell to 0.139 standard deviations\u2014closing about 75 percent of the baseline productivity difference.",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "anthropic-labor-market-impacts-2026",
@@ -545,7 +571,8 @@
       "publisher": "Anthropic (Massenkoff, McCrory)",
       "evidenceTier": 2,
       "datePublished": "2026-03-05",
-      "excerpt": "Graduate degree holders comprise 17.4% of the most AI-exposed workers vs 4.5% of the unexposed group"
+      "excerpt": "Graduate degree holders comprise 17.4% of the most AI-exposed workers vs 4.5% of the unexposed group",
+      "dateAdded": "2026-03-07"
     }
   ]
 }

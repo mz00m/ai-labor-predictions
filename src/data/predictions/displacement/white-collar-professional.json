@@ -398,7 +398,7 @@
         "wang-neubig-agent-benchmarks-2026"
       ],
       "evidenceTier": 1,
-      "label": "Wang et al.: Legal 70%, Management 88% digital work — high automation potential"
+      "label": "Wang et al.: Legal 70%, Management 88% digital work \u2014 high automation potential"
     },
     {
       "date": "2026-03-02",
@@ -434,7 +434,7 @@
         "anthropic-labor-market-impacts-2026"
       ],
       "evidenceTier": 2,
-      "label": "Anthropic: Most AI-exposed workers are educated, higher-paid — no unemployment rise found"
+      "label": "Anthropic: Most AI-exposed workers are educated, higher-paid \u2014 no unemployment rise found"
     },
     {
       "date": "2026-03-07",
@@ -454,7 +454,8 @@
       "publisher": "Goldman Sachs",
       "evidenceTier": 1,
       "datePublished": "2023-03-26",
-      "excerpt": "Two-thirds of US occupations are exposed to some degree of AI automation. Administrative and legal professions face the highest exposure rates at 46%."
+      "excerpt": "Two-thirds of US occupations are exposed to some degree of AI automation. Administrative and legal professions face the highest exposure rates at 46%.",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "mckinsey-genai-occupations",
@@ -463,7 +464,8 @@
       "publisher": "McKinsey Global Institute",
       "evidenceTier": 2,
       "datePublished": "2023-06-14",
-      "excerpt": "Banking, insurance, and capital markets could see up to 50% of current work activities automated. Legal research and contract review are among the most automatable tasks."
+      "excerpt": "Banking, insurance, and capital markets could see up to 50% of current work activities automated. Legal research and contract review are among the most automatable tasks.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "eloundou-openai-2024",
@@ -472,7 +474,8 @@
       "publisher": "OpenAI / U Penn (Eloundou et al.)",
       "evidenceTier": 1,
       "datePublished": "2024-01-15",
-      "excerpt": "~80% of the US workforce could have at least 10% of their tasks affected by GPTs. Legal, accounting, and financial analysis are among the highest-exposure occupations."
+      "excerpt": "~80% of the US workforce could have at least 10% of their tasks affected by GPTs. Legal, accounting, and financial analysis are among the highest-exposure occupations.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "workday-ai-skills-revolution-2025",
@@ -481,7 +484,8 @@
       "publisher": "Workday / Hanover Research",
       "evidenceTier": 2,
       "datePublished": "2025-01-08",
-      "excerpt": "top three uses of AI today. 51% Data analysis. 43% Fraud detection and security monitoring. 39% Human resources and recruiting processes"
+      "excerpt": "top three uses of AI today. 51% Data analysis. 43% Fraud detection and security monitoring. 39% Human resources and recruiting processes",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "brookings-white-collar-2024",
@@ -490,7 +494,8 @@
       "publisher": "Brookings Institution",
       "evidenceTier": 2,
       "datePublished": "2024-04-20",
-      "excerpt": "High-paid, white-collar occupations in business, finance, and law are among the most exposed to generative AI disruption."
+      "excerpt": "High-paid, white-collar occupations in business, finance, and law are among the most exposed to generative AI disruption.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "stanford-codex-legal-ai",
@@ -499,7 +504,8 @@
       "publisher": "MIT Technology Review",
       "evidenceTier": 1,
       "datePublished": "2025-12-15",
-      "excerpt": "Despite early signs that AI is beginning to affect entry-level workers, labor statistics have yet to show lawyers being displaced. Law graduate employment in 2024 reached 93.4% — the highest rate on record."
+      "excerpt": "Despite early signs that AI is beginning to affect entry-level workers, labor statistics have yet to show lawyers being displaced. Law graduate employment in 2024 reached 93.4% \u2014 the highest rate on record.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "wsj-white-collar-layoffs",
@@ -507,7 +513,8 @@
       "url": "https://www.wsj.com/economy/jobs/white-collar-jobs-ai-324b749c",
       "publisher": "The Wall Street Journal",
       "evidenceTier": 3,
-      "datePublished": "2025-10-29"
+      "datePublished": "2025-10-29",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "deloitte-professional-services-2025",
@@ -516,7 +523,8 @@
       "publisher": "Deloitte Insights",
       "evidenceTier": 2,
       "datePublished": "2025-12-24",
-      "excerpt": "A Deloitte survey reveals how AI and human collaboration can help close talent gaps, speed upskilling, and transfer knowledge as demographic changes reshape the workforce."
+      "excerpt": "A Deloitte survey reveals how AI and human collaboration can help close talent gaps, speed upskilling, and transfer knowledge as demographic changes reshape the workforce.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "oecd-white-collar-2025",
@@ -525,25 +533,28 @@
       "publisher": "OECD",
       "evidenceTier": 1,
       "datePublished": "2025-07-01",
-      "excerpt": "Professional services occupations face the largest task-level AI exposure among high-income economies, with 18-25% of tasks fully automatable by current LLMs."
+      "excerpt": "Professional services occupations face the largest task-level AI exposure among high-income economies, with 18-25% of tasks fully automatable by current LLMs.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "jpmorgan-10k-ai-2024",
-      "title": "JPMorgan Chase 2024 10-K — AI and Workforce",
+      "title": "JPMorgan Chase 2024 10-K \u2014 AI and Workforce",
       "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000019617&type=10-K",
       "publisher": "JPMorgan Chase (SEC Filing)",
       "evidenceTier": 1,
       "datePublished": "2025-02-15",
-      "excerpt": "JPMorgan disclosed deploying LLM-based tools across legal, compliance, and research functions, with estimated productivity gains equivalent to 3,000+ full-time roles."
+      "excerpt": "JPMorgan disclosed deploying LLM-based tools across legal, compliance, and research functions, with estimated productivity gains equivalent to 3,000+ full-time roles.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "ey-10k-ai-2024",
-      "title": "EY Global — AI Transformation in Professional Services",
+      "title": "EY Global \u2014 AI Transformation in Professional Services",
       "url": "https://www.ey.com/en_gl/insights/ai/case-study-how-ey-transformed-with-ai",
       "publisher": "Ernst & Young",
       "evidenceTier": 2,
       "datePublished": "2025-03-01",
-      "excerpt": "EY invested $1.4B in AI, reporting that AI-assisted audit procedures now cover 40% of routine testing tasks previously performed by junior staff."
+      "excerpt": "EY invested $1.4B in AI, reporting that AI-assisted audit procedures now cover 40% of routine testing tasks previously performed by junior staff.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "indeed-cnbc-radical-transform",
@@ -552,7 +563,8 @@
       "publisher": "CNBC / Indeed",
       "evidenceTier": 2,
       "datePublished": "2025-10-10",
-      "excerpt": "Indeed analysis finds 26% of jobs face radical transformation from AI. Paralegals face 80% automation risk by 2026. Legal research and contract review most affected."
+      "excerpt": "Indeed analysis finds 26% of jobs face radical transformation from AI. Paralegals face 80% automation risk by 2026. Legal research and contract review most affected.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "papanikolaou-schmidt-ai-labor-2025",
@@ -561,7 +573,8 @@
       "publisher": "NBER (Hampole, Papanikolaou, Schmidt, Seegmiller)",
       "evidenceTier": 1,
       "datePublished": "2025-02-01",
-      "excerpt": "Tasks with higher AI exposure subsequently experience reduced labor demand. 1 SD increase in AI exposure reduces relative demand for related skills by 2%."
+      "excerpt": "Tasks with higher AI exposure subsequently experience reduced labor demand. 1 SD increase in AI exposure reduces relative demand for related skills by 2%.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "papanikolaou-bpea-historical-2025",
@@ -570,7 +583,8 @@
       "publisher": "BPEA (Liu, Papanikolaou, Schmidt, Seegmiller)",
       "evidenceTier": 1,
       "datePublished": "2025-09-26",
-      "excerpt": "In sharp contrast to the past two centuries, AI will shift relative demand toward occupations with lower education, lower wages, and a greater share of male workers."
+      "excerpt": "In sharp contrast to the past two centuries, AI will shift relative demand toward occupations with lower education, lower wages, and a greater share of male workers.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "worldbank-liu-wang-yu-2025",
@@ -579,7 +593,8 @@
       "publisher": "World Bank (Liu, Wang, Yu)",
       "evidenceTier": 1,
       "datePublished": "2025-11-01",
-      "excerpt": "Job postings for high-AI-substitution occupations fell 18% relative to low-substitution roles by year three post-ChatGPT. This measures posting-level demand shifts in white-collar occupations."
+      "excerpt": "Job postings for high-AI-substitution occupations fell 18% relative to low-substitution roles by year three post-ChatGPT. This measures posting-level demand shifts in white-collar occupations.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "noy-zhang-science-2023",
@@ -588,7 +603,8 @@
       "publisher": "Science (Noy, Zhang)",
       "evidenceTier": 1,
       "datePublished": "2023-07-14",
-      "excerpt": "RCT: ChatGPT reduced task completion time by 40% and raised output quality by 18%. Low-ability workers benefited most, compressing the productivity distribution."
+      "excerpt": "RCT: ChatGPT reduced task completion time by 40% and raised output quality by 18%. Low-ability workers benefited most, compressing the productivity distribution.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "chen-hbs-white-collar-2025",
@@ -597,7 +613,8 @@
       "publisher": "Harvard Business School",
       "evidenceTier": 1,
       "datePublished": "2025-01-15",
-      "excerpt": "24% decrease in AI-exposed skills required in highly automatable jobs, but 15% increase in AI-exposed skills for augmentation-prone professional roles."
+      "excerpt": "24% decrease in AI-exposed skills required in highly automatable jobs, but 15% increase in AI-exposed skills for augmentation-prone professional roles.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "hosseini-brookings-freelancer-2025",
@@ -606,7 +623,8 @@
       "publisher": "Brookings Institution",
       "evidenceTier": 1,
       "datePublished": "2025-07-01",
-      "excerpt": "High-skill freelancers disproportionately affected by AI — top performers were impacted most, contradicting conventional wisdom that expertise insulates workers."
+      "excerpt": "High-skill freelancers disproportionately affected by AI \u2014 top performers were impacted most, contradicting conventional wisdom that expertise insulates workers.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "del-rio-chanona-ai-jobs-2025",
@@ -615,7 +633,8 @@
       "publisher": "arXiv (ILO-affiliated researchers)",
       "evidenceTier": 1,
       "datePublished": "2025-09-15",
-      "excerpt": "AI exposure measures converge toward high-wage jobs being most exposed; digital trace data show substitution already occurring in writing and translation."
+      "excerpt": "AI exposure measures converge toward high-wage jobs being most exposed; digital trace data show substitution already occurring in writing and translation.",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "jpmorgan-white-collar-2025",
@@ -624,7 +643,8 @@
       "publisher": "J.P. Morgan Global Research",
       "evidenceTier": 2,
       "datePublished": "2025-06-01",
-      "excerpt": "Non-routine cognitive job workers now face rising unemployment risk, surpassing non-routine manual workers for the first time."
+      "excerpt": "Non-routine cognitive job workers now face rising unemployment risk, surpassing non-routine manual workers for the first time.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "gartner-middle-mgmt-2025",
@@ -633,7 +653,8 @@
       "publisher": "Gartner",
       "evidenceTier": 3,
       "datePublished": "2025-11-20",
-      "excerpt": "By 2026, 20% of organizations will use AI to flatten their organizational structure, eliminating more than half of current middle management positions in those organizations."
+      "excerpt": "By 2026, 20% of organizations will use AI to flatten their organizational structure, eliminating more than half of current middle management positions in those organizations.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "goldman-ai-workforce-2025",
@@ -642,7 +663,8 @@
       "publisher": "Goldman Sachs Research",
       "evidenceTier": 2,
       "datePublished": "2025-08-01",
-      "excerpt": "Only 2.5% of work tasks are currently at risk of direct displacement from AI. Remaining exposure is augmentation-oriented, boosting productivity without eliminating roles."
+      "excerpt": "Only 2.5% of work tasks are currently at risk of direct displacement from AI. Remaining exposure is augmentation-oriented, boosting productivity without eliminating roles.",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "gartner-ai-layoffs-2025",
@@ -651,7 +673,8 @@
       "publisher": "Gartner",
       "evidenceTier": 3,
       "datePublished": "2025-10-22",
-      "excerpt": "Less than 1% of announced layoffs in the first half of 2025 are attributable to productivity gains from AI; most (79%) have been unrelated to AI."
+      "excerpt": "Less than 1% of announced layoffs in the first half of 2025 are attributable to productivity gains from AI; most (79%) have been unrelated to AI.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "egon-zehnder-cfo-ai-2025",
@@ -660,7 +683,8 @@
       "publisher": "Egon Zehnder",
       "evidenceTier": 1,
       "datePublished": "2025-09-15",
-      "excerpt": "18% of CFOs have already eliminated roles due to AI. Of those, 88% of cuts were in accounting, 38% in FP&A, 33% in treasury. Finance teams are the earliest white-collar AI displacement."
+      "excerpt": "18% of CFOs have already eliminated roles due to AI. Of those, 88% of cuts were in accounting, 38% in FP&A, 33% in treasury. Finance teams are the earliest white-collar AI displacement.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "hbr-ai-potential-layoffs-2026",
@@ -669,7 +693,8 @@
       "publisher": "Harvard Business Review",
       "evidenceTier": 1,
       "datePublished": "2026-01-15",
-      "excerpt": "95% of generative AI projects have failed to deliver measurable returns (citing MIT). PwC: 56% of CEOs said AI failed to boost revenue or lower costs. Layoffs are anticipatory, not performance-driven."
+      "excerpt": "95% of generative AI projects have failed to deliver measurable returns (citing MIT). PwC: 56% of CEOs said AI failed to boost revenue or lower costs. Layoffs are anticipatory, not performance-driven.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "nber-ai-legal-impact-2025",
@@ -678,7 +703,8 @@
       "publisher": "NBER",
       "evidenceTier": 1,
       "datePublished": "2025-12-15",
-      "excerpt": "AI chatbots had no statistically significant impact on hours worked or wages earned for lawyers. Law graduate employment in 2024 reached 93.4% — the highest rate on record."
+      "excerpt": "AI chatbots had no statistically significant impact on hours worked or wages earned for lawyers. Law graduate employment in 2024 reached 93.4% \u2014 the highest rate on record.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "dellacqua-jagged-frontier-2023",
@@ -687,7 +713,8 @@
       "publisher": "HBS (Dell'Acqua et al.)",
       "evidenceTier": 1,
       "datePublished": "2023-09-01",
-      "excerpt": "RCT with 758 BCG consultants: for tasks within AI's capabilities, 12.2% more tasks completed, 25.1% faster, output rated 40% higher quality. For tasks outside AI's frontier, performance was 19pp worse."
+      "excerpt": "RCT with 758 BCG consultants: for tasks within AI's capabilities, 12.2% more tasks completed, 25.1% faster, output rated 40% higher quality. For tasks outside AI's frontier, performance was 19pp worse.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "cognizant-new-work-2026",
@@ -696,7 +723,8 @@
       "publisher": "Cognizant",
       "evidenceTier": 2,
       "datePublished": "2026-01-15",
-      "excerpt": "Education task exposure jumped from 11% to 49% — a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations."
+      "excerpt": "Education task exposure jumped from 11% to 49% \u2014 a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "althoff-reichardt-task-specific-technical-2026",
@@ -705,7 +733,8 @@
       "publisher": "CESifo (Althoff, Reichardt)",
       "evidenceTier": 1,
       "datePublished": "2026-01-21",
-      "excerpt": "administrative occupations (e.g., financial clerks) see a large decline in employment, while science occupations (e.g., life scientists) expand"
+      "excerpt": "administrative occupations (e.g., financial clerks) see a large decline in employment, while science occupations (e.g., life scientists) expand",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "brookings-adaptive-capacity-2026",
@@ -714,7 +743,8 @@
       "publisher": "Brookings Institution (Manning, Aguirre, Muro, Methkupally)",
       "evidenceTier": 2,
       "datePublished": "2026-01-21",
-      "excerpt": "Professional and managerial occupations (56.9 million workers) have relatively higher adaptive capacity on average (0.734) despite substantial exposure (0.400)."
+      "excerpt": "Professional and managerial occupations (56.9 million workers) have relatively higher adaptive capacity on average (0.734) despite substantial exposure (0.400).",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "fri-white-collar-expert-survey-2025",
@@ -734,7 +764,7 @@
       "evidenceTier": 2,
       "datePublished": "2026-02-01",
       "dateAdded": "2026-03-02",
-      "excerpt": "the jobs most vulnerable to AI are elsewhere—including executive assistants, editors, and interpreters/translators (where over 70% of their skills are exposed to AI)."
+      "excerpt": "the jobs most vulnerable to AI are elsewhere\u2014including executive assistants, editors, and interpreters/translators (where over 70% of their skills are exposed to AI)."
     },
     {
       "id": "causalinf-research-publishing-ai-2026",
@@ -743,7 +773,8 @@
       "publisher": "CausalInf Substack (Scott Cunningham)",
       "evidenceTier": 4,
       "datePublished": "2026-03-02",
-      "excerpt": "Project APE — Autonomous Policy Evaluation... has produced 204 papers — with 60 added in a single week... These are fully automated papers, like a version 1.0, with no human iteration whatsoever."
+      "excerpt": "Project APE \u2014 Autonomous Policy Evaluation... has produced 204 papers \u2014 with 60 added in a single week... These are fully automated papers, like a version 1.0, with no human iteration whatsoever.",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "wang-neubig-agent-benchmarks-2026",
@@ -752,7 +783,8 @@
       "publisher": "Carnegie Mellon / Stanford (Wang, Neubig, Fried, Yang et al.)",
       "evidenceTier": 1,
       "datePublished": "2026-03-01",
-      "excerpt": "Management, Legal, and Architecture and Engineering exhibit high ratios of digital work (88%, 70%, and 71%, respectively). Management and Legal are sparsely covered by existing benchmarks (1.4%, 0.3% among all 19179 examples)."
+      "excerpt": "Management, Legal, and Architecture and Engineering exhibit high ratios of digital work (88%, 70%, and 71%, respectively). Management and Legal are sparsely covered by existing benchmarks (1.4%, 0.3% among all 19179 examples).",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "cio-it-jobs-ai-skills-2026",
@@ -761,7 +793,8 @@
       "publisher": "CIO.com",
       "evidenceTier": 3,
       "datePublished": "2026-02-18",
-      "excerpt": "40% plan to reduce staff as skills become redundant"
+      "excerpt": "40% plan to reduce staff as skills become redundant",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "bls-mlr-ai-employment-projections-2025",
@@ -770,7 +803,8 @@
       "publisher": "U.S. Bureau of Labor Statistics (Monthly Labor Review)",
       "evidenceTier": 1,
       "datePublished": "2025-02-10",
-      "excerpt": "Employment of personal financial advisors is projected to grow 17.1 percent from 2023 to 2033, much faster than average. Employment of paralegals and legal assistants is projected to grow only 1.2 percent, slower than the average for all occupations."
+      "excerpt": "Employment of personal financial advisors is projected to grow 17.1 percent from 2023 to 2033, much faster than average. Employment of paralegals and legal assistants is projected to grow only 1.2 percent, slower than the average for all occupations.",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "workday-ai-productivity-rework-2026",
@@ -779,7 +813,8 @@
       "publisher": "Workday / Hanover Research",
       "evidenceTier": 2,
       "datePublished": "2026-01-14",
-      "excerpt": "In most organizations (89%), fewer than half of roles have been updated to reflect AI capabilities."
+      "excerpt": "In most organizations (89%), fewer than half of roles have been updated to reflect AI capabilities.",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "eig-entry-level-ai-displacement-2026",
@@ -788,7 +823,8 @@
       "publisher": "Economic Innovation Group (Iscenko & Curto Millet)",
       "evidenceTier": 2,
       "datePublished": "2026-01-14",
-      "excerpt": "There is no evidence that job postings for junior roles within occupations most exposed to AI have declined more than postings for senior positions. Postings for both levels of seniority have been falling roughly in parallel since their peak in Spring 2022, with the decline in junior positions stabilizing faster."
+      "excerpt": "There is no evidence that job postings for junior roles within occupations most exposed to AI have declined more than postings for senior positions. Postings for both levels of seniority have been falling roughly in parallel since their peak in Spring 2022, with the decline in junior positions stabilizing faster.",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "anthropic-labor-market-impacts-2026",
@@ -797,16 +833,18 @@
       "publisher": "Anthropic (Massenkoff, McCrory)",
       "evidenceTier": 2,
       "datePublished": "2026-03-05",
-      "excerpt": "Workers in the most exposed professions are more likely to be older, female, more educated, and higher-paid. They earn 47% more, on average."
+      "excerpt": "Workers in the most exposed professions are more likely to be older, female, more educated, and higher-paid. They earn 47% more, on average.",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "bls-jolts-december-2025",
-      "title": "Job Openings and Labor Turnover — December 2025",
+      "title": "Job Openings and Labor Turnover \u2014 December 2025",
       "url": "https://www.bls.gov/news.release/jolts.nr0.htm",
       "publisher": "U.S. Bureau of Labor Statistics",
       "evidenceTier": 1,
       "datePublished": "2026-02-05",
-      "excerpt": "Professional & business services openings down 21.8% (-284,000). Financial activities openings down 25.1% (-86,000)."
+      "excerpt": "Professional & business services openings down 21.8% (-284,000). Financial activities openings down 25.1% (-86,000).",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "wsj-ai-military-iran-2026",
@@ -815,7 +853,8 @@
       "publisher": "The Wall Street Journal",
       "evidenceTier": 3,
       "datePublished": "2026-03-07",
-      "excerpt": "The U.S. Army's 18th Airborne Corps, using software from data company Palantir Technologies in a continuing string of exercises dubbed Scarlet Dragon, matched its own record from Iraq as the military's most efficient targeting operation ever, according to Emelia Probasco, a senior fellow at Georgetown University's Center for Security and Emerging Technology. Thanks to AI, the corps achieved that with only 20 people, compared with more than 2,000 staffers employed in Iraq, she said."
+      "excerpt": "The U.S. Army's 18th Airborne Corps, using software from data company Palantir Technologies in a continuing string of exercises dubbed Scarlet Dragon, matched its own record from Iraq as the military's most efficient targeting operation ever, according to Emelia Probasco, a senior fellow at Georgetown University's Center for Security and Emerging Technology. Thanks to AI, the corps achieved that with only 20 people, compared with more than 2,000 staffers employed in Iraq, she said.",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "brynjolfsson-chandar-chen-wc-2025",
@@ -824,7 +863,8 @@
       "publisher": "Stanford Digital Economy Lab (Brynjolfsson, Chandar, Chen)",
       "evidenceTier": 1,
       "datePublished": "2025-11-13",
-      "excerpt": "Workers aged 22 to 25 have experienced a 6% decline in employment from late 2022 to September 2025 in the most AI-exposed occupations, compared to a 6-9% increase for older workers."
+      "excerpt": "Workers aged 22 to 25 have experienced a 6% decline in employment from late 2022 to September 2025 in the most AI-exposed occupations, compared to a 6-9% increase for older workers.",
+      "dateAdded": "2026-03-09"
     },
     {
       "id": "mckinsey-agents-robots-us-2025",
@@ -833,7 +873,8 @@
       "publisher": "McKinsey Global Institute (Yee, Madgavkar, Smit et al.)",
       "evidenceTier": 2,
       "datePublished": "2025-11-25",
-      "excerpt": "Currently demonstrated technologies could automate activities accounting for about 57 percent of US work hours today. AI agents could perform tasks occupying 44 percent of US work hours, while robots could handle another 13 percent. Roles with the highest potential for automation make up about 40 percent of total jobs."
+      "excerpt": "Currently demonstrated technologies could automate activities accounting for about 57 percent of US work hours today. AI agents could perform tasks occupying 44 percent of US work hours, while robots could handle another 13 percent. Roles with the highest potential for automation make up about 40 percent of total jobs.",
+      "dateAdded": "2026-03-10"
     }
   ]
 }

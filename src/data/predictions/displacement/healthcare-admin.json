@@ -113,7 +113,7 @@
         "ncbi-hospital-ai-billing-2024"
       ],
       "evidenceTier": 1,
-      "label": "NCBI: hospital AI billing automation surged 36% → 61% in one year"
+      "label": "NCBI: hospital AI billing automation surged 36% \u2192 61% in one year"
     },
     {
       "date": "2025-01-01",
@@ -232,7 +232,8 @@
       "publisher": "McKinsey & Company",
       "evidenceTier": 2,
       "datePublished": "2021-10-01",
-      "excerpt": "Up to $265B in annual US healthcare administrative costs could be reduced through simplification of coding, billing, and prior authorization processes."
+      "excerpt": "Up to $265B in annual US healthcare administrative costs could be reduced through simplification of coding, billing, and prior authorization processes.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "accenture-health-ai-2023",
@@ -241,7 +242,8 @@
       "publisher": "Accenture",
       "evidenceTier": 2,
       "datePublished": "2023-04-16",
-      "excerpt": "Accenture estimated that 40% of all working hours in healthcare could be supported or augmented by language-based AI."
+      "excerpt": "Accenture estimated that 40% of all working hours in healthcare could be supported or augmented by language-based AI.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "cms-prior-auth-2024",
@@ -250,7 +252,8 @@
       "publisher": "Centers for Medicare & Medicaid Services",
       "evidenceTier": 1,
       "datePublished": "2024-03-01",
-      "excerpt": "CMS rules now allow electronic prior auth with AI-assisted review, enabling automation of an estimated 60% of prior authorization workflows."
+      "excerpt": "CMS rules now allow electronic prior auth with AI-assisted review, enabling automation of an estimated 60% of prior authorization workflows.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "nejm-admin-ai-2024",
@@ -259,16 +262,18 @@
       "publisher": "New England Journal of Medicine",
       "evidenceTier": 1,
       "datePublished": "2024-06-20",
-      "excerpt": "AI medical coding achieves 95% accuracy vs. 90% for human coders. AI-driven scheduling reduces no-show rates by 25%. Administrative cost reduction estimated at 20-35%."
+      "excerpt": "AI medical coding achieves 95% accuracy vs. 90% for human coders. AI-driven scheduling reduces no-show rates by 25%. Administrative cost reduction estimated at 20-35%.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "deloitte-health-2025",
-      "title": "2025 Global Health Care Outlook — AI and Administrative Efficiency",
+      "title": "2025 Global Health Care Outlook \u2014 AI and Administrative Efficiency",
       "url": "https://www2.deloitte.com/us/en/insights/industry/health-care/global-health-care-outlook.html",
       "publisher": "Deloitte",
       "evidenceTier": 2,
       "datePublished": "2025-01-10",
-      "excerpt": "Health systems deploying AI for revenue cycle management report 30% reduction in administrative FTEs within 18 months."
+      "excerpt": "Health systems deploying AI for revenue cycle management report 30% reduction in administrative FTEs within 18 months.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "reuters-health-admin-cuts",
@@ -277,7 +282,8 @@
       "publisher": "STAT News",
       "evidenceTier": 3,
       "datePublished": "2025-10-31",
-      "excerpt": "Health insurance companies deploying AI to combat rising costs driven by hospital use of AI for billing and coding."
+      "excerpt": "Health insurance companies deploying AI to combat rising costs driven by hospital use of AI for billing and coding.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "bls-health-admin-2025",
@@ -286,7 +292,8 @@
       "publisher": "Bureau of Labor Statistics",
       "evidenceTier": 1,
       "datePublished": "2025-07-01",
-      "excerpt": "Medical records, billing, and coding specialist employment projected to decline 8% through 2033, the steepest decline among healthcare occupations."
+      "excerpt": "Medical records, billing, and coding specialist employment projected to decline 8% through 2033, the steepest decline among healthcare occupations.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "unitedhealth-10k-2024",
@@ -295,7 +302,8 @@
       "publisher": "UnitedHealth Group Newsroom",
       "evidenceTier": 2,
       "datePublished": "2025-11-13",
-      "excerpt": "UnitedHealth deployed over 1,000 AI applications across insurance, care delivery, and pharmacy. AI chatbots handled over 65 million customer calls in 2024. Invested $1.5B in AI targeting ~$1B in annual operating cost savings."
+      "excerpt": "UnitedHealth deployed over 1,000 AI applications across insurance, care delivery, and pharmacy. AI chatbots handled over 65 million customer calls in 2024. Invested $1.5B in AI targeting ~$1B in annual operating cost savings.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "healthtech-ai-admin-2025",
@@ -304,7 +312,8 @@
       "publisher": "HealthTech Magazine (CDW)",
       "evidenceTier": 2,
       "datePublished": "2026-01-22",
-      "excerpt": "Administration comprises 25% of all healthcare costs, making it a key target for automation. Organizations are using AI for documentation, coding, scheduling. Ambient documentation frees up to four hours of clinician time."
+      "excerpt": "Administration comprises 25% of all healthcare costs, making it a key target for automation. Organizations are using AI for documentation, coding, scheduling. Ambient documentation frees up to four hours of clinician time.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "himss-medical-coding-ai-2025",
@@ -313,7 +322,8 @@
       "publisher": "HIMSS",
       "evidenceTier": 2,
       "datePublished": "2025-01-01",
-      "excerpt": "Potential annual savings of $122 billion through AI automation of medical coding; 42% of claim denials stem from coding issues."
+      "excerpt": "Potential annual savings of $122 billion through AI automation of medical coding; 42% of claim denials stem from coding issues.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "aha-ai-revenue-cycle-2025",
@@ -322,7 +332,8 @@
       "publisher": "American Hospital Association (Center for Health Innovation)",
       "evidenceTier": 2,
       "datePublished": "2024-06-04",
-      "excerpt": "About 46% of hospitals and health systems now use AI in their RCM operations. AI-driven NLP systems automatically assign billing codes, and AI predicts likely denials and their causes."
+      "excerpt": "About 46% of hospitals and health systems now use AI in their RCM operations. AI-driven NLP systems automatically assign billing codes, and AI predicts likely denials and their causes.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "revere-health-ai-layoffs-2025",
@@ -331,7 +342,8 @@
       "publisher": "ABC4 News / Becker's Hospital Review",
       "evidenceTier": 1,
       "datePublished": "2025-09-15",
-      "excerpt": "Revere Health eliminated 177 positions (billing, coding, accounts receivable) after partnering with IKS Health for AI-driven claims processing and automated billing. Largest documented healthcare admin AI layoff."
+      "excerpt": "Revere Health eliminated 177 positions (billing, coding, accounts receivable) after partnering with IKS Health for AI-driven claims processing and automated billing. Largest documented healthcare admin AI layoff.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "ncbi-hospital-ai-billing-2024",
@@ -340,7 +352,8 @@
       "publisher": "NCBI / ASTP Health IT Data Brief",
       "evidenceTier": 1,
       "datePublished": "2024-12-01",
-      "excerpt": "Hospital use of AI for billing automation surged from 36% to 61% (+25pp) between 2023 and 2024. Scheduling automation grew from 51% to 67%. Fastest-growing AI use cases in healthcare."
+      "excerpt": "Hospital use of AI for billing automation surged from 36% to 61% (+25pp) between 2023 and 2024. Scheduling automation grew from 51% to 67%. Fastest-growing AI use cases in healthcare.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "experian-health-claims-2025",
@@ -349,7 +362,8 @@
       "publisher": "Experian Health",
       "evidenceTier": 2,
       "datePublished": "2025-09-01",
-      "excerpt": "67% of providers believe AI can improve claims processing, but only 14% have implemented AI tools. Among adopters, 69% report reduced denials. Survey of 250 providers."
+      "excerpt": "67% of providers believe AI can improve claims processing, but only 14% have implemented AI tools. Among adopters, 69% report reduced denials. Survey of 250 providers.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "cognizant-new-work-2026",
@@ -358,7 +372,8 @@
       "publisher": "Cognizant",
       "evidenceTier": 2,
       "datePublished": "2026-01-15",
-      "excerpt": "Education task exposure jumped from 11% to 49% — a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations."
+      "excerpt": "Education task exposure jumped from 11% to 49% \u2014 a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "bls-mlr-ai-employment-projections-2025",
@@ -367,16 +382,18 @@
       "publisher": "U.S. Bureau of Labor Statistics (Monthly Labor Review)",
       "evidenceTier": 1,
       "datePublished": "2025-02-10",
-      "excerpt": "Medical transcriptionists, whose employment is projected to decline by 4.7 percent through 2033."
+      "excerpt": "Medical transcriptionists, whose employment is projected to decline by 4.7 percent through 2033.",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "bls-jolts-december-2025",
-      "title": "Job Openings and Labor Turnover — December 2025",
+      "title": "Job Openings and Labor Turnover \u2014 December 2025",
       "url": "https://www.bls.gov/news.release/jolts.nr0.htm",
       "publisher": "U.S. Bureau of Labor Statistics",
       "evidenceTier": 1,
       "datePublished": "2026-02-05",
-      "excerpt": "Healthcare and social assistance openings down 10.8% (-152,000) since October."
+      "excerpt": "Healthcare and social assistance openings down 10.8% (-152,000) since October.",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "brookings-ai-adaptive-capacity-2026",
@@ -385,16 +402,18 @@
       "publisher": "Brookings Metro / GovAI (Manning, Muro, Aguirre)",
       "evidenceTier": 2,
       "datePublished": "2026-01-22",
-      "excerpt": "6.1 million U.S. workers face both high AI exposure and low adaptive capacity. Medical secretaries and administrative assistants (831,000 workers) stand out as one of the largest occupations in this high-risk category. About 86% of these workers are women."
+      "excerpt": "6.1 million U.S. workers face both high AI exposure and low adaptive capacity. Medical secretaries and administrative assistants (831,000 workers) stand out as one of the largest occupations in this high-risk category. About 86% of these workers are women.",
+      "dateAdded": "2026-03-08"
     },
     {
       "id": "gommers-masai-lancet-2026",
       "title": "Interval Cancer, Sensitivity, and Specificity Comparing AI-Supported Mammography Screening with Standard Double Reading without AI in the MASAI Study",
       "url": "https://doi.org/10.1016/S0140-6736(25)00120-X",
-      "publisher": "The Lancet (Gommers, Hernström, Josefsson et al.)",
+      "publisher": "The Lancet (Gommers, Hernstr\u00f6m, Josefsson et al.)",
       "evidenceTier": 1,
       "datePublished": "2026-01-15",
-      "excerpt": "In the AI group, screen readings fell from 109,692 to 61,248—a 44 percent workload reduction—while screen-detected cancers rose from 262 to 338, a 29 percent increase in detection."
+      "excerpt": "In the AI group, screen readings fell from 109,692 to 61,248\u2014a 44 percent workload reduction\u2014while screen-detected cancers rose from 262 to 338, a 29 percent increase in detection.",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "oecd-health-ai-skills-2025",
@@ -403,7 +422,8 @@
       "publisher": "OECD (Manca & Eslava)",
       "evidenceTier": 1,
       "datePublished": "2025-05-01",
-      "excerpt": "Approximately 32% of health employment is classified under potential augmentation, approximately 4.3% of roles (such as Pharmacy Technicians) are identified as potentially automatable, and the high automation risk category (roles like Orderlies and Medical Transcriptionists) constitutes around 0.6% of the health workforce. Analysis of 55.5 million online job postings from Canada, UK, and US (2018-2023)."
+      "excerpt": "Approximately 32% of health employment is classified under potential augmentation, approximately 4.3% of roles (such as Pharmacy Technicians) are identified as potentially automatable, and the high automation risk category (roles like Orderlies and Medical Transcriptionists) constitutes around 0.6% of the health workforce. Analysis of 55.5 million online job postings from Canada, UK, and US (2018-2023).",
+      "dateAdded": "2026-03-09"
     },
     {
       "id": "oecd-health-ai-workforce-2024",
@@ -412,7 +432,8 @@
       "publisher": "OECD",
       "evidenceTier": 2,
       "datePublished": "2024-11-01",
-      "excerpt": "Up to 30% of all administrative tasks performed by physicians, dentists, pharmacists, and specialists can be automated by 2030. Net impact on employment is theoretically ambiguous: displacement effect offset by productivity and reinstatement effects."
+      "excerpt": "Up to 30% of all administrative tasks performed by physicians, dentists, pharmacists, and specialists can be automated by 2030. Net impact on employment is theoretically ambiguous: displacement effect offset by productivity and reinstatement effects.",
+      "dateAdded": "2026-03-10"
     },
     {
       "id": "caqh-index-2025",
@@ -421,7 +442,8 @@
       "publisher": "CAQH (Council for Affordable Quality Healthcare)",
       "evidenceTier": 2,
       "datePublished": "2026-02-19",
-      "excerpt": "U.S. healthcare avoided $258B in admin costs through electronic transactions (17% increase YoY). 50%+ of health plans and 25% of provider organizations now use AI tools in admin workflows. 9% reduction in medical admin spend. Data from 600+ provider organizations representing 63% of insured lives."
+      "excerpt": "U.S. healthcare avoided $258B in admin costs through electronic transactions (17% increase YoY). 50%+ of health plans and 25% of provider organizations now use AI tools in admin workflows. 9% reduction in medical admin spend. Data from 600+ provider organizations representing 63% of insured lives.",
+      "dateAdded": "2026-03-10"
     }
   ]
 }

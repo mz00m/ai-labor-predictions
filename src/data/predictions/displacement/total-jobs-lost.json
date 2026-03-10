@@ -233,7 +233,8 @@
       "publisher": "Goldman Sachs",
       "evidenceTier": 1,
       "datePublished": "2023-03-26",
-      "excerpt": "Generative AI could substitute up to one-fourth of current work. Net impact: estimated 3-7% of total employment displaced after accounting for task reallocation and new job creation."
+      "excerpt": "Generative AI could substitute up to one-fourth of current work. Net impact: estimated 3-7% of total employment displaced after accounting for task reallocation and new job creation.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "oecd-employment-2023",
@@ -242,7 +243,8 @@
       "publisher": "OECD",
       "evidenceTier": 1,
       "datePublished": "2023-07-11",
-      "excerpt": "27% of jobs are in occupations at high risk, but actual displacement depends on adoption speed and policy response."
+      "excerpt": "27% of jobs are in occupations at high risk, but actual displacement depends on adoption speed and policy response.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "imf-ai-work-2024",
@@ -251,7 +253,8 @@
       "publisher": "International Monetary Fund",
       "evidenceTier": 2,
       "datePublished": "2024-01-14",
-      "excerpt": "Almost 40% of global employment is exposed to AI; in advanced economies, roughly 60% of workers face some degree of AI impact."
+      "excerpt": "Almost 40% of global employment is exposed to AI; in advanced economies, roughly 60% of workers face some degree of AI impact.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "acemoglu-macro-2024",
@@ -260,7 +263,8 @@
       "publisher": "NBER (Acemoglu)",
       "evidenceTier": 1,
       "datePublished": "2024-04-01",
-      "excerpt": "AI may increase TFP by only 0.53-0.66% over 10 years; limited net job losses of ~2% as many affected tasks are only partially automated."
+      "excerpt": "AI may increase TFP by only 0.53-0.66% over 10 years; limited net job losses of ~2% as many affected tasks are only partially automated.",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "wef-future-jobs-2024",
@@ -269,7 +273,8 @@
       "publisher": "World Economic Forum",
       "evidenceTier": 2,
       "datePublished": "2024-09-15",
-      "excerpt": "Employers expect 23% of jobs to change in the next five years, with a net decline of 2-4% of total roles once job creation offsets displacement."
+      "excerpt": "Employers expect 23% of jobs to change in the next five years, with a net decline of 2-4% of total roles once job creation offsets displacement.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "forrester-jobs-2025",
@@ -278,7 +283,8 @@
       "publisher": "Forrester",
       "evidenceTier": 2,
       "datePublished": "2025-01-06",
-      "excerpt": "Forrester estimates 6% of US jobs will be lost to AI and automation by 2030, partially offset by new job creation."
+      "excerpt": "Forrester estimates 6% of US jobs will be lost to AI and automation by 2030, partially offset by new job creation.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "pnas-unemployment-2025",
@@ -287,7 +293,8 @@
       "publisher": "PNAS Nexus",
       "evidenceTier": 1,
       "datePublished": "2025-02-01",
-      "excerpt": "Workers in AI-exposed occupations face significantly higher unemployment risk, suggesting aggregate job losses may exceed earlier estimates."
+      "excerpt": "Workers in AI-exposed occupations face significantly higher unemployment risk, suggesting aggregate job losses may exceed earlier estimates.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "medium-doom-2025",
@@ -295,7 +302,8 @@
       "url": "https://medium.com/@jamiebulloch/were-not-ready-for-mass-ai-unemployment-f54d39a4c08d",
       "publisher": "Medium",
       "evidenceTier": 4,
-      "datePublished": "2025-05-01"
+      "datePublished": "2025-05-01",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "bls-projections-2025",
@@ -303,7 +311,8 @@
       "url": "https://www.bls.gov/emp/",
       "publisher": "Bureau of Labor Statistics",
       "evidenceTier": 1,
-      "datePublished": "2025-08-01"
+      "datePublished": "2025-08-01",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "sp500-layoff-tracker-2025",
@@ -312,7 +321,8 @@
       "publisher": "CNBC / Challenger, Gray & Christmas",
       "evidenceTier": 2,
       "datePublished": "2025-12-21",
-      "excerpt": "Challenger, Gray & Christmas reports AI has been cited as the reason for 54,694 planned layoffs in 2025. Overall job cuts topped 1 million in 2025."
+      "excerpt": "Challenger, Gray & Christmas reports AI has been cited as the reason for 54,694 planned layoffs in 2025. Overall job cuts topped 1 million in 2025.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "indeed-total-postings-2025",
@@ -321,7 +331,8 @@
       "publisher": "Indeed Hiring Lab",
       "evidenceTier": 2,
       "datePublished": "2025-01-28",
-      "excerpt": "Data entry (-27%), customer service (-18%), and basic admin (-22%) postings saw steepest declines. AI/ML postings +42% YoY."
+      "excerpt": "Data entry (-27%), customer service (-18%), and basic admin (-22%) postings saw steepest declines. AI/ML postings +42% YoY.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "nber-csuite-survey-2025",
@@ -330,7 +341,8 @@
       "publisher": "NBER",
       "evidenceTier": 1,
       "datePublished": "2025-11-01",
-      "excerpt": "Survey of 2,500 C-suite executives finds 90% report no significant net employment impact from AI adoption as of Q3 2025, though task reallocation is widespread."
+      "excerpt": "Survey of 2,500 C-suite executives finds 90% report no significant net employment impact from AI adoption as of Q3 2025, though task reallocation is widespread.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "challenger-ai-layoffs-2025",
@@ -339,7 +351,8 @@
       "publisher": "Challenger, Gray & Christmas",
       "evidenceTier": 3,
       "datePublished": "2026-01-10",
-      "excerpt": "Employers cited AI as a direct cause for 55,000 job cuts in 2025, concentrated in customer service, data entry, and back-office operations."
+      "excerpt": "Employers cited AI as a direct cause for 55,000 job cuts in 2025, concentrated in customer service, data entry, and back-office operations.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "pwbm-ai-productivity-2025",
@@ -348,7 +361,8 @@
       "publisher": "Penn Wharton Budget Model (Arnon, Smetters)",
       "evidenceTier": 1,
       "datePublished": "2025-09-08",
-      "excerpt": "Roughly 10% of US work affected in the short run; AI will increase productivity and GDP by 1.5% by 2035. Jobs that AI can completely replace saw 0.75% employment fall 2021-2024."
+      "excerpt": "Roughly 10% of US work affected in the short run; AI will increase productivity and GDP by 1.5% by 2035. Jobs that AI can completely replace saw 0.75% employment fall 2021-2024.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "gimbel-yale-ai-labor-2025",
@@ -357,7 +371,8 @@
       "publisher": "Yale Budget Lab (Gimbel, Kinder, Kendall, Lee)",
       "evidenceTier": 1,
       "datePublished": "2025-10-01",
-      "excerpt": "No economy-wide employment disruption tied to AI since ChatGPT's debut. Measures of AI exposure show no clear relationship with changes in employment or unemployment."
+      "excerpt": "No economy-wide employment disruption tied to AI since ChatGPT's debut. Measures of AI exposure show no clear relationship with changes in employment or unemployment.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "humlum-vestergaard-chatgpt-2025",
@@ -366,7 +381,8 @@
       "publisher": "PNAS (Humlum, Vestergaard)",
       "evidenceTier": 1,
       "datePublished": "2025-01-06",
-      "excerpt": "Half of workers in exposed occupations have used ChatGPT; younger, male, higher-achieving workers lead adoption. Women 16pp less likely to use for work."
+      "excerpt": "Half of workers in exposed occupations have used ChatGPT; younger, male, higher-achieving workers lead adoption. Women 16pp less likely to use for work.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "goldman-ai-workforce-2025",
@@ -375,7 +391,8 @@
       "publisher": "Goldman Sachs Research",
       "evidenceTier": 2,
       "datePublished": "2025-08-01",
-      "excerpt": "2.5% of US employment at risk of displacement from current AI use cases; 60% of current US workers in occupations that didn't exist in 1940."
+      "excerpt": "2.5% of US employment at risk of displacement from current AI use cases; 60% of current US workers in occupations that didn't exist in 1940.",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "ramp-freelance-velocity-2025",
@@ -384,7 +401,8 @@
       "publisher": "Ramp",
       "evidenceTier": 1,
       "datePublished": "2025-09-20",
-      "excerpt": "More than half of businesses using freelancers in 2022 have stopped entirely; freelance marketplace spend fell from 0.66% to 0.14% of total business spend."
+      "excerpt": "More than half of businesses using freelancers in 2022 have stopped entirely; freelance marketplace spend fell from 0.66% to 0.14% of total business spend.",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "brookings-adaptive-capacity-2026",
@@ -393,7 +411,8 @@
       "publisher": "Brookings Institution (Manning, Aguirre, Muro, Methkupally)",
       "evidenceTier": 2,
       "datePublished": "2026-01-21",
-      "excerpt": "6.1 million workers (4.2% of the workforce in our sample) work in occupations that are both highly exposed and where workers have low expected adaptive capacity."
+      "excerpt": "6.1 million workers (4.2% of the workforce in our sample) work in occupations that are both highly exposed and where workers have low expected adaptive capacity.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "anthropic-labor-market-impacts-2026",
@@ -402,7 +421,8 @@
       "publisher": "Anthropic (Massenkoff, McCrory)",
       "evidenceTier": 2,
       "datePublished": "2026-03-05",
-      "excerpt": "The averaged estimate in the post-ChatGPT era is a 14% drop in the job finding rate compared to that in 2022 in the exposed occupations, although this is just barely statistically significant. (There is no such decrease for workers older than 25.)"
+      "excerpt": "The averaged estimate in the post-ChatGPT era is a 14% drop in the job finding rate compared to that in 2022 in the exposed occupations, although this is just barely statistically significant. (There is no such decrease for workers older than 25.)",
+      "dateAdded": "2026-03-07"
     },
     {
       "id": "yotzov-firm-data-ai-2026",
@@ -411,7 +431,8 @@
       "publisher": "NBER (Yotzov, Barrero, Bloom, Bunn, Davis et al.)",
       "evidenceTier": 1,
       "datePublished": "2026-02-15",
-      "excerpt": "Looking ahead three years, executives predict a 1.4 percent productivity boost and 0.8 percent output increase alongside a 0.7 percent employment reduction\u2014while employees forecast a 0.5 percent employment increase."
+      "excerpt": "Looking ahead three years, executives predict a 1.4 percent productivity boost and 0.8 percent output increase alongside a 0.7 percent employment reduction\u2014while employees forecast a 0.5 percent employment increase.",
+      "dateAdded": "2026-03-07"
     }
   ]
 }
