@@ -42,6 +42,8 @@ function getContextLine(prediction: Prediction, aggregateValue: number): string 
     return `${v}% of healthcare admin roles (coding, billing, prior auth) projected to be automated — one of the fastest-moving sectors.`;
   if (prediction.slug === "education-sector-displacement")
     return `${v}% of education support roles face displacement as AI handles tutoring, grading, and content creation.`;
+  if (prediction.slug === "financial-services-displacement")
+    return `${v}% of financial services roles projected to be displaced by AI by 2030 — high automation potential (54%) but observed cuts remain modest so far.`;
   if (prediction.slug === "high-skill-wage-premium")
     return `Workers with AI/ML skills earn ~${v}% more than median — the gap is widening.`;
   if (prediction.slug === "median-wage-impact")
