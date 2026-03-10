@@ -98,6 +98,15 @@
       "label": "NEJM: 20-35% admin cost reduction"
     },
     {
+      "date": "2024-11-01",
+      "direction": "down",
+      "sourceIds": [
+        "oecd-health-ai-workforce-2024"
+      ],
+      "evidenceTier": 2,
+      "label": "OECD: Up to 30% of physician admin tasks automatable by 2030"
+    },
+    {
       "date": "2024-12-01",
       "direction": "down",
       "sourceIds": [
@@ -204,6 +213,15 @@
       ],
       "evidenceTier": 1,
       "label": "BLS JOLTS: Healthcare openings down 10.8% (-152K) since Oct"
+    },
+    {
+      "date": "2026-02-19",
+      "direction": "down",
+      "sourceIds": [
+        "caqh-index-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "CAQH: 50%+ of health plans use AI in admin; $258B in costs avoided via automation"
     }
   ],
   "sources": [
@@ -386,6 +404,24 @@
       "evidenceTier": 1,
       "datePublished": "2025-05-01",
       "excerpt": "Approximately 32% of health employment is classified under potential augmentation, approximately 4.3% of roles (such as Pharmacy Technicians) are identified as potentially automatable, and the high automation risk category (roles like Orderlies and Medical Transcriptionists) constitutes around 0.6% of the health workforce. Analysis of 55.5 million online job postings from Canada, UK, and US (2018-2023)."
+    },
+    {
+      "id": "oecd-health-ai-workforce-2024",
+      "title": "Artificial Intelligence and the Health Workforce: Perspectives from Medical Associations",
+      "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/11/artificial-intelligence-and-the-health-workforce_c8e4433d/9a31d8af-en.pdf",
+      "publisher": "OECD",
+      "evidenceTier": 2,
+      "datePublished": "2024-11-01",
+      "excerpt": "Up to 30% of all administrative tasks performed by physicians, dentists, pharmacists, and specialists can be automated by 2030. Net impact on employment is theoretically ambiguous: displacement effect offset by productivity and reinstatement effects."
+    },
+    {
+      "id": "caqh-index-2025",
+      "title": "2025 CAQH Index Shows U.S. Healthcare Avoided $258 Billion and Accelerated Automation, Interoperability and AI Adoption",
+      "url": "https://www.caqh.org/blog/2025-caqh-index-shows-u.s.-healthcare-avoided-258-billion-and-accelerated-automation-interoperability-and-ai-adoption",
+      "publisher": "CAQH (Council for Affordable Quality Healthcare)",
+      "evidenceTier": 2,
+      "datePublished": "2026-02-19",
+      "excerpt": "U.S. healthcare avoided $258B in admin costs through electronic transactions (17% increase YoY). 50%+ of health plans and 25% of provider organizations now use AI tools in admin workflows. 9% reduction in medical admin spend. Data from 600+ provider organizations representing 63% of insured lives."
     }
   ]
 }

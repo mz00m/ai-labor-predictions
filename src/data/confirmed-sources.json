@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-10",
-  "totalSources": 365,
-  "verifiedCount": 365,
+  "totalSources": 368,
+  "verifiedCount": 368,
   "sources": {
     "revelio-labs-wage-divide-2025": {
       "id": "revelio-labs-wage-divide-2025",
@@ -4980,6 +4980,48 @@
       "excerpt": "Today, AI apps have crossed 1 billion weekly active users and ChatGPT alone accounts for 900M of that.",
       "usedIn": [
         "genai-work-adoption"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "oecd-health-ai-workforce-2024": {
+      "id": "oecd-health-ai-workforce-2024",
+      "title": "Artificial Intelligence and the Health Workforce: Perspectives from Medical Associations",
+      "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/11/artificial-intelligence-and-the-health-workforce_c8e4433d/9a31d8af-en.pdf",
+      "publisher": "OECD",
+      "evidenceTier": 2,
+      "datePublished": "2024-11-01",
+      "excerpt": "Up to 30% of all administrative tasks performed by physicians, dentists, pharmacists, and specialists can be automated by 2030.",
+      "usedIn": [
+        "healthcare-admin-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "caqh-index-2025": {
+      "id": "caqh-index-2025",
+      "title": "2025 CAQH Index Shows U.S. Healthcare Avoided $258 Billion and Accelerated Automation",
+      "url": "https://www.caqh.org/blog/2025-caqh-index-shows-u.s.-healthcare-avoided-258-billion-and-accelerated-automation-interoperability-and-ai-adoption",
+      "publisher": "CAQH (Council for Affordable Quality Healthcare)",
+      "evidenceTier": 2,
+      "datePublished": "2026-02-19",
+      "excerpt": "U.S. healthcare avoided $258B in admin costs. 50%+ of health plans and 25% of provider organizations use AI tools in admin workflows.",
+      "usedIn": [
+        "healthcare-admin-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "pew-ai-experts-predictions-2025": {
+      "id": "pew-ai-experts-predictions-2025",
+      "title": "Predictions for AI's Next 20 Years by the US Public and AI Experts",
+      "url": "https://www.pewresearch.org/internet/2025/04/03/public-and-expert-predictions-for-ais-next-20-years/",
+      "publisher": "Pew Research Center",
+      "evidenceTier": 1,
+      "datePublished": "2025-04-03",
+      "excerpt": "31% of AI experts predict AI will lead to fewer teacher jobs in 20 years. Survey of 1,013 AI experts and 5,410 US adults.",
+      "usedIn": [
+        "education-sector-displacement"
       ],
       "verified": true,
       "synthetic": false
