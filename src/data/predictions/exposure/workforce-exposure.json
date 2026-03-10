@@ -132,6 +132,15 @@
   ],
   "overlays": [
     {
+      "date": "2024-01-24",
+      "direction": "neutral",
+      "sourceIds": [
+        "mcelheran-brynjolfsson-abs-ai-adoption-2024"
+      ],
+      "evidenceTier": 1,
+      "label": "JEMS/Census ABS: 18.2% of workers at AI-using firms by 2017 (n=850K firms)"
+    },
+    {
       "date": "2024-03-01",
       "direction": "up",
       "sourceIds": [
@@ -223,6 +232,15 @@
     }
   ],
   "sources": [
+    {
+      "id": "mcelheran-brynjolfsson-abs-ai-adoption-2024",
+      "title": "AI Adoption in America: Who, What, and Where",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/jems.12576",
+      "publisher": "Journal of Economics & Management Strategy (McElheran, Li, Brynjolfsson et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2024-01-24",
+      "excerpt": "Employment-weighted adoption was just over 18%. AI use in production was found in every sector of the economy. Manufacturing and information led at roughly 12% each. Based on the 2018 Annual Business Survey of 850,000 firms."
+    },
     {
       "id": "goldman-300m",
       "title": "The Potentially Large Effects of AI on Economic Growth",
