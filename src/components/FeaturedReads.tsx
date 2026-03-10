@@ -10,12 +10,12 @@ interface Article {
 
 const articles: Article[] = [
   {
-    author: "Raimondo (NYT Opinion)",
-    title: "America Cannot Withstand the Economic Shock That's Coming",
+    author: "Ranganathan & Ye (HBR)",
+    title: "AI Doesn\u2019t Reduce Work \u2014 It Intensifies It",
     summary:
-      "Former Commerce Secretary calls for a new grand bargain between public and private sectors to prevent AI-driven mass unemployment.",
-    date: "Mar 6",
-    url: "https://www.nytimes.com/2026/03/06/opinion/ai-labor-unemployment.html",
+      "Eight-month study of 200 employees: 83% said AI increased workload. Workers voluntarily took on more pace, scope, and hours \u2014 leading to burnout and cognitive fatigue.",
+    date: "Feb 9",
+    url: "https://hbr.org/2026/02/ai-doesnt-reduce-work-it-intensifies-it",
     accent: "border-l-emerald-500",
   },
   {
