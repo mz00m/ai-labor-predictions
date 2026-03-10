@@ -1,0 +1,14 @@
+{
+  "id": "metr-becker-ai-dev-productivity-2025",
+  "abstract": "This randomized controlled trial measures how AI tools at the February-June 2025 frontier affect the productivity of experienced open-source developers. 16 developers with moderate AI experience completed 246 tasks in mature projects where they averaged 5 years of prior experience. Contrary to developer expectations of 24% time savings, allowing AI tools (primarily Cursor Pro with Claude 3.5/3.7 Sonnet) actually increased task completion time by 19%.",
+  "keyFindings": [
+    "Allowing AI tools increased task completion time by 19% for experienced open-source developers (confidence interval: +2% to +39%)",
+    "Before starting tasks, developers forecast that AI would reduce completion time by 24%; after completing the study, they estimated 20% savings",
+    "A quarter of participants saw increased performance, while three-quarters saw reduced performance",
+    "When AI is allowed, developers spend less time actively coding and more time prompting AI, waiting on outputs, and idle",
+    "Economics experts predicted 39% speedup and ML experts predicted 38% speedup, both far from actual results"
+  ],
+  "methodology": "Randomized controlled trial with 16 experienced open-source developers completing 246 tasks across mature projects. Each task randomly assigned to allow or disallow AI tools. Developers averaged 5 years of experience on their projects. Primary AI tools: Cursor Pro with Claude 3.5/3.7 Sonnet.",
+  "qualifiers": "Small sample size (16 developers). Setting is experienced developers working on mature, complex codebases — results may not generalize to greenfield development or less experienced developers. Influence of experimental artifacts cannot be entirely ruled out.",
+  "fetchedAt": "2026-03-10"
+}

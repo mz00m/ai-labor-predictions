@@ -1,0 +1,14 @@
+{
+  "id": "nber-delfino-unwilling-reskill-2026",
+  "abstract": "This study examines barriers preventing jobseekers from pursuing reskilling in high-demand occupations, using a discrete choice experiment with Italian jobseekers. The key finding is that perceived 'identity fit' — whether a new skill feels compatible with a person's sense of self — is the most important factor shaping reskilling decisions, often outweighing beliefs about monetary returns or employer demand.",
+  "keyFindings": [
+    "Perceived identity fit in the target occupation is the most important individual-level factor shaping reskilling decisions",
+    "Willingness to pay estimates show participants are willing to pay to reskill into IT but would require compensation to reskill into construction",
+    "Beliefs about monetary returns and social status help explain differences in reskilling demand",
+    "A light-touch randomized information intervention providing data on occupational returns significantly increases reskilling interest",
+    "The information intervention also increased actual engagement in real-world training"
+  ],
+  "methodology": "Discrete choice experiment with real-world Italian jobseekers examining willingness to reskill into two high-demand occupations (IT assistant and construction technician). Includes a randomized information intervention. Published as NBER Working Paper 34633 and CEPR Discussion Paper 21055.",
+  "qualifiers": "Study focuses on Italian jobseekers; labor market context may differ from the US. Reskilling is studied for two specific occupations (IT assistant and construction technician). Study is about general reskilling barriers, not AI-specific retraining.",
+  "fetchedAt": "2026-03-10"
+}

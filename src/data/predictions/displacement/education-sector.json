@@ -179,6 +179,15 @@
       ],
       "evidenceTier": 2,
       "label": "Ellucian: 66% of higher ed institutions leveraging AI, up from 49% YoY (n=779)"
+    },
+    {
+      "date": "2026-01-28",
+      "direction": "neutral",
+      "sourceIds": [
+        "anthropic-shen-ai-skill-formation-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Anthropic/Shen: AI-assisted devs score 17pp lower on comprehension (50% vs 67%, n=52)"
     }
   ],
   "sources": [
@@ -325,6 +334,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-01-15",
       "excerpt": "Education task exposure jumped from 11% to 49% — a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations."
+    },
+    {
+      "id": "anthropic-shen-ai-skill-formation-2026",
+      "title": "How AI Impacts Skill Formation",
+      "url": "https://arxiv.org/abs/2601.20245",
+      "publisher": "Anthropic (Shen, Tamkin)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-28",
+      "excerpt": "AI use impairs conceptual understanding, code reading, and debugging abilities. The AI group averaged 50% on the quiz, compared to 67% in the hand-coding group. The AI didn't make developers faster on average."
     },
     {
       "id": "ellucian-higher-ed-ai-survey-2026",

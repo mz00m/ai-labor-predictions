@@ -1,0 +1,14 @@
+{
+  "id": "nhh-carvajal-ai-gender-gap-2024",
+  "abstract": "This study examines gender differences in generative AI adoption through two preregistered experiments at a top business school in Norway. The authors find a substantial gender gap: male students are 25% more likely to be high AI users, with the gap widest among highest-performing women. A survey of 1,134 managers shows acquiring AI skills would enhance job prospects, especially for top female students currently avoiding AI.",
+  "keyFindings": [
+    "Among 595 business school students in Norway, male students were 25% more likely to be high AI users",
+    "The gender gap was widest among the highest-performing female students",
+    "Female students were more likely to view AI use as 'cheating' and less likely to persist when tools did not deliver on first try",
+    "When AI use was explicitly allowed, the gender gap completely closed — over 80% of both men and women intended to use AI",
+    "Top female students with AI expertise were rated higher by managers than those without, while male candidates did not receive the same premium"
+  ],
+  "methodology": "Two preregistered survey experiments. Study 1: 595 students at NHH (Norwegian School of Economics). Study 2: 1,134 managers across industries that typically hire NHH graduates. Includes causal evidence on policy interventions (explicit permission vs. bans).",
+  "qualifiers": "Sample is from a single elite business school in Norway; may not generalize to broader populations. Student adoption patterns may differ from workforce adoption. Cultural context (Norway) may influence gender dynamics differently than other countries.",
+  "fetchedAt": "2026-03-10"
+}

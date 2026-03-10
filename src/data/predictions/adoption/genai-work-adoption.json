@@ -145,6 +145,13 @@
       "sourceIds": ["apoorv03-consumer-ai-usage-2026"],
       "evidenceTier": 4,
       "label": "@apoorv03: AI apps cross 1B WAU; ChatGPT at 900M (Sensortower)"
+    },
+    {
+      "date": "2024-10-01",
+      "direction": "neutral",
+      "sourceIds": ["nhh-carvajal-ai-gender-gap-2024"],
+      "evidenceTier": 1,
+      "label": "NHH/Carvajal: Male students 25% more likely to be high AI users (n=595)"
     }
   ],
   "sources": [
@@ -219,6 +226,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-01-19",
       "excerpt": "AI skills significantly increase interview invitation probabilities by approximately 8 to 15 percentage points, compared with candidates without such skills"
+    },
+    {
+      "id": "nhh-carvajal-ai-gender-gap-2024",
+      "title": "Will Artificial Intelligence Get in the Way of Achieving Gender Equality?",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4758197",
+      "publisher": "NHH Norwegian School of Economics (Carvajal, Franco, Isaksson)",
+      "evidenceTier": 1,
+      "datePublished": "2024-10-01",
+      "excerpt": "Among 595 business school students in Norway, male students were 25 percent more likely to be high AI users, and the gap was widest among the highest-performing women."
     },
     {
       "id": "arxiv-what-do-professional-2025",
