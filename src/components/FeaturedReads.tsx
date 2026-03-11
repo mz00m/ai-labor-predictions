@@ -10,6 +10,15 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Oks",
+    title: "Why the ATM Didn\u2019t Kill Bank Teller Jobs, but the iPhone Did",
+    summary:
+      "Task automation rarely displaces workers; paradigm replacement does. Implications for AI displacement timelines.",
+    date: "Mar 10",
+    url: "https://davidoks.blog/p/why-the-atm-didnt-kill-bank-teller",
+    accent: "border-l-blue-500",
+  },
+  {
     author: "Kolko (PIIE)",
     title: "AI and the Labor Market Is Still in the First Inning",
     summary:
@@ -44,15 +53,6 @@ const articles: Article[] = [
     date: "Mar 4",
     url: "https://www.linkedin.com/pulse/introducing-air-ai-resilience-report-jared-chung-gxfec",
     accent: "border-l-rose-500",
-  },
-  {
-    author: "Oks",
-    title: "Why the ATM Didn\u2019t Kill Bank Teller Jobs, but the iPhone Did",
-    summary:
-      "Task automation rarely displaces workers; paradigm replacement does. Implications for AI displacement timelines.",
-    date: "Mar 10",
-    url: "https://davidoks.blog/p/why-the-atm-didnt-kill-bank-teller",
-    accent: "border-l-blue-500",
   },
 ];
 
