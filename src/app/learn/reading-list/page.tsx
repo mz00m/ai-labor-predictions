@@ -1,4 +1,6 @@
 import readingListData from "@/data/reading-list.json";
+import RecentSources from "@/components/RecentSources";
+import { getRecentSources } from "@/lib/sources";
 
 interface Article {
   title: string;
@@ -50,9 +52,10 @@ export default function ReadingListPage() {
   const articles = readingListData.articles as Article[];
   const grouped = groupByWeek(articles);
   const weeks = Array.from(grouped.keys()).sort((a, b) => b.localeCompare(a));
+  const recentSources = getRecentSources(20);
 
   return (
-    <main className="max-w-4xl mx-auto px-6 sm:px-10 py-12">
+    <main className="max-w-7xl mx-auto px-6 sm:px-10 py-12">
       <header className="mb-10">
         <h1 className="text-2xl font-bold text-[var(--foreground)] tracking-tight">
           Reading List
@@ -64,58 +67,66 @@ export default function ReadingListPage() {
         </p>
       </header>
 
-      <div className="space-y-10">
-        {weeks.map((week) => {
-          const weekArticles = grouped.get(week)!;
-          return (
-            <section key={week}>
-              <h2 className="text-[11px] font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
-                {formatWeekLabel(week)}
-              </h2>
-              <div className="space-y-3">
-                {weekArticles.map((a) => (
-                  <a
-                    key={a.url}
-                    href={a.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group block rounded-lg border border-black/[0.06] bg-black/[0.01] dark:bg-white/[0.02] px-5 py-4 transition-all hover:border-black/[0.12] hover:bg-black/[0.03] dark:hover:bg-white/[0.04]"
-                  >
-                    <div className="flex items-start justify-between gap-4">
-                      <div className="min-w-0 flex-1">
-                        <div className="flex items-center gap-2 mb-1">
-                          <span
-                            className={`text-[10px] font-semibold uppercase tracking-wide px-1.5 py-0.5 rounded ${TIER_COLORS[a.tier] ?? TIER_COLORS[4]}`}
-                          >
-                            {TIER_LABELS[a.tier] ?? "Other"}
-                          </span>
-                          <span className="text-[11px] text-[var(--muted)]">
-                            {a.publisher}
-                          </span>
-                          <span className="text-[11px] text-[var(--muted)] opacity-50">
-                            {new Date(a.date + "T00:00:00").toLocaleDateString(
-                              "en-US",
-                              { month: "short", day: "numeric", year: "numeric" }
-                            )}
-                          </span>
+      <div className="flex gap-8">
+        {/* Main content */}
+        <div className="flex-1 min-w-0 space-y-10">
+          {weeks.map((week) => {
+            const weekArticles = grouped.get(week)!;
+            return (
+              <section key={week}>
+                <h2 className="text-[11px] font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
+                  {formatWeekLabel(week)}
+                </h2>
+                <div className="space-y-3">
+                  {weekArticles.map((a) => (
+                    <a
+                      key={a.url}
+                      href={a.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group block rounded-lg border border-black/[0.06] bg-black/[0.01] dark:bg-white/[0.02] px-5 py-4 transition-all hover:border-black/[0.12] hover:bg-black/[0.03] dark:hover:bg-white/[0.04]"
+                    >
+                      <div className="flex items-start justify-between gap-4">
+                        <div className="min-w-0 flex-1">
+                          <div className="flex items-center gap-2 mb-1">
+                            <span
+                              className={`text-[10px] font-semibold uppercase tracking-wide px-1.5 py-0.5 rounded ${TIER_COLORS[a.tier] ?? TIER_COLORS[4]}`}
+                            >
+                              {TIER_LABELS[a.tier] ?? "Other"}
+                            </span>
+                            <span className="text-[11px] text-[var(--muted)]">
+                              {a.publisher}
+                            </span>
+                            <span className="text-[11px] text-[var(--muted)] opacity-50">
+                              {new Date(a.date + "T00:00:00").toLocaleDateString(
+                                "en-US",
+                                { month: "short", day: "numeric", year: "numeric" }
+                              )}
+                            </span>
+                          </div>
+                          <h3 className="text-[14px] font-bold text-[var(--foreground)] leading-snug group-hover:text-[var(--accent)] transition-colors">
+                            {a.title}
+                          </h3>
+                          <p className="text-[11px] text-[var(--muted)] mt-0.5">
+                            {a.author}
+                          </p>
                         </div>
-                        <h3 className="text-[14px] font-bold text-[var(--foreground)] leading-snug group-hover:text-[var(--accent)] transition-colors">
-                          {a.title}
-                        </h3>
-                        <p className="text-[11px] text-[var(--muted)] mt-0.5">
-                          {a.author}
-                        </p>
                       </div>
-                    </div>
-                    <p className="text-[12px] text-[var(--foreground)] opacity-80 leading-relaxed mt-2">
-                      {a.takeaway}
-                    </p>
-                  </a>
-                ))}
-              </div>
-            </section>
-          );
-        })}
+                      <p className="text-[12px] text-[var(--foreground)] opacity-80 leading-relaxed mt-2">
+                        {a.takeaway}
+                      </p>
+                    </a>
+                  ))}
+                </div>
+              </section>
+            );
+          })}
+        </div>
+
+        {/* Sidebar: Recently Added Sources */}
+        <aside className="hidden lg:block w-72 shrink-0 sticky top-24 self-start">
+          <RecentSources sources={recentSources} />
+        </aside>
       </div>
     </main>
   );

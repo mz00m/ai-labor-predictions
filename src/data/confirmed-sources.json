@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-11",
-  "totalSources": 369,
-  "verifiedCount": 369,
+  "totalSources": 370,
+  "verifiedCount": 370,
   "sources": {
     "revelio-labs-wage-divide-2025": {
       "id": "revelio-labs-wage-divide-2025",
@@ -5067,6 +5067,20 @@
         "ai-adoption-rate",
         "overall-us-displacement",
         "white-collar-professional-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "google-amie-clinical-feasibility-2026": {
+      "id": "google-amie-clinical-feasibility-2026",
+      "title": "A prospective clinical feasibility study of a conversational diagnostic AI in an ambulatory primary care clinic",
+      "url": "https://arxiv.org/abs/2603.08448",
+      "publisher": "Google Research / Google DeepMind / Beth Israel Deaconess Medical Center",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-09",
+      "excerpt": "AMIE's differential diagnosis included the final diagnosis in 90% of cases, with 75% top-3 accuracy. Blinded assessment suggested similar overall DDx and Mx plan quality between AMIE and PCPs. Human safety supervisors did not need to intervene to stop any consultations.",
+      "usedIn": [
+        "healthcare-admin-displacement"
       ],
       "verified": true,
       "synthetic": false

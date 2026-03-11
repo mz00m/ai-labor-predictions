@@ -1,0 +1,14 @@
+{
+  "id": "google-amie-clinical-feasibility-2026",
+  "abstract": "A prospective, single-arm feasibility study of an LLM-based conversational AI system (AMIE, Articulate Medical Intelligence Explorer) that conducted clinical history taking and presented potential diagnoses for patients to discuss with their provider at urgent care appointments at Beth Israel Deaconess Medical Center. The study enrolled 100 adult patients from April to November 2025 and found that AMIE's diagnostic accuracy and management plan quality were statistically comparable to primary care providers, with no safety interventions required during any patient interaction.",
+  "keyFindings": [
+    "AMIE's differential diagnosis included the final diagnosis in 90% of cases, with 75% top-3 accuracy, per chart review 8 weeks post-encounter.",
+    "Blinded assessment found no significant differences between AMIE and PCP differential diagnosis quality (p = 0.6) or management plan appropriateness and safety (p = 0.1 and 1.0).",
+    "PCPs outperformed AMIE in management plan practicality (p = 0.003) and cost effectiveness (p = 0.004).",
+    "Human safety supervisors monitored all 100 patient-AMIE interactions in real time and did not need to intervene to stop any consultations.",
+    "Patient attitudes toward AI in healthcare improved significantly after interacting with AMIE (p < 0.001)."
+  ],
+  "methodology": "Prospective, single-arm clinical feasibility study at Healthcare Associates (HCA), an academic primary care practice at Beth Israel Deaconess Medical Center with 56 attending physicians and 110 resident physicians. 100 adult patients completed text-chat AMIE interactions up to 5 days before their appointment (April-November 2025). AMIE used Gemini 2.5 base models with Thinking Mode and a state-aware chain-of-reasoning strategy. Blinded specialist assessment compared AMIE and PCP diagnostic and management outputs. Chart review at 8 weeks assessed diagnostic accuracy against final diagnosis.",
+  "qualifiers": "Single-arm design without randomization limits causal inference. Study conducted at a single academic medical center, limiting generalizability. Small sample size (n=100). PCPs outperformed AMIE on practicality and cost-effectiveness of management plans. Text-based interaction only; does not assess physical examination capabilities. Authors note further research needed before clinical deployment.",
+  "fetchedAt": "2026-03-11"
+}
