@@ -46,12 +46,12 @@ const articles: Article[] = [
     accent: "border-l-rose-500",
   },
   {
-    author: "Kinder (Brookings)",
-    title: "What Deindustrialization Did to Men, AI May Do to Women",
+    author: "Oks",
+    title: "Why the ATM Didn\u2019t Kill Bank Teller Jobs, but the iPhone Did",
     summary:
-      "Millions of women in clerical/CS roles face AI exposure — echoing manufacturing\u2019s toll on men.",
-    date: "Mar 2",
-    url: "https://humanistxyz.substack.com/p/what-deindustrialization-did-to-men",
+      "Task automation rarely displaces workers; paradigm replacement does. Implications for AI displacement timelines.",
+    date: "Mar 10",
+    url: "https://davidoks.blog/p/why-the-atm-didnt-kill-bank-teller",
     accent: "border-l-blue-500",
   },
 ];

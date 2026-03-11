@@ -1,0 +1,14 @@
+{
+  "id": "oks-atm-iphone-displacement-2026",
+  "abstract": "David Oks examines the popular parable that ATMs did not kill bank teller jobs, showing it is only half the story: while ATMs indeed did not reduce teller employment (1970s-2010), the iPhone and mobile banking caused a 51% collapse in bank teller jobs from 332,000 in 2010 to 164,000 in 2022. He argues that task automation within existing paradigms rarely displaces workers due to complementarity and frictions, but paradigm replacement -- creating entirely new workflows that make old roles irrelevant -- is what actually drives displacement. Applied to AI, he suggests the current 'drop-in remote worker' approach will produce disappointing productivity gains and limited displacement, and that real labor market disruption will come only when AI enables fundamentally new organizational paradigms.",
+  "keyFindings": [
+    "ATMs reduced tellers per branch from 21 to 13 but total US bank teller employment grew from 1970s through 2010 due to Jevons effect (40%+ increase in urban branches)",
+    "Bank teller employment collapsed 51% from 332,000 in 2010 to 164,000 in 2022, driven by iPhone/mobile banking making branches irrelevant",
+    "Commercial bank branches per capita peaked in 2009 and fell nearly 30% since; Bank of America closed about 40% of branches between 2008 and 2025",
+    "Author argues AI as 'drop-in remote worker' fitting into human-shaped jobs will face similar frictions to ATMs -- limited displacement in the near term",
+    "Real AI displacement threat comes from paradigm replacement (fully-automated firms), not task automation within existing workflows"
+  ],
+  "methodology": "Historical case study analysis drawing on BLS employment data for bank tellers (2000-2022), academic literature (Autor, Bessen), and banking industry data (branch counts, BofA headcount). Qualitative argument by analogy from ATM/iPhone history to AI labor market impacts.",
+  "qualifiers": "Author states he is 'not a denier on the question of technological job loss' but is skeptical of near-term mass displacement. Acknowledges AI is 'wholly unlike anything that has come before' and may eventually build structures that harness its powers by itself. Notes the gap between technology capability and labor displacement 'will probably close faster than previous gaps did.'",
+  "fetchedAt": "2026-03-11"
+}
