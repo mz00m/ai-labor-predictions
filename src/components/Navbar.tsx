@@ -28,20 +28,20 @@ const NAV_ENTRIES: NavEntry[] = [
     label: "Analysis",
     items: [
       { href: "/signals", label: "Signals" },
-      { href: "/j-curve", label: "J-Curve" },
+      { href: "/j-curve", label: "What's a J-Curve" },
+      { href: "/history", label: "History" },
       { href: "/signals/firm-response", label: "Firm Response" },
     ],
   },
   {
     label: "Learn",
     items: [
-      { href: "/learn/reading-list", label: "Reading List" },
-      { href: "/history", label: "History" },
-      { href: "/about#methodology", label: "Methodology" },
       { href: "/suggest", label: "Suggest Source" },
-      { href: "/about", label: "About" },
+      { href: "/learn/reading-list", label: "Reading List" },
+      { href: "/about#methodology", label: "Methodology" },
     ],
   },
+  { href: "/about", label: "About" },
 ];
 
 function ChevronDown({ className }: { className?: string }) {
@@ -121,14 +121,17 @@ function DesktopDropdown({ group }: { group: NavGroup }) {
               pathname === item.href ||
               (item.href !== "/" &&
                 pathname.startsWith(item.href.split("#")[0]));
+            const isSuggest = item.href === "/suggest";
             return (
               <Link
                 key={item.href}
                 href={item.href}
                 className={`block text-[12px] font-medium px-4 py-2 ${
-                  itemActive
-                    ? "text-[var(--foreground)] bg-black/[0.03]"
-                    : "text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-black/[0.03]"
+                  isSuggest
+                    ? "text-[#F66B5C] hover:text-[#e55a4b] hover:bg-black/[0.03]"
+                    : itemActive
+                      ? "text-[var(--foreground)] bg-black/[0.03]"
+                      : "text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-black/[0.03]"
                 }`}
               >
                 {item.label}
@@ -283,16 +286,23 @@ export default function Navbar() {
                     </button>
                     {mobileExpanded === entry.label && (
                       <div className="bg-black/[0.02]">
-                        {entry.items.map((item) => (
-                          <Link
-                            key={item.href}
-                            href={item.href}
-                            onClick={() => setMobileOpen(false)}
-                            className="block text-[13px] font-medium text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-black/[0.03] pl-8 pr-4 py-2"
-                          >
-                            {item.label}
-                          </Link>
-                        ))}
+                        {entry.items.map((item) => {
+                          const isSuggest = item.href === "/suggest";
+                          return (
+                            <Link
+                              key={item.href}
+                              href={item.href}
+                              onClick={() => setMobileOpen(false)}
+                              className={`block text-[13px] font-medium pl-8 pr-4 py-2 ${
+                                isSuggest
+                                  ? "text-[#F66B5C] hover:text-[#e55a4b] hover:bg-black/[0.03]"
+                                  : "text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-black/[0.03]"
+                              }`}
+                            >
+                              {item.label}
+                            </Link>
+                          );
+                        })}
                       </div>
                     )}
                   </div>
