@@ -32,7 +32,6 @@ Read all 17 prediction JSON files to understand the available graphs. Here is th
 
 **Wage Graphs:**
 - `median-wage-impact` — "Median Wage Impact from AI by 2030" — unit: "% change in real median wage"
-- `geographic-wage-divergence` — "AI Hub vs. Non-Hub Wage Divergence by 2030" — unit: "% wage premium"
 - `entry-level-wage-impact` — "Entry-Level Wage Impact from AI by 2030" — unit: "% wage change"
 - `high-skill-wage-premium` — "High-Skill AI Wage Premium by 2030" — unit: "% wage premium over median"
 - `freelancer-rate-impact` — "Freelancer/Gig Worker Rate Impact by 2028" — unit: "% rate change"

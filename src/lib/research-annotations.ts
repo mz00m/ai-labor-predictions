@@ -78,11 +78,6 @@ const ANNOTATIONS: Record<string, ResearchAnnotation> = {
       "Mixed signals: del Rio-Chanona et al. (2025) find productivity gains of 20\u201360% in experiments, which should push wages up, but the Anthropic Economic Index shows automation (45%) competing with augmentation (52%) \u2014 the net wage effect depends on which pattern dominates.",
     estimateType: "exposure",
   },
-  "geographic-wage-divergence": {
-    note:
-      "Exposure-based projection reinforced by observed AI investment clustering. Each AI job in a hub city creates 3\u20135 additional local service jobs through spatial multiplier effects.",
-    estimateType: "exposure",
-  },
   "ai-adoption-rate": {
     note:
       "Directly observed from Census Bureau Business Trends survey data, supplemented by corporate earnings call disclosures and Ramp firm spending analysis.",

@@ -61,7 +61,6 @@ Graphs ranked by data hunger. The agent prioritizes graphs with the fewest data 
 | 2 | `healthcare-admin-displacement` | displacement | 4 | 8+ |
 | 3 | `creative-industry-displacement` | displacement | 6 | 10+ |
 | 4 | `customer-service-automation` | displacement | 6 | 10+ |
-| 5 | `geographic-wage-divergence` | wages | 6 | 10+ |
 | 6 | `freelancer-rate-impact` | wages | 7 | 10+ |
 | 7 | `high-skill-wage-premium` | wages | 7 | 10+ |
 | 8 | `white-collar-professional-displacement` | displacement | 7 | 10+ |

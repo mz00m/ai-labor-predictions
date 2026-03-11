@@ -139,7 +139,6 @@ For each new entry, note:
 | `financial-services-displacement` | Financial Services Displacement |
 | `customer-service-automation` | Customer Service Automation |
 | `median-wage-impact` | Median Wage Impact from AI |
-| `geographic-wage-divergence` | AI Hub vs. Non-Hub Wage Divergence |
 | `entry-level-wage-impact` | Entry-Level Wage Impact |
 | `high-skill-wage-premium` | High-Skill AI Wage Premium |
 | `freelancer-rate-impact` | Freelancer/Gig Worker Rate Impact |

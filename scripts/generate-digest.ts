@@ -94,7 +94,6 @@ const DISPLACEMENT_SLUGS = new Set([
 
 const WAGES_SLUGS = new Set([
   "median-wage-impact",
-  "geographic-wage-divergence",
   "entry-level-wage-impact",
   "high-skill-wage-premium",
   "freelancer-rate-impact",

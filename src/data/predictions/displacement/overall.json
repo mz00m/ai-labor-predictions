@@ -434,6 +434,15 @@
       "date": "2026-01-15",
       "direction": "down",
       "sourceIds": [
+        "imf-skill-gaps-geo-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "IMF: employment 3.6% lower in AI-vulnerable occupations after 5 years"
+    },
+    {
+      "date": "2026-01-15",
+      "direction": "down",
+      "sourceIds": [
         "frank-ai-unemployment-overall-2026"
       ],
       "evidenceTier": 1,
@@ -483,6 +492,15 @@
       ],
       "evidenceTier": 2,
       "label": "Brookings: 70% of 37.1M highly AI-exposed workers are resilient"
+    },
+    {
+      "date": "2026-01-21",
+      "direction": "down",
+      "sourceIds": [
+        "manning-aguirre-adaptive-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER: 6.1M workers in AI-exposed roles lack adaptive capacity; 86% women"
     },
     {
       "date": "2026-01-22",
@@ -1215,6 +1233,26 @@
       "datePublished": "2026-03-10",
       "excerpt": "The evidence on how AI is affecting the labor market today is inconclusive, and claims about harmful impacts on particular groups of workers are premature. Initial evidence suggests that transitional disruption from AI to date is not outpacing recent technological changes.",
       "dateAdded": "2026-03-10"
+    },
+    {
+      "id": "manning-aguirre-adaptive-2026",
+      "title": "How Adaptable Are American Workers to AI-Induced Job Displacement?",
+      "url": "https://www.nber.org/papers/w34705",
+      "publisher": "NBER (Manning, Aguirre)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-21",
+      "excerpt": "6.1 million workers in AI-exposed roles lack adaptive capacity; 86% are women. Vulnerability concentrated in college towns and state capitals in Mountain West and Midwest.",
+      "dateAdded": "2026-03-11"
+    },
+    {
+      "id": "imf-skill-gaps-geo-2026",
+      "title": "Bridging Skill Gaps for the Future: New Jobs Creation in the AI Age",
+      "url": "https://www.imf.org/-/media/files/publications/sdn/2026/english/sdnea2026001.pdf",
+      "publisher": "IMF Staff Discussion Note",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-15",
+      "excerpt": "Employment 3.6% lower in AI-vulnerable occupations in regions with high AI-skill demand after 5 years; geographic divergence driven by skill concentration.",
+      "dateAdded": "2026-03-11"
     }
   ]
 }

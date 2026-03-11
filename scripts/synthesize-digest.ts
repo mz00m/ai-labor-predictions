@@ -163,7 +163,7 @@ DISPLACEMENT: overall-us-displacement,
   creative-industry-displacement, education-sector-displacement,
   healthcare-admin-displacement, financial-services-displacement,
   customer-service-automation
-WAGES: median-wage-impact, geographic-wage-divergence, entry-level-wage-impact,
+WAGES: median-wage-impact, entry-level-wage-impact,
   high-skill-wage-premium, freelancer-rate-impact
 ADOPTION: ai-adoption-rate, genai-work-adoption, workforce-ai-exposure,
   earnings-call-ai-mentions
