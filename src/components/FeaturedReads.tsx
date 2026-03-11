@@ -10,6 +10,15 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Sivulka (Hebbia)",
+    title: "Productive Individuals Don\u2019t Make Productive Firms",
+    summary:
+      "Individual AI productivity gains aren\u2019t translating to firm-level value. Seven pillars of institutional intelligence for organizational AI adoption.",
+    date: "Mar 11",
+    url: "https://x.com/gsivulka/status/2031797989908627849",
+    accent: "border-l-cyan-500",
+  },
+  {
     author: "Oks",
     title: "Why the ATM Didn\u2019t Kill Bank Teller Jobs, but the iPhone Did",
     summary:
@@ -44,15 +53,6 @@ const articles: Article[] = [
     date: "Feb 9",
     url: "https://hbr.org/2026/02/ai-doesnt-reduce-work-it-intensifies-it",
     accent: "border-l-emerald-500",
-  },
-  {
-    author: "Chung",
-    title: "AIR: The AI Resilience Report",
-    summary:
-      "First canonical aggregator of AI job-impact research at the occupational level.",
-    date: "Mar 4",
-    url: "https://www.linkedin.com/pulse/introducing-air-ai-resilience-report-jared-chung-gxfec",
-    accent: "border-l-rose-500",
   },
 ];
 
