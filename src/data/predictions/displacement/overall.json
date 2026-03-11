@@ -636,6 +636,15 @@
       ],
       "evidenceTier": 2,
       "label": "PIIE/Kolko: AI disruption pace similar to computer & internet eras"
+    },
+    {
+      "date": "2026-03-10",
+      "direction": "down",
+      "sourceIds": [
+        "oks-atm-iphone-displacement-2026"
+      ],
+      "evidenceTier": 4,
+      "label": "Oks: Paradigm replacement, not task automation, drives displacement -- still early"
     }
   ],
   "sources": [
@@ -1215,6 +1224,16 @@
       "datePublished": "2026-03-10",
       "excerpt": "The evidence on how AI is affecting the labor market today is inconclusive, and claims about harmful impacts on particular groups of workers are premature. Initial evidence suggests that transitional disruption from AI to date is not outpacing recent technological changes.",
       "dateAdded": "2026-03-10"
+    },
+    {
+      "id": "oks-atm-iphone-displacement-2026",
+      "title": "Why the ATM didn't kill bank teller jobs, but the iPhone did",
+      "url": "https://davidoks.blog/p/why-the-atm-didnt-kill-bank-teller",
+      "publisher": "David Oks (Substack)",
+      "evidenceTier": 4,
+      "datePublished": "2026-03-10",
+      "excerpt": "I'm skeptical that simply slotting AI into human-shaped jobs will have the results people seem to expect... as long as we are in that regime, I expect disappointing productivity gains and relatively little real displacement.",
+      "dateAdded": "2026-03-11"
     }
   ]
 }

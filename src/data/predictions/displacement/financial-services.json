@@ -155,6 +155,15 @@
       ],
       "evidenceTier": 3,
       "label": "Morgan Stanley: 3% workforce reduction amid record profits, IB revenue up 47%"
+    },
+    {
+      "date": "2026-03-10",
+      "direction": "down",
+      "sourceIds": [
+        "oks-atm-iphone-displacement-2026"
+      ],
+      "evidenceTier": 4,
+      "label": "Oks: Bank tellers survived ATMs (task automation) but not iPhones (paradigm shift)"
     }
   ],
   "sources": [
@@ -307,6 +316,16 @@
       "datePublished": "2026-03-05",
       "excerpt": "3% workforce reduction amidst record profits; investment banking revenue up 47%.",
       "dateAdded": "2026-03-10"
+    },
+    {
+      "id": "oks-atm-iphone-displacement-2026",
+      "title": "Why the ATM didn't kill bank teller jobs, but the iPhone did",
+      "url": "https://davidoks.blog/p/why-the-atm-didnt-kill-bank-teller",
+      "publisher": "David Oks (Substack)",
+      "evidenceTier": 4,
+      "datePublished": "2026-03-10",
+      "excerpt": "Bank teller employment collapsed from 332,000 in 2010 to 164,000 in 2022... ATMs didn't reduce bank teller employment... another technology did. And that technology was the iPhone.",
+      "dateAdded": "2026-03-11"
     }
   ]
 }
