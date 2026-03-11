@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "Academics Need to Wake Up on AI",
+      "author": "Alexander Kustov",
+      "publisher": "Substack",
+      "date": "2026-03-02",
+      "url": "https://www.popularbydesign.org/p/academics-need-to-wake-up-on-ai",
+      "takeaway": "Ten theses on AI disrupting academia: AI can already produce publishable social science research in hours for ~$100, the 30-page paper format is dying, the journal system may not survive a fivefold increase in submissions, and research assistant roles are being replaced. Junior scholars face the biggest disruption and opportunity.",
+      "weekFeatured": "2026-03-10",
+      "tier": 4
+    },
+    {
       "title": "Why the ATM didn't kill bank teller jobs, but the iPhone did",
       "author": "David Oks",
       "publisher": "Substack",
