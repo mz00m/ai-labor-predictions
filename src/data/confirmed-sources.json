@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-11",
-  "totalSources": 370,
-  "verifiedCount": 370,
+  "totalSources": 371,
+  "verifiedCount": 371,
   "sources": {
     "revelio-labs-wage-divide-2025": {
       "id": "revelio-labs-wage-divide-2025",
@@ -5082,6 +5082,18 @@
       "usedIn": [
         "healthcare-admin-displacement"
       ],
+      "verified": true,
+      "synthetic": false
+    },
+    "sivulka-institutional-ai-2026": {
+      "id": "sivulka-institutional-ai-2026",
+      "title": "Productive Individuals Don't Make Productive Firms",
+      "url": "https://x.com/gsivulka/status/2031797989908627849",
+      "publisher": "Twitter/X (Hebbia)",
+      "evidenceTier": 4,
+      "datePublished": "2026-03-11",
+      "excerpt": "AI is driving a 10x increase in the productivity of the individuals who know how to leverage it. But that's not enough. We've swapped the motor; we have not yet redesigned the factory. Because of a simple fact: productive individuals do not make productive firms.",
+      "usedIn": [],
       "verified": true,
       "synthetic": false
     }
