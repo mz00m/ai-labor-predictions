@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "Productive Individuals Don't Make Productive Firms",
+      "author": "George Sivulka",
+      "publisher": "Twitter/X (Hebbia)",
+      "date": "2026-03-11",
+      "url": "https://x.com/gsivulka/status/2031797989908627849",
+      "takeaway": "Individual AI productivity gains (10x) aren't translating to firm-level value. Historical parallel: electrified textile mills saw no output gains for 30 years until factories were redesigned. Proposes 'Institutional Intelligence' framework with 7 pillars for organizational AI adoption.",
+      "weekFeatured": "2026-03-10",
+      "tier": 4
+    },
+    {
       "title": "Why the ATM didn't kill bank teller jobs, but the iPhone did",
       "author": "David Oks",
       "publisher": "Substack",
