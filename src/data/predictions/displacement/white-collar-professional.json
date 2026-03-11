@@ -444,6 +444,15 @@
       ],
       "evidenceTier": 3,
       "label": "WSJ: U.S. Army targeting ops achieved with 20 staff vs. 2,000 pre-AI (99% reduction)"
+    },
+    {
+      "date": "2026-03-10",
+      "direction": "up",
+      "sourceIds": [
+        "bizjournals-ai-layoffs-divide-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Microsoft AI CEO via BizJournals: Expects all white-collar work automated in 18 months"
     }
   ],
   "sources": [
@@ -875,6 +884,16 @@
       "datePublished": "2025-11-25",
       "excerpt": "Currently demonstrated technologies could automate activities accounting for about 57 percent of US work hours today. AI agents could perform tasks occupying 44 percent of US work hours, while robots could handle another 13 percent. Roles with the highest potential for automation make up about 40 percent of total jobs.",
       "dateAdded": "2026-03-10"
+    },
+    {
+      "id": "bizjournals-ai-layoffs-divide-2026",
+      "title": "AI-fueled layoffs are rising, but a great divide is emerging",
+      "url": "https://www.bizjournals.com/sanjose/news/2026/03/10/small-business-ai-layoffs-tech-amazon-salesforce.html",
+      "publisher": "The Business Journals",
+      "evidenceTier": 3,
+      "datePublished": "2026-03-10",
+      "excerpt": "Mustafa Suleyman, CEO of Microsoft AI, stated last month that he expects all white-collar work will be automated by AI within 18 months.",
+      "dateAdded": "2026-03-11"
     }
   ]
 }

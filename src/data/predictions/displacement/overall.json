@@ -645,6 +645,33 @@
       ],
       "evidenceTier": 4,
       "label": "Oks: Paradigm replacement, not task automation, drives displacement -- still early"
+    },
+    {
+      "date": "2026-03-10",
+      "direction": "down",
+      "sourceIds": [
+        "bizjournals-ai-layoffs-divide-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "BizJournals: 89% of small-biz execs have no plans to cut staff due to AI"
+    },
+    {
+      "date": "2026-03-10",
+      "direction": "down",
+      "sourceIds": [
+        "bizjournals-ai-layoffs-divide-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "NBER via BizJournals: 90% of 6,000 execs say no employment impact from AI"
+    },
+    {
+      "date": "2026-03-10",
+      "direction": "up",
+      "sourceIds": [
+        "bizjournals-ai-layoffs-divide-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Morgan Stanley via BizJournals: 4% net job reduction in 5 high-AI sectors"
     }
   ],
   "sources": [
@@ -1233,6 +1260,16 @@
       "evidenceTier": 4,
       "datePublished": "2026-03-10",
       "excerpt": "I'm skeptical that simply slotting AI into human-shaped jobs will have the results people seem to expect... as long as we are in that regime, I expect disappointing productivity gains and relatively little real displacement.",
+      "dateAdded": "2026-03-11"
+    },
+    {
+      "id": "bizjournals-ai-layoffs-divide-2026",
+      "title": "AI-fueled layoffs are rising, but a great divide is emerging",
+      "url": "https://www.bizjournals.com/sanjose/news/2026/03/10/small-business-ai-layoffs-tech-amazon-salesforce.html",
+      "publisher": "The Business Journals",
+      "evidenceTier": 3,
+      "datePublished": "2026-03-10",
+      "excerpt": "89% of the respondents said they have no plans to cut staff or lay off workers because of AI. Just 3% said they have already cut staff, while 7% said they have plans to reduce their workforce within the next year.",
       "dateAdded": "2026-03-11"
     }
   ]
