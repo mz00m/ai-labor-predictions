@@ -104,6 +104,16 @@
       ],
       "evidenceTier": 3,
       "metricType": "survey"
+    },
+    {
+      "date": "2026-03-10",
+      "value": 71,
+      "sourceIds": [
+        "bizjournals-ai-layoffs-divide-2026"
+      ],
+      "evidenceTier": 3,
+      "metricType": "survey",
+      "sampleSize": 500
     }
   ],
   "overlays": [
@@ -376,6 +386,15 @@
       ],
       "evidenceTier": 2,
       "label": "PIIE/Kolko: <1/5 of firms using AI; even fewer for production (Census BTOS)"
+    },
+    {
+      "date": "2026-03-10",
+      "direction": "up",
+      "sourceIds": [
+        "bizjournals-ai-layoffs-divide-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "NBER via BizJournals: 70% of 6,000 intl. execs report using AI"
     }
   ],
   "sources": [
@@ -708,6 +727,16 @@
       "datePublished": "2026-01-01",
       "excerpt": "Even 18 months after firm-level adoption, only about half of engineers had begun using the tools. Individual take-up was not universal.",
       "dateAdded": "2026-03-10"
+    },
+    {
+      "id": "bizjournals-ai-layoffs-divide-2026",
+      "title": "AI-fueled layoffs are rising, but a great divide is emerging",
+      "url": "https://www.bizjournals.com/sanjose/news/2026/03/10/small-business-ai-layoffs-tech-amazon-salesforce.html",
+      "publisher": "The Business Journals",
+      "evidenceTier": 3,
+      "datePublished": "2026-03-10",
+      "excerpt": "more than 71% said they have adopted AI tools either 'somewhat' or 'extensively,' while just under 20% said they were considering it either for this year or later, and only 9% said they had no plans to adopt the technology.",
+      "dateAdded": "2026-03-11"
     },
     {
       "id": "piie-kolko-ai-labor-first-inning-2026",
