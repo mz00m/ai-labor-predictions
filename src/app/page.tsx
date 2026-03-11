@@ -108,6 +108,10 @@ export default function Home() {
             <span className="normal-case font-semibold">
               {new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}
             </span>
+            {" "}<span className="opacity-50">|</span>{" "}
+            <a href="/learn/reading-list" className="normal-case font-semibold opacity-60 hover:opacity-100 transition-opacity">
+              See all &rarr;
+            </a>
           </p>
           <FeaturedReads />
         </div>

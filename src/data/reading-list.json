@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "Why the ATM didn't kill bank teller jobs, but the iPhone did",
+      "author": "David Oks",
+      "publisher": "Substack",
+      "date": "2026-03-10",
+      "url": "https://davidoks.blog/p/why-the-atm-didnt-kill-bank-teller",
+      "takeaway": "ATMs didn't reduce bank teller employment due to complementarity, but iPhones/mobile banking caused a 51% collapse (332K to 164K, 2010-2022). Task automation within existing paradigms rarely displaces; paradigm replacement does. AI is still in the 'slotting in' phase.",
+      "weekFeatured": "2026-03-10",
+      "tier": 4
+    },
+    {
       "title": "Research on AI and the labor market is still in the first inning",
       "author": "Jed Kolko",
       "publisher": "PIIE",
