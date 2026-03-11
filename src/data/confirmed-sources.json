@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-10",
-  "totalSources": 368,
-  "verifiedCount": 368,
+  "totalSources": 367,
+  "verifiedCount": 367,
   "sources": {
     "revelio-labs-wage-divide-2025": {
       "id": "revelio-labs-wage-divide-2025",
@@ -2786,19 +2786,6 @@
       ],
       "verified": true,
       "synthetic": false
-    },
-    "muro-kinder-geography-2025": {
-      "id": "muro-kinder-geography-2025",
-      "title": "The geography of generative AI's workforce impacts will likely differ from those of previous technologies",
-      "url": "https://www.brookings.edu/articles/the-geography-of-generative-ais-workforce-impacts-will-likely-differ-from-those-of-previous-technologies/",
-      "publisher": "Brookings Metro (Muro, Methkupally, Kinder)",
-      "evidenceTier": 1,
-      "datePublished": "2025-02-01",
-      "excerpt": "43% of workers in San Jose could see AI shift half or more of tasks, vs only 31% in Las Vegas. High-skill metro areas most exposed \u2014 reversing prior automation patterns.",
-      "usedIn": [
-        "geographic-wage-divergence"
-      ],
-      "verified": true
     },
     "nber-ai-legal-impact-2025": {
       "id": "nber-ai-legal-impact-2025",

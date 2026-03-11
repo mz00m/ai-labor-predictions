@@ -95,15 +95,6 @@
       "label": "LinkedIn: skills for jobs will change up to 65% by 2030; 55% impacted by AI"
     },
     {
-      "date": "2025-02-01",
-      "direction": "up",
-      "sourceIds": [
-        "muro-kinder-geography-2025"
-      ],
-      "evidenceTier": 1,
-      "label": "Brookings: San Jose 43% AI-exposed vs 31% in Las Vegas"
-    },
-    {
       "date": "2025-05-01",
       "direction": "up",
       "sourceIds": [
@@ -293,16 +284,6 @@
       "evidenceTier": 3,
       "datePublished": "2025-12-10",
       "excerpt": "Mountain region leads US AI adoption at 42%, followed by Pacific at 39%. Southeast lags at 22%. Regional adoption gaps correlate with widening wage divergence.",
-      "dateAdded": "2026-03-01"
-    },
-    {
-      "id": "muro-kinder-geography-2025",
-      "title": "The geography of generative AI's workforce impacts will likely differ from those of previous technologies",
-      "url": "https://www.brookings.edu/articles/the-geography-of-generative-ais-workforce-impacts-will-likely-differ-from-those-of-previous-technologies/",
-      "publisher": "Brookings Metro (Muro, Methkupally, Kinder)",
-      "evidenceTier": 1,
-      "datePublished": "2025-02-01",
-      "excerpt": "43% of workers in San Jose could see AI shift half or more of tasks, vs only 31% in Las Vegas. High-skill metro areas most exposed \u2014 reversing prior automation patterns.",
       "dateAdded": "2026-03-01"
     },
     {
