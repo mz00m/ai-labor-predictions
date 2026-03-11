@@ -66,7 +66,7 @@ A public-facing Next.js dashboard tracking AI's impact on the labor market. URL:
 ## Data File Conventions
 
 ### Prediction JSON schema (`src/data/predictions/{category}/{slug}.json`)
-- `history[]` entries: `date` (YYYY-MM-DD), `value` (number), `confidenceLow?`, `confidenceHigh?`, `sourceIds[]`, `evidenceTier` (1-4), `metricType?`, `sampleSize?`
+- `history[]` entries: `date` (YYYY-MM-DD), `value` (number), `confidenceLow?`, `confidenceHigh?`, `sourceIds[]`, `evidenceTier` (1-4), `metricType?`, `sampleSize?`, `isProxy?`, `proxyContext?`
 - `overlays[]` entries: `date`, `direction` (up/down/neutral), `sourceIds[]`, `evidenceTier`, `label` (≤80 chars, format: "Publisher: finding")
 - `sources[]` entries: `id`, `title`, `url`, `publisher`, `evidenceTier`, `datePublished`, `excerpt`
 - `aggregationMethod`: `"weighted"` (default, tier×recency×sampleSize weighting) or `"latest"` (use most recent data point)
@@ -87,7 +87,7 @@ Must be updated with today's date on every ingestion. Hero reads this to display
 - **Negative values** for job losses, wage declines, rate drops (e.g., -10 for "10% decline")
 - **Ranges → midpoints**: "20-30%" → value: 25, confidenceLow: 20, confidenceHigh: 30
 - **Exact quotes only**: every data point must trace to verbatim source text
-- **data_point vs overlay**: if stat's unit matches graph's unit → data_point; otherwise → overlay. When unsure, default to overlay
+- **data_point vs overlay vs proxy**: if stat's unit matches graph's unit → data_point; if it's a known proxy metric with a conversion factor → data_point with `isProxy: true` (see `docs/proxy-metric-methodology.md`); otherwise → overlay. When unsure, default to overlay
 - **Arrays sorted by date** ascending
 - **One source entry per file** even if multiple stats from same source
 
@@ -106,6 +106,7 @@ Defined in `src/lib/prediction-stats.ts`:
 - Tier weights: T1=4×, T2=2×, T3=1×, T4=0.5×
 - Recency weights: linear 1.0× (oldest) → 1.5× (newest)
 - Sample size boost: log-scaled 1.0× (n≤100) → 2.0× (n≥100K)
+- Proxy discount: `isProxy: true` data points receive 0.5× weight (indirect measurement penalty)
 - For `aggregationMethod: "latest"`: uses most recent data point value directly
 
 ## Key File Paths
@@ -122,6 +123,7 @@ Defined in `src/lib/prediction-stats.ts`:
 | `scripts/` | Digest pipeline, ingestion, signal fetching |
 | `.claude/commands/` | Claude skills (ingest, weekly-changelog) |
 | `changelog/` | Weekly changelogs and LinkedIn posts |
+| `docs/proxy-metric-methodology.md` | Proxy metric conversion & outlier detection methodology |
 
 ## Existing Claude Skills
 
