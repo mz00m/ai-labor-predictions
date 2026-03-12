@@ -404,10 +404,6 @@ export const GRAPH_AFFINITY_SIGNALS: Record<string, string[]> = {
     "freelancer", "gig worker", "contractor rates", "Upwork", "Fiverr",
     "independent worker", "platform worker",
   ],
-  "geographic-wage-divergence": [
-    "geographic inequality", "regional wage", "AI hub", "tech hub wage",
-    "rural urban wage", "place-based inequality",
-  ],
   "ai-adoption-rate": [
     "AI adoption", "firm AI use", "business AI", "company AI investment",
     "Census BTOS", "AI deployment enterprise",

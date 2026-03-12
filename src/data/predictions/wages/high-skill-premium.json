@@ -113,6 +113,15 @@
       "label": "Microsoft: Cloud revenue $35.1B, up 23%; 65%+ of Fortune 500 use Azure OpenAI"
     },
     {
+      "date": "2024-09-01",
+      "direction": "up",
+      "sourceIds": [
+        "indeed-geo-premiums-2024"
+      ],
+      "evidenceTier": 2,
+      "label": "Indeed: AI roles pay 38% wage premium in top-10 tech metros"
+    },
+    {
       "date": "2024-10-02",
       "direction": "up",
       "sourceIds": [
@@ -149,6 +158,15 @@
       "label": "QJE: less experienced workers improve most with AI"
     },
     {
+      "date": "2025-07-01",
+      "direction": "up",
+      "sourceIds": [
+        "glassdoor-ai-salaries-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Glassdoor: AI jobs pay 25% premium; AI job listings up 123% YoY"
+    },
+    {
       "date": "2025-07-23",
       "direction": "up",
       "sourceIds": [
@@ -156,6 +174,15 @@
       ],
       "evidenceTier": 2,
       "label": "Lightcast: 51% of AI job postings now outside IT; 800% growth in non-tech gen AI roles since 2022"
+    },
+    {
+      "date": "2025-07-27",
+      "direction": "up",
+      "sourceIds": [
+        "techcrunch-ai-salary-gap"
+      ],
+      "evidenceTier": 2,
+      "label": "Fortune: non-tech AI-skilled roles pay 28% more (~$18K/year extra)"
     },
     {
       "date": "2025-08-11",
@@ -465,6 +492,36 @@
       "datePublished": "2026-03-05",
       "excerpt": "Workers in the most exposed professions earn 47% more, on average, and are 16 percentage points more likely to be female",
       "dateAdded": "2026-03-07"
+    },
+    {
+      "id": "indeed-geo-premiums-2024",
+      "title": "The Geography of AI Jobs — Indeed Hiring Lab",
+      "url": "https://www.hiringlab.org/2024/09/12/ai-job-tracker/",
+      "publisher": "Indeed Hiring Lab",
+      "evidenceTier": 2,
+      "datePublished": "2024-09-01",
+      "excerpt": "AI-related roles offer a 38% wage premium in top-10 tech metros vs. national average. Non-AI roles in same metros show only 12% premium.",
+      "dateAdded": "2026-03-11"
+    },
+    {
+      "id": "glassdoor-ai-salaries-2025",
+      "title": "Conversation starter: are AI jobs booming or overhyped?",
+      "url": "https://www.glassdoor.com/blog/ai-jobs-booming-or-overhyped/",
+      "publisher": "Glassdoor Economic Research",
+      "evidenceTier": 2,
+      "datePublished": "2025-07-01",
+      "excerpt": "AI jobs pay more than similar jobs that do not focus on AI, with a typical premium of 25%. The share of AI jobs among new job listings increased 123% from 2023 to 2024.",
+      "dateAdded": "2026-03-11"
+    },
+    {
+      "id": "techcrunch-ai-salary-gap",
+      "title": "AI is driving mass layoffs in tech, but it's boosting salaries by $18,000 a year everywhere else, study says",
+      "url": "https://fortune.com/2025/07/27/artificial-intelligence-skills-18000-salaries-28-percent/",
+      "publisher": "Fortune",
+      "evidenceTier": 2,
+      "datePublished": "2025-07-27",
+      "excerpt": "Job postings for non-tech roles that require AI skills offer 28% higher salaries — an average of nearly $18,000 more per year. The divide between AI-skilled and non-AI-skilled workers is widening.",
+      "dateAdded": "2026-03-11"
     },
     {
       "id": "wharton-accenture-skills-mismatch-2026",

@@ -14,7 +14,6 @@ import highSkillPremium from "@/data/predictions/wages/high-skill-premium.json";
 import medianWage from "@/data/predictions/wages/median-wage-impact.json";
 import freelancerRate from "@/data/predictions/wages/freelancer-rate-impact.json";
 import entryLevel from "@/data/predictions/wages/entry-level-impact.json";
-import geoDivergence from "@/data/predictions/wages/geographic-divergence.json";
 import aiAdoption from "@/data/predictions/adoption/ai-adoption-rate.json";
 import genaiWorkAdoption from "@/data/predictions/adoption/genai-work-adoption.json";
 import earningsCallMentions from "@/data/predictions/signals/earnings-call-mentions.json";
@@ -31,9 +30,8 @@ const allPredictions: Prediction[] = [
   financialServices as Prediction,
   customerService as Prediction,
   robotsPhysicalAutomation as Prediction,
-  // Wages: all workers → regional → demographic → niche
+  // Wages: all workers → demographic → niche
   medianWage as Prediction,
-  geoDivergence as Prediction,
   entryLevel as Prediction,
   highSkillPremium as Prediction,
   freelancerRate as Prediction,

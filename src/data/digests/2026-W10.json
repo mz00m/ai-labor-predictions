@@ -1098,11 +1098,6 @@
           "slug": "education-sector-displacement",
           "title": "Education Sector Displacement by 2030",
           "relevanceScore": 4
-        },
-        {
-          "slug": "geographic-wage-divergence",
-          "title": "AI Hub vs. Non-Hub Wage Divergence by 2030",
-          "relevanceScore": 4
         }
       ],
       "isTrackedAuthor": false,
@@ -2051,11 +2046,6 @@
           {
             "slug": "education-sector-displacement",
             "title": "Education Sector Displacement by 2030",
-            "relevanceScore": 4
-          },
-          {
-            "slug": "geographic-wage-divergence",
-            "title": "AI Hub vs. Non-Hub Wage Divergence by 2030",
             "relevanceScore": 4
           }
         ],

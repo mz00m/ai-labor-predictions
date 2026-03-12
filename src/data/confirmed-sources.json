@@ -20,20 +20,6 @@
       "verified": true,
       "synthetic": false
     },
-    "epj-ai-economic-divide-2025": {
-      "id": "epj-ai-economic-divide-2025",
-      "title": "AI and the economic divide: How Artificial Intelligence could widen the divide in the U.S.",
-      "url": "https://epjdatascience.springeropen.com/articles/10.1140/epjds/s13688-025-00547-9",
-      "publisher": "EPJ Data Science (Septiandri, Constantinides, Quercia)",
-      "evidenceTier": 1,
-      "datePublished": "2025-05-01",
-      "excerpt": "MSAs that will be more likely to be impacted by AI are not just hubs of creative industries but will also be characterized by a lack of economic diversity.",
-      "usedIn": [
-        "geographic-wage-divergence"
-      ],
-      "verified": true,
-      "synthetic": false
-    },
     "accenture-health-ai-2023": {
       "id": "accenture-health-ai-2023",
       "title": "Accenture Technology Vision 2023: Healthcare Applications",
@@ -217,19 +203,6 @@
       ],
       "verified": true
     },
-    "anthropic-geographic-2025": {
-      "id": "anthropic-geographic-2025",
-      "title": "Uneven geographic and demographic patterns of AI adoption",
-      "url": "https://www.anthropic.com/research/anthropic-economic-index-september-2025-report",
-      "publisher": "Anthropic",
-      "evidenceTier": 1,
-      "datePublished": "2025-09-15",
-      "excerpt": "AI usage heavily concentrated by income and geography globally; within US, workforce composition matters more than income for adoption patterns.",
-      "usedIn": [
-        "geographic-wage-divergence"
-      ],
-      "verified": true
-    },
     "anthropic-geographic-adoption-2025": {
       "id": "anthropic-geographic-adoption-2025",
       "title": "Uneven geographic and demographic patterns of AI adoption",
@@ -398,19 +371,6 @@
       ],
       "verified": true
     },
-    "bls-metro-wages-2025": {
-      "id": "bls-metro-wages-2025",
-      "title": "Occupational Employment and Wage Statistics \u2014 Metropolitan Areas 2025",
-      "url": "https://www.bls.gov/oes/current/oessrcma.htm",
-      "publisher": "Bureau of Labor Statistics",
-      "evidenceTier": 1,
-      "datePublished": "2025-07-01",
-      "excerpt": "Computer and mathematical occupations in San Jose-SF-Oakland MSA: $178K median. National median: $108K. Gap up from 48% to 65% since 2022.",
-      "usedIn": [
-        "geographic-wage-divergence"
-      ],
-      "verified": true
-    },
     "bls-programmer-employment-observed": {
       "id": "bls-programmer-employment-observed",
       "title": "BLS Occupational Employment Statistics: Computer Programmers \u2014 Observed Decline",
@@ -533,19 +493,6 @@
       ],
       "verified": true,
       "synthetic": false
-    },
-    "brookings-metro-ai-2024": {
-      "id": "brookings-metro-ai-2024",
-      "title": "AI and the Geography of Opportunity",
-      "url": "https://www.brookings.edu/articles/the-geography-of-generative-ais-workforce-impacts-will-likely-differ-from-those-of-previous-technologies/",
-      "publisher": "Brookings Institution",
-      "evidenceTier": 2,
-      "datePublished": "2024-01-20",
-      "excerpt": "AI adoption is concentrating economic gains in a handful of superstar cities, widening the already large metro-level wage divergence.",
-      "usedIn": [
-        "geographic-wage-divergence"
-      ],
-      "verified": true
     },
     "brookings-white-collar-2024": {
       "id": "brookings-white-collar-2024",
@@ -1626,7 +1573,7 @@
       "datePublished": "2025-07-01",
       "excerpt": "AI jobs pay more than similar jobs that do not focus on AI, with a typical premium of 25%. The share of AI jobs among new job listings increased 123% from 2023 to 2024.",
       "usedIn": [
-        "geographic-wage-divergence"
+        "high-skill-wage-premium"
       ],
       "verified": true,
       "synthetic": false
@@ -2078,7 +2025,7 @@
       "datePublished": "2026-01-15",
       "excerpt": "Employment 3.6% lower in AI-vulnerable occupations in regions with high AI-skill demand after 5 years; geographic divergence driven by skill concentration.",
       "usedIn": [
-        "geographic-wage-divergence"
+        "overall-us-displacement"
       ],
       "verified": true
     },
@@ -2155,7 +2102,7 @@
       "datePublished": "2024-09-01",
       "excerpt": "AI-related roles offer a 38% wage premium in top-10 tech metros vs. national average. Non-AI roles in same metros show only 12% premium.",
       "usedIn": [
-        "geographic-wage-divergence"
+        "high-skill-wage-premium"
       ],
       "verified": true
     },
@@ -2438,20 +2385,6 @@
       ],
       "verified": true
     },
-    "lightcast-geo-wages-2023": {
-      "id": "lightcast-geo-wages-2023",
-      "title": "The Lightcast Global AI Skills Outlook",
-      "url": "https://lightcast.io/resources/research/the-lightcast-global-ai-skills-outlook",
-      "publisher": "Lightcast",
-      "evidenceTier": 2,
-      "datePublished": "2023-08-15",
-      "excerpt": "AI skills are becoming a universal priority beyond Silicon Valley. The U.S. leads in AI skills demand, with San Francisco commanding the highest average tech salary at $177,636.",
-      "usedIn": [
-        "geographic-wage-divergence"
-      ],
-      "verified": true,
-      "synthetic": false
-    },
     "lightcast-tech-postings-2025": {
       "id": "lightcast-tech-postings-2025",
       "title": "How AI is Disrupting the Tech Job Market: Data from 20M Job Postings",
@@ -2489,7 +2422,7 @@
       "datePublished": "2023-11-01",
       "excerpt": "55% of LinkedIn members hold jobs that stand to be impacted by generative AI. By 2030, the skills required for jobs will change by up to 65%.",
       "usedIn": [
-        "geographic-wage-divergence"
+        "workforce-ai-exposure"
       ],
       "verified": true,
       "synthetic": false
@@ -2503,7 +2436,7 @@
       "datePublished": "2026-01-21",
       "excerpt": "6.1 million workers in AI-exposed roles lack adaptive capacity; 86% are women. Vulnerability concentrated in college towns and state capitals in Mountain West and Midwest.",
       "usedIn": [
-        "geographic-wage-divergence"
+        "overall-us-displacement"
       ],
       "verified": true
     },
@@ -2760,19 +2693,6 @@
       ],
       "verified": true
     },
-    "moneypenny-regional-ai-2025": {
-      "id": "moneypenny-regional-ai-2025",
-      "title": "The State of AI Adoption in U.S. Businesses | 2025 Trends",
-      "url": "https://www.moneypenny.com/us/resources/blog/the-state-of-ai-adoption-in-u-s-businesses/",
-      "publisher": "Moneypenny",
-      "evidenceTier": 3,
-      "datePublished": "2025-12-10",
-      "excerpt": "Mountain region leads US AI adoption at 42%, followed by Pacific at 39%. Southeast lags at 22%. Regional adoption gaps correlate with widening wage divergence.",
-      "usedIn": [
-        "geographic-wage-divergence"
-      ],
-      "verified": true
-    },
     "msft-earnings-2024": {
       "id": "msft-earnings-2024",
       "title": "Microsoft FY24 Q3 Press Release",
@@ -2786,19 +2706,6 @@
       ],
       "verified": true,
       "synthetic": false
-    },
-    "muro-kinder-geography-2025": {
-      "id": "muro-kinder-geography-2025",
-      "title": "The geography of generative AI's workforce impacts will likely differ from those of previous technologies",
-      "url": "https://www.brookings.edu/articles/the-geography-of-generative-ais-workforce-impacts-will-likely-differ-from-those-of-previous-technologies/",
-      "publisher": "Brookings Metro (Muro, Methkupally, Kinder)",
-      "evidenceTier": 1,
-      "datePublished": "2025-02-01",
-      "excerpt": "43% of workers in San Jose could see AI shift half or more of tasks, vs only 31% in Las Vegas. High-skill metro areas most exposed \u2014 reversing prior automation patterns.",
-      "usedIn": [
-        "geographic-wage-divergence"
-      ],
-      "verified": true
     },
     "nber-ai-legal-impact-2025": {
       "id": "nber-ai-legal-impact-2025",
@@ -2904,19 +2811,6 @@
       "excerpt": "ChatGPT's launch caused a 21% decline in freelance writing job postings and a 15% drop in average hourly rates within 6 months.",
       "usedIn": [
         "freelancer-rate-impact"
-      ],
-      "verified": true
-    },
-    "nber-spatial-ai-2024": {
-      "id": "nber-spatial-ai-2024",
-      "title": "The Spatial Distribution of AI's Labor Market Effects",
-      "url": "https://www.nber.org/papers/w32899",
-      "publisher": "NBER (Moretti, Faggio)",
-      "evidenceTier": 1,
-      "datePublished": "2024-05-15",
-      "excerpt": "Each AI job in a hub city creates 3-5 local service jobs. Non-hub cities see net job losses. The spatial multiplier amplifies geographic wage divergence.",
-      "usedIn": [
-        "geographic-wage-divergence"
       ],
       "verified": true
     },
@@ -3199,20 +3093,6 @@
       ],
       "verified": true
     },
-    "pwc-ai-jobs-barometer-2025": {
-      "id": "pwc-ai-jobs-barometer-2025",
-      "title": "PwC Global AI Jobs Barometer 2025",
-      "url": "https://www.pwc.com/gx/en/issues/artificial-intelligence/ai-jobs-barometer.html",
-      "publisher": "PwC",
-      "evidenceTier": 2,
-      "datePublished": "2025-06-03",
-      "excerpt": "AI-skilled workers command a 56% wage premium, up from 25% in prior year. AI roles median compensation at $157K vs. $49,500 all-occupation median.",
-      "usedIn": [
-        "median-wage-impact",
-        "geographic-wage-divergence"
-      ],
-      "verified": true
-    },
     "pwc-ai-wage-premium-2025": {
       "id": "pwc-ai-wage-premium-2025",
       "title": "PwC AI Jobs Barometer 2025: The AI Wage Premium",
@@ -3329,7 +3209,7 @@
       "id": "sciencedirect-freelancer-demand-2025",
       "title": "Winners and losers of generative AI: Early Evidence of Shifts in Freelancer Demand",
       "url": "https://www.sciencedirect.com/science/article/pii/S0167268124004591",
-      "publisher": "Journal of Economic Behavior & Organization (Teutloff, Einsiedler, Kässi, Braesemann, Mishkin, del Rio-Chanona)",
+      "publisher": "Journal of Economic Behavior & Organization (Teutloff, Einsiedler, K\u00e4ssi, Braesemann, Mishkin, del Rio-Chanona)",
       "evidenceTier": 1,
       "datePublished": "2025-01-29",
       "excerpt": "Demand for substitutable skills (writing, translation) decreased 20-50% relative to counterfactual after ChatGPT launch. Short-term (1-3 week) jobs saw sharpest decline. ML programming demand grew 24%; AI chatbot development nearly tripled.",
@@ -3482,7 +3362,7 @@
       "datePublished": "2025-07-27",
       "excerpt": "Job postings for non-tech roles that require AI skills offer 28% higher salaries \u2014 an average of nearly $18,000 more per year. The divide between AI-skilled and non-AI-skilled workers is widening.",
       "usedIn": [
-        "geographic-wage-divergence"
+        "high-skill-wage-premium"
       ],
       "verified": true,
       "synthetic": false
@@ -3873,8 +3753,7 @@
         "entry-level-wage-impact",
         "high-skill-wage-premium",
         "creative-industry-displacement",
-        "median-wage-impact",
-        "geographic-wage-divergence"
+        "median-wage-impact"
       ],
       "verified": true,
       "synthetic": false
@@ -4379,8 +4258,7 @@
       "verified": true,
       "synthetic": false,
       "usedIn": [
-        "overall-us-displacement",
-        "geographic-wage-divergence"
+        "overall-us-displacement"
       ]
     },
     "jff-ai-economic-opportunity-2026": {
@@ -5035,7 +4913,7 @@
       "datePublished": "2025-07-16",
       "excerpt": "Bay Area accounts for 13% of national AI job postings. Top 30 metros capture 67% of all AI hiring. AI job postings grew 28.5% annually since 2010 but still only 2.5% of all US openings. More than 200 metros lack significant AI presence.",
       "usedIn": [
-        "geographic-wage-divergence"
+        "workforce-ai-exposure"
       ],
       "verified": true,
       "synthetic": false

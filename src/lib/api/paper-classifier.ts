@@ -191,27 +191,6 @@ const PREDICTION_KEYWORDS: Record<
       "displacement",
     ],
   },
-  "geographic-wage-divergence": {
-    primary: [
-      "geographic",
-      "regional",
-      "city",
-      "metro",
-      "hub",
-      "remote work",
-      "spatial",
-      "location premium",
-      "tech hub",
-    ],
-    secondary: [
-      "wage gap",
-      "divergence",
-      "inequality",
-      "migration",
-      "clustering",
-      "AI adoption",
-    ],
-  },
   "entry-level-wage-impact": {
     primary: [
       "entry level",

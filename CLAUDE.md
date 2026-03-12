@@ -2,7 +2,7 @@
 
 ## What This Is
 
-A public-facing Next.js dashboard tracking AI's impact on the labor market. URL: jobsdata.ai. It synthesizes research, government data, and expert analysis into 17 interactive prediction graphs across 5 categories. Practitioner-first tone — no hype, no doom, just evidence.
+A public-facing Next.js dashboard tracking AI's impact on the labor market. URL: jobsdata.ai. It synthesizes research, government data, and expert analysis into 16 interactive prediction graphs across 5 categories. Practitioner-first tone — no hype, no doom, just evidence.
 
 ## Tech Stack
 
@@ -17,13 +17,13 @@ A public-facing Next.js dashboard tracking AI's impact on the labor market. URL:
 | Route | Description |
 |-------|-------------|
 | `/` | Hero stats + prediction grid (displacement, wages, adoption) |
-| `/predictions/[slug]` | Individual prediction detail pages (17 total) |
+| `/predictions/[slug]` | Individual prediction detail pages (16 total) |
 | `/signals` | Leading indicators: firm response, productivity paths |
 | `/history` | Historical technology comparison (GPT compression, diffusion) |
 | `/j-curve` | J-Curve explainer with interactive visuals |
 | `/about` | Methodology, FAQ |
 
-## Prediction Graph Taxonomy (17 graphs)
+## Prediction Graph Taxonomy (16 graphs)
 
 ### Displacement (8)
 | Slug | Title | Unit |
@@ -37,13 +37,12 @@ A public-facing Next.js dashboard tracking AI's impact on the labor market. URL:
 | `financial-services-displacement` | Financial Services Displacement by 2030 | % of roles displaced |
 | `customer-service-automation` | Customer Service Automation by 2028 | % of interactions automated |
 
-### Wages (5)
+### Wages (4)
 | Slug | Title | Unit |
 |------|-------|------|
 | `median-wage-impact` | Median Wage Impact from AI by 2030 | % change in real median wage |
 | `entry-level-wage-impact` | Entry-Level Wage Impact from AI by 2030 | % wage change |
 | `high-skill-wage-premium` | High-Skill AI Wage Premium by 2030 | % wage premium over median |
-| `geographic-wage-divergence` | AI Hub vs. Non-Hub Wage Divergence by 2030 | % wage premium |
 | `freelancer-rate-impact` | Freelancer/Gig Worker Rate Impact by 2028 | % rate change |
 
 ### Adoption, Exposure & Signals (4)
@@ -113,13 +112,13 @@ Defined in `src/lib/prediction-stats.ts`:
 
 | Path | Purpose |
 |------|---------|
-| `src/data/predictions/` | All 17 prediction JSON files |
+| `src/data/predictions/` | All 16 prediction JSON files |
 | `src/data/confirmed-sources.json` | Master source registry (300+ sources) |
 | `src/data/last-updated.json` | Site-wide "last updated" date |
 | `src/app/page.tsx` | Hero section with hardcoded stats |
 | `src/lib/types.ts` | TypeScript interfaces (Prediction, Source, etc.) |
 | `src/lib/prediction-stats.ts` | Weighted average computation |
-| `src/lib/data-loader.ts` | Loads all 17 predictions |
+| `src/lib/data-loader.ts` | Loads all 16 predictions |
 | `scripts/` | Digest pipeline, ingestion, signal fetching |
 | `.claude/commands/` | Claude skills (ingest, weekly-changelog) |
 | `changelog/` | Weekly changelogs and LinkedIn posts |

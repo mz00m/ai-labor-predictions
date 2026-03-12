@@ -36,7 +36,6 @@ Graphs ranked by data hunger (fewest data points first). The agent should priori
 | 2 | `healthcare-admin-displacement` | 4 | 8+ |
 | 3 | `creative-industry-displacement` | 6 | 10+ |
 | 4 | `customer-service-automation` | 6 | 10+ |
-| 5 | `geographic-wage-divergence` | 6 | 10+ |
 | 6 | `freelancer-rate-impact` | 7 | 10+ |
 | 7 | `high-skill-wage-premium` | 7 | 10+ |
 | 8 | `white-collar-professional-displacement` | 7 | 10+ |

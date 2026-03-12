@@ -191,7 +191,7 @@ Displacement: overall-us-displacement (% of US jobs),
   creative-industry-displacement (% roles), education-sector-displacement (% roles),
   healthcare-admin-displacement (% roles), financial-services-displacement (% roles),
   customer-service-automation (% interactions)
-Wages: median-wage-impact (% change real median wage), geographic-wage-divergence (% wage premium),
+Wages: median-wage-impact (% change real median wage),
   entry-level-wage-impact (% wage change), high-skill-wage-premium (% premium over median),
   freelancer-rate-impact (% rate change)
 Adoption: ai-adoption-rate (% of firms), genai-work-adoption (% adults at work),

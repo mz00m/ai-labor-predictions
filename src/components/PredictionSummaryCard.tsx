@@ -52,8 +52,6 @@ function getContextLine(prediction: Prediction, aggregateValue: number): string 
     return `Freelancer rates in AI-exposed categories (writing, design, translation) have ${v < 0 ? "fallen" : "risen"} ${Math.abs(v)}% — a leading indicator of broader wage shifts.`;
   if (prediction.slug === "entry-level-wage-impact")
     return `Entry-level wages in knowledge work are projected to ${v < 0 ? "decline" : "increase"} ${Math.abs(v)}% as AI handles tasks traditionally done by juniors.`;
-  if (prediction.slug === "geographic-wage-divergence")
-    return `AI hub cities (SF, Seattle, NYC) pay ${v}% more than non-hub metros for tech workers — and the gap is accelerating.`;
   if (prediction.slug === "ai-adoption-rate")
     return `${v}% of US companies with 50+ employees have deployed AI in production, up from under 4% in 2023.`;
   if (prediction.slug === "genai-work-adoption")

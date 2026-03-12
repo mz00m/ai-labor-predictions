@@ -38,7 +38,6 @@ const SLUG_TO_INDUSTRY: Record<string, string> = {
   // Wages
   "median-wage-impact": "manufacturing", // broad economy proxy
   "entry-level-wage-impact": "office",
-  "geographic-wage-divergence": "software_it",
   "freelancer-rate-impact": "creative",
 };
 
