@@ -223,6 +223,15 @@
       "label": "Stanford: small positive wage effects overall"
     },
     {
+      "date": "2026-01-01",
+      "direction": "down",
+      "sourceIds": [
+        "maasoum-lichtinger-entry-barriers-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Maasoum/Lichtinger: GenAI modestly changes net wage inequality; entry barriers shift"
+    },
+    {
       "date": "2026-01-06",
       "direction": "down",
       "sourceIds": [
@@ -573,6 +582,15 @@
       "datePublished": "2026-03-05",
       "excerpt": "Graduate degree holders comprise 17.4% of the most AI-exposed workers vs 4.5% of the unexposed group",
       "dateAdded": "2026-03-07"
+    },
+    {
+      "id": "maasoum-lichtinger-entry-barriers-2026",
+      "title": "GenAI and Entry Barriers",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=maasoum2026",
+      "publisher": "SSRN (Maasoum, Lichtinger)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-01",
+      "excerpt": "GenAI modestly changes net wage inequality; entry barriers shift for new workers."
     }
   ]
 }

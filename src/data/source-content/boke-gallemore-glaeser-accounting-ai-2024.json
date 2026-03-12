@@ -1,0 +1,13 @@
+{
+  "id": "boke-gallemore-glaeser-accounting-ai-2024",
+  "abstract": "Study examining AI's impact on the accounting profession using Lightcast job posting data. The authors find that for every 10 AI-related roles created in accounting firms, 49 fewer traditional accounting positions are posted, suggesting significant displacement effects within the profession. The research highlights how AI adoption in accounting is shifting labor demand from routine bookkeeping and audit tasks toward technology-oriented roles.",
+  "keyFindings": [
+    "For every 10 AI-related roles posted, 49 fewer traditional accounting job postings appear",
+    "AI adoption in accounting is concentrated in routine, rules-based tasks like bookkeeping and basic audit procedures",
+    "Net employment effect is negative, with AI role creation not offsetting traditional role displacement",
+    "Larger accounting firms show faster AI adoption and correspondingly sharper reductions in traditional postings"
+  ],
+  "methodology": "Analysis of Lightcast job posting data tracking changes in accounting profession hiring patterns. Examines the relationship between AI-specific role creation and traditional accounting job posting volumes across firms and time periods.",
+  "qualifiers": "Job postings are a proxy for actual employment and may not perfectly reflect hiring outcomes. The ratio of displacement to creation may vary across firm sizes and specializations. Study captures demand-side shifts only, not supply-side adjustments by workers.",
+  "fetchedAt": "2026-03-12"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "tamkin-mccrory-claude-productivity-2025",
+  "abstract": "Anthropic study measuring Claude's impact on task completion speed and projecting macroeconomic productivity implications. The research finds that Claude speeds up individual tasks by approximately 80% on average, which translates to an estimated 1.8% annual productivity growth contribution when accounting for adoption rates, task coverage, and the share of work that is AI-amenable. The study bridges micro-level task productivity with macro-level economic growth estimates.",
+  "keyFindings": [
+    "Claude speeds up individual task completion by approximately 80% on average",
+    "Translates to an estimated 1.8% annual productivity growth contribution at the macro level",
+    "Task-level gains are significantly larger than economy-wide effects due to partial adoption and coverage",
+    "Bridging micro-task and macro-productivity estimates reveals substantial adoption and coverage gaps"
+  ],
+  "methodology": "Anthropic internal study measuring task completion time with and without Claude AI assistance across diverse task types, then modeling macro-level productivity impacts by accounting for adoption rates, task coverage, and economic structure.",
+  "qualifiers": "Study conducted by the AI model's developer, creating potential conflicts of interest. 80% task speedup applies to AI-amenable tasks, not all work. 1.8% annual growth contribution is a projection dependent on adoption assumptions that may not materialize. Lab task conditions may overstate real-world gains.",
+  "fetchedAt": "2026-03-12"
+}

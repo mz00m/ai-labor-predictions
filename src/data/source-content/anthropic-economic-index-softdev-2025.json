@@ -1,0 +1,13 @@
+{
+  "id": "anthropic-economic-index-softdev-2025",
+  "abstract": "Anthropic's Economic Index finding that 37% of software development tasks show evidence of AI involvement based on analysis of Claude usage patterns. This represents one of the highest task-level AI penetration rates across all occupations studied, reflecting software development's position as an early and intensive adopter of generative AI tools for production work rather than just experimentation.",
+  "keyFindings": [
+    "37% of software development tasks show AI involvement based on Claude usage data",
+    "Software development has one of the highest AI task penetration rates across occupations",
+    "AI usage in software development spans coding, debugging, documentation, and code review",
+    "Usage patterns indicate production work integration, not just experimentation"
+  ],
+  "methodology": "Analysis of Claude AI usage patterns mapped to occupational task taxonomies, measuring the share of software development tasks where AI is actively involved. Part of Anthropic's broader Economic Index tracking AI's role across the economy.",
+  "qualifiers": "Based on Claude usage data only, which may not represent all AI tool usage in software development. Task-level involvement does not mean full automation; AI may assist rather than replace human work on these tasks. Usage patterns from a single AI provider may not generalize to the full market.",
+  "fetchedAt": "2026-03-12"
+}

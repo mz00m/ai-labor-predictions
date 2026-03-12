@@ -1,0 +1,13 @@
+{
+  "id": "bis-bulletin86-genai-households-2024",
+  "abstract": "BIS Bulletin (Bank for International Settlements) drawing on the NY Fed Survey of Consumer Expectations (SCE) finding that approximately 50% of US households report using generative AI tools. Based on a sample of 893 respondents, the study examines adoption patterns across demographic groups and use cases, providing one of the earliest central-bank-sourced measurements of consumer-level generative AI diffusion.",
+  "keyFindings": [
+    "Approximately 50% of US households report using generative AI tools",
+    "Adoption rates vary significantly by age, education, and income level",
+    "Work-related use cases represent a growing share of household AI usage",
+    "Higher-income and higher-education households show earlier and more intensive adoption"
+  ],
+  "methodology": "Analysis based on the NY Fed Survey of Consumer Expectations (SCE) with n=893 respondents. Published as BIS Bulletin No. 86, measuring household-level generative AI adoption rates and usage patterns across demographic categories.",
+  "qualifiers": "Relatively small sample size of 893 respondents for population-level inference. Self-reported usage may overstate or understate actual adoption depending on respondent awareness of what constitutes generative AI. Survey captures a single point in time in a rapidly evolving adoption landscape.",
+  "fetchedAt": "2026-03-12"
+}

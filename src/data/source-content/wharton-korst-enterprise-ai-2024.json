@@ -1,0 +1,13 @@
+{
+  "id": "wharton-korst-enterprise-ai-2024",
+  "abstract": "Wharton survey of 800 enterprise leaders finding that 72% report using AI tools on a weekly basis. The study examines how senior decision-makers in large organizations are integrating AI into strategic and operational workflows, with usage concentrated in data analysis, report generation, and decision support. The high adoption rate among leaders suggests top-down AI culture is forming in many enterprises.",
+  "keyFindings": [
+    "72% of enterprise leaders report weekly AI tool usage",
+    "Usage concentrated in data analysis, report generation, and decision support",
+    "Senior leader adoption signals top-down AI culture formation in enterprises",
+    "Leaders report AI most valuable for synthesizing information and preparing for decisions"
+  ],
+  "methodology": "Survey of n=800 enterprise leaders conducted in partnership with Wharton, measuring AI adoption frequency, use cases, and perceived value among senior decision-makers at large organizations.",
+  "qualifiers": "Enterprise leaders may over-report AI usage due to social desirability bias. Sample limited to large enterprises and may not reflect SMB adoption. Weekly usage does not distinguish between brief experimentation and deep integration into workflows.",
+  "fetchedAt": "2026-03-12"
+}

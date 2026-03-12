@@ -1,0 +1,13 @@
+{
+  "id": "abrahams-levy-metros-ai-2025",
+  "abstract": "Research examining geographic variation in AI vulnerability across US metropolitan areas, finding that high-education metros are the most exposed to AI-driven labor market disruption. Unlike previous automation waves that primarily affected manufacturing-heavy regions, AI's impact concentrates in knowledge-economy metros with large shares of professional, analytical, and administrative workers whose tasks overlap significantly with generative AI capabilities.",
+  "keyFindings": [
+    "High-education metropolitan areas are the most vulnerable to AI-driven labor disruption",
+    "AI exposure patterns differ sharply from previous automation waves that hit manufacturing regions",
+    "Knowledge-economy metros with large professional workforces face the greatest task-level AI overlap",
+    "Geographic concentration of AI-exposed occupations creates regional economic risk"
+  ],
+  "methodology": "Geographic analysis mapping AI task exposure scores to US metropolitan area employment composition, comparing AI vulnerability patterns to historical automation exposure distributions.",
+  "qualifiers": "Exposure does not equal displacement; high-education metros may also be better positioned to adapt. Metropolitan-level analysis masks within-metro variation by neighborhood and demographic group. Task exposure metrics are model-based estimates with inherent uncertainty.",
+  "fetchedAt": "2026-03-12"
+}

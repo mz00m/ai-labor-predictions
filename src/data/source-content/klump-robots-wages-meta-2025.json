@@ -1,0 +1,13 @@
+{
+  "id": "klump-robots-wages-meta-2025",
+  "abstract": "Meta-analysis synthesizing 53 studies on the relationship between robot adoption and wages, finding that the aggregate wage effect of robots is approximately zero. While individual studies show both positive and negative wage effects, the meta-analytic average converges to a null result, suggesting that robots neither systematically raise nor lower wages at the economy-wide level. This provides an important historical baseline for evaluating AI's potential wage impacts.",
+  "keyFindings": [
+    "Meta-analysis of 53 studies finds the average robot wage effect is approximately zero",
+    "Individual study estimates range widely from negative to positive wage effects",
+    "The null aggregate result masks heterogeneous effects across occupations and skill levels",
+    "Historical robot-wage relationship provides a baseline for evaluating AI's wage impacts"
+  ],
+  "methodology": "Systematic meta-analysis of 53 empirical studies examining the causal effect of robot adoption on wages, using standard meta-analytic techniques to aggregate effect sizes and assess heterogeneity and publication bias.",
+  "qualifiers": "Robot effects may not predict AI effects given differences in task overlap and adoption patterns. Meta-analytic averages can mask important distributional effects. Publication bias and methodological heterogeneity across studies complicate interpretation.",
+  "fetchedAt": "2026-03-12"
+}

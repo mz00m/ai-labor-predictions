@@ -150,6 +150,15 @@
       "label": "Otis et al.: No avg AI effect on Kenyan SME revenue; high performers +15%, low -8%"
     },
     {
+      "date": "2025-01-29",
+      "direction": "down",
+      "sourceIds": [
+        "jiang-extended-workday-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER/Jiang: AI-exposed workers work 3.5 hrs/wk more; productivity gains captured by firms"
+    },
+    {
       "date": "2025-01-30",
       "direction": "neutral",
       "sourceIds": [
@@ -166,6 +175,15 @@
       ],
       "evidenceTier": 2,
       "label": "Indeed: AI-exposed wages grew 1.2% vs 4.1% non-exposed"
+    },
+    {
+      "date": "2025-03-24",
+      "direction": "neutral",
+      "sourceIds": [
+        "marguerit-augmenting-automating-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Marguerit: Automation AI depresses low-skill wages; augmentation AI raises high-skill wages"
     },
     {
       "date": "2025-03-28",
@@ -204,6 +222,42 @@
       "label": "Goldman Sachs: AI to raise labor productivity ~15% when fully adopted"
     },
     {
+      "date": "2025-08-21",
+      "direction": "down",
+      "sourceIds": [
+        "dubal-negron-surveillance-pay-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Equitable Growth: 500 AI vendors audit finds surveillance pay spreading across sectors"
+    },
+    {
+      "date": "2025-10-08",
+      "direction": "neutral",
+      "sourceIds": [
+        "klump-robots-wages-meta-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Klump et al.: Meta-analysis of 53 studies (2,143 estimates) finds robot wage effect ~zero"
+    },
+    {
+      "date": "2025-10-15",
+      "direction": "up",
+      "sourceIds": [
+        "fang-genai-retail-productivity-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "CESifo RCT: GenAI boosts e-commerce sales 0-16.3% (TFP gains); larger for small sellers"
+    },
+    {
+      "date": "2025-11-05",
+      "direction": "up",
+      "sourceIds": [
+        "tamkin-mccrory-claude-productivity-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Anthropic: Claude speeds tasks ~80%; projects 1.8% annual US productivity growth/decade"
+    },
+    {
       "date": "2025-12-01",
       "direction": "down",
       "sourceIds": [
@@ -211,6 +265,15 @@
       ],
       "evidenceTier": 2,
       "label": "Revelio Labs: top-quartile salaries +30% vs bottom-quartile +10% since Jan 2023"
+    },
+    {
+      "date": "2025-12-24",
+      "direction": "up",
+      "sourceIds": [
+        "merali-scaling-laws-productivity-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Merali (Yale RCT): 8%/yr task time reduction from AI; ~20% US productivity boost/decade"
     },
     {
       "date": "2025-12-30",
@@ -559,6 +622,69 @@
       "datePublished": "2025-12-30",
       "excerpt": "falling labor share accounted for 16% of U.S. real wage growth between 1954 and 2019",
       "dateAdded": "2026-03-07"
+    },
+    {
+      "id": "jiang-extended-workday-2025",
+      "title": "AI and the Extended Workday",
+      "url": "https://www.nber.org/papers/w33536",
+      "publisher": "NBER (Jiang, Park, Xiao, Zhang)",
+      "evidenceTier": 1,
+      "datePublished": "2025-01-29",
+      "excerpt": "When someone transitions to a job with high exposure to AI, they work 3.5 hours longer per week. Productivity gains captured by firms, not wages."
+    },
+    {
+      "id": "klump-robots-wages-meta-2025",
+      "title": "Robots and Wages: A Meta-Analysis",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0954349X2500150X",
+      "publisher": "Structural Change and Economic Dynamics (Klump, Schneider, Jurkat)",
+      "evidenceTier": 1,
+      "datePublished": "2025-10-08",
+      "excerpt": "The overall effect of industrial robots on wages is close to zero and insignificant. 53 papers, 2,143 estimations."
+    },
+    {
+      "id": "merali-scaling-laws-productivity-2025",
+      "title": "Scaling Laws for Economic Productivity",
+      "url": "https://arxiv.org/abs/2512.21316",
+      "publisher": "Yale / arXiv (Merali)",
+      "evidenceTier": 1,
+      "datePublished": "2025-12-24",
+      "excerpt": "Each year of AI model progress reduced task time by 8%. Access to any AI model increased Earnings Per Minute by 81.3%. Continued scaling could boost US productivity by ~20% over the next decade."
+    },
+    {
+      "id": "tamkin-mccrory-claude-productivity-2025",
+      "title": "Estimating AI Productivity Gains from Claude Conversations",
+      "url": "https://www.anthropic.com/research/estimating-productivity-gains",
+      "publisher": "Anthropic (Tamkin, McCrory)",
+      "evidenceTier": 2,
+      "datePublished": "2025-11-05",
+      "excerpt": "Claude speeds up individual tasks by about 80%. Extrapolating suggests 1.8% annual US productivity growth over the next decade."
+    },
+    {
+      "id": "marguerit-augmenting-automating-2025",
+      "title": "Augmenting or Automating Labor?",
+      "url": "https://arxiv.org/abs/2503.19159",
+      "publisher": "LISER / arXiv (Marguerit)",
+      "evidenceTier": 1,
+      "datePublished": "2025-03-24",
+      "excerpt": "Automation AI negatively impacts low-skilled wages; augmentation AI raises high-skilled wages."
+    },
+    {
+      "id": "dubal-negron-surveillance-pay-2025",
+      "title": "How AI uncouples hard work from fair wages through surveillance pay",
+      "url": "https://equitablegrowth.org/how-artificial-intelligence-uncouples-hard-work-from-fair-wages-through-surveillance-pay-practices-and-how-to-fix-it/",
+      "publisher": "Washington Center for Equitable Growth (Dubal, Negron)",
+      "evidenceTier": 2,
+      "datePublished": "2025-08-21",
+      "excerpt": "Audit of 500 AI vendors finds surveillance pay spreading across healthcare, customer service, and logistics."
+    },
+    {
+      "id": "fang-genai-retail-productivity-2025",
+      "title": "Generative AI and Firm Productivity: Field Experiments in Online Retail",
+      "url": "https://arxiv.org/abs/2510.12049",
+      "publisher": "CESifo / Columbia (Fang et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2025-10-15",
+      "excerpt": "Large-scale field experiments find treatment effects 0-16.3% on sales, mapping directly into TFP improvements."
     }
   ]
 }

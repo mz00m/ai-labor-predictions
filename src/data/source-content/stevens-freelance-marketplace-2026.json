@@ -1,0 +1,13 @@
+{
+  "id": "stevens-freelance-marketplace-2026",
+  "abstract": "Analysis documenting a dramatic collapse in freelance marketplace spending, falling from 0.66% to 0.14% of GDP. This steep decline reflects the combined impact of AI tools substituting for freelance work and broader shifts in how companies source ad-hoc professional services. The contraction is particularly acute in writing, translation, graphic design, and basic programming -- categories where generative AI provides direct substitutes.",
+  "keyFindings": [
+    "Freelance marketplace spend collapsed from 0.66% to 0.14% of GDP",
+    "Decline concentrated in writing, translation, graphic design, and basic programming",
+    "Generative AI tools provide direct substitutes for many common freelance task categories",
+    "Platform-mediated freelance work is among the most visibly AI-disrupted labor market segments"
+  ],
+  "methodology": "Economic analysis of freelance marketplace transaction data and revenue figures, normalized against GDP to track the relative size of the platform freelance economy over time.",
+  "qualifiers": "Marketplace spending may shift to direct contracting or other platforms not captured in the data. Some decline may reflect broader economic conditions beyond AI substitution. GDP normalization can amplify apparent declines during periods of GDP growth.",
+  "fetchedAt": "2026-03-12"
+}

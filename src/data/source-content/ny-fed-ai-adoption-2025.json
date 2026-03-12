@@ -1,0 +1,13 @@
+{
+  "id": "ny-fed-ai-adoption-2025",
+  "abstract": "New York Federal Reserve research finding that over 50% of firms in information and finance sectors report using AI, representing the highest sectoral adoption rates in the US economy. Despite this significant adoption, few firms report AI-related layoffs, suggesting that early AI integration is augmenting rather than displacing workers in these knowledge-intensive industries. The study provides central-bank-quality data on the gap between AI adoption and labor displacement.",
+  "keyFindings": [
+    "Over 50% of firms in information and finance sectors report AI usage",
+    "Information and finance show the highest sectoral AI adoption rates",
+    "Few firms report AI-related layoffs despite significant adoption",
+    "Early evidence suggests augmentation rather than displacement in knowledge-intensive sectors"
+  ],
+  "methodology": "NY Fed survey of firms across sectors measuring AI adoption rates and associated workforce changes, with particular focus on information and financial services industries.",
+  "qualifiers": "Firm-level self-reporting may undercount or overcount AI usage depending on definition. 'Few layoffs' does not rule out reduced hiring or slower headcount growth. Early adoption phase results may not predict longer-term employment effects as AI capabilities mature.",
+  "fetchedAt": "2026-03-12"
+}

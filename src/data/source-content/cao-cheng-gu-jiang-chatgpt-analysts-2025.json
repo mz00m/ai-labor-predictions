@@ -1,0 +1,13 @@
+{
+  "id": "cao-cheng-gu-jiang-chatgpt-analysts-2025",
+  "abstract": "Study examining how ChatGPT adoption affects financial analyst report quality and characteristics. Analysts using ChatGPT produced reports that were 8.9% shorter on average, but report quality declined by 17% as measured by forecast accuracy and informativeness metrics. The findings suggest that while AI tools increase analyst efficiency, they may degrade the depth of analysis when used as a shortcut rather than a supplement.",
+  "keyFindings": [
+    "Financial analyst reports shortened by 8.9% on average after ChatGPT adoption",
+    "Report quality declined by 17% as measured by forecast accuracy and informativeness",
+    "AI-assisted reports showed reduced differentiation from consensus estimates",
+    "The quality decline was most pronounced among less experienced analysts"
+  ],
+  "methodology": "Empirical analysis of financial analyst reports before and after ChatGPT availability, measuring changes in report length, forecast accuracy, and informativeness. Uses textual analysis to identify AI-assisted reports and compares quality metrics across adoption cohorts.",
+  "qualifiers": "Difficulty in definitively identifying which reports used AI assistance. Quality decline may reflect early adoption patterns that improve over time as analysts learn to use tools more effectively. Metrics of report quality are debatable and may not capture all dimensions of analytical value.",
+  "fetchedAt": "2026-03-12"
+}

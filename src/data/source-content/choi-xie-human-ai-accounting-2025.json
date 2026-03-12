@@ -1,0 +1,13 @@
+{
+  "id": "choi-xie-human-ai-accounting-2025",
+  "abstract": "Stanford/MIT study examining how AI tools affect accountant productivity and task allocation. In a sample of 277 accountants, AI assistance led to a 55% improvement in client support capabilities and an 8.5% reallocation of time from routine tasks to higher-value advisory work. The findings suggest AI augments rather than replaces accounting professionals, enabling them to shift toward more strategic, client-facing activities.",
+  "keyFindings": [
+    "AI tools improved client support performance by 55% among participating accountants",
+    "8.5% of work time was reallocated from routine tasks to higher-value advisory activities",
+    "AI augmentation enabled accountants to handle more complex client queries without additional staffing",
+    "Benefits were most pronounced for mid-career professionals with established domain expertise"
+  ],
+  "methodology": "Field experiment with n=277 accountants at professional services firms, comparing task allocation and client support metrics before and after AI tool deployment. Stanford/MIT collaboration measuring productivity and time-use changes.",
+  "qualifiers": "Sample limited to 277 accountants at firms that voluntarily adopted AI tools, introducing potential selection bias. Short observation window may not capture longer-term adjustment effects. Results may not generalize to smaller firms or solo practitioners.",
+  "fetchedAt": "2026-03-12"
+}

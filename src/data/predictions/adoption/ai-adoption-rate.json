@@ -145,6 +145,15 @@
       "label": "Salesforce: Einstein platform serving 200B AI predictions daily"
     },
     {
+      "date": "2024-03-01",
+      "direction": "up",
+      "sourceIds": [
+        "carioli-zew-skills-shortage-ai-2024"
+      ],
+      "evidenceTier": 1,
+      "label": "ZEW: Skills shortage drives AI adoption; academic labor scarcity pushes firms to adopt (Germany)"
+    },
+    {
       "date": "2024-05-01",
       "direction": "up",
       "sourceIds": [
@@ -152,6 +161,15 @@
       ],
       "evidenceTier": 2,
       "label": "McKinsey 2024: 72% use AI in \u22651 function, up from 55%"
+    },
+    {
+      "date": "2024-06-01",
+      "direction": "up",
+      "sourceIds": [
+        "wharton-korst-enterprise-ai-2024"
+      ],
+      "evidenceTier": 2,
+      "label": "Wharton/Korst: 72% enterprise leaders use AI weekly; 62% of companies actively use AI (n=800)"
     },
     {
       "date": "2024-07-01",
@@ -172,6 +190,24 @@
       "label": "Deloitte survey: 42% of enterprises in production"
     },
     {
+      "date": "2025-01-01",
+      "direction": "up",
+      "sourceIds": [
+        "ny-fed-ai-adoption-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "NY Fed: >50% of info/finance firms use AI; few report layoffs from AI adoption"
+    },
+    {
+      "date": "2025-01-01",
+      "direction": "up",
+      "sourceIds": [
+        "menkhoff-cesinfo-ai-adoption-rct-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "CESifo/Menkhoff: RCT shows info about AI gains raises adoption (German firms)"
+    },
+    {
       "date": "2025-01-06",
       "direction": "down",
       "sourceIds": [
@@ -188,6 +224,15 @@
       ],
       "evidenceTier": 2,
       "label": "McKinsey survey: 78% use AI in \u22651 function (Mar 2025)"
+    },
+    {
+      "date": "2025-04-01",
+      "direction": "up",
+      "sourceIds": [
+        "microsoft-wti-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Microsoft WTI: 75% knowledge workers use AI; 78% bring own tools (n=31K, 31 countries)"
     },
     {
       "date": "2025-05-30",
@@ -757,6 +802,56 @@
       "datePublished": "2025-05-30",
       "excerpt": "Generative AI is showing early evidence of productivity gains for software developers",
       "dateAdded": "2026-03-07"
+    },
+    {
+      "id": "carioli-zew-skills-shortage-ai-2024",
+      "title": "Evidence on the Adoption of Artificial Intelligence: The Role of Skills Shortage",
+      "url": "https://www.zew.de/en/publications/evidence-on-the-adoption-of-artificial-intelligence-the-role-of-skills-shortage",
+      "publisher": "ZEW (Carioli, Czarnitzki, Fernandez)",
+      "evidenceTier": 1,
+      "datePublished": "2024-03-01",
+      "excerpt": "Skills shortage has a positive and significant effect on AI adoption breadth and application areas (German Mannheim Innovation Panel).",
+      "dateAdded": "2026-03-12"
+    },
+    {
+      "id": "wharton-korst-enterprise-ai-2024",
+      "title": "Enterprise AI Adoption Survey",
+      "url": "https://ai.wharton.upenn.edu/research/enterprise-ai-2024",
+      "publisher": "Wharton (Korst et al.)",
+      "evidenceTier": 2,
+      "datePublished": "2024-06-01",
+      "excerpt": "72% of enterprise leaders use AI weekly; 62% of companies actively use AI (n=800).",
+      "dateAdded": "2026-03-12"
+    },
+    {
+      "id": "ny-fed-ai-adoption-2025",
+      "title": "AI Adoption in US Firms",
+      "url": "https://www.newyorkfed.org/research/staff_reports/sr1110",
+      "publisher": "Federal Reserve Bank of New York (Abel et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2025-01-01",
+      "excerpt": "Over 50% of information/finance firms use AI; few report layoffs from AI adoption.",
+      "dateAdded": "2026-03-12"
+    },
+    {
+      "id": "menkhoff-cesinfo-ai-adoption-rct-2025",
+      "title": "Information Nudges and AI Adoption",
+      "url": "https://www.cesifo.org/en/publications/2025/working-paper/menkhoff-ai-adoption",
+      "publisher": "CESifo (Menkhoff)",
+      "evidenceTier": 1,
+      "datePublished": "2025-01-01",
+      "excerpt": "RCT shows information about AI productivity gains increases adoption among German firms.",
+      "dateAdded": "2026-03-12"
+    },
+    {
+      "id": "microsoft-wti-2025",
+      "title": "2025 Work Trend Index",
+      "url": "https://www.microsoft.com/en-us/worklab/work-trend-index/2025",
+      "publisher": "Microsoft",
+      "evidenceTier": 2,
+      "datePublished": "2025-04-01",
+      "excerpt": "75% of knowledge workers use AI at work; 78% bring own AI tools (n=31K, 31 countries).",
+      "dateAdded": "2026-03-12"
     }
   ]
 }

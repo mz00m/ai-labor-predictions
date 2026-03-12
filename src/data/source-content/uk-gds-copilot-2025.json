@@ -1,0 +1,13 @@
+{
+  "id": "uk-gds-copilot-2025",
+  "abstract": "UK Government Digital Service (GDS) report on a large-scale deployment of AI Copilot tools across 20,000 civil servants. The program found average time savings of 26 minutes per day per user, primarily from faster document drafting, email composition, and information retrieval. The deployment represents one of the largest government AI productivity studies, providing public-sector evidence alongside the predominantly private-sector AI productivity literature.",
+  "keyFindings": [
+    "Civil servants saved an average of 26 minutes per day using AI Copilot tools",
+    "Time savings concentrated in document drafting, email composition, and information retrieval",
+    "20,000 civil servants participated, making it one of the largest government AI deployments studied",
+    "Public-sector productivity gains broadly consistent with private-sector AI productivity findings"
+  ],
+  "methodology": "UK Government Digital Service deployment study measuring time savings across 20,000 civil servants using AI Copilot tools, based on self-reported time tracking and usage analytics.",
+  "qualifiers": "Self-reported time savings may overstate actual productivity gains. 26 minutes per day does not necessarily translate to equivalent output increases. Government work contexts and incentive structures differ from private-sector environments where most AI productivity studies are conducted.",
+  "fetchedAt": "2026-03-12"
+}

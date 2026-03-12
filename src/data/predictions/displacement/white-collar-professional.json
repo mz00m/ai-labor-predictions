@@ -293,6 +293,41 @@
       "label": "McKinsey: AI fluency demand grew 7x in 2 yrs; 40% of jobs in highly automatable roles"
     },
     {
+      "date": "2024-11-30",
+      "direction": "down",
+      "sourceIds": ["boke-gallemore-glaeser-accounting-ai-2024"],
+      "evidenceTier": 1,
+      "label": "Boke et al.: AI investment reduces accounting hiring but not work quality"
+    },
+    {
+      "date": "2025-01-01",
+      "direction": "down",
+      "sourceIds": ["maasoum-lichtinger-seniority-2025"],
+      "evidenceTier": 1,
+      "label": "Maasoum/Lichtinger: GenAI adopters cut junior hiring 22%; seniority composition shifts"
+    },
+    {
+      "date": "2025-03-15",
+      "direction": "up",
+      "sourceIds": ["dellacqua-cybernetic-teammate-2025"],
+      "evidenceTier": 1,
+      "label": "NBER/HBS RCT (776 P&G pros): Individual + AI matches team without AI (+0.37 SD)"
+    },
+    {
+      "date": "2025-04-15",
+      "direction": "up",
+      "sourceIds": ["dillon-shifting-work-patterns-2025"],
+      "evidenceTier": 1,
+      "label": "NBER/AER:I (7K workers, 66 firms): AI saves 2 hrs/wk on email; no task shift detected"
+    },
+    {
+      "date": "2025-09-15",
+      "direction": "up",
+      "sourceIds": ["chatterji-chatgpt-usage-2025"],
+      "evidenceTier": 1,
+      "label": "NBER: 700M ChatGPT users; 81% of work use is decision support, not task automation"
+    },
+    {
       "date": "2025-12-15",
       "direction": "up",
       "sourceIds": [
@@ -912,6 +947,56 @@
       "evidenceTier": 1,
       "datePublished": "2026-01-22",
       "excerpt": "Zo lag het aantal openstaande vacatures in de meest vatbare beroepsgroepen in het tweede kwartaal van 2025 bijna 25 procent lager dan eind 2022. In de 102 overige beroepsgroepen daalde het aantal vacatures in dezelfde periode met minder dan 10 procent.",
+      "dateAdded": "2026-03-12"
+    },
+    {
+      "id": "boke-gallemore-glaeser-accounting-ai-2024",
+      "title": "Artificial Intelligence and White-Collar Work: Evidence from the Accounting Profession",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5039640",
+      "publisher": "SSRN (Boke, De la Parra, Gallemore, Glaeser)",
+      "evidenceTier": 1,
+      "datePublished": "2024-11-30",
+      "excerpt": "AI investment reduces accounting hiring but not work quality. 10 additional AI accounting roles associated with 49 fewer accounting-skill postings.",
+      "dateAdded": "2026-03-12"
+    },
+    {
+      "id": "maasoum-lichtinger-seniority-2025",
+      "title": "GenAI and Seniority Composition",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5039640",
+      "publisher": "SSRN (Maasoum, Lichtinger)",
+      "evidenceTier": 1,
+      "datePublished": "2025-01-01",
+      "excerpt": "GenAI adopters cut junior hiring 22%; seniority composition shifts toward more experienced workers.",
+      "dateAdded": "2026-03-12"
+    },
+    {
+      "id": "dillon-shifting-work-patterns-2025",
+      "title": "Shifting Work Patterns with Generative AI",
+      "url": "https://www.nber.org/papers/w33795",
+      "publisher": "NBER / AER: Insights (Dillon, Jaffe, Immorlica, Stanton)",
+      "evidenceTier": 1,
+      "datePublished": "2025-04-15",
+      "excerpt": "In a field experiment across 66 firms and 7,137 knowledge workers, the 80% of treated workers who used the AI tool spent two fewer hours on email each week. We do not detect shifts in the quantity or composition of workers' tasks.",
+      "dateAdded": "2026-03-12"
+    },
+    {
+      "id": "chatterji-chatgpt-usage-2025",
+      "title": "How People Use ChatGPT",
+      "url": "https://www.nber.org/papers/w34255",
+      "publisher": "NBER (Chatterji, Cunningham, Deming, Hitzig, Ong, Shan, Wadman)",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-15",
+      "excerpt": "By July 2025, 18 billion messages were being sent each week by 700 million users. 81% of work-related messages involve obtaining information or making decisions, not task automation.",
+      "dateAdded": "2026-03-12"
+    },
+    {
+      "id": "dellacqua-cybernetic-teammate-2025",
+      "title": "The Cybernetic Teammate: A Field Experiment on Generative AI Reshaping Teamwork and Expertise",
+      "url": "https://www.nber.org/papers/w33641",
+      "publisher": "NBER / HBS (Dell'Acqua, Ayoubi et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2025-03-15",
+      "excerpt": "In a pre-registered RCT with 776 P&G professionals, individuals with AI matched teams without AI (+0.37 SD improvement). AI broke professional silos.",
       "dateAdded": "2026-03-12"
     }
   ]

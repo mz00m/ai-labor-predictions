@@ -1,0 +1,13 @@
+{
+  "id": "fang-genai-retail-productivity-2025",
+  "abstract": "CESifo randomized controlled trial measuring the impact of generative AI tools on retail sales productivity, finding total factor productivity (TFP) gains ranging from 0% to 16.3% depending on the specific application and worker characteristics. The wide range of effects highlights that AI's productivity impact is highly context-dependent, with some implementations yielding substantial gains while others show no measurable improvement.",
+  "keyFindings": [
+    "Generative AI produces 0-16.3% sales TFP gains in retail settings",
+    "Productivity gains are highly variable across workers and implementation contexts",
+    "Some AI implementations show no measurable productivity improvement",
+    "Worker characteristics and task fit are key determinants of AI productivity effects"
+  ],
+  "methodology": "CESifo randomized controlled trial in retail settings, randomizing access to generative AI tools and measuring changes in sales-based total factor productivity across treatment and control groups.",
+  "qualifiers": "Retail-specific results may not generalize to other sectors. The wide range (0-16.3%) reflects genuine heterogeneity rather than measurement imprecision. Short-term RCT may not capture learning effects that emerge over longer periods of AI tool use.",
+  "fetchedAt": "2026-03-12"
+}

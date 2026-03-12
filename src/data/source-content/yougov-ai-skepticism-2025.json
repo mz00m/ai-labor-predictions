@@ -1,0 +1,13 @@
+{
+  "id": "yougov-ai-skepticism-2025",
+  "abstract": "YouGov survey tracking AI tool usage and public sentiment toward artificial intelligence. The study finds that 56% of respondents report using AI tools, with 28% using them weekly. However, skepticism about AI's societal impact has increased by 8 percentage points compared to the prior year, indicating a growing gap between adoption behavior and public confidence in AI's net effects on employment and daily life.",
+  "keyFindings": [
+    "56% of respondents report using AI tools in some capacity",
+    "28% report weekly AI tool usage",
+    "Skepticism about AI's societal impact increased by 8 percentage points year-over-year",
+    "Growing divergence between actual adoption rates and sentiment toward AI's broader effects"
+  ],
+  "methodology": "Nationally representative survey conducted by YouGov measuring AI tool usage frequency and attitudes toward AI's societal impact. Tracks changes in both adoption and sentiment over time through repeated cross-sectional design.",
+  "qualifiers": "Self-reported usage may not align with objective usage data. Definition of 'AI tools' may be interpreted differently by respondents. Skepticism measures capture broad sentiment that may not reflect nuanced views on specific AI applications.",
+  "fetchedAt": "2026-03-12"
+}

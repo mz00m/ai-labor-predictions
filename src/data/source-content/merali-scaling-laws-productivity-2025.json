@@ -1,0 +1,13 @@
+{
+  "id": "merali-scaling-laws-productivity-2025",
+  "abstract": "Yale RCT establishing scaling laws for AI-driven productivity gains, finding approximately 8% per year reduction in task completion time, which compounds to roughly 20% productivity improvement per decade. The study provides a quantitative framework for projecting AI's productivity trajectory based on observed improvement rates, offering more grounded estimates than speculation-driven forecasts.",
+  "keyFindings": [
+    "AI reduces task completion time by approximately 8% per year based on observed data",
+    "Compounding effect yields roughly 20% productivity improvement per decade",
+    "Productivity scaling follows predictable patterns amenable to quantitative projection",
+    "RCT design provides stronger causal evidence than observational productivity studies"
+  ],
+  "methodology": "Yale randomized controlled trial measuring task completion time reductions from AI assistance across standardized tasks, fitting scaling law models to observed productivity improvement rates over successive AI model generations.",
+  "qualifiers": "Scaling laws derived from current trends may not hold if AI capability improvements accelerate or plateau. Lab-based task time measurements may not translate directly to real-world productivity gains. 8%/year rate represents an average across task types with significant variation.",
+  "fetchedAt": "2026-03-12"
+}

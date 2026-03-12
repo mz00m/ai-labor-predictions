@@ -1,0 +1,13 @@
+{
+  "id": "brynjolfsson-shao-task-automation-2025",
+  "abstract": "Brynjolfsson and Shao study surveying workers about their preferences for task-level automation, finding that workers want 46% of their tasks automated by AI. This reveals a substantial appetite for AI-assisted work among employees themselves, with preferences concentrated on repetitive, administrative, and data-processing tasks. The research challenges narratives of universal worker resistance to AI and suggests that worker demand may be a significant driver of AI diffusion.",
+  "keyFindings": [
+    "Workers want 46% of their tasks automated by AI on average",
+    "Automation preferences concentrated on repetitive, administrative, and data-processing tasks",
+    "Workers generally prefer to retain tasks involving judgment, creativity, and interpersonal interaction",
+    "Worker demand for automation may be a significant driver of AI diffusion beyond employer-driven adoption"
+  ],
+  "methodology": "Survey of workers measuring preferences for AI automation across their specific task portfolios, mapping desired automation rates to occupational task taxonomies.",
+  "qualifiers": "Stated preferences for automation may differ from actual acceptance when automation is implemented. Workers may underestimate the scope of tasks AI could affect. Survey framing may influence reported preferences depending on how automation benefits and risks are presented.",
+  "fetchedAt": "2026-03-12"
+}

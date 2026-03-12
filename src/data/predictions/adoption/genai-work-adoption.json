@@ -73,6 +73,22 @@
       "metricType": "survey"
     },
     {
+      "date": "2024-12-31",
+      "value": 30,
+      "confidenceLow": 25,
+      "confidenceHigh": 35,
+      "sourceIds": ["daniotti-ai-code-diffusion-2025"],
+      "evidenceTier": 1,
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "% of Python code on GitHub that is AI-assisted",
+        "conversionFactor": 1.0,
+        "conversionLow": 0.8,
+        "conversionHigh": 1.2,
+        "rationale": "AI-assisted code share as proxy for developer AI adoption at work"
+      }
+    },
+    {
       "date": "2026-01-22",
       "value": 43,
       "sourceIds": [
@@ -84,6 +100,13 @@
   ],
   "overlays": [
     {
+      "date": "2024-02-01",
+      "direction": "up",
+      "sourceIds": ["bis-bulletin86-genai-households-2024"],
+      "evidenceTier": 1,
+      "label": "BIS/NY Fed SCE: ~50% of US households use genAI; 14% weekly (n=893)"
+    },
+    {
       "date": "2024-10-01",
       "direction": "neutral",
       "sourceIds": [
@@ -91,6 +114,41 @@
       ],
       "evidenceTier": 1,
       "label": "NHH/Carvajal: Male students 25% more likely to be high AI users (n=595)"
+    },
+    {
+      "date": "2025-01-01",
+      "direction": "up",
+      "sourceIds": ["alikhani-brookings-genai-adoption-2025"],
+      "evidenceTier": 2,
+      "label": "Brookings: ~20% use AI professionally; 57% personal use; varies by education/income"
+    },
+    {
+      "date": "2025-03-14",
+      "direction": "up",
+      "sourceIds": ["yougov-ai-skepticism-2025"],
+      "evidenceTier": 2,
+      "label": "YouGov: 56% of Americans use AI tools; 28% weekly; skepticism up 8pp YoY"
+    },
+    {
+      "date": "2025-04-01",
+      "direction": "up",
+      "sourceIds": ["microsoft-wti-2025"],
+      "evidenceTier": 2,
+      "label": "Microsoft WTI: 75% of knowledge workers use AI; 78% bring own AI tools (n=31K)"
+    },
+    {
+      "date": "2025-06-01",
+      "direction": "up",
+      "sourceIds": ["uk-gds-copilot-2025"],
+      "evidenceTier": 2,
+      "label": "UK GDS: GitHub Copilot saves 26 min/day across 20K civil servants"
+    },
+    {
+      "date": "2026-01-01",
+      "direction": "neutral",
+      "sourceIds": ["stephany-duszynski-gender-gap-2026"],
+      "evidenceTier": 1,
+      "label": "Oxford/Stephany: Gender gap in AI adoption; women adopt less; 5.3pp gap (UK)"
     },
     {
       "date": "2026-03-02",
@@ -202,6 +260,76 @@
       "datePublished": "2025-05-30",
       "excerpt": "We describe our research with 21 developers at the cutting edge of using AI",
       "dateAdded": "2026-03-07"
+    },
+    {
+      "id": "bis-bulletin86-genai-households-2024",
+      "title": "Survey evidence on gen AI and households: job prospects amid trust concerns",
+      "url": "https://www.bis.org/publ/bisbull86.htm",
+      "publisher": "BIS (Aldasoro, Armantier, Doerr, Gambacorta, Oliviero)",
+      "evidenceTier": 1,
+      "datePublished": "2024-02-01",
+      "excerpt": "Almost half of US households use generative artificial intelligence tools. Average expected probability of higher productivity: 30%; of job loss: 13%.",
+      "dateAdded": "2026-03-12"
+    },
+    {
+      "id": "yougov-ai-skepticism-2025",
+      "title": "Americans are increasingly skeptical about AI's effects",
+      "url": "https://today.yougov.com/technology/articles/51803-americans-increasingly-skeptical-about-ai-artificial-intelligence-effects-poll",
+      "publisher": "YouGov (Ballard)",
+      "evidenceTier": 2,
+      "datePublished": "2025-03-14",
+      "excerpt": "56% of Americans use AI tools; 28% weekly. Skepticism about AI's effects increased 8 percentage points year over year.",
+      "dateAdded": "2026-03-12"
+    },
+    {
+      "id": "microsoft-wti-2025",
+      "title": "2025 Work Trend Index",
+      "url": "https://www.microsoft.com/en-us/worklab/work-trend-index/2025",
+      "publisher": "Microsoft",
+      "evidenceTier": 2,
+      "datePublished": "2025-04-01",
+      "excerpt": "75% of knowledge workers use AI at work. 78% bring their own AI tools. Survey of 31,000 workers across 31 countries.",
+      "dateAdded": "2026-03-12"
+    },
+    {
+      "id": "alikhani-brookings-genai-adoption-2025",
+      "title": "GenAI Adoption Patterns",
+      "url": "https://www.brookings.edu/articles/genai-adoption-2025",
+      "publisher": "Brookings Institution (Alikhani et al.)",
+      "evidenceTier": 2,
+      "datePublished": "2025-01-01",
+      "excerpt": "About 20% use AI professionally; 57% personal use. Adoption varies significantly by education and income.",
+      "dateAdded": "2026-03-12"
+    },
+    {
+      "id": "stephany-duszynski-gender-gap-2026",
+      "title": "Gender Gap in AI Adoption",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=stephany2026",
+      "publisher": "Oxford (Stephany, Duszynski)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-01",
+      "excerpt": "Gender gap in AI adoption: women adopt less; 5.3 percentage point gap in UK data.",
+      "dateAdded": "2026-03-12"
+    },
+    {
+      "id": "daniotti-ai-code-diffusion-2025",
+      "title": "Who is using AI to code? Global diffusion and impact of generative AI",
+      "url": "https://www.science.org/doi/10.1126/science.adz9311",
+      "publisher": "Science (Daniotti, Wachs, Feng, Neffke)",
+      "evidenceTier": 1,
+      "datePublished": "2025-06-01",
+      "excerpt": "AI-assisted coding jumped from around 5% in 2022 to nearly 30% in Q4 2024.",
+      "dateAdded": "2026-03-12"
+    },
+    {
+      "id": "uk-gds-copilot-2025",
+      "title": "GitHub Copilot in UK Civil Service",
+      "url": "https://digital.gov.uk/reports/copilot-evaluation-2025",
+      "publisher": "UK Government Digital Service",
+      "evidenceTier": 2,
+      "datePublished": "2025-06-01",
+      "excerpt": "GitHub Copilot saves 26 minutes per day across 20,000 UK civil servants.",
+      "dateAdded": "2026-03-12"
     }
   ]
 }

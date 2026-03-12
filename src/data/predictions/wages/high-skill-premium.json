@@ -149,6 +149,15 @@
       "label": "NVIDIA: median comp $301K, headcount up 21.6% YoY"
     },
     {
+      "date": "2025-03-24",
+      "direction": "up",
+      "sourceIds": [
+        "marguerit-augmenting-automating-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Marguerit: Augmentation AI fosters new work and raises wages for high-skilled occupations"
+    },
+    {
       "date": "2025-05-01",
       "direction": "down",
       "sourceIds": [
@@ -495,7 +504,7 @@
     },
     {
       "id": "indeed-geo-premiums-2024",
-      "title": "The Geography of AI Jobs — Indeed Hiring Lab",
+      "title": "The Geography of AI Jobs \u2014 Indeed Hiring Lab",
       "url": "https://www.hiringlab.org/2024/09/12/ai-job-tracker/",
       "publisher": "Indeed Hiring Lab",
       "evidenceTier": 2,
@@ -520,7 +529,7 @@
       "publisher": "Fortune",
       "evidenceTier": 2,
       "datePublished": "2025-07-27",
-      "excerpt": "Job postings for non-tech roles that require AI skills offer 28% higher salaries — an average of nearly $18,000 more per year. The divide between AI-skilled and non-AI-skilled workers is widening.",
+      "excerpt": "Job postings for non-tech roles that require AI skills offer 28% higher salaries \u2014 an average of nearly $18,000 more per year. The divide between AI-skilled and non-AI-skilled workers is widening.",
       "dateAdded": "2026-03-11"
     },
     {
@@ -532,6 +541,15 @@
       "datePublished": "2026-01-22",
       "excerpt": "AI is redistributing economic value away from routine cognitive tasks toward judgment, coordination, and specialized knowledge.",
       "dateAdded": "2026-03-09"
+    },
+    {
+      "id": "marguerit-augmenting-automating-2025",
+      "title": "Augmenting or Automating Labor?",
+      "url": "https://arxiv.org/abs/2503.19159",
+      "publisher": "LISER / arXiv (Marguerit)",
+      "evidenceTier": 1,
+      "datePublished": "2025-03-24",
+      "excerpt": "Augmentation AI fosters new work and raises wages for high-skilled occupations."
     }
   ]
 }

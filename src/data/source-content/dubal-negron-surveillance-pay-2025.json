@@ -1,0 +1,13 @@
+{
+  "id": "dubal-negron-surveillance-pay-2025",
+  "abstract": "Research documenting the spread of AI-powered surveillance pay systems across approximately 500 AI vendors, where worker monitoring and algorithmic management are used to set individualized compensation. The study highlights how AI enables more granular employer control over wages through real-time performance monitoring, raising concerns about worker bargaining power, pay transparency, and the normalization of surveillance-based compensation practices.",
+  "keyFindings": [
+    "Approximately 500 AI vendors now offer surveillance-based pay and worker monitoring systems",
+    "AI enables individualized, real-time compensation adjustments based on monitored performance",
+    "Surveillance pay systems are spreading beyond gig work into traditional employment settings",
+    "These systems reduce worker bargaining power and pay transparency"
+  ],
+  "methodology": "Survey and analysis of approximately 500 AI vendor offerings in the worker monitoring and algorithmic management space, documenting the spread of surveillance-based compensation practices across industries.",
+  "qualifiers": "Vendor count does not indicate adoption rates among employers. The impact of surveillance pay on actual wage levels is not fully established. Regulatory responses to algorithmic management may constrain adoption in some jurisdictions.",
+  "fetchedAt": "2026-03-12"
+}

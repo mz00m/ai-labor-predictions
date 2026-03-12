@@ -1,0 +1,13 @@
+{
+  "id": "maasoum-lichtinger-seniority-2025",
+  "abstract": "Study finding that firms adopting generative AI cut junior hiring by 22%, with the displacement effect concentrated at entry-level and early-career positions. Senior workers are relatively protected as their roles involve more judgment, client relationships, and complex decision-making that AI cannot yet replicate. The research highlights a seniority-based asymmetry in AI's labor market impact that could create bottlenecks in professional development pipelines.",
+  "keyFindings": [
+    "GenAI-adopting firms reduced junior hiring by 22%",
+    "Displacement effects concentrated at entry-level and early-career positions",
+    "Senior workers relatively protected due to judgment-intensive and relationship-dependent roles",
+    "Reduced junior hiring may create long-term professional development pipeline bottlenecks"
+  ],
+  "methodology": "Firm-level analysis comparing hiring patterns across seniority levels before and after generative AI adoption, using job posting and hiring data to measure differential effects by career stage.",
+  "qualifiers": "Reduced postings may not translate directly to reduced employment if firms shift hiring channels. Early-career workers may find opportunities at firms that have not yet adopted AI. The 22% figure represents an average across adopting firms and varies considerably by industry.",
+  "fetchedAt": "2026-03-12"
+}

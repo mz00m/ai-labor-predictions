@@ -106,6 +106,23 @@
       "metricType": "projection"
     },
     {
+      "date": "2025-01-01",
+      "value": 0.6,
+      "confidenceLow": 0.3,
+      "confidenceHigh": 1.0,
+      "sourceIds": ["bonfiglioli-ai-epop-2025"],
+      "evidenceTier": 1,
+      "metricType": "observed",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "percentage point decline in employment-to-population ratio",
+        "conversionFactor": 1.0,
+        "conversionLow": 0.5,
+        "conversionHigh": 1.5,
+        "rationale": "EPOP decline used as direct proxy for job displacement percentage"
+      }
+    },
+    {
       "date": "2026-01-06",
       "value": 0.1,
       "confidenceLow": 0,
@@ -402,6 +419,27 @@
       ],
       "evidenceTier": 2,
       "label": "Challenger: AI cited in 5% of 2025 layoff announcements (54,836 cuts)"
+    },
+    {
+      "date": "2025-01-01",
+      "direction": "down",
+      "sourceIds": ["abrahams-levy-metros-ai-2025"],
+      "evidenceTier": 1,
+      "label": "Abrahams/Levy: High-education, high-cost metros most vulnerable to AI displacement"
+    },
+    {
+      "date": "2025-01-01",
+      "direction": "up",
+      "sourceIds": ["bao-lou-sun-genai-entrepreneurship-2025"],
+      "evidenceTier": 1,
+      "label": "Bao et al.: GenAI increased STEM entrepreneurship; displacement may be offset by new firms"
+    },
+    {
+      "date": "2026-01-01",
+      "direction": "up",
+      "sourceIds": ["aldasoro-bis-eu-firms-ai-2026"],
+      "evidenceTier": 1,
+      "label": "BIS/Aldasoro: EU firms +4% productivity from AI; no employment decline detected"
     },
     {
       "date": "2026-01-01",
@@ -1327,6 +1365,46 @@
       "evidenceTier": 1,
       "datePublished": "2026-01-22",
       "excerpt": "In het derde kwartaal van 2025 werkten ruim dertien procent minder jongeren in de meest vatbare beroepsgroepen dan in het vierde kwartaal van 2022, terwijl de werkgelegenheid in andere beroepsgroepen juist drie procent steeg.",
+      "dateAdded": "2026-03-12"
+    },
+    {
+      "id": "bonfiglioli-ai-epop-2025",
+      "title": "AI Adoption and Employment-to-Population Ratio",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=bonfiglioli2025",
+      "publisher": "Academic paper (Bonfiglioli et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2025-01-01",
+      "excerpt": "AI adoption associated with -0.6 percentage point decline in employment-to-population ratio.",
+      "dateAdded": "2026-03-12"
+    },
+    {
+      "id": "abrahams-levy-metros-ai-2025",
+      "title": "Geographic Vulnerability to AI Displacement",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=abrahams2025",
+      "publisher": "Academic paper (Abrahams, Levy)",
+      "evidenceTier": 1,
+      "datePublished": "2025-01-01",
+      "excerpt": "High-education, high-cost metros are most vulnerable to AI displacement.",
+      "dateAdded": "2026-03-12"
+    },
+    {
+      "id": "bao-lou-sun-genai-entrepreneurship-2025",
+      "title": "GenAI and STEM Entrepreneurship",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=bao2025",
+      "publisher": "Academic paper (Bao, Lou, Sun)",
+      "evidenceTier": 1,
+      "datePublished": "2025-01-01",
+      "excerpt": "GenAI increased STEM incorporated entrepreneurship; displacement may be offset by new firm creation.",
+      "dateAdded": "2026-03-12"
+    },
+    {
+      "id": "aldasoro-bis-eu-firms-ai-2026",
+      "title": "AI Adoption and Employment in EU Firms",
+      "url": "https://www.bis.org/publ/work1239.htm",
+      "publisher": "BIS (Aldasoro et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-01",
+      "excerpt": "EU firms see +4% productivity from AI adoption; no employment decline detected.",
       "dateAdded": "2026-03-12"
     }
   ]
