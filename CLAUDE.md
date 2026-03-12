@@ -124,6 +124,14 @@ Defined in `src/lib/prediction-stats.ts`:
 | `changelog/` | Weekly changelogs and LinkedIn posts |
 | `docs/proxy-metric-methodology.md` | Proxy metric conversion & outlier detection methodology |
 
+## Homepage Featured Reads (`src/components/FeaturedReads.tsx`)
+
+Hardcoded array of 5 articles displayed left-to-right on the homepage. On ingestion:
+1. Insert the new article at position 0 (leftmost)
+2. Shift all existing articles one position right
+3. Remove the last article (rightmost/oldest) — it remains in `src/data/reading-list.json`
+4. Keep the array at exactly 5 entries
+
 ## Existing Claude Skills
 
 - `/ingest [url or text]` — Full source ingestion workflow (extract → map → approve → apply)

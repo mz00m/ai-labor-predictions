@@ -1,0 +1,14 @@
+{
+  "id": "sivulka-institutional-ai-2026",
+  "abstract": "George Sivulka (CEO of Hebbia) argues that individual AI productivity gains are not translating into firm-level value, drawing a historical parallel to 1890s electrification of textile mills which took 30 years to produce meaningful returns. He proposes an 'Institutional Intelligence' framework with seven pillars -- Coordination, Signal, Bias, Edge, Outcomes, Enablement, and Unprompted -- that differentiate organizational AI from individual AI tools. The essay contends that the B2B AI market for the next decade will be built on these institutional differences.",
+  "keyFindings": [
+    "In 2026, AI is claimed to drive a 10x increase in individual productivity, but no company has become 10x more valuable as a result",
+    "Historical parallel: electrified textile mills (1890s-1920s) saw almost no output gains for 30 years until factories were completely redesigned with assembly lines and unit-drive motors",
+    "Seven pillars of 'Institutional Intelligence' proposed: Coordination, Signal, Bias, Edge, Outcomes, Enablement, and Unprompted -- each contrasting individual vs. institutional AI",
+    "Individual AI tools reinforce user bias through sycophantic alignment (over-RLHF), while institutional AI must challenge bias and enforce standards",
+    "The 'solution layer' marrying technology to business outcomes is where lasting value will accumulate, as foundation models commoditize and vertical apps move upstream"
+  ],
+  "methodology": "Opinion essay and industry commentary. No empirical study or data collection. Arguments based on historical analogy (electrification of textile mills), author's experience as CEO of Hebbia (an enterprise AI company), and qualitative observations about AI adoption patterns in organizations.",
+  "qualifiers": "This is a commentary piece by an AI company CEO with commercial interest in enterprise/institutional AI products. The '10x productivity' claim is rhetorical, not measured. No empirical evidence is presented for the seven pillars framework. The historical electrification analogy, while well-documented in economic history (David 1990), is applied loosely rather than rigorously.",
+  "fetchedAt": "2026-03-11"
+}

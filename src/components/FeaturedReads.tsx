@@ -10,6 +10,33 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Groenewegen et al. (ESB/Rabobank)",
+    title: "Dutch Youth Employment in GenAI-Exposed Jobs Fell 13%",
+    summary:
+      "Netherlands CBS data: youth employment in GenAI-vulnerable occupations down 13% since ChatGPT launch, while other occupations rose 3%. Mirrors US findings.",
+    date: "Jan 22",
+    url: "https://esb.nu/dalende-werkgelegenheid-onder-nederlandse-jongeren-die-concurreren-met-genai/",
+    accent: "border-l-red-500",
+  },
+  {
+    author: "Sivulka (Hebbia)",
+    title: "Productive Individuals Don\u2019t Make Productive Firms",
+    summary:
+      "Individual AI productivity gains aren\u2019t translating to firm-level value. Seven pillars of institutional intelligence for organizational AI adoption.",
+    date: "Mar 11",
+    url: "https://x.com/gsivulka/status/2031797989908627849",
+    accent: "border-l-cyan-500",
+  },
+  {
+    author: "Oks",
+    title: "Why the ATM Didn\u2019t Kill Bank Teller Jobs, but the iPhone Did",
+    summary:
+      "Task automation rarely displaces workers; paradigm replacement does. Implications for AI displacement timelines.",
+    date: "Mar 10",
+    url: "https://davidoks.blog/p/why-the-atm-didnt-kill-bank-teller",
+    accent: "border-l-blue-500",
+  },
+  {
     author: "Kolko (PIIE)",
     title: "AI and the Labor Market Is Still in the First Inning",
     summary:
@@ -26,33 +53,6 @@ const articles: Article[] = [
     date: "Mar 5",
     url: "https://www.anthropic.com/research/labor-market-impacts",
     accent: "border-l-purple-500",
-  },
-  {
-    author: "Ranganathan & Ye (HBR)",
-    title: "AI Doesn\u2019t Reduce Work — It Intensifies It",
-    summary:
-      "200-employee study: 83% said AI increased workload via pace, scope, and hours — leading to burnout.",
-    date: "Feb 9",
-    url: "https://hbr.org/2026/02/ai-doesnt-reduce-work-it-intensifies-it",
-    accent: "border-l-emerald-500",
-  },
-  {
-    author: "Chung",
-    title: "AIR: The AI Resilience Report",
-    summary:
-      "First canonical aggregator of AI job-impact research at the occupational level.",
-    date: "Mar 4",
-    url: "https://www.linkedin.com/pulse/introducing-air-ai-resilience-report-jared-chung-gxfec",
-    accent: "border-l-rose-500",
-  },
-  {
-    author: "Kinder (Brookings)",
-    title: "What Deindustrialization Did to Men, AI May Do to Women",
-    summary:
-      "Millions of women in clerical/CS roles face AI exposure — echoing manufacturing\u2019s toll on men.",
-    date: "Mar 2",
-    url: "https://humanistxyz.substack.com/p/what-deindustrialization-did-to-men",
-    accent: "border-l-blue-500",
   },
 ];
 

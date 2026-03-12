@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-03-10",
-  "totalSources": 358,
-  "verifiedCount": 358,
+  "lastUpdated": "2026-03-12",
+  "totalSources": 372,
+  "verifiedCount": 372,
   "sources": {
     "revelio-labs-wage-divide-2025": {
       "id": "revelio-labs-wage-divide-2025",
@@ -4900,6 +4900,93 @@
       "excerpt": "31% of AI experts predict AI will lead to fewer teacher jobs in 20 years. Survey of 1,013 AI experts and 5,410 US adults.",
       "usedIn": [
         "education-sector-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "brookings-mapping-ai-economy-2025": {
+      "id": "brookings-mapping-ai-economy-2025",
+      "title": "Mapping the AI Economy: Which Regions Are Ready for the Next Technology Leap",
+      "url": "https://www.brookings.edu/articles/mapping-the-ai-economy-which-regions-are-ready-for-the-next-technology-leap/",
+      "publisher": "Brookings Metro (Muro, Methkupally)",
+      "evidenceTier": 2,
+      "datePublished": "2025-07-16",
+      "excerpt": "Bay Area accounts for 13% of national AI job postings. Top 30 metros capture 67% of all AI hiring. AI job postings grew 28.5% annually since 2010 but still only 2.5% of all US openings. More than 200 metros lack significant AI presence.",
+      "usedIn": [
+        "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "oks-atm-iphone-displacement-2026": {
+      "id": "oks-atm-iphone-displacement-2026",
+      "title": "Why the ATM didn't kill bank teller jobs, but the iPhone did",
+      "url": "https://davidoks.blog/p/why-the-atm-didnt-kill-bank-teller",
+      "publisher": "David Oks (Substack)",
+      "evidenceTier": 4,
+      "datePublished": "2026-03-10",
+      "excerpt": "I'm skeptical that simply slotting AI into human-shaped jobs will have the results people seem to expect... as long as we are in that regime, I expect disappointing productivity gains and relatively little real displacement.",
+      "usedIn": [
+        "overall-us-displacement",
+        "financial-services-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "bizjournals-ai-layoffs-divide-2026": {
+      "id": "bizjournals-ai-layoffs-divide-2026",
+      "title": "AI-fueled layoffs are rising, but a great divide is emerging",
+      "url": "https://www.bizjournals.com/sanjose/news/2026/03/10/small-business-ai-layoffs-tech-amazon-salesforce.html",
+      "publisher": "The Business Journals",
+      "evidenceTier": 3,
+      "datePublished": "2026-03-10",
+      "excerpt": "89% of the respondents said they have no plans to cut staff or lay off workers because of AI. Just 3% said they have already cut staff, while 7% said they have plans to reduce their workforce within the next year.",
+      "usedIn": [
+        "ai-adoption-rate",
+        "overall-us-displacement",
+        "white-collar-professional-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "google-amie-clinical-feasibility-2026": {
+      "id": "google-amie-clinical-feasibility-2026",
+      "title": "A prospective clinical feasibility study of a conversational diagnostic AI in an ambulatory primary care clinic",
+      "url": "https://arxiv.org/abs/2603.08448",
+      "publisher": "Google Research / Google DeepMind / Beth Israel Deaconess Medical Center",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-09",
+      "excerpt": "AMIE's differential diagnosis included the final diagnosis in 90% of cases, with 75% top-3 accuracy. Blinded assessment suggested similar overall DDx and Mx plan quality between AMIE and PCPs. Human safety supervisors did not need to intervene to stop any consultations.",
+      "usedIn": [
+        "healthcare-admin-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "sivulka-institutional-ai-2026": {
+      "id": "sivulka-institutional-ai-2026",
+      "title": "Productive Individuals Don't Make Productive Firms",
+      "url": "https://x.com/gsivulka/status/2031797989908627849",
+      "publisher": "Twitter/X (Hebbia)",
+      "evidenceTier": 4,
+      "datePublished": "2026-03-11",
+      "excerpt": "AI is driving a 10x increase in the productivity of the individuals who know how to leverage it. But that's not enough. We've swapped the motor; we have not yet redesigned the factory. Because of a simple fact: productive individuals do not make productive firms.",
+      "usedIn": [],
+      "verified": true,
+      "synthetic": false
+    },
+    "esb-dutch-youth-genai-employment-2026": {
+      "id": "esb-dutch-youth-genai-employment-2026",
+      "title": "Dalende werkgelegenheid onder Nederlandse jongeren die concurreren met GenAI",
+      "url": "https://esb.nu/dalende-werkgelegenheid-onder-nederlandse-jongeren-die-concurreren-met-genai/",
+      "publisher": "ESB / Rabobank (Groenewegen, van Limbergen, Vrieselaar)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-22",
+      "excerpt": "In het derde kwartaal van 2025 werkten ruim dertien procent minder jongeren in de meest vatbare beroepsgroepen dan in het vierde kwartaal van 2022, terwijl de werkgelegenheid in andere beroepsgroepen juist drie procent steeg.",
+      "usedIn": [
+        "overall-us-displacement",
+        "white-collar-professional-displacement",
+        "tech-sector-displacement"
       ],
       "verified": true,
       "synthetic": false

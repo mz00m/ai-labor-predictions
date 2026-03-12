@@ -15,6 +15,7 @@ const CORROBORATING = [
   { signal: "Entry-level tech hiring", change: "\u221225%", source: "SignalFire 2025" },
   { signal: "CS grad unemployment", change: "7.2% vs 4.5%", source: "ACS 2024" },
   { signal: "CompTIA IT unemployment", change: "3.9% \u2192 5.7%", source: "CompTIA 2025" },
+  { signal: "Dutch youth GenAI-job employment", change: "\u221213%", source: "ESB/Rabobank 2026" },
 ] as const;
 
 const DETAILS = [
@@ -213,7 +214,8 @@ export default function AgeWeightedMethodology() {
             <p className="mt-5 pt-3 border-t border-[var(--border)] text-[10px] text-[var(--muted)] opacity-60 leading-relaxed">
               Primary: Brynjolfsson, Chandar &amp; Chen (2025) &ldquo;Canaries in the Coal Mine?&rdquo;
               Stanford DEL / ADP Research. Corroborating: Dallas Fed (2026), Goldman Sachs (2025),
-              CompTIA (2025), Handshake, SignalFire, BLS OOH 2024, ACS via Preston Cooper.
+              CompTIA (2025), Handshake, SignalFire, BLS OOH 2024, ACS via Preston Cooper,
+              ESB/Rabobank (2026, Netherlands).
             </p>
           </div>
         )}

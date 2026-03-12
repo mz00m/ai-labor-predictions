@@ -1,0 +1,14 @@
+{
+  "id": "bizjournals-ai-layoffs-divide-2026",
+  "abstract": "The Business Journals reports a growing divide in AI-related layoffs: large companies like Block, Amazon, and Salesforce are announcing thousands of AI-driven job cuts, while small businesses adopting the same technology report no plans to reduce staff. The article cites exclusive survey data showing 71% of small businesses have adopted AI tools, yet 89% have no plans to cut workers. Referenced NBER research of 6,000 executives found 90% report no employment impact from AI.",
+  "keyFindings": [
+    "71% of small businesses (under $100M revenue) have adopted AI tools 'somewhat' or 'extensively' as of March 2026",
+    "89% of small-business respondents have no plans to cut staff due to AI; just 3% have already done so",
+    "NBER survey of 6,000 executives across US, UK, Germany, Australia found 90% report no employment impact from AI over past three years",
+    "Morgan Stanley found 11.5% productivity boost and 4% net job reduction in five high-AI sectors (retail, real estate, transportation, automobiles, healthcare equipment)",
+    "Block announced plans to cut 40% of workforce (~4,000 jobs) citing AI productivity; Amazon cut 30,000 corporate jobs in an AI-driven efficiency push"
+  ],
+  "methodology": "Exclusive survey by The Business Journals with 80%+ respondents from companies under $100M revenue and ~90% from companies under 500 employees. Also references NBER executive survey (n=6,000 across 4 countries), Morgan Stanley sector analysis, Gusto payroll data (400,000+ companies), and MIT NANDA initiative findings.",
+  "qualifiers": "Small-business survey sample is self-selected Business Journals readers, not a representative national sample. Large-company layoff decisions attributed to AI 'have drawn questions' about actual AI causation. NBER finding of 89% reporting no productivity impact suggests many AI deployments may not yet be mature.",
+  "fetchedAt": "2026-03-11"
+}

@@ -2,6 +2,36 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "Dalende werkgelegenheid onder Nederlandse jongeren die concurreren met GenAI",
+      "author": "J. Groenewegen, N. van Limbergen, N. Vrieselaar",
+      "publisher": "ESB / Rabobank",
+      "date": "2026-01-22",
+      "url": "https://esb.nu/dalende-werkgelegenheid-onder-nederlandse-jongeren-die-concurreren-met-genai/",
+      "takeaway": "Dutch youth employment in GenAI-vulnerable occupations fell 13% from Q4 2022 to Q3 2025, while other occupations rose 3%. Job postings in vulnerable occupations down 25% vs <10% elsewhere. ICT sector grew 6.5% but youth employment fell 11%. Mirrors US findings from Brynjolfsson et al. (2025).",
+      "weekFeatured": "2026-03-12",
+      "tier": 1
+    },
+    {
+      "title": "Productive Individuals Don't Make Productive Firms",
+      "author": "George Sivulka",
+      "publisher": "Twitter/X (Hebbia)",
+      "date": "2026-03-11",
+      "url": "https://x.com/gsivulka/status/2031797989908627849",
+      "takeaway": "Individual AI productivity gains (10x) aren't translating to firm-level value. Historical parallel: electrified textile mills saw no output gains for 30 years until factories were redesigned. Proposes 'Institutional Intelligence' framework with 7 pillars for organizational AI adoption.",
+      "weekFeatured": "2026-03-10",
+      "tier": 4
+    },
+    {
+      "title": "Why the ATM didn't kill bank teller jobs, but the iPhone did",
+      "author": "David Oks",
+      "publisher": "Substack",
+      "date": "2026-03-10",
+      "url": "https://davidoks.blog/p/why-the-atm-didnt-kill-bank-teller",
+      "takeaway": "ATMs didn't reduce bank teller employment due to complementarity, but iPhones/mobile banking caused a 51% collapse (332K to 164K, 2010-2022). Task automation within existing paradigms rarely displaces; paradigm replacement does. AI is still in the 'slotting in' phase.",
+      "weekFeatured": "2026-03-10",
+      "tier": 4
+    },
+    {
       "title": "Research on AI and the labor market is still in the first inning",
       "author": "Jed Kolko",
       "publisher": "PIIE",

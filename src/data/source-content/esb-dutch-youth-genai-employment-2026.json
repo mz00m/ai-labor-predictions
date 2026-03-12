@@ -1,0 +1,14 @@
+{
+  "id": "esb-dutch-youth-genai-employment-2026",
+  "abstract": "Economists from Rabobank analyze Dutch labor market data (CBS, UWV) to identify which occupations are most vulnerable to GenAI automation and track employment and vacancy trends since ChatGPT's launch. They find that job postings in GenAI-vulnerable occupations fell 25% since late 2022 (vs <10% elsewhere) and youth employment in those occupations declined 13%, while rising 3% in other occupations. The pattern mirrors US findings from Brynjolfsson et al. (2025) and is not explained by cyclical or supply-side factors.",
+  "keyFindings": [
+    "Youth employment (ages 15-24) in GenAI-vulnerable Dutch occupations fell over 13% from Q4 2022 to Q3 2025, while employment in other occupations rose 3%",
+    "Job postings in the most GenAI-vulnerable occupations fell nearly 25% since late 2022, compared to less than 10% in the 102 other occupation groups (a gap of 19,000+ vacancies)",
+    "Dutch ICT sector value added grew 6.5% since Q4 2022, but youth employment in ICT fell approximately 11%",
+    "Business services sector grew 2.6% since Q4 2022, but youth employment fell approximately 8%",
+    "Approximately 19,000 fewer 15-24 year olds worked in GenAI-vulnerable occupations by Q3 2025, while total Dutch unemployment rose by 38,000 (25,000 of which were youth)"
+  ],
+  "methodology": "Authors classify 114 CBS occupation groups by GenAI automation potential using Gmyrek et al. (2025) ILO task-level scores. Occupations with mean automation score >0.7 and standard deviation <0.2 are classified as 'vulnerable to substitution.' Employment data from CBS quarterly labor force surveys; vacancy data from UWV longitudinal series. Robustness checks against Eloundou et al. (2024) and Felten et al. (2023) scores show correlations of 0.8-0.9.",
+  "qualifiers": "Authors note it is too early to determine whether declines represent a temporary adjustment or a longer-term structural trend. Alternative explanations (sectoral downturns, shifts in education enrollment) are examined and found inconsistent with the data, but causal identification is correlational rather than experimental. GenAI may also boost productivity and create new jobs not yet visible in the data.",
+  "fetchedAt": "2026-03-12"
+}

@@ -654,6 +654,51 @@
       ],
       "evidenceTier": 2,
       "label": "PIIE/Kolko: AI disruption pace similar to computer & internet eras"
+    },
+    {
+      "date": "2026-03-10",
+      "direction": "down",
+      "sourceIds": [
+        "oks-atm-iphone-displacement-2026"
+      ],
+      "evidenceTier": 4,
+      "label": "Oks: Paradigm replacement, not task automation, drives displacement -- still early"
+    },
+    {
+      "date": "2026-03-10",
+      "direction": "down",
+      "sourceIds": [
+        "bizjournals-ai-layoffs-divide-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "BizJournals: 89% of small-biz execs have no plans to cut staff due to AI"
+    },
+    {
+      "date": "2026-03-10",
+      "direction": "down",
+      "sourceIds": [
+        "bizjournals-ai-layoffs-divide-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "NBER via BizJournals: 90% of 6,000 execs say no employment impact from AI"
+    },
+    {
+      "date": "2026-03-10",
+      "direction": "up",
+      "sourceIds": [
+        "bizjournals-ai-layoffs-divide-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Morgan Stanley via BizJournals: 4% net job reduction in 5 high-AI sectors"
+    },
+    {
+      "date": "2026-01-22",
+      "direction": "down",
+      "sourceIds": [
+        "esb-dutch-youth-genai-employment-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "ESB/Rabobank: Dutch youth employment in GenAI-exposed jobs fell 13% (Q4 2022\u2013Q3 2025)"
     }
   ],
   "sources": [
@@ -1253,6 +1298,36 @@
       "datePublished": "2026-01-15",
       "excerpt": "Employment 3.6% lower in AI-vulnerable occupations in regions with high AI-skill demand after 5 years; geographic divergence driven by skill concentration.",
       "dateAdded": "2026-03-11"
+    },
+    {
+      "id": "oks-atm-iphone-displacement-2026",
+      "title": "Why the ATM didn't kill bank teller jobs, but the iPhone did",
+      "url": "https://davidoks.blog/p/why-the-atm-didnt-kill-bank-teller",
+      "publisher": "David Oks (Substack)",
+      "evidenceTier": 4,
+      "datePublished": "2026-03-10",
+      "excerpt": "I'm skeptical that simply slotting AI into human-shaped jobs will have the results people seem to expect... as long as we are in that regime, I expect disappointing productivity gains and relatively little real displacement.",
+      "dateAdded": "2026-03-11"
+    },
+    {
+      "id": "bizjournals-ai-layoffs-divide-2026",
+      "title": "AI-fueled layoffs are rising, but a great divide is emerging",
+      "url": "https://www.bizjournals.com/sanjose/news/2026/03/10/small-business-ai-layoffs-tech-amazon-salesforce.html",
+      "publisher": "The Business Journals",
+      "evidenceTier": 3,
+      "datePublished": "2026-03-10",
+      "excerpt": "89% of the respondents said they have no plans to cut staff or lay off workers because of AI. Just 3% said they have already cut staff, while 7% said they have plans to reduce their workforce within the next year.",
+      "dateAdded": "2026-03-11"
+    },
+    {
+      "id": "esb-dutch-youth-genai-employment-2026",
+      "title": "Dalende werkgelegenheid onder Nederlandse jongeren die concurreren met GenAI",
+      "url": "https://esb.nu/dalende-werkgelegenheid-onder-nederlandse-jongeren-die-concurreren-met-genai/",
+      "publisher": "ESB / Rabobank (Groenewegen, van Limbergen, Vrieselaar)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-22",
+      "excerpt": "In het derde kwartaal van 2025 werkten ruim dertien procent minder jongeren in de meest vatbare beroepsgroepen dan in het vierde kwartaal van 2022, terwijl de werkgelegenheid in andere beroepsgroepen juist drie procent steeg.",
+      "dateAdded": "2026-03-12"
     }
   ]
 }
