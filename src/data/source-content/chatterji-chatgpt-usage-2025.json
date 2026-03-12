@@ -1,0 +1,13 @@
+{
+  "id": "chatterji-chatgpt-usage-2025",
+  "abstract": "NBER working paper analyzing ChatGPT usage patterns among approximately 700 million users, finding that 81% of work-related use is for decision support rather than content generation or task automation. The study provides the largest-scale analysis of how workers actually use generative AI, revealing that the dominant use case is informing human decisions rather than replacing human work -- a pattern with significant implications for AI's labor market impact.",
+  "keyFindings": [
+    "ChatGPT has approximately 700 million users globally",
+    "81% of work-related usage is for decision support, not content generation or automation",
+    "Decision support usage suggests AI is primarily augmenting rather than replacing human judgment",
+    "Usage patterns indicate AI's labor impact may be more subtle than wholesale task automation"
+  ],
+  "methodology": "NBER working paper analyzing large-scale ChatGPT usage data to categorize work-related use cases and measure the share of usage devoted to decision support versus other functions.",
+  "qualifiers": "Usage data may not capture all AI tool usage beyond ChatGPT. Decision support and automation exist on a spectrum and categorization involves judgment calls. High decision-support share may reflect current AI limitations rather than stable user preferences.",
+  "fetchedAt": "2026-03-12"
+}

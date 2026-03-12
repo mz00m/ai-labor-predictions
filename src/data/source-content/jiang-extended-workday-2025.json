@@ -1,0 +1,13 @@
+{
+  "id": "jiang-extended-workday-2025",
+  "abstract": "NBER working paper finding that workers in AI-exposed occupations work an additional 3.5 hours per week compared to non-exposed peers, with the productivity gains captured primarily by firms rather than workers. The study documents an important distributional consequence of AI adoption: while AI increases output per worker, the benefits accrue disproportionately to employers through extended work hours rather than to employees through higher wages or reduced workloads.",
+  "keyFindings": [
+    "AI-exposed workers work an additional 3.5 hours per week on average",
+    "Productivity gains from AI are captured primarily by firms, not workers",
+    "Extended hours suggest AI increases work intensity rather than enabling leisure",
+    "Distributional consequences favor employers over employees in the current AI adoption phase"
+  ],
+  "methodology": "NBER working paper using time-use and employment data to compare work hours between AI-exposed and non-exposed occupations, controlling for industry, demographic, and job characteristics.",
+  "qualifiers": "Correlation between AI exposure and longer hours may reflect selection effects (demanding jobs both attract AI tools and require long hours). Work hour measurement may not capture changes in work intensity or quality. Employer capture of gains may be a transitional phenomenon that shifts as labor markets adjust.",
+  "fetchedAt": "2026-03-12"
+}

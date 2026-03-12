@@ -1,0 +1,13 @@
+{
+  "id": "menkhoff-cesinfo-ai-adoption-rct-2025",
+  "abstract": "CESifo randomized controlled trial examining whether information nudges can increase AI adoption among German firms. The study tests whether providing firms with evidence about AI benefits and implementation guidance influences their adoption decisions, contributing to the policy debate about how to accelerate productive AI diffusion in the economy. Results inform understanding of barriers to AI adoption beyond technical readiness.",
+  "keyFindings": [
+    "Information nudges can influence firm-level AI adoption decisions",
+    "Awareness gaps about AI capabilities and benefits are a meaningful barrier to adoption",
+    "German firms face both informational and organizational barriers to AI integration",
+    "Policy interventions targeting information asymmetries may accelerate productive AI diffusion"
+  ],
+  "methodology": "Randomized controlled trial conducted through CESifo, randomly assigning German firms to receive information treatments about AI benefits and implementation guidance, then measuring subsequent AI adoption rates compared to control groups.",
+  "qualifiers": "Germany-specific findings in a labor market with distinct regulatory and institutional features. RCT measures intent to adopt or early adoption steps, not long-term sustained AI integration. Information nudges address only one barrier among many (cost, skills, organizational culture).",
+  "fetchedAt": "2026-03-12"
+}

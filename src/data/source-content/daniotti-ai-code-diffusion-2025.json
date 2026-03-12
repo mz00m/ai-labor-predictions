@@ -1,0 +1,13 @@
+{
+  "id": "daniotti-ai-code-diffusion-2025",
+  "abstract": "Published in Science, this study analyzes over 30 million Python contributions on GitHub to measure the diffusion of AI-assisted coding. By Q4 2024, approximately 30% of Python code contributions showed evidence of AI assistance, up from near zero in early 2023. Despite this rapid adoption, the associated increase in total code output was a modest 3.6%, suggesting AI coding tools primarily substitute for rather than augment developer effort at the aggregate level.",
+  "keyFindings": [
+    "30% of Python contributions on GitHub showed AI assistance by Q4 2024",
+    "AI-assisted coding diffused rapidly from near zero to 30% in under two years",
+    "Total code output increased by only 3.6% despite widespread AI adoption",
+    "The modest output gain suggests significant substitution of human effort rather than pure augmentation"
+  ],
+  "methodology": "Large-scale analysis of over 30 million Python code contributions on GitHub, using statistical methods to detect AI-generated or AI-assisted code. Published in Science, tracking diffusion patterns and aggregate output effects over time.",
+  "qualifiers": "Detection of AI-assisted code relies on statistical signatures that may miss some AI contributions or flag false positives. Python-specific results may not generalize to other languages. GitHub contributions are a subset of all professional software development activity.",
+  "fetchedAt": "2026-03-12"
+}

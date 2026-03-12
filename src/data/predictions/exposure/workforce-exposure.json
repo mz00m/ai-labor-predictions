@@ -53,6 +53,16 @@
       "metricType": "projection"
     },
     {
+      "date": "2024-06-01",
+      "value": 26.5,
+      "confidenceLow": 17,
+      "confidenceHigh": 36,
+      "sourceIds": [
+        "auer-bis-skills-exposure-2024"
+      ],
+      "evidenceTier": 1
+    },
+    {
       "date": "2025-01-15",
       "value": 36,
       "confidenceLow": 28,
@@ -157,6 +167,15 @@
       ],
       "evidenceTier": 1,
       "label": "OpenAI/UPenn: 80% of workers have \u226510% tasks affected"
+    },
+    {
+      "date": "2025-01-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "brynjolfsson-shao-task-automation-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Brynjolfsson/Shao: Workers want 46% of tasks automated; preferences vary by task type"
     },
     {
       "date": "2025-02-01",
@@ -440,6 +459,26 @@
       "datePublished": "2025-06-01",
       "excerpt": "678 occupations having on average 23% of their tasks exposed to Generative AI",
       "dateAdded": "2026-03-07"
+    },
+    {
+      "id": "auer-bis-skills-exposure-2024",
+      "title": "Skills Exposure to AI",
+      "url": "https://www.bis.org/publ/work1228.htm",
+      "publisher": "BIS (Auer et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2024-06-01",
+      "excerpt": "17-36% of worker skills exposed at moderate-to-high AI capability level.",
+      "dateAdded": "2026-03-12"
+    },
+    {
+      "id": "brynjolfsson-shao-task-automation-2025",
+      "title": "Worker Preferences for Task Automation",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=shao2025",
+      "publisher": "MIT/Stanford (Shao, Brynjolfsson)",
+      "evidenceTier": 1,
+      "datePublished": "2025-01-01",
+      "excerpt": "Workers want 46% of their tasks automated; preferences vary by task type and worker characteristics.",
+      "dateAdded": "2026-03-12"
     }
   ]
 }

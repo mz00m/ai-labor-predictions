@@ -1,0 +1,13 @@
+{
+  "id": "hoffmann-ai-code-security-2024",
+  "abstract": "Harvard Business School study examining the security implications of AI-generated code. Developers using AI coding assistants produced code with 41% more security vulnerabilities compared to manually written code. The study highlights a critical trade-off in AI-assisted development: while AI tools increase coding speed, they may introduce security risks if developers over-rely on AI output without adequate review, particularly for security-sensitive applications.",
+  "keyFindings": [
+    "AI-generated code contained 41% more security vulnerabilities than manually written code",
+    "Developers using AI assistants showed reduced attention to security considerations",
+    "The vulnerability increase was most pronounced in complex, security-sensitive code sections",
+    "Over-reliance on AI suggestions without adequate review amplified security risks"
+  ],
+  "methodology": "HBS study comparing security vulnerability rates in code produced with and without AI coding assistants. Uses automated security scanning and manual code review to identify vulnerability types and frequencies across controlled coding tasks.",
+  "qualifiers": "Vulnerability rates may vary by programming language, domain, and AI tool version. Study may capture early-adoption patterns that improve as tools and developer practices mature. Definition and severity of vulnerabilities can vary across security frameworks.",
+  "fetchedAt": "2026-03-12"
+}

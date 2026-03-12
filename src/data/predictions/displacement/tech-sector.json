@@ -212,6 +212,13 @@
       "label": "Gambacorta et al.: CodeFuse \u2192 55% increase in code output at Ant Group"
     },
     {
+      "date": "2024-06-01",
+      "direction": "neutral",
+      "sourceIds": ["baird-linkedin-copilot-2024"],
+      "evidenceTier": 2,
+      "label": "LinkedIn/Baird: Copilot users show increased code output but no displacement evidence"
+    },
+    {
       "date": "2024-07-01",
       "direction": "down",
       "sourceIds": [
@@ -237,6 +244,13 @@
       ],
       "evidenceTier": 2,
       "label": "Paradis et al. (Google): 21% reduction in coding time per task"
+    },
+    {
+      "date": "2024-10-01",
+      "direction": "down",
+      "sourceIds": ["hoffmann-ai-code-security-2024"],
+      "evidenceTier": 1,
+      "label": "HBS/Hoffmann: AI-generated code has 41% more vulnerabilities; devs overestimate security"
     },
     {
       "date": "2025-01-06",
@@ -294,6 +308,13 @@
     },
     {
       "date": "2025-06-01",
+      "direction": "neutral",
+      "sourceIds": ["daniotti-ai-code-diffusion-2025"],
+      "evidenceTier": 1,
+      "label": "Daniotti et al. (Science): 30% of US Python code AI-assisted; 3.6% output increase"
+    },
+    {
+      "date": "2025-06-01",
       "direction": "down",
       "sourceIds": [
         "jpmorgan-ai-job-growth-2025"
@@ -327,6 +348,13 @@
       ],
       "evidenceTier": 2,
       "label": "Goldman: Young tech workers (20-30) unemployment risen ~3pp since start of 2025"
+    },
+    {
+      "date": "2025-09-01",
+      "direction": "neutral",
+      "sourceIds": ["anthropic-economic-index-softdev-2025"],
+      "evidenceTier": 2,
+      "label": "Anthropic: 37% of software dev tasks show AI involvement; writing code is 18% of usage"
     },
     {
       "date": "2025-09-01",
@@ -525,6 +553,13 @@
       ],
       "evidenceTier": 2,
       "label": "Anthropic: Programmers highest AI exposure (74.5%) but no unemployment impact detected"
+    },
+    {
+      "date": "2025-11-06",
+      "direction": "up",
+      "sourceIds": ["sarkar-cursor-agents-2025"],
+      "evidenceTier": 1,
+      "label": "Sarkar (UChicago/Cursor): 39% more code merges after AI agent became default mode"
     },
     {
       "date": "2026-01-22",
@@ -1023,6 +1058,56 @@
       "evidenceTier": 1,
       "datePublished": "2026-01-22",
       "excerpt": "De ICT groeide in dezelfde periode met 6,5 procent, maar zag een daling van de werkgelegenheid van zo'n 11 procent onder 15- tot 24-jarigen.",
+      "dateAdded": "2026-03-12"
+    },
+    {
+      "id": "daniotti-ai-code-diffusion-2025",
+      "title": "Who is using AI to code? Global diffusion and impact of generative AI",
+      "url": "https://www.science.org/doi/10.1126/science.adz9311",
+      "publisher": "Science (Daniotti, Wachs, Feng, Neffke)",
+      "evidenceTier": 1,
+      "datePublished": "2025-06-01",
+      "excerpt": "AI-assisted coding jumped from around 5% in 2022 to nearly 30% in the last quarter of 2024. Quarterly output has increased by 3.6%. Experienced programmers benefit more; beginners hardly benefit at all.",
+      "dateAdded": "2026-03-12"
+    },
+    {
+      "id": "sarkar-cursor-agents-2025",
+      "title": "AI Agents, Productivity, and Higher-Order Thinking: Early Evidence From Software Development",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5713646",
+      "publisher": "SSRN (Suproteem K. Sarkar, University of Chicago)",
+      "evidenceTier": 1,
+      "datePublished": "2025-11-06",
+      "excerpt": "Software output increased by 39% after the AI agent became the platform's default code generation mode. Quality did not deteriorate. Senior developers benefit most from agents; junior developers benefit most from autocomplete.",
+      "dateAdded": "2026-03-12"
+    },
+    {
+      "id": "baird-linkedin-copilot-2024",
+      "title": "GitHub Copilot and Developer Productivity",
+      "url": "https://economicgraph.linkedin.com/content/dam/me/economicgraph/en-us/PDF/github-copilot-working-paper.pdf",
+      "publisher": "LinkedIn Economic Graph (Baird et al.)",
+      "evidenceTier": 2,
+      "datePublished": "2024-06-01",
+      "excerpt": "GitHub Copilot users show increased code output but no evidence of displacement in hiring patterns.",
+      "dateAdded": "2026-03-12"
+    },
+    {
+      "id": "hoffmann-ai-code-security-2024",
+      "title": "AI-Generated Code Security Risks",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5007084",
+      "publisher": "Harvard Business School (Hoffmann et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2024-10-01",
+      "excerpt": "AI-generated code has 41% more vulnerabilities than human-written code. Developers overestimate the security of AI-generated code.",
+      "dateAdded": "2026-03-12"
+    },
+    {
+      "id": "anthropic-economic-index-softdev-2025",
+      "title": "Anthropic Economic Index: Software Development",
+      "url": "https://www.anthropic.com/research/impact-software-development",
+      "publisher": "Anthropic",
+      "evidenceTier": 2,
+      "datePublished": "2025-09-01",
+      "excerpt": "37% of software development tasks show AI involvement. Writing code is 18% of actual AI usage in software development; most use is for understanding, debugging, and reviewing code.",
       "dateAdded": "2026-03-12"
     }
   ],

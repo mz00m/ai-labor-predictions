@@ -1,0 +1,13 @@
+{
+  "id": "dillon-shifting-work-patterns-2025",
+  "abstract": "NBER working paper studying 7,137 workers across 66 firms to measure how AI adoption changes work patterns. Workers save approximately 2 hours per week on average from AI tools, but the study finds no significant shift in task composition -- workers perform the same types of tasks, just faster. This challenges expectations that AI would rapidly transform the nature of work and suggests that early AI adoption primarily accelerates existing workflows rather than restructuring them.",
+  "keyFindings": [
+    "Workers save approximately 2 hours per week on average from AI tool usage",
+    "No significant shift in task composition despite time savings",
+    "AI primarily accelerates existing workflows rather than restructuring work",
+    "Results based on a large sample of 7,137 workers across 66 firms"
+  ],
+  "methodology": "NBER working paper analyzing time-use and task composition data from 7,137 workers across 66 firms, measuring changes in work patterns before and after AI tool adoption using detailed task-level tracking.",
+  "qualifiers": "The 66 firms studied may not represent all industries or firm types. 2 hours/week average may mask wide variation across workers and roles. Absence of task shift in the short term does not preclude longer-term work restructuring as AI tools mature and organizations adapt.",
+  "fetchedAt": "2026-03-12"
+}

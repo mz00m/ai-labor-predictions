@@ -67,6 +67,13 @@
   ],
   "overlays": [
     {
+      "date": "2024-01-01",
+      "direction": "down",
+      "sourceIds": ["fouarge-montizaan-zwick-ai-risk-2024"],
+      "evidenceTier": 1,
+      "label": "IZA/Fouarge: Financial sector workers most threatened; age, tenure, education moderate AI risk"
+    },
+    {
       "date": "2024-06-19",
       "direction": "down",
       "sourceIds": [
@@ -92,6 +99,27 @@
       ],
       "evidenceTier": 2,
       "label": "WEF: 32-39% of financial services tasks have automation potential"
+    },
+    {
+      "date": "2024-11-30",
+      "direction": "down",
+      "sourceIds": ["boke-gallemore-glaeser-accounting-ai-2024"],
+      "evidenceTier": 1,
+      "label": "Boke et al.: 10 additional AI acct roles -> 49 fewer accounting-skill postings"
+    },
+    {
+      "date": "2025-01-01",
+      "direction": "down",
+      "sourceIds": ["cao-cheng-gu-jiang-chatgpt-analysts-2025"],
+      "evidenceTier": 1,
+      "label": "Cao et al.: ChatGPT cuts analyst report length 8.9%, quality -17%; more AI reliance = worse forecasts"
+    },
+    {
+      "date": "2025-05-03",
+      "direction": "up",
+      "sourceIds": ["choi-xie-human-ai-accounting-2025"],
+      "evidenceTier": 1,
+      "label": "Choi/Xie (Stanford/MIT): AI accountants +55% client support, 8.5% time shifted to high-value tasks"
     },
     {
       "date": "2025-06-01",
@@ -326,6 +354,46 @@
       "datePublished": "2026-03-10",
       "excerpt": "Bank teller employment collapsed from 332,000 in 2010 to 164,000 in 2022... ATMs didn't reduce bank teller employment... another technology did. And that technology was the iPhone.",
       "dateAdded": "2026-03-11"
+    },
+    {
+      "id": "boke-gallemore-glaeser-accounting-ai-2024",
+      "title": "Artificial Intelligence and White-Collar Work: Evidence from the Accounting Profession",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5039640",
+      "publisher": "SSRN (Boke, De la Parra, Gallemore, Glaeser)",
+      "evidenceTier": 1,
+      "datePublished": "2024-11-30",
+      "excerpt": "Using Lightcast job postings data, finds that accounting-related AI investment reduces demand for traditional accountants: 10 additional AI accounting roles associated with 49 fewer accounting-skill postings and 15 fewer traditional accounting postings.",
+      "dateAdded": "2026-03-12"
+    },
+    {
+      "id": "choi-xie-human-ai-accounting-2025",
+      "title": "Human + AI in Accounting: Early Evidence from the Field",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5240924",
+      "publisher": "Stanford GSB / MIT Sloan (Choi, Xie)",
+      "evidenceTier": 1,
+      "datePublished": "2025-05-03",
+      "excerpt": "AI-adopting accountants see 55% increase in weekly client support, 8.5% of time reallocated from data entry to high-value tasks, 12% increase in ledger granularity, and 7.5-day reduction in monthly close time.",
+      "dateAdded": "2026-03-12"
+    },
+    {
+      "id": "fouarge-montizaan-zwick-ai-risk-2024",
+      "title": "Is my job at risk? Workers' perceived risk of AI",
+      "url": "https://docs.iza.org/dp18224.pdf",
+      "publisher": "IZA (Fouarge, Montizaan, Zwick)",
+      "evidenceTier": 1,
+      "datePublished": "2024-01-01",
+      "excerpt": "Financial sector workers perceive highest threat from AI. Age, tenure, and education moderate perceived AI displacement risk.",
+      "dateAdded": "2026-03-12"
+    },
+    {
+      "id": "cao-cheng-gu-jiang-chatgpt-analysts-2025",
+      "title": "ChatGPT and Financial Analysts",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5870582",
+      "publisher": "SSRN (Cao, Cheng, Gu, Jiang)",
+      "evidenceTier": 1,
+      "datePublished": "2025-01-01",
+      "excerpt": "ChatGPT cuts analyst report length by 8.9% and reduces quality by 17%. Greater AI reliance is associated with worse earnings forecasts.",
+      "dateAdded": "2026-03-12"
     }
   ]
 }

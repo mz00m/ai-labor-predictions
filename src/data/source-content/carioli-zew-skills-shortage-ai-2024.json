@@ -1,0 +1,13 @@
+{
+  "id": "carioli-zew-skills-shortage-ai-2024",
+  "abstract": "ZEW (Leibniz Centre for European Economic Research) study finding that skills shortages are a primary driver of AI adoption among German firms. Companies facing difficulty recruiting qualified workers are significantly more likely to implement AI solutions as a substitute for scarce labor, suggesting that tight labor markets may accelerate rather than impede AI diffusion. This challenges the narrative that AI adoption is primarily driven by cost-cutting motives.",
+  "keyFindings": [
+    "Skills shortages are a primary driver of AI adoption in German firms",
+    "Firms facing recruitment difficulties are more likely to implement AI solutions",
+    "Tight labor markets may accelerate AI diffusion rather than impede it",
+    "AI adoption motivated by labor scarcity differs in character from cost-cutting-driven adoption"
+  ],
+  "methodology": "ZEW analysis of German firm-level data examining the relationship between reported skills shortages, vacancy rates, and subsequent AI technology adoption decisions.",
+  "qualifiers": "German labor market conditions (strong worker protections, apprenticeship system) may not generalize to other countries. Correlation between shortages and adoption does not establish that shortage-driven AI use reduces future hiring needs. Self-reported skills shortages may reflect wage-setting rigidities rather than true scarcity.",
+  "fetchedAt": "2026-03-12"
+}

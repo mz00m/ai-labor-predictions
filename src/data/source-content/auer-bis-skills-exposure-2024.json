@@ -1,0 +1,13 @@
+{
+  "id": "auer-bis-skills-exposure-2024",
+  "abstract": "BIS research estimating that 17-36% of workforce skills are exposed at moderate-to-high AI capability levels, depending on the assessment methodology and capability threshold used. The study provides a skills-based (rather than occupation-based) framework for measuring AI exposure, arguing that skill-level analysis better captures the granular ways AI transforms work within occupations rather than eliminating entire job categories.",
+  "keyFindings": [
+    "17-36% of workforce skills exposed at moderate-to-high AI capability levels",
+    "Exposure range depends on assessment methodology and capability threshold definition",
+    "Skills-based analysis captures AI impact more granularly than occupation-level frameworks",
+    "Cognitive and analytical skills show higher exposure than physical and interpersonal skills"
+  ],
+  "methodology": "BIS skills-level exposure analysis mapping AI capability assessments to workforce skill distributions, using multiple methodological approaches to generate a range of exposure estimates.",
+  "qualifiers": "Wide range (17-36%) reflects genuine methodological uncertainty in measuring AI exposure. Skills exposure does not equate to job displacement. AI capability assessments are point-in-time and may rapidly become outdated as technology advances.",
+  "fetchedAt": "2026-03-12"
+}

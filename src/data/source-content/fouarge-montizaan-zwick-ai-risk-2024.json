@@ -1,0 +1,13 @@
+{
+  "id": "fouarge-montizaan-zwick-ai-risk-2024",
+  "abstract": "IZA discussion paper examining workers' perceived risk of AI displacement across industries. The study finds that workers in the financial sector perceive themselves as the most threatened by AI automation, followed by administrative and professional services. Perceived risk correlates with task routineness and exposure to large language model capabilities, and has measurable effects on job satisfaction and career planning behaviors.",
+  "keyFindings": [
+    "Financial sector workers report the highest perceived AI displacement risk among all industries surveyed",
+    "Perceived AI risk is strongly correlated with task routineness and LLM-exposure metrics",
+    "Workers with higher perceived risk are more likely to invest in reskilling and career transitions",
+    "Perceived risk affects job satisfaction and organizational commitment independent of actual displacement probability"
+  ],
+  "methodology": "Survey-based study published through IZA (Institute of Labor Economics), measuring perceived AI risk across industries and occupations. Links subjective risk perceptions to objective task-level AI exposure metrics and behavioral outcomes.",
+  "qualifiers": "Perceived risk may diverge significantly from actual displacement probability. Self-reported survey data subject to framing effects and media influence on AI perceptions. Cross-sectional design limits causal inference about behavioral responses.",
+  "fetchedAt": "2026-03-12"
+}

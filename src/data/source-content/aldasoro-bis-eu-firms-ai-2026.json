@@ -1,0 +1,13 @@
+{
+  "id": "aldasoro-bis-eu-firms-ai-2026",
+  "abstract": "Bank for International Settlements study of European Union firms finding that AI adoption is associated with a 4% productivity increase with no corresponding employment decline. The research provides cross-country evidence that early AI adoption in Europe is augmenting rather than displacing workers, consistent with a pattern where productivity gains are absorbed through expanded output rather than workforce reduction in the near term.",
+  "keyFindings": [
+    "EU firms adopting AI show approximately 4% productivity increase",
+    "No statistically significant employment decline associated with AI adoption",
+    "Productivity gains appear to be absorbed through expanded output rather than workforce reduction",
+    "Results consistent across multiple EU countries and industry sectors"
+  ],
+  "methodology": "BIS cross-country analysis of EU firm-level data linking AI adoption indicators to productivity and employment outcomes, controlling for firm size, sector, and country-level economic conditions.",
+  "qualifiers": "European labor market protections may slow employment adjustment relative to more flexible markets. Early adoption period results may not predict medium-term effects. Firm-level analysis may miss industry-wide competitive dynamics that redistribute employment.",
+  "fetchedAt": "2026-03-12"
+}

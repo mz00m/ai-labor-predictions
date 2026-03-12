@@ -1,0 +1,13 @@
+{
+  "id": "marguerit-augmenting-automating-2025",
+  "abstract": "Study distinguishing between automation-oriented and augmentation-oriented AI applications and their differential wage effects. Automation AI that replaces routine tasks tends to hurt low-skill wages by reducing demand for routine labor. In contrast, augmentation AI that enhances worker capabilities tends to raise high-skill wages by increasing the productivity and output of already-skilled workers. This dual dynamic suggests AI's wage impact depends critically on how it is deployed.",
+  "keyFindings": [
+    "Automation AI hurts low-skill wages by reducing demand for routine labor",
+    "Augmentation AI raises high-skill wages by enhancing worker productivity",
+    "AI's wage impact depends critically on deployment mode (automation vs. augmentation)",
+    "The automation/augmentation distinction predicts differential effects across the skill distribution"
+  ],
+  "methodology": "Empirical analysis distinguishing between automation-type and augmentation-type AI deployments at the firm level, then measuring differential wage effects across the skill distribution for each deployment type.",
+  "qualifiers": "The automation/augmentation distinction can be blurry in practice, with many AI tools serving both functions. Wage effects may evolve as the technology matures and deployment patterns shift. Firm-level deployment choices are endogenous to existing workforce composition.",
+  "fetchedAt": "2026-03-12"
+}

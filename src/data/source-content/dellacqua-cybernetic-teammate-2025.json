@@ -1,0 +1,13 @@
+{
+  "id": "dellacqua-cybernetic-teammate-2025",
+  "abstract": "NBER/HBS randomized controlled trial with 776 Procter & Gamble professionals finding that individual workers paired with AI perform at the level of human teams. The study introduces the concept of a 'cybernetic teammate' where AI effectively replaces the need for additional team members for certain collaborative tasks, suggesting AI may reshape team structures and organizational design rather than simply augmenting individual productivity.",
+  "keyFindings": [
+    "Individual workers paired with AI match the performance of human teams on collaborative tasks",
+    "AI effectively serves as a 'cybernetic teammate' replacing the need for additional team members",
+    "Finding suggests AI may reshape team structures and organizational design",
+    "Results observed across 776 P&G professionals in a rigorous RCT setting"
+  ],
+  "methodology": "NBER/HBS randomized controlled trial with n=776 Procter & Gamble professionals, comparing performance outcomes between individuals working with AI versus traditional human teams on standardized collaborative tasks.",
+  "qualifiers": "P&G professionals may not be representative of all knowledge workers. Specific task types used in the RCT may favor AI-assisted individuals over teams. Long-term team dynamics, knowledge transfer, and mentorship benefits are not captured in task-level performance comparisons.",
+  "fetchedAt": "2026-03-12"
+}

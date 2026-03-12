@@ -1,0 +1,13 @@
+{
+  "id": "bao-lou-sun-genai-entrepreneurship-2025",
+  "abstract": "Study finding that generative AI availability increased STEM entrepreneurship, as technical professionals leveraged AI tools to lower barriers to starting new ventures. AI enables smaller teams to achieve output previously requiring larger workforces, making entrepreneurship more accessible for individuals with technical skills. The findings suggest a positive labor market adjustment channel where AI-displaced or AI-augmented workers create new firms rather than facing unemployment.",
+  "keyFindings": [
+    "Generative AI availability increased STEM entrepreneurship rates",
+    "AI tools lower barriers to new venture creation by enabling smaller founding teams",
+    "Technical professionals are leveraging AI to replace functions previously requiring additional hires",
+    "Entrepreneurship may serve as a positive labor market adjustment channel for AI-affected workers"
+  ],
+  "methodology": "Empirical analysis examining the relationship between generative AI tool availability and new business formation rates in STEM sectors, using firm registration data and temporal variation in AI tool launches.",
+  "qualifiers": "Increased business formation does not guarantee business survival or quality job creation. STEM entrepreneurship is a narrow segment of overall entrepreneurial activity. Causal identification relies on timing of AI tool availability, which may correlate with other favorable conditions.",
+  "fetchedAt": "2026-03-12"
+}

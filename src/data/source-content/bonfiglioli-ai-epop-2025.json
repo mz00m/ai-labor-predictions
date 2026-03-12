@@ -1,0 +1,13 @@
+{
+  "id": "bonfiglioli-ai-epop-2025",
+  "abstract": "Study examining AI adoption's impact on the employment-to-population ratio (EPOP), finding a -0.6 percentage point decline associated with AI implementation. This modest but statistically significant effect suggests that AI adoption is beginning to produce measurable aggregate employment effects, though the magnitude remains small relative to normal business cycle fluctuations and other labor market forces.",
+  "keyFindings": [
+    "AI adoption associated with a -0.6 percentage point decline in employment-to-population ratio",
+    "Effect is statistically significant but modest relative to business cycle fluctuations",
+    "Employment impact is concentrated in specific sectors and occupation types",
+    "Results suggest early-stage labor market displacement effects are emerging but remain small"
+  ],
+  "methodology": "Econometric analysis linking measures of AI adoption intensity to changes in employment-to-population ratios, controlling for business cycle effects, demographic shifts, and other confounding factors.",
+  "qualifiers": "EPOP changes may reflect multiple simultaneous factors beyond AI adoption. The -0.6pp effect is within the range of measurement uncertainty for aggregate labor statistics. Causal identification is challenging given the simultaneous diffusion of AI and other labor market shocks.",
+  "fetchedAt": "2026-03-12"
+}

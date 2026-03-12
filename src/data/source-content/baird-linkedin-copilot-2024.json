@@ -1,0 +1,13 @@
+{
+  "id": "baird-linkedin-copilot-2024",
+  "abstract": "LinkedIn Economic Graph analysis examining the relationship between GitHub Copilot adoption and developer employment outcomes. The study finds that Copilot usage is associated with measurable productivity gains but shows no evidence of developer displacement. Firms adopting Copilot maintained or increased developer headcount, suggesting that productivity gains from AI coding tools are being channeled into expanded output rather than workforce reduction.",
+  "keyFindings": [
+    "GitHub Copilot adoption is associated with productivity gains for developers",
+    "No evidence of developer displacement following Copilot adoption",
+    "Firms using Copilot maintained or increased developer headcount",
+    "Productivity gains appear to be channeled into expanded output rather than labor substitution"
+  ],
+  "methodology": "LinkedIn Economic Graph data analysis tracking developer employment trajectories at firms before and after GitHub Copilot adoption. Uses LinkedIn's large-scale professional network data to measure workforce changes at the firm level.",
+  "qualifiers": "Covers an early adoption period when firms may not yet have adjusted workforce plans. LinkedIn data may not capture all employment changes, particularly contractor and freelance arrangements. Selection effects: early Copilot adopters may differ systematically from non-adopters.",
+  "fetchedAt": "2026-03-12"
+}

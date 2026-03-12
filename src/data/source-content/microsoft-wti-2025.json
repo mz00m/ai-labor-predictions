@@ -1,0 +1,13 @@
+{
+  "id": "microsoft-wti-2025",
+  "abstract": "Microsoft's Work Trend Index survey of 31,000 workers across multiple countries finding that 75% of knowledge workers use AI tools at work and 78% bring their own AI tools (BYOAI) rather than relying on employer-provided solutions. The report highlights a significant gap between employee-driven AI adoption and organizational AI strategy, with workers adopting AI tools faster than IT departments can govern them.",
+  "keyFindings": [
+    "75% of knowledge workers report using AI at work",
+    "78% of AI-using workers bring their own AI tools (BYOAI) rather than using employer-provided options",
+    "Significant gap exists between bottom-up employee adoption and top-down organizational AI strategy",
+    "Workers report AI helps most with information synthesis, drafting, and meeting preparation"
+  ],
+  "methodology": "Large-scale survey of n=31,000 knowledge workers across multiple countries, conducted as part of Microsoft's annual Work Trend Index. Measures AI adoption rates, usage patterns, and organizational readiness through self-reported data.",
+  "qualifiers": "Microsoft has commercial interest in promoting AI adoption narratives. Knowledge workers are not representative of the full workforce. Self-reported usage may conflate occasional experimentation with regular productive use. Survey conducted by an AI tool vendor.",
+  "fetchedAt": "2026-03-12"
+}

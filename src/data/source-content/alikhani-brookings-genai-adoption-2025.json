@@ -1,0 +1,13 @@
+{
+  "id": "alikhani-brookings-genai-adoption-2025",
+  "abstract": "Brookings Institution analysis of generative AI adoption patterns finding approximately 20% professional use and 57% personal use among US adults. The study highlights a significant gap between personal experimentation with generative AI and its integration into professional workflows, suggesting that organizational barriers, security concerns, and unclear use cases slow workplace adoption relative to individual exploration.",
+  "keyFindings": [
+    "Approximately 20% of US adults report professional use of generative AI",
+    "57% report personal use of generative AI tools",
+    "Large gap between personal experimentation and professional integration",
+    "Organizational barriers and security concerns slow workplace AI adoption"
+  ],
+  "methodology": "Brookings Institution analysis synthesizing multiple survey data sources to estimate generative AI adoption rates across personal and professional contexts in the United States.",
+  "qualifiers": "Adoption rates are evolving rapidly and may be outdated shortly after measurement. Distinction between personal and professional use can be blurry for remote workers. Survey-based estimates of professional use may undercount informal or unauthorized workplace usage.",
+  "fetchedAt": "2026-03-12"
+}

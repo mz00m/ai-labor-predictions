@@ -1,0 +1,13 @@
+{
+  "id": "kim-jin-lee-pixiv-illustrators-2026",
+  "abstract": "Study examining the impact of AI image generation on illustrators using Japan's Pixiv platform, finding a 10.1% decline in overall uploads and a 14.3% decline in commercial illustration work. The research provides direct evidence of AI's displacement effect on creative professionals, with the commercial segment -- where AI-generated images offer closer substitutes -- showing a larger decline than personal or fan art categories.",
+  "keyFindings": [
+    "Pixiv illustration uploads declined 10.1% overall following AI image generator proliferation",
+    "Commercial illustration work declined 14.3%, a steeper drop than non-commercial content",
+    "AI displacement is more pronounced where AI-generated images are closer substitutes (commercial work)",
+    "Human illustrators face competitive pressure from AI-generated art in marketplace settings"
+  ],
+  "methodology": "Quantitative analysis of Pixiv platform upload data, tracking changes in illustration volume and commercial activity before and after the widespread availability of AI image generation tools. Distinguishes between commercial and non-commercial illustration categories.",
+  "qualifiers": "Pixiv is Japan-centric and results may not fully generalize to global creative markets. Upload volume changes may reflect platform migration rather than reduced creative output. Commercial illustration decline may partly reflect broader economic conditions in Japan's creative industry.",
+  "fetchedAt": "2026-03-12"
+}

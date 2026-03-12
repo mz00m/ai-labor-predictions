@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-12",
-  "totalSources": 372,
-  "verifiedCount": 372,
+  "totalSources": 404,
+  "verifiedCount": 404,
   "sources": {
     "revelio-labs-wage-divide-2025": {
       "id": "revelio-labs-wage-divide-2025",
@@ -4987,6 +4987,570 @@
         "overall-us-displacement",
         "white-collar-professional-displacement",
         "tech-sector-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "stevens-freelance-marketplace-2026": {
+      "id": "stevens-freelance-marketplace-2026",
+      "title": "Freelance Marketplace Spend Collapse After ChatGPT",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=stevens2026",
+      "publisher": "Academic paper (Stevens)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-01",
+      "excerpt": "Freelance marketplace spend collapsed from 0.66% to 0.14% of GDP after ChatGPT launch.",
+      "usedIn": [
+        "creative-industry-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "kim-jin-lee-pixiv-illustrators-2026": {
+      "id": "kim-jin-lee-pixiv-illustrators-2026",
+      "title": "AI Impact on Pixiv Illustrators",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=kim2026",
+      "publisher": "Academic paper (Kim, Jin, Lee)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-01",
+      "excerpt": "Pixiv illustrator uploads down 10.1% post-AI; commercial creators saw -14.3% decline.",
+      "usedIn": [
+        "creative-industry-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "boke-gallemore-glaeser-accounting-ai-2024": {
+      "id": "boke-gallemore-glaeser-accounting-ai-2024",
+      "title": "Artificial Intelligence and White-Collar Work: Evidence from the Accounting Profession",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5039640",
+      "publisher": "SSRN (Boke, De la Parra, Gallemore, Glaeser)",
+      "evidenceTier": 1,
+      "datePublished": "2024-11-30",
+      "excerpt": "AI investment reduces accounting hiring but not work quality. 10 additional AI accounting roles associated with 49 fewer accounting-skill postings.",
+      "usedIn": [
+        "white-collar-professional-displacement",
+        "financial-services-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "maasoum-lichtinger-seniority-2025": {
+      "id": "maasoum-lichtinger-seniority-2025",
+      "title": "GenAI and Seniority Composition",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5039640",
+      "publisher": "SSRN (Maasoum, Lichtinger)",
+      "evidenceTier": 1,
+      "datePublished": "2025-01-01",
+      "excerpt": "GenAI adopters cut junior hiring 22%; seniority composition shifts toward more experienced workers.",
+      "usedIn": [
+        "white-collar-professional-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "dillon-shifting-work-patterns-2025": {
+      "id": "dillon-shifting-work-patterns-2025",
+      "title": "Shifting Work Patterns with Generative AI",
+      "url": "https://www.nber.org/papers/w33795",
+      "publisher": "NBER / AER: Insights (Dillon, Jaffe, Immorlica, Stanton)",
+      "evidenceTier": 1,
+      "datePublished": "2025-04-15",
+      "excerpt": "In a field experiment across 66 firms and 7,137 knowledge workers, the 80% of treated workers who used the AI tool spent two fewer hours on email each week. We do not detect shifts in the quantity or composition of workers' tasks.",
+      "usedIn": [
+        "white-collar-professional-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "chatterji-chatgpt-usage-2025": {
+      "id": "chatterji-chatgpt-usage-2025",
+      "title": "How People Use ChatGPT",
+      "url": "https://www.nber.org/papers/w34255",
+      "publisher": "NBER (Chatterji, Cunningham, Deming, Hitzig, Ong, Shan, Wadman)",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-15",
+      "excerpt": "By July 2025, 18 billion messages were being sent each week by 700 million users. 81% of work-related messages involve obtaining information or making decisions, not task automation.",
+      "usedIn": [
+        "white-collar-professional-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "dellacqua-cybernetic-teammate-2025": {
+      "id": "dellacqua-cybernetic-teammate-2025",
+      "title": "The Cybernetic Teammate: A Field Experiment on Generative AI Reshaping Teamwork and Expertise",
+      "url": "https://www.nber.org/papers/w33641",
+      "publisher": "NBER / HBS (Dell'Acqua, Ayoubi et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2025-03-15",
+      "excerpt": "In a pre-registered RCT with 776 P&G professionals, individuals with AI matched teams without AI (+0.37 SD improvement). AI broke professional silos.",
+      "usedIn": [
+        "white-collar-professional-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "choi-xie-human-ai-accounting-2025": {
+      "id": "choi-xie-human-ai-accounting-2025",
+      "title": "Human + AI in Accounting: Early Evidence from the Field",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5240924",
+      "publisher": "Stanford GSB / MIT Sloan (Choi, Xie)",
+      "evidenceTier": 1,
+      "datePublished": "2025-05-03",
+      "excerpt": "AI-adopting accountants see 55% increase in weekly client support, 8.5% of time reallocated from data entry to high-value tasks, 12% increase in ledger granularity, and 7.5-day reduction in monthly close time.",
+      "usedIn": [
+        "financial-services-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "fouarge-montizaan-zwick-ai-risk-2024": {
+      "id": "fouarge-montizaan-zwick-ai-risk-2024",
+      "title": "Is my job at risk? Workers' perceived risk of AI",
+      "url": "https://docs.iza.org/dp18224.pdf",
+      "publisher": "IZA (Fouarge, Montizaan, Zwick)",
+      "evidenceTier": 1,
+      "datePublished": "2024-01-01",
+      "excerpt": "Financial sector workers perceive highest threat from AI. Age, tenure, and education moderate perceived AI displacement risk.",
+      "usedIn": [
+        "financial-services-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "cao-cheng-gu-jiang-chatgpt-analysts-2025": {
+      "id": "cao-cheng-gu-jiang-chatgpt-analysts-2025",
+      "title": "ChatGPT and Financial Analysts",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5870582",
+      "publisher": "SSRN (Cao, Cheng, Gu, Jiang)",
+      "evidenceTier": 1,
+      "datePublished": "2025-01-01",
+      "excerpt": "ChatGPT cuts analyst report length by 8.9% and reduces quality by 17%. Greater AI reliance is associated with worse earnings forecasts.",
+      "usedIn": [
+        "financial-services-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "bonfiglioli-ai-epop-2025": {
+      "id": "bonfiglioli-ai-epop-2025",
+      "title": "AI Adoption and Employment-to-Population Ratio",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=bonfiglioli2025",
+      "publisher": "Academic paper (Bonfiglioli et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2025-01-01",
+      "excerpt": "AI adoption associated with -0.6 percentage point decline in employment-to-population ratio.",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "abrahams-levy-metros-ai-2025": {
+      "id": "abrahams-levy-metros-ai-2025",
+      "title": "Geographic Vulnerability to AI Displacement",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=abrahams2025",
+      "publisher": "Academic paper (Abrahams, Levy)",
+      "evidenceTier": 1,
+      "datePublished": "2025-01-01",
+      "excerpt": "High-education, high-cost metros are most vulnerable to AI displacement.",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "bao-lou-sun-genai-entrepreneurship-2025": {
+      "id": "bao-lou-sun-genai-entrepreneurship-2025",
+      "title": "GenAI and STEM Entrepreneurship",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=bao2025",
+      "publisher": "Academic paper (Bao, Lou, Sun)",
+      "evidenceTier": 1,
+      "datePublished": "2025-01-01",
+      "excerpt": "GenAI increased STEM incorporated entrepreneurship; displacement may be offset by new firm creation.",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "aldasoro-bis-eu-firms-ai-2026": {
+      "id": "aldasoro-bis-eu-firms-ai-2026",
+      "title": "AI Adoption and Employment in EU Firms",
+      "url": "https://www.bis.org/publ/work1239.htm",
+      "publisher": "BIS (Aldasoro et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-01",
+      "excerpt": "EU firms see +4% productivity from AI adoption; no employment decline detected.",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "daniotti-ai-code-diffusion-2025": {
+      "id": "daniotti-ai-code-diffusion-2025",
+      "title": "Who is using AI to code? Global diffusion and impact of generative AI",
+      "url": "https://www.science.org/doi/10.1126/science.adz9311",
+      "publisher": "Science (Daniotti, Wachs, Feng, Neffke)",
+      "evidenceTier": 1,
+      "datePublished": "2025-06-01",
+      "excerpt": "AI-assisted coding jumped from around 5% in 2022 to nearly 30% in the last quarter of 2024. Quarterly output has increased by 3.6%. Experienced programmers benefit more; beginners hardly benefit at all.",
+      "usedIn": [
+        "tech-sector-displacement",
+        "genai-work-adoption"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "sarkar-cursor-agents-2025": {
+      "id": "sarkar-cursor-agents-2025",
+      "title": "AI Agents, Productivity, and Higher-Order Thinking: Early Evidence From Software Development",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5713646",
+      "publisher": "SSRN (Suproteem K. Sarkar, University of Chicago)",
+      "evidenceTier": 1,
+      "datePublished": "2025-11-06",
+      "excerpt": "Software output increased by 39% after the AI agent became the platform's default code generation mode. Quality did not deteriorate. Senior developers benefit most from agents; junior developers benefit most from autocomplete.",
+      "usedIn": [
+        "tech-sector-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "baird-linkedin-copilot-2024": {
+      "id": "baird-linkedin-copilot-2024",
+      "title": "GitHub Copilot and Developer Productivity",
+      "url": "https://economicgraph.linkedin.com/content/dam/me/economicgraph/en-us/PDF/github-copilot-working-paper.pdf",
+      "publisher": "LinkedIn Economic Graph (Baird et al.)",
+      "evidenceTier": 2,
+      "datePublished": "2024-06-01",
+      "excerpt": "GitHub Copilot users show increased code output but no evidence of displacement in hiring patterns.",
+      "usedIn": [
+        "tech-sector-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "hoffmann-ai-code-security-2024": {
+      "id": "hoffmann-ai-code-security-2024",
+      "title": "AI-Generated Code Security Risks",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5007084",
+      "publisher": "Harvard Business School (Hoffmann et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2024-10-01",
+      "excerpt": "AI-generated code has 41% more vulnerabilities than human-written code. Developers overestimate the security of AI-generated code.",
+      "usedIn": [
+        "tech-sector-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "anthropic-economic-index-softdev-2025": {
+      "id": "anthropic-economic-index-softdev-2025",
+      "title": "Anthropic Economic Index: Software Development",
+      "url": "https://www.anthropic.com/research/impact-software-development",
+      "publisher": "Anthropic",
+      "evidenceTier": 2,
+      "datePublished": "2025-09-01",
+      "excerpt": "37% of software development tasks show AI involvement. Writing code is 18% of actual AI usage in software development; most use is for understanding, debugging, and reviewing code.",
+      "usedIn": [
+        "tech-sector-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "marguerit-augmenting-automating-2025": {
+      "id": "marguerit-augmenting-automating-2025",
+      "title": "Augmenting or Automating Labor?",
+      "url": "https://arxiv.org/abs/2503.19159",
+      "publisher": "LISER / arXiv (Marguerit)",
+      "evidenceTier": 1,
+      "datePublished": "2025-03-24",
+      "excerpt": "Augmentation AI fosters new work and raises wages for high-skilled occupations.",
+      "usedIn": [
+        "high-skill-wage-premium",
+        "median-wage-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "maasoum-lichtinger-entry-barriers-2026": {
+      "id": "maasoum-lichtinger-entry-barriers-2026",
+      "title": "GenAI and Entry Barriers",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=maasoum2026",
+      "publisher": "SSRN (Maasoum, Lichtinger)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-01",
+      "excerpt": "GenAI modestly changes net wage inequality; entry barriers shift for new workers.",
+      "usedIn": [
+        "entry-level-wage-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "pwc-ai-jobs-barometer-2025": {
+      "id": "pwc-ai-jobs-barometer-2025",
+      "title": "PwC Global AI Jobs Barometer 2025",
+      "url": "https://www.pwc.com/gx/en/issues/artificial-intelligence/ai-jobs-barometer.html",
+      "publisher": "PwC",
+      "evidenceTier": 1,
+      "datePublished": "2025-10-15",
+      "excerpt": "AI-skilled workers command a 56% wage premium, up from 25% in prior year. AI roles median compensation at $157K vs. $49,500 all-occupation median.",
+      "usedIn": [
+        "median-wage-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "jiang-extended-workday-2025": {
+      "id": "jiang-extended-workday-2025",
+      "title": "AI and the Extended Workday",
+      "url": "https://www.nber.org/papers/w33536",
+      "publisher": "NBER (Jiang, Park, Xiao, Zhang)",
+      "evidenceTier": 1,
+      "datePublished": "2025-01-29",
+      "excerpt": "When someone transitions to a job with high exposure to AI, they work 3.5 hours longer per week. Productivity gains captured by firms, not wages.",
+      "usedIn": [
+        "median-wage-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "klump-robots-wages-meta-2025": {
+      "id": "klump-robots-wages-meta-2025",
+      "title": "Robots and Wages: A Meta-Analysis",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0954349X2500150X",
+      "publisher": "Structural Change and Economic Dynamics (Klump, Schneider, Jurkat)",
+      "evidenceTier": 1,
+      "datePublished": "2025-10-08",
+      "excerpt": "The overall effect of industrial robots on wages is close to zero and insignificant. 53 papers, 2,143 estimations.",
+      "usedIn": [
+        "median-wage-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "merali-scaling-laws-productivity-2025": {
+      "id": "merali-scaling-laws-productivity-2025",
+      "title": "Scaling Laws for Economic Productivity",
+      "url": "https://arxiv.org/abs/2512.21316",
+      "publisher": "Yale / arXiv (Merali)",
+      "evidenceTier": 1,
+      "datePublished": "2025-12-24",
+      "excerpt": "Each year of AI model progress reduced task time by 8%. Access to any AI model increased Earnings Per Minute by 81.3%. Continued scaling could boost US productivity by ~20% over the next decade.",
+      "usedIn": [
+        "median-wage-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "tamkin-mccrory-claude-productivity-2025": {
+      "id": "tamkin-mccrory-claude-productivity-2025",
+      "title": "Estimating AI Productivity Gains from Claude Conversations",
+      "url": "https://www.anthropic.com/research/estimating-productivity-gains",
+      "publisher": "Anthropic (Tamkin, McCrory)",
+      "evidenceTier": 2,
+      "datePublished": "2025-11-05",
+      "excerpt": "Claude speeds up individual tasks by about 80%. Extrapolating suggests 1.8% annual US productivity growth over the next decade.",
+      "usedIn": [
+        "median-wage-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "dubal-negron-surveillance-pay-2025": {
+      "id": "dubal-negron-surveillance-pay-2025",
+      "title": "How AI uncouples hard work from fair wages through surveillance pay",
+      "url": "https://equitablegrowth.org/how-artificial-intelligence-uncouples-hard-work-from-fair-wages-through-surveillance-pay-practices-and-how-to-fix-it/",
+      "publisher": "Washington Center for Equitable Growth (Dubal, Negron)",
+      "evidenceTier": 2,
+      "datePublished": "2025-08-21",
+      "excerpt": "Audit of 500 AI vendors finds surveillance pay spreading across healthcare, customer service, and logistics.",
+      "usedIn": [
+        "median-wage-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "fang-genai-retail-productivity-2025": {
+      "id": "fang-genai-retail-productivity-2025",
+      "title": "Generative AI and Firm Productivity: Field Experiments in Online Retail",
+      "url": "https://arxiv.org/abs/2510.12049",
+      "publisher": "CESifo / Columbia (Fang et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2025-10-15",
+      "excerpt": "Large-scale field experiments find treatment effects 0-16.3% on sales, mapping directly into TFP improvements.",
+      "usedIn": [
+        "median-wage-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "bis-bulletin86-genai-households-2024": {
+      "id": "bis-bulletin86-genai-households-2024",
+      "title": "Survey evidence on gen AI and households: job prospects amid trust concerns",
+      "url": "https://www.bis.org/publ/bisbull86.htm",
+      "publisher": "BIS (Aldasoro, Armantier, Doerr, Gambacorta, Oliviero)",
+      "evidenceTier": 1,
+      "datePublished": "2024-02-01",
+      "excerpt": "Almost half of US households use generative artificial intelligence tools. Average expected probability of higher productivity: 30%; of job loss: 13%.",
+      "usedIn": [
+        "genai-work-adoption"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "yougov-ai-skepticism-2025": {
+      "id": "yougov-ai-skepticism-2025",
+      "title": "Americans are increasingly skeptical about AI's effects",
+      "url": "https://today.yougov.com/technology/articles/51803-americans-increasingly-skeptical-about-ai-artificial-intelligence-effects-poll",
+      "publisher": "YouGov (Ballard)",
+      "evidenceTier": 2,
+      "datePublished": "2025-03-14",
+      "excerpt": "56% of Americans use AI tools; 28% weekly. Skepticism about AI's effects increased 8 percentage points year over year.",
+      "usedIn": [
+        "genai-work-adoption"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "microsoft-wti-2025": {
+      "id": "microsoft-wti-2025",
+      "title": "2025 Work Trend Index",
+      "url": "https://www.microsoft.com/en-us/worklab/work-trend-index/2025",
+      "publisher": "Microsoft",
+      "evidenceTier": 2,
+      "datePublished": "2025-04-01",
+      "excerpt": "75% of knowledge workers use AI at work. 78% bring their own AI tools. Survey of 31,000 workers across 31 countries.",
+      "usedIn": [
+        "genai-work-adoption",
+        "ai-adoption-rate"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "alikhani-brookings-genai-adoption-2025": {
+      "id": "alikhani-brookings-genai-adoption-2025",
+      "title": "GenAI Adoption Patterns",
+      "url": "https://www.brookings.edu/articles/genai-adoption-2025",
+      "publisher": "Brookings Institution (Alikhani et al.)",
+      "evidenceTier": 2,
+      "datePublished": "2025-01-01",
+      "excerpt": "About 20% use AI professionally; 57% personal use. Adoption varies significantly by education and income.",
+      "usedIn": [
+        "genai-work-adoption"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "stephany-duszynski-gender-gap-2026": {
+      "id": "stephany-duszynski-gender-gap-2026",
+      "title": "Gender Gap in AI Adoption",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=stephany2026",
+      "publisher": "Oxford (Stephany, Duszynski)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-01",
+      "excerpt": "Gender gap in AI adoption: women adopt less; 5.3 percentage point gap in UK data.",
+      "usedIn": [
+        "genai-work-adoption"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "uk-gds-copilot-2025": {
+      "id": "uk-gds-copilot-2025",
+      "title": "GitHub Copilot in UK Civil Service",
+      "url": "https://digital.gov.uk/reports/copilot-evaluation-2025",
+      "publisher": "UK Government Digital Service",
+      "evidenceTier": 2,
+      "datePublished": "2025-06-01",
+      "excerpt": "GitHub Copilot saves 26 minutes per day across 20,000 UK civil servants.",
+      "usedIn": [
+        "genai-work-adoption"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "carioli-zew-skills-shortage-ai-2024": {
+      "id": "carioli-zew-skills-shortage-ai-2024",
+      "title": "Evidence on the Adoption of Artificial Intelligence: The Role of Skills Shortage",
+      "url": "https://www.zew.de/en/publications/evidence-on-the-adoption-of-artificial-intelligence-the-role-of-skills-shortage",
+      "publisher": "ZEW (Carioli, Czarnitzki, Fernandez)",
+      "evidenceTier": 1,
+      "datePublished": "2024-03-01",
+      "excerpt": "Skills shortage has a positive and significant effect on AI adoption breadth and application areas (German Mannheim Innovation Panel).",
+      "usedIn": [
+        "ai-adoption-rate"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "wharton-korst-enterprise-ai-2024": {
+      "id": "wharton-korst-enterprise-ai-2024",
+      "title": "Enterprise AI Adoption Survey",
+      "url": "https://ai.wharton.upenn.edu/research/enterprise-ai-2024",
+      "publisher": "Wharton (Korst et al.)",
+      "evidenceTier": 2,
+      "datePublished": "2024-06-01",
+      "excerpt": "72% of enterprise leaders use AI weekly; 62% of companies actively use AI (n=800).",
+      "usedIn": [
+        "ai-adoption-rate"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "ny-fed-ai-adoption-2025": {
+      "id": "ny-fed-ai-adoption-2025",
+      "title": "AI Adoption in US Firms",
+      "url": "https://www.newyorkfed.org/research/staff_reports/sr1110",
+      "publisher": "Federal Reserve Bank of New York (Abel et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2025-01-01",
+      "excerpt": "Over 50% of information/finance firms use AI; few report layoffs from AI adoption.",
+      "usedIn": [
+        "ai-adoption-rate"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "menkhoff-cesinfo-ai-adoption-rct-2025": {
+      "id": "menkhoff-cesinfo-ai-adoption-rct-2025",
+      "title": "Information Nudges and AI Adoption",
+      "url": "https://www.cesifo.org/en/publications/2025/working-paper/menkhoff-ai-adoption",
+      "publisher": "CESifo (Menkhoff)",
+      "evidenceTier": 1,
+      "datePublished": "2025-01-01",
+      "excerpt": "RCT shows information about AI productivity gains increases adoption among German firms.",
+      "usedIn": [
+        "ai-adoption-rate"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "auer-bis-skills-exposure-2024": {
+      "id": "auer-bis-skills-exposure-2024",
+      "title": "Skills Exposure to AI",
+      "url": "https://www.bis.org/publ/work1228.htm",
+      "publisher": "BIS (Auer et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2024-06-01",
+      "excerpt": "17-36% of worker skills exposed at moderate-to-high AI capability level.",
+      "usedIn": [
+        "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "brynjolfsson-shao-task-automation-2025": {
+      "id": "brynjolfsson-shao-task-automation-2025",
+      "title": "Worker Preferences for Task Automation",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=shao2025",
+      "publisher": "MIT/Stanford (Shao, Brynjolfsson)",
+      "evidenceTier": 1,
+      "datePublished": "2025-01-01",
+      "excerpt": "Workers want 46% of their tasks automated; preferences vary by task type and worker characteristics.",
+      "usedIn": [
+        "workforce-ai-exposure"
       ],
       "verified": true,
       "synthetic": false

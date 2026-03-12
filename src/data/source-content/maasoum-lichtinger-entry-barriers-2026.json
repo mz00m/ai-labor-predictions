@@ -1,0 +1,13 @@
+{
+  "id": "maasoum-lichtinger-entry-barriers-2026",
+  "abstract": "Research examining how generative AI affects entry barriers to professional occupations and the resulting wage inequality implications. The study finds that while AI raises barriers to entry-level employment (as firms substitute AI for junior workers), the overall wage inequality effects remain modest. AI creates both upward pressure on high-skill wages and reduced demand for entry-level work, but these forces partially offset each other at the aggregate level.",
+  "keyFindings": [
+    "Generative AI raises barriers to entry-level professional employment",
+    "Overall wage inequality changes from AI adoption remain modest in magnitude",
+    "AI creates upward pressure on high-skill wages while reducing entry-level demand",
+    "Offsetting forces at the aggregate level mute the net inequality effect"
+  ],
+  "methodology": "Empirical analysis of wage distributions and entry-level hiring patterns at firms adopting generative AI, examining how AI-driven changes in labor demand across skill levels translate into wage inequality measures.",
+  "qualifiers": "Modest aggregate inequality effects may mask larger distributional shifts within specific occupations or demographics. Early-stage findings that may evolve as AI adoption deepens. Wage inequality measures are sensitive to the specific metric and time horizon used.",
+  "fetchedAt": "2026-03-12"
+}

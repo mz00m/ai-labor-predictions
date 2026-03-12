@@ -1,0 +1,13 @@
+{
+  "id": "sarkar-cursor-agents-2025",
+  "abstract": "UChicago/Cursor collaboration studying the impact of AI coding agents on software development productivity across approximately 1,000 organizations. Teams using AI agents merged 39% more code compared to baseline, indicating substantial productivity gains. The study provides large-scale evidence from production environments rather than lab settings, strengthening the case for meaningful AI-driven developer productivity improvements.",
+  "keyFindings": [
+    "Teams using AI coding agents merged 39% more code than those without",
+    "Productivity gains were consistent across approximately 1,000 organizations",
+    "Benefits were observed in production environments, not just controlled lab settings",
+    "AI agents showed larger productivity effects than simpler code completion tools"
+  ],
+  "methodology": "Observational study analyzing code merge rates across approximately 1,000 organizations using the Cursor AI coding platform. Compares productivity metrics before and after AI agent adoption, controlling for team and project characteristics.",
+  "qualifiers": "Code merge volume is an imperfect proxy for developer productivity and does not capture code quality. Organizations using Cursor may be positively selected for AI readiness. Observational design limits causal claims compared to randomized experiments.",
+  "fetchedAt": "2026-03-12"
+}

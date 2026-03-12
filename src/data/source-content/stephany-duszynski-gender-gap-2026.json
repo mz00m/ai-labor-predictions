@@ -1,0 +1,13 @@
+{
+  "id": "stephany-duszynski-gender-gap-2026",
+  "abstract": "Oxford University study documenting a 5.3 percentage point gender gap in AI adoption in the UK, with men more likely to use AI tools than women across most occupational categories. The research examines how differential AI adoption rates may compound existing gender inequalities in the labor market, as those who adopt AI earlier may gain disproportionate productivity and career advantages.",
+  "keyFindings": [
+    "5.3 percentage point gender gap in AI adoption in the UK, favoring men",
+    "Gender gap persists across most occupational categories after controlling for job type",
+    "Early AI adopters may gain compounding productivity and career advantages",
+    "Differential adoption could exacerbate existing gender wage and promotion gaps"
+  ],
+  "methodology": "Oxford University study analyzing UK survey data on AI tool adoption broken down by gender, controlling for occupation, industry, education, and other demographic factors to isolate the gender-specific adoption gap.",
+  "qualifiers": "UK-specific findings may not generalize to other labor markets. Self-reported adoption data subject to potential differences in how men and women describe their tool usage. The gap may narrow as AI tools become more ubiquitous and embedded in standard workflows.",
+  "fetchedAt": "2026-03-12"
+}
