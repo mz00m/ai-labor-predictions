@@ -672,6 +672,15 @@
       ],
       "evidenceTier": 3,
       "label": "Morgan Stanley via BizJournals: 4% net job reduction in 5 high-AI sectors"
+    },
+    {
+      "date": "2026-01-22",
+      "direction": "down",
+      "sourceIds": [
+        "esb-dutch-youth-genai-employment-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "ESB/Rabobank: Dutch youth employment in GenAI-exposed jobs fell 13% (Q4 2022\u2013Q3 2025)"
     }
   ],
   "sources": [
@@ -1271,6 +1280,16 @@
       "datePublished": "2026-03-10",
       "excerpt": "89% of the respondents said they have no plans to cut staff or lay off workers because of AI. Just 3% said they have already cut staff, while 7% said they have plans to reduce their workforce within the next year.",
       "dateAdded": "2026-03-11"
+    },
+    {
+      "id": "esb-dutch-youth-genai-employment-2026",
+      "title": "Dalende werkgelegenheid onder Nederlandse jongeren die concurreren met GenAI",
+      "url": "https://esb.nu/dalende-werkgelegenheid-onder-nederlandse-jongeren-die-concurreren-met-genai/",
+      "publisher": "ESB / Rabobank (Groenewegen, van Limbergen, Vrieselaar)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-22",
+      "excerpt": "In het derde kwartaal van 2025 werkten ruim dertien procent minder jongeren in de meest vatbare beroepsgroepen dan in het vierde kwartaal van 2022, terwijl de werkgelegenheid in andere beroepsgroepen juist drie procent steeg.",
+      "dateAdded": "2026-03-12"
     }
   ]
 }

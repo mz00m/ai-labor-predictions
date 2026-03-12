@@ -525,6 +525,15 @@
       ],
       "evidenceTier": 2,
       "label": "Anthropic: Programmers highest AI exposure (74.5%) but no unemployment impact detected"
+    },
+    {
+      "date": "2026-01-22",
+      "direction": "down",
+      "sourceIds": [
+        "esb-dutch-youth-genai-employment-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "ESB/Rabobank: Dutch ICT youth employment fell 11% despite 6.5% sector growth (since 2022)"
     }
   ],
   "sources": [
@@ -1005,6 +1014,16 @@
       "datePublished": "2024-10-01",
       "excerpt": "They found a 21 percent reduction in time spent per task. Interestingly, more experienced developers saw bigger effects, possibly because AI requires substantial verification and judgment rather than simply accepting generated code.",
       "dateAdded": "2026-03-07"
+    }
+    {
+      "id": "esb-dutch-youth-genai-employment-2026",
+      "title": "Dalende werkgelegenheid onder Nederlandse jongeren die concurreren met GenAI",
+      "url": "https://esb.nu/dalende-werkgelegenheid-onder-nederlandse-jongeren-die-concurreren-met-genai/",
+      "publisher": "ESB / Rabobank (Groenewegen, van Limbergen, Vrieselaar)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-22",
+      "excerpt": "De ICT groeide in dezelfde periode met 6,5 procent, maar zag een daling van de werkgelegenheid van zo'n 11 procent onder 15- tot 24-jarigen.",
+      "dateAdded": "2026-03-12"
     }
   ],
   "marketIds": {

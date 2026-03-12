@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "Dalende werkgelegenheid onder Nederlandse jongeren die concurreren met GenAI",
+      "author": "J. Groenewegen, N. van Limbergen, N. Vrieselaar",
+      "publisher": "ESB / Rabobank",
+      "date": "2026-01-22",
+      "url": "https://esb.nu/dalende-werkgelegenheid-onder-nederlandse-jongeren-die-concurreren-met-genai/",
+      "takeaway": "Dutch youth employment in GenAI-vulnerable occupations fell 13% from Q4 2022 to Q3 2025, while other occupations rose 3%. Job postings in vulnerable occupations down 25% vs <10% elsewhere. ICT sector grew 6.5% but youth employment fell 11%. Mirrors US findings from Brynjolfsson et al. (2025).",
+      "weekFeatured": "2026-03-12",
+      "tier": 1
+    },
+    {
       "title": "Productive Individuals Don't Make Productive Firms",
       "author": "George Sivulka",
       "publisher": "Twitter/X (Hebbia)",

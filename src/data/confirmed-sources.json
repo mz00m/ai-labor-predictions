@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-03-11",
-  "totalSources": 371,
-  "verifiedCount": 371,
+  "lastUpdated": "2026-03-12",
+  "totalSources": 372,
+  "verifiedCount": 372,
   "sources": {
     "revelio-labs-wage-divide-2025": {
       "id": "revelio-labs-wage-divide-2025",
@@ -5094,6 +5094,22 @@
       "datePublished": "2026-03-11",
       "excerpt": "AI is driving a 10x increase in the productivity of the individuals who know how to leverage it. But that's not enough. We've swapped the motor; we have not yet redesigned the factory. Because of a simple fact: productive individuals do not make productive firms.",
       "usedIn": [],
+      "verified": true,
+      "synthetic": false
+    },
+    "esb-dutch-youth-genai-employment-2026": {
+      "id": "esb-dutch-youth-genai-employment-2026",
+      "title": "Dalende werkgelegenheid onder Nederlandse jongeren die concurreren met GenAI",
+      "url": "https://esb.nu/dalende-werkgelegenheid-onder-nederlandse-jongeren-die-concurreren-met-genai/",
+      "publisher": "ESB / Rabobank (Groenewegen, van Limbergen, Vrieselaar)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-22",
+      "excerpt": "In het derde kwartaal van 2025 werkten ruim dertien procent minder jongeren in de meest vatbare beroepsgroepen dan in het vierde kwartaal van 2022, terwijl de werkgelegenheid in andere beroepsgroepen juist drie procent steeg.",
+      "usedIn": [
+        "overall-us-displacement",
+        "white-collar-professional-displacement",
+        "tech-sector-displacement"
+      ],
       "verified": true,
       "synthetic": false
     }
