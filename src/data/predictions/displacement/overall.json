@@ -112,7 +112,8 @@
       "confidenceHigh": 1.0,
       "sourceIds": ["bonfiglioli-ai-epop-2025"],
       "evidenceTier": 1,
-      "metricType": "observed",
+      "metricType": "employment",
+      "dataType": "observed",
       "isProxy": true,
       "proxyContext": {
         "actualUnit": "percentage point decline in employment-to-population ratio",
