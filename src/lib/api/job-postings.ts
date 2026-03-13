@@ -1,3 +1,5 @@
+import { toDateString } from "@/lib/date-utils";
+
 /**
  * Job Postings Data API clients.
  *
@@ -101,7 +103,7 @@ async function fetchAdzunaCategory(
       category: label,
       description: `${data.count.toLocaleString()} active postings for "${query}" in the US job market.`,
       url: `https://www.adzuna.com/search?q=${encodeURIComponent(query)}`,
-      dataDate: new Date().toISOString().split("T")[0],
+      dataDate: toDateString(),
       metrics: {
         totalPostings: data.count,
         avgSalary,

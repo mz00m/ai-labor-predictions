@@ -1,6 +1,7 @@
 import { fetchAuthorWorks, OpenAlexWork, reconstructAbstract } from "./openalex";
 import { ResearchPaper } from "./research-aggregator";
 import trackedAuthorsData from "@/data/tracked-authors.json";
+import { toDateString } from "@/lib/date-utils";
 
 export interface TrackedAuthor {
   name: string;
@@ -85,7 +86,7 @@ export async function fetchTrackedAuthorPapers(
   const authors = loadTrackedAuthors();
   const sinceDate = new Date();
   sinceDate.setDate(sinceDate.getDate() - daysBack);
-  const sinceDateStr = sinceDate.toISOString().split("T")[0];
+  const sinceDateStr = toDateString(sinceDate);
 
   const papers: ResearchPaper[] = [];
   const seenIds = new Set<string>();

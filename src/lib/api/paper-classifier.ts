@@ -1,4 +1,5 @@
 import { EvidenceTier, Source } from "../types";
+import { toDateString } from "@/lib/date-utils";
 import { ResearchPaper } from "./research-aggregator";
 import { getAllPredictions } from "../data-loader";
 
@@ -464,7 +465,7 @@ export function paperToSource(paper: ClassifiedPaper): Source {
     url: paper.url,
     publisher: paper.venue || SOURCE_PUBLISHER_LABELS[paper.source] || paper.source,
     evidenceTier: paper.classifiedTier,
-    datePublished: paper.publishedDate || new Date().toISOString().split("T")[0],
+    datePublished: paper.publishedDate || toDateString(),
     excerpt: paper.abstract
       ? paper.abstract.length > 200
         ? paper.abstract.slice(0, 200) + "..."

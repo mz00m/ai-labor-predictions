@@ -80,7 +80,10 @@ export function getHeroStats(): HeroStats {
   );
 
   if (!overallDisplacement) {
-    return { projectedJobLoss: 3, projectedEstimateCount: 14, measuredJobLoss: 0 };
+    throw new Error(
+      "getHeroStats: overall-us-displacement prediction not found in data-loader. " +
+      "Ensure src/data/predictions/displacement/overall.json exists and is imported."
+    );
   }
 
   const agg = computeAggregate(overallDisplacement, allTiers);

@@ -1,3 +1,5 @@
+import { toDateString } from "@/lib/date-utils";
+
 /**
  * SEC EDGAR Full-Text Search API client.
  * Searches 10-K, 10-Q, and 8-K filings for AI/automation workforce disclosures.
@@ -60,7 +62,7 @@ export async function searchSECFilings(
         q: query,
         dateRange: "custom",
         startdt: "2023-01-01",
-        enddt: new Date().toISOString().split("T")[0],
+        enddt: toDateString(),
         forms: "10-K,10-Q,8-K",
       });
 
