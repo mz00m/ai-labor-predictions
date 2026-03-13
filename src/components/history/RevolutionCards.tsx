@@ -27,11 +27,11 @@ const REVOLUTIONS: Revolution[] = [
     colorLight: "#fef3c7",
     innovation:
       "First mechanical substitute for human muscle at industrial scale",
-    automated: "Routine physical labor — weaving, grinding, pumping",
+    automated: "Routine physical labor: weaving, grinding, pumping",
     destroyed:
       "Handloom weavers (250,000+ eliminated by 1860), guild craftspeople",
     created:
-      "Railway workers (300,000+ by 1850), mechanics, engineers, mine workers — industries that didn\u2019t exist 20 years prior",
+      "Railway workers (300,000+ by 1850), mechanics, engineers, mine workers. These industries didn\u2019t exist 20 years prior.",
     painfulPart:
       'The "Engel\u2019s Pause" — real wages stagnated for 60 years despite massive productivity gains',
     lesson:

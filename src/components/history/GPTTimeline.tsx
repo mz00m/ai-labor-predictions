@@ -7,7 +7,7 @@ const PHASES = [
     phase: "I",
     name: "Emergence",
     duration: "5–20 yrs",
-    aiDuration: "~10 yrs (2012–2022) — complete",
+    aiDuration: "~10 yrs (2012–2022), complete",
     description:
       "Technology arrives; specialists created; little aggregate effect on total employment.",
     example:
@@ -21,13 +21,13 @@ const PHASES = [
     phase: "II",
     name: "Rapid Diffusion",
     duration: "10–25 yrs",
-    aiDuration: "~1–3 yrs (2022–2025) — nearly complete",
+    aiDuration: "~1–3 yrs (2022–2025), nearly complete",
     description:
       "Spreads across sectors; high-skill workers who adopt early benefit most. Productivity rises faster than wages.",
     example:
       "By 1900, electric motors were spreading across US factories but most still used shaft-and-belt power. Early adopters saw enormous gains.",
     aiNote:
-      "For AI: ChatGPT hit 100M users in 2 months; 54.6% of US adults used gen AI by 2025 (St. Louis Fed). Enterprise adoption surged from 33% to 88% in ~2 years (McKinsey). Anthropic's 2026 analysis of first-party API traffic found ~70% of US workers already have observed AI task coverage — and AI-exposed workers earn 47% more than unexposed workers, the classic early-adopter premium. A phase that took electricity 25 years effectively completed in under 3 for AI.",
+      "For AI: ChatGPT hit 100M users in 2 months; 54.6% of US adults used gen AI by 2025 (St. Louis Fed). Enterprise adoption surged from 33% to 88% in ~2 years (McKinsey). Anthropic's 2026 analysis of first-party API traffic found ~70% of US workers already have observed AI task coverage, and AI-exposed workers earn 47% more than unexposed workers, the classic early-adopter premium. A phase that took electricity 25 years effectively completed in under 3 for AI.",
     workerEffect: "Spreads across sectors; high-skill workers benefit most",
   },
   {
@@ -54,7 +54,7 @@ const PHASES = [
     example:
       "Factories redesigned around electric motors (1920s). The web spawned e-commerce, social media, and the app economy (2000s).",
     aiNote:
-      "For AI: organizational restructuring is partially constrained by human speed — but AI itself accelerates institutional adaptation (automated compliance, AI-assisted education, rapid prototyping of new business models). The productivity paradox could resolve by the early 2030s.",
+      "For AI: organizational restructuring is partially constrained by human speed, but AI itself accelerates institutional adaptation (automated compliance, AI-assisted education, rapid prototyping of new business models). The productivity paradox could resolve by the early 2030s.",
     workerEffect:
       "New industries emerge; productivity paradox resolves",
   },
@@ -66,9 +66,9 @@ const PHASES = [
     description:
       "Higher average wages; completely different job distribution. The economy has absorbed the GPT and a new normal emerges.",
     example:
-      "By 1950, electrification was invisible infrastructure. By 2020, 'using a computer' was not a skill — it was assumed.",
+      "By 1950, electrification was invisible infrastructure. By 2020, 'using a computer' wasn't a skill. It was assumed.",
     aiNote:
-      "For AI: at 10x compression, a new occupational equilibrium could emerge by the mid-2030s to early 2040s — within the careers of workers being displaced today, not their grandchildren's.",
+      "For AI: at 10x compression, a new occupational equilibrium could emerge by the mid-2030s to early 2040s. That's within the careers of workers being displaced today, not their grandchildren's.",
     workerEffect:
       "Higher avg wages; completely different job distribution",
   },

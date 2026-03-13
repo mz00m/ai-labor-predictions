@@ -209,7 +209,7 @@ export async function POST(request: Request) {
         if (err instanceof Anthropic.RateLimitError) {
           controller.enqueue(
             encoder.encode(
-              `data: ${JSON.stringify({ type: "error", error: "High demand right now — please wait a moment and try again." })}\n\n`
+              `data: ${JSON.stringify({ type: "error", error: "High demand right now. Please wait a moment and try again." })}\n\n`
             )
           );
         } else {

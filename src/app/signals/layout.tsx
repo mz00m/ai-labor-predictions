@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "AI Automation Signals — Where is AI Automation Heading?",
+  title: "AI Automation Signals | Where is AI Automation Heading?",
   description:
     "Track AI automation acceleration across 6 industries by monitoring open-source package downloads and BLS employment data. Like construction permits for the AI economy.",
   alternates: {

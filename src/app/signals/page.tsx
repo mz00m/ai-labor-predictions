@@ -71,7 +71,7 @@ export default function SignalsPage() {
           The gap between what AI <em>could</em> automate and what it <em>actually</em> handles
           today is enormous. Blue shows the share of tasks LLMs could theoretically perform;
           red shows measured usage from Claude API traffic. The discrepancy suggests we are
-          still early in the diffusion phase &mdash; even in high-exposure categories like
+          still early in the diffusion phase, even in high-exposure categories like
           Office &amp; Admin and Computer &amp; Math.
         </p>
         <div className="flex justify-center">

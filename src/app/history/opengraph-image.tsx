@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "nodejs";
 export const alt =
-  "On Tap Intelligence — What History Tells Us About AI and Work";
+  "On Tap Intelligence | What History Tells Us About AI and Work";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
