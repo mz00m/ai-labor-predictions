@@ -11,6 +11,7 @@
 
 import fs from "fs";
 import path from "path";
+import { toDateString } from "./lib/date-utils";
 import { fetchSource } from "./lib/ingest/fetcher";
 import {
   extractSourceContent,
@@ -79,14 +80,14 @@ async function applyIngestion(
           evidenceTier,
           datePublished:
             highlight.publishedAt ??
-            new Date().toISOString().split("T")[0],
+            toDateString(),
           excerpt: stat.quote,
         });
       }
 
       const dateStr = highlight.publishedAt
-        ? new Date(highlight.publishedAt).toISOString().split("T")[0]
-        : new Date().toISOString().split("T")[0];
+        ? toDateString(new Date(highlight.publishedAt))
+        : toDateString();
 
       if (stat.type === "data_point" && stat.value != null) {
         predictionFile.history = predictionFile.history ?? [];
@@ -145,7 +146,7 @@ async function applyIngestion(
         evidenceTier,
         datePublished:
           highlight.publishedAt ??
-          new Date().toISOString().split("T")[0],
+          toDateString(),
         excerpt:
           extractedStats[0]?.quote ?? highlight.summary,
         usedIn: [...modifiedFiles],
@@ -160,7 +161,7 @@ async function applyIngestion(
   }
 
   // Update timestamps
-  const today = new Date().toISOString().split("T")[0];
+  const today = toDateString();
   confirmedSources.lastUpdated = today;
   fs.writeFileSync(
     confirmedSourcesPath,
@@ -185,7 +186,7 @@ async function applyIngestion(
         const contentEntry = await extractSourceContent(sourceId, fetched.text, {
           title: highlight.title,
           publisher: new URL(highlight.source).hostname.replace("www.", ""),
-          datePublished: highlight.publishedAt ?? new Date().toISOString().split("T")[0],
+          datePublished: highlight.publishedAt ?? toDateString(),
           evidenceTier,
           url: highlight.source,
           excerpt: candidate.extractedStats?.[0]?.quote,

@@ -15,6 +15,7 @@
 import fs from "fs";
 import path from "path";
 import { loadEnv } from "./lib/load-env";
+import { toDateString } from "./lib/date-utils";
 
 loadEnv();
 
@@ -120,7 +121,7 @@ async function main() {
   since.setDate(since.getDate() - days);
   const now = new Date();
 
-  console.log(`Fetching sources for the past ${days} days (since ${since.toISOString().split("T")[0]})...`);
+  console.log(`Fetching sources for the past ${days} days (since ${toDateString(since)})...`);
   console.log(`Query: "${query}"`);
   console.log(`Adapters: ${ADAPTERS.map((a) => a.name).join(", ")}\n`);
 

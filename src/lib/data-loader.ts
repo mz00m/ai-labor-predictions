@@ -1,4 +1,5 @@
-import { Prediction } from "./types";
+import { EvidenceTier, Prediction } from "./types";
+import { computeAggregate } from "./prediction-stats";
 import lastUpdatedMeta from "@/data/last-updated.json";
 
 import techSector from "@/data/predictions/displacement/tech-sector.json";
@@ -58,4 +59,44 @@ export function getPredictionsByCategory(
 
 export function getLastUpdated(): string {
   return lastUpdatedMeta.lastUpdated;
+}
+
+export interface HeroStats {
+  projectedJobLoss: number;
+  projectedEstimateCount: number;
+  measuredJobLoss: number;
+}
+
+/**
+ * Compute hero stats from actual prediction data instead of hardcoding.
+ * - projectedJobLoss: weighted average from overall-us-displacement (all tiers)
+ * - projectedEstimateCount: number of data points in overall-us-displacement
+ * - measuredJobLoss: latest observed-only data point (dataType === "observed")
+ */
+export function getHeroStats(): HeroStats {
+  const allTiers: EvidenceTier[] = [1, 2, 3, 4];
+  const overallDisplacement = allPredictions.find(
+    (p) => p.slug === "overall-us-displacement"
+  );
+
+  if (!overallDisplacement) {
+    return { projectedJobLoss: 3, projectedEstimateCount: 14, measuredJobLoss: 0 };
+  }
+
+  const agg = computeAggregate(overallDisplacement, allTiers);
+  const estimateCount = overallDisplacement.history.length;
+
+  // Measured job loss: most recent observed data point
+  const observed = overallDisplacement.history
+    .filter((d) => d.dataType === "observed")
+    .sort((a, b) => a.date.localeCompare(b.date));
+  const measuredJobLoss = observed.length > 0
+    ? Math.round(observed[observed.length - 1].value)
+    : 0;
+
+  return {
+    projectedJobLoss: Math.round(Math.abs(agg.mean)),
+    projectedEstimateCount: estimateCount,
+    measuredJobLoss: Math.abs(measuredJobLoss),
+  };
 }
