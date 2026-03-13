@@ -241,7 +241,7 @@ const MICRO_STUDIES: MicroStudy[] = [
     domain: "Knowledge work",
     effectPct: -2,
     effectLabel: "\u22122 hrs/incident",
-    finding: "40% of knowledge workers have received \u2018AI workslop\u2019 \u2014 low-quality AI-generated output passed off as finished work. Each incident costs ~2 hours to fix, eroding trust and team productivity.",
+    finding: "40% of knowledge workers have received \u2018AI workslop\u2019: low-quality AI-generated output passed off as finished work. Each incident costs ~2 hours to fix, eroding trust and team productivity.",
     citation: "Harvard Business Review, 2025",
     url: "https://hbr.org/2025/05/research-ai-generated-work-is-creating-a-hidden-burden-for-colleagues",
     note: "Time lost per workslop incident; net negative productivity",
