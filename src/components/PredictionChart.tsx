@@ -228,20 +228,27 @@ function overlayColor(direction: string) {
       : "#94a3b8"; // slate-400 — neutral / mixed signal
 }
 
+interface DotShapeProps {
+  cx: number;
+  cy: number;
+  r: number;
+  fill: string;
+  metricType?: MetricType;
+  stroke?: string;
+  strokeWidth?: number;
+  style?: React.CSSProperties;
+  onClick?: () => void;
+  keyPrefix?: string;
+  date?: number;
+}
+
 /** Render a dot shape based on metricType. Falls back to circle with tier color. */
-function renderDotShape(
-  cx: number,
-  cy: number,
-  r: number,
-  fillColor: string,
-  metricType?: MetricType,
-  strokeColor = "white",
-  strokeWidth = 2,
-  style?: React.CSSProperties,
-  onClick?: () => void,
-  keyPrefix = "dot",
-  date = 0,
-): React.ReactElement {
+function renderDotShape(props: DotShapeProps): React.ReactElement {
+  const {
+    cx, cy, r, fill: fillColor, metricType,
+    stroke: strokeColor = "white", strokeWidth = 2,
+    style, onClick, keyPrefix = "dot", date = 0,
+  } = props;
   const shape = metricType
     ? getMetricTypeConfig(metricType).shape
     : "circle";
@@ -801,13 +808,12 @@ export default function PredictionChart({
               const fillColor = payload.metricType
                 ? getMetricTypeConfig(payload.metricType).color
                 : getTierConfig(payload.evidenceTier).color;
-              return renderDotShape(
-                cx, cy, 5, fillColor, payload.metricType,
-                "white", 2,
-                { cursor: onDotClick ? "pointer" : undefined },
-                () => onDotClick?.(payload.sourceIds),
-                "dot-obs", payload.date,
-              );
+              return renderDotShape({
+                cx, cy, r: 5, fill: fillColor, metricType: payload.metricType,
+                style: { cursor: onDotClick ? "pointer" : undefined },
+                onClick: () => onDotClick?.(payload.sourceIds),
+                keyPrefix: "dot-obs", date: payload.date,
+              });
             }}
             activeDot={(props: unknown) => {
               const { cx, cy, payload } = props as {
@@ -819,13 +825,12 @@ export default function PredictionChart({
               const fillColor = payload.metricType
                 ? getMetricTypeConfig(payload.metricType).color
                 : getTierConfig(payload.evidenceTier).color;
-              return renderDotShape(
-                cx, cy, 7, fillColor, payload.metricType,
-                "white", 2,
-                { cursor: onDotClick ? "pointer" : undefined },
-                () => onDotClick?.(payload.sourceIds),
-                "active-obs", payload.date,
-              );
+              return renderDotShape({
+                cx, cy, r: 7, fill: fillColor, metricType: payload.metricType,
+                style: { cursor: onDotClick ? "pointer" : undefined },
+                onClick: () => onDotClick?.(payload.sourceIds),
+                keyPrefix: "active-obs", date: payload.date,
+              });
             }}
           />
           {/* Projected data line (dashed) */}
@@ -850,13 +855,12 @@ export default function PredictionChart({
                 const fillColor = payload.metricType
                   ? getMetricTypeConfig(payload.metricType).color
                   : getTierConfig(payload.evidenceTier).color;
-                return renderDotShape(
-                  cx, cy, 4, fillColor, payload.metricType,
-                  "white", 2,
-                  { cursor: onDotClick ? "pointer" : undefined },
-                  () => onDotClick?.(payload.sourceIds),
-                  "dot-proj", payload.date,
-                );
+                return renderDotShape({
+                  cx, cy, r: 4, fill: fillColor, metricType: payload.metricType,
+                  style: { cursor: onDotClick ? "pointer" : undefined },
+                  onClick: () => onDotClick?.(payload.sourceIds),
+                  keyPrefix: "dot-proj", date: payload.date,
+                });
               }}
               activeDot={(props: unknown) => {
                 const { cx, cy, payload } = props as {
@@ -868,13 +872,12 @@ export default function PredictionChart({
                 const fillColor = payload.metricType
                   ? getMetricTypeConfig(payload.metricType).color
                   : getTierConfig(payload.evidenceTier).color;
-                return renderDotShape(
-                  cx, cy, 6, fillColor, payload.metricType,
-                  "white", 2,
-                  { cursor: onDotClick ? "pointer" : undefined },
-                  () => onDotClick?.(payload.sourceIds),
-                  "active-proj", payload.date,
-                );
+                return renderDotShape({
+                  cx, cy, r: 6, fill: fillColor, metricType: payload.metricType,
+                  style: { cursor: onDotClick ? "pointer" : undefined },
+                  onClick: () => onDotClick?.(payload.sourceIds),
+                  keyPrefix: "active-proj", date: payload.date,
+                });
               }}
             />
           )}

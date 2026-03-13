@@ -1,6 +1,8 @@
 import readingListData from "@/data/reading-list.json";
 import RecentSources from "@/components/RecentSources";
 import { getRecentSources } from "@/lib/sources";
+import { getTierConfig, type TierConfig } from "@/lib/evidence-tiers";
+import type { EvidenceTier } from "@/lib/types";
 
 interface Article {
   title: string;
@@ -13,14 +15,7 @@ interface Article {
   tier: number;
 }
 
-const TIER_LABELS: Record<number, string> = {
-  1: "Research",
-  2: "Analysis",
-  3: "Commentary",
-  4: "Informal",
-};
-
-const TIER_COLORS: Record<number, string> = {
+const TIER_BG_COLORS: Record<number, string> = {
   1: "bg-emerald-100 text-emerald-800",
   2: "bg-blue-100 text-blue-800",
   3: "bg-amber-100 text-amber-800",
@@ -90,9 +85,9 @@ export default function ReadingListPage() {
                         <div className="min-w-0 flex-1">
                           <div className="flex items-center gap-2 mb-1">
                             <span
-                              className={`text-[10px] font-semibold uppercase tracking-wide px-1.5 py-0.5 rounded ${TIER_COLORS[a.tier] ?? TIER_COLORS[4]}`}
+                              className={`text-[10px] font-semibold uppercase tracking-wide px-1.5 py-0.5 rounded ${TIER_BG_COLORS[a.tier] ?? TIER_BG_COLORS[4]}`}
                             >
-                              {TIER_LABELS[a.tier] ?? "Other"}
+                              {getTierConfig(a.tier as EvidenceTier).shortLabel}
                             </span>
                             <span className="text-[11px] text-[var(--muted)]">
                               {a.publisher}
