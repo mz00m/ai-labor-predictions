@@ -73,31 +73,56 @@ function proxyWeight(point: HistoricalDataPoint): number {
  * The newest point gets 2× the recency weight of the oldest.
  * Trend compares first and last points chronologically.
  */
+/** Parse date string to ms timestamp (cached to avoid repeated parsing). */
+function dateToMs(dateStr: string): number {
+  return new Date(dateStr).getTime();
+}
+
+/** Sort + attach timestamps to avoid repeated Date parsing. */
+function filterAndSort(
+  history: HistoricalDataPoint[],
+  tiers: EvidenceTier[]
+): { points: HistoricalDataPoint[]; timestamps: number[] } {
+  const filtered = history.filter((d) => tiers.includes(d.evidenceTier));
+  const withTs = filtered.map((p) => ({ p, ts: dateToMs(p.date) }));
+  withTs.sort((a, b) => a.ts - b.ts);
+  return {
+    points: withTs.map((x) => x.p),
+    timestamps: withTs.map((x) => x.ts),
+  };
+}
+
 export function computeAggregate(
   prediction: Prediction,
   selectedTiers: EvidenceTier[]
 ): AggregateStats {
-  const points = prediction.history
-    .filter((d) => selectedTiers.includes(d.evidenceTier))
-    .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+  let { points, timestamps } = filterAndSort(prediction.history, selectedTiers);
 
   if (points.length === 0) {
-    // No points matched selected tiers — re-run with ALL tiers before falling back to 0
+    // No points matched selected tiers — try ALL tiers before falling back to 0
     const allTiers: EvidenceTier[] = [1, 2, 3, 4];
-    const allPoints = prediction.history
-      .filter((d) => allTiers.includes(d.evidenceTier))
-      .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+    const all = filterAndSort(prediction.history, allTiers);
 
-    if (allPoints.length === 0) {
+    if (all.points.length === 0) {
       const v = prediction.currentValue ?? 0;
       return { mean: v, min: v, max: v, trend: "flat", trendIsBad: false };
     }
 
-    // Recurse with all tiers and flag the fallback
-    const fallbackResult = computeAggregate(prediction, allTiers);
-    return { ...fallbackResult, tierFallback: true };
+    points = all.points;
+    timestamps = all.timestamps;
+    // Compute with fallback data and flag it
+    const result = computeFromSorted(prediction, points, timestamps);
+    return { ...result, tierFallback: true };
   }
 
+  return computeFromSorted(prediction, points, timestamps);
+}
+
+function computeFromSorted(
+  prediction: Prediction,
+  points: HistoricalDataPoint[],
+  timestamps: number[]
+): AggregateStats {
   const values = points.map((p) => p.value);
   const min = Math.round(Math.min(...values) * 10) / 10;
   const max = Math.round(Math.max(...values) * 10) / 10;
@@ -109,11 +134,9 @@ export function computeAggregate(
   let mean: number;
 
   if (useLatest) {
-    // Pick the most recent data point, preferring Tier 1 if available at the latest date
     const latest = points[points.length - 1];
     mean = Math.round(latest.value * 10) / 10;
   } else {
-    const timestamps = points.map((p) => new Date(p.date).getTime());
     const minMs = timestamps[0];
     const maxMs = timestamps[timestamps.length - 1];
 

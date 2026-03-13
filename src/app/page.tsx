@@ -4,6 +4,7 @@ import { useState } from "react";
 import { EvidenceTier } from "@/lib/types";
 import { getAllPredictions, getLastUpdated } from "@/lib/data-loader";
 import { getSourceCount } from "@/lib/search-sources";
+import { getTierConfig } from "@/lib/evidence-tiers";
 import EvidenceFilter from "@/components/EvidenceFilter";
 import PredictionSummaryCard from "@/components/PredictionSummaryCard";
 import NewsTicker from "@/components/NewsTicker";
@@ -148,8 +149,7 @@ export default function Home() {
         <div className="flex items-center gap-0">
           {([1, 2, 3, 4] as EvidenceTier[]).map((tier) => {
             const checked = selectedTiers.includes(tier);
-            const colors: Record<number, string> = { 1: "#16a34a", 2: "#2563eb", 3: "#ea580c", 4: "#dc2626" };
-            const labels: Record<number, string> = { 1: "Research", 2: "Institutional", 3: "Journalism", 4: "Social" };
+            const { color: tierColor, shortLabel } = getTierConfig(tier);
             return (
               <button
                 key={tier}
@@ -170,14 +170,14 @@ export default function Home() {
                 <span className="inline-flex items-center gap-1.5">
                   <span
                     className="inline-block w-1.5 h-1.5 rounded-full shrink-0"
-                    style={{ backgroundColor: colors[tier] }}
+                    style={{ backgroundColor: tierColor }}
                   />
-                  <span className="hidden sm:inline">{labels[tier]}</span>
+                  <span className="hidden sm:inline">{shortLabel}</span>
                 </span>
                 {checked && (
                   <span
                     className="absolute bottom-0 left-3 right-3 sm:left-4 sm:right-4 h-[2px] rounded-full"
-                    style={{ backgroundColor: colors[tier] }}
+                    style={{ backgroundColor: tierColor }}
                   />
                 )}
               </button>

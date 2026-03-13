@@ -98,14 +98,15 @@ export default function PredictionDetailPage() {
     );
   }
 
+  const agg = computeAggregate(prediction, selectedTiers);
+
   const filteredHistory = prediction.history
     .filter((d) => selectedTiers.includes(d.evidenceTier))
-    .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+    .sort((a, b) => a.date.localeCompare(b.date));
 
-  const sortedDesc = [...filteredHistory].reverse();
-  const bestEstimate = sortedDesc.find((d) => d.evidenceTier === 1) || sortedDesc[0];
-
-  const agg = computeAggregate(prediction, selectedTiers);
+  const bestEstimate = filteredHistory.length > 0
+    ? (filteredHistory.findLast((d) => d.evidenceTier === 1) ?? filteredHistory[filteredHistory.length - 1])
+    : undefined;
 
   const trendColorClass = agg.trendIsBad
     ? "text-[#F66B5C]"

@@ -9,23 +9,9 @@
 
 import fs from "fs";
 import path from "path";
+import { loadEnv } from "./lib/load-env";
 
-// Load environment variables from .env if present
-const envPath = path.join(process.cwd(), ".env");
-if (fs.existsSync(envPath)) {
-  const envContent = fs.readFileSync(envPath, "utf-8");
-  for (const line of envContent.split("\n")) {
-    const trimmed = line.trim();
-    if (trimmed && !trimmed.startsWith("#")) {
-      const eqIdx = trimmed.indexOf("=");
-      if (eqIdx > 0) {
-        const key = trimmed.slice(0, eqIdx);
-        const value = trimmed.slice(eqIdx + 1).replace(/^["']|["']$/g, "");
-        process.env[key] = value;
-      }
-    }
-  }
-}
+loadEnv();
 
 import { getResearchFeed, ResearchPaper } from "../src/lib/api/research-aggregator";
 import { ClassifiedPaper } from "../src/lib/api/paper-classifier";
