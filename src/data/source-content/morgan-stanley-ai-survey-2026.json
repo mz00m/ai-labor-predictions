@@ -1,0 +1,16 @@
+{
+  "id": "morgan-stanley-ai-survey-2026",
+  "abstract": "Morgan Stanley's AlphaWise survey of 935 corporate executives across the US, Germany, Japan, and Australia finds that companies in five AI-exposed sectors reported an 11.5% increase in net productivity and a 4% net decline in headcount over the past 12 months. AI adoption led to elimination of 11% of jobs, with an additional 12% left unfilled, partially offset by 18% new hires. US companies were an outlier, reporting a 2% net job gain.",
+  "keyFindings": [
+    "4% net global headcount decline: 11% eliminated + 12% unfilled - 18% new hires across 5 sectors",
+    "US companies reported 2% net job gain; UK saw 8% net loss; Germany 4% net loss",
+    "11.5% average net productivity increase across all countries and sectors",
+    "Automotive sector had highest net job loss at 10%; real estate saw 1% net gain",
+    "Larger firms (501-1,000 employees) cut 15% of positions; small firms (<49) gained 4%",
+    "Early-career positions most at risk: highest rates of elimination without replacement",
+    "27% of employees retrained in past 12 months"
+  ],
+  "methodology": "AlphaWise survey of 935 corporate executives in the US, Germany, Japan, and Australia. Five sectors: consumer staples distribution & retail, real estate management & development, transportation, healthcare equipment & services, and automobiles & components. Companies had been using AI for at least one year.",
+  "qualifiers": "Results likely represent the worst-case scenario for workforce impact, as the survey focused on 5 sectors deemed most exposed to AI. US-specific results showed net job creation, not loss. Stephen Byrd noted: 'Although the results likely represent the worst-case scenario for workforce impact, the data provide an early warning about the potential negative effects on employment as AI technology continues to rapidly improve.'",
+  "fetchedAt": "2026-03-13"
+}

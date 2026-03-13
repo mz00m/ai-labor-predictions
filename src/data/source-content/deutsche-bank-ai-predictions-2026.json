@@ -1,0 +1,14 @@
+{
+  "id": "deutsche-bank-ai-predictions-2026",
+  "abstract": "Deutsche Bank researchers used their AI model dbLumina to forecast AI's disruptive potential across industries. The report, titled 'What AI Says About AI Eating Itself and the World,' projects significant automation in customer service (75% by 2026), wealth management (80% robo-advised by 2027), and software development (85% of devs using AI assistants). Despite sector-specific disruption, the report frames the changes as a 'great rebalancing' rather than mass unemployment.",
+  "keyFindings": [
+    "Customer service could see as much as 75% of interactions automated by 2026, reserving human agents for complex, nuanced cases",
+    "AI-driven platforms could deliver primary investment advice to nearly 80% of retail investors by 2027",
+    "Over 85% of software developers now use AI coding assistants, delivering productivity gains of up to 60%",
+    "92 million jobs displaced globally by 2030, but 170 million new positions created — net gain of 78 million",
+    "In the US, automation may affect activities accounting for up to 30% of hours worked by 2030, prompting around 12 million occupational transitions"
+  ],
+  "methodology": "Deutsche Bank researchers used dbLumina, an AI large language model, to forecast AI's disruptive potential. The AI analyzed patterns across technology, finance, customer service, and other sectors to project adoption curves and workforce impacts.",
+  "qualifiers": "Projections come from Deutsche Bank's AI model (dbLumina), not from surveys or empirical data. Deutsche Bank analysts cautioned that companies attributing job cuts to AI should be taken 'with a grain of salt' as 'AI redundancy washing will be a significant feature of 2026.' The 92M/170M global job figures align with WEF projections.",
+  "fetchedAt": "2026-03-13"
+}

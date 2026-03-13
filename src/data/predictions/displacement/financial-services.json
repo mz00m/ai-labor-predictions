@@ -192,6 +192,15 @@
       ],
       "evidenceTier": 4,
       "label": "Oks: Bank tellers survived ATMs (task automation) but not iPhones (paradigm shift)"
+    },
+    {
+      "date": "2026-02-16",
+      "direction": "down",
+      "sourceIds": [
+        "deutsche-bank-ai-predictions-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Deutsche Bank: AI platforms could advise 80% of retail investors by 2027"
     }
   ],
   "sources": [
@@ -394,6 +403,16 @@
       "datePublished": "2025-01-01",
       "excerpt": "ChatGPT cuts analyst report length by 8.9% and reduces quality by 17%. Greater AI reliance is associated with worse earnings forecasts.",
       "dateAdded": "2026-03-12"
+    },
+    {
+      "id": "deutsche-bank-ai-predictions-2026",
+      "title": "What AI Says About AI Eating Itself and the World",
+      "url": "https://fortune.com/2026/02/18/will-ai-destroy-jobs-deutsche-bank-asks-ai-to-predict/",
+      "publisher": "Deutsche Bank Research (dbLumina)",
+      "evidenceTier": 2,
+      "datePublished": "2026-02-16",
+      "excerpt": "dbLumina anticipates a massive expansion of robo-advisors, projecting that AI-driven platforms could deliver primary investment advice to nearly 80% of retail investors by 2027.",
+      "dateAdded": "2026-03-13"
     }
   ]
 }
