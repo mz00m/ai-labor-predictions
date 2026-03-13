@@ -10,15 +10,6 @@ interface Article {
 
 const articles: Article[] = [
   {
-    author: "Groenewegen et al. (ESB/Rabobank)",
-    title: "Dutch Youth Employment in GenAI-Exposed Jobs Fell 13%",
-    summary:
-      "Netherlands CBS data: youth employment in GenAI-vulnerable occupations down 13% since ChatGPT launch, while other occupations rose 3%. Mirrors US findings.",
-    date: "Jan 22",
-    url: "https://esb.nu/dalende-werkgelegenheid-onder-nederlandse-jongeren-die-concurreren-met-genai/",
-    accent: "border-l-red-500",
-  },
-  {
     author: "Sivulka (Hebbia)",
     title: "Productive Individuals Don\u2019t Make Productive Firms",
     summary:
@@ -53,6 +44,15 @@ const articles: Article[] = [
     date: "Mar 5",
     url: "https://www.anthropic.com/research/labor-market-impacts",
     accent: "border-l-purple-500",
+  },
+  {
+    author: "Ranganathan & Ye (HBR)",
+    title: "AI Doesn\u2019t Reduce Work \u2014 It Intensifies It",
+    summary:
+      "Eight-month study of 200 employees: 83% said AI increased workload through greater pace, scope, and hours \u2014 leading to burnout.",
+    date: "Feb 9",
+    url: "https://hbr.org/2026/02/ai-doesnt-reduce-work-it-intensifies-it",
+    accent: "border-l-red-500",
   },
 ];
 
