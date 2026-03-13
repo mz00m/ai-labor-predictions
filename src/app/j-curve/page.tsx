@@ -2,14 +2,14 @@ import { Metadata } from "next";
 import JCurvePage from "@/components/j-curve/JCurvePage";
 
 export const metadata: Metadata = {
-  title: "The Productivity J-Curve — Why AI's Impact Hasn't Shown Up Yet",
+  title: "The Productivity J-Curve | Why AI's Impact Hasn't Shown Up Yet",
   description:
-    "New technologies often make productivity look worse before making it better. This visual explainer breaks down the J-Curve framework from Brynjolfsson, Rock & Syverson — and what it means for AI.",
+    "New technologies often make productivity look worse before making it better. This visual explainer breaks down the J-Curve framework from Brynjolfsson, Rock & Syverson, and what it means for AI.",
   alternates: {
     canonical: "/j-curve",
   },
   openGraph: {
-    title: "The Productivity J-Curve — Why AI's Impact Hasn't Shown Up Yet",
+    title: "The Productivity J-Curve | Why AI's Impact Hasn't Shown Up Yet",
     description:
       "New technologies often make productivity look worse before making it better. A visual explainer of the J-Curve framework.",
     type: "article",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Productivity J-Curve — Why AI's Impact Hasn't Shown Up Yet",
+    title: "The Productivity J-Curve | Why AI's Impact Hasn't Shown Up Yet",
     description:
       "New technologies often make productivity look worse before making it better. A visual explainer of the J-Curve framework.",
   },

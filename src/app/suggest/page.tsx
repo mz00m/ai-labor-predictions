@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     canonical: "/suggest",
   },
   openGraph: {
-    title: "Suggest a Source — Early Signals of AI Impact",
+    title: "Suggest a Source | Early Signals of AI Impact",
     description:
       "Submit a study, article, or dataset for review.",
     type: "website",

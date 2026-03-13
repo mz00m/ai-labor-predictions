@@ -29,7 +29,7 @@ const TRANSITIONS: Transition[] = [
     period: "1760–1850",
     totalYears: 90,
     painfulYears: 60,
-    painfulLabel: "Engel's Pause — 60 yrs of wage stagnation",
+    painfulLabel: "Engel's Pause: 60 yrs of wage stagnation",
     color: "#b45309",
     source: "Allen (2009)",
   },
@@ -49,7 +49,7 @@ const TRANSITIONS: Transition[] = [
     period: "1880–1930",
     totalYears: 50,
     painfulYears: 40,
-    painfulLabel: "David's Productivity Paradox — 40 yrs to show gains",
+    painfulLabel: "David's Productivity Paradox: 40 yrs to show gains",
     color: "#1d4ed8",
     source: "David (1990)",
   },
@@ -188,7 +188,7 @@ export default function CompressionComparison() {
           Steam took 90 years to fully reshape the labor market.
           Electrification did it in 50. Computers in 40. Each arc below spans a
           technology&rsquo;s full transition from emergence to new
-          equilibrium &mdash; and each is shorter than the one before.
+          equilibrium, and each is shorter than the one before.
           AI is on pace to be the fastest diffusion of a general-purpose
           technology in recorded history: 100M users in 2 months, majority
           adult adoption in under 3 years. Hover any arc to compare.
@@ -842,7 +842,7 @@ export default function CompressionComparison() {
             4–10
           </div>
           <div className="text-[12px] font-semibold text-[var(--foreground)] mt-1">
-            Years &mdash; Projected Painful Phase
+            Years, Projected Painful Phase
           </div>
           <div className="text-[11px] text-[var(--muted)] mt-1 leading-relaxed">
             Displacement + reorganization
@@ -883,7 +883,7 @@ export default function CompressionComparison() {
           These projections extrapolate from adoption speed. If the diffusion
           phase that historically took 10&ndash;25 years is happening in
           1&ndash;3, the displacement and reorganization phases may compress as
-          well &mdash; though prior GPTs show that adoption speed does not
+          well. That said, prior GPTs show that adoption speed does not
           reliably predict impact speed. The internet reached 50% of households
           by 2000 but didn&rsquo;t show clear labor market effects for another
           decade. Organizational restructuring, education systems, and policy
