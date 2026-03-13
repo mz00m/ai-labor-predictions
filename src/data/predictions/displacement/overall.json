@@ -146,6 +146,26 @@
       "metricType": "projection"
     },
     {
+      "date": "2026-02-05",
+      "value": 4,
+      "confidenceLow": 0,
+      "confidenceHigh": 10,
+      "sourceIds": [
+        "morgan-stanley-ai-survey-2026"
+      ],
+      "evidenceTier": 2,
+      "metricType": "survey",
+      "sampleSize": 935,
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "% net headcount decline in 5 AI-exposed sectors globally",
+        "conversionFactor": 1.0,
+        "conversionLow": 0,
+        "conversionHigh": 10,
+        "rationale": "Global survey of 935 execs across 5 sectors (consumer staples, real estate, transport, healthcare equip, autos); US showed +2% net gain, UK -8%, Germany -4%, auto sector -10%"
+      }
+    },
+    {
       "date": "2026-02-15",
       "value": 1.2,
       "confidenceLow": 0.5,
@@ -738,6 +758,15 @@
       ],
       "evidenceTier": 1,
       "label": "ESB/Rabobank: Dutch youth employment in GenAI-exposed jobs fell 13% (Q4 2022\u2013Q3 2025)"
+    },
+    {
+      "date": "2026-02-05",
+      "direction": "down",
+      "sourceIds": [
+        "morgan-stanley-ai-survey-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Morgan Stanley (n=935): Early-career positions most at risk; firms >500 cut 15%"
     }
   ],
   "sources": [
@@ -1407,6 +1436,16 @@
       "datePublished": "2026-01-01",
       "excerpt": "EU firms see +4% productivity from AI adoption; no employment decline detected.",
       "dateAdded": "2026-03-12"
+    },
+    {
+      "id": "morgan-stanley-ai-survey-2026",
+      "title": "AI's Impact Accelerates: AlphaWise Survey of 935 Executives",
+      "url": "https://www.morganstanley.com/insights/articles/ai-adoption-accelerates-survey-find",
+      "publisher": "Morgan Stanley Research (AlphaWise)",
+      "evidenceTier": 2,
+      "datePublished": "2026-02-05",
+      "excerpt": "Survey respondents said that AI adoption had led to elimination of 11% of jobs and an additional 12% were left unfilled. This is partially offset by 18% new hires, resulting in a 4% net job loss globally.",
+      "dateAdded": "2026-03-13"
     }
   ]
 }
