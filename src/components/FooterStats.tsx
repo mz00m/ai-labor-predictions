@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const PROJECT_START = new Date("2025-02-22T00:00:00Z");
+const PROJECT_START = new Date("2026-02-22T00:00:00Z");
 
 export default function FooterStats() {
   const [commitCount, setCommitCount] = useState<number | null>(null);
