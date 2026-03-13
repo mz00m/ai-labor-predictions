@@ -249,7 +249,7 @@ export default function JCurvePage() {
           <p className="text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
             The J-curve has played out at least twice before. Each time,
             observers declared the technology overhyped during the
-            investment phase &mdash; only to see a productivity surge once
+            investment phase, only to see a productivity surge once
             complementary investments matured.
           </p>
 
@@ -270,7 +270,7 @@ export default function JCurvePage() {
               apparently disappointing AI productivity gains is not evidence
               that AI doesn&rsquo;t work. It&rsquo;s evidence that we are
               in the investment phase of a new general-purpose technology
-              cycle &mdash; and the complementary intangible investments
+              cycle, and the complementary intangible investments
               haven&rsquo;t yet matured.
             </p>
             <p>
@@ -286,9 +286,9 @@ export default function JCurvePage() {
               <strong>extended</strong>. AI touches more job categories
               simultaneously than any prior GPT, requiring more widespread
               organizational change. Trust and regulatory frameworks are
-              still forming. And the intangible investments required &mdash;
-              in data quality, workflow redesign, and human-AI collaboration
-              skills &mdash; may be deeper than anticipated.
+              still forming. And the intangible investments required
+              (in data quality, workflow redesign, and human-AI collaboration
+              skills) may be deeper than anticipated.
             </p>
           </div>
 
