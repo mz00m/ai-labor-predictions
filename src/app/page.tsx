@@ -70,7 +70,7 @@ export default function Home() {
             they&apos;re disappearing.
           </p>
           <p className="mt-3 text-[20px] sm:text-[22px] font-bold text-[var(--foreground)] leading-snug max-w-2xl">
-            No measurable macro displacement &mdash; <span className="text-[#F66B5C] italic">yet.</span>
+            No measurable macro displacement, <span className="text-[#F66B5C] italic">yet.</span>
           </p>
 
           {/* Hero data triad */}
@@ -131,7 +131,7 @@ export default function Home() {
             Predictions Over Time
           </h2>
           <p className="text-[15px] text-[var(--muted)] leading-relaxed max-w-2xl">
-            {predictions.length} predictions across job displacement, wages, and AI adoption — each with its own trend chart, source list, and weighted estimate built from {totalSources}+ sources. Click any tile to explore. Every source is color-coded by evidence quality; use the tiers below to filter what appears.
+            {predictions.length} predictions across job displacement, wages, and AI adoption, each with its own trend chart, source list, and weighted estimate built from {totalSources}+ sources. Click any tile to explore. Every source is color-coded by evidence quality; use the tiers below to filter what appears.
           </p>
         </div>
       </div>
@@ -218,7 +218,7 @@ export default function Home() {
               Job Displacement &amp; Restructuring
             </h2>
             <p className="text-[15px] text-[var(--muted)] mt-2 max-w-2xl">
-              Projected share of jobs eliminated, restructured, or significantly transformed by AI &mdash; most evidence points to task-level transition rather than wholesale replacement
+              Projected share of jobs eliminated, restructured, or significantly transformed by AI. Most evidence points to task-level transition rather than wholesale replacement
             </p>
           </div>
         </div>

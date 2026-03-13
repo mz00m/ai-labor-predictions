@@ -4,9 +4,9 @@ import { useState } from "react";
 
 const AGE_BANDS = [
   { band: "22\u201325", change: -20, label: "\u221220%", color: "#ef4444", weight: "12%", src: "direct", detail: "Near-zero hiring + AI tool substitution" },
-  { band: "26\u201330", change: 0, label: "\u2248 0%", color: "#f59e0b", weight: "22%", src: "direct", detail: "Flat — caught between junior freeze and senior growth" },
+  { band: "26\u201330", change: 0, label: "\u2248 0%", color: "#f59e0b", weight: "22%", src: "direct", detail: "Flat: caught between junior freeze and senior growth" },
   { band: "31\u201334", change: 6, label: "+6%", color: "#10b981", weight: "20%", src: "interp.", detail: "Benefiting from AI augmentation, still hiring" },
-  { band: "35\u201349", change: 9, label: "+9%", color: "#059669", weight: "32%", src: "direct", detail: "Peak beneficiaries — experience + AI tools compound" },
+  { band: "35\u201349", change: 9, label: "+9%", color: "#059669", weight: "32%", src: "direct", detail: "Peak beneficiaries: experience + AI tools compound" },
   { band: "50+", change: 5, label: "+5%", color: "#0d9488", weight: "14%", src: "direct", detail: "Stable, moderate AI adoption" },
 ] as const;
 
@@ -29,7 +29,7 @@ const DETAILS = [
   },
   {
     label: "THE MECHANISM: EVAPORATED ENTRY POINTS",
-    text: "This is not a story about mass layoffs. Firms stopped creating junior roles because senior developers — armed with Copilot, Cursor, Claude — can now absorb routine tasks that previously went to juniors. The traditional career ladder (learn by doing grunt work, get promoted) is being compressed. Junior hiring is a lagging indicator of how firms value human learning vs. AI output.",
+    text: "This is not a story about mass layoffs. Firms stopped creating junior roles because senior developers, armed with Copilot, Cursor, Claude, can now absorb routine tasks that previously went to juniors. The traditional career ladder (learn by doing grunt work, get promoted) is being compressed. Junior hiring is a lagging indicator of how firms value human learning vs. AI output.",
   },
   {
     label: "POPULATION WEIGHTS",
@@ -37,7 +37,7 @@ const DETAILS = [
   },
   {
     label: "WHO BENEFITS",
-    text: "Experienced developers (35-49) are seeing the strongest growth. AI tools amplify domain knowledge and judgment — exactly what senior engineers have. The productivity literature (Copilot RCT: +55.8% speed, Microsoft/Accenture: +26% PRs) mostly measures experienced developer gains. Early evidence suggests juniors benefit less from AI tools because effective use requires knowing what good code looks like.",
+    text: "Experienced developers (35-49) are seeing the strongest growth. AI tools amplify domain knowledge and judgment, exactly what senior engineers have. The productivity literature (Copilot RCT: +55.8% speed, Microsoft/Accenture: +26% PRs) mostly measures experienced developer gains. Early evidence suggests juniors benefit less from AI tools because effective use requires knowing what good code looks like.",
   },
 ] as const;
 

@@ -23,7 +23,7 @@ export default function JCurvePage() {
           style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
         >
           Why transformative technologies make productivity look{" "}
-          <em>worse</em> before making it better &mdash; and what this
+          <em>worse</em> before making it better, and what this
           means for AI.
         </p>
 
@@ -34,7 +34,7 @@ export default function JCurvePage() {
             style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
           >
             When a major new technology arrives, measured productivity often
-            stagnates or declines for years &mdash; not because the
+            stagnates or declines for years, not because the
             technology doesn&rsquo;t work, but because the massive
             complementary investments it requires are invisible to official
             statistics.
@@ -76,7 +76,7 @@ export default function JCurvePage() {
             <p>
               Erik Brynjolfsson, Daniel Rock, and Chad Syverson argue this
               isn&rsquo;t a mystery. It&rsquo;s the predictable result of
-              how we measure productivity &mdash; and how general-purpose
+              how we measure productivity, and how general-purpose
               technologies actually transform economies.
             </p>
           </div>
@@ -118,10 +118,10 @@ export default function JCurvePage() {
             productivity when a{" "}
             <Tooltip
               label="general-purpose technology"
-              tip="A transformative technology that reshapes entire economies — steam, electricity, computers, AI. Economists abbreviate this &quot;GPT&quot; (not to be confused with the AI model &quot;Generative Pre-trained Transformer&quot;)."
+              tip="A transformative technology that reshapes entire economies: steam, electricity, computers, AI. Economists abbreviate this &quot;GPT&quot; (not to be confused with the AI model &quot;Generative Pre-trained Transformer&quot;)."
             />{" "}
             is adopted. Measured productivity initially
-            drops below true productivity &mdash; then later overshoots it. The
+            drops below true productivity, then later overshoots it. The
             result is a J-shaped curve in the measurement error over time.
           </p>
 
@@ -200,13 +200,13 @@ export default function JCurvePage() {
             The accounting identity
           </span>
           <span className="text-[10px] text-[var(--muted)] opacity-60">
-            &mdash; optional detail
+            (optional detail)
           </span>
         </div>
         <p className="text-[13px] text-[var(--muted)] leading-[1.75] mb-4">
           Standard productivity measurement uses only measured inputs.
           When firms adopt a general-purpose technology, they also build
-          unmeasured intangible capital &mdash; creating a systematic gap:
+          unmeasured intangible capital, creating a systematic gap:
         </p>
 
         {/* Equation cards */}
@@ -249,7 +249,7 @@ export default function JCurvePage() {
           <p className="text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
             The J-curve has played out at least twice before. Each time,
             observers declared the technology overhyped during the
-            investment phase &mdash; only to see a productivity surge once
+            investment phase, only to see a productivity surge once
             complementary investments matured.
           </p>
 
@@ -270,7 +270,7 @@ export default function JCurvePage() {
               apparently disappointing AI productivity gains is not evidence
               that AI doesn&rsquo;t work. It&rsquo;s evidence that we are
               in the investment phase of a new general-purpose technology
-              cycle &mdash; and the complementary intangible investments
+              cycle, and the complementary intangible investments
               haven&rsquo;t yet matured.
             </p>
             <p>
@@ -286,9 +286,9 @@ export default function JCurvePage() {
               <strong>extended</strong>. AI touches more job categories
               simultaneously than any prior GPT, requiring more widespread
               organizational change. Trust and regulatory frameworks are
-              still forming. And the intangible investments required &mdash;
-              in data quality, workflow redesign, and human-AI collaboration
-              skills &mdash; may be deeper than anticipated.
+              still forming. And the intangible investments required
+              (in data quality, workflow redesign, and human-AI collaboration
+              skills) may be deeper than anticipated.
             </p>
           </div>
 

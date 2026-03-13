@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "nodejs";
 export const alt =
-  "How Firms Respond to AI Productivity — Reduce, Amplify, or Expand";
+  "How Firms Respond to AI Productivity: Reduce, Amplify, or Expand";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -12,7 +12,7 @@ const PATHS = [
     subtitle: "Same output, fewer workers",
     color: "#dc2626",
     icon: "↓",
-    description: "Firms maintain output while cutting headcount — entry-level roles hit hardest.",
+    description: "Firms maintain output while cutting headcount. Entry-level roles hit hardest.",
   },
   {
     title: "Amplify",

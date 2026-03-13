@@ -28,7 +28,7 @@ export function generateMetadata({ params }: Props): Metadata {
             ? "Corporate Signals"
             : "Workforce Exposure";
 
-  const title = `${prediction.title} — Early Signals of AI Impact`;
+  const title = `${prediction.title} | Early Signals of AI Impact`;
   const description = `${prediction.description} Tracked with ${prediction.sources.length} sources across ${prediction.timeHorizon}.`;
 
   return {

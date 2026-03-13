@@ -96,7 +96,7 @@ async function fetchAdzunaCategory(
 
     return {
       id: `adzuna-${label.toLowerCase().replace(/\s+/g, "-")}`,
-      title: `${label} — Job Market Snapshot`,
+      title: `${label} | Job Market Snapshot`,
       source: "adzuna",
       category: label,
       description: `${data.count.toLocaleString()} active postings for "${query}" in the US job market.`,
@@ -145,7 +145,7 @@ function getCuratedJobPostingData(): JobPostingSnapshot[] {
   return [
     {
       id: "indeed-ai-postings-2025",
-      title: "AI Job Postings Growth — Indeed Hiring Lab",
+      title: "AI Job Postings Growth | Indeed Hiring Lab",
       source: "indeed_proxy",
       category: "AI & Machine Learning",
       description:
@@ -156,7 +156,7 @@ function getCuratedJobPostingData(): JobPostingSnapshot[] {
     },
     {
       id: "indeed-cs-postings-2025",
-      title: "Customer Service Job Postings Decline — Indeed",
+      title: "Customer Service Job Postings Decline | Indeed",
       source: "indeed_proxy",
       category: "CS Automation",
       description:
@@ -167,7 +167,7 @@ function getCuratedJobPostingData(): JobPostingSnapshot[] {
     },
     {
       id: "lightcast-data-entry-2024",
-      title: "Data Entry & Administrative Job Postings — Lightcast",
+      title: "Data Entry & Administrative Job Postings | Lightcast",
       source: "lightcast",
       category: "Data Entry (declining)",
       description:
@@ -178,7 +178,7 @@ function getCuratedJobPostingData(): JobPostingSnapshot[] {
     },
     {
       id: "linkedin-ai-skills-2025",
-      title: "AI Skills Premium in Job Postings — LinkedIn Economic Graph",
+      title: "AI Skills Premium in Job Postings | LinkedIn Economic Graph",
       source: "indeed_proxy",
       category: "AI-Augmented Engineering",
       description:
@@ -189,7 +189,7 @@ function getCuratedJobPostingData(): JobPostingSnapshot[] {
     },
     {
       id: "indeed-prompt-eng-2025",
-      title: "Prompt Engineering Job Postings — Indeed",
+      title: "Prompt Engineering Job Postings | Indeed",
       source: "indeed_proxy",
       category: "Prompt Engineering",
       description:

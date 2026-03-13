@@ -6,8 +6,8 @@ import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: {
-    default: "Early Signals of AI Impact — jobsdata.ai",
-    template: "%s — jobsdata.ai",
+    default: "Early Signals of AI Impact | jobsdata.ai",
+    template: "%s | jobsdata.ai",
   },
   description:
     "300+ sources tracking AI's impact on jobs, wages, and adoption. AI adoption is accelerating, productivity is climbing, and jobs are changing faster than they're disappearing.",

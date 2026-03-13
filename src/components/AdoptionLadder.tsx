@@ -45,7 +45,7 @@ export default function AdoptionLadder() {
   return (
     <div className="mt-6 mb-2">
       <p className="text-[11px] font-bold uppercase tracking-widest text-[var(--accent)] mb-3">
-        Adoption spectrum — why adoption numbers vary
+        Adoption spectrum: why adoption numbers vary
       </p>
 
       <div className="space-y-2.5">
@@ -86,7 +86,7 @@ export default function AdoptionLadder() {
         The gap between 10% and 78% is definitional, not contradictory.
         Strict &ldquo;in production&rdquo; measures capture at-scale deployment;
         survey-based measures capture any experimentation.
-        Both are valid — the adoption ladder shows where firms actually are.
+        Both are valid. The adoption ladder shows where firms actually are.
       </p>
     </div>
   );

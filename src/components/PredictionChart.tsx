@@ -107,7 +107,7 @@ function CustomTooltip({
           {data.confidenceLow != null && data.confidenceHigh != null && (
             <p className="text-[11px] text-[var(--muted)]">
               Range: {data.confidenceLow}
-              {unit} — {data.confidenceHigh}
+              {unit} to {data.confidenceHigh}
               {unit}
             </p>
           )}
@@ -960,7 +960,7 @@ export default function PredictionChart({
                 </span>
                 <span className="text-[12px] leading-snug text-[var(--foreground)]">
                   <span className="text-[var(--muted)]">{o.dateStr}</span>
-                  {" \u2014 "}
+                  {": "}
                   {o.label}
                 </span>
               </button>

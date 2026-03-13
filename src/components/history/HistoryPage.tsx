@@ -37,7 +37,7 @@ export default function HistoryPage() {
             style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
           >
             AI is doing for cognitive capabilities what electricity did for
-            physical power &mdash; turning a scarce, expensive resource
+            physical power: turning a scarce, expensive resource
             into an on-demand utility available to anyone.
           </p>
         </div>
@@ -75,9 +75,9 @@ export default function HistoryPage() {
             follows a predictable{" "}
             <Tooltip
               label="five-phase arc"
-              tip="This framework synthesizes several academic models of how general-purpose technologies reshape economies. The closest single source is Carlota Perez (2002), Technological Revolutions and Financial Capital, which models technology waves in recurring phases. The definitive academic treatment of GPT theory is Lipsey, Carlaw &amp; Bekar (2005), Economic Transformations: General Purpose Technologies and Long-Term Economic Growth. The specific five phases here — emergence, diffusion, displacement, reorganization, new equilibrium — are an editorial synthesis, not a direct citation from any single paper."
+              tip="This framework synthesizes several academic models of how general-purpose technologies reshape economies. The closest single source is Carlota Perez (2002), Technological Revolutions and Financial Capital, which models technology waves in recurring phases. The definitive academic treatment of GPT theory is Lipsey, Carlaw &amp; Bekar (2005), Economic Transformations: General Purpose Technologies and Long-Term Economic Growth. The specific five phases here (emergence, diffusion, displacement, reorganization, new equilibrium) are an editorial synthesis, not a direct citation from any single paper."
             />. The names change, but the shape is the same.
-            Steam, electricity, computers &mdash; each transformed the
+            Steam, electricity, computers: each transformed the
             labor market through the same sequence of emergence, diffusion,
             displacement, reorganization, and new equilibrium.
           </p>
@@ -92,8 +92,8 @@ export default function HistoryPage() {
               But what if this time is different?
             </p>
             <p className="text-[13px] text-[var(--muted)] leading-relaxed">
-              Previous technologies automated tasks &mdash; sometimes many
-              tasks &mdash; but none could emulate the full range of human
+              Previous technologies automated tasks, sometimes many
+              tasks, but none could emulate the full range of human
               cognition. If AI progresses toward general intelligence, the
               historical pattern may break down. The relevant question shifts
               from <em className="text-[var(--foreground)]">which tasks get
@@ -102,7 +102,7 @@ export default function HistoryPage() {
               roles where the human element <em>is</em> the value, and
               complementarities between cognitive and physical work. Just
               because AI <em>can</em> do something doesn&rsquo;t mean human
-              labor involving it disappears &mdash; but it will probably
+              labor involving it disappears, but it will probably
               look very different.
             </p>
             <p className="text-[11px] text-[var(--muted)] mt-2">
@@ -129,7 +129,7 @@ export default function HistoryPage() {
           </h2>
           <p className="text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
             Four technologies. Four massive disruptions. All eventually
-            created more jobs than they destroyed &mdash; but the path was
+            created more jobs than they destroyed, but the path was
             never smooth or quick.
           </p>
           <RevolutionCards />
@@ -149,8 +149,8 @@ export default function HistoryPage() {
               Prior automation technologies had a consistent structure: they
               automated <em>physical</em> capabilities (steam, combustion,
               electricity) or <em>rule-based cognitive</em> tasks
-              (computers). Each wave created a new protected domain &mdash;
-              work the technology structurally couldn&rsquo;t do &mdash;
+              (computers). Each wave created a new protected domain,
+              work the technology structurally couldn&rsquo;t do,
               that workers could move toward. The task model of labor
               (Autor, Levy &amp; Murnane, 2003) categorized this as the
               difference between <em>routine</em> tasks (codifiable,
@@ -162,15 +162,15 @@ export default function HistoryPage() {
               AI systems perform tasks that are simultaneously cognitive and
               ostensibly non-routine: legal analysis, medical reasoning,
               strategic synthesis, creative writing, code generation. This
-              doesn&rsquo;t mean AI equals human intelligence &mdash; it
-              doesn&rsquo;t &mdash; but it means the protected domain of
+              doesn&rsquo;t mean AI equals human intelligence (it
+              doesn&rsquo;t), but it means the protected domain of
               prior automation waves is now being encroached on.
             </p>
             <p>
               The most useful analogy is electrification. Before
               electricity, accessing significant mechanical power required
-              physical proximity to a power source &mdash; a river, a steam
-              boiler. Power was scarce, locationally fixed, and expensive.
+              physical proximity to a power source (a river, a steam
+              boiler). Power was scarce, locationally fixed, and expensive.
               Electrification transformed power into a{" "}
               <strong>utility</strong>: standardized, reliable, available on
               demand anywhere on the grid, priced per unit of use.{" "}
@@ -206,7 +206,7 @@ export default function HistoryPage() {
             What the Pattern Predicts
           </h2>
           <p className="text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
-            History doesn&rsquo;t tell us the outcome &mdash; it tells us
+            History doesn&rsquo;t tell us the outcome. It tells us
             the shape. Here is what the pattern predicts, offered not as
             certainties but as the most historically-grounded expectations.
           </p>
@@ -266,8 +266,8 @@ export default function HistoryPage() {
               Technological
             </h3>
             <p className="text-[14px] text-[var(--muted)] leading-[1.8]">
-              The computer era&rsquo;s inequality &mdash; 40 years of wage
-              stagnation for workers without degrees &mdash; was not
+              The computer era&rsquo;s inequality (40 years of wage
+              stagnation for workers without degrees) was not
               technologically inevitable. It reflected specific choices:
               declining union density, wage policy, trade liberalization,
               corporate governance norms. The AI era&rsquo;s distributional
@@ -289,8 +289,8 @@ export default function HistoryPage() {
             <p className="text-[14px] text-[var(--muted)] leading-[1.8]">
               Every GPT ultimately created more jobs than it destroyed and
               raised average wages. This is true and important. It is also
-              true that the prior pattern&rsquo;s timeline &mdash; 40 to 70
-              years &mdash; is politically and humanly unacceptable as a
+              true that the prior pattern&rsquo;s timeline (40 to 70
+              years) is politically and humanly unacceptable as a
               response to workers experiencing disruption today.
               &ldquo;Eventually&rdquo; is not a policy.
             </p>
@@ -305,9 +305,9 @@ export default function HistoryPage() {
               }}
             >
               If on-tap intelligence enables the democratization of
-              expertise &mdash; putting the equivalent of world-class
+              expertise, putting the equivalent of world-class
               legal, medical, educational, and financial guidance within
-              reach of everyone rather than only the affluent &mdash; it
+              reach of everyone rather than only the affluent, it
               could be among the most equalizing forces in human history.
               If it primarily displaces workers while concentrating gains
               among capital owners and a small elite of knowledge workers,

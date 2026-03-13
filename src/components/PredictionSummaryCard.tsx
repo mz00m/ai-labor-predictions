@@ -29,7 +29,7 @@ function getBestEstimate(prediction: Prediction, selectedTiers: EvidenceTier[]) 
 function getContextLine(prediction: Prediction, aggregateValue: number): string {
   const v = aggregateValue;
   if (prediction.slug === "overall-us-displacement")
-    return `An estimated ${v}% of US jobs face net displacement from AI by 2030 — roles eliminated or fundamentally restructured.`;
+    return `An estimated ${v}% of US jobs face net displacement from AI by 2030, with roles eliminated or fundamentally restructured.`;
   if (prediction.slug === "customer-service-automation")
     return `${v}% of CS interactions projected to be fully handled by AI without human involvement.`;
   if (prediction.slug === "tech-sector-displacement")
@@ -39,27 +39,27 @@ function getContextLine(prediction: Prediction, aggregateValue: number): string 
   if (prediction.slug === "creative-industry-displacement")
     return `${v}% of creative roles in design, writing, and marketing could be displaced by generative AI tools.`;
   if (prediction.slug === "healthcare-admin-displacement")
-    return `${v}% of healthcare admin roles (coding, billing, prior auth) projected to be automated — one of the fastest-moving sectors.`;
+    return `${v}% of healthcare admin roles (coding, billing, prior auth) are on track to be automated. One of the fastest-moving sectors.`;
   if (prediction.slug === "education-sector-displacement")
     return `${v}% of education support roles face displacement as AI handles tutoring, grading, and content creation.`;
   if (prediction.slug === "financial-services-displacement")
-    return `${v}% of financial services roles projected to be displaced by AI by 2030 — high automation potential (54%) but observed cuts remain modest so far.`;
+    return `${v}% of financial services roles projected to be displaced by AI by 2030. High automation potential (54%), but observed cuts remain modest so far.`;
   if (prediction.slug === "high-skill-wage-premium")
-    return `Workers with AI/ML skills earn ~${v}% more than median — the gap is widening.`;
+    return `Workers with AI/ML skills earn ~${v}% more than median, and the gap is widening.`;
   if (prediction.slug === "median-wage-impact")
     return `Real median wages projected to ${v < 0 ? "decline" : "increase"} ${Math.abs(v)}% as AI reshapes mid-skill work.`;
   if (prediction.slug === "freelancer-rate-impact")
-    return `Freelancer rates in AI-exposed categories (writing, design, translation) have ${v < 0 ? "fallen" : "risen"} ${Math.abs(v)}% — a leading indicator of broader wage shifts.`;
+    return `Freelancer rates in AI-exposed categories (writing, design, translation) have ${v < 0 ? "fallen" : "risen"} ${Math.abs(v)}%, a leading indicator of broader wage shifts.`;
   if (prediction.slug === "entry-level-wage-impact")
     return `Entry-level wages in knowledge work are projected to ${v < 0 ? "decline" : "increase"} ${Math.abs(v)}% as AI handles tasks traditionally done by juniors.`;
   if (prediction.slug === "ai-adoption-rate")
     return `${v}% of US companies with 50+ employees have deployed AI in production, up from under 4% in 2023.`;
   if (prediction.slug === "genai-work-adoption")
-    return `${v}% of U.S. working-age adults now use generative AI at work — overall adoption (55.9%) outpaces the PC and internet at comparable points post-launch.`;
+    return `${v}% of U.S. working-age adults now use generative AI at work. Overall adoption (55.9%) outpaces the PC and internet at comparable points post-launch.`;
   if (prediction.slug === "earnings-call-ai-mentions")
     return `${v}% of S&P 500 companies now mention AI + workforce on earnings calls, up from 8% pre-ChatGPT.`;
   if (prediction.slug === "robots-physical-automation-displacement")
-    return `${v}% of physical/manual task jobs projected to be displaced by robots and physical automation by 2030 — constrained by hardware costs.`;
+    return `${v}% of physical/manual task jobs projected to be displaced by robots and physical automation by 2030, though constrained by hardware costs.`;
   return `Current estimate: ${v > 0 ? "+" : ""}${v} ${prediction.unit}.`;
 }
 
@@ -262,7 +262,7 @@ export default function PredictionSummaryCard({
             {contextLine}
           </p>
           <p className="text-[11px] text-[var(--muted)] opacity-60 mb-4">
-            {filteredHistory.length} source{filteredHistory.length !== 1 ? "s" : ""}{agg.min !== agg.max ? ` ranging ${agg.min}–${agg.max}${prediction.unit.includes("%") ? "%" : ""}` : ""}{agg.max - agg.min > 10 ? " — significant disagreement" : ""}.{" "}
+            {filteredHistory.length} source{filteredHistory.length !== 1 ? "s" : ""}{agg.min !== agg.max ? ` ranging ${agg.min}–${agg.max}${prediction.unit.includes("%") ? "%" : ""}` : ""}{agg.max - agg.min > 10 ? " (significant disagreement)" : ""}.{" "}
             <span
               className="underline cursor-pointer"
               onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.location.href = "/about#how-we-calculate"; }}
