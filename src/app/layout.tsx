@@ -104,15 +104,14 @@ export default function RootLayout({
           <div className="pt-10 border-t border-black/[0.06] space-y-4">
             <FooterStats />
             <p className="text-[13px] text-[var(--muted)]">
-              Data sourced from hundreds of sources, including academic research, government statistics,
-              corporate filings, journalism, and expert industry opinions, which you are able to review
-              and filter yourself based on your preferences. Aggregate numbers are my independent
-              analysis{" "}
+              Data drawn from hundreds of sources (academic research, government statistics, corporate
+              filings, journalism, and expert opinion) all able to be reviewed and filtered by you.
+              Aggregate figures reflect my independent analysis{" "}
               (<a href="/about" className="underline hover:text-[var(--foreground)]">methodology</a>).
             </p>
             <p className="text-[13px] text-[var(--muted)]">
-              Nothing on this site should be considered investment or career advice, and this entire
-              project is not affiliated with my employer. Corrections and ideas welcome:{" "}
+              Nothing here is investment or career advice. This project is unaffiliated with my
+              employer. Corrections and ideas welcome:{" "}
               <a href="https://www.linkedin.com/in/mattzieger" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">LinkedIn</a>
               {" "}/{" "}
               <a href="https://x.com/mattzieger" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">X</a>
