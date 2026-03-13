@@ -22,7 +22,6 @@ export default function FooterStats() {
 
   return (
     <span className="text-[13px] text-[var(--muted)]">
-      {daysSinceStart} days ago,{" "}
       <a
         href="https://www.linkedin.com/in/mattzieger"
         target="_blank"
@@ -31,32 +30,16 @@ export default function FooterStats() {
       >
         Matt Zieger
       </a>{" "}
-      started this as a weekend vibe coding project.
-      {commitCount !== null && (
+      started this as a weekend vibe coding project {daysSinceStart} days ago
+      {commitCount !== null ? (
         <>
-          {" "}Since then, he&apos;s made{" "}
+          , and since then has made{" "}
           <span className="text-[var(--foreground)] font-medium">{commitCount}</span>{" "}
           improvements and counting.
         </>
+      ) : (
+        "."
       )}
-      {" "}Have a suggestion?{" "}
-      <a
-        href="https://www.linkedin.com/in/mattzieger"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="underline hover:text-[var(--foreground)]"
-      >
-        LinkedIn
-      </a>
-      {" / "}
-      <a
-        href="https://x.com/mattzieger"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="underline hover:text-[var(--foreground)]"
-      >
-        X
-      </a>
     </span>
   );
 }
