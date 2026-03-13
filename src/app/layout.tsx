@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Chatbot from "@/components/Chatbot";
+import FooterStats from "@/components/FooterStats";
 import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
@@ -112,17 +113,7 @@ export default function RootLayout({
                   <a href="https://x.com/mattzieger" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">X</a>
                 </p>
               </div>
-              <span className="text-[13px] text-[var(--muted)]">
-                A weekend vibe coding project by{" "}
-                <a
-                  href="https://www.linkedin.com/in/mattzieger"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline hover:text-[var(--foreground)]"
-                >
-                  Matt Zieger
-                </a>
-              </span>
+              <FooterStats />
             </div>
           </div>
         </footer>
