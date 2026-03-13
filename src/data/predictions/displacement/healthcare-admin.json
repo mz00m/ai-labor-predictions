@@ -2,7 +2,7 @@
   "id": "displacement-healthcare-admin",
   "slug": "healthcare-admin-displacement",
   "title": "Healthcare Administrative Displacement by 2030",
-  "description": "Projected percentage of healthcare administrative roles (coding, billing, scheduling, prior auth) automated by AI by 2030. Only data points where sources directly state a displacement or reduction figure are plotted.",
+  "description": "Projected percentage of healthcare administrative roles (coding, billing, scheduling, prior auth) automated by AI by 2030. Corporate signals are emerging: Trinity Health cut 10.5% of RCM staff across 92 hospitals (Jan 2026), medical coding automation projected at 40%+, and hospital AI billing adoption surged from 36% to 61% in one year. However, chronic healthcare labor shortages may absorb displacement through attrition rather than layoffs.",
   "category": "displacement",
   "unit": "% of roles displaced",
   "currentValue": 14.5,

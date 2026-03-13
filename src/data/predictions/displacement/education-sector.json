@@ -2,7 +2,7 @@
   "id": "displacement-education",
   "slug": "education-sector-displacement",
   "title": "Education Sector Displacement by 2030",
-  "description": "Projected percentage of education roles (tutoring, grading, content creation, administration) restructured or reduced by AI by 2030. Only data points where sources directly state a displacement figure are plotted. Note: most recent research focuses on AI adoption rates and task exposure in education rather than role elimination rates, making direct displacement estimates unusually sparse for this sector.",
+  "description": "Projected percentage of education roles (tutoring, grading, content creation, administration) restructured or reduced by AI by 2030. AI adoption is high (92% of students, 60% of teachers use AI tools) but studies consistently frame AI as augmenting educators, not displacing them. The 33,000 higher ed jobs cut in 2025 (BLS) were driven by federal funding policy, not AI. SHRM found education has the lowest automation rate of any sector at 7.3%. Direct AI-specific displacement estimates remain unusually sparse.",
   "category": "displacement",
   "unit": "% of roles displaced",
   "currentValue": 12.2,
