@@ -104,14 +104,14 @@ export async function analyzeSuggestedDataPoints(
 ): Promise<SuggestedDataPoint[]> {
   const apiKey = getApiKey();
   if (!apiKey) {
-    console.log("ANTHROPIC_API_KEY not set — skipping LLM analysis");
+    console.log("ANTHROPIC_API_KEY not set: skipping LLM analysis");
     return [];
   }
 
   // Only analyze papers that have linked predictions
   const linkedPapers = papers.filter((p) => p.linkedPredictions.length > 0);
   if (linkedPapers.length === 0) {
-    console.log("No papers with linked predictions — skipping LLM analysis");
+    console.log("No papers with linked predictions: skipping LLM analysis");
     return [];
   }
 

@@ -47,9 +47,9 @@ const articles: Article[] = [
   },
   {
     author: "Ranganathan & Ye (HBR)",
-    title: "AI Doesn\u2019t Reduce Work \u2014 It Intensifies It",
+    title: "AI Doesn\u2019t Reduce Work, It Intensifies It",
     summary:
-      "Eight-month study of 200 employees: 83% said AI increased workload through greater pace, scope, and hours \u2014 leading to burnout.",
+      "Eight-month study of 200 employees: 83% said AI increased workload through greater pace, scope, and hours, leading to burnout.",
     date: "Feb 9",
     url: "https://hbr.org/2026/02/ai-doesnt-reduce-work-it-intensifies-it",
     accent: "border-l-red-500",
