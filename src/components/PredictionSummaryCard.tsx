@@ -39,9 +39,9 @@ function getContextLine(prediction: Prediction, aggregateValue: number): string 
   if (prediction.slug === "creative-industry-displacement")
     return `${v}% of creative roles in design, writing, and marketing could be displaced by generative AI tools.`;
   if (prediction.slug === "healthcare-admin-displacement")
-    return `${v}% of healthcare admin roles (coding, billing, prior auth) are on track to be automated. One of the fastest-moving sectors.`;
+    return `${v}% of healthcare admin roles (coding, billing, prior auth) on track to be automated. Medical coding 40%+ automated; Trinity Health cut 10.5% of RCM staff. Chronic labor shortages absorb some displacement via attrition.`;
   if (prediction.slug === "education-sector-displacement")
-    return `${v}% of education support roles face displacement as AI handles tutoring, grading, and content creation.`;
+    return `${v}% of education support roles face displacement, though AI adoption (92% of students, 60% of teachers) is augmenting rather than replacing educators. Lowest automation rate of any sector at 7.3% (SHRM).`;
   if (prediction.slug === "financial-services-displacement")
     return `${v}% of financial services roles projected to be displaced by AI by 2030. High automation potential (54%), but observed cuts remain modest so far.`;
   if (prediction.slug === "high-skill-wage-premium")
