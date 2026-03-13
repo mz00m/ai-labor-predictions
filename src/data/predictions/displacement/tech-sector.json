@@ -569,6 +569,15 @@
       ],
       "evidenceTier": 1,
       "label": "ESB/Rabobank: Dutch ICT youth employment fell 11% despite 6.5% sector growth (since 2022)"
+    },
+    {
+      "date": "2026-02-16",
+      "direction": "down",
+      "sourceIds": [
+        "deutsche-bank-ai-predictions-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Deutsche Bank: 85% of devs use AI coding assistants; up to 60% productivity gains"
     }
   ],
   "sources": [
@@ -1109,6 +1118,16 @@
       "datePublished": "2025-09-01",
       "excerpt": "37% of software development tasks show AI involvement. Writing code is 18% of actual AI usage in software development; most use is for understanding, debugging, and reviewing code.",
       "dateAdded": "2026-03-12"
+    },
+    {
+      "id": "deutsche-bank-ai-predictions-2026",
+      "title": "What AI Says About AI Eating Itself and the World",
+      "url": "https://fortune.com/2026/02/18/will-ai-destroy-jobs-deutsche-bank-asks-ai-to-predict/",
+      "publisher": "Deutsche Bank Research (dbLumina)",
+      "evidenceTier": 2,
+      "datePublished": "2026-02-16",
+      "excerpt": "Over 85% of software developers now use AI coding assistants, delivering productivity gains of up to 60%. This shift raises questions about traditional software engineering roles and licensing models.",
+      "dateAdded": "2026-03-13"
     }
   ],
   "marketIds": {

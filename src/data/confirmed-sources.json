@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-13",
-  "totalSources": 405,
-  "verifiedCount": 405,
+  "totalSources": 406,
+  "verifiedCount": 406,
   "sources": {
     "revelio-labs-wage-divide-2025": {
       "id": "revelio-labs-wage-divide-2025",
@@ -5565,6 +5565,22 @@
       "excerpt": "Survey respondents said that AI adoption had led to elimination of 11% of jobs and an additional 12% were left unfilled. This is partially offset by 18% new hires, resulting in a 4% net job loss globally.",
       "usedIn": [
         "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "deutsche-bank-ai-predictions-2026": {
+      "id": "deutsche-bank-ai-predictions-2026",
+      "title": "What AI Says About AI Eating Itself and the World",
+      "url": "https://fortune.com/2026/02/18/will-ai-destroy-jobs-deutsche-bank-asks-ai-to-predict/",
+      "publisher": "Deutsche Bank Research (dbLumina)",
+      "evidenceTier": 2,
+      "datePublished": "2026-02-16",
+      "excerpt": "Customer service could see as much as 75% of interactions automated by 2026. AI-driven platforms could deliver primary investment advice to nearly 80% of retail investors by 2027. Over 85% of software developers now use AI coding assistants, delivering productivity gains of up to 60%.",
+      "usedIn": [
+        "customer-service-automation",
+        "financial-services-displacement",
+        "tech-sector-displacement"
       ],
       "verified": true,
       "synthetic": false
