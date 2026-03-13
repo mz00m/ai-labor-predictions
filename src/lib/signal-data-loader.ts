@@ -7,6 +7,15 @@ import type {
   StackOverflowActivityData,
   HuggingFaceData,
 } from "./signal-types";
+import {
+  SignalTaxonomySchema,
+  MonthlyDownloadsDataSchema,
+  SignalMetricsSchema,
+  BLSEmploymentDataSchema,
+  GitHubActivityDataSchema,
+  StackOverflowActivityDataSchema,
+  HuggingFaceDataSchema,
+} from "./signal-schemas";
 
 import taxonomyData from "@/data/signals/taxonomy.json";
 import downloadsData from "@/data/signals/monthly_downloads.json";
@@ -16,13 +25,14 @@ import githubData from "@/data/signals/github_activity.json";
 import soData from "@/data/signals/stackoverflow_activity.json";
 import hfData from "@/data/signals/huggingface_downloads.json";
 
-const taxonomy = taxonomyData as unknown as SignalTaxonomy;
-const downloads = downloadsData as unknown as MonthlyDownloadsData;
-const metrics = metricsData as unknown as SignalMetrics;
-const bls = blsData as unknown as BLSEmploymentData;
-const github = githubData as unknown as GitHubActivityData;
-const so = soData as unknown as StackOverflowActivityData;
-const huggingface = hfData as unknown as HuggingFaceData;
+// Zod validates at runtime; cast to hand-written types for downstream compatibility
+const taxonomy = SignalTaxonomySchema.parse(taxonomyData) as SignalTaxonomy;
+const downloads = MonthlyDownloadsDataSchema.parse(downloadsData) as MonthlyDownloadsData;
+const metrics = SignalMetricsSchema.parse(metricsData) as SignalMetrics;
+const bls = BLSEmploymentDataSchema.parse(blsData) as BLSEmploymentData;
+const github = GitHubActivityDataSchema.parse(githubData) as GitHubActivityData;
+const so = StackOverflowActivityDataSchema.parse(soData) as StackOverflowActivityData;
+const huggingface = HuggingFaceDataSchema.parse(hfData) as HuggingFaceData;
 
 export function getSignalTaxonomy(): SignalTaxonomy {
   return taxonomy;

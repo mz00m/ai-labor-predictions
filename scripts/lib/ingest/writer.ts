@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import { toDateString } from "../date-utils";
 import type { ProposedChange } from "./types";
 
 /**
@@ -156,7 +157,7 @@ export function applyChanges(
   // Update the last-updated timestamp if any files were modified
   if (written.length > 0) {
     const metaPath = path.join(process.cwd(), "src/data/last-updated.json");
-    const today = new Date().toISOString().split("T")[0];
+    const today = toDateString();
     fs.writeFileSync(metaPath, JSON.stringify({ lastUpdated: today }, null, 2) + "\n");
   }
 

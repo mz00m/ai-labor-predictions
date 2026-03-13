@@ -10,6 +10,7 @@
 import fs from "fs";
 import path from "path";
 import { loadEnv } from "./lib/load-env";
+import { toDateString } from "./lib/date-utils";
 
 loadEnv();
 
@@ -156,8 +157,8 @@ async function main() {
     weekId,
     generatedAt: now.toISOString(),
     dateRange: {
-      from: from.toISOString().split("T")[0],
-      to: now.toISOString().split("T")[0],
+      from: toDateString(from),
+      to: toDateString(now),
     },
     totalPapersDiscovered: papers.length,
     totalAfterDedup: papers.length,

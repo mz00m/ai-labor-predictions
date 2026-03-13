@@ -2,6 +2,9 @@ import { Metadata } from "next";
 import { getAllPredictions, getPredictionBySlug } from "@/lib/data-loader";
 import PredictionDetailPage from "./PredictionDetailClient";
 
+// Revalidate SSG pages hourly so deploys pick up data changes faster
+export const revalidate = 3600;
+
 interface Props {
   params: { slug: string };
 }

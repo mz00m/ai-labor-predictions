@@ -8,6 +8,7 @@
  */
 
 import Anthropic from "@anthropic-ai/sdk";
+import { toDateString } from "../date-utils";
 import fs from "fs";
 import path from "path";
 
@@ -95,7 +96,7 @@ ${truncated}`;
     keyFindings: Array.isArray(parsed.keyFindings) ? parsed.keyFindings : [],
     methodology: parsed.methodology || "Not specified",
     qualifiers: parsed.qualifiers || "None stated",
-    fetchedAt: new Date().toISOString().split("T")[0],
+    fetchedAt: toDateString(),
   };
 }
 
