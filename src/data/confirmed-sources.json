@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-13",
-  "totalSources": 406,
-  "verifiedCount": 406,
+  "totalSources": 407,
+  "verifiedCount": 407,
   "sources": {
     "revelio-labs-wage-divide-2025": {
       "id": "revelio-labs-wage-divide-2025",
@@ -5581,6 +5581,20 @@
         "customer-service-automation",
         "financial-services-displacement",
         "tech-sector-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "trinity-health-rcm-layoffs-2026": {
+      "id": "trinity-health-rcm-layoffs-2026",
+      "title": "Trinity Health to lay off 10.5% of revenue cycle headcount",
+      "url": "https://www.healthcaredive.com/news/trinity-health-layoffs-revenue-cycle-management/809980/",
+      "publisher": "Healthcare Dive / Trinity Health",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-15",
+      "excerpt": "Trinity Health is laying off 10.5% of its revenue cycle management staff across 15 states and 92 hospitals. Non-patient-facing revenue cycle functions will be transitioned to an external partner.",
+      "usedIn": [
+        "healthcare-admin-displacement"
       ],
       "verified": true,
       "synthetic": false

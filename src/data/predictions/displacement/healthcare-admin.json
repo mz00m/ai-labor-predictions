@@ -240,6 +240,15 @@
       ],
       "evidenceTier": 1,
       "label": "Google/BIDMC: Pre-visit AI intake safe across 100 real patients, zero safety stops needed"
+    },
+    {
+      "date": "2026-01-15",
+      "direction": "down",
+      "sourceIds": [
+        "trinity-health-rcm-layoffs-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Trinity Health: 10.5% of revenue cycle workforce cut across 92 hospitals in 15 states"
     }
   ],
   "sources": [
@@ -472,6 +481,16 @@
       "datePublished": "2026-03-09",
       "excerpt": "AMIE's differential diagnosis included the final diagnosis in 90% of cases, with 75% top-3 accuracy. Blinded assessment suggested similar overall DDx and Mx plan quality between AMIE and PCPs. Human safety supervisors did not need to intervene to stop any consultations.",
       "dateAdded": "2026-03-11"
+    },
+    {
+      "id": "trinity-health-rcm-layoffs-2026",
+      "title": "Trinity Health to lay off 10.5% of revenue cycle headcount",
+      "url": "https://www.healthcaredive.com/news/trinity-health-layoffs-revenue-cycle-management/809980/",
+      "publisher": "Healthcare Dive / Trinity Health",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-15",
+      "excerpt": "Trinity Health is laying off 10.5% of its revenue cycle management staff across 15 states and 92 hospitals. Non-patient-facing revenue cycle functions will be transitioned to an external partner. System reported $12.2M operating loss on $25.4B revenue in FY2025.",
+      "dateAdded": "2026-03-13"
     }
   ]
 }
