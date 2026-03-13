@@ -39,24 +39,6 @@ export default function FooterStats() {
           improvements and counting.
         </>
       )}
-      {" "}Have a suggestion?{" "}
-      <a
-        href="https://www.linkedin.com/in/mattzieger"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="underline hover:text-[var(--foreground)]"
-      >
-        LinkedIn
-      </a>
-      {" / "}
-      <a
-        href="https://x.com/mattzieger"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="underline hover:text-[var(--foreground)]"
-      >
-        X
-      </a>
     </span>
   );
 }
