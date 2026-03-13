@@ -165,7 +165,7 @@ export default function Methodology() {
             Tracked Researchers
           </h3>
           <p className="text-[14px] text-[var(--muted)] leading-relaxed mb-4 max-w-3xl">
-            18 leading AI-labor researchers are monitored &mdash; their new
+            35 leading AI-labor researchers are monitored &mdash; their new
             papers are automatically surfaced regardless of keyword match.
           </p>
           <div className="flex flex-wrap gap-2">
@@ -292,4 +292,20 @@ const AUTHORS = [
   { name: "Lindsey Raymond", affiliation: "MIT" },
   { name: "Bharat Chandar", affiliation: "Stanford" },
   { name: "Molly Kinder", affiliation: "Brookings" },
+  { name: "Simon Johnson", affiliation: "MIT Sloan" },
+  { name: "John Horton", affiliation: "MIT Sloan" },
+  { name: "Menaka Hampole", affiliation: "Yale" },
+  { name: "Dimitris Papanikolaou", affiliation: "Northwestern" },
+  { name: "Sida Peng", affiliation: "Microsoft Research" },
+  { name: "Fabrizio Dell'Acqua", affiliation: "Harvard" },
+  { name: "James Bessen", affiliation: "Boston University" },
+  { name: "Michael Webb", affiliation: "Stanford" },
+  { name: "Katja Mann", affiliation: "Copenhagen" },
+  { name: "Anton Korinek", affiliation: "UVA / Brookings" },
+  { name: "Avi Goldfarb", affiliation: "Toronto Rotman" },
+  { name: "Ajay Agrawal", affiliation: "Toronto Rotman" },
+  { name: "Chad Syverson", affiliation: "Chicago Booth" },
+  { name: "Robert Gordon", affiliation: "Northwestern" },
+  { name: "Philippe Aghion", affiliation: "College de France" },
+  { name: "Alex Imas", affiliation: "Chicago Booth" },
 ];
