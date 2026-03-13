@@ -1,3 +1,5 @@
+import { toDateString } from "@/lib/date-utils";
+
 export interface BrookingsPaper {
   id: string;
   title: string;
@@ -66,9 +68,9 @@ function parseBrookingsRss(xml: string): BrookingsPaper[] {
     let publishedDate = "";
     if (pubDate) {
       try {
-        publishedDate = new Date(pubDate).toISOString().split("T")[0];
+        publishedDate = toDateString(new Date(pubDate));
       } catch {
-        publishedDate = new Date().toISOString().split("T")[0];
+        publishedDate = toDateString();
       }
     }
 

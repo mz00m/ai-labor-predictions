@@ -1,3 +1,5 @@
+import { toDateString } from "@/lib/date-utils";
+
 export interface NBERPaper {
   id: string;
   title: string;
@@ -82,9 +84,9 @@ function parseNBERRss(xml: string): NBERPaper[] {
     let publishedDate = "";
     if (pubDate) {
       try {
-        publishedDate = new Date(pubDate).toISOString().split("T")[0];
+        publishedDate = toDateString(new Date(pubDate));
       } catch {
-        publishedDate = new Date().toISOString().split("T")[0];
+        publishedDate = toDateString();
       }
     }
 

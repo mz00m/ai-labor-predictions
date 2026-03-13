@@ -33,6 +33,7 @@ async function applyIngestion(
   const confirmedSources = JSON.parse(
     fs.readFileSync(confirmedSourcesPath, "utf-8")
   );
+  const today = toDateString();
   let statsAdded = 0;
   let statsSkipped = 0;
   const modifiedFiles = new Set<string>();
@@ -79,15 +80,14 @@ async function applyIngestion(
           publisher: new URL(highlight.source).hostname.replace("www.", ""),
           evidenceTier,
           datePublished:
-            highlight.publishedAt ??
-            toDateString(),
+            highlight.publishedAt ?? today,
           excerpt: stat.quote,
         });
       }
 
       const dateStr = highlight.publishedAt
         ? toDateString(new Date(highlight.publishedAt))
-        : toDateString();
+        : today;
 
       if (stat.type === "data_point" && stat.value != null) {
         predictionFile.history = predictionFile.history ?? [];
@@ -145,8 +145,7 @@ async function applyIngestion(
         publisher: new URL(highlight.source).hostname.replace("www.", ""),
         evidenceTier,
         datePublished:
-          highlight.publishedAt ??
-          toDateString(),
+          highlight.publishedAt ?? today,
         excerpt:
           extractedStats[0]?.quote ?? highlight.summary,
         usedIn: [...modifiedFiles],
@@ -161,7 +160,6 @@ async function applyIngestion(
   }
 
   // Update timestamps
-  const today = toDateString();
   confirmedSources.lastUpdated = today;
   fs.writeFileSync(
     confirmedSourcesPath,
@@ -186,7 +184,7 @@ async function applyIngestion(
         const contentEntry = await extractSourceContent(sourceId, fetched.text, {
           title: highlight.title,
           publisher: new URL(highlight.source).hostname.replace("www.", ""),
-          datePublished: highlight.publishedAt ?? toDateString(),
+          datePublished: highlight.publishedAt ?? today,
           evidenceTier,
           url: highlight.source,
           excerpt: candidate.extractedStats?.[0]?.quote,

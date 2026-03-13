@@ -1,4 +1,5 @@
 import { EvidenceTier } from "../types";
+import { toDateString } from "@/lib/date-utils";
 import {
   discoverRecentPapers,
   SemanticScholarPaper,
@@ -455,7 +456,7 @@ function fromReddit(post: RedditPost): ResearchPaper {
     title: post.title,
     abstract: truncateText(post.selftext || post.title, 500),
     authors: [`u/${post.author}`],
-    publishedDate: new Date(post.createdUtc * 1000).toISOString().split("T")[0],
+    publishedDate: toDateString(new Date(post.createdUtc * 1000)),
     year: new Date(post.createdUtc * 1000).getFullYear(),
     venue: `Reddit r/${post.subreddit}`,
     url: `https://www.reddit.com${post.permalink}`,
