@@ -23,7 +23,7 @@ export default function JCurvePage() {
           style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
         >
           Why transformative technologies make productivity look{" "}
-          <em>worse</em> before making it better &mdash; and what this
+          <em>worse</em> before making it better, and what this
           means for AI.
         </p>
 
@@ -34,7 +34,7 @@ export default function JCurvePage() {
             style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
           >
             When a major new technology arrives, measured productivity often
-            stagnates or declines for years &mdash; not because the
+            stagnates or declines for years, not because the
             technology doesn&rsquo;t work, but because the massive
             complementary investments it requires are invisible to official
             statistics.
@@ -76,7 +76,7 @@ export default function JCurvePage() {
             <p>
               Erik Brynjolfsson, Daniel Rock, and Chad Syverson argue this
               isn&rsquo;t a mystery. It&rsquo;s the predictable result of
-              how we measure productivity &mdash; and how general-purpose
+              how we measure productivity, and how general-purpose
               technologies actually transform economies.
             </p>
           </div>
@@ -121,7 +121,7 @@ export default function JCurvePage() {
               tip="A transformative technology that reshapes entire economies: steam, electricity, computers, AI. Economists abbreviate this &quot;GPT&quot; (not to be confused with the AI model &quot;Generative Pre-trained Transformer&quot;)."
             />{" "}
             is adopted. Measured productivity initially
-            drops below true productivity &mdash; then later overshoots it. The
+            drops below true productivity, then later overshoots it. The
             result is a J-shaped curve in the measurement error over time.
           </p>
 
@@ -200,13 +200,13 @@ export default function JCurvePage() {
             The accounting identity
           </span>
           <span className="text-[10px] text-[var(--muted)] opacity-60">
-            &mdash; optional detail
+            (optional detail)
           </span>
         </div>
         <p className="text-[13px] text-[var(--muted)] leading-[1.75] mb-4">
           Standard productivity measurement uses only measured inputs.
           When firms adopt a general-purpose technology, they also build
-          unmeasured intangible capital &mdash; creating a systematic gap:
+          unmeasured intangible capital, creating a systematic gap:
         </p>
 
         {/* Equation cards */}
