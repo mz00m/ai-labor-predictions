@@ -123,7 +123,7 @@ Every general-purpose technology (GPT) follows a 5-phase arc: invention, infrast
 ## The On-Tap Intelligence Shift
 Prior waves of automation followed a clear pattern: machines replaced routine physical tasks (assembly), then routine cognitive tasks (data entry). Non-routine cognitive work (reasoning, judgment, creativity) was considered the human safe zone. AI breaks this pattern. LLMs can now perform legal analysis ($400/hour tasks at marginal cost), medical reasoning, strategic consulting, and creative work. This is unprecedented: no previous technology could perform non-routine cognitive tasks.
 
-The analogy: Before electrification, factories needed their own power source — a steam engine or water wheel. Power was scarce, locationally fixed, and expensive. Electrification made power available on-demand from the grid. AI is doing the same for cognitive capability: making expertise available on-demand, at marginal cost, to anyone with internet access.
+The analogy: Before electrification, factories needed their own power source, whether a steam engine or water wheel. Power was scarce, locationally fixed, and expensive. Electrification made power available on-demand from the grid. AI is doing the same for cognitive capability: making expertise available on-demand, at marginal cost, to anyone with internet access.
 
 ## What the Pattern Predicts
 History tells us the shape of what's coming, but not the specifics. The consistent pattern:
@@ -144,13 +144,13 @@ Five categories:
 ## Key Lessons from History
 1. Invest in Complements, Not Preservation: The Morrill Acts created land-grant universities for the industrial age. The GI Bill and community colleges for the post-war economy. Today's equivalent: AI literacy programs, retraining infrastructure, new educational pathways.
 2. The Distribution Problem is Institutional: Technology creates aggregate wealth but doesn't distribute it fairly by default. Example: 40 years of wage stagnation despite massive productivity gains. Ford's Five Dollar Day showed that distribution choices are as important as technological capability.
-3. The Gains Are Real, The Timeline is Not: Every GPT took 40-70 years to fully transform the economy. "Eventually" is not a policy timeline — the transition period creates real hardship that requires immediate institutional response.`;
+3. The Gains Are Real, The Timeline is Not: Every GPT took 40-70 years to fully transform the economy. "Eventually" is not a policy timeline. The transition period creates real hardship that requires immediate institutional response.`;
 
 /** Signals page content */
 export const SIGNALS_CONTENT = `# Leading Indicators: Where Is AI Automation Heading?
 
 ## What This Page Measures
-Think of this page like construction permits for AI automation. Construction permits don't tell you what a neighborhood looks like today — they tell you what it will look like in 2-3 years. Similarly, the signals tracked here — tool downloads, GitHub stars, deployment patterns — are leading indicators of where AI automation is heading before it shows up in labor statistics.
+Think of this page like construction permits for AI automation. Construction permits don't tell you what a neighborhood looks like today; they tell you what it will look like in 2-3 years. Similarly, the signals tracked here (tool downloads, GitHub stars, deployment patterns) are leading indicators of where AI automation is heading before it shows up in labor statistics.
 
 ## Theoretical Capability vs. Observed Exposure
 There is a significant gap between what LLMs could theoretically automate and what they actually handle in practice. Research (including from Anthropic) shows that theoretical exposure estimates are much higher than real-world deployment. This gap is important context for interpreting displacement predictions.
@@ -158,7 +158,7 @@ There is a significant gap between what LLMs could theoretically automate and wh
 ## The Automation Flow
 1. Tool Adoption: Developers download tools (e.g., browser-use, faster-whisper, docling)
 2. Task Automation: Tasks get automated, not entire jobs. Example: a paralegal's document review task is automated, but the paralegal role persists in restructured form.
-3. Productivity Absorption: Productivity absorbs the impact — until it doesn't. There's a 2-10 year lag between AI capability and labor market impact. During this phase, firms use AI to do more with the same workforce.
+3. Productivity Absorption: Productivity absorbs the impact, until it doesn't. There's a 2-10 year lag between AI capability and labor market impact. During this phase, firms use AI to do more with the same workforce.
 4. Firm Response: The task composition determines vulnerability. Jobs with >60% automatable tasks face headcount reduction; jobs with <30% face augmentation.
 
 ## Three Firm Response Paths When Workers Get More Productive
@@ -170,7 +170,7 @@ Firms keep output constant and cut headcount. Research: Brynjolfsson, Chandar & 
 Firms keep headcount constant and increase output. Research: Brynjolfsson, Li & Raymond (2025) found AI-assisted customer service agents handled 13.8% more issues per hour. Example: A 50-person support team handles the volume of a 70-person team.
 
 ### Path 3: Expand (New work, new roles, new markets)
-Firms use productivity gains to enter new markets or create new services. This is the Jevons Paradox applied to labor: when a resource becomes more efficient, total usage sometimes increases. Historical parallel: ATMs didn't eliminate bank tellers — they made branches cheaper to operate, so banks opened more branches, and teller employment actually rose for 20 years.
+Firms use productivity gains to enter new markets or create new services. This is the Jevons Paradox applied to labor: when a resource becomes more efficient, total usage sometimes increases. Historical parallel: ATMs didn't eliminate bank tellers. They made branches cheaper to operate, so banks opened more branches, and teller employment actually rose for 20 years.
 
 ## Methodology Notes
 - Automation Acceleration Index: Values above 1.0 indicate acceleration. Calculated from tool download growth rates.
@@ -182,11 +182,11 @@ Firms use productivity gains to enter new markets or create new services. This i
 /** Hero stats content */
 export const HERO_CONTENT = `# Key Dashboard Statistics
 
-The site headline is: "How is AI reshaping the labor market?" with the thesis: "AI adoption is accelerating, productivity is climbing, and jobs are changing faster than they are disappearing. No measurable macro displacement — yet."
+The site headline is: "How is AI reshaping the labor market?" with the thesis: "AI adoption is accelerating, productivity is climbing, and jobs are changing faster than they are disappearing. No measurable macro displacement, yet."
 
 Three hero statistics:
-1. ~21% Productivity boost — Median of 18 studies measuring AI's impact on worker productivity
-2. ~3% Projected job loss — Weighted average of 14 estimates for overall US job displacement (from the overall-us-displacement prediction, all evidence tiers weighted)
-3. ~0% Measured job loss — Based on Yale, Goldman Sachs, and Dallas Fed observed data. Despite high exposure estimates, actual macro-level job losses attributable to AI remain near zero as of early 2026.
+1. ~21% Productivity boost: Median of 18 studies measuring AI's impact on worker productivity
+2. ~3% Projected job loss: Weighted average of 14 estimates for overall US job displacement (from the overall-us-displacement prediction, all evidence tiers weighted)
+3. ~0% Measured job loss: Based on Yale, Goldman Sachs, and Dallas Fed observed data. Despite high exposure estimates, actual macro-level job losses attributable to AI remain near zero as of early 2026.
 
 These three numbers capture the core tension: AI demonstrably boosts productivity and is projected to displace some jobs, but observed displacement so far is minimal. The gap between projected and observed displacement is one of the most important findings on the site.`;

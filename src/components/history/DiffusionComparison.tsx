@@ -125,7 +125,7 @@ export default function DiffusionComparison() {
       {/* Caveat */}
       <p className="text-[11px] text-[var(--muted)] leading-[1.6] mt-4 italic">
         Note: Census Bureau&rsquo;s rigorous sampling shows only 17.5% of US
-        firms actively using AI (Feb 2026) &mdash; a 5&times; gap with
+        firms actively using AI (Feb 2026), a 5&times; gap with
         McKinsey&rsquo;s 88%. The range reflects this measurement uncertainty.
         Adoption speed also does not guarantee proportional impact speed.
       </p>

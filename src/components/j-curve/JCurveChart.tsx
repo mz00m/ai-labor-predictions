@@ -16,7 +16,7 @@ const PHASES = [
     color: "#ef4444",
     range: [0.08, 0.38],
     description:
-      "Firms pour resources into intangible capital — reorganization, training, new workflows. These investments are expensed, not capitalized, so measured output falls even as true capability grows.",
+      "Firms pour resources into intangible capital: reorganization, training, new workflows. These investments are expensed, not capitalized, so measured output falls even as true capability grows.",
   },
   {
     id: "trough",
@@ -32,7 +32,7 @@ const PHASES = [
     color: "#22c55e",
     range: [0.55, 0.92],
     description:
-      "Intangible investments mature. Reorganized workflows produce measurable output gains. Measured productivity surges — and actually overstates true TFP because the intangible capital driving it isn't counted as an input.",
+      "Intangible investments mature. Reorganized workflows produce measurable output gains. Measured productivity surges, and actually overstates true TFP because the intangible capital driving it isn't counted as an input.",
   },
 ];
 

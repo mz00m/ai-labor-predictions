@@ -72,7 +72,7 @@ const EXAMPLES: Example[] = [
     paradox:
       "Massive AI investment has not yet appeared in aggregate productivity statistics. Many firms report little measurable ROI from AI spending.",
     payoff:
-      "The framework predicts a productivity surge once intangible investments mature — new workflows are established, workers are trained, and complementary systems are built.",
+      "The framework predicts a productivity surge once intangible investments mature: new workflows are established, workers are trained, and complementary systems are built.",
     payoffYears: "Potentially faster than prior GPTs",
     intangibles: [
       "Data infrastructure & pipelines",

@@ -202,7 +202,7 @@ const MICRO_STUDIES: MicroStudy[] = [
     domain: "Entrepreneurship",
     effectPct: 0,
     effectLabel: "~0%",
-    finding: "No statistically significant average effect on revenues. High-performing businesses improved ~15%, low performers did 8–10% worse — widening performance gaps.",
+    finding: "No statistically significant average effect on revenues. High-performing businesses improved ~15%, low performers did 8–10% worse, widening performance gaps.",
     citation: "HBS Working Paper 24-042",
     url: "https://www.hbs.edu/ris/Publication%20Files/24-042_9d69e71a-98c6-4a9a-9755-93462d7e4394.pdf",
     note: "Widened performance gaps",
@@ -288,7 +288,7 @@ const MACRO_STUDIES: MacroStudy[] = [
     metric: "Labor productivity",
     effectPct: 1.2,
     effectLabel: "+1.1–1.3%",
-    finding: "Generative AI may have increased labor productivity by up to 1.1–1.3% since ChatGPT's release (based on self-reported time savings — likely overstated).",
+    finding: "Generative AI may have increased labor productivity by up to 1.1–1.3% since ChatGPT's release (based on self-reported time savings, likely overstated).",
     citation: "St. Louis Fed, 2025",
     url: "https://www.stlouisfed.org/on-the-economy/2025/feb/how-much-has-gen-ai-increased-labor-productivity",
     direction: "positive",
@@ -314,7 +314,7 @@ const MACRO_STUDIES: MacroStudy[] = [
     metric: "TFP growth",
     effectPct: 0.01,
     effectLabel: "+0.01pp",
-    finding: "AI's contribution to total factor productivity growth projected at approximately 0.01 percentage points in 2025 — essentially negligible.",
+    finding: "AI's contribution to total factor productivity growth projected at approximately 0.01 percentage points in 2025, essentially negligible.",
     citation: "PWBM 2025",
     url: "https://budgetmodel.wharton.upenn.edu/issues/2025/9/8/projected-impact-of-generative-ai-on-future-productivity-growth",
     direction: "neutral",
@@ -721,7 +721,7 @@ export default function ResearchEvidence() {
               Macro Productivity
             </h3>
             <p className="text-[13px] text-[var(--muted)] mt-1">
-              Economy-wide studies measuring aggregate productivity gains —
+              Economy-wide studies measuring aggregate productivity gains:
               TFP, labor productivity, and time savings
             </p>
           </div>
@@ -753,7 +753,7 @@ export default function ResearchEvidence() {
               <span className="font-bold">Key gap narrowing:</span>{" "}
               Micro studies show 14–56% individual productivity gains. BLS
               data now shows labor productivity 2.2% above pre-pandemic
-              forecast — but how much is AI vs. other factors remains an
+              forecast, but how much is AI vs. other factors remains an
               open question.
             </p>
           </div>

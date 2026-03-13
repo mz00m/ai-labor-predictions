@@ -118,7 +118,7 @@ export default function JCurvePage() {
             productivity when a{" "}
             <Tooltip
               label="general-purpose technology"
-              tip="A transformative technology that reshapes entire economies — steam, electricity, computers, AI. Economists abbreviate this &quot;GPT&quot; (not to be confused with the AI model &quot;Generative Pre-trained Transformer&quot;)."
+              tip="A transformative technology that reshapes entire economies: steam, electricity, computers, AI. Economists abbreviate this &quot;GPT&quot; (not to be confused with the AI model &quot;Generative Pre-trained Transformer&quot;)."
             />{" "}
             is adopted. Measured productivity initially
             drops below true productivity &mdash; then later overshoots it. The

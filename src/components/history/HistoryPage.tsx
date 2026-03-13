@@ -75,7 +75,7 @@ export default function HistoryPage() {
             follows a predictable{" "}
             <Tooltip
               label="five-phase arc"
-              tip="This framework synthesizes several academic models of how general-purpose technologies reshape economies. The closest single source is Carlota Perez (2002), Technological Revolutions and Financial Capital, which models technology waves in recurring phases. The definitive academic treatment of GPT theory is Lipsey, Carlaw &amp; Bekar (2005), Economic Transformations: General Purpose Technologies and Long-Term Economic Growth. The specific five phases here — emergence, diffusion, displacement, reorganization, new equilibrium — are an editorial synthesis, not a direct citation from any single paper."
+              tip="This framework synthesizes several academic models of how general-purpose technologies reshape economies. The closest single source is Carlota Perez (2002), Technological Revolutions and Financial Capital, which models technology waves in recurring phases. The definitive academic treatment of GPT theory is Lipsey, Carlaw &amp; Bekar (2005), Economic Transformations: General Purpose Technologies and Long-Term Economic Growth. The specific five phases here (emergence, diffusion, displacement, reorganization, new equilibrium) are an editorial synthesis, not a direct citation from any single paper."
             />. The names change, but the shape is the same.
             Steam, electricity, computers: each transformed the
             labor market through the same sequence of emergence, diffusion,

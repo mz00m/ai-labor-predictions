@@ -40,7 +40,7 @@ const articles: Article[] = [
     author: "Anthropic (Massenkoff, McCrory)",
     title: "Labor Market Impacts of AI: New Measure & Early Evidence",
     summary:
-      "New 'observed exposure' metric. No unemployment rise yet — but young worker hiring slowing in exposed jobs.",
+      "New 'observed exposure' metric. No unemployment rise yet, but young worker hiring slowing in exposed jobs.",
     date: "Mar 5",
     url: "https://www.anthropic.com/research/labor-market-impacts",
     accent: "border-l-purple-500",

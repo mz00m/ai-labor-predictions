@@ -4,7 +4,7 @@ import { useState } from "react";
 import type { BlsTrend } from "@/lib/bls-trends";
 
 function formatChange(value: number | null): string {
-  if (value === null) return "—";
+  if (value === null) return "N/A";
   const sign = value > 0 ? "+" : "";
   return `${sign}${value.toFixed(1)}%`;
 }

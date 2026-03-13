@@ -33,7 +33,7 @@ const REVOLUTIONS: Revolution[] = [
     created:
       "Railway workers (300,000+ by 1850), mechanics, engineers, mine workers. These industries didn\u2019t exist 20 years prior.",
     painfulPart:
-      'The "Engel\u2019s Pause" — real wages stagnated for 60 years despite massive productivity gains',
+      'The "Engel\u2019s Pause": real wages stagnated for 60 years despite massive productivity gains',
     lesson:
       "Aggregate growth masks generational disruption. New jobs are real but they\u2019re not the same jobs, and they don\u2019t arrive on the same schedule as the losses.",
     aiParallel: "The timeline of disruption, not the domain",
@@ -48,15 +48,15 @@ const REVOLUTIONS: Revolution[] = [
       "Portable, distributed mechanical power enabling mobile machinery and mass production",
     automated: "Horse-powered transport and labor; physically repetitive assembly",
     destroyed:
-      "~1 million horse-economy workers (blacksmiths, stable hands, harness makers) — a category essentially eliminated",
+      "About 1 million horse-economy workers (blacksmiths, stable hands, harness makers), a category essentially wiped out",
     created:
-      "Auto manufacturing, trucking, road construction, petroleum, suburban retail — the entire 20th-century consumer economy",
+      "Auto manufacturing, trucking, road construction, petroleum, suburban retail. Basically the entire 20th-century consumer economy.",
     painfulPart:
-      "Ford\u2019s Five Dollar Day (1914) doubled wages deliberately — because mass production requires mass consumers. The interwar period still saw catastrophic structural unemployment.",
+      "Ford\u2019s Five Dollar Day (1914) doubled wages deliberately, because mass production requires mass consumers. The interwar period still saw catastrophic structural unemployment.",
     lesson:
       "Technologies that enable new forms of distribution tend to have larger and more diffuse effects than technologies that merely improve production. Mass productivity gains require mass purchasing power to be economically stable.",
     aiParallel:
-      "The demand-side logic — if AI creates enormous value, how it\u2019s distributed determines whether the economy remains stable",
+      "The demand-side logic: if AI creates enormous value, how it\u2019s distributed determines whether the economy remains stable",
   },
   {
     id: "electricity",
@@ -74,9 +74,9 @@ const REVOLUTIONS: Revolution[] = [
     created:
       "Electricians, electrical engineers, the entire consumer appliance industry (radio, refrigeration, washing machines), domestic electrification created conditions for women\u2019s mass labor force entry",
     painfulPart:
-      "Paul David\u2019s \u201cProductivity Paradox\u201d — electric dynamos were introduced in the 1880s but didn\u2019t show up in productivity statistics until the 1920s. 40 years.",
+      "Paul David\u2019s \u201cProductivity Paradox\u201d: electric dynamos were introduced in the 1880s but didn\u2019t show up in productivity statistics until the 1920s. That took 40 years.",
     lesson:
-      "The technology isn\u2019t the bottleneck — the organizational, educational, and institutional ecosystem surrounding it is. On-tap power democratized access to energy in ways that shifted competitive advantage from those who owned power infrastructure to those who used it most intelligently.",
+      "The technology isn\u2019t the bottleneck. The organizational, educational, and institutional ecosystem surrounding it is. On-tap power democratized access to energy in ways that shifted competitive advantage from those who owned power infrastructure to those who used it most intelligently.",
     aiParallel:
       "This is the on-tap intelligence moment. AI transforms cognitive capabilities from scarce expert resources into utilities. The productivity gains will arrive later than expected, and through organizational redesign more than simple substitution.",
   },
@@ -91,13 +91,13 @@ const REVOLUTIONS: Revolution[] = [
     automated:
       "Clerical labor (typing, filing, bookkeeping); routine cognitive tasks; then logistics and coordination",
     destroyed:
-      "Telephone operators, bank tellers, travel agents, filing clerks, typists — many roles reduced 80\u201390%",
+      "Telephone operators, bank tellers, travel agents, filing clerks, typists. Many of these roles shrank 80\u201390%.",
     created:
-      "Software developers, network engineers, UX designers, social media managers, e-commerce — industries generating trillions that didn\u2019t exist in 1990",
+      "Software developers, network engineers, UX designers, social media managers, e-commerce. Industries generating trillions that didn\u2019t exist in 1990.",
     painfulPart:
-      '\u201cLabor market polarization\u201d — growth at the top (knowledge workers) and bottom (personal services) of wages, hollowing out of the middle. College wage premium rose from ~40% to ~70% between 1980\u20132000. Workers without degrees saw real wages stagnate or fall for 40 years. Robert Solow\u2019s observation (1987): "You can see the computer age everywhere but in the productivity statistics."',
+      '\u201cLabor market polarization\u201d: growth at the top (knowledge workers) and bottom (personal services) of wages, hollowing out of the middle. The college wage premium rose from ~40% to ~70% between 1980\u20132000. Workers without degrees saw real wages stagnate or fall for 40 years. Robert Solow\u2019s observation (1987): "You can see the computer age everywhere but in the productivity statistics."',
     lesson:
-      "Technological gains accruing primarily to capital and high-skill workers is not inevitable — it\u2019s a policy choice. The computer era\u2019s inequality reflected specific institutional decisions (declining unions, wage policy, trade) as much as the technology itself.",
+      "Technological gains accruing primarily to capital and high-skill workers is not inevitable. It\u2019s a policy choice. The computer era\u2019s inequality reflected specific institutional decisions (declining unions, wage policy, trade) as much as the technology itself.",
     aiParallel:
       "The distributional warning. Without deliberate policy, AI-era gains will follow the computer-era pattern: high returns to capital and top earners, stagnation elsewhere.",
   },

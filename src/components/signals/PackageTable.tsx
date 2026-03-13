@@ -192,10 +192,10 @@ function PackageRow({
                 }`}
                 title={
                   pkg.signalQuality === "strong"
-                    ? "Low download-to-stars ratio — strong community signal"
+                    ? "Low download-to-stars ratio: strong community signal"
                     : pkg.signalQuality === "moderate"
                       ? "Moderate download-to-stars ratio"
-                      : "High download-to-stars ratio — likely CI/CD noise"
+                      : "High download-to-stars ratio: likely CI/CD noise"
                 }
               >
                 {pkg.signalQuality === "strong"

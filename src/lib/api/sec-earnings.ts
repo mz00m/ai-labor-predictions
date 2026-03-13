@@ -88,7 +88,7 @@ export async function searchSECFilings(
 
         allFilings.push({
           id: `sec-${hit._id}`,
-          title: `${companyName} ${formType} — AI/Workforce Disclosures`,
+          title: `${companyName} ${formType} | AI/Workforce Disclosures`,
           companyName,
           ticker,
           formType,

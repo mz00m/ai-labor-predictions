@@ -262,7 +262,7 @@ export default function PredictionSummaryCard({
             {contextLine}
           </p>
           <p className="text-[11px] text-[var(--muted)] opacity-60 mb-4">
-            {filteredHistory.length} source{filteredHistory.length !== 1 ? "s" : ""}{agg.min !== agg.max ? ` ranging ${agg.min}–${agg.max}${prediction.unit.includes("%") ? "%" : ""}` : ""}{agg.max - agg.min > 10 ? " — significant disagreement" : ""}.{" "}
+            {filteredHistory.length} source{filteredHistory.length !== 1 ? "s" : ""}{agg.min !== agg.max ? ` ranging ${agg.min}–${agg.max}${prediction.unit.includes("%") ? "%" : ""}` : ""}{agg.max - agg.min > 10 ? " (significant disagreement)" : ""}.{" "}
             <span
               className="underline cursor-pointer"
               onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.location.href = "/about#how-we-calculate"; }}

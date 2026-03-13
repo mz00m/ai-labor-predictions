@@ -99,7 +99,7 @@ const RESPONDENTS: Respondent[] = [
     bio: "https://www.econ.berkeley.edu/profile/013121396",
     linkedin: null,
     isCrowd: false,
-    note: "Macro economist focused on monetary and fiscal policy. Puts notable 20% weight on stagnation risk — among the higher estimates in the group.",
+    note: "Macro economist focused on monetary and fiscal policy. Puts notable 20% weight on stagnation risk, among the higher estimates in the group.",
     probs: { stagnation: 20, status_quo: 35, solid_breakout: 30, boom: 12, phase_change: 3 },
   },
   {

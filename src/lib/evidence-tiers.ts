@@ -19,7 +19,7 @@ export const TIER_CONFIGS: TierConfig[] = [
     color: "#16a34a",
     bgColor: "bg-green-100 dark:bg-green-900/30",
     borderColor: "border-green-500",
-    description: "Highest confidence — direct empirical evidence",
+    description: "Highest confidence: direct empirical evidence",
     includes: [
       "Randomized controlled trials (RCTs)",
       "Peer-reviewed journal articles (AER, QJE, NBER)",
@@ -66,7 +66,7 @@ export const TIER_CONFIGS: TierConfig[] = [
     color: "#dc2626",
     bgColor: "bg-red-100 dark:bg-red-900/30",
     borderColor: "border-red-500",
-    description: "Unvetted — anecdotal and crowd-sourced",
+    description: "Unvetted: anecdotal and crowd-sourced",
     includes: [
       "Twitter/X threads and posts",
       "Reddit discussions",

@@ -100,7 +100,7 @@ const ANNOTATIONS: Record<string, ResearchAnnotation> = {
   },
   "robots-physical-automation-displacement": {
     note:
-      "Mixed evidence: Acemoglu & Restrepo (2020) provide causal estimates from US labor markets showing modest displacement per robot. IFR data shows accelerating installations but BLS projections remain conservative. Physical task automation is cost-constrained — McKinsey (2025) notes robot unit costs must fall 70-90% for mass adoption.",
+      "Mixed evidence: Acemoglu & Restrepo (2020) provide causal estimates from US labor markets showing modest displacement per robot. IFR data shows accelerating installations but BLS projections remain conservative. Physical task automation is cost-constrained. McKinsey (2025) notes robot unit costs must fall 70-90% for mass adoption.",
     estimateType: "mixed",
   },
 };

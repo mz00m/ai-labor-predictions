@@ -197,7 +197,7 @@ export default function Chatbot() {
       const now = Date.now();
       const elapsed = now - lastSendRef.current;
       if (elapsed < MIN_SEND_GAP_MS) {
-        setError("Hold on — give it a second before sending another message.");
+        setError("Hold on, give it a second before sending another message.");
         return;
       }
       lastSendRef.current = now;
