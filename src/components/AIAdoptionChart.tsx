@@ -204,7 +204,7 @@ export default function AIAdoptionChart() {
         >
           <CartesianGrid
             strokeDasharray="3 3"
-            opacity={0.15}
+            opacity={0.06}
             vertical={false}
           />
           <XAxis

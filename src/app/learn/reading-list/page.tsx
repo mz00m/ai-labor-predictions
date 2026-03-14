@@ -16,8 +16,8 @@ interface Article {
 }
 
 const TIER_BG_COLORS: Record<number, string> = {
-  1: "bg-emerald-100 text-emerald-800",
-  2: "bg-blue-100 text-blue-800",
+  1: "bg-indigo-100 text-indigo-800",
+  2: "bg-teal-100 text-teal-800",
   3: "bg-amber-100 text-amber-800",
   4: "bg-gray-100 text-gray-700",
 };

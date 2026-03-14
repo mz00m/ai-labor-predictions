@@ -88,7 +88,7 @@ function CustomTooltip({
   const pointSources = sources.filter((s) => data.sourceIds.includes(s.id));
 
   return (
-    <div className="bg-white border border-black/[0.08] rounded-lg p-3.5 max-w-xs shadow-sm">
+    <div className="bg-[var(--background)] border border-[var(--border)] rounded-lg p-3.5 max-w-xs shadow-sm">
       {/* Data point section (only for real points) */}
       {!data.isPhantom && data.value != null && (
         <>
@@ -132,7 +132,7 @@ function CustomTooltip({
           {pointSources.length > 0 && (
             <div className="mt-2 border-t border-black/[0.06] pt-1.5">
               {pointSources.map((s) => (
-                <p key={s.id} className="text-[11px] text-[var(--accent)]">
+                <p key={s.id} className="text-[11px] text-[var(--accent-text)]">
                   {s.publisher}: {s.title.slice(0, 55)}
                   {s.title.length > 55 ? "..." : ""}
                 </p>
@@ -187,7 +187,7 @@ function CustomTooltip({
                 {overlaySources.length > 0 && (
                   <div className="mt-1">
                     {overlaySources.map((s) => (
-                      <p key={s.id} className="text-[11px] text-[var(--accent)]">
+                      <p key={s.id} className="text-[11px] text-[var(--accent-text)]">
                         {s.publisher}: {s.title.slice(0, 55)}
                         {s.title.length > 55 ? "..." : ""}
                       </p>
@@ -694,7 +694,7 @@ export default function PredictionChart({
           }}
           style={{ cursor: onDotClick ? "pointer" : undefined }}
         >
-          <CartesianGrid strokeDasharray="3 3" opacity={0.2} />
+          <CartesianGrid strokeDasharray="3 3" opacity={0.06} />
           <XAxis
             dataKey="dateStr"
             tick={{ fontSize: 12, fill: "#6b7280" }}
@@ -894,7 +894,7 @@ export default function PredictionChart({
             pointerEvents: "none",
           }}
         >
-          <div className="bg-white border border-black/[0.08] rounded-lg p-3.5 max-w-xs shadow-sm">
+          <div className="bg-[var(--background)] border border-[var(--border)] rounded-lg p-3.5 max-w-xs shadow-sm">
             <p className="text-[12px] font-medium text-[var(--foreground)] mb-1.5">
               {hoverOverlay.overlay.dateStr}
             </p>
@@ -919,7 +919,7 @@ export default function PredictionChart({
                   {overlaySources.length > 0 && (
                     <div className="mt-1">
                       {overlaySources.map((s) => (
-                        <p key={s.id} className="text-[11px] text-[var(--accent)]">
+                        <p key={s.id} className="text-[11px] text-[var(--accent-text)]">
                           {s.publisher}: {s.title.slice(0, 55)}
                           {s.title.length > 55 ? "..." : ""}
                         </p>

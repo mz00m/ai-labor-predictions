@@ -53,7 +53,7 @@ function SentimentIcon({ sentiment }: { sentiment: TickerHeadline["sentiment"] }
       height="12"
       viewBox="0 0 12 12"
       fill="none"
-      className="shrink-0 text-blue-300/60"
+      className="shrink-0 text-white/40"
     >
       <path
         d="M2 6h8M10 6l-3-3M10 6l-3 3"
@@ -79,23 +79,23 @@ function HeadlineItem({ headline }: { headline: TickerHeadline }) {
   return (
     <span className="inline-flex items-center gap-2 whitespace-nowrap px-4">
       <SentimentIcon sentiment={headline.sentiment} />
-      <span className="text-[11px] sm:text-[12px] font-semibold text-blue-200/70">
+      <span className="text-[11px] sm:text-[12px] font-semibold text-white/60">
         {headline.source}
       </span>
       {timeAgo && (
         <>
-          <span className="text-blue-300/30">·</span>
-          <span className="text-[11px] sm:text-[12px] text-blue-200/40">
+          <span className="text-white/20">·</span>
+          <span className="text-[11px] sm:text-[12px] text-white/30">
             {timeAgo}
           </span>
         </>
       )}
-      <span className="text-blue-300/30">·</span>
+      <span className="text-white/20">·</span>
       <a
         href={headline.link}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-[12px] sm:text-[13px] text-blue-50/90 hover:text-white"
+        className="text-[12px] sm:text-[13px] text-white/85 hover:text-white"
       >
         {headline.title}
       </a>
@@ -154,17 +154,17 @@ export default function NewsTicker() {
   // Always render the container to avoid layout shift
   return (
     <div
-      className="relative bg-[#2a5280] h-9 sm:h-10 overflow-hidden flex items-center -mx-6 sm:-mx-10"
+      className="relative bg-[#1a1a24] h-9 sm:h-10 overflow-hidden flex items-center -mx-6 sm:-mx-10"
       role="marquee"
       aria-label="Latest AI labor market headlines"
     >
       {/* LIVE label */}
-      <div className="absolute left-0 top-0 bottom-0 flex items-center gap-1.5 pl-6 pr-2 sm:pl-10 sm:pr-3 bg-[#2a5280] z-10">
+      <div className="absolute left-0 top-0 bottom-0 flex items-center gap-1.5 pl-6 pr-2 sm:pl-10 sm:pr-3 bg-[#1a1a24] z-10">
         <span className="relative flex h-2 w-2">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" />
           <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500" />
         </span>
-        <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-blue-100/80">
+        <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-white/70">
           Live
         </span>
       </div>

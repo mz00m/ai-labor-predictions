@@ -14,6 +14,7 @@ html {
   --background: #ffffff;
   --muted: #6b7280;
   --accent: #5C61F6;
+  --accent-text: #4F52D4;
   --accent-light: #eef0ff;
   --border: rgba(0, 0, 0, 0.08);
 }
