@@ -38,7 +38,7 @@ export default function EvidenceFilter({
             onClick={selectResearchOnly}
             className={`text-[12px] font-semibold cursor-pointer ${
               researchOnly
-                ? "text-emerald-600 underline underline-offset-4"
+                ? "text-[var(--accent)] underline underline-offset-4"
                 : "text-[var(--muted)] hover:text-[var(--foreground)]"
             }`}
           >

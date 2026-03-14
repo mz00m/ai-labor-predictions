@@ -35,7 +35,7 @@ export default function Home() {
   const totalSources = getSourceCount();
 
   return (
-    <div className="space-y-16">
+    <div className="space-y-0">
       {/* Hero */}
       <div className="relative overflow-hidden -mx-6 sm:-mx-10 px-6 sm:px-10 pt-1 pb-0 sm:pt-2 sm:pb-0">
         {/* Background gradient orbs */}
@@ -120,13 +120,13 @@ export default function Home() {
       </div>
 
       {/* Evidence Funnel */}
-      <section>
+      <section className="mt-20">
         <FunnelStrip />
       </section>
 
       {/* Section break — Predictions Over Time */}
-      <div className="relative -mx-6 sm:-mx-10">
-        <div className="h-1 bg-gradient-to-r from-emerald-500 via-blue-500 to-violet-500" />
+      <div className="relative -mx-6 sm:-mx-10 mt-20">
+        <div className="h-1 bg-gradient-to-r from-[#3ECFAE] via-[#6B7BF7] to-[#F7C96B]" />
         <div className="px-6 sm:px-10 pt-10 pb-2">
           <h2 className="text-[28px] sm:text-[36px] font-black tracking-tight text-[var(--foreground)] leading-tight mb-3">
             Predictions Over Time
@@ -138,7 +138,7 @@ export default function Home() {
       </div>
 
       {/* Evidence Filter — full version in-flow */}
-      <section>
+      <section className="mt-12">
         <EvidenceFilter
           selectedTiers={selectedTiers}
           onChange={setSelectedTiers}
@@ -146,7 +146,7 @@ export default function Home() {
       </section>
 
       {/* Compact sticky tier bar */}
-      <div className="sticky top-12 z-40 bg-white/95 backdrop-blur-sm -mx-6 sm:-mx-10 px-6 sm:px-10 py-0 border-b border-black/[0.06] flex items-center justify-between gap-4">
+      <div className="sticky top-12 z-40 bg-white/95 backdrop-blur-sm -mx-6 sm:-mx-10 px-6 sm:px-10 py-1 border-b border-black/[0.06] flex items-center justify-between gap-4 mt-6">
         <div className="flex items-center gap-0">
           {([1, 2, 3, 4] as EvidenceTier[]).map((tier) => {
             const checked = selectedTiers.includes(tier);
@@ -211,7 +211,7 @@ export default function Home() {
       </div>
 
       {/* Job Displacement & Restructuring */}
-      <section id="displacement">
+      <section id="displacement" className="mt-16">
         <div className="mb-8 flex items-start gap-3">
           <div className="w-1 self-stretch rounded-full bg-red-400/60 shrink-0" />
           <div>
@@ -235,7 +235,7 @@ export default function Home() {
       </section>
 
       {/* Wage Impact */}
-      <section id="wages">
+      <section id="wages" className="mt-12">
         <div className="mb-8 flex items-start gap-3">
           <div className="w-1 self-stretch rounded-full bg-blue-400/60 shrink-0" />
           <div>
@@ -260,7 +260,7 @@ export default function Home() {
 
       {/* AI Adoption */}
       {adoption.length > 0 && (
-        <section>
+        <section className="mt-12">
           <div className="mb-8 flex items-start gap-3">
             <div className="w-1 self-stretch rounded-full bg-emerald-400/60 shrink-0" />
             <div>
@@ -285,15 +285,19 @@ export default function Home() {
       )}
 
       {/* ChatGPT Usage by Age */}
-      <AgeUsageTile />
+      <div className="mt-16">
+        <AgeUsageTile />
+      </div>
 
       {/* Productivity Predictions */}
-      <ProductivityPredictions />
+      <div className="mt-16">
+        <ProductivityPredictions />
+      </div>
 
       {/* Link → signals productivity paths */}
       <a
         href="/signals#productivity-paths"
-        className="group flex items-center gap-2 text-[15px] font-semibold text-[var(--accent)] hover:text-[#5C61F6] transition-colors -mt-4"
+        className="group flex items-center gap-2 text-[15px] font-semibold text-[var(--accent)] hover:text-[#5C61F6] transition-colors mt-4"
       >
         What happens when workers get more productive?
         <svg
@@ -313,10 +317,12 @@ export default function Home() {
       </a>
 
       {/* Research Evidence */}
-      <ResearchEvidence />
+      <div className="mt-20">
+        <ResearchEvidence />
+      </div>
 
       {/* Research Feed */}
-      <section id="research-feed">
+      <section id="research-feed" className="mt-10">
         <ResearchFeed selectedTiers={selectedTiers} />
       </section>
     </div>
