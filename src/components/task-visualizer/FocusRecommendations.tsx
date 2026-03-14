@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
-import { JobTask, TASK_CATEGORY_META, calculateCrossoverYear } from "@/data/job-tasks";
+import { JobTask, calculateCrossoverYear } from "@/data/job-tasks";
 
 interface FocusRecommendationsProps {
   tasks: JobTask[];
@@ -84,10 +84,7 @@ export default function FocusRecommendations({
                 className="flex items-center justify-between py-1.5 px-3 rounded-lg bg-black/[0.02]"
               >
                 <div className="flex items-center gap-2">
-                  <div
-                    className="w-2 h-2 rounded-full"
-                    style={{ backgroundColor: TASK_CATEGORY_META[task.category].color }}
-                  />
+                  <div className="w-2 h-2 rounded-full bg-[#EF4444]" />
                   <span className="text-[12px] font-medium">{task.name}</span>
                 </div>
                 <span className="text-[11px] text-[var(--muted)]">
@@ -102,8 +99,8 @@ export default function FocusRecommendations({
       {/* Augment */}
       {augment.length > 0 && (
         <div>
-          <h4 className="text-[13px] font-semibold text-[#F59E0B] mb-2 flex items-center gap-1.5">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#F59E0B]" />
+          <h4 className="text-[13px] font-semibold text-[#6366F1] mb-2 flex items-center gap-1.5">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#6366F1]" />
             Learn to work with AI
           </h4>
           <p className="text-[12px] text-[var(--muted)] mb-2">
@@ -116,10 +113,7 @@ export default function FocusRecommendations({
                 className="flex items-center justify-between py-1.5 px-3 rounded-lg bg-black/[0.02]"
               >
                 <div className="flex items-center gap-2">
-                  <div
-                    className="w-2 h-2 rounded-full"
-                    style={{ backgroundColor: TASK_CATEGORY_META[task.category].color }}
-                  />
+                  <div className="w-2 h-2 rounded-full bg-[#6366F1]" />
                   <span className="text-[12px] font-medium">{task.name}</span>
                 </div>
                 <span className="text-[11px] text-[var(--muted)]">
@@ -148,10 +142,7 @@ export default function FocusRecommendations({
                 className="flex items-center justify-between py-1.5 px-3 rounded-lg bg-black/[0.02]"
               >
                 <div className="flex items-center gap-2">
-                  <div
-                    className="w-2 h-2 rounded-full"
-                    style={{ backgroundColor: TASK_CATEGORY_META[task.category].color }}
-                  />
+                  <div className="w-2 h-2 rounded-full bg-[#10B981]" />
                   <span className="text-[12px] font-medium">{task.name}</span>
                 </div>
                 <span className="text-[11px] text-[var(--muted)]">

@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback } from "react";
-import { JobTask, TASK_CATEGORY_META, calculateCrossoverYear } from "@/data/job-tasks";
+import { JobTask, calculateCrossoverYear } from "@/data/job-tasks";
 
 interface TaskSlidersProps {
   tasks: JobTask[];
@@ -54,7 +54,6 @@ export default function TaskSliders({
           humanWagePerHr
         );
         const risk = getRiskBadge(crossover);
-        const catMeta = TASK_CATEGORY_META[task.category];
 
         return (
           <div key={task.id} className="group">
@@ -62,7 +61,7 @@ export default function TaskSliders({
               <div className="flex items-center gap-2 min-w-0">
                 <div
                   className="w-2 h-2 rounded-full shrink-0"
-                  style={{ backgroundColor: catMeta.color }}
+                  style={{ backgroundColor: risk.color }}
                 />
                 <span className="text-[13px] font-medium text-[var(--foreground)] truncate">
                   {task.name}
@@ -88,7 +87,7 @@ export default function TaskSliders({
               onChange={(e) => handleChange(task.id, parseInt(e.target.value) / 100)}
               className="w-full h-1.5 rounded-full appearance-none cursor-pointer"
               style={{
-                background: `linear-gradient(to right, ${catMeta.color} 0%, ${catMeta.color} ${share * 100}%, rgba(0,0,0,0.06) ${share * 100}%, rgba(0,0,0,0.06) 100%)`,
+                background: `linear-gradient(to right, ${risk.color} 0%, ${risk.color} ${share * 100}%, rgba(0,0,0,0.06) ${share * 100}%, rgba(0,0,0,0.06) 100%)`,
               }}
             />
             <p className="text-[11px] text-[var(--muted)] mt-0.5 opacity-0 group-hover:opacity-100 transition-opacity">

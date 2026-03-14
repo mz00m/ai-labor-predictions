@@ -12,7 +12,7 @@ import {
   Cell,
   TooltipProps,
 } from "recharts";
-import { JobTask, TASK_CATEGORY_META, calculateCrossoverYear } from "@/data/job-tasks";
+import { JobTask, calculateCrossoverYear } from "@/data/job-tasks";
 
 interface TaskBreakdownChartProps {
   tasks: JobTask[];
@@ -20,22 +20,19 @@ interface TaskBreakdownChartProps {
   humanWagePerHr: number;
 }
 
-function getRiskLevel(
-  crossoverYear: number | null
-): { label: string; color: string; bg: string } {
-  if (!crossoverYear || crossoverYear <= 2026) {
-    return { label: "Automated now", color: "#EF4444", bg: "rgba(239, 68, 68, 0.1)" };
-  }
-  if (crossoverYear <= 2028) {
-    return { label: "1-2 years", color: "#EF4444", bg: "rgba(239, 68, 68, 0.08)" };
-  }
-  if (crossoverYear <= 2031) {
-    return { label: "3-5 years", color: "#6366F1", bg: "rgba(99, 102, 241, 0.08)" };
-  }
-  if (crossoverYear <= 2036) {
-    return { label: "5-10 years", color: "#10B981", bg: "rgba(16, 185, 129, 0.08)" };
-  }
-  return { label: "10+ years", color: "#10B981", bg: "rgba(16, 185, 129, 0.06)" };
+/** Red/blue/green risk palette — the through-line of the whole visualizer */
+function getRiskColor(crossoverYear: number | null): string {
+  if (!crossoverYear || crossoverYear <= 2028) return "#EF4444"; // red — high risk
+  if (crossoverYear <= 2031) return "#6366F1"; // indigo — moderate
+  return "#10B981"; // green — durable
+}
+
+function getRiskLabel(crossoverYear: number | null): string {
+  if (!crossoverYear || crossoverYear <= 2026) return "At risk now";
+  if (crossoverYear <= 2028) return "1-2 years";
+  if (crossoverYear <= 2031) return "3-5 years";
+  if (crossoverYear <= 2036) return "5-10 years";
+  return "10+ years";
 }
 
 function CustomTooltip({
@@ -85,7 +82,7 @@ export default function TaskBreakdownChart({
           { ...task, timeShare: adjustedShare },
           humanWagePerHr
         );
-        const risk = getRiskLevel(crossover);
+        const riskColor = getRiskColor(crossover);
         return {
           id: task.id,
           name: task.name,
@@ -100,10 +97,8 @@ export default function TaskBreakdownChart({
               ? "Now"
               : `~${crossover}`
             : "Not foreseeable",
-          riskColor: risk.color,
-          riskLabel: risk.label,
-          category: task.category,
-          categoryColor: TASK_CATEGORY_META[task.category].color,
+          riskColor,
+          riskLabel: getRiskLabel(crossover),
         };
       })
       .sort((a, b) => b.adjustedShare - a.adjustedShare);
@@ -138,24 +133,26 @@ export default function TaskBreakdownChart({
             <Tooltip content={<CustomTooltip />} cursor={{ fill: "rgba(0,0,0,0.02)" }} />
             <Bar dataKey="sharePercent" radius={[0, 4, 4, 0]} barSize={24}>
               {chartData.map((entry) => (
-                <Cell key={entry.id} fill={entry.categoryColor} fillOpacity={0.85} />
+                <Cell key={entry.id} fill={entry.riskColor} fillOpacity={0.75} />
               ))}
             </Bar>
           </BarChart>
         </ResponsiveContainer>
       </div>
 
-      {/* Legend */}
-      <div className="flex flex-wrap gap-3 mt-4 pt-3 border-t border-black/[0.06]">
-        {Array.from(new Set(chartData.map((d) => d.category))).map((cat) => (
-          <div key={cat} className="flex items-center gap-1.5">
+      {/* Simple risk legend */}
+      <div className="flex gap-4 mt-4 pt-3 border-t border-black/[0.06]">
+        {[
+          { label: "High risk (<3yr)", color: "#EF4444" },
+          { label: "Moderate (3-5yr)", color: "#6366F1" },
+          { label: "Durable (5yr+)", color: "#10B981" },
+        ].map((item) => (
+          <div key={item.label} className="flex items-center gap-1.5">
             <div
               className="w-2.5 h-2.5 rounded-full"
-              style={{ backgroundColor: TASK_CATEGORY_META[cat].color }}
+              style={{ backgroundColor: item.color }}
             />
-            <span className="text-[11px] text-[var(--muted)]">
-              {TASK_CATEGORY_META[cat].label}
-            </span>
+            <span className="text-[11px] text-[var(--muted)]">{item.label}</span>
           </div>
         ))}
       </div>

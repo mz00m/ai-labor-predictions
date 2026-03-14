@@ -14,7 +14,7 @@ import {
 } from "recharts";
 import {
   JobTask,
-  TASK_CATEGORY_META,
+  DEPLOYMENT_OVERHEAD,
   generateCostTrajectory,
   getTaskTokenCost,
   MODEL_PRICING,
@@ -26,26 +26,41 @@ interface ComputeCostChartProps {
   humanWagePerHr: number;
 }
 
+/** Soft, distinguishable line colors — no category semantics, just visual differentiation */
+const LINE_COLORS = [
+  "#6366F1", // indigo
+  "#06B6D4", // cyan
+  "#8B5CF6", // violet
+  "#0EA5E9", // sky
+  "#A78BFA", // light violet
+  "#38BDF8", // light sky
+  "#818CF8", // light indigo
+  "#67E8F9", // light cyan
+];
+
 function CustomTooltip({ active, payload, label }: TooltipProps<number, string>) {
   if (!active || !payload?.length) return null;
   return (
-    <div className="bg-white rounded-lg border border-black/[0.08] shadow-lg p-3 max-w-[220px]">
+    <div className="bg-white rounded-lg border border-black/[0.08] shadow-lg p-3 max-w-[260px]">
       <p className="text-[12px] font-semibold text-[var(--foreground)] mb-2">{label}</p>
       {payload
         .filter((p) => p.value !== undefined && p.dataKey !== "humanCost")
-        .map((p) => (
-          <div key={p.dataKey} className="flex justify-between text-[11px] mb-0.5">
-            <span style={{ color: p.color }}>{String(p.name)}</span>
-            <span className="font-medium ml-3">
-              ${typeof p.value === "number" ? p.value.toFixed(2) : p.value}/hr
-            </span>
-          </div>
-        ))}
+        .map((p) => {
+          const val = typeof p.value === "number" ? p.value : 0;
+          return (
+            <div key={p.dataKey} className="flex justify-between text-[11px] mb-0.5">
+              <span style={{ color: p.color }}>{String(p.name)}</span>
+              <span className="font-medium ml-3">
+                ${val < 1 ? val.toFixed(2) : val.toFixed(0)}/hr
+              </span>
+            </div>
+          );
+        })}
       {payload.find((p) => p.dataKey === "humanCost") && (
         <div className="flex justify-between text-[11px] mt-1 pt-1 border-t border-black/[0.06]">
-          <span className="text-[var(--muted)]">Human cost</span>
+          <span className="text-[var(--muted)]">Your wage</span>
           <span className="font-medium">
-            ${payload.find((p) => p.dataKey === "humanCost")?.value?.toFixed(2)}/hr
+            ${payload.find((p) => p.dataKey === "humanCost")?.value?.toFixed(0)}/hr
           </span>
         </div>
       )}
@@ -68,7 +83,6 @@ export default function ComputeCostChart({
 
     for (let y = 0; y <= years; y++) {
       const point: Record<string, number | string> = { year: `${2026 + y}` };
-      // Blended human cost as reference
       point.humanCost = Math.round(humanWagePerHr * 100) / 100;
 
       for (const task of tasks) {
@@ -86,6 +100,23 @@ export default function ComputeCostChart({
     return data;
   }, [tasks, adjustedShares, humanWagePerHr, selectedTasks]);
 
+  // Compute Y-axis domain to ensure both wage and all task lines are visible
+  const yDomain = useMemo(() => {
+    let minVal = humanWagePerHr;
+    let maxVal = humanWagePerHr;
+    for (const point of chartData) {
+      for (const [key, val] of Object.entries(point)) {
+        if (key === "year" || key === "humanCost") continue;
+        if (typeof val === "number" && val > 0) {
+          minVal = Math.min(minVal, val);
+          maxVal = Math.max(maxVal, val);
+        }
+      }
+    }
+    // Add padding: go 2x below min and 2x above max for log scale
+    return [Math.max(0.01, minVal / 3), maxVal * 2];
+  }, [chartData, humanWagePerHr]);
+
   const toggleTask = (id: string) => {
     setSelectedTasks((prev) => {
       const next = new Set(prev);
@@ -98,13 +129,27 @@ export default function ComputeCostChart({
     });
   };
 
+  // Assign colors by selection order, not category
+  const selectedTasksList = tasks.filter((t) => selectedTasks.has(t.id));
+
   return (
     <div>
-      {/* Task selector pills */}
+      {/* Explanation */}
+      <div className="rounded-lg bg-gradient-to-r from-indigo-50/40 to-sky-50/40 border border-indigo-100/30 p-3 mb-5">
+        <p className="text-[12px] text-[var(--foreground)] leading-relaxed">
+          Each line shows the <strong>total cost to automate one hour</strong> of a task
+          (API costs + deployment overhead). When a line drops below the{" "}
+          <span className="text-[#EF4444] font-medium">red wage line</span>, there is
+          economic incentive to automate that task. The vertical distance between a line
+          and the wage line shows how much cost must still fall.
+        </p>
+      </div>
+
+      {/* Task selector pills — neutral styling */}
       <div className="flex flex-wrap gap-1.5 mb-5">
-        {tasks.map((task) => {
+        {tasks.map((task, i) => {
           const isSelected = selectedTasks.has(task.id);
-          const color = TASK_CATEGORY_META[task.category].color;
+          const color = LINE_COLORS[i % LINE_COLORS.length];
           return (
             <button
               key={task.id}
@@ -112,8 +157,8 @@ export default function ComputeCostChart({
               className="text-[11px] font-medium px-2.5 py-1 rounded-full border transition-colors"
               style={{
                 borderColor: isSelected ? color : "rgba(0,0,0,0.08)",
-                backgroundColor: isSelected ? `${color}10` : "transparent",
-                color: isSelected ? color : "#6b7280",
+                backgroundColor: isSelected ? `${color}12` : "transparent",
+                color: isSelected ? color : "#9ca3af",
               }}
             >
               {task.name}
@@ -122,9 +167,9 @@ export default function ComputeCostChart({
         })}
       </div>
 
-      <div className="h-[320px]">
+      <div className="h-[360px]">
         <ResponsiveContainer width="100%" height="100%">
-          <LineChart data={chartData} margin={{ top: 5, right: 20, left: 5, bottom: 5 }}>
+          <LineChart data={chartData} margin={{ top: 5, right: 20, left: 10, bottom: 5 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="rgba(0,0,0,0.06)" />
             <XAxis
               dataKey="year"
@@ -136,9 +181,9 @@ export default function ComputeCostChart({
               tick={{ fontSize: 11, fill: "#6b7280" }}
               axisLine={false}
               tickLine={false}
-              tickFormatter={(v) => `$${v}`}
+              tickFormatter={(v) => v >= 1000 ? `$${(v / 1000).toFixed(0)}K` : `$${v}`}
               scale="log"
-              domain={["auto", "auto"]}
+              domain={yDomain}
               allowDataOverflow
             />
             <Tooltip content={<CustomTooltip />} />
@@ -146,96 +191,97 @@ export default function ComputeCostChart({
               y={humanWagePerHr}
               stroke="#EF4444"
               strokeDasharray="6 3"
-              strokeWidth={1.5}
+              strokeWidth={2}
               label={{
-                value: `Human wage: $${humanWagePerHr}/hr`,
+                value: `Your wage: $${humanWagePerHr}/hr`,
                 position: "insideTopRight",
                 fill: "#EF4444",
                 fontSize: 11,
+                fontWeight: 600,
               }}
             />
-            {tasks
-              .filter((t) => selectedTasks.has(t.id))
-              .map((task) => (
-                <Line
-                  key={task.id}
-                  type="monotone"
-                  dataKey={task.id}
-                  name={task.name}
-                  stroke={TASK_CATEGORY_META[task.category].color}
-                  strokeWidth={2}
-                  dot={false}
-                  connectNulls
-                />
-              ))}
+            {selectedTasksList.map((task, i) => (
+              <Line
+                key={task.id}
+                type="monotone"
+                dataKey={task.id}
+                name={task.name}
+                stroke={LINE_COLORS[tasks.indexOf(task) % LINE_COLORS.length]}
+                strokeWidth={2}
+                dot={false}
+                connectNulls
+              />
+            ))}
           </LineChart>
         </ResponsiveContainer>
       </div>
 
       <p className="text-[11px] text-[var(--muted)] mt-3">
-        Log scale. When a task line drops below the red wage line, there is economic incentive to automate it.
-        Cost decline rates based on observed AI inference cost trends (30-48% annual decline).
+        Log scale. Includes {DEPLOYMENT_OVERHEAD}x deployment overhead (integration, tooling, validation)
+        on top of raw API costs. Cost decline rates: 30-48% annual based on observed AI inference trends.
       </p>
 
       {/* Token economics breakdown */}
       <div className="mt-6 pt-5 border-t border-black/[0.06]">
         <h4 className="text-[13px] font-semibold text-[var(--foreground)] mb-1">
-          Token economics breakdown
+          How we calculate cost per task
         </h4>
         <p className="text-[11px] text-[var(--muted)] mb-3">
-          How compute cost per task is calculated from real AI API pricing: Cost = Calls x (Input tokens x Input price + Output tokens x Output price) x Overhead
+          Raw API cost = Calls/hr x (Input tokens x Input price + Output tokens x Output price) x Call overhead.
+          Deployment overhead ({DEPLOYMENT_OVERHEAD}x) is applied separately in the crossover calculation.
         </p>
         <div className="overflow-x-auto">
           <table className="w-full text-[11px]">
             <thead>
               <tr className="border-b border-black/[0.06]">
                 <th className="text-left py-1.5 pr-2 text-[var(--foreground)] font-semibold">Task</th>
-                <th className="text-right py-1.5 px-2 text-[var(--foreground)] font-semibold">Model</th>
+                <th className="text-right py-1.5 px-2 text-[var(--foreground)] font-semibold">Model tier</th>
                 <th className="text-right py-1.5 px-2 text-[var(--foreground)] font-semibold">In tokens</th>
                 <th className="text-right py-1.5 px-2 text-[var(--foreground)] font-semibold">Out tokens</th>
                 <th className="text-right py-1.5 px-2 text-[var(--foreground)] font-semibold">Calls/hr</th>
                 <th className="text-right py-1.5 px-2 text-[var(--foreground)] font-semibold">$/call</th>
                 <th className="text-right py-1.5 px-2 text-[var(--foreground)] font-semibold">Overhead</th>
-                <th className="text-right py-1.5 pl-2 text-[var(--foreground)] font-semibold">$/hr</th>
+                <th className="text-right py-1.5 pl-2 text-[var(--foreground)] font-semibold">Raw $/hr</th>
               </tr>
             </thead>
             <tbody className="text-[var(--muted)]">
-              {tasks
-                .filter((t) => selectedTasks.has(t.id))
-                .map((task) => {
-                  const { costPerHour, profile, costPerCall } = getTaskTokenCost(task);
-                  const tierLabel = MODEL_PRICING[profile.modelTier].label.split(" ")[0];
-                  return (
-                    <tr key={task.id} className="border-b border-black/[0.03]">
-                      <td className="py-1.5 pr-2 font-medium" style={{ color: TASK_CATEGORY_META[task.category].color }}>
-                        {task.name}
-                      </td>
-                      <td className="text-right py-1.5 px-2">{tierLabel}</td>
-                      <td className="text-right py-1.5 px-2 tabular-nums">
-                        {profile.inputTokensPerCall >= 1000
-                          ? `${(profile.inputTokensPerCall / 1000).toFixed(0)}K`
-                          : profile.inputTokensPerCall}
-                      </td>
-                      <td className="text-right py-1.5 px-2 tabular-nums">
-                        {profile.outputTokensPerCall >= 1000
-                          ? `${(profile.outputTokensPerCall / 1000).toFixed(0)}K`
-                          : profile.outputTokensPerCall}
-                      </td>
-                      <td className="text-right py-1.5 px-2 tabular-nums">{profile.callsPerHumanHour}</td>
-                      <td className="text-right py-1.5 px-2 tabular-nums">${costPerCall < 0.01 ? costPerCall.toFixed(4) : costPerCall.toFixed(3)}</td>
-                      <td className="text-right py-1.5 px-2 tabular-nums">{profile.overheadMultiplier}x</td>
-                      <td className="text-right py-1.5 pl-2 tabular-nums font-medium text-[var(--foreground)]">
-                        ${costPerHour < 1 ? costPerHour.toFixed(3) : costPerHour.toFixed(2)}
-                      </td>
-                    </tr>
-                  );
-                })}
+              {selectedTasksList.map((task, i) => {
+                const { costPerHour, profile, costPerCall } = getTaskTokenCost(task);
+                const tierLabel = MODEL_PRICING[profile.modelTier].label.split(" ")[0];
+                const lineColor = LINE_COLORS[tasks.indexOf(task) % LINE_COLORS.length];
+                return (
+                  <tr key={task.id} className="border-b border-black/[0.03]">
+                    <td className="py-1.5 pr-2 font-medium" style={{ color: lineColor }}>
+                      {task.name}
+                    </td>
+                    <td className="text-right py-1.5 px-2">{tierLabel}</td>
+                    <td className="text-right py-1.5 px-2 tabular-nums">
+                      {profile.inputTokensPerCall >= 1000
+                        ? `${(profile.inputTokensPerCall / 1000).toFixed(0)}K`
+                        : profile.inputTokensPerCall}
+                    </td>
+                    <td className="text-right py-1.5 px-2 tabular-nums">
+                      {profile.outputTokensPerCall >= 1000
+                        ? `${(profile.outputTokensPerCall / 1000).toFixed(0)}K`
+                        : profile.outputTokensPerCall}
+                    </td>
+                    <td className="text-right py-1.5 px-2 tabular-nums">{profile.callsPerHumanHour}</td>
+                    <td className="text-right py-1.5 px-2 tabular-nums">${costPerCall < 0.01 ? costPerCall.toFixed(4) : costPerCall.toFixed(3)}</td>
+                    <td className="text-right py-1.5 px-2 tabular-nums">{profile.overheadMultiplier}x</td>
+                    <td className="text-right py-1.5 pl-2 tabular-nums font-medium text-[var(--foreground)]">
+                      ${costPerHour < 1 ? costPerHour.toFixed(3) : costPerHour.toFixed(2)}
+                    </td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>
         <p className="text-[10px] text-[var(--muted)] mt-2">
-          Token estimates based on typical AI API usage patterns. Overhead multiplier accounts for prompt retries (1.2-1.5x),
-          multi-step agents (2-5x), RAG/tool calls (1.2-3x). Physical tasks include robotics hardware amortization beyond token costs.
+          Model tiers: <strong className="text-[var(--foreground)]">Small</strong> ({MODEL_PRICING.small.examples}),{" "}
+          <strong className="text-[var(--foreground)]">Mid</strong> ({MODEL_PRICING.mid.examples}),{" "}
+          <strong className="text-[var(--foreground)]">Frontier</strong> ({MODEL_PRICING.frontier.examples}).
+          Pricing as of mid-2026.
         </p>
       </div>
     </div>

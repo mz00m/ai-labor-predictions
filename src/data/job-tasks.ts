@@ -31,10 +31,23 @@ export interface TokenProfile {
   overheadMultiplier: number; // 2-6 typical
 }
 
-export const MODEL_PRICING: Record<string, { inputPer1M: number; outputPer1M: number; label: string }> = {
-  small:    { inputPer1M: 0.10, outputPer1M: 0.20, label: "Small (classification, extraction)" },
-  mid:      { inputPer1M: 0.50, outputPer1M: 1.50, label: "Mid-tier (chat, drafting)" },
-  frontier: { inputPer1M: 5.00, outputPer1M: 15.00, label: "Frontier (reasoning, coding)" },
+/**
+ * Model tier pricing — 2026 blended rates based on leading providers.
+ *
+ * Small:    Haiku 4.5 ($0.80/$4), GPT-4o-mini ($0.15/$0.60), Gemini Flash ($0.075/$0.30).
+ *           Blended average for classification/extraction workloads.
+ * Mid:      Sonnet 4.6 ($3/$15), GPT-4o ($2.50/$10), Gemini Pro ($1.25/$5).
+ *           Blended for drafting, chat, summarization.
+ * Frontier: Opus 4.6 ($15/$75), o3 ($10/$40), Gemini Ultra ($5/$20).
+ *           Used for complex reasoning, coding, expert analysis.
+ *
+ * These represent mid-2026 published API rates. Actual costs are declining
+ * ~40-60% annually. The cost decline rate in each task captures this trend.
+ */
+export const MODEL_PRICING: Record<string, { inputPer1M: number; outputPer1M: number; label: string; examples: string }> = {
+  small:    { inputPer1M: 0.25, outputPer1M: 1.00, label: "Small (classification, extraction)", examples: "Haiku 4.5, GPT-4o-mini, Gemini Flash" },
+  mid:      { inputPer1M: 2.00, outputPer1M: 10.00, label: "Mid-tier (chat, drafting)", examples: "Sonnet 4.6, GPT-4o, Gemini Pro" },
+  frontier: { inputPer1M: 10.00, outputPer1M: 50.00, label: "Frontier (reasoning, coding)", examples: "Opus 4.6, o3, Gemini Ultra" },
 };
 
 /** Calculate $/hr from token profile */
