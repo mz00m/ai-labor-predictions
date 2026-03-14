@@ -5,10 +5,18 @@
  * May 2024 release (most recent as of March 2026)
  * https://www.bls.gov/oes/current/oes_nat.htm
  *
+ * Employment and wage figures sourced from BLS Table 1 (national employment
+ * and wage data, May 2024 OEWS release, published April 2025).
+ * Total OEWS-covered employment: 154,187,380.
+ *
+ * 17 of 22 groups have employment confirmed directly from BLS Table 1.
+ * 5 groups (Office/Admin, Farming, Construction, Installation/Repair,
+ * Production, Transportation) use estimates based on May 2023 data + trends.
+ *
  * Each occupation group has:
  *   - employment: thousands of workers
  *   - medianWageHr: median hourly wage
- *   - medianWageAnnual: median annual wage
+ *   - medianWageAnnual: median annual wage (hourly x 2080)
  *   - taskComposition: estimated breakdown of time across task categories
  *     (derived from O*NET Generalized Work Activities mapped to each SOC group)
  *   - incomeTier: low / middle / high based on median wage
@@ -122,133 +130,133 @@ function makeGroup(
 
 export const OCCUPATION_GROUPS: OccupationGroup[] = [
   makeGroup("management", "11-0000", "Management Occupations", "Management",
-    8530, 59.07, 122870, "high",
+    10967, 58.70, 122090, "high",
     { "information-processing": 0.10, "communication": 0.15, "analysis-decision": 0.20,
       "creative-generative": 0.05, "coordination-management": 0.25, "physical-manual": 0.00,
       "interpersonal": 0.20, "technical-specialized": 0.05 }),
 
   makeGroup("business-financial", "13-0000", "Business and Financial Operations", "Business & Finance",
-    9740, 39.47, 82100, "high",
+    10351, 38.90, 80910, "high",
     { "information-processing": 0.25, "communication": 0.15, "analysis-decision": 0.25,
       "creative-generative": 0.03, "coordination-management": 0.10, "physical-manual": 0.00,
       "interpersonal": 0.12, "technical-specialized": 0.10 }),
 
   makeGroup("computer-math", "15-0000", "Computer and Mathematical Occupations", "Tech & Computing",
-    4900, 52.88, 110000, "high",
+    5193, 50.89, 105850, "high",
     { "information-processing": 0.15, "communication": 0.10, "analysis-decision": 0.15,
       "creative-generative": 0.10, "coordination-management": 0.05, "physical-manual": 0.00,
       "interpersonal": 0.10, "technical-specialized": 0.35 }),
 
   makeGroup("architecture-engineering", "17-0000", "Architecture and Engineering", "Architecture & Engineering",
-    2800, 45.37, 94370, "high",
+    2567, 45.37, 94370, "high",
     { "information-processing": 0.10, "communication": 0.10, "analysis-decision": 0.20,
       "creative-generative": 0.15, "coordination-management": 0.10, "physical-manual": 0.05,
       "interpersonal": 0.05, "technical-specialized": 0.25 }),
 
   makeGroup("life-physical-social-science", "19-0000", "Life, Physical, and Social Science", "Sciences",
-    1460, 39.35, 81860, "high",
+    1447, 39.35, 81860, "high",
     { "information-processing": 0.20, "communication": 0.10, "analysis-decision": 0.30,
       "creative-generative": 0.10, "coordination-management": 0.05, "physical-manual": 0.10,
       "interpersonal": 0.05, "technical-specialized": 0.10 }),
 
   makeGroup("community-social", "21-0000", "Community and Social Service", "Social Services",
-    2590, 25.02, 52050, "middle",
+    2570, 27.66, 57530, "middle",
     { "information-processing": 0.10, "communication": 0.15, "analysis-decision": 0.10,
       "creative-generative": 0.02, "coordination-management": 0.10, "physical-manual": 0.05,
       "interpersonal": 0.40, "technical-specialized": 0.08 }),
 
   makeGroup("legal", "23-0000", "Legal Occupations", "Legal",
-    1130, 45.76, 95170, "high",
+    1273, 48.07, 99990, "high",
     { "information-processing": 0.25, "communication": 0.20, "analysis-decision": 0.20,
       "creative-generative": 0.05, "coordination-management": 0.05, "physical-manual": 0.00,
       "interpersonal": 0.15, "technical-specialized": 0.10 }),
 
   makeGroup("education", "25-0000", "Educational Instruction and Library", "Education",
-    9120, 28.82, 59950, "middle",
+    8948, 28.47, 59220, "middle",
     { "information-processing": 0.10, "communication": 0.15, "analysis-decision": 0.10,
       "creative-generative": 0.10, "coordination-management": 0.05, "physical-manual": 0.05,
       "interpersonal": 0.40, "technical-specialized": 0.05 }),
 
   makeGroup("arts-media", "27-0000", "Arts, Design, Entertainment, Sports, and Media", "Arts & Media",
-    2070, 29.68, 61730, "middle",
+    2099, 28.91, 60130, "middle",
     { "information-processing": 0.10, "communication": 0.15, "analysis-decision": 0.05,
       "creative-generative": 0.40, "coordination-management": 0.05, "physical-manual": 0.10,
       "interpersonal": 0.10, "technical-specialized": 0.05 }),
 
   makeGroup("healthcare-practitioners", "29-0000", "Healthcare Practitioners and Technical", "Healthcare (Clinical)",
-    9290, 42.28, 87930, "high",
+    9593, 42.28, 87930, "high",
     { "information-processing": 0.15, "communication": 0.05, "analysis-decision": 0.15,
       "creative-generative": 0.02, "coordination-management": 0.05, "physical-manual": 0.30,
       "interpersonal": 0.15, "technical-specialized": 0.13 }),
 
   makeGroup("healthcare-support", "31-0000", "Healthcare Support Occupations", "Healthcare (Support)",
-    7110, 17.13, 35620, "low",
+    7448, 17.13, 35620, "low",
     { "information-processing": 0.10, "communication": 0.05, "analysis-decision": 0.05,
       "creative-generative": 0.00, "coordination-management": 0.05, "physical-manual": 0.45,
       "interpersonal": 0.25, "technical-specialized": 0.05 }),
 
   makeGroup("protective-service", "33-0000", "Protective Service Occupations", "Protective Services",
-    3430, 24.42, 50800, "middle",
+    3655, 24.42, 50800, "middle",
     { "information-processing": 0.10, "communication": 0.10, "analysis-decision": 0.10,
       "creative-generative": 0.00, "coordination-management": 0.10, "physical-manual": 0.35,
       "interpersonal": 0.20, "technical-specialized": 0.05 }),
 
   makeGroup("food-serving", "35-0000", "Food Preparation and Serving Related", "Food & Serving",
-    13290, 14.69, 30550, "low",
+    13613, 14.69, 30550, "low",
     { "information-processing": 0.05, "communication": 0.05, "analysis-decision": 0.02,
       "creative-generative": 0.03, "coordination-management": 0.05, "physical-manual": 0.60,
       "interpersonal": 0.15, "technical-specialized": 0.05 }),
 
   makeGroup("building-grounds", "37-0000", "Building and Grounds Cleaning and Maintenance", "Building & Grounds",
-    5020, 16.18, 33650, "low",
+    4496, 16.18, 33650, "low",
     { "information-processing": 0.03, "communication": 0.02, "analysis-decision": 0.02,
       "creative-generative": 0.00, "coordination-management": 0.05, "physical-manual": 0.80,
       "interpersonal": 0.03, "technical-specialized": 0.05 }),
 
   makeGroup("personal-care", "39-0000", "Personal Care and Service Occupations", "Personal Care",
-    3600, 16.22, 33740, "low",
+    3160, 16.22, 33740, "low",
     { "information-processing": 0.05, "communication": 0.05, "analysis-decision": 0.03,
       "creative-generative": 0.05, "coordination-management": 0.02, "physical-manual": 0.40,
       "interpersonal": 0.35, "technical-specialized": 0.05 }),
 
   makeGroup("sales", "41-0000", "Sales and Related Occupations", "Sales",
-    13300, 16.02, 33320, "low",
+    13352, 18.01, 37460, "middle",
     { "information-processing": 0.15, "communication": 0.20, "analysis-decision": 0.05,
       "creative-generative": 0.03, "coordination-management": 0.02, "physical-manual": 0.15,
       "interpersonal": 0.35, "technical-specialized": 0.05 }),
 
   makeGroup("office-admin", "43-0000", "Office and Administrative Support", "Office & Admin",
-    17640, 20.82, 43310, "middle",
+    18200, 20.82, 43310, "middle",
     { "information-processing": 0.40, "communication": 0.20, "analysis-decision": 0.05,
       "creative-generative": 0.02, "coordination-management": 0.10, "physical-manual": 0.05,
       "interpersonal": 0.10, "technical-specialized": 0.08 }),
 
   makeGroup("farming-fishing", "45-0000", "Farming, Fishing, and Forestry", "Farming & Forestry",
-    530, 17.35, 36090, "low",
+    470, 17.35, 36090, "low",
     { "information-processing": 0.03, "communication": 0.02, "analysis-decision": 0.05,
       "creative-generative": 0.00, "coordination-management": 0.05, "physical-manual": 0.75,
       "interpersonal": 0.02, "technical-specialized": 0.08 }),
 
   makeGroup("construction", "47-0000", "Construction and Extraction Occupations", "Construction",
-    7070, 25.54, 53120, "middle",
+    7000, 25.54, 53120, "middle",
     { "information-processing": 0.05, "communication": 0.03, "analysis-decision": 0.05,
       "creative-generative": 0.00, "coordination-management": 0.05, "physical-manual": 0.65,
       "interpersonal": 0.02, "technical-specialized": 0.15 }),
 
   makeGroup("installation-repair", "49-0000", "Installation, Maintenance, and Repair", "Installation & Repair",
-    5880, 25.76, 53580, "middle",
+    5950, 25.76, 53580, "middle",
     { "information-processing": 0.05, "communication": 0.03, "analysis-decision": 0.10,
       "creative-generative": 0.00, "coordination-management": 0.05, "physical-manual": 0.55,
       "interpersonal": 0.02, "technical-specialized": 0.20 }),
 
   makeGroup("production", "51-0000", "Production Occupations", "Production",
-    8560, 19.53, 40630, "middle",
+    8700, 19.53, 40630, "middle",
     { "information-processing": 0.05, "communication": 0.03, "analysis-decision": 0.05,
       "creative-generative": 0.00, "coordination-management": 0.02, "physical-manual": 0.70,
       "interpersonal": 0.02, "technical-specialized": 0.13 }),
 
   makeGroup("transportation", "53-0000", "Transportation and Material Moving", "Transportation",
-    13640, 18.61, 38710, "middle",
+    13100, 18.61, 38710, "middle",
     { "information-processing": 0.10, "communication": 0.03, "analysis-decision": 0.03,
       "creative-generative": 0.00, "coordination-management": 0.02, "physical-manual": 0.70,
       "interpersonal": 0.02, "technical-specialized": 0.10 }),
