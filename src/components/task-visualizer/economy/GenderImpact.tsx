@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
+import { useRouter } from "next/navigation";
 import {
   BarChart,
   Bar,
@@ -16,6 +17,7 @@ import {
   OCCUPATION_GROUPS,
   INCOME_TIER_META,
   TOTAL_EMPLOYMENT,
+  SOC_TO_JOB_IDS,
   getAutomationPercentAtYear,
   type IncomeTier,
 } from "@/data/economy-occupations";
@@ -48,6 +50,7 @@ interface TierGenderData {
 function CustomTooltip({ active, payload }: TooltipProps<number, string>) {
   if (!active || !payload?.[0]) return null;
   const d = payload[0].payload;
+  const jobIds = d.id ? (SOC_TO_JOB_IDS[d.id] || []) : [];
   return (
     <div className="bg-white rounded-lg border border-black/[0.08] shadow-lg p-3 max-w-[260px]">
       <p className="text-[13px] font-semibold text-[var(--foreground)]">{d.shortTitle}</p>
@@ -69,11 +72,17 @@ function CustomTooltip({ active, payload }: TooltipProps<number, string>) {
           <span className="font-medium">{d.automationPct2030}%</span>
         </div>
       </div>
+      {jobIds.length > 0 && (
+        <p className="text-[10px] text-[var(--accent)] mt-2 pt-1.5 border-t border-black/[0.06]">
+          Click to explore individual jobs in this group
+        </p>
+      )}
     </div>
   );
 }
 
 export default function GenderImpact() {
+  const router = useRouter();
   const tierData: TierGenderData[] = useMemo(() => {
     return (["low", "middle", "high"] as const).map((tier) => {
       const tierGroups = OCCUPATION_GROUPS.filter((g) => g.incomeTier === tier);
@@ -147,6 +156,7 @@ export default function GenderImpact() {
     return OCCUPATION_GROUPS
       .filter((g) => g.womenPercent >= 55)
       .map((g) => ({
+        id: g.id,
         shortTitle: g.shortTitle,
         womenPercent: g.womenPercent,
         womenCount: Math.round(g.employment * g.womenPercent / 100),
@@ -161,6 +171,7 @@ export default function GenderImpact() {
   const barChartData = useMemo(() => {
     return OCCUPATION_GROUPS
       .map((g) => ({
+        id: g.id,
         shortTitle: g.shortTitle,
         womenPercent: g.womenPercent,
         menPercent: 100 - g.womenPercent,
@@ -169,6 +180,7 @@ export default function GenderImpact() {
         employment: g.employment,
         automationPct2030: getAutomationPercentAtYear(g, 2030),
         incomeTier: g.incomeTier,
+        hasJobs: (SOC_TO_JOB_IDS[g.id] || []).length > 0,
       }))
       .sort((a, b) => b.womenPercent - a.womenPercent);
   }, []);
@@ -236,6 +248,14 @@ export default function GenderImpact() {
               data={barChartData}
               layout="vertical"
               margin={{ top: 0, right: 30, left: 0, bottom: 0 }}
+              onClick={(state) => {
+                if (!state?.activePayload?.[0]) return;
+                const group = state.activePayload[0].payload as (typeof barChartData)[number];
+                const jobIds = SOC_TO_JOB_IDS[group.id] || [];
+                if (jobIds.length > 0) {
+                  router.push(`/task-visualizer?job=${jobIds[0]}`);
+                }
+              }}
             >
               <CartesianGrid strokeDasharray="3 3" stroke="rgba(0,0,0,0.06)" horizontal={false} />
               <XAxis
@@ -255,14 +275,14 @@ export default function GenderImpact() {
                 tickLine={false}
               />
               <Tooltip content={<CustomTooltip />} cursor={{ fill: "rgba(0,0,0,0.02)" }} />
-              <Bar dataKey="womenPercent" name="Women" stackId="a" barSize={18}>
+              <Bar dataKey="womenPercent" name="Women" stackId="a" barSize={18} style={{ cursor: "pointer" }}>
                 {barChartData.map((entry) => (
-                  <Cell key={entry.shortTitle} fill={GENDER_COLORS.women} fillOpacity={0.85} />
+                  <Cell key={entry.shortTitle} fill={GENDER_COLORS.women} fillOpacity={entry.hasJobs ? 0.85 : 0.45} />
                 ))}
               </Bar>
-              <Bar dataKey="menPercent" name="Men" stackId="a" barSize={18}>
+              <Bar dataKey="menPercent" name="Men" stackId="a" barSize={18} style={{ cursor: "pointer" }}>
                 {barChartData.map((entry) => (
-                  <Cell key={entry.shortTitle} fill={GENDER_COLORS.men} fillOpacity={0.85} />
+                  <Cell key={entry.shortTitle} fill={GENDER_COLORS.men} fillOpacity={entry.hasJobs ? 0.85 : 0.45} />
                 ))}
               </Bar>
             </BarChart>
@@ -290,9 +310,22 @@ export default function GenderImpact() {
               </tr>
             </thead>
             <tbody className="text-[var(--muted)]">
-              {mostExposedWomen.map((g) => (
-                <tr key={g.shortTitle} className="border-b border-black/[0.03] hover:bg-black/[0.01]">
-                  <td className="py-2 pr-3 text-[var(--foreground)] font-medium">{g.shortTitle}</td>
+              {mostExposedWomen.map((g) => {
+                const jobIds = SOC_TO_JOB_IDS[g.id] || [];
+                const clickable = jobIds.length > 0;
+                return (
+                <tr
+                  key={g.shortTitle}
+                  className={`border-b border-black/[0.03] hover:bg-black/[0.02] ${clickable ? "cursor-pointer" : ""}`}
+                  onClick={clickable ? () => router.push(`/task-visualizer?job=${jobIds[0]}`) : undefined}
+                >
+                  <td className="py-2 pr-3 font-medium">
+                    {clickable ? (
+                      <span className="text-[var(--foreground)] hover:text-[var(--accent)]">{g.shortTitle}</span>
+                    ) : (
+                      <span className="text-[var(--foreground)]">{g.shortTitle}</span>
+                    )}
+                  </td>
                   <td className="text-right py-2 px-3 tabular-nums" style={{ color: GENDER_COLORS.women }}>
                     {g.womenPercent}%
                   </td>
@@ -310,7 +343,8 @@ export default function GenderImpact() {
                     </span>
                   </td>
                 </tr>
-              ))}
+                );
+              })}
             </tbody>
           </table>
         </div>
