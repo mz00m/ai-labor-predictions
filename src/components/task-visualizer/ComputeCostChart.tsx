@@ -26,16 +26,16 @@ interface ComputeCostChartProps {
   humanWagePerHr: number;
 }
 
-/** Soft, distinguishable line colors — no category semantics, just visual differentiation */
+/** Single indigo palette with opacity/shade variance for clean, consistent look */
 const LINE_COLORS = [
-  "#6366F1", // indigo
-  "#06B6D4", // cyan
-  "#8B5CF6", // violet
-  "#0EA5E9", // sky
-  "#A78BFA", // light violet
-  "#38BDF8", // light sky
-  "#818CF8", // light indigo
-  "#67E8F9", // light cyan
+  "#4338CA", // indigo-700
+  "#5C61F6", // indigo-500
+  "#6366F1", // indigo-500
+  "#818CF8", // indigo-400
+  "#A5B4FC", // indigo-300
+  "#4F46E5", // indigo-600
+  "#7C83F7", // indigo-450
+  "#C7D2FE", // indigo-200
 ];
 
 function CustomTooltip({ active, payload, label }: TooltipProps<number, string>) {
@@ -135,7 +135,7 @@ export default function ComputeCostChart({
   return (
     <div>
       {/* Explanation */}
-      <div className="rounded-lg bg-gradient-to-r from-indigo-50/40 to-sky-50/40 border border-indigo-100/30 p-3 mb-5">
+      <div className="rounded-lg bg-black/[0.02] border border-black/[0.06] p-3 mb-5">
         <p className="text-[12px] text-[var(--foreground)] leading-relaxed">
           Each line shows the <strong>total cost to automate one hour</strong> of a task
           (API costs + deployment overhead). When a line drops below the{" "}

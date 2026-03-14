@@ -18,12 +18,12 @@ import ageUsageData from "@/data/age-usage.json";
 /* ------------------------------------------------------------------ */
 
 const AGE_COLORS: Record<string, string> = {
-  "18-25": "#5C61F6",
-  "26-35": "#22c55e",
-  "36-45": "#e8a838",
-  "46-55": "#d4601a",
-  "56-65": "#b02020",
-  "66+": "#9333ea",
+  "18-25": "#4338CA",
+  "26-35": "#4F46E5",
+  "36-45": "#6366F1",
+  "46-55": "#818CF8",
+  "56-65": "#A5B4FC",
+  "66+": "#C7D2FE",
 };
 
 /* ------------------------------------------------------------------ */
@@ -163,8 +163,8 @@ export default function AgeUsageTile() {
         </div>
 
         {/* Key takeaway */}
-        <div className="mt-5 p-3 rounded-md bg-blue-50/50 border border-blue-200/30">
-          <p className="text-[12px] text-blue-900 leading-relaxed">
+        <div className="mt-5 p-3 rounded-md bg-black/[0.02] border border-black/[0.06]">
+          <p className="text-[12px] text-[var(--foreground)] leading-relaxed">
             <span className="font-bold">Key trend:</span>{" "}
             The 18-25 age group dominates ChatGPT usage with ~{last["18-25"]}% of
             messages, but this share has fallen from {first["18-25"]}% as older
