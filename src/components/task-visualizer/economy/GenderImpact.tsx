@@ -11,7 +11,6 @@ import {
   ResponsiveContainer,
   Cell,
   TooltipProps,
-  Legend,
 } from "recharts";
 import {
   OCCUPATION_GROUPS,
@@ -22,8 +21,8 @@ import {
 } from "@/data/economy-occupations";
 
 const GENDER_COLORS = {
-  women: "#4338CA",
-  men: "#A5B4FC",
+  women: "#5C61F6",
+  men: "#C7D2FE",
 };
 
 interface TierGenderData {
@@ -199,7 +198,7 @@ export default function GenderImpact() {
           <p className="text-[11px] text-[var(--muted)]">Avg task automation for men by 2030</p>
         </div>
         <div className="rounded-xl bg-black/[0.02] border border-black/[0.06] p-4">
-          <p className="text-[28px] font-bold tracking-tight" style={{ color: economyStats.gap > 0 ? "#EF4444" : "#10B981" }}>
+          <p className="text-[28px] font-bold tracking-tight text-[var(--foreground)]">
             {economyStats.gap > 0 ? "+" : ""}{economyStats.gap}pp
           </p>
           <p className="text-[11px] text-[var(--muted)]">
@@ -218,6 +217,18 @@ export default function GenderImpact() {
           and education roles — many of which have high information-processing and communication task loads
           that face near-term automation.
         </p>
+
+        {/* Legend */}
+        <div className="flex gap-6 mb-4">
+          <div className="flex items-center gap-2">
+            <div className="w-4 h-4 rounded" style={{ backgroundColor: GENDER_COLORS.women }} />
+            <span className="text-[13px] font-medium text-[var(--foreground)]">Women</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <div className="w-4 h-4 rounded" style={{ backgroundColor: GENDER_COLORS.men }} />
+            <span className="text-[13px] font-medium text-[var(--foreground)]">Men</span>
+          </div>
+        </div>
 
         <div className="h-[520px]">
           <ResponsiveContainer width="100%" height="100%">
@@ -244,21 +255,14 @@ export default function GenderImpact() {
                 tickLine={false}
               />
               <Tooltip content={<CustomTooltip />} cursor={{ fill: "rgba(0,0,0,0.02)" }} />
-              <Legend
-                verticalAlign="top"
-                height={30}
-                formatter={(value: string) => (
-                  <span className="text-[11px] text-[var(--muted)]">{value}</span>
-                )}
-              />
               <Bar dataKey="womenPercent" name="Women" stackId="a" barSize={18}>
                 {barChartData.map((entry) => (
-                  <Cell key={entry.shortTitle} fill={GENDER_COLORS.women} fillOpacity={0.75} />
+                  <Cell key={entry.shortTitle} fill={GENDER_COLORS.women} fillOpacity={0.85} />
                 ))}
               </Bar>
               <Bar dataKey="menPercent" name="Men" stackId="a" barSize={18}>
                 {barChartData.map((entry) => (
-                  <Cell key={entry.shortTitle} fill={GENDER_COLORS.men} fillOpacity={0.75} />
+                  <Cell key={entry.shortTitle} fill={GENDER_COLORS.men} fillOpacity={0.85} />
                 ))}
               </Bar>
             </BarChart>
@@ -337,7 +341,7 @@ export default function GenderImpact() {
                     </p>
                   </div>
                   <div className="text-right">
-                    <p className="text-[13px] font-bold" style={{ color: gapInTier > 0 ? "#EF4444" : "#10B981" }}>
+                    <p className="text-[13px] font-bold text-[var(--foreground)]">
                       {gapInTier > 0 ? "+" : ""}{gapInTier}pp gap
                     </p>
                     <p className="text-[10px] text-[var(--muted)]">women vs men automation</p>
