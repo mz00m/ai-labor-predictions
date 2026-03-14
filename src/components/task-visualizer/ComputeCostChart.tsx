@@ -26,16 +26,16 @@ interface ComputeCostChartProps {
   humanWagePerHr: number;
 }
 
-/** Single indigo palette with opacity/shade variance for clean, consistent look */
+/** Distinct multi-hue palette so each task line is easy to tell apart */
 const LINE_COLORS = [
-  "#4338CA", // indigo-700
-  "#5C61F6", // indigo-500
-  "#6366F1", // indigo-500
-  "#818CF8", // indigo-400
-  "#A5B4FC", // indigo-300
-  "#4F46E5", // indigo-600
-  "#7C83F7", // indigo-450
-  "#C7D2FE", // indigo-200
+  "#6366F1", // indigo
+  "#F59E0B", // amber
+  "#10B981", // emerald
+  "#EF4444", // red
+  "#8B5CF6", // violet
+  "#06B6D4", // cyan
+  "#F97316", // orange
+  "#EC4899", // pink
 ];
 
 function CustomTooltip({ active, payload, label }: TooltipProps<number, string>) {
