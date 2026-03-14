@@ -130,5 +130,77 @@
     "openAlexId": "A5079889899",
     "affiliation": "Northwestern Kellogg School of Management",
     "specialization": "Technology and labor, AI exposure indices, asset pricing"
+  },
+  {
+    "name": "Sida Peng",
+    "openAlexId": "A5006089097",
+    "affiliation": "Microsoft Research",
+    "specialization": "AI developer productivity, GitHub Copilot studies"
+  },
+  {
+    "name": "Fabrizio Dell'Acqua",
+    "openAlexId": "A5049583953",
+    "affiliation": "Harvard Business School",
+    "specialization": "AI and consultant performance, field experiments"
+  },
+  {
+    "name": "James Bessen",
+    "openAlexId": "A5068897553",
+    "affiliation": "Boston University",
+    "specialization": "Automation and employment, technology diffusion"
+  },
+  {
+    "name": "Michael Webb",
+    "openAlexId": "A5046612504",
+    "affiliation": "Stanford University",
+    "specialization": "AI patents and labor market exposure"
+  },
+  {
+    "name": "Katja Mann",
+    "openAlexId": "A5045708498",
+    "affiliation": "Copenhagen Business School",
+    "specialization": "AI-driven technological change, labor macro models"
+  },
+  {
+    "name": "Anton Korinek",
+    "openAlexId": "A5048985178",
+    "affiliation": "University of Virginia / Brookings",
+    "specialization": "AI economic policy, scenario modeling"
+  },
+  {
+    "name": "Avi Goldfarb",
+    "openAlexId": "A5078498508",
+    "affiliation": "University of Toronto Rotman School of Management",
+    "specialization": "Economics of AI, prediction machines"
+  },
+  {
+    "name": "Ajay Agrawal",
+    "openAlexId": "A5053588969",
+    "affiliation": "University of Toronto Rotman School of Management",
+    "specialization": "Economics of AI, prediction machines"
+  },
+  {
+    "name": "Chad Syverson",
+    "openAlexId": "A5035972751",
+    "affiliation": "University of Chicago Booth School of Business",
+    "specialization": "Productivity measurement, productivity paradox"
+  },
+  {
+    "name": "Robert Gordon",
+    "openAlexId": "A5028308478",
+    "affiliation": "Northwestern University",
+    "specialization": "Productivity growth, technology skepticism"
+  },
+  {
+    "name": "Philippe Aghion",
+    "openAlexId": "A5065917043",
+    "affiliation": "College de France / LSE",
+    "specialization": "Growth theory, AI and creative destruction"
+  },
+  {
+    "name": "Alex Imas",
+    "openAlexId": "A5053206728",
+    "affiliation": "University of Chicago Booth School of Business",
+    "specialization": "Behavioral economics, AI and decision-making"
   }
 ]
