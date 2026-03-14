@@ -176,7 +176,7 @@ export default function YearSliderExplorer() {
             <Bar dataKey="automationPct" radius={[0, 4, 4, 0]} barSize={18}>
               {chartData.map((entry) => {
                 const pct = entry.automationPct;
-                const color = pct >= 75 ? "#EF4444" : pct >= 50 ? "#F59E0B" : pct >= 25 ? "#5C61F6" : "#10B981";
+                const color = pct >= 60 ? "#EF4444" : pct >= 35 ? "#6366F1" : "#10B981";
                 return (
                   <Cell key={entry.id} fill={color} fillOpacity={0.75} />
                 );
@@ -189,10 +189,9 @@ export default function YearSliderExplorer() {
       {/* Color legend */}
       <div className="flex flex-wrap gap-3 mt-3 pt-3 border-t border-black/[0.06]">
         {[
-          { label: "Low exposure (<25%)", color: "#10B981" },
-          { label: "Moderate (25-50%)", color: "#5C61F6" },
-          { label: "High (50-75%)", color: "#F59E0B" },
-          { label: "Very high (>75%)", color: "#EF4444" },
+          { label: "Low risk (<35%)", color: "#10B981" },
+          { label: "Moderate (35-60%)", color: "#6366F1" },
+          { label: "High risk (>60%)", color: "#EF4444" },
         ].map((item) => (
           <div key={item.label} className="flex items-center gap-1.5">
             <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: item.color }} />

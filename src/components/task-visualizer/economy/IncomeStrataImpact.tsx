@@ -182,17 +182,17 @@ export default function IncomeStrataImpact() {
                       <td className="text-right py-2 px-3 tabular-nums">{(g.employment / 1000).toFixed(1)}M</td>
                       <td className="text-right py-2 px-3 tabular-nums">${(g.medianWageAnnual / 1000).toFixed(0)}K</td>
                       <td className="text-right py-2 px-3 tabular-nums">
-                        <span style={{ color: g.pct2028 >= 50 ? "#EF4444" : g.pct2028 >= 25 ? "#F59E0B" : "#10B981" }}>
+                        <span style={{ color: g.pct2028 >= 60 ? "#EF4444" : g.pct2028 >= 35 ? "#6366F1" : "#10B981" }}>
                           {g.pct2028}%
                         </span>
                       </td>
                       <td className="text-right py-2 px-3 tabular-nums">
-                        <span style={{ color: g.pct2032 >= 50 ? "#EF4444" : g.pct2032 >= 25 ? "#F59E0B" : "#10B981" }}>
+                        <span style={{ color: g.pct2032 >= 60 ? "#EF4444" : g.pct2032 >= 35 ? "#6366F1" : "#10B981" }}>
                           {g.pct2032}%
                         </span>
                       </td>
                       <td className="text-right py-2 px-3 tabular-nums">
-                        <span style={{ color: g.pct2036 >= 50 ? "#EF4444" : g.pct2036 >= 25 ? "#F59E0B" : "#10B981" }}>
+                        <span style={{ color: g.pct2036 >= 60 ? "#EF4444" : g.pct2036 >= 35 ? "#6366F1" : "#10B981" }}>
                           {g.pct2036}%
                         </span>
                       </td>

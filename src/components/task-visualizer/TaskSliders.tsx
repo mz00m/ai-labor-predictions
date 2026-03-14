@@ -15,15 +15,15 @@ function getRiskBadge(crossoverYear: number | null) {
     return { label: "At risk now", color: "#EF4444", bg: "rgba(239, 68, 68, 0.08)" };
   }
   if (crossoverYear <= 2028) {
-    return { label: `~${crossoverYear}`, color: "#F59E0B", bg: "rgba(245, 158, 11, 0.08)" };
+    return { label: `~${crossoverYear}`, color: "#EF4444", bg: "rgba(239, 68, 68, 0.06)" };
   }
   if (crossoverYear <= 2031) {
-    return { label: `~${crossoverYear}`, color: "#F59E0B", bg: "rgba(245, 158, 11, 0.06)" };
+    return { label: `~${crossoverYear}`, color: "#6366F1", bg: "rgba(99, 102, 241, 0.06)" };
   }
   if (crossoverYear <= 2036) {
     return { label: `~${crossoverYear}`, color: "#10B981", bg: "rgba(16, 185, 129, 0.06)" };
   }
-  return { label: "Safe (10yr+)", color: "#5C61F6", bg: "rgba(92, 97, 246, 0.06)" };
+  return { label: "Safe (10yr+)", color: "#10B981", bg: "rgba(16, 185, 129, 0.06)" };
 }
 
 export default function TaskSliders({

@@ -143,13 +143,13 @@ export const OCCUPATION_GROUPS: OccupationGroup[] = [
     10967, 58.70, 122090, "high",
     { "information-processing": 0.10, "communication": 0.15, "analysis-decision": 0.20,
       "creative-generative": 0.05, "coordination-management": 0.25, "physical-manual": 0.00,
-      "interpersonal": 0.20, "technical-specialized": 0.05 }, 41),
+      "interpersonal": 0.20, "technical-specialized": 0.05 }, 47),
 
   makeGroup("business-financial", "13-0000", "Business and Financial Operations", "Business & Finance",
     10351, 38.90, 80910, "high",
     { "information-processing": 0.25, "communication": 0.15, "analysis-decision": 0.25,
       "creative-generative": 0.03, "coordination-management": 0.10, "physical-manual": 0.00,
-      "interpersonal": 0.12, "technical-specialized": 0.10 }, 56),
+      "interpersonal": 0.12, "technical-specialized": 0.10 }, 35),
 
   makeGroup("computer-math", "15-0000", "Computer and Mathematical Occupations", "Tech & Computing",
     5193, 50.89, 105850, "high",
@@ -191,13 +191,13 @@ export const OCCUPATION_GROUPS: OccupationGroup[] = [
     2099, 28.91, 60130, "middle",
     { "information-processing": 0.10, "communication": 0.15, "analysis-decision": 0.05,
       "creative-generative": 0.40, "coordination-management": 0.05, "physical-manual": 0.10,
-      "interpersonal": 0.10, "technical-specialized": 0.05 }, 47),
+      "interpersonal": 0.10, "technical-specialized": 0.05 }, 52),
 
   makeGroup("healthcare-practitioners", "29-0000", "Healthcare Practitioners and Technical", "Healthcare (Clinical)",
     9593, 42.28, 87930, "high",
     { "information-processing": 0.15, "communication": 0.05, "analysis-decision": 0.15,
       "creative-generative": 0.02, "coordination-management": 0.05, "physical-manual": 0.30,
-      "interpersonal": 0.15, "technical-specialized": 0.13 }, 75),
+      "interpersonal": 0.15, "technical-specialized": 0.13 }, 76),
 
   makeGroup("healthcare-support", "31-0000", "Healthcare Support Occupations", "Healthcare (Support)",
     7448, 17.13, 35620, "low",
@@ -209,37 +209,37 @@ export const OCCUPATION_GROUPS: OccupationGroup[] = [
     3655, 24.42, 50800, "middle",
     { "information-processing": 0.10, "communication": 0.10, "analysis-decision": 0.10,
       "creative-generative": 0.00, "coordination-management": 0.10, "physical-manual": 0.35,
-      "interpersonal": 0.20, "technical-specialized": 0.05 }, 24),
+      "interpersonal": 0.20, "technical-specialized": 0.05 }, 22),
 
   makeGroup("food-serving", "35-0000", "Food Preparation and Serving Related", "Food & Serving",
     13613, 14.69, 30550, "low",
     { "information-processing": 0.05, "communication": 0.05, "analysis-decision": 0.02,
       "creative-generative": 0.03, "coordination-management": 0.05, "physical-manual": 0.60,
-      "interpersonal": 0.15, "technical-specialized": 0.05 }, 54),
+      "interpersonal": 0.15, "technical-specialized": 0.05 }, 62),
 
   makeGroup("building-grounds", "37-0000", "Building and Grounds Cleaning and Maintenance", "Building & Grounds",
     4496, 16.18, 33650, "low",
     { "information-processing": 0.03, "communication": 0.02, "analysis-decision": 0.02,
       "creative-generative": 0.00, "coordination-management": 0.05, "physical-manual": 0.80,
-      "interpersonal": 0.03, "technical-specialized": 0.05 }, 42),
+      "interpersonal": 0.03, "technical-specialized": 0.05 }, 37),
 
   makeGroup("personal-care", "39-0000", "Personal Care and Service Occupations", "Personal Care",
     3160, 16.22, 33740, "low",
     { "information-processing": 0.05, "communication": 0.05, "analysis-decision": 0.03,
       "creative-generative": 0.05, "coordination-management": 0.02, "physical-manual": 0.40,
-      "interpersonal": 0.35, "technical-specialized": 0.05 }, 77),
+      "interpersonal": 0.35, "technical-specialized": 0.05 }, 76),
 
   makeGroup("sales", "41-0000", "Sales and Related Occupations", "Sales",
     13352, 18.01, 37460, "middle",
     { "information-processing": 0.15, "communication": 0.20, "analysis-decision": 0.05,
       "creative-generative": 0.03, "coordination-management": 0.02, "physical-manual": 0.15,
-      "interpersonal": 0.35, "technical-specialized": 0.05 }, 48),
+      "interpersonal": 0.35, "technical-specialized": 0.05 }, 49),
 
   makeGroup("office-admin", "43-0000", "Office and Administrative Support", "Office & Admin",
     18200, 20.82, 43310, "middle",
     { "information-processing": 0.40, "communication": 0.20, "analysis-decision": 0.05,
       "creative-generative": 0.02, "coordination-management": 0.10, "physical-manual": 0.05,
-      "interpersonal": 0.10, "technical-specialized": 0.08 }, 72),
+      "interpersonal": 0.10, "technical-specialized": 0.08 }, 42),
 
   makeGroup("farming-fishing", "45-0000", "Farming, Fishing, and Forestry", "Farming & Forestry",
     470, 17.35, 36090, "low",
@@ -251,7 +251,7 @@ export const OCCUPATION_GROUPS: OccupationGroup[] = [
     7000, 25.54, 53120, "middle",
     { "information-processing": 0.05, "communication": 0.03, "analysis-decision": 0.05,
       "creative-generative": 0.00, "coordination-management": 0.05, "physical-manual": 0.65,
-      "interpersonal": 0.02, "technical-specialized": 0.15 }, 4),
+      "interpersonal": 0.02, "technical-specialized": 0.15 }, 11),
 
   makeGroup("installation-repair", "49-0000", "Installation, Maintenance, and Repair", "Installation & Repair",
     5950, 25.76, 53580, "middle",
@@ -269,7 +269,7 @@ export const OCCUPATION_GROUPS: OccupationGroup[] = [
     13100, 18.61, 38710, "middle",
     { "information-processing": 0.10, "communication": 0.03, "analysis-decision": 0.03,
       "creative-generative": 0.00, "coordination-management": 0.02, "physical-manual": 0.70,
-      "interpersonal": 0.02, "technical-specialized": 0.10 }, 16),
+      "interpersonal": 0.02, "technical-specialized": 0.10 }, 20),
 ];
 
 export const TOTAL_EMPLOYMENT = OCCUPATION_GROUPS.reduce((s, g) => s + g.employment, 0); // thousands
@@ -307,13 +307,19 @@ export const SOC_TO_JOB_IDS: Record<string, string[]> = {
  * Calculate the percentage of an occupation group's tasks that are
  * economically automatable at a given year, based on cost crossover.
  */
+/**
+ * Deployment overhead: real-world automation costs beyond raw API calls.
+ * Same 5x multiplier used in job-tasks.ts crossover calculations.
+ */
+export const DEPLOYMENT_OVERHEAD = 5;
+
 export function getAutomationPercentAtYear(group: OccupationGroup, year: number): number {
   const yearsFromNow = year - 2026;
   if (yearsFromNow < 0) return 0;
 
   let automatedShare = 0;
   for (const [cat, share] of Object.entries(group.taskComposition) as [TaskCategory, number][]) {
-    const computeCost = CATEGORY_COMPUTE_COSTS[cat] * Math.pow(1 - CATEGORY_DECLINE_RATES[cat], yearsFromNow);
+    const computeCost = CATEGORY_COMPUTE_COSTS[cat] * DEPLOYMENT_OVERHEAD * Math.pow(1 - CATEGORY_DECLINE_RATES[cat], yearsFromNow);
     // Task is automatable when compute cost < human wage for that task-share
     if (computeCost < group.medianWageHr) {
       automatedShare += share;

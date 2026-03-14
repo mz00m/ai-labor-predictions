@@ -128,11 +128,11 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
     return calculateJobExposure(selectedJob);
   }, [selectedJob]);
 
-  const tabs: { id: Tab; label: string; hint: string }[] = [
-    { id: "breakdown", label: "Task Breakdown", hint: "How your time is split across task types, and which to focus on" },
-    { id: "timeline", label: "Automation Timeline", hint: "When each task becomes cheaper to automate than to pay a human" },
-    { id: "costs", label: "Compute Costs", hint: "Log-scale cost curves showing AI getting cheaper for each task" },
-    { id: "benchmarks", label: "Cost Benchmarks", hint: "Real-world AI compute costs and how fast they are falling" },
+  const tabs: { id: Tab; label: string; question: string }[] = [
+    { id: "breakdown", label: "Task Breakdown", question: "How is your time spent, and which tasks face the most automation pressure?" },
+    { id: "timeline", label: "Automation Timeline", question: "When will it become cheaper to automate each of your tasks than to pay you?" },
+    { id: "costs", label: "Compute Costs", question: "How fast is AI getting cheaper for each of your specific tasks?" },
+    { id: "benchmarks", label: "Cost Benchmarks", question: "How much does AI compute cost today, and how fast is it falling?" },
   ];
 
   return (
@@ -261,7 +261,7 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
                     exposureScore > 60
                       ? "#EF4444"
                       : exposureScore > 35
-                        ? "#F59E0B"
+                        ? "#6366F1"
                         : "#10B981",
                 }}
               >
@@ -313,9 +313,9 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
                 ))}
               </div>
 
-              {/* Tab hint */}
-              <p className="text-[12px] text-[var(--muted)] mb-4 -mt-1">
-                {tabs.find((t) => t.id === activeTab)?.hint}
+              {/* Tab question */}
+              <p className="text-[14px] font-medium text-[var(--foreground)] mb-4 -mt-1">
+                {tabs.find((t) => t.id === activeTab)?.question}
               </p>
 
               {/* Tab content */}

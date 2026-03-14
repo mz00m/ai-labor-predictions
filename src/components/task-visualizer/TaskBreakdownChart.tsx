@@ -27,15 +27,15 @@ function getRiskLevel(
     return { label: "Automated now", color: "#EF4444", bg: "rgba(239, 68, 68, 0.1)" };
   }
   if (crossoverYear <= 2028) {
-    return { label: "1-2 years", color: "#F59E0B", bg: "rgba(245, 158, 11, 0.1)" };
+    return { label: "1-2 years", color: "#EF4444", bg: "rgba(239, 68, 68, 0.08)" };
   }
   if (crossoverYear <= 2031) {
-    return { label: "3-5 years", color: "#F59E0B", bg: "rgba(245, 158, 11, 0.08)" };
+    return { label: "3-5 years", color: "#6366F1", bg: "rgba(99, 102, 241, 0.08)" };
   }
   if (crossoverYear <= 2036) {
     return { label: "5-10 years", color: "#10B981", bg: "rgba(16, 185, 129, 0.08)" };
   }
-  return { label: "10+ years", color: "#5C61F6", bg: "rgba(92, 97, 246, 0.08)" };
+  return { label: "10+ years", color: "#10B981", bg: "rgba(16, 185, 129, 0.06)" };
 }
 
 function CustomTooltip({
