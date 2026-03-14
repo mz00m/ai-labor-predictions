@@ -85,9 +85,9 @@ export const CATEGORY_COMPUTE_COSTS: Record<TaskCategory, number> = {
 };
 
 export const INCOME_TIER_META: Record<IncomeTier, { label: string; color: string; range: string }> = {
-  low: { label: "Lower income", color: "#A5B4FC", range: "Under $35K/yr" },
+  low: { label: "Lower income", color: "#F59E0B", range: "Under $35K/yr" },
   middle: { label: "Middle income", color: "#6366F1", range: "$35K-$75K/yr" },
-  high: { label: "Higher income", color: "#4338CA", range: "Over $75K/yr" },
+  high: { label: "Higher income", color: "#10B981", range: "Over $75K/yr" },
 };
 
 export const TASK_CATEGORY_META: Record<TaskCategory, { label: string; color: string }> = {

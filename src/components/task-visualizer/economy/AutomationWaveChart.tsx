@@ -21,7 +21,7 @@ function CustomTooltip({ active, payload, label }: TooltipProps<number, string>)
   return (
     <div className="bg-white rounded-lg border border-black/[0.08] shadow-lg p-3">
       <p className="text-[12px] font-semibold text-[var(--foreground)] mb-1.5">{label}</p>
-      {payload.map((p) => (
+      {[...payload].reverse().map((p) => (
         <div key={p.dataKey} className="flex justify-between text-[11px] gap-4 mb-0.5">
           <span style={{ color: p.color }}>{p.name}</span>
           <span className="font-medium">{p.value}% of tasks</span>
@@ -34,11 +34,14 @@ function CustomTooltip({ active, payload, label }: TooltipProps<number, string>)
 export default function AutomationWaveChart() {
   const data = useMemo(() => generateEconomyTimeline(2026, 2040), []);
 
+  // Get last data point values for inline labels
+  const lastPoint = data[data.length - 1];
+
   return (
     <div>
       <div className="h-[360px]">
         <ResponsiveContainer width="100%" height="100%">
-          <AreaChart data={data} margin={{ top: 10, right: 20, left: 5, bottom: 5 }}>
+          <AreaChart data={data} margin={{ top: 10, right: 100, left: 5, bottom: 5 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="rgba(0,0,0,0.06)" />
             <XAxis
               dataKey="year"
@@ -75,6 +78,16 @@ export default function AutomationWaveChart() {
               stroke={INCOME_TIER_META.low.color}
               fill="url(#gradLow)"
               strokeWidth={2}
+              dot={false}
+              activeDot={{ r: 4 }}
+              label={({ x, y, index }: { x: number; y: number; index: number }) => {
+                if (index !== data.length - 1) return <g />;
+                return (
+                  <text x={x + 8} y={y + 4} fontSize={11} fontWeight={600} fill={INCOME_TIER_META.low.color}>
+                    Lower
+                  </text>
+                );
+              }}
             />
             <Area
               type="monotone"
@@ -83,6 +96,16 @@ export default function AutomationWaveChart() {
               stroke={INCOME_TIER_META.middle.color}
               fill="url(#gradMiddle)"
               strokeWidth={2}
+              dot={false}
+              activeDot={{ r: 4 }}
+              label={({ x, y, index }: { x: number; y: number; index: number }) => {
+                if (index !== data.length - 1) return <g />;
+                return (
+                  <text x={x + 8} y={y + 4} fontSize={11} fontWeight={600} fill={INCOME_TIER_META.middle.color}>
+                    Middle
+                  </text>
+                );
+              }}
             />
             <Area
               type="monotone"
@@ -91,6 +114,16 @@ export default function AutomationWaveChart() {
               stroke={INCOME_TIER_META.high.color}
               fill="url(#gradHigh)"
               strokeWidth={2}
+              dot={false}
+              activeDot={{ r: 4 }}
+              label={({ x, y, index }: { x: number; y: number; index: number }) => {
+                if (index !== data.length - 1) return <g />;
+                return (
+                  <text x={x + 8} y={y + 4} fontSize={11} fontWeight={600} fill={INCOME_TIER_META.high.color}>
+                    Higher
+                  </text>
+                );
+              }}
             />
           </AreaChart>
         </ResponsiveContainer>
@@ -112,9 +145,10 @@ export default function AutomationWaveChart() {
       </div>
 
       <p className="text-[11px] text-[var(--muted)] mt-3">
-        Percentage of weighted task-hours within each income tier where AI compute cost has crossed below
-        the human labor cost. Higher = more economic incentive to automate. Does not equal job loss — adoption
-        lags, new task creation, and O-ring effects moderate actual displacement.
+        This chart shows the percentage of tasks within each income tier where it&apos;s now cheaper to use AI
+        than to pay a human. A rising line means more tasks are crossing that cost threshold each year. This
+        measures economic incentive, not actual job loss — real-world adoption is slowed by organizational
+        inertia, regulation, and the fact that automating some tasks can make the remaining human tasks more valuable.
       </p>
     </div>
   );

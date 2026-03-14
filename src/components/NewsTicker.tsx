@@ -158,19 +158,23 @@ export default function NewsTicker() {
       role="marquee"
       aria-label="Latest AI labor market headlines"
     >
-      {/* LIVE label */}
-      <div className="absolute left-0 top-0 bottom-0 flex items-center gap-1.5 pl-6 pr-2 sm:pl-10 sm:pr-3 bg-[#24243a] z-10">
-        <span className="relative flex h-2 w-2">
-          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" />
-          <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500" />
-        </span>
-        <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-white/70">
-          Live
-        </span>
+      {/* LIVE label + gradient fade */}
+      <div className="absolute left-0 top-0 bottom-0 z-10 flex items-center pointer-events-none" style={{ width: 160 }}>
+        {/* Solid background behind LIVE text */}
+        <div className="absolute left-0 top-0 bottom-0 w-[90px] sm:w-[110px] bg-[#24243a]" />
+        {/* Gradient dissolve from solid to transparent */}
+        <div className="absolute left-[90px] sm:left-[110px] top-0 bottom-0 w-[70px] bg-gradient-to-r from-[#24243a] to-transparent" />
+        {/* LIVE text */}
+        <div className="relative flex items-center gap-1.5 pl-6 sm:pl-10 pointer-events-auto">
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" />
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500" />
+          </span>
+          <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-white/70">
+            Live
+          </span>
+        </div>
       </div>
-
-      {/* Gradient fade after LIVE label */}
-      <div className="absolute left-[80px] sm:left-[100px] top-0 bottom-0 w-8 bg-gradient-to-r from-[#24243a] to-transparent z-10 pointer-events-none" />
 
       {/* Gradient fade on right edge */}
       <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-[#24243a] to-transparent z-10 pointer-events-none" />

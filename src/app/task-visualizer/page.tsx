@@ -15,7 +15,8 @@ export default function TaskVisualizerPage() {
           What parts of your job will AI automate?
         </h1>
         <p className="text-[14px] text-[var(--muted)] mt-1.5 max-w-2xl leading-relaxed">
-          Pick your job below to see a task-by-task breakdown of automation risk, compute costs, and where to invest your time.{" "}
+          Click a job title below to see which of your tasks AI will automate first — and which stay human.
+          You can also search by name above.{" "}
           <a
             href="/task-visualizer/economy"
             className="text-[var(--accent)] hover:underline font-medium"
