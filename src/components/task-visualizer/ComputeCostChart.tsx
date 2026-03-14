@@ -16,6 +16,8 @@ import {
   JobTask,
   TASK_CATEGORY_META,
   generateCostTrajectory,
+  getTaskTokenCost,
+  MODEL_PRICING,
 } from "@/data/job-tasks";
 
 interface ComputeCostChartProps {
@@ -174,6 +176,68 @@ export default function ComputeCostChart({
         Log scale. When a task line drops below the red wage line, there is economic incentive to automate it.
         Cost decline rates based on observed AI inference cost trends (30-48% annual decline).
       </p>
+
+      {/* Token economics breakdown */}
+      <div className="mt-6 pt-5 border-t border-black/[0.06]">
+        <h4 className="text-[13px] font-semibold text-[var(--foreground)] mb-1">
+          Token economics breakdown
+        </h4>
+        <p className="text-[11px] text-[var(--muted)] mb-3">
+          How compute cost per task is calculated from real AI API pricing: Cost = Calls x (Input tokens x Input price + Output tokens x Output price) x Overhead
+        </p>
+        <div className="overflow-x-auto">
+          <table className="w-full text-[11px]">
+            <thead>
+              <tr className="border-b border-black/[0.06]">
+                <th className="text-left py-1.5 pr-2 text-[var(--foreground)] font-semibold">Task</th>
+                <th className="text-right py-1.5 px-2 text-[var(--foreground)] font-semibold">Model</th>
+                <th className="text-right py-1.5 px-2 text-[var(--foreground)] font-semibold">In tokens</th>
+                <th className="text-right py-1.5 px-2 text-[var(--foreground)] font-semibold">Out tokens</th>
+                <th className="text-right py-1.5 px-2 text-[var(--foreground)] font-semibold">Calls/hr</th>
+                <th className="text-right py-1.5 px-2 text-[var(--foreground)] font-semibold">$/call</th>
+                <th className="text-right py-1.5 px-2 text-[var(--foreground)] font-semibold">Overhead</th>
+                <th className="text-right py-1.5 pl-2 text-[var(--foreground)] font-semibold">$/hr</th>
+              </tr>
+            </thead>
+            <tbody className="text-[var(--muted)]">
+              {tasks
+                .filter((t) => selectedTasks.has(t.id))
+                .map((task) => {
+                  const { costPerHour, profile, costPerCall } = getTaskTokenCost(task);
+                  const tierLabel = MODEL_PRICING[profile.modelTier].label.split(" ")[0];
+                  return (
+                    <tr key={task.id} className="border-b border-black/[0.03]">
+                      <td className="py-1.5 pr-2 font-medium" style={{ color: TASK_CATEGORY_META[task.category].color }}>
+                        {task.name}
+                      </td>
+                      <td className="text-right py-1.5 px-2">{tierLabel}</td>
+                      <td className="text-right py-1.5 px-2 tabular-nums">
+                        {profile.inputTokensPerCall >= 1000
+                          ? `${(profile.inputTokensPerCall / 1000).toFixed(0)}K`
+                          : profile.inputTokensPerCall}
+                      </td>
+                      <td className="text-right py-1.5 px-2 tabular-nums">
+                        {profile.outputTokensPerCall >= 1000
+                          ? `${(profile.outputTokensPerCall / 1000).toFixed(0)}K`
+                          : profile.outputTokensPerCall}
+                      </td>
+                      <td className="text-right py-1.5 px-2 tabular-nums">{profile.callsPerHumanHour}</td>
+                      <td className="text-right py-1.5 px-2 tabular-nums">${costPerCall < 0.01 ? costPerCall.toFixed(4) : costPerCall.toFixed(3)}</td>
+                      <td className="text-right py-1.5 px-2 tabular-nums">{profile.overheadMultiplier}x</td>
+                      <td className="text-right py-1.5 pl-2 tabular-nums font-medium text-[var(--foreground)]">
+                        ${costPerHour < 1 ? costPerHour.toFixed(3) : costPerHour.toFixed(2)}
+                      </td>
+                    </tr>
+                  );
+                })}
+            </tbody>
+          </table>
+        </div>
+        <p className="text-[10px] text-[var(--muted)] mt-2">
+          Token estimates based on typical AI API usage patterns. Overhead multiplier accounts for prompt retries (1.2-1.5x),
+          multi-step agents (2-5x), RAG/tool calls (1.2-3x). Physical tasks include robotics hardware amortization beyond token costs.
+        </p>
+      </div>
     </div>
   );
 }

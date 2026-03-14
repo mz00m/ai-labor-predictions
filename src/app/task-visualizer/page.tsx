@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import JobTaskVisualizer from "@/components/task-visualizer/JobTaskVisualizer";
+import JobTaskVisualizerWrapper from "@/components/task-visualizer/JobTaskVisualizerWrapper";
 
 export const metadata: Metadata = {
   title: "Job Task Visualizer — What parts of your job will AI automate?",
@@ -29,7 +29,7 @@ export default function TaskVisualizerPage() {
         </p>
       </header>
 
-      <JobTaskVisualizer />
+      <JobTaskVisualizerWrapper />
     </div>
   );
 }

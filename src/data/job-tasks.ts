@@ -13,6 +13,54 @@
  * computeCost * (1 - costDeclineRate)^years < humanWagePerHr * timeShare-adjusted cost.
  */
 
+/**
+ * Token economics model for computing AI task cost.
+ * Cost_task = N × (T_i/1M × P_i + T_o/1M × P_o) × M
+ *
+ * Where:
+ *   N  = model calls per hour of equivalent human work
+ *   T_i, T_o = input/output tokens per call
+ *   P_i, P_o = price per 1M input/output tokens
+ *   M  = overhead multiplier (retries, RAG, tool calls: typically 2-6)
+ */
+export interface TokenProfile {
+  modelTier: "small" | "mid" | "frontier";
+  inputTokensPerCall: number;
+  outputTokensPerCall: number;
+  callsPerHumanHour: number;
+  overheadMultiplier: number; // 2-6 typical
+}
+
+export const MODEL_PRICING: Record<string, { inputPer1M: number; outputPer1M: number; label: string }> = {
+  small:    { inputPer1M: 0.10, outputPer1M: 0.20, label: "Small (classification, extraction)" },
+  mid:      { inputPer1M: 0.50, outputPer1M: 1.50, label: "Mid-tier (chat, drafting)" },
+  frontier: { inputPer1M: 5.00, outputPer1M: 15.00, label: "Frontier (reasoning, coding)" },
+};
+
+/** Calculate $/hr from token profile */
+export function tokenCostPerHour(profile: TokenProfile): number {
+  const pricing = MODEL_PRICING[profile.modelTier];
+  const costPerCall =
+    (profile.inputTokensPerCall / 1_000_000) * pricing.inputPer1M +
+    (profile.outputTokensPerCall / 1_000_000) * pricing.outputPer1M;
+  return costPerCall * profile.callsPerHumanHour * profile.overheadMultiplier;
+}
+
+/**
+ * Default token profiles by task category.
+ * These represent the typical token usage pattern for each type of work.
+ */
+export const CATEGORY_TOKEN_PROFILES: Record<TaskCategory, TokenProfile> = {
+  "information-processing": { modelTier: "small",    inputTokensPerCall: 500,   outputTokensPerCall: 100,   callsPerHumanHour: 60,  overheadMultiplier: 2 },
+  "communication":          { modelTier: "mid",      inputTokensPerCall: 800,   outputTokensPerCall: 600,   callsPerHumanHour: 15,  overheadMultiplier: 2 },
+  "analysis-decision":      { modelTier: "frontier", inputTokensPerCall: 15000, outputTokensPerCall: 3000,  callsPerHumanHour: 8,   overheadMultiplier: 3 },
+  "creative-generative":    { modelTier: "mid",      inputTokensPerCall: 2000,  outputTokensPerCall: 1500,  callsPerHumanHour: 12,  overheadMultiplier: 3 },
+  "coordination-management":{ modelTier: "frontier", inputTokensPerCall: 5000,  outputTokensPerCall: 2000,  callsPerHumanHour: 10,  overheadMultiplier: 4 },
+  "physical-manual":        { modelTier: "frontier", inputTokensPerCall: 20000, outputTokensPerCall: 5000,  callsPerHumanHour: 4,   overheadMultiplier: 6 },
+  "interpersonal":          { modelTier: "frontier", inputTokensPerCall: 3000,  outputTokensPerCall: 2000,  callsPerHumanHour: 10,  overheadMultiplier: 5 },
+  "technical-specialized":  { modelTier: "frontier", inputTokensPerCall: 12000, outputTokensPerCall: 4000,  callsPerHumanHour: 6,   overheadMultiplier: 3 },
+};
+
 export interface JobTask {
   id: string;
   name: string;
@@ -22,6 +70,8 @@ export interface JobTask {
   aiCapability: number; // 0-1, current AI capability level
   costDeclineRate: number; // annual fractional decline (e.g. 0.40 = 40%/yr)
   category: TaskCategory;
+  /** Optional task-specific token profile override */
+  tokenProfile?: Partial<TokenProfile>;
 }
 
 export type TaskCategory =
@@ -2577,6 +2627,28 @@ export function generateCostTrajectory(
     });
   }
   return data;
+}
+
+/**
+ * Get the token-based cost for a task, using task-specific overrides
+ * or the default category profile.
+ */
+export function getTaskTokenCost(task: JobTask): {
+  costPerHour: number;
+  profile: TokenProfile;
+  costPerCall: number;
+} {
+  const defaultProfile = CATEGORY_TOKEN_PROFILES[task.category];
+  const profile: TokenProfile = {
+    ...defaultProfile,
+    ...(task.tokenProfile || {}),
+  };
+  const pricing = MODEL_PRICING[profile.modelTier];
+  const costPerCall =
+    (profile.inputTokensPerCall / 1_000_000) * pricing.inputPer1M +
+    (profile.outputTokensPerCall / 1_000_000) * pricing.outputPer1M;
+  const costPerHour = costPerCall * profile.callsPerHumanHour * profile.overheadMultiplier;
+  return { costPerHour, profile, costPerCall };
 }
 
 /**
