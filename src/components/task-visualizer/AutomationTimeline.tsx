@@ -1,7 +1,14 @@
 "use client";
 
 import { useMemo } from "react";
-import { JobTask, TASK_CATEGORY_META, calculateCrossoverYear } from "@/data/job-tasks";
+import { JobTask, calculateCrossoverYear } from "@/data/job-tasks";
+
+/** Risk color based on crossover year */
+function getRiskColor(crossoverYear: number | null): string {
+  if (!crossoverYear || crossoverYear <= 2028) return "#EF4444";
+  if (crossoverYear <= 2031) return "#6366F1";
+  return "#10B981";
+}
 
 interface AutomationTimelineProps {
   tasks: JobTask[];
@@ -64,7 +71,7 @@ export default function AutomationTimeline({
         </div>
 
         {timelineData.map(({ task, share, crossover }) => {
-          const color = TASK_CATEGORY_META[task.category].color;
+          const color = getRiskColor(crossover);
           const year = crossover ?? maxYear;
           const leftPct = Math.min(((year - minYear) / range) * 100, 100);
           const isNow = crossover !== null && crossover <= 2026;
