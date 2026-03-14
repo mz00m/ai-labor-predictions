@@ -22,8 +22,8 @@ import {
 } from "@/data/economy-occupations";
 
 const GENDER_COLORS = {
-  women: "#8B5CF6",
-  men: "#06B6D4",
+  women: "#4338CA",
+  men: "#A5B4FC",
 };
 
 interface TierGenderData {

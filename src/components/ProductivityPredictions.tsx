@@ -7,11 +7,11 @@ import { useState, useEffect, useCallback, useRef } from "react";
 /* ------------------------------------------------------------------ */
 
 const CATEGORIES = [
-  { id: "stagnation",     label: "Stagnation",     range: "< 1%",  color: "#1a3a5c" },
-  { id: "status_quo",     label: "Status Quo",     range: "1–2%",  color: "#2e6da4" },
-  { id: "solid_breakout", label: "Solid Breakout", range: "2–3%",  color: "#e8a838" },
-  { id: "boom",           label: "Boom",           range: "3–4%",  color: "#d4601a" },
-  { id: "phase_change",   label: "Phase Change",   range: "> 4%",  color: "#b02020" },
+  { id: "stagnation",     label: "Stagnation",     range: "< 1%",  color: "#C7D2FE" },
+  { id: "status_quo",     label: "Status Quo",     range: "1–2%",  color: "#A5B4FC" },
+  { id: "solid_breakout", label: "Solid Breakout", range: "2–3%",  color: "#6366F1" },
+  { id: "boom",           label: "Boom",           range: "3–4%",  color: "#4F46E5" },
+  { id: "phase_change",   label: "Phase Change",   range: "> 4%",  color: "#4338CA" },
 ] as const;
 
 type CategoryId = (typeof CATEGORIES)[number]["id"];
@@ -555,7 +555,7 @@ export default function ProductivityPredictions() {
         <span className="flex items-center gap-1.5">
           <span
             className="inline-block w-3 h-3 rounded-sm"
-            style={{ backgroundColor: "#2e6da4", opacity: 0.55 }}
+            style={{ backgroundColor: "#6366F1", opacity: 0.55 }}
           />
           Individual economist
         </span>
@@ -563,8 +563,8 @@ export default function ProductivityPredictions() {
           <span
             className="inline-block w-3 h-3 rounded-sm"
             style={{
-              background: `repeating-linear-gradient(-45deg, #2e6da455, #2e6da455 2px, transparent 2px, transparent 4px)`,
-              border: "1px dashed #2e6da488",
+              background: `repeating-linear-gradient(-45deg, #6366F155, #6366F155 2px, transparent 2px, transparent 4px)`,
+              border: "1px dashed #6366F188",
             }}
           />
           Crowd average (n=23)

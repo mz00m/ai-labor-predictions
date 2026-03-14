@@ -11,22 +11,11 @@ import ComputeBenchmarks from "./ComputeBenchmarks";
 import DurableSkillsSection from "./DurableSkillsSection";
 import MethodologySection from "./MethodologySection";
 
-const CATEGORY_COLORS: Record<string, { bg: string; border: string; text: string; accent: string }> = {
-  "Business & Finance": { bg: "rgba(92,97,246,0.04)", border: "rgba(92,97,246,0.15)", text: "#5C61F6", accent: "#5C61F6" },
-  "Technology": { bg: "rgba(6,182,212,0.04)", border: "rgba(6,182,212,0.15)", text: "#06B6D4", accent: "#06B6D4" },
-  "Healthcare": { bg: "rgba(16,185,129,0.04)", border: "rgba(16,185,129,0.15)", text: "#10B981", accent: "#10B981" },
-  "Legal": { bg: "rgba(139,92,246,0.04)", border: "rgba(139,92,246,0.15)", text: "#8B5CF6", accent: "#8B5CF6" },
-  "Education": { bg: "rgba(245,158,11,0.04)", border: "rgba(245,158,11,0.15)", text: "#F59E0B", accent: "#F59E0B" },
-  "Construction & Trades": { bg: "rgba(107,114,128,0.04)", border: "rgba(107,114,128,0.15)", text: "#6B7280", accent: "#6B7280" },
-  "Office & Admin": { bg: "rgba(246,107,92,0.04)", border: "rgba(246,107,92,0.15)", text: "#F66B5C", accent: "#F66B5C" },
-  "Sales": { bg: "rgba(236,72,153,0.04)", border: "rgba(236,72,153,0.15)", text: "#EC4899", accent: "#EC4899" },
-  "Arts & Design": { bg: "rgba(245,158,11,0.04)", border: "rgba(245,158,11,0.15)", text: "#D97706", accent: "#D97706" },
-  "Media & Communications": { bg: "rgba(246,107,92,0.04)", border: "rgba(246,107,92,0.15)", text: "#EA580C", accent: "#EA580C" },
-  "Management": { bg: "rgba(92,97,246,0.04)", border: "rgba(92,97,246,0.15)", text: "#4338CA", accent: "#4338CA" },
-  "Community & Social Services": { bg: "rgba(236,72,153,0.04)", border: "rgba(236,72,153,0.15)", text: "#BE185D", accent: "#BE185D" },
-  "Food & Hospitality": { bg: "rgba(245,158,11,0.04)", border: "rgba(245,158,11,0.15)", text: "#B45309", accent: "#B45309" },
-  "Transportation": { bg: "rgba(107,114,128,0.04)", border: "rgba(107,114,128,0.15)", text: "#4B5563", accent: "#4B5563" },
-  "Retail": { bg: "rgba(236,72,153,0.04)", border: "rgba(236,72,153,0.15)", text: "#DB2777", accent: "#DB2777" },
+const DEFAULT_CATEGORY_STYLE = {
+  bg: "rgba(92,97,246,0.03)",
+  border: "rgba(0,0,0,0.08)",
+  text: "#6b7280",
+  accent: "#5C61F6",
 };
 
 type Tab = "breakdown" | "timeline" | "costs" | "benchmarks";
@@ -138,9 +127,9 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
   return (
     <div>
       {/* Job selector */}
-      <div className="mb-8">
+      <div className="mb-6">
         {/* Search bar */}
-        <div className="relative mb-5">
+        <div className="relative mb-4">
           <input
             type="text"
             value={selectedJob ? (searchQuery || selectedJob.title) : searchQuery}
@@ -156,7 +145,7 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
           {searchQuery && !selectedJob && filteredJobs.length > 0 && (
             <div className="absolute top-full left-0 right-0 max-w-lg mt-1 bg-white rounded-xl border border-black/[0.08] shadow-lg max-h-[280px] overflow-y-auto z-30">
               {filteredJobs.map((job) => {
-                const colors = CATEGORY_COLORS[job.category] || CATEGORY_COLORS["Office & Admin"];
+                const colors = DEFAULT_CATEGORY_STYLE;
                 return (
                   <button
                     key={job.id}
@@ -196,7 +185,7 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
                 return acc;
               }, {})
             ).map(([category, jobs]) => {
-              const colors = CATEGORY_COLORS[category] || CATEGORY_COLORS["Office & Admin"];
+              const colors = DEFAULT_CATEGORY_STYLE;
               return (
                 <div
                   key={category}

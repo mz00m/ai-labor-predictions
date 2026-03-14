@@ -85,20 +85,20 @@ export const CATEGORY_COMPUTE_COSTS: Record<TaskCategory, number> = {
 };
 
 export const INCOME_TIER_META: Record<IncomeTier, { label: string; color: string; range: string }> = {
-  low: { label: "Lower income", color: "#F66B5C", range: "Under $35K/yr" },
-  middle: { label: "Middle income", color: "#F59E0B", range: "$35K-$75K/yr" },
-  high: { label: "Higher income", color: "#5C61F6", range: "Over $75K/yr" },
+  low: { label: "Lower income", color: "#A5B4FC", range: "Under $35K/yr" },
+  middle: { label: "Middle income", color: "#6366F1", range: "$35K-$75K/yr" },
+  high: { label: "Higher income", color: "#4338CA", range: "Over $75K/yr" },
 };
 
 export const TASK_CATEGORY_META: Record<TaskCategory, { label: string; color: string }> = {
-  "information-processing": { label: "Information Processing", color: "#5C61F6" },
-  "communication": { label: "Communication", color: "#F66B5C" },
-  "analysis-decision": { label: "Analysis & Decisions", color: "#10B981" },
-  "creative-generative": { label: "Creative & Generative", color: "#F59E0B" },
-  "coordination-management": { label: "Coordination", color: "#8B5CF6" },
-  "physical-manual": { label: "Physical & Manual", color: "#6B7280" },
-  "interpersonal": { label: "Interpersonal", color: "#EC4899" },
-  "technical-specialized": { label: "Technical & Specialized", color: "#06B6D4" },
+  "information-processing": { label: "Information Processing", color: "#4338CA" },
+  "communication": { label: "Communication", color: "#5C61F6" },
+  "analysis-decision": { label: "Analysis & Decisions", color: "#6366F1" },
+  "creative-generative": { label: "Creative & Generative", color: "#818CF8" },
+  "coordination-management": { label: "Coordination", color: "#7C83F7" },
+  "physical-manual": { label: "Physical & Manual", color: "#A5B4FC" },
+  "interpersonal": { label: "Interpersonal", color: "#4F46E5" },
+  "technical-specialized": { label: "Technical & Specialized", color: "#C7D2FE" },
 };
 
 function computeBlended(tc: Record<TaskCategory, number>): { avgCost: number; declineRate: number } {
