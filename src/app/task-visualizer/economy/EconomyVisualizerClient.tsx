@@ -9,36 +9,36 @@ import GenderImpact from "@/components/task-visualizer/economy/GenderImpact";
 
 type Section = "overview" | "gender" | "wave" | "explorer" | "strata";
 
-const SECTIONS: { id: Section; label: string; description: string; howTo: string }[] = [
+const SECTIONS: { id: Section; label: string; question: string; description: string }[] = [
   {
     id: "overview",
     label: "The Workforce",
-    description: "The 154 million jobs that make up the US economy, broken down by occupation group and income level.",
-    howTo: "Click any bar to explore that occupation in the individual task visualizer.",
+    question: "What does the US workforce look like, and who earns what?",
+    description: "154 million workers across 22 occupation groups, colored by income tier. Click any bar to explore that job in detail.",
   },
   {
     id: "gender",
     label: "Gender Impact",
-    description: "Women and men are concentrated in different occupations with very different automation profiles. Clerical, administrative, and healthcare support roles — where women are the majority — face higher near-term automation pressure from information-processing tasks.",
-    howTo: "Compare automation exposure for women vs. men across income tiers and see which female-dominated occupations are most at risk.",
+    question: "Will automation hit women harder than men?",
+    description: "Women are concentrated in clerical, admin, and healthcare support roles with high information-processing task loads — making them disproportionately exposed to near-term AI automation.",
   },
   {
     id: "wave",
     label: "The Automation Wave",
-    description: "As AI compute costs fall each year, more tasks become cheaper to automate than to pay humans. This chart shows that pressure building across income tiers from 2026 to 2040.",
-    howTo: "Hover over the chart to see the exact automation percentage for each income tier at any year.",
+    question: "How fast is automation pressure building across income levels?",
+    description: "As compute costs fall each year, more tasks become cheaper to automate. This shows that pressure building from 2026 to 2040 across lower, middle, and higher income tiers.",
   },
   {
     id: "explorer",
     label: "Year Explorer",
-    description: "Pick any year between now and 2040. See which occupation groups face the most automation pressure and how many workers are affected.",
-    howTo: "Drag the slider to a year. Bars show what percentage of each group's tasks are economically automatable.",
+    question: "In any given year, which occupations face the most automation pressure?",
+    description: "Drag the slider to any year. Bars show what percentage of each group's tasks are economically automatable.",
   },
   {
     id: "strata",
     label: "By Income Tier",
-    description: "Lower, middle, and higher income jobs face very different automation timelines. Here's the detailed breakdown with the most exposed and most durable task categories for each group.",
-    howTo: "Each tier card shows the task composition, automation projections at 2028/2032/2036, and which skills are most at risk vs. most durable.",
+    question: "How do automation timelines differ for lower, middle, and higher earners?",
+    description: "Detailed breakdown by income tier with task composition, automation projections, and which skills are most at risk vs. most durable.",
   },
 ];
 
@@ -64,16 +64,16 @@ export default function EconomyVisualizerClient() {
         ))}
       </div>
 
-      {/* Section description */}
+      {/* Section question + description */}
       {(() => {
         const section = SECTIONS.find((s) => s.id === activeSection);
         return section ? (
           <div className="mb-6 max-w-2xl">
+            <p className="text-[16px] font-semibold text-[var(--foreground)] mb-1">
+              {section.question}
+            </p>
             <p className="text-[13px] text-[var(--muted)] leading-relaxed">
               {section.description}
-            </p>
-            <p className="text-[12px] text-[var(--accent)] mt-1.5">
-              {section.howTo}
             </p>
           </div>
         ) : null;

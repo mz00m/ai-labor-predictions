@@ -39,7 +39,7 @@ export default function MethodologySection() {
             equivalent human work. The formula:
           </p>
           <div className="bg-black/[0.02] rounded-lg p-3 font-mono text-[12px] text-[var(--foreground)] mb-4">
-            Cost/hr = Calls × (InputTokens/1M × InputPrice + OutputTokens/1M × OutputPrice) × Overhead
+            Cost/hr = Calls × (InputTokens/1M × InputPrice + OutputTokens/1M × OutputPrice) × CallOverhead × DeploymentOverhead
           </div>
           <div className="space-y-3 text-[12px]">
             <div className="flex gap-3 rounded-lg border border-black/[0.06] p-3">
@@ -73,10 +73,12 @@ export default function MethodologySection() {
                 3. Overhead multiplier
               </span>
               <span className="text-[var(--muted)]">
-                Real systems cost more than single API calls. Prompt retries add 1.2-1.5x. Multi-step
-                agents add 2-5x. RAG retrieval and tool calls add 1.2-3x. We apply a composite overhead
-                of 2-6x depending on task complexity. This matches production cost data from AI product teams.
-                For physical tasks, robotics hardware amortization is added on top.
+                Real systems cost more than single API calls. <strong className="text-[var(--foreground)]">Call overhead</strong> (2-6x):
+                prompt retries (1.2-1.5x), multi-step agents (2-5x), RAG/tool calls (1.2-3x).{" "}
+                <strong className="text-[var(--foreground)]">Deployment overhead</strong> (5x):
+                integration engineering, error handling, validation pipelines, human-in-the-loop review,
+                monitoring, and organizational adoption costs. This 5x deployment multiplier is based on
+                production data from Sequoia Capital (2025) showing real-world AI system costs at 3-8x raw inference.
               </span>
             </div>
           </div>

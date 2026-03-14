@@ -296,7 +296,7 @@ export default function GenderImpact() {
                     {(g.womenCount / 1000).toFixed(1)}M
                   </td>
                   <td className="text-right py-2 px-3 tabular-nums">
-                    <span style={{ color: g.automationPct2030 >= 50 ? "#EF4444" : g.automationPct2030 >= 25 ? "#F59E0B" : "#10B981" }}>
+                    <span style={{ color: g.automationPct2030 >= 60 ? "#EF4444" : g.automationPct2030 >= 35 ? "#6366F1" : "#10B981" }}>
                       {g.automationPct2030}%
                     </span>
                   </td>

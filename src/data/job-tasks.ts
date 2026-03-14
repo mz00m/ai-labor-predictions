@@ -2581,8 +2581,20 @@ export const JOB_PROFILES: JobProfile[] = [
 ];
 
 /**
+ * Deployment overhead: real-world automation costs beyond raw API calls.
+ * Accounts for: integration engineering, error handling & retries, validation pipelines,
+ * human-in-the-loop review, monitoring, edge case handling, and organizational adoption.
+ * Production AI deployments typically cost 3-8x raw inference (Sequoia Capital 2025 data).
+ * We use 5x as a conservative midpoint.
+ */
+export const DEPLOYMENT_OVERHEAD = 5;
+
+/**
  * Calculate the year when compute cost crosses below human cost for a task.
  * Returns null if crossover doesn't happen within 20 years.
+ *
+ * Compute cost includes deployment overhead (integration, tooling, validation)
+ * on top of raw API/inference costs, declining annually per task category.
  */
 export function calculateCrossoverYear(
   task: JobTask,
@@ -2590,7 +2602,7 @@ export function calculateCrossoverYear(
   baseYear: number = 2026
 ): number | null {
   const humanCostForTask = humanWagePerHr * task.timeShare;
-  const computeCostForTask = task.currentComputeCostPerHr * task.timeShare;
+  const computeCostForTask = task.currentComputeCostPerHr * DEPLOYMENT_OVERHEAD * task.timeShare;
 
   if (computeCostForTask <= humanCostForTask) return baseYear;
 
@@ -2618,6 +2630,7 @@ export function generateCostTrajectory(
   for (let y = 0; y <= years; y++) {
     const computeCost =
       task.currentComputeCostPerHr *
+      DEPLOYMENT_OVERHEAD *
       task.timeShare *
       Math.pow(1 - task.costDeclineRate, y);
     data.push({
