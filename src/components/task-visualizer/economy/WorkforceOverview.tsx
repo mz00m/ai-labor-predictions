@@ -1,6 +1,7 @@
 "use client";
 
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
+import type { IncomeTier } from "@/data/economy-occupations";
 import { useRouter } from "next/navigation";
 import {
   BarChart,
@@ -62,8 +63,24 @@ function CustomTooltip({ active, payload }: TooltipProps<number, string>) {
 
 export default function WorkforceOverview() {
   const router = useRouter();
+  const [selectedTiers, setSelectedTiers] = useState<Set<IncomeTier>>(
+    () => new Set(["low", "middle", "high"] as IncomeTier[])
+  );
 
-  const chartData = useMemo(() => {
+  const toggleTier = (tier: IncomeTier) => {
+    setSelectedTiers((prev) => {
+      const next = new Set(prev);
+      if (next.has(tier)) {
+        // Don't allow deselecting all — keep at least one
+        if (next.size > 1) next.delete(tier);
+      } else {
+        next.add(tier);
+      }
+      return next;
+    });
+  };
+
+  const allChartData = useMemo(() => {
     return [...OCCUPATION_GROUPS]
       .sort((a, b) => b.employment - a.employment)
       .map((g) => ({
@@ -72,6 +89,10 @@ export default function WorkforceOverview() {
         hasJobs: (SOC_TO_JOB_IDS[g.id] || []).length > 0,
       }));
   }, []);
+
+  const chartData = useMemo(() => {
+    return allChartData.filter((g) => selectedTiers.has(g.incomeTier));
+  }, [allChartData, selectedTiers]);
 
   const tierSummary = useMemo(() => {
     const tiers = { low: 0, middle: 0, high: 0 };
@@ -93,21 +114,31 @@ export default function WorkforceOverview() {
         </div>
         {(["low", "middle", "high"] as const).map((tier) => {
           const meta = INCOME_TIER_META[tier];
+          const isActive = selectedTiers.has(tier);
           return (
-            <div key={tier} className="rounded-xl bg-black/[0.02] border border-black/[0.06] p-4">
+            <button
+              key={tier}
+              onClick={() => toggleTier(tier)}
+              className="rounded-xl border p-4 text-left cursor-pointer"
+              style={{
+                backgroundColor: isActive ? `${meta.color}08` : "transparent",
+                borderColor: isActive ? `${meta.color}40` : "rgba(0,0,0,0.06)",
+                opacity: isActive ? 1 : 0.4,
+              }}
+            >
               <p className="text-[28px] font-bold tracking-tight" style={{ color: meta.color }}>
                 {(tierSummary[tier] / 1000).toFixed(1)}M
               </p>
               <p className="text-[11px] text-[var(--muted)]">
                 {meta.label} ({meta.range})
               </p>
-            </div>
+            </button>
           );
         })}
       </div>
 
       {/* Bar chart */}
-      <div className="h-[520px]">
+      <div style={{ height: Math.max(200, chartData.length * 26 + 40) }}>
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
             data={chartData}
@@ -154,17 +185,25 @@ export default function WorkforceOverview() {
 
       {/* Legend */}
       <div className="flex gap-4 mt-3 pt-3 border-t border-black/[0.06]">
-        {(["low", "middle", "high"] as const).map((tier) => (
-          <div key={tier} className="flex items-center gap-1.5">
-            <div
-              className="w-2.5 h-2.5 rounded-full"
-              style={{ backgroundColor: INCOME_TIER_META[tier].color }}
-            />
-            <span className="text-[11px] text-[var(--muted)]">
-              {INCOME_TIER_META[tier].label} ({INCOME_TIER_META[tier].range})
-            </span>
-          </div>
-        ))}
+        {(["low", "middle", "high"] as const).map((tier) => {
+          const isActive = selectedTiers.has(tier);
+          return (
+            <button
+              key={tier}
+              onClick={() => toggleTier(tier)}
+              className="flex items-center gap-1.5 cursor-pointer"
+              style={{ opacity: isActive ? 1 : 0.35 }}
+            >
+              <div
+                className="w-2.5 h-2.5 rounded-full"
+                style={{ backgroundColor: INCOME_TIER_META[tier].color }}
+              />
+              <span className="text-[11px] text-[var(--muted)]">
+                {INCOME_TIER_META[tier].label} ({INCOME_TIER_META[tier].range})
+              </span>
+            </button>
+          );
+        })}
       </div>
 
       <p className="text-[11px] text-[var(--muted)] mt-3">
