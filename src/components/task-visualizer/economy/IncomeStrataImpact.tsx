@@ -117,7 +117,7 @@ export default function IncomeStrataImpact() {
                   </p>
                 </div>
                 <div className="text-right">
-                  <p className="text-[22px] font-bold tracking-tight" style={{ color: meta.color }}>
+                  <p className="text-[28px] font-bold tracking-tight" style={{ color: meta.color }}>
                     {detail.avgAutomation2030}%
                   </p>
                   <p className="text-[10px] text-[var(--muted)]">avg task automation by 2030</p>

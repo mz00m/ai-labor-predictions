@@ -224,8 +224,8 @@ export default function DurableSkillsSection({
       {/* Hero stat + radar chart side by side when job selected */}
       {selectedJob && radarData && (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-          <div className="rounded-xl bg-gradient-to-br from-emerald-50 to-cyan-50 border border-emerald-100/50 p-6">
-            <p className="text-[48px] font-bold text-[#10B981] tracking-tight leading-none">
+          <div className="rounded-xl bg-black/[0.02] border border-black/[0.06] p-6">
+            <p className="text-[28px] font-bold text-[#10B981] tracking-tight leading-none">
               {durablePercent}%
             </p>
             <p className="text-[14px] text-[var(--foreground)] font-medium mt-2">
@@ -295,7 +295,7 @@ export default function DurableSkillsSection({
       </div>
 
       {/* Closing message */}
-      <div className="mt-8 rounded-xl bg-gradient-to-r from-emerald-50/50 to-blue-50/50 border border-emerald-100/30 p-6 max-w-2xl">
+      <div className="mt-8 rounded-xl bg-black/[0.02] border border-black/[0.06] p-6 max-w-2xl">
         <p className="text-[13px] text-[var(--foreground)] leading-relaxed">
           <strong>The bottom line:</strong> AI will automate tasks, not jobs. The professionals who thrive will
           be the ones who deliberately shift their time toward the tasks that are hardest to automate

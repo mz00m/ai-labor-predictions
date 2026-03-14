@@ -5,8 +5,9 @@ import WorkforceOverview from "@/components/task-visualizer/economy/WorkforceOve
 import AutomationWaveChart from "@/components/task-visualizer/economy/AutomationWaveChart";
 import YearSliderExplorer from "@/components/task-visualizer/economy/YearSliderExplorer";
 import IncomeStrataImpact from "@/components/task-visualizer/economy/IncomeStrataImpact";
+import GenderImpact from "@/components/task-visualizer/economy/GenderImpact";
 
-type Section = "overview" | "wave" | "explorer" | "strata";
+type Section = "overview" | "gender" | "wave" | "explorer" | "strata";
 
 const SECTIONS: { id: Section; label: string; description: string; howTo: string }[] = [
   {
@@ -14,6 +15,12 @@ const SECTIONS: { id: Section; label: string; description: string; howTo: string
     label: "The Workforce",
     description: "The 154 million jobs that make up the US economy, broken down by occupation group and income level.",
     howTo: "Click any bar to explore that occupation in the individual task visualizer.",
+  },
+  {
+    id: "gender",
+    label: "Gender Impact",
+    description: "Women and men are concentrated in different occupations with very different automation profiles. Clerical, administrative, and healthcare support roles — where women are the majority — face higher near-term automation pressure from information-processing tasks.",
+    howTo: "Compare automation exposure for women vs. men across income tiers and see which female-dominated occupations are most at risk.",
   },
   {
     id: "wave",
@@ -74,6 +81,7 @@ export default function EconomyVisualizerClient() {
 
       {/* Section content */}
       {activeSection === "overview" && <WorkforceOverview />}
+      {activeSection === "gender" && <GenderImpact />}
       {activeSection === "wave" && <AutomationWaveChart />}
       {activeSection === "explorer" && <YearSliderExplorer />}
       {activeSection === "strata" && <IncomeStrataImpact />}

@@ -85,7 +85,7 @@ export default function WorkforceOverview() {
     <div>
       {/* Big stat */}
       <div className="grid grid-cols-1 sm:grid-cols-4 gap-3 mb-8">
-        <div className="rounded-xl border border-black/[0.06] p-4">
+        <div className="rounded-xl bg-black/[0.02] border border-black/[0.06] p-4">
           <p className="text-[28px] font-bold text-[var(--foreground)] tracking-tight">
             {(TOTAL_EMPLOYMENT / 1000).toFixed(1)}M
           </p>
@@ -94,7 +94,7 @@ export default function WorkforceOverview() {
         {(["low", "middle", "high"] as const).map((tier) => {
           const meta = INCOME_TIER_META[tier];
           return (
-            <div key={tier} className="rounded-xl border border-black/[0.06] p-4">
+            <div key={tier} className="rounded-xl bg-black/[0.02] border border-black/[0.06] p-4">
               <p className="text-[28px] font-bold tracking-tight" style={{ color: meta.color }}>
                 {(tierSummary[tier] / 1000).toFixed(1)}M
               </p>

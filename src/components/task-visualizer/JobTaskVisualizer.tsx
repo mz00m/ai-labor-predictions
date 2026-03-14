@@ -253,7 +253,7 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
                 {selectedJob.tasks.length} task components
               </p>
             </div>
-            <div className="text-center px-5 py-3 rounded-xl border border-black/[0.06]">
+            <div className="text-center px-5 py-3 rounded-xl bg-black/[0.02] border border-black/[0.06]">
               <p
                 className="text-[28px] font-bold tracking-tight"
                 style={{
