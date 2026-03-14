@@ -13,32 +13,32 @@ const SECTIONS: { id: Section; label: string; question: string; description: str
   {
     id: "overview",
     label: "The Workforce",
-    question: "What does the US workforce look like, and who earns what?",
-    description: "154 million workers across 22 occupation groups, shaded by income tier. Click any bar to explore that job in detail.",
+    question: "The US workforce: 154M workers by occupation and income",
+    description: "Each bar is an occupation group sized by number of workers. Color shows income tier. Click any bar to see a task-by-task automation breakdown for that job.",
   },
   {
     id: "wave",
     label: "The Automation Wave",
-    question: "How fast is automation pressure building across income levels?",
-    description: "As compute costs fall each year, more tasks become cheaper to automate. This shows that pressure building from 2026 to 2040 across lower, middle, and higher income tiers.",
+    question: "Automation pressure is building fastest for higher earners",
+    description: "Each line tracks the share of tasks within an income tier where AI compute has become cheaper than human labor. Higher doesn't mean jobs disappear — it means the economic incentive to automate is growing. The gap between tiers shows where pressure concentrates first.",
   },
   {
     id: "explorer",
     label: "Year Explorer",
-    question: "In any given year, which occupations face the most automation pressure?",
-    description: "Drag the slider to any year. Bars show what percentage of each group's tasks are economically automatable.",
+    question: "Explore automation pressure by year: drag the slider to see who's exposed",
+    description: "Each bar shows what percentage of an occupation group's tasks could be automated more cheaply by AI in that year. Taller bars = more economic pressure. Click any bar to explore that job's tasks in detail.",
   },
   {
     id: "strata",
     label: "By Income",
-    question: "How do automation timelines differ for lower, middle, and higher earners?",
-    description: "Detailed breakdown by income tier with task composition, automation projections, and which skills are most at risk vs. most durable.",
+    question: "Automation hits different income levels on different timelines",
+    description: "Each income tier is broken out with its top occupation groups, projected automation rates at 2028/2032/2036, and which task types are most exposed vs. most durable. Click any occupation row to explore its individual tasks.",
   },
   {
     id: "gender",
     label: "By Gender",
-    question: "Will automation hit women harder than men?",
-    description: "Women are concentrated in clerical, admin, and healthcare support roles with high information-processing task loads — making them disproportionately exposed to near-term AI automation.",
+    question: "Women face higher near-term automation exposure than men",
+    description: "Women are concentrated in clerical, admin, and healthcare support roles with high information-processing task loads. This chart compares automation exposure across all 22 occupation groups by gender concentration. Click any bar to explore that job's tasks.",
   },
 ];
 

@@ -184,26 +184,32 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
                 (acc[job.category] ??= []).push(job);
                 return acc;
               }, {})
-            ).map(([category, jobs]) => {
-              const colors = DEFAULT_CATEGORY_STYLE;
+            ).sort(([a], [b]) => a.localeCompare(b)).map(([category, jobs], index) => {
+              const hue = (index * 25 + 230) % 360;
               return (
                 <div
                   key={category}
-                  className="rounded-lg border p-3 transition-colors hover:shadow-sm"
-                  style={{ backgroundColor: colors.bg, borderColor: colors.border }}
+                  className="rounded-lg border p-3 hover:shadow-sm"
+                  style={{
+                    backgroundColor: `hsla(${hue}, 40%, 97%, 1)`,
+                    borderColor: `hsla(${hue}, 30%, 88%, 1)`,
+                  }}
                 >
                   <p
-                    className="text-[11px] font-semibold mb-2 tracking-wide uppercase"
-                    style={{ color: colors.text }}
+                    className="text-[11px] font-semibold mb-1.5 tracking-wide uppercase"
+                    style={{ color: `hsla(${hue}, 25%, 40%, 1)` }}
                   >
                     {category}
+                    <span className="ml-1.5 text-[10px] font-normal normal-case tracking-normal opacity-60">
+                      {jobs.length}
+                    </span>
                   </p>
-                  <div className="space-y-0.5">
+                  <div className="space-y-0">
                     {jobs.map((job) => (
                       <button
                         key={job.id}
                         onClick={() => handleSelectJob(job)}
-                        className="block w-full text-left text-[12px] py-1 px-1.5 rounded transition-colors hover:bg-black/[0.04] text-[var(--foreground)]"
+                        className="block w-full text-left text-[11px] py-0.5 px-1 rounded hover:bg-black/[0.04] text-[var(--foreground)]"
                       >
                         {job.title}
                       </button>
