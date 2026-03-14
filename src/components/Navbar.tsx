@@ -32,6 +32,7 @@ const NAV_ENTRIES: NavEntry[] = [
       { href: "/history", label: "History" },
       { href: "/signals/firm-response", label: "Firm Response" },
       { href: "/task-visualizer", label: "Task Visualizer" },
+      { href: "/task-visualizer/economy", label: "Economy View" },
     ],
   },
   {

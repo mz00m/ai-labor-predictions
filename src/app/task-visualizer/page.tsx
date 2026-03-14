@@ -19,6 +19,14 @@ export default function TaskVisualizerPage() {
           piece of your work maps to AI compute costs, and where you should be building
           irreplaceable human expertise.
         </p>
+        <p className="text-[13px] mt-3">
+          <a
+            href="/task-visualizer/economy"
+            className="text-[var(--accent)] hover:underline font-medium"
+          >
+            See the full US economy view →
+          </a>
+        </p>
       </header>
 
       <JobTaskVisualizer />
