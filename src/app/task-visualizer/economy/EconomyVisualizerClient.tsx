@@ -8,26 +8,30 @@ import IncomeStrataImpact from "@/components/task-visualizer/economy/IncomeStrat
 
 type Section = "overview" | "wave" | "explorer" | "strata";
 
-const SECTIONS: { id: Section; label: string; description: string }[] = [
+const SECTIONS: { id: Section; label: string; description: string; howTo: string }[] = [
   {
     id: "overview",
     label: "The Workforce",
-    description: "Who works where and earns what in the US economy",
+    description: "The 154 million jobs that make up the US economy, broken down by occupation group and income level.",
+    howTo: "Click any bar to explore that occupation in the individual task visualizer.",
   },
   {
     id: "wave",
     label: "The Automation Wave",
-    description: "How automation pressure builds over time by income tier",
+    description: "As AI compute costs fall each year, more tasks become cheaper to automate than to pay humans. This chart shows that pressure building across income tiers from 2026 to 2040.",
+    howTo: "Hover over the chart to see the exact automation percentage for each income tier at any year.",
   },
   {
     id: "explorer",
     label: "Year Explorer",
-    description: "Slide through time to see automation reach each occupation",
+    description: "Pick any year between now and 2040. See which occupation groups face the most automation pressure and how many workers are affected.",
+    howTo: "Drag the slider to a year. Bars show what percentage of each group's tasks are economically automatable.",
   },
   {
     id: "strata",
     label: "By Income Tier",
-    description: "Detailed breakdown by low, middle, and high income",
+    description: "Lower, middle, and higher income jobs face very different automation timelines. Here's the detailed breakdown with the most exposed and most durable task categories for each group.",
+    howTo: "Each tier card shows the task composition, automation projections at 2028/2032/2036, and which skills are most at risk vs. most durable.",
   },
 ];
 
@@ -54,9 +58,19 @@ export default function EconomyVisualizerClient() {
       </div>
 
       {/* Section description */}
-      <p className="text-[13px] text-[var(--muted)] mb-6">
-        {SECTIONS.find((s) => s.id === activeSection)?.description}
-      </p>
+      {(() => {
+        const section = SECTIONS.find((s) => s.id === activeSection);
+        return section ? (
+          <div className="mb-6 max-w-2xl">
+            <p className="text-[13px] text-[var(--muted)] leading-relaxed">
+              {section.description}
+            </p>
+            <p className="text-[12px] text-[var(--accent)] mt-1.5">
+              {section.howTo}
+            </p>
+          </div>
+        ) : null;
+      })()}
 
       {/* Section content */}
       {activeSection === "overview" && <WorkforceOverview />}

@@ -265,6 +265,35 @@ export const OCCUPATION_GROUPS: OccupationGroup[] = [
 export const TOTAL_EMPLOYMENT = OCCUPATION_GROUPS.reduce((s, g) => s + g.employment, 0); // thousands
 
 /**
+ * Maps economy SOC groups to representative job profiles in the task visualizer.
+ * Each SOC group links to the most relevant individual job(s) available.
+ */
+export const SOC_TO_JOB_IDS: Record<string, string[]> = {
+  "management": ["project-manager", "construction-manager", "restaurant-manager", "retail-store-manager"],
+  "business-financial": ["accountant", "financial-analyst", "hr-specialist", "supply-chain-analyst"],
+  "computer-math": ["software-developer", "data-analyst", "product-manager"],
+  "architecture-engineering": ["electrician", "construction-manager"],
+  "life-physical-social-science": ["data-analyst"],
+  "community-social": ["social-worker"],
+  "legal": ["lawyer", "paralegal"],
+  "education": ["teacher-k12"],
+  "arts-media": ["graphic-designer", "ux-designer", "journalist"],
+  "healthcare-practitioners": ["physician", "pharmacist", "registered-nurse", "dental-hygienist"],
+  "healthcare-support": ["registered-nurse"],
+  "protective-service": [],
+  "food-serving": ["restaurant-manager"],
+  "building-grounds": [],
+  "personal-care": ["therapist"],
+  "sales": ["sales-representative", "real-estate-agent"],
+  "office-admin": ["executive-assistant", "customer-service-rep"],
+  "farming-fishing": [],
+  "construction": ["electrician", "plumber", "construction-manager"],
+  "installation-repair": ["electrician", "plumber"],
+  "production": [],
+  "transportation": ["truck-driver"],
+};
+
+/**
  * Calculate the percentage of an occupation group's tasks that are
  * economically automatable at a given year, based on cost crossover.
  */

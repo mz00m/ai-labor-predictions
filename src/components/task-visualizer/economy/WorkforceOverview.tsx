@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
+import { useRouter } from "next/navigation";
 import {
   BarChart,
   Bar,
@@ -16,6 +17,7 @@ import {
   OCCUPATION_GROUPS,
   INCOME_TIER_META,
   TOTAL_EMPLOYMENT,
+  SOC_TO_JOB_IDS,
   type OccupationGroup,
 } from "@/data/economy-occupations";
 
@@ -23,6 +25,7 @@ function CustomTooltip({ active, payload }: TooltipProps<number, string>) {
   if (!active || !payload?.[0]) return null;
   const d = payload[0].payload as OccupationGroup & { employmentFormatted: string };
   const tierMeta = INCOME_TIER_META[d.incomeTier];
+  const jobIds = SOC_TO_JOB_IDS[d.id] || [];
   return (
     <div className="bg-white rounded-lg border border-black/[0.08] shadow-lg p-3 max-w-[280px]">
       <p className="text-[13px] font-semibold text-[var(--foreground)]">{d.title}</p>
@@ -48,17 +51,25 @@ function CustomTooltip({ active, payload }: TooltipProps<number, string>) {
           </span>
         </div>
       </div>
+      {jobIds.length > 0 && (
+        <p className="text-[10px] text-[var(--accent)] mt-2 pt-1.5 border-t border-black/[0.06]">
+          Click to explore individual jobs in this group
+        </p>
+      )}
     </div>
   );
 }
 
 export default function WorkforceOverview() {
+  const router = useRouter();
+
   const chartData = useMemo(() => {
     return [...OCCUPATION_GROUPS]
       .sort((a, b) => b.employment - a.employment)
       .map((g) => ({
         ...g,
         employmentM: Math.round(g.employment / 10) / 100, // millions
+        hasJobs: (SOC_TO_JOB_IDS[g.id] || []).length > 0,
       }));
   }, []);
 
@@ -102,6 +113,14 @@ export default function WorkforceOverview() {
             data={chartData}
             layout="vertical"
             margin={{ top: 0, right: 30, left: 0, bottom: 0 }}
+            onClick={(state) => {
+              if (!state?.activePayload?.[0]) return;
+              const group = state.activePayload[0].payload as OccupationGroup & { hasJobs: boolean };
+              const jobIds = SOC_TO_JOB_IDS[group.id] || [];
+              if (jobIds.length > 0) {
+                router.push(`/task-visualizer?job=${jobIds[0]}`);
+              }
+            }}
           >
             <CartesianGrid strokeDasharray="3 3" stroke="rgba(0,0,0,0.06)" horizontal={false} />
             <XAxis
@@ -120,12 +139,12 @@ export default function WorkforceOverview() {
               tickLine={false}
             />
             <Tooltip content={<CustomTooltip />} cursor={{ fill: "rgba(0,0,0,0.02)" }} />
-            <Bar dataKey="employmentM" radius={[0, 4, 4, 0]} barSize={18}>
+            <Bar dataKey="employmentM" radius={[0, 4, 4, 0]} barSize={18} style={{ cursor: "pointer" }}>
               {chartData.map((entry) => (
                 <Cell
                   key={entry.id}
                   fill={INCOME_TIER_META[entry.incomeTier].color}
-                  fillOpacity={0.75}
+                  fillOpacity={entry.hasJobs ? 0.75 : 0.45}
                 />
               ))}
             </Bar>

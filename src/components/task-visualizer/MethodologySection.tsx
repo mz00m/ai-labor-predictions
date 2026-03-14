@@ -29,60 +29,65 @@ export default function MethodologySection() {
           </p>
         </div>
 
-        {/* How we estimate compute cost */}
+        {/* Token economics model */}
         <div>
           <h4 className="text-[14px] font-semibold text-[var(--foreground)] mb-2">
-            Estimating compute cost per task
+            Token economics: from API pricing to $/hour
           </h4>
           <p className="text-[13px] text-[var(--muted)] leading-relaxed mb-3">
-            For each task, we estimate the current cost (in $/hour) to achieve full automation using
-            today&apos;s AI systems. This estimate combines three factors:
+            For each task, we calculate what it costs in real AI API spend to produce one hour of
+            equivalent human work. The formula:
           </p>
+          <div className="bg-black/[0.02] rounded-lg p-3 font-mono text-[12px] text-[var(--foreground)] mb-4">
+            Cost/hr = Calls × (InputTokens/1M × InputPrice + OutputTokens/1M × OutputPrice) × Overhead
+          </div>
           <div className="space-y-3 text-[12px]">
             <div className="flex gap-3 rounded-lg border border-black/[0.06] p-3">
               <span className="text-[var(--foreground)] font-semibold shrink-0 w-[120px]">
-                1. Base inference cost
+                1. Model tier
               </span>
               <span className="text-[var(--muted)]">
-                What does it cost to run the AI model needed for this task? We start from current API
-                pricing: frontier models (GPT-4o, Claude Sonnet) at $2-15/M output tokens, smaller
-                models at $0.05-2/M tokens. A task requiring heavy reasoning (legal analysis, medical
-                diagnosis) needs a frontier model with chain-of-thought; simple data entry can use a
-                small model. We convert token costs to $/hour by estimating the tokens needed per hour
-                of equivalent human work.
+                Each task maps to a model tier based on cognitive complexity.{" "}
+                <strong className="text-[var(--foreground)]">Small models</strong> ($0.10-0.20/M tokens)
+                handle classification and data extraction.{" "}
+                <strong className="text-[var(--foreground)]">Mid-tier</strong> ($0.50-1.50/M) handles
+                writing, chat, drafting.{" "}
+                <strong className="text-[var(--foreground)]">Frontier</strong> ($5-15/M) handles reasoning,
+                analysis, expert judgment. Based on current API pricing from OpenAI, Anthropic, Google.
               </span>
             </div>
             <div className="flex gap-3 rounded-lg border border-black/[0.06] p-3">
               <span className="text-[var(--foreground)] font-semibold shrink-0 w-[120px]">
-                2. Complexity multiplier
+                2. Token volume
               </span>
               <span className="text-[var(--muted)]">
-                Cognitive complexity matters. Based on{" "}
-                <a
-                  href="https://github.com/CharlesD353/ai-labour-calculator"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline hover:text-[var(--foreground)]"
-                >
-                  Dillon&apos;s task tier model
-                </a>, routine tasks
-                need ~10^12 FLOPs while frontier creative tasks need ~10^20 FLOPs — a factor of 100
-                million. We apply tier multipliers: routine (1x), standard (10x), complex (100x),
-                expert (1000x), frontier (10000x) to the base cost.
+                We estimate input and output tokens per model call based on real-world AI usage:
+                an email draft uses ~800 input / ~600 output tokens; a legal analysis uses ~20K input / ~5K output.
+                The <strong className="text-[var(--foreground)]">calls per human hour</strong> reflects
+                how many independent AI invocations are needed to match what a human does in an hour:
+                simple classification might need 60 calls/hr, while deep research needs 4-8.
               </span>
             </div>
             <div className="flex gap-3 rounded-lg border border-black/[0.06] p-3">
               <span className="text-[var(--foreground)] font-semibold shrink-0 w-[120px]">
-                3. Physical barrier premium
+                3. Overhead multiplier
               </span>
               <span className="text-[var(--muted)]">
-                Tasks requiring physical presence, manual dexterity, or embodied action incur massive
-                additional costs. Robotics systems capable of general manipulation cost $50-200/hr to
-                operate (hardware amortization + maintenance + supervision). We add premiums of
-                $200-800/hr for tasks requiring hands-on work, reflecting the state of commercial
-                robotics in 2026.
+                Real systems cost more than single API calls. Prompt retries add 1.2-1.5x. Multi-step
+                agents add 2-5x. RAG retrieval and tool calls add 1.2-3x. We apply a composite overhead
+                of 2-6x depending on task complexity. This matches production cost data from AI product teams.
+                For physical tasks, robotics hardware amortization is added on top.
               </span>
             </div>
+          </div>
+          <div className="mt-4 text-[12px] text-[var(--muted)]">
+            <p className="mb-2">
+              <strong className="text-[var(--foreground)]">The key economic insight:</strong>{" "}
+              AI cost scales with tokens (volume), while human cost scales with time. A $60/hr analyst
+              doing 3 hours of research costs $180. The equivalent AI task — 120K input tokens, 8K output,
+              12 frontier calls with 3x overhead — costs roughly $18. AI is already 10x cheaper for many
+              knowledge tasks.
+            </p>
           </div>
         </div>
 
