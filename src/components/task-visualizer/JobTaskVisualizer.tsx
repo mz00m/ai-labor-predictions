@@ -8,6 +8,8 @@ import ComputeCostChart from "./ComputeCostChart";
 import AutomationTimeline from "./AutomationTimeline";
 import FocusRecommendations from "./FocusRecommendations";
 import ComputeBenchmarks from "./ComputeBenchmarks";
+import DurableSkillsSection from "./DurableSkillsSection";
+import MethodologySection from "./MethodologySection";
 
 type Tab = "breakdown" | "timeline" | "costs" | "benchmarks";
 
@@ -151,17 +153,29 @@ export default function JobTaskVisualizer() {
           )}
         </div>
 
-        {/* Quick select chips */}
+        {/* Quick select by category */}
         {!selectedJob && (
-          <div className="flex flex-wrap gap-1.5 mt-3">
-            {JOB_PROFILES.slice(0, 10).map((job) => (
-              <button
-                key={job.id}
-                onClick={() => handleSelectJob(job)}
-                className="text-[11px] font-medium px-3 py-1.5 rounded-full border border-black/[0.08] text-[var(--muted)] hover:text-[var(--foreground)] hover:border-black/[0.15] transition-colors"
-              >
-                {job.title}
-              </button>
+          <div className="mt-4 space-y-3">
+            {Object.entries(
+              JOB_PROFILES.reduce<Record<string, typeof JOB_PROFILES>>((acc, job) => {
+                (acc[job.category] ??= []).push(job);
+                return acc;
+              }, {})
+            ).map(([category, jobs]) => (
+              <div key={category}>
+                <p className="text-[11px] font-medium text-[var(--muted)] mb-1.5">{category}</p>
+                <div className="flex flex-wrap gap-1.5">
+                  {jobs.map((job) => (
+                    <button
+                      key={job.id}
+                      onClick={() => handleSelectJob(job)}
+                      className="text-[11px] font-medium px-3 py-1.5 rounded-full border border-black/[0.08] text-[var(--muted)] hover:text-[var(--foreground)] hover:border-black/[0.15] transition-colors"
+                    >
+                      {job.title}
+                    </button>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         )}
@@ -291,43 +305,14 @@ export default function JobTaskVisualizer() {
         </>
       )}
 
-      {/* Methodology note */}
-      <div className="mt-12 pt-8 border-t border-black/[0.06]">
-        <h3 className="text-[14px] font-semibold text-[var(--foreground)] mb-2">
-          How this works
-        </h3>
-        <div className="text-[12px] text-[var(--muted)] space-y-2 max-w-2xl">
-          <p>
-            Every job is a bundle of tasks. This tool breaks your job into its component activities
-            (informed by the O*NET work activity taxonomy) and estimates the current compute cost
-            to fully automate each one.
-          </p>
-          <p>
-            The key insight: <strong className="text-[var(--foreground)]">automation follows economics, not capability</strong>.
-            Even if AI <em>can</em> do a task, it only <em>will</em> when the compute cost drops
-            below the human labor cost. By tracking the declining cost curve for each task type,
-            we can project when each piece of your job faces automation pressure.
-          </p>
-          <p>
-            Compute costs are estimated from current AI API pricing, cloud GPU rates, and
-            task-specific complexity multipliers. Cost decline rates (30-48% annually) are based on
-            observed trends from Epoch AI, Stanford HAI, and LLM pricing data since 2020.
-          </p>
-          <p>
-            This is a simplified model — real-world adoption involves regulatory, organizational,
-            and trust barriers beyond pure cost. Use it as a directional guide, not a forecast.
-            Inspired by Charles Dillon&apos;s{" "}
-            <a
-              href="https://github.com/CharlesD353/ai-labour-calculator"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline hover:text-[var(--foreground)]"
-            >
-              AI Labour Calculator
-            </a>.
-          </p>
-        </div>
-      </div>
+      {/* Durable human skills — optimistic closing */}
+      <DurableSkillsSection
+        selectedJob={selectedJob}
+        adjustedShares={adjustedShares}
+      />
+
+      {/* Methodology */}
+      <MethodologySection />
     </div>
   );
 }
