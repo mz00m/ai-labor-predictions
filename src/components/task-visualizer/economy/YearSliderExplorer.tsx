@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import { useRouter } from "next/navigation";
 import {
   BarChart,
   Bar,
@@ -17,6 +18,7 @@ import {
   OCCUPATION_GROUPS,
   INCOME_TIER_META,
   TOTAL_EMPLOYMENT,
+  SOC_TO_JOB_IDS,
   getAutomationPercentAtYear,
   type OccupationGroup,
 } from "@/data/economy-occupations";
@@ -25,6 +27,7 @@ function CustomTooltip({ active, payload }: TooltipProps<number, string>) {
   if (!active || !payload?.[0]) return null;
   const d = payload[0].payload;
   const tierMeta = INCOME_TIER_META[d.incomeTier as keyof typeof INCOME_TIER_META];
+  const jobIds = SOC_TO_JOB_IDS[d.id] || [];
   return (
     <div className="bg-white rounded-lg border border-black/[0.08] shadow-lg p-3 max-w-[280px]">
       <p className="text-[13px] font-semibold text-[var(--foreground)]">{d.title}</p>
@@ -46,11 +49,17 @@ function CustomTooltip({ active, payload }: TooltipProps<number, string>) {
           <span style={{ color: tierMeta.color }} className="font-medium">{tierMeta.label}</span>
         </div>
       </div>
+      {jobIds.length > 0 && (
+        <p className="text-[10px] text-[var(--accent)] mt-2 pt-1.5 border-t border-black/[0.06]">
+          Click to explore individual jobs in this group
+        </p>
+      )}
     </div>
   );
 }
 
 export default function YearSliderExplorer() {
+  const router = useRouter();
   const [selectedYear, setSelectedYear] = useState(2030);
 
   const chartData = useMemo(() => {
@@ -147,6 +156,14 @@ export default function YearSliderExplorer() {
             data={chartData}
             layout="vertical"
             margin={{ top: 0, right: 20, left: 0, bottom: 0 }}
+            onClick={(state) => {
+              if (!state?.activePayload?.[0]) return;
+              const group = state.activePayload[0].payload as OccupationGroup;
+              const jobIds = SOC_TO_JOB_IDS[group.id] || [];
+              if (jobIds.length > 0) {
+                router.push(`/task-visualizer?job=${jobIds[0]}`);
+              }
+            }}
           >
             <CartesianGrid strokeDasharray="3 3" stroke="rgba(0,0,0,0.06)" horizontal={false} />
             <XAxis
@@ -173,12 +190,13 @@ export default function YearSliderExplorer() {
               strokeWidth={1}
               label={{ value: "50% threshold", position: "insideTopRight", fill: "#EF4444", fontSize: 10 }}
             />
-            <Bar dataKey="automationPct" radius={[0, 4, 4, 0]} barSize={18}>
+            <Bar dataKey="automationPct" radius={[0, 4, 4, 0]} barSize={18} style={{ cursor: "pointer" }}>
               {chartData.map((entry) => {
                 const pct = entry.automationPct;
                 const color = pct >= 60 ? "#EF4444" : pct >= 35 ? "#6366F1" : "#10B981";
+                const hasJobs = (SOC_TO_JOB_IDS[entry.id] || []).length > 0;
                 return (
-                  <Cell key={entry.id} fill={color} fillOpacity={0.75} />
+                  <Cell key={entry.id} fill={color} fillOpacity={hasJobs ? 0.75 : 0.45} />
                 );
               })}
             </Bar>
