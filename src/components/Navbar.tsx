@@ -31,6 +31,7 @@ const NAV_ENTRIES: NavEntry[] = [
       { href: "/j-curve", label: "What's a J-Curve" },
       { href: "/history", label: "History" },
       { href: "/signals/firm-response", label: "Firm Response" },
+      { href: "/task-visualizer", label: "Task Visualizer" },
     ],
   },
   {
