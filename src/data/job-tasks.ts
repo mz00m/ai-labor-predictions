@@ -10,8 +10,10 @@
  *   - category: broad O*NET work activity category
  *
  * Human wage is set per job. The crossover year for each task is when
- * computeCost * (1 - costDeclineRate)^years < humanWagePerHr * timeShare-adjusted cost.
+ * computeCost * (1 - costDeclineRate)^years < humanWagePerHr.
  */
+
+import type { TaskCategory } from "./task-categories";
 
 /**
  * Token economics model for computing AI task cost.
@@ -87,61 +89,8 @@ export interface JobTask {
   tokenProfile?: Partial<TokenProfile>;
 }
 
-export type TaskCategory =
-  | "information-processing"
-  | "communication"
-  | "analysis-decision"
-  | "creative-generative"
-  | "coordination-management"
-  | "physical-manual"
-  | "interpersonal"
-  | "technical-specialized";
-
-export const TASK_CATEGORY_META: Record<
-  TaskCategory,
-  { label: string; color: string; description: string }
-> = {
-  "information-processing": {
-    label: "Information Processing",
-    color: "#5C61F6",
-    description: "Data entry, document handling, lookups, form filling",
-  },
-  communication: {
-    label: "Communication",
-    color: "#F66B5C",
-    description: "Emails, reports, presentations, correspondence",
-  },
-  "analysis-decision": {
-    label: "Analysis & Decisions",
-    color: "#10B981",
-    description: "Research, evaluation, strategic planning, judgment calls",
-  },
-  "creative-generative": {
-    label: "Creative & Generative",
-    color: "#F59E0B",
-    description: "Design, writing, ideation, novel problem-solving",
-  },
-  "coordination-management": {
-    label: "Coordination",
-    color: "#8B5CF6",
-    description: "Scheduling, project management, delegation, oversight",
-  },
-  "physical-manual": {
-    label: "Physical & Manual",
-    color: "#6B7280",
-    description: "Hands-on tasks, equipment operation, physical presence",
-  },
-  interpersonal: {
-    label: "Interpersonal",
-    color: "#EC4899",
-    description: "Relationship building, negotiation, counseling, empathy",
-  },
-  "technical-specialized": {
-    label: "Technical & Specialized",
-    color: "#06B6D4",
-    description: "Domain-specific skills, tools, certifications",
-  },
-};
+// Re-export shared task category type and metadata
+export { type TaskCategory, TASK_CATEGORY_META } from "./task-categories";
 
 export interface JobProfile {
   id: string;
@@ -3643,14 +3592,17 @@ export function calculateCrossoverYear(
   humanWagePerHr: number,
   baseYear: number = 2026
 ): number | null {
-  const humanCostForTask = humanWagePerHr * task.timeShare;
-  const computeCostForTask = task.currentComputeCostPerHr * DEPLOYMENT_OVERHEAD * task.timeShare;
+  // Crossover is when compute cost per hour of work drops below human wage per hour.
+  // This is independent of timeShare — it reflects when the economics tip for this
+  // task type at this wage level. TimeShare affects *exposure* (how much of your job
+  // is affected), not *when* automation becomes viable.
+  const computeCostPerHr = task.currentComputeCostPerHr * DEPLOYMENT_OVERHEAD;
 
-  if (computeCostForTask <= humanCostForTask) return baseYear;
+  if (computeCostPerHr <= humanWagePerHr) return baseYear;
 
   for (let y = 1; y <= 20; y++) {
-    const futureCost = computeCostForTask * Math.pow(1 - task.costDeclineRate, y);
-    if (futureCost <= humanCostForTask) {
+    const futureCost = computeCostPerHr * Math.pow(1 - task.costDeclineRate, y);
+    if (futureCost <= humanWagePerHr) {
       return baseYear + y;
     }
   }
@@ -3667,18 +3619,16 @@ export function generateCostTrajectory(
   baseYear: number = 2026
 ): { year: number; computeCost: number; humanCost: number }[] {
   const data = [];
-  const humanCostForTask = humanWagePerHr * task.timeShare;
 
   for (let y = 0; y <= years; y++) {
     const computeCost =
       task.currentComputeCostPerHr *
       DEPLOYMENT_OVERHEAD *
-      task.timeShare *
       Math.pow(1 - task.costDeclineRate, y);
     data.push({
       year: baseYear + y,
       computeCost: Math.round(computeCost * 100) / 100,
-      humanCost: Math.round(humanCostForTask * 100) / 100,
+      humanCost: Math.round(humanWagePerHr * 100) / 100,
     });
   }
   return data;

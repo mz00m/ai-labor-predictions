@@ -32,7 +32,7 @@ function getRiskLabel(crossoverYear: number | null): string {
   if (crossoverYear <= 2028) return "1-2 years";
   if (crossoverYear <= 2031) return "3-5 years";
   if (crossoverYear <= 2036) return "5-10 years";
-  return "10+ years";
+  return "Lower risk (10yr+)";
 }
 
 function CustomTooltip({

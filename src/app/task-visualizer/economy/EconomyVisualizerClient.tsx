@@ -37,8 +37,8 @@ const SECTIONS: { id: Section; label: string; question: string; description: str
   {
     id: "gender",
     label: "By Gender",
-    question: "Women face higher near-term automation exposure than men",
-    description: "Women are concentrated in clerical, admin, and healthcare support roles with high information-processing task loads. This chart compares automation exposure across all 22 occupation groups by gender concentration. Click any bar to explore that job's tasks.",
+    question: "Women's occupational concentration puts them in higher-exposure roles",
+    description: "Women are concentrated in clerical, admin, and healthcare support roles with high information-processing task loads. This gap reflects where women work today, not inherent vulnerability — occupational mobility moderates the actual impact. Click any bar to explore that job's tasks.",
   },
 ];
 

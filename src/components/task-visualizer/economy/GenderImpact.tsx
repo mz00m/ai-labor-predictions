@@ -227,7 +227,8 @@ export default function GenderImpact() {
         <p className="text-[11px] text-[var(--muted)] mb-4">
           Sorted by percentage of women. Women are concentrated in clerical, administrative, healthcare support,
           and education roles — many of which have high information-processing and communication task loads
-          that face near-term automation.
+          that face near-term automation pressure. This gap is driven by occupational segregation, not
+          differential vulnerability within the same role.
         </p>
 
         {/* Legend */}

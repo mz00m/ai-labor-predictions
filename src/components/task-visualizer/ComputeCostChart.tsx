@@ -93,7 +93,7 @@ export default function ComputeCostChart({
           humanWagePerHr,
           years
         );
-        point[task.id] = trajectory[y].computeCost / share; // per full-hour equivalent
+        point[task.id] = trajectory[y].computeCost;
       }
       data.push(point);
     }
