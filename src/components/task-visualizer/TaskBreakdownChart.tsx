@@ -12,7 +12,7 @@ import {
   Cell,
   TooltipProps,
 } from "recharts";
-import { JobTask, calculateCrossoverYear } from "@/data/job-tasks";
+import { JobTask, calculateCrossoverYear, DEPLOYMENT_OVERHEAD } from "@/data/job-tasks";
 
 interface TaskBreakdownChartProps {
   tasks: JobTask[];
@@ -55,7 +55,7 @@ function CustomTooltip({
           <span className="font-medium">{Math.round(data.aiCapability * 100)}%</span>
         </div>
         <div className="flex justify-between">
-          <span className="text-[var(--muted)]">Compute cost</span>
+          <span className="text-[var(--muted)]">API cost</span>
           <span className="font-medium">${data.computeCost}/hr</span>
         </div>
         <div className="flex justify-between">
@@ -65,6 +65,10 @@ function CustomTooltip({
           </span>
         </div>
       </div>
+      <p className="text-[10px] text-[var(--muted)] mt-2 pt-1.5 border-t border-black/[0.06]">
+        API cost = raw inference only. The Compute Costs tab adds a {DEPLOYMENT_OVERHEAD}x
+        deployment overhead (integration, validation, monitoring).
+      </p>
     </div>
   );
 }

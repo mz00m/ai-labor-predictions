@@ -137,11 +137,13 @@ export default function ComputeCostChart({
       {/* Explanation */}
       <div className="rounded-lg bg-black/[0.02] border border-black/[0.06] p-3 mb-5">
         <p className="text-[12px] text-[var(--foreground)] leading-relaxed">
-          Each line shows the <strong>total cost to automate one hour</strong> of a task
-          (API costs + deployment overhead). When a line drops below the{" "}
+          Each line shows the <strong>total production cost to automate one hour</strong> of
+          a task — raw API cost plus a {DEPLOYMENT_OVERHEAD}x deployment overhead
+          (integration engineering, error handling, validation, human review, monitoring).
+          When a line drops below the{" "}
           <span className="text-[#EF4444] font-medium">red wage line</span>, there is
-          economic incentive to automate that task. The vertical distance between a line
-          and the wage line shows how much cost must still fall.
+          economic incentive to automate that task. These costs are higher than the raw API
+          costs shown in the Task Breakdown tab because real-world deployment adds significant overhead.
         </p>
       </div>
 

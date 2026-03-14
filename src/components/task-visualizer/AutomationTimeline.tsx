@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
-import { JobTask, calculateCrossoverYear } from "@/data/job-tasks";
+import { JobTask, calculateCrossoverYear, DEPLOYMENT_OVERHEAD } from "@/data/job-tasks";
 
 /** Risk color based on crossover year */
 function getRiskColor(crossoverYear: number | null): string {
@@ -125,8 +125,9 @@ export default function AutomationTimeline({
       </div>
 
       <p className="text-[11px] text-[var(--muted)] mt-4">
-        Bar length shows time until compute cost drops below human labor cost for each task.
-        Shorter bars = sooner economic incentive to automate.
+        Bar length shows time until total production cost (API + {DEPLOYMENT_OVERHEAD}x deployment
+        overhead) drops below human labor cost for each task. Shorter bars = sooner economic
+        incentive to automate. Does not predict actual adoption — just when the economics tip.
       </p>
     </div>
   );
