@@ -1,10 +1,12 @@
 "use client";
 
 import { useMemo } from "react";
+import { useRouter } from "next/navigation";
 import {
   OCCUPATION_GROUPS,
   INCOME_TIER_META,
   TASK_CATEGORY_META,
+  SOC_TO_JOB_IDS,
   getAutomationPercentAtYear,
   type IncomeTier,
   type TaskCategory,
@@ -13,6 +15,7 @@ import {
 interface TierDetail {
   tier: IncomeTier;
   groups: {
+    id: string;
     title: string;
     shortTitle: string;
     employment: number;
@@ -29,6 +32,7 @@ interface TierDetail {
 }
 
 export default function IncomeStrataImpact() {
+  const router = useRouter();
   const tierDetails: TierDetail[] = useMemo(() => {
     return (["low", "middle", "high"] as const).map((tier) => {
       const groups = OCCUPATION_GROUPS.filter((g) => g.incomeTier === tier).map((g) => {
@@ -47,6 +51,7 @@ export default function IncomeStrataImpact() {
           .map(([cat]) => TASK_CATEGORY_META[cat].label)[0] || "N/A";
 
         return {
+          id: g.id,
           title: g.title,
           shortTitle: g.shortTitle,
           employment: g.employment,
@@ -176,9 +181,22 @@ export default function IncomeStrataImpact() {
                   </tr>
                 </thead>
                 <tbody className="text-[var(--muted)]">
-                  {detail.groups.map((g) => (
-                    <tr key={g.shortTitle} className="border-b border-black/[0.03] hover:bg-black/[0.01]">
-                      <td className="py-2 px-4 text-[var(--foreground)] font-medium">{g.shortTitle}</td>
+                  {detail.groups.map((g) => {
+                    const jobIds = SOC_TO_JOB_IDS[g.id] || [];
+                    const clickable = jobIds.length > 0;
+                    return (
+                    <tr
+                      key={g.shortTitle}
+                      className={`border-b border-black/[0.03] hover:bg-black/[0.02] ${clickable ? "cursor-pointer" : ""}`}
+                      onClick={clickable ? () => router.push(`/task-visualizer?job=${jobIds[0]}`) : undefined}
+                    >
+                      <td className="py-2 px-4 font-medium">
+                        {clickable ? (
+                          <span className="text-[var(--foreground)] hover:text-[var(--accent)]">{g.shortTitle}</span>
+                        ) : (
+                          <span className="text-[var(--foreground)]">{g.shortTitle}</span>
+                        )}
+                      </td>
                       <td className="text-right py-2 px-3 tabular-nums">{(g.employment / 1000).toFixed(1)}M</td>
                       <td className="text-right py-2 px-3 tabular-nums">${(g.medianWageAnnual / 1000).toFixed(0)}K</td>
                       <td className="text-right py-2 px-3 tabular-nums">
@@ -199,7 +217,8 @@ export default function IncomeStrataImpact() {
                       <td className="py-2 px-3 text-[11px]">{g.topVulnerable}</td>
                       <td className="py-2 px-4 text-[11px]">{g.topDurable}</td>
                     </tr>
-                  ))}
+                    );
+                  })}
                 </tbody>
               </table>
             </div>
