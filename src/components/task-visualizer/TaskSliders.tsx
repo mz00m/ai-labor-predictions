@@ -23,7 +23,7 @@ function getRiskBadge(crossoverYear: number | null) {
   if (crossoverYear <= 2036) {
     return { label: `~${crossoverYear}`, color: "#10B981", bg: "rgba(16, 185, 129, 0.06)" };
   }
-  return { label: "Safe (10yr+)", color: "#10B981", bg: "rgba(16, 185, 129, 0.06)" };
+  return { label: "Lower risk (10yr+)", color: "#10B981", bg: "rgba(16, 185, 129, 0.06)" };
 }
 
 export default function TaskSliders({
@@ -43,7 +43,8 @@ export default function TaskSliders({
     <div className="space-y-3">
       <div className="mb-2">
         <p className="text-[12px] text-[var(--muted)]">
-          Adjust sliders to match your actual workload — others rebalance automatically
+          Adjust sliders to match your actual workload — others rebalance automatically.
+          This changes your overall exposure profile, not when each task becomes automatable.
         </p>
       </div>
 

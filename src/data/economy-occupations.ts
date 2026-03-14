@@ -26,15 +26,12 @@
  * major group level. These are approximations.
  */
 
-export type TaskCategory =
-  | "information-processing"
-  | "communication"
-  | "analysis-decision"
-  | "creative-generative"
-  | "coordination-management"
-  | "physical-manual"
-  | "interpersonal"
-  | "technical-specialized";
+// Import shared task category definitions (single source of truth)
+import type { TaskCategory } from "./task-categories";
+import { TASK_CATEGORY_META, CATEGORY_DECLINE_RATES } from "./task-categories";
+
+// Re-export for consumers
+export { type TaskCategory, TASK_CATEGORY_META, CATEGORY_DECLINE_RATES } from "./task-categories";
 
 export type IncomeTier = "low" | "middle" | "high";
 
@@ -56,19 +53,7 @@ export interface OccupationGroup {
   womenPercent: number;
 }
 
-/**
- * Cost decline rates by task category (same as job-tasks.ts)
- */
-export const CATEGORY_DECLINE_RATES: Record<TaskCategory, number> = {
-  "information-processing": 0.44,
-  "communication": 0.41,
-  "analysis-decision": 0.33,
-  "creative-generative": 0.36,
-  "coordination-management": 0.24,
-  "physical-manual": 0.12,
-  "interpersonal": 0.20,
-  "technical-specialized": 0.36,
-};
+// CATEGORY_DECLINE_RATES imported from ./task-categories above
 
 /**
  * Base compute cost per hour by task category (2026 estimates)
@@ -90,16 +75,7 @@ export const INCOME_TIER_META: Record<IncomeTier, { label: string; color: string
   high: { label: "Higher income", color: "#10B981", range: "Over $75K/yr" },
 };
 
-export const TASK_CATEGORY_META: Record<TaskCategory, { label: string; color: string }> = {
-  "information-processing": { label: "Information Processing", color: "#4338CA" },
-  "communication": { label: "Communication", color: "#5C61F6" },
-  "analysis-decision": { label: "Analysis & Decisions", color: "#6366F1" },
-  "creative-generative": { label: "Creative & Generative", color: "#818CF8" },
-  "coordination-management": { label: "Coordination", color: "#7C83F7" },
-  "physical-manual": { label: "Physical & Manual", color: "#A5B4FC" },
-  "interpersonal": { label: "Interpersonal", color: "#4F46E5" },
-  "technical-specialized": { label: "Technical & Specialized", color: "#C7D2FE" },
-};
+// TASK_CATEGORY_META imported from ./task-categories above (multi-hue palette)
 
 function computeBlended(tc: Record<TaskCategory, number>): { avgCost: number; declineRate: number } {
   let avgCost = 0;
@@ -320,10 +296,13 @@ export function getAutomationPercentAtYear(group: OccupationGroup, year: number)
   let automatedShare = 0;
   for (const [cat, share] of Object.entries(group.taskComposition) as [TaskCategory, number][]) {
     const computeCost = CATEGORY_COMPUTE_COSTS[cat] * DEPLOYMENT_OVERHEAD * Math.pow(1 - CATEGORY_DECLINE_RATES[cat], yearsFromNow);
-    // Task is automatable when compute cost < human wage for that task-share
-    if (computeCost < group.medianWageHr) {
-      automatedShare += share;
-    }
+    // Sigmoid-based automation pressure: smooth transition instead of binary cutoff.
+    // When computeCost == humanWage, pressure is 50%. Steepness k=6 gives a reasonable
+    // ramp: ~5% pressure at 2x human cost, ~95% pressure at 0.5x human cost.
+    const ratio = computeCost / group.medianWageHr;
+    const k = 6;
+    const pressure = 1 / (1 + Math.exp(k * (ratio - 1)));
+    automatedShare += share * pressure;
   }
   return Math.round(automatedShare * 100);
 }
