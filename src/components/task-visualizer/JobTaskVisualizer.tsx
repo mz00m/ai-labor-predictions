@@ -43,7 +43,38 @@ export default function JobTaskVisualizer() {
   }, []);
 
   const handleShareChange = useCallback((taskId: string, value: number) => {
-    setAdjustedShares((prev) => ({ ...prev, [taskId]: value }));
+    setAdjustedShares((prev) => {
+      const clamped = Math.max(0, Math.min(1, value));
+      const oldValue = prev[taskId] ?? 0;
+      const delta = clamped - oldValue;
+      if (delta === 0) return prev;
+
+      // Sum of all OTHER sliders
+      const othersSum = Object.entries(prev)
+        .filter(([id]) => id !== taskId)
+        .reduce((s, [, v]) => s + v, 0);
+
+      const next: Record<string, number> = {};
+
+      if (othersSum === 0) {
+        // Edge case: all others are zero, just set this one
+        for (const [id, v] of Object.entries(prev)) {
+          next[id] = id === taskId ? clamped : v;
+        }
+      } else {
+        // Proportionally scale other sliders so total stays at 1.0
+        const remainingForOthers = Math.max(0, 1 - clamped);
+        const scale = remainingForOthers / othersSum;
+        for (const [id, v] of Object.entries(prev)) {
+          if (id === taskId) {
+            next[id] = clamped;
+          } else {
+            next[id] = Math.max(0, Math.round(v * scale * 1000) / 1000);
+          }
+        }
+      }
+      return next;
+    });
   }, []);
 
   const handleReset = useCallback(() => {

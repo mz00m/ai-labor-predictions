@@ -32,8 +32,6 @@ export default function TaskSliders({
   onShareChange,
   humanWagePerHr,
 }: TaskSlidersProps) {
-  const totalShare = Object.values(adjustedShares).reduce((s, v) => s + v, 0);
-
   const handleChange = useCallback(
     (taskId: string, newVal: number) => {
       onShareChange(taskId, Math.max(0, Math.min(1, newVal)));
@@ -43,17 +41,10 @@ export default function TaskSliders({
 
   return (
     <div className="space-y-3">
-      <div className="flex items-center justify-between mb-2">
+      <div className="mb-2">
         <p className="text-[12px] text-[var(--muted)]">
-          Adjust sliders to match your actual workload
+          Adjust sliders to match your actual workload — others rebalance automatically
         </p>
-        <span
-          className={`text-[12px] font-medium ${
-            Math.abs(totalShare - 1) < 0.02 ? "text-[#10B981]" : "text-[#F59E0B]"
-          }`}
-        >
-          Total: {Math.round(totalShare * 100)}%
-        </span>
       </div>
 
       {tasks.map((task) => {
