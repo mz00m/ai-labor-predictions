@@ -14,13 +14,7 @@ const SECTIONS: { id: Section; label: string; question: string; description: str
     id: "overview",
     label: "The Workforce",
     question: "What does the US workforce look like, and who earns what?",
-    description: "154 million workers across 22 occupation groups, colored by income tier. Click any bar to explore that job in detail.",
-  },
-  {
-    id: "gender",
-    label: "Gender Impact",
-    question: "Will automation hit women harder than men?",
-    description: "Women are concentrated in clerical, admin, and healthcare support roles with high information-processing task loads — making them disproportionately exposed to near-term AI automation.",
+    description: "154 million workers across 22 occupation groups, shaded by income tier. Click any bar to explore that job in detail.",
   },
   {
     id: "wave",
@@ -36,9 +30,15 @@ const SECTIONS: { id: Section; label: string; question: string; description: str
   },
   {
     id: "strata",
-    label: "By Income Tier",
+    label: "By Income",
     question: "How do automation timelines differ for lower, middle, and higher earners?",
     description: "Detailed breakdown by income tier with task composition, automation projections, and which skills are most at risk vs. most durable.",
+  },
+  {
+    id: "gender",
+    label: "By Gender",
+    question: "Will automation hit women harder than men?",
+    description: "Women are concentrated in clerical, admin, and healthcare support roles with high information-processing task loads — making them disproportionately exposed to near-term AI automation.",
   },
 ];
 
