@@ -140,16 +140,16 @@ export default function ComputeBenchmarks() {
 
       {/* Key stats */}
       <div className="grid grid-cols-3 gap-3">
-        <div className="rounded-xl border border-black/[0.06] p-3">
-          <p className="text-[22px] font-bold text-[#5C61F6] tracking-tight">~200x</p>
+        <div className="rounded-xl bg-black/[0.02] border border-black/[0.06] p-4">
+          <p className="text-[28px] font-bold text-[#5C61F6] tracking-tight">~200x</p>
           <p className="text-[11px] text-[var(--muted)]">Cost reduction since GPT-3 (2020)</p>
         </div>
-        <div className="rounded-xl border border-black/[0.06] p-3">
-          <p className="text-[22px] font-bold text-[#5C61F6] tracking-tight">~60%</p>
+        <div className="rounded-xl bg-black/[0.02] border border-black/[0.06] p-4">
+          <p className="text-[28px] font-bold text-[#5C61F6] tracking-tight">~60%</p>
           <p className="text-[11px] text-[var(--muted)]">Annual cost decline rate (inference)</p>
         </div>
-        <div className="rounded-xl border border-black/[0.06] p-3">
-          <p className="text-[22px] font-bold text-[#5C61F6] tracking-tight">2x/yr</p>
+        <div className="rounded-xl bg-black/[0.02] border border-black/[0.06] p-4">
+          <p className="text-[28px] font-bold text-[#5C61F6] tracking-tight">2x/yr</p>
           <p className="text-[11px] text-[var(--muted)]">Algorithmic efficiency gains (Epoch AI)</p>
         </div>
       </div>

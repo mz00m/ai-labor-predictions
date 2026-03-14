@@ -56,7 +56,7 @@ export default function FocusRecommendations({
   return (
     <div className="space-y-5">
       {/* Summary stat */}
-      <div className="rounded-xl bg-gradient-to-r from-red-50 to-amber-50 border border-red-100/50 p-4">
+      <div className="rounded-xl bg-black/[0.02] border border-black/[0.06] p-4">
         <div className="flex items-baseline gap-2">
           <span className="text-[28px] font-bold text-[#EF4444] tracking-tight">
             {automatedSharePercent}%
@@ -81,7 +81,7 @@ export default function FocusRecommendations({
             {atRisk.map(({ task, share }) => (
               <div
                 key={task.id}
-                className="flex items-center justify-between py-1.5 px-3 rounded-lg bg-red-50/50"
+                className="flex items-center justify-between py-1.5 px-3 rounded-lg bg-black/[0.02]"
               >
                 <div className="flex items-center gap-2">
                   <div
@@ -113,7 +113,7 @@ export default function FocusRecommendations({
             {augment.map(({ task, share }) => (
               <div
                 key={task.id}
-                className="flex items-center justify-between py-1.5 px-3 rounded-lg bg-amber-50/50"
+                className="flex items-center justify-between py-1.5 px-3 rounded-lg bg-black/[0.02]"
               >
                 <div className="flex items-center gap-2">
                   <div
@@ -145,7 +145,7 @@ export default function FocusRecommendations({
             {invest.map(({ task, share }) => (
               <div
                 key={task.id}
-                className="flex items-center justify-between py-1.5 px-3 rounded-lg bg-emerald-50/50"
+                className="flex items-center justify-between py-1.5 px-3 rounded-lg bg-black/[0.02]"
               >
                 <div className="flex items-center gap-2">
                   <div
