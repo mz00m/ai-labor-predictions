@@ -10,6 +10,15 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Noah Smith (Noahpinion)",
+    title: "The Future Isn\u2019t What It Used to Be",
+    summary:
+      "American optimism about the future has declined sharply as AI uncertainty, political chaos, and geopolitical risks make the future a blank wall of fog.",
+    date: "Mar 15",
+    url: "https://www.noahpinion.blog/p/the-future-isnt-what-it-used-to-be",
+    accent: "border-l-emerald-500",
+  },
+  {
     author: "Sivulka (Hebbia)",
     title: "Productive Individuals Don\u2019t Make Productive Firms",
     summary:
@@ -44,15 +53,6 @@ const articles: Article[] = [
     date: "Mar 5",
     url: "https://www.anthropic.com/research/labor-market-impacts",
     accent: "border-l-purple-500",
-  },
-  {
-    author: "Ranganathan & Ye (HBR)",
-    title: "AI Doesn\u2019t Reduce Work, It Intensifies It",
-    summary:
-      "Eight-month study of 200 employees: 83% said AI increased workload through greater pace, scope, and hours, leading to burnout.",
-    date: "Feb 9",
-    url: "https://hbr.org/2026/02/ai-doesnt-reduce-work-it-intensifies-it",
-    accent: "border-l-red-500",
   },
 ];
 
