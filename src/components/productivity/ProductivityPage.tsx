@@ -45,10 +45,24 @@ export default function ProductivityPage() {
         </div>
       </header>
 
+      {/* ───── Section 1: From Productivity to Jobs ───── */}
+      <section id="productivity-paths" className="mt-12">
+        <div className="max-w-3xl mb-2">
+          <SectionLabel number="01" title="From productivity to jobs" />
+          <p className="text-[14px] text-[var(--muted)] leading-[1.75] mb-4">
+            Higher productivity doesn&rsquo;t map one-to-one to job loss.
+            History shows three distinct paths that firms take, often
+            simultaneously. The ratio between them determines whether AI creates
+            a net employment boom or a contraction.
+          </p>
+        </div>
+        <ProductivityPaths />
+      </section>
+
       {/* ───── The Core Tension ───── */}
-      <section className="mt-12">
+      <section className="mt-20">
         <div className="max-w-3xl">
-          <SectionLabel number="01" title="The core tension" />
+          <SectionLabel number="02" title="The core tension" />
           <div className="space-y-4 text-[14px] text-[var(--muted)] leading-[1.75]">
             <p>
               Three facts coexist uncomfortably. First: at the task level, AI
@@ -92,7 +106,7 @@ export default function ProductivityPage() {
       {/* ───── Section 2: Research Evidence ───── */}
       <section className="mt-20">
         <div className="max-w-3xl mb-2">
-          <SectionLabel number="02" title="What the research shows" />
+          <SectionLabel number="03" title="What the research shows" />
           <p className="text-[14px] text-[var(--muted)] leading-[1.75] mb-4">
             The gap between micro and macro is the central puzzle. Individual
             workers are clearly more productive with AI, but the economy-wide
@@ -139,7 +153,7 @@ export default function ProductivityPage() {
       {/* ───── Section 3: What Economists Expect ───── */}
       <section className="mt-20">
         <div className="max-w-3xl mb-2">
-          <SectionLabel number="03" title="What economists expect" />
+          <SectionLabel number="04" title="What economists expect" />
           <p className="text-[14px] text-[var(--muted)] leading-[1.75] mb-4">
             If the micro gains are real, how much will they eventually move the
             macro needle? This question determines everything downstream:
@@ -147,20 +161,6 @@ export default function ProductivityPage() {
           </p>
         </div>
         <ProductivityPredictions />
-      </section>
-
-      {/* ───── Section 4: From Productivity to Jobs ───── */}
-      <section className="mt-20">
-        <div className="max-w-3xl mb-2">
-          <SectionLabel number="04" title="From productivity to jobs" />
-          <p className="text-[14px] text-[var(--muted)] leading-[1.75] mb-4">
-            Higher productivity doesn&rsquo;t map one-to-one to job loss.
-            History shows three distinct paths that firms take, often
-            simultaneously. The ratio between them determines whether AI creates
-            a net employment boom or a contraction.
-          </p>
-        </div>
-        <ProductivityPaths />
       </section>
 
       {/* ───── Section 5: The Measurement Problem ───── */}
