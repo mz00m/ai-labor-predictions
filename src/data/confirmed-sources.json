@@ -2614,12 +2614,12 @@
     },
     "metr-2026": {
       "id": "metr-2026",
-      "title": "Uplift Update: Measuring AI's Impact on Open-Source Developer Productivity",
-      "url": "https://metr.org/blog/2026-02-24-uplift-update/",
-      "publisher": "METR",
+      "title": "We are Changing our Developer Productivity Experiment Design",
+      "url": "https://metr.org/blog/2026-02-24-developer-productivity-update/",
+      "publisher": "METR (Becker, Rush, Cunningham, Rein, Mahamud)",
       "evidenceTier": 1,
       "datePublished": "2026-02-24",
-      "excerpt": "Updated study: original developers now estimated at -18% speedup (CI: -38% to +9%). Newly-recruited developers estimated at -4% (CI: -15% to +9%). Wide confidence intervals span zero.",
+      "excerpt": "METR retracts original 19% slowdown finding, citing severe selection bias. Follow-up shows -18% speedup for original devs (CI: -38% to +9%), -4% for new recruits (CI: -15% to +9%). Authors state data gives 'unreliable signal' and are redesigning the study.",
       "usedIn": [
         "tech-sector-displacement"
       ],
@@ -4675,7 +4675,7 @@
       "publisher": "METR (Becker, Rush, Barnes, Rein)",
       "evidenceTier": 1,
       "datePublished": "2025-07-12",
-      "excerpt": "16 developers with moderate AI experience complete 246 tasks in mature projects on which they have an average of 5 years of prior experience. Allowing AI actually increases completion time by 19%.",
+      "excerpt": "Original finding of 19% slowdown retracted by authors in Feb 2026. METR acknowledged severe selection bias and unreliable signal. Follow-up data shows likely speedup, not slowdown. Study redesigned.",
       "usedIn": [
         "tech-sector-displacement"
       ],
