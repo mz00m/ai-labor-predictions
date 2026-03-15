@@ -1,0 +1,13 @@
+{
+  "id": "nber-cruces-galiani-ai-productivity-gap-2026",
+  "abstract": "This NBER working paper examines whether generative AI reinforces or reduces productivity differences across workers with different education levels. Using a randomized online experiment with 1,174 adults ages 25-45, the authors find that AI access closes approximately three-quarters of the education-based productivity gap, reducing it from 0.548 to 0.139 standard deviations. The study targets the between-education-group productivity gap as the primary estimand, unlike prior work studying heterogeneity within relatively homogeneous worker samples.",
+  "keyFindings": [
+    "AI closes ~75% of the education-based productivity gap (0.548 SD to 0.139 SD) in a randomized experiment with 1,174 adults",
+    "AI increases productivity for all participants, with substantially larger gains for lower-education individuals",
+    "Underlying skill differences persist: education gaps remain in task performance and in follow-up exercises without AI assistance",
+    "Generative AI relaxes cognitive constraints that are more binding for lower-education individuals"
+  ],
+  "methodology": "Randomized online experiment with 1,174 adults ages 25-45 from Argentina with heterogeneous educational backgrounds. Participants completed an incentivized, workplace-style business problem-solving task with or without access to a generative AI assistant. Low-education = high school diploma or less than half of postsecondary degree; high-education = more advanced credentials.",
+  "qualifiers": "Sample drawn from Argentina, which may limit generalizability to the US labor market. The task was a general business problem-solving exercise, not domain-specific. Underlying skill differences persist even when effective productivity gaps narrow. Authors note that AI's effects on labor markets may be more modest and unequally distributed than early discussions suggest (citing Acemoglu 2024).",
+  "fetchedAt": "2026-03-15"
+}

@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-03-13",
-  "totalSources": 407,
-  "verifiedCount": 407,
+  "lastUpdated": "2026-03-15",
+  "totalSources": 408,
+  "verifiedCount": 408,
   "sources": {
     "revelio-labs-wage-divide-2025": {
       "id": "revelio-labs-wage-divide-2025",
@@ -2756,6 +2756,20 @@
       "excerpt": "a 10 percent increase in the minimum wage increases robot adoption by roughly 8 percent relative to the mean",
       "usedIn": [
         "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "nber-cruces-galiani-ai-productivity-gap-2026": {
+      "id": "nber-cruces-galiani-ai-productivity-gap-2026",
+      "title": "Does Generative AI Narrow Education-Based Productivity Gaps? Evidence from a Randomized Experiment",
+      "url": "https://www.nber.org/papers/w34851",
+      "publisher": "NBER (Cruces, Fernández Meijide, Galiani, Gálvez, Lombardi)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-01",
+      "excerpt": "In a randomized experiment with 1,174 adults ages 25-45, AI access closed approximately three-quarters of the education-based productivity gap: higher-education participants outperform lower-education participants by 0.548 standard deviations without AI; with AI, this gap falls to 0.139 standard deviations.",
+      "usedIn": [
+        "education-sector-displacement"
       ],
       "verified": true,
       "synthetic": false
