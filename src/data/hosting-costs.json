@@ -1,0 +1,282 @@
+{
+  "projectStartDate": "2026-02-22",
+  "lastUpdated": "2026-03-15",
+  "currency": "USD",
+  "categories": [
+    {
+      "name": "Hosting & Domain",
+      "services": [
+        {
+          "name": "Squarespace Domain Registration",
+          "monthlyCost": 0,
+          "oneTimeCost": 337.05,
+          "costType": "one-time",
+          "startDate": "2026-02-22",
+          "endDate": null,
+          "status": "active",
+          "notes": "2 domains, 3-year registration"
+        },
+        {
+          "name": "Vercel Pro",
+          "monthlyCost": 24.42,
+          "oneTimeCost": 0,
+          "costType": "recurring",
+          "startDate": "2026-02-22",
+          "endDate": null,
+          "status": "active",
+          "notes": "Pro plan for production hosting"
+        }
+      ]
+    },
+    {
+      "name": "Development Tools",
+      "services": [
+        {
+          "name": "Claude Code",
+          "monthlyCost": 25,
+          "oneTimeCost": 0,
+          "costType": "recurring",
+          "startDate": "2026-02-22",
+          "endDate": null,
+          "status": "active",
+          "notes": "$100/mo subscription, ~25% allocated to this project"
+        }
+      ]
+    },
+    {
+      "name": "AI & LLM",
+      "services": [
+        {
+          "name": "Anthropic API Tokens",
+          "monthlyCost": 0,
+          "oneTimeCost": 8.09,
+          "costType": "cumulative",
+          "startDate": "2026-02-22",
+          "endDate": null,
+          "status": "active",
+          "notes": "Claude Haiku for digest synthesis and chat"
+        }
+      ]
+    },
+    {
+      "name": "APIs",
+      "services": [
+        {
+          "name": "X Developer Platform",
+          "monthlyCost": 25,
+          "oneTimeCost": 0,
+          "costType": "recurring",
+          "startDate": "2026-02-22",
+          "endDate": null,
+          "status": "active",
+          "notes": "Basic tier, not yet connected"
+        },
+        {
+          "name": "Google Custom Search",
+          "monthlyCost": 0,
+          "oneTimeCost": 0,
+          "costType": "recurring",
+          "startDate": "2026-02-22",
+          "endDate": null,
+          "status": "active",
+          "notes": "Within free tier (100 queries/day)"
+        },
+        {
+          "name": "Semantic Scholar",
+          "monthlyCost": 0,
+          "oneTimeCost": 0,
+          "costType": "recurring",
+          "startDate": "2026-02-22",
+          "endDate": null,
+          "status": "active",
+          "notes": "Free API"
+        },
+        {
+          "name": "OpenAlex",
+          "monthlyCost": 0,
+          "oneTimeCost": 0,
+          "costType": "recurring",
+          "startDate": "2026-02-22",
+          "endDate": null,
+          "status": "active",
+          "notes": "Free API"
+        },
+        {
+          "name": "arXiv",
+          "monthlyCost": 0,
+          "oneTimeCost": 0,
+          "costType": "recurring",
+          "startDate": "2026-02-22",
+          "endDate": null,
+          "status": "active",
+          "notes": "Free API"
+        },
+        {
+          "name": "NBER",
+          "monthlyCost": 0,
+          "oneTimeCost": 0,
+          "costType": "recurring",
+          "startDate": "2026-02-22",
+          "endDate": null,
+          "status": "active",
+          "notes": "Free RSS feeds"
+        },
+        {
+          "name": "Reddit",
+          "monthlyCost": 0,
+          "oneTimeCost": 0,
+          "costType": "recurring",
+          "startDate": "2026-02-22",
+          "endDate": null,
+          "status": "active",
+          "notes": "Free unauthenticated access"
+        },
+        {
+          "name": "Bluesky",
+          "monthlyCost": 0,
+          "oneTimeCost": 0,
+          "costType": "recurring",
+          "startDate": "2026-02-22",
+          "endDate": null,
+          "status": "active",
+          "notes": "Free public API"
+        },
+        {
+          "name": "Adzuna",
+          "monthlyCost": 0,
+          "oneTimeCost": 0,
+          "costType": "recurring",
+          "startDate": "2026-02-22",
+          "endDate": null,
+          "status": "active",
+          "notes": "Free tier (250 requests/day)"
+        },
+        {
+          "name": "SEC EDGAR",
+          "monthlyCost": 0,
+          "oneTimeCost": 0,
+          "costType": "recurring",
+          "startDate": "2026-02-22",
+          "endDate": null,
+          "status": "active",
+          "notes": "Free government API"
+        },
+        {
+          "name": "Metaculus",
+          "monthlyCost": 0,
+          "oneTimeCost": 0,
+          "costType": "recurring",
+          "startDate": "2026-02-22",
+          "endDate": null,
+          "status": "active",
+          "notes": "Free API"
+        },
+        {
+          "name": "Brookings",
+          "monthlyCost": 0,
+          "oneTimeCost": 0,
+          "costType": "recurring",
+          "startDate": "2026-02-22",
+          "endDate": null,
+          "status": "active",
+          "notes": "Free RSS feeds"
+        },
+        {
+          "name": "BLS",
+          "monthlyCost": 0,
+          "oneTimeCost": 0,
+          "costType": "recurring",
+          "startDate": "2026-02-22",
+          "endDate": null,
+          "status": "active",
+          "notes": "Free government API"
+        },
+        {
+          "name": "FRED",
+          "monthlyCost": 0,
+          "oneTimeCost": 0,
+          "costType": "recurring",
+          "startDate": "2026-02-22",
+          "endDate": null,
+          "status": "active",
+          "notes": "Free government API"
+        },
+        {
+          "name": "GitHub API",
+          "monthlyCost": 0,
+          "oneTimeCost": 0,
+          "costType": "recurring",
+          "startDate": "2026-02-22",
+          "endDate": null,
+          "status": "active",
+          "notes": "Free with personal access token"
+        },
+        {
+          "name": "npm / PyPI",
+          "monthlyCost": 0,
+          "oneTimeCost": 0,
+          "costType": "recurring",
+          "startDate": "2026-02-22",
+          "endDate": null,
+          "status": "active",
+          "notes": "Free public download stats"
+        },
+        {
+          "name": "Stack Overflow",
+          "monthlyCost": 0,
+          "oneTimeCost": 0,
+          "costType": "recurring",
+          "startDate": "2026-02-22",
+          "endDate": null,
+          "status": "active",
+          "notes": "Free API"
+        },
+        {
+          "name": "HuggingFace",
+          "monthlyCost": 0,
+          "oneTimeCost": 0,
+          "costType": "recurring",
+          "startDate": "2026-02-22",
+          "endDate": null,
+          "status": "active",
+          "notes": "Free API"
+        }
+      ]
+    },
+    {
+      "name": "Infrastructure",
+      "services": [
+        {
+          "name": "Neon PostgreSQL",
+          "monthlyCost": 0,
+          "oneTimeCost": 0,
+          "costType": "recurring",
+          "startDate": "2026-02-22",
+          "endDate": null,
+          "status": "active",
+          "notes": "Free tier"
+        },
+        {
+          "name": "Vercel Analytics",
+          "monthlyCost": 0,
+          "oneTimeCost": 0,
+          "costType": "recurring",
+          "startDate": "2026-02-22",
+          "endDate": null,
+          "status": "active",
+          "notes": "Included with Vercel"
+        },
+        {
+          "name": "GitHub Actions",
+          "monthlyCost": 0,
+          "oneTimeCost": 0,
+          "costType": "recurring",
+          "startDate": "2026-02-22",
+          "endDate": null,
+          "status": "active",
+          "notes": "Free tier CI/CD"
+        }
+      ]
+    }
+  ]
+}

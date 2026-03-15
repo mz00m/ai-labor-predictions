@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Methodology from "@/components/Methodology";
+import TransparencyCosts from "@/components/TransparencyCosts";
 import RecentSources from "@/components/RecentSources";
 import { getRecentSources } from "@/lib/sources";
 
@@ -127,6 +128,14 @@ export default function AboutPage() {
         {/* Methodology */}
         <section id="methodology" className="scroll-mt-16">
           <Methodology />
+        </section>
+
+        {/* Divider */}
+        <div className="border-t border-black/[0.06]" />
+
+        {/* What This Costs */}
+        <section id="costs" className="scroll-mt-16">
+          <TransparencyCosts />
         </section>
       </div>
 
