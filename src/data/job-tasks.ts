@@ -14,6 +14,7 @@
  */
 
 import type { TaskCategory } from "./task-categories";
+import { CATEGORY_ADOPTION_LAG } from "./task-categories";
 
 /**
  * Token economics model for computing AI task cost.
@@ -4766,7 +4767,24 @@ export function getTaskTokenCost(task: JobTask): {
 }
 
 /**
- * Calculate overall job automation exposure score (0-100).
+ * Calculate the probable adoption year for a task, accounting for
+ * institutional drag (process change, training, regulation, trust).
+ *
+ * Returns economic crossover year + category-specific adoption lag,
+ * or null if crossover doesn't happen within 20 years.
+ */
+export function calculateAdoptionYear(
+  task: JobTask,
+  humanWagePerHr: number,
+  baseYear: number = 2026
+): number | null {
+  const crossover = calculateCrossoverYear(task, humanWagePerHr, baseYear);
+  if (crossover === null) return null;
+  return Math.round((crossover + CATEGORY_ADOPTION_LAG[task.category]) * 10) / 10;
+}
+
+/**
+ * Calculate overall job economic exposure score (0-100).
  */
 export function calculateJobExposure(job: JobProfile): number {
   return Math.round(

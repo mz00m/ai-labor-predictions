@@ -70,6 +70,33 @@ export const TASK_CATEGORY_META: Record<
  * - Epoch AI: algorithmic efficiency doubling annually
  * - a16z LLMflation: 1,000x cost decline for equivalent MMLU performance in 3 years
  */
+/**
+ * Institutional adoption lag by task category (years beyond economic crossover).
+ *
+ * Economic crossover (when AI compute < human labor cost) is a necessary but
+ * not sufficient condition for adoption. Real deployment requires process
+ * redesign, staff retraining, regulatory compliance, and cultural buy-in.
+ *
+ * These lag estimates draw on historical technology diffusion research:
+ * - Griliches (1957): hybrid corn adoption took 5-15 years after economic viability
+ * - Comin & Hobijn (2010): cross-country technology adoption lags of 5-45 years
+ * - Rogers (2003): diffusion of innovations framework (early majority at 3-5 years)
+ *
+ * Values are conservative estimates for the gap between cost parity and
+ * probable firm-level adoption in the US context. They reflect the binding
+ * constraint identified by labor economists: institutional change, not compute cost.
+ */
+export const CATEGORY_ADOPTION_LAG: Record<TaskCategory, number> = {
+  "information-processing": 1.5,  // Low friction: clear ROI, easy to pilot, minimal process change
+  "communication": 2.0,           // Moderate: quality/tone concerns, brand risk
+  "analysis-decision": 3.5,       // High: liability exposure, trust requirements, judgment calls
+  "creative-generative": 2.5,     // Medium: quality bar, brand consistency, taste
+  "coordination-management": 3.0, // High: organizational restructuring required
+  "physical-manual": 4.0,         // Very high: capital expenditure, safety regulation, union contracts
+  "interpersonal": 4.5,           // Very high: trust, ethics review, regulatory approval
+  "technical-specialized": 3.0,   // High: certification requirements, domain validation
+};
+
 export const CATEGORY_DECLINE_RATES: Record<TaskCategory, number> = {
   "information-processing": 0.44,
   "communication": 0.41,

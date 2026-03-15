@@ -90,6 +90,15 @@ export default function MethodologySection() {
               12 frontier calls with 3x overhead — costs roughly $18. AI is already 10x cheaper for many
               knowledge tasks.
             </p>
+            <p>
+              This compute floor — the raw token cost to replicate one hour of human work — is the
+              most important number in AI labor economics. It represents the minimum a firm must invest
+              before any organizational change, any integration engineering, any validation pipeline.
+              It is falling 30-45% per year across task types, and unlike human wages, it has no floor.
+              Understanding this number is the starting point for any serious analysis of where AI
+              will reshape work: not because cheap compute guarantees adoption, but because it sets
+              the boundary on what is economically possible.
+            </p>
           </div>
         </div>
 
@@ -173,7 +182,7 @@ export default function MethodologySection() {
           <div className="text-[13px] text-[var(--muted)] leading-relaxed space-y-2">
             <p>
               For each task, we calculate the <strong className="text-[var(--foreground)]">crossover year</strong>:
-              the year when the compute cost to automate that task drops below the human labor cost for
+              the year when the compute cost for AI to perform that task drops below the human labor cost for
               those hours. The formula:
             </p>
             <div className="bg-black/[0.02] rounded-lg p-3 font-mono text-[12px]">
@@ -181,9 +190,12 @@ export default function MethodologySection() {
             </div>
             <p>
               This is the economic inflection point. Before crossover, there&apos;s no cost incentive to
-              automate (even if AI <em>can</em> do the task). After crossover, the economic incentive
-              exists and adoption typically follows within 1-3 years, modulated by organizational
-              inertia, regulation, and trust barriers.
+              deploy AI (even if AI <em>can</em> do the task). After crossover, the economic case
+              exists — but adoption is a separate question entirely. Firms must redesign processes,
+              retrain staff, navigate regulation, and build organizational trust. Historical technology
+              diffusion research (Griliches 1957, Comin &amp; Hobijn 2010) suggests this institutional
+              drag adds 1.5-4.5 years beyond economic viability, varying significantly by industry
+              and task type. Exposure is not automation.
             </p>
           </div>
         </div>

@@ -121,8 +121,8 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
   }, [selectedJob]);
 
   const tabs: { id: Tab; label: string; question: string }[] = [
-    { id: "breakdown", label: "Task Breakdown", question: "How is your time spent, and which tasks face the most automation pressure?" },
-    { id: "timeline", label: "Automation Timeline", question: "When will it become cheaper to automate each of your tasks than to pay you?" },
+    { id: "breakdown", label: "Task Breakdown", question: "How is your time spent, and which tasks face the most economic pressure from AI?" },
+    { id: "timeline", label: "Economic Timeline", question: "When does AI become cheaper than human labor for each task?" },
     { id: "costs", label: "Compute Costs", question: "How fast is AI getting cheaper for each of your specific tasks?" },
     { id: "benchmarks", label: "Cost Benchmarks", question: "How much does AI compute cost today, and how fast is it falling?" },
   ];
@@ -285,7 +285,7 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
               >
                 {exposureScore}
               </p>
-              <p className="text-[11px] text-[var(--muted)]">Automation exposure</p>
+              <p className="text-[11px] text-[var(--muted)]">Economic exposure</p>
             </div>
           </div>
 

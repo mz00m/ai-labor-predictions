@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
-import { JobTask, calculateCrossoverYear, DEPLOYMENT_OVERHEAD } from "@/data/job-tasks";
+import { JobTask, calculateCrossoverYear, calculateAdoptionYear, DEPLOYMENT_OVERHEAD } from "@/data/job-tasks";
 
 /** Risk color based on crossover year */
 function getRiskColor(crossoverYear: number | null): string {
@@ -29,7 +29,11 @@ export default function AutomationTimeline({
           { ...task, timeShare: share },
           humanWagePerHr
         );
-        return { task, share, crossover };
+        const adoption = calculateAdoptionYear(
+          { ...task, timeShare: share },
+          humanWagePerHr
+        );
+        return { task, share, crossover, adoption };
       })
       .sort((a, b) => {
         const ya = a.crossover ?? 2050;
@@ -44,6 +48,18 @@ export default function AutomationTimeline({
 
   return (
     <div>
+      {/* Legend */}
+      <div className="flex items-center gap-5 mb-4 text-[10px] text-[var(--muted)]">
+        <div className="flex items-center gap-1.5">
+          <div className="w-3 h-0.5 bg-[#6366F1] rounded-full" />
+          <span>Cost parity (AI cheaper than labor)</span>
+        </div>
+        <div className="flex items-center gap-1.5">
+          <div className="w-3 h-0.5 rounded-full" style={{ background: "repeating-linear-gradient(90deg, #6366F1 0, #6366F1 2px, transparent 2px, transparent 5px)" }} />
+          <span>Probable adoption (+ institutional drag)</span>
+        </div>
+      </div>
+
       {/* Year axis */}
       <div className="relative mb-2 h-6">
         {[2026, 2028, 2030, 2032, 2034, 2036, 2038, 2040].map((yr) => (
@@ -70,10 +86,12 @@ export default function AutomationTimeline({
           ))}
         </div>
 
-        {timelineData.map(({ task, share, crossover }) => {
+        {timelineData.map(({ task, share, crossover, adoption }) => {
           const color = getRiskColor(crossover);
-          const year = crossover ?? maxYear;
-          const leftPct = Math.min(((year - minYear) / range) * 100, 100);
+          const crossoverYear = crossover ?? maxYear;
+          const adoptionYear = adoption ?? maxYear;
+          const crossoverPct = Math.min(((crossoverYear - minYear) / range) * 100, 100);
+          const adoptionPct = Math.min(((adoptionYear - minYear) / range) * 100, 100);
           const isNow = crossover !== null && crossover <= 2026;
           const isBeyond = crossover === null;
 
@@ -88,35 +106,64 @@ export default function AutomationTimeline({
                 </span>
               </div>
               <div className="flex-1 relative h-6">
-                {/* Bar from now to crossover */}
+                {/* Solid bar: now → cost parity */}
                 <div
-                  className="absolute top-1 h-4 rounded-full"
+                  className="absolute top-1 h-4 rounded-l-full"
                   style={{
                     left: 0,
-                    width: `${leftPct}%`,
+                    width: `${crossoverPct}%`,
                     backgroundColor: color,
                     opacity: isNow ? 0.4 : 0.7,
+                    borderTopRightRadius: isBeyond ? "9999px" : 0,
+                    borderBottomRightRadius: isBeyond ? "9999px" : 0,
                   }}
                 />
-                {/* Crossover marker */}
+                {/* Striped bar: cost parity → probable adoption (institutional drag zone) */}
+                {!isBeyond && adoptionPct > crossoverPct && (
+                  <div
+                    className="absolute top-1 h-4"
+                    style={{
+                      left: `${crossoverPct}%`,
+                      width: `${Math.min(adoptionPct - crossoverPct, 100 - crossoverPct)}%`,
+                      background: `repeating-linear-gradient(90deg, ${color}40 0, ${color}40 3px, transparent 3px, transparent 6px)`,
+                      borderTopRightRadius: "9999px",
+                      borderBottomRightRadius: "9999px",
+                    }}
+                  />
+                )}
+                {/* Cost parity marker (solid) */}
                 {!isBeyond && (
                   <div
                     className="absolute top-0 w-0.5 h-6 rounded-full"
                     style={{
-                      left: `${leftPct}%`,
+                      left: `${crossoverPct}%`,
                       backgroundColor: color,
                     }}
                   />
                 )}
-                {/* Label */}
+                {/* Adoption marker (dashed) */}
+                {!isBeyond && adoption !== null && adoptionPct < 100 && (
+                  <div
+                    className="absolute top-0 w-0.5 h-6"
+                    style={{
+                      left: `${adoptionPct}%`,
+                      background: `repeating-linear-gradient(180deg, ${color} 0, ${color} 2px, transparent 2px, transparent 5px)`,
+                    }}
+                  />
+                )}
+                {/* Labels */}
                 <span
                   className="absolute top-0.5 text-[10px] font-medium"
                   style={{
-                    left: `${Math.min(leftPct + 1, 85)}%`,
+                    left: `${Math.min((isBeyond ? crossoverPct : adoptionPct) + 1, 80)}%`,
                     color: isBeyond ? "#6b7280" : color,
                   }}
                 >
-                  {isNow ? "Now" : isBeyond ? "10yr+" : `${year}`}
+                  {isNow ? "Now" : isBeyond ? "10yr+" : (
+                    adoption !== null && adoption !== crossover
+                      ? `${crossoverYear} / ${Math.round(adoptionYear)}`
+                      : `${crossoverYear}`
+                  )}
                 </span>
               </div>
             </div>
@@ -125,9 +172,11 @@ export default function AutomationTimeline({
       </div>
 
       <p className="text-[11px] text-[var(--muted)] mt-4">
-        Bar length shows time until total production cost (API + {DEPLOYMENT_OVERHEAD}x deployment
-        overhead) drops below human labor cost for each task. Shorter bars = sooner economic
-        incentive to automate. Does not predict actual adoption — just when the economics tip.
+        Solid bar = time until AI production cost (API + {DEPLOYMENT_OVERHEAD}x deployment
+        overhead) drops below human labor cost. Striped extension = estimated institutional
+        adoption drag (process change, training, compliance). The gap between cost parity
+        and probable adoption is 1.5-4.5 years depending on task type. Neither predicts
+        actual adoption — they frame the economic and organizational constraints.
       </p>
     </div>
   );

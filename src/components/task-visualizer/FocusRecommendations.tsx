@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
-import { JobTask, calculateCrossoverYear } from "@/data/job-tasks";
+import { JobTask, calculateAdoptionYear } from "@/data/job-tasks";
 
 interface FocusRecommendationsProps {
   tasks: JobTask[];
@@ -17,12 +17,12 @@ export default function FocusRecommendations({
   const { atRisk, augment, invest } = useMemo(() => {
     const analyzed = tasks.map((task) => {
       const share = adjustedShares[task.id] ?? task.timeShare;
-      const crossover = calculateCrossoverYear(
+      const adoption = calculateAdoptionYear(
         { ...task, timeShare: share },
         humanWagePerHr
       );
-      const yearsLeft = crossover ? crossover - 2026 : 20;
-      return { task, share, crossover, yearsLeft };
+      const yearsLeft = adoption ? adoption - 2026 : 20;
+      return { task, share, adoption, yearsLeft };
     });
 
     // At risk: crossover within 3 years and >5% of time
@@ -62,7 +62,7 @@ export default function FocusRecommendations({
             {automatedSharePercent}%
           </span>
           <span className="text-[13px] text-[var(--muted)]">
-            of your time is on tasks facing near-term automation pressure
+            of your time is on tasks facing near-term economic pressure from AI
           </span>
         </div>
       </div>
@@ -72,10 +72,10 @@ export default function FocusRecommendations({
         <div>
           <h4 className="text-[13px] font-semibold text-[#EF4444] mb-2 flex items-center gap-1.5">
             <span className="w-1.5 h-1.5 rounded-full bg-[#EF4444]" />
-            Likely automated soon
+            AI is already cost-competitive
           </h4>
           <p className="text-[12px] text-[var(--muted)] mb-2">
-            These tasks are already cheaper (or nearly) to automate than to pay a human. Shift time away from these.
+            AI can already perform these tasks at or below human labor cost. Adoption still lags economics by years, but the cost incentive is there. Shift time away from these.
           </p>
           <div className="space-y-1.5">
             {atRisk.map(({ task, share }) => (
@@ -133,7 +133,7 @@ export default function FocusRecommendations({
             Double down here
           </h4>
           <p className="text-[12px] text-[var(--muted)] mb-2">
-            These tasks remain expensive and difficult to automate. Building unique expertise here is your best bet.
+            These tasks remain expensive and difficult for AI to replicate. Building unique expertise here is your best bet.
           </p>
           <div className="space-y-1.5">
             {invest.map(({ task, share }) => (
