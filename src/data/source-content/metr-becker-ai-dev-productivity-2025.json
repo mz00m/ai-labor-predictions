@@ -1,14 +1,14 @@
 {
   "id": "metr-becker-ai-dev-productivity-2025",
-  "abstract": "This randomized controlled trial measures how AI tools at the February-June 2025 frontier affect the productivity of experienced open-source developers. 16 developers with moderate AI experience completed 246 tasks in mature projects where they averaged 5 years of prior experience. Contrary to developer expectations of 24% time savings, allowing AI tools (primarily Cursor Pro with Claude 3.5/3.7 Sonnet) actually increased task completion time by 19%.",
+  "abstract": "RETRACTED BY AUTHORS (Feb 2026). This RCT originally found AI tools caused a 19% slowdown for experienced open-source developers. In February 2026, METR published a follow-up acknowledging severe selection bias and stating the data gives an 'unreliable signal.' Follow-up data shows likely speedup, not slowdown. See metr-2026 for the updated findings.",
   "keyFindings": [
-    "Allowing AI tools increased task completion time by 19% for experienced open-source developers (confidence interval: +2% to +39%)",
-    "Before starting tasks, developers forecast that AI would reduce completion time by 24%; after completing the study, they estimated 20% savings",
-    "A quarter of participants saw increased performance, while three-quarters saw reduced performance",
-    "When AI is allowed, developers spend less time actively coding and more time prompting AI, waiting on outputs, and idle",
-    "Economics experts predicted 39% speedup and ML experts predicted 38% speedup, both far from actual results"
+    "RETRACTED: Original finding of 19% slowdown has been walked back by METR in their Feb 2026 update",
+    "Follow-up study with 57 developers and 800+ tasks shows estimated speedup of -18% for original developers (CI: -38% to +9%)",
+    "Newly-recruited developers show estimated -4% speedup (CI: -15% to +9%)",
+    "30-50% of developers reported avoiding submitting tasks they expected AI to accelerate, creating severe downward bias",
+    "Authors state the measured productivity effects are 'likely a bad proxy for the real productivity impact'"
   ],
-  "methodology": "Randomized controlled trial with 16 experienced open-source developers completing 246 tasks across mature projects. Each task randomly assigned to allow or disallow AI tools. Developers averaged 5 years of experience on their projects. Primary AI tools: Cursor Pro with Claude 3.5/3.7 Sonnet.",
-  "qualifiers": "Small sample size (16 developers). Setting is experienced developers working on mature, complex codebases — results may not generalize to greenfield development or less experienced developers. Influence of experimental artifacts cannot be entirely ruled out.",
-  "fetchedAt": "2026-03-10"
+  "methodology": "Original: RCT with 16 experienced open-source developers completing 246 tasks. Follow-up: 57 developers (10 original, 47 new) across 143 repos and 800+ tasks. Authors identified severe selection effects that invalidate the original finding.",
+  "qualifiers": "METR explicitly states their original experimental design produced unreliable results. They are redesigning the study. The 19% slowdown should not be cited as a current finding.",
+  "fetchedAt": "2026-03-15"
 }

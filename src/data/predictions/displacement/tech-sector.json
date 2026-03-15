@@ -332,13 +332,13 @@
       "label": "OECD: Employment Outlook 2025 on AI and the labour market"
     },
     {
-      "date": "2025-07-12",
-      "direction": "down",
+      "date": "2026-02-24",
+      "direction": "up",
       "sourceIds": [
-        "metr-becker-ai-dev-productivity-2025"
+        "metr-2026"
       ],
       "evidenceTier": 1,
-      "label": "METR RCT: AI increases experienced dev task time by 19% (n=16, 246 tasks)"
+      "label": "METR: Original 19% slowdown finding retracted; follow-up shows likely speedup, study redesigned"
     },
     {
       "date": "2025-08-01",
@@ -1030,14 +1030,14 @@
       "dateAdded": "2026-03-07"
     },
     {
-      "id": "metr-becker-ai-dev-productivity-2025",
-      "title": "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity",
-      "url": "https://arxiv.org/abs/2507.09089",
-      "publisher": "METR (Becker, Rush, Barnes, Rein)",
+      "id": "metr-2026",
+      "title": "We are Changing our Developer Productivity Experiment Design",
+      "url": "https://metr.org/blog/2026-02-24-developer-productivity-update/",
+      "publisher": "METR (Becker, Rush, Cunningham, Rein, Mahamud)",
       "evidenceTier": 1,
-      "datePublished": "2025-07-12",
-      "excerpt": "16 developers with moderate AI experience complete 246 tasks in mature projects on which they have an average of 5 years of prior experience. Allowing AI actually increases completion time by 19%.",
-      "dateAdded": "2026-03-10"
+      "datePublished": "2026-02-24",
+      "excerpt": "METR's follow-up study finds original 19% slowdown unreliable due to selection effects. New data shows -18% speedup (CI: -38% to +9%) for original developers and -4% speedup (CI: -15% to +9%) for new recruits. Study redesigned due to severe selection bias.",
+      "dateAdded": "2026-03-15"
     },
     {
       "id": "chen-stratton-ai-in-firm-2026",
