@@ -10,24 +10,23 @@
 
 ```
 COMMIT ACTIVITY
-  Total commits this week:         150
-  Non-merge commits:               88
-  Total files changed:             1,553
-  Lines added:                     171,097
-  Lines removed:                   3,768
+  Total commits this week:         246 (139 non-merge)
+  Total files changed:             968
+  Lines added:                     28,465
+  Lines removed:                   5,824
 
 DATA ADDITIONS
-  New research sources added:      91 (316 -> 407)
-    Tier 1 (peer-reviewed):        47
-    Tier 2 (think tank/intl org):  37
-    Tier 3 (major press):          5
+  New research sources added:      85 (322 -> 407)
+    Tier 1 (peer-reviewed):        45
+    Tier 2 (think tank/intl org):  34
+    Tier 3 (major press):          4
     Tier 4 (blog/opinion):         2
   Prediction graphs updated:       11+
   New prediction graph:            1 (robots-physical-automation)
+  Prediction graph removed:        1 (geographic-wage-divergence)
 
 SITE CHANGES
-  New pages/routes:                5
-  New components:                  20+
+  New pages/routes:                4
   Script/pipeline changes:         3
 ```
 
@@ -35,7 +34,7 @@ SITE CHANGES
 
 ## A. New Research Sources Added
 
-91 new sources this week (316 -> 407 total). Key ingestions:
+85 new sources this week (322 -> 407 total). Key ingestions:
 
 ### Batch ingestion: 39 papers (commit `3d036c8`)
 - **Daniotti (Science, 2025)** -- T1: AI adoption patterns in scientific research workflows
@@ -94,7 +93,7 @@ Key data movements this week:
 
 - **New graph: `robots-physical-automation`** -- Physical/industrial automation displacement estimate (~8% of physical-task jobs), 12 sources. Extends coverage beyond white-collar and service roles.
 - **Removed: `geographic-wage-divergence`** -- Insufficient defensible sources; usable sources salvaged to other graphs.
-- Net change: 17 -> 18 prediction graphs
+- Net change: 17 -> 18 prediction graphs (added robots, removed geo-wage, kept total-jobs-lost which already existed)
 - Education and healthcare-admin descriptions updated with research context
 
 ---

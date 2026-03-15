@@ -9,7 +9,7 @@ Interactive tools
 -> US Economy view: Macro automation exposure across 160M US workers segmented by income tier and gender, using BLS OEWS May 2024 data. 22 SOC occupation groups. Clickable income cards filter the chart. Click any bar to explore individual job profiles.
 
 Research and data
--> 91 new sources added this week (316 -> 407 total). Breakdown: 47 peer-reviewed, 37 institutional, 5 major press, 2 commentary.
+-> 85 new sources added this week (322 -> 407 total). Breakdown: 45 peer-reviewed, 34 institutional, 4 major press, 2 commentary.
 -> Largest batch: 39 papers ingested in a single pass across 11 prediction graphs, including Daniotti (Science), Dell'Acqua (NBER/HBS), Jiang (NBER), and Sarkar's Cursor productivity study.
 -> Shen and Tamkin (2026, Anthropic): Early-career workers using AI tools form skills more slowly -- the AI group scored 50% on assessments vs 67% for those coding by hand. A finding with real workforce development implications.
 -> First platform earnings data: Upwork and Fiverr FY2025 results now feed the freelancer rate impact graph, adding hard revenue numbers to what was previously survey-based.
@@ -26,7 +26,7 @@ Site updates
 -> Color system overhaul: evidence tier palette, chart gridlines, accessibility improvements
 -> Footer now shows live project stats; navigation reorganized for clarity
 
-By the numbers: 150 commits, 88 non-merge, 91 new sources, 18 prediction graphs, 5 new pages
+By the numbers: 246 commits, 968 files changed, 85 new sources, 18 prediction graphs, 4 new pages
 
 The Task Visualizer exists because sector-level statements about AI displacement ("30% of jobs at risk") are not useful for workforce planning. What matters is the task composition of specific jobs, how fast compute costs are declining for each task type, and what the realistic deployment overhead looks like. A financial analyst and a therapist face very different automation profiles even if both show up as "white-collar professional" in the aggregate data. That granularity is what practitioners need, and it is what we are building toward.
 
