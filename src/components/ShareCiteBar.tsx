@@ -76,7 +76,7 @@ export default function ShareCiteBar({
   }
 
   return (
-    <div className="rounded-lg bg-[#f0f1ff]/60 dark:bg-[#1e1e3a]/40">
+    <div className="rounded-xl bg-gradient-to-r from-transparent via-black/[0.02] to-transparent dark:via-white/[0.03]">
       {/* Action buttons row */}
       <div className="flex items-center gap-2 px-4 py-2.5 flex-wrap">
         <span className="text-[12px] font-bold uppercase tracking-widest text-[var(--muted)] mr-1">Share</span>
