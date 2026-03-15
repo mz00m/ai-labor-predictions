@@ -9,7 +9,6 @@ import PredictionSummaryCard from "@/components/PredictionSummaryCard";
 import NewsTicker from "@/components/NewsTicker";
 import ResearchFeed from "@/components/ResearchFeed";
 import FunnelStrip from "@/components/FunnelStrip";
-import ResearchEvidence from "@/components/ResearchEvidence";
 import FeaturedReads from "@/components/FeaturedReads";
 import AgeUsageTile from "@/components/AgeUsageTile";
 
@@ -222,11 +221,6 @@ export default function Home() {
         <AgeUsageTile />
       </div>
 
-
-      {/* Research Evidence */}
-      <div className="mt-20">
-        <ResearchEvidence />
-      </div>
 
       {/* Research Feed */}
       <section id="research-feed" className="mt-10">
