@@ -55,9 +55,9 @@ export default function EvidenceFilter({
             ? `sticky top-12 z-40 -mx-6 sm:-mx-10 px-6 sm:px-10 ${
                 isStuck
                   ? "bg-white/95 backdrop-blur-sm border-b border-black/[0.06] py-1.5"
-                  : "rounded-lg bg-[#f0f1ff]/60 dark:bg-[#1e1e3a]/40 px-4 py-3"
+                  : "rounded-xl bg-gradient-to-r from-transparent via-black/[0.02] to-transparent dark:via-white/[0.03] px-4 py-3"
               }`
-            : "rounded-lg bg-[#f0f1ff]/60 dark:bg-[#1e1e3a]/40 px-4 py-3"
+            : "rounded-xl bg-gradient-to-r from-transparent via-black/[0.02] to-transparent dark:via-white/[0.03] px-4 py-3"
         }`}
       >
         <div className="flex items-center justify-between gap-4 flex-wrap">
