@@ -172,3 +172,14 @@ export function getPredictionTitle(slug: string): string {
 export function getSourceCount(): number {
   return allSources.length;
 }
+
+/**
+ * Count of sources per evidence tier (1-4).
+ */
+export function getSourceCountsByTier(): Record<number, number> {
+  const counts: Record<number, number> = { 1: 0, 2: 0, 3: 0, 4: 0 };
+  for (const s of allSources) {
+    counts[s.evidenceTier] = (counts[s.evidenceTier] ?? 0) + 1;
+  }
+  return counts;
+}

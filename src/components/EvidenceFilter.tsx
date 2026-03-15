@@ -7,11 +7,13 @@ import { TIER_CONFIGS } from "@/lib/evidence-tiers";
 interface EvidenceFilterProps {
   selectedTiers: EvidenceTier[];
   onChange: (tiers: EvidenceTier[]) => void;
+  tierCounts?: Record<number, number>;
 }
 
 export default function EvidenceFilter({
   selectedTiers,
   onChange,
+  tierCounts,
 }: EvidenceFilterProps) {
   const handleToggle = (tier: EvidenceTier) => {
     if (selectedTiers.includes(tier)) {
@@ -30,39 +32,22 @@ export default function EvidenceFilter({
 
   return (
     <div className="flex items-center justify-between gap-4 flex-wrap">
-      <div className="flex items-center gap-2">
-        <div className="flex items-center gap-1.5 mr-1">
-          <h3 className="text-[12px] font-bold uppercase tracking-widest text-[var(--muted)]">
-            Evidence
-          </h3>
-          <Tooltip
-            content={
-              "Tier 1: RCTs, peer-reviewed journals, government data\n" +
-              "Tier 2: Think tanks, intl orgs, prediction markets\n" +
-              "Tier 3: Major news outlets, trade publications\n" +
-              "Tier 4: Twitter/X, Reddit, blogs, podcasts"
-            }
-          />
-        </div>
-        {TIER_CONFIGS.map((config) => {
+      <div className="flex items-center gap-0">
+        <h3 className="text-[12px] font-bold uppercase tracking-widest text-[var(--muted)] mr-3">
+          Evidence
+        </h3>
+        {TIER_CONFIGS.map((config, i) => {
           const checked = selectedTiers.includes(config.tier);
+          const count = tierCounts?.[config.tier];
           return (
-            <button
+            <TierButton
               key={config.tier}
+              config={config}
+              checked={checked}
+              count={count}
+              isLast={i === TIER_CONFIGS.length - 1}
               onClick={() => handleToggle(config.tier)}
-              title={`${config.label}: ${config.description}\n${config.includes.join(", ")}`}
-              className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[12px] font-medium cursor-pointer transition-all border ${
-                checked
-                  ? "opacity-100 border-[var(--border)] bg-[var(--card)] text-[var(--foreground)]"
-                  : "opacity-40 border-transparent hover:opacity-60 text-[var(--muted)]"
-              }`}
-            >
-              <span
-                className="inline-block w-2 h-2 rounded-full flex-shrink-0"
-                style={{ backgroundColor: config.color }}
-              />
-              {config.label}
-            </button>
+            />
           );
         })}
       </div>
@@ -92,22 +77,74 @@ export default function EvidenceFilter({
   );
 }
 
-function Tooltip({ content }: { content: string }) {
-  const [visible, setVisible] = useState(false);
+function TierButton({
+  config,
+  checked,
+  count,
+  isLast,
+  onClick,
+}: {
+  config: (typeof TIER_CONFIGS)[number];
+  checked: boolean;
+  count?: number;
+  isLast: boolean;
+  onClick: () => void;
+}) {
+  const [hovered, setHovered] = useState(false);
 
   return (
     <span
       className="relative inline-flex"
-      onMouseEnter={() => setVisible(true)}
-      onMouseLeave={() => setVisible(false)}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
     >
-      <span className="inline-flex items-center justify-center w-4 h-4 rounded-full text-[10px] font-bold text-[var(--muted)] border border-[var(--border)] cursor-help hover:text-[var(--foreground)] hover:border-[var(--foreground)] transition-colors">
-        ?
-      </span>
-      {visible && (
-        <span className="absolute left-1/2 -translate-x-1/2 top-full mt-2 z-50 w-72 rounded-lg bg-[var(--card)] border border-[var(--border)] shadow-lg px-3 py-2.5 text-[11px] leading-relaxed text-[var(--muted)] whitespace-pre-line pointer-events-none">
-          {content}
-        </span>
+      <button
+        onClick={onClick}
+        className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-[12px] font-medium cursor-pointer transition-colors ${
+          !isLast ? "border-r border-[var(--border)]" : ""
+        } ${
+          checked
+            ? "text-[var(--foreground)]"
+            : "opacity-40 hover:opacity-70 text-[var(--muted)]"
+        } hover:bg-[var(--border)]/30`}
+      >
+        <span
+          className="inline-block w-2 h-2 rounded-full flex-shrink-0"
+          style={{ backgroundColor: config.color }}
+        />
+        {config.label}
+      </button>
+
+      {hovered && (
+        <div className="absolute left-1/2 -translate-x-1/2 top-full mt-2 z-50 w-72 rounded-lg bg-[#1a1a2e] border border-[#2a2a3e] shadow-xl px-4 py-3 pointer-events-none">
+          <div className="flex items-center gap-2 mb-1.5">
+            <span
+              className="inline-block w-2.5 h-2.5 rounded-full"
+              style={{ backgroundColor: config.color }}
+            />
+            <span className="text-[13px] font-semibold text-white">
+              {config.label}
+            </span>
+          </div>
+          <p className="text-[11px] text-[#a0a0b8] mb-2 leading-relaxed">
+            {config.description}
+          </p>
+          <ul className="space-y-0.5 mb-2">
+            {config.includes.map((item) => (
+              <li
+                key={item}
+                className="text-[11px] text-[#8a8aa0] leading-relaxed pl-2.5 relative before:content-[''] before:absolute before:left-0 before:top-[7px] before:w-1 before:h-1 before:rounded-full before:bg-[#4a4a5e]"
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
+          {count != null && (
+            <div className="text-[11px] text-[#6a6a80] pt-1.5 border-t border-[#2a2a3e]">
+              {count} source{count !== 1 ? "s" : ""} on site
+            </div>
+          )}
+        </div>
       )}
     </span>
   );

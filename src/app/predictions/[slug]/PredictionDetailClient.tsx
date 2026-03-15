@@ -5,6 +5,7 @@ import { useParams } from "next/navigation";
 import Link from "next/link";
 import { EvidenceTier } from "@/lib/types";
 import { getPredictionBySlug } from "@/lib/data-loader";
+import { getSourceCountsByTier } from "@/lib/search-sources";
 import { getTierConfig } from "@/lib/evidence-tiers";
 import { computeAggregate } from "@/lib/prediction-stats";
 import EvidenceFilter from "@/components/EvidenceFilter";
@@ -14,6 +15,8 @@ import AdoptionLadder from "@/components/AdoptionLadder";
 import SourceList from "@/components/SourceList";
 import AgeWeightedMethodology from "@/components/AgeWeightedMethodology";
 import ShareCiteBar from "@/components/ShareCiteBar";
+
+const tierCounts = getSourceCountsByTier();
 
 const CONTEXT_MAP: Record<string, (v: number) => string> = {
   "overall-us-displacement": (v) =>
@@ -239,6 +242,7 @@ export default function PredictionDetailPage() {
         <EvidenceFilter
           selectedTiers={selectedTiers}
           onChange={setSelectedTiers}
+          tierCounts={tierCounts}
         />
       </section>
 
