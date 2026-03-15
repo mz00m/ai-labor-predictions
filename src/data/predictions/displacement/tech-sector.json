@@ -578,6 +578,15 @@
       ],
       "evidenceTier": 2,
       "label": "Deutsche Bank: 85% of devs use AI coding assistants; up to 60% productivity gains"
+    },
+    {
+      "date": "2025-11-26",
+      "direction": "down",
+      "sourceIds": [
+        "mit-iceberg-index-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "MIT Iceberg Surface Index: 2.2% of tech wage value ($211B, 1.9M workers) exposed to AI"
     }
   ],
   "sources": [
@@ -1128,6 +1137,16 @@
       "datePublished": "2026-02-16",
       "excerpt": "Over 85% of software developers now use AI coding assistants, delivering productivity gains of up to 60%. This shift raises questions about traditional software engineering roles and licensing models.",
       "dateAdded": "2026-03-13"
+    },
+    {
+      "id": "mit-iceberg-index-2025",
+      "title": "The Iceberg Index: Measuring Skills-centered Exposure in the AI Economy",
+      "url": "https://arxiv.org/abs/2510.25137",
+      "publisher": "MIT / Oak Ridge National Laboratory (Project Iceberg)",
+      "evidenceTier": 1,
+      "datePublished": "2025-11-26",
+      "excerpt": "Nationally, the Surface Index stands at 2.2%, representing approximately $211 billion in wage value across 1.9 million workers in technology occupations.",
+      "dateAdded": "2026-03-15"
     }
   ],
   "marketIds": {

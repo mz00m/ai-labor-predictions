@@ -497,6 +497,15 @@
       ],
       "evidenceTier": 1,
       "label": "ESB/Rabobank: Dutch GenAI-vulnerable job postings down 25% vs <10% elsewhere (since 2022)"
+    },
+    {
+      "date": "2025-11-26",
+      "direction": "down",
+      "sourceIds": [
+        "mit-iceberg-index-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "MIT Iceberg: White-collar AI exposure 5x larger than visible tech disruption, spans all states"
     }
   ],
   "sources": [
@@ -998,6 +1007,16 @@
       "datePublished": "2025-03-15",
       "excerpt": "In a pre-registered RCT with 776 P&G professionals, individuals with AI matched teams without AI (+0.37 SD improvement). AI broke professional silos.",
       "dateAdded": "2026-03-12"
+    },
+    {
+      "id": "mit-iceberg-index-2025",
+      "title": "The Iceberg Index: Measuring Skills-centered Exposure in the AI Economy",
+      "url": "https://arxiv.org/abs/2510.25137",
+      "publisher": "MIT / Oak Ridge National Laboratory (Project Iceberg)",
+      "evidenceTier": 1,
+      "datePublished": "2025-11-26",
+      "excerpt": "Administrative and financial tasks where AI demonstrates capability span five times more wage value than visible tech disruption—and are geographically distributed across all states, not just coastal.",
+      "dateAdded": "2026-03-15"
     }
   ]
 }

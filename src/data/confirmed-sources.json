@@ -4300,7 +4300,10 @@
       "verified": true,
       "synthetic": false,
       "usedIn": [
-        "overall-us-displacement"
+        "overall-us-displacement",
+        "workforce-ai-exposure",
+        "tech-sector-displacement",
+        "white-collar-professional-displacement"
       ]
     },
     "jff-ai-economic-opportunity-2026": {
