@@ -27,6 +27,7 @@ const NAV_ENTRIES: NavEntry[] = [
   {
     label: "Analysis",
     items: [
+      { href: "/compare", label: "Compare" },
       { href: "/signals", label: "Signals" },
       { href: "/j-curve", label: "What's a J-Curve" },
       { href: "/history", label: "History" },
