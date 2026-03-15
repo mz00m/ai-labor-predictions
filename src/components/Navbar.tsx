@@ -37,6 +37,7 @@ const NAV_ENTRIES: NavEntry[] = [
   {
     label: "Learn",
     items: [
+      { href: "/productivity", label: "Productivity" },
       { href: "/j-curve", label: "What's a J-Curve" },
       { href: "/history", label: "History" },
       { href: "/suggest", label: "Suggest Source" },

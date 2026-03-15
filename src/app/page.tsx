@@ -228,12 +228,12 @@ export default function Home() {
         <ProductivityPredictions />
       </div>
 
-      {/* Link → signals productivity paths */}
+      {/* Link → productivity explainer page */}
       <a
-        href="/signals#productivity-paths"
+        href="/productivity"
         className="group flex items-center gap-2 text-[15px] font-semibold text-[var(--accent)] hover:text-[#5C61F6] transition-colors mt-4"
       >
-        What happens when workers get more productive?
+        The full productivity story: research, forecasts, and what it means for jobs
         <svg
           width="18"
           height="18"
