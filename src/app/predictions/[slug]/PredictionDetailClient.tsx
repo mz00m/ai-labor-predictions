@@ -280,6 +280,38 @@ export default function PredictionDetailPage() {
         {prediction.slug === "ai-adoption-rate" && <AdoptionLadder />}
       </section>
 
+      {/* Explore More */}
+      <div className="flex flex-col sm:flex-row gap-4 max-w-2xl">
+        <Link
+          href="/task-visualizer"
+          className="flex-1 group border border-black/[0.06] rounded-lg px-5 py-4 bg-[var(--background)] hover:border-[var(--accent)]/40 transition-colors"
+        >
+          <p className="text-[13px] font-bold uppercase tracking-widest text-[var(--muted)] mb-1">
+            Task Visualizer
+          </p>
+          <p className="text-[14px] text-[var(--foreground)] font-semibold group-hover:text-[var(--accent)] transition-colors">
+            What parts of your job will AI automate?
+          </p>
+          <p className="text-[13px] text-[var(--muted)] mt-1">
+            Explore task-level automation risk for any occupation.
+          </p>
+        </Link>
+        <Link
+          href="/task-visualizer/economy"
+          className="flex-1 group border border-black/[0.06] rounded-lg px-5 py-4 bg-[var(--background)] hover:border-[var(--accent)]/40 transition-colors"
+        >
+          <p className="text-[13px] font-bold uppercase tracking-widest text-[var(--muted)] mb-1">
+            Full Economy Picture
+          </p>
+          <p className="text-[14px] text-[var(--foreground)] font-semibold group-hover:text-[var(--accent)] transition-colors">
+            AI and the US Economy
+          </p>
+          <p className="text-[13px] text-[var(--muted)] mt-1">
+            Automation impact by occupation and income tier.
+          </p>
+        </Link>
+      </div>
+
       {/* Divider */}
       <div className="border-t border-black/[0.06]" />
 
