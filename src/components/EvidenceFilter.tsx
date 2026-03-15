@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { EvidenceTier } from "@/lib/types";
 import { TIER_CONFIGS } from "@/lib/evidence-tiers";
 
@@ -8,13 +8,29 @@ interface EvidenceFilterProps {
   selectedTiers: EvidenceTier[];
   onChange: (tiers: EvidenceTier[]) => void;
   tierCounts?: Record<number, number>;
+  /** Makes the bar stick below the navbar when scrolled past */
+  sticky?: boolean;
 }
 
 export default function EvidenceFilter({
   selectedTiers,
   onChange,
   tierCounts,
+  sticky = false,
 }: EvidenceFilterProps) {
+  const sentinelRef = useRef<HTMLDivElement>(null);
+  const [isStuck, setIsStuck] = useState(false);
+
+  useEffect(() => {
+    if (!sticky || !sentinelRef.current) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsStuck(!entry.isIntersecting),
+      { threshold: 0, rootMargin: "-48px 0px 0px 0px" }
+    );
+    observer.observe(sentinelRef.current);
+    return () => observer.disconnect();
+  }, [sticky]);
+
   const handleToggle = (tier: EvidenceTier) => {
     if (selectedTiers.includes(tier)) {
       if (selectedTiers.length === 1) return;
@@ -31,49 +47,74 @@ export default function EvidenceFilter({
   const researchOnly = selectedTiers.length === 1 && selectedTiers[0] === 1;
 
   return (
-    <div className="flex items-center justify-between gap-4 flex-wrap">
-      <div className="flex items-center gap-0">
-        <h3 className="text-[12px] font-bold uppercase tracking-widest text-[var(--muted)] mr-3">
-          Evidence
-        </h3>
-        {TIER_CONFIGS.map((config, i) => {
-          const checked = selectedTiers.includes(config.tier);
-          const count = tierCounts?.[config.tier];
-          return (
-            <TierButton
-              key={config.tier}
-              config={config}
-              checked={checked}
-              count={count}
-              isLast={i === TIER_CONFIGS.length - 1}
-              onClick={() => handleToggle(config.tier)}
-            />
-          );
-        })}
+    <>
+      {sticky && <div ref={sentinelRef} className="h-0 w-0" aria-hidden />}
+      <div
+        className={`transition-all duration-200 ${
+          sticky
+            ? `sticky top-12 z-40 -mx-6 sm:-mx-10 px-6 sm:px-10 ${
+                isStuck
+                  ? "bg-white/95 backdrop-blur-sm border-b border-black/[0.06] py-1.5"
+                  : "py-0"
+              }`
+            : ""
+        }`}
+      >
+        <div className="flex items-center justify-between gap-4 flex-wrap">
+          <div className="flex items-center gap-0">
+            <h3
+              className={`font-bold uppercase tracking-widest text-[var(--muted)] mr-3 transition-all duration-200 ${
+                isStuck ? "text-[0px] w-0 mr-0 opacity-0 overflow-hidden" : "text-[12px]"
+              }`}
+            >
+              Evidence
+            </h3>
+            {TIER_CONFIGS.map((config, i) => {
+              const checked = selectedTiers.includes(config.tier);
+              const count = tierCounts?.[config.tier];
+              return (
+                <TierButton
+                  key={config.tier}
+                  config={config}
+                  checked={checked}
+                  count={count}
+                  isLast={i === TIER_CONFIGS.length - 1}
+                  compact={isStuck}
+                  onClick={() => handleToggle(config.tier)}
+                />
+              );
+            })}
+          </div>
+          <div className="flex items-center gap-3">
+            <button
+              onClick={selectResearchOnly}
+              className={`font-semibold cursor-pointer transition-colors duration-150 ${
+                isStuck ? "text-[11px]" : "text-[12px]"
+              } ${
+                researchOnly
+                  ? "text-[var(--accent)] underline underline-offset-4"
+                  : "text-[var(--muted)] hover:text-[var(--foreground)]"
+              }`}
+            >
+              Research only
+            </button>
+            {isStuck && <span className="text-black/[0.1]">|</span>}
+            <button
+              onClick={selectAll}
+              className={`font-semibold cursor-pointer transition-colors duration-150 ${
+                isStuck ? "text-[11px]" : "text-[12px]"
+              } ${
+                allSelected
+                  ? "text-[var(--accent)] underline underline-offset-4"
+                  : "text-[var(--muted)] hover:text-[var(--foreground)]"
+              }`}
+            >
+              {isStuck ? "All" : "All tiers"}
+            </button>
+          </div>
+        </div>
       </div>
-      <div className="flex gap-3">
-        <button
-          onClick={selectResearchOnly}
-          className={`text-[12px] font-semibold cursor-pointer ${
-            researchOnly
-              ? "text-[var(--accent)] underline underline-offset-4"
-              : "text-[var(--muted)] hover:text-[var(--foreground)]"
-          }`}
-        >
-          Research only
-        </button>
-        <button
-          onClick={selectAll}
-          className={`text-[12px] font-semibold cursor-pointer ${
-            allSelected
-              ? "text-[var(--accent)] underline underline-offset-4"
-              : "text-[var(--muted)] hover:text-[var(--foreground)]"
-          }`}
-        >
-          All tiers
-        </button>
-      </div>
-    </div>
+    </>
   );
 }
 
@@ -82,15 +123,19 @@ function TierButton({
   checked,
   count,
   isLast,
+  compact,
   onClick,
 }: {
   config: (typeof TIER_CONFIGS)[number];
   checked: boolean;
   count?: number;
   isLast: boolean;
+  compact: boolean;
   onClick: () => void;
 }) {
   const [hovered, setHovered] = useState(false);
+
+  const label = compact ? config.shortLabel : config.label;
 
   return (
     <span
@@ -100,8 +145,10 @@ function TierButton({
     >
       <button
         onClick={onClick}
-        className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-[12px] font-medium cursor-pointer transition-colors ${
-          !isLast ? "border-r border-[var(--border)]" : ""
+        className={`relative inline-flex items-center gap-1.5 text-[12px] font-medium cursor-pointer transition-all duration-200 ${
+          compact ? "px-3 sm:px-4 py-2.5" : "px-3 py-1.5"
+        } ${
+          !isLast && !compact ? "border-r border-[var(--border)]" : ""
         } ${
           checked
             ? "text-[var(--foreground)]"
@@ -109,13 +156,21 @@ function TierButton({
         } hover:bg-[var(--border)]/30`}
       >
         <span
-          className="inline-block w-2 h-2 rounded-full flex-shrink-0"
+          className={`inline-block rounded-full flex-shrink-0 transition-all duration-200 ${
+            compact ? "w-1.5 h-1.5" : "w-2 h-2"
+          }`}
           style={{ backgroundColor: config.color }}
         />
-        {config.label}
+        <span className={compact ? "hidden sm:inline" : ""}>{label}</span>
+        {compact && checked && (
+          <span
+            className="absolute bottom-0 left-3 right-3 sm:left-4 sm:right-4 h-[2px] rounded-full"
+            style={{ backgroundColor: config.color }}
+          />
+        )}
       </button>
 
-      {hovered && (
+      {hovered && !compact && (
         <div className="absolute left-1/2 -translate-x-1/2 top-full mt-2 z-50 w-72 rounded-lg bg-[#1a1a2e] border border-[#2a2a3e] shadow-xl px-4 py-3 pointer-events-none">
           <div className="flex items-center gap-2 mb-1.5">
             <span
