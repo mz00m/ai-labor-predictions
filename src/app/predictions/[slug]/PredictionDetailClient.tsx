@@ -290,10 +290,10 @@ export default function PredictionDetailPage() {
             Task Visualizer
           </p>
           <p className="text-[14px] text-[var(--foreground)] font-semibold group-hover:text-[var(--accent)] transition-colors">
-            What parts of your job will AI automate?
+            What parts of your job face economic pressure from AI?
           </p>
           <p className="text-[13px] text-[var(--muted)] mt-1">
-            Explore task-level automation risk for any occupation.
+            Explore task-level economic exposure for any occupation.
           </p>
         </Link>
         <Link

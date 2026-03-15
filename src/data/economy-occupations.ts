@@ -28,7 +28,8 @@
 
 // Import shared task category definitions (single source of truth)
 import type { TaskCategory } from "./task-categories";
-import { TASK_CATEGORY_META, CATEGORY_DECLINE_RATES } from "./task-categories";
+import { TASK_CATEGORY_META, CATEGORY_DECLINE_RATES, CATEGORY_ADOPTION_LAG } from "./task-categories";
+import { SOC_INDUSTRY_SPEED } from "./industry-adoption-speed";
 
 // Re-export for consumers
 export { type TaskCategory, TASK_CATEGORY_META, CATEGORY_DECLINE_RATES } from "./task-categories";
@@ -289,13 +290,35 @@ export const SOC_TO_JOB_IDS: Record<string, string[]> = {
  */
 export const DEPLOYMENT_OVERHEAD = 5;
 
-export function getAutomationPercentAtYear(group: OccupationGroup, year: number): number {
+/**
+ * Calculate the percentage of an occupation group's tasks where AI has
+ * economic viability at a given year, accounting for industry adoption speed.
+ *
+ * The industry speed multiplier shifts adoption timing per task category:
+ * each task's pressure is evaluated at (yearsFromNow - adoptionLag), where
+ * adoptionLag = CATEGORY_ADOPTION_LAG[cat] * industrySpeed. This delays
+ * the sigmoid curve for slower-adopting industries.
+ *
+ * When applyIndustrySpeed is false (default for backward compatibility),
+ * returns raw economic pressure without adoption lag.
+ */
+export function getAutomationPercentAtYear(
+  group: OccupationGroup,
+  year: number,
+  applyIndustrySpeed: boolean = false
+): number {
   const yearsFromNow = year - 2026;
   if (yearsFromNow < 0) return 0;
 
+  const industrySpeed = applyIndustrySpeed ? (SOC_INDUSTRY_SPEED[group.id] ?? 1.0) : 0;
+
   let automatedShare = 0;
   for (const [cat, share] of Object.entries(group.taskComposition) as [TaskCategory, number][]) {
-    const computeCost = CATEGORY_COMPUTE_COSTS[cat] * DEPLOYMENT_OVERHEAD * Math.pow(1 - CATEGORY_DECLINE_RATES[cat], yearsFromNow);
+    // For adoption-adjusted view, shift effective time by the institutional lag
+    const adoptionLag = applyIndustrySpeed ? CATEGORY_ADOPTION_LAG[cat] * industrySpeed : 0;
+    const effectiveYears = Math.max(0, yearsFromNow - adoptionLag);
+
+    const computeCost = CATEGORY_COMPUTE_COSTS[cat] * DEPLOYMENT_OVERHEAD * Math.pow(1 - CATEGORY_DECLINE_RATES[cat], effectiveYears);
     // Sigmoid-based automation pressure: smooth transition instead of binary cutoff.
     // When computeCost == humanWage, pressure is 50%. Steepness k=6 gives a reasonable
     // ramp: ~5% pressure at 2x human cost, ~95% pressure at 0.5x human cost.
@@ -313,13 +336,14 @@ export function getAutomationPercentAtYear(group: OccupationGroup, year: number)
  */
 export function getWorkersAffectedAtYear(
   year: number,
-  thresholdPercent: number = 50
+  thresholdPercent: number = 50,
+  applyIndustrySpeed: boolean = false
 ): { total: number; byTier: Record<IncomeTier, number> } {
   const byTier: Record<IncomeTier, number> = { low: 0, middle: 0, high: 0 };
   let total = 0;
 
   for (const group of OCCUPATION_GROUPS) {
-    const pct = getAutomationPercentAtYear(group, year);
+    const pct = getAutomationPercentAtYear(group, year, applyIndustrySpeed);
     if (pct >= thresholdPercent) {
       total += group.employment;
       byTier[group.incomeTier] += group.employment;
@@ -334,7 +358,8 @@ export function getWorkersAffectedAtYear(
  */
 export function generateEconomyTimeline(
   startYear: number = 2026,
-  endYear: number = 2040
+  endYear: number = 2040,
+  applyIndustrySpeed: boolean = false
 ): {
   year: number;
   lowAutomated: number;
@@ -349,12 +374,12 @@ export function generateEconomyTimeline(
 
     for (const group of OCCUPATION_GROUPS) {
       tierEmployment[group.incomeTier] += group.employment;
-      const pct = getAutomationPercentAtYear(group, year);
+      const pct = getAutomationPercentAtYear(group, year, applyIndustrySpeed);
       // Weight by how much of the group's tasks are automated
       tierAutomated[group.incomeTier] += group.employment * (pct / 100);
     }
 
-    const workersSignificant = getWorkersAffectedAtYear(year, 50);
+    const workersSignificant = getWorkersAffectedAtYear(year, 50, applyIndustrySpeed);
 
     data.push({
       year,

@@ -14,6 +14,7 @@
  */
 
 import type { TaskCategory } from "./task-categories";
+import { CATEGORY_ADOPTION_LAG } from "./task-categories";
 
 /**
  * Token economics model for computing AI task cost.
@@ -4766,7 +4767,32 @@ export function getTaskTokenCost(task: JobTask): {
 }
 
 /**
- * Calculate overall job automation exposure score (0-100).
+ * Calculate the probable adoption year for a task, accounting for
+ * institutional drag (process change, training, regulation, trust)
+ * and industry-level adoption speed.
+ *
+ * The industrySpeedMultiplier scales the task-category adoption lag:
+ *   - 1.0 = baseline (default)
+ *   - < 1.0 = faster adoption (e.g., tech industry at 0.6)
+ *   - > 1.0 = slower adoption (e.g., healthcare at 1.4)
+ *
+ * Returns economic crossover year + adjusted adoption lag,
+ * or null if crossover doesn't happen within 20 years.
+ */
+export function calculateAdoptionYear(
+  task: JobTask,
+  humanWagePerHr: number,
+  baseYear: number = 2026,
+  industrySpeedMultiplier: number = 1.0
+): number | null {
+  const crossover = calculateCrossoverYear(task, humanWagePerHr, baseYear);
+  if (crossover === null) return null;
+  const adjustedLag = CATEGORY_ADOPTION_LAG[task.category] * industrySpeedMultiplier;
+  return Math.round((crossover + adjustedLag) * 10) / 10;
+}
+
+/**
+ * Calculate overall job economic exposure score (0-100).
  */
 export function calculateJobExposure(job: JobProfile): number {
   return Math.round(

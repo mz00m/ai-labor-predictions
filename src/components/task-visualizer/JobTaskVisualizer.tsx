@@ -9,7 +9,9 @@ import AutomationTimeline from "./AutomationTimeline";
 import FocusRecommendations from "./FocusRecommendations";
 import ComputeBenchmarks from "./ComputeBenchmarks";
 import DurableSkillsSection from "./DurableSkillsSection";
+import IndustrySpeedSlider from "./IndustrySpeedSlider";
 import MethodologySection from "./MethodologySection";
+import { INDUSTRY_ADOPTION_SPEED } from "@/data/industry-adoption-speed";
 
 const DEFAULT_CATEGORY_STYLE = {
   bg: "rgba(92,97,246,0.03)",
@@ -47,6 +49,13 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
     return {};
   });
   const [activeTab, setActiveTab] = useState<Tab>("breakdown");
+  const [industrySpeedMultiplier, setIndustrySpeedMultiplier] = useState<number>(() => {
+    if (initialJobId) {
+      const job = JOB_PROFILES.find((j) => j.id === initialJobId);
+      if (job) return INDUSTRY_ADOPTION_SPEED[job.category]?.multiplier ?? 1.0;
+    }
+    return 1.0;
+  });
 
   const selectedJob = useMemo(
     () => JOB_PROFILES.find((j) => j.id === selectedJobId) ?? null,
@@ -70,6 +79,7 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
     const shares: Record<string, number> = {};
     job.tasks.forEach((t) => (shares[t.id] = t.timeShare));
     setAdjustedShares(shares);
+    setIndustrySpeedMultiplier(INDUSTRY_ADOPTION_SPEED[job.category]?.multiplier ?? 1.0);
     setActiveTab("breakdown");
   }, []);
 
@@ -121,8 +131,8 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
   }, [selectedJob]);
 
   const tabs: { id: Tab; label: string; question: string }[] = [
-    { id: "breakdown", label: "Task Breakdown", question: "How is your time spent, and which tasks face the most automation pressure?" },
-    { id: "timeline", label: "Automation Timeline", question: "When will it become cheaper to automate each of your tasks than to pay you?" },
+    { id: "breakdown", label: "Task Breakdown", question: "How is your time spent, and which tasks face the most economic pressure from AI?" },
+    { id: "timeline", label: "Economic Timeline", question: "When does AI become cheaper than human labor for each task?" },
     { id: "costs", label: "Compute Costs", question: "How fast is AI getting cheaper for each of your specific tasks?" },
     { id: "benchmarks", label: "Cost Benchmarks", question: "How much does AI compute cost today, and how fast is it falling?" },
   ];
@@ -285,7 +295,7 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
               >
                 {exposureScore}
               </p>
-              <p className="text-[11px] text-[var(--muted)]">Automation exposure</p>
+              <p className="text-[11px] text-[var(--muted)]">Economic exposure</p>
             </div>
           </div>
 
@@ -309,6 +319,11 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
                 adjustedShares={adjustedShares}
                 onShareChange={handleShareChange}
                 humanWagePerHr={selectedJob.medianWagePerHr}
+              />
+              <IndustrySpeedSlider
+                category={selectedJob.category}
+                value={industrySpeedMultiplier}
+                onChange={setIndustrySpeedMultiplier}
               />
             </div>
 
@@ -348,6 +363,7 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
                     tasks={selectedJob.tasks}
                     adjustedShares={adjustedShares}
                     humanWagePerHr={selectedJob.medianWagePerHr}
+                    industrySpeedMultiplier={industrySpeedMultiplier}
                   />
                 </div>
               )}
@@ -357,6 +373,7 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
                   tasks={selectedJob.tasks}
                   adjustedShares={adjustedShares}
                   humanWagePerHr={selectedJob.medianWagePerHr}
+                  industrySpeedMultiplier={industrySpeedMultiplier}
                 />
               )}
 
