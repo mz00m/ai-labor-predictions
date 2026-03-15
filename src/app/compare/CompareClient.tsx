@@ -246,17 +246,16 @@ export default function CompareClient() {
                   </div>
 
                   {/* Chart */}
-                  <div className="h-[200px]">
-                    <PredictionChart
-                      history={prediction.history}
-                      sources={prediction.sources}
-                      selectedTiers={allTiers}
-                      unit={unitSymbol}
-                      overlays={prediction.overlays}
-                      category={prediction.category}
-                      showTrendLine={true}
-                    />
-                  </div>
+                  <PredictionChart
+                    history={prediction.history}
+                    sources={prediction.sources}
+                    selectedTiers={allTiers}
+                    unit={unitSymbol}
+                    overlays={prediction.overlays}
+                    category={prediction.category}
+                    showTrendLine={true}
+                    height={220}
+                  />
 
                   {/* Meta */}
                   <div className="flex items-center justify-between mt-3 pt-3 border-t border-black/[0.04] dark:border-white/[0.04]">
