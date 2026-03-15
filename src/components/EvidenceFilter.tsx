@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { EvidenceTier } from "@/lib/types";
 import { TIER_CONFIGS } from "@/lib/evidence-tiers";
 
@@ -28,67 +29,86 @@ export default function EvidenceFilter({
   const researchOnly = selectedTiers.length === 1 && selectedTiers[0] === 1;
 
   return (
-    <div className="space-y-5">
-      <div className="flex items-center justify-between">
-        <h3 className="text-[13px] font-bold uppercase tracking-widest text-[var(--muted)]">
-          Filter by evidence quality
-        </h3>
-        <div className="flex gap-3">
-          <button
-            onClick={selectResearchOnly}
-            className={`text-[12px] font-semibold cursor-pointer ${
-              researchOnly
-                ? "text-[var(--accent)] underline underline-offset-4"
-                : "text-[var(--muted)] hover:text-[var(--foreground)]"
-            }`}
-          >
-            Research only
-          </button>
-          <button
-            onClick={selectAll}
-            className={`text-[12px] font-semibold cursor-pointer ${
-              allSelected
-                ? "text-[var(--accent)] underline underline-offset-4"
-                : "text-[var(--muted)] hover:text-[var(--foreground)]"
-            }`}
-          >
-            All tiers
-          </button>
+    <div className="flex items-center justify-between gap-4 flex-wrap">
+      <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1.5 mr-1">
+          <h3 className="text-[12px] font-bold uppercase tracking-widest text-[var(--muted)]">
+            Evidence
+          </h3>
+          <Tooltip
+            content={
+              "Tier 1: RCTs, peer-reviewed journals, government data\n" +
+              "Tier 2: Think tanks, intl orgs, prediction markets\n" +
+              "Tier 3: Major news outlets, trade publications\n" +
+              "Tier 4: Twitter/X, Reddit, blogs, podcasts"
+            }
+          />
         </div>
-      </div>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {TIER_CONFIGS.map((config) => {
           const checked = selectedTiers.includes(config.tier);
           return (
-            <label
+            <button
               key={config.tier}
-              className={`relative cursor-pointer select-none group ${
-                checked ? "opacity-100" : "opacity-35 hover:opacity-55"
+              onClick={() => handleToggle(config.tier)}
+              title={`${config.label}: ${config.description}\n${config.includes.join(", ")}`}
+              className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[12px] font-medium cursor-pointer transition-all border ${
+                checked
+                  ? "opacity-100 border-[var(--border)] bg-[var(--card)] text-[var(--foreground)]"
+                  : "opacity-40 border-transparent hover:opacity-60 text-[var(--muted)]"
               }`}
             >
-              <input
-                type="checkbox"
-                checked={checked}
-                onChange={() => handleToggle(config.tier)}
-                className="sr-only"
+              <span
+                className="inline-block w-2 h-2 rounded-full flex-shrink-0"
+                style={{ backgroundColor: config.color }}
               />
-              <div className="flex items-center gap-2.5 mb-1.5">
-                <span
-                  className="inline-block w-3 h-3 rounded-full"
-                  style={{ backgroundColor: config.color }}
-                />
-                <span className="text-[13px] font-bold text-[var(--foreground)]">
-                  {config.label}
-                </span>
-              </div>
-              <p className="text-[12px] text-[var(--muted)] leading-relaxed pl-[22px]">
-                {config.includes.slice(0, 3).join(" / ")}
-              </p>
-            </label>
+              {config.label}
+            </button>
           );
         })}
       </div>
+      <div className="flex gap-3">
+        <button
+          onClick={selectResearchOnly}
+          className={`text-[12px] font-semibold cursor-pointer ${
+            researchOnly
+              ? "text-[var(--accent)] underline underline-offset-4"
+              : "text-[var(--muted)] hover:text-[var(--foreground)]"
+          }`}
+        >
+          Research only
+        </button>
+        <button
+          onClick={selectAll}
+          className={`text-[12px] font-semibold cursor-pointer ${
+            allSelected
+              ? "text-[var(--accent)] underline underline-offset-4"
+              : "text-[var(--muted)] hover:text-[var(--foreground)]"
+          }`}
+        >
+          All tiers
+        </button>
+      </div>
     </div>
+  );
+}
+
+function Tooltip({ content }: { content: string }) {
+  const [visible, setVisible] = useState(false);
+
+  return (
+    <span
+      className="relative inline-flex"
+      onMouseEnter={() => setVisible(true)}
+      onMouseLeave={() => setVisible(false)}
+    >
+      <span className="inline-flex items-center justify-center w-4 h-4 rounded-full text-[10px] font-bold text-[var(--muted)] border border-[var(--border)] cursor-help hover:text-[var(--foreground)] hover:border-[var(--foreground)] transition-colors">
+        ?
+      </span>
+      {visible && (
+        <span className="absolute left-1/2 -translate-x-1/2 top-full mt-2 z-50 w-72 rounded-lg bg-[var(--card)] border border-[var(--border)] shadow-lg px-3 py-2.5 text-[11px] leading-relaxed text-[var(--muted)] whitespace-pre-line pointer-events-none">
+          {content}
+        </span>
+      )}
+    </span>
   );
 }
