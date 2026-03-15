@@ -29,7 +29,6 @@ const NAV_ENTRIES: NavEntry[] = [
     items: [
       { href: "/compare", label: "Compare" },
       { href: "/signals", label: "Signals" },
-      { href: "/signals/firm-response", label: "Firm Response" },
       { href: "/task-visualizer", label: "Task Visualizer" },
       { href: "/task-visualizer/economy", label: "Economy View" },
     ],

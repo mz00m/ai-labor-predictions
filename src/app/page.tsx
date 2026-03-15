@@ -10,7 +10,6 @@ import NewsTicker from "@/components/NewsTicker";
 import ResearchFeed from "@/components/ResearchFeed";
 import FunnelStrip from "@/components/FunnelStrip";
 import FeaturedReads from "@/components/FeaturedReads";
-import AgeUsageTile from "@/components/AgeUsageTile";
 
 const predictions = getAllPredictions();
 const lastUpdated = getLastUpdated();
@@ -215,10 +214,6 @@ export default function Home() {
           </section>
         )}
 
-        {/* ChatGPT Usage by Age */}
-        <div className="mt-16">
-          <AgeUsageTile />
-        </div>
 
         {/* Research Feed */}
         <section id="research-feed" className="mt-10">
