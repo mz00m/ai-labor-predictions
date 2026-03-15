@@ -129,7 +129,7 @@ export default function PredictionDetailPage() {
     : prediction.description;
 
   return (
-    <div className="space-y-16">
+    <div className="space-y-12">
       {/* Breadcrumb */}
       <div className="flex items-center gap-2 text-[13px] text-[var(--muted)]">
         <Link href="/" className="hover:text-[var(--foreground)] font-medium">
@@ -212,20 +212,22 @@ export default function PredictionDetailPage() {
         )}
       </div>
 
-      {/* Share / Cite / Embed */}
-      <ShareCiteBar
-        slug={prediction.slug}
-        title={prediction.title}
-        value={agg.mean}
-        unit={prediction.unit}
-        sourceCount={prediction.sources.length}
-        timeHorizon={prediction.timeHorizon}
-      />
+      {/* Share / Cite / Embed — tighter to stat section */}
+      <div className="-mt-4">
+        <ShareCiteBar
+          slug={prediction.slug}
+          title={prediction.title}
+          value={agg.mean}
+          unit={prediction.unit}
+          sourceCount={prediction.sources.length}
+          timeHorizon={prediction.timeHorizon}
+        />
+      </div>
 
       {/* Section break — Indicators & Predictions */}
-      <div className="relative -mx-6 sm:-mx-10">
+      <div className="relative -mx-6 sm:-mx-10 -mt-4">
         <div className="h-1 bg-gradient-to-r from-[#5C61F6] via-[#E8A090] to-[#F66B5C]" />
-        <div className="px-6 sm:px-10 pt-10 pb-2">
+        <div className="px-6 sm:px-10 pt-8 pb-2">
           <h2 className="text-[28px] sm:text-[36px] font-black tracking-tight text-[var(--foreground)] leading-tight mb-3">
             {prediction.timeHorizon.toLowerCase().includes("current")
               ? "Indicators Over Time"
@@ -257,17 +259,6 @@ export default function PredictionDetailPage() {
           </>
         ) : (
           <>
-            <p className="text-[14px] text-[var(--muted)] mb-2">
-              Each data point is from a different source. Dots are color-coded by evidence tier. Click any dot to jump to its source.
-            </p>
-            {prediction.overlays && prediction.overlays.length > 0 && (
-              <p className="text-[13px] text-[var(--muted)] opacity-60 mb-8">
-                Colored overlay bars represent relevant studies or data points that provide directional (but not exact) guidance. Click a bar to see its source.
-              </p>
-            )}
-            {(!prediction.overlays || prediction.overlays.length === 0) && (
-              <div className="mb-8" />
-            )}
             <PredictionChart
               history={prediction.history}
               sources={prediction.sources}
@@ -280,6 +271,9 @@ export default function PredictionDetailPage() {
               category={prediction.category}
               showTrendLine={prediction.slug !== "tech-sector-displacement"}
             />
+            <p className="text-[12px] text-[var(--muted)] mt-4 opacity-70">
+              Each data point is from a different source. Dots are color-coded by evidence tier. Click any dot to jump to its source.{prediction.overlays && prediction.overlays.length > 0 ? " Colored overlay bars represent relevant studies or data points that provide directional (but not exact) guidance. Click a bar to see its source." : ""}
+            </p>
           </>
         )}
         {/* Adoption Ladder — directly below chart */}
