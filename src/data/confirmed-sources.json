@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-15",
-  "totalSources": 408,
-  "verifiedCount": 408,
+  "totalSources": 409,
+  "verifiedCount": 409,
   "sources": {
     "revelio-labs-wage-divide-2025": {
       "id": "revelio-labs-wage-divide-2025",
@@ -1671,6 +1671,20 @@
         "workforce-ai-exposure"
       ],
       "verified": true
+    },
+    "hbs-chen-srinivasan-displacement-complementarity-2025": {
+      "id": "hbs-chen-srinivasan-displacement-complementarity-2025",
+      "title": "Displacement or Complementarity? The Labor Market Impact of Generative AI",
+      "url": "https://www.hbs.edu/faculty/Pages/item.aspx?num=67045",
+      "publisher": "Harvard Business School (Chen, Srinivasan, Zakerinia)",
+      "evidenceTier": 1,
+      "datePublished": "2025-06-01",
+      "excerpt": "Using O*NET and LightCast job postings data (2019-June 2024), the study found a 24% decrease in generative AI-exposed skills per firm per quarter for automation-prone occupations, while augmentation-prone occupations saw a 15% increase. Demonstrates the dual displacement/complementarity impact of generative AI.",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
     },
     "harvard-edtech-2024": {
       "id": "harvard-edtech-2024",

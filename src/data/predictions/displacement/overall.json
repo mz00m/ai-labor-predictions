@@ -767,6 +767,24 @@
       ],
       "evidenceTier": 2,
       "label": "Morgan Stanley (n=935): Early-career positions most at risk; firms >500 cut 15%"
+    },
+    {
+      "date": "2025-06-01",
+      "direction": "down",
+      "sourceIds": [
+        "hbs-chen-srinivasan-displacement-complementarity-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "HBS (Chen et al.): Job postings fell 24%/quarter for automation-prone roles post-ChatGPT"
+    },
+    {
+      "date": "2025-06-01",
+      "direction": "up",
+      "sourceIds": [
+        "hbs-chen-srinivasan-displacement-complementarity-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "HBS (Chen et al.): Job postings rose 15%/quarter for AI-augmented roles post-ChatGPT"
     }
   ],
   "sources": [
@@ -1446,6 +1464,16 @@
       "datePublished": "2026-02-05",
       "excerpt": "Survey respondents said that AI adoption had led to elimination of 11% of jobs and an additional 12% were left unfilled. This is partially offset by 18% new hires, resulting in a 4% net job loss globally.",
       "dateAdded": "2026-03-13"
+    },
+    {
+      "id": "hbs-chen-srinivasan-displacement-complementarity-2025",
+      "title": "Displacement or Complementarity? The Labor Market Impact of Generative AI",
+      "url": "https://www.hbs.edu/faculty/Pages/item.aspx?num=67045",
+      "publisher": "Harvard Business School (Chen, Srinivasan, Zakerinia)",
+      "evidenceTier": 1,
+      "datePublished": "2025-06-01",
+      "excerpt": "Using O*NET and LightCast job postings data (2019-June 2024), the study found a 24% decrease in generative AI-exposed skills per firm per quarter for automation-prone occupations, while augmentation-prone occupations saw a 15% increase. Demonstrates the dual displacement/complementarity impact of generative AI.",
+      "dateAdded": "2026-03-15"
     }
   ]
 }

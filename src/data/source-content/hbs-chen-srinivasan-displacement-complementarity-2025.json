@@ -1,0 +1,13 @@
+{
+  "id": "hbs-chen-srinivasan-displacement-complementarity-2025",
+  "abstract": "This Harvard Business School working paper examines whether generative AI displaces workers or augments their jobs by analyzing labor demand and skill requirements across occupations. Using O*NET v25.1 and US job postings data from LightCast (2019 to June 2024), the authors identify a dual, heterogeneous impact: automation-prone occupations see reduced demand while augmentation-prone occupations see increased demand.",
+  "keyFindings": [
+    "24% decrease in generative AI-exposed skills per firm per quarter for occupations in the top quartile of automation potential after ChatGPT launch",
+    "15% increase in generative AI-exposed skills per firm per quarter for augmentation-prone occupations",
+    "Similar trends mirrored in both total number of required skills and newly required skills across job postings",
+    "Generative AI simplifies tasks in automation-prone occupations while enhancing productivity and skill requirements in augmentation-prone roles"
+  ],
+  "methodology": "Analysis of O*NET v25.1 database and US job postings data from LightCast covering the period from 2019 to June 2024. Occupations classified into automation-prone and augmentation-prone categories based on task exposure to generative AI capabilities.",
+  "qualifiers": "Data covers only the period through June 2024, relatively early in the generative AI adoption cycle. Job posting data may not fully reflect actual hiring outcomes. The dual effect (displacement + complementarity) means net employment impact depends on the relative size of each channel.",
+  "fetchedAt": "2026-03-15"
+}
