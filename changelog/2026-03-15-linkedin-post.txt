@@ -1,34 +1,34 @@
-jobsdata.ai Weekly Update -- Launch Week (March 8-15, 2026)
+jobsdata.ai Weekly Update -- Week of March 8-15, 2026
 
-This week we launched jobsdata.ai with a new interactive Job Task Visualizer that breaks 34 occupations into their component tasks and models when AI becomes cheaper than human labor for each one. It uses a sigmoid crossover function against real compute costs, with BLS wage data as the baseline. You can adjust the assumptions yourself. The answer is not "soon" or "never" -- it depends entirely on the job, the task mix, and the deployment overhead. That specificity is the point.
+This week we shipped the Job Task Visualizer -- an interactive tool that breaks 34 occupations into their component tasks and models when AI becomes cheaper than human labor for each one. Pick a job. Adjust the task mix. Watch the automation crossover dates shift. The model uses a sigmoid function against real compute costs with BLS wage data as the baseline, and it includes a 5x deployment overhead (integration, validation, monitoring, human review) that most AI cost projections ignore. The point is not prediction -- it is making the assumptions visible and adjustable.
 
 What's new this week:
 
 Interactive tools
--> Job Task Visualizer (jobsdata.ai/task-visualizer): Break any of 34 jobs into tasks, see AI capability scores, compute costs, and projected automation crossover dates. Adjust sliders to test your own assumptions.
--> US Economy view: Macro automation exposure across 160M US workers by income tier and gender, using BLS OEWS May 2024 data. Clickable income tier cards filter the workforce chart. 22 SOC occupation groups mapped.
+-> Job Task Visualizer (jobsdata.ai/task-visualizer): 34 occupations broken into automatable tasks with AI capability scores, compute cost modeling, and projected automation crossover dates. Adjust any assumption with sliders.
+-> US Economy view: Macro automation exposure across 160M US workers segmented by income tier and gender, using BLS OEWS May 2024 data. 22 SOC occupation groups. Clickable income cards filter the chart. Click any bar to explore individual job profiles.
 
 Research and data
--> 407 verified sources ingested across all evidence tiers (219 peer-reviewed, 150 institutional, 28 major press, 10 commentary)
--> METR retraction: The widely-cited finding that AI slows experienced developers by 19% has been walked back by METR themselves. Their follow-up study with 57 developers found severe selection bias invalidated the original result. New data actually shows likely speedup. We have updated the site accordingly.
--> Shen and Tamkin (2026): Early-career workers using AI tools form skills more slowly, a finding with real workforce development implications
--> 39 papers ingested in a single batch covering displacement, wages, adoption, and exposure across 11 prediction graphs
--> Platform earnings data from Upwork and Fiverr FY2025 now feed the freelancer rate impact graph
+-> 91 new sources added this week (316 -> 407 total). Breakdown: 47 peer-reviewed, 37 institutional, 5 major press, 2 commentary.
+-> Largest batch: 39 papers ingested in a single pass across 11 prediction graphs, including Daniotti (Science), Dell'Acqua (NBER/HBS), Jiang (NBER), and Sarkar's Cursor productivity study.
+-> Shen and Tamkin (2026, Anthropic): Early-career workers using AI tools form skills more slowly -- the AI group scored 50% on assessments vs 67% for those coding by hand. A finding with real workforce development implications.
+-> First platform earnings data: Upwork and Fiverr FY2025 results now feed the freelancer rate impact graph, adding hard revenue numbers to what was previously survey-based.
+-> New prediction graph: Robots and physical automation displacement, extending coverage beyond white-collar and service roles.
 
 Data movements
--> Overall US displacement consensus: approximately -3% by 2030, weighted across 14 Tier 1-3 estimates
--> Tech sector displacement: METR overlay flipped from bearish to bullish signal following retraction of the 19% slowdown finding
--> Healthcare admin: Trinity Health RCM layoffs and Google/BIDMC diagnostic AI study add real-world signal to what has been mostly forecast data
+-> Healthcare admin: Trinity Health RCM layoffs and Google/BIDMC diagnostic AI study add the first real-world layoff signal to a graph that was previously all forecast data.
+-> Deutsche Bank and Morgan Stanley estimates ingested via autonomous research pipeline, updating customer service, financial services, and overall displacement graphs.
 
 Site updates
--> Full-text search across 407 sources and all prediction graph data
+-> Full-text search across all 407 sources, overlay signals, and prediction excerpts
 -> Reading list page with 18 curated articles and evidence tier badges
--> Study submission form at jobsdata.ai/suggest for recommending new research
--> Color system and chart design overhauled for accessibility and visual clarity
+-> Study submission form (jobsdata.ai/suggest) for recommending new research
+-> Color system overhaul: evidence tier palette, chart gridlines, accessibility improvements
+-> Footer now shows live project stats; navigation reorganized for clarity
 
-By the numbers: 151 commits, 2,082 files changed, 407 sources verified, 18 prediction graphs live
+By the numbers: 150 commits, 88 non-merge, 91 new sources, 18 prediction graphs, 5 new pages
 
-We built jobsdata.ai because the conversation about AI and jobs needs more signal and less noise. The site now tracks 18 prediction graphs across displacement, wages, adoption, and exposure, each backed by peer-reviewed research, government data, and institutional analysis with explicit evidence tiers. The Job Task Visualizer is our attempt to move past sector-level generalization and into the task-level specificity that actually matters for workforce planning. If you work in economic mobility, workforce development, or labor policy, we built this for you.
+The Task Visualizer exists because sector-level statements about AI displacement ("30% of jobs at risk") are not useful for workforce planning. What matters is the task composition of specific jobs, how fast compute costs are declining for each task type, and what the realistic deployment overhead looks like. A financial analyst and a therapist face very different automation profiles even if both show up as "white-collar professional" in the aggregate data. That granularity is what practitioners need, and it is what we are building toward.
 
 jobsdata.ai -- tracking AI's real impact on work and wages
 
