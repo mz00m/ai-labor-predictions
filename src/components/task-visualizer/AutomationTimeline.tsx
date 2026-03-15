@@ -14,12 +14,14 @@ interface AutomationTimelineProps {
   tasks: JobTask[];
   adjustedShares: Record<string, number>;
   humanWagePerHr: number;
+  industrySpeedMultiplier?: number;
 }
 
 export default function AutomationTimeline({
   tasks,
   adjustedShares,
   humanWagePerHr,
+  industrySpeedMultiplier = 1.0,
 }: AutomationTimelineProps) {
   const timelineData = useMemo(() => {
     return tasks
@@ -31,7 +33,9 @@ export default function AutomationTimeline({
         );
         const adoption = calculateAdoptionYear(
           { ...task, timeShare: share },
-          humanWagePerHr
+          humanWagePerHr,
+          2026,
+          industrySpeedMultiplier
         );
         return { task, share, crossover, adoption };
       })
@@ -40,7 +44,7 @@ export default function AutomationTimeline({
         const yb = b.crossover ?? 2050;
         return ya - yb;
       });
-  }, [tasks, adjustedShares, humanWagePerHr]);
+  }, [tasks, adjustedShares, humanWagePerHr, industrySpeedMultiplier]);
 
   const minYear = 2026;
   const maxYear = 2040;

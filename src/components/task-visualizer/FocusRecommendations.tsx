@@ -7,19 +7,23 @@ interface FocusRecommendationsProps {
   tasks: JobTask[];
   adjustedShares: Record<string, number>;
   humanWagePerHr: number;
+  industrySpeedMultiplier?: number;
 }
 
 export default function FocusRecommendations({
   tasks,
   adjustedShares,
   humanWagePerHr,
+  industrySpeedMultiplier = 1.0,
 }: FocusRecommendationsProps) {
   const { atRisk, augment, invest } = useMemo(() => {
     const analyzed = tasks.map((task) => {
       const share = adjustedShares[task.id] ?? task.timeShare;
       const adoption = calculateAdoptionYear(
         { ...task, timeShare: share },
-        humanWagePerHr
+        humanWagePerHr,
+        2026,
+        industrySpeedMultiplier
       );
       const yearsLeft = adoption ? adoption - 2026 : 20;
       return { task, share, adoption, yearsLeft };
@@ -47,7 +51,7 @@ export default function FocusRecommendations({
       .sort((a, b) => b.yearsLeft - a.yearsLeft);
 
     return { atRisk, augment, invest };
-  }, [tasks, adjustedShares, humanWagePerHr]);
+  }, [tasks, adjustedShares, humanWagePerHr, industrySpeedMultiplier]);
 
   const automatedSharePercent = Math.round(
     atRisk.reduce((s, a) => s + a.share, 0) * 100
