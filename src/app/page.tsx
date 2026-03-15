@@ -9,7 +9,6 @@ import PredictionSummaryCard from "@/components/PredictionSummaryCard";
 import NewsTicker from "@/components/NewsTicker";
 import ResearchFeed from "@/components/ResearchFeed";
 import FunnelStrip from "@/components/FunnelStrip";
-import ProductivityPredictions from "@/components/ProductivityPredictions";
 import ResearchEvidence from "@/components/ResearchEvidence";
 import FeaturedReads from "@/components/FeaturedReads";
 import AgeUsageTile from "@/components/AgeUsageTile";
@@ -223,32 +222,6 @@ export default function Home() {
         <AgeUsageTile />
       </div>
 
-      {/* Productivity Predictions */}
-      <div className="mt-16">
-        <ProductivityPredictions />
-      </div>
-
-      {/* Link → productivity explainer page */}
-      <a
-        href="/productivity"
-        className="group flex items-center gap-2 text-[15px] font-semibold text-[var(--accent)] hover:text-[#5C61F6] transition-colors mt-4"
-      >
-        The full productivity story: research, forecasts, and what it means for jobs
-        <svg
-          width="18"
-          height="18"
-          viewBox="0 0 18 18"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="opacity-50 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all"
-          aria-hidden="true"
-        >
-          <path d="M4 9h10m0 0l-4-4m4 4l-4 4" />
-        </svg>
-      </a>
 
       {/* Research Evidence */}
       <div className="mt-20">
