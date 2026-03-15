@@ -289,6 +289,7 @@ export default function PredictionDetailPage() {
           sources={prediction.sources}
           selectedTiers={selectedTiers}
           highlightedSourceIds={highlightedSourceIds}
+          overlays={prediction.overlays}
         />
       </section>
 
