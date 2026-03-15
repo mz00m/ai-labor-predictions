@@ -24,6 +24,8 @@ interface JobTaskVisualizerProps {
   initialJobId?: string;
 }
 
+const HIDDEN_CATEGORIES = ["Building & Grounds", "Protective Services"];
+
 export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerProps) {
   const [selectedJobId, setSelectedJobId] = useState<string>(() => {
     if (initialJobId && JOB_PROFILES.find((j) => j.id === initialJobId)) {
@@ -32,6 +34,7 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
     return "";
   });
   const [searchQuery, setSearchQuery] = useState("");
+  const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
   const [adjustedShares, setAdjustedShares] = useState<Record<string, number>>(() => {
     if (initialJobId) {
       const job = JOB_PROFILES.find((j) => j.id === initialJobId);
@@ -176,45 +179,65 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
           )}
         </div>
 
-        {/* Sector grid - compact colored cards */}
+        {/* Sector grid - clickable category cards */}
         {!selectedJob && (
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2">
+          <div className="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-5 gap-2">
             {Object.entries(
               JOB_PROFILES.reduce<Record<string, typeof JOB_PROFILES>>((acc, job) => {
-                (acc[job.category] ??= []).push(job);
+                if (!HIDDEN_CATEGORIES.includes(job.category)) {
+                  (acc[job.category] ??= []).push(job);
+                }
                 return acc;
               }, {})
             ).sort(([a], [b]) => a.localeCompare(b)).map(([category, jobs], index) => {
-              const hue = (index * 25 + 230) % 360;
+              const hue = (index * 24 + 230) % 360;
+              const isExpanded = expandedCategory === category;
               return (
                 <div
                   key={category}
-                  className="rounded-lg border p-3 hover:shadow-sm"
+                  className={`rounded-lg border transition-all ${isExpanded ? "col-span-3 sm:col-span-3 lg:col-span-5" : ""}`}
                   style={{
                     backgroundColor: `hsla(${hue}, 40%, 97%, 1)`,
-                    borderColor: `hsla(${hue}, 30%, 88%, 1)`,
+                    borderColor: isExpanded ? `hsla(${hue}, 30%, 75%, 1)` : `hsla(${hue}, 30%, 88%, 1)`,
                   }}
                 >
-                  <p
-                    className="text-[11px] font-semibold mb-1.5 tracking-wide uppercase"
-                    style={{ color: `hsla(${hue}, 25%, 40%, 1)` }}
+                  <button
+                    onClick={() => setExpandedCategory(isExpanded ? null : category)}
+                    className="w-full text-left p-3 flex items-center justify-between gap-2"
                   >
-                    {category}
-                    <span className="ml-1.5 text-[10px] font-normal normal-case tracking-normal opacity-60">
-                      {jobs.length}
-                    </span>
-                  </p>
-                  <div className="space-y-0">
-                    {jobs.map((job) => (
-                      <button
-                        key={job.id}
-                        onClick={() => handleSelectJob(job)}
-                        className="block w-full text-left text-[11px] py-0.5 px-1 rounded hover:bg-black/[0.04] text-[var(--foreground)]"
-                      >
-                        {job.title}
-                      </button>
-                    ))}
-                  </div>
+                    <p
+                      className="text-[11px] font-semibold tracking-wide uppercase"
+                      style={{ color: `hsla(${hue}, 25%, 40%, 1)` }}
+                    >
+                      {category}
+                      <span className="ml-1.5 text-[10px] font-normal normal-case tracking-normal opacity-60">
+                        {jobs.length} {jobs.length === 1 ? "role" : "roles"}
+                      </span>
+                    </p>
+                    <svg
+                      className={`w-3.5 h-3.5 transition-transform ${isExpanded ? "rotate-180" : ""}`}
+                      style={{ color: `hsla(${hue}, 25%, 55%, 1)` }}
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  {isExpanded && (
+                    <div className="px-3 pb-3 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-1">
+                      {jobs.map((job) => (
+                        <button
+                          key={job.id}
+                          onClick={() => handleSelectJob(job)}
+                          className="text-left text-[12px] py-1.5 px-2 rounded-md hover:bg-black/[0.05] text-[var(--foreground)] transition-colors"
+                        >
+                          {job.title}
+                        </button>
+                      ))}
+                    </div>
+                  )}
                 </div>
               );
             })}
