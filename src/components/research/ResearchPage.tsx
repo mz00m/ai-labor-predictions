@@ -171,6 +171,7 @@ export default function ResearchPage() {
         selectedTiers={selectedTiers}
         onChange={setSelectedTiers}
         tierCounts={tierCounts}
+        sticky
       />
 
       {/* Results count */}
