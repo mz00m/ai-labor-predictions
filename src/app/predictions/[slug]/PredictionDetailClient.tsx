@@ -13,6 +13,7 @@ import AIAdoptionChart from "@/components/AIAdoptionChart";
 import AdoptionLadder from "@/components/AdoptionLadder";
 import SourceList from "@/components/SourceList";
 import AgeWeightedMethodology from "@/components/AgeWeightedMethodology";
+import ShareCiteBar from "@/components/ShareCiteBar";
 
 const CONTEXT_MAP: Record<string, (v: number) => string> = {
   "overall-us-displacement": (v) =>
@@ -207,6 +208,16 @@ export default function PredictionDetailPage() {
           </div>
         )}
       </div>
+
+      {/* Share / Cite / Embed */}
+      <ShareCiteBar
+        slug={prediction.slug}
+        title={prediction.title}
+        value={agg.mean}
+        unit={prediction.unit}
+        sourceCount={prediction.sources.length}
+        timeHorizon={prediction.timeHorizon}
+      />
 
       {/* Section break — Indicators & Predictions */}
       <div className="relative -mx-6 sm:-mx-10">
