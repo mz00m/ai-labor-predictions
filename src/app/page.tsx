@@ -132,80 +132,30 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Evidence Filter — compacts into sticky bar on scroll */}
-      <section className="mt-12">
+      {/* Evidence Filter + all prediction sections in one block so sticky works */}
+      <div className="mt-12">
         <EvidenceFilter
           selectedTiers={selectedTiers}
           onChange={setSelectedTiers}
           tierCounts={tierCounts}
           sticky
         />
-      </section>
 
-      {/* Job Displacement & Restructuring */}
-      <section id="displacement" className="mt-16">
-        <div className="mb-8 flex items-start gap-3">
-          <div className="w-1 self-stretch rounded-full bg-red-400/60 shrink-0" />
-          <div>
-            <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
-              Job Displacement &amp; Restructuring
-            </h2>
-            <p className="text-[15px] text-[var(--muted)] mt-2 max-w-2xl">
-              Projected share of jobs eliminated, restructured, or significantly transformed by AI. Most evidence points to task-level transition rather than wholesale replacement
-            </p>
-          </div>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
-          {displacement.map((p) => (
-            <PredictionSummaryCard
-              key={p.id}
-              prediction={p}
-              selectedTiers={selectedTiers}
-            />
-          ))}
-        </div>
-      </section>
-
-      {/* Wage Impact */}
-      <section id="wages" className="mt-12">
-        <div className="mb-8 flex items-start gap-3">
-          <div className="w-1 self-stretch rounded-full bg-blue-400/60 shrink-0" />
-          <div>
-            <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
-              Wage Impact
-            </h2>
-            <p className="text-[15px] text-[var(--muted)] mt-2 max-w-xl">
-              How AI adoption is projected to affect compensation across worker segments
-            </p>
-          </div>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
-          {wages.map((p) => (
-            <PredictionSummaryCard
-              key={p.id}
-              prediction={p}
-              selectedTiers={selectedTiers}
-            />
-          ))}
-        </div>
-      </section>
-
-      {/* AI Adoption */}
-      {adoption.length > 0 && (
-        <section className="mt-12">
+        {/* Job Displacement & Restructuring */}
+        <section id="displacement" className="mt-16">
           <div className="mb-8 flex items-start gap-3">
-            <div className="w-1 self-stretch rounded-full bg-emerald-400/60 shrink-0" />
+            <div className="w-1 self-stretch rounded-full bg-red-400/60 shrink-0" />
             <div>
               <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
-                AI Adoption
+                Job Displacement &amp; Restructuring
               </h2>
               <p className="text-[15px] text-[var(--muted)] mt-2 max-w-2xl">
-                How rapidly companies are deploying AI, how much of the workforce is exposed, and corporate signaling on earnings calls. <strong className="text-[var(--foreground)]">Exposure does not mean displacement or job loss.</strong>
+                Projected share of jobs eliminated, restructured, or significantly transformed by AI. Most evidence points to task-level transition rather than wholesale replacement
               </p>
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
-            {adoption.map((p) => (
+            {displacement.map((p) => (
               <PredictionSummaryCard
                 key={p.id}
                 prediction={p}
@@ -214,18 +164,67 @@ export default function Home() {
             ))}
           </div>
         </section>
-      )}
 
-      {/* ChatGPT Usage by Age */}
-      <div className="mt-16">
-        <AgeUsageTile />
+        {/* Wage Impact */}
+        <section id="wages" className="mt-12">
+          <div className="mb-8 flex items-start gap-3">
+            <div className="w-1 self-stretch rounded-full bg-blue-400/60 shrink-0" />
+            <div>
+              <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
+                Wage Impact
+              </h2>
+              <p className="text-[15px] text-[var(--muted)] mt-2 max-w-xl">
+                How AI adoption is projected to affect compensation across worker segments
+              </p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+            {wages.map((p) => (
+              <PredictionSummaryCard
+                key={p.id}
+                prediction={p}
+                selectedTiers={selectedTiers}
+              />
+            ))}
+          </div>
+        </section>
+
+        {/* AI Adoption */}
+        {adoption.length > 0 && (
+          <section className="mt-12">
+            <div className="mb-8 flex items-start gap-3">
+              <div className="w-1 self-stretch rounded-full bg-emerald-400/60 shrink-0" />
+              <div>
+                <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
+                  AI Adoption
+                </h2>
+                <p className="text-[15px] text-[var(--muted)] mt-2 max-w-2xl">
+                  How rapidly companies are deploying AI, how much of the workforce is exposed, and corporate signaling on earnings calls. <strong className="text-[var(--foreground)]">Exposure does not mean displacement or job loss.</strong>
+                </p>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+              {adoption.map((p) => (
+                <PredictionSummaryCard
+                  key={p.id}
+                  prediction={p}
+                  selectedTiers={selectedTiers}
+                />
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* ChatGPT Usage by Age */}
+        <div className="mt-16">
+          <AgeUsageTile />
+        </div>
+
+        {/* Research Feed */}
+        <section id="research-feed" className="mt-10">
+          <ResearchFeed selectedTiers={selectedTiers} />
+        </section>
       </div>
-
-
-      {/* Research Feed */}
-      <section id="research-feed" className="mt-10">
-        <ResearchFeed selectedTiers={selectedTiers} />
-      </section>
     </div>
   );
 }
