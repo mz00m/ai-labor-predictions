@@ -1,5 +1,6 @@
 import { Metadata } from "next";
-import { getAllPredictions, getPredictionBySlug } from "@/lib/data-loader";
+import { getAllPredictions, getPredictionBySlug, getLastUpdated } from "@/lib/data-loader";
+import { buildPredictionStructuredData } from "@/lib/structured-data";
 import PredictionDetailPage from "./PredictionDetailClient";
 
 // Revalidate SSG pages hourly so deploys pick up data changes faster
@@ -59,6 +60,7 @@ export function generateMetadata({ params }: Props): Metadata {
 
 export default function Page({ params }: Props) {
   const prediction = getPredictionBySlug(params.slug);
+  const lastUpdated = getLastUpdated();
 
   const categoryLabel =
     prediction?.category === "displacement"
@@ -96,12 +98,24 @@ export default function Page({ params }: Props) {
     ],
   };
 
+  // Dataset + Observation structured data for Google Knowledge Panels
+  const structuredData = prediction
+    ? buildPredictionStructuredData(prediction, lastUpdated)
+    : [];
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
+      {structuredData.map((ld, i) => (
+        <script
+          key={`ld-${i}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }}
+        />
+      ))}
       <PredictionDetailPage />
     </>
   );

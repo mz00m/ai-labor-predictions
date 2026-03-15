@@ -30,6 +30,8 @@ interface PredictionChartProps {
   yAxisMin?: number;
   category?: string;
   showTrendLine?: boolean;
+  /** Override chart height in pixels (default: 360 for normal, 80 for compact) */
+  height?: number;
 }
 
 interface ChartDataPoint {
@@ -340,6 +342,7 @@ export default function PredictionChart({
   yAxisMin = -5,
   category,
   showTrendLine = true,
+  height,
 }: PredictionChartProps) {
   const chartWrapperRef = useRef<HTMLDivElement>(null);
   const [hoverOverlay, setHoverOverlay] = useState<{
@@ -680,7 +683,7 @@ export default function PredictionChart({
           })}
         </div>
       )}
-      <ResponsiveContainer width="100%" height={360}>
+      <ResponsiveContainer width="100%" height={height ?? 360}>
         <ComposedChart
           data={chartData}
           margin={{ top: 10, right: 30, left: 10, bottom: 0 }}
