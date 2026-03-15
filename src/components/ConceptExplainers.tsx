@@ -2,36 +2,36 @@ import Link from "next/link";
 
 const concepts = [
   {
-    title: "The J-Curve",
-    href: "/j-curve",
-    description:
-      "Transformative technologies make productivity look worse before making it better. AI is likely in this dip right now.",
-    accent: "border-amber-400/60",
-    tag: "Framework",
-  },
-  {
-    title: "The Firm Response",
-    href: "/signals#productivity-paths",
-    description:
-      "When workers get more productive, firms choose one of three paths: reduce headcount, amplify output, or expand into new markets.",
-    accent: "border-emerald-400/60",
-    tag: "Mechanism",
-  },
-  {
-    title: "The Productivity Question",
-    href: "/productivity",
-    description:
-      "Individual studies show 14-56% productivity gains from AI, but macro data hasn't moved. Understanding this gap is key.",
-    accent: "border-blue-400/60",
-    tag: "Evidence",
-  },
-  {
-    title: "Historical Parallels",
+    title: "We've Seen This Before",
     href: "/history",
     description:
-      "Steam, electricity, computers — every general-purpose technology followed the same arc. AI is doing for cognition what electricity did for physical power.",
+      "Every major technology — steam, electricity, computers — displaced jobs, then created more. Here's what those transitions actually looked like and what they tell us about AI.",
     accent: "border-purple-400/60",
-    tag: "Context",
+    tag: "History",
+  },
+  {
+    title: "Why Productivity Hasn't Moved",
+    href: "/productivity",
+    description:
+      "AI boosts individual output by 14-56% in studies, but the economy-wide numbers haven't budged. This gap explains why job losses haven't materialized yet.",
+    accent: "border-blue-400/60",
+    tag: "The paradox",
+  },
+  {
+    title: "What Happens to Your Job",
+    href: "/signals#productivity-paths",
+    description:
+      "When AI makes workers more productive, companies do one of three things: cut headcount, increase output, or expand into new markets. Which path your employer takes matters more than the technology itself.",
+    accent: "border-emerald-400/60",
+    tag: "Firm response",
+  },
+  {
+    title: "The Dip Before the Payoff",
+    href: "/j-curve",
+    description:
+      "New technologies often make things worse before they make them better. AI is likely in this messy middle period right now — and that's actually normal.",
+    accent: "border-amber-400/60",
+    tag: "J-Curve",
   },
 ];
 
