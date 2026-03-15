@@ -249,6 +249,15 @@
       ],
       "evidenceTier": 2,
       "label": "Trinity Health: 10.5% of revenue cycle workforce cut across 92 hospitals in 15 states"
+    },
+    {
+      "date": "2025-08-01",
+      "direction": "down",
+      "sourceIds": [
+        "bain-klas-healthcare-ai-investment-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Bain/KLAS: 70% of providers have AI strategy; RCM top use case; ambient docs at 20% rollout (n=228)"
     }
   ],
   "sources": [
@@ -491,6 +500,16 @@
       "datePublished": "2026-01-15",
       "excerpt": "Trinity Health is laying off 10.5% of its revenue cycle management staff across 15 states and 92 hospitals. Non-patient-facing revenue cycle functions will be transitioned to an external partner. System reported $12.2M operating loss on $25.4B revenue in FY2025.",
       "dateAdded": "2026-03-13"
+    },
+    {
+      "id": "bain-klas-healthcare-ai-investment-2025",
+      "title": "Healthcare IT Investment: AI Moves from Pilot to Production",
+      "url": "https://www.bain.com/insights/healthcare-it-investment-ai-moves-from-pilot-to-production/",
+      "publisher": "Bain & Company / KLAS Research",
+      "evidenceTier": 2,
+      "datePublished": "2025-08-01",
+      "excerpt": "70% of providers and 80% of payers now have an AI strategy in place or in development. RCM is the top AI use case, with ambient documentation at ~20% full rollout and ~40% in pilot. Nearly half of provider executives said revenue cycle management was a top three IT investment priority. Survey of 228 US healthcare provider and payer executives.",
+      "dateAdded": "2026-03-15"
     }
   ]
 }
