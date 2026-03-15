@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { EvidenceTier } from "@/lib/types";
 import { getAllPredictions, getLastUpdated, getHeroStats } from "@/lib/data-loader";
-import { getSourceCount } from "@/lib/search-sources";
+import { getSourceCount, getSourceCountsByTier } from "@/lib/search-sources";
 import { getTierConfig } from "@/lib/evidence-tiers";
 import EvidenceFilter from "@/components/EvidenceFilter";
 import PredictionSummaryCard from "@/components/PredictionSummaryCard";
@@ -18,6 +18,7 @@ import AgeUsageTile from "@/components/AgeUsageTile";
 const predictions = getAllPredictions();
 const lastUpdated = getLastUpdated();
 const heroStats = getHeroStats();
+const tierCounts = getSourceCountsByTier();
 
 function formatUpdatedDate(iso: string): string {
   const [y, m, d] = iso.split("-");
@@ -142,6 +143,7 @@ export default function Home() {
         <EvidenceFilter
           selectedTiers={selectedTiers}
           onChange={setSelectedTiers}
+          tierCounts={tierCounts}
         />
       </section>
 
