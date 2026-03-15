@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-03-13",
-  "totalSources": 407,
-  "verifiedCount": 407,
+  "lastUpdated": "2026-03-15",
+  "totalSources": 410,
+  "verifiedCount": 410,
   "sources": {
     "revelio-labs-wage-divide-2025": {
       "id": "revelio-labs-wage-divide-2025",
@@ -240,6 +240,20 @@
         "ai-adoption-rate"
       ],
       "verified": true
+    },
+    "bain-klas-healthcare-ai-investment-2025": {
+      "id": "bain-klas-healthcare-ai-investment-2025",
+      "title": "Healthcare IT Investment: AI Moves from Pilot to Production",
+      "url": "https://www.bain.com/insights/healthcare-it-investment-ai-moves-from-pilot-to-production/",
+      "publisher": "Bain & Company / KLAS Research",
+      "evidenceTier": 2,
+      "datePublished": "2025-08-01",
+      "excerpt": "70% of providers and 80% of payers now have an AI strategy in place or in development. RCM is the top AI use case, with ambient documentation at ~20% full rollout and ~40% in pilot. Nearly half of provider executives said revenue cycle management was a top three IT investment priority. Survey of 228 US healthcare provider and payer executives.",
+      "usedIn": [
+        "healthcare-admin-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
     },
     "autor-new-frontiers-qje-2024": {
       "id": "autor-new-frontiers-qje-2024",
@@ -1672,6 +1686,20 @@
       ],
       "verified": true
     },
+    "hbs-chen-srinivasan-displacement-complementarity-2025": {
+      "id": "hbs-chen-srinivasan-displacement-complementarity-2025",
+      "title": "Displacement or Complementarity? The Labor Market Impact of Generative AI",
+      "url": "https://www.hbs.edu/faculty/Pages/item.aspx?num=67045",
+      "publisher": "Harvard Business School (Chen, Srinivasan, Zakerinia)",
+      "evidenceTier": 1,
+      "datePublished": "2025-06-01",
+      "excerpt": "Using O*NET and LightCast job postings data (2019-June 2024), the study found a 24% decrease in generative AI-exposed skills per firm per quarter for automation-prone occupations, while augmentation-prone occupations saw a 15% increase. Demonstrates the dual displacement/complementarity impact of generative AI.",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
     "harvard-edtech-2024": {
       "id": "harvard-edtech-2024",
       "title": "Professor tailored AI tutor to physics course. Engagement doubled.",
@@ -2756,6 +2784,20 @@
       "excerpt": "a 10 percent increase in the minimum wage increases robot adoption by roughly 8 percent relative to the mean",
       "usedIn": [
         "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "nber-cruces-galiani-ai-productivity-gap-2026": {
+      "id": "nber-cruces-galiani-ai-productivity-gap-2026",
+      "title": "Does Generative AI Narrow Education-Based Productivity Gaps? Evidence from a Randomized Experiment",
+      "url": "https://www.nber.org/papers/w34851",
+      "publisher": "NBER (Cruces, Fernández Meijide, Galiani, Gálvez, Lombardi)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-01",
+      "excerpt": "In a randomized experiment with 1,174 adults ages 25-45, AI access closed approximately three-quarters of the education-based productivity gap: higher-education participants outperform lower-education participants by 0.548 standard deviations without AI; with AI, this gap falls to 0.139 standard deviations.",
+      "usedIn": [
+        "education-sector-displacement"
       ],
       "verified": true,
       "synthetic": false

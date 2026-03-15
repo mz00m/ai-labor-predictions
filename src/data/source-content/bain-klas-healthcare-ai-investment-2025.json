@@ -1,0 +1,14 @@
+{
+  "id": "bain-klas-healthcare-ai-investment-2025",
+  "abstract": "Joint survey by Bain & Company and KLAS Research covering 228 US healthcare provider and payer executives on AI investment priorities in healthcare IT. The report finds that AI has moved from pilot to production phase, with revenue cycle management as the top use case. Provider and payer AI strategy adoption has risen significantly year-over-year.",
+  "keyFindings": [
+    "70% of providers and 80% of payers now have an AI strategy in place or in development, up from 60% for both groups the prior year",
+    "Revenue cycle management is the top AI use case, encompassing ambient documentation, clinical documentation improvement, coding, and prior authorization",
+    "Ambient documentation is furthest along, with ~20% of providers at full rollout and ~40% in pilot",
+    "Nearly half of provider executives cited RCM as a top three IT investment priority",
+    "Fewer than 5% of respondents said AI hadn't met expectations in areas where implemented"
+  ],
+  "methodology": "Survey of 228 US healthcare provider and payer executives conducted in 2025 by Bain & Company and KLAS Research. Covers AI strategy adoption, investment priorities, and deployment status across clinical and administrative workflows.",
+  "qualifiers": "Survey of executives may overrepresent organizations with active technology strategies. The report focuses on investment intent and pilot status rather than measured workforce displacement outcomes. Sample of 228 executives may not fully represent the breadth of US healthcare organizations.",
+  "fetchedAt": "2026-03-15"
+}

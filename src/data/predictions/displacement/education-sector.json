@@ -197,6 +197,15 @@
       ],
       "evidenceTier": 2,
       "label": "Ellucian: 66% of higher ed institutions leveraging AI, up from 49% YoY (n=779)"
+    },
+    {
+      "date": "2026-02-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "nber-cruces-galiani-ai-productivity-gap-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER (Cruces et al.): AI closes ~75% of education-based productivity gap in RCT (n=1,174)"
     }
   ],
   "sources": [
@@ -389,6 +398,16 @@
       "datePublished": "2025-04-03",
       "excerpt": "31% of AI experts predict AI will lead to fewer teacher jobs in 20 years, vs 43% of general public. Survey of 1,013 AI experts (Aug-Oct 2024) and 5,410 US adults. AI experts far more optimistic: 73% say positive impact on jobs vs 23% of public.",
       "dateAdded": "2026-03-10"
+    },
+    {
+      "id": "nber-cruces-galiani-ai-productivity-gap-2026",
+      "title": "Does Generative AI Narrow Education-Based Productivity Gaps? Evidence from a Randomized Experiment",
+      "url": "https://www.nber.org/papers/w34851",
+      "publisher": "NBER (Cruces, Fernández Meijide, Galiani, Gálvez, Lombardi)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-01",
+      "excerpt": "In a randomized experiment with 1,174 adults ages 25-45, AI access closed approximately three-quarters of the education-based productivity gap: higher-education participants outperform lower-education participants by 0.548 standard deviations without AI; with AI, this gap falls to 0.139 standard deviations.",
+      "dateAdded": "2026-03-15"
     }
   ]
 }
