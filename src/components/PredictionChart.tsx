@@ -604,85 +604,6 @@ export default function PredictionChart({
 
   return (
     <div ref={chartWrapperRef} style={{ position: "relative" }}>
-      {/* Chart legend row */}
-      <div className="flex items-center gap-4 mb-2 px-1 flex-wrap">
-        {hasProjectedData && (
-          <>
-            <div className="flex items-center gap-1.5">
-              <svg width="24" height="2"><line x1="0" y1="1" x2="24" y2="1" stroke="#5C61F6" strokeWidth="2.5" /></svg>
-              <span className="text-[11px] text-[var(--muted)]">Observed data</span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              <svg width="24" height="2"><line x1="0" y1="1" x2="24" y2="1" stroke="#5C61F6" strokeWidth="2.5" strokeDasharray="6 3" strokeOpacity="0.7" /></svg>
-              <span className="text-[11px] text-[var(--muted)]">Projected / Forecast</span>
-            </div>
-          </>
-        )}
-        {hasConfidenceBands && (
-          <div className="flex items-center gap-1.5">
-            <svg width="16" height="10">
-              <rect x="0" y="0" width="16" height="10" fill="#5C61F6" fillOpacity="0.22" rx="2" />
-            </svg>
-            <span className="text-[11px] text-[var(--muted)]">Confidence range</span>
-          </div>
-        )}
-        {overlayData.length > 0 && (
-          <>
-            <div className="flex items-center gap-1.5">
-              <svg width="6" height="10">
-                <rect x="0" y="0" width="6" height="10" fill="#ef4444" fillOpacity="0.32" rx="1" />
-              </svg>
-              <span className="text-[11px] text-[var(--muted)]">Negative signal</span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              <svg width="6" height="10">
-                <rect x="0" y="0" width="6" height="10" fill="#22c55e" fillOpacity="0.32" rx="1" />
-              </svg>
-              <span className="text-[11px] text-[var(--muted)]">Positive signal</span>
-            </div>
-          </>
-        )}
-      </div>
-      {/* Metric type legend (only when metricType tags are present) */}
-      {presentMetricTypes.length > 0 && (
-        <div className="flex items-center gap-3 mb-2 px-1 flex-wrap">
-          <span className="text-[10px] font-medium text-[var(--muted)] uppercase tracking-wider">
-            Data type
-          </span>
-          {presentMetricTypes.map((mt) => {
-            const cfg = getMetricTypeConfig(mt);
-            return (
-              <div key={mt} className="flex items-center gap-1.5">
-                <svg width="12" height="12" viewBox="-6 -6 12 12">
-                  {cfg.shape === "circle" && (
-                    <circle r="4" fill={cfg.color} />
-                  )}
-                  {cfg.shape === "diamond" && (
-                    <polygon points="0,-5 5,0 0,5 -5,0" fill={cfg.color} />
-                  )}
-                  {cfg.shape === "square" && (
-                    <rect x="-4" y="-4" width="8" height="8" fill={cfg.color} />
-                  )}
-                  {cfg.shape === "triangle" && (
-                    <polygon points="0,-5 5,4 -5,4" fill={cfg.color} />
-                  )}
-                  {cfg.shape === "star" && (
-                    <polygon
-                      points={Array.from({ length: 5 }, (_, i) => {
-                        const outerAngle = (Math.PI / 2) + (2 * Math.PI * i) / 5;
-                        const innerAngle = outerAngle + Math.PI / 5;
-                        return `${5 * Math.cos(outerAngle)},${-5 * Math.sin(outerAngle)} ${2.25 * Math.cos(innerAngle)},${-2.25 * Math.sin(innerAngle)}`;
-                      }).join(" ")}
-                      fill={cfg.color}
-                    />
-                  )}
-                </svg>
-                <span className="text-[11px] text-[var(--muted)]">{cfg.shortLabel}</span>
-              </div>
-            );
-          })}
-        </div>
-      )}
       <ResponsiveContainer width="100%" height={height ?? 360}>
         <ComposedChart
           data={chartData}
@@ -967,6 +888,85 @@ export default function PredictionChart({
                   {o.label}
                 </span>
               </button>
+            );
+          })}
+        </div>
+      )}
+      {/* Chart legend — below chart */}
+      <div className="flex items-center gap-4 mt-4 px-1 flex-wrap">
+        {hasProjectedData && (
+          <>
+            <div className="flex items-center gap-1.5">
+              <svg width="24" height="2"><line x1="0" y1="1" x2="24" y2="1" stroke="#5C61F6" strokeWidth="2.5" /></svg>
+              <span className="text-[11px] text-[var(--muted)]">Observed data</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <svg width="24" height="2"><line x1="0" y1="1" x2="24" y2="1" stroke="#5C61F6" strokeWidth="2.5" strokeDasharray="6 3" strokeOpacity="0.7" /></svg>
+              <span className="text-[11px] text-[var(--muted)]">Projected / Forecast</span>
+            </div>
+          </>
+        )}
+        {hasConfidenceBands && (
+          <div className="flex items-center gap-1.5">
+            <svg width="16" height="10">
+              <rect x="0" y="0" width="16" height="10" fill="#5C61F6" fillOpacity="0.22" rx="2" />
+            </svg>
+            <span className="text-[11px] text-[var(--muted)]">Confidence range</span>
+          </div>
+        )}
+        {overlayData.length > 0 && (
+          <>
+            <div className="flex items-center gap-1.5">
+              <svg width="6" height="10">
+                <rect x="0" y="0" width="6" height="10" fill="#ef4444" fillOpacity="0.32" rx="1" />
+              </svg>
+              <span className="text-[11px] text-[var(--muted)]">Negative signal</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <svg width="6" height="10">
+                <rect x="0" y="0" width="6" height="10" fill="#22c55e" fillOpacity="0.32" rx="1" />
+              </svg>
+              <span className="text-[11px] text-[var(--muted)]">Positive signal</span>
+            </div>
+          </>
+        )}
+      </div>
+      {/* Metric type legend (only when metricType tags are present) */}
+      {presentMetricTypes.length > 0 && (
+        <div className="flex items-center gap-3 mt-2 px-1 flex-wrap">
+          <span className="text-[10px] font-medium text-[var(--muted)] uppercase tracking-wider">
+            Data type
+          </span>
+          {presentMetricTypes.map((mt) => {
+            const cfg = getMetricTypeConfig(mt);
+            return (
+              <div key={mt} className="flex items-center gap-1.5">
+                <svg width="12" height="12" viewBox="-6 -6 12 12">
+                  {cfg.shape === "circle" && (
+                    <circle r="4" fill={cfg.color} />
+                  )}
+                  {cfg.shape === "diamond" && (
+                    <polygon points="0,-5 5,0 0,5 -5,0" fill={cfg.color} />
+                  )}
+                  {cfg.shape === "square" && (
+                    <rect x="-4" y="-4" width="8" height="8" fill={cfg.color} />
+                  )}
+                  {cfg.shape === "triangle" && (
+                    <polygon points="0,-5 5,4 -5,4" fill={cfg.color} />
+                  )}
+                  {cfg.shape === "star" && (
+                    <polygon
+                      points={Array.from({ length: 5 }, (_, i) => {
+                        const outerAngle = (Math.PI / 2) + (2 * Math.PI * i) / 5;
+                        const innerAngle = outerAngle + Math.PI / 5;
+                        return `${5 * Math.cos(outerAngle)},${-5 * Math.sin(outerAngle)} ${2.25 * Math.cos(innerAngle)},${-2.25 * Math.sin(innerAngle)}`;
+                      }).join(" ")}
+                      fill={cfg.color}
+                    />
+                  )}
+                </svg>
+                <span className="text-[11px] text-[var(--muted)]">{cfg.shortLabel}</span>
+              </div>
             );
           })}
         </div>

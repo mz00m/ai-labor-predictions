@@ -76,9 +76,10 @@ export default function ShareCiteBar({
   }
 
   return (
-    <div className="border border-black/[0.06] dark:border-white/[0.08] rounded-lg bg-[var(--background)]">
+    <div className="rounded-lg bg-[#f0f1ff]/60 dark:bg-[#1e1e3a]/40">
       {/* Action buttons row */}
-      <div className="flex items-center gap-2 px-4 py-3 flex-wrap">
+      <div className="flex items-center gap-2 px-4 py-2.5 flex-wrap">
+        <span className="text-[12px] font-bold uppercase tracking-widest text-[var(--muted)] mr-1">Share</span>
         <button
           onClick={() => copyToClipboard(url, "link")}
           className="inline-flex items-center gap-1.5 px-3 py-1.5 text-[13px] font-medium rounded-md bg-[var(--accent)]/[0.08] text-[var(--accent)] hover:bg-[var(--accent)]/[0.15] transition-colors"

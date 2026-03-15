@@ -55,9 +55,9 @@ export default function EvidenceFilter({
             ? `sticky top-12 z-40 -mx-6 sm:-mx-10 px-6 sm:px-10 ${
                 isStuck
                   ? "bg-white/95 backdrop-blur-sm border-b border-black/[0.06] py-1.5"
-                  : "py-0"
+                  : "rounded-lg bg-[#f0f1ff]/60 dark:bg-[#1e1e3a]/40 px-4 py-3"
               }`
-            : ""
+            : "rounded-lg bg-[#f0f1ff]/60 dark:bg-[#1e1e3a]/40 px-4 py-3"
         }`}
       >
         <div className="flex items-center justify-between gap-4 flex-wrap">
@@ -67,7 +67,7 @@ export default function EvidenceFilter({
                 isStuck ? "text-[0px] w-0 mr-0 opacity-0 overflow-hidden" : "text-[12px]"
               }`}
             >
-              Evidence
+              Filter by evidence tiers
             </h3>
             {TIER_CONFIGS.map((config, i) => {
               const checked = selectedTiers.includes(config.tier);
