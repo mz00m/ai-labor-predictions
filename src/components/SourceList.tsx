@@ -1,4 +1,4 @@
-import { Source, EvidenceTier } from "@/lib/types";
+import { Source, EvidenceTier, DirectionalOverlay } from "@/lib/types";
 import { getTierConfig } from "@/lib/evidence-tiers";
 import { format, parseISO } from "date-fns";
 
@@ -6,13 +6,26 @@ interface SourceListProps {
   sources: Source[];
   selectedTiers: EvidenceTier[];
   highlightedSourceIds?: string[];
+  overlays?: DirectionalOverlay[];
 }
 
 export default function SourceList({
   sources,
   selectedTiers,
   highlightedSourceIds = [],
+  overlays = [],
 }: SourceListProps) {
+  // Build a map from sourceId → overlay info
+  const overlayBySourceId = new Map<
+    string,
+    { direction: "up" | "down" | "neutral"; label: string }
+  >();
+  for (const o of overlays) {
+    for (const sid of o.sourceIds) {
+      overlayBySourceId.set(sid, { direction: o.direction, label: o.label });
+    }
+  }
+
   const filtered = sources
     .filter((s) => selectedTiers.includes(s.evidenceTier))
     .sort((a, b) => new Date(b.datePublished).getTime() - new Date(a.datePublished).getTime());
@@ -34,6 +47,21 @@ export default function SourceList({
         {filtered.map((source) => {
           const config = getTierConfig(source.evidenceTier);
           const isHighlighted = highlightedSourceIds.includes(source.id);
+          const overlay = overlayBySourceId.get(source.id);
+          const arrow = overlay
+            ? overlay.direction === "down"
+              ? "\u2193"
+              : overlay.direction === "up"
+                ? "\u2191"
+                : "\u2194"
+            : null;
+          const arrowColor = overlay
+            ? overlay.direction === "down"
+              ? "#ef4444"
+              : overlay.direction === "up"
+                ? "#22c55e"
+                : "#94a3b8"
+            : null;
           return (
             <div
               key={source.id}
@@ -52,10 +80,19 @@ export default function SourceList({
                   : undefined
               }
             >
-              <span
-                className="mt-1.5 inline-block w-2 h-2 rounded-full shrink-0"
-                style={{ backgroundColor: config.color }}
-              />
+              {arrow ? (
+                <span
+                  className="mt-1 text-[14px] font-bold shrink-0 w-3 text-center"
+                  style={{ color: arrowColor! }}
+                >
+                  {arrow}
+                </span>
+              ) : (
+                <span
+                  className="mt-1.5 inline-block w-2 h-2 rounded-full shrink-0"
+                  style={{ backgroundColor: config.color }}
+                />
+              )}
               <div className="min-w-0 flex-1">
                 <a
                   href={source.url}
@@ -65,6 +102,11 @@ export default function SourceList({
                 >
                   {source.title}
                 </a>
+                {overlay && (
+                  <p className="text-[12px] text-[var(--muted)] mt-0.5 leading-snug">
+                    {overlay.label}
+                  </p>
+                )}
                 <div className="flex items-center gap-3 mt-1">
                   <span className="text-[12px] text-[var(--muted)]">
                     {source.publisher}

@@ -857,41 +857,6 @@ export default function PredictionChart({
           </div>
         </div>
       )}
-      {overlayData.length > 0 && (
-        <div className="mt-3 flex flex-col gap-1.5 px-1">
-          <p className="text-[11px] font-medium text-[var(--muted)] uppercase tracking-wider">
-            Additional context
-          </p>
-          {[...overlayData].sort((a, b) => b.date - a.date).map((o) => {
-            const color = overlayColor(o.direction);
-            const arrow =
-              o.direction === "down"
-                ? "\u2193"
-                : o.direction === "up"
-                  ? "\u2191"
-                  : "\u2194";
-            return (
-              <button
-                key={`overlay-${o.dateStr}-${o.label.slice(0, 20)}`}
-                className="flex items-start gap-2 text-left rounded-md px-2 py-1.5 hover:bg-black/[0.03] transition-colors"
-                onClick={() => onDotClick?.(o.sourceIds)}
-              >
-                <span
-                  className="text-[13px] font-bold leading-tight mt-px shrink-0"
-                  style={{ color }}
-                >
-                  {arrow}
-                </span>
-                <span className="text-[12px] leading-snug text-[var(--foreground)]">
-                  <span className="text-[var(--muted)]">{o.dateStr}</span>
-                  {": "}
-                  {o.label}
-                </span>
-              </button>
-            );
-          })}
-        </div>
-      )}
       {/* Chart legend — below chart */}
       <div className="flex items-center gap-4 mt-4 px-1 flex-wrap">
         {hasProjectedData && (
