@@ -5,31 +5,39 @@ const concepts = [
     title: "We've Seen This Before",
     href: "/history",
     description:
-      "Every major technology — steam, electricity, computers — displaced jobs, then created more. Here's what those transitions actually looked like and what they tell us about AI.",
+      "Every major technology — steam, electricity, computers — displaced jobs, then created more. Here's what those transitions actually looked like.",
     accent: "border-purple-400/60",
     tag: "History",
   },
   {
-    title: "Why Productivity Hasn't Moved",
+    title: "Why Isn't AI Showing Up Yet?",
     href: "/productivity",
     description:
-      "AI boosts individual output by 14-56% in studies, but the economy-wide numbers haven't budged. This gap explains why job losses haven't materialized yet.",
+      "Workers using AI are dramatically more productive. But the economy? Flat. That mismatch is actually the key to understanding everything on this page.",
     accent: "border-blue-400/60",
     tag: "The paradox",
   },
   {
     title: "What Happens to Your Job",
+    href: "/task-visualizer",
+    description:
+      "AI doesn't replace jobs wholesale — it automates specific tasks. See which parts of your role are most exposed and which ones aren't going anywhere.",
+    accent: "border-emerald-400/60",
+    tag: "Your tasks",
+  },
+  {
+    title: "What Your Employer Will Do",
     href: "/signals#productivity-paths",
     description:
-      "When AI makes workers more productive, companies do one of three things: cut headcount, increase output, or expand into new markets. Which path your employer takes matters more than the technology itself.",
-    accent: "border-emerald-400/60",
+      "When AI makes your team more productive, your company picks one of three paths: cut costs, do more with the same people, or chase new markets. That choice matters more than the tech.",
+    accent: "border-red-400/60",
     tag: "Firm response",
   },
   {
     title: "The Dip Before the Payoff",
     href: "/j-curve",
     description:
-      "New technologies often make things worse before they make them better. AI is likely in this messy middle period right now — and that's actually normal.",
+      "New technologies often make things worse before they make them better. AI is likely in this messy middle right now — and that's actually normal.",
     accent: "border-amber-400/60",
     tag: "J-Curve",
   },
@@ -41,7 +49,7 @@ export default function ConceptExplainers() {
       <h3 className="text-[13px] font-bold uppercase tracking-widest text-[var(--muted)] mb-5">
         Important Concepts to Understand
       </h3>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {concepts.map((c) => (
           <Link
             key={c.href}
