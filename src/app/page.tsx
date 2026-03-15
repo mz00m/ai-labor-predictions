@@ -92,9 +92,6 @@ export default function Home() {
               <p className="relative text-[11px] text-[var(--muted)] opacity-50 leading-snug">Yale, Goldman, Dallas Fed</p>
             </a>
           </div>
-          <p className="mt-4 text-[14px] text-[var(--muted)] italic opacity-80 text-right">
-            The gap between the near future and the present reality defines this moment.
-          </p>
         </div>
 
         {/* News Ticker — directly below hero content */}
@@ -205,7 +202,7 @@ export default function Home() {
                 AI Adoption
               </h2>
               <p className="text-[15px] text-[var(--muted)] mt-2 max-w-2xl">
-                How rapidly companies are deploying AI, how much of the workforce is exposed, and corporate signaling on earnings calls
+                How rapidly companies are deploying AI, how much of the workforce is exposed, and corporate signaling on earnings calls. <strong className="text-[var(--foreground)]">Exposure does not mean displacement or job loss.</strong>
               </p>
             </div>
           </div>
