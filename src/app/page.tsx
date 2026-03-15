@@ -4,7 +4,6 @@ import { useState } from "react";
 import { EvidenceTier } from "@/lib/types";
 import { getAllPredictions, getLastUpdated, getHeroStats } from "@/lib/data-loader";
 import { getSourceCount, getSourceCountsByTier } from "@/lib/search-sources";
-import { getTierConfig } from "@/lib/evidence-tiers";
 import EvidenceFilter from "@/components/EvidenceFilter";
 import PredictionSummaryCard from "@/components/PredictionSummaryCard";
 import NewsTicker from "@/components/NewsTicker";
@@ -138,79 +137,15 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Evidence Filter — full version in-flow */}
+      {/* Evidence Filter — compacts into sticky bar on scroll */}
       <section className="mt-12">
         <EvidenceFilter
           selectedTiers={selectedTiers}
           onChange={setSelectedTiers}
           tierCounts={tierCounts}
+          sticky
         />
       </section>
-
-      {/* Compact sticky tier bar */}
-      <div className="sticky top-12 z-40 bg-white/95 backdrop-blur-sm -mx-6 sm:-mx-10 px-6 sm:px-10 py-1 border-b border-black/[0.06] flex items-center justify-between gap-4 mt-6">
-        <div className="flex items-center gap-0">
-          {([1, 2, 3, 4] as EvidenceTier[]).map((tier) => {
-            const checked = selectedTiers.includes(tier);
-            const { color: tierColor, shortLabel } = getTierConfig(tier);
-            return (
-              <button
-                key={tier}
-                onClick={() => {
-                  if (checked && selectedTiers.length === 1) return;
-                  setSelectedTiers(
-                    checked
-                      ? selectedTiers.filter((t) => t !== tier)
-                      : [...selectedTiers, tier].sort((a, b) => a - b)
-                  );
-                }}
-                className={`relative px-3 sm:px-4 py-2.5 text-[11px] sm:text-[12px] font-medium cursor-pointer transition-colors duration-150 ${
-                  checked
-                    ? "text-[var(--foreground)]"
-                    : "text-[var(--muted)] opacity-40 hover:opacity-70"
-                }`}
-              >
-                <span className="inline-flex items-center gap-1.5">
-                  <span
-                    className="inline-block w-1.5 h-1.5 rounded-full shrink-0"
-                    style={{ backgroundColor: tierColor }}
-                  />
-                  <span className="hidden sm:inline">{shortLabel}</span>
-                </span>
-                {checked && (
-                  <span
-                    className="absolute bottom-0 left-3 right-3 sm:left-4 sm:right-4 h-[2px] rounded-full"
-                    style={{ backgroundColor: tierColor }}
-                  />
-                )}
-              </button>
-            );
-          })}
-        </div>
-        <div className="flex items-center gap-3">
-          <button
-            onClick={() => setSelectedTiers([1] as EvidenceTier[])}
-            className={`text-[11px] font-medium cursor-pointer transition-colors duration-150 ${
-              selectedTiers.length === 1 && selectedTiers[0] === 1
-                ? "text-[var(--foreground)]"
-                : "text-[var(--muted)] hover:text-[var(--foreground)]"
-            }`}
-          >
-            Research only
-          </button>
-          <span className="text-black/[0.1]">|</span>
-          <button
-            onClick={() => setSelectedTiers([1, 2, 3, 4] as EvidenceTier[])}
-            className={`text-[11px] font-medium cursor-pointer transition-colors duration-150 ${
-              selectedTiers.length === 4
-                ? "text-[var(--foreground)]"
-                : "text-[var(--muted)] hover:text-[var(--foreground)]"
-            }`}
-          >
-            All
-          </button>
-        </div>
-      </div>
 
       {/* Job Displacement & Restructuring */}
       <section id="displacement" className="mt-16">
