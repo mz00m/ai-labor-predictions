@@ -66,6 +66,19 @@ export default function AgeWeightedMethodology() {
           </button>
         </div>
 
+        {/* TL;DR box */}
+        <div className="mx-4 mt-4 rounded-xl border border-[#6366F1]/20 bg-[#6366F1]/[0.04] p-4">
+          <h4 className="text-[13px] font-bold text-[#6366F1] uppercase tracking-wide mb-2">
+            TL;DR
+          </h4>
+          <p className="text-[13px] text-[var(--foreground)] leading-relaxed">
+            The sector-wide +1.3% average hides a K-shaped split: workers 22-25 face <strong>-20%
+            employment decline</strong> while workers 35-49 see <strong>+9% growth</strong>. AI tools
+            amplify experience, so senior workers benefit while entry-level hiring evaporates. The
+            average is technically correct but practically misleading for any individual.
+          </p>
+        </div>
+
         {/* Summary */}
         <div className="px-4 py-4">
           <p className="text-[13px] text-[var(--muted)] leading-relaxed">

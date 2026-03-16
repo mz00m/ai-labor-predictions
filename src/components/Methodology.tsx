@@ -15,6 +15,24 @@ export default function Methodology() {
       </div>
 
       <div className="space-y-10">
+        {/* TL;DR box */}
+        <div className="rounded-xl border border-[#6366F1]/20 bg-[#6366F1]/[0.04] p-5 max-w-3xl">
+          <h4 className="text-[13px] font-bold text-[#6366F1] uppercase tracking-wide mb-2">
+            TL;DR
+          </h4>
+          <p className="text-[13px] text-[var(--foreground)] leading-relaxed">
+            Every prediction tile shows a <strong>weighted average</strong> of all published estimates,
+            not a single source. Peer-reviewed research (Tier 1) counts 8x more than a blog post (Tier 4),
+            and newer studies get up to 2x more weight than older ones. You can toggle evidence tiers on
+            and off to see how the number shifts. The trend arrow shows whether newer sources are
+            estimating higher or lower than older ones.
+          </p>
+          <p className="text-[12px] text-[var(--muted)] mt-2">
+            This is a <strong className="text-[var(--foreground)]">live meta-analysis</strong>, not a
+            forecast. When new research drops, the numbers update automatically.
+          </p>
+        </div>
+
         {/* How We Calculate the Headline Number */}
         <div id="how-we-calculate" className="max-w-3xl">
           <h3 className="text-[18px] font-bold text-[var(--foreground)] mb-3">
