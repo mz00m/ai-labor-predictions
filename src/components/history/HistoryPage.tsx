@@ -11,51 +11,45 @@ import DiffusionComparison from "./DiffusionComparison";
 
 export default function HistoryPage() {
   return (
-    <div>
-      {/* ───── Section 1: Hero / Thesis Statement ───── */}
-      <header className="relative overflow-hidden -mx-6 sm:-mx-10 px-6 sm:px-10 pt-1 pb-8 sm:pt-2 sm:pb-10 mb-10">
-        {/* Background gradient orbs */}
-        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-          <div className="absolute -top-24 -left-24 w-[500px] h-[500px] rounded-full bg-[#5C61F6]/[0.04] blur-3xl" />
-          <div className="absolute -bottom-32 right-0 w-[400px] h-[400px] rounded-full bg-[#22c55e]/[0.03] blur-3xl" />
+    <article className="max-w-[740px] mx-auto">
+      {/* ───── Header ───── */}
+      <header className="mb-10">
+        <p className="text-[12px] font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
+          Historical Context
+        </p>
+        <h1
+          className="text-[36px] sm:text-[44px] font-extrabold text-[var(--foreground)] leading-[1.1] tracking-tight mb-4"
+          style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
+        >
+          On Tap Intelligence
+        </h1>
+        <p
+          className="text-[18px] sm:text-[20px] text-[var(--muted)] leading-relaxed mb-5"
+          style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
+        >
+          Every great technology has transformed work. Here&rsquo;s what
+          history tells us about what comes next.
+        </p>
+
+        {/* Thesis card */}
+        <div className="border-l-4 border-[var(--accent)] bg-[var(--accent-light)] rounded-r-lg px-5 py-4">
+          <p
+            className="text-[15px] sm:text-[16px] text-[var(--foreground)] leading-relaxed font-medium"
+            style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
+          >
+            AI is doing for cognitive capabilities what electricity did for
+            physical power: turning a scarce, expensive resource
+            into an on-demand utility available to anyone.
+          </p>
         </div>
 
-        <div className="relative max-w-3xl">
-          <p className="text-[12px] font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
-            Historical Context
-          </p>
-          <h1
-            className="text-[36px] sm:text-[50px] font-black tracking-tight text-[var(--foreground)] leading-[1.08] mb-5"
-          >
-            On Tap Intelligence
-          </h1>
-          <p className="text-[17px] sm:text-[19px] text-[var(--muted)] leading-relaxed mb-6">
-            Every great technology has transformed work. Here&rsquo;s what
-            history tells us about what comes next.
-          </p>
-
-          {/* Thesis card */}
-          <div className="border-l-4 border-[var(--accent)] bg-[var(--accent-light)] rounded-r-lg px-5 py-4">
-            <p
-              className="text-[15px] sm:text-[16px] text-[var(--foreground)] leading-relaxed font-medium"
-              style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
-            >
-              AI is doing for cognitive capabilities what electricity did for
-              physical power: turning a scarce, expensive resource
-              into an on-demand utility available to anyone.
-            </p>
-          </div>
-
-          {/* Read time */}
-          <div className="mt-4 flex items-center gap-2">
-            <span className="pill bg-black/[0.04] text-[var(--muted)]">
-              8 min read
-            </span>
-          </div>
+        {/* Read time */}
+        <div className="mt-4 flex items-center gap-2">
+          <span className="pill bg-black/[0.04] text-[var(--muted)]">
+            8 min read
+          </span>
         </div>
       </header>
-
-    <article className="max-w-[740px] mx-auto">
       {/* ───── Section 2: The Pattern ───── */}
       <section className="mb-12">
         <div className="border-t border-black/[0.06] pt-8">
@@ -350,7 +344,6 @@ export default function HistoryPage() {
         </div>
       </section>
     </article>
-    </div>
   );
 }
 
