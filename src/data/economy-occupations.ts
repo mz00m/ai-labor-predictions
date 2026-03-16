@@ -290,6 +290,46 @@ export const EXPOSURE_UNCERTAINTY: Record<string, { variance: number; pcaScore: 
 };
 
 /**
+ * GPT-scored AI exposure by SOC major group (0-10 scale).
+ *
+ * Source: Yale Budget Lab data repo (rmmomin/jobs-ai-exposure), scoring
+ * 342 BLS Occupational Outlook Handbook occupations via GPT across
+ * direct automation, indirect productivity, and digital work emphasis.
+ *
+ * Validated against 6 academic exposure metrics:
+ *   - Pearson 0.878 with Yale PCA reference
+ *   - Pearson 0.885 with OpenAI GPTs-are-GPTs (Eloundou et al.)
+ *
+ * mean: unweighted average across occupations in the SOC major group
+ * min/max: range of individual occupation scores within the group
+ * count: number of BLS occupations scored in this group
+ */
+export const SOC_EXPOSURE_SCORES: Record<string, { mean: number; min: number; max: number; count: number }> = {
+  "management":              { mean: 6.17, min: 4, max: 8, count: 24 },
+  "business-financial":      { mean: 7.32, min: 5, max: 9, count: 22 },
+  "computer-math":           { mean: 8.40, min: 8, max: 9, count: 10 },
+  "architecture-engineering": { mean: 6.03, min: 3, max: 8, count: 30 },
+  "life-physical-social-science": { mean: 6.07, min: 4, max: 8, count: 29 },
+  "community-social":        { mean: 4.89, min: 4, max: 5, count: 9 },
+  "legal":                   { mean: 7.67, min: 6, max: 9, count: 3 },
+  "education":               { mean: 5.80, min: 4, max: 7, count: 10 },
+  "arts-media":              { mean: 6.58, min: 2, max: 9, count: 26 },
+  "healthcare-practitioners": { mean: 4.61, min: 3, max: 9, count: 33 },
+  "healthcare-support":      { mean: 3.67, min: 2, max: 10, count: 9 },
+  "protective-service":      { mean: 3.80, min: 2, max: 6, count: 5 },
+  "food-serving":            { mean: 2.60, min: 2, max: 3, count: 5 },
+  "building-grounds":        { mean: 2.00, min: 2, max: 2, count: 3 },
+  "personal-care":           { mean: 2.67, min: 2, max: 5, count: 9 },
+  "sales":                   { mean: 6.67, min: 5, max: 8, count: 9 },
+  "office-admin":            { mean: 7.70, min: 4, max: 9, count: 10 },
+  "farming-fishing":         { mean: 2.00, min: 2, max: 2, count: 3 },
+  "construction":            { mean: 2.25, min: 1, max: 4, count: 16 },
+  "installation-repair":     { mean: 2.78, min: 2, max: 3, count: 9 },
+  "production":              { mean: 3.36, min: 2, max: 5, count: 11 },
+  "transportation":          { mean: 4.20, min: 3, max: 5, count: 5 },
+};
+
+/**
  * Maps economy SOC groups to representative job profiles in the task visualizer.
  * Each SOC group links to the most relevant individual job(s) available.
  */

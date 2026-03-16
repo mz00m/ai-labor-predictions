@@ -79,7 +79,9 @@
       "value": 14.3,
       "confidenceLow": 10.1,
       "confidenceHigh": 18,
-      "sourceIds": ["kim-jin-lee-pixiv-illustrators-2026"],
+      "sourceIds": [
+        "kim-jin-lee-pixiv-illustrators-2026"
+      ],
       "evidenceTier": 1,
       "isProxy": true,
       "proxyContext": {
@@ -237,6 +239,15 @@
       "label": "Queen Mary/Turing: 73% of freelancers report reduced job security"
     },
     {
+      "date": "2026-01-01",
+      "direction": "down",
+      "sourceIds": [
+        "stevens-freelance-marketplace-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Stevens: Freelance marketplace spend collapsed from 0.66% to 0.14% of GDP post-ChatGPT"
+    },
+    {
       "date": "2026-01-15",
       "direction": "up",
       "sourceIds": [
@@ -244,6 +255,15 @@
       ],
       "evidenceTier": 1,
       "label": "Reimers & Waldfogel: Book releases tripled 2022-2025; consumer surplus +25-50%"
+    },
+    {
+      "date": "2026-02-19",
+      "direction": "down",
+      "sourceIds": [
+        "yale-budgetlab-occupation-exposure-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Yale Budget Lab: Arts/media occupations score 6.6/10 exposure; newspaper/publishing at 8.0/10"
     },
     {
       "date": "2026-02-24",
@@ -262,13 +282,6 @@
       ],
       "evidenceTier": 4,
       "label": "CausalInf: Amazon book titles tripled post-ChatGPT, average quality fell"
-    },
-    {
-      "date": "2026-01-01",
-      "direction": "down",
-      "sourceIds": ["stevens-freelance-marketplace-2026"],
-      "evidenceTier": 1,
-      "label": "Stevens: Freelance marketplace spend collapsed from 0.66% to 0.14% of GDP post-ChatGPT"
     }
   ],
   "sources": [
@@ -531,6 +544,16 @@
       "datePublished": "2026-01-01",
       "excerpt": "Pixiv illustrator uploads down 10.1% post-AI; commercial creators saw -14.3% decline.",
       "dateAdded": "2026-03-12"
+    },
+    {
+      "id": "yale-budgetlab-occupation-exposure-2026",
+      "title": "Labor Market AI Exposure: What Do We Know? (Data Repository)",
+      "url": "https://github.com/rmmomin/jobs-ai-exposure",
+      "publisher": "The Budget Lab at Yale (Gimbel, Kendall, Kulsakdinun)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-19",
+      "dateAdded": "2026-03-16",
+      "excerpt": "Arts, Design, Entertainment, Sports and Media SOC group: mean 6.58/10 (range 2-9, 26 occupations). Newspaper, periodical, book, and directory publishers: 8.04/10 weighted industry exposure. Writers and authors score 9/10; special effects artists 9/10."
     }
   ]
 }

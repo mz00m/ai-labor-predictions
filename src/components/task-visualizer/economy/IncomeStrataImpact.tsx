@@ -8,6 +8,7 @@ import {
   TASK_CATEGORY_META,
   SOC_TO_JOB_IDS,
   EXPOSURE_UNCERTAINTY,
+  SOC_EXPOSURE_SCORES,
   getAutomationPercentAtYear,
   type IncomeTier,
   type TaskCategory,
@@ -33,6 +34,7 @@ interface TierDetail {
     topVulnerable: string;
     topDurable: string;
     uncertaintyVariance: number;
+    exposureScore: number;
   }[];
   totalEmployment: number;
   avgAutomation2030: number;
@@ -70,6 +72,7 @@ export default function IncomeStrataImpact() {
           topVulnerable: vulnerable,
           topDurable: durable,
           uncertaintyVariance: EXPOSURE_UNCERTAINTY[g.id]?.variance ?? 0,
+          exposureScore: SOC_EXPOSURE_SCORES[g.id]?.mean ?? 0,
         };
       });
 
@@ -182,6 +185,7 @@ export default function IncomeStrataImpact() {
                     <th className="text-left py-2 px-4 text-[var(--foreground)] font-semibold">Occupation</th>
                     <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold">Workers</th>
                     <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold">Wage</th>
+                    <th className="text-center py-2 px-3 text-[var(--foreground)] font-semibold" title="AI exposure score from Yale Budget Lab repo (0-10 scale, 342 BLS occupations)">Exposure</th>
                     <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold">2028</th>
                     <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold">2032</th>
                     <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold">2036</th>
@@ -209,6 +213,19 @@ export default function IncomeStrataImpact() {
                       </td>
                       <td className="text-right py-2 px-3 tabular-nums">{(g.employment / 1000).toFixed(1)}M</td>
                       <td className="text-right py-2 px-3 tabular-nums">${(g.medianWageAnnual / 1000).toFixed(0)}K</td>
+                      <td className="text-center py-2 px-3 tabular-nums">
+                        {g.exposureScore > 0 && (
+                          <span
+                            className="inline-block px-1.5 py-0.5 rounded text-[10px] font-medium"
+                            style={{
+                              color: g.exposureScore >= 7 ? "#EF4444" : g.exposureScore >= 5 ? "#F59E0B" : "#10B981",
+                              backgroundColor: g.exposureScore >= 7 ? "#EF444415" : g.exposureScore >= 5 ? "#F59E0B15" : "#10B98115",
+                            }}
+                          >
+                            {g.exposureScore.toFixed(1)}
+                          </span>
+                        )}
+                      </td>
                       <td className="text-right py-2 px-3 tabular-nums">
                         <span style={{ color: g.pct2028 >= 60 ? "#EF4444" : g.pct2028 >= 35 ? "#6366F1" : "#10B981" }}>
                           {g.pct2028}%

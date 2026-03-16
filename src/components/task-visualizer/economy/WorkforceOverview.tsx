@@ -20,6 +20,7 @@ import {
   TOTAL_EMPLOYMENT,
   SOC_TO_JOB_IDS,
   EXPOSURE_UNCERTAINTY,
+  SOC_EXPOSURE_SCORES,
   type OccupationGroup,
 } from "@/data/economy-occupations";
 
@@ -59,12 +60,27 @@ function CustomTooltip({ active, payload }: TooltipProps<number, string>) {
             {tierMeta.label}
           </span>
         </div>
-        {uncertainty && (
-          <div className="flex justify-between gap-4 mt-1 pt-1 border-t border-black/[0.06]">
-            <span className="text-[var(--muted)]">Exposure metric agreement</span>
-            <span className="font-medium" style={{ color: getUncertaintyLabel(uncertainty.variance).color }}>
-              {getUncertaintyLabel(uncertainty.variance).label}
-            </span>
+        {(uncertainty || SOC_EXPOSURE_SCORES[d.id]) && (
+          <div className="mt-1 pt-1 border-t border-black/[0.06] space-y-0.5">
+            {SOC_EXPOSURE_SCORES[d.id] && (
+              <div className="flex justify-between gap-4">
+                <span className="text-[var(--muted)]">AI exposure score</span>
+                <span className="font-medium">
+                  {SOC_EXPOSURE_SCORES[d.id].mean.toFixed(1)}/10
+                  <span className="text-[var(--muted)] font-normal ml-1">
+                    ({SOC_EXPOSURE_SCORES[d.id].min}-{SOC_EXPOSURE_SCORES[d.id].max})
+                  </span>
+                </span>
+              </div>
+            )}
+            {uncertainty && (
+              <div className="flex justify-between gap-4">
+                <span className="text-[var(--muted)]">Metric agreement</span>
+                <span className="font-medium" style={{ color: getUncertaintyLabel(uncertainty.variance).color }}>
+                  {getUncertaintyLabel(uncertainty.variance).label}
+                </span>
+              </div>
+            )}
           </div>
         )}
       </div>
