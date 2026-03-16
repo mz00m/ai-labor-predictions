@@ -417,6 +417,8 @@ export default function GenderImpact() {
         The automation gap reflects occupational segregation — women are concentrated in clerical,
         administrative, healthcare support, and education roles with high information-processing
         task loads, while men dominate physical/manual trades which are harder to automate.
+        Yale Budget Lab (2026) finds that occupations with 30-50% women have the highest measurement
+        disagreement across exposure metrics, driven by differing assessments of office and healthcare roles.
       </p>
     </div>
   );

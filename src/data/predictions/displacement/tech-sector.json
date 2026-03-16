@@ -214,7 +214,9 @@
     {
       "date": "2024-06-01",
       "direction": "neutral",
-      "sourceIds": ["baird-linkedin-copilot-2024"],
+      "sourceIds": [
+        "baird-linkedin-copilot-2024"
+      ],
       "evidenceTier": 2,
       "label": "LinkedIn/Baird: Copilot users show increased code output but no displacement evidence"
     },
@@ -248,7 +250,9 @@
     {
       "date": "2024-10-01",
       "direction": "down",
-      "sourceIds": ["hoffmann-ai-code-security-2024"],
+      "sourceIds": [
+        "hoffmann-ai-code-security-2024"
+      ],
       "evidenceTier": 1,
       "label": "HBS/Hoffmann: AI-generated code has 41% more vulnerabilities; devs overestimate security"
     },
@@ -309,7 +313,9 @@
     {
       "date": "2025-06-01",
       "direction": "neutral",
-      "sourceIds": ["daniotti-ai-code-diffusion-2025"],
+      "sourceIds": [
+        "daniotti-ai-code-diffusion-2025"
+      ],
       "evidenceTier": 1,
       "label": "Daniotti et al. (Science): 30% of US Python code AI-assisted; 3.6% output increase"
     },
@@ -332,15 +338,6 @@
       "label": "OECD: Employment Outlook 2025 on AI and the labour market"
     },
     {
-      "date": "2026-02-24",
-      "direction": "up",
-      "sourceIds": [
-        "metr-2026"
-      ],
-      "evidenceTier": 1,
-      "label": "METR: Original 19% slowdown finding retracted; follow-up shows likely speedup, study redesigned"
-    },
-    {
       "date": "2025-08-01",
       "direction": "down",
       "sourceIds": [
@@ -352,7 +349,9 @@
     {
       "date": "2025-09-01",
       "direction": "neutral",
-      "sourceIds": ["anthropic-economic-index-softdev-2025"],
+      "sourceIds": [
+        "anthropic-economic-index-softdev-2025"
+      ],
       "evidenceTier": 2,
       "label": "Anthropic: 37% of software dev tasks show AI involvement; writing code is 18% of usage"
     },
@@ -382,6 +381,24 @@
       ],
       "evidenceTier": 1,
       "label": "CAIS/Scale AI: AI fails 97.5% of real-world remote work projects at professional quality"
+    },
+    {
+      "date": "2025-11-06",
+      "direction": "up",
+      "sourceIds": [
+        "sarkar-cursor-agents-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Sarkar (UChicago/Cursor): 39% more code merges after AI agent became default mode"
+    },
+    {
+      "date": "2025-11-26",
+      "direction": "down",
+      "sourceIds": [
+        "mit-iceberg-index-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "MIT Iceberg Surface Index: 2.2% of tech wage value ($211B, 1.9M workers) exposed to AI"
     },
     {
       "date": "2025-12-01",
@@ -456,6 +473,24 @@
       "label": "Indeed: Tech postings 34% below pre-pandemic; AI tech postings 45% above"
     },
     {
+      "date": "2026-01-22",
+      "direction": "down",
+      "sourceIds": [
+        "esb-dutch-youth-genai-employment-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "ESB/Rabobank: Dutch ICT youth employment fell 11% despite 6.5% sector growth (since 2022)"
+    },
+    {
+      "date": "2026-02-16",
+      "direction": "down",
+      "sourceIds": [
+        "deutsche-bank-ai-predictions-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Deutsche Bank: 85% of devs use AI coding assistants; up to 60% productivity gains"
+    },
+    {
       "date": "2026-02-18",
       "direction": "up",
       "sourceIds": [
@@ -472,6 +507,24 @@
       ],
       "evidenceTier": 3,
       "label": "CIO/Robert Half: 61% of IT leaders plan to increase permanent headcount in H1 2026"
+    },
+    {
+      "date": "2026-02-19",
+      "direction": "down",
+      "sourceIds": [
+        "yale-budgetlab-occupation-exposure-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Yale Budget Lab: Computer/math occupations score 8.4/10 exposure (highest of 22 groups, 342 BLS occupations)"
+    },
+    {
+      "date": "2026-02-24",
+      "direction": "up",
+      "sourceIds": [
+        "metr-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "METR: Original 19% slowdown finding retracted; follow-up shows likely speedup, study redesigned"
     },
     {
       "date": "2026-02-24",
@@ -553,40 +606,6 @@
       ],
       "evidenceTier": 2,
       "label": "Anthropic: Programmers highest AI exposure (74.5%) but no unemployment impact detected"
-    },
-    {
-      "date": "2025-11-06",
-      "direction": "up",
-      "sourceIds": ["sarkar-cursor-agents-2025"],
-      "evidenceTier": 1,
-      "label": "Sarkar (UChicago/Cursor): 39% more code merges after AI agent became default mode"
-    },
-    {
-      "date": "2026-01-22",
-      "direction": "down",
-      "sourceIds": [
-        "esb-dutch-youth-genai-employment-2026"
-      ],
-      "evidenceTier": 1,
-      "label": "ESB/Rabobank: Dutch ICT youth employment fell 11% despite 6.5% sector growth (since 2022)"
-    },
-    {
-      "date": "2026-02-16",
-      "direction": "down",
-      "sourceIds": [
-        "deutsche-bank-ai-predictions-2026"
-      ],
-      "evidenceTier": 2,
-      "label": "Deutsche Bank: 85% of devs use AI coding assistants; up to 60% productivity gains"
-    },
-    {
-      "date": "2025-11-26",
-      "direction": "down",
-      "sourceIds": [
-        "mit-iceberg-index-2025"
-      ],
-      "evidenceTier": 1,
-      "label": "MIT Iceberg Surface Index: 2.2% of tech wage value ($211B, 1.9M workers) exposed to AI"
     }
   ],
   "sources": [
@@ -1147,6 +1166,16 @@
       "datePublished": "2025-11-26",
       "excerpt": "Nationally, the Surface Index stands at 2.2%, representing approximately $211 billion in wage value across 1.9 million workers in technology occupations.",
       "dateAdded": "2026-03-15"
+    },
+    {
+      "id": "yale-budgetlab-occupation-exposure-2026",
+      "title": "Labor Market AI Exposure: What Do We Know? (Data Repository)",
+      "url": "https://github.com/rmmomin/jobs-ai-exposure",
+      "publisher": "The Budget Lab at Yale (Gimbel, Kendall, Kulsakdinun)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-19",
+      "dateAdded": "2026-03-16",
+      "excerpt": "Computer and Mathematical occupations have the highest average PCA-weighted exposure score (4.2) and highest variance (0.739). GPT-scored exposure for SOC 15-0000: mean 8.4/10, range 8-9 across 10 occupations."
     }
   ],
   "marketIds": {

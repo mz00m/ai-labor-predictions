@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-03-15",
-  "totalSources": 410,
-  "verifiedCount": 410,
+  "lastUpdated": "2026-03-16",
+  "totalSources": 412,
+  "verifiedCount": 412,
   "sources": {
     "revelio-labs-wage-divide-2025": {
       "id": "revelio-labs-wage-divide-2025",
@@ -5639,6 +5639,38 @@
       "datePublished": "2026-01-15",
       "excerpt": "Trinity Health is laying off 10.5% of its revenue cycle management staff across 15 states and 92 hospitals. Non-patient-facing revenue cycle functions will be transitioned to an external partner.",
       "usedIn": [
+        "healthcare-admin-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "yale-budgetlab-exposure-agreement-2026": {
+      "id": "yale-budgetlab-exposure-agreement-2026",
+      "title": "Labor Market AI Exposure: What Do We Know?",
+      "url": "https://budgetlab.yale.edu/research/labor-market-ai-exposure-what-do-we-know",
+      "publisher": "The Budget Lab at Yale (Gimbel, Kendall, Kulsakdinun)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-19",
+      "excerpt": "AI exposure metrics broadly agree with each other, but that they disagree with each other more on highly exposed occupations. The key point of disagreement between different AI exposure metrics is in the magnitude of exposure, not whether an occupation is exposed.",
+      "usedIn": [
+        "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "yale-budgetlab-occupation-exposure-2026": {
+      "id": "yale-budgetlab-occupation-exposure-2026",
+      "title": "Labor Market AI Exposure: What Do We Know? (Data Repository)",
+      "url": "https://github.com/rmmomin/jobs-ai-exposure",
+      "publisher": "The Budget Lab at Yale (Gimbel, Kendall, Kulsakdinun)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-19",
+      "excerpt": "GPT-scored AI exposure for 342 BLS occupations on a 0-10 scale, validated against 6 academic metrics (Pearson 0.878 with Yale PCA, 0.885 with OpenAI). Employment-weighted industry exposure scores for 186 4-digit NAICS industries.",
+      "usedIn": [
+        "tech-sector-displacement",
+        "financial-services-displacement",
+        "creative-industry-displacement",
+        "customer-service-automation",
         "healthcare-admin-displacement"
       ],
       "verified": true,

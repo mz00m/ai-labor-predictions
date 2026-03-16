@@ -1,0 +1,14 @@
+{
+  "id": "yale-budgetlab-occupation-exposure-2026",
+  "abstract": "The companion data repository for the Yale Budget Lab's 'Labor Market AI Exposure: What Do We Know?' study. Provides GPT-scored AI exposure ratings (0-10 scale) for 342 BLS Occupational Outlook Handbook occupations across three dimensions: direct automation, indirect productivity effects, and digital work emphasis. Includes employment-weighted industry exposure scores for 186 4-digit NAICS industries and 18 sector-level aggregations. Scores are validated against 6 independent academic exposure metrics with Pearson correlations of 0.878 (Yale PCA reference) and 0.885 (OpenAI GPTs-are-GPTs).",
+  "keyFindings": [
+    "342 BLS occupations scored on 0-10 AI exposure scale; employment-weighted mean is 5.05/10 as of February 2026.",
+    "Computer and Mathematical occupations have the highest mean exposure (8.4/10), while Building & Grounds Cleaning and Farming/Fishing have the lowest (2.0/10).",
+    "Business support services (NAICS 561400) has the highest industry-level exposure at 8.55/10; legal services at 8.38/10; software publishers at 8.11/10.",
+    "Despite high overall correlation with Felten AIOE (Pearson 0.851), top-decile occupation overlap is only 3.8% — confirming Yale study finding that metrics disagree most on the most exposed jobs.",
+    "Healthcare sector has lowest white-collar exposure (4.44/10, 20.7M workers) but medical records specialists (9/10) and medical transcriptionists (10/10) are among the highest-scoring individual occupations."
+  ],
+  "methodology": "GPT-based scoring of BLS Occupational Outlook Handbook pages, evaluating direct automation potential, indirect productivity effects, and digital work emphasis. Scores aggregated to industry level using employment-weighted averages from BLS 2024 occupational employment data. Validated against Eloundou et al. (2024), Felten et al. (2021), Eisfeldt et al. (2023), Tomlinson et al. (2025), Webb (2020), and Yale PCA composite.",
+  "qualifiers": "Scores reflect AI exposure potential, not actual displacement or automation. GPT-based scoring introduces model bias — the GABRIEL variant (more conservative, mean 5.01 vs 5.26) is provided for sensitivity analysis. 51 occupations lack SOC codes and could not be mapped to major groups. Industry-level scores only cover occupations present in the BLS OOH, which may underrepresent some sectors.",
+  "fetchedAt": "2026-03-16"
+}

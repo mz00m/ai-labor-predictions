@@ -7,10 +7,18 @@ import {
   INCOME_TIER_META,
   TASK_CATEGORY_META,
   SOC_TO_JOB_IDS,
+  EXPOSURE_UNCERTAINTY,
+  SOC_EXPOSURE_SCORES,
   getAutomationPercentAtYear,
   type IncomeTier,
   type TaskCategory,
 } from "@/data/economy-occupations";
+
+function getUncertaintyLabel(variance: number): { label: string; color: string } {
+  if (variance >= 0.5) return { label: "High", color: "#EF4444" };
+  if (variance >= 0.3) return { label: "Med", color: "#F59E0B" };
+  return { label: "Low", color: "#10B981" };
+}
 
 interface TierDetail {
   tier: IncomeTier;
@@ -25,6 +33,8 @@ interface TierDetail {
     pct2036: number;
     topVulnerable: string;
     topDurable: string;
+    uncertaintyVariance: number;
+    exposureScore: number;
   }[];
   totalEmployment: number;
   avgAutomation2030: number;
@@ -61,6 +71,8 @@ export default function IncomeStrataImpact() {
           pct2036: getAutomationPercentAtYear(g, 2036),
           topVulnerable: vulnerable,
           topDurable: durable,
+          uncertaintyVariance: EXPOSURE_UNCERTAINTY[g.id]?.variance ?? 0,
+          exposureScore: SOC_EXPOSURE_SCORES[g.id]?.mean ?? 0,
         };
       });
 
@@ -173,11 +185,13 @@ export default function IncomeStrataImpact() {
                     <th className="text-left py-2 px-4 text-[var(--foreground)] font-semibold">Occupation</th>
                     <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold">Workers</th>
                     <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold">Wage</th>
+                    <th className="text-center py-2 px-3 text-[var(--foreground)] font-semibold" title="AI exposure score from Yale Budget Lab repo (0-10 scale, 342 BLS occupations)">Exposure</th>
                     <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold">2028</th>
                     <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold">2032</th>
                     <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold">2036</th>
                     <th className="text-left py-2 px-3 text-[var(--foreground)] font-semibold">Most exposed</th>
-                    <th className="text-left py-2 px-4 text-[var(--foreground)] font-semibold">Most durable</th>
+                    <th className="text-left py-2 px-3 text-[var(--foreground)] font-semibold">Most durable</th>
+                    <th className="text-center py-2 px-4 text-[var(--foreground)] font-semibold" title="How much 6 AI exposure metrics agree on this group's exposure level (Yale Budget Lab, 2026)">Certainty</th>
                   </tr>
                 </thead>
                 <tbody className="text-[var(--muted)]">
@@ -199,6 +213,19 @@ export default function IncomeStrataImpact() {
                       </td>
                       <td className="text-right py-2 px-3 tabular-nums">{(g.employment / 1000).toFixed(1)}M</td>
                       <td className="text-right py-2 px-3 tabular-nums">${(g.medianWageAnnual / 1000).toFixed(0)}K</td>
+                      <td className="text-center py-2 px-3 tabular-nums">
+                        {g.exposureScore > 0 && (
+                          <span
+                            className="inline-block px-1.5 py-0.5 rounded text-[10px] font-medium"
+                            style={{
+                              color: g.exposureScore >= 7 ? "#EF4444" : g.exposureScore >= 5 ? "#F59E0B" : "#10B981",
+                              backgroundColor: g.exposureScore >= 7 ? "#EF444415" : g.exposureScore >= 5 ? "#F59E0B15" : "#10B98115",
+                            }}
+                          >
+                            {g.exposureScore.toFixed(1)}
+                          </span>
+                        )}
+                      </td>
                       <td className="text-right py-2 px-3 tabular-nums">
                         <span style={{ color: g.pct2028 >= 60 ? "#EF4444" : g.pct2028 >= 35 ? "#6366F1" : "#10B981" }}>
                           {g.pct2028}%
@@ -215,7 +242,21 @@ export default function IncomeStrataImpact() {
                         </span>
                       </td>
                       <td className="py-2 px-3 text-[11px]">{g.topVulnerable}</td>
-                      <td className="py-2 px-4 text-[11px]">{g.topDurable}</td>
+                      <td className="py-2 px-3 text-[11px]">{g.topDurable}</td>
+                      <td className="text-center py-2 px-4 text-[11px]">
+                        {g.uncertaintyVariance > 0 && (() => {
+                          const u = getUncertaintyLabel(g.uncertaintyVariance);
+                          return (
+                            <span
+                              className="inline-block px-1.5 py-0.5 rounded text-[10px] font-medium"
+                              style={{ color: u.color, backgroundColor: `${u.color}15` }}
+                              title={`Metric variance: ${g.uncertaintyVariance.toFixed(3)}`}
+                            >
+                              {u.label}
+                            </span>
+                          );
+                        })()}
+                      </td>
                     </tr>
                     );
                   })}

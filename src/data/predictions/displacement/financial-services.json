@@ -69,7 +69,9 @@
     {
       "date": "2024-01-01",
       "direction": "down",
-      "sourceIds": ["fouarge-montizaan-zwick-ai-risk-2024"],
+      "sourceIds": [
+        "fouarge-montizaan-zwick-ai-risk-2024"
+      ],
       "evidenceTier": 1,
       "label": "IZA/Fouarge: Financial sector workers most threatened; age, tenure, education moderate AI risk"
     },
@@ -92,6 +94,24 @@
       "label": "Accenture: 73% of US banking working time impactable by GenAI"
     },
     {
+      "date": "2024-11-30",
+      "direction": "down",
+      "sourceIds": [
+        "boke-gallemore-glaeser-accounting-ai-2024"
+      ],
+      "evidenceTier": 1,
+      "label": "Boke et al.: 10 additional AI acct roles -> 49 fewer accounting-skill postings"
+    },
+    {
+      "date": "2025-01-01",
+      "direction": "down",
+      "sourceIds": [
+        "cao-cheng-gu-jiang-chatgpt-analysts-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Cao et al.: ChatGPT cuts analyst report length 8.9%, quality -17%; more AI reliance = worse forecasts"
+    },
+    {
       "date": "2025-01-08",
       "direction": "down",
       "sourceIds": [
@@ -101,23 +121,11 @@
       "label": "WEF: 32-39% of financial services tasks have automation potential"
     },
     {
-      "date": "2024-11-30",
-      "direction": "down",
-      "sourceIds": ["boke-gallemore-glaeser-accounting-ai-2024"],
-      "evidenceTier": 1,
-      "label": "Boke et al.: 10 additional AI acct roles -> 49 fewer accounting-skill postings"
-    },
-    {
-      "date": "2025-01-01",
-      "direction": "down",
-      "sourceIds": ["cao-cheng-gu-jiang-chatgpt-analysts-2025"],
-      "evidenceTier": 1,
-      "label": "Cao et al.: ChatGPT cuts analyst report length 8.9%, quality -17%; more AI reliance = worse forecasts"
-    },
-    {
       "date": "2025-05-03",
       "direction": "up",
-      "sourceIds": ["choi-xie-human-ai-accounting-2025"],
+      "sourceIds": [
+        "choi-xie-human-ai-accounting-2025"
+      ],
       "evidenceTier": 1,
       "label": "Choi/Xie (Stanford/MIT): AI accountants +55% client support, 8.5% time shifted to high-value tasks"
     },
@@ -176,6 +184,24 @@
       "label": "Citigroup: Cutting ~20,000 jobs (8% of workforce) in AI-linked restructuring"
     },
     {
+      "date": "2026-02-16",
+      "direction": "down",
+      "sourceIds": [
+        "deutsche-bank-ai-predictions-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Deutsche Bank: AI platforms could advise 80% of retail investors by 2027"
+    },
+    {
+      "date": "2026-02-19",
+      "direction": "down",
+      "sourceIds": [
+        "yale-budgetlab-occupation-exposure-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Yale Budget Lab: Finance/insurance sector 7.65/10 exposure (5.2M workers); legal 8.38/10 (1.1M)"
+    },
+    {
       "date": "2026-03-05",
       "direction": "down",
       "sourceIds": [
@@ -192,15 +218,6 @@
       ],
       "evidenceTier": 4,
       "label": "Oks: Bank tellers survived ATMs (task automation) but not iPhones (paradigm shift)"
-    },
-    {
-      "date": "2026-02-16",
-      "direction": "down",
-      "sourceIds": [
-        "deutsche-bank-ai-predictions-2026"
-      ],
-      "evidenceTier": 2,
-      "label": "Deutsche Bank: AI platforms could advise 80% of retail investors by 2027"
     }
   ],
   "sources": [
@@ -413,6 +430,16 @@
       "datePublished": "2026-02-16",
       "excerpt": "dbLumina anticipates a massive expansion of robo-advisors, projecting that AI-driven platforms could deliver primary investment advice to nearly 80% of retail investors by 2027.",
       "dateAdded": "2026-03-13"
+    },
+    {
+      "id": "yale-budgetlab-occupation-exposure-2026",
+      "title": "Labor Market AI Exposure: What Do We Know? (Data Repository)",
+      "url": "https://github.com/rmmomin/jobs-ai-exposure",
+      "publisher": "The Budget Lab at Yale (Gimbel, Kendall, Kulsakdinun)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-19",
+      "dateAdded": "2026-03-16",
+      "excerpt": "Finance and insurance sector weighted exposure: 7.65/10 across 5.2M workers and 144 occupations. Legal services: 8.38/10 across 1.1M workers. Business/financial operations SOC group: mean 7.32/10 (range 5-9, 22 occupations)."
     }
   ]
 }

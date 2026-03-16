@@ -134,6 +134,15 @@
       "label": "OECD: only 4.3% of health roles potentially automatable; 0.6% high risk (55.5M postings)"
     },
     {
+      "date": "2025-08-01",
+      "direction": "down",
+      "sourceIds": [
+        "bain-klas-healthcare-ai-investment-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Bain/KLAS: 70% of providers have AI strategy; RCM top use case; ambient docs at 20% rollout (n=228)"
+    },
+    {
       "date": "2025-09-01",
       "direction": "down",
       "sourceIds": [
@@ -188,6 +197,15 @@
       "label": "MASAI trial (Lancet): 44% workload reduction in mammography screening"
     },
     {
+      "date": "2026-01-15",
+      "direction": "down",
+      "sourceIds": [
+        "trinity-health-rcm-layoffs-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Trinity Health: 10.5% of revenue cycle workforce cut across 92 hospitals in 15 states"
+    },
+    {
       "date": "2026-01-22",
       "direction": "down",
       "sourceIds": [
@@ -224,6 +242,15 @@
       "label": "CAQH: 50%+ of health plans use AI in admin; $258B in costs avoided via automation"
     },
     {
+      "date": "2026-02-19",
+      "direction": "neutral",
+      "sourceIds": [
+        "yale-budgetlab-occupation-exposure-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Yale Budget Lab: Healthcare overall 4.44/10 exposure; admin roles score higher (medical records 9/10)"
+    },
+    {
       "date": "2026-03-09",
       "direction": "down",
       "sourceIds": [
@@ -240,24 +267,6 @@
       ],
       "evidenceTier": 1,
       "label": "Google/BIDMC: Pre-visit AI intake safe across 100 real patients, zero safety stops needed"
-    },
-    {
-      "date": "2026-01-15",
-      "direction": "down",
-      "sourceIds": [
-        "trinity-health-rcm-layoffs-2026"
-      ],
-      "evidenceTier": 2,
-      "label": "Trinity Health: 10.5% of revenue cycle workforce cut across 92 hospitals in 15 states"
-    },
-    {
-      "date": "2025-08-01",
-      "direction": "down",
-      "sourceIds": [
-        "bain-klas-healthcare-ai-investment-2025"
-      ],
-      "evidenceTier": 2,
-      "label": "Bain/KLAS: 70% of providers have AI strategy; RCM top use case; ambient docs at 20% rollout (n=228)"
     }
   ],
   "sources": [
@@ -510,6 +519,16 @@
       "datePublished": "2025-08-01",
       "excerpt": "70% of providers and 80% of payers now have an AI strategy in place or in development. RCM is the top AI use case, with ambient documentation at ~20% full rollout and ~40% in pilot. Nearly half of provider executives said revenue cycle management was a top three IT investment priority. Survey of 228 US healthcare provider and payer executives.",
       "dateAdded": "2026-03-15"
+    },
+    {
+      "id": "yale-budgetlab-occupation-exposure-2026",
+      "title": "Labor Market AI Exposure: What Do We Know? (Data Repository)",
+      "url": "https://github.com/rmmomin/jobs-ai-exposure",
+      "publisher": "The Budget Lab at Yale (Gimbel, Kendall, Kulsakdinun)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-19",
+      "dateAdded": "2026-03-16",
+      "excerpt": "Healthcare and social assistance sector: 4.44/10 weighted exposure (20.7M workers, lowest among white-collar sectors). However, medical records specialists score 9/10 and medical transcriptionists score 10/10 \u2014 the only occupation at maximum exposure."
     }
   ]
 }
