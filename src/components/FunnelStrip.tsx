@@ -92,15 +92,26 @@ export default function FunnelStrip() {
   const hoveredData = hovered !== null ? allBars[hovered] : null;
 
   return (
-    <div>
+    <div id="evidence-funnel">
       {/* Title */}
       <div className="mb-5">
         <h2 className="font-serif text-[22px] sm:text-[26px] font-bold tracking-tight text-[var(--foreground)] leading-tight">
           From exposure to job loss
         </h2>
         <p className="text-[15px] sm:text-[17px] text-[var(--muted)] mt-1.5 leading-relaxed">
-          AI adoption is accelerating and changing work, but the impact on jobs is less clear.
+          AI adoption is accelerating and changing work, but the impact on jobs is less clear. Productivity gains at the task level have not yet translated into measurable workforce displacement — the path between the two remains uncertain.
         </p>
+        <div className="mt-3 flex flex-wrap gap-x-5 gap-y-1.5">
+          <Link href="/task-visualizer" className="text-[13px] font-medium text-[var(--accent)] hover:underline">
+            How will AI affect your job? &rarr;
+          </Link>
+          <Link href="/j-curve" className="text-[13px] font-medium text-[var(--accent)] hover:underline">
+            Why the gap between productivity and job loss? &rarr;
+          </Link>
+          <Link href="/history" className="text-[13px] font-medium text-[var(--accent)] hover:underline">
+            How technology has impacted jobs before &rarr;
+          </Link>
+        </div>
       </div>
 
       {/* Two-column chart */}
