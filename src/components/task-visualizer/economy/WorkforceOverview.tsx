@@ -21,6 +21,7 @@ import {
   SOC_TO_JOB_IDS,
   EXPOSURE_UNCERTAINTY,
   SOC_EXPOSURE_SCORES,
+  CFO_SURVEY_NEI,
   type OccupationGroup,
 } from "@/data/economy-occupations";
 
@@ -36,6 +37,7 @@ function CustomTooltip({ active, payload }: TooltipProps<number, string>) {
   const tierMeta = INCOME_TIER_META[d.incomeTier];
   const jobIds = SOC_TO_JOB_IDS[d.id] || [];
   const uncertainty = EXPOSURE_UNCERTAINTY[d.id];
+  const neiData = CFO_SURVEY_NEI[d.id];
   return (
     <div className="bg-white rounded-lg border border-black/[0.08] shadow-lg p-3 max-w-[280px]">
       <p className="text-[13px] font-semibold text-[var(--foreground)]">{d.title}</p>
@@ -78,6 +80,17 @@ function CustomTooltip({ active, payload }: TooltipProps<number, string>) {
                 <span className="text-[var(--muted)]">Metric agreement</span>
                 <span className="font-medium" style={{ color: getUncertaintyLabel(uncertainty.variance).color }}>
                   {getUncertaintyLabel(uncertainty.variance).label}
+                </span>
+              </div>
+            )}
+            {neiData && (
+              <div className="flex justify-between gap-4">
+                <span className="text-[var(--muted)]">CFO replace/enhance</span>
+                <span className="font-medium" style={{ color: neiData.nei > 1 ? "#EF4444" : neiData.nei > 0.7 ? "#F59E0B" : "#10B981" }}>
+                  {neiData.nei.toFixed(2)}x
+                  <span className="text-[var(--muted)] font-normal ml-1">
+                    ({neiData.label})
+                  </span>
                 </span>
               </div>
             )}
@@ -242,6 +255,7 @@ export default function WorkforceOverview() {
         Source: Bureau of Labor Statistics, Occupational Employment and Wage Statistics (OEWS), May 2024.
         Income tiers based on median annual wage for the occupation group.
         Exposure metric agreement from Yale Budget Lab (Gimbel et al., 2026), comparing 6 AI exposure measures across 778 occupations.
+        CFO replace/enhance ratio from Baslandze et al. (2026), Federal Reserve Bank of Atlanta/Duke University survey of ~750 executives.
       </p>
     </div>
   );

@@ -20,6 +20,7 @@ import {
   OCCUPATION_GROUPS,
   INCOME_TIER_META,
   SOC_TO_JOB_IDS,
+  CFO_SURVEY_NEI,
   type IncomeTier,
   type OccupationGroup,
 } from "@/data/economy-occupations";
@@ -48,6 +49,7 @@ interface ScatterPoint {
 function CustomTooltip({ active, payload }: TooltipProps<number, string>) {
   if (!active || !payload?.[0]) return null;
   const d = payload[0].payload as ScatterPoint;
+  const neiData = CFO_SURVEY_NEI[d.id];
   return (
     <div className="bg-white rounded-lg border border-black/[0.08] shadow-lg p-3 max-w-[260px]">
       <p className="text-[13px] font-semibold text-[var(--foreground)]">{d.shortTitle}</p>
@@ -74,6 +76,14 @@ function CustomTooltip({ active, payload }: TooltipProps<number, string>) {
             {INCOME_TIER_META[d.incomeTier].label}
           </span>
         </div>
+        {neiData && (
+          <div className="flex justify-between gap-4">
+            <span className="text-[var(--muted)]">CFO replace/enhance</span>
+            <span className="font-medium" style={{ color: neiData.nei > 1 ? "#EF4444" : neiData.nei > 0.7 ? "#F59E0B" : "#10B981" }}>
+              {neiData.nei.toFixed(2)}x
+            </span>
+          </div>
+        )}
       </div>
       {d.hasJobs && (
         <p className="text-[10px] text-[var(--accent)] mt-2 pt-1.5 border-t border-black/[0.06]">
