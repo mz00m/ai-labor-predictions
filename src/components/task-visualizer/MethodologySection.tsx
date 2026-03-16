@@ -8,31 +8,225 @@ export default function MethodologySection() {
       </h3>
 
       <div className="space-y-6 max-w-3xl">
-        {/* Core framework */}
+        {/* TL;DR box */}
+        <div className="rounded-xl border border-[#6366F1]/20 bg-[#6366F1]/[0.04] p-5">
+          <h4 className="text-[13px] font-bold text-[#6366F1] uppercase tracking-wide mb-2">
+            TL;DR
+          </h4>
+          <p className="text-[13px] text-[var(--foreground)] leading-relaxed">
+            We break every job into its component tasks using federal labor data (O*NET, BLS). For each
+            task, we calculate what it costs in real AI API spend to replicate one hour of human work,
+            then project when that cost drops below the human wage — the <strong>economic crossover
+            point</strong>. We layer in how much independent research metrics agree on each
+            occupation&apos;s AI exposure (Yale Budget Lab), and how fast each industry actually adopts
+            new technology. The result: a task-by-task map of where AI has economic incentive to
+            replace human labor, and when.
+          </p>
+          <p className="text-[12px] text-[var(--muted)] mt-2">
+            This is <strong className="text-[var(--foreground)]">not</strong> a prediction of job loss.
+            Economic viability is necessary but not sufficient — real adoption depends on organizational
+            inertia, regulation, quality requirements, and new task creation.
+          </p>
+        </div>
+
+        {/* Step 1: How we decouple tasks from jobs */}
         <div>
           <h4 className="text-[14px] font-semibold text-[var(--foreground)] mb-2">
-            The core idea
+            Step 1: Decoupling tasks from jobs
           </h4>
-          <p className="text-[13px] text-[var(--muted)] leading-relaxed">
-            Every job is a bundle of tasks. We decompose each job into 5-8 task components using the{" "}
-            <a
-              href="https://www.onetonline.org/find/descriptor/browse/4.A/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline hover:text-[var(--foreground)]"
-            >
-              O*NET Generalized Work Activities
-            </a>{" "}
-            taxonomy, which categorizes all work into four domains: Information Input (observing, gathering),
-            Mental Processes (analyzing, deciding), Work Output (physical activity), and Interacting
-            with Others (communicating, leading).
+          <p className="text-[13px] text-[var(--muted)] leading-relaxed mb-3">
+            AI doesn&apos;t automate jobs — it automates tasks. A &ldquo;financial analyst&rdquo; is really
+            a bundle of 5-8 distinct activities: some are highly automatable (data gathering, report
+            drafting), others are not (client relationships, judgment calls). To model AI impact
+            accurately, we need to decompose every job into these atomic units of work.
           </p>
+          <p className="text-[13px] text-[var(--muted)] leading-relaxed mb-4">
+            We do this in three layers, each building on the last:
+          </p>
+
+          <div className="space-y-3 text-[12px]">
+            {/* Layer 1: O*NET */}
+            <div className="rounded-lg border border-black/[0.06] p-4">
+              <div className="flex items-start gap-3">
+                <span className="text-[var(--foreground)] font-bold text-[14px] shrink-0 w-6 h-6 rounded-full bg-black/[0.04] flex items-center justify-center">1</span>
+                <div>
+                  <p className="font-semibold text-[var(--foreground)] mb-1">
+                    O*NET work activities — what people actually do
+                  </p>
+                  <p className="text-[var(--muted)] mb-2">
+                    The U.S. Department of Labor&apos;s{" "}
+                    <a
+                      href="https://www.onetonline.org/find/descriptor/browse/4.A/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline hover:text-[var(--foreground)]"
+                    >
+                      Occupational Information Network (O*NET)
+                    </a>{" "}
+                    catalogs every occupation in the economy by its <strong className="text-[var(--foreground)]">Generalized Work Activities</strong> —
+                    a taxonomy of 41 discrete activities organized into four domains:
+                  </p>
+                  <ul className="text-[var(--muted)] space-y-0.5 ml-4 list-disc list-outside">
+                    <li><strong className="text-[var(--foreground)]">Information Input</strong> — observing, gathering, monitoring data</li>
+                    <li><strong className="text-[var(--foreground)]">Mental Processes</strong> — analyzing, deciding, evaluating, planning</li>
+                    <li><strong className="text-[var(--foreground)]">Work Output</strong> — physical activity, operating equipment, handling objects</li>
+                    <li><strong className="text-[var(--foreground)]">Interacting with Others</strong> — communicating, leading, coordinating, negotiating</li>
+                  </ul>
+                  <p className="text-[var(--muted)] mt-2">
+                    We map these 41 activities into 8 task categories (information processing, communication,
+                    analysis, creative, coordination, physical, interpersonal, technical) and estimate what share
+                    of each job&apos;s working hours fall into each category. The{" "}
+                    <a
+                      href="https://www.pewresearch.org/social-trends/2023/07/26/2023-ai-and-jobs-methodology-for-onet-analysis/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline hover:text-[var(--foreground)]"
+                    >
+                      Pew Research Center methodology
+                    </a>{" "}
+                    for mapping O*NET activities to AI exposure informed our category design.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Layer 2: BLS wages + employment */}
+            <div className="rounded-lg border border-black/[0.06] p-4">
+              <div className="flex items-start gap-3">
+                <span className="text-[var(--foreground)] font-bold text-[14px] shrink-0 w-6 h-6 rounded-full bg-black/[0.04] flex items-center justify-center">2</span>
+                <div>
+                  <p className="font-semibold text-[var(--foreground)] mb-1">
+                    BLS employment and wages — the human cost baseline
+                  </p>
+                  <p className="text-[var(--muted)] mb-2">
+                    The Bureau of Labor Statistics&apos;{" "}
+                    <a
+                      href="https://www.bls.gov/oes/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline hover:text-[var(--foreground)]"
+                    >
+                      Occupational Employment and Wage Statistics (OEWS)
+                    </a>{" "}
+                    (May 2024 release) provides median hourly wages and employment counts for all 22 SOC
+                    major occupation groups — covering 154 million workers. This is the human labor cost that
+                    AI compute must undercut to create economic incentive for automation.
+                  </p>
+                  <p className="text-[var(--muted)]">
+                    Gender composition comes from the{" "}
+                    <a
+                      href="https://www.bls.gov/cps/cpsaat11.htm"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline hover:text-[var(--foreground)]"
+                    >
+                      Current Population Survey (CPS) 2024 annual averages
+                    </a>{" "}
+                    (Table 11), which reports employed persons by detailed occupation and sex.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Layer 3: AI exposure validation */}
+            <div className="rounded-lg border border-black/[0.06] p-4">
+              <div className="flex items-start gap-3">
+                <span className="text-[var(--foreground)] font-bold text-[14px] shrink-0 w-6 h-6 rounded-full bg-black/[0.04] flex items-center justify-center">3</span>
+                <div>
+                  <p className="font-semibold text-[var(--foreground)] mb-1">
+                    AI exposure scores — external validation
+                  </p>
+                  <p className="text-[var(--muted)] mb-2">
+                    Our task decomposition produces an internal model of which jobs are most automatable. To
+                    check whether the model is directionally correct, we compare it against independent
+                    exposure research:
+                  </p>
+                  <ul className="text-[var(--muted)] space-y-1 ml-4 list-disc list-outside">
+                    <li>
+                      <a
+                        href="https://budgetlab.yale.edu/research/labor-market-ai-exposure-what-do-we-know"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline hover:text-[var(--foreground)]"
+                      >
+                        Yale Budget Lab (Gimbel et al., 2026)
+                      </a>{" "}
+                      — Meta-analysis comparing 6 independent AI exposure metrics (Eloundou et al., Eisfeldt et al.,
+                      Felten et al., Tomlinson et al.) across 778 occupations using PCA-weighted z-scores. This is the
+                      source of the &ldquo;Certainty&rdquo; indicator in the economy view.
+                    </li>
+                    <li>
+                      <a
+                        href="https://github.com/rmmomin/jobs-ai-exposure"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline hover:text-[var(--foreground)]"
+                      >
+                        Yale Budget Lab data repository
+                      </a>{" "}
+                      — GPT-scored AI exposure (0-10 scale) for 342 BLS Occupational Outlook Handbook occupations
+                      across three dimensions: direct automation, indirect productivity, and digital work emphasis.
+                      Validated at Pearson 0.878 against the Yale PCA composite and 0.885 against OpenAI/UPenn&apos;s
+                      GPTs-are-GPTs (Eloundou et al.). This is the source of the &ldquo;Exposure&rdquo; scores in the economy view.
+                    </li>
+                    <li>
+                      <a
+                        href="https://arxiv.org/abs/2303.10130"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline hover:text-[var(--foreground)]"
+                      >
+                        Eloundou et al. (2024) — GPTs are GPTs
+                      </a>{" "}
+                      — The foundational exposure study: human and GPT-4 annotators assessed which O*NET tasks
+                      LLMs could speed up, finding ~80% of workers have at least 10% of tasks affected.
+                    </li>
+                  </ul>
+                  <p className="text-[var(--muted)] mt-2">
+                    The key finding from this validation: all metrics agree on which jobs have <em>low</em> exposure
+                    (construction, maintenance, farming) but disagree on the <em>magnitude</em> of exposure for highly
+                    exposed jobs (tech, legal, office/admin). We surface this disagreement as the certainty indicator
+                    so readers know where the evidence is strong and where it is contested.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Layer 4: Industry adoption speed */}
+            <div className="rounded-lg border border-black/[0.06] p-4">
+              <div className="flex items-start gap-3">
+                <span className="text-[var(--foreground)] font-bold text-[14px] shrink-0 w-6 h-6 rounded-full bg-black/[0.04] flex items-center justify-center">4</span>
+                <div>
+                  <p className="font-semibold text-[var(--foreground)] mb-1">
+                    Industry adoption speed — how fast sectors actually move
+                  </p>
+                  <p className="text-[var(--muted)] mb-2">
+                    Even when AI is cheaper than human labor for a task, industries adopt at very different speeds.
+                    We model this as a multiplier on the adoption lag, based on a five-factor composite:
+                  </p>
+                  <ul className="text-[var(--muted)] space-y-0.5 ml-4 list-disc list-outside">
+                    <li><strong className="text-[var(--foreground)]">Regulatory burden</strong> (25%) — OECD Product Market Regulation data</li>
+                    <li><strong className="text-[var(--foreground)]">Digital maturity</strong> (25%) — IT workforce share by industry (BLS), McKinsey Digital America</li>
+                    <li><strong className="text-[var(--foreground)]">Competitive pressure</strong> (20%) — Industry concentration; Autor et al. (2020)</li>
+                    <li><strong className="text-[var(--foreground)]">Labor rigidity</strong> (15%) — Union density by industry (BLS); Acemoglu &amp; Restrepo (2020)</li>
+                    <li><strong className="text-[var(--foreground)]">Organizational complexity</strong> (15%) — Firm size distributions; Brynjolfsson et al. (2021)</li>
+                  </ul>
+                  <p className="text-[var(--muted)] mt-2">
+                    Technology adopts fastest (0.6x lag) and Healthcare slowest (1.6x lag).
+                    Combined with per-task adoption lags (1.5-4.5 years), informed by Griliches (1957), Comin &amp;
+                    Hobijn (2010), and Rogers (2003), this produces realistic deployment timelines rather than
+                    theoretical cost-crossover dates.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Token economics model */}
         <div>
           <h4 className="text-[14px] font-semibold text-[var(--foreground)] mb-2">
-            Token economics: from API pricing to $/hour
+            Step 2: Token economics — from API pricing to $/hour
           </h4>
           <p className="text-[13px] text-[var(--muted)] leading-relaxed mb-3">
             For each task, we calculate what it costs in real AI API spend to produce one hour of
@@ -105,7 +299,7 @@ export default function MethodologySection() {
         {/* Cost decline rates */}
         <div>
           <h4 className="text-[14px] font-semibold text-[var(--foreground)] mb-2">
-            How fast costs are falling
+            Step 3: How fast costs are falling
           </h4>
           <p className="text-[13px] text-[var(--muted)] leading-relaxed mb-3">
             Each task category has an annual cost decline rate. These are derived from observed data:
@@ -177,7 +371,7 @@ export default function MethodologySection() {
         {/* The crossover calculation */}
         <div>
           <h4 className="text-[14px] font-semibold text-[var(--foreground)] mb-2">
-            The crossover calculation
+            Step 4: The crossover calculation
           </h4>
           <div className="text-[13px] text-[var(--muted)] leading-relaxed space-y-2">
             <p>
@@ -203,47 +397,14 @@ export default function MethodologySection() {
         {/* Exposure scores & measurement uncertainty */}
         <div>
           <h4 className="text-[14px] font-semibold text-[var(--foreground)] mb-2">
-            AI exposure scores and measurement uncertainty
+            Reading the certainty indicators
           </h4>
-          <div className="text-[13px] text-[var(--muted)] leading-relaxed space-y-2">
-            <p>
-              The economy view includes two additional data layers from the{" "}
-              <a
-                href="https://budgetlab.yale.edu/research/labor-market-ai-exposure-what-do-we-know"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline hover:text-[var(--foreground)]"
-              >
-                Yale Budget Lab (Gimbel, Kendall, Kulsakdinun, 2026)
-              </a>{" "}
-              and its{" "}
-              <a
-                href="https://github.com/rmmomin/jobs-ai-exposure"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline hover:text-[var(--foreground)]"
-              >
-                companion data repository
-              </a>:
-            </p>
-            <p>
-              <strong className="text-[var(--foreground)]">Exposure scores (0-10)</strong> —
-              GPT-scored AI exposure for 342 BLS occupations across three dimensions: direct automation
-              effects, indirect productivity effects, and digital work emphasis. Scores are aggregated to
-              the 22 SOC major groups using unweighted means. Validated against six independent academic
-              exposure metrics with high correlation (Pearson 0.878 with Yale PCA composite, 0.885 with
-              OpenAI/UPenn GPTs-are-GPTs). These appear in the &ldquo;Exposure&rdquo; column and tooltips.
-            </p>
-            <p>
-              <strong className="text-[var(--foreground)]">Measurement certainty</strong> —
-              The Yale study compared six AI exposure metrics (Eloundou et al., Eisfeldt et al., Felten et al.,
-              Tomlinson et al.) across 778 occupations using PCA-weighted z-scores. The key finding: metrics
-              broadly agree on which occupations have low exposure (e.g., construction, maintenance) but
-              disagree significantly on the <em>magnitude</em> of exposure for highly exposed occupations
-              (e.g., computer/math, legal). We display this as a &ldquo;Certainty&rdquo; indicator:
-            </p>
-          </div>
-          <div className="overflow-x-auto mt-3">
+          <p className="text-[13px] text-[var(--muted)] leading-relaxed mb-3">
+            The economy view displays a &ldquo;Certainty&rdquo; badge for each occupation group, derived from
+            the Yale Budget Lab&apos;s cross-metric variance analysis. This tells you how much independent
+            researchers agree about each group&apos;s exposure:
+          </p>
+          <div className="overflow-x-auto">
             <table className="w-full text-[12px]">
               <thead>
                 <tr className="border-b border-black/[0.06]">
@@ -325,6 +486,31 @@ export default function MethodologySection() {
               </a>
             </li>
             <li>
+              <a href="https://www.bls.gov/oes/" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">
+                Bureau of Labor Statistics — Occupational Employment and Wage Statistics, May 2024
+              </a>
+            </li>
+            <li>
+              <a href="https://www.bls.gov/cps/cpsaat11.htm" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">
+                Bureau of Labor Statistics — Current Population Survey 2024 (Table 11, gender by occupation)
+              </a>
+            </li>
+            <li>
+              <a href="https://budgetlab.yale.edu/research/labor-market-ai-exposure-what-do-we-know" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">
+                Yale Budget Lab (Gimbel et al., 2026): &quot;Labor Market AI Exposure: What Do We Know?&quot; — 6 exposure metrics across 778 occupations
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/rmmomin/jobs-ai-exposure" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">
+                Yale Budget Lab data repository — GPT-scored exposure for 342 BLS occupations (0-10 scale)
+              </a>
+            </li>
+            <li>
+              <a href="https://arxiv.org/abs/2303.10130" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">
+                Eloundou et al. (2024): &quot;GPTs are GPTs&quot; — foundational AI task exposure study (OpenAI/UPenn)
+              </a>
+            </li>
+            <li>
               <a href="https://github.com/CharlesD353/ai-labour-calculator" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">
                 Dillon (2025): &quot;AI Labour Calculator&quot; — task tier compute requirements, S-curve substitutability model
               </a>
@@ -345,11 +531,6 @@ export default function MethodologySection() {
               </a>
             </li>
             <li>
-              <a href="https://www.bls.gov/oes/" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">
-                Bureau of Labor Statistics — Occupational Employment and Wage Statistics (median hourly wages)
-              </a>
-            </li>
-            <li>
               <a href="https://www.pewresearch.org/social-trends/2023/07/26/2023-ai-and-jobs-methodology-for-onet-analysis/" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">
                 Pew Research Center — methodology for mapping O*NET activities to AI exposure
               </a>
@@ -357,16 +538,6 @@ export default function MethodologySection() {
             <li>
               <a href="https://arxiv.org/html/2510.13369v1" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">
                 Moravec&apos;s Paradox Applied to Labor Markets — why physical tasks are harder to automate than cognitive ones
-              </a>
-            </li>
-            <li>
-              <a href="https://budgetlab.yale.edu/research/labor-market-ai-exposure-what-do-we-know" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">
-                Yale Budget Lab (Gimbel et al., 2026): &quot;Labor Market AI Exposure: What Do We Know?&quot; — meta-analysis of 6 exposure metrics across 778 occupations
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/rmmomin/jobs-ai-exposure" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">
-                Yale Budget Lab data repository — GPT-scored exposure for 342 BLS occupations (0-10 scale), industry-weighted NAICS exposures
               </a>
             </li>
           </ul>
