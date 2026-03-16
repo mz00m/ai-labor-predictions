@@ -11,7 +11,7 @@ const stripData = [
 
   // SECTION 2a: EMPLOYEE PRODUCTIVITY
   { study: "Median (18 studies)", value: 20, range: [0, 73] as [number, number], metric: "Employee productivity", sourceUrl: "/research", quote: "Median effect across 18 task & firm productivity studies. Individual results range from \u22122% (AI workslop) to +73% (human-AI ad teams), with most studies clustered between +14% and +37%." },
-  { study: "Goldman Sachs '25", value: 15, range: null, metric: "Employee productivity", sourceUrl: "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce", quote: "Generative AI will raise the level of labor productivity in the US and other developed markets by around 15% when fully adopted and incorporated into regular production." },
+  { study: "Demirer et al. '25", value: 26, range: null, metric: "Employee productivity", sourceUrl: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4945566", quote: "Across three field experiments and 4,867 developers, our analysis reveals a 26.08% increase in completed tasks among developers using the AI coding assistant. Less experienced developers had higher adoption rates and greater productivity gains." },
   { study: "Brynjolfsson et al. '25", value: 15, range: null, metric: "Employee productivity", sourceUrl: "https://academic.oup.com/qje/article/140/2/889/7990658", quote: "Access to AI assistance increases worker productivity, as measured by issues resolved per hour, by 15% on average, with substantial heterogeneity across workers." },
 
   // SECTION 3: HIRING SLOWDOWN
@@ -22,12 +22,13 @@ const stripData = [
   // SECTION 4: PROJECTED DISPLACEMENT
   { study: "WEF '25", value: 8, range: null, metric: "Projected displacement", sourceUrl: "https://www.weforum.org/publications/the-future-of-jobs-report-2025/", quote: "92 million roles will be displaced by 2030, equivalent to 8% of current jobs, offset by the creation of 170 million new roles for a net gain of 78 million. 40% of employers expect to reduce headcount where AI can automate tasks." },
   { study: "Goldman Sachs '25", value: 7, range: [3, 14] as [number, number], metric: "Projected displacement", sourceUrl: "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce", quote: "AI could displace 6\u20137% of the US workforce if widely adopted. We remain skeptical that AI will lead to large employment reductions over the next decade." },
-  { study: "Forrester '26", value: 6, range: null, metric: "Projected displacement", sourceUrl: "https://www.forrester.com/press-newsroom/forrester-impact-ai-jobs-forecast/", quote: "AI and automation could account for 6% of total US job losses by 2030, equating to 10.4 million roles. Widespread AI-driven job replacement remains unlikely. AI will augment 20% of jobs rather than eliminate them." },
+  { study: "Bloom et al. '26", value: 1, range: null, metric: "Projected displacement", sourceUrl: "https://www.nber.org/papers/w34836", quote: "Surveying nearly 6,000 executives across the US, UK, Germany, and Australia, firms predict AI will cut employment by 0.7% over the next 3 years. Over 80% of firms report no impact on employment over the past 3 years." },
 
   // SECTION 5: MEASURED JOB LOSS
   { study: "Dallas Fed '26", value: 0.1, range: null, metric: "Measured job loss", sourceUrl: "https://www.dallasfed.org/research/economics/2026/0106", quote: "We find some correlation across occupations between employment declines and AI exposure, but only for younger workers. This suggests only a slight impact on the aggregate unemployment rate so far." },
   { study: "Yale Budget Lab '25", value: 0, range: null, metric: "Measured job loss", sourceUrl: "https://budgetlab.yale.edu/research/evaluating-impact-ai-labor-market-current-state-affairs", quote: "Currently, measures of exposure, automation, and augmentation show no sign of being related to changes in employment or unemployment." },
-  { study: "Goldman Sachs '25", value: 0, range: null, metric: "Measured job loss", sourceUrl: "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce", quote: "There is no economically or statistically significant correlation between AI exposure and job growth, unemployment, job finding rates, layoff rates, weekly hours, or average hourly earnings." },
+  { study: "Humlum & Vestergaard '25", value: 0, range: null, metric: "Measured job loss", sourceUrl: "https://www.nber.org/papers/w33777", quote: "Linking large-scale adoption surveys to Danish administrative records, we estimate precise null effects on earnings and hours, ruling out effects larger than 2% two years after ChatGPT's release." },
+  { study: "ECB '26", value: 0, range: null, metric: "Measured job loss", sourceUrl: "https://www.ecb.europa.eu/press/blog/date/2026/html/ecb.blog20260304~d9e34fc95f.en.html", quote: "Firms making significant use of AI were about 4% more likely to hire additional employees. There is no marked difference in overall hiring intentions between AI-using and non-AI-using firms." },
 ];
 
 const sectionMeta = [
@@ -79,7 +80,7 @@ const leftGroups: {
   {
     label: "Measured",
     context: "Actual job loss so far",
-    startBar: 12, barCount: 3,
+    startBar: 12, barCount: 4,
   },
 ];
 
@@ -274,7 +275,7 @@ export default function FunnelStrip() {
         {/* Bottom note */}
         <div className="px-4 sm:px-6 py-2.5 border-t border-black/[0.06] bg-black/[0.01] flex items-center justify-between gap-4">
           <p className="text-[11px] text-[var(--muted)] leading-relaxed">
-            15 studies &middot; Hover for quotes and links
+            16 studies &middot; Hover for quotes and links
           </p>
           <a
             href="/research"
