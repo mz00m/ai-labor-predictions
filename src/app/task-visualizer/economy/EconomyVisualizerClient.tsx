@@ -108,6 +108,35 @@ export default function EconomyVisualizerClient() {
             , with category-level cost decline rates derived from observed AI inference cost trends.
           </p>
           <p>
+            AI exposure scores (0-10) and measurement certainty indicators are from the{" "}
+            <a
+              href="https://budgetlab.yale.edu/research/labor-market-ai-exposure-what-do-we-know"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-[var(--foreground)]"
+            >
+              Yale Budget Lab
+            </a>{" "}
+            (Gimbel, Kendall, Kulsakdinun, 2026), which compared six independent AI exposure
+            metrics across 778 occupations. Occupation-level scores are GPT-scored across 342 BLS
+            occupations from the study&apos;s{" "}
+            <a
+              href="https://github.com/rmmomin/jobs-ai-exposure"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-[var(--foreground)]"
+            >
+              data repository
+            </a>
+            , validated against Eloundou et al. (Pearson 0.885) and the Yale PCA composite
+            (Pearson 0.878). Certainty reflects how much the six metrics agree: low variance
+            means strong consensus (e.g., construction), high variance means significant
+            disagreement (e.g., computer/math, legal).
+          </p>
+          <p>
+            Gender composition from BLS Current Population Survey 2024 annual averages (Table 11).
+          </p>
+          <p>
             <strong className="text-[var(--foreground)]">Critical caveat:</strong> Task automation
             does not equal job loss. These projections show economic incentive to automate, not
             actual displacement. Real-world adoption is moderated by: organizational inertia (1-5
