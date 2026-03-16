@@ -7,6 +7,21 @@ import { getTierConfig } from "@/lib/evidence-tiers";
 import type { SearchResult } from "@/lib/search-sources";
 
 /* ------------------------------------------------------------------ */
+/*  Easter egg: secret query                                           */
+/* ------------------------------------------------------------------ */
+
+const EASTER_EGG_QUERY = "are robots coming for my job";
+const EASTER_EGG_RESULT: SearchResult = {
+  id: "easter-egg-robots",
+  title: "Probably not. But your tasks might change.",
+  publisher: "Evidence tier: vibes",
+  excerpt: "",
+  evidenceTier: 4 as SearchResult["evidenceTier"],
+  usedIn: ["overall-us-displacement"],
+  datePublished: "2026-01-01",
+};
+
+/* ------------------------------------------------------------------ */
 /*  Props                                                              */
 /* ------------------------------------------------------------------ */
 
@@ -63,6 +78,11 @@ export default function SearchCombobox({ mobile }: SearchComboboxProps) {
 
     if (debounceRef.current) clearTimeout(debounceRef.current);
     debounceRef.current = setTimeout(() => {
+      if (value.trim().toLowerCase() === EASTER_EGG_QUERY) {
+        setResults([EASTER_EGG_RESULT]);
+        setIsOpen(true);
+        return;
+      }
       const hits = searchSources(value);
       setResults(hits);
       setIsOpen(value.trim().length > 0);
@@ -252,12 +272,23 @@ export default function SearchCombobox({ mobile }: SearchComboboxProps) {
                   onClick={() => navigateTo(result)}
                   onMouseEnter={() => setActiveIndex(i)}
                 >
-                  {/* Tier dot */}
-                  <span
-                    className="mt-1.5 w-2 h-2 rounded-full shrink-0"
-                    style={{ backgroundColor: tierCfg.color }}
-                    title={tierCfg.label}
-                  />
+                  {/* Tier dot / Easter egg robot icon */}
+                  {result.id === "easter-egg-robots" ? (
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" className="mt-1 shrink-0 text-[var(--muted)]" aria-hidden="true">
+                      <rect x="3" y="5" width="10" height="8" rx="2" stroke="currentColor" strokeWidth="1.2" />
+                      <circle cx="6" cy="9" r="1" fill="currentColor" />
+                      <circle cx="10" cy="9" r="1" fill="currentColor" />
+                      <line x1="6" y1="11.5" x2="10" y2="11.5" stroke="currentColor" strokeWidth="1" strokeLinecap="round" />
+                      <line x1="8" y1="5" x2="8" y2="3" stroke="currentColor" strokeWidth="1" strokeLinecap="round" />
+                      <circle cx="8" cy="2.5" r="0.8" fill="currentColor" />
+                    </svg>
+                  ) : (
+                    <span
+                      className="mt-1.5 w-2 h-2 rounded-full shrink-0"
+                      style={{ backgroundColor: tierCfg.color }}
+                      title={tierCfg.label}
+                    />
+                  )}
 
                   <div className="min-w-0 flex-1">
                     {/* Title */}

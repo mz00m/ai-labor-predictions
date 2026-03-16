@@ -220,4 +220,110 @@ a, button, [role="button"], input, label {
   .sparkline-draw.visible path.spark-area {
     animation: none;
   }
+  .animate-chart-draw {
+    stroke-dashoffset: 0 !important;
+    stroke-dasharray: none !important;
+  }
+}
+
+/* 404 page — broken chart line draw animation */
+@keyframes chart-draw-in {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.animate-chart-draw {
+  animation: chart-draw-in 0.8s ease-out forwards;
+}
+
+/* ---- Microinteractions ---- */
+
+/* Featured read cards: subtle lift + shadow on hover */
+.featured-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.15s ease;
+}
+.featured-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* Section bar title: subtle letter-spacing tightening on hover */
+.section-title {
+  transition: letter-spacing 0.3s ease;
+}
+.group:hover .section-title {
+  letter-spacing: -0.01em;
+}
+
+/* Staggered scroll-reveal for elements entering the viewport */
+@keyframes fade-up-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-up {
+  animation: fade-up-in 0.5s ease-out both;
+}
+
+/* Link underline draw-in effect */
+.link-draw-underline {
+  position: relative;
+  text-decoration: none !important;
+}
+.link-draw-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: currentColor;
+  transition: width 0.25s ease;
+}
+.link-draw-underline:hover::after {
+  width: 100%;
+}
+
+/* Evidence tier dot: gentle pulse on first appearance */
+@keyframes tier-dot-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.4); }
+  100% { transform: scale(1); }
+}
+.tier-dot-enter {
+  animation: tier-dot-pulse 0.4s ease-out;
+}
+
+/* Reduced motion: disable all microinteractions */
+@media (prefers-reduced-motion: reduce) {
+  .featured-card:hover {
+    transform: none;
+  }
+  .animate-fade-up {
+    animation: none;
+    opacity: 1;
+  }
+  .link-draw-underline::after {
+    transition: none;
+  }
+  .tier-dot-enter {
+    animation: none;
+  }
+}
+
+/* Easter egg: flip toast slide-in */
+@keyframes flip-toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

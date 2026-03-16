@@ -64,12 +64,12 @@ export default function FeaturedReads() {
           key={a.url}
           href={a.url}
           {...(a.internal ? {} : { target: "_blank", rel: "noopener noreferrer" })}
-          className={`group border-l-2 ${a.accent} rounded-r-md bg-black/[0.02] dark:bg-white/[0.03] px-2.5 py-2 transition-all hover:bg-black/[0.04] dark:hover:bg-white/[0.06]`}
+          className={`featured-card group border-l-2 ${a.accent} rounded-r-md bg-black/[0.02] dark:bg-white/[0.03] px-2.5 py-2 hover:bg-black/[0.04] dark:hover:bg-white/[0.06]`}
         >
           <p className="text-[10px] font-semibold text-[var(--muted)] uppercase tracking-wide truncate">
             {a.author}{a.date && <span className="opacity-50"> &middot; {a.date}</span>}
           </p>
-          <h3 className="text-[12px] font-bold text-[var(--foreground)] leading-snug mt-0.5 group-hover:text-[var(--accent)] transition-colors line-clamp-2">
+          <h3 className="text-[12px] font-bold text-[var(--foreground)] leading-snug mt-0.5 group-hover:text-[var(--accent)] line-clamp-2" style={{ transition: "color 0.15s ease" }}>
             {a.title}
           </h3>
           <p className="text-[10px] text-[var(--muted)] leading-relaxed mt-0.5 line-clamp-2">

@@ -32,6 +32,8 @@ interface PredictionChartProps {
   showTrendLine?: boolean;
   /** Override chart height in pixels (default: 360 for normal, 80 for compact) */
   height?: number;
+  /** Easter egg: flip chart vertically (negate all values) */
+  flipped?: boolean;
 }
 
 interface ChartDataPoint {
@@ -343,6 +345,7 @@ export default function PredictionChart({
   category,
   showTrendLine = true,
   height,
+  flipped = false,
 }: PredictionChartProps) {
   const chartWrapperRef = useRef<HTMLDivElement>(null);
   const [hoverOverlay, setHoverOverlay] = useState<{
@@ -604,6 +607,12 @@ export default function PredictionChart({
 
   return (
     <div ref={chartWrapperRef} style={{ position: "relative" }}>
+      <div
+        style={{
+          transform: flipped ? "scaleY(-1)" : undefined,
+          transition: "transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)",
+        }}
+      >
       <ResponsiveContainer width="100%" height={height ?? 360}>
         <ComposedChart
           data={chartData}
@@ -621,7 +630,16 @@ export default function PredictionChart({
           <CartesianGrid strokeDasharray="3 3" opacity={0.06} />
           <XAxis
             dataKey="dateStr"
-            tick={{ fontSize: 12, fill: "#6b7280" }}
+            tick={flipped
+              ? (props: Record<string, unknown>) => {
+                  const { x, y, payload } = props as { x: number; y: number; payload: { value: string } };
+                  return (
+                    <text x={x} y={y} transform={`rotate(180, ${x}, ${y})`} textAnchor="middle" dy={-4} fontSize={12} fill="#6b7280">
+                      {payload.value}
+                    </text>
+                  );
+                }
+              : { fontSize: 12, fill: "#6b7280" }}
             tickLine={false}
             axisLine={false}
             padding={{ left: 30, right: 30 }}
@@ -629,10 +647,19 @@ export default function PredictionChart({
           <YAxis
             domain={[yMin, yMax]}
             allowDataOverflow
-            tick={{ fontSize: 12, fill: "#6b7280" }}
+            tick={flipped
+              ? (props: Record<string, unknown>) => {
+                  const { x, y, payload } = props as { x: number; y: number; payload: { value: number } };
+                  return (
+                    <text x={x} y={y} transform={`rotate(180, ${x}, ${y})`} textAnchor="end" dy={4} fontSize={12} fill="#6b7280">
+                      {payload.value}{unit}
+                    </text>
+                  );
+                }
+              : { fontSize: 12, fill: "#6b7280" }}
             tickLine={false}
             axisLine={false}
-            tickFormatter={(v) => `${v}${unit}`}
+            tickFormatter={flipped ? undefined : (v) => `${v}${unit}`}
           />
           <Tooltip
             cursor={false}
@@ -807,6 +834,7 @@ export default function PredictionChart({
           )}
         </ComposedChart>
       </ResponsiveContainer>
+      </div>
       {/* Custom overlay tooltip — works at chart edges where Recharts tooltip doesn't activate */}
       {hoverOverlay && (
         <div
