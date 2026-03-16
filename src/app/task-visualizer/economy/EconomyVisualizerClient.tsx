@@ -6,8 +6,9 @@ import AutomationWaveChart from "@/components/task-visualizer/economy/Automation
 import YearSliderExplorer from "@/components/task-visualizer/economy/YearSliderExplorer";
 import IncomeStrataImpact from "@/components/task-visualizer/economy/IncomeStrataImpact";
 import GenderImpact from "@/components/task-visualizer/economy/GenderImpact";
+import AdaptiveCapacity from "@/components/task-visualizer/economy/AdaptiveCapacity";
 
-type Section = "overview" | "gender" | "wave" | "explorer" | "strata";
+type Section = "overview" | "gender" | "wave" | "explorer" | "strata" | "adaptability";
 
 const SECTIONS: { id: Section; label: string; question: string; description: string }[] = [
   {
@@ -33,6 +34,12 @@ const SECTIONS: { id: Section; label: string; question: string; description: str
     label: "By Income",
     question: "Automation hits different income levels on different timelines",
     description: "Each income tier is broken out with its top occupation groups, projected automation rates at 2028/2032/2036, and which task types are most exposed vs. most durable. Click any occupation row to explore its individual tasks.",
+  },
+  {
+    id: "adaptability",
+    label: "Adaptability",
+    question: "AI exposure and worker adaptability are positively correlated — but not for everyone",
+    description: "Most workers in highly AI-exposed occupations have strong adaptive capacity (savings, transferable skills, urban location, younger age). But 6.1 million clerical/admin workers face both high exposure and low adaptability. Based on Manning & Aguirre (NBER, 2026).",
   },
   {
     id: "gender",
@@ -82,6 +89,7 @@ export default function EconomyVisualizerClient() {
       {/* Section content */}
       {activeSection === "overview" && <WorkforceOverview />}
       {activeSection === "gender" && <GenderImpact />}
+      {activeSection === "adaptability" && <AdaptiveCapacity />}
       {activeSection === "wave" && <AutomationWaveChart />}
       {activeSection === "explorer" && <YearSliderExplorer />}
       {activeSection === "strata" && <IncomeStrataImpact />}

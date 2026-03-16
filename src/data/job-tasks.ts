@@ -100,6 +100,11 @@ export interface JobProfile {
   category: string; // broad occupation group
   onetCode?: string;
   tasks: JobTask[];
+  /** Adaptive capacity index (0-1), from Manning/Aguirre NBER w34705.
+   *  Occupation-level score — reflects occupation characteristics, not individual workers. */
+  adaptiveCapacity?: number;
+  /** High AI exposure + bottom quartile adaptive capacity */
+  highVulnerability?: boolean;
 }
 
 export const JOB_PROFILES: JobProfile[] = [
@@ -4680,6 +4685,95 @@ export const JOB_PROFILES: JobProfile[] = [
     ],
   },
 ];
+
+/**
+ * Adaptive capacity scores by job profile ID.
+ * Source: Manning & Aguirre, NBER w34705 (January 2026).
+ *
+ * Scores mapped from the paper's 7 major occupation categories to our job profiles.
+ * Jobs explicitly called out in the paper (e.g., secretary, admin) get specific scores;
+ * others inherit from their SOC major group. highVulnerability = high exposure + bottom
+ * quartile AC (the paper's 6.1M most-at-risk workers).
+ */
+const ADAPTIVE_CAPACITY_MAP: Record<string, { ac: number; hv?: boolean }> = {
+  // Professional, Managerial, Technical — AC=0.734
+  "accountant": { ac: 0.73 },
+  "software-developer": { ac: 0.78 },
+  "marketing-manager": { ac: 0.74 },
+  "lawyer": { ac: 0.76 },
+  "financial-analyst": { ac: 0.74 },
+  "project-manager": { ac: 0.72 },
+  "hr-specialist": { ac: 0.70 },
+  "data-analyst": { ac: 0.76 },
+  "product-manager": { ac: 0.75 },
+  "graphic-designer": { ac: 0.68 },
+  "journalist": { ac: 0.66 },
+  "ux-designer": { ac: 0.74 },
+  "technical-writer": { ac: 0.70 },
+  "pr-specialist": { ac: 0.70 },
+  "copywriter": { ac: 0.65 },
+  "video-editor": { ac: 0.66 },
+  "operations-manager": { ac: 0.73 },
+  "it-manager": { ac: 0.76 },
+  "general-operations-manager": { ac: 0.74 },
+  "management-analyst": { ac: 0.74 },
+  "supply-chain-analyst": { ac: 0.72 },
+  "merch-buyer": { ac: 0.60 },
+  // Administrative Support — AC=0.360, high vulnerability
+  "customer-service-rep": { ac: 0.35, hv: true },
+  "executive-assistant": { ac: 0.32, hv: true },
+  "paralegal": { ac: 0.45 },
+  "receptionist": { ac: 0.30, hv: true },
+  "cashier": { ac: 0.32, hv: true },
+  "hotel-front-desk": { ac: 0.33, hv: true },
+  "loan-officer": { ac: 0.50 },
+  "insurance-agent": { ac: 0.48 },
+  // Education — AC=0.600
+  "teacher-k12": { ac: 0.60 },
+  "college-professor": { ac: 0.68 },
+  "school-counselor": { ac: 0.58 },
+  // Healthcare — mixed
+  "registered-nurse": { ac: 0.55 },
+  "physician": { ac: 0.62 },
+  "pharmacist": { ac: 0.55 },
+  "dental-hygienist": { ac: 0.50 },
+  "nursing-assistant": { ac: 0.35, hv: true },
+  "medical-assistant": { ac: 0.38 },
+  "home-health-aide": { ac: 0.30, hv: true },
+  // Service — AC=0.454
+  "therapist": { ac: 0.52 },
+  "social-worker": { ac: 0.48 },
+  "chef-line-cook": { ac: 0.42 },
+  "restaurant-manager": { ac: 0.50 },
+  "retail-store-manager": { ac: 0.50 },
+  "security-guard": { ac: 0.40 },
+  // Sales — AC=0.487
+  "sales-representative": { ac: 0.50 },
+  "real-estate-agent": { ac: 0.52 },
+  "retail-salesperson": { ac: 0.42 },
+  // Trades — AC=0.449
+  "electrician": { ac: 0.46 },
+  "plumber": { ac: 0.45 },
+  "construction-manager": { ac: 0.52 },
+  "automotive-mechanic": { ac: 0.44 },
+  "hvac-technician": { ac: 0.45 },
+  "maintenance-repair-worker": { ac: 0.42 },
+  // Transportation — AC=0.401
+  "truck-driver": { ac: 0.38 },
+  "delivery-driver": { ac: 0.36 },
+  "warehouse-worker": { ac: 0.34, hv: true },
+  "laborer-material-mover": { ac: 0.32 },
+  "janitor-custodian": { ac: 0.30 },
+};
+
+// Apply adaptive capacity scores to job profiles
+for (const profile of JOB_PROFILES) {
+  const mapping = ADAPTIVE_CAPACITY_MAP[profile.id];
+  if (mapping) {
+    profile.adaptiveCapacity = mapping.ac;
+    if (mapping.hv) profile.highVulnerability = true;
+  }
+}
 
 /**
  * Deployment overhead: real-world automation costs beyond raw API calls.

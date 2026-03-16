@@ -363,6 +363,8 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
                     adjustedShares={adjustedShares}
                     humanWagePerHr={selectedJob.medianWagePerHr}
                     industrySpeedMultiplier={industrySpeedMultiplier}
+                    adaptiveCapacity={selectedJob.adaptiveCapacity}
+                    highVulnerability={selectedJob.highVulnerability}
                   />
                 </div>
               )}

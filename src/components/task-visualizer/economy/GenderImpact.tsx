@@ -187,6 +187,19 @@ export default function GenderImpact() {
 
   return (
     <div>
+      {/* Manning/Aguirre vulnerability callout */}
+      <div className="bg-[#EC4899]/[0.06] border border-[#EC4899]/20 rounded-xl p-4 mb-6">
+        <p className="text-[13px] font-semibold text-[#EC4899] mb-1">
+          Research highlight: Women are 81% of the most vulnerable workers
+        </p>
+        <p className="text-[12px] text-[var(--muted)] leading-relaxed">
+          Manning &amp; Aguirre (NBER, 2026) find that women make up approximately 81.3% of workers
+          in occupations with both high AI exposure and low adaptive capacity (ability to transition
+          to other jobs). These are concentrated in clerical and administrative roles. Only 4.9% of
+          high-vulnerability workers hold a bachelor&apos;s degree or higher.
+        </p>
+      </div>
+
       {/* Big stat cards */}
       <div className="grid grid-cols-1 sm:grid-cols-4 gap-3 mb-8">
         <div className="rounded-xl bg-black/[0.02] border border-black/[0.06] p-4">
