@@ -145,7 +145,7 @@ function TierButton({
     >
       <button
         onClick={onClick}
-        className={`relative inline-flex items-center gap-1.5 text-[12px] font-medium cursor-pointer transition-all duration-200 ${
+        className={`btn-press relative inline-flex items-center gap-1.5 text-[12px] font-medium cursor-pointer transition-all duration-200 ${
           compact ? "px-3 sm:px-4 py-2.5" : "px-3 py-1.5"
         } ${
           !isLast && !compact ? "border-r border-[var(--border)]" : ""
@@ -156,7 +156,7 @@ function TierButton({
         } hover:bg-[var(--border)]/30`}
       >
         <span
-          className={`inline-block rounded-full flex-shrink-0 transition-all duration-200 ${
+          className={`tier-dot-interactive inline-block rounded-full flex-shrink-0 transition-all duration-200 ${
             compact ? "w-1.5 h-1.5" : "w-2 h-2"
           }`}
           style={{ backgroundColor: config.color }}

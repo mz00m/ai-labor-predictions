@@ -7,6 +7,7 @@ import { getSourceCount, getSourceCountsByTier } from "@/lib/search-sources";
 import EvidenceFilter from "@/components/EvidenceFilter";
 import PredictionSummaryCard from "@/components/PredictionSummaryCard";
 import ResearchFeed from "@/components/ResearchFeed";
+import ScrollReveal from "@/components/ScrollReveal";
 
 const predictions = getAllPredictions();
 const tierCounts = getSourceCountsByTier();
@@ -49,51 +50,57 @@ export default function PredictionsPage() {
 
         {/* Job Displacement & Restructuring */}
         <section id="displacement" className="mt-16">
-          <div className="mb-8 flex items-start gap-3">
-            <div className="w-1 self-stretch rounded-full bg-red-400/60 shrink-0" />
-            <div>
-              <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
-                Job Displacement &amp; Restructuring
-              </h2>
-              <p className="text-[15px] text-[var(--muted)] mt-2 max-w-2xl">
-                Projected share of jobs eliminated, restructured, or significantly transformed by
-                AI. Sector-specific estimates are higher than the ~3% economy-wide average because
-                they measure the most-exposed segments, not the full workforce. Most evidence points
-                to task-level transition rather than wholesale replacement
-              </p>
+          <ScrollReveal>
+            <div className="mb-8 flex items-start gap-3">
+              <div className="w-1 self-stretch rounded-full bg-red-400/60 shrink-0" />
+              <div>
+                <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
+                  Job Displacement &amp; Restructuring
+                </h2>
+                <p className="text-[15px] text-[var(--muted)] mt-2 max-w-2xl">
+                  Projected share of jobs eliminated, restructured, or significantly transformed by
+                  AI. Sector-specific estimates are higher than the ~3% economy-wide average because
+                  they measure the most-exposed segments, not the full workforce. Most evidence points
+                  to task-level transition rather than wholesale replacement
+                </p>
+              </div>
             </div>
-          </div>
+          </ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
-            {displacement.map((p) => (
-              <PredictionSummaryCard
-                key={p.id}
-                prediction={p}
-                selectedTiers={selectedTiers}
-              />
+            {displacement.map((p, i) => (
+              <ScrollReveal key={p.id} delay={i * 60}>
+                <PredictionSummaryCard
+                  prediction={p}
+                  selectedTiers={selectedTiers}
+                />
+              </ScrollReveal>
             ))}
           </div>
         </section>
 
         {/* Wage Impact */}
         <section id="wages" className="mt-12">
-          <div className="mb-8 flex items-start gap-3">
-            <div className="w-1 self-stretch rounded-full bg-blue-400/60 shrink-0" />
-            <div>
-              <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
-                Wage Impact
-              </h2>
-              <p className="text-[15px] text-[var(--muted)] mt-2 max-w-xl">
-                How AI adoption is projected to affect compensation across worker segments
-              </p>
+          <ScrollReveal>
+            <div className="mb-8 flex items-start gap-3">
+              <div className="w-1 self-stretch rounded-full bg-blue-400/60 shrink-0" />
+              <div>
+                <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
+                  Wage Impact
+                </h2>
+                <p className="text-[15px] text-[var(--muted)] mt-2 max-w-xl">
+                  How AI adoption is projected to affect compensation across worker segments
+                </p>
+              </div>
             </div>
-          </div>
+          </ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
-            {wages.map((p) => (
-              <PredictionSummaryCard
-                key={p.id}
-                prediction={p}
-                selectedTiers={selectedTiers}
-              />
+            {wages.map((p, i) => (
+              <ScrollReveal key={p.id} delay={i * 60}>
+                <PredictionSummaryCard
+                  prediction={p}
+                  selectedTiers={selectedTiers}
+                />
+              </ScrollReveal>
             ))}
           </div>
         </section>
@@ -101,28 +108,31 @@ export default function PredictionsPage() {
         {/* AI Adoption */}
         {adoption.length > 0 && (
           <section className="mt-12">
-            <div className="mb-8 flex items-start gap-3">
-              <div className="w-1 self-stretch rounded-full bg-emerald-400/60 shrink-0" />
-              <div>
-                <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
-                  AI Adoption
-                </h2>
-                <p className="text-[15px] text-[var(--muted)] mt-2 max-w-2xl">
-                  How rapidly companies are deploying AI, how much of the workforce is exposed, and
-                  corporate signaling on earnings calls.{" "}
-                  <strong className="text-[var(--foreground)]">
-                    Exposure does not mean displacement or job loss.
-                  </strong>
-                </p>
+            <ScrollReveal>
+              <div className="mb-8 flex items-start gap-3">
+                <div className="w-1 self-stretch rounded-full bg-emerald-400/60 shrink-0" />
+                <div>
+                  <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
+                    AI Adoption
+                  </h2>
+                  <p className="text-[15px] text-[var(--muted)] mt-2 max-w-2xl">
+                    How rapidly companies are deploying AI, how much of the workforce is exposed, and
+                    corporate signaling on earnings calls.{" "}
+                    <strong className="text-[var(--foreground)]">
+                      Exposure does not mean displacement or job loss.
+                    </strong>
+                  </p>
+                </div>
               </div>
-            </div>
+            </ScrollReveal>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
-              {adoption.map((p) => (
-                <PredictionSummaryCard
-                  key={p.id}
-                  prediction={p}
-                  selectedTiers={selectedTiers}
-                />
+              {adoption.map((p, i) => (
+                <ScrollReveal key={p.id} delay={i * 60}>
+                  <PredictionSummaryCard
+                    prediction={p}
+                    selectedTiers={selectedTiers}
+                  />
+                </ScrollReveal>
               ))}
             </div>
           </section>

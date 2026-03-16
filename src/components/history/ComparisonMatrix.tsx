@@ -90,7 +90,7 @@ export default function ComparisonMatrix() {
                   {row.preElec}
                 </td>
                 <td
-                  className="py-3 px-3 text-[12px] font-medium rounded-sm"
+                  className="matrix-cell py-3 px-3 text-[12px] font-medium rounded-sm"
                   style={{
                     backgroundColor: "#2563eb08",
                     color: "#1e40af",
@@ -98,11 +98,11 @@ export default function ComparisonMatrix() {
                 >
                   {row.postElec}
                 </td>
-                <td className="py-3 px-3 text-[12px] text-[var(--muted)]">
+                <td className="matrix-cell py-3 px-3 text-[12px] text-[var(--muted)]">
                   {row.preAI}
                 </td>
                 <td
-                  className="py-3 px-3 text-[12px] font-medium rounded-sm"
+                  className="matrix-cell py-3 px-3 text-[12px] font-medium rounded-sm"
                   style={{
                     backgroundColor: "#7c3aed08",
                     color: "#5b21b6",
