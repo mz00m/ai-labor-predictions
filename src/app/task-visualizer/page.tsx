@@ -20,15 +20,6 @@ export default function TaskVisualizerPage() {
           breaks your job into its tasks and shows you which ones face that pressure first,
           which ones stay human for a long time, and how the economics are shifting.
         </p>
-        <p className="text-[14px] text-[var(--muted)] mt-2 max-w-2xl leading-relaxed">
-          Pick a job title below, or search by name above.{" "}
-          <a
-            href="/task-visualizer/economy"
-            className="text-[var(--accent)] hover:underline font-medium"
-          >
-            See the full US economy view
-          </a>
-        </p>
       </header>
 
       <JobTaskVisualizerWrapper />

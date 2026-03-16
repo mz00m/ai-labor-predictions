@@ -141,6 +141,23 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
     <div>
       {/* Job selector */}
       <div className="mb-6">
+        {/* CTA prompt */}
+        {!selectedJob && (
+          <div className="mb-5 px-5 py-4 rounded-xl bg-[var(--accent)]/[0.07] border border-[var(--accent)]/[0.15] max-w-2xl">
+            <p className="text-[15px] font-semibold text-[var(--foreground)]">
+              Pick a job title from the categories below, or search by name:
+            </p>
+            <p className="text-[13px] text-[var(--muted)] mt-1">
+              Each job is broken into its individual tasks so you can see where AI pressure hits first.{" "}
+              <a
+                href="/task-visualizer/economy"
+                className="text-[var(--accent)] hover:underline font-medium"
+              >
+                Or see the full US economy view &rarr;
+              </a>
+            </p>
+          </div>
+        )}
         {/* Search bar */}
         <div className="relative mb-4">
           <input
