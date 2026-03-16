@@ -1,14 +1,14 @@
 {
   "id": "arxiv-how-well-does-2026",
-  "abstract": "This study systematically examines how well AI agent benchmarks reflect real-world human work by analyzing 43 benchmarks and 72,342 tasks across 1,016 U.S. occupations. The authors find substantial mismatches between agent development efforts, which tend to be programming-centric, and the actual distribution of human labor and economic value. They characterize agent utility by autonomy levels and propose three principles—coverage, realism, and granular evaluation—for designing benchmarks that better capture socially important and technically challenging forms of work.",
+  "abstract": "This study systematically examines how well AI agent benchmarks reflect real-world human work by mapping 43 benchmarks and 72,342 tasks onto O*NET occupational taxonomies covering 1,016 U.S. occupations. The authors find that agent development is overwhelmingly concentrated in the Computer and Mathematical domain, which accounts for only 7.6% of US employment, while highly digitized domains like Management (88% digital), Legal (70%), and Architecture/Engineering (71%) receive minimal benchmark coverage. The most-targeted agent skills cover less than 5% of total US employment, and interpersonal interaction skills — which permeate most real-world jobs — are largely absent from benchmarks.",
   "keyFindings": [
-    "Analysis of 43 benchmarks containing 72,342 tasks reveals substantial mismatches between agent development focus and real-world labor market distribution across 1,016 U.S. occupations.",
-    "Agent development efforts are disproportionately programming-centric compared to where human labor and economic value are actually concentrated.",
-    "Current agent benchmarks show limited alignment with human employment and capital allocation patterns in the broader labor market.",
-    "Agent autonomy levels vary significantly across different work scenarios, requiring different interaction strategies.",
-    "Three measurable principles—coverage, realism, and granular evaluation—are proposed for designing benchmarks that better reflect socially important and technically challenging work."
+    "Agent benchmarks are overwhelmingly concentrated in Computer and Mathematical domain, which accounts for only 7.6% of total US employment",
+    "Management (88% digital, 1.4% of benchmarks), Legal (70% digital, 0.3%), and Architecture/Engineering (71% digital, 0.7%) are heavily digitized but sparsely benchmarked",
+    "The two most-targeted fine-grained skills — Getting Information (3.1% of employment) and Working with Computers (2.4%) — together cover less than 5% of US employment",
+    "Benchmarks collectively cover 56.5% of the domain taxonomy but 85.4% of the skill taxonomy across 43 benchmarks and 72,342 tasks",
+    "Agent autonomy drops sharply as task complexity increases: most domains show little to no coverage at complexity levels above 6"
   ],
-  "methodology": "Systematic analysis of 43 AI agent benchmarks containing 72,342 tasks mapped to work domains and skills. Comparison of benchmark task distribution against 1,016 real-world U.S. occupations using employment and capital allocation data. Assessment of agent autonomy levels across targeted work areas.",
-  "qualifiers": "None stated",
-  "fetchedAt": "2026-03-09"
+  "methodology": "Systematic mapping of 43 AI agent benchmarks (72,342 tasks) to O*NET occupational taxonomies using LLM-based annotation with manual validation (91.2% domain accuracy, 95.5% skill accuracy). Employment and capital statistics from BLS (2024). Workflow induction from agent trajectories to measure task complexity and agent autonomy levels. Coverage-aware sampling with permutation-based sensitivity analysis (500 permutations per benchmark).",
+  "qualifiers": "Study focuses on benchmark coverage, not actual deployment or labor market impact. Physical work domains are underrepresented in available robotics benchmarks. Task complexity measure captures component complexity but not coordinative or dynamic complexity. Agent autonomy comparisons are limited by inconsistent agent/LM pairings across benchmarks. The mapping from benchmark tasks to occupations is approximate — a single task may span multiple domains.",
+  "fetchedAt": "2026-03-16"
 }

@@ -262,6 +262,15 @@
       "label": "Wang et al.: AI benchmarks cover 85% of work skills but only 57% of job domains"
     },
     {
+      "date": "2026-03-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "wang-neubig-agent-benchmarks-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "CMU/Stanford: Agent benchmarks target Computer/Math domain — only 7.6% of US employment"
+    },
+    {
       "date": "2026-03-05",
       "direction": "up",
       "sourceIds": [
