@@ -214,6 +214,55 @@ export function SignalsWatermark({ color }: WatermarkProps) {
   );
 }
 
+/** Demand elasticity — upward lines branching out, representing job creation outpacing displacement */
+export function DemandElasticityWatermark({ color }: WatermarkProps) {
+  return (
+    <svg width="220" height="70" viewBox="0 0 220 70" fill="none" className="overflow-visible">
+      {/* Base line draws */}
+      <polyline
+        points="10,55 60,45 110,35"
+        stroke={color} strokeWidth="2" fill="none" strokeLinejoin="round"
+        strokeDasharray="200" strokeDashoffset="200"
+        className="group-hover:animate-[wm-draw_0.5s_ease-out_forwards]"
+      />
+      {/* Branch 1 — jobs created (steeper upward) */}
+      <polyline
+        points="110,35 145,20 180,10 210,5"
+        stroke={color} strokeWidth="2" fill="none" strokeLinejoin="round"
+        strokeDasharray="200" strokeDashoffset="200"
+        className="group-hover:animate-[wm-draw_0.5s_ease-out_0.4s_forwards]"
+      />
+      {/* Branch 2 — jobs displaced (shallow) */}
+      <polyline
+        points="110,35 145,40 180,42 210,43"
+        stroke={color} strokeWidth="1.5" fill="none" strokeLinejoin="round"
+        strokeDasharray="200" strokeDashoffset="200"
+        strokeOpacity="0.5"
+        className="group-hover:animate-[wm-draw_0.5s_ease-out_0.4s_forwards]"
+      />
+      {/* Area between branches — net gain */}
+      <path
+        d="M110,35 145,20 180,10 210,5 210,43 180,42 145,40 110,35Z"
+        fill={color} opacity="0"
+        className="group-hover:animate-[wm-fill-soft_0.5s_ease-out_0.6s_forwards]"
+      />
+      {/* "+" symbol fades in */}
+      <text
+        x="175" y="30" textAnchor="middle"
+        fill={color} fontSize="14" fontWeight="800" opacity="0"
+        className="group-hover:animate-[wm-text-in_0.3s_ease-out_0.8s_forwards]"
+      >
+        +
+      </text>
+      {/* Fork dot */}
+      <circle
+        cx={110} cy={35} r="0" fill={color}
+        className="group-hover:animate-[wm-pop_0.35s_ease-out_0.35s_forwards]"
+      />
+    </svg>
+  );
+}
+
 /** Productivity plateau — line draws boldly, gap zone pulses */
 export function ProductivityWatermark({ color }: WatermarkProps) {
   return (
