@@ -1,21 +1,20 @@
-"use client";
-
-import { useState } from "react";
-import { EvidenceTier } from "@/lib/types";
 import { getAllPredictions, getLastUpdated, getHeroStats } from "@/lib/data-loader";
-import { getSourceCount, getSourceCountsByTier } from "@/lib/search-sources";
-import EvidenceFilter from "@/components/EvidenceFilter";
-import PredictionSummaryCard from "@/components/PredictionSummaryCard";
+import { getSourceCount } from "@/lib/search-sources";
 import NewsTicker from "@/components/NewsTicker";
-import ResearchFeed from "@/components/ResearchFeed";
-import FunnelStrip from "@/components/FunnelStrip";
 import FeaturedReads from "@/components/FeaturedReads";
-import ConceptExplainers from "@/components/ConceptExplainers";
+import SectionBar from "@/components/SectionBar";
+import {
+  PredictionsWatermark,
+  TaskVisualizerWatermark,
+  EconomyFunnelWatermark,
+  HistoryTimelineWatermark,
+  SignalsWatermark,
+  ProductivityWatermark,
+} from "@/components/section-watermarks";
 
 const predictions = getAllPredictions();
 const lastUpdated = getLastUpdated();
 const heroStats = getHeroStats();
-const tierCounts = getSourceCountsByTier();
 
 function formatUpdatedDate(iso: string): string {
   const [y, m, d] = iso.split("-");
@@ -24,12 +23,6 @@ function formatUpdatedDate(iso: string): string {
 }
 
 export default function Home() {
-  const [selectedTiers, setSelectedTiers] = useState<EvidenceTier[]>([1, 2, 3, 4]);
-
-  const displacement = predictions.filter((p) => p.category === "displacement");
-  const wages = predictions.filter((p) => p.category === "wages");
-  const adoption = predictions.filter((p) => p.category === "adoption");
-
   const totalSources = getSourceCount();
 
   return (
@@ -38,9 +31,9 @@ export default function Home() {
       <div className="relative overflow-hidden -mx-6 sm:-mx-10 px-6 sm:px-10 pt-1 pb-0 sm:pt-2 sm:pb-0">
         {/* Background gradient orbs */}
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-          <div className="absolute -top-24 -left-24 w-[500px] h-[500px] rounded-full bg-[#5C61F6]/[0.04] blur-3xl" />
-          <div className="absolute -bottom-32 right-0 w-[400px] h-[400px] rounded-full bg-[#5C61F6]/[0.03] blur-3xl" />
-          <div className="absolute top-1/2 left-1/3 w-[300px] h-[300px] rounded-full bg-[#3b82f6]/[0.02] blur-3xl" />
+          <div className="absolute -top-24 -left-24 w-[420px] h-[420px] rounded-full bg-[#5C61F6]/[0.04] blur-3xl" />
+          <div className="absolute -top-16 right-0 w-[350px] h-[350px] rounded-full bg-[#5C61F6]/[0.03] blur-3xl" />
+          <div className="absolute top-1/3 left-1/3 w-[280px] h-[280px] rounded-full bg-[#3b82f6]/[0.02] blur-3xl" />
           {/* Subtle grid pattern */}
           <svg className="absolute inset-0 w-full h-full opacity-[0.03]" aria-hidden="true">
             <defs>
@@ -79,12 +72,12 @@ export default function Home() {
               <p className="relative z-[2] text-[10px] font-bold uppercase tracking-widest text-[var(--muted)] mb-1.5"><span className="text-[9px] font-light opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 mr-0.5">~</span>Productivity boost</p>
               <p className="relative z-[2] text-[11px] text-[var(--muted)] opacity-50 leading-snug">Median of 18 studies</p>
             </a>
-            <a href="#displacement" className="group/stat relative overflow-hidden pt-6 pb-12 px-4 no-underline text-center">
+            <a href="/predictions" className="group/stat relative overflow-hidden pt-6 pb-12 px-4 no-underline text-center">
               <span className="absolute inset-x-0 -bottom-4 flex items-end justify-center stat-number text-[120px] sm:text-[150px] font-black leading-none pointer-events-none select-none transition-colors duration-200 text-black/[0.10] group-hover/stat:text-black/[0.20]" style={{ maskImage: 'linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 85%)', WebkitMaskImage: 'linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 85%)' }}>{heroStats.projectedJobLoss}<span className="text-[50px] sm:text-[60px] font-normal opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 ml-0.5">%</span></span>
               <p className="relative z-[2] text-[10px] font-bold uppercase tracking-widest text-[var(--muted)] mb-1.5"><span className="text-[9px] font-light opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 mr-0.5">~</span>Projected job loss</p>
               <p className="relative z-[2] text-[11px] text-[var(--muted)] opacity-50 leading-snug">Weighted avg of {heroStats.projectedEstimateCount} estimates</p>
             </a>
-            <a href="#displacement" className="group/stat relative overflow-hidden pt-6 pb-12 px-4 no-underline text-center">
+            <a href="/predictions" className="group/stat relative overflow-hidden pt-6 pb-12 px-4 no-underline text-center">
               <span className="absolute inset-x-0 -bottom-4 flex items-end justify-center stat-number text-[120px] sm:text-[150px] font-black leading-none pointer-events-none select-none transition-colors duration-200 text-emerald-600/[0.12] group-hover/stat:text-emerald-600/[0.25]" style={{ maskImage: 'linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 85%)', WebkitMaskImage: 'linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 85%)' }}>{heroStats.measuredJobLoss}<span className="text-[50px] sm:text-[60px] font-normal opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 ml-0.5">%</span></span>
               <p className="relative z-[2] text-[10px] font-bold uppercase tracking-widest text-[var(--muted)] mb-1.5"><span className="text-[9px] font-light opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 mr-0.5">~</span>Measured job loss</p>
               <p className="relative z-[2] text-[11px] text-[var(--muted)] opacity-50 leading-snug">Yale, Goldman, Dallas Fed</p>
@@ -92,7 +85,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* News Ticker — overlaps the bottom of the numbers, clipping them like a real object */}
+        {/* News Ticker — overlaps the bottom of the numbers, clipping them */}
         <div className="relative z-[3] -mt-6">
           <NewsTicker />
         </div>
@@ -114,115 +107,66 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Evidence Funnel */}
-      <section className="mt-20">
-        <FunnelStrip />
-      </section>
-
-      {/* Section break — Predictions Over Time */}
-      <div className="relative -mx-6 sm:-mx-10 mt-20">
-        <div className="h-1 bg-gradient-to-r from-[#3ECFAE] via-[#6B7BF7] to-[#F7C96B]" />
-        <div className="px-6 sm:px-10 pt-10 pb-2">
-          <h2 className="text-[28px] sm:text-[36px] font-black tracking-tight text-[var(--foreground)] leading-tight mb-3">
-            Predictions Over Time
-          </h2>
-          <p className="text-[15px] text-[var(--muted)] leading-relaxed max-w-2xl">
-            {predictions.length} predictions across job displacement, wages, and AI adoption, each with its own trend chart, source list, and weighted estimate built from {totalSources}+ sources. Click any tile to explore. Every source is color-coded by evidence quality; use the tiers below to filter what appears.
-          </p>
-        </div>
-      </div>
-
-      {/* Evidence Filter + all prediction sections in one block so sticky works */}
-      <div className="mt-12">
-        <EvidenceFilter
-          selectedTiers={selectedTiers}
-          onChange={setSelectedTiers}
-          tierCounts={tierCounts}
-          sticky
+      {/* Section Bars */}
+      <div className="mt-10">
+        <SectionBar
+          title={`${predictions.length} Predictions for How AI Will Impact Jobs`}
+          description={`Displacement, wages, and adoption \u2014 each with trend data, source quality ratings, and a weighted estimate from ${totalSources}+ sources.`}
+          href="/predictions"
+          tag="Predictions"
+          accentColor="#6B7BF7"
+          watermark={<PredictionsWatermark color="#6B7BF7" />}
+          stat={{ value: `${totalSources}+`, label: "sources" }}
         />
 
-        {/* Job Displacement & Restructuring */}
-        <section id="displacement" className="mt-16">
-          <div className="mb-8 flex items-start gap-3">
-            <div className="w-1 self-stretch rounded-full bg-red-400/60 shrink-0" />
-            <div>
-              <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
-                Job Displacement &amp; Restructuring
-              </h2>
-              <p className="text-[15px] text-[var(--muted)] mt-2 max-w-2xl">
-                Projected share of jobs eliminated, restructured, or significantly transformed by AI. Most evidence points to task-level transition rather than wholesale replacement
-              </p>
-            </div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
-            {displacement.map((p) => (
-              <PredictionSummaryCard
-                key={p.id}
-                prediction={p}
-                selectedTiers={selectedTiers}
-              />
-            ))}
-          </div>
-        </section>
+        <SectionBar
+          title="See How It Will Impact Your Job"
+          description="AI doesn't replace whole jobs \u2014 it automates specific tasks. Explore which parts of 800+ occupations are exposed and which remain human-dependent."
+          href="/task-visualizer"
+          tag="Task visualizer"
+          accentColor="#3ECFAE"
+          watermark={<TaskVisualizerWatermark color="#3ECFAE" />}
+          stat={{ value: "800+", label: "occupations" }}
+        />
 
-        {/* Wage Impact */}
-        <section id="wages" className="mt-12">
-          <div className="mb-8 flex items-start gap-3">
-            <div className="w-1 self-stretch rounded-full bg-blue-400/60 shrink-0" />
-            <div>
-              <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
-                Wage Impact
-              </h2>
-              <p className="text-[15px] text-[var(--muted)] mt-2 max-w-xl">
-                How AI adoption is projected to affect compensation across worker segments
-              </p>
-            </div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
-            {wages.map((p) => (
-              <PredictionSummaryCard
-                key={p.id}
-                prediction={p}
-                selectedTiers={selectedTiers}
-              />
-            ))}
-          </div>
-        </section>
+        <SectionBar
+          title="Why Is Nothing Changing?"
+          description="40% of jobs are AI-exposed, but near-zero have measurably vanished. Follow the evidence funnel from exposure through productivity to actual displacement across 15 studies."
+          href="/task-visualizer/economy"
+          tag="J-Curve"
+          accentColor="#F7C96B"
+          watermark={<EconomyFunnelWatermark color="#F7C96B" />}
+          stat={{ value: "15", label: "studies" }}
+        />
 
-        {/* AI Adoption */}
-        {adoption.length > 0 && (
-          <section className="mt-12">
-            <div className="mb-8 flex items-start gap-3">
-              <div className="w-1 self-stretch rounded-full bg-emerald-400/60 shrink-0" />
-              <div>
-                <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
-                  AI Adoption
-                </h2>
-                <p className="text-[15px] text-[var(--muted)] mt-2 max-w-2xl">
-                  How rapidly companies are deploying AI, how much of the workforce is exposed, and corporate signaling on earnings calls. <strong className="text-[var(--foreground)]">Exposure does not mean displacement or job loss.</strong>
-                </p>
-              </div>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
-              {adoption.map((p) => (
-                <PredictionSummaryCard
-                  key={p.id}
-                  prediction={p}
-                  selectedTiers={selectedTiers}
-                />
-              ))}
-            </div>
-          </section>
-        )}
+        <SectionBar
+          title="What Happens When 1 Worker Equals 2"
+          description="Workers using AI are 20-40% faster at individual tasks. But the economy isn't growing faster. Understanding that gap is the key to predicting what comes next."
+          href="/productivity"
+          tag="Productivity"
+          accentColor="#3B4494"
+          watermark={<ProductivityWatermark color="#3B4494" />}
+          stat={{ value: "~0%", label: "GDP effect" }}
+        />
 
+        <SectionBar
+          title="We've Seen This Before"
+          description="Every major technology \u2014 steam, electricity, computers \u2014 followed the same pattern: displacement first, then more jobs than before. AI is compressing that timeline."
+          href="/history"
+          tag="History"
+          accentColor="#9A9AAF"
+          watermark={<HistoryTimelineWatermark color="#9A9AAF" />}
+        />
 
-        {/* Concept Explainers */}
-        <ConceptExplainers />
-
-        {/* Research Feed */}
-        <section id="research-feed" className="mt-10">
-          <ResearchFeed selectedTiers={selectedTiers} />
-        </section>
+        <SectionBar
+          title="Early Indicators"
+          description="AI tool downloads are surging \u2014 PyPI and npm package data, SDK adoption curves, and developer activity signal where automation is landing before the labor data catches up."
+          href="/signals"
+          tag="Signals"
+          accentColor="#F26D6D"
+          watermark={<SignalsWatermark color="#F26D6D" />}
+          stat={{ value: "Live", label: "data" }}
+        />
       </div>
     </div>
   );
