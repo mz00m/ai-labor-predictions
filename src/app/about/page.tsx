@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Methodology from "@/components/Methodology";
-import TransparencyCosts from "@/components/TransparencyCosts";
+import costsData from "@/data/hosting-costs.json";
 import RecentSources from "@/components/RecentSources";
 import { getRecentSources } from "@/lib/sources";
 
@@ -26,8 +26,20 @@ export const metadata: Metadata = {
   },
 };
 
+function computeTotalCost(): number {
+  const data = costsData as { projectStartDate: string; categories: { services: { monthlyCost: number; oneTimeCost: number; costType: string; startDate: string; endDate: string | null }[] }[] };
+  return data.categories.flatMap((c) => c.services).reduce((sum, s) => {
+    if (s.costType === "one-time" || s.costType === "cumulative") return sum + s.oneTimeCost;
+    const start = new Date(s.startDate);
+    const end = s.endDate ? new Date(s.endDate) : new Date();
+    const months = Math.ceil((end.getTime() - start.getTime()) / (30.44 * 24 * 60 * 60 * 1000));
+    return sum + s.monthlyCost * Math.max(months, 0);
+  }, 0);
+}
+
 export default function AboutPage() {
   const recentSources = getRecentSources(20);
+  const totalCost = computeTotalCost().toLocaleString("en-US", { style: "currency", currency: "USD", minimumFractionDigits: 2 });
 
   return (
     <div className="flex flex-col lg:flex-row lg:gap-10">
@@ -60,7 +72,7 @@ export default function AboutPage() {
             evidence-grounded response to what&rsquo;s coming.
           </p>
           <p className="text-[14px] text-[var(--muted)] leading-relaxed">
-            It&rsquo;s a weekend project, built in the open, and very much a work in progress.
+            Matt Zieger started this as a weekend vibe coding project 22 days ago and has made 763 improvements and counting. In total this has cost {totalCost}.
           </p>
           <p className="text-[14px] text-[var(--muted)] leading-relaxed">
             If you have ideas on how to make it better, I&rsquo;d love to hear from you:{" "}
@@ -130,13 +142,6 @@ export default function AboutPage() {
           <Methodology />
         </section>
 
-        {/* Divider */}
-        <div className="border-t border-black/[0.06]" />
-
-        {/* What This Costs */}
-        <section id="costs" className="scroll-mt-16">
-          <TransparencyCosts />
-        </section>
       </div>
 
       {/* Right column — compact auto-scrolling recent sources feed */}
