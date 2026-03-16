@@ -108,7 +108,7 @@ export default function FocusRecommendations({
             Learn to work with AI
           </h4>
           <p className="text-[12px] text-[var(--muted)] mb-2">
-            AI is getting capable at these tasks. Become the person who directs AI tools here — your value multiplies.
+            AI is getting capable at these tasks. Become the person who directs AI tools here. Your value multiplies.
           </p>
           <div className="space-y-1.5">
             {augment.map(({ task, share }) => (

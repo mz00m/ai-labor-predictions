@@ -131,10 +131,10 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
   }, [selectedJob]);
 
   const tabs: { id: Tab; label: string; question: string }[] = [
-    { id: "breakdown", label: "Task Breakdown", question: "How is your time spent, and which tasks face the most economic pressure from AI?" },
-    { id: "timeline", label: "Economic Timeline", question: "When does AI become cheaper than human labor for each task?" },
-    { id: "costs", label: "Compute Costs", question: "How fast is AI getting cheaper for each of your specific tasks?" },
-    { id: "benchmarks", label: "Cost Benchmarks", question: "How much does AI compute cost today, and how fast is it falling?" },
+    { id: "breakdown", label: "Task Breakdown", question: "Where does your time go, and which tasks are getting cheaper to do with AI?" },
+    { id: "timeline", label: "Economic Timeline", question: "When will AI be cheaper than a person for each of your tasks?" },
+    { id: "costs", label: "Compute Costs", question: "How fast is AI getting cheaper for your specific tasks?" },
+    { id: "benchmarks", label: "Cost Benchmarks", question: "What does AI compute cost today, and how fast are prices dropping?" },
   ];
 
   return (
@@ -277,8 +277,7 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
                 </button>
               </div>
               <p className="text-[13px] text-[var(--muted)] mt-0.5">
-                {selectedJob.category} — Median wage: ${selectedJob.medianWagePerHr}/hr (BLS) —{" "}
-                {selectedJob.tasks.length} task components
+                {selectedJob.category} · ${selectedJob.medianWagePerHr}/hr median wage (BLS) · {selectedJob.tasks.length} tasks
               </p>
             </div>
             <div className="text-center px-5 py-3 rounded-xl bg-black/[0.02] border border-black/[0.06]">

@@ -180,7 +180,7 @@ export default function AutomationTimeline({
         overhead) drops below human labor cost. Striped extension = estimated institutional
         adoption drag (process change, training, compliance). The gap between cost parity
         and probable adoption is 1.5-4.5 years depending on task type. Neither predicts
-        actual adoption — they frame the economic and organizational constraints.
+        actual adoption. They frame the economic and organizational constraints.
       </p>
     </div>
   );

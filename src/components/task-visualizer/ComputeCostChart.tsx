@@ -129,7 +129,7 @@ function ComputeFloorSummary({
       </div>
       <p className="text-[10px] text-[var(--muted)] mt-2">
         Weighted by task time share. This is the minimum a firm would spend on AI compute
-        to replicate one hour of this role — before any process change, training, or integration.
+        to replicate one hour of this role, before any process change, training, or integration.
       </p>
     </div>
   );
@@ -205,11 +205,11 @@ export default function ComputeCostChart({
       <div className="rounded-lg bg-black/[0.02] border border-black/[0.06] p-3 mb-5">
         <p className="text-[12px] text-[var(--foreground)] leading-relaxed">
           Each line shows the <strong>total production cost for AI to perform one hour</strong> of
-          a task — raw API cost plus a {DEPLOYMENT_OVERHEAD}x deployment overhead
+          a task: raw API cost plus a {DEPLOYMENT_OVERHEAD}x deployment overhead
           (integration engineering, error handling, validation, human review, monitoring).
           When a line drops below the{" "}
           <span className="text-[#EF4444] font-medium">red wage line</span>, the
-          economic case for AI begins — though adoption requires far more than cost parity
+          economic case for AI begins, though adoption requires far more than cost parity
           (process change, training, organizational trust). These costs are higher than the raw API
           costs shown in the Task Breakdown tab because real-world deployment adds significant overhead.
         </p>
@@ -223,7 +223,7 @@ export default function ComputeCostChart({
         <p className="text-[11px] text-[var(--muted)] leading-relaxed">
           Before a firm can even consider deploying AI for a task, it must pay the compute
           floor: the raw cost of running AI inference at production scale. This is the economic
-          baseline — what it costs just to turn the AI on, before integration, validation,
+          baseline: what it costs just to turn the AI on, before integration, validation,
           organizational change, or any human oversight. The lines below show this floor plus
           a {DEPLOYMENT_OVERHEAD}x deployment overhead. The compute floor falls 30-45% per year
           across task types, and it only goes in one direction.
