@@ -10,6 +10,15 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Schaul, Ovide (WaPo)",
+    title: "Which Jobs Are Most Threatened by AI, and Who May Adapt",
+    summary:
+      "Interactive tool mapping 350+ occupations by AI exposure and adaptability. 6.1M clerical workers most vulnerable; 86% women.",
+    date: "Mar 16",
+    url: "https://www.washingtonpost.com/technology/interactive/2026/jobs-most-affected-ai-automation/",
+    accent: "border-l-rose-500",
+  },
+  {
     author: "Noah Smith (Noahpinion)",
     title: "The Future Isn\u2019t What It Used to Be",
     summary:
@@ -44,15 +53,6 @@ const articles: Article[] = [
     date: "Mar 10",
     url: "https://www.piie.com/blogs/realtime-economics/2026/research-ai-and-labor-market-still-first-inning",
     accent: "border-l-amber-500",
-  },
-  {
-    author: "Anthropic (Massenkoff, McCrory)",
-    title: "Labor Market Impacts of AI: New Measure & Early Evidence",
-    summary:
-      "New 'observed exposure' metric. No unemployment rise yet, but young worker hiring slowing in exposed jobs.",
-    date: "Mar 5",
-    url: "https://www.anthropic.com/research/labor-market-impacts",
-    accent: "border-l-purple-500",
   },
 ];
 
