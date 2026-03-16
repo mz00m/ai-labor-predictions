@@ -10,6 +10,7 @@ import {
   HistoryTimelineWatermark,
   SignalsWatermark,
   ProductivityWatermark,
+  DemandElasticityWatermark,
 } from "@/components/section-watermarks";
 
 const predictions = getAllPredictions();
@@ -166,6 +167,15 @@ export default function Home() {
           accentColor="#F26D6D"
           watermark={<SignalsWatermark color="#F26D6D" />}
           stat={{ value: "Live", label: "data" }}
+        />
+
+        <SectionBar
+          title="What if AI Creates More Jobs Than It Changes?"
+          description="Very possible based on historic data. Every general-purpose technology eventually created more jobs than it displaced — and AI may be no different."
+          href="/demand-elasticity"
+          tag="Demand elasticity"
+          accentColor="#34D399"
+          watermark={<DemandElasticityWatermark color="#34D399" />}
         />
       </div>
     </div>
