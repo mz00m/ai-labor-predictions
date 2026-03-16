@@ -5,7 +5,8 @@
   "description": "Percentage of US firms using AI in production, measured by the Census Bureau's Business Trends and Outlook Survey (BTOS) \u2014 the most rigorous measure available. Survey-based estimates from consultancies run 5-10x higher due to self-selected samples.",
   "category": "adoption",
   "unit": "% of firms (Census BTOS)",
-  "currentValue": 19.9,
+  "currentValue": 17.5,
+  "aggregationMethod": "latest",
   "timeHorizon": "Current measure",
   "history": [
     {
@@ -42,17 +43,6 @@
       "metricType": "survey"
     },
     {
-      "date": "2025-08-15",
-      "value": 37.4,
-      "confidenceLow": 32,
-      "confidenceHigh": 43,
-      "sourceIds": [
-        "bick-blandin-deming-nber-2025"
-      ],
-      "evidenceTier": 1,
-      "metricType": "survey"
-    },
-    {
       "date": "2025-10-01",
       "value": 9.7,
       "confidenceLow": 7,
@@ -75,17 +65,6 @@
       "metricType": "survey"
     },
     {
-      "date": "2026-01-01",
-      "value": 36,
-      "confidenceLow": 30,
-      "confidenceHigh": 42,
-      "sourceIds": [
-        "hartley-genai-labor-2026"
-      ],
-      "evidenceTier": 1,
-      "metricType": "survey"
-    },
-    {
       "date": "2026-02-26",
       "value": 17.5,
       "confidenceLow": 16,
@@ -95,25 +74,6 @@
       ],
       "evidenceTier": 1,
       "metricType": "survey"
-    },
-    {
-      "date": "2026-03-04",
-      "value": 66,
-      "sourceIds": [
-        "ecb-safe-ai-hiring-2026"
-      ],
-      "evidenceTier": 3,
-      "metricType": "survey"
-    },
-    {
-      "date": "2026-03-10",
-      "value": 71,
-      "sourceIds": [
-        "bizjournals-ai-layoffs-divide-2026"
-      ],
-      "evidenceTier": 3,
-      "metricType": "survey",
-      "sampleSize": 500
     }
   ],
   "overlays": [
@@ -458,6 +418,33 @@
       ],
       "evidenceTier": 1,
       "label": "Hunt/Cockburn/Bessen: state borders explain 20% of AI adoption distance penalty"
+    },
+    {
+      "date": "2025-08-15",
+      "direction": "up",
+      "sourceIds": [
+        "bick-blandin-deming-nber-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER/Bick et al.: 37.4% of workers use AI (worker-level, not firm-level Census measure)"
+    },
+    {
+      "date": "2026-01-01",
+      "direction": "up",
+      "sourceIds": [
+        "hartley-genai-labor-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Hartley: 36% worker-level AI adoption (broader definition than Census BTOS firm-level measure)"
+    },
+    {
+      "date": "2026-03-04",
+      "direction": "up",
+      "sourceIds": [
+        "ecb-safe-ai-hiring-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "ECB/SAFE: 66% of European firms adopted AI (European scope, not US Census)"
     }
   ],
   "sources": [

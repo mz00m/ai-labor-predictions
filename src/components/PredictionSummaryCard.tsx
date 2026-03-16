@@ -29,9 +29,9 @@ function getBestEstimate(prediction: Prediction, selectedTiers: EvidenceTier[]) 
 function getContextLine(prediction: Prediction, aggregateValue: number): string {
   const v = aggregateValue;
   if (prediction.slug === "overall-us-displacement")
-    return `An estimated ${v}% of US jobs face net displacement from AI by 2030, with roles eliminated or fundamentally restructured.`;
+    return `Projected ${v}% net displacement blends observed near-zero job loss (Yale, Dallas Fed) with economist projections of 5\u201312% by 2030.`;
   if (prediction.slug === "customer-service-automation")
-    return `${v}% of CS interactions projected to be fully handled by AI without human involvement.`;
+    return `${v}% of CS interactions (not jobs) projected to be fully handled by AI without human involvement.`;
   if (prediction.slug === "tech-sector-displacement")
     return `${v}% of tech sector jobs could be displaced by AI coding assistants and automated ops.`;
   if (prediction.slug === "white-collar-professional-displacement")

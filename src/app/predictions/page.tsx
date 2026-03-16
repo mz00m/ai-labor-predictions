@@ -57,7 +57,9 @@ export default function PredictionsPage() {
               </h2>
               <p className="text-[15px] text-[var(--muted)] mt-2 max-w-2xl">
                 Projected share of jobs eliminated, restructured, or significantly transformed by
-                AI. Most evidence points to task-level transition rather than wholesale replacement
+                AI. Sector-specific estimates are higher than the ~3% economy-wide average because
+                they measure the most-exposed segments, not the full workforce. Most evidence points
+                to task-level transition rather than wholesale replacement
               </p>
             </div>
           </div>

@@ -20,7 +20,7 @@ const tierCounts = getSourceCountsByTier();
 
 const CONTEXT_MAP: Record<string, (v: number) => string> = {
   "overall-us-displacement": (v) =>
-    `This means roughly ${v}% of all US jobs are projected to be eliminated or fundamentally restructured by AI and automation by 2030. "Net displacement" accounts for both jobs lost and the fact that some affected roles are restructured rather than fully eliminated. For context, 1% of the US labor force is about 1.69 million workers.`,
+    `This ${v}% is a weighted average blending two different types of evidence. Observed employment data (Yale Budget Lab, Brookings, Dallas Fed) show near-zero measurable job loss from AI so far. Forward-looking projections from economists cluster around 5\u201312% by 2030. The chart distinguishes these visually: solid dots are observed data, dashed dots are projections. For context, 1% of the US labor force is about 1.69 million workers.`,
   "customer-service-automation": (v) =>
     `${v}% of all customer service interactions (phone calls, chat messages, emails) will likely be handled by AI without a human agent ever getting involved. This doesn't mean ${v}% of CS jobs disappear, since the remaining interactions may need more skilled human agents, but headcount reductions are widely expected. Unlike software or creative work, customer service demand is relatively inelastic — consumers don't want more support interactions at lower prices. This makes displacement more likely than demand expansion in this sector.`,
   "tech-sector-displacement": (v) =>
