@@ -389,6 +389,32 @@ export const SOC_EXPOSURE_SCORES: Record<string, { mean: number; min: number; ma
 };
 
 /**
+ * CFO-reported Negative Exposure Index (NEI) by SOC major occupation group.
+ *
+ * Source: Baslandze et al. (2026), "Artificial Intelligence, Productivity,
+ * and the Workforce: Evidence from Corporate Executives."
+ * Federal Reserve Bank of Atlanta / Duke University. Table 6.
+ * Survey of ~750 CFOs (Nov 2025 - Jan 2026).
+ *
+ * NEI = Replacement Mentions / Enhancement Mentions.
+ * Values > 1.0 indicate AI is more frequently described as replacing roles
+ * than enhancing them. Only groups with >= 20 total mentions are reported.
+ *
+ * This provides a real-world executive signal complementing the algorithmic
+ * exposure scores from Eloundou et al. and Yale Budget Lab.
+ */
+export const CFO_SURVEY_NEI: Record<string, { nei: number; label: string }> = {
+  "office-admin":             { nei: 2.025, label: "Strongly negative (most at-risk)" },
+  "business-financial":       { nei: 0.829, label: "Roughly balanced" },
+  "computer-math":            { nei: 0.596, label: "More enhancement" },
+  "legal":                    { nei: 0.471, label: "More enhancement" },
+  "production":               { nei: 0.308, label: "More enhancement" },
+  "sales":                    { nei: 0.298, label: "More enhancement" },
+  "management":               { nei: 0.138, label: "Strongly positive (enhanced)" },
+  "architecture-engineering": { nei: 0.100, label: "Strongly positive (enhanced)" },
+};
+
+/**
  * Maps economy SOC groups to representative job profiles in the task visualizer.
  * Each SOC group links to the most relevant individual job(s) available.
  */
