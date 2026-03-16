@@ -2,6 +2,7 @@ import { getAllPredictions, getLastUpdated, getHeroStats } from "@/lib/data-load
 import { getSourceCount } from "@/lib/search-sources";
 import NewsTicker from "@/components/NewsTicker";
 import FeaturedReads from "@/components/FeaturedReads";
+import FunnelStrip from "@/components/FunnelStrip";
 import SectionBar from "@/components/SectionBar";
 import {
   PredictionsWatermark,
@@ -107,6 +108,11 @@ export default function Home() {
           <FeaturedReads />
         </div>
       </div>
+
+      {/* Evidence Funnel */}
+      <section className="mt-20">
+        <FunnelStrip />
+      </section>
 
       {/* Featured Section Bars */}
       <div className="mt-10">
