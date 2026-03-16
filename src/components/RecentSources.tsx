@@ -18,7 +18,7 @@ export default function RecentSources({ sources }: RecentSourcesProps) {
     if (!el) return;
 
     let raf: number;
-    const speed = 0.4; // px per frame (~24px/sec at 60fps)
+    const speed = 0.25; // px per frame (~15px/sec at 60fps)
 
     function step() {
       if (!paused && el) {
@@ -84,7 +84,7 @@ export default function RecentSources({ sources }: RecentSourcesProps) {
             ref={scrollRef}
             onMouseEnter={() => setPaused(true)}
             onMouseLeave={() => setPaused(false)}
-            className="max-h-[420px] overflow-y-auto px-4 py-3 scrollbar-none"
+            className="max-h-[560px] overflow-y-auto px-4 py-3 scrollbar-none"
             style={{ scrollbarWidth: "none" }}
           >
             {sources.map((source) => {
