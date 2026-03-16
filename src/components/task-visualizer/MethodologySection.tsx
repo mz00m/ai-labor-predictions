@@ -441,6 +441,61 @@ export default function MethodologySection() {
           </p>
         </div>
 
+        {/* Adaptive Capacity Index */}
+        <div>
+          <h4 className="text-[14px] font-semibold text-[var(--foreground)] mb-2">
+            Adaptive capacity: who can transition?
+          </h4>
+          <p className="text-[13px] text-[var(--muted)] leading-relaxed mb-3">
+            Economic exposure tells you which tasks are vulnerable. Adaptive capacity tells you which
+            <em> workers</em> can navigate the transition. We integrate the Manning &amp; Aguirre (NBER, 2026)
+            adaptive capacity index, which measures four dimensions of an occupation&apos;s resilience:
+          </p>
+          <div className="space-y-2 text-[12px] mb-4">
+            <div className="flex gap-3 rounded-lg border border-black/[0.06] p-3">
+              <span className="text-[var(--foreground)] font-semibold shrink-0 w-[140px]">Net liquid wealth</span>
+              <span className="text-[var(--muted)]">
+                Occupation-level median from SIPP 2022-2024 (log-transformed). Measures financial runway
+                to weather job transitions without immediate distress.
+              </span>
+            </div>
+            <div className="flex gap-3 rounded-lg border border-black/[0.06] p-3">
+              <span className="text-[var(--foreground)] font-semibold shrink-0 w-[140px]">Skill transferability</span>
+              <span className="text-[var(--muted)]">
+                Growth-weighted cosine similarity of O*NET Skills and Work Activities across occupations,
+                weighted by BLS 2024-2034 employment projections. Higher = your skills work in more growing fields.
+              </span>
+            </div>
+            <div className="flex gap-3 rounded-lg border border-black/[0.06] p-3">
+              <span className="text-[var(--foreground)] font-semibold shrink-0 w-[140px]">Geographic density</span>
+              <span className="text-[var(--muted)]">
+                Lightcast employment-weighted average log CBSA density. Urban workers have more alternative
+                employers within commuting distance.
+              </span>
+            </div>
+            <div className="flex gap-3 rounded-lg border border-black/[0.06] p-3">
+              <span className="text-[var(--foreground)] font-semibold shrink-0 w-[140px]">Age (fraction 55+)</span>
+              <span className="text-[var(--muted)]">
+                From ACS data. Inverted: occupations with fewer older workers score higher, reflecting
+                longer remaining career horizon and typically greater willingness to retrain.
+              </span>
+            </div>
+          </div>
+          <p className="text-[13px] text-[var(--muted)] leading-relaxed mb-2">
+            The key finding: AI exposure and adaptive capacity are <strong className="text-[var(--foreground)]">positively
+            correlated</strong> (r = 0.502, bootstrap 95% CI: [0.353, 0.624]). Most highly-exposed workers —
+            professionals, managers, technologists — have strong savings, transferable skills, and urban job access.
+            The 6.1 million workers who combine high exposure with low adaptability are concentrated in clerical
+            and administrative support roles.
+          </p>
+          <p className="text-[12px] text-[var(--muted)]">
+            <strong className="text-[var(--foreground)]">Key limitation:</strong> The index measures occupation-level
+            characteristics, not individual workers. Within any occupation, there is substantial heterogeneity in
+            savings, skills, and geography. The index uses equal component weighting for transparency, though
+            components may contribute unequally to actual adaptability.
+          </p>
+        </div>
+
         {/* What this doesn't capture */}
         <div>
           <h4 className="text-[14px] font-semibold text-[var(--foreground)] mb-2">
@@ -538,6 +593,11 @@ export default function MethodologySection() {
             <li>
               <a href="https://arxiv.org/html/2510.13369v1" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">
                 Moravec&apos;s Paradox Applied to Labor Markets — why physical tasks are harder to automate than cognitive ones
+              </a>
+            </li>
+            <li>
+              <a href="https://www.nber.org/papers/w34705" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">
+                Manning &amp; Aguirre (2026): &quot;How Adaptable Are American Workers to AI-Induced Job Displacement?&quot; — adaptive capacity index for 356 occupations (NBER w34705)
               </a>
             </li>
           </ul>

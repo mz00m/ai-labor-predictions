@@ -8,6 +8,18 @@ interface FocusRecommendationsProps {
   adjustedShares: Record<string, number>;
   humanWagePerHr: number;
   industrySpeedMultiplier?: number;
+  adaptiveCapacity?: number;
+  highVulnerability?: boolean;
+}
+
+function getACInterpretation(ac: number): string {
+  if (ac >= 0.65) {
+    return "Workers in this occupation have strong adaptive capacity — above-median savings, transferable skills, and urban job access. If AI transforms this role, most workers are well-positioned to transition.";
+  }
+  if (ac >= 0.45) {
+    return "Workers in this occupation have moderate adaptive capacity. Some workers will transition smoothly, but others may face barriers related to savings, skills, or location.";
+  }
+  return "Workers in this occupation face low adaptive capacity — below-median savings, fewer transferable skills, or geographic constraints. If AI displaces this role, many workers may struggle to find comparable employment.";
 }
 
 export default function FocusRecommendations({
@@ -15,6 +27,8 @@ export default function FocusRecommendations({
   adjustedShares,
   humanWagePerHr,
   industrySpeedMultiplier = 1.0,
+  adaptiveCapacity,
+  highVulnerability,
 }: FocusRecommendationsProps) {
   const { atRisk, augment, invest } = useMemo(() => {
     const analyzed = tasks.map((task) => {
@@ -155,6 +169,39 @@ export default function FocusRecommendations({
               </div>
             ))}
           </div>
+        </div>
+      )}
+
+      {/* Adaptive Capacity context */}
+      {adaptiveCapacity !== undefined && (
+        <div className="mt-6 pt-4 border-t border-black/[0.06]">
+          <h4 className="text-[13px] font-semibold text-[var(--foreground)] mb-2">
+            Adaptability context
+          </h4>
+          <div className="flex items-center gap-3 mb-2">
+            <div
+              className="text-[24px] font-bold tabular-nums"
+              style={{
+                color: adaptiveCapacity >= 0.65 ? "#10B981" : adaptiveCapacity >= 0.45 ? "#F59E0B" : "#EF4444",
+              }}
+            >
+              {(adaptiveCapacity * 100).toFixed(0)}
+            </div>
+            <div className="text-[12px] text-[var(--muted)]">
+              <div>Adaptive Capacity Score (0-100)</div>
+              <div>Manning &amp; Aguirre, NBER 2026</div>
+            </div>
+          </div>
+          {highVulnerability && (
+            <div className="bg-[#EF4444]/[0.06] border border-[#EF4444]/20 rounded-lg px-3 py-2 mb-2">
+              <p className="text-[11px] text-[#EF4444] font-medium">
+                High vulnerability: this occupation combines high AI exposure with low adaptive capacity
+              </p>
+            </div>
+          )}
+          <p className="text-[12px] text-[var(--muted)] leading-relaxed">
+            {getACInterpretation(adaptiveCapacity)}
+          </p>
         </div>
       )}
     </div>
