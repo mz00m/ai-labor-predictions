@@ -1,0 +1,14 @@
+{
+  "id": "bessen-automation-employment-demand-2019",
+  "abstract": "Using data over two centuries for US textile, steel, and auto industries, this paper shows that automation initially spurred job growth because demand was highly elastic, but demand later became satiated, leading to job losses. The central finding is that the elasticity of demand determines whether automation creates or destroys jobs in an industry. A simple model explains this inverted-U pattern and suggests that today's technologies may cause some industries to decline and others to grow, with the main impact being a major reallocation of jobs rather than mass unemployment.",
+  "keyFindings": [
+    "During the 19th century, technologies automated 98% of the labour required to weave a yard of cloth, yet the number of weaving jobs increased for decades",
+    "Labour productivity in cotton textiles grew 2.9% per year (1820-1995), in steel 2.4% per year (1860-1982), and in motor vehicles 1.4% per year (1910-2007)",
+    "Labor productivity in cotton textiles increased nearly thirtyfold during the 19th century while consumption of cotton cloth increased one hundredfold",
+    "The main impact of automation in the near future may be a major reallocation of jobs, even if it does not permanently eliminate large numbers of jobs",
+    "Employment will increase if product demand is sufficiently elastic (price elasticity greater than one); the increase in demand more than offsets the labor-saving effect"
+  ],
+  "methodology": "Historical analysis of US textile, steel, and automotive industries spanning two centuries. Uses consumption and employment data to estimate demand elasticities and their relationship to automation-driven employment changes. Develops a theoretical model where demand follows a lognormal distribution, generating an inverted-U employment pattern as productivity grows. Published in Economic Policy, Volume 34, Issue 100, pp. 589-626.",
+  "qualifiers": "Analysis is based on historical manufacturing industries, not modern AI/knowledge work. The demand elasticity framework may not directly apply to all AI-affected industries. Different industries today have different demand elasticities, making the aggregate employment impact highly heterogeneous and difficult to predict. The paper does not produce specific numerical AI displacement forecasts.",
+  "fetchedAt": "2026-03-16"
+}
