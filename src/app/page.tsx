@@ -69,20 +69,20 @@ export default function Home() {
 
           {/* Hero data triad — numbers emerge from behind the ticker, dissolve upward */}
           <div className="mt-6 relative grid grid-cols-3 place-items-center pb-6">
-            <a href="/research" className="group/stat relative overflow-hidden pt-6 pb-8 sm:pb-12 px-1 sm:px-4 no-underline text-center w-full">
+            <a href="#evidence-funnel" className="group/stat relative overflow-hidden pt-6 pb-8 sm:pb-12 px-1 sm:px-4 no-underline text-center w-full">
               <span className="absolute inset-x-0 -bottom-4 flex items-end justify-center stat-number text-[72px] sm:text-[150px] font-black leading-none pointer-events-none select-none transition-opacity duration-200 opacity-[0.15] group-hover/stat:opacity-[0.25]" style={{ color: 'var(--accent)', letterSpacing: '-0.09em', maskImage: 'linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 85%)', WebkitMaskImage: 'linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 85%)' }}><span className="relative">21<span className="absolute left-full top-0 text-[30px] sm:text-[60px] font-normal opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 ml-0.5">%</span></span></span>
               <p className="relative z-[2] text-[9px] sm:text-[10px] font-bold uppercase tracking-wide sm:tracking-widest text-[var(--muted)] mb-1.5"><span className="text-[9px] font-light opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 mr-0.5">~</span>Productivity boost</p>
               <p className="relative z-[2] text-[10px] sm:text-[11px] text-[var(--muted)] opacity-50 leading-snug">Median of 18 studies</p>
             </a>
-            <a href="/predictions" className="group/stat relative overflow-hidden pt-6 pb-8 sm:pb-12 px-1 sm:px-4 no-underline text-center w-full">
+            <a href="#evidence-funnel" className="group/stat relative overflow-hidden pt-6 pb-8 sm:pb-12 px-1 sm:px-4 no-underline text-center w-full">
               <span className="absolute inset-x-0 -bottom-4 flex items-end justify-center stat-number text-[72px] sm:text-[150px] font-black leading-none pointer-events-none select-none transition-colors duration-200 text-black/[0.10] group-hover/stat:text-black/[0.20]" style={{ maskImage: 'linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 85%)', WebkitMaskImage: 'linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 85%)' }}><span className="relative">{heroStats.projectedJobLoss}<span className="absolute left-full top-0 text-[30px] sm:text-[60px] font-normal opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 ml-0.5">%</span></span></span>
               <p className="relative z-[2] text-[9px] sm:text-[10px] font-bold uppercase tracking-wide sm:tracking-widest text-[var(--muted)] mb-1.5"><span className="text-[9px] font-light opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 mr-0.5">~</span>Projected job loss</p>
               <p className="relative z-[2] text-[10px] sm:text-[11px] text-[var(--muted)] opacity-50 leading-snug">Weighted avg of {heroStats.projectedEstimateCount} estimates</p>
             </a>
-            <a href="/predictions" className="group/stat relative overflow-hidden pt-6 pb-8 sm:pb-12 px-1 sm:px-4 no-underline text-center w-full">
+            <a href="#evidence-funnel" className="group/stat relative overflow-hidden pt-6 pb-8 sm:pb-12 px-1 sm:px-4 no-underline text-center w-full">
               <span className="absolute inset-x-0 -bottom-4 flex items-end justify-center stat-number text-[72px] sm:text-[150px] font-black leading-none pointer-events-none select-none transition-colors duration-200 text-emerald-600/[0.12] group-hover/stat:text-emerald-600/[0.25]" style={{ maskImage: 'linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 85%)', WebkitMaskImage: 'linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 85%)' }}><span className="relative">{heroStats.measuredJobLoss}<span className="absolute left-full top-0 text-[30px] sm:text-[60px] font-normal opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 ml-0.5">%</span></span></span>
               <p className="relative z-[2] text-[9px] sm:text-[10px] font-bold uppercase tracking-wide sm:tracking-widest text-[var(--muted)] mb-1.5"><span className="text-[9px] font-light opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 mr-0.5">~</span>Measured job loss</p>
-              <p className="relative z-[2] text-[10px] sm:text-[11px] text-[var(--muted)] opacity-50 leading-snug">Yale, Goldman, Dallas Fed</p>
+              <p className="relative z-[2] text-[10px] sm:text-[11px] text-[var(--muted)] opacity-50 leading-snug">Yale, NBER, Dallas Fed, ECB</p>
             </a>
           </div>
         </div>
