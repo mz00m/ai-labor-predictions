@@ -63,6 +63,17 @@
       "evidenceTier": 1,
       "dataType": "observed",
       "metricType": "employment"
+    },
+    {
+      "date": "2026-03-13",
+      "value": -1.2,
+      "confidenceLow": -1.6,
+      "confidenceHigh": -0.8,
+      "sourceIds": ["fed-atl-duke-cfo-ai-productivity-2026"],
+      "evidenceTier": 1,
+      "metricType": "survey",
+      "sampleSize": 748,
+      "dataType": "projected"
     }
   ],
   "overlays": [
@@ -218,6 +229,13 @@
       ],
       "evidenceTier": 4,
       "label": "Oks: Bank tellers survived ATMs (task automation) but not iPhones (paradigm shift)"
+    },
+    {
+      "date": "2026-03-13",
+      "direction": "down",
+      "sourceIds": ["fed-atl-duke-cfo-ai-productivity-2026"],
+      "evidenceTier": 1,
+      "label": "Fed/Duke: Finance largest AI productivity gains (>2% in 2026); NEI 1.1"
     }
   ],
   "sources": [
@@ -440,6 +458,16 @@
       "datePublished": "2026-02-19",
       "dateAdded": "2026-03-16",
       "excerpt": "Finance and insurance sector weighted exposure: 7.65/10 across 5.2M workers and 144 occupations. Legal services: 8.38/10 across 1.1M workers. Business/financial operations SOC group: mean 7.32/10 (range 5-9, 22 occupations)."
+    },
+    {
+      "id": "fed-atl-duke-cfo-ai-productivity-2026",
+      "title": "Artificial Intelligence, Productivity, and the Workforce: Evidence from Corporate Executives",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6410338",
+      "publisher": "Federal Reserve Bank of Atlanta / Duke University (Baslandze et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-13",
+      "excerpt": "Finance sector expects the largest AI-driven employment decline: -1.204% in 2026 (95% CI: -1.602% to -0.806%), implying ~111K workers. Finance also sees the largest implied AI productivity gains, exceeding 2% in 2026. Negative Exposure Index of 1.1 indicates more replacement than enhancement mentions.",
+      "dateAdded": "2026-03-16"
     }
   ]
 }

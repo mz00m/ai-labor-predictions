@@ -314,6 +314,13 @@
       ],
       "evidenceTier": 1,
       "label": "NBER: AI exposure and adaptive capacity positively correlated (r=0.502); most exposed workers best positioned"
+    },
+    {
+      "date": "2026-03-13",
+      "direction": "neutral",
+      "sourceIds": ["fed-atl-duke-cfo-ai-productivity-2026"],
+      "evidenceTier": 1,
+      "label": "Fed/Duke: Large firms expect AI workforce cuts; small firms expect modest gains"
     }
   ],
   "sources": [
@@ -575,6 +582,16 @@
       "evidenceTier": 1,
       "datePublished": "2026-01-21",
       "excerpt": "We find a positive correlation (r = 0.502) between AI exposure and a novel measure of worker adaptive capacity to displacement. Higher-income, highly skilled workers in professional occupations typically possess characteristics that enable successful navigation of job transitions.",
+      "dateAdded": "2026-03-16"
+    },
+    {
+      "id": "fed-atl-duke-cfo-ai-productivity-2026",
+      "title": "Artificial Intelligence, Productivity, and the Workforce: Evidence from Corporate Executives",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6410338",
+      "publisher": "Federal Reserve Bank of Atlanta / Duke University (Baslandze et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-13",
+      "excerpt": "Employment effects heterogeneous by firm size: large companies expect AI-driven workforce reductions while smaller firms anticipate modest employment growth. Compositional reallocation of labor both within and across firms, with routine clerical roles declining and skilled-technical roles increasing.",
       "dateAdded": "2026-03-16"
     }
   ]

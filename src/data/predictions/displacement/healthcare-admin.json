@@ -267,6 +267,13 @@
       ],
       "evidenceTier": 1,
       "label": "Google/BIDMC: Pre-visit AI intake safe across 100 real patients, zero safety stops needed"
+    },
+    {
+      "date": "2026-03-13",
+      "direction": "neutral",
+      "sourceIds": ["fed-atl-duke-cfo-ai-productivity-2026"],
+      "evidenceTier": 1,
+      "label": "Fed/Duke: Healthcare NEI 0.69; AI enhances more roles than it replaces"
     }
   ],
   "sources": [
@@ -529,6 +536,16 @@
       "datePublished": "2026-02-19",
       "dateAdded": "2026-03-16",
       "excerpt": "Healthcare and social assistance sector: 4.44/10 weighted exposure (20.7M workers, lowest among white-collar sectors). However, medical records specialists score 9/10 and medical transcriptionists score 10/10 \u2014 the only occupation at maximum exposure."
+    },
+    {
+      "id": "fed-atl-duke-cfo-ai-productivity-2026",
+      "title": "Artificial Intelligence, Productivity, and the Workforce: Evidence from Corporate Executives",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6410338",
+      "publisher": "Federal Reserve Bank of Atlanta / Duke University (Baslandze et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-13",
+      "excerpt": "Healthcare and social assistance: 62.5% of firms AI-exposed, but Negative Exposure Index of 0.688 indicates AI enhances more healthcare roles than it replaces. Consistent with AI complementing analytical and clinical decision tasks.",
+      "dateAdded": "2026-03-16"
     }
   ]
 }

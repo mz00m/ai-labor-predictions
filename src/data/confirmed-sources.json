@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-16",
-  "totalSources": 419,
-  "verifiedCount": 419,
+  "totalSources": 420,
+  "verifiedCount": 420,
   "sources": {
     "manning-aguirre-adaptive-2026": {
       "id": "manning-aguirre-adaptive-2026",
@@ -5769,6 +5769,26 @@
         "creative-industry-displacement",
         "customer-service-automation",
         "healthcare-admin-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "fed-atl-duke-cfo-ai-productivity-2026": {
+      "id": "fed-atl-duke-cfo-ai-productivity-2026",
+      "title": "Artificial Intelligence, Productivity, and the Workforce: Evidence from Corporate Executives",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6410338",
+      "publisher": "Federal Reserve Bank of Atlanta / Duke University (Baslandze et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-13",
+      "excerpt": "Survey of ~750 CFOs finds AI adoption widespread (58.5% in 2025, 85.4% expected 2026). Implied revenue-based labor productivity gains of 0.6% in 2025, 1.8% expected 2026, with largest gains in finance (>2%). Aggregate employment decline <0.4% in 2026 (~502K workers). Routine clerical roles declining; skilled-technical rising. Productivity paradox: reported gains 3x larger than implied revenue-based gains.",
+      "usedIn": [
+        "overall-us-displacement",
+        "financial-services-displacement",
+        "ai-adoption-rate",
+        "customer-service-automation",
+        "white-collar-professional-displacement",
+        "healthcare-admin-displacement",
+        "workforce-ai-exposure"
       ],
       "verified": true,
       "synthetic": false

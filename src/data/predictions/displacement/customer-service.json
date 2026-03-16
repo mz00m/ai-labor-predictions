@@ -265,6 +265,13 @@
       ],
       "evidenceTier": 2,
       "label": "Anthropic: Customer service reps 70.1% observed AI task exposure, rising in API traffic"
+    },
+    {
+      "date": "2026-03-13",
+      "direction": "down",
+      "sourceIds": ["fed-atl-duke-cfo-ai-productivity-2026"],
+      "evidenceTier": 1,
+      "label": "Fed/Duke: Office/admin support highest negative AI exposure index (NEI 2.0)"
     }
   ],
   "sources": [
@@ -503,6 +510,16 @@
       "datePublished": "2026-02-19",
       "dateAdded": "2026-03-16",
       "excerpt": "Business support services (NAICS 561400) has the highest weighted industry exposure at 8.55/10, with customer service representatives at 9/10 comprising 53.8% of sector employment. Office/admin SOC group: mean 7.70/10 (range 4-9)."
+    },
+    {
+      "id": "fed-atl-duke-cfo-ai-productivity-2026",
+      "title": "Artificial Intelligence, Productivity, and the Workforce: Evidence from Corporate Executives",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6410338",
+      "publisher": "Federal Reserve Bank of Atlanta / Duke University (Baslandze et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-13",
+      "excerpt": "Office and administrative support roles exhibit the most negative AI exposure (NEI 2.025), consistent with automation of routine clerical activities such as data entry. Routine clerical employment share expected to decline by 0.76pp in 2026 and 2.19pp by 2028.",
+      "dateAdded": "2026-03-16"
     }
   ]
 }
