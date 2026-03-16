@@ -300,10 +300,10 @@ export default function PredictionDetailPage() {
             Task Visualizer
           </p>
           <p className="text-[14px] text-[var(--foreground)] font-semibold group-hover:text-[var(--accent)] transition-colors">
-            What parts of your job face economic pressure from AI?
+            What parts of your job will be cheaper to do with AI?
           </p>
           <p className="text-[13px] text-[var(--muted)] mt-1">
-            Explore task-level economic exposure for any occupation.
+            See which of your tasks face cost pressure from AI first.
           </p>
         </Link>
         <Link

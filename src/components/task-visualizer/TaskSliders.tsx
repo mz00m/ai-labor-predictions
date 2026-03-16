@@ -43,7 +43,7 @@ export default function TaskSliders({
     <div className="space-y-3">
       <div className="mb-2">
         <p className="text-[12px] text-[var(--muted)]">
-          Adjust sliders to match your actual workload — others rebalance automatically.
+          Adjust sliders to match your actual workload. The others rebalance automatically.
           This changes your overall exposure profile, not when each task becomes automatable.
         </p>
       </div>

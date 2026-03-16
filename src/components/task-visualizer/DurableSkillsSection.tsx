@@ -47,7 +47,7 @@ const DURABLE_SKILLS = [
     id: "judgment-ambiguity",
     name: "Judgment Under Ambiguity",
     description:
-      "When the problem is novel, the stakes are high, and the data is incomplete, humans who can synthesize context and make judgment calls are irreplaceable. This is different from analysis — it requires wisdom.",
+      "When the problem is novel, the stakes are high, and the data is incomplete, humans who can synthesize context and make judgment calls are irreplaceable. This is different from analysis. It requires wisdom.",
     categories: ["analysis-decision"] as TaskCategory[],
     icon: "scale",
   },
@@ -55,7 +55,7 @@ const DURABLE_SKILLS = [
     id: "creative-vision",
     name: "Creative Vision & Taste",
     description:
-      "AI can generate infinite variations. The scarce skill is knowing which one is right — having taste, editorial judgment, and a creative point of view that connects with an audience.",
+      "AI can generate infinite variations. The scarce skill is knowing which one is right: having taste, editorial judgment, and a creative point of view that connects with an audience.",
     categories: ["creative-generative"] as TaskCategory[],
     icon: "sparkle",
   },
@@ -71,7 +71,7 @@ const DURABLE_SKILLS = [
     id: "cross-domain",
     name: "Cross-Domain Integration",
     description:
-      "The most valuable professionals connect knowledge across domains — the engineer who understands the business, the therapist who understands systems. AI excels at depth; humans at bridging.",
+      "The most valuable professionals connect knowledge across domains: the engineer who understands the business, the therapist who understands systems. AI excels at depth; humans at bridging.",
     categories: ["analysis-decision", "interpersonal"] as TaskCategory[],
     icon: "bridge",
   },
@@ -216,7 +216,7 @@ export default function DurableSkillsSection({
         </h3>
         <p className="text-[14px] text-[var(--muted)] max-w-2xl leading-relaxed">
           Automation pressure is real, but it is unevenly distributed. The tasks that are hardest and most
-          expensive to automate are often the ones that matter most — and they represent real opportunity
+          expensive to automate are often the ones that matter most, and they represent real opportunity
           for anyone willing to invest in them.
         </p>
       </div>
@@ -253,7 +253,7 @@ export default function DurableSkillsSection({
                       <div className="bg-white rounded-lg border border-black/[0.08] shadow-lg p-2">
                         <p className="text-[12px] font-medium">{d.category}</p>
                         <p className="text-[11px] text-[var(--muted)]">
-                          {d.timeShare}% of your time — durability: {d.durability}/100
+                          {d.timeShare}% of your time · durability: {d.durability}/100
                         </p>
                       </div>
                     );
@@ -299,7 +299,7 @@ export default function DurableSkillsSection({
         <p className="text-[13px] text-[var(--foreground)] leading-relaxed">
           <strong>The bottom line:</strong> AI will automate tasks, not jobs. The professionals who thrive will
           be the ones who deliberately shift their time toward the tasks that are hardest to automate
-          — and get better at working <em>with</em> AI on everything else. The goal isn&apos;t to compete
+          and get better at working <em>with</em> AI on everything else. The goal isn&apos;t to compete
           with AI. It&apos;s to become the kind of person who makes AI more useful.
         </p>
       </div>
