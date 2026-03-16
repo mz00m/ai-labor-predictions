@@ -29,6 +29,7 @@ const NAV_ENTRIES: NavEntry[] = [
     items: [
       { href: "/compare", label: "Compare" },
       { href: "/signals", label: "Signals" },
+      { href: "/productivity", label: "Productivity" },
       { href: "/task-visualizer", label: "Task Visualizer" },
       { href: "/task-visualizer/economy", label: "Economy View" },
     ],
@@ -36,10 +37,9 @@ const NAV_ENTRIES: NavEntry[] = [
   {
     label: "Learn",
     items: [
-      { href: "/productivity", label: "Productivity" },
+      { href: "/suggest", label: "Suggest Source" },
       { href: "/j-curve", label: "What's a J-Curve" },
       { href: "/history", label: "History" },
-      { href: "/suggest", label: "Suggest Source" },
       { href: "/research", label: "All Sources" },
       { href: "/learn/reading-list", label: "Reading List" },
       { href: "/about#methodology", label: "Methodology" },
