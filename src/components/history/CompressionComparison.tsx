@@ -320,7 +320,9 @@ export default function CompressionComparison() {
             const active = hov === t.id;
             const anyHov = hov !== null;
             const dimmed = anyHov && !active && hov !== "ai";
-            const delay = idx * 0.18;
+            // Launch longest arc first, stagger 0.5s apart, duration scales with arc length
+            const delay = idx * 0.5;
+            const duration = 0.6 + (t.totalYears / MAX_YEARS) * 0.6; // 0.66s (AI) to 1.2s (Steam)
 
             // label position: sit just above the actual visual peak of the arc
             const labelMidX = a.midX;
@@ -371,7 +373,7 @@ export default function CompressionComparison() {
                   strokeDashoffset={vis ? "0" : "1"}
                   style={{
                     opacity: dimmed ? 0.12 : active ? 0.85 : 0.32,
-                    transition: `stroke-dashoffset 0.9s ease ${delay}s, opacity 0.3s ease, stroke 0.3s ease, stroke-width 0.3s ease`,
+                    transition: `stroke-dashoffset ${duration}s cubic-bezier(0.16, 1, 0.3, 1) ${delay}s, opacity 0.3s ease, stroke 0.3s ease, stroke-width 0.3s ease`,
                   }}
                 />
 
@@ -389,7 +391,7 @@ export default function CompressionComparison() {
                           ? 0.9
                           : 0.3
                         : 0,
-                    transition: `opacity 0.4s ease ${delay + 0.7}s, fill 0.3s ease`,
+                    transition: `opacity 0.3s ease ${delay + duration - 0.1}s, fill 0.3s ease`,
                   }}
                 />
 
@@ -409,7 +411,7 @@ export default function CompressionComparison() {
                         : vis
                           ? 0.35
                           : 0,
-                    transition: `opacity 0.4s ease ${active ? "0s" : `${delay + 0.6}s`}, fill 0.3s ease, font-size 0.3s ease`,
+                    transition: `opacity 0.4s ease ${active ? "0s" : `${delay + duration * 0.6}s`}, fill 0.3s ease, font-size 0.3s ease`,
                   }}
                 >
                   {t.name}
@@ -470,7 +472,7 @@ export default function CompressionComparison() {
               fill="url(#ai-wash-hi)"
               style={{
                 opacity: vis ? 1 : 0,
-                transition: "opacity 0.5s ease 0.9s",
+                transition: "opacity 0.5s ease 2.1s",
               }}
             />
             <path
@@ -485,7 +487,7 @@ export default function CompressionComparison() {
                 strokeDashoffset: vis ? "0" : "1",
                 opacity: hov === "ai" ? 0.4 : 0.2,
                 transition:
-                  "stroke-dashoffset 0.7s ease 0.85s, opacity 0.3s ease",
+                  "stroke-dashoffset 0.7s cubic-bezier(0.16, 1, 0.3, 1) 2.05s, opacity 0.3s ease",
               }}
             />
 
@@ -495,7 +497,7 @@ export default function CompressionComparison() {
               fill="url(#ai-wash)"
               style={{
                 opacity: vis ? 1 : 0,
-                transition: "opacity 0.6s ease 1s",
+                transition: "opacity 0.6s ease 2.2s",
               }}
             />
 
@@ -512,7 +514,7 @@ export default function CompressionComparison() {
               style={{
                 opacity: hov === "ai" ? 1 : 0.85,
                 transition:
-                  "stroke-dashoffset 0.6s ease 0.8s, opacity 0.3s ease, stroke-width 0.3s ease",
+                  "stroke-dashoffset 0.6s cubic-bezier(0.16, 1, 0.3, 1) 2.0s, opacity 0.3s ease, stroke-width 0.3s ease",
               }}
             />
 
@@ -524,7 +526,7 @@ export default function CompressionComparison() {
               fill={ai.color}
               style={{
                 opacity: vis ? 0.9 : 0,
-                transition: "opacity 0.4s ease 1.1s",
+                transition: "opacity 0.3s ease 2.5s",
               }}
             />
             {ai.totalYearsHigh && (
@@ -535,7 +537,7 @@ export default function CompressionComparison() {
                 fill={ai.color}
                 style={{
                   opacity: vis ? 0.3 : 0,
-                  transition: "opacity 0.4s ease 1.1s",
+                  transition: "opacity 0.3s ease 2.6s",
                 }}
               />
             )}
@@ -550,7 +552,7 @@ export default function CompressionComparison() {
               fill={ai.color}
               style={{
                 opacity: vis ? 1 : 0,
-                transition: "opacity 0.5s ease 1.1s",
+                transition: "opacity 0.5s ease 2.4s",
               }}
             >
               AI / LLMs
@@ -564,7 +566,7 @@ export default function CompressionComparison() {
               style={{
                 opacity: vis ? 0.7 : 0,
                 fontVariantNumeric: "tabular-nums",
-                transition: "opacity 0.5s ease 1.15s",
+                transition: "opacity 0.5s ease 2.45s",
               }}
             >
               {ai.totalYears}&ndash;{ai.totalYearsHigh} yrs
@@ -685,13 +687,16 @@ export default function CompressionComparison() {
                   Years from emergence to equilibrium
                 </text>
 
-                {/* Historical arcs — grey */}
+                {/* Historical arcs — grey, animated on scroll */}
                 {historical.map((t) => {
+                  const idx = TRANSITIONS.indexOf(t);
                   const yrs = t.totalYears;
                   const endX = mxOf(yrs);
                   const midX = (mOX + endX) / 2;
                   const peakY = mBL - mhOf(yrs);
                   const d = `M ${mOX},${mBL} Q ${midX},${peakY} ${endX},${mBL}`;
+                  const mDelay = idx * 0.5;
+                  const mDuration = 0.6 + (yrs / MAX_YEARS) * 0.6;
                   return (
                     <g key={t.id}>
                       <path
@@ -700,7 +705,13 @@ export default function CompressionComparison() {
                         stroke={GREY}
                         strokeWidth="1.2"
                         strokeLinecap="round"
-                        opacity="0.28"
+                        pathLength="1"
+                        strokeDasharray="1"
+                        strokeDashoffset={vis ? "0" : "1"}
+                        style={{
+                          opacity: 0.28,
+                          transition: `stroke-dashoffset ${mDuration}s cubic-bezier(0.16, 1, 0.3, 1) ${mDelay}s`,
+                        }}
                       />
                       <text
                         x={endX}
@@ -708,7 +719,10 @@ export default function CompressionComparison() {
                         textAnchor="middle"
                         fontSize="7.5"
                         fill={GREY}
-                        opacity="0.5"
+                        style={{
+                          opacity: vis ? 0.5 : 0,
+                          transition: `opacity 0.3s ease ${mDelay + mDuration - 0.1}s`,
+                        }}
                       >
                         {t.totalYears}
                       </text>
@@ -718,7 +732,10 @@ export default function CompressionComparison() {
                         textAnchor="middle"
                         fontSize="8"
                         fill={GREY}
-                        opacity="0.45"
+                        style={{
+                          opacity: vis ? 0.45 : 0,
+                          transition: `opacity 0.4s ease ${mDelay + mDuration * 0.6}s`,
+                        }}
                       >
                         {t.name}
                       </text>
@@ -748,10 +765,22 @@ export default function CompressionComparison() {
                         stroke={ai.color}
                         strokeWidth="1"
                         strokeDasharray="4 3"
-                        opacity="0.2"
+                        pathLength="1"
+                        strokeDashoffset={vis ? "0" : "1"}
+                        style={{
+                          opacity: 0.2,
+                          transition: "stroke-dashoffset 0.7s cubic-bezier(0.16, 1, 0.3, 1) 2.05s",
+                        }}
                       />
                       {/* Fill */}
-                      <path d={`${lowD} Z`} fill="url(#m-ai-wash)" />
+                      <path
+                        d={`${lowD} Z`}
+                        fill="url(#m-ai-wash)"
+                        style={{
+                          opacity: vis ? 1 : 0,
+                          transition: "opacity 0.6s ease 2.2s",
+                        }}
+                      />
                       {/* Main stroke */}
                       <path
                         d={lowD}
@@ -759,7 +788,13 @@ export default function CompressionComparison() {
                         stroke={ai.color}
                         strokeWidth="2.5"
                         strokeLinecap="round"
-                        opacity="0.85"
+                        pathLength="1"
+                        strokeDasharray="1"
+                        strokeDashoffset={vis ? "0" : "1"}
+                        style={{
+                          opacity: 0.85,
+                          transition: "stroke-dashoffset 0.6s cubic-bezier(0.16, 1, 0.3, 1) 2.0s",
+                        }}
                       />
                       {/* Dot */}
                       <circle
@@ -767,7 +802,10 @@ export default function CompressionComparison() {
                         cy={mBL}
                         r="3.5"
                         fill={ai.color}
-                        opacity="0.9"
+                        style={{
+                          opacity: vis ? 0.9 : 0,
+                          transition: "opacity 0.3s ease 2.5s",
+                        }}
                       />
                       {/* Label */}
                       <text
@@ -777,6 +815,10 @@ export default function CompressionComparison() {
                         fontSize="10"
                         fontWeight="700"
                         fill={ai.color}
+                        style={{
+                          opacity: vis ? 1 : 0,
+                          transition: "opacity 0.5s ease 2.4s",
+                        }}
                       >
                         AI / LLMs
                       </text>
@@ -786,7 +828,10 @@ export default function CompressionComparison() {
                         textAnchor="start"
                         fontSize="9"
                         fill={ai.color}
-                        opacity="0.65"
+                        style={{
+                          opacity: vis ? 0.65 : 0,
+                          transition: "opacity 0.5s ease 2.45s",
+                        }}
                       >
                         {ai.totalYears}–{ai.totalYearsHigh} yrs
                       </text>
