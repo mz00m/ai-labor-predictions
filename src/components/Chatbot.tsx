@@ -121,7 +121,11 @@ export function ChatTrigger({ onClick }: { onClick: () => void }) {
   );
 }
 
-export default function Chatbot() {
+interface ChatbotProps {
+  sourceCount?: number;
+}
+
+export default function Chatbot({ sourceCount }: ChatbotProps) {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
@@ -350,7 +354,7 @@ export default function Chatbot() {
               Ask the data
             </h3>
             <p className="text-[11px] text-white/70">
-              300+ sources across 17 predictions
+              {sourceCount ? `${sourceCount}+` : "300+"} sources across 17 predictions
             </p>
           </div>
           <button

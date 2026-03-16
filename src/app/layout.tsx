@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Chatbot from "@/components/Chatbot";
 import FooterStats from "@/components/FooterStats";
+import { getSourceCount } from "@/lib/search-sources";
 import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
@@ -39,6 +40,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const sourceCount = getSourceCount();
   return (
     <html lang="en">
       <head>
@@ -98,7 +100,7 @@ export default function RootLayout({
         <main className="max-w-6xl mx-auto px-6 sm:px-10 py-16">
           {children}
         </main>
-        <Chatbot />
+        <Chatbot sourceCount={sourceCount} />
         <Analytics />
         <footer className="max-w-6xl mx-auto px-6 sm:px-10 pb-16">
           <div className="pt-10 border-t border-black/[0.06] space-y-4">

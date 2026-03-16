@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Methodology from "@/components/Methodology";
 import costsData from "@/data/hosting-costs.json";
 import RecentSources from "@/components/RecentSources";
+import AboutStats from "@/components/AboutStats";
 import { getRecentSources } from "@/lib/sources";
 
 export const metadata: Metadata = {
@@ -82,9 +83,7 @@ export default function AboutPage() {
             workforce development, education, philanthropy, and policy, have a more thoughtful,
             evidence-grounded response to what&rsquo;s coming.
           </p>
-          <p className="text-[14px] text-[var(--muted)] leading-relaxed">
-            Matt Zieger started this as a weekend vibe coding project 22 days ago, and since then has made 767 improvements and counting. In total this has cost {totalCost}.
-          </p>
+          <AboutStats totalCost={totalCost} />
           <p className="text-[14px] text-[var(--muted)] leading-relaxed">
             If you have ideas on how to make it better, I&rsquo;d love to hear from you:{" "}
             <a

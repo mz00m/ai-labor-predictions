@@ -84,7 +84,7 @@ export default function RecentSources({ sources }: RecentSourcesProps) {
             ref={scrollRef}
             onMouseEnter={() => setPaused(true)}
             onMouseLeave={() => setPaused(false)}
-            className="max-h-[560px] overflow-y-auto px-4 py-3 scrollbar-none"
+            className="max-h-[480px] overflow-y-auto px-4 py-3 scrollbar-none"
             style={{ scrollbarWidth: "none" }}
           >
             {sources.map((source) => {
