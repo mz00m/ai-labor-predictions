@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import EconomyVisualizerClient from "./EconomyVisualizerClient";
 
 export const metadata: Metadata = {
@@ -26,7 +27,9 @@ export default function EconomyPage() {
         </p>
       </header>
 
-      <EconomyVisualizerClient />
+      <Suspense fallback={<div className="py-20 text-center text-[var(--muted)]">Loading...</div>}>
+        <EconomyVisualizerClient />
+      </Suspense>
     </div>
   );
 }
