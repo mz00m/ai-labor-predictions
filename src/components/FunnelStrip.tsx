@@ -99,7 +99,7 @@ export default function FunnelStrip() {
           From exposure to job loss
         </h2>
         <p className="text-[15px] sm:text-[17px] text-[var(--muted)] mt-1.5 leading-relaxed">
-          AI adoption is accelerating and changing work, but the impact on jobs is less clear. Productivity gains at the task level have not yet translated into measurable workforce displacement — the path between the two remains uncertain.
+          AI adoption is accelerating and significantly changing work, but the impact on jobs is less clear. 
         </p>
         <div className="mt-3 flex flex-wrap gap-x-5 gap-y-1.5">
           <Link href="/task-visualizer" className="text-[13px] font-medium text-[var(--accent)] hover:underline">
