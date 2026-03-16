@@ -111,7 +111,7 @@ export default function Home() {
       <div className="mt-10">
         <SectionBar
           title={`${predictions.length} Predictions for How AI Will Impact Jobs`}
-          description={`Displacement, wages, and adoption \u2014 each with trend data, source quality ratings, and a weighted estimate from ${totalSources}+ sources.`}
+          description={`Displacement, wages, and adoption — each with trend data, source quality ratings, and a weighted estimate from ${totalSources}+ sources.`}
           href="/predictions"
           tag="Predictions"
           accentColor="#6B7BF7"
@@ -121,7 +121,7 @@ export default function Home() {
 
         <SectionBar
           title="See How It Will Impact Your Job"
-          description="AI doesn't replace whole jobs \u2014 it automates specific tasks. Explore which parts of 800+ occupations are exposed and which remain human-dependent."
+          description="AI doesn't replace whole jobs — it automates specific tasks. Explore which parts of 800+ occupations are exposed and which remain human-dependent."
           href="/task-visualizer"
           tag="Task visualizer"
           accentColor="#3ECFAE"
@@ -151,7 +151,7 @@ export default function Home() {
 
         <SectionBar
           title="We've Seen This Before"
-          description="Every major technology \u2014 steam, electricity, computers \u2014 followed the same pattern: displacement first, then more jobs than before. AI is compressing that timeline."
+          description="Every major technology — steam, electricity, computers — followed the same pattern: displacement first, then more jobs than before. AI is compressing that timeline."
           href="/history"
           tag="History"
           accentColor="#9A9AAF"
@@ -160,7 +160,7 @@ export default function Home() {
 
         <SectionBar
           title="Early Indicators"
-          description="AI tool downloads are surging \u2014 PyPI and npm package data, SDK adoption curves, and developer activity signal where automation is landing before the labor data catches up."
+          description="AI tool downloads are surging — PyPI and npm package data, SDK adoption curves, and developer activity signal where automation is landing before the labor data catches up."
           href="/signals"
           tag="Signals"
           accentColor="#F26D6D"
