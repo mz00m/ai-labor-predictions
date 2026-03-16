@@ -133,7 +133,7 @@ export default function Home() {
         <SectionBar
           title="Why Is Nothing Changing?"
           description="40% of jobs are AI-exposed, but near-zero have measurably vanished. Follow the evidence funnel from exposure through productivity to actual displacement across 15 studies."
-          href="/task-visualizer/economy"
+          href="/j-curve"
           tag="J-Curve"
           accentColor="#F7C96B"
           watermark={<EconomyFunnelWatermark color="#F7C96B" />}
