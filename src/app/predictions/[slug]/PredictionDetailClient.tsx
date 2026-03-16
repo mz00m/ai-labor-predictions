@@ -165,8 +165,8 @@ export default function PredictionDetailPage() {
             </span>
           )}
           {agg.trend !== "flat" && (
-            <span className={`text-[28px] ${trendColorClass}`} style={{ opacity: 0.5 }}>
-              {agg.trend === "up" ? "▲" : "▼"}
+            <span className={`text-[16px] font-medium ${trendColorClass}`} style={{ opacity: 0.6 }}>
+              Trending {agg.trend === "up" ? "▲" : "▼"}
             </span>
           )}
         </div>
@@ -247,6 +247,16 @@ export default function PredictionDetailPage() {
           tierCounts={tierCounts}
         />
       </section>
+
+      {/* Disclaimer callout — shown when sources use incompatible definitions */}
+      {prediction.disclaimer && (
+        <div className="border border-[#d97706]/20 bg-[#d97706]/[0.04] rounded-lg px-5 py-4 max-w-2xl -mt-4">
+          <p className="text-[13px] text-[var(--muted)] leading-relaxed">
+            <span className="font-semibold text-[#d97706]">Note:</span>{" "}
+            {prediction.disclaimer}
+          </p>
+        </div>
+      )}
 
       {/* Chart */}
       <section>

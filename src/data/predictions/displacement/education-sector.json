@@ -7,6 +7,7 @@
   "unit": "% of roles displaced",
   "currentValue": 12.2,
   "timeHorizon": "By 2030",
+  "disclaimer": "Direct AI displacement estimates for education are sparse. History includes ed-tech platform declines and publisher layoffs, which are proxies for broader sector impact. SHRM found education has the lowest automation rate of any sector at 7.3%.",
   "history": [
     {
       "date": "2024-07-01",

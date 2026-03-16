@@ -135,7 +135,7 @@
       "confidenceLow": 56,
       "confidenceHigh": 66,
       "sourceIds": [
-        "factset-earnings-q3-2025"
+        "factset-earnings-q4-2025"
       ],
       "evidenceTier": 1,
       "metricType": "corporate"
@@ -291,6 +291,16 @@
       "datePublished": "2024-11-01",
       "excerpt": "Companies that mention AI + workforce on calls have average headcount growth 3.2pp lower than non-mentioners. The correlation has strengthened each quarter.",
       "dateAdded": "2026-03-07"
+    },
+    {
+      "id": "factset-earnings-q4-2025",
+      "title": "FactSet Earnings Insight Q4 2025",
+      "url": "https://insight.factset.com/highest-number-of-sp-500-earnings-calls-citing-ai-over-the-past-10-years-1",
+      "publisher": "FactSet",
+      "evidenceTier": 1,
+      "datePublished": "2025-12-01",
+      "excerpt": "61% of S&P 500 companies cited AI in Q4 2025 earnings calls, maintaining near-record levels from Q3.",
+      "dateAdded": "2026-03-16"
     },
     {
       "id": "factset-earnings-q3-2025",

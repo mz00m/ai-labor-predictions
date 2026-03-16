@@ -22,6 +22,11 @@ export default function PredictionCard({
       ? "text-green-500"
       : "text-gray-400";
 
+  // Show range + disagreement disclaimer when source spread is wide
+  const spread = agg.max - agg.min;
+  const meanAbs = Math.abs(agg.mean) || 1;
+  const hasSignificantDisagreement = agg.min !== agg.max && spread / meanAbs > 0.5;
+
   return (
     <Link href={`/predictions/${prediction.slug}`}>
       <div className="group p-5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-indigo-400 dark:hover:border-indigo-500 hover:shadow-lg transition-all cursor-pointer">
@@ -59,13 +64,18 @@ export default function PredictionCard({
             </span>
           </div>
           {agg.trend !== "flat" && (
-            <span className={`text-lg ${trendColor}`} style={{ opacity: 0.6 }}>
-              {agg.trend === "up" ? "▲" : "▼"}
+            <span className={`text-xs font-medium ${trendColor}`} style={{ opacity: 0.7 }}>
+              Trending {agg.trend === "up" ? "▲" : "▼"}
             </span>
           )}
         </div>
-        <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-          {prediction.sources.length} sources
+        {hasSignificantDisagreement && (
+          <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+            Range: {agg.min}–{agg.max}{prediction.unit.includes("%") ? "%" : ""}
+          </p>
+        )}
+        <p className={`text-xs mt-1 ${hasSignificantDisagreement ? "text-[#d97706]" : "text-gray-500 dark:text-gray-400"}`}>
+          {prediction.sources.length} sources{hasSignificantDisagreement ? " — significant disagreement" : ""}
         </p>
       </div>
     </Link>
