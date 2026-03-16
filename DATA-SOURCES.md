@@ -1,6 +1,6 @@
 # Data Sources
 
-*Sources updated: February 27, 2026*
+*Sources updated: March 16, 2026*
 
 This document lists every external data source that powers this site — where it comes from, how we access it, and what it's used for. Our goal is full transparency about the evidence behind every chart, prediction, and headline you see here.
 
@@ -290,6 +290,7 @@ These individual studies are prominently cited across the dashboard:
 | [Chen et al., HBS 2025](https://www.hbs.edu/faculty/Pages/item.aspx?num=66491) | 17% fewer postings in highly automatable occupations | Evidence summary |
 | [Ramp Economics Lab, 2026](https://ramp.com/blog/ai-spending-trends-2026) | 33:1 freelancer-to-AI cost substitution ratio | Evidence summary |
 | [Yale Budget Lab, 2025](https://budgetlab.yale.edu/research/ai-labor-market-2025) | No macro employment effect yet | Evidence summary |
+| [Yale Budget Lab (Gimbel et al.), Feb 2026](https://budgetlab.yale.edu/research/labor-market-ai-exposure-what-do-we-know) | 6 exposure metrics agree on who's exposed but disagree on magnitude; variance rises with exposure (beta=0.0617); 342 occupations scored 0-10 | Economy visualizer, Workforce exposure overlay, 5 displacement overlays |
 | [Noy & Zhang, Science 2023](https://www.science.org/doi/10.1126/science.adh2586) | 37% faster task completion with AI assistance | Funnel strip |
 | [Brynjolfsson, Li, Raymond, QJE 2025](https://academic.oup.com/qje/article/140/2/889/7990658) | 15% average productivity increase (issues resolved/hour) | Funnel strip |
 | [IMF, 2024](https://www.imf.org/en/Blogs/Articles/2024/01/14/ai-will-transform-the-global-economy-lets-make-sure-it-benefits-humanity) | 40% of global employment exposed to AI | Funnel strip |
