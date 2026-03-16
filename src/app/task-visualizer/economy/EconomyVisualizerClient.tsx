@@ -1,12 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams, useRouter } from "next/navigation";
 import WorkforceOverview from "@/components/task-visualizer/economy/WorkforceOverview";
 import AutomationWaveChart from "@/components/task-visualizer/economy/AutomationWaveChart";
 import YearSliderExplorer from "@/components/task-visualizer/economy/YearSliderExplorer";
 import IncomeStrataImpact from "@/components/task-visualizer/economy/IncomeStrataImpact";
 import GenderImpact from "@/components/task-visualizer/economy/GenderImpact";
 import AdaptiveCapacity from "@/components/task-visualizer/economy/AdaptiveCapacity";
+import ShareSectionBar from "@/components/ShareSectionBar";
 
 type Section = "overview" | "gender" | "wave" | "explorer" | "strata" | "adaptability";
 
@@ -49,8 +51,33 @@ const SECTIONS: { id: Section; label: string; question: string; description: str
   },
 ];
 
+const VALID_SECTIONS = new Set<string>(SECTIONS.map((s) => s.id));
+
 export default function EconomyVisualizerClient() {
-  const [activeSection, setActiveSection] = useState<Section>("overview");
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const tabParam = searchParams.get("tab");
+  const initialTab = tabParam && VALID_SECTIONS.has(tabParam) ? (tabParam as Section) : "overview";
+  const [activeSection, setActiveSection] = useState<Section>(initialTab);
+
+  // Sync URL when tab changes
+  useEffect(() => {
+    const currentTab = searchParams.get("tab");
+    if (activeSection === "overview" && !currentTab) return;
+    if (currentTab === activeSection) return;
+
+    const params = new URLSearchParams(searchParams.toString());
+    if (activeSection === "overview") {
+      params.delete("tab");
+    } else {
+      params.set("tab", activeSection);
+    }
+    const qs = params.toString();
+    router.replace(`/task-visualizer/economy${qs ? `?${qs}` : ""}`, { scroll: false });
+  }, [activeSection, searchParams, router]);
+
+  const currentSection = SECTIONS.find((s) => s.id === activeSection);
+  const shareUrl = `https://jobsdata.ai/task-visualizer/economy${activeSection !== "overview" ? `?tab=${activeSection}` : ""}`;
 
   return (
     <div>
@@ -72,19 +99,16 @@ export default function EconomyVisualizerClient() {
       </div>
 
       {/* Section question + description */}
-      {(() => {
-        const section = SECTIONS.find((s) => s.id === activeSection);
-        return section ? (
-          <div className="mb-6 max-w-2xl">
-            <p className="text-[16px] font-semibold text-[var(--foreground)] mb-1">
-              {section.question}
-            </p>
-            <p className="text-[13px] text-[var(--muted)] leading-relaxed">
-              {section.description}
-            </p>
-          </div>
-        ) : null;
-      })()}
+      {currentSection && (
+        <div className="mb-6 max-w-2xl">
+          <p className="text-[16px] font-semibold text-[var(--foreground)] mb-1">
+            {currentSection.question}
+          </p>
+          <p className="text-[13px] text-[var(--muted)] leading-relaxed">
+            {currentSection.description}
+          </p>
+        </div>
+      )}
 
       {/* Section content */}
       {activeSection === "overview" && <WorkforceOverview />}
@@ -93,6 +117,15 @@ export default function EconomyVisualizerClient() {
       {activeSection === "wave" && <AutomationWaveChart />}
       {activeSection === "explorer" && <YearSliderExplorer />}
       {activeSection === "strata" && <IncomeStrataImpact />}
+
+      {/* Social sharing */}
+      {currentSection && (
+        <ShareSectionBar
+          url={shareUrl}
+          title={currentSection.question}
+          description={currentSection.description}
+        />
+      )}
 
       {/* Bottom methodology note */}
       <div className="mt-12 pt-8 border-t border-black/[0.06]">
