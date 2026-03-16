@@ -9,6 +9,25 @@
   "timeHorizon": "By 2030",
   "history": [
     {
+      "date": "2023-08-01",
+      "value": -2.4,
+      "confidenceLow": -3.6,
+      "confidenceHigh": -1.2,
+      "sourceIds": [
+        "eisfeldt-genai-firm-values-2026"
+      ],
+      "evidenceTier": 1,
+      "metricType": "postings",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "relative job posting decline per SD of GenAI exposure",
+        "conversionFactor": 0.30,
+        "conversionLow": 0.15,
+        "conversionHigh": 0.45,
+        "rationale": "8% relative posting decline (1-SD exposure) converted via 0.30 factor; postings overstate displacement ~2-3x"
+      }
+    },
+    {
       "date": "2024-04-01",
       "value": 5,
       "confidenceLow": 1,
@@ -789,6 +808,16 @@
     }
   ],
   "sources": [
+    {
+      "id": "eisfeldt-genai-firm-values-2026",
+      "title": "Generative AI and Firm Values",
+      "url": "https://www.nber.org/papers/w31222",
+      "publisher": "NBER (Eisfeldt, Schubert, Zhang)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-21",
+      "excerpt": "A one-standard-deviation increase in Generative AI exposure is associated with an 8% decline in job postings and a 0.6% decline in the hourly wage rate.",
+      "dateAdded": "2026-03-16"
+    },
     {
       "id": "nber-wang-wong-tech-unemployment-2025",
       "title": "Artificial Intelligence and Technological Unemployment",

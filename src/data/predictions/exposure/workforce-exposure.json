@@ -21,6 +21,17 @@
       "metricType": "projection"
     },
     {
+      "date": "2023-05-01",
+      "value": 40,
+      "confidenceLow": 35,
+      "confidenceHigh": 45,
+      "sourceIds": [
+        "eisfeldt-genai-firm-values-2026"
+      ],
+      "evidenceTier": 1,
+      "metricType": "projection"
+    },
+    {
       "date": "2023-07-01",
       "value": 27,
       "confidenceLow": 20,
@@ -477,6 +488,16 @@
       "datePublished": "2025-04-24",
       "excerpt": "With one in three job vacancies having high AI exposure, a significant share of jobs in OECD economies are influenced by the rise of AI. Only a small percentage of training courses currently deliver AI content.",
       "dateAdded": "2026-03-10"
+    },
+    {
+      "id": "eisfeldt-genai-firm-values-2026",
+      "title": "Generative AI and Firm Values",
+      "url": "https://www.nber.org/papers/w31222",
+      "publisher": "NBER (Eisfeldt, Schubert, Zhang)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-21",
+      "excerpt": "the overall Generative AI exposure of the tasks in all white-collar occupations is 40% versus 9% for blue-collar and service occupations",
+      "dateAdded": "2026-03-16"
     },
     {
       "id": "eisfeldt-genai-exposure-2025",
