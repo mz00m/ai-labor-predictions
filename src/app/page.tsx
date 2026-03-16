@@ -72,29 +72,29 @@ export default function Home() {
             No measurable macro displacement, <span className="text-[#F66B5C] italic">yet.</span>
           </p>
 
-          {/* Hero data triad */}
-          <div className="mt-6 grid grid-cols-3">
-            <a href="/research" className="group/stat relative overflow-hidden pt-6 pb-10 px-4 no-underline text-center">
-              <span className="absolute inset-0 flex items-center justify-center stat-number text-[100px] sm:text-[130px] font-black leading-none pointer-events-none select-none transition-opacity duration-200 opacity-[0.06] group-hover/stat:opacity-[0.18]" style={{ color: 'var(--accent)', letterSpacing: '-0.09em' }}>21<span className="text-[40px] sm:text-[50px] font-normal opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 ml-0.5">%</span></span>
-              <p className="relative text-[10px] font-bold uppercase tracking-widest text-[var(--muted)] mb-1.5"><span className="text-[9px] font-light opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 mr-0.5">~</span>Productivity boost</p>
-              <p className="relative text-[11px] text-[var(--muted)] opacity-50 leading-snug">Median of 18 studies</p>
+          {/* Hero data triad — numbers rise from ticker and fade upward */}
+          <div className="mt-6 relative grid grid-cols-3">
+            {/* Top fade: numbers dissolve upward into the page background */}
+            <div className="absolute inset-x-0 top-0 h-2/3 bg-gradient-to-b from-white via-white/80 to-transparent z-[1] pointer-events-none" />
+            <a href="/research" className="group/stat relative overflow-hidden pt-8 pb-2 px-4 no-underline text-center">
+              <span className="absolute inset-x-0 bottom-0 flex items-end justify-center stat-number text-[100px] sm:text-[130px] font-black leading-none pointer-events-none select-none transition-opacity duration-200 opacity-[0.08] group-hover/stat:opacity-[0.20]" style={{ color: 'var(--accent)', letterSpacing: '-0.09em' }}>21<span className="text-[40px] sm:text-[50px] font-normal opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 ml-0.5">%</span></span>
+              <p className="relative z-[2] text-[10px] font-bold uppercase tracking-widest text-[var(--muted)] mb-1.5"><span className="text-[9px] font-light opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 mr-0.5">~</span>Productivity boost</p>
+              <p className="relative z-[2] text-[11px] text-[var(--muted)] opacity-50 leading-snug">Median of 18 studies</p>
             </a>
-            <a href="#displacement" className="group/stat relative overflow-hidden pt-6 pb-10 px-4 no-underline text-center">
-              <span className="absolute inset-0 flex items-center justify-center stat-number text-[100px] sm:text-[130px] font-black leading-none text-black/[0.04] group-hover/stat:text-black/[0.10] transition-colors duration-200 pointer-events-none select-none">{heroStats.projectedJobLoss}<span className="text-[40px] sm:text-[50px] font-normal opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 ml-0.5">%</span></span>
-              <p className="relative text-[10px] font-bold uppercase tracking-widest text-[var(--muted)] mb-1.5"><span className="text-[9px] font-light opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 mr-0.5">~</span>Projected job loss</p>
-              <p className="relative text-[11px] text-[var(--muted)] opacity-50 leading-snug">Weighted avg of {heroStats.projectedEstimateCount} estimates</p>
+            <a href="#displacement" className="group/stat relative overflow-hidden pt-8 pb-2 px-4 no-underline text-center">
+              <span className="absolute inset-x-0 bottom-0 flex items-end justify-center stat-number text-[100px] sm:text-[130px] font-black leading-none text-black/[0.06] group-hover/stat:text-black/[0.14] transition-colors duration-200 pointer-events-none select-none">{heroStats.projectedJobLoss}<span className="text-[40px] sm:text-[50px] font-normal opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 ml-0.5">%</span></span>
+              <p className="relative z-[2] text-[10px] font-bold uppercase tracking-widest text-[var(--muted)] mb-1.5"><span className="text-[9px] font-light opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 mr-0.5">~</span>Projected job loss</p>
+              <p className="relative z-[2] text-[11px] text-[var(--muted)] opacity-50 leading-snug">Weighted avg of {heroStats.projectedEstimateCount} estimates</p>
             </a>
-            <a href="#displacement" className="group/stat relative overflow-hidden pt-6 pb-10 px-4 no-underline text-center">
-              <span className="absolute inset-0 flex items-center justify-center stat-number text-[100px] sm:text-[130px] font-black leading-none text-emerald-600/[0.06] group-hover/stat:text-emerald-600/[0.18] transition-colors duration-200 pointer-events-none select-none">{heroStats.measuredJobLoss}<span className="text-[40px] sm:text-[50px] font-normal opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 ml-0.5">%</span></span>
-              <p className="relative text-[10px] font-bold uppercase tracking-widest text-[var(--muted)] mb-1.5"><span className="text-[9px] font-light opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 mr-0.5">~</span>Measured job loss</p>
-              <p className="relative text-[11px] text-[var(--muted)] opacity-50 leading-snug">Yale, Goldman, Dallas Fed</p>
+            <a href="#displacement" className="group/stat relative overflow-hidden pt-8 pb-2 px-4 no-underline text-center">
+              <span className="absolute inset-x-0 bottom-0 flex items-end justify-center stat-number text-[100px] sm:text-[130px] font-black leading-none text-emerald-600/[0.08] group-hover/stat:text-emerald-600/[0.20] transition-colors duration-200 pointer-events-none select-none">{heroStats.measuredJobLoss}<span className="text-[40px] sm:text-[50px] font-normal opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 ml-0.5">%</span></span>
+              <p className="relative z-[2] text-[10px] font-bold uppercase tracking-widest text-[var(--muted)] mb-1.5"><span className="text-[9px] font-light opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 mr-0.5">~</span>Measured job loss</p>
+              <p className="relative z-[2] text-[11px] text-[var(--muted)] opacity-50 leading-snug">Yale, Goldman, Dallas Fed</p>
             </a>
           </div>
-          {/* Gradient fade from background into ticker */}
-          <div className="h-8 -mb-8 bg-gradient-to-b from-transparent to-[#2E3650] relative z-[1] pointer-events-none" />
         </div>
 
-        {/* News Ticker — directly below hero content */}
+        {/* News Ticker — flush against stats */}
         <div className="relative">
           <NewsTicker />
         </div>
