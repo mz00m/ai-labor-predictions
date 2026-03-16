@@ -72,7 +72,7 @@ export default function AboutPage() {
             evidence-grounded response to what&rsquo;s coming.
           </p>
           <p className="text-[14px] text-[var(--muted)] leading-relaxed">
-            Matt Zieger started this as a weekend vibe coding project 22 days ago and has made 763 improvements and counting. In total this has cost {totalCost}.
+            Matt Zieger started this as a weekend vibe coding project 22 days ago, and since then has made 767 improvements and counting. In total this has cost {totalCost}.
           </p>
           <p className="text-[14px] text-[var(--muted)] leading-relaxed">
             If you have ideas on how to make it better, I&rsquo;d love to hear from you:{" "}
