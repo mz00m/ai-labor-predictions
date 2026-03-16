@@ -7,6 +7,24 @@ export default function MethodologyNote() {
         How to Read This Data
       </h2>
 
+      {/* TL;DR box */}
+      <div className="rounded-xl border border-[#6366F1]/20 bg-[#6366F1]/[0.04] p-5 max-w-3xl mb-6">
+        <h4 className="text-[13px] font-bold text-[#6366F1] uppercase tracking-wide mb-2">
+          TL;DR
+        </h4>
+        <p className="text-[13px] text-[var(--foreground)] leading-relaxed">
+          Think of this like construction permits for AI automation. Before AI replaces tasks in an
+          industry, developers download the tools to build those systems. We track Python and JavaScript
+          package downloads as a <strong>leading indicator</strong> of where AI automation is heading.
+          When industry-specific tools grow faster than general AI infrastructure, it signals a shift from
+          &ldquo;people using AI&rdquo; to &ldquo;AI doing the work.&rdquo;
+        </p>
+        <p className="text-[12px] text-[var(--muted)] mt-2">
+          Package downloads do not equal production use. The signal is in <strong className="text-[var(--foreground)]">relative growth rates</strong> across
+          industries, not absolute numbers.
+        </p>
+      </div>
+
       <div className="grid gap-6 sm:grid-cols-2 text-[13px] text-[var(--muted)] leading-relaxed">
         <div>
           <h3 className="text-[14px] font-semibold text-[var(--foreground)] mb-1">
