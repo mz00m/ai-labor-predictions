@@ -1,0 +1,14 @@
+{
+  "id": "wapo-ai-jobs-adapt-2026",
+  "abstract": "Washington Post interactive analysis of which jobs are most threatened by AI and which workers may be able to adapt, based on GovAI and Brookings Institution research by Sam Manning and Tomas Aguirre. The article maps 350+ occupations by AI exposure and adaptability, finding that 6.1 million largely clerical and administrative workers are both highly AI-exposed and have the lowest estimated adaptability. Women make up 86% of these most vulnerable workers. The article emphasizes two points of consensus: no measurable evidence of aggregate job displacement yet, and white-collar jobs are first in line for AI disruption.",
+  "keyFindings": [
+    "As of March 2026, there is no measurable evidence that AI is putting Americans as a whole out of work",
+    "6.1 million largely clerical and administrative workers are both highly AI-exposed and have the lowest estimated adaptability (GovAI/Brookings)",
+    "Women make up about 86% of the most vulnerable workers whose jobs may be hardest to replace",
+    "White-collar jobs are first in line for AI shake-ups, unlike past automation waves that hit factory and trade workers",
+    "Majority of workers whose jobs may be transformed by AI can bounce back; a smaller share may struggle to find new jobs"
+  ],
+  "methodology": "Journalistic synthesis of GovAI/Brookings/NBER research (Manning, Aguirre, Muro). Underlying research used industry-standard AI exposure measures for 350+ occupations combined with novel adaptive capacity index incorporating education, work experience diversity, savings, age, and local labor market conditions.",
+  "qualifiers": "Article repeatedly emphasizes economists' poor track record predicting technology's effects on work. Researchers caution these are 'useful but fallible best guesses.' Multiple quoted experts stress humility and uncertainty. Conflicting findings from Stanford (youth job losses) vs Economic Innovation Group (youth doing better) highlighted as example of contradictory evidence.",
+  "fetchedAt": "2026-03-16"
+}

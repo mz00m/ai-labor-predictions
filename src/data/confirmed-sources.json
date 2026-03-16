@@ -1,9 +1,23 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-16",
-  "totalSources": 414,
-  "verifiedCount": 414,
+  "totalSources": 415,
+  "verifiedCount": 415,
   "sources": {
+    "wapo-ai-jobs-adapt-2026": {
+      "id": "wapo-ai-jobs-adapt-2026",
+      "title": "See which jobs are most threatened by AI, and who may be able to adapt",
+      "url": "https://www.washingtonpost.com/technology/interactive/2026/jobs-most-affected-ai-automation/",
+      "publisher": "Washington Post (Schaul, Ovide)",
+      "evidenceTier": 3,
+      "datePublished": "2026-03-16",
+      "excerpt": "Two points of general agreement stand out: There's no measurable evidence so far that AI is putting Americans as a whole out of work, economists say. And while the victims of past workplace automation were mostly factory and trade workers, it's white collar jobs that are first in line for AI shake-ups today.",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
     "bessen-automation-employment-demand-2019": {
       "id": "bessen-automation-employment-demand-2019",
       "title": "Automation and jobs: when technology boosts employment",

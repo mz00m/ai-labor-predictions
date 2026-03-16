@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "See which jobs are most threatened by AI, and who may be able to adapt",
+      "author": "Kevin Schaul, Shira Ovide",
+      "publisher": "Washington Post",
+      "date": "2026-03-16",
+      "url": "https://www.washingtonpost.com/technology/interactive/2026/jobs-most-affected-ai-automation/",
+      "takeaway": "Interactive mapping of 350+ occupations by AI exposure and adaptability using GovAI/Brookings research. 6.1M clerical/admin workers most vulnerable (86% women). Consensus: no measurable aggregate displacement yet, but white-collar jobs first in line. Economists stress humility — predictions have historically been poor.",
+      "weekFeatured": "2026-03-16",
+      "tier": 3
+    },
+    {
       "title": "Dalende werkgelegenheid onder Nederlandse jongeren die concurreren met GenAI",
       "author": "J. Groenewegen, N. van Limbergen, N. Vrieselaar",
       "publisher": "ESB / Rabobank",
