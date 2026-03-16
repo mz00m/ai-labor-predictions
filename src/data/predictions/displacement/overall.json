@@ -219,6 +219,24 @@
   ],
   "overlays": [
     {
+      "date": "2020-07-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "bessen-automation-employment-demand-2019"
+      ],
+      "evidenceTier": 1,
+      "label": "Bessen: automation effect on jobs depends on demand elasticity; reallocation, not mass unemployment"
+    },
+    {
+      "date": "2020-07-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "bessen-automation-employment-demand-2019"
+      ],
+      "evidenceTier": 1,
+      "label": "Bessen: textile automation cut 98% of labor per yard yet employment grew via elastic demand"
+    },
+    {
       "date": "2023-03-26",
       "direction": "down",
       "sourceIds": [
@@ -1504,6 +1522,16 @@
       "datePublished": "2025-06-01",
       "excerpt": "Using O*NET and LightCast job postings data (2019-June 2024), the study found a 24% decrease in generative AI-exposed skills per firm per quarter for automation-prone occupations, while augmentation-prone occupations saw a 15% increase. Demonstrates the dual displacement/complementarity impact of generative AI.",
       "dateAdded": "2026-03-15"
+    },
+    {
+      "id": "bessen-automation-employment-demand-2019",
+      "title": "Automation and jobs: when technology boosts employment",
+      "url": "https://doi.org/10.1093/epolic/eiaa001",
+      "publisher": "Economic Policy (James Bessen)",
+      "evidenceTier": 1,
+      "datePublished": "2020-07-01",
+      "excerpt": "The main impact of automation in the near future may be to cause a major reallocation of jobs, even if it does not permanently eliminate large numbers of jobs. During the 19th century, technologies had automated 98% of the labour required to weave a yard of cloth. Yet, the number of weaving jobs actually increased for decades over this period.",
+      "dateAdded": "2026-03-16"
     }
   ]
 }
