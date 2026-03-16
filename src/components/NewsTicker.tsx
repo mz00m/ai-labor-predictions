@@ -154,16 +154,16 @@ export default function NewsTicker() {
   // Always render the container to avoid layout shift
   return (
     <div
-      className="relative bg-[#24243a] h-9 sm:h-10 overflow-hidden flex items-center -mx-6 sm:-mx-10"
+      className="relative bg-[#2E3650] h-9 sm:h-10 overflow-hidden flex items-center -mx-6 sm:-mx-10"
       role="marquee"
       aria-label="Latest AI labor market headlines"
     >
       {/* LIVE label + gradient fade */}
       <div className="absolute left-0 top-0 bottom-0 z-10 flex items-center pointer-events-none" style={{ width: 160 }}>
         {/* Solid background behind LIVE text */}
-        <div className="absolute left-0 top-0 bottom-0 w-[90px] sm:w-[110px] bg-[#24243a]" />
+        <div className="absolute left-0 top-0 bottom-0 w-[90px] sm:w-[110px] bg-[#2E3650]" />
         {/* Gradient dissolve from solid to transparent */}
-        <div className="absolute left-[90px] sm:left-[110px] top-0 bottom-0 w-[70px] bg-gradient-to-r from-[#24243a] to-transparent" />
+        <div className="absolute left-[90px] sm:left-[110px] top-0 bottom-0 w-[70px] bg-gradient-to-r from-[#2E3650] to-transparent" />
         {/* LIVE text */}
         <div className="relative flex items-center gap-1.5 pl-6 sm:pl-10 pointer-events-auto">
           <span className="relative flex h-2 w-2">
@@ -177,7 +177,7 @@ export default function NewsTicker() {
       </div>
 
       {/* Gradient fade on right edge */}
-      <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-[#24243a] to-transparent z-10 pointer-events-none" />
+      <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-[#2E3650] to-transparent z-10 pointer-events-none" />
 
       {/* Scrolling content */}
       {loaded && headlines.length > 0 && (

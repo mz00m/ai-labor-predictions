@@ -59,7 +59,7 @@ export default function Home() {
             <span className="opacity-50 mx-1">&middot;</span>
             <span className="normal-case font-semibold opacity-70">{formatUpdatedDate(lastUpdated)}</span>
           </p>
-          <h1 className="text-[42px] sm:text-[56px] font-black tracking-tight text-[var(--foreground)] leading-[1.05] max-w-4xl">
+          <h1 className="text-[42px] sm:text-[56px] font-black tracking-tight text-[#2E3650] leading-[1.05] max-w-4xl">
             How is AI <span className="text-[#F66B5C] italic">reshaping</span>
             <br className="hidden sm:block" /> the labor market?
           </h1>
@@ -68,7 +68,7 @@ export default function Home() {
             entry-level and freelance work is compressing, and jobs are changing faster than
             they&apos;re disappearing.
           </p>
-          <p className="mt-3 text-[20px] sm:text-[22px] font-bold text-[var(--foreground)] leading-snug max-w-2xl">
+          <p className="mt-3 text-[20px] sm:text-[22px] font-bold text-[#2E3650] leading-snug max-w-2xl">
             No measurable macro displacement, <span className="text-[#F66B5C] italic">yet.</span>
           </p>
 
