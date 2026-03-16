@@ -6,12 +6,13 @@ const PROJECT_START = new Date("2026-02-22T00:00:00Z");
 
 /* ------------------------------------------------------------------ */
 /*  Easter egg: "Source Zero" — triple-click "X days ago" to reveal    */
-/*  a hand-drawn sparkline of the project's first week of commits.     */
+/*  a hand-drawn sparkline of early commit milestones.                 */
 /* ------------------------------------------------------------------ */
 
-// Hardcoded first-week commit counts (historical, won't change)
-const FIRST_WEEK = [3, 14, 11, 8, 22, 17, 9];
-const FIRST_WEEK_MAX = Math.max(...FIRST_WEEK);
+// Hardcoded commit milestones (historical, won't change)
+// Days 1-7 + day 22 (the big push)
+const COMMIT_DAYS = [3, 14, 11, 8, 22, 17, 9, 88];
+const COMMIT_DAYS_MAX = Math.max(...COMMIT_DAYS);
 
 // Deterministic wobble for hand-drawn feel
 function wobble(seed: number): number {
@@ -27,9 +28,9 @@ function HandDrawnSparkline() {
   const usableW = w - padX * 2;
   const usableH = h - padY * 2;
 
-  const points = FIRST_WEEK.map((v, i) => ({
-    x: padX + (i / (FIRST_WEEK.length - 1)) * usableW,
-    y: padY + usableH - (v / FIRST_WEEK_MAX) * usableH,
+  const points = COMMIT_DAYS.map((v, i) => ({
+    x: padX + (i / (COMMIT_DAYS.length - 1)) * usableW,
+    y: padY + usableH - (v / COMMIT_DAYS_MAX) * usableH,
   }));
 
   // Build a wobbly cubic bezier path
@@ -158,7 +159,7 @@ export default function FooterStats() {
               transition: reducedMotion ? "none" : "opacity 0.5s ease 0.3s",
             }}
           >
-            Day 1: 3 commits. Day 2: 14 commits. The weekend that got out of hand.
+            Day 1: 3 commits. Day 2: 14 commits. Day 22: 88 commits. The weekend that got out of hand.
           </span>
         </span>
       </span>
