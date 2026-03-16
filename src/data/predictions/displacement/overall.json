@@ -868,6 +868,24 @@
       ],
       "evidenceTier": 3,
       "label": "WaPo: No measurable evidence AI putting Americans out of work; white-collar jobs first in line"
+    },
+    {
+      "date": "2026-01-21",
+      "direction": "neutral",
+      "sourceIds": [
+        "manning-aguirre-adaptive-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER (Manning/Aguirre): 26.5M of 37.1M highly AI-exposed workers have above-median adaptive capacity"
+    },
+    {
+      "date": "2026-01-21",
+      "direction": "down",
+      "sourceIds": [
+        "manning-aguirre-adaptive-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER: 6.1M workers (4.2%) highly AI-exposed with low adaptive capacity; clerical/admin roles"
     }
   ],
   "sources": [
@@ -1606,6 +1624,16 @@
       "evidenceTier": 3,
       "datePublished": "2026-03-16",
       "excerpt": "Two points of general agreement stand out: There's no measurable evidence so far that AI is putting Americans as a whole out of work, economists say. And while the victims of past workplace automation were mostly factory and trade workers, it's white collar jobs that are first in line for AI shake-ups today.",
+      "dateAdded": "2026-03-16"
+    },
+    {
+      "id": "manning-aguirre-adaptive-2026",
+      "title": "How Adaptable Are American Workers to AI-Induced Job Displacement?",
+      "url": "https://www.nber.org/papers/w34705",
+      "publisher": "NBER (Manning, Aguirre)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-21",
+      "excerpt": "Of the 37.1 million workers in the top quartile of AI exposure, 26.5 million are in occupations that also have above-median adaptive capacity. At the same time, 6.1 million workers (4.2% of the workforce) are both highly exposed and in the bottom quartile of adaptive capacity, concentrated in clerical and administrative roles.",
       "dateAdded": "2026-03-16"
     }
   ]

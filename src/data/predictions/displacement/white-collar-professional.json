@@ -506,6 +506,15 @@
       ],
       "evidenceTier": 1,
       "label": "MIT Iceberg: White-collar AI exposure 5x larger than visible tech disruption, spans all states"
+    },
+    {
+      "date": "2026-01-21",
+      "direction": "neutral",
+      "sourceIds": [
+        "manning-aguirre-adaptive-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER: Professional/managerial (56.9M) have high adaptive capacity (0.734) despite high AI exposure"
     }
   ],
   "sources": [
@@ -1017,6 +1026,16 @@
       "datePublished": "2025-11-26",
       "excerpt": "Administrative and financial tasks where AI demonstrates capability span five times more wage value than visible tech disruption—and are geographically distributed across all states, not just coastal.",
       "dateAdded": "2026-03-15"
+    },
+    {
+      "id": "manning-aguirre-adaptive-2026",
+      "title": "How Adaptable Are American Workers to AI-Induced Job Displacement?",
+      "url": "https://www.nber.org/papers/w34705",
+      "publisher": "NBER (Manning, Aguirre)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-21",
+      "excerpt": "Professional and managerial occupations (56.9 million workers) have relatively higher adaptive capacity on average (0.734) despite substantial exposure (0.400), while administrative support occupations have lower adaptive capacity (0.360) combined with the highest AI exposure of any major occupation group (0.525).",
+      "dateAdded": "2026-03-16"
     }
   ]
 }

@@ -305,6 +305,15 @@
       ],
       "evidenceTier": 1,
       "label": "Yale Budget Lab: 6 exposure metrics agree on who's exposed, disagree on magnitude (778 occupations)"
+    },
+    {
+      "date": "2026-01-21",
+      "direction": "neutral",
+      "sourceIds": [
+        "manning-aguirre-adaptive-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER: AI exposure and adaptive capacity positively correlated (r=0.502); most exposed workers best positioned"
     }
   ],
   "sources": [
@@ -556,6 +565,16 @@
       "evidenceTier": 1,
       "datePublished": "2026-02-19",
       "excerpt": "AI exposure metrics broadly agree with each other, but that they disagree with each other more on highly exposed occupations. The key point of disagreement between different AI exposure metrics is in the magnitude of exposure, not whether an occupation is exposed.",
+      "dateAdded": "2026-03-16"
+    },
+    {
+      "id": "manning-aguirre-adaptive-2026",
+      "title": "How Adaptable Are American Workers to AI-Induced Job Displacement?",
+      "url": "https://www.nber.org/papers/w34705",
+      "publisher": "NBER (Manning, Aguirre)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-21",
+      "excerpt": "We find a positive correlation (r = 0.502) between AI exposure and a novel measure of worker adaptive capacity to displacement. Higher-income, highly skilled workers in professional occupations typically possess characteristics that enable successful navigation of job transitions.",
       "dateAdded": "2026-03-16"
     }
   ]
