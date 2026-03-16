@@ -1,0 +1,104 @@
+{
+  "week": "2026-W12",
+  "generatedAt": "2026-03-16T08:57:13.862Z",
+  "candidates": [
+    {
+      "highlight": {
+        "title": "Desk Review: Recent Methodologies on AI and Labour",
+        "summary": "This toolkit synthesises recent methodologies for analysing AI's effects on employment, wages, and productivity, highlighting a critical shift from occupation-level to task-level analysis that better captures heterogeneity within jobs. The review underscores that task-based frameworks reveal more nuanced displacement dynamics than traditional occupational classifications. (Papagiannaki & Geisler, Zenodo, 2026-03-06)",
+        "source": "https://napier-repository.worktribe.com/output/4981081",
+        "authors": [
+          "Elena Papagiannaki",
+          "Joana Geisler"
+        ],
+        "publishedAt": "2026-03-06",
+        "doi": "10.5281/zenodo.18801200",
+        "score": 0.385,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "overall-us-displacement"
+      },
+      "sourceId": "napier-repository-desk-review-recent-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Enhancing BLS Methodologies for Projecting AI's Impact on Employment",
+        "summary": "This policy paper proposes comprehensive enhancements to U.S. Bureau of Labor Statistics forecasting methods, arguing that traditional extrapolation techniques are inadequate for capturing AI-driven labor market transformation. The authors present a data-driven framework for measuring occupational exposure and displacement risk across sectors. (Joshi, Preprints, 2026-03-06)",
+        "source": "https://doi.org/10.20944/preprints202603.0399.v2",
+        "authors": [
+          "Satyadhar Joshi"
+        ],
+        "publishedAt": "2026-03-06",
+        "doi": "10.20944/preprints202603.0399.v2",
+        "score": 0.274,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "workforce-ai-exposure"
+      },
+      "sourceId": "doi-enhancing-bls-methodologies-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "AI and the Future of Work: Occupational Status Perceptions Among University Students",
+        "summary": "A survey of university students finds that AI is reshaping perceptions of occupational social status, with students re-evaluating the prestige and long-term viability of various careers in light of automation risk. The study highlights that entry-level and routine white-collar roles are perceived as most vulnerable, influencing students' career alignment decisions. (Liu et al., Behavioral Sciences, 2026-03-04)",
+        "source": "https://doi.org/10.3390/bs16030362",
+        "authors": [
+          "Jiawei Liu",
+          "Yifan Zhuang",
+          "Huaqi Yang",
+          "Siying Li",
+          "Chen Qu"
+        ],
+        "publishedAt": "2026-03-04",
+        "doi": "10.3390/bs16030362",
+        "score": 0.215,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "entry-level-wage-impact"
+      },
+      "sourceId": "doi-ai-and-the-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Digital Technology Facilitates Union Busting: Surveillance and Worker Suppression",
+        "summary": "This study documents how employers leverage digital technologies—including AI-powered surveillance and automated scheduling—to counter union organizing efforts, erecting new barriers to collective bargaining in the United States. The findings suggest algorithmic management tools are increasingly deployed as instruments of labor control, with downstream effects on worker wages and conditions. (Reiber et al., arXiv, 2026-03-03)",
+        "source": "http://arxiv.org/abs/2603.03130",
+        "authors": [
+          "Frederick Reiber",
+          "Nathan Y. Kim",
+          "Allison McDonald",
+          "Dana Calacci"
+        ],
+        "publishedAt": "2026-03-03",
+        "score": 0.191,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "median-wage-impact"
+      },
+      "sourceId": "arxiv-digital-technology-facilitates-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Capability Thresholds in Embodied Intelligence Trigger Phase Transitions in Manufacturing Geography",
+        "summary": "This paper argues that advances in embodied AI and robotics represent a paradigm-level disruption to manufacturing topology not seen since Ford's assembly line, with capability thresholds triggering abrupt geographic and structural shifts in production. The analysis implies significant displacement of manufacturing-adjacent white-collar and operational roles as intelligent automation matures. (Fang, Tao & Li, arXiv, 2026-03-03)",
+        "source": "http://arxiv.org/abs/2603.04457",
+        "authors": [
+          "Xinmin Fang",
+          "Lingfeng Tao",
+          "Zhengxiong Li"
+        ],
+        "publishedAt": "2026-03-03",
+        "score": 0.191,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "white-collar-professional-displacement"
+      },
+      "sourceId": "arxiv-capability-thresholds-in-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    }
+  ]
+}
