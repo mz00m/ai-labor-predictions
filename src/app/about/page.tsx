@@ -47,12 +47,23 @@ export default function AboutPage() {
       <div className="lg:flex-1 min-w-0 space-y-14">
         {/* Header */}
         <section className="mb-2">
-          <p className="text-[13px] font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
+          <p className="text-[12px] font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
             About This Project
           </p>
-          <h1 className="text-[36px] sm:text-[44px] font-extrabold tracking-tight text-[var(--foreground)] leading-[1.1]">
+          <h1
+            className="text-[36px] sm:text-[44px] font-extrabold tracking-tight text-[var(--foreground)] leading-[1.1] mb-4"
+            style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
+          >
             Evidence Over Narrative
           </h1>
+          <p
+            className="text-[18px] sm:text-[20px] text-[var(--muted)] leading-relaxed"
+            style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
+          >
+            Synthesizing what we actually know about AI&rsquo;s impact on
+            economic opportunity &mdash; not the hype, not the doom, but
+            the evidence.
+          </p>
         </section>
 
         {/* Mission */}
