@@ -1,0 +1,14 @@
+{
+  "id": "hunt-cockburn-bessen-ai-distance-adoption-2024",
+  "abstract": "Using a novel dataset of AI publications merged with Burning Glass vacancy data (2007-2019), the authors examine whether geographic distance from AI innovation hotspots slows AI adoption across 741 US commuting zones. They find that distance from innovation is a significant barrier, with effects driven by proximity to AI research papers rather than patents, and amplified by state borders.",
+  "keyFindings": [
+    "A commuting zone 200km farther from the closest AI hotspot has 17% lower growth in AI jobs' share of vacancies over seven years",
+    "The distance effect is driven by proximity to AI research papers, not AI patents",
+    "State borders between commuting zones and their closest hotspot explain 20% of the overall distance effect",
+    "Distance reduces growth in both AI research jobs and jobs adapting AI to new industries (e.g., finance and insurance)",
+    "Distance has much less impact on downstream AI adoption (e.g., use of image processing) than on AI adaptation and development"
+  ],
+  "methodology": "Novel dataset combining Microsoft Academic Graph AI publications with Burning Glass Technologies (Lightcast) online job vacancy data, aggregated to 741 US commuting zones from 2007-2019. AI innovation hotspots defined by cumulative pre-period AI publication counts. AI adoption measured by share of job vacancies requiring AI skills.",
+  "qualifiers": "Covers 2007-2019 period, prior to the generative AI era (ChatGPT launched Nov 2022). Uses job postings as a proxy for AI adoption, which may not capture informal or unposted AI use. US-only data. The distinction between AI 'adaptation' (developing new AI applications) and 'adoption' (using existing AI tools) is important: distance mainly affects the former.",
+  "fetchedAt": "2026-03-16"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "bessen-ai-jobs-demand-2018",
+  "abstract": "Bessen presents a simple model showing that the effect of AI on jobs depends critically on demand elasticity. Using historical data from textile, steel, and automotive industries, he demonstrates that technology initially created jobs when demand was elastic (large unmet needs) but later destroyed jobs when demand became saturated and inelastic. The model accurately predicts the inverted-U pattern of employment in these industries and provides a framework for how AI will affect jobs.",
+  "keyFindings": [
+    "If demand is sufficiently elastic and AI does not completely replace humans, technical change will create jobs rather than destroy them",
+    "In textiles, technologies automated 98% of the labor required to weave a yard of cloth, yet weaving employment grew for decades because demand was elastic",
+    "Manufacturing employment followed an inverted-U: elastic demand drove a century of growth, then inelastic demand drove decline",
+    "The model predicts the rise and fall of employment in textile, steel, and auto industries with reasonable accuracy",
+    "Predictions about technological unemployment have reliably failed to anticipate major new applications and sources of demand"
+  ],
+  "methodology": "Simple economic model of demand elasticity applied to historical industry data (textiles 1800s-1900s, steel, automotive). The model decomposes the employment effect of automation into a labor-saving effect and a demand-expansion effect, with the net outcome determined by the price elasticity of demand.",
+  "qualifiers": "The model is a theoretical framework, not an empirical study of AI specifically. Historical analogies may not fully apply to AI given its breadth of cognitive task automation. The paper acknowledges that AI could be different if it completely replaces humans in a domain rather than augmenting them. Published as NBER Working Paper 24235 (Jan 2018, revised Mar 2023), also as chapter in Economics of Artificial Intelligence (NBER).",
+  "fetchedAt": "2026-03-16"
+}
