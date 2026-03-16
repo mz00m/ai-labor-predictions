@@ -121,8 +121,8 @@ function DesktopDropdown({ group }: { group: NavGroup }) {
       </button>
 
       {open && (
-        <div className="absolute top-full right-0 mt-1 min-w-[160px] bg-white rounded-lg border border-black/[0.08] shadow-lg py-1 z-50">
-          {group.items.map((item) => {
+        <div className="absolute top-full right-0 mt-1 min-w-[160px] bg-white rounded-lg border border-black/[0.08] shadow-lg py-1 z-50 dropdown-enter">
+          {group.items.map((item, idx) => {
             const itemActive =
               pathname === item.href ||
               (item.href !== "/" &&
@@ -132,13 +132,14 @@ function DesktopDropdown({ group }: { group: NavGroup }) {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`block text-[12px] font-medium px-4 py-2 ${
+                className={`block text-[12px] font-medium px-4 py-2 dropdown-item ${
                   isSuggest
                     ? "text-[#F66B5C] hover:text-[#e55a4b] hover:bg-black/[0.03]"
                     : itemActive
                       ? "text-[var(--foreground)] bg-black/[0.03]"
                       : "text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-black/[0.03]"
                 }`}
+                style={{ animationDelay: `${idx * 30}ms` }}
               >
                 {item.label}
               </Link>
@@ -268,7 +269,7 @@ export default function Navbar() {
 
           {/* Mobile dropdown */}
           {mobileOpen && (
-            <div className="absolute top-12 right-4 left-4 bg-white rounded-lg border border-black/[0.08] shadow-lg py-2">
+            <div className="absolute top-12 right-4 left-4 bg-white rounded-lg border border-black/[0.08] shadow-lg py-2 dropdown-enter">
               <div className="px-3 py-2 border-b border-black/[0.04]">
                 <SearchCombobox mobile />
               </div>

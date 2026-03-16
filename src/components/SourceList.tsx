@@ -66,7 +66,7 @@ export default function SourceList({
             <div
               key={source.id}
               id={`source-${source.id}`}
-              className="flex items-start gap-3 py-4 border-b border-black/[0.04] transition-all duration-700 rounded-lg"
+              className="source-item flex items-start gap-3 py-4 border-b border-black/[0.04] transition-all duration-700 rounded-lg"
               style={
                 isHighlighted
                   ? {
@@ -98,7 +98,8 @@ export default function SourceList({
                   href={source.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[14px] font-semibold text-[var(--foreground)] hover:text-[var(--accent)] leading-tight"
+                  className="source-title text-[14px] font-semibold text-[var(--foreground)] leading-tight"
+                  style={{ transition: "color 0.15s ease" }}
                 >
                   {source.title}
                 </a>
@@ -107,7 +108,7 @@ export default function SourceList({
                     {overlay.label}
                   </p>
                 )}
-                <div className="flex items-center gap-3 mt-1">
+                <div className="source-meta flex items-center gap-3 mt-1" style={{ transition: "opacity 0.15s ease" }}>
                   <span className="text-[12px] text-[var(--muted)]">
                     {source.publisher}
                   </span>
