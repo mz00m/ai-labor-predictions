@@ -4,6 +4,8 @@ import NewsTicker from "@/components/NewsTicker";
 import FeaturedReads from "@/components/FeaturedReads";
 import FunnelStrip from "@/components/FunnelStrip";
 import SectionBar from "@/components/SectionBar";
+import HeroTriad from "@/components/HeroTriad";
+import ScrollReveal from "@/components/ScrollReveal";
 import {
   PredictionsWatermark,
   TaskVisualizerWatermark,
@@ -68,23 +70,11 @@ export default function Home() {
           </p>
 
           {/* Hero data triad — numbers emerge from behind the ticker, dissolve upward */}
-          <div className="mt-6 relative grid grid-cols-3 place-items-center pb-6">
-            <a href="#evidence-funnel" className="group/stat relative overflow-hidden pt-6 pb-8 sm:pb-12 px-1 sm:px-4 no-underline text-center w-full">
-              <span className="absolute inset-x-0 -bottom-4 flex items-end justify-center stat-number text-[72px] sm:text-[150px] font-black leading-none pointer-events-none select-none transition-opacity duration-200 opacity-[0.15] group-hover/stat:opacity-[0.25]" style={{ color: 'var(--accent)', letterSpacing: '-0.09em', maskImage: 'linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 85%)', WebkitMaskImage: 'linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 85%)' }}><span className="relative">21<span className="absolute left-full top-0 text-[30px] sm:text-[60px] font-normal opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 ml-0.5">%</span></span></span>
-              <p className="relative z-[2] text-[9px] sm:text-[10px] font-bold uppercase tracking-wide sm:tracking-widest text-[var(--muted)] mb-1.5"><span className="text-[9px] font-light opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 mr-0.5">~</span>Productivity boost</p>
-              <p className="relative z-[2] text-[10px] sm:text-[11px] text-[var(--muted)] opacity-50 leading-snug">Median task-level gain, 18 studies</p>
-            </a>
-            <a href="/predictions/overall-us-displacement" className="group/stat relative overflow-hidden pt-6 pb-8 sm:pb-12 px-1 sm:px-4 no-underline text-center w-full">
-              <span className="absolute inset-x-0 -bottom-4 flex items-end justify-center stat-number text-[72px] sm:text-[150px] font-black leading-none pointer-events-none select-none transition-colors duration-200 text-black/[0.10] group-hover/stat:text-black/[0.20]" style={{ maskImage: 'linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 85%)', WebkitMaskImage: 'linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 85%)' }}><span className="relative">{heroStats.projectedJobLoss}<span className="absolute left-full top-0 text-[30px] sm:text-[60px] font-normal opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 ml-0.5">%</span></span></span>
-              <p className="relative z-[2] text-[9px] sm:text-[10px] font-bold uppercase tracking-wide sm:tracking-widest text-[var(--muted)] mb-1.5"><span className="text-[9px] font-light opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 mr-0.5">~</span>Projected job loss</p>
-              <p className="relative z-[2] text-[10px] sm:text-[11px] text-[var(--muted)] opacity-50 leading-snug">Weighted avg of {heroStats.projectedEstimateCount} estimates</p>
-            </a>
-            <a href="#evidence-funnel" className="group/stat relative overflow-hidden pt-6 pb-8 sm:pb-12 px-1 sm:px-4 no-underline text-center w-full">
-              <span className="absolute inset-x-0 -bottom-4 flex items-end justify-center stat-number text-[72px] sm:text-[150px] font-black leading-none pointer-events-none select-none transition-colors duration-200 text-emerald-600/[0.12] group-hover/stat:text-emerald-600/[0.25]" style={{ maskImage: 'linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 85%)', WebkitMaskImage: 'linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 85%)' }}><span className="relative">{heroStats.measuredJobLoss}<span className="absolute left-full top-0 text-[30px] sm:text-[60px] font-normal opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 ml-0.5">%</span></span></span>
-              <p className="relative z-[2] text-[9px] sm:text-[10px] font-bold uppercase tracking-wide sm:tracking-widest text-[var(--muted)] mb-1.5"><span className="text-[9px] font-light opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 mr-0.5">~</span>Measured job loss</p>
-              <p className="relative z-[2] text-[10px] sm:text-[11px] text-[var(--muted)] opacity-50 leading-snug">Yale, NBER, Dallas Fed, ECB</p>
-            </a>
-          </div>
+          <HeroTriad
+            projectedJobLoss={heroStats.projectedJobLoss}
+            projectedEstimateCount={heroStats.projectedEstimateCount}
+            measuredJobLoss={heroStats.measuredJobLoss}
+          />
         </div>
 
         {/* News Ticker — overlaps the bottom of the numbers, clipping them */}
@@ -160,43 +150,51 @@ export default function Home() {
 
       {/* Concept Section Bars */}
       <div>
-        <SectionBar
-          title="Why Is Nothing Changing?"
-          description="40% of jobs are AI-exposed, but near-zero have measurably vanished. Follow the evidence funnel from exposure through productivity to actual displacement across 15 studies."
-          href="/j-curve"
-          tag="J-Curve"
-          accentColor="#F7C96B"
-          watermark={<EconomyFunnelWatermark color="#F7C96B" />}
-          stat={{ value: "15", label: "studies" }}
-        />
+        <ScrollReveal>
+          <SectionBar
+            title="Why Is Nothing Changing?"
+            description="40% of jobs are AI-exposed, but near-zero have measurably vanished. Follow the evidence funnel from exposure through productivity to actual displacement across 15 studies."
+            href="/j-curve"
+            tag="J-Curve"
+            accentColor="#F7C96B"
+            watermark={<EconomyFunnelWatermark color="#F7C96B" />}
+            stat={{ value: "15", label: "studies" }}
+          />
+        </ScrollReveal>
 
-        <SectionBar
-          title="What Happens When 1 Worker Equals 2"
-          description="Workers using AI are 20-40% faster at individual tasks. But the economy isn't growing faster. Understanding that gap is the key to predicting what comes next."
-          href="/productivity"
-          tag="Productivity"
-          accentColor="#3B4494"
-          watermark={<ProductivityWatermark color="#3B4494" />}
-          stat={{ value: "~0%", label: "GDP effect" }}
-        />
+        <ScrollReveal delay={80}>
+          <SectionBar
+            title="What Happens When 1 Worker Equals 2"
+            description="Workers using AI are 20-40% faster at individual tasks. But the economy isn't growing faster. Understanding that gap is the key to predicting what comes next."
+            href="/productivity"
+            tag="Productivity"
+            accentColor="#3B4494"
+            watermark={<ProductivityWatermark color="#3B4494" />}
+            stat={{ value: "~0%", label: "GDP effect" }}
+          />
+        </ScrollReveal>
 
-        <SectionBar
-          title="We've Seen This Before"
-          description="Every major technology — steam, electricity, computers — followed the same pattern: displacement first, then more jobs than before. AI is compressing that timeline."
-          href="/history"
-          tag="History"
-          accentColor="#9A9AAF"
-          watermark={<HistoryTimelineWatermark color="#9A9AAF" />}
-        />
+        <ScrollReveal delay={160}>
+          <SectionBar
+            title="We've Seen This Before"
+            description="Every major technology — steam, electricity, computers — followed the same pattern: displacement first, then more jobs than before. AI is compressing that timeline."
+            href="/history"
+            tag="History"
+            accentColor="#9A9AAF"
+            watermark={<HistoryTimelineWatermark color="#9A9AAF" />}
+          />
+        </ScrollReveal>
 
-        <SectionBar
-          title="What if AI Creates More Jobs Than It Changes?"
-          description="Very possible based on historic data. Every general-purpose technology eventually created more jobs than it displaced — and AI may be no different."
-          href="/demand-elasticity"
-          tag="Demand elasticity"
-          accentColor="#34D399"
-          watermark={<DemandElasticityWatermark color="#34D399" />}
-        />
+        <ScrollReveal delay={240}>
+          <SectionBar
+            title="What if AI Creates More Jobs Than It Changes?"
+            description="Very possible based on historic data. Every general-purpose technology eventually created more jobs than it displaced — and AI may be no different."
+            href="/demand-elasticity"
+            tag="Demand elasticity"
+            accentColor="#34D399"
+            watermark={<DemandElasticityWatermark color="#34D399" />}
+          />
+        </ScrollReveal>
       </div>
     </div>
   );

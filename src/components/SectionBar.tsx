@@ -70,7 +70,7 @@ export default function SectionBar({
         {/* Text block */}
         <div className="flex-1 min-w-0">
           <div className="flex items-baseline gap-3 mb-1">
-            <h2 className={`${featured ? "text-[20px] sm:text-[26px]" : "text-[18px] sm:text-[22px]"} font-extrabold tracking-tight text-[var(--foreground)] leading-snug`}>
+            <h2 className={`section-title ${featured ? "text-[20px] sm:text-[26px]" : "text-[18px] sm:text-[22px]"} font-extrabold tracking-tight text-[var(--foreground)] leading-snug`}>
               {title}
             </h2>
             {tag && (
