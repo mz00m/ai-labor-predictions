@@ -73,27 +73,29 @@ export default function Home() {
           </p>
 
           {/* Hero data triad */}
-          <div className="mt-6 grid grid-cols-3 border-t border-black/[0.06]">
-            <a href="/research" className="group/stat relative overflow-hidden py-6 px-4 no-underline text-center">
+          <div className="mt-6 grid grid-cols-3">
+            <a href="/research" className="group/stat relative overflow-hidden pt-6 pb-10 px-4 no-underline text-center">
               <span className="absolute inset-0 flex items-center justify-center stat-number text-[100px] sm:text-[130px] font-black leading-none pointer-events-none select-none transition-opacity duration-200 opacity-[0.06] group-hover/stat:opacity-[0.18]" style={{ color: 'var(--accent)', letterSpacing: '-0.09em' }}>21<span className="text-[40px] sm:text-[50px] font-normal opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 ml-0.5">%</span></span>
               <p className="relative text-[10px] font-bold uppercase tracking-widest text-[var(--muted)] mb-1.5"><span className="text-[9px] font-light opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 mr-0.5">~</span>Productivity boost</p>
               <p className="relative text-[11px] text-[var(--muted)] opacity-50 leading-snug">Median of 18 studies</p>
             </a>
-            <a href="#displacement" className="group/stat relative overflow-hidden py-6 px-4 border-l border-black/[0.06] no-underline text-center">
+            <a href="#displacement" className="group/stat relative overflow-hidden pt-6 pb-10 px-4 no-underline text-center">
               <span className="absolute inset-0 flex items-center justify-center stat-number text-[100px] sm:text-[130px] font-black leading-none text-black/[0.04] group-hover/stat:text-black/[0.10] transition-colors duration-200 pointer-events-none select-none">{heroStats.projectedJobLoss}<span className="text-[40px] sm:text-[50px] font-normal opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 ml-0.5">%</span></span>
               <p className="relative text-[10px] font-bold uppercase tracking-widest text-[var(--muted)] mb-1.5"><span className="text-[9px] font-light opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 mr-0.5">~</span>Projected job loss</p>
               <p className="relative text-[11px] text-[var(--muted)] opacity-50 leading-snug">Weighted avg of {heroStats.projectedEstimateCount} estimates</p>
             </a>
-            <a href="#displacement" className="group/stat relative overflow-hidden py-6 px-4 border-l border-black/[0.06] no-underline text-center">
+            <a href="#displacement" className="group/stat relative overflow-hidden pt-6 pb-10 px-4 no-underline text-center">
               <span className="absolute inset-0 flex items-center justify-center stat-number text-[100px] sm:text-[130px] font-black leading-none text-emerald-600/[0.06] group-hover/stat:text-emerald-600/[0.18] transition-colors duration-200 pointer-events-none select-none">{heroStats.measuredJobLoss}<span className="text-[40px] sm:text-[50px] font-normal opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 ml-0.5">%</span></span>
               <p className="relative text-[10px] font-bold uppercase tracking-widest text-[var(--muted)] mb-1.5"><span className="text-[9px] font-light opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 mr-0.5">~</span>Measured job loss</p>
               <p className="relative text-[11px] text-[var(--muted)] opacity-50 leading-snug">Yale, Goldman, Dallas Fed</p>
             </a>
           </div>
+          {/* Gradient fade from background into ticker */}
+          <div className="h-8 -mb-8 bg-gradient-to-b from-transparent to-[#2E3650] relative z-[1] pointer-events-none" />
         </div>
 
         {/* News Ticker — directly below hero content */}
-        <div className="relative mt-8">
+        <div className="relative">
           <NewsTicker />
         </div>
 
