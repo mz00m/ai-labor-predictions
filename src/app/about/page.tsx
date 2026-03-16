@@ -74,14 +74,32 @@ export default function AboutPage() {
             changing.
           </p>
           <p className="text-[14px] text-[var(--muted)] leading-relaxed">
-            For years I&rsquo;ve wanted a single place that synthesizes what we actually
-            know about AI&rsquo;s impact on economic opportunity: not the hype, not the doom,
-            but the evidence.
-            This dashboard makes that process visible by tracking how predictions about displacement,
+            This site initially started as a way for me to track how predictions about displacement,
             wages, adoption, and corporate behavior evolve as new research, data, and real-world
-            evidence emerge. The goal is to help the people who need it most, leaders in
-            workforce development, education, philanthropy, and policy, have a more thoughtful,
-            evidence-grounded response to what&rsquo;s coming.
+            evidence emerge.
+          </p>
+          <p className="text-[14px] text-[var(--muted)] leading-relaxed">
+            I quickly realized there was also a lot of value in simplifying complex economic theories
+            and research to help the average person understand what it means for their jobs, their
+            kids headed off to college, and just generally what we should plan for as a society!
+            I hope you take some time to interact with the visualizations
+            ({" "}
+            <a href="/task-visualizer" className="underline hover:text-[var(--foreground)] transition-colors">job task breakdown</a>,{" "}
+            <a href="/task-visualizer/economy" className="underline hover:text-[var(--foreground)] transition-colors">economy-wide view</a>,{" "}
+            <a href="/compare" className="underline hover:text-[var(--foreground)] transition-colors">prediction comparison</a>{" "}
+            ) and read through some of the explainers
+            ({" "}
+            <a href="/j-curve" className="underline hover:text-[var(--foreground)] transition-colors">the J-Curve</a>,{" "}
+            <a href="/history" className="underline hover:text-[var(--foreground)] transition-colors">historical context</a>,{" "}
+            <a href="/demand-elasticity" className="underline hover:text-[var(--foreground)] transition-colors">demand elasticity</a>,{" "}
+            <a href="/signals" className="underline hover:text-[var(--foreground)] transition-colors">leading indicators</a>{" "}
+            ) and I hope you find them useful.
+          </p>
+          <p className="text-[14px] text-[var(--muted)] leading-relaxed">
+            The goal is to help the people who need it most, leaders in workforce development,
+            education, philanthropy, and policy, but also just the average person trying to navigate
+            this new AI-enabled world have a more thoughtful, evidence-grounded response to
+            what&rsquo;s coming.
           </p>
           <AboutStats totalCost={totalCost} />
           <p className="text-[14px] text-[var(--muted)] leading-relaxed">
