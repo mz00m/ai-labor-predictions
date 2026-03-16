@@ -215,6 +215,17 @@
       ],
       "evidenceTier": 1,
       "metricType": "employment"
+    },
+    {
+      "date": "2026-03-13",
+      "value": -0.37,
+      "confidenceLow": -0.70,
+      "confidenceHigh": -0.01,
+      "sourceIds": ["fed-atl-duke-cfo-ai-productivity-2026"],
+      "evidenceTier": 1,
+      "metricType": "survey",
+      "sampleSize": 748,
+      "dataType": "projected"
     }
   ],
   "overlays": [
@@ -886,6 +897,13 @@
       ],
       "evidenceTier": 1,
       "label": "NBER: 6.1M workers (4.2%) highly AI-exposed with low adaptive capacity; clerical/admin roles"
+    },
+    {
+      "date": "2026-03-13",
+      "direction": "neutral",
+      "sourceIds": ["fed-atl-duke-cfo-ai-productivity-2026"],
+      "evidenceTier": 1,
+      "label": "Fed/Duke CFO Survey: 50% of firms report no AI job replacement; aggregate effect <0.4%"
     }
   ],
   "sources": [
@@ -1634,6 +1652,16 @@
       "evidenceTier": 1,
       "datePublished": "2026-01-21",
       "excerpt": "Of the 37.1 million workers in the top quartile of AI exposure, 26.5 million are in occupations that also have above-median adaptive capacity. At the same time, 6.1 million workers (4.2% of the workforce) are both highly exposed and in the bottom quartile of adaptive capacity, concentrated in clerical and administrative roles.",
+      "dateAdded": "2026-03-16"
+    },
+    {
+      "id": "fed-atl-duke-cfo-ai-productivity-2026",
+      "title": "Artificial Intelligence, Productivity, and the Workforce: Evidence from Corporate Executives",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6410338",
+      "publisher": "Federal Reserve Bank of Atlanta / Duke University (Baslandze et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-13",
+      "excerpt": "Survey of ~750 CFOs finds firm-size-and-sector-weighted aggregate employment is expected to decline by less than 0.4% due to AI in 2026, implying ~502K workers. 50% of firms report no AI job replacement. Large firms expect workforce reductions; small firms expect modest gains.",
       "dateAdded": "2026-03-16"
     }
   ]

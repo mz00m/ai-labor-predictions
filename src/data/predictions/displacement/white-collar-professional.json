@@ -515,6 +515,13 @@
       ],
       "evidenceTier": 1,
       "label": "NBER: Professional/managerial (56.9M) have high adaptive capacity (0.734) despite high AI exposure"
+    },
+    {
+      "date": "2026-03-13",
+      "direction": "down",
+      "sourceIds": ["fed-atl-duke-cfo-ai-productivity-2026"],
+      "evidenceTier": 1,
+      "label": "Fed/Duke: Routine clerical declining 0.76pp/yr; offset by skilled-technical gains"
     }
   ],
   "sources": [
@@ -1035,6 +1042,16 @@
       "evidenceTier": 1,
       "datePublished": "2026-01-21",
       "excerpt": "Professional and managerial occupations (56.9 million workers) have relatively higher adaptive capacity on average (0.734) despite substantial exposure (0.400), while administrative support occupations have lower adaptive capacity (0.360) combined with the highest AI exposure of any major occupation group (0.525).",
+      "dateAdded": "2026-03-16"
+    },
+    {
+      "id": "fed-atl-duke-cfo-ai-productivity-2026",
+      "title": "Artificial Intelligence, Productivity, and the Workforce: Evidence from Corporate Executives",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6410338",
+      "publisher": "Federal Reserve Bank of Atlanta / Duke University (Baslandze et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-13",
+      "excerpt": "CFOs expect routine clerical employment share to decline by 0.76pp in 2026 and 2.19pp by 2028, with partially offsetting increases in skilled-technical roles (+0.62pp in 2026). Business/financial operations NEI of 0.829 indicates roughly balanced replacement and enhancement.",
       "dateAdded": "2026-03-16"
     }
   ]

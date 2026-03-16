@@ -10,6 +10,15 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Baslandze et al. (Fed Atlanta/Duke)",
+    title: "AI, Productivity, and the Workforce: Evidence from Corporate Executives",
+    summary:
+      "Survey of 750 CFOs: <0.4% aggregate job loss, productivity paradox (reported 3x implied gains), finance leads. Routine clerical declining; skilled-technical rising.",
+    date: "Mar 13",
+    url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6410338",
+    accent: "border-l-violet-500",
+  },
+  {
     author: "Schaul, Ovide (WaPo)",
     title: "Which Jobs Are Most Threatened by AI, and Who May Adapt",
     summary:
@@ -44,15 +53,6 @@ const articles: Article[] = [
     date: "Mar 10",
     url: "https://davidoks.blog/p/why-the-atm-didnt-kill-bank-teller",
     accent: "border-l-blue-500",
-  },
-  {
-    author: "Kolko (PIIE)",
-    title: "AI and the Labor Market Is Still in the First Inning",
-    summary:
-      "Evidence inconclusive; disruption pace matches computer & internet eras. Under 1/5 of firms using AI.",
-    date: "Mar 10",
-    url: "https://www.piie.com/blogs/realtime-economics/2026/research-ai-and-labor-market-still-first-inning",
-    accent: "border-l-amber-500",
   },
 ];
 
