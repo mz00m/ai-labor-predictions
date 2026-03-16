@@ -200,6 +200,86 @@ export default function MethodologySection() {
           </div>
         </div>
 
+        {/* Exposure scores & measurement uncertainty */}
+        <div>
+          <h4 className="text-[14px] font-semibold text-[var(--foreground)] mb-2">
+            AI exposure scores and measurement uncertainty
+          </h4>
+          <div className="text-[13px] text-[var(--muted)] leading-relaxed space-y-2">
+            <p>
+              The economy view includes two additional data layers from the{" "}
+              <a
+                href="https://budgetlab.yale.edu/research/labor-market-ai-exposure-what-do-we-know"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-[var(--foreground)]"
+              >
+                Yale Budget Lab (Gimbel, Kendall, Kulsakdinun, 2026)
+              </a>{" "}
+              and its{" "}
+              <a
+                href="https://github.com/rmmomin/jobs-ai-exposure"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-[var(--foreground)]"
+              >
+                companion data repository
+              </a>:
+            </p>
+            <p>
+              <strong className="text-[var(--foreground)]">Exposure scores (0-10)</strong> —
+              GPT-scored AI exposure for 342 BLS occupations across three dimensions: direct automation
+              effects, indirect productivity effects, and digital work emphasis. Scores are aggregated to
+              the 22 SOC major groups using unweighted means. Validated against six independent academic
+              exposure metrics with high correlation (Pearson 0.878 with Yale PCA composite, 0.885 with
+              OpenAI/UPenn GPTs-are-GPTs). These appear in the &ldquo;Exposure&rdquo; column and tooltips.
+            </p>
+            <p>
+              <strong className="text-[var(--foreground)]">Measurement certainty</strong> —
+              The Yale study compared six AI exposure metrics (Eloundou et al., Eisfeldt et al., Felten et al.,
+              Tomlinson et al.) across 778 occupations using PCA-weighted z-scores. The key finding: metrics
+              broadly agree on which occupations have low exposure (e.g., construction, maintenance) but
+              disagree significantly on the <em>magnitude</em> of exposure for highly exposed occupations
+              (e.g., computer/math, legal). We display this as a &ldquo;Certainty&rdquo; indicator:
+            </p>
+          </div>
+          <div className="overflow-x-auto mt-3">
+            <table className="w-full text-[12px]">
+              <thead>
+                <tr className="border-b border-black/[0.06]">
+                  <th className="text-left py-2 pr-4 text-[var(--foreground)] font-semibold">Certainty</th>
+                  <th className="text-left py-2 pr-4 text-[var(--foreground)] font-semibold">Variance</th>
+                  <th className="text-left py-2 text-[var(--foreground)] font-semibold">Interpretation</th>
+                </tr>
+              </thead>
+              <tbody className="text-[var(--muted)]">
+                <tr className="border-b border-black/[0.04]">
+                  <td className="py-2 pr-4"><span style={{ color: "#10B981" }}>Low uncertainty</span></td>
+                  <td className="py-2 pr-4">&lt; 0.3</td>
+                  <td className="py-2">Metrics agree. Automation projections for these groups are well-calibrated.</td>
+                </tr>
+                <tr className="border-b border-black/[0.04]">
+                  <td className="py-2 pr-4"><span style={{ color: "#F59E0B" }}>Moderate uncertainty</span></td>
+                  <td className="py-2 pr-4">0.3 - 0.5</td>
+                  <td className="py-2">Metrics partially agree. True exposure may be higher or lower than shown.</td>
+                </tr>
+                <tr>
+                  <td className="py-2 pr-4"><span style={{ color: "#EF4444" }}>High uncertainty</span></td>
+                  <td className="py-2 pr-4">&gt; 0.5</td>
+                  <td className="py-2">Metrics disagree. Automation projections should be interpreted with caution.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="text-[12px] text-[var(--muted)] mt-3">
+            The regression coefficient (beta = 0.0617, p &lt; 0.0001) indicates that disagreement increases
+            moderately but consistently with exposure. This means our cost-crossover projections for the
+            most-exposed groups (Computer &amp; Math, Legal, Office &amp; Admin) carry inherently more
+            measurement uncertainty than projections for less-exposed groups (Construction, Farming,
+            Building &amp; Grounds).
+          </p>
+        </div>
+
         {/* What this doesn't capture */}
         <div>
           <h4 className="text-[14px] font-semibold text-[var(--foreground)] mb-2">
@@ -277,6 +357,16 @@ export default function MethodologySection() {
             <li>
               <a href="https://arxiv.org/html/2510.13369v1" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">
                 Moravec&apos;s Paradox Applied to Labor Markets — why physical tasks are harder to automate than cognitive ones
+              </a>
+            </li>
+            <li>
+              <a href="https://budgetlab.yale.edu/research/labor-market-ai-exposure-what-do-we-know" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">
+                Yale Budget Lab (Gimbel et al., 2026): &quot;Labor Market AI Exposure: What Do We Know?&quot; — meta-analysis of 6 exposure metrics across 778 occupations
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/rmmomin/jobs-ai-exposure" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">
+                Yale Budget Lab data repository — GPT-scored exposure for 342 BLS occupations (0-10 scale), industry-weighted NAICS exposures
               </a>
             </li>
           </ul>
