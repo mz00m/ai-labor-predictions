@@ -73,15 +73,6 @@
       ],
       "evidenceTier": 2,
       "metricType": "postings"
-    },
-    {
-      "date": "2026-02-24",
-      "value": 9.2,
-      "sourceIds": [
-        "dallas-fed-davis-ai-wages-2026"
-      ],
-      "evidenceTier": 1,
-      "metricType": "employment"
     }
   ],
   "overlays": [

@@ -87,6 +87,8 @@ export interface Prediction {
   currentValueMethodology?: string;
   /** "weighted" (default) averages competing estimates; "latest" uses the most recent data point (for time-series observed data like adoption rates) */
   aggregationMethod?: "weighted" | "latest";
+  /** Prominent disclaimer shown above the chart when sources use incompatible definitions or scopes */
+  disclaimer?: string;
   timeHorizon: string;
   history: HistoricalDataPoint[];
   overlays?: DirectionalOverlay[];

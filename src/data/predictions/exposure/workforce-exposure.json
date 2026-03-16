@@ -7,6 +7,7 @@
   "unit": "% of jobs exposed",
   "currentValue": 46.2,
   "timeHorizon": "Current estimate",
+  "disclaimer": "Sources use different definitions of 'exposure' -- from tasks within a job to entire occupations. The range (23%--93%) reflects definitional differences, not measurement uncertainty.",
   "history": [
     {
       "date": "2023-03-26",
