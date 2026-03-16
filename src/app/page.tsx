@@ -108,7 +108,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Section Bars */}
+      {/* Featured Section Bars */}
       <div className="mt-10">
         <SectionBar
           title={`${predictions.length} Predictions for How AI Will Impact Jobs`}
@@ -118,6 +118,7 @@ export default function Home() {
           accentColor="#6B7BF7"
           watermark={<PredictionsWatermark color="#6B7BF7" />}
           stat={{ value: `${totalSources}+`, label: "sources" }}
+          featured
         />
 
         <SectionBar
@@ -128,8 +129,31 @@ export default function Home() {
           accentColor="#3ECFAE"
           watermark={<TaskVisualizerWatermark color="#3ECFAE" />}
           stat={{ value: "800+", label: "occupations" }}
+          featured
         />
 
+        <SectionBar
+          title="Early Indicators"
+          description="AI tool downloads are surging — PyPI and npm package data, SDK adoption curves, and developer activity signal where automation is landing before the labor data catches up."
+          href="/signals"
+          tag="Signals"
+          accentColor="#F26D6D"
+          watermark={<SignalsWatermark color="#F26D6D" />}
+          stat={{ value: "Live", label: "data" }}
+          featured
+        />
+      </div>
+
+      {/* Important Concepts divider */}
+      <div className="mt-12 mb-2 -mx-6 sm:-mx-10 px-6 sm:px-10">
+        <div className="border-t border-black/[0.08]" />
+        <p className="mt-5 text-[11px] font-bold uppercase tracking-widest text-[var(--muted)] opacity-60">
+          Important Concepts
+        </p>
+      </div>
+
+      {/* Concept Section Bars */}
+      <div>
         <SectionBar
           title="Why Is Nothing Changing?"
           description="40% of jobs are AI-exposed, but near-zero have measurably vanished. Follow the evidence funnel from exposure through productivity to actual displacement across 15 studies."
@@ -157,16 +181,6 @@ export default function Home() {
           tag="History"
           accentColor="#9A9AAF"
           watermark={<HistoryTimelineWatermark color="#9A9AAF" />}
-        />
-
-        <SectionBar
-          title="Early Indicators"
-          description="AI tool downloads are surging — PyPI and npm package data, SDK adoption curves, and developer activity signal where automation is landing before the labor data catches up."
-          href="/signals"
-          tag="Signals"
-          accentColor="#F26D6D"
-          watermark={<SignalsWatermark color="#F26D6D" />}
-          stat={{ value: "Live", label: "data" }}
         />
 
         <SectionBar
