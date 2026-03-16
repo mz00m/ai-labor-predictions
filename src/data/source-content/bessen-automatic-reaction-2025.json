@@ -1,0 +1,14 @@
+{
+  "id": "bessen-automatic-reaction-2025",
+  "abstract": "Using Dutch government administrative data covering 36,000 firms and ~5 million workers per year (2000-2016), the authors provide the first large-scale estimate of automation's impact on individual workers. They find that automation increases worker separation from employers and reduces days worked, leading to cumulative earnings losses, but at rates far below mass layoffs. The effects are gradual and unevenly distributed across worker demographics.",
+  "keyFindings": [
+    "Tenured workers at automating firms cumulatively lose about 3,800 Euros (9% of one year's income) in wage and salary earnings over five years",
+    "Only 0.7% of all workers leave their employers each year due to automation, compared to 3.5-7.2% from mass layoffs",
+    "Little change in wage rates observed; earnings losses driven by reduced days worked and employer separation",
+    "Adverse impacts are larger in smaller firms and for older and middle-educated workers",
+    "Highly educated and highly paid workers are more likely to leave following automation but find new jobs faster"
+  ],
+  "methodology": "Event study difference-in-differences design using Dutch administrative microdata (2000-2016). Automation measured via lumpy capital investment spikes at 36,000 firms across all private non-financial industries. Sample covers approximately 5 million workers per year. Outcomes tracked over 5-year post-automation windows.",
+  "qualifiers": "Data is from the Netherlands (2000-2016), not the US. Covers pre-AI automation (industrial/process automation), not specifically AI. Computer investment alone showed no adverse worker effects. Results may not generalize to AI-era cognitive task automation. The study period predates large language models and generative AI.",
+  "fetchedAt": "2026-03-16"
+}

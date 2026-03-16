@@ -440,6 +440,24 @@
       ],
       "evidenceTier": 3,
       "label": "NBER via BizJournals: 70% of 6,000 intl. execs report using AI"
+    },
+    {
+      "date": "2024-10-01",
+      "direction": "down",
+      "sourceIds": [
+        "hunt-cockburn-bessen-ai-distance-adoption-2024"
+      ],
+      "evidenceTier": 1,
+      "label": "Hunt/Cockburn/Bessen: 200km from AI hotspot = 17% lower AI job growth (741 CZs, 2007-2019)"
+    },
+    {
+      "date": "2024-10-01",
+      "direction": "down",
+      "sourceIds": [
+        "hunt-cockburn-bessen-ai-distance-adoption-2024"
+      ],
+      "evidenceTier": 1,
+      "label": "Hunt/Cockburn/Bessen: state borders explain 20% of AI adoption distance penalty"
     }
   ],
   "sources": [
@@ -852,6 +870,16 @@
       "datePublished": "2025-04-01",
       "excerpt": "75% of knowledge workers use AI at work; 78% bring own AI tools (n=31K, 31 countries).",
       "dateAdded": "2026-03-12"
+    },
+    {
+      "id": "hunt-cockburn-bessen-ai-distance-adoption-2024",
+      "title": "Is Distance from Innovation a Barrier to the Adoption of Artificial Intelligence?",
+      "url": "https://www.nber.org/papers/w33022",
+      "publisher": "NBER (Hunt, Cockburn, Bessen)",
+      "evidenceTier": 1,
+      "datePublished": "2024-10-01",
+      "excerpt": "A commuting zone which is an additional 200 km from the closest AI hotspot has 17% lower growth in AI jobs' share of vacancies. 20% of the effect is explained by state borders.",
+      "dateAdded": "2026-03-16"
     }
   ]
 }

@@ -139,6 +139,25 @@
       ],
       "evidenceTier": 2,
       "metricType": "employment"
+    },
+    {
+      "date": "2025-02-01",
+      "value": -3.6,
+      "confidenceLow": -5.4,
+      "confidenceHigh": -1.8,
+      "sourceIds": [
+        "bessen-automatic-reaction-2025"
+      ],
+      "evidenceTier": 1,
+      "metricType": "employment",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "cumulative earnings loss over 5 years (% of one year's income)",
+        "conversionFactor": 0.40,
+        "conversionLow": 0.20,
+        "conversionHigh": 0.60,
+        "rationale": "9% cumulative earnings loss from reduced days worked and separation; authors find little wage rate change"
+      }
     }
   ],
   "overlays": [
@@ -706,6 +725,15 @@
       "evidenceTier": 1,
       "datePublished": "2025-10-15",
       "excerpt": "Large-scale field experiments find treatment effects 0-16.3% on sales, mapping directly into TFP improvements."
+    },
+    {
+      "id": "bessen-automatic-reaction-2025",
+      "title": "Automatic Reaction \u2014 What Happens to Workers at Firms that Automate?",
+      "url": "https://doi.org/10.1162/rest_a_01284",
+      "publisher": "Review of Economics and Statistics (Bessen, Goos, Salomons, van den Berge)",
+      "evidenceTier": 1,
+      "datePublished": "2025-02-01",
+      "excerpt": "Tenured workers cumulatively lose about 3,800 Euros in wage and salary earnings over five years on average (about 9% of one year's income). We find little change in wage rates."
     }
   ]
 }
