@@ -84,7 +84,7 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
   }, []);
 
   const handleShareChange = useCallback((taskId: string, value: number) => {
-    setAdjustedShares((prev) => {
+    setAdjustedShares((prev: Record<string, number>) => {
       const clamped = Math.max(0, Math.min(1, value));
       const oldValue = prev[taskId] ?? 0;
       const delta = clamped - oldValue;
@@ -93,14 +93,14 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
       // Sum of all OTHER sliders
       const othersSum = Object.entries(prev)
         .filter(([id]) => id !== taskId)
-        .reduce((s, [, v]) => s + v, 0);
+        .reduce((s: number, [, v]) => s + (v as number), 0);
 
       const next: Record<string, number> = {};
 
       if (othersSum === 0) {
         // Edge case: all others are zero, just set this one
         for (const [id, v] of Object.entries(prev)) {
-          next[id] = id === taskId ? clamped : v;
+          next[id] = id === taskId ? clamped : (v as number);
         }
       } else {
         // Proportionally scale other sliders so total stays at 1.0
@@ -110,7 +110,7 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
           if (id === taskId) {
             next[id] = clamped;
           } else {
-            next[id] = Math.max(0, Math.round(v * scale * 1000) / 1000);
+            next[id] = Math.max(0, Math.round((v as number) * scale * 1000) / 1000);
           }
         }
       }
@@ -121,7 +121,7 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
   const handleReset = useCallback(() => {
     if (!selectedJob) return;
     const shares: Record<string, number> = {};
-    selectedJob.tasks.forEach((t) => (shares[t.id] = t.timeShare));
+    selectedJob.tasks.forEach((t: { id: string; timeShare: number }) => (shares[t.id] = t.timeShare));
     setAdjustedShares(shares);
   }, [selectedJob]);
 
@@ -146,7 +146,7 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
           <input
             type="text"
             value={selectedJob ? (searchQuery || selectedJob.title) : searchQuery}
-            onChange={(e) => {
+            onChange={(e: { target: { value: string } }) => {
               setSearchQuery(e.target.value);
             }}
             onFocus={() => {
@@ -157,7 +157,7 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
           />
           {searchQuery && !selectedJob && filteredJobs.length > 0 && (
             <div className="absolute top-full left-0 right-0 max-w-lg mt-1 bg-white rounded-xl border border-black/[0.08] shadow-lg max-h-[280px] overflow-y-auto z-30">
-              {filteredJobs.map((job) => {
+              {filteredJobs.map((job: JobProfile) => {
                 const colors = DEFAULT_CATEGORY_STYLE;
                 return (
                   <button

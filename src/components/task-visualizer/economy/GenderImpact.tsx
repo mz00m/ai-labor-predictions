@@ -47,6 +47,28 @@ interface TierGenderData {
   }[];
 }
 
+interface GenderBarEntry {
+  id: string;
+  shortTitle: string;
+  womenPercent: number;
+  menPercent: number;
+  womenCount: number;
+  menCount: number;
+  employment: number;
+  automationPct2030: number;
+  incomeTier: IncomeTier;
+  hasJobs: boolean;
+}
+
+interface ExposedWomenEntry {
+  id: string;
+  shortTitle: string;
+  womenPercent: number;
+  womenCount: number;
+  automationPct2030: number;
+  incomeTier: IncomeTier;
+}
+
 function CustomTooltip({ active, payload }: TooltipProps<number, string>) {
   if (!active || !payload?.[0]) return null;
   const d = payload[0].payload;
@@ -152,7 +174,7 @@ export default function GenderImpact() {
   }, []);
 
   // Most exposed female-dominated occupations
-  const mostExposedWomen = useMemo(() => {
+  const mostExposedWomen = useMemo<ExposedWomenEntry[]>(() => {
     return OCCUPATION_GROUPS
       .filter((g) => g.womenPercent >= 55)
       .map((g) => ({
@@ -168,7 +190,7 @@ export default function GenderImpact() {
   }, []);
 
   // Bar chart data: all groups by women% with automation color
-  const barChartData = useMemo(() => {
+  const barChartData = useMemo<GenderBarEntry[]>(() => {
     return OCCUPATION_GROUPS
       .map((g) => ({
         id: g.id,
@@ -262,9 +284,9 @@ export default function GenderImpact() {
               data={barChartData}
               layout="vertical"
               margin={{ top: 0, right: 30, left: 0, bottom: 0 }}
-              onClick={(state) => {
+              onClick={(state: { activePayload?: { payload: GenderBarEntry }[] } | null) => {
                 if (!state?.activePayload?.[0]) return;
-                const group = state.activePayload[0].payload as (typeof barChartData)[number];
+                const group = state.activePayload[0].payload;
                 const jobIds = SOC_TO_JOB_IDS[group.id] || [];
                 if (jobIds.length > 0) {
                   router.push(`/task-visualizer?job=${jobIds[0]}`);
@@ -275,7 +297,7 @@ export default function GenderImpact() {
               <XAxis
                 type="number"
                 domain={[0, 100]}
-                tickFormatter={(v) => `${v}%`}
+                tickFormatter={(v: number) => `${v}%`}
                 tick={{ fontSize: 11, fill: "#6b7280" }}
                 axisLine={false}
                 tickLine={false}
@@ -290,12 +312,12 @@ export default function GenderImpact() {
               />
               <Tooltip content={<CustomTooltip />} cursor={{ fill: "rgba(0,0,0,0.02)" }} />
               <Bar dataKey="womenPercent" name="Women" stackId="a" barSize={18} style={{ cursor: "pointer" }}>
-                {barChartData.map((entry) => (
+                {barChartData.map((entry: GenderBarEntry) => (
                   <Cell key={entry.shortTitle} fill={GENDER_COLORS.women} fillOpacity={entry.hasJobs ? 0.85 : 0.45} />
                 ))}
               </Bar>
               <Bar dataKey="menPercent" name="Men" stackId="a" barSize={18} style={{ cursor: "pointer" }}>
-                {barChartData.map((entry) => (
+                {barChartData.map((entry: GenderBarEntry) => (
                   <Cell key={entry.shortTitle} fill={GENDER_COLORS.men} fillOpacity={entry.hasJobs ? 0.85 : 0.45} />
                 ))}
               </Bar>
@@ -324,7 +346,7 @@ export default function GenderImpact() {
               </tr>
             </thead>
             <tbody className="text-[var(--muted)]">
-              {mostExposedWomen.map((g) => {
+              {mostExposedWomen.map((g: ExposedWomenEntry) => {
                 const jobIds = SOC_TO_JOB_IDS[g.id] || [];
                 const clickable = jobIds.length > 0;
                 return (
