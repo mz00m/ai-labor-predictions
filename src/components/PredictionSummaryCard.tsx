@@ -251,8 +251,8 @@ export default function PredictionSummaryCard({
               </span>
             )}
             {agg.trend !== "flat" && (
-              <span className={`text-[22px] ${trendColorClass}`} style={{ opacity: 0.6 }}>
-                {agg.trend === "up" ? "▲" : "▼"}
+              <span className={`text-[13px] font-medium ${trendColorClass}`} style={{ opacity: 0.7 }}>
+                Trending {agg.trend === "up" ? "▲" : "▼"}
               </span>
             )}
           </div>
@@ -307,21 +307,8 @@ export default function PredictionSummaryCard({
             </div>
           )}
 
-          {/* Source attribution + link */}
-          <div className="flex items-center justify-between gap-2">
-            <div className="flex items-center gap-2.5 min-w-0">
-              {bestSource && tierConfig && (
-                <div className="flex items-center gap-1.5 min-w-0">
-                  <span
-                    className="inline-block w-2 h-2 rounded-full shrink-0"
-                    style={{ backgroundColor: tierConfig.color }}
-                  />
-                  <span className="text-[12px] text-[var(--muted)] truncate max-w-[140px]">
-                    {bestSource.publisher}
-                  </span>
-                </div>
-              )}
-            </div>
+          {/* Source count link */}
+          <div className="flex items-center justify-end">
             <span className="text-[12px] text-[var(--accent)] font-semibold group-hover:underline shrink-0">
               {prediction.sources.length} sources
             </span>
