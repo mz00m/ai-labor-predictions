@@ -72,7 +72,13 @@ export default function SignalsPage() {
           today is enormous. Blue shows the share of tasks LLMs could theoretically perform;
           red shows measured usage from Claude API traffic. The discrepancy suggests we are
           still early in the diffusion phase, even in high-exposure categories like
-          Office &amp; Admin and Computer &amp; Math.
+          Office &amp; Admin and Computer &amp; Math. Importantly, high exposure does not
+          automatically predict displacement. In sectors with{" "}
+          <a href="/demand-elasticity" className="text-[var(--accent)] hover:underline">
+            elastic demand
+          </a>, high AI exposure may predict <em>expansion</em> &mdash; more hiring at
+          higher wages &mdash; as productivity gains make previously unviable work
+          economically feasible.
         </p>
         <div className="flex justify-center">
           {/* eslint-disable-next-line @next/next/no-img-element */}

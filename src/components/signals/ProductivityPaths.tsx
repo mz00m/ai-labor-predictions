@@ -238,18 +238,65 @@ const PATHS: PathConfig[] = [
             Jevons Paradox
           </strong>{" "}
           applied to labor: efficiency doesn&apos;t shrink demand, it grows it.
-          IBM&apos;s AI-driven HR savings were reinvested into hiring more
-          engineers and salespeople.
+          When AI dramatically reduces the cost of work, previously unviable
+          projects become viable. The net effect depends on two conditions:
+        </p>
+        <div className="mt-3 grid grid-cols-2 gap-2">
+          <div className="rounded-md px-3 py-2 border border-[#5C61F6]/20 bg-[#5C61F6]/[0.04]">
+            <p className="text-[11px] font-bold text-[#5C61F6] mb-0.5">
+              A: Demand elasticity
+            </p>
+            <p className="text-[11px] text-[var(--muted)]">
+              Does cheaper output create more demand?
+            </p>
+          </div>
+          <div className="rounded-md px-3 py-2 border border-[#22c55e]/20 bg-[#22c55e]/[0.04]">
+            <p className="text-[11px] font-bold text-[#22c55e] mb-0.5">
+              B: High task exposure
+            </p>
+            <p className="text-[11px] text-[var(--muted)]">
+              Enough AI-augmented tasks to change the cost equation?
+            </p>
+          </div>
+        </div>
+        <p className="mt-3">
+          <strong className="text-[var(--foreground)]">Agentic coding example:</strong>{" "}
+          A project needs 50 engineers but the ROI doesn&apos;t justify it
+          &mdash; so the company hires 0. AI agents make it a 10-engineer
+          problem. Now the company hires 10. Net: +10 engineers, not -40.
         </p>
         <p className="mt-2">
           Historical precedent: ATMs didn&apos;t eliminate bank tellers &mdash;
           they made branches cheaper to operate, so banks opened more branches,
-          and total teller employment rose for decades.
+          and total teller employment rose for decades (
+          <a
+            href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2690435"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--accent)] hover:underline"
+          >
+            Bessen, 2015
+          </a>
+          ). Spreadsheets didn&apos;t eliminate accountants &mdash; they made
+          analysis affordable, expanding the market for accounting services.
         </p>
+        <p className="mt-2 text-[11px]">
+          Note: expansion is a net effect, not frictionless. Some workers will
+          be displaced at individual firms even as the sector grows overall.
+        </p>
+        <Link
+          href="/demand-elasticity"
+          className="inline-flex items-center gap-1 mt-3 text-[12px] font-bold text-[var(--accent)] hover:underline"
+        >
+          Explore the full demand elasticity framework
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M4.5 2.5L8 6L4.5 9.5" />
+          </svg>
+        </Link>
       </>
     ),
     example:
-      "A marketing agency uses AI to cut production costs 40%, then expands from 3 service lines to 7, hiring specialists for the new offerings.",
+      "A marketing agency uses AI to cut production costs 40%, then expands from 3 service lines to 7, hiring specialists for the new offerings. A mid-sized company starts a software project that was previously too expensive, hiring 10 AI-augmented engineers for work that would have required 50 before.",
   },
 ];
 
