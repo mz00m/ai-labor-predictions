@@ -21,7 +21,18 @@ import {
   INCOME_TIER_META,
   SOC_TO_JOB_IDS,
   type IncomeTier,
+  type OccupationGroup,
 } from "@/data/economy-occupations";
+
+interface ACComponentRow {
+  id: string;
+  shortTitle: string;
+  adaptiveCapacity: number;
+  netLiquidWealth: number;
+  skillTransferability: number;
+  geographicDensity: number;
+  ageFraction55Plus: number;
+}
 
 interface ScatterPoint {
   id: string;
@@ -108,7 +119,7 @@ export default function AdaptiveCapacity() {
   }, [medianExposure, medianAC]);
 
   // AC components bar data
-  const componentsData = useMemo(() => {
+  const componentsData = useMemo<ACComponentRow[]>(() => {
     return [...OCCUPATION_GROUPS]
       .sort((a, b) => b.adaptiveCapacity - a.adaptiveCapacity)
       .map((g) => ({
@@ -182,9 +193,9 @@ export default function AdaptiveCapacity() {
           <ResponsiveContainer width="100%" height="100%">
             <ScatterChart
               margin={{ top: 20, right: 30, left: 10, bottom: 20 }}
-              onClick={(state) => {
+              onClick={(state: { activePayload?: { payload: ScatterPoint }[] } | null) => {
                 if (!state?.activePayload?.[0]) return;
-                const point = state.activePayload[0].payload as ScatterPoint;
+                const point = state.activePayload[0].payload;
                 const jobIds = SOC_TO_JOB_IDS[point.id] || [];
                 if (jobIds.length > 0) {
                   router.push(`/task-visualizer?job=${jobIds[0]}`);
@@ -198,7 +209,7 @@ export default function AdaptiveCapacity() {
                 domain={[0, 0.6]}
                 name="AI Exposure"
                 tick={{ fontSize: 11, fill: "#6b7280" }}
-                tickFormatter={(v) => `${(v * 100).toFixed(0)}%`}
+                tickFormatter={(v: number) => `${(v * 100).toFixed(0)}%`}
                 axisLine={false}
                 tickLine={false}
               >
@@ -215,7 +226,7 @@ export default function AdaptiveCapacity() {
                 domain={[0.25, 0.8]}
                 name="Adaptive Capacity"
                 tick={{ fontSize: 11, fill: "#6b7280" }}
-                tickFormatter={(v) => v.toFixed(2)}
+                tickFormatter={(v: number) => v.toFixed(2)}
                 axisLine={false}
                 tickLine={false}
               >
@@ -248,7 +259,7 @@ export default function AdaptiveCapacity() {
                 data={scatterData}
                 style={{ cursor: "pointer" }}
               >
-                {scatterData.map((entry) => (
+                {scatterData.map((entry: ScatterPoint) => (
                   <Cell
                     key={entry.id}
                     fill={INCOME_TIER_META[entry.incomeTier].color}
@@ -303,7 +314,7 @@ export default function AdaptiveCapacity() {
                 </tr>
               </thead>
               <tbody className="text-[var(--muted)]">
-                {vulnerableGroups.map((g) => {
+                {vulnerableGroups.map((g: OccupationGroup) => {
                   const jobIds = SOC_TO_JOB_IDS[g.id] || [];
                   const clickable = jobIds.length > 0;
                   return (
@@ -367,7 +378,7 @@ export default function AdaptiveCapacity() {
         </div>
 
         <div className="space-y-1.5">
-          {componentsData.map((g) => {
+          {componentsData.map((g: ACComponentRow) => {
             const total = g.netLiquidWealth + g.skillTransferability + g.geographicDensity + g.ageFraction55Plus;
             return (
               <div key={g.id} className="flex items-center gap-2">

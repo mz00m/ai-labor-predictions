@@ -30,8 +30,9 @@ export default function FocusRecommendations({
   adaptiveCapacity,
   highVulnerability,
 }: FocusRecommendationsProps) {
-  const { atRisk, augment, invest } = useMemo(() => {
-    const analyzed = tasks.map((task) => {
+  type AnalyzedTask = { task: JobTask; share: number; adoption: number | null; yearsLeft: number };
+  const { atRisk, augment, invest } = useMemo<{ atRisk: AnalyzedTask[]; augment: AnalyzedTask[]; invest: AnalyzedTask[] }>(() => {
+    const analyzed: AnalyzedTask[] = tasks.map((task) => {
       const share = adjustedShares[task.id] ?? task.timeShare;
       const adoption = calculateAdoptionYear(
         { ...task, timeShare: share },
@@ -68,7 +69,7 @@ export default function FocusRecommendations({
   }, [tasks, adjustedShares, humanWagePerHr, industrySpeedMultiplier]);
 
   const automatedSharePercent = Math.round(
-    atRisk.reduce((s, a) => s + a.share, 0) * 100
+    atRisk.reduce((s: number, a: AnalyzedTask) => s + a.share, 0) * 100
   );
 
   return (
@@ -96,7 +97,7 @@ export default function FocusRecommendations({
             AI can already perform these tasks at or below human labor cost. Adoption still lags economics by years, but the cost incentive is there. Shift time away from these.
           </p>
           <div className="space-y-1.5">
-            {atRisk.map(({ task, share }) => (
+            {atRisk.map(({ task, share }: AnalyzedTask) => (
               <div
                 key={task.id}
                 className="flex items-center justify-between py-1.5 px-3 rounded-lg bg-black/[0.02]"
@@ -125,7 +126,7 @@ export default function FocusRecommendations({
             AI is getting capable at these tasks. Become the person who directs AI tools here. Your value multiplies.
           </p>
           <div className="space-y-1.5">
-            {augment.map(({ task, share }) => (
+            {augment.map(({ task, share }: AnalyzedTask) => (
               <div
                 key={task.id}
                 className="flex items-center justify-between py-1.5 px-3 rounded-lg bg-black/[0.02]"
@@ -154,7 +155,7 @@ export default function FocusRecommendations({
             These tasks remain expensive and difficult for AI to replicate. Building unique expertise here is your best bet.
           </p>
           <div className="space-y-1.5">
-            {invest.map(({ task, share }) => (
+            {invest.map(({ task, share }: AnalyzedTask) => (
               <div
                 key={task.id}
                 className="flex items-center justify-between py-1.5 px-3 rounded-lg bg-black/[0.02]"
