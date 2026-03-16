@@ -74,6 +74,9 @@ export default function AboutPage() {
             changing.
           </p>
           <p className="text-[14px] text-[var(--muted)] leading-relaxed">
+            For years I&rsquo;ve wanted a single place that synthesizes what we actually
+            know about AI&rsquo;s impact on economic opportunity: not the hype, not the doom,
+            but the evidence.
             This site initially started as a way for me to track how predictions about displacement,
             wages, adoption, and corporate behavior evolve as new research, data, and real-world
             evidence emerge.
