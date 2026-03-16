@@ -1,0 +1,14 @@
+{
+  "id": "yale-budgetlab-exposure-agreement-2026",
+  "abstract": "The Budget Lab at Yale compares seven AI exposure metrics across 778 occupations to assess how much they agree on which jobs are exposed to AI. Using PCA-weighted z-scores and variance analysis, the study finds that metrics broadly agree on low-exposure occupations but disagree significantly on the magnitude of exposure for highly exposed occupations. The analysis controls for salary, gender composition, and major occupation category.",
+  "keyFindings": [
+    "Six AI exposure metrics covering 778 occupations agree on which jobs have low exposure but disagree on the magnitude of exposure for highly exposed jobs (variance regression beta = 0.0617, p < 0.0001).",
+    "Computer and Mathematical occupations have both the highest average PCA-weighted exposure score (4.2) and the highest variance across metrics (0.739), while Building and Grounds Cleaning has the lowest exposure (-2.0) and lowest variance (0.085).",
+    "AI exposure rises linearly with salary: the top salary quintile has an average PCA score of 1.47, while the bottom quintile averages -1.16.",
+    "Occupations with 30-50% women have the highest measurement disagreement (variance 0.352 in the 3rd quintile), driven by differing assessments of office administration and healthcare roles.",
+    "Webb's patent-based pct_ai metric is a meaningful outlier with a PCA weight 10x smaller than the other six metrics, indicating it captures a fundamentally different dimension of AI exposure."
+  ],
+  "methodology": "Meta-analysis of 7 AI exposure metrics (Eloundou et al. 2024, Eisfeldt et al. 2023, Felten et al. 2021, Tomlinson et al. 2025, Webb 2020) crosswalked to SOC 2018 codes. PCA-weighted z-scores computed for 778 occupations (after dropping Webb's pct_ai). Multivariate regressions control for % women, log salary, and major occupation dummies. Data from 2024 OEWS reports and CPS annual averages.",
+  "qualifiers": "Exposure does not equal displacement — the study explicitly cautions that exposure metrics indicate where AI could have an impact, not which jobs will be automated. Excluded occupations (those lacking full metric coverage) tend to have slightly lower exposure scores. The study does not produce new exposure estimates; it compares existing metrics.",
+  "fetchedAt": "2026-03-16"
+}

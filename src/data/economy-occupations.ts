@@ -252,6 +252,44 @@ export const OCCUPATION_GROUPS: OccupationGroup[] = [
 export const TOTAL_EMPLOYMENT = OCCUPATION_GROUPS.reduce((s, g) => s + g.employment, 0); // thousands
 
 /**
+ * Exposure measurement uncertainty by major occupation group.
+ *
+ * Source: Yale Budget Lab (Gimbel, Kendall, Kulsakdinun), February 2026.
+ * "Labor Market AI Exposure: What Do We Know?"
+ *
+ * Values are the variance of z-scores across 6 AI exposure metrics
+ * (Eloundou et al., Eisfeldt et al., Felten et al., Tomlinson et al.)
+ * for 778 occupations. Higher variance = more disagreement between metrics
+ * about how exposed the occupation group is.
+ *
+ * Also includes PCA-weighted exposure score (mean across metrics).
+ */
+export const EXPOSURE_UNCERTAINTY: Record<string, { variance: number; pcaScore: number }> = {
+  "management":              { variance: 0.317, pcaScore: 1.3 },
+  "business-financial":      { variance: 0.329, pcaScore: 2.1 },
+  "computer-math":           { variance: 0.739, pcaScore: 4.2 },
+  "architecture-engineering": { variance: 0.150, pcaScore: 1.6 },
+  "life-physical-social-science": { variance: 0.210, pcaScore: 1.7 },
+  "community-social":        { variance: 0.347, pcaScore: 0.9 },
+  "legal":                   { variance: 0.581, pcaScore: 1.6 },
+  "education":               { variance: 0.232, pcaScore: 1.7 },
+  "arts-media":              { variance: 0.377, pcaScore: 0.9 },
+  "healthcare-practitioners": { variance: 0.221, pcaScore: -0.4 },
+  "healthcare-support":      { variance: 0.228, pcaScore: -1.4 },
+  "protective-service":      { variance: 0.214, pcaScore: -0.7 },
+  "food-serving":            { variance: 0.233, pcaScore: -1.5 },
+  "building-grounds":        { variance: 0.085, pcaScore: -2.0 },
+  "personal-care":           { variance: 0.272, pcaScore: -0.9 },
+  "sales":                   { variance: 0.474, pcaScore: 1.7 },
+  "office-admin":            { variance: 0.379, pcaScore: 2.5 },
+  "farming-fishing":         { variance: 0.147, pcaScore: -2.2 },
+  "construction":            { variance: 0.095, pcaScore: -2.6 },
+  "installation-repair":     { variance: 0.103, pcaScore: -1.8 },
+  "production":              { variance: 0.134, pcaScore: -1.9 },
+  "transportation":          { variance: 0.199, pcaScore: -1.5 },
+};
+
+/**
  * Maps economy SOC groups to representative job profiles in the task visualizer.
  * Each SOC group links to the most relevant individual job(s) available.
  */

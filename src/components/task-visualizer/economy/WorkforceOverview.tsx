@@ -19,14 +19,22 @@ import {
   INCOME_TIER_META,
   TOTAL_EMPLOYMENT,
   SOC_TO_JOB_IDS,
+  EXPOSURE_UNCERTAINTY,
   type OccupationGroup,
 } from "@/data/economy-occupations";
+
+function getUncertaintyLabel(variance: number): { label: string; color: string } {
+  if (variance >= 0.5) return { label: "High", color: "#EF4444" };
+  if (variance >= 0.3) return { label: "Moderate", color: "#F59E0B" };
+  return { label: "Low", color: "#10B981" };
+}
 
 function CustomTooltip({ active, payload }: TooltipProps<number, string>) {
   if (!active || !payload?.[0]) return null;
   const d = payload[0].payload as OccupationGroup & { employmentFormatted: string };
   const tierMeta = INCOME_TIER_META[d.incomeTier];
   const jobIds = SOC_TO_JOB_IDS[d.id] || [];
+  const uncertainty = EXPOSURE_UNCERTAINTY[d.id];
   return (
     <div className="bg-white rounded-lg border border-black/[0.08] shadow-lg p-3 max-w-[280px]">
       <p className="text-[13px] font-semibold text-[var(--foreground)]">{d.title}</p>
@@ -51,6 +59,14 @@ function CustomTooltip({ active, payload }: TooltipProps<number, string>) {
             {tierMeta.label}
           </span>
         </div>
+        {uncertainty && (
+          <div className="flex justify-between gap-4 mt-1 pt-1 border-t border-black/[0.06]">
+            <span className="text-[var(--muted)]">Exposure metric agreement</span>
+            <span className="font-medium" style={{ color: getUncertaintyLabel(uncertainty.variance).color }}>
+              {getUncertaintyLabel(uncertainty.variance).label}
+            </span>
+          </div>
+        )}
       </div>
       {jobIds.length > 0 && (
         <p className="text-[10px] text-[var(--accent)] mt-2 pt-1.5 border-t border-black/[0.06]">
@@ -209,6 +225,7 @@ export default function WorkforceOverview() {
       <p className="text-[11px] text-[var(--muted)] mt-3">
         Source: Bureau of Labor Statistics, Occupational Employment and Wage Statistics (OEWS), May 2024.
         Income tiers based on median annual wage for the occupation group.
+        Exposure metric agreement from Yale Budget Lab (Gimbel et al., 2026), comparing 6 AI exposure measures across 778 occupations.
       </p>
     </div>
   );
