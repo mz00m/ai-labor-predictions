@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import GPTTimeline from "./GPTTimeline";
 import CompressionComparison from "./CompressionComparison";
 import RevolutionCards from "./RevolutionCards";
@@ -185,6 +186,25 @@ export default function HistoryPage() {
               make these capabilities available to anyone with internet
               access, at marginal cost approaching zero.{" "}
               <strong>On-tap intelligence.</strong>
+            </p>
+            <p>
+              Crucially, when electricity made factory power cheap and
+              ubiquitous, the result wasn&rsquo;t fewer factories &mdash; it
+              was dramatically more. Manufacturing output and employment grew
+              for decades because cheaper power made previously unviable
+              production economically feasible. The same dynamic may apply to
+              cognitive work: when intelligence becomes on-tap, the question
+              is whether there&rsquo;s unmet demand for cognitive output. In
+              sectors like software, creative services, and data analysis, the
+              answer is emphatically yes. This is the{" "}
+              <Link
+                href="/demand-elasticity"
+                className="text-[var(--accent)] hover:underline"
+              >
+                demand elasticity effect
+              </Link>
+              : lower costs unlock new markets, potentially creating more
+              total work than they eliminate.
             </p>
           </div>
 

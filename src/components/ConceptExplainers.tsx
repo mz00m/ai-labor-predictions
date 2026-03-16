@@ -34,6 +34,14 @@ const concepts = [
     tag: "Firm response",
   },
   {
+    title: "When Cheaper Means More Jobs",
+    href: "/demand-elasticity",
+    description:
+      "AI makes work cheaper. In many sectors, that doesn't eliminate jobs — it creates demand that didn't exist before. The Jevons Paradox, applied to labor.",
+    accent: "border-cyan-400/60",
+    tag: "Demand elasticity",
+  },
+  {
     title: "The Dip Before the Payoff",
     href: "/j-curve",
     description:
