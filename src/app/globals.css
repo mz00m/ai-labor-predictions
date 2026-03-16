@@ -130,6 +130,32 @@ a, button, [role="button"], input, label {
   animation-play-state: paused;
 }
 
+/* --- Section bar watermark animations --- */
+@keyframes draw {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes pop {
+  0% { r: 0; }
+  60% { r: 4; }
+  100% { r: 2.5; }
+}
+
+@keyframes fade-seg {
+  to { opacity: 0.2; }
+}
+
+@keyframes fill-in {
+  0% { opacity: 0.15; }
+  50% { opacity: 0.4; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes pulse-ring {
+  0% { r: 6; opacity: 0.6; }
+  100% { r: 12; opacity: 0; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .ticker-content {
     animation: none;
