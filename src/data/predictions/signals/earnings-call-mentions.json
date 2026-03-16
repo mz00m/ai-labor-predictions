@@ -31,6 +31,17 @@
       "metricType": "corporate"
     },
     {
+      "date": "2023-04-15",
+      "value": 27,
+      "confidenceLow": 22,
+      "confidenceHigh": 32,
+      "sourceIds": [
+        "eisfeldt-genai-firm-values-2026"
+      ],
+      "evidenceTier": 1,
+      "metricType": "corporate"
+    },
+    {
       "date": "2023-07-15",
       "value": 32,
       "confidenceLow": 26,
@@ -321,6 +332,16 @@
       "datePublished": "2025-12-15",
       "excerpt": "AI was the most-cited topic in S&P 500 earnings calls in 2025. Companies mentioning AI in workforce context outperformed peers by 8.2 percentage points on average.",
       "dateAdded": "2026-03-01"
+    },
+    {
+      "id": "eisfeldt-genai-firm-values-2026",
+      "title": "Generative AI and Firm Values",
+      "url": "https://www.nber.org/papers/w31222",
+      "publisher": "NBER (Eisfeldt, Schubert, Zhang)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-21",
+      "excerpt": "the share of firms mentioning Generative AI rose substantially from less than 5% before ChatGPT's release to 27% in the first quarter after the release",
+      "dateAdded": "2026-03-16"
     },
     {
       "id": "korinek-brynjolfsson-agrawal-acm-2026",

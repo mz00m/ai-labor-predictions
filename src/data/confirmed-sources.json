@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-16",
-  "totalSources": 412,
-  "verifiedCount": 412,
+  "totalSources": 413,
+  "verifiedCount": 413,
   "sources": {
     "revelio-labs-wage-divide-2025": {
       "id": "revelio-labs-wage-divide-2025",
@@ -4068,6 +4068,23 @@
       "datePublished": "2025-06-01",
       "excerpt": "678 occupations having on average 23% of their tasks exposed to Generative AI",
       "usedIn": [
+        "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "eisfeldt-genai-firm-values-2026": {
+      "id": "eisfeldt-genai-firm-values-2026",
+      "title": "Generative AI and Firm Values (Revised January 2026)",
+      "url": "https://www.nber.org/papers/w31222",
+      "publisher": "NBER (Eisfeldt, Schubert, Zhang)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-21",
+      "excerpt": "A one-standard-deviation increase in Generative AI exposure is associated with an 8% decline in job postings and a 0.6% decline in the hourly wage rate.",
+      "usedIn": [
+        "earnings-call-ai-mentions",
+        "overall-us-displacement",
+        "median-wage-impact",
         "workforce-ai-exposure"
       ],
       "verified": true,

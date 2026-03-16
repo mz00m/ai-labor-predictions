@@ -31,6 +31,17 @@
       "metricType": "projection"
     },
     {
+      "date": "2023-10-01",
+      "value": -0.6,
+      "confidenceLow": -1.4,
+      "confidenceHigh": 0,
+      "sourceIds": [
+        "eisfeldt-genai-firm-values-2026"
+      ],
+      "evidenceTier": 1,
+      "metricType": "employment"
+    },
+    {
       "date": "2024-02-01",
       "value": -1,
       "confidenceLow": -5,
@@ -358,6 +369,16 @@
     }
   ],
   "sources": [
+    {
+      "id": "eisfeldt-genai-firm-values-2026",
+      "title": "Generative AI and Firm Values",
+      "url": "https://www.nber.org/papers/w31222",
+      "publisher": "NBER (Eisfeldt, Schubert, Zhang)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-21",
+      "excerpt": "A one-standard-deviation increase in Generative AI exposure is associated with a 0.6% decline in the hourly wage rate. For occupations with exposure derived solely from core tasks, a one-standard-deviation higher Generative AI exposure corresponds to a significantly greater decline in relative wage rates by 1.4%.",
+      "dateAdded": "2026-03-16"
+    },
     {
       "id": "goldman-ai-workforce-2025",
       "title": "AI and the US Labor Market",

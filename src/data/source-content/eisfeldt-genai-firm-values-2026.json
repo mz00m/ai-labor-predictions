@@ -1,0 +1,14 @@
+{
+  "id": "eisfeldt-genai-firm-values-2026",
+  "abstract": "This study constructs the first measure of firms' workforce exposures to Generative AI and documents that an 'Artificial-Minus-Human' portfolio earned 5% in the two weeks following ChatGPT's release. The authors show that firms with higher labor exposure to GenAI experienced increased market value driven by a labor-technology substitution channel: exposed occupations saw reduced job postings and lower wages, while firms saw higher profitability. The key innovation is distinguishing between core and supplemental task exposure to identify substitution versus complementarity effects.",
+  "keyFindings": [
+    "A one-standard-deviation increase in Generative AI exposure is associated with an 8% decline in job postings and a 0.6% decline in the hourly wage rate (Lightcast and CPS data, Jan 2022-Oct 2023)",
+    "678 occupations have an average of 23% of their tasks exposed to Generative AI; white-collar occupations average 40% vs 9% for blue-collar and service occupations",
+    "For occupations with core-task exposure to GenAI, the wage decline is 1.4% per SD -- 2.3x larger than the unconditional effect, supporting a labor-substitution channel",
+    "The share of S&P 500 firms mentioning Generative AI in earnings calls rose from less than 5% before ChatGPT to 27% in the first quarter after release",
+    "Firms with one-standard-deviation higher GenAI exposure experienced a 1.7pp higher cumulative abnormal return during the two-week ChatGPT event period"
+  ],
+  "methodology": "Task-level exposure measured using GPT 3.5 Turbo classification of 19,265 O*Net tasks into direct (1.0), indirect (0.5), and no (0.0) exposure categories following Eloundou et al. (2023). Aggregated to 678 SOC 6-digit occupations, then to 2,518 publicly traded firms using Revelio Labs occupational employment shares. Labor market outcomes analyzed using Lightcast job posting data (Jan 2022-Aug 2023) and Census CPS individual wage data (Jan 2022-Oct 2023). Event study design around ChatGPT release (Nov 30, 2022) with portfolio sorts and cross-sectional regressions.",
+  "qualifiers": "The study period covers the initial months after ChatGPT's release (Nov 2022-Oct 2023) and may not capture longer-term adjustment dynamics. Per-standard-deviation effects measure cross-sectional variation in outcomes by exposure, not aggregate economy-wide impacts. The core vs supplemental task distinction, while novel, relies on O*Net classifications that may not perfectly capture real-world task importance hierarchies. Cannot fully rule out that part of the pattern reflects broader tech-sector cyclical dynamics coinciding with the event window.",
+  "fetchedAt": "2026-03-16"
+}
