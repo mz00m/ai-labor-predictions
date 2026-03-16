@@ -1,50 +1,54 @@
 /**
  * SVG watermark illustrations for homepage section bars.
  * Animate on parent hover via CSS (parent has .group class).
+ * Bold, expressive animations that reward curiosity.
  */
 
 interface WatermarkProps {
   color: string;
 }
 
-/** Area chart — line draws itself on hover, dots pop in */
+/** Area chart — line draws itself on hover, dots pop in, area fills */
 export function PredictionsWatermark({ color }: WatermarkProps) {
   const points = "10,55 40,38 70,45 100,25 130,32 160,18 190,24 220,10";
   return (
     <svg width="240" height="70" viewBox="0 0 240 70" fill="none" className="overflow-visible">
-      <polygon points={`10,65 ${points} 220,65`} fill={color} opacity="0.08" />
+      {/* Confidence band — fades in */}
       <path
-        d="M10,58 40,44 70,50 100,30 130,38 160,22 190,30 220,14 220,6 190,18 160,14 130,26 100,20 70,40 40,32 10,52Z"
-        fill={color} opacity="0.15"
+        d="M10,65 10,58 40,44 70,50 100,30 130,38 160,22 190,30 220,14 220,6 190,18 160,14 130,26 100,20 70,40 40,32 10,52 10,65Z"
+        fill={color} opacity="0"
+        className="group-hover:animate-[wm-fill_0.6s_ease-out_0.3s_forwards]"
       />
+      {/* Area under line — fades in */}
+      <polygon
+        points={`10,65 ${points} 220,65`}
+        fill={color} opacity="0"
+        className="group-hover:animate-[wm-fill-soft_0.5s_ease-out_0.2s_forwards]"
+      />
+      {/* Main line — draws */}
       <polyline
         points={points}
-        stroke={color}
-        strokeWidth="1.5"
-        strokeLinejoin="round"
-        fill="none"
-        strokeDasharray="400"
-        strokeDashoffset="400"
-        className="group-hover:animate-[draw_0.8s_ease-out_forwards]"
+        stroke={color} strokeWidth="2" strokeLinejoin="round" fill="none"
+        strokeDasharray="400" strokeDashoffset="400"
+        className="group-hover:animate-[wm-draw_0.7s_ease-out_forwards]"
       />
+      {/* Data dots — pop in sequentially */}
       {[[10,55],[40,38],[70,45],[100,25],[130,32],[160,18],[190,24],[220,10]].map(([cx,cy],i) => (
         <circle
-          key={i}
-          cx={cx} cy={cy} r="0"
-          fill={color}
-          className="group-hover:animate-[pop_0.3s_ease-out_forwards]"
-          style={{ animationDelay: `${0.1 + i * 0.08}s` }}
+          key={i} cx={cx} cy={cy} r="0" fill={color}
+          className="group-hover:animate-[wm-pop_0.35s_ease-out_forwards]"
+          style={{ animationDelay: `${0.08 + i * 0.07}s` }}
         />
       ))}
     </svg>
   );
 }
 
-/** Task grid — blocks fill in sequentially on hover */
+/** Task grid — blocks scale up and fill in with a stagger */
 export function TaskVisualizerWatermark({ color }: WatermarkProps) {
   const filled = [0, 2, 5, 6];
   return (
-    <svg width="200" height="70" viewBox="0 0 200 70" fill="none">
+    <svg width="200" height="70" viewBox="0 0 200 70" fill="none" className="overflow-visible">
       {Array.from({ length: 8 }).map((_, i) => {
         const col = i % 4;
         const row = Math.floor(i / 4);
@@ -52,17 +56,16 @@ export function TaskVisualizerWatermark({ color }: WatermarkProps) {
         return (
           <rect
             key={i}
-            x={8 + col * 48}
-            y={5 + row * 33}
-            width="40"
-            height="26"
-            rx="3"
-            stroke={color}
-            strokeWidth="1.2"
+            x={8 + col * 48} y={5 + row * 33}
+            width="40" height="26" rx="3"
+            stroke={color} strokeWidth="1.2"
             fill={isFilled ? color : "none"}
-            opacity={isFilled ? 0.15 : 0.8}
-            className={isFilled ? "group-hover:animate-[fill-in_0.4s_ease-out_forwards]" : ""}
-            style={isFilled ? { animationDelay: `${i * 0.1}s` } : {}}
+            opacity={isFilled ? 0.12 : 0.6}
+            className={isFilled
+              ? "group-hover:animate-[wm-block-fill_0.4s_ease-out_forwards]"
+              : "group-hover:animate-[wm-block-outline_0.3s_ease-out_forwards]"
+            }
+            style={{ animationDelay: `${i * 0.06}s` }}
           />
         );
       })}
@@ -70,133 +73,184 @@ export function TaskVisualizerWatermark({ color }: WatermarkProps) {
   );
 }
 
-/** Funnel — segments fill from left to right on hover */
+/** Funnel — segments slam in from left to right, shrinking dramatically */
 export function EconomyFunnelWatermark({ color }: WatermarkProps) {
-  // Build trapezoid segments
   const yTop = [2, 15, 25, 30, 33];
   const yBot = [68, 55, 45, 40, 37];
   const xs = [5, 50, 100, 150, 195];
 
   return (
-    <svg width="200" height="70" viewBox="0 0 200 70" fill="none">
+    <svg width="200" height="70" viewBox="0 0 200 70" fill="none" className="overflow-visible">
+      {/* Outline draws first */}
+      <path
+        d="M5,2 L195,33 L195,37 L5,68 Z"
+        stroke={color} strokeWidth="1.5" fill="none"
+        strokeDasharray="600" strokeDashoffset="600"
+        className="group-hover:animate-[wm-draw_0.5s_ease-out_forwards]"
+      />
+      {/* Segments fill in with stagger */}
       {xs.slice(0, -1).map((x, i) => {
         const nx = xs[i + 1];
         return (
           <path
             key={i}
             d={`M${x},${yTop[i]} L${nx},${yTop[i+1]} L${nx},${yBot[i+1]} L${x},${yBot[i]} Z`}
-            stroke={color}
-            strokeWidth="1"
-            fill={color}
-            opacity="0"
-            className="group-hover:animate-[fade-seg_0.3s_ease-out_forwards]"
-            style={{ animationDelay: `${i * 0.12}s` }}
+            stroke="none" fill={color} opacity="0"
+            className="group-hover:animate-[wm-seg-fill_0.3s_ease-out_forwards]"
+            style={{ animationDelay: `${0.15 + i * 0.1}s` }}
           />
         );
       })}
-      <path
-        d={`M5,2 L195,33 L195,37 L5,68 Z`}
-        stroke={color}
-        strokeWidth="1.5"
-        fill="none"
-      />
+      {/* Percentage labels fade in */}
+      {["40%", "20%", "7%", "~0%"].map((label, i) => (
+        <text
+          key={i}
+          x={xs[i] + (xs[i+1] - xs[i]) / 2}
+          y={38}
+          textAnchor="middle" fill={color}
+          fontSize="9" fontWeight="700" opacity="0"
+          className="group-hover:animate-[wm-text-in_0.25s_ease-out_forwards]"
+          style={{ animationDelay: `${0.3 + i * 0.1}s` }}
+        >
+          {label}
+        </text>
+      ))}
     </svg>
   );
 }
 
-/** Timeline — nodes pulse sequentially on hover */
+/** Timeline — line draws, nodes expand with ripples */
 export function HistoryTimelineWatermark({ color }: WatermarkProps) {
   const nodes = [15, 55, 95, 135, 175];
   return (
     <svg width="200" height="70" viewBox="0 0 200 70" fill="none" className="overflow-visible">
-      <line x1="15" y1="35" x2="185" y2="35" stroke={color} strokeWidth="1.5" />
+      {/* Line draws itself */}
+      <line
+        x1="15" y1="35" x2="185" y2="35"
+        stroke={color} strokeWidth="1.5"
+        strokeDasharray="180" strokeDashoffset="180"
+        className="group-hover:animate-[wm-draw_0.5s_ease-out_forwards]"
+      />
       {nodes.map((cx, i) => (
         <g key={i}>
+          {/* Ripple ring */}
           <circle
             cx={cx} cy={35} r="6"
+            stroke={color} strokeWidth="1.5" fill="none" opacity="0"
+            className="group-hover:animate-[wm-ripple_0.8s_ease-out_forwards]"
+            style={{ animationDelay: `${0.2 + i * 0.12}s` }}
+          />
+          {/* Outer circle pops */}
+          <circle
+            cx={cx} cy={35} r="0"
             stroke={color} strokeWidth="1.2" fill="none"
+            className="group-hover:animate-[wm-ring-pop_0.4s_ease-out_forwards]"
+            style={{ animationDelay: `${0.15 + i * 0.12}s` }}
           />
+          {/* Inner dot pops */}
           <circle
-            cx={cx} cy={35} r="2" fill={color}
+            cx={cx} cy={35} r="0" fill={color}
+            className="group-hover:animate-[wm-dot-pop_0.3s_ease-out_forwards]"
+            style={{ animationDelay: `${0.2 + i * 0.12}s` }}
           />
-          {/* Pulse ring on hover */}
-          <circle
-            cx={cx} cy={35} r="6"
-            stroke={color} strokeWidth="1"
-            fill="none" opacity="0"
-            className="group-hover:animate-[pulse-ring_0.6s_ease-out_forwards]"
-            style={{ animationDelay: `${i * 0.15}s` }}
+          {/* Tick below */}
+          <line
+            x1={cx} y1={44} x2={cx} y2={54}
+            stroke={color} strokeWidth="1" opacity="0"
+            className="group-hover:animate-[wm-text-in_0.3s_ease-out_forwards]"
+            style={{ animationDelay: `${0.3 + i * 0.12}s` }}
           />
-          <line x1={cx} y1={44} x2={cx} y2={52} stroke={color} strokeWidth="1" opacity="0.4" />
         </g>
       ))}
     </svg>
   );
 }
 
-/** Branching paths — paths draw themselves on hover */
-export function FirmResponseWatermark({ color }: WatermarkProps) {
+/** Rising bar chart — AI tool downloads surging upward */
+export function SignalsWatermark({ color }: WatermarkProps) {
+  const bars = [
+    { x: 15, h: 12 },
+    { x: 40, h: 16 },
+    { x: 65, h: 14 },
+    { x: 90, h: 22 },
+    { x: 115, h: 30 },
+    { x: 140, h: 38 },
+    { x: 165, h: 52 },
+    { x: 190, h: 60 },
+  ];
   return (
-    <svg width="200" height="70" viewBox="0 0 200 70" fill="none">
-      <line x1="10" y1="35" x2="80" y2="35" stroke={color} strokeWidth="1.5" />
-      <circle cx="80" cy="35" r="4" stroke={color} strokeWidth="1.2" fill="none" />
-      {[
-        { d: "M84,35 C110,35 120,12 190,10", delay: 0 },
-        { d: "M84,35 C120,35 140,35 190,35", delay: 0.12 },
-        { d: "M84,35 C110,35 120,58 190,60", delay: 0.24 },
-      ].map((p, i) => (
-        <path
+    <svg width="220" height="70" viewBox="0 0 220 70" fill="none" className="overflow-visible">
+      {/* Baseline */}
+      <line x1="10" y1="66" x2="210" y2="66" stroke={color} strokeWidth="1" opacity="0.4" />
+      {/* Bars grow upward */}
+      {bars.map((bar, i) => (
+        <rect
           key={i}
-          d={p.d}
-          stroke={color}
-          strokeWidth="1.5"
-          fill="none"
-          strokeDasharray="200"
-          strokeDashoffset="200"
-          className="group-hover:animate-[draw_0.6s_ease-out_forwards]"
-          style={{ animationDelay: `${p.delay}s` }}
+          x={bar.x} y={66} width="16" height="0" rx="2"
+          fill={color}
+          className="group-hover:animate-[wm-bar-grow_0.4s_ease-out_forwards]"
+          style={{
+            animationDelay: `${i * 0.06}s`,
+            // @ts-expect-error CSS custom property for bar height
+            "--bar-h": bar.h,
+          }}
         />
       ))}
-      {[10, 35, 60].map((cy, i) => (
-        <circle
-          key={i}
-          cx="190" cy={cy} r="0" fill={color}
-          className="group-hover:animate-[pop_0.3s_ease-out_forwards]"
-          style={{ animationDelay: `${0.3 + i * 0.1}s` }}
-        />
-      ))}
+      {/* Trend line draws on top */}
+      <polyline
+        points={bars.map(b => `${b.x + 8},${66 - b.h}`).join(" ")}
+        stroke={color} strokeWidth="1.5" fill="none"
+        strokeDasharray="300" strokeDashoffset="300"
+        strokeLinejoin="round"
+        className="group-hover:animate-[wm-draw_0.6s_ease-out_0.4s_forwards]"
+      />
+      {/* Arrow at the end pointing up */}
+      <path
+        d="M198,6 L202,2 L206,6" stroke={color} strokeWidth="1.5"
+        fill="none" opacity="0" strokeLinecap="round"
+        className="group-hover:animate-[wm-text-in_0.3s_ease-out_0.7s_forwards]"
+      />
     </svg>
   );
 }
 
-/** Productivity plateau — line draws, then question mark fades in */
+/** Productivity plateau — line draws boldly, gap zone pulses */
 export function ProductivityWatermark({ color }: WatermarkProps) {
   return (
-    <svg width="220" height="70" viewBox="0 0 220 70" fill="none">
+    <svg width="220" height="70" viewBox="0 0 220 70" fill="none" className="overflow-visible">
+      {/* Main line draws */}
       <polyline
         points="10,60 40,42 65,30 90,29 115,28 140,27 165,15 200,8"
-        stroke={color}
-        strokeWidth="1.5"
-        fill="none"
-        strokeLinejoin="round"
-        strokeDasharray="300"
-        strokeDashoffset="300"
-        className="group-hover:animate-[draw_0.8s_ease-out_forwards]"
+        stroke={color} strokeWidth="2" fill="none" strokeLinejoin="round"
+        strokeDasharray="300" strokeDashoffset="300"
+        className="group-hover:animate-[wm-draw_0.7s_ease-out_forwards]"
       />
+      {/* Plateau zone pulses */}
       <rect
-        x="62" y="20" width="82" height="18" rx="3"
-        stroke={color} strokeWidth="0.8" strokeDasharray="3 3"
+        x="60" y="18" width="86" height="22" rx="4"
+        stroke={color} strokeWidth="1" strokeDasharray="3 3"
         fill={color} opacity="0"
-        className="group-hover:animate-[fade-seg_0.4s_ease-out_0.3s_forwards]"
+        className="group-hover:animate-[wm-plateau-pulse_1.2s_ease-in-out_0.4s_forwards]"
       />
+      {/* "?" fades in and bobs */}
       <text
-        x="103" y="18" textAnchor="middle"
-        fill={color} fontSize="11" fontWeight="700"
-        opacity="0"
-        className="group-hover:animate-[fade-seg_0.3s_ease-out_0.5s_forwards]"
+        x="103" y="16" textAnchor="middle"
+        fill={color} fontSize="12" fontWeight="800" opacity="0"
+        className="group-hover:animate-[wm-q-bob_1s_ease-in-out_0.6s_forwards]"
       >
         ?
       </text>
+      {/* Arrows on the rising segments */}
+      <path
+        d="M36,46 L40,42 L44,46" stroke={color} strokeWidth="1.5"
+        fill="none" opacity="0" strokeLinecap="round"
+        className="group-hover:animate-[wm-text-in_0.3s_ease-out_0.3s_forwards]"
+      />
+      <path
+        d="M161,19 L165,15 L169,19" stroke={color} strokeWidth="1.5"
+        fill="none" opacity="0" strokeLinecap="round"
+        className="group-hover:animate-[wm-text-in_0.3s_ease-out_0.7s_forwards]"
+      />
     </svg>
   );
 }
