@@ -476,9 +476,11 @@ export default function CompressionComparison() {
             const active = hov === t.id;
             const anyHov = hov !== null;
             const dimmed = anyHov && !active && hov !== "ai";
-            // Launch longest arc first, stagger 0.5s apart, duration scales with arc length
-            const delay = idx * 0.5;
-            const duration = 0.6 + (t.totalYears / MAX_YEARS) * 0.6; // 0.66s (AI) to 1.2s (Steam)
+            // AI fires first like a projectile, then historical arcs cascade shortest→longest
+            // Reverse order: Computers(idx3)→Electricity(idx2)→Combustion(idx1)→Steam(idx0)
+            const historicalRank = historical.length - 1 - historical.indexOf(t);
+            const delay = 0.4 + historicalRank * 0.35;
+            const duration = 0.5 + (t.totalYears / MAX_YEARS) * 0.5;
 
             // label position: sit just above the actual visual peak of the arc
             const labelMidX = a.midX;
@@ -529,7 +531,7 @@ export default function CompressionComparison() {
                   strokeDashoffset={vis ? "0" : "1"}
                   style={{
                     opacity: dimmed ? 0.12 : active ? 0.85 : 0.32,
-                    transition: `stroke-dashoffset ${duration}s cubic-bezier(0.16, 1, 0.3, 1) ${delay}s, opacity 0.3s ease, stroke 0.3s ease, stroke-width 0.3s ease`,
+                    transition: `stroke-dashoffset ${duration}s cubic-bezier(0.12, 0.9, 0.25, 1) ${delay}s, opacity 0.3s ease, stroke 0.3s ease, stroke-width 0.3s ease`,
                   }}
                 />
 
@@ -639,7 +641,7 @@ export default function CompressionComparison() {
               fill="url(#ai-wash-hi)"
               style={{
                 opacity: vis ? 1 : 0,
-                transition: "opacity 0.5s ease 2.1s",
+                transition: "opacity 0.3s ease 0.2s",
               }}
             />
             <path
@@ -654,7 +656,7 @@ export default function CompressionComparison() {
                 strokeDashoffset: vis ? "0" : "1",
                 opacity: hov === "ai" ? 0.4 : 0.2,
                 transition:
-                  "stroke-dashoffset 0.7s cubic-bezier(0.16, 1, 0.3, 1) 2.05s, opacity 0.3s ease",
+                  "stroke-dashoffset 0.4s cubic-bezier(0.08, 0.82, 0.17, 1) 0.12s, opacity 0.3s ease",
               }}
             />
 
@@ -664,11 +666,11 @@ export default function CompressionComparison() {
               fill="url(#ai-wash)"
               style={{
                 opacity: vis ? 1 : 0,
-                transition: "opacity 0.6s ease 2.2s",
+                transition: "opacity 0.35s ease 0.15s",
               }}
             />
 
-            {/* Main arc stroke — vibrant */}
+            {/* Main arc stroke — fires FIRST like a projectile */}
             <path
               d={aiArc.lowArcD}
               fill="none"
@@ -681,7 +683,7 @@ export default function CompressionComparison() {
               style={{
                 opacity: hov === "ai" ? 1 : 0.85,
                 transition:
-                  "stroke-dashoffset 0.6s cubic-bezier(0.16, 1, 0.3, 1) 2.0s, opacity 0.3s ease, stroke-width 0.3s ease",
+                  "stroke-dashoffset 0.35s cubic-bezier(0.08, 0.82, 0.17, 1) 0.08s, opacity 0.3s ease, stroke-width 0.3s ease",
               }}
             />
 
@@ -693,7 +695,7 @@ export default function CompressionComparison() {
               fill={ai.color}
               style={{
                 opacity: vis ? 0.9 : 0,
-                transition: "opacity 0.3s ease 2.5s",
+                transition: "opacity 0.2s ease 0.35s",
               }}
             />
             {ai.totalYearsHigh && (
@@ -704,7 +706,7 @@ export default function CompressionComparison() {
                 fill={ai.color}
                 style={{
                   opacity: vis ? 0.3 : 0,
-                  transition: "opacity 0.3s ease 2.6s",
+                  transition: "opacity 0.2s ease 0.4s",
                 }}
               />
             )}
@@ -717,7 +719,7 @@ export default function CompressionComparison() {
               color={ai.color}
               active={hov === "ai"}
               vis={vis}
-              delay={2.3}
+              delay={0.25}
             />
 
             {/* AI label — always visible */}
@@ -730,7 +732,7 @@ export default function CompressionComparison() {
               fill={ai.color}
               style={{
                 opacity: vis ? 1 : 0,
-                transition: "opacity 0.5s ease 2.4s",
+                transition: "opacity 0.3s ease 0.3s",
               }}
             >
               AI / LLMs
@@ -744,7 +746,7 @@ export default function CompressionComparison() {
               style={{
                 opacity: vis ? 0.7 : 0,
                 fontVariantNumeric: "tabular-nums",
-                transition: "opacity 0.5s ease 2.45s",
+                transition: "opacity 0.3s ease 0.35s",
               }}
             >
               {ai.totalYears}&ndash;{ai.totalYearsHigh} yrs
@@ -754,7 +756,7 @@ export default function CompressionComparison() {
             {hov === "ai" && (
               <text
                 x={aiArc.lowEndX + 14}
-                y={BL - 0}
+                y={BL}
                 textAnchor="start"
                 fontSize="9.5"
                 fontStyle="italic"
@@ -865,16 +867,16 @@ export default function CompressionComparison() {
                   Years from emergence to equilibrium
                 </text>
 
-                {/* Historical arcs — grey, animated on scroll */}
+                {/* Historical arcs — grey, animated on scroll, shortest first */}
                 {historical.map((t) => {
-                  const idx = TRANSITIONS.indexOf(t);
                   const yrs = t.totalYears;
                   const endX = mxOf(yrs);
                   const midX = (mOX + endX) / 2;
                   const peakY = mBL - mhOf(yrs);
                   const d = `M ${mOX},${mBL} Q ${midX},${peakY} ${endX},${mBL}`;
-                  const mDelay = idx * 0.5;
-                  const mDuration = 0.6 + (yrs / MAX_YEARS) * 0.6;
+                  const mRank = historical.length - 1 - historical.indexOf(t);
+                  const mDelay = 0.4 + mRank * 0.35;
+                  const mDuration = 0.5 + (yrs / MAX_YEARS) * 0.5;
                   return (
                     <g key={t.id}>
                       <path
@@ -947,7 +949,7 @@ export default function CompressionComparison() {
                         strokeDashoffset={vis ? "0" : "1"}
                         style={{
                           opacity: 0.2,
-                          transition: "stroke-dashoffset 0.7s cubic-bezier(0.16, 1, 0.3, 1) 2.05s",
+                          transition: "stroke-dashoffset 0.4s cubic-bezier(0.08, 0.82, 0.17, 1) 0.12s",
                         }}
                       />
                       {/* Fill */}
@@ -956,10 +958,10 @@ export default function CompressionComparison() {
                         fill="url(#m-ai-wash)"
                         style={{
                           opacity: vis ? 1 : 0,
-                          transition: "opacity 0.6s ease 2.2s",
+                          transition: "opacity 0.35s ease 0.15s",
                         }}
                       />
-                      {/* Main stroke */}
+                      {/* Main stroke — fires FIRST */}
                       <path
                         d={lowD}
                         fill="none"
@@ -971,7 +973,7 @@ export default function CompressionComparison() {
                         strokeDashoffset={vis ? "0" : "1"}
                         style={{
                           opacity: 0.85,
-                          transition: "stroke-dashoffset 0.6s cubic-bezier(0.16, 1, 0.3, 1) 2.0s",
+                          transition: "stroke-dashoffset 0.35s cubic-bezier(0.08, 0.82, 0.17, 1) 0.08s",
                         }}
                       />
                       {/* Dot */}
@@ -982,7 +984,7 @@ export default function CompressionComparison() {
                         fill={ai.color}
                         style={{
                           opacity: vis ? 0.9 : 0,
-                          transition: "opacity 0.3s ease 2.5s",
+                          transition: "opacity 0.2s ease 0.35s",
                         }}
                       />
                       {/* Label */}
@@ -995,7 +997,7 @@ export default function CompressionComparison() {
                         fill={ai.color}
                         style={{
                           opacity: vis ? 1 : 0,
-                          transition: "opacity 0.5s ease 2.4s",
+                          transition: "opacity 0.3s ease 0.3s",
                         }}
                       >
                         AI / LLMs
@@ -1008,7 +1010,7 @@ export default function CompressionComparison() {
                         fill={ai.color}
                         style={{
                           opacity: vis ? 0.65 : 0,
-                          transition: "opacity 0.5s ease 2.45s",
+                          transition: "opacity 0.3s ease 0.35s",
                         }}
                       >
                         {ai.totalYears}–{ai.totalYearsHigh} yrs
