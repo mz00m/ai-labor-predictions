@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useRef, useEffect } from "react";
+import { useState, useCallback, useRef } from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import { EvidenceTier } from "@/lib/types";
@@ -62,31 +62,6 @@ export default function PredictionDetailPage() {
   const [highlightedSourceIds, setHighlightedSourceIds] = useState<string[]>([]);
   const highlightTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  /* ---- Easter egg: type "jcurve" to flip the chart ---- */
-  const [chartFlipped, setChartFlipped] = useState(false);
-  const [showFlipToast, setShowFlipToast] = useState(false);
-  const keyBufferRef = useRef("");
-  const flipToastTimerRef = useRef<ReturnType<typeof setTimeout>>();
-
-  useEffect(() => {
-    function handleKeyDown(e: KeyboardEvent) {
-      // Ignore if user is typing in an input/textarea
-      if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
-      keyBufferRef.current = (keyBufferRef.current + e.key.toLowerCase()).slice(-6);
-      if (keyBufferRef.current === "jcurve") {
-        setChartFlipped((prev) => !prev);
-        setShowFlipToast(true);
-        if (flipToastTimerRef.current) clearTimeout(flipToastTimerRef.current);
-        flipToastTimerRef.current = setTimeout(() => setShowFlipToast(false), 3000);
-        keyBufferRef.current = "";
-      }
-    }
-    document.addEventListener("keydown", handleKeyDown);
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown);
-      if (flipToastTimerRef.current) clearTimeout(flipToastTimerRef.current);
-    };
-  }, []);
 
   const handleDotClick = useCallback((sourceIds: string[]) => {
     // Clear any existing highlight timeout
@@ -302,11 +277,11 @@ export default function PredictionDetailPage() {
               unit={prediction.unit.includes("%") ? "%" : ""}
               overlays={prediction.overlays}
               onDotClick={handleDotClick}
-              yAxisMax={prediction.slug === "workforce-ai-exposure" ? 100 : prediction.slug === "earnings-call-ai-mentions" ? 100 : prediction.slug === "customer-service-automation" ? 75 : prediction.slug === "ai-adoption-rate" ? 75 : prediction.slug === "entry-level-wage-impact" || prediction.slug === "freelancer-rate-impact" ? 5 : prediction.slug === "tech-sector-displacement" ? 35 : prediction.slug === "median-wage-impact" ? 10 : undefined}
-              yAxisMin={prediction.slug === "entry-level-wage-impact" || prediction.slug === "freelancer-rate-impact" ? -50 : prediction.slug === "tech-sector-displacement" ? -20 : prediction.slug === "median-wage-impact" ? -10 : undefined}
+              yAxisMax={prediction.slug === "workforce-ai-exposure" ? 100 : prediction.slug === "earnings-call-ai-mentions" ? 100 : prediction.slug === "customer-service-automation" ? 75 : prediction.slug === "ai-adoption-rate" ? 75 : prediction.slug === "entry-level-wage-impact" || prediction.slug === "freelancer-rate-impact" ? 5 : prediction.slug === "tech-sector-displacement" ? 35 : prediction.slug === "median-wage-impact" ? 10 : prediction.slug === "white-collar-professional-displacement" ? 25 : undefined}
+              yAxisMin={prediction.slug === "entry-level-wage-impact" || prediction.slug === "freelancer-rate-impact" ? -50 : prediction.slug === "tech-sector-displacement" ? -20 : prediction.slug === "median-wage-impact" ? -10 : prediction.slug === "white-collar-professional-displacement" ? -25 : undefined}
               category={prediction.category}
               showTrendLine={prediction.slug !== "tech-sector-displacement"}
-              flipped={chartFlipped}
+
             />
             <p className="text-[12px] text-[var(--muted)] mt-4 opacity-70">
               Each data point is from a different source. Dots are color-coded by evidence tier. Click any dot to jump to its source.{prediction.overlays && prediction.overlays.length > 0 ? " Colored overlay bars represent relevant studies or data points that provide directional (but not exact) guidance. Click a bar to see its source." : ""}
@@ -421,20 +396,7 @@ export default function PredictionDetailPage() {
           </section>
         </>
       )}
-      {/* Easter egg: flip toast */}
-      {showFlipToast && (
-        <div
-          className="fixed bottom-6 right-6 z-50 bg-white border border-black/[0.08] rounded-lg shadow-lg px-4 py-2.5"
-          style={{
-            animation: "flip-toast-in 0.3s ease-out",
-          }}
-          aria-hidden="true"
-        >
-          <p className="text-[12px] text-[var(--muted)]">
-            {chartFlipped ? "What if AI created jobs?" : "Back to reality."}
-          </p>
-        </div>
-      )}
+
     </div>
   );
 }
