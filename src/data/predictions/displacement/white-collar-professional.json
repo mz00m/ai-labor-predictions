@@ -1,87 +1,75 @@
 {
   "id": "displacement-white-collar",
   "slug": "white-collar-professional-displacement",
-  "title": "White-Collar Professional Displacement by 2030",
-  "description": "Projected percentage of legal, accounting, and financial analyst roles significantly restructured or eliminated by AI by 2030. Only data points where sources directly state a displacement or restructuring figure are plotted.",
+  "title": "Employment in High-AI-Exposure Occupations",
+  "description": "Measured employment change in occupations classified as highly AI-exposed (top quartile by AI exposure indices). Most studies find near-zero aggregate displacement but a sharp age gradient: young workers (22-30) in AI-exposed roles show -5% to -13% declines across the US, Sweden, and the Netherlands, while older workers are stable or growing. Finland and Denmark report null results. Data points span both age-specific and all-worker measurements.",
   "category": "displacement",
-  "unit": "% of roles displaced",
-  "currentValue": 6.8,
+  "unit": "% employment change",
+  "currentValue": -3,
   "timeHorizon": "By 2030",
   "history": [
     {
-      "date": "2025-02-10",
-      "value": 1.2,
-      "sourceIds": [
-        "bls-mlr-ai-employment-projections-2025"
-      ],
+      "date": "2025-09-08",
+      "value": -0.75,
+      "confidenceLow": -1.5,
+      "confidenceHigh": 0,
+      "sourceIds": ["pwbm-ai-productivity-2025"],
       "evidenceTier": 1,
-      "metricType": "employment"
+      "metricType": "employment",
+      "sampleSize": 160000000,
+      "note": "All workers in fully AI-replaceable jobs, US 2021-2024"
     },
     {
-      "date": "2025-07-01",
-      "value": 21.5,
-      "confidenceLow": 18,
-      "confidenceHigh": 25,
-      "sourceIds": [
-        "oecd-white-collar-2025"
-      ],
+      "date": "2025-11-13",
+      "value": -6,
+      "confidenceLow": -9,
+      "confidenceHigh": -3,
+      "sourceIds": ["brynjolfsson-chandar-chen-wc-2025"],
       "evidenceTier": 1,
-      "metricType": "projection"
-    },
-    {
-      "date": "2025-08-01",
-      "value": 2.5,
-      "confidenceLow": 1,
-      "confidenceHigh": 5,
-      "sourceIds": [
-        "goldman-ai-workforce-2025"
-      ],
-      "evidenceTier": 2,
-      "metricType": "projection"
-    },
-    {
-      "date": "2025-10-22",
-      "value": 1,
-      "confidenceLow": 0,
-      "confidenceHigh": 3,
-      "sourceIds": [
-        "gartner-ai-layoffs-2025"
-      ],
-      "evidenceTier": 3,
-      "metricType": "survey"
-    },
-    {
-      "date": "2025-11-01",
-      "value": 18,
-      "confidenceLow": 6,
-      "confidenceHigh": 30,
-      "sourceIds": [
-        "worldbank-liu-wang-yu-2025"
-      ],
-      "evidenceTier": 1,
-      "metricType": "projection"
-    },
-    {
-      "date": "2025-12-15",
-      "value": 0,
-      "confidenceLow": 0,
-      "confidenceHigh": 2,
-      "sourceIds": [
-        "nber-ai-legal-impact-2025"
-      ],
-      "evidenceTier": 1,
-      "metricType": "employment"
+      "metricType": "employment",
+      "sampleSize": 5000000,
+      "note": "Ages 22-25 in most AI-exposed occupations, US ADP payroll data"
     },
     {
       "date": "2026-01-15",
-      "value": 0,
-      "confidenceLow": 0,
-      "confidenceHigh": 2,
-      "sourceIds": [
-        "hbr-ai-potential-layoffs-2026"
-      ],
+      "value": -3.6,
+      "confidenceLow": -5,
+      "confidenceHigh": -2,
+      "sourceIds": ["imf-skill-gaps-geo-2026"],
+      "evidenceTier": 2,
+      "metricType": "employment",
+      "note": "All workers in AI-vulnerable occupations after 5 years, multi-country"
+    },
+    {
+      "date": "2026-01-22",
+      "value": -13,
+      "confidenceLow": -16,
+      "confidenceHigh": -10,
+      "sourceIds": ["esb-dutch-youth-genai-employment-2026"],
       "evidenceTier": 1,
-      "metricType": "survey"
+      "metricType": "employment",
+      "note": "Youth employment in GenAI-exposed occupations, Netherlands Q4 2022-Q3 2025"
+    },
+    {
+      "date": "2026-03-05",
+      "value": 0,
+      "confidenceLow": -1,
+      "confidenceHigh": 1,
+      "sourceIds": ["anthropic-labor-market-impacts-2026"],
+      "evidenceTier": 2,
+      "metricType": "employment",
+      "note": "All workers, US DiD; no systematic unemployment increase in AI-exposed occupations"
+    },
+    {
+      "date": "2026-03-16",
+      "value": -5.5,
+      "confidenceLow": -7,
+      "confidenceHigh": -4,
+      "sourceIds": ["lodefalk-age-gradient-hiring-2026"],
+      "evidenceTier": 1,
+      "metricType": "employment",
+      "sampleSize": 4600000,
+      "note": "Ages 22-25 in top-quartile AI-exposed occupations, Sweden employer-level DiD"
     }
   ],
   "overlays": [
@@ -534,6 +522,41 @@
       ],
       "evidenceTier": 1,
       "label": "Fed/Duke: Routine clerical declining 0.76pp/yr; offset by skilled-technical gains"
+    },
+    {
+      "date": "2026-01-15",
+      "direction": "down",
+      "sourceIds": ["frank-ai-unemployment-overall-2026"],
+      "evidenceTier": 1,
+      "label": "Frank et al.: Unemployment risk rose in AI-exposed occupations from early 2022"
+    },
+    {
+      "date": "2025-09-08",
+      "direction": "neutral",
+      "sourceIds": ["pwbm-ai-productivity-2025"],
+      "evidenceTier": 1,
+      "label": "PWBM: Jobs fully AI-replaceable saw only 0.75% employment fall 2021-2024"
+    },
+    {
+      "date": "2026-03-16",
+      "direction": "down",
+      "sourceIds": ["lodefalk-age-gradient-hiring-2026"],
+      "evidenceTier": 1,
+      "label": "Lodefalk et al.: Sweden 50+ workers in AI-exposed occupations rose 1.3%; age gradient monotonic"
+    },
+    {
+      "date": "2026-03-16",
+      "direction": "neutral",
+      "sourceIds": ["lodefalk-age-gradient-hiring-2026"],
+      "evidenceTier": 1,
+      "label": "Lodefalk et al.: Sweden posting decline driven by monetary policy, not AI (Riksbank timing test)"
+    },
+    {
+      "date": "2026-03-16",
+      "direction": "down",
+      "sourceIds": ["lodefalk-age-gradient-hiring-2026"],
+      "evidenceTier": 1,
+      "label": "Lodefalk et al.: Effect ~2x larger for young women (-0.016 vs -0.007); 1/3 from occupational sorting"
     }
   ],
   "sources": [
@@ -1065,6 +1088,46 @@
       "datePublished": "2026-03-13",
       "excerpt": "CFOs expect routine clerical employment share to decline by 0.76pp in 2026 and 2.19pp by 2028, with partially offsetting increases in skilled-technical roles (+0.62pp in 2026). Business/financial operations NEI of 0.829 indicates roughly balanced replacement and enhancement.",
       "dateAdded": "2026-03-16"
+    },
+    {
+      "id": "lodefalk-age-gradient-hiring-2026",
+      "title": "Same Storm, Different Boats: Generative AI and the Age Gradient in Hiring",
+      "url": "https://cms.ratio.se/app/uploads/2026/03/lodefalk_march16_paper_v2-kombinerades.pdf",
+      "publisher": "RATIO Institute / Örebro University (Lodefalk, Löthman, Koch, Engberg)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-16",
+      "excerpt": "An event study documents an accelerating decline in employment of 22–25-year-olds in high-AI-exposure occupations, reaching 5.5 per cent by early 2025 relative to less exposed occupations within the same employers, while employment of workers over 50 rose by 1.3 per cent.",
+      "dateAdded": "2026-03-17"
+    },
+    {
+      "id": "pwbm-ai-productivity-2025",
+      "title": "The Projected Impact of Generative AI on Future Productivity Growth",
+      "url": "https://budgetmodel.wharton.upenn.edu/issues/2025/9/8/projected-impact-of-generative-ai-on-future-productivity-growth",
+      "publisher": "Penn Wharton Budget Model (Arnon, Smetters)",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-08",
+      "excerpt": "Roughly 10% of US work affected in the short run; AI will increase productivity and GDP by 1.5% by 2035. Jobs that AI can completely replace saw 0.75% employment fall 2021-2024.",
+      "dateAdded": "2026-03-17"
+    },
+    {
+      "id": "imf-skill-gaps-geo-2026",
+      "title": "Bridging Skill Gaps for the Future: New Jobs Creation in the AI Age",
+      "url": "https://www.imf.org/-/media/files/publications/sdn/2026/english/sdnea2026001.pdf",
+      "publisher": "IMF Staff Discussion Note",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-15",
+      "excerpt": "Employment 3.6% lower in AI-vulnerable occupations in regions with high AI-skill demand after 5 years; geographic divergence driven by skill concentration.",
+      "dateAdded": "2026-03-17"
+    },
+    {
+      "id": "frank-ai-unemployment-overall-2026",
+      "title": "AI Exposure and Unemployment Risk",
+      "url": "https://arxiv.org/abs/2601.02554",
+      "publisher": "arXiv (Frank et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-15",
+      "excerpt": "Unemployment risk in AI-exposed occupations rose beginning early 2022; graduates with AI-exposed curricula have higher first-job pay and shorter job searches post-ChatGPT.",
+      "dateAdded": "2026-03-17"
     }
   ]
 }

@@ -82,7 +82,7 @@ Example output:
 [
   {
     "predictionSlug": "white-collar-professional-displacement",
-    "predictionTitle": "White-Collar Professional Displacement",
+    "predictionTitle": "Employment in High-AI-Exposure Occupations",
     "date": "2026-03-01",
     "value": 8,
     "confidenceLow": 5,

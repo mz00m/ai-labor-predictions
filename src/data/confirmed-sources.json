@@ -12,7 +12,7 @@
       "evidenceTier": 1,
       "datePublished": "2026-03-16",
       "excerpt": "An event study documents an accelerating decline in employment of 22–25-year-olds in high-AI-exposure occupations, reaching 5.5 per cent by early 2025 relative to less exposed occupations within the same employers, while employment of workers over 50 rose by 1.3 per cent.",
-      "usedIn": ["overall-us-displacement", "tech-sector-displacement", "customer-service-automation"],
+      "usedIn": ["overall-us-displacement", "tech-sector-displacement", "customer-service-automation", "white-collar-professional-displacement"],
       "verified": true,
       "synthetic": false
     },
@@ -2151,7 +2151,8 @@
       "datePublished": "2026-01-15",
       "excerpt": "Employment 3.6% lower in AI-vulnerable occupations in regions with high AI-skill demand after 5 years; geographic divergence driven by skill concentration.",
       "usedIn": [
-        "overall-us-displacement"
+        "overall-us-displacement",
+        "white-collar-professional-displacement"
       ],
       "verified": true
     },
@@ -3216,7 +3217,8 @@
       "excerpt": "Roughly 10% of US work affected in the short run; AI will increase productivity and GDP by 1.5% by 2035. Jobs that AI can completely replace saw 0.75% employment fall 2021-2024.",
       "usedIn": [
         "overall-us-displacement",
-        "total-us-jobs-lost"
+        "total-us-jobs-lost",
+        "white-collar-professional-displacement"
       ],
       "verified": true
     },
