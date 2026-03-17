@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const PHASES = [
   {
@@ -76,8 +76,38 @@ const PHASES = [
 
 const AI_POSITION = 1.5; // Between Phase II and III (0-indexed)
 
+/** Phase-specific icons — small, geometric */
+function PhaseIcon({ phase, active }: { phase: string; active: boolean }) {
+  const color = active ? "white" : "var(--muted)";
+  const size = 11;
+  const icons: Record<string, JSX.Element> = {
+    I: <svg width={size} height={size} viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="2.5" stroke={color} strokeWidth="1.5"/><path d="M8 2v2m0 8v2M2 8h2m8 0h2" stroke={color} strokeWidth="1.5" strokeLinecap="round"/></svg>,
+    II: <svg width={size} height={size} viewBox="0 0 16 16" fill="none"><path d="M3 13l5-10 5 10" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>,
+    III: <svg width={size} height={size} viewBox="0 0 16 16" fill="none"><path d="M2 12l4-4 3 3 5-6" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>,
+    IV: <svg width={size} height={size} viewBox="0 0 16 16" fill="none"><rect x="3" y="3" width="10" height="10" rx="1.5" stroke={color} strokeWidth="1.5"/><path d="M6 8h4m-2-2v4" stroke={color} strokeWidth="1.5" strokeLinecap="round"/></svg>,
+    V: <svg width={size} height={size} viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="5" stroke={color} strokeWidth="1.5"/><path d="M8 5v3l2 2" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>,
+  };
+  return icons[phase] ?? null;
+}
+
 export default function GPTTimeline() {
   const [activePhase, setActivePhase] = useState<number | null>(null);
+  const [pulsingNode, setPulsingNode] = useState<number | null>(null);
+  const reducedMotion = useRef(false);
+
+  useEffect(() => {
+    reducedMotion.current =
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  }, []);
+
+  const handlePhaseHover = (i: number) => {
+    setActivePhase(i);
+    if (!reducedMotion.current) {
+      setPulsingNode(i);
+      setTimeout(() => setPulsingNode(null), 500);
+    }
+  };
 
   return (
     <div className="space-y-6">
@@ -101,18 +131,29 @@ export default function GPTTimeline() {
                   onClick={() =>
                     setActivePhase(isActive ? null : i)
                   }
-                  onMouseEnter={() => setActivePhase(i)}
+                  onMouseEnter={() => handlePhaseHover(i)}
                   className="flex flex-col items-center flex-1 group cursor-pointer"
                 >
-                  {/* Node */}
-                  <div
-                    className={`timeline-node w-7 h-7 rounded-full border-2 flex items-center justify-center text-[11px] font-bold ${
-                      isActive
-                        ? "bg-[var(--accent)] border-[var(--accent)] text-white scale-110 shadow-[0_0_0_4px_rgba(92,97,246,0.15)]"
-                        : "bg-white border-black/[0.15] text-[var(--muted)] group-hover:border-[var(--accent)] group-hover:text-[var(--accent)]"
-                    }`}
-                  >
-                    {p.phase}
+                  {/* Node with pulse ring */}
+                  <div className="relative">
+                    {pulsingNode === i && (
+                      <div
+                        className="phase-pulse-ring absolute inset-0 rounded-full"
+                        style={{
+                          boxShadow: `0 0 0 0 rgba(92,97,246,0.4)`,
+                          animation: "phase-ring-pulse 0.5s ease-out forwards",
+                        }}
+                      />
+                    )}
+                    <div
+                      className={`timeline-node w-7 h-7 rounded-full border-2 flex items-center justify-center ${
+                        isActive
+                          ? "bg-[var(--accent)] border-[var(--accent)] text-white scale-110 shadow-[0_0_0_4px_rgba(92,97,246,0.15)]"
+                          : "bg-white border-black/[0.15] text-[var(--muted)] group-hover:border-[var(--accent)] group-hover:text-[var(--accent)]"
+                      }`}
+                    >
+                      <PhaseIcon phase={p.phase} active={isActive} />
+                    </div>
                   </div>
 
                   {/* Label */}
