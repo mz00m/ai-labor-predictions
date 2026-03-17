@@ -606,6 +606,13 @@
       ],
       "evidenceTier": 2,
       "label": "Anthropic: Programmers highest AI exposure (74.5%) but no unemployment impact detected"
+    },
+    {
+      "date": "2026-03-16",
+      "direction": "down",
+      "sourceIds": ["lodefalk-age-gradient-hiring-2026"],
+      "evidenceTier": 1,
+      "label": "Lodefalk et al.: Sweden young software dev (22-25) employment shows steepest AI-exposure decline"
     }
   ],
   "sources": [
@@ -1166,6 +1173,16 @@
       "datePublished": "2026-02-19",
       "dateAdded": "2026-03-16",
       "excerpt": "Computer and Mathematical occupations have the highest average PCA-weighted exposure score (4.2) and highest variance (0.739). GPT-scored exposure for SOC 15-0000: mean 8.4/10, range 8-9 across 10 occupations."
+    },
+    {
+      "id": "lodefalk-age-gradient-hiring-2026",
+      "title": "Same Storm, Different Boats: Generative AI and the Age Gradient in Hiring",
+      "url": "https://cms.ratio.se/app/uploads/2026/03/lodefalk_march16_paper_v2-kombinerades.pdf",
+      "publisher": "RATIO Institute / Örebro University (Lodefalk, Löthman, Koch, Engberg)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-16",
+      "excerpt": "The youngest cohort (22–25) shows the steepest decline in software developer employment, consistent with the economy-wide canaries effect. Software developers (SSYK 2512) represent a setting where AI primarily augments experienced workers.",
+      "dateAdded": "2026-03-17"
     }
   ],
   "marketIds": {

@@ -934,6 +934,13 @@
       ],
       "evidenceTier": 3,
       "label": "Yale (Restrepo): Compute constraints will slow AI displacement timeline"
+    },
+    {
+      "date": "2026-03-16",
+      "direction": "down",
+      "sourceIds": ["lodefalk-age-gradient-hiring-2026"],
+      "evidenceTier": 1,
+      "label": "Lodefalk et al.: Sweden 22-25yr employment in high-AI occupations -5.5% by 2025H1 (employer DiD)"
     }
   ],
   "sources": [
@@ -1692,6 +1699,16 @@
       "evidenceTier": 3,
       "datePublished": "2026-03-17",
       "excerpt": "A lot of these claims are premature. Many of the people making them have an interest in selling a product, so you have to take them with a grain of salt. Right now I would describe the labor market as more of a wait-and-see environment. You cannot automate everything tomorrow because we simply don't have enough computing power to do it.",
+      "dateAdded": "2026-03-17"
+    },
+    {
+      "id": "lodefalk-age-gradient-hiring-2026",
+      "title": "Same Storm, Different Boats: Generative AI and the Age Gradient in Hiring",
+      "url": "https://cms.ratio.se/app/uploads/2026/03/lodefalk_march16_paper_v2-kombinerades.pdf",
+      "publisher": "RATIO Institute / Örebro University (Lodefalk, Löthman, Koch, Engberg)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-16",
+      "excerpt": "An event study documents an accelerating decline in employment of 22–25-year-olds in high-AI-exposure occupations, reaching 5.5 per cent by early 2025 relative to less exposed occupations within the same employers, while employment of workers over 50 rose by 1.3 per cent.",
       "dateAdded": "2026-03-17"
     }
   ]
