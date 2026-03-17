@@ -2,7 +2,7 @@
   "id": "genai-work-adoption",
   "slug": "genai-work-adoption",
   "title": "Generative AI Adoption",
-  "description": "Share of U.S. working-age adults (18\u201364) using generative AI at work, from a nationally representative quarterly survey (Real-Time Population Survey). Work adoption (40.7%) lags overall use (55.9%), consistent with workers adopting ahead of their employers. Overall adoption has outpaced both the PC and internet at comparable points post-launch.",
+  "description": "Share of U.S. working-age adults (18–64) using generative AI at work, from a nationally representative quarterly survey (Real-Time Population Survey). Work adoption (40.7%) lags overall use (55.9%), consistent with workers adopting ahead of their employers. Overall adoption has outpaced both the PC and internet at comparable points post-launch.",
   "category": "adoption",
   "unit": "% of adults at work",
   "currentValue": 43,
@@ -35,6 +35,24 @@
       ],
       "evidenceTier": 1,
       "metricType": "survey"
+    },
+    {
+      "date": "2024-12-31",
+      "value": 30,
+      "confidenceLow": 25,
+      "confidenceHigh": 35,
+      "sourceIds": [
+        "daniotti-ai-code-diffusion-2025"
+      ],
+      "evidenceTier": 1,
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "% of Python code on GitHub that is AI-assisted",
+        "conversionFactor": 1,
+        "conversionLow": 0.8,
+        "conversionHigh": 1.2,
+        "rationale": "AI-assisted code share as proxy for developer AI adoption at work"
+      }
     },
     {
       "date": "2025-02-01",
@@ -73,22 +91,6 @@
       "metricType": "survey"
     },
     {
-      "date": "2024-12-31",
-      "value": 30,
-      "confidenceLow": 25,
-      "confidenceHigh": 35,
-      "sourceIds": ["daniotti-ai-code-diffusion-2025"],
-      "evidenceTier": 1,
-      "isProxy": true,
-      "proxyContext": {
-        "actualUnit": "% of Python code on GitHub that is AI-assisted",
-        "conversionFactor": 1.0,
-        "conversionLow": 0.8,
-        "conversionHigh": 1.2,
-        "rationale": "AI-assisted code share as proxy for developer AI adoption at work"
-      }
-    },
-    {
       "date": "2026-01-22",
       "value": 43,
       "sourceIds": [
@@ -102,7 +104,9 @@
     {
       "date": "2024-02-01",
       "direction": "up",
-      "sourceIds": ["bis-bulletin86-genai-households-2024"],
+      "sourceIds": [
+        "bis-bulletin86-genai-households-2024"
+      ],
       "evidenceTier": 1,
       "label": "BIS/NY Fed SCE: ~50% of US households use genAI; 14% weekly (n=893)"
     },
@@ -118,35 +122,45 @@
     {
       "date": "2025-01-01",
       "direction": "up",
-      "sourceIds": ["alikhani-brookings-genai-adoption-2025"],
+      "sourceIds": [
+        "alikhani-brookings-genai-adoption-2025"
+      ],
       "evidenceTier": 2,
       "label": "Brookings: ~20% use AI professionally; 57% personal use; varies by education/income"
     },
     {
       "date": "2025-03-14",
       "direction": "up",
-      "sourceIds": ["yougov-ai-skepticism-2025"],
+      "sourceIds": [
+        "yougov-ai-skepticism-2025"
+      ],
       "evidenceTier": 2,
       "label": "YouGov: 56% of Americans use AI tools; 28% weekly; skepticism up 8pp YoY"
     },
     {
       "date": "2025-04-01",
       "direction": "up",
-      "sourceIds": ["microsoft-wti-2025"],
+      "sourceIds": [
+        "microsoft-wti-2025"
+      ],
       "evidenceTier": 2,
       "label": "Microsoft WTI: 75% of knowledge workers use AI; 78% bring own AI tools (n=31K)"
     },
     {
       "date": "2025-06-01",
       "direction": "up",
-      "sourceIds": ["uk-gds-copilot-2025"],
+      "sourceIds": [
+        "uk-gds-copilot-2025"
+      ],
       "evidenceTier": 2,
       "label": "UK GDS: GitHub Copilot saves 26 min/day across 20K civil servants"
     },
     {
       "date": "2026-01-01",
       "direction": "neutral",
-      "sourceIds": ["stephany-duszynski-gender-gap-2026"],
+      "sourceIds": [
+        "stephany-duszynski-gender-gap-2026"
+      ],
       "evidenceTier": 1,
       "label": "Oxford/Stephany: Gender gap in AI adoption; women adopt less; 5.3pp gap (UK)"
     },
@@ -208,7 +222,7 @@
       "publisher": "Workday / Hanover Research",
       "evidenceTier": 2,
       "datePublished": "2026-01-14",
-      "excerpt": "85% of employees report saving one to seven hours per week using AI. Employees who use AI every day are overwhelmingly optimistic \u2013 more than 90% believe it will help them succeed.",
+      "excerpt": "85% of employees report saving one to seven hours per week using AI. Employees who use AI every day are overwhelmingly optimistic – more than 90% believe it will help them succeed.",
       "dateAdded": "2026-03-07"
     },
     {

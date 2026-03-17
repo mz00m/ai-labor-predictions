@@ -170,7 +170,7 @@
         "cognizant-new-work-2026"
       ],
       "evidenceTier": 2,
-      "label": "Cognizant: education exposure jumped from 11% to 49% \u2014 a 4.5x increase"
+      "label": "Cognizant: education exposure jumped from 11% to 49% — a 4.5x increase"
     },
     {
       "date": "2026-01-28",
@@ -188,16 +188,7 @@
         "shrm-automation-education-2025"
       ],
       "evidenceTier": 2,
-      "label": "SHRM: only 7.3% of education jobs highly automated \u2014 lowest of any sector (n=20,262)"
-    },
-    {
-      "date": "2026-03-04",
-      "direction": "down",
-      "sourceIds": [
-        "ellucian-higher-ed-ai-survey-2026"
-      ],
-      "evidenceTier": 2,
-      "label": "Ellucian: 66% of higher ed institutions leveraging AI, up from 49% YoY (n=779)"
+      "label": "SHRM: only 7.3% of education jobs highly automated — lowest of any sector (n=20,262)"
     },
     {
       "date": "2026-02-01",
@@ -207,6 +198,15 @@
       ],
       "evidenceTier": 1,
       "label": "NBER (Cruces et al.): AI closes ~75% of education-based productivity gap in RCT (n=1,174)"
+    },
+    {
+      "date": "2026-03-04",
+      "direction": "down",
+      "sourceIds": [
+        "ellucian-higher-ed-ai-survey-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Ellucian: 66% of higher ed institutions leveraging AI, up from 49% YoY (n=779)"
     }
   ],
   "sources": [
@@ -242,7 +242,7 @@
     },
     {
       "id": "chegg-enrollment-decline",
-      "title": "Chegg Q2 2024 Earnings \u2014 ChatGPT Impact on Tutoring Market",
+      "title": "Chegg Q2 2024 Earnings — ChatGPT Impact on Tutoring Market",
       "url": "https://investor.chegg.com/press-releases/news-details/2024/Chegg-Reports-Q2-2024-Financial-Results/",
       "publisher": "Chegg (Earnings Report)",
       "evidenceTier": 1,
@@ -282,7 +282,7 @@
     },
     {
       "id": "pearson-10k-2024",
-      "title": "Pearson plc 2024 Annual Report \u2014 AI Strategy",
+      "title": "Pearson plc 2024 Annual Report — AI Strategy",
       "url": "https://plc.pearson.com/en-GB/annual-report-2024",
       "publisher": "Pearson plc",
       "evidenceTier": 1,
@@ -347,7 +347,7 @@
       "publisher": "SHRM (Society for Human Resource Management)",
       "evidenceTier": 2,
       "datePublished": "2025-10-01",
-      "excerpt": "At least 50% of tasks are automated in only 7.3% of education and library occupations \u2014 the lowest of any occupational group. Survey of 20,262 U.S. workers fielded March-April 2025.",
+      "excerpt": "At least 50% of tasks are automated in only 7.3% of education and library occupations — the lowest of any occupational group. Survey of 20,262 U.S. workers fielded March-April 2025.",
       "dateAdded": "2026-03-08"
     },
     {
@@ -367,7 +367,7 @@
       "publisher": "Cognizant",
       "evidenceTier": 2,
       "datePublished": "2026-01-15",
-      "excerpt": "Education task exposure jumped from 11% to 49% \u2014 a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations.",
+      "excerpt": "Education task exposure jumped from 11% to 49% — a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations.",
       "dateAdded": "2026-03-01"
     },
     {

@@ -5,9 +5,9 @@
   "description": "Share of US jobs with significant task overlap with current AI capabilities. Exposure measures what AI could automate, not what it has. High exposure does not equal displacement.",
   "category": "adoption",
   "unit": "% of jobs exposed",
-  "currentValue": 46.2,
+  "currentValue": 44.1,
   "timeHorizon": "Current estimate",
-  "disclaimer": "Exposure measures which tasks could be affected by AI, not which jobs will be lost. Sources use fundamentally different definitions of 'exposure' \u2014 from individual task overlap to full occupation-level capability mapping. The 23\u201393% range reflects these definitional differences, not measurement uncertainty. The weighted average is a mathematical summary, not a consensus estimate. Explore task-level detail in the [Task Visualizer](/task-visualizer).",
+  "disclaimer": "Exposure measures which tasks could be affected by AI, not which jobs will be lost. Sources use fundamentally different definitions of 'exposure' — from individual task overlap to full occupation-level capability mapping. The 23–93% range reflects these definitional differences, not measurement uncertainty. The weighted average is a mathematical summary, not a consensus estimate. Explore task-level detail in the [Task Visualizer](/task-visualizer).",
   "history": [
     {
       "date": "2023-03-26",
@@ -178,7 +178,7 @@
         "eloundou-openai-2024"
       ],
       "evidenceTier": 1,
-      "label": "OpenAI/UPenn: 80% of workers have \u226510% tasks affected"
+      "label": "OpenAI/UPenn: 80% of workers have ≥10% tasks affected"
     },
     {
       "date": "2025-01-01",
@@ -217,6 +217,24 @@
       "label": "ILO review: exposure converges on high-wage jobs"
     },
     {
+      "date": "2025-11-26",
+      "direction": "up",
+      "sourceIds": [
+        "mit-iceberg-index-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "MIT Iceberg: ~16% of BLS-classified labor tasks technically performable by current AI systems"
+    },
+    {
+      "date": "2025-11-26",
+      "direction": "up",
+      "sourceIds": [
+        "mit-iceberg-index-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "MIT Iceberg Index: 11.7% of US wage value exposed to AI across admin, finance, professional services"
+    },
+    {
       "date": "2026-01-15",
       "direction": "up",
       "sourceIds": [
@@ -235,6 +253,15 @@
       "label": "Brookings: Admin support has highest exposure (52.5%) + lowest adaptability"
     },
     {
+      "date": "2026-01-21",
+      "direction": "neutral",
+      "sourceIds": [
+        "manning-aguirre-adaptive-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER: AI exposure and adaptive capacity positively correlated (r=0.502); most exposed workers best positioned"
+    },
+    {
       "date": "2026-01-22",
       "direction": "up",
       "sourceIds": [
@@ -251,6 +278,15 @@
       ],
       "evidenceTier": 2,
       "label": "Lightcast: Most-exposed roles 70-78% (office/editorial); least 6-14% (healthcare)"
+    },
+    {
+      "date": "2026-02-19",
+      "direction": "neutral",
+      "sourceIds": [
+        "yale-budgetlab-exposure-agreement-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Yale Budget Lab: 6 exposure metrics agree on who's exposed, disagree on magnitude (778 occupations)"
     },
     {
       "date": "2026-03-01",
@@ -280,45 +316,11 @@
       "label": "Anthropic: ~70% of workers have some observed AI task coverage; theoretical far exceeds actual"
     },
     {
-      "date": "2025-11-26",
-      "direction": "up",
-      "sourceIds": [
-        "mit-iceberg-index-2025"
-      ],
-      "evidenceTier": 1,
-      "label": "MIT Iceberg: ~16% of BLS-classified labor tasks technically performable by current AI systems"
-    },
-    {
-      "date": "2025-11-26",
-      "direction": "up",
-      "sourceIds": [
-        "mit-iceberg-index-2025"
-      ],
-      "evidenceTier": 1,
-      "label": "MIT Iceberg Index: 11.7% of US wage value exposed to AI across admin, finance, professional services"
-    },
-    {
-      "date": "2026-02-19",
-      "direction": "neutral",
-      "sourceIds": [
-        "yale-budgetlab-exposure-agreement-2026"
-      ],
-      "evidenceTier": 1,
-      "label": "Yale Budget Lab: 6 exposure metrics agree on who's exposed, disagree on magnitude (778 occupations)"
-    },
-    {
-      "date": "2026-01-21",
-      "direction": "neutral",
-      "sourceIds": [
-        "manning-aguirre-adaptive-2026"
-      ],
-      "evidenceTier": 1,
-      "label": "NBER: AI exposure and adaptive capacity positively correlated (r=0.502); most exposed workers best positioned"
-    },
-    {
       "date": "2026-03-13",
       "direction": "neutral",
-      "sourceIds": ["fed-atl-duke-cfo-ai-productivity-2026"],
+      "sourceIds": [
+        "fed-atl-duke-cfo-ai-productivity-2026"
+      ],
       "evidenceTier": 1,
       "label": "Fed/Duke: Large firms expect AI workforce cuts; small firms expect modest gains"
     }
@@ -441,7 +443,7 @@
       "publisher": "Cognizant",
       "evidenceTier": 2,
       "datePublished": "2026-01-15",
-      "excerpt": "93% of all occupations analyzed have at least one task with significant AI exposure. Education task exposure jumped from 11% to 49% \u2014 a 4.5x increase. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations.",
+      "excerpt": "93% of all occupations analyzed have at least one task with significant AI exposure. Education task exposure jumped from 11% to 49% — a 4.5x increase. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -491,7 +493,7 @@
       "publisher": "Stanford GSB / NBER (Jones, Tonetti)",
       "evidenceTier": 1,
       "datePublished": "2026-01-15",
-      "excerpt": "In recent years, retail trade has the lowest share of tasks that have been automated \u2014 around 50% \u2014 whereas computers/electronics has the highest share \u2014 more than 85%.",
+      "excerpt": "In recent years, retail trade has the lowest share of tasks that have been automated — around 50% — whereas computers/electronics has the highest share — more than 85%.",
       "dateAdded": "2026-03-07"
     },
     {

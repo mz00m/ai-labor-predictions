@@ -11,24 +11,26 @@
       "publisher": "NBER (Manning, Aguirre)",
       "evidenceTier": 1,
       "datePublished": "2026-01-21",
-      "excerpt": "Of the 37.1 million workers in the top quartile of AI exposure, 26.5 million are in occupations that also have above-median adaptive capacity. 6.1 million workers (4.2%) are both highly exposed and in the bottom quartile of adaptive capacity, concentrated in clerical and administrative roles. Women make up 81.3% of high-vulnerability workers.",
+      "excerpt": "6.1 million workers in AI-exposed roles lack adaptive capacity; 86% are women. Vulnerability concentrated in college towns and state capitals in Mountain West and Midwest.",
       "usedIn": [
         "overall-us-displacement",
         "white-collar-professional-displacement",
         "workforce-ai-exposure"
       ],
-      "verified": true,
-      "synthetic": false
+      "verified": true
     },
     "bessen-automatic-reaction-2025": {
       "id": "bessen-automatic-reaction-2025",
-      "title": "Automatic Reaction \u2014 What Happens to Workers at Firms that Automate?",
+      "title": "Automatic Reaction — What Happens to Workers at Firms that Automate?",
       "url": "https://doi.org/10.1162/rest_a_01284",
       "publisher": "Review of Economics and Statistics (Bessen, Goos, Salomons, van den Berge)",
       "evidenceTier": 1,
       "datePublished": "2025-02-01",
       "excerpt": "Tenured workers cumulatively lose about 3,800 Euros in wage and salary earnings over five years on average (about 9% of one year's income). Only 0.7% of all workers leave their employers each year due to automation, far below mass layoff rates.",
-      "usedIn": ["overall-us-displacement", "median-wage-impact"],
+      "usedIn": [
+        "overall-us-displacement",
+        "median-wage-impact"
+      ],
       "verified": true,
       "synthetic": false
     },
@@ -40,7 +42,9 @@
       "evidenceTier": 1,
       "datePublished": "2018-01-01",
       "excerpt": "If demand is sufficiently elastic and AI does not completely replace humans, then technical change will create jobs rather than destroy them. Manufacturing employment followed an inverted-U driven by demand elasticity.",
-      "usedIn": ["overall-us-displacement"],
+      "usedIn": [
+        "overall-us-displacement"
+      ],
       "verified": true,
       "synthetic": false
     },
@@ -52,7 +56,9 @@
       "evidenceTier": 1,
       "datePublished": "2024-10-01",
       "excerpt": "A commuting zone which is an additional 200 km from the closest AI hotspot has 17% lower growth in AI jobs' share of vacancies. 20% of the effect is explained by state borders.",
-      "usedIn": ["ai-adoption-rate"],
+      "usedIn": [
+        "ai-adoption-rate"
+      ],
       "verified": true,
       "synthetic": false
     },
@@ -2534,19 +2540,6 @@
       ],
       "verified": true,
       "synthetic": false
-    },
-    "manning-aguirre-adaptive-2026": {
-      "id": "manning-aguirre-adaptive-2026",
-      "title": "How Adaptable Are American Workers to AI-Induced Job Displacement?",
-      "url": "https://www.nber.org/papers/w34705",
-      "publisher": "NBER (Manning, Aguirre)",
-      "evidenceTier": 1,
-      "datePublished": "2026-01-21",
-      "excerpt": "6.1 million workers in AI-exposed roles lack adaptive capacity; 86% are women. Vulnerability concentrated in college towns and state capitals in Mountain West and Midwest.",
-      "usedIn": [
-        "overall-us-displacement"
-      ],
-      "verified": true
     },
     "mckinsey-12m-workers-2025": {
       "id": "mckinsey-12m-workers-2025",
@@ -5789,6 +5782,20 @@
         "white-collar-professional-displacement",
         "healthcare-admin-displacement",
         "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "factset-earnings-q4-2025": {
+      "id": "factset-earnings-q4-2025",
+      "title": "FactSet Earnings Insight Q4 2025",
+      "url": "https://insight.factset.com/highest-number-of-sp-500-earnings-calls-citing-ai-over-the-past-10-years-1",
+      "publisher": "FactSet",
+      "evidenceTier": 1,
+      "datePublished": "2025-12-01",
+      "excerpt": "61% of S&P 500 companies cited AI in Q4 2025 earnings calls, maintaining near-record levels from Q3.",
+      "usedIn": [
+        "earnings-call-ai-mentions"
       ],
       "verified": true,
       "synthetic": false

@@ -5,7 +5,7 @@
   "description": "Projected change in real median wages in the US due to AI adoption, combining productivity gains and displacement effects.",
   "category": "wages",
   "unit": "% change in real median wage",
-  "currentValue": -2.5,
+  "currentValue": -1.4,
   "timeHorizon": "By 2030",
   "history": [
     {
@@ -143,15 +143,6 @@
   ],
   "overlays": [
     {
-      "date": "2025-02-01",
-      "direction": "down",
-      "sourceIds": [
-        "bessen-automatic-reaction-2025"
-      ],
-      "evidenceTier": 1,
-      "label": "Bessen et al.: 9% cumulative earnings loss over 5yr from automation (via reduced hours/separation, not wage rate decline)"
-    },
-    {
       "date": "2023-05-16",
       "direction": "neutral",
       "sourceIds": [
@@ -186,6 +177,15 @@
       ],
       "evidenceTier": 1,
       "label": "UPS: 12K management jobs cut; driver top rate $49/hr under new contract"
+    },
+    {
+      "date": "2025-02-01",
+      "direction": "down",
+      "sourceIds": [
+        "bessen-automatic-reaction-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Bessen et al.: 9% cumulative earnings loss over 5yr from automation (reduced hours/separation)"
     },
     {
       "date": "2025-02-10",
@@ -329,7 +329,7 @@
         "jones-tonetti-weak-links-2026"
       ],
       "evidenceTier": 1,
-      "label": "Jones & Tonetti (Stanford/NBER): AI output gains modest near-term \u2014 only 4% above trend by 2040"
+      "label": "Jones & Tonetti (Stanford/NBER): AI output gains modest near-term — only 4% above trend by 2040"
     },
     {
       "date": "2026-01-21",
@@ -379,7 +379,9 @@
     {
       "date": "2026-03-17",
       "direction": "down",
-      "sourceIds": ["yale-restrepo-ai-automation-future-work-2026"],
+      "sourceIds": [
+        "yale-restrepo-ai-automation-future-work-2026"
+      ],
       "evidenceTier": 3,
       "label": "Yale (Restrepo): Automation targets above-median wage tasks, amplifying losses"
     }
@@ -444,7 +446,7 @@
     },
     {
       "id": "bls-wage-data-2025",
-      "title": "Employment Cost Index \u2014 2025 Q1",
+      "title": "Employment Cost Index — 2025 Q1",
       "url": "https://www.bls.gov/eci/",
       "publisher": "Bureau of Labor Statistics",
       "evidenceTier": 1,
@@ -462,7 +464,7 @@
     },
     {
       "id": "epi-wages-2025",
-      "title": "Unbalanced labor market power is what makes technology \u2014 including AI \u2014 threatening to workers",
+      "title": "Unbalanced labor market power is what makes technology — including AI — threatening to workers",
       "url": "https://www.epi.org/publication/ai-unbalanced-labor-markets/",
       "publisher": "Economic Policy Institute (Bivens, Zipperer)",
       "evidenceTier": 2,
@@ -482,7 +484,7 @@
     },
     {
       "id": "indeed-wage-tracker-2025",
-      "title": "US Wage Tracker \u2014 Posted Wage Trends by Occupation",
+      "title": "US Wage Tracker — Posted Wage Trends by Occupation",
       "url": "https://www.hiringlab.org/2025/02/10/us-wage-tracker/",
       "publisher": "Indeed Hiring Lab",
       "evidenceTier": 2,
@@ -594,7 +596,7 @@
       "id": "cepr-ai-productivity-jobs-europe-2026",
       "title": "How AI is affecting productivity and jobs in Europe",
       "url": "https://cepr.org/voxeu/columns/how-ai-affecting-productivity-and-jobs-europe",
-      "publisher": "CEPR VoxEU (Aldasoro, Gambacorta, P\u00e1l, Revoltella, Weiss, Wolski)",
+      "publisher": "CEPR VoxEU (Aldasoro, Gambacorta, Pál, Revoltella, Weiss, Wolski)",
       "evidenceTier": 1,
       "datePublished": "2026-02-17",
       "excerpt": "AI adoption causally increases labour productivity levels by 4% on average. Employees in AI-using companies benefit through higher wages, both in total and per employee.",
@@ -647,7 +649,7 @@
       "publisher": "HBS Working Paper (Otis, Clarke, Delecourt, Holtz, Koning)",
       "evidenceTier": 1,
       "datePublished": "2023-12-01",
-      "excerpt": "The paper reports no statistically significant average effect on revenues or profits. But effects are highly heterogeneous: high\u2011performing businesses at baseline appear to improve (roughly 15 percent), while low performers do worse (roughly 8-10 percent worse)",
+      "excerpt": "The paper reports no statistically significant average effect on revenues or profits. But effects are highly heterogeneous: high‑performing businesses at baseline appear to improve (roughly 15 percent), while low performers do worse (roughly 8-10 percent worse)",
       "dateAdded": "2026-03-07"
     },
     {
@@ -725,7 +727,7 @@
     },
     {
       "id": "bessen-automatic-reaction-2025",
-      "title": "Automatic Reaction \u2014 What Happens to Workers at Firms that Automate?",
+      "title": "Automatic Reaction — What Happens to Workers at Firms that Automate?",
       "url": "https://doi.org/10.1162/rest_a_01284",
       "publisher": "Review of Economics and Statistics (Bessen, Goos, Salomons, van den Berge)",
       "evidenceTier": 1,
