@@ -149,6 +149,24 @@
       "label": "WSJ: Tens of thousands of white-collar jobs disappearing as AI starts to bite"
     },
     {
+      "date": "2024-11-30",
+      "direction": "down",
+      "sourceIds": [
+        "boke-gallemore-glaeser-accounting-ai-2024"
+      ],
+      "evidenceTier": 1,
+      "label": "Boke et al.: AI investment reduces accounting hiring but not work quality"
+    },
+    {
+      "date": "2025-01-01",
+      "direction": "down",
+      "sourceIds": [
+        "maasoum-lichtinger-seniority-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Maasoum/Lichtinger: GenAI adopters cut junior hiring 22%; seniority composition shifts"
+    },
+    {
       "date": "2025-01-08",
       "direction": "down",
       "sourceIds": [
@@ -203,6 +221,24 @@
       "label": "EY: $1.4B AI investment; AI-assisted audit covers 40% of routine testing tasks"
     },
     {
+      "date": "2025-03-15",
+      "direction": "up",
+      "sourceIds": [
+        "dellacqua-cybernetic-teammate-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER/HBS RCT (776 P&G pros): Individual + AI matches team without AI (+0.37 SD)"
+    },
+    {
+      "date": "2025-04-15",
+      "direction": "up",
+      "sourceIds": [
+        "dillon-shifting-work-patterns-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER/AER:I (7K workers, 66 firms): AI saves 2 hrs/wk on email; no task shift detected"
+    },
+    {
       "date": "2025-06-01",
       "direction": "down",
       "sourceIds": [
@@ -237,6 +273,15 @@
       ],
       "evidenceTier": 1,
       "label": "ILO review: AI exposure highest in high-wage jobs; substitution in writing/translation"
+    },
+    {
+      "date": "2025-09-15",
+      "direction": "up",
+      "sourceIds": [
+        "chatterji-chatgpt-usage-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER: 700M ChatGPT users; 81% of work use is decision support, not task automation"
     },
     {
       "date": "2025-09-26",
@@ -293,39 +338,13 @@
       "label": "McKinsey: AI fluency demand grew 7x in 2 yrs; 40% of jobs in highly automatable roles"
     },
     {
-      "date": "2024-11-30",
+      "date": "2025-11-26",
       "direction": "down",
-      "sourceIds": ["boke-gallemore-glaeser-accounting-ai-2024"],
+      "sourceIds": [
+        "mit-iceberg-index-2025"
+      ],
       "evidenceTier": 1,
-      "label": "Boke et al.: AI investment reduces accounting hiring but not work quality"
-    },
-    {
-      "date": "2025-01-01",
-      "direction": "down",
-      "sourceIds": ["maasoum-lichtinger-seniority-2025"],
-      "evidenceTier": 1,
-      "label": "Maasoum/Lichtinger: GenAI adopters cut junior hiring 22%; seniority composition shifts"
-    },
-    {
-      "date": "2025-03-15",
-      "direction": "up",
-      "sourceIds": ["dellacqua-cybernetic-teammate-2025"],
-      "evidenceTier": 1,
-      "label": "NBER/HBS RCT (776 P&G pros): Individual + AI matches team without AI (+0.37 SD)"
-    },
-    {
-      "date": "2025-04-15",
-      "direction": "up",
-      "sourceIds": ["dillon-shifting-work-patterns-2025"],
-      "evidenceTier": 1,
-      "label": "NBER/AER:I (7K workers, 66 firms): AI saves 2 hrs/wk on email; no task shift detected"
-    },
-    {
-      "date": "2025-09-15",
-      "direction": "up",
-      "sourceIds": ["chatterji-chatgpt-usage-2025"],
-      "evidenceTier": 1,
-      "label": "NBER: 700M ChatGPT users; 81% of work use is decision support, not task automation"
+      "label": "MIT Iceberg: White-collar AI exposure 5x larger than visible tech disruption, spans all states"
     },
     {
       "date": "2025-12-15",
@@ -391,6 +410,24 @@
       "label": "Althoff & Reichardt: Admin roles (financial clerks) see large employment decline"
     },
     {
+      "date": "2026-01-21",
+      "direction": "neutral",
+      "sourceIds": [
+        "manning-aguirre-adaptive-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER: Professional/managerial (56.9M) have high adaptive capacity (0.734) despite high AI exposure"
+    },
+    {
+      "date": "2026-01-22",
+      "direction": "down",
+      "sourceIds": [
+        "esb-dutch-youth-genai-employment-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "ESB/Rabobank: Dutch GenAI-vulnerable job postings down 25% vs <10% elsewhere (since 2022)"
+    },
+    {
       "date": "2026-02-01",
       "direction": "down",
       "sourceIds": [
@@ -433,7 +470,7 @@
         "wang-neubig-agent-benchmarks-2026"
       ],
       "evidenceTier": 1,
-      "label": "Wang et al.: Legal 70%, Management 88% digital work \u2014 high automation potential"
+      "label": "Wang et al.: Legal 70%, Management 88% digital work — high automation potential"
     },
     {
       "date": "2026-03-02",
@@ -469,7 +506,7 @@
         "anthropic-labor-market-impacts-2026"
       ],
       "evidenceTier": 2,
-      "label": "Anthropic: Most AI-exposed workers are educated, higher-paid \u2014 no unemployment rise found"
+      "label": "Anthropic: Most AI-exposed workers are educated, higher-paid — no unemployment rise found"
     },
     {
       "date": "2026-03-07",
@@ -490,36 +527,11 @@
       "label": "Microsoft AI CEO via BizJournals: Expects all white-collar work automated in 18 months"
     },
     {
-      "date": "2026-01-22",
-      "direction": "down",
-      "sourceIds": [
-        "esb-dutch-youth-genai-employment-2026"
-      ],
-      "evidenceTier": 1,
-      "label": "ESB/Rabobank: Dutch GenAI-vulnerable job postings down 25% vs <10% elsewhere (since 2022)"
-    },
-    {
-      "date": "2025-11-26",
-      "direction": "down",
-      "sourceIds": [
-        "mit-iceberg-index-2025"
-      ],
-      "evidenceTier": 1,
-      "label": "MIT Iceberg: White-collar AI exposure 5x larger than visible tech disruption, spans all states"
-    },
-    {
-      "date": "2026-01-21",
-      "direction": "neutral",
-      "sourceIds": [
-        "manning-aguirre-adaptive-2026"
-      ],
-      "evidenceTier": 1,
-      "label": "NBER: Professional/managerial (56.9M) have high adaptive capacity (0.734) despite high AI exposure"
-    },
-    {
       "date": "2026-03-13",
       "direction": "down",
-      "sourceIds": ["fed-atl-duke-cfo-ai-productivity-2026"],
+      "sourceIds": [
+        "fed-atl-duke-cfo-ai-productivity-2026"
+      ],
       "evidenceTier": 1,
       "label": "Fed/Duke: Routine clerical declining 0.76pp/yr; offset by skilled-technical gains"
     }
@@ -582,7 +594,7 @@
       "publisher": "MIT Technology Review",
       "evidenceTier": 1,
       "datePublished": "2025-12-15",
-      "excerpt": "Despite early signs that AI is beginning to affect entry-level workers, labor statistics have yet to show lawyers being displaced. Law graduate employment in 2024 reached 93.4% \u2014 the highest rate on record.",
+      "excerpt": "Despite early signs that AI is beginning to affect entry-level workers, labor statistics have yet to show lawyers being displaced. Law graduate employment in 2024 reached 93.4% — the highest rate on record.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -616,7 +628,7 @@
     },
     {
       "id": "jpmorgan-10k-ai-2024",
-      "title": "JPMorgan Chase 2024 10-K \u2014 AI and Workforce",
+      "title": "JPMorgan Chase 2024 10-K — AI and Workforce",
       "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000019617&type=10-K",
       "publisher": "JPMorgan Chase (SEC Filing)",
       "evidenceTier": 1,
@@ -626,7 +638,7 @@
     },
     {
       "id": "ey-10k-ai-2024",
-      "title": "EY Global \u2014 AI Transformation in Professional Services",
+      "title": "EY Global — AI Transformation in Professional Services",
       "url": "https://www.ey.com/en_gl/insights/ai/case-study-how-ey-transformed-with-ai",
       "publisher": "Ernst & Young",
       "evidenceTier": 2,
@@ -701,7 +713,7 @@
       "publisher": "Brookings Institution",
       "evidenceTier": 1,
       "datePublished": "2025-07-01",
-      "excerpt": "High-skill freelancers disproportionately affected by AI \u2014 top performers were impacted most, contradicting conventional wisdom that expertise insulates workers.",
+      "excerpt": "High-skill freelancers disproportionately affected by AI — top performers were impacted most, contradicting conventional wisdom that expertise insulates workers.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -781,7 +793,7 @@
       "publisher": "NBER",
       "evidenceTier": 1,
       "datePublished": "2025-12-15",
-      "excerpt": "AI chatbots had no statistically significant impact on hours worked or wages earned for lawyers. Law graduate employment in 2024 reached 93.4% \u2014 the highest rate on record.",
+      "excerpt": "AI chatbots had no statistically significant impact on hours worked or wages earned for lawyers. Law graduate employment in 2024 reached 93.4% — the highest rate on record.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -801,7 +813,7 @@
       "publisher": "Cognizant",
       "evidenceTier": 2,
       "datePublished": "2026-01-15",
-      "excerpt": "Education task exposure jumped from 11% to 49% \u2014 a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations.",
+      "excerpt": "Education task exposure jumped from 11% to 49% — a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -842,7 +854,7 @@
       "evidenceTier": 2,
       "datePublished": "2026-02-01",
       "dateAdded": "2026-03-02",
-      "excerpt": "the jobs most vulnerable to AI are elsewhere\u2014including executive assistants, editors, and interpreters/translators (where over 70% of their skills are exposed to AI)."
+      "excerpt": "the jobs most vulnerable to AI are elsewhere—including executive assistants, editors, and interpreters/translators (where over 70% of their skills are exposed to AI)."
     },
     {
       "id": "causalinf-research-publishing-ai-2026",
@@ -851,7 +863,7 @@
       "publisher": "CausalInf Substack (Scott Cunningham)",
       "evidenceTier": 4,
       "datePublished": "2026-03-02",
-      "excerpt": "Project APE \u2014 Autonomous Policy Evaluation... has produced 204 papers \u2014 with 60 added in a single week... These are fully automated papers, like a version 1.0, with no human iteration whatsoever.",
+      "excerpt": "Project APE — Autonomous Policy Evaluation... has produced 204 papers — with 60 added in a single week... These are fully automated papers, like a version 1.0, with no human iteration whatsoever.",
       "dateAdded": "2026-03-07"
     },
     {
@@ -916,7 +928,7 @@
     },
     {
       "id": "bls-jolts-december-2025",
-      "title": "Job Openings and Labor Turnover \u2014 December 2025",
+      "title": "Job Openings and Labor Turnover — December 2025",
       "url": "https://www.bls.gov/news.release/jolts.nr0.htm",
       "publisher": "U.S. Bureau of Labor Statistics",
       "evidenceTier": 1,

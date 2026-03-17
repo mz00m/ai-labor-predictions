@@ -868,16 +868,6 @@
       "dateAdded": "2026-03-01"
     },
     {
-      "id": "metr-2026",
-      "title": "Uplift Update: Measuring AI's Impact on Open-Source Developer Productivity",
-      "url": "https://metr.org/blog/2026-02-24-uplift-update/",
-      "publisher": "METR",
-      "evidenceTier": 1,
-      "datePublished": "2026-02-24",
-      "excerpt": "Updated study: original developers now estimated at -18% speedup (CI: -38% to +9%). Newly-recruited developers estimated at -4% (CI: -15% to +9%). Wide confidence intervals span zero.",
-      "dateAdded": "2026-03-01"
-    },
-    {
       "id": "cui-microsoft-copilot-2025",
       "title": "The Effects of Generative AI on Computing Workers' Productivity",
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5106604",
