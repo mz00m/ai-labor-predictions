@@ -217,6 +217,15 @@
       "label": "ILO review: exposure converges on high-wage jobs"
     },
     {
+      "date": "2025-09-01",
+      "direction": "up",
+      "sourceIds": [
+        "brynjolfsson-hitzig-ai-knowledge-centralization-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER (Brynjolfsson/Hitzig): AI expanding codifiable knowledge frontier, increasing exposure"
+    },
+    {
       "date": "2025-11-26",
       "direction": "up",
       "sourceIds": [
@@ -595,6 +604,16 @@
       "datePublished": "2026-03-13",
       "excerpt": "Employment effects heterogeneous by firm size: large companies expect AI-driven workforce reductions while smaller firms anticipate modest employment growth. Compositional reallocation of labor both within and across firms, with routine clerical roles declining and skilled-technical roles increasing.",
       "dateAdded": "2026-03-16"
+    },
+    {
+      "id": "brynjolfsson-hitzig-ai-knowledge-centralization-2025",
+      "title": "AI's Use of Knowledge in Society",
+      "url": "https://www.nber.org/system/files/chapters/c15303/c15303.pdf",
+      "publisher": "NBER (Brynjolfsson, Hitzig)",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-01",
+      "excerpt": "Transformative AI sharply expands what counts as codifiable -- and therefore transferable -- 'local knowledge,' in three main ways: it makes explicit knowledge more accessible to decision-makers, it increasingly extracts tacit know-how once embedded in human perception and practice, and it generates machine-native knowledge.",
+      "dateAdded": "2026-03-17"
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-17",
-  "totalSources": 421,
-  "verifiedCount": 421,
+  "totalSources": 422,
+  "verifiedCount": 422,
   "sources": {
     "lodefalk-age-gradient-hiring-2026": {
       "id": "lodefalk-age-gradient-hiring-2026",
@@ -5826,6 +5826,22 @@
         "overall-us-displacement",
         "median-wage-impact",
         "ai-adoption-rate"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "brynjolfsson-hitzig-ai-knowledge-centralization-2025": {
+      "id": "brynjolfsson-hitzig-ai-knowledge-centralization-2025",
+      "title": "AI's Use of Knowledge in Society",
+      "url": "https://www.nber.org/system/files/chapters/c15303/c15303.pdf",
+      "publisher": "NBER (Brynjolfsson, Hitzig)",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-01",
+      "excerpt": "The framework yields several predictions: larger average firm size, greater industry concentration, and reduced local managerial autonomy. Transformative AI sharply expands what counts as codifiable local knowledge. In the absence of active countermeasures, transformative AI may lead to significantly more centralization of decision-making.",
+      "usedIn": [
+        "white-collar-professional-displacement",
+        "workforce-ai-exposure",
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false
