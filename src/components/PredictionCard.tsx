@@ -1,9 +1,13 @@
 "use client";
 
+import { useRef } from "react";
 import Link from "next/link";
 import { Prediction, EvidenceTier } from "@/lib/types";
 import { computeAggregate } from "@/lib/prediction-stats";
 import PredictionChart from "./PredictionChart";
+import { useMagneticTilt } from "@/hooks/useMagneticTilt";
+import { useInView } from "@/hooks/useInView";
+import { useCountUp } from "@/hooks/useCountUp";
 
 interface PredictionCardProps {
   prediction: Prediction;
@@ -27,9 +31,38 @@ export default function PredictionCard({
   const meanAbs = Math.abs(agg.mean) || 1;
   const hasSignificantDisagreement = agg.min !== agg.max && spread / meanAbs > 0.5;
 
+  // Magnetic tilt — subtle 3D depth on hover
+  const { ref: tiltRef, style: tiltStyle } = useMagneticTilt<HTMLDivElement>({
+    maxTilt: 5,
+    hoverScale: 1.02,
+    perspective: 600,
+  });
+
+  // Intersection-triggered count-up for the big stat number
+  const { ref: viewRef, inView } = useInView<HTMLDivElement>(0.3);
+  const animatedMean = useCountUp(
+    Math.round(agg.mean * 10) / 10 * 10, // x10 for precision
+    700,
+    inView ? 0 : 99999
+  );
+  const displayMean = animatedMean / 10;
+
+  // Merge refs
+  const mergedRef = (el: HTMLDivElement | null) => {
+    (tiltRef as React.MutableRefObject<HTMLDivElement | null>).current = el;
+    (viewRef as React.MutableRefObject<HTMLDivElement | null>).current = el;
+  };
+
   return (
     <Link href={`/predictions/${prediction.slug}`}>
-      <div className="group p-5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-indigo-400 dark:hover:border-indigo-500 hover:shadow-lg transition-all cursor-pointer">
+      <div
+        ref={mergedRef}
+        className="group p-5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-indigo-400 dark:hover:border-indigo-500 hover:shadow-lg cursor-pointer"
+        style={{
+          ...tiltStyle,
+          willChange: "transform",
+        }}
+      >
         <div className="flex items-start justify-between mb-1">
           <span className="text-xs font-medium uppercase tracking-wide text-gray-500 dark:text-gray-400">
             {prediction.category === "displacement"
@@ -55,9 +88,11 @@ export default function PredictionCard({
         </div>
         <div className="flex items-end justify-between">
           <div>
-            <span className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+            <span className="text-2xl font-bold text-gray-900 dark:text-gray-100 tabular-nums">
               {agg.mean > 0 && prediction.category === "wages" ? "+" : ""}
-              {Number.isInteger(agg.mean) ? agg.mean : agg.mean.toFixed(1)}
+              {inView
+                ? (Number.isInteger(agg.mean) ? Math.round(displayMean) : displayMean.toFixed(1))
+                : "0"}
               <span className="text-sm font-normal text-gray-500">
                 {prediction.unit.includes("%") ? "%" : ` ${prediction.unit}`}
               </span>

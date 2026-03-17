@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo } from "react";
+import { useMemo, useState, useEffect, useRef } from "react";
 import {
   BarChart,
   Bar,
@@ -13,6 +13,7 @@ import {
   TooltipProps,
 } from "recharts";
 import { JobTask, calculateCrossoverYear, DEPLOYMENT_OVERHEAD } from "@/data/job-tasks";
+import { useInView } from "@/hooks/useInView";
 
 interface TaskBreakdownChartProps {
   tasks: JobTask[];
@@ -108,19 +109,57 @@ export default function TaskBreakdownChart({
       .sort((a, b) => b.adjustedShare - a.adjustedShare);
   }, [tasks, adjustedShares, humanWagePerHr]);
 
+  // --- Grow-in animation: bars expand from 0 to full width on mount ---
+  const { ref: viewRef, inView } = useInView<HTMLDivElement>(0.2);
+  const [animProgress, setAnimProgress] = useState(0);
+  const reducedMotion = useRef(false);
+
+  useEffect(() => {
+    reducedMotion.current =
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reducedMotion.current) setAnimProgress(1);
+  }, []);
+
+  useEffect(() => {
+    if (!inView || reducedMotion.current) return;
+    let start: number | null = null;
+    let raf: number;
+    const duration = 700; // ms
+    const animate = (ts: number) => {
+      if (!start) start = ts;
+      const t = Math.min((ts - start) / duration, 1);
+      // Ease-out cubic
+      const eased = 1 - Math.pow(1 - t, 3);
+      setAnimProgress(eased);
+      if (t < 1) raf = requestAnimationFrame(animate);
+    };
+    raf = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(raf);
+  }, [inView]);
+
+  const animatedData = useMemo(
+    () =>
+      chartData.map((d) => ({
+        ...d,
+        sharePercent: Math.round(d.sharePercent * animProgress),
+      })),
+    [chartData, animProgress]
+  );
+
   return (
-    <div>
+    <div ref={viewRef}>
       <div className="h-[320px]">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
-            data={chartData}
+            data={animatedData}
             layout="vertical"
             margin={{ top: 0, right: 20, left: 0, bottom: 0 }}
           >
             <CartesianGrid strokeDasharray="3 3" stroke="rgba(0,0,0,0.06)" horizontal={false} />
             <XAxis
               type="number"
-              domain={[0, "dataMax"]}
+              domain={[0, Math.max(...chartData.map(d => d.sharePercent), 1)]}
               tickFormatter={(v) => `${v}%`}
               tick={{ fontSize: 11, fill: "#6b7280" }}
               axisLine={false}
@@ -136,7 +175,7 @@ export default function TaskBreakdownChart({
             />
             <Tooltip content={<CustomTooltip />} cursor={{ fill: "rgba(0,0,0,0.02)" }} />
             <Bar dataKey="sharePercent" radius={[0, 4, 4, 0]} barSize={24}>
-              {chartData.map((entry) => (
+              {animatedData.map((entry) => (
                 <Cell key={entry.id} fill={entry.riskColor} fillOpacity={0.75} />
               ))}
             </Bar>

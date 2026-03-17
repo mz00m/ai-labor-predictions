@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useMemo } from "react";
+import { useState, useCallback, useMemo, useEffect, useRef } from "react";
 import { JOB_PROFILES, JobProfile, calculateJobExposure } from "@/data/job-tasks";
 import TaskBreakdownChart from "./TaskBreakdownChart";
 import TaskSliders from "./TaskSliders";
@@ -11,6 +11,7 @@ import ComputeBenchmarks from "./ComputeBenchmarks";
 import DurableSkillsSection from "./DurableSkillsSection";
 import IndustrySpeedSlider from "./IndustrySpeedSlider";
 import MethodologySection from "./MethodologySection";
+import ExposureParticles from "./ExposureParticles";
 import { INDUSTRY_ADOPTION_SPEED } from "@/data/industry-adoption-speed";
 import { useCountUp } from "@/hooks/useCountUp";
 
@@ -132,6 +133,18 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
   }, [selectedJob]);
 
   const exposureScore = useCountUp(exposureScoreRaw, 600);
+
+  // Particle burst trigger — fires on job selection
+  const [particleTrigger, setParticleTrigger] = useState(0);
+  const prevJobRef = useRef<string>("");
+  useEffect(() => {
+    if (selectedJobId && selectedJobId !== prevJobRef.current) {
+      // Small delay to let the count-up animation get close to final value
+      const timer = setTimeout(() => setParticleTrigger((n) => n + 1), 650);
+      prevJobRef.current = selectedJobId;
+      return () => clearTimeout(timer);
+    }
+  }, [selectedJobId]);
 
   const tabs: { id: Tab; label: string; question: string }[] = [
     { id: "breakdown", label: "Task Breakdown", question: "Where does your time go, and which tasks are getting cheaper to do with AI?" },
@@ -300,9 +313,10 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
                 {selectedJob.category} · ${selectedJob.medianWagePerHr}/hr median wage (BLS) · {selectedJob.tasks.length} tasks
               </p>
             </div>
-            <div className="exposure-score text-center px-5 py-3 rounded-xl bg-black/[0.02] border border-black/[0.06]">
+            <div className="exposure-score relative text-center px-5 py-3 rounded-xl bg-black/[0.02] border border-black/[0.06] overflow-hidden">
+              <ExposureParticles score={exposureScoreRaw} trigger={particleTrigger} />
               <p
-                className="text-[28px] font-bold tracking-tight"
+                className="text-[28px] font-bold tracking-tight relative z-10"
                 style={{
                   color:
                     exposureScoreRaw > 60
@@ -314,7 +328,7 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
               >
                 {exposureScore}
               </p>
-              <p className="text-[11px] text-[var(--muted)]">Economic exposure</p>
+              <p className="text-[11px] text-[var(--muted)] relative z-10">Economic exposure</p>
             </div>
           </div>
 
