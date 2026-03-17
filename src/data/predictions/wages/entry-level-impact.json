@@ -311,6 +311,13 @@
       ],
       "evidenceTier": 2,
       "label": "Anthropic: AI exposure concentrates in credentialed roles (17.4% vs 4.5% grad degrees)"
+    },
+    {
+      "date": "2026-01-07",
+      "direction": "down",
+      "sourceIds": ["imas-demand-collapse-ai-2026"],
+      "evidenceTier": 4,
+      "label": "Imas: Wage share collapse from automation could trigger demand-side contraction"
     }
   ],
   "sources": [
@@ -591,6 +598,16 @@
       "evidenceTier": 1,
       "datePublished": "2026-01-01",
       "excerpt": "GenAI modestly changes net wage inequality; entry barriers shift for new workers."
+    },
+    {
+      "id": "imas-demand-collapse-ai-2026",
+      "title": "Can advanced AI lead to negative economic growth?",
+      "url": "https://aleximas.substack.com/p/will-advanced-ai-lead-to-negative",
+      "publisher": "Ghosts of Electricity (Alex Imas, Substack)",
+      "evidenceTier": 4,
+      "datePublished": "2026-01-07",
+      "excerpt": "If broad automation shifts income from un-satiated high-spending (high MPC) workers to the satiated low-spending (low MPC) capital owners, this can trigger a Keynesian demand collapse that contracts the economy",
+      "dateAdded": "2026-03-17"
     }
   ]
 }

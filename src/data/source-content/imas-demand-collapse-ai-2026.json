@@ -1,0 +1,14 @@
+{
+  "id": "imas-demand-collapse-ai-2026",
+  "abstract": "Alex Imas (University of Chicago) examines whether advanced AI could lead to negative economic growth through demand collapse. Using a Keynesian demand-determined framework, he shows that if automation shifts income from high-MPC workers to low-MPC capital owners, aggregate demand can fall enough to shrink realized GDP despite higher potential output. He also reviews Benzell et al.'s 'Robots Are Us' model showing immiserating growth through capital decumulation. However, Imas concludes the conditions for negative growth are likely too extreme to hold in practice, though demand-side forces will moderate AI growth expectations.",
+  "keyFindings": [
+    "In the demand collapse model, GDP falls ~48% when labor share drops from 0.60 to 0.05, even with 30% price decline (theoretical result)",
+    "Benzell et al. simulations show wages falling 25% and welfare dropping 16.5% under full automation with low savings propensity (phi=0.2)",
+    "Negative growth requires near-total labor automation, no policy response, and institutional stasis -- conditions author deems unlikely to co-occur",
+    "Demand-side forces (MPC heterogeneity, satiated preferences) will likely moderate but not reverse AI-driven growth",
+    "Sovereign wealth funds and broad capital ownership proposed as policy tools to maintain demand without disincentivizing investment"
+  ],
+  "methodology": "Theoretical economic modeling using a Keynesian demand-determined framework with CES production function, heterogeneous marginal propensities to consume (workers MPC=0.90, owners MPC=0.20), and satiated preferences. Also reviews Benzell et al.'s overlapping generations (OLG) model with capital decumulation. Numerical simulations with calibrated parameters; no empirical data collected.",
+  "qualifiers": "Author notes he is not a macroeconomist and treats the essay as a 'living document.' The static model assumes savings do not factor into growth accounting. Conditions for negative growth are described as 'likely too extreme' and 'too unrealistic to hold in practice.' The essay examines consequences of labor share collapse, not whether such collapse will occur.",
+  "fetchedAt": "2026-03-17"
+}

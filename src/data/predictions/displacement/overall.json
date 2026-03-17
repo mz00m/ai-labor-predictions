@@ -950,6 +950,13 @@
       "sourceIds": ["lodefalk-age-gradient-hiring-2026"],
       "evidenceTier": 1,
       "label": "Lodefalk et al.: Sweden 22-25yr employment in high-AI occupations -5.5% by 2025H1 (employer DiD)"
+    },
+    {
+      "date": "2026-01-07",
+      "direction": "neutral",
+      "sourceIds": ["imas-demand-collapse-ai-2026"],
+      "evidenceTier": 4,
+      "label": "Imas: Demand-side forces moderate AI displacement impact, negative growth unlikely"
     }
   ],
   "sources": [
@@ -1728,6 +1735,16 @@
       "evidenceTier": 1,
       "datePublished": "2025-09-01",
       "excerpt": "In the absence of active countermeasures, transformative AI may lead to significantly more centralization of decision-making. Some types of information might defy codification, and some types of information processing might be better done locally.",
+      "dateAdded": "2026-03-17"
+    },
+    {
+      "id": "imas-demand-collapse-ai-2026",
+      "title": "Can advanced AI lead to negative economic growth?",
+      "url": "https://aleximas.substack.com/p/will-advanced-ai-lead-to-negative",
+      "publisher": "Ghosts of Electricity (Alex Imas, Substack)",
+      "evidenceTier": 4,
+      "datePublished": "2026-01-07",
+      "excerpt": "automation can depress demand and push AI-driven growth toward the lower end of current forecasts. [...] the conditions needed for growth to actually turn negative are likely too unrealistic to hold in practice",
       "dateAdded": "2026-03-17"
     }
   ]

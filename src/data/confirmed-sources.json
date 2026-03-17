@@ -1,9 +1,21 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-17",
-  "totalSources": 422,
-  "verifiedCount": 422,
+  "totalSources": 423,
+  "verifiedCount": 423,
   "sources": {
+    "imas-demand-collapse-ai-2026": {
+      "id": "imas-demand-collapse-ai-2026",
+      "title": "Can advanced AI lead to negative economic growth?",
+      "url": "https://aleximas.substack.com/p/will-advanced-ai-lead-to-negative",
+      "publisher": "Ghosts of Electricity (Alex Imas, Substack)",
+      "evidenceTier": 4,
+      "datePublished": "2026-01-07",
+      "excerpt": "automation can depress demand and push AI-driven growth toward the lower end of current forecasts. [...] the conditions needed for growth to actually turn negative are likely too unrealistic to hold in practice",
+      "usedIn": ["overall-us-displacement", "median-wage-impact", "entry-level-wage-impact"],
+      "verified": true,
+      "synthetic": false
+    },
     "lodefalk-age-gradient-hiring-2026": {
       "id": "lodefalk-age-gradient-hiring-2026",
       "title": "Same Storm, Different Boats: Generative AI and the Age Gradient in Hiring",
