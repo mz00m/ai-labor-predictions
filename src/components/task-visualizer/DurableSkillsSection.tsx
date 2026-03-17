@@ -277,10 +277,10 @@ export default function DurableSkillsSection({
         {relevantSkills.map((skill) => (
           <div
             key={skill.id}
-            className="rounded-xl border border-black/[0.06] p-4 hover:border-emerald-200 transition-colors"
+            className="skill-card rounded-xl border border-black/[0.06] p-4"
           >
             <div className="flex items-center gap-2 mb-2">
-              <div className="text-[#10B981]">
+              <div className="skill-icon text-[#10B981]">
                 <SkillIcon type={skill.icon} />
               </div>
               <h4 className="text-[13px] font-semibold text-[var(--foreground)]">

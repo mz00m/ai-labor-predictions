@@ -164,7 +164,7 @@ export default function WorkforceOverview() {
             <button
               key={tier}
               onClick={() => toggleTier(tier)}
-              className="rounded-xl border p-4 text-left cursor-pointer"
+              className="stat-card-toggle rounded-xl border p-4 text-left cursor-pointer"
               style={{
                 backgroundColor: isActive ? `${meta.color}08` : "transparent",
                 borderColor: isActive ? `${meta.color}40` : "rgba(0,0,0,0.06)",

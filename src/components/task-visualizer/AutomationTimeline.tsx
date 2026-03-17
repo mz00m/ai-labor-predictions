@@ -100,7 +100,7 @@ export default function AutomationTimeline({
           const isBeyond = crossover === null;
 
           return (
-            <div key={task.id} className="flex items-center gap-3 group relative">
+            <div key={task.id} className="timeline-bar flex items-center gap-3 group relative">
               <div className="w-[140px] shrink-0 text-right">
                 <span className="text-[11px] font-medium text-[var(--foreground)] truncate block">
                   {task.name}
