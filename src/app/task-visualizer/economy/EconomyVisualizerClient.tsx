@@ -10,7 +10,7 @@ import GenderImpact from "@/components/task-visualizer/economy/GenderImpact";
 import AdaptiveCapacity from "@/components/task-visualizer/economy/AdaptiveCapacity";
 import ShareSectionBar from "@/components/ShareSectionBar";
 
-type Section = "overview" | "gender" | "wave" | "explorer" | "strata" | "adaptability";
+type Section = "overview" | "gender" | "explorer" | "strata" | "adaptability";
 
 const SECTIONS: { id: Section; label: string; question: string; description: string }[] = [
   {
@@ -18,12 +18,6 @@ const SECTIONS: { id: Section; label: string; question: string; description: str
     label: "The Workforce",
     question: "The US workforce: 154M workers by occupation and income",
     description: "Each bar is an occupation group sized by number of workers. Color shows income tier. Click any bar to see a task-by-task automation breakdown for that job.",
-  },
-  {
-    id: "wave",
-    label: "The Automation Wave",
-    question: "Automation pressure is building fastest for higher earners",
-    description: "Each line tracks the share of tasks within an income tier where AI compute has become cheaper than human labor. Higher doesn't mean jobs disappear — it means the economic incentive to automate is growing. The gap between tiers shows where pressure concentrates first.",
   },
   {
     id: "explorer",
@@ -35,7 +29,7 @@ const SECTIONS: { id: Section; label: string; question: string; description: str
     id: "strata",
     label: "By Income",
     question: "Automation hits different income levels on different timelines",
-    description: "Each income tier is broken out with its top occupation groups, projected automation rates at 2028/2032/2036, and which task types are most exposed vs. most durable. Click any occupation row to explore its individual tasks.",
+    description: "The automation wave chart shows where pressure concentrates first. Each income tier below is broken out with its top occupation groups, projected automation rates at 2028/2032/2036, and which task types are most exposed vs. most durable. Click any occupation row to explore its individual tasks.",
   },
   {
     id: "adaptability",
@@ -115,9 +109,15 @@ export default function EconomyVisualizerClient() {
       {activeSection === "overview" && <WorkforceOverview />}
       {activeSection === "gender" && <GenderImpact />}
       {activeSection === "adaptability" && <AdaptiveCapacity />}
-      {activeSection === "wave" && <AutomationWaveChart />}
       {activeSection === "explorer" && <YearSliderExplorer />}
-      {activeSection === "strata" && <IncomeStrataImpact />}
+      {activeSection === "strata" && (
+        <>
+          <AutomationWaveChart />
+          <div className="mt-8">
+            <IncomeStrataImpact />
+          </div>
+        </>
+      )}
 
       {/* Social sharing */}
       {currentSection && (

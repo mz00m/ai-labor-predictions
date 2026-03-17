@@ -44,7 +44,7 @@ interface TierDetail {
 export default function IncomeStrataImpact() {
   const router = useRouter();
   const tierDetails: TierDetail[] = useMemo(() => {
-    return (["low", "middle", "high"] as const).map((tier) => {
+    return (["high", "middle", "low"] as const).map((tier) => {
       const groups = OCCUPATION_GROUPS.filter((g) => g.incomeTier === tier).map((g) => {
         // Find most vulnerable and most durable task categories
         const cats = Object.entries(g.taskComposition) as [TaskCategory, number][];
@@ -117,7 +117,7 @@ export default function IncomeStrataImpact() {
       {tierDetails.map((detail) => {
         const meta = INCOME_TIER_META[detail.tier];
         return (
-          <div key={detail.tier} className="stagger-enter rounded-xl border border-black/[0.06] overflow-hidden" style={{ animationDelay: `${["low","middle","high"].indexOf(detail.tier) * 0.12}s` }}>
+          <div key={detail.tier} className="stagger-enter rounded-xl border border-black/[0.06] overflow-hidden" style={{ animationDelay: `${["high","middle","low"].indexOf(detail.tier) * 0.12}s` }}>
             {/* Tier header */}
             <div
               className="tier-header-enter px-5 py-4 border-b border-black/[0.06]"
