@@ -1,12 +1,12 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 
 const PROJECT_START = new Date("2026-02-22T00:00:00Z");
 
 /* ------------------------------------------------------------------ */
-/*  Easter egg: "Source Zero" — triple-click "X days ago" to reveal    */
-/*  a hand-drawn sparkline of early commit milestones.                 */
+/*  Easter egg: "Source Zero" — click "X days ago" to reveal a         */
+/*  hand-drawn sparkline of early commit milestones.                   */
 /* ------------------------------------------------------------------ */
 
 // Hardcoded commit milestones (historical, won't change)
@@ -77,8 +77,6 @@ function HandDrawnSparkline() {
 export default function FooterStats() {
   const [commitCount, setCommitCount] = useState<number | null>(null);
   const [showTimeline, setShowTimeline] = useState(false);
-  const clickTimesRef = useRef<number[]>([]);
-
   const daysSinceStart = Math.floor(
     (Date.now() - PROJECT_START.getTime()) / (1000 * 60 * 60 * 24)
   );
@@ -93,20 +91,7 @@ export default function FooterStats() {
   }, []);
 
   const handleDaysClick = () => {
-    const now = Date.now();
-    clickTimesRef.current.push(now);
-    // Keep only last 3
-    if (clickTimesRef.current.length > 3) {
-      clickTimesRef.current = clickTimesRef.current.slice(-3);
-    }
-    // Check if 3 clicks within 500ms
-    if (clickTimesRef.current.length >= 3) {
-      const first = clickTimesRef.current[clickTimesRef.current.length - 3];
-      if (now - first < 500) {
-        setShowTimeline((prev) => !prev);
-        clickTimesRef.current = [];
-      }
-    }
+    setShowTimeline((prev) => !prev);
   };
 
   const reducedMotion =

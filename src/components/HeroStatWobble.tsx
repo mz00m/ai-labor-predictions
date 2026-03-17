@@ -103,7 +103,7 @@ export default function HeroStatWobble({
   }, [wobbling, displayValue, center]);
 
   const handleMouseEnter = () => {
-    dwellTimer.current = setTimeout(startOscillation, 2000);
+    dwellTimer.current = setTimeout(startOscillation, 800);
   };
 
   const handleMouseLeave = () => {
