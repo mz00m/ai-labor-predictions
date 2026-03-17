@@ -106,9 +106,9 @@ export default function GPTTimeline() {
                 >
                   {/* Node */}
                   <div
-                    className={`w-7 h-7 rounded-full border-2 flex items-center justify-center text-[11px] font-bold transition-all duration-200 ${
+                    className={`timeline-node w-7 h-7 rounded-full border-2 flex items-center justify-center text-[11px] font-bold ${
                       isActive
-                        ? "bg-[var(--accent)] border-[var(--accent)] text-white scale-110"
+                        ? "bg-[var(--accent)] border-[var(--accent)] text-white scale-110 shadow-[0_0_0_4px_rgba(92,97,246,0.15)]"
                         : "bg-white border-black/[0.15] text-[var(--muted)] group-hover:border-[var(--accent)] group-hover:text-[var(--accent)]"
                     }`}
                   >
@@ -172,9 +172,9 @@ export default function GPTTimeline() {
                 {/* Vertical track */}
                 <div className="flex flex-col items-center">
                   <div
-                    className={`w-7 h-7 rounded-full border-2 flex items-center justify-center text-[11px] font-bold shrink-0 ${
+                    className={`timeline-node w-7 h-7 rounded-full border-2 flex items-center justify-center text-[11px] font-bold shrink-0 ${
                       isActive
-                        ? "bg-[var(--accent)] border-[var(--accent)] text-white"
+                        ? "bg-[var(--accent)] border-[var(--accent)] text-white shadow-[0_0_0_4px_rgba(92,97,246,0.15)]"
                         : "bg-white border-black/[0.15] text-[var(--muted)]"
                     }`}
                   >
@@ -218,7 +218,7 @@ export default function GPTTimeline() {
 
       {/* Active phase detail card */}
       {activePhase !== null && (
-        <div className="border border-black/[0.06] rounded-lg p-5 bg-[var(--accent-light)]/30">
+        <div className="revolution-content border border-black/[0.06] rounded-lg p-5 bg-[var(--accent-light)]/30">
           <div className="flex items-baseline gap-2 mb-2 flex-wrap">
             <span className="text-[12px] font-bold text-[var(--accent)] uppercase tracking-wider">
               Phase {PHASES[activePhase].phase}

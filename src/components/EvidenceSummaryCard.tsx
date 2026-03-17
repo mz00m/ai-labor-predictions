@@ -51,7 +51,7 @@ export default function EvidenceSummaryCard() {
         {EVIDENCE_STATS.map((item, i) => (
           <div
             key={i}
-            className="border border-black/[0.06] rounded-lg px-5 py-4 bg-white"
+            className="evidence-card border border-black/[0.06] rounded-lg px-5 py-4 bg-white"
           >
             <p className="stat-number text-[22px] font-black text-[var(--foreground)] leading-tight mb-1.5">
               {item.stat}
@@ -63,7 +63,7 @@ export default function EvidenceSummaryCard() {
               href={item.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[12px] font-medium text-[var(--accent)] hover:underline"
+              className="text-[12px] font-medium text-[var(--accent)] link-draw-underline"
             >
               {item.source} &rarr;
             </a>

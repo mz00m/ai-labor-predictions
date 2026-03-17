@@ -189,7 +189,7 @@ export default function PredictionSummaryCard({
   return (
     <Link href={`/predictions/${prediction.slug}`} className="group block">
       <div
-        className="card-hover relative pb-8 border-b border-black/[0.06] overflow-hidden rounded-lg pl-3 border-l-[2px]"
+        className="card-hover summary-card-border relative pb-8 border-b border-black/[0.06] overflow-hidden rounded-lg pl-3 border-l-[2px]"
         style={{ borderLeftColor: tierBorderColor }}
       >
         {/* Sparkline watermark */}
@@ -238,7 +238,7 @@ export default function PredictionSummaryCard({
 
           {/* Big number + source range + trend */}
           <div className="flex items-baseline gap-3 mb-3">
-            <span className="stat-number text-[44px] font-black text-[var(--foreground)] leading-none">
+            <span className="stat-number stat-hover text-[44px] font-black text-[var(--foreground)] leading-none">
               {agg.mean > 0 && prediction.category === "wages" ? "+" : ""}
               {Number.isInteger(agg.mean) ? agg.mean : agg.mean.toFixed(1)}
               <span className="text-[18px] font-normal text-[var(--muted)] opacity-50 ml-0.5">
@@ -299,11 +299,17 @@ export default function PredictionSummaryCard({
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                 </svg>
               </button>
-              {showNote && (
+              <div
+                className="research-note-expand"
+                style={{
+                  maxHeight: showNote ? 200 : 0,
+                  opacity: showNote ? 1 : 0,
+                }}
+              >
                 <p className="mt-2 text-[12px] text-[var(--muted)] leading-relaxed border-l-2 border-[var(--accent)]/30 pl-3">
                   {annotation.note}
                 </p>
-              )}
+              </div>
             </div>
           )}
 

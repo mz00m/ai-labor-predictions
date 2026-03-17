@@ -62,14 +62,14 @@ export default function ConceptExplainers() {
           <Link
             key={c.href}
             href={c.href}
-            className={`group card-hover block border-l-[3px] ${c.accent} rounded-r-lg px-5 py-4 no-underline`}
+            className={`group concept-card block border-l-[3px] ${c.accent} rounded-r-lg px-5 py-4 no-underline`}
           >
             <span className="text-[10px] font-bold uppercase tracking-widest text-[var(--muted)] opacity-60">
               {c.tag}
             </span>
             <h4 className="text-[15px] font-bold text-[var(--foreground)] mt-1 mb-2 group-hover:text-[var(--accent)] transition-colors">
               {c.title}
-              <span className="inline-block ml-1.5 text-[12px] opacity-0 group-hover:opacity-60 transition-opacity duration-150">
+              <span className="concept-arrow inline-block ml-1.5 text-[12px] opacity-0">
                 &rarr;
               </span>
             </h4>

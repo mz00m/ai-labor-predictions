@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 /**
  * Interactive J-Curve SVG visualization.
@@ -38,6 +38,19 @@ const PHASES = [
 
 export default function JCurveChart() {
   const [activePhase, setActivePhase] = useState<string | null>(null);
+  const svgRef = useRef<SVGSVGElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = svgRef.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([e]) => { if (e.isIntersecting) { setVisible(true); obs.disconnect(); } },
+      { threshold: 0.2 }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
 
   // SVG dimensions
   const W = 720;
@@ -129,6 +142,7 @@ export default function JCurveChart() {
   return (
     <div className="space-y-3">
       <svg
+        ref={svgRef}
         viewBox={`0 0 ${W} ${H}`}
         className="w-full"
         style={{ maxWidth: 720 }}
@@ -313,7 +327,7 @@ export default function JCurveChart() {
           fill="none"
           stroke="var(--accent)"
           strokeWidth="2"
-          strokeDasharray="6,4"
+          className={`jcurve-line-dashed ${visible ? "visible" : ""}`}
           opacity="0.5"
         />
 
@@ -324,6 +338,7 @@ export default function JCurveChart() {
           stroke="var(--foreground)"
           strokeWidth="2.5"
           strokeLinecap="round"
+          className={`jcurve-line ${visible ? "visible" : ""}`}
         />
 
         {/* Gap fill between curves */}
