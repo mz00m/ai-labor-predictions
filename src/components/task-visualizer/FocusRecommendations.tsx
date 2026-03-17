@@ -2,6 +2,7 @@
 
 import { useMemo } from "react";
 import { JobTask, calculateAdoptionYear } from "@/data/job-tasks";
+import { useCountUp } from "@/hooks/useCountUp";
 
 interface FocusRecommendationsProps {
   tasks: JobTask[];
@@ -72,13 +73,15 @@ export default function FocusRecommendations({
     atRisk.reduce((s: number, a: AnalyzedTask) => s + a.share, 0) * 100
   );
 
+  const animatedPercent = useCountUp(automatedSharePercent, 800);
+
   return (
     <div className="space-y-5">
       {/* Summary stat */}
       <div className="exposure-score rounded-xl bg-black/[0.02] border border-black/[0.06] p-4">
         <div className="flex items-baseline gap-2">
-          <span className="text-[28px] font-bold text-[#EF4444] tracking-tight">
-            {automatedSharePercent}%
+          <span className="text-[28px] font-bold text-[#EF4444] tracking-tight tabular-nums">
+            {animatedPercent}%
           </span>
           <span className="text-[13px] text-[var(--muted)]">
             of your time is on tasks facing near-term economic pressure from AI

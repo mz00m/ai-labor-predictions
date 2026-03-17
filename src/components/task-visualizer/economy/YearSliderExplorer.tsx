@@ -130,17 +130,17 @@ export default function YearSliderExplorer() {
 
       {/* Summary stats */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
-        <div className="rounded-xl bg-black/[0.02] border border-black/[0.06] p-4">
-          <p className="text-[28px] font-bold text-[var(--foreground)] tracking-tight">
+        <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-black/[0.06] p-4">
+          <p className="text-[28px] font-bold text-[var(--foreground)] tracking-tight tabular-nums">
             {summaryStats.avgPct}%
           </p>
           <p className="text-[11px] text-[var(--muted)]">Avg task automation across economy</p>
         </div>
-        {summaryStats.tiers.map(({ tier, pct }) => {
+        {summaryStats.tiers.map(({ tier, pct }, i) => {
           const meta = INCOME_TIER_META[tier];
           return (
-            <div key={tier} className="rounded-xl bg-black/[0.02] border border-black/[0.06] p-4">
-              <p className="text-[28px] font-bold tracking-tight" style={{ color: meta.color }}>
+            <div key={tier} className="stat-card-enter rounded-xl bg-black/[0.02] border border-black/[0.06] p-4" style={{ animationDelay: `${(i + 1) * 0.08}s` }}>
+              <p className="text-[28px] font-bold tracking-tight tabular-nums" style={{ color: meta.color }}>
                 {pct}%
               </p>
               <p className="text-[11px] text-[var(--muted)]">{meta.label} task automation</p>

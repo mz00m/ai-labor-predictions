@@ -12,6 +12,7 @@ import DurableSkillsSection from "./DurableSkillsSection";
 import IndustrySpeedSlider from "./IndustrySpeedSlider";
 import MethodologySection from "./MethodologySection";
 import { INDUSTRY_ADOPTION_SPEED } from "@/data/industry-adoption-speed";
+import { useCountUp } from "@/hooks/useCountUp";
 
 const DEFAULT_CATEGORY_STYLE = {
   bg: "rgba(92,97,246,0.03)",
@@ -125,10 +126,12 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
     setAdjustedShares(shares);
   }, [selectedJob]);
 
-  const exposureScore = useMemo(() => {
+  const exposureScoreRaw = useMemo(() => {
     if (!selectedJob) return 0;
     return calculateJobExposure(selectedJob);
   }, [selectedJob]);
+
+  const exposureScore = useCountUp(exposureScoreRaw, 600);
 
   const tabs: { id: Tab; label: string; question: string }[] = [
     { id: "breakdown", label: "Task Breakdown", question: "Where does your time go, and which tasks are getting cheaper to do with AI?" },
@@ -302,9 +305,9 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
                 className="text-[28px] font-bold tracking-tight"
                 style={{
                   color:
-                    exposureScore > 60
+                    exposureScoreRaw > 60
                       ? "#EF4444"
-                      : exposureScore > 35
+                      : exposureScoreRaw > 35
                         ? "#6366F1"
                         : "#10B981",
                 }}

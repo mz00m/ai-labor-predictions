@@ -90,7 +90,7 @@ export default function AutomationTimeline({
           ))}
         </div>
 
-        {timelineData.map(({ task, share, crossover, adoption }) => {
+        {timelineData.map(({ task, share, crossover, adoption }, idx) => {
           const color = getRiskColor(crossover);
           const crossoverYear = crossover ?? maxYear;
           const adoptionYear = adoption ?? maxYear;
@@ -100,7 +100,7 @@ export default function AutomationTimeline({
           const isBeyond = crossover === null;
 
           return (
-            <div key={task.id} className="timeline-bar flex items-center gap-3 group relative">
+            <div key={task.id} className="timeline-bar flex items-center gap-3 group relative" style={{ animationDelay: `${idx * 0.08}s` }}>
               <div className="w-[140px] shrink-0 text-right">
                 <span className="text-[11px] font-medium text-[var(--foreground)] truncate block">
                   {task.name}
@@ -125,11 +125,12 @@ export default function AutomationTimeline({
                 {/* Striped bar: cost parity → probable adoption (institutional drag zone) */}
                 {!isBeyond && adoptionPct > crossoverPct && (
                   <div
-                    className="absolute top-1 h-4"
+                    className="march-stripe absolute top-1 h-4"
                     style={{
                       left: `${crossoverPct}%`,
                       width: `${Math.min(adoptionPct - crossoverPct, 100 - crossoverPct)}%`,
                       background: `repeating-linear-gradient(90deg, ${color}40 0, ${color}40 3px, transparent 3px, transparent 6px)`,
+                      backgroundSize: '12px 100%',
                       borderTopRightRadius: "9999px",
                       borderBottomRightRadius: "9999px",
                     }}
