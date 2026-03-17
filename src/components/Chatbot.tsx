@@ -26,44 +26,49 @@ function CloseIcon() {
   );
 }
 
-/** Mini robot face for the chat header */
+/** Mini robot face for the chat header — silver body with purple eyes */
 function MiniRobot({ speaking }: { speaking?: boolean }) {
   return (
     <svg
       width="28"
       height="28"
-      viewBox="0 0 52 48"
+      viewBox="0 0 48 40"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
       className="shrink-0"
     >
       {/* Antenna */}
-      <line x1="26" y1="0" x2="26" y2="8" stroke="white" strokeWidth="1.5" strokeLinecap="round" opacity="0.6" />
-      <circle cx="26" cy="0" r="2" fill="#00FF88">
+      <rect x="21" y="0" width="4" height="6" rx="2" fill="white" opacity="0.4" />
+      <circle cx="23" cy="0" r="2.5" fill="#F66B5C">
         {speaking && (
           <animate attributeName="opacity" values="1;0.3;1" dur="0.8s" repeatCount="indefinite" />
         )}
       </circle>
-      {/* Head */}
-      <rect x="6" y="8" width="40" height="30" rx="7" fill="white" opacity="0.15" />
-      <rect x="10" y="12" width="32" height="22" rx="4" fill="white" opacity="0.08" />
-      {/* Eyes */}
-      <rect x="16" y="18" width="5" height="4" rx="1.5" fill="#00FF88">
+      {/* Head — silver appearance on the purple header */}
+      <rect x="3" y="6" width="42" height="26" rx="6" fill="white" opacity="0.2" />
+      {/* Chrome highlight */}
+      <rect x="5" y="6" width="38" height="5" rx="2.5" fill="white" opacity="0.12" />
+      {/* Face screen */}
+      <rect x="7" y="10" width="34" height="18" rx="4" fill="white" opacity="0.08" />
+      {/* Eyes — match the purple accent */}
+      <rect x="13" y="16" width="6" height="5" rx="2" fill="white">
         {speaking && (
-          <animate attributeName="height" values="4;2;4" dur="1.5s" repeatCount="indefinite" />
+          <animate attributeName="height" values="5;2;5" dur="1.5s" repeatCount="indefinite" />
         )}
       </rect>
-      <rect x="31" y="18" width="5" height="4" rx="1.5" fill="#00FF88">
+      <rect x="29" y="16" width="6" height="5" rx="2" fill="white">
         {speaking && (
-          <animate attributeName="height" values="4;2;4" dur="1.5s" repeatCount="indefinite" />
+          <animate attributeName="height" values="5;2;5" dur="1.5s" repeatCount="indefinite" />
         )}
       </rect>
       {/* Mouth */}
-      <rect x="22" y="27" width="8" height="1.5" rx="0.75" fill="#00FF88" opacity="0.5" />
+      <rect x="19" y="25" width="10" height="1.5" rx="0.75" fill="white" opacity="0.4" />
       {/* Ear bolts */}
-      <circle cx="6" cy="23" r="2" fill="white" opacity="0.3" />
-      <circle cx="46" cy="23" r="2" fill="white" opacity="0.3" />
+      <circle cx="3" cy="19" r="2.5" fill="white" opacity="0.2" />
+      <circle cx="3" cy="19" r="1" fill="white" opacity="0.35" />
+      <circle cx="45" cy="19" r="2.5" fill="white" opacity="0.2" />
+      <circle cx="45" cy="19" r="1" fill="white" opacity="0.35" />
     </svg>
   );
 }
