@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "Same Storm, Different Boats: Generative AI and the Age Gradient in Hiring",
+      "author": "Magnus Lodefalk, Lydia Löthman, Michael Koch, Erik Engberg",
+      "publisher": "RATIO Institute / Örebro University",
+      "date": "2026-03-16",
+      "url": "https://cms.ratio.se/app/uploads/2026/03/lodefalk_march16_paper_v2-kombinerades.pdf",
+      "takeaway": "Swedish population register data (4.6M job ads, full-population employer-employee records): 22-25yr employment in high-AI occupations fell 5.5% by 2025H1 vs low-exposure occupations within same employers. 50+ workers rose 1.3%. Broad posting decline driven by Riksbank rate hike, not AI. Effect ~2x larger for young women. Replicates US 'canaries' finding (Brynjolfsson et al.) in Nordic register data; contrasts with Finnish null.",
+      "weekFeatured": "2026-03-17",
+      "tier": 1
+    },
+    {
       "title": "See which jobs are most threatened by AI, and who may be able to adapt",
       "author": "Kevin Schaul, Shira Ovide",
       "publisher": "Washington Post",

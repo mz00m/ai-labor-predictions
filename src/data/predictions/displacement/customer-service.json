@@ -272,6 +272,13 @@
       "sourceIds": ["fed-atl-duke-cfo-ai-productivity-2026"],
       "evidenceTier": 1,
       "label": "Fed/Duke: Office/admin support highest negative AI exposure index (NEI 2.0)"
+    },
+    {
+      "date": "2026-03-16",
+      "direction": "down",
+      "sourceIds": ["lodefalk-age-gradient-hiring-2026"],
+      "evidenceTier": 1,
+      "label": "Lodefalk et al.: Sweden customer service shows same age-gradient AI displacement pattern"
     }
   ],
   "sources": [
@@ -520,6 +527,16 @@
       "datePublished": "2026-03-13",
       "excerpt": "Office and administrative support roles exhibit the most negative AI exposure (NEI 2.025), consistent with automation of routine clerical activities such as data entry. Routine clerical employment share expected to decline by 0.76pp in 2026 and 2.19pp by 2028.",
       "dateAdded": "2026-03-16"
+    },
+    {
+      "id": "lodefalk-age-gradient-hiring-2026",
+      "title": "Same Storm, Different Boats: Generative AI and the Age Gradient in Hiring",
+      "url": "https://cms.ratio.se/app/uploads/2026/03/lodefalk_march16_paper_v2-kombinerades.pdf",
+      "publisher": "RATIO Institute / Örebro University (Lodefalk, Löthman, Koch, Engberg)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-16",
+      "excerpt": "Customer service agents (SSYK 4222) display the same age gradient as the economy-wide canaries effect, lying between the augmentation and automation poles. All four spotlight occupations show young workers declining, older workers stable or rising.",
+      "dateAdded": "2026-03-17"
     }
   ]
 }

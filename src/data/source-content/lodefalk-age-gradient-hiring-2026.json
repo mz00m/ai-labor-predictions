@@ -1,0 +1,14 @@
+{
+  "id": "lodefalk-age-gradient-hiring-2026",
+  "abstract": "Using 4.6 million job advertisements and full-population employer-employee register data from Sweden, this study separates AI effects from monetary policy tightening using a natural timing test: the Riksbank hiked rates in April 2022, seven months before ChatGPT launched. The broad posting decline aligns with monetary tightening, not AI. However, an employer-level difference-in-differences design reveals an accelerating age gradient: employment of 22-25-year-olds in high-AI-exposure occupations fell 5.5% by early 2025 relative to less exposed occupations within the same employers, while employment of workers over 50 rose 1.3%.",
+  "keyFindings": [
+    "Employment of 22-25-year-olds in top-quartile AI-exposed occupations fell 5.5% by 2025H1 relative to less exposed occupations within the same employers (employer-level event study with employer x quartile and employer x month fixed effects)",
+    "Employment of workers over 50 in high-AI occupations rose 1.3% over the same period, creating a monotonic age gradient",
+    "The 26-30 age group declined 4.9% by 2025H1, suggesting AI displacement is diffusing up the age distribution",
+    "The broad job posting decline in Sweden aligns with the Riksbank's rate hike (April 2022) rather than ChatGPT (November 2022); posting DiD coefficient for AI exposure is statistically insignificant",
+    "The effect is approximately twice as large for young women as for young men (gamma_2 = -0.016 vs -0.007); one-third of the gender gap is explained by occupational composition"
+  ],
+  "methodology": "Employer-level difference-in-differences using monthly population-register (AGI) employment data from Statistics Sweden, covering the full population of Swedish employees. AI exposure measured via the DAIOE index (Dynamic AI Occupational Exposure) at SSYK 4-digit level. Employer x quartile and employer x month fixed effects absorb all time-varying employer-level shocks. Sample: 510,213 employers, 75M non-zero panel cells, 78 months (2019-2025). Job posting analysis uses 4.6M ads from Platsbanken (2020-2026).",
+  "qualifiers": "Pre-trend tests reject for all age groups, though for core 22-25 and 26-30 groups the pre-trend direction is opposite to post-treatment effect. AI adoption is not directly observed. Swedish employment protection (LAS) creates seniority-based retrenchment incentives that could partly account for the age gradient. Population-level employment remains broadly stable, pointing to reallocation rather than destruction. Contrasts with Finnish null (Kauhanen and Rouvinen, 2026) which persists under the same employer-level design.",
+  "fetchedAt": "2026-03-17"
+}

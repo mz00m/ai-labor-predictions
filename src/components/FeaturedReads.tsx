@@ -10,6 +10,15 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Lodefalk et al. (RATIO/Örebro)",
+    title: "Same Storm, Different Boats: GenAI and the Age Gradient in Hiring",
+    summary:
+      "Swedish population register data: 22-25yr employment in high-AI occupations fell 5.5% by 2025H1 (employer DiD). Posting decline driven by monetary policy, not AI.",
+    date: "Mar 16",
+    url: "https://cms.ratio.se/app/uploads/2026/03/lodefalk_march16_paper_v2-kombinerades.pdf",
+    accent: "border-l-amber-500",
+  },
+  {
     author: "Baslandze et al. (Fed Atlanta/Duke)",
     title: "AI, Productivity, and the Workforce: Evidence from Corporate Executives",
     summary:
@@ -44,15 +53,6 @@ const articles: Article[] = [
     date: "Mar 11",
     url: "https://x.com/gsivulka/status/2031797989908627849",
     accent: "border-l-cyan-500",
-  },
-  {
-    author: "Oks",
-    title: "Why the ATM Didn\u2019t Kill Bank Teller Jobs, but the iPhone Did",
-    summary:
-      "Task automation rarely displaces workers; paradigm replacement does. Implications for AI displacement timelines.",
-    date: "Mar 10",
-    url: "https://davidoks.blog/p/why-the-atm-didnt-kill-bank-teller",
-    accent: "border-l-blue-500",
   },
 ];
 
