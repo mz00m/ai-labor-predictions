@@ -7,7 +7,7 @@
   "unit": "% of jobs exposed",
   "currentValue": 46.2,
   "timeHorizon": "Current estimate",
-  "disclaimer": "Sources use fundamentally different definitions of 'exposure' \u2014 from individual task overlap to full occupation-level capability mapping. The 23\u201393% range reflects these definitional differences, not measurement uncertainty. The weighted average is a mathematical summary, not a consensus estimate.",
+  "disclaimer": "Exposure measures which tasks could be affected by AI, not which jobs will be lost. Sources use fundamentally different definitions of 'exposure' \u2014 from individual task overlap to full occupation-level capability mapping. The 23\u201393% range reflects these definitional differences, not measurement uncertainty. The weighted average is a mathematical summary, not a consensus estimate. Explore task-level detail in the [Task Visualizer](/task-visualizer).",
   "history": [
     {
       "date": "2023-03-26",
