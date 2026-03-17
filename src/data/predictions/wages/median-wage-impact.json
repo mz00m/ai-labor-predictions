@@ -375,6 +375,13 @@
       ],
       "evidenceTier": 3,
       "label": "Furman (BLS): productivity 2.2% above CBO forecast; 2.8% annual growth"
+    },
+    {
+      "date": "2026-03-17",
+      "direction": "down",
+      "sourceIds": ["yale-restrepo-ai-automation-future-work-2026"],
+      "evidenceTier": 3,
+      "label": "Yale (Restrepo): Automation targets above-median wage tasks, amplifying losses"
     }
   ],
   "sources": [
@@ -724,6 +731,16 @@
       "evidenceTier": 1,
       "datePublished": "2025-02-01",
       "excerpt": "Tenured workers cumulatively lose about 3,800 Euros in wage and salary earnings over five years on average (about 9% of one year's income). We find little change in wage rates."
+    },
+    {
+      "id": "yale-restrepo-ai-automation-future-work-2026",
+      "title": "Pascual Restrepo on AI, Automation, and the Future of Work",
+      "url": "https://economics.yale.edu/news/260317/pascual-restrepo-ai-automation-and-future-work",
+      "publisher": "Yale Department of Economics (Restrepo, interviewed by Strathmann)",
+      "evidenceTier": 3,
+      "datePublished": "2026-03-17",
+      "excerpt": "In research forthcoming in the Quarterly Journal of Economics, they examine how automation often targets tasks that pay workers wages above their outside options. When those tasks are automated, those wage 'rents' disappear, amplifying wage losses and contributing to rising inequality.",
+      "dateAdded": "2026-03-17"
     }
   ]
 }

@@ -452,6 +452,13 @@
       "sourceIds": ["fed-atl-duke-cfo-ai-productivity-2026"],
       "evidenceTier": 1,
       "label": "Fed/Duke CFO Survey: 58.5% invested in AI (2025); 85.4% expect to in 2026"
+    },
+    {
+      "date": "2026-03-17",
+      "direction": "neutral",
+      "sourceIds": ["yale-restrepo-ai-automation-future-work-2026"],
+      "evidenceTier": 3,
+      "label": "Yale (Restrepo): AI firm adoption still relatively low; firms experimenting"
     }
   ],
   "sources": [
@@ -884,6 +891,16 @@
       "datePublished": "2026-03-13",
       "excerpt": "58.5% of ~750 surveyed firms invested in AI in 2025; 85.4% expect to invest in 2026. Many smaller firms only beginning to invest in 2026. Note: CFO Survey uses broader 'invested in AI' definition vs Census BTOS 'using AI in production', explaining higher rate.",
       "dateAdded": "2026-03-16"
+    },
+    {
+      "id": "yale-restrepo-ai-automation-future-work-2026",
+      "title": "Pascual Restrepo on AI, Automation, and the Future of Work",
+      "url": "https://economics.yale.edu/news/260317/pascual-restrepo-ai-automation-and-future-work",
+      "publisher": "Yale Department of Economics (Restrepo, interviewed by Strathmann)",
+      "evidenceTier": 3,
+      "datePublished": "2026-03-17",
+      "excerpt": "When you look at the data, adoption of AI by firms is still relatively low. Right now I would describe the labor market as more of a wait-and-see environment.",
+      "dateAdded": "2026-03-17"
     }
   ]
 }
