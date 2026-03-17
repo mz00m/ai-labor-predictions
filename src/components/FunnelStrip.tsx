@@ -280,7 +280,7 @@ export default function FunnelStrip() {
                           width: visible ? `${barWidth}%` : "0%",
                           minWidth: visible && bar.value === 0 ? 3 : undefined,
                           backgroundColor: isHovered ? bar.barHover : bar.barColor,
-                          transition: `width 0.6s cubic-bezier(0.16, 1, 0.3, 1) ${barDelay}s, background-color 0.1s ease`,
+                          transition: `width 1.2s cubic-bezier(0.16, 1, 0.3, 1) ${barDelay}s, background-color 0.1s ease`,
                         }}
                       />
 
@@ -328,7 +328,7 @@ export default function FunnelStrip() {
                         className="absolute top-0 bottom-0 flex items-center pl-2 z-10"
                         style={{
                           left: visible ? `${barWidth}%` : "0%",
-                          transition: `left 0.6s cubic-bezier(0.16, 1, 0.3, 1) ${barDelay}s`,
+                          transition: `left 1.2s cubic-bezier(0.16, 1, 0.3, 1) ${barDelay}s`,
                         }}
                       >
                         <span
@@ -339,7 +339,7 @@ export default function FunnelStrip() {
                           }`}
                           style={{
                             opacity: visible ? 1 : 0,
-                            transition: `opacity 0.3s ease ${barDelay + 0.3}s, color 0.1s ease`,
+                            transition: `opacity 0.3s ease ${barDelay + 0.6}s, color 0.1s ease`,
                           }}
                         >
                           {bar.value}%
