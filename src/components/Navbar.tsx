@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState, useEffect, useRef, useCallback } from "react";
 import { usePathname } from "next/navigation";
 import SearchCombobox from "./SearchCombobox";
-import { ChatTrigger } from "./Chatbot";
+import { ChatTrigger } from "./ChatbotBuddy";
 
 interface NavItem {
   href: string;

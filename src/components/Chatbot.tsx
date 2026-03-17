@@ -26,6 +26,48 @@ function CloseIcon() {
   );
 }
 
+/** Mini robot face for the chat header */
+function MiniRobot({ speaking }: { speaking?: boolean }) {
+  return (
+    <svg
+      width="28"
+      height="28"
+      viewBox="0 0 52 48"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+      className="shrink-0"
+    >
+      {/* Antenna */}
+      <line x1="26" y1="0" x2="26" y2="8" stroke="white" strokeWidth="1.5" strokeLinecap="round" opacity="0.6" />
+      <circle cx="26" cy="0" r="2" fill="#00FF88">
+        {speaking && (
+          <animate attributeName="opacity" values="1;0.3;1" dur="0.8s" repeatCount="indefinite" />
+        )}
+      </circle>
+      {/* Head */}
+      <rect x="6" y="8" width="40" height="30" rx="7" fill="white" opacity="0.15" />
+      <rect x="10" y="12" width="32" height="22" rx="4" fill="white" opacity="0.08" />
+      {/* Eyes */}
+      <rect x="16" y="18" width="5" height="4" rx="1.5" fill="#00FF88">
+        {speaking && (
+          <animate attributeName="height" values="4;2;4" dur="1.5s" repeatCount="indefinite" />
+        )}
+      </rect>
+      <rect x="31" y="18" width="5" height="4" rx="1.5" fill="#00FF88">
+        {speaking && (
+          <animate attributeName="height" values="4;2;4" dur="1.5s" repeatCount="indefinite" />
+        )}
+      </rect>
+      {/* Mouth */}
+      <rect x="22" y="27" width="8" height="1.5" rx="0.75" fill="#00FF88" opacity="0.5" />
+      {/* Ear bolts */}
+      <circle cx="6" cy="23" r="2" fill="white" opacity="0.3" />
+      <circle cx="46" cy="23" r="2" fill="white" opacity="0.3" />
+    </svg>
+  );
+}
+
 function SendIcon() {
   return (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -113,8 +155,17 @@ export function ChatTrigger({ onClick }: { onClick: () => void }) {
       onClick={onClick}
       className="flex items-center gap-1.5 text-[12px] font-semibold text-white bg-[var(--accent)] hover:bg-[#4b50e5] px-3 py-1.5 rounded-md transition-colors"
     >
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+      <svg
+        width="14"
+        height="14"
+        viewBox="0 0 52 48"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect x="6" y="8" width="40" height="30" rx="7" fill="currentColor" opacity="0.3" />
+        <rect x="16" y="18" width="5" height="4" rx="1.5" fill="currentColor" />
+        <rect x="31" y="18" width="5" height="4" rx="1.5" fill="currentColor" />
+        <rect x="22" y="27" width="8" height="1.5" rx="0.75" fill="currentColor" opacity="0.6" />
       </svg>
       Ask
     </button>
@@ -158,6 +209,7 @@ export default function Chatbot({ sourceCount }: ChatbotProps) {
       if (e.key === "Escape" && open) {
         setOpen(false);
         if (abortRef.current) abortRef.current.abort();
+        window.dispatchEvent(new Event("close-chatbot"));
       }
     }
     document.addEventListener("keydown", handleKey);
@@ -329,6 +381,12 @@ export default function Chatbot({ sourceCount }: ChatbotProps) {
     }
   };
 
+  const closeChat = useCallback(() => {
+    setOpen(false);
+    if (abortRef.current) abortRef.current.abort();
+    window.dispatchEvent(new Event("close-chatbot"));
+  }, []);
+
   if (!open) return null;
 
   return (
@@ -336,10 +394,7 @@ export default function Chatbot({ sourceCount }: ChatbotProps) {
       {/* Backdrop */}
       <div
         className="fixed inset-0 z-[60] bg-black/[0.15] backdrop-blur-[2px]"
-        onClick={() => {
-          setOpen(false);
-          if (abortRef.current) abortRef.current.abort();
-        }}
+        onClick={closeChat}
       />
 
       {/* Chat panel — anchored top-right, below navbar */}
@@ -349,19 +404,19 @@ export default function Chatbot({ sourceCount }: ChatbotProps) {
       >
         {/* Header */}
         <div className="flex items-center justify-between px-4 py-3 border-b border-black/[0.06] bg-[var(--accent)] text-white shrink-0">
-          <div>
-            <h3 className="text-[14px] font-semibold">
-              Ask the data
-            </h3>
-            <p className="text-[11px] text-white/70">
-              {sourceCount ? `${sourceCount}+` : "300+"} sources across 17 predictions
-            </p>
+          <div className="flex items-center gap-2.5">
+            <MiniRobot speaking={streaming} />
+            <div>
+              <h3 className="text-[14px] font-semibold">
+                Ask the data
+              </h3>
+              <p className="text-[11px] text-white/70">
+                {sourceCount ? `${sourceCount}+` : "300+"} sources across 17 predictions
+              </p>
+            </div>
           </div>
           <button
-            onClick={() => {
-              setOpen(false);
-              if (abortRef.current) abortRef.current.abort();
-            }}
+            onClick={closeChat}
             className="p-1 rounded-md hover:bg-white/[0.15] text-white/80 hover:text-white"
             aria-label="Close chat"
           >
