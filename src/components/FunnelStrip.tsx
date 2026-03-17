@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 
 const stripData = [
@@ -88,8 +88,35 @@ const MAX_VAL = 50;
 
 export default function FunnelStrip() {
   const [hovered, setHovered] = useState<number | null>(null);
+  const [visible, setVisible] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const hoveredData = hovered !== null ? allBars[hovered] : null;
+  const hoveredSection = hovered !== null ? allBars[hovered].si : null;
+
+  // Scroll-triggered entrance animation
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+
+    // Respect prefers-reduced-motion
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setVisible(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.15 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div id="evidence-funnel">
@@ -99,23 +126,23 @@ export default function FunnelStrip() {
           From exposure to job loss
         </h2>
         <p className="text-[15px] sm:text-[17px] text-[var(--muted)] mt-1.5 leading-relaxed">
-          AI adoption is accelerating and significantly changing work, but the impact on jobs is less clear. 
+          AI adoption is accelerating and significantly changing work, but the impact on jobs is less clear.
         </p>
         <div className="mt-3 flex flex-wrap gap-x-5 gap-y-1.5">
-          <Link href="/task-visualizer" className="text-[13px] font-medium text-[var(--accent)] hover:underline">
+          <Link href="/task-visualizer" className="text-[13px] font-medium text-[var(--accent)] link-draw-underline">
             How will AI affect your job? &rarr;
           </Link>
-          <Link href="/j-curve" className="text-[13px] font-medium text-[var(--accent)] hover:underline">
+          <Link href="/j-curve" className="text-[13px] font-medium text-[var(--accent)] link-draw-underline">
             Why the gap between productivity and job loss? &rarr;
           </Link>
-          <Link href="/history" className="text-[13px] font-medium text-[var(--accent)] hover:underline">
+          <Link href="/history" className="text-[13px] font-medium text-[var(--accent)] link-draw-underline">
             How technology has impacted jobs before &rarr;
           </Link>
         </div>
       </div>
 
       {/* Two-column chart */}
-      <div className="border border-black/[0.06] rounded-lg overflow-hidden">
+      <div ref={containerRef} className="border border-black/[0.06] rounded-lg overflow-hidden">
         <div className="flex">
           {/* Left column — desktop only */}
           <div
@@ -129,9 +156,20 @@ export default function FunnelStrip() {
                 style={{
                   top: group.startBar * ROW_H,
                   height: group.barCount * ROW_H,
+                  // Fade-slide in from left, staggered per section
+                  opacity: visible ? 1 : 0,
+                  transform: visible ? "translateX(0)" : "translateX(-12px)",
+                  transition: `opacity 0.4s ease-out ${gi * 0.12}s, transform 0.4s ease-out ${gi * 0.12}s`,
                 }}
               >
-                <span className="text-[11px] font-semibold uppercase tracking-[0.06em] text-[var(--foreground)] leading-tight">
+                <span
+                  className="text-[11px] font-semibold uppercase tracking-[0.06em] leading-tight"
+                  style={{
+                    // Highlight active section label
+                    color: hoveredSection === gi ? "var(--accent)" : "var(--foreground)",
+                    transition: "color 0.15s ease",
+                  }}
+                >
                   {group.label}
                 </span>
                 <span className="text-[9px] text-[var(--muted)] mt-0.5 leading-snug">
@@ -145,12 +183,27 @@ export default function FunnelStrip() {
                 {group.link && (
                   <Link
                     href="/signals#productivity-paths"
-                    className="text-[9px] text-[var(--accent)] hover:underline mt-0.5 leading-snug"
+                    className="text-[9px] text-[var(--accent)] link-draw-underline mt-0.5 leading-snug"
                   >
                     How this translates to jobs &rarr;
                   </Link>
                 )}
               </div>
+            ))}
+
+            {/* Section divider lines — draw in from left */}
+            {leftGroups.slice(1).map((group, di) => (
+              <div
+                key={`divider-${di}`}
+                className="absolute left-4 right-4 h-px"
+                style={{
+                  top: group.startBar * ROW_H,
+                  backgroundColor: "rgba(0,0,0,0.06)",
+                  transform: visible ? "scaleX(1)" : "scaleX(0)",
+                  transformOrigin: "left",
+                  transition: `transform 0.5s ease-out ${0.3 + di * 0.1}s`,
+                }}
+              />
             ))}
           </div>
 
@@ -171,6 +224,12 @@ export default function FunnelStrip() {
               // Mobile productivity link after last productivity bar (index 5)
               const showMobileProductivityLink = i === 5;
 
+              // Cross-section dimming: dim bars in other sections when hovering
+              const isDimmed = hoveredSection !== null && bar.si !== hoveredSection;
+
+              // Bar entrance animation delay
+              const barDelay = 0.06 + i * 0.04;
+
               return (
                 <div key={i}>
                   {/* Mobile inline label */}
@@ -185,9 +244,27 @@ export default function FunnelStrip() {
                     </div>
                   )}
 
+                  {/* Section divider on right side (desktop) — between sections */}
+                  {isFirstOfSection && i > 0 && (
+                    <div
+                      className="hidden sm:block h-px"
+                      style={{
+                        backgroundColor: "rgba(0,0,0,0.04)",
+                        transform: visible ? "scaleX(1)" : "scaleX(0)",
+                        transformOrigin: "left",
+                        transition: `transform 0.4s ease-out ${barDelay}s`,
+                      }}
+                    />
+                  )}
+
                   <div
                     onMouseEnter={() => setHovered(i)}
                     onMouseLeave={() => setHovered(null)}
+                    style={{
+                      // Cross-section dimming
+                      opacity: isDimmed ? 0.4 : 1,
+                      transition: "opacity 0.2s ease",
+                    }}
                   >
                     <a
                       href={bar.sourceUrl}
@@ -196,27 +273,74 @@ export default function FunnelStrip() {
                       className="flex items-center w-full no-underline relative"
                       style={{ height: ROW_H }}
                     >
-                      {/* Bar fill */}
+                      {/* Bar fill — animates width on scroll */}
                       <div
-                        className="absolute left-0 top-0 bottom-0 transition-colors duration-100"
+                        className="absolute left-0 top-0 bottom-0"
                         style={{
-                          width: `${barWidth}%`,
-                          minWidth: bar.value === 0 ? 3 : undefined,
+                          width: visible ? `${barWidth}%` : "0%",
+                          minWidth: visible && bar.value === 0 ? 3 : undefined,
                           backgroundColor: isHovered ? bar.barHover : bar.barColor,
+                          transition: `width 0.6s cubic-bezier(0.16, 1, 0.3, 1) ${barDelay}s, background-color 0.1s ease`,
                         }}
                       />
+
+                      {/* Confidence range whiskers — shown on hover when range exists */}
+                      {bar.range && (
+                        <>
+                          {/* Low whisker */}
+                          <div
+                            className="absolute top-[10px] h-[4px]"
+                            style={{
+                              left: `${(bar.range[0] / MAX_VAL) * 100}%`,
+                              width: 1,
+                              backgroundColor: bar.barHover,
+                              opacity: isHovered ? 0.6 : 0,
+                              transition: "opacity 0.2s ease",
+                            }}
+                          />
+                          {/* High whisker */}
+                          <div
+                            className="absolute top-[10px] h-[4px]"
+                            style={{
+                              left: `${(bar.range[1] / MAX_VAL) * 100}%`,
+                              width: 1,
+                              backgroundColor: bar.barHover,
+                              opacity: isHovered ? 0.6 : 0,
+                              transition: "opacity 0.2s ease",
+                            }}
+                          />
+                          {/* Connecting line between whiskers */}
+                          <div
+                            className="absolute top-[11.5px] h-px"
+                            style={{
+                              left: `${(bar.range[0] / MAX_VAL) * 100}%`,
+                              width: `${((bar.range[1] - bar.range[0]) / MAX_VAL) * 100}%`,
+                              backgroundColor: bar.barHover,
+                              opacity: isHovered ? 0.35 : 0,
+                              transition: "opacity 0.2s ease",
+                            }}
+                          />
+                        </>
+                      )}
 
                       {/* Value after bar — z-10 so it floats over source name */}
                       <div
                         className="absolute top-0 bottom-0 flex items-center pl-2 z-10"
-                        style={{ left: `${barWidth}%` }}
+                        style={{
+                          left: visible ? `${barWidth}%` : "0%",
+                          transition: `left 0.6s cubic-bezier(0.16, 1, 0.3, 1) ${barDelay}s`,
+                        }}
                       >
                         <span
-                          className={`font-mono text-[10px] sm:text-[11px] font-medium whitespace-nowrap leading-none tabular-nums transition-colors duration-100 bg-white/80 px-0.5 rounded-sm ${
+                          className={`font-mono text-[10px] sm:text-[11px] font-medium whitespace-nowrap leading-none tabular-nums bg-white/80 px-0.5 rounded-sm ${
                             isHovered
                               ? "text-[var(--foreground)]"
                               : "text-[var(--muted)]"
                           }`}
+                          style={{
+                            opacity: visible ? 1 : 0,
+                            transition: `opacity 0.3s ease ${barDelay + 0.3}s, color 0.1s ease`,
+                          }}
                         >
                           {bar.value}%
                           {isHovered && bar.range && (
@@ -229,11 +353,12 @@ export default function FunnelStrip() {
 
                       {/* Source name — right-justified, desktop only */}
                       <span
-                        className={`hidden sm:flex absolute right-3 top-0 bottom-0 items-center text-[10px] whitespace-nowrap leading-none transition-all duration-100 ${
+                        className={`hidden sm:flex absolute right-3 top-0 bottom-0 items-center text-[10px] whitespace-nowrap leading-none ${
                           isHovered
                             ? "text-[var(--foreground)] opacity-60 font-medium"
                             : "text-[var(--muted)] opacity-25 font-normal"
                         }`}
+                        style={{ transition: "opacity 0.15s ease, color 0.1s ease" }}
                       >
                         {bar.study}
                       </span>
@@ -257,17 +382,16 @@ export default function FunnelStrip() {
           </div>
         </div>
 
-        {/* Detail panel — shown below chart */}
+        {/* Detail panel — smooth max-height transition */}
         <div
-          className="px-4 sm:px-6 border-t border-black/[0.06] overflow-hidden transition-all duration-150"
+          className="funnel-detail-panel border-t border-black/[0.06] overflow-hidden"
           style={{
-            height: hoveredData?.quote ? "auto" : 0,
-            padding: hoveredData?.quote ? undefined : 0,
-            borderTopWidth: hoveredData?.quote ? undefined : 0,
+            maxHeight: hoveredData?.quote ? 120 : 0,
+            opacity: hoveredData?.quote ? 1 : 0,
           }}
         >
           {hoveredData?.quote && (
-            <div className="py-2 flex items-baseline gap-3">
+            <div className="px-4 sm:px-6 py-2 flex items-baseline gap-3">
               <p className="text-[11px] sm:text-[12px] text-[var(--muted)] leading-relaxed italic flex-1">
                 &ldquo;{hoveredData.quote}&rdquo;
               </p>
@@ -275,7 +399,7 @@ export default function FunnelStrip() {
                 href={hoveredData.sourceUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[11px] font-medium text-[var(--accent)] whitespace-nowrap hover:underline shrink-0"
+                className="text-[11px] font-medium text-[var(--accent)] whitespace-nowrap link-draw-underline shrink-0"
               >
                 View source &rarr;
               </a>
@@ -290,7 +414,7 @@ export default function FunnelStrip() {
           </p>
           <a
             href="/research"
-            className="text-[12px] font-semibold text-[var(--foreground)] hover:text-[var(--accent)] whitespace-nowrap shrink-0"
+            className="text-[12px] font-semibold text-[var(--foreground)] link-draw-underline"
           >
             Read more sources &rarr;
           </a>
