@@ -90,7 +90,13 @@ export default function BLSTrendStrip({ trend }: { trend: BlsTrend }) {
         </div>
       </button>
 
-      {expanded && (
+      <div
+        className="bls-expand"
+        style={{
+          maxHeight: expanded ? 120 : 0,
+          opacity: expanded ? 1 : 0,
+        }}
+      >
         <div className="mt-2 text-[11px] text-[var(--muted)] opacity-60 leading-relaxed border-l-2 border-black/[0.06] pl-3 space-y-1">
           <p>
             % change in nonfarm payroll employment (BLS Current Employment Statistics, seasonally adjusted).
@@ -103,7 +109,7 @@ export default function BLSTrendStrip({ trend }: { trend: BlsTrend }) {
           </p>
           <p>As of {formatAsOf(trend.asOf)}.</p>
         </div>
-      )}
+      </div>
     </div>
   );
 }

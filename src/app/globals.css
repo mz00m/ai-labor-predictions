@@ -414,6 +414,213 @@ a, button, [role="button"], input, label {
   }
 }
 
+/* ---- Evidence stat card hover ---- */
+.evidence-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.15s ease;
+}
+.evidence-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+/* ---- Concept card: border glow + arrow slide ---- */
+.concept-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.15s ease;
+}
+.concept-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  background-color: rgba(0, 0, 0, 0.01);
+}
+.concept-arrow {
+  transition: transform 0.2s ease, opacity 0.15s ease;
+}
+.group:hover .concept-arrow {
+  transform: translateX(3px);
+  opacity: 0.7;
+}
+
+/* ---- Research feed paper row ---- */
+.research-paper {
+  transition: background-color 0.15s ease, padding-left 0.15s ease;
+  border-radius: 8px;
+  margin-left: -8px;
+  margin-right: -8px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.research-paper:hover {
+  background-color: rgba(0, 0, 0, 0.015);
+}
+.research-paper:hover .paper-title {
+  color: var(--accent);
+}
+
+/* ---- GPT Timeline node glow ---- */
+.timeline-node {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+.timeline-node:hover {
+  box-shadow: 0 0 0 4px rgba(92, 97, 246, 0.12);
+}
+
+/* ---- Revolution card content fade ---- */
+@keyframes content-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.revolution-content {
+  animation: content-fade-in 0.25s ease-out;
+}
+
+/* ---- Revolution tab indicator ---- */
+.revolution-tab {
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+.revolution-tab:hover {
+  transform: translateY(-1px);
+}
+.revolution-tab:active {
+  transform: scale(0.97);
+}
+
+/* ---- Industry card interactions ---- */
+.industry-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.15s ease, background-color 0.15s ease;
+}
+.industry-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+.industry-chevron {
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.industry-dot {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.industry-card:hover .industry-dot {
+  transform: scale(1.25);
+}
+
+/* ---- J-Curve draw animation ---- */
+.jcurve-line {
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+}
+.jcurve-line.visible {
+  animation: draw-line 1.5s ease-out forwards;
+}
+.jcurve-line-dashed {
+  stroke-dasharray: 6 4;
+  stroke-dashoffset: 200;
+}
+.jcurve-line-dashed.visible {
+  animation: draw-line 1.2s ease-out 0.3s forwards;
+}
+
+/* ---- Phase region glow ---- */
+.phase-region {
+  transition: fill-opacity 0.25s ease;
+}
+
+/* ---- BLS strip expand ---- */
+.bls-expand {
+  overflow: hidden;
+  transition: max-height 0.25s ease, opacity 0.2s ease;
+}
+
+/* ---- Prediction summary card: left border glow ---- */
+.summary-card-border {
+  transition: border-left-width 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
+}
+.summary-card-border:hover {
+  border-left-width: 3px;
+}
+
+/* ---- Stat number scale on hover ---- */
+.stat-hover {
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+.group:hover .stat-hover {
+  transform: scale(1.02);
+}
+
+/* ---- Research note smooth expand ---- */
+.research-note-expand {
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.25s ease;
+}
+
+/* ---- Surging badge pulse ---- */
+@keyframes gentle-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+.surging-badge {
+  animation: gentle-pulse 2s ease-in-out infinite;
+}
+
+/* ---- About page card ---- */
+.about-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.15s ease;
+}
+.about-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+/* Reduced motion: disable all new microinteractions */
+@media (prefers-reduced-motion: reduce) {
+  .evidence-card:hover,
+  .concept-card:hover,
+  .revolution-tab:hover,
+  .industry-card:hover,
+  .about-card:hover,
+  .summary-card-border:hover {
+    transform: none;
+  }
+  .group:hover .concept-arrow {
+    transform: none;
+  }
+  .group:hover .stat-hover {
+    transform: none;
+  }
+  .revolution-content {
+    animation: none;
+  }
+  .jcurve-line,
+  .jcurve-line-dashed {
+    stroke-dasharray: none;
+    stroke-dashoffset: 0;
+    animation: none;
+  }
+  .surging-badge {
+    animation: none;
+  }
+  .research-note-expand,
+  .bls-expand {
+    transition: none;
+  }
+  .research-paper {
+    transition: none;
+  }
+  .industry-card:hover .industry-dot {
+    transform: none;
+  }
+  .industry-chevron {
+    transition: none;
+  }
+}
+
 /* Easter egg: flip toast slide-in */
 @keyframes flip-toast-in {
   from {

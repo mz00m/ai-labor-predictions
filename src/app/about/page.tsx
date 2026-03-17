@@ -87,15 +87,15 @@ export default function AboutPage() {
             kids headed off to college, and just generally what we should plan for as a society!
             I hope you take some time to interact with the visualizations
             ({" "}
-            <a href="/task-visualizer" className="underline hover:text-[var(--foreground)] transition-colors">job task breakdown</a>,{" "}
-            <a href="/task-visualizer/economy" className="underline hover:text-[var(--foreground)] transition-colors">economy-wide view</a>,{" "}
-            <a href="/compare" className="underline hover:text-[var(--foreground)] transition-colors">prediction comparison</a>{" "}
+            <a href="/task-visualizer" className="link-draw-underline hover:text-[var(--foreground)]">job task breakdown</a>,{" "}
+            <a href="/task-visualizer/economy" className="link-draw-underline hover:text-[var(--foreground)]">economy-wide view</a>,{" "}
+            <a href="/compare" className="link-draw-underline hover:text-[var(--foreground)]">prediction comparison</a>{" "}
             ) and read through some of the explainers
             ({" "}
-            <a href="/j-curve" className="underline hover:text-[var(--foreground)] transition-colors">the J-Curve</a>,{" "}
-            <a href="/history" className="underline hover:text-[var(--foreground)] transition-colors">historical context</a>,{" "}
-            <a href="/demand-elasticity" className="underline hover:text-[var(--foreground)] transition-colors">demand elasticity</a>,{" "}
-            <a href="/signals" className="underline hover:text-[var(--foreground)] transition-colors">leading indicators</a>{" "}
+            <a href="/j-curve" className="link-draw-underline hover:text-[var(--foreground)]">the J-Curve</a>,{" "}
+            <a href="/history" className="link-draw-underline hover:text-[var(--foreground)]">historical context</a>,{" "}
+            <a href="/demand-elasticity" className="link-draw-underline hover:text-[var(--foreground)]">demand elasticity</a>,{" "}
+            <a href="/signals" className="link-draw-underline hover:text-[var(--foreground)]">leading indicators</a>{" "}
             ) and I hope you find them useful.
           </p>
           <p className="text-[14px] text-[var(--muted)] leading-relaxed">
@@ -111,7 +111,7 @@ export default function AboutPage() {
               href="https://www.linkedin.com/in/mattzieger"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline hover:text-[var(--foreground)] transition-colors"
+              className="link-draw-underline hover:text-[var(--foreground)]"
             >
               LinkedIn
             </a>
@@ -120,7 +120,7 @@ export default function AboutPage() {
               href="https://x.com/mattzieger"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline hover:text-[var(--foreground)] transition-colors"
+              className="link-draw-underline hover:text-[var(--foreground)]"
             >
               X
             </a>
@@ -129,7 +129,7 @@ export default function AboutPage() {
 
         {/* About Matt */}
         <section className="max-w-3xl">
-          <div className="border border-black/[0.06] rounded-lg px-5 py-5 bg-[var(--background)]">
+          <div className="about-card border border-black/[0.06] rounded-lg px-5 py-5 bg-[var(--background)]">
             <p className="text-[14px] font-bold text-[var(--foreground)] mb-2">
               Who is behind this?
             </p>
@@ -147,7 +147,7 @@ export default function AboutPage() {
                 href="https://www.gitlabfoundation.org/futureofwork"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline hover:text-[var(--foreground)] transition-colors"
+                className="link-draw-underline hover:text-[var(--foreground)]"
               >
                 AI for Economic Opportunity Fund
               </a>{" "}
@@ -156,7 +156,7 @@ export default function AboutPage() {
                 href="https://www.opportunityai.org/about"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline hover:text-[var(--foreground)] transition-colors"
+                className="link-draw-underline hover:text-[var(--foreground)]"
               >
                 OpportunityAI
               </a>

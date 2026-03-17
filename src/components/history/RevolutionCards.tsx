@@ -116,7 +116,7 @@ export default function RevolutionCards() {
           <button
             key={r.id}
             onClick={() => setActiveTab(r.id)}
-            className={`px-2.5 py-1.5 rounded-md text-[11px] sm:text-[12px] font-medium border transition-colors duration-150 whitespace-nowrap ${
+            className={`revolution-tab px-2.5 py-1.5 rounded-md text-[11px] sm:text-[12px] font-medium border whitespace-nowrap cursor-pointer ${
               activeTab === r.id
                 ? "text-white border-transparent"
                 : "text-[var(--muted)] border-black/[0.08] hover:border-black/[0.15] bg-white"
@@ -165,7 +165,7 @@ export default function RevolutionCards() {
         </div>
 
         {/* Content */}
-        <div className="p-5 space-y-4">
+        <div className="revolution-content p-5 space-y-4" key={active.id}>
           <Row label="The Innovation" value={active.innovation} />
           <Row label="What It Automated" value={active.automated} />
           <Row label="Jobs Destroyed" value={active.destroyed} />

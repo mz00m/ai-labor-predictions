@@ -109,7 +109,7 @@ export default function ResearchFeed({ selectedTiers }: ResearchFeedProps) {
           <button
             onClick={fetchPapers}
             disabled={loading}
-            className="shrink-0 px-8 py-3.5 text-[14px] font-bold text-white bg-[var(--accent)] rounded-full hover:opacity-90 disabled:opacity-50 cursor-pointer shadow-sm"
+            className="btn-press shrink-0 px-8 py-3.5 text-[14px] font-bold text-white bg-[var(--accent)] rounded-full hover:opacity-90 disabled:opacity-50 cursor-pointer shadow-sm"
           >
             {loading ? "Searching..." : "Find Recent Research"}
           </button>
@@ -131,7 +131,7 @@ export default function ResearchFeed({ selectedTiers }: ResearchFeedProps) {
           <button
             onClick={fetchPapers}
             disabled={loading}
-            className="px-4 py-1.5 text-[12px] font-semibold text-[var(--accent)] border border-[var(--accent)]/30 rounded-full hover:bg-[var(--accent)]/[0.05] disabled:opacity-50 cursor-pointer"
+            className="btn-press px-4 py-1.5 text-[12px] font-semibold text-[var(--accent)] border border-[var(--accent)]/30 rounded-full hover:bg-[var(--accent)]/[0.05] disabled:opacity-50 cursor-pointer"
           >
             {loading ? "Refreshing..." : "Refresh"}
           </button>
@@ -173,7 +173,7 @@ export default function ResearchFeed({ selectedTiers }: ResearchFeedProps) {
             return (
               <div
                 key={paper.id}
-                className="py-4 border-b border-black/[0.04]"
+                className="research-paper py-4 border-b border-black/[0.04]"
               >
                 <div className="flex items-start gap-3">
                   <span
@@ -185,7 +185,7 @@ export default function ResearchFeed({ selectedTiers }: ResearchFeedProps) {
                       href={paper.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[14px] font-semibold text-[var(--foreground)] hover:text-[var(--accent)] leading-tight"
+                      className="paper-title text-[14px] font-semibold text-[var(--foreground)] leading-tight"
                     >
                       {paper.title}
                     </a>

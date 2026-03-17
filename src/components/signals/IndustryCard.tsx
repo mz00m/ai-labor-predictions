@@ -41,7 +41,7 @@ export default function IndustryCard({
   return (
     <button
       onClick={onToggle}
-      className={`w-full text-left rounded-xl border p-4 sm:p-5 transition-all hover:border-black/[0.12] ${
+      className={`industry-card w-full text-left rounded-xl border p-4 sm:p-5 ${
         isExpanded
           ? "border-black/[0.12] bg-white shadow-sm"
           : "border-black/[0.06] bg-white"
@@ -50,15 +50,18 @@ export default function IndustryCard({
       <div className="flex items-start justify-between gap-3">
         <div className="flex items-center gap-2.5">
           <span
-            className="w-3 h-3 rounded-full shrink-0"
+            className="industry-dot w-3 h-3 rounded-full shrink-0"
             style={{ backgroundColor: industry.color }}
           />
           <h3 className="text-[15px] sm:text-[17px] font-bold text-[var(--foreground)]">
             {industry.label}
           </h3>
         </div>
-        <span className="text-[12px] text-[var(--muted)] shrink-0 mt-0.5">
-          {isExpanded ? "\u25B2" : "\u25BC"}
+        <span
+          className="industry-chevron text-[12px] text-[var(--muted)] shrink-0 mt-0.5 inline-block"
+          style={{ transform: isExpanded ? "rotate(180deg)" : "rotate(0deg)" }}
+        >
+          &#9660;
         </span>
       </div>
 
@@ -117,7 +120,7 @@ export default function IndustryCard({
         </span>
         {industry.surgingCount > 0 && (
           <span
-            className="font-semibold px-1.5 py-0.5 rounded-full text-[10px]"
+            className="surging-badge font-semibold px-1.5 py-0.5 rounded-full text-[10px]"
             style={{
               backgroundColor: "rgba(245, 158, 11, 0.12)",
               color: "#d97706",
