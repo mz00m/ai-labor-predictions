@@ -904,6 +904,20 @@
       "sourceIds": ["fed-atl-duke-cfo-ai-productivity-2026"],
       "evidenceTier": 1,
       "label": "Fed/Duke CFO Survey: 50% of firms report no AI job replacement; aggregate effect <0.4%"
+    },
+    {
+      "date": "2026-03-17",
+      "direction": "neutral",
+      "sourceIds": ["yale-restrepo-ai-automation-future-work-2026"],
+      "evidenceTier": 3,
+      "label": "Yale (Restrepo): AI job displacement claims 'premature'; labor market in wait-and-see mode"
+    },
+    {
+      "date": "2026-03-17",
+      "direction": "neutral",
+      "sourceIds": ["yale-restrepo-ai-automation-future-work-2026"],
+      "evidenceTier": 3,
+      "label": "Yale (Restrepo): Compute constraints will slow AI displacement timeline"
     }
   ],
   "sources": [
@@ -1663,6 +1677,16 @@
       "datePublished": "2026-03-13",
       "excerpt": "Survey of ~750 CFOs finds firm-size-and-sector-weighted aggregate employment is expected to decline by less than 0.4% due to AI in 2026, implying ~502K workers. 50% of firms report no AI job replacement. Large firms expect workforce reductions; small firms expect modest gains.",
       "dateAdded": "2026-03-16"
+    },
+    {
+      "id": "yale-restrepo-ai-automation-future-work-2026",
+      "title": "Pascual Restrepo on AI, Automation, and the Future of Work",
+      "url": "https://economics.yale.edu/news/260317/pascual-restrepo-ai-automation-and-future-work",
+      "publisher": "Yale Department of Economics (Restrepo, interviewed by Strathmann)",
+      "evidenceTier": 3,
+      "datePublished": "2026-03-17",
+      "excerpt": "A lot of these claims are premature. Many of the people making them have an interest in selling a product, so you have to take them with a grain of salt. Right now I would describe the labor market as more of a wait-and-see environment. You cannot automate everything tomorrow because we simply don't have enough computing power to do it.",
+      "dateAdded": "2026-03-17"
     }
   ]
 }

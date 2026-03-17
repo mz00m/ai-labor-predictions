@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-03-16",
-  "totalSources": 420,
-  "verifiedCount": 420,
+  "lastUpdated": "2026-03-17",
+  "totalSources": 421,
+  "verifiedCount": 421,
   "sources": {
     "manning-aguirre-adaptive-2026": {
       "id": "manning-aguirre-adaptive-2026",
@@ -5789,6 +5789,22 @@
         "white-collar-professional-displacement",
         "healthcare-admin-displacement",
         "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "yale-restrepo-ai-automation-future-work-2026": {
+      "id": "yale-restrepo-ai-automation-future-work-2026",
+      "title": "Pascual Restrepo on AI, Automation, and the Future of Work",
+      "url": "https://economics.yale.edu/news/260317/pascual-restrepo-ai-automation-and-future-work",
+      "publisher": "Yale Department of Economics (Restrepo, interviewed by Strathmann)",
+      "evidenceTier": 3,
+      "datePublished": "2026-03-17",
+      "excerpt": "A lot of these claims are premature. Many of the people making them have an interest in selling a product. Right now I would describe the labor market as more of a wait-and-see environment. You cannot automate everything tomorrow because we simply don't have enough computing power to do it.",
+      "usedIn": [
+        "overall-us-displacement",
+        "median-wage-impact",
+        "ai-adoption-rate"
       ],
       "verified": true,
       "synthetic": false

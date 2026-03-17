@@ -1,0 +1,14 @@
+{
+  "id": "yale-restrepo-ai-automation-future-work-2026",
+  "abstract": "In a wide-ranging Q&A, Yale economist Pascual Restrepo discusses how economists view AI's impact on labor markets, wages, and economic growth. Restrepo argues that AI job displacement claims are premature, that compute constraints will slow the automation transition, and that the labor market is currently in a wait-and-see phase. He also discusses forthcoming QJE research showing automation targets above-median wage tasks, amplifying inequality.",
+  "keyFindings": [
+    "AI job displacement claims are 'premature' as of March 2026; many claimants have interest in selling products",
+    "AI firm adoption is still relatively low; labor market is in a 'wait-and-see environment' with firms experimenting",
+    "Compute constraints are underappreciated: infrastructure must be built incrementally, slowing displacement timeline",
+    "Forthcoming QJE research (Acemoglu & Restrepo) shows automation targets tasks paying above outside-option wages, amplifying wage losses and inequality",
+    "Even with very powerful AI, competing priorities for finite compute (curing diseases, climate, science) slow displacement of any particular job category"
+  ],
+  "methodology": "Expert interview/Q&A with Pascual Restrepo (Yale Associate Professor of Economics), conducted by Luke Strathmann for Yale Department of Economics news. Draws on Restrepo's body of research including task-based automation models, joint work with Acemoglu, and a forthcoming QJE paper on automation and wage rents.",
+  "qualifiers": "This is an interview, not a peer-reviewed paper. Quantitative claims reference forthcoming or prior research rather than presenting new data. Restrepo acknowledges uncertainty: 'It's hard to evaluate these claims empirically right now.' The AGI scenario discussed is explicitly described as 'speculative.'",
+  "fetchedAt": "2026-03-17"
+}
