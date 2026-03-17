@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import { useCountUp } from "@/hooks/useCountUp";
 import { useInView } from "@/hooks/useInView";
 
@@ -99,6 +99,50 @@ function xOf(yr: number) {
 }
 function hOf(yr: number) {
   return (yr / MAX_YEARS) * MAX_H;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Animation utilities                                                */
+/* ------------------------------------------------------------------ */
+
+function easeOutQuint(t: number): number {
+  return 1 - Math.pow(1 - t, 5);
+}
+
+function bezierAt(
+  t: number,
+  x0: number, y0: number,
+  cx: number, cy: number,
+  x1: number, y1: number,
+) {
+  return {
+    x: (1 - t) ** 2 * x0 + 2 * (1 - t) * t * cx + t ** 2 * x1,
+    y: (1 - t) ** 2 * y0 + 2 * (1 - t) * t * cy + t ** 2 * y1,
+  };
+}
+
+// AI fires first, then shortest → longest historical arcs
+// [transition index, delay ms, duration ms]
+const ANIM_SCHEDULE: { idx: number; delay: number; dur: number }[] = [
+  { idx: 4, delay: 150, dur: 1000 },    // AI — fast projectile
+  { idx: 3, delay: 1500, dur: 1200 },   // Computers (40yr)
+  { idx: 2, delay: 2900, dur: 1500 },   // Electricity (50yr)
+  { idx: 1, delay: 4600, dur: 1800 },   // Combustion (60yr)
+  { idx: 0, delay: 6600, dur: 2400 },   // Steam (90yr) — longest, most dramatic
+];
+
+/* ------------------------------------------------------------------ */
+/*  Traveling dot — glowing circle that traces each arc path           */
+/* ------------------------------------------------------------------ */
+
+function TravelingDot({ x, y, color }: { x: number; y: number; color: string }) {
+  return (
+    <g>
+      <circle cx={x} cy={y} r="18" fill={color} opacity="0.06" />
+      <circle cx={x} cy={y} r="10" fill={color} opacity="0.14" />
+      <circle cx={x} cy={y} r="4" fill={color} opacity="0.9" />
+    </g>
+  );
 }
 
 /* ------------------------------------------------------------------ */
@@ -264,6 +308,18 @@ export default function CompressionComparison() {
   const [vis, setVis] = useState(false);
   const [hov, setHov] = useState<string | null>(null);
 
+  // JS-driven animation progress (0–1) for each transition
+  const [arcProg, setArcProg] = useState<number[]>(() => TRANSITIONS.map(() => 0));
+  const [settled, setSettled] = useState(false);
+  const reducedMotion = useRef(false);
+
+  useEffect(() => {
+    reducedMotion.current =
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  }, []);
+
+  // Intersection observer — trigger animation on scroll-in
   useEffect(() => {
     const el = wrap.current;
     if (!el) return;
@@ -279,6 +335,48 @@ export default function CompressionComparison() {
     obs.observe(el);
     return () => obs.disconnect();
   }, []);
+
+  // Main animation loop — drives all arc drawing + traveling dots
+  useEffect(() => {
+    if (!vis) return;
+
+    // Skip animation for reduced motion
+    if (reducedMotion.current) {
+      setArcProg(TRANSITIONS.map(() => 1));
+      setSettled(true);
+      return;
+    }
+
+    const start = performance.now();
+    let raf: number;
+    let finished = false;
+
+    const tick = (now: number) => {
+      const elapsed = now - start;
+      const prog = new Array(TRANSITIONS.length).fill(0);
+      let allDone = true;
+
+      for (const s of ANIM_SCHEDULE) {
+        const raw = Math.max(0, Math.min(1, (elapsed - s.delay) / s.dur));
+        prog[s.idx] = easeOutQuint(raw);
+        if (raw < 1) allDone = false;
+      }
+
+      setArcProg(prog);
+
+      if (allDone && !finished) {
+        finished = true;
+        setTimeout(() => setSettled(true), 1200);
+        return;
+      }
+      if (!finished) {
+        raf = requestAnimationFrame(tick);
+      }
+    };
+
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [vis]);
 
   /* ---- pre-compute geometry ---- */
   const arcs = TRANSITIONS.map((t) => {
@@ -321,6 +419,7 @@ export default function CompressionComparison() {
   const ai = TRANSITIONS.find((t) => t.isProjection)!;
   const aiIdx = TRANSITIONS.indexOf(ai);
   const aiArc = arcs[aiIdx];
+  const aiProg = arcProg[aiIdx];
 
   return (
     <div className="mt-5 space-y-4" ref={wrap}>
@@ -388,7 +487,7 @@ export default function CompressionComparison() {
             </linearGradient>
 
             {/* Hover fill gradient for historical arcs */}
-            {historical.map((t, i) => {
+            {historical.map((t) => {
               const a = arcs[TRANSITIONS.indexOf(t)];
               return (
                 <linearGradient
@@ -468,19 +567,20 @@ export default function CompressionComparison() {
           />
 
           {/* ============================================ */}
-          {/*  Historical arcs — soft grey background      */}
+          {/*  Historical arcs — colored during animation, */}
+          {/*  fade to gray after settling                 */}
           {/* ============================================ */}
           {historical.map((t) => {
             const idx = TRANSITIONS.indexOf(t);
             const a = arcs[idx];
+            const prog = arcProg[idx];
             const active = hov === t.id;
             const anyHov = hov !== null;
             const dimmed = anyHov && !active && hov !== "ai";
-            // AI fires first like a projectile, then historical arcs cascade shortest→longest
-            // Reverse order: Computers(idx3)→Electricity(idx2)→Combustion(idx1)→Steam(idx0)
-            const historicalRank = historical.length - 1 - historical.indexOf(t);
-            const delay = 0.4 + historicalRank * 0.35;
-            const duration = 0.5 + (t.totalYears / MAX_YEARS) * 0.5;
+            const isDrawing = prog > 0.01 && prog < 0.99;
+
+            // Stroke color: colored during animation, transitions to gray on settle
+            const strokeColor = active ? t.color : settled ? GREY : t.color;
 
             // label position: sit just above the actual visual peak of the arc
             const labelMidX = a.midX;
@@ -513,77 +613,81 @@ export default function CompressionComparison() {
                   <path
                     d={`${a.arcD} Z`}
                     fill={`url(#hfill-${t.id})`}
-                    style={{
-                      opacity: 1,
-                    }}
+                    style={{ opacity: 1 }}
                   />
                 )}
 
-                {/* Arc stroke */}
+                {/* Arc stroke — JS-driven progress, color transitions on settle */}
                 <path
                   d={a.arcD}
                   fill="none"
-                  stroke={active ? t.color : GREY}
+                  stroke={strokeColor}
                   strokeWidth={active ? 2.5 : 1.6}
                   strokeLinecap="round"
                   pathLength="1"
                   strokeDasharray="1"
-                  strokeDashoffset={vis ? "0" : "1"}
+                  strokeDashoffset={1 - prog}
                   style={{
-                    opacity: dimmed ? 0.12 : active ? 0.85 : 0.32,
-                    transition: `stroke-dashoffset ${duration}s cubic-bezier(0.12, 0.9, 0.25, 1) ${delay}s, opacity 0.3s ease, stroke 0.3s ease, stroke-width 0.3s ease`,
+                    opacity: dimmed ? 0.12 : active ? 0.85 : settled ? 0.32 : 0.75,
+                    transition: settled
+                      ? "stroke 1.5s ease, opacity 1.5s ease, stroke-width 0.3s ease"
+                      : "opacity 0.3s ease, stroke 0.3s ease, stroke-width 0.3s ease",
                   }}
                 />
+
+                {/* Traveling dot — traces the arc during animation */}
+                {isDrawing && (() => {
+                  const pos = bezierAt(prog, OX, BL, a.midX, a.peakY, a.endX, BL);
+                  return <TravelingDot x={pos.x} y={pos.y} color={t.color} />;
+                })()}
 
                 {/* Endpoint dot */}
                 <circle
                   cx={a.endX}
                   cy={BL}
                   r={active ? 4.5 : 2.5}
-                  fill={active ? t.color : GREY}
+                  fill={active ? t.color : settled ? GREY : t.color}
                   style={{
-                    opacity: dimmed
-                      ? 0.1
-                      : vis
-                        ? active
-                          ? 0.9
-                          : 0.3
-                        : 0,
-                    transition: `opacity 0.3s ease ${delay + duration - 0.1}s, fill 0.3s ease`,
+                    opacity: dimmed ? 0.1 : prog > 0.95 ? (active ? 0.9 : 0.5) : 0,
+                    transition: settled
+                      ? "fill 1.5s ease, opacity 0.3s ease"
+                      : "opacity 0.3s ease, fill 0.3s ease",
                   }}
                 />
 
-                {/* ---- Always-visible soft peak label ---- */}
+                {/* ---- Peak label — appears when arc is ~40% drawn ---- */}
                 <text
                   x={labelX}
                   y={a.visualPeakY - (active ? 18 : 10)}
                   textAnchor={anchor}
                   fontSize={active ? "12" : "10"}
                   fontWeight={active ? "600" : "500"}
-                  fill={active ? t.color : GREY}
+                  fill={active ? t.color : settled ? GREY : t.color}
                   style={{
                     opacity: dimmed
                       ? 0.06
                       : active
                         ? 0.9
-                        : vis
-                          ? 0.35
+                        : prog > 0.4
+                          ? 0.45
                           : 0,
-                    transition: `opacity 0.4s ease ${active ? "0s" : `${delay + duration * 0.6}s`}, fill 0.3s ease, font-size 0.3s ease`,
+                    transition: settled
+                      ? "fill 1.5s ease, opacity 1s ease, font-size 0.3s ease"
+                      : "opacity 0.4s ease, fill 0.3s ease, font-size 0.3s ease",
                   }}
                 >
                   {t.name}
                 </text>
 
-                {/* ---- Technology icon at peak ---- */}
+                {/* ---- Technology icon at peak — appears after settling ---- */}
                 <TechIcon
                   id={t.id}
                   x={a.midX}
                   y={a.visualPeakY - (active ? 28 : 18)}
                   color={t.color}
                   active={active}
-                  vis={vis}
-                  delay={delay + duration * 0.7}
+                  vis={settled || active}
+                  delay={0}
                 />
 
                 {/* ---- Hover detail labels ---- */}
@@ -640,8 +744,8 @@ export default function CompressionComparison() {
               d={`${aiArc.arcD} Z`}
               fill="url(#ai-wash-hi)"
               style={{
-                opacity: vis ? 1 : 0,
-                transition: "opacity 0.3s ease 0.2s",
+                opacity: aiProg > 0.3 ? 1 : 0,
+                transition: "opacity 0.5s ease",
               }}
             />
             <path
@@ -652,11 +756,10 @@ export default function CompressionComparison() {
               strokeDasharray="5 4"
               strokeLinecap="round"
               pathLength="1"
+              strokeDashoffset={1 - aiProg}
               style={{
-                strokeDashoffset: vis ? "0" : "1",
                 opacity: hov === "ai" ? 0.4 : 0.2,
-                transition:
-                  "stroke-dashoffset 0.4s cubic-bezier(0.08, 0.82, 0.17, 1) 0.12s, opacity 0.3s ease",
+                transition: "opacity 0.3s ease",
               }}
             />
 
@@ -665,8 +768,8 @@ export default function CompressionComparison() {
               d={`${aiArc.lowArcD} Z`}
               fill="url(#ai-wash)"
               style={{
-                opacity: vis ? 1 : 0,
-                transition: "opacity 0.35s ease 0.15s",
+                opacity: aiProg > 0.2 ? 1 : 0,
+                transition: "opacity 0.4s ease",
               }}
             />
 
@@ -679,13 +782,22 @@ export default function CompressionComparison() {
               strokeLinecap="round"
               pathLength="1"
               strokeDasharray="1"
-              strokeDashoffset={vis ? "0" : "1"}
+              strokeDashoffset={1 - aiProg}
               style={{
                 opacity: hov === "ai" ? 1 : 0.85,
-                transition:
-                  "stroke-dashoffset 0.35s cubic-bezier(0.08, 0.82, 0.17, 1) 0.08s, opacity 0.3s ease, stroke-width 0.3s ease",
+                transition: "opacity 0.3s ease, stroke-width 0.3s ease",
               }}
             />
+
+            {/* Traveling dot for AI arc */}
+            {aiProg > 0.01 && aiProg < 0.99 && (() => {
+              const pos = bezierAt(
+                aiProg, OX, BL,
+                aiArc.lowMidX, aiArc.lowPeakY,
+                aiArc.lowEndX, BL,
+              );
+              return <TravelingDot x={pos.x} y={pos.y} color={ai.color} />;
+            })()}
 
             {/* Endpoint dots */}
             <circle
@@ -694,8 +806,8 @@ export default function CompressionComparison() {
               r={hov === "ai" ? 5.5 : 4}
               fill={ai.color}
               style={{
-                opacity: vis ? 0.9 : 0,
-                transition: "opacity 0.2s ease 0.35s",
+                opacity: aiProg > 0.95 ? 0.9 : 0,
+                transition: "opacity 0.3s ease",
               }}
             />
             {ai.totalYearsHigh && (
@@ -705,8 +817,8 @@ export default function CompressionComparison() {
                 r="2.5"
                 fill={ai.color}
                 style={{
-                  opacity: vis ? 0.3 : 0,
-                  transition: "opacity 0.2s ease 0.4s",
+                  opacity: aiProg > 0.95 ? 0.3 : 0,
+                  transition: "opacity 0.3s ease",
                 }}
               />
             )}
@@ -718,11 +830,11 @@ export default function CompressionComparison() {
               y={aiArc.lowVisualPeakY - 22}
               color={ai.color}
               active={hov === "ai"}
-              vis={vis}
-              delay={0.25}
+              vis={aiProg > 0.95}
+              delay={0}
             />
 
-            {/* AI label — always visible */}
+            {/* AI label — appears after arc is mostly drawn */}
             <text
               x={aiArc.lowEndX + 14}
               y={BL - 28}
@@ -731,8 +843,8 @@ export default function CompressionComparison() {
               fontWeight="700"
               fill={ai.color}
               style={{
-                opacity: vis ? 1 : 0,
-                transition: "opacity 0.3s ease 0.3s",
+                opacity: aiProg > 0.5 ? 1 : 0,
+                transition: "opacity 0.4s ease",
               }}
             >
               AI / LLMs
@@ -744,9 +856,9 @@ export default function CompressionComparison() {
               fontSize="11"
               fill={ai.color}
               style={{
-                opacity: vis ? 0.7 : 0,
+                opacity: aiProg > 0.6 ? 0.7 : 0,
                 fontVariantNumeric: "tabular-nums",
-                transition: "opacity 0.3s ease 0.35s",
+                transition: "opacity 0.4s ease",
               }}
             >
               {ai.totalYears}&ndash;{ai.totalYearsHigh} yrs
@@ -791,7 +903,7 @@ export default function CompressionComparison() {
       </div>
 
       {/* ============================================================ */}
-      {/*  MOBILE — simplified arc view                                */}
+      {/*  MOBILE — simplified arc view (same JS-driven animation)     */}
       {/* ============================================================ */}
       <div className="md:hidden">
         <svg
@@ -867,41 +979,56 @@ export default function CompressionComparison() {
                   Years from emergence to equilibrium
                 </text>
 
-                {/* Historical arcs — grey, animated on scroll, shortest first */}
+                {/* Historical arcs — JS-driven, colored then gray */}
                 {historical.map((t) => {
+                  const idx = TRANSITIONS.indexOf(t);
+                  const prog = arcProg[idx];
                   const yrs = t.totalYears;
                   const endX = mxOf(yrs);
                   const midX = (mOX + endX) / 2;
                   const peakY = mBL - mhOf(yrs);
                   const d = `M ${mOX},${mBL} Q ${midX},${peakY} ${endX},${mBL}`;
-                  const mRank = historical.length - 1 - historical.indexOf(t);
-                  const mDelay = 0.4 + mRank * 0.35;
-                  const mDuration = 0.5 + (yrs / MAX_YEARS) * 0.5;
+                  const isDrawing = prog > 0.01 && prog < 0.99;
+
                   return (
                     <g key={t.id}>
                       <path
                         d={d}
                         fill="none"
-                        stroke={GREY}
+                        stroke={settled ? GREY : t.color}
                         strokeWidth="1.2"
                         strokeLinecap="round"
                         pathLength="1"
                         strokeDasharray="1"
-                        strokeDashoffset={vis ? "0" : "1"}
+                        strokeDashoffset={1 - prog}
                         style={{
-                          opacity: 0.28,
-                          transition: `stroke-dashoffset ${mDuration}s cubic-bezier(0.16, 1, 0.3, 1) ${mDelay}s`,
+                          opacity: settled ? 0.28 : 0.6,
+                          transition: settled
+                            ? "stroke 1.5s ease, opacity 1.5s ease"
+                            : "opacity 0.3s ease",
                         }}
                       />
+                      {/* Traveling dot */}
+                      {isDrawing && (() => {
+                        const pos = bezierAt(prog, mOX, mBL, midX, peakY, endX, mBL);
+                        return (
+                          <g>
+                            <circle cx={pos.x} cy={pos.y} r="10" fill={t.color} opacity="0.08" />
+                            <circle cx={pos.x} cy={pos.y} r="3" fill={t.color} opacity="0.8" />
+                          </g>
+                        );
+                      })()}
                       <text
                         x={endX}
                         y={mBL - 6}
                         textAnchor="middle"
                         fontSize="7.5"
-                        fill={GREY}
+                        fill={settled ? GREY : t.color}
                         style={{
-                          opacity: vis ? 0.5 : 0,
-                          transition: `opacity 0.3s ease ${mDelay + mDuration - 0.1}s`,
+                          opacity: prog > 0.9 ? 0.5 : 0,
+                          transition: settled
+                            ? "fill 1.5s ease, opacity 0.3s ease"
+                            : "opacity 0.3s ease",
                         }}
                       >
                         {t.totalYears}
@@ -911,10 +1038,12 @@ export default function CompressionComparison() {
                         y={peakY - 6}
                         textAnchor="middle"
                         fontSize="8"
-                        fill={GREY}
+                        fill={settled ? GREY : t.color}
                         style={{
-                          opacity: vis ? 0.45 : 0,
-                          transition: `opacity 0.4s ease ${mDelay + mDuration * 0.6}s`,
+                          opacity: prog > 0.4 ? 0.45 : 0,
+                          transition: settled
+                            ? "fill 1.5s ease, opacity 0.3s ease"
+                            : "opacity 0.3s ease",
                         }}
                       >
                         {t.name}
@@ -946,10 +1075,9 @@ export default function CompressionComparison() {
                         strokeWidth="1"
                         strokeDasharray="4 3"
                         pathLength="1"
-                        strokeDashoffset={vis ? "0" : "1"}
+                        strokeDashoffset={1 - aiProg}
                         style={{
                           opacity: 0.2,
-                          transition: "stroke-dashoffset 0.4s cubic-bezier(0.08, 0.82, 0.17, 1) 0.12s",
                         }}
                       />
                       {/* Fill */}
@@ -957,11 +1085,11 @@ export default function CompressionComparison() {
                         d={`${lowD} Z`}
                         fill="url(#m-ai-wash)"
                         style={{
-                          opacity: vis ? 1 : 0,
-                          transition: "opacity 0.35s ease 0.15s",
+                          opacity: aiProg > 0.2 ? 1 : 0,
+                          transition: "opacity 0.4s ease",
                         }}
                       />
-                      {/* Main stroke — fires FIRST */}
+                      {/* Main stroke */}
                       <path
                         d={lowD}
                         fill="none"
@@ -970,12 +1098,19 @@ export default function CompressionComparison() {
                         strokeLinecap="round"
                         pathLength="1"
                         strokeDasharray="1"
-                        strokeDashoffset={vis ? "0" : "1"}
-                        style={{
-                          opacity: 0.85,
-                          transition: "stroke-dashoffset 0.35s cubic-bezier(0.08, 0.82, 0.17, 1) 0.08s",
-                        }}
+                        strokeDashoffset={1 - aiProg}
+                        style={{ opacity: 0.85 }}
                       />
+                      {/* Traveling dot */}
+                      {aiProg > 0.01 && aiProg < 0.99 && (() => {
+                        const pos = bezierAt(aiProg, mOX, mBL, lowMid, lowPk, lowEnd, mBL);
+                        return (
+                          <g>
+                            <circle cx={pos.x} cy={pos.y} r="10" fill={ai.color} opacity="0.1" />
+                            <circle cx={pos.x} cy={pos.y} r="3.5" fill={ai.color} opacity="0.85" />
+                          </g>
+                        );
+                      })()}
                       {/* Dot */}
                       <circle
                         cx={lowEnd}
@@ -983,8 +1118,8 @@ export default function CompressionComparison() {
                         r="3.5"
                         fill={ai.color}
                         style={{
-                          opacity: vis ? 0.9 : 0,
-                          transition: "opacity 0.2s ease 0.35s",
+                          opacity: aiProg > 0.95 ? 0.9 : 0,
+                          transition: "opacity 0.3s ease",
                         }}
                       />
                       {/* Label */}
@@ -996,8 +1131,8 @@ export default function CompressionComparison() {
                         fontWeight="700"
                         fill={ai.color}
                         style={{
-                          opacity: vis ? 1 : 0,
-                          transition: "opacity 0.3s ease 0.3s",
+                          opacity: aiProg > 0.5 ? 1 : 0,
+                          transition: "opacity 0.3s ease",
                         }}
                       >
                         AI / LLMs
@@ -1009,8 +1144,8 @@ export default function CompressionComparison() {
                         fontSize="9"
                         fill={ai.color}
                         style={{
-                          opacity: vis ? 0.65 : 0,
-                          transition: "opacity 0.3s ease 0.35s",
+                          opacity: aiProg > 0.6 ? 0.65 : 0,
+                          transition: "opacity 0.3s ease",
                         }}
                       >
                         {ai.totalYears}–{ai.totalYearsHigh} yrs
