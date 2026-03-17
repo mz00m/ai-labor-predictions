@@ -289,7 +289,7 @@ export default function ChatbotBuddy() {
           focus:outline-none focus-visible:ring-2 focus-visible:ring-[#5C61F6] focus-visible:ring-offset-2
           rounded-xl`}
         style={positionStyles.robot}
-        aria-label="Open AI assistant chat"
+        aria-label="Ask Gob — open AI assistant chat"
       >
         {/* Hover glow */}
         <div
@@ -520,7 +520,7 @@ export function ChatTrigger({ onClick }: { onClick: () => void }) {
         <rect x="22" y="2" width="4" height="7" rx="2" fill="white" opacity="0.4" />
         <circle cx="24" cy="2" r="2" fill="white" opacity="0.6" />
       </svg>
-      Ask
+      Ask Gob
     </button>
   );
 }

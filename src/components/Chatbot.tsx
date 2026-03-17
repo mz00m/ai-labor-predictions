@@ -413,7 +413,7 @@ export default function Chatbot({ sourceCount }: ChatbotProps) {
             <MiniRobot speaking={streaming} />
             <div>
               <h3 className="text-[14px] font-semibold">
-                Ask the data
+                Ask Gob
               </h3>
               <p className="text-[11px] text-white/70">
                 {sourceCount ? `${sourceCount}+` : "300+"} sources across 17 predictions
@@ -530,7 +530,7 @@ export default function Chatbot({ sourceCount }: ChatbotProps) {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={handleKeyDown}
-            placeholder="Ask about AI labor data..."
+            placeholder="Ask Gob about AI labor data..."
             rows={1}
             disabled={streaming}
             className="flex-1 resize-none text-[13px] leading-relaxed bg-transparent outline-none placeholder:text-[var(--muted)] disabled:opacity-50 max-h-24 overflow-y-auto"
