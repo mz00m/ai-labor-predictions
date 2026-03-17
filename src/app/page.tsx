@@ -67,7 +67,7 @@ export default function Home() {
             they&apos;re disappearing.
           </p>
           <p className="mt-3 text-[20px] sm:text-[22px] font-bold text-[#2E3650] leading-snug max-w-2xl">
-            No measurable job displacement, <SplitFlapWord />
+            No measurable macro displacement, <SplitFlapWord />
           </p>
 
           {/* Hero data triad — numbers emerge from behind the ticker, dissolve upward */}
