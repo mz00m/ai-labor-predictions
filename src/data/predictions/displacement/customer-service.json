@@ -7,7 +7,7 @@
   "unit": "% of interactions automated",
   "currentValue": 34.7,
   "timeHorizon": "By 2028",
-  "disclaimer": "This chart tracks interaction automation rates, not job elimination. A high automation rate may reduce headcount but does not imply equivalent job loss.",
+  "disclaimer": "Measures interaction automation, not job elimination. Actual headcount effects depend on demand response and service quality. A high automation rate may reduce headcount but does not imply equivalent job loss.",
   "history": [
     {
       "date": "2024-01-20",
