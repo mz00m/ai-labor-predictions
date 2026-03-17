@@ -1,75 +1,36 @@
 "use client";
 
 /**
- * SplitFlapWord — mechanical split-flap (Solari board) display.
+ * SplitFlapWord — a split-flap (Solari board) animation for a single word.
  *
- * Mimics a real train station departure board: each character has a visible
- * top/bottom split with a divider line. Characters drop through with a sharp,
- * mechanical "chka-chka-chka" rhythm — abrupt snaps, not smooth easing.
- *
- * Sequence: "yet." → "expected." → "today." → "ever." → "maybe?"
+ * Cycles: "yet." -> "expected." -> "today." -> "ever." -> "maybe?"
+ * Pauses on "yet.", rapidly flips through middle words, lands on "maybe?"
  */
 
 import { useState, useEffect, useCallback, useRef } from "react";
 
 const WORDS = ["yet.", "expected.", "today.", "ever.", "maybe?"];
 const HOLD_TIMES = [2400, 500, 500, 500, Infinity];
+const FLIP_CHAR_STAGGER = 40;
+const FLIP_DURATION = 220;
+const FLAP_CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!?.abcdefghijklmnopqrstuvwxyz";
 
-// Mechanical timing — sharp, regular intervals like a real board
-const TICK_MS = 55; // Time per flap tick — the "chka" rhythm
-const TICKS_PER_CHAR = 6; // How many flaps each character cycles through
-const CHAR_STAGGER = 15; // ms between columns starting (near-simultaneous, like real boards)
-
-// The alphabet the flaps cycle through (real boards use this order)
-const FLAP_ORDER = " ABCDEFGHIJKLMNOPQRSTUVWXYZ.!?abcdefghijklmnopqrstuvwxyz";
-
-const STYLE_ID = "split-flap-styles";
+// Inject keyframes once
+const STYLE_ID = "split-flap-keyframes";
 function ensureStyles() {
   if (typeof document === "undefined") return;
   if (document.getElementById(STYLE_ID)) return;
   const style = document.createElement("style");
   style.id = STYLE_ID;
   style.textContent = `
-    .sf-cell {
-      display: inline-flex;
-      position: relative;
-      width: 0.62em;
-      height: 1.3em;
-      overflow: hidden;
-      border-radius: 2px;
-      vertical-align: baseline;
-    }
-    .sf-cell-inner {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    /* The horizontal split line — signature of a real flap display */
-    .sf-cell-inner::after {
-      content: '';
-      position: absolute;
-      left: 5%;
-      right: 5%;
-      top: 50%;
-      height: 1px;
-      background: rgba(0,0,0,0.08);
-      pointer-events: none;
-    }
-    /* Flap drop: sharp snap down with a tiny mechanical bounce */
-    @keyframes flapDrop {
-      0%   { transform: translateY(-35%); opacity: 0.3; }
-      60%  { transform: translateY(2%); opacity: 1; }
-      80%  { transform: translateY(-1%); opacity: 1; }
-      100% { transform: translateY(0); opacity: 1; }
-    }
-    .sf-dropping {
-      animation: flapDrop 50ms steps(3, end) forwards;
+    @keyframes splitFlapDown {
+      0%   { transform: perspective(200px) rotateX(0deg); opacity: 1; }
+      35%  { transform: perspective(200px) rotateX(-60deg); opacity: 0.5; }
+      65%  { transform: perspective(200px) rotateX(15deg); opacity: 0.9; }
+      100% { transform: perspective(200px) rotateX(0deg); opacity: 1; }
     }
     @media (prefers-reduced-motion: reduce) {
-      .sf-dropping { animation: none !important; }
+      .split-flap-char { animation: none !important; }
     }
   `;
   document.head.appendChild(style);
@@ -78,7 +39,7 @@ function ensureStyles() {
 export default function SplitFlapWord() {
   const [wordIndex, setWordIndex] = useState(0);
   const [displayChars, setDisplayChars] = useState<string[]>([]);
-  const [dropping, setDropping] = useState<boolean[]>([]);
+  const [flipping, setFlipping] = useState<boolean[]>([]);
   const [settled, setSettled] = useState(true);
   const [reducedMotion, setReducedMotion] = useState(false);
   const timeoutsRef = useRef<ReturnType<typeof setTimeout>[]>([]);
@@ -104,62 +65,52 @@ export default function SplitFlapWord() {
   const flipToWord = useCallback(
     (targetWord: string, prevWord: string) => {
       clearTimeouts();
-
       const maxLen = Math.max(targetWord.length, prevWord.length);
       const padded = targetWord.padEnd(maxLen, " ");
       const prevPadded = prevWord.padEnd(maxLen, " ");
+      const flipState = new Array(maxLen).fill(false);
       const chars = prevPadded.split("");
-      const dropState = new Array(maxLen).fill(false);
 
       setDisplayChars([...chars]);
-      setDropping([...dropState]);
+      setFlipping([...flipState]);
       setSettled(false);
 
-      // Each column flips through TICKS_PER_CHAR characters with a slight stagger
-      for (let col = 0; col < maxLen; col++) {
-        const colDelay = col * CHAR_STAGGER;
+      for (let i = 0; i < maxLen; i++) {
+        const delay = i * FLIP_CHAR_STAGGER;
 
-        for (let tick = 0; tick < TICKS_PER_CHAR; tick++) {
-          const isLast = tick === TICKS_PER_CHAR - 1;
-          const t = setTimeout(() => {
-            // Trigger the drop animation on each tick
-            dropState[col] = true;
-            setDropping([...dropState]);
+        const t1 = setTimeout(() => {
+          flipState[i] = true;
+          setFlipping([...flipState]);
 
-            if (isLast) {
-              // Land on the target character
-              chars[col] = padded[col];
-            } else {
-              // Cycle through random flap characters
-              const ri = Math.floor(Math.random() * FLAP_ORDER.length);
-              chars[col] = FLAP_ORDER[ri];
-            }
+          const cycleCount = 3 + Math.floor(Math.random() * 2);
+          const interval = FLIP_DURATION / (cycleCount + 1);
+
+          for (let c = 0; c < cycleCount; c++) {
+            const t2 = setTimeout(() => {
+              chars[i] = FLAP_CHARS[Math.floor(Math.random() * FLAP_CHARS.length)];
+              setDisplayChars([...chars]);
+            }, interval * (c + 1));
+            timeoutsRef.current.push(t2);
+          }
+
+          const t3 = setTimeout(() => {
+            chars[i] = padded[i];
+            flipState[i] = false;
             setDisplayChars([...chars]);
-
-            // Reset drop state briefly so the next tick re-triggers the animation
-            const resetT = setTimeout(() => {
-              dropState[col] = false;
-              setDropping([...dropState]);
-            }, TICK_MS * 0.6);
-            timeoutsRef.current.push(resetT);
-
-            // Check if entire board has settled
-            if (isLast && col === maxLen - 1) {
-              const finalT = setTimeout(() => {
-                setDisplayChars(padded.trimEnd().split(""));
-                setSettled(true);
-              }, TICK_MS);
-              timeoutsRef.current.push(finalT);
+            setFlipping([...flipState]);
+            if (i === maxLen - 1) {
+              setDisplayChars(padded.trimEnd().split(""));
+              setSettled(true);
             }
-          }, colDelay + tick * TICK_MS);
-          timeoutsRef.current.push(t);
-        }
+          }, FLIP_DURATION);
+          timeoutsRef.current.push(t3);
+        }, delay);
+        timeoutsRef.current.push(t1);
       }
     },
     [clearTimeouts]
   );
 
-  // Sequence controller
   useEffect(() => {
     if (reducedMotion) {
       setDisplayChars(WORDS[WORDS.length - 1].split(""));
@@ -183,18 +134,19 @@ export default function SplitFlapWord() {
   useEffect(() => clearTimeouts, [clearTimeouts]);
 
   return (
-    <span
-      className="inline-flex items-baseline gap-[0.5px]"
-      aria-label={WORDS[WORDS.length - 1]}
-      aria-live="polite"
-    >
+    <span className="inline-flex items-baseline" aria-label={WORDS[WORDS.length - 1]} aria-live="polite">
       {displayChars.map((char, i) => (
-        <span key={i} className="sf-cell" aria-hidden="true">
-          <span className={`sf-cell-inner ${dropping[i] ? "sf-dropping" : ""}`}>
-            <span className="text-[#F66B5C] italic font-bold">
-              {char === " " ? "\u00A0" : char}
-            </span>
-          </span>
+        <span
+          key={i}
+          aria-hidden="true"
+          className="split-flap-char inline-block text-[#F66B5C] italic font-bold"
+          style={{
+            minWidth: char === " " ? "0.15em" : undefined,
+            animation: flipping[i] ? `splitFlapDown ${FLIP_DURATION}ms ease-in-out` : "none",
+            transformOrigin: "center bottom",
+          }}
+        >
+          {char === " " ? "\u00A0" : char}
         </span>
       ))}
     </span>
