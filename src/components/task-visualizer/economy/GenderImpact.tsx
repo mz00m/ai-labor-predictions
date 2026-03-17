@@ -210,7 +210,7 @@ export default function GenderImpact() {
   return (
     <div>
       {/* Manning/Aguirre vulnerability callout */}
-      <div className="bg-[#EC4899]/[0.06] border border-[#EC4899]/20 rounded-xl p-4 mb-6">
+      <div className="callout-card bg-[#EC4899]/[0.06] border border-[#EC4899]/20 rounded-xl p-4 mb-6">
         <p className="text-[13px] font-semibold text-[#EC4899] mb-1">
           Research highlight: Women are 81% of the most vulnerable workers
         </p>
@@ -224,7 +224,7 @@ export default function GenderImpact() {
 
       {/* Big stat cards */}
       <div className="grid grid-cols-1 sm:grid-cols-4 gap-3 mb-8">
-        <div className="rounded-xl bg-black/[0.02] border border-black/[0.06] p-4">
+        <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-black/[0.06] p-4" style={{ animationDelay: "0s" }}>
           <p className="text-[28px] font-bold tracking-tight" style={{ color: GENDER_COLORS.women }}>
             {economyStats.womenPct}%
           </p>
@@ -232,19 +232,19 @@ export default function GenderImpact() {
             of workforce is women ({(economyStats.totalWomen / 1000).toFixed(1)}M)
           </p>
         </div>
-        <div className="rounded-xl bg-black/[0.02] border border-black/[0.06] p-4">
+        <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-black/[0.06] p-4" style={{ animationDelay: "0.08s" }}>
           <p className="text-[28px] font-bold tracking-tight" style={{ color: GENDER_COLORS.women }}>
             {economyStats.womenAvgAuto}%
           </p>
           <p className="text-[11px] text-[var(--muted)]">Avg task automation for women by 2030</p>
         </div>
-        <div className="rounded-xl bg-black/[0.02] border border-black/[0.06] p-4">
+        <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-black/[0.06] p-4" style={{ animationDelay: "0.16s" }}>
           <p className="text-[28px] font-bold tracking-tight" style={{ color: GENDER_COLORS.men }}>
             {economyStats.menAvgAuto}%
           </p>
           <p className="text-[11px] text-[var(--muted)]">Avg task automation for men by 2030</p>
         </div>
-        <div className="rounded-xl bg-black/[0.02] border border-black/[0.06] p-4">
+        <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-black/[0.06] p-4" style={{ animationDelay: "0.24s" }}>
           <p className="text-[28px] font-bold tracking-tight text-[var(--foreground)]">
             {economyStats.gap > 0 ? "+" : ""}{economyStats.gap}pp
           </p>
@@ -352,7 +352,7 @@ export default function GenderImpact() {
                 return (
                 <tr
                   key={g.shortTitle}
-                  className={`border-b border-black/[0.03] hover:bg-black/[0.02] ${clickable ? "cursor-pointer" : ""}`}
+                  className={`border-b border-black/[0.03] ${clickable ? "nav-row cursor-pointer" : "hover:bg-black/[0.02]"}`}
                   onClick={clickable ? () => router.push(`/task-visualizer?job=${jobIds[0]}`) : undefined}
                 >
                   <td className="py-2 pr-3 font-medium">
@@ -400,7 +400,7 @@ export default function GenderImpact() {
             const meta = INCOME_TIER_META[td.tier];
             const gapInTier = td.womenAvgAutomation2030 - td.menAvgAutomation2030;
             return (
-              <div key={td.tier} className="rounded-xl border border-black/[0.06] p-4">
+              <div key={td.tier} className="gender-tier-card rounded-xl border border-black/[0.06] p-4">
                 <div className="flex items-center justify-between mb-3">
                   <div>
                     <h5 className="text-[13px] font-semibold" style={{ color: meta.color }}>

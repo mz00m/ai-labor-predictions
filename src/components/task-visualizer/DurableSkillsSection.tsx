@@ -16,6 +16,7 @@ import {
   TaskCategory,
   calculateCrossoverYear,
 } from "@/data/job-tasks";
+import { useCountUp } from "@/hooks/useCountUp";
 
 interface DurableSkillsSectionProps {
   selectedJob: JobProfile | null;
@@ -147,6 +148,11 @@ function SkillIcon({ type }: { type: string }) {
   }
 }
 
+function AnimatedPercent({ value }: { value: number }) {
+  const animated = useCountUp(value, 800);
+  return <>{animated}</>;
+}
+
 export default function DurableSkillsSection({
   selectedJob,
   adjustedShares,
@@ -224,9 +230,9 @@ export default function DurableSkillsSection({
       {/* Hero stat + radar chart side by side when job selected */}
       {selectedJob && radarData && (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-          <div className="rounded-xl bg-black/[0.02] border border-black/[0.06] p-6">
-            <p className="text-[28px] font-bold text-[#10B981] tracking-tight leading-none">
-              {durablePercent}%
+          <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-black/[0.06] p-6">
+            <p className="text-[28px] font-bold text-[#10B981] tracking-tight leading-none tabular-nums">
+              <AnimatedPercent value={durablePercent} />%
             </p>
             <p className="text-[14px] text-[var(--foreground)] font-medium mt-2">
               of your time is on tasks with strong human advantage
@@ -274,10 +280,11 @@ export default function DurableSkillsSection({
 
       {/* Durable skill cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {relevantSkills.map((skill) => (
+        {relevantSkills.map((skill, i) => (
           <div
             key={skill.id}
-            className="skill-card rounded-xl border border-black/[0.06] p-4"
+            className="skill-card stagger-enter rounded-xl border border-black/[0.06] p-4"
+            style={{ animationDelay: `${i * 0.08}s` }}
           >
             <div className="flex items-center gap-2 mb-2">
               <div className="skill-icon text-[#10B981]">
@@ -295,7 +302,7 @@ export default function DurableSkillsSection({
       </div>
 
       {/* Closing message */}
-      <div className="mt-8 rounded-xl bg-black/[0.02] border border-black/[0.06] p-6 max-w-2xl">
+      <div className="closing-message mt-8 rounded-xl bg-black/[0.02] border border-black/[0.06] p-6 max-w-2xl">
         <p className="text-[13px] text-[var(--foreground)] leading-relaxed">
           <strong>The bottom line:</strong> AI will automate tasks, not jobs. The professionals who thrive will
           be the ones who deliberately shift their time toward the tasks that are hardest to automate

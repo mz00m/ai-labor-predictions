@@ -239,7 +239,7 @@ export default function ComputeCostChart({
             <button
               key={task.id}
               onClick={() => toggleTask(task.id)}
-              className="text-[11px] font-medium px-2.5 py-1 rounded-full border transition-colors"
+              className="task-pill text-[11px] font-medium px-2.5 py-1 rounded-full border"
               style={{
                 borderColor: isSelected ? color : "rgba(0,0,0,0.08)",
                 backgroundColor: isSelected ? `${color}12` : "transparent",

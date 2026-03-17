@@ -117,10 +117,10 @@ export default function IncomeStrataImpact() {
       {tierDetails.map((detail) => {
         const meta = INCOME_TIER_META[detail.tier];
         return (
-          <div key={detail.tier} className="rounded-xl border border-black/[0.06] overflow-hidden">
+          <div key={detail.tier} className="stagger-enter rounded-xl border border-black/[0.06] overflow-hidden" style={{ animationDelay: `${["low","middle","high"].indexOf(detail.tier) * 0.12}s` }}>
             {/* Tier header */}
             <div
-              className="px-5 py-4 border-b border-black/[0.06]"
+              className="tier-header-enter px-5 py-4 border-b border-black/[0.06]"
               style={{ backgroundColor: `${meta.color}08` }}
             >
               <div className="flex items-center justify-between">
@@ -147,11 +147,12 @@ export default function IncomeStrataImpact() {
                   {(Object.entries(detail.avgTaskMix) as [TaskCategory, number][])
                     .filter(([, v]) => v >= 0.02)
                     .sort((a, b) => b[1] - a[1])
-                    .map(([cat, share]) => (
+                    .map(([cat, share], segIdx) => (
                       <div
                         key={cat}
-                        className="h-full"
+                        className="composition-segment h-full"
                         style={{
+                          animationDelay: `${segIdx * 0.06}s`,
                           width: `${share * 100}%`,
                           backgroundColor: TASK_CATEGORY_META[cat].color,
                           opacity: 0.7,
@@ -201,7 +202,7 @@ export default function IncomeStrataImpact() {
                     return (
                     <tr
                       key={g.shortTitle}
-                      className={`border-b border-black/[0.03] hover:bg-black/[0.02] ${clickable ? "cursor-pointer" : ""}`}
+                      className={`border-b border-black/[0.03] ${clickable ? "nav-row cursor-pointer" : "hover:bg-black/[0.02]"}`}
                       onClick={clickable ? () => router.push(`/task-visualizer?job=${jobIds[0]}`) : undefined}
                     >
                       <td className="py-2 px-4 font-medium">

@@ -144,7 +144,7 @@ export default function AdaptiveCapacity() {
     <div>
       {/* Headline stats */}
       <div className="grid grid-cols-1 sm:grid-cols-4 gap-3 mb-8">
-        <div className="rounded-xl bg-black/[0.02] border border-black/[0.06] p-4">
+        <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-black/[0.06] p-4" style={{ animationDelay: "0s" }}>
           <p className="text-[28px] font-bold tracking-tight text-[var(--foreground)]">
             r = 0.50
           </p>
@@ -152,7 +152,7 @@ export default function AdaptiveCapacity() {
             AI exposure and adaptive capacity are positively correlated
           </p>
         </div>
-        <div className="rounded-xl bg-black/[0.02] border border-black/[0.06] p-4">
+        <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-black/[0.06] p-4" style={{ animationDelay: "0.08s" }}>
           <p className="text-[28px] font-bold tracking-tight text-[#10B981]">
             71%
           </p>
@@ -160,7 +160,7 @@ export default function AdaptiveCapacity() {
             of highly-exposed workers have above-median adaptability
           </p>
         </div>
-        <div className="rounded-xl bg-black/[0.02] border border-black/[0.06] p-4">
+        <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-black/[0.06] p-4" style={{ animationDelay: "0.16s" }}>
           <p className="text-[28px] font-bold tracking-tight text-[#EF4444]">
             6.1M
           </p>
@@ -168,7 +168,7 @@ export default function AdaptiveCapacity() {
             workers with high exposure + low adaptability
           </p>
         </div>
-        <div className="rounded-xl bg-black/[0.02] border border-black/[0.06] p-4">
+        <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-black/[0.06] p-4" style={{ animationDelay: "0.24s" }}>
           <p className="text-[28px] font-bold tracking-tight text-[#EC4899]">
             81%
           </p>
@@ -286,16 +286,16 @@ export default function AdaptiveCapacity() {
 
         {/* Quadrant labels */}
         <div className="grid grid-cols-2 gap-4 mt-2 text-[11px]">
-          <div className="text-right text-[var(--muted)]">
+          <div className="quadrant-label text-right text-[var(--muted)]">
             Low exposure, high adaptability
           </div>
-          <div className="text-left text-[#10B981] font-medium">
+          <div className="quadrant-label text-left text-[#10B981] font-medium">
             High exposure, high adaptability
           </div>
-          <div className="text-right text-[#F59E0B]">
+          <div className="quadrant-label text-right text-[#F59E0B]">
             Low exposure, low adaptability
           </div>
-          <div className="text-left text-[#EF4444] font-medium">
+          <div className="quadrant-label text-left text-[#EF4444] font-medium">
             High exposure, LOW adaptability
           </div>
         </div>
@@ -330,7 +330,7 @@ export default function AdaptiveCapacity() {
                   return (
                     <tr
                       key={g.id}
-                      className={`border-b border-black/[0.03] hover:bg-black/[0.02] ${clickable ? "cursor-pointer" : ""}`}
+                      className={`border-b border-black/[0.03] ${clickable ? "nav-row cursor-pointer" : "hover:bg-black/[0.02]"}`}
                       onClick={clickable ? () => router.push(`/task-visualizer?job=${jobIds[0]}`) : undefined}
                     >
                       <td className="py-2 pr-3 font-medium text-[var(--foreground)]">{g.shortTitle}</td>

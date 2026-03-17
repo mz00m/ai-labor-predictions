@@ -61,7 +61,7 @@ export default function TaskSliders({
             <div className="flex items-center justify-between mb-1">
               <div className="flex items-center gap-2 min-w-0">
                 <div
-                  className="w-2 h-2 rounded-full shrink-0"
+                  className={`w-2 h-2 rounded-full shrink-0 ${crossover !== null && crossover <= 2026 ? "risk-dot-pulse" : ""}`}
                   style={{ backgroundColor: risk.color }}
                 />
                 <span className="text-[13px] font-medium text-[var(--foreground)] truncate">
