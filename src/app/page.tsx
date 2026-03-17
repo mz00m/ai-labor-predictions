@@ -5,6 +5,7 @@ import FeaturedReads from "@/components/FeaturedReads";
 import FunnelStrip from "@/components/FunnelStrip";
 import SectionBar from "@/components/SectionBar";
 import HeroTriad from "@/components/HeroTriad";
+import SplitFlapWord from "@/components/SplitFlapWord";
 import ScrollReveal from "@/components/ScrollReveal";
 import {
   PredictionsWatermark,
@@ -66,7 +67,7 @@ export default function Home() {
             they&apos;re disappearing.
           </p>
           <p className="mt-3 text-[20px] sm:text-[22px] font-bold text-[#2E3650] leading-snug max-w-2xl">
-            No measurable macro displacement, <span className="text-[#F66B5C] italic">yet.</span>
+            No measurable macro displacement, <SplitFlapWord />
           </p>
 
           {/* Hero data triad — numbers emerge from behind the ticker, dissolve upward */}
