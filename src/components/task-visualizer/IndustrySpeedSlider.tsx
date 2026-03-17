@@ -104,7 +104,7 @@ export default function IndustrySpeedSlider({
           <button
             key={preset.value}
             onClick={() => onChange(preset.value)}
-            className={`text-[9px] transition-colors ${
+            className={`speed-preset text-[9px] transition-colors ${
               Math.abs(value - preset.value) < 0.03
                 ? "text-[var(--foreground)] font-medium"
                 : "text-[var(--muted)] opacity-50 hover:opacity-100"

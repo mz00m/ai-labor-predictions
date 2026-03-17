@@ -75,7 +75,7 @@ export default function FocusRecommendations({
   return (
     <div className="space-y-5">
       {/* Summary stat */}
-      <div className="rounded-xl bg-black/[0.02] border border-black/[0.06] p-4">
+      <div className="exposure-score rounded-xl bg-black/[0.02] border border-black/[0.06] p-4">
         <div className="flex items-baseline gap-2">
           <span className="text-[28px] font-bold text-[#EF4444] tracking-tight">
             {automatedSharePercent}%
@@ -100,7 +100,7 @@ export default function FocusRecommendations({
             {atRisk.map(({ task, share }: AnalyzedTask) => (
               <div
                 key={task.id}
-                className="flex items-center justify-between py-1.5 px-3 rounded-lg bg-black/[0.02]"
+                className="focus-row flex items-center justify-between py-1.5 px-3 rounded-lg bg-black/[0.02]"
               >
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-[#EF4444]" />
@@ -129,7 +129,7 @@ export default function FocusRecommendations({
             {augment.map(({ task, share }: AnalyzedTask) => (
               <div
                 key={task.id}
-                className="flex items-center justify-between py-1.5 px-3 rounded-lg bg-black/[0.02]"
+                className="focus-row flex items-center justify-between py-1.5 px-3 rounded-lg bg-black/[0.02]"
               >
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-[#6366F1]" />
@@ -158,7 +158,7 @@ export default function FocusRecommendations({
             {invest.map(({ task, share }: AnalyzedTask) => (
               <div
                 key={task.id}
-                className="flex items-center justify-between py-1.5 px-3 rounded-lg bg-black/[0.02]"
+                className="focus-row flex items-center justify-between py-1.5 px-3 rounded-lg bg-black/[0.02]"
               >
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-[#10B981]" />
@@ -194,7 +194,7 @@ export default function FocusRecommendations({
             </div>
           </div>
           {highVulnerability && (
-            <div className="bg-[#EF4444]/[0.06] border border-[#EF4444]/20 rounded-lg px-3 py-2 mb-2">
+            <div className="vulnerability-warning bg-[#EF4444]/[0.06] border border-[#EF4444]/20 rounded-lg px-3 py-2 mb-2">
               <p className="text-[11px] text-[#EF4444] font-medium">
                 High vulnerability: this occupation combines high AI exposure with low adaptive capacity
               </p>

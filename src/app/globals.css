@@ -621,6 +621,201 @@ a, button, [role="button"], input, label {
   }
 }
 
+/* ==== Task Visualizer microinteractions ==== */
+
+/* Category card in job picker grid */
+.category-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.15s ease;
+}
+.category-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Category chevron rotation */
+.category-chevron {
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Job list items within expanded category */
+.job-item {
+  transition: background-color 0.12s ease, padding-left 0.15s ease;
+}
+.job-item:hover {
+  padding-left: 6px;
+}
+
+/* Tab bar buttons */
+.viz-tab {
+  transition: color 0.15s ease, border-color 0.2s ease;
+  position: relative;
+}
+.viz-tab::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transition: transform 0.2s ease;
+}
+.viz-tab[data-active="true"]::after {
+  transform: scaleX(1);
+}
+
+/* Exposure score badge */
+@keyframes score-pop {
+  0% { transform: scale(0.85); opacity: 0; }
+  60% { transform: scale(1.05); }
+  100% { transform: scale(1); opacity: 1; }
+}
+.exposure-score {
+  animation: score-pop 0.4s ease-out;
+}
+
+/* Focus recommendation rows */
+.focus-row {
+  transition: transform 0.15s ease, background-color 0.12s ease;
+}
+.focus-row:hover {
+  transform: translateX(3px);
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+/* Timeline bar animation */
+@keyframes bar-grow-right {
+  from { width: 0; }
+}
+.timeline-bar {
+  animation: bar-grow-right 0.6s ease-out both;
+}
+
+/* Durable skill card */
+.skill-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.skill-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.08);
+  border-color: rgba(16, 185, 129, 0.3);
+}
+.skill-icon {
+  transition: transform 0.3s ease;
+}
+.skill-card:hover .skill-icon {
+  transform: scale(1.15);
+}
+
+/* Stat card in economy overview */
+.stat-card-toggle {
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+}
+.stat-card-toggle:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.stat-card-toggle:active {
+  transform: scale(0.98);
+}
+
+/* Search dropdown item hover */
+.search-result-item {
+  transition: background-color 0.1s ease, padding-left 0.15s ease;
+}
+.search-result-item:hover {
+  padding-left: 18px;
+}
+
+/* Speed preset button */
+.speed-preset {
+  transition: color 0.15s ease, transform 0.1s ease;
+}
+.speed-preset:hover {
+  transform: scale(1.1);
+}
+.speed-preset:active {
+  transform: scale(0.95);
+}
+
+/* Slider custom thumb styling */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid currentColor;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+input[type="range"]::-webkit-slider-thumb:active {
+  transform: scale(1.1);
+}
+input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid currentColor;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+input[type="range"]::-moz-range-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Vulnerability warning shake */
+@keyframes subtle-shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-2px); }
+  75% { transform: translateX(2px); }
+}
+.vulnerability-warning {
+  animation: subtle-shake 0.4s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .category-card:hover,
+  .skill-card:hover,
+  .stat-card-toggle:hover {
+    transform: none;
+  }
+  .focus-row:hover {
+    transform: none;
+  }
+  .skill-card:hover .skill-icon {
+    transform: none;
+  }
+  .exposure-score {
+    animation: none;
+  }
+  .timeline-bar {
+    animation: none;
+  }
+  .vulnerability-warning {
+    animation: none;
+  }
+  input[type="range"]::-webkit-slider-thumb:hover {
+    transform: none;
+  }
+  .speed-preset:hover, .speed-preset:active {
+    transform: none;
+  }
+  .search-result-item:hover, .job-item:hover {
+    padding-left: revert;
+  }
+}
+
 /* Easter egg: flip toast slide-in */
 @keyframes flip-toast-in {
   from {

@@ -180,7 +180,7 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
                   <button
                     key={job.id}
                     onClick={() => handleSelectJob(job)}
-                    className="w-full text-left px-4 py-2.5 hover:bg-black/[0.02] transition-colors flex items-center gap-2"
+                    className="search-result-item w-full text-left px-4 py-2.5 hover:bg-black/[0.02] flex items-center gap-2"
                   >
                     <span
                       className="w-2 h-2 rounded-full shrink-0"
@@ -222,7 +222,7 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
               return (
                 <div
                   key={category}
-                  className={`rounded-lg border transition-all ${isExpanded ? "col-span-3 sm:col-span-3 lg:col-span-5" : ""}`}
+                  className={`category-card rounded-lg border ${isExpanded ? "col-span-3 sm:col-span-3 lg:col-span-5" : ""}`}
                   style={{
                     backgroundColor: `hsla(${hue}, 40%, 97%, 1)`,
                     borderColor: isExpanded ? `hsla(${hue}, 30%, 75%, 1)` : `hsla(${hue}, 30%, 88%, 1)`,
@@ -242,7 +242,7 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
                       </span>
                     </p>
                     <svg
-                      className={`w-3.5 h-3.5 transition-transform ${isExpanded ? "rotate-180" : ""}`}
+                      className={`category-chevron w-3.5 h-3.5 ${isExpanded ? "rotate-180" : ""}`}
                       style={{ color: `hsla(${hue}, 25%, 55%, 1)` }}
                       fill="none"
                       viewBox="0 0 24 24"
@@ -258,7 +258,7 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
                         <button
                           key={job.id}
                           onClick={() => handleSelectJob(job)}
-                          className="text-left text-[12px] py-1.5 px-2 rounded-md hover:bg-black/[0.05] text-[var(--foreground)] transition-colors"
+                          className="job-item text-left text-[12px] py-1.5 px-2 rounded-md hover:bg-black/[0.05] text-[var(--foreground)]"
                         >
                           {job.title}
                         </button>
@@ -297,7 +297,7 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
                 {selectedJob.category} · ${selectedJob.medianWagePerHr}/hr median wage (BLS) · {selectedJob.tasks.length} tasks
               </p>
             </div>
-            <div className="text-center px-5 py-3 rounded-xl bg-black/[0.02] border border-black/[0.06]">
+            <div className="exposure-score text-center px-5 py-3 rounded-xl bg-black/[0.02] border border-black/[0.06]">
               <p
                 className="text-[28px] font-bold tracking-tight"
                 style={{
@@ -351,7 +351,8 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
                   <button
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id)}
-                    className={`text-[12px] font-medium px-3 py-2 border-b-2 transition-colors ${
+                    data-active={activeTab === tab.id}
+                    className={`viz-tab text-[12px] font-medium px-3 py-2 border-b-2 ${
                       activeTab === tab.id
                         ? "border-[var(--accent)] text-[var(--foreground)]"
                         : "border-transparent text-[var(--muted)] hover:text-[var(--foreground)]"

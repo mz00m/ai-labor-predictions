@@ -82,15 +82,16 @@ export default function EconomyVisualizerClient() {
   return (
     <div>
       {/* Section tabs */}
-      <div className="flex gap-1 mb-8 border-b border-black/[0.06] overflow-x-auto">
+      <div className="flex gap-1 mb-8 overflow-x-auto">
         {SECTIONS.map((section) => (
           <button
             key={section.id}
             onClick={() => setActiveSection(section.id)}
-            className={`shrink-0 text-[12px] font-medium px-4 py-2.5 border-b-2 transition-colors ${
+            data-active={activeSection === section.id || undefined}
+            className={`viz-tab shrink-0 text-[12px] font-medium px-4 py-2.5 transition-colors ${
               activeSection === section.id
-                ? "border-[var(--accent)] text-[var(--foreground)]"
-                : "border-transparent text-[var(--muted)] hover:text-[var(--foreground)]"
+                ? "text-[var(--foreground)]"
+                : "text-[var(--muted)] hover:text-[var(--foreground)]"
             }`}
           >
             {section.label}
