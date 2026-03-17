@@ -495,6 +495,15 @@
       "label": "Stanford/ADP: 6% employment decline for ages 22-25 in AI-exposed jobs"
     },
     {
+      "date": "2025-09-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "brynjolfsson-hitzig-ai-knowledge-centralization-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER (Brynjolfsson/Hitzig): AI centralizes decisions; countervailing forces limit scope"
+    },
+    {
       "date": "2025-09-08",
       "direction": "neutral",
       "sourceIds": [
@@ -1709,6 +1718,16 @@
       "evidenceTier": 1,
       "datePublished": "2026-03-16",
       "excerpt": "An event study documents an accelerating decline in employment of 22–25-year-olds in high-AI-exposure occupations, reaching 5.5 per cent by early 2025 relative to less exposed occupations within the same employers, while employment of workers over 50 rose by 1.3 per cent.",
+      "dateAdded": "2026-03-17"
+    },
+    {
+      "id": "brynjolfsson-hitzig-ai-knowledge-centralization-2025",
+      "title": "AI's Use of Knowledge in Society",
+      "url": "https://www.nber.org/system/files/chapters/c15303/c15303.pdf",
+      "publisher": "NBER (Brynjolfsson, Hitzig)",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-01",
+      "excerpt": "In the absence of active countermeasures, transformative AI may lead to significantly more centralization of decision-making. Some types of information might defy codification, and some types of information processing might be better done locally.",
       "dateAdded": "2026-03-17"
     }
   ]
