@@ -239,6 +239,15 @@
       "url": "https://www.vox.com/future-perfect/482460/ai-jobs-automation-meaning-work",
       "takeaway": "Explores how AI automation extends beyond job displacement to challenge deeper questions about work's role in identity, purpose, and social meaning.",
       "tier": 3
+    },
+    {
+      "title": "Can advanced AI lead to negative economic growth?",
+      "author": "Alex Imas",
+      "publisher": "Ghosts of Electricity (Substack)",
+      "date": "2026-01-07",
+      "url": "https://aleximas.substack.com/p/will-advanced-ai-lead-to-negative",
+      "takeaway": "Formal models show AGI-driven demand collapse is theoretically possible if labor share collapses and capital owners are satiated, but conditions are extreme. Benzell et al.'s OLG model shows 'immiserating growth' via capital decumulation when wages fall and savings decline. Imas concludes negative growth is unlikely but demand-side forces will moderate AGI growth expectations. Recommends sovereign wealth funds for broad capital ownership.",
+      "tier": 4
     }
   ]
 }
