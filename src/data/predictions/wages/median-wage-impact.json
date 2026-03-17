@@ -384,6 +384,13 @@
       ],
       "evidenceTier": 3,
       "label": "Yale (Restrepo): Automation targets above-median wage tasks, amplifying losses"
+    },
+    {
+      "date": "2026-01-07",
+      "direction": "down",
+      "sourceIds": ["imas-demand-collapse-ai-2026"],
+      "evidenceTier": 4,
+      "label": "Imas (citing Benzell et al): Model shows 25% wage decline under full automation with low savings"
     }
   ],
   "sources": [
@@ -742,6 +749,16 @@
       "evidenceTier": 3,
       "datePublished": "2026-03-17",
       "excerpt": "In research forthcoming in the Quarterly Journal of Economics, they examine how automation often targets tasks that pay workers wages above their outside options. When those tasks are automated, those wage 'rents' disappear, amplifying wage losses and contributing to rising inequality.",
+      "dateAdded": "2026-03-17"
+    },
+    {
+      "id": "imas-demand-collapse-ai-2026",
+      "title": "Can advanced AI lead to negative economic growth?",
+      "url": "https://aleximas.substack.com/p/will-advanced-ai-lead-to-negative",
+      "publisher": "Ghosts of Electricity (Alex Imas, Substack)",
+      "evidenceTier": 4,
+      "datePublished": "2026-01-07",
+      "excerpt": "wages fall by 25%, and long-run welfare drops by 16.5%",
       "dateAdded": "2026-03-17"
     }
   ]
