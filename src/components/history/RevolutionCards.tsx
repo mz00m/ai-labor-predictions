@@ -1,6 +1,43 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+
+/** Inline SVG icons for each revolution — precise, geometric */
+function RevolutionIcon({ id, color, size = 16 }: { id: string; color: string; size?: number }) {
+  const s = size / 24;
+  const icons: Record<string, JSX.Element> = {
+    steam: (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <g transform={`scale(${s})`}>
+          <circle cx="12" cy="12" r="3" stroke={color} strokeWidth="1.8"/>
+          <path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke={color} strokeWidth="1.8" strokeLinecap="round"/>
+        </g>
+      </svg>
+    ),
+    combustion: (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M12 2c.5 3.5-1.5 5-1.5 5C12.5 9 14 8.5 14 11c0 2-1.5 3-3 3s-3-1-3-3c0-3 2-5 4-9z" stroke={color} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M12 22c4 0 7-2.5 7-6 0-4.5-3.5-7-3.5-7s0 2.5-1.5 4c0 0 1.5-1 1.5-3.5 0-2-2-3.5-3.5-6-1.5 2.5-3.5 4-3.5 6 0 2.5 1.5 3.5 1.5 3.5-1.5-1.5-1.5-4-1.5-4S5 11.5 5 16c0 3.5 3 6 7 6z" stroke={color} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+    ),
+    electricity: (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke={color} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+    ),
+    computers: (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <rect x="4" y="4" width="16" height="16" rx="2" stroke={color} strokeWidth="1.8"/>
+        <rect x="9" y="9" width="6" height="6" rx="1" stroke={color} strokeWidth="1.8"/>
+        <line x1="9" y1="1" x2="9" y2="4" stroke={color} strokeWidth="1.8" strokeLinecap="round"/>
+        <line x1="15" y1="1" x2="15" y2="4" stroke={color} strokeWidth="1.8" strokeLinecap="round"/>
+        <line x1="9" y1="20" x2="9" y2="23" stroke={color} strokeWidth="1.8" strokeLinecap="round"/>
+        <line x1="15" y1="20" x2="15" y2="23" stroke={color} strokeWidth="1.8" strokeLinecap="round"/>
+      </svg>
+    ),
+  };
+  return icons[id] ?? null;
+}
 
 interface Revolution {
   id: string;
@@ -105,6 +142,28 @@ const REVOLUTIONS: Revolution[] = [
 
 export default function RevolutionCards() {
   const [activeTab, setActiveTab] = useState("electricity");
+  const [animating, setAnimating] = useState(false);
+  const contentRef = useRef<HTMLDivElement>(null);
+  const reducedMotion = useRef(false);
+
+  useEffect(() => {
+    reducedMotion.current =
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  }, []);
+
+  const handleTabChange = (id: string) => {
+    if (id === activeTab || reducedMotion.current) {
+      setActiveTab(id);
+      return;
+    }
+    setAnimating(true);
+    // Quick fade out, swap, fade in
+    setTimeout(() => {
+      setActiveTab(id);
+      setTimeout(() => setAnimating(false), 30);
+    }, 150);
+  };
 
   const active = REVOLUTIONS.find((r) => r.id === activeTab)!;
 
@@ -115,8 +174,8 @@ export default function RevolutionCards() {
         {REVOLUTIONS.map((r) => (
           <button
             key={r.id}
-            onClick={() => setActiveTab(r.id)}
-            className={`revolution-tab px-2.5 py-1.5 rounded-md text-[11px] sm:text-[12px] font-medium border whitespace-nowrap cursor-pointer ${
+            onClick={() => handleTabChange(r.id)}
+            className={`revolution-tab flex items-center gap-1.5 px-2.5 py-1.5 rounded-md text-[11px] sm:text-[12px] font-medium border whitespace-nowrap cursor-pointer ${
               activeTab === r.id
                 ? "text-white border-transparent"
                 : "text-[var(--muted)] border-black/[0.08] hover:border-black/[0.15] bg-white"
@@ -127,8 +186,13 @@ export default function RevolutionCards() {
                 : undefined
             }
           >
+            <RevolutionIcon
+              id={r.id}
+              color={activeTab === r.id ? "#ffffff" : r.color}
+              size={14}
+            />
             {r.closestAnalog && activeTab === r.id && (
-              <span className="mr-1">&#11088;</span>
+              <span className="mr-0.5">&#11088;</span>
             )}
             {r.title}
             <span className="ml-1 opacity-70 hidden lg:inline">{r.period}</span>
@@ -146,26 +210,43 @@ export default function RevolutionCards() {
           className="px-5 py-3 flex items-center justify-between"
           style={{ backgroundColor: active.colorLight }}
         >
-          <div>
-            <h3
-              className="text-[15px] font-bold"
-              style={{ color: active.color }}
+          <div className="flex items-center gap-3">
+            <div
+              className="revolution-header-icon flex items-center justify-center w-9 h-9 rounded-lg"
+              style={{ backgroundColor: `${active.color}15` }}
             >
-              {active.title}
-              {active.closestAnalog && (
-                <span className="ml-2 text-[11px] font-semibold bg-white/80 px-2 py-0.5 rounded-full">
-                  Closest AI Analog
-                </span>
-              )}
-            </h3>
-            <span className="text-[12px] text-[var(--muted)]">
-              {active.period}
-            </span>
+              <RevolutionIcon id={active.id} color={active.color} size={20} />
+            </div>
+            <div>
+              <h3
+                className="text-[15px] font-bold"
+                style={{ color: active.color }}
+              >
+                {active.title}
+                {active.closestAnalog && (
+                  <span className="ml-2 text-[11px] font-semibold bg-white/80 px-2 py-0.5 rounded-full">
+                    Closest AI Analog
+                  </span>
+                )}
+              </h3>
+              <span className="text-[12px] text-[var(--muted)]">
+                {active.period}
+              </span>
+            </div>
           </div>
         </div>
 
         {/* Content */}
-        <div className="revolution-content p-5 space-y-4" key={active.id}>
+        <div
+          ref={contentRef}
+          className="revolution-content p-5 space-y-4"
+          key={active.id}
+          style={{
+            opacity: animating ? 0 : 1,
+            transform: animating ? "translateY(6px)" : "translateY(0)",
+            transition: "opacity 0.2s ease, transform 0.2s ease",
+          }}
+        >
           <Row label="The Innovation" value={active.innovation} />
           <Row label="What It Automated" value={active.automated} />
           <Row label="Jobs Destroyed" value={active.destroyed} />

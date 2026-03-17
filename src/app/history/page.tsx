@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 
 export default function HistoryPageRoute() {
   return (
-    <main className="px-6 sm:px-10 py-8 sm:py-12 max-w-5xl mx-auto">
+    <main className="px-6 sm:px-10 py-8 sm:py-12 max-w-6xl mx-auto">
       <HistoryPage />
     </main>
   );

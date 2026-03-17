@@ -1089,3 +1089,40 @@ input[type="range"]::-moz-range-thumb:hover {
     transform: none;
   }
 }
+
+/* GPT Timeline phase node pulse ring — fires once on hover */
+@keyframes phase-ring-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(92, 97, 246, 0.4); }
+  100% { box-shadow: 0 0 0 12px rgba(92, 97, 246, 0); }
+}
+
+/* Metric card subtle lift on hover */
+.metric-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.metric-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+/* Revolution header icon gentle rotation on tab switch */
+.revolution-header-icon {
+  transition: transform 0.3s ease;
+}
+.revolution-tab:hover ~ .revolution-header-icon,
+.revolution-header-icon:hover {
+  transform: rotate(8deg);
+}
+
+/* Reduced motion: disable history page animations */
+@media (prefers-reduced-motion: reduce) {
+  .phase-pulse-ring {
+    animation: none !important;
+  }
+  .metric-card:hover {
+    transform: none;
+  }
+  .revolution-header-icon {
+    transition: none;
+  }
+}

@@ -11,7 +11,7 @@ import DiffusionComparison from "./DiffusionComparison";
 
 export default function HistoryPage() {
   return (
-    <article className="max-w-[740px] mx-auto">
+    <article className="max-w-[960px] mx-auto">
       {/* ───── Header ───── */}
       <header className="mb-10">
         <p className="text-[12px] font-bold uppercase tracking-widest text-[var(--accent)] mb-4">

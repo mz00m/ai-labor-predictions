@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useCountUp } from "@/hooks/useCountUp";
+import { useInView } from "@/hooks/useInView";
 
 /* ------------------------------------------------------------------ */
 /*  Data                                                               */
@@ -82,14 +84,14 @@ const TRANSITIONS: Transition[] = [
 /*  Layout constants                                                   */
 /* ------------------------------------------------------------------ */
 
-const W = 820;
-const BL = 340; // baseline y
-const OX = 60; // origin x
-const EX = 785; // end x
+const W = 1050;
+const BL = 360; // baseline y
+const OX = 80; // origin x
+const EX = 1010; // end x
 const TW = EX - OX; // timeline pixel width
-const MAX_H = 280; // max arc height (Steam)
-const VB_TOP = 150; // viewBox y offset — crops empty space above arcs
-const VB_H = 245; // viewBox height (150 → 395)
+const MAX_H = 310; // max arc height (Steam)
+const VB_TOP = 130; // viewBox y offset — crops empty space above arcs
+const VB_H = 290; // viewBox height
 const GREY = "#b4b9c4"; // background arc color
 
 function xOf(yr: number) {
@@ -97,6 +99,160 @@ function xOf(yr: number) {
 }
 function hOf(yr: number) {
   return (yr / MAX_YEARS) * MAX_H;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Technology icons — crisp inline SVGs at arc peaks                  */
+/* ------------------------------------------------------------------ */
+function TechIcon({ id, x, y, color, active, vis, delay }: {
+  id: string; x: number; y: number; color: string;
+  active: boolean; vis: boolean; delay: number;
+}) {
+  const size = active ? 28 : 20;
+  const half = size / 2;
+  const iconColor = active ? color : GREY;
+  const opacity = active ? 0.9 : 0.3;
+
+  const paths: Record<string, JSX.Element> = {
+    steam: (
+      // Gear/cog icon
+      <g transform={`translate(${x - half}, ${y - half - 6}) scale(${size / 24})`}>
+        <path d="M12 15a3 3 0 100-6 3 3 0 000 6z" fill="none" stroke={iconColor} strokeWidth="1.5"/>
+        <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 01-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9c.26.604.852.997 1.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z" fill="none" stroke={iconColor} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+      </g>
+    ),
+    combustion: (
+      // Flame icon
+      <g transform={`translate(${x - half}, ${y - half - 6}) scale(${size / 24})`}>
+        <path d="M12 2c.5 3.5-1.5 5-1.5 5C12.5 9 14 8.5 14 11c0 2-1.5 3-3 3s-3-1-3-3c0-3 2-5 4-9z" fill="none" stroke={iconColor} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M12 22c4.418 0 8-3 8-7 0-5-4-8-4-8s0 3-2 5c0 0 2-1.5 2-4 0-2-2-4-4-7-2 3-4 5-4 7 0 2.5 2 4 2 4-2-2-2-5-2-5s-4 3-4 8c0 4 3.582 7 8 7z" fill="none" stroke={iconColor} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+      </g>
+    ),
+    electricity: (
+      // Lightning bolt icon
+      <g transform={`translate(${x - half}, ${y - half - 6}) scale(${size / 24})`}>
+        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="none" stroke={iconColor} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+      </g>
+    ),
+    computers: (
+      // CPU/chip icon
+      <g transform={`translate(${x - half}, ${y - half - 6}) scale(${size / 24})`}>
+        <rect x="4" y="4" width="16" height="16" rx="2" fill="none" stroke={iconColor} strokeWidth="1.5"/>
+        <rect x="9" y="9" width="6" height="6" rx="1" fill="none" stroke={iconColor} strokeWidth="1.5"/>
+        <line x1="9" y1="1" x2="9" y2="4" stroke={iconColor} strokeWidth="1.5" strokeLinecap="round"/>
+        <line x1="15" y1="1" x2="15" y2="4" stroke={iconColor} strokeWidth="1.5" strokeLinecap="round"/>
+        <line x1="9" y1="20" x2="9" y2="23" stroke={iconColor} strokeWidth="1.5" strokeLinecap="round"/>
+        <line x1="15" y1="20" x2="15" y2="23" stroke={iconColor} strokeWidth="1.5" strokeLinecap="round"/>
+        <line x1="20" y1="9" x2="23" y2="9" stroke={iconColor} strokeWidth="1.5" strokeLinecap="round"/>
+        <line x1="20" y1="15" x2="23" y2="15" stroke={iconColor} strokeWidth="1.5" strokeLinecap="round"/>
+        <line x1="1" y1="9" x2="4" y2="9" stroke={iconColor} strokeWidth="1.5" strokeLinecap="round"/>
+        <line x1="1" y1="15" x2="4" y2="15" stroke={iconColor} strokeWidth="1.5" strokeLinecap="round"/>
+      </g>
+    ),
+    ai: (
+      // Brain/neural icon
+      <g transform={`translate(${x - half}, ${y - half - 6}) scale(${size / 24})`}>
+        <path d="M12 2a7 7 0 00-4.6 12.3A3 3 0 006 17v1a2 2 0 002 2h8a2 2 0 002-2v-1a3 3 0 00-1.4-2.7A7 7 0 0012 2z" fill="none" stroke={iconColor} strokeWidth="1.5" strokeLinecap="round"/>
+        <path d="M9 22v-1m6 1v-1M12 2v-0" fill="none" stroke={iconColor} strokeWidth="1.5" strokeLinecap="round"/>
+        <path d="M9 10h.01M15 10h.01M9.5 15a3.5 3.5 0 005 0" fill="none" stroke={iconColor} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        <circle cx="9" cy="10" r="0.5" fill={iconColor}/>
+        <circle cx="15" cy="10" r="0.5" fill={iconColor}/>
+      </g>
+    ),
+  };
+
+  return (
+    <g
+      style={{
+        opacity: vis ? opacity : 0,
+        transition: `opacity 0.5s ease ${delay}s, transform 0.4s ease ${delay}s`,
+        transform: vis ? "scale(1)" : "scale(0.5)",
+        transformOrigin: `${x}px ${y - 6}px`,
+      }}
+      aria-hidden="true"
+    >
+      {paths[id] ?? null}
+    </g>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/*  Key Metrics — count-up numbers on scroll-in                        */
+/* ------------------------------------------------------------------ */
+
+function KeyMetrics() {
+  const { ref, inView } = useInView<HTMLDivElement>(0.3);
+  const diffLow = useCountUp(5, 700, inView ? 0 : 99999);
+  const diffHigh = useCountUp(12, 700, inView ? 200 : 99999);
+  const painLow = useCountUp(4, 700, inView ? 100 : 99999);
+  const painHigh = useCountUp(10, 700, inView ? 300 : 99999);
+  const coverage = useCountUp(70, 800, inView ? 200 : 99999);
+
+  return (
+    <div ref={ref} className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+      <div className="metric-card border border-black/[0.06] rounded-lg p-4 text-center">
+        <div
+          className="text-[28px] font-extrabold text-[var(--accent)] tabular-nums"
+          style={{ fontVariantNumeric: "tabular-nums" }}
+        >
+          {inView ? diffLow : 0}&ndash;{inView ? diffHigh : 0}&times;
+        </div>
+        <div className="text-[12px] font-semibold text-[var(--foreground)] mt-1">
+          Faster Diffusion
+        </div>
+        <div className="text-[11px] text-[var(--muted)] mt-1 leading-relaxed">
+          Range depends on comparison
+          <br />
+          <a href="#diffusion-comparison" className="text-[var(--accent)] underline underline-offset-2">
+            See methodology &darr;
+          </a>
+        </div>
+        <div className="text-[10px] text-[var(--muted)] mt-1 italic">
+          Multiple sources; see table below
+        </div>
+      </div>
+
+      <div className="metric-card border border-black/[0.06] rounded-lg p-4 text-center">
+        <div
+          className="text-[28px] font-extrabold tabular-nums"
+          style={{ color: "#F66B5C", fontVariantNumeric: "tabular-nums" }}
+        >
+          {inView ? painLow : 0}&ndash;{inView ? painHigh : 0}
+        </div>
+        <div className="text-[12px] font-semibold text-[var(--foreground)] mt-1">
+          Years, Projected Painful Phase
+        </div>
+        <div className="text-[11px] text-[var(--muted)] mt-1 leading-relaxed">
+          Displacement + reorganization
+          <br />
+          vs. 20&ndash;60 yrs historically
+        </div>
+        <div className="text-[10px] text-[var(--muted)] mt-1 italic">
+          Extrapolated from adoption speed
+        </div>
+      </div>
+
+      <div className="metric-card border border-black/[0.06] rounded-lg p-4 text-center">
+        <div
+          className="text-[28px] font-extrabold text-[var(--foreground)] tabular-nums"
+          style={{ fontVariantNumeric: "tabular-nums" }}
+        >
+          ~{inView ? coverage : 0}%
+        </div>
+        <div className="text-[12px] font-semibold text-[var(--foreground)] mt-1">
+          Workers With AI Task Coverage
+        </div>
+        <div className="text-[11px] text-[var(--muted)] mt-1 leading-relaxed">
+          Observed in first-party API traffic
+          <br />
+          No systematic unemployment yet
+        </div>
+        <div className="text-[10px] text-[var(--muted)] mt-1 italic">
+          Anthropic / Massenkoff &amp; McCrory (2026)
+        </div>
+      </div>
+    </div>
+  );
 }
 
 /* ------------------------------------------------------------------ */
@@ -417,6 +573,17 @@ export default function CompressionComparison() {
                   {t.name}
                 </text>
 
+                {/* ---- Technology icon at peak ---- */}
+                <TechIcon
+                  id={t.id}
+                  x={a.midX}
+                  y={a.visualPeakY - (active ? 28 : 18)}
+                  color={t.color}
+                  active={active}
+                  vis={vis}
+                  delay={delay + duration * 0.7}
+                />
+
                 {/* ---- Hover detail labels ---- */}
                 {active && (
                   <>
@@ -541,6 +708,17 @@ export default function CompressionComparison() {
                 }}
               />
             )}
+
+            {/* AI icon at arc peak */}
+            <TechIcon
+              id="ai"
+              x={(OX + aiArc.lowEndX) / 2}
+              y={aiArc.lowVisualPeakY - 22}
+              color={ai.color}
+              active={hov === "ai"}
+              vis={vis}
+              delay={2.3}
+            />
 
             {/* AI label — always visible */}
             <text
@@ -854,71 +1032,9 @@ export default function CompressionComparison() {
       </div>
 
       {/* ============================================================ */}
-      {/*  Key metrics                                                 */}
+      {/*  Key metrics — animated count-up                             */}
       {/* ============================================================ */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-        <div className="border border-black/[0.06] rounded-lg p-4 text-center">
-          <div
-            className="text-[28px] font-extrabold text-[var(--accent)]"
-            style={{ fontVariantNumeric: "tabular-nums" }}
-          >
-            5–12×
-          </div>
-          <div className="text-[12px] font-semibold text-[var(--foreground)] mt-1">
-            Faster Diffusion
-          </div>
-          <div className="text-[11px] text-[var(--muted)] mt-1 leading-relaxed">
-            Range depends on comparison
-            <br />
-            <a href="#diffusion-comparison" className="text-[var(--accent)] underline underline-offset-2">
-              See methodology &darr;
-            </a>
-          </div>
-          <div className="text-[10px] text-[var(--muted)] mt-1 italic">
-            Multiple sources; see table below
-          </div>
-        </div>
-
-        <div className="border border-black/[0.06] rounded-lg p-4 text-center">
-          <div
-            className="text-[28px] font-extrabold"
-            style={{ color: "#F66B5C", fontVariantNumeric: "tabular-nums" }}
-          >
-            4–10
-          </div>
-          <div className="text-[12px] font-semibold text-[var(--foreground)] mt-1">
-            Years, Projected Painful Phase
-          </div>
-          <div className="text-[11px] text-[var(--muted)] mt-1 leading-relaxed">
-            Displacement + reorganization
-            <br />
-            vs. 20–60 yrs historically
-          </div>
-          <div className="text-[10px] text-[var(--muted)] mt-1 italic">
-            Extrapolated from adoption speed
-          </div>
-        </div>
-
-        <div className="border border-black/[0.06] rounded-lg p-4 text-center">
-          <div
-            className="text-[28px] font-extrabold text-[var(--foreground)]"
-            style={{ fontVariantNumeric: "tabular-nums" }}
-          >
-            ~70%
-          </div>
-          <div className="text-[12px] font-semibold text-[var(--foreground)] mt-1">
-            Workers With AI Task Coverage
-          </div>
-          <div className="text-[11px] text-[var(--muted)] mt-1 leading-relaxed">
-            Observed in first-party API traffic
-            <br />
-            No systematic unemployment yet
-          </div>
-          <div className="text-[10px] text-[var(--muted)] mt-1 italic">
-            Anthropic / Massenkoff &amp; McCrory (2026)
-          </div>
-        </div>
-      </div>
+      <KeyMetrics />
 
       {/* ============================================================ */}
       {/*  Caveat                                                      */}
