@@ -11,6 +11,8 @@ import {
 import { computeAggregate } from "@/lib/prediction-stats";
 import { getBlsTrendForSlug } from "@/lib/bls-trends";
 import BLSTrendStrip from "@/components/BLSTrendStrip";
+import { useInView } from "@/hooks/useInView";
+import { useCountUp } from "@/hooks/useCountUp";
 
 interface PredictionSummaryCardProps {
   prediction: Prediction;
@@ -159,6 +161,15 @@ export default function PredictionSummaryCard({
   const best = getBestEstimate(prediction, selectedTiers);
   const agg = computeAggregate(prediction, selectedTiers);
   const contextLine = getContextLine(prediction, agg.mean);
+
+  // Stat number count-up animation on scroll-in
+  const { ref: statViewRef, inView: statInView } = useInView<HTMLDivElement>(0.2);
+  const animatedStat = useCountUp(
+    Math.round(agg.mean * 10), // x10 for one decimal
+    800,
+    statInView ? 100 : 99999 // slight delay for dramatic effect
+  );
+  const displayStat = animatedStat / 10;
   const annotation = getResearchAnnotation(prediction.slug);
   const blsTrend = getBlsTrendForSlug(prediction.slug);
   const filteredHistory = prediction.history.filter((d) =>
@@ -237,10 +248,12 @@ export default function PredictionSummaryCard({
           </h3>
 
           {/* Big number + source range + trend */}
-          <div className="flex items-baseline gap-3 mb-3">
-            <span className="stat-number stat-hover text-[44px] font-black text-[var(--foreground)] leading-none">
+          <div ref={statViewRef} className="flex items-baseline gap-3 mb-3">
+            <span className="stat-number stat-hover text-[44px] font-black text-[var(--foreground)] leading-none tabular-nums">
               {agg.mean > 0 && prediction.category === "wages" ? "+" : ""}
-              {Number.isInteger(agg.mean) ? agg.mean : agg.mean.toFixed(1)}
+              {statInView
+                ? (Number.isInteger(agg.mean) ? Math.round(displayStat) : displayStat.toFixed(1))
+                : "0"}
               <span className="text-[18px] font-normal text-[var(--muted)] opacity-50 ml-0.5">
                 {prediction.unit.includes("%") ? "%" : ` ${prediction.unit}`}
               </span>

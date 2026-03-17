@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback } from "react";
+import { useCallback, useRef, useState, useEffect } from "react";
 import { JobTask, calculateCrossoverYear } from "@/data/job-tasks";
 
 interface TaskSlidersProps {
@@ -39,6 +39,28 @@ export default function TaskSliders({
     [onShareChange]
   );
 
+  // Track risk badge transitions for pop animation
+  const prevRiskRef = useRef<Record<string, string>>({});
+  const [poppedBadges, setPoppedBadges] = useState<Record<string, boolean>>({});
+  const reducedMotion = useRef(false);
+
+  useEffect(() => {
+    reducedMotion.current =
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  }, []);
+
+  // Check for risk-level transitions and trigger pop
+  const checkRiskTransition = useCallback((taskId: string, label: string) => {
+    if (reducedMotion.current) return;
+    const prev = prevRiskRef.current[taskId];
+    if (prev && prev !== label) {
+      setPoppedBadges((p) => ({ ...p, [taskId]: true }));
+      setTimeout(() => setPoppedBadges((p) => ({ ...p, [taskId]: false })), 400);
+    }
+    prevRiskRef.current[taskId] = label;
+  }, []);
+
   return (
     <div className="space-y-3">
       <div className="mb-2">
@@ -55,6 +77,8 @@ export default function TaskSliders({
           humanWagePerHr
         );
         const risk = getRiskBadge(crossover);
+        checkRiskTransition(task.id, risk.label);
+        const isPopped = poppedBadges[task.id];
 
         return (
           <div key={task.id} className="group">
@@ -70,7 +94,7 @@ export default function TaskSliders({
               </div>
               <div className="flex items-center gap-2 shrink-0 ml-2">
                 <span
-                  className="text-[10px] font-medium px-2 py-0.5 rounded-full"
+                  className={`text-[10px] font-medium px-2 py-0.5 rounded-full ${isPopped ? "risk-badge-pop" : ""}`}
                   style={{ color: risk.color, backgroundColor: risk.bg }}
                 >
                   {risk.label}
@@ -86,7 +110,7 @@ export default function TaskSliders({
               max={100}
               value={Math.round(share * 100)}
               onChange={(e) => handleChange(task.id, parseInt(e.target.value) / 100)}
-              className="w-full h-1.5 rounded-full appearance-none cursor-pointer"
+              className="w-full h-1.5 rounded-full appearance-none cursor-pointer slider-track"
               style={{
                 background: `linear-gradient(to right, ${risk.color} 0%, ${risk.color} ${share * 100}%, rgba(0,0,0,0.06) ${share * 100}%, rgba(0,0,0,0.06) 100%)`,
               }}

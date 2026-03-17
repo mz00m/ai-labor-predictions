@@ -1,6 +1,9 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import type { IndustryMetrics } from "@/lib/signal-types";
+import { useMagneticTilt } from "@/hooks/useMagneticTilt";
+import { useInView } from "@/hooks/useInView";
 
 interface IndustryCardProps {
   industry: IndustryMetrics;
@@ -30,6 +33,35 @@ function employmentColor(val: number | null): string {
   return "var(--muted)";
 }
 
+/** Animates a number from 0 to target over ~600ms on mount (once in view) */
+function useAnimatedNumber(target: number, inView: boolean): number {
+  const [val, setVal] = useState(0);
+  const reducedMotion = useRef(false);
+  useEffect(() => {
+    reducedMotion.current =
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reducedMotion.current) setVal(target);
+  }, [target]);
+
+  useEffect(() => {
+    if (!inView || reducedMotion.current) return;
+    let start: number | null = null;
+    let raf: number;
+    const duration = 600;
+    const animate = (ts: number) => {
+      if (!start) start = ts;
+      const t = Math.min((ts - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - t, 3);
+      setVal(eased * target);
+      if (t < 1) raf = requestAnimationFrame(animate);
+    };
+    raf = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(raf);
+  }, [inView, target]);
+  return val;
+}
+
 export default function IndustryCard({
   industry,
   isExpanded,
@@ -38,14 +70,37 @@ export default function IndustryCard({
   const growth = industry.toolGrowth3m;
   const heatWidth = Math.min(Math.max(growth * 100, 0), 100);
 
+  // Magnetic tilt for the card
+  const { ref: tiltRef, style: tiltStyle } = useMagneticTilt<HTMLButtonElement>({
+    maxTilt: 3,
+    hoverScale: 1.01,
+  });
+
+  // Animate heat bar and numbers on scroll-in
+  const { ref: viewRef, inView } = useInView<HTMLButtonElement>(0.3);
+  const animGrowth = useAnimatedNumber(growth * 100, inView);
+  const empChange = industry.employmentChangeSinceNov2022;
+  const animEmp = useAnimatedNumber(empChange !== null ? empChange * 100 : 0, inView);
+  const animHeat = useAnimatedNumber(heatWidth, inView);
+
+  // Merge refs
+  const mergedRef = useRef<HTMLButtonElement>(null);
+  const setRefs = (el: HTMLButtonElement | null) => {
+    (mergedRef as React.MutableRefObject<HTMLButtonElement | null>).current = el;
+    (tiltRef as React.MutableRefObject<HTMLButtonElement | null>).current = el;
+    (viewRef as React.MutableRefObject<HTMLButtonElement | null>).current = el;
+  };
+
   return (
     <button
+      ref={setRefs}
       onClick={onToggle}
       className={`industry-card w-full text-left rounded-xl border p-4 sm:p-5 ${
         isExpanded
           ? "border-black/[0.12] bg-white shadow-sm"
           : "border-black/[0.06] bg-white"
       }`}
+      style={isExpanded ? undefined : tiltStyle}
     >
       <div className="flex items-start justify-between gap-3">
         <div className="flex items-center gap-2.5">
@@ -72,13 +127,13 @@ export default function IndustryCard({
             AI tool growth
           </p>
           <p
-            className="text-[22px] sm:text-[26px] font-black stat-number leading-none"
+            className="text-[22px] sm:text-[26px] font-black stat-number leading-none tabular-nums"
             style={{
               color: growth > 0 ? "#16a34a" : growth < 0 ? "#dc2626" : "var(--muted)",
             }}
           >
-            {growth >= 0 ? "+" : ""}
-            {(growth * 100).toFixed(1)}%
+            {animGrowth >= 0 ? "+" : ""}
+            {animGrowth.toFixed(1)}%
           </p>
           <p className="text-[10px] text-[var(--muted)] mt-0.5">3-month avg</p>
         </div>
@@ -89,12 +144,14 @@ export default function IndustryCard({
             Employment (BLS)
           </p>
           <p
-            className="text-[22px] sm:text-[26px] font-black stat-number leading-none"
+            className="text-[22px] sm:text-[26px] font-black stat-number leading-none tabular-nums"
             style={{
               color: employmentColor(industry.employmentChangeSinceNov2022),
             }}
           >
-            {formatEmployment(industry.employmentChangeSinceNov2022)}
+            {empChange === null
+              ? "No data"
+              : `${animEmp >= 0 ? "+" : ""}${animEmp.toFixed(1)}%`}
           </p>
           <p className="text-[10px] text-[var(--muted)] mt-0.5">
             vs late 2022
@@ -102,14 +159,15 @@ export default function IndustryCard({
         </div>
       </div>
 
-      {/* Heat bar */}
+      {/* Heat bar — grows from left on scroll-in */}
       <div className="mt-3 h-1.5 rounded-full bg-black/[0.04] overflow-hidden">
         <div
-          className="h-full rounded-full transition-all"
+          className="h-full rounded-full"
           style={{
-            width: `${heatWidth}%`,
+            width: `${animHeat}%`,
             background: `linear-gradient(to right, #bbf7d0, #16a34a)`,
             opacity: 0.7,
+            transition: "none",
           }}
         />
       </div>
