@@ -816,6 +816,19 @@ input[type="range"]::-moz-range-thumb:hover {
   }
 }
 
+/* ==== Funnel strip interactions ==== */
+
+/* Detail panel smooth expand/collapse */
+.funnel-detail-panel {
+  transition: max-height 0.25s ease, opacity 0.2s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .funnel-detail-panel {
+    transition: none;
+  }
+}
+
 /* ==== Additional task-visualizer microinteractions ==== */
 
 /* Staggered entrance for cards and list items */
