@@ -7,20 +7,12 @@ import {
   INCOME_TIER_META,
   TASK_CATEGORY_META,
   SOC_TO_JOB_IDS,
-  EXPOSURE_UNCERTAINTY,
-  SOC_EXPOSURE_SCORES,
   getAutomationPercentAtYear,
   DEMAND_ELASTICITY,
   DEMAND_ELASTICITY_META,
   type IncomeTier,
   type TaskCategory,
 } from "@/data/economy-occupations";
-
-function getUncertaintyLabel(variance: number): { label: string; color: string } {
-  if (variance >= 0.5) return { label: "High", color: "#EF4444" };
-  if (variance >= 0.3) return { label: "Med", color: "#F59E0B" };
-  return { label: "Low", color: "#10B981" };
-}
 
 interface TierDetail {
   tier: IncomeTier;
@@ -33,8 +25,6 @@ interface TierDetail {
     pct2028: number;
     pct2032: number;
     pct2036: number;
-    uncertaintyVariance: number;
-    exposureScore: number;
     demandElasticity: string | null;
   }[];
   totalEmployment: number;
@@ -56,8 +46,6 @@ export default function IncomeStrataImpact() {
           pct2028: getAutomationPercentAtYear(g, 2028),
           pct2032: getAutomationPercentAtYear(g, 2032),
           pct2036: getAutomationPercentAtYear(g, 2036),
-          uncertaintyVariance: EXPOSURE_UNCERTAINTY[g.id]?.variance ?? 0,
-          exposureScore: SOC_EXPOSURE_SCORES[g.id]?.mean ?? 0,
           demandElasticity: DEMAND_ELASTICITY[g.id]?.elasticity ?? null,
         };
       });
@@ -165,19 +153,17 @@ export default function IncomeStrataImpact() {
             </div>
 
             {/* Occupation table */}
-            <div className="overflow-x-auto">
+            <div>
               <table className="w-full text-[12px]">
                 <thead>
                   <tr className="border-b border-black/[0.06]">
                     <th className="text-left py-2 px-3 text-[var(--foreground)] font-semibold">Occupation</th>
                     <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold">Workers</th>
                     <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold">Wage</th>
-                    <th className="text-center py-2 px-3 text-[var(--foreground)] font-semibold" title="AI exposure score from Yale Budget Lab (0-10 scale)">Exposure</th>
                     <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold" title="% of tasks where AI compute cost < human wage in 2028">2028</th>
                     <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold" title="% of tasks where AI compute cost < human wage in 2032">2032</th>
                     <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold" title="% of tasks where AI compute cost < human wage in 2036">2036</th>
                     <th className="text-center py-2 px-3 text-[var(--foreground)] font-semibold" title="Demand elasticity: will cheaper AI output expand this market or just cut costs?">Demand</th>
-                    <th className="text-center py-2 px-3 text-[var(--foreground)] font-semibold" title="How much 6 AI exposure metrics agree on this group's exposure level (Yale Budget Lab, 2026). Low variance = high certainty.">Certainty</th>
                   </tr>
                 </thead>
                 <tbody className="text-[var(--muted)]">
@@ -199,19 +185,6 @@ export default function IncomeStrataImpact() {
                       </td>
                       <td className="text-right py-2 px-3 tabular-nums whitespace-nowrap">{(g.employment / 1000).toFixed(1)}M</td>
                       <td className="text-right py-2 px-3 tabular-nums whitespace-nowrap">${(g.medianWageAnnual / 1000).toFixed(0)}K</td>
-                      <td className="text-center py-2 px-3 tabular-nums whitespace-nowrap">
-                        {g.exposureScore > 0 && (
-                          <span
-                            className="inline-block px-1.5 py-0.5 rounded text-[10px] font-medium"
-                            style={{
-                              color: g.exposureScore >= 7 ? "#EF4444" : g.exposureScore >= 5 ? "#F59E0B" : "#10B981",
-                              backgroundColor: g.exposureScore >= 7 ? "#EF444415" : g.exposureScore >= 5 ? "#F59E0B15" : "#10B98115",
-                            }}
-                          >
-                            {g.exposureScore.toFixed(1)}
-                          </span>
-                        )}
-                      </td>
                       <td className="text-right py-2 px-3 tabular-nums whitespace-nowrap">
                         <span style={{ color: g.pct2028 >= 60 ? "#EF4444" : g.pct2028 >= 35 ? "#6366F1" : "#10B981" }}>
                           {g.pct2028}%
@@ -241,20 +214,6 @@ export default function IncomeStrataImpact() {
                           </span>
                         )}
                       </td>
-                      <td className="text-center py-2 px-3 text-[11px] whitespace-nowrap">
-                        {g.uncertaintyVariance > 0 && (() => {
-                          const u = getUncertaintyLabel(g.uncertaintyVariance);
-                          return (
-                            <span
-                              className="inline-block px-1.5 py-0.5 rounded text-[10px] font-medium"
-                              style={{ color: u.color, backgroundColor: `${u.color}15` }}
-                              title={`Metric variance: ${g.uncertaintyVariance.toFixed(3)}`}
-                            >
-                              {u.label}
-                            </span>
-                          );
-                        })()}
-                      </td>
                     </tr>
                     );
                   })}
@@ -264,10 +223,8 @@ export default function IncomeStrataImpact() {
 
             {/* Column definitions */}
             <div className="px-5 py-2.5 border-t border-black/[0.06] text-[10px] text-[var(--muted)] leading-relaxed">
-              <strong className="text-[var(--foreground)]">Exposure</strong> = AI exposure score (0-10, Yale Budget Lab).{" "}
               <strong className="text-[var(--foreground)]">2028/32/36</strong> = % of tasks where AI is cheaper than human labor.{" "}
-              <strong className="text-[var(--foreground)]">Demand</strong> = will cheaper output expand this market? <span className="text-[#10B981]">High</span> = more demand, <span className="text-[#EF4444]">Low</span> = fixed demand.{" "}
-              <strong className="text-[var(--foreground)]">Certainty</strong> = how much 6 AI exposure metrics agree. <span className="text-[#10B981]">Low</span> variance = high agreement.
+              <strong className="text-[var(--foreground)]">Demand</strong> = will cheaper output expand this market? <span className="text-[#10B981]">High</span> = more demand, <span className="text-[#EF4444]">Low</span> = fixed demand.
             </div>
           </div>
         );
