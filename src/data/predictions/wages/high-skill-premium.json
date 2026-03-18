@@ -273,6 +273,15 @@
       ],
       "evidenceTier": 2,
       "label": "Anthropic: AI-exposed workers earn 47% more than unexposed workers"
+    },
+    {
+      "date": "2026-03-18",
+      "direction": "up",
+      "sourceIds": [
+        "coworkingcafe-ai-jobs-metros-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "CoworkingCafe: AI salaries $215K in San Jose, $128K in Dallas; geographic premium wide"
     }
   ],
   "sources": [
@@ -541,6 +550,15 @@
       "evidenceTier": 1,
       "datePublished": "2025-03-24",
       "excerpt": "Augmentation AI fosters new work and raises wages for high-skilled occupations."
+    },
+    {
+      "id": "coworkingcafe-ai-jobs-metros-2026",
+      "title": "The New Map of AI Work: San Jose Builds It & New York Scales It",
+      "url": "https://www.coworkingcafe.com/blog/msa-for-people-with-ai-jobs/",
+      "publisher": "CoworkingCafe (Yardi Systems)",
+      "evidenceTier": 3,
+      "datePublished": "2026-03-18",
+      "excerpt": "AI professionals earn $215,000, on average, in San Jose, CA — the highest in the country. But, with living costs 13% above average, that premium narrows. For comparison, in Dallas–Fort Worth, TX, $128,000 salaries stretch further with costs just 3% above average."
     }
   ]
 }

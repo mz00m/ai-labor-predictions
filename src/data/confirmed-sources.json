@@ -1,9 +1,21 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-18",
-  "totalSources": 424,
-  "verifiedCount": 424,
+  "totalSources": 425,
+  "verifiedCount": 425,
   "sources": {
+    "coworkingcafe-ai-jobs-metros-2026": {
+      "id": "coworkingcafe-ai-jobs-metros-2026",
+      "title": "The New Map of AI Work: San Jose Builds It & New York Scales It",
+      "url": "https://www.coworkingcafe.com/blog/msa-for-people-with-ai-jobs/",
+      "publisher": "CoworkingCafe (Yardi Systems)",
+      "evidenceTier": 3,
+      "datePublished": "2026-03-18",
+      "excerpt": "AI professionals earn $215,000, on average, in San Jose, CA — the highest in the country. But, with living costs 13% above average, that premium narrows. For comparison, in Dallas–Fort Worth, TX, $128,000 salaries stretch further with costs just 3% above average.",
+      "usedIn": ["high-skill-wage-premium"],
+      "verified": true,
+      "synthetic": false
+    },
     "imas-demand-collapse-ai-2026": {
       "id": "imas-demand-collapse-ai-2026",
       "title": "Can advanced AI lead to negative economic growth?",
