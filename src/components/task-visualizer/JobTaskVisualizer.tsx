@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useMemo, useEffect, useRef } from "react";
+import { useState, useCallback, useMemo, useEffect, useRef, type ReactNode } from "react";
 import { JOB_PROFILES, JobProfile, calculateJobExposure } from "@/data/job-tasks";
 import TaskBreakdownChart from "./TaskBreakdownChart";
 import TaskSliders from "./TaskSliders";
@@ -23,6 +23,43 @@ const DEFAULT_CATEGORY_STYLE = {
 };
 
 type Tab = "breakdown" | "timeline" | "costs" | "benchmarks";
+
+function ExposureTooltip({ children }: { children: ReactNode }) {
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    function handleClick(e: MouseEvent) {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
+    }
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, [open]);
+
+  return (
+    <div className="relative inline-flex" ref={ref}>
+      <div
+        onMouseEnter={() => setOpen(true)}
+        onMouseLeave={() => setOpen(false)}
+        onClick={() => setOpen((v) => !v)}
+        className="cursor-help"
+      >
+        {children}
+      </div>
+      {open && (
+        <div className="absolute z-50 bottom-full left-1/2 -translate-x-1/2 mb-2 w-[280px] p-3 rounded-lg bg-[var(--foreground)] text-[var(--background)] text-[12px] leading-relaxed shadow-xl pointer-events-auto">
+          <p className="font-semibold mb-1">Economic Exposure Score (0–100)</p>
+          <p className="opacity-80">
+            Measures how much of this role&apos;s economic value is vulnerable to AI automation, based on each task&apos;s time share, current AI capability, and how soon compute costs undercut the human wage rate.
+          </p>
+          <p className="opacity-60 mt-1.5 text-[11px]">Higher = more tasks approaching cost crossover sooner.</p>
+          <div className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-r-[6px] border-t-[6px] border-l-transparent border-r-transparent border-t-[var(--foreground)]" />
+        </div>
+      )}
+    </div>
+  );
+}
 
 interface JobTaskVisualizerProps {
   initialJobId?: string;
@@ -292,44 +329,53 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
       {selectedJob && (
         <>
           {/* Header with job info and exposure score */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-6 border-b border-black/[0.06]">
-            <div>
-              <div className="flex items-center gap-3">
-                <h2 className="text-[20px] font-bold text-[var(--foreground)] tracking-tight">
-                  {selectedJob.title}
-                </h2>
-                <button
-                  onClick={() => {
-                    setSelectedJobId("");
-                    setSearchQuery("");
-                    setAdjustedShares({});
-                  }}
-                  className="text-[11px] text-[var(--muted)] hover:text-[var(--foreground)] underline"
-                >
-                  Change
-                </button>
-              </div>
-              <p className="text-[13px] text-[var(--muted)] mt-0.5">
-                {selectedJob.category} · ${selectedJob.medianWagePerHr}/hr median wage (BLS) · {selectedJob.tasks.length} tasks
-              </p>
-            </div>
-            <div className="exposure-score relative text-center px-5 py-3 rounded-xl bg-black/[0.02] border border-black/[0.06] overflow-hidden">
-              <ExposureParticles score={exposureScoreRaw} trigger={particleTrigger} />
-              <p
-                className="text-[28px] font-bold tracking-tight relative z-10"
-                style={{
-                  color:
-                    exposureScoreRaw > 60
-                      ? "#EF4444"
-                      : exposureScoreRaw > 35
-                        ? "#6366F1"
-                        : "#10B981",
+          <div className="mb-6 pb-6 border-b border-black/[0.06]">
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+              <h2 className="text-[20px] font-bold text-[var(--foreground)] tracking-tight">
+                {selectedJob.title}
+              </h2>
+              <ExposureTooltip>
+                <div className="exposure-score relative inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-black/[0.02] border border-black/[0.06] overflow-hidden">
+                  <ExposureParticles score={exposureScoreRaw} trigger={particleTrigger} />
+                  <p
+                    className="text-[22px] font-bold tracking-tight relative z-10 leading-none"
+                    style={{
+                      color:
+                        exposureScoreRaw > 60
+                          ? "#EF4444"
+                          : exposureScoreRaw > 35
+                            ? "#6366F1"
+                            : "#10B981",
+                    }}
+                  >
+                    {exposureScore}
+                  </p>
+                  <div className="relative z-10 flex items-center gap-1">
+                    <span className="text-[12px] font-medium text-[var(--muted)] leading-tight">
+                      exposure
+                    </span>
+                    <svg width="13" height="13" viewBox="0 0 16 16" fill="none" className="text-[var(--muted)] opacity-50 shrink-0">
+                      <circle cx="8" cy="8" r="7" stroke="currentColor" strokeWidth="1.5" />
+                      <path d="M8 7v4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                      <circle cx="8" cy="5" r="0.75" fill="currentColor" />
+                    </svg>
+                  </div>
+                </div>
+              </ExposureTooltip>
+              <button
+                onClick={() => {
+                  setSelectedJobId("");
+                  setSearchQuery("");
+                  setAdjustedShares({});
                 }}
+                className="text-[11px] text-[var(--muted)] hover:text-[var(--foreground)] underline"
               >
-                {exposureScore}
-              </p>
-              <p className="text-[11px] text-[var(--muted)] relative z-10">Economic exposure</p>
+                Change job
+              </button>
             </div>
+            <p className="text-[13px] text-[var(--muted)] mt-1.5">
+              {selectedJob.category} · ${selectedJob.medianWagePerHr}/hr median wage (BLS) · {selectedJob.tasks.length} tasks
+            </p>
           </div>
 
           {/* Two-column layout: sliders + main content */}
