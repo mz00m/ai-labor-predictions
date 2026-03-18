@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { usePathname } from "next/navigation";
 
 /**
@@ -31,13 +31,16 @@ const C = {
   antennaTip: "#F66B5C", // coral signal light
 };
 
-const PEEK_PROMPTS = [
-  "Got a data question?",
-  "Curious about AI jobs?",
-  "Ask me anything",
-  "300+ sources ready",
-  "What sector interests you?",
-];
+function getPeekPrompts(sourceCount?: number) {
+  const countLabel = sourceCount ? `${sourceCount}+ sources ready` : "Hundreds of sources ready";
+  return [
+    "Got a data question?",
+    "Curious about AI jobs?",
+    "Ask me anything",
+    countLabel,
+    "What sector interests you?",
+  ];
+}
 
 // Pages where the bottom entrance is used
 const BOTTOM_PAGES = ["/about", "/j-curve", "/history", "/demand-elasticity", "/signals"];
@@ -146,12 +149,13 @@ function RobotSVG({
 }
 
 // ── Main Component ───────────────────────────────────────────────────────────
-export default function ChatbotBuddy() {
+export default function ChatbotBuddy({ sourceCount }: { sourceCount?: number }) {
+  const peekPrompts = useMemo(() => getPeekPrompts(sourceCount), [sourceCount]);
   const pathname = usePathname();
   const [isHovered, setIsHovered] = useState(false);
   const [eyeState, setEyeState] = useState<"open" | "blink" | "wide">("open");
   const [showBubble, setShowBubble] = useState(false);
-  const [bubbleText, setBubbleText] = useState(PEEK_PROMPTS[0]);
+  const [bubbleText, setBubbleText] = useState(peekPrompts[0]);
   const [chatOpen, setChatOpen] = useState(false);
   const [entered, setEntered] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
@@ -222,8 +226,8 @@ export default function ChatbotBuddy() {
     if (reducedMotion || !entered) return;
     function schedule() {
       bubbleRef.current = setTimeout(() => {
-        promptIdx.current = (promptIdx.current + 1) % PEEK_PROMPTS.length;
-        setBubbleText(PEEK_PROMPTS[promptIdx.current]);
+        promptIdx.current = (promptIdx.current + 1) % peekPrompts.length;
+        setBubbleText(peekPrompts[promptIdx.current]);
         setShowBubble(true);
         setTimeout(() => { setShowBubble(false); schedule(); }, 3200);
       }, 7000 + Math.random() * 10000);
