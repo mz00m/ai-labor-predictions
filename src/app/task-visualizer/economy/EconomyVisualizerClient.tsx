@@ -22,14 +22,14 @@ const SECTIONS: { id: Section; label: string; question: string; description: str
   {
     id: "explorer",
     label: "Year Explorer",
-    question: "Explore automation pressure by year: drag the slider to see who's exposed",
-    description: "Each bar shows what percentage of an occupation group's tasks could be automated more cheaply by AI in that year. Taller bars = more economic pressure. Click any bar to explore that job's tasks in detail.",
+    question: "Explore cost crossover by year: drag the slider to see who's exposed",
+    description: "Each bar shows what percentage of an occupation group's tasks could be performed more cheaply by AI in that year. Use the scenario toggle to see how sensitive projections are to AI cost decline rates. Demand elasticity and CFO signals show whether cost crossover is likely to mean displacement or market expansion.",
   },
   {
     id: "strata",
     label: "By Income",
-    question: "Automation hits different income levels on different timelines",
-    description: "The automation wave chart shows where pressure concentrates first. Each income tier below is broken out with its top occupation groups, projected automation rates at 2028/2032/2036, and which task types are most exposed vs. most durable. Click any occupation row to explore its individual tasks.",
+    question: "Cost crossover hits different income levels on different timelines",
+    description: "The automation wave chart shows where pressure concentrates first, with scenario uncertainty bands. Each income tier below is broken out with its top occupation groups, projected cost crossover at 2028/2032/2036, demand elasticity, and CFO replace/enhance signals. Click any occupation row to explore its individual tasks.",
   },
   {
     id: "adaptability",
