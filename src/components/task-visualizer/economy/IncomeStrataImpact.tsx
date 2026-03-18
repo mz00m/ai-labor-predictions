@@ -185,6 +185,15 @@ export default function IncomeStrataImpact() {
               </div>
             </div>
 
+            {/* Column key */}
+            <div className="px-5 py-2.5 bg-black/[0.015] border-b border-black/[0.06] flex flex-wrap gap-x-5 gap-y-1 text-[10px] text-[var(--muted)]">
+              <span><strong className="text-[var(--foreground)]">Exposure</strong> = AI exposure score (0-10, Yale Budget Lab)</span>
+              <span><strong className="text-[var(--foreground)]">2028/32/36</strong> = % of tasks where AI is cheaper than human labor</span>
+              <span><strong className="text-[var(--foreground)]">Demand</strong> = will cheaper output expand this market? <span className="text-[#10B981]">High</span> = more demand, <span className="text-[#EF4444]">Low</span> = fixed demand</span>
+              <span><strong className="text-[var(--foreground)]">CFO</strong> = do executives see AI replacing or enhancing workers? (<span className="text-[#10B981]">Enhance</span> / <span className="text-[#F59E0B]">Balanced</span> / <span className="text-[#EF4444]">Replace</span>)</span>
+              <span><strong className="text-[var(--foreground)]">Certainty</strong> = how much 6 AI exposure metrics agree (<span className="text-[#10B981]">Low</span> variance = high agreement)</span>
+            </div>
+
             {/* Occupation table */}
             <div className="overflow-x-auto">
               <table className="w-full text-[12px]">
@@ -193,15 +202,15 @@ export default function IncomeStrataImpact() {
                     <th className="text-left py-2 px-4 text-[var(--foreground)] font-semibold">Occupation</th>
                     <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold">Workers</th>
                     <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold">Wage</th>
-                    <th className="text-center py-2 px-3 text-[var(--foreground)] font-semibold" title="AI exposure score from Yale Budget Lab repo (0-10 scale, 342 BLS occupations)">Exposure</th>
-                    <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold">2028</th>
-                    <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold">2032</th>
-                    <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold">2036</th>
+                    <th className="text-center py-2 px-3 text-[var(--foreground)] font-semibold" title="AI exposure score from Yale Budget Lab (0-10 scale)">Exposure</th>
+                    <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold" title="% of tasks where AI compute cost < human wage in 2028">2028</th>
+                    <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold" title="% of tasks where AI compute cost < human wage in 2032">2032</th>
+                    <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold" title="% of tasks where AI compute cost < human wage in 2036">2036</th>
                     <th className="text-left py-2 px-3 text-[var(--foreground)] font-semibold">Most exposed</th>
                     <th className="text-left py-2 px-3 text-[var(--foreground)] font-semibold">Most durable</th>
-                    <th className="text-center py-2 px-3 text-[var(--foreground)] font-semibold" title="Demand elasticity: will cheaper output expand this market?">Demand</th>
-                    <th className="text-center py-2 px-3 text-[var(--foreground)] font-semibold" title="CFO replace/enhance signal (Baslandze et al., 2026)">CFO</th>
-                    <th className="text-center py-2 px-4 text-[var(--foreground)] font-semibold" title="How much 6 AI exposure metrics agree on this group's exposure level (Yale Budget Lab, 2026)">Certainty</th>
+                    <th className="text-center py-2 px-3 text-[var(--foreground)] font-semibold" title="Demand elasticity: will cheaper AI output expand this market or just cut costs?">Demand</th>
+                    <th className="text-center py-2 px-3 text-[var(--foreground)] font-semibold" title="CFO replace/enhance signal: do ~750 executives see AI replacing or enhancing this occupation? (Baslandze et al., 2026)">CFO</th>
+                    <th className="text-center py-2 px-4 text-[var(--foreground)] font-semibold" title="How much 6 AI exposure metrics agree on this group's exposure level (Yale Budget Lab, 2026). Low variance = high certainty.">Certainty</th>
                   </tr>
                 </thead>
                 <tbody className="text-[var(--muted)]">
