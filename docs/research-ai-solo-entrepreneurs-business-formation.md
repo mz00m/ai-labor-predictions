@@ -135,6 +135,59 @@ There is a **strong and growing body of evidence** linking AI tools to changes i
 - Mechanisms: improved decision-making, reduced costs, accelerated business model innovation cycles.
 - **Evidence tier: 1** (peer-reviewed meta-review)
 
+### Marchesi & Tang (2025) — "When AI Meets Entrepreneurship: Evidence from the Commercialization of ChatGPT" [KEY SOURCE]
+
+**Source:** [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5759264), University of Chicago Booth. Won Best Doctoral Student Paper at SWFA 2026.
+
+- Industries more compatible with AI experienced **>10% increase in firm formation** post-ChatGPT.
+- New firms in AI-compatible industries are **more likely to survive**, grow faster, and attract more educated workers.
+- Mechanism: **reduced cost of experimentation** disproportionately benefits high-ability entrepreneurs.
+- This is the strongest causal evidence directly quantifying AI's impact on firm formation.
+- **Evidence tier: 1** (rigorous causal design, top institution, award-winning)
+
+### Gupta, Qian, Simintzi & Sun (2025) — "Generative AI and Entrepreneurship"
+
+**Source:** [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5971474)
+
+- Exposed startups increased productivity, scaled faster, accelerated through financing rounds.
+- VC shifted toward frequent, smaller investments, boosting new firm formation.
+- **Evidence tier: 1** (SSRN working paper)
+
+### Gofman & Jin (2024) — "Artificial Intelligence, Education, and Entrepreneurship"
+
+**Source:** [*Journal of Finance*](https://onlinelibrary.wiley.com/doi/10.1111/jofi.13302), Vol. 79, No. 1, pp. 631-667. Won Brattle Group Prize at AFA 2025.
+
+- Documents AI professor brain drain from universities (2004-2018).
+- AI professors' startups raise **$23M on average in <2 years**; 20% acquired within ~3.5 years.
+- Students from affected universities establish fewer AI startups — human capital matters.
+- **Evidence tier: 1** (top finance journal, peer-reviewed, award-winning)
+
+### Teutloff et al. (2025) — "Winners and Losers of Generative AI: Early Evidence of Shifts in Freelancer Demand"
+
+**Source:** [*Journal of Economic Behavior & Organization*](https://www.sciencedirect.com/science/article/pii/S0167268124004591)
+
+- Analysis of **3M+ job postings**. Demand for substitutable skills (writing, translation) decreased **20-50%**.
+- ML programming demand grew **24%**. AI chatbot development demand nearly **tripled**.
+- Shows the reallocation effect: AI destroys some solo work while creating new categories.
+- **Evidence tier: 1** (peer-reviewed, 3M+ data points)
+
+### GEM 2024/2025 & 2025/2026 Global Reports
+
+**Source:** [GEM Consortium](https://gemconsortium.org/report/gem-20242025-global-report-entrepreneurship-reality-check-4)
+
+- In 36 of 49 economies, fewer than **30% of early-stage entrepreneurs** consider AI "very important."
+- Growing "Survival Gap" (too few startups transition to established firms) and expanding "AI Readiness Gap."
+- AI adoption accelerating but **unevenly distributed** globally.
+- **Evidence tier: 1** (major longitudinal global survey)
+
+### "AI-Enabled Individual Entrepreneurship Theory" (AIET) (2025)
+
+**Source:** [*Journal of Innovation and Entrepreneurship*](https://link.springer.com/article/10.1186/s13731-025-00521-9), Springer
+
+- AI empowers solo entrepreneurs to achieve scalability traditionally reserved for large organizations.
+- Three mechanisms: **skill augmentation**, **capital access**, and **risk reduction**.
+- **Evidence tier: 1** (peer-reviewed journal)
+
 ### Brynjolfsson, Korinek & Agrawal (2025) — "A Research Agenda for the Economics of Transformative AI"
 
 **Source:** [NBER WP 34256](https://www.nber.org/papers/w34256)
@@ -187,6 +240,16 @@ There is a **strong and growing body of evidence** linking AI tools to changes i
 - 65% of SME AI users report **increased employee performance**.
 - 35% say it enabled them to **scale up**, 29% to **compete with larger companies**.
 - **Evidence tier: 2**
+
+### MIT Sloan / BCG — "The Emerging Agentic Enterprise" (2025)
+
+**Source:** [MIT Sloan Management Review](https://sloanreview.mit.edu/projects/the-emerging-agentic-enterprise-how-leaders-must-navigate-a-new-age-of-ai/)
+
+- Among organizations with extensive agentic AI adoption, **45% expect reductions in middle management layers**.
+- Gartner: by 2026, **20% of organizations** will use AI to eliminate more than half of current middle management roles.
+- Korn Ferry: **41% of employees** report their companies have already reduced managerial layers.
+- Implication for entrepreneurship: flatter organizations + AI management tools lower the coordination cost of running a business solo.
+- **Evidence tier: 2** (MIT/BCG institutional research)
 
 ### UNCTAD — "Artificial Intelligence Unleashed: Transforming the Entrepreneurial Landscape" (2025)
 
@@ -404,6 +467,11 @@ There is a **strong and growing body of evidence** linking AI tools to changes i
 | Carta Solo Founders Report (2025) | 2 | 36.3% solo founders (up from 17%) | NOT INGESTED |
 | Fossen, McLemore & Sorgner (2024) | 1 | 124-page AI-entrepreneurship survey | NOT INGESTED |
 | Cai & Gu (2024) | 1 | 12M Chinese firms, smaller teams post-ChatGPT | NOT INGESTED |
+| Marchesi & Tang (2025) | 1 | >10% firm formation increase, higher survival | NOT INGESTED |
+| Gupta, Qian, Simintzi & Sun (2025) | 1 | Exposed startups scale faster | NOT INGESTED |
+| Gofman & Jin (2024, *J. Finance*) | 1 | AI professor startups raise $23M in <2 years | NOT INGESTED |
+| Teutloff et al. (2025, *JEBO*) | 1 | 3M+ postings, 20-50% demand shifts | NOT INGESTED |
+| GEM 2024/2025 Global Report | 1 | <30% of entrepreneurs see AI as important | NOT INGESTED |
 | Hui, Reshef & Zhou (2024) | 1 | Freelancer income declines (counter-evidence) | NOT INGESTED |
 | CB Insights AI unicorn data (2024) | 2 | ~200 employees to $1B in 2 years | NOT INGESTED |
 | Bao, Lou & Sun (2025) | 1 | STEM entrepreneurship increase | ALREADY IN SYSTEM |
