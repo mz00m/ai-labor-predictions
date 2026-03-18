@@ -112,9 +112,7 @@ export default function AboutPage() {
               >
                 Matt Zieger
               </a>{" "}
-              built this as a personal project &mdash; to learn, and to help everyone navigate an uncertain
-              new world. While not formally affiliated with his day job, Matt is Chief Program &amp; Partnership
-              Officer at the GitLab Foundation, where he leads the{" "}
+              built this as a personal project &mdash; to learn, and to help everyone navigate an uncertain new world. While not formally affiliated with his day job, Matt is Chief Program &amp; Partnership Officer at the GitLab Foundation, where he leads the{" "}
               <a
                 href="https://www.gitlabfoundation.org/futureofwork"
                 target="_blank"
