@@ -10,21 +10,12 @@ interface Article {
 
 const articles: Article[] = [
   {
-    author: "Lodefalk et al. (RATIO/Örebro)",
-    title: "Same Storm, Different Boats: GenAI and the Age Gradient in Hiring",
+    author: "Alex Imas",
+    title: "Can Advanced AI Lead to Negative Economic Growth?",
     summary:
-      "Swedish population register data: 22-25yr employment in high-AI occupations fell 5.5% by 2025H1 (employer DiD). Posting decline driven by monetary policy, not AI.",
-    date: "Mar 16",
-    url: "https://cms.ratio.se/app/uploads/2026/03/lodefalk_march16_paper_v2-kombinerades.pdf",
-    accent: "border-l-amber-500",
-  },
-  {
-    author: "Baslandze et al. (Fed Atlanta/Duke)",
-    title: "AI, Productivity, and the Workforce: Evidence from Corporate Executives",
-    summary:
-      "Survey of 750 CFOs: <0.4% aggregate job loss, productivity paradox (reported 3x implied gains), finance leads. Routine clerical declining; skilled-technical rising.",
-    date: "Mar 13",
-    url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6410338",
+      "Formal models show AGI-driven demand collapse is theoretically possible if labor share collapses. Negative growth unlikely but demand-side forces will moderate AGI growth expectations.",
+    date: "Jan 7",
+    url: "https://aleximas.substack.com/p/will-advanced-ai-lead-to-negative",
     accent: "border-l-violet-500",
   },
   {
@@ -54,6 +45,15 @@ const articles: Article[] = [
     url: "https://x.com/gsivulka/status/2031797989908627849",
     accent: "border-l-cyan-500",
   },
+  {
+    author: "Oks",
+    title: "Why the ATM Didn\u2019t Kill Bank Teller Jobs, but the iPhone Did",
+    summary:
+      "Task automation rarely displaces workers; paradigm replacement does. Implications for AI displacement timelines.",
+    date: "Mar 10",
+    url: "https://davidoks.blog/p/why-the-atm-didnt-kill-bank-teller",
+    accent: "border-l-blue-500",
+  },
 ];
 
 export default function FeaturedReads() {
@@ -64,12 +64,12 @@ export default function FeaturedReads() {
           key={a.url}
           href={a.url}
           {...(a.internal ? {} : { target: "_blank", rel: "noopener noreferrer" })}
-          className={`featured-card group border-l-2 ${a.accent} rounded-r-md bg-black/[0.02] dark:bg-white/[0.03] px-2.5 py-2 hover:bg-black/[0.04] dark:hover:bg-white/[0.06]`}
+          className={`group border-l-2 ${a.accent} rounded-r-md bg-black/[0.02] dark:bg-white/[0.03] px-2.5 py-2 transition-all hover:bg-black/[0.04] dark:hover:bg-white/[0.06]`}
         >
           <p className="text-[10px] font-semibold text-[var(--muted)] uppercase tracking-wide truncate">
             {a.author}{a.date && <span className="opacity-50"> &middot; {a.date}</span>}
           </p>
-          <h3 className="text-[12px] font-bold text-[var(--foreground)] leading-snug mt-0.5 group-hover:text-[var(--accent)] line-clamp-2" style={{ transition: "color 0.15s ease" }}>
+          <h3 className="text-[12px] font-bold text-[var(--foreground)] leading-snug mt-0.5 group-hover:text-[var(--accent)] transition-colors line-clamp-2">
             {a.title}
           </h3>
           <p className="text-[10px] text-[var(--muted)] leading-relaxed mt-0.5 line-clamp-2">
