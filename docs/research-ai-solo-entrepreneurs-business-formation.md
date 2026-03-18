@@ -91,6 +91,50 @@ There is a **strong and growing body of evidence** linking AI tools to changes i
 - AI **amplifies existing performance disparities** — a Matthew effect.
 - **Evidence tier: 1** (HBS working paper, but Kenyan sample — generalizability caveat)
 
+### Fossen, McLemore & Sorgner (2024) — "Artificial Intelligence and Entrepreneurship"
+
+**Source:** [IZA DP 17055](https://www.iza.org/publications/dp/17055/artificial-intelligence-and-entrepreneurship) / *Foundations and Trends in Entrepreneurship*, Vol. 20(8), pp. 781-904
+
+- Comprehensive **124-page survey** of the entire AI-entrepreneurship literature.
+- AI that *automates* jobs increases **necessity** entrepreneurship; AI that *transforms* jobs increases **opportunity** entrepreneurship.
+- AI alters regional entrepreneurship ecosystems and potentially reduces the role of geography.
+- EU AI regulation could shape the entrepreneurship landscape.
+- **Evidence tier: 1** (peer-reviewed journal, 124-page literature survey)
+
+### Cai & Gu (2024) — "AI as Co-founder: GenAI for Entrepreneurship"
+
+**Source:** [arXiv:2512.06506](https://www.arxiv.org/pdf/2512.06506)
+
+- Uses the **universe of newly registered firms in China** (12+ million firms, 2021-2024) combined with AI patent data.
+- "One of the first pieces of systematic evidence on how technological breakthroughs, such as GenAI, facilitate firm entry."
+- Firms formed after ChatGPT had **fewer shareholders and smaller founding teams**, consistent with AI substituting for labor at the startup stage.
+- **Evidence tier: 1** (large-scale empirical data, not yet peer-reviewed)
+
+### Obschonka et al. (2025) — "AI and Entrepreneurship: A Call for Research"
+
+**Source:** [*Entrepreneurship Theory and Practice*](https://journals.sagepub.com/doi/10.1177/10422587241304676), SAGE
+
+- AI tools reduce barriers to entry, creating new opportunities for aspiring entrepreneurs from diverse backgrounds.
+- Could also exacerbate inequalities by concentrating resources in organizations capable of developing cutting-edge AI.
+- **Evidence tier: 1** (peer-reviewed journal)
+
+### Tian et al. (2025) — "The Impact of AI Technological Innovation on Global Entrepreneurial Activities"
+
+**Source:** [*Socio-Economic Planning Sciences*](https://www.sciencedirect.com/science/article/abs/pii/S0038012125002307), ScienceDirect
+
+- AI technological innovation significantly promotes entrepreneurial activities through two paths: **entrepreneurship education** and **AI investment**.
+- Impact is particularly strong among **highly educated and young** entrepreneur groups.
+- **Evidence tier: 1** (peer-reviewed journal)
+
+### Review of Managerial Science — AI and Entrepreneurship Hybrid Review (Springer, 2025)
+
+**Source:** [Springer Link](https://link.springer.com/article/10.1007/s11846-025-00839-4)
+
+- Analysis of **345 peer-reviewed articles** on AI and entrepreneurship.
+- AI can "significantly reduce the barriers to entry for start-ups, making entrepreneurship more accessible and inclusive."
+- Mechanisms: improved decision-making, reduced costs, accelerated business model innovation cycles.
+- **Evidence tier: 1** (peer-reviewed meta-review)
+
 ### Brynjolfsson, Korinek & Agrawal (2025) — "A Research Agenda for the Economics of Transformative AI"
 
 **Source:** [NBER WP 34256](https://www.nber.org/papers/w34256)
@@ -193,15 +237,19 @@ There is a **strong and growing body of evidence** linking AI tools to changes i
 - BFCM 2025: $14.6B in merchant sales (+27%); 15,800 entrepreneurs made first-ever sale.
 - **Evidence tier: 2-3** (platform data)
 
-### Carta — Startup Headcount Data (2024)
+### Carta — Solo Founders Report & Startup Headcount Data (2024-2025)
 
-**Source:** [Carta](https://carta.com/data/startup-headcounts-2024/)
+**Source:** [Carta Solo Founders Report](https://carta.com/data/solo-founders-report/), [Carta Headcount Data](https://carta.com/data/startup-headcounts-2024/) (45,000+ startups)
 
+- Solo founders now start **36.3%** of all new companies (H1 2025), up from 23.7% (2019) and **17% (2017)**.
+- Three-founder teams dropped to **16%** (lowest in a decade).
 - Average consumer startup at seed round: **<3.5 employees** (down from 6.4 in 2022).
-- Series A median headcount: **47** (down from 57 in 2020).
+- Series A teams average **16.8 employees** (down from 25.9 in 2021).
+- Series B teams average **48.2** (down from 72.3 in 2022).
+- Median time to first hire increased from **214 days (2019) to 284 days (2024)**.
 - New monthly hires across startups fell **>50%** between Jan 2022 and Jan 2024.
-- Solo-founded startups (without VC): **rose from 17% (2017) to 36-38% (2024)**.
-- **Evidence tier: 2-3** (Carta platform data, tech-heavy sample)
+- However, solo founders receive only **14.7% of total VC cash** despite representing 30% of startups.
+- **Evidence tier: 2** (Carta platform data, large sample of 45K+ startups)
 
 ### AI-Native Startup Efficiency Metrics
 
@@ -254,6 +302,24 @@ There is a **strong and growing body of evidence** linking AI tools to changes i
 - A dedicated tracking site exists: [1person1billion.ai](https://www.1person1billion.ai/race).
 - Emerging near-examples: **Base44** (solo founder → 300K users, $3.5M ARR, sold to Wix for $80M in 6 months).
 - **Evidence tier: 4** (prediction/commentary, no confirmed cases yet)
+
+### Hui, Reshef & Zhou (2024) — Freelancer Impact (Counter-Evidence)
+
+**Source:** [*Organization Science*](https://www.brookings.edu/articles/is-generative-ai-a-job-killer-evidence-from-the-freelance-market/), 35(6): 1977-89
+
+- Writing freelancers: **-2% jobs, -5.2% earnings** post-ChatGPT.
+- Image freelancers: **-3.7% jobs, -9.4% income** post-DALL-E/Midjourney.
+- **High-skilled freelancers disproportionately affected** — top-rated saw larger drops than average.
+- Important counter-evidence: AI doesn't just enable solopreneurs, it also **threatens existing solo workers**.
+- **Evidence tier: 1** (peer-reviewed, *Organization Science*)
+
+### CB Insights — AI Unicorn Efficiency (2024)
+
+**Source:** CB Insights
+
+- AI unicorns in 2024 averaged **~200 employees** and reached $1B valuation in **just 2 years**.
+- Non-AI unicorns typically required **9 years** and nearly double the team size.
+- **Evidence tier: 2** (industry research)
 
 ### Simply Business — "The Power of One: 2025 Solopreneur Report"
 
@@ -335,7 +401,11 @@ There is a **strong and growing body of evidence** linking AI tools to changes i
 | SBA "AI in Business" (2025) | 1 | 8.8% small business AI adoption | NOT INGESTED |
 | OECD AI Paper No. 39 (2025) | 2 | 80+ studies, entry barrier reduction | NOT INGESTED |
 | Stripe Atlas Year in Review (2025) | 2-3 | 42% AI share, 41% formation growth | NOT INGESTED |
-| Carta headcount data (2024) | 2-3 | Seed teams <3.5 employees | NOT INGESTED |
+| Carta Solo Founders Report (2025) | 2 | 36.3% solo founders (up from 17%) | NOT INGESTED |
+| Fossen, McLemore & Sorgner (2024) | 1 | 124-page AI-entrepreneurship survey | NOT INGESTED |
+| Cai & Gu (2024) | 1 | 12M Chinese firms, smaller teams post-ChatGPT | NOT INGESTED |
+| Hui, Reshef & Zhou (2024) | 1 | Freelancer income declines (counter-evidence) | NOT INGESTED |
+| CB Insights AI unicorn data (2024) | 2 | ~200 employees to $1B in 2 years | NOT INGESTED |
 | Bao, Lou & Sun (2025) | 1 | STEM entrepreneurship increase | ALREADY IN SYSTEM |
 | Otis et al. (2023) | 1 | +15%/-10% heterogeneous effects | ALREADY IN SYSTEM |
 
