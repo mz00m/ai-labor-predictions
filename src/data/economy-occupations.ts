@@ -415,6 +415,88 @@ export const CFO_SURVEY_NEI: Record<string, { nei: number; label: string }> = {
 };
 
 /**
+ * Get the CFO NEI signal label and color for display.
+ * NEI > 1.0 = replacement-dominant (red), 0.7-1.0 = balanced (amber), < 0.7 = enhancement-dominant (green).
+ */
+export function getCfoSignal(groupId: string): { nei: number; label: string; shortLabel: string; color: string } | null {
+  const data = CFO_SURVEY_NEI[groupId];
+  if (!data) return null;
+  if (data.nei > 1.0) return { nei: data.nei, label: data.label, shortLabel: "Replace", color: "#EF4444" };
+  if (data.nei > 0.7) return { nei: data.nei, label: data.label, shortLabel: "Balanced", color: "#F59E0B" };
+  return { nei: data.nei, label: data.label, shortLabel: "Enhance", color: "#10B981" };
+}
+
+/**
+ * Demand elasticity by major occupation group.
+ *
+ * Classifies how much demand for an occupation's output is likely to expand
+ * when AI reduces the cost of providing it. Based on historical precedent
+ * from Bessen (2019) "Automation and Jobs: When Technology Boosts Employment"
+ * and Autor & Salomons (2018) "Is Automation Labor-Displacing?"
+ *
+ * High elasticity: cheaper output historically drives large demand expansion.
+ *   Example: ATMs reduced branch cost -> banks opened more branches -> teller
+ *   employment *increased* for 30 years.
+ *
+ * Moderate elasticity: some unmet demand exists, but expansion has limits.
+ *   Example: Legal research for SMBs is underserved; cheaper AI legal tools
+ *   may expand the market, but total legal demand has natural limits.
+ *
+ * Low elasticity: demand is largely fixed or internally consumed.
+ *   Example: Back-office admin work is a cost center, not a product.
+ *   Cheaper admin doesn't create more admin demand — it just cuts costs.
+ */
+export type DemandElasticity = "high" | "moderate" | "low";
+
+export const DEMAND_ELASTICITY: Record<string, { elasticity: DemandElasticity; rationale: string }> = {
+  // High: cheaper output -> much more demand
+  "sales":                    { elasticity: "high", rationale: "Cheaper outreach expands addressable market; historically elastic to CRM/automation" },
+  "arts-media":               { elasticity: "high", rationale: "Near-zero-cost design/content could serve every SMB, social post, and internal doc" },
+  "food-serving":             { elasticity: "high", rationale: "Restaurant demand is price-sensitive; lower costs expand casual dining and delivery" },
+  "personal-care":            { elasticity: "high", rationale: "Personal services are price-elastic; cheaper services expand to new demographics" },
+  "community-social":         { elasticity: "high", rationale: "Vast unmet demand for social services; supply-constrained, not demand-constrained" },
+
+  // Moderate: some expansion, but not unlimited
+  "management":               { elasticity: "moderate", rationale: "Better management tools improve quality but management demand is bounded by org size" },
+  "business-financial":       { elasticity: "moderate", rationale: "Some unmet demand (SMB accounting, financial planning), but market partially saturated" },
+  "computer-math":            { elasticity: "moderate", rationale: "Software demand is large but developer productivity gains may reduce headcount needs" },
+  "legal":                    { elasticity: "moderate", rationale: "Large unmet demand for SMB/individual legal services, but total legal market has limits" },
+  "education":                { elasticity: "moderate", rationale: "Personalized tutoring demand is high, but institutional education is supply-constrained" },
+  "healthcare-practitioners": { elasticity: "moderate", rationale: "Enormous unmet healthcare demand, but regulated supply limits expansion speed" },
+  "healthcare-support":       { elasticity: "moderate", rationale: "Aging population drives demand; cost reduction enables broader access" },
+  "architecture-engineering": { elasticity: "moderate", rationale: "Cheaper design expands renovation/custom work, but bounded by physical construction" },
+  "life-physical-social-science": { elasticity: "moderate", rationale: "Cheaper analysis expands research volume, but funding-constrained" },
+
+  // Low: demand is mostly fixed or cost-center
+  "office-admin":             { elasticity: "low", rationale: "Internal cost center: cheaper admin reduces headcount, doesn't create more admin demand" },
+  "protective-service":       { elasticity: "low", rationale: "Government-funded; budget-constrained, not demand-elastic" },
+  "production":               { elasticity: "low", rationale: "Manufacturing demand set by product markets, not production labor cost" },
+  "transportation":           { elasticity: "low", rationale: "Freight/logistics demand tied to trade volume, not labor cost" },
+  "building-grounds":         { elasticity: "low", rationale: "Cleaning demand set by square footage, not labor cost" },
+  "farming-fishing":          { elasticity: "low", rationale: "Agricultural demand is food consumption, which is highly inelastic" },
+  "construction":             { elasticity: "low", rationale: "Construction demand set by housing/infrastructure markets, not labor cost" },
+  "installation-repair":      { elasticity: "low", rationale: "Repair demand set by equipment base, not labor cost" },
+};
+
+export const DEMAND_ELASTICITY_META: Record<DemandElasticity, { label: string; color: string; description: string }> = {
+  high: {
+    label: "High",
+    color: "#10B981",
+    description: "Cheaper output historically drives large demand expansion — automation may increase employment",
+  },
+  moderate: {
+    label: "Moderate",
+    color: "#F59E0B",
+    description: "Some unmet demand exists — cost reduction may partially offset displacement",
+  },
+  low: {
+    label: "Low",
+    color: "#EF4444",
+    description: "Demand is largely fixed — cost reduction leads primarily to headcount reduction",
+  },
+};
+
+/**
  * Maps economy SOC groups to representative job profiles in the task visualizer.
  * Each SOC group links to the most relevant individual job(s) available.
  */
@@ -454,6 +536,22 @@ export const SOC_TO_JOB_IDS: Record<string, string[]> = {
 export const DEPLOYMENT_OVERHEAD = 5;
 
 /**
+ * Scenario multipliers for cost decline rate sensitivity analysis.
+ *
+ * The baseline decline rates (e.g. 44% annual for information-processing) are
+ * extrapolated from 2020-2026 AI inference cost trends. These could plateau
+ * (diminishing returns), continue (baseline), or accelerate (algorithmic
+ * breakthroughs). Scenario analysis makes this uncertainty visible.
+ */
+export const DECLINE_RATE_SCENARIOS = {
+  slow: { multiplier: 0.5, label: "Slow", description: "Cost improvements decelerate — diminishing returns on compute efficiency" },
+  baseline: { multiplier: 1.0, label: "Baseline", description: "Current trends continue — inference costs decline at observed 2020-2026 rates" },
+  fast: { multiplier: 1.5, label: "Fast", description: "Algorithmic breakthroughs accelerate — cost improvements compound faster" },
+} as const;
+
+export type ScenarioKey = keyof typeof DECLINE_RATE_SCENARIOS;
+
+/**
  * Calculate the percentage of an occupation group's tasks where AI has
  * economic viability at a given year, accounting for industry adoption speed.
  *
@@ -464,11 +562,16 @@ export const DEPLOYMENT_OVERHEAD = 5;
  *
  * When applyIndustrySpeed is false (default for backward compatibility),
  * returns raw economic pressure without adoption lag.
+ *
+ * scenarioMultiplier scales the cost decline rates: 0.5 = slow (rates halve),
+ * 1.0 = baseline, 1.5 = fast (rates 50% higher). This makes the model's
+ * sensitivity to its most uncertain parameter visible to users.
  */
 export function getAutomationPercentAtYear(
   group: OccupationGroup,
   year: number,
-  applyIndustrySpeed: boolean = false
+  applyIndustrySpeed: boolean = false,
+  scenarioMultiplier: number = 1.0
 ): number {
   const yearsFromNow = year - 2026;
   if (yearsFromNow < 0) return 0;
@@ -481,7 +584,9 @@ export function getAutomationPercentAtYear(
     const adoptionLag = applyIndustrySpeed ? CATEGORY_ADOPTION_LAG[cat] * industrySpeed : 0;
     const effectiveYears = Math.max(0, yearsFromNow - adoptionLag);
 
-    const computeCost = CATEGORY_COMPUTE_COSTS[cat] * DEPLOYMENT_OVERHEAD * Math.pow(1 - CATEGORY_DECLINE_RATES[cat], effectiveYears);
+    // Apply scenario multiplier to decline rate (clamped to [0, 0.95] to avoid negative costs)
+    const effectiveDeclineRate = Math.min(0.95, CATEGORY_DECLINE_RATES[cat] * scenarioMultiplier);
+    const computeCost = CATEGORY_COMPUTE_COSTS[cat] * DEPLOYMENT_OVERHEAD * Math.pow(1 - effectiveDeclineRate, effectiveYears);
     // Sigmoid-based automation pressure: smooth transition instead of binary cutoff.
     // When computeCost == humanWage, pressure is 50%. Steepness k=6 gives a reasonable
     // ramp: ~5% pressure at 2x human cost, ~95% pressure at 0.5x human cost.
@@ -500,13 +605,14 @@ export function getAutomationPercentAtYear(
 export function getWorkersAffectedAtYear(
   year: number,
   thresholdPercent: number = 50,
-  applyIndustrySpeed: boolean = false
+  applyIndustrySpeed: boolean = false,
+  scenarioMultiplier: number = 1.0
 ): { total: number; byTier: Record<IncomeTier, number> } {
   const byTier: Record<IncomeTier, number> = { low: 0, middle: 0, high: 0 };
   let total = 0;
 
   for (const group of OCCUPATION_GROUPS) {
-    const pct = getAutomationPercentAtYear(group, year, applyIndustrySpeed);
+    const pct = getAutomationPercentAtYear(group, year, applyIndustrySpeed, scenarioMultiplier);
     if (pct >= thresholdPercent) {
       total += group.employment;
       byTier[group.incomeTier] += group.employment;
@@ -522,7 +628,8 @@ export function getWorkersAffectedAtYear(
 export function generateEconomyTimeline(
   startYear: number = 2026,
   endYear: number = 2040,
-  applyIndustrySpeed: boolean = false
+  applyIndustrySpeed: boolean = false,
+  scenarioMultiplier: number = 1.0
 ): {
   year: number;
   lowAutomated: number;
@@ -537,12 +644,12 @@ export function generateEconomyTimeline(
 
     for (const group of OCCUPATION_GROUPS) {
       tierEmployment[group.incomeTier] += group.employment;
-      const pct = getAutomationPercentAtYear(group, year, applyIndustrySpeed);
+      const pct = getAutomationPercentAtYear(group, year, applyIndustrySpeed, scenarioMultiplier);
       // Weight by how much of the group's tasks are automated
       tierAutomated[group.incomeTier] += group.employment * (pct / 100);
     }
 
-    const workersSignificant = getWorkersAffectedAtYear(year, 50, applyIndustrySpeed);
+    const workersSignificant = getWorkersAffectedAtYear(year, 50, applyIndustrySpeed, scenarioMultiplier);
 
     data.push({
       year,

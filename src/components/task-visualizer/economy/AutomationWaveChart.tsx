@@ -14,6 +14,7 @@ import {
 import {
   generateEconomyTimeline,
   INCOME_TIER_META,
+  DECLINE_RATE_SCENARIOS,
 } from "@/data/economy-occupations";
 
 function CustomTooltip({ active, payload, label }: TooltipProps<number, string>) {
@@ -34,6 +35,26 @@ function CustomTooltip({ active, payload, label }: TooltipProps<number, string>)
 export default function AutomationWaveChart() {
   const data = useMemo(() => generateEconomyTimeline(2026, 2040), []);
 
+  // Generate slow/fast scenario data for fan chart bands
+  const scenarioData = useMemo(() => {
+    const slow = generateEconomyTimeline(2026, 2040, false, DECLINE_RATE_SCENARIOS.slow.multiplier);
+    const fast = generateEconomyTimeline(2026, 2040, false, DECLINE_RATE_SCENARIOS.fast.multiplier);
+    return data.map((d, i) => ({
+      ...d,
+      // Compute overall economy-wide average for band display
+      baselineAvg: Math.round((d.lowAutomated + d.middleAutomated + d.highAutomated) / 3),
+      slowHigh: Math.max(slow[i].lowAutomated, slow[i].middleAutomated, slow[i].highAutomated),
+      fastHigh: Math.max(fast[i].lowAutomated, fast[i].middleAutomated, fast[i].highAutomated),
+      // Per-tier slow/fast bounds for the higher-income line (most visible)
+      highSlow: slow[i].highAutomated,
+      highFast: fast[i].highAutomated,
+      middleSlow: slow[i].middleAutomated,
+      middleFast: fast[i].middleAutomated,
+      lowSlow: slow[i].lowAutomated,
+      lowFast: fast[i].lowAutomated,
+    }));
+  }, [data]);
+
   // Get last data point values for inline labels
   const lastPoint = data[data.length - 1];
 
@@ -41,7 +62,7 @@ export default function AutomationWaveChart() {
     <div>
       <div className="h-[360px]">
         <ResponsiveContainer width="100%" height="100%">
-          <AreaChart data={data} margin={{ top: 10, right: 100, left: 5, bottom: 5 }}>
+          <AreaChart data={scenarioData} margin={{ top: 10, right: 100, left: 5, bottom: 5 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="rgba(0,0,0,0.06)" />
             <XAxis
               dataKey="year"
@@ -71,6 +92,16 @@ export default function AutomationWaveChart() {
                 <stop offset="100%" stopColor={INCOME_TIER_META.high.color} stopOpacity={0.02} />
               </linearGradient>
             </defs>
+
+            {/* Scenario uncertainty bands (slow-to-fast range) per tier */}
+            <Area type="monotone" dataKey="highFast" stroke="none" fill={INCOME_TIER_META.high.color} fillOpacity={0.06} dot={false} activeDot={false} legendType="none" />
+            <Area type="monotone" dataKey="highSlow" stroke="none" fill="#fff" fillOpacity={1} dot={false} activeDot={false} legendType="none" />
+            <Area type="monotone" dataKey="middleFast" stroke="none" fill={INCOME_TIER_META.middle.color} fillOpacity={0.06} dot={false} activeDot={false} legendType="none" />
+            <Area type="monotone" dataKey="middleSlow" stroke="none" fill="#fff" fillOpacity={1} dot={false} activeDot={false} legendType="none" />
+            <Area type="monotone" dataKey="lowFast" stroke="none" fill={INCOME_TIER_META.low.color} fillOpacity={0.06} dot={false} activeDot={false} legendType="none" />
+            <Area type="monotone" dataKey="lowSlow" stroke="none" fill="#fff" fillOpacity={1} dot={false} activeDot={false} legendType="none" />
+
+            {/* Baseline lines */}
             <Area
               type="monotone"
               dataKey="lowAutomated"
@@ -81,7 +112,7 @@ export default function AutomationWaveChart() {
               dot={false}
               activeDot={{ r: 4 }}
               label={({ x, y, index }: { x: number; y: number; index: number }) => {
-                if (index !== data.length - 1) return <g />;
+                if (index !== scenarioData.length - 1) return <g />;
                 return (
                   <text x={x + 8} y={y + 4} fontSize={11} fontWeight={600} fill={INCOME_TIER_META.low.color}>
                     Lower
@@ -99,7 +130,7 @@ export default function AutomationWaveChart() {
               dot={false}
               activeDot={{ r: 4 }}
               label={({ x, y, index }: { x: number; y: number; index: number }) => {
-                if (index !== data.length - 1) return <g />;
+                if (index !== scenarioData.length - 1) return <g />;
                 return (
                   <text x={x + 8} y={y + 4} fontSize={11} fontWeight={600} fill={INCOME_TIER_META.middle.color}>
                     Middle
@@ -117,7 +148,7 @@ export default function AutomationWaveChart() {
               dot={false}
               activeDot={{ r: 4 }}
               label={({ x, y, index }: { x: number; y: number; index: number }) => {
-                if (index !== data.length - 1) return <g />;
+                if (index !== scenarioData.length - 1) return <g />;
                 return (
                   <text x={x + 8} y={y + 4} fontSize={11} fontWeight={600} fill={INCOME_TIER_META.high.color}>
                     Higher
@@ -145,10 +176,12 @@ export default function AutomationWaveChart() {
       </div>
 
       <p className="text-[11px] text-[var(--muted)] mt-3">
-        This chart shows the percentage of tasks within each income tier where it&apos;s now cheaper to use AI
-        than to pay a human. A rising line means more tasks are crossing that cost threshold each year. This
-        measures economic incentive, not actual job loss — real-world adoption is slowed by organizational
-        inertia, regulation, and the fact that automating some tasks can make the remaining human tasks more valuable.
+        Solid lines show baseline cost crossover — the percentage of tasks within each income tier where
+        AI compute is now cheaper than the human wage rate. Shaded bands show the slow-to-fast scenario
+        range (0.5x to 1.5x cost decline rates). The widening bands reflect compounding uncertainty:
+        by 2036, projections are highly sensitive to assumed cost trajectories. This measures economic
+        incentive, not actual job loss — real-world adoption is slowed by organizational inertia, regulation,
+        demand elasticity, and complementarity effects.
       </p>
     </div>
   );

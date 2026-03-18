@@ -10,6 +10,9 @@ import {
   EXPOSURE_UNCERTAINTY,
   SOC_EXPOSURE_SCORES,
   getAutomationPercentAtYear,
+  getCfoSignal,
+  DEMAND_ELASTICITY,
+  DEMAND_ELASTICITY_META,
   type IncomeTier,
   type TaskCategory,
 } from "@/data/economy-occupations";
@@ -35,6 +38,8 @@ interface TierDetail {
     topDurable: string;
     uncertaintyVariance: number;
     exposureScore: number;
+    demandElasticity: string | null;
+    cfoSignal: { shortLabel: string; color: string; nei: number } | null;
   }[];
   totalEmployment: number;
   avgAutomation2030: number;
@@ -73,6 +78,8 @@ export default function IncomeStrataImpact() {
           topDurable: durable,
           uncertaintyVariance: EXPOSURE_UNCERTAINTY[g.id]?.variance ?? 0,
           exposureScore: SOC_EXPOSURE_SCORES[g.id]?.mean ?? 0,
+          demandElasticity: DEMAND_ELASTICITY[g.id]?.elasticity ?? null,
+          cfoSignal: getCfoSignal(g.id),
         };
       });
 
@@ -192,6 +199,8 @@ export default function IncomeStrataImpact() {
                     <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold">2036</th>
                     <th className="text-left py-2 px-3 text-[var(--foreground)] font-semibold">Most exposed</th>
                     <th className="text-left py-2 px-3 text-[var(--foreground)] font-semibold">Most durable</th>
+                    <th className="text-center py-2 px-3 text-[var(--foreground)] font-semibold" title="Demand elasticity: will cheaper output expand this market?">Demand</th>
+                    <th className="text-center py-2 px-3 text-[var(--foreground)] font-semibold" title="CFO replace/enhance signal (Baslandze et al., 2026)">CFO</th>
                     <th className="text-center py-2 px-4 text-[var(--foreground)] font-semibold" title="How much 6 AI exposure metrics agree on this group's exposure level (Yale Budget Lab, 2026)">Certainty</th>
                   </tr>
                 </thead>
@@ -244,6 +253,31 @@ export default function IncomeStrataImpact() {
                       </td>
                       <td className="py-2 px-3 text-[11px]">{g.topVulnerable}</td>
                       <td className="py-2 px-3 text-[11px]">{g.topDurable}</td>
+                      <td className="text-center py-2 px-3 text-[11px]">
+                        {g.demandElasticity && (
+                          <span
+                            className="inline-block px-1.5 py-0.5 rounded text-[10px] font-medium"
+                            style={{
+                              color: DEMAND_ELASTICITY_META[g.demandElasticity as keyof typeof DEMAND_ELASTICITY_META].color,
+                              backgroundColor: `${DEMAND_ELASTICITY_META[g.demandElasticity as keyof typeof DEMAND_ELASTICITY_META].color}15`,
+                            }}
+                            title={DEMAND_ELASTICITY[g.id]?.rationale}
+                          >
+                            {DEMAND_ELASTICITY_META[g.demandElasticity as keyof typeof DEMAND_ELASTICITY_META].label}
+                          </span>
+                        )}
+                      </td>
+                      <td className="text-center py-2 px-3 text-[11px]">
+                        {g.cfoSignal && (
+                          <span
+                            className="inline-block px-1.5 py-0.5 rounded text-[10px] font-medium"
+                            style={{ color: g.cfoSignal.color, backgroundColor: `${g.cfoSignal.color}15` }}
+                            title={`NEI: ${g.cfoSignal.nei.toFixed(2)}x replace/enhance`}
+                          >
+                            {g.cfoSignal.shortLabel}
+                          </span>
+                        )}
+                      </td>
                       <td className="text-center py-2 px-4 text-[11px]">
                         {g.uncertaintyVariance > 0 && (() => {
                           const u = getUncertaintyLabel(g.uncertaintyVariance);

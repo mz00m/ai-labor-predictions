@@ -22,6 +22,9 @@ import {
   EXPOSURE_UNCERTAINTY,
   SOC_EXPOSURE_SCORES,
   CFO_SURVEY_NEI,
+  getCfoSignal,
+  DEMAND_ELASTICITY,
+  DEMAND_ELASTICITY_META,
   type OccupationGroup,
 } from "@/data/economy-occupations";
 
@@ -91,6 +94,14 @@ function CustomTooltip({ active, payload }: TooltipProps<number, string>) {
                   <span className="text-[var(--muted)] font-normal ml-1">
                     ({neiData.label})
                   </span>
+                </span>
+              </div>
+            )}
+            {DEMAND_ELASTICITY[d.id] && (
+              <div className="flex justify-between gap-4">
+                <span className="text-[var(--muted)]">Demand elasticity</span>
+                <span className="font-medium" style={{ color: DEMAND_ELASTICITY_META[DEMAND_ELASTICITY[d.id].elasticity].color }}>
+                  {DEMAND_ELASTICITY_META[DEMAND_ELASTICITY[d.id].elasticity].label}
                 </span>
               </div>
             )}
@@ -182,6 +193,37 @@ export default function WorkforceOverview() {
         })}
       </div>
 
+      {/* CFO Signal: Replace vs. Enhance */}
+      <div className="callout-card bg-[#10B981]/[0.06] border border-[#10B981]/20 rounded-xl p-4 mb-6">
+        <p className="text-[13px] font-semibold text-[#10B981] mb-1">
+          Real-world signal: CFOs see enhancement, not replacement, for 7 of 8 groups
+        </p>
+        <p className="text-[12px] text-[var(--muted)] leading-relaxed">
+          In a survey of ~750 CFOs (Baslandze et al., 2026), only Office &amp; Admin roles were described
+          as being replaced more than enhanced by AI (NEI 2.0x). For the other 7 occupation groups with data,
+          CFOs see AI as enhancing workers — Tech &amp; Computing (0.60x), Legal (0.47x), and Management (0.14x)
+          are the most enhancement-oriented. This suggests the dominant near-term channel is augmentation, not automation.
+        </p>
+        <div className="flex flex-wrap gap-3 mt-3">
+          {Object.entries(CFO_SURVEY_NEI)
+            .sort(([, a], [, b]) => b.nei - a.nei)
+            .map(([id]) => {
+              const signal = getCfoSignal(id);
+              const group = OCCUPATION_GROUPS.find((g) => g.id === id);
+              if (!signal || !group) return null;
+              return (
+                <span
+                  key={id}
+                  className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-medium"
+                  style={{ color: signal.color, backgroundColor: `${signal.color}12` }}
+                >
+                  {group.shortTitle}: {signal.nei.toFixed(2)}x
+                </span>
+              );
+            })}
+        </div>
+      </div>
+
       {/* Bar chart */}
       <div style={{ height: Math.max(200, chartData.length * 26 + 40) }}>
         <ResponsiveContainer width="100%" height="100%">
@@ -256,6 +298,9 @@ export default function WorkforceOverview() {
         Income tiers based on median annual wage for the occupation group.
         Exposure metric agreement from Yale Budget Lab (Gimbel et al., 2026), comparing 6 AI exposure measures across 778 occupations.
         CFO replace/enhance ratio from Baslandze et al. (2026), Federal Reserve Bank of Atlanta/Duke University survey of ~750 executives.
+        Demand elasticity classifications informed by Bessen (2019) and Autor &amp; Salomons (2018) — high elasticity
+        means cheaper output historically expands markets (potentially increasing employment); low elasticity means
+        demand is fixed and cost reduction leads to headcount reduction.
       </p>
     </div>
   );
