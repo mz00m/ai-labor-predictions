@@ -158,7 +158,7 @@ export default function IncomeStrataImpact() {
               {/* Header */}
               <div
                 className="grid border-b border-black/[0.06] font-semibold text-[var(--foreground)]"
-                style={{ gridTemplateColumns: "1fr 70px 70px 55px 55px 55px 75px" }}
+                style={{ gridTemplateColumns: "2.5fr 1fr 1fr 0.8fr 0.8fr 0.8fr 1fr" }}
               >
                 <div className="py-2 pl-4 pr-3 text-left">Occupation</div>
                 <div className="py-2 px-3 text-right">Workers</div>
@@ -177,7 +177,7 @@ export default function IncomeStrataImpact() {
                     <div
                       key={g.shortTitle}
                       className={`grid items-center border-b border-black/[0.03] ${clickable ? "cursor-pointer hover:bg-black/[0.02] relative" : "hover:bg-black/[0.02]"}`}
-                      style={{ gridTemplateColumns: "1fr 70px 70px 55px 55px 55px 75px" }}
+                      style={{ gridTemplateColumns: "2.5fr 1fr 1fr 0.8fr 0.8fr 0.8fr 1fr" }}
                       onClick={clickable ? () => router.push(`/task-visualizer?job=${jobIds[0]}`) : undefined}
                     >
                       <div className="py-2 pl-4 pr-3 font-medium">
