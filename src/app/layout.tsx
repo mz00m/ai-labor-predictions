@@ -102,7 +102,7 @@ export default function RootLayout({
           {children}
         </main>
         <Chatbot sourceCount={sourceCount} />
-        <ChatbotBuddy />
+        <ChatbotBuddy sourceCount={sourceCount} />
         <Analytics />
         <footer className="max-w-6xl mx-auto px-6 sm:px-10 pb-16">
           <div className="pt-10 border-t border-black/[0.06] space-y-4">
