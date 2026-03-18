@@ -253,7 +253,6 @@ export default function ChatbotBuddy() {
   }, []);
 
   if (chatOpen) return null;
-  if (pathname === "/") return null; // Hero has its own walking robot
 
   // ── Position & transform for each entrance mode ──
   const positionStyles = getPositionStyles(entrance, entered, isHovered, reducedMotion);
