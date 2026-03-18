@@ -1,0 +1,14 @@
+{
+  "id": "deloitte-ai-state-enterprise-2026",
+  "abstract": "Deloitte's annual State of AI in the Enterprise survey of 3,235 director-to-C-suite leaders across 24 countries (fielded Aug-Sep 2025) finds AI moving from pilots to enterprise scaling, with worker access expanding 50% in one year. While productivity gains are widespread, only 34% of firms are using AI for deep business transformation, and 84% have not redesigned jobs around AI capabilities. The report also examines sovereign AI, agentic AI (74% plan deployment within two years), and physical AI trends.",
+  "keyFindings": [
+    "Workforce access to sanctioned AI tools grew from under 40% to under 60% of workers in one year (among surveyed AI-using firms)",
+    "Only 25% of firms have moved 40%+ of AI experiments into production, but 54% expect to within 3-6 months",
+    "34% of firms are using AI for deep business transformation; 37% use AI at surface level with little process change",
+    "84% of companies have not redesigned jobs around AI capabilities despite high automation expectations",
+    "74% of companies plan to deploy agentic AI within two years, but only 21% have mature governance for autonomous agents"
+  ],
+  "methodology": "Survey of 3,235 director-to-C-suite respondents across 24 countries (Aug-Sep 2025). Industries: consumer, energy/resources/industrials, financial services, life sciences/healthcare, TMT, government/public services. All participating organizations had one or more working AI implementations. Supplemented by 15 qualitative interviews with global C-suite executives.",
+  "qualifiers": "Survey sample is biased toward AI-active organizations (all had working AI implementations). Respondent pool is global (24 countries), not US-only. Self-reported data from senior leaders, not measured outcomes. Results reflect intentions and perceptions, not verified deployments.",
+  "fetchedAt": "2026-03-18"
+}
