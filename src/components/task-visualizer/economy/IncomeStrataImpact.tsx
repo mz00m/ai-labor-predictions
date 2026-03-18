@@ -152,55 +152,59 @@ export default function IncomeStrataImpact() {
               </div>
             </div>
 
-            {/* Occupation table */}
-            <div className="overflow-x-auto">
-              <table className="w-full text-[12px]">
-                <thead>
-                  <tr className="border-b border-black/[0.06]">
-                    <th className="text-left py-2 px-4 text-[var(--foreground)] font-semibold">Occupation</th>
-                    <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold">Workers</th>
-                    <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold">Wage</th>
-                    <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold" title="% of tasks where AI compute cost < human wage in 2028">2028</th>
-                    <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold" title="% of tasks where AI compute cost < human wage in 2032">2032</th>
-                    <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold" title="% of tasks where AI compute cost < human wage in 2036">2036</th>
-                    <th className="text-center py-2 px-3 text-[var(--foreground)] font-semibold" title="Demand elasticity: will cheaper AI output expand this market or just cut costs?">Demand</th>
-                  </tr>
-                </thead>
-                <tbody className="text-[var(--muted)]">
-                  {detail.groups.map((g) => {
-                    const jobIds = SOC_TO_JOB_IDS[g.id] || [];
-                    const clickable = jobIds.length > 0;
-                    return (
-                    <tr
+            {/* Occupation table — uses CSS grid instead of <table> to avoid
+                column misalignment caused by nav-row ::before pseudo-element on <tr> */}
+            <div className="text-[12px]">
+              {/* Header */}
+              <div
+                className="grid border-b border-black/[0.06] font-semibold text-[var(--foreground)]"
+                style={{ gridTemplateColumns: "1fr 70px 70px 55px 55px 55px 75px" }}
+              >
+                <div className="py-2 pl-4 pr-3 text-left">Occupation</div>
+                <div className="py-2 px-3 text-right">Workers</div>
+                <div className="py-2 px-3 text-right">Wage</div>
+                <div className="py-2 px-3 text-right" title="% of tasks where AI compute cost < human wage in 2028">2028</div>
+                <div className="py-2 px-3 text-right" title="% of tasks where AI compute cost < human wage in 2032">2032</div>
+                <div className="py-2 px-3 text-right" title="% of tasks where AI compute cost < human wage in 2036">2036</div>
+                <div className="py-2 px-3 text-center" title="Demand elasticity: will cheaper AI output expand this market or just cut costs?">Demand</div>
+              </div>
+              {/* Rows */}
+              <div className="text-[var(--muted)]">
+                {detail.groups.map((g) => {
+                  const jobIds = SOC_TO_JOB_IDS[g.id] || [];
+                  const clickable = jobIds.length > 0;
+                  return (
+                    <div
                       key={g.shortTitle}
-                      className={`border-b border-black/[0.03] ${clickable ? "nav-row cursor-pointer" : "hover:bg-black/[0.02]"}`}
+                      className={`grid items-center border-b border-black/[0.03] ${clickable ? "cursor-pointer hover:bg-black/[0.02] relative" : "hover:bg-black/[0.02]"}`}
+                      style={{ gridTemplateColumns: "1fr 70px 70px 55px 55px 55px 75px" }}
                       onClick={clickable ? () => router.push(`/task-visualizer?job=${jobIds[0]}`) : undefined}
                     >
-                      <td className="py-2 px-4 font-medium">
+                      <div className="py-2 pl-4 pr-3 font-medium">
                         {clickable ? (
                           <span className="text-[var(--foreground)] hover:text-[var(--accent)]">{g.shortTitle}</span>
                         ) : (
                           <span className="text-[var(--foreground)]">{g.shortTitle}</span>
                         )}
-                      </td>
-                      <td className="text-right py-2 px-3 tabular-nums">{(g.employment / 1000).toFixed(1)}M</td>
-                      <td className="text-right py-2 px-3 tabular-nums">${(g.medianWageAnnual / 1000).toFixed(0)}K</td>
-                      <td className="text-right py-2 px-3 tabular-nums">
+                      </div>
+                      <div className="py-2 px-3 text-right tabular-nums">{(g.employment / 1000).toFixed(1)}M</div>
+                      <div className="py-2 px-3 text-right tabular-nums">${(g.medianWageAnnual / 1000).toFixed(0)}K</div>
+                      <div className="py-2 px-3 text-right tabular-nums">
                         <span style={{ color: g.pct2028 >= 60 ? "#EF4444" : g.pct2028 >= 35 ? "#6366F1" : "#10B981" }}>
                           {g.pct2028}%
                         </span>
-                      </td>
-                      <td className="text-right py-2 px-3 tabular-nums">
+                      </div>
+                      <div className="py-2 px-3 text-right tabular-nums">
                         <span style={{ color: g.pct2032 >= 60 ? "#EF4444" : g.pct2032 >= 35 ? "#6366F1" : "#10B981" }}>
                           {g.pct2032}%
                         </span>
-                      </td>
-                      <td className="text-right py-2 px-3 tabular-nums">
+                      </div>
+                      <div className="py-2 px-3 text-right tabular-nums">
                         <span style={{ color: g.pct2036 >= 60 ? "#EF4444" : g.pct2036 >= 35 ? "#6366F1" : "#10B981" }}>
                           {g.pct2036}%
                         </span>
-                      </td>
-                      <td className="text-center py-2 px-3 text-[11px]">
+                      </div>
+                      <div className="py-2 px-3 text-center text-[11px]">
                         {g.demandElasticity && (
                           <span
                             className="inline-block px-1.5 py-0.5 rounded text-[10px] font-medium"
@@ -213,12 +217,11 @@ export default function IncomeStrataImpact() {
                             {DEMAND_ELASTICITY_META[g.demandElasticity as keyof typeof DEMAND_ELASTICITY_META].label}
                           </span>
                         )}
-                      </td>
-                    </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
 
             {/* Column definitions */}
