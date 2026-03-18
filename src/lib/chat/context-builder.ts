@@ -293,7 +293,7 @@ export function buildChatContext(userQuery: string): ChatContext {
   const sections: string[] = [];
 
   // Site overview + role instructions
-  sections.push(`You are a friendly, knowledgeable research assistant for jobsdata.ai, a dashboard tracking AI's impact on the labor market with 300+ sources across 17 prediction graphs.
+  sections.push(`You are a friendly, knowledgeable research assistant for jobsdata.ai, a dashboard tracking AI's impact on the labor market with 400+ sources across 17 prediction graphs.
 Data last updated: ${lastUpdated}.
 
 Evidence tiers (for your reference, don't explain these unless asked):

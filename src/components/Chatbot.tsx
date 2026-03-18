@@ -416,7 +416,7 @@ export default function Chatbot({ sourceCount }: ChatbotProps) {
                 Ask Gob
               </h3>
               <p className="text-[11px] text-white/70">
-                {sourceCount ? `${sourceCount}+` : "300+"} sources across 17 predictions
+                {sourceCount ? `${sourceCount}+` : "400+"} sources across 17 predictions
               </p>
             </div>
           </div>
