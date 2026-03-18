@@ -75,7 +75,7 @@ const PHASES = [
 ];
 
 const AI_POSITION = 1.5; // Between Phase II and III (0-indexed)
-const WALK_DURATION_MS = 2800;
+const WALK_DURATION_MS = 5500;
 const TARGET_LEFT = `${((AI_POSITION + 0.5) / PHASES.length) * 100}%`;
 
 /** Phase-specific icons — small, geometric */
@@ -96,7 +96,7 @@ function PhaseIcon({ phase, active }: { phase: string; active: boolean }) {
 function WalkingRobot({ walking, leaning }: { walking: boolean; leaning: boolean }) {
   const legStyle = (anim: string): React.CSSProperties => ({
     transformOrigin: anim === "robot-step-l" ? "8px 21px" : "14px 21px",
-    animation: walking ? `${anim} 0.3s linear infinite` : "none",
+    animation: walking ? `${anim} 0.45s linear infinite` : "none",
     transform: leaning
       ? anim === "robot-step-l"
         ? "rotate(6deg) translateX(2px)"
@@ -109,15 +109,15 @@ function WalkingRobot({ walking, leaning }: { walking: boolean; leaning: boolean
 
   return (
     <svg
-      width="27"
-      height="36"
+      width="36"
+      height="47"
       viewBox="0 0 22 29"
       fill="none"
       aria-hidden="true"
       className="robot-walking"
       style={{
         overflow: "visible",
-        animation: walking ? "robot-bob 0.3s linear infinite" : "none",
+        animation: walking ? "robot-bob 0.45s linear infinite" : "none",
         filter: "drop-shadow(0 1px 2px rgba(92,97,246,0.2))",
       }}
     >
@@ -264,9 +264,9 @@ export default function GPTTimeline() {
           <div
             className="absolute z-[1] flex flex-col items-center"
             style={{
-              // feet sit directly on the track line: track top is at pt-8 (2rem)
-              top: "calc(2rem + 2px)",
-              transform: "translateX(-50%) translateY(-100%)",
+              // Robot feet on the track: track center is at 2rem+2px, robot is 47px tall
+              top: "calc(2rem + 2px - 47px)",
+              transform: "translateX(-50%)",
               left: walkStarted ? TARGET_LEFT : "2rem",
               transition: walkStarted
                 ? `left ${WALK_DURATION_MS}ms cubic-bezier(0.25, 0.46, 0.45, 0.94)`
@@ -274,9 +274,9 @@ export default function GPTTimeline() {
             }}
           >
             <WalkingRobot walking={walkStarted && !walkDone} leaning={leaning} />
-            {/* Label fades in after walk completes */}
+            {/* Label below the track line, fades in after walk */}
             <span
-              className="text-[7px] font-bold text-[var(--accent)] tracking-wider whitespace-nowrap mt-0.5"
+              className="text-[8px] font-bold text-[var(--accent)] tracking-wider whitespace-nowrap mt-1"
               style={{
                 opacity: walkDone ? 1 : 0,
                 transition: walkDone ? "opacity 0.5s ease 0.2s" : "none",
