@@ -17,17 +17,33 @@ import {
   DECLINE_RATE_SCENARIOS,
 } from "@/data/economy-occupations";
 
+// Only show baseline income tier lines in tooltip, not scenario band areas
+const BASELINE_KEYS = new Set(["lowAutomated", "middleAutomated", "highAutomated"]);
+
 function CustomTooltip({ active, payload, label }: TooltipProps<number, string>) {
   if (!active || !payload?.length) return null;
+  const filtered = payload.filter((p) => BASELINE_KEYS.has(p.dataKey as string));
+  if (!filtered.length) return null;
+
+  // Pull scenario range from the full payload for context
+  const dataPoint = payload[0]?.payload;
+  const hasRange = dataPoint?.lowSlow !== undefined;
+
   return (
     <div className="bg-white rounded-lg border border-black/[0.08] shadow-lg p-3">
       <p className="text-[12px] font-semibold text-[var(--foreground)] mb-1.5">{label}</p>
-      {[...payload].reverse().map((p) => (
+      <p className="text-[10px] text-[var(--muted)] mb-1">Baseline cost crossover by income tier:</p>
+      {[...filtered].reverse().map((p) => (
         <div key={p.dataKey} className="flex justify-between text-[11px] gap-4 mb-0.5">
           <span style={{ color: p.color }}>{p.name}</span>
           <span className="font-medium">{p.value}% of tasks</span>
         </div>
       ))}
+      {hasRange && (
+        <p className="text-[10px] text-[var(--muted)] mt-1.5 pt-1.5 border-t border-black/[0.06]">
+          Shaded bands show slow/fast scenario range
+        </p>
+      )}
     </div>
   );
 }
