@@ -1,0 +1,14 @@
+{
+  "id": "coworkingcafe-ai-jobs-metros-2026",
+  "abstract": "CoworkingCafe analyzed 300+ US metropolitan areas to map where AI jobs are concentrated, how much they pay, and which metros offer the best mix of opportunity, pay, and livability. The study finds AI hiring remains highly concentrated in a small number of metros, with San Jose leading in specialization (6x national average concentration) and New York leading in volume (15,000+ new AI postings). A second tier of emerging markets like Dallas is capturing new AI roles by balancing talent access with cost efficiency.",
+  "keyFindings": [
+    "San Jose has the highest AI job concentration at 6x the national average, with average AI salaries of $215,000 (Nov 2024-2025)",
+    "New York leads in AI hiring volume with 15,018 new AI-native job postings, surpassing Silicon Valley in raw numbers",
+    "Dallas-Fort Worth added 6,000+ AI jobs with $128,572 average salaries at just 3% above average cost of living",
+    "Seattle ranked third nationally with 12,726 new AI jobs and AI roles nearly 3x the national average concentration",
+    "San Francisco AI salaries average $178,000 but face the steepest cost premium among large metros at nearly 20% above US average"
+  ],
+  "methodology": "Analysis of 300+ metropolitan statistical areas with populations over 50,000, scored on six metrics: AI job postings from AImaps (Nov 2024-Nov 2025, 35 points), BLS average salaries for AI-related occupations (25 points), BLS location quotients (15 points), BEA regional price parity (10 points), FCC fiber coverage (10 points), and coworking spaces from CoworkingCafe listings (5 points). Metros grouped into large (1M+), medium (500K-1M), and small (<500K) population brackets.",
+  "qualifiers": "Study focuses on AI-native technical roles (software developers, data scientists, systems analysts, QA testers) and does not cover all AI-adjacent occupations. Geographic concentration data reflects job postings, not actual employment. Cost of living comparisons use BEA regional price parity which may not capture intra-metro variation. Coworking space counts are from CoworkingCafe's own listings database.",
+  "fetchedAt": "2026-03-18"
+}
