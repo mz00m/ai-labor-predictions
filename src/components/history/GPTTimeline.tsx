@@ -92,47 +92,85 @@ function PhaseIcon({ phase, active }: { phase: string; active: boolean }) {
   return icons[phase] ?? null;
 }
 
-/** Walking robot SVG — front-facing with animated legs */
-function WalkingRobot({ walking }: { walking: boolean }) {
+/** Walking robot SVG — front-facing with animated legs, 30% larger */
+function WalkingRobot({ walking, leaning }: { walking: boolean; leaning: boolean }) {
   const legStyle = (anim: string): React.CSSProperties => ({
     transformOrigin: anim === "robot-step-l" ? "8px 21px" : "14px 21px",
     animation: walking ? `${anim} 0.3s linear infinite` : "none",
+    transform: leaning
+      ? anim === "robot-step-l"
+        ? "rotate(6deg) translateX(2px)"
+        : "rotate(-2deg)"
+      : undefined,
+    transition: "transform 0.4s ease",
   });
+
+  const spring = "cubic-bezier(0.34,1.56,0.64,1)";
 
   return (
     <svg
-      width="18"
-      height="26"
-      viewBox="0 0 22 30"
+      width="23"
+      height="34"
+      viewBox="0 0 22 36"
       fill="none"
       aria-hidden="true"
       className="robot-walking"
       style={{
+        overflow: "visible",
         animation: walking ? "robot-bob 0.3s linear infinite" : "none",
         filter: "drop-shadow(0 1px 2px rgba(92,97,246,0.2))",
       }}
     >
-      {/* Antenna */}
-      <line x1="11" y1="0.5" x2="11" y2="4" stroke="var(--accent)" strokeWidth="1.5" strokeLinecap="round" />
-      <circle cx="11" cy="0.5" r="1.5" fill="var(--accent)" opacity={walking ? "1" : "0.7"} />
+      {/* Upper body — tilts on lean */}
+      <g
+        style={{
+          transformOrigin: "11px 21px",
+          transform: leaning ? "rotate(6deg)" : "rotate(0deg)",
+          transition: `transform 0.6s ${spring}`,
+        }}
+      >
+        {/* Antenna */}
+        <line x1="11" y1="0.5" x2="11" y2="4" stroke="var(--accent)" strokeWidth="1.5" strokeLinecap="round" />
+        <circle cx="11" cy="0.5" r="1.5" fill="var(--accent)" opacity={walking ? "1" : leaning ? "1" : "0.7"}>
+          {leaning && (
+            <animate attributeName="opacity" values="1;0.4;1" dur="1.5s" repeatCount="indefinite" />
+          )}
+        </circle>
 
-      {/* Head */}
-      <rect x="3" y="4" width="16" height="10" rx="2.5" fill="var(--accent)" />
-      {/* Eyes */}
-      <rect x="5.5" y="7" width="3.5" height="3" rx="1" fill="white" />
-      <rect x="13" y="7" width="3.5" height="3" rx="1" fill="white" />
-      {/* Mouth */}
-      <rect x="8" y="11.5" width="6" height="1.5" rx="0.75" fill="white" opacity="0.5" />
+        {/* Head */}
+        <rect x="3" y="4" width="16" height="10" rx="2.5" fill="var(--accent)" />
+        {/* Eyes */}
+        <rect x="5.5" y="7" width="3.5" height="3" rx="1" fill="white" />
+        <rect x="13" y="7" width="3.5" height="3" rx="1" fill="white" />
+        {/* Mouth — wider smirk when leaning */}
+        <rect
+          x={leaning ? 6.5 : 8}
+          y="11.5"
+          width={leaning ? 9 : 6}
+          height="1.5"
+          rx="0.75"
+          fill="white"
+          opacity="0.5"
+        />
 
-      {/* Body */}
-      <rect x="4.5" y="14.5" width="13" height="7" rx="2" fill="var(--accent)" opacity="0.85" />
+        {/* Body */}
+        <rect x="4.5" y="14.5" width="13" height="7" rx="2" fill="var(--accent)" opacity="0.85" />
 
-      {/* Left arm */}
-      <rect x="1.5" y="15.5" width="2.5" height="5" rx="1" fill="var(--accent)" opacity="0.6" />
-      {/* Right arm */}
-      <rect x="18" y="15.5" width="2.5" height="5" rx="1" fill="var(--accent)" opacity="0.6" />
+        {/* Left arm */}
+        <rect x="1.5" y="15.5" width="2.5" height="5" rx="1" fill="var(--accent)" opacity="0.6" />
+        {/* Right arm — reaches toward cane on lean */}
+        <g
+          style={{
+            transformOrigin: "19px 15.5px",
+            transform: leaning ? "rotate(14deg)" : "rotate(0deg)",
+            transition: `transform 0.5s ${spring}`,
+          }}
+        >
+          <rect x="18" y="15.5" width="2.5" height="5" rx="1" fill="var(--accent)" opacity="0.6" />
+        </g>
+      </g>
 
-      {/* Left leg */}
+      {/* Left leg — crosses in front on lean */}
       <g style={legStyle("robot-step-l")}>
         <rect x="5.5" y="21.5" width="3.5" height="5" rx="1.2" fill="var(--accent)" opacity="0.75" />
         <rect x="4.5" y="25.5" width="5" height="2.5" rx="1" fill="var(--accent)" opacity="0.6" />
@@ -143,6 +181,23 @@ function WalkingRobot({ walking }: { walking: boolean }) {
         <rect x="13" y="21.5" width="3.5" height="5" rx="1.2" fill="var(--accent)" opacity="0.75" />
         <rect x="12.5" y="25.5" width="5" height="2.5" rx="1" fill="var(--accent)" opacity="0.6" />
       </g>
+
+      {/* Cane — swings into place on lean */}
+      <g
+        style={{
+          opacity: leaning ? 1 : 0,
+          transform: leaning ? "rotate(0deg)" : "rotate(-40deg)",
+          transformOrigin: "20px 18px",
+          transition: `all 0.5s ${spring}`,
+        }}
+      >
+        {/* Shaft */}
+        <line x1="20" y1="18" x2="22" y2="29" stroke="#8B7355" strokeWidth="1.5" strokeLinecap="round" />
+        {/* Curved handle */}
+        <path d="M20,18 Q20,15.5 17.5,15.5" stroke="#6B5335" strokeWidth="1.5" fill="none" strokeLinecap="round" />
+        {/* Tip */}
+        <circle cx="22" cy="29" r="0.8" fill="#6B5335" />
+      </g>
     </svg>
   );
 }
@@ -152,6 +207,7 @@ export default function GPTTimeline() {
   const [pulsingNode, setPulsingNode] = useState<number | null>(null);
   const [walkStarted, setWalkStarted] = useState(false);
   const [walkDone, setWalkDone] = useState(false);
+  const [leaning, setLeaning] = useState(false);
   const reducedMotion = useRef(false);
   const timelineRef = useRef<HTMLDivElement>(null);
 
@@ -172,9 +228,13 @@ export default function GPTTimeline() {
           if (reducedMotion.current) {
             setWalkStarted(true);
             setWalkDone(true);
+            setLeaning(true);
           } else {
             setWalkStarted(true);
-            setTimeout(() => setWalkDone(true), WALK_DURATION_MS);
+            setTimeout(() => {
+              setWalkDone(true);
+              setTimeout(() => setLeaning(true), 300);
+            }, WALK_DURATION_MS);
           }
         }
       },
@@ -204,8 +264,8 @@ export default function GPTTimeline() {
           <div
             className="absolute z-10 flex flex-col items-center"
             style={{
-              // feet sit on the track: top of track is at pt-8 (2rem), center at +2px
-              top: "calc(2rem + 2px)",
+              // feet sit directly on the track line: track top is at pt-8 (2rem)
+              top: "2rem",
               transform: "translateX(-50%) translateY(-100%)",
               left: walkStarted ? TARGET_LEFT : "2rem",
               transition: walkStarted
@@ -213,7 +273,7 @@ export default function GPTTimeline() {
                 : "none",
             }}
           >
-            <WalkingRobot walking={walkStarted && !walkDone} />
+            <WalkingRobot walking={walkStarted && !walkDone} leaning={leaning} />
             {/* Label fades in after walk completes */}
             <span
               className="text-[7px] font-bold text-[var(--accent)] tracking-wider whitespace-nowrap mt-0.5"

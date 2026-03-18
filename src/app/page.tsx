@@ -6,7 +6,6 @@ import FunnelStrip from "@/components/FunnelStrip";
 import SectionBar from "@/components/SectionBar";
 import HeroTriad from "@/components/HeroTriad";
 import SplitFlapWord from "@/components/SplitFlapWord";
-import HeroRobot from "@/components/HeroRobot";
 import ScrollReveal from "@/components/ScrollReveal";
 import {
   PredictionsWatermark,
@@ -58,13 +57,10 @@ export default function Home() {
             <span className="opacity-50 mx-1">&middot;</span>
             <span className="normal-case font-semibold opacity-70">{formatUpdatedDate(lastUpdated)}</span>
           </p>
-          <div className="relative max-w-4xl">
-            <h1 className="text-[42px] sm:text-[56px] font-black tracking-tight text-[#2E3650] leading-[1.05]">
-              How is AI <span className="text-[#F66B5C] italic">reshaping</span>
-              <br className="hidden sm:block" /> the labor market?
-            </h1>
-            <HeroRobot />
-          </div>
+          <h1 className="text-[42px] sm:text-[56px] font-black tracking-tight text-[#2E3650] leading-[1.05] max-w-4xl">
+            How is AI <span className="text-[#F66B5C] italic">reshaping</span>
+            <br className="hidden sm:block" /> the labor market?
+          </h1>
           <p className="mt-4 text-[15px] text-[var(--muted)] leading-relaxed max-w-2xl">
             ~{totalSources} sources, one pattern. AI adoption is accelerating, productivity is climbing,
             entry-level and freelance work is compressing, and jobs are changing faster than
