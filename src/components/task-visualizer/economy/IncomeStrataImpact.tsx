@@ -153,11 +153,11 @@ export default function IncomeStrataImpact() {
             </div>
 
             {/* Occupation table */}
-            <div>
+            <div className="overflow-x-auto">
               <table className="w-full text-[12px]">
                 <thead>
                   <tr className="border-b border-black/[0.06]">
-                    <th className="text-left py-2 px-3 text-[var(--foreground)] font-semibold">Occupation</th>
+                    <th className="text-left py-2 px-4 text-[var(--foreground)] font-semibold">Occupation</th>
                     <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold">Workers</th>
                     <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold">Wage</th>
                     <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold" title="% of tasks where AI compute cost < human wage in 2028">2028</th>
@@ -176,31 +176,31 @@ export default function IncomeStrataImpact() {
                       className={`border-b border-black/[0.03] ${clickable ? "nav-row cursor-pointer" : "hover:bg-black/[0.02]"}`}
                       onClick={clickable ? () => router.push(`/task-visualizer?job=${jobIds[0]}`) : undefined}
                     >
-                      <td className="text-left py-2 px-3 font-medium whitespace-nowrap">
+                      <td className="py-2 px-4 font-medium">
                         {clickable ? (
                           <span className="text-[var(--foreground)] hover:text-[var(--accent)]">{g.shortTitle}</span>
                         ) : (
                           <span className="text-[var(--foreground)]">{g.shortTitle}</span>
                         )}
                       </td>
-                      <td className="text-right py-2 px-3 tabular-nums whitespace-nowrap">{(g.employment / 1000).toFixed(1)}M</td>
-                      <td className="text-right py-2 px-3 tabular-nums whitespace-nowrap">${(g.medianWageAnnual / 1000).toFixed(0)}K</td>
-                      <td className="text-right py-2 px-3 tabular-nums whitespace-nowrap">
+                      <td className="text-right py-2 px-3 tabular-nums">{(g.employment / 1000).toFixed(1)}M</td>
+                      <td className="text-right py-2 px-3 tabular-nums">${(g.medianWageAnnual / 1000).toFixed(0)}K</td>
+                      <td className="text-right py-2 px-3 tabular-nums">
                         <span style={{ color: g.pct2028 >= 60 ? "#EF4444" : g.pct2028 >= 35 ? "#6366F1" : "#10B981" }}>
                           {g.pct2028}%
                         </span>
                       </td>
-                      <td className="text-right py-2 px-3 tabular-nums whitespace-nowrap">
+                      <td className="text-right py-2 px-3 tabular-nums">
                         <span style={{ color: g.pct2032 >= 60 ? "#EF4444" : g.pct2032 >= 35 ? "#6366F1" : "#10B981" }}>
                           {g.pct2032}%
                         </span>
                       </td>
-                      <td className="text-right py-2 px-3 tabular-nums whitespace-nowrap">
+                      <td className="text-right py-2 px-3 tabular-nums">
                         <span style={{ color: g.pct2036 >= 60 ? "#EF4444" : g.pct2036 >= 35 ? "#6366F1" : "#10B981" }}>
                           {g.pct2036}%
                         </span>
                       </td>
-                      <td className="text-center py-2 px-3 text-[11px] whitespace-nowrap">
+                      <td className="text-center py-2 px-3 text-[11px]">
                         {g.demandElasticity && (
                           <span
                             className="inline-block px-1.5 py-0.5 rounded text-[10px] font-medium"
