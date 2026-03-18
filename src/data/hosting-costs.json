@@ -1,6 +1,6 @@
 {
   "projectStartDate": "2026-02-22",
-  "lastUpdated": "2026-03-15",
+  "lastUpdated": "2026-03-18",
   "currency": "USD",
   "categories": [
     {
@@ -18,9 +18,9 @@
         },
         {
           "name": "Vercel Pro",
-          "monthlyCost": 24.42,
-          "oneTimeCost": 0,
-          "costType": "recurring",
+          "monthlyCost": 0,
+          "oneTimeCost": 62.46,
+          "costType": "cumulative",
           "startDate": "2026-02-22",
           "endDate": null,
           "status": "active",
