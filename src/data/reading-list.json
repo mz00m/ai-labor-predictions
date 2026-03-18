@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "81,000 People Told Us How They Use AI",
+      "author": "Anthropic",
+      "publisher": "Anthropic",
+      "date": "2026-03-18",
+      "url": "https://www.anthropic.com/features/81k-interviews",
+      "takeaway": "Anthropic invited Claude users to share how they use AI, what they dream it could make possible, and what they fear it might do. Nearly 81,000 people responded in one week — the largest qualitative study of its kind.",
+      "weekFeatured": "2026-03-18",
+      "tier": 3
+    },
+    {
       "title": "Artificial Intelligence, Productivity, and the Workforce: Evidence from Corporate Executives",
       "author": "Salomé Baslandze, Brent Meyer, John Robertson, Emil Verner, Erick Zwick",
       "publisher": "Federal Reserve Bank of Atlanta / Duke University",
