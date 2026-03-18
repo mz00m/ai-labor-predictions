@@ -176,38 +176,37 @@ export default function GPTTimeline() {
             })}
           </div>
 
-          {/* AI position indicator — between Phase II and III */}
+          {/* AI position indicator — below the track, between Phase II and III */}
           <div
-            className="absolute top-0 -mt-14 flex flex-col items-center"
+            className="absolute flex flex-col items-center"
             style={{
               left: `${((AI_POSITION + 0.5) / PHASES.length) * 100}%`,
               transform: "translateX(-50%)",
+              top: "4px",
             }}
           >
-            <div className="flex flex-col items-center">
+            <div className="w-px h-3 bg-[var(--accent)] opacity-40" />
+            <div className="flex flex-col items-center mt-0.5">
               {/* Robot head */}
-              <div className="relative">
-                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true" className="drop-shadow-sm">
-                  {/* Antenna */}
-                  <line x1="16" y1="2" x2="16" y2="7" stroke="var(--accent)" strokeWidth="1.5" strokeLinecap="round" />
-                  <circle cx="16" cy="2" r="1.5" fill="var(--accent)" className="animate-pulse" />
-                  {/* Head */}
-                  <rect x="6" y="7" width="20" height="18" rx="3" fill="var(--accent)" />
-                  {/* Eyes */}
-                  <rect x="10" y="12" width="4" height="4" rx="1" fill="white" />
-                  <rect x="18" y="12" width="4" height="4" rx="1" fill="white" />
-                  {/* Mouth */}
-                  <rect x="11" y="19" width="10" height="2" rx="1" fill="white" opacity="0.6" />
-                  {/* Ear bolts */}
-                  <circle cx="5" cy="16" r="1.5" fill="var(--accent)" opacity="0.6" />
-                  <circle cx="27" cy="16" r="1.5" fill="var(--accent)" opacity="0.6" />
-                </svg>
-              </div>
-              <span className="text-[9px] font-bold text-[var(--accent)] mt-0.5 tracking-wide">
+              <svg width="24" height="24" viewBox="0 0 32 32" fill="none" aria-hidden="true" className="drop-shadow-sm">
+                {/* Antenna */}
+                <line x1="16" y1="2" x2="16" y2="7" stroke="var(--accent)" strokeWidth="1.5" strokeLinecap="round" />
+                <circle cx="16" cy="2" r="1.5" fill="var(--accent)" className="animate-pulse" />
+                {/* Head */}
+                <rect x="6" y="7" width="20" height="18" rx="3" fill="var(--accent)" />
+                {/* Eyes */}
+                <rect x="10" y="12" width="4" height="4" rx="1" fill="white" />
+                <rect x="18" y="12" width="4" height="4" rx="1" fill="white" />
+                {/* Mouth */}
+                <rect x="11" y="19" width="10" height="2" rx="1" fill="white" opacity="0.6" />
+                {/* Ear bolts */}
+                <circle cx="5" cy="16" r="1.5" fill="var(--accent)" opacity="0.6" />
+                <circle cx="27" cy="16" r="1.5" fill="var(--accent)" opacity="0.6" />
+              </svg>
+              <span className="text-[8px] font-bold text-[var(--accent)] tracking-wide">
                 AI IS HERE
               </span>
             </div>
-            <div className="w-px h-3 bg-[var(--accent)] opacity-40" />
           </div>
         </div>
       </div>
