@@ -61,69 +61,39 @@ export default function AboutPage() {
             className="text-[18px] sm:text-[20px] text-[var(--muted)] leading-relaxed"
             style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
           >
-            Synthesizing what we actually know about AI&rsquo;s impact on
-            economic opportunity &mdash; not the hype, not the doom, but
-            the evidence.
+            Society is trying to figure out what AI means for work and the answers keep changing.
           </p>
         </section>
 
         {/* Mission */}
         <section className="max-w-3xl space-y-4">
           <p className="text-[14px] text-[var(--muted)] leading-relaxed">
-            Society is trying to figure out what AI means for work, and the answers keep
-            changing.
-          </p>
-          <p className="text-[14px] text-[var(--muted)] leading-relaxed">
             For years I&rsquo;ve wanted a single place that synthesizes what we actually
             know about AI&rsquo;s impact on economic opportunity: not the hype, not the doom,
             but the evidence.
-            This site initially started as a way for me to track how predictions about displacement,
-            wages, adoption, and corporate behavior evolve as new research, data, and real-world
-            evidence emerge.
           </p>
           <p className="text-[14px] text-[var(--muted)] leading-relaxed">
-            I quickly realized there was also a lot of value in simplifying complex economic theories
-            and research to help the average person understand what it means for their jobs, their
-            kids headed off to college, and just generally what we should plan for as a society!
-            I hope you take some time to interact with the visualizations
+            This site started as a way to track how predictions about displacement,
+            wages, adoption, and corporate behavior evolve as new research, data, and real-world
+            evidence emerge. It quickly grew into something more: a resource for simplifying
+            complex economic research on how AI will impact jobs so that anyone &mdash; whether
+            you&rsquo;re a workforce leader, a parent with a college-bound kid, or just someone
+            trying to plan &mdash; can engage with this new and unclear future in a clear-headed way.
+          </p>
+          <p className="text-[14px] text-[var(--muted)] leading-relaxed">
+            Explore the visualizations
             ({" "}
-            <a href="/task-visualizer" className="link-draw-underline hover:text-[var(--foreground)]">job task breakdown</a>,{" "}
-            <a href="/task-visualizer/economy" className="link-draw-underline hover:text-[var(--foreground)]">economy-wide view</a>,{" "}
-            <a href="/compare" className="link-draw-underline hover:text-[var(--foreground)]">prediction comparison</a>{" "}
-            ) and read through some of the explainers
+            <a href="/task-visualizer" className="link-draw-underline hover:text-[var(--foreground)]">job tasks</a>,{" "}
+            <a href="/task-visualizer/economy" className="link-draw-underline hover:text-[var(--foreground)]">full economy</a>,{" "}
+            <a href="/compare" className="link-draw-underline hover:text-[var(--foreground)]">predictions</a>{" "}
+            ) and explainers
             ({" "}
-            <a href="/j-curve" className="link-draw-underline hover:text-[var(--foreground)]">the J-Curve</a>,{" "}
+            <a href="/j-curve" className="link-draw-underline hover:text-[var(--foreground)]">J-Curve</a>,{" "}
             <a href="/history" className="link-draw-underline hover:text-[var(--foreground)]">historical context</a>,{" "}
             <a href="/demand-elasticity" className="link-draw-underline hover:text-[var(--foreground)]">demand elasticity</a>,{" "}
-            <a href="/signals" className="link-draw-underline hover:text-[var(--foreground)]">leading indicators</a>{" "}
-            ) and I hope you find them useful.
-          </p>
-          <p className="text-[14px] text-[var(--muted)] leading-relaxed">
-            The goal is to help the people who need it most, leaders in workforce development,
-            education, philanthropy, and policy, but also just the average person trying to navigate
-            this new AI-enabled world have a more thoughtful, evidence-grounded response to
-            what&rsquo;s coming.
-          </p>
-          <AboutStats totalCost={totalCost} />
-          <p className="text-[14px] text-[var(--muted)] leading-relaxed">
-            If you have ideas on how to make it better, I&rsquo;d love to hear from you:{" "}
-            <a
-              href="https://www.linkedin.com/in/mattzieger"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="link-draw-underline hover:text-[var(--foreground)]"
-            >
-              LinkedIn
-            </a>
-            {" / "}
-            <a
-              href="https://x.com/mattzieger"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="link-draw-underline hover:text-[var(--foreground)]"
-            >
-              X
-            </a>
+            <a href="/signals" className="link-draw-underline hover:text-[var(--foreground)]">early indicators</a>{" "}
+            ) or chat with Gob, our friendly research-backed robot. The goal is to help the people
+            who need it most have a more thoughtful, evidence-grounded response to what&rsquo;s ahead.
           </p>
         </section>
 
@@ -131,7 +101,7 @@ export default function AboutPage() {
         <section className="max-w-3xl">
           <div className="about-card border border-black/[0.06] rounded-lg px-5 py-5 bg-[var(--background)]">
             <p className="text-[14px] font-bold text-[var(--foreground)] mb-2">
-              Who is behind this?
+              Who&rsquo;s behind this?
             </p>
             <p className="text-[14px] text-[var(--muted)] leading-relaxed">
               <a
@@ -142,7 +112,9 @@ export default function AboutPage() {
               >
                 Matt Zieger
               </a>{" "}
-              is building this as a personal project, to learn and help everyone navigate this new and uncertain world. While this is not formally affiliated with his day job, he&rsquo;s the Chief Program &amp; Partnership Officer at the GitLab Foundation, where he leads the{" "}
+              built this as a personal project &mdash; to learn, and to help everyone navigate an uncertain
+              new world. While not formally affiliated with his day job, Matt is Chief Program &amp; Partnership
+              Officer at the GitLab Foundation, where he leads the{" "}
               <a
                 href="https://www.gitlabfoundation.org/futureofwork"
                 target="_blank"
@@ -151,7 +123,7 @@ export default function AboutPage() {
               >
                 AI for Economic Opportunity Fund
               </a>{" "}
-              and is the co-founder and chair of{" "}
+              and co-founded{" "}
               <a
                 href="https://www.opportunityai.org/about"
                 target="_blank"
@@ -159,6 +131,28 @@ export default function AboutPage() {
                 className="link-draw-underline hover:text-[var(--foreground)]"
               >
                 OpportunityAI
+              </a>
+              .
+            </p>
+            <AboutStats totalCost={totalCost} />
+            <p className="text-[14px] text-[var(--muted)] leading-relaxed mt-3">
+              Have ideas? Reach out on{" "}
+              <a
+                href="https://www.linkedin.com/in/mattzieger"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link-draw-underline hover:text-[var(--foreground)]"
+              >
+                LinkedIn
+              </a>
+              {" or "}
+              <a
+                href="https://x.com/mattzieger"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link-draw-underline hover:text-[var(--foreground)]"
+              >
+                X
               </a>
               .
             </p>
