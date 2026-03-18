@@ -1128,6 +1128,78 @@ input[type="range"]::-moz-range-thumb:hover {
   50% { transform: translateY(-1.5px); }
 }
 
+/* Phase I — Emergence: tiny dot grows to full size */
+@keyframes phase-emerge {
+  0% { transform: scale(0.15); opacity: 0; }
+  60% { transform: scale(1.15); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Phase II — Diffusion: ripple ring expands outward */
+@keyframes phase-ripple {
+  0% { transform: scale(1); opacity: 0.4; box-shadow: 0 0 0 0 rgba(92,97,246,0.35); }
+  100% { transform: scale(1); opacity: 0; box-shadow: 0 0 0 18px rgba(92,97,246,0); }
+}
+
+/* Phase III — Displacement: victim circle arcs up then falls off line */
+@keyframes phase-bump-victim {
+  0% { transform: translate(0, 0) scale(1); opacity: 0.5; }
+  15% { transform: translate(2px, -12px) scale(0.95); opacity: 0.7; }
+  100% { transform: translate(20px, 40px) scale(0.15) rotate(180deg); opacity: 0; }
+}
+
+/* Phase III — Displacing node arrives with lateral force */
+@keyframes phase-displace-in {
+  0% { transform: scale(0.5) translateX(-10px); opacity: 0; }
+  50% { transform: scale(1.18) translateX(1px); opacity: 1; }
+  100% { transform: scale(1) translateX(0); opacity: 1; }
+}
+
+/* Phase IV — Reorganization: puzzle shard flies inward */
+@keyframes phase-shard-tl {
+  0% { transform: translate(-18px, -18px) rotate(-40deg) scale(0.5); opacity: 0; }
+  70% { transform: translate(1px, 1px) rotate(5deg) scale(1.05); opacity: 1; }
+  100% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 1; }
+}
+@keyframes phase-shard-tr {
+  0% { transform: translate(18px, -18px) rotate(35deg) scale(0.5); opacity: 0; }
+  70% { transform: translate(-1px, 1px) rotate(-3deg) scale(1.05); opacity: 1; }
+  100% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 1; }
+}
+@keyframes phase-shard-bl {
+  0% { transform: translate(-16px, 18px) rotate(30deg) scale(0.5); opacity: 0; }
+  70% { transform: translate(1px, -1px) rotate(-4deg) scale(1.05); opacity: 1; }
+  100% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 1; }
+}
+@keyframes phase-shard-br {
+  0% { transform: translate(16px, 18px) rotate(-35deg) scale(0.5); opacity: 0; }
+  70% { transform: translate(-1px, -1px) rotate(3deg) scale(1.05); opacity: 1; }
+  100% { transform: translate(0, 0) rotate(0deg) scale(1); opacity: 1; }
+}
+/* Assembled node spins once to become whole */
+@keyframes phase-reorg-spin {
+  0% { transform: rotate(0deg) scale(0.9); opacity: 0.8; }
+  100% { transform: rotate(360deg) scale(1); opacity: 1; }
+}
+
+/* Phase V — New Equilibrium: peaceful green glow pulse */
+@keyframes phase-eq-glow {
+  0% { box-shadow: 0 0 0 0 rgba(74,222,128,0), 0 0 0 0 rgba(74,222,128,0); opacity: 0; transform: scale(0.8); }
+  40% { opacity: 1; transform: scale(1.05); }
+  100% { box-shadow: 0 0 8px 2px rgba(74,222,128,0.2), 0 0 0 6px rgba(74,222,128,0.08); opacity: 1; transform: scale(1); }
+}
+/* Leaf sprouts outward from the orb */
+@keyframes phase-eq-leaf-l {
+  0% { transform: translate(0, 0) scale(0) rotate(0deg); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translate(-6px, -8px) scale(1) rotate(-20deg); opacity: 0.8; }
+}
+@keyframes phase-eq-leaf-r {
+  0% { transform: translate(0, 0) scale(0) rotate(0deg); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translate(6px, -8px) scale(1) rotate(20deg); opacity: 0.8; }
+}
+
 /* Reduced motion: disable history page animations */
 @media (prefers-reduced-motion: reduce) {
   .phase-pulse-ring {
@@ -1141,5 +1213,15 @@ input[type="range"]::-moz-range-thumb:hover {
   }
   .robot-walking * {
     animation: none !important;
+  }
+  .phase-node-animated,
+  .phase-node-animated *,
+  .phase-shard,
+  .phase-ripple-ring,
+  .phase-victim,
+  .phase-eq-leaf {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
   }
 }

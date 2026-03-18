@@ -79,8 +79,8 @@ const WALK_DURATION_MS = 5500;
 const TARGET_LEFT = `${((AI_POSITION + 0.5) / PHASES.length) * 100}%`;
 
 /** Phase-specific icons — small, geometric */
-function PhaseIcon({ phase, active }: { phase: string; active: boolean }) {
-  const color = active ? "white" : "var(--muted)";
+function PhaseIcon({ phase, active, inactiveColor }: { phase: string; active: boolean; inactiveColor?: string }) {
+  const color = active ? "white" : (inactiveColor ?? "var(--muted)");
   const size = 11;
   const icons: Record<string, JSX.Element> = {
     I: <svg width={size} height={size} viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="2.5" stroke={color} strokeWidth="1.5"/><path d="M8 2v2m0 8v2M2 8h2m8 0h2" stroke={color} strokeWidth="1.5" strokeLinecap="round"/></svg>,
@@ -290,6 +290,24 @@ export default function GPTTimeline() {
           <div className="flex justify-between relative z-[5] -mt-3.5">
             {PHASES.map((p, i) => {
               const isActive = activePhase === i;
+              const staggerDelay = [0.4, 1.2, 2.0, 2.8, 3.6][i];
+              const spring = "cubic-bezier(0.34,1.56,0.64,1)";
+
+              // Phase-specific node animation
+              const nodeAnim = walkStarted
+                ? i === 0
+                  ? `phase-emerge 0.7s ${spring} ${staggerDelay}s both`
+                  : i === 2
+                    ? `phase-displace-in 0.6s ${spring} ${staggerDelay}s both`
+                    : i === 3
+                      ? `phase-reorg-spin 0.8s ease-out ${staggerDelay + 0.5}s both`
+                      : i === 4
+                        ? `phase-eq-glow 0.8s ease-out ${staggerDelay}s both`
+                        : undefined
+                : undefined;
+
+              // Phase V gets green styling after animation
+              const isEquilibrium = i === 4 && walkStarted;
 
               return (
                 <button
@@ -300,8 +318,9 @@ export default function GPTTimeline() {
                   onMouseEnter={() => handlePhaseHover(i)}
                   className="flex flex-col items-center flex-1 group cursor-pointer"
                 >
-                  {/* Node with pulse ring */}
+                  {/* Node with effects */}
                   <div className="relative">
+                    {/* Hover pulse ring */}
                     {pulsingNode === i && (
                       <div
                         className="phase-pulse-ring absolute inset-0 rounded-full"
@@ -311,14 +330,118 @@ export default function GPTTimeline() {
                         }}
                       />
                     )}
+
+                    {/* Phase II — Diffusion ripple rings */}
+                    {i === 1 && walkStarted && (
+                      <>
+                        <div
+                          className="phase-ripple-ring absolute inset-0 rounded-full pointer-events-none"
+                          style={{ animation: `phase-ripple 0.8s ease-out ${staggerDelay}s both` }}
+                        />
+                        <div
+                          className="phase-ripple-ring absolute inset-0 rounded-full pointer-events-none"
+                          style={{ animation: `phase-ripple 0.8s ease-out ${staggerDelay + 0.2}s both` }}
+                        />
+                        <div
+                          className="phase-ripple-ring absolute inset-0 rounded-full pointer-events-none"
+                          style={{ animation: `phase-ripple 0.8s ease-out ${staggerDelay + 0.4}s both` }}
+                        />
+                      </>
+                    )}
+
+                    {/* Phase III — Victim circle that gets bumped off */}
+                    {i === 2 && walkStarted && (
+                      <div
+                        className="phase-victim absolute rounded-full bg-black/[0.15] pointer-events-none"
+                        style={{
+                          width: 10,
+                          height: 10,
+                          top: "50%",
+                          left: "calc(50% + 12px)",
+                          transformOrigin: "center center",
+                          animation: `phase-bump-victim 0.9s ease-in ${staggerDelay}s both`,
+                        }}
+                      />
+                    )}
+
+                    {/* Phase IV — Puzzle shards fly in from edges */}
+                    {i === 3 && walkStarted && (
+                      <>
+                        <div
+                          className="phase-shard absolute rounded-sm bg-[var(--accent)] pointer-events-none"
+                          style={{
+                            width: 8, height: 8, top: 2, left: 2,
+                            clipPath: "polygon(0 0, 100% 0, 50% 100%)",
+                            animation: `phase-shard-tl 0.6s ${spring} ${staggerDelay}s both`,
+                          }}
+                        />
+                        <div
+                          className="phase-shard absolute rounded-sm bg-[var(--accent)] pointer-events-none"
+                          style={{
+                            width: 8, height: 8, top: 2, right: 2,
+                            clipPath: "polygon(0 0, 100% 0, 50% 100%)",
+                            animation: `phase-shard-tr 0.6s ${spring} ${staggerDelay + 0.1}s both`,
+                          }}
+                        />
+                        <div
+                          className="phase-shard absolute rounded-sm bg-[var(--accent)] pointer-events-none"
+                          style={{
+                            width: 8, height: 8, bottom: 2, left: 2,
+                            clipPath: "polygon(50% 0, 100% 100%, 0 100%)",
+                            animation: `phase-shard-bl 0.6s ${spring} ${staggerDelay + 0.2}s both`,
+                          }}
+                        />
+                        <div
+                          className="phase-shard absolute rounded-sm bg-[var(--accent)] pointer-events-none"
+                          style={{
+                            width: 8, height: 8, bottom: 2, right: 2,
+                            clipPath: "polygon(50% 0, 100% 100%, 0 100%)",
+                            animation: `phase-shard-br 0.6s ${spring} ${staggerDelay + 0.3}s both`,
+                          }}
+                        />
+                      </>
+                    )}
+
+                    {/* Phase V — Leaves sprouting from equilibrium orb */}
+                    {i === 4 && walkStarted && (
+                      <>
+                        <svg
+                          className="phase-eq-leaf absolute pointer-events-none"
+                          width="8" height="10" viewBox="0 0 8 10"
+                          style={{
+                            top: -2, left: 2,
+                            animation: `phase-eq-leaf-l 0.6s ease-out ${staggerDelay + 0.6}s both`,
+                          }}
+                        >
+                          <path d="M7,9 Q4,4 1,1 Q0,4 2,7 Z" fill="#4ade80" opacity="0.7" />
+                        </svg>
+                        <svg
+                          className="phase-eq-leaf absolute pointer-events-none"
+                          width="8" height="10" viewBox="0 0 8 10"
+                          style={{
+                            top: -2, right: 2,
+                            animation: `phase-eq-leaf-r 0.6s ease-out ${staggerDelay + 0.8}s both`,
+                          }}
+                        >
+                          <path d="M1,9 Q4,4 7,1 Q8,4 6,7 Z" fill="#4ade80" opacity="0.7" />
+                        </svg>
+                      </>
+                    )}
+
+                    {/* The node circle itself */}
                     <div
-                      className={`timeline-node w-7 h-7 rounded-full border-2 flex items-center justify-center ${
+                      className={`phase-node-animated timeline-node w-7 h-7 rounded-full border-2 flex items-center justify-center ${
                         isActive
-                          ? "bg-[var(--accent)] border-[var(--accent)] text-white scale-110 shadow-[0_0_0_4px_rgba(92,97,246,0.15)]"
-                          : "bg-white border-black/[0.15] text-[var(--muted)] group-hover:border-[var(--accent)] group-hover:text-[var(--accent)]"
+                          ? isEquilibrium
+                            ? "bg-emerald-500 border-emerald-500 text-white scale-110 shadow-[0_0_0_4px_rgba(74,222,128,0.2)]"
+                            : "bg-[var(--accent)] border-[var(--accent)] text-white scale-110 shadow-[0_0_0_4px_rgba(92,97,246,0.15)]"
+                          : isEquilibrium
+                            ? "bg-emerald-50 border-emerald-400 text-emerald-600 group-hover:border-emerald-500 group-hover:text-emerald-700"
+                            : "bg-white border-black/[0.15] text-[var(--muted)] group-hover:border-[var(--accent)] group-hover:text-[var(--accent)]"
                       }`}
+                      style={{ animation: nodeAnim }}
                     >
-                      <PhaseIcon phase={p.phase} active={isActive} />
+                      <PhaseIcon phase={p.phase} active={isActive} inactiveColor={isEquilibrium ? "#16a34a" : undefined} />
                     </div>
                   </div>
 
@@ -326,7 +449,7 @@ export default function GPTTimeline() {
                   <span
                     className={`mt-2 text-[11px] font-semibold tracking-wide text-center ${
                       isActive
-                        ? "text-[var(--foreground)]"
+                        ? isEquilibrium ? "text-emerald-700" : "text-[var(--foreground)]"
                         : "text-[var(--muted)]"
                     }`}
                   >
