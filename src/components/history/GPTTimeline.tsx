@@ -75,6 +75,8 @@ const PHASES = [
 ];
 
 const AI_POSITION = 1.5; // Between Phase II and III (0-indexed)
+const WALK_DURATION_MS = 2800;
+const TARGET_LEFT = `${((AI_POSITION + 0.5) / PHASES.length) * 100}%`;
 
 /** Phase-specific icons — small, geometric */
 function PhaseIcon({ phase, active }: { phase: string; active: boolean }) {
@@ -90,15 +92,96 @@ function PhaseIcon({ phase, active }: { phase: string; active: boolean }) {
   return icons[phase] ?? null;
 }
 
+/** Walking robot SVG — front-facing with animated legs */
+function WalkingRobot({ walking }: { walking: boolean }) {
+  const legStyle = (anim: string): React.CSSProperties => ({
+    transformOrigin: anim === "robot-step-l" ? "8px 21px" : "14px 21px",
+    animation: walking ? `${anim} 0.3s linear infinite` : "none",
+  });
+
+  return (
+    <svg
+      width="18"
+      height="26"
+      viewBox="0 0 22 30"
+      fill="none"
+      aria-hidden="true"
+      className="robot-walking"
+      style={{
+        animation: walking ? "robot-bob 0.3s linear infinite" : "none",
+        filter: "drop-shadow(0 1px 2px rgba(92,97,246,0.2))",
+      }}
+    >
+      {/* Antenna */}
+      <line x1="11" y1="0.5" x2="11" y2="4" stroke="var(--accent)" strokeWidth="1.5" strokeLinecap="round" />
+      <circle cx="11" cy="0.5" r="1.5" fill="var(--accent)" opacity={walking ? "1" : "0.7"} />
+
+      {/* Head */}
+      <rect x="3" y="4" width="16" height="10" rx="2.5" fill="var(--accent)" />
+      {/* Eyes */}
+      <rect x="5.5" y="7" width="3.5" height="3" rx="1" fill="white" />
+      <rect x="13" y="7" width="3.5" height="3" rx="1" fill="white" />
+      {/* Mouth */}
+      <rect x="8" y="11.5" width="6" height="1.5" rx="0.75" fill="white" opacity="0.5" />
+
+      {/* Body */}
+      <rect x="4.5" y="14.5" width="13" height="7" rx="2" fill="var(--accent)" opacity="0.85" />
+
+      {/* Left arm */}
+      <rect x="1.5" y="15.5" width="2.5" height="5" rx="1" fill="var(--accent)" opacity="0.6" />
+      {/* Right arm */}
+      <rect x="18" y="15.5" width="2.5" height="5" rx="1" fill="var(--accent)" opacity="0.6" />
+
+      {/* Left leg */}
+      <g style={legStyle("robot-step-l")}>
+        <rect x="5.5" y="21.5" width="3.5" height="5" rx="1.2" fill="var(--accent)" opacity="0.75" />
+        <rect x="4.5" y="25.5" width="5" height="2.5" rx="1" fill="var(--accent)" opacity="0.6" />
+      </g>
+
+      {/* Right leg */}
+      <g style={legStyle("robot-step-r")}>
+        <rect x="13" y="21.5" width="3.5" height="5" rx="1.2" fill="var(--accent)" opacity="0.75" />
+        <rect x="12.5" y="25.5" width="5" height="2.5" rx="1" fill="var(--accent)" opacity="0.6" />
+      </g>
+    </svg>
+  );
+}
+
 export default function GPTTimeline() {
   const [activePhase, setActivePhase] = useState<number | null>(null);
   const [pulsingNode, setPulsingNode] = useState<number | null>(null);
+  const [walkStarted, setWalkStarted] = useState(false);
+  const [walkDone, setWalkDone] = useState(false);
   const reducedMotion = useRef(false);
+  const timelineRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     reducedMotion.current =
       typeof window !== "undefined" &&
       window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  }, []);
+
+  // Trigger walk when timeline scrolls into view
+  useEffect(() => {
+    const el = timelineRef.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([e]) => {
+        if (e.isIntersecting) {
+          obs.disconnect();
+          if (reducedMotion.current) {
+            setWalkStarted(true);
+            setWalkDone(true);
+          } else {
+            setWalkStarted(true);
+            setTimeout(() => setWalkDone(true), WALK_DURATION_MS);
+          }
+        }
+      },
+      { threshold: 0.3 },
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
   }, []);
 
   const handlePhaseHover = (i: number) => {
@@ -112,18 +195,41 @@ export default function GPTTimeline() {
   return (
     <div className="space-y-6">
       {/* Desktop timeline */}
-      <div className="hidden md:block">
-        <div className="relative">
+      <div className="hidden md:block" ref={timelineRef}>
+        <div className="relative pt-8">
           {/* Track */}
           <div className="h-1 bg-black/[0.06] rounded-full mx-8" />
+
+          {/* Walking robot — walks from left edge of track to AI position */}
+          <div
+            className="absolute z-10 flex flex-col items-center"
+            style={{
+              // feet sit on the track: top of track is at pt-8 (2rem), center at +2px
+              top: "calc(2rem + 2px)",
+              transform: "translateX(-50%) translateY(-100%)",
+              left: walkStarted ? TARGET_LEFT : "2rem",
+              transition: walkStarted
+                ? `left ${WALK_DURATION_MS}ms cubic-bezier(0.25, 0.46, 0.45, 0.94)`
+                : "none",
+            }}
+          >
+            <WalkingRobot walking={walkStarted && !walkDone} />
+            {/* Label fades in after walk completes */}
+            <span
+              className="text-[7px] font-bold text-[var(--accent)] tracking-wider whitespace-nowrap mt-0.5"
+              style={{
+                opacity: walkDone ? 1 : 0,
+                transition: walkDone ? "opacity 0.5s ease 0.2s" : "none",
+              }}
+            >
+              AI IS HERE
+            </span>
+          </div>
 
           {/* Phases */}
           <div className="flex justify-between relative -mt-3.5">
             {PHASES.map((p, i) => {
               const isActive = activePhase === i;
-              const isAI =
-                i === Math.floor(AI_POSITION) ||
-                i === Math.ceil(AI_POSITION);
 
               return (
                 <button
@@ -175,39 +281,6 @@ export default function GPTTimeline() {
               );
             })}
           </div>
-
-          {/* AI position indicator — below the track, between Phase II and III */}
-          <div
-            className="absolute flex flex-col items-center"
-            style={{
-              left: `${((AI_POSITION + 0.5) / PHASES.length) * 100}%`,
-              transform: "translateX(-50%)",
-              top: "4px",
-            }}
-          >
-            <div className="w-px h-3 bg-[var(--accent)] opacity-40" />
-            <div className="flex flex-col items-center mt-0.5">
-              {/* Robot head */}
-              <svg width="24" height="24" viewBox="0 0 32 32" fill="none" aria-hidden="true" className="drop-shadow-sm">
-                {/* Antenna */}
-                <line x1="16" y1="2" x2="16" y2="7" stroke="var(--accent)" strokeWidth="1.5" strokeLinecap="round" />
-                <circle cx="16" cy="2" r="1.5" fill="var(--accent)" className="animate-pulse" />
-                {/* Head */}
-                <rect x="6" y="7" width="20" height="18" rx="3" fill="var(--accent)" />
-                {/* Eyes */}
-                <rect x="10" y="12" width="4" height="4" rx="1" fill="white" />
-                <rect x="18" y="12" width="4" height="4" rx="1" fill="white" />
-                {/* Mouth */}
-                <rect x="11" y="19" width="10" height="2" rx="1" fill="white" opacity="0.6" />
-                {/* Ear bolts */}
-                <circle cx="5" cy="16" r="1.5" fill="var(--accent)" opacity="0.6" />
-                <circle cx="27" cy="16" r="1.5" fill="var(--accent)" opacity="0.6" />
-              </svg>
-              <span className="text-[8px] font-bold text-[var(--accent)] tracking-wide">
-                AI IS HERE
-              </span>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -258,13 +331,18 @@ export default function GPTTimeline() {
               {/* AI marker after Phase II */}
               {showAIMarker && (
                 <div className="flex items-center gap-2 py-2 ml-0.5">
-                  <svg width="24" height="24" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-                    <line x1="16" y1="2" x2="16" y2="7" stroke="var(--accent)" strokeWidth="1.5" strokeLinecap="round" />
-                    <circle cx="16" cy="2" r="1.5" fill="var(--accent)" className="animate-pulse" />
-                    <rect x="6" y="7" width="20" height="18" rx="3" fill="var(--accent)" />
-                    <rect x="10" y="12" width="4" height="4" rx="1" fill="white" />
-                    <rect x="18" y="12" width="4" height="4" rx="1" fill="white" />
-                    <rect x="11" y="19" width="10" height="2" rx="1" fill="white" opacity="0.6" />
+                  <svg width="20" height="24" viewBox="0 0 22 30" fill="none" aria-hidden="true">
+                    <line x1="11" y1="0.5" x2="11" y2="4" stroke="var(--accent)" strokeWidth="1.5" strokeLinecap="round" />
+                    <circle cx="11" cy="0.5" r="1.5" fill="var(--accent)" />
+                    <rect x="3" y="4" width="16" height="10" rx="2.5" fill="var(--accent)" />
+                    <rect x="5.5" y="7" width="3.5" height="3" rx="1" fill="white" />
+                    <rect x="13" y="7" width="3.5" height="3" rx="1" fill="white" />
+                    <rect x="8" y="11.5" width="6" height="1.5" rx="0.75" fill="white" opacity="0.5" />
+                    <rect x="4.5" y="14.5" width="13" height="7" rx="2" fill="var(--accent)" opacity="0.85" />
+                    <rect x="5.5" y="21.5" width="3.5" height="5" rx="1.2" fill="var(--accent)" opacity="0.75" />
+                    <rect x="4.5" y="25.5" width="5" height="2.5" rx="1" fill="var(--accent)" opacity="0.6" />
+                    <rect x="13" y="21.5" width="3.5" height="5" rx="1.2" fill="var(--accent)" opacity="0.75" />
+                    <rect x="12.5" y="25.5" width="5" height="2.5" rx="1" fill="var(--accent)" opacity="0.6" />
                   </svg>
                   <span className="text-[10px] font-bold text-[var(--accent)] tracking-wide">
                     AI IS HERE
