@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "Artificial Intelligence, Productivity, and the Workforce: Evidence from Corporate Executives",
+      "author": "Salomé Baslandze, Brent Meyer, John Robertson, Emil Verner, Erick Zwick",
+      "publisher": "Federal Reserve Bank of Atlanta / Duke University",
+      "date": "2026-03-13",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6410338",
+      "takeaway": "Survey of ~750 CFOs: <0.4% aggregate job loss expected, productivity paradox (reported gains 3x implied), finance leads at >2% productivity growth. Routine clerical roles declining 0.76pp/yr offset by skilled-technical gains. 85.4% of firms expect to invest in AI in 2026.",
+      "weekFeatured": "2026-03-17",
+      "tier": 1
+    },
+    {
       "title": "Same Storm, Different Boats: Generative AI and the Age Gradient in Hiring",
       "author": "Magnus Lodefalk, Lydia Löthman, Michael Koch, Erik Engberg",
       "publisher": "RATIO Institute / Örebro University",
