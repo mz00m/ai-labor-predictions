@@ -154,16 +154,7 @@ export default function IncomeStrataImpact() {
 
             {/* Occupation table */}
             <div>
-              <table className="w-full text-[12px] table-fixed">
-                <colgroup>
-                  <col className="w-[40%]" />
-                  <col className="w-[10%]" />
-                  <col className="w-[10%]" />
-                  <col className="w-[10%]" />
-                  <col className="w-[10%]" />
-                  <col className="w-[10%]" />
-                  <col className="w-[10%]" />
-                </colgroup>
+              <table className="w-full text-[12px]">
                 <thead>
                   <tr className="border-b border-black/[0.06]">
                     <th className="text-left py-2 px-3 text-[var(--foreground)] font-semibold">Occupation</th>
@@ -185,7 +176,7 @@ export default function IncomeStrataImpact() {
                       className={`border-b border-black/[0.03] ${clickable ? "nav-row cursor-pointer" : "hover:bg-black/[0.02]"}`}
                       onClick={clickable ? () => router.push(`/task-visualizer?job=${jobIds[0]}`) : undefined}
                     >
-                      <td className="text-left py-2 px-3 font-medium">
+                      <td className="text-left py-2 px-3 font-medium whitespace-nowrap">
                         {clickable ? (
                           <span className="text-[var(--foreground)] hover:text-[var(--accent)]">{g.shortTitle}</span>
                         ) : (
