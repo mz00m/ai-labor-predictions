@@ -178,7 +178,20 @@ There is a **strong and growing body of evidence** linking AI tools to changes i
 - 2025 cohort generated **39% more revenue** in first 6 months than 2024.
 - Companies reaching $10M ARR within 3 months: **double** the 2024 count.
 - Funded startups declining (2.2% fundraised within 3 months, down from 3.1%) — suggests more bootstrapped/solo ventures.
+- Average time to first hire **increased 49% since 2019** — startups operating lean for longer.
 - **Evidence tier: 2-3** (platform data, large sample but self-selected)
+
+### Shopify — AI & Solo Merchants (2024-2025)
+
+**Source:** [Shopify Blog](https://www.shopify.com/blog/expanding-your-ai-horizons-summer-edition-25), [Shopify News](https://www.shopify.com/news/shopify-open-ai-commerce)
+
+- **5.6-5.8M** live Shopify stores worldwide (2025); ~6.9M total merchants.
+- **97%** of surveyed SMB Shopify merchants planned to incorporate AI into operations (2024).
+- AI Store Builder turns week-long store setup into a guided conversation — lowering barriers for solo entrepreneurs.
+- Partnered with OpenAI for **agentic commerce** directly inside ChatGPT.
+- **29%** of Shopify stores sell 1-9 products, highlighting prevalence of solo/niche DTC brands.
+- BFCM 2025: $14.6B in merchant sales (+27%); 15,800 entrepreneurs made first-ever sale.
+- **Evidence tier: 2-3** (platform data)
 
 ### Carta — Startup Headcount Data (2024)
 
@@ -199,17 +212,24 @@ There is a **strong and growing body of evidence** linking AI tools to changes i
 - Reach unicorn status **~1 year faster** than non-AI counterparts.
 - Example: Lovable reached **$17M ARR with 15 employees** in 3 months post-launch.
 - Best AI companies: **>$1M ARR per employee** (3x what was previously considered "great").
-- **Evidence tier: 3** (industry analysis, individual company data)
+- **Bessemer's "AI Supernovas"**: top AI companies achieve **$1.13M ARR per FTE** (4-5x above typical SaaS benchmarks).
+- Notable tiny-team successes: **Cursor** (~$2B ARR, <50 employees), **Midjourney** ($200M+ ARR, ~40 people, zero VC raised), **Bolt** ($40M ARR in 2 months, 15 people).
+- AI startups reaching **$100M ARR with <100 employees** vs. 300-500 employees for 2010s SaaS champions.
+- AI startups reach $5M annualized revenue in **24 months** vs. 37 months for SaaS in 2018 (Stripe data).
+- **Evidence tier: 2-3** (industry analysis, Bessemer/Stripe/individual company data)
 
 ### Y Combinator Batch Data (2024-2025)
 
-**Source:** Various analyses of YC batches
+**Source:** [CNBC](https://www.cnbc.com/2025/03/15/y-combinator-startups-are-fastest-growing-in-fund-history-because-of-ai.html), [PitchBook](https://pitchbook.com/news/articles/y-combinator-is-going-all-in-on-ai-agents-making-up-nearly-50-of-latest-batch), various
 
-- **72%** of new YC startups in 2025 are AI-powered.
+- **88%** of YC S25 batch classified as AI-native (up from 15% two years prior).
 - AI-focused startups: 871 (2024) → 1,140 (2025) = 53% of all new YC startups.
+- Garry Tan (YC CEO): *"For about a quarter of current YC startups, 95% of the code was written by AI."*
+- AI capabilities "recalibrating the incubator's preference for multi-founder teams" — strong solo founders now feasible.
+- Winter 2025 batch grew **10% per week** in aggregate — fastest-growing and most profitable batch in YC history.
 - Solo founders at YC specifically: only **9.5%** (YC still favors co-founders).
 - However, broader ecosystem solo founding rate rising to **36-38%** per Carta.
-- **Evidence tier: 3** (journalism/analysis of YC data)
+- **Evidence tier: 2-3** (institutional data + journalism)
 
 ### VC Funding Trends
 
@@ -230,8 +250,10 @@ There is a **strong and growing body of evidence** linking AI tools to changes i
 
 - Predicted in an interview with Alexis Ohanian that AI will enable a one-person billion-dollar company.
 - Timeline: 2026-2028.
+- **Dario Amodei** (Anthropic CEO) puts odds at **70-80%** this could happen **as early as 2026**.
 - A dedicated tracking site exists: [1person1billion.ai](https://www.1person1billion.ai/race).
-- **Evidence tier: 4** (prediction/commentary, no empirical backing yet)
+- Emerging near-examples: **Base44** (solo founder → 300K users, $3.5M ARR, sold to Wix for $80M in 6 months).
+- **Evidence tier: 4** (prediction/commentary, no confirmed cases yet)
 
 ### Simply Business — "The Power of One: 2025 Solopreneur Report"
 
