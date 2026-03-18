@@ -10,6 +10,15 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Anthropic",
+    title: "81,000 People Told Us How They Use AI",
+    summary:
+      "Anthropic invited Claude users to share how they use AI, what they dream it could make possible, and what they fear it might do. Nearly 81,000 people responded in one week\u2014the largest qualitative study of its kind.",
+    date: "Mar 18",
+    url: "https://www.anthropic.com/features/81k-interviews",
+    accent: "border-l-amber-500",
+  },
+  {
     author: "Alex Imas",
     title: "Can Advanced AI Lead to Negative Economic Growth?",
     summary:
@@ -44,15 +53,6 @@ const articles: Article[] = [
     date: "Mar 11",
     url: "https://x.com/gsivulka/status/2031797989908627849",
     accent: "border-l-cyan-500",
-  },
-  {
-    author: "Oks",
-    title: "Why the ATM Didn\u2019t Kill Bank Teller Jobs, but the iPhone Did",
-    summary:
-      "Task automation rarely displaces workers; paradigm replacement does. Implications for AI displacement timelines.",
-    date: "Mar 10",
-    url: "https://davidoks.blog/p/why-the-atm-didnt-kill-bank-teller",
-    accent: "border-l-blue-500",
   },
 ];
 
