@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     template: "%s | jobsdata.ai",
   },
   description:
-    "300+ sources tracking AI's impact on jobs, wages, and adoption. AI adoption is accelerating, productivity is climbing, and jobs are changing faster than they're disappearing.",
+    "400+ sources tracking AI's impact on jobs, wages, and adoption. AI adoption is accelerating, productivity is climbing, and jobs are changing faster than they're disappearing.",
   metadataBase: new URL("https://jobsdata.ai"),
   alternates: {
     canonical: "/",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Early Signals of AI Impact",
     description:
-      "300+ sources, one pattern: AI adoption is accelerating, productivity is climbing, and jobs are changing faster than they're disappearing.",
+      "400+ sources, one pattern: AI adoption is accelerating, productivity is climbing, and jobs are changing faster than they're disappearing.",
     type: "website",
     siteName: "Early Signals of AI Impact",
     locale: "en_US",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     creator: "@mattzieger",
     title: "Early Signals of AI Impact",
     description:
-      "300+ sources, one pattern: AI adoption is accelerating, productivity is climbing, and jobs are changing faster than they're disappearing.",
+      "400+ sources, one pattern: AI adoption is accelerating, productivity is climbing, and jobs are changing faster than they're disappearing.",
   },
 };
 
@@ -54,7 +54,7 @@ export default function RootLayout({
               name: "Early Signals of AI Impact",
               url: "https://jobsdata.ai",
               description:
-                "Tracking 17 predictions about AI-driven job displacement, wage impacts, and corporate adoption with 300+ sources filtered by evidence quality.",
+                "Tracking 17 predictions about AI-driven job displacement, wage impacts, and corporate adoption with 400+ sources filtered by evidence quality.",
               author: {
                 "@type": "Person",
                 name: "Matt Zieger",

@@ -1114,6 +1114,20 @@ input[type="range"]::-moz-range-thumb:hover {
   transform: rotate(8deg);
 }
 
+/* Walking robot leg animations */
+@keyframes robot-step-l {
+  0%, 100% { transform: rotate(-20deg); }
+  50% { transform: rotate(20deg); }
+}
+@keyframes robot-step-r {
+  0%, 100% { transform: rotate(20deg); }
+  50% { transform: rotate(-20deg); }
+}
+@keyframes robot-bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-1.5px); }
+}
+
 /* Reduced motion: disable history page animations */
 @media (prefers-reduced-motion: reduce) {
   .phase-pulse-ring {
@@ -1124,5 +1138,8 @@ input[type="range"]::-moz-range-thumb:hover {
   }
   .revolution-header-icon {
     transition: none;
+  }
+  .robot-walking * {
+    animation: none !important;
   }
 }

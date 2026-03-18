@@ -260,7 +260,7 @@ export default function ChatbotBuddy() {
 
   return (
     <div
-      className="fixed z-[55]"
+      className="fixed z-[55] hidden md:block"
       style={positionStyles.wrapper}
       aria-hidden="true"
     >
