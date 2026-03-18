@@ -582,17 +582,6 @@ export default function CompressionComparison() {
             // Stroke color: colored during animation, transitions to gray on settle
             const strokeColor = active ? t.color : settled ? GREY : t.color;
 
-            // label position: sit just above the actual visual peak of the arc
-            const labelMidX = a.midX;
-            const anchor =
-              labelMidX < 120 ? "start" : labelMidX > W - 120 ? "end" : "middle";
-            const labelX =
-              labelMidX < 120
-                ? labelMidX + 8
-                : labelMidX > W - 120
-                  ? labelMidX - 8
-                  : labelMidX;
-
             return (
               <g
                 key={t.id}
@@ -655,21 +644,21 @@ export default function CompressionComparison() {
                   }}
                 />
 
-                {/* ---- Peak label — appears when arc is ~40% drawn ---- */}
+                {/* ---- End label — right of endpoint, appears when arc is ~40% drawn ---- */}
                 <text
-                  x={labelX}
-                  y={a.visualPeakY - (active ? 18 : 10)}
-                  textAnchor={anchor}
-                  fontSize={active ? "12" : "10"}
-                  fontWeight={active ? "600" : "500"}
+                  x={a.endX + 8}
+                  y={BL - (active ? 6 : 4)}
+                  textAnchor="start"
+                  fontSize={active ? "13" : "11.5"}
+                  fontWeight={active ? "700" : "600"}
                   fill={active ? t.color : settled ? GREY : t.color}
                   style={{
                     opacity: dimmed
-                      ? 0.06
+                      ? 0.08
                       : active
-                        ? 0.9
+                        ? 1
                         : prog > 0.4
-                          ? 0.45
+                          ? 0.7
                           : 0,
                     transition: settled
                       ? "fill 1.5s ease, opacity 1s ease, font-size 0.3s ease"
@@ -679,41 +668,41 @@ export default function CompressionComparison() {
                   {t.name}
                 </text>
 
-                {/* ---- Technology icon at peak — appears after settling ---- */}
+                {/* ---- Technology icon — right of endpoint, appears after settling ---- */}
                 <TechIcon
                   id={t.id}
-                  x={a.midX}
-                  y={a.visualPeakY - (active ? 28 : 18)}
+                  x={a.endX + (active ? 62 : 52)}
+                  y={BL - (active ? 16 : 12)}
                   color={t.color}
                   active={active}
                   vis={settled || active}
                   delay={0}
                 />
 
-                {/* ---- Hover detail labels ---- */}
+                {/* ---- Hover detail labels — right of endpoint ---- */}
                 {active && (
                   <>
                     {/* Duration + period */}
                     <text
-                      x={labelX}
-                      y={a.visualPeakY - 5}
-                      textAnchor={anchor}
+                      x={a.endX + 8}
+                      y={BL + 12}
+                      textAnchor="start"
                       fontSize="10"
                       fill={t.color}
-                      opacity="0.65"
+                      opacity="0.7"
                       style={{ fontVariantNumeric: "tabular-nums" }}
                     >
                       {t.totalYears} yrs &middot; {t.period}
                     </text>
                     {/* Painful phase */}
                     <text
-                      x={labelX}
-                      y={a.visualPeakY + 10}
-                      textAnchor={anchor}
+                      x={a.endX + 8}
+                      y={BL + 25}
+                      textAnchor="start"
                       fontSize="9.5"
                       fontStyle="italic"
                       fill={t.color}
-                      opacity="0.55"
+                      opacity="0.6"
                     >
                       {t.painfulLabel}
                     </text>
