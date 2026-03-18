@@ -78,8 +78,8 @@ export default function SearchCombobox({ mobile }: SearchComboboxProps) {
 
     if (debounceRef.current) clearTimeout(debounceRef.current);
     debounceRef.current = setTimeout(() => {
-      if (value.trim().toLowerCase() === EASTER_EGG_QUERY) {
-        setResults([EASTER_EGG_RESULT]);
+      if (/robot/i.test(value)) {
+        setResults([EASTER_EGG_RESULT, ...searchSources(value)]);
         setIsOpen(true);
         return;
       }
