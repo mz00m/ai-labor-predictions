@@ -10,7 +10,6 @@ import {
   EXPOSURE_UNCERTAINTY,
   SOC_EXPOSURE_SCORES,
   getAutomationPercentAtYear,
-  getCfoSignal,
   DEMAND_ELASTICITY,
   DEMAND_ELASTICITY_META,
   type IncomeTier,
@@ -39,7 +38,6 @@ interface TierDetail {
     uncertaintyVariance: number;
     exposureScore: number;
     demandElasticity: string | null;
-    cfoSignal: { shortLabel: string; color: string; nei: number } | null;
   }[];
   totalEmployment: number;
   avgAutomation2030: number;
@@ -79,7 +77,6 @@ export default function IncomeStrataImpact() {
           uncertaintyVariance: EXPOSURE_UNCERTAINTY[g.id]?.variance ?? 0,
           exposureScore: SOC_EXPOSURE_SCORES[g.id]?.mean ?? 0,
           demandElasticity: DEMAND_ELASTICITY[g.id]?.elasticity ?? null,
-          cfoSignal: getCfoSignal(g.id),
         };
       });
 
@@ -190,13 +187,25 @@ export default function IncomeStrataImpact() {
               <span><strong className="text-[var(--foreground)]">Exposure</strong> = AI exposure score (0-10, Yale Budget Lab)</span>
               <span><strong className="text-[var(--foreground)]">2028/32/36</strong> = % of tasks where AI is cheaper than human labor</span>
               <span><strong className="text-[var(--foreground)]">Demand</strong> = will cheaper output expand this market? <span className="text-[#10B981]">High</span> = more demand, <span className="text-[#EF4444]">Low</span> = fixed demand</span>
-              <span><strong className="text-[var(--foreground)]">CFO</strong> = do executives see AI replacing or enhancing workers? (<span className="text-[#10B981]">Enhance</span> / <span className="text-[#F59E0B]">Balanced</span> / <span className="text-[#EF4444]">Replace</span>)</span>
               <span><strong className="text-[var(--foreground)]">Certainty</strong> = how much 6 AI exposure metrics agree (<span className="text-[#10B981]">Low</span> variance = high agreement)</span>
             </div>
 
             {/* Occupation table */}
             <div className="overflow-x-auto">
-              <table className="w-full text-[12px]">
+              <table className="w-full text-[12px]" style={{ tableLayout: "fixed" }}>
+                <colgroup>
+                  <col style={{ width: "15%" }} />
+                  <col style={{ width: "8%" }} />
+                  <col style={{ width: "7%" }} />
+                  <col style={{ width: "8%" }} />
+                  <col style={{ width: "6%" }} />
+                  <col style={{ width: "6%" }} />
+                  <col style={{ width: "6%" }} />
+                  <col style={{ width: "14%" }} />
+                  <col style={{ width: "14%" }} />
+                  <col style={{ width: "8%" }} />
+                  <col style={{ width: "8%" }} />
+                </colgroup>
                 <thead>
                   <tr className="border-b border-black/[0.06]">
                     <th className="text-left py-2 px-4 text-[var(--foreground)] font-semibold">Occupation</th>
@@ -209,7 +218,6 @@ export default function IncomeStrataImpact() {
                     <th className="text-left py-2 px-3 text-[var(--foreground)] font-semibold">Most exposed</th>
                     <th className="text-left py-2 px-3 text-[var(--foreground)] font-semibold">Most durable</th>
                     <th className="text-center py-2 px-3 text-[var(--foreground)] font-semibold" title="Demand elasticity: will cheaper AI output expand this market or just cut costs?">Demand</th>
-                    <th className="text-center py-2 px-3 text-[var(--foreground)] font-semibold" title="CFO replace/enhance signal: do ~750 executives see AI replacing or enhancing this occupation? (Baslandze et al., 2026)">CFO</th>
                     <th className="text-center py-2 px-4 text-[var(--foreground)] font-semibold" title="How much 6 AI exposure metrics agree on this group's exposure level (Yale Budget Lab, 2026). Low variance = high certainty.">Certainty</th>
                   </tr>
                 </thead>
@@ -273,17 +281,6 @@ export default function IncomeStrataImpact() {
                             title={DEMAND_ELASTICITY[g.id]?.rationale}
                           >
                             {DEMAND_ELASTICITY_META[g.demandElasticity as keyof typeof DEMAND_ELASTICITY_META].label}
-                          </span>
-                        )}
-                      </td>
-                      <td className="text-center py-2 px-3 text-[11px]">
-                        {g.cfoSignal && (
-                          <span
-                            className="inline-block px-1.5 py-0.5 rounded text-[10px] font-medium"
-                            style={{ color: g.cfoSignal.color, backgroundColor: `${g.cfoSignal.color}15` }}
-                            title={`NEI: ${g.cfoSignal.nei.toFixed(2)}x replace/enhance`}
-                          >
-                            {g.cfoSignal.shortLabel}
                           </span>
                         )}
                       </td>
