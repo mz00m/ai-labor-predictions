@@ -109,9 +109,9 @@ function WalkingRobot({ walking, leaning }: { walking: boolean; leaning: boolean
 
   return (
     <svg
-      width="23"
-      height="34"
-      viewBox="0 0 22 36"
+      width="27"
+      height="36"
+      viewBox="0 0 22 29"
       fill="none"
       aria-hidden="true"
       className="robot-walking"
@@ -262,10 +262,10 @@ export default function GPTTimeline() {
 
           {/* Walking robot — walks from left edge of track to AI position */}
           <div
-            className="absolute z-10 flex flex-col items-center"
+            className="absolute z-[1] flex flex-col items-center"
             style={{
               // feet sit directly on the track line: track top is at pt-8 (2rem)
-              top: "2rem",
+              top: "calc(2rem + 2px)",
               transform: "translateX(-50%) translateY(-100%)",
               left: walkStarted ? TARGET_LEFT : "2rem",
               transition: walkStarted
@@ -287,7 +287,7 @@ export default function GPTTimeline() {
           </div>
 
           {/* Phases */}
-          <div className="flex justify-between relative -mt-3.5">
+          <div className="flex justify-between relative z-[5] -mt-3.5">
             {PHASES.map((p, i) => {
               const isActive = activePhase === i;
 
