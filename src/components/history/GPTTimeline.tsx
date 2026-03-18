@@ -286,28 +286,35 @@ export default function GPTTimeline() {
             </span>
           </div>
 
-          {/* Phases */}
+          {/* Phases — nodes start invisible, each appears dramatically in sequence */}
           <div className="flex justify-between relative z-[5] -mt-3.5">
             {PHASES.map((p, i) => {
               const isActive = activePhase === i;
-              const staggerDelay = [0.4, 1.2, 2.0, 2.8, 3.6][i];
+              // Wide stagger: each node gets ~1.8s of breathing room
+              const staggerDelay = [0.8, 2.6, 4.4, 6.2, 8.0][i];
               const spring = "cubic-bezier(0.34,1.56,0.64,1)";
 
-              // Phase-specific node animation
+              // Phase-specific node entrance animation
               const nodeAnim = walkStarted
                 ? i === 0
-                  ? `phase-emerge 0.7s ${spring} ${staggerDelay}s both`
-                  : i === 2
-                    ? `phase-displace-in 0.6s ${spring} ${staggerDelay}s both`
-                    : i === 3
-                      ? `phase-reorg-spin 0.8s ease-out ${staggerDelay + 0.5}s both`
-                      : i === 4
-                        ? `phase-eq-glow 0.8s ease-out ${staggerDelay}s both`
-                        : undefined
+                  ? `phase-emerge 1.2s ${spring} ${staggerDelay}s both`
+                  : i === 1
+                    ? `phase-emerge 0.8s ${spring} ${staggerDelay}s both`
+                    : i === 2
+                      ? `phase-displace-in 1.0s ${spring} ${staggerDelay}s both`
+                      : i === 3
+                        ? `phase-reorg-spin 1.2s ease-out ${staggerDelay + 0.8}s both`
+                        : i === 4
+                          ? `phase-eq-glow 1.4s ease-out ${staggerDelay}s both`
+                          : undefined
                 : undefined;
 
               // Phase V gets green styling after animation
               const isEquilibrium = i === 4 && walkStarted;
+
+              // Nodes are invisible until their animation fires
+              const nodeHidden = walkStarted && !nodeAnim;
+              const preReveal = walkStarted ? { opacity: 0 } : {};
 
               return (
                 <button
@@ -331,72 +338,76 @@ export default function GPTTimeline() {
                       />
                     )}
 
-                    {/* Phase II — Diffusion ripple rings */}
+                    {/* Phase II — Diffusion: bold ripple waves */}
                     {i === 1 && walkStarted && (
                       <>
                         <div
-                          className="phase-ripple-ring absolute inset-0 rounded-full pointer-events-none"
-                          style={{ animation: `phase-ripple 0.8s ease-out ${staggerDelay}s both` }}
+                          className="phase-ripple-ring absolute inset-[-4px] rounded-full pointer-events-none"
+                          style={{ animation: `phase-ripple 1.2s ease-out ${staggerDelay + 0.3}s both` }}
                         />
                         <div
-                          className="phase-ripple-ring absolute inset-0 rounded-full pointer-events-none"
-                          style={{ animation: `phase-ripple 0.8s ease-out ${staggerDelay + 0.2}s both` }}
+                          className="phase-ripple-ring absolute inset-[-4px] rounded-full pointer-events-none"
+                          style={{ animation: `phase-ripple 1.2s ease-out ${staggerDelay + 0.6}s both` }}
                         />
                         <div
-                          className="phase-ripple-ring absolute inset-0 rounded-full pointer-events-none"
-                          style={{ animation: `phase-ripple 0.8s ease-out ${staggerDelay + 0.4}s both` }}
+                          className="phase-ripple-ring absolute inset-[-4px] rounded-full pointer-events-none"
+                          style={{ animation: `phase-ripple 1.2s ease-out ${staggerDelay + 0.9}s both` }}
+                        />
+                        <div
+                          className="phase-ripple-ring absolute inset-[-4px] rounded-full pointer-events-none"
+                          style={{ animation: `phase-ripple 1.2s ease-out ${staggerDelay + 1.2}s both` }}
                         />
                       </>
                     )}
 
-                    {/* Phase III — Victim circle that gets bumped off */}
+                    {/* Phase III — Victim circle sitting on line, gets bumped off */}
                     {i === 2 && walkStarted && (
                       <div
-                        className="phase-victim absolute rounded-full bg-black/[0.15] pointer-events-none"
+                        className="phase-victim absolute rounded-full bg-black/[0.2] pointer-events-none"
                         style={{
-                          width: 10,
-                          height: 10,
+                          width: 12,
+                          height: 12,
                           top: "50%",
-                          left: "calc(50% + 12px)",
+                          left: "calc(50% + 14px)",
                           transformOrigin: "center center",
-                          animation: `phase-bump-victim 0.9s ease-in ${staggerDelay}s both`,
+                          animation: `phase-bump-victim 1.4s ease-in ${staggerDelay}s both`,
                         }}
                       />
                     )}
 
-                    {/* Phase IV — Puzzle shards fly in from edges */}
+                    {/* Phase IV — Puzzle shards fly in from far edges */}
                     {i === 3 && walkStarted && (
                       <>
                         <div
                           className="phase-shard absolute rounded-sm bg-[var(--accent)] pointer-events-none"
                           style={{
-                            width: 8, height: 8, top: 2, left: 2,
+                            width: 10, height: 10, top: 0, left: 0,
                             clipPath: "polygon(0 0, 100% 0, 50% 100%)",
-                            animation: `phase-shard-tl 0.6s ${spring} ${staggerDelay}s both`,
+                            animation: `phase-shard-tl 1.0s ${spring} ${staggerDelay}s both`,
                           }}
                         />
                         <div
                           className="phase-shard absolute rounded-sm bg-[var(--accent)] pointer-events-none"
                           style={{
-                            width: 8, height: 8, top: 2, right: 2,
+                            width: 10, height: 10, top: 0, right: 0,
                             clipPath: "polygon(0 0, 100% 0, 50% 100%)",
-                            animation: `phase-shard-tr 0.6s ${spring} ${staggerDelay + 0.1}s both`,
+                            animation: `phase-shard-tr 1.0s ${spring} ${staggerDelay + 0.15}s both`,
                           }}
                         />
                         <div
                           className="phase-shard absolute rounded-sm bg-[var(--accent)] pointer-events-none"
                           style={{
-                            width: 8, height: 8, bottom: 2, left: 2,
+                            width: 10, height: 10, bottom: 0, left: 0,
                             clipPath: "polygon(50% 0, 100% 100%, 0 100%)",
-                            animation: `phase-shard-bl 0.6s ${spring} ${staggerDelay + 0.2}s both`,
+                            animation: `phase-shard-bl 1.0s ${spring} ${staggerDelay + 0.3}s both`,
                           }}
                         />
                         <div
                           className="phase-shard absolute rounded-sm bg-[var(--accent)] pointer-events-none"
                           style={{
-                            width: 8, height: 8, bottom: 2, right: 2,
+                            width: 10, height: 10, bottom: 0, right: 0,
                             clipPath: "polygon(50% 0, 100% 100%, 0 100%)",
-                            animation: `phase-shard-br 0.6s ${spring} ${staggerDelay + 0.3}s both`,
+                            animation: `phase-shard-br 1.0s ${spring} ${staggerDelay + 0.45}s both`,
                           }}
                         />
                       </>
@@ -407,28 +418,28 @@ export default function GPTTimeline() {
                       <>
                         <svg
                           className="phase-eq-leaf absolute pointer-events-none"
-                          width="8" height="10" viewBox="0 0 8 10"
+                          width="10" height="12" viewBox="0 0 8 10"
                           style={{
-                            top: -2, left: 2,
-                            animation: `phase-eq-leaf-l 0.6s ease-out ${staggerDelay + 0.6}s both`,
+                            top: -4, left: 0,
+                            animation: `phase-eq-leaf-l 1.0s ease-out ${staggerDelay + 1.0}s both`,
                           }}
                         >
-                          <path d="M7,9 Q4,4 1,1 Q0,4 2,7 Z" fill="#4ade80" opacity="0.7" />
+                          <path d="M7,9 Q4,4 1,1 Q0,4 2,7 Z" fill="#4ade80" opacity="0.8" />
                         </svg>
                         <svg
                           className="phase-eq-leaf absolute pointer-events-none"
-                          width="8" height="10" viewBox="0 0 8 10"
+                          width="10" height="12" viewBox="0 0 8 10"
                           style={{
-                            top: -2, right: 2,
-                            animation: `phase-eq-leaf-r 0.6s ease-out ${staggerDelay + 0.8}s both`,
+                            top: -4, right: 0,
+                            animation: `phase-eq-leaf-r 1.0s ease-out ${staggerDelay + 1.3}s both`,
                           }}
                         >
-                          <path d="M1,9 Q4,4 7,1 Q8,4 6,7 Z" fill="#4ade80" opacity="0.7" />
+                          <path d="M1,9 Q4,4 7,1 Q8,4 6,7 Z" fill="#4ade80" opacity="0.8" />
                         </svg>
                       </>
                     )}
 
-                    {/* The node circle itself */}
+                    {/* The node circle itself — invisible until animation fires */}
                     <div
                       className={`phase-node-animated timeline-node w-7 h-7 rounded-full border-2 flex items-center justify-center ${
                         isActive
@@ -439,25 +450,39 @@ export default function GPTTimeline() {
                             ? "bg-emerald-50 border-emerald-400 text-emerald-600 group-hover:border-emerald-500 group-hover:text-emerald-700"
                             : "bg-white border-black/[0.15] text-[var(--muted)] group-hover:border-[var(--accent)] group-hover:text-[var(--accent)]"
                       }`}
-                      style={{ animation: nodeAnim }}
+                      style={nodeAnim ? { animation: nodeAnim } : preReveal}
                     >
                       <PhaseIcon phase={p.phase} active={isActive} inactiveColor={isEquilibrium ? "#16a34a" : undefined} />
                     </div>
                   </div>
 
-                  {/* Label */}
+                  {/* Label — fades in after node appears */}
                   <span
-                    className={`mt-2 text-[11px] font-semibold tracking-wide text-center ${
+                    className={`mt-2 text-[11px] font-semibold tracking-wide text-center transition-opacity duration-700 ${
                       isActive
                         ? isEquilibrium ? "text-emerald-700" : "text-[var(--foreground)]"
                         : "text-[var(--muted)]"
                     }`}
+                    style={{
+                      opacity: walkStarted ? 0 : 1,
+                      animation: walkStarted
+                        ? `phase-emerge 0.5s ease-out ${staggerDelay + 0.4}s both`
+                        : undefined,
+                    }}
                   >
                     {p.name}
                   </span>
 
-                  {/* Duration */}
-                  <span className="text-[10px] text-[var(--muted)] mt-0.5">
+                  {/* Duration — fades in slightly after label */}
+                  <span
+                    className="text-[10px] text-[var(--muted)] mt-0.5 transition-opacity duration-700"
+                    style={{
+                      opacity: walkStarted ? 0 : 1,
+                      animation: walkStarted
+                        ? `phase-emerge 0.5s ease-out ${staggerDelay + 0.6}s both`
+                        : undefined,
+                    }}
+                  >
                     {p.duration}
                   </span>
                 </button>
