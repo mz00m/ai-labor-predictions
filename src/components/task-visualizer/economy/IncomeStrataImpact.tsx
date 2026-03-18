@@ -33,8 +33,6 @@ interface TierDetail {
     pct2028: number;
     pct2032: number;
     pct2036: number;
-    topVulnerable: string;
-    topDurable: string;
     uncertaintyVariance: number;
     exposureScore: number;
     demandElasticity: string | null;
@@ -49,20 +47,6 @@ export default function IncomeStrataImpact() {
   const tierDetails: TierDetail[] = useMemo(() => {
     return (["high", "middle", "low"] as const).map((tier) => {
       const groups = OCCUPATION_GROUPS.filter((g) => g.incomeTier === tier).map((g) => {
-        // Find most vulnerable and most durable task categories
-        const cats = Object.entries(g.taskComposition) as [TaskCategory, number][];
-        const sorted = cats.filter(([, s]) => s >= 0.05).sort((a, b) => b[1] - a[1]);
-
-        // Vulnerable: high share + high decline rate
-        const vulnerable = sorted
-          .filter(([cat]) => !["physical-manual", "interpersonal"].includes(cat))
-          .map(([cat]) => TASK_CATEGORY_META[cat].label)[0] || "N/A";
-
-        // Durable: physical or interpersonal with high share
-        const durable = sorted
-          .filter(([cat]) => ["physical-manual", "interpersonal", "coordination-management"].includes(cat))
-          .map(([cat]) => TASK_CATEGORY_META[cat].label)[0] || "N/A";
-
         return {
           id: g.id,
           title: g.title,
@@ -72,8 +56,6 @@ export default function IncomeStrataImpact() {
           pct2028: getAutomationPercentAtYear(g, 2028),
           pct2032: getAutomationPercentAtYear(g, 2032),
           pct2036: getAutomationPercentAtYear(g, 2036),
-          topVulnerable: vulnerable,
-          topDurable: durable,
           uncertaintyVariance: EXPOSURE_UNCERTAINTY[g.id]?.variance ?? 0,
           exposureScore: SOC_EXPOSURE_SCORES[g.id]?.mean ?? 0,
           demandElasticity: DEMAND_ELASTICITY[g.id]?.elasticity ?? null,
@@ -194,8 +176,6 @@ export default function IncomeStrataImpact() {
                     <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold" title="% of tasks where AI compute cost < human wage in 2028">2028</th>
                     <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold" title="% of tasks where AI compute cost < human wage in 2032">2032</th>
                     <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold" title="% of tasks where AI compute cost < human wage in 2036">2036</th>
-                    <th className="text-left py-2 px-3 text-[var(--foreground)] font-semibold">Most exposed</th>
-                    <th className="text-left py-2 px-3 text-[var(--foreground)] font-semibold">Most durable</th>
                     <th className="text-center py-2 px-3 text-[var(--foreground)] font-semibold" title="Demand elasticity: will cheaper AI output expand this market or just cut costs?">Demand</th>
                     <th className="text-center py-2 px-3 text-[var(--foreground)] font-semibold" title="How much 6 AI exposure metrics agree on this group's exposure level (Yale Budget Lab, 2026). Low variance = high certainty.">Certainty</th>
                   </tr>
@@ -247,8 +227,6 @@ export default function IncomeStrataImpact() {
                           {g.pct2036}%
                         </span>
                       </td>
-                      <td className="py-2 px-3 text-[11px]">{g.topVulnerable}</td>
-                      <td className="py-2 px-3 text-[11px]">{g.topDurable}</td>
                       <td className="text-center py-2 px-3 text-[11px] whitespace-nowrap">
                         {g.demandElasticity && (
                           <span
