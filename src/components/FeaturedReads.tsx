@@ -10,6 +10,15 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Alex Imas",
+    title: "Can Advanced AI Lead to Negative Economic Growth?",
+    summary:
+      "Formal models show AGI-driven demand collapse is theoretically possible if labor share collapses. Negative growth unlikely but demand-side forces will moderate AGI growth expectations.",
+    date: "Jan 7",
+    url: "https://aleximas.substack.com/p/will-advanced-ai-lead-to-negative",
+    accent: "border-l-violet-500",
+  },
+  {
     author: "Schaul, Ovide (WaPo)",
     title: "Which Jobs Are Most Threatened by AI, and Who May Adapt",
     summary:
@@ -44,15 +53,6 @@ const articles: Article[] = [
     date: "Mar 10",
     url: "https://davidoks.blog/p/why-the-atm-didnt-kill-bank-teller",
     accent: "border-l-blue-500",
-  },
-  {
-    author: "Kolko (PIIE)",
-    title: "AI and the Labor Market Is Still in the First Inning",
-    summary:
-      "Evidence inconclusive; disruption pace matches computer & internet eras. Under 1/5 of firms using AI.",
-    date: "Mar 10",
-    url: "https://www.piie.com/blogs/realtime-economics/2026/research-ai-and-labor-market-still-first-inning",
-    accent: "border-l-amber-500",
   },
 ];
 
