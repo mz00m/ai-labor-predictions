@@ -182,30 +182,22 @@ export default function IncomeStrataImpact() {
               </div>
             </div>
 
-            {/* Column key */}
-            <div className="px-5 py-2.5 bg-black/[0.015] border-b border-black/[0.06] flex flex-wrap gap-x-5 gap-y-1 text-[10px] text-[var(--muted)]">
-              <span><strong className="text-[var(--foreground)]">Exposure</strong> = AI exposure score (0-10, Yale Budget Lab)</span>
-              <span><strong className="text-[var(--foreground)]">2028/32/36</strong> = % of tasks where AI is cheaper than human labor</span>
-              <span><strong className="text-[var(--foreground)]">Demand</strong> = will cheaper output expand this market? <span className="text-[#10B981]">High</span> = more demand, <span className="text-[#EF4444]">Low</span> = fixed demand</span>
-              <span><strong className="text-[var(--foreground)]">Certainty</strong> = how much 6 AI exposure metrics agree (<span className="text-[#10B981]">Low</span> variance = high agreement)</span>
-            </div>
-
             {/* Occupation table */}
             <div className="overflow-x-auto">
               <table className="w-full text-[12px]">
                 <thead>
                   <tr className="border-b border-black/[0.06]">
-                    <th className="text-left py-2 px-4 text-[var(--foreground)] font-semibold whitespace-nowrap">Occupation</th>
-                    <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold whitespace-nowrap">Workers</th>
-                    <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold whitespace-nowrap">Wage</th>
-                    <th className="text-center py-2 px-3 text-[var(--foreground)] font-semibold whitespace-nowrap" title="AI exposure score from Yale Budget Lab (0-10 scale)">Exposure</th>
-                    <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold whitespace-nowrap" title="% of tasks where AI compute cost < human wage in 2028">2028</th>
-                    <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold whitespace-nowrap" title="% of tasks where AI compute cost < human wage in 2032">2032</th>
-                    <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold whitespace-nowrap" title="% of tasks where AI compute cost < human wage in 2036">2036</th>
-                    <th className="text-left py-2 px-3 text-[var(--foreground)] font-semibold whitespace-nowrap">Most exposed</th>
-                    <th className="text-left py-2 px-3 text-[var(--foreground)] font-semibold whitespace-nowrap">Most durable</th>
-                    <th className="text-center py-2 px-3 text-[var(--foreground)] font-semibold whitespace-nowrap" title="Demand elasticity: will cheaper AI output expand this market or just cut costs?">Demand</th>
-                    <th className="text-center py-2 px-4 text-[var(--foreground)] font-semibold whitespace-nowrap" title="How much 6 AI exposure metrics agree on this group's exposure level (Yale Budget Lab, 2026). Low variance = high certainty.">Certainty</th>
+                    <th className="text-left py-2 px-3 text-[var(--foreground)] font-semibold">Occupation</th>
+                    <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold">Workers</th>
+                    <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold">Wage</th>
+                    <th className="text-center py-2 px-3 text-[var(--foreground)] font-semibold" title="AI exposure score from Yale Budget Lab (0-10 scale)">Exposure</th>
+                    <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold" title="% of tasks where AI compute cost < human wage in 2028">2028</th>
+                    <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold" title="% of tasks where AI compute cost < human wage in 2032">2032</th>
+                    <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold" title="% of tasks where AI compute cost < human wage in 2036">2036</th>
+                    <th className="text-left py-2 px-3 text-[var(--foreground)] font-semibold">Most exposed</th>
+                    <th className="text-left py-2 px-3 text-[var(--foreground)] font-semibold">Most durable</th>
+                    <th className="text-center py-2 px-3 text-[var(--foreground)] font-semibold" title="Demand elasticity: will cheaper AI output expand this market or just cut costs?">Demand</th>
+                    <th className="text-center py-2 px-3 text-[var(--foreground)] font-semibold" title="How much 6 AI exposure metrics agree on this group's exposure level (Yale Budget Lab, 2026). Low variance = high certainty.">Certainty</th>
                   </tr>
                 </thead>
                 <tbody className="text-[var(--muted)]">
@@ -218,7 +210,7 @@ export default function IncomeStrataImpact() {
                       className={`border-b border-black/[0.03] ${clickable ? "nav-row cursor-pointer" : "hover:bg-black/[0.02]"}`}
                       onClick={clickable ? () => router.push(`/task-visualizer?job=${jobIds[0]}`) : undefined}
                     >
-                      <td className="py-2 px-4 font-medium">
+                      <td className="py-2 px-3 font-medium">
                         {clickable ? (
                           <span className="text-[var(--foreground)] hover:text-[var(--accent)]">{g.shortTitle}</span>
                         ) : (
@@ -271,7 +263,7 @@ export default function IncomeStrataImpact() {
                           </span>
                         )}
                       </td>
-                      <td className="text-center py-2 px-4 text-[11px] whitespace-nowrap">
+                      <td className="text-center py-2 px-3 text-[11px] whitespace-nowrap">
                         {g.uncertaintyVariance > 0 && (() => {
                           const u = getUncertaintyLabel(g.uncertaintyVariance);
                           return (
@@ -290,6 +282,14 @@ export default function IncomeStrataImpact() {
                   })}
                 </tbody>
               </table>
+            </div>
+
+            {/* Column definitions */}
+            <div className="px-5 py-2.5 border-t border-black/[0.06] text-[10px] text-[var(--muted)] leading-relaxed">
+              <strong className="text-[var(--foreground)]">Exposure</strong> = AI exposure score (0-10, Yale Budget Lab).{" "}
+              <strong className="text-[var(--foreground)]">2028/32/36</strong> = % of tasks where AI is cheaper than human labor.{" "}
+              <strong className="text-[var(--foreground)]">Demand</strong> = will cheaper output expand this market? <span className="text-[#10B981]">High</span> = more demand, <span className="text-[#EF4444]">Low</span> = fixed demand.{" "}
+              <strong className="text-[var(--foreground)]">Certainty</strong> = how much 6 AI exposure metrics agree. <span className="text-[#10B981]">Low</span> variance = high agreement.
             </div>
           </div>
         );
