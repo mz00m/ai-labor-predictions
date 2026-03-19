@@ -624,6 +624,15 @@
       ],
       "evidenceTier": 1,
       "label": "Lodefalk et al.: Sweden young software dev (22-25) employment shows steepest AI-exposure decline"
+    },
+    {
+      "date": "2026-03-18",
+      "direction": "down",
+      "sourceIds": [
+        "goldman-briggs-us-labor-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "GS Research (Briggs): Tech employment share has fallen below long-term trend"
     }
   ],
   "sources": [
@@ -1203,6 +1212,16 @@
       "evidenceTier": 1,
       "datePublished": "2025-08-01",
       "excerpt": "Occupations with higher AI exposure experienced larger unemployment rate increases between 2022 and 2025 (r=0.47). Computer/math occupations (exposure ~80%) saw steepest rises. GenAI-intensive occupations: r=0.57."
+    },
+    {
+      "id": "goldman-briggs-us-labor-2026",
+      "title": "How Will AI Affect the US Labor Market?",
+      "url": "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-us-labor-market",
+      "publisher": "Goldman Sachs Research (Joseph Briggs)",
+      "evidenceTier": 2,
+      "datePublished": "2026-03-18",
+      "excerpt": "You can see AI's impact in the tech sector, where the employment share as a proportion of the whole economy has gone below the long term trend.",
+      "dateAdded": "2026-03-19"
     }
   ],
   "marketIds": {

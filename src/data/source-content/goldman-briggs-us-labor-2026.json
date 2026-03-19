@@ -1,0 +1,14 @@
+{
+  "id": "goldman-briggs-us-labor-2026",
+  "abstract": "Goldman Sachs Research co-lead Joseph Briggs assesses AI's current and projected impact on the US labor market. The analysis finds AI is already affecting tech, knowledge, and creative sector employment, with 6-7% of workers expected to be displaced over a 10-year adoption timeline. The report emphasizes that AI will also create jobs through infrastructure buildout, new AI-specific occupations, specialization in fields like healthcare, and indirect demand from rising incomes.",
+  "keyFindings": [
+    "In Briggs' base case, 6-7% of workers will be displaced over a 10-year AI adoption timeline, resulting in a 0.6 percentage point increase in the unemployment rate.",
+    "AI can potentially automate tasks that account for 25% of all US work hours.",
+    "Tech sector employment share has already fallen below its long-term trend as of early 2026.",
+    "Construction jobs exposed to data center buildout have increased by 216,000 since 2022, with roughly 500,000 net new jobs needed for power demand by 2030.",
+    "Entry-level workers in their 20s and 30s in knowledge and content creation sectors are likely to be most affected by new AI deployments."
+  ],
+  "methodology": "Interview-based analysis drawing on Goldman Sachs Research's economic modeling of AI adoption timelines, labor market data analysis of employment share trends, and sectoral employment tracking. Combines macro modeling (unemployment projections) with micro-level observation of current labor market shifts.",
+  "qualifiers": "Briggs emphasizes significant uncertainty: 'There's a lot of uncertainty about how this will play out.' The unemployment impact depends heavily on adoption speed — frontloaded adoption would produce much larger economic impacts. No significant AI-led changes in the overall US employment mix have shown up in aggregate labor data yet. Entry-level impact is 'not a foregone conclusion.'",
+  "fetchedAt": "2026-03-19"
+}

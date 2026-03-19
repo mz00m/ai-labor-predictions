@@ -1055,6 +1055,15 @@
       ],
       "evidenceTier": 3,
       "label": "Yale (Restrepo): Compute constraints will slow AI displacement timeline"
+    },
+    {
+      "date": "2026-03-18",
+      "direction": "down",
+      "sourceIds": [
+        "goldman-briggs-us-labor-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "GS Research (Briggs): AI adoption over 10yr = +0.6pp unemployment rate"
     }
   ],
   "sources": [
@@ -1926,6 +1935,16 @@
       "evidenceTier": 1,
       "datePublished": "2025-03-01",
       "excerpt": "24% decrease in generative AI-exposed skills per firm per quarter in top-quartile automation-exposed jobs. 15% increase in AI-exposed skills for augmentation-prone jobs. Augmentation-prone job postings increased 22% per quarter per firm."
+    },
+    {
+      "id": "goldman-briggs-us-labor-2026",
+      "title": "How Will AI Affect the US Labor Market?",
+      "url": "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-us-labor-market",
+      "publisher": "Goldman Sachs Research (Joseph Briggs)",
+      "evidenceTier": 2,
+      "datePublished": "2026-03-18",
+      "excerpt": "If it takes place over a decade, Goldman Sachs Research expects to see a 0.6 percentage point increase in the unemployment rate.",
+      "dateAdded": "2026-03-19"
     }
   ]
 }
