@@ -84,6 +84,15 @@
       ],
       "evidenceTier": 1,
       "metricType": "projection"
+    },
+    {
+      "date": "2026-03-18",
+      "value": 2,
+      "sourceIds": [
+        "freund-mann-job-transformation-2026"
+      ],
+      "evidenceTier": 1,
+      "metricType": "projection"
     }
   ],
   "overlays": [
@@ -646,6 +655,16 @@
       "evidenceTier": 1,
       "datePublished": "2026-02-24",
       "excerpt": "AI's impact depends on whether it automates or augments. For zero-experience-premium occupations, increased AI exposure is associated with -0.28pp reduction in wage growth. Wages in AI-exposed jobs not uniformly declining."
+    },
+    {
+      "id": "freund-mann-job-transformation-2026",
+      "title": "Job Transformation, Specialization, and the Labor Market Effects of AI",
+      "url": "https://lukasbfreund.github.io/files/FM_AI.pdf",
+      "publisher": "Boston College / Arizona State (Freund, Mann)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-18",
+      "excerpt": "Low-wage workers gain around 2% on average, whereas wages barely change toward the top (with some outliers).",
+      "dateAdded": "2026-03-19"
     }
   ]
 }

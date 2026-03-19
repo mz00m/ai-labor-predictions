@@ -4,6 +4,18 @@
   "totalSources": 457,
   "verifiedCount": 457,
   "sources": {
+    "freund-mann-job-transformation-2026": {
+      "id": "freund-mann-job-transformation-2026",
+      "title": "Job Transformation, Specialization, and the Labor Market Effects of AI",
+      "url": "https://lukasbfreund.github.io/files/FM_AI.pdf",
+      "publisher": "Boston College / Arizona State (Freund, Mann)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-18",
+      "excerpt": "average individual wages are roughly unchanged for incumbents of occupations with no AI exposure, rise by around 4% at moderate exposure, and drop by as much as 35% for workers in the most exposed occupations",
+      "usedIn": ["entry-level-wage-impact", "median-wage-impact", "white-collar-professional-displacement", "high-skill-wage-premium"],
+      "verified": true,
+      "synthetic": false
+    },
     "agrawal-ai-science-2026": {
       "id": "agrawal-ai-science-2026",
       "title": "AI in Science",

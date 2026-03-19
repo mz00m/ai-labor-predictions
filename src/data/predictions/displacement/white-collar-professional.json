@@ -606,6 +606,13 @@
       ],
       "evidenceTier": 1,
       "label": "Lodefalk et al.: Effect ~2x larger for young women (-0.016 vs -0.007); 1/3 from occupational sorting"
+    },
+    {
+      "date": "2026-03-18",
+      "direction": "up",
+      "sourceIds": ["freund-mann-job-transformation-2026"],
+      "evidenceTier": 1,
+      "label": "Freund & Mann: White-collar professions (legal, science, engineering) projected to decline most"
     }
   ],
   "sources": [
@@ -1147,6 +1154,16 @@
       "datePublished": "2026-03-16",
       "excerpt": "An event study documents an accelerating decline in employment of 22–25-year-olds in high-AI-exposure occupations, reaching 5.5 per cent by early 2025 relative to less exposed occupations within the same employers, while employment of workers over 50 rose by 1.3 per cent.",
       "dateAdded": "2026-03-17"
+    },
+    {
+      "id": "freund-mann-job-transformation-2026",
+      "title": "Job Transformation, Specialization, and the Labor Market Effects of AI",
+      "url": "https://lukasbfreund.github.io/files/FM_AI.pdf",
+      "publisher": "Boston College / Arizona State (Freund, Mann)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-18",
+      "excerpt": "The occupations projected to decline the most in terms of employment tend to be white-collar professions such as Life, Physical, and Social Science, Architecture and Engineering, or Legal Occupations.",
+      "dateAdded": "2026-03-19"
     },
     {
       "id": "pwbm-ai-productivity-2025",

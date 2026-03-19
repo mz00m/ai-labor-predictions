@@ -1,0 +1,14 @@
+{
+  "id": "freund-mann-job-transformation-2026",
+  "abstract": "This paper develops a general-equilibrium model of automation-driven job transformation, where occupations bundle multiple tasks and workers possess task-specific skills. When a task is automated, remaining tasks gain importance, so wage effects depend on workers' full multi-dimensional skill profiles. The authors estimate the distribution of task-specific skills using maximum likelihood on NLSY79 data and 19,000 O*NET micro-tasks clustered into 38 categories. Projecting the effects of LLM automation using Eloundou et al. (2023) exposure measures, they find non-monotonic wage effects by exposure, a rising return to social skills, and mildly progressive distributional consequences.",
+  "keyFindings": [
+    "Average wage effects of occupational AI exposure are non-monotonic: moderate exposure (~10% of tasks automated) yields +4% wage gains; high exposure produces losses up to -35%.",
+    "Low-wage workers gain around 2% on average from AI automation, whereas wages barely change toward the top of the distribution — AI is mildly progressive.",
+    "AI raises the return to social and non-routine manual skills while reducing the return to analytical skills, reversing the historical pattern of skill-biased technological change.",
+    "Within any occupation, there are both winners and losers from AI — two workers in the same exposed occupation can experience wage changes of opposite sign depending on their multi-dimensional skill profile.",
+    "The occupations projected to decline most in employment are white-collar professions: Life/Physical/Social Science, Architecture and Engineering, and Legal Occupations."
+  ],
+  "methodology": "General-equilibrium model with Roy-style occupational choice and Cobb-Douglas task bundling within occupations. Skills estimated via maximum likelihood on NLSY79 panel (6,033 workers, 110,618 observations, 1979-2018) with 61 occupations and 38 task clusters derived from ~19,000 O*NET micro-tasks. LLM automation scenario uses Eloundou et al. (2023) task-level exposure measures. Model validated against historical routine-biased technological change: replicates job polarization (Goos et al. 2009) and rising return to social skills (Deming 2017).",
+  "qualifiers": "Model assumes time-invariant skills (no retraining/adaptation), unit elasticity of substitution across tasks (Cobb-Douglas), universal automation adoption across firms, and no non-employment margin. Structural model projections, not empirical measurements of realized AI impacts. The model understates occupational persistence (31% vs 70% in data) due to absence of switching costs.",
+  "fetchedAt": "2026-03-19"
+}

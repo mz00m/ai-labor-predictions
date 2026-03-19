@@ -411,6 +411,20 @@
       ],
       "evidenceTier": 3,
       "label": "Yale (Restrepo): Automation targets above-median wage tasks, amplifying losses"
+    },
+    {
+      "date": "2026-01-07",
+      "direction": "down",
+      "sourceIds": ["imas-demand-collapse-ai-2026"],
+      "evidenceTier": 4,
+      "label": "Imas (citing Benzell et al): Model shows 25% wage decline under full automation with low savings"
+    },
+    {
+      "date": "2026-03-18",
+      "direction": "neutral",
+      "sourceIds": ["freund-mann-job-transformation-2026"],
+      "evidenceTier": 1,
+      "label": "Freund & Mann: Wage effects non-monotonic; +4% moderate, -35% high exposure"
     }
   ],
   "sources": [
@@ -798,6 +812,16 @@
       "evidenceTier": 1,
       "datePublished": "2026-02-24",
       "excerpt": "AI's impact depends on whether it automates or augments. For zero-experience-premium occupations, increased AI exposure is associated with -0.28pp reduction in wage growth. Wages in AI-exposed jobs not uniformly declining."
+    },
+    {
+      "id": "freund-mann-job-transformation-2026",
+      "title": "Job Transformation, Specialization, and the Labor Market Effects of AI",
+      "url": "https://lukasbfreund.github.io/files/FM_AI.pdf",
+      "publisher": "Boston College / Arizona State (Freund, Mann)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-18",
+      "excerpt": "average individual wages are roughly unchanged for incumbents of occupations with no AI exposure, rise by around 4% at moderate exposure, and drop by as much as 35% for workers in the most exposed occupations",
+      "dateAdded": "2026-03-19"
     }
   ]
 }
