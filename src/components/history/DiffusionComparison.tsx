@@ -3,24 +3,24 @@
 const ROWS = [
   {
     comparison: "vs. Electrification",
-    historical: "25 yrs to industrial adoption",
-    ai: "~2–3 yrs (St. Louis Fed: 54.6% adults)",
-    ratio: "8–12×",
-    source: "David (1990); Bick, Blandin & Deming (2025)",
+    historical: "~40 yrs from dynamo (1880s) to productivity gains (1920s); only 3% of residences had electric lighting by 1900",
+    ai: "~2–3 yrs: 39% of US adults using genAI by Aug 2024; ChatGPT reached 100M users in 60 days",
+    ratio: "8–12\u00d7",
+    source: "David (1990); Bick, Blandin & Deming (2025); Epoch AI",
   },
   {
     comparison: "vs. PC / Internet",
-    historical: "5–15 yrs to 50% of households",
-    ai: "~3 yrs to 55.9% adult adoption",
-    ratio: "2–5×",
-    source: "Census; St. Louis Fed (2025)",
+    historical: "PC: 20% adoption 3 yrs after IBM PC (1981); Internet: 20% two yrs after commercial opening (1995)",
+    ai: "GenAI: 39% adoption 2 yrs after ChatGPT launch — nearly double the PC rate at a comparable stage",
+    ratio: "2\u20135\u00d7",
+    source: "Bick, Blandin & Deming (NBER 32966, 2024); Census",
   },
   {
     comparison: "vs. Enterprise adoption",
     historical: "10–25 yrs historically",
-    ai: "33% → 88% in 2 yrs (McKinsey)",
-    ratio: "5–12×",
-    source: "McKinsey AI Survey (2023–2025)",
+    ai: "33% \u2192 88% in 2 yrs (McKinsey); but Census BTOS shows only 17.5% of firms actively using AI (Feb 2026)",
+    ratio: "5\u201312\u00d7",
+    source: "McKinsey AI Survey (2023\u20132025); Census BTOS (2026)",
   },
 ];
 

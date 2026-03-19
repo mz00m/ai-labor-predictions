@@ -12,7 +12,7 @@ const FORECASTS = [
       "Routine cognitive work faces displacement pressure first: document review, standard writing, basic code, data analysis, customer service",
       "Wage compression and employment decline appear in these categories as AI-assisted workers handle dramatically more volume",
       "New roles in AI oversight, training, and application emerge \u2014 but won\u2019t immediately compensate for losses",
-      "With 88% of organizations already adopting AI (McKinsey, 2025), the Solow Paradox may resolve in years rather than the decades it took for electricity and computers",
+      "With 88% of organizations already adopting AI (McKinsey, 2025) and 39% of US adults using genAI within two years of ChatGPT\u2019s launch (NBER, Bick et al.), the Solow Paradox may resolve in years rather than the decades it took for electricity and computers",
     ],
   },
   {
@@ -22,7 +22,7 @@ const FORECASTS = [
     color: "#d97706",
     colorLight: "#fffbeb",
     points: [
-      "The productivity paradox resolves \u2014 organizational complements to AI develop (new business models, new processes, new educational pathways, new regulatory frameworks)",
+      "The Productivity J-Curve (Brynjolfsson, Rock & Syverson, 2021) resolves \u2014 trillions in intangible investment become visible as organizational complements to AI develop (new business models, new processes, new educational pathways, new regulatory frameworks)",
       "Aggregate productivity growth becomes visible and accelerates \u2014 potentially arriving by the early 2030s rather than the 2050s a historical baseline would predict",
       "Whether this growth translates to broadly shared wages depends entirely on institutional choices being made now",
       "AI\u2019s low infrastructure requirements could spread gains more geographically than prior GPTs, which concentrated in industrial centers",
@@ -37,7 +37,7 @@ const FORECASTS = [
     points: [
       "A new occupational equilibrium emerges, dominated by human-AI collaborative roles",
       "Growth in human-specific services: caregiving, high-stakes physical tasks, relational work that requires accountability and presence",
-      "Entirely new industries emerge, enabled by democratized access to cognitive capabilities \u2014 analogous to how electrification created the consumer appliance economy",
+      "Entirely new industries emerge, enabled by democratized access to cognitive capabilities \u2014 analogous to how electrification created the consumer appliance economy and how the GI Bill (8 million veterans educated by 1956) unlocked the postwar knowledge economy",
       "Average wages in the new equilibrium may be substantially higher \u2014 but the compressed transition means less time for workers and institutions to adapt",
     ],
   },
@@ -104,10 +104,12 @@ export default function ForecastColumns() {
           diffusion to new equilibrium ranged from 40 to 70 years.
           AI&rsquo;s diffusion phase is running at roughly 10x the speed
           of prior GPTs: enterprise adoption went from 33% to 88% in two
-          years (McKinsey), and 54.6% of US working-age adults used
-          generative AI within three years of launch (St. Louis Fed)
-          &mdash; penetration rates the internet and PC took 5&ndash;15
-          years to achieve. The timelines above extrapolate from this 10x
+          years (McKinsey), and 39% of US adults used
+          generative AI within two years of launch (NBER, Bick et al.
+          2024) &mdash; nearly double the PC adoption rate at a comparable
+          stage. Deming, Ong &amp; Summers (NBER, 2025) find that
+          1990&ndash;2017 was the least disruptive labor market period
+          since 1880, suggesting the pace may now be accelerating sharply. The timelines above extrapolate from this 10x
           adoption speed. If the historical 40&ndash;70 year arc
           compresses proportionally, the full transition from diffusion to
           new equilibrium could play out in 7&ndash;15 years &mdash; a
