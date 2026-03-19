@@ -1,9 +1,21 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-03-18",
-  "totalSources": 438,
-  "verifiedCount": 438,
+  "lastUpdated": "2026-03-19",
+  "totalSources": 439,
+  "verifiedCount": 439,
   "sources": {
+    "agrawal-ai-science-2026": {
+      "id": "agrawal-ai-science-2026",
+      "title": "AI in Science",
+      "url": "https://www.nber.org/papers/w34953",
+      "publisher": "NBER / University of Chicago Press",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-11",
+      "excerpt": "output is only 4% above the constant-growth path after 20 years and 19% after 40 years... even infinite automation of all cognitive labor (roughly one-third of GDP) would raise output by only 50% in a weak-links framework",
+      "usedIn": [],
+      "verified": true,
+      "synthetic": false
+    },
     "coworkingcafe-ai-jobs-metros-2026": {
       "id": "coworkingcafe-ai-jobs-metros-2026",
       "title": "The New Map of AI Work: San Jose Builds It & New York Scales It",

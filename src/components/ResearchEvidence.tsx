@@ -319,6 +319,32 @@ const MACRO_STUDIES: MacroStudy[] = [
     url: "https://budgetmodel.wharton.upenn.edu/issues/2025/9/8/projected-impact-of-generative-ai-on-future-productivity-growth",
     direction: "neutral",
   },
+  {
+    id: "agrawal-ai-science-2026",
+    authors: "Agrawal, McHale & Oettl",
+    year: 2026,
+    title: "AI in Science (Calibrated Growth Model)",
+    metric: "Output growth path",
+    effectPct: 0.2,
+    effectLabel: "+4% / 20yr",
+    finding: "Calibrated task-based augmentation model finds output only 4% above the constant-growth path after 20 years and 19% after 40 years. Acceleration is gradual because output is constrained by the slowest-improving tasks (weak-links framework). Productivity effects depend on the stock of AI expertise among scientists.",
+    citation: "NBER Working Paper 34953 / Economics of Science (UChicago Press, 2026)",
+    url: "https://www.nber.org/papers/w34953",
+    direction: "neutral",
+  },
+  {
+    id: "jones-cognitive-ceiling-2026",
+    authors: "Jones (via Agrawal et al.)",
+    year: 2026,
+    title: "Cognitive Labor Automation Ceiling",
+    metric: "Output ceiling",
+    effectPct: 0,
+    effectLabel: "50% max",
+    finding: "Even infinite automation of all cognitive labor (roughly one-third of GDP) would raise output by only 50% in a weak-links framework, because non-cognitive inputs remain bottlenecks. Extends Agrawal et al.'s finding that growth is constrained by the slowest-improving tasks.",
+    citation: "Jones (2026), cited in NBER WP 34953",
+    url: "https://www.nber.org/papers/w34953",
+    direction: "neutral",
+  },
 ];
 
 /* ------------------------------------------------------------------ */
