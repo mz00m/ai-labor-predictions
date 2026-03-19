@@ -40,15 +40,14 @@ function YearHeader({ year }: { year: number }) {
       onMouseEnter={() => setShow(true)}
       onMouseLeave={() => setShow(false)}
     >
-      <span className="cursor-help">
+      <span className="cursor-help border-b border-dashed border-current">
         {year}
-        <span className="ml-0.5 inline-flex items-center justify-center w-3 h-3 rounded-full bg-black/[0.06] text-[8px] text-[var(--muted)] align-top">
-          ?
-        </span>
       </span>
       {show && (
-        <div className="absolute z-20 right-0 top-full mt-1 w-48 px-2.5 py-1.5 rounded-md bg-[var(--foreground)] text-[var(--background)] text-[10px] leading-snug shadow-lg pointer-events-none text-left">
-          % of occupation tasks where AI compute cost is cheaper than human labor in {year}
+        <div className="absolute z-20 right-0 top-full mt-1 w-52 px-3 py-2 rounded-lg bg-zinc-900 text-white text-[11px] leading-snug shadow-xl pointer-events-none text-left">
+          <span className="font-semibold">{year} projection</span>
+          <br />
+          % of occupation tasks where AI compute cost is cheaper than human labor
         </div>
       )}
     </div>
@@ -212,17 +211,17 @@ export default function IncomeStrataImpact() {
                       </div>
                       <div className="py-2 px-3 text-right tabular-nums">{(g.employment / 1000).toFixed(1)}M</div>
                       <div className="py-2 px-3 text-right tabular-nums">${(g.medianWageAnnual / 1000).toFixed(0)}K</div>
-                      <div className="py-2 px-3 text-right tabular-nums" style={g.pct2028 < 35 ? { backgroundColor: "rgba(16, 185, 129, 0.06)" } : undefined}>
+                      <div className="py-2 px-3 text-right tabular-nums" style={g.pct2028 < 35 ? { backgroundColor: "rgba(16, 185, 129, 0.10)" } : undefined}>
                         <span style={{ color: g.pct2028 >= 60 ? "#EF4444" : g.pct2028 >= 35 ? "#6366F1" : "#10B981" }}>
                           {g.pct2028}%
                         </span>
                       </div>
-                      <div className="py-2 px-3 text-right tabular-nums" style={g.pct2032 < 35 ? { backgroundColor: "rgba(16, 185, 129, 0.06)" } : undefined}>
+                      <div className="py-2 px-3 text-right tabular-nums" style={g.pct2032 < 35 ? { backgroundColor: "rgba(16, 185, 129, 0.10)" } : undefined}>
                         <span style={{ color: g.pct2032 >= 60 ? "#EF4444" : g.pct2032 >= 35 ? "#6366F1" : "#10B981" }}>
                           {g.pct2032}%
                         </span>
                       </div>
-                      <div className="py-2 px-3 text-right tabular-nums" style={g.pct2036 < 35 ? { backgroundColor: "rgba(16, 185, 129, 0.06)" } : undefined}>
+                      <div className="py-2 px-3 text-right tabular-nums" style={g.pct2036 < 35 ? { backgroundColor: "rgba(16, 185, 129, 0.10)" } : undefined}>
                         <span style={{ color: g.pct2036 >= 60 ? "#EF4444" : g.pct2036 >= 35 ? "#6366F1" : "#10B981" }}>
                           {g.pct2036}%
                         </span>
