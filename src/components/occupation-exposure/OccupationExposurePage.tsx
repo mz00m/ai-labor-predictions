@@ -130,52 +130,48 @@ export default function OccupationExposurePage() {
           {/* 5 dimensions — compact list */}
           <div className="border border-black/[0.06] rounded-lg divide-y divide-black/[0.06] mb-2">
             {DIMENSION_EXPLAINERS.map((dim) => (
-              <div
+              <button
                 key={dim.key}
-                className={`transition-colors ${
+                onClick={() => setActiveDimension(dim.key)}
+                className={`w-full text-left px-3 py-2 flex items-center gap-2.5 transition-colors ${
                   activeDimension === dim.key
                     ? "bg-[var(--accent-light)]"
                     : "hover:bg-black/[0.01]"
                 }`}
               >
-                <button
-                  onClick={() => setActiveDimension(dim.key)}
-                  className="w-full text-left px-4 pt-2.5 pb-1 flex items-start gap-3"
+                <span
+                  className="text-[9px] font-bold uppercase tracking-wider w-[52px] flex-shrink-0 text-center"
+                  style={{ color: dim.roleColor }}
                 >
-                  <span
-                    className="text-[10px] font-bold uppercase tracking-wider mt-0.5 w-16 flex-shrink-0"
-                    style={{ color: dim.roleColor }}
-                  >
-                    {dim.role}
+                  {dim.role}
+                </span>
+                <div className="min-w-0 flex-1">
+                  <span className="text-[11.5px] font-semibold text-[var(--foreground)]">
+                    {dim.label}
                   </span>
-                  <div className="min-w-0">
-                    <span className="text-[13px] font-semibold text-[var(--foreground)]">
-                      {dim.label}
-                    </span>
-                    <span className="text-[12px] text-[var(--muted)] ml-2">
-                      {dim.oneLiner}
-                    </span>
-                  </div>
-                </button>
-                <div className="pl-[76px] pr-4 pb-2 flex items-center gap-3">
+                  <span className="text-[10.5px] text-[var(--muted)] ml-1.5 leading-tight">
+                    {dim.oneLiner}
+                  </span>
+                </div>
+                <div className="flex items-center gap-2 flex-shrink-0">
                   <a
                     href={`#${dim.anchor}`}
-                    className="text-[11px] text-[var(--muted)] hover:text-[var(--accent-text)] transition-colors"
+                    className="text-[10px] text-[var(--muted)] hover:text-[var(--accent-text)] transition-colors whitespace-nowrap"
                     onClick={(e) => e.stopPropagation()}
                   >
-                    Read the research &darr;
+                    Research &darr;
                   </a>
                   {dim.pageLink && (
                     <Link
                       href={dim.pageLink}
-                      className="text-[11px] text-[var(--accent-text)] hover:underline"
+                      className="text-[10px] text-[var(--accent-text)] hover:underline whitespace-nowrap"
                       onClick={(e) => e.stopPropagation()}
                     >
-                      Full explainer &rarr;
+                      Explainer &rarr;
                     </Link>
                   )}
                 </div>
-              </div>
+              </button>
             ))}
           </div>
           <p className="text-[11px] text-[var(--muted)] leading-snug">
