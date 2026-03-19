@@ -10,6 +10,15 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Sahaj Garg (Wispr)",
+    title: "The Displacement of Cognitive Labor and What Comes After",
+    summary:
+      "Stanford grad turned AI startup CTO argues cognitive labor automation is months away, not decades. Physical labor follows on a 5-10 year timeline. The identity crisis for knowledge workers may be worse than the economic one.",
+    date: "Mar 18",
+    url: "https://sahajgarg.github.io/blog/cognitive-labor/",
+    accent: "border-l-orange-500",
+  },
+  {
     author: "Anthropic",
     title: "81,000 People Told Us How They Use AI",
     summary:
@@ -44,15 +53,6 @@ const articles: Article[] = [
     date: "Mar 15",
     url: "https://www.noahpinion.blog/p/the-future-isnt-what-it-used-to-be",
     accent: "border-l-emerald-500",
-  },
-  {
-    author: "Sivulka (Hebbia)",
-    title: "Productive Individuals Don\u2019t Make Productive Firms",
-    summary:
-      "Individual AI productivity gains aren\u2019t translating to firm-level value. Seven pillars of institutional intelligence for organizational AI adoption.",
-    date: "Mar 11",
-    url: "https://x.com/gsivulka/status/2031797989908627849",
-    accent: "border-l-cyan-500",
   },
 ];
 

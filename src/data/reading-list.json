@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "The Displacement of Cognitive Labor and What Comes After",
+      "author": "Sahaj Garg",
+      "publisher": "Personal Blog (Wispr CTO)",
+      "date": "2026-03-18",
+      "url": "https://sahajgarg.github.io/blog/cognitive-labor/",
+      "takeaway": "Stanford grad turned AI startup CTO argues cognitive labor automation is months away, not decades. Reports 4-week engineering tasks completed in 45 minutes with AI. Physical labor automation follows on 5-10 year timeline as AI-compressed R&D accelerates robotics. The identity crisis for displaced knowledge workers may be worse than the economic loss, paralleling Rust Belt deindustrialization at larger scale. Post-abundance world splits into zero-marginal-cost cognitive goods and still-scarce physical/experiential goods.",
+      "weekFeatured": "2026-03-19",
+      "tier": 4
+    },
+    {
       "title": "81,000 People Told Us How They Use AI",
       "author": "Anthropic",
       "publisher": "Anthropic",
