@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import {
   OCCUPATION_GROUPS,
@@ -30,6 +30,29 @@ interface TierDetail {
   totalEmployment: number;
   avgAutomation2030: number;
   avgTaskMix: Record<TaskCategory, number>;
+}
+
+function YearHeader({ year }: { year: number }) {
+  const [show, setShow] = useState(false);
+  return (
+    <div
+      className="py-2 px-3 text-right relative"
+      onMouseEnter={() => setShow(true)}
+      onMouseLeave={() => setShow(false)}
+    >
+      <span className="cursor-help">
+        {year}
+        <span className="ml-0.5 inline-flex items-center justify-center w-3 h-3 rounded-full bg-black/[0.06] text-[8px] text-[var(--muted)] align-top">
+          ?
+        </span>
+      </span>
+      {show && (
+        <div className="absolute z-20 right-0 top-full mt-1 w-48 px-2.5 py-1.5 rounded-md bg-[var(--foreground)] text-[var(--background)] text-[10px] leading-snug shadow-lg pointer-events-none text-left">
+          % of occupation tasks where AI compute cost is cheaper than human labor in {year}
+        </div>
+      )}
+    </div>
+  );
 }
 
 export default function IncomeStrataImpact() {
@@ -163,9 +186,9 @@ export default function IncomeStrataImpact() {
                 <div className="py-2 pl-4 pr-3 text-left">Occupation</div>
                 <div className="py-2 px-3 text-right">Workers</div>
                 <div className="py-2 px-3 text-right">Wage</div>
-                <div className="py-2 px-3 text-right" title="% of tasks where AI compute cost < human wage in 2028">2028</div>
-                <div className="py-2 px-3 text-right" title="% of tasks where AI compute cost < human wage in 2032">2032</div>
-                <div className="py-2 px-3 text-right" title="% of tasks where AI compute cost < human wage in 2036">2036</div>
+                <YearHeader year={2028} />
+                <YearHeader year={2032} />
+                <YearHeader year={2036} />
                 <div className="py-2 px-3 text-center" title="Demand elasticity: will cheaper AI output expand this market or just cut costs?">Demand</div>
               </div>
               {/* Rows */}
@@ -189,17 +212,17 @@ export default function IncomeStrataImpact() {
                       </div>
                       <div className="py-2 px-3 text-right tabular-nums">{(g.employment / 1000).toFixed(1)}M</div>
                       <div className="py-2 px-3 text-right tabular-nums">${(g.medianWageAnnual / 1000).toFixed(0)}K</div>
-                      <div className="py-2 px-3 text-right tabular-nums">
+                      <div className="py-2 px-3 text-right tabular-nums" style={g.pct2028 < 35 ? { backgroundColor: "rgba(16, 185, 129, 0.06)" } : undefined}>
                         <span style={{ color: g.pct2028 >= 60 ? "#EF4444" : g.pct2028 >= 35 ? "#6366F1" : "#10B981" }}>
                           {g.pct2028}%
                         </span>
                       </div>
-                      <div className="py-2 px-3 text-right tabular-nums">
+                      <div className="py-2 px-3 text-right tabular-nums" style={g.pct2032 < 35 ? { backgroundColor: "rgba(16, 185, 129, 0.06)" } : undefined}>
                         <span style={{ color: g.pct2032 >= 60 ? "#EF4444" : g.pct2032 >= 35 ? "#6366F1" : "#10B981" }}>
                           {g.pct2032}%
                         </span>
                       </div>
-                      <div className="py-2 px-3 text-right tabular-nums">
+                      <div className="py-2 px-3 text-right tabular-nums" style={g.pct2036 < 35 ? { backgroundColor: "rgba(16, 185, 129, 0.06)" } : undefined}>
                         <span style={{ color: g.pct2036 >= 60 ? "#EF4444" : g.pct2036 >= 35 ? "#6366F1" : "#10B981" }}>
                           {g.pct2036}%
                         </span>
