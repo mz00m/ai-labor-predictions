@@ -8,6 +8,7 @@ import ComparisonMatrix from "./ComparisonMatrix";
 import ForecastColumns from "./ForecastColumns";
 import VulnerabilityTable from "./VulnerabilityTable";
 import DiffusionComparison from "./DiffusionComparison";
+import ShareSectionBar from "@/components/ShareSectionBar";
 
 export default function HistoryPage() {
   return (
@@ -354,6 +355,15 @@ export default function HistoryPage() {
         <div className="border-t border-black/[0.06] pt-8">
           <DiffusionComparison />
         </div>
+      </section>
+
+      {/* ───── Share ───── */}
+      <section className="mb-8">
+        <ShareSectionBar
+          url="https://jobsdata.ai/history"
+          title="Historical Technology Comparison"
+          description="How past technology revolutions reshaped labor markets"
+        />
       </section>
     </article>
   );

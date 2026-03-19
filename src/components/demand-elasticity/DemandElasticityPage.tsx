@@ -4,6 +4,7 @@ import Link from "next/link";
 import ElasticityMatrix from "./ElasticityMatrix";
 import DemandSliderViz from "./DemandSliderViz";
 import ElasticityToggleViz from "./ElasticityToggleViz";
+import ShareSectionBar from "@/components/ShareSectionBar";
 
 export default function DemandElasticityPage() {
   return (
@@ -443,8 +444,14 @@ export default function DemandElasticityPage() {
             </p>
           </blockquote>
 
+          <ShareSectionBar
+            url="https://jobsdata.ai/demand-elasticity"
+            title="The Demand Elasticity Effect"
+            description="Why making work cheaper can create more jobs, not fewer"
+          />
+
           {/* Continue exploring */}
-          <p className="text-[11px] font-bold uppercase tracking-widest text-[var(--muted)] mb-4">
+          <p className="text-[11px] font-bold uppercase tracking-widest text-[var(--muted)] mb-4 mt-8">
             Continue exploring
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
