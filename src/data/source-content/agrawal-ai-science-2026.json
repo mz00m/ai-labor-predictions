@@ -1,0 +1,14 @@
+{
+  "id": "agrawal-ai-science-2026",
+  "abstract": "This paper examines the impact of AI on the knowledge production function in science, characterizing AI as a tool for augmentation through enhanced search over combinatorial spaces rather than full automation. The authors decompose knowledge production into a multi-stage process to illuminate the 'jagged frontier' of AI in science, showing differential returns across domains (data-rich biology vs. anomaly-sparse physics) and workflow stages. Using a task-based augmentation model adapted from Acemoglu and Restrepo, they find that growth acceleration from AI is gradual: output is only 4% above the constant-growth path after 20 years and 19% after 40 years, because output is constrained by the slowest-improving tasks in a weak-links framework.",
+  "keyFindings": [
+    "Calibrated task-based augmentation model shows output only 4% above the constant-growth path after 20 years and 19% after 40 years, indicating very gradual productivity acceleration from AI.",
+    "Output growth is constrained by the slowest-improving tasks (weak-links framework). Jones (2026) extends this logic: even infinite automation of all cognitive labor (roughly one-third of GDP) would raise output by only 50%.",
+    "AI's productivity effects depend critically on the stock of AI expertise: exogenous improvements in AI yield nonlinear productivity gains amplified by the share of scientists that are AI experts.",
+    "The 'jagged frontier' of AI in science reveals differential returns across domains (strong in data-rich biology, subtler in anomaly-sparse physics) and workflow stages (strong for design aids like AlphaFold, weaker for question generation).",
+    "Human judgment remains indispensable for tasks involving abductive inference, contextual nuance, and trade-offs, particularly in data-sparse environments."
+  ],
+  "methodology": "Task-based augmentation model adapted from Acemoglu and Restrepo (2018, 2019), distinguishing 'ordinary' from AI-expert scientists. Calibrated growth model projecting output paths under AI-driven automation. Multi-stage decomposition of the knowledge production function to analyze differential AI impacts across scientific domains and workflow stages.",
+  "qualifiers": "The calibration is for scientific knowledge production specifically, which may not generalize directly to all economic sectors. The model assumes a specific task structure and complementarity pattern. The gradual acceleration finding depends on the weak-links assumption that output is constrained by the slowest-improving inputs. The paper focuses on augmentation rather than full automation scenarios.",
+  "fetchedAt": "2026-03-19"
+}
