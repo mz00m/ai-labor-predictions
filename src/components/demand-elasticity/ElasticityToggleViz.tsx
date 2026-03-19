@@ -25,7 +25,7 @@ const INDUSTRIES: IndustryData[] = [
     productivityMultiplier: 5.0,
     rawDisplacement: -15,
     description:
-      "Vast unmet demand for automation, custom tooling, and integration. When coding costs fall, firms fund projects that were previously unviable.",
+      "Vast unmet demand for automation, custom tooling, and integration. When coding costs fall, firms fund projects that were previously unviable. The long tail of software needs is enormous.",
   },
   {
     id: "creative",
@@ -34,7 +34,34 @@ const INDUSTRIES: IndustryData[] = [
     productivityMultiplier: 3.0,
     rawDisplacement: -20,
     description:
-      "Bespoke creative work was unaffordable for most SMBs. Lower production costs expand the addressable market significantly.",
+      "Bespoke creative work (video, illustration, copywriting) was unaffordable for most SMBs. Lower production costs expand the addressable market significantly.",
+  },
+  {
+    id: "data-analysis",
+    label: "Data Analysis & Research",
+    elasticity: 1.5,
+    productivityMultiplier: 4.0,
+    rawDisplacement: -18,
+    description:
+      "Most companies lack the budget for dedicated analysts. When AI drops the cost of insight generation, every mid-market firm becomes a buyer. Demand scales with affordability.",
+  },
+  {
+    id: "marketing",
+    label: "Marketing & Advertising",
+    elasticity: 1.2,
+    productivityMultiplier: 3.0,
+    rawDisplacement: -16,
+    description:
+      "Personalized campaigns were only viable for large brands. AI-driven content and targeting make sophisticated marketing accessible to smaller businesses, expanding the market.",
+  },
+  {
+    id: "education",
+    label: "Education & Tutoring",
+    elasticity: 1.1,
+    productivityMultiplier: 2.0,
+    rawDisplacement: -10,
+    description:
+      "Massive unmet demand for affordable, personalized instruction. AI tutoring could serve billions who lack access. Regulatory constraints are lighter than healthcare or law.",
   },
   {
     id: "legal",
@@ -43,16 +70,7 @@ const INDUSTRIES: IndustryData[] = [
     productivityMultiplier: 2.5,
     rawDisplacement: -12,
     description:
-      "Moderate latent demand for affordable legal services, but regulatory friction and licensing requirements slow expansion.",
-  },
-  {
-    id: "healthcare",
-    label: "Healthcare Admin",
-    elasticity: 0.6,
-    productivityMultiplier: 2.0,
-    rawDisplacement: -15,
-    description:
-      "Enormous unmet demand constrained by regulation, licensing, and institutional inertia. Displacement mainly via attrition.",
+      "Moderate latent demand for affordable legal services, but regulatory friction and licensing requirements slow expansion. Contract review may expand; litigation less so.",
   },
   {
     id: "financial",
@@ -61,7 +79,25 @@ const INDUSTRIES: IndustryData[] = [
     productivityMultiplier: 2.5,
     rawDisplacement: -14,
     description:
-      "Moderate latent demand in personal finance and risk analysis, but heavily regulated. Mixed outlook.",
+      "Moderate latent demand in personal finance and risk analysis, but heavily regulated. Some expansion in robo-advisory; back-office roles face pure displacement.",
+  },
+  {
+    id: "healthcare",
+    label: "Healthcare Admin",
+    elasticity: 0.6,
+    productivityMultiplier: 2.0,
+    rawDisplacement: -15,
+    description:
+      "Enormous unmet demand constrained by regulation, licensing, and institutional inertia. Displacement mainly via attrition rather than layoffs.",
+  },
+  {
+    id: "accounting",
+    label: "Accounting & Bookkeeping",
+    elasticity: 0.5,
+    productivityMultiplier: 3.5,
+    rawDisplacement: -22,
+    description:
+      "Firms don't need more bookkeeping when it's cheaper — they need the same amount done faster. High productivity gains with low demand response means net workforce shrinkage.",
   },
   {
     id: "customer-service",
@@ -70,7 +106,16 @@ const INDUSTRIES: IndustryData[] = [
     productivityMultiplier: 4.0,
     rawDisplacement: -25,
     description:
-      "Consumers don't want more support interactions at lower prices. Automation of existing volume dominates.",
+      "Consumers don't want more support interactions at lower prices. Nobody calls a helpline for fun. Automation of existing volume dominates over any demand expansion.",
+  },
+  {
+    id: "translation",
+    label: "Translation & Localization",
+    elasticity: 0.9,
+    productivityMultiplier: 6.0,
+    rawDisplacement: -28,
+    description:
+      "Moderate new demand (more content localized into more languages) but extreme productivity gains overwhelm it. A translator handling 6x more volume still nets fewer total translators.",
   },
   {
     id: "data-entry",
@@ -79,7 +124,16 @@ const INDUSTRIES: IndustryData[] = [
     productivityMultiplier: 5.0,
     rawDisplacement: -30,
     description:
-      "Nobody wants more data entry. When AI automates it, the work simply goes away. Textbook displacement.",
+      "Nobody wants more data entry. When AI automates it, the work simply goes away. There is no latent market waiting for cheaper data entry. Textbook displacement.",
+  },
+  {
+    id: "compliance",
+    label: "Compliance & Audit",
+    elasticity: 0.3,
+    productivityMultiplier: 3.0,
+    rawDisplacement: -20,
+    description:
+      "Regulatory requirements are fixed — companies must comply regardless of cost. Cheaper compliance doesn't create more compliance work, it just requires fewer compliance officers.",
   },
 ];
 
@@ -140,8 +194,8 @@ export default function ElasticityToggleViz() {
     setElasticityOn((prev) => !prev);
     if (!reducedMotion) {
       setAnimating(true);
-      // Animation duration: 700ms base + 80ms * 7 items stagger = ~1260ms
-      setTimeout(() => setAnimating(false), 1400);
+      // Animation duration: 700ms base + 80ms * 13 items stagger = ~1740ms
+      setTimeout(() => setAnimating(false), 1900);
     }
   }, [reducedMotion]);
 
