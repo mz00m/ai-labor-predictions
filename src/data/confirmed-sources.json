@@ -4,6 +4,18 @@
   "totalSources": 457,
   "verifiedCount": 457,
   "sources": {
+    "korinek-ai-tool-vs-agi-2026": {
+      "id": "korinek-ai-tool-vs-agi-2026",
+      "title": "The economics of AI as a tool vs AGI as a worker",
+      "url": "https://ideasindevelopment.substack.com/p/the-economics-of-ai-as-a-tool-vs",
+      "publisher": "Ideas in Development (Substack)",
+      "evidenceTier": 4,
+      "datePublished": "2026-02-17",
+      "excerpt": "even if we stopped all progress in artificial intelligence today, and we spent the next five or ten years figuring out how can we use the systems that we have right now throughout our economy in a productive way. We would probably experience very significant productivity gains.",
+      "usedIn": [],
+      "verified": true,
+      "synthetic": false
+    },
     "freund-mann-job-transformation-2026": {
       "id": "freund-mann-job-transformation-2026",
       "title": "Job Transformation, Specialization, and the Labor Market Effects of AI",
