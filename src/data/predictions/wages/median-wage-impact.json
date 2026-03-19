@@ -332,6 +332,15 @@
       "label": "Stanford: small positive wage effects in AI-exposed jobs"
     },
     {
+      "date": "2026-01-07",
+      "direction": "down",
+      "sourceIds": [
+        "imas-demand-collapse-ai-2026"
+      ],
+      "evidenceTier": 4,
+      "label": "Imas (citing Benzell et al): Model shows 25% wage decline under full automation with low savings"
+    },
+    {
       "date": "2026-01-15",
       "direction": "up",
       "sourceIds": [
@@ -402,15 +411,6 @@
       ],
       "evidenceTier": 3,
       "label": "Yale (Restrepo): Automation targets above-median wage tasks, amplifying losses"
-    },
-    {
-      "date": "2026-01-07",
-      "direction": "down",
-      "sourceIds": [
-        "imas-demand-collapse-ai-2026"
-      ],
-      "evidenceTier": 4,
-      "label": "Imas (citing Benzell et al): Model shows 25% wage decline under full automation with low savings"
     }
   ],
   "sources": [

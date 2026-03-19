@@ -250,6 +250,15 @@
       "label": "Dallas Fed: Workers 22-25 in AI-exposed jobs saw 13% employment decline since 2022"
     },
     {
+      "date": "2026-01-07",
+      "direction": "down",
+      "sourceIds": [
+        "imas-demand-collapse-ai-2026"
+      ],
+      "evidenceTier": 4,
+      "label": "Imas: Wage share collapse from automation could trigger demand-side contraction"
+    },
+    {
       "date": "2026-01-14",
       "direction": "down",
       "sourceIds": [
@@ -329,15 +338,6 @@
       ],
       "evidenceTier": 2,
       "label": "Anthropic: AI exposure concentrates in credentialed roles (17.4% vs 4.5% grad degrees)"
-    },
-    {
-      "date": "2026-01-07",
-      "direction": "down",
-      "sourceIds": [
-        "imas-demand-collapse-ai-2026"
-      ],
-      "evidenceTier": 4,
-      "label": "Imas: Wage share collapse from automation could trigger demand-side contraction"
     }
   ],
   "sources": [

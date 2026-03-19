@@ -275,6 +275,24 @@
       "label": "Brookings: top freelancers hit hardest"
     },
     {
+      "date": "2025-09-01",
+      "direction": "up",
+      "sourceIds": [
+        "brynjolfsson-hitzig-ai-knowledge-centralization-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER (Brynjolfsson/Hitzig): AI enables centralization, reduces managerial autonomy"
+    },
+    {
+      "date": "2025-09-08",
+      "direction": "neutral",
+      "sourceIds": [
+        "pwbm-ai-productivity-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "PWBM: Jobs fully AI-replaceable saw only 0.75% employment fall 2021-2024"
+    },
+    {
       "date": "2025-09-15",
       "direction": "down",
       "sourceIds": [
@@ -300,15 +318,6 @@
       ],
       "evidenceTier": 1,
       "label": "NBER: 700M ChatGPT users; 81% of work use is decision support, not task automation"
-    },
-    {
-      "date": "2025-09-01",
-      "direction": "up",
-      "sourceIds": [
-        "brynjolfsson-hitzig-ai-knowledge-centralization-2025"
-      ],
-      "evidenceTier": 1,
-      "label": "NBER (Brynjolfsson/Hitzig): AI enables centralization, reduces managerial autonomy"
     },
     {
       "date": "2025-09-26",
@@ -417,6 +426,15 @@
       ],
       "evidenceTier": 2,
       "label": "Cognizant: financial managers 84% exposed; legal 63% (up from 9%); C-suite 60% (up from 25%)"
+    },
+    {
+      "date": "2026-01-15",
+      "direction": "down",
+      "sourceIds": [
+        "frank-ai-unemployment-overall-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Frank et al.: Unemployment risk rose in AI-exposed occupations from early 2022"
     },
     {
       "date": "2026-01-21",
@@ -561,24 +579,6 @@
       ],
       "evidenceTier": 1,
       "label": "Fed/Duke: Routine clerical declining 0.76pp/yr; offset by skilled-technical gains"
-    },
-    {
-      "date": "2026-01-15",
-      "direction": "down",
-      "sourceIds": [
-        "frank-ai-unemployment-overall-2026"
-      ],
-      "evidenceTier": 1,
-      "label": "Frank et al.: Unemployment risk rose in AI-exposed occupations from early 2022"
-    },
-    {
-      "date": "2025-09-08",
-      "direction": "neutral",
-      "sourceIds": [
-        "pwbm-ai-productivity-2025"
-      ],
-      "evidenceTier": 1,
-      "label": "PWBM: Jobs fully AI-replaceable saw only 0.75% employment fall 2021-2024"
     },
     {
       "date": "2026-03-16",
