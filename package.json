@@ -23,9 +23,12 @@
     "fetch:pdf": "tsx scripts/fetch-article.ts --pdf",
     "signals:fetch": "python3 scripts/signals/fetch_all.py",
     "signals:calc": "python3 scripts/signals/calculate_metrics.py",
-    "signals:update": "python3 scripts/signals/fetch_all.py"
+    "signals:update": "python3 scripts/signals/fetch_all.py",
+    "agent:research": "tsx scripts/agent-research.ts",
+    "agent:review": "tsx scripts/agent-review.ts"
   },
   "dependencies": {
+    "@anthropic-ai/claude-agent-sdk": "^0.2.79",
     "@anthropic-ai/sdk": "^0.78.0",
     "@mozilla/readability": "^0.6.0",
     "@neondatabase/serverless": "^1.0.2",
