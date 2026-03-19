@@ -1,9 +1,21 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-19",
-  "totalSources": 457,
-  "verifiedCount": 457,
+  "totalSources": 458,
+  "verifiedCount": 458,
   "sources": {
+    "goldman-briggs-us-labor-2026": {
+      "id": "goldman-briggs-us-labor-2026",
+      "title": "How Will AI Affect the US Labor Market?",
+      "url": "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-us-labor-market",
+      "publisher": "Goldman Sachs Research (Joseph Briggs)",
+      "evidenceTier": 2,
+      "datePublished": "2026-03-18",
+      "excerpt": "6-7% of workers will be displaced during that transition period. In the US, AI can potentially automate tasks that account for 25% of all work hours. Goldman Sachs Research expects to see a 0.6 percentage point increase in the unemployment rate over a decade.",
+      "usedIn": ["overall-us-displacement", "workforce-ai-exposure", "tech-sector-displacement"],
+      "verified": true,
+      "synthetic": false
+    },
     "korinek-ai-tool-vs-agi-2026": {
       "id": "korinek-ai-tool-vs-agi-2026",
       "title": "The economics of AI as a tool vs AGI as a worker",
