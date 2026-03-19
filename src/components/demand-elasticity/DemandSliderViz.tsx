@@ -63,7 +63,7 @@ const AGENTIC_CODING_PRESET: Preset = {
 /*  Math: demand response to cost reduction                             */
 /* ------------------------------------------------------------------ */
 
-function computeScenario(
+export function computeScenario(
   productivity: number,
   elasticity: number,
   baseWorkers: number
