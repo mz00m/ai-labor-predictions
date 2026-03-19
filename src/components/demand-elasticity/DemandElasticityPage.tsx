@@ -3,6 +3,7 @@
 import Link from "next/link";
 import ElasticityMatrix from "./ElasticityMatrix";
 import DemandSliderViz from "./DemandSliderViz";
+import ElasticityToggleViz from "./ElasticityToggleViz";
 
 export default function DemandElasticityPage() {
   return (
@@ -247,10 +248,29 @@ export default function DemandElasticityPage() {
         </div>
       </section>
 
-      {/* ───── Section 5: Where It Applies ───── */}
+      {/* ───── Section 5: Interactive Toggle ───── */}
       <section className="mb-12">
         <div className="border-t border-black/[0.06] pt-8">
           <SectionLabel number="05" />
+          <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+            Toggle the Elastic Effect
+          </h2>
+          <p className="text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
+            Raw displacement projections treat every automated task as a lost
+            job. But in elastic markets, lower costs unlock new demand that
+            partially — or fully — offsets the loss. Toggle elasticity on to
+            watch each industry stretch or compress based on its demand
+            response.
+          </p>
+
+          <ElasticityToggleViz />
+        </div>
+      </section>
+
+      {/* ───── Section 6: Where It Applies ───── */}
+      <section className="mb-12">
+        <div className="border-t border-black/[0.06] pt-8">
+          <SectionLabel number="06" />
           <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
             Where Expansion vs. Contraction Is Likely
           </h2>
@@ -310,10 +330,10 @@ export default function DemandElasticityPage() {
         </div>
       </section>
 
-      {/* ───── Section 6: The Reallocation Caveat ───── */}
+      {/* ───── Section 7: The Reallocation Caveat ───── */}
       <section className="mb-12">
         <div className="border-t border-black/[0.06] pt-8">
-          <SectionLabel number="06" />
+          <SectionLabel number="07" />
           <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
             The Reallocation Caveat
           </h2>
