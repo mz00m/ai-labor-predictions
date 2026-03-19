@@ -282,6 +282,13 @@
       ],
       "evidenceTier": 3,
       "label": "CoworkingCafe: AI salaries $215K in San Jose, $128K in Dallas; geographic premium wide"
+    },
+    {
+      "date": "2026-03-18",
+      "direction": "down",
+      "sourceIds": ["freund-mann-job-transformation-2026"],
+      "evidenceTier": 1,
+      "label": "Freund & Mann: Return to analytical skills falls; social/manual skills rise"
     }
   ],
   "sources": [
@@ -550,6 +557,16 @@
       "evidenceTier": 1,
       "datePublished": "2025-03-24",
       "excerpt": "Augmentation AI fosters new work and raises wages for high-skilled occupations."
+    },
+    {
+      "id": "freund-mann-job-transformation-2026",
+      "title": "Job Transformation, Specialization, and the Labor Market Effects of AI",
+      "url": "https://lukasbfreund.github.io/files/FM_AI.pdf",
+      "publisher": "Boston College / Arizona State (Freund, Mann)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-18",
+      "excerpt": "AI raises the return to social and non-routine manual skills, while reducing the return to analytical skills. Workers with high analytical skills are thus over-represented among those who lose from the AI shock.",
+      "dateAdded": "2026-03-19"
     },
     {
       "id": "coworkingcafe-ai-jobs-metros-2026",

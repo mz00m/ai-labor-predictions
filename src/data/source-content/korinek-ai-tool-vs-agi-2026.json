@@ -1,0 +1,14 @@
+{
+  "id": "korinek-ai-tool-vs-agi-2026",
+  "abstract": "Podcast discussion with economist Anton Korinek exploring how to think rigorously about AI's labor market impact. Korinek argues that large user numbers do not equal large economic impact, benchmarks do not equal real-world performance, and establishing causal links between AI and aggregate labor market outcomes remains difficult. The conversation covers Jevons paradox applied to AI labor markets, comparative advantage under AGI scenarios, and the distinction between AI as a productivity tool versus AGI as a substitute worker.",
+  "keyFindings": [
+    "Big AI adoption numbers do not necessarily translate to big economic impact; GDP and standard statistics miss consumer surplus from free or cheap digital services, similar to patterns seen since the 1990s.",
+    "Even if AI progress stopped today, spending 5-10 years diffusing current capabilities throughout the economy would likely yield very significant productivity gains, suggesting the bottleneck is diffusion and workflow redesign, not capability.",
+    "Firms may delay entry-level hiring due to AI uncertainty, depressing early-career opportunities without showing up in official job loss statistics — a hiring-freeze channel distinct from displacement.",
+    "Jevons paradox (efficiency gains increasing total demand) does not guarantee labor market stability; past technological waves still produced painful transitions despite overall economic growth.",
+    "Under AGI, comparative advantage logic still holds (humans specialize in what they are relatively least bad at), but wages could be pushed toward machine cost levels, making distribution of gains the decisive question."
+  ],
+  "methodology": "Expert interview / podcast discussion. Korinek draws on economic theory (Jevons paradox, comparative advantage, task-based models) and qualitative observations from interactions with AI lab staff. No original empirical data or quantitative analysis.",
+  "qualifiers": "This is a conceptual discussion, not empirical research. Contains no original quantitative statistics. AGI wage scenarios are explicitly described as speculative. Korinek acknowledges the probability of transformative AI is uncertain but high enough to justify speculative research with clear caveats.",
+  "fetchedAt": "2026-03-19"
+}

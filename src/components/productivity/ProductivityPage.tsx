@@ -4,6 +4,7 @@ import Link from "next/link";
 import ResearchEvidence from "@/components/ResearchEvidence";
 import ProductivityPredictions from "@/components/ProductivityPredictions";
 import ProductivityPaths from "@/components/signals/ProductivityPaths";
+import ShareSectionBar from "@/components/ShareSectionBar";
 import DemandSliderViz from "@/components/demand-elasticity/DemandSliderViz";
 
 export default function ProductivityPage() {
@@ -405,8 +406,17 @@ export default function ProductivityPage() {
         </div>
       </section>
 
+      {/* ───── Share ───── */}
+      <section className="mt-16">
+        <ShareSectionBar
+          url="https://jobsdata.ai/productivity"
+          title="The Productivity Question"
+          description="AI productivity research, economist forecasts, and what it means for jobs"
+        />
+      </section>
+
       {/* ───── Footer nav ───── */}
-      <section className="mt-16 mb-8">
+      <section className="mt-8 mb-8">
         <div className="border-t border-black/[0.06] pt-8">
           <p className="text-[11px] font-bold uppercase tracking-widest text-[var(--muted)] mb-4">
             Continue exploring

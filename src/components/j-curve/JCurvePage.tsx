@@ -3,6 +3,7 @@
 import JCurveChart from "./JCurveChart";
 import HistoricalExamples from "./HistoricalExamples";
 import IntangibleDiagram from "./IntangibleDiagram";
+import ShareSectionBar from "@/components/ShareSectionBar";
 
 export default function JCurvePage() {
   return (
@@ -376,6 +377,15 @@ export default function JCurvePage() {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* ───── Share ───── */}
+      <section className="mb-8">
+        <ShareSectionBar
+          url="https://jobsdata.ai/j-curve"
+          title="The Productivity J-Curve"
+          description="Why measured productivity lags real AI impact"
+        />
       </section>
     </article>
   );
