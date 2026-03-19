@@ -112,10 +112,50 @@ export default function DemandElasticityPage() {
         </div>
       </section>
 
-      {/* ───── Section 2: The Two Conditions ───── */}
+      {/* ───── Section 2: Interactive Toggle ───── */}
       <section className="mb-12">
         <div className="border-t border-black/[0.06] pt-8">
           <SectionLabel number="02" />
+          <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+            See the Effect Across Industries
+          </h2>
+          <div className="space-y-4 text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
+            <p>
+              Most displacement projections assume a fixed demand for output:
+              AI automates tasks, fewer workers are needed, end of story. But
+              that ignores the demand side. In some industries, lower costs
+              unlock entirely new markets. In others, they don&rsquo;t.
+            </p>
+            <p>
+              <strong className="text-[var(--foreground)]">Why does low
+              elasticity mean more displacement?</strong> When demand is
+              inelastic, the total amount of work people want done barely
+              changes even when it gets cheaper. Nobody needs <em>more</em>{" "}
+              payroll processing, toll collection, or compliance paperwork
+              just because AI can do it for less. So when AI makes each
+              worker 3x more productive, you simply need a third of the
+              workers. The efficiency gain translates almost entirely into
+              job cuts, not growth.
+            </p>
+            <p>
+              <strong className="text-[var(--foreground)]">Why does high
+              elasticity mean expansion?</strong> When demand is elastic,
+              cheaper output creates proportionally more buyers. Custom
+              software at $500K serves Fortune 500 companies. At $50K, it
+              serves every mid-sized business. The total market grows faster
+              than per-worker productivity, so <em>more</em> workers are
+              needed, not fewer. Toggle below to see the difference.
+            </p>
+          </div>
+
+          <ElasticityToggleViz />
+        </div>
+      </section>
+
+      {/* ───── Section 3: The Two Conditions ───── */}
+      <section className="mb-12">
+        <div className="border-t border-black/[0.06] pt-8">
+          <SectionLabel number="03" />
           <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
             The Two Conditions
           </h2>
@@ -184,10 +224,10 @@ export default function DemandElasticityPage() {
         </div>
       </section>
 
-      {/* ───── Section 3: The Agentic Coding Example ───── */}
+      {/* ───── Section 4: The Agentic Coding Example ───── */}
       <section className="mb-12">
         <div className="border-t border-black/[0.06] pt-8">
-          <SectionLabel number="03" />
+          <SectionLabel number="04" />
           <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
             The Agentic Coding Example
           </h2>
@@ -230,10 +270,10 @@ export default function DemandElasticityPage() {
         </div>
       </section>
 
-      {/* ───── Section 4: Interactive Calculator ───── */}
+      {/* ───── Section 5: Interactive Calculator ───── */}
       <section className="mb-12">
         <div className="border-t border-black/[0.06] pt-8">
-          <SectionLabel number="04" />
+          <SectionLabel number="05" />
           <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
             See It Yourself
           </h2>
@@ -245,25 +285,6 @@ export default function DemandElasticityPage() {
           </p>
 
           <DemandSliderViz />
-        </div>
-      </section>
-
-      {/* ───── Section 5: Interactive Toggle ───── */}
-      <section className="mb-12">
-        <div className="border-t border-black/[0.06] pt-8">
-          <SectionLabel number="05" />
-          <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
-            Toggle the Elastic Effect
-          </h2>
-          <p className="text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
-            Raw displacement projections treat every automated task as a lost
-            job. But in elastic markets, lower costs unlock new demand that
-            partially — or fully — offsets the loss. Toggle elasticity on to
-            watch each industry stretch or compress based on its demand
-            response.
-          </p>
-
-          <ElasticityToggleViz />
         </div>
       </section>
 
