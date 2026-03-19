@@ -32,6 +32,8 @@ const DIMENSION_EXPLAINERS: {
   role: string;
   roleColor: string;
   oneLiner: string;
+  anchor: string;
+  pageLink?: string;
 }[] = [
   {
     key: "technicalExposure",
@@ -40,6 +42,7 @@ const DIMENSION_EXPLAINERS: {
     roleColor: "#DC2626",
     oneLiner:
       "How many of this job's tasks can AI actually perform today?",
+    anchor: "methodology-exposure",
   },
   {
     key: "adoptionSpeed",
@@ -48,6 +51,7 @@ const DIMENSION_EXPLAINERS: {
     roleColor: "#DC2626",
     oneLiner:
       "How fast will this sector's firms actually deploy AI? (Regulated industries lag years behind tech.)",
+    anchor: "methodology-adoption",
   },
   {
     key: "adaptability",
@@ -56,6 +60,7 @@ const DIMENSION_EXPLAINERS: {
     roleColor: "#16A34A",
     oneLiner:
       "Can displaced workers retrain and transition? (Wealth, transferable skills, age, geography.)",
+    anchor: "methodology-adaptability",
   },
   {
     key: "demandElasticity",
@@ -64,6 +69,8 @@ const DIMENSION_EXPLAINERS: {
     roleColor: "#16A34A",
     oneLiner:
       "When AI makes output cheaper, does demand expand enough to offset job losses? (ATMs led to *more* bank tellers for 30 years.)",
+    anchor: "methodology-elasticity",
+    pageLink: "/demand-elasticity",
   },
   {
     key: "complementarity",
@@ -72,6 +79,7 @@ const DIMENSION_EXPLAINERS: {
     roleColor: "#16A34A",
     oneLiner:
       "Does AI replace workers or make them more productive? (CFO surveys show management is enhanced, admin is replaced.)",
+    anchor: "methodology-complementarity",
   },
 ];
 
@@ -122,30 +130,52 @@ export default function OccupationExposurePage() {
           {/* 5 dimensions — compact list */}
           <div className="border border-black/[0.06] rounded-lg divide-y divide-black/[0.06] mb-2">
             {DIMENSION_EXPLAINERS.map((dim) => (
-              <button
+              <div
                 key={dim.key}
-                onClick={() => setActiveDimension(dim.key)}
-                className={`w-full text-left px-4 py-2.5 flex items-start gap-3 transition-colors ${
+                className={`transition-colors ${
                   activeDimension === dim.key
                     ? "bg-[var(--accent-light)]"
                     : "hover:bg-black/[0.01]"
                 }`}
               >
-                <span
-                  className="text-[10px] font-bold uppercase tracking-wider mt-0.5 w-16 flex-shrink-0"
-                  style={{ color: dim.roleColor }}
+                <button
+                  onClick={() => setActiveDimension(dim.key)}
+                  className="w-full text-left px-4 pt-2.5 pb-1 flex items-start gap-3"
                 >
-                  {dim.role}
-                </span>
-                <div className="min-w-0">
-                  <span className="text-[13px] font-semibold text-[var(--foreground)]">
-                    {dim.label}
+                  <span
+                    className="text-[10px] font-bold uppercase tracking-wider mt-0.5 w-16 flex-shrink-0"
+                    style={{ color: dim.roleColor }}
+                  >
+                    {dim.role}
                   </span>
-                  <span className="text-[12px] text-[var(--muted)] ml-2">
-                    {dim.oneLiner}
-                  </span>
+                  <div className="min-w-0">
+                    <span className="text-[13px] font-semibold text-[var(--foreground)]">
+                      {dim.label}
+                    </span>
+                    <span className="text-[12px] text-[var(--muted)] ml-2">
+                      {dim.oneLiner}
+                    </span>
+                  </div>
+                </button>
+                <div className="pl-[76px] pr-4 pb-2 flex items-center gap-3">
+                  <a
+                    href={`#${dim.anchor}`}
+                    className="text-[11px] text-[var(--muted)] hover:text-[var(--accent-text)] transition-colors"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    Read the research &darr;
+                  </a>
+                  {dim.pageLink && (
+                    <Link
+                      href={dim.pageLink}
+                      className="text-[11px] text-[var(--accent-text)] hover:underline"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      Full explainer &rarr;
+                    </Link>
+                  )}
                 </div>
-              </button>
+              </div>
             ))}
           </div>
           <p className="text-[11px] text-[var(--muted)] leading-snug">
@@ -156,8 +186,8 @@ export default function OccupationExposurePage() {
       </article>
 
       {/* ───── Full-width treemap section ───── */}
-      <section id="treemap" className="mb-12 bg-[#0a0a0f] -mx-6 sm:-mx-10 px-4 sm:px-6 py-6 rounded-xl scroll-mt-4">
-        <div className="max-w-[1400px] mx-auto">
+      <section id="treemap" className="mb-12 bg-[#0a0a0f] -mx-6 sm:-mx-10 px-3 sm:px-4 py-6 rounded-xl scroll-mt-4">
+        <div className="max-w-[1800px] mx-auto">
           {/* Dimension toggle */}
           <div className="mb-4 flex flex-col sm:flex-row sm:items-center gap-3">
             <DimensionPanel
@@ -176,7 +206,7 @@ export default function OccupationExposurePage() {
 
         {/* Selected occupation detail (inline below treemap) */}
         {selectedOcc && (
-          <div className="max-w-[1400px] mx-auto mt-4">
+          <div className="max-w-[1800px] mx-auto mt-4">
             <div className="bg-[#12121a] border border-white/[0.1] rounded-lg p-4 sm:p-5 relative">
               <button
                 onClick={() => setSelectedOcc(null)}

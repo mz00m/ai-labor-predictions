@@ -384,46 +384,79 @@ export default function KarpathyTreemap({
         ctx.strokeRect(rect.x, rect.y, rect.w, rect.h);
       }
 
-      // Labels — clipped to tile bounds
-      if (rect.w > 50 && rect.h > 18) {
+      // Labels — clipped to tile bounds, with word-wrapping
+      if (rect.w > 40 && rect.h > 16) {
         ctx.save();
         ctx.beginPath();
-        ctx.rect(rect.x + 3, rect.y + 2, rect.w - 6, rect.h - 4);
+        ctx.rect(rect.x + 2, rect.y + 1, rect.w - 4, rect.h - 2);
         ctx.clip();
 
+        // Scale font to tile size — smaller base than before
         const fontSize = Math.min(
-          13,
-          Math.max(9, Math.min(rect.w / 10, rect.h / 3))
+          11,
+          Math.max(7, Math.min(rect.w / 12, rect.h / 4))
         );
         const alpha = isHovered ? 1 : 0.85;
+        const cx = rect.x + rect.w / 2;
+        const maxTextW = rect.w - 8;
+        const lineH = fontSize * 1.2;
 
         ctx.font = `500 ${fontSize}px -apple-system, system-ui, sans-serif`;
         ctx.fillStyle = `rgba(255,255,255,${alpha})`;
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
 
-        const cx = rect.x + rect.w / 2;
-        const cy = rect.y + rect.h / 2;
+        // Word-wrap the title into lines that fit
+        const words = rect.occ.raw.title.split(" ");
+        const lines: string[] = [];
+        let currentLine = words[0];
+        for (let w = 1; w < words.length; w++) {
+          const test = currentLine + " " + words[w];
+          if (ctx.measureText(test).width <= maxTextW) {
+            currentLine = test;
+          } else {
+            lines.push(currentLine);
+            currentLine = words[w];
+          }
+        }
+        lines.push(currentLine);
 
-        if (rect.h > 34 && rect.w > 60) {
-          // Two-line: title + sub-label
-          ctx.fillText(rect.occ.raw.title, cx, cy - fontSize * 0.45);
+        // Decide how many lines we can show
+        const hasRoomForSub = rect.h > 34 && rect.w > 50;
+        const subLineH = hasRoomForSub ? fontSize * 1.1 : 0;
+        const availH = rect.h - 4 - subLineH;
+        const maxLines = Math.max(1, Math.floor(availH / lineH));
+        const shownLines = lines.slice(0, maxLines);
 
-          const subFontSize = Math.max(8, fontSize - 2);
+        // If we truncated, add ellipsis to last line
+        if (shownLines.length < lines.length) {
+          const last = shownLines[shownLines.length - 1];
+          shownLines[shownLines.length - 1] = last.length > 3 ? last.slice(0, -2) + "\u2026" : last;
+        }
+
+        // Center the text block vertically
+        const totalTextH = shownLines.length * lineH + subLineH;
+        const startY = rect.y + (rect.h - totalTextH) / 2 + lineH / 2;
+
+        for (let l = 0; l < shownLines.length; l++) {
+          ctx.fillText(shownLines[l], cx, startY + l * lineH);
+        }
+
+        // Sub-label: score + jobs count
+        if (hasRoomForSub) {
+          const subFontSize = Math.max(7, fontSize - 2);
           ctx.font = `400 ${subFontSize}px -apple-system, system-ui, sans-serif`;
-          ctx.fillStyle = `rgba(255,255,255,${isHovered ? 0.7 : 0.5})`;
+          ctx.fillStyle = `rgba(255,255,255,${isHovered ? 0.7 : 0.45})`;
           const jobs = rect.occ.raw.jobs
             ? rect.occ.raw.jobs >= 1000000
               ? `${(rect.occ.raw.jobs / 1000000).toFixed(1)}M`
               : `${(rect.occ.raw.jobs / 1000).toFixed(0)}K`
             : "";
           ctx.fillText(
-            `${score.toFixed(1)}/10 · ${jobs} jobs`,
+            `${score.toFixed(1)}/10 · ${jobs}`,
             cx,
-            cy + fontSize * 0.55
+            startY + shownLines.length * lineH + subLineH / 2 - 1
           );
-        } else {
-          ctx.fillText(rect.occ.raw.title, cx, cy);
         }
 
         ctx.restore();
