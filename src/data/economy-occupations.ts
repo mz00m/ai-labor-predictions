@@ -515,7 +515,7 @@ export const SOC_TO_JOB_IDS: Record<string, string[]> = {
   "protective-service": [],
   "food-serving": ["restaurant-manager"],
   "building-grounds": [],
-  "personal-care": ["therapist"],
+  "personal-care": ["home-health-aide"],
   "sales": ["sales-representative", "real-estate-agent"],
   "office-admin": ["executive-assistant", "customer-service-rep", "bookkeeper"],
   "farming-fishing": [],
