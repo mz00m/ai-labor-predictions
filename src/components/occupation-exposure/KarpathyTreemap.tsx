@@ -22,6 +22,15 @@ interface OccRect {
   category: string;
 }
 
+interface CatRect {
+  x: number;
+  y: number;
+  w: number;
+  h: number;
+  cat: string;
+  label: string;
+}
+
 /* ── Pretty category names ── */
 const CATEGORY_LABELS: Record<string, string> = {
   "management": "Management",
@@ -47,29 +56,26 @@ const CATEGORY_LABELS: Record<string, string> = {
   "construction-and-extraction": "Construction & Extraction",
   "installation-maintenance-and-repair": "Installation & Repair",
   "production": "Production",
-  "transportation-and-material-moving": "Transportation & Material Moving",
+  "transportation-and-material-moving": "Transportation & Moving",
   "military": "Military",
 };
 
 /* ── Color helpers — matched to Karpathy's green-red scale ── */
 
 function boostContrast(t: number): number {
-  // Karpathy uses power=0.55 for mid-range expansion
   return Math.pow(t, 0.55);
 }
 
 function greenRedRGB(t: number): [number, number, number] {
-  // t: 0 = green (safe), 1 = red (risk)
-  // Matched to Karpathy's piecewise RGB interpolation
   const b = boostContrast(t);
   let r: number, g: number, bl: number;
   if (b < 0.5) {
-    const s = b / 0.5; // 0→1 within green half
+    const s = b / 0.5;
     r = 30 + s * 200;
     g = 180 - s * 20;
     bl = 40 - s * 20;
   } else {
-    const s = (b - 0.5) / 0.5; // 0→1 within red half
+    const s = (b - 0.5) / 0.5;
     r = 230 + s * 25;
     g = 160 - s * 130;
     bl = 20 - s * 5;
@@ -190,14 +196,16 @@ interface CategoryGroup extends SquarifyItem {
   items: ScoredKarpathyOccupation[];
 }
 
-function buildNestedRects(
+const CATEGORY_GAP = 4;   // gap between category groups (dark bg shows through)
+const HEADER_H = 18;       // space reserved for category label at top
+const TILE_GAP = 1.5;      // gap between occupation tiles within a category
+const MARGIN = 6;
+
+function buildNestedLayout(
   data: ScoredKarpathyOccupation[],
   w: number,
   h: number
-): OccRect[] {
-  const GAP = 1.5;
-  const MARGIN = 8;
-
+): { occRects: OccRect[]; catRects: CatRect[] } {
   // Group by category
   const byCategory: Record<string, ScoredKarpathyOccupation[]> = {};
   for (const d of data) {
@@ -206,7 +214,6 @@ function buildNestedRects(
     byCategory[cat].push(d);
   }
 
-  // Build category items sorted by total employment
   const categories: CategoryGroup[] = Object.keys(byCategory)
     .map((cat) => ({
       cat,
@@ -218,35 +225,63 @@ function buildNestedRects(
     .sort((a, b) => b.value - a.value);
 
   // Level 1: category rectangles
-  const catRects = squarify(categories, MARGIN, MARGIN, w - MARGIN * 2, h - MARGIN * 2);
+  const catSquares = squarify(
+    categories,
+    MARGIN,
+    MARGIN,
+    w - MARGIN * 2,
+    h - MARGIN * 2
+  );
 
-  // Level 2: occupations within each category
-  const rects: OccRect[] = [];
-  for (const cr of catRects) {
+  const occRects: OccRect[] = [];
+  const catRects: CatRect[] = [];
+
+  for (const cr of catSquares) {
+    const catX = cr.rx + CATEGORY_GAP;
+    const catY = cr.ry + CATEGORY_GAP;
+    const catW = cr.rw - CATEGORY_GAP * 2;
+    const catH = cr.rh - CATEGORY_GAP * 2;
+
+    if (catW < 4 || catH < 4) continue;
+
+    catRects.push({
+      x: catX,
+      y: catY,
+      w: catW,
+      h: catH,
+      cat: cr.item.cat,
+      label: CATEGORY_LABELS[cr.item.cat] || cr.item.cat,
+    });
+
+    // Reserve space for category header label
+    const headerSpace = catH > 50 ? HEADER_H : 0;
+    const innerX = catX + TILE_GAP;
+    const innerY = catY + headerSpace + TILE_GAP;
+    const innerW = catW - TILE_GAP * 2;
+    const innerH = catH - headerSpace - TILE_GAP * 2;
+
+    if (innerW < 2 || innerH < 2) continue;
+
+    // Level 2: occupations within category
     const innerItems = cr.item.items.map((occ) => ({
       ...occ,
       value: occ.raw.jobs || 1,
     }));
-    const innerRects = squarify(
-      innerItems,
-      cr.rx + GAP,
-      cr.ry + GAP,
-      cr.rw - GAP * 2,
-      cr.rh - GAP * 2
-    );
+    const innerRects = squarify(innerItems, innerX, innerY, innerW, innerH);
+
     for (const ir of innerRects) {
-      rects.push({
-        x: ir.rx + GAP / 2,
-        y: ir.ry + GAP / 2,
-        w: ir.rw - GAP,
-        h: ir.rh - GAP,
+      occRects.push({
+        x: ir.rx + TILE_GAP / 2,
+        y: ir.ry + TILE_GAP / 2,
+        w: ir.rw - TILE_GAP,
+        h: ir.rh - TILE_GAP,
         occ: ir.item as unknown as ScoredKarpathyOccupation,
         category: cr.item.cat,
       });
     }
   }
 
-  return rects;
+  return { occRects, catRects };
 }
 
 /* ── Canvas treemap component ── */
@@ -267,12 +302,12 @@ export default function KarpathyTreemap({
     category: string;
   } | null>(null);
 
-  const rects = useMemo(
-    () => buildNestedRects(data, size.w, size.h),
+  const { occRects, catRects } = useMemo(
+    () => buildNestedLayout(data, size.w, size.h),
     [data, size.w, size.h]
   );
 
-  // Resize observer — 4:3 aspect ratio like Karpathy
+  // Resize observer — 4:3 aspect ratio
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
@@ -281,7 +316,7 @@ export default function KarpathyTreemap({
       const entry = entries[0];
       if (entry) {
         const w = Math.floor(entry.contentRect.width);
-        const h = Math.round(w * 3 / 4); // 4:3 aspect ratio
+        const h = Math.round(w * 3 / 4);
         setSize({ w, h });
       }
     });
@@ -308,14 +343,37 @@ export default function KarpathyTreemap({
     ctx.fillStyle = "#0a0a0f";
     ctx.fillRect(0, 0, size.w, size.h);
 
-    for (let i = 0; i < rects.length; i++) {
-      const rect = rects[i];
+    // Draw category backgrounds with subtle border
+    for (const cr of catRects) {
+      ctx.fillStyle = "rgba(255,255,255,0.03)";
+      ctx.fillRect(cr.x, cr.y, cr.w, cr.h);
+
+      // Category label in the header area
+      if (cr.h > 50 && cr.w > 60) {
+        ctx.save();
+        ctx.beginPath();
+        ctx.rect(cr.x + 4, cr.y + 2, cr.w - 8, HEADER_H - 2);
+        ctx.clip();
+
+        const labelFontSize = Math.min(11, Math.max(8, cr.w / 20));
+        ctx.font = `700 ${labelFontSize}px -apple-system, system-ui, sans-serif`;
+        ctx.fillStyle = "rgba(255,255,255,0.55)";
+        ctx.textAlign = "left";
+        ctx.textBaseline = "middle";
+        ctx.fillText(cr.label.toUpperCase(), cr.x + 5, cr.y + HEADER_H / 2 + 1);
+        ctx.restore();
+      }
+    }
+
+    // Draw occupation tiles
+    for (let i = 0; i < occRects.length; i++) {
+      const rect = occRects[i];
       const score = rect.occ.scores[activeDimension];
       const isHovered = i === hoveredIdx;
 
-      // Tile fill — alpha 0.5 default, 0.8 on hover (Karpathy style)
+      // Tile fill
       ctx.fillStyle = colorCSS(score, activeDimension);
-      ctx.globalAlpha = isHovered ? 0.85 : hoveredIdx >= 0 ? 0.35 : 0.5;
+      ctx.globalAlpha = isHovered ? 0.9 : hoveredIdx >= 0 ? 0.3 : 0.55;
       ctx.fillRect(rect.x, rect.y, rect.w, rect.h);
       ctx.globalAlpha = 1;
 
@@ -326,14 +384,17 @@ export default function KarpathyTreemap({
         ctx.strokeRect(rect.x, rect.y, rect.w, rect.h);
       }
 
-      // Labels — use canvas clipping like Karpathy
+      // Labels — clipped to tile bounds
       if (rect.w > 50 && rect.h > 18) {
         ctx.save();
         ctx.beginPath();
-        ctx.rect(rect.x + 4, rect.y + 2, rect.w - 8, rect.h - 4);
+        ctx.rect(rect.x + 3, rect.y + 2, rect.w - 6, rect.h - 4);
         ctx.clip();
 
-        const fontSize = Math.min(13, Math.max(9, Math.min(rect.w / 10, rect.h / 3)));
+        const fontSize = Math.min(
+          13,
+          Math.max(9, Math.min(rect.w / 10, rect.h / 3))
+        );
         const alpha = isHovered ? 1 : 0.85;
 
         ctx.font = `500 ${fontSize}px -apple-system, system-ui, sans-serif`;
@@ -348,41 +409,40 @@ export default function KarpathyTreemap({
           // Two-line: title + sub-label
           ctx.fillText(rect.occ.raw.title, cx, cy - fontSize * 0.45);
 
-          // Sub-label: score + jobs count
           const subFontSize = Math.max(8, fontSize - 2);
           ctx.font = `400 ${subFontSize}px -apple-system, system-ui, sans-serif`;
           ctx.fillStyle = `rgba(255,255,255,${isHovered ? 0.7 : 0.5})`;
           const jobs = rect.occ.raw.jobs
-            ? `${(rect.occ.raw.jobs / 1000000).toFixed(1)}M`
+            ? rect.occ.raw.jobs >= 1000000
+              ? `${(rect.occ.raw.jobs / 1000000).toFixed(1)}M`
+              : `${(rect.occ.raw.jobs / 1000).toFixed(0)}K`
             : "";
-          const dimMeta = DIMENSION_META[activeDimension];
           ctx.fillText(
             `${score.toFixed(1)}/10 · ${jobs} jobs`,
             cx,
             cy + fontSize * 0.55
           );
         } else {
-          // Single-line: just title
           ctx.fillText(rect.occ.raw.title, cx, cy);
         }
 
         ctx.restore();
       }
     }
-  }, [rects, activeDimension, hoveredIdx, size]);
+  }, [occRects, catRects, activeDimension, hoveredIdx, size]);
 
   // Hit test
   const hitTest = useCallback(
     (mx: number, my: number): number => {
-      for (let i = rects.length - 1; i >= 0; i--) {
-        const r = rects[i];
+      for (let i = occRects.length - 1; i >= 0; i--) {
+        const r = occRects[i];
         if (mx >= r.x && mx < r.x + r.w && my >= r.y && my < r.y + r.h) {
           return i;
         }
       }
       return -1;
     },
-    [rects]
+    [occRects]
   );
 
   const handleMouseMove = useCallback(
@@ -399,7 +459,7 @@ export default function KarpathyTreemap({
       setHoveredIdx(idx);
 
       if (idx >= 0) {
-        const r = rects[idx];
+        const r = occRects[idx];
         setTooltipInfo({
           x: e.clientX - bRect.left,
           y: e.clientY - bRect.top,
@@ -410,7 +470,7 @@ export default function KarpathyTreemap({
         setTooltipInfo(null);
       }
     },
-    [hitTest, rects, size]
+    [hitTest, occRects, size]
   );
 
   const handleClick = useCallback(
@@ -424,10 +484,10 @@ export default function KarpathyTreemap({
       const my = (e.clientY - bRect.top) * scaleY;
       const idx = hitTest(mx, my);
       if (idx >= 0) {
-        onSelect(rects[idx].occ);
+        onSelect(occRects[idx].occ);
       }
     },
-    [hitTest, rects, onSelect, size]
+    [hitTest, occRects, onSelect, size]
   );
 
   const dimMeta = DIMENSION_META[activeDimension];
@@ -446,7 +506,7 @@ export default function KarpathyTreemap({
         onClick={handleClick}
       />
 
-      {/* Tooltip — Karpathy style */}
+      {/* Tooltip */}
       {tooltipInfo && (
         <div
           className="absolute pointer-events-none z-20 bg-[#12121a] border border-white/[0.12] rounded-lg px-4 py-3 text-left"
@@ -471,7 +531,10 @@ export default function KarpathyTreemap({
               <span className="text-[12px] font-medium text-white">
                 {dimMeta.shortLabel}
               </span>
-              <span className="text-[13px] font-bold text-white" style={{ fontFamily: "'DM Mono', monospace" }}>
+              <span
+                className="text-[13px] font-bold text-white"
+                style={{ fontFamily: "'DM Mono', monospace" }}
+              >
                 {tooltipInfo.occ.scores[activeDimension].toFixed(1)}/10
               </span>
             </div>
@@ -480,7 +543,10 @@ export default function KarpathyTreemap({
                 className="h-full rounded-full"
                 style={{
                   width: `${(tooltipInfo.occ.scores[activeDimension] / 10) * 100}%`,
-                  background: colorCSS(tooltipInfo.occ.scores[activeDimension], activeDimension),
+                  background: colorCSS(
+                    tooltipInfo.occ.scores[activeDimension],
+                    activeDimension
+                  ),
                 }}
               />
             </div>
@@ -508,7 +574,7 @@ export default function KarpathyTreemap({
               <span className="text-white/30">Outlook</span>
               <p className="text-white/80 font-medium">
                 {tooltipInfo.occ.raw.outlook !== null
-                  ? `${tooltipInfo.occ.raw.outlook > 0 ? "+" : ""}${tooltipInfo.occ.raw.outlook}% (${tooltipInfo.occ.raw.outlook_desc})`
+                  ? `${tooltipInfo.occ.raw.outlook! > 0 ? "+" : ""}${tooltipInfo.occ.raw.outlook}% (${tooltipInfo.occ.raw.outlook_desc})`
                   : "N/A"}
               </p>
             </div>
@@ -536,7 +602,9 @@ export default function KarpathyTreemap({
               const isActive = key === activeDimension;
               return (
                 <div key={key} className="flex items-center gap-2">
-                  <span className={`w-16 text-[10px] flex-shrink-0 ${isActive ? "text-white font-medium" : "text-white/40"}`}>
+                  <span
+                    className={`w-16 text-[10px] flex-shrink-0 ${isActive ? "text-white font-medium" : "text-white/40"}`}
+                  >
                     {meta.shortLabel}
                   </span>
                   <div className="flex-1 h-1 bg-white/[0.06] rounded-full overflow-hidden">
@@ -548,7 +616,10 @@ export default function KarpathyTreemap({
                       }}
                     />
                   </div>
-                  <span className={`text-[10px] w-6 text-right ${isActive ? "text-white" : "text-white/40"}`} style={{ fontFamily: "'DM Mono', monospace" }}>
+                  <span
+                    className={`text-[10px] w-6 text-right ${isActive ? "text-white" : "text-white/40"}`}
+                    style={{ fontFamily: "'DM Mono', monospace" }}
+                  >
                     {val.toFixed(1)}
                   </span>
                 </div>
@@ -563,11 +634,17 @@ export default function KarpathyTreemap({
                   className="h-full rounded-full"
                   style={{
                     width: `${(tooltipInfo.occ.scores.netRisk / 10) * 100}%`,
-                    background: colorCSS(tooltipInfo.occ.scores.netRisk, "netRisk"),
+                    background: colorCSS(
+                      tooltipInfo.occ.scores.netRisk,
+                      "netRisk"
+                    ),
                   }}
                 />
               </div>
-              <span className="text-[10px] w-6 text-right text-white font-bold" style={{ fontFamily: "'DM Mono', monospace" }}>
+              <span
+                className="text-[10px] w-6 text-right text-white font-bold"
+                style={{ fontFamily: "'DM Mono', monospace" }}
+              >
                 {tooltipInfo.occ.scores.netRisk.toFixed(1)}
               </span>
             </div>
@@ -585,7 +662,11 @@ export default function KarpathyTreemap({
           {dimMeta.isPressure ? "Low risk" : "Low"}
         </span>
         <span className="font-medium text-white/70">
-          {dimMeta.label} — {data.length} occupations, {(data.reduce((s, d) => s + (d.raw.jobs || 0), 0) / 1000000).toFixed(0)}M workers
+          {dimMeta.label} — {data.length} occupations,{" "}
+          {(
+            data.reduce((s, d) => s + (d.raw.jobs || 0), 0) / 1000000
+          ).toFixed(0)}
+          M workers
         </span>
         <span className="flex items-center gap-1.5">
           {dimMeta.isPressure ? "High risk" : "High"}
