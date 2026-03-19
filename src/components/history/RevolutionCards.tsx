@@ -66,11 +66,11 @@ const REVOLUTIONS: Revolution[] = [
       "First mechanical substitute for human muscle at industrial scale",
     automated: "Routine physical labor: weaving, grinding, pumping",
     destroyed:
-      "Handloom weavers (250,000+ eliminated by 1860), guild craftspeople",
+      "Handloom weavers (250,000+ eliminated by 1860), guild craftspeople. On March 11, 1811, framework knitters in Arnold, Nottingham destroyed 63 stocking frames in a single night \u2014 the first Luddite attack. Within three weeks, 200+ frames were smashed across the county. By 1812, over 800 frames had been destroyed and 12,000 troops were deployed to suppress the movement \u2014 more soldiers than Wellington took to Portugal.",
     created:
       "Railway workers (300,000+ by 1850), mechanics, engineers, mine workers. These industries didn\u2019t exist 20 years prior.",
     painfulPart:
-      'The "Engel\u2019s Pause": real wages stagnated for 60 years despite massive productivity gains',
+      'Robert Allen\u2019s "Engels\u2019 Pause" (2009): from the 1780s to the 1840s, Britain\u2019s per capita GDP grew 46%, but real wages for the working class rose only 12%. The profit rate doubled and capital\u2019s share of national income expanded at the expense of labor. Wages didn\u2019t begin growing in line with productivity until after the 1870s \u2014 nearly a century after the first power looms.',
     lesson:
       "Aggregate growth masks generational disruption. New jobs are real but they\u2019re not the same jobs, and they don\u2019t arrive on the same schedule as the losses.",
     aiParallel: "The timeline of disruption, not the domain",
@@ -85,11 +85,11 @@ const REVOLUTIONS: Revolution[] = [
       "Portable, distributed mechanical power enabling mobile machinery and mass production",
     automated: "Horse-powered transport and labor; physically repetitive assembly",
     destroyed:
-      "About 1 million horse-economy workers (blacksmiths, stable hands, harness makers), a category essentially wiped out",
+      "About 1 million horse-economy workers (blacksmiths, stable hands, harness makers), a category essentially wiped out. In 1900 there were roughly 109,000 carriage and harness makers in the US; by 1930, the occupation had virtually vanished.",
     created:
       "Auto manufacturing, trucking, road construction, petroleum, suburban retail. Basically the entire 20th-century consumer economy.",
     painfulPart:
-      "Ford\u2019s Five Dollar Day (1914) doubled wages deliberately, because mass production requires mass consumers. The interwar period still saw catastrophic structural unemployment.",
+      "Ford\u2019s Five Dollar Day (January 5, 1914) doubled the prevailing $2.34 wage to $5.00 per day \u2014 deliberately, because mass production requires mass consumers. At Highland Park, the moving assembly line (launched October 7, 1913) cut Model T assembly from 12.5 man-hours to 1.5, and the price from $700 (1910) to $350 (1917). But the interwar period still saw catastrophic structural unemployment as entire occupational categories dissolved.",
     lesson:
       "Technologies that enable new forms of distribution tend to have larger and more diffuse effects than technologies that merely improve production. Mass productivity gains require mass purchasing power to be economically stable.",
     aiParallel:
@@ -107,15 +107,15 @@ const REVOLUTIONS: Revolution[] = [
     automated:
       "Centralized shaft-and-belt power distribution; many domestic labor tasks",
     destroyed:
-      "Millwrights, shaft-and-belt mechanics, specific factory roles tied to the old organizational form",
+      "Millwrights, shaft-and-belt mechanics, specific factory roles tied to the old organizational form. Early adopters made the classic mistake: they replaced the steam engine with an electric dynamo but kept the same shaft-and-belt layout. Paul David called this \u201csimply overlaying one technical system upon a preexisting stratum.\u201d",
     created:
-      "Electricians, electrical engineers, the entire consumer appliance industry (radio, refrigeration, washing machines), domestic electrification created conditions for women\u2019s mass labor force entry",
+      "Electricians, electrical engineers, the entire consumer appliance industry (radio, refrigeration, washing machines). The breakthrough was \u201cunit drive\u201d \u2014 giving each machine its own electric motor \u2014 which freed factories to arrange machinery by production flow instead of proximity to power shafts. Ford\u2019s Highland Park plant exemplified this: conveyors and gravity slides cut assembly time by an estimated 30%. Domestic electrification also created the conditions for women\u2019s mass labor force entry.",
     painfulPart:
-      "Paul David\u2019s \u201cProductivity Paradox\u201d: electric dynamos were introduced in the 1880s but didn\u2019t show up in productivity statistics until the 1920s. That took 40 years.",
+      "Paul David\u2019s \u201cProductivity Paradox\u201d (1990): the lightbulb was invented in 1879, but by 1900 only 3% of residences had electric lighting and electric motors accounted for less than 5% of factory mechanical drive. Productivity gains from electrification didn\u2019t appear until the 1920s \u2014 40 years later. The gains then accounted for half of all manufacturing productivity growth during that decade.",
     lesson:
       "The technology isn\u2019t the bottleneck. The organizational, educational, and institutional ecosystem surrounding it is. On-tap power democratized access to energy in ways that shifted competitive advantage from those who owned power infrastructure to those who used it most intelligently.",
     aiParallel:
-      "This is the on-tap intelligence moment. AI transforms cognitive capabilities from scarce expert resources into utilities. The productivity gains will arrive later than expected, and through organizational redesign more than simple substitution.",
+      "This is the on-tap intelligence moment. AI transforms cognitive capabilities from scarce expert resources into utilities. The productivity gains will arrive later than expected, and through organizational redesign more than simple substitution. Brynjolfsson, Rock & Syverson (2021) call this the \u201cProductivity J-Curve\u201d: trillions in intangible investment are being made now but aren\u2019t captured in measured output.",
   },
   {
     id: "computers",
@@ -128,11 +128,11 @@ const REVOLUTIONS: Revolution[] = [
     automated:
       "Clerical labor (typing, filing, bookkeeping); routine cognitive tasks; then logistics and coordination",
     destroyed:
-      "Telephone operators, bank tellers, travel agents, filing clerks, typists. Many of these roles shrank 80\u201390%.",
+      "In 1910 there were 167,000+ telephone operators; automation eventually eliminated nearly all of them, though displaced workers shifted to secretarial and food service work (NBER, Feigenbaum & Gross, 2020). Bank tellers fell from 20 per branch to 13 between 1988\u20132004 as ATMs spread \u2014 but banks opened 43% more branches, so total teller employment actually grew to 600,000 by 2010. The real collapse came from the iPhone: tellers dropped from 332,000 (2010) to 164,000 (2022). Travel agents fell from 270,000 (1990) to under 50,000.",
     created:
       "Software developers, network engineers, UX designers, social media managers, e-commerce. Industries generating trillions that didn\u2019t exist in 1990.",
     painfulPart:
-      '\u201cLabor market polarization\u201d: growth at the top (knowledge workers) and bottom (personal services) of wages, hollowing out of the middle. The college wage premium rose from ~40% to ~70% between 1980\u20132000. Workers without degrees saw real wages stagnate or fall for 40 years. Robert Solow\u2019s observation (1987): "You can see the computer age everywhere but in the productivity statistics."',
+      '\u201cLabor market polarization\u201d: growth at the top (knowledge workers) and bottom (personal services), hollowing out of the middle. Goldin & Katz show the college wage premium rose from 39% (1980) to 79% (2000), then stagnated. Real wages for men with a high school diploma declined between 1979\u20131999. Acemoglu & Restrepo (2022) find that 50\u201370% of wage structure changes over four decades are accounted for by automation displacing routine-task workers. Solow (1987): \u201cYou can see the computer age everywhere but in the productivity statistics.\u201d',
     lesson:
       "Technological gains accruing primarily to capital and high-skill workers is not inevitable. It\u2019s a policy choice. The computer era\u2019s inequality reflected specific institutional decisions (declining unions, wage policy, trade) as much as the technology itself.",
     aiParallel:

@@ -189,9 +189,13 @@ export default function HistoryPage() {
             <p>
               Crucially, when electricity made factory power cheap and
               ubiquitous, the result wasn&rsquo;t fewer factories &mdash; it
-              was dramatically more. Manufacturing output and employment grew
-              for decades because cheaper power made previously unviable
-              production economically feasible. The same dynamic may apply to
+              was dramatically more. Once factories adopted &ldquo;unit
+              drive&rdquo; (individual electric motors per machine, replacing
+              centralized shaft-and-belt systems), they could be single-story,
+              lighter, and modular. Electrification accounted for half of all
+              manufacturing productivity growth in the 1920s. Manufacturing
+              output and employment grew for decades because cheaper power
+              made previously unviable production economically feasible. The same dynamic may apply to
               cognitive work: when intelligence becomes on-tap, the question
               is whether there&rsquo;s unmet demand for cognitive output. In
               sectors like software, creative services, and data analysis, the
@@ -268,13 +272,19 @@ export default function HistoryPage() {
             <p className="text-[14px] text-[var(--muted)] leading-[1.8]">
               Every successful institutional response to a GPT transition
               invested in workers&rsquo; capacity to participate in the new
-              economy, not in protecting the old one. The Morrill Acts
-              (public universities, 1862) equipped workers for the
-              industrial era. The GI Bill (1944) prepared workers for the
-              postwar economy. The community college system extended
-              computing-era skills broadly. The equivalent for AI: radical
-              investment in AI literacy, domain-expert + AI collaboration
-              skills, and accessible retraining pathways.
+              economy, not in protecting the old one. The Morrill Act
+              (1862) created land-grant universities that provided the
+              skilled workforce for industrialization. The GI Bill (1944)
+              sent nearly 8 million veterans through education programs by
+              1956; by 1947, WWII veterans accounted for half of all
+              college admissions. The VA estimated that increased federal
+              income taxes from these better-educated workers paid for the
+              program several times over. Community colleges, whose growth
+              the GI Bill accelerated, now serve 44% of US undergraduates and
+              are the nation&rsquo;s primary workforce development engine.
+              The equivalent for AI: radical investment in AI literacy,
+              domain-expert + AI collaboration skills, and accessible
+              retraining pathways.
             </p>
           </div>
 
@@ -285,17 +295,19 @@ export default function HistoryPage() {
               Technological
             </h3>
             <p className="text-[14px] text-[var(--muted)] leading-[1.8]">
-              The computer era&rsquo;s inequality (40 years of wage
-              stagnation for workers without degrees) was not
-              technologically inevitable. It reflected specific choices:
-              declining union density, wage policy, trade liberalization,
-              corporate governance norms. The AI era&rsquo;s distributional
-              outcome will similarly reflect choices. Ford&rsquo;s Five
-              Dollar Day (1914) is the counterexample: he doubled wages
-              deliberately because mass production requires mass consumers.
-              If AI dramatically increases productivity, the economic
-              stability of the outcome depends on how those gains are
-              distributed.
+              The computer era&rsquo;s inequality was not
+              technologically inevitable. Goldin &amp; Katz document the
+              college wage premium rising from 39% (1980) to 79% (2000),
+              while real wages for men without degrees declined. Acemoglu
+              &amp; Restrepo (2022) find that 50&ndash;70% of US wage
+              structure changes over four decades trace to automation
+              displacing routine-task workers. But this reflected specific
+              institutional choices: declining union density, wage policy,
+              trade liberalization, corporate governance norms. Ford&rsquo;s
+              Five Dollar Day (January 5, 1914) is the counterexample:
+              he raised the prevailing $2.34 to $5.00 per day because mass
+              production requires mass consumers. The AI era&rsquo;s
+              distributional outcome will similarly reflect choices made now.
             </p>
           </div>
 
