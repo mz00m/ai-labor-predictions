@@ -130,8 +130,11 @@ export default function OccupationExposurePage() {
                   <p className="text-[14px] font-semibold text-[var(--foreground)] mb-1">
                     {dim.label}
                   </p>
-                  <p className="text-[12px] text-[var(--muted)] leading-snug">
-                    {dim.description.slice(0, 100)}...
+                  <p className="text-[12px] text-[var(--muted)] leading-snug mb-1.5">
+                    {dim.description}
+                  </p>
+                  <p className="text-[10px] text-[var(--muted)] opacity-60 leading-snug">
+                    {dim.source}
                   </p>
                 </button>
               );
