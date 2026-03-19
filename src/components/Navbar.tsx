@@ -33,6 +33,7 @@ const NAV_ENTRIES: NavEntry[] = [
       { href: "/productivity", label: "Productivity" },
       { href: "/task-visualizer", label: "Task Visualizer" },
       { href: "/task-visualizer/economy", label: "Economy View" },
+      { href: "/occupation-exposure", label: "Beyond Exposure" },
     ],
   },
   {
