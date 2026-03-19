@@ -31,9 +31,9 @@ export default function DimensionPanel({ activeDimension, onSelect }: Props) {
             className={`text-[11px] sm:text-[12px] font-medium px-3 py-1.5 rounded-full border transition-all ${
               isActive
                 ? isComposite
-                  ? "border-[var(--foreground)] bg-[var(--foreground)] text-white"
+                  ? "border-white bg-white text-black"
                   : "border-[var(--accent)] bg-[var(--accent)] text-white"
-                : "border-black/[0.08] text-[var(--muted)] hover:border-black/[0.15] hover:text-[var(--foreground)]"
+                : "border-white/[0.15] text-white/60 hover:border-white/[0.3] hover:text-white/90"
             }`}
           >
             {dim.shortLabel}
@@ -41,7 +41,7 @@ export default function DimensionPanel({ activeDimension, onSelect }: Props) {
               <span className="ml-1 opacity-50">+</span>
             )}
             {!dim.isPressure && (
-              <span className="ml-1 opacity-50">-</span>
+              <span className="ml-1 opacity-50">&minus;</span>
             )}
           </button>
         );

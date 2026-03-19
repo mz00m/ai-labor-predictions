@@ -8,9 +8,13 @@ import {
   type DimensionKey,
   type ScoredOccupation,
 } from "@/lib/composite-risk";
-import EnhancedTreemap from "./EnhancedTreemap";
+import {
+  scoreKarpathyOccupations,
+  type ScoredKarpathyOccupation,
+} from "@/lib/karpathy-scoring";
+import karpathyData from "@/data/karpathy-jobs.json";
+import KarpathyTreemap from "./KarpathyTreemap";
 import DimensionPanel from "./DimensionPanel";
-import OccupationDetail from "./OccupationDetail";
 import ComparisonTable from "./ComparisonTable";
 import MethodologySection from "./MethodologySection";
 
@@ -22,259 +26,336 @@ function SectionLabel({ number }: { number: string }) {
   );
 }
 
+const DIMENSION_EXPLAINERS: {
+  key: DimensionKey;
+  label: string;
+  role: string;
+  roleColor: string;
+  oneLiner: string;
+}[] = [
+  {
+    key: "technicalExposure",
+    label: "Technical Exposure",
+    role: "Pressure",
+    roleColor: "#DC2626",
+    oneLiner:
+      "How many of this job's tasks can AI actually perform today?",
+  },
+  {
+    key: "adoptionSpeed",
+    label: "Adoption Speed",
+    role: "Pressure",
+    roleColor: "#DC2626",
+    oneLiner:
+      "How fast will this sector's firms actually deploy AI? (Regulated industries lag years behind tech.)",
+  },
+  {
+    key: "adaptability",
+    label: "Worker Adaptability",
+    role: "Buffer",
+    roleColor: "#16A34A",
+    oneLiner:
+      "Can displaced workers retrain and transition? (Wealth, transferable skills, age, geography.)",
+  },
+  {
+    key: "demandElasticity",
+    label: "Demand Elasticity",
+    role: "Buffer",
+    roleColor: "#16A34A",
+    oneLiner:
+      "When AI makes output cheaper, does demand expand enough to offset job losses? (ATMs led to *more* bank tellers for 30 years.)",
+  },
+  {
+    key: "complementarity",
+    label: "AI Complementarity",
+    role: "Buffer",
+    roleColor: "#16A34A",
+    oneLiner:
+      "Does AI replace workers or make them more productive? (CFO surveys show management is enhanced, admin is replaced.)",
+  },
+];
+
 export default function OccupationExposurePage() {
   const scored = useMemo(() => scoreAllOccupations(), []);
+  const scoredKarpathy = useMemo(
+    () => scoreKarpathyOccupations(karpathyData as any),
+    []
+  );
   const [activeDimension, setActiveDimension] =
     useState<DimensionKey>("netRisk");
-  const [selectedOccupation, setSelectedOccupation] =
-    useState<ScoredOccupation | null>(null);
+  const [selectedOcc, setSelectedOcc] =
+    useState<ScoredKarpathyOccupation | null>(null);
 
   return (
-    <article className="max-w-[740px] mx-auto">
-      {/* ───── Header ───── */}
-      <header className="mb-10">
-        <p className="text-[12px] font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
-          Analysis
-        </p>
-        <h1
-          className="text-[36px] sm:text-[44px] font-extrabold text-[var(--foreground)] leading-[1.1] tracking-tight mb-4"
-          style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
-        >
-          Beyond Exposure: What Actually Predicts Displacement
-        </h1>
-        <p
-          className="text-[18px] sm:text-[20px] text-[var(--muted)] leading-relaxed mb-5"
-          style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
-        >
-          AI exposure scores tell you which jobs AI <em>can</em> do. They
-          don&rsquo;t tell you which jobs will actually be displaced &mdash;
-          because that depends on five things, not one.
-        </p>
-
-        {/* Thesis card */}
-        <div className="border-l-4 border-[var(--accent)] bg-[var(--accent-light)] rounded-r-lg px-5 py-4">
-          <p
-            className="text-[15px] sm:text-[16px] text-[var(--foreground)] leading-relaxed font-medium"
+    <>
+      {/* ───── Narrow-column text ───── */}
+      <article className="max-w-[740px] mx-auto">
+        {/* Header */}
+        <header className="mb-8">
+          <p className="text-[12px] font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
+            Analysis
+          </p>
+          <h1
+            className="text-[36px] sm:text-[44px] font-extrabold text-[var(--foreground)] leading-[1.1] tracking-tight mb-4"
             style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
           >
-            A single &ldquo;AI exposure&rdquo; score conflates what AI{" "}
-            <em>can</em> do with what will actually happen. Real displacement
-            depends on how fast institutions adopt, whether workers can adapt,
-            whether demand expands, and whether AI enhances or replaces. This
-            tool scores 22 occupation groups across all five dimensions.
+            Beyond Exposure: What Actually Predicts Displacement
+          </h1>
+          <p
+            className="text-[17px] sm:text-[19px] text-[var(--muted)] leading-relaxed mb-4"
+            style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
+          >
+            Karpathy&rsquo;s AI jobs treemap scores 342 occupations on a single
+            axis: &ldquo;digital AI exposure.&rdquo; That captures which tasks AI{" "}
+            <em>can</em> do &mdash; but not which jobs will actually be displaced.
+            We rebuild his exact visualization with the same 342 BLS occupations,
+            then add four additional research-backed dimensions.
           </p>
-        </div>
 
-        <div className="mt-4 flex items-center gap-2 flex-wrap">
-          <span className="pill bg-black/[0.04] text-[var(--muted)]">
-            22 occupation groups
-          </span>
-          <span className="pill bg-black/[0.04] text-[var(--muted)]">
-            154M workers
-          </span>
-          <span className="pill bg-black/[0.04] text-[var(--muted)]">
-            5 dimensions
-          </span>
-        </div>
-      </header>
+          <a
+            href="#treemap"
+            className="inline-flex items-center gap-1.5 text-[13px] font-medium text-[var(--accent-text)] hover:underline mb-5"
+          >
+            Jump to interactive chart &darr;
+          </a>
 
-      {/* ───── Section 1: The Problem ───── */}
-      <section className="mb-12">
-        <div className="border-t border-black/[0.06] pt-8">
-          <SectionLabel number="01" />
-          <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
-            Why Exposure Alone Gets It Wrong
-          </h2>
-          <div className="space-y-4 text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
-            <p>
-              When Andrej Karpathy published his AI jobs treemap, it used a
-              single dimension: &ldquo;digital AI exposure,&rdquo; scored 0-10
-              by an LLM reading BLS job descriptions. That score captures
-              something real &mdash; which jobs involve tasks that AI systems can
-              plausibly perform. But it explicitly doesn&rsquo;t account for what
-              happens next.
-            </p>
-            <p>
-              An occupation can be highly exposed to AI and still grow in
-              employment (software development, so far). Another can be
-              moderately exposed and face severe displacement (office
-              administration). The difference comes down to four additional
-              factors that single-dimension scores omit.
-            </p>
-          </div>
-
-          {/* Factor cards */}
-          <div className="grid grid-cols-2 gap-3 mb-6">
-            {(
-              [
-                "adoptionSpeed",
-                "adaptability",
-                "demandElasticity",
-                "complementarity",
-              ] as DimensionKey[]
-            ).map((key) => {
-              const dim = DIMENSION_META[key];
-              return (
-                <button
-                  key={key}
-                  onClick={() => setActiveDimension(key)}
-                  className={`text-left p-4 rounded-lg border transition-all ${
-                    activeDimension === key
-                      ? "border-[var(--accent)] bg-[var(--accent-light)]"
-                      : "border-black/[0.06] hover:border-black/[0.12] hover:bg-black/[0.01]"
-                  }`}
+          {/* 5 dimensions — compact list */}
+          <div className="border border-black/[0.06] rounded-lg divide-y divide-black/[0.06] mb-2">
+            {DIMENSION_EXPLAINERS.map((dim) => (
+              <button
+                key={dim.key}
+                onClick={() => setActiveDimension(dim.key)}
+                className={`w-full text-left px-4 py-2.5 flex items-start gap-3 transition-colors ${
+                  activeDimension === dim.key
+                    ? "bg-[var(--accent-light)]"
+                    : "hover:bg-black/[0.01]"
+                }`}
+              >
+                <span
+                  className="text-[10px] font-bold uppercase tracking-wider mt-0.5 w-16 flex-shrink-0"
+                  style={{ color: dim.roleColor }}
                 >
-                  <p className="text-[11px] font-bold uppercase tracking-widest text-[var(--accent)] mb-1">
-                    {dim.isPressure ? "Pressure" : "Absorption"}
-                  </p>
-                  <p className="text-[14px] font-semibold text-[var(--foreground)] mb-1">
+                  {dim.role}
+                </span>
+                <div className="min-w-0">
+                  <span className="text-[13px] font-semibold text-[var(--foreground)]">
                     {dim.label}
-                  </p>
-                  <p className="text-[12px] text-[var(--muted)] leading-snug mb-1.5">
-                    {dim.description}
-                  </p>
-                  <p className="text-[10px] text-[var(--muted)] opacity-60 leading-snug">
-                    {dim.source}
-                  </p>
-                </button>
-              );
-            })}
+                  </span>
+                  <span className="text-[12px] text-[var(--muted)] ml-2">
+                    {dim.oneLiner}
+                  </span>
+                </div>
+              </button>
+            ))}
           </div>
-        </div>
-      </section>
-
-      {/* ───── Section 2: Interactive Treemap ───── */}
-      <section className="mb-12">
-        <div className="border-t border-black/[0.06] pt-8">
-          <SectionLabel number="02" />
-          <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
-            The Full Picture
-          </h2>
-          <p className="text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
-            Each rectangle is sized by total employment. Color encodes the
-            selected dimension. Toggle between dimensions to see how the picture
-            changes. Click any occupation for a full breakdown.
+          <p className="text-[11px] text-[var(--muted)] leading-snug">
+            Net Risk = weighted combination of 2 pressure factors minus 3 buffer
+            factors, bounded 0-10. <a href="#methodology" className="text-[var(--accent-text)] hover:underline">Full methodology below.</a>
           </p>
+        </header>
+      </article>
 
-          {/* Dimension selector */}
-          <DimensionPanel
-            activeDimension={activeDimension}
-            onSelect={setActiveDimension}
-          />
-
-          {/* Treemap */}
-          <div className="mt-4">
-            <EnhancedTreemap
-              data={scored}
+      {/* ───── Full-width treemap section ───── */}
+      <section id="treemap" className="mb-12 bg-[#0a0a0f] -mx-6 sm:-mx-10 px-4 sm:px-6 py-6 rounded-xl scroll-mt-4">
+        <div className="max-w-[1400px] mx-auto">
+          {/* Dimension toggle */}
+          <div className="mb-4 flex flex-col sm:flex-row sm:items-center gap-3">
+            <DimensionPanel
               activeDimension={activeDimension}
-              onSelect={setSelectedOccupation}
-              selected={selectedOccupation}
+              onSelect={setActiveDimension}
             />
           </div>
 
-          {/* Legend */}
-          <div className="mt-3 flex items-center justify-between text-[11px] text-[var(--muted)]">
-            <span className="flex items-center gap-1.5">
-              <span
-                className="w-3 h-3 rounded-sm"
-                style={{
-                  background: DIMENSION_META[activeDimension].colorScale[0],
-                }}
-              />
-              {DIMENSION_META[activeDimension].isPressure ? "Low" : "Low"}
-            </span>
-            <span className="font-medium">
-              {DIMENSION_META[activeDimension].label}
-            </span>
-            <span className="flex items-center gap-1.5">
-              {DIMENSION_META[activeDimension].isPressure ? "High" : "High"}
-              <span
-                className="w-3 h-3 rounded-sm"
-                style={{
-                  background: DIMENSION_META[activeDimension].colorScale[1],
-                }}
-              />
-            </span>
-          </div>
-        </div>
-      </section>
-
-      {/* ───── Selected Occupation Detail ───── */}
-      {selectedOccupation && (
-        <section className="mb-12">
-          <OccupationDetail
-            occupation={selectedOccupation}
-            onClose={() => setSelectedOccupation(null)}
+          {/* Canvas treemap */}
+          <KarpathyTreemap
+            data={scoredKarpathy}
+            activeDimension={activeDimension}
+            onSelect={setSelectedOcc}
           />
-        </section>
-      )}
-
-      {/* ───── Section 3: Comparison Table ───── */}
-      <section className="mb-12">
-        <div className="border-t border-black/[0.06] pt-8">
-          <SectionLabel number="03" />
-          <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
-            Where Exposure and Net Risk Diverge
-          </h2>
-          <p className="text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
-            These are the occupation groups where the multi-dimensional net risk
-            score disagrees most with simple AI exposure. High-exposure groups
-            with strong absorption factors (adaptability, elastic demand,
-            complementarity) drop in net risk. Low-exposure groups in rigid
-            institutions climb.
-          </p>
-          <ComparisonTable data={scored} />
         </div>
-      </section>
 
-      {/* ───── Section 4: Methodology ───── */}
-      <section className="mb-12">
-        <div className="border-t border-black/[0.06] pt-8">
-          <SectionLabel number="04" />
-          <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
-            Methodology
-          </h2>
-          <MethodologySection />
-        </div>
-      </section>
+        {/* Selected occupation detail (inline below treemap) */}
+        {selectedOcc && (
+          <div className="max-w-[1400px] mx-auto mt-4">
+            <div className="bg-[#12121a] border border-white/[0.1] rounded-lg p-4 sm:p-5 relative">
+              <button
+                onClick={() => setSelectedOcc(null)}
+                className="absolute top-3 right-3 text-white/40 hover:text-white transition-colors"
+                aria-label="Close"
+              >
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <line x1="4" y1="4" x2="12" y2="12" />
+                  <line x1="12" y1="4" x2="4" y2="12" />
+                </svg>
+              </button>
 
-      {/* ───── Related ───── */}
-      <section className="mb-4">
-        <div className="border-t border-black/[0.06] pt-8">
-          <h3 className="text-[14px] font-bold text-[var(--foreground)] mb-3">
-            Related explorations
-          </h3>
-          <div className="flex flex-wrap gap-3">
-            <Link
-              href="/task-visualizer"
-              className="text-[13px] font-medium text-[var(--accent-text)] hover:underline"
-            >
-              Task-level visualizer
-            </Link>
-            <span className="text-black/[0.15]">|</span>
-            <Link
-              href="/task-visualizer/economy"
-              className="text-[13px] font-medium text-[var(--accent-text)] hover:underline"
-            >
-              Economy-wide view
-            </Link>
-            <span className="text-black/[0.15]">|</span>
-            <Link
-              href="/demand-elasticity"
-              className="text-[13px] font-medium text-[var(--accent-text)] hover:underline"
-            >
-              Demand elasticity explainer
-            </Link>
-            <span className="text-black/[0.15]">|</span>
-            <Link
-              href="/predictions"
-              className="text-[13px] font-medium text-[var(--accent-text)] hover:underline"
-            >
-              All predictions
-            </Link>
+              <div className="flex flex-col sm:flex-row gap-4">
+                {/* Left: occupation info */}
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-[18px] font-bold text-white mb-1">
+                    {selectedOcc.raw.title}
+                  </h3>
+                  <div className="flex flex-wrap gap-2 text-[11px] text-white/50 mb-3">
+                    {selectedOcc.raw.jobs && (
+                      <span>{(selectedOcc.raw.jobs / 1000).toFixed(0)}K workers</span>
+                    )}
+                    {selectedOcc.raw.pay && (
+                      <span>| ${(selectedOcc.raw.pay / 1000).toFixed(0)}K/yr</span>
+                    )}
+                    {selectedOcc.raw.outlook !== null && (
+                      <span>| {selectedOcc.raw.outlook > 0 ? "+" : ""}{selectedOcc.raw.outlook}% BLS outlook ({selectedOcc.raw.outlook_desc})</span>
+                    )}
+                    <span>| {selectedOcc.raw.education}</span>
+                  </div>
+                  <p className="text-[12px] text-white/60 leading-relaxed">
+                    {selectedOcc.raw.exposure_rationale}
+                  </p>
+                </div>
+
+                {/* Right: dimension scores */}
+                <div className="w-full sm:w-72 flex-shrink-0">
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-white/40 mb-2">
+                    5-Dimension Scores
+                  </p>
+                  {(
+                    [
+                      "technicalExposure",
+                      "adoptionSpeed",
+                      "adaptability",
+                      "demandElasticity",
+                      "complementarity",
+                    ] as DimensionKey[]
+                  ).map((key) => {
+                    const val = selectedOcc.scores[key];
+                    const meta = DIMENSION_META[key];
+                    const barColor = meta.isPressure
+                      ? val > 6 ? "#DC2626" : val > 3 ? "#F59E0B" : "#16A34A"
+                      : val > 6 ? "#16A34A" : val > 3 ? "#F59E0B" : "#DC2626";
+                    return (
+                      <div key={key} className="mb-1.5">
+                        <div className="flex items-center justify-between mb-0.5">
+                          <span className="text-[11px] text-white/70">
+                            {meta.shortLabel}
+                          </span>
+                          <span
+                            className="text-[11px] font-bold"
+                            style={{ color: barColor, fontFamily: "'DM Mono', monospace" }}
+                          >
+                            {val.toFixed(1)}
+                          </span>
+                        </div>
+                        <div className="h-1.5 bg-white/[0.06] rounded-full overflow-hidden">
+                          <div
+                            className="h-full rounded-full"
+                            style={{ width: `${(val / 10) * 100}%`, background: barColor }}
+                          />
+                        </div>
+                      </div>
+                    );
+                  })}
+                  {/* Net risk */}
+                  <div className="mt-2 pt-2 border-t border-white/[0.08] flex items-center justify-between">
+                    <span className="text-[12px] font-semibold text-white/80">
+                      Net Displacement Risk
+                    </span>
+                    <span
+                      className="text-[16px] font-black"
+                      style={{
+                        fontFamily: "'DM Mono', monospace",
+                        color: selectedOcc.scores.netRisk > 6 ? "#DC2626" : selectedOcc.scores.netRisk > 4 ? "#F59E0B" : "#16A34A",
+                      }}
+                    >
+                      {selectedOcc.scores.netRisk.toFixed(1)}
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* BLS link */}
+              {selectedOcc.raw.url && (
+                <a
+                  href={selectedOcc.raw.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-3 text-[11px] text-white/40 hover:text-white/70 transition-colors"
+                >
+                  View on BLS Occupational Outlook Handbook &rarr;
+                </a>
+              )}
+            </div>
           </div>
-        </div>
+        )}
       </section>
-    </article>
+
+      {/* ───── Back to narrow column for analysis sections ───── */}
+      <article className="max-w-[740px] mx-auto">
+        {/* Comparison Table */}
+        <section className="mb-12">
+          <div className="border-t border-black/[0.06] pt-8">
+            <SectionLabel number="02" />
+            <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+              Where Exposure and Net Risk Diverge
+            </h2>
+            <p className="text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
+              These are the occupation groups where the multi-dimensional net risk
+              score disagrees most with simple AI exposure. High-exposure groups
+              with strong buffer factors (adaptability, elastic demand,
+              complementarity) drop in net risk. Low-exposure groups in rigid
+              institutions climb.
+            </p>
+            <ComparisonTable data={scored} />
+          </div>
+        </section>
+
+        {/* Methodology */}
+        <section id="methodology" className="mb-12 scroll-mt-8">
+          <div className="border-t border-black/[0.06] pt-8">
+            <SectionLabel number="03" />
+            <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+              Methodology
+            </h2>
+            <MethodologySection />
+          </div>
+        </section>
+
+        {/* Related */}
+        <section className="mb-4">
+          <div className="border-t border-black/[0.06] pt-8">
+            <h3 className="text-[14px] font-bold text-[var(--foreground)] mb-3">
+              Related explorations
+            </h3>
+            <div className="flex flex-wrap gap-3">
+              <Link
+                href="/task-visualizer"
+                className="text-[13px] font-medium text-[var(--accent-text)] hover:underline"
+              >
+                Task-level visualizer
+              </Link>
+              <span className="text-black/[0.15]">|</span>
+              <Link
+                href="/task-visualizer/economy"
+                className="text-[13px] font-medium text-[var(--accent-text)] hover:underline"
+              >
+                Economy-wide view
+              </Link>
+              <span className="text-black/[0.15]">|</span>
+              <Link
+                href="/demand-elasticity"
+                className="text-[13px] font-medium text-[var(--accent-text)] hover:underline"
+              >
+                Demand elasticity explainer
+              </Link>
+              <span className="text-black/[0.15]">|</span>
+              <Link
+                href="/predictions"
+                className="text-[13px] font-medium text-[var(--accent-text)] hover:underline"
+              >
+                All predictions
+              </Link>
+            </div>
+          </div>
+        </section>
+      </article>
+    </>
   );
 }

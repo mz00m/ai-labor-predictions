@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title:
     "Beyond Exposure: Multi-Dimensional AI Displacement Risk | jobsdata.ai",
   description:
-    "AI exposure alone doesn't predict job displacement. This tool scores 22 occupation groups across 5 research-backed dimensions: technical exposure, adoption speed, worker adaptability, demand elasticity, and AI complementarity.",
+    "AI exposure alone doesn't predict job displacement. This tool scores 342 BLS occupations across 5 research-backed dimensions: technical exposure, adoption speed, worker adaptability, demand elasticity, and AI complementarity.",
   openGraph: {
     title: "Beyond Exposure — jobsdata.ai",
     description:
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <main className="px-6 sm:px-10 py-8 sm:py-12 max-w-5xl mx-auto">
+    <main className="px-6 sm:px-10 py-8 sm:py-12">
       <OccupationExposurePage />
     </main>
   );
