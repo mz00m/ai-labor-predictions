@@ -108,6 +108,17 @@ export default function Home() {
       {/* Featured Section Bars */}
       <div className="mt-10">
         <SectionBar
+          title="How Will AI Affect Your Job?"
+          description="AI doesn't replace whole jobs — it automates specific tasks. Explore which parts of 800+ occupations are exposed and which remain human-dependent."
+          href="/task-visualizer"
+          tag="Task visualizer"
+          accentColor="#3ECFAE"
+          watermark={<TaskVisualizerWatermark color="#3ECFAE" />}
+          stat={{ value: "800+", label: "occupations" }}
+          featured
+        />
+
+        <SectionBar
           title={`${predictions.length} Predictions for How AI Will Impact Jobs`}
           description={`Displacement, wages, and adoption — each with trend data, source quality ratings, and a weighted estimate from ${totalSources}+ sources.`}
           href="/predictions"
@@ -119,24 +130,12 @@ export default function Home() {
         />
 
         <SectionBar
-          title="See How It Will Impact Your Job"
-          description="AI doesn't replace whole jobs — it automates specific tasks. Explore which parts of 800+ occupations are exposed and which remain human-dependent."
-          href="/task-visualizer"
-          tag="Task visualizer"
-          accentColor="#3ECFAE"
-          watermark={<TaskVisualizerWatermark color="#3ECFAE" />}
-          stat={{ value: "800+", label: "occupations" }}
-          featured
-        />
-
-        <SectionBar
-          title="Early Indicators"
-          description="AI tool downloads are surging — PyPI and npm package data, SDK adoption curves, and developer activity signal where automation is landing before the labor data catches up."
-          href="/signals"
-          tag="Signals"
-          accentColor="#F26D6D"
-          watermark={<SignalsWatermark color="#F26D6D" />}
-          stat={{ value: "Live", label: "data" }}
+          title="What if AI Creates More Jobs Than It Displaces"
+          description="Very possible based on historic data. Every general-purpose technology eventually created more jobs than it displaced — and AI may be no different."
+          href="/demand-elasticity"
+          tag="Demand elasticity"
+          accentColor="#34D399"
+          watermark={<DemandElasticityWatermark color="#34D399" />}
           featured
         />
       </div>
@@ -188,12 +187,13 @@ export default function Home() {
 
         <ScrollReveal delay={240}>
           <SectionBar
-            title="What if AI Creates More Jobs Than It Changes?"
-            description="Very possible based on historic data. Every general-purpose technology eventually created more jobs than it displaced — and AI may be no different."
-            href="/demand-elasticity"
-            tag="Demand elasticity"
-            accentColor="#34D399"
-            watermark={<DemandElasticityWatermark color="#34D399" />}
+            title="Early Indicators"
+            description="AI tool downloads are surging — PyPI and npm package data, SDK adoption curves, and developer activity signal where automation is landing before the labor data catches up."
+            href="/signals"
+            tag="Signals"
+            accentColor="#F26D6D"
+            watermark={<SignalsWatermark color="#F26D6D" />}
+            stat={{ value: "Live", label: "data" }}
           />
         </ScrollReveal>
       </div>
