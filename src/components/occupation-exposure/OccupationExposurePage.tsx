@@ -186,8 +186,8 @@ export default function OccupationExposurePage() {
       </article>
 
       {/* ───── Full-width treemap section ───── */}
-      <section id="treemap" className="mb-12 bg-[#0a0a0f] -mx-6 sm:-mx-10 px-4 sm:px-6 py-6 rounded-xl scroll-mt-4">
-        <div className="max-w-[1400px] mx-auto">
+      <section id="treemap" className="mb-12 bg-[#0a0a0f] -mx-6 sm:-mx-10 px-3 sm:px-4 py-6 rounded-xl scroll-mt-4">
+        <div className="max-w-[1800px] mx-auto">
           {/* Dimension toggle */}
           <div className="mb-4 flex flex-col sm:flex-row sm:items-center gap-3">
             <DimensionPanel
@@ -206,7 +206,7 @@ export default function OccupationExposurePage() {
 
         {/* Selected occupation detail (inline below treemap) */}
         {selectedOcc && (
-          <div className="max-w-[1400px] mx-auto mt-4">
+          <div className="max-w-[1800px] mx-auto mt-4">
             <div className="bg-[#12121a] border border-white/[0.1] rounded-lg p-4 sm:p-5 relative">
               <button
                 onClick={() => setSelectedOcc(null)}
