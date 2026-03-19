@@ -2,7 +2,7 @@
   "id": "genai-work-adoption",
   "slug": "genai-work-adoption",
   "title": "Generative AI Adoption",
-  "description": "Share of U.S. working-age adults (18\u201364) using generative AI at work, from a nationally representative quarterly survey (Real-Time Population Survey). Work adoption (40.7%) lags overall use (55.9%), consistent with workers adopting ahead of their employers. Overall adoption has outpaced both the PC and internet at comparable points post-launch.",
+  "description": "Share of U.S. working-age adults (18–64) using generative AI at work, from a nationally representative quarterly survey (Real-Time Population Survey). Work adoption (40.7%) lags overall use (55.9%), consistent with workers adopting ahead of their employers. Overall adoption has outpaced both the PC and internet at comparable points post-launch.",
   "category": "adoption",
   "unit": "% of adults at work",
   "currentValue": 43,
@@ -98,6 +98,17 @@
       ],
       "evidenceTier": 2,
       "metricType": "survey"
+    },
+    {
+      "date": "2026-01-28",
+      "value": 41.1,
+      "confidenceLow": 36,
+      "confidenceHigh": 46,
+      "sourceIds": [
+        "oecd-ai-adoption-firms-individuals-2026"
+      ],
+      "evidenceTier": 1,
+      "metricType": "survey"
     }
   ],
   "overlays": [
@@ -154,6 +165,15 @@
       ],
       "evidenceTier": 2,
       "label": "UK GDS: GitHub Copilot saves 26 min/day across 20K civil servants"
+    },
+    {
+      "date": "2025-11-01",
+      "direction": "up",
+      "sourceIds": [
+        "stlouisfed-genai-adoption-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "St. Louis Fed: 23% weekly GenAI use at work; work hours with GenAI up to 5.7%"
     },
     {
       "date": "2026-01-01",
@@ -231,7 +251,7 @@
       "publisher": "Workday / Hanover Research",
       "evidenceTier": 2,
       "datePublished": "2026-01-14",
-      "excerpt": "85% of employees report saving one to seven hours per week using AI. Employees who use AI every day are overwhelmingly optimistic \u2013 more than 90% believe it will help them succeed.",
+      "excerpt": "85% of employees report saving one to seven hours per week using AI. Employees who use AI every day are overwhelmingly optimistic – more than 90% believe it will help them succeed.",
       "dateAdded": "2026-03-07"
     },
     {
@@ -361,8 +381,26 @@
       "publisher": "Deloitte AI Institute",
       "evidenceTier": 2,
       "datePublished": "2026-01-15",
-      "excerpt": "Workforce access to AI has expanded by 50% in just one year\u2014growing from under 40% to under 60% of workers now equipped with sanctioned AI tools.",
+      "excerpt": "Workforce access to AI has expanded by 50% in just one year—growing from under 40% to under 60% of workers now equipped with sanctioned AI tools.",
       "dateAdded": "2026-03-18"
+    },
+    {
+      "id": "oecd-ai-adoption-firms-individuals-2026",
+      "title": "AI use by individuals surges across the OECD as adoption by firms continues to expand",
+      "url": "https://www.oecd.org/en/about/news/announcements/2026/01/ai-use-by-individuals-surges-across-the-oecd-as-adoption-by-firms-continues-to-expand.html",
+      "publisher": "OECD",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-28",
+      "excerpt": "36.8% of individuals across OECD used generative AI in 2025. 20.2% of firms used AI in 2025 (up from 8.7% in 2023). 41.1% of employed individuals used generative AI. 52.0% of large firms vs 17.4% small."
+    },
+    {
+      "id": "stlouisfed-genai-adoption-2025",
+      "title": "The State of Generative AI Adoption in 2025",
+      "url": "https://www.stlouisfed.org/on-the-economy/2025/nov/state-generative-ai-adoption-2025",
+      "publisher": "Federal Reserve Bank of St. Louis",
+      "evidenceTier": 1,
+      "datePublished": "2025-11-01",
+      "excerpt": "23% of employed workers used generative AI at work weekly as of late 2024. Share of work hours with GenAI increased from 4.1% (Nov 2024) to 5.7% (Aug 2025). GenAI may have increased aggregate labor productivity by up to 1.3%."
     }
   ]
 }

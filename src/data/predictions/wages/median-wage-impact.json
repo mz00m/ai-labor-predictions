@@ -233,6 +233,15 @@
       "label": "Korinek & Stiglitz: wage growth requires capital-augmenting AI"
     },
     {
+      "date": "2025-06-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "nber-llm-small-effects-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER: LLM adoption shows precisely estimated zero wage effects over 2 years"
+    },
+    {
       "date": "2025-08-01",
       "direction": "up",
       "sourceIds": [
@@ -368,6 +377,15 @@
       "label": "Dallas Fed: AI exposure has ~zero effect on wages at median experience premium (CI includes 0)"
     },
     {
+      "date": "2026-02-24",
+      "direction": "neutral",
+      "sourceIds": [
+        "dallasfed-ai-aiding-replacing-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Dallas Fed: AI wages not uniformly declining; augmentation offsets automation pressure"
+    },
+    {
       "date": "2026-03-05",
       "direction": "up",
       "sourceIds": [
@@ -388,7 +406,9 @@
     {
       "date": "2026-01-07",
       "direction": "down",
-      "sourceIds": ["imas-demand-collapse-ai-2026"],
+      "sourceIds": [
+        "imas-demand-collapse-ai-2026"
+      ],
       "evidenceTier": 4,
       "label": "Imas (citing Benzell et al): Model shows 25% wage decline under full automation with low savings"
     }
@@ -760,6 +780,24 @@
       "datePublished": "2026-01-07",
       "excerpt": "wages fall by 25%, and long-run welfare drops by 16.5%",
       "dateAdded": "2026-03-17"
+    },
+    {
+      "id": "nber-llm-small-effects-2025",
+      "title": "Large Language Models, Small Labor Market Effects",
+      "url": "https://www.nber.org/papers/w33777",
+      "publisher": "NBER",
+      "evidenceTier": 1,
+      "datePublished": "2025-06-01",
+      "excerpt": "Workplaces that adopted AI chatbots showed no significant difference in employment, early-career jobs, job churn, or worker mix. Difference-in-differences estimates for earnings and wages are all precisely estimated zeros, ruling out effects larger than 2%."
+    },
+    {
+      "id": "dallasfed-ai-aiding-replacing-2026",
+      "title": "AI is simultaneously aiding and replacing workers, wage data suggest",
+      "url": "https://www.dallasfed.org/research/economics/2026/0224",
+      "publisher": "Federal Reserve Bank of Dallas",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-24",
+      "excerpt": "AI's impact depends on whether it automates or augments. For zero-experience-premium occupations, increased AI exposure is associated with -0.28pp reduction in wage growth. Wages in AI-exposed jobs not uniformly declining."
     }
   ]
 }
