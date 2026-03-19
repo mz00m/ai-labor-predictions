@@ -18,5 +18,12 @@ const systemPrompt = `You are a senior code reviewer for a Next.js data dashboar
 Focus on: data integrity, schema compliance, evidence tier accuracy, and TypeScript correctness.
 Be specific — reference file paths, line numbers, and concrete issues.`;
 
-const result = await researchAgent(prompt);
-console.log(result);
+async function main() {
+  const result = await researchAgent(prompt);
+  console.log(result);
+}
+
+main().catch((err) => {
+  console.error(err);
+  process.exit(1);
+});

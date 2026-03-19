@@ -1,7 +1,9 @@
 import { query } from "@anthropic-ai/claude-agent-sdk";
 import path from "path";
+import { fileURLToPath } from "url";
 
-const PROJECT_ROOT = path.resolve(import.meta.dirname, "../..");
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const PROJECT_ROOT = path.resolve(__dirname, "../..");
 
 /**
  * Run a Claude Agent SDK query against this project.

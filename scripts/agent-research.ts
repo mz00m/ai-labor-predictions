@@ -14,5 +14,12 @@ if (!prompt) {
   process.exit(1);
 }
 
-const result = await researchAgent(prompt);
-console.log(result);
+async function main() {
+  const result = await researchAgent(prompt);
+  console.log(result);
+}
+
+main().catch((err) => {
+  console.error(err);
+  process.exit(1);
+});
