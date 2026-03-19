@@ -70,6 +70,17 @@
       }
     },
     {
+      "date": "2025-06-01",
+      "value": -11.5,
+      "confidenceLow": -23,
+      "confidenceHigh": -5,
+      "sourceIds": [
+        "nber-ai-productivity-unemployment-2025"
+      ],
+      "evidenceTier": 1,
+      "metricType": "projection"
+    },
+    {
       "date": "2025-08-01",
       "value": 6.5,
       "confidenceLow": 3,
@@ -155,6 +166,26 @@
       "evidenceTier": 1,
       "metricType": "employment",
       "dataType": "observed"
+    },
+    {
+      "date": "2026-01-06",
+      "value": -0.9,
+      "confidenceLow": -1.5,
+      "confidenceHigh": -0.4,
+      "sourceIds": [
+        "dallasfed-young-workers-ai-2026"
+      ],
+      "evidenceTier": 1,
+      "metricType": "employment",
+      "dataType": "observed",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "percentage point drop in AI-exposed occupation employment share",
+        "conversionFactor": 1,
+        "conversionLow": 0.5,
+        "conversionHigh": 1.5,
+        "rationale": "16.4% to 15.5% employment share decline in AI-exposed occupations used as displacement proxy"
+      }
     },
     {
       "date": "2026-02-01",
@@ -387,6 +418,15 @@
       "label": "Bessen et al.: automation displacement far below mass layoff rates (0.7% vs 3.5-7.2%/yr)"
     },
     {
+      "date": "2025-02-01",
+      "direction": "down",
+      "sourceIds": [
+        "nber-hampole-ai-labor-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER (Hampole et al.): Most-impacted occupations declined 2-2.5% over 5 years"
+    },
+    {
       "date": "2025-02-10",
       "direction": "down",
       "sourceIds": [
@@ -403,6 +443,15 @@
       ],
       "evidenceTier": 1,
       "label": "IBM: Plans to replace ~7,800 back-office roles with AI"
+    },
+    {
+      "date": "2025-03-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "hbs-displacement-complementarity-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "HBS: AI displaces automation-prone roles (-24% skills) but creates augmentation roles (+22%)"
     },
     {
       "date": "2025-05-05",
@@ -439,6 +488,15 @@
       ],
       "evidenceTier": 1,
       "label": "HBS (Chen et al.): Job postings rose 15%/quarter for AI-augmented roles post-ChatGPT"
+    },
+    {
+      "date": "2025-06-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "nber-llm-small-effects-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER: LLM-adopting workplaces show zero employment effects (CI rules out >2%)"
     },
     {
       "date": "2025-06-03",
@@ -484,6 +542,15 @@
       ],
       "evidenceTier": 1,
       "label": "BLS: Official employment projections 2024-2034"
+    },
+    {
+      "date": "2025-08-01",
+      "direction": "down",
+      "sourceIds": [
+        "stlouisfed-ai-unemployment-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "St. Louis Fed: AI-exposed occupations see larger unemployment rises (r=0.47)"
     },
     {
       "date": "2025-09-01",
@@ -538,6 +605,15 @@
       ],
       "evidenceTier": 1,
       "label": "Denmark study: zero effects on earnings and hours from AI (11 occupations)"
+    },
+    {
+      "date": "2025-11-05",
+      "direction": "down",
+      "sourceIds": [
+        "mckinsey-state-ai-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "McKinsey: 32% of firms expect AI to cut workforce by 3%+ within next year"
     },
     {
       "date": "2025-11-13",
@@ -663,7 +739,7 @@
         "jones-tonetti-weak-links-2026"
       ],
       "evidenceTier": 1,
-      "label": "Jones & Tonetti (Stanford/NBER): Automation raises GDP only 4% by 2040, 19% by 2060 \u2014 'weak links' slow impact"
+      "label": "Jones & Tonetti (Stanford/NBER): Automation raises GDP only 4% by 2040, 19% by 2060 — 'weak links' slow impact"
     },
     {
       "date": "2026-01-15",
@@ -672,7 +748,7 @@
         "deloitte-ai-state-enterprise-2026"
       ],
       "evidenceTier": 2,
-      "label": "Deloitte: 36% of firms expect \u226510% of jobs fully automated within a year"
+      "label": "Deloitte: 36% of firms expect ≥10% of jobs fully automated within a year"
     },
     {
       "date": "2026-01-20",
@@ -735,7 +811,7 @@
         "esb-dutch-youth-genai-employment-2026"
       ],
       "evidenceTier": 1,
-      "label": "ESB/Rabobank: Dutch youth employment in GenAI-exposed jobs fell 13% (Q4 2022\u2013Q3 2025)"
+      "label": "ESB/Rabobank: Dutch youth employment in GenAI-exposed jobs fell 13% (Q4 2022–Q3 2025)"
     },
     {
       "date": "2026-02-01",
@@ -744,7 +820,16 @@
         "nber-brynjolfsson-minwage-robots-2026"
       ],
       "evidenceTier": 1,
-      "label": "NBER (Brynjolfsson et al.): 10% min-wage hike \u2192 ~8% rise in robot adoption"
+      "label": "NBER (Brynjolfsson et al.): 10% min-wage hike → ~8% rise in robot adoption"
+    },
+    {
+      "date": "2026-02-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "nber-firm-data-ai-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER: US/UK/DE/AU firm survey shows mixed AI employment effects across countries"
     },
     {
       "date": "2026-02-05",
@@ -753,7 +838,7 @@
         "bls-jolts-december-2025"
       ],
       "evidenceTier": 1,
-      "label": "BLS JOLTS: Job openings fell to 6.5M (Dec 2025) \u2014 lowest since 2017"
+      "label": "BLS JOLTS: Job openings fell to 6.5M (Dec 2025) — lowest since 2017"
     },
     {
       "date": "2026-02-05",
@@ -762,7 +847,7 @@
         "bls-jolts-december-2025"
       ],
       "evidenceTier": 1,
-      "label": "BLS JOLTS: Quits rate at 2.0% \u2014 below 2019 average"
+      "label": "BLS JOLTS: Quits rate at 2.0% — below 2019 average"
     },
     {
       "date": "2026-02-05",
@@ -789,7 +874,7 @@
         "goldman-mei-ai-labor-2026"
       ],
       "evidenceTier": 2,
-      "label": "Goldman (Mei): only 5-10K/mo drag so far; baseline 6-7% displaced; +\u00bdpp unemployment"
+      "label": "Goldman (Mei): only 5-10K/mo drag so far; baseline 6-7% displaced; +½pp unemployment"
     },
     {
       "date": "2026-03-01",
@@ -852,7 +937,7 @@
         "challenger-ai-layoffs-feb-2026"
       ],
       "evidenceTier": 2,
-      "label": "Challenger: AI cited in 8% of Jan\u2013Feb 2026 layoff plans (12,304 cuts)"
+      "label": "Challenger: AI cited in 8% of Jan–Feb 2026 layoff plans (12,304 cuts)"
     },
     {
       "date": "2026-03-05",
@@ -1010,7 +1095,7 @@
       "publisher": "NBER (Delfino, Garnero, Inferrera, Leonardi, Sadun)",
       "evidenceTier": 1,
       "datePublished": "2026-01-01",
-      "excerpt": "Perceived 'identity fit' \u2014 whether a new skill feels compatible with a person's sense of self \u2014 dominated re-skilling decisions, often outweighing beliefs about wages or employer demand.",
+      "excerpt": "Perceived 'identity fit' — whether a new skill feels compatible with a person's sense of self — dominated re-skilling decisions, often outweighing beliefs about wages or employer demand.",
       "dateAdded": "2026-03-10"
     },
     {
@@ -1113,7 +1198,7 @@
     },
     {
       "id": "ibm-10k-2024",
-      "title": "IBM 2024 10-K \u2014 AI Strategy & Workforce Transformation",
+      "title": "IBM 2024 10-K — AI Strategy & Workforce Transformation",
       "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000051143&type=10-K",
       "publisher": "IBM (SEC Filing)",
       "evidenceTier": 1,
@@ -1123,7 +1208,7 @@
     },
     {
       "id": "indeed-overall-postings-2025",
-      "title": "Total US Job Postings Trend Analysis \u2014 January 2025",
+      "title": "Total US Job Postings Trend Analysis — January 2025",
       "url": "https://www.hiringlab.org/2025/01/28/us-job-postings-trends/",
       "publisher": "Indeed Hiring Lab",
       "evidenceTier": 2,
@@ -1172,7 +1257,7 @@
     },
     {
       "id": "kinder-brookings-2025",
-      "title": "New data show no AI jobs apocalypse \u2014 for now",
+      "title": "New data show no AI jobs apocalypse — for now",
       "url": "https://www.brookings.edu/articles/new-data-show-no-ai-jobs-apocalypse-for-now/",
       "publisher": "Brookings (Kinder)",
       "evidenceTier": 1,
@@ -1217,7 +1302,7 @@
       "publisher": "Harvard Business School",
       "evidenceTier": 1,
       "datePublished": "2025-01-15",
-      "excerpt": "17% decrease in job postings for highly automatable occupations, but 22% increase for augmentation-prone ones \u2014 net effect depends on occupation mix.",
+      "excerpt": "17% decrease in job postings for highly automatable occupations, but 22% increase for augmentation-prone ones — net effect depends on occupation mix.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -1317,7 +1402,7 @@
       "publisher": "Cognizant",
       "evidenceTier": 2,
       "datePublished": "2026-01-15",
-      "excerpt": "Education task exposure jumped from 11% to 49% \u2014 a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations.",
+      "excerpt": "Education task exposure jumped from 11% to 49% — a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -1327,7 +1412,7 @@
       "publisher": "Goldman Sachs Research (Pierfrancesco Mei)",
       "evidenceTier": 2,
       "datePublished": "2026-02-24",
-      "excerpt": "AI's labor market impact still small \u2014 only 5-10K/month drag on net job growth. Only 2\u00bd% of jobs exposed to automation today. Baseline forecast: 6-7% of workers displaced (range 3-14%), lowering annual hiring by 1M jobs and raising unemployment ~\u00bdpp. US creates 30M gross new jobs/year; does not anticipate job apocalypse. Impact so far largely confined to tech sector but expects it to grow materially.",
+      "excerpt": "AI's labor market impact still small — only 5-10K/month drag on net job growth. Only 2½% of jobs exposed to automation today. Baseline forecast: 6-7% of workers displaced (range 3-14%), lowering annual hiring by 1M jobs and raising unemployment ~½pp. US creates 30M gross new jobs/year; does not anticipate job apocalypse. Impact so far largely confined to tech sector but expects it to grow materially.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -1354,10 +1439,10 @@
       "id": "cepr-ai-productivity-jobs-europe-2026",
       "title": "How AI is affecting productivity and jobs in Europe",
       "url": "https://cepr.org/voxeu/columns/how-ai-affecting-productivity-and-jobs-europe",
-      "publisher": "CEPR VoxEU (Aldasoro, Gambacorta, P\u00e1l, Revoltella, Weiss, Wolski)",
+      "publisher": "CEPR VoxEU (Aldasoro, Gambacorta, Pál, Revoltella, Weiss, Wolski)",
       "evidenceTier": 1,
       "datePublished": "2026-02-17",
-      "excerpt": "No evidence that AI reduces employment in the short run. AI augments worker output \u2014 enabling employees to complete tasks faster and make better decisions \u2014 without displacing labour.",
+      "excerpt": "No evidence that AI reduces employment in the short run. AI augments worker output — enabling employees to complete tasks faster and make better decisions — without displacing labour.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -1452,7 +1537,7 @@
     },
     {
       "id": "bls-jolts-december-2025",
-      "title": "Job Openings and Labor Turnover \u2014 December 2025",
+      "title": "Job Openings and Labor Turnover — December 2025",
       "url": "https://www.bls.gov/news.release/jolts.nr0.htm",
       "publisher": "U.S. Bureau of Labor Statistics",
       "evidenceTier": 1,
@@ -1517,7 +1602,7 @@
       "publisher": "MIT / Oak Ridge National Laboratory",
       "evidenceTier": 1,
       "datePublished": "2025-11-26",
-      "excerpt": "AI can already replace 11.7% of the U.S. workforce, or as much as $1.2 trillion in wages across finance, health care, and professional services. The visible tip \u2014 tech sector layoffs \u2014 represents just 2.2% of total wage exposure ($211B). Simulated 151 million workers across 32,000 skills and 3,000 counties.",
+      "excerpt": "AI can already replace 11.7% of the U.S. workforce, or as much as $1.2 trillion in wages across finance, health care, and professional services. The visible tip — tech sector layoffs — represents just 2.2% of total wage exposure ($211B). Simulated 151 million workers across 32,000 skills and 3,000 counties.",
       "dateAdded": "2026-03-09"
     },
     {
@@ -1672,7 +1757,7 @@
     },
     {
       "id": "bessen-automatic-reaction-2025",
-      "title": "Automatic Reaction \u2014 What Happens to Workers at Firms that Automate?",
+      "title": "Automatic Reaction — What Happens to Workers at Firms that Automate?",
       "url": "https://doi.org/10.1162/rest_a_01284",
       "publisher": "Review of Economics and Statistics (Bessen, Goos, Salomons, van den Berge)",
       "evidenceTier": 1,
@@ -1734,10 +1819,10 @@
       "id": "lodefalk-age-gradient-hiring-2026",
       "title": "Same Storm, Different Boats: Generative AI and the Age Gradient in Hiring",
       "url": "https://cms.ratio.se/app/uploads/2026/03/lodefalk_march16_paper_v2-kombinerades.pdf",
-      "publisher": "RATIO Institute / \u00d6rebro University (Lodefalk, L\u00f6thman, Koch, Engberg)",
+      "publisher": "RATIO Institute / Örebro University (Lodefalk, Löthman, Koch, Engberg)",
       "evidenceTier": 1,
       "datePublished": "2026-03-16",
-      "excerpt": "An event study documents an accelerating decline in employment of 22\u201325-year-olds in high-AI-exposure occupations, reaching 5.5 per cent by early 2025 relative to less exposed occupations within the same employers, while employment of workers over 50 rose by 1.3 per cent.",
+      "excerpt": "An event study documents an accelerating decline in employment of 22–25-year-olds in high-AI-exposure occupations, reaching 5.5 per cent by early 2025 relative to less exposed occupations within the same employers, while employment of workers over 50 rose by 1.3 per cent.",
       "dateAdded": "2026-03-17"
     },
     {
@@ -1769,6 +1854,78 @@
       "datePublished": "2026-01-15",
       "excerpt": "Within a year, more than a third of surveyed companies (36%) expect at least 10% of their jobs to be fully automated.",
       "dateAdded": "2026-03-18"
+    },
+    {
+      "id": "nber-hampole-ai-labor-2025",
+      "title": "Artificial Intelligence and the Labor Market",
+      "url": "https://www.nber.org/papers/w33509",
+      "publisher": "NBER (Hampole, Traina, Yin)",
+      "evidenceTier": 1,
+      "datePublished": "2025-02-01",
+      "excerpt": "Most adversely impacted occupations (business, financial, engineering) experienced a decline of 2% to 2.5% over a five-year period. Reduced demand in exposed occupations is offset by productivity-driven increases in labor demand at AI-adopting firms."
+    },
+    {
+      "id": "nber-llm-small-effects-2025",
+      "title": "Large Language Models, Small Labor Market Effects",
+      "url": "https://www.nber.org/papers/w33777",
+      "publisher": "NBER",
+      "evidenceTier": 1,
+      "datePublished": "2025-06-01",
+      "excerpt": "Workplaces that adopted AI chatbots showed no significant difference in employment, early-career jobs, job churn, or worker mix. Difference-in-differences estimates for earnings and wages are all precisely estimated zeros, ruling out effects larger than 2%."
+    },
+    {
+      "id": "nber-ai-productivity-unemployment-2025",
+      "title": "AI, Productivity, and Technological Unemployment",
+      "url": "https://www.nber.org/papers/w33867",
+      "publisher": "NBER",
+      "evidenceTier": 1,
+      "datePublished": "2025-06-01",
+      "excerpt": "Calibrated to U.S. data, the model predicts more than threefold productivity improvements alongside a long-run employment loss of 23%, with half (~11.5%) occurring over the initial five-year transition period."
+    },
+    {
+      "id": "nber-firm-data-ai-2026",
+      "title": "Firm Data on AI",
+      "url": "https://www.nber.org/papers/w34836",
+      "publisher": "NBER",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-01",
+      "excerpt": "Synthesizes firm-level survey data from the US, UK, Germany, and Australia measuring AI's realized and expected impacts on sales per employee and employment. Data collected Feb-Apr 2025 and Nov 2025-Jan 2026."
+    },
+    {
+      "id": "stlouisfed-ai-unemployment-2025",
+      "title": "Is AI Contributing to Rising Unemployment? Evidence from Occupational Variation",
+      "url": "https://www.stlouisfed.org/on-the-economy/2025/aug/is-ai-contributing-unemployment-evidence-occupational-variation",
+      "publisher": "Federal Reserve Bank of St. Louis",
+      "evidenceTier": 1,
+      "datePublished": "2025-08-01",
+      "excerpt": "Occupations with higher AI exposure experienced larger unemployment rate increases between 2022 and 2025 (r=0.47). Computer/math occupations (exposure ~80%) saw steepest rises. GenAI-intensive occupations: r=0.57."
+    },
+    {
+      "id": "dallasfed-young-workers-ai-2026",
+      "title": "Young workers' employment drops in occupations with high AI exposure",
+      "url": "https://www.dallasfed.org/research/economics/2026/0106",
+      "publisher": "Federal Reserve Bank of Dallas",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-06",
+      "excerpt": "Employment share for AI-exposed occupations fell from 16.4% (Nov 2022) to 15.5% (Sep 2025). Workers age 22-25 in most AI-exposed occupations experienced 13% employment decline since 2022, driven by fewer workforce entrants rather than layoffs."
+    },
+    {
+      "id": "mckinsey-state-ai-2025",
+      "title": "McKinsey Global Survey on AI (State of AI, 2025)",
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
+      "publisher": "McKinsey & Company",
+      "evidenceTier": 2,
+      "datePublished": "2025-11-05",
+      "excerpt": "32% of companies expect AI to reduce workforce by 3%+ within next year. Median 17% of respondents report workforce declines within functions from AI use. 88% of organizations now use AI in at least one business function."
+    },
+    {
+      "id": "hbs-displacement-complementarity-2025",
+      "title": "Displacement or Complementarity? The Labor Market Impact of Generative AI",
+      "url": "https://www.hbs.edu/faculty/Pages/item.aspx?num=67045",
+      "publisher": "Harvard Business School",
+      "evidenceTier": 1,
+      "datePublished": "2025-03-01",
+      "excerpt": "24% decrease in generative AI-exposed skills per firm per quarter in top-quartile automation-exposed jobs. 15% increase in AI-exposed skills for augmentation-prone jobs. Augmentation-prone job postings increased 22% per quarter per firm."
     }
   ]
 }

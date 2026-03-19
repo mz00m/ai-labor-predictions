@@ -13,7 +13,9 @@
       "value": -0.75,
       "confidenceLow": -1.5,
       "confidenceHigh": 0,
-      "sourceIds": ["pwbm-ai-productivity-2025"],
+      "sourceIds": [
+        "pwbm-ai-productivity-2025"
+      ],
       "evidenceTier": 1,
       "metricType": "employment",
       "sampleSize": 160000000,
@@ -24,7 +26,9 @@
       "value": -6,
       "confidenceLow": -9,
       "confidenceHigh": -3,
-      "sourceIds": ["brynjolfsson-chandar-chen-wc-2025"],
+      "sourceIds": [
+        "brynjolfsson-chandar-chen-wc-2025"
+      ],
       "evidenceTier": 1,
       "metricType": "employment",
       "sampleSize": 5000000,
@@ -35,7 +39,9 @@
       "value": -3.6,
       "confidenceLow": -5,
       "confidenceHigh": -2,
-      "sourceIds": ["imf-skill-gaps-geo-2026"],
+      "sourceIds": [
+        "imf-skill-gaps-geo-2026"
+      ],
       "evidenceTier": 2,
       "metricType": "employment",
       "note": "All workers in AI-vulnerable occupations after 5 years, multi-country"
@@ -45,7 +51,9 @@
       "value": -13,
       "confidenceLow": -16,
       "confidenceHigh": -10,
-      "sourceIds": ["esb-dutch-youth-genai-employment-2026"],
+      "sourceIds": [
+        "esb-dutch-youth-genai-employment-2026"
+      ],
       "evidenceTier": 1,
       "metricType": "employment",
       "note": "Youth employment in GenAI-exposed occupations, Netherlands Q4 2022-Q3 2025"
@@ -55,7 +63,9 @@
       "value": 0,
       "confidenceLow": -1,
       "confidenceHigh": 1,
-      "sourceIds": ["anthropic-labor-market-impacts-2026"],
+      "sourceIds": [
+        "anthropic-labor-market-impacts-2026"
+      ],
       "evidenceTier": 2,
       "metricType": "employment",
       "note": "All workers, US DiD; no systematic unemployment increase in AI-exposed occupations"
@@ -65,7 +75,9 @@
       "value": -5.5,
       "confidenceLow": -7,
       "confidenceHigh": -4,
-      "sourceIds": ["lodefalk-age-gradient-hiring-2026"],
+      "sourceIds": [
+        "lodefalk-age-gradient-hiring-2026"
+      ],
       "evidenceTier": 1,
       "metricType": "employment",
       "sampleSize": 4600000,
@@ -182,6 +194,15 @@
       "label": "NBER: 1 SD increase in AI exposure reduces related skill demand by 2%"
     },
     {
+      "date": "2025-02-01",
+      "direction": "down",
+      "sourceIds": [
+        "nber-hampole-ai-labor-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER: Business/financial/engineering occupations declined 2-2.5% over 5 yrs"
+    },
+    {
       "date": "2025-02-10",
       "direction": "up",
       "sourceIds": [
@@ -207,6 +228,15 @@
       ],
       "evidenceTier": 2,
       "label": "EY: $1.4B AI investment; AI-assisted audit covers 40% of routine testing tasks"
+    },
+    {
+      "date": "2025-03-01",
+      "direction": "down",
+      "sourceIds": [
+        "hbs-displacement-complementarity-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "HBS: -24% in automation-exposed job skills; +22% in augmentation job postings"
     },
     {
       "date": "2025-03-15",
@@ -245,6 +275,24 @@
       "label": "Brookings: top freelancers hit hardest"
     },
     {
+      "date": "2025-09-01",
+      "direction": "up",
+      "sourceIds": [
+        "brynjolfsson-hitzig-ai-knowledge-centralization-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER (Brynjolfsson/Hitzig): AI enables centralization, reduces managerial autonomy"
+    },
+    {
+      "date": "2025-09-08",
+      "direction": "neutral",
+      "sourceIds": [
+        "pwbm-ai-productivity-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "PWBM: Jobs fully AI-replaceable saw only 0.75% employment fall 2021-2024"
+    },
+    {
       "date": "2025-09-15",
       "direction": "down",
       "sourceIds": [
@@ -270,15 +318,6 @@
       ],
       "evidenceTier": 1,
       "label": "NBER: 700M ChatGPT users; 81% of work use is decision support, not task automation"
-    },
-    {
-      "date": "2025-09-01",
-      "direction": "up",
-      "sourceIds": [
-        "brynjolfsson-hitzig-ai-knowledge-centralization-2025"
-      ],
-      "evidenceTier": 1,
-      "label": "NBER (Brynjolfsson/Hitzig): AI enables centralization, reduces managerial autonomy"
     },
     {
       "date": "2025-09-26",
@@ -387,6 +426,15 @@
       ],
       "evidenceTier": 2,
       "label": "Cognizant: financial managers 84% exposed; legal 63% (up from 9%); C-suite 60% (up from 25%)"
+    },
+    {
+      "date": "2026-01-15",
+      "direction": "down",
+      "sourceIds": [
+        "frank-ai-unemployment-overall-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Frank et al.: Unemployment risk rose in AI-exposed occupations from early 2022"
     },
     {
       "date": "2026-01-21",
@@ -533,37 +581,29 @@
       "label": "Fed/Duke: Routine clerical declining 0.76pp/yr; offset by skilled-technical gains"
     },
     {
-      "date": "2026-01-15",
-      "direction": "down",
-      "sourceIds": ["frank-ai-unemployment-overall-2026"],
-      "evidenceTier": 1,
-      "label": "Frank et al.: Unemployment risk rose in AI-exposed occupations from early 2022"
-    },
-    {
-      "date": "2025-09-08",
-      "direction": "neutral",
-      "sourceIds": ["pwbm-ai-productivity-2025"],
-      "evidenceTier": 1,
-      "label": "PWBM: Jobs fully AI-replaceable saw only 0.75% employment fall 2021-2024"
-    },
-    {
       "date": "2026-03-16",
       "direction": "down",
-      "sourceIds": ["lodefalk-age-gradient-hiring-2026"],
+      "sourceIds": [
+        "lodefalk-age-gradient-hiring-2026"
+      ],
       "evidenceTier": 1,
       "label": "Lodefalk et al.: Sweden 50+ workers in AI-exposed occupations rose 1.3%; age gradient monotonic"
     },
     {
       "date": "2026-03-16",
       "direction": "neutral",
-      "sourceIds": ["lodefalk-age-gradient-hiring-2026"],
+      "sourceIds": [
+        "lodefalk-age-gradient-hiring-2026"
+      ],
       "evidenceTier": 1,
       "label": "Lodefalk et al.: Sweden posting decline driven by monetary policy, not AI (Riksbank timing test)"
     },
     {
       "date": "2026-03-16",
       "direction": "down",
-      "sourceIds": ["lodefalk-age-gradient-hiring-2026"],
+      "sourceIds": [
+        "lodefalk-age-gradient-hiring-2026"
+      ],
       "evidenceTier": 1,
       "label": "Lodefalk et al.: Effect ~2x larger for young women (-0.016 vs -0.007); 1/3 from occupational sorting"
     }
@@ -1147,6 +1187,24 @@
       "datePublished": "2025-09-01",
       "excerpt": "The framework yields several predictions: larger average firm size, greater industry concentration, and reduced local managerial autonomy.",
       "dateAdded": "2026-03-17"
+    },
+    {
+      "id": "nber-hampole-ai-labor-2025",
+      "title": "Artificial Intelligence and the Labor Market",
+      "url": "https://www.nber.org/papers/w33509",
+      "publisher": "NBER (Hampole, Traina, Yin)",
+      "evidenceTier": 1,
+      "datePublished": "2025-02-01",
+      "excerpt": "Most adversely impacted occupations (business, financial, engineering) experienced a decline of 2% to 2.5% over a five-year period. Reduced demand in exposed occupations is offset by productivity-driven increases in labor demand at AI-adopting firms."
+    },
+    {
+      "id": "hbs-displacement-complementarity-2025",
+      "title": "Displacement or Complementarity? The Labor Market Impact of Generative AI",
+      "url": "https://www.hbs.edu/faculty/Pages/item.aspx?num=67045",
+      "publisher": "Harvard Business School",
+      "evidenceTier": 1,
+      "datePublished": "2025-03-01",
+      "excerpt": "24% decrease in generative AI-exposed skills per firm per quarter in top-quartile automation-exposed jobs. 15% increase in AI-exposed skills for augmentation-prone jobs. Augmentation-prone job postings increased 22% per quarter per firm."
     }
   ]
 }

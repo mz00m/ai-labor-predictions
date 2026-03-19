@@ -31,6 +31,17 @@
       "metricType": "projection"
     },
     {
+      "date": "2025-09-01",
+      "value": -3,
+      "confidenceLow": -5,
+      "confidenceHigh": -1.5,
+      "sourceIds": [
+        "bloomberg-wall-st-ai-cuts-2025"
+      ],
+      "evidenceTier": 2,
+      "metricType": "projection"
+    },
+    {
       "date": "2025-10-30",
       "value": 14,
       "confidenceLow": 5,
@@ -132,6 +143,15 @@
       ],
       "evidenceTier": 2,
       "label": "WEF: 32-39% of financial services tasks have automation potential"
+    },
+    {
+      "date": "2025-02-01",
+      "direction": "down",
+      "sourceIds": [
+        "nber-hampole-ai-labor-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER: Financial occupations among most adversely impacted, -2% to -2.5%"
     },
     {
       "date": "2025-05-03",
@@ -472,6 +492,24 @@
       "datePublished": "2026-03-13",
       "excerpt": "Finance sector expects the largest AI-driven employment decline: -1.204% in 2026 (95% CI: -1.602% to -0.806%), implying ~111K workers. Finance also sees the largest implied AI productivity gains, exceeding 2% in 2026. Negative Exposure Index of 1.1 indicates more replacement than enhancement mentions.",
       "dateAdded": "2026-03-16"
+    },
+    {
+      "id": "nber-hampole-ai-labor-2025",
+      "title": "Artificial Intelligence and the Labor Market",
+      "url": "https://www.nber.org/papers/w33509",
+      "publisher": "NBER (Hampole, Traina, Yin)",
+      "evidenceTier": 1,
+      "datePublished": "2025-02-01",
+      "excerpt": "Most adversely impacted occupations (business, financial, engineering) experienced a decline of 2% to 2.5% over a five-year period. Reduced demand in exposed occupations is offset by productivity-driven increases in labor demand at AI-adopting firms."
+    },
+    {
+      "id": "bloomberg-wall-st-ai-cuts-2025",
+      "title": "Wall Street to cut 200,000 jobs as AI reshapes banking",
+      "url": "https://www.bobsguide.com/wall-street-to-cut-200000-jobs-as-ai-reshapes-banking/",
+      "publisher": "Bloomberg Intelligence",
+      "evidenceTier": 2,
+      "datePublished": "2025-09-01",
+      "excerpt": "Global banks expected to shed 200,000 roles over 3-5 years (~3% headcount drop). Citigroup: 54% of banking jobs have high automation potential. AI could lift bank pre-tax profits 12-17% by 2027."
     }
   ]
 }

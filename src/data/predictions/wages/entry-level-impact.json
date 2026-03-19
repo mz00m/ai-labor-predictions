@@ -238,7 +238,25 @@
         "dallas-fed-entry-level-2026"
       ],
       "evidenceTier": 1,
-      "label": "Dallas Fed: young worker share fell 16.4% \u2192 15.5%"
+      "label": "Dallas Fed: young worker share fell 16.4% → 15.5%"
+    },
+    {
+      "date": "2026-01-06",
+      "direction": "down",
+      "sourceIds": [
+        "dallasfed-young-workers-ai-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Dallas Fed: Workers 22-25 in AI-exposed jobs saw 13% employment decline since 2022"
+    },
+    {
+      "date": "2026-01-07",
+      "direction": "down",
+      "sourceIds": [
+        "imas-demand-collapse-ai-2026"
+      ],
+      "evidenceTier": 4,
+      "label": "Imas: Wage share collapse from automation could trigger demand-side contraction"
     },
     {
       "date": "2026-01-14",
@@ -292,7 +310,16 @@
         "dallas-fed-davis-ai-wages-2026"
       ],
       "evidenceTier": 1,
-      "label": "Dallas Fed: AI exposure \u2192 0.28pp wage growth reduction in low-experience-premium jobs"
+      "label": "Dallas Fed: AI exposure → 0.28pp wage growth reduction in low-experience-premium jobs"
+    },
+    {
+      "date": "2026-02-24",
+      "direction": "down",
+      "sourceIds": [
+        "dallasfed-ai-aiding-replacing-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Dallas Fed: Zero-experience occupations see -0.28pp wage growth from AI exposure"
     },
     {
       "date": "2026-03-05",
@@ -311,19 +338,12 @@
       ],
       "evidenceTier": 2,
       "label": "Anthropic: AI exposure concentrates in credentialed roles (17.4% vs 4.5% grad degrees)"
-    },
-    {
-      "date": "2026-01-07",
-      "direction": "down",
-      "sourceIds": ["imas-demand-collapse-ai-2026"],
-      "evidenceTier": 4,
-      "label": "Imas: Wage share collapse from automation could trigger demand-side contraction"
     }
   ],
   "sources": [
     {
       "id": "indeed-entry-level-2023",
-      "title": "Entry-Level Job Market Update \u2014 Indeed Hiring Lab",
+      "title": "Entry-Level Job Market Update — Indeed Hiring Lab",
       "url": "https://www.hiringlab.org/2025/09/25/september-labor-market-squeeze-on-new-entrants/",
       "publisher": "Indeed Hiring Lab",
       "evidenceTier": 2,
@@ -383,7 +403,7 @@
     },
     {
       "id": "wsj-entry-level-squeeze",
-      "title": "Entry-Level Jobs Are Vanishing \u2014 and AI Is a Big Reason",
+      "title": "Entry-Level Jobs Are Vanishing — and AI Is a Big Reason",
       "url": "https://www.wsj.com/lifestyle/careers/ai-entry-level-jobs-career-strategy-f59d574b",
       "publisher": "The Wall Street Journal",
       "evidenceTier": 3,
@@ -402,7 +422,7 @@
     },
     {
       "id": "bls-entry-wages-2025",
-      "title": "Usual Weekly Earnings \u2014 Workers 16-24",
+      "title": "Usual Weekly Earnings — Workers 16-24",
       "url": "https://www.bls.gov/cps/",
       "publisher": "Bureau of Labor Statistics",
       "evidenceTier": 1,
@@ -507,7 +527,7 @@
       "publisher": "SSRN (Hosseini Maasoum, Lichtinger)",
       "evidenceTier": 1,
       "datePublished": "2025-09-01",
-      "excerpt": "Analysis of 62M U.S. resumes: junior employment declined sharply at AI-adopting firms while senior employment was largely unchanged \u2014 described as 'seniority-biased technological change.'",
+      "excerpt": "Analysis of 62M U.S. resumes: junior employment declined sharply at AI-adopting firms while senior employment was largely unchanged — described as 'seniority-biased technological change.'",
       "dateAdded": "2026-03-01"
     },
     {
@@ -574,10 +594,10 @@
       "id": "cruces-galiani-education-gap-2026",
       "title": "Does Generative AI Narrow Education-Based Productivity Gaps? Evidence from a Randomized Experiment",
       "url": "https://www.nber.org/papers/w34851",
-      "publisher": "NBER (Cruces, Fern\u00e1ndez Meijide, Galiani, G\u00e1lvez, Lombardi)",
+      "publisher": "NBER (Cruces, Fernández Meijide, Galiani, Gálvez, Lombardi)",
       "evidenceTier": 1,
       "datePublished": "2026-02-01",
-      "excerpt": "Without AI, higher-education participants outperformed lower-education participants by 0.548 standard deviations. With AI access, this gap fell to 0.139 standard deviations\u2014closing about 75 percent of the baseline productivity difference.",
+      "excerpt": "Without AI, higher-education participants outperformed lower-education participants by 0.548 standard deviations. With AI access, this gap fell to 0.139 standard deviations—closing about 75 percent of the baseline productivity difference.",
       "dateAdded": "2026-03-07"
     },
     {
@@ -608,6 +628,24 @@
       "datePublished": "2026-01-07",
       "excerpt": "If broad automation shifts income from un-satiated high-spending (high MPC) workers to the satiated low-spending (low MPC) capital owners, this can trigger a Keynesian demand collapse that contracts the economy",
       "dateAdded": "2026-03-17"
+    },
+    {
+      "id": "dallasfed-young-workers-ai-2026",
+      "title": "Young workers' employment drops in occupations with high AI exposure",
+      "url": "https://www.dallasfed.org/research/economics/2026/0106",
+      "publisher": "Federal Reserve Bank of Dallas",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-06",
+      "excerpt": "Employment share for AI-exposed occupations fell from 16.4% (Nov 2022) to 15.5% (Sep 2025). Workers age 22-25 in most AI-exposed occupations experienced 13% employment decline since 2022, driven by fewer workforce entrants rather than layoffs."
+    },
+    {
+      "id": "dallasfed-ai-aiding-replacing-2026",
+      "title": "AI is simultaneously aiding and replacing workers, wage data suggest",
+      "url": "https://www.dallasfed.org/research/economics/2026/0224",
+      "publisher": "Federal Reserve Bank of Dallas",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-24",
+      "excerpt": "AI's impact depends on whether it automates or augments. For zero-experience-premium occupations, increased AI exposure is associated with -0.28pp reduction in wage growth. Wages in AI-exposed jobs not uniformly declining."
     }
   ]
 }
