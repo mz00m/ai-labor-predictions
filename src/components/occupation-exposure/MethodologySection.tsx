@@ -107,21 +107,21 @@ export default function MethodologySection() {
           title="Labor Market AI Exposure: What Do We Know?"
           authors="Gimbel, Kendall, Kulsakdinun (Yale Budget Lab)"
           year="2026"
-          url="https://budgetlab.yale.edu/research/labor-market-ai-exposure"
+          url="https://budgetlab.yale.edu/research/labor-market-ai-exposure-what-do-we-know"
           summary="Meta-analysis comparing 6 independent AI exposure metrics across 778 occupations. Found high agreement on extremes (construction = low, data entry = high) but significant disagreement in the middle. We use their PCA-weighted composite as our validation benchmark (Pearson r = 0.878 with our scores)."
         />
         <Study
-          title="The Exposure of Occupations to AI and Its Productivity Effects"
+          title="Occupational Heterogeneity in Exposure to Generative AI"
           authors="Felten, Raj, Seamans"
           year="2023"
-          url="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4700751"
-          summary="Maps AI capabilities from Electronic Frontier Foundation benchmarks to O*NET work activities. Important because it measures what AI can actually do on standardized tests, rather than relying on LLM self-assessment. Highly correlated with GPTs-are-GPTs but uses an independent methodology."
+          url="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4414065"
+          summary="Extends their earlier AI-occupation exposure framework to generative AI specifically. Maps AI capabilities to O*NET work activities using an independent methodology from Eloundou et al. Important because it measures what AI can actually do on standardized benchmarks rather than relying on LLM self-assessment."
         />
         <Study
           title="AI Adoption in America: Who, What, and Where"
-          authors="Svanberg, Li, Fleming, Goehring, Jha"
+          authors="McElheran, Li, Brynjolfsson, Kroff, Dinlersoz, Foster, Zolas"
           year="2024"
-          url="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4805804"
+          url="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4673528"
           summary="Uses Census BTOS data to show which firms are actually adopting AI vs. which are just exposed. Key finding: AI adoption is concentrated in large, high-paying firms — exposure and adoption diverge significantly, motivating our separate adoption speed dimension."
         />
       </DimensionResearch>
@@ -147,10 +147,10 @@ export default function MethodologySection() {
           summary="Analyzed adoption lags for 15 technologies across 166 countries. Found that cross-country adoption gaps have narrowed over time, but within-country institutional factors still create 5-45 year lags between availability and full deployment."
         />
         <Study
-          title="The Turing Trap: The Promise & Peril of Human-Like AI"
+          title="The Turing Trap: The Promise & Peril of Human-Like Artificial Intelligence"
           authors="Brynjolfsson"
           year="2022"
-          url="https://www.nber.org/papers/w31461"
+          url="https://direct.mit.edu/daed/article/151/2/272/110622/The-Turing-Trap-The-Promise-amp-Peril-of-Human"
           summary="Argues that institutional incentives — not technical capability — determine whether AI augments or replaces workers. Organizations with strong unions, regulatory oversight, or professional norms face higher adoption friction, slowing displacement even when the technology is ready."
         />
         <Study
@@ -176,25 +176,25 @@ export default function MethodologySection() {
           summary="Our primary source for this dimension. Constructs a composite adaptability index across 356 occupations (95.9% of US workforce) from four sub-components: net liquid wealth (SIPP), skill transferability (O*NET), geographic job density (Lightcast), and age fraction 55+. Professional workers score 0.734; admin support scores 0.360."
         />
         <Study
-          title="The Labor Market Effects of Reducing the Number of Illegal Immigrants"
-          authors="Borjas"
-          year="2017"
-          url="https://www.journals.uchicago.edu/doi/abs/10.1086/694552"
-          summary="While focused on immigration, demonstrates that workers with low savings and non-transferable skills experience 3-5x longer unemployment spells after displacement. The financial buffer mechanism is central to Manning & Aguirre's adaptability framework."
-        />
-        <Study
-          title="Worker Adjustment to Changes in Trade: Evidence from Longitudinal Census Data"
+          title="Trade Adjustment: Worker-Level Evidence"
           authors="Autor, Dorn, Hanson, Song"
           year="2014"
-          url="https://www.aeaweb.org/articles?id=10.1257/app.6.2.250"
-          summary="Tracked 2M+ workers displaced by the China trade shock. Found that geographic concentration of affected industries predicted worse outcomes: workers in regions with many similar displaced peers competed for the same alternative jobs. Motivates the geographic density sub-component."
+          url="https://academic.oup.com/qje/article-abstract/129/4/1799/1854509"
+          summary="Tracked 2M+ workers displaced by the China trade shock using longitudinal earnings records. Found that geographic concentration of affected industries predicted worse outcomes: workers in regions with many similar displaced peers competed for the same alternative jobs. Directly motivates the geographic job density sub-component."
         />
         <Study
-          title="The Changing Nature of U.S. Labor Markets: How Technology Is Reshaping the Workforce"
-          authors="Hershbein, Kahn"
-          year="2018"
-          url="https://www.aeaweb.org/articles?id=10.1257/pandp.20181004"
-          summary="Showed that workers over 55 displaced by automation have 40-60% lower re-employment rates than workers under 35 with identical skills. Age is the strongest single predictor of post-displacement outcomes, which is why Manning & Aguirre weight it heavily."
+          title="The China Syndrome: Local Labor Market Effects of Import Competition in the United States"
+          authors="Autor, Dorn, Hanson"
+          year="2013"
+          url="https://www.aeaweb.org/articles?id=10.1257/aer.103.6.2121"
+          summary="Showed that trade-exposed local labor markets experienced sharp declines in manufacturing employment, lower wages, and higher transfer payments. Workers with narrow, non-transferable skills suffered most — establishing that skill breadth and local labor market conditions are key determinants of post-displacement outcomes."
+        />
+        <Study
+          title="Recessions and the Costs of Job Loss"
+          authors="Davis, von Wachter"
+          year="2011"
+          url="https://www.brookings.edu/articles/recessions-and-the-costs-of-job-loss/"
+          summary="Using Social Security earnings records for 3.6M workers, found that displaced workers in their 50s suffer ~25% larger present-value lifetime earnings losses than workers in their 30s. Older workers also face longer unemployment spells and lower re-employment rates, directly motivating the age fraction sub-component in Manning & Aguirre's framework."
         />
       </DimensionResearch>
 
@@ -216,7 +216,7 @@ export default function MethodologySection() {
           title="Automation and Jobs: When Technology Boosts Employment"
           authors="Bessen"
           year="2019"
-          url="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2886233"
+          url="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2935003"
           summary="The key paper on this dimension. Analyzed 150 years of US Census data and found that in most occupations, automation increased employment when demand was elastic. The ATM example: ATMs reduced the cost of operating a bank branch, so banks opened more branches, and teller employment grew for 30 years."
         />
         <Study
@@ -227,16 +227,16 @@ export default function MethodologySection() {
           summary="Found that at the industry level, productivity growth from automation almost always increased employment in that industry — but reduced employment economy-wide through cross-industry competition effects. The within-industry expansion is the demand elasticity mechanism."
         />
         <Study
-          title="The Jevons Paradox and the Rebound Effect"
+          title="Jevons' Paradox"
           authors="Alcott"
           year="2005"
-          url="https://doi.org/10.1016/j.ecolecon.2004.10.007"
+          url="https://doi.org/10.1016/j.ecolecon.2005.03.020"
           summary="Formalizes when and why cost reduction leads to increased consumption. The paradox holds when demand is elastic (many potential customers priced out) and fails when demand is inelastic (everyone who wants the service already has it). This is why office admin (internal cost center) differs from arts/media (vast unserved market)."
         />
         <Study
           title="New Frontiers: The Origins and Content of New Work, 1940-2018"
           authors="Autor, Chin, Salomons, Seegmiller"
-          year="2024"
+          year="2022"
           url="https://www.nber.org/papers/w30389"
           summary="Found that 60% of 2018 employment was in job titles that didn't exist in 1940, most created by prior waves of automation expanding demand. AI's ability to create new task categories — not just automate existing ones — is a major source of potential demand expansion."
         />
@@ -252,22 +252,22 @@ export default function MethodologySection() {
           title="Artificial Intelligence, Productivity, and the Workforce: Evidence from Corporate Executives"
           authors="Baslandze, Foster, Moreira, Peterman"
           year="2026"
-          url="https://www.atlantafed.org/research/publications/working-papers/2026/01/08/01--artificial-intelligence-productivity-and-workforce"
+          url="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6410338"
           summary="Surveyed ~750 CFOs on whether AI was replacing or enhancing workers in each occupation group. Found that office/admin is the only group where replacement dominates (NEI = 2.03). Management (0.14) and engineering (0.10) are strongly enhancement-dominant. This is the most direct empirical measure of how firms are actually deploying AI."
         />
         <Study
-          title="The Turing Trap: The Promise & Peril of Human-Like AI"
+          title="The Turing Trap: The Promise & Peril of Human-Like Artificial Intelligence"
           authors="Brynjolfsson"
           year="2022"
-          url="https://digitaleconomy.stanford.edu/news/the-turing-trap-the-promise-peril-of-human-like-artificial-intelligence/"
+          url="https://direct.mit.edu/daed/article/151/2/272/110622/The-Turing-Trap-The-Promise-amp-Peril-of-Human"
           summary="Argues that the current AI development paradigm over-optimizes for human replacement ('passing the Turing test') when the larger economic opportunity is augmentation. Whether AI is used to substitute or complement depends on incentive structures, not just technical capability."
         />
         <Study
-          title="Prediction Machines: The Simple Economics of Artificial Intelligence"
+          title="Artificial Intelligence: The Ambiguous Labor Market Impact of Automating Prediction"
           authors="Agrawal, Gans, Goldfarb"
-          year="2018"
-          url="https://www.hbs.edu/ris/Publication%20Files/PredictionMachines_Agrawal-Gans-Goldfarb_b63e867f-6dc1-43b3-8ed8-5d46e7b5f5f5.pdf"
-          summary="Decomposes decisions into prediction (what AI does) and judgment (what humans do). When AI improves prediction, the value of human judgment increases — making the two complementary rather than substitutive. Jobs heavy in judgment (management, medicine) benefit most from AI prediction improvements."
+          year="2019"
+          url="https://www.aeaweb.org/articles?id=10.1257/jep.33.2.31"
+          summary="Decomposes decisions into prediction (what AI automates) and judgment (what humans provide). When AI improves prediction, the value of human judgment increases — making the two complementary rather than substitutive. Jobs heavy in judgment (management, medicine) benefit most from AI prediction improvements."
         />
         <Study
           title="The Work of the Future: Building Better Jobs in an Age of Intelligent Machines"
