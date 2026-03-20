@@ -140,18 +140,18 @@ function interpolateColor(
 ): string {
   const score = Math.max(0, Math.min(max, value));
 
-  // netRisk: 3-stop gradient matching KarpathyTreemap
+  // netRisk: 3-stop gradient aligned to score distribution (median ~4.3)
   if (dim === "netRisk") {
     let r: number, g: number, b: number;
-    if (score <= 5) {
-      r = 30; g = 180; b = 40; // green
-    } else if (score <= 7.5) {
-      const s = (score - 5) / 2.5;
+    if (score <= 3.5) {
+      r = 30; g = 180; b = 40;
+    } else if (score <= 5.5) {
+      const s = (score - 3.5) / 2.0;
       r = Math.round(30 + s * 215);
       g = Math.round(180 - s * 22);
       b = Math.round(40 - s * 20);
     } else {
-      const s = (score - 7.5) / 2.5;
+      const s = Math.min(1, (score - 5.5) / 4.5);
       r = Math.round(245 + s * 10);
       g = Math.round(158 - s * 128);
       b = Math.round(20 - s * 15);

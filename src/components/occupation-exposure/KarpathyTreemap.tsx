@@ -90,20 +90,23 @@ function colorCSS(score: number, dim: DimensionKey, alpha: number = 1): string {
     dim === "demandElasticity" ||
     dim === "complementarity";
   if (dim === "netRisk") {
-    // 3-stop gradient: 0-5 green, 5-7.5 green→orange, 7.5-10 orange→red
+    // 3-stop gradient aligned to actual score distribution (median ~4.3):
+    //   0–3.5  green (low risk)
+    //   3.5–5.5  green→orange (moderate risk)
+    //   5.5–10  orange→red (elevated/high risk)
     let r: number, g: number, b: number;
-    if (score <= 5) {
-      r = 30; g = 180; b = 40; // green
-    } else if (score <= 7.5) {
-      const s = (score - 5) / 2.5; // 0→1
-      r = Math.round(30 + s * 215);  // 30→245
-      g = Math.round(180 - s * 22);  // 180→158
-      b = Math.round(40 - s * 20);   // 40→20
+    if (score <= 3.5) {
+      r = 30; g = 180; b = 40;
+    } else if (score <= 5.5) {
+      const s = (score - 3.5) / 2.0;
+      r = Math.round(30 + s * 215);
+      g = Math.round(180 - s * 22);
+      b = Math.round(40 - s * 20);
     } else {
-      const s = (score - 7.5) / 2.5; // 0→1
-      r = Math.round(245 + s * 10);  // 245→255
-      g = Math.round(158 - s * 128); // 158→30
-      b = Math.round(20 - s * 15);   // 20→5
+      const s = Math.min(1, (score - 5.5) / 4.5);
+      r = Math.round(245 + s * 10);
+      g = Math.round(158 - s * 128);
+      b = Math.round(20 - s * 15);
     }
     return `rgba(${r},${g},${b},${alpha})`;
   }
