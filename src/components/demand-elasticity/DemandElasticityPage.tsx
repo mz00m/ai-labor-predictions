@@ -104,7 +104,7 @@ export default function DemandElasticityPage() {
               color="#22c55e"
             />
             <StatCard
-              value="DTP"
+              value="Desktop Publishing"
               label="1990s"
               sublabel="Cheaper publishing = more designers needed"
               color="#ef4444"
