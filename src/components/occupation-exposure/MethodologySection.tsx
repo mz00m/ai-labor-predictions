@@ -190,10 +190,10 @@ export default function MethodologySection() {
           summary="Tracked 2M+ workers displaced by the China trade shock using longitudinal earnings records. Found that geographic concentration of affected industries predicted worse outcomes: workers in regions with many similar displaced peers competed for the same alternative jobs. Directly motivates the geographic job density sub-component."
         />
         <Study
-          title="Automatic Reaction: What Happens to Workers at Firms that Automate?"
+          title="What Happens to Workers at Firms that Automate?"
           authors="Bessen, Goos, Salomons, van den Berge"
           year="2025"
-          url="https://direct.mit.edu/rest/article/107/1/138/118761/Automatic-Reaction-What-Happens-to-Workers-at"
+          url="https://direct.mit.edu/rest/article/107/1/125/114750/What-Happens-to-Workers-at-Firms-that-Automate"
           summary="First worker-level estimates of automation adjustment using Dutch administrative data covering all private non-financial industries (2000-2016). Cumulative wage income loss of ~8% over 5 years; only 2% of tenured workers leave in the year of automation. Critically, costs are borne disproportionately by older workers with longer tenure — quantifying the outcomes that Manning & Aguirre's adaptability index predicts."
         />
         <Study
@@ -293,7 +293,7 @@ export default function MethodologySection() {
           title="Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence"
           authors="Brynjolfsson, Chandar, Chen"
           year="2025"
-          url="https://siepr.stanford.edu/publications/working-paper/canaries-coal-mine-six-facts-about-recent-employment-effects-artificial"
+          url="https://digitaleconomy.stanford.edu/publications/canaries-in-the-coal-mine/"
           summary="Using ADP payroll data covering 3.5-5M workers, found a 13% relative employment decline for ages 22-25 in AI-exposed occupations — but only in automation-heavy quintiles. Augmentation-heavy occupation quintiles show positive youth employment trends. Makes the automation-vs-augmentation distinction empirically testable: the deployment choice predicts who gets displaced."
         />
         <Study
