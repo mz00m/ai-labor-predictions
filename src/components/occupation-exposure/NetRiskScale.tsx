@@ -10,7 +10,7 @@ const ZONES = [
     bg: "rgba(22,163,74,0.1)",
     border: "rgba(22,163,74,0.25)",
     description:
-      "Strong buffers outweigh pressure. These occupations have some combination of elastic demand, high complementarity with AI, and adaptable workers. AI is more likely to reshape these roles than eliminate them.",
+      "Protective factors outweigh the threat. These jobs benefit from growing demand, workers who can adapt quickly, or tasks where AI helps people do more rather than replacing them. AI will likely change how these jobs are done, not eliminate them.",
   },
   {
     range: "4 - 6",
@@ -19,7 +19,7 @@ const ZONES = [
     bg: "rgba(245,158,11,0.1)",
     border: "rgba(245,158,11,0.25)",
     description:
-      "Pressure and buffers roughly balance. Outcomes depend on how fast firms adopt, whether demand expands, and how quickly workers adapt. Most occupations fall here — the picture is genuinely uncertain.",
+      "Could go either way. A lot depends on how fast companies adopt AI, whether demand for these workers grows, and how quickly people pick up new skills. Most jobs land here — the outlook is genuinely uncertain.",
   },
   {
     range: "7 - 10",
@@ -28,7 +28,7 @@ const ZONES = [
     bg: "rgba(220,38,38,0.1)",
     border: "rgba(220,38,38,0.25)",
     description:
-      "Pressure factors dominate. High technical exposure, fast adoption, and limited buffers. These roles face real displacement pressure — though even here, timing is uncertain and new tasks often emerge.",
+      "AI can already handle much of the work, companies are adopting fast, and there are fewer offsetting factors. These roles face real pressure — though even here, the timeline is uncertain and new responsibilities often emerge.",
   },
 ];
 
@@ -39,10 +39,12 @@ export default function NetRiskScale() {
         Reading the net risk score
       </h3>
       <p className="text-[12px] text-white/50 leading-snug mb-4">
-        The score weighs two pressure factors (exposure, adoption speed) against
-        three buffers (adaptability, demand elasticity, complementarity). A high
-        score doesn&rsquo;t mean jobs disappear — it means the balance of
-        evidence tilts toward disruption.
+        The score asks: how much of this job can AI do, and how fast are
+        companies adopting it? Then it weighs that against protective factors —
+        like whether demand for the job is growing, whether AI makes workers
+        more productive rather than replaceable, and how easily workers can
+        learn new skills. A high score doesn&rsquo;t mean jobs disappear — it
+        means the evidence leans toward significant change.
       </p>
 
       {/* Gradient bar */}
