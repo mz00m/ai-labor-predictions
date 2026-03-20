@@ -188,7 +188,7 @@ The site headline is: "How is AI reshaping the labor market?" with the thesis: "
 
 Three hero statistics:
 1. ~21% Productivity boost: Median of 18 studies measuring AI's impact on worker productivity
-2. ~3% Projected job loss: Weighted average of 14 estimates for overall US job displacement (from the overall-us-displacement prediction, all evidence tiers weighted)
+2. ~1% Projected job loss: Weighted average of estimates for overall US job displacement (from the overall-us-displacement prediction, all evidence tiers weighted)
 3. ~0% Measured job loss: Based on Yale, Goldman Sachs, and Dallas Fed observed data. Despite high exposure estimates, actual macro-level job losses attributable to AI remain near zero as of early 2026.
 
 These three numbers capture the core tension: AI demonstrably boosts productivity and is projected to displace some jobs, but observed displacement so far is minimal. The gap between projected and observed displacement is one of the most important findings on the site.`;

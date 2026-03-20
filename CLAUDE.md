@@ -94,7 +94,7 @@ Must be updated with today's date on every ingestion. Hero reads this to display
 
 Three hardcoded stats that must stay in sync with prediction data:
 1. **~21% Productivity boost** — "Median of 18 studies"
-2. **~3% Projected job loss** — "Weighted avg of 14 estimates" (from `overall-us-displacement`, all tiers weighted)
+2. **~1% Projected job loss** — "Weighted avg of estimates" (from `overall-us-displacement`, all tiers weighted)
 3. **~0% Measured job loss** — "Yale, Goldman, Dallas Fed" (observed data only)
 
 These are manually set — after ingesting data that affects displacement graphs, recompute the weighted average and update if drift > 1pp.

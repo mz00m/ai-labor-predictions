@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "Early Signals of AI Impact",
     short_name: "jobsdata.ai",
     description:
-      "400+ sources tracking AI's impact on jobs, wages, and adoption across 17 interactive prediction graphs.",
+      "460+ sources tracking AI's impact on jobs, wages, and adoption across 17 interactive prediction graphs.",
     start_url: "/",
     display: "browser",
     background_color: "#ffffff",

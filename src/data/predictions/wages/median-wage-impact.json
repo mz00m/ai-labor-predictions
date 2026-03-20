@@ -413,16 +413,11 @@
       "label": "Yale (Restrepo): Automation targets above-median wage tasks, amplifying losses"
     },
     {
-      "date": "2026-01-07",
-      "direction": "down",
-      "sourceIds": ["imas-demand-collapse-ai-2026"],
-      "evidenceTier": 4,
-      "label": "Imas (citing Benzell et al): Model shows 25% wage decline under full automation with low savings"
-    },
-    {
       "date": "2026-03-18",
       "direction": "neutral",
-      "sourceIds": ["freund-mann-job-transformation-2026"],
+      "sourceIds": [
+        "freund-mann-job-transformation-2026"
+      ],
       "evidenceTier": 1,
       "label": "Freund & Mann: Wage effects non-monotonic; +4% moderate, -35% high exposure"
     }
