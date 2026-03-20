@@ -5,7 +5,7 @@
   "description": "Share of U.S. working-age adults (18–64) using generative AI at work, from a nationally representative quarterly survey (Real-Time Population Survey). Work adoption (40.7%) lags overall use (55.9%), consistent with workers adopting ahead of their employers. Overall adoption has outpaced both the PC and internet at comparable points post-launch.",
   "category": "adoption",
   "unit": "% of adults at work",
-  "currentValue": 43,
+  "currentValue": 41,
   "aggregationMethod": "latest",
   "timeHorizon": "Current measure",
   "history": [
