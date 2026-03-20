@@ -138,9 +138,28 @@ function interpolateColor(
   isPressure: boolean,
   dim?: string
 ): string {
-  // For netRisk: below 5 = green (start color), above 5 = interpolate toward red
-  const raw = Math.max(0, Math.min(1, value / max));
-  const t = dim === "netRisk" ? (raw <= 0.5 ? 0 : (raw - 0.5) * 2) : raw;
+  const score = Math.max(0, Math.min(max, value));
+
+  // netRisk: 3-stop gradient matching KarpathyTreemap
+  if (dim === "netRisk") {
+    let r: number, g: number, b: number;
+    if (score <= 5) {
+      r = 30; g = 180; b = 40; // green
+    } else if (score <= 7.5) {
+      const s = (score - 5) / 2.5;
+      r = Math.round(30 + s * 215);
+      g = Math.round(180 - s * 22);
+      b = Math.round(40 - s * 20);
+    } else {
+      const s = (score - 7.5) / 2.5;
+      r = Math.round(245 + s * 10);
+      g = Math.round(158 - s * 128);
+      b = Math.round(20 - s * 15);
+    }
+    return `rgb(${r}, ${g}, ${b})`;
+  }
+
+  const t = Math.max(0, Math.min(1, value / max));
   // For pressure dimensions, high value = red. For absorption, high value = green.
   // The color scales are already set appropriately in DIMENSION_META.
   const [startHex, endHex] = colorScale;
