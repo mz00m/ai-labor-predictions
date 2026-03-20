@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 const ZONES = [
   {
     range: "1 - 3",
@@ -89,6 +91,33 @@ export default function NetRiskScale() {
             </p>
           </div>
         ))}
+      </div>
+
+      {/* Task visualizer CTA */}
+      <div className="mt-4 rounded-lg border border-black/[0.06] bg-[var(--accent-light)] px-4 py-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+        <p className="text-[12px] text-[var(--muted)] leading-snug">
+          Want to see how AI affects the specific tasks in your job, not just the
+          occupation group?
+        </p>
+        <Link
+          href="/task-visualizer"
+          className="inline-flex items-center gap-1.5 text-[13px] font-bold text-[var(--accent)] hover:underline whitespace-nowrap flex-shrink-0"
+        >
+          Explore by job title
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 14 14"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M5 3L9.5 7L5 11" />
+          </svg>
+        </Link>
       </div>
     </div>
   );
