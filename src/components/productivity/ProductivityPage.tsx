@@ -5,7 +5,6 @@ import ResearchEvidence from "@/components/ResearchEvidence";
 import ProductivityPredictions from "@/components/ProductivityPredictions";
 import ProductivityPaths from "@/components/signals/ProductivityPaths";
 import ShareSectionBar from "@/components/ShareSectionBar";
-import DemandSliderViz from "@/components/demand-elasticity/DemandSliderViz";
 
 export default function ProductivityPage() {
   return (
@@ -165,43 +164,20 @@ export default function ProductivityPage() {
         <ProductivityPredictions />
       </section>
 
-      {/* ───── Section 5: When Productivity Creates Demand ───── */}
+      {/* ───── Section 5: Demand Elasticity ───── */}
       <section className="mt-20">
-        <div className="max-w-3xl mb-2">
+        <div className="max-w-3xl">
           <SectionLabel number="05" title="When productivity creates demand" />
-          <div className="space-y-4 text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
-            <p>
-              There&rsquo;s a critical counterforce to displacement that most
-              forecasts underweight: when AI makes work dramatically cheaper,
-              it can unlock demand that didn&rsquo;t previously exist. ATMs were
-              introduced in the 1970s. By 2010, the US had more bank tellers
-              than before ATMs existed &mdash; because cheaper branches meant
-              more branches.
-            </p>
-            <p>
-              This is{" "}
-              <strong className="text-[var(--foreground)]">
-                Jevons Paradox
-              </strong>{" "}
-              applied to labor. The effect depends on two conditions: whether
-              demand is elastic (cheaper output = more demand) and whether AI
-              exposure is high enough to meaningfully change the cost equation.
-              Where both hold &mdash; software engineering, creative services,
-              data analysis &mdash; AI exposure may predict{" "}
-              <em>job growth</em>, not displacement.
-            </p>
-          </div>
-        </div>
-
-        {/* Compact demand slider */}
-        <DemandSliderViz compact />
-
-        <div className="max-w-3xl mt-6">
+          <p className="text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
+            There&rsquo;s a critical counterforce to displacement that most
+            forecasts underweight: when AI makes work dramatically cheaper,
+            it can unlock demand that didn&rsquo;t previously exist.
+          </p>
           <Link
             href="/demand-elasticity"
             className="inline-flex items-center gap-1.5 text-[13px] font-bold text-[var(--accent)] hover:underline"
           >
-            Read the full demand elasticity explainer
+            Explore demand elasticity and Jevons Paradox
             <svg
               width="14"
               height="14"
