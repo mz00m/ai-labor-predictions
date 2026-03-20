@@ -164,12 +164,12 @@ export function scoreKarpathyOccupations(
       const pressureWeightSum = WEIGHTS.technicalExposure + WEIGHTS.adoptionSpeed;
       const absorptionWeightSum = WEIGHTS.adaptability + WEIGHTS.demandElasticity + WEIGHTS.complementarity;
       const pressureNorm =
-        ((WEIGHTS.technicalExposure * technicalExposure +
-          WEIGHTS.adoptionSpeed * adoptionSpeed) / pressureWeightSum) * 10;
+        (WEIGHTS.technicalExposure * technicalExposure +
+          WEIGHTS.adoptionSpeed * adoptionSpeed) / pressureWeightSum;
       const absorptionNorm =
-        ((WEIGHTS.adaptability * adaptability +
+        (WEIGHTS.adaptability * adaptability +
           WEIGHTS.demandElasticity * demandElasticity +
-          WEIGHTS.complementarity * complementarity) / absorptionWeightSum) * 10;
+          WEIGHTS.complementarity * complementarity) / absorptionWeightSum;
       const netRisk = Math.max(0, Math.min(10, (pressureNorm - absorptionNorm + 10) / 2));
 
       return {
