@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "Evaluating the Impact of AI on the Labor Market: January/February CPS Update",
+      "author": "Gimbel, Kendall, Kulsakdinun",
+      "publisher": "The Budget Lab at Yale",
+      "date": "2026-03-19",
+      "url": "https://budgetlab.yale.edu/research/evaluating-impact-ai-labor-market-januaryfebruary-cps-update",
+      "takeaway": "Jan/Feb 2026 CPS data and Anthropic's new 'Observed Exposure' metric do not suggest any substantial AI labor market impact. Occupational dissimilarity, industry dissimilarity, and all exposure/usage metrics remain flat, within historical ranges, or on pre-existing trends. OpenAI exposure quintiles stable. No relationship between automation/augmentation measures and employment or unemployment changes.",
+      "weekFeatured": "2026-03-20",
+      "tier": 1
+    },
+    {
       "title": "The Best Guide to the AI Revolution May Be Victorian Fiction",
       "author": "Martha Gimbel",
       "publisher": "Bloomberg",

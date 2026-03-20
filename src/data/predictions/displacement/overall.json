@@ -261,6 +261,18 @@
       "metricType": "survey",
       "sampleSize": 748,
       "dataType": "projected"
+    },
+    {
+      "date": "2026-03-19",
+      "value": 0,
+      "confidenceLow": 0,
+      "confidenceHigh": 1,
+      "sourceIds": [
+        "yale-budgetlab-cps-update-2026"
+      ],
+      "evidenceTier": 1,
+      "metricType": "employment",
+      "dataType": "observed"
     }
   ],
   "overlays": [
@@ -1064,6 +1076,24 @@
       ],
       "evidenceTier": 2,
       "label": "GS Research (Briggs): AI adoption over 10yr = +0.6pp unemployment rate"
+    },
+    {
+      "date": "2026-03-19",
+      "direction": "neutral",
+      "sourceIds": [
+        "yale-budgetlab-cps-update-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Yale Budget Lab: Jan/Feb 2026 CPS shows no AI displacement; occupational dissimilarity flat"
+    },
+    {
+      "date": "2026-03-19",
+      "direction": "neutral",
+      "sourceIds": [
+        "yale-budgetlab-cps-update-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Yale Budget Lab: Anthropic 'Observed Exposure' metric shows stability, not disruption"
     }
   ],
   "sources": [
@@ -1945,6 +1975,16 @@
       "datePublished": "2026-03-18",
       "excerpt": "If it takes place over a decade, Goldman Sachs Research expects to see a 0.6 percentage point increase in the unemployment rate.",
       "dateAdded": "2026-03-19"
+    },
+    {
+      "id": "yale-budgetlab-cps-update-2026",
+      "title": "Evaluating the Impact of AI on the Labor Market: January/February CPS Update",
+      "url": "https://budgetlab.yale.edu/research/evaluating-impact-ai-labor-market-januaryfebruary-cps-update",
+      "publisher": "The Budget Lab at Yale",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-19",
+      "excerpt": "The addition of the January and February 2026 CPS and the introduction of Anthropic's 'Observed Exposure' metrics do not suggest any substantial changes. Occupational dissimilarity, industry dissimilarity, and exposure and usage metrics all remain flat, lie within historical ranges, or continue along pre-existing trends.",
+      "dateAdded": "2026-03-20"
     }
   ]
 }
