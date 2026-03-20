@@ -135,9 +135,12 @@ function interpolateColor(
   value: number,
   max: number,
   colorScale: [string, string],
-  isPressure: boolean
+  isPressure: boolean,
+  dim?: string
 ): string {
-  const t = Math.max(0, Math.min(1, value / max));
+  // For netRisk: below 5 = green (start color), above 5 = interpolate toward red
+  const raw = Math.max(0, Math.min(1, value / max));
+  const t = dim === "netRisk" ? (raw <= 0.5 ? 0 : (raw - 0.5) * 2) : raw;
   // For pressure dimensions, high value = red. For absorption, high value = green.
   // The color scales are already set appropriately in DIMENSION_META.
   const [startHex, endHex] = colorScale;
@@ -205,7 +208,7 @@ export default function EnhancedTreemap({
       >
         {rects.map((rect) => {
           const score = rect.occ.scores[activeDimension];
-          const color = interpolateColor(score, 10, dimMeta.colorScale, dimMeta.isPressure);
+          const color = interpolateColor(score, 10, dimMeta.colorScale, dimMeta.isPressure, activeDimension);
           const isHovered = hoveredId === rect.occ.group.id;
           const isSelected = selected?.group.id === rect.occ.group.id;
           const showLabel = rect.w > 50 && rect.h > 30;

@@ -66,8 +66,8 @@ function boostContrast(t: number): number {
   return Math.pow(t, 0.55);
 }
 
-function greenRedRGB(t: number): [number, number, number] {
-  const b = boostContrast(t);
+function greenRedRGB(t: number, skipBoost: boolean = false): [number, number, number] {
+  const b = skipBoost ? t : boostContrast(t);
   let r: number, g: number, bl: number;
   if (b < 0.5) {
     const s = b / 0.5;
@@ -89,10 +89,13 @@ function colorCSS(score: number, dim: DimensionKey, alpha: number = 1): string {
     dim === "adaptability" ||
     dim === "demandElasticity" ||
     dim === "complementarity";
-  // netRisk scores now span the full 0-10 range after normalization fix,
-  // so skip the contrast boost that was designed for clustered high scores.
-  const adjusted = dim === "netRisk" ? t : boostContrast(t);
-  const [r, g, b] = greenRedRGB(flipped ? 1 - adjusted : adjusted);
+  if (dim === "netRisk") {
+    // Below 5 = green, 5 = midpoint, above 5 = yellow→red
+    const remapped = t <= 0.5 ? 0 : (t - 0.5) * 2;
+    const [r, g, b] = greenRedRGB(flipped ? 1 - remapped : remapped, true);
+    return `rgba(${r},${g},${b},${alpha})`;
+  }
+  const [r, g, b] = greenRedRGB(flipped ? 1 - t : t);
   return `rgba(${r},${g},${b},${alpha})`;
 }
 
