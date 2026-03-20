@@ -23,8 +23,10 @@ export default function HeroStatWobble({
 }: HeroStatWobbleProps) {
   const [wobbling, setWobbling] = useState(false);
   const [displayValue, setDisplayValue] = useState<string | null>(null);
+  const [countUpDone, setCountUpDone] = useState(false);
   const dwellTimer = useRef<ReturnType<typeof setTimeout>>();
   const rafRef = useRef<number>();
+  const countUpRaf = useRef<number>();
   const startTimeRef = useRef(0);
   const reducedMotionRef = useRef(false);
 
@@ -35,8 +37,42 @@ export default function HeroStatWobble({
     return () => {
       if (dwellTimer.current) clearTimeout(dwellTimer.current);
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
+      if (countUpRaf.current) cancelAnimationFrame(countUpRaf.current);
     };
   }, []);
+
+  // Count-up animation on mount
+  useEffect(() => {
+    if (reducedMotionRef.current) {
+      setCountUpDone(true);
+      return;
+    }
+
+    const duration = 800;
+    let start: number | null = null;
+
+    const tick = (now: number) => {
+      if (!start) start = now;
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      // Ease-out cubic
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = Math.round(eased * center);
+      setDisplayValue(String(current));
+
+      if (progress < 1) {
+        countUpRaf.current = requestAnimationFrame(tick);
+      } else {
+        setDisplayValue(null);
+        setCountUpDone(true);
+      }
+    };
+
+    countUpRaf.current = requestAnimationFrame(tick);
+    return () => {
+      if (countUpRaf.current) cancelAnimationFrame(countUpRaf.current);
+    };
+  }, [center]);
 
   const startOscillation = useCallback(() => {
     if (reducedMotionRef.current) {
@@ -103,6 +139,7 @@ export default function HeroStatWobble({
   }, [wobbling, displayValue, center]);
 
   const handleMouseEnter = () => {
+    if (!countUpDone) return;
     dwellTimer.current = setTimeout(startOscillation, 800);
   };
 
