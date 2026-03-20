@@ -89,7 +89,10 @@ function colorCSS(score: number, dim: DimensionKey, alpha: number = 1): string {
     dim === "adaptability" ||
     dim === "demandElasticity" ||
     dim === "complementarity";
-  const [r, g, b] = greenRedRGB(flipped ? 1 - t : t);
+  // netRisk scores now span the full 0-10 range after normalization fix,
+  // so skip the contrast boost that was designed for clustered high scores.
+  const adjusted = dim === "netRisk" ? t : boostContrast(t);
+  const [r, g, b] = greenRedRGB(flipped ? 1 - adjusted : adjusted);
   return `rgba(${r},${g},${b},${alpha})`;
 }
 
