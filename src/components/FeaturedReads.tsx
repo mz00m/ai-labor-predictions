@@ -10,6 +10,15 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Martha Gimbel (Bloomberg)",
+    title: "The Best Guide to the AI Revolution May Be Victorian Fiction",
+    summary:
+      "Industrial Revolution novels illuminate what living through epochal technological change feels like. Weavers were the white-collar workers of their day -- real wages fell by half in 14 years.",
+    date: "Mar 20",
+    url: "https://www.bloomberg.com/news/articles/2026-03-20/to-understand-ai-s-future-read-dickens-bronte-industrial-revolution-novels",
+    accent: "border-l-cyan-500",
+  },
+  {
     author: "Sahaj Garg (Wispr)",
     title: "The Displacement of Cognitive Labor and What Comes After",
     summary:
@@ -44,15 +53,6 @@ const articles: Article[] = [
     date: "Mar 16",
     url: "https://www.washingtonpost.com/technology/interactive/2026/jobs-most-affected-ai-automation/",
     accent: "border-l-rose-500",
-  },
-  {
-    author: "Noah Smith (Noahpinion)",
-    title: "The Future Isn\u2019t What It Used to Be",
-    summary:
-      "American optimism about the future has declined sharply as AI uncertainty, political chaos, and geopolitical risks make the future a blank wall of fog.",
-    date: "Mar 15",
-    url: "https://www.noahpinion.blog/p/the-future-isnt-what-it-used-to-be",
-    accent: "border-l-emerald-500",
   },
 ];
 

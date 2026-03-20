@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "The Best Guide to the AI Revolution May Be Victorian Fiction",
+      "author": "Martha Gimbel",
+      "publisher": "Bloomberg",
+      "date": "2026-03-20",
+      "url": "https://www.bloomberg.com/news/articles/2026-03-20/to-understand-ai-s-future-read-dickens-bronte-industrial-revolution-novels",
+      "takeaway": "Industrial Revolution novels illuminate what living through epochal technological change feels like. Handloom weavers -- the white-collar workers of their day -- saw real wages fall by half between 1806 and 1820. Recommends Shirley (Bronte), North and South (Gaskell), and A Christmas Carol (Dickens) as guides to understanding technological disruption, labor unrest, and society's response to those who lost out. AI transition may be faster and bigger, but the human dynamics are strikingly familiar.",
+      "weekFeatured": "2026-03-20",
+      "tier": 3
+    },
+    {
       "title": "The Displacement of Cognitive Labor and What Comes After",
       "author": "Sahaj Garg",
       "publisher": "Personal Blog (Wispr CTO)",
