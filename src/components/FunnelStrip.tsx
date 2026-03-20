@@ -36,7 +36,7 @@ const sectionMeta = [
   { metric: "Employee productivity", barColor: "#B8D4F0", barHover: "#9AC2E8" }, // soft blue
   { metric: "Posting decline", barColor: "#E8C8A0", barHover: "#DDB580" },       // warm amber
   { metric: "Projected displacement", barColor: "#E8A090", barHover: "#DE8878" }, // salmon approach
-  { metric: "Measured job loss", barColor: "#F66B5C", barHover: "#E05A4C" },      // hero red
+  { metric: "Measured job loss", barColor: "#A7F3D0", barHover: "#6EE7B7" },      // emerald — ~0% actual loss
 ];
 
 // Flatten all bars in display order
