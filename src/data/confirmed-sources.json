@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-19",
-  "totalSources": 458,
-  "verifiedCount": 458,
+  "totalSources": 460,
+  "verifiedCount": 460,
   "sources": {
     "goldman-briggs-us-labor-2026": {
       "id": "goldman-briggs-us-labor-2026",
@@ -12,7 +12,11 @@
       "evidenceTier": 2,
       "datePublished": "2026-03-18",
       "excerpt": "6-7% of workers will be displaced during that transition period. In the US, AI can potentially automate tasks that account for 25% of all work hours. Goldman Sachs Research expects to see a 0.6 percentage point increase in the unemployment rate over a decade.",
-      "usedIn": ["overall-us-displacement", "workforce-ai-exposure", "tech-sector-displacement"],
+      "usedIn": [
+        "overall-us-displacement",
+        "workforce-ai-exposure",
+        "tech-sector-displacement"
+      ],
       "verified": true,
       "synthetic": false
     },
@@ -36,7 +40,12 @@
       "evidenceTier": 1,
       "datePublished": "2026-03-18",
       "excerpt": "average individual wages are roughly unchanged for incumbents of occupations with no AI exposure, rise by around 4% at moderate exposure, and drop by as much as 35% for workers in the most exposed occupations",
-      "usedIn": ["entry-level-wage-impact", "median-wage-impact", "white-collar-professional-displacement", "high-skill-wage-premium"],
+      "usedIn": [
+        "entry-level-wage-impact",
+        "median-wage-impact",
+        "white-collar-professional-displacement",
+        "high-skill-wage-premium"
+      ],
       "verified": true,
       "synthetic": false
     },
@@ -1625,7 +1634,8 @@
       "datePublished": "2026-01-15",
       "excerpt": "Unemployment risk in AI-exposed occupations rose beginning early 2022; graduates with AI-exposed curricula have higher first-job pay and shorter job searches post-ChatGPT.",
       "usedIn": [
-        "overall-us-displacement"
+        "overall-us-displacement",
+        "white-collar-professional-displacement"
       ],
       "verified": true
     },
@@ -5401,7 +5411,8 @@
       "datePublished": "2025-03-05",
       "excerpt": "GenAI access leads to increased incorporated entrepreneurship for individuals with higher GenAI exposure -- effect specific to STEM population. Mechanism tests support the augmentation channel.",
       "usedIn": [
-        "ai-business-formation"
+        "ai-business-formation",
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false
