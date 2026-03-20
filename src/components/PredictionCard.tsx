@@ -26,10 +26,12 @@ export default function PredictionCard({
       ? "text-green-500"
       : "text-gray-400";
 
-  // Show range + disagreement disclaimer when source spread is wide
+  // Show range + disagreement disclaimer when source spread is wide or many sources
   const spread = agg.max - agg.min;
   const meanAbs = Math.abs(agg.mean) || 1;
-  const hasSignificantDisagreement = agg.min !== agg.max && spread / meanAbs > 0.5;
+  const sourceCount = prediction.history.filter((d) => selectedTiers.includes(d.evidenceTier)).length;
+  const hasSignificantDisagreement = agg.min !== agg.max && (spread / meanAbs > 0.5 || sourceCount > 5);
+  const isLowConfidence = sourceCount > 0 && sourceCount < 6;
 
   // Magnetic tilt — subtle 3D depth on hover
   const { ref: tiltRef, style: tiltStyle } = useMagneticTilt<HTMLDivElement>({
@@ -67,7 +69,15 @@ export default function PredictionCard({
           <span className="text-xs font-medium uppercase tracking-wide text-gray-500 dark:text-gray-400">
             {prediction.category === "displacement"
               ? "Job Displacement"
-              : "Wage Impact"}
+              : prediction.category === "wages"
+                ? "Wage Impact"
+                : prediction.category === "adoption"
+                  ? "AI Adoption"
+                  : prediction.category === "signals"
+                    ? "Signal"
+                    : prediction.category === "exposure"
+                      ? "AI Exposure"
+                      : prediction.category}
           </span>
           <span className="text-xs text-gray-400 dark:text-gray-500">
             {prediction.timeHorizon}
@@ -111,6 +121,11 @@ export default function PredictionCard({
         )}
         <p className={`text-xs mt-1 ${hasSignificantDisagreement ? "text-[#d97706]" : "text-gray-500 dark:text-gray-400"}`}>
           {prediction.sources.length} sources{hasSignificantDisagreement ? " — significant disagreement" : ""}
+          {isLowConfidence && (
+            <span className="ml-1.5 inline-block text-[10px] font-medium text-[#d97706] bg-[#d97706]/[0.08] rounded px-1.5 py-0.5">
+              Low confidence
+            </span>
+          )}
         </p>
       </div>
     </Link>
