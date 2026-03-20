@@ -162,7 +162,7 @@ export const OCCUPATION_GROUPS: OccupationGroup[] = [
     { "information-processing": 0.15, "communication": 0.10, "analysis-decision": 0.15,
       "creative-generative": 0.10, "coordination-management": 0.05, "physical-manual": 0.00,
       "interpersonal": 0.10, "technical-specialized": 0.35 }, 26,
-    0.734, { netLiquidWealth: 0.82, skillTransferability: 0.80, geographicDensity: 0.78, ageFraction55Plus: 0.68 }, 0.400),
+    0.800, { netLiquidWealth: 0.82, skillTransferability: 0.80, geographicDensity: 0.78, ageFraction55Plus: 0.68 }, 0.400),
 
   makeGroup("architecture-engineering", "17-0000", "Architecture and Engineering", "Architecture & Engineering",
     2567, 45.37, 94370, "high",
@@ -459,7 +459,7 @@ export const DEMAND_ELASTICITY: Record<string, { elasticity: DemandElasticity; r
   // Moderate: some expansion, but not unlimited
   "management":               { elasticity: "moderate", rationale: "Better management tools improve quality but management demand is bounded by org size" },
   "business-financial":       { elasticity: "moderate", rationale: "Some unmet demand (SMB accounting, financial planning), but market partially saturated" },
-  "computer-math":            { elasticity: "moderate", rationale: "Software demand is large but developer productivity gains may reduce headcount needs" },
+  "computer-math":            { elasticity: "high", rationale: "Strong Jevons Paradox: every productivity wave (compilers, cloud, open source) expanded total software demand; vast latent demand for custom tooling and digital products remains cost-prohibitive" },
   "legal":                    { elasticity: "moderate", rationale: "Large unmet demand for SMB/individual legal services, but total legal market has limits" },
   "education":                { elasticity: "moderate", rationale: "Personalized tutoring demand is high, but institutional education is supply-constrained" },
   "healthcare-practitioners": { elasticity: "moderate", rationale: "Enormous unmet healthcare demand, but regulated supply limits expansion speed" },
