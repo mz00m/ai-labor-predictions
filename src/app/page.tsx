@@ -74,6 +74,8 @@ export default function Home() {
           <HeroTriad
             projectedJobLoss={heroStats.projectedJobLoss}
             projectedEstimateCount={heroStats.projectedEstimateCount}
+            projectedLow={heroStats.projectedLow}
+            projectedHigh={heroStats.projectedHigh}
             measuredJobLoss={heroStats.measuredJobLoss}
           />
         </div>

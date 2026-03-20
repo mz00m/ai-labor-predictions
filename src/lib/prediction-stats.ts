@@ -155,12 +155,26 @@ function computeFromSorted(
     mean = Math.round((weightedSum / totalWeight) * 10) / 10;
   }
 
+  // Trend: for "latest" aggregation (time-series), compare first/last directly.
+  // For "weighted" aggregation, use only observed data points so the trend
+  // reflects real-world change, not source accretion from new projections.
   let trend: "up" | "down" | "flat" = "flat";
-  if (points.length >= 2) {
-    const first = points[0].value;
-    const last = points[points.length - 1].value;
-    if (last > first) trend = "up";
-    else if (last < first) trend = "down";
+  if (useLatest) {
+    if (points.length >= 2) {
+      const first = points[0].value;
+      const last = points[points.length - 1].value;
+      if (last > first) trend = "up";
+      else if (last < first) trend = "down";
+    }
+  } else {
+    const observed = points.filter((p) => p.dataType === "observed");
+    if (observed.length >= 2) {
+      const first = observed[0].value;
+      const last = observed[observed.length - 1].value;
+      if (last > first) trend = "up";
+      else if (last < first) trend = "down";
+    }
+    // If no observed data, trend stays "flat" — projections don't imply trajectory
   }
 
   const trendIsBad =

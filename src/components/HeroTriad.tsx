@@ -9,6 +9,8 @@ import HeroStatWobble from "./HeroStatWobble";
 interface HeroTriadProps {
   projectedJobLoss: number;
   projectedEstimateCount: number;
+  projectedLow: number;
+  projectedHigh: number;
   measuredJobLoss: number;
 }
 
@@ -22,6 +24,8 @@ const maskStyle = {
 export default function HeroTriad({
   projectedJobLoss,
   projectedEstimateCount,
+  projectedLow,
+  projectedHigh,
   measuredJobLoss,
 }: HeroTriadProps) {
   return (
@@ -57,8 +61,8 @@ export default function HeroTriad({
         )}
       </HeroStatWobble>
 
-      {/* Projected job loss — range: 1% to 7% */}
-      <HeroStatWobble center={projectedJobLoss} low={1} high={7}>
+      {/* Projected job loss — range from actual data bounds */}
+      <HeroStatWobble center={projectedJobLoss} low={projectedLow} high={projectedHigh}>
         {(displayValue, wobbling) => (
           <a
             href="/predictions/overall-us-displacement"
@@ -82,7 +86,7 @@ export default function HeroTriad({
               Projected job loss
             </p>
             <p className="relative z-[2] text-[10px] sm:text-[11px] text-[var(--muted)] opacity-50 leading-snug">
-              Weighted avg of {projectedEstimateCount} estimates
+              Weighted avg of {projectedEstimateCount} data points
             </p>
           </a>
         )}

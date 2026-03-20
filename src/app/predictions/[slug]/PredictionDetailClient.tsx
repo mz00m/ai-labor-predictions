@@ -154,25 +154,56 @@ export default function PredictionDetailPage() {
         </h1>
 
         {/* Big number + source range + trend arrow */}
-        <div className="flex items-baseline gap-4 mb-4">
-          <span className="stat-number text-[56px] sm:text-[72px] font-black text-[var(--foreground)] leading-none">
-            {agg.mean > 0 && prediction.category === "wages" ? "+" : ""}
-            {Number.isInteger(agg.mean) ? agg.mean : agg.mean.toFixed(1)}
-            <span className="text-[24px] font-normal text-[var(--muted)] ml-1">
-              {prediction.unit.includes("%") ? "%" : ` ${prediction.unit}`}
-            </span>
-          </span>
-          {agg.min !== agg.max && (
-            <span className="text-[18px] font-medium text-[var(--muted)]" style={{ opacity: 0.7 }}>
-              {agg.min}–{agg.max}{prediction.unit.includes("%") ? "%" : ""}
-            </span>
-          )}
-          {agg.trend !== "flat" && (
-            <span className={`text-[16px] font-medium ${trendColorClass}`} style={{ opacity: 0.6 }}>
-              Trending {agg.trend === "up" ? "▲" : "▼"}
-            </span>
-          )}
-        </div>
+        {(() => {
+          const spread = agg.max - agg.min;
+          const meanAbs = Math.abs(agg.mean) || 1;
+          const wideDisagreement = spread / meanAbs > 1.5;
+          const unitSuffix = prediction.unit.includes("%") ? "%" : "";
+
+          if (wideDisagreement && agg.min !== agg.max) {
+            // Wide disagreement: lead with range, show weighted avg as secondary
+            return (
+              <div className="mb-4">
+                <div className="flex items-baseline gap-3">
+                  <span className="stat-number text-[56px] sm:text-[72px] font-black text-[var(--foreground)] leading-none">
+                    {agg.min}–{agg.max}
+                    <span className="text-[24px] font-normal text-[var(--muted)] ml-1">{unitSuffix}</span>
+                  </span>
+                  {agg.trend !== "flat" && (
+                    <span className={`text-[16px] font-medium ${trendColorClass}`} style={{ opacity: 0.6 }}>
+                      Trending {agg.trend === "up" ? "▲" : "▼"}
+                    </span>
+                  )}
+                </div>
+                <p className="text-[15px] text-[var(--muted)] mt-1">
+                  Weighted avg: {agg.mean > 0 && prediction.category === "wages" ? "+" : ""}
+                  {Number.isInteger(agg.mean) ? agg.mean : agg.mean.toFixed(1)}{unitSuffix}
+                  <span className="ml-2 text-[13px] text-[#d97706]">Sources measure different things</span>
+                </p>
+              </div>
+            );
+          }
+
+          return (
+            <div className="flex items-baseline gap-4 mb-4">
+              <span className="stat-number text-[56px] sm:text-[72px] font-black text-[var(--foreground)] leading-none">
+                {agg.mean > 0 && prediction.category === "wages" ? "+" : ""}
+                {Number.isInteger(agg.mean) ? agg.mean : agg.mean.toFixed(1)}
+                <span className="text-[24px] font-normal text-[var(--muted)] ml-1">{unitSuffix}</span>
+              </span>
+              {agg.min !== agg.max && (
+                <span className="text-[18px] font-medium text-[var(--muted)]" style={{ opacity: 0.7 }}>
+                  {agg.min}–{agg.max}{unitSuffix}
+                </span>
+              )}
+              {agg.trend !== "flat" && (
+                <span className={`text-[16px] font-medium ${trendColorClass}`} style={{ opacity: 0.6 }}>
+                  Trending {agg.trend === "up" ? "▲" : "▼"}
+                </span>
+              )}
+            </div>
+          );
+        })()}
 
         <p className="text-[16px] text-[var(--muted)] leading-relaxed mb-3 max-w-2xl">
           {contextText}
@@ -261,6 +292,24 @@ export default function PredictionDetailPage() {
         </div>
       )}
 
+      {/* Signal type callout for charts mixing observed and projected data */}
+      {prediction.history.some((d) => d.dataType === "observed") &&
+       prediction.history.some((d) => d.dataType === "projected") && (
+        <div className="border border-[#5C61F6]/20 bg-[#5C61F6]/[0.03] rounded-lg px-5 py-4 max-w-2xl -mt-4">
+          <p className="text-[13px] text-[var(--muted)] leading-relaxed">
+            <span className="font-semibold text-[#5C61F6]">Reading this chart:</span>{" "}
+            <span className="inline-flex items-center gap-1">
+              <svg width="16" height="2" className="inline"><line x1="0" y1="1" x2="16" y2="1" stroke="#5C61F6" strokeWidth="2" /></svg>
+              Solid line
+            </span>{" "}= observed employment data.{" "}
+            <span className="inline-flex items-center gap-1">
+              <svg width="16" height="2" className="inline"><line x1="0" y1="1" x2="16" y2="1" stroke="#5C61F6" strokeWidth="2" strokeDasharray="4 2" opacity="0.7" /></svg>
+              Dashed line
+            </span>{" "}= forward-looking projections. These are fundamentally different signal types — observed data near 0% does not contradict projections of 5-12%.
+          </p>
+        </div>
+      )}
+
       {/* Chart */}
       <section>
         {prediction.slug === "genai-work-adoption" ? (
@@ -282,7 +331,7 @@ export default function PredictionDetailPage() {
               yAxisMax={prediction.slug === "workforce-ai-exposure" ? 100 : prediction.slug === "earnings-call-ai-mentions" ? 100 : prediction.slug === "customer-service-automation" ? 75 : prediction.slug === "ai-adoption-rate" ? 75 : prediction.slug === "entry-level-wage-impact" || prediction.slug === "freelancer-rate-impact" ? 5 : prediction.slug === "tech-sector-displacement" ? 35 : prediction.slug === "median-wage-impact" ? 10 : prediction.slug === "white-collar-professional-displacement" || prediction.slug === "overall-us-displacement" ? 25 : undefined}
               yAxisMin={prediction.slug === "entry-level-wage-impact" || prediction.slug === "freelancer-rate-impact" ? -50 : prediction.slug === "tech-sector-displacement" ? -20 : prediction.slug === "median-wage-impact" ? -10 : prediction.slug === "white-collar-professional-displacement" || prediction.slug === "overall-us-displacement" ? -25 : undefined}
               category={prediction.category}
-              showTrendLine={prediction.slug !== "tech-sector-displacement"}
+              showTrendLine={prediction.aggregationMethod === "latest"}
 
             />
             <p className="text-[12px] text-[var(--muted)] mt-4 opacity-70">

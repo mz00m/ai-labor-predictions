@@ -66,6 +66,8 @@ export function getLastUpdated(): string {
 export interface HeroStats {
   projectedJobLoss: number;
   projectedEstimateCount: number;
+  projectedLow: number;
+  projectedHigh: number;
   measuredJobLoss: number;
 }
 
@@ -107,6 +109,8 @@ export function getHeroStats(): HeroStats {
   return {
     projectedJobLoss: Math.round(Math.abs(agg.mean)),
     projectedEstimateCount: estimateCount,
+    projectedLow: Math.round(Math.abs(agg.min)),
+    projectedHigh: Math.round(Math.abs(agg.max)),
     measuredJobLoss: Math.abs(measuredJobLoss),
   };
 }

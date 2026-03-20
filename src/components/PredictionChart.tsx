@@ -350,6 +350,11 @@ export default function PredictionChart({
     x: number;
     y: number;
   } | null>(null);
+  // Collapse overlays on dense charts: show only 10 most recent by default
+  const OVERLAY_COLLAPSE_THRESHOLD = 20;
+  const OVERLAY_VISIBLE_COUNT = 10;
+  const totalOverlayCount = (overlays ?? []).length;
+  const [overlaysExpanded, setOverlaysExpanded] = useState(totalOverlayCount <= OVERLAY_COLLAPSE_THRESHOLD);
 
   const handleOverlayMouseEnter = useCallback(
     (overlay: OverlayTooltipData, e: React.MouseEvent) => {
@@ -469,9 +474,17 @@ export default function PredictionChart({
   const yMax = yAxisMax;
 
   // Process overlay bands (qualitative directional studies)
-  const filteredOverlays = (overlays ?? []).filter((o) =>
+  const allFilteredOverlays = (overlays ?? []).filter((o) =>
     selectedTiers.includes(o.evidenceTier)
   );
+  // When collapsed, show only the N most recent overlays
+  const filteredOverlays = overlaysExpanded
+    ? allFilteredOverlays
+    : allFilteredOverlays
+        .slice()
+        .sort((a, b) => b.date.localeCompare(a.date))
+        .slice(0, OVERLAY_VISIBLE_COUNT)
+        .sort((a, b) => a.date.localeCompare(b.date));
   const directionOrder: Record<string, number> = { down: 0, neutral: 1, up: 2 };
   const overlayData = filteredOverlays.map((o) => {
     const ts = parseISO(o.date).getTime();
@@ -937,6 +950,17 @@ export default function PredictionChart({
             );
           })}
         </div>
+      )}
+      {/* Overlay expand/collapse toggle for dense charts */}
+      {!compact && totalOverlayCount > OVERLAY_COLLAPSE_THRESHOLD && (
+        <button
+          onClick={() => setOverlaysExpanded(!overlaysExpanded)}
+          className="mt-2 px-1 text-[11px] font-medium text-[var(--accent)] hover:underline"
+        >
+          {overlaysExpanded
+            ? `Collapse overlay signals (${totalOverlayCount} total)`
+            : `Show all ${totalOverlayCount} overlay signals (${OVERLAY_VISIBLE_COUNT} most recent shown)`}
+        </button>
       )}
     </div>
   );
