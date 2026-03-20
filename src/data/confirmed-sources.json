@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-20",
-  "totalSources": 461,
-  "verifiedCount": 461,
+  "totalSources": 462,
+  "verifiedCount": 462,
   "sources": {
     "goldman-briggs-us-labor-2026": {
       "id": "goldman-briggs-us-labor-2026",
@@ -6398,6 +6398,20 @@
       "usedIn": [
         "overall-us-displacement",
         "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "mokyr-vickers-ziebarth-tech-anxiety-2015": {
+      "id": "mokyr-vickers-ziebarth-tech-anxiety-2015",
+      "title": "The History of Technological Anxiety and the Future of Economic Growth: Is This Time Different?",
+      "url": "https://pubs.aeaweb.org/doi/pdfplus/10.1257/jep.29.3.31",
+      "publisher": "Journal of Economic Perspectives (Mokyr, Vickers, Ziebarth)",
+      "evidenceTier": 1,
+      "datePublished": "2015-07-01",
+      "excerpt": "The evidence is that technological unemployment did not occur on a large scale during the Industrial Revolution. The fears of the Luddites that machinery would impoverish workers were not realized. Predictions of widespread technological unemployment were, by and large, wrong, but we should not trivialize the costs borne by the many who were actually displaced.",
+      "usedIn": [
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false

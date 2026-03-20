@@ -1094,6 +1094,15 @@
       ],
       "evidenceTier": 1,
       "label": "Yale Budget Lab: Anthropic 'Observed Exposure' metric shows stability, not disruption"
+    },
+    {
+      "date": "2015-07-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "mokyr-vickers-ziebarth-tech-anxiety-2015"
+      ],
+      "evidenceTier": 1,
+      "label": "JEP (Mokyr et al.): Every GPT caused anxiety but tech unemployment was 'largely an exaggerated issue'"
     }
   ],
   "sources": [
@@ -1984,6 +1993,16 @@
       "evidenceTier": 1,
       "datePublished": "2026-03-19",
       "excerpt": "The addition of the January and February 2026 CPS and the introduction of Anthropic's 'Observed Exposure' metrics do not suggest any substantial changes. Occupational dissimilarity, industry dissimilarity, and exposure and usage metrics all remain flat, lie within historical ranges, or continue along pre-existing trends.",
+      "dateAdded": "2026-03-20"
+    },
+    {
+      "id": "mokyr-vickers-ziebarth-tech-anxiety-2015",
+      "title": "The History of Technological Anxiety and the Future of Economic Growth: Is This Time Different?",
+      "url": "https://pubs.aeaweb.org/doi/pdfplus/10.1257/jep.29.3.31",
+      "publisher": "Journal of Economic Perspectives (Mokyr, Vickers, Ziebarth)",
+      "evidenceTier": 1,
+      "datePublished": "2015-07-01",
+      "excerpt": "The evidence is that technological unemployment did not occur on a large scale during the Industrial Revolution. The fears of the Luddites that machinery would impoverish workers were not realized, and the main reason is well understood: mechanization could only replace a limited number of human activities, while technological change increased the demand for other types of labor that were complementary to the capital goods embodied in the new technologies.",
       "dateAdded": "2026-03-20"
     }
   ]

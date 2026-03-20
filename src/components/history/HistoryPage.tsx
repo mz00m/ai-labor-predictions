@@ -357,6 +357,45 @@ export default function HistoryPage() {
         </div>
       </section>
 
+      {/* ───── Key Sources ───── */}
+      <section className="mb-12">
+        <div className="border-t border-black/[0.06] pt-8">
+          <p className="text-[12px] font-bold uppercase tracking-widest text-[var(--muted)] mb-4">
+            Key Sources
+          </p>
+          <div className="space-y-4">
+            <SourceCard
+              title="The History of Technological Anxiety and the Future of Economic Growth: Is This Time Different?"
+              authors="Joel Mokyr, Chris Vickers, Nicolas L. Ziebarth"
+              journal="Journal of Economic Perspectives, Vol. 29, No. 3 (2015)"
+              url="https://pubs.aeaweb.org/doi/pdfplus/10.1257/jep.29.3.31"
+              note="The anchor reference for this page. Surveys 250 years of technological anxiety across three recurring themes: displacement fears, work dehumanization, and stagnation pessimism. Finds that predictions of widespread technological unemployment were 'by and large, wrong' but cautions against trivializing the costs borne by those actually displaced."
+            />
+            <SourceCard
+              title="Technological Revolutions and Financial Capital"
+              authors="Carlota Perez"
+              journal="Edward Elgar Publishing (2002)"
+              url="https://en.wikipedia.org/wiki/Technological_Revolutions_and_Financial_Capital"
+              note="The theoretical framework behind the five-phase GPT arc (Section 01). Models technology waves as recurring surges with installation and deployment periods separated by a turning point."
+            />
+            <SourceCard
+              title="The Computer and the Dynamo: An Historical Perspective on the Modern Productivity Paradox"
+              authors="Paul David"
+              journal="American Economic Review, Vol. 80, No. 2 (1990)"
+              url="https://www.jstor.org/stable/2006600"
+              note="Origin of the electrification productivity paradox cited in the Electricity card. Showed that 40 years elapsed between the lightbulb and measurable productivity gains from electrification."
+            />
+            <SourceCard
+              title="Economic Possibilities for our Grandchildren"
+              authors="John Maynard Keynes"
+              journal="Essays in Persuasion (1930)"
+              url="https://www.aspeninstitute.org/wp-content/uploads/files/content/upload/Intro_and_Section_I.pdf"
+              note="Keynes predicted a 15-hour work week within 100 years, driven by compound productivity growth. He saw technological unemployment as 'growing-pains of over-rapid changes' rather than a permanent condition."
+            />
+          </div>
+        </div>
+      </section>
+
       {/* ───── Share ───── */}
       <section className="mb-8">
         <ShareSectionBar
@@ -374,6 +413,39 @@ function SectionLabel({ number }: { number: string }) {
     <span className="text-[11px] font-bold uppercase tracking-widest text-[var(--accent)] mb-3 block">
       {number}
     </span>
+  );
+}
+
+function SourceCard({
+  title,
+  authors,
+  journal,
+  url,
+  note,
+}: {
+  title: string;
+  authors: string;
+  journal: string;
+  url: string;
+  note: string;
+}) {
+  return (
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block border border-black/[0.06] rounded-lg px-5 py-4 hover:border-[var(--accent)]/30 transition-colors group"
+    >
+      <p className="text-[13px] font-bold text-[var(--foreground)] leading-snug group-hover:text-[var(--accent)] transition-colors">
+        {title}
+      </p>
+      <p className="text-[11px] text-[var(--muted)] mt-1">
+        {authors} &middot; {journal}
+      </p>
+      <p className="text-[12px] text-[var(--muted)] leading-relaxed mt-2">
+        {note}
+      </p>
+    </a>
   );
 }
 

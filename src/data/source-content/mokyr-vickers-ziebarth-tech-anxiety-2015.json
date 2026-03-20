@@ -1,0 +1,14 @@
+{
+  "id": "mokyr-vickers-ziebarth-tech-anxiety-2015",
+  "abstract": "Surveys 250 years of technological anxiety from the Industrial Revolution through the present, identifying three recurring themes: fear of mass unemployment from labor substitution, anxiety over the dehumanizing nature of new work, and pessimism that major technological progress is over. Finds that while short-run disruption was real and painful, predictions of permanent technological unemployment were 'by and large, wrong.' Cautions against trivializing transition costs: during the Industrial Revolution, wages took nearly a century to catch up with productivity. Applies these lessons to modern AI anxiety, arguing that comparative advantage will persist but distributional outcomes depend on policy choices.",
+  "keyFindings": [
+    "Technological unemployment during the Industrial Revolution 'did not occur on a large scale' despite widespread fears; the Luddite and Captain Swing riots were driven more by wage disputes than anti-machinery sentiment.",
+    "David Ricardo reversed his own position on machinery in 1821, admitting it could be 'very injurious to the interests of the class of labourers' — one of the earliest recorded changes of mind on automation among economists.",
+    "Annual hours worked per employee in industrialized economies fell from ~2,950 (1870) to ~1,500 (1998), roughly halving over 130 years (Maddison 2001).",
+    "Leisure inequality widened dramatically: people without a high school degree gained ~10 hours of weekly leisure (1965-2003), mostly TV watching, while college graduates gained less than one hour (Aguiar & Hurst 2007).",
+    "Jeremy Rifkin (1995) predicted 'as little as 2% of the world's current labor force will be needed to produce all the goods necessary for total demand' within 30 years — a prediction that has not materialized."
+  ],
+  "methodology": "Historical literature survey covering political economists from Adam Smith and David Ricardo through Keynes, with quantitative evidence from economic history on wages, employment, work hours, and inequality during the Industrial Revolution, electrification, and computerization eras. Published in the Journal of Economic Perspectives (AER family), a peer-reviewed survey journal.",
+  "qualifiers": "The authors acknowledge that AI may be qualitatively different from prior GPTs because it can emulate cognitive capabilities, not just physical ones. They note it is 'frighteningly plausible' that large sections of the labor market could be hollowed out. They also caution that 'in the long run, we are all dead' — the 40-70 year adjustment timeline of prior GPTs is 'politically and humanly unacceptable.'",
+  "fetchedAt": "2026-03-20"
+}
