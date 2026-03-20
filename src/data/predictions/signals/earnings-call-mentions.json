@@ -173,17 +173,6 @@
       ],
       "evidenceTier": 1,
       "metricType": "corporate"
-    },
-    {
-      "date": "2026-02-01",
-      "value": 55,
-      "confidenceLow": 48,
-      "confidenceHigh": 63,
-      "sourceIds": [
-        "fortune-ai-earnings-surge-2026"
-      ],
-      "evidenceTier": 3,
-      "metricType": "corporate"
     }
   ],
   "overlays": [

@@ -5,7 +5,7 @@
   "description": "Measured employment change in occupations classified as highly AI-exposed (top quartile by AI exposure indices). Most studies find near-zero aggregate displacement but a sharp age gradient: young workers (22-30) in AI-exposed roles show -5% to -13% declines across the US, Sweden, and the Netherlands, while older workers are stable or growing. Finland and Denmark report null results. Data points span both age-specific and all-worker measurements.",
   "category": "displacement",
   "unit": "% employment change",
-  "currentValue": -3,
+  "currentValue": -5.2,
   "timeHorizon": "By 2030",
   "history": [
     {
