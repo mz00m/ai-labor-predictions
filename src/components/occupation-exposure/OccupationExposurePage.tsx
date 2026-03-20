@@ -182,9 +182,6 @@ export default function OccupationExposurePage() {
         </header>
       </article>
 
-      {/* ───── Net Risk Scale explainer ───── */}
-      <NetRiskScale />
-
       {/* ───── Full-width treemap section ───── */}
       <section id="treemap" className="mb-12 bg-[#0a0a0f] -mx-6 sm:-mx-10 px-3 sm:px-4 py-6 rounded-xl scroll-mt-4">
         <div className="max-w-[1800px] mx-auto">
@@ -315,6 +312,10 @@ export default function OccupationExposurePage() {
             </div>
           </div>
         )}
+        {/* ───── Net Risk Scale explainer ───── */}
+        <div className="max-w-[1800px] mx-auto mt-6">
+          <NetRiskScale />
+        </div>
       </section>
 
       {/* ───── Back to narrow column for analysis sections ───── */}
