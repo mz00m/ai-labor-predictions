@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "The History of Technological Anxiety and the Future of Economic Growth: Is This Time Different?",
+      "author": "Joel Mokyr, Chris Vickers, Nicolas L. Ziebarth",
+      "publisher": "Journal of Economic Perspectives",
+      "date": "2015-07-01",
+      "url": "https://pubs.aeaweb.org/doi/pdfplus/10.1257/jep.29.3.31",
+      "takeaway": "Surveys 250 years of technological anxiety across three recurring themes: displacement fears, work dehumanization, and stagnation pessimism. Finds predictions of widespread technological unemployment were 'by and large, wrong' but cautions against trivializing costs to the displaced. Ricardo reversed his own position on machinery in 1821. The Luddite riots were driven more by wages than anti-machinery sentiment. Annual hours worked halved from 2,950 (1870) to 1,500 (1998). Concludes with Amara's Law: we overestimate technology's short-run effect and underestimate its long-run effect.",
+      "weekFeatured": "2026-03-20",
+      "tier": 1
+    },
+    {
       "title": "Evaluating the Impact of AI on the Labor Market: January/February CPS Update",
       "author": "Gimbel, Kendall, Kulsakdinun",
       "publisher": "The Budget Lab at Yale",
