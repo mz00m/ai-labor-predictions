@@ -106,11 +106,19 @@ export function getHeroStats(): HeroStats {
     ? Math.round(observed[observed.length - 1].value)
     : 0;
 
+  // Compute wobble bounds from absolute values of all data points.
+  // Using abs(min)/abs(max) collapses the range when data spans negative
+  // and positive (e.g. -11.5 and 12 both round to 12). Instead, find the
+  // actual smallest and largest absolute displacement estimates.
+  const absValues = overallDisplacement.history.map((d) => Math.abs(d.value));
+  const absLow = Math.round(Math.min(...absValues));
+  const absHigh = Math.round(Math.max(...absValues));
+
   return {
     projectedJobLoss: Math.round(Math.abs(agg.mean)),
     projectedEstimateCount: estimateCount,
-    projectedLow: Math.round(Math.abs(agg.min)),
-    projectedHigh: Math.round(Math.abs(agg.max)),
+    projectedLow: absLow,
+    projectedHigh: absHigh,
     measuredJobLoss: Math.abs(measuredJobLoss),
   };
 }

@@ -22,7 +22,7 @@ export default function HeroStatWobble({
   children,
 }: HeroStatWobbleProps) {
   const [wobbling, setWobbling] = useState(false);
-  const [displayValue, setDisplayValue] = useState<string | null>(null);
+  const [displayValue, setDisplayValue] = useState<string | null>("0");
   const [countUpDone, setCountUpDone] = useState(false);
   const dwellTimer = useRef<ReturnType<typeof setTimeout>>();
   const rafRef = useRef<number>();
