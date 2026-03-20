@@ -10,13 +10,22 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Yale Budget Lab",
+    title: "Evaluating the Impact of AI on the Labor Market: Jan/Feb CPS Update",
+    summary:
+      "Jan/Feb 2026 CPS data show no AI displacement. Occupational dissimilarity flat, exposure quintiles stable, Anthropic 'Observed Exposure' confirms stability over disruption.",
+    date: "Mar 19",
+    url: "https://budgetlab.yale.edu/research/evaluating-impact-ai-labor-market-januaryfebruary-cps-update",
+    accent: "border-l-cyan-500",
+  },
+  {
     author: "Martha Gimbel (Bloomberg)",
     title: "The Best Guide to the AI Revolution May Be Victorian Fiction",
     summary:
       "Industrial Revolution novels illuminate what living through epochal technological change feels like. Weavers were the white-collar workers of their day -- real wages fell by half in 14 years.",
     date: "Mar 20",
     url: "https://www.bloomberg.com/news/articles/2026-03-20/to-understand-ai-s-future-read-dickens-bronte-industrial-revolution-novels",
-    accent: "border-l-cyan-500",
+    accent: "border-l-orange-500",
   },
   {
     author: "Sahaj Garg (Wispr)",
@@ -25,7 +34,7 @@ const articles: Article[] = [
       "Stanford grad turned AI startup CTO argues cognitive labor automation is months away, not decades. Physical labor follows on a 5-10 year timeline. The identity crisis for knowledge workers may be worse than the economic one.",
     date: "Mar 18",
     url: "https://sahajgarg.github.io/blog/cognitive-labor/",
-    accent: "border-l-orange-500",
+    accent: "border-l-amber-500",
   },
   {
     author: "Anthropic",
@@ -34,15 +43,6 @@ const articles: Article[] = [
       "Anthropic invited Claude users to share how they use AI, what they dream it could make possible, and what they fear it might do. Nearly 81,000 people responded in one week\u2014the largest qualitative study of its kind.",
     date: "Mar 18",
     url: "https://www.anthropic.com/features/81k-interviews",
-    accent: "border-l-amber-500",
-  },
-  {
-    author: "Alex Imas",
-    title: "Can Advanced AI Lead to Negative Economic Growth?",
-    summary:
-      "Formal models show AGI-driven demand collapse is theoretically possible if labor share collapses. Negative growth unlikely but demand-side forces will moderate AGI growth expectations.",
-    date: "Jan 7",
-    url: "https://aleximas.substack.com/p/will-advanced-ai-lead-to-negative",
     accent: "border-l-violet-500",
   },
   {

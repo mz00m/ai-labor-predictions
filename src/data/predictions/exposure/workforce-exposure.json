@@ -350,6 +350,15 @@
       ],
       "evidenceTier": 2,
       "label": "GS Research (Briggs): AI can automate tasks accounting for 25% of all US work hours"
+    },
+    {
+      "date": "2026-03-19",
+      "direction": "neutral",
+      "sourceIds": [
+        "yale-budgetlab-cps-update-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Yale Budget Lab: OpenAI exposure quintiles stable; no shift in worker distribution since ChatGPT"
     }
   ],
   "sources": [
@@ -652,6 +661,16 @@
       "datePublished": "2026-03-18",
       "excerpt": "In the US, AI can potentially automate tasks that account for 25% of all work hours, Briggs' team finds.",
       "dateAdded": "2026-03-19"
+    },
+    {
+      "id": "yale-budgetlab-cps-update-2026",
+      "title": "Evaluating the Impact of AI on the Labor Market: January/February CPS Update",
+      "url": "https://budgetlab.yale.edu/research/evaluating-impact-ai-labor-market-januaryfebruary-cps-update",
+      "publisher": "The Budget Lab at Yale",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-19",
+      "excerpt": "The share of workers in the lowest, middle, and highest occupational exposure groups stay stable. Even when specifically examining the unemployed population, there is no clear growth in exposure to generative AI.",
+      "dateAdded": "2026-03-20"
     }
   ]
 }

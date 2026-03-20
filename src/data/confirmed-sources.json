@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-03-19",
-  "totalSources": 460,
-  "verifiedCount": 460,
+  "lastUpdated": "2026-03-20",
+  "totalSources": 461,
+  "verifiedCount": 461,
   "sources": {
     "goldman-briggs-us-labor-2026": {
       "id": "goldman-briggs-us-labor-2026",
@@ -6383,6 +6383,21 @@
       "excerpt": "71% of organizations regularly use generative AI in at least one business function (up from 65% in early 2024). 92% plan to invest in generative AI over next three years. 66% report productivity gains.",
       "usedIn": [
         "ai-adoption-rate"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "yale-budgetlab-cps-update-2026": {
+      "id": "yale-budgetlab-cps-update-2026",
+      "title": "Evaluating the Impact of AI on the Labor Market: January/February CPS Update",
+      "url": "https://budgetlab.yale.edu/research/evaluating-impact-ai-labor-market-januaryfebruary-cps-update",
+      "publisher": "The Budget Lab at Yale",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-19",
+      "excerpt": "The addition of the January and February 2026 CPS and the introduction of Anthropic's 'Observed Exposure' metrics do not suggest any substantial changes. Occupational dissimilarity, industry dissimilarity, and exposure and usage metrics all remain flat, lie within historical ranges, or continue along pre-existing trends.",
+      "usedIn": [
+        "overall-us-displacement",
+        "workforce-ai-exposure"
       ],
       "verified": true,
       "synthetic": false
