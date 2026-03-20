@@ -94,7 +94,12 @@ export function getHeroStats(): HeroStats {
   // Measured job loss: most recent observed data point
   const observed = overallDisplacement.history
     .filter((d) => d.dataType === "observed")
-    .sort((a, b) => a.date.localeCompare(b.date));
+    .sort((a, b) => {
+      const dateCmp = a.date.localeCompare(b.date);
+      if (dateCmp !== 0) return dateCmp;
+      // Same date: sort proxy entries before direct so direct ends up last (selected)
+      return (a.isProxy ? 0 : 1) - (b.isProxy ? 0 : 1);
+    });
   const measuredJobLoss = observed.length > 0
     ? Math.round(observed[observed.length - 1].value)
     : 0;
