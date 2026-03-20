@@ -124,6 +124,13 @@ export default function MethodologySection() {
           url="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4673528"
           summary="Uses Census BTOS data to show which firms are actually adopting AI vs. which are just exposed. Key finding: AI adoption is concentrated in large, high-paying firms — exposure and adoption diverge significantly, motivating our separate adoption speed dimension."
         />
+        <Study
+          title="The Simple Macroeconomics of AI"
+          authors="Acemoglu"
+          year="2024"
+          url="https://www.nber.org/papers/w32487"
+          summary="The essential bounding argument for interpreting exposure scores. Using Hulten's theorem: ~20% of tasks are AI-exposed, ~23% can be profitably automated, with ~27% cost savings per task — yielding only 0.53-0.66% TFP gain over a decade. Exposure alone dramatically overstates likely displacement."
+        />
       </DimensionResearch>
 
       {/* ── Dimension 2: Adoption Speed ── */}
@@ -147,18 +154,18 @@ export default function MethodologySection() {
           summary="Analyzed adoption lags for 15 technologies across 166 countries. Found that cross-country adoption gaps have narrowed over time, but within-country institutional factors still create 5-45 year lags between availability and full deployment."
         />
         <Study
-          title="The Turing Trap: The Promise & Peril of Human-Like Artificial Intelligence"
-          authors="Brynjolfsson"
-          year="2022"
-          url="https://direct.mit.edu/daed/article/151/2/272/110622/The-Turing-Trap-The-Promise-amp-Peril-of-Human"
-          summary="Argues that institutional incentives — not technical capability — determine whether AI augments or replaces workers. Organizations with strong unions, regulatory oversight, or professional norms face higher adoption friction, slowing displacement even when the technology is ready."
+          title="Is Distance from Innovation a Barrier to the Adoption of Artificial Intelligence?"
+          authors="Hunt, Cockburn, Bessen"
+          year="2024"
+          url="https://www.nber.org/papers/w33022"
+          summary="Directly measures geographic variation in AI adoption using vacancy data. Being 200km from an AI hotspot is associated with 17% lower AI job growth. State borders explain 20% of the adoption distance penalty. AI deployment is spatially concentrated, not evenly distributed — adoption speed is a local phenomenon."
         />
         <Study
           title="Robots and Jobs: Evidence from US Labor Markets"
           authors="Acemoglu, Restrepo"
           year="2020"
           url="https://www.journals.uchicago.edu/doi/10.1086/705716"
-          summary="Found that industrial robot adoption varied dramatically by industry, with automotive adopting 8-10x faster than food processing despite similar economic incentives. The gap was driven by process standardization, regulatory environment, and workforce composition."
+          summary="Using IFR robot data and an IV approach, found that one more robot per thousand workers reduces the employment-to-population ratio by 0.2pp and wages by 0.42%. Adoption varied dramatically by industry — automotive adopted 8-10x faster than food processing — demonstrating that sector-specific institutional factors mediate deployment speed."
         />
       </DimensionResearch>
 
@@ -183,11 +190,11 @@ export default function MethodologySection() {
           summary="Tracked 2M+ workers displaced by the China trade shock using longitudinal earnings records. Found that geographic concentration of affected industries predicted worse outcomes: workers in regions with many similar displaced peers competed for the same alternative jobs. Directly motivates the geographic job density sub-component."
         />
         <Study
-          title="The China Syndrome: Local Labor Market Effects of Import Competition in the United States"
-          authors="Autor, Dorn, Hanson"
-          year="2013"
-          url="https://www.aeaweb.org/articles?id=10.1257/aer.103.6.2121"
-          summary="Showed that trade-exposed local labor markets experienced sharp declines in manufacturing employment, lower wages, and higher transfer payments. Workers with narrow, non-transferable skills suffered most — establishing that skill breadth and local labor market conditions are key determinants of post-displacement outcomes."
+          title="Automatic Reaction: What Happens to Workers at Firms that Automate?"
+          authors="Bessen, Goos, Salomons, van den Berge"
+          year="2025"
+          url="https://direct.mit.edu/rest/article/107/1/138/118761/Automatic-Reaction-What-Happens-to-Workers-at"
+          summary="First worker-level estimates of automation adjustment using Dutch administrative data covering all private non-financial industries (2000-2016). Cumulative wage income loss of ~8% over 5 years; only 2% of tenured workers leave in the year of automation. Critically, costs are borne disproportionately by older workers with longer tenure — quantifying the outcomes that Manning & Aguirre's adaptability index predicts."
         />
         <Study
           title="Recessions and the Costs of Job Loss"
@@ -234,12 +241,25 @@ export default function MethodologySection() {
           summary="Formalizes when and why cost reduction leads to increased consumption. The paradox holds when demand is elastic (many potential customers priced out) and fails when demand is inelastic (everyone who wants the service already has it). This is why office admin (internal cost center) differs from arts/media (vast unserved market)."
         />
         <Study
+          title="Automation and New Tasks: How Technology Displaces and Reinstates Labor"
+          authors="Acemoglu, Restrepo"
+          year="2019"
+          url="https://www.aeaweb.org/articles?id=10.1257/jep.33.2.3"
+          summary="The theoretical foundation for why displacement is not the whole story. Technology operates through two opposing forces: displacement (capital replaces labor in existing tasks) and reinstatement (new tasks are created where labor has comparative advantage). Whether employment grows or shrinks depends on the balance — and reinstatement has historically dominated."
+        />
+        <Study
           title="New Frontiers: The Origins and Content of New Work, 1940-2018"
           authors="Autor, Chin, Salomons, Seegmiller"
           year="2022"
           url="https://www.nber.org/papers/w30389"
           summary="Found that 60% of 2018 employment was in job titles that didn't exist in 1940, most created by prior waves of automation expanding demand. AI's ability to create new task categories — not just automate existing ones — is a major source of potential demand expansion."
         />
+        <p className="text-[11px] text-[var(--muted)] leading-[1.5] mt-3 italic">
+          Note: Our per-occupation elasticity classifications (high/moderate/low)
+          are qualitative assessments informed by these frameworks, not derived
+          from a specific empirical paper. No validated, occupation-specific
+          demand elasticity parameters exist for AI-era services.
+        </p>
       </DimensionResearch>
 
       {/* ── Dimension 5: AI Complementarity ── */}
@@ -263,18 +283,25 @@ export default function MethodologySection() {
           summary="Argues that the current AI development paradigm over-optimizes for human replacement ('passing the Turing test') when the larger economic opportunity is augmentation. Whether AI is used to substitute or complement depends on incentive structures, not just technical capability."
         />
         <Study
+          title="Generative AI at Work"
+          authors="Brynjolfsson, Li, Raymond"
+          year="2025"
+          url="https://academic.oup.com/qje/article/140/2/889/7990658"
+          summary="The largest empirical study of AI complementarity in production. Studied 5,172 customer-support agents: 15% average productivity increase from AI assistance, ~30% for least-experienced workers, with durable learning effects even when AI was unavailable. Gains came from augmentation (AI-generated suggestions workers could accept, modify, or reject), not replacement."
+        />
+        <Study
+          title="Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence"
+          authors="Brynjolfsson, Chandar, Chen"
+          year="2025"
+          url="https://siepr.stanford.edu/publications/working-paper/canaries-coal-mine-six-facts-about-recent-employment-effects-artificial"
+          summary="Using ADP payroll data covering 3.5-5M workers, found a 13% relative employment decline for ages 22-25 in AI-exposed occupations — but only in automation-heavy quintiles. Augmentation-heavy occupation quintiles show positive youth employment trends. Makes the automation-vs-augmentation distinction empirically testable: the deployment choice predicts who gets displaced."
+        />
+        <Study
           title="Artificial Intelligence: The Ambiguous Labor Market Impact of Automating Prediction"
           authors="Agrawal, Gans, Goldfarb"
           year="2019"
           url="https://www.aeaweb.org/articles?id=10.1257/jep.33.2.31"
           summary="Decomposes decisions into prediction (what AI automates) and judgment (what humans provide). When AI improves prediction, the value of human judgment increases — making the two complementary rather than substitutive. Jobs heavy in judgment (management, medicine) benefit most from AI prediction improvements."
-        />
-        <Study
-          title="The Work of the Future: Building Better Jobs in an Age of Intelligent Machines"
-          authors="Autor, Mindell, Reynolds (MIT Task Force)"
-          year="2020"
-          url="https://workofthefuture.mit.edu/research-post/the-work-of-the-future-building-better-jobs-in-an-age-of-intelligent-machines/"
-          summary="Concluded that historically, technology has more often complemented than substituted for labor, but that the complementary outcome requires deliberate institutional choices. The 'new tasks' framework: automation displaces from old tasks, but creates demand for new human tasks — the balance determines net employment."
         />
       </DimensionResearch>
 
