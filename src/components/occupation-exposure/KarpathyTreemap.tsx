@@ -90,9 +90,21 @@ function colorCSS(score: number, dim: DimensionKey, alpha: number = 1): string {
     dim === "demandElasticity" ||
     dim === "complementarity";
   if (dim === "netRisk") {
-    // Below 5 = green, 5 = midpoint, above 5 = yellow→red
-    const remapped = t <= 0.5 ? 0 : (t - 0.5) * 2;
-    const [r, g, b] = greenRedRGB(flipped ? 1 - remapped : remapped, true);
+    // 3-stop gradient: 0-5 green, 5-7.5 green→orange, 7.5-10 orange→red
+    let r: number, g: number, b: number;
+    if (score <= 5) {
+      r = 30; g = 180; b = 40; // green
+    } else if (score <= 7.5) {
+      const s = (score - 5) / 2.5; // 0→1
+      r = Math.round(30 + s * 215);  // 30→245
+      g = Math.round(180 - s * 22);  // 180→158
+      b = Math.round(40 - s * 20);   // 40→20
+    } else {
+      const s = (score - 7.5) / 2.5; // 0→1
+      r = Math.round(245 + s * 10);  // 245→255
+      g = Math.round(158 - s * 128); // 158→30
+      b = Math.round(20 - s * 15);   // 20→5
+    }
     return `rgba(${r},${g},${b},${alpha})`;
   }
   const [r, g, b] = greenRedRGB(flipped ? 1 - t : t);
