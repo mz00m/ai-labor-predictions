@@ -17,6 +17,7 @@ import KarpathyTreemap from "./KarpathyTreemap";
 import DimensionPanel from "./DimensionPanel";
 import ComparisonTable from "./ComparisonTable";
 import MethodologySection from "./MethodologySection";
+import NetRiskScale from "./NetRiskScale";
 
 function SectionLabel({ number }: { number: string }) {
   return (
@@ -180,6 +181,9 @@ export default function OccupationExposurePage() {
           </p>
         </header>
       </article>
+
+      {/* ───── Net Risk Scale explainer ───── */}
+      <NetRiskScale />
 
       {/* ───── Full-width treemap section ───── */}
       <section id="treemap" className="mb-12 bg-[#0a0a0f] -mx-6 sm:-mx-10 px-3 sm:px-4 py-6 rounded-xl scroll-mt-4">
