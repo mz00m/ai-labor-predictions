@@ -65,7 +65,55 @@ interface JobTaskVisualizerProps {
   initialJobId?: string;
 }
 
-const HIDDEN_CATEGORIES = ["Building & Grounds", "Protective Services"];
+const HIDDEN_CATEGORIES: string[] = [];
+
+/**
+ * BLS May 2024 employment estimates (thousands) for each profiled occupation.
+ * Total US nonfarm employment: ~158.4M (BLS CES, 2024 annual average).
+ */
+const EMPLOYMENT_THOUSANDS: Record<string, number> = {
+  "retail-salesperson": 4300, "fast-food-worker": 3800, "home-health-aide": 3200,
+  "cashier": 3300, "general-operations-manager": 3000, "registered-nurse": 3200,
+  "office-clerk": 2700, "customer-service-rep": 2800, "waiter-waitress": 2300,
+  "laborer-material-mover": 2600, "stocker-order-filler": 2000,
+  "administrative-assistant": 2000, "janitor-custodian": 2100,
+  "truck-driver": 2000, "software-developer": 1800, "bookkeeper": 1500,
+  "accountant": 1500, "assembler-fabricator": 1500, "teacher-k12": 1500,
+  "nursing-assistant": 1300, "construction-laborer": 1300, "maid-housekeeper": 1400,
+  "teaching-assistant": 1400, "landscaping-worker": 1300, "retail-store-manager": 1400,
+  "restaurant-manager": 1100, "food-service-supervisor": 1100,
+  "warehouse-worker": 1200, "security-guard": 1100, "delivery-driver": 1100,
+  "carpenter": 1000, "childcare-worker": 1000, "personal-care-aide": 1800,
+  "medical-assistant": 800, "hairdresser-barber": 800, "bus-driver": 700,
+  "electrician": 800, "plumber": 500, "hvac-technician": 400,
+  "automotive-mechanic": 800, "maintenance-repair-worker": 1400,
+  "dental-hygienist": 230, "receptionist": 1000, "sales-representative": 1700,
+  "lawyer": 800, "physician": 730, "pharmacist": 330, "dentist": 160,
+  "financial-analyst": 330, "marketing-manager": 400, "hr-specialist": 800,
+  "project-manager": 900, "data-analyst": 500, "executive-assistant": 600,
+  "graphic-designer": 270, "operations-manager": 400, "it-manager": 520,
+  "product-manager": 400, "management-analyst": 900,
+  "loan-officer": 350, "insurance-agent": 530, "real-estate-agent": 500,
+  "paralegal": 350, "social-worker": 730, "therapist": 350,
+  "college-professor": 1300, "school-counselor": 350,
+  "hotel-front-desk": 300, "chef-line-cook": 1300, "police-officer": 700,
+  "supply-chain-analyst": 200, "copywriter": 130, "video-editor": 60,
+  "pr-specialist": 280, "technical-writer": 55, "merch-buyer": 200,
+  "journalist": 45, "ux-designer": 110, "construction-manager": 500,
+  "translator-interpreter": 60, "radiologist": 35, "compliance-officer": 350,
+  "claims-adjuster": 300, "architect": 130, "tax-preparer": 90,
+  "research-scientist": 180, "photographer": 60, "civil-engineer": 330,
+  "bank-teller": 400, "retail-supervisor": 1400,
+  "licensed-practical-nurse": 630, "industrial-machinery-mechanic": 500,
+  "pharmacy-technician": 450, "welder": 430, "preschool-teacher": 400,
+  "substance-abuse-counselor": 350, "firefighter": 330, "emt-paramedic": 270,
+  "genetic-counselor": 5,
+};
+const TOTAL_US_EMPLOYMENT = 158400; // thousands
+const coveredEmployment = JOB_PROFILES.reduce(
+  (sum, job) => sum + (EMPLOYMENT_THOUSANDS[job.id] ?? 0), 0
+);
+const coveragePct = Math.round((coveredEmployment / TOTAL_US_EMPLOYMENT) * 100);
 
 export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerProps) {
   const [selectedJobId, setSelectedJobId] = useState<string>(() => {
@@ -209,6 +257,9 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
                 Or see the full US economy view &rarr;
               </a>
             </p>
+            <p className="text-[11px] text-[var(--muted)] mt-2 opacity-70">
+              {JOB_PROFILES.length} occupations covering ~{coveragePct}% of US employment (BLS 2024)
+            </p>
           </div>
         )}
         {/* Search bar */}
@@ -269,7 +320,8 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
                 }
                 return acc;
               }, {})
-            ).sort(([a], [b]) => a.localeCompare(b)).map(([category, jobs], index) => {
+            ).sort(([a], [b]) => a.localeCompare(b)).map(([category, catJobs], index) => {
+              const jobs = [...catJobs].sort((a, b) => a.title.localeCompare(b.title));
               const hue = (index * 24 + 230) % 360;
               const isExpanded = expandedCategory === category;
               return (
