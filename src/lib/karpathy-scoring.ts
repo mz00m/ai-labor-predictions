@@ -158,19 +158,19 @@ export function scoreKarpathyOccupations(
         complementarity = 5;
       }
 
-      // Net Risk composite
-      const pressure =
-        WEIGHTS.technicalExposure * technicalExposure +
-        WEIGHTS.adoptionSpeed * adoptionSpeed;
-      const absorption =
-        WEIGHTS.adaptability * adaptability +
-        WEIGHTS.demandElasticity * demandElasticity +
-        WEIGHTS.complementarity * complementarity;
-      const raw =
-        ((pressure - absorption) /
-          (WEIGHTS.technicalExposure + WEIGHTS.adoptionSpeed)) *
-        10;
-      const netRisk = Math.max(0, Math.min(10, (raw + 10) / 2));
+      // Net Risk composite — normalize pressure and absorption independently
+      // so defensive factors (adaptability, elasticity, complementarity) can
+      // fully counterbalance pressure factors (exposure, adoption speed).
+      const pressureWeightSum = WEIGHTS.technicalExposure + WEIGHTS.adoptionSpeed;
+      const absorptionWeightSum = WEIGHTS.adaptability + WEIGHTS.demandElasticity + WEIGHTS.complementarity;
+      const pressureNorm =
+        ((WEIGHTS.technicalExposure * technicalExposure +
+          WEIGHTS.adoptionSpeed * adoptionSpeed) / pressureWeightSum) * 10;
+      const absorptionNorm =
+        ((WEIGHTS.adaptability * adaptability +
+          WEIGHTS.demandElasticity * demandElasticity +
+          WEIGHTS.complementarity * complementarity) / absorptionWeightSum) * 10;
+      const netRisk = Math.max(0, Math.min(10, (pressureNorm - absorptionNorm + 10) / 2));
 
       return {
         raw: occ,

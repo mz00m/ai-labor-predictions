@@ -118,18 +118,20 @@ export function scoreOccupation(group: OccupationGroup): ScoredOccupation {
     ? complementarityFromNEI(cfoData.nei)
     : estimateComplementarity(group);
 
-  // Composite: pressure - absorption, normalized to 0-10
-  const pressure =
-    WEIGHTS.technicalExposure * technicalExposure +
-    WEIGHTS.adoptionSpeed * adoptionSpeed;
-  const absorption =
-    WEIGHTS.adaptability * adaptability +
-    WEIGHTS.demandElasticity * demandElasticity +
-    WEIGHTS.complementarity * complementarity;
+  // Composite: pressure - absorption, each normalized to 0-10 independently
+  // so defensive factors can fully counterbalance pressure factors.
+  const pressureWeightSum = WEIGHTS.technicalExposure + WEIGHTS.adoptionSpeed;
+  const absorptionWeightSum = WEIGHTS.adaptability + WEIGHTS.demandElasticity + WEIGHTS.complementarity;
+  const pressureNorm =
+    ((WEIGHTS.technicalExposure * technicalExposure +
+      WEIGHTS.adoptionSpeed * adoptionSpeed) / pressureWeightSum) * 10;
+  const absorptionNorm =
+    ((WEIGHTS.adaptability * adaptability +
+      WEIGHTS.demandElasticity * demandElasticity +
+      WEIGHTS.complementarity * complementarity) / absorptionWeightSum) * 10;
 
-  // Scale to 0-10 range
-  const raw = ((pressure - absorption) / (WEIGHTS.technicalExposure + WEIGHTS.adoptionSpeed)) * 10;
-  const netRisk = Math.max(0, Math.min(10, (raw + 10) / 2));
+  // Scale to 0-10: 5.0 when pressure = absorption, 0 when fully absorbed, 10 when fully exposed
+  const netRisk = Math.max(0, Math.min(10, (pressureNorm - absorptionNorm + 10) / 2));
 
   const rationales: Record<keyof DimensionScores, string> = {
     technicalExposure: exposureData

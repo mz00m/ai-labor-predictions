@@ -320,10 +320,15 @@ export default function MethodologySection() {
         <p className="text-[13px] text-[var(--muted)] leading-[1.75] mb-3">
           Exposure and adoption speed are &ldquo;pressure&rdquo; factors that
           drive displacement up. Adaptability, elasticity, and complementarity
-          are &ldquo;buffer&rdquo; factors that moderate it. The composite
-          formula: Net Risk = (w1 &times; Exposure + w2 &times; Speed) &minus;
-          (w3 &times; Adaptability + w4 &times; Elasticity + w5 &times;
-          Complementarity), normalized to 0-10.
+          are &ldquo;buffer&rdquo; factors that moderate it. Each side is
+          normalized to 0&ndash;10 independently before combining: Pressure =
+          weighted average of Exposure and Speed (0&ndash;10); Absorption =
+          weighted average of Adaptability, Elasticity, and Complementarity
+          (0&ndash;10). Net Risk = (Pressure &minus; Absorption + 10) / 2,
+          clamped to 0&ndash;10. This ensures defensive factors can fully
+          counterbalance pressure &mdash; an occupation with maximum exposure
+          but equally strong adaptability, demand elasticity, and
+          complementarity scores 5.0 (neutral), not 10.
         </p>
         <p className="text-[13px] text-[var(--muted)] leading-[1.75]">
           The weighting is intentionally simple and transparent. Reasonable
