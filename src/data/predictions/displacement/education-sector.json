@@ -212,6 +212,15 @@
       ],
       "evidenceTier": 2,
       "label": "Ellucian: 66% of higher ed institutions leveraging AI, up from 49% YoY (n=779)"
+    },
+    {
+      "date": "2025-06-13",
+      "direction": "down",
+      "sourceIds": [
+        "pwc-ai-jobs-barometer-growth-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "PwC: AI-exposed professions saw 55% faster skill churn in job postings (US)"
     }
   ],
   "sources": [
@@ -414,6 +423,16 @@
       "datePublished": "2026-02-01",
       "excerpt": "In a randomized experiment with 1,174 adults ages 25-45, AI access closed approximately three-quarters of the education-based productivity gap: higher-education participants outperform lower-education participants by 0.548 standard deviations without AI; with AI, this gap falls to 0.139 standard deviations.",
       "dateAdded": "2026-03-15"
+    },
+    {
+      "id": "pwc-ai-jobs-barometer-growth-2025",
+      "title": "PwC 2025 Global AI Jobs Barometer",
+      "url": "https://www.pwc.com/gx/en/news-room/press-releases/2025/ai-linked-to-a-fourfold-increase-in-productivity-growth.html",
+      "publisher": "PwC",
+      "evidenceTier": 2,
+      "datePublished": "2025-06-13",
+      "excerpt": "In job postings in the US, those professions most exposed to AI have seen a 55% greater change in skills requested by employers.",
+      "dateAdded": "2026-03-21"
     }
   ]
 }

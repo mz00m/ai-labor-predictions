@@ -356,6 +356,24 @@
       ],
       "evidenceTier": 2,
       "label": "Anthropic: AI exposure concentrates in credentialed roles (17.4% vs 4.5% grad degrees)"
+    },
+    {
+      "date": "2025-06-13",
+      "direction": "up",
+      "sourceIds": [
+        "pwc-ai-jobs-barometer-growth-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "PwC: Degree requirements fell 7pp for AI-augmented jobs (2019-24), lowering barriers"
+    },
+    {
+      "date": "2026-01-15",
+      "direction": "down",
+      "sourceIds": [
+        "imf-skill-gaps-entry-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "IMF: AI skill diffusion linked to lower youth employment in high-exposure roles"
     }
   ],
   "sources": [
@@ -674,6 +692,16 @@
       "datePublished": "2026-03-18",
       "excerpt": "Low-wage workers gain around 2% on average, whereas wages barely change toward the top (with some outliers).",
       "dateAdded": "2026-03-19"
+    },
+    {
+      "id": "pwc-ai-jobs-barometer-growth-2025",
+      "title": "PwC 2025 Global AI Jobs Barometer",
+      "url": "https://www.pwc.com/gx/en/news-room/press-releases/2025/ai-linked-to-a-fourfold-increase-in-productivity-growth.html",
+      "publisher": "PwC",
+      "evidenceTier": 2,
+      "datePublished": "2025-06-13",
+      "excerpt": "Employer demand for formal degrees is declining, especially quickly for AI-exposed jobs. The percentage of jobs AI augments that require a degree fell 7 percentage points between 2019 and 2024.",
+      "dateAdded": "2026-03-21"
     }
   ]
 }

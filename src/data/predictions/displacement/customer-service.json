@@ -290,6 +290,42 @@
       ],
       "evidenceTier": 1,
       "label": "Lodefalk et al.: Sweden customer service shows same age-gradient AI displacement pattern"
+    },
+    {
+      "date": "2025-05-20",
+      "direction": "up",
+      "sourceIds": [
+        "ilo-nask-genai-exposure-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "ILO-NASK: Clerical support most exposed; data entry/payroll highest automation potential"
+    },
+    {
+      "date": "2026-02-18",
+      "direction": "down",
+      "sourceIds": [
+        "gartner-cs-leaders-survey-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Gartner: Only 20% of CS leaders have actually reduced agent staffing due to AI"
+    },
+    {
+      "date": "2026-02-18",
+      "direction": "down",
+      "sourceIds": [
+        "gartner-cs-leaders-survey-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Gartner: 80%+ orgs expect CS headcount cuts over next 18 months via attrition"
+    },
+    {
+      "date": "2026-02-18",
+      "direction": "up",
+      "sourceIds": [
+        "gartner-cs-leaders-survey-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Gartner: ~80% plan to transition CS agents to new roles, 84% expanding skills"
     }
   ],
   "sources": [
@@ -548,6 +584,26 @@
       "datePublished": "2026-03-16",
       "excerpt": "Customer service agents (SSYK 4222) display the same age gradient as the economy-wide canaries effect, lying between the augmentation and automation poles. All four spotlight occupations show young workers declining, older workers stable or rising.",
       "dateAdded": "2026-03-17"
+    },
+    {
+      "id": "gartner-cs-leaders-survey-2026",
+      "title": "Gartner Survey Finds 91% of Customer Service Leaders Under Pressure to Implement AI in 2026",
+      "url": "https://www.gartner.com/en/newsroom/press-releases/2026-02-18-gartner-survey-finds-ninety-one-percent-of-customer-service-leaders-under-pressure-to-implement-ai-in-2026",
+      "publisher": "Gartner",
+      "evidenceTier": 2,
+      "datePublished": "2026-02-18",
+      "excerpt": "Only 20% of customer service leaders have actually reduced agent staffing due to AI, yet 80%+ expect to reduce headcount over the next 18 months. Nearly 80% plan to transition agents into new roles. Survey of 321 CS leaders (Sep-Oct 2025).",
+      "dateAdded": "2026-03-21"
+    },
+    {
+      "id": "ilo-nask-genai-exposure-2025",
+      "title": "Generative AI and Jobs: A Refined Global Index of Occupational Exposure",
+      "url": "https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure",
+      "publisher": "ILO / NASK",
+      "evidenceTier": 2,
+      "datePublished": "2025-05-20",
+      "excerpt": "Clerical support roles remain the most exposed. Data entry clerks, payroll clerks, and typists continue to show the highest automation potential.",
+      "dateAdded": "2026-03-21"
     }
   ]
 }

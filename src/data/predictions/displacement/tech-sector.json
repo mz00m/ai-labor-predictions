@@ -666,6 +666,15 @@
       ],
       "evidenceTier": 2,
       "label": "GS Research (Briggs): Tech employment share has fallen below long-term trend"
+    },
+    {
+      "date": "2026-01-15",
+      "direction": "down",
+      "sourceIds": [
+        "imf-skill-gaps-it-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "IMF: High IT skill demand won't translate 1:1 to specialist jobs as AI automates IT tasks"
     }
   ],
   "sources": [
@@ -1255,6 +1264,16 @@
       "datePublished": "2026-03-18",
       "excerpt": "You can see AI's impact in the tech sector, where the employment share as a proportion of the whole economy has gone below the long term trend.",
       "dateAdded": "2026-03-19"
+    },
+    {
+      "id": "imf-skill-gaps-it-2026",
+      "title": "Bridging Skill Gaps for the Future: New Jobs Creation in the AI Age",
+      "url": "https://www.imf.org/-/media/files/publications/sdn/2026/english/sdnea2026001.pdf",
+      "publisher": "IMF (Jaumotte et al.)",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-15",
+      "excerpt": "The high demand for new IT skills may not necessarily translate into a one-for-one rise in demand for IT and AI specialists, especially as many IT tasks may progressively be automated by AI.",
+      "dateAdded": "2026-03-21"
     }
   ],
   "marketIds": {

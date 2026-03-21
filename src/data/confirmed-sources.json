@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-03-20",
-  "totalSources": 462,
-  "verifiedCount": 462,
+  "lastUpdated": "2026-03-21",
+  "totalSources": 466,
+  "verifiedCount": 466,
   "sources": {
     "goldman-briggs-us-labor-2026": {
       "id": "goldman-briggs-us-labor-2026",
@@ -6408,6 +6408,65 @@
       "excerpt": "The evidence is that technological unemployment did not occur on a large scale during the Industrial Revolution. The fears of the Luddites that machinery would impoverish workers were not realized. Predictions of widespread technological unemployment were, by and large, wrong, but we should not trivialize the costs borne by the many who were actually displaced.",
       "usedIn": [
         "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "imf-skill-gaps-it-2026": {
+      "id": "imf-skill-gaps-it-2026",
+      "title": "Bridging Skill Gaps for the Future: New Jobs Creation in the AI Age",
+      "url": "https://www.imf.org/-/media/files/publications/sdn/2026/english/sdnea2026001.pdf",
+      "publisher": "IMF (Jaumotte et al.)",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-15",
+      "excerpt": "The high demand for new IT skills may not necessarily translate into a one-for-one rise in demand for IT and AI specialists, especially as many IT tasks may progressively be automated by AI.",
+      "usedIn": [
+        "tech-sector-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "gartner-cs-leaders-survey-2026": {
+      "id": "gartner-cs-leaders-survey-2026",
+      "title": "Gartner Survey Finds 91% of Customer Service Leaders Under Pressure to Implement AI in 2026",
+      "url": "https://www.gartner.com/en/newsroom/press-releases/2026-02-18-gartner-survey-finds-ninety-one-percent-of-customer-service-leaders-under-pressure-to-implement-ai-in-2026",
+      "publisher": "Gartner",
+      "evidenceTier": 2,
+      "datePublished": "2026-02-18",
+      "excerpt": "Only 20% of customer service leaders have actually reduced agent staffing due to AI, yet 80%+ expect to reduce headcount over the next 18 months. Nearly 80% plan to transition agents into new roles. Survey of 321 CS leaders (Sep-Oct 2025).",
+      "usedIn": [
+        "customer-service-automation"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "ilo-nask-genai-exposure-2025": {
+      "id": "ilo-nask-genai-exposure-2025",
+      "title": "Generative AI and Jobs: A Refined Global Index of Occupational Exposure",
+      "url": "https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure",
+      "publisher": "ILO / NASK",
+      "evidenceTier": 2,
+      "datePublished": "2025-05-20",
+      "excerpt": "25% of global employment falls within occupations potentially exposed to GenAI, with higher shares in high-income countries (34%). Clerical support roles remain the most exposed.",
+      "usedIn": [
+        "customer-service-automation",
+        "white-collar-professional-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "pwc-ai-jobs-barometer-growth-2025": {
+      "id": "pwc-ai-jobs-barometer-growth-2025",
+      "title": "PwC 2025 Global AI Jobs Barometer",
+      "url": "https://www.pwc.com/gx/en/news-room/press-releases/2025/ai-linked-to-a-fourfold-increase-in-productivity-growth.html",
+      "publisher": "PwC",
+      "evidenceTier": 2,
+      "datePublished": "2025-06-13",
+      "excerpt": "Job growth remained robust even in AI-exposed occupations (38%). Degree requirements fell 7pp for AI-augmented jobs. AI-exposed professions saw 55% faster skill churn in job postings.",
+      "usedIn": [
+        "overall-us-displacement",
+        "entry-level-wage-impact",
+        "education-sector-displacement"
       ],
       "verified": true,
       "synthetic": false
