@@ -6,7 +6,7 @@ import HistoricalExamples from "./HistoricalExamples";
 import IntangibleDiagram from "./IntangibleDiagram";
 import ShareSectionBar from "@/components/ShareSectionBar";
 import ReadingProgressBar from "@/components/ReadingProgressBar";
-import JCurveBallDrop from "@/components/delights/JCurveBallDrop";
+
 
 export default function JCurvePage() {
   return (
@@ -129,10 +129,7 @@ export default function JCurvePage() {
             result is a J-shaped curve in the measurement error over time.
           </p>
 
-          <div className="relative">
-            <JCurveChart />
-            <JCurveBallDrop />
-          </div>
+          <JCurveChart />
         </div>
       </section>
 
