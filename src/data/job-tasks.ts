@@ -6685,7 +6685,7 @@ export const JOB_PROFILES: JobProfile[] = [
     id: "personal-care-aide",
     title: "Personal Care Aide",
     medianWagePerHr: 15,
-    category: "Healthcare Support",
+    category: "Healthcare",
     tasks: [
       {
         id: "pca-daily-living",
@@ -7153,7 +7153,7 @@ export const JOB_PROFILES: JobProfile[] = [
     id: "pharmacy-technician",
     title: "Pharmacy Technician",
     medianWagePerHr: 19,
-    category: "Healthcare Support",
+    category: "Healthcare",
     tasks: [
       {
         id: "pht-dispensing",
