@@ -375,8 +375,8 @@ export default function PredictionDetailPage() {
                 unit={prediction.unit.includes("%") ? "%" : ""}
                 overlays={observedOverlays}
                 onDotClick={handleDotClick}
-                yAxisMax={prediction.slug === "overall-us-displacement" || prediction.slug === "white-collar-professional-displacement" ? 10 : undefined}
-                yAxisMin={prediction.slug === "overall-us-displacement" || prediction.slug === "white-collar-professional-displacement" ? -5 : undefined}
+                yAxisMax={prediction.slug === "overall-us-displacement" || prediction.slug === "white-collar-professional-displacement" ? 10 : prediction.slug === "tech-sector-displacement" ? 15 : undefined}
+                yAxisMin={prediction.slug === "overall-us-displacement" || prediction.slug === "white-collar-professional-displacement" ? -5 : prediction.slug === "tech-sector-displacement" ? -25 : undefined}
                 category={prediction.category}
                 showTrendLine={true}
                 height={280}
@@ -408,8 +408,8 @@ export default function PredictionDetailPage() {
                 unit={prediction.unit.includes("%") ? "%" : ""}
                 overlays={projectedOverlays}
                 onDotClick={handleDotClick}
-                yAxisMax={prediction.slug === "overall-us-displacement" || prediction.slug === "white-collar-professional-displacement" ? 25 : undefined}
-                yAxisMin={prediction.slug === "overall-us-displacement" || prediction.slug === "white-collar-professional-displacement" ? -5 : undefined}
+                yAxisMax={prediction.slug === "overall-us-displacement" || prediction.slug === "white-collar-professional-displacement" || prediction.slug === "tech-sector-displacement" ? 25 : undefined}
+                yAxisMin={prediction.slug === "overall-us-displacement" || prediction.slug === "white-collar-professional-displacement" || prediction.slug === "tech-sector-displacement" ? -25 : undefined}
                 category={prediction.category}
                 showTrendLine={false}
                 targetDate={targetDateStr ?? undefined}
