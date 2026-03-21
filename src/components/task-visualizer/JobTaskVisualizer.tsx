@@ -107,7 +107,7 @@ const EMPLOYMENT_THOUSANDS: Record<string, number> = {
   "licensed-practical-nurse": 630, "industrial-machinery-mechanic": 500,
   "pharmacy-technician": 450, "welder": 430, "preschool-teacher": 400,
   "substance-abuse-counselor": 350, "firefighter": 330, "emt-paramedic": 270,
-  "genetic-counselor": 5, "veterinary-technician": 120,
+  "genetic-counselor": 5, "veterinary-technician": 120, "chief-of-staff": 50,
 };
 const TOTAL_US_EMPLOYMENT = 158400; // thousands
 const coveredEmployment = JOB_PROFILES.reduce(
