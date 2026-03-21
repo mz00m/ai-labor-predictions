@@ -142,6 +142,15 @@
       "label": "Anthropic CEO: up to 50% of entry-level office jobs impacted"
     },
     {
+      "date": "2025-06-13",
+      "direction": "up",
+      "sourceIds": [
+        "pwc-ai-jobs-barometer-growth-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "PwC: Degree requirements fell 7pp for AI-augmented jobs (2019-24), lowering barriers"
+    },
+    {
       "date": "2025-07-29",
       "direction": "down",
       "sourceIds": [
@@ -295,6 +304,15 @@
       "label": "Frank et al.: unemployment risk rose in AI-exposed occupations from early 2022"
     },
     {
+      "date": "2026-01-15",
+      "direction": "down",
+      "sourceIds": [
+        "imf-skill-gaps-entry-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "IMF: AI skill diffusion linked to lower youth employment in high-exposure roles"
+    },
+    {
       "date": "2026-01-21",
       "direction": "up",
       "sourceIds": [
@@ -356,24 +374,6 @@
       ],
       "evidenceTier": 2,
       "label": "Anthropic: AI exposure concentrates in credentialed roles (17.4% vs 4.5% grad degrees)"
-    },
-    {
-      "date": "2025-06-13",
-      "direction": "up",
-      "sourceIds": [
-        "pwc-ai-jobs-barometer-growth-2025"
-      ],
-      "evidenceTier": 2,
-      "label": "PwC: Degree requirements fell 7pp for AI-augmented jobs (2019-24), lowering barriers"
-    },
-    {
-      "date": "2026-01-15",
-      "direction": "down",
-      "sourceIds": [
-        "imf-skill-gaps-entry-2026"
-      ],
-      "evidenceTier": 2,
-      "label": "IMF: AI skill diffusion linked to lower youth employment in high-exposure roles"
     }
   ],
   "sources": [

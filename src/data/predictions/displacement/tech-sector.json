@@ -506,6 +506,15 @@
       "label": "Anthropic: Computer/math tasks ~33% of Claude.ai conversations, ~50% of API traffic"
     },
     {
+      "date": "2026-01-15",
+      "direction": "down",
+      "sourceIds": [
+        "imf-skill-gaps-it-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "IMF: High IT skill demand won't translate 1:1 to specialist jobs as AI automates IT tasks"
+    },
+    {
       "date": "2026-01-22",
       "direction": "up",
       "sourceIds": [
@@ -666,15 +675,6 @@
       ],
       "evidenceTier": 2,
       "label": "GS Research (Briggs): Tech employment share has fallen below long-term trend"
-    },
-    {
-      "date": "2026-01-15",
-      "direction": "down",
-      "sourceIds": [
-        "imf-skill-gaps-it-2026"
-      ],
-      "evidenceTier": 2,
-      "label": "IMF: High IT skill demand won't translate 1:1 to specialist jobs as AI automates IT tasks"
     }
   ],
   "sources": [

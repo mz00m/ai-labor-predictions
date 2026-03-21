@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-21",
-  "totalSources": 468,
-  "verifiedCount": 468,
+  "totalSources": 460,
+  "verifiedCount": 460,
   "sources": {
     "cvl-economics-entertainment-ai-2024": {
       "id": "cvl-economics-entertainment-ai-2024",
@@ -48,18 +48,6 @@
       "verified": true,
       "synthetic": false
     },
-    "korinek-ai-tool-vs-agi-2026": {
-      "id": "korinek-ai-tool-vs-agi-2026",
-      "title": "The economics of AI as a tool vs AGI as a worker",
-      "url": "https://ideasindevelopment.substack.com/p/the-economics-of-ai-as-a-tool-vs",
-      "publisher": "Ideas in Development (Substack)",
-      "evidenceTier": 4,
-      "datePublished": "2026-02-17",
-      "excerpt": "even if we stopped all progress in artificial intelligence today, and we spent the next five or ten years figuring out how can we use the systems that we have right now throughout our economy in a productive way. We would probably experience very significant productivity gains.",
-      "usedIn": [],
-      "verified": true,
-      "synthetic": false
-    },
     "freund-mann-job-transformation-2026": {
       "id": "freund-mann-job-transformation-2026",
       "title": "Job Transformation, Specialization, and the Labor Market Effects of AI",
@@ -74,18 +62,6 @@
         "white-collar-professional-displacement",
         "high-skill-wage-premium"
       ],
-      "verified": true,
-      "synthetic": false
-    },
-    "agrawal-ai-science-2026": {
-      "id": "agrawal-ai-science-2026",
-      "title": "AI in Science",
-      "url": "https://www.nber.org/papers/w34953",
-      "publisher": "NBER / University of Chicago Press",
-      "evidenceTier": 1,
-      "datePublished": "2026-03-11",
-      "excerpt": "output is only 4% above the constant-growth path after 20 years and 19% after 40 years... even infinite automation of all cognitive labor (roughly one-third of GDP) would raise output by only 50% in a weak-links framework",
-      "usedIn": [],
       "verified": true,
       "synthetic": false
     },
@@ -393,18 +369,6 @@
         "workforce-ai-exposure",
         "total-us-jobs-lost"
       ],
-      "verified": true,
-      "synthetic": false
-    },
-    "careervillage-ai-resilience-report-2026": {
-      "id": "careervillage-ai-resilience-report-2026",
-      "title": "The AI Resilience Report",
-      "url": "https://www.airesilience.org/",
-      "publisher": "CareerVillage.org",
-      "evidenceTier": 2,
-      "datePublished": "2026-03-07",
-      "excerpt": "Aggregates multiple AI exposure datasets with employment projections into occupation-specific AI resilience scores for students and entry-level professionals.",
-      "usedIn": [],
       "verified": true,
       "synthetic": false
     },
@@ -4938,18 +4902,6 @@
       "verified": true,
       "synthetic": false
     },
-    "metr-becker-ai-dev-productivity-2025": {
-      "id": "metr-becker-ai-dev-productivity-2025",
-      "title": "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity",
-      "url": "https://arxiv.org/abs/2507.09089",
-      "publisher": "METR (Becker, Rush, Barnes, Rein)",
-      "evidenceTier": 1,
-      "datePublished": "2025-07-12",
-      "excerpt": "Original finding of 19% slowdown retracted by authors in Feb 2026. METR acknowledged severe selection bias and unreliable signal. Follow-up data shows likely speedup, not slowdown. Study redesigned.",
-      "usedIn": [],
-      "verified": true,
-      "synthetic": false
-    },
     "anthropic-shen-ai-skill-formation-2026": {
       "id": "anthropic-shen-ai-skill-formation-2026",
       "title": "How AI Impacts Skill Formation",
@@ -5018,30 +4970,6 @@
       "usedIn": [
         "overall-us-displacement"
       ],
-      "verified": true,
-      "synthetic": false
-    },
-    "itrev-beane-human-vibes-2025": {
-      "id": "itrev-beane-human-vibes-2025",
-      "title": "Human Vibes: How Developers Can Navigate a Job Market That's Stretching at Both Ends",
-      "url": "https://itrevolution.com/articles/the-great-developer-divide-how-ai-is-reshaping-the-software-job-market-into-three-tiers/",
-      "publisher": "IT Revolution (Beane, Hassell, Hopper, Yegge)",
-      "evidenceTier": 3,
-      "datePublished": "2025-10-01",
-      "excerpt": "The developer job market is polarizing into three tiers. Three dimensions identified for effective AI use: code reading velocity, productive skepticism, and architectural judgment.",
-      "usedIn": [],
-      "verified": true,
-      "synthetic": false
-    },
-    "nber-diaz-training-within-firms-2025": {
-      "id": "nber-diaz-training-within-firms-2025",
-      "title": "Training within Firms",
-      "url": "https://www.nber.org/papers/w33670",
-      "publisher": "NBER (Diaz, Neyra-Nazarrett, Ramirez, Sadun, Tamayo)",
-      "evidenceTier": 1,
-      "datePublished": "2025-04-14",
-      "excerpt": "Variation in training participation among employees is closely tied to differences in middle managers' behavior and practices. When a high-training manager takes over a team, training participation surges within weeks.",
-      "usedIn": [],
       "verified": true,
       "synthetic": false
     },
@@ -5172,18 +5100,6 @@
       "verified": true,
       "synthetic": false
     },
-    "brookings-mapping-ai-economy-2025": {
-      "id": "brookings-mapping-ai-economy-2025",
-      "title": "Mapping the AI Economy: Which Regions Are Ready for the Next Technology Leap",
-      "url": "https://www.brookings.edu/articles/mapping-the-ai-economy-which-regions-are-ready-for-the-next-technology-leap/",
-      "publisher": "Brookings Metro (Muro, Methkupally)",
-      "evidenceTier": 2,
-      "datePublished": "2025-07-16",
-      "excerpt": "Bay Area accounts for 13% of national AI job postings. Top 30 metros capture 67% of all AI hiring. AI job postings grew 28.5% annually since 2010 but still only 2.5% of all US openings. More than 200 metros lack significant AI presence.",
-      "usedIn": [],
-      "verified": true,
-      "synthetic": false
-    },
     "oks-atm-iphone-displacement-2026": {
       "id": "oks-atm-iphone-displacement-2026",
       "title": "Why the ATM didn't kill bank teller jobs, but the iPhone did",
@@ -5226,18 +5142,6 @@
       "usedIn": [
         "healthcare-admin-displacement"
       ],
-      "verified": true,
-      "synthetic": false
-    },
-    "sivulka-institutional-ai-2026": {
-      "id": "sivulka-institutional-ai-2026",
-      "title": "Productive Individuals Don't Make Productive Firms",
-      "url": "https://x.com/gsivulka/status/2031797989908627849",
-      "publisher": "Twitter/X (Hebbia)",
-      "evidenceTier": 4,
-      "datePublished": "2026-03-11",
-      "excerpt": "AI is driving a 10x increase in the productivity of the individuals who know how to leverage it. But that's not enough. We've swapped the motor; we have not yet redesigned the factory. Because of a simple fact: productive individuals do not make productive firms.",
-      "usedIn": [],
       "verified": true,
       "synthetic": false
     },

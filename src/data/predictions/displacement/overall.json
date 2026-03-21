@@ -564,6 +564,15 @@
       "label": "Ifo: Two-thirds of German firms expect no AI employment change"
     },
     {
+      "date": "2025-06-13",
+      "direction": "up",
+      "sourceIds": [
+        "pwc-ai-jobs-barometer-growth-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "PwC: Job growth 38% even in AI-exposed occupations (2019-24); no destruction signal"
+    },
+    {
       "date": "2025-07-02",
       "direction": "down",
       "sourceIds": [
@@ -1120,15 +1129,6 @@
       ],
       "evidenceTier": 1,
       "label": "Yale Budget Lab: Anthropic 'Observed Exposure' metric shows stability, not disruption"
-    },
-    {
-      "date": "2025-06-13",
-      "direction": "up",
-      "sourceIds": [
-        "pwc-ai-jobs-barometer-growth-2025"
-      ],
-      "evidenceTier": 2,
-      "label": "PwC: Job growth 38% even in AI-exposed occupations (2019-24); no destruction signal"
     }
   ],
   "sources": [

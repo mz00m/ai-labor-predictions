@@ -175,6 +175,15 @@
       "label": "QJE: 15% productivity gain, novices benefit most"
     },
     {
+      "date": "2025-05-20",
+      "direction": "up",
+      "sourceIds": [
+        "ilo-nask-genai-exposure-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "ILO-NASK: Clerical support most exposed; data entry/payroll highest automation potential"
+    },
+    {
       "date": "2025-05-27",
       "direction": "up",
       "sourceIds": [
@@ -256,6 +265,33 @@
       "label": "Deutsche Bank: Up to 75% of CS interactions could be automated by 2026"
     },
     {
+      "date": "2026-02-18",
+      "direction": "down",
+      "sourceIds": [
+        "gartner-cs-leaders-survey-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Gartner: Only 20% of CS leaders have actually reduced agent staffing due to AI"
+    },
+    {
+      "date": "2026-02-18",
+      "direction": "down",
+      "sourceIds": [
+        "gartner-cs-leaders-survey-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Gartner: 80%+ orgs expect CS headcount cuts over next 18 months via attrition"
+    },
+    {
+      "date": "2026-02-18",
+      "direction": "up",
+      "sourceIds": [
+        "gartner-cs-leaders-survey-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Gartner: ~80% plan to transition CS agents to new roles, 84% expanding skills"
+    },
+    {
       "date": "2026-02-19",
       "direction": "down",
       "sourceIds": [
@@ -290,42 +326,6 @@
       ],
       "evidenceTier": 1,
       "label": "Lodefalk et al.: Sweden customer service shows same age-gradient AI displacement pattern"
-    },
-    {
-      "date": "2025-05-20",
-      "direction": "up",
-      "sourceIds": [
-        "ilo-nask-genai-exposure-2025"
-      ],
-      "evidenceTier": 2,
-      "label": "ILO-NASK: Clerical support most exposed; data entry/payroll highest automation potential"
-    },
-    {
-      "date": "2026-02-18",
-      "direction": "down",
-      "sourceIds": [
-        "gartner-cs-leaders-survey-2026"
-      ],
-      "evidenceTier": 2,
-      "label": "Gartner: Only 20% of CS leaders have actually reduced agent staffing due to AI"
-    },
-    {
-      "date": "2026-02-18",
-      "direction": "down",
-      "sourceIds": [
-        "gartner-cs-leaders-survey-2026"
-      ],
-      "evidenceTier": 2,
-      "label": "Gartner: 80%+ orgs expect CS headcount cuts over next 18 months via attrition"
-    },
-    {
-      "date": "2026-02-18",
-      "direction": "up",
-      "sourceIds": [
-        "gartner-cs-leaders-survey-2026"
-      ],
-      "evidenceTier": 2,
-      "label": "Gartner: ~80% plan to transition CS agents to new roles, 84% expanding skills"
     }
   ],
   "sources": [
