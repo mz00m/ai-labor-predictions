@@ -111,12 +111,12 @@ export default function Home() {
       <div className="mt-10">
         <SectionBar
           title="How Will AI Affect Your Job?"
-          description="AI doesn't replace whole jobs — it automates specific tasks. Explore which parts of 100+ occupations covering ~61% of US employment are exposed and which remain human-dependent."
+          description="AI doesn't replace whole jobs — it automates specific tasks. Explore which parts of 110+ occupations covering ~67% of US employment are exposed and which remain human-dependent."
           href="/task-visualizer"
           tag="Task visualizer"
           accentColor="#3ECFAE"
           watermark={<TaskVisualizerWatermark color="#3ECFAE" />}
-          stat={{ value: "100+", label: "occupations" }}
+          stat={{ value: "110+", label: "occupations" }}
           featured
         />
 
