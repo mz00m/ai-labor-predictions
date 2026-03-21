@@ -13,6 +13,7 @@ import { getBlsTrendForSlug } from "@/lib/bls-trends";
 import BLSTrendStrip from "@/components/BLSTrendStrip";
 import { useInView } from "@/hooks/useInView";
 import { useCountUp } from "@/hooks/useCountUp";
+import { useTilt } from "@/hooks/useTilt";
 
 interface PredictionSummaryCardProps {
   prediction: Prediction;
@@ -158,6 +159,7 @@ export default function PredictionSummaryCard({
   selectedTiers,
 }: PredictionSummaryCardProps) {
   const [showNote, setShowNote] = useState(false);
+  const tilt = useTilt(3);
   const best = getBestEstimate(prediction, selectedTiers);
   const agg = computeAggregate(prediction, selectedTiers);
   const contextLine = getContextLine(prediction, agg.mean);
@@ -200,8 +202,11 @@ export default function PredictionSummaryCard({
   return (
     <Link href={`/predictions/${prediction.slug}`} className="group block">
       <div
+        ref={tilt.ref}
+        onMouseMove={tilt.onMouseMove}
+        onMouseLeave={tilt.onMouseLeave}
         className="card-hover summary-card-border relative pb-8 border-b border-black/[0.06] overflow-hidden rounded-lg pl-3 border-l-[2px]"
-        style={{ borderLeftColor: tierBorderColor }}
+        style={{ borderLeftColor: tierBorderColor, ...tilt.style }}
       >
         {/* Sparkline watermark */}
         <SparklineWatermark

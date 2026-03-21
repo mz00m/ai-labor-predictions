@@ -1023,6 +1023,18 @@ input[type="range"]::-moz-range-thumb:hover {
   .step-number:hover {
     transform: none;
   }
+  .animate-mystery-pulse {
+    animation: none;
+  }
+}
+
+/* Mystery pulse for the "?" on J-Curve AI lag stat */
+@keyframes mystery-pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.15); opacity: 0.6; }
+}
+.animate-mystery-pulse {
+  animation: mystery-pulse 2.5s ease-in-out infinite;
 }
 
 

@@ -1,13 +1,16 @@
 "use client";
 
+import { useRef, useState, useEffect } from "react";
 import JCurveChart from "./JCurveChart";
 import HistoricalExamples from "./HistoricalExamples";
 import IntangibleDiagram from "./IntangibleDiagram";
 import ShareSectionBar from "@/components/ShareSectionBar";
+import ReadingProgressBar from "@/components/ReadingProgressBar";
 
 export default function JCurvePage() {
   return (
     <article className="max-w-[740px] mx-auto">
+      <ReadingProgressBar />
       {/* ───── Header ───── */}
       <header className="mb-10">
         <p className="text-[12px] font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
@@ -428,9 +431,30 @@ function StatCard({
   color: string;
   emphasis?: boolean;
 }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { setVisible(true); observer.disconnect(); } },
+      { threshold: 0.5 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  // Extract numeric part for count-up animation
+  const numMatch = value.match(/~?(\d+)/);
+  const targetNum = numMatch ? parseInt(numMatch[1], 10) : null;
+  const prefix = value.startsWith("~") ? "~" : "";
+  const suffix = value.replace(/~?\d+/, "");
+
   return (
     <div
-      className={`text-center rounded-lg px-3 border${emphasis ? " py-4 relative" : " py-3"}`}
+      ref={ref}
+      className={`stat-card-enter text-center rounded-lg px-3 border${emphasis ? " py-4 relative" : " py-3"}`}
       style={{
         borderColor: emphasis ? color + "50" : color + "30",
         backgroundColor: emphasis ? color + "12" : color + "08",
@@ -449,7 +473,13 @@ function StatCard({
         className={emphasis ? "text-[30px] font-black" : "text-[24px] font-black"}
         style={{ color }}
       >
-        {value}
+        {targetNum !== null && visible ? (
+          <CountUpValue target={targetNum} prefix={prefix} suffix={suffix} />
+        ) : emphasis && value === "?" ? (
+          <span className="inline-block animate-mystery-pulse">?</span>
+        ) : (
+          value
+        )}
       </p>
       <p className="text-[11px] font-bold text-[var(--foreground)] mt-0.5">
         {label}
@@ -457,6 +487,34 @@ function StatCard({
       <p className="text-[10px] text-[var(--muted)]">{sublabel}</p>
     </div>
   );
+}
+
+function CountUpValue({ target, prefix, suffix }: { target: number; prefix: string; suffix: string }) {
+  const [current, setCurrent] = useState(0);
+  const rafRef = useRef<number>();
+
+  useEffect(() => {
+    if (typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setCurrent(target);
+      return;
+    }
+
+    let start: number | null = null;
+    const duration = 800;
+
+    function tick(ts: number) {
+      if (!start) start = ts;
+      const progress = Math.min((ts - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setCurrent(Math.round(eased * target));
+      if (progress < 1) rafRef.current = requestAnimationFrame(tick);
+    }
+
+    rafRef.current = requestAnimationFrame(tick);
+    return () => { if (rafRef.current) cancelAnimationFrame(rafRef.current); };
+  }, [target]);
+
+  return <>{prefix}{current}{suffix}</>;
 }
 
 function EquationCard({
