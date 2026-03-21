@@ -40,11 +40,11 @@ const NAV_ENTRIES: NavEntry[] = [
     label: "Learn",
     items: [
       { href: "/suggest", label: "Suggest Source" },
+      { href: "/research", label: "All Sources" },
+      { href: "/learn/reading-list", label: "Reading List" },
       { href: "/j-curve", label: "What's a J-Curve" },
       { href: "/demand-elasticity", label: "Demand Elasticity" },
       { href: "/history", label: "History" },
-      { href: "/research", label: "All Sources" },
-      { href: "/learn/reading-list", label: "Reading List" },
       { href: "/about#methodology", label: "Methodology" },
     ],
   },
