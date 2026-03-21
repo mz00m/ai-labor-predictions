@@ -1,9 +1,23 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-21",
-  "totalSources": 467,
-  "verifiedCount": 467,
+  "totalSources": 468,
+  "verifiedCount": 468,
   "sources": {
+    "cvl-economics-entertainment-ai-2024": {
+      "id": "cvl-economics-entertainment-ai-2024",
+      "title": "Future Unscripted: The Impact of Generative AI on Entertainment Industry Jobs",
+      "url": "https://www.cvleconomics.com/case-study/assessing-generative-ais-impact-on-the-entertainment-industries/",
+      "publisher": "CVL Economics (commissioned by Animation Guild IATSE 839, CAA, Human Artistry Campaign)",
+      "evidenceTier": 2,
+      "datePublished": "2024-01-30",
+      "excerpt": "About 21.4% of film, television, and animation jobs (approximately 118,500 jobs) are likely to be either consolidated, replaced, or eliminated by GenAI in the U.S. by 2026. 75% of survey respondents indicated Gen AI tools had supported the elimination, reduction, or consolidation of jobs in their business division.",
+      "usedIn": [
+        "creative-industry-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
     "oxford-oii-ai-skills-premium-2025": {
       "id": "oxford-oii-ai-skills-premium-2025",
       "title": "Skills or degree? The rise of skill-based hiring for AI and green jobs",
