@@ -1304,6 +1304,12 @@ html.accelerationist-mode .stat-number {
   90% { transform: translate(0, 1px); }
 }
 
+/* #9 Treemap earthquake flash overlay */
+@keyframes treemap-flash {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
 /* #12 Scroll progress milestone pop */
 @keyframes milestone-pop {
   from { transform: translateX(-50%) scale(0.8); opacity: 0; }
