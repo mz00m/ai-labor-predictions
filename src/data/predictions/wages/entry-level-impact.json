@@ -7,6 +7,7 @@
   "unit": "% wage change",
   "currentValue": -6.7,
   "timeHorizon": "By 2030",
+  "aggregationMethod": "weighted",
   "history": [
     {
       "date": "2023-05-01",

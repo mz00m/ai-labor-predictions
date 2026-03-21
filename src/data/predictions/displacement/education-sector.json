@@ -7,6 +7,7 @@
   "unit": "% of roles displaced",
   "currentValue": 12.2,
   "timeHorizon": "By 2030",
+  "aggregationMethod": "weighted",
   "disclaimer": "Insufficient evidence for confident projection. Only 4 data points, two of which are corporate proxies (Chegg, Pearson) rather than sector-wide measurements. BLS projects just 3% displacement in education support roles, and SHRM found education has the lowest automation rate of any sector at 7.3%. Treat this estimate with more caution than others on this site.",
   "history": [
     {
@@ -97,7 +98,7 @@
       "sourceIds": [
         "duolingo-ai-first-2025"
       ],
-      "evidenceTier": 1,
+      "evidenceTier": 3,
       "label": "Duolingo: cut 10%+ of contractors, replaced by AI content generation"
     },
     {
@@ -115,7 +116,7 @@
       "sourceIds": [
         "chegg-layoffs-2025"
       ],
-      "evidenceTier": 1,
+      "evidenceTier": 2,
       "label": "Chegg: 636 employees eliminated (67% of workforce), citing AI"
     },
     {
@@ -245,7 +246,7 @@
       "title": "Chegg Q2 2024 Earnings — ChatGPT Impact on Tutoring Market",
       "url": "https://investor.chegg.com/press-releases/news-details/2024/Chegg-Reports-Q2-2024-Financial-Results/",
       "publisher": "Chegg (Earnings Report)",
-      "evidenceTier": 1,
+      "evidenceTier": 2,
       "datePublished": "2024-07-01",
       "excerpt": "Chegg subscribers fell 50% from peak as students shifted to ChatGPT. Company laid off 23% of workforce, citing AI as primary competitive threat.",
       "dateAdded": "2026-03-01"
@@ -285,7 +286,7 @@
       "title": "Pearson plc 2024 Annual Report — AI Strategy",
       "url": "https://plc.pearson.com/en-GB/annual-report-2024",
       "publisher": "Pearson plc",
-      "evidenceTier": 1,
+      "evidenceTier": 2,
       "datePublished": "2025-03-01",
       "excerpt": "Pearson pivoted to AI-first content delivery, reducing editorial headcount by 18% while growing AI-generated adaptive learning content 300%.",
       "dateAdded": "2026-03-01"
@@ -325,7 +326,7 @@
       "title": "Chegg Eliminates 636 Employees in Two Rounds of AI-Driven Layoffs",
       "url": "https://investor.chegg.com/press-releases/news-details/2025/Chegg-Announces-Restructuring-Plan-to-Accelerate-AI-Transformation/",
       "publisher": "Chegg (SEC Filing / Press Release)",
-      "evidenceTier": 1,
+      "evidenceTier": 2,
       "datePublished": "2025-02-01",
       "excerpt": "Chegg eliminated 636 employees across two rounds of layoffs (23% in 2024, then additional cuts in early 2025), totaling ~67% of peak workforce. CEO explicitly cited AI as existential threat to homework-help business model.",
       "dateAdded": "2026-03-01"
@@ -335,7 +336,7 @@
       "title": "Duolingo Cuts Contractors as AI Replaces Content Creation",
       "url": "https://blog.duolingo.com/ai-first/",
       "publisher": "Duolingo",
-      "evidenceTier": 1,
+      "evidenceTier": 3,
       "datePublished": "2025-01-08",
       "excerpt": "Duolingo cut 10%+ of its contractor workforce, explicitly replacing human content creators with AI-generated language exercises. CEO announced 'AI-first' strategy for all content production.",
       "dateAdded": "2026-03-01"

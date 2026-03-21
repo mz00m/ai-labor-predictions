@@ -7,6 +7,7 @@
   "unit": "% of jobs displaced",
   "currentValue": 2,
   "timeHorizon": "By 2030",
+  "aggregationMethod": "weighted",
   "history": [
     {
       "date": "2024-02-20",
