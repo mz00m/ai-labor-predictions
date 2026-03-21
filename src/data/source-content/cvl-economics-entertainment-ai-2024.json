@@ -1,0 +1,13 @@
+{
+  "id": "cvl-economics-entertainment-ai-2024",
+  "abstract": "CVL Economics conducted a survey of 300 C-Suite leaders, senior executives, and mid-level managers across six key entertainment industries (film, television, animation, music, gaming, and live events) between November and December 2023. The study, commissioned by the Animation Guild (IATSE Local 839) and the Concept Art Association, found that 21.4% of entertainment industry jobs are likely to be consolidated, replaced, or eliminated by generative AI by 2026, affecting approximately 118,500 positions in the US.",
+  "keyFindings": [
+    "21.4% of film, television, and animation jobs (~118,500) likely eliminated, consolidated, or replaced by GenAI by 2026",
+    "75% of executives say GenAI tools have already supported elimination, reduction, or consolidation of jobs",
+    "55% anticipate Sound Designers most at risk; ~40% expect Music Editors and Audio Technicians affected",
+    "California most impacted with 39,500 entertainment jobs affected; New York second with 15,100"
+  ],
+  "methodology": "Survey of 300 C-Suite leaders, senior executives, and mid-level managers across six entertainment industries, conducted November 17 to December 22, 2023. Commissioned by Animation Guild IATSE 839, Concept Art Association, Human Artistry Campaign, and National Cartoonist Society Foundation.",
+  "qualifiers": "Executive survey reflects expectations, not observed displacement. Entertainment/animation focus may not generalize to all creative industries. 'By 2026' projection is short-term and may not reflect longer-term patterns.",
+  "fetchedAt": "2026-03-21"
+}

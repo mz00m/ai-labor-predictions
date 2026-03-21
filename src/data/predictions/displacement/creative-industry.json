@@ -23,6 +23,18 @@
       "dataType": "projected"
     },
     {
+      "date": "2024-01-30",
+      "value": 21.4,
+      "confidenceLow": 15,
+      "confidenceHigh": 28,
+      "sourceIds": [
+        "cvl-economics-entertainment-ai-2024"
+      ],
+      "evidenceTier": 2,
+      "metricType": "survey",
+      "sampleSize": 300
+    },
+    {
       "date": "2024-05-20",
       "value": 22,
       "confidenceLow": 17,
@@ -291,6 +303,15 @@
       ],
       "evidenceTier": 4,
       "label": "CausalInf: Amazon book titles tripled post-ChatGPT, average quality fell"
+    },
+    {
+      "date": "2024-01-30",
+      "direction": "down",
+      "sourceIds": [
+        "cvl-economics-entertainment-ai-2024"
+      ],
+      "evidenceTier": 2,
+      "label": "CVL Economics: 75% of entertainment execs say AI already eliminated or reduced jobs (n=300)"
     }
   ],
   "sources": [
@@ -563,6 +584,16 @@
       "datePublished": "2026-02-19",
       "dateAdded": "2026-03-16",
       "excerpt": "Arts, Design, Entertainment, Sports and Media SOC group: mean 6.58/10 (range 2-9, 26 occupations). Newspaper, periodical, book, and directory publishers: 8.04/10 weighted industry exposure. Writers and authors score 9/10; special effects artists 9/10."
+    },
+    {
+      "id": "cvl-economics-entertainment-ai-2024",
+      "title": "Future Unscripted: The Impact of Generative AI on Entertainment Industry Jobs",
+      "url": "https://www.cvleconomics.com/case-study/assessing-generative-ais-impact-on-the-entertainment-industries/",
+      "publisher": "CVL Economics (commissioned by Animation Guild IATSE 839, CAA, Human Artistry Campaign)",
+      "evidenceTier": 2,
+      "datePublished": "2024-01-30",
+      "excerpt": "About 21.4% of film, television, and animation jobs (approximately 118,500 jobs) are likely to be either consolidated, replaced, or eliminated by GenAI in the U.S. by 2026. 75% of survey respondents indicated Gen AI tools had supported the elimination, reduction, or consolidation of jobs in their business division. Survey of 300 C-Suite leaders and senior executives across six entertainment industries.",
+      "dateAdded": "2026-03-21"
     }
   ]
 }
