@@ -1120,6 +1120,15 @@
       ],
       "evidenceTier": 1,
       "label": "Yale Budget Lab: Anthropic 'Observed Exposure' metric shows stability, not disruption"
+    },
+    {
+      "date": "2025-06-13",
+      "direction": "up",
+      "sourceIds": [
+        "pwc-ai-jobs-barometer-growth-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "PwC: Job growth 38% even in AI-exposed occupations (2019-24); no destruction signal"
     }
   ],
   "sources": [
@@ -2021,6 +2030,16 @@
       "datePublished": "2015-07-01",
       "excerpt": "The evidence is that technological unemployment did not occur on a large scale during the Industrial Revolution. The fears of the Luddites that machinery would impoverish workers were not realized, and the main reason is well understood: mechanization could only replace a limited number of human activities, while technological change increased the demand for other types of labor that were complementary to the capital goods embodied in the new technologies.",
       "dateAdded": "2026-03-20"
+    },
+    {
+      "id": "pwc-ai-jobs-barometer-growth-2025",
+      "title": "PwC 2025 Global AI Jobs Barometer",
+      "url": "https://www.pwc.com/gx/en/news-room/press-releases/2025/ai-linked-to-a-fourfold-increase-in-productivity-growth.html",
+      "publisher": "PwC",
+      "evidenceTier": 2,
+      "datePublished": "2025-06-13",
+      "excerpt": "Job numbers are growing in every industry analysed. Growth remained robust even in more exposed occupations (38%). Productivity growth nearly quadrupled in AI-exposed industries.",
+      "dateAdded": "2026-03-21"
     }
   ]
 }

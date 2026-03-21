@@ -80,6 +80,18 @@
       "evidenceTier": 2,
       "metricType": "postings",
       "dataType": "observed"
+    },
+    {
+      "date": "2026-01-15",
+      "value": 3,
+      "confidenceLow": 3,
+      "confidenceHigh": 15,
+      "sourceIds": [
+        "imf-skill-gaps-premium-2026"
+      ],
+      "evidenceTier": 2,
+      "metricType": "postings",
+      "dataType": "observed"
     }
   ],
   "overlays": [
