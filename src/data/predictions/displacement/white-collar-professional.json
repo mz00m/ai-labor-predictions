@@ -264,6 +264,15 @@
       "label": "NBER/AER:I (7K workers, 66 firms): AI saves 2 hrs/wk on email; no task shift detected"
     },
     {
+      "date": "2025-05-20",
+      "direction": "down",
+      "sourceIds": [
+        "ilo-nask-genai-exposure-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "ILO-NASK: GenAI expanding into digitized cognitive roles in media, software, finance"
+    },
+    {
       "date": "2025-06-01",
       "direction": "down",
       "sourceIds": [
@@ -622,15 +631,6 @@
       ],
       "evidenceTier": 1,
       "label": "Freund & Mann: White-collar professions (legal, science, engineering) projected to decline most"
-    },
-    {
-      "date": "2025-05-20",
-      "direction": "down",
-      "sourceIds": [
-        "ilo-nask-genai-exposure-2025"
-      ],
-      "evidenceTier": 2,
-      "label": "ILO-NASK: GenAI expanding into digitized cognitive roles in media, software, finance"
     }
   ],
   "sources": [
