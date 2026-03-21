@@ -19,6 +19,7 @@
       ],
       "evidenceTier": 2,
       "metricType": "survey",
+      "dataType": "projected",
       "sampleSize": 93
     },
     {
@@ -28,18 +29,20 @@
         "bls-mlr-ai-employment-projections-2025"
       ],
       "evidenceTier": 1,
-      "metricType": "projection"
+      "metricType": "projection",
+      "dataType": "projected"
     },
     {
       "date": "2025-09-01",
-      "value": -3,
-      "confidenceLow": -5,
-      "confidenceHigh": -1.5,
+      "value": 3,
+      "confidenceLow": 1.5,
+      "confidenceHigh": 5,
       "sourceIds": [
         "bloomberg-wall-st-ai-cuts-2025"
       ],
       "evidenceTier": 2,
-      "metricType": "projection"
+      "metricType": "projection",
+      "dataType": "projected"
     },
     {
       "date": "2025-10-30",
@@ -50,7 +53,8 @@
         "goldman-sachs-ai-headcount-survey-2025"
       ],
       "evidenceTier": 2,
-      "metricType": "survey"
+      "metricType": "survey",
+      "dataType": "projected"
     },
     {
       "date": "2025-12-01",
@@ -61,7 +65,8 @@
         "morgan-stanley-european-banks-2025"
       ],
       "evidenceTier": 2,
-      "metricType": "projection"
+      "metricType": "projection",
+      "dataType": "projected"
     },
     {
       "date": "2025-12-31",
@@ -77,9 +82,9 @@
     },
     {
       "date": "2026-03-13",
-      "value": -1.2,
-      "confidenceLow": -1.6,
-      "confidenceHigh": -0.8,
+      "value": 1.2,
+      "confidenceLow": 0.8,
+      "confidenceHigh": 1.6,
       "sourceIds": [
         "fed-atl-duke-cfo-ai-productivity-2026"
       ],

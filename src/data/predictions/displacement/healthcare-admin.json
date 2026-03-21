@@ -18,7 +18,8 @@
         "nejm-admin-ai-2024"
       ],
       "evidenceTier": 1,
-      "metricType": "survey"
+      "metricType": "survey",
+      "dataType": "projected"
     },
     {
       "date": "2025-01-10",
@@ -29,7 +30,8 @@
         "deloitte-health-2025"
       ],
       "evidenceTier": 2,
-      "metricType": "survey"
+      "metricType": "survey",
+      "dataType": "projected"
     },
     {
       "date": "2025-02-10",
@@ -38,7 +40,8 @@
         "bls-mlr-ai-employment-projections-2025"
       ],
       "evidenceTier": 1,
-      "metricType": "employment"
+      "metricType": "employment",
+      "dataType": "observed"
     },
     {
       "date": "2025-07-01",
@@ -49,7 +52,8 @@
         "bls-health-admin-2025"
       ],
       "evidenceTier": 1,
-      "metricType": "employment"
+      "metricType": "employment",
+      "dataType": "observed"
     }
   ],
   "overlays": [

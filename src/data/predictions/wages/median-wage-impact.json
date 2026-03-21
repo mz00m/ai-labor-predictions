@@ -18,7 +18,8 @@
         "goldman-ai-workforce-2025"
       ],
       "evidenceTier": 1,
-      "metricType": "projection"
+      "metricType": "projection",
+      "dataType": "projected"
     },
     {
       "date": "2023-09-01",
@@ -29,7 +30,8 @@
         "ilo-wages-2023"
       ],
       "evidenceTier": 1,
-      "metricType": "projection"
+      "metricType": "projection",
+      "dataType": "projected"
     },
     {
       "date": "2023-10-01",
@@ -40,7 +42,8 @@
         "eisfeldt-genai-firm-values-2026"
       ],
       "evidenceTier": 1,
-      "metricType": "employment"
+      "metricType": "employment",
+      "dataType": "observed"
     },
     {
       "date": "2024-02-01",
@@ -51,7 +54,8 @@
         "imf-inequality-2024"
       ],
       "evidenceTier": 2,
-      "metricType": "projection"
+      "metricType": "projection",
+      "dataType": "projected"
     },
     {
       "date": "2024-06-01",
@@ -62,7 +66,8 @@
         "webb-2024"
       ],
       "evidenceTier": 1,
-      "metricType": "projection"
+      "metricType": "projection",
+      "dataType": "projected"
     },
     {
       "date": "2024-10-01",
@@ -73,7 +78,8 @@
         "atlantic-wages-2024"
       ],
       "evidenceTier": 3,
-      "metricType": "projection"
+      "metricType": "projection",
+      "dataType": "projected"
     },
     {
       "date": "2025-02-01",
@@ -84,7 +90,8 @@
         "bls-wage-data-2025"
       ],
       "evidenceTier": 1,
-      "metricType": "employment"
+      "metricType": "employment",
+      "dataType": "observed"
     },
     {
       "date": "2025-05-01",
@@ -95,7 +102,8 @@
         "substack-wages-doom"
       ],
       "evidenceTier": 4,
-      "metricType": "projection"
+      "metricType": "projection",
+      "dataType": "projected"
     },
     {
       "date": "2025-08-01",
@@ -106,7 +114,8 @@
         "epi-wages-2025"
       ],
       "evidenceTier": 2,
-      "metricType": "projection"
+      "metricType": "projection",
+      "dataType": "projected"
     },
     {
       "date": "2025-09-01",
@@ -117,7 +126,8 @@
         "korinek-trammell-growth-2025"
       ],
       "evidenceTier": 1,
-      "metricType": "projection"
+      "metricType": "projection",
+      "dataType": "projected"
     },
     {
       "date": "2025-11-01",
@@ -128,7 +138,8 @@
         "pwc-ai-jobs-barometer-2025"
       ],
       "evidenceTier": 1,
-      "metricType": "survey"
+      "metricType": "survey",
+      "dataType": "projected"
     },
     {
       "date": "2026-01-01",
@@ -139,7 +150,8 @@
         "bls-may-2024-wage-data"
       ],
       "evidenceTier": 2,
-      "metricType": "employment"
+      "metricType": "employment",
+      "dataType": "observed"
     }
   ],
   "overlays": [

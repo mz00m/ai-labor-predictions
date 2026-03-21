@@ -20,7 +20,8 @@
       "evidenceTier": 1,
       "metricType": "employment",
       "sampleSize": 160000000,
-      "note": "All workers in fully AI-replaceable jobs, US 2021-2024"
+      "note": "All workers in fully AI-replaceable jobs, US 2021-2024",
+      "dataType": "observed"
     },
     {
       "date": "2025-11-13",
@@ -33,7 +34,8 @@
       "evidenceTier": 1,
       "metricType": "employment",
       "sampleSize": 5000000,
-      "note": "Ages 22-25 in most AI-exposed occupations, US ADP payroll data"
+      "note": "Ages 22-25 in most AI-exposed occupations, US ADP payroll data",
+      "dataType": "observed"
     },
     {
       "date": "2026-01-15",
@@ -45,7 +47,8 @@
       ],
       "evidenceTier": 2,
       "metricType": "employment",
-      "note": "All workers in AI-vulnerable occupations after 5 years, multi-country"
+      "note": "All workers in AI-vulnerable occupations after 5 years, multi-country",
+      "dataType": "observed"
     },
     {
       "date": "2026-01-22",
@@ -57,7 +60,8 @@
       ],
       "evidenceTier": 1,
       "metricType": "employment",
-      "note": "Youth employment in GenAI-exposed occupations, Netherlands Q4 2022-Q3 2025"
+      "note": "Youth employment in GenAI-exposed occupations, Netherlands Q4 2022-Q3 2025",
+      "dataType": "observed"
     },
     {
       "date": "2026-03-05",
@@ -69,7 +73,8 @@
       ],
       "evidenceTier": 2,
       "metricType": "employment",
-      "note": "All workers, US DiD; no systematic unemployment increase in AI-exposed occupations"
+      "note": "All workers, US DiD; no systematic unemployment increase in AI-exposed occupations",
+      "dataType": "observed"
     },
     {
       "date": "2026-03-16",
@@ -82,7 +87,8 @@
       "evidenceTier": 1,
       "metricType": "employment",
       "sampleSize": 4600000,
-      "note": "Ages 22-25 in top-quartile AI-exposed occupations, Sweden employer-level DiD"
+      "note": "Ages 22-25 in top-quartile AI-exposed occupations, Sweden employer-level DiD",
+      "dataType": "observed"
     }
   ],
   "overlays": [
@@ -611,7 +617,9 @@
     {
       "date": "2026-03-18",
       "direction": "up",
-      "sourceIds": ["freund-mann-job-transformation-2026"],
+      "sourceIds": [
+        "freund-mann-job-transformation-2026"
+      ],
       "evidenceTier": 1,
       "label": "Freund & Mann: White-collar professions (legal, science, engineering) projected to decline most"
     }

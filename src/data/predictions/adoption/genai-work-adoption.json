@@ -16,7 +16,8 @@
         "bick-blandin-deming-wp-2025"
       ],
       "evidenceTier": 1,
-      "metricType": "survey"
+      "metricType": "survey",
+      "dataType": "observed"
     },
     {
       "date": "2024-08-01",
@@ -25,7 +26,8 @@
         "bick-blandin-deming-wp-2025"
       ],
       "evidenceTier": 1,
-      "metricType": "survey"
+      "metricType": "survey",
+      "dataType": "observed"
     },
     {
       "date": "2024-11-01",
@@ -34,7 +36,8 @@
         "bick-blandin-deming-wp-2025"
       ],
       "evidenceTier": 1,
-      "metricType": "survey"
+      "metricType": "survey",
+      "dataType": "observed"
     },
     {
       "date": "2024-12-31",
@@ -45,6 +48,7 @@
         "daniotti-ai-code-diffusion-2025"
       ],
       "evidenceTier": 1,
+      "dataType": "observed",
       "isProxy": true,
       "proxyContext": {
         "actualUnit": "% of Python code on GitHub that is AI-assisted",
@@ -61,7 +65,8 @@
         "genai-adoption-tracker-2025"
       ],
       "evidenceTier": 2,
-      "metricType": "survey"
+      "metricType": "survey",
+      "dataType": "observed"
     },
     {
       "date": "2025-05-01",
@@ -70,7 +75,8 @@
         "genai-adoption-tracker-2025"
       ],
       "evidenceTier": 2,
-      "metricType": "survey"
+      "metricType": "survey",
+      "dataType": "observed"
     },
     {
       "date": "2025-08-01",
@@ -79,7 +85,8 @@
         "bick-blandin-deming-wp-2025"
       ],
       "evidenceTier": 1,
-      "metricType": "survey"
+      "metricType": "survey",
+      "dataType": "observed"
     },
     {
       "date": "2025-11-01",
@@ -88,7 +95,8 @@
         "bick-blandin-deming-wp-2025"
       ],
       "evidenceTier": 1,
-      "metricType": "survey"
+      "metricType": "survey",
+      "dataType": "observed"
     },
     {
       "date": "2026-01-22",
@@ -97,7 +105,8 @@
         "indeed-hiringlab-ai-jobs-labor-2026"
       ],
       "evidenceTier": 2,
-      "metricType": "survey"
+      "metricType": "survey",
+      "dataType": "observed"
     },
     {
       "date": "2026-01-28",
@@ -108,7 +117,8 @@
         "oecd-ai-adoption-firms-individuals-2026"
       ],
       "evidenceTier": 1,
-      "metricType": "survey"
+      "metricType": "survey",
+      "dataType": "observed"
     }
   ],
   "overlays": [

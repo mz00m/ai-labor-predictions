@@ -18,7 +18,8 @@
         "indeed-entry-level-2023"
       ],
       "evidenceTier": 2,
-      "metricType": "postings"
+      "metricType": "postings",
+      "dataType": "observed"
     },
     {
       "date": "2025-01-15",
@@ -29,7 +30,8 @@
         "wsj-entry-level-squeeze"
       ],
       "evidenceTier": 3,
-      "metricType": "projection"
+      "metricType": "projection",
+      "dataType": "projected"
     },
     {
       "date": "2025-04-01",
@@ -40,7 +42,8 @@
         "oecd-youth-employment-2025"
       ],
       "evidenceTier": 1,
-      "metricType": "employment"
+      "metricType": "employment",
+      "dataType": "observed"
     },
     {
       "date": "2025-07-01",
@@ -51,7 +54,8 @@
         "bls-entry-wages-2025"
       ],
       "evidenceTier": 1,
-      "metricType": "employment"
+      "metricType": "employment",
+      "dataType": "observed"
     },
     {
       "date": "2025-11-15",
@@ -62,7 +66,8 @@
         "worldbank-liu-wang-yu-2025"
       ],
       "evidenceTier": 1,
-      "metricType": "postings"
+      "metricType": "postings",
+      "dataType": "observed"
     },
     {
       "date": "2026-01-15",
@@ -73,7 +78,8 @@
         "anthropic-ceo-entry-level-2025"
       ],
       "evidenceTier": 3,
-      "metricType": "projection"
+      "metricType": "projection",
+      "dataType": "projected"
     },
     {
       "date": "2026-01-15",
@@ -84,7 +90,8 @@
         "imf-skill-gaps-entry-2026"
       ],
       "evidenceTier": 1,
-      "metricType": "projection"
+      "metricType": "projection",
+      "dataType": "projected"
     },
     {
       "date": "2026-03-18",
@@ -93,7 +100,8 @@
         "freund-mann-job-transformation-2026"
       ],
       "evidenceTier": 1,
-      "metricType": "projection"
+      "metricType": "projection",
+      "dataType": "projected"
     }
   ],
   "overlays": [

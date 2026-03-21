@@ -8,6 +8,7 @@
 
 import { getAllPredictions, getLastUpdated } from "../data-loader";
 import { Prediction, EVIDENCE_TIER_LABELS } from "../types";
+import { SOURCE_COUNT_DISPLAY } from "../constants";
 import { getSourceContents } from "./source-content";
 import type { SourceContentEntry } from "./source-content";
 import {
@@ -293,7 +294,7 @@ export function buildChatContext(userQuery: string): ChatContext {
   const sections: string[] = [];
 
   // Site overview + role instructions
-  sections.push(`You are a friendly, knowledgeable research assistant for jobsdata.ai, a dashboard tracking AI's impact on the labor market with 460+ sources across 17 prediction graphs.
+  sections.push(`You are a friendly, knowledgeable research assistant for jobsdata.ai, a dashboard tracking AI's impact on the labor market with ${SOURCE_COUNT_DISPLAY} sources across 17 prediction graphs.
 Data last updated: ${lastUpdated}.
 
 Evidence tiers (for your reference, don't explain these unless asked):

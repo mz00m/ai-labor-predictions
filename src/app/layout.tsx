@@ -5,6 +5,7 @@ import Chatbot from "@/components/Chatbot";
 import ChatbotBuddy from "@/components/ChatbotBuddy";
 import FooterStats from "@/components/FooterStats";
 import { getSourceCount } from "@/lib/search-sources";
+import { SOURCE_COUNT_DISPLAY } from "@/lib/constants";
 import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
     template: "%s | jobsdata.ai",
   },
   description:
-    "460+ sources tracking AI's impact on jobs, wages, and adoption. AI adoption is accelerating, productivity is climbing, and jobs are changing faster than they're disappearing.",
+    `${SOURCE_COUNT_DISPLAY} sources tracking AI's impact on jobs, wages, and adoption. AI adoption is accelerating, productivity is climbing, and jobs are changing faster than they're disappearing.`,
   metadataBase: new URL("https://jobsdata.ai"),
   alternates: {
     canonical: "/",
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Early Signals of AI Impact",
     description:
-      "460+ sources, one pattern: AI adoption is accelerating, productivity is climbing, and jobs are changing faster than they're disappearing.",
+      `${SOURCE_COUNT_DISPLAY} sources, one pattern: AI adoption is accelerating, productivity is climbing, and jobs are changing faster than they're disappearing.`,
     type: "website",
     siteName: "Early Signals of AI Impact",
     locale: "en_US",
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
     creator: "@mattzieger",
     title: "Early Signals of AI Impact",
     description:
-      "460+ sources, one pattern: AI adoption is accelerating, productivity is climbing, and jobs are changing faster than they're disappearing.",
+      `${SOURCE_COUNT_DISPLAY} sources, one pattern: AI adoption is accelerating, productivity is climbing, and jobs are changing faster than they're disappearing.`,
   },
 };
 
@@ -54,7 +55,7 @@ export default function RootLayout({
               name: "Early Signals of AI Impact",
               url: "https://jobsdata.ai",
               description:
-                "Tracking 17 predictions about AI-driven job displacement, wage impacts, and corporate adoption with 460+ sources filtered by evidence quality.",
+                `Tracking 17 predictions about AI-driven job displacement, wage impacts, and corporate adoption with ${SOURCE_COUNT_DISPLAY} sources filtered by evidence quality.`,
               author: {
                 "@type": "Person",
                 name: "Matt Zieger",

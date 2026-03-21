@@ -19,7 +19,8 @@
         "goldman-300m"
       ],
       "evidenceTier": 1,
-      "metricType": "projection"
+      "metricType": "projection",
+      "dataType": "projected"
     },
     {
       "date": "2024-04-01",
@@ -30,7 +31,8 @@
         "acemoglu-macro-2024"
       ],
       "evidenceTier": 1,
-      "metricType": "projection"
+      "metricType": "projection",
+      "dataType": "projected"
     },
     {
       "date": "2024-09-15",
@@ -41,7 +43,8 @@
         "wef-future-jobs-2024"
       ],
       "evidenceTier": 2,
-      "metricType": "projection"
+      "metricType": "projection",
+      "dataType": "projected"
     },
     {
       "date": "2025-01-06",
@@ -52,7 +55,8 @@
         "forrester-jobs-2025"
       ],
       "evidenceTier": 2,
-      "metricType": "survey"
+      "metricType": "survey",
+      "dataType": "projected"
     },
     {
       "date": "2025-08-01",
@@ -63,7 +67,8 @@
         "goldman-ai-workforce-2025"
       ],
       "evidenceTier": 2,
-      "metricType": "projection"
+      "metricType": "projection",
+      "dataType": "projected"
     },
     {
       "date": "2025-09-08",
@@ -74,7 +79,8 @@
         "pwbm-ai-productivity-2025"
       ],
       "evidenceTier": 1,
-      "metricType": "projection"
+      "metricType": "projection",
+      "dataType": "projected"
     },
     {
       "date": "2025-10-01",
@@ -85,7 +91,8 @@
         "gimbel-yale-ai-labor-2025"
       ],
       "evidenceTier": 1,
-      "metricType": "employment"
+      "metricType": "employment",
+      "dataType": "observed"
     },
     {
       "date": "2025-11-01",
@@ -96,7 +103,8 @@
         "nber-csuite-survey-2025"
       ],
       "evidenceTier": 1,
-      "metricType": "survey"
+      "metricType": "survey",
+      "dataType": "projected"
     }
   ],
   "overlays": [
@@ -224,7 +232,7 @@
         "anthropic-labor-market-impacts-2026"
       ],
       "evidenceTier": 2,
-      "label": "Anthropic: Young workers (22\u201325) see 14% hiring rate drop in AI-exposed occupations"
+      "label": "Anthropic: Young workers (22–25) see 14% hiring rate drop in AI-exposed occupations"
     }
   ],
   "sources": [
@@ -328,7 +336,7 @@
     },
     {
       "id": "indeed-total-postings-2025",
-      "title": "US Job Postings Are 15% Below Peak \u2014 AI Categories Hit Hardest",
+      "title": "US Job Postings Are 15% Below Peak — AI Categories Hit Hardest",
       "url": "https://www.hiringlab.org/2025/01/28/us-job-postings-trends/",
       "publisher": "Indeed Hiring Lab",
       "evidenceTier": 2,
@@ -433,7 +441,7 @@
       "publisher": "NBER (Yotzov, Barrero, Bloom, Bunn, Davis et al.)",
       "evidenceTier": 1,
       "datePublished": "2026-02-15",
-      "excerpt": "Looking ahead three years, executives predict a 1.4 percent productivity boost and 0.8 percent output increase alongside a 0.7 percent employment reduction\u2014while employees forecast a 0.5 percent employment increase.",
+      "excerpt": "Looking ahead three years, executives predict a 1.4 percent productivity boost and 0.8 percent output increase alongside a 0.7 percent employment reduction—while employees forecast a 0.5 percent employment increase.",
       "dateAdded": "2026-03-07"
     }
   ]
