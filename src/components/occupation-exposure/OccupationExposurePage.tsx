@@ -18,6 +18,7 @@ import DimensionPanel from "./DimensionPanel";
 import ComparisonTable from "./ComparisonTable";
 import MethodologySection from "./MethodologySection";
 import NetRiskScale from "./NetRiskScale";
+import TreemapEarthquake from "@/components/delights/TreemapEarthquake";
 
 function SectionLabel({ number }: { number: string }) {
   return (
@@ -94,6 +95,8 @@ export default function OccupationExposurePage() {
     useState<DimensionKey>("netRisk");
   const [selectedOcc, setSelectedOcc] =
     useState<ScoredKarpathyOccupation | null>(null);
+  const [preShockDimension, setPreShockDimension] =
+    useState<DimensionKey | null>(null);
 
   return (
     <>
@@ -189,7 +192,21 @@ export default function OccupationExposurePage() {
           <div className="mb-4 flex flex-col sm:flex-row sm:items-center gap-3">
             <DimensionPanel
               activeDimension={activeDimension}
-              onSelect={setActiveDimension}
+              onSelect={(dim) => {
+                setActiveDimension(dim);
+                setPreShockDimension(null); // manual change clears shock state
+              }}
+            />
+            <TreemapEarthquake
+              isShocked={preShockDimension !== null}
+              onShock={() => {
+                setPreShockDimension(activeDimension);
+                setActiveDimension("technicalExposure");
+              }}
+              onReset={() => {
+                setActiveDimension(preShockDimension ?? "netRisk");
+                setPreShockDimension(null);
+              }}
             />
           </div>
 

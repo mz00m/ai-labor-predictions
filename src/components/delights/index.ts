@@ -1,5 +1,5 @@
 export { default as KonamiModeProvider, useKonamiMode } from "./KonamiMode";
-export { default as JCurveBallDrop } from "./JCurveBallDrop";
+
 export { default as DisagreementShake } from "./DisagreementShake";
 export { default as ScrollProgressMeter } from "./ScrollProgressMeter";
 export { default as CursorSpotlight } from "./CursorSpotlight";
