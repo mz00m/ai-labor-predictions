@@ -10,6 +10,7 @@ import VulnerabilityTable from "./VulnerabilityTable";
 import DiffusionComparison from "./DiffusionComparison";
 import ShareSectionBar from "@/components/ShareSectionBar";
 import ReadingProgressBar from "@/components/ReadingProgressBar";
+import CursorSpotlight from "@/components/delights/CursorSpotlight";
 
 export default function HistoryPage() {
   return (
@@ -84,7 +85,9 @@ export default function HistoryPage() {
             labor market through the same sequence of emergence, diffusion,
             displacement, reorganization, and new equilibrium.
           </p>
-          <GPTTimeline />
+          <CursorSpotlight>
+            <GPTTimeline />
+          </CursorSpotlight>
 
           {/* Speed compression visualization */}
           <CompressionComparison />
