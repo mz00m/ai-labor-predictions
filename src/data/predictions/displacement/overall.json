@@ -19,6 +19,7 @@
       ],
       "evidenceTier": 1,
       "metricType": "postings",
+      "dataType": "observed",
       "isProxy": true,
       "proxyContext": {
         "actualUnit": "relative job posting decline per SD of GenAI exposure",
@@ -37,7 +38,8 @@
         "acemoglu-macro-2024"
       ],
       "evidenceTier": 1,
-      "metricType": "projection"
+      "metricType": "projection",
+      "dataType": "projected"
     },
     {
       "date": "2024-11-01",
@@ -48,7 +50,8 @@
         "forrester-6pct"
       ],
       "evidenceTier": 2,
-      "metricType": "survey"
+      "metricType": "survey",
+      "dataType": "projected"
     },
     {
       "date": "2025-01-01",
@@ -79,7 +82,8 @@
         "nber-ai-productivity-unemployment-2025"
       ],
       "evidenceTier": 1,
-      "metricType": "projection"
+      "metricType": "projection",
+      "dataType": "projected"
     },
     {
       "date": "2025-08-01",
@@ -90,7 +94,8 @@
         "goldman-ai-workforce-2025"
       ],
       "evidenceTier": 2,
-      "metricType": "projection"
+      "metricType": "projection",
+      "dataType": "projected"
     },
     {
       "date": "2025-10-01",
@@ -101,7 +106,8 @@
         "kinder-brookings-2025"
       ],
       "evidenceTier": 1,
-      "metricType": "employment"
+      "metricType": "employment",
+      "dataType": "observed"
     },
     {
       "date": "2025-10-15",
@@ -112,7 +118,8 @@
         "yale-budget-lab-2025"
       ],
       "evidenceTier": 1,
-      "metricType": "employment"
+      "metricType": "employment",
+      "dataType": "observed"
     },
     {
       "date": "2025-10-30",
@@ -121,7 +128,8 @@
         "cais-scale-remote-labor-index-2025"
       ],
       "evidenceTier": 1,
-      "metricType": "projection"
+      "metricType": "projection",
+      "dataType": "projected"
     },
     {
       "date": "2025-11-01",
@@ -132,7 +140,8 @@
         "worldbank-liu-wang-yu-2025"
       ],
       "evidenceTier": 1,
-      "metricType": "projection"
+      "metricType": "projection",
+      "dataType": "projected"
     },
     {
       "date": "2025-12-01",
@@ -143,7 +152,8 @@
         "wef-future-jobs-2025"
       ],
       "evidenceTier": 2,
-      "metricType": "projection"
+      "metricType": "projection",
+      "dataType": "projected"
     },
     {
       "date": "2026-01-01",
@@ -154,7 +164,8 @@
         "hartley-genai-labor-2026"
       ],
       "evidenceTier": 1,
-      "metricType": "projection"
+      "metricType": "projection",
+      "dataType": "projected"
     },
     {
       "date": "2026-01-06",
@@ -197,7 +208,8 @@
         "icle-ai-productivity-2026"
       ],
       "evidenceTier": 2,
-      "metricType": "projection"
+      "metricType": "projection",
+      "dataType": "projected"
     },
     {
       "date": "2026-02-05",
@@ -209,6 +221,7 @@
       ],
       "evidenceTier": 2,
       "metricType": "survey",
+      "dataType": "projected",
       "sampleSize": 935,
       "isProxy": true,
       "proxyContext": {
@@ -228,7 +241,8 @@
         "nber-bloom-firm-data-ai-2026"
       ],
       "evidenceTier": 1,
-      "metricType": "survey"
+      "metricType": "survey",
+      "dataType": "observed"
     },
     {
       "date": "2026-02-24",
@@ -239,7 +253,8 @@
         "goldman-mei-ai-labor-2026"
       ],
       "evidenceTier": 2,
-      "metricType": "projection"
+      "metricType": "projection",
+      "dataType": "projected"
     },
     {
       "date": "2026-02-24",
@@ -248,7 +263,8 @@
         "dallas-fed-davis-ai-wages-2026"
       ],
       "evidenceTier": 1,
-      "metricType": "employment"
+      "metricType": "employment",
+      "dataType": "observed"
     },
     {
       "date": "2026-03-13",

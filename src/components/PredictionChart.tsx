@@ -793,12 +793,32 @@ export default function PredictionChart({
                 const fillColor = payload.metricType
                   ? getMetricTypeConfig(payload.metricType).color
                   : getTierConfig(payload.evidenceTier).color;
-                return renderDotShape({
+                const dotEl = renderDotShape({
                   cx, cy, r: 4, fill: fillColor, metricType: payload.metricType,
                   style: { cursor: onDotClick ? "pointer" : undefined },
                   onClick: () => onDotClick?.(payload.sourceIds),
                   keyPrefix: "dot-proj", date: payload.date,
                 });
+                // Value label above each projected dot
+                const labelValue = payload.projectedValue != null
+                  ? `${payload.projectedValue > 0 ? "" : ""}${payload.projectedValue}%`
+                  : "";
+                return (
+                  <g key={`proj-group-${payload.date}`}>
+                    {dotEl}
+                    <text
+                      x={cx}
+                      y={cy - 10}
+                      textAnchor="middle"
+                      fill="#5C61F6"
+                      fontSize={10}
+                      fontWeight={600}
+                      opacity={0.85}
+                    >
+                      {labelValue}
+                    </text>
+                  </g>
+                );
               }}
               activeDot={(props: unknown) => {
                 const { cx, cy, payload } = props as {
@@ -882,7 +902,7 @@ export default function PredictionChart({
             </div>
             <div className="flex items-center gap-1.5">
               <svg width="24" height="2"><line x1="0" y1="1" x2="24" y2="1" stroke="#5C61F6" strokeWidth="2.5" strokeDasharray="6 3" strokeOpacity="0.7" /></svg>
-              <span className="text-[11px] text-[var(--muted)]">Projected / Forecast</span>
+              <span className="text-[11px] text-[var(--muted)]">Projected / Forecast (labeled with projected %)</span>
             </div>
           </>
         )}
