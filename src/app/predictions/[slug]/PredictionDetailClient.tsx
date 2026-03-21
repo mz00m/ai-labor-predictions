@@ -113,6 +113,50 @@ export default function PredictionDetailPage() {
     .filter((d) => selectedTiers.includes(d.evidenceTier))
     .sort((a, b) => a.date.localeCompare(b.date));
 
+  // Split history into observed and projected
+  const observedHistory = prediction.history.filter((d) => d.dataType === "observed");
+  const projectedHistory = prediction.history.filter((d) => d.dataType === "projected");
+  const hasObserved = observedHistory.length > 0;
+  const hasProjected = projectedHistory.length > 0;
+  const hasBothTypes = hasObserved && hasProjected;
+
+  // Compute separate stats for observed and projected
+  const observedValues = observedHistory
+    .filter((d) => selectedTiers.includes(d.evidenceTier))
+    .map((d) => d.value);
+  const projectedValues = projectedHistory
+    .filter((d) => selectedTiers.includes(d.evidenceTier))
+    .map((d) => d.value);
+  const observedMean = observedValues.length > 0
+    ? Math.round((observedValues.reduce((s, v) => s + v, 0) / observedValues.length) * 10) / 10
+    : 0;
+  const observedMin = observedValues.length > 0 ? Math.round(Math.min(...observedValues) * 10) / 10 : 0;
+  const observedMax = observedValues.length > 0 ? Math.round(Math.max(...observedValues) * 10) / 10 : 0;
+  const projectedMin = projectedValues.length > 0 ? Math.round(Math.min(...projectedValues) * 10) / 10 : 0;
+  const projectedMax = projectedValues.length > 0 ? Math.round(Math.max(...projectedValues) * 10) / 10 : 0;
+  const projectedMedian = projectedValues.length > 0
+    ? (() => {
+        const sorted = [...projectedValues].sort((a, b) => a - b);
+        const mid = Math.floor(sorted.length / 2);
+        const val = sorted.length % 2 !== 0 ? sorted[mid] : (sorted[mid - 1] + sorted[mid]) / 2;
+        return Math.round(val * 10) / 10;
+      })()
+    : 0;
+
+  // Parse target year from timeHorizon (e.g., "By 2030" -> "2030-01-01")
+  const targetYearMatch = prediction.timeHorizon.match(/\b(20\d{2})\b/);
+  const targetDateStr = targetYearMatch ? `${targetYearMatch[1]}-01-01` : null;
+
+  // Separate overlays into observed-relevant and projection-relevant
+  // Overlays referencing observed/measured data go on observed chart;
+  // forward-looking ones go on projection chart
+  const observedOverlayKeywords = ["CPS", "Budget Lab", "BLS", "employment data", "no effect", "no displacement", "zero effect", "no evidence", "flat", "stability"];
+  const observedOverlays = prediction.overlays?.filter((o) =>
+    o.direction === "neutral" || o.direction === "up" ||
+    observedOverlayKeywords.some((kw) => o.label.toLowerCase().includes(kw.toLowerCase()))
+  );
+  const projectedOverlays = prediction.overlays;
+
   const bestEstimate = filteredHistory.length > 0
     ? (filteredHistory.findLast((d) => d.evidenceTier === 1) ?? filteredHistory[filteredHistory.length - 1])
     : undefined;
@@ -155,37 +199,43 @@ export default function PredictionDetailPage() {
           {prediction.title}
         </h1>
 
-        {/* Big number + source range + trend arrow */}
+        {/* Hero stat: projection weighted average with observed note */}
         {(() => {
-          const spread = agg.max - agg.min;
-          const meanAbs = Math.abs(agg.mean) || 1;
-          const wideDisagreement = spread / meanAbs > 1.5;
           const unitSuffix = prediction.unit.includes("%") ? "%" : "";
 
-          if (wideDisagreement && agg.min !== agg.max) {
-            // Wide disagreement: lead with range, show weighted avg as secondary
+          if (hasBothTypes) {
             return (
               <div className="mb-4">
                 <div className="flex items-baseline gap-3">
                   <span className="stat-number text-[56px] sm:text-[72px] font-black text-[var(--foreground)] leading-none">
-                    {agg.min}–{agg.max}
+                    {agg.mean > 0 && prediction.category === "wages" ? "+" : ""}
+                    {Number.isInteger(agg.mean) ? agg.mean : agg.mean.toFixed(1)}
                     <span className="text-[24px] font-normal text-[var(--muted)] ml-1">{unitSuffix}</span>
                   </span>
+                  {agg.min !== agg.max && (
+                    <span className="text-[18px] font-medium text-[var(--muted)]" style={{ opacity: 0.7 }}>
+                      {agg.min}–{agg.max}{unitSuffix}
+                    </span>
+                  )}
                   {agg.trend !== "flat" && (
                     <span className={`text-[16px] font-medium ${trendColorClass}`} style={{ opacity: 0.6 }}>
                       Trending {agg.trend === "up" ? "▲" : "▼"}
                     </span>
                   )}
                 </div>
-                <p className="text-[15px] text-[var(--muted)] mt-1">
-                  Weighted avg: {agg.mean > 0 && prediction.category === "wages" ? "+" : ""}
-                  {Number.isInteger(agg.mean) ? agg.mean : agg.mean.toFixed(1)}{unitSuffix}
-                  <span className="ml-2 text-[13px] text-[#d97706]">Sources measure different things</span>
+                <p className="text-[14px] text-[var(--muted)] mt-2">
+                  Weighted average across {filteredHistory.length} sources.{" "}
+                  <span className="font-semibold text-[#16a34a]">
+                    Observed so far: ~{observedMean}{unitSuffix}
+                  </span>
+                  {" "}({observedValues.length} measurements from Yale Budget Lab, Brookings, Dallas Fed, BLS).{" "}
+                  Projections range {projectedMin}–{projectedMax}{unitSuffix} (median ~{projectedMedian}{unitSuffix}).
                 </p>
               </div>
             );
           }
 
+          // Single-type display (fallback for predictions with only one data type)
           return (
             <div className="flex items-baseline gap-4 mb-4">
               <span className="stat-number text-[56px] sm:text-[72px] font-black text-[var(--foreground)] leading-none">
@@ -269,17 +319,19 @@ export default function PredictionDetailPage() {
         />
       </div>
 
-      {/* Section break — Indicators & Predictions */}
+      {/* Section break */}
       <div className="relative -mx-6 sm:-mx-10 -mt-4">
         <div className="h-1 bg-gradient-to-r from-[#5C61F6] via-[#E8A090] to-[#F66B5C]" />
         <div className="px-6 sm:px-10 pt-8 pb-2">
           <h2 className="text-[28px] sm:text-[36px] font-black tracking-tight text-[var(--foreground)] leading-tight mb-3">
             {prediction.timeHorizon.toLowerCase().includes("current")
               ? "Indicators Over Time"
-              : "Predictions Over Time"}
+              : hasBothTypes ? "Observed Data & Projections" : "Predictions Over Time"}
           </h2>
           <p className="text-[15px] text-[var(--muted)] leading-relaxed max-w-2xl">
-            The chart below tracks how this estimate has shifted over time as new research and data emerge. Every source is color-coded by evidence quality; use the tiers below to filter what appears on the chart and in the weighted average above.
+            {hasBothTypes
+              ? "This prediction has two fundamentally different types of evidence: observed employment data (what has actually happened) and forward-looking projections (what researchers estimate will happen). They are shown separately below because they answer different questions."
+              : "The chart below tracks how this estimate has shifted over time as new research and data emerge. Every source is color-coded by evidence quality; use the tiers below to filter what appears on the chart and in the weighted average above."}
           </p>
         </div>
       </div>
@@ -303,25 +355,7 @@ export default function PredictionDetailPage() {
         </div>
       )}
 
-      {/* Signal type callout for charts mixing observed and projected data */}
-      {prediction.history.some((d) => d.dataType === "observed") &&
-       prediction.history.some((d) => d.dataType === "projected") && (
-        <div className="border border-[#5C61F6]/20 bg-[#5C61F6]/[0.03] rounded-lg px-5 py-4 max-w-2xl -mt-4">
-          <p className="text-[13px] text-[var(--muted)] leading-relaxed">
-            <span className="font-semibold text-[#5C61F6]">Reading this chart:</span>{" "}
-            <span className="inline-flex items-center gap-1">
-              <svg width="16" height="2" className="inline"><line x1="0" y1="1" x2="16" y2="1" stroke="#5C61F6" strokeWidth="2" /></svg>
-              Solid line
-            </span>{" "}= observed employment data.{" "}
-            <span className="inline-flex items-center gap-1">
-              <svg width="16" height="2" className="inline"><line x1="0" y1="1" x2="16" y2="1" stroke="#5C61F6" strokeWidth="2" strokeDasharray="4 2" opacity="0.7" /></svg>
-              Dashed line
-            </span>{" "}= forward-looking projections. These are fundamentally different signal types — observed data near 0% does not contradict projections of 5-12%.
-          </p>
-        </div>
-      )}
-
-      {/* Chart */}
+      {/* Charts — split into observed and projected when both exist */}
       <section>
         {prediction.slug === "genai-work-adoption" ? (
           <>
@@ -329,6 +363,72 @@ export default function PredictionDetailPage() {
               Two trend lines from the same quarterly survey: overall generative AI use and use at work. Hollow dots indicate values estimated from the tracker chart.
             </p>
             <AIAdoptionChart />
+          </>
+        ) : hasBothTypes ? (
+          <>
+            {/* OBSERVED CHART */}
+            <div className="mb-12">
+              <div className="mb-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <div className="w-3 h-3 rounded-full bg-[#16a34a]" />
+                  <h3 className="text-[20px] sm:text-[24px] font-bold text-[var(--foreground)]">
+                    What has happened
+                  </h3>
+                </div>
+                <p className="text-[14px] text-[var(--muted)] leading-relaxed max-w-2xl">
+                  Measured employment data from government statistics, large-scale surveys, and administrative records. This is ground truth — what has actually occurred in the labor market.
+                </p>
+              </div>
+              <PredictionChart
+                history={observedHistory}
+                sources={prediction.sources}
+                selectedTiers={selectedTiers}
+                unit={prediction.unit.includes("%") ? "%" : ""}
+                overlays={observedOverlays}
+                onDotClick={handleDotClick}
+                yAxisMax={prediction.slug === "overall-us-displacement" || prediction.slug === "white-collar-professional-displacement" ? 10 : undefined}
+                yAxisMin={prediction.slug === "overall-us-displacement" || prediction.slug === "white-collar-professional-displacement" ? -5 : undefined}
+                category={prediction.category}
+                showTrendLine={true}
+                height={280}
+              />
+              <p className="text-[12px] text-[var(--muted)] mt-3 opacity-70">
+                Each dot is a different measurement source. Click any dot to jump to its source below.
+              </p>
+            </div>
+
+            {/* PROJECTED CHART */}
+            <div>
+              <div className="mb-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <div className="w-3 h-3 rounded-full bg-[#5C61F6]" />
+                  <h3 className="text-[20px] sm:text-[24px] font-bold text-[var(--foreground)]">
+                    What researchers project
+                  </h3>
+                </div>
+                <p className="text-[14px] text-[var(--muted)] leading-relaxed max-w-2xl">
+                  Forward-looking estimates from structural models, institutional surveys, and expert forecasts.
+                  {targetDateStr ? ` All projections target ${prediction.timeHorizon.toLowerCase()}, shown by the reference line.` : ""}
+                  {" "}The wide range ({projectedMin}–{projectedMax}%) reflects different model assumptions about reinstatement effects, demand elasticity, and adoption speed — not just parameter uncertainty.
+                </p>
+              </div>
+              <PredictionChart
+                history={projectedHistory}
+                sources={prediction.sources}
+                selectedTiers={selectedTiers}
+                unit={prediction.unit.includes("%") ? "%" : ""}
+                overlays={projectedOverlays}
+                onDotClick={handleDotClick}
+                yAxisMax={prediction.slug === "overall-us-displacement" || prediction.slug === "white-collar-professional-displacement" ? 25 : undefined}
+                yAxisMin={prediction.slug === "overall-us-displacement" || prediction.slug === "white-collar-professional-displacement" ? -5 : undefined}
+                category={prediction.category}
+                showTrendLine={false}
+                targetDate={targetDateStr ?? undefined}
+              />
+              <p className="text-[12px] text-[var(--muted)] mt-3 opacity-70">
+                Each dot is a different projection source. The x-axis shows when the projection was published. Click any dot to jump to its source.{prediction.overlays && prediction.overlays.length > 0 ? " Overlay bars show directional signals from related studies." : ""}
+              </p>
+            </div>
           </>
         ) : (
           <>
@@ -343,7 +443,6 @@ export default function PredictionDetailPage() {
               yAxisMin={prediction.slug === "entry-level-wage-impact" || prediction.slug === "freelancer-rate-impact" ? -50 : prediction.slug === "tech-sector-displacement" ? -20 : prediction.slug === "median-wage-impact" ? -10 : prediction.slug === "white-collar-professional-displacement" || prediction.slug === "overall-us-displacement" ? -25 : undefined}
               category={prediction.category}
               showTrendLine={prediction.aggregationMethod === "latest"}
-
             />
             <p className="text-[12px] text-[var(--muted)] mt-4 opacity-70">
               Each data point is from a different source. Dots are color-coded by evidence tier. Click any dot to jump to its source.{prediction.overlays && prediction.overlays.length > 0 ? " Colored overlay bars represent relevant studies or data points that provide directional (but not exact) guidance. Click a bar to see its source." : ""}
