@@ -32,6 +32,10 @@ interface PredictionChartProps {
   showTrendLine?: boolean;
   /** Override chart height in pixels (default: 360 for normal, 80 for compact) */
   height?: number;
+  /** Target date for projections — adds a labeled reference line at this year */
+  targetDate?: string;
+  /** Label for the chart section (shown above chart) */
+  chartLabel?: string;
 }
 
 interface ChartDataPoint {
@@ -343,8 +347,14 @@ export default function PredictionChart({
   category,
   showTrendLine = true,
   height,
+  targetDate,
+  chartLabel,
 }: PredictionChartProps) {
   const chartWrapperRef = useRef<HTMLDivElement>(null);
+
+  // Parse targetDate into a timestamp for the reference line
+  const targetDateTs = targetDate ? parseISO(targetDate).getTime() : null;
+  const targetDateStr = targetDate ? format(parseISO(targetDate), "MMM yyyy") : null;
   const [hoverOverlay, setHoverOverlay] = useState<{
     overlay: OverlayTooltipData;
     x: number;
@@ -524,6 +534,20 @@ export default function PredictionChart({
     }
   }
 
+  // Add a phantom point at the target date to extend the x-axis
+  if (targetDateTs && targetDateStr && !usedDateStrs.has(targetDateStr)) {
+    usedDateStrs.add(targetDateStr);
+    phantomPoints.push({
+      date: targetDateTs,
+      dateStr: targetDateStr,
+      value: undefined,
+      dataType: "projected",
+      evidenceTier: 1 as EvidenceTier,
+      sourceIds: [],
+      isPhantom: true,
+    });
+  }
+
   const chartData = [...realPoints, ...phantomPoints].sort(
     (a, b) => a.date - b.date
   );
@@ -661,6 +685,22 @@ export default function PredictionChart({
           />
           {/* Zero baseline */}
           <ReferenceLine y={0} stroke="#d1d5db" strokeWidth={1} />
+          {/* Target date reference line */}
+          {targetDateStr && (
+            <ReferenceLine
+              x={targetDateStr}
+              stroke="#d97706"
+              strokeWidth={2}
+              strokeDasharray="8 4"
+              label={{
+                value: `Target: ${targetDateStr}`,
+                position: "top",
+                fill: "#d97706",
+                fontSize: 12,
+                fontWeight: 600,
+              }}
+            />
+          )}
           {/* Confidence band (stacked area trick: transparent base + visible width) */}
           {chartData.some((d) => d.confidenceBandBase != null && d.confidenceBandWidth != null) && (
             <>
