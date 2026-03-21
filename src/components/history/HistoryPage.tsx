@@ -9,10 +9,12 @@ import ForecastColumns from "./ForecastColumns";
 import VulnerabilityTable from "./VulnerabilityTable";
 import DiffusionComparison from "./DiffusionComparison";
 import ShareSectionBar from "@/components/ShareSectionBar";
+import ReadingProgressBar from "@/components/ReadingProgressBar";
 
 export default function HistoryPage() {
   return (
     <article className="max-w-[960px] mx-auto">
+      <ReadingProgressBar />
       {/* ───── Header ───── */}
       <header className="mb-10">
         <p className="text-[12px] font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
