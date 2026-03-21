@@ -108,6 +108,11 @@ const EMPLOYMENT_THOUSANDS: Record<string, number> = {
   "pharmacy-technician": 450, "welder": 430, "preschool-teacher": 400,
   "substance-abuse-counselor": 350, "firefighter": 330, "emt-paramedic": 270,
   "genetic-counselor": 5, "veterinary-technician": 120, "chief-of-staff": 50,
+  "cook-restaurant": 1400, "food-prep-worker": 900, "production-supervisor": 700,
+  "packer-packager": 650, "bartender": 650, "forklift-operator": 600,
+  "inspector-tester-sorter": 600, "hotel-housekeeper": 600, "dining-attendant": 550,
+  "shipping-receiving-clerk": 550, "systems-analyst": 500, "billing-clerk": 500,
+  "dishwasher": 500,
 };
 const TOTAL_US_EMPLOYMENT = 158400; // thousands
 const coveredEmployment = JOB_PROFILES.reduce(
