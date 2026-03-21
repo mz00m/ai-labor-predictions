@@ -8,6 +8,7 @@ import PredictionChart from "./PredictionChart";
 import { useMagneticTilt } from "@/hooks/useMagneticTilt";
 import { useInView } from "@/hooks/useInView";
 import { useCountUp } from "@/hooks/useCountUp";
+import DisagreementShake from "@/components/delights/DisagreementShake";
 
 interface PredictionCardProps {
   prediction: Prediction;
@@ -57,6 +58,7 @@ export default function PredictionCard({
 
   return (
     <Link href={`/predictions/${prediction.slug}`}>
+      <DisagreementShake hasDisagreement={hasSignificantDisagreement} spreadRatio={spread / meanAbs}>
       <div
         ref={mergedRef}
         className="group p-5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:border-indigo-400 dark:hover:border-indigo-500 hover:shadow-lg cursor-pointer"
@@ -128,6 +130,7 @@ export default function PredictionCard({
           )}
         </p>
       </div>
+      </DisagreementShake>
     </Link>
   );
 }

@@ -1,6 +1,7 @@
 import { Source, EvidenceTier, DirectionalOverlay } from "@/lib/types";
 import { getTierConfig } from "@/lib/evidence-tiers";
 import { format, parseISO } from "date-fns";
+import SourceWeightDot from "@/components/delights/SourceWeightViz";
 
 interface SourceListProps {
   sources: Source[];
@@ -118,6 +119,7 @@ export default function SourceList({
                   <span className="text-[11px] font-medium" style={{ color: config.color }}>
                     {config.shortLabel}
                   </span>
+                  <SourceWeightDot tier={source.evidenceTier as 1 | 2 | 3 | 4} />
                 </div>
                 {source.excerpt && (
                   <p className="text-[13px] text-[var(--muted)] mt-1.5 leading-relaxed">

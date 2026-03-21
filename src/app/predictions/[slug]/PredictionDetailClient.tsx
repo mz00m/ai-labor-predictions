@@ -15,6 +15,8 @@ import AdoptionLadder from "@/components/AdoptionLadder";
 import SourceList from "@/components/SourceList";
 import AgeWeightedMethodology from "@/components/AgeWeightedMethodology";
 import ShareCiteBar from "@/components/ShareCiteBar";
+import DragTimeline from "@/components/delights/DragTimeline";
+import ShuffleSources from "@/components/delights/ShuffleSources";
 
 const tierCounts = getSourceCountsByTier();
 
@@ -201,6 +203,15 @@ export default function PredictionDetailPage() {
                   Trending {agg.trend === "up" ? "▲" : "▼"}
                 </span>
               )}
+              {prediction.timeHorizon.match(/\d{4}/) && (
+                <DragTimeline
+                  targetYear={parseInt(prediction.timeHorizon.match(/\d{4}/)?.[0] ?? "2030")}
+                  min={agg.min}
+                  max={agg.max}
+                  mean={agg.mean}
+                  unit={prediction.unit.includes("%") ? "%" : ""}
+                />
+              )}
             </div>
           );
         })()}
@@ -380,6 +391,10 @@ export default function PredictionDetailPage() {
 
       {/* Sources */}
       <section>
+        <div className="flex items-center justify-between mb-2">
+          <div /> {/* Spacer — heading is inside SourceList */}
+          <ShuffleSources sourceCount={prediction.sources.length} />
+        </div>
         <SourceList
           sources={prediction.sources}
           selectedTiers={selectedTiers}

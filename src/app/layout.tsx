@@ -8,6 +8,7 @@ import FooterStats from "@/components/FooterStats";
 import { getSourceCount } from "@/lib/search-sources";
 import { SOURCE_COUNT_DISPLAY } from "@/lib/constants";
 import { Analytics } from "@vercel/analytics/react";
+import DelightsWrapper from "@/components/delights/DelightsWrapper";
 
 export const metadata: Metadata = {
   title: {
@@ -99,32 +100,34 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen bg-white text-[var(--foreground)] antialiased">
-        <Navbar />
-        <main className="max-w-6xl mx-auto px-6 sm:px-10 py-16">
-          {children}
-        </main>
-        <Chatbot sourceCount={sourceCount} />
-        <ChatbotBuddy sourceCount={sourceCount} />
-        <KonamiEasterEgg />
-        <Analytics />
-        <footer className="max-w-6xl mx-auto px-6 sm:px-10 pb-16">
-          <div className="pt-10 border-t border-black/[0.06] space-y-4">
-            <FooterStats />
-            <p className="text-[13px] text-[var(--muted)]">
-              Data drawn from hundreds of sources (academic research, government statistics, corporate
-              filings, journalism, and expert opinion) all able to be reviewed and filtered by you.
-              Aggregate figures reflect my independent analysis{" "}
-              (<a href="/about" className="underline hover:text-[var(--foreground)]">methodology</a>).
-            </p>
-            <p className="text-[13px] text-[var(--muted)]">
-              Nothing here is investment or career advice. This project is unaffiliated with my
-              employer. Corrections and ideas welcome:{" "}
-              <a href="https://www.linkedin.com/in/mattzieger" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">LinkedIn</a>
-              {" "}/{" "}
-              <a href="https://x.com/mattzieger" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">X</a>
-            </p>
-          </div>
-        </footer>
+        <DelightsWrapper>
+          <Navbar />
+          <main className="max-w-6xl mx-auto px-6 sm:px-10 py-16">
+            {children}
+          </main>
+          <Chatbot sourceCount={sourceCount} />
+          <ChatbotBuddy sourceCount={sourceCount} />
+          <KonamiEasterEgg />
+          <Analytics />
+          <footer className="max-w-6xl mx-auto px-6 sm:px-10 pb-16">
+            <div className="pt-10 border-t border-black/[0.06] space-y-4">
+              <FooterStats />
+              <p className="text-[13px] text-[var(--muted)]">
+                Data drawn from hundreds of sources (academic research, government statistics, corporate
+                filings, journalism, and expert opinion) all able to be reviewed and filtered by you.
+                Aggregate figures reflect my independent analysis{" "}
+                (<a href="/about" className="underline hover:text-[var(--foreground)]">methodology</a>).
+              </p>
+              <p className="text-[13px] text-[var(--muted)]">
+                Nothing here is investment or career advice. This project is unaffiliated with my
+                employer. Corrections and ideas welcome:{" "}
+                <a href="https://www.linkedin.com/in/mattzieger" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">LinkedIn</a>
+                {" "}/{" "}
+                <a href="https://x.com/mattzieger" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">X</a>
+              </p>
+            </div>
+          </footer>
+        </DelightsWrapper>
       </body>
     </html>
   );

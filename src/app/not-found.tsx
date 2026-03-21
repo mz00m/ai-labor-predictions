@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import NotFoundGame from "@/components/delights/NotFoundGame";
 
 /* ------------------------------------------------------------------ */
 /*  Falling-dot physics for the broken chart Easter egg                */
@@ -206,6 +207,14 @@ export default function NotFound() {
       <p className="text-[15px] text-[var(--muted)] mb-6 text-center">
         This page has been displaced.
       </p>
+
+      {/* Mini-game: Lost in the Labor Market */}
+      <div className="w-full max-w-md mb-8">
+        <p className="text-[11px] font-bold uppercase tracking-widest text-[var(--muted)] mb-3 text-center">
+          While you&rsquo;re here...
+        </p>
+        <NotFoundGame />
+      </div>
 
       {/* Back link */}
       <Link
