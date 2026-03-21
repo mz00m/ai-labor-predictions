@@ -18,7 +18,8 @@
         "upwork-trends-2023"
       ],
       "evidenceTier": 1,
-      "metricType": "corporate"
+      "metricType": "corporate",
+      "dataType": "observed"
     },
     {
       "date": "2023-11-01",
@@ -29,7 +30,8 @@
         "fiverr-market-report-2023"
       ],
       "evidenceTier": 1,
-      "metricType": "corporate"
+      "metricType": "corporate",
+      "dataType": "observed"
     },
     {
       "date": "2024-03-15",
@@ -40,7 +42,8 @@
         "nber-freelance-ai-2024"
       ],
       "evidenceTier": 1,
-      "metricType": "projection"
+      "metricType": "projection",
+      "dataType": "projected"
     },
     {
       "date": "2024-07-01",
@@ -51,7 +54,8 @@
         "upwork-earnings-q2-2024"
       ],
       "evidenceTier": 1,
-      "metricType": "corporate"
+      "metricType": "corporate",
+      "dataType": "observed"
     },
     {
       "date": "2025-05-01",
@@ -62,7 +66,8 @@
         "ilo-gig-workers-2025"
       ],
       "evidenceTier": 1,
-      "metricType": "projection"
+      "metricType": "projection",
+      "dataType": "projected"
     },
     {
       "date": "2025-10-01",
@@ -73,7 +78,8 @@
         "ramp-freelance-velocity-2025"
       ],
       "evidenceTier": 1,
-      "metricType": "corporate"
+      "metricType": "corporate",
+      "dataType": "observed"
     },
     {
       "date": "2026-02-01",
@@ -84,7 +90,8 @@
         "sciencedirect-freelancer-demand-2025"
       ],
       "evidenceTier": 1,
-      "metricType": "projection"
+      "metricType": "projection",
+      "dataType": "projected"
     }
   ],
   "overlays": [

@@ -19,7 +19,8 @@
         "chegg-enrollment-decline"
       ],
       "evidenceTier": 4,
-      "metricType": "corporate"
+      "metricType": "corporate",
+      "dataType": "observed"
     },
     {
       "date": "2025-01-20",
@@ -30,7 +31,8 @@
         "oecd-education-outlook-2025"
       ],
       "evidenceTier": 1,
-      "metricType": "projection"
+      "metricType": "projection",
+      "dataType": "projected"
     },
     {
       "date": "2025-03-01",
@@ -41,7 +43,8 @@
         "pearson-10k-2024"
       ],
       "evidenceTier": 4,
-      "metricType": "corporate"
+      "metricType": "corporate",
+      "dataType": "observed"
     },
     {
       "date": "2025-07-15",
@@ -52,7 +55,8 @@
         "bls-education-2025"
       ],
       "evidenceTier": 1,
-      "metricType": "employment"
+      "metricType": "employment",
+      "dataType": "observed"
     }
   ],
   "overlays": [

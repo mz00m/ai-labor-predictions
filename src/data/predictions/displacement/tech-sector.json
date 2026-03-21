@@ -17,7 +17,15 @@
       ],
       "evidenceTier": 2,
       "dataType": "observed",
-      "metricType": "postings"
+      "metricType": "postings",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "% decline in tech job postings from peak",
+        "conversionFactor": 0.4,
+        "conversionLow": 0.3,
+        "conversionHigh": 0.5,
+        "rationale": "Job posting declines overstate actual displacement by ~2-3x; reduced hiring velocity != job elimination"
+      }
     },
     {
       "date": "2024-03-15",
@@ -51,7 +59,15 @@
       ],
       "evidenceTier": 2,
       "dataType": "observed",
-      "metricType": "postings"
+      "metricType": "postings",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "% decline in tech job postings from peak",
+        "conversionFactor": 0.4,
+        "conversionLow": 0.3,
+        "conversionHigh": 0.5,
+        "rationale": "Job posting declines overstate actual displacement by ~2-3x; reduced hiring velocity != job elimination"
+      }
     },
     {
       "date": "2025-01-20",
@@ -63,7 +79,15 @@
       ],
       "evidenceTier": 2,
       "dataType": "observed",
-      "metricType": "postings"
+      "metricType": "postings",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "% decline in tech job postings from peak",
+        "conversionFactor": 0.4,
+        "conversionLow": 0.3,
+        "conversionHigh": 0.5,
+        "rationale": "Job posting declines overstate actual displacement by ~2-3x; reduced hiring velocity != job elimination"
+      }
     },
     {
       "date": "2025-02-10",
@@ -83,7 +107,15 @@
       ],
       "evidenceTier": 2,
       "dataType": "observed",
-      "metricType": "postings"
+      "metricType": "postings",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "% decline in tech job postings from peak",
+        "conversionFactor": 0.4,
+        "conversionLow": 0.3,
+        "conversionHigh": 0.5,
+        "rationale": "Job posting declines overstate actual displacement by ~2-3x; reduced hiring velocity != job elimination"
+      }
     },
     {
       "date": "2025-11-13",

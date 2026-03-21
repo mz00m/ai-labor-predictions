@@ -19,7 +19,8 @@
         "mckinsey-creative-automation"
       ],
       "evidenceTier": 2,
-      "metricType": "survey"
+      "metricType": "survey",
+      "dataType": "projected"
     },
     {
       "date": "2024-05-20",
@@ -30,7 +31,8 @@
         "upwork-freelancer-impact"
       ],
       "evidenceTier": 1,
-      "metricType": "corporate"
+      "metricType": "corporate",
+      "dataType": "observed"
     },
     {
       "date": "2024-08-15",
@@ -41,7 +43,8 @@
         "nber-creative-ai-2024"
       ],
       "evidenceTier": 1,
-      "metricType": "projection"
+      "metricType": "projection",
+      "dataType": "projected"
     },
     {
       "date": "2025-02-15",
@@ -52,7 +55,8 @@
         "forrester-creative-2025"
       ],
       "evidenceTier": 2,
-      "metricType": "survey"
+      "metricType": "survey",
+      "dataType": "projected"
     },
     {
       "date": "2025-07-15",
@@ -63,7 +67,8 @@
         "indeed-graphic-artist-postings-2025"
       ],
       "evidenceTier": 2,
-      "metricType": "postings"
+      "metricType": "postings",
+      "dataType": "observed"
     },
     {
       "date": "2025-10-01",
@@ -74,7 +79,8 @@
         "uoc-creative-automation-2025"
       ],
       "evidenceTier": 1,
-      "metricType": "projection"
+      "metricType": "projection",
+      "dataType": "projected"
     },
     {
       "date": "2026-01-01",
@@ -85,6 +91,7 @@
         "kim-jin-lee-pixiv-illustrators-2026"
       ],
       "evidenceTier": 1,
+      "dataType": "observed",
       "isProxy": true,
       "proxyContext": {
         "actualUnit": "% decline in commercial creator uploads on Pixiv",

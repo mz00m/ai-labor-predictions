@@ -19,7 +19,8 @@
       ],
       "evidenceTier": 1,
       "metricType": "employment",
-      "sampleSize": 722
+      "sampleSize": 722,
+      "dataType": "observed"
     },
     {
       "date": "2024-04-01",
@@ -30,7 +31,8 @@
         "acemoglu-macro-2024"
       ],
       "evidenceTier": 1,
-      "metricType": "projection"
+      "metricType": "projection",
+      "dataType": "projected"
     },
     {
       "date": "2025-01-07",
@@ -42,7 +44,8 @@
       ],
       "evidenceTier": 2,
       "metricType": "survey",
-      "sampleSize": 1000
+      "sampleSize": 1000,
+      "dataType": "projected"
     },
     {
       "date": "2025-09-01",
@@ -53,7 +56,8 @@
         "oecd-automation-risk-2024"
       ],
       "evidenceTier": 2,
-      "metricType": "projection"
+      "metricType": "projection",
+      "dataType": "projected"
     },
     {
       "date": "2025-10-01",
@@ -64,7 +68,8 @@
         "shrm-automation-risk-2025"
       ],
       "evidenceTier": 2,
-      "metricType": "survey"
+      "metricType": "survey",
+      "dataType": "projected"
     },
     {
       "date": "2025-11-25",
@@ -75,7 +80,8 @@
         "mckinsey-agents-robots-2025"
       ],
       "evidenceTier": 2,
-      "metricType": "projection"
+      "metricType": "projection",
+      "dataType": "projected"
     },
     {
       "date": "2026-01-15",
@@ -86,7 +92,8 @@
         "bls-employment-projections-2026"
       ],
       "evidenceTier": 1,
-      "metricType": "projection"
+      "metricType": "projection",
+      "dataType": "projected"
     }
   ],
   "overlays": [
@@ -249,12 +256,12 @@
     },
     {
       "id": "ifr-world-robotics-2025",
-      "title": "World Robotics 2025 \u2014 Industrial Robots",
+      "title": "World Robotics 2025 — Industrial Robots",
       "url": "https://ifr.org/ifr-press-releases/news/global-robot-demand-in-factories-doubles-over-10-years",
       "publisher": "International Federation of Robotics",
       "evidenceTier": 2,
       "datePublished": "2025-10-01",
-      "excerpt": "542,000 industrial robots installed in 2024 \u2014 more than double the number 10 years ago. 4,664,000 robots operational worldwide. US installations at 34,200 units. Global market value $16.5 billion.",
+      "excerpt": "542,000 industrial robots installed in 2024 — more than double the number 10 years ago. 4,664,000 robots operational worldwide. US installations at 34,200 units. Global market value $16.5 billion.",
       "dateAdded": "2026-03-10"
     },
     {
@@ -324,7 +331,7 @@
       "publisher": "SHRM",
       "evidenceTier": 2,
       "datePublished": "2025-10-01",
-      "excerpt": "15% of US jobs \u2014 about 23 million total \u2014 are at high risk of displacement due to automation, concentrated in manufacturing, transportation, and food preparation.",
+      "excerpt": "15% of US jobs — about 23 million total — are at high risk of displacement due to automation, concentrated in manufacturing, transportation, and food preparation.",
       "dateAdded": "2026-03-10"
     },
     {

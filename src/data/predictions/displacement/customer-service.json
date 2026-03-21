@@ -19,7 +19,8 @@
         "klarna-earnings-2024"
       ],
       "evidenceTier": 1,
-      "metricType": "corporate"
+      "metricType": "corporate",
+      "dataType": "observed"
     },
     {
       "date": "2024-02-01",
@@ -30,16 +31,8 @@
         "shopify-earnings-2024"
       ],
       "evidenceTier": 1,
-      "metricType": "corporate"
-    },
-    {
-      "date": "2025-02-10",
-      "value": 5,
-      "sourceIds": [
-        "bls-mlr-ai-employment-projections-2025"
-      ],
-      "evidenceTier": 1,
-      "metricType": "employment"
+      "metricType": "corporate",
+      "dataType": "observed"
     },
     {
       "date": "2025-02-12",
@@ -50,7 +43,8 @@
         "shopify-earnings-2024"
       ],
       "evidenceTier": 1,
-      "metricType": "corporate"
+      "metricType": "corporate",
+      "dataType": "observed"
     },
     {
       "date": "2025-09-02",
@@ -61,7 +55,8 @@
         "salesforce-cs-ai-agents-2025"
       ],
       "evidenceTier": 1,
-      "metricType": "corporate"
+      "metricType": "corporate",
+      "dataType": "observed"
     },
     {
       "date": "2025-10-15",
@@ -72,7 +67,8 @@
         "gartner-cs-2026-forecast"
       ],
       "evidenceTier": 2,
-      "metricType": "survey"
+      "metricType": "survey",
+      "dataType": "projected"
     },
     {
       "date": "2026-02-01",
@@ -83,7 +79,8 @@
         "zendesk-ai-cs-2026"
       ],
       "evidenceTier": 3,
-      "metricType": "survey"
+      "metricType": "survey",
+      "dataType": "projected"
     }
   ],
   "overlays": [
@@ -140,6 +137,15 @@
       ],
       "evidenceTier": 2,
       "label": "Indeed: Customer service postings declined 18% YoY; now require AI tool familiarity"
+    },
+    {
+      "date": "2025-02-10",
+      "direction": "down",
+      "sourceIds": [
+        "bls-mlr-ai-employment-projections-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "BLS: CS representative employment projected to decline 5% through 2033"
     },
     {
       "date": "2025-02-27",
@@ -270,14 +276,18 @@
     {
       "date": "2026-03-13",
       "direction": "down",
-      "sourceIds": ["fed-atl-duke-cfo-ai-productivity-2026"],
+      "sourceIds": [
+        "fed-atl-duke-cfo-ai-productivity-2026"
+      ],
       "evidenceTier": 1,
       "label": "Fed/Duke: Office/admin support highest negative AI exposure index (NEI 2.0)"
     },
     {
       "date": "2026-03-16",
       "direction": "down",
-      "sourceIds": ["lodefalk-age-gradient-hiring-2026"],
+      "sourceIds": [
+        "lodefalk-age-gradient-hiring-2026"
+      ],
       "evidenceTier": 1,
       "label": "Lodefalk et al.: Sweden customer service shows same age-gradient AI displacement pattern"
     }
@@ -308,7 +318,7 @@
       "publisher": "Klarna",
       "evidenceTier": 1,
       "datePublished": "2024-02-27",
-      "excerpt": "Klarna's AI assistant handled two-thirds of customer service chats within one month of launch \u2014 2.3 million conversations, doing the equivalent work of 700 full-time agents.",
+      "excerpt": "Klarna's AI assistant handled two-thirds of customer service chats within one month of launch — 2.3 million conversations, doing the equivalent work of 700 full-time agents.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -371,7 +381,7 @@
     },
     {
       "id": "shopify-earnings-2024",
-      "title": "Shopify Q4 2024 Earnings \u2014 AI Customer Support Metrics",
+      "title": "Shopify Q4 2024 Earnings — AI Customer Support Metrics",
       "url": "https://investors.shopify.com/financial-reports",
       "publisher": "Shopify (Earnings Call)",
       "evidenceTier": 1,

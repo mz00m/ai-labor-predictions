@@ -18,7 +18,8 @@
         "census-bts-ai-2023"
       ],
       "evidenceTier": 1,
-      "metricType": "survey"
+      "metricType": "survey",
+      "dataType": "observed"
     },
     {
       "date": "2024-05-01",
@@ -29,7 +30,8 @@
         "census-bts-ai-2024"
       ],
       "evidenceTier": 1,
-      "metricType": "survey"
+      "metricType": "survey",
+      "dataType": "observed"
     },
     {
       "date": "2025-07-01",
@@ -40,7 +42,8 @@
         "census-bts-ai-2025"
       ],
       "evidenceTier": 1,
-      "metricType": "survey"
+      "metricType": "survey",
+      "dataType": "observed"
     },
     {
       "date": "2025-10-01",
@@ -51,7 +54,8 @@
         "anthropic-economic-index-2025"
       ],
       "evidenceTier": 1,
-      "metricType": "survey"
+      "metricType": "survey",
+      "dataType": "observed"
     },
     {
       "date": "2025-12-04",
@@ -62,7 +66,8 @@
         "census-btos-ai-biweekly-2026"
       ],
       "evidenceTier": 1,
-      "metricType": "survey"
+      "metricType": "survey",
+      "dataType": "observed"
     },
     {
       "date": "2026-02-26",
@@ -73,7 +78,8 @@
         "census-btos-ai-biweekly-2026"
       ],
       "evidenceTier": 1,
-      "metricType": "survey"
+      "metricType": "survey",
+      "dataType": "observed"
     }
   ],
   "overlays": [
