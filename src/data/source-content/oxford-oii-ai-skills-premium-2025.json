@@ -1,0 +1,13 @@
+{
+  "id": "oxford-oii-ai-skills-premium-2025",
+  "abstract": "Researchers at the Oxford Internet Institute analysed over 10 million online job vacancies in the UK between 2018 and 2024 to examine the association between higher education degrees, skills requirements, and financial remuneration. Published in Technological Forecasting and Social Change, the study finds that AI skills command a 23% wage premium, surpassing the value of master's degrees (13%) while trailing PhD-level compensation (33%). In STEM roles, the AI skills premium reaches 36%.",
+  "keyFindings": [
+    "AI skills offer a 23% wage premium across all UK job vacancies, compared to 13% for master's degrees and 33% for PhDs",
+    "In science, engineering, and technology roles, the AI skills premium is 36%, higher than formal degree premiums",
+    "Job postings requiring at least one AI skill increased by nearly 21% between 2018 and 2024",
+    "The proportion of AI roles requiring formal higher education qualifications declined from 36% in 2018 to 31% in 2023"
+  ],
+  "methodology": "Analysis of over 10 million online job vacancies in the UK from 2018 to 2024, using statistical analysis and regression models to examine the association between degree requirements, AI skills, and wages.",
+  "qualifiers": "UK-specific data; US premiums may differ. The premium reflects posted salary differences, not controlled experimental effects. Time period covers pre- and post-ChatGPT era combined.",
+  "fetchedAt": "2026-03-21"
+}

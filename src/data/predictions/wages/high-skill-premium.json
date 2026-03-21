@@ -70,6 +70,20 @@
       "dataType": "observed"
     },
     {
+      "date": "2025-02-26",
+      "value": 23,
+      "confidenceLow": 18,
+      "confidenceHigh": 36,
+      "sourceIds": [
+        "oxford-oii-ai-skills-premium-2025"
+      ],
+      "evidenceTier": 1,
+      "metricType": "postings",
+      "sampleSize": 10000000,
+      "isProxy": true,
+      "proxyContext": "UK job vacancies; US premium likely higher based on PwC/Lightcast data"
+    },
+    {
       "date": "2026-01-01",
       "value": 35,
       "confidenceLow": 25,
@@ -308,6 +322,13 @@
       "sourceIds": ["freund-mann-job-transformation-2026"],
       "evidenceTier": 1,
       "label": "Freund & Mann: Return to analytical skills falls; social/manual skills rise"
+    },
+    {
+      "date": "2025-02-26",
+      "direction": "up",
+      "sourceIds": ["oxford-oii-ai-skills-premium-2025"],
+      "evidenceTier": 1,
+      "label": "Oxford/OII: AI skills premium 36% in STEM roles, vs 13% for master's degrees (10M UK vacancies)"
     }
   ],
   "sources": [
@@ -595,6 +616,16 @@
       "evidenceTier": 3,
       "datePublished": "2026-03-18",
       "excerpt": "AI professionals earn $215,000, on average, in San Jose, CA — the highest in the country. But, with living costs 13% above average, that premium narrows. For comparison, in Dallas–Fort Worth, TX, $128,000 salaries stretch further with costs just 3% above average."
+    },
+    {
+      "id": "oxford-oii-ai-skills-premium-2025",
+      "title": "Skills or degree? The rise of skill-based hiring for AI and green jobs",
+      "url": "https://www.oii.ox.ac.uk/news-events/practical-expertise-drives-salary-premiums-in-the-ai-sector-finds-new-oxford-study/",
+      "publisher": "Oxford Internet Institute (Bone, Ehlinger, Stephany)",
+      "evidenceTier": 1,
+      "datePublished": "2025-02-26",
+      "excerpt": "AI skills and expertise are highly valued by employers, offering a 23% wage premium, compared to a 13% wage premium for Master's degrees and a 33% premium for PhDs. In science, engineering, and tech jobs, the AI skills premium is 36%. Analysis of over 10 million online job vacancies in the UK between 2018 to 2024.",
+      "dateAdded": "2026-03-21"
     }
   ]
 }
