@@ -7,6 +7,7 @@
   "unit": "% of physical-task jobs displaced",
   "currentValue": 6.1,
   "timeHorizon": "By 2030",
+  "aggregationMethod": "weighted",
   "history": [
     {
       "date": "2020-06-01",

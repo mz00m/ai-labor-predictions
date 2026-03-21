@@ -7,6 +7,7 @@
   "unit": "% wage premium over median",
   "currentValue": 27.2,
   "timeHorizon": "By 2030",
+  "aggregationMethod": "weighted",
   "history": [
     {
       "date": "2023-02-01",

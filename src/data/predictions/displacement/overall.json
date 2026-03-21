@@ -7,6 +7,7 @@
   "unit": "% of US jobs",
   "currentValue": 2,
   "timeHorizon": "By 2030",
+  "aggregationMethod": "weighted",
   "history": [
     {
       "date": "2023-08-01",
@@ -276,6 +277,15 @@
     }
   ],
   "overlays": [
+    {
+      "date": "2015-07-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "mokyr-vickers-ziebarth-tech-anxiety-2015"
+      ],
+      "evidenceTier": 1,
+      "label": "JEP (Mokyr et al.): Every GPT caused anxiety but tech unemployment was 'largely an exaggerated issue'"
+    },
     {
       "date": "2018-01-01",
       "direction": "neutral",
@@ -1094,15 +1104,6 @@
       ],
       "evidenceTier": 1,
       "label": "Yale Budget Lab: Anthropic 'Observed Exposure' metric shows stability, not disruption"
-    },
-    {
-      "date": "2015-07-01",
-      "direction": "neutral",
-      "sourceIds": [
-        "mokyr-vickers-ziebarth-tech-anxiety-2015"
-      ],
-      "evidenceTier": 1,
-      "label": "JEP (Mokyr et al.): Every GPT caused anxiety but tech unemployment was 'largely an exaggerated issue'"
     }
   ],
   "sources": [

@@ -7,6 +7,7 @@
   "unit": "% change in real median wage",
   "currentValue": -1.4,
   "timeHorizon": "By 2030",
+  "aggregationMethod": "weighted",
   "history": [
     {
       "date": "2023-04-01",
