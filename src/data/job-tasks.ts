@@ -5389,7 +5389,7 @@ export const JOB_PROFILES: JobProfile[] = [
     id: "fast-food-worker",
     title: "Fast Food Worker",
     medianWagePerHr: 14,
-    category: "Food Service",
+    category: "Food & Hospitality",
     tasks: [
       {
         id: "fast-food-cooking",
@@ -5457,7 +5457,7 @@ export const JOB_PROFILES: JobProfile[] = [
     id: "waiter-waitress",
     title: "Waiter / Waitress",
     medianWagePerHr: 15,
-    category: "Food Service",
+    category: "Food & Hospitality",
     tasks: [
       {
         id: "waiter-taking-orders",
@@ -5525,7 +5525,7 @@ export const JOB_PROFILES: JobProfile[] = [
     id: "construction-laborer",
     title: "Construction Laborer",
     medianWagePerHr: 21,
-    category: "Construction",
+    category: "Construction & Trades",
     tasks: [
       {
         id: "construction-manual-labor",
@@ -5827,7 +5827,7 @@ export const JOB_PROFILES: JobProfile[] = [
     id: "stocker-order-filler",
     title: "Stocker / Order Filler",
     medianWagePerHr: 16,
-    category: "Retail & Warehousing",
+    category: "Retail",
     tasks: [
       {
         id: "sof-stocking",
@@ -6841,7 +6841,7 @@ export const JOB_PROFILES: JobProfile[] = [
     id: "retail-supervisor",
     title: "First-Line Supervisor, Retail Sales",
     medianWagePerHr: 23,
-    category: "Retail & Sales",
+    category: "Retail",
     tasks: [
       {
         id: "retsup-staff-mgmt",
@@ -6919,7 +6919,7 @@ export const JOB_PROFILES: JobProfile[] = [
     id: "food-service-supervisor",
     title: "First-Line Supervisor, Food Service",
     medianWagePerHr: 20,
-    category: "Food Service",
+    category: "Food & Hospitality",
     tasks: [
       {
         id: "fssup-staff-mgmt",
@@ -7777,7 +7777,7 @@ export const JOB_PROFILES: JobProfile[] = [
     id: "cook-restaurant",
     title: "Cook (Restaurant / Non-Fast-Food)",
     medianWagePerHr: 16,
-    category: "Food & Beverage",
+    category: "Food & Hospitality",
     tasks: [
       {
         id: "cook-prep",
@@ -7835,7 +7835,7 @@ export const JOB_PROFILES: JobProfile[] = [
     id: "food-prep-worker",
     title: "Food Preparation Worker",
     medianWagePerHr: 14,
-    category: "Food & Beverage",
+    category: "Food & Hospitality",
     tasks: [
       {
         id: "fpw-prep",
@@ -8009,7 +8009,7 @@ export const JOB_PROFILES: JobProfile[] = [
     id: "bartender",
     title: "Bartender",
     medianWagePerHr: 15,
-    category: "Food & Beverage",
+    category: "Food & Hospitality",
     tasks: [
       {
         id: "bar-mixing",
@@ -8251,7 +8251,7 @@ export const JOB_PROFILES: JobProfile[] = [
     id: "dining-attendant",
     title: "Dining Room / Cafeteria Attendant",
     medianWagePerHr: 14,
-    category: "Food & Beverage",
+    category: "Food & Hospitality",
     tasks: [
       {
         id: "da-bussing",
@@ -8483,7 +8483,7 @@ export const JOB_PROFILES: JobProfile[] = [
     id: "dishwasher",
     title: "Dishwasher",
     medianWagePerHr: 14,
-    category: "Food & Beverage",
+    category: "Food & Hospitality",
     tasks: [
       {
         id: "dw-washing",
