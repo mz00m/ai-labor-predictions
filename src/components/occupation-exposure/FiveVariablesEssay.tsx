@@ -21,12 +21,11 @@ export default function FiveVariablesEssay() {
           they&rsquo;re either safe or doomed based entirely on this one
           dimension. A radiologist sees that AI can read medical images and
           panics. An electrician knows that AI can&rsquo;t fish wires through a basement crawl space and relaxes.
-          Both are making the same mistake. They&rsquo;re looking out the window
-          and calling it a weather forecast.
+          Both are making the same mistake, seeing only one factor affecting their future.
         </p>
 
         <p>
-          What actually determines whether AI displaces you are five specific and easy to undestand factors. Two of them push toward job loss or displacement. Three push against it. And
+          What actually determines whether AI displaces you at work looks a lot more like five specific and easy to undestand factors. Two of them push toward job loss or displacement. Three push against it. And
           the three that push against it are, actually quite a bit more interesting.
           Partly because they&rsquo;re less obvious, and partly because
           they&rsquo;re the ones you can actually do something about.
