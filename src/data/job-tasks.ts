@@ -6451,7 +6451,7 @@ export const JOB_PROFILES: JobProfile[] = [
     id: "bank-teller",
     title: "Bank Teller",
     medianWagePerHr: 17,
-    category: "Financial Services",
+    category: "Business & Finance",
     tasks: [
       {
         id: "teller-transaction-processing",
@@ -8425,7 +8425,7 @@ export const JOB_PROFILES: JobProfile[] = [
     id: "billing-clerk",
     title: "Billing & Posting Clerk",
     medianWagePerHr: 20,
-    category: "Finance & Insurance",
+    category: "Business & Finance",
     tasks: [
       {
         id: "bc-invoicing",
