@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function FiveVariablesEssay() {
   return (
-    <article id="essay" className="max-w-[740px] mx-auto prose-custom">
+    <article id="essay" className="max-w-[740px] mx-auto prose-custom scroll-mt-40 sm:scroll-mt-24">
       <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-6">
         The Wrong Question About AI and Jobs
       </h2>
@@ -29,8 +29,8 @@ export default function FiveVariablesEssay() {
         <p>
           What actually determines whether AI displaces you is five things, not
           one. Two of them push toward displacement. Three push against it. And
-          the three that push against it are, in my view, more interesting —
-          partly because they&rsquo;re less obvious, and partly because
+          the three that push against it are, in my view, more interesting.
+          Partly because they&rsquo;re less obvious, and partly because
           they&rsquo;re the ones you can actually do something about.
         </p>
 
@@ -44,7 +44,7 @@ export default function FiveVariablesEssay() {
           >
             actual daily tasks
           </Link>
-          ? Not your job title — your tasks. A &ldquo;financial analyst&rdquo;
+          ? Not your job title. Your tasks. A &ldquo;financial analyst&rdquo;
           might spend 70% of their time on work an LLM can handle and 30% on
           judgment calls that require a human in the room. That 70% is
           real exposure, and ignoring it would be foolish. But treating it as
@@ -54,7 +54,7 @@ export default function FiveVariablesEssay() {
 
         {/* ── Pressure 2: Speed ── */}
         <p>
-          The second variable is adoption speed — how fast companies will
+          The second variable is adoption speed: how fast companies will
           actually deploy AI into your specific workflow. This is where people
           consistently get the timeline wrong. A tech startup can plug in a new
           API over a weekend. A hospital system has to navigate FDA clearance,
@@ -86,7 +86,7 @@ export default function FiveVariablesEssay() {
             half of the developers never used it
           </a>
           . Think about that. The tool is right there, free, integrated into
-          their editor — and half of them ignore it. The speed at which a
+          their editor. And half of them ignore it. The speed at which a
           company buys a tool and the speed at which its workers actually adopt
           it are two very different things.
         </p>
@@ -108,7 +108,7 @@ export default function FiveVariablesEssay() {
           it turns out to depend on surprisingly measurable things: how
           transferable your skills are across occupations, whether you have
           savings to weather a transition, whether there are other employers
-          nearby, and — uncomfortably — your age. Not because older workers
+          nearby. And, uncomfortably, your age. Not because older workers
           can&rsquo;t learn, but because the economics of retraining look
           different at 55 than at 25.
         </p>
@@ -123,9 +123,9 @@ export default function FiveVariablesEssay() {
             Manning and Aguirre
           </a>
           {" "}built a composite index of these factors, and the variation is
-          striking. Software developers score very high — their skills transfer
+          striking. Software developers score very high. Their skills transfer
           widely, they have financial cushions, employers are everywhere. Food
-          preparation workers score low — not because they&rsquo;re less
+          preparation workers score low. Not because they&rsquo;re less
           capable, but because their skills are narrow, their savings are thin,
           and their geographic options are limited. The system creates the
           vulnerability, not the individual. (Our{" "}
@@ -171,7 +171,7 @@ export default function FiveVariablesEssay() {
             eventually decline
           </a>
           {" "}once online banking eliminated the need for branches
-          altogether — the buffer was powerful, but it wasn&rsquo;t permanent.)
+          altogether. The buffer was powerful, but it wasn&rsquo;t permanent.)
         </p>
 
         <p>
@@ -184,7 +184,7 @@ export default function FiveVariablesEssay() {
           </Link>
           . So the question for any occupation is: when AI makes this cheaper,
           will people want a lot more of it? Legal research is a good
-          candidate — most people who need legal help can&rsquo;t afford it, so
+          candidate. Most people who need legal help can&rsquo;t afford it, so
           making it cheaper could dramatically expand the market. Payroll
           processing is not. Companies have exactly as many paychecks to
           process as they have employees, no matter how cheap it gets. (We
@@ -208,9 +208,9 @@ export default function FiveVariablesEssay() {
         <p>
           Think about the difference between a call center agent and a
           management consultant. A call center agent handles a conversation
-          from start to finish — an AI chatbot is a direct substitute for that
+          from start to finish. An AI chatbot is a direct substitute for that
           whole workflow. A management consultant uses judgment, builds
-          relationships, synthesizes messy inputs from many stakeholders — AI
+          relationships, synthesizes messy inputs from many stakeholders. AI
           makes them faster at the analysis parts, but the human is still
           driving the engagement. One is a replacement pattern. The other is
           augmentation. You can see this distinction clearly in our{" "}
@@ -256,19 +256,19 @@ export default function FiveVariablesEssay() {
         </p>
 
         <p>
-          Take radiologists. Their technical exposure is very high — image
+          Take radiologists. Their technical exposure is very high. Image
           analysis is one of AI&rsquo;s strongest capabilities. If you only
           looked at that number, you&rsquo;d assume they&rsquo;re in serious
           trouble. But adoption in hospitals is glacially slow. Their
           specialized skills transfer across medicine. And AI makes
           radiologists faster at reading scans without replacing the
-          diagnosis itself — strong complementarity. Their net risk is much
+          diagnosis itself. Strong complementarity. Their net risk is much
           lower than their exposure alone would suggest.
         </p>
 
         <p>
           Conversely, some jobs with moderate exposure end up with higher net
-          risk because every buffer is weak — companies in their sector adopt
+          risk because every buffer is weak. Companies in their sector adopt
           fast, workers have limited transferable skills, demand is fixed, and
           AI is a direct substitute.
         </p>
@@ -310,15 +310,15 @@ export default function FiveVariablesEssay() {
           </Link>
           . These are forward-looking projections, not observations. The
           displacement everyone is worried about hasn&rsquo;t shown up in the
-          macro data yet. That doesn&rsquo;t mean it won&rsquo;t — but it&rsquo;s
+          macro data yet. That doesn&rsquo;t mean it won&rsquo;t. But it&rsquo;s
           worth keeping in mind when the headlines get loud.
         </p>
 
         <p>
           The chart above lets you explore these dynamics across 342
           occupations. Click any block to see all five scores and how they
-          combine. For the aggregate picture — what happens when you add up all
-          342 occupations — see our{" "}
+          combine. For the aggregate picture, what happens when you add up all
+          342 occupations, see our{" "}
           <Link
             href="/predictions/overall-us-displacement"
             className="text-[var(--accent-text)] hover:underline"
@@ -341,7 +341,7 @@ export default function FiveVariablesEssay() {
           There&rsquo;s one more thing this framework can&rsquo;t capture, and
           it might be the most important thing of all. These five variables
           score the risks to <em>existing</em> jobs. But technology
-          doesn&rsquo;t just destroy tasks — it{" "}
+          doesn&rsquo;t just destroy tasks. It{" "}
           <a
             href="https://economics.mit.edu/sites/default/files/2024-05/new-work-aw.pdf"
             target="_blank"
@@ -360,15 +360,15 @@ export default function FiveVariablesEssay() {
 
         <p>
           None of this is destiny. Every one of these five variables can be
-          changed — by policy, by companies, by individuals. But you
+          changed. By policy, by companies, by individuals. But you
           can&rsquo;t change what you don&rsquo;t understand. And
           understanding means asking five questions instead of one.
         </p>
 
         <div className="border-t border-black/[0.06] pt-4 mt-8">
           <p className="text-[12px] text-[var(--muted)] leading-[1.7]">
-            For the full scoring methodology — including data sources, weights,
-            and academic citations for each variable — see the{" "}
+            For the full scoring methodology, including data sources, weights,
+            and academic citations for each variable, see the{" "}
             <a
               href="#methodology"
               className="text-[var(--accent-text)] hover:underline"
