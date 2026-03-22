@@ -141,7 +141,7 @@ export default function FiveVariablesEssay() {
           The second buffer is the one I find most underrated, maybe because
           it requires you to think one step beyond the obvious. It&rsquo;s
           demand elasticity: when AI makes the output of an occupation cheaper,
-          do people buy a lot more of it?
+          do people buy more of it?
         </p>
 
         <p>
@@ -181,7 +181,7 @@ export default function FiveVariablesEssay() {
             textile looms, accounting software, and electronic trading
           </Link>
           . So the question for any occupation is: when AI makes this cheaper,
-          will people want a lot more of it? Legal research is a good
+          will people want more of it? Legal research is a good
           candidate. Most people who need legal help can&rsquo;t afford it, so
           making it cheaper could dramatically expand the market. Payroll
           processing is not. Companies have exactly as many paychecks to
@@ -205,8 +205,8 @@ export default function FiveVariablesEssay() {
 
         <p>
           Think about the difference between a call center agent and a
-          management consultant. A call center agent handles a conversation
-          from start to finish. An AI chatbot is a direct substitute for that
+          management consultant. A call center agent handles often routine conversations about returns or billing issues
+          from start to finish. An AI chatbot can often be a direct substitute for that
           whole workflow. A management consultant uses judgment, builds
           relationships, synthesizes messy inputs from many stakeholders. AI
           makes them faster at the analysis parts, but the human is still
@@ -241,8 +241,7 @@ export default function FiveVariablesEssay() {
           {" "}asked executives directly: for each role, is AI primarily
           enhancing your workers or replacing them? The pattern is clear. Jobs
           heavy on interpersonal interaction and physical presence tend to be
-          augmented. Jobs that are mostly information processing tend to be
-          replaced.
+          augmented. Jobs that are mostly information processing tend toward replacement.
         </p>
 
         {/* ── The Payoff ── */}
@@ -304,11 +303,11 @@ export default function FiveVariablesEssay() {
             href="/predictions/overall-us-displacement"
             className="text-[var(--accent-text)] hover:underline"
           >
-            no detectable aggregate AI displacement effect
+            no detectable aggregate AI displacement or job loss
           </Link>
-          . These are forward-looking projections, not observations. The
+          . These are not forward-looking projections, they are observations on what has happened so far, and its showing basically zero substantial job loss. The
           displacement everyone is worried about hasn&rsquo;t shown up in the
-          macro data yet. That doesn&rsquo;t mean it won&rsquo;t. But it&rsquo;s
+         data yet. That doesn&rsquo;t mean it won&rsquo;t. But it&rsquo;s
           worth keeping in mind when the headlines get loud.
         </p>
 
@@ -357,7 +356,7 @@ export default function FiveVariablesEssay() {
         </p>
 
         <p>
-          None of this is destiny. Every one of these five variables can be
+          None of this is destiny. Read that again. Every one of these five variables can be
           changed. By policy, by companies, by individuals. But you
           can&rsquo;t change what you don&rsquo;t understand. And
           understanding means asking five questions instead of one.
