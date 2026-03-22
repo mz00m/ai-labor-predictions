@@ -280,7 +280,7 @@ export default function FiveVariablesEssay() {
           >
             Yale
           </a>
-          and{" "}
+         {" "}and{" "}
           <a
             href="https://www.dallasfed.org/"
             target="_blank"
