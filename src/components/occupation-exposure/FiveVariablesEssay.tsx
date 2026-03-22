@@ -6,116 +6,114 @@ export default function FiveVariablesEssay() {
   return (
     <article className="max-w-[740px] mx-auto prose-custom">
       <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-6">
-        Five Things That Determine Whether AI Takes Your Job
+        The Wrong Question About AI and Jobs
       </h2>
 
       <div className="space-y-5 text-[14px] text-[var(--muted)] leading-[1.8]">
         <p>
-          Most of the conversation about AI and jobs boils down to a single
-          question: can AI do this task? That&rsquo;s the wrong question. Or
-          rather, it&rsquo;s only one-fifth of the right question.
+          Most people, when they think about AI and their career, ask a single
+          question: can AI do my job? That&rsquo;s the wrong question. Or
+          rather, it&rsquo;s one-fifth of the right question. And it&rsquo;s
+          not even the most important fifth.
         </p>
 
         <p>
-          Whether your job is actually at risk depends on five things, not one.
-          Two of them push toward displacement. Three of them push against it.
-          The net score is what matters, and it&rsquo;s often surprising.
+          I keep running into smart people who&rsquo;ve convinced themselves
+          they&rsquo;re either safe or doomed based entirely on this one
+          dimension. Radiologists see that AI can read medical images and
+          panic. Electricians see that AI can&rsquo;t climb poles and relax.
+          Both are making the same mistake. They&rsquo;re checking the humidity
+          and calling it a weather forecast.
         </p>
 
         <p>
-          Here&rsquo;s what we mean.
+          What actually determines whether AI displaces you is five things, not
+          one. Two of them push toward displacement. Three push against it. And
+          the three that push against it are, in my view, more interesting —
+          partly because they&rsquo;re less obvious, and partly because
+          they&rsquo;re the ones you can actually do something about.
         </p>
 
-        {/* ── Variable 1 ── */}
-        <h3 className="text-[17px] font-bold text-[var(--foreground)] !mb-2 !mt-8">
-          1. Technical Exposure — &ldquo;Can AI do your tasks?&rdquo;
-        </h3>
+        {/* ── Pressure 1: Exposure ── */}
         <p>
-          This is the one everyone focuses on, and it&rsquo;s real. If you spend
-          your day writing boilerplate legal documents, and an LLM can produce
-          those documents in seconds, you have high technical exposure. If you
-          spend your day climbing utility poles in sleet, you don&rsquo;t.
-        </p>
-        <p>
-          We score this by looking at every task in an occupation — not just
-          the headline description, but the{" "}
+          The first variable is the one everyone focuses on: technical
+          exposure. Can AI do your{" "}
           <Link
             href="/task-visualizer"
             className="text-[var(--accent-text)] hover:underline"
           >
-            actual daily tasks defined by the Bureau of Labor Statistics
+            actual daily tasks
           </Link>
-          {" "}— and asking what percentage of them current AI systems can
-          handle. Some jobs score surprisingly high. Radiologists, for example,
-          have high exposure because image analysis is one of AI&rsquo;s
-          strongest capabilities. But as you&rsquo;ll see, that doesn&rsquo;t
-          tell the whole story.
+          ? Not your job title — your tasks. A &ldquo;financial analyst&rdquo;
+          might spend 70% of their time on work an LLM can handle and 30% on
+          judgment calls that require a human in the room. That 70% is
+          real exposure, and ignoring it would be foolish. But treating it as
+          the whole story is equally foolish, and that&rsquo;s what most
+          analysis does.
         </p>
 
-        {/* ── Variable 2 ── */}
-        <h3 className="text-[17px] font-bold text-[var(--foreground)] !mb-2 !mt-8">
-          2. Adoption Speed — &ldquo;How fast will companies actually deploy it?&rdquo;
-        </h3>
+        {/* ── Pressure 2: Speed ── */}
         <p>
-          Just because AI <em>can</em> do something doesn&rsquo;t mean
-          companies will roll it out tomorrow. This is where people
-          consistently get the timeline wrong. We track{" "}
+          The second variable is adoption speed — how fast companies will
+          actually deploy AI into your specific workflow. This is where people
+          consistently get the timeline wrong. A tech startup can plug in a new
+          API over a weekend. A hospital system has to navigate FDA clearance,
+          liability questions, union contracts, IT integration across dozens of
+          legacy systems, and probably a two-year pilot program. A hospital
+          receptionist and a startup&rsquo;s customer support agent might have
+          identical technical exposure, but one will feel the effects years
+          before the other. We{" "}
           <Link
             href="/signals"
             className="text-[var(--accent-text)] hover:underline"
           >
-            real-time signals of how fast firms are actually moving
+            track real-time signals
           </Link>
-          , and the variation is enormous.
+          {" "}of how fast firms are actually moving, and the variation is
+          enormous.
         </p>
+
         <p>
-          A tech startup can plug in a new API over a weekend. A hospital
-          system has to navigate FDA clearance, liability questions, union
-          contracts, IT integration across dozens of legacy systems, and
-          probably a two-year pilot program. A bank has to satisfy regulators
-          who are still writing the rules.
-        </p>
-        <p>
-          So a hospital receptionist and a startup&rsquo;s customer support
-          agent might have identical technical exposure — but one will feel
-          the effects years before the other. The gap between &ldquo;AI can do
-          this&rdquo; and &ldquo;my employer has deployed AI to do this&rdquo;
-          is often measured in years, sometimes decades. Regulated industries,
-          unionized workplaces, and organizations with complex IT environments
-          all move slower. And even within fast-moving companies, adoption is
-          uneven — at firms that rolled out GitHub Copilot, roughly{" "}
+          And here&rsquo;s something most analysis misses entirely: even within
+          fast-moving companies, adoption is uneven. At firms that rolled out
+          GitHub Copilot, roughly{" "}
           <a
             href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4945566"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[var(--accent-text)] hover:underline"
           >
-            half of developers never used it
+            half of the developers never used it
           </a>
-          . The speed at which a company buys a tool and the speed at which its
-          workers actually adopt it are two very different things.
+          . Think about that. The tool is right there, free, integrated into
+          their editor — and half of them ignore it. The speed at which a
+          company buys a tool and the speed at which its workers actually adopt
+          it are two very different things.
         </p>
 
-        {/* ── Variable 3 ── */}
-        <h3 className="text-[17px] font-bold text-[var(--foreground)] !mb-2 !mt-8">
-          3. Worker Adaptability — &ldquo;Can you make the jump?&rdquo;
-        </h3>
+        {/* ── The Turn ── */}
         <p>
-          This one is uncomfortable because it&rsquo;s personal. When your
-          current role changes, how well positioned are you to move into a
-          new one?
+          So those are the two pressure variables. If you stopped here,
+          you&rsquo;d conclude that any job with high exposure in a
+          fast-adopting industry is toast. And that&rsquo;s exactly the
+          conclusion most AI-and-jobs commentary reaches. But it&rsquo;s
+          wrong, because it ignores three forces pushing in the other
+          direction. These are the interesting ones.
         </p>
+
+        {/* ── Buffer 1: Adaptability ── */}
         <p>
-          It turns out this depends on measurable things. How transferable are
-          your skills — does your experience apply to adjacent occupations, or
-          is it narrow? Do you have enough savings to weather a transition
-          period? Are there other employers hiring nearby, or would you have
-          to relocate? What&rsquo;s your age — not because older workers
+          The first buffer is worker adaptability. When your role changes, how
+          well positioned are you to move into a new one? This sounds soft, but
+          it turns out to depend on surprisingly measurable things: how
+          transferable your skills are across occupations, whether you have
+          savings to weather a transition, whether there are other employers
+          nearby, and — uncomfortably — your age. Not because older workers
           can&rsquo;t learn, but because the economics of retraining look
           different at 55 than at 25.
         </p>
+
         <p>
-          A recent NBER paper by{" "}
           <a
             href="https://www.nber.org/papers/w34705"
             target="_blank"
@@ -125,46 +123,45 @@ export default function FiveVariablesEssay() {
             Manning and Aguirre
           </a>
           {" "}built a composite index of these factors, and the variation is
-          striking. Software developers score very high — their skills
-          transfer widely, they have financial buffers, and there are employers
-          everywhere. Food preparation workers score low — not because
-          they&rsquo;re less capable, but because their skills are narrow,
-          their savings are thin, and their geographic options are limited. The
-          system, not the individual, creates the vulnerability. (Our{" "}
+          striking. Software developers score very high — their skills transfer
+          widely, they have financial cushions, employers are everywhere. Food
+          preparation workers score low — not because they&rsquo;re less
+          capable, but because their skills are narrow, their savings are thin,
+          and their geographic options are limited. The system creates the
+          vulnerability, not the individual. (Our{" "}
           <Link
             href="/productivity"
             className="text-[var(--accent-text)] hover:underline"
           >
             productivity data
           </Link>
-          {" "}shows that workers who can adapt are often seeing real gains
-          already.)
+          {" "}shows that workers who can adapt are already seeing real gains.)
         </p>
 
-        {/* ── Variable 4 ── */}
-        <h3 className="text-[17px] font-bold text-[var(--foreground)] !mb-2 !mt-8">
-          4. Demand Elasticity — &ldquo;When it gets cheaper, do people buy more?&rdquo;
-        </h3>
+        {/* ── Buffer 2: Demand Elasticity ── */}
         <p>
-          This is the most underrated variable, and it has the most historical
-          precedent going for it.
+          The second buffer is the one I find most underrated, maybe because
+          it requires you to think one step beyond the obvious. It&rsquo;s
+          demand elasticity: when AI makes the output of an occupation cheaper,
+          do people buy a lot more of it?
         </p>
+
         <p>
-          When ATMs were introduced in the late 1960s, everyone assumed bank
-          tellers were finished.{" "}
+          Consider what happened with ATMs. When they were introduced in the
+          late 1960s, everyone assumed bank tellers were finished. The{" "}
           <a
             href="https://www.jstor.org/stable/j.ctvc77hh1"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[var(--accent-text)] hover:underline"
           >
-            What actually happened
+            opposite happened
           </a>
-          {" "}was that ATMs made it cheaper to operate a branch, so banks
-          opened more branches, and the total number of tellers went{" "}
-          <em>up</em> for roughly three decades. The cost per unit of banking
-          went down, demand for banking went up, and that demand increase
-          more than offset the automation. (Teller employment did{" "}
+          . ATMs made it cheaper to operate a branch, so banks opened more
+          branches, and the total number of tellers went <em>up</em> for
+          roughly three decades. The cost per unit of banking fell, demand for
+          banking rose, and that demand increase more than offset the
+          automation. (Teller employment did{" "}
           <a
             href="https://www.bls.gov/ooh/office-and-administrative-support/tellers.htm"
             target="_blank"
@@ -174,79 +171,56 @@ export default function FiveVariablesEssay() {
             eventually decline
           </a>
           {" "}once online banking eliminated the need for branches
-          altogether — demand elasticity is powerful, but not permanent.)
+          altogether — the buffer was powerful, but it wasn&rsquo;t permanent.)
         </p>
+
         <p>
-          The same dynamic played out with textile looms, accounting software,
-          and electronic trading — we cover several of these cases in our{" "}
+          The same dynamic played out with{" "}
           <Link
             href="/history"
             className="text-[var(--accent-text)] hover:underline"
           >
-            historical comparisons
+            textile looms, accounting software, and electronic trading
           </Link>
-          . The question is: when AI makes the output of
-          this occupation cheaper, will people want a lot more of it? Legal
-          research is a good candidate — most people who need legal help
-          currently can&rsquo;t afford it, so making it cheaper could
-          dramatically expand the market. Whereas the demand for, say,
-          payroll processing is relatively fixed. Companies have exactly as
-          many paychecks to process as they have employees, no matter how cheap
-          it gets.
-        </p>
-        <p>
-          We write more about this dynamic on our{" "}
+          . So the question for any occupation is: when AI makes this cheaper,
+          will people want a lot more of it? Legal research is a good
+          candidate — most people who need legal help can&rsquo;t afford it, so
+          making it cheaper could dramatically expand the market. Payroll
+          processing is not. Companies have exactly as many paychecks to
+          process as they have employees, no matter how cheap it gets. (We
+          write more about this on our{" "}
           <Link
             href="/demand-elasticity"
             className="text-[var(--accent-text)] hover:underline"
           >
             demand elasticity explainer
           </Link>
-          .
+          .)
         </p>
 
-        {/* ── Variable 5 ── */}
-        <h3 className="text-[17px] font-bold text-[var(--foreground)] !mb-2 !mt-8">
-          5. AI Complementarity — &ldquo;Does AI replace you or make you better?&rdquo;
-        </h3>
+        {/* ── Buffer 3: Complementarity ── */}
         <p>
-          This is the variable that flips the whole narrative for some
-          occupations. The question is simple: when AI enters this job, does
-          it <em>substitute</em> for the worker or <em>complement</em> them?
+          The third buffer is the one that flips the entire narrative for some
+          occupations. It&rsquo;s the question of whether AI <em>replaces</em>
+          {" "}you or <em>makes you better</em>.
         </p>
+
         <p>
           Think about the difference between a call center agent and a
           management consultant. A call center agent handles a conversation
-          from start to finish — an AI chatbot is a direct substitute for
-          that entire workflow. A management consultant uses judgment, builds
-          relationships, and synthesizes messy inputs from multiple
-          stakeholders — AI can make them faster at the analysis parts, but
-          the human is still driving the engagement. One is a replacement
-          pattern. The other is an augmentation pattern.
-        </p>
-        <p>
-          We draw on a{" "}
-          <a
-            href="https://www.nber.org/papers/w33886"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[var(--accent-text)] hover:underline"
-          >
-            large-scale CFO survey
-          </a>
-          {" "}that asked executives directly: for each role, is AI primarily
-          enhancing your workers or replacing them? Where that data isn&rsquo;t
-          available, we estimate it from the task mix — jobs heavy on
-          interpersonal interaction and physical presence tend to be augmented.
-          Jobs that are mostly information processing tend to be replaced.
-          You can see this pattern clearly in our{" "}
+          from start to finish — an AI chatbot is a direct substitute for that
+          whole workflow. A management consultant uses judgment, builds
+          relationships, synthesizes messy inputs from many stakeholders — AI
+          makes them faster at the analysis parts, but the human is still
+          driving the engagement. One is a replacement pattern. The other is
+          augmentation. You can see this distinction clearly in our{" "}
           <Link
             href="/predictions/customer-service-automation"
             className="text-[var(--accent-text)] hover:underline"
           >
             customer service automation forecast
           </Link>
-          {" "}— a textbook replacement case — versus the{" "}
+          {" "}versus the{" "}
           <Link
             href="/predictions/high-skill-wage-premium"
             className="text-[var(--accent-text)] hover:underline"
@@ -256,32 +230,51 @@ export default function FiveVariablesEssay() {
           , which is rising precisely because AI complements those workers.
         </p>
 
-        {/* ── Putting it together ── */}
-        <h3 className="text-[17px] font-bold text-[var(--foreground)] !mb-2 !mt-8">
-          Putting it together
-        </h3>
         <p>
-          The two pressure variables (exposure and adoption speed) push risk
-          up. The three buffer variables (adaptability, demand elasticity,
-          complementarity) push risk down. The{" "}
+          A{" "}
+          <a
+            href="https://www.nber.org/papers/w33886"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--accent-text)] hover:underline"
+          >
+            large-scale CFO survey
+          </a>
+          {" "}asked executives directly: for each role, is AI primarily
+          enhancing your workers or replacing them? The pattern is clear. Jobs
+          heavy on interpersonal interaction and physical presence tend to be
+          augmented. Jobs that are mostly information processing tend to be
+          replaced.
+        </p>
+
+        {/* ── The Payoff ── */}
+        <p>
+          So: two forces push toward displacement, three push against it. The{" "}
           <strong className="text-[var(--foreground)]">net risk score</strong>
-          {" "}is the balance between them, on a 1-10 scale.
+          {" "}is the balance between them, on a 1&ndash;10 scale. And this is
+          where the picture gets genuinely surprising.
         </p>
+
         <p>
-          This is why single-dimension analysis is misleading. Radiologists
-          have very high technical exposure — but slow institutional adoption
-          (hospitals), high worker adaptability (specialized skills transfer
-          across medicine), moderate demand elasticity, and strong
-          complementarity (AI makes radiologists faster, it doesn&rsquo;t
-          replace the diagnosis). Their net risk is much lower than their
-          exposure score alone would suggest.
+          Take radiologists. Their technical exposure is very high — image
+          analysis is one of AI&rsquo;s strongest capabilities. If you only
+          looked at that number, you&rsquo;d assume they&rsquo;re in serious
+          trouble. But adoption in hospitals is glacially slow. Their
+          specialized skills transfer across medicine. And AI makes
+          radiologists faster at reading scans without replacing the
+          diagnosis itself — strong complementarity. Their net risk is much
+          lower than their exposure alone would suggest.
         </p>
+
         <p>
           Conversely, some jobs with moderate exposure end up with higher net
-          risk because the buffer factors are all weak — companies in their
-          sector adopt fast, workers have limited transferable skills, demand
-          is fixed, and AI is a direct substitute. (It&rsquo;s worth noting
-          that as of early 2026, aggregate labor data from{" "}
+          risk because every buffer is weak — companies in their sector adopt
+          fast, workers have limited transferable skills, demand is fixed, and
+          AI is a direct substitute.
+        </p>
+
+        <p>
+          An important caveat: as of early 2026, aggregate labor data from{" "}
           <a
             href="https://budgetlab.yale.edu/"
             target="_blank"
@@ -308,58 +301,68 @@ export default function FiveVariablesEssay() {
           >
             Dallas Fed
           </a>
-          {" "}shows no detectable aggregate AI displacement effect — these
-          risks remain{" "}
+          {" "}shows{" "}
           <Link
             href="/predictions/overall-us-displacement"
             className="text-[var(--accent-text)] hover:underline"
           >
-            forward-looking projections
+            no detectable aggregate AI displacement effect
           </Link>
-          , not observations.) The chart above lets you explore these dynamics
-          across 342 occupations. Click any block to see all five scores and
-          how they combine.
+          . These are forward-looking projections, not observations. The
+          displacement everyone is worried about hasn&rsquo;t shown up in the
+          macro data yet. That doesn&rsquo;t mean it won&rsquo;t — but it&rsquo;s
+          worth keeping in mind when the headlines get loud.
         </p>
 
         <p>
-          If you want to see how this plays out in aggregate — what happens
-          when you add up all 342 occupations and their scores — our{" "}
+          The chart above lets you explore these dynamics across 342
+          occupations. Click any block to see all five scores and how they
+          combine. For the aggregate picture — what happens when you add up all
+          342 occupations — see our{" "}
           <Link
             href="/predictions/overall-us-displacement"
             className="text-[var(--accent-text)] hover:underline"
           >
             overall US displacement forecast
           </Link>
-          {" "}synthesizes the best estimates. And if you&rsquo;re wondering
-          why the short-term picture might look worse before it gets better,
-          the{" "}
+          . And if you&rsquo;re wondering why the short-term picture might
+          look worse before it gets better, the{" "}
           <Link
             href="/j-curve"
             className="text-[var(--accent-text)] hover:underline"
           >
             J-Curve explainer
           </Link>
-          {" "}covers that dynamic.
+          {" "}covers that.
         </p>
 
+        {/* ── The Landing ── */}
         <p>
-          None of this is destiny. Every one of these variables can be changed
-          by policy, by companies, or by individuals. And this framework only
-          scores the risks to <em>existing</em> jobs from existing AI
-          capabilities — it doesn&rsquo;t capture the creation of entirely
-          new roles that don&rsquo;t exist yet, which{" "}
+          There&rsquo;s one more thing this framework can&rsquo;t capture, and
+          it might be the most important thing of all. These five variables
+          score the risks to <em>existing</em> jobs. But technology
+          doesn&rsquo;t just destroy tasks — it{" "}
           <a
             href="https://economics.mit.edu/sites/default/files/2024-05/new-work-aw.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[var(--accent-text)] hover:underline"
           >
-            historically
+            creates new ones
           </a>
-          {" "}has been the dominant response to technological change. But you
+          . Roughly 60% of workers today are employed in occupations that
+          didn&rsquo;t exist in 1940. That&rsquo;s not a minor footnote. It
+          has been, historically, the dominant response to technological
+          change. Not shuffling people between existing jobs, but the emergence
+          of entirely new work that nobody predicted. There&rsquo;s no reason
+          to think AI will be different.
+        </p>
+
+        <p>
+          None of this is destiny. Every one of these five variables can be
+          changed — by policy, by companies, by individuals. But you
           can&rsquo;t change what you don&rsquo;t understand. And
-          understanding starts with asking the right five questions instead of
-          just one.
+          understanding means asking five questions instead of one.
         </p>
 
         <div className="border-t border-black/[0.06] pt-4 mt-8">
