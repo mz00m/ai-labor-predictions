@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function FiveVariablesEssay() {
   return (
-    <article id="essay" className="max-w-[740px] mx-auto prose-custom">
+    <article id="essay" className="max-w-[740px] mx-auto prose-custom scroll-mt-20">
       <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-6">
         The Wrong Question About AI and Jobs
       </h2>
