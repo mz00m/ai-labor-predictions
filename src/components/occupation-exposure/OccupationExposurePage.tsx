@@ -320,7 +320,7 @@ export default function OccupationExposurePage() {
       </section>
 
       {/* ───── Essay section ───── */}
-      <section className="mb-12 mt-12">
+      <section id="five-variables" className="mb-12 mt-12 scroll-mt-8">
         <FiveVariablesEssay />
       </section>
 

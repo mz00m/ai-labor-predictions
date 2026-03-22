@@ -59,7 +59,14 @@ export default function FiveVariablesEssay() {
         <p>
           Just because AI <em>can</em> do something doesn&rsquo;t mean
           companies will roll it out tomorrow. This is where people
-          consistently get the timeline wrong.
+          consistently get the timeline wrong. We track{" "}
+          <Link
+            href="/signals"
+            className="text-[var(--accent-text)] hover:underline"
+          >
+            real-time signals of how fast firms are actually moving
+          </Link>
+          , and the variation is enormous.
         </p>
         <p>
           A tech startup can plug in a new API over a weekend. A hospital
@@ -113,7 +120,15 @@ export default function FiveVariablesEssay() {
           everywhere. Food preparation workers score low — not because
           they&rsquo;re less capable, but because their skills are narrow,
           their savings are thin, and their geographic options are limited. The
-          system, not the individual, creates the vulnerability.
+          system, not the individual, creates the vulnerability. (Our{" "}
+          <Link
+            href="/productivity"
+            className="text-[var(--accent-text)] hover:underline"
+          >
+            productivity data
+          </Link>
+          {" "}shows that workers who can adapt are often seeing real gains
+          already.)
         </p>
 
         {/* ── Variable 4 ── */}
@@ -143,7 +158,14 @@ export default function FiveVariablesEssay() {
         </p>
         <p>
           The same dynamic played out with textile looms, accounting software,
-          and electronic trading. The question is: when AI makes the output of
+          and electronic trading — we cover several of these cases in our{" "}
+          <Link
+            href="/history"
+            className="text-[var(--accent-text)] hover:underline"
+          >
+            historical comparisons
+          </Link>
+          . The question is: when AI makes the output of
           this occupation cheaper, will people want a lot more of it? Legal
           research is a good candidate — most people who need legal help
           currently can&rsquo;t afford it, so making it cheaper could
@@ -197,6 +219,21 @@ export default function FiveVariablesEssay() {
           available, we estimate it from the task mix — jobs heavy on
           interpersonal interaction and physical presence tend to be augmented.
           Jobs that are mostly information processing tend to be replaced.
+          You can see this pattern clearly in our{" "}
+          <Link
+            href="/predictions/customer-service-automation"
+            className="text-[var(--accent-text)] hover:underline"
+          >
+            customer service automation forecast
+          </Link>
+          {" "}— a textbook replacement case — versus the{" "}
+          <Link
+            href="/predictions/high-skill-wage-premium"
+            className="text-[var(--accent-text)] hover:underline"
+          >
+            high-skill wage premium
+          </Link>
+          , which is rising precisely because AI complements those workers.
         </p>
 
         {/* ── Putting it together ── */}
@@ -229,6 +266,27 @@ export default function FiveVariablesEssay() {
         </p>
 
         <p>
+          If you want to see how this plays out in aggregate — what happens
+          when you add up all 342 occupations and their scores — our{" "}
+          <Link
+            href="/predictions/overall-us-displacement"
+            className="text-[var(--accent-text)] hover:underline"
+          >
+            overall US displacement forecast
+          </Link>
+          {" "}synthesizes the best estimates. And if you&rsquo;re wondering
+          why the short-term picture might look worse before it gets better,
+          the{" "}
+          <Link
+            href="/j-curve"
+            className="text-[var(--accent-text)] hover:underline"
+          >
+            J-Curve explainer
+          </Link>
+          {" "}covers that dynamic.
+        </p>
+
+        <p>
           None of this is destiny. Every one of these variables can be changed
           by policy, by companies, or by individuals. But you can&rsquo;t
           change what you don&rsquo;t understand. And understanding starts
@@ -253,7 +311,14 @@ export default function FiveVariablesEssay() {
             >
               task-level visualizer
             </Link>
-            .
+            . Or browse all{" "}
+            <Link
+              href="/research"
+              className="text-[var(--accent-text)] hover:underline"
+            >
+              300+ sources
+            </Link>
+            {" "}behind this analysis.
           </p>
         </div>
       </div>
