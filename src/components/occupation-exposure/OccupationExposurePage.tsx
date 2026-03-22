@@ -18,6 +18,7 @@ import DimensionPanel from "./DimensionPanel";
 import ComparisonTable from "./ComparisonTable";
 import MethodologySection from "./MethodologySection";
 import NetRiskScale from "./NetRiskScale";
+import FiveVariablesEssay from "./FiveVariablesEssay";
 
 function SectionLabel({ number }: { number: string }) {
   return (
@@ -318,23 +319,44 @@ export default function OccupationExposurePage() {
         </div>
       </section>
 
+      {/* ───── Essay section ───── */}
+      <section className="mb-12 mt-12">
+        <FiveVariablesEssay />
+      </section>
+
       {/* ───── Back to narrow column for analysis sections ───── */}
       <article className="max-w-[740px] mx-auto">
-        {/* Comparison Table */}
+        {/* Comparison Table — collapsible */}
         <section className="mb-12">
           <div className="border-t border-black/[0.06] pt-8">
             <SectionLabel number="02" />
-            <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
-              Where Exposure and Net Risk Diverge
-            </h2>
-            <p className="text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
-              These are the occupation groups where the multi-dimensional net risk
-              score disagrees most with simple AI exposure. High-exposure groups
-              with strong buffer factors (adaptability, elastic demand,
-              complementarity) drop in net risk. Low-exposure groups in rigid
-              institutions climb.
-            </p>
-            <ComparisonTable data={scored} />
+            <details className="group">
+              <summary className="cursor-pointer list-none">
+                <div className="flex items-center justify-between">
+                  <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight">
+                    When Exposure Doesn&rsquo;t Match Risk
+                  </h2>
+                  <span className="text-[var(--muted)] text-[13px] group-open:hidden">
+                    Show table &darr;
+                  </span>
+                  <span className="text-[var(--muted)] text-[13px] hidden group-open:inline">
+                    Hide table &uarr;
+                  </span>
+                </div>
+                <p className="text-[14px] text-[var(--muted)] leading-[1.75] mt-3 mb-2">
+                  Some jobs have high AI exposure but low actual risk — because
+                  protective factors (adaptable workers, growing demand, AI as a
+                  helper not a replacement) absorb the pressure. Other jobs have
+                  moderate exposure but score higher in net risk, because those
+                  protective factors are weak. This table shows the biggest
+                  gaps between &ldquo;AI can do this&rdquo; and &ldquo;this job
+                  is actually threatened.&rdquo;
+                </p>
+              </summary>
+              <div className="mt-4">
+                <ComparisonTable data={scored} />
+              </div>
+            </details>
           </div>
         </section>
 
