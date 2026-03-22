@@ -273,7 +273,7 @@ export default function FiveVariablesEssay() {
         <p>
           An important caveat: as of early 2026, aggregate labor data from{" "}
           <a
-            href="https://budgetlab.yale.edu/"
+            href="https://budgetlab.yale.edu/research/evaluating-impact-ai-labor-market-januaryfebruary-cps-update"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[var(--accent-text)] hover:underline"
@@ -281,15 +281,6 @@ export default function FiveVariablesEssay() {
             Yale
           </a>
           ,{" "}
-          <a
-            href="https://www.goldmansachs.com/insights/articles/ai-may-start-to-boost-us-gdp-in-2027"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[var(--accent-text)] hover:underline"
-          >
-            Goldman Sachs
-          </a>
-          , and the{" "}
           <a
             href="https://www.dallasfed.org/"
             target="_blank"
