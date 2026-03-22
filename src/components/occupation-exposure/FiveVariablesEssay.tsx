@@ -11,25 +11,23 @@ export default function FiveVariablesEssay() {
 
       <div className="space-y-5 text-[14px] text-[var(--muted)] leading-[1.8]">
         <p>
-          Most people, when they think about AI and their career, ask a single
-          question: can AI do my job? That&rsquo;s the wrong question. Or
+          Most people ask a single question: can AI do my job? But that&rsquo;s the wrong question. Or
           rather, it&rsquo;s one-fifth of the right question. And it&rsquo;s
           not even the most important fifth.
         </p>
 
         <p>
-          I keep running into smart people who&rsquo;ve convinced themselves
+          I often chat with people who&rsquo;ve convinced themselves
           they&rsquo;re either safe or doomed based entirely on this one
-          dimension. Radiologists see that AI can read medical images and
-          panic. Electricians see that AI can&rsquo;t climb poles and relax.
-          Both are making the same mistake. They&rsquo;re checking the humidity
+          dimension. A radiologist sees that AI can read medical images and
+          panics. An electrician knows that AI can&rsquo;t fish wires through a basement crawl space and relaxes.
+          Both are making the same mistake. They&rsquo;re looking out the window
           and calling it a weather forecast.
         </p>
 
         <p>
-          What actually determines whether AI displaces you is five things, not
-          one. Two of them push toward displacement. Three push against it. And
-          the three that push against it are, in my view, more interesting.
+          What actually determines whether AI displaces you are five specific and easy to undestand factors. Two of them push toward job loss or displacement. Three push against it. And
+          the three that push against it are, actually quite a bit more interesting.
           Partly because they&rsquo;re less obvious, and partly because
           they&rsquo;re the ones you can actually do something about.
         </p>
