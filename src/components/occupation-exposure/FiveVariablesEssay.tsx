@@ -82,8 +82,18 @@ export default function FiveVariablesEssay() {
           this&rdquo; and &ldquo;my employer has deployed AI to do this&rdquo;
           is often measured in years, sometimes decades. Regulated industries,
           unionized workplaces, and organizations with complex IT environments
-          all move slower. That delay matters enormously for the humans
-          involved.
+          all move slower. And even within fast-moving companies, adoption is
+          uneven — at firms that rolled out GitHub Copilot, roughly{" "}
+          <a
+            href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4945566"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--accent-text)] hover:underline"
+          >
+            half of developers never used it
+          </a>
+          . The speed at which a company buys a tool and the speed at which its
+          workers actually adopt it are two very different things.
         </p>
 
         {/* ── Variable 3 ── */}
@@ -140,8 +150,8 @@ export default function FiveVariablesEssay() {
           precedent going for it.
         </p>
         <p>
-          When ATMs were introduced in the 1970s, everyone assumed bank tellers
-          were finished.{" "}
+          When ATMs were introduced in the late 1960s, everyone assumed bank
+          tellers were finished.{" "}
           <a
             href="https://www.jstor.org/stable/j.ctvc77hh1"
             target="_blank"
@@ -152,9 +162,19 @@ export default function FiveVariablesEssay() {
           </a>
           {" "}was that ATMs made it cheaper to operate a branch, so banks
           opened more branches, and the total number of tellers went{" "}
-          <em>up</em> for the next 30 years. The cost per unit of banking
+          <em>up</em> for roughly three decades. The cost per unit of banking
           went down, demand for banking went up, and that demand increase
-          more than offset the automation.
+          more than offset the automation. (Teller employment did{" "}
+          <a
+            href="https://www.bls.gov/ooh/office-and-administrative-support/tellers.htm"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--accent-text)] hover:underline"
+          >
+            eventually decline
+          </a>
+          {" "}once online banking eliminated the need for branches
+          altogether — demand elasticity is powerful, but not permanent.)
         </p>
         <p>
           The same dynamic played out with textile looms, accounting software,
@@ -260,9 +280,45 @@ export default function FiveVariablesEssay() {
           Conversely, some jobs with moderate exposure end up with higher net
           risk because the buffer factors are all weak — companies in their
           sector adopt fast, workers have limited transferable skills, demand
-          is fixed, and AI is a direct substitute. The chart above lets you
-          explore these dynamics across 342 occupations. Click any block to
-          see all five scores and how they combine.
+          is fixed, and AI is a direct substitute. (It&rsquo;s worth noting
+          that as of early 2026, aggregate labor data from{" "}
+          <a
+            href="https://budgetlab.yale.edu/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--accent-text)] hover:underline"
+          >
+            Yale
+          </a>
+          ,{" "}
+          <a
+            href="https://www.goldmansachs.com/insights/articles/ai-may-start-to-boost-us-gdp-in-2027"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--accent-text)] hover:underline"
+          >
+            Goldman Sachs
+          </a>
+          , and the{" "}
+          <a
+            href="https://www.dallasfed.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--accent-text)] hover:underline"
+          >
+            Dallas Fed
+          </a>
+          {" "}shows no detectable aggregate AI displacement effect — these
+          risks remain{" "}
+          <Link
+            href="/predictions/overall-us-displacement"
+            className="text-[var(--accent-text)] hover:underline"
+          >
+            forward-looking projections
+          </Link>
+          , not observations.) The chart above lets you explore these dynamics
+          across 342 occupations. Click any block to see all five scores and
+          how they combine.
         </p>
 
         <p>
@@ -288,9 +344,22 @@ export default function FiveVariablesEssay() {
 
         <p>
           None of this is destiny. Every one of these variables can be changed
-          by policy, by companies, or by individuals. But you can&rsquo;t
-          change what you don&rsquo;t understand. And understanding starts
-          with asking the right five questions instead of just one.
+          by policy, by companies, or by individuals. And this framework only
+          scores the risks to <em>existing</em> jobs from existing AI
+          capabilities — it doesn&rsquo;t capture the creation of entirely
+          new roles that don&rsquo;t exist yet, which{" "}
+          <a
+            href="https://economics.mit.edu/sites/default/files/2024-05/new-work-aw.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--accent-text)] hover:underline"
+          >
+            historically
+          </a>
+          {" "}has been the dominant response to technological change. But you
+          can&rsquo;t change what you don&rsquo;t understand. And
+          understanding starts with asking the right five questions instead of
+          just one.
         </p>
 
         <div className="border-t border-black/[0.06] pt-4 mt-8">
