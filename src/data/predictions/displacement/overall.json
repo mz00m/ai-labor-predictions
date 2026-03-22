@@ -1129,6 +1129,15 @@
       ],
       "evidenceTier": 1,
       "label": "Yale Budget Lab: Anthropic 'Observed Exposure' metric shows stability, not disruption"
+    },
+    {
+      "date": "2025-09-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "freund-mann-job-transformation-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Minneapolis Fed: Job transformation, not displacement, is primary AI labor channel"
     }
   ],
   "sources": [
@@ -2040,6 +2049,16 @@
       "datePublished": "2025-06-13",
       "excerpt": "Job numbers are growing in every industry analysed. Growth remained robust even in more exposed occupations (38%). Productivity growth nearly quadrupled in AI-exposed industries.",
       "dateAdded": "2026-03-21"
+    },
+    {
+      "id": "freund-mann-job-transformation-2026",
+      "title": "Job Transformation, Specialization, and the Labor Market Effects of AI",
+      "url": "https://www.minneapolisfed.org/research/institute-working-papers/job-transformation-specialization-and-the-labor-market-effects-of-ai",
+      "publisher": "Federal Reserve Bank of Minneapolis (Freund, Mann)",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-01",
+      "excerpt": "Within highly exposed occupations, like office and administrative roles, workers specialized in information-processing tasks leave and suffer wage losses, while those specialized in customer-facing and coordination tasks stay and experience wage gains as work rebalances toward their strengths.",
+      "dateAdded": "2026-03-22"
     }
   ]
 }

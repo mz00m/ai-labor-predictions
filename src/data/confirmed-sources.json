@@ -60,7 +60,8 @@
         "entry-level-wage-impact",
         "median-wage-impact",
         "white-collar-professional-displacement",
-        "high-skill-wage-premium"
+        "high-skill-wage-premium",
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false
