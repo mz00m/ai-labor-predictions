@@ -11,7 +11,7 @@ export default function FiveVariablesEssay() {
 
       <div className="space-y-5 text-[14px] text-[var(--muted)] leading-[1.8]">
         <p>
-          Most people ask a single question: can AI do my job? But that&rsquo;s the wrong question. Or
+          When reading the headlines, most people are starting to ask themselves a single question: will I lose my job if AI is able to do it better than me? But after spending months in the research, I can say that&rsquo;s the wrong question. Or
           rather, it&rsquo;s one-fifth of the right question. And it&rsquo;s
           not even the most important fifth.
         </p>
