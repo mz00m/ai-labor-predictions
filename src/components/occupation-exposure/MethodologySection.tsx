@@ -372,6 +372,59 @@ export default function MethodologySection() {
           occupation with maximum exposure but equally strong adaptability,
           demand elasticity, and complementarity scores 5.0 (neutral), not 10.
         </p>
+
+        <h4 className="text-[13px] font-semibold text-[var(--foreground)] mt-5 mb-2">
+          How Dimensionality Enters the Composite Score
+        </h4>
+        <p className="text-[13px] text-[var(--muted)] leading-[1.75] mb-3">
+          Dimensionality is not a separate dimension &mdash; it is a structural
+          adjustment to the complementarity score (Dimension 5). It captures the
+          insight from the O-Ring production function (Kremer 1993, Gans &amp;
+          Goldfarb 2024): jobs where tasks are multiplicative and interdependent
+          behave differently under automation than jobs where tasks are separable.
+        </p>
+        <p className="text-[13px] text-[var(--muted)] leading-[1.75] mb-3">
+          We measure <em>effective dimensions</em> as the number of distinct task
+          clusters in an occupation that each account for &ge;10% of work time
+          (derived from BLS time-use data). This count determines the adjustment:
+        </p>
+        <ul className="text-[13px] text-[var(--muted)] leading-[1.75] mb-3 ml-4 list-disc space-y-1">
+          <li>
+            <strong>Low-dimensional (&le;2 clusters):</strong> Penalty of &minus;1.5
+            to complementarity. These jobs have few, separable tasks. When AI automates
+            one task, there is little remaining work to &ldquo;focus&rdquo; on, and
+            firms face strong incentive to automate the rest. Example: a truck driver
+            with one critical task (driving) faces existential risk once that task
+            becomes automatable.
+          </li>
+          <li>
+            <strong>Mid-dimensional (3&ndash;4 clusters):</strong> No adjustment.
+            These jobs have moderate task complexity where the effect is ambiguous.
+          </li>
+          <li>
+            <strong>High-dimensional (&ge;5 clusters):</strong> Bonus of +1.0 to
+            complementarity. These jobs have many interlinked tasks. Automating one
+            frees the worker to concentrate on the rest &mdash; the &ldquo;focus
+            effect&rdquo; raises quality across all remaining tasks and can increase
+            wages. Example: a management consultant with 7&ndash;8 complementary
+            tasks sees AI boost their productivity rather than replace them.
+          </li>
+        </ul>
+        <p className="text-[13px] text-[var(--muted)] leading-[1.75] mb-3">
+          For the ~8 occupation groups with CFO survey data (Baslandze et al. 2026),
+          the adjustment is milder (&plusmn;0.5) because executive sentiment about
+          actual deployment intent is a stronger signal than structural heuristics
+          alone. For all other groups, we rely on the heuristic-based
+          &plusmn;1.5/+1.0 adjustments.
+        </p>
+        <p className="text-[13px] text-[var(--muted)] leading-[1.75] mb-3">
+          The adjusted complementarity score is clamped to 0&ndash;10, then feeds
+          into the absorption side of the composite at its 15% weight. So the maximum
+          impact of dimensionality on the final net risk score is roughly
+          &plusmn;0.1&ndash;0.2 points &mdash; a subtle but structurally meaningful
+          shift that separates occupations with identical exposure but different
+          internal task structures.
+        </p>
         <p className="text-[13px] text-[var(--muted)] leading-[1.75]">
           The weighting is intentionally simple and transparent. Reasonable
           people will disagree on weights. The tool&rsquo;s value is not in the
