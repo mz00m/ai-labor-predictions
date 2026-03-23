@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "O-Ring Automation",
+      "author": "Joshua S. Gans, Avi Goldfarb",
+      "publisher": "NBER",
+      "date": "2026-01-01",
+      "url": "https://www.nber.org/papers/w34639",
+      "takeaway": "Formal model showing that when tasks are quality complements (O-ring production), partial automation triggers a 'focus' mechanism that can raise worker income. Task-by-task substitution logic is incomplete because automating one task changes the return to automating others. Automation decisions can require bundled adoption even when quality improves smoothly. Linear exposure indices overstate displacement when tasks are complements. The relevant object is not average task exposure but the structure of bottlenecks.",
+      "weekFeatured": "2026-03-23",
+      "tier": 1
+    },
+    {
       "title": "How Will AI-driven Automation Actually Affect Jobs?",
       "author": "Alex Imas, Soumitra Shukla",
       "publisher": "Substack (U of Chicago Booth)",

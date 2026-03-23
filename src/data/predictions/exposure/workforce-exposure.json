@@ -382,6 +382,15 @@
       ],
       "evidenceTier": 4,
       "label": "Imas/Shukla: Exposure != displacement; O-ring complementarities can raise wages under partial automation"
+    },
+    {
+      "date": "2026-01-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "gans-goldfarb-oring-automation-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER (Gans/Goldfarb): Linear exposure indices overstate displacement when tasks are quality complements"
     }
   ],
   "sources": [
@@ -703,6 +712,16 @@
       "evidenceTier": 4,
       "datePublished": "2026-03-23",
       "excerpt": "Two jobs with identical exposure scores can have completely opposite displacement risks depending on whether their tasks are complements, whether demand for their output is elastic or inelastic, and the incentives of the firm to invest in automation.",
+      "dateAdded": "2026-03-23"
+    },
+    {
+      "id": "gans-goldfarb-oring-automation-2026",
+      "title": "O-Ring Automation",
+      "url": "https://www.nber.org/papers/w34639",
+      "publisher": "NBER (Joshua S. Gans, Avi Goldfarb)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-01",
+      "excerpt": "Widely-used exposure indices, which aggregate task-level automation risk using linear formulas, will overstate displacement when tasks are complements. The relevant object is not average task exposure but the structure of bottlenecks and how automation reshapes worker time around them.",
       "dateAdded": "2026-03-23"
     }
   ]
