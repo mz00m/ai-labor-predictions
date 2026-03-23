@@ -433,6 +433,15 @@
       ],
       "evidenceTier": 1,
       "label": "Freund & Mann: Wage effects non-monotonic; +4% moderate, -35% high exposure"
+    },
+    {
+      "date": "2026-01-01",
+      "direction": "up",
+      "sourceIds": [
+        "gans-goldfarb-oring-automation-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER (Gans/Goldfarb): O-ring model -- partial automation can raise wages via bottleneck task revaluation"
     }
   ],
   "sources": [
@@ -830,6 +839,16 @@
       "datePublished": "2026-03-18",
       "excerpt": "average individual wages are roughly unchanged for incumbents of occupations with no AI exposure, rise by around 4% at moderate exposure, and drop by as much as 35% for workers in the most exposed occupations",
       "dateAdded": "2026-03-19"
+    },
+    {
+      "id": "gans-goldfarb-oring-automation-2026",
+      "title": "O-Ring Automation",
+      "url": "https://www.nber.org/papers/w34639",
+      "publisher": "NBER (Joshua S. Gans, Avi Goldfarb)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-01",
+      "excerpt": "Labour income can rise under partial automation because automation scales the value of remaining bottleneck tasks.",
+      "dateAdded": "2026-03-23"
     }
   ]
 }

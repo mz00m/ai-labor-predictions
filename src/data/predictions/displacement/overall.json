@@ -1147,6 +1147,15 @@
       ],
       "evidenceTier": 4,
       "label": "Imas/Shukla: Low-dimensional jobs (trucking, warehousing) face higher displacement risk than high-exposure knowledge work"
+    },
+    {
+      "date": "2026-01-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "gans-goldfarb-oring-automation-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER (Gans/Goldfarb): O-ring model -- automating one task changes the return to automating all others"
     }
   ],
   "sources": [
@@ -2077,6 +2086,16 @@
       "evidenceTier": 4,
       "datePublished": "2026-03-23",
       "excerpt": "The workers at greatest risk are not necessarily those with the highest average exposure, but those whose jobs are built around a small number of core tasks that AI can automate.",
+      "dateAdded": "2026-03-23"
+    },
+    {
+      "id": "gans-goldfarb-oring-automation-2026",
+      "title": "O-Ring Automation",
+      "url": "https://www.nber.org/papers/w34639",
+      "publisher": "NBER (Joshua S. Gans, Avi Goldfarb)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-01",
+      "excerpt": "Task-by-task substitution logic is incomplete because automating one task changes the return to automating others. Automation decisions are discrete and can require bundled adoption even when automation quality improves smoothly.",
       "dateAdded": "2026-03-23"
     }
   ]

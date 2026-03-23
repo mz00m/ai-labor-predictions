@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-23",
-  "totalSources": 462,
-  "verifiedCount": 462,
+  "totalSources": 463,
+  "verifiedCount": 463,
   "sources": {
     "cvl-economics-entertainment-ai-2024": {
       "id": "cvl-economics-entertainment-ai-2024",
@@ -107,6 +107,22 @@
       "usedIn": [
         "workforce-ai-exposure",
         "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "gans-goldfarb-oring-automation-2026": {
+      "id": "gans-goldfarb-oring-automation-2026",
+      "title": "O-Ring Automation",
+      "url": "https://www.nber.org/papers/w34639",
+      "publisher": "NBER (Joshua S. Gans, Avi Goldfarb)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-01",
+      "excerpt": "Widely-used exposure indices, which aggregate task-level automation risk using linear formulas, will overstate displacement when tasks are complements. Labour income can rise under partial automation because automation scales the value of remaining bottleneck tasks.",
+      "usedIn": [
+        "workforce-ai-exposure",
+        "overall-us-displacement",
+        "median-wage-impact"
       ],
       "verified": true,
       "synthetic": false

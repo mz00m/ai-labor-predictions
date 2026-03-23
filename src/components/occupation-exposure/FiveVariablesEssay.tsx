@@ -221,7 +221,7 @@ export default function FiveVariablesEssay() {
           </a>
           {" "}using the{" "}
           <a
-            href="https://www.nber.org/papers/w33886"
+            href="https://www.nber.org/papers/w34639"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[var(--accent-text)] hover:underline"

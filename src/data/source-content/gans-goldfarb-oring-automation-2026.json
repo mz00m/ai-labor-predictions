@@ -1,0 +1,14 @@
+{
+  "id": "gans-goldfarb-oring-automation-2026",
+  "abstract": "Gans and Goldfarb study automation when tasks are quality complements rather than separable, using an O-ring production function where a worker's output is the product of task qualities. They show that partial automation triggers a 'focus' mechanism: when machines replace some tasks, workers concentrate their time on the remaining ones, raising quality multiplicatively. This generates three key results that challenge standard task-based automation frameworks.",
+  "keyFindings": [
+    "Task-by-task substitution logic is incomplete because automating one task changes the return to automating others",
+    "Automation decisions are discrete and can require bundled adoption even when automation quality improves smoothly",
+    "Labour income can rise under partial automation because automation scales the value of remaining bottleneck tasks",
+    "Widely-used exposure indices that use linear aggregation will overstate displacement when tasks are complements",
+    "The relevant object is not average task exposure but the structure of bottlenecks and how automation reshapes worker time around them"
+  ],
+  "methodology": "Formal theoretical model using an O-ring (multiplicative) production function where job output equals the product of task qualities. Worker allocates fixed time endowment across n tasks; machines replace tasks at given quality theta at cost r per task. Derives conditions for when partial automation raises vs. lowers worker marginal product and labor income. No empirical data; pure analytical results from the model.",
+  "qualifiers": "This is a theoretical model paper — all results are qualitative predictions from the formal framework, not empirical findings. The model assumes symmetric task structure and constant labor productivity across tasks (simplifying assumptions). The O-ring production function is one specific functional form; results may differ under alternative complementarity structures.",
+  "fetchedAt": "2026-03-23"
+}

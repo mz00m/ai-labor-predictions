@@ -506,7 +506,16 @@ export default function MethodologySection() {
               <strong className="text-[var(--foreground)]">Task bundling (O-ring effects)</strong> —
               In practice, tasks within a job are interconnected. Automating 6 of 7 tasks doesn&apos;t mean
               automating 85% of the job; the remaining task may become more valuable because it&apos;s the
-              bottleneck.
+              bottleneck.{" "}
+              <a
+                href="https://www.nber.org/papers/w34639"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-[var(--foreground)]"
+              >
+                Gans &amp; Goldfarb (2026)
+              </a>{" "}
+              formalize this: linear exposure indices overstate displacement when tasks are complements.
             </li>
             <li>
               <strong className="text-[var(--foreground)]">Quality differences</strong> —
