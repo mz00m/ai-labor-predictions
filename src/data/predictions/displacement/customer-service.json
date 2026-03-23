@@ -326,6 +326,24 @@
       ],
       "evidenceTier": 1,
       "label": "Lodefalk et al.: Sweden customer service shows same age-gradient AI displacement pattern"
+    },
+    {
+      "date": "2025-11-25",
+      "direction": "up",
+      "sourceIds": [
+        "mckinsey-agents-robots-us-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "MGI: Utility AI agents handle 40% of calls, resolving 80%+ without humans; cost/call down 50%"
+    },
+    {
+      "date": "2025-11-25",
+      "direction": "up",
+      "sourceIds": [
+        "mckinsey-agents-robots-us-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "MGI: Advanced AI agents could eventually handle 80-90% of customer inquiries"
     }
   ],
   "sources": [
@@ -604,6 +622,16 @@
       "datePublished": "2025-05-20",
       "excerpt": "Clerical support roles remain the most exposed. Data entry clerks, payroll clerks, and typists continue to show the highest automation potential.",
       "dateAdded": "2026-03-21"
+    },
+    {
+      "id": "mckinsey-agents-robots-us-2025",
+      "title": "Agents, robots, and us: Skill partnerships in the age of AI",
+      "url": "https://www.mckinsey.com/mgi/our-research/agents-robots-and-us-skill-partnerships-in-the-age-of-ai",
+      "publisher": "McKinsey Global Institute (Yee, Madgavkar, Smit et al.)",
+      "evidenceTier": 2,
+      "datePublished": "2025-11-25",
+      "excerpt": "Together, these now handle roughly 40 percent of all calls, resolving more than 80 percent without human involvement. The new process has cut the average cost per call by about 50 percent. Advanced AI agents could eventually handle 80 to 90 percent of customer inquiries.",
+      "dateAdded": "2026-03-23"
     }
   ]
 }

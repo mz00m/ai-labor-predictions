@@ -1,6 +1,6 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-03-21",
+  "lastUpdated": "2026-03-23",
   "totalSources": 460,
   "verifiedCount": 460,
   "sources": {
@@ -60,7 +60,8 @@
         "entry-level-wage-impact",
         "median-wage-impact",
         "white-collar-professional-displacement",
-        "high-skill-wage-premium"
+        "high-skill-wage-premium",
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -4997,7 +4998,8 @@
       "excerpt": "Currently demonstrated technologies could automate activities accounting for about 57 percent of US work hours today. AI agents could perform tasks occupying 44 percent of US work hours, while robots could handle another 13 percent. Roles with the highest potential for automation make up about 40 percent of total jobs.",
       "usedIn": [
         "overall-us-displacement",
-        "white-collar-professional-displacement"
+        "white-collar-professional-displacement",
+        "customer-service-automation"
       ],
       "verified": true,
       "synthetic": false

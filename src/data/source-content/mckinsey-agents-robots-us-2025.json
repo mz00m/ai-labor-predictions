@@ -1,0 +1,14 @@
+{
+  "id": "mckinsey-agents-robots-us-2025",
+  "abstract": "McKinsey Global Institute analyzes how AI-powered agents and robots will reshape work as a partnership between people and intelligent machines. Currently demonstrated technologies could theoretically automate activities accounting for about 57 percent of US work hours (44% by AI agents, 13% by robots). The report finds that most human skills will endure but be applied differently, with 72% of skills used in both automatable and non-automatable work. In a midpoint adoption scenario, AI could unlock $2.9 trillion of US economic value by 2030, but realizing these gains requires redesigning entire workflows rather than automating individual tasks.",
+  "keyFindings": [
+    "Currently demonstrated technologies could automate activities accounting for about 57 percent of US work hours today: AI agents could perform tasks occupying 44 percent, and robots 13 percent.",
+    "More than 70 percent of the skills sought by employers today are used in both automatable and non-automatable work, meaning most skills remain relevant but how they are used will evolve.",
+    "Demand for AI fluency jumped nearly sevenfold in two years through mid-2025, now a job requirement in occupations employing about 7 million US workers.",
+    "Nearly 90 percent of companies say they have invested in AI, but fewer than 40 percent report measurable gains.",
+    "In a midpoint adoption scenario by 2030, AI-powered agents and robots could generate about $2.9 trillion in US economic value per year."
+  ],
+  "methodology": "Analysis of roughly 800 US occupations broken into approximately 2,000 work activities using BLS and O*NET databases. Technical automation potential assessed by comparing demonstrated technology capabilities against required human proficiency levels. Skills analysis based on approximately 6,800 skills from more than 11 million Lightcast job postings. Economic value estimated via midpoint automation adoption scenarios to 2030. Includes 80 implementation case studies and 190 business processes analyzed.",
+  "qualifiers": "The 57 percent figure reflects technical automation potential, not a forecast of job losses. Adoption will take time and may span decades. Actual deployment depends on policy choices, labor costs, implementation expenses, and development time. The analysis reflects today's capabilities, which will continue to evolve. The $2.9 trillion figure is a midpoint scenario estimate, not a prediction.",
+  "fetchedAt": "2026-03-23"
+}
