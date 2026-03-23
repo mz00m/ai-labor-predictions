@@ -1138,6 +1138,15 @@
       ],
       "evidenceTier": 1,
       "label": "Minneapolis Fed: Job transformation, not displacement, is primary AI labor channel"
+    },
+    {
+      "date": "2026-03-23",
+      "direction": "neutral",
+      "sourceIds": [
+        "imas-shukla-oring-exposure-2026"
+      ],
+      "evidenceTier": 4,
+      "label": "Imas/Shukla: Low-dimensional jobs (trucking, warehousing) face higher displacement risk than high-exposure knowledge work"
     }
   ],
   "sources": [
@@ -2059,6 +2068,16 @@
       "datePublished": "2025-09-01",
       "excerpt": "Within highly exposed occupations, like office and administrative roles, workers specialized in information-processing tasks leave and suffer wage losses, while those specialized in customer-facing and coordination tasks stay and experience wage gains as work rebalances toward their strengths.",
       "dateAdded": "2026-03-22"
+    },
+    {
+      "id": "imas-shukla-oring-exposure-2026",
+      "title": "How Will AI-driven Automation Actually Affect Jobs?",
+      "url": "https://aleximas.substack.com/p/how-will-ai-driven-automation-actually",
+      "publisher": "Substack (Alex Imas, Soumitra Shukla — U of Chicago Booth)",
+      "evidenceTier": 4,
+      "datePublished": "2026-03-23",
+      "excerpt": "The workers at greatest risk are not necessarily those with the highest average exposure, but those whose jobs are built around a small number of core tasks that AI can automate.",
+      "dateAdded": "2026-03-23"
     }
   ]
 }

@@ -10,6 +10,15 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Imas, Shukla (Chicago Booth)",
+    title: "How Will AI-driven Automation Actually Affect Jobs?",
+    summary:
+      "O-ring model shows exposure != displacement. Low-dimensional jobs (trucking, warehousing) face real risk; high-dimensional knowledge work gets augmented. Firm incentives and demand elasticity matter more than task exposure.",
+    date: "Mar 23",
+    url: "https://aleximas.substack.com/p/how-will-ai-driven-automation-actually",
+    accent: "border-l-emerald-500",
+  },
+  {
     author: "Yale Budget Lab",
     title: "Evaluating the Impact of AI on the Labor Market: Jan/Feb CPS Update",
     summary:
@@ -44,15 +53,6 @@ const articles: Article[] = [
     date: "Mar 18",
     url: "https://www.anthropic.com/features/81k-interviews",
     accent: "border-l-violet-500",
-  },
-  {
-    author: "Schaul, Ovide (WaPo)",
-    title: "Which Jobs Are Most Threatened by AI, and Who May Adapt",
-    summary:
-      "Interactive tool mapping 350+ occupations by AI exposure and adaptability. 6.1M clerical workers most vulnerable; 86% women.",
-    date: "Mar 16",
-    url: "https://www.washingtonpost.com/technology/interactive/2026/jobs-most-affected-ai-automation/",
-    accent: "border-l-rose-500",
   },
 ];
 
