@@ -5,6 +5,8 @@ import { DIMENSION_META, type DimensionKey } from "@/lib/composite-risk";
 interface Props {
   activeDimension: DimensionKey;
   onSelect: (key: DimensionKey) => void;
+  dimensionalityEnabled: boolean;
+  onToggleDimensionality: () => void;
 }
 
 const DIMENSION_ORDER: DimensionKey[] = [
@@ -16,9 +18,14 @@ const DIMENSION_ORDER: DimensionKey[] = [
   "complementarity",
 ];
 
-export default function DimensionPanel({ activeDimension, onSelect }: Props) {
+export default function DimensionPanel({
+  activeDimension,
+  onSelect,
+  dimensionalityEnabled,
+  onToggleDimensionality,
+}: Props) {
   return (
-    <div className="flex flex-wrap gap-1.5">
+    <div className="flex flex-wrap items-center gap-1.5">
       {DIMENSION_ORDER.map((key) => {
         const dim = DIMENSION_META[key];
         const isActive = activeDimension === key;
@@ -46,6 +53,34 @@ export default function DimensionPanel({ activeDimension, onSelect }: Props) {
           </button>
         );
       })}
+
+      {/* Dimensionality toggle */}
+      <div className="ml-2 pl-2 border-l border-white/[0.12] flex items-center">
+        <button
+          onClick={onToggleDimensionality}
+          className={`text-[10px] sm:text-[11px] font-medium px-2.5 py-1.5 rounded-full border transition-all flex items-center gap-1.5 ${
+            dimensionalityEnabled
+              ? "border-emerald-500/50 bg-emerald-500/15 text-emerald-400"
+              : "border-white/[0.12] text-white/40 hover:border-white/[0.25] hover:text-white/60"
+          }`}
+          title="Toggle O-Ring dimensionality adjustment on complementarity scores"
+        >
+          <span
+            className={`inline-block w-[26px] h-[14px] rounded-full relative transition-colors ${
+              dimensionalityEnabled ? "bg-emerald-500/40" : "bg-white/[0.1]"
+            }`}
+          >
+            <span
+              className={`absolute top-[2px] w-[10px] h-[10px] rounded-full transition-all ${
+                dimensionalityEnabled
+                  ? "left-[14px] bg-emerald-400"
+                  : "left-[2px] bg-white/40"
+              }`}
+            />
+          </span>
+          O-Ring
+        </button>
+      </div>
     </div>
   );
 }

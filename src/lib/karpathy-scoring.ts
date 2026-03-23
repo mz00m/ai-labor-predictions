@@ -115,9 +115,15 @@ function complementarityFromNEI(nei: number): number {
   return Math.max(0, Math.min(10, 10 - nei * 5));
 }
 
+export interface KarpathyScoringOptions {
+  dimensionalityEnabled?: boolean; // default true
+}
+
 export function scoreKarpathyOccupations(
-  rawData: KarpathyOccupation[]
+  rawData: KarpathyOccupation[],
+  options: KarpathyScoringOptions = {}
 ): ScoredKarpathyOccupation[] {
+  const { dimensionalityEnabled = true } = options;
   // Build lookup for SOC group data
   const socLookup = new Map(OCCUPATION_GROUPS.map((g) => [g.id, g]));
 
@@ -157,7 +163,7 @@ export function scoreKarpathyOccupations(
       if (cfoData) {
         dimSource = "cfo";
         complementarityBase = complementarityFromNEI(cfoData.nei);
-        if (socGroup) {
+        if (socGroup && dimensionalityEnabled) {
           dimensionalityAdj = effectiveDims <= 2 ? -0.5 : effectiveDims >= 6 ? 0.5 : 0;
         } else {
           dimensionalityAdj = 0;
@@ -175,7 +181,9 @@ export function scoreKarpathyOccupations(
           tc["information-processing"] + tc["communication"] * 0.5;
         const ratio = compShare / Math.max(0.1, subShare);
         complementarityBase = Math.max(1, Math.min(9, ratio * 3));
-        dimensionalityAdj = effectiveDims <= 2 ? -1.5 : effectiveDims >= 5 ? 1.0 : 0;
+        dimensionalityAdj = dimensionalityEnabled
+          ? (effectiveDims <= 2 ? -1.5 : effectiveDims >= 5 ? 1.0 : 0)
+          : 0;
         complementarity = Math.max(0, Math.min(10, complementarityBase + dimensionalityAdj));
       } else {
         dimSource = "heuristic";

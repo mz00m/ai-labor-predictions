@@ -11,6 +11,7 @@ import { Prediction, EVIDENCE_TIER_LABELS } from "../types";
 import { SOURCE_COUNT_DISPLAY } from "../constants";
 import { getSourceContents } from "./source-content";
 import type { SourceContentEntry } from "./source-content";
+import readingListData from "@/data/reading-list.json";
 import {
   PREDICTION_CONTEXT,
   ABOUT_CONTENT,
@@ -86,6 +87,193 @@ const PAGE_CONTENT_KEYWORDS: Record<string, string[]> = {
   signals: ["signal", "leading indicator", "construction permit", "tool adoption", "automation index", "surging", "reduce amplify expand", "firm response", "productivity path", "three paths"],
   hero: ["headline", "hero stat", "key stat", "main finding", "summary", "overview", "what does the site say", "what does this site"],
 };
+
+interface ReadingListArticle {
+  title: string;
+  author: string;
+  publisher: string;
+  date: string;
+  url: string;
+  takeaway: string;
+  tier?: number;
+}
+
+/** Keywords that trigger inclusion of specific reading list articles */
+const READING_LIST_KEYWORDS: Record<string, string[]> = {
+  // O-Ring / dimensionality / complementarity
+  "o-ring": ["How Will AI-driven Automation Actually Affect Jobs?"],
+  "o ring": ["How Will AI-driven Automation Actually Affect Jobs?"],
+  dimensionality: ["How Will AI-driven Automation Actually Affect Jobs?"],
+  "focus effect": ["How Will AI-driven Automation Actually Affect Jobs?"],
+  "task cluster": ["How Will AI-driven Automation Actually Affect Jobs?"],
+  complementarity: ["How Will AI-driven Automation Actually Affect Jobs?"],
+  augmentation: ["How Will AI-driven Automation Actually Affect Jobs?", "AI is simultaneously aiding and replacing workers, wage data suggest"],
+
+  // Historical parallels
+  "industrial revolution": ["The Best Guide to the AI Revolution May Be Victorian Fiction", "The History of Technological Anxiety and the Future of Economic Growth: Is This Time Different?"],
+  luddite: ["The History of Technological Anxiety and the Future of Economic Growth: Is This Time Different?"],
+  historical: ["The History of Technological Anxiety and the Future of Economic Growth: Is This Time Different?"],
+  "amara's law": ["The History of Technological Anxiety and the Future of Economic Growth: Is This Time Different?"],
+  dickens: ["The Best Guide to the AI Revolution May Be Victorian Fiction"],
+  victorian: ["The Best Guide to the AI Revolution May Be Victorian Fiction"],
+  "handloom weaver": ["The Best Guide to the AI Revolution May Be Victorian Fiction"],
+
+  // Youth employment / canaries
+  "young worker": ["Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of AI", "Same Storm, Different Boats: Generative AI and the Age Gradient in Hiring", "Dalende werkgelegenheid onder Nederlandse jongeren die concurreren met GenAI"],
+  "youth employment": ["Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of AI", "Same Storm, Different Boats: Generative AI and the Age Gradient in Hiring"],
+  canaries: ["Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of AI"],
+  "age gradient": ["Same Storm, Different Boats: Generative AI and the Age Gradient in Hiring"],
+  sweden: ["Same Storm, Different Boats: Generative AI and the Age Gradient in Hiring"],
+  dutch: ["Dalende werkgelegenheid onder Nederlandse jongeren die concurreren met GenAI"],
+  netherlands: ["Dalende werkgelegenheid onder Nederlandse jongeren die concurreren met GenAI"],
+
+  // CFO / firm data
+  cfo: ["Artificial Intelligence, Productivity, and the Workforce: Evidence from Corporate Executives", "Firm Data on AI"],
+  executive: ["Artificial Intelligence, Productivity, and the Workforce: Evidence from Corporate Executives"],
+  "firm data": ["Firm Data on AI"],
+
+  // Productivity
+  productivity: ["Productive Individuals Don't Make Productive Firms", "Earnings Season Takeaways: AI-nxiety", "AI Doesn't Reduce Work -- It Intensifies It", "How AI is affecting productivity and jobs in Europe"],
+  "institutional intelligence": ["Productive Individuals Don't Make Productive Firms"],
+  burnout: ["AI Doesn't Reduce Work -- It Intensifies It"],
+  workload: ["AI Doesn't Reduce Work -- It Intensifies It"],
+
+  // ATM / paradigm
+  atm: ["Why the ATM didn't kill bank teller jobs, but the iPhone did"],
+  "bank teller": ["Why the ATM didn't kill bank teller jobs, but the iPhone did"],
+  paradigm: ["Why the ATM didn't kill bank teller jobs, but the iPhone did"],
+  jevons: ["Why the ATM didn't kill bank teller jobs, but the iPhone did"],
+
+  // Macro / aggregate data
+  "no displacement": ["Evaluating the Impact of AI on the Labor Market: January/February CPS Update", "The 2026 Global Intelligence Crisis"],
+  cps: ["Evaluating the Impact of AI on the Labor Market: January/February CPS Update"],
+  "yale budget lab": ["Evaluating the Impact of AI on the Labor Market: January/February CPS Update"],
+  "labor data": ["Evaluating the Impact of AI on the Labor Market: January/February CPS Update", "Research on AI and the labor market is still in the first inning"],
+  "first inning": ["Research on AI and the labor market is still in the first inning"],
+
+  // Women / gender
+  women: ["What Deindustrialization Did to Men, AI May Do to Women", "Same Storm, Different Boats: Generative AI and the Age Gradient in Hiring"],
+  gender: ["What Deindustrialization Did to Men, AI May Do to Women"],
+  deindustrialization: ["What Deindustrialization Did to Men, AI May Do to Women"],
+  clerical: ["What Deindustrialization Did to Men, AI May Do to Women"],
+
+  // Adoption data
+  "how many use": ["Is AI Already Replacing Jobs? A Large-Scale Survey", "AI, Productivity, and Labor Markets: A Review of the Empirical Evidence"],
+  "adoption data": ["Is AI Already Replacing Jobs? A Large-Scale Survey"],
+  "35%": ["Is AI Already Replacing Jobs? A Large-Scale Survey"],
+
+  // Dallas Fed / wage data
+  "dallas fed": ["AI is simultaneously aiding and replacing workers, wage data suggest"],
+  "wage data": ["AI is simultaneously aiding and replacing workers, wage data suggest"],
+
+  // Acemoglu
+  acemoglu: ["The Simple Macroeconomics of AI"],
+  "simple macro": ["The Simple Macroeconomics of AI"],
+  tfp: ["The Simple Macroeconomics of AI"],
+  "hulten's theorem": ["The Simple Macroeconomics of AI"],
+
+  // Europe
+  europe: ["How AI is affecting productivity and jobs in Europe", "Artificial Intelligence: friend or foe for hiring in Europe today?"],
+  ecb: ["Artificial Intelligence: friend or foe for hiring in Europe today?"],
+
+  // Cognitive labor / identity
+  "cognitive labor": ["The Displacement of Cognitive Labor and What Comes After"],
+  identity: ["The Displacement of Cognitive Labor and What Comes After", "AI Won't Just Automate Jobs — It Will Challenge the Meaning of Work"],
+  "meaning of work": ["AI Won't Just Automate Jobs — It Will Challenge the Meaning of Work"],
+  purpose: ["AI Won't Just Automate Jobs — It Will Challenge the Meaning of Work"],
+
+  // Wharton / Penn
+  wharton: ["The Projected Impact of Generative AI on Future Productivity Growth"],
+  "penn wharton": ["The Projected Impact of Generative AI on Future Productivity Growth"],
+
+  // Demand collapse / negative growth
+  "negative growth": ["Can advanced AI lead to negative economic growth?"],
+  "demand collapse": ["Can advanced AI lead to negative economic growth?"],
+  "sovereign wealth": ["Can advanced AI lead to negative economic growth?"],
+
+  // Anthropic
+  anthropic: ["81,000 People Told Us How They Use AI", "Labor market impacts of AI: A new measure and early evidence"],
+  "observed exposure": ["Labor market impacts of AI: A new measure and early evidence"],
+
+  // Goldman Sachs
+  goldman: ["Earnings Season Takeaways: AI-nxiety"],
+
+  // Resilience
+  resilience: ["Introducing AIR: The AI Resilience Report", "Measuring US workers' capacity to adapt to AI-driven job displacement"],
+  adaptability: ["Measuring US workers' capacity to adapt to AI-driven job displacement"],
+  brookings: ["Measuring US workers' capacity to adapt to AI-driven job displacement", "What Deindustrialization Did to Men, AI May Do to Women"],
+
+  // Iceberg
+  iceberg: ["The Iceberg Index: Measuring Skills-centered Exposure in the AI Economy"],
+  "skills exposure": ["The Iceberg Index: Measuring Skills-centered Exposure in the AI Economy"],
+
+  // Washington Post
+  "washington post": ["See which jobs are most threatened by AI, and who may be able to adapt"],
+};
+
+/**
+ * Select reading list articles relevant to a user query.
+ * Returns up to maxArticles articles, scored by keyword matches + fallback title matching.
+ */
+function selectRelevantReadingList(
+  query: string,
+  maxArticles: number = 5
+): ReadingListArticle[] {
+  const lowerQuery = query.toLowerCase();
+  const articles = readingListData.articles as ReadingListArticle[];
+  const titleScores = new Map<string, number>();
+
+  // Score by keyword map
+  for (const [keyword, titles] of Object.entries(READING_LIST_KEYWORDS)) {
+    if (lowerQuery.includes(keyword)) {
+      for (const title of titles) {
+        titleScores.set(title, (titleScores.get(title) || 0) + 1);
+      }
+    }
+  }
+
+  // Fallback: match query words against article titles, authors, and takeaways
+  const queryWords = lowerQuery.split(/\s+/).filter((w) => w.length >= 4);
+  for (const article of articles) {
+    const searchText = `${article.title} ${article.author} ${article.takeaway}`.toLowerCase();
+    for (const word of queryWords) {
+      if (searchText.includes(word)) {
+        titleScores.set(
+          article.title,
+          (titleScores.get(article.title) || 0) + 0.3
+        );
+      }
+    }
+  }
+
+  if (titleScores.size === 0) return [];
+
+  // Sort by score, return top N
+  const ranked = Array.from(titleScores.entries())
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, maxArticles)
+    .map(([title]) => title);
+
+  return ranked
+    .map((title) => articles.find((a) => a.title === title))
+    .filter((a): a is ReadingListArticle => a !== undefined);
+}
+
+/** Format reading list articles into context text */
+function formatReadingListContext(articles: ReadingListArticle[]): string {
+  const lines = ["# Relevant Reading List Articles\n"];
+  lines.push(
+    "These are curated articles from the jobsdata.ai reading list. Use their insights when answering.\n"
+  );
+  for (const a of articles) {
+    lines.push(`## ${a.title}`);
+    lines.push(`By ${a.author} (${a.publisher}, ${a.date})`);
+    lines.push(`Takeaway: ${a.takeaway}`);
+    lines.push(`URL: ${a.url}`);
+    lines.push("");
+  }
+  return lines.join("\n");
+}
 
 /** Select predictions relevant to a user query via keyword matching */
 function selectRelevantPredictions(
@@ -309,6 +497,12 @@ Your personality and style:
 - If something is debated or uncertain, just say so in one sentence. Don't over-qualify
 - No bullet-point lists unless the user asks for a comparison
 
+Reading list knowledge (IMPORTANT):
+- You have access to curated articles from the jobsdata.ai reading list below. Draw on their insights when relevant
+- Reference reading list perspectives naturally, e.g., "Imas & Shukla make the case that..." or "As Mokyr et al. showed, historically..."
+- When a reading list article is directly relevant, mention it and link to the reading list: "More reading: https://jobsdata.ai/learn/reading-list"
+- The reading list provides depth and nuance beyond the prediction data — use it to give richer, more contextual answers
+
 Linking to the site (IMPORTANT, do this consistently):
 - After answering, point users to the relevant page on jobsdata.ai to explore further
 - Use these link patterns based on what the question is about:
@@ -319,6 +513,7 @@ Linking to the site (IMPORTANT, do this consistently):
   * Historical parallels: "More on this: https://jobsdata.ai/history"
   * Leading indicators: "More on this: https://jobsdata.ai/signals"
   * Methodology: "More on this: https://jobsdata.ai/about"
+  * Reading list / deeper reading: "More reading: https://jobsdata.ai/learn/reading-list"
   * General / overview: "Explore the full dashboard: https://jobsdata.ai"
 - Keep the link natural. One line at the end, not a big call-to-action
 - You can link to multiple pages if the question spans topics
@@ -340,6 +535,12 @@ Data caveats (apply lightly, don't lecture):
     for (const content of pageContent) {
       sections.push(content);
     }
+  }
+
+  // Include relevant reading list articles based on query
+  const relevantArticles = selectRelevantReadingList(userQuery);
+  if (relevantArticles.length > 0) {
+    sections.push(formatReadingListContext(relevantArticles));
   }
 
   // Load rich content for relevant sources
