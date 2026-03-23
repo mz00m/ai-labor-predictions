@@ -210,7 +210,29 @@ export default function FiveVariablesEssay() {
           relationships, synthesizes messy inputs from many stakeholders. AI
           makes them faster at the analysis parts, but the human is still
           driving the engagement. One is a replacement pattern. The other is
-          augmentation. You can see this distinction clearly in our{" "}
+          augmentation. (This intuition is formalized by{" "}
+          <a
+            href="https://aleximas.substack.com/p/how-will-ai-driven-automation-actually"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--accent-text)] hover:underline"
+          >
+            Imas and Shukla
+          </a>
+          {" "}using the{" "}
+          <a
+            href="https://www.nber.org/papers/w33886"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--accent-text)] hover:underline"
+          >
+            O-ring model of automation
+          </a>
+          : in jobs with many complementary tasks, partial automation triggers a
+          &ldquo;focus effect&rdquo; that raises worker productivity and wages.
+          The real displacement risk concentrates in low-dimensional jobs like
+          trucking and warehousing, where automating one core task eliminates the
+          position entirely.) You can see this distinction clearly in our{" "}
           <Link
             href="/predictions/customer-service-automation"
             className="text-[var(--accent-text)] hover:underline"

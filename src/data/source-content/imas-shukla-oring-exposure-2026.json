@@ -1,0 +1,14 @@
+{
+  "id": "imas-shukla-oring-exposure-2026",
+  "abstract": "Alex Imas and Soumitra Shukla (University of Chicago Booth) argue that AI exposure measures are routinely misinterpreted as displacement forecasts. Applying the Gans & Goldfarb 'O-Ring Automation' framework, they show that partial automation of complementary tasks can raise worker productivity and wages via a 'focus effect,' while full displacement risk concentrates in low-dimensional jobs where firms have stronger incentives to automate. Whether exposure leads to better or worse outcomes depends on demand elasticity, job dimensionality, and firm incentives — not average task exposure alone.",
+  "keyFindings": [
+    "Two jobs with identical exposure scores can have completely opposite displacement risks depending on task complementarity, demand elasticity, and firm incentives",
+    "Partial automation in high-dimensional jobs (e.g., consulting) triggers a 'focus effect' — workers concentrate on fewer tasks, raising quality multiplicatively through the O-ring production function",
+    "Low-dimensional jobs (trucking, warehousing) face the highest displacement risk because firms have stronger financial incentive to fully automate when few non-automated tasks remain",
+    "Demand elasticity determines whether productivity gains lead to more hiring (elastic) or displacement (inelastic) — the Jevons paradox applied to labor",
+    "Roughly 3 million US truck drivers are at risk; autonomous trucking pilots by Aurora Innovation and Kodiak Robotics are already in commercial deployment"
+  ],
+  "methodology": "Analytical commentary applying the Gans & Goldfarb (2025) 'O-Ring Automation' model — an extension of Kremer's 1993 O-ring production function to AI-driven automation. Multiplicative production function where job output = product of task qualities. Examines conditions under which partial automation raises vs. lowers worker marginal product. No new empirical data collected; synthesizes existing evidence on trucking automation, management consulting augmentation, and medical AI adoption.",
+  "qualifiers": "Commentary piece on Substack, not peer-reviewed. All quantitative figures cited are from other published sources. The O-ring model assumes symmetric task structure and constant labor productivity across tasks (simplifying assumptions acknowledged by the authors). The framework provides qualitative predictions about displacement patterns but does not generate specific numerical estimates.",
+  "fetchedAt": "2026-03-23"
+}

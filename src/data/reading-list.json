@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "How Will AI-driven Automation Actually Affect Jobs?",
+      "author": "Alex Imas, Soumitra Shukla",
+      "publisher": "Substack (U of Chicago Booth)",
+      "date": "2026-03-23",
+      "url": "https://aleximas.substack.com/p/how-will-ai-driven-automation-actually",
+      "takeaway": "Applies Gans & Goldfarb's O-ring model of automation to show that AI exposure measures are routinely misinterpreted as displacement forecasts. In jobs with many complementary tasks (consulting, medicine, academia), partial automation triggers a 'focus effect' that raises worker productivity and wages. Low-dimensional jobs (trucking, warehousing) face the real displacement risk because firms have stronger financial incentive to fully automate when few non-automated tasks remain. Whether exposure leads to better or worse outcomes depends on demand elasticity, job dimensionality, and firm incentives -- not average task exposure alone.",
+      "weekFeatured": "2026-03-23",
+      "tier": 4
+    },
+    {
       "title": "The History of Technological Anxiety and the Future of Economic Growth: Is This Time Different?",
       "author": "Joel Mokyr, Chris Vickers, Nicolas L. Ziebarth",
       "publisher": "Journal of Economic Perspectives",

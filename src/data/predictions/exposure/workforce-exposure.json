@@ -373,6 +373,15 @@
       ],
       "evidenceTier": 1,
       "label": "Yale Budget Lab: OpenAI exposure quintiles stable; no shift in worker distribution since ChatGPT"
+    },
+    {
+      "date": "2026-03-23",
+      "direction": "neutral",
+      "sourceIds": [
+        "imas-shukla-oring-exposure-2026"
+      ],
+      "evidenceTier": 4,
+      "label": "Imas/Shukla: Exposure != displacement; O-ring complementarities can raise wages under partial automation"
     }
   ],
   "sources": [
@@ -685,6 +694,16 @@
       "datePublished": "2026-03-19",
       "excerpt": "The share of workers in the lowest, middle, and highest occupational exposure groups stay stable. Even when specifically examining the unemployed population, there is no clear growth in exposure to generative AI.",
       "dateAdded": "2026-03-20"
+    },
+    {
+      "id": "imas-shukla-oring-exposure-2026",
+      "title": "How Will AI-driven Automation Actually Affect Jobs?",
+      "url": "https://aleximas.substack.com/p/how-will-ai-driven-automation-actually",
+      "publisher": "Substack (Alex Imas, Soumitra Shukla — U of Chicago Booth)",
+      "evidenceTier": 4,
+      "datePublished": "2026-03-23",
+      "excerpt": "Two jobs with identical exposure scores can have completely opposite displacement risks depending on whether their tasks are complements, whether demand for their output is elastic or inelastic, and the incentives of the firm to invest in automation.",
+      "dateAdded": "2026-03-23"
     }
   ]
 }

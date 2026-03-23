@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-23",
-  "totalSources": 461,
-  "verifiedCount": 461,
+  "totalSources": 462,
+  "verifiedCount": 462,
   "sources": {
     "cvl-economics-entertainment-ai-2024": {
       "id": "cvl-economics-entertainment-ai-2024",
@@ -92,6 +92,21 @@
         "overall-us-displacement",
         "median-wage-impact",
         "entry-level-wage-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "imas-shukla-oring-exposure-2026": {
+      "id": "imas-shukla-oring-exposure-2026",
+      "title": "How Will AI-driven Automation Actually Affect Jobs?",
+      "url": "https://aleximas.substack.com/p/how-will-ai-driven-automation-actually",
+      "publisher": "Substack (Alex Imas, Soumitra Shukla — U of Chicago Booth)",
+      "evidenceTier": 4,
+      "datePublished": "2026-03-23",
+      "excerpt": "Two jobs with identical exposure scores can have completely opposite displacement risks depending on whether their tasks are complements, whether demand for their output is elastic or inelastic, and the incentives of the firm to invest in automation. The workers at greatest risk are not necessarily those with the highest average exposure, but those whose jobs are built around a small number of core tasks that AI can automate.",
+      "usedIn": [
+        "workforce-ai-exposure",
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false
