@@ -679,6 +679,21 @@ export default function KarpathyTreemap({
                 </div>
               );
             })}
+            {/* Dimensionality context */}
+            {tooltipInfo.occ.dimensionality.dimensionalityAdj !== 0 && (() => {
+              const dim = tooltipInfo.occ.dimensionality;
+              const dc = dim.effectiveDimensions <= 2 ? "#DC2626" : dim.effectiveDimensions >= 5 ? "#16A34A" : "#F59E0B";
+              return (
+                <div className="flex items-center gap-1.5 pl-[72px]">
+                  <span className="text-[9px] font-bold px-1 rounded" style={{ background: dc + "20", color: dc }}>
+                    {dim.effectiveDimensions} dims
+                  </span>
+                  <span className="text-[9px] text-white/30">
+                    {dim.dimensionalityAdj > 0 ? "+" : ""}{dim.dimensionalityAdj.toFixed(1)} complementarity
+                  </span>
+                </div>
+              );
+            })()}
             <div className="flex items-center gap-2 pt-1 border-t border-white/[0.06]">
               <span className="w-16 text-[10px] flex-shrink-0 text-white font-medium">
                 Net Risk

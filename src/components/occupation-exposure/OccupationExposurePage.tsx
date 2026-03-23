@@ -81,7 +81,7 @@ const DIMENSION_EXPLAINERS: {
     role: "Buffer",
     roleColor: "#16A34A",
     oneLiner:
-      "Does AI replace workers or make them more productive? (CFO surveys show management is enhanced, admin is replaced.)",
+      "Does AI replace workers or make them more productive? Job dimensionality — the number of distinct task clusters — is the structural driver (O-Ring theory).",
     anchor: "methodology-complementarity",
   },
 ];
@@ -261,6 +261,12 @@ export default function OccupationExposurePage() {
                     const barColor = meta.isPressure
                       ? val > 6 ? "#DC2626" : val > 3 ? "#F59E0B" : "#16A34A"
                       : val > 6 ? "#16A34A" : val > 3 ? "#F59E0B" : "#DC2626";
+                    const dim = selectedOcc.dimensionality;
+                    const dimColor = dim.effectiveDimensions <= 2
+                      ? "#DC2626"
+                      : dim.effectiveDimensions >= 5
+                        ? "#16A34A"
+                        : "#F59E0B";
                     return (
                       <div key={key} className="mb-1.5">
                         <div className="flex items-center justify-between mb-0.5">
@@ -280,6 +286,19 @@ export default function OccupationExposurePage() {
                             style={{ width: `${(val / 10) * 100}%`, background: barColor }}
                           />
                         </div>
+                        {key === "complementarity" && dim.dimensionalityAdj !== 0 && (
+                          <div className="flex items-center gap-1.5 mt-0.5">
+                            <span
+                              className="text-[9px] font-bold px-1 py-px rounded"
+                              style={{ background: dimColor + "20", color: dimColor }}
+                            >
+                              {dim.effectiveDimensions} dims
+                            </span>
+                            <span className="text-[9px] text-white/40">
+                              {dim.dimensionalityAdj > 0 ? "+" : ""}{dim.dimensionalityAdj.toFixed(1)} O-Ring adj
+                            </span>
+                          </div>
+                        )}
                       </div>
                     );
                   })}

@@ -38,10 +38,18 @@ export interface DimensionScores {
   netRisk: number;              // 0-10: composite displacement risk
 }
 
+export interface DimensionalityMeta {
+  effectiveDimensions: number;  // task clusters with >= 10% time share
+  complementarityBase: number;  // score before dimensionality adjustment
+  dimensionalityAdj: number;    // the ±adjustment applied
+  source: "cfo" | "heuristic";  // whether base came from CFO survey or task heuristic
+}
+
 export interface ScoredOccupation {
   group: OccupationGroup;
   scores: DimensionScores;
   rationales: Record<keyof DimensionScores, string>;
+  dimensionality: DimensionalityMeta;
 }
 
 const ELASTICITY_SCORES: Record<DemandElasticity, number> = {
@@ -160,9 +168,24 @@ export function scoreOccupation(group: OccupationGroup): ScoredOccupation {
   // 5. Complementarity (0-10), informed by job dimensionality
   const cfoData = CFO_SURVEY_NEI[group.id];
   const effectiveDims = getEffectiveDimensions(group);
-  const complementarity = cfoData
-    ? adjustComplementarityForDimensionality(complementarityFromNEI(cfoData.nei), group)
-    : estimateComplementarity(group);
+  let complementarityBase: number;
+  let dimensionalityAdj: number;
+  const dimSource: "cfo" | "heuristic" = cfoData ? "cfo" : "heuristic";
+
+  if (cfoData) {
+    complementarityBase = complementarityFromNEI(cfoData.nei);
+    const dimAdj = effectiveDims <= 2 ? -0.5 : effectiveDims >= 6 ? 0.5 : 0;
+    dimensionalityAdj = dimAdj;
+  } else {
+    const tc = group.taskComposition;
+    const complementaryShare = tc["interpersonal"] + tc["physical-manual"] +
+      tc["coordination-management"] * 0.5 + tc["analysis-decision"] * 0.3;
+    const substitutionShare = tc["information-processing"] + tc["communication"] * 0.5;
+    const taskRatio = complementaryShare / Math.max(0.1, substitutionShare);
+    complementarityBase = Math.max(1, Math.min(9, taskRatio * 3));
+    dimensionalityAdj = effectiveDims <= 2 ? -1.5 : effectiveDims >= 5 ? 1.0 : 0;
+  }
+  const complementarity = Math.max(0, Math.min(10, complementarityBase + dimensionalityAdj));
 
   // Composite: pressure - absorption, each normalized to 0-10 independently
   // so defensive factors can fully counterbalance pressure factors.
@@ -209,6 +232,12 @@ export function scoreOccupation(group: OccupationGroup): ScoredOccupation {
       netRisk,
     },
     rationales,
+    dimensionality: {
+      effectiveDimensions: effectiveDims,
+      complementarityBase,
+      dimensionalityAdj,
+      source: dimSource,
+    },
   };
 }
 

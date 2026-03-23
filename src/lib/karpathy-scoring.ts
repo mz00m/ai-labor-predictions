@@ -9,7 +9,7 @@
  * low-dimensional jobs face stronger firm incentive for full automation.
  */
 
-import { DIMENSION_META, type DimensionKey } from "./composite-risk";
+import { DIMENSION_META, type DimensionKey, type DimensionalityMeta } from "./composite-risk";
 import {
   OCCUPATION_GROUPS,
   DEMAND_ELASTICITY,
@@ -38,6 +38,7 @@ export interface ScoredKarpathyOccupation {
   raw: KarpathyOccupation;
   socGroupId: string;
   scores: Record<DimensionKey, number>;
+  dimensionality: DimensionalityMeta;
 }
 
 /** Map Karpathy categories → our SOC group IDs */
@@ -146,18 +147,24 @@ export function scoreKarpathyOccupations(
       //    informed by job dimensionality (O-Ring model)
       const cfoData = CFO_SURVEY_NEI[socGroupId];
       let complementarity: number;
+      let complementarityBase: number;
+      let dimensionalityAdj: number;
+      let dimSource: "cfo" | "heuristic";
+      const effectiveDims = socGroup
+        ? Object.values(socGroup.taskComposition).filter((share) => share >= 0.10).length
+        : 4; // default mid-range
+
       if (cfoData) {
-        const baseCfoScore = complementarityFromNEI(cfoData.nei);
-        // Mild dimensionality adjustment to CFO-based scores
+        dimSource = "cfo";
+        complementarityBase = complementarityFromNEI(cfoData.nei);
         if (socGroup) {
-          const effectiveDims = Object.values(socGroup.taskComposition)
-            .filter((share) => share >= 0.10).length;
-          const dimAdj = effectiveDims <= 2 ? -0.5 : effectiveDims >= 6 ? 0.5 : 0;
-          complementarity = Math.max(0, Math.min(10, baseCfoScore + dimAdj));
+          dimensionalityAdj = effectiveDims <= 2 ? -0.5 : effectiveDims >= 6 ? 0.5 : 0;
         } else {
-          complementarity = baseCfoScore;
+          dimensionalityAdj = 0;
         }
+        complementarity = Math.max(0, Math.min(10, complementarityBase + dimensionalityAdj));
       } else if (socGroup) {
+        dimSource = "heuristic";
         const tc = socGroup.taskComposition;
         const compShare =
           tc["interpersonal"] +
@@ -167,13 +174,13 @@ export function scoreKarpathyOccupations(
         const subShare =
           tc["information-processing"] + tc["communication"] * 0.5;
         const ratio = compShare / Math.max(0.1, subShare);
-        const taskScore = Math.max(1, Math.min(9, ratio * 3));
-        // Dimensionality bonus/penalty (O-Ring mechanism)
-        const effectiveDims = Object.values(tc)
-          .filter((share) => share >= 0.10).length;
-        const dimAdj = effectiveDims <= 2 ? -1.5 : effectiveDims >= 5 ? 1.0 : 0;
-        complementarity = Math.max(0, Math.min(10, taskScore + dimAdj));
+        complementarityBase = Math.max(1, Math.min(9, ratio * 3));
+        dimensionalityAdj = effectiveDims <= 2 ? -1.5 : effectiveDims >= 5 ? 1.0 : 0;
+        complementarity = Math.max(0, Math.min(10, complementarityBase + dimensionalityAdj));
       } else {
+        dimSource = "heuristic";
+        complementarityBase = 5;
+        dimensionalityAdj = 0;
         complementarity = 5;
       }
 
@@ -201,6 +208,12 @@ export function scoreKarpathyOccupations(
           demandElasticity,
           complementarity,
           netRisk,
+        },
+        dimensionality: {
+          effectiveDimensions: effectiveDims,
+          complementarityBase,
+          dimensionalityAdj,
+          source: dimSource,
         },
       };
     });

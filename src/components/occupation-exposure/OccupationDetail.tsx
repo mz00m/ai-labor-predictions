@@ -1,6 +1,6 @@
 "use client";
 
-import { DIMENSION_META, type DimensionKey, type ScoredOccupation } from "@/lib/composite-risk";
+import { DIMENSION_META, type DimensionKey, type ScoredOccupation, type DimensionalityMeta } from "@/lib/composite-risk";
 import { DEMAND_ELASTICITY, DEMAND_ELASTICITY_META } from "@/data/economy-occupations";
 import { SOC_INDUSTRY_SPEED, getSpeedLabel } from "@/data/industry-adoption-speed";
 import Link from "next/link";
@@ -66,6 +66,48 @@ function ScoreBar({
       </div>
       <p className="text-[10px] text-[var(--muted)] mt-0.5 leading-snug">
         {rationale}
+      </p>
+    </div>
+  );
+}
+
+function DimensionalityDetail({ dim }: { dim: DimensionalityMeta }) {
+  const dimColor =
+    dim.effectiveDimensions <= 2
+      ? "#DC2626"
+      : dim.effectiveDimensions >= 5
+        ? "#16A34A"
+        : "#F59E0B";
+  const dimLabel =
+    dim.effectiveDimensions <= 2
+      ? "Low-dimensional"
+      : dim.effectiveDimensions >= 5
+        ? "High-dimensional"
+        : "Mid-range";
+  const adjSign = dim.dimensionalityAdj > 0 ? "+" : "";
+  const sourceLabel = dim.source === "cfo" ? "CFO survey" : "Task heuristic";
+
+  return (
+    <div className="ml-0 mb-3 pl-3 border-l-2 border-black/[0.06]">
+      <div className="flex items-center gap-2 mb-1">
+        <span
+          className="inline-flex items-center gap-1 text-[10px] font-bold px-1.5 py-0.5 rounded"
+          style={{ background: dimColor + "15", color: dimColor }}
+        >
+          {dim.effectiveDimensions} task dimension{dim.effectiveDimensions !== 1 ? "s" : ""}
+        </span>
+        <span className="text-[10px] text-[var(--muted)]">{dimLabel}</span>
+      </div>
+      <p className="text-[10px] text-[var(--muted)] leading-snug">
+        {sourceLabel} base: {dim.complementarityBase.toFixed(1)}
+        {dim.dimensionalityAdj !== 0 && (
+          <span style={{ color: dimColor }}>
+            {" "}{adjSign}{dim.dimensionalityAdj.toFixed(1)} from dimensionality
+          </span>
+        )}
+        {dim.dimensionalityAdj === 0 && (
+          <span> (no dimensionality adjustment in mid-range)</span>
+        )}
       </p>
     </div>
   );
@@ -173,12 +215,16 @@ export default function OccupationDetail({ occupation, onClose }: Props) {
           Dimension Breakdown
         </h4>
         {BAR_DIMENSIONS.map((dim) => (
-          <ScoreBar
-            key={dim}
-            dimension={dim}
-            value={scores[dim]}
-            rationale={rationales[dim]}
-          />
+          <div key={dim}>
+            <ScoreBar
+              dimension={dim}
+              value={scores[dim]}
+              rationale={rationales[dim]}
+            />
+            {dim === "complementarity" && (
+              <DimensionalityDetail dim={occupation.dimensionality} />
+            )}
+          </div>
         ))}
       </div>
 
