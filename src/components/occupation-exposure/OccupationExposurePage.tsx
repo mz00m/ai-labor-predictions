@@ -87,10 +87,11 @@ const DIMENSION_EXPLAINERS: {
 ];
 
 export default function OccupationExposurePage() {
+  const [dimensionalityEnabled, setDimensionalityEnabled] = useState(true);
   const scored = useMemo(() => scoreAllOccupations(), []);
   const scoredKarpathy = useMemo(
-    () => scoreKarpathyOccupations(karpathyData as any),
-    []
+    () => scoreKarpathyOccupations(karpathyData as any, { dimensionalityEnabled }),
+    [dimensionalityEnabled]
   );
   const [activeDimension, setActiveDimension] =
     useState<DimensionKey>("netRisk");
@@ -193,6 +194,11 @@ export default function OccupationExposurePage() {
             <DimensionPanel
               activeDimension={activeDimension}
               onSelect={setActiveDimension}
+              dimensionalityEnabled={dimensionalityEnabled}
+              onToggleDimensionality={() => {
+                setDimensionalityEnabled((prev: boolean) => !prev);
+                setSelectedOcc(null); // clear selection since scores change
+              }}
             />
           </div>
 
