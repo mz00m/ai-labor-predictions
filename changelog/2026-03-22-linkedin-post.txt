@@ -1,0 +1,31 @@
+jobsdata.ai Weekly Update -- Week of March 15-22, 2026
+
+Yale Budget Lab's latest CPS analysis dropped this week: January/February 2026 data shows zero measurable AI labor market displacement. Occupational dissimilarity flat, exposure quintiles stable. Meanwhile, an Oxford Internet Institute study finds a 23% wage premium for AI skills across 10M+ UK job vacancies -- and a Gartner survey shows 20% of customer service leaders have already made AI-driven staffing cuts. The gap between "nothing is changing" and "everything is changing" keeps widening.
+
+What's new this week:
+
+Research and data
+- 7 new sources added (3 Tier 1 peer-reviewed, 4 Tier 2 institutional)
+- Yale Budget Lab: Jan/Feb 2026 CPS confirms 0% measurable AI displacement -- third consecutive update showing stability
+- Oxford Internet Institute: 23% AI skills wage premium (10M+ UK vacancies, 2018-2024); 36% in STEM
+- CVL Economics/Animation Guild: 21.4% of entertainment jobs (~118,500) likely eliminated by GenAI, per executive survey
+- Gartner: 20% of CS leaders report actual staffing cuts; 80% expect more
+- 4 data points and 13 directional signals added across 9 prediction graphs
+
+Data movements
+- Prediction charts now split observed employment data from researcher projections into two separate visualizations -- the clearest way to show the gap between "what has happened" (near zero) and "what researchers expect" (3-14%)
+- Evidence tier corrections: Chegg and Duolingo corporate data downgraded from Tier 1 to Tier 2-3 (corporate proxies, not peer-reviewed research)
+
+Site updates
+- Task visualizer expanded from 67 to 114 occupations covering ~67% of US employment -- added fast food workers, admin assistants, police officers, carpenters, welders, and 42 more
+- New long-form essay: "The Wrong Question About AI and Jobs" -- walks through the 5 variables that actually determine automation risk, built around the ATM paradox and the finding that 60% of today's jobs didn't exist in 1940
+- Net risk scoring formula fixed -- a normalization bug was making nearly every occupation appear maximum risk regardless of defensive factors like adaptability and demand elasticity
+- Data integrity sweep: sign conventions standardized, proxy metrics tagged, 8 unused sources cleaned, aggregation methods made explicit across all 19 prediction files
+
+By the numbers: 99 commits, 76 files changed, 7 new sources, 4 data points, 13 overlay signals, 47 new occupation profiles
+
+The observed-vs-projected split is the most important visualization change since launch. When every Tier 1 source measuring actual employment finds ~0% displacement while projections cluster around 3-14%, the honest thing to do is show both clearly and let the reader sit with the tension. That's what the data demands right now: not resolution, but visible uncertainty.
+
+jobsdata.ai -- tracking AI's real impact on work and wages
+
+#AIandWork #FutureOfWork #LaborMarket #EconomicMobility #WorkforceDevelopment #OpportunityAI
