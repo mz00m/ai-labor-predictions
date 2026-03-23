@@ -143,8 +143,8 @@ const WEIGHTS = {
   technicalExposure: 0.30,
   adoptionSpeed: 0.20,
   adaptability: 0.15,
-  demandElasticity: 0.20,
-  complementarity: 0.15,
+  demandElasticity: 0.15,
+  complementarity: 0.20,
 };
 
 export function scoreOccupation(group: OccupationGroup): ScoredOccupation {

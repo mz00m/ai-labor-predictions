@@ -355,8 +355,8 @@ export default function MethodologySection() {
         <p className="text-[13px] text-[var(--muted)] leading-[1.75] mb-3">
           The net displacement risk score combines the five dimensions with the
           following weights: Technical Exposure (30%), Adoption Speed (20%),
-          Worker Adaptability (15%), Demand Elasticity (20%),
-          Complementarity (15%).
+          Worker Adaptability (15%), Demand Elasticity (15%),
+          Complementarity (20%).
         </p>
         <p className="text-[13px] text-[var(--muted)] leading-[1.75] mb-3">
           Exposure and adoption speed are
