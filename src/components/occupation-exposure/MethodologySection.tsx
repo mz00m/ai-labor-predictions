@@ -169,10 +169,44 @@ export default function MethodologySection() {
         />
       </DimensionResearch>
 
-      {/* ── Dimension 3: Worker Adaptability ── */}
+      {/* ── Dimension 3: Job Dimensionality ── */}
+      <DimensionResearch
+        id="methodology-dimensionality"
+        title="Dimension 3: Job Dimensionality Risk"
+        why="Jobs with fewer distinct task clusters face stronger firm incentive for full automation. When automating the last task eliminates the position entirely, the return on investment is much higher than automating one task in a 20-task job."
+      >
+        <Study
+          title="O-Ring Automation"
+          authors="Gans, Goldfarb"
+          year="2024"
+          url="https://www.nber.org/papers/w33886"
+          summary="Applies Kremer's O-Ring production function to AI automation. In the multiplicative model, automating some tasks frees workers to concentrate on remaining ones — the 'focus effect' raises quality across all remaining tasks. But this only works in high-dimensional jobs. In low-dimensional jobs, partial automation doesn't free the worker for much else, and firms have stronger incentive to invest in automating the remaining tasks."
+        />
+        <Study
+          title="The O-Ring Theory of Economic Development"
+          authors="Kremer"
+          year="1993"
+          url="https://academic.oup.com/qje/article-abstract/108/3/551/1881852"
+          summary="The foundational insight: if production requires many steps and each step needs to be done well for the product to have value, productivity is multiplicative in skill. Named after the Challenger disaster — a single faulty O-ring caused catastrophic failure. Applied to jobs: in multi-task roles, automating one task well compounds through all remaining tasks."
+        />
+        <Study
+          title="How Will AI-driven Automation Actually Affect Jobs?"
+          authors="Imas, Shukla"
+          year="2026"
+          url="https://aleximas.substack.com/p/how-will-ai-driven-automation-actually"
+          summary="Synthesizes the O-Ring automation framework for practitioners. Key insight: exposure and displacement risk are not the same thing. A management consultant with high exposure across 7-8 complementary tasks may see wages rise (focus effect). A truck driver with moderate exposure on 1 critical task faces existential risk because firms have enormous incentive to automate driving once it's feasible."
+        />
+        <p className="text-[11px] text-[var(--muted)] leading-[1.5] mt-3 italic">
+          Note: Our dimensionality score counts task categories with &ge;10% time
+          share from O*NET work activity data. This is a structural approximation;
+          real job complexity varies within occupation groups.
+        </p>
+      </DimensionResearch>
+
+      {/* ── Dimension 4: Worker Adaptability ── */}
       <DimensionResearch
         id="methodology-adaptability"
-        title="Dimension 3: Worker Adaptability"
+        title="Dimension 4: Worker Adaptability"
         why="When displacement occurs, some workers land on their feet quickly while others face prolonged unemployment. Financial savings, transferable skills, geographic job density, and age all determine how costly displacement is for the individual — and for the economy."
       >
         <Study
@@ -205,10 +239,10 @@ export default function MethodologySection() {
         />
       </DimensionResearch>
 
-      {/* ── Dimension 4: Demand Elasticity ── */}
+      {/* ── Dimension 5: Demand Elasticity ── */}
       <DimensionResearch
         id="methodology-elasticity"
-        title="Dimension 4: Demand Elasticity"
+        title="Dimension 5: Demand Elasticity"
         why="The Jevons Paradox: when technology makes output cheaper, total demand for that output often expands. If demand expands faster than productivity grows, employment increases — even as each worker becomes more productive. This is the most overlooked factor in AI displacement forecasts."
       >
         <div className="mb-4">
@@ -262,10 +296,10 @@ export default function MethodologySection() {
         </p>
       </DimensionResearch>
 
-      {/* ── Dimension 5: AI Complementarity ── */}
+      {/* ── Dimension 6: AI Complementarity ── */}
       <DimensionResearch
         id="methodology-complementarity"
-        title="Dimension 5: AI Complementarity"
+        title="Dimension 6: AI Complementarity"
         why="The same technology can be used to replace workers or to make them more productive. Whether AI is deployed as a substitute or complement depends on management decisions, task structure, and organizational incentives — not just technical capability."
       >
         <Study
@@ -309,26 +343,27 @@ export default function MethodologySection() {
       <DimensionResearch
         id="methodology-composite"
         title="Composite Score Calculation"
-        why="How the five dimensions combine into a single net displacement risk score."
+        why="How the six dimensions combine into a single net displacement risk score."
       >
         <p className="text-[13px] text-[var(--muted)] leading-[1.75] mb-3">
-          The net displacement risk score combines the five dimensions with the
-          following weights: Technical Exposure (30%), Adoption Speed (20%),
-          Worker Adaptability (15%), Demand Elasticity (20%), Complementarity
-          (15%).
+          The net displacement risk score combines the six dimensions with the
+          following weights: Technical Exposure (25%), Adoption Speed (15%),
+          Job Dimensionality (15%), Worker Adaptability (15%), Demand
+          Elasticity (15%), Complementarity (15%).
         </p>
         <p className="text-[13px] text-[var(--muted)] leading-[1.75] mb-3">
-          Exposure and adoption speed are &ldquo;pressure&rdquo; factors that
-          drive displacement up. Adaptability, elasticity, and complementarity
-          are &ldquo;buffer&rdquo; factors that moderate it. Each side is
+          Exposure, adoption speed, and job dimensionality are
+          &ldquo;pressure&rdquo; factors that drive displacement up.
+          Adaptability, elasticity, and complementarity are
+          &ldquo;buffer&rdquo; factors that moderate it. Each side is
           normalized to 0&ndash;10 independently before combining: Pressure =
-          weighted average of Exposure and Speed (0&ndash;10); Absorption =
-          weighted average of Adaptability, Elasticity, and Complementarity
-          (0&ndash;10). Net Risk = (Pressure &minus; Absorption + 10) / 2,
-          clamped to 0&ndash;10. This ensures defensive factors can fully
-          counterbalance pressure &mdash; an occupation with maximum exposure
-          but equally strong adaptability, demand elasticity, and
-          complementarity scores 5.0 (neutral), not 10.
+          weighted average of Exposure, Speed, and Dimensionality
+          (0&ndash;10); Absorption = weighted average of Adaptability,
+          Elasticity, and Complementarity (0&ndash;10). Net Risk = (Pressure
+          &minus; Absorption + 10) / 2, clamped to 0&ndash;10. This ensures
+          defensive factors can fully counterbalance pressure &mdash; an
+          occupation with maximum exposure but equally strong adaptability,
+          demand elasticity, and complementarity scores 5.0 (neutral), not 10.
         </p>
         <p className="text-[13px] text-[var(--muted)] leading-[1.75]">
           The weighting is intentionally simple and transparent. Reasonable

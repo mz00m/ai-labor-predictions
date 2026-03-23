@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useCallback, useMemo, useEffect, useRef, type ReactNode } from "react";
-import { JOB_PROFILES, JobProfile, calculateJobExposure } from "@/data/job-tasks";
+import { JOB_PROFILES, JobProfile, calculateJobExposure, calculateCrossoverYear } from "@/data/job-tasks";
+import type { TaskCategory } from "@/data/task-categories";
 import TaskBreakdownChart from "./TaskBreakdownChart";
 import TaskSliders from "./TaskSliders";
 import ComputeCostChart from "./ComputeCostChart";
@@ -224,6 +225,33 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
 
   const exposureScore = useCountUp(exposureScoreRaw, 600);
 
+  // Job dimensionality: count unique task categories with >= 10% time share
+  // Low-dimensional jobs face higher displacement risk (Gans & Goldfarb 2024)
+  const dimensionalityInfo = useMemo(() => {
+    if (!selectedJob) return null;
+    const categoryShares: Record<string, number> = {};
+    for (const task of selectedJob.tasks) {
+      const cat = task.category as TaskCategory;
+      categoryShares[cat] = (categoryShares[cat] ?? 0) + task.timeShare;
+    }
+    const effectiveDimensions = Object.values(categoryShares).filter((s) => s >= 0.10).length;
+    const totalCategories = Object.keys(categoryShares).length;
+
+    // Phase transition: count categories that have crossed cost parity
+    let crossedCategories = 0;
+    const categoryCrossed: Record<string, boolean> = {};
+    for (const task of selectedJob.tasks) {
+      const cat = task.category as TaskCategory;
+      if (categoryCrossed[cat] !== undefined) continue;
+      const crossover = calculateCrossoverYear(task, selectedJob.medianWagePerHr);
+      categoryCrossed[cat] = crossover !== null && crossover <= 2030;
+    }
+    crossedCategories = Object.values(categoryCrossed).filter(Boolean).length;
+    const crossedRatio = totalCategories > 0 ? crossedCategories / totalCategories : 0;
+
+    return { effectiveDimensions, totalCategories, crossedCategories, crossedRatio };
+  }, [selectedJob]);
+
   // Particle burst trigger — fires on job selection
   const [particleTrigger, setParticleTrigger] = useState(0);
   const prevJobRef = useRef<string>("");
@@ -433,6 +461,55 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
             <p className="text-[13px] text-[var(--muted)] mt-1.5">
               {selectedJob.category} · ${selectedJob.medianWagePerHr}/hr median wage (BLS) · {selectedJob.tasks.length} tasks
             </p>
+
+            {/* Job Dimensionality + Phase Transition */}
+            {dimensionalityInfo && (
+              <div className="mt-3 flex flex-wrap gap-2">
+                {/* Dimensionality badge */}
+                <div
+                  className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[12px] font-medium border"
+                  style={{
+                    borderColor:
+                      dimensionalityInfo.effectiveDimensions <= 2
+                        ? "rgba(239,68,68,0.3)"
+                        : dimensionalityInfo.effectiveDimensions <= 4
+                          ? "rgba(245,158,11,0.3)"
+                          : "rgba(16,185,129,0.3)",
+                    backgroundColor:
+                      dimensionalityInfo.effectiveDimensions <= 2
+                        ? "rgba(239,68,68,0.06)"
+                        : dimensionalityInfo.effectiveDimensions <= 4
+                          ? "rgba(245,158,11,0.06)"
+                          : "rgba(16,185,129,0.06)",
+                    color:
+                      dimensionalityInfo.effectiveDimensions <= 2
+                        ? "#DC2626"
+                        : dimensionalityInfo.effectiveDimensions <= 4
+                          ? "#D97706"
+                          : "#059669",
+                  }}
+                >
+                  <span style={{ fontFamily: "'DM Mono', monospace" }}>
+                    {dimensionalityInfo.effectiveDimensions}/{dimensionalityInfo.totalCategories}
+                  </span>
+                  <span className="opacity-70">task dimensions</span>
+                </div>
+
+                {/* Phase transition warning */}
+                {dimensionalityInfo.crossedRatio > 0.5 ? (
+                  <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[12px] font-medium border border-red-200 bg-red-50 text-red-700">
+                    <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" className="shrink-0 opacity-70">
+                      <path d="M8 1l7 14H1L8 1zm0 4.5v4m0 2v.5" stroke="currentColor" fill="none" strokeWidth="1.5" strokeLinecap="round" />
+                    </svg>
+                    Majority of task dimensions at cost parity by 2030 — firm incentive shifts toward full replacement
+                  </div>
+                ) : dimensionalityInfo.effectiveDimensions >= 4 && dimensionalityInfo.crossedRatio > 0 ? (
+                  <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[12px] font-medium border border-green-200 bg-green-50 text-green-700">
+                    Partial automation likely augments this role — O-Ring focus effect applies
+                  </div>
+                ) : null}
+              </div>
+            )}
           </div>
 
           {/* Two-column layout: sliders + main content */}

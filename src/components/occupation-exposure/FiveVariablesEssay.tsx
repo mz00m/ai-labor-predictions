@@ -12,8 +12,8 @@ export default function FiveVariablesEssay() {
       <div className="space-y-5 text-[14px] text-[var(--muted)] leading-[1.8]">
         <p>
          Most people are starting to ask themselves a single question: will I lose my job if AI is able to do it better than me? But after spending months in the research, I can say that seems to be the wrong question. Or
-          rather, it&rsquo;s one-fifth of the right question. And it&rsquo;s
-          not even the most important fifth.
+          rather, it&rsquo;s one-sixth of the right question. And it&rsquo;s
+          not even the most important sixth.
         </p>
 
         <p>
@@ -25,7 +25,7 @@ export default function FiveVariablesEssay() {
         </p>
 
         <p>
-          What actually determines whether AI displaces you at work looks a lot more like five specific and easy to undestand factors. Two of them push toward job loss or displacement. Three push against it. And
+          What actually determines whether AI displaces you at work looks a lot more like six specific and easy to understand factors. Three of them push toward job loss or displacement. Three push against it. And
           the three that push against it are, actually quite a bit more interesting.
           Partly because they&rsquo;re less obvious, and partly because
           they&rsquo;re the ones you can actually do something about.
@@ -88,13 +88,69 @@ export default function FiveVariablesEssay() {
           it are two very different things.
         </p>
 
+        {/* ── Pressure 3: Dimensionality ── */}
+        <p>
+          The third pressure variable is the one most analysis overlooks
+          entirely: job dimensionality. How many distinct types of tasks does
+          your job involve?
+        </p>
+
+        <p>
+          A long-haul truck driver&rsquo;s job is built around one core task:
+          moving the truck safely from point A to point B. A management
+          consultant does research, data analysis, client communication,
+          presentation design, strategic reasoning, team coordination, and
+          relationship management. That&rsquo;s seven or eight distinct task
+          clusters. This difference matters enormously. As{" "}
+          <a
+            href="https://aleximas.substack.com/p/how-will-ai-driven-automation-actually"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--accent-text)] hover:underline"
+          >
+            Imas and Shukla
+          </a>
+          {" "}explain, applying{" "}
+          <a
+            href="https://www.nber.org/papers/w33886"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--accent-text)] hover:underline"
+          >
+            Gans and Goldfarb&rsquo;s O-Ring automation model
+          </a>
+          : if a job has 20 tasks and one gets automated, a human is still
+          required for the other 19. But if a job has one task and that task
+          gets automated, the job is gone. And here&rsquo;s the part that
+          most people miss: firms have a much stronger financial incentive to
+          invest in automating a task when it&rsquo;s the <em>last</em>{" "}
+          non-automated task in the job, because then they can eliminate the
+          position entirely and save the full wage bill. This means
+          low-dimensional jobs attract more automation investment, not less.
+        </p>
+
+        <p>
+          This is why trucking and warehousing may be the real canaries in the
+          coal mine, not the white-collar knowledge workers who dominate the
+          headlines. Aurora Innovation and Kodiak Robotics are already running
+          commercial autonomous trucking deployments. The{" "}
+          <Link
+            href="/task-visualizer"
+            className="text-[var(--accent-text)] hover:underline"
+          >
+            task visualizer
+          </Link>
+          {" "}now shows each job&rsquo;s dimensionality score alongside its
+          exposure, so you can see this distinction for yourself.
+        </p>
+
         {/* ── The Turn ── */}
         <p>
-          So those are the two pressure variables. If you stopped here,
-          you&rsquo;d conclude that any job with high exposure in a
-          fast-adopting industry is toast. And that&rsquo;s exactly the
-          conclusion most AI-and-jobs commentary reaches. But it&rsquo;s
-          wrong, because it ignores three forces pushing in the other
+          So those are the three pressure variables. If you stopped here,
+          you&rsquo;d conclude that any job with high exposure, in a
+          fast-adopting industry, with few task dimensions is toast. And
+          that&rsquo;s closer to the right conclusion, but it&rsquo;s still
+          incomplete, because it ignores three forces pushing in the other
           direction. These are the interesting ones.
         </p>
 
@@ -267,7 +323,7 @@ export default function FiveVariablesEssay() {
 
         {/* ── The Payoff ── */}
         <p>
-          So: two forces push toward displacement, three push against it. The{" "}
+          So: three forces push toward displacement, three push against it. The{" "}
           <strong className="text-[var(--foreground)]">net risk score</strong>
           {" "}is the balance between them, on a 1&ndash;10 scale. And this is
           where the picture gets genuinely surprising.
@@ -325,7 +381,7 @@ export default function FiveVariablesEssay() {
 
         <p>
           The chart above lets you explore these dynamics across 342
-          occupations. Click any block to see all five scores and how they
+          occupations. Click any block to see all six scores and how they
           combine. For the aggregate picture, what happens when you add up all
           342 occupations, see our{" "}
           <Link
@@ -348,7 +404,7 @@ export default function FiveVariablesEssay() {
         {/* ── The Landing ── */}
         <p>
           There&rsquo;s one more thing this framework can&rsquo;t capture, and
-          it might be the most important thing of all. These five variables
+          it might be the most important thing of all. These six variables
           score the risks to <em>existing</em> jobs. But technology
           doesn&rsquo;t just destroy tasks. It{" "}
           <a
@@ -368,10 +424,10 @@ export default function FiveVariablesEssay() {
         </p>
 
         <p>
-          None of this is destiny. Read that again. Every one of these five variables can be
+          None of this is destiny. Read that again. Every one of these six variables can be
           changed. By policy, by companies, by individuals. But you
           can&rsquo;t change what you don&rsquo;t understand. And
-          understanding means asking five questions instead of one.
+          understanding means asking six questions instead of one.
         </p>
 
         <div className="border-t border-black/[0.06] pt-4 mt-8">

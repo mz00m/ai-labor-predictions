@@ -57,6 +57,15 @@ const DIMENSION_EXPLAINERS: {
     anchor: "methodology-adoption",
   },
   {
+    key: "jobDimensionality",
+    label: "Job Dimensionality",
+    role: "Pressure",
+    roleColor: "#DC2626",
+    oneLiner:
+      "How many distinct task clusters define this job? Low-dimensional jobs face stronger firm incentive to fully automate.",
+    anchor: "methodology-dimensionality",
+  },
+  {
     key: "adaptability",
     label: "Worker Adaptability",
     role: "Buffer",
@@ -121,7 +130,7 @@ export default function OccupationExposurePage() {
             axis: &ldquo;digital AI exposure.&rdquo; That captures which tasks AI{" "}
             <em>can</em> do &mdash; but not which jobs will actually be displaced.
             We rebuild his exact visualization with the same 342 BLS occupations,
-            then add four additional research-backed dimensions.
+            then add five additional research-backed dimensions.
           </p>
 
           <a
@@ -131,7 +140,7 @@ export default function OccupationExposurePage() {
             Jump to interactive chart &darr;
           </a>
 
-          {/* 5 dimensions — compact list */}
+          {/* 6 dimensions — compact list */}
           <div className="border border-black/[0.06] rounded-lg divide-y divide-black/[0.06] mb-2">
             {DIMENSION_EXPLAINERS.map((dim) => (
               <button
@@ -179,7 +188,7 @@ export default function OccupationExposurePage() {
             ))}
           </div>
           <p className="text-[11px] text-[var(--muted)] leading-snug">
-            Net Risk = weighted combination of 2 pressure factors minus 3 buffer
+            Net Risk = weighted combination of 3 pressure factors minus 3 buffer
             factors, bounded 0-10. <a href="#methodology" className="text-[var(--accent-text)] hover:underline">Full methodology below.</a>
           </p>
         </header>
@@ -245,12 +254,13 @@ export default function OccupationExposurePage() {
                 {/* Right: dimension scores */}
                 <div className="w-full sm:w-72 flex-shrink-0">
                   <p className="text-[10px] font-bold uppercase tracking-widest text-white/40 mb-2">
-                    5-Dimension Scores
+                    6-Dimension Scores
                   </p>
                   {(
                     [
                       "technicalExposure",
                       "adoptionSpeed",
+                      "jobDimensionality",
                       "adaptability",
                       "demandElasticity",
                       "complementarity",
@@ -322,7 +332,7 @@ export default function OccupationExposurePage() {
       </section>
 
       {/* ───── Essay section ───── */}
-      <section id="five-variables" className="mb-12 mt-12 scroll-mt-8">
+      <section id="six-variables" className="mb-12 mt-12 scroll-mt-8">
         <FiveVariablesEssay />
       </section>
 

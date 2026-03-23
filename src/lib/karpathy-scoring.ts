@@ -1,5 +1,5 @@
 /**
- * Maps Karpathy's 342 BLS occupations to our 5-dimensional risk framework.
+ * Maps Karpathy's 342 BLS occupations to our 6-dimensional risk framework.
  *
  * Each occupation inherits dimension scores from its parent SOC major group,
  * with the exposure dimension using Karpathy's per-occupation GPT score (0-10).
@@ -89,10 +89,11 @@ function getSocGroupId(occ: KarpathyOccupation): string {
 }
 
 const WEIGHTS = {
-  technicalExposure: 0.30,
-  adoptionSpeed: 0.20,
+  technicalExposure: 0.25,
+  adoptionSpeed: 0.15,
+  jobDimensionality: 0.15,
   adaptability: 0.15,
-  demandElasticity: 0.20,
+  demandElasticity: 0.15,
   complementarity: 0.15,
 };
 
@@ -158,14 +159,24 @@ export function scoreKarpathyOccupations(
         complementarity = 5;
       }
 
+      // 6. Job Dimensionality: from SOC group task composition
+      // Fewer effective task clusters = higher displacement risk
+      let jobDimensionality = 5; // default
+      if (socGroup) {
+        const effectiveDims = Object.values(socGroup.taskComposition)
+          .filter((share) => share >= 0.10).length;
+        jobDimensionality = Math.max(0, Math.min(10, 10 - (effectiveDims - 1) * (10 / 7)));
+      }
+
       // Net Risk composite — normalize pressure and absorption independently
       // so defensive factors (adaptability, elasticity, complementarity) can
-      // fully counterbalance pressure factors (exposure, adoption speed).
-      const pressureWeightSum = WEIGHTS.technicalExposure + WEIGHTS.adoptionSpeed;
+      // fully counterbalance pressure factors (exposure, adoption speed, dimensionality).
+      const pressureWeightSum = WEIGHTS.technicalExposure + WEIGHTS.adoptionSpeed + WEIGHTS.jobDimensionality;
       const absorptionWeightSum = WEIGHTS.adaptability + WEIGHTS.demandElasticity + WEIGHTS.complementarity;
       const pressureNorm =
         (WEIGHTS.technicalExposure * technicalExposure +
-          WEIGHTS.adoptionSpeed * adoptionSpeed) / pressureWeightSum;
+          WEIGHTS.adoptionSpeed * adoptionSpeed +
+          WEIGHTS.jobDimensionality * jobDimensionality) / pressureWeightSum;
       const absorptionNorm =
         (WEIGHTS.adaptability * adaptability +
           WEIGHTS.demandElasticity * demandElasticity +
@@ -178,6 +189,7 @@ export function scoreKarpathyOccupations(
         scores: {
           technicalExposure,
           adoptionSpeed,
+          jobDimensionality,
           adaptability,
           demandElasticity,
           complementarity,

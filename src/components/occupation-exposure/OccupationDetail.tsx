@@ -14,6 +14,7 @@ interface Props {
 const BAR_DIMENSIONS: DimensionKey[] = [
   "technicalExposure",
   "adoptionSpeed",
+  "jobDimensionality",
   "adaptability",
   "demandElasticity",
   "complementarity",
@@ -161,7 +162,7 @@ export default function OccupationDetail({ occupation, onClose }: Props) {
               {riskLabel}
             </p>
             <p className="text-[11px] text-[var(--muted)]">
-              Composite of 5 dimensions (higher = more displacement pressure)
+              Composite of 6 dimensions (higher = more displacement pressure)
             </p>
           </div>
         </div>

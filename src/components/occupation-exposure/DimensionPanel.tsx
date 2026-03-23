@@ -11,6 +11,7 @@ const DIMENSION_ORDER: DimensionKey[] = [
   "netRisk",
   "technicalExposure",
   "adoptionSpeed",
+  "jobDimensionality",
   "adaptability",
   "demandElasticity",
   "complementarity",

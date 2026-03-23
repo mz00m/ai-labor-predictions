@@ -31,6 +31,7 @@ import { SOC_INDUSTRY_SPEED } from "@/data/industry-adoption-speed";
 export interface DimensionScores {
   technicalExposure: number;    // 0-10: higher = more exposed
   adoptionSpeed: number;        // 0-10: higher = faster adoption (more pressure)
+  jobDimensionality: number;    // 0-10: higher = fewer task clusters (more pressure)
   adaptability: number;         // 0-10: higher = more adaptable (less risk)
   demandElasticity: number;     // 0-10: higher = more elastic (less risk)
   complementarity: number;      // 0-10: higher = more enhancement (less risk)
@@ -85,12 +86,31 @@ function estimateComplementarity(group: OccupationGroup): number {
   return Math.max(1, Math.min(9, ratio * 3));
 }
 
+/**
+ * Compute job dimensionality risk score (0-10).
+ *
+ * Counts the number of task categories with >= 10% time share ("effective
+ * dimensions"). Fewer effective dimensions = higher displacement risk because:
+ * 1. Automating a larger share of the job is feasible
+ * 2. Firms have stronger incentive to invest in full automation when fewer
+ *    non-automated tasks remain (Gans & Goldfarb 2024, "O-Ring Automation")
+ *
+ * Scale: 1-2 dimensions → 9-10 (critical risk), 7-8 → 1-2 (low risk)
+ */
+function jobDimensionalityScore(group: OccupationGroup): number {
+  const effectiveDimensions = Object.values(group.taskComposition)
+    .filter((share) => share >= 0.10).length;
+  // Map: 1 dim → 10, 2 → 8.6, 3 → 7.1, 4 → 5.7, 5 → 4.3, 6 → 2.9, 7 → 1.4, 8 → 0
+  return Math.max(0, Math.min(10, 10 - (effectiveDimensions - 1) * (10 / 7)));
+}
+
 /** Weights for the composite score */
 const WEIGHTS = {
-  technicalExposure: 0.30,
-  adoptionSpeed: 0.20,
+  technicalExposure: 0.25,
+  adoptionSpeed: 0.15,
+  jobDimensionality: 0.15,
   adaptability: 0.15,
-  demandElasticity: 0.20,
+  demandElasticity: 0.15,
   complementarity: 0.15,
 };
 
@@ -103,16 +123,19 @@ export function scoreOccupation(group: OccupationGroup): ScoredOccupation {
   const speedMultiplier = SOC_INDUSTRY_SPEED[group.id] ?? 1.0;
   const adoptionSpeed = adoptionSpeedScore(speedMultiplier);
 
-  // 3. Adaptability (0-10)
+  // 3. Job Dimensionality (0-10, higher = fewer dimensions = more pressure)
+  const jobDimensionality = jobDimensionalityScore(group);
+
+  // 4. Adaptability (0-10)
   const adaptability = group.adaptiveCapacity * 10;
 
-  // 4. Demand Elasticity (0-10)
+  // 5. Demand Elasticity (0-10)
   const elasticityData = DEMAND_ELASTICITY[group.id];
   const demandElasticity = elasticityData
     ? ELASTICITY_SCORES[elasticityData.elasticity]
     : 5;
 
-  // 5. Complementarity (0-10)
+  // 6. Complementarity (0-10)
   const cfoData = CFO_SURVEY_NEI[group.id];
   const complementarity = cfoData
     ? complementarityFromNEI(cfoData.nei)
@@ -120,11 +143,12 @@ export function scoreOccupation(group: OccupationGroup): ScoredOccupation {
 
   // Composite: pressure - absorption, each normalized to 0-10 independently
   // so defensive factors can fully counterbalance pressure factors.
-  const pressureWeightSum = WEIGHTS.technicalExposure + WEIGHTS.adoptionSpeed;
+  const pressureWeightSum = WEIGHTS.technicalExposure + WEIGHTS.adoptionSpeed + WEIGHTS.jobDimensionality;
   const absorptionWeightSum = WEIGHTS.adaptability + WEIGHTS.demandElasticity + WEIGHTS.complementarity;
   const pressureNorm =
     (WEIGHTS.technicalExposure * technicalExposure +
-      WEIGHTS.adoptionSpeed * adoptionSpeed) / pressureWeightSum;
+      WEIGHTS.adoptionSpeed * adoptionSpeed +
+      WEIGHTS.jobDimensionality * jobDimensionality) / pressureWeightSum;
   const absorptionNorm =
     (WEIGHTS.adaptability * adaptability +
       WEIGHTS.demandElasticity * demandElasticity +
@@ -133,17 +157,20 @@ export function scoreOccupation(group: OccupationGroup): ScoredOccupation {
   // Scale to 0-10: 5.0 when pressure = absorption, 0 when fully absorbed, 10 when fully exposed
   const netRisk = Math.max(0, Math.min(10, (pressureNorm - absorptionNorm + 10) / 2));
 
+  const effectiveDims = Object.values(group.taskComposition).filter((s) => s >= 0.10).length;
+
   const rationales: Record<keyof DimensionScores, string> = {
     technicalExposure: exposureData
       ? `GPT-scored mean ${exposureData.mean.toFixed(1)}/10 across ${exposureData.count} occupations (range: ${exposureData.min}-${exposureData.max})`
       : `Eloundou et al. E1+0.5E2 score: ${(group.aiExposure * 10).toFixed(1)}/10`,
     adoptionSpeed: `Industry speed multiplier: ${speedMultiplier.toFixed(2)}x (${speedMultiplier < 1 ? "faster" : speedMultiplier > 1 ? "slower" : "baseline"} than average)`,
+    jobDimensionality: `${effectiveDims} of 8 task categories above 10% share${effectiveDims <= 2 ? " — low-dimensional job, high firm incentive to fully automate" : effectiveDims >= 5 ? " — high-dimensional job, partial automation likely augments workers" : ""}`,
     adaptability: `Manning & Aguirre composite: ${group.adaptiveCapacity.toFixed(2)} (wealth: ${group.adaptiveCapacityComponents.netLiquidWealth.toFixed(2)}, skills: ${group.adaptiveCapacityComponents.skillTransferability.toFixed(2)})`,
     demandElasticity: elasticityData?.rationale ?? "No elasticity data available",
     complementarity: cfoData
       ? `CFO survey NEI: ${cfoData.nei.toFixed(2)} (${cfoData.label})`
       : "Estimated from task composition (no CFO survey data)",
-    netRisk: `Composite of 5 dimensions, weighted: exposure (${(WEIGHTS.technicalExposure * 100).toFixed(0)}%), speed (${(WEIGHTS.adoptionSpeed * 100).toFixed(0)}%), adaptability (${(WEIGHTS.adaptability * 100).toFixed(0)}%), elasticity (${(WEIGHTS.demandElasticity * 100).toFixed(0)}%), complementarity (${(WEIGHTS.complementarity * 100).toFixed(0)}%)`,
+    netRisk: `Composite of 6 dimensions, weighted: exposure (${(WEIGHTS.technicalExposure * 100).toFixed(0)}%), speed (${(WEIGHTS.adoptionSpeed * 100).toFixed(0)}%), dimensionality (${(WEIGHTS.jobDimensionality * 100).toFixed(0)}%), adaptability (${(WEIGHTS.adaptability * 100).toFixed(0)}%), elasticity (${(WEIGHTS.demandElasticity * 100).toFixed(0)}%), complementarity (${(WEIGHTS.complementarity * 100).toFixed(0)}%)`,
   };
 
   return {
@@ -151,6 +178,7 @@ export function scoreOccupation(group: OccupationGroup): ScoredOccupation {
     scores: {
       technicalExposure,
       adoptionSpeed,
+      jobDimensionality,
       adaptability,
       demandElasticity,
       complementarity,
@@ -196,6 +224,16 @@ export const DIMENSION_META: Record<
     colorScale: ["#DCFCE7", "#DC2626"],
     isPressure: true,
   },
+  jobDimensionality: {
+    label: "Job Dimensionality Risk",
+    shortLabel: "Dimensionality",
+    description:
+      "How many distinct task clusters define this job? Low-dimensional jobs (1-2 core tasks) face higher displacement risk because firms have stronger incentive to invest in full automation. High-dimensional jobs (5+ task clusters) are more likely to see augmentation via the O-Ring \"focus effect.\"",
+    source:
+      "Gans & Goldfarb (2024), O-Ring Automation; Kremer (1993), O-Ring Theory of Economic Development",
+    colorScale: ["#DCFCE7", "#DC2626"],
+    isPressure: true,
+  },
   adaptability: {
     label: "Worker Adaptability",
     shortLabel: "Adaptability",
@@ -229,7 +267,7 @@ export const DIMENSION_META: Record<
     label: "Net Displacement Risk",
     shortLabel: "Net Risk",
     description:
-      "Composite score combining all five dimensions. Accounts for both the pressure toward displacement AND the factors that absorb or redirect that pressure.",
+      "Composite score combining all six dimensions. Accounts for both the pressure toward displacement AND the factors that absorb or redirect that pressure.",
     source: "Weighted composite of 5 research-backed dimensions",
     colorScale: ["#DCFCE7", "#DC2626"],
     isPressure: true,
