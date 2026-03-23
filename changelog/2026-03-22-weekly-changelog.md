@@ -9,22 +9,27 @@
 
 | Metric | Count |
 |--------|-------|
-| Total commits | 99 |
-| Files changed | 76 |
-| Lines added | 6,942 |
-| Lines removed | 761 |
+| Total commits | 502 |
+| Files changed | 206 |
+| Lines added | ~25,000+ |
+| Lines removed | ~5,000+ |
+
+*Note: Largest week since launch. Commits span PRs #328–#425.*
 
 ## Data Additions
 
 | Metric | Count |
 |--------|-------|
-| New research sources added | 7 |
-| — Tier 1 (peer-reviewed/gov) | 3 |
-| — Tier 2 (think tank/industry) | 4 |
-| New data points added | 4 |
-| New overlay signals added | 13 |
-| Prediction graphs updated | 9 |
+| New research sources added | 24+ |
+| — Tier 1 (peer-reviewed/gov) | 5+ |
+| — Tier 2 (think tank/industry) | 15+ |
+| — Tier 3 (major press) | 4+ |
+| New data points added | 20+ |
+| New overlay signals added | 30+ |
+| Prediction graphs updated | 11+ |
 | Occupation profiles added | 47 (67 → 114) |
+| New pages created | 1 (`/occupation-exposure`) |
+| New prediction tiles | 1 (AI-Driven New Business Formation) |
 
 ---
 
@@ -67,6 +72,20 @@
 - **Feeds:** `creative-industry-displacement`
 - **Finding:** Executive survey (n=300): 21.4% of entertainment jobs (~118,500) likely eliminated by GenAI by 2026. 75% of execs say AI already supported job elimination.
 - **Commit:** `6c0cb190`
+
+### 8–24. Batch Ingestion — 17 Sources on March 19 (Mixed Tiers)
+- **Commit:** `2909b8c3`
+- 17 new sources ingested across 9 prediction graphs in a single session
+- Includes Goldman Sachs (Briggs) "How Will AI Affect the US Labor Market?" (Mar 2026) — `cd3fe874`
+- Freund & Mann (2026) "Job Transformation, Specialization, and the Labor Market Effects of AI" NBER — `c6dbfd07`
+- Agrawal et al. (2026) "AI in Science" NBER WP 34953 — `bb6fe28b`
+- Deloitte State of AI in the Enterprise 2026 (5 overlays) — `828c847c`
+- CoworkingCafe AI jobs metro study (Mar 2026) — `eaf0f26c`
+
+### PwC AI Jobs Barometer (Tier 2)
+- **Feeds:** `overall-us-displacement`, `entry-level-wage-impact`, `education-sector-displacement`
+- **Finding:** 38% job growth in AI-exposed occupations. 55% skill churn. Degree requirement decline signal.
+- **Commit:** `1f3aafba`
 
 ---
 
@@ -124,6 +143,45 @@
 
 ## D. Site Pages & Features
 
+### NEW PAGE: /occupation-exposure — Multi-Dimensional Displacement Risk (major)
+Entirely new page launched this week. Visualizes occupation-level displacement risk across 342 BLS occupations using a 5-dimensional research-backed framework:
+1. **Technical exposure** (Yale/Eloundou) — how much of the job can AI do?
+2. **Institutional adoption speed** (OECD/McKinsey) — how fast is the industry adopting?
+3. **Worker adaptability** (Manning & Aguirre NBER) — how transferable are the skills?
+4. **Demand elasticity** (Bessen/Jevons) — does automation expand demand?
+5. **AI complementarity** (Baslandze CFO survey) — does AI help workers or replace them?
+
+Features: canvas-rendered Karpathy-style treemap sized by employment, dimension toggle pills, click-to-expand occupation detail cards with full 5-dimension score breakdown (BLS outlook, pay, education, exposure rationale), exposure vs. net-risk comparison table, expandable methodology with full source citations. Iterated through multiple rounds: SVG treemap → canvas treemap, category grouping, color gradient calibration, netRisk formula fixes.
+- **Commits:** `99257b67` (page creation, 1,474 lines), `22abc63a` (Karpathy treemap rebuild), `6f774a9a`, `c58ae32f`, `b3eb505b`, many more
+
+### NEW PAGE SECTION: Interactive Elasticity Toggle on /demand-elasticity
+New interactive visualization showing how demand elasticity works across industries — toggle between "AI automates tasks" and "AI expands demand" to see how the Jevons Paradox plays out sector by sector. 6+ industries covered.
+- **Commits:** `f457b7ab`, `eb13ec9f`
+
+### NEW: AI-Driven New Business Formation Prediction Tile
+New prediction tile tracking AI-driven entrepreneurship and business formation. Accompanied by a full literature review document covering Marchesi/Tang and 7+ academic sources plus Carta data.
+- **Commits:** `1f43b023`, `e51cff8a`, `96a00a1f`, `1afba72a`
+
+### History Page Enriched
+Specific stories, data, and strong sources added to the technology history page. More grounded in primary research.
+- **Commit:** `7813eac9`
+
+### Social Sharing Links
+Added to all explainer pages.
+- **Commit:** `e47c3f66`
+
+### Front Page Reorganized
+Section order and titles updated.
+- **Commit:** `01543a96`
+
+### About Page Rewritten
+Revised copy with updated methodology and credibility signals.
+- **Commit:** `8ce48db9`
+
+### Labor Economist Review of Task Visualizer
+Full economist review conducted with recommendations implemented: tooltip fixes, column key additions, income strata table fixes, economic exposure display improvements.
+- **Commits:** `90103d3d`, `71726dda`, `2cc86cce`, multiple table fix commits
+
 ### Task Visualizer — 47 New Occupation Profiles (67→114)
 Massive expansion of the task visualizer reaching ~67% of US nonfarm employment coverage. New profiles span:
 - High-employment roles: fast food worker (3.6M), admin assistant (2.0M), personal care aide (1.8M), office clerk (2.7M), assembler (1.5M), stocker/order filler (2.0M)
@@ -164,6 +222,11 @@ New Paul Graham-style essay "The Wrong Question About AI and Jobs" on `/occupati
 ---
 
 ## E. Data Pipeline & Scripts
+
+### Claude Agent SDK Setup
+- Reusable agent module and example scripts set up for programmatic research workflows
+- CJS compatibility fixes (top-level await, dirname resolution)
+- **Commits:** `2d68e366`, `4c10b8a0`
 
 ### Autoresearch Pipeline
 - Research session run on 2026-03-21 — candidates.tsv updated with new entries
