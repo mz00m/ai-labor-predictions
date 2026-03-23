@@ -324,8 +324,6 @@ export default function KarpathyTreemap({
     occ: ScoredKarpathyOccupation;
     category: string;
   } | null>(null);
-  const highlightStartRef = useRef<number>(0);
-  const highlightAnimRef = useRef<number>(0);
 
   const { occRects, catRects } = useMemo(
     () => buildNestedLayout(data, size.w, size.h),
@@ -489,43 +487,35 @@ export default function KarpathyTreemap({
     }
   }, [occRects, catRects, activeDimension, hoveredIdx, size]);
 
-  // Highlight flash animation for impacted occupations
+  // Steady highlight overlay for negatively impacted occupations
   useEffect(() => {
-    if (!highlightedSlugs || highlightedSlugs.size === 0) {
-      cancelAnimationFrame(highlightAnimRef.current);
-      return;
-    }
-
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    highlightStartRef.current = performance.now();
-    const DURATION = 2500; // ms
+    // Remove existing overlay
+    const existing = canvas.parentElement?.querySelector(".highlight-overlay");
+    if (existing) existing.parentElement?.removeChild(existing);
+
+    if (!highlightedSlugs || highlightedSlugs.size === 0) return;
 
     // Build set of rect indices to highlight
-    const highlightIndices = new Set<number>();
+    const highlightIndices: number[] = [];
     for (let i = 0; i < occRects.length; i++) {
       if (highlightedSlugs.has(occRects[i].occ.raw.slug)) {
-        highlightIndices.add(i);
+        highlightIndices.push(i);
       }
     }
-    if (highlightIndices.size === 0) return;
+    if (highlightIndices.length === 0) return;
 
-    // We draw the highlight overlay on a separate overlay canvas
-    // to avoid redrawing the entire treemap each frame
-    let overlayCanvas = canvas.parentElement?.querySelector(
-      ".highlight-overlay"
-    ) as HTMLCanvasElement | null;
-    if (!overlayCanvas) {
-      overlayCanvas = document.createElement("canvas");
-      overlayCanvas.className = "highlight-overlay";
-      overlayCanvas.style.position = "absolute";
-      overlayCanvas.style.top = "0";
-      overlayCanvas.style.left = "0";
-      overlayCanvas.style.pointerEvents = "none";
-      overlayCanvas.style.zIndex = "5";
-      canvas.parentElement?.appendChild(overlayCanvas);
-    }
+    // Draw static highlight on a separate overlay canvas
+    const overlayCanvas = document.createElement("canvas");
+    overlayCanvas.className = "highlight-overlay";
+    overlayCanvas.style.position = "absolute";
+    overlayCanvas.style.top = "0";
+    overlayCanvas.style.left = "0";
+    overlayCanvas.style.pointerEvents = "none";
+    overlayCanvas.style.zIndex = "5";
+    canvas.parentElement?.appendChild(overlayCanvas);
 
     const dpr = window.devicePixelRatio || 1;
     overlayCanvas.width = size.w * dpr;
@@ -533,45 +523,23 @@ export default function KarpathyTreemap({
     overlayCanvas.style.width = `${size.w}px`;
     overlayCanvas.style.height = `${size.h}px`;
 
-    const animate = () => {
-      const elapsed = performance.now() - highlightStartRef.current;
-      const progress = Math.min(1, elapsed / DURATION);
-      const ctx = overlayCanvas!.getContext("2d");
-      if (!ctx) return;
+    const ctx = overlayCanvas.getContext("2d");
+    if (!ctx) return;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      ctx.clearRect(0, 0, size.w, size.h);
+    for (const idx of highlightIndices) {
+      const rect = occRects[idx];
+      // Subtle white border
+      ctx.strokeStyle = "rgba(255, 255, 255, 0.6)";
+      ctx.lineWidth = 2;
+      ctx.strokeRect(rect.x + 0.5, rect.y + 0.5, rect.w - 1, rect.h - 1);
 
-      if (progress >= 1) {
-        // Clean up overlay
-        overlayCanvas!.parentElement?.removeChild(overlayCanvas!);
-        return;
-      }
-
-      // Pulse: starts strong, fades out. Two pulses over the duration.
-      const pulse = Math.sin(progress * Math.PI * 2.5) * (1 - progress);
-      const alpha = Math.max(0, pulse * 0.8);
-
-      for (const idx of Array.from(highlightIndices)) {
-        const rect = occRects[idx];
-        // White glow border
-        ctx.strokeStyle = `rgba(255, 255, 255, ${alpha})`;
-        ctx.lineWidth = 2.5;
-        ctx.strokeRect(rect.x + 0.5, rect.y + 0.5, rect.w - 1, rect.h - 1);
-
-        // Inner fill glow
-        ctx.fillStyle = `rgba(255, 255, 255, ${alpha * 0.15})`;
-        ctx.fillRect(rect.x, rect.y, rect.w, rect.h);
-      }
-
-      highlightAnimRef.current = requestAnimationFrame(animate);
-    };
-
-    highlightAnimRef.current = requestAnimationFrame(animate);
+      // Faint inner glow
+      ctx.fillStyle = "rgba(255, 255, 255, 0.08)";
+      ctx.fillRect(rect.x, rect.y, rect.w, rect.h);
+    }
 
     return () => {
-      cancelAnimationFrame(highlightAnimRef.current);
-      // Clean up overlay canvas
       const overlay = canvas.parentElement?.querySelector(".highlight-overlay");
       if (overlay) overlay.parentElement?.removeChild(overlay);
     };

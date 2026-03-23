@@ -96,7 +96,7 @@ export default function DimensionPanel({
               &ldquo;focus effect.&rdquo;
             </p>
             <p className="text-[11px] text-white/50 leading-[1.6] mb-1.5">
-              Toggling highlights the top 20% most negatively impacted
+              When enabled, highlights the top 20% most negatively impacted
               occupations by workforce size &mdash; jobs where low
               dimensionality increases automation risk for the most workers.
             </p>
