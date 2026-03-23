@@ -96,9 +96,9 @@ export default function DimensionPanel({
               &ldquo;focus effect.&rdquo;
             </p>
             <p className="text-[11px] text-white/50 leading-[1.6] mb-1.5">
-              When enabled, highlights the top 50% most negatively impacted
-              occupations by workforce size &mdash; jobs where low
-              dimensionality increases automation risk for the most workers.
+              When enabled, highlights occupations where dimensionality
+              increases net risk above 3.5 &mdash; the jobs where low task
+              complexity makes automation pressure materially worse.
             </p>
             <a
               href="#methodology-complementarity"

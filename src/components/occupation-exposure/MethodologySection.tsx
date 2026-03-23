@@ -337,9 +337,9 @@ export default function MethodologySection() {
         <p className="text-[11px] text-[var(--muted)] leading-[1.5] mt-2 italic">
           The &ldquo;Dimensionality&rdquo; toggle above the treemap lets you
           turn this adjustment on or off. When enabled, the chart steadily
-          highlights the top 50% most negatively impacted occupations by
-          workforce size &mdash; jobs where low dimensionality increases
-          automation risk for the most workers.
+          highlights occupations where dimensionality increases net risk
+          above 3.5 &mdash; the jobs where low task complexity makes
+          automation pressure materially worse.
           Comparing scores with and without dimensionality shows how much job
           structure (vs. task composition alone) drives the complementarity
           estimate.
