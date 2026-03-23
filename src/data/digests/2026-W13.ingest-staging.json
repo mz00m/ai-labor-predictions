@@ -1,0 +1,158 @@
+{
+  "week": "2026-W13",
+  "generatedAt": "2026-03-23T08:56:20.656Z",
+  "candidates": [
+    {
+      "highlight": {
+        "title": "Automation-Migration Interface: How AI Reshapes Migrant Labour Market Integration",
+        "summary": "A new preprint introduces the concept of the 'Automation-Migration Interface,' arguing that technological change is restructuring the dual labour market in ways that disproportionately expose migrant workers to displacement risk. The study builds on dual labour market theory to show that automation and migration pressures interact, compounding integration challenges for foreign-born workers. This has direct implications for understanding overall workforce displacement patterns across skill and demographic segments. (Grabowska et al., 2026)",
+        "source": "https://doi.org/10.21203/rs.3.rs-9053484/v1",
+        "authors": [
+          "Izabela Grabowska",
+          "Agnieszka Bezat",
+          "Konrad Sowa",
+          "Aleksandra Przegalinska"
+        ],
+        "publishedAt": "2026-03-20",
+        "doi": "10.21203/rs.3.rs-9053484/v1",
+        "score": 0.333,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "overall-us-displacement"
+      },
+      "sourceId": "doi-automationmigration-interface-how-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Replacement vs. Augmentation: Student and Faculty Views on AI's Labor Market Impact",
+        "summary": "A peer-reviewed study surveying Romanian students and faculty finds deeply divided views on whether AI will replace or merely augment human workers, with younger respondents more likely to anticipate augmentation while faculty express greater displacement concern. The research highlights that perceptions of AI's labor market role vary substantially by educational level and domain, with white-collar professional roles seen as most at risk. These attitudes are shaping how institutions prepare graduates for an AI-transformed workforce. (Aivaz, Teodorescu & Radu, 2026)",
+        "source": "https://doi.org/10.3390/systems14030323",
+        "authors": [
+          "Kamer-Ainur Aivaz",
+          "Daniel Teodorescu",
+          "Oana Roxana Radu"
+        ],
+        "publishedAt": "2026-03-18",
+        "doi": "10.3390/systems14030323",
+        "score": 0.318,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "white-collar-professional-displacement"
+      },
+      "sourceId": "doi-replacement-vs-augmentation-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "AI Agents Autonomously Execute High Energy Physics Experiments with Minimal Expert Input",
+        "summary": "Researchers demonstrate that LLM-based AI agents using Claude can autonomously carry out substantial portions of a high-energy physics analysis pipeline—including data processing and result interpretation—with minimal expert-curated guidance. This marks a significant milestone in agentic AI adoption within highly specialized scientific workflows, suggesting accelerating displacement of expert-level technical labor in research settings. The findings raise urgent questions about the future role of domain specialists in AI-augmented scientific environments. (Moreno et al., 2026)",
+        "source": "https://arxiv.org/abs/2603.20179v1",
+        "authors": [
+          "Eric A. Moreno",
+          "Samuel Bright-Thonney",
+          "Andrzej Novak",
+          "Dolores Garcia",
+          "Philip Harris"
+        ],
+        "publishedAt": "2026-03-20",
+        "score": 0.379,
+        "sourceAdapter": "arxiv",
+        "graphSlug": "genai-work-adoption"
+      },
+      "sourceId": "arxiv-ai-agents-autonomously-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Six-Agent AI System Replaces Costly Cybersecurity Risk Assessments for Small Organizations",
+        "summary": "A multi-agent AI architecture is shown to replicate NIST CSF-aligned cybersecurity risk assessments—engagements that typically cost $15,000 and take weeks—at a fraction of the cost and time. Each of the six agents specializes in a distinct assessment domain, collectively matching the output of scarce human practitioners. This case study exemplifies how agentic AI is beginning to automate high-skill, high-cost professional services, with material implications for wage premiums in technical consulting roles. (Gupta et al., 2026)",
+        "source": "https://arxiv.org/abs/2603.20131v1",
+        "authors": [
+          "Ravish Gupta",
+          "Saket Kumar",
+          "Shreeya Sharma",
+          "Maulik Dang",
+          "Abhishek Aggarwal"
+        ],
+        "publishedAt": "2026-03-20",
+        "score": 0.378,
+        "sourceAdapter": "arxiv",
+        "graphSlug": "high-skill-wage-premium"
+      },
+      "sourceId": "arxiv-sixagent-ai-system-2026",
+      "evidenceTier": 1,
+      "extractedStats": [
+        {
+          "graphSlug": "high-skill-wage-premium",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "AI system replicates CISSP expert assessments at $15K+ cost savings",
+          "quote": "Getting a real cybersecurity risk assessment for a small organization is expensive -- a NIST CSF-aligned engagement runs $15,000 on the low end, takes weeks, and depends on practitioners who are genuinely scarce. Most small companies skip it entirely."
+        },
+        {
+          "graphSlug": "white-collar-professional-displacement",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "6-agent AI matches CISSP practitioners 85% on severity classifications",
+          "quote": "the system agreed with them 85% of the time on severity classifications, covered 92% of identified risks, and finished in under 15 minutes"
+        }
+      ]
+    },
+    {
+      "highlight": {
+        "title": "Human-AI Orchestration in Software Delivery: Field Study Across Three Modernization Programs",
+        "summary": "A longitudinal retrospective field study of the Chiron industrial platform examines how coordinating human and AI agents across four software delivery stages impacts team-level productivity and role boundaries in real software modernization programs. The study finds that AI orchestration meaningfully alters task allocation, with some human roles narrowing in scope as agents absorb routine delivery work. This is one of the first team-level (rather than individual task-level) empirical assessments of AI's effects on software engineering labor. (Armesto & Kolb, 2026)",
+        "source": "https://arxiv.org/abs/2603.20028v1",
+        "authors": [
+          "Maximiliano Armesto",
+          "Christophe Kolb"
+        ],
+        "publishedAt": "2026-03-20",
+        "score": 0.526,
+        "sourceAdapter": "arxiv",
+        "graphSlug": "tech-sector-displacement"
+      },
+      "sourceId": "arxiv-humanai-orchestration-in-2026",
+      "evidenceTier": 1,
+      "extractedStats": [
+        {
+          "graphSlug": "tech-sector-displacement",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "Modeled raw effort fell from 1080.0 to 232.5 person-days with AI orchestration",
+          "quote": "modeled raw effort falls from 1080.0 to 232.5 person-days"
+        },
+        {
+          "graphSlug": "tech-sector-displacement",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "Modeled senior-equivalent effort fell from 1080.0 to 139.5 SEE-days with AI",
+          "quote": "modeled senior-equivalent effort falls from 1080.0 to 139.5 SEE-days"
+        },
+        {
+          "graphSlug": "tech-sector-displacement",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "Portfolio delivery time fell from 36.0 to 9.3 summed project-weeks with AI",
+          "quote": "portfolio totals move from 36.0 to 9.3 summed project-weeks"
+        },
+        {
+          "graphSlug": "tech-sector-displacement",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "Validation-stage issues fell from 8.03 to 2.09 per 100 tasks under AI orchestration",
+          "quote": "validation-stage issue load falls from 8.03 to 2.09 issues per 100 tasks"
+        },
+        {
+          "graphSlug": "tech-sector-displacement",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "First-release coverage rose from 77.0% to 90.5% under AI orchestrated workflow",
+          "quote": "first-release coverage rises from 77.0% to 90.5%"
+        }
+      ]
+    }
+  ]
+}
