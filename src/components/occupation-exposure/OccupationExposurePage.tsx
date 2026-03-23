@@ -108,13 +108,13 @@ export default function OccupationExposurePage() {
   const [highlightedSlugs, setHighlightedSlugs] = useState<Set<string>>(new Set());
 
 
-  // Highlight occupations negatively impacted by dimensionality with net risk > 3.5
+  // Highlight occupations negatively impacted by dimensionality with net risk > 4.0
   const impactedSlugs = useMemo(() => {
     const slugs: string[] = [];
     for (let i = 0; i < scoredWithDim.length; i++) {
       const delta =
         scoredWithDim[i].scores.netRisk - scoredWithoutDim[i].scores.netRisk;
-      if (delta > 0.01 && scoredWithDim[i].scores.netRisk > 3.5) {
+      if (delta > 0.01 && scoredWithDim[i].scores.netRisk > 4.0) {
         slugs.push(scoredWithDim[i].raw.slug);
       }
     }
