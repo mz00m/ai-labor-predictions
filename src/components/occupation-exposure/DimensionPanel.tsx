@@ -97,8 +97,8 @@ export default function DimensionPanel({
             </p>
             <p className="text-[11px] text-white/50 leading-[1.6] mb-1.5">
               When enabled, highlights occupations where dimensionality
-              increases net risk above 3.5 &mdash; the jobs where low task
-              complexity makes automation pressure materially worse.
+              increases net risk above 4.0 &mdash; the highest-risk jobs where
+              low task complexity makes automation pressure materially worse.
             </p>
             <a
               href="#methodology-complementarity"

@@ -164,7 +164,7 @@ export function scoreKarpathyOccupations(
         dimSource = "cfo";
         complementarityBase = complementarityFromNEI(cfoData.nei);
         if (socGroup && dimensionalityEnabled) {
-          dimensionalityAdj = effectiveDims <= 2 ? -0.5 : effectiveDims >= 6 ? 0.5 : 0;
+          dimensionalityAdj = effectiveDims <= 3 ? -0.5 : effectiveDims >= 6 ? 0.5 : 0;
         } else {
           dimensionalityAdj = 0;
         }
@@ -182,7 +182,7 @@ export function scoreKarpathyOccupations(
         const ratio = compShare / Math.max(0.1, subShare);
         complementarityBase = Math.max(1, Math.min(9, ratio * 3));
         dimensionalityAdj = dimensionalityEnabled
-          ? (effectiveDims <= 2 ? -1.5 : effectiveDims >= 5 ? 1.0 : 0)
+          ? (effectiveDims <= 3 ? -1.5 : effectiveDims >= 5 ? 1.0 : 0)
           : 0;
         complementarity = Math.max(0, Math.min(10, complementarityBase + dimensionalityAdj));
       } else {

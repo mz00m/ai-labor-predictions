@@ -329,7 +329,7 @@ export default function MethodologySection() {
           share) is used as a structural input to complementarity scoring, not
           as a separate dimension. High-dimensional jobs (&ge;5 clusters)
           receive a complementarity bonus of up to +1.0; low-dimensional jobs
-          (&le;2 clusters) receive a penalty of up to &minus;1.5. For
+          (&le;3 clusters) receive a penalty of up to &minus;1.5. For
           occupations with CFO survey data, the adjustment is milder
           (&plusmn;0.5) since executive sentiment should carry more weight than
           structural heuristics.
@@ -338,7 +338,7 @@ export default function MethodologySection() {
           The &ldquo;Dimensionality&rdquo; toggle above the treemap lets you
           turn this adjustment on or off. When enabled, the chart steadily
           highlights occupations where dimensionality increases net risk
-          above 3.5 &mdash; the jobs where low task complexity makes
+          above 4.0 &mdash; the jobs where low task complexity makes
           automation pressure materially worse.
           Comparing scores with and without dimensionality shows how much job
           structure (vs. task composition alone) drives the complementarity
@@ -390,7 +390,7 @@ export default function MethodologySection() {
         </p>
         <ul className="text-[13px] text-[var(--muted)] leading-[1.75] mb-3 ml-4 list-disc space-y-1">
           <li>
-            <strong>Low-dimensional (&le;2 clusters):</strong> Penalty of &minus;1.5
+            <strong>Low-dimensional (&le;3 clusters):</strong> Penalty of &minus;1.5
             to complementarity. These jobs have few, separable tasks. When AI automates
             one task, there is little remaining work to &ldquo;focus&rdquo; on, and
             firms face strong incentive to automate the rest. Example: a data entry
@@ -398,7 +398,7 @@ export default function MethodologySection() {
             automation risk with little remaining task to anchor the role.
           </li>
           <li>
-            <strong>Mid-dimensional (3&ndash;4 clusters):</strong> No adjustment.
+            <strong>Mid-dimensional (4 clusters):</strong> No adjustment.
             These jobs have moderate task complexity where the effect is ambiguous.
           </li>
           <li>
