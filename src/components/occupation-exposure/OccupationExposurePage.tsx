@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef, useCallback } from "react";
 import Link from "next/link";
 import {
   scoreAllOccupations,
@@ -89,14 +89,49 @@ const DIMENSION_EXPLAINERS: {
 export default function OccupationExposurePage() {
   const [dimensionalityEnabled, setDimensionalityEnabled] = useState(true);
   const scored = useMemo(() => scoreAllOccupations(), []);
-  const scoredKarpathy = useMemo(
-    () => scoreKarpathyOccupations(karpathyData as any, { dimensionalityEnabled }),
-    [dimensionalityEnabled]
+
+  // Pre-compute both scored sets so we can diff on toggle
+  const scoredWithDim = useMemo(
+    () => scoreKarpathyOccupations(karpathyData as any, { dimensionalityEnabled: true }),
+    []
   );
+  const scoredWithoutDim = useMemo(
+    () => scoreKarpathyOccupations(karpathyData as any, { dimensionalityEnabled: false }),
+    []
+  );
+  const scoredKarpathy = dimensionalityEnabled ? scoredWithDim : scoredWithoutDim;
+
   const [activeDimension, setActiveDimension] =
     useState<DimensionKey>("netRisk");
   const [selectedOcc, setSelectedOcc] =
     useState<ScoredKarpathyOccupation | null>(null);
+  const [highlightedSlugs, setHighlightedSlugs] = useState<Set<string>>(new Set());
+  const flashTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  // Compute top 10% most impacted occupations by net risk delta
+  const impactedSlugs = useMemo(() => {
+    const deltas = scoredWithDim.map((occ, i) => ({
+      slug: occ.raw.slug,
+      delta: Math.abs(occ.scores.netRisk - scoredWithoutDim[i].scores.netRisk),
+    }));
+    deltas.sort((a, b) => b.delta - a.delta);
+    const top10pct = Math.max(1, Math.ceil(deltas.length * 0.1));
+    // Only include occupations that actually changed
+    return new Set(
+      deltas.slice(0, top10pct).filter((d) => d.delta > 0.01).map((d) => d.slug)
+    );
+  }, [scoredWithDim, scoredWithoutDim]);
+
+  const handleToggleDimensionality = useCallback(() => {
+    setDimensionalityEnabled((prev: boolean) => !prev);
+    setSelectedOcc(null);
+    // Flash impacted occupations
+    setHighlightedSlugs(impactedSlugs);
+    if (flashTimerRef.current) clearTimeout(flashTimerRef.current);
+    flashTimerRef.current = setTimeout(() => {
+      setHighlightedSlugs(new Set());
+    }, 2500);
+  }, [impactedSlugs]);
 
 
   return (
@@ -195,10 +230,7 @@ export default function OccupationExposurePage() {
               activeDimension={activeDimension}
               onSelect={setActiveDimension}
               dimensionalityEnabled={dimensionalityEnabled}
-              onToggleDimensionality={() => {
-                setDimensionalityEnabled((prev: boolean) => !prev);
-                setSelectedOcc(null); // clear selection since scores change
-              }}
+              onToggleDimensionality={handleToggleDimensionality}
             />
           </div>
 
@@ -207,6 +239,7 @@ export default function OccupationExposurePage() {
             data={scoredKarpathy}
             activeDimension={activeDimension}
             onSelect={setSelectedOcc}
+            highlightedSlugs={highlightedSlugs}
           />
         </div>
 
@@ -301,7 +334,7 @@ export default function OccupationExposurePage() {
                               {dim.effectiveDimensions} dims
                             </span>
                             <span className="text-[9px] text-white/40">
-                              {dim.dimensionalityAdj > 0 ? "+" : ""}{dim.dimensionalityAdj.toFixed(1)} O-Ring adj
+                              {dim.dimensionalityAdj > 0 ? "+" : ""}{dim.dimensionalityAdj.toFixed(1)} dimensionality adj
                             </span>
                           </div>
                         )}
