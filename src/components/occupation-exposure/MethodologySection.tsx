@@ -337,9 +337,9 @@ export default function MethodologySection() {
         <p className="text-[11px] text-[var(--muted)] leading-[1.5] mt-2 italic">
           The &ldquo;Dimensionality&rdquo; toggle above the treemap lets you
           turn this adjustment on or off. When enabled, the chart steadily
-          highlights occupations where dimensionality increases net risk
-          above 3.5 &mdash; the jobs where low task complexity makes
-          automation pressure materially worse.
+          highlights the top 50% most negatively impacted occupations by
+          workforce size &mdash; jobs where low dimensionality increases
+          automation risk for the most workers.
           Comparing scores with and without dimensionality shows how much job
           structure (vs. task composition alone) drives the complementarity
           estimate.
@@ -393,9 +393,9 @@ export default function MethodologySection() {
             <strong>Low-dimensional (&le;2 clusters):</strong> Penalty of &minus;1.5
             to complementarity. These jobs have few, separable tasks. When AI automates
             one task, there is little remaining work to &ldquo;focus&rdquo; on, and
-            firms face strong incentive to automate the rest. Example: a truck driver
-            with one critical task (driving) faces existential risk once that task
-            becomes automatable.
+            firms face strong incentive to automate the rest. Example: a data entry
+            clerk whose work is almost entirely information processing faces full
+            automation risk with little remaining task to anchor the role.
           </li>
           <li>
             <strong>Mid-dimensional (3&ndash;4 clusters):</strong> No adjustment.
@@ -450,6 +450,20 @@ export default function MethodologySection() {
           estimated. Demand elasticity classifications are qualitative
           assessments, not measured parameters. CFO complementarity data covers
           only 8 of 22 groups.
+        </p>
+        <p className="text-[13px] text-[var(--muted)] leading-[1.75] mb-3">
+          The task-composition model assumes gradual, task-by-task automation
+          and does not capture <strong>binary replacement risks</strong> &mdash;
+          cases where a single technological breakthrough could automate the
+          dominant task cluster wholesale. For example, heavy truck drivers
+          score 3 effective dimensions and high complementarity (9.0/10)
+          because 70% of their work is physical-manual, which the model treats
+          as AI-complementary. But autonomous vehicle technology targets
+          &ldquo;driving&rdquo; as a monolithic capability, not a set of
+          separable sub-tasks. If that capability crosses the threshold, the
+          complementarity buffer disappears. Similar binary risks apply to
+          other transportation roles and any occupation where one dominant
+          physical task is the target of a single-purpose automation technology.
         </p>
         <p className="text-[13px] text-[var(--muted)] leading-[1.75]">
           These scores describe structural tendencies, not predictions for

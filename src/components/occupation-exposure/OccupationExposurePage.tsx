@@ -108,18 +108,23 @@ export default function OccupationExposurePage() {
   const [highlightedSlugs, setHighlightedSlugs] = useState<Set<string>>(new Set());
 
 
-  // Highlight occupations negatively impacted by dimensionality with net risk > 3.5
+  // Highlight top 50% most negatively impacted occupations by job count
+  // among those where dimensionality increases net risk
   const impactedSlugs = useMemo(() => {
-    const slugs: string[] = [];
+    const negativelyImpacted: { slug: string; jobs: number }[] = [];
     for (let i = 0; i < scoredWithDim.length; i++) {
       const delta =
         scoredWithDim[i].scores.netRisk - scoredWithoutDim[i].scores.netRisk;
-      // Only include where dimensionality makes risk worse AND net risk exceeds 3.5
-      if (delta > 0.01 && scoredWithDim[i].scores.netRisk > 3.5) {
-        slugs.push(scoredWithDim[i].raw.slug);
+      if (delta > 0.01 && scoredWithDim[i].raw.jobs) {
+        negativelyImpacted.push({
+          slug: scoredWithDim[i].raw.slug,
+          jobs: scoredWithDim[i].raw.jobs!,
+        });
       }
     }
-    return new Set(slugs);
+    negativelyImpacted.sort((a, b) => b.jobs - a.jobs);
+    const top50pct = Math.max(1, Math.ceil(negativelyImpacted.length * 0.5));
+    return new Set(negativelyImpacted.slice(0, top50pct).map((d) => d.slug));
   }, [scoredWithDim, scoredWithoutDim]);
 
   const handleToggleDimensionality = useCallback(() => {
