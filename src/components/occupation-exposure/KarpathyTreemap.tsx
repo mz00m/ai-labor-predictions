@@ -640,13 +640,12 @@ export default function KarpathyTreemap({
             </div>
           </div>
 
-          {/* All 6 dimension mini-bars */}
+          {/* All 5 dimension mini-bars */}
           <div className="border-t border-white/[0.08] pt-2 mt-1 space-y-1">
             {(
               [
                 "technicalExposure",
                 "adoptionSpeed",
-                "jobDimensionality",
                 "adaptability",
                 "demandElasticity",
                 "complementarity",
