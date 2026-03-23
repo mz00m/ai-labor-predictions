@@ -87,7 +87,7 @@ const DIMENSION_EXPLAINERS: {
 ];
 
 export default function OccupationExposurePage() {
-  const [dimensionalityEnabled, setDimensionalityEnabled] = useState(true);
+  const [dimensionalityEnabled, setDimensionalityEnabled] = useState(false);
   const scored = useMemo(() => scoreAllOccupations(), []);
 
   // Pre-compute both scored sets so we can diff on toggle
@@ -106,7 +106,7 @@ export default function OccupationExposurePage() {
   const [selectedOcc, setSelectedOcc] =
     useState<ScoredKarpathyOccupation | null>(null);
   const [highlightedSlugs, setHighlightedSlugs] = useState<Set<string>>(new Set());
-  const flashTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
 
   // Compute top 20% most negatively impacted occupations by total job count
   // among those where dimensionality increases net risk (worse for workers)
@@ -130,14 +130,13 @@ export default function OccupationExposurePage() {
   }, [scoredWithDim, scoredWithoutDim]);
 
   const handleToggleDimensionality = useCallback(() => {
-    setDimensionalityEnabled((prev: boolean) => !prev);
+    setDimensionalityEnabled((prev: boolean) => {
+      const next = !prev;
+      // Show steady highlight when dimensionality is on, clear when off
+      setHighlightedSlugs(next ? impactedSlugs : new Set());
+      return next;
+    });
     setSelectedOcc(null);
-    // Flash impacted occupations
-    setHighlightedSlugs(impactedSlugs);
-    if (flashTimerRef.current) clearTimeout(flashTimerRef.current);
-    flashTimerRef.current = setTimeout(() => {
-      setHighlightedSlugs(new Set());
-    }, 2500);
   }, [impactedSlugs]);
 
 
