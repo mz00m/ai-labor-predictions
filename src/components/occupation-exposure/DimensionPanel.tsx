@@ -89,10 +89,16 @@ export default function DimensionPanel({
         {showTooltip && (
           <div className="absolute bottom-full left-0 mb-2 w-72 bg-[#1a1a24] border border-white/[0.12] rounded-lg px-3 py-2.5 shadow-xl z-30 pointer-events-auto">
             <p className="text-[11px] text-white/70 leading-[1.6] mb-1.5">
-              Jobs with fewer distinct task clusters face stronger firm incentive
-              for full automation. High-dimensional jobs see augmentation via the
-              &ldquo;focus effect.&rdquo; Toggle off to see scores without this
-              adjustment.
+              Adjusts complementarity scores based on job dimensionality &mdash;
+              the number of distinct task clusters (&ge;10% time share). Jobs
+              with fewer clusters face stronger firm incentive for full
+              automation; high-dimensional jobs see augmentation via the
+              &ldquo;focus effect.&rdquo;
+            </p>
+            <p className="text-[11px] text-white/50 leading-[1.6] mb-1.5">
+              Toggling highlights the top 20% of affected occupations by
+              workforce size &mdash; the jobs where this adjustment impacts the
+              most workers.
             </p>
             <a
               href="#methodology-complementarity"

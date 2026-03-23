@@ -108,18 +108,25 @@ export default function OccupationExposurePage() {
   const [highlightedSlugs, setHighlightedSlugs] = useState<Set<string>>(new Set());
   const flashTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  // Compute top 10% most impacted occupations by net risk delta
+  // Compute top 20% most impacted occupations by total job count
+  // among those whose scores actually change with dimensionality
   const impactedSlugs = useMemo(() => {
-    const deltas = scoredWithDim.map((occ, i) => ({
-      slug: occ.raw.slug,
-      delta: Math.abs(occ.scores.netRisk - scoredWithoutDim[i].scores.netRisk),
-    }));
-    deltas.sort((a, b) => b.delta - a.delta);
-    const top10pct = Math.max(1, Math.ceil(deltas.length * 0.1));
-    // Only include occupations that actually changed
-    return new Set(
-      deltas.slice(0, top10pct).filter((d) => d.delta > 0.01).map((d) => d.slug)
-    );
+    const changed: { slug: string; jobs: number }[] = [];
+    for (let i = 0; i < scoredWithDim.length; i++) {
+      const delta = Math.abs(
+        scoredWithDim[i].scores.netRisk - scoredWithoutDim[i].scores.netRisk
+      );
+      if (delta > 0.01 && scoredWithDim[i].raw.jobs) {
+        changed.push({
+          slug: scoredWithDim[i].raw.slug,
+          jobs: scoredWithDim[i].raw.jobs!,
+        });
+      }
+    }
+    // Sort by job count descending, take top 20%
+    changed.sort((a, b) => b.jobs - a.jobs);
+    const top20pct = Math.max(1, Math.ceil(changed.length * 0.2));
+    return new Set(changed.slice(0, top20pct).map((d) => d.slug));
   }, [scoredWithDim, scoredWithoutDim]);
 
   const handleToggleDimensionality = useCallback(() => {
