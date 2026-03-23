@@ -325,10 +325,23 @@ export default function MethodologySection() {
           summary="Synthesizes the O-Ring automation framework for practitioners. A management consultant with high exposure across 7-8 complementary tasks may see wages rise (focus effect). A truck driver with moderate exposure on 1 critical task faces existential risk because firms have enormous incentive to automate driving once it's feasible. Dimensionality determines whether exposure translates to complementarity or substitution."
         />
         <p className="text-[11px] text-[var(--muted)] leading-[1.5] mt-3 italic">
-          Note: Job dimensionality (number of task clusters with &ge;10% time share)
-          is used as a structural input to complementarity scoring, not as a
-          separate dimension. High-dimensional jobs receive a complementarity bonus;
-          low-dimensional jobs receive a penalty.
+          Note: Job dimensionality (number of task clusters with &ge;10% time
+          share) is used as a structural input to complementarity scoring, not
+          as a separate dimension. High-dimensional jobs (&ge;5 clusters)
+          receive a complementarity bonus of up to +1.0; low-dimensional jobs
+          (&le;2 clusters) receive a penalty of up to &minus;1.5. For
+          occupations with CFO survey data, the adjustment is milder
+          (&plusmn;0.5) since executive sentiment should carry more weight than
+          structural heuristics.
+        </p>
+        <p className="text-[11px] text-[var(--muted)] leading-[1.5] mt-2 italic">
+          The &ldquo;Dimensionality&rdquo; toggle above the treemap lets you
+          turn this adjustment on or off. When toggled, the chart briefly
+          highlights the top 20% of affected occupations by workforce size
+          &mdash; the jobs where this adjustment impacts the most workers.
+          Comparing scores with and without dimensionality shows how much job
+          structure (vs. task composition alone) drives the complementarity
+          estimate.
         </p>
       </DimensionResearch>
 
