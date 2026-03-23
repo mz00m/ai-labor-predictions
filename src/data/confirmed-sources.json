@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-23",
-  "totalSources": 460,
-  "verifiedCount": 460,
+  "totalSources": 461,
+  "verifiedCount": 461,
   "sources": {
     "cvl-economics-entertainment-ai-2024": {
       "id": "cvl-economics-entertainment-ai-2024",
@@ -6063,6 +6063,20 @@
       "evidenceTier": 1,
       "datePublished": "2024-01-01",
       "excerpt": "Labor-augmenting AI technologies enable self-employment among high-skilled workers. Workers exposed to labor-augmenting tech more likely to transition to solo self-employment.",
+      "usedIn": [
+        "ai-business-formation"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "a16z-bofa-solopreneur-2026": {
+      "id": "a16z-bofa-solopreneur-2026",
+      "title": "AI-Native Solopreneuring?",
+      "url": "https://a16z.news/subscribe",
+      "publisher": "a16z (citing Bank of America, Haver Analytics)",
+      "evidenceTier": 3,
+      "datePublished": "2026-03-16",
+      "excerpt": "New business applications remain elevated but 'high propensity to hire' applications are in decline. SMBs are rapidly increasing tech spend (including AI) while payroll spend is flat or declining — consistent with AI-native solopreneurs substituting software for labor.",
       "usedIn": [
         "ai-business-formation"
       ],
