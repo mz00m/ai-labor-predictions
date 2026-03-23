@@ -9,7 +9,8 @@
  * 2. Institutional Adoption Speed — how fast WILL the sector adopt? (Acemoglu & Restrepo, Brynjolfsson)
  * 3. Worker Adaptability — can displaced workers transition? (Manning & Aguirre NBER w34705)
  * 4. Demand Elasticity — does cheaper output create more demand? (Bessen 2019, Jevons Paradox)
- * 5. Complementarity — does AI replace or enhance? (Baslandze et al. 2026 CFO Survey)
+ * 5. Complementarity — does AI replace or enhance? (Baslandze et al. 2026 CFO Survey,
+ *    informed by job dimensionality per Gans & Goldfarb 2024 O-Ring Automation)
  *
  * The first two are "pressure" dimensions (drive displacement up).
  * The last three are "absorption" dimensions (soften displacement).
@@ -71,8 +72,28 @@ function complementarityFromNEI(nei: number): number {
 }
 
 /**
+ * Count effective task dimensions for an occupation group.
+ * "Effective dimensions" = task categories with >= 10% time share.
+ *
+ * This captures the O-Ring insight from Gans & Goldfarb (2024): jobs with
+ * more complementary task clusters are more likely to see augmentation
+ * (the "focus effect") rather than replacement.
+ */
+export function getEffectiveDimensions(group: OccupationGroup): number {
+  return Object.values(group.taskComposition)
+    .filter((share) => share >= 0.10).length;
+}
+
+/**
  * Estimate complementarity for groups without CFO survey data,
- * based on task composition heuristics.
+ * incorporating both task composition heuristics and job dimensionality.
+ *
+ * Job dimensionality (Gans & Goldfarb 2024, "O-Ring Automation") is the
+ * structural mechanism behind complementarity: high-dimensional jobs with
+ * many complementary task clusters see augmentation via the "focus effect"
+ * (automating some tasks lets workers concentrate on remaining ones,
+ * multiplying quality). Low-dimensional jobs face stronger firm incentive
+ * to fully automate since eliminating the last task removes the position.
  */
 function estimateComplementarity(group: OccupationGroup): number {
   const tc = group.taskComposition;
@@ -81,8 +102,32 @@ function estimateComplementarity(group: OccupationGroup): number {
   const complementaryShare = tc["interpersonal"] + tc["physical-manual"] +
     tc["coordination-management"] * 0.5 + tc["analysis-decision"] * 0.3;
   const substitutionShare = tc["information-processing"] + tc["communication"] * 0.5;
-  const ratio = complementaryShare / Math.max(0.1, substitutionShare);
-  return Math.max(1, Math.min(9, ratio * 3));
+  const taskRatio = complementaryShare / Math.max(0.1, substitutionShare);
+  const taskScore = Math.max(1, Math.min(9, taskRatio * 3));
+
+  // Dimensionality bonus: more effective task dimensions → stronger focus effect
+  // → higher complementarity. This is the O-Ring mechanism.
+  const effectiveDims = getEffectiveDimensions(group);
+  // 1-2 dims: -1.5 penalty, 3-4: no change, 5+: +1.0 bonus
+  const dimAdjustment = effectiveDims <= 2 ? -1.5 : effectiveDims >= 5 ? 1.0 : 0;
+
+  return Math.max(0, Math.min(10, taskScore + dimAdjustment));
+}
+
+/**
+ * Apply dimensionality adjustment to CFO-based complementarity scores.
+ * Even with real CFO data, job structure modulates the score:
+ * low-dimensional jobs are structurally more substitutable regardless
+ * of current CFO sentiment.
+ */
+function adjustComplementarityForDimensionality(
+  cfoScore: number,
+  group: OccupationGroup
+): number {
+  const effectiveDims = getEffectiveDimensions(group);
+  // Mild adjustment: ±0.5 for extreme dimensionality
+  const dimAdjustment = effectiveDims <= 2 ? -0.5 : effectiveDims >= 6 ? 0.5 : 0;
+  return Math.max(0, Math.min(10, cfoScore + dimAdjustment));
 }
 
 /** Weights for the composite score */
@@ -112,10 +157,11 @@ export function scoreOccupation(group: OccupationGroup): ScoredOccupation {
     ? ELASTICITY_SCORES[elasticityData.elasticity]
     : 5;
 
-  // 5. Complementarity (0-10)
+  // 5. Complementarity (0-10), informed by job dimensionality
   const cfoData = CFO_SURVEY_NEI[group.id];
+  const effectiveDims = getEffectiveDimensions(group);
   const complementarity = cfoData
-    ? complementarityFromNEI(cfoData.nei)
+    ? adjustComplementarityForDimensionality(complementarityFromNEI(cfoData.nei), group)
     : estimateComplementarity(group);
 
   // Composite: pressure - absorption, each normalized to 0-10 independently
@@ -133,6 +179,12 @@ export function scoreOccupation(group: OccupationGroup): ScoredOccupation {
   // Scale to 0-10: 5.0 when pressure = absorption, 0 when fully absorbed, 10 when fully exposed
   const netRisk = Math.max(0, Math.min(10, (pressureNorm - absorptionNorm + 10) / 2));
 
+  const dimContext = effectiveDims <= 2
+    ? ` Job has only ${effectiveDims} effective task dimension${effectiveDims === 1 ? "" : "s"} — low-dimensional, strong firm incentive to fully automate (O-Ring risk).`
+    : effectiveDims >= 5
+      ? ` Job has ${effectiveDims} effective task dimensions — high-dimensional, partial automation likely augments workers (O-Ring focus effect).`
+      : "";
+
   const rationales: Record<keyof DimensionScores, string> = {
     technicalExposure: exposureData
       ? `GPT-scored mean ${exposureData.mean.toFixed(1)}/10 across ${exposureData.count} occupations (range: ${exposureData.min}-${exposureData.max})`
@@ -140,9 +192,9 @@ export function scoreOccupation(group: OccupationGroup): ScoredOccupation {
     adoptionSpeed: `Industry speed multiplier: ${speedMultiplier.toFixed(2)}x (${speedMultiplier < 1 ? "faster" : speedMultiplier > 1 ? "slower" : "baseline"} than average)`,
     adaptability: `Manning & Aguirre composite: ${group.adaptiveCapacity.toFixed(2)} (wealth: ${group.adaptiveCapacityComponents.netLiquidWealth.toFixed(2)}, skills: ${group.adaptiveCapacityComponents.skillTransferability.toFixed(2)})`,
     demandElasticity: elasticityData?.rationale ?? "No elasticity data available",
-    complementarity: cfoData
+    complementarity: (cfoData
       ? `CFO survey NEI: ${cfoData.nei.toFixed(2)} (${cfoData.label})`
-      : "Estimated from task composition (no CFO survey data)",
+      : "Estimated from task composition (no CFO survey data)") + dimContext,
     netRisk: `Composite of 5 dimensions, weighted: exposure (${(WEIGHTS.technicalExposure * 100).toFixed(0)}%), speed (${(WEIGHTS.adoptionSpeed * 100).toFixed(0)}%), adaptability (${(WEIGHTS.adaptability * 100).toFixed(0)}%), elasticity (${(WEIGHTS.demandElasticity * 100).toFixed(0)}%), complementarity (${(WEIGHTS.complementarity * 100).toFixed(0)}%)`,
   };
 
@@ -219,9 +271,9 @@ export const DIMENSION_META: Record<
     label: "AI Complementarity",
     shortLabel: "Complement",
     description:
-      "Is AI primarily enhancing workers in this occupation or replacing them? Based on CFO survey data where available, estimated from task composition otherwise.",
+      "Is AI primarily enhancing workers in this occupation or replacing them? Based on CFO survey data where available, estimated from task composition and job dimensionality otherwise. Jobs with more distinct task clusters (high dimensionality) tend toward augmentation via the O-Ring \"focus effect\" — automating some tasks lets workers concentrate on remaining ones, multiplying output quality.",
     source:
-      "Baslandze et al. (2026) CFO Survey; Autor (2024) new-tasks framework",
+      "Baslandze et al. (2026) CFO Survey; Gans & Goldfarb (2024) O-Ring Automation; Autor (2024) new-tasks framework",
     colorScale: ["#FEE2E2", "#16A34A"],
     isPressure: false,
   },

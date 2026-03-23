@@ -266,7 +266,7 @@ export default function MethodologySection() {
       <DimensionResearch
         id="methodology-complementarity"
         title="Dimension 5: AI Complementarity"
-        why="The same technology can be used to replace workers or to make them more productive. Whether AI is deployed as a substitute or complement depends on management decisions, task structure, and organizational incentives — not just technical capability."
+        why="The same technology can be used to replace workers or to make them more productive. Whether AI is deployed as a substitute or complement depends on management decisions, task structure, and organizational incentives — not just technical capability. Job dimensionality (the number of distinct task clusters) is a key structural input: high-dimensional jobs trigger a 'focus effect' that raises wages, while low-dimensional jobs face stronger firm incentive for full automation."
       >
         <Study
           title="Artificial Intelligence, Productivity, and the Workforce: Evidence from Corporate Executives"
@@ -303,6 +303,33 @@ export default function MethodologySection() {
           url="https://www.aeaweb.org/articles?id=10.1257/jep.33.2.31"
           summary="Decomposes decisions into prediction (what AI automates) and judgment (what humans provide). When AI improves prediction, the value of human judgment increases — making the two complementary rather than substitutive. Jobs heavy in judgment (management, medicine) benefit most from AI prediction improvements."
         />
+        <Study
+          title="O-Ring Automation"
+          authors="Gans, Goldfarb"
+          year="2024"
+          url="https://www.nber.org/papers/w33886"
+          summary="Applies Kremer's O-Ring production function to AI automation. In high-dimensional jobs (many complementary tasks), automating some tasks frees workers to concentrate on remaining ones — the 'focus effect' raises quality and wages. In low-dimensional jobs, partial automation doesn't free the worker for much else, and firms have stronger incentive to invest in automating the remaining tasks. Job dimensionality is the structural mechanism that determines whether AI complements or substitutes."
+        />
+        <Study
+          title="The O-Ring Theory of Economic Development"
+          authors="Kremer"
+          year="1993"
+          url="https://academic.oup.com/qje/article-abstract/108/3/551/1881852"
+          summary="The foundational insight behind the dimensionality mechanism: if production requires many steps and each step needs to be done well, productivity is multiplicative in skill. In multi-task roles, automating one task well compounds through all remaining tasks — a structural argument for why high-dimensional jobs see augmentation rather than replacement."
+        />
+        <Study
+          title="How Will AI-driven Automation Actually Affect Jobs?"
+          authors="Imas, Shukla"
+          year="2026"
+          url="https://aleximas.substack.com/p/how-will-ai-driven-automation-actually"
+          summary="Synthesizes the O-Ring automation framework for practitioners. A management consultant with high exposure across 7-8 complementary tasks may see wages rise (focus effect). A truck driver with moderate exposure on 1 critical task faces existential risk because firms have enormous incentive to automate driving once it's feasible. Dimensionality determines whether exposure translates to complementarity or substitution."
+        />
+        <p className="text-[11px] text-[var(--muted)] leading-[1.5] mt-3 italic">
+          Note: Job dimensionality (number of task clusters with &ge;10% time share)
+          is used as a structural input to complementarity scoring, not as a
+          separate dimension. High-dimensional jobs receive a complementarity bonus;
+          low-dimensional jobs receive a penalty.
+        </p>
       </DimensionResearch>
 
       {/* ── Composite Score ── */}
@@ -314,21 +341,22 @@ export default function MethodologySection() {
         <p className="text-[13px] text-[var(--muted)] leading-[1.75] mb-3">
           The net displacement risk score combines the five dimensions with the
           following weights: Technical Exposure (30%), Adoption Speed (20%),
-          Worker Adaptability (15%), Demand Elasticity (20%), Complementarity
-          (15%).
+          Worker Adaptability (15%), Demand Elasticity (20%),
+          Complementarity (15%).
         </p>
         <p className="text-[13px] text-[var(--muted)] leading-[1.75] mb-3">
-          Exposure and adoption speed are &ldquo;pressure&rdquo; factors that
-          drive displacement up. Adaptability, elasticity, and complementarity
-          are &ldquo;buffer&rdquo; factors that moderate it. Each side is
+          Exposure and adoption speed are
+          &ldquo;pressure&rdquo; factors that drive displacement up.
+          Adaptability, elasticity, and complementarity are
+          &ldquo;buffer&rdquo; factors that moderate it. Each side is
           normalized to 0&ndash;10 independently before combining: Pressure =
-          weighted average of Exposure and Speed (0&ndash;10); Absorption =
-          weighted average of Adaptability, Elasticity, and Complementarity
-          (0&ndash;10). Net Risk = (Pressure &minus; Absorption + 10) / 2,
-          clamped to 0&ndash;10. This ensures defensive factors can fully
-          counterbalance pressure &mdash; an occupation with maximum exposure
-          but equally strong adaptability, demand elasticity, and
-          complementarity scores 5.0 (neutral), not 10.
+          weighted average of Exposure and Speed
+          (0&ndash;10); Absorption = weighted average of Adaptability,
+          Elasticity, and Complementarity (0&ndash;10). Net Risk = (Pressure
+          &minus; Absorption + 10) / 2, clamped to 0&ndash;10. This ensures
+          defensive factors can fully counterbalance pressure &mdash; an
+          occupation with maximum exposure but equally strong adaptability,
+          demand elasticity, and complementarity scores 5.0 (neutral), not 10.
         </p>
         <p className="text-[13px] text-[var(--muted)] leading-[1.75]">
           The weighting is intentionally simple and transparent. Reasonable

@@ -89,6 +89,28 @@ export default function FocusRecommendations({
         </div>
       </div>
 
+      {/* O-Ring Focus Effect */}
+      {atRisk.length > 0 && invest.length > 0 && (
+        <div className="rounded-lg border border-[#6366F1]/20 bg-[#6366F1]/[0.04] p-3.5">
+          <h4 className="text-[12px] font-semibold text-[#6366F1] mb-1.5">
+            Focus Effect (O-Ring Theory)
+          </h4>
+          <p className="text-[12px] text-[var(--muted)] leading-relaxed mb-2">
+            If AI handles{" "}
+            {atRisk.map((a) => a.task.name).join(", ")},{" "}
+            you can reallocate ~{Math.round(atRisk.reduce((s: number, a: AnalyzedTask) => s + a.share * 40, 0))} hrs/week
+            to{" "}
+            {invest.slice(0, 3).map((a) => a.task.name).join(", ")}
+            {invest.length > 3 ? ", etc." : ""}.
+            In complementary-task jobs, concentrated effort on fewer tasks multiplies output quality &mdash;
+            you become more valuable, not less.
+          </p>
+          <p className="text-[10px] text-[var(--muted)] opacity-60">
+            Gans &amp; Goldfarb (2024), &ldquo;O-Ring Automation&rdquo;; Kremer (1993)
+          </p>
+        </div>
+      )}
+
       {/* At risk */}
       {atRisk.length > 0 && (
         <div>

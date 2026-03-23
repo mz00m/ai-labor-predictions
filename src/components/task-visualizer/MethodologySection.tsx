@@ -609,7 +609,37 @@ export default function MethodologySection() {
                 Manning &amp; Aguirre (2026): &quot;How Adaptable Are American Workers to AI-Induced Job Displacement?&quot; — adaptive capacity index for 356 occupations (NBER w34705)
               </a>
             </li>
+            <li>
+              <a href="https://www.nber.org/papers/w33886" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">
+                Gans &amp; Goldfarb (2024): &quot;O-Ring Automation&quot; — multiplicative task structure and firm incentive to fully automate low-dimensional jobs
+              </a>
+            </li>
+            <li>
+              <a href="https://aleximas.substack.com/p/how-will-ai-driven-automation-actually" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">
+                Imas &amp; Shukla (2026): &quot;Ghosts of Electricity&quot; — practical implications of O-Ring automation for trucking, warehousing, and knowledge work
+              </a>
+            </li>
           </ul>
+        </div>
+
+        {/* O-Ring framework caveat */}
+        <div className="rounded-xl border border-[#F59E0B]/20 bg-[#F59E0B]/[0.04] p-5">
+          <h4 className="text-[13px] font-bold text-[#D97706] uppercase tracking-wide mb-2">
+            Important Modeling Caveat
+          </h4>
+          <p className="text-[13px] text-[var(--muted)] leading-relaxed">
+            This tool evaluates each task independently — when task A crosses cost parity, it has no
+            effect on task B. In reality, most jobs have complementary tasks where the{" "}
+            <a href="https://www.nber.org/papers/w33886" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">
+              O-Ring production function
+            </a>{" "}
+            applies: automating some tasks lets workers concentrate on remaining ones, multiplying
+            quality across the whole job. The <strong className="text-[var(--foreground)]">dimensionality score</strong> and{" "}
+            <strong className="text-[var(--foreground)]">phase transition warning</strong> above are corrections
+            for this — they flag when a job&apos;s structure makes the additive model misleading. But the
+            underlying cost-crossover calculation remains separable. A fully multiplicative model is a
+            direction for future work.
+          </p>
         </div>
       </div>
     </div>

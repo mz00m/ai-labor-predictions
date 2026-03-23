@@ -3,6 +3,10 @@
  *
  * Each occupation inherits dimension scores from its parent SOC major group,
  * with the exposure dimension using Karpathy's per-occupation GPT score (0-10).
+ *
+ * Complementarity is informed by job dimensionality (Gans & Goldfarb 2024):
+ * jobs with more distinct task clusters tend toward augmentation, while
+ * low-dimensional jobs face stronger firm incentive for full automation.
  */
 
 import { DIMENSION_META, type DimensionKey } from "./composite-risk";
@@ -138,11 +142,21 @@ export function scoreKarpathyOccupations(
         ? ELASTICITY_SCORES[elasticityData.elasticity]
         : 5;
 
-      // 5. Complementarity: from CFO survey or task composition estimate
+      // 5. Complementarity: from CFO survey or task composition estimate,
+      //    informed by job dimensionality (O-Ring model)
       const cfoData = CFO_SURVEY_NEI[socGroupId];
       let complementarity: number;
       if (cfoData) {
-        complementarity = complementarityFromNEI(cfoData.nei);
+        const baseCfoScore = complementarityFromNEI(cfoData.nei);
+        // Mild dimensionality adjustment to CFO-based scores
+        if (socGroup) {
+          const effectiveDims = Object.values(socGroup.taskComposition)
+            .filter((share) => share >= 0.10).length;
+          const dimAdj = effectiveDims <= 2 ? -0.5 : effectiveDims >= 6 ? 0.5 : 0;
+          complementarity = Math.max(0, Math.min(10, baseCfoScore + dimAdj));
+        } else {
+          complementarity = baseCfoScore;
+        }
       } else if (socGroup) {
         const tc = socGroup.taskComposition;
         const compShare =
@@ -153,7 +167,12 @@ export function scoreKarpathyOccupations(
         const subShare =
           tc["information-processing"] + tc["communication"] * 0.5;
         const ratio = compShare / Math.max(0.1, subShare);
-        complementarity = Math.max(1, Math.min(9, ratio * 3));
+        const taskScore = Math.max(1, Math.min(9, ratio * 3));
+        // Dimensionality bonus/penalty (O-Ring mechanism)
+        const effectiveDims = Object.values(tc)
+          .filter((share) => share >= 0.10).length;
+        const dimAdj = effectiveDims <= 2 ? -1.5 : effectiveDims >= 5 ? 1.0 : 0;
+        complementarity = Math.max(0, Math.min(10, taskScore + dimAdj));
       } else {
         complementarity = 5;
       }

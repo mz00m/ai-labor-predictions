@@ -125,6 +125,15 @@ export default function ComparisonTable({ data }: Props) {
         lower than exposure suggests (absorption factors help). {"\u2191"} = net
         risk is higher (institutional factors add pressure).
       </p>
+      <p className="text-[10px] text-[var(--muted)] mt-1.5 leading-relaxed">
+        Job dimensionality explains many of the largest shifts. High-dimensional
+        occupations (management, consulting) rank lower in net risk than exposure
+        suggests because partial automation triggers the O-Ring &ldquo;focus
+        effect&rdquo; &mdash; workers concentrate on fewer tasks, raising quality
+        on each. Low-dimensional occupations (transportation, production) rank
+        higher because firms have stronger incentive to fully automate when few
+        tasks remain.
+      </p>
     </div>
   );
 }

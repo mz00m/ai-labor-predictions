@@ -25,7 +25,7 @@ export default function FiveVariablesEssay() {
         </p>
 
         <p>
-          What actually determines whether AI displaces you at work looks a lot more like five specific and easy to undestand factors. Two of them push toward job loss or displacement. Three push against it. And
+          What actually determines whether AI displaces you at work looks a lot more like five specific and easy to understand factors. Two of them push toward job loss or displacement. Three push against it. And
           the three that push against it are, actually quite a bit more interesting.
           Partly because they&rsquo;re less obvious, and partly because
           they&rsquo;re the ones you can actually do something about.
