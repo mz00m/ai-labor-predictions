@@ -1,0 +1,14 @@
+{
+  "id": "garicano-li-wu-bundle-strength-2026",
+  "abstract": "This paper studies how AI's effect on an occupation depends not just on which tasks AI can perform but on how costly it is to unbundle those tasks from the job. The authors build a two-task model where AI can either assist one task inside a bundled job or supply that task autonomously while a human supplies the residual task. In weak-bundle occupations, AI automates tasks and narrows the job boundary (standard task-substitution). In strong-bundle occupations where tasks are not independently reallocable, AI improves performance inside the job but does not remove the human from the bundle. Bundling thus provides a force that protects jobs and the labor share.",
+  "keyFindings": [
+    "Workers keep a larger share of revenue in bundled production than in unbundled production, because human work contributes to both tasks in the bundle but only to one task outside it",
+    "AI pushes the frontier toward unbundled jobs; better AI capability raises the sorting cutoff, shifting more workers into unbundling",
+    "Unbundling produces a discrete capacity shock: workers who previously split time across two tasks now devote everything to the residual task, and with inelastic demand the resulting output flood depresses prices enough to displace the least-productive workers",
+    "Strong bundles protect labor: AI raises performance on the codifiable task but the task remains inside the bundle, so the worker keeps a larger revenue share and the capacity shock is mitigated",
+    "In the model calibration, weak-bundle occupations see ~7% employment decline and ~12% labor income decline, while strong-bundle occupations see employment essentially unchanged and <4% labor income decline"
+  ],
+  "methodology": "Theoretical two-task competitive equilibrium model with Cobb-Douglas production. Workers are heterogeneous in two skill dimensions. Production can be bundled (one human does both tasks with AI assistance) or unbundled (AI supplies task 1 autonomously, human supplies only task 2). Closed with inelastic demand. Calibrated with uniform skill distribution on [0.2, 1]^2, alpha=0.50, eta=0.75-0.85. No empirical estimation; quantitative results are from model simulations.",
+  "qualifiers": "This is a purely theoretical paper. All quantitative results (7% employment decline, 12% labor income decline) are from model calibrations with specific parameter assumptions, not empirical estimates. The coordination cost parameter c is reduced-form and not directly measured. The model uses a stylized two-task structure; real occupations bundle many tasks. The authors note that measuring coordination costs empirically is a key open question.",
+  "fetchedAt": "2026-03-24"
+}
