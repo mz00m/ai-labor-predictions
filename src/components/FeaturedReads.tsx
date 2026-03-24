@@ -10,6 +10,15 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Anthropic",
+    title: "Anthropic Economic Index: Learning Curves",
+    summary:
+      "49% of jobs have 25%+ of tasks done via Claude. High-tenure users show 10% higher success rates. Coding migrates to automated API workflows. Skill-biased adoption may already be deepening labor market inequality.",
+    date: "Mar 24",
+    url: "https://www.anthropic.com/research/economic-index-march-2026-report",
+    accent: "border-l-blue-500",
+  },
+  {
     author: "Imas, Shukla (Chicago Booth)",
     title: "How Will AI-driven Automation Actually Affect Jobs?",
     summary:
@@ -44,15 +53,6 @@ const articles: Article[] = [
     date: "Mar 18",
     url: "https://sahajgarg.github.io/blog/cognitive-labor/",
     accent: "border-l-amber-500",
-  },
-  {
-    author: "Anthropic",
-    title: "81,000 People Told Us How They Use AI",
-    summary:
-      "Anthropic invited Claude users to share how they use AI, what they dream it could make possible, and what they fear it might do. Nearly 81,000 people responded in one week\u2014the largest qualitative study of its kind.",
-    date: "Mar 18",
-    url: "https://www.anthropic.com/features/81k-interviews",
-    accent: "border-l-violet-500",
   },
 ];
 

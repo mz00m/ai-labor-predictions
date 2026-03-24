@@ -344,6 +344,15 @@
       ],
       "evidenceTier": 2,
       "label": "MGI: Advanced AI agents could eventually handle 80-90% of customer inquiries"
+    },
+    {
+      "date": "2026-03-24",
+      "direction": "up",
+      "sourceIds": [
+        "anthropic-economic-index-learning-curves-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Anthropic: CS rep tasks prevalent in automated API workflows"
     }
   ],
   "sources": [
@@ -632,6 +641,16 @@
       "datePublished": "2025-11-25",
       "excerpt": "Together, these now handle roughly 40 percent of all calls, resolving more than 80 percent without human involvement. The new process has cut the average cost per call by about 50 percent. Advanced AI agents could eventually handle 80 to 90 percent of customer inquiries.",
       "dateAdded": "2026-03-23"
+    },
+    {
+      "id": "anthropic-economic-index-learning-curves-2026",
+      "title": "Anthropic Economic Index report: Learning curves",
+      "url": "https://www.anthropic.com/research/economic-index-march-2026-report",
+      "publisher": "Anthropic (Massenkoff, Lyubich, McCrory, Appel, Heller)",
+      "evidenceTier": 2,
+      "datePublished": "2026-03-24",
+      "excerpt": "customer service tasks, including, for example, automated support for payment and billing issues, are prevalent in the API data. These contributed to a higher observed exposure for Customer Service Representatives\u2014Claude was recorded doing a high share of their tasks in automated workflows, so these jobs may be more likely to change as AI diffuses.",
+      "dateAdded": "2026-03-24"
     }
   ]
 }
