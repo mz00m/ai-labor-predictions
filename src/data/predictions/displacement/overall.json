@@ -1156,6 +1156,15 @@
       ],
       "evidenceTier": 1,
       "label": "NBER (Gans/Goldfarb): O-ring model -- automating one task changes the return to automating all others"
+    },
+    {
+      "date": "2026-03-23",
+      "direction": "neutral",
+      "sourceIds": [
+        "garicano-li-wu-bundle-strength-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Garicano, Li & Wu: Strong task bundles protect jobs; displacement only in weak-bundle occupations"
     }
   ],
   "sources": [
@@ -2097,6 +2106,16 @@
       "datePublished": "2026-01-01",
       "excerpt": "Task-by-task substitution logic is incomplete because automating one task changes the return to automating others. Automation decisions are discrete and can require bundled adoption even when automation quality improves smoothly.",
       "dateAdded": "2026-03-23"
+    },
+    {
+      "id": "garicano-li-wu-bundle-strength-2026",
+      "title": "Weak Bundle, Strong Bundle: How AI Redraws Job Boundaries",
+      "url": "https://www.dropbox.com/scl/fo/689u1g785x8jp6c8v1s21/AKxZ_N15vUxMA3PBtpbr5nM?rlkey=ottgcu71u1t4mhn6tblvatu8w&e=1&st=dj6k0x2o&dl=0",
+      "publisher": "Garicano, Li & Wu (LSE / University of Hong Kong)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-23",
+      "excerpt": "In weak-bundle occupations, AI automates some tasks and narrows the boundary of the job, leading to the standard task-substitution channel. In strong-bundle occupations where tasks are not independently reallocable, AI improves performance inside the job, but does not remove the human from the bundle.",
+      "dateAdded": "2026-03-24"
     }
   ]
 }
