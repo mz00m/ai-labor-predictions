@@ -1,0 +1,14 @@
+{
+  "id": "agrawal-augmentation-task-model-2026",
+  "abstract": "This paper develops two related task-based models in which AI enhances worker productivity without automating tasks, challenging the dominant framework that emphasizes replacement of human workers by machines. Motivated by growing empirical evidence that contemporary AI is more often used as a tool that augments workers, the authors show that aggregate productivity and wage inequality depend on different global properties of the equilibrium distribution of workers across tasks. Productivity is particularly sensitive to thinly staffed tasks that create bottlenecks, while wage inequality is driven by the concentration of workers in a narrow set of tasks.",
+  "keyFindings": [
+    "AI improvements can induce non-monotonic co-movement between productivity and inequality: productivity can rise while inequality sometimes rises and sometimes falls depending on the distribution of workers across tasks.",
+    "Aggregate productivity is particularly sensitive to thinly staffed tasks that create bottlenecks in production, meaning AI tools that help workers perform a wider range of tasks can have outsized productivity effects.",
+    "Wage inequality is driven by the concentration of workers in a narrow set of tasks rather than by the productivity of top performers, suggesting inequality effects depend on how AI reshapes task allocation.",
+    "In the first model, AI use requires specialized expertise and technological progress expands the set of tasks for which such expertise is effective, creating returns to AI-specific human capital.",
+    "In the second model, AI tools alter the set of tasks workers can perform given their non-AI skills, and workers allocate across tasks in response to wages, generating an endogenous distribution of skills across the task space."
+  ],
+  "methodology": "Theoretical task-based modeling building on the Acemoglu-Restrepo framework. Two formal models: (1) AI-expertise model where technological progress expands tasks amenable to AI-augmented expertise; (2) non-AI skills model where AI tools change the feasible task set for workers given their existing skills. Both models abstract from capital and derive equilibrium properties analytically. No empirical estimation or calibration to data.",
+  "qualifiers": "This is a purely theoretical paper with no empirical estimates or quantitative predictions. The models abstract from capital and focus on the labor side. Results depend on specific assumptions about task structure and human capital complementarity. The non-monotonic co-movement result means the direction of inequality effects cannot be predicted without knowing the specific distribution of workers across tasks. The paper does not provide specific numerical estimates of displacement, wage changes, or productivity gains.",
+  "fetchedAt": "2026-03-24"
+}
