@@ -77,6 +77,20 @@
       "dataType": "observed"
     },
     {
+      "date": "2026-03-13",
+      "value": -2.2,
+      "confidenceLow": -3,
+      "confidenceHigh": -1,
+      "sourceIds": [
+        "fed-atl-duke-cfo-ai-productivity-2026"
+      ],
+      "evidenceTier": 1,
+      "metricType": "survey",
+      "sampleSize": 748,
+      "note": "All workers, routine clerical share expected to decline 2.19pp by 2028; skilled-technical up 1.35pp",
+      "dataType": "projected"
+    },
+    {
       "date": "2026-03-16",
       "value": -5.5,
       "confidenceLow": -7,
