@@ -1,164 +1,283 @@
+---
+name: source-ingestion
+description: >
+  Ingest research sources (papers, reports, articles, blog posts) into the
+  jobsdata.ai AI Labor Predictions tracker. Extracts quantitative statistics
+  about AI's impact on jobs, wages, and workforce, maps them to prediction
+  graphs, and writes structured entries to the project's data files. Use this
+  skill whenever the user says "ingest", "add source", "add this to jobsdata",
+  "add this paper/article/report", shares a URL or PDF about AI labor impact,
+  or references updating the prediction tracker data. Also trigger when the
+  user pastes article text and asks to extract labor market statistics from it,
+  or when they mention updating the graphs, adding a data point, or processing
+  a new source for the site.
+---
+
 # Source Ingestion Skill
 
-You are ingesting a research source into the AI Labor Predictions tracker. Your job is to extract ALL quantitative statistics from the source, map each to the correct prediction graph, and write properly formatted entries to the data files.
+Ingest a research source into the jobsdata.ai AI Labor Predictions tracker. The goal is to extract every quantitative statistic from the source, map each to the correct prediction graph, and write properly formatted entries to the data files — with the user confirming each mapping before any file is changed.
 
 ## Input
 
-The user has provided the following source to ingest:
+The user provides a source in one of these forms:
 
-$ARGUMENTS
+* **URL** — a link to a research paper, report, blog post, or news article
+* **Pasted text** — the content of an article or excerpt copied into the chat
+* **Local file** — a reference to a file (PDF, .txt, .md) already on disk
 
-## Step-by-Step Process
+The input is passed via: $ARGUMENTS
 
-### Step 1: Fetch the Source Content
+## Ingestion Workflow
 
-- If the input is a URL, use `WebFetch` to retrieve the page content
-- If the input is pasted text, use it directly
-- If the input references a local file, use `Read` to load it
+Work through these steps in order. Do not skip steps or combine them without the user's explicit permission.
 
-### Step 2: Load the Prediction Graph Registry
+### Step 1: Fetch and Read the Source
 
-Read all 17 prediction JSON files to understand the available graphs. Here is the complete registry for reference:
+Retrieve the source content based on the input type:
 
-**Displacement Graphs:**
-- `overall-us-displacement` — "Projected US Job Displacement from AI by 2030" — unit: "% of US jobs"
-- `white-collar-professional-displacement` — "White-Collar Professional Displacement by 2030" — unit: "% of roles displaced"
-- `tech-sector-displacement` — "Tech Sector Job Displacement by 2030" — unit: "% of jobs displaced"
-- `creative-industry-displacement` — "Creative Industry Displacement by 2030" — unit: "% of roles displaced"
-- `education-sector-displacement` — "Education Sector Displacement by 2030" — unit: "% of roles displaced"
-- `healthcare-admin-displacement` — "Healthcare Administrative Displacement by 2030" — unit: "% of roles displaced"
-- `financial-services-displacement` — "Financial Services Displacement by 2030" — unit: "% of roles displaced"
-- `customer-service-automation` — "Customer Service Automation by 2028" — unit: "% of interactions automated"
+* **Pasted text** → Use it directly. Ask for the URL and publication date if not provided.
+* **Local file path** → Use view or bash_tool to read the file contents.
+* **URL** → Work through the waterfall below in order. Stop at the first strategy that returns ≥500 characters of meaningful text. Tell the user which strategy succeeded.
 
-**Wage Graphs:**
-- `median-wage-impact` — "Median Wage Impact from AI by 2030" — unit: "% change in real median wage"
-- `entry-level-wage-impact` — "Entry-Level Wage Impact from AI by 2030" — unit: "% wage change"
-- `high-skill-wage-premium` — "High-Skill AI Wage Premium by 2030" — unit: "% wage premium over median"
-- `freelancer-rate-impact` — "Freelancer/Gig Worker Rate Impact by 2028" — unit: "% rate change"
+#### URL Fetch Waterfall
 
-**Adoption, Exposure & Signals:**
-- `ai-adoption-rate` — "AI Adoption Rate Across US Companies" — unit: "% of firms (Census BTOS)"
-- `genai-work-adoption` — "Generative AI Adoption" — unit: "% of adults at work"
-- `workforce-ai-exposure` — "US Workforce AI Exposure" — unit: "% of jobs exposed"
-- `earnings-call-ai-mentions` — "S&P 500 AI Workforce Mentions in Earnings Calls" — unit: "% of S&P 500"
+**Strategy 1 — curl**
 
-### Step 3: Extract Statistics
-
-From the source content, extract EVERY quantitative statistic related to AI's impact on labor, jobs, wages, or workforce. For each statistic:
-
-1. **EXACT QUOTE** — Copy the exact verbatim sentence(s) from the source. Never paraphrase. This is critical for reader trust and verifiability.
-
-2. **VALUE** — The numeric value. For ranges (e.g., "20-30%"):
-   - Use the midpoint as the value (e.g., 25)
-   - Record the range bounds separately
-
-3. **GRAPH MAPPING** — Match to the most appropriate graph based on:
-   - **Unit compatibility** (most important — does the stat's unit match the graph's unit?)
-   - **Topic alignment** (secondary)
-
-4. **DATA TYPE** — Classify using this decision tree:
-
-   **Step A: Direct unit match?**
-   Does the stat's unit exactly match the graph's unit (e.g., "% of jobs displaced" → displacement graph)?
-   - YES → `data_point` (standard). Proceed to step 5.
-   - NO → Go to Step B.
-
-   **Step B: Known proxy metric with conversion?**
-   Is the stat a recognized proxy for the graph's unit? Check the proxy conversion table:
-
-   | Proxy Metric | Target Unit | Conversion Factor | Range | Rationale |
-   |---|---|---|---|---|
-   | Job posting decline (%) | % jobs displaced | 0.35 | 0.2–0.5 | Posting drops overstate displacement ~2–3x; most reflect hiring freezes, not eliminations (Cajner et al., Davis/Haltiwanger) |
-   | Task automation potential (%) | % jobs displaced | 0.30 | 0.15–0.50 | Not all automatable tasks lead to job cuts; firms redeploy workers (Autor, OECD 2023) |
-   | Relative posting change (%) | % jobs displaced | 0.30 | 0.15–0.45 | Relative comparisons (high-AI vs low-AI occupations) capture substitution patterns but not net displacement |
-   | Productivity gain (%) | % wage change | 0.40 | 0.20–0.60 | Historical pass-through of productivity to wages is partial and lagged (Stansbury/Summers) |
-   | Revenue impact (%) | % jobs displaced | 0.25 | 0.10–0.40 | Revenue automation ≠ headcount reduction; firms often redeploy savings to growth |
-
-   - If proxy match found → `data_point` with `isProxy: true`. Apply conversion:
-     - `value` = rawValue × conversionFactor (use midpoint)
-     - `confidenceLow` = rawValue × conversionLow
-     - `confidenceHigh` = rawValue × conversionHigh
-     - Include `proxyContext` object with `actualUnit`, factors, and `rationale`
-     - The point receives 0.5× weight discount in the weighted average automatically
-   - If no proxy match → Go to Step C.
-
-   **Step C: Outlier check — would plotting this create a statistical outlier?**
-   Compare the proposed value against existing data points on the target graph:
-   - Compute the mean and standard deviation of existing `history[]` values
-   - If |proposedValue - mean| > 2 × stddev → FLAG as potential outlier
-   - Present the flag to the user: "This value (X%) is >2 SD from the graph mean (Y% ± Z%). Recommend: overlay unless you can justify the deviation."
-
-   **Step D: Default to overlay**
-   - `overlay`: Provides directional evidence but different units → shown as directional signal
-   - When unsure, default to `overlay`
-
-   **Example — World Bank posting study:**
-   Source says: "Job postings for high-AI-substitution occupations fell 12% relative to low-substitution roles"
-   - Unit: "relative job posting decline (%)" ≠ graph unit "% of US jobs" → not a direct match
-   - Proxy table match: "Relative posting change → % jobs displaced" with factor 0.30 [0.15–0.45]
-   - Converted: value = -12 × 0.30 = -3.6, confidenceLow = -12 × 0.45 = -5.4, confidenceHigh = -12 × 0.15 = -1.8
-   - Result: `data_point` with `isProxy: true`, value = -3.6, range [-5.4, -1.8]
-   - This plots sensibly alongside direct displacement estimates (-3% to -6%) instead of appearing as a -12% outlier
-
-5. **EVIDENCE TIER** — Classify the source (not individual stats):
-   - **Tier 1**: Peer-reviewed journals (AER, QJE, Science, Nature), NBER/CEPR working papers, government statistics (BLS, Census, OECD data tables), SEC filings, RCTs
-   - **Tier 2**: Think tanks (Brookings, McKinsey, RAND), international orgs (IMF, World Bank, ILO), industry research (Gartner, Forrester, Deloitte), prediction markets
-   - **Tier 3**: Major news outlets (NYT, WSJ, FT, Reuters, Bloomberg), trade publications, expert commentary
-   - **Tier 4**: Twitter/X, Reddit, blogs, Substack, podcasts
-
-6. **SOURCE ID** — Generate as: `{publisher-slug}-{topic-keywords}-{year}` (e.g., `gartner-cs-agents-replaced-2025`). Check that the ID doesn't already exist in the target file.
-
-### Step 4: Present Extraction Report
-
-Before making any changes, present a clear report to the user:
-
-```
-=== SOURCE INGESTION REPORT ===
-
-Title:     [source title]
-Publisher: [publisher]
-Date:      [YYYY-MM-DD]
-Tier:      [1-4] ([tier label])
-URL:       [url if available]
-
---- Extracted Statistics ---
-
-[1] → [Graph Title] ([slug])
-    Type:  DATA POINT / OVERLAY / PROXY DATA POINT
-    Value: [value] (midpoint of [low]–[high]) — or just the value if not a range
-    Quote: "[exact quote from source]"
-
-    (If PROXY DATA POINT):
-    Raw:        [rawValue] [actualUnit]
-    Converted:  [convertedValue] [graphUnit] (×[factor], range [low]–[high])
-    Rationale:  [why this conversion]
-    Outlier?:   [YES/NO — is converted value >2 SD from graph mean?]
-
-[2] → [Graph Title] ([slug])
-    ...
-
---- Proposed File Changes ---
-
-[filename].json:
-  + history: date=[date], value=[value], range=[[low], [high]], tier=[tier]
-  + source: [source-id]
+```bash
+curl -sL \
+  -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" \
+  --max-time 15 \
+  "$URL"
 ```
 
-### Step 5: Ask for Confirmation (Per-Statistic)
+If ≥500 characters and not a login wall or CAPTCHA → success. Otherwise move to Strategy 2.
 
-After presenting the report, ask the user to approve **each extracted statistic individually**. For each statistic, use `AskUserQuestion` to let the user:
-- **Accept** — apply as proposed
-- **Skip** — do not add this statistic
-- **Modify** — change the graph assignment, direction, value, or label
+**Strategy 2 — Python httpx**
 
-Walk through each statistic one at a time (or in small batches of 2-3 if there are many). Only apply statistics the user explicitly approves. If the user rejects all statistics, stop — do not make any file changes.
+```python
+import httpx
+headers = {
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.9",
+}
+with httpx.Client(follow_redirects=True, timeout=20, headers=headers) as client:
+    r = client.get("$URL")
+    print(r.text[:10000])
+```
 
-### Step 6: Apply Approved Changes
+Install if needed: `pip install httpx -q`. If ≥500 characters → success. Otherwise move to Strategy 3.
 
-For each **approved** prediction JSON file that needs changes:
+**Strategy 3 — Direct PDF download (research papers only)**
 
-1. **Read** the current file
-2. **Add the Source entry** to the `sources` array:
+Construct the PDF URL from the page URL using these patterns:
+
+| Source | Page URL | PDF URL |
+|--------|----------|---------|
+| NBER | nber.org/papers/wNNNNN | nber.org/system/files/working_papers/wNNNNN/wNNNNN.pdf |
+| arXiv | arxiv.org/abs/NNNN.NNNNN | arxiv.org/pdf/NNNN.NNNNN |
+
+```bash
+curl -sL --max-time 30 -o /tmp/paper.pdf "$PDF_URL"
+```
+
+Extract text:
+
+```python
+import subprocess, fitz  # pip install pymupdf -q
+result = subprocess.run(["pdftotext", "/tmp/paper.pdf", "-"], capture_output=True, text=True)
+if result.returncode == 0 and len(result.stdout) > 500:
+    print(result.stdout[:15000])
+else:
+    doc = fitz.open("/tmp/paper.pdf")
+    print("\n".join(page.get_text() for page in doc)[:15000])
+```
+
+If ≥500 characters → success. Otherwise move to Strategy 4.
+
+**Strategy 4 — Playwright headless browser**
+
+```bash
+pip install playwright -q && python -m playwright install chromium --with-deps -q
+```
+
+```python
+from playwright.sync_api import sync_playwright
+with sync_playwright() as p:
+    browser = p.chromium.launch(headless=True)
+    page = browser.new_context(user_agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36").new_page()
+    page.goto("$URL", wait_until="networkidle", timeout=30000)
+    print(page.inner_text("body")[:15000])
+    browser.close()
+```
+
+If ≥500 characters → success. Otherwise move to Strategy 5.
+
+**Strategy 5 — Manual fallback**
+
+All automated strategies failed. Tell the user what was tried and ask them to either paste the article text, upload the PDF, or copy the key sections into the chat. Do not proceed to Step 2 until content is available.
+
+#### After fetching: clean the HTML
+
+If the content is raw HTML, extract readable text before proceeding:
+
+```python
+from bs4 import BeautifulSoup  # pip install beautifulsoup4 -q
+soup = BeautifulSoup(raw_html, "html.parser")
+for tag in soup(["script", "style", "nav", "footer", "header"]):
+    tag.decompose()
+print(soup.get_text(separator=" ", strip=True)[:15000])
+```
+
+**NBER tip:** Strategy 3 (PDF) is the most reliable path for NBER papers. Construct the PDF URL directly from the paper number — you'll get the full text rather than just the abstract, which is essential for extracting all quantitative statistics.
+
+If the retrieved content is under 200 characters after all strategies, warn the user that the fetch failed and wait for them to provide content manually.
+
+### Step 2: Know the Prediction Graph Registry
+
+These are the 17 prediction graphs on jobsdata.ai. Every extracted statistic must map to exactly one of them. The graph's unit is the most important matching criterion — a statistic can only be a data_point if its unit is directly compatible with the graph's unit.
+
+**Displacement Graphs (8):**
+
+| Slug | Title | Unit |
+|------|-------|------|
+| `overall-us-displacement` | Overall US Job Displacement by 2030 | % of US jobs |
+| `total-us-jobs-lost` | Total US Jobs Lost to AI as % of Labor Force | % of US labor force |
+| `white-collar-professional-displacement` | White-Collar Professional Displacement by 2030 | % of roles displaced |
+| `tech-sector-displacement` | Tech Sector Job Displacement by 2030 | % of jobs displaced |
+| `creative-industry-displacement` | Creative Industry Displacement by 2030 | % of roles displaced |
+| `education-sector-displacement` | Education Sector Displacement by 2030 | % of roles displaced |
+| `healthcare-admin-displacement` | Healthcare Administrative Displacement by 2030 | % of roles displaced |
+| `customer-service-automation` | Customer Service Automation by 2028 | % of interactions automated |
+
+**Wage Graphs (5):**
+
+| Slug | Title | Unit |
+|------|-------|------|
+| `median-wage-impact` | Median Wage Impact from AI by 2030 | % change in real median wage |
+| `geographic-wage-divergence` | AI Hub vs. Non-Hub Wage Divergence by 2030 | % wage premium |
+| `entry-level-wage-impact` | Entry-Level Wage Impact from AI by 2030 | % wage change |
+| `high-skill-wage-premium` | High-Skill AI Wage Premium by 2030 | % wage premium over median |
+| `freelancer-rate-impact` | Freelancer/Gig Worker Rate Impact by 2028 | % rate change |
+
+**Adoption, Exposure & Signals (4):**
+
+| Slug | Title | Unit |
+|------|-------|------|
+| `ai-adoption-rate` | AI Adoption Rate Across US Companies | % of firms (Census BTOS) |
+| `genai-work-adoption` | Generative AI Adoption | % of adults at work |
+| `workforce-ai-exposure` | US Workforce AI Exposure | % of jobs exposed |
+| `earnings-call-ai-mentions` | S&P 500 AI Workforce Mentions in Earnings Calls | % of S&P 500 |
+
+### Step 3: Extract Every Quantitative Statistic
+
+Read the full source content and identify every quantitative claim about AI's impact on labor, jobs, wages, workforce, or the economy. For each statistic, capture:
+
+**3a. Exact quote** — Copy the verbatim sentence(s) from the source. Never paraphrase, never summarize. This is the most important field because readers need to verify the data point against the original text.
+
+**3b. Numeric value** — The number itself. Handle ranges like this:
+* Single value (e.g., "47%") → record as value: 47
+* Range (e.g., "20–30%") → record as value: 25 (midpoint), confidenceLow: 20, confidenceHigh: 30
+* Negative impacts → use negative numbers (e.g., a "10% wage decline" → value: -10)
+
+**3c. Graph mapping** — Match to the most appropriate graph using this priority:
+1. **Unit compatibility** — Does the statistic's unit directly match the graph's unit? This is the primary criterion. A "% of US jobs" statistic maps to overall-us-displacement, not to workforce-ai-exposure (which measures exposure, not displacement).
+2. **Topic alignment** — Is the subject matter the same? A healthcare stat goes to a healthcare graph even if the units technically fit a general displacement graph.
+3. **Geographic/temporal scope** — US-specific stats map to US-specific graphs.
+
+**3d. Data type** — Classify as one of two types:
+* **data_point**: The statistic's unit directly and unambiguously matches the graph's unit. It will be plotted on the chart line. Use this only when you are confident in unit compatibility.
+* **overlay**: The statistic provides relevant directional evidence but uses different units, covers a different geography, or measures something adjacent. It will appear as a contextual signal alongside the chart. When in doubt, choose overlay — it's the conservative default.
+
+**3e. Direction (for overlays only)** — Classify the directional signal:
+* **up** — suggests the graph's metric will be higher than current consensus
+* **down** — suggests it will be lower
+* **neutral** — informational without clear directional implication
+
+**3f. Overlay label (for overlays only)** — Write a short label (80 characters max) in the format: "[Publisher]: [concise finding]" — e.g., "McKinsey: 30% of work hours automatable by 2030"
+
+### Step 4: Classify the Source
+
+Determine the following for the source as a whole (these apply to all extracted statistics):
+
+**Evidence tier** — Classify the source, not the individual statistic:
+
+| Tier | Description | Examples |
+|------|-------------|----------|
+| 1 | Peer-reviewed research, government statistics, RCTs | AER, QJE, Science, Nature, NBER working papers, BLS data, Census BTOS, SEC filings |
+| 2 | Think tanks, international organizations, industry research | Brookings, McKinsey, RAND, IMF, World Bank, ILO, Gartner, Forrester, Deloitte |
+| 3 | Major news outlets, trade publications, expert commentary | NYT, WSJ, FT, Reuters, Bloomberg, Wired, MIT Tech Review |
+| 4 | Social media, blogs, podcasts, opinion pieces | Twitter/X, Substack, Reddit, personal blogs, podcast transcripts |
+
+When uncertain between two tiers, choose the higher number (lower quality). A Brookings blog post is Tier 3, not Tier 2. A working paper on SSRN that hasn't been peer-reviewed is Tier 2, not Tier 1.
+
+**Source ID** — Generate a slug in the format `{publisher}-{topic-keywords}-{year}`:
+* Use lowercase, hyphens only, no special characters
+* Keep it short but unique (e.g., `mckinsey-genai-workforce-2023`, `bls-ai-adoption-survey-2025`)
+* Check existing data files to avoid duplicates
+
+**Publication date** — Extract from the source. If only a month/year is available, use the first of the month (e.g., 2024-03-01). If only a year, use {year}-01-01.
+
+### Step 5: Present the Extraction Report
+
+Before changing any files, present a clear summary for the user to review:
+
+```
+══════════════════════════════════════════════════
+  SOURCE INGESTION REPORT
+══════════════════════════════════════════════════
+
+  Title:     [source title]
+  Publisher: [publisher name]
+  Date:      [YYYY-MM-DD]
+  Tier:      [1–4] ([tier label, e.g., "Think tank / industry research"])
+  URL:       [url or "pasted text"]
+  Source ID: [generated-source-id]
+
+──────────────────────────────────────────────────
+  EXTRACTED STATISTICS ([N] total)
+──────────────────────────────────────────────────
+
+  [1] → [Graph Title]
+        Slug:  [graph-slug]
+        Type:  DATA POINT | OVERLAY ([direction] if overlay)
+        Value: [value] — or: [midpoint] (range: [low]–[high])
+        Label: "[overlay label]" (overlays only)
+        Quote: "[exact verbatim quote from source]"
+
+  [2] → [Graph Title]
+        ...
+
+──────────────────────────────────────────────────
+  FILE CHANGES (pending approval)
+──────────────────────────────────────────────────
+
+  src/data/predictions/[slug].json:
+    + sources: [source-id]
+    + history/overlays: [date], [value/direction]
+
+  src/data/confirmed-sources.json:
+    + sources["[source-id]"]: usedIn=[slug-1, slug-2, ...]
+```
+
+### Step 6: Get Per-Statistic Approval
+
+Walk through each extracted statistic and ask the user to approve it individually. For each one, offer these options:
+
+* **Accept** — apply as proposed
+* **Skip** — do not add this statistic
+* **Modify** — change the graph assignment, data type, direction, value, or label
+
+Present statistics in small batches (2–3 at a time if there are many) rather than one massive list. This keeps decisions manageable.
+
+If the user rejects all statistics, stop. Do not make any file changes.
+
+### Step 7: Apply Approved Changes to Prediction Files
+
+For each prediction JSON file that needs changes:
+
+1. **Read** the current file content.
+2. **Add the source entry** to the `sources` array (once per file, even if multiple stats map to this graph):
    ```json
    {
      "id": "[source-id]",
@@ -167,79 +286,39 @@ For each **approved** prediction JSON file that needs changes:
      "publisher": "[publisher]",
      "evidenceTier": [tier],
      "datePublished": "[YYYY-MM-DD]",
-     "excerpt": "[exact quote used for this graph's statistic]"
+     "excerpt": "[exact quote — use the most representative quote if multiple stats map here]"
    }
    ```
-3. **For data points**, add to the `history` array:
+3. **For data points**, add an entry to the `history` array:
    ```json
    {
-     "date": "[publication date YYYY-MM-DD]",
+     "date": "[YYYY-MM-DD]",
      "value": [value],
-     "confidenceLow": [range_low if range],
-     "confidenceHigh": [range_high if range],
+     "confidenceLow": [range_low_or_null],
+     "confidenceHigh": [range_high_or_null],
      "sourceIds": ["[source-id]"],
      "evidenceTier": [tier]
    }
    ```
-   **For proxy data points** (when `isProxy: true`), use the converted value and add proxy metadata:
+4. **For overlays**, add an entry to the `overlays` array:
    ```json
    {
-     "date": "[publication date YYYY-MM-DD]",
-     "value": [convertedValue],
-     "confidenceLow": [rawValue × conversionLow],
-     "confidenceHigh": [rawValue × conversionHigh],
-     "sourceIds": ["[source-id]"],
-     "evidenceTier": [tier],
-     "metricType": "[postings|survey|etc]",
-     "isProxy": true,
-     "proxyContext": {
-       "actualUnit": "[what the study actually measured]",
-       "conversionFactor": [factor used],
-       "conversionLow": [low end of range],
-       "conversionHigh": [high end of range],
-       "rationale": "[why this conversion factor, ≤120 chars]"
-     }
-   }
-   ```
-4. **For overlays**, add to the `overlays` array:
-   ```json
-   {
-     "date": "[publication date YYYY-MM-DD]",
+     "date": "[YYYY-MM-DD]",
      "direction": "up|down|neutral",
      "sourceIds": ["[source-id]"],
      "evidenceTier": [tier],
-     "label": "[Publisher]: [short finding, ~80 chars max]"
+     "label": "[Publisher]: [short finding, 80 chars max]"
    }
    ```
-5. **Keep arrays sorted by date** (ascending)
-6. **Check for duplicates** — skip if source ID or URL already exists
+5. **Keep arrays sorted by date** in ascending order (earliest first).
+6. **Check for duplicates** before writing — skip if the source ID or URL already exists in the file.
+7. **Validate JSON** after editing. If the file doesn't parse, fix it before moving on.
 
-### Step 7: Populate Chatbot Content Store
+### Step 8: Update the Verified Source Registry
 
-After applying changes to prediction files, populate the chatbot source content store so the chat assistant can answer questions grounded in this source's full text. This is REQUIRED for every ingested source regardless of evidence tier.
+Update `src/data/confirmed-sources.json`:
 
-1. **Write a source content JSON file** to `src/data/source-content/[source-id].json` with this structure:
-   ```json
-   {
-     "id": "[source-id]",
-     "abstract": "[2-4 sentence summary of the source's main argument and findings, 500-2000 chars]",
-     "keyFindings": ["Finding 1 with specific numbers", "Finding 2", "Finding 3"],
-     "methodology": "[Study design, data sources, sample size, time period, analytical approach. If not a study, describe the evidence basis.]",
-     "qualifiers": "[Caveats, limitations, uncertainty language, scope restrictions mentioned by the authors.]",
-     "fetchedAt": "[today's date YYYY-MM-DD]"
-   }
-   ```
-2. **keyFindings** should have 3-5 items, each a single sentence with specific numbers and dates when available
-3. **Use the authors' own language** where possible — do not editorialize
-4. **Include dates** in findings: e.g., "As of Q1 2026, 12.3% of US firms use AI in production"
-5. If the source file already exists in `src/data/source-content/`, skip this step
-
-### Step 8: Add to Verified Source List
-
-After applying changes to prediction files, also update `src/data/confirmed-sources.json`:
-
-1. **Read** the current file
-2. **Add a source entry** to the `sources` object for each approved source (keyed by source ID):
+1. **Add the source** to the `sources` object, keyed by source ID:
    ```json
    "[source-id]": {
      "id": "[source-id]",
@@ -248,31 +327,54 @@ After applying changes to prediction files, also update `src/data/confirmed-sour
      "publisher": "[publisher]",
      "evidenceTier": [tier],
      "datePublished": "[YYYY-MM-DD]",
-     "excerpt": "[primary excerpt from this source]",
+     "excerpt": "[primary excerpt — the most representative quote from this source]",
      "usedIn": ["[graph-slug-1]", "[graph-slug-2]"],
      "verified": true,
      "synthetic": false
    }
    ```
-   - The `usedIn` array should list **every** prediction graph slug this source was added to
-   - Set `verified: true` and `synthetic: false` for all ingested sources
-   - Skip if the source ID already exists in the file
-3. **Increment** `totalSources` and `verifiedCount` by the number of new sources added (usually 1)
+   * `usedIn` must list every graph slug this source was added to
+   * Always set `verified: true` and `synthetic: false` for ingested sources
+   * Skip entirely if the source ID already exists
 
-### Step 9: Update Last Updated Date
+2. **Increment counters**: Add 1 to both `totalSources` and `verifiedCount`.
+
+### Step 9: Update Timestamps
 
 After all file changes are applied:
 
-1. **Update** the `lastUpdated` field in `src/data/confirmed-sources.json` to today's date (`YYYY-MM-DD`)
-2. **Update** `src/data/last-updated.json` to `{ "lastUpdated": "YYYY-MM-DD" }` with today's date — this is what the site Hero reads to display "Updated ..."
-3. This ensures the site header reflects the most recent ingestion
+1. **Set** the `lastUpdated` field in `src/data/confirmed-sources.json` to today's date (`YYYY-MM-DD`).
+2. **Set** `src/data/last-updated.json` to `{ "lastUpdated": "YYYY-MM-DD" }` — this is what the site hero component reads.
 
-### Critical Rules
+### Step 10: Confirm Completion
 
-- **NEVER invent data.** Only extract statistics explicitly stated in the source text.
-- **ALWAYS provide exact quotes.** Every data point must trace back to verbatim source text.
-- **RANGES → MIDPOINTS.** When a source says "20-30%", plot 25% with confidenceLow=20 and confidenceHigh=30.
-- **NEGATIVE VALUES for losses.** Wage declines and rate drops should be negative (e.g., -10 for "10% wage decline").
-- **CONSERVATIVE classification.** When unsure between data_point and overlay, choose overlay. When unsure about tier, choose the higher number (lower quality).
-- **ONE source entry per file.** If a source has multiple stats for the same graph, add the source once but add each stat as a separate history/overlay entry.
-- **Validate JSON** after editing each file to ensure it's still valid.
+Summarize what was done:
+
+* How many statistics were added (and how many were skipped)
+* Which graph files were modified
+* Remind the user to commit and deploy if working in a git repo
+
+## Rules
+
+These rules are non-negotiable. They protect data integrity and reader trust.
+
+1. **Never invent data.** Only extract statistics that are explicitly stated in the source text. If a number isn't in the source, it doesn't get added.
+2. **Always use exact quotes.** Every data point and overlay must trace back to a verbatim quote. No paraphrasing, no summarizing, no rewording. Copy-paste from the source.
+3. **Ranges become midpoints.** When a source says "20–30%", the plotted value is 25 with confidenceLow: 20 and confidenceHigh: 30.
+4. **Negative values for losses.** Wage declines, rate drops, and job losses should be negative numbers (e.g., "10% wage decline" → value: -10). Displacement percentages remain positive because the graph's unit is "% displaced" (i.e., the displacement itself is the metric).
+5. **Default to overlay when uncertain.** If you're not sure whether a stat's unit matches the graph's unit, classify it as an overlay rather than a data_point. Overlays are low-risk; bad data points distort the chart.
+6. **Default to higher tier number when uncertain.** A Tier 3 source misclassified as Tier 2 erodes trust. The reverse is merely conservative.
+7. **One source entry per prediction file.** If a source contributes multiple statistics to the same graph, add the source once to `sources` but add each statistic as a separate `history` or `overlay` entry.
+8. **Validate JSON after every edit.** A malformed JSON file will break the site. Read back the file after writing to confirm it parses.
+9. **Never write files without user approval.** The extraction report (Step 5) and per-statistic confirmation (Step 6) must happen before any file is modified.
+10. **Preserve existing data.** When editing a file, never remove or modify existing entries. Only append new entries to the relevant arrays.
+
+## Common Mapping Pitfalls
+
+These are easy mistakes to avoid:
+
+* **"Exposed to AI" ≠ "displaced by AI."** A stat like "60% of jobs are exposed to AI" maps to `workforce-ai-exposure`, not `overall-us-displacement`. Exposure means the job involves tasks AI can affect; displacement means the job is eliminated.
+* **Global stats ≠ US stats.** "300 million jobs globally" does not map to a US-specific graph without conversion. Use overlay if the geographic scope doesn't match.
+* **"Tasks automatable" ≠ "jobs displaced."** A finding that "30% of tasks within an occupation can be automated" is about task automation, not job elimination. Many jobs will be restructured rather than eliminated.
+* **Productivity gains are positive.** A "7% GDP boost" has direction: up and a positive value — it's a gain, not a loss.
+* **Adoption rates are adoption rates.** "75% of knowledge workers use AI tools" maps to `genai-work-adoption`, not to any displacement graph.
