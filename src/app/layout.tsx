@@ -4,7 +4,6 @@ import Navbar from "@/components/Navbar";
 import Chatbot from "@/components/Chatbot";
 import ChatbotBuddy from "@/components/ChatbotBuddy";
 import KonamiEasterEgg from "@/components/KonamiEasterEgg";
-import FooterStats from "@/components/FooterStats";
 import { getSourceCount } from "@/lib/search-sources";
 import { SOURCE_COUNT_DISPLAY } from "@/lib/constants";
 import { Analytics } from "@vercel/analytics/react";
@@ -110,21 +109,12 @@ export default function RootLayout({
           <KonamiEasterEgg />
           <Analytics />
           <footer className="max-w-6xl mx-auto px-6 sm:px-10 pb-16">
-            <div className="pt-10 border-t border-black/[0.06] space-y-4">
-              <FooterStats />
-              <p className="text-[13px] text-[var(--muted)]">
-                Data drawn from hundreds of sources (academic research, government statistics, corporate
-                filings, journalism, and expert opinion) all able to be reviewed and filtered by you.
-                Aggregate figures reflect my independent analysis{" "}
-                (<a href="/about" className="underline hover:text-[var(--foreground)]">methodology</a>).
-              </p>
-              <p className="text-[13px] text-[var(--muted)]">
-                Nothing here is investment or career advice. This project is unaffiliated with my
-                employer. Corrections and ideas welcome:{" "}
-                <a href="https://www.linkedin.com/in/mattzieger" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">LinkedIn</a>
-                {" "}/{" "}
-                <a href="https://x.com/mattzieger" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">X</a>
-              </p>
+            <div className="pt-10 border-t border-black/[0.06] flex flex-wrap items-center gap-x-6 gap-y-2 text-[13px] text-[var(--muted)]">
+              <a href="/about" className="hover:text-[var(--foreground)] transition-colors">About</a>
+              <a href="/about#methodology" className="hover:text-[var(--foreground)] transition-colors">Methodology</a>
+              <a href="/learn/reading-list" className="hover:text-[var(--foreground)] transition-colors">Reading List</a>
+              <a href="/research" className="hover:text-[var(--foreground)] transition-colors">Sources</a>
+              <a href="/suggest" className="hover:text-[var(--foreground)] transition-colors">Suggest a Source</a>
             </div>
           </footer>
         </DelightsWrapper>
