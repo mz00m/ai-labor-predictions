@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-24",
-  "totalSources": 464,
-  "verifiedCount": 464,
+  "totalSources": 465,
+  "verifiedCount": 465,
   "sources": {
     "cvl-economics-entertainment-ai-2024": {
       "id": "cvl-economics-entertainment-ai-2024",
@@ -6460,6 +6460,26 @@
       "excerpt": "In weak-bundle occupations, AI automates some tasks and narrows the boundary of the job, leading to the standard task-substitution channel. In strong-bundle occupations where tasks are not independently reallocable, AI improves performance inside the job, but does not remove the human from the bundle.",
       "usedIn": [
         "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "anthropic-economic-index-learning-curves-2026": {
+      "id": "anthropic-economic-index-learning-curves-2026",
+      "title": "Anthropic Economic Index report: Learning curves",
+      "url": "https://www.anthropic.com/research/economic-index-march-2026-report",
+      "publisher": "Anthropic (Massenkoff, Lyubich, McCrory, Appel, Heller)",
+      "evidenceTier": 2,
+      "datePublished": "2026-03-24",
+      "excerpt": "About 49% of jobs have seen at least a quarter of their tasks performed using Claude. High-tenure users have a 10% higher success rate. Early adopters with high-skill tasks have more successful interactions, identifying a channel through which skill-biased transformation may already be unfolding.",
+      "usedIn": [
+        "workforce-ai-exposure",
+        "customer-service-automation",
+        "tech-sector-displacement",
+        "financial-services-displacement",
+        "genai-work-adoption",
+        "high-skill-wage-premium",
+        "median-wage-impact"
       ],
       "verified": true,
       "synthetic": false

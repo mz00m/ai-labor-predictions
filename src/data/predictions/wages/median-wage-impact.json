@@ -442,6 +442,15 @@
       ],
       "evidenceTier": 1,
       "label": "NBER (Gans/Goldfarb): O-ring model -- partial automation can raise wages via bottleneck task revaluation"
+    },
+    {
+      "date": "2026-03-24",
+      "direction": "neutral",
+      "sourceIds": [
+        "anthropic-economic-index-learning-curves-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Anthropic: Claude tasks avg $47.9/hr vs $37.3 US avg wage"
     }
   ],
   "sources": [
@@ -849,6 +858,16 @@
       "datePublished": "2026-01-01",
       "excerpt": "Labour income can rise under partial automation because automation scales the value of remaining bottleneck tasks.",
       "dateAdded": "2026-03-23"
+    },
+    {
+      "id": "anthropic-economic-index-learning-curves-2026",
+      "title": "Anthropic Economic Index report: Learning curves",
+      "url": "https://www.anthropic.com/research/economic-index-march-2026-report",
+      "publisher": "Anthropic (Massenkoff, Lyubich, McCrory, Appel, Heller)",
+      "evidenceTier": 2,
+      "datePublished": "2026-03-24",
+      "excerpt": "This estimate of the value of tasks in Claude.ai has dropped slightly from $49.3 to $47.9. US avg. hourly wage: $37.3.",
+      "dateAdded": "2026-03-24"
     }
   ]
 }

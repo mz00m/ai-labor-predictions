@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "Anthropic Economic Index report: Learning curves",
+      "author": "Maxim Massenkoff, Eva Lyubich, Peter McCrory, Ruth Appel, Ryan Heller",
+      "publisher": "Anthropic",
+      "date": "2026-03-24",
+      "url": "https://www.anthropic.com/research/economic-index-march-2026-report",
+      "takeaway": "49% of jobs have at least a quarter of their tasks performed using Claude. High-tenure users show 10% higher success rates, evidence consistent with learning-by-doing. Coding tasks migrating from Claude.ai to automated API workflows (+14% since Aug 2025). Early adopters with high-skill tasks have more successful interactions, identifying a skill-biased adoption channel that may deepen labor market inequality. Average task value on Claude.ai declined from $49.3 to $47.9/hr as adoption broadened to lower-wage tasks.",
+      "weekFeatured": "2026-03-24",
+      "tier": 2
+    },
+    {
       "title": "O-Ring Automation",
       "author": "Joshua S. Gans, Avi Goldfarb",
       "publisher": "NBER",

@@ -675,6 +675,15 @@
       ],
       "evidenceTier": 2,
       "label": "GS Research (Briggs): Tech employment share has fallen below long-term trend"
+    },
+    {
+      "date": "2026-03-24",
+      "direction": "up",
+      "sourceIds": [
+        "anthropic-economic-index-learning-curves-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Anthropic: Coding tasks migrating to automated API (+14% since Aug)"
     }
   ],
   "sources": [
@@ -1274,6 +1283,16 @@
       "datePublished": "2026-01-15",
       "excerpt": "The high demand for new IT skills may not necessarily translate into a one-for-one rise in demand for IT and AI specialists, especially as many IT tasks may progressively be automated by AI.",
       "dateAdded": "2026-03-21"
+    },
+    {
+      "id": "anthropic-economic-index-learning-curves-2026",
+      "title": "Anthropic Economic Index report: Learning curves",
+      "url": "https://www.anthropic.com/research/economic-index-march-2026-report",
+      "publisher": "Anthropic (Massenkoff, Lyubich, McCrory, Appel, Heller)",
+      "evidenceTier": 2,
+      "datePublished": "2026-03-24",
+      "excerpt": "Since August 2025, the share of tasks in this category [Computer and Mathematical] has increased by 14% in the API and decreased by 18% in Claude.ai.",
+      "dateAdded": "2026-03-24"
     }
   ],
   "marketIds": {

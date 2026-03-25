@@ -265,6 +265,15 @@
       ],
       "evidenceTier": 1,
       "label": "Fed/Duke: Finance largest AI productivity gains (>2% in 2026); NEI 1.1"
+    },
+    {
+      "date": "2026-03-24",
+      "direction": "up",
+      "sourceIds": [
+        "anthropic-economic-index-learning-curves-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Anthropic: Automated trading & market ops usage doubled in 3mo"
     }
   ],
   "sources": [
@@ -515,6 +524,16 @@
       "evidenceTier": 2,
       "datePublished": "2025-09-01",
       "excerpt": "Global banks expected to shed 200,000 roles over 3-5 years (~3% headcount drop). Citigroup: 54% of banking jobs have high automation potential. AI could lift bank pre-tax profits 12-17% by 2027."
+    },
+    {
+      "id": "anthropic-economic-index-learning-curves-2026",
+      "title": "Anthropic Economic Index report: Learning curves",
+      "url": "https://www.anthropic.com/research/economic-index-march-2026-report",
+      "publisher": "Anthropic (Massenkoff, Lyubich, McCrory, Appel, Heller)",
+      "evidenceTier": 2,
+      "datePublished": "2026-03-24",
+      "excerpt": "Automated trading & market ops: monitor markets or positions, propose specific investments, inform traders of market conditions, and related tasks. [Shares at least doubling in our latest sample.]",
+      "dateAdded": "2026-03-24"
     }
   ]
 }

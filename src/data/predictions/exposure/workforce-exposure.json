@@ -391,6 +391,15 @@
       ],
       "evidenceTier": 1,
       "label": "NBER (Gans/Goldfarb): Linear exposure indices overstate displacement when tasks are quality complements"
+    },
+    {
+      "date": "2026-03-24",
+      "direction": "neutral",
+      "sourceIds": [
+        "anthropic-economic-index-learning-curves-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Anthropic: 49% of jobs have 25%+ of tasks performed using Claude"
     }
   ],
   "sources": [
@@ -723,6 +732,16 @@
       "datePublished": "2026-01-01",
       "excerpt": "Widely-used exposure indices, which aggregate task-level automation risk using linear formulas, will overstate displacement when tasks are complements. The relevant object is not average task exposure but the structure of bottlenecks and how automation reshapes worker time around them.",
       "dateAdded": "2026-03-23"
+    },
+    {
+      "id": "anthropic-economic-index-learning-curves-2026",
+      "title": "Anthropic Economic Index report: Learning curves",
+      "url": "https://www.anthropic.com/research/economic-index-march-2026-report",
+      "publisher": "Anthropic (Massenkoff, Lyubich, McCrory, Appel, Heller)",
+      "evidenceTier": 2,
+      "datePublished": "2026-03-24",
+      "excerpt": "About 49% of jobs have seen at least a quarter of their tasks performed using Claude.",
+      "dateAdded": "2026-03-24"
     }
   ]
 }
