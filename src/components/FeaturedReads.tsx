@@ -10,6 +10,15 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Tufts Digital Planet",
+    title: "AI and the Emerging Geography of American Job Risk",
+    summary:
+      "9.3M US jobs vulnerable (range 2.7-19.5M), ~6% industry-wide displacement. Information (18%), Finance (17%), Professional Services (16%) hardest hit. Innovation hubs face highest geographic risk. $757B in annual income at risk.",
+    date: "Mar 25",
+    url: "https://digitalplanet.tufts.edu/ai-and-the-emerging-geography-of-american-job-risk-page/",
+    accent: "border-l-violet-500",
+  },
+  {
     author: "Anthropic",
     title: "Anthropic Economic Index: Learning Curves",
     summary:
@@ -44,15 +53,6 @@ const articles: Article[] = [
     date: "Mar 20",
     url: "https://www.bloomberg.com/news/articles/2026-03-20/to-understand-ai-s-future-read-dickens-bronte-industrial-revolution-novels",
     accent: "border-l-orange-500",
-  },
-  {
-    author: "Sahaj Garg (Wispr)",
-    title: "The Displacement of Cognitive Labor and What Comes After",
-    summary:
-      "Stanford grad turned AI startup CTO argues cognitive labor automation is months away, not decades. Physical labor follows on a 5-10 year timeline. The identity crisis for knowledge workers may be worse than the economic one.",
-    date: "Mar 18",
-    url: "https://sahajgarg.github.io/blog/cognitive-labor/",
-    accent: "border-l-amber-500",
   },
 ];
 

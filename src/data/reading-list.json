@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "Will Wired Belts Become the New Rust Belts? AI and the Emerging Geography of American Job Risk",
+      "author": "Bhaskar Chakravorti, Christina Filipovic, Abidemi Adisa",
+      "publisher": "Digital Planet, The Fletcher School, Tufts University",
+      "date": "2026-03-25",
+      "url": "https://digitalplanet.tufts.edu/ai-and-the-emerging-geography-of-american-job-risk-page/",
+      "takeaway": "Introduces the American AI Jobs Risk Index. 9.3M US jobs vulnerable under median adoption (range 2.7-19.5M), ~6% industry-wide displacement. Information (18.3%), Finance and Insurance (16.5%), Professional Services (15.6%) face steepest risks. Writers/Authors (57%), Computer Programmers (55%), Web Designers (55%) are most vulnerable occupations. Innovation hubs (San Jose 9.9%, DC 9.1%) face highest geographic risk. $757B in annual income at risk (2-15% of total wage income). 4.9M 'tipping point' workers in 33 occupations swing from <10% to >40% displacement.",
+      "weekFeatured": "2026-03-25",
+      "tier": 2
+    },
+    {
       "title": "Anthropic Economic Index report: Learning curves",
       "author": "Maxim Massenkoff, Eva Lyubich, Peter McCrory, Ruth Appel, Ryan Heller",
       "publisher": "Anthropic",

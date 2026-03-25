@@ -152,6 +152,18 @@
       "evidenceTier": 2,
       "metricType": "employment",
       "dataType": "observed"
+    },
+    {
+      "date": "2026-03-25",
+      "value": -8.5,
+      "sourceIds": [
+        "tufts-digital-planet-ai-jobs-risk-2026"
+      ],
+      "evidenceTier": 2,
+      "metricType": "projection",
+      "dataType": "projected",
+      "confidenceLow": -15,
+      "confidenceHigh": -2
     }
   ],
   "overlays": [
@@ -360,7 +372,7 @@
         "jones-tonetti-weak-links-2026"
       ],
       "evidenceTier": 1,
-      "label": "Jones & Tonetti (Stanford/NBER): AI output gains modest near-term — only 4% above trend by 2040"
+      "label": "Jones & Tonetti (Stanford/NBER): AI output gains modest near-term \u2014 only 4% above trend by 2040"
     },
     {
       "date": "2026-01-21",
@@ -513,7 +525,7 @@
     },
     {
       "id": "bls-wage-data-2025",
-      "title": "Employment Cost Index — 2025 Q1",
+      "title": "Employment Cost Index \u2014 2025 Q1",
       "url": "https://www.bls.gov/eci/",
       "publisher": "Bureau of Labor Statistics",
       "evidenceTier": 1,
@@ -531,7 +543,7 @@
     },
     {
       "id": "epi-wages-2025",
-      "title": "Unbalanced labor market power is what makes technology — including AI — threatening to workers",
+      "title": "Unbalanced labor market power is what makes technology \u2014 including AI \u2014 threatening to workers",
       "url": "https://www.epi.org/publication/ai-unbalanced-labor-markets/",
       "publisher": "Economic Policy Institute (Bivens, Zipperer)",
       "evidenceTier": 2,
@@ -551,7 +563,7 @@
     },
     {
       "id": "indeed-wage-tracker-2025",
-      "title": "US Wage Tracker — Posted Wage Trends by Occupation",
+      "title": "US Wage Tracker \u2014 Posted Wage Trends by Occupation",
       "url": "https://www.hiringlab.org/2025/02/10/us-wage-tracker/",
       "publisher": "Indeed Hiring Lab",
       "evidenceTier": 2,
@@ -663,7 +675,7 @@
       "id": "cepr-ai-productivity-jobs-europe-2026",
       "title": "How AI is affecting productivity and jobs in Europe",
       "url": "https://cepr.org/voxeu/columns/how-ai-affecting-productivity-and-jobs-europe",
-      "publisher": "CEPR VoxEU (Aldasoro, Gambacorta, Pál, Revoltella, Weiss, Wolski)",
+      "publisher": "CEPR VoxEU (Aldasoro, Gambacorta, P\u00e1l, Revoltella, Weiss, Wolski)",
       "evidenceTier": 1,
       "datePublished": "2026-02-17",
       "excerpt": "AI adoption causally increases labour productivity levels by 4% on average. Employees in AI-using companies benefit through higher wages, both in total and per employee.",
@@ -716,7 +728,7 @@
       "publisher": "HBS Working Paper (Otis, Clarke, Delecourt, Holtz, Koning)",
       "evidenceTier": 1,
       "datePublished": "2023-12-01",
-      "excerpt": "The paper reports no statistically significant average effect on revenues or profits. But effects are highly heterogeneous: high‑performing businesses at baseline appear to improve (roughly 15 percent), while low performers do worse (roughly 8-10 percent worse)",
+      "excerpt": "The paper reports no statistically significant average effect on revenues or profits. But effects are highly heterogeneous: high\u2011performing businesses at baseline appear to improve (roughly 15 percent), while low performers do worse (roughly 8-10 percent worse)",
       "dateAdded": "2026-03-07"
     },
     {
@@ -794,7 +806,7 @@
     },
     {
       "id": "bessen-automatic-reaction-2025",
-      "title": "Automatic Reaction — What Happens to Workers at Firms that Automate?",
+      "title": "Automatic Reaction \u2014 What Happens to Workers at Firms that Automate?",
       "url": "https://doi.org/10.1162/rest_a_01284",
       "publisher": "Review of Economics and Statistics (Bessen, Goos, Salomons, van den Berge)",
       "evidenceTier": 1,
@@ -868,6 +880,15 @@
       "datePublished": "2026-03-24",
       "excerpt": "This estimate of the value of tasks in Claude.ai has dropped slightly from $49.3 to $47.9. US avg. hourly wage: $37.3.",
       "dateAdded": "2026-03-24"
+    },
+    {
+      "id": "tufts-digital-planet-ai-jobs-risk-2026",
+      "title": "Will Wired Belts Become the New Rust Belts? AI and the Emerging Geography of American Job Risk",
+      "url": "https://digitalplanet.tufts.edu/ai-and-the-emerging-geography-of-american-job-risk-page/",
+      "publisher": "Digital Planet, The Fletcher School, Tufts University",
+      "evidenceTier": 2,
+      "datePublished": "2026-03-25",
+      "excerpt": "total income loss of between $200 billion to $1.5 trillion, representing 2% to 15% of overall income from wages and salaries across the U.S."
     }
   ]
 }

@@ -92,6 +92,16 @@
       "metricType": "survey",
       "sampleSize": 748,
       "dataType": "projected"
+    },
+    {
+      "date": "2026-03-25",
+      "value": 16.5,
+      "sourceIds": [
+        "tufts-digital-planet-ai-jobs-risk-2026"
+      ],
+      "evidenceTier": 2,
+      "metricType": "projection",
+      "dataType": "projected"
     }
   ],
   "overlays": [
@@ -314,7 +324,7 @@
       "publisher": "Morgan Stanley (via TechCrunch / Financial Times)",
       "evidenceTier": 2,
       "datePublished": "2025-12-01",
-      "excerpt": "200,000+ European banking jobs could vanish by 2030 — roughly 10% of workforce at 35 major European lenders (2.12M staff). Efficiency gains of 30% quoted by banks.",
+      "excerpt": "200,000+ European banking jobs could vanish by 2030 \u2014 roughly 10% of workforce at 35 major European lenders (2.12M staff). Efficiency gains of 30% quoted by banks.",
       "dateAdded": "2026-03-10"
     },
     {
@@ -324,7 +334,7 @@
       "publisher": "Multiple financial reporting (via Fortune)",
       "evidenceTier": 1,
       "datePublished": "2025-12-31",
-      "excerpt": "Combined headcount fell to 1.09 million — lowest since 2021, down ~10,600 from prior year, largest annual reduction since 2016.",
+      "excerpt": "Combined headcount fell to 1.09 million \u2014 lowest since 2021, down ~10,600 from prior year, largest annual reduction since 2016.",
       "dateAdded": "2026-03-10"
     },
     {
@@ -334,7 +344,7 @@
       "publisher": "Citigroup Global Perspectives & Solutions",
       "evidenceTier": 2,
       "datePublished": "2024-06-19",
-      "excerpt": "54% of banking jobs have high potential for automation — more than any other sector. Another 12% could be augmented. Insurance at 48%, capital markets at 40%.",
+      "excerpt": "54% of banking jobs have high potential for automation \u2014 more than any other sector. Another 12% could be augmented. Insurance at 48%, capital markets at 40%.",
       "dateAdded": "2026-03-10"
     },
     {
@@ -399,12 +409,12 @@
     },
     {
       "id": "bofa-q4-2025-ai-coding-2026",
-      "title": "Bank of America Q4 2025 Earnings Call — AI Coding Efficiency",
+      "title": "Bank of America Q4 2025 Earnings Call \u2014 AI Coding Efficiency",
       "url": "https://investor.bankofamerica.com/events-and-presentations/events/detail/20260114-q4-2025-bank-of-america-earnings-conference-call",
       "publisher": "Bank of America (Q4 2025 earnings call)",
       "evidenceTier": 1,
       "datePublished": "2026-01-14",
-      "excerpt": "CEO Brian Moynihan: 'We have 18,000 people on the company's payroll who code, and we've — using the AI techniques, we've taken 30% out of the coding part of the stream of introducing a new product or service or change that saved us about 2,000 people.'",
+      "excerpt": "CEO Brian Moynihan: 'We have 18,000 people on the company's payroll who code, and we've \u2014 using the AI techniques, we've taken 30% out of the coding part of the stream of introducing a new product or service or change that saved us about 2,000 people.'",
       "dateAdded": "2026-03-10"
     },
     {
@@ -534,6 +544,15 @@
       "datePublished": "2026-03-24",
       "excerpt": "Automated trading & market ops: monitor markets or positions, propose specific investments, inform traders of market conditions, and related tasks. [Shares at least doubling in our latest sample.]",
       "dateAdded": "2026-03-24"
+    },
+    {
+      "id": "tufts-digital-planet-ai-jobs-risk-2026",
+      "title": "Will Wired Belts Become the New Rust Belts? AI and the Emerging Geography of American Job Risk",
+      "url": "https://digitalplanet.tufts.edu/ai-and-the-emerging-geography-of-american-job-risk-page/",
+      "publisher": "Digital Planet, The Fletcher School, Tufts University",
+      "evidenceTier": 2,
+      "datePublished": "2026-03-25",
+      "excerpt": "Finance and Insurance (16%)... Finance and Insurance 16.5%"
     }
   ]
 }

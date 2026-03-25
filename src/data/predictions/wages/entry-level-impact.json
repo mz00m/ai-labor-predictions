@@ -265,7 +265,7 @@
         "dallas-fed-entry-level-2026"
       ],
       "evidenceTier": 1,
-      "label": "Dallas Fed: young worker share fell 16.4% → 15.5%"
+      "label": "Dallas Fed: young worker share fell 16.4% \u2192 15.5%"
     },
     {
       "date": "2026-01-06",
@@ -346,7 +346,7 @@
         "dallas-fed-davis-ai-wages-2026"
       ],
       "evidenceTier": 1,
-      "label": "Dallas Fed: AI exposure → 0.28pp wage growth reduction in low-experience-premium jobs"
+      "label": "Dallas Fed: AI exposure \u2192 0.28pp wage growth reduction in low-experience-premium jobs"
     },
     {
       "date": "2026-02-24",
@@ -374,12 +374,21 @@
       ],
       "evidenceTier": 2,
       "label": "Anthropic: AI exposure concentrates in credentialed roles (17.4% vs 4.5% grad degrees)"
+    },
+    {
+      "date": "2026-03-25",
+      "direction": "down",
+      "sourceIds": [
+        "tufts-digital-planet-ai-jobs-risk-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Tufts Digital Planet: Entry-level roles bear disproportionate AI displacement"
     }
   ],
   "sources": [
     {
       "id": "indeed-entry-level-2023",
-      "title": "Entry-Level Job Market Update — Indeed Hiring Lab",
+      "title": "Entry-Level Job Market Update \u2014 Indeed Hiring Lab",
       "url": "https://www.hiringlab.org/2025/09/25/september-labor-market-squeeze-on-new-entrants/",
       "publisher": "Indeed Hiring Lab",
       "evidenceTier": 2,
@@ -439,7 +448,7 @@
     },
     {
       "id": "wsj-entry-level-squeeze",
-      "title": "Entry-Level Jobs Are Vanishing — and AI Is a Big Reason",
+      "title": "Entry-Level Jobs Are Vanishing \u2014 and AI Is a Big Reason",
       "url": "https://www.wsj.com/lifestyle/careers/ai-entry-level-jobs-career-strategy-f59d574b",
       "publisher": "The Wall Street Journal",
       "evidenceTier": 3,
@@ -458,7 +467,7 @@
     },
     {
       "id": "bls-entry-wages-2025",
-      "title": "Usual Weekly Earnings — Workers 16-24",
+      "title": "Usual Weekly Earnings \u2014 Workers 16-24",
       "url": "https://www.bls.gov/cps/",
       "publisher": "Bureau of Labor Statistics",
       "evidenceTier": 1,
@@ -563,7 +572,7 @@
       "publisher": "SSRN (Hosseini Maasoum, Lichtinger)",
       "evidenceTier": 1,
       "datePublished": "2025-09-01",
-      "excerpt": "Analysis of 62M U.S. resumes: junior employment declined sharply at AI-adopting firms while senior employment was largely unchanged — described as 'seniority-biased technological change.'",
+      "excerpt": "Analysis of 62M U.S. resumes: junior employment declined sharply at AI-adopting firms while senior employment was largely unchanged \u2014 described as 'seniority-biased technological change.'",
       "dateAdded": "2026-03-01"
     },
     {
@@ -630,10 +639,10 @@
       "id": "cruces-galiani-education-gap-2026",
       "title": "Does Generative AI Narrow Education-Based Productivity Gaps? Evidence from a Randomized Experiment",
       "url": "https://www.nber.org/papers/w34851",
-      "publisher": "NBER (Cruces, Fernández Meijide, Galiani, Gálvez, Lombardi)",
+      "publisher": "NBER (Cruces, Fern\u00e1ndez Meijide, Galiani, G\u00e1lvez, Lombardi)",
       "evidenceTier": 1,
       "datePublished": "2026-02-01",
-      "excerpt": "Without AI, higher-education participants outperformed lower-education participants by 0.548 standard deviations. With AI access, this gap fell to 0.139 standard deviations—closing about 75 percent of the baseline productivity difference.",
+      "excerpt": "Without AI, higher-education participants outperformed lower-education participants by 0.548 standard deviations. With AI access, this gap fell to 0.139 standard deviations\u2014closing about 75 percent of the baseline productivity difference.",
       "dateAdded": "2026-03-07"
     },
     {
@@ -702,6 +711,15 @@
       "datePublished": "2025-06-13",
       "excerpt": "Employer demand for formal degrees is declining, especially quickly for AI-exposed jobs. The percentage of jobs AI augments that require a degree fell 7 percentage points between 2019 and 2024.",
       "dateAdded": "2026-03-21"
+    },
+    {
+      "id": "tufts-digital-planet-ai-jobs-risk-2026",
+      "title": "Will Wired Belts Become the New Rust Belts? AI and the Emerging Geography of American Job Risk",
+      "url": "https://digitalplanet.tufts.edu/ai-and-the-emerging-geography-of-american-job-risk-page/",
+      "publisher": "Digital Planet, The Fletcher School, Tufts University",
+      "evidenceTier": 2,
+      "datePublished": "2026-03-25",
+      "excerpt": "AI-related job losses are more concentrated in lower-income roles... affecting entry-level roles that are usually repetitive such as administrative, clerical, or data-processing positions"
     }
   ]
 }

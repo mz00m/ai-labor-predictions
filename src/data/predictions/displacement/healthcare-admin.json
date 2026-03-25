@@ -54,6 +54,16 @@
       "evidenceTier": 1,
       "metricType": "employment",
       "dataType": "observed"
+    },
+    {
+      "date": "2026-03-25",
+      "value": 3.6,
+      "sourceIds": [
+        "tufts-digital-planet-ai-jobs-risk-2026"
+      ],
+      "evidenceTier": 2,
+      "metricType": "projection",
+      "dataType": "projected"
     }
   ],
   "overlays": [
@@ -276,7 +286,9 @@
     {
       "date": "2026-03-13",
       "direction": "neutral",
-      "sourceIds": ["fed-atl-duke-cfo-ai-productivity-2026"],
+      "sourceIds": [
+        "fed-atl-duke-cfo-ai-productivity-2026"
+      ],
       "evidenceTier": 1,
       "label": "Fed/Duke: Healthcare NEI 0.69; AI enhances more roles than it replaces"
     }
@@ -551,6 +563,15 @@
       "datePublished": "2026-03-13",
       "excerpt": "Healthcare and social assistance: 62.5% of firms AI-exposed, but Negative Exposure Index of 0.688 indicates AI enhances more healthcare roles than it replaces. Consistent with AI complementing analytical and clinical decision tasks.",
       "dateAdded": "2026-03-16"
+    },
+    {
+      "id": "tufts-digital-planet-ai-jobs-risk-2026",
+      "title": "Will Wired Belts Become the New Rust Belts? AI and the Emerging Geography of American Job Risk",
+      "url": "https://digitalplanet.tufts.edu/ai-and-the-emerging-geography-of-american-job-risk-page/",
+      "publisher": "Digital Planet, The Fletcher School, Tufts University",
+      "evidenceTier": 2,
+      "datePublished": "2026-03-25",
+      "excerpt": "Health Care and Social Assistance... 3.6%"
     }
   ]
 }
