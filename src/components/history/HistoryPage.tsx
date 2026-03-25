@@ -256,6 +256,18 @@ export default function HistoryPage() {
             occupational structures.
           </p>
           <VulnerabilityTable />
+          <div className="mt-6 p-4 rounded-lg border border-white/[0.06] bg-white/[0.02]">
+            <p className="text-[14px] text-[var(--muted)] leading-[1.75]">
+              Want to see how your specific job breaks down?{' '}
+              <Link
+                href="/task-visualizer"
+                className="text-blue-400 hover:text-blue-300 underline underline-offset-2 transition-colors"
+              >
+                Explore the Task Visualizer
+              </Link>{' '}
+              to analyze task-level AI exposure for 100+ occupations.
+            </p>
+          </div>
         </div>
       </section>
 
