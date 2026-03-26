@@ -463,6 +463,15 @@
       ],
       "evidenceTier": 2,
       "label": "Anthropic: Claude tasks avg $47.9/hr vs $37.3 US avg wage"
+    },
+    {
+      "date": "2026-03-26",
+      "direction": "neutral",
+      "sourceIds": [
+        "lichtinger-hosseini-inequality-equalizer-2026"
+      ],
+      "evidenceTier": 4,
+      "label": "Lichtinger & Hosseini: Net AI inequality effect genuinely open question"
     }
   ],
   "sources": [
@@ -889,6 +898,16 @@
       "evidenceTier": 2,
       "datePublished": "2026-03-25",
       "excerpt": "total income loss of between $200 billion to $1.5 trillion, representing 2% to 15% of overall income from wages and salaries across the U.S."
+    },
+    {
+      "id": "lichtinger-hosseini-inequality-equalizer-2026",
+      "title": "AI Narrows Performance Gaps — But Does That Mean It Reduces Inequality?",
+      "url": "https://guylichtinger.substack.com/p/ai-narrows-performance-gaps-but-does",
+      "publisher": "Substack (Guy Lichtinger, Seyed M Hosseini)",
+      "evidenceTier": 4,
+      "datePublished": "2026-03-26",
+      "excerpt": "whether it is, on net, an equalizing force remains a genuinely open question—one that the current evidence, important as it is, does not yet answer.",
+      "dateAdded": "2026-03-26"
     }
   ]
 }
