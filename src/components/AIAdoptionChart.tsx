@@ -254,7 +254,7 @@ export default function AIAdoptionChart() {
       <p className="text-[12px] text-[var(--muted)] mt-2">
         St. Louis Fed / Harvard RPS &middot; Updated quarterly &middot;{" "}
         <a
-          href="http://GenAIAdoptionTracker.com"
+          href="https://genaiadoptiontracker.com"
           target="_blank"
           rel="noopener noreferrer"
           className="underline hover:text-[var(--foreground)]"

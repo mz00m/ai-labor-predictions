@@ -27,13 +27,13 @@ const EVIDENCE_STATS = [
     stat: "33:1 cost ratio",
     label: "Firms substituting freelancers with AI \u2014 freelance spend fell from 0.66% to 0.14% of total",
     source: "Ramp Economics Lab, 2026",
-    url: "https://ramp.com/blog/ai-spending-trends-2026",
+    url: "https://ramp.com/velocity/ai-labor-market-impact-freelancers",
   },
   {
     stat: "No macro effect",
     label: "Aggregate unemployment data show no economy-wide displacement yet",
     source: "Yale Budget Lab, 2025; ICLE, 2026",
-    url: "https://budgetlab.yale.edu/research/ai-labor-market-2025",
+    url: "https://budgetlab.yale.edu/research/evaluating-impact-ai-labor-market-current-state-affairs",
   },
 ];
 

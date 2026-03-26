@@ -296,7 +296,7 @@
     {
       "id": "arxiv-ai-skills-improve-2026",
       "title": "AI Skills Improve Job Prospects: Causal Evidence from a Hiring Experiment",
-      "url": "http://arxiv.org/abs/2601.13286v2",
+      "url": "https://arxiv.org/abs/2601.13286v2",
       "publisher": "arxiv.org",
       "evidenceTier": 1,
       "datePublished": "2026-01-19",
@@ -316,7 +316,7 @@
     {
       "id": "arxiv-what-do-professional-2025",
       "title": "What do professional software developers need to know to succeed in an age of Artificial Intelligence?",
-      "url": "http://arxiv.org/abs/2506.00202v3",
+      "url": "https://arxiv.org/abs/2506.00202v3",
       "publisher": "arxiv.org",
       "evidenceTier": 1,
       "datePublished": "2025-05-30",
@@ -356,7 +356,7 @@
     {
       "id": "alikhani-brookings-genai-adoption-2025",
       "title": "GenAI Adoption Patterns",
-      "url": "https://www.brookings.edu/articles/genai-adoption-2025",
+      "url": "https://www.brookings.edu/articles/how-are-americans-using-ai-evidence-from-a-nationwide-survey/",
       "publisher": "Brookings Institution (Alikhani et al.)",
       "evidenceTier": 2,
       "datePublished": "2025-01-01",
@@ -366,7 +366,7 @@
     {
       "id": "stephany-duszynski-gender-gap-2026",
       "title": "Gender Gap in AI Adoption",
-      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=stephany2026",
+      "url": "https://arxiv.org/abs/2601.03880",
       "publisher": "Oxford (Stephany, Duszynski)",
       "evidenceTier": 1,
       "datePublished": "2026-01-01",
@@ -386,7 +386,7 @@
     {
       "id": "uk-gds-copilot-2025",
       "title": "GitHub Copilot in UK Civil Service",
-      "url": "https://digital.gov.uk/reports/copilot-evaluation-2025",
+      "url": "https://www.gov.uk/government/publications/ai-coding-assistant-trial/ai-coding-assistant-trial-uk-public-sector-findings-report",
       "publisher": "UK Government Digital Service",
       "evidenceTier": 2,
       "datePublished": "2025-06-01",
