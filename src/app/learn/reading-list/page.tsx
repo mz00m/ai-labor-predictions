@@ -33,7 +33,7 @@ function getMonday(dateStr: string): string {
 function groupByWeek(articles: Article[]): Map<string, Article[]> {
   const map = new Map<string, Article[]>();
   for (const a of articles) {
-    const monday = getMonday(a.weekFeatured);
+    const monday = getMonday(a.weekFeatured || a.date);
     if (!map.has(monday)) map.set(monday, []);
     map.get(monday)!.push(a);
   }
