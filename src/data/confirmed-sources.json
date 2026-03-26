@@ -51,7 +51,7 @@
     "freund-mann-job-transformation-2026": {
       "id": "freund-mann-job-transformation-2026",
       "title": "Job Transformation, Specialization, and the Labor Market Effects of AI",
-      "url": "https://lukasbfreund.github.io/files/FM_AI.pdf",
+      "url": "https://www.minneapolisfed.org/research/institute-working-papers/job-transformation-specialization-and-the-labor-market-effects-of-ai",
       "publisher": "Boston College / Arizona State (Freund, Mann)",
       "evidenceTier": 1,
       "datePublished": "2026-03-18",
@@ -921,7 +921,6 @@
       "datePublished": "2026-01-10",
       "excerpt": "Employers cited AI as a direct cause for 55,000 job cuts in 2025, concentrated in customer service, data entry, and back-office operations.",
       "usedIn": [
-        "overall-us-displacement",
         "total-us-jobs-lost"
       ],
       "verified": true
@@ -1606,7 +1605,6 @@
       "datePublished": "2025-01-06",
       "excerpt": "Forrester estimates 6% of US jobs will be lost to AI and automation by 2030, partially offset by new job creation.",
       "usedIn": [
-        "overall-us-displacement",
         "total-us-jobs-lost"
       ],
       "verified": true
@@ -1788,7 +1786,6 @@
       "datePublished": "2025-10-01",
       "excerpt": "No economy-wide employment disruption tied to AI since ChatGPT's debut. Measures of AI exposure show no clear relationship with changes in employment or unemployment.",
       "usedIn": [
-        "overall-us-displacement",
         "total-us-jobs-lost"
       ],
       "verified": true
@@ -2070,7 +2067,6 @@
       "datePublished": "2025-01-06",
       "excerpt": "Half of workers in exposed occupations have used ChatGPT; younger, male, higher-achieving workers lead adoption. Women 16pp less likely to use for work.",
       "usedIn": [
-        "overall-us-displacement",
         "total-us-jobs-lost"
       ],
       "verified": true
@@ -2215,7 +2211,6 @@
       "datePublished": "2024-01-14",
       "excerpt": "Almost 40% of global employment is exposed to AI; in advanced economies, roughly 60% of workers face some degree of AI impact.",
       "usedIn": [
-        "overall-us-displacement",
         "total-us-jobs-lost"
       ],
       "verified": true
@@ -2427,7 +2422,6 @@
       "datePublished": "2025-01-28",
       "excerpt": "Data entry (-27%), customer service (-18%), and basic admin (-22%) postings saw steepest declines. AI/ML postings +42% YoY.",
       "usedIn": [
-        "overall-us-displacement",
         "total-us-jobs-lost"
       ],
       "verified": true
@@ -2825,7 +2819,6 @@
       "evidenceTier": 4,
       "datePublished": "2025-05-01",
       "usedIn": [
-        "overall-us-displacement",
         "total-us-jobs-lost"
       ],
       "verified": true
@@ -3027,7 +3020,6 @@
       "datePublished": "2025-11-01",
       "excerpt": "Survey of 2,500 C-suite executives finds 90% report no significant net employment impact from AI adoption as of Q3 2025, though task reallocation is widespread.",
       "usedIn": [
-        "overall-us-displacement",
         "total-us-jobs-lost"
       ],
       "verified": true
@@ -3161,7 +3153,6 @@
       "datePublished": "2023-07-11",
       "excerpt": "27% of jobs are in occupations at high risk, but actual displacement depends on adoption speed and policy response.",
       "usedIn": [
-        "overall-us-displacement",
         "total-us-jobs-lost"
       ],
       "verified": true
@@ -3305,7 +3296,6 @@
       "datePublished": "2025-02-01",
       "excerpt": "Workers in AI-exposed occupations face significantly higher unemployment risk, suggesting aggregate job losses may exceed earlier estimates.",
       "usedIn": [
-        "overall-us-displacement",
         "total-us-jobs-lost"
       ],
       "verified": true
@@ -3527,7 +3517,6 @@
       "datePublished": "2025-12-21",
       "excerpt": "Challenger, Gray & Christmas reports AI has been cited as the reason for 54,694 planned layoffs in 2025. Overall job cuts topped 1 million in 2025.",
       "usedIn": [
-        "overall-us-displacement",
         "total-us-jobs-lost"
       ],
       "verified": true,
@@ -3809,7 +3798,6 @@
       "datePublished": "2024-09-15",
       "excerpt": "Employers expect 23% of jobs to change in the next five years, with a net decline of 2-4% of total roles once job creation offsets displacement.",
       "usedIn": [
-        "overall-us-displacement",
         "total-us-jobs-lost"
       ],
       "verified": true
@@ -4257,7 +4245,6 @@
       "datePublished": "2026-02-15",
       "excerpt": "Looking ahead three years, executives predict a 1.4 percent productivity boost and 0.8 percent output increase alongside a 0.7 percent employment reduction\u2014while employees forecast a 0.5 percent employment increase.",
       "usedIn": [
-        "overall-us-displacement",
         "total-us-jobs-lost"
       ],
       "verified": true,
@@ -4409,7 +4396,7 @@
     "arxiv-how-well-does-2026": {
       "id": "arxiv-how-well-does-2026",
       "title": "How Well Does Agent Development Reflect Real-World Work?",
-      "url": "http://arxiv.org/abs/2603.01203v1",
+      "url": "https://arxiv.org/abs/2603.01203v1",
       "publisher": "arxiv.org",
       "evidenceTier": 1,
       "datePublished": "2026-03-01",
@@ -4423,13 +4410,12 @@
     "arxiv-ai-skills-improve-2026": {
       "id": "arxiv-ai-skills-improve-2026",
       "title": "AI Skills Improve Job Prospects: Causal Evidence from a Hiring Experiment",
-      "url": "http://arxiv.org/abs/2601.13286v2",
+      "url": "https://arxiv.org/abs/2601.13286v2",
       "publisher": "arxiv.org",
       "evidenceTier": 1,
       "datePublished": "2026-01-19",
       "excerpt": "AI skills significantly increase interview invitation probabilities by approximately 8 to 15 percentage points, compared with candidates without such skills",
       "usedIn": [
-        "overall-us-displacement",
         "genai-work-adoption"
       ],
       "verified": true,
@@ -4438,13 +4424,12 @@
     "arxiv-what-do-professional-2025": {
       "id": "arxiv-what-do-professional-2025",
       "title": "What do professional software developers need to know to succeed in an age of Artificial Intelligence?",
-      "url": "http://arxiv.org/abs/2506.00202v3",
+      "url": "https://arxiv.org/abs/2506.00202v3",
       "publisher": "arxiv.org",
       "evidenceTier": 1,
       "datePublished": "2025-05-30",
       "excerpt": "We describe our research with 21 developers at the cutting edge of using AI",
       "usedIn": [
-        "overall-us-displacement",
         "genai-work-adoption",
         "ai-adoption-rate"
       ],
@@ -4698,7 +4683,7 @@
     "abn-amro-ai-workforce-2025": {
       "id": "abn-amro-ai-workforce-2025",
       "title": "ABN Amro Plans ~20% Workforce Reduction by 2028",
-      "url": "https://www.ft.com/content/abn-amro-ai-workforce-2025",
+      "url": "https://www.abnamro.com/en/news/abn-amro-presents-roadmap-for-profitable-growth-and-new-financial-targets",
       "publisher": "ABN Amro (via Financial Times)",
       "evidenceTier": 3,
       "datePublished": "2025-11-01",
@@ -4979,7 +4964,7 @@
     "chen-stratton-ai-in-firm-2026": {
       "id": "chen-stratton-ai-in-firm-2026",
       "title": "Artificial Intelligence in the Firm",
-      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=chen-stratton-2026",
+      "url": "https://fion.ac/jellyfish.pdf",
       "publisher": "Chen & Stratton (Jellyfish data)",
       "evidenceTier": 1,
       "datePublished": "2026-01-01",
@@ -5197,7 +5182,7 @@
     "stevens-freelance-marketplace-2026": {
       "id": "stevens-freelance-marketplace-2026",
       "title": "Freelance Marketplace Spend Collapse After ChatGPT",
-      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=stevens2026",
+      "url": "https://ramp.com/velocity/ai-labor-market-impact-freelancers",
       "publisher": "Academic paper (Stevens)",
       "evidenceTier": 1,
       "datePublished": "2026-01-01",
@@ -5211,7 +5196,7 @@
     "kim-jin-lee-pixiv-illustrators-2026": {
       "id": "kim-jin-lee-pixiv-illustrators-2026",
       "title": "AI Impact on Pixiv Illustrators",
-      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=kim2026",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6134103",
       "publisher": "Academic paper (Kim, Jin, Lee)",
       "evidenceTier": 1,
       "datePublished": "2026-01-01",
@@ -5338,7 +5323,7 @@
     "bonfiglioli-ai-epop-2025": {
       "id": "bonfiglioli-ai-epop-2025",
       "title": "AI Adoption and Employment-to-Population Ratio",
-      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=bonfiglioli2025",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4608807",
       "publisher": "Academic paper (Bonfiglioli et al.)",
       "evidenceTier": 1,
       "datePublished": "2025-01-01",
@@ -5352,7 +5337,7 @@
     "abrahams-levy-metros-ai-2025": {
       "id": "abrahams-levy-metros-ai-2025",
       "title": "Geographic Vulnerability to AI Displacement",
-      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=abrahams2025",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4874104",
       "publisher": "Academic paper (Abrahams, Levy)",
       "evidenceTier": 1,
       "datePublished": "2025-01-01",
@@ -5481,7 +5466,7 @@
     "maasoum-lichtinger-entry-barriers-2026": {
       "id": "maasoum-lichtinger-entry-barriers-2026",
       "title": "GenAI and Entry Barriers",
-      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=maasoum2026",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6059674",
       "publisher": "SSRN (Maasoum, Lichtinger)",
       "evidenceTier": 1,
       "datePublished": "2026-01-01",
@@ -5636,7 +5621,7 @@
     "alikhani-brookings-genai-adoption-2025": {
       "id": "alikhani-brookings-genai-adoption-2025",
       "title": "GenAI Adoption Patterns",
-      "url": "https://www.brookings.edu/articles/genai-adoption-2025",
+      "url": "https://www.brookings.edu/articles/how-are-americans-using-ai-evidence-from-a-nationwide-survey/",
       "publisher": "Brookings Institution (Alikhani et al.)",
       "evidenceTier": 2,
       "datePublished": "2025-01-01",
@@ -5650,7 +5635,7 @@
     "stephany-duszynski-gender-gap-2026": {
       "id": "stephany-duszynski-gender-gap-2026",
       "title": "Gender Gap in AI Adoption",
-      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=stephany2026",
+      "url": "https://arxiv.org/abs/2601.03880",
       "publisher": "Oxford (Stephany, Duszynski)",
       "evidenceTier": 1,
       "datePublished": "2026-01-01",
@@ -5664,7 +5649,7 @@
     "uk-gds-copilot-2025": {
       "id": "uk-gds-copilot-2025",
       "title": "GitHub Copilot in UK Civil Service",
-      "url": "https://digital.gov.uk/reports/copilot-evaluation-2025",
+      "url": "https://www.gov.uk/government/publications/ai-coding-assistant-trial/ai-coding-assistant-trial-uk-public-sector-findings-report",
       "publisher": "UK Government Digital Service",
       "evidenceTier": 2,
       "datePublished": "2025-06-01",
@@ -5748,7 +5733,7 @@
     "brynjolfsson-shao-task-automation-2025": {
       "id": "brynjolfsson-shao-task-automation-2025",
       "title": "Worker Preferences for Task Automation",
-      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=shao2025",
+      "url": "https://arxiv.org/abs/2506.06576",
       "publisher": "MIT/Stanford (Shao, Brynjolfsson)",
       "evidenceTier": 1,
       "datePublished": "2025-01-01",
@@ -6103,7 +6088,7 @@
     "a16z-bofa-solopreneur-2026": {
       "id": "a16z-bofa-solopreneur-2026",
       "title": "AI-Native Solopreneuring?",
-      "url": "https://a16z.news/subscribe",
+      "url": "https://www.a16z.news/p/charts-of-the-week-learning-to-weld",
       "publisher": "a16z (citing Bank of America, Haver Analytics)",
       "evidenceTier": 3,
       "datePublished": "2026-03-16",

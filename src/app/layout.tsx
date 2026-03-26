@@ -60,7 +60,7 @@ export default function RootLayout({
               author: {
                 "@type": "Person",
                 name: "Matt Zieger",
-                url: "https://linkedin.com/in/mattzieger",
+                url: "https://www.linkedin.com/in/mattzieger",
                 jobTitle: "Chief Program & Partnership Officer",
                 worksFor: {
                   "@type": "Organization",

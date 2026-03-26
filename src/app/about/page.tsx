@@ -105,7 +105,7 @@ export default function AboutPage() {
             </p>
             <p className="text-[14px] text-[var(--muted)] leading-relaxed">
               <a
-                href="https://linkedin.com/in/mattzieger"
+                href="https://www.linkedin.com/in/mattzieger"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-semibold text-[var(--foreground)] underline hover:text-[var(--accent)] transition-colors"
