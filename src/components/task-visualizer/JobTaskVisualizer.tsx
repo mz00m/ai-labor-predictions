@@ -495,19 +495,6 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
                   <span className="opacity-70">task dimensions</span>
                 </div>
 
-                {/* Phase transition warning */}
-                {dimensionalityInfo.crossedRatio > 0.5 ? (
-                  <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[12px] font-medium border border-red-200 bg-red-50 text-red-700">
-                    <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" className="shrink-0 opacity-70">
-                      <path d="M8 1l7 14H1L8 1zm0 4.5v4m0 2v.5" stroke="currentColor" fill="none" strokeWidth="1.5" strokeLinecap="round" />
-                    </svg>
-                    Majority of task dimensions at cost parity by 2030 — firm incentive shifts toward full replacement
-                  </div>
-                ) : dimensionalityInfo.effectiveDimensions >= 4 && dimensionalityInfo.crossedRatio > 0 ? (
-                  <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[12px] font-medium border border-green-200 bg-green-50 text-green-700">
-                    Partial automation likely augments this role — O-Ring focus effect applies
-                  </div>
-                ) : null}
               </div>
             )}
           </div>
