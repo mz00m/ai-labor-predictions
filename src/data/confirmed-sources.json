@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-03-25",
-  "totalSources": 466,
-  "verifiedCount": 466,
+  "lastUpdated": "2026-03-26",
+  "totalSources": 467,
+  "verifiedCount": 467,
   "sources": {
     "cvl-economics-entertainment-ai-2024": {
       "id": "cvl-economics-entertainment-ai-2024",
@@ -6488,6 +6488,22 @@
         "median-wage-impact",
         "entry-level-wage-impact",
         "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "lichtinger-hosseini-inequality-equalizer-2026": {
+      "id": "lichtinger-hosseini-inequality-equalizer-2026",
+      "title": "AI Narrows Performance Gaps — But Does That Mean It Reduces Inequality?",
+      "url": "https://guylichtinger.substack.com/p/ai-narrows-performance-gaps-but-does",
+      "publisher": "Substack (Guy Lichtinger, Seyed M Hosseini)",
+      "evidenceTier": 4,
+      "datePublished": "2026-03-26",
+      "excerpt": "If AI dramatically boosts the productivity of high-paying knowledge work while leaving lower-paid service occupations largely unaffected, between-occupation inequality could widen even as within-task inequality narrows.",
+      "usedIn": [
+        "high-skill-wage-premium",
+        "entry-level-wage-impact",
+        "median-wage-impact"
       ],
       "verified": true,
       "synthetic": false

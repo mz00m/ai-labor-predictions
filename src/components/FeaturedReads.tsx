@@ -10,6 +10,15 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Lichtinger, Hosseini",
+    title: "AI Narrows Performance Gaps — But Does That Mean It Reduces Inequality?",
+    summary:
+      "Within-task equalization doesn't imply between-occupation equalization. Experiments hold tasks fixed, missing automation channel and seniority dynamics. Net inequality effect remains genuinely open.",
+    date: "Mar 26",
+    url: "https://guylichtinger.substack.com/p/ai-narrows-performance-gaps-but-does",
+    accent: "border-l-rose-500",
+  },
+  {
     author: "Tufts Digital Planet",
     title: "AI and the Emerging Geography of American Job Risk",
     summary:
@@ -44,15 +53,6 @@ const articles: Article[] = [
     date: "Mar 19",
     url: "https://budgetlab.yale.edu/research/evaluating-impact-ai-labor-market-januaryfebruary-cps-update",
     accent: "border-l-cyan-500",
-  },
-  {
-    author: "Martha Gimbel (Bloomberg)",
-    title: "The Best Guide to the AI Revolution May Be Victorian Fiction",
-    summary:
-      "Industrial Revolution novels illuminate what living through epochal technological change feels like. Weavers were the white-collar workers of their day -- real wages fell by half in 14 years.",
-    date: "Mar 20",
-    url: "https://www.bloomberg.com/news/articles/2026-03-20/to-understand-ai-s-future-read-dickens-bronte-industrial-revolution-novels",
-    accent: "border-l-orange-500",
   },
 ];
 
