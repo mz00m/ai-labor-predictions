@@ -22,12 +22,20 @@ const TIER_BG_COLORS: Record<number, string> = {
   4: "bg-gray-100 text-gray-700",
 };
 
+function getMonday(dateStr: string): string {
+  const d = new Date(dateStr + "T00:00:00");
+  const day = d.getDay(); // 0=Sun, 1=Mon, ...
+  const diff = day === 0 ? 6 : day - 1; // days since Monday
+  d.setDate(d.getDate() - diff);
+  return d.toISOString().slice(0, 10);
+}
+
 function groupByWeek(articles: Article[]): Map<string, Article[]> {
   const map = new Map<string, Article[]>();
   for (const a of articles) {
-    const week = a.weekFeatured;
-    if (!map.has(week)) map.set(week, []);
-    map.get(week)!.push(a);
+    const monday = getMonday(a.weekFeatured);
+    if (!map.has(monday)) map.set(monday, []);
+    map.get(monday)!.push(a);
   }
   return map;
 }
