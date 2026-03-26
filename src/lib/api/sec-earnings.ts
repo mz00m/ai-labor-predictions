@@ -95,7 +95,7 @@ export async function searchSECFilings(
           ticker,
           formType,
           filedAt,
-          url: `https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&filenum=${src.file_num || ""}&type=${formType}&dateb=&owner=include&count=1`,
+          url: `https://efts.sec.gov/LATEST/search-index?q=%22${encodeURIComponent(companyName)}%22&forms=${formType}&dateRange=custom&startdt=${filedAt.slice(0, 10)}`,
           excerpt,
         });
       }

@@ -666,7 +666,7 @@
     {
       "id": "stanford-ai-index-2025",
       "title": "Stanford AI Index Report 2025",
-      "url": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
+      "url": "https://aiindex.stanford.edu/report/",
       "publisher": "Stanford HAI",
       "evidenceTier": 2,
       "datePublished": "2025-12-01",
@@ -756,7 +756,7 @@
     {
       "id": "bick-blandin-deming-nber-2025",
       "title": "Is AI Already Replacing Jobs? A Large-Scale Survey",
-      "url": "https://www.nber.org/papers/w33734",
+      "url": "https://www.nber.org/papers/w32966",
       "publisher": "NBER (Bick, Blandin, Deming)",
       "evidenceTier": 1,
       "datePublished": "2025-08-15",
@@ -926,7 +926,7 @@
     {
       "id": "wharton-korst-enterprise-ai-2024",
       "title": "Enterprise AI Adoption Survey",
-      "url": "https://ai.wharton.upenn.edu/research/enterprise-ai-2024",
+      "url": "https://ai.wharton.upenn.edu/focus-areas/human-technology-interaction/2024-ai-adoption-report/",
       "publisher": "Wharton (Korst et al.)",
       "evidenceTier": 2,
       "datePublished": "2024-06-01",

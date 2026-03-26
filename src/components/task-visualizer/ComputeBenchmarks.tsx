@@ -48,7 +48,7 @@ const SOURCES = [
   },
   {
     label: "Epoch AI: \"Trends in the cost of computing\" (2024)",
-    url: "https://epochai.org/trends-in-the-cost-of-computing",
+    url: "https://epoch.ai/blog/trends-in-the-dollar-training-cost-of-machine-learning-systems",
   },
   {
     label: "Stanford HAI: AI Index Report 2025 — inference cost declining ~10x per year for equivalent capability",

@@ -499,7 +499,7 @@
     "bick-blandin-deming-nber-2025": {
       "id": "bick-blandin-deming-nber-2025",
       "title": "Is AI Already Replacing Jobs? A Large-Scale Survey",
-      "url": "https://www.nber.org/papers/w33734",
+      "url": "https://www.nber.org/papers/w32966",
       "publisher": "NBER (Bick, Blandin, Deming)",
       "evidenceTier": 1,
       "datePublished": "2025-08-15",
@@ -683,7 +683,7 @@
     "bofa-erica-ai-2025": {
       "id": "bofa-erica-ai-2025",
       "title": "Bank of America: Erica AI Assistant Surpasses 2 Billion Interactions",
-      "url": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2025/10/bank-of-america-s-erica-surpasses-2-billion-interactions.html",
+      "url": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2024/04/bofa-s-erica-surpasses-2-billion-interactions--helping-42-millio.html",
       "publisher": "Bank of America",
       "evidenceTier": 1,
       "datePublished": "2025-10-01",
@@ -1783,7 +1783,7 @@
     "genai-adoption-tracker-2025": {
       "id": "genai-adoption-tracker-2025",
       "title": "GenAI Adoption Tracker (Harvard / St. Louis Fed)",
-      "url": "https://genaiadoptiontracker.com",
+      "url": "https://pw.hks.harvard.edu/post/the-generative-ai-adoption-tracker",
       "publisher": "Harvard / St. Louis Fed RPS",
       "evidenceTier": 2,
       "datePublished": "2025-11-01",
@@ -1885,8 +1885,8 @@
     },
     "google-10k-2024": {
       "id": "google-10k-2024",
-      "title": "Alphabet Inc. 2024 10-K \u2014 Workforce & AI Automation Disclosures",
-      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001652044&type=10-K",
+      "title": "Alphabet Inc. 2024 10-K — Workforce & AI Automation Disclosures",
+      "url": "https://www.sec.gov/edgar/browse/?CIK=0001652044",
       "publisher": "Alphabet (SEC Filing)",
       "evidenceTier": 1,
       "datePublished": "2025-02-03",
@@ -2115,8 +2115,8 @@
     },
     "ibm-10k-2024": {
       "id": "ibm-10k-2024",
-      "title": "IBM 2024 10-K \u2014 AI Strategy & Workforce Transformation",
-      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000051143&type=10-K",
+      "title": "IBM 2024 10-K — AI Strategy & Workforce Transformation",
+      "url": "https://www.sec.gov/edgar/browse/?CIK=0000051143",
       "publisher": "IBM (SEC Filing)",
       "evidenceTier": 1,
       "datePublished": "2025-02-25",
@@ -2470,8 +2470,8 @@
     },
     "jpmorgan-10k-ai-2024": {
       "id": "jpmorgan-10k-ai-2024",
-      "title": "JPMorgan Chase 2024 10-K \u2014 AI and Workforce",
-      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000019617&type=10-K",
+      "title": "JPMorgan Chase 2024 10-K — AI and Workforce",
+      "url": "https://www.sec.gov/edgar/browse/?CIK=0000019617",
       "publisher": "JPMorgan Chase (SEC Filing)",
       "evidenceTier": 1,
       "datePublished": "2025-02-15",
@@ -2617,7 +2617,7 @@
     "lightcast-2024": {
       "id": "lightcast-2024",
       "title": "The AI Talent Landscape: Skills, Demand, and Compensation",
-      "url": "https://lightcast.io/resources/research/generative-artificial-intelligence",
+      "url": "https://lightcast.io/resources/research/the-lightcast-global-ai-skills-outlook",
       "publisher": "Lightcast (Burning Glass)",
       "evidenceTier": 2,
       "datePublished": "2024-01-15",
@@ -2841,8 +2841,8 @@
     },
     "meta-10k-2024": {
       "id": "meta-10k-2024",
-      "title": "Meta Platforms 2024 10-K \u2014 AI Efficiency & Headcount",
-      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001326801&type=10-K",
+      "title": "Meta Platforms 2024 10-K — AI Efficiency & Headcount",
+      "url": "https://www.sec.gov/edgar/browse/?CIK=0001326801",
       "publisher": "Meta Platforms (SEC Filing)",
       "evidenceTier": 1,
       "datePublished": "2025-02-01",
@@ -2855,7 +2855,7 @@
     "metr-2026": {
       "id": "metr-2026",
       "title": "We are Changing our Developer Productivity Experiment Design",
-      "url": "https://metr.org/blog/2026-02-24-developer-productivity-update/",
+      "url": "https://metr.org/blog/2026-02-24-uplift-update/",
       "publisher": "METR (Becker, Rush, Cunningham, Rein, Mahamud)",
       "evidenceTier": 1,
       "datePublished": "2026-02-24",
@@ -2923,7 +2923,7 @@
     "mit-task-2024": {
       "id": "mit-task-2024",
       "title": "Beyond AI Exposure: Which Tasks are Cost-Effective to Automate with Computer Vision?",
-      "url": "https://economics.mit.edu/sites/default/files/2024-01/Beyond_AI_Exposure.pdf",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4700751",
       "publisher": "MIT (Svanberg et al.)",
       "evidenceTier": 1,
       "datePublished": "2024-01-22",
@@ -3541,7 +3541,7 @@
     "stanford-ai-index-2025": {
       "id": "stanford-ai-index-2025",
       "title": "Stanford AI Index Report 2025",
-      "url": "https://hai.stanford.edu/ai-index/2025-ai-index-report",
+      "url": "https://aiindex.stanford.edu/report/",
       "publisher": "Stanford HAI",
       "evidenceTier": 2,
       "datePublished": "2025-12-01",
@@ -3715,8 +3715,8 @@
     },
     "upwork-freelancer-impact": {
       "id": "upwork-freelancer-impact",
-      "title": "Upwork Q2 2024 Earnings \u2014 Freelancer Market Trends",
-      "url": "https://investors.upwork.com/news-releases/news-release-details/upwork-announces-second-quarter-2024-financial-results",
+      "title": "Upwork Q2 2024 Earnings — Freelancer Market Trends",
+      "url": "https://investors.upwork.com/news-releases/news-release-details/upwork-reports-second-quarter-2024-financial-results",
       "publisher": "Upwork (Earnings Report)",
       "evidenceTier": 1,
       "datePublished": "2024-05-20",
@@ -4269,7 +4269,7 @@
     "eisfeldt-genai-exposure-2025": {
       "id": "eisfeldt-genai-exposure-2025",
       "title": "Generative AI and Firm Values",
-      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4375282",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4436627",
       "publisher": "SSRN (Eisfeldt, Schubert, Taska, Zhang)",
       "evidenceTier": 1,
       "datePublished": "2025-06-01",
@@ -4300,8 +4300,8 @@
     "gommers-masai-lancet-2026": {
       "id": "gommers-masai-lancet-2026",
       "title": "Interval Cancer, Sensitivity, and Specificity Comparing AI-Supported Mammography Screening with Standard Double Reading without AI in the MASAI Study",
-      "url": "https://doi.org/10.1016/S0140-6736(25)00120-X",
-      "publisher": "The Lancet (Gommers, Hernstr\u00f6m, Josefsson et al.)",
+      "url": "https://doi.org/10.1016/S0140-6736(25)02464-X",
+      "publisher": "The Lancet (Gommers, Hernström, Josefsson et al.)",
       "evidenceTier": 1,
       "datePublished": "2026-01-15",
       "excerpt": "In the AI group, screen readings fell from 109,692 to 61,248\u2014a 44 percent workload reduction\u2014while screen-detected cancers rose from 262 to 338, a 29 percent increase in detection.",
@@ -4853,7 +4853,7 @@
     "amazon-robotics-2025": {
       "id": "amazon-robotics-2025",
       "title": "Amazon Fulfillment Center Robotics Deployment",
-      "url": "https://www.aboutamazon.com/news/operations/amazon-robots",
+      "url": "https://www.aboutamazon.com/news/operations/amazon-robotics-robots-fulfillment-center",
       "publisher": "Amazon",
       "evidenceTier": 1,
       "datePublished": "2025-03-01",
@@ -4881,7 +4881,7 @@
     "shrm-automation-risk-2025": {
       "id": "shrm-automation-risk-2025",
       "title": "Jobs at High Risk of Automation in the US",
-      "url": "https://www.shrm.org/topics-tools/news/technology/automation-job-displacement-risk",
+      "url": "https://www.shrm.org/topics-tools/research/automation-generative-ai-and-job-displacement-risk-in-u-s--employment",
       "publisher": "SHRM",
       "evidenceTier": 2,
       "datePublished": "2025-10-01",
@@ -5198,7 +5198,7 @@
     "stevens-freelance-marketplace-2026": {
       "id": "stevens-freelance-marketplace-2026",
       "title": "Freelance Marketplace Spend Collapse After ChatGPT",
-      "url": "https://ramp.com/velocity/ai-labor-market-impact-freelancers",
+      "url": "https://arxiv.org/abs/2602.00139",
       "publisher": "Academic paper (Stevens)",
       "evidenceTier": 1,
       "datePublished": "2026-01-01",
@@ -5665,7 +5665,7 @@
     "uk-gds-copilot-2025": {
       "id": "uk-gds-copilot-2025",
       "title": "GitHub Copilot in UK Civil Service",
-      "url": "https://www.gov.uk/government/publications/ai-coding-assistant-trial/ai-coding-assistant-trial-uk-public-sector-findings-report",
+      "url": "https://www.gov.uk/government/publications/microsoft-365-copilot-experiment-cross-government-findings-report",
       "publisher": "UK Government Digital Service",
       "evidenceTier": 2,
       "datePublished": "2025-06-01",
@@ -5693,7 +5693,7 @@
     "wharton-korst-enterprise-ai-2024": {
       "id": "wharton-korst-enterprise-ai-2024",
       "title": "Enterprise AI Adoption Survey",
-      "url": "https://ai.wharton.upenn.edu/research/enterprise-ai-2024",
+      "url": "https://ai.wharton.upenn.edu/focus-areas/human-technology-interaction/2024-ai-adoption-report/",
       "publisher": "Wharton (Korst et al.)",
       "evidenceTier": 2,
       "datePublished": "2024-06-01",

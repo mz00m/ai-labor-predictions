@@ -750,7 +750,7 @@
     {
       "id": "mit-task-2024",
       "title": "Beyond AI Exposure: Which Tasks are Cost-Effective to Automate with Computer Vision?",
-      "url": "https://economics.mit.edu/sites/default/files/2024-01/Beyond_AI_Exposure.pdf",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4700751",
       "publisher": "MIT (Svanberg et al.)",
       "evidenceTier": 1,
       "datePublished": "2024-01-22",
@@ -777,8 +777,8 @@
     },
     {
       "id": "google-10k-2024",
-      "title": "Alphabet Inc. 2024 10-K \u2014 Workforce & AI Automation Disclosures",
-      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001652044&type=10-K",
+      "title": "Alphabet Inc. 2024 10-K — Workforce & AI Automation Disclosures",
+      "url": "https://www.sec.gov/edgar/browse/?CIK=0001652044",
       "publisher": "Alphabet (SEC Filing)",
       "evidenceTier": 1,
       "datePublished": "2025-02-03",
@@ -787,8 +787,8 @@
     },
     {
       "id": "meta-10k-2024",
-      "title": "Meta Platforms 2024 10-K \u2014 AI Efficiency & Headcount",
-      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001326801&type=10-K",
+      "title": "Meta Platforms 2024 10-K — AI Efficiency & Headcount",
+      "url": "https://www.sec.gov/edgar/browse/?CIK=0001326801",
       "publisher": "Meta Platforms (SEC Filing)",
       "evidenceTier": 1,
       "datePublished": "2025-02-01",
@@ -1138,7 +1138,7 @@
     {
       "id": "metr-2026",
       "title": "We are Changing our Developer Productivity Experiment Design",
-      "url": "https://metr.org/blog/2026-02-24-developer-productivity-update/",
+      "url": "https://metr.org/blog/2026-02-24-uplift-update/",
       "publisher": "METR (Becker, Rush, Cunningham, Rein, Mahamud)",
       "evidenceTier": 1,
       "datePublished": "2026-02-24",

@@ -580,7 +580,7 @@ export default function MethodologySection() {
               </a>
             </li>
             <li>
-              <a href="https://epochai.org/trends-in-the-cost-of-computing" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">
+              <a href="https://epoch.ai/blog/trends-in-the-dollar-training-cost-of-machine-learning-systems" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">
                 Epoch AI: Trends in the Cost of Computing — algorithmic efficiency doubling ~annually
               </a>
             </li>

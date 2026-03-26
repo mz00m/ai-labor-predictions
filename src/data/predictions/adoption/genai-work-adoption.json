@@ -274,7 +274,7 @@
     {
       "id": "genai-adoption-tracker-2025",
       "title": "GenAI Adoption Tracker (Harvard / St. Louis Fed)",
-      "url": "https://genaiadoptiontracker.com",
+      "url": "https://pw.hks.harvard.edu/post/the-generative-ai-adoption-tracker",
       "publisher": "Harvard / St. Louis Fed RPS",
       "evidenceTier": 2,
       "datePublished": "2025-11-01",
@@ -414,7 +414,7 @@
     {
       "id": "uk-gds-copilot-2025",
       "title": "GitHub Copilot in UK Civil Service",
-      "url": "https://www.gov.uk/government/publications/ai-coding-assistant-trial/ai-coding-assistant-trial-uk-public-sector-findings-report",
+      "url": "https://www.gov.uk/government/publications/microsoft-365-copilot-experiment-cross-government-findings-report",
       "publisher": "UK Government Digital Service",
       "evidenceTier": 2,
       "datePublished": "2025-06-01",

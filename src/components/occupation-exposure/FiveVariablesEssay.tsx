@@ -252,7 +252,7 @@ export default function FiveVariablesEssay() {
         <p>
           A{" "}
           <a
-            href="https://www.nber.org/papers/w33886"
+            href="https://www.nber.org/papers/w34836"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[var(--accent-text)] hover:underline"
@@ -352,7 +352,7 @@ export default function FiveVariablesEssay() {
           score the risks to <em>existing</em> jobs. But technology
           doesn&rsquo;t just destroy tasks. It{" "}
           <a
-            href="https://economics.mit.edu/sites/default/files/2024-05/new-work-aw.pdf"
+            href="https://www.nber.org/papers/w30389"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[var(--accent-text)] hover:underline"
