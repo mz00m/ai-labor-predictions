@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-03-26",
-  "totalSources": 468,
-  "verifiedCount": 468,
+  "lastUpdated": "2026-03-27",
+  "totalSources": 469,
+  "verifiedCount": 469,
   "sources": {
     "cvl-economics-entertainment-ai-2024": {
       "id": "cvl-economics-entertainment-ai-2024",
@@ -6499,7 +6499,7 @@
       "publisher": "NBER (David Autor, Neil Thompson)",
       "evidenceTier": 1,
       "datePublished": "2025-06-20",
-      "excerpt": "automation has raised wages and reduced employment in occupations where it eliminated inexpert tasks, but lowered wages and increased employment in occupations where it eliminated expert tasks. These effects are distinct from—and in the case of employment, opposite to—the effects of changing task quantities.",
+      "excerpt": "automation has raised wages and reduced employment in occupations where it eliminated inexpert tasks, but lowered wages and increased employment in occupations where it eliminated expert tasks. These effects are distinct from\u2014and in the case of employment, opposite to\u2014the effects of changing task quantities.",
       "usedIn": [
         "high-skill-wage-premium",
         "entry-level-wage-impact",
@@ -6510,7 +6510,7 @@
     },
     "lichtinger-hosseini-inequality-equalizer-2026": {
       "id": "lichtinger-hosseini-inequality-equalizer-2026",
-      "title": "AI Narrows Performance Gaps — But Does That Mean It Reduces Inequality?",
+      "title": "AI Narrows Performance Gaps \u2014 But Does That Mean It Reduces Inequality?",
       "url": "https://guylichtinger.substack.com/p/ai-narrows-performance-gaps-but-does",
       "publisher": "Substack (Guy Lichtinger, Seyed M Hosseini)",
       "evidenceTier": 4,
@@ -6520,6 +6520,20 @@
         "high-skill-wage-premium",
         "entry-level-wage-impact",
         "median-wage-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "levanon-education-penalty-2026": {
+      "id": "levanon-education-penalty-2026",
+      "title": "The Education Penalty",
+      "url": "https://www.linkedin.com/pulse/education-penalty-gad-levanon-2pb7e/",
+      "publisher": "The Burning Glass Institute (Gad Levanon)",
+      "evidenceTier": 3,
+      "datePublished": "2026-03-26",
+      "excerpt": "In 2022, there was essentially no relationship between a metro area's share of college graduates and where its unemployment rate stood relative to its own history. The correlation was -0.01. Three years later, that correlation is 0.26 \u2014 modest but meaningful across more than 300 metropolitan areas.",
+      "usedIn": [
+        "white-collar-professional-displacement"
       ],
       "verified": true,
       "synthetic": false
