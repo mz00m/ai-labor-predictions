@@ -10,6 +10,15 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "The Atlantic",
+    title: "Am I Coal, or Am I a Horse? AI, Jobs, and the Jevons Paradox",
+    summary:
+      "Are white-collar workers like coal (demand rises as efficiency gains unlock new uses) or horses (permanently replaced)? Jevons paradox meets the AI labor debate. 26M equines in 1915, 700K a century later.",
+    date: "Mar 26",
+    url: "https://www.theatlantic.com/ideas/2026/03/ai-job-loss-jevons-paradox/686520/",
+    accent: "border-l-amber-500",
+  },
+  {
     author: "Lichtinger, Hosseini",
     title: "AI Narrows Performance Gaps — But Does That Mean It Reduces Inequality?",
     summary:
@@ -44,15 +53,6 @@ const articles: Article[] = [
     date: "Mar 23",
     url: "https://aleximas.substack.com/p/how-will-ai-driven-automation-actually",
     accent: "border-l-emerald-500",
-  },
-  {
-    author: "Yale Budget Lab",
-    title: "Evaluating the Impact of AI on the Labor Market: Jan/Feb CPS Update",
-    summary:
-      "Jan/Feb 2026 CPS data show no AI displacement. Occupational dissimilarity flat, exposure quintiles stable, Anthropic 'Observed Exposure' confirms stability over disruption.",
-    date: "Mar 19",
-    url: "https://budgetlab.yale.edu/research/evaluating-impact-ai-labor-market-januaryfebruary-cps-update",
-    accent: "border-l-cyan-500",
   },
 ];
 
