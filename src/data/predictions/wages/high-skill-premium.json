@@ -347,6 +347,15 @@
       ],
       "evidenceTier": 4,
       "label": "Lichtinger & Hosseini: Between-occupation inequality may widen from AI"
+    },
+    {
+      "date": "2025-06-20",
+      "direction": "up",
+      "sourceIds": [
+        "autor-thompson-expertise-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER (Autor/Thompson): Automation of inexpert tasks raises wages in expert-intensive occupations"
     }
   ],
   "sources": [
@@ -663,6 +672,16 @@
       "evidenceTier": 4,
       "datePublished": "2026-03-26",
       "excerpt": "If AI dramatically boosts the productivity of high-paying knowledge work while leaving lower-paid service occupations largely unaffected, between-occupation inequality could widen even as within-task inequality narrows.",
+      "dateAdded": "2026-03-26"
+    },
+    {
+      "id": "autor-thompson-expertise-2025",
+      "title": "Expertise",
+      "url": "https://www.nber.org/papers/w33941",
+      "publisher": "NBER (David Autor, Neil Thompson)",
+      "evidenceTier": 1,
+      "datePublished": "2025-06-20",
+      "excerpt": "automation has raised wages and reduced employment in occupations where it eliminated inexpert tasks, but lowered wages and increased employment in occupations where it eliminated expert tasks.",
       "dateAdded": "2026-03-26"
     }
   ]

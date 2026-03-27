@@ -392,6 +392,15 @@
       ],
       "evidenceTier": 4,
       "label": "Lichtinger & Hosseini: Junior tasks most susceptible to AI displacement"
+    },
+    {
+      "date": "2025-06-20",
+      "direction": "down",
+      "sourceIds": [
+        "autor-thompson-expertise-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER (Autor/Thompson): 1 SD expertise decline linked to 18% wage drop per decade (303 occupations, 1980-2018)"
     }
   ],
   "sources": [
@@ -738,6 +747,16 @@
       "evidenceTier": 4,
       "datePublished": "2026-03-26",
       "excerpt": "The tasks juniors tend to do—more routine, more codifiable, more text-based—are generally more exposed to AI than what seniors do... the tasks juniors typically perform may be the ones most susceptible to displacement.",
+      "dateAdded": "2026-03-26"
+    },
+    {
+      "id": "autor-thompson-expertise-2025",
+      "title": "Expertise",
+      "url": "https://www.nber.org/papers/w33941",
+      "publisher": "NBER (David Autor, Neil Thompson)",
+      "evidenceTier": 1,
+      "datePublished": "2025-06-20",
+      "excerpt": "A one-standard-deviation decline in the complexity of an occupation's tasks—equivalent to the decline in expertise required by a telephone operator from 1980 to 2018—is linked to an 18% wage decline and a 40% increase in employment per decade.",
       "dateAdded": "2026-03-26"
     }
   ]

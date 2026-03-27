@@ -472,6 +472,15 @@
       ],
       "evidenceTier": 4,
       "label": "Lichtinger & Hosseini: Net AI inequality effect genuinely open question"
+    },
+    {
+      "date": "2025-06-20",
+      "direction": "neutral",
+      "sourceIds": [
+        "autor-thompson-expertise-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER (Autor/Thompson): Expertise framework shows automation has offsetting wage-employment effects"
     }
   ],
   "sources": [
@@ -907,6 +916,16 @@
       "evidenceTier": 4,
       "datePublished": "2026-03-26",
       "excerpt": "whether it is, on net, an equalizing force remains a genuinely open question—one that the current evidence, important as it is, does not yet answer.",
+      "dateAdded": "2026-03-26"
+    },
+    {
+      "id": "autor-thompson-expertise-2025",
+      "title": "Expertise",
+      "url": "https://www.nber.org/papers/w33941",
+      "publisher": "NBER (David Autor, Neil Thompson)",
+      "evidenceTier": 1,
+      "datePublished": "2025-06-20",
+      "excerpt": "automation can simultaneously replace experts in some occupations while augmenting expertise in others.",
       "dateAdded": "2026-03-26"
     }
   ]

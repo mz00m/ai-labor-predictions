@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-26",
-  "totalSources": 467,
-  "verifiedCount": 467,
+  "totalSources": 468,
+  "verifiedCount": 468,
   "sources": {
     "cvl-economics-entertainment-ai-2024": {
       "id": "cvl-economics-entertainment-ai-2024",
@@ -6488,6 +6488,22 @@
         "median-wage-impact",
         "entry-level-wage-impact",
         "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "autor-thompson-expertise-2025": {
+      "id": "autor-thompson-expertise-2025",
+      "title": "Expertise",
+      "url": "https://www.nber.org/papers/w33941",
+      "publisher": "NBER (David Autor, Neil Thompson)",
+      "evidenceTier": 1,
+      "datePublished": "2025-06-20",
+      "excerpt": "automation has raised wages and reduced employment in occupations where it eliminated inexpert tasks, but lowered wages and increased employment in occupations where it eliminated expert tasks. These effects are distinct from—and in the case of employment, opposite to—the effects of changing task quantities.",
+      "usedIn": [
+        "high-skill-wage-premium",
+        "entry-level-wage-impact",
+        "median-wage-impact"
       ],
       "verified": true,
       "synthetic": false
