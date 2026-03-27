@@ -10,11 +10,11 @@ interface Article {
 
 const articles: Article[] = [
   {
-    author: "The Atlantic",
-    title: "Am I Coal, or Am I a Horse? AI, Jobs, and the Jevons Paradox",
+    author: "Annie Lowrey (The Atlantic)",
+    title: "How to Guess If Your Job Will Exist in Five Years",
     summary:
-      "Are white-collar workers like coal (demand rises as efficiency gains unlock new uses) or horses (permanently replaced)? Jevons paradox meets the AI labor debate. 26M equines in 1915, 700K a century later.",
-    date: "Mar 26",
+      "Are you coal or a horse? Jevons paradox meets AI: software engineer hiring up 6% YoY even as Block cuts half its staff. Efficiency may expand demand for cognition, not shrink it.",
+    date: "Mar 25",
     url: "https://www.theatlantic.com/ideas/2026/03/ai-job-loss-jevons-paradox/686520/",
     accent: "border-l-amber-500",
   },
