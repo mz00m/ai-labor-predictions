@@ -655,6 +655,24 @@
       ],
       "evidenceTier": 1,
       "label": "Freund & Mann: White-collar professions (legal, science, engineering) projected to decline most"
+    },
+    {
+      "date": "2026-03-26",
+      "direction": "up",
+      "sourceIds": [
+        "levanon-education-penalty-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Burning Glass: Educated-metro unemployment correlation rose -0.01 to 0.26 (2022-2025)"
+    },
+    {
+      "date": "2026-03-26",
+      "direction": "up",
+      "sourceIds": [
+        "levanon-education-penalty-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Burning Glass: All 38%+ college metros saw double-digit unemployment percentile rise"
     }
   ],
   "sources": [
@@ -1283,6 +1301,16 @@
       "evidenceTier": 2,
       "datePublished": "2026-03-25",
       "excerpt": "Professional, Scientific, and Technical Services (16%)... Professional, Scientific, and Technical Services 15.6%"
+    },
+    {
+      "id": "levanon-education-penalty-2026",
+      "title": "The Education Penalty",
+      "url": "https://www.linkedin.com/pulse/education-penalty-gad-levanon-2pb7e/",
+      "publisher": "The Burning Glass Institute (Gad Levanon)",
+      "evidenceTier": 3,
+      "datePublished": "2026-03-26",
+      "excerpt": "In 2022, there was essentially no relationship between a metro area's share of college graduates and where its unemployment rate stood relative to its own history. The correlation was -0.01. Three years later, that correlation is 0.26 \u2014 modest but meaningful across more than 300 metropolitan areas.",
+      "dateAdded": "2026-03-27"
     }
   ]
 }
