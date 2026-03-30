@@ -1,0 +1,98 @@
+{
+  "week": "2026-W14",
+  "generatedAt": "2026-03-30T09:13:01.978Z",
+  "candidates": [
+    {
+      "highlight": {
+        "title": "The AI Layoff Trap: Automation Arms Race Erodes Consumer Demand",
+        "summary": "Falk and Tsoukalas model a competitive 'automation arms race' in which rational firms displace workers faster than the economy can reabsorb them, creating a demand externality that ultimately harms the firms themselves. The paper shows that awareness of this trap is insufficient to stop it under competitive market conditions, implying structural policy intervention may be required. This is one of the most directly relevant pieces to aggregate displacement dynamics published in the lookback window.",
+        "source": "http://arxiv.org/abs/2603.20617",
+        "authors": [
+          "Brett Hemenway Falk",
+          "Gerry Tsoukalas"
+        ],
+        "publishedAt": "2026-03-21",
+        "score": 0.269,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "overall-us-displacement"
+      },
+      "sourceId": "arxiv-the-ai-layoff-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Labor Theory of Value Revisited: AI and Digital Platforms Challenge Classical Wage Models",
+        "summary": "Zhang (2026) applies a Marxian framework to examine how AI and digital platform economies decouple labor input from value creation, arguing that traditional wage-setting mechanisms break down when algorithmic systems replace human cognitive work at scale. The paper calls for new theoretical extensions to account for AI-generated surplus and its distributional consequences. These findings bear directly on projections for median and entry-level wage trajectories.",
+        "source": "https://doi.org/10.1057/s41599-026-07030-4",
+        "authors": [
+          "Fenglin Zhang"
+        ],
+        "publishedAt": "2026-03-28",
+        "doi": "10.1057/s41599-026-07030-4",
+        "score": 0.327,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "median-wage-impact"
+      },
+      "sourceId": "doi-labor-theory-of-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Automation in Industry 4.0: Socio-Economic Trade-offs Beyond Efficiency Gains",
+        "summary": "Qi (2026) investigates the socio-economic consequences of autonomous systems in industrial production, arguing that efficiency narratives obscure significant labor displacement and ethical risks as algorithmic autonomy replaces labor-intensive processes. The study stresses that workforce transition costs fall disproportionately on lower-skilled workers, exacerbating inequality. These findings are highly relevant to understanding displacement patterns in manufacturing and adjacent white-collar support roles.",
+        "source": "https://doi.org/10.54254/2755-2721/2026.ba32390",
+        "authors": [
+          "Lanpeng Qi"
+        ],
+        "publishedAt": "2026-03-24",
+        "doi": "10.54254/2755-2721/2026.ba32390",
+        "score": 0.218,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "white-collar-professional-displacement"
+      },
+      "sourceId": "doi-automation-in-industry-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Replacement vs. Augmentation: Romanian Academic Survey Maps AI Labor Market Perceptions",
+        "summary": "Aivaz et al. (2026) survey Romanian students and faculty to assess whether AI is perceived primarily as a replacement or augmentation technology, finding significant divergence by discipline and seniority. Faculty in technical fields lean toward augmentation narratives while students in social sciences express higher displacement anxiety, suggesting AI literacy gaps shape risk perception. The results provide a leading-indicator lens on workforce AI exposure sentiment in an emerging European economy.",
+        "source": "https://doi.org/10.3390/systems14030323",
+        "authors": [
+          "Kamer-Ainur Aivaz",
+          "Daniel Teodorescu",
+          "Oana Roxana Radu"
+        ],
+        "publishedAt": "2026-03-18",
+        "doi": "10.3390/systems14030323",
+        "score": 0.215,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "workforce-ai-exposure"
+      },
+      "sourceId": "doi-replacement-vs-augmentation-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "IoT, AI, and Robotics Strain Social Security Contributory Principles",
+        "summary": "Cabeçais de Carvalho (2026) examines how the convergence of IoT, AI, cloud computing, and robotics disrupts the contributory basis of social security systems, as automation reduces the payroll tax base that funds pension and unemployment programs. The paper argues that current social protection architectures are structurally misaligned with an economy increasingly characterized by non-labor value creation. This has direct implications for the sustainability of safety nets during accelerated displacement.",
+        "source": "https://doi.org/10.1007/s43681-026-01045-y",
+        "authors": [
+          "Marco António Cabeçais de Carvalho"
+        ],
+        "publishedAt": "2026-03-25",
+        "doi": "10.1007/s43681-026-01045-y",
+        "score": 0.201,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "overall-us-displacement"
+      },
+      "sourceId": "doi-iot-ai-and-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    }
+  ]
+}
