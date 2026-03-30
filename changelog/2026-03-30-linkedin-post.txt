@@ -1,0 +1,45 @@
+jobsdata.ai Weekly Update -- Week of March 23-30, 2026
+
+This was a research-heavy week. Seven new sources ingested, a major data quality sweep, and a few papers that are worth your time even if they didn't produce chart-ready numbers.
+
+---
+
+Research that mattered this week
+
+The Anthropic Economic Index dropped its March update, and the headline number is striking: 49% of jobs now have at least a quarter of their tasks performed using Claude. But the more interesting finding is the learning curve data -- high-tenure users show 10% higher success rates, and coding tasks are migrating from interactive chat to fully automated API workflows. This is the adoption-to-automation pipeline in real time.
+
+NBER published Bick et al.'s "Mind the Gap" (w34995), the first rigorous comparison of AI adoption between the US and Europe. This maps directly to the adoption-rate graph and gives us a baseline for how differently the transition is unfolding across economies.
+
+Burning Glass Institute's "Education Penalty" by Levanon landed with a finding that cuts against the "just get more education" narrative -- credential requirements are shifting in ways that don't straightforwardly reward more schooling when AI can substitute for the skills degrees are supposed to signal.
+
+Garicano, Li & Wu formalized something practitioners have intuited: displacement risk depends on how tightly bundled your job tasks are, not just how exposed any single task is to automation. Strong task bundles protect workers even at high exposure levels. This is the O-Ring argument with teeth.
+
+Two papers to watch: Falk & Tsoukalas model a competitive "automation arms race" where firms rationally displace workers faster than the economy can absorb them -- a demand externality that ultimately hurts the firms too. And Autor & Thompson's "Expertise" (NBER WP 33941) explores how AI reshapes the returns to deep domain knowledge.
+
+---
+
+Featured reads this week
+
+Noah Smith republished his influential "Plentiful, High-Paying Jobs in the Age of AI" with new framing. Core argument: compute constraints create a producer-specific bottleneck that preserves comparative advantage for human labor, even at full AI surpassment. Annie Lowrey in The Atlantic asked the Jevons paradox question directly: software engineer hiring is up 6% YoY even as some firms cut staff. And Lichtinger & Hosseini published a sharp piece arguing that within-task equalization from AI doesn't necessarily mean between-occupation equalization -- the inequality question remains genuinely open.
+
+---
+
+Site updates
+
+- Tufts Digital Planet AI Jobs Risk Index ingested: 10 new data points across 10 graphs, including the 9.3M vulnerable jobs estimate and the $757B income-at-risk figure
+- Automated signals pipeline launched via GitHub Actions -- leading indicators now update without manual intervention
+- Reading list redesigned: articles grouped by week instead of individual days
+- Tech sector displacement chart y-axis fixed for better readability
+- 46 broken source URLs repaired across the entire dataset
+- Creative industry displacement chart now carries a disclaimer badge noting the outsized influence of a single entertainment-industry survey
+- Footer redesigned with navigation links
+
+---
+
+By the numbers: 40+ commits, 16 PRs merged, 7 new sources ingested, 10 new data points, 46 URL repairs, 1 new automated pipeline
+
+The pattern from the research this week is consistent: the more carefully you look at AI displacement, the more the answer depends on structure -- task bundling, demand elasticity, adoption speed, learning curves. Aggregate exposure numbers are a starting point, not an answer. That's what jobsdata.ai is built to show.
+
+jobsdata.ai -- tracking AI's real impact on work and wages
+
+#AIandWork #FutureOfWork #LaborMarket #EconomicMobility #WorkforceDevelopment #OpportunityAI
