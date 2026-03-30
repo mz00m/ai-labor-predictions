@@ -1177,6 +1177,24 @@
       ],
       "evidenceTier": 1,
       "label": "Garicano, Li & Wu: Strong task bundles protect jobs; displacement only in weak-bundle occupations"
+    },
+    {
+      "date": "2026-03-01",
+      "direction": "down",
+      "sourceIds": [
+        "bick-deming-mind-the-gap-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER/Bick et al.: No evidence AI adoption linked to employment changes"
+    },
+    {
+      "date": "2026-03-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "bick-deming-mind-the-gap-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER/Bick et al.: 10pp more AI adoption → ~3.7pp productivity growth"
     }
   ],
   "sources": [
@@ -2137,6 +2155,16 @@
       "evidenceTier": 2,
       "datePublished": "2026-03-25",
       "excerpt": "Industry-wide vulnerability to job displacement is approximately 6%... 9.3 million jobs are vulnerable to job loss due to AI under our median adoption path, with a plausible range of 2.7 to 19.5 million"
+    },
+    {
+      "id": "bick-deming-mind-the-gap-2026",
+      "title": "Mind the Gap: AI Adoption in Europe and the U.S.",
+      "url": "https://www.nber.org/system/files/working_papers/w34995/w34995.pdf",
+      "publisher": "NBER (Bick, Blandin, Deming, Fuchs-Schundeln, Jessen)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-01",
+      "excerpt": "We do not find clear evidence that industry-level AI adoption is associated with employment changes.",
+      "dateAdded": "2026-03-30"
     }
   ]
 }

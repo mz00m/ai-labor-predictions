@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-03-27",
-  "totalSources": 469,
-  "verifiedCount": 469,
+  "lastUpdated": "2026-03-30",
+  "totalSources": 470,
+  "verifiedCount": 470,
   "sources": {
     "cvl-economics-entertainment-ai-2024": {
       "id": "cvl-economics-entertainment-ai-2024",
@@ -521,6 +521,22 @@
         "genai-work-adoption"
       ],
       "verified": true
+    },
+    "bick-deming-mind-the-gap-2026": {
+      "id": "bick-deming-mind-the-gap-2026",
+      "title": "Mind the Gap: AI Adoption in Europe and the U.S.",
+      "url": "https://www.nber.org/system/files/working_papers/w34995/w34995.pdf",
+      "publisher": "NBER (Bick, Blandin, Deming, Fuchs-Schundeln, Jessen)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-01",
+      "excerpt": "in 2026 we find that 43% of US workers use AI for their job compared with 32% among European workers in our surveys.",
+      "usedIn": [
+        "genai-work-adoption",
+        "ai-adoption-rate",
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
     },
     "blog-mass-unemployment": {
       "id": "blog-mass-unemployment",
