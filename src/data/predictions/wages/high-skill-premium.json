@@ -5,7 +5,7 @@
   "description": "Projected change in wages for workers with strong AI/ML skills relative to the median, measuring the emerging 'AI premium' in compensation.",
   "category": "wages",
   "unit": "% wage premium over median",
-  "currentValue": 27.2,
+  "currentValue": 23.8,
   "timeHorizon": "By 2030",
   "aggregationMethod": "weighted",
   "history": [
@@ -32,6 +32,20 @@
       "evidenceTier": 2,
       "metricType": "postings",
       "dataType": "observed"
+    },
+    {
+      "date": "2025-02-26",
+      "value": 23,
+      "confidenceLow": 18,
+      "confidenceHigh": 36,
+      "sourceIds": [
+        "oxford-oii-ai-skills-premium-2025"
+      ],
+      "evidenceTier": 1,
+      "metricType": "postings",
+      "sampleSize": 10000000,
+      "isProxy": true,
+      "proxyContext": "UK job vacancies; US premium likely higher based on PwC/Lightcast data"
     },
     {
       "date": "2025-07-23",
@@ -68,20 +82,6 @@
       "evidenceTier": 1,
       "metricType": "survey",
       "dataType": "observed"
-    },
-    {
-      "date": "2025-02-26",
-      "value": 23,
-      "confidenceLow": 18,
-      "confidenceHigh": 36,
-      "sourceIds": [
-        "oxford-oii-ai-skills-premium-2025"
-      ],
-      "evidenceTier": 1,
-      "metricType": "postings",
-      "sampleSize": 10000000,
-      "isProxy": true,
-      "proxyContext": "UK job vacancies; US premium likely higher based on PwC/Lightcast data"
     },
     {
       "date": "2026-01-01",
@@ -173,6 +173,15 @@
       "label": "NVIDIA: median comp $301K, headcount up 21.6% YoY"
     },
     {
+      "date": "2025-02-26",
+      "direction": "up",
+      "sourceIds": [
+        "oxford-oii-ai-skills-premium-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Oxford/OII: AI skills premium 36% in STEM roles, vs 13% for master's degrees (10M UK vacancies)"
+    },
+    {
       "date": "2025-03-24",
       "direction": "up",
       "sourceIds": [
@@ -189,6 +198,15 @@
       ],
       "evidenceTier": 1,
       "label": "QJE: less experienced workers improve most with AI"
+    },
+    {
+      "date": "2025-06-20",
+      "direction": "up",
+      "sourceIds": [
+        "autor-thompson-expertise-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER (Autor/Thompson): Automation of inexpert tasks raises wages in expert-intensive occupations"
     },
     {
       "date": "2025-07-01",
@@ -319,16 +337,11 @@
     {
       "date": "2026-03-18",
       "direction": "down",
-      "sourceIds": ["freund-mann-job-transformation-2026"],
+      "sourceIds": [
+        "freund-mann-job-transformation-2026"
+      ],
       "evidenceTier": 1,
       "label": "Freund & Mann: Return to analytical skills falls; social/manual skills rise"
-    },
-    {
-      "date": "2025-02-26",
-      "direction": "up",
-      "sourceIds": ["oxford-oii-ai-skills-premium-2025"],
-      "evidenceTier": 1,
-      "label": "Oxford/OII: AI skills premium 36% in STEM roles, vs 13% for master's degrees (10M UK vacancies)"
     },
     {
       "date": "2026-03-24",
@@ -347,15 +360,6 @@
       ],
       "evidenceTier": 4,
       "label": "Lichtinger & Hosseini: Between-occupation inequality may widen from AI"
-    },
-    {
-      "date": "2025-06-20",
-      "direction": "up",
-      "sourceIds": [
-        "autor-thompson-expertise-2025"
-      ],
-      "evidenceTier": 1,
-      "label": "NBER (Autor/Thompson): Automation of inexpert tasks raises wages in expert-intensive occupations"
     }
   ],
   "sources": [
