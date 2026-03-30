@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "Plentiful, High-Paying Jobs in the Age of AI",
+      "author": "Noah Smith",
+      "publisher": "Noahpinion (Substack)",
+      "date": "2026-03-28",
+      "url": "https://www.noahpinion.blog/p/plentiful-high-paying-jobs-in-the-ff9",
+      "takeaway": "Repost of influential 2024 essay with new framing. Argues compute is a producer-specific constraint on AI that preserves comparative advantage for human labor, even if AI surpasses humans at every task. Opportunity cost of AI scales with its productivity, so cheaper compute doesn't eliminate the case for human workers. Key risks: energy competition (the 'horse' scenario), inequality from capital concentration, and adjustment frictions. References Korinek & Suh (2024) model showing wages drop but don't collapse at full automation.",
+      "weekFeatured": "2026-03-28",
+      "tier": 4
+    },
+    {
       "title": "Will Wired Belts Become the New Rust Belts? AI and the Emerging Geography of American Job Risk",
       "author": "Bhaskar Chakravorti, Christina Filipovic, Abidemi Adisa",
       "publisher": "Digital Planet, The Fletcher School, Tufts University",

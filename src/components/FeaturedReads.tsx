@@ -10,6 +10,15 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Noah Smith (Noahpinion)",
+    title: "Plentiful, High-Paying Jobs in the Age of AI",
+    summary:
+      "Compute constraints give AI a producer-specific bottleneck. Comparative advantage — not absolute advantage — determines who works. Even if AI surpasses humans at everything, opportunity cost keeps human labor valuable.",
+    date: "Mar 28",
+    url: "https://www.noahpinion.blog/p/plentiful-high-paying-jobs-in-the-ff9",
+    accent: "border-l-cyan-500",
+  },
+  {
     author: "Annie Lowrey (The Atlantic)",
     title: "How to Guess If Your Job Will Exist in Five Years",
     summary:
@@ -44,15 +53,6 @@ const articles: Article[] = [
     date: "Mar 24",
     url: "https://www.anthropic.com/research/economic-index-march-2026-report",
     accent: "border-l-blue-500",
-  },
-  {
-    author: "Imas, Shukla (Chicago Booth)",
-    title: "How Will AI-driven Automation Actually Affect Jobs?",
-    summary:
-      "O-ring model shows exposure != displacement. Low-dimensional jobs (trucking, warehousing) face real risk; high-dimensional knowledge work gets augmented. Firm incentives and demand elasticity matter more than task exposure.",
-    date: "Mar 23",
-    url: "https://aleximas.substack.com/p/how-will-ai-driven-automation-actually",
-    accent: "border-l-emerald-500",
   },
 ];
 
