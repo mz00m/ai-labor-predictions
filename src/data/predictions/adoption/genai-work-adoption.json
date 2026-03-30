@@ -5,7 +5,7 @@
   "description": "Share of U.S. working-age adults (18–64) using generative AI at work, from a nationally representative quarterly survey (Real-Time Population Survey). Work adoption (40.7%) lags overall use (55.9%), consistent with workers adopting ahead of their employers. Overall adoption has outpaced both the PC and internet at comparable points post-launch.",
   "category": "adoption",
   "unit": "% of adults at work",
-  "currentValue": 41,
+  "currentValue": 43,
   "aggregationMethod": "latest",
   "timeHorizon": "Current measure",
   "history": [
@@ -119,6 +119,16 @@
       "evidenceTier": 1,
       "metricType": "survey",
       "dataType": "observed"
+    },
+    {
+      "date": "2026-02-01",
+      "value": 43,
+      "sourceIds": [
+        "bick-deming-mind-the-gap-2026"
+      ],
+      "evidenceTier": 1,
+      "metricType": "survey",
+      "dataType": "observed"
     }
   ],
   "overlays": [
@@ -220,6 +230,24 @@
       ],
       "evidenceTier": 2,
       "label": "Anthropic: High-tenure users 10% higher success rate with Claude"
+    },
+    {
+      "date": "2026-03-01",
+      "direction": "up",
+      "sourceIds": [
+        "bick-deming-mind-the-gap-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER/Bick et al.: 5.2% of US work hours spent using AI in 2026"
+    },
+    {
+      "date": "2026-03-01",
+      "direction": "up",
+      "sourceIds": [
+        "bick-deming-mind-the-gap-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER/Bick et al.: AI saves US workers 2.3% of work hours aggregate"
     }
   ],
   "sources": [
@@ -430,6 +458,16 @@
       "datePublished": "2026-03-24",
       "excerpt": "people in this higher-tenure group have a 10% higher success rate in their conversations, an association that is not explained by their task selection, country of origin, or other factors.",
       "dateAdded": "2026-03-24"
+    },
+    {
+      "id": "bick-deming-mind-the-gap-2026",
+      "title": "Mind the Gap: AI Adoption in Europe and the U.S.",
+      "url": "https://www.nber.org/system/files/working_papers/w34995/w34995.pdf",
+      "publisher": "NBER (Bick, Blandin, Deming, Fuchs-Schundeln, Jessen)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-01",
+      "excerpt": "in 2026 we find that 43% of US workers use AI for their job compared with 32% among European workers in our surveys.",
+      "dateAdded": "2026-03-30"
     }
   ]
 }

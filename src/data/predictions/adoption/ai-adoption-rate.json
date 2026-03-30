@@ -541,6 +541,15 @@
       ],
       "evidenceTier": 3,
       "label": "Yale (Restrepo): AI firm adoption still relatively low; firms experimenting"
+    },
+    {
+      "date": "2026-03-01",
+      "direction": "up",
+      "sourceIds": [
+        "bick-deming-mind-the-gap-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER/Bick et al.: Firm encouragement explains 80% of US-EU adoption gap"
     }
   ],
   "sources": [
@@ -1047,6 +1056,16 @@
       "evidenceTier": 2,
       "datePublished": "2026-01-15",
       "excerpt": "71% of organizations regularly use generative AI in at least one business function (up from 65% in early 2024). 92% plan to invest in generative AI over next three years. 66% report productivity gains."
+    },
+    {
+      "id": "bick-deming-mind-the-gap-2026",
+      "title": "Mind the Gap: AI Adoption in Europe and the U.S.",
+      "url": "https://www.nber.org/system/files/working_papers/w34995/w34995.pdf",
+      "publisher": "NBER (Bick, Blandin, Deming, Fuchs-Schundeln, Jessen)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-01",
+      "excerpt": "Firm encouragement alone accounts for 80% of the overall average gap.",
+      "dateAdded": "2026-03-30"
     }
   ]
 }
