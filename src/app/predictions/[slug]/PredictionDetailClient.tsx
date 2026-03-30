@@ -386,8 +386,8 @@ export default function PredictionDetailPage() {
                 unit={prediction.unit.includes("%") ? "%" : ""}
                 overlays={observedOverlays}
                 onDotClick={handleDotClick}
-                yAxisMax={prediction.slug === "overall-us-displacement" || prediction.slug === "white-collar-professional-displacement" ? 10 : prediction.slug === "tech-sector-displacement" ? 15 : undefined}
-                yAxisMin={prediction.slug === "overall-us-displacement" || prediction.slug === "white-collar-professional-displacement" ? -5 : prediction.slug === "tech-sector-displacement" ? -25 : undefined}
+                yAxisMax={prediction.slug === "overall-us-displacement" || prediction.slug === "white-collar-professional-displacement" ? 10 : prediction.slug === "tech-sector-displacement" ? 20 : undefined}
+                yAxisMin={prediction.slug === "overall-us-displacement" || prediction.slug === "white-collar-professional-displacement" ? -5 : prediction.slug === "tech-sector-displacement" ? -15 : undefined}
                 category={prediction.category}
                 showTrendLine={true}
                 height={280}
