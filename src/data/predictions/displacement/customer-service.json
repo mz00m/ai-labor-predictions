@@ -5,7 +5,7 @@
   "description": "Percentage of customer service interactions fully handled by AI without human intervention. Only data points where sources directly state an automation rate are plotted.",
   "category": "displacement",
   "unit": "% of interactions automated",
-  "currentValue": 34.7,
+  "currentValue": 41.2,
   "timeHorizon": "By 2028",
   "aggregationMethod": "weighted",
   "disclaimer": "Measures interaction automation, not job elimination. Actual headcount effects depend on demand response and service quality. A high automation rate may reduce headcount but does not imply equivalent job loss.",
@@ -247,6 +247,24 @@
       "label": "Gartner: 20-30% of CS agents replaced by 2026"
     },
     {
+      "date": "2025-11-25",
+      "direction": "up",
+      "sourceIds": [
+        "mckinsey-agents-robots-us-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "MGI: Utility AI agents handle 40% of calls, resolving 80%+ without humans; cost/call down 50%"
+    },
+    {
+      "date": "2025-11-25",
+      "direction": "up",
+      "sourceIds": [
+        "mckinsey-agents-robots-us-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "MGI: Advanced AI agents could eventually handle 80-90% of customer inquiries"
+    },
+    {
       "date": "2026-01-21",
       "direction": "up",
       "sourceIds": [
@@ -326,24 +344,6 @@
       ],
       "evidenceTier": 1,
       "label": "Lodefalk et al.: Sweden customer service shows same age-gradient AI displacement pattern"
-    },
-    {
-      "date": "2025-11-25",
-      "direction": "up",
-      "sourceIds": [
-        "mckinsey-agents-robots-us-2025"
-      ],
-      "evidenceTier": 2,
-      "label": "MGI: Utility AI agents handle 40% of calls, resolving 80%+ without humans; cost/call down 50%"
-    },
-    {
-      "date": "2025-11-25",
-      "direction": "up",
-      "sourceIds": [
-        "mckinsey-agents-robots-us-2025"
-      ],
-      "evidenceTier": 2,
-      "label": "MGI: Advanced AI agents could eventually handle 80-90% of customer inquiries"
     },
     {
       "date": "2026-03-24",
@@ -649,7 +649,7 @@
       "publisher": "Anthropic (Massenkoff, Lyubich, McCrory, Appel, Heller)",
       "evidenceTier": 2,
       "datePublished": "2026-03-24",
-      "excerpt": "customer service tasks, including, for example, automated support for payment and billing issues, are prevalent in the API data. These contributed to a higher observed exposure for Customer Service Representatives\u2014Claude was recorded doing a high share of their tasks in automated workflows, so these jobs may be more likely to change as AI diffuses.",
+      "excerpt": "customer service tasks, including, for example, automated support for payment and billing issues, are prevalent in the API data. These contributed to a higher observed exposure for Customer Service Representatives—Claude was recorded doing a high share of their tasks in automated workflows, so these jobs may be more likely to change as AI diffuses.",
       "dateAdded": "2026-03-24"
     }
   ]

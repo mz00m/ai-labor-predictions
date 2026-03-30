@@ -5,7 +5,7 @@
   "description": "Projected percentage of healthcare administrative roles (coding, billing, scheduling, prior auth) automated by AI by 2030. Corporate signals are emerging: Trinity Health cut 10.5% of RCM staff across 92 hospitals (Jan 2026), medical coding automation projected at 40%+, and hospital AI billing adoption surged from 36% to 61% in one year. However, chronic healthcare labor shortages may absorb displacement through attrition rather than layoffs.",
   "category": "displacement",
   "unit": "% of roles displaced",
-  "currentValue": 14.5,
+  "currentValue": 13.2,
   "timeHorizon": "By 2030",
   "aggregationMethod": "weighted",
   "history": [
@@ -128,7 +128,7 @@
         "ncbi-hospital-ai-billing-2024"
       ],
       "evidenceTier": 1,
-      "label": "NCBI: hospital AI billing automation surged 36% \u2192 61% in one year"
+      "label": "NCBI: hospital AI billing automation surged 36% → 61% in one year"
     },
     {
       "date": "2025-01-01",
@@ -336,7 +336,7 @@
     },
     {
       "id": "deloitte-health-2025",
-      "title": "2025 Global Health Care Outlook \u2014 AI and Administrative Efficiency",
+      "title": "2025 Global Health Care Outlook — AI and Administrative Efficiency",
       "url": "https://www2.deloitte.com/us/en/insights/industry/health-care/global-health-care-outlook.html",
       "publisher": "Deloitte",
       "evidenceTier": 2,
@@ -441,7 +441,7 @@
       "publisher": "Cognizant",
       "evidenceTier": 2,
       "datePublished": "2026-01-15",
-      "excerpt": "Education task exposure jumped from 11% to 49% \u2014 a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations.",
+      "excerpt": "Education task exposure jumped from 11% to 49% — a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -456,7 +456,7 @@
     },
     {
       "id": "bls-jolts-december-2025",
-      "title": "Job Openings and Labor Turnover \u2014 December 2025",
+      "title": "Job Openings and Labor Turnover — December 2025",
       "url": "https://www.bls.gov/news.release/jolts.nr0.htm",
       "publisher": "U.S. Bureau of Labor Statistics",
       "evidenceTier": 1,
@@ -478,10 +478,10 @@
       "id": "gommers-masai-lancet-2026",
       "title": "Interval Cancer, Sensitivity, and Specificity Comparing AI-Supported Mammography Screening with Standard Double Reading without AI in the MASAI Study",
       "url": "https://doi.org/10.1016/S0140-6736(25)00120-X",
-      "publisher": "The Lancet (Gommers, Hernstr\u00f6m, Josefsson et al.)",
+      "publisher": "The Lancet (Gommers, Hernström, Josefsson et al.)",
       "evidenceTier": 1,
       "datePublished": "2026-01-15",
-      "excerpt": "In the AI group, screen readings fell from 109,692 to 61,248\u2014a 44 percent workload reduction\u2014while screen-detected cancers rose from 262 to 338, a 29 percent increase in detection.",
+      "excerpt": "In the AI group, screen readings fell from 109,692 to 61,248—a 44 percent workload reduction—while screen-detected cancers rose from 262 to 338, a 29 percent increase in detection.",
       "dateAdded": "2026-03-07"
     },
     {
@@ -552,7 +552,7 @@
       "evidenceTier": 1,
       "datePublished": "2026-02-19",
       "dateAdded": "2026-03-16",
-      "excerpt": "Healthcare and social assistance sector: 4.44/10 weighted exposure (20.7M workers, lowest among white-collar sectors). However, medical records specialists score 9/10 and medical transcriptionists score 10/10 \u2014 the only occupation at maximum exposure."
+      "excerpt": "Healthcare and social assistance sector: 4.44/10 weighted exposure (20.7M workers, lowest among white-collar sectors). However, medical records specialists score 9/10 and medical transcriptionists score 10/10 — the only occupation at maximum exposure."
     },
     {
       "id": "fed-atl-duke-cfo-ai-productivity-2026",
