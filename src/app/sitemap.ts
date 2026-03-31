@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { getAllPredictions } from "@/lib/data-loader";
+import enrichedData from "@/data/enriched-occupations.json";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const predictions = getAllPredictions();
@@ -9,6 +10,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
     changeFrequency: "weekly" as const,
     priority: 0.8,
+  }));
+
+  const occupationRoutes = enrichedData.occupations.map((o) => ({
+    url: `https://jobsdata.ai/occupation-exposure/${o.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
   }));
 
   return [
@@ -49,5 +57,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     },
     ...predictionRoutes,
+    {
+      url: "https://jobsdata.ai/occupation-exposure",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    ...occupationRoutes,
   ];
 }
