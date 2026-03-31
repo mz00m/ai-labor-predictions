@@ -17,6 +17,7 @@ import { INDUSTRY_ADOPTION_SPEED } from "@/data/industry-adoption-speed";
 import Link from "next/link";
 import { useCountUp } from "@/hooks/useCountUp";
 import DimensionSummary, { type DimensionScoreData, workerSummary } from "./DimensionSummary";
+import ShareBar from "./ShareBar";
 
 export type DimensionScoresMap = Record<string, DimensionScoreData>;
 
@@ -179,6 +180,10 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
     setAdjustedShares(shares);
     setIndustrySpeedMultiplier(INDUSTRY_ADOPTION_SPEED[job.category]?.multiplier ?? 1.0);
     setActiveTab("breakdown");
+    // Update URL so the page is shareable
+    const url = new URL(window.location.href);
+    url.searchParams.set("job", job.id);
+    window.history.replaceState({}, "", url.toString());
   }, []);
 
   const handleShareChange = useCallback((taskId: string, value: number) => {
@@ -420,20 +425,26 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
         <>
           {/* Header with job info */}
           <div className="mb-6 pb-6 border-b border-black/[0.06]">
-            <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-3">
-              <h2 className="text-[20px] font-bold text-[var(--foreground)] tracking-tight">
-                {selectedJob.title}
-              </h2>
-              <button
+            <div className="flex flex-wrap items-center justify-between gap-y-2 mb-3">
+              <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                <h2 className="text-[20px] font-bold text-[var(--foreground)] tracking-tight">
+                  {selectedJob.title}
+                </h2>
+                <button
                 onClick={() => {
                   setSelectedJobId("");
                   setSearchQuery("");
                   setAdjustedShares({});
+                  const url = new URL(window.location.href);
+                  url.searchParams.delete("job");
+                  window.history.replaceState({}, "", url.toString());
                 }}
                 className="text-[11px] text-[var(--muted)] hover:text-[var(--foreground)] underline"
               >
                 Change job
               </button>
+              </div>
+              <ShareBar jobTitle={selectedJob.title} jobId={selectedJob.id} />
             </div>
 
             {/* Scannable stat pills - each links to its explainer */}
@@ -653,6 +664,14 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
 
               {activeTab === "benchmarks" && <ComputeBenchmarks />}
             </div>
+          </div>
+
+          {/* Bottom share bar */}
+          <div className="mt-6 pt-4 border-t border-black/[0.06] flex items-center justify-between">
+            <p className="text-[11px] text-[var(--muted)]">
+              Know someone in this field? Share this breakdown with them.
+            </p>
+            <ShareBar jobTitle={selectedJob.title} jobId={selectedJob.id} />
           </div>
         </>
       )}
