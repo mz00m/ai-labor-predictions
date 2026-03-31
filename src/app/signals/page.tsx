@@ -28,14 +28,14 @@ export default function SignalsPage() {
   const [sortDirection, setSortDirection] = useState<"asc" | "desc">("desc");
 
   return (
-    <div className="space-y-10">
+    <div className="space-y-8">
       {/* Hero: AAI number + trend + industries to watch */}
       <SignalHero metrics={metrics} lastUpdated={lastUpdated} />
 
       {/* Jump link → productivity-paths */}
       <a
         href="#productivity-paths"
-        className="group flex items-center gap-2 text-[15px] font-semibold text-[var(--accent)] hover:text-[#5C61F6] transition-colors -mt-4"
+        className="group flex items-center gap-2 text-[15px] font-semibold text-[var(--accent)] hover:text-[#5C61F6] transition-colors -mt-2"
       >
         What happens when workers get more productive?
         <svg

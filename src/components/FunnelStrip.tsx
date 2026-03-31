@@ -407,6 +407,23 @@ export default function FunnelStrip() {
           )}
         </div>
 
+        {/* Gap annotation */}
+        <div
+          className="px-4 sm:px-6 py-2 border-t border-black/[0.06]"
+          style={{
+            backgroundColor: "rgba(92, 97, 246, 0.05)",
+            opacity: visible ? 1 : 0,
+            transition: "opacity 0.6s ease 2.2s",
+          }}
+        >
+          <p className="text-[11px] sm:text-[12px] text-[var(--accent-text)] leading-relaxed font-medium">
+            40% of jobs are AI-exposed, but near-zero displacement measured so far.{" "}
+            <Link href="/j-curve" className="underline decoration-[var(--accent)]/40 hover:decoration-[var(--accent)]">
+              That gap is the story &rarr;
+            </Link>
+          </p>
+        </div>
+
         {/* Bottom note */}
         <div className="px-4 sm:px-6 py-2.5 border-t border-black/[0.06] bg-black/[0.01] flex items-center justify-between gap-4">
           <p className="text-[11px] text-[var(--muted)] leading-relaxed">
