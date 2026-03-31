@@ -82,7 +82,7 @@ export default function SectionBar({
               </span>
             )}
           </div>
-          <p className={`${featured ? "text-[14px] max-w-2xl" : "text-[13px] max-w-xl"} text-[var(--muted)] leading-relaxed`}>
+          <p className={`${featured ? "text-[14px] max-w-2xl" : "text-[13px] max-w-xl"} text-[var(--muted)] leading-relaxed line-clamp-2`}>
             {description}
           </p>
         </div>

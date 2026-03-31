@@ -19,7 +19,7 @@ function formatDate(iso: string): string {
 export default function SignalHero({ metrics, lastUpdated }: SignalHeroProps) {
 
   return (
-    <div className="relative overflow-hidden -mx-6 sm:-mx-10 px-6 sm:px-10 pt-1 pb-6 sm:pt-2 sm:pb-8">
+    <div className="relative overflow-hidden -mx-6 sm:-mx-10 px-6 sm:px-10 pt-1 pb-2 sm:pt-2 sm:pb-4">
       {/* Background gradient orbs */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         <div className="absolute -top-24 -left-24 w-[500px] h-[500px] rounded-full bg-[#5C61F6]/[0.04] blur-3xl" />
