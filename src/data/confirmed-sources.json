@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-31",
-  "totalSources": 471,
-  "verifiedCount": 471,
+  "totalSources": 472,
+  "verifiedCount": 472,
   "sources": {
     "cvl-economics-entertainment-ai-2024": {
       "id": "cvl-economics-entertainment-ai-2024",
@@ -6564,6 +6564,20 @@
       "excerpt": "In a rapid AI progress scenario, economists forecast a drop in labor force participation from its 2025 baseline of 62.6% to 59.1% in 2030 and 55% in 2050, with roughly half of this decline—equivalent to 10 million jobs—attributable to AI.",
       "usedIn": [
         "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "nber-horton-coasean-agents-2026": {
+      "id": "nber-horton-coasean-agents-2026",
+      "title": "The Coasean Singularity? Demand, Supply, and Market Design with AI Agents",
+      "url": "https://www.nber.org/system/files/chapters/c15309/c15309.pdf",
+      "publisher": "NBER (Shahidi, Rusak, Manning, Fradkin, Horton)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-31",
+      "excerpt": "The activities that comprise transaction costs—learning prices, negotiating terms, writing contracts, and monitoring compliance—are precisely the types of tasks that AI agents can potentially perform at very low marginal cost. Once agents can indeed execute these functions effectively and cheaply, we will see significant shifts in the traditional make-or-buy boundaries that define firm organization and market structure.",
+      "usedIn": [
+        "ai-business-formation"
       ],
       "verified": true,
       "synthetic": false
