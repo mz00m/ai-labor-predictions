@@ -106,6 +106,20 @@
       "evidenceTier": 2,
       "metricType": "postings",
       "dataType": "observed"
+    },
+    {
+      "date": "2026-03-01",
+      "value": 13,
+      "confidenceLow": 11,
+      "confidenceHigh": 15,
+      "sourceIds": [
+        "kpmg-ai-pulse-q1-2026"
+      ],
+      "evidenceTier": 2,
+      "metricType": "survey",
+      "dataType": "observed",
+      "isProxy": true,
+      "proxyContext": "Willingness-to-pay premium reported by 45% of leaders; likely understates actual market premium"
     }
   ],
   "overlays": [
@@ -360,6 +374,15 @@
       ],
       "evidenceTier": 4,
       "label": "Lichtinger & Hosseini: Between-occupation inequality may widen from AI"
+    },
+    {
+      "date": "2026-03-01",
+      "direction": "up",
+      "sourceIds": [
+        "kpmg-ai-pulse-q1-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "KPMG: 68% recruiting new AI roles (architects, etc.)"
     }
   ],
   "sources": [
@@ -687,6 +710,16 @@
       "datePublished": "2025-06-20",
       "excerpt": "automation has raised wages and reduced employment in occupations where it eliminated inexpert tasks, but lowered wages and increased employment in occupations where it eliminated expert tasks.",
       "dateAdded": "2026-03-26"
+    },
+    {
+      "id": "kpmg-ai-pulse-q1-2026",
+      "title": "AI Quarterly Pulse Survey Q1 2026",
+      "url": "https://kpmg.com/us/en/media/news/q1-ai-pulse2026.html",
+      "publisher": "KPMG",
+      "evidenceTier": 2,
+      "datePublished": "2026-03-01",
+      "excerpt": "45% of leaders are willing to pay 11% to 15% more for strong AI skills",
+      "dateAdded": "2026-03-31"
     }
   ]
 }

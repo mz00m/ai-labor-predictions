@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-03-31",
-  "totalSources": 472,
-  "verifiedCount": 472,
+  "totalSources": 473,
+  "verifiedCount": 473,
   "sources": {
     "cvl-economics-entertainment-ai-2024": {
       "id": "cvl-economics-entertainment-ai-2024",
@@ -6578,6 +6578,26 @@
       "excerpt": "The activities that comprise transaction costs—learning prices, negotiating terms, writing contracts, and monitoring compliance—are precisely the types of tasks that AI agents can potentially perform at very low marginal cost. Once agents can indeed execute these functions effectively and cheaply, we will see significant shifts in the traditional make-or-buy boundaries that define firm organization and market structure.",
       "usedIn": [
         "ai-business-formation"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "kpmg-ai-pulse-q1-2026": {
+      "id": "kpmg-ai-pulse-q1-2026",
+      "title": "AI Quarterly Pulse Survey Q1 2026",
+      "url": "https://kpmg.com/us/en/media/news/q1-ai-pulse2026.html",
+      "publisher": "KPMG",
+      "evidenceTier": 2,
+      "datePublished": "2026-03-01",
+      "excerpt": "45% of leaders are willing to pay 11% to 15% more for strong AI skills",
+      "usedIn": [
+        "high-skill-wage-premium",
+        "ai-adoption-rate",
+        "genai-work-adoption",
+        "entry-level-wage-impact",
+        "white-collar-professional-displacement",
+        "workforce-ai-exposure",
+        "customer-service-automation"
       ],
       "verified": true,
       "synthetic": false

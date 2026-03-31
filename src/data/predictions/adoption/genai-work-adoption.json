@@ -248,6 +248,15 @@
       ],
       "evidenceTier": 1,
       "label": "NBER/Bick et al.: AI saves US workers 2.3% of work hours aggregate"
+    },
+    {
+      "date": "2026-03-01",
+      "direction": "up",
+      "sourceIds": [
+        "kpmg-ai-pulse-q1-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "KPMG: 55% of employees adopting/integrating AI agents"
     }
   ],
   "sources": [
@@ -468,6 +477,16 @@
       "datePublished": "2026-03-01",
       "excerpt": "in 2026 we find that 43% of US workers use AI for their job compared with 32% among European workers in our surveys.",
       "dateAdded": "2026-03-30"
+    },
+    {
+      "id": "kpmg-ai-pulse-q1-2026",
+      "title": "AI Quarterly Pulse Survey Q1 2026",
+      "url": "https://kpmg.com/us/en/media/news/q1-ai-pulse2026.html",
+      "publisher": "KPMG",
+      "evidenceTier": 2,
+      "datePublished": "2026-03-01",
+      "excerpt": "55% are seeing slight or significant adoption (employees beginning to accept and integrate agents in their work).",
+      "dateAdded": "2026-03-31"
     }
   ]
 }
