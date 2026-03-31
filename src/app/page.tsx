@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { getAllPredictions, getLastUpdated, getHeroStats } from "@/lib/data-loader";
 import { getSourceCount } from "@/lib/search-sources";
 import NewsTicker from "@/components/NewsTicker";
@@ -53,7 +54,7 @@ export default function Home() {
         {/* Content */}
         <div className="relative">
           <p className="text-[13px] font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
-            {predictions.length} predictions &middot; {totalSources} sources
+            <Link href="/predictions" className="hover:opacity-70 transition-opacity">{predictions.length} predictions</Link> &middot; <Link href="/research" className="hover:opacity-70 transition-opacity">{totalSources} sources</Link>
             <span className="opacity-50 mx-1">&middot;</span>
             <span className="normal-case font-semibold opacity-70">{formatUpdatedDate(lastUpdated)}</span>
           </p>
