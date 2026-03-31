@@ -70,36 +70,34 @@ function bufferDetail(scores: Record<DimensionKey, number>): {
   pressureNote: string;
   actionable: string;
 } {
-  // Identify the strongest buffer dimension
   const buffers: { key: string; score: number; strong: string; action: string }[] = [
     {
       key: "adaptability",
       score: scores.adaptability,
-      strong: "workers in this field have strong transferable skills and financial capacity to transition",
-      action: "Your existing skills transfer well to adjacent roles. Invest in learning how AI tools apply to your specific domain so you can pair your expertise with AI fluency.",
+      strong: "the people who do this work tend to have transferable skills and the financial capacity to make a transition if they need to",
+      action: "Focus on building AI fluency in your specific domain. Your existing skills transfer well to adjacent roles, and the workers who combine deep expertise with comfort using AI tools will have the strongest hand as the field shifts.",
     },
     {
       key: "demandElasticity",
       score: scores.demandElasticity,
-      strong: "when AI makes this work cheaper, demand for the output tends to grow, which historically preserves or even expands employment",
-      action: "As AI drives costs down, expect more demand for this kind of work, not less. Position yourself to handle the higher volume and more complex cases that expansion brings.",
+      strong: "when AI makes this kind of work cheaper to produce, demand for the output tends to grow. Historically, that pattern has preserved or even expanded employment in fields like this one",
+      action: "Focus on moving toward the higher-complexity, higher-judgment work in your field. As AI brings costs down, expect more demand for this kind of work, not less. The people who can handle the volume and the harder cases that expansion brings will be the most valuable.",
     },
     {
       key: "complementarity",
       score: scores.complementarity,
-      strong: "AI tends to enhance workers in this role rather than replace them, particularly on tasks that require combining judgment across multiple skill areas",
-      action: "Focus on the tasks where AI makes you faster and better rather than redundant. The workers who learn to use AI as a tool for routine subtasks will free up time for the higher-value work that clients and employers actually pay a premium for.",
+      strong: "AI tends to make people in this role more productive rather than replacing them, especially on tasks that require combining judgment across multiple skill areas",
+      action: "Focus on the parts of your work where AI makes you faster and better, not redundant. The people who learn to use AI for the routine subtasks will free up time for the higher-value work that clients and employers actually pay a premium for.",
     },
   ];
 
   const sorted = [...buffers].sort((a, b) => b.score - a.score);
   const best = sorted[0];
 
-  // Pressure specifics
   const fastAdoption = scores.adoptionSpeed > 6;
   const pressureNote = fastAdoption
-    ? "This sector tends to adopt new technology quickly, so the timeline for change is shorter than average."
-    : "Adoption in this sector tends to be gradual, which gives you more time to prepare.";
+    ? "This is a sector that tends to adopt new technology quickly, so the timeline for change is shorter than in other fields."
+    : "This is a sector where adoption tends to be gradual, which means there is more time to prepare than in faster-moving industries.";
 
   return {
     strongestBuffer: best.strong,
@@ -112,32 +110,37 @@ function bufferDetail(scores: Record<DimensionKey, number>): {
 export function workerSummary(
   scores: Record<DimensionKey, number>,
   jobTitle: string
-): { headline: string; guidance: string } {
+): { headline: string; context: string; action: string } {
   const risk = scores.netRisk;
   const detail = bufferDetail(scores);
   const exposureLevel = scores.technicalExposure > 7
     ? "a high share"
     : scores.technicalExposure > 4
-      ? "a moderate share"
+      ? "a meaningful share"
       : "a smaller share";
+
+  const article = /^[aeiou]/i.test(jobTitle) ? "an" : "a";
 
   if (risk <= 3.5) {
     return {
-      headline: `${jobTitle} has strong structural protection against AI displacement.`,
-      guidance: `AI can currently perform ${exposureLevel} of the tasks in this role, but ${detail.strongestBuffer}. ${detail.pressureNote} ${detail.actionable}`,
+      headline: `The job of ${article} ${jobTitle.toLowerCase()} has strong structural protection against AI displacement.`,
+      context: `AI can currently perform ${exposureLevel} of the tasks involved in this work, but ${detail.strongestBuffer}. ${detail.pressureNote}`,
+      action: detail.actionable,
     };
   }
 
   if (risk <= 5.5) {
     return {
-      headline: `${jobTitle} faces moderate AI pressure, but has real room to adapt.`,
-      guidance: `AI can currently perform ${exposureLevel} of the tasks in this role. The important context: ${detail.strongestBuffer}. ${detail.pressureNote} ${detail.actionable}`,
+      headline: `The job of ${article} ${jobTitle.toLowerCase()} faces moderate AI pressure, but has real room to adapt.`,
+      context: `AI can currently perform ${exposureLevel} of the tasks involved in this work. The important context: ${detail.strongestBuffer}. ${detail.pressureNote}`,
+      action: detail.actionable,
     };
   }
 
   return {
-    headline: `${jobTitle} faces significant AI pressure, which means acting now matters most.`,
-    guidance: `AI can currently perform ${exposureLevel} of the tasks in this role, and that share is growing. Even so, ${detail.strongestBuffer}. ${detail.pressureNote} ${detail.actionable}`,
+    headline: `The job of ${article} ${jobTitle.toLowerCase()} faces significant AI pressure, which means acting now matters most.`,
+    context: `AI can currently perform ${exposureLevel} of the tasks involved in this work, and that share is growing. That said, ${detail.strongestBuffer}. ${detail.pressureNote}`,
+    action: detail.actionable,
   };
 }
 

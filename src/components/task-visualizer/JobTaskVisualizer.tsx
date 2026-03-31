@@ -545,7 +545,11 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
                     {summary.headline}
                   </p>
                   <p className="text-[12px] text-[var(--muted)] mt-1.5 leading-relaxed">
-                    {summary.guidance}
+                    {summary.context}
+                  </p>
+                  <p className="text-[12px] text-[var(--foreground)] mt-2 leading-relaxed">
+                    <span className="font-semibold">{summary.action.split(".")[0]}.</span>
+                    {summary.action.includes(".") && " " + summary.action.split(".").slice(1).join(".").trim()}
                   </p>
                 </div>
               );
