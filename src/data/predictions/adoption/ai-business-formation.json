@@ -190,6 +190,15 @@
       ],
       "evidenceTier": 3,
       "label": "a16z/BofA: New businesses elevated but not hiring; SMB tech spend surging, payroll flat"
+    },
+    {
+      "date": "2026-03-31",
+      "direction": "up",
+      "sourceIds": [
+        "nber-horton-coasean-agents-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER (Horton et al.): AI agents collapse transaction costs, expanding feasible market designs"
     }
   ],
   "sources": [
@@ -332,6 +341,15 @@
       "datePublished": "2026-03-16",
       "excerpt": "New business applications remain elevated but 'high propensity to hire' applications are in decline. SMBs are rapidly increasing tech spend (including AI) while payroll spend is flat or declining — consistent with AI-native solopreneurs substituting software for labor.",
       "dateAdded": "2026-03-23"
+    },
+    {
+      "id": "nber-horton-coasean-agents-2026",
+      "title": "The Coasean Singularity? Demand, Supply, and Market Design with AI Agents",
+      "url": "https://www.nber.org/system/files/chapters/c15309/c15309.pdf",
+      "publisher": "NBER (Shahidi, Rusak, Manning, Fradkin, Horton)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-31",
+      "excerpt": "The activities that comprise transaction costs—learning prices, negotiating terms, writing contracts, and monitoring compliance—are precisely the types of tasks that AI agents can potentially perform at very low marginal cost. Once agents can indeed execute these functions effectively and cheaply, we will see significant shifts in the traditional make-or-buy boundaries that define firm organization and market structure."
     },
     {
       "id": "fossen-sorgner-ai-self-employment-2024",
