@@ -88,6 +88,30 @@ export default function FiveVariablesEssay() {
           it are two very different things.
         </p>
 
+        <p>
+          But there&rsquo;s a second speed dynamic that matters even more:
+          once adoption happens, how fast does it shift from augmentation to
+          automation? The{" "}
+          <a
+            href="https://www.anthropicindex.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--accent-text)] hover:underline"
+          >
+            Anthropic Economic Index
+          </a>
+          {" "}(March 2026) found that coding tasks are migrating from
+          interactive chat interfaces to fully automated API workflows at a
+          rate of +14% since August 2025. That&rsquo;s the adoption-to-automation
+          pipeline in real time: workers start by using AI as a copilot, then
+          organizations build systems that remove the human from the loop
+          entirely. The same pattern is emerging in sales automation and
+          trading. This means adoption speed isn&rsquo;t just about when a
+          company starts using AI &mdash; it&rsquo;s about how quickly that
+          usage evolves from &ldquo;tool that helps workers&rdquo; to
+          &ldquo;system that replaces workflows.&rdquo;
+        </p>
+
         {/* ── The Turn ── */}
         <p>
           So those are the two pressure variables. If you stopped here,
@@ -133,6 +157,29 @@ export default function FiveVariablesEssay() {
             productivity data
           </Link>
           {" "}shows that workers who can adapt are already seeing real gains.)
+        </p>
+
+        <p>
+          There&rsquo;s now empirical evidence that this adaptability gap
+          compounds over time. The{" "}
+          <a
+            href="https://www.anthropicindex.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--accent-text)] hover:underline"
+          >
+            Anthropic Economic Index
+          </a>
+          {" "}(March 2026) tracked real AI usage across millions of
+          conversations and found that high-tenure users &mdash; people
+          who&rsquo;ve been using AI tools longer &mdash; achieve 10% higher
+          success rates on the same tasks. They also bring 6% higher education
+          levels to their prompts, meaning they&rsquo;re asking harder
+          questions as they learn. This is the learning curve at work:
+          adaptability isn&rsquo;t just about whether you <em>can</em> switch
+          to new tools, it&rsquo;s about how much better you get with them
+          over time. Workers who start using AI early build a compounding
+          advantage that widens the gap with those who don&rsquo;t.
         </p>
 
         {/* ── Buffer 2: Demand Elasticity ── */}
