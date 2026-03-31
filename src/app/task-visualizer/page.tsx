@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import enrichedData from "@/data/enriched-occupations.json";
+import { scoreKarpathyOccupations } from "@/lib/karpathy-scoring";
+import { TASK_VIS_TO_ENRICHED } from "@/data/task-vis-to-enriched";
 import JobTaskVisualizerWrapper from "@/components/task-visualizer/JobTaskVisualizerWrapper";
 
 export const metadata: Metadata = {
@@ -6,6 +9,48 @@ export const metadata: Metadata = {
   description:
     "Every job is made up of tasks. AI costs are dropping fast, and some of your tasks will be cheaper to do with AI before others. See which ones, and when.",
 };
+
+// Pre-compute 5D scores for occupations that map from task-vis profiles
+const rawForScoring = enrichedData.occupations.map((o) => ({
+  title: o.title,
+  slug: o.slug,
+  category: o.category,
+  pay: o.pay,
+  jobs: o.jobs,
+  outlook: null,
+  outlook_desc: "",
+  education: o.education,
+  exposure: o.exposure,
+  exposure_rationale: o.exposure_rationale,
+  url: o.blsUrl,
+}));
+
+const allScored = scoreKarpathyOccupations(rawForScoring);
+const scoredBySlug = new Map(allScored.map((s) => [s.raw.slug, s]));
+
+// Build a map from task-vis job ID → dimension scores
+const dimensionScores: Record<
+  string,
+  {
+    scores: Record<string, number>;
+    dimensionality: {
+      effectiveDimensions: number;
+      complementarityBase: number;
+      dimensionalityAdj: number;
+      source: "cfo" | "heuristic";
+    };
+  }
+> = {};
+
+for (const [jobId, enrichedSlug] of Object.entries(TASK_VIS_TO_ENRICHED)) {
+  const scored = scoredBySlug.get(enrichedSlug);
+  if (scored) {
+    dimensionScores[jobId] = {
+      scores: scored.scores,
+      dimensionality: scored.dimensionality,
+    };
+  }
+}
 
 export default function TaskVisualizerPage() {
   return (
@@ -22,7 +67,7 @@ export default function TaskVisualizerPage() {
         </p>
       </header>
 
-      <JobTaskVisualizerWrapper />
+      <JobTaskVisualizerWrapper dimensionScores={dimensionScores} />
     </div>
   );
 }
