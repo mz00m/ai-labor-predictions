@@ -69,24 +69,36 @@ function bufferDetail(scores: Record<DimensionKey, number>): {
   whyProtected: string;
   action: string;
 } {
+  const isPhysical = scores.technicalExposure <= 4;
+
   const buffers: { key: string; score: number; why: string; action: string }[] = [
     {
       key: "adaptability",
       score: scores.adaptability,
-      why: "people in this line of work tend to have skills that carry over well to other roles, and generally have enough financial cushion to weather a transition",
-      action: "Start getting comfortable with AI tools that touch your day-to-day work. You don't need to become a technologist. You just need to be the person in your field who knows how to use these tools well, because your core skills will still be in demand.",
+      why: isPhysical
+        ? "the people in this line of work tend to be resourceful and able to pick up new skills when they need to. That matters more than people realize"
+        : "you've built skills that translate well beyond this one role, and that flexibility is genuinely valuable right now",
+      action: isPhysical
+        ? "Keep an eye on how technology is changing the tools and processes around your work. You don't need to become technical, but knowing what's coming gives you a real advantage over people who aren't paying attention."
+        : "Start exploring AI tools that are relevant to your everyday work. You don't need to become a technologist. Even a little familiarity goes a long way, and your existing expertise is the thing that makes you hard to replace.",
     },
     {
       key: "demandElasticity",
       score: scores.demandElasticity,
-      why: "history shows that when technology makes this kind of work cheaper, people want more of it, not less. That pattern tends to protect jobs even as the tools change",
-      action: "Lean into the parts of your work that require real judgment and expertise. As AI makes the basics cheaper and faster, there will likely be more demand for what you do, not less. The opportunity is in handling the harder, more nuanced work that growth brings.",
+      why: "when technology has made this kind of work cheaper in the past, people ended up wanting more of it, not less. There's good reason to think that pattern will hold here too",
+      action: isPhysical
+        ? "The demand for what you do has historically grown when costs go down elsewhere. Focus on being reliable and good at what you do. As the economy shifts, the human side of this work becomes the part people value most."
+        : "Double down on the parts of your work that take real judgment and experience. As AI handles more of the straightforward stuff, demand for what you do will likely grow. The opportunity is in the harder, more nuanced work that only comes with that growth.",
     },
     {
       key: "complementarity",
       score: scores.complementarity,
-      why: "this is the kind of work where AI is more likely to help you do your job better than to take it over. The work involves too many different kinds of judgment happening together for AI to handle it cleanly",
-      action: "Learn to use AI for the parts of your work that feel routine or repetitive. That frees you up to spend more time on the things that actually matter in your role and that only a person can do well.",
+      why: isPhysical
+        ? "this is hands-on work that requires you to be present, read the situation, and adapt in real time. That's exactly the kind of thing AI can't do"
+        : "this is work where AI is much more likely to help you than to replace you. Your job requires too many different kinds of thinking happening at once for a machine to take over",
+      action: isPhysical
+        ? "Your biggest advantage is that your work requires being there, in person, handling things as they come. That's not going away. Stay open to new tools that make the logistical side easier, but know that the core of what you do is secure."
+        : "Try using AI for the parts of your work that feel repetitive or administrative. That frees up your time and energy for the things that actually matter in your role, the work that only you can do.",
     },
   ];
 
@@ -105,34 +117,37 @@ export function workerSummary(
   const jt = jobTitle.toLowerCase();
 
   const exposureDesc = scores.technicalExposure > 7
-    ? "AI can already handle a large portion of the individual tasks that make up this job"
+    ? "a lot of the individual tasks in your job are things AI can already do"
     : scores.technicalExposure > 4
-      ? "AI can handle some of the tasks that make up this job today"
-      : "Most of what this job involves is still hard for AI to do well";
+      ? "some of the tasks in your day-to-day work are things AI is getting good at"
+      : "most of what you actually do in this job is still really hard for AI";
 
   const paceNote = scores.adoptionSpeed > 6
-    ? "And this is a field where new technology gets adopted relatively quickly, so these changes won't be far off."
-    : "This is also a field that tends to move slowly on new technology, which means you have more runway than people in faster-moving industries.";
+    ? "Your field also tends to adopt new technology faster than most, so it's worth paying attention now."
+    : "Your field also tends to be slower to adopt new technology, so you have more time to adjust than people in faster-moving industries.";
 
   if (risk <= 3.5) {
     return {
-      headline: `If you're ${article} ${jt}, your job is well-protected from AI.`,
-      context: `${exposureDesc}. But the bigger picture is encouraging: ${detail.whyProtected}. ${paceNote}`,
+      headline: `If you're ${article} ${jt}, the short answer is: your job is in a strong position.`,
+      context: `We looked at the research, and ${exposureDesc}. More importantly, ${detail.whyProtected}. ${paceNote}`,
       action: detail.action,
     };
   }
 
   if (risk <= 5.5) {
+    const midContext = scores.technicalExposure > 4
+      ? `Here's where things stand: ${exposureDesc}, and that will shift how your role looks over time. But there's genuinely good news here: ${detail.whyProtected}.`
+      : `Here's where things stand: ${exposureDesc}. The bigger picture is that broader changes in your industry will still reshape how this work gets done. The good news is that ${detail.whyProtected}.`;
     return {
-      headline: `If you're ${article} ${jt}, AI will change parts of your work, but you have real room to adapt.`,
-      context: `${exposureDesc}, and that will shift how the role looks over time. The good news: ${detail.whyProtected}. ${paceNote}`,
+      headline: `If you're ${article} ${jt}, AI is going to change parts of your work. But you have real options.`,
+      context: `${midContext} ${paceNote}`,
       action: detail.action,
     };
   }
 
   return {
-    headline: `If you're ${article} ${jt}, AI is going to change your work significantly. The time to prepare is now.`,
-    context: `${exposureDesc}, and the share that AI can handle is growing quickly. That said, there are real reasons for optimism: ${detail.whyProtected}. ${paceNote}`,
+    headline: `If you're ${article} ${jt}, this is worth taking seriously. But it's not too late to get ahead of it.`,
+    context: `We'll be honest with you: ${exposureDesc}, and that's accelerating. But there are real reasons not to panic: ${detail.whyProtected}. ${paceNote}`,
     action: detail.action,
   };
 }
