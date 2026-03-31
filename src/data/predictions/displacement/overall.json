@@ -302,6 +302,25 @@
       "dataType": "projected",
       "confidenceLow": 1.8,
       "confidenceHigh": 12.9
+    },
+    {
+      "date": "2026-03-31",
+      "value": 6,
+      "sourceIds": [
+        "fri-ai-economics-survey-2026"
+      ],
+      "evidenceTier": 1,
+      "metricType": "survey",
+      "sampleSize": 69,
+      "dataType": "projected",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "LFPR decline attributable to AI in rapid progress scenario",
+        "conversionFactor": 1,
+        "conversionLow": 0.5,
+        "conversionHigh": 1.5,
+        "rationale": "Economists forecast LFPR drop from 62.6% to 59.1% by 2030 in rapid AI scenario, with ~half (~1.75pp, ~10M jobs) attributable to AI. 10M/166M labor force ≈ 6%. CONDITIONAL on rapid scenario which economists assign only 14% probability. Probability-weighted expected displacement ≈ 0.8%."
+      }
     }
   ],
   "overlays": [
@@ -1195,6 +1214,15 @@
       ],
       "evidenceTier": 1,
       "label": "NBER/Bick et al.: 10pp more AI adoption → ~3.7pp productivity growth"
+    },
+    {
+      "date": "2026-03-31",
+      "direction": "down",
+      "sourceIds": [
+        "fri-ai-economics-survey-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "FRI: 69 economists forecast labor indicators near historical trends through 2030"
     }
   ],
   "sources": [
@@ -2165,6 +2193,15 @@
       "datePublished": "2026-03-01",
       "excerpt": "We do not find clear evidence that industry-level AI adoption is associated with employment changes.",
       "dateAdded": "2026-03-30"
+    },
+    {
+      "id": "fri-ai-economics-survey-2026",
+      "title": "Forecasting the Economic Effects of AI",
+      "url": "https://open.substack.com/pub/forecastingresearch/p/forecasting-the-economic-effects-of-ai",
+      "publisher": "Forecasting Research Institute (w/ Fed Chicago, Yale, Stanford, UPenn)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-31",
+      "excerpt": "In a rapid AI progress scenario, economists forecast a drop in labor force participation from its 2025 baseline of 62.6% to 59.1% in 2030 and 55% in 2050, with roughly half of this decline—equivalent to 10 million jobs—attributable to AI."
     }
   ]
 }
