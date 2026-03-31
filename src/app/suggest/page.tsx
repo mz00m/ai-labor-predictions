@@ -49,7 +49,7 @@ export default function SuggestPage() {
           <li>
             Peer-reviewed research, government statistics, or institutional reports
             (these carry the most weight in our{" "}
-            <Link href="/about#methodology" className="underline hover:text-[var(--foreground)]">
+            <Link href="/methodology#evidence-tiers" className="underline hover:text-[var(--foreground)]">
               evidence tier system
             </Link>)
           </li>

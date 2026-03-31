@@ -111,7 +111,7 @@ export default function RootLayout({
           <footer className="max-w-6xl mx-auto px-6 sm:px-10 pb-16">
             <div className="pt-10 border-t border-black/[0.06] flex flex-wrap justify-end items-center gap-x-6 gap-y-2 text-[13px] text-[var(--muted)]">
               <a href="/about" className="hover:text-[var(--foreground)] transition-colors">About</a>
-              <a href="/about#methodology" className="hover:text-[var(--foreground)] transition-colors">Methodology</a>
+              <a href="/methodology" className="hover:text-[var(--foreground)] transition-colors">Methodology</a>
               <a href="/learn/reading-list" className="hover:text-[var(--foreground)] transition-colors">Reading List</a>
               <a href="/research" className="hover:text-[var(--foreground)] transition-colors">Sources</a>
               <a href="/suggest" className="hover:text-[var(--foreground)] transition-colors">Suggest a Source</a>

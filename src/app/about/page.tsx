@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import Methodology from "@/components/Methodology";
 import costsData from "@/data/hosting-costs.json";
 import RecentSources from "@/components/RecentSources";
 import AboutStats from "@/components/AboutStats";
@@ -160,9 +159,24 @@ export default function AboutPage() {
         {/* Divider */}
         <div className="border-t border-black/[0.06]" />
 
-        {/* Methodology */}
+        {/* Methodology link */}
         <section id="methodology" className="scroll-mt-16">
-          <Methodology />
+          <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
+            Methodology &amp; Sources
+          </h2>
+          <p className="text-[15px] text-[var(--muted)] mt-2 max-w-3xl mb-4">
+            Full documentation of how we collect, weight, combine, and present
+            evidence across every section of the site.
+          </p>
+          <a
+            href="/methodology"
+            className="inline-flex items-center gap-2 text-[14px] font-semibold text-[var(--accent)] hover:text-[#5C61F6] transition-colors"
+          >
+            Read the full methodology
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M3 8h10m0 0l-4-4m4 4l-4 4" />
+            </svg>
+          </a>
         </section>
 
       </div>
