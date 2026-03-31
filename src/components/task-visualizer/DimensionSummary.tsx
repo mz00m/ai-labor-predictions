@@ -64,39 +64,80 @@ function scoreColor(value: number, isPressure: boolean): string {
   return value > 6 ? "#059669" : value > 3 ? "#D97706" : "#DC2626";
 }
 
+/** Build specific buffer/pressure language from the actual scores */
+function bufferDetail(scores: Record<DimensionKey, number>): {
+  strongestBuffer: string;
+  pressureNote: string;
+  actionable: string;
+} {
+  // Identify the strongest buffer dimension
+  const buffers: { key: string; score: number; strong: string; action: string }[] = [
+    {
+      key: "adaptability",
+      score: scores.adaptability,
+      strong: "workers in this field have strong transferable skills and financial capacity to transition",
+      action: "Your existing skills transfer well to adjacent roles. Invest in learning how AI tools apply to your specific domain so you can pair your expertise with AI fluency.",
+    },
+    {
+      key: "demandElasticity",
+      score: scores.demandElasticity,
+      strong: "when AI makes this work cheaper, demand for the output tends to grow, which historically preserves or even expands employment",
+      action: "As AI drives costs down, expect more demand for this kind of work, not less. Position yourself to handle the higher volume and more complex cases that expansion brings.",
+    },
+    {
+      key: "complementarity",
+      score: scores.complementarity,
+      strong: "AI tends to enhance workers in this role rather than replace them, particularly on tasks that require combining judgment across multiple skill areas",
+      action: "Focus on the tasks where AI makes you faster and better rather than redundant. The workers who learn to use AI as a tool for routine subtasks will free up time for the higher-value work that clients and employers actually pay a premium for.",
+    },
+  ];
+
+  const sorted = [...buffers].sort((a, b) => b.score - a.score);
+  const best = sorted[0];
+
+  // Pressure specifics
+  const fastAdoption = scores.adoptionSpeed > 6;
+  const pressureNote = fastAdoption
+    ? "This sector tends to adopt new technology quickly, so the timeline for change is shorter than average."
+    : "Adoption in this sector tends to be gradual, which gives you more time to prepare.";
+
+  return {
+    strongestBuffer: best.strong,
+    pressureNote,
+    actionable: best.action,
+  };
+}
+
 /** Generate a worker-friendly summary based on the scores */
 export function workerSummary(
   scores: Record<DimensionKey, number>,
   jobTitle: string
 ): { headline: string; guidance: string } {
   const risk = scores.netRisk;
-  const hasStrongBuffers =
-    scores.adaptability > 5 || scores.demandElasticity > 5 || scores.complementarity > 5;
-  const highExposure = scores.technicalExposure > 6;
+  const detail = bufferDetail(scores);
+  const exposureLevel = scores.technicalExposure > 7
+    ? "a high share"
+    : scores.technicalExposure > 4
+      ? "a moderate share"
+      : "a smaller share";
 
   if (risk <= 3.5) {
     return {
       headline: `${jobTitle} has strong structural protection against AI displacement.`,
-      guidance: hasStrongBuffers
-        ? "Your work involves tasks that AI tends to enhance rather than replace. Focus on the human judgment, creativity, and interpersonal skills that make you harder to substitute."
-        : "AI pressure on this role is low. Use this window to build skills in areas where AI can make you more productive, not to replace you.",
+      guidance: `AI can currently perform ${exposureLevel} of the tasks in this role, but ${detail.strongestBuffer}. ${detail.pressureNote} ${detail.actionable}`,
     };
   }
 
   if (risk <= 5.5) {
     return {
-      headline: `${jobTitle} faces moderate AI pressure — but has real room to adapt.`,
-      guidance: highExposure && hasStrongBuffers
-        ? "Some of your tasks will get cheaper to do with AI, but demand for your work and your ability to adapt are working in your favor. Lean into the tasks AI can't easily replicate and learn to use AI as a tool for the parts it can."
-        : "The transition will be gradual. Start learning how AI tools apply to your specific work now — the workers who adapt earliest will have the most options.",
+      headline: `${jobTitle} faces moderate AI pressure, but has real room to adapt.`,
+      guidance: `AI can currently perform ${exposureLevel} of the tasks in this role. The important context: ${detail.strongestBuffer}. ${detail.pressureNote} ${detail.actionable}`,
     };
   }
 
   return {
-    headline: `${jobTitle} faces significant AI pressure — but that means acting now matters most.`,
-    guidance: hasStrongBuffers
-      ? "The exposure is real, but you have transferable skills and growing demand on your side. Focus on the parts of your work that require judgment, relationships, and context that AI can't replicate. Workers who pair AI fluency with domain expertise will be in the strongest position."
-      : "Start building adjacent skills now. The tasks AI will handle first are the most routine ones — shift your focus toward work that requires human judgment, coordination, and creative problem-solving.",
+    headline: `${jobTitle} faces significant AI pressure, which means acting now matters most.`,
+    guidance: `AI can currently perform ${exposureLevel} of the tasks in this role, and that share is growing. Even so, ${detail.strongestBuffer}. ${detail.pressureNote} ${detail.actionable}`,
   };
 }
 
