@@ -16,7 +16,7 @@ import ExposureParticles from "./ExposureParticles";
 import { INDUSTRY_ADOPTION_SPEED } from "@/data/industry-adoption-speed";
 import Link from "next/link";
 import { useCountUp } from "@/hooks/useCountUp";
-import DimensionSummary, { type DimensionScoreData } from "./DimensionSummary";
+import DimensionSummary, { type DimensionScoreData, workerSummary } from "./DimensionSummary";
 
 export type DimensionScoresMap = Record<string, DimensionScoreData>;
 
@@ -465,23 +465,11 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
             </div>
             <p className="text-[13px] text-[var(--muted)] mt-1.5">
               {selectedJob.category} · ${selectedJob.medianWagePerHr}/hr median wage (BLS) · {selectedJob.tasks.length} tasks
-              {dimensionScores[selectedJob.id] && (
-                <>
-                  {" · "}
-                  <a
-                    href="#dimension-summary"
-                    className="text-[var(--accent-text)] hover:underline"
-                  >
-                    5-dimension risk &darr;
-                  </a>
-                </>
-              )}
             </p>
 
-            {/* Job Dimensionality + Phase Transition */}
+            {/* Job Dimensionality badge */}
             {dimensionalityInfo && (
               <div className="mt-3 flex flex-wrap gap-2">
-                {/* Dimensionality badge */}
                 <div
                   className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[12px] font-medium border"
                   style={{
@@ -510,9 +498,37 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
                   </span>
                   <span className="opacity-70">task dimensions</span>
                 </div>
-
               </div>
             )}
+
+            {/* Plain-language AI impact summary */}
+            {dimensionScores[selectedJob.id] && (() => {
+              const summary = workerSummary(
+                dimensionScores[selectedJob.id].scores as Parameters<typeof workerSummary>[0],
+                selectedJob.title
+              );
+              const rc = dimensionScores[selectedJob.id].scores.netRisk > 6
+                ? "#DC2626"
+                : dimensionScores[selectedJob.id].scores.netRisk > 4
+                  ? "#D97706"
+                  : "#059669";
+              return (
+                <div
+                  className="mt-4 px-4 py-3 rounded-lg border"
+                  style={{
+                    borderColor: rc + "20",
+                    background: rc + "06",
+                  }}
+                >
+                  <p className="text-[13px] font-medium text-[var(--foreground)] leading-snug">
+                    {summary.headline}
+                  </p>
+                  <p className="text-[12px] text-[var(--muted)] mt-1 leading-relaxed">
+                    {summary.guidance}
+                  </p>
+                </div>
+              );
+            })()}
           </div>
 
           {/* Two-column layout: sliders + main content */}
@@ -541,6 +557,12 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
                 value={industrySpeedMultiplier}
                 onChange={setIndustrySpeedMultiplier}
               />
+              {dimensionScores[selectedJob.id] && (
+                <DimensionSummary
+                  data={dimensionScores[selectedJob.id]}
+                  jobTitle={selectedJob.title}
+                />
+              )}
             </div>
 
             {/* Right: Visualizations */}
@@ -608,13 +630,6 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
             </div>
           </div>
         </>
-      )}
-
-      {/* 5-Dimension Displacement Risk */}
-      {selectedJob && dimensionScores[selectedJob.id] && (
-        <div id="dimension-summary" className="mt-8 max-w-xl">
-          <DimensionSummary data={dimensionScores[selectedJob.id]} />
-        </div>
       )}
 
       {/* Durable human skills — optimistic closing */}
