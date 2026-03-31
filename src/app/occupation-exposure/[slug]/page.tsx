@@ -122,9 +122,20 @@ export default function Page({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
-      <main className="px-6 sm:px-10 py-8 sm:py-12">
+      <div
+        className="text-white min-h-screen py-8 sm:py-12 px-6 sm:px-10"
+        style={{
+          background: "#0a0a0f",
+          marginLeft: "calc(-50vw + 50%)",
+          marginRight: "calc(-50vw + 50%)",
+          marginTop: "-4rem",
+          marginBottom: "-4rem",
+          paddingLeft: "max(1.5rem, calc(50vw - 36rem))",
+          paddingRight: "max(1.5rem, calc(50vw - 36rem))",
+        }}
+      >
         <OccupationSlugPage data={clientData} />
-      </main>
+      </div>
     </>
   );
 }
