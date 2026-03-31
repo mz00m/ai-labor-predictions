@@ -14,9 +14,11 @@ import IndustrySpeedSlider from "./IndustrySpeedSlider";
 import MethodologySection from "./MethodologySection";
 import ExposureParticles from "./ExposureParticles";
 import { INDUSTRY_ADOPTION_SPEED } from "@/data/industry-adoption-speed";
-import { TASK_VIS_TO_ENRICHED } from "@/data/task-vis-to-enriched";
 import Link from "next/link";
 import { useCountUp } from "@/hooks/useCountUp";
+import DimensionSummary, { type DimensionScoreData } from "./DimensionSummary";
+
+export type DimensionScoresMap = Record<string, DimensionScoreData>;
 
 const DEFAULT_CATEGORY_STYLE = {
   bg: "rgba(92,97,246,0.03)",
@@ -66,6 +68,7 @@ function ExposureTooltip({ children }: { children: ReactNode }) {
 
 interface JobTaskVisualizerProps {
   initialJobId?: string;
+  dimensionScores: DimensionScoresMap;
 }
 
 const HIDDEN_CATEGORIES: string[] = [];
@@ -123,7 +126,7 @@ const coveredEmployment = JOB_PROFILES.reduce(
 );
 const coveragePct = Math.round((coveredEmployment / TOTAL_US_EMPLOYMENT) * 100);
 
-export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerProps) {
+export default function JobTaskVisualizer({ initialJobId, dimensionScores }: JobTaskVisualizerProps) {
   const [selectedJobId, setSelectedJobId] = useState<string>(() => {
     if (initialJobId && JOB_PROFILES.find((j) => j.id === initialJobId)) {
       return initialJobId;
@@ -462,15 +465,15 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
             </div>
             <p className="text-[13px] text-[var(--muted)] mt-1.5">
               {selectedJob.category} · ${selectedJob.medianWagePerHr}/hr median wage (BLS) · {selectedJob.tasks.length} tasks
-              {TASK_VIS_TO_ENRICHED[selectedJob.id] && (
+              {dimensionScores[selectedJob.id] && (
                 <>
                   {" · "}
-                  <Link
-                    href={`/occupation-exposure/${TASK_VIS_TO_ENRICHED[selectedJob.id]}`}
+                  <a
+                    href="#dimension-summary"
                     className="text-[var(--accent-text)] hover:underline"
                   >
-                    5-dimension analysis &rarr;
-                  </Link>
+                    5-dimension risk &darr;
+                  </a>
                 </>
               )}
             </p>
@@ -605,6 +608,13 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
             </div>
           </div>
         </>
+      )}
+
+      {/* 5-Dimension Displacement Risk */}
+      {selectedJob && dimensionScores[selectedJob.id] && (
+        <div id="dimension-summary" className="mt-8 max-w-xl">
+          <DimensionSummary data={dimensionScores[selectedJob.id]} />
+        </div>
       )}
 
       {/* Durable human skills — optimistic closing */}

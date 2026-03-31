@@ -3,17 +3,22 @@
 import { useSearchParams } from "next/navigation";
 import { Suspense } from "react";
 import JobTaskVisualizer from "./JobTaskVisualizer";
+import type { DimensionScoresMap } from "./JobTaskVisualizer";
 
-function Inner() {
-  const searchParams = useSearchParams();
-  const initialJobId = searchParams.get("job") || undefined;
-  return <JobTaskVisualizer initialJobId={initialJobId} />;
+interface Props {
+  dimensionScores: DimensionScoresMap;
 }
 
-export default function JobTaskVisualizerWrapper() {
+function Inner({ dimensionScores }: Props) {
+  const searchParams = useSearchParams();
+  const initialJobId = searchParams.get("job") || undefined;
+  return <JobTaskVisualizer initialJobId={initialJobId} dimensionScores={dimensionScores} />;
+}
+
+export default function JobTaskVisualizerWrapper({ dimensionScores }: Props) {
   return (
     <Suspense fallback={<div className="h-[200px]" />}>
-      <Inner />
+      <Inner dimensionScores={dimensionScores} />
     </Suspense>
   );
 }
