@@ -14,9 +14,18 @@ import {
   OCCUPATION_GROUPS,
   DEMAND_ELASTICITY,
   CFO_SURVEY_NEI,
-  SOC_EXPOSURE_SCORES,
 } from "@/data/economy-occupations";
 import { SOC_INDUSTRY_SPEED } from "@/data/industry-adoption-speed";
+import {
+  WEIGHTS,
+  ELASTICITY_SCORES,
+  adoptionSpeedScore,
+  complementarityFromNEI,
+  estimateComplementarityFromTasks,
+  dimensionalityAdjustment,
+  clamp010,
+  computeNetRisk,
+} from "./scoring-shared";
 
 /** Karpathy's raw occupation data */
 export interface KarpathyOccupation {
@@ -93,27 +102,6 @@ function getSocGroupId(occ: KarpathyOccupation): string {
   return CATEGORY_TO_SOC[occ.category] || "office-admin";
 }
 
-const WEIGHTS = {
-  technicalExposure: 0.30,
-  adoptionSpeed: 0.20,
-  adaptability: 0.15,
-  demandElasticity: 0.15,
-  complementarity: 0.20,
-};
-
-const ELASTICITY_SCORES: Record<string, number> = {
-  high: 8,
-  moderate: 5,
-  low: 2,
-};
-
-function adoptionSpeedScore(multiplier: number): number {
-  return Math.max(0, Math.min(10, ((1.4 - multiplier) / 0.8) * 10));
-}
-
-function complementarityFromNEI(nei: number): number {
-  return Math.max(0, Math.min(10, 10 - nei * 5));
-}
 
 export interface KarpathyScoringOptions {
   dimensionalityEnabled?: boolean; // default true
@@ -163,28 +151,17 @@ export function scoreKarpathyOccupations(
       if (cfoData) {
         dimSource = "cfo";
         complementarityBase = complementarityFromNEI(cfoData.nei);
-        if (socGroup && dimensionalityEnabled) {
-          dimensionalityAdj = effectiveDims <= 3 ? -0.5 : effectiveDims >= 6 ? 0.5 : 0;
-        } else {
-          dimensionalityAdj = 0;
-        }
-        complementarity = Math.max(0, Math.min(10, complementarityBase + dimensionalityAdj));
+        dimensionalityAdj = (socGroup && dimensionalityEnabled)
+          ? dimensionalityAdjustment(effectiveDims, true, 3)
+          : 0;
+        complementarity = clamp010(complementarityBase + dimensionalityAdj);
       } else if (socGroup) {
         dimSource = "heuristic";
-        const tc = socGroup.taskComposition;
-        const compShare =
-          tc["interpersonal"] +
-          tc["physical-manual"] +
-          tc["coordination-management"] * 0.5 +
-          tc["analysis-decision"] * 0.3;
-        const subShare =
-          tc["information-processing"] + tc["communication"] * 0.5;
-        const ratio = compShare / Math.max(0.1, subShare);
-        complementarityBase = Math.max(1, Math.min(9, ratio * 3));
+        complementarityBase = estimateComplementarityFromTasks(socGroup.taskComposition);
         dimensionalityAdj = dimensionalityEnabled
-          ? (effectiveDims <= 3 ? -1.5 : effectiveDims >= 5 ? 1.0 : 0)
+          ? dimensionalityAdjustment(effectiveDims, false, 3)
           : 0;
-        complementarity = Math.max(0, Math.min(10, complementarityBase + dimensionalityAdj));
+        complementarity = clamp010(complementarityBase + dimensionalityAdj);
       } else {
         dimSource = "heuristic";
         complementarityBase = 5;
@@ -192,19 +169,10 @@ export function scoreKarpathyOccupations(
         complementarity = 5;
       }
 
-      // Net Risk composite — normalize pressure and absorption independently
-      // so defensive factors (adaptability, elasticity, complementarity) can
-      // fully counterbalance pressure factors (exposure, adoption speed).
-      const pressureWeightSum = WEIGHTS.technicalExposure + WEIGHTS.adoptionSpeed;
-      const absorptionWeightSum = WEIGHTS.adaptability + WEIGHTS.demandElasticity + WEIGHTS.complementarity;
-      const pressureNorm =
-        (WEIGHTS.technicalExposure * technicalExposure +
-          WEIGHTS.adoptionSpeed * adoptionSpeed) / pressureWeightSum;
-      const absorptionNorm =
-        (WEIGHTS.adaptability * adaptability +
-          WEIGHTS.demandElasticity * demandElasticity +
-          WEIGHTS.complementarity * complementarity) / absorptionWeightSum;
-      const netRisk = Math.max(0, Math.min(10, (pressureNorm - absorptionNorm + 10) / 2));
+      // Composite net risk
+      const netRisk = computeNetRisk({
+        technicalExposure, adoptionSpeed, adaptability, demandElasticity, complementarity,
+      });
 
       return {
         raw: occ,

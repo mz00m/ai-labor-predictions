@@ -25,9 +25,19 @@ import {
   DEMAND_ELASTICITY,
   CFO_SURVEY_NEI,
   type OccupationGroup,
-  type DemandElasticity,
 } from "@/data/economy-occupations";
 import { SOC_INDUSTRY_SPEED } from "@/data/industry-adoption-speed";
+import {
+  WEIGHTS,
+  ELASTICITY_SCORES,
+  adoptionSpeedScore,
+  complementarityFromNEI,
+  estimateComplementarityFromTasks,
+  getEffectiveDimensions as getEffectiveDimsFromComposition,
+  dimensionalityAdjustment,
+  clamp010,
+  computeNetRisk,
+} from "./scoring-shared";
 
 export interface DimensionScores {
   technicalExposure: number;    // 0-10: higher = more exposed
@@ -52,100 +62,12 @@ export interface ScoredOccupation {
   dimensionality: DimensionalityMeta;
 }
 
-const ELASTICITY_SCORES: Record<DemandElasticity, number> = {
-  high: 8,
-  moderate: 5,
-  low: 2,
-};
-
 /**
- * Convert SOC_INDUSTRY_SPEED multiplier to 0-10 speed score.
- * Lower multiplier = faster adoption = higher score.
- * Range: 0.6 (fastest, Technology) to 1.4 (slowest, Healthcare).
- */
-function adoptionSpeedScore(multiplier: number): number {
-  // Map 0.6-1.4 → 10-0 (inverted: faster = higher score)
-  return Math.max(0, Math.min(10, ((1.4 - multiplier) / 0.8) * 10));
-}
-
-/**
- * Convert CFO NEI to complementarity score.
- * NEI < 0.3 = strongly enhancement-dominant (score ~9)
- * NEI ~ 1.0 = balanced (score ~5)
- * NEI > 1.5 = replacement-dominant (score ~2)
- */
-function complementarityFromNEI(nei: number): number {
-  // Inverse sigmoid-ish mapping: NEI 0→10, NEI 1→5, NEI 2→1
-  return Math.max(0, Math.min(10, 10 - (nei * 5)));
-}
-
-/**
- * Count effective task dimensions for an occupation group.
- * "Effective dimensions" = task categories with >= 10% time share.
- *
- * This captures the O-Ring insight from Gans & Goldfarb (2024): jobs with
- * more complementary task clusters are more likely to see augmentation
- * (the "focus effect") rather than replacement.
+ * Wrapper for backward compatibility: delegates to shared getEffectiveDimensions.
  */
 export function getEffectiveDimensions(group: OccupationGroup): number {
-  return Object.values(group.taskComposition)
-    .filter((share) => share >= 0.10).length;
+  return getEffectiveDimsFromComposition(group.taskComposition);
 }
-
-/**
- * Estimate complementarity for groups without CFO survey data,
- * incorporating both task composition heuristics and job dimensionality.
- *
- * Job dimensionality (Gans & Goldfarb 2024, "O-Ring Automation") is the
- * structural mechanism behind complementarity: high-dimensional jobs with
- * many complementary task clusters see augmentation via the "focus effect"
- * (automating some tasks lets workers concentrate on remaining ones,
- * multiplying quality). Low-dimensional jobs face stronger firm incentive
- * to fully automate since eliminating the last task removes the position.
- */
-function estimateComplementarity(group: OccupationGroup): number {
-  const tc = group.taskComposition;
-  // High physical/interpersonal = more complementary (AI assists, doesn't replace)
-  // High information-processing = less complementary (AI directly substitutes)
-  const complementaryShare = tc["interpersonal"] + tc["physical-manual"] +
-    tc["coordination-management"] * 0.5 + tc["analysis-decision"] * 0.3;
-  const substitutionShare = tc["information-processing"] + tc["communication"] * 0.5;
-  const taskRatio = complementaryShare / Math.max(0.1, substitutionShare);
-  const taskScore = Math.max(1, Math.min(9, taskRatio * 3));
-
-  // Dimensionality bonus: more effective task dimensions → stronger focus effect
-  // → higher complementarity. This is the O-Ring mechanism.
-  const effectiveDims = getEffectiveDimensions(group);
-  // 1-2 dims: -1.5 penalty, 3-4: no change, 5+: +1.0 bonus
-  const dimAdjustment = effectiveDims <= 2 ? -1.5 : effectiveDims >= 5 ? 1.0 : 0;
-
-  return Math.max(0, Math.min(10, taskScore + dimAdjustment));
-}
-
-/**
- * Apply dimensionality adjustment to CFO-based complementarity scores.
- * Even with real CFO data, job structure modulates the score:
- * low-dimensional jobs are structurally more substitutable regardless
- * of current CFO sentiment.
- */
-function adjustComplementarityForDimensionality(
-  cfoScore: number,
-  group: OccupationGroup
-): number {
-  const effectiveDims = getEffectiveDimensions(group);
-  // Mild adjustment: ±0.5 for extreme dimensionality
-  const dimAdjustment = effectiveDims <= 2 ? -0.5 : effectiveDims >= 6 ? 0.5 : 0;
-  return Math.max(0, Math.min(10, cfoScore + dimAdjustment));
-}
-
-/** Weights for the composite score */
-const WEIGHTS = {
-  technicalExposure: 0.30,
-  adoptionSpeed: 0.20,
-  adaptability: 0.15,
-  demandElasticity: 0.15,
-  complementarity: 0.20,
-};
 
 export function scoreOccupation(group: OccupationGroup): ScoredOccupation {
   // 1. Technical Exposure (0-10)
@@ -174,33 +96,17 @@ export function scoreOccupation(group: OccupationGroup): ScoredOccupation {
 
   if (cfoData) {
     complementarityBase = complementarityFromNEI(cfoData.nei);
-    const dimAdj = effectiveDims <= 2 ? -0.5 : effectiveDims >= 6 ? 0.5 : 0;
-    dimensionalityAdj = dimAdj;
+    dimensionalityAdj = dimensionalityAdjustment(effectiveDims, true);
   } else {
-    const tc = group.taskComposition;
-    const complementaryShare = tc["interpersonal"] + tc["physical-manual"] +
-      tc["coordination-management"] * 0.5 + tc["analysis-decision"] * 0.3;
-    const substitutionShare = tc["information-processing"] + tc["communication"] * 0.5;
-    const taskRatio = complementaryShare / Math.max(0.1, substitutionShare);
-    complementarityBase = Math.max(1, Math.min(9, taskRatio * 3));
-    dimensionalityAdj = effectiveDims <= 2 ? -1.5 : effectiveDims >= 5 ? 1.0 : 0;
+    complementarityBase = estimateComplementarityFromTasks(group.taskComposition);
+    dimensionalityAdj = dimensionalityAdjustment(effectiveDims, false);
   }
-  const complementarity = Math.max(0, Math.min(10, complementarityBase + dimensionalityAdj));
+  const complementarity = clamp010(complementarityBase + dimensionalityAdj);
 
-  // Composite: pressure - absorption, each normalized to 0-10 independently
-  // so defensive factors can fully counterbalance pressure factors.
-  const pressureWeightSum = WEIGHTS.technicalExposure + WEIGHTS.adoptionSpeed;
-  const absorptionWeightSum = WEIGHTS.adaptability + WEIGHTS.demandElasticity + WEIGHTS.complementarity;
-  const pressureNorm =
-    (WEIGHTS.technicalExposure * technicalExposure +
-      WEIGHTS.adoptionSpeed * adoptionSpeed) / pressureWeightSum;
-  const absorptionNorm =
-    (WEIGHTS.adaptability * adaptability +
-      WEIGHTS.demandElasticity * demandElasticity +
-      WEIGHTS.complementarity * complementarity) / absorptionWeightSum;
-
-  // Scale to 0-10: 5.0 when pressure = absorption, 0 when fully absorbed, 10 when fully exposed
-  const netRisk = Math.max(0, Math.min(10, (pressureNorm - absorptionNorm + 10) / 2));
+  // Composite net risk
+  const netRisk = computeNetRisk({
+    technicalExposure, adoptionSpeed, adaptability, demandElasticity, complementarity,
+  });
 
   const dimContext = effectiveDims <= 2
     ? ` Job has only ${effectiveDims} effective task dimension${effectiveDims === 1 ? "" : "s"} — low-dimensional, strong firm incentive to fully automate (O-Ring risk).`
