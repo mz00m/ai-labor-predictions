@@ -14,6 +14,8 @@ import IndustrySpeedSlider from "./IndustrySpeedSlider";
 import MethodologySection from "./MethodologySection";
 import ExposureParticles from "./ExposureParticles";
 import { INDUSTRY_ADOPTION_SPEED } from "@/data/industry-adoption-speed";
+import { TASK_VIS_TO_ENRICHED } from "@/data/task-vis-to-enriched";
+import Link from "next/link";
 import { useCountUp } from "@/hooks/useCountUp";
 
 const DEFAULT_CATEGORY_STYLE = {
@@ -460,6 +462,17 @@ export default function JobTaskVisualizer({ initialJobId }: JobTaskVisualizerPro
             </div>
             <p className="text-[13px] text-[var(--muted)] mt-1.5">
               {selectedJob.category} · ${selectedJob.medianWagePerHr}/hr median wage (BLS) · {selectedJob.tasks.length} tasks
+              {TASK_VIS_TO_ENRICHED[selectedJob.id] && (
+                <>
+                  {" · "}
+                  <Link
+                    href={`/occupation-exposure/${TASK_VIS_TO_ENRICHED[selectedJob.id]}`}
+                    className="text-[var(--accent-text)] hover:underline"
+                  >
+                    5-dimension analysis &rarr;
+                  </Link>
+                </>
+              )}
             </p>
 
             {/* Job Dimensionality + Phase Transition */}

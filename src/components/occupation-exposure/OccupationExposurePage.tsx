@@ -260,7 +260,12 @@ export default function OccupationExposurePage() {
                 {/* Left: occupation info */}
                 <div className="flex-1 min-w-0">
                   <h3 className="text-[18px] font-bold text-white mb-1">
-                    {selectedOcc.raw.title}
+                    <Link
+                      href={`/occupation-exposure/${selectedOcc.raw.slug}`}
+                      className="hover:text-white/80 transition-colors underline decoration-white/20 underline-offset-2 hover:decoration-white/50"
+                    >
+                      {selectedOcc.raw.title}
+                    </Link>
                   </h3>
                   <div className="flex flex-wrap gap-2 text-[11px] text-white/50 mb-3">
                     {selectedOcc.raw.jobs && (
@@ -357,17 +362,25 @@ export default function OccupationExposurePage() {
                 </div>
               </div>
 
-              {/* BLS link */}
-              {selectedOcc.raw.url && (
-                <a
-                  href={selectedOcc.raw.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block mt-3 text-[11px] text-white/40 hover:text-white/70 transition-colors"
+              {/* Links */}
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-3">
+                <Link
+                  href={`/occupation-exposure/${selectedOcc.raw.slug}`}
+                  className="text-[11px] font-medium text-white/60 hover:text-white transition-colors"
                 >
-                  View on BLS Occupational Outlook Handbook &rarr;
-                </a>
-              )}
+                  View full analysis &rarr;
+                </Link>
+                {selectedOcc.raw.url && (
+                  <a
+                    href={selectedOcc.raw.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[11px] text-white/40 hover:text-white/70 transition-colors"
+                  >
+                    BLS Handbook &rarr;
+                  </a>
+                )}
+              </div>
             </div>
           </div>
         )}
