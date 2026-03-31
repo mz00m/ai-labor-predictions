@@ -418,40 +418,12 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
       {/* Selected job view */}
       {selectedJob && (
         <>
-          {/* Header with job info and exposure score */}
+          {/* Header with job info */}
           <div className="mb-6 pb-6 border-b border-black/[0.06]">
-            <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+            <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-3">
               <h2 className="text-[20px] font-bold text-[var(--foreground)] tracking-tight">
                 {selectedJob.title}
               </h2>
-              <ExposureTooltip>
-                <div className="exposure-score relative inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-black/[0.02] border border-black/[0.06] overflow-hidden">
-                  <ExposureParticles score={exposureScoreRaw} trigger={particleTrigger} />
-                  <p
-                    className="text-[22px] font-bold tracking-tight relative z-10 leading-none"
-                    style={{
-                      color:
-                        exposureScoreRaw > 60
-                          ? "#EF4444"
-                          : exposureScoreRaw > 35
-                            ? "#6366F1"
-                            : "#10B981",
-                    }}
-                  >
-                    {exposureScore}
-                  </p>
-                  <div className="relative z-10 flex items-center gap-1">
-                    <span className="text-[12px] font-medium text-[var(--muted)] leading-tight">
-                      exposure
-                    </span>
-                    <svg width="13" height="13" viewBox="0 0 16 16" fill="none" className="text-[var(--muted)] opacity-50 shrink-0">
-                      <circle cx="8" cy="8" r="7" stroke="currentColor" strokeWidth="1.5" />
-                      <path d="M8 7v4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-                      <circle cx="8" cy="5" r="0.75" fill="currentColor" />
-                    </svg>
-                  </div>
-                </div>
-              </ExposureTooltip>
               <button
                 onClick={() => {
                   setSelectedJobId("");
@@ -463,28 +435,77 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
                 Change job
               </button>
             </div>
-            <p className="text-[13px] text-[var(--muted)] mt-1.5">
-              {selectedJob.category} · ${selectedJob.medianWagePerHr}/hr median wage (BLS) · {selectedJob.tasks.length} tasks
-            </p>
 
-            {/* Job Dimensionality badge */}
-            {dimensionalityInfo && (
-              <div className="mt-3 flex flex-wrap gap-2">
-                <div
-                  className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[12px] font-medium border"
+            {/* Scannable stat pills - each links to its explainer */}
+            <div className="flex flex-wrap gap-2 mb-4">
+              <ExposureTooltip>
+                <div className="exposure-score relative inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-black/[0.02] border border-black/[0.06] overflow-hidden cursor-help">
+                  <ExposureParticles score={exposureScoreRaw} trigger={particleTrigger} />
+                  <p
+                    className="text-[16px] font-bold tracking-tight relative z-10 leading-none"
+                    style={{
+                      color:
+                        exposureScoreRaw > 60
+                          ? "#EF4444"
+                          : exposureScoreRaw > 35
+                            ? "#6366F1"
+                            : "#10B981",
+                    }}
+                  >
+                    {exposureScore}
+                  </p>
+                  <span className="relative z-10 text-[11px] text-[var(--muted)]">
+                    exposure score
+                  </span>
+                </div>
+              </ExposureTooltip>
+
+              <button
+                onClick={() => setActiveTab("breakdown")}
+                className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-black/[0.02] border border-black/[0.06] text-[11px] text-[var(--muted)] hover:border-[var(--accent)] hover:text-[var(--foreground)] transition-colors"
+              >
+                <span className="text-[14px] font-bold text-[var(--foreground)]" style={{ fontFamily: "'DM Mono', monospace" }}>
+                  {selectedJob.tasks.length}
+                </span>
+                tasks analyzed
+              </button>
+
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-black/[0.02] border border-black/[0.06] text-[11px] text-[var(--muted)]">
+                <span className="text-[14px] font-bold text-[var(--foreground)]" style={{ fontFamily: "'DM Mono', monospace" }}>
+                  ${selectedJob.medianWagePerHr}
+                </span>
+                /hr median wage
+              </span>
+
+              <a
+                href={`https://www.bls.gov/ooh/${selectedJob.category.toLowerCase().replace(/[^a-z0-9]+/g, "-")}/`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-black/[0.02] border border-black/[0.06] text-[11px] text-[var(--muted)] hover:border-[var(--accent)] hover:text-[var(--foreground)] transition-colors"
+              >
+                {selectedJob.category}
+                <svg width="10" height="10" viewBox="0 0 16 16" fill="none" className="opacity-40">
+                  <path d="M6 3h7v7M13 3L6 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </a>
+
+              {dimensionalityInfo && (
+                <a
+                  href="/occupation-exposure#methodology-complementarity"
+                  className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border text-[11px] hover:border-[var(--accent)] transition-colors"
                   style={{
                     borderColor:
                       dimensionalityInfo.effectiveDimensions <= 2
-                        ? "rgba(239,68,68,0.3)"
+                        ? "rgba(239,68,68,0.25)"
                         : dimensionalityInfo.effectiveDimensions <= 4
-                          ? "rgba(245,158,11,0.3)"
-                          : "rgba(16,185,129,0.3)",
+                          ? "rgba(245,158,11,0.25)"
+                          : "rgba(16,185,129,0.25)",
                     backgroundColor:
                       dimensionalityInfo.effectiveDimensions <= 2
-                        ? "rgba(239,68,68,0.06)"
+                        ? "rgba(239,68,68,0.04)"
                         : dimensionalityInfo.effectiveDimensions <= 4
-                          ? "rgba(245,158,11,0.06)"
-                          : "rgba(16,185,129,0.06)",
+                          ? "rgba(245,158,11,0.04)"
+                          : "rgba(16,185,129,0.04)",
                     color:
                       dimensionalityInfo.effectiveDimensions <= 2
                         ? "#DC2626"
@@ -493,13 +514,13 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
                           : "#059669",
                   }}
                 >
-                  <span style={{ fontFamily: "'DM Mono', monospace" }}>
+                  <span className="text-[14px] font-bold" style={{ fontFamily: "'DM Mono', monospace" }}>
                     {dimensionalityInfo.effectiveDimensions}/{dimensionalityInfo.totalCategories}
                   </span>
-                  <span className="opacity-70">task dimensions</span>
-                </div>
-              </div>
-            )}
+                  <span className="opacity-80">task dimensions</span>
+                </a>
+              )}
+            </div>
 
             {/* Plain-language AI impact summary */}
             {dimensionScores[selectedJob.id] && (() => {
@@ -514,16 +535,16 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
                   : "#059669";
               return (
                 <div
-                  className="mt-4 px-4 py-3 rounded-lg border"
+                  className="px-4 py-3 rounded-lg border"
                   style={{
-                    borderColor: rc + "20",
+                    borderColor: rc + "18",
                     background: rc + "06",
                   }}
                 >
                   <p className="text-[13px] font-medium text-[var(--foreground)] leading-snug">
                     {summary.headline}
                   </p>
-                  <p className="text-[12px] text-[var(--muted)] mt-1 leading-relaxed">
+                  <p className="text-[12px] text-[var(--muted)] mt-1.5 leading-relaxed">
                     {summary.guidance}
                   </p>
                 </div>
