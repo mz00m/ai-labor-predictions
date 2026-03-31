@@ -409,6 +409,24 @@
       ],
       "evidenceTier": 2,
       "label": "Tufts Digital Planet: 4.9M 'tipping point' workers in 33 occupations swing to >40% displacement"
+    },
+    {
+      "date": "2026-03-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "kpmg-ai-pulse-q1-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "KPMG: 87% of firms upskilling/reskilling for AI"
+    },
+    {
+      "date": "2026-03-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "kpmg-ai-pulse-q1-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "KPMG: 57% expect humans to manage/direct AI agents"
     }
   ],
   "sources": [
@@ -760,6 +778,16 @@
       "evidenceTier": 2,
       "datePublished": "2026-03-25",
       "excerpt": "There are 4.9 million 'tipping point' workers -- spanning 33 occupations that swing from <10% to >40% displacement in the next 2-5 years across the US."
+    },
+    {
+      "id": "kpmg-ai-pulse-q1-2026",
+      "title": "AI Quarterly Pulse Survey Q1 2026",
+      "url": "https://kpmg.com/us/en/media/news/q1-ai-pulse2026.html",
+      "publisher": "KPMG",
+      "evidenceTier": 2,
+      "datePublished": "2026-03-01",
+      "excerpt": "87% Upskilling/reskilling current workforce",
+      "dateAdded": "2026-03-31"
     }
   ]
 }

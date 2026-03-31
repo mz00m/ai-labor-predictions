@@ -673,6 +673,15 @@
       ],
       "evidenceTier": 3,
       "label": "Burning Glass: All 38%+ college metros saw double-digit unemployment percentile rise"
+    },
+    {
+      "date": "2026-03-01",
+      "direction": "up",
+      "sourceIds": [
+        "kpmg-ai-pulse-q1-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "KPMG: 55% of firms redesigning job roles for AI"
     }
   ],
   "sources": [
@@ -1311,6 +1320,16 @@
       "datePublished": "2026-03-26",
       "excerpt": "In 2022, there was essentially no relationship between a metro area's share of college graduates and where its unemployment rate stood relative to its own history. The correlation was -0.01. Three years later, that correlation is 0.26 \u2014 modest but meaningful across more than 300 metropolitan areas.",
       "dateAdded": "2026-03-27"
+    },
+    {
+      "id": "kpmg-ai-pulse-q1-2026",
+      "title": "AI Quarterly Pulse Survey Q1 2026",
+      "url": "https://kpmg.com/us/en/media/news/q1-ai-pulse2026.html",
+      "publisher": "KPMG",
+      "evidenceTier": 2,
+      "datePublished": "2026-03-01",
+      "excerpt": "Redesigning job roles... 55%",
+      "dateAdded": "2026-03-31"
     }
   ]
 }

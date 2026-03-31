@@ -550,6 +550,15 @@
       ],
       "evidenceTier": 1,
       "label": "NBER/Bick et al.: Firm encouragement explains 80% of US-EU adoption gap"
+    },
+    {
+      "date": "2026-03-01",
+      "direction": "up",
+      "sourceIds": [
+        "kpmg-ai-pulse-q1-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "KPMG: 54% of orgs deploying AI agents, Q1 2026"
     }
   ],
   "sources": [
@@ -1066,6 +1075,16 @@
       "datePublished": "2026-03-01",
       "excerpt": "Firm encouragement alone accounts for 80% of the overall average gap.",
       "dateAdded": "2026-03-30"
+    },
+    {
+      "id": "kpmg-ai-pulse-q1-2026",
+      "title": "AI Quarterly Pulse Survey Q1 2026",
+      "url": "https://kpmg.com/us/en/media/news/q1-ai-pulse2026.html",
+      "publisher": "KPMG",
+      "evidenceTier": 2,
+      "datePublished": "2026-03-01",
+      "excerpt": "Today, more than half of organizations are actively deploying AI agents.",
+      "dateAdded": "2026-03-31"
     }
   ]
 }

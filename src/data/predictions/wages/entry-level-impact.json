@@ -401,6 +401,15 @@
       ],
       "evidenceTier": 4,
       "label": "Lichtinger & Hosseini: Junior tasks most susceptible to AI displacement"
+    },
+    {
+      "date": "2026-03-01",
+      "direction": "down",
+      "sourceIds": [
+        "kpmg-ai-pulse-q1-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "KPMG: 64% say AI agents changed entry-level hiring"
     }
   ],
   "sources": [
@@ -758,6 +767,16 @@
       "datePublished": "2025-06-20",
       "excerpt": "A one-standard-deviation decline in the complexity of an occupation's tasks—equivalent to the decline in expertise required by a telephone operator from 1980 to 2018—is linked to an 18% wage decline and a 40% increase in employment per decade.",
       "dateAdded": "2026-03-26"
+    },
+    {
+      "id": "kpmg-ai-pulse-q1-2026",
+      "title": "AI Quarterly Pulse Survey Q1 2026",
+      "url": "https://kpmg.com/us/en/media/news/q1-ai-pulse2026.html",
+      "publisher": "KPMG",
+      "evidenceTier": 2,
+      "datePublished": "2026-03-01",
+      "excerpt": "64% say agents have already changed their approach to entry-level hiring",
+      "dateAdded": "2026-03-31"
     }
   ]
 }
