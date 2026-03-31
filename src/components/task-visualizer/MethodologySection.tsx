@@ -223,6 +223,48 @@ export default function MethodologySection() {
           </div>
         </div>
 
+        {/* Observed adoption overlay */}
+        <div className="rounded-xl border border-[#6366F1]/20 bg-[#6366F1]/[0.04] p-5">
+          <h4 className="text-[13px] font-bold text-[#6366F1] uppercase tracking-wide mb-2">
+            Ground truth: observed AI adoption
+          </h4>
+          <p className="text-[13px] text-[var(--muted)] leading-relaxed mb-2">
+            The model above projects <em>when</em> AI becomes economically viable for each task. But we
+            can now cross-reference those projections against <em>actual</em> usage data. The{" "}
+            <a
+              href="https://www.anthropicindex.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-[var(--foreground)]"
+            >
+              Anthropic Economic Index
+            </a>{" "}
+            (March 2026) analyzed millions of real AI conversations and found:
+          </p>
+          <ul className="text-[13px] text-[var(--muted)] space-y-1 ml-4 list-disc list-outside mb-3">
+            <li>
+              <strong className="text-[var(--foreground)]">49% of occupations</strong> already have 25%+
+              of their tasks being performed using Claude &mdash; suggesting the cost-crossover point has
+              already been reached for a significant share of knowledge work.
+            </li>
+            <li>
+              <strong className="text-[var(--foreground)]">Task value is broadening:</strong> the average
+              hourly wage of tasks performed on Claude declined from $49.30/hr to $47.90/hr over the study
+              period, as adoption spread from high-wage early adopters to a wider range of work.
+            </li>
+            <li>
+              <strong className="text-[var(--foreground)]">Model selection tracks complexity:</strong> users
+              choose more capable (and expensive) models for higher-wage tasks, consistent with our model tier
+              mapping in Step 2.
+            </li>
+          </ul>
+          <p className="text-[12px] text-[var(--muted)]">
+            This data is from a single provider and reflects usage patterns, not full automation. But it is
+            the first large-scale empirical check on theoretical exposure models &mdash; and it broadly
+            confirms the task-level ordering predicted by O*NET-based analysis.
+          </p>
+        </div>
+
         {/* Token economics model */}
         <div>
           <h4 className="text-[14px] font-semibold text-[var(--foreground)] mb-2">
@@ -602,6 +644,11 @@ export default function MethodologySection() {
             <li>
               <a href="https://arxiv.org/html/2510.13369v1" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">
                 Moravec&apos;s Paradox Applied to Labor Markets — why physical tasks are harder to automate than cognitive ones
+              </a>
+            </li>
+            <li>
+              <a href="https://www.anthropicindex.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">
+                Anthropic Economic Index: Learning Curves (March 2026) — observed AI usage across occupations, task value trends, learning curve data
               </a>
             </li>
             <li>
