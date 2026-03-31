@@ -35,6 +35,9 @@ yarn-error.log*
 # article fetch cache
 .fetch-cache/
 
+# O*NET raw data (large CSV files)
+db/onet/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
