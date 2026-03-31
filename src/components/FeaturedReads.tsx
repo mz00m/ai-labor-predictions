@@ -10,6 +10,15 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Forecasting Research Institute",
+    title: "Forecasting the Economic Effects of AI",
+    summary:
+      "69 economists, 52 AI experts, 38 superforecasters surveyed. Unconditional forecasts cluster near trends; rapid scenario (14% prob) implies ~10M AI job losses and 75% wealth concentration in top 10%.",
+    date: "Mar 31",
+    url: "https://open.substack.com/pub/forecastingresearch/p/forecasting-the-economic-effects-of-ai",
+    accent: "border-l-emerald-500",
+  },
+  {
     author: "Noah Smith (Noahpinion)",
     title: "Plentiful, High-Paying Jobs in the Age of AI",
     summary:
@@ -44,15 +53,6 @@ const articles: Article[] = [
     date: "Mar 25",
     url: "https://digitalplanet.tufts.edu/ai-and-the-emerging-geography-of-american-job-risk-page/",
     accent: "border-l-violet-500",
-  },
-  {
-    author: "Anthropic",
-    title: "Anthropic Economic Index: Learning Curves",
-    summary:
-      "49% of jobs have 25%+ of tasks done via Claude. High-tenure users show 10% higher success rates. Coding migrates to automated API workflows. Skill-biased adoption may already be deepening labor market inequality.",
-    date: "Mar 24",
-    url: "https://www.anthropic.com/research/economic-index-march-2026-report",
-    accent: "border-l-blue-500",
   },
 ];
 

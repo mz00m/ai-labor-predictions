@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "Forecasting the Economic Effects of AI",
+      "author": "Forecasting Research Institute (w/ Fed Chicago, Yale, Stanford, UPenn)",
+      "publisher": "Forecasting Research Institute",
+      "date": "2026-03-31",
+      "url": "https://open.substack.com/pub/forecastingresearch/p/forecasting-the-economic-effects-of-ai",
+      "takeaway": "Most comprehensive survey of economist views on AI's economic impact. 69 leading economists, 52 AI experts, 38 superforecasters, 401 public respondents. Unconditional forecasts cluster near historical trends for GDP, TFP, and LFPR despite 61% expecting moderate/rapid AI progress by 2030. Rapid scenario (14% prob): 3.5% GDP growth, LFPR drops to 59.1% (~10M AI job losses), top 10% holds 75% of wealth. 71.8% of economists support job retraining (+1pp LFPR, +0.2pp GDP). 80% credible intervals show massive uncertainty in rapid scenario.",
+      "weekFeatured": "2026-03-31",
+      "tier": 1
+    },
+    {
       "title": "Plentiful, High-Paying Jobs in the Age of AI",
       "author": "Noah Smith",
       "publisher": "Noahpinion (Substack)",
