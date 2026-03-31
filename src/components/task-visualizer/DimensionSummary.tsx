@@ -64,83 +64,76 @@ function scoreColor(value: number, isPressure: boolean): string {
   return value > 6 ? "#059669" : value > 3 ? "#D97706" : "#DC2626";
 }
 
-/** Build specific buffer/pressure language from the actual scores */
+/** Pick the most relevant reason this job is protected and matching advice */
 function bufferDetail(scores: Record<DimensionKey, number>): {
-  strongestBuffer: string;
-  pressureNote: string;
-  actionable: string;
+  whyProtected: string;
+  action: string;
 } {
-  const buffers: { key: string; score: number; strong: string; action: string }[] = [
+  const buffers: { key: string; score: number; why: string; action: string }[] = [
     {
       key: "adaptability",
       score: scores.adaptability,
-      strong: "the people who do this work tend to have transferable skills and the financial capacity to make a transition if they need to",
-      action: "Focus on building AI fluency in your specific domain. Your existing skills transfer well to adjacent roles, and the workers who combine deep expertise with comfort using AI tools will have the strongest hand as the field shifts.",
+      why: "people in this line of work tend to have skills that carry over well to other roles, and generally have enough financial cushion to weather a transition",
+      action: "Start getting comfortable with AI tools that touch your day-to-day work. You don't need to become a technologist. You just need to be the person in your field who knows how to use these tools well, because your core skills will still be in demand.",
     },
     {
       key: "demandElasticity",
       score: scores.demandElasticity,
-      strong: "when AI makes this kind of work cheaper to produce, demand for the output tends to grow. Historically, that pattern has preserved or even expanded employment in fields like this one",
-      action: "Focus on moving toward the higher-complexity, higher-judgment work in your field. As AI brings costs down, expect more demand for this kind of work, not less. The people who can handle the volume and the harder cases that expansion brings will be the most valuable.",
+      why: "history shows that when technology makes this kind of work cheaper, people want more of it, not less. That pattern tends to protect jobs even as the tools change",
+      action: "Lean into the parts of your work that require real judgment and expertise. As AI makes the basics cheaper and faster, there will likely be more demand for what you do, not less. The opportunity is in handling the harder, more nuanced work that growth brings.",
     },
     {
       key: "complementarity",
       score: scores.complementarity,
-      strong: "AI tends to make people in this role more productive rather than replacing them, especially on tasks that require combining judgment across multiple skill areas",
-      action: "Focus on the parts of your work where AI makes you faster and better, not redundant. The people who learn to use AI for the routine subtasks will free up time for the higher-value work that clients and employers actually pay a premium for.",
+      why: "this is the kind of work where AI is more likely to help you do your job better than to take it over. The work involves too many different kinds of judgment happening together for AI to handle it cleanly",
+      action: "Learn to use AI for the parts of your work that feel routine or repetitive. That frees you up to spend more time on the things that actually matter in your role and that only a person can do well.",
     },
   ];
 
   const sorted = [...buffers].sort((a, b) => b.score - a.score);
-  const best = sorted[0];
-
-  const fastAdoption = scores.adoptionSpeed > 6;
-  const pressureNote = fastAdoption
-    ? "This is a sector that tends to adopt new technology quickly, so the timeline for change is shorter than in other fields."
-    : "This is a sector where adoption tends to be gradual, which means there is more time to prepare than in faster-moving industries.";
-
-  return {
-    strongestBuffer: best.strong,
-    pressureNote,
-    actionable: best.action,
-  };
+  return { whyProtected: sorted[0].why, action: sorted[0].action };
 }
 
-/** Generate a worker-friendly summary based on the scores */
+/** Generate a plain-language summary based on the actual dimension scores */
 export function workerSummary(
   scores: Record<DimensionKey, number>,
   jobTitle: string
 ): { headline: string; context: string; action: string } {
   const risk = scores.netRisk;
   const detail = bufferDetail(scores);
-  const exposureLevel = scores.technicalExposure > 7
-    ? "a high share"
-    : scores.technicalExposure > 4
-      ? "a meaningful share"
-      : "a smaller share";
-
   const article = /^[aeiou]/i.test(jobTitle) ? "an" : "a";
+  const jt = jobTitle.toLowerCase();
+
+  const exposureDesc = scores.technicalExposure > 7
+    ? "AI can already handle a large portion of the individual tasks that make up this job"
+    : scores.technicalExposure > 4
+      ? "AI can handle some of the tasks that make up this job today"
+      : "Most of what this job involves is still hard for AI to do well";
+
+  const paceNote = scores.adoptionSpeed > 6
+    ? "And this is a field where new technology gets adopted relatively quickly, so these changes won't be far off."
+    : "This is also a field that tends to move slowly on new technology, which means you have more runway than people in faster-moving industries.";
 
   if (risk <= 3.5) {
     return {
-      headline: `The job of ${article} ${jobTitle.toLowerCase()} has strong structural protection against AI displacement.`,
-      context: `AI can currently perform ${exposureLevel} of the tasks involved in this work, but ${detail.strongestBuffer}. ${detail.pressureNote}`,
-      action: detail.actionable,
+      headline: `If you're ${article} ${jt}, your job is well-protected from AI.`,
+      context: `${exposureDesc}. But the bigger picture is encouraging: ${detail.whyProtected}. ${paceNote}`,
+      action: detail.action,
     };
   }
 
   if (risk <= 5.5) {
     return {
-      headline: `The job of ${article} ${jobTitle.toLowerCase()} faces moderate AI pressure, but has real room to adapt.`,
-      context: `AI can currently perform ${exposureLevel} of the tasks involved in this work. The important context: ${detail.strongestBuffer}. ${detail.pressureNote}`,
-      action: detail.actionable,
+      headline: `If you're ${article} ${jt}, AI will change parts of your work, but you have real room to adapt.`,
+      context: `${exposureDesc}, and that will shift how the role looks over time. The good news: ${detail.whyProtected}. ${paceNote}`,
+      action: detail.action,
     };
   }
 
   return {
-    headline: `The job of ${article} ${jobTitle.toLowerCase()} faces significant AI pressure, which means acting now matters most.`,
-    context: `AI can currently perform ${exposureLevel} of the tasks involved in this work, and that share is growing. That said, ${detail.strongestBuffer}. ${detail.pressureNote}`,
-    action: detail.actionable,
+    headline: `If you're ${article} ${jt}, AI is going to change your work significantly. The time to prepare is now.`,
+    context: `${exposureDesc}, and the share that AI can handle is growing quickly. That said, there are real reasons for optimism: ${detail.whyProtected}. ${paceNote}`,
+    action: detail.action,
   };
 }
 
