@@ -5,7 +5,7 @@ import {
 
 /**
  * Discover IZA Discussion Papers related to AI + labor.
- * Uses OpenAlex source filtering — avoids fragile IZA website scraping.
+ * Uses OpenAlex source filtering - avoids fragile IZA website scraping.
  * IZA Discussion Paper Series source ID in OpenAlex: S4306402567
  */
 const IZA_SOURCE_ID = "S4306402567";

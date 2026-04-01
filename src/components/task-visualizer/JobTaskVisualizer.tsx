@@ -262,7 +262,7 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
     return { effectiveDimensions, totalCategories, crossedCategories, crossedRatio };
   }, [selectedJob]);
 
-  // Particle burst trigger — fires on job selection
+  // Particle burst trigger - fires on job selection
   const [particleTrigger, setParticleTrigger] = useState(0);
   const prevJobRef = useRef<string>("");
   useEffect(() => {
@@ -676,7 +676,7 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
         </>
       )}
 
-      {/* Durable human skills — optimistic closing */}
+      {/* Durable human skills - optimistic closing */}
       <DurableSkillsSection
         selectedJob={selectedJob}
         adjustedShares={adjustedShares}

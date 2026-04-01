@@ -120,7 +120,7 @@ async function loadFullIndex(): Promise<void> {
     haystacks = upgraded;
     fullIndexLoaded = true;
   } catch {
-    // search-index.json not generated yet — fall back to basic haystacks
+    // search-index.json not generated yet - fall back to basic haystacks
   } finally {
     fullIndexLoading = false;
   }
@@ -144,7 +144,7 @@ export function searchSources(query: string, limit = 8): SearchResult[] {
   const trimmed = query.trim().toLowerCase();
   if (!trimmed) return [];
 
-  // Fire-and-forget load of full index — next search will use it
+  // Fire-and-forget load of full index - next search will use it
   if (!fullIndexLoaded) {
     loadFullIndex();
   }

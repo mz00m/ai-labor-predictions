@@ -35,7 +35,7 @@ export interface TokenProfile {
 }
 
 /**
- * Model tier pricing — 2026 blended rates based on leading providers.
+ * Model tier pricing - 2026 blended rates based on leading providers.
  *
  * Small:    Haiku 4.5 ($0.80/$4), GPT-4o-mini ($0.15/$0.60), Gemini Flash ($0.075/$0.30).
  *           Blended average for classification/extraction workloads.
@@ -101,7 +101,7 @@ export interface JobProfile {
   onetCode?: string;
   tasks: JobTask[];
   /** Adaptive capacity index (0-1), from Manning/Aguirre NBER w34705.
-   *  Occupation-level score — reflects occupation characteristics, not individual workers. */
+   *  Occupation-level score - reflects occupation characteristics, not individual workers. */
   adaptiveCapacity?: number;
   /** High AI exposure + bottom quartile adaptive capacity */
   highVulnerability?: boolean;
@@ -8539,7 +8539,7 @@ export const JOB_PROFILES: JobProfile[] = [
  * quartile AC (the paper's 6.1M most-at-risk workers).
  */
 const ADAPTIVE_CAPACITY_MAP: Record<string, { ac: number; hv?: boolean }> = {
-  // Professional, Managerial, Technical — AC=0.734
+  // Professional, Managerial, Technical - AC=0.734
   "accountant": { ac: 0.73 },
   "software-developer": { ac: 0.78 },
   "marketing-manager": { ac: 0.74 },
@@ -8562,7 +8562,7 @@ const ADAPTIVE_CAPACITY_MAP: Record<string, { ac: number; hv?: boolean }> = {
   "management-analyst": { ac: 0.74 },
   "supply-chain-analyst": { ac: 0.72 },
   "merch-buyer": { ac: 0.60 },
-  // Administrative Support — AC=0.360, high vulnerability
+  // Administrative Support - AC=0.360, high vulnerability
   "customer-service-rep": { ac: 0.35, hv: true },
   "executive-assistant": { ac: 0.32, hv: true },
   "paralegal": { ac: 0.45 },
@@ -8571,11 +8571,11 @@ const ADAPTIVE_CAPACITY_MAP: Record<string, { ac: number; hv?: boolean }> = {
   "hotel-front-desk": { ac: 0.33, hv: true },
   "loan-officer": { ac: 0.50 },
   "insurance-agent": { ac: 0.48 },
-  // Education — AC=0.600
+  // Education - AC=0.600
   "teacher-k12": { ac: 0.60 },
   "college-professor": { ac: 0.68 },
   "school-counselor": { ac: 0.58 },
-  // Healthcare — mixed
+  // Healthcare - mixed
   "registered-nurse": { ac: 0.55 },
   "physician": { ac: 0.62 },
   "pharmacist": { ac: 0.55 },
@@ -8583,25 +8583,25 @@ const ADAPTIVE_CAPACITY_MAP: Record<string, { ac: number; hv?: boolean }> = {
   "nursing-assistant": { ac: 0.35, hv: true },
   "medical-assistant": { ac: 0.38 },
   "home-health-aide": { ac: 0.30, hv: true },
-  // Service — AC=0.454
+  // Service - AC=0.454
   "therapist": { ac: 0.52 },
   "social-worker": { ac: 0.48 },
   "chef-line-cook": { ac: 0.42 },
   "restaurant-manager": { ac: 0.50 },
   "retail-store-manager": { ac: 0.50 },
   "security-guard": { ac: 0.40 },
-  // Sales — AC=0.487
+  // Sales - AC=0.487
   "sales-representative": { ac: 0.50 },
   "real-estate-agent": { ac: 0.52 },
   "retail-salesperson": { ac: 0.42 },
-  // Trades — AC=0.449
+  // Trades - AC=0.449
   "electrician": { ac: 0.46 },
   "plumber": { ac: 0.45 },
   "construction-manager": { ac: 0.52 },
   "automotive-mechanic": { ac: 0.44 },
   "hvac-technician": { ac: 0.45 },
   "maintenance-repair-worker": { ac: 0.42 },
-  // Transportation — AC=0.401
+  // Transportation - AC=0.401
   "truck-driver": { ac: 0.38 },
   "delivery-driver": { ac: 0.36 },
   "warehouse-worker": { ac: 0.34, hv: true },
@@ -8618,13 +8618,13 @@ const ADAPTIVE_CAPACITY_MAP: Record<string, { ac: number; hv?: boolean }> = {
   "research-scientist": { ac: 0.78 },
   "photographer": { ac: 0.56 },
   "civil-engineer": { ac: 0.70 },
-  // New occupations — batch 2
+  // New occupations - batch 2
   "fast-food-worker": { ac: 0.32, hv: true },
   "waiter-waitress": { ac: 0.34, hv: true },
   "construction-laborer": { ac: 0.36 },
   "police-officer": { ac: 0.52 },
   "dentist": { ac: 0.64 },
-  // New occupations — batch 3 (high employment)
+  // New occupations - batch 3 (high employment)
   "office-clerk": { ac: 0.32, hv: true },
   "stocker-order-filler": { ac: 0.30, hv: true },
   "maid-housekeeper": { ac: 0.28, hv: true },
@@ -8636,7 +8636,7 @@ const ADAPTIVE_CAPACITY_MAP: Record<string, { ac: number; hv?: boolean }> = {
   "bus-driver": { ac: 0.36 },
   "bank-teller": { ac: 0.33, hv: true },
   "genetic-counselor": { ac: 0.62 },
-  // New occupations — batch 4 (high employment)
+  // New occupations - batch 4 (high employment)
   "administrative-assistant": { ac: 0.32, hv: true },
   "personal-care-aide": { ac: 0.28, hv: true },
   "assembler-fabricator": { ac: 0.30, hv: true },
@@ -8647,13 +8647,13 @@ const ADAPTIVE_CAPACITY_MAP: Record<string, { ac: number; hv?: boolean }> = {
   "pharmacy-technician": { ac: 0.38 },
   "welder": { ac: 0.42 },
   "preschool-teacher": { ac: 0.52 },
-  // New occupations — batch 5
+  // New occupations - batch 5
   "substance-abuse-counselor": { ac: 0.50 },
   "firefighter": { ac: 0.54 },
   "emt-paramedic": { ac: 0.46 },
   "veterinary-technician": { ac: 0.50 },
   "chief-of-staff": { ac: 0.62 },
-  // New occupations — batch 6 (2/3 coverage push)
+  // New occupations - batch 6 (2/3 coverage push)
   "cook-restaurant": { ac: 0.40 },
   "food-prep-worker": { ac: 0.34 },
   "production-supervisor": { ac: 0.56 },
@@ -8700,7 +8700,7 @@ export function calculateCrossoverYear(
   baseYear: number = 2026
 ): number | null {
   // Crossover is when compute cost per hour of work drops below human wage per hour.
-  // This is independent of timeShare — it reflects when the economics tip for this
+  // This is independent of timeShare - it reflects when the economics tip for this
   // task type at this wage level. TimeShare affects *exposure* (how much of your job
   // is affected), not *when* automation becomes viable.
   const computeCostPerHr = task.currentComputeCostPerHr * DEPLOYMENT_OVERHEAD;

@@ -34,14 +34,14 @@ const SECTIONS: { id: Section; label: string; question: string; description: str
   {
     id: "adaptability",
     label: "Adaptability",
-    question: "AI exposure and worker adaptability are positively correlated — but not for everyone",
+    question: "AI exposure and worker adaptability are positively correlated, but not for everyone",
     description: "Most workers in highly AI-exposed occupations have strong adaptive capacity (savings, transferable skills, urban location, younger age). But 6.1 million clerical/admin workers face both high exposure and low adaptability. Based on Manning & Aguirre (NBER, 2026).",
   },
   {
     id: "gender",
     label: "By Gender",
     question: "Women's occupational concentration puts them in higher-exposure roles",
-    description: "Women are concentrated in clerical, admin, and healthcare support roles with high information-processing task loads. This gap reflects where women work today, not inherent vulnerability — occupational mobility moderates the actual impact. Click any bar to explore that job's tasks.",
+    description: "Women are concentrated in clerical, admin, and healthcare support roles with high information-processing task loads. This gap reflects where women work today, not inherent vulnerability. Occupational mobility moderates the actual impact. Click any bar to explore that job's tasks.",
   },
 ];
 

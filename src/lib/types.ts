@@ -50,7 +50,7 @@ export interface HistoricalDataPoint {
   /** Approximate sample size for within-tier quality weighting (optional) */
   sampleSize?: number;
   /**
-   * Marks this data point as a proxy measurement — the study measures something
+   * Marks this data point as a proxy measurement - the study measures something
    * correlated with but not identical to the graph's unit.
    *
    * When true:
@@ -62,7 +62,7 @@ export interface HistoricalDataPoint {
    * When false/undefined: standard direct measurement.
    */
   isProxy?: boolean;
-  /** Conversion metadata — required when isProxy is true */
+  /** Conversion metadata - required when isProxy is true */
   proxyContext?: ProxyContext;
 }
 

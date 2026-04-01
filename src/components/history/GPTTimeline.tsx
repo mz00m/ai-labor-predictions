@@ -78,7 +78,7 @@ const AI_POSITION = 1.5; // Between Phase II and III (0-indexed)
 const WALK_DURATION_MS = 5500;
 const TARGET_LEFT = `${((AI_POSITION + 0.5) / PHASES.length) * 100}%`;
 
-/** Phase-specific icons — small, geometric */
+/** Phase-specific icons - small, geometric */
 function PhaseIcon({ phase, active, inactiveColor }: { phase: string; active: boolean; inactiveColor?: string }) {
   const color = active ? "white" : (inactiveColor ?? "var(--muted)");
   const size = 11;
@@ -92,7 +92,7 @@ function PhaseIcon({ phase, active, inactiveColor }: { phase: string; active: bo
   return icons[phase] ?? null;
 }
 
-/** Walking robot SVG — front-facing with animated legs, 30% larger */
+/** Walking robot SVG - front-facing with animated legs, 30% larger */
 function WalkingRobot({ walking, leaning }: { walking: boolean; leaning: boolean }) {
   const legStyle = (anim: string): React.CSSProperties => ({
     transformOrigin: anim === "robot-step-l" ? "8px 21px" : "14px 21px",
@@ -121,7 +121,7 @@ function WalkingRobot({ walking, leaning }: { walking: boolean; leaning: boolean
         filter: "drop-shadow(0 1px 2px rgba(92,97,246,0.2))",
       }}
     >
-      {/* Upper body — tilts on lean */}
+      {/* Upper body - tilts on lean */}
       <g
         style={{
           transformOrigin: "11px 21px",
@@ -142,7 +142,7 @@ function WalkingRobot({ walking, leaning }: { walking: boolean; leaning: boolean
         {/* Eyes */}
         <rect x="5.5" y="7" width="3.5" height="3" rx="1" fill="white" />
         <rect x="13" y="7" width="3.5" height="3" rx="1" fill="white" />
-        {/* Mouth — wider smirk when leaning */}
+        {/* Mouth - wider smirk when leaning */}
         <rect
           x={leaning ? 6.5 : 8}
           y="11.5"
@@ -158,7 +158,7 @@ function WalkingRobot({ walking, leaning }: { walking: boolean; leaning: boolean
 
         {/* Left arm */}
         <rect x="1.5" y="15.5" width="2.5" height="5" rx="1" fill="var(--accent)" opacity="0.6" />
-        {/* Right arm — reaches toward cane on lean */}
+        {/* Right arm - reaches toward cane on lean */}
         <g
           style={{
             transformOrigin: "19px 15.5px",
@@ -170,7 +170,7 @@ function WalkingRobot({ walking, leaning }: { walking: boolean; leaning: boolean
         </g>
       </g>
 
-      {/* Left leg — crosses in front on lean */}
+      {/* Left leg - crosses in front on lean */}
       <g style={legStyle("robot-step-l")}>
         <rect x="5.5" y="21.5" width="3.5" height="5" rx="1.2" fill="var(--accent)" opacity="0.75" />
         <rect x="4.5" y="25.5" width="5" height="2.5" rx="1" fill="var(--accent)" opacity="0.6" />
@@ -182,7 +182,7 @@ function WalkingRobot({ walking, leaning }: { walking: boolean; leaning: boolean
         <rect x="12.5" y="25.5" width="5" height="2.5" rx="1" fill="var(--accent)" opacity="0.6" />
       </g>
 
-      {/* Cane — swings into place on lean */}
+      {/* Cane - swings into place on lean */}
       <g
         style={{
           opacity: leaning ? 1 : 0,
@@ -260,7 +260,7 @@ export default function GPTTimeline() {
           {/* Track */}
           <div className="h-1 bg-black/[0.06] rounded-full mx-8" />
 
-          {/* Walking robot — walks from left edge of track to AI position */}
+          {/* Walking robot - walks from left edge of track to AI position */}
           <div
             className="absolute z-[1] flex flex-col items-center"
             style={{
@@ -286,7 +286,7 @@ export default function GPTTimeline() {
             </span>
           </div>
 
-          {/* Phases — nodes start invisible, each appears dramatically in sequence */}
+          {/* Phases - nodes start invisible, each appears dramatically in sequence */}
           <div className="flex justify-between relative z-[5] -mt-3.5">
             {PHASES.map((p, i) => {
               const isActive = activePhase === i;
@@ -338,7 +338,7 @@ export default function GPTTimeline() {
                       />
                     )}
 
-                    {/* Phase II — Diffusion: bold ripple waves */}
+                    {/* Phase II - Diffusion: bold ripple waves */}
                     {i === 1 && walkStarted && (
                       <>
                         <div
@@ -360,7 +360,7 @@ export default function GPTTimeline() {
                       </>
                     )}
 
-                    {/* Phase III — Victim circle sitting on line, gets bumped off */}
+                    {/* Phase III - Victim circle sitting on line, gets bumped off */}
                     {i === 2 && walkStarted && (
                       <div
                         className="phase-victim absolute rounded-full bg-black/[0.2] pointer-events-none"
@@ -375,7 +375,7 @@ export default function GPTTimeline() {
                       />
                     )}
 
-                    {/* Phase IV — Puzzle shards fly in from far edges */}
+                    {/* Phase IV - Puzzle shards fly in from far edges */}
                     {i === 3 && walkStarted && (
                       <>
                         <div
@@ -413,7 +413,7 @@ export default function GPTTimeline() {
                       </>
                     )}
 
-                    {/* Phase V — Leaves sprouting from equilibrium orb */}
+                    {/* Phase V - Leaves sprouting from equilibrium orb */}
                     {i === 4 && walkStarted && (
                       <>
                         <svg
@@ -439,7 +439,7 @@ export default function GPTTimeline() {
                       </>
                     )}
 
-                    {/* The node circle itself — invisible until animation fires */}
+                    {/* The node circle itself - invisible until animation fires */}
                     <div
                       className={`phase-node-animated timeline-node w-7 h-7 rounded-full border-2 flex items-center justify-center ${
                         isActive
@@ -456,7 +456,7 @@ export default function GPTTimeline() {
                     </div>
                   </div>
 
-                  {/* Label — fades in after node appears */}
+                  {/* Label - fades in after node appears */}
                   <span
                     className={`mt-2 text-[11px] font-semibold tracking-wide text-center transition-opacity duration-700 ${
                       isActive
@@ -473,7 +473,7 @@ export default function GPTTimeline() {
                     {p.name}
                   </span>
 
-                  {/* Duration — fades in slightly after label */}
+                  {/* Duration - fades in slightly after label */}
                   <span
                     className="text-[10px] text-[var(--muted)] mt-0.5 transition-opacity duration-700"
                     style={{
@@ -492,7 +492,7 @@ export default function GPTTimeline() {
         </div>
       </div>
 
-      {/* Mobile timeline — vertical */}
+      {/* Mobile timeline - vertical */}
       <div className="md:hidden space-y-0">
         {PHASES.map((p, i) => {
           const isActive = activePhase === i;

@@ -1,10 +1,10 @@
 "use client";
 
 /**
- * Adoption Ladder — a horizontal stacked bar showing the AI adoption spectrum.
+ * Adoption Ladder - a horizontal stacked bar showing the AI adoption spectrum.
  *
  * The key insight: Census says 10% of firms use AI "in production," while
- * McKinsey/Bloom surveys say 78–88%. Both are correct — they measure
+ * McKinsey/Bloom surveys say 78–88%. Both are correct - they measure
  * different thresholds. This visualization reconciles them.
  */
 

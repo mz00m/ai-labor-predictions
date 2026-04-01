@@ -3,7 +3,7 @@
 import { useRef, useState, useEffect, useCallback } from "react";
 
 /* ------------------------------------------------------------------ */
-/*  Easter egg: "Confidence Interval" — hover a hero stat for 2+       */
+/*  Easter egg: "Confidence Interval" - hover a hero stat for 2+       */
 /*  seconds and the number oscillates between its confidence bounds,   */
 /*  revealing the uncertainty behind every point estimate.              */
 /* ------------------------------------------------------------------ */
@@ -76,7 +76,7 @@ export default function HeroStatWobble({
 
   const startOscillation = useCallback(() => {
     if (reducedMotionRef.current) {
-      // No animation — show range as text
+      // No animation - show range as text
       setDisplayValue(`${low}–${high}`);
       setWobbling(true);
       return;

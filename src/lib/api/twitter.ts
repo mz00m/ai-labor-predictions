@@ -1,7 +1,7 @@
 /**
  * Twitter/X fetcher for AI + labor market discussions.
  * Uses API v2 recent search (requires TWITTER_BEARER_TOKEN).
- * Fully optional — returns [] if no token is configured.
+ * Fully optional - returns [] if no token is configured.
  */
 
 import { extractUrls, rateLimit, SOCIAL_SEARCH_QUERIES } from "./social-utils";

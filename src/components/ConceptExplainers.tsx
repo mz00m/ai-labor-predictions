@@ -5,7 +5,7 @@ const concepts = [
     title: "We've Seen This Before",
     href: "/history",
     description:
-      "Every major technology — steam, electricity, computers — displaced jobs, then created more. Here's what those transitions actually looked like.",
+      "Every major technology. Steam, electricity, computers. Displaced jobs, then created more. Here's what those transitions actually looked like.",
     accent: "border-purple-400/60",
     tag: "History",
   },
@@ -21,7 +21,7 @@ const concepts = [
     title: "What Happens to Your Job",
     href: "/task-visualizer",
     description:
-      "AI doesn't replace jobs wholesale — it automates specific tasks. See which parts of your role are most exposed and which ones aren't going anywhere.",
+      "AI doesn't replace jobs wholesale. It automates specific tasks. See which parts of your role are most exposed and which ones aren't going anywhere.",
     accent: "border-emerald-400/60",
     tag: "Your tasks",
   },
@@ -37,7 +37,7 @@ const concepts = [
     title: "When Cheaper Means More Jobs",
     href: "/demand-elasticity",
     description:
-      "AI makes work cheaper. In many sectors, that doesn't eliminate jobs — it creates demand that didn't exist before. The Jevons Paradox, applied to labor.",
+      "AI makes work cheaper. In many sectors, that doesn't eliminate jobs. It creates demand that didn't exist before. The Jevons Paradox, applied to labor.",
     accent: "border-cyan-400/60",
     tag: "Demand elasticity",
   },
@@ -45,7 +45,7 @@ const concepts = [
     title: "The Dip Before the Payoff",
     href: "/j-curve",
     description:
-      "New technologies often make things worse before they make them better. AI is likely in this messy middle right now — and that's actually normal.",
+      "New technologies often make things worse before they make them better. AI is likely in this messy middle right now, and that's actually normal.",
     accent: "border-amber-400/60",
     tag: "J-Curve",
   },

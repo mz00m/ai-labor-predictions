@@ -59,7 +59,7 @@ export default function OGImage() {
           }}
         />
 
-        {/* Top accent bar — three-color */}
+        {/* Top accent bar - three-color */}
         <div
           style={{
             position: "absolute",

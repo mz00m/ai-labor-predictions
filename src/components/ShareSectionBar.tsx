@@ -34,7 +34,7 @@ export default function ShareSectionBar({
 
   function shareTwitter() {
     const text = encodeURIComponent(
-      description ? `${title} — ${description}` : title
+      description ? `${title} | ${description}` : title
     );
     const u = encodeURIComponent(url);
     window.open(

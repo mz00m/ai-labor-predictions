@@ -32,7 +32,7 @@ interface PredictionChartProps {
   showTrendLine?: boolean;
   /** Override chart height in pixels (default: 360 for normal, 80 for compact) */
   height?: number;
-  /** Target date for projections — adds a labeled reference line at this year */
+  /** Target date for projections - adds a labeled reference line at this year */
   targetDate?: string;
   /** Label for the chart section (shown above chart) */
   chartLabel?: string;
@@ -77,7 +77,7 @@ function CustomTooltip({
 }) {
   if (!active || !payload || payload.length === 0) return null;
 
-  // Pick the first non-null payload — when two Lines exist, Recharts may
+  // Pick the first non-null payload - when two Lines exist, Recharts may
   // return multiple entries.  We only need the underlying ChartDataPoint.
   const data = (payload.find((p) => p.payload)?.payload ?? payload[0]?.payload) as ChartDataPoint;
   if (!data) return null;
@@ -217,10 +217,10 @@ function CustomTooltip({
 function groupedOverlayColor(directions: string[]): string {
   const ups = directions.filter((d) => d === "up").length;
   const downs = directions.filter((d) => d === "down").length;
-  // Pure positive / negative — use green / red
+  // Pure positive / negative - use green / red
   if (ups > 0 && downs === 0) return "#22c55e";
   if (downs > 0 && ups === 0) return "#ef4444";
-  // Mixed — dominant direction wins, neutral if tied
+  // Mixed - dominant direction wins, neutral if tied
   if (ups > downs) return "#22c55e";
   if (downs > ups) return "#ef4444";
   return "#94a3b8"; // tied or all neutral
@@ -228,10 +228,10 @@ function groupedOverlayColor(directions: string[]): string {
 
 function overlayColor(direction: string) {
   return direction === "down"
-    ? "#ef4444"   // red-500 — negative / risk signal
+    ? "#ef4444"   // red-500. Negative / risk signal
     : direction === "up"
-      ? "#22c55e" // green-500 — positive / growth signal
-      : "#94a3b8"; // slate-400 — neutral / mixed signal
+      ? "#22c55e" // green-500. Positive / growth signal
+      : "#94a3b8"; // slate-400. Neutral / mixed signal
 }
 
 interface DotShapeProps {
@@ -743,7 +743,7 @@ export default function PredictionChart({
               isAnimationActive={false}
             />
           )}
-          {/* Overlay vertical bars — one per date, color from grouped direction */}
+          {/* Overlay vertical bars - one per date, color from grouped direction */}
           {(() => {
             // Group overlays by dateStr so overlapping bars don't blend to brown
             const byDate = new Map<string, typeof overlayData>();
@@ -882,7 +882,7 @@ export default function PredictionChart({
         </ComposedChart>
       </ResponsiveContainer>
       </div>
-      {/* Custom overlay tooltip — works at chart edges where Recharts tooltip doesn't activate */}
+      {/* Custom overlay tooltip - works at chart edges where Recharts tooltip doesn't activate */}
       {hoverOverlay && (
         <div
           style={{
@@ -932,7 +932,7 @@ export default function PredictionChart({
           </div>
         </div>
       )}
-      {/* Chart legend — below chart */}
+      {/* Chart legend - below chart */}
       <div className="flex items-center gap-4 mt-4 px-1 flex-wrap">
         {hasProjectedData && (
           <>

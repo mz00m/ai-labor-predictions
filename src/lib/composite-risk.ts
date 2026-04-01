@@ -5,11 +5,11 @@
  * score (0-10) for each major occupation group. This goes beyond simple
  * "AI exposure" scores (a la Karpathy, Eloundou et al.) by incorporating:
  *
- * 1. Technical Exposure — how many tasks CAN AI do? (Eloundou et al., Felten et al., Yale Budget Lab)
- * 2. Institutional Adoption Speed — how fast WILL the sector adopt? (Acemoglu & Restrepo, Brynjolfsson)
- * 3. Worker Adaptability — can displaced workers transition? (Manning & Aguirre NBER w34705)
- * 4. Demand Elasticity — does cheaper output create more demand? (Bessen 2019, Jevons Paradox)
- * 5. Complementarity — does AI replace or enhance? (Baslandze et al. 2026 CFO Survey,
+ * 1. Technical Exposure - how many tasks CAN AI do? (Eloundou et al., Felten et al., Yale Budget Lab)
+ * 2. Institutional Adoption Speed - how fast WILL the sector adopt? (Acemoglu & Restrepo, Brynjolfsson)
+ * 3. Worker Adaptability - can displaced workers transition? (Manning & Aguirre NBER w34705)
+ * 4. Demand Elasticity - does cheaper output create more demand? (Bessen 2019, Jevons Paradox)
+ * 5. Complementarity - does AI replace or enhance? (Baslandze et al. 2026 CFO Survey,
  *    informed by job dimensionality per Gans & Goldfarb 2024 O-Ring Automation)
  *
  * The first two are "pressure" dimensions (drive displacement up).
@@ -109,9 +109,9 @@ export function scoreOccupation(group: OccupationGroup): ScoredOccupation {
   });
 
   const dimContext = effectiveDims <= 2
-    ? ` Job has only ${effectiveDims} effective task dimension${effectiveDims === 1 ? "" : "s"} — low-dimensional, strong firm incentive to fully automate (O-Ring risk).`
+    ? ` Job has only ${effectiveDims} effective task dimension${effectiveDims === 1 ? "" : "s"}. Low-dimensional, strong firm incentive to fully automate (O-Ring risk).`
     : effectiveDims >= 5
-      ? ` Job has ${effectiveDims} effective task dimensions — high-dimensional, partial automation likely augments workers (O-Ring focus effect).`
+      ? ` Job has ${effectiveDims} effective task dimensions. High-dimensional, partial automation likely augments workers (O-Ring focus effect).`
       : "";
 
   const rationales: Record<keyof DimensionScores, string> = {
@@ -206,7 +206,7 @@ export const DIMENSION_META: Record<
     label: "AI Complementarity",
     shortLabel: "Complement",
     description:
-      "Is AI primarily enhancing workers in this occupation or replacing them? Based on CFO survey data where available, estimated from task composition and job dimensionality otherwise. Jobs with more distinct task clusters (high dimensionality) tend toward augmentation via the O-Ring \"focus effect\" — automating some tasks lets workers concentrate on remaining ones, multiplying output quality.",
+      "Is AI primarily enhancing workers in this occupation or replacing them? Based on CFO survey data where available, estimated from task composition and job dimensionality otherwise. Jobs with more distinct task clusters (high dimensionality) tend toward augmentation via the O-Ring \"focus effect\". Automating some tasks lets workers concentrate on remaining ones, multiplying output quality.",
     source:
       "Baslandze et al. (2026) CFO Survey; Gans & Goldfarb (2024) O-Ring Automation; Autor (2024) new-tasks framework",
     colorScale: ["#FEE2E2", "#16A34A"],

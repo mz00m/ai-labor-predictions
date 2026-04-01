@@ -192,7 +192,7 @@ export async function resolveAuthorId(
 }
 
 /**
- * Main discovery function — combines keyword search + concept search.
+ * Main discovery function - combines keyword search + concept search.
  */
 export async function discoverOpenAlexPapers(
   limit = 50

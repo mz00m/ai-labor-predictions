@@ -99,7 +99,7 @@ export function computeAggregate(
   let { points, timestamps } = filterAndSort(prediction.history, selectedTiers);
 
   if (points.length === 0) {
-    // No points matched selected tiers — try ALL tiers before falling back to 0
+    // No points matched selected tiers - try ALL tiers before falling back to 0
     const allTiers: EvidenceTier[] = [1, 2, 3, 4];
     const all = filterAndSort(prediction.history, allTiers);
 
@@ -174,7 +174,7 @@ function computeFromSorted(
       if (last > first) trend = "up";
       else if (last < first) trend = "down";
     }
-    // If no observed data, trend stays "flat" — projections don't imply trajectory
+    // If no observed data, trend stays "flat" - projections don't imply trajectory
   }
 
   const trendIsBad =

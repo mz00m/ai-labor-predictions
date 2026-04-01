@@ -215,7 +215,7 @@ export default function ComputeCostChart({
         </p>
       </div>
 
-      {/* The compute floor — economic insight */}
+      {/* The compute floor - economic insight */}
       <div className="rounded-lg border border-[#6366F1]/20 bg-[#6366F1]/[0.03] p-3 mb-5">
         <p className="text-[12px] font-semibold text-[var(--foreground)] mb-1">
           The compute floor: minimum cost of doing business
@@ -230,7 +230,7 @@ export default function ComputeCostChart({
         </p>
       </div>
 
-      {/* Task selector pills — neutral styling */}
+      {/* Task selector pills - neutral styling */}
       <div className="flex flex-wrap gap-1.5 mb-5">
         {tasks.map((task, i) => {
           const isSelected = selectedTasks.has(task.id);

@@ -45,7 +45,7 @@ export default function Methodology() {
             determine each point&apos;s weight:
           </p>
 
-          {/* Tier weights — compact row */}
+          {/* Tier weights - compact row */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center mb-4">
             <div className="bg-black/[0.02] border border-black/[0.06] rounded px-3 py-2">
               <span className="inline-block w-2 h-2 rounded-full bg-green-500 mb-1" />

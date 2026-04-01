@@ -178,9 +178,9 @@ const READING_LIST_KEYWORDS: Record<string, string[]> = {
 
   // Cognitive labor / identity
   "cognitive labor": ["The Displacement of Cognitive Labor and What Comes After"],
-  identity: ["The Displacement of Cognitive Labor and What Comes After", "AI Won't Just Automate Jobs — It Will Challenge the Meaning of Work"],
-  "meaning of work": ["AI Won't Just Automate Jobs — It Will Challenge the Meaning of Work"],
-  purpose: ["AI Won't Just Automate Jobs — It Will Challenge the Meaning of Work"],
+  identity: ["The Displacement of Cognitive Labor and What Comes After", "AI Won't Just Automate Jobs. It Will Challenge the Meaning of Work"],
+  "meaning of work": ["AI Won't Just Automate Jobs. It Will Challenge the Meaning of Work"],
+  purpose: ["AI Won't Just Automate Jobs. It Will Challenge the Meaning of Work"],
 
   // Wharton / Penn
   wharton: ["The Projected Impact of Generative AI on Future Productivity Growth"],
@@ -416,7 +416,7 @@ function formatPrediction(
     }
   }
 
-  // Sources (all, for citation) — enriched with content store data
+  // Sources (all, for citation) - enriched with content store data
   if (p.sources.length > 0) {
     lines.push("\nSources:");
     for (const s of p.sources) {
@@ -501,7 +501,7 @@ Reading list knowledge (IMPORTANT):
 - You have access to curated articles from the jobsdata.ai reading list below. Draw on their insights when relevant
 - Reference reading list perspectives naturally, e.g., "Imas & Shukla make the case that..." or "As Mokyr et al. showed, historically..."
 - When a reading list article is directly relevant, mention it and link to the reading list: "More reading: https://jobsdata.ai/learn/reading-list"
-- The reading list provides depth and nuance beyond the prediction data — use it to give richer, more contextual answers
+- The reading list provides depth and nuance beyond the prediction data. Use it to give richer, more contextual answers
 
 Linking to the site (IMPORTANT, do this consistently):
 - After answering, point users to the relevant page on jobsdata.ai to explore further

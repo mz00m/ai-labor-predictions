@@ -7,7 +7,7 @@ import JobTaskVisualizerWrapper from "@/components/task-visualizer/JobTaskVisual
 export const metadata: Metadata = {
   title: "How will AI impact your job?",
   description:
-    "See how AI will affect your specific job — task by task. Which parts face pressure first, which stay human, and what you can do about it.",
+    "See how AI will affect your specific job, task by task. Which parts face pressure first, which stay human, and what you can do about it.",
 };
 
 // Pre-compute 5D scores for occupations that map from task-vis profiles

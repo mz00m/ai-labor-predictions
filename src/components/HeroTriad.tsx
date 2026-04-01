@@ -30,7 +30,7 @@ export default function HeroTriad({
 }: HeroTriadProps) {
   return (
     <div className="mt-6 relative grid grid-cols-3 place-items-center pb-6">
-      {/* Productivity boost — range: 14% to 35% across studies */}
+      {/* Productivity boost - range: 14% to 35% across studies */}
       <HeroStatWobble center={21} low={14} high={35}>
         {(displayValue, wobbling) => (
           <a
@@ -61,7 +61,7 @@ export default function HeroTriad({
         )}
       </HeroStatWobble>
 
-      {/* Projected job loss — range from actual data bounds */}
+      {/* Projected job loss - range from actual data bounds */}
       <HeroStatWobble center={projectedJobLoss} low={projectedLow} high={projectedHigh}>
         {(displayValue, wobbling) => (
           <a
@@ -92,7 +92,7 @@ export default function HeroTriad({
         )}
       </HeroStatWobble>
 
-      {/* Measured job loss — range: -0.5% to 0.5% */}
+      {/* Measured job loss - range: -0.5% to 0.5% */}
       <HeroStatWobble center={measuredJobLoss} low={-0.5} high={0.5}>
         {(displayValue, wobbling) => (
           <a

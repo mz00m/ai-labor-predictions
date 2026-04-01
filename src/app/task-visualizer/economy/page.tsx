@@ -3,7 +3,7 @@ import { Suspense } from "react";
 import EconomyVisualizerClient from "./EconomyVisualizerClient";
 
 export const metadata: Metadata = {
-  title: "AI and the US Economy — Automation impact by occupation and income",
+  title: "AI and the US Economy | Automation impact by occupation and income",
   description:
     "How will AI automation roll through the US economy? Explore 160M+ jobs across 22 occupation groups by income tier, task composition, and projected automation timeline.",
 };

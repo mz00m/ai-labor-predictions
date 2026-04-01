@@ -61,7 +61,7 @@ const CATEGORY_LABELS: Record<string, string> = {
   "military": "Military",
 };
 
-/* ── Color helpers — matched to Karpathy's green-red scale ── */
+/* ── Color helpers - matched to Karpathy's green-red scale ── */
 
 function boostContrast(t: number): number {
   return Math.pow(t, 0.55);
@@ -330,7 +330,7 @@ export default function KarpathyTreemap({
     [data, size.w, size.h]
   );
 
-  // Resize observer — 4:3 aspect ratio
+  // Resize observer - 4:3 aspect ratio
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
@@ -407,14 +407,14 @@ export default function KarpathyTreemap({
         ctx.strokeRect(rect.x, rect.y, rect.w, rect.h);
       }
 
-      // Labels — clipped to tile bounds, with word-wrapping
+      // Labels - clipped to tile bounds, with word-wrapping
       if (rect.w > 40 && rect.h > 16) {
         ctx.save();
         ctx.beginPath();
         ctx.rect(rect.x + 2, rect.y + 1, rect.w - 4, rect.h - 2);
         ctx.clip();
 
-        // Scale font to tile size — smaller base than before
+        // Scale font to tile size - smaller base than before
         const fontSize = Math.min(
           11,
           Math.max(7, Math.min(rect.w / 12, rect.h / 4))
@@ -791,7 +791,7 @@ export default function KarpathyTreemap({
           {dimMeta.isPressure ? "Low risk" : "Low"}
         </span>
         <span className="font-medium text-white/70">
-          {dimMeta.label} — {data.length} occupations,{" "}
+          {dimMeta.label} - {data.length} occupations,{" "}
           {(
             data.reduce((s, d) => s + (d.raw.jobs || 0), 0) / 1000000
           ).toFixed(0)}

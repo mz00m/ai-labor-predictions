@@ -17,7 +17,7 @@ export async function getAggregatedPredictions(): Promise<PredictionsResponse> {
         );
         if (metaculus?.currentPrediction != null) {
           // We could merge live data into history here.
-          // For now, just note it's available — the curated data is primary.
+          // For now, just note it's available - the curated data is primary.
         }
       }
 

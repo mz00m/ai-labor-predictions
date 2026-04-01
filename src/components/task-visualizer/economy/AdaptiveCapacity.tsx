@@ -185,7 +185,7 @@ export default function AdaptiveCapacity() {
         </h4>
         <p className="text-[11px] text-[var(--muted)] mb-4">
           Dot size reflects employment. Color shows income tier. The bottom-right quadrant
-          (high exposure, low adaptability) contains the most vulnerable workers — concentrated
+          (high exposure, low adaptability) contains the most vulnerable workers. Concentrated
           in clerical and administrative roles.
         </p>
 
@@ -427,7 +427,7 @@ export default function AdaptiveCapacity() {
         Based on Manning &amp; Aguirre, &quot;How Adaptable Are American Workers to AI-Induced Job
         Displacement?&quot; NBER Working Paper w34705, January 2026. Adaptive capacity index covers
         356 occupations (95.9% of US workforce). The index measures occupation-level characteristics,
-        not individual workers — within-occupation heterogeneity is masked. AI exposure from Eloundou
+        not individual workers. Within-occupation heterogeneity is masked. AI exposure from Eloundou
         et al. (2024) E1+0.5E2 estimates. The paper&apos;s 7 major occupation categories map to our 22
         SOC groups; groups sharing a paper category share the same composite AC score.
       </p>

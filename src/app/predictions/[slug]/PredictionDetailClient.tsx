@@ -22,19 +22,19 @@ const tierCounts = getSourceCountsByTier();
 
 const CONTEXT_MAP: Record<string, (v: number) => string> = {
   "overall-us-displacement": (v) =>
-    `This ${v}% is a weighted average blending two different types of evidence. Observed employment data (Yale Budget Lab, Brookings, Dallas Fed) show near-zero measurable job loss from AI so far. Forward-looking projections from economists cluster around 5\u201312% by 2030. The chart distinguishes these visually: solid dots are observed data, dashed dots are projections. For context, 1% of the US labor force is about 1.69 million workers.`,
+    `This ${v}% is a weighted average blending two different types of evidence. Observed employment data (Yale Budget Lab, Brookings, Dallas Fed) show near-zero measurable job loss from AI so far. Forward-looking projections from economists cluster around 5-12% by 2030. The chart distinguishes these visually: solid dots are observed data, dashed dots are projections. For context, 1% of the US labor force is about 1.69 million workers.`,
   "customer-service-automation": (v) =>
-    `${v}% of all customer service interactions (phone calls, chat messages, emails) will likely be handled by AI without a human agent ever getting involved. This doesn't mean ${v}% of CS jobs disappear, since the remaining interactions may need more skilled human agents, but headcount reductions are widely expected. Unlike software or creative work, customer service demand is relatively inelastic — consumers don't want more support interactions at lower prices. This makes displacement more likely than demand expansion in this sector.`,
+    `${v}% of all customer service interactions (phone calls, chat messages, emails) will likely be handled by AI without a human agent ever getting involved. This doesn't mean ${v}% of CS jobs disappear, since the remaining interactions may need more skilled human agents, but headcount reductions are widely expected. Unlike software or creative work, customer service demand is relatively inelastic: consumers don't want more support interactions at lower prices. This makes displacement more likely than demand expansion in this sector.`,
   "tech-sector-displacement": (v) =>
-    `The sector-wide average of ${v > 0 ? "+" : ""}${Number.isInteger(v) ? v : v.toFixed(1)}% obscures a K-shaped labor market split. Software developers aged 22-25 experienced a ~20% employment decline from late 2022 to Sept 2025 (Brynjolfsson, Chandar, Chen 2025), while workers aged 35-49 grew +9% over the same period. The primary mechanism is not mass layoffs but evaporated entry points: firms froze junior hiring as senior developers absorbed routine tasks with AI coding tools. Corroborating signals include a 30% drop in tech internships (Handshake), 25% fewer entry-level tech postings (SignalFire), and CS graduate unemployment at 7.2% vs. 4.5% for all graduates (ACS 2024). Meanwhile, BLS projects overall software developer employment to grow 17.9% through 2033, but the gains are concentrating among experienced workers who can effectively leverage AI. Note: Software has among the highest demand elasticity of any sector. When coding costs fall, firms fund projects that were previously unviable — potentially creating net new engineering roles even as per-project headcount shrinks.`,
+    `The sector-wide average of ${v > 0 ? "+" : ""}${Number.isInteger(v) ? v : v.toFixed(1)}% obscures a K-shaped labor market split. Software developers aged 22-25 experienced a ~20% employment decline from late 2022 to Sept 2025 (Brynjolfsson, Chandar, Chen 2025), while workers aged 35-49 grew +9% over the same period. The primary mechanism is not mass layoffs but evaporated entry points: firms froze junior hiring as senior developers absorbed routine tasks with AI coding tools. Corroborating signals include a 30% drop in tech internships (Handshake), 25% fewer entry-level tech postings (SignalFire), and CS graduate unemployment at 7.2% vs. 4.5% for all graduates (ACS 2024). Meanwhile, BLS projects overall software developer employment to grow 17.9% through 2033, but the gains are concentrating among experienced workers who can effectively leverage AI. Note: Software has among the highest demand elasticity of any sector. When coding costs fall, firms fund projects that were previously unviable, potentially creating net new engineering roles even as per-project headcount shrinks.`,
   "white-collar-professional-displacement": (v) =>
     `An estimated ${v}% of white-collar professional roles in law, accounting, and finance could be displaced by 2030. LLMs can now perform contract review, financial analysis, and audit procedures at near-professional quality. The Big Four accounting firms have all announced significant restructuring plans citing AI-driven productivity. Junior and mid-level roles are most exposed, while senior advisory work remains largely protected.`,
   "creative-industry-displacement": (v) =>
-    `${v}% of creative roles in design, writing, and marketing are projected to be eliminated or fundamentally restructured by generative AI. Freelance platforms like Upwork and Fiverr have already reported 20-30% declines in traditional creative gig volume. The impact is bifurcated: AI-augmented creative professionals see higher demand, while those performing routine creative tasks face steep displacement. A countervailing force: bespoke creative work (custom video, illustration, copywriting) was previously unaffordable for most SMBs. Lower production costs may expand the total addressable market for creative services, partially offsetting displacement in commoditized creative work.`,
+    `${v}% of creative roles in design, writing, and marketing are projected to be eliminated or fundamentally restructured by generative AI. Freelance platforms like Upwork and Fiverr have already reported 20-30% declines in traditional creative gig volume. The impact is bifurcated: AI-augmented creative professionals see higher demand, while those performing routine creative tasks face steep displacement. There is a countervailing force here. Bespoke creative work (custom video, illustration, copywriting) was previously unaffordable for most SMBs. Lower production costs may expand the total addressable market for creative services, partially offsetting displacement in commoditized creative work.`,
   "healthcare-admin-displacement": (v) =>
-    `${v}% of healthcare administrative roles (medical coding, billing, claims processing, scheduling, and prior authorization) are on track to be automated by AI. Healthcare administration accounts for roughly 30% of US healthcare employment and over $265B in annual costs. AI coding achieves 95% accuracy, and CMS rules now permit AI-assisted prior authorization, accelerating adoption. Corporate signals are emerging: Trinity Health cut 10.5% of revenue cycle staff across 92 hospitals in 15 states (Jan 2026), and Revere Health eliminated 177 billing/coding positions after adopting AI-driven claims processing. Medical coding automation is projected to reach 40%+ by 2025, with hospital AI billing adoption surging from 36% to 61% in a single year (NCBI). However, healthcare's chronic labor shortages may absorb much of the displacement through attrition rather than layoffs.`,
+    `${v}% of healthcare administrative roles (medical coding, billing, claims processing, scheduling, and prior authorization) are on track to be automated by AI. Healthcare administration accounts for roughly 30% of US healthcare employment and over $265B in annual costs. AI coding achieves 95% accuracy, and CMS rules now permit AI-assisted prior authorization, accelerating adoption. Corporate signals are emerging. Trinity Health cut 10.5% of revenue cycle staff across 92 hospitals in 15 states (Jan 2026), and Revere Health eliminated 177 billing/coding positions after adopting AI-driven claims processing. Medical coding automation is projected to reach 40%+ by 2025, with hospital AI billing adoption surging from 36% to 61% in a single year (NCBI). However, healthcare's chronic labor shortages may absorb much of the displacement through attrition rather than layoffs.`,
   "education-sector-displacement": (v) =>
-    `${v}% of education support roles could be displaced by AI. This includes tutoring, grading, content creation, and administration, but notably not core teaching, which remains among the least automatable occupations. The collapse of companies like Chegg (subscribers down 50% due to ChatGPT) shows how quickly AI can disrupt adjacent education services even while classroom teaching persists. AI adoption in education is high: 92% of students use AI tools (up from 66% in 2024), 60% of teachers report using AI, and 93% of higher education staff expect to expand AI use (Ellucian). However, research consistently frames AI as augmenting educators rather than replacing them. The 33,000 higher education jobs eliminated in 2025 (BLS) were primarily driven by federal funding policy, not AI. Direct AI-specific displacement estimates remain unusually sparse for this sector, as SHRM found education has the lowest automation rate of any sector at just 7.3%.`,
+    `${v}% of education support roles could be displaced by AI. This includes tutoring, grading, content creation, and administration, but notably not core teaching, which remains among the least automatable occupations. The collapse of companies like Chegg (subscribers down 50% due to ChatGPT) shows how quickly AI can disrupt adjacent education services even while classroom teaching persists. AI adoption in education is high: 92% of students use AI tools (up from 66% in 2024), 60% of teachers report using AI, and 93% of higher education staff expect to expand AI use (Ellucian). However, research consistently frames AI as augmenting educators rather than replacing them. The 33,000 higher education jobs eliminated in 2025 (BLS) were primarily driven by federal funding policy, not AI. Direct AI-specific displacement estimates remain unusually sparse for this sector. SHRM found education has the lowest automation rate of any sector at just 7.3%.`,
   "high-skill-wage-premium": (v) =>
     `Workers with strong AI and machine learning skills currently earn about ${v}% more than the median worker in comparable roles. This "AI premium" reflects both scarcity of talent and the outsized productivity gains AI-skilled workers deliver. A rising premium signals that AI skills are becoming more, not less, valuable.`,
   "median-wage-impact": (v) =>
@@ -307,7 +307,7 @@ export default function PredictionDetailPage() {
         )}
       </div>
 
-      {/* Share / Cite / Embed — tighter to stat section */}
+      {/* Share / Cite / Embed - tighter to stat section */}
       <div className="-mt-4">
         <ShareCiteBar
           slug={prediction.slug}
@@ -345,7 +345,7 @@ export default function PredictionDetailPage() {
         />
       </section>
 
-      {/* Disclaimer callout — shown when sources use incompatible definitions */}
+      {/* Disclaimer callout - shown when sources use incompatible definitions */}
       {prediction.disclaimer && (
         <div className="border border-[#d97706]/20 bg-[#d97706]/[0.04] rounded-lg px-5 py-4 max-w-2xl -mt-4">
           <p className="text-[13px] text-[var(--muted)] leading-relaxed">
@@ -355,7 +355,7 @@ export default function PredictionDetailPage() {
         </div>
       )}
 
-      {/* Charts — split into observed and projected when both exist */}
+      {/* Charts - split into observed and projected when both exist */}
       <section>
         {prediction.slug === "genai-work-adoption" ? (
           <>
@@ -376,7 +376,7 @@ export default function PredictionDetailPage() {
                   </h3>
                 </div>
                 <p className="text-[14px] text-[var(--muted)] leading-relaxed max-w-2xl">
-                  Measured employment data from government statistics, large-scale surveys, and administrative records. This is ground truth — what has actually occurred in the labor market.
+                  Measured employment data from government statistics, large-scale surveys, and administrative records. This is ground truth: what has actually occurred in the labor market.
                 </p>
               </div>
               <PredictionChart
@@ -409,7 +409,7 @@ export default function PredictionDetailPage() {
                 <p className="text-[14px] text-[var(--muted)] leading-relaxed max-w-2xl">
                   Forward-looking estimates from structural models, institutional surveys, and expert forecasts.
                   {targetDateStr ? ` All projections target ${prediction.timeHorizon.toLowerCase()}, shown by the reference line.` : ""}
-                  {" "}The wide range ({projectedMin}–{projectedMax}%) reflects different model assumptions about reinstatement effects, demand elasticity, and adoption speed — not just parameter uncertainty.
+                  {" "}The wide range ({projectedMin}–{projectedMax}%) reflects different model assumptions about reinstatement effects, demand elasticity, and adoption speed, not just parameter uncertainty.
                 </p>
               </div>
               <PredictionChart
@@ -449,7 +449,7 @@ export default function PredictionDetailPage() {
             </p>
           </>
         )}
-        {/* Adoption Ladder — directly below chart */}
+        {/* Adoption Ladder - directly below chart */}
         {prediction.slug === "ai-adoption-rate" && <AdoptionLadder />}
       </section>
 

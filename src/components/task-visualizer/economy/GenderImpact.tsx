@@ -261,7 +261,7 @@ export default function GenderImpact() {
         </h4>
         <p className="text-[11px] text-[var(--muted)] mb-4">
           Sorted by percentage of women. Women are concentrated in clerical, administrative, healthcare support,
-          and education roles — many of which have high information-processing and communication task loads
+          and education roles. Many of which have high information-processing and communication task loads
           that face near-term automation pressure. This gap is driven by occupational segregation, not
           differential vulnerability within the same role.
         </p>
@@ -407,7 +407,7 @@ export default function GenderImpact() {
                       {meta.label}
                     </h5>
                     <p className="text-[11px] text-[var(--muted)]">
-                      {meta.range} — {td.womenPercent}% women ({(td.womenWorkers / 1000).toFixed(1)}M)
+                      {meta.range}. {td.womenPercent}% women ({(td.womenWorkers / 1000).toFixed(1)}M)
                     </p>
                   </div>
                   <div className="text-right">
@@ -449,7 +449,7 @@ export default function GenderImpact() {
       <p className="text-[11px] text-[var(--muted)] mt-6">
         Gender composition from BLS Current Population Survey 2024 annual averages (Table 11).
         Automation projections use the same compute-cost crossover model as other sections.
-        The automation gap reflects occupational segregation — women are concentrated in clerical,
+        The automation gap reflects occupational segregation. Women are concentrated in clerical,
         administrative, healthcare support, and education roles with high information-processing
         task loads, while men dominate physical/manual trades which are harder to automate.
         Yale Budget Lab (2026) finds that occupations with 30-50% women have the highest measurement

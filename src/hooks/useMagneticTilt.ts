@@ -5,7 +5,7 @@ import { useRef, useCallback, useEffect, useState } from "react";
 /**
  * Physics-based magnetic tilt for card elements.
  * Returns a ref to attach and a style object with transform + transition.
- * Uses spring physics for settling — things find their place naturally.
+ * Uses spring physics for settling - things find their place naturally.
  * Respects prefers-reduced-motion.
  */
 export function useMagneticTilt<T extends HTMLElement = HTMLDivElement>(opts?: {

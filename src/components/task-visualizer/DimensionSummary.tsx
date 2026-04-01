@@ -48,7 +48,7 @@ const DIMENSION_TIPS: Record<
     link: "/occupation-exposure#methodology-elasticity",
   },
   complementarity: {
-    tip: "Does AI replace workers or make them more productive? Jobs with more distinct task clusters tend toward augmentation — AI handles some tasks so you can focus on the rest.",
+    tip: "Does AI replace workers or make them more productive? Jobs with more distinct task clusters tend toward augmentation. AI handles some tasks so you can focus on the rest.",
     link: "/occupation-exposure#methodology-complementarity",
   },
 };

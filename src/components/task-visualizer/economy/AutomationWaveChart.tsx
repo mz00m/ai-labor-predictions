@@ -192,11 +192,11 @@ export default function AutomationWaveChart() {
       </div>
 
       <p className="text-[11px] text-[var(--muted)] mt-3">
-        Solid lines show baseline cost crossover — the percentage of tasks within each income tier where
+        Solid lines show baseline cost crossover. The percentage of tasks within each income tier where
         AI compute is now cheaper than the human wage rate. Shaded bands show the slow-to-fast scenario
         range (0.5x to 1.5x cost decline rates). The widening bands reflect compounding uncertainty:
         by 2036, projections are highly sensitive to assumed cost trajectories. This measures economic
-        incentive, not actual job loss — real-world adoption is slowed by organizational inertia, regulation,
+        incentive, not actual job loss. Real-world adoption is slowed by organizational inertia, regulation,
         demand elasticity, and complementarity effects.
       </p>
     </div>

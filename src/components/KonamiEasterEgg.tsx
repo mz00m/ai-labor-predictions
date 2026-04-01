@@ -125,7 +125,7 @@ export default function KonamiEasterEgg() {
         } else if (p.shape === "square") {
           ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size);
         } else {
-          // bar — tall and thin like a chart bar
+          // bar - tall and thin like a chart bar
           ctx.fillRect(-p.size / 4, -p.size, p.size / 2, p.size * 2);
         }
 

@@ -71,7 +71,7 @@ export default function Home() {
             No measurable job displacement, <SplitFlapWord />
           </p>
 
-          {/* Hero data triad — numbers emerge from behind the ticker, dissolve upward */}
+          {/* Hero data triad - numbers emerge from behind the ticker, dissolve upward */}
           <HeroTriad
             projectedJobLoss={heroStats.projectedJobLoss}
             projectedEstimateCount={heroStats.projectedEstimateCount}
@@ -81,12 +81,12 @@ export default function Home() {
           />
         </div>
 
-        {/* News Ticker — overlaps the bottom of the numbers, clipping them */}
+        {/* News Ticker - overlaps the bottom of the numbers, clipping them */}
         <div className="relative z-[3] -mt-6">
           <NewsTicker />
         </div>
 
-        {/* Essential Reading — compact strip under ticker */}
+        {/* Essential Reading - compact strip under ticker */}
         <div className="relative mt-4 pb-6">
           <p className="text-[11px] font-bold uppercase tracking-widest text-[var(--accent)] mb-2">
             Important Reads This Week{" "}
@@ -112,7 +112,7 @@ export default function Home() {
       <div className="mt-10">
         <SectionBar
           title="How Will AI Affect Your Job?"
-          description="AI doesn't replace whole jobs — it automates specific tasks. Explore which parts of 110+ occupations covering ~67% of US employment are exposed and which remain human-dependent."
+          description="AI doesn't replace whole jobs. It automates specific tasks. Explore which parts of 110+ occupations covering ~67% of US employment are exposed and which remain human-dependent."
           href="/task-visualizer"
           tag="Task visualizer"
           accentColor="#3ECFAE"
@@ -123,7 +123,7 @@ export default function Home() {
 
         <SectionBar
           title={`${predictions.length} Predictions for How AI Will Impact Jobs`}
-          description={`Displacement, wages, and adoption — each with trend data, source quality ratings, and a weighted estimate from ${totalSources}+ sources.`}
+          description={`Displacement, wages, and adoption: each with trend data, source quality ratings, and a weighted estimate from ${totalSources}+ sources.`}
           href="/predictions"
           tag="Predictions"
           accentColor="#6B7BF7"
@@ -134,7 +134,7 @@ export default function Home() {
 
         <SectionBar
           title="What if AI Creates More Jobs Than It Displaces"
-          description="Very possible based on historic data. Every general-purpose technology eventually created more jobs than it displaced — and AI may be no different."
+          description="Very possible based on historic data. Every general-purpose technology eventually created more jobs than it displaced, and AI may be no different."
           href="/demand-elasticity"
           tag="Demand elasticity"
           accentColor="#34D399"
@@ -180,7 +180,7 @@ export default function Home() {
         <ScrollReveal delay={160}>
           <SectionBar
             title="We've Seen This Before"
-            description="Every major technology — steam, electricity, computers — followed the same pattern: displacement first, then more jobs than before. AI is compressing that timeline."
+            description="Every major technology (steam, electricity, computers) followed the same pattern: displacement first, then more jobs than before. AI is compressing that timeline."
             href="/history"
             tag="History"
             accentColor="#9A9AAF"
@@ -191,7 +191,7 @@ export default function Home() {
         <ScrollReveal delay={240}>
           <SectionBar
             title="Early Indicators"
-            description="AI tool downloads are surging — PyPI and npm package data, SDK adoption curves, and developer activity signal where automation is landing before the labor data catches up."
+            description="AI tool downloads are surging. PyPI and npm package data, SDK adoption curves, and developer activity signal where automation is landing before the labor data catches up."
             href="/signals"
             tag="Signals"
             accentColor="#F26D6D"

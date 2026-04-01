@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "AI exposure alone doesn't predict job displacement. This tool scores 342 BLS occupations across 5 research-backed dimensions: technical exposure, adoption speed, worker adaptability, demand elasticity, and AI complementarity.",
   openGraph: {
-    title: "Beyond Exposure — jobsdata.ai",
+    title: "Beyond Exposure | jobsdata.ai",
     description:
       "Why AI exposure scores alone get displacement wrong. A 5-dimensional framework for understanding AI's real labor market impact.",
   },

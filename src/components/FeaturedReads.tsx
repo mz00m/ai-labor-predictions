@@ -22,7 +22,7 @@ const articles: Article[] = [
     author: "Noah Smith (Noahpinion)",
     title: "Plentiful, High-Paying Jobs in the Age of AI",
     summary:
-      "Compute constraints give AI a producer-specific bottleneck. Comparative advantage — not absolute advantage — determines who works. Even if AI surpasses humans at everything, opportunity cost keeps human labor valuable.",
+      "Compute constraints give AI a producer-specific bottleneck. Comparative advantage, not absolute advantage. Determines who works. Even if AI surpasses humans at everything, opportunity cost keeps human labor valuable.",
     date: "Mar 28",
     url: "https://www.noahpinion.blog/p/plentiful-high-paying-jobs-in-the-ff9",
     accent: "border-l-cyan-500",
@@ -38,7 +38,7 @@ const articles: Article[] = [
   },
   {
     author: "Lichtinger, Hosseini",
-    title: "AI Narrows Performance Gaps — But Does That Mean It Reduces Inequality?",
+    title: "AI Narrows Performance Gaps | But Does That Mean It Reduces Inequality?",
     summary:
       "Within-task equalization doesn't imply between-occupation equalization. Experiments hold tasks fixed, missing automation channel and seniority dynamics. Net inequality effect remains genuinely open.",
     date: "Mar 26",

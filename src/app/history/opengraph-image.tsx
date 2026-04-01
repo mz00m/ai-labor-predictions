@@ -155,7 +155,7 @@ export default function OGImage() {
             </p>
           </div>
 
-          {/* Arc Visualization — SVG paths only + HTML labels */}
+          {/* Arc Visualization - SVG paths only + HTML labels */}
           <div
             style={{
               display: "flex",

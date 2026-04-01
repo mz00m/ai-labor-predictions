@@ -32,11 +32,11 @@ const stripData = [
 ];
 
 const sectionMeta = [
-  { metric: "Exposure", barColor: "#D6DAFE", barHover: "#C0C6FC" },       // light indigo — ties to accent
+  { metric: "Exposure", barColor: "#D6DAFE", barHover: "#C0C6FC" },       // light indigo. Ties to accent
   { metric: "Employee productivity", barColor: "#B8D4F0", barHover: "#9AC2E8" }, // soft blue
   { metric: "Posting decline", barColor: "#E8C8A0", barHover: "#DDB580" },       // warm amber
   { metric: "Projected displacement", barColor: "#E8A090", barHover: "#DE8878" }, // salmon approach
-  { metric: "Measured job loss", barColor: "#A7F3D0", barHover: "#6EE7B7" },      // emerald — ~0% actual loss
+  { metric: "Measured job loss", barColor: "#A7F3D0", barHover: "#6EE7B7" },      // emerald - ~0% actual loss
 ];
 
 // Flatten all bars in display order
@@ -47,7 +47,7 @@ const allBars = sectionMeta.flatMap((sec, si) =>
     .map((d) => ({ ...d, si, barColor: sec.barColor, barHover: sec.barHover }))
 );
 
-// Left column label groups — positioned by bar offsets
+// Left column label groups - positioned by bar offsets
 const ROW_H = 24;
 const leftGroups: {
   label: string;
@@ -144,7 +144,7 @@ export default function FunnelStrip() {
       {/* Two-column chart */}
       <div ref={containerRef} className="border border-black/[0.06] rounded-lg overflow-hidden">
         <div className="flex">
-          {/* Left column — desktop only */}
+          {/* Left column - desktop only */}
           <div
             className="hidden sm:block w-[200px] shrink-0 border-r border-black/[0.06] relative"
             style={{ height: allBars.length * ROW_H }}
@@ -191,7 +191,7 @@ export default function FunnelStrip() {
               </div>
             ))}
 
-            {/* Section divider lines — draw in from left */}
+            {/* Section divider lines - draw in from left */}
             {leftGroups.slice(1).map((group, di) => (
               <div
                 key={`divider-${di}`}
@@ -207,7 +207,7 @@ export default function FunnelStrip() {
             ))}
           </div>
 
-          {/* Right column — flush bars */}
+          {/* Right column - flush bars */}
           <div className="flex-1">
             {allBars.map((bar, i) => {
               const isHovered = hovered === i;
@@ -244,7 +244,7 @@ export default function FunnelStrip() {
                     </div>
                   )}
 
-                  {/* Section divider on right side (desktop) — between sections */}
+                  {/* Section divider on right side (desktop) - between sections */}
                   {isFirstOfSection && i > 0 && (
                     <div
                       className="hidden sm:block h-px"
@@ -273,7 +273,7 @@ export default function FunnelStrip() {
                       className="flex items-center w-full no-underline relative"
                       style={{ height: ROW_H }}
                     >
-                      {/* Bar fill — animates width on scroll */}
+                      {/* Bar fill - animates width on scroll */}
                       <div
                         className="absolute left-0 top-0 bottom-0"
                         style={{
@@ -284,7 +284,7 @@ export default function FunnelStrip() {
                         }}
                       />
 
-                      {/* Confidence range whiskers — shown on hover when range exists */}
+                      {/* Confidence range whiskers - shown on hover when range exists */}
                       {bar.range && (
                         <>
                           {/* Low whisker */}
@@ -323,7 +323,7 @@ export default function FunnelStrip() {
                         </>
                       )}
 
-                      {/* Value after bar — z-10 so it floats over source name */}
+                      {/* Value after bar - z-10 so it floats over source name */}
                       <div
                         className="absolute top-0 bottom-0 flex items-center pl-2 z-10"
                         style={{
@@ -351,7 +351,7 @@ export default function FunnelStrip() {
                         </span>
                       </div>
 
-                      {/* Source name — right-justified, desktop only */}
+                      {/* Source name - right-justified, desktop only */}
                       <span
                         className={`hidden sm:flex absolute right-3 top-0 bottom-0 items-center text-[10px] whitespace-nowrap leading-none ${
                           isHovered
@@ -382,7 +382,7 @@ export default function FunnelStrip() {
           </div>
         </div>
 
-        {/* Detail panel — smooth max-height transition */}
+        {/* Detail panel - smooth max-height transition */}
         <div
           className="funnel-detail-panel border-t border-black/[0.06] overflow-hidden"
           style={{

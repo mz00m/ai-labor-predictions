@@ -142,7 +142,7 @@ export default function NewsTicker() {
           // sessionStorage full or unavailable
         }
       } catch {
-        // Silently fail — ticker just stays empty
+        // Silently fail - ticker just stays empty
       } finally {
         setLoaded(true);
       }

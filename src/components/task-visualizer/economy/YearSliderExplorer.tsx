@@ -309,8 +309,8 @@ export default function YearSliderExplorer() {
       <p className="text-[11px] text-[var(--muted)] mt-3">
         Bar shows the percentage of each occupation&apos;s task-hours where compute cost has crossed
         below human labor cost. The 50% line marks the threshold where more than half of an
-        occupation&apos;s tasks face cost crossover. This measures economic incentive, not actual displacement —
-        real adoption depends on organizational readiness, regulation, and demand elasticity. For high-elasticity
+        occupation&apos;s tasks face cost crossover. This measures economic incentive, not actual displacement.
+        Real adoption depends on organizational readiness, regulation, and demand elasticity. For high-elasticity
         sectors, cost reduction may expand markets and increase employment. Use the scenario toggle to see how
         sensitive these projections are to the assumed rate of AI cost decline.
       </p>

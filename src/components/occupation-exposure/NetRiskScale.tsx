@@ -19,7 +19,7 @@ const ZONES = [
     bg: "rgba(245,158,11,0.1)",
     border: "rgba(245,158,11,0.25)",
     description:
-      "Could go either way. A lot depends on how fast companies adopt AI, whether demand for these workers grows, and how quickly people pick up new skills. Most jobs land here — the outlook is genuinely uncertain.",
+      "Could go either way. A lot depends on how fast companies adopt AI, whether demand for these workers grows, and how quickly people pick up new skills. Most jobs land here. The outlook is genuinely uncertain.",
   },
   {
     range: "7 - 10",
@@ -28,7 +28,7 @@ const ZONES = [
     bg: "rgba(220,38,38,0.1)",
     border: "rgba(220,38,38,0.25)",
     description:
-      "AI can already handle much of the work, companies are adopting fast, and there are fewer offsetting factors. These roles face real pressure — though even here, the timeline is uncertain and new responsibilities often emerge.",
+      "AI can already handle much of the work, companies are adopting fast, and there are fewer offsetting factors. These roles face real pressure, though even here, the timeline is uncertain and new responsibilities often emerge.",
   },
 ];
 
@@ -40,10 +40,10 @@ export default function NetRiskScale() {
       </h3>
       <p className="text-[12px] text-white/50 leading-snug mb-4">
         The score asks: how much of this job can AI do, and how fast are
-        companies adopting it? Then it weighs that against protective factors —
-        like whether demand for the job is growing, whether AI makes workers
+        companies adopting it? Then it weighs that against protective factors:
+        whether demand for the job is growing, whether AI makes workers
         more productive rather than replaceable, and how easily workers can
-        learn new skills. A high score doesn&rsquo;t mean jobs disappear — it
+        learn new skills. A high score doesn&rsquo;t mean jobs disappear. It
         means the evidence leans toward significant change.
       </p>
 

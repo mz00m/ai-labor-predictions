@@ -127,7 +127,7 @@ export default function WorkforceOverview() {
     setSelectedTiers((prev) => {
       const next = new Set(prev);
       if (next.has(tier)) {
-        // Don't allow deselecting all — keep at least one
+        // Don't allow deselecting all - keep at least one
         if (next.size > 1) next.delete(tier);
       } else {
         next.add(tier);
@@ -201,7 +201,7 @@ export default function WorkforceOverview() {
         <p className="text-[12px] text-[var(--muted)] leading-relaxed">
           In a survey of ~750 CFOs (Baslandze et al., 2026), only Office &amp; Admin roles were described
           as being replaced more than enhanced by AI (NEI 2.0x). For the other 7 occupation groups with data,
-          CFOs see AI as enhancing workers — Tech &amp; Computing (0.60x), Legal (0.47x), and Management (0.14x)
+          CFOs see AI as enhancing workers. Tech &amp; Computing (0.60x), Legal (0.47x), and Management (0.14x)
           are the most enhancement-oriented. This suggests the dominant near-term channel is augmentation, not automation.
         </p>
         <div className="flex flex-wrap gap-3 mt-3">
@@ -298,7 +298,7 @@ export default function WorkforceOverview() {
         Income tiers based on median annual wage for the occupation group.
         Exposure metric agreement from Yale Budget Lab (Gimbel et al., 2026), comparing 6 AI exposure measures across 778 occupations.
         CFO replace/enhance ratio from Baslandze et al. (2026), Federal Reserve Bank of Atlanta/Duke University survey of ~750 executives.
-        Demand elasticity classifications informed by Bessen (2019) and Autor &amp; Salomons (2018) — high elasticity
+        Demand elasticity classifications informed by Bessen (2019) and Autor &amp; Salomons (2018). High elasticity
         means cheaper output historically expands markets (potentially increasing employment); low elasticity means
         demand is fixed and cost reduction leads to headcount reduction.
       </p>

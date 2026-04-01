@@ -1,7 +1,7 @@
 /**
  * Google Custom Search fetcher for AI + labor market content.
  * Captures LinkedIn Pulse articles, Medium posts, Substack, and blog content.
- * Fully optional — returns [] if GOOGLE_CSE_KEY and GOOGLE_CSE_ID are not set.
+ * Fully optional - returns [] if GOOGLE_CSE_KEY and GOOGLE_CSE_ID are not set.
  */
 
 import { rateLimit, SOCIAL_SEARCH_QUERIES } from "./social-utils";

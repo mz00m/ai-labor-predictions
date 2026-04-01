@@ -8,31 +8,31 @@ interface WatermarkProps {
   color: string;
 }
 
-/** Area chart — line draws itself on hover, dots pop in, area fills */
+/** Area chart - line draws itself on hover, dots pop in, area fills */
 export function PredictionsWatermark({ color }: WatermarkProps) {
   const points = "10,55 40,38 70,45 100,25 130,32 160,18 190,24 220,10";
   return (
     <svg width="240" height="70" viewBox="0 0 240 70" fill="none" className="overflow-visible">
-      {/* Confidence band — fades in */}
+      {/* Confidence band - fades in */}
       <path
         d="M10,65 10,58 40,44 70,50 100,30 130,38 160,22 190,30 220,14 220,6 190,18 160,14 130,26 100,20 70,40 40,32 10,52 10,65Z"
         fill={color} opacity="0"
         className="group-hover:animate-[wm-fill_0.6s_ease-out_0.3s_forwards]"
       />
-      {/* Area under line — fades in */}
+      {/* Area under line - fades in */}
       <polygon
         points={`10,65 ${points} 220,65`}
         fill={color} opacity="0"
         className="group-hover:animate-[wm-fill-soft_0.5s_ease-out_0.2s_forwards]"
       />
-      {/* Main line — draws */}
+      {/* Main line - draws */}
       <polyline
         points={points}
         stroke={color} strokeWidth="2" strokeLinejoin="round" fill="none"
         strokeDasharray="400" strokeDashoffset="400"
         className="group-hover:animate-[wm-draw_0.7s_ease-out_forwards]"
       />
-      {/* Data dots — pop in sequentially */}
+      {/* Data dots - pop in sequentially */}
       {[[10,55],[40,38],[70,45],[100,25],[130,32],[160,18],[190,24],[220,10]].map(([cx,cy],i) => (
         <circle
           key={i} cx={cx} cy={cy} r="0" fill={color}
@@ -44,7 +44,7 @@ export function PredictionsWatermark({ color }: WatermarkProps) {
   );
 }
 
-/** Task grid — blocks scale up and fill in with a stagger */
+/** Task grid - blocks scale up and fill in with a stagger */
 export function TaskVisualizerWatermark({ color }: WatermarkProps) {
   const filled = [0, 2, 5, 6];
   return (
@@ -73,7 +73,7 @@ export function TaskVisualizerWatermark({ color }: WatermarkProps) {
   );
 }
 
-/** Funnel — segments slam in from left to right, shrinking dramatically */
+/** Funnel - segments slam in from left to right, shrinking dramatically */
 export function EconomyFunnelWatermark({ color }: WatermarkProps) {
   const yTop = [2, 15, 25, 30, 33];
   const yBot = [68, 55, 45, 40, 37];
@@ -119,7 +119,7 @@ export function EconomyFunnelWatermark({ color }: WatermarkProps) {
   );
 }
 
-/** Timeline — line draws, nodes expand with ripples */
+/** Timeline - line draws, nodes expand with ripples */
 export function HistoryTimelineWatermark({ color }: WatermarkProps) {
   const nodes = [15, 55, 95, 135, 175];
   return (
@@ -166,7 +166,7 @@ export function HistoryTimelineWatermark({ color }: WatermarkProps) {
   );
 }
 
-/** Rising bar chart — AI tool downloads surging upward */
+/** Rising bar chart - AI tool downloads surging upward */
 export function SignalsWatermark({ color }: WatermarkProps) {
   const bars = [
     { x: 15, h: 12 },
@@ -214,7 +214,7 @@ export function SignalsWatermark({ color }: WatermarkProps) {
   );
 }
 
-/** Demand elasticity — upward lines branching out, representing job creation outpacing displacement */
+/** Demand elasticity - upward lines branching out, representing job creation outpacing displacement */
 export function DemandElasticityWatermark({ color }: WatermarkProps) {
   return (
     <svg width="220" height="70" viewBox="0 0 220 70" fill="none" className="overflow-visible">
@@ -225,14 +225,14 @@ export function DemandElasticityWatermark({ color }: WatermarkProps) {
         strokeDasharray="200" strokeDashoffset="200"
         className="group-hover:animate-[wm-draw_0.5s_ease-out_forwards]"
       />
-      {/* Branch 1 — jobs created (steeper upward) */}
+      {/* Branch 1 - jobs created (steeper upward) */}
       <polyline
         points="110,35 145,20 180,10 210,5"
         stroke={color} strokeWidth="2" fill="none" strokeLinejoin="round"
         strokeDasharray="200" strokeDashoffset="200"
         className="group-hover:animate-[wm-draw_0.5s_ease-out_0.4s_forwards]"
       />
-      {/* Branch 2 — jobs displaced (shallow) */}
+      {/* Branch 2 - jobs displaced (shallow) */}
       <polyline
         points="110,35 145,40 180,42 210,43"
         stroke={color} strokeWidth="1.5" fill="none" strokeLinejoin="round"
@@ -240,7 +240,7 @@ export function DemandElasticityWatermark({ color }: WatermarkProps) {
         strokeOpacity="0.5"
         className="group-hover:animate-[wm-draw_0.5s_ease-out_0.4s_forwards]"
       />
-      {/* Area between branches — net gain */}
+      {/* Area between branches - net gain */}
       <path
         d="M110,35 145,20 180,10 210,5 210,43 180,42 145,40 110,35Z"
         fill={color} opacity="0"
@@ -263,7 +263,7 @@ export function DemandElasticityWatermark({ color }: WatermarkProps) {
   );
 }
 
-/** Productivity plateau — line draws boldly, gap zone pulses */
+/** Productivity plateau - line draws boldly, gap zone pulses */
 export function ProductivityWatermark({ color }: WatermarkProps) {
   return (
     <svg width="220" height="70" viewBox="0 0 220 70" fill="none" className="overflow-visible">

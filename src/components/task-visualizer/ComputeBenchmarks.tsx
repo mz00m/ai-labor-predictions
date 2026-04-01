@@ -13,7 +13,7 @@ import {
 
 /**
  * Historical and projected AI inference cost data.
- * Sources cited inline — these are real benchmark data points.
+ * Sources cited inline - these are real benchmark data points.
  */
 const COMPUTE_COST_HISTORY = [
   { year: "2020", costPerMToken: 60.00, label: "GPT-3 launch" },
@@ -51,7 +51,7 @@ const SOURCES = [
     url: "https://epoch.ai/blog/trends-in-the-dollar-training-cost-of-machine-learning-systems",
   },
   {
-    label: "Stanford HAI: AI Index Report 2025 — inference cost declining ~10x per year for equivalent capability",
+    label: "Stanford HAI: AI Index Report 2025 - inference cost declining ~10x per year for equivalent capability",
     url: "https://aiindex.stanford.edu/report/",
   },
   {
@@ -59,7 +59,7 @@ const SOURCES = [
     url: null,
   },
   {
-    label: "Dillon (2025): \"AI Labour Calculator\" — Epoch AI default of 10^21.7 FLOP/s, 100% YOY growth, 2x algorithmic efficiency",
+    label: "Dillon (2025): \"AI Labour Calculator\" - Epoch AI default of 10^21.7 FLOP/s, 100% YOY growth, 2x algorithmic efficiency",
     url: "https://github.com/CharlesD353/ai-labour-calculator",
   },
   {

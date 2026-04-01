@@ -4,14 +4,14 @@ import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { usePathname } from "next/navigation";
 
 /**
- * ChatbotBuddy — A silver retro robot that peeks into the page from different edges.
+ * ChatbotBuddy - A silver retro robot that peeks into the page from different edges.
  *
  * Three entrance modes:
- *  1. "side"   — 45° diagonal from top-right corner, near the Ask button, gripping the edge
- *  2. "top"    — drops down vertically from the top of the viewport, peeking upside-down
- *  3. "bottom" — pops up from the bottom edge on deeper pages (/about, /j-curve, /history, etc.)
+ *  1. "side"   - 45° diagonal from top-right corner, near the Ask button, gripping the edge
+ *  2. "top"    - drops down vertically from the top of the viewport, peeking upside-down
+ *  3. "bottom" - pops up from the bottom edge on deeper pages (/about, /j-curve, /history, etc.)
  *
- * The robot is silver/metallic with glowing blue eyes — classic retro robot look.
+ * The robot is silver/metallic with glowing blue eyes - classic retro robot look.
  * Cycles through entrance modes on each page navigation.
  * Respects prefers-reduced-motion.
  */
@@ -24,7 +24,7 @@ const C = {
   chrome: "#E8E8EC",     // bright chrome
   rivet: "#888890",      // bolt/rivet grey
   screen: "#1A1A2E",     // face screen
-  eye: "#5C61F6",        // matches site accent — glowing blue
+  eye: "#5C61F6",        // matches site accent. Glowing blue
   eyeGlow: "#7B80FF",    // eye highlight
   mouth: "#5C61F6",
   antenna: "#A0A0A8",
@@ -73,7 +73,7 @@ function RobotSVG({
     >
       {/* Antenna stalk */}
       <rect x="22" y="3" width="4" height="9" rx="2" fill={C.antenna} />
-      {/* Antenna tip — glows coral when active */}
+      {/* Antenna tip - glows coral when active */}
       <circle cx="24" cy="3" r="3.5" fill={antennaGlow ? C.antennaTip : C.rivet}>
         {antennaGlow && (
           <animate attributeName="opacity" values="1;0.4;1" dur="1s" repeatCount="indefinite" />
@@ -86,7 +86,7 @@ function RobotSVG({
         </circle>
       )}
 
-      {/* Head — main silver shell */}
+      {/* Head - main silver shell */}
       <rect x="3" y="10" width="42" height="30" rx="7" fill={C.body} />
       {/* Chrome highlight strip across top of head */}
       <rect x="5" y="10" width="38" height="6" rx="3" fill={C.chrome} opacity="0.6" />
@@ -113,10 +113,10 @@ function RobotSVG({
         </>
       )}
 
-      {/* Mouth — little speaker grille */}
+      {/* Mouth - little speaker grille */}
       <rect x={24 - mouthW / 2} y="32" width={mouthW} height="2" rx="1" fill={C.mouth} opacity="0.5" />
 
-      {/* Ear bolts — riveted to the side */}
+      {/* Ear bolts - riveted to the side */}
       <circle cx="3" cy="25" r="3" fill={C.bodyDark} />
       <circle cx="3" cy="25" r="1.5" fill={C.chrome} />
       <circle cx="45" cy="25" r="3" fill={C.bodyDark} />
@@ -140,7 +140,7 @@ function RobotSVG({
       <circle cx="14" cy="52" r="1" fill={C.rivet} />
       <circle cx="34" cy="52" r="1" fill={C.rivet} />
 
-      {/* Purple accent stripe along head bottom edge — ties to Ask button */}
+      {/* Purple accent stripe along head bottom edge - ties to Ask button */}
       <rect x="9" y="37" width="30" height="1.5" rx="0.75" fill={C.eye} opacity="0.35" />
       {/* Purple accent line on torso */}
       <rect x="16" y="50" width="16" height="1" rx="0.5" fill={C.eye} opacity="0.25" />
@@ -293,7 +293,7 @@ export default function ChatbotBuddy({ sourceCount }: { sourceCount?: number }) 
           focus:outline-none focus-visible:ring-2 focus-visible:ring-[#5C61F6] focus-visible:ring-offset-2
           rounded-xl`}
         style={positionStyles.robot}
-        aria-label="Ask Gob — open AI assistant chat"
+        aria-label="Ask Gob - open AI assistant chat"
       >
         {/* Hover glow */}
         <div

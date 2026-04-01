@@ -48,7 +48,7 @@ export default function OGImage() {
           }}
         />
 
-        {/* Content — centered */}
+        {/* Content - centered */}
         <div
           style={{
             display: "flex",

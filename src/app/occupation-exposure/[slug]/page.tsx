@@ -41,7 +41,7 @@ export function generateMetadata({ params }: Props): Metadata {
     return { title: "Occupation Not Found" };
   }
 
-  const title = `${occ.title} — AI Displacement Risk | jobsdata.ai`;
+  const title = `${occ.title} - AI Displacement Risk | jobsdata.ai`;
   const description = `How exposed is "${occ.title}" to AI displacement? 5-dimensional risk analysis covering technical exposure, adoption speed, adaptability, demand elasticity, and complementarity. Based on O*NET task data and Karpathy's GPT-scored analysis.`;
 
   return {

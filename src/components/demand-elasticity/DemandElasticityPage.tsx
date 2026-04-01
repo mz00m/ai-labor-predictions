@@ -463,7 +463,7 @@ export default function DemandElasticityPage() {
             <NavCard
               href="/signals#productivity-paths"
               label="Productivity Paths"
-              description="Reduce, amplify, or expand — how firms respond"
+              description="Reduce, amplify, or expand. How firms respond"
             />
             <NavCard
               href="/j-curve"

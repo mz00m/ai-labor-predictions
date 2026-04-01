@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * SplitFlapWord — a split-flap (Solari board) animation for a single word.
+ * SplitFlapWord - a split-flap (Solari board) animation for a single word.
  *
  * Cycles: "yet." -> "expected." -> "today." -> "ever." -> "maybe?"
  * Pauses on "yet.", rapidly flips through middle words, lands on "maybe?"

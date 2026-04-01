@@ -297,7 +297,7 @@ export default function PredictionSummaryCard({
           {/* BLS Employment Trend */}
           {blsTrend && <BLSTrendStrip trend={blsTrend} />}
 
-          {/* Research annotation — note expandable, badge always visible */}
+          {/* Research annotation - note expandable, badge always visible */}
           {annotation && (
             <div className="mb-4">
               <button

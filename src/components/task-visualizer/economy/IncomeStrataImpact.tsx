@@ -125,7 +125,7 @@ export default function IncomeStrataImpact() {
                     {meta.label}
                   </h4>
                   <p className="text-[12px] text-[var(--muted)]">
-                    {meta.range} — {(detail.totalEmployment / 1000).toFixed(1)}M workers —{" "}
+                    {meta.range}. {(detail.totalEmployment / 1000).toFixed(1)}M workers,{" "}
                     {detail.groups.length} occupation groups
                   </p>
                 </div>
@@ -174,7 +174,7 @@ export default function IncomeStrataImpact() {
               </div>
             </div>
 
-            {/* Occupation table — uses CSS grid instead of <table> to avoid
+            {/* Occupation table - uses CSS grid instead of <table> to avoid
                 column misalignment caused by nav-row ::before pseudo-element on <tr> */}
             <div className="text-[12px]">
               {/* Header */}

@@ -11,7 +11,7 @@ const ROWS = [
   {
     comparison: "vs. PC / Internet",
     historical: "PC: 20% adoption 3 yrs after IBM PC (1981); Internet: 20% two yrs after commercial opening (1995)",
-    ai: "GenAI: 39% adoption 2 yrs after ChatGPT launch — nearly double the PC rate at a comparable stage",
+    ai: "GenAI: 39% adoption 2 yrs after ChatGPT launch, nearly double the PC rate at a comparable stage",
     ratio: "2\u20135\u00d7",
     source: "Bick, Blandin & Deming (NBER 32966, 2024); Census",
   },
@@ -39,7 +39,7 @@ export default function DiffusionComparison() {
         measurement uncertainty.
       </p>
 
-      {/* Table — desktop */}
+      {/* Table - desktop */}
       <div className="hidden sm:block overflow-x-auto">
         <table className="w-full text-left text-[12px] border-collapse">
           <thead>
@@ -90,7 +90,7 @@ export default function DiffusionComparison() {
         </table>
       </div>
 
-      {/* Cards — mobile */}
+      {/* Cards - mobile */}
       <div className="sm:hidden space-y-3">
         {ROWS.map((r) => (
           <div

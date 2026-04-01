@@ -16,7 +16,7 @@ export default function MethodologySection() {
           <p className="text-[13px] text-[var(--foreground)] leading-relaxed">
             We break every job into its component tasks using federal labor data (O*NET, BLS). For each
             task, we calculate what it costs in real AI API spend to replicate one hour of human work,
-            then project when that cost drops below the human wage — the <strong>economic crossover
+            then project when that cost drops below the human wage. The <strong>economic crossover
             point</strong>. We layer in how much independent research metrics agree on each
             occupation&apos;s AI exposure (Yale Budget Lab), and how fast each industry actually adopts
             new technology. The result: a task-by-task map of where AI has economic incentive to
@@ -24,7 +24,7 @@ export default function MethodologySection() {
           </p>
           <p className="text-[12px] text-[var(--muted)] mt-2">
             This is <strong className="text-[var(--foreground)]">not</strong> a prediction of job loss.
-            Economic viability is necessary but not sufficient — real adoption depends on organizational
+            Economic viability is necessary but not sufficient. Real adoption depends on organizational
             inertia, regulation, quality requirements, and new task creation.
           </p>
         </div>
@@ -35,7 +35,7 @@ export default function MethodologySection() {
             Step 1: Decoupling tasks from jobs
           </h4>
           <p className="text-[13px] text-[var(--muted)] leading-relaxed mb-3">
-            AI doesn&apos;t automate jobs — it automates tasks. A &ldquo;financial analyst&rdquo; is really
+            AI doesn&apos;t automate jobs. It automates tasks. A &ldquo;financial analyst&rdquo; is really
             a bundle of 5-8 distinct activities: some are highly automatable (data gathering, report
             drafting), others are not (client relationships, judgment calls). To model AI impact
             accurately, we need to decompose every job into these atomic units of work.
@@ -51,7 +51,7 @@ export default function MethodologySection() {
                 <span className="text-[var(--foreground)] font-bold text-[14px] shrink-0 w-6 h-6 rounded-full bg-black/[0.04] flex items-center justify-center">1</span>
                 <div>
                   <p className="font-semibold text-[var(--foreground)] mb-1">
-                    O*NET work activities — what people actually do
+                    O*NET work activities: what people actually do
                   </p>
                   <p className="text-[var(--muted)] mb-2">
                     The U.S. Department of Labor&apos;s{" "}
@@ -63,14 +63,14 @@ export default function MethodologySection() {
                     >
                       Occupational Information Network (O*NET)
                     </a>{" "}
-                    catalogs every occupation in the economy by its <strong className="text-[var(--foreground)]">Generalized Work Activities</strong> —
+                    catalogs every occupation in the economy by its <strong className="text-[var(--foreground)]">Generalized Work Activities</strong>:
                     a taxonomy of 41 discrete activities organized into four domains:
                   </p>
                   <ul className="text-[var(--muted)] space-y-0.5 ml-4 list-disc list-outside">
-                    <li><strong className="text-[var(--foreground)]">Information Input</strong> — observing, gathering, monitoring data</li>
-                    <li><strong className="text-[var(--foreground)]">Mental Processes</strong> — analyzing, deciding, evaluating, planning</li>
-                    <li><strong className="text-[var(--foreground)]">Work Output</strong> — physical activity, operating equipment, handling objects</li>
-                    <li><strong className="text-[var(--foreground)]">Interacting with Others</strong> — communicating, leading, coordinating, negotiating</li>
+                    <li><strong className="text-[var(--foreground)]">Information Input</strong>. Observing, gathering, monitoring data</li>
+                    <li><strong className="text-[var(--foreground)]">Mental Processes</strong>. Analyzing, deciding, evaluating, planning</li>
+                    <li><strong className="text-[var(--foreground)]">Work Output</strong>. Physical activity, operating equipment, handling objects</li>
+                    <li><strong className="text-[var(--foreground)]">Interacting with Others</strong>. Communicating, leading, coordinating, negotiating</li>
                   </ul>
                   <p className="text-[var(--muted)] mt-2">
                     We map these 41 activities into 8 task categories (information processing, communication,
@@ -96,7 +96,7 @@ export default function MethodologySection() {
                 <span className="text-[var(--foreground)] font-bold text-[14px] shrink-0 w-6 h-6 rounded-full bg-black/[0.04] flex items-center justify-center">2</span>
                 <div>
                   <p className="font-semibold text-[var(--foreground)] mb-1">
-                    BLS employment and wages — the human cost baseline
+                    BLS employment and wages. The human cost baseline
                   </p>
                   <p className="text-[var(--muted)] mb-2">
                     The Bureau of Labor Statistics&apos;{" "}
@@ -109,7 +109,7 @@ export default function MethodologySection() {
                       Occupational Employment and Wage Statistics (OEWS)
                     </a>{" "}
                     (May 2024 release) provides median hourly wages and employment counts for all 22 SOC
-                    major occupation groups — covering 154 million workers. This is the human labor cost that
+                    major occupation groups, covering 154 million workers. This is the human labor cost that
                     AI compute must undercut to create economic incentive for automation.
                   </p>
                   <p className="text-[var(--muted)]">
@@ -134,7 +134,7 @@ export default function MethodologySection() {
                 <span className="text-[var(--foreground)] font-bold text-[14px] shrink-0 w-6 h-6 rounded-full bg-black/[0.04] flex items-center justify-center">3</span>
                 <div>
                   <p className="font-semibold text-[var(--foreground)] mb-1">
-                    AI exposure scores — external validation
+                    AI exposure scores. External validation
                   </p>
                   <p className="text-[var(--muted)] mb-2">
                     Our task decomposition produces an internal model of which jobs are most automatable. To
@@ -151,7 +151,7 @@ export default function MethodologySection() {
                       >
                         Yale Budget Lab (Gimbel et al., 2026)
                       </a>{" "}
-                      — Meta-analysis comparing 6 independent AI exposure metrics (Eloundou et al., Eisfeldt et al.,
+                     . Meta-analysis comparing 6 independent AI exposure metrics (Eloundou et al., Eisfeldt et al.,
                       Felten et al., Tomlinson et al.) across 778 occupations using PCA-weighted z-scores. This is the
                       source of the &ldquo;Certainty&rdquo; indicator in the economy view.
                     </li>
@@ -164,7 +164,7 @@ export default function MethodologySection() {
                       >
                         Yale Budget Lab data repository
                       </a>{" "}
-                      — GPT-scored AI exposure (0-10 scale) for 342 BLS Occupational Outlook Handbook occupations
+                     . GPT-scored AI exposure (0-10 scale) for 342 BLS Occupational Outlook Handbook occupations
                       across three dimensions: direct automation, indirect productivity, and digital work emphasis.
                       Validated at Pearson 0.878 against the Yale PCA composite and 0.885 against OpenAI/UPenn&apos;s
                       GPTs-are-GPTs (Eloundou et al.). This is the source of the &ldquo;Exposure&rdquo; scores in the economy view.
@@ -176,9 +176,9 @@ export default function MethodologySection() {
                         rel="noopener noreferrer"
                         className="underline hover:text-[var(--foreground)]"
                       >
-                        Eloundou et al. (2024) — GPTs are GPTs
+                        Eloundou et al. (2024). GPTs are GPTs
                       </a>{" "}
-                      — The foundational exposure study: human and GPT-4 annotators assessed which O*NET tasks
+                     . The foundational exposure study: human and GPT-4 annotators assessed which O*NET tasks
                       LLMs could speed up, finding ~80% of workers have at least 10% of tasks affected.
                     </li>
                   </ul>
@@ -198,18 +198,18 @@ export default function MethodologySection() {
                 <span className="text-[var(--foreground)] font-bold text-[14px] shrink-0 w-6 h-6 rounded-full bg-black/[0.04] flex items-center justify-center">4</span>
                 <div>
                   <p className="font-semibold text-[var(--foreground)] mb-1">
-                    Industry adoption speed — how fast sectors actually move
+                    Industry adoption speed. How fast sectors actually move
                   </p>
                   <p className="text-[var(--muted)] mb-2">
                     Even when AI is cheaper than human labor for a task, industries adopt at very different speeds.
                     We model this as a multiplier on the adoption lag, based on a five-factor composite:
                   </p>
                   <ul className="text-[var(--muted)] space-y-0.5 ml-4 list-disc list-outside">
-                    <li><strong className="text-[var(--foreground)]">Regulatory burden</strong> (25%) — OECD Product Market Regulation data</li>
-                    <li><strong className="text-[var(--foreground)]">Digital maturity</strong> (25%) — IT workforce share by industry (BLS), McKinsey Digital America</li>
-                    <li><strong className="text-[var(--foreground)]">Competitive pressure</strong> (20%) — Industry concentration; Autor et al. (2020)</li>
-                    <li><strong className="text-[var(--foreground)]">Labor rigidity</strong> (15%) — Union density by industry (BLS); Acemoglu &amp; Restrepo (2020)</li>
-                    <li><strong className="text-[var(--foreground)]">Organizational complexity</strong> (15%) — Firm size distributions; Brynjolfsson et al. (2021)</li>
+                    <li><strong className="text-[var(--foreground)]">Regulatory burden</strong> (25%). OECD Product Market Regulation data</li>
+                    <li><strong className="text-[var(--foreground)]">Digital maturity</strong> (25%). IT workforce share by industry (BLS), McKinsey Digital America</li>
+                    <li><strong className="text-[var(--foreground)]">Competitive pressure</strong> (20%). Industry concentration; Autor et al. (2020)</li>
+                    <li><strong className="text-[var(--foreground)]">Labor rigidity</strong> (15%). Union density by industry (BLS); Acemoglu &amp; Restrepo (2020)</li>
+                    <li><strong className="text-[var(--foreground)]">Organizational complexity</strong> (15%). Firm size distributions; Brynjolfsson et al. (2021)</li>
                   </ul>
                   <p className="text-[var(--muted)] mt-2">
                     Technology adopts fastest (0.6x lag) and Healthcare slowest (1.6x lag).
@@ -268,7 +268,7 @@ export default function MethodologySection() {
         {/* Token economics model */}
         <div>
           <h4 className="text-[14px] font-semibold text-[var(--foreground)] mb-2">
-            Step 2: Token economics — from API pricing to $/hour
+            Step 2: Token economics. From API pricing to $/hour
           </h4>
           <p className="text-[13px] text-[var(--muted)] leading-relaxed mb-3">
             For each task, we calculate what it costs in real AI API spend to produce one hour of
@@ -322,12 +322,12 @@ export default function MethodologySection() {
             <p className="mb-2">
               <strong className="text-[var(--foreground)]">The key economic insight:</strong>{" "}
               AI cost scales with tokens (volume), while human cost scales with time. A $60/hr analyst
-              doing 3 hours of research costs $180. The equivalent AI task — 120K input tokens, 8K output,
-              12 frontier calls with 3x overhead — costs roughly $18. AI is already 10x cheaper for many
+              doing 3 hours of research costs $180. The equivalent AI task: 120K input tokens, 8K output,
+              12 frontier calls with 3x overhead. Costs roughly $18. AI is already 10x cheaper for many
               knowledge tasks.
             </p>
             <p>
-              This compute floor — the raw token cost to replicate one hour of human work — is the
+              This compute floor. The raw token cost to replicate one hour of human work. Is the
               most important number in AI labor economics. It represents the minimum a firm must invest
               before any organizational change, any integration engineering, any validation pipeline.
               It is falling 30-45% per year across task types, and unlike human wages, it has no floor.
@@ -360,7 +360,7 @@ export default function MethodologySection() {
                   <td className="py-2 pr-4">Information processing</td>
                   <td className="py-2 pr-4">42-48%</td>
                   <td className="py-2">
-                    Commodity LLM pricing (GPT-3.5 level fell 280x in 18 months — Stanford HAI 2025)
+                    Commodity LLM pricing (GPT-3.5 level fell 280x in 18 months. Stanford HAI 2025)
                   </td>
                 </tr>
                 <tr className="border-b border-black/[0.04]">
@@ -427,7 +427,7 @@ export default function MethodologySection() {
             <p>
               This is the economic inflection point. Before crossover, there&apos;s no cost incentive to
               deploy AI (even if AI <em>can</em> do the task). After crossover, the economic case
-              exists — but adoption is a separate question entirely. Firms must redesign processes,
+              exists, but adoption is a separate question entirely. Firms must redesign processes,
               retrain staff, navigate regulation, and build organizational trust. Historical technology
               diffusion research (Griliches 1957, Comin &amp; Hobijn 2010) suggests this institutional
               drag adds 1.5-4.5 years beyond economic viability, varying significantly by industry
@@ -525,8 +525,8 @@ export default function MethodologySection() {
           </div>
           <p className="text-[13px] text-[var(--muted)] leading-relaxed mb-2">
             The key finding: AI exposure and adaptive capacity are <strong className="text-[var(--foreground)]">positively
-            correlated</strong> (r = 0.502, bootstrap 95% CI: [0.353, 0.624]). Most highly-exposed workers —
-            professionals, managers, technologists — have strong savings, transferable skills, and urban job access.
+            correlated</strong> (r = 0.502, bootstrap 95% CI: [0.353, 0.624]). Most highly-exposed workers
+            (professionals, managers, technologists) have strong savings, transferable skills, and urban job access.
             The 6.1 million workers who combine high exposure with low adaptability are concentrated in clerical
             and administrative support roles.
           </p>
@@ -545,7 +545,7 @@ export default function MethodologySection() {
           </h4>
           <ul className="text-[12px] text-[var(--muted)] space-y-1.5 list-disc list-outside ml-4">
             <li>
-              <strong className="text-[var(--foreground)]">Task bundling (O-ring effects)</strong> —
+              <strong className="text-[var(--foreground)]">Task bundling (O-ring effects)</strong>:
               In practice, tasks within a job are interconnected. Automating 6 of 7 tasks doesn&apos;t mean
               automating 85% of the job; the remaining task may become more valuable because it&apos;s the
               bottleneck.{" "}
@@ -560,24 +560,24 @@ export default function MethodologySection() {
               formalize this: linear exposure indices overstate displacement when tasks are complements.
             </li>
             <li>
-              <strong className="text-[var(--foreground)]">Quality differences</strong> —
+              <strong className="text-[var(--foreground)]">Quality differences</strong>:
               AI cost parity doesn&apos;t mean quality parity. Many tasks have a quality premium for human
               execution that justifies higher cost.
             </li>
             <li>
-              <strong className="text-[var(--foreground)]">Regulatory and trust barriers</strong> —
+              <strong className="text-[var(--foreground)]">Regulatory and trust barriers</strong>:
               Healthcare, legal, and financial services face regulatory requirements that slow adoption
               independent of cost.
             </li>
             <li>
-              <strong className="text-[var(--foreground)]">New task creation</strong> —
+              <strong className="text-[var(--foreground)]">New task creation</strong>:
               As AI automates existing tasks, new categories of work emerge. Historically, technology
               has created more jobs than it has destroyed (though the transition period can be painful).
             </li>
             <li>
-              <strong className="text-[var(--foreground)]">Induced demand</strong> —
+              <strong className="text-[var(--foreground)]">Induced demand</strong>:
               Cheaper AI makes more work economically viable. If legal analysis costs 90% less, society
-              may demand 10x more of it — potentially increasing total employment in that domain.
+              may demand 10x more of it. Potentially increasing total employment in that domain.
             </li>
           </ul>
         </div>
@@ -588,82 +588,82 @@ export default function MethodologySection() {
           <ul className="text-[11px] text-[var(--muted)] space-y-1">
             <li>
               <a href="https://www.onetonline.org/" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">
-                O*NET OnLine — Occupational Information Network (U.S. Department of Labor)
+                O*NET OnLine. Occupational Information Network (U.S. Department of Labor)
               </a>
             </li>
             <li>
               <a href="https://www.bls.gov/oes/" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">
-                Bureau of Labor Statistics — Occupational Employment and Wage Statistics, May 2024
+                Bureau of Labor Statistics. Occupational Employment and Wage Statistics, May 2024
               </a>
             </li>
             <li>
               <a href="https://www.bls.gov/cps/cpsaat11.htm" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">
-                Bureau of Labor Statistics — Current Population Survey 2024 (Table 11, gender by occupation)
+                Bureau of Labor Statistics. Current Population Survey 2024 (Table 11, gender by occupation)
               </a>
             </li>
             <li>
               <a href="https://budgetlab.yale.edu/research/labor-market-ai-exposure-what-do-we-know" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">
-                Yale Budget Lab (Gimbel et al., 2026): &quot;Labor Market AI Exposure: What Do We Know?&quot; — 6 exposure metrics across 778 occupations
+                Yale Budget Lab (Gimbel et al., 2026): &quot;Labor Market AI Exposure: What Do We Know?&quot;. 6 exposure metrics across 778 occupations
               </a>
             </li>
             <li>
               <a href="https://github.com/rmmomin/jobs-ai-exposure" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">
-                Yale Budget Lab data repository — GPT-scored exposure for 342 BLS occupations (0-10 scale)
+                Yale Budget Lab data repository. GPT-scored exposure for 342 BLS occupations (0-10 scale)
               </a>
             </li>
             <li>
               <a href="https://arxiv.org/abs/2303.10130" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">
-                Eloundou et al. (2024): &quot;GPTs are GPTs&quot; — foundational AI task exposure study (OpenAI/UPenn)
+                Eloundou et al. (2024): &quot;GPTs are GPTs&quot;. Foundational AI task exposure study (OpenAI/UPenn)
               </a>
             </li>
             <li>
               <a href="https://github.com/CharlesD353/ai-labour-calculator" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">
-                Dillon (2025): &quot;AI Labour Calculator&quot; — task tier compute requirements, S-curve substitutability model
+                Dillon (2025): &quot;AI Labour Calculator&quot;. Task tier compute requirements, S-curve substitutability model
               </a>
             </li>
             <li>
               <a href="https://epoch.ai/blog/trends-in-the-dollar-training-cost-of-machine-learning-systems" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">
-                Epoch AI: Trends in the Cost of Computing — algorithmic efficiency doubling ~annually
+                Epoch AI: Trends in the Cost of Computing. Algorithmic efficiency doubling ~annually
               </a>
             </li>
             <li>
               <a href="https://aiindex.stanford.edu/report/" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">
-                Stanford HAI: AI Index Report 2025 — inference cost declining ~280x in 18 months for equivalent capability
+                Stanford HAI: AI Index Report 2025. Inference cost declining ~280x in 18 months for equivalent capability
               </a>
             </li>
             <li>
               <a href="https://a16z.com/llmflation-llm-inference-cost/" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">
-                a16z &quot;LLMflation&quot; — 1,000x cost decline for equivalent MMLU performance in 3 years
+                a16z &quot;LLMflation&quot;: 1,000x cost decline for equivalent MMLU performance in 3 years
               </a>
             </li>
             <li>
               <a href="https://www.pewresearch.org/social-trends/2023/07/26/2023-ai-and-jobs-methodology-for-onet-analysis/" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">
-                Pew Research Center — methodology for mapping O*NET activities to AI exposure
+                Pew Research Center. Methodology for mapping O*NET activities to AI exposure
               </a>
             </li>
             <li>
               <a href="https://arxiv.org/html/2510.13369v1" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">
-                Moravec&apos;s Paradox Applied to Labor Markets — why physical tasks are harder to automate than cognitive ones
+                Moravec&apos;s Paradox Applied to Labor Markets. Why physical tasks are harder to automate than cognitive ones
               </a>
             </li>
             <li>
               <a href="https://www.anthropicindex.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">
-                Anthropic Economic Index: Learning Curves (March 2026) — observed AI usage across occupations, task value trends, learning curve data
+                Anthropic Economic Index: Learning Curves (March 2026). Observed AI usage across occupations, task value trends, learning curve data
               </a>
             </li>
             <li>
               <a href="https://www.nber.org/papers/w34705" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">
-                Manning &amp; Aguirre (2026): &quot;How Adaptable Are American Workers to AI-Induced Job Displacement?&quot; — adaptive capacity index for 356 occupations (NBER w34705)
+                Manning &amp; Aguirre (2026): &quot;How Adaptable Are American Workers to AI-Induced Job Displacement?&quot;. Adaptive capacity index for 356 occupations (NBER w34705)
               </a>
             </li>
             <li>
               <a href="https://www.nber.org/papers/w33886" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">
-                Gans &amp; Goldfarb (2024): &quot;O-Ring Automation&quot; — multiplicative task structure and firm incentive to fully automate low-dimensional jobs
+                Gans &amp; Goldfarb (2024): &quot;O-Ring Automation&quot;. Multiplicative task structure and firm incentive to fully automate low-dimensional jobs
               </a>
             </li>
             <li>
               <a href="https://aleximas.substack.com/p/how-will-ai-driven-automation-actually" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">
-                Imas &amp; Shukla (2026): &quot;Ghosts of Electricity&quot; — practical implications of O-Ring automation for trucking, warehousing, and knowledge work
+                Imas &amp; Shukla (2026): &quot;Ghosts of Electricity&quot;. Practical implications of O-Ring automation for trucking, warehousing, and knowledge work
               </a>
             </li>
           </ul>
@@ -675,7 +675,7 @@ export default function MethodologySection() {
             Important Modeling Caveat
           </h4>
           <p className="text-[13px] text-[var(--muted)] leading-relaxed">
-            This tool evaluates each task independently — when task A crosses cost parity, it has no
+            This tool evaluates each task independently. When task A crosses cost parity, it has no
             effect on task B. In reality, most jobs have complementary tasks where the{" "}
             <a href="https://www.nber.org/papers/w33886" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">
               O-Ring production function
@@ -683,7 +683,7 @@ export default function MethodologySection() {
             applies: automating some tasks lets workers concentrate on remaining ones, multiplying
             quality across the whole job. The <strong className="text-[var(--foreground)]">dimensionality score</strong> and{" "}
             <strong className="text-[var(--foreground)]">phase transition warning</strong> above are corrections
-            for this — they flag when a job&apos;s structure makes the additive model misleading. But the
+            for this. They flag when a job&apos;s structure makes the additive model misleading. But the
             underlying cost-crossover calculation remains separable. A fully multiplicative model is a
             direction for future work.
           </p>

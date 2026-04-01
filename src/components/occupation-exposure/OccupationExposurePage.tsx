@@ -81,7 +81,7 @@ const DIMENSION_EXPLAINERS: {
     role: "Buffer",
     roleColor: "#16A34A",
     oneLiner:
-      "Does AI replace workers or make them more productive? Job dimensionality — the number of distinct task clusters — is the structural driver (O-Ring theory).",
+      "Does AI replace workers or make them more productive? Job dimensionality. The number of distinct task clusters. Is the structural driver (O-Ring theory).",
     anchor: "methodology-complementarity",
   },
 ];
@@ -165,7 +165,7 @@ export default function OccupationExposurePage() {
             Jump to interactive chart &darr;
           </a>
 
-          {/* 5 dimensions — compact list */}
+          {/* 5 dimensions - compact list */}
           <div className="border border-black/[0.06] rounded-lg divide-y divide-black/[0.06] mb-2">
             {DIMENSION_EXPLAINERS.map((dim) => (
               <button
@@ -397,7 +397,7 @@ export default function OccupationExposurePage() {
 
       {/* ───── Back to narrow column for analysis sections ───── */}
       <article className="max-w-[740px] mx-auto">
-        {/* Comparison Table — collapsible */}
+        {/* Comparison Table - collapsible */}
         <section className="mb-12">
           <div className="border-t border-black/[0.06] pt-8">
             <SectionLabel number="02" />
@@ -415,7 +415,7 @@ export default function OccupationExposurePage() {
                   </span>
                 </div>
                 <p className="text-[14px] text-[var(--muted)] leading-[1.75] mt-3 mb-2">
-                  Some jobs have high AI exposure but low actual risk — because
+                  Some jobs have high AI exposure but low actual risk. Because
                   protective factors (adaptable workers, growing demand, AI as a
                   helper not a replacement) absorb the pressure. Other jobs have
                   moderate exposure but score higher in net risk, because those

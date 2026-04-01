@@ -34,13 +34,13 @@ const HIDDEN_ANNOTATIONS: Annotation[] = [
   {
     x: 0.25,
     y: 0.7,
-    text: "Early cars were called 'horseless carriages' — we still name new tech after what it replaces",
+    text: "Early cars were called 'horseless carriages'. We still name new tech after what it replaces",
     color: "#065F46",
   },
   {
     x: 0.45,
     y: 0.25,
-    text: "ATMs led to more bank tellers, not fewer — branches got cheaper to operate",
+    text: "ATMs led to more bank tellers, not fewer. Branches got cheaper to operate",
     color: "#1E40AF",
   },
   {
@@ -58,7 +58,7 @@ const HIDDEN_ANNOTATIONS: Annotation[] = [
 ];
 
 const SPOTLIGHT_RADIUS = 120; // px
-const REVEAL_RADIUS = 140; // px — slightly larger than spotlight
+const REVEAL_RADIUS = 140; // px. Slightly larger than spotlight
 
 export default function CursorSpotlight({ children }: { children: React.ReactNode }) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -147,7 +147,7 @@ export default function CursorSpotlight({ children }: { children: React.ReactNod
             }}
           />
 
-          {/* Hidden annotations — revealed by proximity */}
+          {/* Hidden annotations - revealed by proximity */}
           {HIDDEN_ANNOTATIONS.map((ann, i) => {
             const container = containerRef.current;
             if (!container) return null;

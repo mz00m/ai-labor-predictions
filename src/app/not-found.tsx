@@ -176,7 +176,7 @@ export default function NotFound() {
           <line key={y} x1="60" y1={y} x2="540" y2={y} stroke="#2E3650" strokeWidth="0.5" opacity="0.06" strokeDasharray="3 3" />
         ))}
 
-        {/* Chart line — draws in then breaks */}
+        {/* Chart line - draws in then breaks */}
         <path
           d={linePath}
           fill="none"

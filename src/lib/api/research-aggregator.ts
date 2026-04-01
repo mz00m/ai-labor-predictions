@@ -146,7 +146,7 @@ function isOffTopicDomain(title: string, abstract: string | null, venue: string 
 
   if (offTopicHits === 0) return false;
 
-  // Count labor signal hits — need 2+ to override off-topic content
+  // Count labor signal hits - need 2+ to override off-topic content
   let laborHits = 0;
   for (const term of LABOR_SIGNALS) {
     if (text.includes(term)) {
@@ -543,7 +543,7 @@ function deduplicate(papers: ResearchPaper[]): ResearchPaper[] {
   const byTitle = new Map<string, ResearchPaper>();
 
   for (const paper of papers) {
-    // DOI-based deduplication (primary — deterministic)
+    // DOI-based deduplication (primary - deterministic)
     if (paper.doi) {
       const normalizedDoi = paper.doi.toLowerCase().replace(/^https?:\/\/doi\.org\//, "");
       const existing = byDoi.get(normalizedDoi);

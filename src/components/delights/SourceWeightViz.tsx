@@ -19,10 +19,10 @@ interface SourceWeightDotProps {
 }
 
 const TIER_CONFIG = {
-  1: { size: 9, weight: 4, color: "#22c55e", label: "Tier 1 — heavy weight" },
-  2: { size: 7, weight: 2, color: "#3b82f6", label: "Tier 2 — moderate weight" },
-  3: { size: 5, weight: 1, color: "#f59e0b", label: "Tier 3 — light weight" },
-  4: { size: 3.5, weight: 0.5, color: "#ef4444", label: "Tier 4 — very light" },
+  1: { size: 9, weight: 4, color: "#22c55e", label: "Tier 1 - heavy weight" },
+  2: { size: 7, weight: 2, color: "#3b82f6", label: "Tier 2 - moderate weight" },
+  3: { size: 5, weight: 1, color: "#f59e0b", label: "Tier 3 - light weight" },
+  4: { size: 3.5, weight: 0.5, color: "#ef4444", label: "Tier 4 - very light" },
 };
 
 export default function SourceWeightDot({ tier, sampleSize }: SourceWeightDotProps) {

@@ -46,7 +46,7 @@ export default function RecentSources({ sources }: RecentSourcesProps) {
         }}
       />
 
-      {/* Main container — white bg with very subtle border */}
+      {/* Main container - white bg with very subtle border */}
       <div
         className="relative bg-white/80 backdrop-blur-sm rounded-2xl"
         style={{

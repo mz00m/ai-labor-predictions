@@ -54,7 +54,7 @@ export default function SignalsPage() {
         </svg>
       </a>
 
-      {/* How AI Automation Works — interactive explainer */}
+      {/* How AI Automation Works - interactive explainer */}
       <AutomationExplainer metrics={metrics} />
 
       {/* Anthropic: Theoretical vs Observed AI Coverage */}
@@ -163,7 +163,7 @@ export default function SignalsPage() {
         />
       </section>
 
-      {/* What happens when workers get more productive — 3-path framework */}
+      {/* What happens when workers get more productive - 3-path framework */}
       <ProductivityPaths />
 
       {/* Methodology */}

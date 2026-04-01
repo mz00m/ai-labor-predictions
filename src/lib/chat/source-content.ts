@@ -1,5 +1,5 @@
 /**
- * Source Content Store — richer per-source content for chatbot grounding.
+ * Source Content Store - richer per-source content for chatbot grounding.
  *
  * Each source gets a JSON file in src/data/source-content/{source-id}.json
  * with abstract, key findings, methodology, and qualifiers extracted

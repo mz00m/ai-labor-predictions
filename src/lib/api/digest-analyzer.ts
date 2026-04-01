@@ -3,7 +3,7 @@
  * Analyzes digest papers using Claude Haiku to extract specific
  * quantitative claims and suggest structured data points.
  *
- * Fully optional — returns [] if ANTHROPIC_API_KEY is not set.
+ * Fully optional - returns [] if ANTHROPIC_API_KEY is not set.
  */
 
 import Anthropic from "@anthropic-ai/sdk";
@@ -151,7 +151,7 @@ Now analyze all the papers above and extract any quantitative data points. Retur
       return [];
     }
 
-    // Parse JSON from response — handle code blocks, preamble text, etc.
+    // Parse JSON from response - handle code blocks, preamble text, etc.
     let jsonStr = textBlock.text.trim();
 
     // Strip markdown code blocks

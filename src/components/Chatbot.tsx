@@ -27,7 +27,7 @@ function CloseIcon() {
   );
 }
 
-/** Mini robot face for the chat header — silver body with purple eyes */
+/** Mini robot face for the chat header - silver body with purple eyes */
 function MiniRobot({ speaking }: { speaking?: boolean }) {
   return (
     <svg
@@ -46,13 +46,13 @@ function MiniRobot({ speaking }: { speaking?: boolean }) {
           <animate attributeName="opacity" values="1;0.3;1" dur="0.8s" repeatCount="indefinite" />
         )}
       </circle>
-      {/* Head — silver appearance on the purple header */}
+      {/* Head - silver appearance on the purple header */}
       <rect x="3" y="6" width="42" height="26" rx="6" fill="white" opacity="0.2" />
       {/* Chrome highlight */}
       <rect x="5" y="6" width="38" height="5" rx="2.5" fill="white" opacity="0.12" />
       {/* Face screen */}
       <rect x="7" y="10" width="34" height="18" rx="4" fill="white" opacity="0.08" />
-      {/* Eyes — match the purple accent */}
+      {/* Eyes - match the purple accent */}
       <rect x="13" y="16" width="6" height="5" rx="2" fill="white">
         {speaking && (
           <animate attributeName="height" values="5;2;5" dur="1.5s" repeatCount="indefinite" />
@@ -244,7 +244,7 @@ export default function Chatbot({ sourceCount }: ChatbotProps) {
         body: JSON.stringify({ messageId, rating }),
       });
     } catch {
-      // Silently fail — feedback is non-critical
+      // Silently fail - feedback is non-critical
     }
   }, []);
 
@@ -403,7 +403,7 @@ export default function Chatbot({ sourceCount }: ChatbotProps) {
         onClick={closeChat}
       />
 
-      {/* Chat panel — anchored top-right, below navbar */}
+      {/* Chat panel - anchored top-right, below navbar */}
       <div
         ref={panelRef}
         className="fixed top-14 right-4 sm:right-8 z-[70] w-[400px] max-w-[calc(100vw-2rem)] h-[min(560px,calc(100vh-5rem))] bg-white rounded-xl border border-black/[0.08] shadow-2xl flex flex-col overflow-hidden animate-in fade-in slide-in-from-top-2 duration-200"

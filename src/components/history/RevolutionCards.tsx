@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 
-/** Inline SVG icons for each revolution — precise, geometric */
+/** Inline SVG icons for each revolution - precise, geometric */
 function RevolutionIcon({ id, color, size = 16 }: { id: string; color: string; size?: number }) {
   const s = size / 24;
   const icons: Record<string, JSX.Element> = {

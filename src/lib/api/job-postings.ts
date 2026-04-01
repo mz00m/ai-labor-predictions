@@ -5,9 +5,9 @@ import { toDateString } from "@/lib/date-utils";
  *
  * Aggregates data from:
  * 1. Adzuna API (free tier: 250 req/day, no key needed for limited access)
- *    — Job posting counts and salary data
+ *    - Job posting counts and salary data
  * 2. Google Trends via SerpAPI pattern (public data)
- *    — Proxied through trending topic analysis
+ *    - Proxied through trending topic analysis
  *
  * These provide real-time signals about AI's impact on the job market:
  * - Changes in AI-related job postings over time

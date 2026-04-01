@@ -5,7 +5,7 @@ import { useEffect, useRef, useCallback } from "react";
 /**
  * Canvas-based particle burst that fires when exposure score crosses
  * a threshold. Confetti for high risk (>70), sparkles for low risk (<20).
- * Discovered, not announced — the particles just appear.
+ * Discovered, not announced - the particles just appear.
  * Respects prefers-reduced-motion.
  */
 
@@ -28,7 +28,7 @@ const LOW_RISK_COLORS = ["#10B981", "#34D399", "#6EE7B7", "#A7F3D0", "#059669", 
 
 interface ExposureParticlesProps {
   score: number;
-  /** Fire trigger — increment to fire again */
+  /** Fire trigger - increment to fire again */
   trigger: number;
 }
 

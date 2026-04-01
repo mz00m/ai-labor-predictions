@@ -21,11 +21,11 @@ interface TaskBreakdownChartProps {
   humanWagePerHr: number;
 }
 
-/** Red/blue/green risk palette — the through-line of the whole visualizer */
+/** Red/blue/green risk palette - the through-line of the whole visualizer */
 function getRiskColor(crossoverYear: number | null): string {
-  if (!crossoverYear || crossoverYear <= 2028) return "#EF4444"; // red — high risk
-  if (crossoverYear <= 2031) return "#6366F1"; // indigo — moderate
-  return "#10B981"; // green — durable
+  if (!crossoverYear || crossoverYear <= 2028) return "#EF4444"; // red. High risk
+  if (crossoverYear <= 2031) return "#6366F1"; // indigo. Moderate
+  return "#10B981"; // green. Durable
 }
 
 function getRiskLabel(crossoverYear: number | null): string {

@@ -15,12 +15,12 @@ interface FocusRecommendationsProps {
 
 function getACInterpretation(ac: number): string {
   if (ac >= 0.65) {
-    return "Workers in this occupation have strong adaptive capacity — above-median savings, transferable skills, and urban job access. If AI transforms this role, most workers are well-positioned to transition.";
+    return "Workers in this occupation have strong adaptive capacity. Above-median savings, transferable skills, and urban job access. If AI transforms this role, most workers are well-positioned to transition.";
   }
   if (ac >= 0.45) {
     return "Workers in this occupation have moderate adaptive capacity. Some workers will transition smoothly, but others may face barriers related to savings, skills, or location.";
   }
-  return "Workers in this occupation face low adaptive capacity — below-median savings, fewer transferable skills, or geographic constraints. If AI displaces this role, many workers may struggle to find comparable employment.";
+  return "Workers in this occupation face low adaptive capacity. Below-median savings, fewer transferable skills, or geographic constraints. If AI displaces this role, many workers may struggle to find comparable employment.";
 }
 
 export default function FocusRecommendations({

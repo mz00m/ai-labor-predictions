@@ -164,7 +164,7 @@ export default function DragTimeline({
         </div>
       </div>
 
-      {/* Year tooltip — shows when dragging */}
+      {/* Year tooltip - shows when dragging */}
       {isActive && (
         <div
           className="absolute -top-10 z-30 text-[11px] font-bold text-white bg-[var(--accent)] rounded-md px-2.5 py-1 shadow-lg whitespace-nowrap"

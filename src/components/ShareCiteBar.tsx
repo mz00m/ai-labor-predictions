@@ -30,7 +30,7 @@ export default function ShareCiteBar({
   const url = `https://jobsdata.ai/predictions/${slug}`;
   const today = new Date().toISOString().slice(0, 10);
   const unitSymbol = unit.includes("%") ? "%" : "";
-  const shareText = `${title}: ${value}${unitSymbol} — based on ${sourceCount} sources. ${url}`;
+  const shareText = `${title}: ${value}${unitSymbol} | based on ${sourceCount} sources. ${url}`;
 
   const citations: Record<CiteFormat, string> = {
     plain: `jobsdata.ai. "${title}." jobsdata.ai/predictions/${slug}. Accessed ${today}. Based on ${sourceCount} sources.`,
@@ -65,7 +65,7 @@ export default function ShareCiteBar({
   }
 
   function shareTwitter() {
-    const text = encodeURIComponent(`${title}: ${value}${unitSymbol} — based on ${sourceCount} sources.`);
+    const text = encodeURIComponent(`${title}: ${value}${unitSymbol} | based on ${sourceCount} sources.`);
     const u = encodeURIComponent(url);
     window.open(`https://twitter.com/intent/tweet?text=${text}&url=${u}`, "_blank", "noopener");
   }

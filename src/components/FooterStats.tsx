@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 const PROJECT_START = new Date("2026-02-22T00:00:00Z");
 
 /* ------------------------------------------------------------------ */
-/*  Easter egg: "Source Zero" — click "X days ago" to reveal a         */
+/*  Easter egg: "Source Zero" - click "X days ago" to reveal a         */
 /*  hand-drawn sparkline of early commit milestones.                   */
 /* ------------------------------------------------------------------ */
 

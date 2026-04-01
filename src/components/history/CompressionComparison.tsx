@@ -90,7 +90,7 @@ const OX = 80; // origin x
 const EX = 1010; // end x
 const TW = EX - OX; // timeline pixel width
 const MAX_H = 310; // max arc height (Steam)
-const VB_TOP = 130; // viewBox y offset — crops empty space above arcs
+const VB_TOP = 130; // viewBox y offset. Crops empty space above arcs
 const VB_H = 290; // viewBox height
 const GREY = "#b4b9c4"; // background arc color
 
@@ -124,15 +124,15 @@ function bezierAt(
 // AI fires first, then shortest → longest historical arcs
 // [transition index, delay ms, duration ms]
 const ANIM_SCHEDULE: { idx: number; delay: number; dur: number }[] = [
-  { idx: 4, delay: 150, dur: 1000 },    // AI — fast projectile
+  { idx: 4, delay: 150, dur: 1000 },    // AI. Fast projectile
   { idx: 3, delay: 1500, dur: 1200 },   // Computers (40yr)
   { idx: 2, delay: 2900, dur: 1500 },   // Electricity (50yr)
   { idx: 1, delay: 4600, dur: 1800 },   // Combustion (60yr)
-  { idx: 0, delay: 6600, dur: 2400 },   // Steam (90yr) — longest, most dramatic
+  { idx: 0, delay: 6600, dur: 2400 },   // Steam (90yr). Longest, most dramatic
 ];
 
 /* ------------------------------------------------------------------ */
-/*  Traveling dot — glowing circle that traces each arc path           */
+/*  Traveling dot - glowing circle that traces each arc path           */
 /* ------------------------------------------------------------------ */
 
 function TravelingDot({ x, y, color }: { x: number; y: number; color: string }) {
@@ -146,7 +146,7 @@ function TravelingDot({ x, y, color }: { x: number; y: number; color: string }) 
 }
 
 /* ------------------------------------------------------------------ */
-/*  Technology icons — crisp inline SVGs at arc peaks                  */
+/*  Technology icons - crisp inline SVGs at arc peaks                  */
 /* ------------------------------------------------------------------ */
 function TechIcon({ id, x, y, color, active, vis, delay }: {
   id: string; x: number; y: number; color: string;
@@ -221,7 +221,7 @@ function TechIcon({ id, x, y, color, active, vis, delay }: {
 }
 
 /* ------------------------------------------------------------------ */
-/*  Key Metrics — count-up numbers on scroll-in                        */
+/*  Key Metrics - count-up numbers on scroll-in                        */
 /* ------------------------------------------------------------------ */
 
 function KeyMetrics() {
@@ -319,7 +319,7 @@ export default function CompressionComparison() {
       window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   }, []);
 
-  // Intersection observer — trigger animation on scroll-in
+  // Intersection observer - trigger animation on scroll-in
   useEffect(() => {
     const el = wrap.current;
     if (!el) return;
@@ -336,7 +336,7 @@ export default function CompressionComparison() {
     return () => obs.disconnect();
   }, []);
 
-  // Main animation loop — drives all arc drawing + traveling dots
+  // Main animation loop - drives all arc drawing + traveling dots
   useEffect(() => {
     if (!vis) return;
 
@@ -451,7 +451,7 @@ export default function CompressionComparison() {
       </div>
 
       {/* ============================================================ */}
-      {/*  DESKTOP — Arc timeline                                      */}
+      {/*  DESKTOP - Arc timeline                                      */}
       {/* ============================================================ */}
       <div className="hidden md:block">
         <svg
@@ -460,7 +460,7 @@ export default function CompressionComparison() {
           style={{ overflow: "visible" }}
         >
           <defs>
-            {/* AI fill gradient — top-to-bottom wash */}
+            {/* AI fill gradient - top-to-bottom wash */}
             <linearGradient
               id="ai-wash"
               gradientUnits="userSpaceOnUse"
@@ -567,7 +567,7 @@ export default function CompressionComparison() {
           />
 
           {/* ============================================ */}
-          {/*  Historical arcs — colored during animation, */}
+          {/*  Historical arcs - colored during animation, */}
           {/*  fade to gray after settling                 */}
           {/* ============================================ */}
           {historical.map((t) => {
@@ -606,7 +606,7 @@ export default function CompressionComparison() {
                   />
                 )}
 
-                {/* Arc stroke — JS-driven progress, color transitions on settle */}
+                {/* Arc stroke - JS-driven progress, color transitions on settle */}
                 <path
                   d={a.arcD}
                   fill="none"
@@ -624,7 +624,7 @@ export default function CompressionComparison() {
                   }}
                 />
 
-                {/* Traveling dot — traces the arc during animation */}
+                {/* Traveling dot - traces the arc during animation */}
                 {isDrawing && (() => {
                   const pos = bezierAt(prog, OX, BL, a.midX, a.peakY, a.endX, BL);
                   return <TravelingDot x={pos.x} y={pos.y} color={t.color} />;
@@ -644,7 +644,7 @@ export default function CompressionComparison() {
                   }}
                 />
 
-                {/* ---- End label — right of endpoint, appears when arc is ~40% drawn ---- */}
+                {/* ---- End label - right of endpoint, appears when arc is ~40% drawn ---- */}
                 <text
                   x={a.endX + 8}
                   y={BL - (active ? 6 : 4)}
@@ -668,7 +668,7 @@ export default function CompressionComparison() {
                   {t.name}
                 </text>
 
-                {/* ---- Technology icon — right of endpoint, appears after settling ---- */}
+                {/* ---- Technology icon - right of endpoint, appears after settling ---- */}
                 <TechIcon
                   id={t.id}
                   x={a.endX + (active ? 62 : 52)}
@@ -679,7 +679,7 @@ export default function CompressionComparison() {
                   delay={0}
                 />
 
-                {/* ---- Hover detail labels — right of endpoint ---- */}
+                {/* ---- Hover detail labels - right of endpoint ---- */}
                 {active && (
                   <>
                     {/* Duration + period */}
@@ -713,7 +713,7 @@ export default function CompressionComparison() {
           })}
 
           {/* ============================================ */}
-          {/*  AI arc — always colored, the hero           */}
+          {/*  AI arc - always colored, the hero           */}
           {/* ============================================ */}
           <g
             onMouseEnter={() => setHov("ai")}
@@ -728,7 +728,7 @@ export default function CompressionComparison() {
               strokeWidth="24"
             />
 
-            {/* Ghost arc — high range (15yr) */}
+            {/* Ghost arc - high range (15yr) */}
             <path
               d={`${aiArc.arcD} Z`}
               fill="url(#ai-wash-hi)"
@@ -762,7 +762,7 @@ export default function CompressionComparison() {
               }}
             />
 
-            {/* Main arc stroke — fires FIRST like a projectile */}
+            {/* Main arc stroke - fires FIRST like a projectile */}
             <path
               d={aiArc.lowArcD}
               fill="none"
@@ -823,7 +823,7 @@ export default function CompressionComparison() {
               delay={0}
             />
 
-            {/* AI label — appears after arc is mostly drawn */}
+            {/* AI label - appears after arc is mostly drawn */}
             <text
               x={aiArc.lowEndX + 14}
               y={BL - 28}
@@ -892,7 +892,7 @@ export default function CompressionComparison() {
       </div>
 
       {/* ============================================================ */}
-      {/*  MOBILE — simplified arc view (same JS-driven animation)     */}
+      {/*  MOBILE - simplified arc view (same JS-driven animation)     */}
       {/* ============================================================ */}
       <div className="md:hidden">
         <svg
@@ -968,7 +968,7 @@ export default function CompressionComparison() {
                   Years from emergence to equilibrium
                 </text>
 
-                {/* Historical arcs — JS-driven, colored then gray */}
+                {/* Historical arcs - JS-driven, colored then gray */}
                 {historical.map((t) => {
                   const idx = TRANSITIONS.indexOf(t);
                   const prog = arcProg[idx];
@@ -1041,7 +1041,7 @@ export default function CompressionComparison() {
                   );
                 })}
 
-                {/* AI arc — colored hero */}
+                {/* AI arc - colored hero */}
                 {(() => {
                   const yrs = ai.totalYears;
                   const yrsHi = ai.totalYearsHigh!;
@@ -1158,7 +1158,7 @@ export default function CompressionComparison() {
       </div>
 
       {/* ============================================================ */}
-      {/*  Key metrics — animated count-up                             */}
+      {/*  Key metrics - animated count-up                             */}
       {/* ============================================================ */}
       <KeyMetrics />
 

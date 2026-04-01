@@ -64,7 +64,7 @@ const SORTABLE_COLUMNS = [
   { key: "sparkline", label: "Trend", sortable: false },
 ];
 
-// Industry display order — all 10 industries
+// Industry display order - all 10 industries
 const INDUSTRY_ORDER = [
   "software_it",
   "legal",
@@ -609,7 +609,7 @@ function GroupRows({
           </div>
         </td>
 
-        {/* Type — empty */}
+        {/* Type - empty */}
         <td className="px-4 py-3" />
 
         {/* Aggregate monthly usage */}

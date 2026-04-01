@@ -5,7 +5,7 @@ import {
 
 /**
  * Discover IMF working papers and staff discussion notes related to AI + labor.
- * Uses OpenAlex as a reliable backend — avoids fragile IMF website scraping.
+ * Uses OpenAlex as a reliable backend - avoids fragile IMF website scraping.
  * IMF institution ID in OpenAlex: I107986439
  */
 const IMF_INSTITUTION_ID = "I107986439";

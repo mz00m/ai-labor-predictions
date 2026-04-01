@@ -142,7 +142,7 @@ function makeGroup(
  * AI exposure from Eloundou et al. (2024) E1+0.5E2 estimates (0-1 scale).
  */
 export const OCCUPATION_GROUPS: OccupationGroup[] = [
-  // Professional, Managerial, and Technical — AC=0.734, exposure=0.400 (Table 5)
+  // Professional, Managerial, and Technical - AC=0.734, exposure=0.400 (Table 5)
   makeGroup("management", "11-0000", "Management Occupations", "Management",
     10967, 58.70, 122090, "high",
     { "information-processing": 0.10, "communication": 0.15, "analysis-decision": 0.20,
@@ -178,7 +178,7 @@ export const OCCUPATION_GROUPS: OccupationGroup[] = [
       "interpersonal": 0.05, "technical-specialized": 0.10 }, 48,
     0.734, { netLiquidWealth: 0.70, skillTransferability: 0.78, geographicDensity: 0.74, ageFraction55Plus: 0.60 }, 0.400),
 
-  // Service Occupations — AC=0.454, exposure=0.161 (Table 5)
+  // Service Occupations - AC=0.454, exposure=0.161 (Table 5)
   makeGroup("community-social", "21-0000", "Community and Social Service", "Social Services",
     2570, 27.66, 57530, "middle",
     { "information-processing": 0.10, "communication": 0.15, "analysis-decision": 0.10,
@@ -194,7 +194,7 @@ export const OCCUPATION_GROUPS: OccupationGroup[] = [
       "interpersonal": 0.15, "technical-specialized": 0.10 }, 53,
     0.734, { netLiquidWealth: 0.88, skillTransferability: 0.68, geographicDensity: 0.76, ageFraction55Plus: 0.56 }, 0.400),
 
-  // Education — interpolated: AC=0.600, exposure=0.350
+  // Education - interpolated: AC=0.600, exposure=0.350
   makeGroup("education", "25-0000", "Educational Instruction and Library", "Education",
     8948, 28.47, 59220, "middle",
     { "information-processing": 0.10, "communication": 0.15, "analysis-decision": 0.10,
@@ -210,7 +210,7 @@ export const OCCUPATION_GROUPS: OccupationGroup[] = [
       "interpersonal": 0.10, "technical-specialized": 0.05 }, 52,
     0.734, { netLiquidWealth: 0.55, skillTransferability: 0.76, geographicDensity: 0.80, ageFraction55Plus: 0.65 }, 0.400),
 
-  // Healthcare Practitioners — interpolated: AC=0.550, exposure=0.200
+  // Healthcare Practitioners - interpolated: AC=0.550, exposure=0.200
   makeGroup("healthcare-practitioners", "29-0000", "Healthcare Practitioners and Technical", "Healthcare (Clinical)",
     9593, 42.28, 87930, "high",
     { "information-processing": 0.15, "communication": 0.05, "analysis-decision": 0.15,
@@ -218,7 +218,7 @@ export const OCCUPATION_GROUPS: OccupationGroup[] = [
       "interpersonal": 0.15, "technical-specialized": 0.13 }, 76,
     0.550, { netLiquidWealth: 0.60, skillTransferability: 0.52, geographicDensity: 0.58, ageFraction55Plus: 0.52 }, 0.200),
 
-  // Service Occupations — AC=0.454, exposure=0.161
+  // Service Occupations - AC=0.454, exposure=0.161
   makeGroup("healthcare-support", "31-0000", "Healthcare Support Occupations", "Healthcare (Support)",
     7448, 17.13, 35620, "low",
     { "information-processing": 0.10, "communication": 0.05, "analysis-decision": 0.05,
@@ -254,7 +254,7 @@ export const OCCUPATION_GROUPS: OccupationGroup[] = [
       "interpersonal": 0.35, "technical-specialized": 0.05 }, 76,
     0.454, { netLiquidWealth: 0.20, skillTransferability: 0.50, geographicDensity: 0.55, ageFraction55Plus: 0.52 }, 0.161),
 
-  // Sales and Related — AC=0.487, exposure=0.348 (Table 5)
+  // Sales and Related - AC=0.487, exposure=0.348 (Table 5)
   makeGroup("sales", "41-0000", "Sales and Related Occupations", "Sales",
     13352, 18.01, 37460, "middle",
     { "information-processing": 0.15, "communication": 0.20, "analysis-decision": 0.05,
@@ -262,7 +262,7 @@ export const OCCUPATION_GROUPS: OccupationGroup[] = [
       "interpersonal": 0.35, "technical-specialized": 0.05 }, 49,
     0.487, { netLiquidWealth: 0.38, skillTransferability: 0.55, geographicDensity: 0.52, ageFraction55Plus: 0.50 }, 0.348),
 
-  // Administrative Support — AC=0.360, exposure=0.525 (Table 5, highest exposure + lowest AC of white-collar)
+  // Administrative Support - AC=0.360, exposure=0.525 (Table 5, highest exposure + lowest AC of white-collar)
   makeGroup("office-admin", "43-0000", "Office and Administrative Support", "Office & Admin",
     18200, 20.82, 43310, "middle",
     { "information-processing": 0.40, "communication": 0.20, "analysis-decision": 0.05,
@@ -270,7 +270,7 @@ export const OCCUPATION_GROUPS: OccupationGroup[] = [
       "interpersonal": 0.10, "technical-specialized": 0.08 }, 42,
     0.360, { netLiquidWealth: 0.25, skillTransferability: 0.40, geographicDensity: 0.45, ageFraction55Plus: 0.42 }, 0.525),
 
-  // Natural Resources, Construction, Maintenance — AC=0.449, exposure=0.041 (Table 5)
+  // Natural Resources, Construction, Maintenance - AC=0.449, exposure=0.041 (Table 5)
   makeGroup("farming-fishing", "45-0000", "Farming, Fishing, and Forestry", "Farming & Forestry",
     470, 17.35, 36090, "low",
     { "information-processing": 0.03, "communication": 0.02, "analysis-decision": 0.05,
@@ -292,7 +292,7 @@ export const OCCUPATION_GROUPS: OccupationGroup[] = [
       "interpersonal": 0.02, "technical-specialized": 0.20 }, 4,
     0.449, { netLiquidWealth: 0.40, skillTransferability: 0.45, geographicDensity: 0.50, ageFraction55Plus: 0.45 }, 0.041),
 
-  // Production, Transportation, Material Moving — AC=0.401, exposure=0.131 (Table 5)
+  // Production, Transportation, Material Moving - AC=0.401, exposure=0.131 (Table 5)
   makeGroup("production", "51-0000", "Production Occupations", "Production",
     8700, 19.53, 40630, "middle",
     { "information-processing": 0.05, "communication": 0.03, "analysis-decision": 0.05,
@@ -444,7 +444,7 @@ export function getCfoSignal(groupId: string): { nei: number; label: string; sho
  *
  * Low elasticity: demand is largely fixed or internally consumed.
  *   Example: Back-office admin work is a cost center, not a product.
- *   Cheaper admin doesn't create more admin demand — it just cuts costs.
+ *   Cheaper admin doesn't create more admin demand - it just cuts costs.
  */
 export type DemandElasticity = "high" | "moderate" | "low";
 
@@ -482,17 +482,17 @@ export const DEMAND_ELASTICITY_META: Record<DemandElasticity, { label: string; c
   high: {
     label: "High",
     color: "#10B981",
-    description: "Cheaper output historically drives large demand expansion — automation may increase employment",
+    description: "Cheaper output historically drives large demand expansion. Automation may increase employment",
   },
   moderate: {
     label: "Moderate",
     color: "#F59E0B",
-    description: "Some unmet demand exists — cost reduction may partially offset displacement",
+    description: "Some unmet demand exists. Cost reduction may partially offset displacement",
   },
   low: {
     label: "Low",
     color: "#EF4444",
-    description: "Demand is largely fixed — cost reduction leads primarily to headcount reduction",
+    description: "Demand is largely fixed. Cost reduction leads primarily to headcount reduction",
   },
 };
 
@@ -544,9 +544,9 @@ export const DEPLOYMENT_OVERHEAD = 5;
  * breakthroughs). Scenario analysis makes this uncertainty visible.
  */
 export const DECLINE_RATE_SCENARIOS = {
-  slow: { multiplier: 0.5, label: "Slow", description: "Cost improvements decelerate — diminishing returns on compute efficiency" },
-  baseline: { multiplier: 1.0, label: "Baseline", description: "Current trends continue — inference costs decline at observed 2020-2026 rates" },
-  fast: { multiplier: 1.5, label: "Fast", description: "Algorithmic breakthroughs accelerate — cost improvements compound faster" },
+  slow: { multiplier: 0.5, label: "Slow", description: "Cost improvements decelerate - diminishing returns on compute efficiency" },
+  baseline: { multiplier: 1.0, label: "Baseline", description: "Current trends continue - inference costs decline at observed 2020-2026 rates" },
+  fast: { multiplier: 1.5, label: "Fast", description: "Algorithmic breakthroughs accelerate - cost improvements compound faster" },
 } as const;
 
 export type ScenarioKey = keyof typeof DECLINE_RATE_SCENARIOS;

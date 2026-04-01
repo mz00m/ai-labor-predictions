@@ -159,7 +159,7 @@ export default function IndustryCard({
         </div>
       </div>
 
-      {/* Heat bar — grows from left on scroll-in */}
+      {/* Heat bar - grows from left on scroll-in */}
       <div className="mt-3 h-1.5 rounded-full bg-black/[0.04] overflow-hidden">
         <div
           className="h-full rounded-full"

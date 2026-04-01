@@ -38,7 +38,7 @@ export default function SectionBar({
         e.currentTarget.style.backgroundColor = "transparent";
       }}
     >
-      {/* Watermark — larger and more visible for featured */}
+      {/* Watermark - larger and more visible for featured */}
       {watermark && (
         <div
           className={`absolute right-6 sm:right-10 top-1/2 -translate-y-1/2 pointer-events-none hidden sm:block ${featured ? "opacity-[0.15] group-hover:opacity-[0.28] scale-110 group-hover:scale-125" : "opacity-[0.10] group-hover:opacity-[0.18]"}`}
@@ -87,7 +87,7 @@ export default function SectionBar({
           </p>
         </div>
 
-        {/* Stat pill — always visible for featured, hover-only for regular */}
+        {/* Stat pill - always visible for featured, hover-only for regular */}
         {stat && (
           <div
             className={`hidden sm:flex items-baseline gap-1.5 shrink-0 ${featured ? "opacity-60 group-hover:opacity-100 translate-x-0" : "opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0"}`}

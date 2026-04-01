@@ -97,7 +97,7 @@ const INDUSTRIES: IndustryData[] = [
     productivityMultiplier: 3.5,
     rawDisplacement: -22,
     description:
-      "Firms don't need more bookkeeping when it's cheaper — they need the same amount done faster. High productivity gains with low demand response means net workforce shrinkage.",
+      "Firms don't need more bookkeeping when it's cheaper. They need the same amount done faster. High productivity gains with low demand response means net workforce shrinkage.",
   },
   {
     id: "customer-service",
@@ -133,7 +133,7 @@ const INDUSTRIES: IndustryData[] = [
     productivityMultiplier: 3.0,
     rawDisplacement: -20,
     description:
-      "Regulatory requirements are fixed — companies must comply regardless of cost. Cheaper compliance doesn't create more compliance work, it just requires fewer compliance officers.",
+      "Regulatory requirements are fixed. Companies must comply regardless of cost. Cheaper compliance doesn't create more compliance work, it just requires fewer compliance officers.",
   },
 ];
 
@@ -281,7 +281,7 @@ export default function ElasticityToggleViz() {
               ? "#f59e0b"
               : "#ef4444";
 
-          // Bar positioning — bars grow from the zero line
+          // Bar positioning - bars grow from the zero line
           const barLeft = displayValue < 0
             ? valueToPercent(displayValue)
             : zeroPercent;
@@ -363,7 +363,7 @@ export default function ElasticityToggleViz() {
                   style={{ left: `${zeroPercent}%` }}
                 />
 
-                {/* Ghost bar (raw displacement) — visible when elasticity is toggled on */}
+                {/* Ghost bar (raw displacement) - visible when elasticity is toggled on */}
                 {elasticityOn && (
                   <div
                     className="absolute top-[4px] bottom-[4px] rounded-sm"
@@ -396,7 +396,7 @@ export default function ElasticityToggleViz() {
                   }}
                 />
 
-                {/* Inline keyframes via style tag — each bar gets unique overshoot */}
+                {/* Inline keyframes via style tag - each bar gets unique overshoot */}
                 {animating && !reducedMotion && (
                   <style>{`
                     @keyframes elasticStretch-${industry.id} {

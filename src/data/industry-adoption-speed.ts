@@ -81,7 +81,7 @@ export const INDUSTRY_ADOPTION_SPEED: Record<string, IndustrySpeed> = {
   "Management": {
     multiplier: 1.0,
     label: "Baseline",
-    rationale: "Spans all industries — adoption speed reflects the specific industry managed",
+    rationale: "Spans all industries. Adoption speed reflects the specific industry managed",
   },
   "Building & Grounds": {
     multiplier: 1.1,
@@ -135,7 +135,7 @@ export const INDUSTRY_ADOPTION_SPEED: Record<string, IndustrySpeed> = {
  * Maps each BLS occupation group to its industry-appropriate multiplier.
  */
 export const SOC_INDUSTRY_SPEED: Record<string, number> = {
-  "management":               1.0,   // Management — spans all industries
+  "management":               1.0,   // Management. Spans all industries
   "business-financial":       0.85,  // Business & Finance
   "computer-math":            0.6,   // Technology
   "architecture-engineering": 1.1,   // Engineering: safety codes, licensing

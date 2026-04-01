@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
  * Scroll Progress Bar
  *
  * A simple scroll progress bar at the top of the page with a color gradient.
- * No labels — the gradient speaks for itself.
+ * No labels - the gradient speaks for itself.
  *
  * Respects prefers-reduced-motion (static bar, no transition).
  */

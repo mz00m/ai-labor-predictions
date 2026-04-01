@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/"],
       },
       {
-        // AI search crawlers — explicitly welcome
+        // AI search crawlers - explicitly welcome
         userAgent: [
           "GPTBot",
           "ChatGPT-User",

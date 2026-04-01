@@ -193,7 +193,7 @@ function getCategoryLabel(id: string) {
 }
 
 /* ------------------------------------------------------------------ */
-/*  SparkBar — mini distribution shown in modal                        */
+/*  SparkBar - mini distribution shown in modal                        */
 /* ------------------------------------------------------------------ */
 
 function SparkBar({
@@ -487,7 +487,7 @@ function GroupedCategoryCard({
               onClick={() => onBarClick(r.id, category.id)}
             />
           ))}
-          {/* Crowd Average — slightly wider */}
+          {/* Crowd Average - slightly wider */}
           <div className="flex flex-col justify-end" style={{ flex: "1.3 1 0" }}>
             <Bar
               respondent={CROWD}

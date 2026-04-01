@@ -34,7 +34,7 @@ export default function PredictionCard({
   const hasSignificantDisagreement = agg.min !== agg.max && (spread / meanAbs > 0.5 || sourceCount > 5);
   const isLowConfidence = sourceCount > 0 && sourceCount < 6;
 
-  // Magnetic tilt — subtle 3D depth on hover
+  // Magnetic tilt - subtle 3D depth on hover
   const { ref: tiltRef, style: tiltStyle } = useMagneticTilt<HTMLDivElement>({
     maxTilt: 5,
     hoverScale: 1.02,
@@ -121,7 +121,7 @@ export default function PredictionCard({
           </p>
         )}
         <p className={`text-xs mt-1 ${hasSignificantDisagreement ? "text-[#d97706]" : "text-gray-500 dark:text-gray-400"}`}>
-          {prediction.sources.length} sources{hasSignificantDisagreement ? " — significant disagreement" : ""}
+          {prediction.sources.length} sources{hasSignificantDisagreement ? ". Significant disagreement" : ""}
           {isLowConfidence && (
             <span className="ml-1.5 inline-block text-[10px] font-medium text-[#d97706] bg-[#d97706]/[0.08] rounded px-1.5 py-0.5">
               Low confidence

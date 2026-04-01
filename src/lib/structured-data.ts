@@ -152,7 +152,7 @@ export function buildPredictionStructuredData(
   const summaryObservation = {
     "@context": "https://schema.org",
     "@type": "Observation",
-    name: `${prediction.title} — Current Estimate`,
+    name: `${prediction.title} | Current Estimate`,
     observationDate: latestDate,
     measuredValue: {
       "@type": "QuantitativeValue",

@@ -43,7 +43,7 @@ export default function AboutPage() {
 
   return (
     <div className="flex flex-col lg:flex-row lg:gap-10">
-      {/* Left column — all About + Methodology content */}
+      {/* Left column - all About + Methodology content */}
       <div className="lg:flex-1 min-w-0 space-y-14">
         {/* Header */}
         <section className="mb-2">
@@ -181,7 +181,7 @@ export default function AboutPage() {
 
       </div>
 
-      {/* Right column — compact auto-scrolling recent sources feed */}
+      {/* Right column - compact auto-scrolling recent sources feed */}
       <div className="mt-10 lg:mt-0 lg:w-64 shrink-0">
         <div className="lg:sticky lg:top-16">
           <RecentSources sources={recentSources} />

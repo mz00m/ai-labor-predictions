@@ -38,7 +38,7 @@ export async function GET() {
       return NextResponse.json({ commitCount: lastPage });
     }
 
-    // If no Link header, there's only 1 page — count the items
+    // If no Link header, there's only 1 page - count the items
     const commits = await res.json();
     return NextResponse.json({ commitCount: Array.isArray(commits) ? commits.length : null });
   } catch {

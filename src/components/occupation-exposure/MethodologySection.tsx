@@ -94,7 +94,7 @@ export default function MethodologySection() {
       <DimensionResearch
         id="methodology-exposure"
         title="Dimension 1: Technical AI Exposure"
-        why="Which tasks can AI systems actually perform? This is the starting point — but exposure alone doesn't predict displacement, because what AI can do and what organizations will adopt are different questions."
+        why="Which tasks can AI systems actually perform? This is the starting point, but exposure alone doesn't predict displacement, because what AI can do and what organizations will adopt are different questions."
       >
         <Study
           title="GPTs are GPTs: An Early Look at the Labor Market Impact Potential of Large Language Models"
@@ -122,14 +122,14 @@ export default function MethodologySection() {
           authors="McElheran, Li, Brynjolfsson, Kroff, Dinlersoz, Foster, Zolas"
           year="2024"
           url="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4673528"
-          summary="Uses Census BTOS data to show which firms are actually adopting AI vs. which are just exposed. Key finding: AI adoption is concentrated in large, high-paying firms — exposure and adoption diverge significantly, motivating our separate adoption speed dimension."
+          summary="Uses Census BTOS data to show which firms are actually adopting AI vs. which are just exposed. Key finding: AI adoption is concentrated in large, high-paying firms. Exposure and adoption diverge significantly, motivating our separate adoption speed dimension."
         />
         <Study
           title="The Simple Macroeconomics of AI"
           authors="Acemoglu"
           year="2024"
           url="https://www.nber.org/papers/w32487"
-          summary="The essential bounding argument for interpreting exposure scores. Using Hulten's theorem: ~20% of tasks are AI-exposed, ~23% can be profitably automated, with ~27% cost savings per task — yielding only 0.53-0.66% TFP gain over a decade. Exposure alone dramatically overstates likely displacement."
+          summary="The essential bounding argument for interpreting exposure scores. Using Hulten's theorem: ~20% of tasks are AI-exposed, ~23% can be profitably automated, with ~27% cost savings per task, yielding only 0.53-0.66% TFP gain over a decade. Exposure alone dramatically overstates likely displacement."
         />
       </DimensionResearch>
 
@@ -137,7 +137,7 @@ export default function MethodologySection() {
       <DimensionResearch
         id="methodology-adoption"
         title="Dimension 2: Institutional Adoption Speed"
-        why="A technology can be economically viable for years before organizations actually deploy it. Regulated industries, unionized workplaces, and complex organizations move much slower — this gap between 'can' and 'will' is where most single-dimension analyses go wrong."
+        why="A technology can be economically viable for years before organizations actually deploy it. Regulated industries, unionized workplaces, and complex organizations move much slower. This gap between 'can' and 'will' is where most single-dimension analyses go wrong."
       >
         <Study
           title="Hybrid Corn: An Exploration in the Economics of Technological Change"
@@ -158,14 +158,14 @@ export default function MethodologySection() {
           authors="Hunt, Cockburn, Bessen"
           year="2024"
           url="https://www.nber.org/papers/w33022"
-          summary="Directly measures geographic variation in AI adoption using vacancy data. Being 200km from an AI hotspot is associated with 17% lower AI job growth. State borders explain 20% of the adoption distance penalty. AI deployment is spatially concentrated, not evenly distributed — adoption speed is a local phenomenon."
+          summary="Directly measures geographic variation in AI adoption using vacancy data. Being 200km from an AI hotspot is associated with 17% lower AI job growth. State borders explain 20% of the adoption distance penalty. AI deployment is spatially concentrated, not evenly distributed. Adoption speed is a local phenomenon."
         />
         <Study
           title="Robots and Jobs: Evidence from US Labor Markets"
           authors="Acemoglu, Restrepo"
           year="2020"
           url="https://www.journals.uchicago.edu/doi/10.1086/705716"
-          summary="Using IFR robot data and an IV approach, found that one more robot per thousand workers reduces the employment-to-population ratio by 0.2pp and wages by 0.42%. Adoption varied dramatically by industry — automotive adopted 8-10x faster than food processing — demonstrating that sector-specific institutional factors mediate deployment speed."
+          summary="Using IFR robot data and an IV approach, found that one more robot per thousand workers reduces the employment-to-population ratio by 0.2pp and wages by 0.42%. Adoption varied dramatically by industry (automotive adopted 8-10x faster than food processing), demonstrating that sector-specific institutional factors mediate deployment speed."
         />
       </DimensionResearch>
 
@@ -173,7 +173,7 @@ export default function MethodologySection() {
       <DimensionResearch
         id="methodology-adaptability"
         title="Dimension 3: Worker Adaptability"
-        why="When displacement occurs, some workers land on their feet quickly while others face prolonged unemployment. Financial savings, transferable skills, geographic job density, and age all determine how costly displacement is for the individual — and for the economy."
+        why="When displacement occurs, some workers land on their feet quickly while others face prolonged unemployment. Financial savings, transferable skills, geographic job density, and age all determine how costly displacement is for the individual, and for the economy."
       >
         <Study
           title="How Adaptable Are American Workers to AI-Induced Job Displacement?"
@@ -194,7 +194,7 @@ export default function MethodologySection() {
           authors="Bessen, Goos, Salomons, van den Berge"
           year="2025"
           url="https://direct.mit.edu/rest/article/107/1/125/114750/What-Happens-to-Workers-at-Firms-that-Automate"
-          summary="First worker-level estimates of automation adjustment using Dutch administrative data covering all private non-financial industries (2000-2016). Cumulative wage income loss of ~8% over 5 years; only 2% of tenured workers leave in the year of automation. Critically, costs are borne disproportionately by older workers with longer tenure — quantifying the outcomes that Manning & Aguirre's adaptability index predicts."
+          summary="First worker-level estimates of automation adjustment using Dutch administrative data covering all private non-financial industries (2000-2016). Cumulative wage income loss of ~8% over 5 years; only 2% of tenured workers leave in the year of automation. Critically, costs are borne disproportionately by older workers with longer tenure, quantifying the outcomes that Manning & Aguirre's adaptability index predicts."
         />
         <Study
           title="Recessions and the Costs of Job Loss"
@@ -209,7 +209,7 @@ export default function MethodologySection() {
       <DimensionResearch
         id="methodology-elasticity"
         title="Dimension 4: Demand Elasticity"
-        why="The Jevons Paradox: when technology makes output cheaper, total demand for that output often expands. If demand expands faster than productivity grows, employment increases — even as each worker becomes more productive. This is the most overlooked factor in AI displacement forecasts."
+        why="The Jevons Paradox: when technology makes output cheaper, total demand for that output often expands. If demand expands faster than productivity grows, employment increases, even as each worker becomes more productive. This is the most overlooked factor in AI displacement forecasts."
       >
         <div className="mb-4">
           <Link
@@ -231,7 +231,7 @@ export default function MethodologySection() {
           authors="Autor, Salomons"
           year="2018"
           url="https://www.brookings.edu/articles/is-automation-labor-displacing-productivity-growth-employment-and-the-labor-share/"
-          summary="Found that at the industry level, productivity growth from automation almost always increased employment in that industry — but reduced employment economy-wide through cross-industry competition effects. The within-industry expansion is the demand elasticity mechanism."
+          summary="Found that at the industry level, productivity growth from automation almost always increased employment in that industry, but reduced employment economy-wide through cross-industry competition effects. The within-industry expansion is the demand elasticity mechanism."
         />
         <Study
           title="Jevons' Paradox"
@@ -245,14 +245,14 @@ export default function MethodologySection() {
           authors="Acemoglu, Restrepo"
           year="2019"
           url="https://www.aeaweb.org/articles?id=10.1257/jep.33.2.3"
-          summary="The theoretical foundation for why displacement is not the whole story. Technology operates through two opposing forces: displacement (capital replaces labor in existing tasks) and reinstatement (new tasks are created where labor has comparative advantage). Whether employment grows or shrinks depends on the balance — and reinstatement has historically dominated."
+          summary="The theoretical foundation for why displacement is not the whole story. Technology operates through two opposing forces: displacement (capital replaces labor in existing tasks) and reinstatement (new tasks are created where labor has comparative advantage). Whether employment grows or shrinks depends on the balance, and reinstatement has historically dominated."
         />
         <Study
           title="New Frontiers: The Origins and Content of New Work, 1940-2018"
           authors="Autor, Chin, Salomons, Seegmiller"
           year="2022"
           url="https://www.nber.org/papers/w30389"
-          summary="Found that 60% of 2018 employment was in job titles that didn't exist in 1940, most created by prior waves of automation expanding demand. AI's ability to create new task categories — not just automate existing ones — is a major source of potential demand expansion."
+          summary="Found that 60% of 2018 employment was in job titles that didn't exist in 1940, most created by prior waves of automation expanding demand. AI's ability to create new task categories (not just automate existing ones) is a major source of potential demand expansion."
         />
         <p className="text-[11px] text-[var(--muted)] leading-[1.5] mt-3 italic">
           Note: Our per-occupation elasticity classifications (high/moderate/low)
@@ -266,7 +266,7 @@ export default function MethodologySection() {
       <DimensionResearch
         id="methodology-complementarity"
         title="Dimension 5: AI Complementarity"
-        why="The same technology can be used to replace workers or to make them more productive. Whether AI is deployed as a substitute or complement depends on management decisions, task structure, and organizational incentives — not just technical capability. Job dimensionality (the number of distinct task clusters) is a key structural input: high-dimensional jobs trigger a 'focus effect' that raises wages, while low-dimensional jobs face stronger firm incentive for full automation."
+        why="The same technology can be used to replace workers or to make them more productive. Whether AI is deployed as a substitute or complement depends on management decisions, task structure, and organizational incentives, not just technical capability. Job dimensionality (the number of distinct task clusters) is a key structural input: high-dimensional jobs trigger a 'focus effect' that raises wages, while low-dimensional jobs face stronger firm incentive for full automation."
       >
         <Study
           title="Artificial Intelligence, Productivity, and the Workforce: Evidence from Corporate Executives"
@@ -294,28 +294,28 @@ export default function MethodologySection() {
           authors="Brynjolfsson, Chandar, Chen"
           year="2025"
           url="https://digitaleconomy.stanford.edu/publications/canaries-in-the-coal-mine/"
-          summary="Using ADP payroll data covering 3.5-5M workers, found a 13% relative employment decline for ages 22-25 in AI-exposed occupations — but only in automation-heavy quintiles. Augmentation-heavy occupation quintiles show positive youth employment trends. Makes the automation-vs-augmentation distinction empirically testable: the deployment choice predicts who gets displaced."
+          summary="Using ADP payroll data covering 3.5-5M workers, found a 13% relative employment decline for ages 22-25 in AI-exposed occupations, but only in automation-heavy quintiles. Augmentation-heavy occupation quintiles show positive youth employment trends. Makes the automation-vs-augmentation distinction empirically testable: the deployment choice predicts who gets displaced."
         />
         <Study
           title="Artificial Intelligence: The Ambiguous Labor Market Impact of Automating Prediction"
           authors="Agrawal, Gans, Goldfarb"
           year="2019"
           url="https://www.aeaweb.org/articles?id=10.1257/jep.33.2.31"
-          summary="Decomposes decisions into prediction (what AI automates) and judgment (what humans provide). When AI improves prediction, the value of human judgment increases — making the two complementary rather than substitutive. Jobs heavy in judgment (management, medicine) benefit most from AI prediction improvements."
+          summary="Decomposes decisions into prediction (what AI automates) and judgment (what humans provide). When AI improves prediction, the value of human judgment increases, making the two complementary rather than substitutive. Jobs heavy in judgment (management, medicine) benefit most from AI prediction improvements."
         />
         <Study
           title="O-Ring Automation"
           authors="Gans, Goldfarb"
           year="2024"
           url="https://www.nber.org/papers/w33886"
-          summary="Applies Kremer's O-Ring production function to AI automation. In high-dimensional jobs (many complementary tasks), automating some tasks frees workers to concentrate on remaining ones — the 'focus effect' raises quality and wages. In low-dimensional jobs, partial automation doesn't free the worker for much else, and firms have stronger incentive to invest in automating the remaining tasks. Job dimensionality is the structural mechanism that determines whether AI complements or substitutes."
+          summary="Applies Kremer's O-Ring production function to AI automation. In high-dimensional jobs (many complementary tasks), automating some tasks frees workers to concentrate on remaining ones. The 'focus effect' raises quality and wages. In low-dimensional jobs, partial automation doesn't free the worker for much else, and firms have stronger incentive to invest in automating the remaining tasks. Job dimensionality is the structural mechanism that determines whether AI complements or substitutes."
         />
         <Study
           title="The O-Ring Theory of Economic Development"
           authors="Kremer"
           year="1993"
           url="https://academic.oup.com/qje/article-abstract/108/3/551/1881852"
-          summary="The foundational insight behind the dimensionality mechanism: if production requires many steps and each step needs to be done well, productivity is multiplicative in skill. In multi-task roles, automating one task well compounds through all remaining tasks — a structural argument for why high-dimensional jobs see augmentation rather than replacement."
+          summary="The foundational insight behind the dimensionality mechanism: if production requires many steps and each step needs to be done well, productivity is multiplicative in skill. In multi-task roles, automating one task well compounds through all remaining tasks. A structural argument for why high-dimensional jobs see augmentation rather than replacement."
         />
         <Study
           title="How Will AI-driven Automation Actually Affect Jobs?"
