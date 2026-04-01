@@ -5,9 +5,9 @@ import { TASK_VIS_TO_ENRICHED } from "@/data/task-vis-to-enriched";
 import JobTaskVisualizerWrapper from "@/components/task-visualizer/JobTaskVisualizerWrapper";
 
 export const metadata: Metadata = {
-  title: "What parts of your job will be cheaper to do with AI?",
+  title: "How will AI impact your job?",
   description:
-    "Every job is made up of tasks. AI costs are dropping fast, and some of your tasks will be cheaper to do with AI before others. See which ones, and when.",
+    "See how AI will affect your specific job — task by task. Which parts face pressure first, which stay human, and what you can do about it.",
 };
 
 // Pre-compute 5D scores for occupations that map from task-vis profiles
@@ -57,7 +57,7 @@ export default function TaskVisualizerPage() {
     <div>
       <header className="mb-6">
         <h1 className="text-[28px] sm:text-[34px] font-bold text-[var(--foreground)] tracking-tight leading-tight">
-          What parts of your job will be cheaper to do with AI?
+          How will AI impact your job?
         </h1>
         <p className="text-[14px] text-[var(--muted)] mt-1.5 max-w-2xl leading-relaxed">
           Every job is really a bundle of tasks. As AI gets cheaper and more capable,
