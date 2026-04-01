@@ -260,12 +260,12 @@
     },
     {
       "date": "2026-01-01",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "maasoum-lichtinger-entry-barriers-2026"
       ],
       "evidenceTier": 1,
-      "label": "Maasoum/Lichtinger: GenAI modestly changes net wage inequality; entry barriers shift"
+      "label": "Hosseini/Lichtinger: Low-wage jobs gain indirectly as AI lowers barriers above them"
     },
     {
       "date": "2026-01-06",

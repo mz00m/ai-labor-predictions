@@ -1,6 +1,6 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-03-31",
+  "lastUpdated": "2026-04-01",
   "totalSources": 473,
   "verifiedCount": 473,
   "sources": {
@@ -5481,14 +5481,17 @@
     },
     "maasoum-lichtinger-entry-barriers-2026": {
       "id": "maasoum-lichtinger-entry-barriers-2026",
-      "title": "GenAI and Entry Barriers",
+      "title": "Generative AI and Occupational Entry Barriers: The Labor-Supply Channel of Technological Change",
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6059674",
-      "publisher": "SSRN (Maasoum, Lichtinger)",
+      "publisher": "SSRN (Hosseini, Lichtinger — Harvard)",
       "evidenceTier": 1,
-      "datePublished": "2026-01-01",
-      "excerpt": "GenAI modestly changes net wage inequality; entry barriers shift for new workers.",
+      "datePublished": "2026-04-01",
+      "excerpt": "GenAI reshapes wage inequality through a productivity-scarcity race: productivity gains widen wage disparities while reduced entry barriers compress them. Net effect is a modest increase in inequality.",
       "usedIn": [
-        "entry-level-wage-impact"
+        "entry-level-wage-impact",
+        "workforce-ai-exposure",
+        "median-wage-impact",
+        "high-skill-wage-premium"
       ],
       "verified": true,
       "synthetic": false

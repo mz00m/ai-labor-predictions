@@ -427,6 +427,15 @@
       ],
       "evidenceTier": 2,
       "label": "KPMG: 57% expect humans to manage/direct AI agents"
+    },
+    {
+      "date": "2026-04-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "maasoum-lichtinger-entry-barriers-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Hosseini/Lichtinger: 21.3% of O*NET tasks >80% automatable; avg 10pp labor pool expansion"
     }
   ],
   "sources": [
@@ -788,6 +797,16 @@
       "datePublished": "2026-03-01",
       "excerpt": "87% Upskilling/reskilling current workforce",
       "dateAdded": "2026-03-31"
+    },
+    {
+      "id": "maasoum-lichtinger-entry-barriers-2026",
+      "title": "Generative AI and Occupational Entry Barriers: The Labor-Supply Channel of Technological Change",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6059674",
+      "publisher": "SSRN (Hosseini, Lichtinger — Harvard)",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-01",
+      "excerpt": "We define a binary automation exposure indicator that equals one for tasks in categories 4–5, i.e., more than 80 percent automatable. Under this definition, 4,107 tasks (21.3 percent) are classified as exposed. The mean PSS is about 0.11, implying that for the average occupation, GenAI expands the qualified labor pool by 10 percentage points of the workforce.",
+      "dateAdded": "2026-04-01"
     }
   ]
 }
