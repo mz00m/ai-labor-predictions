@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
+import { markAssessmentPaid, markPolicyAddon } from "@/lib/assessment/db";
 
 function getStripe() {
   if (!process.env.STRIPE_SECRET_KEY) throw new Error("STRIPE_SECRET_KEY not configured");
@@ -17,7 +18,21 @@ export async function POST(req: NextRequest) {
     }
 
     const isAddOn = addOn === "policy-prompts";
-    const amount = isAddOn ? 10000 : 10000; // $100.00 in cents
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://jobsdata.ai";
+
+    // Dev mode: skip Stripe, auto-mark as paid
+    if (process.env.ASSESSMENT_DEV_MODE === "true") {
+      if (isAddOn) {
+        await markPolicyAddon(assessmentId);
+      } else {
+        await markAssessmentPaid(assessmentId, "dev_mode_bypass");
+      }
+      return NextResponse.json({
+        checkoutUrl: `${baseUrl}/assessment/report?id=${assessmentId}&payment=success`,
+      });
+    }
+
+    const amount = 10000; // $100.00 in cents
     const description = isAddOn
       ? "AI Prompts & Guidelines Add-on"
       : "Your AI Action Plan - Full Report";
@@ -42,8 +57,8 @@ export async function POST(req: NextRequest) {
         },
       ],
       mode: "payment",
-      success_url: `${process.env.NEXT_PUBLIC_BASE_URL || "https://jobsdata.ai"}/assessment/report?id=${assessmentId}&payment=success`,
-      cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL || "https://jobsdata.ai"}/assessment/report?id=${assessmentId}&payment=cancelled`,
+      success_url: `${baseUrl}/assessment/report?id=${assessmentId}&payment=success`,
+      cancel_url: `${baseUrl}/assessment/report?id=${assessmentId}&payment=cancelled`,
       metadata: {
         assessmentId,
         type: isAddOn ? "addon" : "assessment",
