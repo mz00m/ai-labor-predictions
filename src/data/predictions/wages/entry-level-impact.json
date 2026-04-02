@@ -410,6 +410,24 @@
       ],
       "evidenceTier": 2,
       "label": "KPMG: 64% say AI agents changed entry-level hiring"
+    },
+    {
+      "date": "2026-04-02",
+      "direction": "down",
+      "sourceIds": [
+        "brookings-ai-career-pathways-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Brookings: ~49% of Gateway-to-Destination pathways highly AI-exposed"
+    },
+    {
+      "date": "2026-04-02",
+      "direction": "down",
+      "sourceIds": [
+        "brookings-ai-career-pathways-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Brookings: 3.5M STARs high-exposed + low adaptive capacity"
     }
   ],
   "sources": [
@@ -777,6 +795,16 @@
       "datePublished": "2026-03-01",
       "excerpt": "64% say agents have already changed their approach to entry-level hiring",
       "dateAdded": "2026-03-31"
+    },
+    {
+      "id": "brookings-ai-career-pathways-2026",
+      "title": "How AI may reshape career pathways to better jobs",
+      "url": "https://www.brookings.edu/articles/how-ai-may-reshape-career-pathways-to-better-jobs/",
+      "publisher": "Brookings Metro / Opportunity@Work",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-02",
+      "excerpt": "Only 51% of job pathways between Gateway and Destination occupations are not highly exposed to AI.",
+      "dateAdded": "2026-04-02"
     }
   ]
 }

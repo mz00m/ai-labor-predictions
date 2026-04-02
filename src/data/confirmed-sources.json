@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-04-01",
-  "totalSources": 473,
-  "verifiedCount": 473,
+  "lastUpdated": "2026-04-02",
+  "totalSources": 474,
+  "verifiedCount": 474,
   "sources": {
     "cvl-economics-entertainment-ai-2024": {
       "id": "cvl-economics-entertainment-ai-2024",
@@ -6600,6 +6600,23 @@
         "entry-level-wage-impact",
         "white-collar-professional-displacement",
         "workforce-ai-exposure",
+        "customer-service-automation"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "brookings-ai-career-pathways-2026": {
+      "id": "brookings-ai-career-pathways-2026",
+      "title": "How AI may reshape career pathways to better jobs",
+      "url": "https://www.brookings.edu/articles/how-ai-may-reshape-career-pathways-to-better-jobs/",
+      "publisher": "Brookings Metro / Opportunity@Work",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-02",
+      "excerpt": "Some 15.6 million—or one-fifth of the nation's 70 million STARs—work in roles highly exposed to AI, meaning they reside in the top quartile of observed occupational task exposure among occupations.",
+      "usedIn": [
+        "workforce-ai-exposure",
+        "entry-level-wage-impact",
+        "white-collar-professional-displacement",
         "customer-service-automation"
       ],
       "verified": true,

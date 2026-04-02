@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "How AI may reshape career pathways to better jobs",
+      "author": "Justin Heck, Mark Muro, Shriya Methkupally, Joseph Siegmund",
+      "publisher": "Brookings Metro / Opportunity@Work",
+      "date": "2026-04-02",
+      "url": "https://www.brookings.edu/articles/how-ai-may-reshape-career-pathways-to-better-jobs/",
+      "takeaway": "15.6M non-degree workers (STARs) in top AI exposure quartile, comprising 43% of all highly exposed US workers. Nearly 11M STARs in highly AI-exposed Gateway occupations. ~49% of career pathways from Gateway to higher-wage Destination occupations are highly AI-exposed. 3.5M STARs have both high AI exposure and low adaptive capacity (67% of dual-risk workers). Uses Anthropic observed exposure data. Sun Belt and Northeast metros most affected due to admin/clerical/CS Gateway concentration.",
+      "weekFeatured": "2026-04-02",
+      "tier": 2
+    },
+    {
       "title": "Forecasting the Economic Effects of AI",
       "author": "Forecasting Research Institute (w/ Fed Chicago, Yale, Stanford, UPenn)",
       "publisher": "Forecasting Research Institute",

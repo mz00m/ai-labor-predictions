@@ -436,6 +436,24 @@
       ],
       "evidenceTier": 1,
       "label": "Hosseini/Lichtinger: 21.3% of O*NET tasks >80% automatable; avg 10pp labor pool expansion"
+    },
+    {
+      "date": "2026-04-02",
+      "direction": "neutral",
+      "sourceIds": [
+        "brookings-ai-career-pathways-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Brookings: 15.6M non-degree workers in top AI exposure quartile"
+    },
+    {
+      "date": "2026-04-02",
+      "direction": "neutral",
+      "sourceIds": [
+        "brookings-ai-career-pathways-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Brookings: 23M non-degree workers have low AI adaptive capacity"
     }
   ],
   "sources": [
@@ -807,6 +825,16 @@
       "datePublished": "2026-04-01",
       "excerpt": "We define a binary automation exposure indicator that equals one for tasks in categories 4–5, i.e., more than 80 percent automatable. Under this definition, 4,107 tasks (21.3 percent) are classified as exposed. The mean PSS is about 0.11, implying that for the average occupation, GenAI expands the qualified labor pool by 10 percentage points of the workforce.",
       "dateAdded": "2026-04-01"
+    },
+    {
+      "id": "brookings-ai-career-pathways-2026",
+      "title": "How AI may reshape career pathways to better jobs",
+      "url": "https://www.brookings.edu/articles/how-ai-may-reshape-career-pathways-to-better-jobs/",
+      "publisher": "Brookings Metro / Opportunity@Work",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-02",
+      "excerpt": "Some 15.6 million—or one-fifth of the nation's 70 million STARs—work in roles highly exposed to AI, meaning they reside in the top quartile of observed occupational task exposure among occupations.",
+      "dateAdded": "2026-04-02"
     }
   ]
 }

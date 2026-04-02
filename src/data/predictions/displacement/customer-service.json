@@ -362,6 +362,15 @@
       ],
       "evidenceTier": 2,
       "label": "KPMG: 73% automating workflows spanning functions"
+    },
+    {
+      "date": "2026-04-02",
+      "direction": "up",
+      "sourceIds": [
+        "brookings-ai-career-pathways-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Brookings: CS rep a key Gateway role; AI disruption cascades"
     }
   ],
   "sources": [
@@ -670,6 +679,16 @@
       "datePublished": "2026-03-01",
       "excerpt": "73% Automating workflows that span multiple functions",
       "dateAdded": "2026-03-31"
+    },
+    {
+      "id": "brookings-ai-career-pathways-2026",
+      "title": "How AI may reshape career pathways to better jobs",
+      "url": "https://www.brookings.edu/articles/how-ai-may-reshape-career-pathways-to-better-jobs/",
+      "publisher": "Brookings Metro / Opportunity@Work",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-02",
+      "excerpt": "if AI were to significantly reorient or automate a customer service role, the opportunity for economic mobility for workers in Origin roles such as receptionists and clerks would likely also be impaired",
+      "dateAdded": "2026-04-02"
     }
   ]
 }
