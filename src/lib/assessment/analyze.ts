@@ -5,6 +5,7 @@ import Anthropic from "@anthropic-ai/sdk";
 import { AssessmentIntake, AssessmentReport } from "./types";
 import { stripPii } from "./pii-strip";
 import { getIndustryTemplate } from "./taxonomy";
+import { getOnetSummaryForPrompt } from "./onet-tasks";
 
 const anthropic = new Anthropic();
 
@@ -275,6 +276,10 @@ Common AI opportunity areas in ${template.industry}:
 ${template.departments.map((d) => `- ${d.name}: ${d.aiOpportunityAreas.join(", ")}`).join("\n")}
 
 Typical industry challenges: ${template.commonChallenges.join(", ")}`;
+
+  // Add O*NET task mapping data
+  const onetSummary = getOnetSummaryForPrompt(intake.primaryFunctions, intake.industry);
+  prompt += `\n\n${onetSummary}`;
 
   return prompt;
 }
