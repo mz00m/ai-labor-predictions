@@ -55,13 +55,19 @@ export async function POST(req: NextRequest) {
       }
     }
 
-    // Website content extraction (basic — could be enhanced with puppeteer)
+    // Website content extraction (Puppeteer with fetch fallback)
     let websiteContent: string | null = null;
     if (intake.websiteUrl) {
       try {
-        websiteContent = await fetchWebsiteText(intake.websiteUrl);
+        const { scrapeWebsite, formatScrapedContent } = await import("@/lib/assessment/scrape-website");
+        const scraped = await scrapeWebsite(intake.websiteUrl);
+        if (scraped.success) {
+          websiteContent = formatScrapedContent(scraped);
+        }
       } catch (e) {
         console.error("Failed to fetch website:", e);
+        // Fallback to basic fetch
+        try { websiteContent = await fetchWebsiteText(intake.websiteUrl); } catch { /* ignore */ }
       }
     }
 
