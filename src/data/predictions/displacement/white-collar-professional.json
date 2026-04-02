@@ -691,6 +691,15 @@
       ],
       "evidenceTier": 2,
       "label": "Brookings: 12.9M in Destination roles now highly AI-exposed"
+    },
+    {
+      "date": "2026-03-31",
+      "direction": "down",
+      "sourceIds": [
+        "fri-ai-economics-survey-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "FRI: Rapid scenario → white-collar sector share stalls at 20-21% by 2050"
     }
   ],
   "sources": [
@@ -1348,6 +1357,16 @@
       "evidenceTier": 2,
       "datePublished": "2026-04-02",
       "excerpt": "Across Destination occupations, 12.9 million workers—or around one-third of all workers in those occupations—may now be highly exposed to AI",
+      "dateAdded": "2026-04-02"
+    },
+    {
+      "id": "fri-ai-economics-survey-2026",
+      "title": "Forecasting the Economic Effects of AI",
+      "url": "https://open.substack.com/pub/forecastingresearch/p/forecasting-the-economic-effects-of-ai",
+      "publisher": "Forecasting Research Institute (w/ Fed Chicago, Yale, Stanford, UPenn)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-31",
+      "excerpt": "In a rapid AI scenario, economists forecast white-collar sector employment share stalling at 20-21% by 2050, down from recent growth trends.",
       "dateAdded": "2026-04-02"
     }
   ]

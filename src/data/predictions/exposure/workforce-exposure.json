@@ -454,6 +454,15 @@
       ],
       "evidenceTier": 2,
       "label": "Brookings: 23M non-degree workers have low AI adaptive capacity"
+    },
+    {
+      "date": "2026-03-31",
+      "direction": "up",
+      "sourceIds": [
+        "fri-ai-economics-survey-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "FRI: 69 economists assign 61% prob to moderate/rapid AI capabilities by 2030"
     }
   ],
   "sources": [
@@ -834,6 +843,16 @@
       "evidenceTier": 2,
       "datePublished": "2026-04-02",
       "excerpt": "Some 15.6 million—or one-fifth of the nation's 70 million STARs—work in roles highly exposed to AI, meaning they reside in the top quartile of observed occupational task exposure among occupations.",
+      "dateAdded": "2026-04-02"
+    },
+    {
+      "id": "fri-ai-economics-survey-2026",
+      "title": "Forecasting the Economic Effects of AI",
+      "url": "https://open.substack.com/pub/forecastingresearch/p/forecasting-the-economic-effects-of-ai",
+      "publisher": "Forecasting Research Institute (w/ Fed Chicago, Yale, Stanford, UPenn)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-31",
+      "excerpt": "69 economists assign 61.4% probability to moderate or rapid AI capability progress by 2030. In the rapid scenario, AI surpasses humans on most cognitive and physical tasks.",
       "dateAdded": "2026-04-02"
     }
   ]

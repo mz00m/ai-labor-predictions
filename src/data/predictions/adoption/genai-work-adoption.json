@@ -129,6 +129,25 @@
       "evidenceTier": 1,
       "metricType": "survey",
       "dataType": "observed"
+    },
+    {
+      "date": "2026-03-31",
+      "value": 10.1,
+      "sourceIds": [
+        "fri-ai-economics-survey-2026"
+      ],
+      "evidenceTier": 1,
+      "metricType": "survey",
+      "sampleSize": 69,
+      "dataType": "projected",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "% of work hours assisted by GenAI (unconditional forecast for 2030)",
+        "conversionFactor": 1,
+        "conversionLow": 0.5,
+        "conversionHigh": 2.0,
+        "rationale": "Measures adoption intensity (share of work hours) rather than breadth (share of workers). 69 economists' median unconditional forecast for 2030. Current observed: 5.2% of work hours (Bick/Deming 2026). Graph tracks % of adults using AI at work (~41-43%), which is higher because many workers use AI for only a fraction of their hours."
+      }
     }
   ],
   "overlays": [
@@ -257,6 +276,15 @@
       ],
       "evidenceTier": 2,
       "label": "KPMG: 55% of employees adopting/integrating AI agents"
+    },
+    {
+      "date": "2026-03-31",
+      "direction": "up",
+      "sourceIds": [
+        "fri-ai-economics-survey-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "FRI: Rapid scenario → 62% of work hours GenAI-assisted by 2050"
     }
   ],
   "sources": [
@@ -487,6 +515,16 @@
       "datePublished": "2026-03-01",
       "excerpt": "55% are seeing slight or significant adoption (employees beginning to accept and integrate agents in their work).",
       "dateAdded": "2026-03-31"
+    },
+    {
+      "id": "fri-ai-economics-survey-2026",
+      "title": "Forecasting the Economic Effects of AI",
+      "url": "https://open.substack.com/pub/forecastingresearch/p/forecasting-the-economic-effects-of-ai",
+      "publisher": "Forecasting Research Institute (w/ Fed Chicago, Yale, Stanford, UPenn)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-31",
+      "excerpt": "69 economists' median unconditional forecast: 10.1% of work hours GenAI-assisted by 2030. Rapid scenario (14% prob): 62% of work hours by 2050.",
+      "dateAdded": "2026-04-02"
     }
   ]
 }

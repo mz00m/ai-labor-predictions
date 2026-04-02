@@ -6566,7 +6566,16 @@
       "datePublished": "2026-03-31",
       "excerpt": "In a rapid AI progress scenario, economists forecast a drop in labor force participation from its 2025 baseline of 62.6% to 59.1% in 2030 and 55% in 2050, with roughly half of this decline—equivalent to 10 million jobs—attributable to AI.",
       "usedIn": [
-        "overall-us-displacement"
+        "overall-us-displacement",
+        "genai-work-adoption",
+        "median-wage-impact",
+        "high-skill-wage-premium",
+        "white-collar-professional-displacement",
+        "customer-service-automation",
+        "tech-sector-displacement",
+        "financial-services-displacement",
+        "freelancer-rate-impact",
+        "workforce-ai-exposure"
       ],
       "verified": true,
       "synthetic": false

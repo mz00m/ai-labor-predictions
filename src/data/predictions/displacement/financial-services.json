@@ -284,6 +284,15 @@
       ],
       "evidenceTier": 2,
       "label": "Anthropic: Automated trading & market ops usage doubled in 3mo"
+    },
+    {
+      "date": "2026-03-31",
+      "direction": "down",
+      "sourceIds": [
+        "fri-ai-economics-survey-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "FRI: Rapid scenario → AI surpasses paralegals and clerical workers by 2030"
     }
   ],
   "sources": [
@@ -553,6 +562,16 @@
       "evidenceTier": 2,
       "datePublished": "2026-03-25",
       "excerpt": "Finance and Insurance (16%)... Finance and Insurance 16.5%"
+    },
+    {
+      "id": "fri-ai-economics-survey-2026",
+      "title": "Forecasting the Economic Effects of AI",
+      "url": "https://open.substack.com/pub/forecastingresearch/p/forecasting-the-economic-effects-of-ai",
+      "publisher": "Forecasting Research Institute (w/ Fed Chicago, Yale, Stanford, UPenn)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-31",
+      "excerpt": "In the rapid AI scenario (14% probability), AI systems surpass all paralegals and clerical workers, handling tasks as inexpensively and reliably as humans.",
+      "dateAdded": "2026-04-02"
     }
   ]
 }

@@ -490,6 +490,15 @@
       ],
       "evidenceTier": 1,
       "label": "Hosseini/Lichtinger: Avg 17% productivity gain partially offset by entry-barrier erosion"
+    },
+    {
+      "date": "2026-03-31",
+      "direction": "down",
+      "sourceIds": [
+        "fri-ai-economics-survey-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "FRI: Rapid scenario → labor income share drops from ~58% to 45% by 2050"
     }
   ],
   "sources": [
@@ -946,6 +955,16 @@
       "datePublished": "2026-04-01",
       "excerpt": "The mean is 0.17 (SD 0.11), implying that for the average occupation, GenAI could reduce total work time by roughly 17 percent under this conservative calibration.",
       "dateAdded": "2026-04-01"
+    },
+    {
+      "id": "fri-ai-economics-survey-2026",
+      "title": "Forecasting the Economic Effects of AI",
+      "url": "https://open.substack.com/pub/forecastingresearch/p/forecasting-the-economic-effects-of-ai",
+      "publisher": "Forecasting Research Institute (w/ Fed Chicago, Yale, Stanford, UPenn)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-31",
+      "excerpt": "In a rapid AI scenario, economists forecast labor income share dropping from ~58% to 45% by 2050, implying significant downward pressure on median wages even if aggregate GDP grows.",
+      "dateAdded": "2026-04-02"
     }
   ]
 }

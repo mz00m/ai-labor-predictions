@@ -166,6 +166,15 @@
       ],
       "evidenceTier": 1,
       "label": "Fiverr FY2025: Active buyers -13.6%; writing/translation categories -20%; 2026 guidance: revenue -3% to -12%"
+    },
+    {
+      "date": "2026-03-31",
+      "direction": "down",
+      "sourceIds": [
+        "fri-ai-economics-survey-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "FRI: Moderate scenario → almost all 5-day freelance SW jobs automatable by 2030"
     }
   ],
   "sources": [
@@ -308,6 +317,16 @@
       "datePublished": "2025-10-30",
       "excerpt": "Best AI agent (Manus) earned $1,720 out of a possible $143,991 across 240 real freelance projects \u2014 capturing only 1.2% of economic value. Automation rate: 2.5%.",
       "dateAdded": "2026-03-01"
+    },
+    {
+      "id": "fri-ai-economics-survey-2026",
+      "title": "Forecasting the Economic Effects of AI",
+      "url": "https://open.substack.com/pub/forecastingresearch/p/forecasting-the-economic-effects-of-ai",
+      "publisher": "Forecasting Research Institute (w/ Fed Chicago, Yale, Stanford, UPenn)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-31",
+      "excerpt": "In the moderate AI scenario, almost all freelance software-engineering jobs requiring 5 days of effort from an experienced human are automatable by 2030. In the rapid scenario, AI surpasses all freelance software engineers.",
+      "dateAdded": "2026-04-02"
     }
   ]
 }
