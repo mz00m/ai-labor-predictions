@@ -371,6 +371,15 @@
       ],
       "evidenceTier": 2,
       "label": "Brookings: CS rep a key Gateway role; AI disruption cascades"
+    },
+    {
+      "date": "2026-03-31",
+      "direction": "up",
+      "sourceIds": [
+        "fri-ai-economics-survey-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "FRI: Rapid scenario → AI surpasses all human customer service agents by 2030"
     }
   ],
   "sources": [
@@ -688,6 +697,16 @@
       "evidenceTier": 2,
       "datePublished": "2026-04-02",
       "excerpt": "if AI were to significantly reorient or automate a customer service role, the opportunity for economic mobility for workers in Origin roles such as receptionists and clerks would likely also be impaired",
+      "dateAdded": "2026-04-02"
+    },
+    {
+      "id": "fri-ai-economics-survey-2026",
+      "title": "Forecasting the Economic Effects of AI",
+      "url": "https://open.substack.com/pub/forecastingresearch/p/forecasting-the-economic-effects-of-ai",
+      "publisher": "Forecasting Research Institute (w/ Fed Chicago, Yale, Stanford, UPenn)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-31",
+      "excerpt": "In the rapid AI scenario (14% probability), AI systems surpass all freelance customer service agents, handling inquiries as inexpensively and reliably as humans.",
       "dateAdded": "2026-04-02"
     }
   ]

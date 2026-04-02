@@ -10,13 +10,22 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Forecasting Research Institute",
+    title: "Forecasting the Economic Effects of AI",
+    summary:
+      "69 economists, 52 AI experts, 38 superforecasters surveyed. Rapid scenario (14% prob): GDP ~4%, LFPR drops to 55% by 2050, ~10M AI job losses, top 10% holds 80% of wealth. Unconditional forecasts cluster near trends.",
+    date: "Mar 31",
+    url: "https://open.substack.com/pub/forecastingresearch/p/forecasting-the-economic-effects-of-ai",
+    accent: "border-l-emerald-500",
+  },
+  {
     author: "Stefan Schubert (The Update Brief)",
     title: "How Much Will AI Increase Economic Growth?",
     summary:
       "Expert debate on FRI survey findings. Rapid AI scenario yields only +45% GDP over 25 years. Economists vs AI experts diverge on diffusion speed. Social backlash may constrain adoption more than technology.",
     date: "Apr 2",
     url: "https://open.substack.com/pub/theupdatebrief/p/how-much-will-ai-increase-economic",
-    accent: "border-l-emerald-500",
+    accent: "border-l-cyan-500",
   },
   {
     author: "Brookings Metro",
@@ -25,15 +34,6 @@ const articles: Article[] = [
       "15.6M non-degree workers in top AI exposure quartile. ~49% of Gateway-to-Destination career pathways highly AI-exposed. 3.5M workers face both high exposure and low adaptive capacity.",
     date: "Apr 2",
     url: "https://www.brookings.edu/articles/how-ai-may-reshape-career-pathways-to-better-jobs/",
-    accent: "border-l-cyan-500",
-  },
-  {
-    author: "Forecasting Research Institute",
-    title: "Forecasting the Economic Effects of AI",
-    summary:
-      "69 economists, 52 AI experts, 38 superforecasters surveyed. Unconditional forecasts cluster near trends; rapid scenario (14% prob) implies ~10M AI job losses and 75% wealth concentration in top 10%.",
-    date: "Mar 31",
-    url: "https://open.substack.com/pub/forecastingresearch/p/forecasting-the-economic-effects-of-ai",
     accent: "border-l-amber-500",
   },
   {

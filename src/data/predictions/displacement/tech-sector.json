@@ -694,6 +694,15 @@
       ],
       "evidenceTier": 2,
       "label": "Anthropic: Coding tasks migrating to automated API (+14% since Aug)"
+    },
+    {
+      "date": "2026-03-31",
+      "direction": "down",
+      "sourceIds": [
+        "fri-ai-economics-survey-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "FRI: Moderate scenario → most 5-day freelance SW engineering jobs automatable by 2030"
     }
   ],
   "sources": [
@@ -1312,6 +1321,16 @@
       "evidenceTier": 2,
       "datePublished": "2026-03-25",
       "excerpt": "the steepest risks in Information (18%)... Information 18.3%"
+    },
+    {
+      "id": "fri-ai-economics-survey-2026",
+      "title": "Forecasting the Economic Effects of AI",
+      "url": "https://open.substack.com/pub/forecastingresearch/p/forecasting-the-economic-effects-of-ai",
+      "publisher": "Forecasting Research Institute (w/ Fed Chicago, Yale, Stanford, UPenn)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-31",
+      "excerpt": "In the moderate AI scenario, almost all freelance software-engineering jobs requiring 5 days of effort from an experienced human are automatable by 2030.",
+      "dateAdded": "2026-04-02"
     }
   ],
   "marketIds": {

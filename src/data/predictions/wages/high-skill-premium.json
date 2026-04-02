@@ -392,6 +392,15 @@
       ],
       "evidenceTier": 1,
       "label": "Hosseini/Lichtinger: p90-p50 wage gap rises from 0.733 to 0.789 in combined GE model"
+    },
+    {
+      "date": "2026-03-31",
+      "direction": "up",
+      "sourceIds": [
+        "fri-ai-economics-survey-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "FRI: Rapid scenario → top 10% wealth share rises to 80% by 2050 (from ~72%)"
     }
   ],
   "sources": [
@@ -739,6 +748,16 @@
       "datePublished": "2026-04-01",
       "excerpt": "In general equilibrium, overall wage dispersion rises modestly relative to baseline: the variance of log wages increases from 0.201 to 0.230, while the p90-p50 gap rises from 0.733 to 0.789.",
       "dateAdded": "2026-04-01"
+    },
+    {
+      "id": "fri-ai-economics-survey-2026",
+      "title": "Forecasting the Economic Effects of AI",
+      "url": "https://open.substack.com/pub/forecastingresearch/p/forecasting-the-economic-effects-of-ai",
+      "publisher": "Forecasting Research Institute (w/ Fed Chicago, Yale, Stanford, UPenn)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-31",
+      "excerpt": "In a rapid AI scenario, economists forecast the fraction of wealth held by the wealthiest 10% of households rising to 80% by 2050 (from ~72% today).",
+      "dateAdded": "2026-04-02"
     }
   ]
 }
