@@ -17,7 +17,7 @@ const PROCESS_STEPS = [
     step: "03",
     title: "Get your personalized action plan",
     description:
-      "A downloadable PDF with specific ways AI can save you time on your actual tasks — plus a clear plan for what to try first, what to learn next, and where the biggest wins are.",
+      "A downloadable PDF with specific ways AI can save you time on your actual tasks, plus a clear plan for what to try first, what to learn next, and where the biggest wins are.",
   },
 ];
 
@@ -86,9 +86,9 @@ export default function AssessmentLanding() {
       <section className="relative overflow-hidden">
         {/* Background */}
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-          <div className="absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full bg-[#5C61F6]/[0.06] blur-[100px]" />
+          <div className="absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full bg-[#5C61F6]/[0.05] blur-[100px]" />
           <div className="absolute -top-20 right-0 w-[400px] h-[400px] rounded-full bg-[#3b82f6]/[0.04] blur-[80px]" />
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
         </div>
 
         <div className="relative max-w-6xl mx-auto px-6 sm:px-10 pt-20 pb-16">
@@ -97,14 +97,14 @@ export default function AssessmentLanding() {
             Built on jobsdata.ai research
           </div>
 
-          <h1 className="text-[40px] sm:text-[56px] font-black tracking-tight text-white leading-[1.05] max-w-3xl">
+          <h1 className="text-[40px] sm:text-[56px] font-black tracking-tight text-gray-900 leading-[1.05] max-w-3xl">
             Get your time back
             <br />
             <span className="text-[#5C61F6]">with a clear AI plan</span>
           </h1>
 
-          <p className="mt-5 text-[17px] text-[#8B95A5] leading-relaxed max-w-2xl">
-            Find out exactly which parts of your work AI can handle — so you can
+          <p className="mt-5 text-[17px] text-gray-500 leading-relaxed max-w-2xl">
+            Find out exactly which parts of your work AI can handle so you can
             spend more time on the things that actually need you. A personalized,
             task-by-task action plan for individual workers and small business teams.
           </p>
@@ -121,7 +121,7 @@ export default function AssessmentLanding() {
             </Link>
             <Link
               href="#pricing"
-              className="inline-flex items-center justify-center gap-2 border border-white/[0.1] text-[#8B95A5] hover:text-white hover:border-white/[0.2] font-medium text-[15px] px-7 py-3 rounded-lg transition-colors"
+              className="inline-flex items-center justify-center gap-2 border border-gray-200 text-gray-500 hover:text-gray-900 hover:border-gray-300 font-medium text-[15px] px-7 py-3 rounded-lg transition-colors"
             >
               View Pricing
             </Link>
@@ -130,16 +130,16 @@ export default function AssessmentLanding() {
           {/* Quick stats */}
           <div className="mt-12 flex flex-wrap gap-8 text-[13px]">
             <div>
-              <div className="text-[28px] font-black text-white">300+</div>
-              <div className="text-[#5A6478]">Research sources behind it</div>
+              <div className="text-[28px] font-black text-gray-900">300+</div>
+              <div className="text-gray-400">Research sources behind it</div>
             </div>
             <div>
-              <div className="text-[28px] font-black text-white">16</div>
-              <div className="text-[#5A6478]">Industries covered</div>
+              <div className="text-[28px] font-black text-gray-900">16</div>
+              <div className="text-gray-400">Industries covered</div>
             </div>
             <div>
-              <div className="text-[28px] font-black text-white">PDF</div>
-              <div className="text-[#5A6478]">Yours to keep and share</div>
+              <div className="text-[28px] font-black text-gray-900">PDF</div>
+              <div className="text-gray-400">Yours to keep and share</div>
             </div>
           </div>
         </div>
@@ -150,12 +150,12 @@ export default function AssessmentLanding() {
         <h2 className="text-[13px] font-bold uppercase tracking-widest text-[#5C61F6] mb-3">
           Who this is for
         </h2>
-        <p className="text-[24px] sm:text-[32px] font-bold text-white mb-6 max-w-2xl">
+        <p className="text-[24px] sm:text-[32px] font-bold text-gray-900 mb-6 max-w-2xl">
           You know AI is changing work. You just need a starting point.
         </p>
-        <p className="text-[15px] text-[#8B95A5] leading-relaxed max-w-3xl mb-10">
+        <p className="text-[15px] text-gray-500 leading-relaxed max-w-3xl mb-10">
           Whether you&apos;re an individual contributor looking to level up, a manager trying to
-          help your team work smarter, or a small business owner who wears ten hats — this
+          help your team work smarter, or a small business owner who wears ten hats, this
           gives you a clear, practical plan based on what you actually do every day.
         </p>
 
@@ -163,13 +163,13 @@ export default function AssessmentLanding() {
           {TESTIMONIAL_SCENARIOS.map((t) => (
             <div
               key={t.role}
-              className="bg-[#111827]/40 border border-white/[0.04] rounded-xl p-5"
+              className="bg-gray-50 border border-gray-100 rounded-xl p-5"
             >
-              <p className="text-[13px] text-[#C5CDD8] leading-relaxed italic mb-3">
+              <p className="text-[13px] text-gray-600 leading-relaxed italic mb-3">
                 &quot;{t.quote}&quot;
               </p>
               <p className="text-[12px] text-[#5C61F6] font-semibold">{t.role}</p>
-              <p className="text-[11px] text-[#5A6478]">{t.industry}</p>
+              <p className="text-[11px] text-gray-400">{t.industry}</p>
             </div>
           ))}
         </div>
@@ -180,7 +180,7 @@ export default function AssessmentLanding() {
         <h2 className="text-[13px] font-bold uppercase tracking-widest text-[#5C61F6] mb-3">
           How it works
         </h2>
-        <p className="text-[24px] sm:text-[32px] font-bold text-white mb-10 max-w-2xl">
+        <p className="text-[24px] sm:text-[32px] font-bold text-gray-900 mb-10 max-w-2xl">
           Three steps to knowing exactly where to start
         </p>
 
@@ -188,13 +188,13 @@ export default function AssessmentLanding() {
           {PROCESS_STEPS.map((step) => (
             <div
               key={step.step}
-              className="relative bg-[#111827]/60 border border-white/[0.06] rounded-xl p-6 hover:border-[#5C61F6]/30 transition-colors"
+              className="relative bg-gray-50 border border-gray-100 rounded-xl p-6 hover:border-[#5C61F6]/30 transition-colors"
             >
               <div className="text-[11px] font-mono font-bold text-[#5C61F6] mb-3">
                 STEP {step.step}
               </div>
-              <h3 className="text-[17px] font-bold text-white mb-2">{step.title}</h3>
-              <p className="text-[14px] text-[#8B95A5] leading-relaxed">
+              <h3 className="text-[17px] font-bold text-gray-900 mb-2">{step.title}</h3>
+              <p className="text-[14px] text-gray-500 leading-relaxed">
                 {step.description}
               </p>
             </div>
@@ -207,7 +207,7 @@ export default function AssessmentLanding() {
         <h2 className="text-[13px] font-bold uppercase tracking-widest text-[#5C61F6] mb-3">
           What you get
         </h2>
-        <p className="text-[24px] sm:text-[32px] font-bold text-white mb-10 max-w-2xl">
+        <p className="text-[24px] sm:text-[32px] font-bold text-gray-900 mb-10 max-w-2xl">
           A plan built around your actual work
         </p>
 
@@ -215,7 +215,7 @@ export default function AssessmentLanding() {
           {REPORT_SECTIONS.map((section) => (
             <div
               key={section.title}
-              className="flex gap-3 bg-[#111827]/40 border border-white/[0.04] rounded-lg p-4"
+              className="flex gap-3 bg-gray-50 border border-gray-100 rounded-lg p-4"
             >
               <div className="mt-0.5 text-[#5C61F6] flex-shrink-0">
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -223,8 +223,8 @@ export default function AssessmentLanding() {
                 </svg>
               </div>
               <div>
-                <h3 className="text-[14px] font-semibold text-white mb-0.5">{section.title}</h3>
-                <p className="text-[13px] text-[#5A6478]">{section.description}</p>
+                <h3 className="text-[14px] font-semibold text-gray-900 mb-0.5">{section.title}</h3>
+                <p className="text-[13px] text-gray-400">{section.description}</p>
               </div>
             </div>
           ))}
@@ -236,7 +236,7 @@ export default function AssessmentLanding() {
         <h2 className="text-[13px] font-bold uppercase tracking-widest text-[#5C61F6] mb-3">
           Data security
         </h2>
-        <p className="text-[24px] sm:text-[32px] font-bold text-white mb-10 max-w-2xl">
+        <p className="text-[24px] sm:text-[32px] font-bold text-gray-900 mb-10 max-w-2xl">
           Your data stays yours
         </p>
 
@@ -245,8 +245,8 @@ export default function AssessmentLanding() {
             <div key={point.title} className="flex gap-4">
               <div className="text-[#5C61F6] flex-shrink-0 mt-1">{point.icon}</div>
               <div>
-                <h3 className="text-[15px] font-semibold text-white mb-1">{point.title}</h3>
-                <p className="text-[13px] text-[#8B95A5] leading-relaxed">{point.description}</p>
+                <h3 className="text-[15px] font-semibold text-gray-900 mb-1">{point.title}</h3>
+                <p className="text-[13px] text-gray-500 leading-relaxed">{point.description}</p>
               </div>
             </div>
           ))}
@@ -258,19 +258,19 @@ export default function AssessmentLanding() {
         <h2 className="text-[13px] font-bold uppercase tracking-widest text-[#5C61F6] mb-3">
           Pricing
         </h2>
-        <p className="text-[24px] sm:text-[32px] font-bold text-white mb-10 max-w-2xl">
+        <p className="text-[24px] sm:text-[32px] font-bold text-gray-900 mb-10 max-w-2xl">
           One price. Your plan. No subscription.
         </p>
 
         <div className="grid md:grid-cols-2 gap-6 max-w-3xl">
           {/* Core Assessment */}
-          <div className="relative bg-[#111827]/60 border-2 border-[#5C61F6]/40 rounded-xl p-6">
+          <div className="relative bg-white border-2 border-[#5C61F6]/40 rounded-xl p-6 shadow-sm">
             <div className="inline-flex items-center text-[11px] font-bold uppercase tracking-wider text-[#5C61F6] bg-[#5C61F6]/[0.08] rounded-full px-2.5 py-0.5 mb-4">
               Your AI Action Plan
             </div>
             <div className="mb-4">
-              <span className="text-[40px] font-black text-white">$100</span>
-              <span className="text-[14px] text-[#5A6478] ml-2">one-time</span>
+              <span className="text-[40px] font-black text-gray-900">$100</span>
+              <span className="text-[14px] text-gray-400 ml-2">one-time</span>
             </div>
             <ul className="space-y-2.5 mb-6">
               {[
@@ -283,7 +283,7 @@ export default function AssessmentLanding() {
                 "Account access to refine and update over time",
                 "Free preview before you buy",
               ].map((item) => (
-                <li key={item} className="flex gap-2 text-[13px] text-[#C5CDD8]">
+                <li key={item} className="flex gap-2 text-[13px] text-gray-600">
                   <svg className="w-4 h-4 text-[#5C61F6] flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                   </svg>
@@ -300,13 +300,13 @@ export default function AssessmentLanding() {
           </div>
 
           {/* Policy Add-on */}
-          <div className="relative bg-[#111827]/40 border border-white/[0.06] rounded-xl p-6">
-            <div className="inline-flex items-center text-[11px] font-bold uppercase tracking-wider text-[#8B95A5] bg-white/[0.04] rounded-full px-2.5 py-0.5 mb-4">
+          <div className="relative bg-gray-50 border border-gray-200 rounded-xl p-6">
+            <div className="inline-flex items-center text-[11px] font-bold uppercase tracking-wider text-gray-500 bg-gray-100 rounded-full px-2.5 py-0.5 mb-4">
               Add-on
             </div>
             <div className="mb-4">
-              <span className="text-[40px] font-black text-white">+$100</span>
-              <span className="text-[14px] text-[#5A6478] ml-2">one-time</span>
+              <span className="text-[40px] font-black text-gray-900">+$100</span>
+              <span className="text-[14px] text-gray-400 ml-2">one-time</span>
             </div>
             <ul className="space-y-2.5 mb-6">
               {[
@@ -316,15 +316,15 @@ export default function AssessmentLanding() {
                 "Data handling and quality assurance tips",
                 "Available after your initial plan",
               ].map((item) => (
-                <li key={item} className="flex gap-2 text-[13px] text-[#C5CDD8]">
-                  <svg className="w-4 h-4 text-[#5A6478] flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <li key={item} className="flex gap-2 text-[13px] text-gray-600">
+                  <svg className="w-4 h-4 text-gray-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                   </svg>
                   {item}
                 </li>
               ))}
             </ul>
-            <div className="block w-full text-center border border-white/[0.1] text-[#5A6478] font-medium text-[14px] py-2.5 rounded-lg cursor-default">
+            <div className="block w-full text-center border border-gray-200 text-gray-400 font-medium text-[14px] py-2.5 rounded-lg cursor-default">
               Available from your dashboard
             </div>
           </div>
@@ -336,7 +336,7 @@ export default function AssessmentLanding() {
         <h2 className="text-[13px] font-bold uppercase tracking-widest text-[#5C61F6] mb-3">
           Works across industries
         </h2>
-        <p className="text-[24px] sm:text-[32px] font-bold text-white mb-10 max-w-2xl">
+        <p className="text-[24px] sm:text-[32px] font-bold text-gray-900 mb-10 max-w-2xl">
           Tailored to how work actually gets done in your field
         </p>
 
@@ -359,7 +359,7 @@ export default function AssessmentLanding() {
           ].map((industry) => (
             <span
               key={industry}
-              className="text-[13px] text-[#8B95A5] bg-white/[0.04] border border-white/[0.06] rounded-full px-4 py-1.5"
+              className="text-[13px] text-gray-500 bg-gray-50 border border-gray-200 rounded-full px-4 py-1.5"
             >
               {industry}
             </span>
@@ -369,12 +369,12 @@ export default function AssessmentLanding() {
 
       {/* Final CTA */}
       <section className="max-w-6xl mx-auto px-6 sm:px-10 py-16 text-center">
-        <h2 className="text-[28px] sm:text-[36px] font-bold text-white mb-4">
+        <h2 className="text-[28px] sm:text-[36px] font-bold text-gray-900 mb-4">
           AI is already changing your industry.
           <br />
           <span className="text-[#5C61F6]">Find out where it can help you.</span>
         </h2>
-        <p className="text-[15px] text-[#8B95A5] mb-8 max-w-xl mx-auto">
+        <p className="text-[15px] text-gray-500 mb-8 max-w-xl mx-auto">
           Start with a free preview. If it&apos;s useful, unlock the full plan for $100.
           No subscription, no recurring charges.
         </p>

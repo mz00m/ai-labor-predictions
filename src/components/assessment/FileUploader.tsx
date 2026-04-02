@@ -117,7 +117,7 @@ export default function FileUploader({
           relative cursor-pointer rounded-xl border-2 border-dashed p-8 text-center transition-colors
           ${dragActive
             ? "border-[#5C61F6] bg-[#5C61F6]/[0.04]"
-            : "border-white/[0.08] hover:border-white/[0.15] bg-[#111827]/30"
+            : "border-gray-200 hover:border-gray-300 bg-gray-50"
           }
         `}
       >
@@ -130,20 +130,20 @@ export default function FileUploader({
           className="hidden"
         />
 
-        <svg className="w-8 h-8 mx-auto mb-3 text-[#5A6478]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <svg className="w-8 h-8 mx-auto mb-3 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
         </svg>
 
-        <p className="text-[14px] text-[#8B95A5] mb-1">
+        <p className="text-[14px] text-gray-500 mb-1">
           <span className="text-[#5C61F6] font-medium">Click to upload</span> or drag and drop
         </p>
-        <p className="text-[12px] text-[#5A6478]">
+        <p className="text-[12px] text-gray-400">
           PDF, DOCX, TXT, CSV, XLS up to {maxSizeMb}MB each &middot; {maxFiles} files max
         </p>
       </div>
 
       {error && (
-        <p className="mt-2 text-[13px] text-red-400">{error}</p>
+        <p className="mt-2 text-[13px] text-red-500">{error}</p>
       )}
 
       {/* File list */}
@@ -152,21 +152,21 @@ export default function FileUploader({
           {files.map((entry, index) => (
             <div
               key={`${entry.meta.name}-${index}`}
-              className="flex items-center gap-3 bg-[#111827]/50 border border-white/[0.04] rounded-lg px-4 py-3"
+              className="flex items-center gap-3 bg-gray-50 border border-gray-100 rounded-lg px-4 py-3"
             >
-              <svg className="w-4 h-4 text-[#5A6478] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+              <svg className="w-4 h-4 text-gray-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
               </svg>
 
               <div className="flex-1 min-w-0">
-                <p className="text-[13px] text-white truncate">{entry.meta.name}</p>
-                <p className="text-[11px] text-[#5A6478]">{formatFileSize(entry.meta.size)}</p>
+                <p className="text-[13px] text-gray-900 truncate">{entry.meta.name}</p>
+                <p className="text-[11px] text-gray-400">{formatFileSize(entry.meta.size)}</p>
               </div>
 
               <select
                 value={entry.meta.category}
                 onChange={(e) => updateCategory(index, e.target.value as FileCategory)}
-                className="text-[12px] bg-[#0B0F1A] border border-white/[0.08] rounded px-2 py-1 text-[#8B95A5] appearance-none cursor-pointer"
+                className="text-[12px] bg-white border border-gray-200 rounded px-2 py-1 text-gray-500 appearance-none cursor-pointer"
               >
                 {(Object.entries(FILE_CATEGORY_LABELS) as [FileCategory, string][]).map(([value, label]) => (
                   <option key={value} value={value}>{label}</option>
@@ -175,7 +175,7 @@ export default function FileUploader({
 
               <button
                 onClick={() => removeFile(index)}
-                className="text-[#5A6478] hover:text-red-400 transition-colors p-1"
+                className="text-gray-400 hover:text-red-500 transition-colors p-1"
               >
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -191,7 +191,7 @@ export default function FileUploader({
         <svg className="w-3.5 h-3.5 text-[#5C61F6] flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
         </svg>
-        <p className="text-[11px] text-[#5A6478]">
+        <p className="text-[11px] text-gray-400">
           Files are processed in-memory only. Content is analyzed once, PII is stripped,
           and no file data is stored on our servers. Only the sanitized analysis output is saved.
         </p>

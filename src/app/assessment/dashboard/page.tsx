@@ -35,8 +35,8 @@ export default function DashboardPage() {
 
   return (
     <div className="max-w-4xl mx-auto px-6 sm:px-10 py-12">
-      <h1 className="text-[28px] font-bold text-white mb-2">My Plans</h1>
-      <p className="text-[14px] text-[#8B95A5] mb-8">
+      <h1 className="text-[28px] font-bold text-gray-900 mb-2">My Plans</h1>
+      <p className="text-[14px] text-gray-500 mb-8">
         View your AI action plans and add-ons.
       </p>
 
@@ -47,7 +47,7 @@ export default function DashboardPage() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Enter the email you used"
-          className="flex-1 bg-[#111827]/50 border border-white/[0.08] rounded-lg px-4 py-2.5 text-[14px] text-[#E2E8F0] placeholder:text-[#3A4250] outline-none focus:border-[#5C61F6]"
+          className="flex-1 bg-gray-50 border border-gray-200 rounded-lg px-4 py-2.5 text-[14px] text-gray-900 placeholder:text-gray-400 outline-none focus:border-[#5C61F6]"
           required
         />
         <button
@@ -60,7 +60,7 @@ export default function DashboardPage() {
       </form>
 
       {error && (
-        <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-4 mb-6 text-[13px] text-red-400">
+        <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6 text-[13px] text-red-600">
           {error}
         </div>
       )}
@@ -68,7 +68,7 @@ export default function DashboardPage() {
       {/* Results */}
       {searched && assessments.length === 0 && (
         <div className="text-center py-16">
-          <p className="text-[#5A6478] text-[14px] mb-4">No plans found for this email.</p>
+          <p className="text-gray-400 text-[14px] mb-4">No plans found for this email.</p>
           <Link
             href="/assessment/start"
             className="text-[#5C61F6] hover:underline text-[14px]"
@@ -83,14 +83,14 @@ export default function DashboardPage() {
           {assessments.map((assessment) => (
             <div
               key={assessment.id}
-              className="bg-[#111827]/60 border border-white/[0.06] rounded-xl p-6 hover:border-white/[0.1] transition-colors"
+              className="bg-gray-50 border border-gray-200 rounded-xl p-6 hover:border-gray-300 transition-colors"
             >
               <div className="flex items-start justify-between">
                 <div>
-                  <h3 className="text-[16px] font-semibold text-white">
+                  <h3 className="text-[16px] font-semibold text-gray-900">
                     {assessment.intake?.organizationName || "Assessment"}
                   </h3>
-                  <p className="text-[13px] text-[#5A6478] mt-1">
+                  <p className="text-[13px] text-gray-400 mt-1">
                     {assessment.intake?.industry ? INDUSTRY_LABELS[assessment.intake.industry] : ""} |{" "}
                     {new Date(assessment.createdAt).toLocaleDateString("en-US", {
                       year: "numeric",
@@ -105,8 +105,8 @@ export default function DashboardPage() {
               {/* AI Readiness Score */}
               {assessment.report?.organizationProfile.aiReadinessScore && (
                 <div className="mt-4 flex items-center gap-3">
-                  <span className="text-[12px] text-[#5A6478]">AI Readiness:</span>
-                  <div className="flex-1 bg-[#1a2032] rounded-full h-1.5">
+                  <span className="text-[12px] text-gray-400">AI Readiness:</span>
+                  <div className="flex-1 bg-gray-200 rounded-full h-1.5">
                     <div
                       className="bg-[#5C61F6] h-1.5 rounded-full"
                       style={{ width: `${assessment.report.organizationProfile.aiReadinessScore * 10}%` }}
@@ -131,18 +131,18 @@ export default function DashboardPage() {
                 {!assessment.paid && assessment.status === "complete" && (
                   <Link
                     href={`/assessment/report?id=${assessment.id}&preview=true`}
-                    className="text-[12px] font-medium text-amber-400 hover:underline"
+                    className="text-[12px] font-medium text-amber-500 hover:underline"
                   >
                     Unlock Full Report
                   </Link>
                 )}
                 {assessment.paid && !assessment.addOns.policyAndPrompts && (
-                  <span className="text-[12px] text-[#5A6478]">
+                  <span className="text-[12px] text-gray-400">
                     Prompts & guidelines add-on available
                   </span>
                 )}
                 {assessment.addOns.policyAndPrompts && (
-                  <span className="text-[12px] text-green-400 flex items-center gap-1">
+                  <span className="text-[12px] text-green-600 flex items-center gap-1">
                     <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                     </svg>
@@ -156,15 +156,15 @@ export default function DashboardPage() {
       )}
 
       {/* Info section */}
-      <div className="mt-12 border-t border-white/[0.06] pt-8">
-        <h2 className="text-[14px] font-semibold text-white mb-4">About your data</h2>
-        <div className="grid sm:grid-cols-2 gap-6 text-[13px] text-[#8B95A5]">
+      <div className="mt-12 border-t border-gray-200 pt-8">
+        <h2 className="text-[14px] font-semibold text-gray-900 mb-4">About your data</h2>
+        <div className="grid sm:grid-cols-2 gap-6 text-[13px] text-gray-500">
           <div>
-            <h3 className="font-medium text-white mb-1">What we store</h3>
+            <h3 className="font-medium text-gray-900 mb-1">What we store</h3>
             <p>Only your email, questionnaire answers, and the AI-generated plan. No uploaded file content is ever stored.</p>
           </div>
           <div>
-            <h3 className="font-medium text-white mb-1">Updating your plan</h3>
+            <h3 className="font-medium text-gray-900 mb-1">Updating your plan</h3>
             <p>Start a new plan anytime with updated information as your role or work changes. Each plan builds on the latest context you provide.</p>
           </div>
         </div>
@@ -176,14 +176,14 @@ export default function DashboardPage() {
 function StatusBadge({ status, paid }: { status: string; paid: boolean }) {
   if (status === "complete" && paid) {
     return (
-      <span className="text-[11px] font-bold text-green-400 bg-green-400/10 border border-green-400/20 px-2 py-0.5 rounded">
+      <span className="text-[11px] font-bold text-green-700 bg-green-50 border border-green-200 px-2 py-0.5 rounded">
         COMPLETE
       </span>
     );
   }
   if (status === "complete" && !paid) {
     return (
-      <span className="text-[11px] font-bold text-amber-400 bg-amber-400/10 border border-amber-400/20 px-2 py-0.5 rounded">
+      <span className="text-[11px] font-bold text-amber-600 bg-amber-50 border border-amber-200 px-2 py-0.5 rounded">
         PREVIEW
       </span>
     );
@@ -196,7 +196,7 @@ function StatusBadge({ status, paid }: { status: string; paid: boolean }) {
     );
   }
   return (
-    <span className="text-[11px] font-bold text-[#5A6478] bg-white/[0.04] border border-white/[0.06] px-2 py-0.5 rounded">
+    <span className="text-[11px] font-bold text-gray-500 bg-gray-50 border border-gray-200 px-2 py-0.5 rounded">
       {status.toUpperCase()}
     </span>
   );
