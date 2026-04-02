@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "How much will AI increase economic growth?",
+      "author": "Stefan Schubert",
+      "publisher": "The Update Brief (Substack)",
+      "date": "2026-04-02",
+      "url": "https://open.substack.com/pub/theupdatebrief/p/how-much-will-ai-increase-economic",
+      "takeaway": "Commentary synthesizing expert debate around the FRI survey. Rapid AI scenario yields only +1.5pp annual GDP growth above slow scenario (+45% cumulative over 25 years). Economists far more conservative than AI experts on growth impact. Highlights social backlash as key constraint (Narayanan), historical diffusion precedent (Novosad), and possibility of Coasean Singularity disrupting adoption models (Imas). Key puzzle: why don't experts expect higher growth even under rapid progress?",
+      "weekFeatured": "2026-04-02",
+      "tier": 4
+    },
+    {
       "title": "How AI may reshape career pathways to better jobs",
       "author": "Justin Heck, Mark Muro, Shriya Methkupally, Joseph Siegmund",
       "publisher": "Brookings Metro / Opportunity@Work",
