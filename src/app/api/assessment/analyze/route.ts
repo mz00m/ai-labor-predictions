@@ -101,9 +101,9 @@ export async function POST(req: NextRequest) {
             price_data: {
               currency: "usd",
               product_data: {
-                name: "AI Adoption Assessment - Full Report",
+                name: "Your AI Action Plan - Full Report",
                 description:
-                  "Comprehensive AI adoption roadmap with task analysis, tool recommendations, and implementation plan",
+                  "Personalized AI action plan with task-by-task analysis, tool recommendations, and step-by-step roadmap",
               },
               unit_amount: 10000,
             },

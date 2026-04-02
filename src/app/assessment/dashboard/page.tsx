@@ -35,9 +35,9 @@ export default function DashboardPage() {
 
   return (
     <div className="max-w-4xl mx-auto px-6 sm:px-10 py-12">
-      <h1 className="text-[28px] font-bold text-white mb-2">My Reports</h1>
+      <h1 className="text-[28px] font-bold text-white mb-2">My Plans</h1>
       <p className="text-[14px] text-[#8B95A5] mb-8">
-        View and manage your AI adoption assessments.
+        View your AI action plans and add-ons.
       </p>
 
       {/* Email lookup */}
@@ -46,7 +46,7 @@ export default function DashboardPage() {
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="Enter the email used for your assessment"
+          placeholder="Enter the email you used"
           className="flex-1 bg-[#111827]/50 border border-white/[0.08] rounded-lg px-4 py-2.5 text-[14px] text-[#E2E8F0] placeholder:text-[#3A4250] outline-none focus:border-[#5C61F6]"
           required
         />
@@ -55,7 +55,7 @@ export default function DashboardPage() {
           disabled={loading}
           className="bg-[#5C61F6] hover:bg-[#4F52D4] text-white text-[13px] font-medium px-6 py-2.5 rounded-lg transition-colors disabled:opacity-50"
         >
-          {loading ? "Looking up..." : "Find My Reports"}
+          {loading ? "Looking up..." : "Find My Plans"}
         </button>
       </form>
 
@@ -68,12 +68,12 @@ export default function DashboardPage() {
       {/* Results */}
       {searched && assessments.length === 0 && (
         <div className="text-center py-16">
-          <p className="text-[#5A6478] text-[14px] mb-4">No assessments found for this email.</p>
+          <p className="text-[#5A6478] text-[14px] mb-4">No plans found for this email.</p>
           <Link
             href="/assessment/start"
             className="text-[#5C61F6] hover:underline text-[14px]"
           >
-            Start your first assessment
+            Get your first AI action plan
           </Link>
         </div>
       )}
@@ -138,7 +138,7 @@ export default function DashboardPage() {
                 )}
                 {assessment.paid && !assessment.addOns.policyAndPrompts && (
                   <span className="text-[12px] text-[#5A6478]">
-                    AI Policy add-on available
+                    Prompts & guidelines add-on available
                   </span>
                 )}
                 {assessment.addOns.policyAndPrompts && (
@@ -146,7 +146,7 @@ export default function DashboardPage() {
                     <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                     </svg>
-                    Policy & Prompts included
+                    Prompts & guidelines included
                   </span>
                 )}
               </div>
@@ -161,11 +161,11 @@ export default function DashboardPage() {
         <div className="grid sm:grid-cols-2 gap-6 text-[13px] text-[#8B95A5]">
           <div>
             <h3 className="font-medium text-white mb-1">What we store</h3>
-            <p>Only your email, assessment questionnaire answers, and the AI-generated report output. No uploaded file content is ever stored.</p>
+            <p>Only your email, questionnaire answers, and the AI-generated plan. No uploaded file content is ever stored.</p>
           </div>
           <div>
-            <h3 className="font-medium text-white mb-1">Refining your assessment</h3>
-            <p>Start a new assessment with updated information to get refined recommendations as your organization evolves.</p>
+            <h3 className="font-medium text-white mb-1">Updating your plan</h3>
+            <p>Start a new plan anytime with updated information as your role or work changes. Each plan builds on the latest context you provide.</p>
           </div>
         </div>
       </div>

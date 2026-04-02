@@ -246,11 +246,11 @@ export const COMPANY_SIZE_LABELS: Record<CompanySize, string> = {
 };
 
 export const AI_MATURITY_LABELS: Record<AiMaturityLevel, string> = {
-  "none": "No AI usage currently",
-  "exploring": "Exploring / researching AI options",
-  "piloting": "Running small pilots or experiments",
-  "some-adoption": "Some teams actively using AI tools",
-  "widespread": "Widespread adoption across the organization",
+  "none": "I haven't really used AI tools yet",
+  "exploring": "I've tried ChatGPT or similar a few times",
+  "piloting": "I use AI occasionally for specific tasks",
+  "some-adoption": "AI is part of my regular workflow",
+  "widespread": "I use AI tools daily across most of my work",
 };
 
 export const FILE_CATEGORY_LABELS: Record<FileCategory, string> = {

@@ -19,8 +19,8 @@ export async function POST(req: NextRequest) {
     const isAddOn = addOn === "policy-prompts";
     const amount = isAddOn ? 10000 : 10000; // $100.00 in cents
     const description = isAddOn
-      ? "AI Policy & Prompt Library Add-on"
-      : "AI Adoption Assessment - Full Report";
+      ? "AI Prompts & Guidelines Add-on"
+      : "Your AI Action Plan - Full Report";
 
     const stripe = getStripe();
     const session = await stripe.checkout.sessions.create({
@@ -33,8 +33,8 @@ export async function POST(req: NextRequest) {
             product_data: {
               name: description,
               description: isAddOn
-                ? "Custom AI usage policy and prompt library tailored to your organization"
-                : "Comprehensive AI adoption roadmap with task analysis, tool recommendations, and implementation plan",
+                ? "Ready-to-use prompts and AI guidelines tailored to your actual workflows"
+                : "Personalized AI action plan with task-by-task analysis, tool recommendations, and step-by-step roadmap",
             },
             unit_amount: amount,
           },

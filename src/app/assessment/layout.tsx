@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "AI Adoption Assessment | jobsdata.ai",
+  title: "AI Action Plan | jobsdata.ai",
   description:
-    "Get a customized AI adoption roadmap for your organization. Actionable recommendations based on your industry, team structure, and current processes.",
+    "Find out exactly which parts of your work AI can handle. A personalized, task-by-task action plan for individual workers and small business teams.",
   openGraph: {
-    title: "AI Adoption Assessment | jobsdata.ai",
+    title: "AI Action Plan | jobsdata.ai",
     description:
-      "Get a customized AI adoption roadmap for your organization. Evidence-based, actionable recommendations.",
+      "Get your time back with a clear AI plan. Personalized recommendations based on your actual tasks and workflows.",
   },
 };
 
@@ -34,7 +34,7 @@ export default function AssessmentLayout({
               href="/assessment"
               className="text-[14px] font-semibold text-white"
             >
-              AI Assessment
+              AI Action Plan
             </Link>
           </div>
           <div className="flex items-center gap-4">
@@ -42,7 +42,7 @@ export default function AssessmentLayout({
               href="/assessment/dashboard"
               className="text-[13px] text-[#8B95A5] hover:text-white transition-colors"
             >
-              My Reports
+              My Plans
             </Link>
             <Link
               href="/assessment/start"
@@ -61,7 +61,7 @@ export default function AssessmentLayout({
       <footer className="border-t border-white/[0.06] mt-20">
         <div className="max-w-6xl mx-auto px-6 sm:px-10 py-8 flex flex-wrap justify-between items-center gap-4">
           <p className="text-[12px] text-[#5A6478]">
-            Powered by jobsdata.ai research &middot; {new Date().getFullYear()}
+            Built on jobsdata.ai research &middot; {new Date().getFullYear()}
           </p>
           <div className="flex gap-6 text-[12px] text-[#5A6478]">
             <Link href="/about" className="hover:text-[#8B95A5] transition-colors">
@@ -71,7 +71,7 @@ export default function AssessmentLayout({
               Methodology
             </Link>
             <span className="cursor-default">
-              Data processed in-memory only &middot; No content stored
+              Your data processed in-memory only &middot; Nothing stored
             </span>
           </div>
         </div>

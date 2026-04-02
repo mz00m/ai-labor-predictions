@@ -13,13 +13,13 @@ import {
 } from "@/lib/assessment/types";
 import { INDUSTRY_TEMPLATES } from "@/lib/assessment/taxonomy";
 
-type Step = "basics" | "scope" | "details" | "upload" | "review";
+type Step = "you" | "scope" | "tasks" | "upload" | "review";
 
 const STEPS: { key: Step; label: string }[] = [
-  { key: "basics", label: "Organization" },
-  { key: "scope", label: "Scope" },
-  { key: "details", label: "Details" },
-  { key: "upload", label: "Documents" },
+  { key: "you", label: "About You" },
+  { key: "scope", label: "Your Role" },
+  { key: "tasks", label: "Your Work" },
+  { key: "upload", label: "Context" },
   { key: "review", label: "Review" },
 ];
 
@@ -48,7 +48,7 @@ const initialFormData: FormData = {
   industry: "",
   industryDetail: "",
   companySize: "",
-  assessmentScope: "full-organization",
+  assessmentScope: "team",
   departmentName: "",
   teamDescription: "",
   primaryFunctions: [],
@@ -63,7 +63,7 @@ const initialFormData: FormData = {
 
 export default function AssessmentStartPage() {
   const router = useRouter();
-  const [step, setStep] = useState<Step>("basics");
+  const [step, setStep] = useState<Step>("you");
   const [form, setForm] = useState<FormData>(initialFormData);
   const [files, setFiles] = useState<FileEntry[]>([]);
   const [submitting, setSubmitting] = useState(false);
@@ -87,11 +87,11 @@ export default function AssessmentStartPage() {
 
   const canAdvance = (): boolean => {
     switch (step) {
-      case "basics":
+      case "you":
         return !!form.email && !!form.organizationName && !!form.industry && !!form.companySize;
       case "scope":
         return true;
-      case "details":
+      case "tasks":
         return form.primaryFunctions.length > 0;
       case "upload":
         return true;
@@ -107,7 +107,6 @@ export default function AssessmentStartPage() {
     setError(null);
 
     try {
-      // Build form data with files for in-memory processing
       const formPayload = new FormData();
       formPayload.append("intake", JSON.stringify({
         organizationName: form.organizationName,
@@ -130,7 +129,6 @@ export default function AssessmentStartPage() {
       formPayload.append("email", form.email);
       formPayload.append("mode", mode);
 
-      // Attach files for in-memory processing
       for (const entry of files) {
         formPayload.append("files", entry.file);
       }
@@ -148,10 +146,8 @@ export default function AssessmentStartPage() {
       const data = await res.json();
 
       if (mode === "preview") {
-        // Show preview, then prompt for payment
         router.push(`/assessment/report?id=${data.assessmentId}&preview=true`);
       } else {
-        // Redirect to Stripe checkout
         if (data.checkoutUrl) {
           window.location.href = data.checkoutUrl;
         } else {
@@ -165,7 +161,6 @@ export default function AssessmentStartPage() {
     }
   };
 
-  // Get industry-specific suggestions
   const industryTemplate = form.industry ? INDUSTRY_TEMPLATES[form.industry] : null;
 
   return (
@@ -198,13 +193,14 @@ export default function AssessmentStartPage() {
         </div>
       </div>
 
-      {/* Step: Basics */}
-      {step === "basics" && (
+      {/* Step: About You */}
+      {step === "you" && (
         <div className="space-y-6">
           <div>
-            <h2 className="text-[24px] font-bold text-white mb-2">Tell us about your organization</h2>
+            <h2 className="text-[24px] font-bold text-white mb-2">Let&apos;s start with the basics</h2>
             <p className="text-[14px] text-[#8B95A5]">
-              This helps us tailor recommendations to your specific context and industry.
+              Tell us where you work and what you do. This helps us tailor everything
+              to your specific situation.
             </p>
           </div>
 
@@ -213,22 +209,22 @@ export default function AssessmentStartPage() {
               type="email"
               value={form.email}
               onChange={(e) => updateField("email", e.target.value)}
-              placeholder="you@company.com"
+              placeholder="you@example.com"
               className="input-field"
             />
           </Field>
 
-          <Field label="Organization name" required>
+          <Field label="Your company or organization" required>
             <input
               type="text"
               value={form.organizationName}
               onChange={(e) => updateField("organizationName", e.target.value)}
-              placeholder="Acme Corp"
+              placeholder="e.g., Smith & Associates, Downtown Bakery, Self-employed"
               className="input-field"
             />
           </Field>
 
-          <Field label="Industry" required>
+          <Field label="Your industry" required>
             <select
               value={form.industry}
               onChange={(e) => updateField("industry", e.target.value as IndustryCategory)}
@@ -247,42 +243,47 @@ export default function AssessmentStartPage() {
                 type="text"
                 value={form.industryDetail}
                 onChange={(e) => updateField("industryDetail", e.target.value)}
-                placeholder="e.g., Veterinary services"
+                placeholder="e.g., Veterinary services, Event planning"
                 className="input-field"
               />
             </Field>
           )}
 
-          <Field label="Company size" required>
+          <Field label="How many people work there?" required>
             <select
               value={form.companySize}
               onChange={(e) => updateField("companySize", e.target.value as CompanySize)}
               className="input-field"
             >
               <option value="">Select size</option>
-              {(Object.entries(COMPANY_SIZE_LABELS) as [CompanySize, string][]).map(([value, label]) => (
-                <option key={value} value={value}>{label}</option>
-              ))}
+              <option value="1-10">Just me / 1-10 people</option>
+              <option value="11-50">11-50 people</option>
+              <option value="51-200">51-200 people</option>
+              <option value="201-500">201-500 people</option>
+              <option value="501-1000">501-1,000 people</option>
+              <option value="1001-5000">1,001-5,000 people</option>
+              <option value="5001+">5,001+ people</option>
             </select>
           </Field>
         </div>
       )}
 
-      {/* Step: Scope */}
+      {/* Step: Your Role */}
       {step === "scope" && (
         <div className="space-y-6">
           <div>
-            <h2 className="text-[24px] font-bold text-white mb-2">Assessment scope</h2>
+            <h2 className="text-[24px] font-bold text-white mb-2">What are we looking at?</h2>
             <p className="text-[14px] text-[#8B95A5]">
-              Are we looking at the whole organization, a specific department, or a team?
+              We can focus on just your work, your team, or the whole business.
+              The more focused, the more specific the recommendations.
             </p>
           </div>
 
           <div className="grid sm:grid-cols-3 gap-3">
             {([
-              { value: "full-organization", label: "Full Organization", desc: "All departments and functions" },
-              { value: "department", label: "Single Department", desc: "One department or division" },
-              { value: "team", label: "Specific Team", desc: "A focused team or function" },
+              { value: "team", label: "My Work", desc: "Focus on my specific role and tasks" },
+              { value: "department", label: "My Team", desc: "My department or team's workflows" },
+              { value: "full-organization", label: "The Whole Business", desc: "All functions across the business" },
             ] as const).map((option) => (
               <button
                 key={option.value}
@@ -300,29 +301,29 @@ export default function AssessmentStartPage() {
           </div>
 
           {form.assessmentScope === "department" && (
-            <Field label="Department name">
+            <Field label="What team or department?">
               <input
                 type="text"
                 value={form.departmentName}
                 onChange={(e) => updateField("departmentName", e.target.value)}
-                placeholder="e.g., Marketing, Operations, Finance"
+                placeholder="e.g., Marketing, Operations, Front office"
                 className="input-field"
               />
             </Field>
           )}
 
           {form.assessmentScope === "team" && (
-            <Field label="Describe the team">
+            <Field label="Describe what you do day-to-day">
               <textarea
                 value={form.teamDescription}
                 onChange={(e) => updateField("teamDescription", e.target.value)}
-                placeholder="e.g., Customer support team handling inbound inquiries via email and phone"
+                placeholder="e.g., I handle client intake, scheduling, invoicing, and follow-up communications. I also manage our social media and monthly newsletter."
                 className="input-field min-h-[80px] resize-y"
               />
             </Field>
           )}
 
-          <Field label="Current AI usage">
+          <Field label="How much are you using AI today?">
             <select
               value={form.currentAiUsage}
               onChange={(e) => updateField("currentAiUsage", e.target.value as AiMaturityLevel)}
@@ -336,21 +337,21 @@ export default function AssessmentStartPage() {
         </div>
       )}
 
-      {/* Step: Details */}
-      {step === "details" && (
+      {/* Step: Your Work */}
+      {step === "tasks" && (
         <div className="space-y-6">
           <div>
-            <h2 className="text-[24px] font-bold text-white mb-2">Functions and priorities</h2>
+            <h2 className="text-[24px] font-bold text-white mb-2">What does your work look like?</h2>
             <p className="text-[14px] text-[#8B95A5]">
               {industryTemplate
-                ? `Based on your industry, here are common functions. Select all that apply.`
-                : `Select the key functions your organization performs.`}
+                ? `Here are common tasks in your industry. Select everything that's part of your work.`
+                : `Select the tasks and functions that are part of your work.`}
             </p>
           </div>
 
           {industryTemplate && (
             <div>
-              <label className="block text-[13px] font-medium text-[#C5CDD8] mb-3">Key functions</label>
+              <label className="block text-[13px] font-medium text-[#C5CDD8] mb-3">Tasks I spend time on</label>
               <div className="flex flex-wrap gap-2">
                 {industryTemplate.departments.flatMap((d) => d.keyFunctions).map((fn) => (
                   <button
@@ -371,7 +372,7 @@ export default function AssessmentStartPage() {
 
           {industryTemplate && (
             <div>
-              <label className="block text-[13px] font-medium text-[#C5CDD8] mb-3">Key roles in scope</label>
+              <label className="block text-[13px] font-medium text-[#C5CDD8] mb-3">My role (or roles I work with)</label>
               <div className="flex flex-wrap gap-2">
                 {industryTemplate.departments.flatMap((d) => d.typicalRoles).map((role) => (
                   <button
@@ -391,16 +392,17 @@ export default function AssessmentStartPage() {
           )}
 
           <div>
-            <label className="block text-[13px] font-medium text-[#C5CDD8] mb-3">Biggest challenges</label>
+            <label className="block text-[13px] font-medium text-[#C5CDD8] mb-3">Where I feel the most friction</label>
             <div className="flex flex-wrap gap-2">
               {[
                 ...(industryTemplate?.commonChallenges || []),
-                "Staff capacity / burnout",
-                "Process inefficiency",
-                "Communication bottlenecks",
-                "Data management",
-                "Customer / client responsiveness",
-                "Scaling without adding headcount",
+                "Too many repetitive tasks",
+                "Not enough hours in the day",
+                "Communication takes forever",
+                "Data entry and manual processes",
+                "Hard to keep up with everything",
+                "Writing takes too long",
+                "Searching for information",
               ].filter((v, i, a) => a.indexOf(v) === i).map((challenge) => (
                 <button
                   key={challenge}
@@ -418,18 +420,18 @@ export default function AssessmentStartPage() {
           </div>
 
           <div>
-            <label className="block text-[13px] font-medium text-[#C5CDD8] mb-3">Primary goals for AI adoption</label>
+            <label className="block text-[13px] font-medium text-[#C5CDD8] mb-3">What I&apos;m hoping AI can help with</label>
             <div className="flex flex-wrap gap-2">
               {[
-                "Reduce repetitive tasks",
-                "Improve customer/client service",
-                "Speed up document creation",
-                "Better data analysis and reporting",
-                "Reduce costs",
-                "Improve quality / accuracy",
-                "Scale operations",
-                "Competitive advantage",
-                "Staff development / upskilling",
+                "Get repetitive tasks off my plate",
+                "Write faster (emails, reports, proposals)",
+                "Make better use of data I already have",
+                "Respond to clients/customers faster",
+                "Keep better organized",
+                "Learn new skills",
+                "Free up time for creative / strategic work",
+                "Stop doing things that don't need a human",
+                "Help my team work more efficiently",
               ].map((goal) => (
                 <button
                   key={goal}
@@ -446,12 +448,12 @@ export default function AssessmentStartPage() {
             </div>
           </div>
 
-          <Field label="Current tools (comma-separated)">
+          <Field label="Tools I use regularly (comma-separated)">
             <input
               type="text"
               value={form.currentTools}
               onChange={(e) => updateField("currentTools", e.target.value)}
-              placeholder="e.g., QuickBooks, Slack, Google Workspace, Salesforce"
+              placeholder="e.g., Google Docs, QuickBooks, Slack, Excel, Canva"
               className="input-field"
             />
           </Field>
@@ -462,17 +464,18 @@ export default function AssessmentStartPage() {
       {step === "upload" && (
         <div className="space-y-6">
           <div>
-            <h2 className="text-[24px] font-bold text-white mb-2">Upload documents (optional)</h2>
+            <h2 className="text-[24px] font-bold text-white mb-2">Help us understand your work better (optional)</h2>
             <p className="text-[14px] text-[#8B95A5]">
-              The more context you provide, the more specific our recommendations.
-              All files are processed in-memory and never stored.
+              The more context you share, the more specific your plan will be.
+              Upload anything that describes what you do — or just skip this step.
+              Everything is processed in-memory and never stored.
             </p>
           </div>
 
           {industryTemplate && (
             <div className="bg-[#111827]/40 border border-white/[0.04] rounded-lg p-4">
               <p className="text-[12px] font-semibold text-[#5C61F6] uppercase tracking-wider mb-2">
-                Suggested uploads for your industry
+                Things that help us give better recommendations
               </p>
               <ul className="space-y-1">
                 {industryTemplate.suggestedUploads.map((item) => (
@@ -486,7 +489,7 @@ export default function AssessmentStartPage() {
 
           <FileUploader files={files} onFilesChange={setFiles} />
 
-          <Field label="Website URL (optional)">
+          <Field label="Your company website (optional)">
             <input
               type="url"
               value={form.websiteUrl}
@@ -495,15 +498,15 @@ export default function AssessmentStartPage() {
               className="input-field"
             />
             <p className="text-[11px] text-[#5A6478] mt-1">
-              We can review your website to understand your services, team structure, and public-facing operations.
+              We&apos;ll review your website to understand what your business does and how you serve clients.
             </p>
           </Field>
 
-          <Field label="Additional context (optional)">
+          <Field label="Anything else we should know? (optional)">
             <textarea
               value={form.additionalContext}
               onChange={(e) => updateField("additionalContext", e.target.value)}
-              placeholder="Anything else that would help us understand your organization — upcoming changes, specific pain points, budget constraints, etc."
+              placeholder="e.g., I spend most of my time on invoicing and follow-ups. I've tried ChatGPT a few times but don't know how to make it work for my specific tasks."
               className="input-field min-h-[100px] resize-y"
               maxLength={2000}
             />
@@ -515,21 +518,25 @@ export default function AssessmentStartPage() {
       {step === "review" && (
         <div className="space-y-6">
           <div>
-            <h2 className="text-[24px] font-bold text-white mb-2">Review and submit</h2>
+            <h2 className="text-[24px] font-bold text-white mb-2">Ready to go</h2>
             <p className="text-[14px] text-[#8B95A5]">
-              Review your information below, then choose to get a free preview or unlock the full report.
+              Here&apos;s what we know. Get a free preview first, or jump straight to your full plan.
             </p>
           </div>
 
           <div className="bg-[#111827]/60 border border-white/[0.06] rounded-xl p-6 space-y-4">
-            <ReviewRow label="Organization" value={form.organizationName} />
+            <ReviewRow label="You" value={form.email} />
+            <ReviewRow label="Company" value={form.organizationName} />
             <ReviewRow label="Industry" value={form.industry ? INDUSTRY_LABELS[form.industry] : "-"} />
             <ReviewRow label="Size" value={form.companySize ? COMPANY_SIZE_LABELS[form.companySize] : "-"} />
-            <ReviewRow label="Scope" value={form.assessmentScope.replace("-", " ")} />
-            {form.departmentName && <ReviewRow label="Department" value={form.departmentName} />}
-            <ReviewRow label="AI maturity" value={AI_MATURITY_LABELS[form.currentAiUsage]} />
-            <ReviewRow label="Functions" value={form.primaryFunctions.join(", ") || "None selected"} />
-            <ReviewRow label="Challenges" value={form.biggestChallenges.join(", ") || "None selected"} />
+            <ReviewRow label="Focus" value={
+              form.assessmentScope === "team" ? "My work" :
+              form.assessmentScope === "department" ? `My team (${form.departmentName || "not specified"})` :
+              "The whole business"
+            } />
+            <ReviewRow label="AI experience" value={AI_MATURITY_LABELS[form.currentAiUsage]} />
+            <ReviewRow label="Tasks" value={form.primaryFunctions.join(", ") || "None selected"} />
+            <ReviewRow label="Friction" value={form.biggestChallenges.join(", ") || "None selected"} />
             <ReviewRow label="Goals" value={form.goals.join(", ") || "None selected"} />
             <ReviewRow label="Documents" value={files.length > 0 ? `${files.length} file(s)` : "None"} />
             {form.websiteUrl && <ReviewRow label="Website" value={form.websiteUrl} />}
@@ -547,19 +554,19 @@ export default function AssessmentStartPage() {
               disabled={submitting}
               className="w-full border border-white/[0.1] text-[#8B95A5] hover:text-white hover:border-white/[0.2] font-medium text-[14px] py-3 rounded-lg transition-colors disabled:opacity-50"
             >
-              {submitting ? "Processing..." : "Get Free Preview"}
+              {submitting ? "Analyzing..." : "Get Free Preview"}
             </button>
             <button
               onClick={() => handleSubmit("full")}
               disabled={submitting}
               className="w-full bg-[#5C61F6] hover:bg-[#4F52D4] text-white font-semibold text-[14px] py-3 rounded-lg transition-colors disabled:opacity-50"
             >
-              {submitting ? "Processing..." : "Unlock Full Report — $100"}
+              {submitting ? "Analyzing..." : "Get Full Plan — $100"}
             </button>
           </div>
 
           <p className="text-[12px] text-[#5A6478] text-center">
-            Payment processed securely via Stripe. Your data is processed in-memory only.
+            Secure payment via Stripe. Your files are processed in-memory only — nothing stored.
           </p>
         </div>
       )}
@@ -568,7 +575,7 @@ export default function AssessmentStartPage() {
       {step !== "review" && (
         <div className="flex justify-between mt-10">
           <button
-            onClick={() => setStep(STEPS[currentStepIndex - 1]?.key || "basics")}
+            onClick={() => setStep(STEPS[currentStepIndex - 1]?.key || "you")}
             disabled={currentStepIndex === 0}
             className="text-[13px] text-[#5A6478] hover:text-white disabled:opacity-30 disabled:cursor-default transition-colors"
           >

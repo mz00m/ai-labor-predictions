@@ -80,7 +80,7 @@ export default function ReportPage() {
           <div className="h-8 bg-white/[0.06] rounded w-64 mx-auto mb-4" />
           <div className="h-4 bg-white/[0.04] rounded w-96 mx-auto" />
         </div>
-        <p className="mt-8 text-[14px] text-[#5A6478]">Loading your assessment...</p>
+        <p className="mt-8 text-[14px] text-[#5A6478]">Building your plan...</p>
       </div>
     );
   }
@@ -92,7 +92,7 @@ export default function ReportPage() {
           {error || "Report not found"}
         </h1>
         <Link href="/assessment/start" className="text-[#5C61F6] hover:underline">
-          Start a new assessment
+          Start a new plan
         </Link>
       </div>
     );
@@ -106,7 +106,7 @@ export default function ReportPage() {
       {/* Payment success banner */}
       {paymentSuccess && (
         <div className="bg-green-500/10 border border-green-500/20 rounded-lg p-4 mb-8 text-[14px] text-green-400">
-          Payment successful. Your full report is now available.
+          Payment successful. Your full plan is ready.
         </div>
       )}
 
@@ -114,7 +114,7 @@ export default function ReportPage() {
       <div className="flex items-start justify-between mb-10">
         <div>
           <h1 className="text-[28px] sm:text-[36px] font-bold text-white">
-            AI Adoption Assessment
+            Your AI Action Plan
           </h1>
           <p className="text-[15px] text-[#8B95A5] mt-1">
             {assessment.intake.organizationName}
@@ -138,7 +138,7 @@ export default function ReportPage() {
       </div>
 
       {/* Executive Summary */}
-      <ReportSection title="Executive Summary">
+      <ReportSection title="Your AI Opportunity Summary">
         <p className="text-[14px] text-[#C5CDD8] leading-relaxed whitespace-pre-line">
           {report.executiveSummary}
         </p>
@@ -149,7 +149,7 @@ export default function ReportPage() {
         <div className="bg-[#111827]/60 border border-white/[0.06] rounded-xl p-6 mb-6">
           <div className="flex items-center justify-between">
             <div>
-              <h3 className="text-[14px] font-semibold text-white">AI Readiness Score</h3>
+              <h3 className="text-[14px] font-semibold text-white">Your AI Readiness</h3>
               <p className="text-[12px] text-[#5A6478] mt-1">{report.organizationProfile.summary}</p>
             </div>
             <div className="text-[36px] font-black text-[#5C61F6]">
@@ -167,7 +167,7 @@ export default function ReportPage() {
 
       {/* Task Analysis */}
       {report.taskAnalysis.length > 0 && (
-        <ReportSection title="Task-Level AI Opportunity Analysis">
+        <ReportSection title="Where AI Can Help Most">
           <div className="space-y-3">
             {report.taskAnalysis.map((task, i) => (
               <div key={i} className="bg-[#111827]/40 border border-white/[0.04] rounded-lg p-4">
@@ -195,17 +195,17 @@ export default function ReportPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0B0F1A] z-10" />
           <div className="relative z-20 text-center py-12 bg-[#111827]/80 border border-[#5C61F6]/20 rounded-xl">
             <h3 className="text-[20px] font-bold text-white mb-3">
-              Unlock Your Full Report
+              Unlock Your Full Plan
             </h3>
             <p className="text-[14px] text-[#8B95A5] mb-6 max-w-md mx-auto">
-              Get the complete analysis with tool recommendations, implementation roadmap,
-              ROI projections, and actionable next steps.
+              Get the complete plan with specific tool recommendations, your
+              step-by-step action plan, time savings estimates, and skills to build.
             </p>
             <button
               onClick={handleUnlock}
               className="bg-[#5C61F6] hover:bg-[#4F52D4] text-white font-semibold text-[14px] px-8 py-3 rounded-lg transition-colors"
             >
-              Unlock Full Report — $100
+              Unlock Full Plan — $100
             </button>
           </div>
         </div>
@@ -216,7 +216,7 @@ export default function ReportPage() {
         <>
           {/* Tool Recommendations */}
           {report.toolRecommendations.length > 0 && (
-            <ReportSection title="Tool Recommendations">
+            <ReportSection title="Tools to Try">
               <div className="space-y-3">
                 {report.toolRecommendations.map((tool, i) => (
                   <div key={i} className="bg-[#111827]/40 border border-white/[0.04] rounded-lg p-4">
@@ -241,11 +241,11 @@ export default function ReportPage() {
           )}
 
           {/* Implementation Roadmap */}
-          <ReportSection title="Implementation Roadmap">
+          <ReportSection title="Your Action Plan">
             {(["immediate", "mediumTerm", "longTerm"] as const).map((phase) => {
               const data = report.implementationRoadmap[phase];
-              const label = phase === "immediate" ? "Immediate (0-3 months)" :
-                phase === "mediumTerm" ? "Medium-Term (3-6 months)" : "Long-Term (6-12+ months)";
+              const label = phase === "immediate" ? "Start This Week (0-3 months)" :
+                phase === "mediumTerm" ? "Build On It (3-6 months)" : "Level Up (6-12+ months)";
 
               return (
                 <div key={phase} className="mb-6">
@@ -288,7 +288,7 @@ export default function ReportPage() {
           </ReportSection>
 
           {/* Risk Assessment */}
-          <ReportSection title="Risk Assessment">
+          <ReportSection title="Things to Keep in Mind">
             <div className="space-y-4">
               <div>
                 <span className="text-[12px] font-semibold text-[#8B95A5]">Overall Risk</span>
@@ -322,7 +322,7 @@ export default function ReportPage() {
 
           {/* ROI */}
           {report.roiProjections.length > 0 && (
-            <ReportSection title="ROI Projections">
+            <ReportSection title="Time & Value You Could Save">
               <div className="space-y-3">
                 {report.roiProjections.map((roi, i) => (
                   <div key={i} className="bg-[#111827]/40 border border-white/[0.04] rounded-lg p-4">
@@ -351,7 +351,7 @@ export default function ReportPage() {
 
           {/* Further Evaluation */}
           {report.furtherEvaluation.length > 0 && (
-            <ReportSection title="Recommended Next Steps">
+            <ReportSection title="What to Do Next">
               <ul className="space-y-2">
                 {report.furtherEvaluation.map((item, i) => (
                   <li key={i} className="text-[13px] text-[#C5CDD8] flex gap-2">
@@ -366,18 +366,32 @@ export default function ReportPage() {
           {!assessment.addOns.policyAndPrompts && (
             <div className="mt-10 bg-[#111827]/60 border border-[#5C61F6]/20 rounded-xl p-6 text-center">
               <h3 className="text-[18px] font-bold text-white mb-2">
-                Want an AI Policy & Prompt Library?
+                Want ready-to-use prompts and guidelines?
               </h3>
               <p className="text-[14px] text-[#8B95A5] mb-4 max-w-lg mx-auto">
-                Get a draft AI usage policy customized to your organization, plus 10-20 ready-to-use
-                prompts matched to your specific workflows.
+                Get AI usage guidelines tailored to your work, plus 10-20 copy-paste prompts
+                built around your actual tasks and workflows.
               </p>
-              <Link
-                href={`/api/assessment/checkout?assessmentId=${assessment.id}&addOn=policy-prompts`}
-                className="inline-block bg-[#5C61F6] hover:bg-[#4F52D4] text-white font-semibold text-[14px] px-6 py-2.5 rounded-lg transition-colors"
+              <button
+                onClick={async () => {
+                  try {
+                    const res = await fetch("/api/assessment/checkout", {
+                      method: "POST",
+                      headers: { "Content-Type": "application/json" },
+                      body: JSON.stringify({
+                        assessmentId: assessment.id,
+                        email: assessment.userId,
+                        addOn: "policy-prompts",
+                      }),
+                    });
+                    const data = await res.json();
+                    if (data.checkoutUrl) window.location.href = data.checkoutUrl;
+                  } catch { /* handle error */ }
+                }}
+                className="bg-[#5C61F6] hover:bg-[#4F52D4] text-white font-semibold text-[14px] px-6 py-2.5 rounded-lg transition-colors"
               >
-                Add AI Policy & Prompts — $100
-              </Link>
+                Add Prompts & Guidelines — $100
+              </button>
             </div>
           )}
         </>
@@ -386,10 +400,10 @@ export default function ReportPage() {
       {/* Footer actions */}
       <div className="mt-10 flex justify-between text-[13px]">
         <Link href="/assessment/dashboard" className="text-[#5A6478] hover:text-white transition-colors">
-          Go to Dashboard
+          My Plans
         </Link>
         <Link href="/assessment/start" className="text-[#5C61F6] hover:underline">
-          Start New Assessment
+          Start a New Plan
         </Link>
       </div>
     </div>
