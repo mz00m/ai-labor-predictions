@@ -3,35 +3,32 @@ import Link from "next/link";
 const PROCESS_STEPS = [
   {
     step: "01",
-    title: "Tell us about your organization",
+    title: "Tell us about your work",
     description:
-      "Industry, team size, department focus, key functions, and current tools. Our guided questionnaire adapts to your specific context.",
+      "Your role, industry, daily tasks, and the tools you already use. Our guided questionnaire adapts to show you what matters for your specific work.",
   },
   {
     step: "02",
-    title: "Upload relevant documents",
+    title: "Share what you can",
     description:
-      "Job descriptions, handbooks, process docs, org charts — whatever helps us understand how your team works. All files are processed in-memory and immediately discarded.",
+      "Job descriptions, process docs, or just a link to your company website. The more we understand your day-to-day, the more specific we can get. Everything is processed in-memory and immediately discarded.",
   },
   {
     step: "03",
-    title: "Receive your AI adoption plan",
+    title: "Get your personalized action plan",
     description:
-      "A detailed, downloadable PDF report with specific tool recommendations, an implementation roadmap, and ROI projections tailored to your organization.",
+      "A downloadable PDF with specific ways AI can save you time on your actual tasks — plus a clear plan for what to try first, what to learn next, and where the biggest wins are.",
   },
 ];
 
 const REPORT_SECTIONS = [
-  { title: "Executive Summary", description: "High-level findings and priority actions" },
-  { title: "Task-Level AI Opportunity Analysis", description: "Every key function scored for AI readiness" },
-  { title: "Tool Recommendations", description: "Specific categories of tools matched to your workflows" },
-  { title: "Risk Assessment", description: "Displacement risk, skill gaps, and change management" },
-  {
-    title: "Implementation Roadmap",
-    description: "Phased plan: immediate (0-3 mo), medium-term (3-6 mo), long-term (1 yr+)",
-  },
-  { title: "ROI Projections", description: "Estimated savings and time-to-value by area" },
-  { title: "Further Evaluation Points", description: "Specific next steps to deepen your AI strategy" },
+  { title: "Your AI Opportunity Summary", description: "Where the biggest time savings are in your work" },
+  { title: "Task-by-Task Analysis", description: "Each of your key tasks scored for AI potential" },
+  { title: "Tool Recommendations", description: "What to use, what it does, and what to expect" },
+  { title: "Your Action Plan", description: "What to start today, this quarter, and this year" },
+  { title: "Skills to Build", description: "The capabilities that will make you more effective with AI" },
+  { title: "Time & Value Projections", description: "Realistic estimates of hours saved per week" },
+  { title: "What to Try Next", description: "Concrete next steps to keep building momentum" },
 ];
 
 const TRUST_POINTS = [
@@ -60,7 +57,25 @@ const TRUST_POINTS = [
       </svg>
     ),
     title: "Research-backed recommendations",
-    description: "Analysis draws on 300+ sources tracking AI's real impact on jobs, wages, and productivity across industries.",
+    description: "Built on 300+ sources tracking AI's real impact on jobs, wages, and productivity across industries.",
+  },
+];
+
+const TESTIMONIAL_SCENARIOS = [
+  {
+    role: "Office Manager",
+    industry: "Small law firm",
+    quote: "I spend 15 hours a week on scheduling, client intake, and document filing. This showed me exactly which of those tasks AI can handle.",
+  },
+  {
+    role: "Executive Director",
+    industry: "Nonprofit",
+    quote: "Grant writing and donor reporting were eating my entire week. Now I have a clear plan for which AI tools to try first.",
+  },
+  {
+    role: "Owner / Operator",
+    industry: "Restaurant",
+    quote: "I didn't know where to start with AI. The action plan broke it down into things I could do this week vs. this quarter.",
   },
 ];
 
@@ -79,19 +94,19 @@ export default function AssessmentLanding() {
         <div className="relative max-w-6xl mx-auto px-6 sm:px-10 pt-20 pb-16">
           <div className="inline-flex items-center gap-2 text-[12px] font-medium text-[#5C61F6] bg-[#5C61F6]/[0.08] rounded-full px-3 py-1 mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-[#5C61F6] animate-pulse" />
-            Powered by jobsdata.ai research
+            Built on jobsdata.ai research
           </div>
 
           <h1 className="text-[40px] sm:text-[56px] font-black tracking-tight text-white leading-[1.05] max-w-3xl">
-            Your organization&apos;s AI
+            Get your time back
             <br />
-            <span className="text-[#5C61F6]">adoption roadmap</span>
+            <span className="text-[#5C61F6]">with a clear AI plan</span>
           </h1>
 
           <p className="mt-5 text-[17px] text-[#8B95A5] leading-relaxed max-w-2xl">
-            A comprehensive, evidence-based assessment of where AI can improve your
-            operations — with specific tool recommendations, implementation timelines,
-            and ROI projections tailored to your industry and team.
+            Find out exactly which parts of your work AI can handle — so you can
+            spend more time on the things that actually need you. A personalized,
+            task-by-task action plan for individual workers and small business teams.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
@@ -99,7 +114,7 @@ export default function AssessmentLanding() {
               href="/assessment/start"
               className="inline-flex items-center justify-center gap-2 bg-[#5C61F6] hover:bg-[#4F52D4] text-white font-semibold text-[15px] px-7 py-3 rounded-lg transition-colors"
             >
-              Start Your Assessment
+              Find My AI Opportunities
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
               </svg>
@@ -116,17 +131,47 @@ export default function AssessmentLanding() {
           <div className="mt-12 flex flex-wrap gap-8 text-[13px]">
             <div>
               <div className="text-[28px] font-black text-white">300+</div>
-              <div className="text-[#5A6478]">Research sources analyzed</div>
+              <div className="text-[#5A6478]">Research sources behind it</div>
             </div>
             <div>
               <div className="text-[28px] font-black text-white">16</div>
-              <div className="text-[#5A6478]">Industry categories</div>
+              <div className="text-[#5A6478]">Industries covered</div>
             </div>
             <div>
               <div className="text-[28px] font-black text-white">PDF</div>
-              <div className="text-[#5A6478]">Downloadable report</div>
+              <div className="text-[#5A6478]">Yours to keep and share</div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Who this is for */}
+      <section className="max-w-6xl mx-auto px-6 sm:px-10 py-16">
+        <h2 className="text-[13px] font-bold uppercase tracking-widest text-[#5C61F6] mb-3">
+          Who this is for
+        </h2>
+        <p className="text-[24px] sm:text-[32px] font-bold text-white mb-6 max-w-2xl">
+          You know AI is changing work. You just need a starting point.
+        </p>
+        <p className="text-[15px] text-[#8B95A5] leading-relaxed max-w-3xl mb-10">
+          Whether you&apos;re an individual contributor looking to level up, a manager trying to
+          help your team work smarter, or a small business owner who wears ten hats — this
+          gives you a clear, practical plan based on what you actually do every day.
+        </p>
+
+        <div className="grid md:grid-cols-3 gap-4">
+          {TESTIMONIAL_SCENARIOS.map((t) => (
+            <div
+              key={t.role}
+              className="bg-[#111827]/40 border border-white/[0.04] rounded-xl p-5"
+            >
+              <p className="text-[13px] text-[#C5CDD8] leading-relaxed italic mb-3">
+                &quot;{t.quote}&quot;
+              </p>
+              <p className="text-[12px] text-[#5C61F6] font-semibold">{t.role}</p>
+              <p className="text-[11px] text-[#5A6478]">{t.industry}</p>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -136,7 +181,7 @@ export default function AssessmentLanding() {
           How it works
         </h2>
         <p className="text-[24px] sm:text-[32px] font-bold text-white mb-10 max-w-2xl">
-          Three steps to a tailored AI strategy
+          Three steps to knowing exactly where to start
         </p>
 
         <div className="grid md:grid-cols-3 gap-6">
@@ -160,10 +205,10 @@ export default function AssessmentLanding() {
       {/* What you get */}
       <section className="max-w-6xl mx-auto px-6 sm:px-10 py-16">
         <h2 className="text-[13px] font-bold uppercase tracking-widest text-[#5C61F6] mb-3">
-          What you receive
+          What you get
         </h2>
         <p className="text-[24px] sm:text-[32px] font-bold text-white mb-10 max-w-2xl">
-          A complete AI adoption plan
+          A plan built around your actual work
         </p>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -214,14 +259,14 @@ export default function AssessmentLanding() {
           Pricing
         </h2>
         <p className="text-[24px] sm:text-[32px] font-bold text-white mb-10 max-w-2xl">
-          Straightforward, one-time pricing
+          One price. Your plan. No subscription.
         </p>
 
         <div className="grid md:grid-cols-2 gap-6 max-w-3xl">
           {/* Core Assessment */}
           <div className="relative bg-[#111827]/60 border-2 border-[#5C61F6]/40 rounded-xl p-6">
             <div className="inline-flex items-center text-[11px] font-bold uppercase tracking-wider text-[#5C61F6] bg-[#5C61F6]/[0.08] rounded-full px-2.5 py-0.5 mb-4">
-              Core Assessment
+              Your AI Action Plan
             </div>
             <div className="mb-4">
               <span className="text-[40px] font-black text-white">$100</span>
@@ -229,14 +274,14 @@ export default function AssessmentLanding() {
             </div>
             <ul className="space-y-2.5 mb-6">
               {[
-                "Full AI opportunity analysis",
-                "Task-level recommendations",
-                "Tool category recommendations",
-                "Implementation roadmap (short/medium/long)",
-                "Risk assessment and skill gap analysis",
-                "ROI projections",
+                "Personalized task-by-task AI analysis",
+                "Specific tool recommendations for your work",
+                "Clear action plan (this week, this quarter, this year)",
+                "Time savings estimates for each opportunity",
+                "Skills roadmap to grow with AI",
                 "Downloadable PDF report",
-                "Account access to refine and update",
+                "Account access to refine and update over time",
+                "Free preview before you buy",
               ].map((item) => (
                 <li key={item} className="flex gap-2 text-[13px] text-[#C5CDD8]">
                   <svg className="w-4 h-4 text-[#5C61F6] flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -265,11 +310,11 @@ export default function AssessmentLanding() {
             </div>
             <ul className="space-y-2.5 mb-6">
               {[
-                "Draft AI usage policy for your org",
-                "Customized prompt library (10-20 prompts)",
-                "Prompts matched to your workflows",
-                "Data handling and ethics guidelines",
-                "Available after initial assessment",
+                "AI usage guidelines for your team or business",
+                "Custom prompt library (10-20 prompts)",
+                "Prompts matched to your actual workflows",
+                "Data handling and quality assurance tips",
+                "Available after your initial plan",
               ].map((item) => (
                 <li key={item} className="flex gap-2 text-[13px] text-[#C5CDD8]">
                   <svg className="w-4 h-4 text-[#5A6478] flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -289,27 +334,27 @@ export default function AssessmentLanding() {
       {/* Industries */}
       <section className="max-w-6xl mx-auto px-6 sm:px-10 py-16">
         <h2 className="text-[13px] font-bold uppercase tracking-widest text-[#5C61F6] mb-3">
-          Built for
+          Works across industries
         </h2>
         <p className="text-[24px] sm:text-[32px] font-bold text-white mb-10 max-w-2xl">
-          Small and mid-size organizations across industries
+          Tailored to how work actually gets done in your field
         </p>
 
         <div className="flex flex-wrap gap-2">
           {[
             "Nonprofits",
-            "Restaurants",
+            "Restaurants & Hospitality",
             "Manufacturing",
-            "Healthcare",
+            "Healthcare & Medical",
             "Retail",
             "Professional Services",
-            "Accounting",
+            "Accounting & Finance",
             "Legal",
             "Education",
-            "Construction",
+            "Construction & Trades",
             "Real Estate",
             "Media & Marketing",
-            "Logistics",
+            "Logistics & Transportation",
             "Government",
           ].map((industry) => (
             <span
@@ -325,17 +370,19 @@ export default function AssessmentLanding() {
       {/* Final CTA */}
       <section className="max-w-6xl mx-auto px-6 sm:px-10 py-16 text-center">
         <h2 className="text-[28px] sm:text-[36px] font-bold text-white mb-4">
-          Ready to assess your AI opportunities?
+          AI is already changing your industry.
+          <br />
+          <span className="text-[#5C61F6]">Find out where it can help you.</span>
         </h2>
         <p className="text-[15px] text-[#8B95A5] mb-8 max-w-xl mx-auto">
-          Start with a free preview to see how it works, then unlock your full
-          report for $100.
+          Start with a free preview. If it&apos;s useful, unlock the full plan for $100.
+          No subscription, no recurring charges.
         </p>
         <Link
           href="/assessment/start"
           className="inline-flex items-center justify-center gap-2 bg-[#5C61F6] hover:bg-[#4F52D4] text-white font-semibold text-[15px] px-8 py-3 rounded-lg transition-colors"
         >
-          Start Your Assessment
+          Start Your Free Preview
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
           </svg>
