@@ -128,7 +128,7 @@ async function scrapeWithPuppeteer(url: string): Promise<ScrapeResult> {
       return {
         title,
         description: metaDesc,
-        bodyText: [...new Set(bodyParts)].join("\n"),
+        bodyText: Array.from(new Set(bodyParts)).join("\n"),
         headings,
         links: importantLinks.slice(0, 10),
       };
