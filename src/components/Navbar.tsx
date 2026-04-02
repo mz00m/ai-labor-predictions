@@ -49,7 +49,6 @@ const NAV_ENTRIES: NavEntry[] = [
     ],
   },
   { href: "/about", label: "About" },
-  { href: "/assessment", label: "AI Action Plan" },
 ];
 
 function ChevronDown({ className }: { className?: string }) {
