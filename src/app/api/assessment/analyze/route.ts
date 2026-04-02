@@ -92,37 +92,44 @@ export async function POST(req: NextRequest) {
       await saveAssessmentReport(assessmentId, report);
     }
 
-    // For full mode, create Stripe checkout
+    // For full mode, create Stripe checkout (or bypass in dev mode)
     let checkoutUrl: string | undefined;
-    if (mode === "full" && assessmentId && process.env.STRIPE_SECRET_KEY) {
-      const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
-        apiVersion: "2025-03-31.basil" as Stripe.LatestApiVersion,
-      });
+    if (mode === "full" && assessmentId) {
+      if (process.env.ASSESSMENT_DEV_MODE === "true") {
+        // Dev mode: skip Stripe, auto-mark as paid
+        const { markAssessmentPaid } = await import("@/lib/assessment/db");
+        await markAssessmentPaid(assessmentId, "dev_mode_bypass");
+        checkoutUrl = `${process.env.NEXT_PUBLIC_BASE_URL || "https://jobsdata.ai"}/assessment/report?id=${assessmentId}&payment=success`;
+      } else if (process.env.STRIPE_SECRET_KEY) {
+        const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
+          apiVersion: "2025-03-31.basil" as Stripe.LatestApiVersion,
+        });
 
-      const session = await stripe.checkout.sessions.create({
-        payment_method_types: ["card"],
-        customer_email: email,
-        line_items: [
-          {
-            price_data: {
-              currency: "usd",
-              product_data: {
-                name: "Your AI Action Plan - Full Report",
-                description:
-                  "Personalized AI action plan with task-by-task analysis, tool recommendations, and step-by-step roadmap",
+        const session = await stripe.checkout.sessions.create({
+          payment_method_types: ["card"],
+          customer_email: email,
+          line_items: [
+            {
+              price_data: {
+                currency: "usd",
+                product_data: {
+                  name: "Your AI Action Plan - Full Report",
+                  description:
+                    "Personalized AI action plan with task-by-task analysis, tool recommendations, and step-by-step roadmap",
+                },
+                unit_amount: 10000,
               },
-              unit_amount: 10000,
+              quantity: 1,
             },
-            quantity: 1,
-          },
-        ],
-        mode: "payment",
-        success_url: `${process.env.NEXT_PUBLIC_BASE_URL || "https://jobsdata.ai"}/assessment/report?id=${assessmentId}&payment=success`,
-        cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL || "https://jobsdata.ai"}/assessment/report?id=${assessmentId}&preview=true`,
-        metadata: { assessmentId, type: "assessment" },
-      });
+          ],
+          mode: "payment",
+          success_url: `${process.env.NEXT_PUBLIC_BASE_URL || "https://jobsdata.ai"}/assessment/report?id=${assessmentId}&payment=success`,
+          cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL || "https://jobsdata.ai"}/assessment/report?id=${assessmentId}&preview=true`,
+          metadata: { assessmentId, type: "assessment" },
+        });
 
-      checkoutUrl = session.url || undefined;
+        checkoutUrl = session.url || undefined;
+      }
     }
 
     return NextResponse.json({
