@@ -10,13 +10,22 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Brookings Metro",
+    title: "How AI May Reshape Career Pathways to Better Jobs",
+    summary:
+      "15.6M non-degree workers in top AI exposure quartile. ~49% of Gateway-to-Destination career pathways highly AI-exposed. 3.5M workers face both high exposure and low adaptive capacity.",
+    date: "Apr 2",
+    url: "https://www.brookings.edu/articles/how-ai-may-reshape-career-pathways-to-better-jobs/",
+    accent: "border-l-emerald-500",
+  },
+  {
     author: "Forecasting Research Institute",
     title: "Forecasting the Economic Effects of AI",
     summary:
       "69 economists, 52 AI experts, 38 superforecasters surveyed. Unconditional forecasts cluster near trends; rapid scenario (14% prob) implies ~10M AI job losses and 75% wealth concentration in top 10%.",
     date: "Mar 31",
     url: "https://open.substack.com/pub/forecastingresearch/p/forecasting-the-economic-effects-of-ai",
-    accent: "border-l-emerald-500",
+    accent: "border-l-cyan-500",
   },
   {
     author: "Noah Smith (Noahpinion)",
@@ -25,7 +34,7 @@ const articles: Article[] = [
       "Compute constraints give AI a producer-specific bottleneck. Comparative advantage, not absolute advantage. Determines who works. Even if AI surpasses humans at everything, opportunity cost keeps human labor valuable.",
     date: "Mar 28",
     url: "https://www.noahpinion.blog/p/plentiful-high-paying-jobs-in-the-ff9",
-    accent: "border-l-cyan-500",
+    accent: "border-l-amber-500",
   },
   {
     author: "Annie Lowrey (The Atlantic)",
@@ -34,7 +43,7 @@ const articles: Article[] = [
       "Are you coal or a horse? Jevons paradox meets AI: software engineer hiring up 6% YoY even as Block cuts half its staff. Efficiency may expand demand for cognition, not shrink it.",
     date: "Mar 25",
     url: "https://www.theatlantic.com/ideas/2026/03/ai-job-loss-jevons-paradox/686520/",
-    accent: "border-l-amber-500",
+    accent: "border-l-rose-500",
   },
   {
     author: "Lichtinger, Hosseini",
@@ -43,15 +52,6 @@ const articles: Article[] = [
       "Within-task equalization doesn't imply between-occupation equalization. Experiments hold tasks fixed, missing automation channel and seniority dynamics. Net inequality effect remains genuinely open.",
     date: "Mar 26",
     url: "https://guylichtinger.substack.com/p/ai-narrows-performance-gaps-but-does",
-    accent: "border-l-rose-500",
-  },
-  {
-    author: "Tufts Digital Planet",
-    title: "AI and the Emerging Geography of American Job Risk",
-    summary:
-      "9.3M US jobs vulnerable (range 2.7-19.5M), ~6% industry-wide displacement. Information (18%), Finance (17%), Professional Services (16%) hardest hit. Innovation hubs face highest geographic risk. $757B in annual income at risk.",
-    date: "Mar 25",
-    url: "https://digitalplanet.tufts.edu/ai-and-the-emerging-geography-of-american-job-risk-page/",
     accent: "border-l-violet-500",
   },
 ];

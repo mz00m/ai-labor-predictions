@@ -682,6 +682,15 @@
       ],
       "evidenceTier": 2,
       "label": "KPMG: 55% of firms redesigning job roles for AI"
+    },
+    {
+      "date": "2026-04-02",
+      "direction": "neutral",
+      "sourceIds": [
+        "brookings-ai-career-pathways-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Brookings: 12.9M in Destination roles now highly AI-exposed"
     }
   ],
   "sources": [
@@ -1330,6 +1339,16 @@
       "datePublished": "2026-03-01",
       "excerpt": "Redesigning job roles... 55%",
       "dateAdded": "2026-03-31"
+    },
+    {
+      "id": "brookings-ai-career-pathways-2026",
+      "title": "How AI may reshape career pathways to better jobs",
+      "url": "https://www.brookings.edu/articles/how-ai-may-reshape-career-pathways-to-better-jobs/",
+      "publisher": "Brookings Metro / Opportunity@Work",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-02",
+      "excerpt": "Across Destination occupations, 12.9 million workers—or around one-third of all workers in those occupations—may now be highly exposed to AI",
+      "dateAdded": "2026-04-02"
     }
   ]
 }
