@@ -472,6 +472,15 @@
       ],
       "evidenceTier": 3,
       "label": "NYT: Economists shifting from dismissive to 'it's coming'; policy unprepared"
+    },
+    {
+      "date": "2026-04-03",
+      "direction": "neutral",
+      "sourceIds": [
+        "makela-stephany-complement-substitute-2024"
+      ],
+      "evidenceTier": 1,
+      "label": "Oxford/OII: Complementary effects 1.7x larger than substitution; AI demand doubling → 5% rise in complementary skill demand"
     }
   ],
   "sources": [
@@ -872,6 +881,16 @@
       "evidenceTier": 3,
       "datePublished": "2026-04-03",
       "excerpt": "Most still do not see much evidence that A.I. is disrupting the job market. But they are starting to take seriously the possibility that it could someday soon.",
+      "dateAdded": "2026-04-03"
+    },
+    {
+      "id": "makela-stephany-complement-substitute-2024",
+      "title": "Complement or Substitute? How AI Increases the Demand for Human Skills",
+      "url": "https://arxiv.org/abs/2412.19754",
+      "publisher": "Oxford Internet Institute (Mäkelä, Stephany)",
+      "evidenceTier": 1,
+      "datePublished": "2024-12-27",
+      "excerpt": "When AI demand doubles in a job ad, demand for complementary skills rises by 5%. Complementary effects are 1.7x larger than substitution effects. Based on 12 million US job vacancies 2018-2023.",
       "dateAdded": "2026-04-03"
     }
   ]

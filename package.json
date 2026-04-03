@@ -25,7 +25,9 @@
     "signals:calc": "python3 scripts/signals/calculate_metrics.py",
     "signals:update": "python3 scripts/signals/fetch_all.py",
     "agent:research": "tsx scripts/agent-research.ts",
-    "agent:review": "tsx scripts/agent-review.ts"
+    "agent:review": "tsx scripts/agent-review.ts",
+    "compile-kb": "tsx scripts/compile-knowledge-base.ts",
+    "test-assessments": "tsx scripts/test-assessments.ts"
   },
   "dependencies": {
     "@anthropic-ai/claude-agent-sdk": "^0.2.79",
