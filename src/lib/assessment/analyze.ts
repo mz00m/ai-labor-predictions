@@ -6,6 +6,7 @@ import { AssessmentIntake, AssessmentReport } from "./types";
 import { stripPii } from "./pii-strip";
 import { getIndustryTemplate } from "./taxonomy";
 import { getOnetSummaryForPrompt } from "./onet-tasks";
+import { formatToolsForPrompt } from "@/data/tools";
 
 const anthropic = new Anthropic();
 
@@ -136,6 +137,7 @@ ${existingReport.toolRecommendations.map((r) => `- ${r.category}: ${r.purpose}`)
 function buildSystemPrompt(mode: "preview" | "full"): string {
   const base = `You are a practical AI productivity advisor helping individual workers and small business teams find where AI can save them time and improve their work. You have deep knowledge of:
 - Current AI tools across industries (productivity, communication, analysis, creative, operations)
+- A curated knowledge base of office automation tools (provided in the user prompt) — reference these specific products in your recommendations
 - O*NET task classifications and how AI maps to specific work activities
 - How individuals and small teams can realistically adopt AI tools
 - Time savings and productivity gains from AI adoption based on research
@@ -175,12 +177,13 @@ IMPORTANT: The data has been pre-processed to remove PII. Do not attempt to refe
   ],
   "toolRecommendations": [
     {
-      "category": "General category of tool (e.g., 'AI writing assistant', not a specific brand)",
+      "toolName": "Specific product name from the tools reference (e.g., 'Grammarly', 'QuickBooks Online')",
+      "category": "General category (e.g., 'AI writing assistant', 'cloud accounting')",
       "purpose": "What it does in plain language",
       "expectedValue": "Specific benefit for their work",
       "implementationEffort": "low|medium|high",
       "priorityTier": "immediate|medium-term|long-term",
-      "estimatedMonthlyCost": "$ range (include free options where they exist)"
+      "estimatedMonthlyCost": "$ range from the tools reference (include free options where they exist)"
     }
   ],
   "riskAssessment": {
@@ -216,7 +219,7 @@ IMPORTANT: The data has been pre-processed to remove PII. Do not attempt to refe
 
 Generate 8-12 task analyses, 6-10 tool recommendations, 3-5 ROI projections, and 5-8 next steps.
 Make every recommendation SPECIFIC to their actual work. Reference their tasks, their challenges, their tools.
-For tool recommendations, use general categories (e.g., "AI writing assistant", "smart scheduling tool") rather than specific product names.
+For tool recommendations, reference specific products from the tools knowledge base provided. Include both the product name AND general category (e.g., "Grammarly (AI writing assistant)") so users can evaluate alternatives too.
 ALWAYS emphasize: AI is here to handle the tedious parts so they can focus on the work that needs a human — the creative, relational, strategic parts of their job.
 Prioritize free and low-cost tools first, especially for individuals and very small teams.`;
 }
@@ -280,6 +283,12 @@ Typical industry challenges: ${template.commonChallenges.join(", ")}`;
   // Add O*NET task mapping data
   const onetSummary = getOnetSummaryForPrompt(intake.primaryFunctions, intake.industry);
   prompt += `\n\n${onetSummary}`;
+
+  // Add tools knowledge base (filtered for this assessment's industry + size)
+  const toolsRef = formatToolsForPrompt(intake.industry, intake.companySize);
+  if (toolsRef) {
+    prompt += `\n\n${toolsRef}`;
+  }
 
   return prompt;
 }

@@ -153,7 +153,10 @@ export interface TaskAnalysis {
 }
 
 export interface ToolRecommendation {
+  /** General category (e.g., "AI writing assistant") */
   category: string;
+  /** Specific product name if from tools KB (e.g., "Grammarly") */
+  toolName?: string;
   purpose: string;
   expectedValue: string;
   implementationEffort: "low" | "medium" | "high";

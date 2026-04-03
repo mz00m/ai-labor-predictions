@@ -199,7 +199,7 @@ export function generatePdf(
       doc.setFont("helvetica", "bold");
       doc.setFontSize(10);
       doc.setTextColor(...COLORS.white);
-      doc.text(tool.category, margin + 4, y + 7);
+      doc.text(tool.toolName ? `${tool.toolName}  (${tool.category})` : tool.category, margin + 4, y + 7);
 
       // Priority badge
       const tierColor = tool.priorityTier === "immediate" ? COLORS.primary : tool.priorityTier === "medium-term" ? [234, 179, 8] : [107, 114, 128];

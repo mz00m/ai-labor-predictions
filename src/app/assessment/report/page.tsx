@@ -221,8 +221,17 @@ export default function ReportPage() {
                 {report.toolRecommendations.map((tool, i) => (
                   <div key={i} className="bg-gray-50 border border-gray-100 rounded-lg p-4">
                     <div className="flex items-start justify-between mb-2">
-                      <h4 className="text-[14px] font-semibold text-gray-900">{tool.category}</h4>
-                      <span className={`text-[11px] font-bold uppercase ${
+                      <div>
+                        {tool.toolName ? (
+                          <>
+                            <h4 className="text-[14px] font-semibold text-gray-900">{tool.toolName}</h4>
+                            <p className="text-[11px] text-gray-400 mt-0.5">{tool.category}</p>
+                          </>
+                        ) : (
+                          <h4 className="text-[14px] font-semibold text-gray-900">{tool.category}</h4>
+                        )}
+                      </div>
+                      <span className={`text-[11px] font-bold uppercase whitespace-nowrap ml-3 ${
                         tool.priorityTier === "immediate" ? "text-[#5C61F6]" :
                         tool.priorityTier === "medium-term" ? "text-amber-500" : "text-gray-400"
                       }`}>
@@ -230,8 +239,9 @@ export default function ReportPage() {
                       </span>
                     </div>
                     <p className="text-[13px] text-gray-500 mb-1">{tool.purpose}</p>
+                    <p className="text-[13px] text-gray-600 mb-1">{tool.expectedValue}</p>
                     <p className="text-[12px] text-gray-400">
-                      Value: {tool.expectedValue} | Effort: {tool.implementationEffort}
+                      Effort: {tool.implementationEffort}
                       {tool.estimatedMonthlyCost && ` | ~${tool.estimatedMonthlyCost}/mo`}
                     </p>
                   </div>
