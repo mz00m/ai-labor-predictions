@@ -119,12 +119,12 @@ export default function AssessmentLanding() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
               </svg>
             </Link>
-            <Link
-              href="#pricing"
-              className="inline-flex items-center justify-center gap-2 border border-gray-200 text-gray-500 hover:text-gray-900 hover:border-gray-300 font-medium text-[15px] px-7 py-3 rounded-lg transition-colors"
-            >
-              View Pricing
-            </Link>
+            <span className="inline-flex items-center gap-2 text-[14px] font-medium text-green-600 bg-green-50 border border-green-200 rounded-full px-4 py-2">
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+              </svg>
+              Free during early access
+            </span>
           </div>
 
           {/* Quick stats */}
@@ -253,84 +253,6 @@ export default function AssessmentLanding() {
         </div>
       </section>
 
-      {/* Pricing */}
-      <section id="pricing" className="max-w-6xl mx-auto px-6 sm:px-10 py-16">
-        <h2 className="text-[13px] font-bold uppercase tracking-widest text-[#5C61F6] mb-3">
-          Pricing
-        </h2>
-        <p className="text-[24px] sm:text-[32px] font-bold text-gray-900 mb-10 max-w-2xl">
-          One price. Your plan. No subscription.
-        </p>
-
-        <div className="grid md:grid-cols-2 gap-6 max-w-3xl">
-          {/* Core Assessment */}
-          <div className="relative bg-white border-2 border-[#5C61F6]/40 rounded-xl p-6 shadow-sm">
-            <div className="inline-flex items-center text-[11px] font-bold uppercase tracking-wider text-[#5C61F6] bg-[#5C61F6]/[0.08] rounded-full px-2.5 py-0.5 mb-4">
-              Your AI Action Plan
-            </div>
-            <div className="mb-4">
-              <span className="text-[40px] font-black text-gray-900">$100</span>
-              <span className="text-[14px] text-gray-400 ml-2">one-time</span>
-            </div>
-            <ul className="space-y-2.5 mb-6">
-              {[
-                "Personalized task-by-task AI analysis",
-                "Specific tool recommendations for your work",
-                "Clear action plan (this week, this quarter, this year)",
-                "Time savings estimates for each opportunity",
-                "Skills roadmap to grow with AI",
-                "Downloadable PDF report",
-                "Account access to refine and update over time",
-                "Free preview before you buy",
-              ].map((item) => (
-                <li key={item} className="flex gap-2 text-[13px] text-gray-600">
-                  <svg className="w-4 h-4 text-[#5C61F6] flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                  </svg>
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <Link
-              href="/assessment/start"
-              className="block w-full text-center bg-[#5C61F6] hover:bg-[#4F52D4] text-white font-semibold text-[14px] py-2.5 rounded-lg transition-colors"
-            >
-              Get Started
-            </Link>
-          </div>
-
-          {/* Policy Add-on */}
-          <div className="relative bg-gray-50 border border-gray-200 rounded-xl p-6">
-            <div className="inline-flex items-center text-[11px] font-bold uppercase tracking-wider text-gray-500 bg-gray-100 rounded-full px-2.5 py-0.5 mb-4">
-              Add-on
-            </div>
-            <div className="mb-4">
-              <span className="text-[40px] font-black text-gray-900">+$100</span>
-              <span className="text-[14px] text-gray-400 ml-2">one-time</span>
-            </div>
-            <ul className="space-y-2.5 mb-6">
-              {[
-                "AI usage guidelines for your team or business",
-                "Custom prompt library (10-20 prompts)",
-                "Prompts matched to your actual workflows",
-                "Data handling and quality assurance tips",
-                "Available after your initial plan",
-              ].map((item) => (
-                <li key={item} className="flex gap-2 text-[13px] text-gray-600">
-                  <svg className="w-4 h-4 text-gray-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                  </svg>
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <div className="block w-full text-center border border-gray-200 text-gray-400 font-medium text-[14px] py-2.5 rounded-lg cursor-default">
-              Available from your dashboard
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Industries */}
       <section className="max-w-6xl mx-auto px-6 sm:px-10 py-16">
         <h2 className="text-[13px] font-bold uppercase tracking-widest text-[#5C61F6] mb-3">
@@ -375,14 +297,13 @@ export default function AssessmentLanding() {
           <span className="text-[#5C61F6]">Find out where it can help you.</span>
         </h2>
         <p className="text-[15px] text-gray-500 mb-8 max-w-xl mx-auto">
-          Start with a free preview. If it&apos;s useful, unlock the full plan for $100.
-          No subscription, no recurring charges.
+          Free during early access. Get your personalized action plan in under 5 minutes.
         </p>
         <Link
           href="/assessment/start"
           className="inline-flex items-center justify-center gap-2 bg-[#5C61F6] hover:bg-[#4F52D4] text-white font-semibold text-[15px] px-8 py-3 rounded-lg transition-colors"
         >
-          Start Your Free Preview
+          Get Your Free AI Action Plan
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
           </svg>
