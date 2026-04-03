@@ -177,12 +177,13 @@ IMPORTANT: The data has been pre-processed to remove PII. Do not attempt to refe
   ],
   "toolRecommendations": [
     {
-      "category": "General category of tool (e.g., 'AI writing assistant', not a specific brand)",
+      "toolName": "Specific product name from the tools reference (e.g., 'Grammarly', 'QuickBooks Online')",
+      "category": "General category (e.g., 'AI writing assistant', 'cloud accounting')",
       "purpose": "What it does in plain language",
       "expectedValue": "Specific benefit for their work",
       "implementationEffort": "low|medium|high",
       "priorityTier": "immediate|medium-term|long-term",
-      "estimatedMonthlyCost": "$ range (include free options where they exist)"
+      "estimatedMonthlyCost": "$ range from the tools reference (include free options where they exist)"
     }
   ],
   "riskAssessment": {
