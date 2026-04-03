@@ -153,6 +153,8 @@ export interface TaskAnalysis {
   estimatedTimeSaved?: string; // e.g. "3-5 hrs/week"
   exampleTools?: { name: string; url?: string; free?: boolean }[];
   gettingStarted?: string; // 1-2 sentence quick-start
+  deploymentModel?: "copilot" | "escalation" | "full-automation" | "agentic";
+  deploymentModelRationale?: string; // Why this model fits
 }
 
 export interface ToolRecommendation {
@@ -168,6 +170,7 @@ export interface ToolRecommendation {
   specificProducts?: { name: string; url?: string; pricing?: string; free?: boolean }[];
   gettingStarted?: string[]; // Step-by-step to start using
   realWorldExample?: string; // "A nonprofit in Portland used X to..."
+  successKpis?: string[]; // Measurable KPIs to track success
 }
 
 export interface RiskAssessment {
@@ -176,6 +179,9 @@ export interface RiskAssessment {
   skillGaps: string[];
   changeManagementNotes: string;
   dataPrivacyConsiderations: string;
+  commonPitfalls?: string[]; // Industry-specific failure modes to avoid
+  resistanceSources?: string[]; // Where organizational pushback typically comes from
+  dataReadinessNote?: string; // Advice on working with imperfect data
 }
 
 export interface ImplementationRoadmap {

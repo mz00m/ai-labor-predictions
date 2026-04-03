@@ -149,6 +149,33 @@ Frame everything around EMPOWERMENT: AI helps them get time back for the work th
 
 CRITICAL INSTRUCTION: Be SPECIFIC with real-world product and service recommendations. Name actual tools (ChatGPT, Claude, Notion AI, Zapier, Grammarly, Otter.ai, Canva, etc.) with their real URLs. Include real pricing. Give real-world examples of how similar businesses or roles use these tools. This is a paid report; generic advice like "use an AI writing assistant" is not acceptable. The user is paying for specific, actionable guidance they can act on today.
 
+## Research-Backed Framework (Stanford Digital Economy Lab, Enterprise AI Playbook 2026)
+
+Use these research findings to ground your recommendations:
+
+**AI Deployment Models** — Match the right model to each task:
+- **Copilot**: Human does the work, AI assists (drafting, suggestions). Best for creative/strategic tasks. ~25-40% productivity gain.
+- **Escalation**: AI handles routine cases (80%+), humans handle exceptions. Best for customer service, intake, triage. ~71% median productivity gain.
+- **Full Automation**: AI runs the process end-to-end with periodic human review. Best for data entry, scheduling, reporting. ~40-60% productivity gain.
+- **Agentic**: AI autonomously plans and executes multi-step workflows. Highest potential (~71% median productivity) but requires more setup. Best for research, analysis pipelines, multi-tool workflows.
+
+**Common Failure Modes** — 77% of the hardest challenges are invisible costs. Warn about:
+- Change management and user adoption (not the technology itself)
+- Data quality issues (but note: messy data is NOT a blocker if you design around it)
+- Process redesign needed before AI can help (automating a bad process just makes bad faster)
+- Underestimating training time for staff
+- Starting too big instead of with a focused pilot
+
+**Organizational Resistance** — Staff functions (Legal, HR, Risk, Compliance) are the #1 source of pushback at 35%. Address this proactively in change management advice.
+
+**Success Pattern** — 61% of successful AI projects had a prior failure. Normalize experimentation and iteration. First attempt rarely works perfectly.
+
+**KPIs by Function** — Recommend specific, measurable success metrics:
+- Customer service: resolution time, first-contact resolution rate, cost per ticket
+- Content/marketing: time to publish, content volume, engagement rates
+- Finance/admin: processing time per document, error rate, cycle time
+- Operations: throughput, manual touch points eliminated, processing lag
+
 IMPORTANT: The data has been pre-processed to remove PII. Do not attempt to reference specific individuals by name.`;
 
   if (mode === "preview") {
@@ -179,7 +206,9 @@ IMPORTANT: The data has been pre-processed to remove PII. Do not attempt to refe
       "exampleTools": [
         { "name": "Actual product name", "url": "https://real-url.com", "free": true/false }
       ],
-      "gettingStarted": "One concrete sentence: 'Start by signing up for [tool] free tier and trying it on your next [task].' Include the specific URL."
+      "gettingStarted": "One concrete sentence: 'Start by signing up for [tool] free tier and trying it on your next [task].' Include the specific URL.",
+      "deploymentModel": "copilot|escalation|full-automation|agentic — pick the model that fits this task based on the Stanford framework",
+      "deploymentModelRationale": "1-2 sentences explaining why this deployment model is the best fit. Reference expected productivity gains."
     }
   ],
   "toolRecommendations": [
@@ -205,7 +234,11 @@ IMPORTANT: The data has been pre-processed to remove PII. Do not attempt to refe
         "Step 3: Try it on [specific task from their intake] this week",
         "Step 4: After a week, evaluate if the paid plan is worth it for [feature]"
       ],
-      "realWorldExample": "A [similar role] at a [similar-sized company] in [industry] used [tool] to [specific result]. For example, an office manager at a 15-person law firm used Zapier to automate client intake forms, saving 6 hours per week on data entry."
+      "realWorldExample": "A [similar role] at a [similar-sized company] in [industry] used [tool] to [specific result]. For example, an office manager at a 15-person law firm used Zapier to automate client intake forms, saving 6 hours per week on data entry.",
+      "successKpis": [
+        "Specific measurable KPI to track, e.g. 'Time to first draft reduced from 2 hours to 20 minutes'",
+        "Second KPI, e.g. 'Error rate on reports decreased by 40%'"
+      ]
     }
   ],
   "riskAssessment": {
@@ -213,7 +246,15 @@ IMPORTANT: The data has been pre-processed to remove PII. Do not attempt to refe
     "displacementRisk": "Honest but reassuring. Frame as 'how your role evolves' not 'risk of replacement'. Reference industry data where possible.",
     "skillGaps": ["Specific skills to build with a recommended free resource for each, e.g., 'Prompt engineering basics - free course at learnprompting.org'"],
     "changeManagementNotes": "Practical, step-by-step advice for making the transition smooth. Include a suggested timeline.",
-    "dataPrivacyConsiderations": "Specific to their industry. Name what data should NOT be put into AI tools and why. Reference relevant regulations if applicable (HIPAA, FERPA, etc.)."
+    "dataPrivacyConsiderations": "Specific to their industry. Name what data should NOT be put into AI tools and why. Reference relevant regulations if applicable (HIPAA, FERPA, etc.).",
+    "commonPitfalls": [
+      "Industry-specific failure mode to watch for, e.g. 'Automating your grant reporting process before standardizing your data collection will amplify inconsistencies'",
+      "Second pitfall, e.g. 'Skipping the pilot phase — 61% of successful AI projects had a prior failed attempt (Stanford DEL 2026). Start small, learn, then scale.'"
+    ],
+    "resistanceSources": [
+      "Where pushback will likely come from and how to address it, e.g. 'Your compliance team may worry about AI-generated documents — address this early by establishing a human review step for all client-facing output'"
+    ],
+    "dataReadinessNote": "Honest assessment of their data situation. Key insight: messy data is NOT a blocker. Recommend designing around imperfect data rather than waiting for perfect data. Give a specific example relevant to their work."
   },
   "implementationRoadmap": {
     "immediate": {
@@ -253,6 +294,10 @@ Include both the product name AND general category (e.g., "Grammarly (AI writing
 Include real-world examples of how similar businesses/roles benefited.
 Show the math on ROI projections.
 For each tool, always mention if a free tier exists and lead with free options.
+For each task, assign a deployment model (copilot, escalation, full-automation, or agentic) based on the Stanford framework.
+For each tool recommendation, include 2-3 specific KPIs the user should track to measure success.
+Include 3-5 common pitfalls specific to their industry and situation. Reference the Stanford finding that 77% of challenges are invisible costs (change management, data quality, process redesign).
+Normalize experimentation: mention that 61% of successful AI projects had a prior failure.
 Make this report so actionable they could start implementing the first recommendation within 10 minutes of reading it.`;
 }
 
