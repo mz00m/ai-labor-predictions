@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import FileUploader, { FileEntry } from "@/components/assessment/FileUploader";
 import {
@@ -67,7 +67,21 @@ export default function AssessmentStartPage() {
   const [form, setForm] = useState<FormData>(initialFormData);
   const [files, setFiles] = useState<FileEntry[]>([]);
   const [submitting, setSubmitting] = useState(false);
+  const [submittingMode, setSubmittingMode] = useState<"preview" | "full" | null>(null);
+  const [elapsedSeconds, setElapsedSeconds] = useState(0);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
   const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (submitting) {
+      setElapsedSeconds(0);
+      timerRef.current = setInterval(() => setElapsedSeconds((s) => s + 1), 1000);
+    } else {
+      if (timerRef.current) clearInterval(timerRef.current);
+      setSubmittingMode(null);
+    }
+    return () => { if (timerRef.current) clearInterval(timerRef.current); };
+  }, [submitting]);
 
   const currentStepIndex = STEPS.findIndex((s) => s.key === step);
 
@@ -104,6 +118,7 @@ export default function AssessmentStartPage() {
 
   const handleSubmit = async (mode: "preview" | "full") => {
     setSubmitting(true);
+    setSubmittingMode(mode);
     setError(null);
 
     try {
@@ -548,26 +563,63 @@ export default function AssessmentStartPage() {
             </div>
           )}
 
-          <div className="grid sm:grid-cols-2 gap-4">
-            <button
-              onClick={() => handleSubmit("preview")}
-              disabled={submitting}
-              className="w-full border border-gray-200 text-gray-500 hover:text-gray-900 hover:border-gray-300 font-medium text-[14px] py-3 rounded-lg transition-colors disabled:opacity-50"
-            >
-              {submitting ? "Analyzing..." : "Get Free Preview"}
-            </button>
-            <button
-              onClick={() => handleSubmit("full")}
-              disabled={submitting}
-              className="w-full bg-[#5C61F6] hover:bg-[#4F52D4] text-white font-semibold text-[14px] py-3 rounded-lg transition-colors disabled:opacity-50"
-            >
-              {submitting ? "Analyzing..." : "Get Full Plan for $100"}
-            </button>
-          </div>
+          {submitting ? (
+            <div className="border border-[#5C61F6]/20 bg-[#5C61F6]/5 rounded-xl p-6 space-y-5">
+              <div className="flex items-center gap-3">
+                <svg className="animate-spin h-5 w-5 text-[#5C61F6]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                </svg>
+                <div>
+                  <p className="text-[14px] font-medium text-gray-900">
+                    Building your {submittingMode === "full" ? "full AI action plan" : "preview"}...
+                  </p>
+                  <p className="text-[12px] text-gray-400 mt-0.5">
+                    {elapsedSeconds < 10
+                      ? "Analyzing your organization and matching AI opportunities"
+                      : elapsedSeconds < 25
+                        ? "Evaluating tasks and matching tools from our knowledge base"
+                        : elapsedSeconds < 45
+                          ? "Generating personalized recommendations and roadmap"
+                          : "Almost done, finalizing your report"}
+                  </p>
+                </div>
+              </div>
+              <div className="w-full bg-gray-100 rounded-full h-1.5 overflow-hidden">
+                <div
+                  className="bg-[#5C61F6] h-1.5 rounded-full transition-all duration-1000 ease-out"
+                  style={{ width: `${Math.min(95, (elapsedSeconds / (submittingMode === "full" ? 70 : 40)) * 100)}%` }}
+                />
+              </div>
+              <div className="flex items-center justify-between text-[12px] text-gray-400">
+                <span>{Math.floor(elapsedSeconds / 60)}:{(elapsedSeconds % 60).toString().padStart(2, "0")} elapsed</span>
+                <span>Typically {submittingMode === "full" ? "45-90" : "20-40"} seconds</span>
+              </div>
+            </div>
+          ) : (
+            <>
+              <div className="grid sm:grid-cols-2 gap-4">
+                <button
+                  onClick={() => handleSubmit("preview")}
+                  disabled={submitting}
+                  className="w-full border border-gray-200 text-gray-500 hover:text-gray-900 hover:border-gray-300 font-medium text-[14px] py-3 rounded-lg transition-colors disabled:opacity-50"
+                >
+                  Get Free Preview
+                </button>
+                <button
+                  onClick={() => handleSubmit("full")}
+                  disabled={submitting}
+                  className="w-full bg-[#5C61F6] hover:bg-[#4F52D4] text-white font-semibold text-[14px] py-3 rounded-lg transition-colors disabled:opacity-50"
+                >
+                  Get Full Plan for $100
+                </button>
+              </div>
 
-          <p className="text-[12px] text-gray-400 text-center">
-            Secure payment via Stripe. Your files are processed in-memory only, nothing stored.
-          </p>
+              <p className="text-[12px] text-gray-400 text-center">
+                Secure payment via Stripe. Your files are processed in-memory only, nothing stored.
+              </p>
+            </>
+          )}
         </div>
       )}
 
