@@ -99,7 +99,7 @@ export default function DashboardPage() {
                     })}
                   </p>
                 </div>
-                <StatusBadge status={assessment.status} paid={assessment.paid} />
+                <StatusBadge status={assessment.status} />
               </div>
 
               {/* AI Readiness Score */}
@@ -122,32 +122,11 @@ export default function DashboardPage() {
               <div className="mt-4 flex gap-3">
                 {assessment.status === "complete" && (
                   <Link
-                    href={`/assessment/report?id=${assessment.id}${!assessment.paid ? "&preview=true" : ""}`}
+                    href={`/assessment/report?id=${assessment.id}`}
                     className="text-[12px] font-medium text-[#5C61F6] hover:underline"
                   >
                     View Report
                   </Link>
-                )}
-                {!assessment.paid && assessment.status === "complete" && (
-                  <Link
-                    href={`/assessment/report?id=${assessment.id}&preview=true`}
-                    className="text-[12px] font-medium text-amber-500 hover:underline"
-                  >
-                    Unlock Full Report
-                  </Link>
-                )}
-                {assessment.paid && !assessment.addOns.policyAndPrompts && (
-                  <span className="text-[12px] text-gray-400">
-                    Prompts & guidelines add-on available
-                  </span>
-                )}
-                {assessment.addOns.policyAndPrompts && (
-                  <span className="text-[12px] text-green-600 flex items-center gap-1">
-                    <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                    </svg>
-                    Prompts & guidelines included
-                  </span>
                 )}
               </div>
             </div>
@@ -173,18 +152,11 @@ export default function DashboardPage() {
   );
 }
 
-function StatusBadge({ status, paid }: { status: string; paid: boolean }) {
-  if (status === "complete" && paid) {
+function StatusBadge({ status }: { status: string }) {
+  if (status === "complete") {
     return (
       <span className="text-[11px] font-bold text-green-700 bg-green-50 border border-green-200 px-2 py-0.5 rounded">
         COMPLETE
-      </span>
-    );
-  }
-  if (status === "complete" && !paid) {
-    return (
-      <span className="text-[11px] font-bold text-amber-600 bg-amber-50 border border-amber-200 px-2 py-0.5 rounded">
-        PREVIEW
       </span>
     );
   }
