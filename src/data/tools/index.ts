@@ -6,8 +6,9 @@
  * - Filtering by category, industry, company size, pricing
  * - Prompt-ready formatting for the assessment pipeline
  *
- * To add new tools: append entries to the relevant category file
- * (office.ts, administrative.ts, billing.ts, marketing.ts, customer-management.ts).
+ * To add new tools: append entries to the relevant category file.
+ * 11 categories across office, operations, finance, marketing, sales,
+ * customer management, data, HR, compliance, IT, and supply chain.
  */
 
 import type { ToolEntry, ToolCategory, CompanySizeFit } from "./types";
@@ -17,6 +18,12 @@ import { ADMINISTRATIVE_TOOLS } from "./administrative";
 import { BILLING_TOOLS } from "./billing";
 import { MARKETING_TOOLS } from "./marketing";
 import { CUSTOMER_MANAGEMENT_TOOLS } from "./customer-management";
+import { DATA_ANALYTICS_TOOLS } from "./data-analytics";
+import { HR_RECRUITING_TOOLS } from "./hr-recruiting";
+import { COMPLIANCE_LEGAL_TOOLS } from "./compliance-legal";
+import { SALES_ENABLEMENT_TOOLS } from "./sales-enablement";
+import { IT_SECURITY_TOOLS } from "./it-security";
+import { INVENTORY_SUPPLY_CHAIN_TOOLS } from "./inventory-supply-chain";
 
 // Re-export types
 export type { ToolEntry, ToolCategory, CompanySizeFit } from "./types";
@@ -29,6 +36,12 @@ export const ALL_TOOLS: ToolEntry[] = [
   ...BILLING_TOOLS,
   ...MARKETING_TOOLS,
   ...CUSTOMER_MANAGEMENT_TOOLS,
+  ...DATA_ANALYTICS_TOOLS,
+  ...HR_RECRUITING_TOOLS,
+  ...COMPLIANCE_LEGAL_TOOLS,
+  ...SALES_ENABLEMENT_TOOLS,
+  ...IT_SECURITY_TOOLS,
+  ...INVENTORY_SUPPLY_CHAIN_TOOLS,
 ];
 
 /** Tools grouped by category */
@@ -38,6 +51,12 @@ export const TOOLS_BY_CATEGORY: Record<ToolCategory, ToolEntry[]> = {
   billing: BILLING_TOOLS,
   marketing: MARKETING_TOOLS,
   "customer-management": CUSTOMER_MANAGEMENT_TOOLS,
+  "data-analytics": DATA_ANALYTICS_TOOLS,
+  "hr-recruiting": HR_RECRUITING_TOOLS,
+  "compliance-legal": COMPLIANCE_LEGAL_TOOLS,
+  "sales-enablement": SALES_ENABLEMENT_TOOLS,
+  "it-security": IT_SECURITY_TOOLS,
+  "inventory-supply-chain": INVENTORY_SUPPLY_CHAIN_TOOLS,
 };
 
 /** Look up a single tool by ID */

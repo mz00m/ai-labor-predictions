@@ -1,9 +1,9 @@
 /**
  * Office Automation Tools Knowledge Base — Type Definitions
  *
- * Structured schema for AI/automation tools used across office, admin,
- * billing, marketing, and customer management functions. Designed for
- * incremental growth: add new tools by appending entries to category files.
+ * Structured schema for AI/automation tools across 11 categories.
+ * Designed for incremental growth: add new tools by appending entries
+ * to category files.
  */
 
 export type ToolCategory =
@@ -11,7 +11,13 @@ export type ToolCategory =
   | "administrative"
   | "billing"
   | "marketing"
-  | "customer-management";
+  | "customer-management"
+  | "data-analytics"
+  | "hr-recruiting"
+  | "compliance-legal"
+  | "sales-enablement"
+  | "it-security"
+  | "inventory-supply-chain";
 
 export const TOOL_CATEGORY_META: Record<
   ToolCategory,
@@ -41,6 +47,36 @@ export const TOOL_CATEGORY_META: Record<
     label: "Customer Management",
     description:
       "CRM, support ticketing, chatbots, customer communication, feedback, loyalty programs",
+  },
+  "data-analytics": {
+    label: "Data & Analytics",
+    description:
+      "BI dashboards, data visualization, reporting, data cleaning, spreadsheet automation, metrics tracking",
+  },
+  "hr-recruiting": {
+    label: "HR & Recruiting",
+    description:
+      "Applicant tracking, candidate screening, interview scheduling, onboarding, performance management",
+  },
+  "compliance-legal": {
+    label: "Compliance & Legal",
+    description:
+      "Contract management, regulatory tracking, policy management, audit readiness, risk monitoring",
+  },
+  "sales-enablement": {
+    label: "Sales Enablement",
+    description:
+      "Proposal builders, CPQ, conversation intelligence, sales coaching, deal rooms, outbound automation",
+  },
+  "it-security": {
+    label: "IT & Security",
+    description:
+      "Password management, endpoint security, IT helpdesk, device management, identity access, MDM",
+  },
+  "inventory-supply-chain": {
+    label: "Inventory & Supply Chain",
+    description:
+      "Stock management, order fulfillment, procurement, warehouse management, demand forecasting",
   },
 };
 
