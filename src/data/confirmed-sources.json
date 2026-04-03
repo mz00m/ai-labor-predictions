@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-04-03",
-  "totalSources": 476,
-  "verifiedCount": 476,
+  "totalSources": 477,
+  "verifiedCount": 477,
   "sources": {
     "cvl-economics-entertainment-ai-2024": {
       "id": "cvl-economics-entertainment-ai-2024",
@@ -6661,6 +6661,21 @@
         "white-collar-professional-displacement",
         "entry-level-wage-impact",
         "ai-adoption-rate",
+        "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "makela-stephany-complement-substitute-2024": {
+      "id": "makela-stephany-complement-substitute-2024",
+      "title": "Complement or Substitute? How AI Increases the Demand for Human Skills",
+      "url": "https://arxiv.org/abs/2412.19754",
+      "publisher": "Oxford Internet Institute (Mäkelä, Stephany)",
+      "evidenceTier": 1,
+      "datePublished": "2024-12-27",
+      "excerpt": "Complementary effects of AI on skill demand are 1.7x larger than substitution effects. AI-focused roles are twice as likely to require resilience, agility, and analytical thinking. Based on 12 million US job vacancies 2018-2023.",
+      "usedIn": [
+        "high-skill-wage-premium",
         "workforce-ai-exposure"
       ],
       "verified": true,

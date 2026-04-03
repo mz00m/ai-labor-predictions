@@ -43,7 +43,8 @@ export default function FuturePage() {
             alarm bells. This is neither. It&rsquo;s a scenario where
             every step follows from the last, every mechanism has
             empirical precedent, and the outcome &mdash; broad-based
-            prosperity &mdash; is earned, not assumed. It starts rough.
+            prosperity &mdash; is earned, not assumed. The timeline is
+            15&ndash;25 years. It starts rough.
           </p>
         </div>
 
@@ -130,6 +131,29 @@ export default function FuturePage() {
               into displacement.
             </p>
             <p>
+              There is a countervailing force. Brynjolfsson&rsquo;s
+              customer-support research shows that firms choosing{" "}
+              <a
+                href="/j-curve"
+                className="text-[var(--accent)] hover:underline"
+              >
+                augmentation over automation
+              </a>{" "}
+              see productivity gains that rebuild career ladders
+              organically &mdash; novice workers using AI tools perform
+              at near-expert levels, which means firms can still hire
+              juniors productively. In{" "}
+              <a
+                href="/predictions/tech-sector-displacement"
+                className="text-[var(--accent)] hover:underline"
+              >
+                tech
+              </a>,
+              the K-shaped split is already visible: augmentation-heavy
+              firms show positive youth employment trends while
+              automation-heavy firms show the opposite.
+            </p>
+            <p>
               This is the valley. It&rsquo;s real, it&rsquo;s measurable,
               and it&rsquo;s where the political window opens.
             </p>
@@ -190,14 +214,23 @@ export default function FuturePage() {
 
           <div className="space-y-4 text-[14px] text-[var(--muted)] leading-[1.75]">
             <p>
-              This isn&rsquo;t speculative. Apprenticeship models already
-              work in skilled trades; the mechanism is the same for
-              white-collar AI work. An apprentice financial analyst
-              learns to spot when an AI-generated model has hallucinated
-              an assumption. An apprentice designer learns when
-              AI-generated layouts violate the hierarchy that makes
-              information legible. The apprenticeship teaches judgment,
-              not production &mdash; because AI handles production.
+              The evidence here comes with a caveat. These 93% retention
+              and $1.47 ROI figures are from traditional skilled-trade
+              apprenticeships &mdash; electricians, machinists, plumbers.
+              White-collar AI apprenticeships are empirically untested
+              at scale. The mechanism is analogous (learning judgment
+              under supervision), but the conversion is not proven. This
+              is where the scenario requires a policy bet, not just a
+              policy extension.
+            </p>
+            <p>
+              That said, the design of AI-era apprenticeships is clear.
+              An apprentice financial analyst learns to spot when an
+              AI-generated model has hallucinated an assumption. An
+              apprentice designer learns when AI-generated layouts
+              violate the hierarchy that makes information legible. The
+              apprenticeship teaches judgment, not production &mdash;
+              because AI handles production.
             </p>
             <p>
               Acemoglu&rsquo;s electrician example from his Nobel lecture
@@ -273,11 +306,29 @@ export default function FuturePage() {
               than it appears from the outside.
             </p>
             <p>
+              But transition programs alone are not enough. These roles
+              must pay enough to attract and retain workers. Teacher and
+              nurse wages have been suppressed for decades relative to
+              their education requirements, which is a primary driver of
+              the shortages. This scenario requires public investment
+              not just in retraining pipelines but in compensation
+              &mdash; raising teacher and nurse pay to levels competitive
+              with the private-sector roles these workers are leaving.
+              Without wage reform, the reallocation stalls regardless of
+              how good the transition programs are.
+            </p>
+            <p>
               AI itself makes the transition faster. Adaptive learning
               platforms can compress certification timelines. AI clinical
               decision support tools allow nurses to practice at the top
-              of their license sooner. The technology that creates the
-              displacement also reduces the cost of the transition.
+              of their license sooner. The technology that creates the{" "}
+              <a
+                href="/predictions/overall-us-displacement"
+                className="text-[var(--accent)] hover:underline"
+              >
+                displacement
+              </a>{" "}
+              also reduces the cost of the transition.
             </p>
           </div>
         </div>
@@ -309,10 +360,10 @@ export default function FuturePage() {
               submission. It can generate compliance documentation
               automatically. A UCLA study found that cutting approval
               times by 25% could boost housing production by 33%. The
-              built environment starts improving &mdash; denser
-              construction, better transit infrastructure, and yes,
-              high-speed rail becomes more feasible when the permitting
-              timeline compresses from decades to years.
+              strongest evidence is in housing: denser construction and
+              shorter permitting timelines directly address the supply
+              shortage that drives housing costs in high-productivity
+              metro areas.
             </p>
           </div>
 
@@ -345,13 +396,18 @@ export default function FuturePage() {
             </p>
             <p>
               This is already happening. New business applications hit a
-              record 5.5 million in 2023, and Census research shows
+              record 5.5 million in 2023 &mdash; though that surge began
+              during the pandemic, driven by remote work, stimulus
+              capital, and shifting career preferences, not AI. The
+              question is whether AI sustains and accelerates the trend
+              as those one-time drivers fade. Census research shows
               AI-using young firms exhibit faster revenue growth and
-              higher conversion rates to employer businesses. The bar for
-              starting a company is falling. The bar for running one well
-              &mdash; which requires human judgment about markets,
-              people, and timing &mdash; remains high. That gap is where
-              human entrepreneurs thrive.
+              higher conversion rates to employer businesses, which
+              suggests AI may be becoming the next structural tailwind.
+              The bar for starting a company is falling. The bar for
+              running one well &mdash; which requires human judgment
+              about markets, people, and timing &mdash; remains high.
+              That gap is where human entrepreneurs thrive.
             </p>
           </div>
         </div>
@@ -448,16 +504,16 @@ export default function FuturePage() {
           <div className="space-y-3 mb-6">
             <ServicePillar
               title="High-quality education"
-              description="Schooling in many places has historically been low quality for most, with lifelong knock-on effects. 1-on-1 personal attention by human teachers for younger students, plus AI-personalized tutoring for older students, bridges this gap."
+              description="Schooling in many places has historically been low quality for most, with lifelong knock-on effects. 1-on-1 personal attention by human teachers for younger students, plus AI-personalized tutoring for older students, bridges this gap. If even a fraction of K-8 students received regular human tutoring, the implied labor demand runs into the millions of positions — dwarfing the 411K current teacher shortage."
               stat="2 SD improvement"
-              statNote="Students tutored 1-on-1 perform 2 standard deviations above classroom peers (Bloom, 1984). AI tutoring at Harvard showed 2x the learning gains of active learning (Kestin et al., 2025)."
+              statNote="Students tutored 1-on-1 perform 2 standard deviations above classroom peers (Bloom, 1984). AI tutoring at Harvard showed 2x the learning gains of active learning (Kestin et al., 2025). With ~35M K-8 students in the US, even 1:10 tutor-to-student ratios imply 3.5M tutor positions."
               color="#5C61F6"
             />
             <ServicePillar
               title="Preventive healthcare for everyone"
-              description="Cheap AI triaging of medical issues lowers the barrier to preventive and life-saving care. 67% of ER visits by the privately insured are avoidable — 18 million annually, costing $32 billion. AI triage redirects these to appropriate care at 1/12th the cost."
-              stat="67% of ER visits avoidable"
-              statNote="Average ER visit for primary-care-treatable conditions: $2,032. Same visit at a physician's office: $167. AI triage closes the access gap. (UnitedHealth Group, 2019)"
+              description="People use ERs for treatable conditions not because they lack judgment, but because they lack access — no primary care provider, no appointment available, no way to assess severity at 2 AM. AI triage addresses the access barrier: 24/7 symptom assessment that routes people to the right level of care, creating demand for more human providers at every tier."
+              stat="18M avoidable ER visits/year"
+              statNote="67% of ER visits by the privately insured are for conditions treatable in primary care. Average ER cost: $2,032 vs. $167 at a physician's office. The gap reflects access barriers, not patient irrationality — and closing it creates millions of primary care, urgent care, and community health roles. (UnitedHealth Group, 2019)"
               color="#10b981"
             />
             <ServicePillar
@@ -541,6 +597,20 @@ export default function FuturePage() {
               not replaced by AI because its value is inseparable from
               the human providing it.
             </p>
+            <p>
+              The historical precedent sets the timeline. The shift from
+              60- to 40-hour weeks took roughly 60 years. This scenario
+              is faster &mdash; 15 to 25 years &mdash; because the
+              underlying technology diffuses faster than electrification
+              did. But it is not instant. The{" "}
+              <a
+                href="/j-curve"
+                className="text-[var(--accent)] hover:underline"
+              >
+                J-curve
+              </a>{" "}
+              applies: the disruption arrives before the equilibrium.
+            </p>
           </div>
         </div>
       </section>
@@ -557,7 +627,13 @@ export default function FuturePage() {
           <div className="space-y-4 text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
             <p>
               This is a scenario, not a prophecy. Every link in the chain
-              is conditional. Here are the things that must hold:
+              is conditional. If enough of these conditions fail, the
+              more likely outcome is Acemoglu&rsquo;s &ldquo;so-so
+              automation&rdquo; &mdash; a long period of modest
+              productivity gains, continued labor share decline, and
+              rising inequality without compensating abundance. Not
+              dystopia, but stagnation. Here are the things that must
+              hold for the better path:
             </p>
           </div>
 
@@ -577,6 +653,10 @@ export default function FuturePage() {
             <ConditionalCard
               condition="Market concentration doesn't capture the gains"
               risk="If a few dominant firms capture AI's productivity gains through market power (Bessen's 'New Goliaths'), the abundance doesn't reach consumers or workers. Antitrust enforcement is a prerequisite."
+            />
+            <ConditionalCard
+              condition="Machine fluency doesn't become the new inequality"
+              risk="The ability to effectively direct AI systems — what Imas calls 'specification hazard' — varies systematically by demographics, education, and personality. If the gains of the AI transition flow disproportionately to those with high 'machine fluency,' the scenario reproduces inequality in a new form rather than resolving it. Broad-based AI literacy programs are a prerequisite."
             />
             <ConditionalCard
               condition="The reduced work week is chosen, not imposed"
@@ -637,6 +717,24 @@ export default function FuturePage() {
                 className="text-[var(--accent)] hover:underline"
               >
                 prediction dashboard
+              </a>, including{" "}
+              <a
+                href="/predictions/customer-service-automation"
+                className="text-[var(--accent)] hover:underline"
+              >
+                customer service automation
+              </a>,{" "}
+              <a
+                href="/predictions/white-collar-professional-displacement"
+                className="text-[var(--accent)] hover:underline"
+              >
+                white-collar displacement
+              </a>, and{" "}
+              <a
+                href="/predictions/workforce-ai-exposure"
+                className="text-[var(--accent)] hover:underline"
+              >
+                workforce AI exposure
               </a>.
             </p>
           </div>

@@ -401,6 +401,15 @@
       ],
       "evidenceTier": 1,
       "label": "FRI: Rapid scenario → top 10% wealth share rises to 80% by 2050 (from ~72%)"
+    },
+    {
+      "date": "2026-04-03",
+      "direction": "up",
+      "sourceIds": [
+        "makela-stephany-complement-substitute-2024"
+      ],
+      "evidenceTier": 1,
+      "label": "Oxford/OII: AI roles 2x more likely to require resilience/agility; 5-10% premium for complementary skills (12M vacancies)"
     }
   ],
   "sources": [
@@ -758,6 +767,16 @@
       "datePublished": "2026-03-31",
       "excerpt": "In a rapid AI scenario, economists forecast the fraction of wealth held by the wealthiest 10% of households rising to 80% by 2050 (from ~72% today).",
       "dateAdded": "2026-04-02"
+    },
+    {
+      "id": "makela-stephany-complement-substitute-2024",
+      "title": "Complement or Substitute? How AI Increases the Demand for Human Skills",
+      "url": "https://arxiv.org/abs/2412.19754",
+      "publisher": "Oxford Internet Institute (Mäkelä, Stephany)",
+      "evidenceTier": 1,
+      "datePublished": "2024-12-27",
+      "excerpt": "AI-focused roles are twice as likely to require resilience, agility, and analytical thinking. Data scientists with complementary skills (resilience, ethics) earn a 5-10% salary premium. Complementary effects are 1.7x larger than substitution effects across 12 million US job vacancies 2018-2023.",
+      "dateAdded": "2026-04-03"
     }
   ]
 }

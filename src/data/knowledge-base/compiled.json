@@ -1,0 +1,2130 @@
+{
+  "compiledAt": "2026-04-03T16:33:07.667Z",
+  "totalTools": 41,
+  "totalCapabilities": 62,
+  "staleCount": 0,
+  "tools": {
+    "administrative": [
+      {
+        "name": "ChatGPT",
+        "function": "administrative",
+        "alsoUsefulFor": [
+          "marketing",
+          "sales",
+          "finance",
+          "communications",
+          "technology",
+          "education"
+        ],
+        "pricing": "Freemium ($20/mo for Plus)",
+        "url": "https://chat.openai.com",
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "pitch": "General-purpose AI assistant for text processing, summarization, data extraction, and Q&A.",
+        "bestFor": "Ad-hoc information lookup, document summarization, data extraction from unstructured text. Works across virtually all knowledge work tasks.",
+        "limitations": "No persistent memory across sessions (without custom GPTs). Can hallucinate facts. Not suitable for tasks requiring real-time data without plugins.",
+        "stale": false
+      },
+      {
+        "name": "Claude",
+        "function": "administrative",
+        "alsoUsefulFor": [
+          "technology",
+          "finance",
+          "legal",
+          "communications",
+          "education"
+        ],
+        "pricing": "Freemium ($20/mo for Pro)",
+        "url": "https://claude.ai",
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "pitch": "AI assistant with strong document analysis, long-context processing, and careful reasoning.",
+        "bestFor": "Analyzing long documents (up to 200K tokens), careful data extraction, tasks requiring nuanced judgment. Particularly strong at following complex instructions.",
+        "limitations": "No web browsing in free tier. No image generation. Slower than some alternatives for simple tasks.",
+        "stale": false
+      },
+      {
+        "name": "Microsoft Copilot (M365)",
+        "function": "administrative",
+        "alsoUsefulFor": [
+          "communications",
+          "finance",
+          "operations"
+        ],
+        "pricing": "Paid ($30/user/mo on top of M365)",
+        "url": "https://www.microsoft.com/en-us/microsoft-copilot",
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "pitch": "AI assistant embedded in Word, Excel, PowerPoint, Outlook, and Teams.",
+        "bestFor": "Workers already in the Microsoft ecosystem. Automates document drafting, email triage, meeting summaries, Excel formula generation, and PowerPoint creation from within the tools people already use.",
+        "limitations": "Requires M365 E3/E5 subscription plus Copilot add-on. Quality varies by application (strong in Word/Outlook, weaker in Excel for complex analysis). Enterprise rollout requires admin configuration.",
+        "stale": false
+      },
+      {
+        "name": "Google Gemini (Workspace)",
+        "function": "administrative",
+        "alsoUsefulFor": [
+          "communications",
+          "finance",
+          "operations"
+        ],
+        "pricing": "Included with Workspace Business/Enterprise ($14+/user/mo)",
+        "url": "https://workspace.google.com/products/gemini/",
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "pitch": "AI assistant embedded in Gmail, Docs, Sheets, Slides, and Meet.",
+        "bestFor": "Google Workspace users. Email drafting, document summarization, spreadsheet formulas, presentation creation, meeting notes.",
+        "limitations": "Tightly coupled to Google ecosystem. Less capable than standalone models for complex reasoning. Enterprise features require higher-tier plans.",
+        "stale": false
+      },
+      {
+        "name": "Notion AI",
+        "function": "administrative",
+        "alsoUsefulFor": [
+          "operations",
+          "communications",
+          "people-management"
+        ],
+        "pricing": "Add-on ($10/member/mo on top of Notion)",
+        "url": "https://www.notion.so/product/ai",
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "pitch": "AI features built into Notion's workspace: summarize pages, extract action items, generate content, answer questions across your workspace.",
+        "bestFor": "Teams already using Notion for documentation. AI can search across your entire workspace to answer questions, summarize meeting notes, draft project briefs, and extract insights from existing docs.",
+        "limitations": "Only useful if your team's knowledge is in Notion. Quality depends heavily on how well-organized your workspace is. Add-on cost on top of existing Notion subscription.",
+        "stale": false
+      },
+      {
+        "name": "Zapier (with AI)",
+        "function": "administrative",
+        "alsoUsefulFor": [
+          "operations",
+          "marketing",
+          "sales"
+        ],
+        "pricing": "Freemium ($20/mo for Starter)",
+        "url": "https://zapier.com",
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "pitch": "No-code automation platform connecting 6,000+ apps with AI-powered workflow building.",
+        "bestFor": "Automating repetitive cross-app workflows without coding. \"When X happens in app A, do Y in app B.\" AI assistant helps build automations from natural language descriptions.",
+        "limitations": "Complex automations can be fragile. Per-task pricing adds up at scale. Debugging failed automations requires understanding the workflow logic.",
+        "stale": false
+      },
+      {
+        "name": "Reclaim.ai",
+        "function": "administrative",
+        "alsoUsefulFor": [
+          "people-management",
+          "operations"
+        ],
+        "pricing": "Freemium ($10/user/mo for Starter)",
+        "url": "https://reclaim.ai",
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "pitch": "AI scheduling assistant that auto-schedules tasks, habits, meetings, and breaks around your calendar.",
+        "bestFor": "Professionals with overloaded calendars. Automatically finds time for focus work, 1:1s, and habits. Defends time blocks and reschedules when conflicts arise.",
+        "limitations": "Requires Google Calendar or Outlook. Works best when you commit to letting it manage your schedule. Team features require everyone to be on the platform.",
+        "stale": false
+      },
+      {
+        "name": "Clockwise",
+        "function": "administrative",
+        "alsoUsefulFor": [
+          "people-management",
+          "operations"
+        ],
+        "pricing": "Freemium ($6.75/user/mo for Teams)",
+        "url": "https://www.getclockwise.com",
+        "verified": "2026-04-03",
+        "confidence": "medium",
+        "pitch": "AI calendar optimization that creates focus time blocks and streamlines meeting scheduling across teams.",
+        "bestFor": "Teams drowning in meetings. Analyzes calendar patterns, consolidates meetings to create focus time blocks, and finds optimal meeting times across time zones.",
+        "limitations": "Most valuable features require team-wide adoption. Free tier is limited. Works best with Google Calendar.",
+        "stale": false
+      },
+      {
+        "name": "Motion",
+        "function": "administrative",
+        "alsoUsefulFor": [
+          "operations"
+        ],
+        "pricing": "Paid ($19/user/mo)",
+        "url": "https://www.usemotion.com",
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "pitch": "AI project manager that auto-schedules tasks, prioritizes work, and reschedules dynamically as priorities shift.",
+        "bestFor": "Small teams and solo operators who need project management without the overhead. Add tasks with deadlines, Motion figures out when to do them. Auto-reschedules when you fall behind.",
+        "limitations": "Monthly cost adds up for teams. Learning to trust the AI scheduler takes adjustment. Limited integrations compared to Asana/Monday.",
+        "stale": false
+      },
+      {
+        "name": "Perplexity AI",
+        "function": "administrative",
+        "alsoUsefulFor": [
+          "marketing",
+          "finance",
+          "legal",
+          "education",
+          "technology"
+        ],
+        "pricing": "Freemium ($20/mo for Pro)",
+        "url": "https://www.perplexity.ai",
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "pitch": "AI-powered research assistant that searches the web and synthesizes answers with citations.",
+        "bestFor": "Research-heavy roles that need current, cited information. Replaces the \"open 15 tabs and read them all\" workflow. Pro tier includes academic paper search and file analysis.",
+        "limitations": "Citations are not always perfectly matched to claims. Can miss niche or specialized sources. Not a replacement for deep domain expertise.",
+        "stale": false
+      }
+    ],
+    "marketing": [
+      {
+        "name": "Jasper",
+        "function": "marketing",
+        "alsoUsefulFor": [
+          "communications",
+          "sales"
+        ],
+        "pricing": "Paid ($49/mo for Creator)",
+        "url": "https://www.jasper.ai",
+        "verified": "2026-04-03",
+        "confidence": "medium",
+        "pitch": "AI content platform for marketing copy, blog posts, social media, and brand-consistent writing.",
+        "bestFor": "Marketing teams and content creators who need high-volume, brand-consistent copy. Template library covers ads, emails, product descriptions, blog posts. Brand voice training keeps output on-brand.",
+        "limitations": "Expensive for solo users. Output quality varies, needs human editing. Not great for technical or highly specialized writing.",
+        "stale": false
+      },
+      {
+        "name": "Canva (Magic Studio)",
+        "function": "marketing",
+        "alsoUsefulFor": [
+          "communications",
+          "administrative",
+          "education"
+        ],
+        "pricing": "Freemium ($13/mo for Pro)",
+        "url": "https://www.canva.com",
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "pitch": "Design platform with AI-powered image generation, background removal, text-to-design, and brand kit management.",
+        "bestFor": "Non-designers who need professional-looking visuals. Social media posts, presentations, flyers, marketing materials. AI features handle resizing, background removal, and style suggestions.",
+        "limitations": "Templates can look generic. Advanced design needs still require Figma/Adobe. AI image generation quality below Midjourney/DALL-E.",
+        "stale": false
+      },
+      {
+        "name": "Gamma",
+        "function": "marketing",
+        "alsoUsefulFor": [
+          "communications",
+          "sales",
+          "administrative"
+        ],
+        "pricing": "Freemium ($10/mo for Plus)",
+        "url": "https://gamma.app",
+        "verified": "2026-04-03",
+        "confidence": "medium",
+        "pitch": "AI-powered presentation and document builder that generates polished decks from text prompts.",
+        "bestFor": "Creating presentations quickly without design skills. Takes text input or outlines and generates visually polished slides. Good for internal presentations, pitch decks, and reports.",
+        "limitations": "Limited customization compared to PowerPoint/Keynote. Templates can feel samey. Not ideal for highly branded or pixel-perfect presentations.",
+        "stale": false
+      }
+    ],
+    "sales": [
+      {
+        "name": "Gong",
+        "function": "sales",
+        "alsoUsefulFor": [
+          "people-management",
+          "customer-service"
+        ],
+        "pricing": "Enterprise (custom pricing, ~$100/user/mo)",
+        "url": "https://www.gong.io",
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "pitch": "Revenue intelligence platform that records, transcribes, and analyzes customer calls and meetings.",
+        "bestFor": "Sales teams and account managers. AI analyzes conversation patterns, identifies winning behaviors, flags risk signals in deals, and provides coaching recommendations based on actual call data.",
+        "limitations": "Expensive. Requires buy-in from the entire sales org. Privacy concerns in some jurisdictions require disclosure. Most valuable with 10+ reps.",
+        "stale": false
+      },
+      {
+        "name": "Crystal",
+        "function": "sales",
+        "alsoUsefulFor": [
+          "people-management",
+          "communications"
+        ],
+        "pricing": "Freemium ($49/mo for Premium)",
+        "url": "https://www.crystalknows.com",
+        "verified": "2026-04-03",
+        "confidence": "medium",
+        "pitch": "AI personality assessment tool that predicts communication styles and provides tailored messaging suggestions.",
+        "bestFor": "Sales, recruiting, and relationship management. Analyzes LinkedIn profiles and other public data to predict DISC personality type. Suggests how to write emails, conduct meetings, and negotiate with each person.",
+        "limitations": "Personality predictions from public data have inherent accuracy limits. Can feel intrusive. Best as a preparation aid, not a substitute for genuine relationship skills.",
+        "stale": false
+      },
+      {
+        "name": "Lavender",
+        "function": "sales",
+        "alsoUsefulFor": [
+          "communications",
+          "marketing"
+        ],
+        "pricing": "Freemium ($29/mo for Pro)",
+        "url": "https://www.lavender.ai",
+        "verified": "2026-04-03",
+        "confidence": "medium",
+        "pitch": "AI email coaching for sales outreach. Scores emails in real-time and suggests improvements for response rates.",
+        "bestFor": "Sales development reps and anyone doing cold outreach. Analyzes email tone, length, readability, and personalization. Provides a score and specific suggestions before you send.",
+        "limitations": "Optimizes for response rate, which isn't always the right metric. Can encourage formulaic writing. Most useful for high-volume outreach, less for relationship-based selling.",
+        "stale": false
+      },
+      {
+        "name": "Fireflies.ai",
+        "function": "sales",
+        "alsoUsefulFor": [
+          "people-management",
+          "operations",
+          "administrative"
+        ],
+        "pricing": "Freemium ($18/seat/mo for Pro)",
+        "url": "https://fireflies.ai",
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "pitch": "Meeting assistant that records, transcribes, and generates summaries with action items and sentiment analysis.",
+        "bestFor": "Client-facing professionals who need to be fully present in conversations instead of taking notes. Auto-captures everything, generates searchable transcripts, and tracks action items across meetings.",
+        "limitations": "Requires participant consent for recording. Accuracy varies with audio quality. Sentiment analysis should be treated as directional, not definitive.",
+        "stale": false
+      }
+    ],
+    "finance": [
+      {
+        "name": "Tableau (with AI)",
+        "function": "finance",
+        "alsoUsefulFor": [
+          "operations",
+          "marketing"
+        ],
+        "pricing": "Paid ($75/user/mo for Creator)",
+        "url": "https://www.tableau.com",
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "pitch": "Business intelligence platform with AI-powered natural language queries and automated insights.",
+        "bestFor": "Analysts and managers who need to explore data visually. Ask Tableau questions in plain English, get charts. AI suggests relevant visualizations and highlights anomalies.",
+        "limitations": "Steep learning curve for advanced features. Expensive per-seat. Requires clean, well-structured data sources.",
+        "stale": false
+      },
+      {
+        "name": "Julius AI",
+        "function": "finance",
+        "alsoUsefulFor": [
+          "administrative",
+          "marketing",
+          "operations"
+        ],
+        "pricing": "Freemium ($20/mo for Pro)",
+        "url": "https://julius.ai",
+        "verified": "2026-04-03",
+        "confidence": "medium",
+        "pitch": "AI data analyst that processes spreadsheets, creates visualizations, and runs statistical analyses from natural language.",
+        "bestFor": "Non-technical professionals who need data analysis without coding. Upload a CSV, ask questions, get charts and statistical summaries. Handles regression, correlation, trend analysis.",
+        "limitations": "Limited to tabular data. Complex multi-step analyses can produce incorrect results. Not suitable for production data pipelines.",
+        "stale": false
+      },
+      {
+        "name": "Power BI (with Copilot)",
+        "function": "finance",
+        "alsoUsefulFor": [
+          "operations",
+          "administrative"
+        ],
+        "pricing": "Paid ($10/user/mo for Pro, Copilot requires Premium)",
+        "url": "https://powerbi.microsoft.com",
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "pitch": "Microsoft's BI platform with AI-powered natural language queries, automated report generation, and anomaly detection.",
+        "bestFor": "Organizations in the Microsoft ecosystem. Ask data questions in plain English, auto-generate reports, detect outliers. Integrates natively with Excel, Azure, and Dynamics.",
+        "limitations": "Copilot features require Premium capacity (expensive). DAX formula language has a steep learning curve. Best with Microsoft data sources.",
+        "stale": false
+      },
+      {
+        "name": "Docsumo",
+        "function": "finance",
+        "alsoUsefulFor": [
+          "administrative",
+          "legal",
+          "operations"
+        ],
+        "pricing": "Freemium (paid plans from $500/mo)",
+        "url": "https://www.docsumo.com",
+        "verified": "2026-04-03",
+        "confidence": "medium",
+        "pitch": "Intelligent document processing for invoices, receipts, bank statements, and financial documents.",
+        "bestFor": "High-volume document processing in accounting, finance, and operations. Extracts structured data from invoices, purchase orders, and financial statements with high accuracy.",
+        "limitations": "Expensive for small teams. Requires training period for custom document types. Best ROI at 500+ documents/month.",
+        "stale": false
+      },
+      {
+        "name": "Fathom (Financial)",
+        "function": "finance",
+        "alsoUsefulFor": [
+          "administrative",
+          "operations"
+        ],
+        "pricing": "Paid ($49/mo for Starter)",
+        "url": "https://www.fathomhq.com",
+        "verified": "2026-04-03",
+        "confidence": "medium",
+        "pitch": "AI-powered financial reporting and analysis tool that generates narrative reports from accounting data.",
+        "bestFor": "Accountants and financial advisors. Connects to Xero, QuickBooks, or MYOB and generates visual reports, KPI dashboards, and narrative commentary. Turns numbers into client-ready reports.",
+        "limitations": "Only works with supported accounting platforms. Narrative generation is template-based, not fully AI-generated. Most valuable for firms with 10+ clients.",
+        "stale": false
+      }
+    ],
+    "operations": [
+      {
+        "name": "Asana (with AI)",
+        "function": "operations",
+        "alsoUsefulFor": [
+          "administrative",
+          "people-management",
+          "marketing"
+        ],
+        "pricing": "Freemium ($11/user/mo for Premium)",
+        "url": "https://asana.com",
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "pitch": "Project management platform with AI features for status updates, task recommendations, and workflow optimization.",
+        "bestFor": "Teams managing complex projects with multiple workstreams. AI generates status reports from task updates, recommends task assignments, and identifies bottlenecks.",
+        "limitations": "Can become bloated for simple projects. AI features are relatively new and still maturing. Requires consistent team adoption to be useful.",
+        "stale": false
+      },
+      {
+        "name": "Automation Anywhere",
+        "function": "operations",
+        "alsoUsefulFor": [
+          "finance",
+          "administrative"
+        ],
+        "pricing": "Enterprise (custom pricing)",
+        "url": "https://www.automationanywhere.com",
+        "verified": "2026-04-03",
+        "confidence": "medium",
+        "pitch": "Enterprise RPA platform for automating repetitive digital tasks across applications.",
+        "bestFor": "Large organizations with high-volume, rule-based processes across multiple systems (ERP, CRM, legacy apps). Automates data entry, form filling, cross-system data migration.",
+        "limitations": "Significant implementation cost and time. Requires dedicated RPA developers. Brittle when underlying applications change their UI. Overkill for small teams.",
+        "stale": false
+      },
+      {
+        "name": "Fieldwire",
+        "function": "operations",
+        "alsoUsefulFor": [
+          "administrative"
+        ],
+        "pricing": "Freemium ($39/user/mo for Pro)",
+        "url": "https://www.fieldwire.com",
+        "verified": "2026-04-03",
+        "confidence": "medium",
+        "pitch": "Construction management platform for task tracking, plan markup, and field reporting.",
+        "bestFor": "Construction managers and field supervisors. Digital plan markup, punch lists, daily reports, and photo documentation from job sites. Reduces paperwork and improves communication between field and office.",
+        "limitations": "Adoption requires training field crews on mobile devices. Most valuable for commercial construction, less for small residential jobs. Requires reliable connectivity.",
+        "stale": false
+      },
+      {
+        "name": "Procore",
+        "function": "operations",
+        "alsoUsefulFor": [
+          "finance"
+        ],
+        "pricing": "Enterprise (custom pricing)",
+        "url": "https://www.procore.com",
+        "verified": "2026-04-03",
+        "confidence": "medium",
+        "pitch": "Construction management platform with AI-powered risk prediction, quality tracking, and safety compliance.",
+        "bestFor": "Large construction firms managing multiple projects. AI analyzes project data to predict delays, identify safety risks, and flag quality issues before they become problems.",
+        "limitations": "Enterprise pricing is significant. Implementation takes months. Overkill for small contractors.",
+        "stale": false
+      },
+      {
+        "name": "Augmentir",
+        "function": "operations",
+        "alsoUsefulFor": [
+          "people-management"
+        ],
+        "pricing": "Enterprise (custom pricing)",
+        "url": "https://www.augmentir.com",
+        "verified": "2026-04-03",
+        "confidence": "medium",
+        "pitch": "AI-powered connected worker platform for manufacturing, with digital work instructions and skills management.",
+        "bestFor": "Manufacturing and maintenance operations. AI personalizes work instructions based on worker skill level, identifies training gaps, and provides real-time guidance on complex procedures.",
+        "limitations": "Requires significant upfront investment in deployment and content creation. Most valuable at scale (50+ workers). Needs reliable shop-floor connectivity.",
+        "stale": false
+      },
+      {
+        "name": "SafetyCulture (iAuditor)",
+        "function": "operations",
+        "alsoUsefulFor": [
+          "healthcare",
+          "legal"
+        ],
+        "pricing": "Freemium ($24/user/mo for Premium)",
+        "url": "https://safetyculture.com",
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "pitch": "Inspection and audit platform with AI-powered issue detection, reporting, and compliance tracking.",
+        "bestFor": "Any role requiring regular inspections (safety, quality, compliance). Digital checklists, photo evidence, automatic report generation. AI suggests corrective actions based on inspection findings.",
+        "limitations": "Template setup requires initial effort. Best ROI for teams doing 10+ inspections/week. Free tier limited to 3 users.",
+        "stale": false
+      }
+    ],
+    "communications": [
+      {
+        "name": "Grammarly",
+        "function": "communications",
+        "alsoUsefulFor": [
+          "administrative",
+          "marketing",
+          "education"
+        ],
+        "pricing": "Freemium ($12/mo for Premium)",
+        "url": "https://www.grammarly.com",
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "pitch": "AI writing assistant for grammar, clarity, tone, and style across all writing surfaces.",
+        "bestFor": "Professionals who write frequently (emails, reports, proposals). Works as a browser extension, desktop app, and integrates with most writing tools. Tone detection helps match communication style to audience.",
+        "limitations": "Premium features require subscription. Can be overly prescriptive about style. The AI rewrite suggestions sometimes strip voice/personality from writing.",
+        "stale": false
+      },
+      {
+        "name": "Otter.ai",
+        "function": "communications",
+        "alsoUsefulFor": [
+          "administrative",
+          "people-management",
+          "sales"
+        ],
+        "pricing": "Freemium ($16.99/mo for Pro)",
+        "url": "https://otter.ai",
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "pitch": "Real-time meeting transcription, summarization, and action item extraction.",
+        "bestFor": "Professionals in meeting-heavy roles. Auto-joins Zoom/Teams/Meet calls, generates transcripts with speaker identification, extracts action items, and creates shareable summaries.",
+        "limitations": "Accuracy drops with heavy accents, overlapping speakers, or poor audio. Free tier limited to 300 minutes/month. Requires calendar integration for auto-join.",
+        "stale": false
+      },
+      {
+        "name": "Loom",
+        "function": "communications",
+        "alsoUsefulFor": [
+          "marketing",
+          "people-management",
+          "education"
+        ],
+        "pricing": "Freemium ($12.50/mo for Business)",
+        "url": "https://www.loom.com",
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "pitch": "Async video messaging with AI-powered summaries, chapters, and transcripts.",
+        "bestFor": "Replacing status update meetings with async video. Record screen + camera, AI generates summary and chapters. Viewers can watch at 2x or just read the summary.",
+        "limitations": "Not a replacement for interactive discussions. Video fatigue is real. Free tier limited to 25 videos and 5 min each.",
+        "stale": false
+      }
+    ],
+    "people-management": [],
+    "customer-service": [],
+    "technology": [
+      {
+        "name": "GitHub Copilot",
+        "function": "technology",
+        "alsoUsefulFor": [
+          "education"
+        ],
+        "pricing": "Freemium ($10/mo for Individual)",
+        "url": "https://github.com/features/copilot",
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "pitch": "AI pair programmer that suggests code completions, generates functions, and explains code inline in your IDE.",
+        "bestFor": "Software developers at all levels. Auto-completes code, generates boilerplate, writes tests, and explains unfamiliar code. Works in VS Code, JetBrains, Neovim, and more.",
+        "limitations": "Can suggest insecure or incorrect code. Doesn't understand full project architecture. Works best for common patterns, less reliable for novel or domain-specific logic.",
+        "stale": false
+      },
+      {
+        "name": "Cursor",
+        "function": "technology",
+        "alsoUsefulFor": [],
+        "pricing": "Freemium ($20/mo for Pro)",
+        "url": "https://cursor.sh",
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "pitch": "AI-native code editor (VS Code fork) with inline code generation, multi-file editing, and codebase-aware chat.",
+        "bestFor": "Software developers of all levels. Write code from natural language descriptions, refactor across files, debug with AI assistance. Understands your full codebase context.",
+        "limitations": "Subscription cost on top of existing tools. Can suggest incorrect code that compiles but has logic errors. Heavy reliance can slow down learning for junior developers.",
+        "stale": false
+      },
+      {
+        "name": "Dbt (with AI)",
+        "function": "technology",
+        "alsoUsefulFor": [
+          "finance",
+          "operations"
+        ],
+        "pricing": "Freemium (Cloud from $100/mo)",
+        "url": "https://www.getdbt.com",
+        "verified": "2026-04-03",
+        "confidence": "medium",
+        "pitch": "Data transformation tool with AI-powered SQL generation, documentation, and lineage tracking.",
+        "bestFor": "Data engineers and analytics engineers. AI generates SQL transformations from natural language, auto-documents models, and explains complex queries. Version-controlled data pipelines.",
+        "limitations": "Steep learning curve for non-SQL users. Cloud pricing can escalate with usage. Requires existing data warehouse infrastructure.",
+        "stale": false
+      },
+      {
+        "name": "Elicit",
+        "function": "technology",
+        "alsoUsefulFor": [
+          "education",
+          "finance",
+          "legal"
+        ],
+        "pricing": "Freemium ($10/mo for Plus)",
+        "url": "https://elicit.com",
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "pitch": "AI research assistant for finding, reading, and synthesizing academic papers.",
+        "bestFor": "Researchers, analysts, and anyone who needs to synthesize academic literature. Searches across 200M+ papers, extracts key findings, identifies methodology, and creates structured summaries.",
+        "limitations": "Academic papers only (not industry reports, news, etc.). Extraction accuracy varies with paper complexity. Best for English-language research.",
+        "stale": false
+      }
+    ],
+    "healthcare": [],
+    "legal": [
+      {
+        "name": "Casetext (CoCounsel)",
+        "function": "legal",
+        "alsoUsefulFor": [
+          "finance"
+        ],
+        "pricing": "Enterprise (custom pricing)",
+        "url": "https://casetext.com",
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "pitch": "AI legal research assistant that reviews documents, identifies relevant case law, and drafts legal memos.",
+        "bestFor": "Lawyers and legal professionals. Analyze contracts, research case law, draft discovery responses, summarize depositions. Dramatically reduces time on legal research.",
+        "limitations": "Requires legal expertise to verify outputs. Cannot replace attorney judgment on strategy. Enterprise pricing limits accessibility for solo practitioners.",
+        "stale": false
+      },
+      {
+        "name": "Harvey AI",
+        "function": "legal",
+        "alsoUsefulFor": [
+          "finance"
+        ],
+        "pricing": "Enterprise (custom pricing)",
+        "url": "https://www.harvey.ai",
+        "verified": "2026-04-03",
+        "confidence": "medium",
+        "pitch": "AI platform purpose-built for legal work: contract analysis, due diligence, regulatory research, and litigation support.",
+        "bestFor": "Law firms and corporate legal departments. Handles complex legal reasoning, multi-jurisdictional research, and large-scale document review. Used by elite firms (Allen & Overy, PwC).",
+        "limitations": "Enterprise-only pricing. Requires firm-wide deployment and training. Best for large firms with high-volume, complex work.",
+        "stale": false
+      }
+    ],
+    "education": [],
+    "creative-design": [
+      {
+        "name": "Midjourney",
+        "function": "creative-design",
+        "alsoUsefulFor": [
+          "marketing",
+          "communications"
+        ],
+        "pricing": "Paid ($10/mo for Basic)",
+        "url": "https://www.midjourney.com",
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "pitch": "AI image generation with exceptional aesthetic quality, accessed via Discord or web interface.",
+        "bestFor": "Concept art, marketing visuals, mood boards, social media imagery. Produces consistently beautiful results with relatively simple prompts. Strong at photorealistic and artistic styles.",
+        "limitations": "Discord-based workflow is awkward for some users (web editor now available). Limited control over precise details. Not great for text-in-image, technical diagrams, or exact brand specifications.",
+        "stale": false
+      },
+      {
+        "name": "Adobe Firefly",
+        "function": "creative-design",
+        "alsoUsefulFor": [
+          "marketing"
+        ],
+        "pricing": "Included with Creative Cloud ($55/mo) or standalone ($5/mo)",
+        "url": "https://firefly.adobe.com",
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "pitch": "AI image generation and editing integrated into Photoshop, Illustrator, and Express. Trained on licensed content.",
+        "bestFor": "Creative professionals already in the Adobe ecosystem. Generative Fill in Photoshop, text-to-image, style transfer. Commercially safe (trained on Adobe Stock and licensed content).",
+        "limitations": "Image quality below Midjourney for artistic work. Requires Creative Cloud for best experience. Standalone app is limited.",
+        "stale": false
+      },
+      {
+        "name": "Suno",
+        "function": "creative-design",
+        "alsoUsefulFor": [
+          "marketing",
+          "communications"
+        ],
+        "pricing": "Freemium ($10/mo for Pro)",
+        "url": "https://suno.com",
+        "verified": "2026-04-03",
+        "confidence": "medium",
+        "pitch": "AI music generation from text prompts. Creates full songs with vocals, instruments, and production.",
+        "bestFor": "Content creators needing background music, jingles, or podcast intros. Marketing teams creating audio content. Rapid prototyping of musical ideas.",
+        "limitations": "Output quality is impressive but not professional studio quality. Limited control over arrangement details. Licensing terms vary by plan.",
+        "stale": false
+      },
+      {
+        "name": "Descript",
+        "function": "creative-design",
+        "alsoUsefulFor": [
+          "marketing",
+          "communications",
+          "education"
+        ],
+        "pricing": "Freemium ($24/mo for Business)",
+        "url": "https://www.descript.com",
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "pitch": "AI-powered video and audio editing through text-based editing. Edit video by editing the transcript.",
+        "bestFor": "Content creators, podcasters, and marketing teams. Edit video/audio by editing text, remove filler words automatically, generate clips, add captions. Dramatically lowers the skill bar for video production.",
+        "limitations": "Complex edits still need traditional editors. AI voice cloning requires careful ethical use. Export quality can vary.",
+        "stale": false
+      }
+    ]
+  },
+  "capabilities": {
+    "administrative": [
+      {
+        "name": "Organizational Judgment & Prioritization",
+        "function": "administrative",
+        "alsoRelevantTo": [
+          "operations",
+          "people-management"
+        ],
+        "whyAppreciating": "AI is quickly taking over scheduling, filing, and data entry. But here's what most people miss: research on 12 million job postings shows that as companies adopt more AI, they actually increase hiring for judgment-heavy skills like this one. The routine work disappears and the judgment work concentrates. The admin who can read a room, triage competing executive priorities, and know which meeting actually needs to happen doesn't get replaced — they become the person everyone depends on.",
+        "howToDevelop": "Shadow decision-makers for a week and note which requests they ignore. Practice writing one-paragraph priority recommendations (\"We should move the board deck deadline because X\"). Build a personal framework for triaging: urgent/important matrix applied to real incoming requests daily.",
+        "automationResistance": [
+          "judgment-under-ambiguity",
+          "institutional-knowledge"
+        ],
+        "taskCategories": [
+          "coordination-management",
+          "analysis-decision"
+        ],
+        "appreciationScore": 9,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Stakeholder Navigation",
+        "function": "administrative",
+        "alsoRelevantTo": [
+          "communications",
+          "people-management"
+        ],
+        "whyAppreciating": "AI can draft the email, but it can't sense that the CFO is frustrated about the budget process or that two department heads are in a quiet turf war. The human who navigates organizational politics with discretion becomes the most trusted person in the building.",
+        "howToDevelop": "Map your organization's informal influence network (who actually makes decisions vs. who has the title). Practice the 30-second hallway update. Keep a private log of stakeholder preferences: who wants detail, who wants headlines, who needs to feel consulted.",
+        "automationResistance": [
+          "relationship-trust",
+          "institutional-knowledge",
+          "cultural-context"
+        ],
+        "taskCategories": [
+          "interpersonal",
+          "communication"
+        ],
+        "appreciationScore": 9,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Anticipatory Problem-Solving",
+        "function": "administrative",
+        "alsoRelevantTo": [
+          "operations",
+          "customer-service"
+        ],
+        "whyAppreciating": "AI is reactive to prompts. The admin who walks into Monday morning knowing the week's three potential disasters — and has already defused two of them — operates on a layer AI can't reach. Pattern recognition built from institutional context, not data.",
+        "howToDevelop": "At the start of each week, write down three things that could go wrong. Track your accuracy. Build checklists for recurring processes that capture the non-obvious steps (the ones that only fail when someone new runs the process). Debrief every near-miss: what was the early signal?",
+        "automationResistance": [
+          "institutional-knowledge",
+          "judgment-under-ambiguity"
+        ],
+        "taskCategories": [
+          "coordination-management",
+          "analysis-decision"
+        ],
+        "appreciationScore": 8,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Confidentiality & Discretion",
+        "function": "administrative",
+        "alsoRelevantTo": [
+          "legal",
+          "people-management",
+          "finance"
+        ],
+        "whyAppreciating": "AI systems create new data exposure risks. The human who understands information sensitivity at a cultural and contextual level — not just a classification level — becomes essential. Trust is the scarcest resource in organizations, and it compounds.",
+        "howToDevelop": "Audit your own information handling: who do you cc by default? What do you discuss in open spaces? Develop a mental model for information sensitivity (public, internal, restricted, confidential) and apply it to every document and conversation. Build a reputation for discretion by demonstrating it consistently.",
+        "automationResistance": [
+          "ethical-reasoning",
+          "relationship-trust",
+          "cultural-context"
+        ],
+        "taskCategories": [
+          "interpersonal",
+          "communication"
+        ],
+        "appreciationScore": 8,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Process Design & Optimization",
+        "function": "administrative",
+        "alsoRelevantTo": [
+          "operations",
+          "technology"
+        ],
+        "whyAppreciating": "Someone has to figure out how to actually integrate AI into existing workflows. Not in theory — in practice, with the specific quirks of your organization's approval chains, compliance requirements, and legacy systems. Studies show that when companies double their use of AI, demand for skills like adaptability and process redesign rises by about 5%. The admin who becomes the AI-integration translator isn't just keeping up — they're building one of the most in-demand skill sets of the next decade.",
+        "howToDevelop": "Document one existing process end-to-end this week, including the workarounds and unofficial steps. Identify the 3 highest-volume repetitive tasks in your workflow and experiment with AI tools for each. Measure before and after: time, error rate, satisfaction. Present findings to your manager with a one-page recommendation.",
+        "automationResistance": [
+          "institutional-knowledge",
+          "judgment-under-ambiguity"
+        ],
+        "taskCategories": [
+          "coordination-management",
+          "technical-specialized"
+        ],
+        "appreciationScore": 9,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      }
+    ],
+    "marketing": [
+      {
+        "name": "Brand Intuition & Taste",
+        "function": "marketing",
+        "alsoRelevantTo": [
+          "creative-design",
+          "communications"
+        ],
+        "whyAppreciating": "AI generates infinite content, but it has no taste. It can match patterns but can't feel when something is trying too hard, or when a subtle shift in tone would land better. A major study of 12 million job postings found that the more AI a company adopts, the more it seeks people with taste, creative judgment, and the ability to tell good from great. As AI floods every channel with competent-but-generic content, the human with genuine taste becomes the signal in the noise.",
+        "howToDevelop": "Build a swipe file of marketing you genuinely admire (not just \"best practices\" lists). For every piece your team produces, write one sentence about what makes it distinctly yours vs. what any brand could say. Study brands that maintained identity through decades of change (Apple, Patagonia, The Economist). Practice editing AI output: what do you cut, add, or reword?",
+        "automationResistance": [
+          "creative-taste",
+          "cultural-context"
+        ],
+        "taskCategories": [
+          "creative-generative",
+          "communication"
+        ],
+        "appreciationScore": 9,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Audience Empathy & Cultural Context",
+        "function": "marketing",
+        "alsoRelevantTo": [
+          "sales",
+          "communications",
+          "customer-service"
+        ],
+        "whyAppreciating": "AI can segment audiences and predict click-through rates. It can't sit in a customer's kitchen and understand why they chose your product over the cheaper alternative. As personalization becomes table stakes, the marketer who truly understands the emotional landscape of their audience creates campaigns that AI-generated content can't match.",
+        "howToDevelop": "Do 5 customer interviews this quarter with no agenda other than understanding their world. Read the forums, subreddits, and comment sections where your audience talks when they don't know you're listening. Build customer journey maps that include emotional states, not just touchpoints. Test your assumptions: write what you think customers want, then validate it.",
+        "automationResistance": [
+          "cultural-context",
+          "relationship-trust"
+        ],
+        "taskCategories": [
+          "interpersonal",
+          "analysis-decision"
+        ],
+        "appreciationScore": 9,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Strategic Narrative Construction",
+        "function": "marketing",
+        "alsoRelevantTo": [
+          "communications",
+          "sales"
+        ],
+        "whyAppreciating": "AI can write blog posts and social copy. It cannot construct the strategic narrative that makes a company matter — the through-line from problem to solution to worldview that turns customers into advocates. This is architectural thinking applied to language.",
+        "howToDevelop": "Study how the best companies frame themselves (not their products — their role in the world). Practice writing the same product benefit three ways: feature-first, benefit-first, worldview-first. Read \"Building a StoryBrand\" by Donald Miller and apply the framework to your company. Write your company's narrative in 100 words, 50 words, and 10 words.",
+        "automationResistance": [
+          "creative-taste",
+          "cultural-context",
+          "judgment-under-ambiguity"
+        ],
+        "taskCategories": [
+          "creative-generative",
+          "communication",
+          "analysis-decision"
+        ],
+        "appreciationScore": 8,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Channel Judgment & Resource Allocation",
+        "function": "marketing",
+        "alsoRelevantTo": [
+          "operations",
+          "finance"
+        ],
+        "whyAppreciating": "AI makes it trivially cheap to be present on every channel. The temptation to do everything intensifies. The marketer who can say \"we're cutting three channels and doubling down on two\" — and be right — is more valuable than ever. Focus is a competitive advantage when everyone else is spraying AI-generated content everywhere.",
+        "howToDevelop": "Audit your current channels: which ones drive pipeline, which drive vanity metrics? Run a \"channel fast\" — stop posting on your weakest channel for 30 days and measure the actual business impact. Build an attribution model that you actually trust (even a simple one). Practice saying no to new channel opportunities with a one-sentence rationale.",
+        "automationResistance": [
+          "judgment-under-ambiguity",
+          "institutional-knowledge"
+        ],
+        "taskCategories": [
+          "analysis-decision",
+          "coordination-management"
+        ],
+        "appreciationScore": 8,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Cross-Functional Translation",
+        "function": "marketing",
+        "alsoRelevantTo": [
+          "operations",
+          "communications",
+          "people-management"
+        ],
+        "whyAppreciating": "As AI handles more production work, marketing's value shifts from making things to connecting things. The marketer who can sit in a product roadmap meeting, extract the story, align it with sales messaging, and brief the exec team — all in the same day — is operating where AI can't.",
+        "howToDevelop": "Attend one meeting per month outside your function (engineering standup, sales pipeline review, customer support retrospective). Build a glossary of how different teams describe the same things differently. Practice translating: take a technical spec and write the customer-facing story in 15 minutes.",
+        "automationResistance": [
+          "institutional-knowledge",
+          "cultural-context",
+          "relationship-trust"
+        ],
+        "taskCategories": [
+          "communication",
+          "interpersonal",
+          "coordination-management"
+        ],
+        "appreciationScore": 8,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      }
+    ],
+    "sales": [
+      {
+        "name": "Relationship Depth & Trust-Building",
+        "function": "sales",
+        "alsoRelevantTo": [
+          "customer-service",
+          "people-management"
+        ],
+        "whyAppreciating": "AI can handle lead scoring, email sequencing, and CRM hygiene. It cannot build the kind of trust where a buyer calls you before they call procurement. Research shows that AI's effect on boosting demand for human relationship skills is nearly twice as large as its effect on replacing tasks. As AI automates top-of-funnel and transactional sales, the human who builds and maintains deep relationships doesn't just survive — they own the high-value deals that matter most.",
+        "howToDevelop": "For your top 10 accounts, write down something personal about each decision-maker that has nothing to do with business. Practice the \"give before you ask\" habit: share one useful insight per week with key contacts with no ask attached. Track your relationship investments the way you track pipeline: who haven't you checked in with? Build a personal CRM of genuine connections, not just leads.",
+        "automationResistance": [
+          "relationship-trust",
+          "cultural-context"
+        ],
+        "taskCategories": [
+          "interpersonal"
+        ],
+        "appreciationScore": 10,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Deal Instinct & Negotiation Reading",
+        "function": "sales",
+        "alsoRelevantTo": [
+          "operations",
+          "legal"
+        ],
+        "whyAppreciating": "AI can predict deal probability from CRM data. It cannot read the pause in a buyer's voice, sense that the budget holder is skeptical despite the champion's enthusiasm, or know that this particular client always bluffs about competitive bids. Deal instinct is pattern recognition trained on thousands of human interactions — exactly what appreciates when routine selling is automated.",
+        "howToDevelop": "After every significant meeting, write down your gut read in one sentence before you check with the team. Track accuracy over 6 months. Study negotiation frameworks (BATNA, anchoring, principled negotiation) and apply one technique per deal. Debrief lost deals rigorously: what did you miss? What signal did you ignore?",
+        "automationResistance": [
+          "judgment-under-ambiguity",
+          "relationship-trust",
+          "institutional-knowledge"
+        ],
+        "taskCategories": [
+          "interpersonal",
+          "analysis-decision"
+        ],
+        "appreciationScore": 9,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Complex Problem Framing",
+        "function": "sales",
+        "alsoRelevantTo": [
+          "marketing",
+          "communications"
+        ],
+        "whyAppreciating": "AI excels at presenting pre-structured information. It struggles with ambiguous, multi-dimensional problems where the buyer doesn't know what they need. The salesperson who can walk into a room, listen for 30 minutes, and reframe the problem in a way that makes the buyer say \"yes, that's exactly it\" — that person closes deals AI-generated sequences never will.",
+        "howToDevelop": "Practice active listening in meetings: take notes on what the buyer says, then rephrase their problem in your own words and confirm. Study the Challenger Sale framework — teach, tailor, take control. Build a library of problem frames: common patterns you see across buyers that help you pattern-match faster.",
+        "automationResistance": [
+          "judgment-under-ambiguity",
+          "cultural-context"
+        ],
+        "taskCategories": [
+          "interpersonal",
+          "communication",
+          "analysis-decision"
+        ],
+        "appreciationScore": 9,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Strategic Account Orchestration",
+        "function": "sales",
+        "alsoRelevantTo": [
+          "operations",
+          "people-management"
+        ],
+        "whyAppreciating": "Complex B2B deals involve 6-10 stakeholders, each with different incentives. AI can track touchpoints but can't orchestrate the political choreography: getting the CTO to champion internally, timing the CFO conversation for budget season, navigating the procurement team's requirements. This is organizational chess.",
+        "howToDevelop": "Map the full decision-making unit for your next major deal: champion, economic buyer, technical evaluator, legal, procurement. For each, write their personal win condition. Practice multi-threading: never have just one contact at an account. Build account plans that include stakeholder relationship goals, not just revenue targets.",
+        "automationResistance": [
+          "relationship-trust",
+          "institutional-knowledge",
+          "judgment-under-ambiguity"
+        ],
+        "taskCategories": [
+          "interpersonal",
+          "coordination-management"
+        ],
+        "appreciationScore": 9,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Resilience & Rejection Processing",
+        "function": "sales",
+        "alsoRelevantTo": [
+          "customer-service",
+          "people-management"
+        ],
+        "whyAppreciating": "As AI handles more routine outreach (and generates more rejection at scale), the human seller's emotional resilience becomes the differentiator. Job postings that mention AI are twice as likely to also require resilience and agility compared to similar roles without AI. The person who can lose a deal Friday and show up Monday genuinely engaged — not performing engagement — is the person buyers want to work with. Authenticity is the ultimate automation resistance.",
+        "howToDevelop": "Build a personal debrief habit: after a loss, write three things you'd do differently and one thing you did well. Find a peer accountability partner for honest deal reviews. Track your win rate over rolling quarters, not individual deals — focus on the trend line, not the noise. Invest in activities outside work that recharge genuine enthusiasm.",
+        "automationResistance": [
+          "motivational-influence",
+          "relationship-trust"
+        ],
+        "taskCategories": [
+          "interpersonal"
+        ],
+        "appreciationScore": 7,
+        "verified": "2026-04-03",
+        "confidence": "medium",
+        "stale": false
+      }
+    ],
+    "finance": [
+      {
+        "name": "Judgment Under Regulatory Ambiguity",
+        "function": "finance",
+        "alsoRelevantTo": [
+          "legal",
+          "operations"
+        ],
+        "whyAppreciating": "AI can apply clear rules (calculate depreciation, classify transactions). It cannot navigate the gray areas where reasonable professionals disagree — aggressive vs. conservative revenue recognition, transfer pricing judgment calls, materiality thresholds. As AI rapidly takes over the mechanical accounting, the routine work disappears and the judgment work concentrates. A study of 12 million job postings found that companies adopting AI actually increase their demand for people with analytical thinking and regulatory judgment. The human who can make defensible calls in ambiguous situations becomes the center of the finance function.",
+        "howToDevelop": "Read the comment letters on new FASB/IASB standards — study how practitioners argue different interpretations. Join a professional network (AICPA, local CPA society) where practitioners discuss edge cases. When you encounter an ambiguous situation, document your reasoning: what facts you considered, what alternatives you rejected, and why. Build a personal precedent library.",
+        "automationResistance": [
+          "judgment-under-ambiguity",
+          "ethical-reasoning"
+        ],
+        "taskCategories": [
+          "analysis-decision",
+          "technical-specialized"
+        ],
+        "appreciationScore": 9,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Business Context Translation",
+        "function": "finance",
+        "alsoRelevantTo": [
+          "operations",
+          "communications"
+        ],
+        "whyAppreciating": "AI can produce the variance analysis. It cannot walk into the leadership meeting and explain why the 8% revenue miss matters less than the 2% margin compression in the enterprise segment — and what to do about it. As financial reporting becomes automated, the finance professional who can translate numbers into strategic action becomes the most valuable person in the room.",
+        "howToDevelop": "After every monthly close, write a one-paragraph \"so what\" for the CEO that contains zero accounting jargon. Practice explaining financial concepts to non-finance colleagues. Build dashboards that lead with business questions (\"Are we growing profitably?\") not accounting categories (\"Revenue, COGS, SG&A\"). Present financial results as a narrative, not a spreadsheet.",
+        "automationResistance": [
+          "institutional-knowledge",
+          "cultural-context",
+          "judgment-under-ambiguity"
+        ],
+        "taskCategories": [
+          "communication",
+          "analysis-decision",
+          "interpersonal"
+        ],
+        "appreciationScore": 9,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Risk Sensing & Scenario Thinking",
+        "function": "finance",
+        "alsoRelevantTo": [
+          "operations",
+          "legal"
+        ],
+        "whyAppreciating": "AI can stress-test a model with the parameters you give it. It cannot imagine the scenario you didn't think of. The finance professional who can sense that a key customer's payment behavior is shifting, that the industry's margin structure is about to change, or that a regulatory shift will make the current model unsustainable — that person is doing the work AI can't.",
+        "howToDevelop": "Build a \"pre-mortem\" habit: before finalizing any forecast, write down three ways it could be meaningfully wrong. Study historical financial crises in your industry — what were the early signals? Subscribe to one industry analyst and one contrarian voice. Track your risk predictions: what did you flag early, what did you miss?",
+        "automationResistance": [
+          "judgment-under-ambiguity",
+          "institutional-knowledge"
+        ],
+        "taskCategories": [
+          "analysis-decision"
+        ],
+        "appreciationScore": 8,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Ethical Stewardship",
+        "function": "finance",
+        "alsoRelevantTo": [
+          "legal",
+          "people-management"
+        ],
+        "whyAppreciating": "AI optimizes for the objective function it's given. It has no moral compass. As AI handles more financial processes, the human who ensures that optimization doesn't cross into manipulation — who pushes back when the revenue recognition is too aggressive, who flags the controls gap — becomes the organization's ethical infrastructure.",
+        "howToDevelop": "Study real-world financial fraud cases (Enron, Wirecard, FTX) — identify the moment where someone could have spoken up. Practice the language of constructive dissent: \"I have a concern about how we're recognizing this\" vs. staying silent. Build relationships with audit and compliance so you're a trusted partner, not an adversary. Know your escalation path before you need it.",
+        "automationResistance": [
+          "ethical-reasoning",
+          "relationship-trust"
+        ],
+        "taskCategories": [
+          "interpersonal",
+          "analysis-decision"
+        ],
+        "appreciationScore": 8,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Cross-Functional Financial Partnership",
+        "function": "finance",
+        "alsoRelevantTo": [
+          "operations",
+          "people-management"
+        ],
+        "whyAppreciating": "The \"finance as back office\" model is dying. As AI handles transaction processing and reporting, finance professionals who can partner with operational teams — helping a product manager build a business case, a sales leader optimize pricing, or an engineering director justify headcount — become the connective tissue of the organization.",
+        "howToDevelop": "Pick one non-finance team and learn their metrics, their vocabulary, their decision-making rhythm. Build a simple financial model for their next big decision and walk them through it. Offer to attend their planning meetings. Ask: \"What financial information would help you make better decisions?\" Then deliver it proactively.",
+        "automationResistance": [
+          "relationship-trust",
+          "institutional-knowledge",
+          "cultural-context"
+        ],
+        "taskCategories": [
+          "interpersonal",
+          "communication",
+          "analysis-decision"
+        ],
+        "appreciationScore": 8,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      }
+    ],
+    "operations": [
+      {
+        "name": "Systems Thinking & Process Architecture",
+        "function": "operations",
+        "alsoRelevantTo": [
+          "technology",
+          "finance"
+        ],
+        "whyAppreciating": "AI can optimize individual steps. It struggles with the full system: the second-order effects, the dependencies that only surface under stress, the reason the workaround exists. Research on 12 million job postings found that when companies double their AI usage, demand for systems thinking and process design skills rises alongside it. The operator who can redesign a process while keeping the whole system running — especially when integrating AI tools into existing workflows — is building the organizational infrastructure of the future.",
+        "howToDevelop": "Map one complete end-to-end process this month, including every handoff, approval, and workaround. Identify the three points where failure would cascade. Study systems thinking frameworks (Meadows' \"Thinking in Systems\" is the best starting point). When something breaks, trace the full chain: what was the trigger, what amplified it, what could have dampened it?",
+        "automationResistance": [
+          "judgment-under-ambiguity",
+          "institutional-knowledge"
+        ],
+        "taskCategories": [
+          "coordination-management",
+          "analysis-decision"
+        ],
+        "appreciationScore": 9,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Crisis Management & Adaptive Response",
+        "function": "operations",
+        "alsoRelevantTo": [
+          "people-management",
+          "customer-service"
+        ],
+        "whyAppreciating": "AI works well in steady state. Crisis requires improvisation: pulling together the right people, making fast decisions with incomplete information, communicating calmly under pressure, and adapting the plan as new information arrives. Every AI-optimized process is one unexpected event away from needing a human who can think on their feet.",
+        "howToDevelop": "Run quarterly tabletop exercises: \"What if our main supplier goes down for two weeks?\" Walk through the response. Build an actual crisis playbook for your top three scenarios — not a document that gathers dust, but a living checklist you update after every incident. After each real disruption, do a blameless retrospective within 48 hours while the memory is fresh.",
+        "automationResistance": [
+          "crisis-adaptation",
+          "judgment-under-ambiguity",
+          "motivational-influence"
+        ],
+        "taskCategories": [
+          "coordination-management",
+          "interpersonal"
+        ],
+        "appreciationScore": 9,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Vendor & Partner Relationship Management",
+        "function": "operations",
+        "alsoRelevantTo": [
+          "sales",
+          "finance"
+        ],
+        "whyAppreciating": "AI can run vendor comparisons and automate procurement workflows. It cannot build the relationship where your supplier prioritizes your order during a shortage, where your partner gives you early access to new capabilities, or where a contractor goes the extra mile because they genuinely want your business to succeed. As supply chains become more AI-optimized and commodity, relationships become the differentiator.",
+        "howToDevelop": "Visit your top three suppliers or partners in person this year. Understand their business model, their constraints, their growth plans. Be the customer they want to help. Pay on time, communicate clearly, and give advance notice of changes. Build personal relationships with your counterparts — these survive job changes and corporate restructurings.",
+        "automationResistance": [
+          "relationship-trust",
+          "cultural-context"
+        ],
+        "taskCategories": [
+          "interpersonal",
+          "communication"
+        ],
+        "appreciationScore": 8,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Practical Innovation & Continuous Improvement",
+        "function": "operations",
+        "alsoRelevantTo": [
+          "administrative",
+          "technology"
+        ],
+        "whyAppreciating": "AI generates novel solutions. The operator who spots that moving one step in the warehouse saves 4 minutes per order, or that changing the customer handoff timing reduces complaints by 30%, is doing something different: applied observation of messy reality. This skill compounds — each improvement creates the conditions for the next one.",
+        "howToDevelop": "Spend one hour per week on the floor / in the process / watching the actual work happen. Keep a running list of friction points you observe. Pick one per month and test a fix. Measure the before and after. Read \"The Toyota Way\" for the mindset (gemba, kaizen), then adapt the principles to your context. Celebrate small improvements loudly — they compound.",
+        "automationResistance": [
+          "embodied-knowledge",
+          "institutional-knowledge"
+        ],
+        "taskCategories": [
+          "analysis-decision",
+          "physical-manual"
+        ],
+        "appreciationScore": 8,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Resource Allocation Under Constraints",
+        "function": "operations",
+        "alsoRelevantTo": [
+          "finance",
+          "people-management"
+        ],
+        "whyAppreciating": "AI can optimize a known objective function with known constraints. Real operations involve ambiguous constraints (the budget is \"tight\" but nobody says how tight), shifting priorities (the CEO changed direction mid-quarter), and political dynamics (this team's project can't be cut even though it should be). The operator who navigates all three simultaneously is doing irreplaceable work.",
+        "howToDevelop": "For every resource decision, make your tradeoffs explicit: \"We're choosing X over Y because Z.\" Write it down. Share it. When priorities shift, re-present the tradeoffs rather than just absorbing the change silently. Build scenario-based resource plans: \"At 80% budget, we cut A. At 60%, we also cut B.\" This makes the decisions faster when pressure arrives.",
+        "automationResistance": [
+          "judgment-under-ambiguity",
+          "institutional-knowledge",
+          "ethical-reasoning"
+        ],
+        "taskCategories": [
+          "analysis-decision",
+          "coordination-management"
+        ],
+        "appreciationScore": 8,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      }
+    ],
+    "communications": [
+      {
+        "name": "Crisis Communication & Reputation Management",
+        "function": "communications",
+        "alsoRelevantTo": [
+          "people-management",
+          "legal"
+        ],
+        "whyAppreciating": "AI can draft holding statements and media responses. It cannot read the temperature of a crisis: whether silence is better than a response, whether the CEO needs to speak personally, whether the apology should be contrite or defiant. One wrong move amplifies the crisis. The human who can navigate this with genuine judgment — not just following a playbook — becomes the most valuable person in the organization when it matters most.",
+        "howToDevelop": "Study five major corporate crises from the last three years. For each, map the timeline: first signal, first response, escalation, resolution. What worked, what made it worse? Build a personal crisis communication framework: who speaks, when, through which channels, with what approval chain. Practice writing three different responses to the same hypothetical crisis and defend each approach.",
+        "automationResistance": [
+          "crisis-adaptation",
+          "judgment-under-ambiguity",
+          "ethical-reasoning"
+        ],
+        "taskCategories": [
+          "communication",
+          "interpersonal",
+          "analysis-decision"
+        ],
+        "appreciationScore": 10,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Authentic Voice & Tone Calibration",
+        "function": "communications",
+        "alsoRelevantTo": [
+          "marketing",
+          "creative-design"
+        ],
+        "whyAppreciating": "AI-generated content sounds competent but generic. As every organization floods channels with AI-written messaging, authentic voice becomes the differentiator. A study of 12 million job postings found that the more AI a company adopts, the more it values people with genuine voice, creative judgment, and cultural sensitivity. The communicator who can write in a way that sounds like a real human with real convictions — and can shift that voice for an investor letter vs. an all-hands email vs. a press release — is doing work AI fundamentally can't.",
+        "howToDevelop": "Read your organization's last 10 external communications. Highlight every sentence that could have come from any company. That's the AI-replaceable content. Now find the sentences that could only come from your organization. Study how great writers maintain voice across contexts (Warren Buffett's shareholder letters are the gold standard). Practice writing the same message for three audiences in three different voices.",
+        "automationResistance": [
+          "creative-taste",
+          "cultural-context"
+        ],
+        "taskCategories": [
+          "communication",
+          "creative-generative"
+        ],
+        "appreciationScore": 9,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Stakeholder Sensing & Narrative Timing",
+        "function": "communications",
+        "alsoRelevantTo": [
+          "marketing",
+          "people-management"
+        ],
+        "whyAppreciating": "AI can schedule content optimally for engagement. It cannot sense that announcing a hiring freeze the same week as record earnings will create a trust crisis, or that the competitor's bad press creates a window for a thought leadership piece. Timing judgment is cultural intelligence applied to communication — and it compounds with experience.",
+        "howToDevelop": "Build a \"news radar\" habit: 15 minutes each morning scanning your industry, your competitors, and the broader cultural moment. Before sending any major communication, ask: \"What else is happening right now that changes how this will be received?\" Keep a log of timing decisions (both good and bad calls) and review quarterly. Develop 2-3 trusted advisors you can gut-check timing with.",
+        "automationResistance": [
+          "cultural-context",
+          "judgment-under-ambiguity",
+          "institutional-knowledge"
+        ],
+        "taskCategories": [
+          "communication",
+          "analysis-decision"
+        ],
+        "appreciationScore": 8,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Relationship Journalism & Media Fluency",
+        "function": "communications",
+        "alsoRelevantTo": [
+          "marketing",
+          "sales"
+        ],
+        "whyAppreciating": "AI can write press releases and pitch emails. It cannot build the relationship where a journalist calls you for a quote because they trust your expertise and candor. As AI-generated pitches flood inboxes, the communicator with genuine media relationships becomes the bottleneck for earned coverage. Relationships are not automatable.",
+        "howToDevelop": "Identify 10 journalists who cover your space. Read everything they've written in the last 6 months. Understand their beat, their angle, their frustrations. Reach out with one useful insight or data point, not a pitch. Be the source who makes their job easier: responsive, quotable, honest about limitations. Build the relationship before you need it.",
+        "automationResistance": [
+          "relationship-trust",
+          "cultural-context"
+        ],
+        "taskCategories": [
+          "interpersonal",
+          "communication"
+        ],
+        "appreciationScore": 8,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Internal Communication Architecture",
+        "function": "communications",
+        "alsoRelevantTo": [
+          "people-management",
+          "operations"
+        ],
+        "whyAppreciating": "As organizations become more distributed and AI handles more routine coordination, the design of internal communication becomes a strategic capability. The communicator who understands that the all-hands email isn't landing, that the Slack channel is creating information overload, and that the quarterly business review needs a different format — this person shapes organizational effectiveness.",
+        "howToDevelop": "Audit your organization's internal communication: what do people actually read? What gets ignored? Survey 10 colleagues about their information diet — what's useful, what's noise? Propose one experiment: kill one communication channel or format for a month and measure what happens. Study organizations known for communication excellence (Stripe's writing culture, Amazon's memo format).",
+        "automationResistance": [
+          "institutional-knowledge",
+          "cultural-context"
+        ],
+        "taskCategories": [
+          "communication",
+          "coordination-management"
+        ],
+        "appreciationScore": 7,
+        "verified": "2026-04-03",
+        "confidence": "medium",
+        "stale": false
+      }
+    ],
+    "people-management": [
+      {
+        "name": "Coaching & Individual Development",
+        "function": "people-management",
+        "alsoRelevantTo": [
+          "education",
+          "sales"
+        ],
+        "whyAppreciating": "AI can track performance metrics, generate development plans, and even provide feedback on writing or presentations. It cannot sit across from someone, sense that they're stuck because they don't believe they belong in the role, and find the exact words that unlock them. Coaching is the highest-leverage people skill because it multiplies the output of everyone it touches. As AI handles more routine management (status updates, scheduling, reporting), the time freed up for genuine coaching is the single biggest opportunity in management.",
+        "howToDevelop": "Learn one coaching framework (GROW is the simplest: Goal, Reality, Options, Will) and use it in every 1:1 for a month. Practice asking questions instead of giving answers. After each coaching conversation, write one sentence about what the person needs most right now. Read \"The Coaching Habit\" by Michael Bungay Stanier — it's short and immediately applicable.",
+        "automationResistance": [
+          "relationship-trust",
+          "motivational-influence",
+          "cultural-context"
+        ],
+        "taskCategories": [
+          "interpersonal"
+        ],
+        "appreciationScore": 10,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Conflict Resolution & Difficult Conversations",
+        "function": "people-management",
+        "alsoRelevantTo": [
+          "operations",
+          "customer-service"
+        ],
+        "whyAppreciating": "AI cannot fire someone with dignity. It cannot mediate a conflict between two engineers who respect each other's work but can't stand being in the same meeting. It cannot tell a high performer that their behavior is toxic in a way that they actually hear. These conversations are the hardest part of management and the part that matters most. As AI removes the excuse of \"I was too busy with admin to address this,\" the expectation for managers to handle people issues directly will only increase.",
+        "howToDevelop": "Practice the SBI framework for feedback: Situation, Behavior, Impact. Role-play difficult conversations with a trusted peer before having them for real. After each difficult conversation, debrief: what landed, what deflected, what would you change? Read \"Crucial Conversations\" and apply the STATE framework. Build a reputation as someone who addresses issues early and fairly.",
+        "automationResistance": [
+          "relationship-trust",
+          "ethical-reasoning",
+          "cultural-context"
+        ],
+        "taskCategories": [
+          "interpersonal",
+          "communication"
+        ],
+        "appreciationScore": 10,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Team Design & Culture Shaping",
+        "function": "people-management",
+        "alsoRelevantTo": [
+          "operations",
+          "technology"
+        ],
+        "whyAppreciating": "AI can screen resumes and predict job performance from assessments. It cannot design a team where the cautious analyst balances the aggressive salesperson, where the new hire's energy lifts the veteran's cynicism, or where the remote members feel as included as the in-office ones. Team chemistry is emergent, not engineered — but the manager who cultivates it consistently produces outsized results.",
+        "howToDevelop": "Map your current team's working styles (not personality types — working styles: how they communicate, make decisions, handle conflict). Identify the gaps: who challenges groupthink? Who keeps the team focused? When hiring, write down what the team needs before you write the job description. Create one team ritual that builds genuine connection (not forced fun — something that surfaces real thinking).",
+        "automationResistance": [
+          "cultural-context",
+          "institutional-knowledge",
+          "motivational-influence"
+        ],
+        "taskCategories": [
+          "interpersonal",
+          "coordination-management"
+        ],
+        "appreciationScore": 9,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Change Leadership & AI Transition Management",
+        "function": "people-management",
+        "alsoRelevantTo": [
+          "operations",
+          "communications"
+        ],
+        "whyAppreciating": "This is the capability of the moment. Every organization is going through AI-driven change, and most are handling it badly: vague reassurances, top-down mandates, or silence. Research shows AI's effect on boosting demand for human leadership and adaptability skills is nearly twice as large as its effect on replacing tasks. The manager who can honestly address fears (\"some tasks will change, here's how we're preparing\"), create safe experimentation spaces, and help individuals find their new value proposition in an AI-augmented workplace — this person is the difference between a successful transition and a talent exodus.",
+        "howToDevelop": "Have individual conversations with each team member about their concerns about AI — listen without reassuring. Be honest about what you know and don't know. Create a \"safe experimentation\" zone: one hour per week where team members can try AI tools without performance pressure. Document how roles are evolving (not just what's being automated, but what new capabilities are emerging). Study change management frameworks (Kotter's 8 steps, Bridges' transitions model) but don't follow them rigidly — adapt to your team.",
+        "automationResistance": [
+          "motivational-influence",
+          "relationship-trust",
+          "ethical-reasoning"
+        ],
+        "taskCategories": [
+          "interpersonal",
+          "coordination-management",
+          "communication"
+        ],
+        "appreciationScore": 10,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Performance Calibration & Fairness",
+        "function": "people-management",
+        "alsoRelevantTo": [
+          "legal",
+          "finance"
+        ],
+        "whyAppreciating": "AI can track output metrics. It cannot assess whether someone is delivering less because they're coasting or because they're investing in a project that will pay off next quarter. It cannot weigh the contribution of the person who makes everyone else better against the individual contributor with higher personal metrics. As AI-driven analytics give managers more data, the ability to interpret that data with human judgment — not just optimize it — becomes the critical management skill.",
+        "howToDevelop": "Before every performance review, write your assessment without looking at any metrics. Then compare to the data. Where do they diverge? That's where your judgment is being tested. Study the research on bias in performance evaluation (gender, recency, halo effect) and build specific countermeasures into your process. Seek calibration: discuss borderline cases with peer managers before finalizing ratings.",
+        "automationResistance": [
+          "judgment-under-ambiguity",
+          "ethical-reasoning",
+          "relationship-trust"
+        ],
+        "taskCategories": [
+          "analysis-decision",
+          "interpersonal"
+        ],
+        "appreciationScore": 8,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      }
+    ],
+    "customer-service": [
+      {
+        "name": "Emotional De-escalation & Empathy",
+        "function": "customer-service",
+        "alsoRelevantTo": [
+          "sales",
+          "people-management"
+        ],
+        "whyAppreciating": "AI chatbots handle 60-80% of routine inquiries today. What's left is the hard stuff: the customer who's been bounced between three departments, the one whose business depends on your product working, the one who's angry because they feel unheard. Research shows that job postings mentioning AI are twice as likely to also require resilience, empathy, and emotional intelligence compared to similar roles without AI. The human agent who can de-escalate, empathize genuinely, and solve the real problem becomes the brand's most important asset. As routine support is automated, every human interaction is high-stakes.",
+        "howToDevelop": "Study hostage negotiation principles (Chris Voss's \"Never Split the Difference\" is applicable). Practice the \"label and mirror\" technique: name the emotion you hear (\"It sounds like you're frustrated because...\") and reflect their words back. Record (with permission) your most difficult calls and review them with a mentor. Track customer satisfaction on your hardest cases — that's your real metric.",
+        "automationResistance": [
+          "relationship-trust",
+          "cultural-context",
+          "crisis-adaptation"
+        ],
+        "taskCategories": [
+          "interpersonal",
+          "communication"
+        ],
+        "appreciationScore": 9,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Complex Problem Diagnosis",
+        "function": "customer-service",
+        "alsoRelevantTo": [
+          "technology",
+          "operations"
+        ],
+        "whyAppreciating": "AI excels at pattern matching: \"error code X means solution Y.\" It fails when the customer says \"it's not working\" and the actual problem is a combination of a misconfigured integration, a misunderstanding of a feature, and an expired billing method. The human who can ask the right questions, hold multiple hypotheses, and systematically eliminate possibilities is doing diagnostic reasoning that AI handles poorly.",
+        "howToDevelop": "Build a personal diagnostic framework: symptoms, possible causes, tests, solution. Practice the \"5 whys\" technique on every complex case. Keep a journal of unusual problems and their actual root causes — patterns will emerge that no knowledge base captures. Shadow the engineering or product team for a day: understanding how the product works at a deeper level makes you 10x more effective at diagnosing issues.",
+        "automationResistance": [
+          "judgment-under-ambiguity",
+          "institutional-knowledge"
+        ],
+        "taskCategories": [
+          "analysis-decision",
+          "technical-specialized"
+        ],
+        "appreciationScore": 8,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Customer Advocacy & Feedback Translation",
+        "function": "customer-service",
+        "alsoRelevantTo": [
+          "operations",
+          "marketing"
+        ],
+        "whyAppreciating": "AI can categorize and aggregate support tickets. It cannot sense that the five unrelated complaints this week all stem from the same confusing onboarding flow. It cannot walk into the product meeting and advocate for the customer with the credibility of someone who talked to 50 frustrated users this month. The support agent who becomes the organization's customer intelligence engine is doing irreplaceable work.",
+        "howToDevelop": "Keep a weekly \"pattern log\" of the top three themes from customer conversations. Once a month, write a one-page \"Voice of the Customer\" memo with specific quotes, frequency data, and one recommended action. Share it with product and engineering. Build relationships with product managers so your feedback has a direct channel. Track which of your recommendations get implemented — and the impact.",
+        "automationResistance": [
+          "institutional-knowledge",
+          "cultural-context",
+          "relationship-trust"
+        ],
+        "taskCategories": [
+          "communication",
+          "analysis-decision",
+          "interpersonal"
+        ],
+        "appreciationScore": 8,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Retention & Relationship Recovery",
+        "function": "customer-service",
+        "alsoRelevantTo": [
+          "sales",
+          "operations"
+        ],
+        "whyAppreciating": "AI can flag churn risk based on usage data. It cannot have the conversation where a frustrated customer admits the real reason they're leaving is that they felt ignored during their last escalation — not the price, not the feature gap. The human who can listen to the unstated reason, acknowledge the failure, and propose a genuine path forward saves revenue that no automated winback campaign can touch.",
+        "howToDevelop": "When a customer cancels or downgrades, don't accept the first reason they give. Ask: \"What could we have done differently six months ago to prevent this?\" The answer is usually more revealing. Build a \"save playbook\" for your top three cancellation reasons, but treat it as a conversation guide, not a script. Track your save rate and the long-term retention of saved accounts — are they staying or just delaying?",
+        "automationResistance": [
+          "relationship-trust",
+          "judgment-under-ambiguity"
+        ],
+        "taskCategories": [
+          "interpersonal",
+          "communication"
+        ],
+        "appreciationScore": 8,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      }
+    ],
+    "technology": [
+      {
+        "name": "System Design Thinking",
+        "function": "technology",
+        "alsoRelevantTo": [
+          "operations",
+          "finance"
+        ],
+        "whyAppreciating": "AI can write code, and it's getting better fast. What it can't do is make the architectural decisions that determine whether the code is maintainable in two years: which abstraction to choose, when to take on tech debt intentionally, how to design for the failure modes you can't predict. Research on 12 million job postings shows that as companies adopt more AI, they don't just need fewer coders — they need more people who can think about systems. As AI handles more implementation, the engineer who designs the system becomes exponentially more valuable than the one who writes the code.",
+        "howToDevelop": "Read the architecture docs of systems you admire (AWS Well-Architected, Google's SRE book, Stripe's API design). For your next project, write the design doc before writing any code — force yourself to articulate the tradeoffs. Study distributed systems failure modes (Byzantine faults, split brain, cascading failures). Review your past architectural decisions: which aged well, which didn't, and why?",
+        "automationResistance": [
+          "judgment-under-ambiguity",
+          "creative-taste"
+        ],
+        "taskCategories": [
+          "technical-specialized",
+          "analysis-decision"
+        ],
+        "appreciationScore": 10,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Debugging Intuition & Root Cause Analysis",
+        "function": "technology",
+        "alsoRelevantTo": [
+          "operations",
+          "customer-service"
+        ],
+        "whyAppreciating": "AI can follow debugging playbooks and search stack traces. It struggles with the bugs that don't match patterns: the intermittent failure that only happens under load on Tuesdays, the race condition that the test suite can't reproduce, the performance degradation that stems from an interaction between three systems nobody mapped. The engineer with deep debugging intuition operates on a level that AI augments but can't replace.",
+        "howToDevelop": "Keep a bug journal: for every interesting bug, write the symptom, your hypotheses, and the actual root cause. Review quarterly for patterns in your own diagnostic blind spots. Practice the \"binary search\" debugging method on unfamiliar codebases — it forces systematic thinking. Read \"Debugging\" by David Agans for a framework. Pair with the best debugger on your team and observe their process.",
+        "automationResistance": [
+          "institutional-knowledge",
+          "judgment-under-ambiguity",
+          "embodied-knowledge"
+        ],
+        "taskCategories": [
+          "technical-specialized",
+          "analysis-decision"
+        ],
+        "appreciationScore": 9,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Codebase Stewardship & Technical Judgment",
+        "function": "technology",
+        "alsoRelevantTo": [
+          "operations",
+          "people-management"
+        ],
+        "whyAppreciating": "AI can generate code that passes tests. It has no opinion about whether that code makes the codebase better or worse over time. The engineer who reviews AI-generated code and says \"this works but it introduces a pattern we'll regret\" is doing the judgment work that determines long-term velocity. As AI generates more code faster, the human who curates, reviews, and stewards the codebase becomes the bottleneck — in the best sense.",
+        "howToDevelop": "Do one code archaeology session per month: read code that was written two years ago. What's aged well? What's a mess? What decisions led to each? Practice writing code review comments that explain the \"why\" behind your feedback, not just the \"what.\" Build a personal style guide of patterns you've seen succeed and fail. Read \"A Philosophy of Software Design\" by John Ousterhout.",
+        "automationResistance": [
+          "judgment-under-ambiguity",
+          "institutional-knowledge",
+          "creative-taste"
+        ],
+        "taskCategories": [
+          "technical-specialized",
+          "analysis-decision"
+        ],
+        "appreciationScore": 9,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Cross-Team Technical Communication",
+        "function": "technology",
+        "alsoRelevantTo": [
+          "operations",
+          "communications"
+        ],
+        "whyAppreciating": "As AI handles more implementation, the engineer's role shifts toward technical advising: helping product managers understand what's feasible, helping executives understand technical risk, helping sales engineers explain the product honestly. The engineer who can translate technical complexity into business language — without oversimplifying — is the bridge every organization needs.",
+        "howToDevelop": "Practice the \"explain it to a smart 12-year-old\" test for every technical concept. When presenting to non-technical stakeholders, lead with the business impact, then explain the mechanism. Build analogies that make complex systems intuitive. Write one technical blog post per quarter that a non-engineer could understand and find useful.",
+        "automationResistance": [
+          "cultural-context",
+          "relationship-trust"
+        ],
+        "taskCategories": [
+          "communication",
+          "interpersonal"
+        ],
+        "appreciationScore": 8,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Security Mindset & Adversarial Thinking",
+        "function": "technology",
+        "alsoRelevantTo": [
+          "legal",
+          "operations"
+        ],
+        "whyAppreciating": "AI can scan for known vulnerabilities. It struggles with novel attack vectors, social engineering scenarios, and the creative misuse of legitimate features. As AI generates more code and more systems, the attack surface expands — and the human who thinks adversarially about every new feature, integration, and data flow becomes essential to organizational survival.",
+        "howToDevelop": "For every feature you build or review, spend 10 minutes asking: \"How would I abuse this?\" Join a CTF team or work through exercises on platforms like HackTheBox. Read post-mortems of major security breaches (the Cloudflare, Okta, and LastPass breach reports are excellent). Build a threat modeling habit: before launching any new feature that touches user data or external systems, map the attack surface.",
+        "automationResistance": [
+          "judgment-under-ambiguity",
+          "creative-taste"
+        ],
+        "taskCategories": [
+          "technical-specialized",
+          "analysis-decision"
+        ],
+        "appreciationScore": 9,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      }
+    ],
+    "healthcare": [
+      {
+        "name": "Clinical Judgment Under Uncertainty",
+        "function": "healthcare",
+        "alsoRelevantTo": [
+          "legal",
+          "operations"
+        ],
+        "whyAppreciating": "AI diagnostic tools are approaching physician-level accuracy on well-defined problems (radiology, dermatology, pathology). But clinical reality is messier: the patient who presents with textbook symptoms of X but whose history, context, and intuition say Y. As AI handles more diagnostic pattern-matching, the clinician's judgment in ambiguous, multi-factorial situations becomes the irreplaceable core of the profession.",
+        "howToDevelop": "Present complex cases at grand rounds or case conferences — the practice of articulating clinical reasoning under peer scrutiny builds the skill. Keep a decision journal for cases where you overrode the obvious diagnosis: what made you look deeper? Study Bayesian reasoning applied to clinical decision-making. Read \"How Doctors Think\" by Jerome Groopman for the cognitive science of clinical judgment.",
+        "automationResistance": [
+          "judgment-under-ambiguity",
+          "ethical-reasoning",
+          "embodied-knowledge"
+        ],
+        "taskCategories": [
+          "analysis-decision",
+          "technical-specialized"
+        ],
+        "appreciationScore": 10,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Therapeutic Presence & Patient Communication",
+        "function": "healthcare",
+        "alsoRelevantTo": [
+          "people-management",
+          "customer-service"
+        ],
+        "whyAppreciating": "Interpersonal skills in healthcare are among the slowest to be affected by AI — and in clinical settings, that timeline stretches even longer due to regulatory and ethical constraints. As AI handles documentation, scheduling, and routine assessments, the time freed up for genuine patient interaction becomes the highest-value use of a clinician's time. Research shows AI's effect on boosting demand for human relationship skills is nearly twice as large as its effect on replacing tasks. The provider who can use freed-up time to truly listen — and who patients trust enough to reveal the real symptoms, fears, and non-compliance — delivers dramatically better outcomes.",
+        "howToDevelop": "Practice motivational interviewing techniques. In your next 10 patient encounters, consciously sit down (eye level), maintain eye contact, and listen for 60 seconds without interrupting. Ask one open-ended question per visit that isn't about symptoms: \"What are you most worried about?\" Track patient satisfaction scores on your hardest cases. Take a course in narrative medicine.",
+        "automationResistance": [
+          "relationship-trust",
+          "physical-presence",
+          "cultural-context"
+        ],
+        "taskCategories": [
+          "interpersonal",
+          "communication"
+        ],
+        "appreciationScore": 10,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Ethical Decision-Making in Care",
+        "function": "healthcare",
+        "alsoRelevantTo": [
+          "legal",
+          "people-management"
+        ],
+        "whyAppreciating": "AI can present treatment options ranked by efficacy. It cannot weigh a patient's quality-of-life preferences against family wishes against resource constraints against cultural beliefs. These decisions require moral reasoning that no algorithm should make — and as AI presents more options faster, the clinician who can guide patients through these decisions with wisdom and compassion becomes more essential, not less.",
+        "howToDevelop": "Participate in your institution's ethics committee or case review process. Study bioethics frameworks (principalism: autonomy, beneficence, non-maleficence, justice). For every difficult decision, practice articulating the competing values at stake — not just the medical tradeoffs. Build relationships with chaplains, social workers, and palliative care teams — ethical decision-making is interdisciplinary.",
+        "automationResistance": [
+          "ethical-reasoning",
+          "relationship-trust",
+          "cultural-context"
+        ],
+        "taskCategories": [
+          "interpersonal",
+          "analysis-decision"
+        ],
+        "appreciationScore": 9,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Interdisciplinary Care Coordination",
+        "function": "healthcare",
+        "alsoRelevantTo": [
+          "operations",
+          "people-management"
+        ],
+        "whyAppreciating": "AI can track orders, flag interactions, and surface relevant information. It cannot negotiate between a surgeon who wants to operate and an internist who thinks the patient can't tolerate surgery, while keeping the family informed and the patient's wishes central. Care coordination is organizational leadership applied to the most consequential context imaginable.",
+        "howToDevelop": "Lead one complex case coordination per month — take ownership of the communication loop between all providers. Practice the SBAR framework (Situation, Background, Assessment, Recommendation) for every handoff. Build personal relationships across disciplines: know the social workers, the PT team, the discharge planners. After each complex discharge, debrief: what fell through the cracks?",
+        "automationResistance": [
+          "relationship-trust",
+          "institutional-knowledge",
+          "crisis-adaptation"
+        ],
+        "taskCategories": [
+          "coordination-management",
+          "interpersonal",
+          "communication"
+        ],
+        "appreciationScore": 8,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Physical Assessment & Procedural Skill",
+        "function": "healthcare",
+        "alsoRelevantTo": [
+          "education"
+        ],
+        "whyAppreciating": "Hands-on clinical skills are on the slowest automation trajectory of any job category. A physician's hands detecting a subtle abdominal mass, a nurse's observation of a patient's gait change, a therapist's manual adjustment — these embodied skills have no AI substitute on any foreseeable timeline. As AI handles more cognitive-diagnostic work, the clinician with excellent physical assessment skills is operating in the most automation-resistant zone of healthcare.",
+        "howToDevelop": "Practice physical examination skills weekly, not just during training. Attend procedural skills workshops. Pair with experienced practitioners who are known for exceptional physical exam findings. Use simulation labs to maintain procedural currency. For every AI-generated differential, perform the physical exam that would confirm or rule out the top diagnoses — don't let AI atrophy your clinical touch.",
+        "automationResistance": [
+          "physical-presence",
+          "embodied-knowledge"
+        ],
+        "taskCategories": [
+          "physical-manual",
+          "technical-specialized"
+        ],
+        "appreciationScore": 9,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      }
+    ],
+    "legal": [
+      {
+        "name": "Legal Judgment in Gray Areas",
+        "function": "legal",
+        "alsoRelevantTo": [
+          "finance",
+          "operations"
+        ],
+        "whyAppreciating": "AI can research case law, draft contracts, and review documents faster every year. But the legal profession's value isn't in the research — it's in the judgment. \"Can we do this?\" is a research question AI handles well. \"Should we do this, and what's the real risk if we do?\" is a judgment question that requires understanding the client's risk tolerance, the regulatory environment's direction, and the difference between what's technically legal and what's wise. As AI takes over more routine legal work, studies show companies actually increase their hiring for judgment-heavy skills like this one.",
+        "howToDevelop": "For every legal opinion you write, include a \"practical risk assessment\" section that goes beyond legal analysis to business judgment. Study how cases settle — understanding the gap between legal position and practical outcome is the skill. Develop industry expertise: the lawyer who understands their client's business as well as the law gives fundamentally better advice. Read judicial reasoning in appellate opinions for how judges weigh competing considerations.",
+        "automationResistance": [
+          "judgment-under-ambiguity",
+          "ethical-reasoning"
+        ],
+        "taskCategories": [
+          "analysis-decision",
+          "technical-specialized"
+        ],
+        "appreciationScore": 9,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Client Counseling & Trust",
+        "function": "legal",
+        "alsoRelevantTo": [
+          "finance",
+          "sales"
+        ],
+        "whyAppreciating": "A lawyer with AI can review 10,000 documents in hours. But the lawyer who can sit across from a CEO, sense that they're not telling the whole story, and create the safe space for full disclosure — that lawyer prevents the catastrophic failures that no amount of document review can catch. As AI handles more legal production work, the client relationship becomes the lawyer's core value proposition.",
+        "howToDevelop": "Practice the skill of uncomfortable silence — ask the hard question and wait. Build the habit of asking \"What aren't you telling me?\" in a way that invites honesty. Invest in long-term client relationships: know their business, their industry, their personal concerns. After every client interaction, note what you learned that wasn't in the file. Read about the psychology of trust in professional relationships.",
+        "automationResistance": [
+          "relationship-trust",
+          "ethical-reasoning",
+          "cultural-context"
+        ],
+        "taskCategories": [
+          "interpersonal",
+          "communication"
+        ],
+        "appreciationScore": 9,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Regulatory Anticipation & Strategic Compliance",
+        "function": "legal",
+        "alsoRelevantTo": [
+          "finance",
+          "operations",
+          "technology"
+        ],
+        "whyAppreciating": "AI can monitor regulatory changes and flag compliance requirements. It cannot read the political tea leaves: which proposed regulation will actually pass, how an agency's enforcement priorities are shifting, or how a court's recent reasoning will affect your industry in 18 months. The lawyer who can anticipate regulatory direction and help clients position ahead of it is providing strategic intelligence, not just compliance checking.",
+        "howToDevelop": "Track regulatory proposals, comment periods, and enforcement actions in your practice area — build a thesis about direction, not just a database of rules. Attend regulatory conferences and build relationships with regulators (they're people who appreciate being understood). Write quarterly \"regulatory outlook\" memos for your clients or organization. Study the history of regulation in your area: patterns repeat.",
+        "automationResistance": [
+          "institutional-knowledge",
+          "judgment-under-ambiguity"
+        ],
+        "taskCategories": [
+          "analysis-decision",
+          "technical-specialized"
+        ],
+        "appreciationScore": 8,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Negotiation & Deal Structuring",
+        "function": "legal",
+        "alsoRelevantTo": [
+          "sales",
+          "finance"
+        ],
+        "whyAppreciating": "AI can draft the documents. It cannot invent the deal structure where one party gets the control they need while the other gets the economics they need, through a creative combination of earnouts, representations, and governance provisions that neither side's initial term sheet contemplated. Legal creativity in deal-making is one of the most underappreciated human capabilities in professional services.",
+        "howToDevelop": "Study completed deals in your practice area — not just the terms, but the negotiation history: what was proposed, what was rejected, what creative solution emerged? Practice reframing zero-sum issues as trades: \"If we give you X, we need Y.\" Build a mental library of deal structures that solved unusual problems. Role-play negotiations with a colleague taking the other side.",
+        "automationResistance": [
+          "creative-taste",
+          "judgment-under-ambiguity",
+          "relationship-trust"
+        ],
+        "taskCategories": [
+          "analysis-decision",
+          "interpersonal"
+        ],
+        "appreciationScore": 8,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      }
+    ],
+    "education": [
+      {
+        "name": "Adaptive Teaching & Real-Time Responsiveness",
+        "function": "education",
+        "alsoRelevantTo": [
+          "people-management",
+          "communications"
+        ],
+        "whyAppreciating": "AI tutors can personalize content delivery at scale. They cannot see that the student in the third row is confused but too embarrassed to ask, or that the energy in the room dropped because the example didn't connect. The teacher who reads these signals and adapts — pivoting from lecture to discussion to hands-on activity based on real-time feedback — is doing the work that makes learning actually happen.",
+        "howToDevelop": "Record yourself teaching (even just screen recordings of virtual sessions) and review for moments where you missed signals or where a pivot worked. Practice having three versions of every key concept ready: technical, analogy-based, and visual. Build a repertoire of \"back pocket\" activities for when the plan isn't working. After each session, note: what did students actually learn vs. what I planned to teach?",
+        "automationResistance": [
+          "cultural-context",
+          "embodied-knowledge",
+          "motivational-influence"
+        ],
+        "taskCategories": [
+          "interpersonal",
+          "communication"
+        ],
+        "appreciationScore": 9,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Mentorship & Individual Potential Recognition",
+        "function": "education",
+        "alsoRelevantTo": [
+          "people-management"
+        ],
+        "whyAppreciating": "AI can identify learning gaps through assessment data. It cannot see the student who is underperforming because they don't believe they belong, or the one who is bored because the material is too easy. Research shows that AI's effect on boosting demand for human mentorship and interpersonal skills is nearly twice as large as its effect on replacing tasks. The educator who recognizes potential — especially potential that the learner doesn't see in themselves — and finds the right combination of challenge and support to unlock it, is doing the most important work in education.",
+        "howToDevelop": "For each student or trainee, write one sentence about what they could achieve that they don't yet believe is possible. Practice the \"warm demander\" approach: high expectations communicated with genuine care. Study Carol Dweck's growth mindset research — not the pop version, the actual research on how belief about capability affects learning. Build individual check-ins into your practice: 5 minutes of genuine conversation about goals, not just performance.",
+        "automationResistance": [
+          "relationship-trust",
+          "motivational-influence"
+        ],
+        "taskCategories": [
+          "interpersonal"
+        ],
+        "appreciationScore": 10,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Learning Experience Design",
+        "function": "education",
+        "alsoRelevantTo": [
+          "marketing",
+          "creative-design"
+        ],
+        "whyAppreciating": "AI can generate curriculum, practice problems, and explanations. It cannot design the activity where students discover the principle themselves, or sequence a learning experience so that each concept builds naturally on the last, or create the project that makes abstract knowledge feel urgent and relevant. Learning design is a creative discipline that combines content expertise with deep understanding of how humans actually learn.",
+        "howToDevelop": "Study learning science: spaced repetition, interleaving, retrieval practice, desirable difficulties. Design one \"discovery-based\" activity per unit — where students encounter the problem before the solution. A/B test your approaches: try two different ways to teach the same concept and compare comprehension. Read \"Make It Stick\" by Brown, Roediger, and McDaniel for evidence-based learning strategies.",
+        "automationResistance": [
+          "creative-taste",
+          "cultural-context"
+        ],
+        "taskCategories": [
+          "creative-generative",
+          "analysis-decision"
+        ],
+        "appreciationScore": 8,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Assessment Integrity & Meaningful Evaluation",
+        "function": "education",
+        "alsoRelevantTo": [
+          "people-management",
+          "technology"
+        ],
+        "whyAppreciating": "AI makes traditional assessments obsolete. Any take-home essay, problem set, or coding assignment can be AI-generated. The educator who can design assessments that genuinely measure understanding — oral examinations, live problem-solving, portfolio defense, collaborative projects with individual accountability — is solving one of education's most urgent problems. This capability will define the credibility of educational institutions.",
+        "howToDevelop": "Redesign one assessment this term to be AI-resistant: oral component, live demonstration, or portfolio defense. Study authentic assessment frameworks: what does it look like to demonstrate genuine competency? Build rubrics that evaluate thinking process, not just output. Experiment with collaborative assessments where individual contributions are traceable. Accept that some AI use in learning is beneficial — the skill is knowing what to assess AI-free.",
+        "automationResistance": [
+          "judgment-under-ambiguity",
+          "ethical-reasoning",
+          "institutional-knowledge"
+        ],
+        "taskCategories": [
+          "analysis-decision",
+          "creative-generative"
+        ],
+        "appreciationScore": 9,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      }
+    ],
+    "creative-design": [
+      {
+        "name": "Taste & Editorial Judgment",
+        "function": "creative-design",
+        "alsoRelevantTo": [
+          "marketing",
+          "communications"
+        ],
+        "whyAppreciating": "AI generates infinite creative output at near-zero cost. This makes taste the scarcest and most valuable creative skill. A major study of 12 million job postings found that the more AI a company adopts, the more it seeks people with taste, creative judgment, and the ability to tell good from great. The designer who looks at 50 AI-generated options and picks the right one — then adjusts three details that transform it from \"competent\" to \"remarkable\" — is operating at the highest level of creative work. Curation and refinement are the new creation. Every brand, publication, and product needs a human with taste standing between AI output and the audience.",
+        "howToDevelop": "Build a personal \"why this is good\" journal: for every piece of design, writing, or creative work that stops you, articulate specifically why. Not \"I like it\" — the exact elements that make it work. Practice editing AI output: generate 10 versions of something, pick the best, then edit it. What did you change? Why? Study the work of editors and art directors who shaped culture: how did they make selection decisions?",
+        "automationResistance": [
+          "creative-taste",
+          "cultural-context"
+        ],
+        "taskCategories": [
+          "creative-generative",
+          "analysis-decision"
+        ],
+        "appreciationScore": 10,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Conceptual Thinking & Meaning-Making",
+        "function": "creative-design",
+        "alsoRelevantTo": [
+          "marketing",
+          "communications"
+        ],
+        "whyAppreciating": "AI generates aesthetic output. It does not generate meaning. The designer who creates a visual identity that captures what a brand stands for, the writer who finds the metaphor that makes a complex idea feel simple and true, the filmmaker who captures an emotion that the audience didn't know they were feeling — this is the irreducible core of creative work. As AI commoditizes execution, concept becomes everything.",
+        "howToDevelop": "Practice the \"what's the one idea?\" discipline: before starting any creative project, write one sentence about what it means. Not what it looks like or says — what it means. Study conceptual advertising (Volkswagen's \"Think Small,\" Apple's \"Think Different\") — these campaigns succeeded because of ideas, not production value. Read widely outside your discipline. The best creative insights come from unexpected connections.",
+        "automationResistance": [
+          "creative-taste",
+          "cultural-context",
+          "judgment-under-ambiguity"
+        ],
+        "taskCategories": [
+          "creative-generative"
+        ],
+        "appreciationScore": 10,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Cultural Fluency & Context Sensitivity",
+        "function": "creative-design",
+        "alsoRelevantTo": [
+          "marketing",
+          "communications"
+        ],
+        "whyAppreciating": "AI is trained on historical data and has no cultural antenna for the present moment. It cannot sense that a visual reference that worked last year now reads differently because of a cultural event. It cannot distinguish between respectful cultural engagement and appropriation. As brands increasingly use AI-generated content, the creative professional who ensures cultural sensitivity and relevance becomes essential — one misstep can undo years of brand equity.",
+        "howToDevelop": "Build diverse creative feedback circles — people from different backgrounds, generations, and perspectives who will tell you honestly when something doesn't land. Immerse yourself in culture beyond your bubble: attend events, follow voices, read publications outside your demographic. Study both successes (campaigns that crossed cultural boundaries) and failures (brands that got it wrong). Practice the \"who might this hurt?\" check before publishing.",
+        "automationResistance": [
+          "cultural-context",
+          "ethical-reasoning"
+        ],
+        "taskCategories": [
+          "creative-generative",
+          "communication"
+        ],
+        "appreciationScore": 8,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Craft Excellence & Detail Obsession",
+        "function": "creative-design",
+        "alsoRelevantTo": [
+          "technology",
+          "marketing"
+        ],
+        "whyAppreciating": "AI produces \"good enough\" at incredible speed. \"Good enough\" is now table stakes. The creative professional who obsesses over the details that most people don't consciously notice — but that everyone subconsciously feels — creates work that stands apart in a world flooded with AI-generated content. Craft is the new luxury. The 5% that separates competent from exceptional is entirely human territory.",
+        "howToDevelop": "Pick one area of craft and go deep: typography, color theory, motion design, prose rhythm. Study the masters — not for inspiration but for technique. How does Massimo Vignelli's grid work? How does Joan Didion's sentence structure create tension? Build a checklist for your work: the 10 details you always check before calling something done. Seek critique from craftspeople who are better than you — comfort with feedback is itself a skill.",
+        "automationResistance": [
+          "creative-taste",
+          "embodied-knowledge"
+        ],
+        "taskCategories": [
+          "creative-generative",
+          "technical-specialized"
+        ],
+        "appreciationScore": 9,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      },
+      {
+        "name": "Client & Stakeholder Translation",
+        "function": "creative-design",
+        "alsoRelevantTo": [
+          "marketing",
+          "communications",
+          "operations"
+        ],
+        "whyAppreciating": "AI can generate to a prompt. The creative professional who can listen to a client say \"I want it to feel more modern\" and translate that into specific design decisions — understanding that \"modern\" means \"we want to attract younger customers without alienating our base\" — is doing the interpretive work that makes creative output useful. As AI makes execution instant, the ability to define the right brief becomes the bottleneck.",
+        "howToDevelop": "After every brief or kickoff meeting, write what you think the client actually wants (not what they said). Validate it with one clarifying question. Build a personal dictionary of \"client language to design language\" translations. Study how great creative directors present work: they sell the idea by connecting it to the client's objective, not their own aesthetic. Practice presenting three concepts where you can articulate why each solves the brief differently.",
+        "automationResistance": [
+          "cultural-context",
+          "relationship-trust",
+          "judgment-under-ambiguity"
+        ],
+        "taskCategories": [
+          "communication",
+          "interpersonal",
+          "analysis-decision"
+        ],
+        "appreciationScore": 8,
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "stale": false
+      }
+    ]
+  }
+}
