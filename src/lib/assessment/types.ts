@@ -166,11 +166,21 @@ export interface ToolRecommendation {
   expectedValue: string;
   implementationEffort: "low" | "medium" | "high";
   priorityTier: "immediate" | "medium-term" | "long-term";
+  /** 3-tier recommendation system: start-here (do this first), add-next (after foundations work), consider-later (when ready) */
+  recommendationTier?: "start-here" | "add-next" | "consider-later";
   estimatedMonthlyCost?: string;
   specificProducts?: { name: string; url?: string; pricing?: string; free?: boolean }[];
   gettingStarted?: string[]; // Step-by-step to start using
   realWorldExample?: string; // "A nonprofit in Portland used X to..."
   successKpis?: string[]; // Measurable KPIs to track success
+  /** What manual process this tool replaces */
+  whatItReplaces?: string;
+  /** How long to learn: "5 minutes", "20 minutes", "2-3 hours", "a dedicated afternoon" */
+  learningTime?: string;
+  /** Specific trigger for upgrading from free to paid */
+  upgradeSignal?: string;
+  /** Single concrete first task to try from their actual work */
+  firstTask?: string;
 }
 
 export interface RiskAssessment {

@@ -1,18 +1,26 @@
 // PDF report generation using jsPDF
-// Generates a professional, branded PDF from the assessment report
+// Clean white layout, professional typography
 
 import { jsPDF } from "jspdf";
 import { AssessmentReport, AssessmentIntake } from "./types";
 import { INDUSTRY_LABELS, COMPANY_SIZE_LABELS } from "./types";
 
-const COLORS = {
-  primary: [92, 97, 246] as [number, number, number],
-  dark: [11, 15, 26] as [number, number, number],
-  text: [226, 232, 240] as [number, number, number],
-  muted: [139, 149, 165] as [number, number, number],
-  white: [255, 255, 255] as [number, number, number],
-  sectionBg: [17, 24, 39] as [number, number, number],
-  border: [42, 48, 64] as [number, number, number],
+type RGB = [number, number, number];
+
+const C = {
+  black: [20, 20, 20] as RGB,
+  heading: [30, 30, 30] as RGB,
+  body: [55, 65, 75] as RGB,
+  muted: [120, 130, 140] as RGB,
+  light: [160, 170, 180] as RGB,
+  accent: [79, 70, 229] as RGB, // indigo-600
+  accentLight: [238, 242, 255] as RGB, // indigo-50
+  green: [22, 163, 74] as RGB,
+  amber: [180, 130, 10] as RGB,
+  gray100: [243, 244, 246] as RGB,
+  gray200: [229, 231, 235] as RGB,
+  gray300: [209, 213, 219] as RGB,
+  white: [255, 255, 255] as RGB,
 };
 
 export function generatePdf(
@@ -21,238 +29,391 @@ export function generatePdf(
   isPaid: boolean
 ): ArrayBuffer {
   const doc = new jsPDF({ orientation: "portrait", unit: "mm", format: "a4" });
-  const pageWidth = doc.internal.pageSize.getWidth();
-  const margin = 20;
-  const contentWidth = pageWidth - margin * 2;
+  const pw = doc.internal.pageSize.getWidth();
+  const ph = doc.internal.pageSize.getHeight();
+  const m = 22; // margin
+  const cw = pw - m * 2; // content width
   let y = 0;
+  let pageNum = 0;
 
-  // Helper to add new page if needed
-  const checkPage = (needed: number) => {
-    if (y + needed > doc.internal.pageSize.getHeight() - 25) {
-      doc.addPage();
-      y = 20;
-      addFooter(doc, pageWidth);
+  const newPage = () => {
+    if (pageNum > 0) doc.addPage();
+    pageNum++;
+    y = 28;
+    footer(doc, pw, ph, pageNum);
+  };
+
+  const need = (h: number) => {
+    if (y + h > ph - 20) {
+      newPage();
     }
   };
 
-  // ===== COVER PAGE =====
-  // Dark background
-  doc.setFillColor(...COLORS.dark);
-  doc.rect(0, 0, pageWidth, doc.internal.pageSize.getHeight(), "F");
+  // ===== COVER =====
+  pageNum++;
 
-  // Accent bar
-  doc.setFillColor(...COLORS.primary);
-  doc.rect(0, 0, pageWidth, 4, "F");
+  // Thin accent strip at top
+  doc.setFillColor(...C.accent);
+  doc.rect(0, 0, pw, 3, "F");
 
-  // Title
-  y = 60;
+  y = 55;
+  doc.setFont("helvetica", "normal");
+  doc.setFontSize(11);
+  doc.setTextColor(...C.accent);
+  doc.text("jobsdata.ai", m, y);
+
+  y += 18;
   doc.setFont("helvetica", "bold");
-  doc.setFontSize(28);
-  doc.setTextColor(...COLORS.white);
-  doc.text("Your AI Action Plan", margin, y);
+  doc.setFontSize(32);
+  doc.setTextColor(...C.black);
+  const titleLines = doc.splitTextToSize("AI Action Plan", cw);
+  doc.text(titleLines, m, y);
+  y += titleLines.length * 12;
 
-  y += 12;
+  y += 4;
+  doc.setFont("helvetica", "normal");
   doc.setFontSize(16);
-  doc.setTextColor(...COLORS.primary);
-  doc.text(intake.organizationName, margin, y);
+  doc.setTextColor(...C.body);
+  doc.text(intake.organizationName, m, y);
 
-  y += 20;
-  doc.setFontSize(10);
-  doc.setTextColor(...COLORS.muted);
-  doc.text(`Industry: ${INDUSTRY_LABELS[intake.industry] || intake.industry}`, margin, y);
-  y += 6;
-  doc.text(`Size: ${COMPANY_SIZE_LABELS[intake.companySize] || intake.companySize}`, margin, y);
-  y += 6;
-  doc.text(`Scope: ${intake.assessmentScope.replace("-", " ")}`, margin, y);
-  y += 6;
-  doc.text(`Generated: ${new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}`, margin, y);
-
-  y += 30;
-  doc.setDrawColor(...COLORS.border);
-  doc.line(margin, y, pageWidth - margin, y);
+  y += 16;
+  doc.setDrawColor(...C.gray200);
+  doc.setLineWidth(0.3);
+  doc.line(m, y, m + cw, y);
 
   y += 10;
+  doc.setFontSize(10);
+  doc.setTextColor(...C.muted);
+  const meta = [
+    `Industry: ${INDUSTRY_LABELS[intake.industry] || intake.industry}`,
+    `Size: ${COMPANY_SIZE_LABELS[intake.companySize] || intake.companySize}`,
+    `Scope: ${intake.assessmentScope.replace("-", " ")}`,
+    `Generated: ${new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}`,
+  ];
+  for (const line of meta) {
+    doc.text(line, m, y);
+    y += 6;
+  }
+
+  // What's inside
+  y += 12;
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(11);
+  doc.setTextColor(...C.heading);
+  doc.text("What's Inside", m, y);
+  y += 8;
+
+  doc.setFont("helvetica", "normal");
   doc.setFontSize(9);
-  doc.setTextColor(...COLORS.muted);
+  const tocItems = [
+    `${report.taskAnalysis.length} tasks analyzed for AI opportunity`,
+    `${report.toolRecommendations.length} tool recommendations with pricing`,
+    "3-phase implementation roadmap",
+    "Risk assessment and skill gap analysis",
+    `${report.roiProjections.length} ROI projections with time-to-value estimates`,
+  ];
+  for (const item of tocItems) {
+    doc.setTextColor(...C.accent);
+    doc.text("\u2022", m + 2, y);
+    doc.setTextColor(...C.body);
+    doc.text(item, m + 7, y);
+    y += 5.5;
+  }
+
+  // Disclaimer
+  y += 16;
+  doc.setDrawColor(...C.gray200);
+  doc.line(m, y, m + cw, y);
+  y += 8;
+  doc.setFontSize(8);
+  doc.setTextColor(...C.light);
   const disclaimer = isPaid
     ? "This plan was built by jobsdata.ai based on your work profile. All uploaded content was processed in-memory and discarded after analysis."
     : "FREE PREVIEW — This is a limited preview. Get your full plan for a complete task-by-task analysis, tool recommendations, and action plan.";
-  const disclaimerLines = doc.splitTextToSize(disclaimer, contentWidth);
-  doc.text(disclaimerLines, margin, y);
+  const dLines = doc.splitTextToSize(disclaimer, cw);
+  doc.text(dLines, m, y);
 
-  y += 20;
-  doc.setFontSize(8);
-  doc.text("Built on jobsdata.ai | 300+ research sources", margin, y);
+  footer(doc, pw, ph, pageNum);
 
   // ===== EXECUTIVE SUMMARY =====
-  doc.addPage();
-  y = 20;
-  addPageBackground(doc);
-  addFooter(doc, pageWidth);
+  newPage();
+  y = sectionTitle(doc, "AI Opportunity Summary", m, y);
 
-  y = addSectionHeader(doc, "Your AI Opportunity Summary", margin, y, contentWidth);
-  y += 4;
-  y = addBodyText(doc, report.executiveSummary, margin, y, contentWidth);
+  y = bodyText(doc, report.executiveSummary, m, y, cw);
 
   // AI Readiness Score
   if (report.organizationProfile.aiReadinessScore) {
     y += 8;
-    checkPage(25);
-    doc.setFillColor(...COLORS.sectionBg);
-    doc.roundedRect(margin, y, contentWidth, 20, 3, 3, "F");
+    need(22);
+    doc.setFillColor(...C.accentLight);
+    doc.roundedRect(m, y, cw, 16, 3, 3, "F");
     doc.setFont("helvetica", "bold");
-    doc.setFontSize(11);
-    doc.setTextColor(...COLORS.white);
-    doc.text("AI Readiness Score", margin + 6, y + 8);
-    doc.setFontSize(20);
-    doc.setTextColor(...COLORS.primary);
-    doc.text(`${report.organizationProfile.aiReadinessScore}/10`, margin + contentWidth - 30, y + 13);
-    y += 26;
+    doc.setFontSize(10);
+    doc.setTextColor(...C.heading);
+    doc.text("AI Readiness Score", m + 6, y + 7);
+    doc.setFontSize(18);
+    doc.setTextColor(...C.accent);
+    doc.text(`${report.organizationProfile.aiReadinessScore}/10`, m + cw - 28, y + 10);
+    y += 22;
   }
 
-  // Organization Profile
   if (report.organizationProfile.industryContext) {
     y += 4;
-    checkPage(30);
-    y = addSubHeader(doc, "Industry Context", margin, y);
-    y = addBodyText(doc, report.organizationProfile.industryContext, margin, y, contentWidth);
+    need(20);
+    y = subHead(doc, "Industry Context", m, y);
+    y = bodyText(doc, report.organizationProfile.industryContext, m, y, cw);
   }
 
   if (report.organizationProfile.keyStrengths.length > 0) {
-    y += 4;
-    checkPage(20);
-    y = addSubHeader(doc, "Key Strengths", margin, y);
+    y += 6;
+    need(16);
+    y = subHead(doc, "Key Strengths", m, y);
     for (const item of report.organizationProfile.keyStrengths) {
-      checkPage(8);
-      y = addBullet(doc, item, margin, y, contentWidth);
+      need(8);
+      y = bullet(doc, item, m, y, cw);
     }
   }
 
   if (report.organizationProfile.keyGaps.length > 0) {
-    y += 4;
-    checkPage(20);
-    y = addSubHeader(doc, "Key Gaps", margin, y);
+    y += 6;
+    need(16);
+    y = subHead(doc, "Key Gaps", m, y);
     for (const item of report.organizationProfile.keyGaps) {
-      checkPage(8);
-      y = addBullet(doc, item, margin, y, contentWidth);
+      need(8);
+      y = bullet(doc, item, m, y, cw);
     }
   }
 
   // ===== TASK ANALYSIS =====
   if (report.taskAnalysis.length > 0) {
-    doc.addPage();
-    y = 20;
-    addPageBackground(doc);
-    addFooter(doc, pageWidth);
-
-    y = addSectionHeader(doc, "Where AI Can Help Most", margin, y, contentWidth);
-    y += 4;
+    newPage();
+    y = sectionTitle(doc, "Where AI Can Help Most", m, y);
 
     for (const task of report.taskAnalysis) {
-      checkPage(35);
+      doc.setFontSize(8);
+      const approachLines = doc.splitTextToSize(task.aiApproach, cw - 10);
+      const shown = approachLines.slice(0, 3);
+      const ch = 18 + shown.length * 3.2;
 
-      doc.setFillColor(...COLORS.sectionBg);
-      doc.roundedRect(margin, y, contentWidth, 28, 2, 2, "F");
+      need(ch + 3);
 
+      doc.setFillColor(...C.gray100);
+      doc.roundedRect(m, y, cw, ch, 2, 2, "F");
+
+      // Task name
       doc.setFont("helvetica", "bold");
-      doc.setFontSize(10);
-      doc.setTextColor(...COLORS.white);
-      doc.text(task.taskName, margin + 4, y + 7);
+      doc.setFontSize(9);
+      doc.setTextColor(...C.heading);
+      const nameLines = doc.splitTextToSize(task.taskName, cw - 36);
+      doc.text(nameLines[0], m + 5, y + 6);
 
       // Opportunity badge
-      const badgeColor = task.aiOpportunity === "high" ? [34, 197, 94] : task.aiOpportunity === "medium" ? [234, 179, 8] : [107, 114, 128];
-      doc.setFillColor(badgeColor[0], badgeColor[1], badgeColor[2]);
-      doc.roundedRect(margin + contentWidth - 25, y + 3, 21, 6, 2, 2, "F");
+      const badgeColors: Record<string, { bg: RGB; fg: RGB }> = {
+        high: { bg: [220, 252, 231] as RGB, fg: C.green },
+        medium: { bg: [254, 249, 195] as RGB, fg: C.amber },
+        low: { bg: C.gray200, fg: C.muted },
+      };
+      const badge = badgeColors[task.aiOpportunity] || badgeColors.low;
+      doc.setFillColor(...badge.bg);
+      doc.roundedRect(m + cw - 26, y + 2, 22, 6, 2, 2, "F");
       doc.setFontSize(7);
-      doc.setTextColor(255, 255, 255);
-      doc.text(task.aiOpportunity.toUpperCase(), margin + contentWidth - 24, y + 7.5);
+      doc.setFont("helvetica", "bold");
+      doc.setTextColor(...badge.fg);
+      doc.text(task.aiOpportunity.toUpperCase(), m + cw - 24, y + 6.5);
 
+      // Department + complexity
       doc.setFont("helvetica", "normal");
+      doc.setFontSize(7);
+      doc.setTextColor(...C.muted);
+      doc.text(`${task.department}  |  Complexity: ${task.complexity}`, m + 5, y + 11);
+
+      // AI approach
       doc.setFontSize(8);
-      doc.setTextColor(...COLORS.muted);
-      doc.text(`${task.department} | Complexity: ${task.complexity}`, margin + 4, y + 13);
+      doc.setTextColor(...C.body);
+      doc.text(shown, m + 5, y + 15.5);
 
-      doc.setTextColor(...COLORS.text);
-      const approachLines = doc.splitTextToSize(task.aiApproach, contentWidth - 8);
-      doc.text(approachLines.slice(0, 2), margin + 4, y + 19);
-
-      y += 32;
+      y += ch + 3;
     }
   }
 
-  // ===== TOOL RECOMMENDATIONS =====
+  // ===== TOOL RECOMMENDATIONS (3-tier system) =====
   if (report.toolRecommendations.length > 0) {
-    doc.addPage();
-    y = 20;
-    addPageBackground(doc);
-    addFooter(doc, pageWidth);
+    newPage();
+    y = sectionTitle(doc, "Your Tool Stack", m, y);
 
-    y = addSectionHeader(doc, "Tools to Try", margin, y, contentWidth);
-    y += 4;
+    // Group tools by recommendation tier
+    const tierGroups: { tier: string; label: string; subtitle: string; color: RGB; tools: typeof report.toolRecommendations }[] = [
+      {
+        tier: "start-here",
+        label: "Start Here",
+        subtitle: "Free or cheap, immediate value, low learning curve",
+        color: C.green,
+        tools: report.toolRecommendations.filter(t => t.recommendationTier === "start-here"),
+      },
+      {
+        tier: "add-next",
+        label: "Add Next",
+        subtitle: "After the first tools are working, these compound the gains",
+        color: C.accent,
+        tools: report.toolRecommendations.filter(t => t.recommendationTier === "add-next"),
+      },
+      {
+        tier: "consider-later",
+        label: "Consider Later",
+        subtitle: "Higher investment, higher payoff, requires foundation",
+        color: C.amber,
+        tools: report.toolRecommendations.filter(t => t.recommendationTier === "consider-later"),
+      },
+    ];
 
-    for (const tool of report.toolRecommendations) {
-      checkPage(30);
+    // Fallback: if no tools have recommendationTier set, show all under a flat list
+    const hasAnyTier = tierGroups.some(g => g.tools.length > 0);
+    if (!hasAnyTier) {
+      tierGroups.length = 0;
+      tierGroups.push({
+        tier: "all",
+        label: "Recommended Tools",
+        subtitle: "Prioritized by impact and ease of adoption",
+        color: C.accent,
+        tools: report.toolRecommendations,
+      });
+    }
 
-      doc.setFillColor(...COLORS.sectionBg);
-      doc.roundedRect(margin, y, contentWidth, 24, 2, 2, "F");
+    for (const group of tierGroups) {
+      if (group.tools.length === 0) continue;
 
+      // Tier header
+      need(14);
       doc.setFont("helvetica", "bold");
-      doc.setFontSize(10);
-      doc.setTextColor(...COLORS.white);
-      doc.text(tool.toolName ? `${tool.toolName}  (${tool.category})` : tool.category, margin + 4, y + 7);
-
-      // Priority badge
-      const tierColor = tool.priorityTier === "immediate" ? COLORS.primary : tool.priorityTier === "medium-term" ? [234, 179, 8] : [107, 114, 128];
-      doc.setFontSize(7);
-      doc.setTextColor(tierColor[0], tierColor[1], tierColor[2]);
-      doc.text(tool.priorityTier.toUpperCase(), margin + contentWidth - 30, y + 7);
-
+      doc.setFontSize(9);
+      doc.setTextColor(...group.color);
+      doc.text(group.label.toUpperCase(), m, y + 4);
       doc.setFont("helvetica", "normal");
-      doc.setFontSize(8);
-      doc.setTextColor(...COLORS.text);
-      const purposeLines = doc.splitTextToSize(tool.purpose, contentWidth - 8);
-      doc.text(purposeLines.slice(0, 2), margin + 4, y + 14);
+      doc.setFontSize(7);
+      doc.setTextColor(...C.muted);
+      doc.text(group.subtitle, m, y + 8.5);
+      y += 12;
 
-      if (tool.estimatedMonthlyCost) {
-        doc.setTextColor(...COLORS.muted);
-        doc.text(`Est. cost: ${tool.estimatedMonthlyCost}/mo | Effort: ${tool.implementationEffort}`, margin + 4, y + 21);
+      for (const tool of group.tools) {
+        // Compute card content
+        doc.setFontSize(8);
+        const purposeLines = doc.splitTextToSize(tool.purpose, cw - 10);
+        const shownPurpose = purposeLines.slice(0, 2);
+        const hasCost = !!tool.estimatedMonthlyCost;
+        const hasReplaces = !!tool.whatItReplaces;
+        const hasLearning = !!tool.learningTime;
+        const hasFirstTask = !!tool.firstTask;
+        let ch = 16 + shownPurpose.length * 3.2;
+        if (hasCost) ch += 4;
+        if (hasReplaces) ch += 4;
+        if (hasLearning || hasFirstTask) ch += 4;
+
+        need(ch + 3);
+
+        doc.setFillColor(...C.gray100);
+        doc.roundedRect(m, y, cw, ch, 2, 2, "F");
+
+        // Tool name
+        doc.setFont("helvetica", "bold");
+        doc.setFontSize(9);
+        doc.setTextColor(...C.heading);
+        const displayName = tool.toolName
+          ? tool.toolName.replace(/\s*\(.*?\)\s*$/, "")
+          : tool.category;
+        doc.text(displayName, m + 5, y + 6);
+
+        // Category on separate line
+        doc.setFont("helvetica", "normal");
+        doc.setFontSize(7);
+        doc.setTextColor(...C.muted);
+        doc.text(tool.category, m + 5, y + 10.5);
+
+        // Effort badge on right
+        doc.setFont("helvetica", "bold");
+        doc.setFontSize(7);
+        doc.setTextColor(...C.muted);
+        doc.text(`Effort: ${tool.implementationEffort || "low"}`, m + cw - 5, y + 6, { align: "right" });
+
+        // Purpose
+        let contentY = y + 15;
+        doc.setFont("helvetica", "normal");
+        doc.setFontSize(8);
+        doc.setTextColor(...C.body);
+        doc.text(shownPurpose, m + 5, contentY);
+        contentY += shownPurpose.length * 3.2;
+
+        // What it replaces
+        if (hasReplaces) {
+          doc.setFontSize(7);
+          doc.setTextColor(...C.muted);
+          const replacesText = `Replaces: ${tool.whatItReplaces}`;
+          const replacesLines = doc.splitTextToSize(replacesText, cw - 12);
+          doc.text(replacesLines[0], m + 5, contentY);
+          contentY += 4;
+        }
+
+        // Cost
+        if (hasCost) {
+          doc.setFontSize(7);
+          doc.setTextColor(...C.muted);
+          const costLines = doc.splitTextToSize(tool.estimatedMonthlyCost!, cw - 12);
+          doc.text(costLines[0], m + 5, contentY);
+          contentY += 4;
+        }
+
+        // Learning time + first task
+        if (hasLearning || hasFirstTask) {
+          doc.setFontSize(7);
+          doc.setTextColor(...C.muted);
+          const meta: string[] = [];
+          if (hasLearning) meta.push(`Learn: ${tool.learningTime}`);
+          if (hasFirstTask) {
+            const taskLines = doc.splitTextToSize(tool.firstTask!, cw - 40);
+            meta.push(`Try: ${taskLines[0]}`);
+          }
+          doc.text(meta.join("  |  "), m + 5, contentY);
+        }
+
+        y += ch + 3;
       }
-
-      y += 28;
+      y += 3; // gap between tier groups
     }
   }
 
   // ===== IMPLEMENTATION ROADMAP =====
-  doc.addPage();
-  y = 20;
-  addPageBackground(doc);
-  addFooter(doc, pageWidth);
+  y += 10;
+  need(40);
+  y = sectionTitle(doc, "Implementation Roadmap", m, y);
 
-  y = addSectionHeader(doc, "Your Action Plan", margin, y, contentWidth);
+  const phases = Object.entries(report.implementationRoadmap) as [string, typeof report.implementationRoadmap.immediate][];
+  for (const [phase, data] of phases) {
+    y += 2;
+    need(30);
 
-  for (const [phase, data] of Object.entries(report.implementationRoadmap) as [string, typeof report.implementationRoadmap.immediate][]) {
-    y += 6;
-    checkPage(30);
+    const phaseLabel = phase === "immediate"
+      ? "Start This Week (0\u20133 months)"
+      : phase === "mediumTerm"
+      ? "Build On It (3\u20136 months)"
+      : "Level Up (6\u201312+ months)";
 
-    const phaseLabel = phase === "immediate" ? "Start This Week (0-3 months)" : phase === "mediumTerm" ? "Build On It (3-6 months)" : "Level Up (6-12+ months)";
-
-    doc.setFillColor(...COLORS.primary);
-    doc.roundedRect(margin, y, contentWidth, 8, 2, 2, "F");
+    // Phase header bar
+    doc.setFillColor(...C.accent);
+    doc.roundedRect(m, y, cw, 7, 2, 2, "F");
     doc.setFont("helvetica", "bold");
-    doc.setFontSize(10);
-    doc.setTextColor(255, 255, 255);
-    doc.text(phaseLabel, margin + 4, y + 5.5);
-    y += 12;
+    doc.setFontSize(9);
+    doc.setTextColor(...C.white);
+    doc.text(phaseLabel, m + 5, y + 5);
+    y += 10;
 
     if (data.objectives.length > 0) {
       doc.setFont("helvetica", "bold");
       doc.setFontSize(9);
-      doc.setTextColor(...COLORS.white);
-      doc.text("Objectives:", margin, y);
+      doc.setTextColor(...C.heading);
+      doc.text("Objectives", m, y);
       y += 5;
       for (const obj of data.objectives) {
-        checkPage(8);
-        y = addBullet(doc, obj, margin, y, contentWidth);
+        need(8);
+        y = bullet(doc, obj, m, y, cw);
       }
     }
 
@@ -260,155 +421,175 @@ export function generatePdf(
       y += 3;
       doc.setFont("helvetica", "bold");
       doc.setFontSize(9);
-      doc.setTextColor(...COLORS.white);
-      doc.text("Actions:", margin, y);
+      doc.setTextColor(...C.heading);
+      doc.text("Actions", m, y);
       y += 5;
       for (const action of data.actions) {
-        checkPage(12);
-        y = addBullet(doc, `${action.title}: ${action.description}`, margin, y, contentWidth);
+        need(10);
+        y = bullet(doc, `${action.title}: ${action.description}`, m, y, cw);
       }
     }
 
     if (data.estimatedInvestment) {
       y += 3;
-      checkPage(8);
+      need(8);
+      doc.setFont("helvetica", "normal");
       doc.setFontSize(8);
-      doc.setTextColor(...COLORS.muted);
-      doc.text(`Estimated investment: ${data.estimatedInvestment}`, margin, y);
-      y += 5;
+      doc.setTextColor(...C.muted);
+      doc.text(`Estimated investment: ${data.estimatedInvestment}`, m, y);
+      y += 6;
     }
   }
 
   // ===== RISK ASSESSMENT =====
-  y += 10;
-  checkPage(40);
-  y = addSectionHeader(doc, "Things to Keep in Mind", margin, y, contentWidth);
-  y += 4;
+  y += 8;
+  need(40);
+  y = sectionTitle(doc, "Risk Assessment", m, y);
 
   if (report.riskAssessment.displacementRisk) {
-    y = addSubHeader(doc, "Displacement Risk", margin, y);
-    y = addBodyText(doc, report.riskAssessment.displacementRisk, margin, y, contentWidth);
-    y += 3;
+    y = subHead(doc, "Displacement Risk", m, y);
+    y = bodyText(doc, report.riskAssessment.displacementRisk, m, y, cw);
+    y += 4;
   }
 
   if (report.riskAssessment.skillGaps.length > 0) {
-    checkPage(20);
-    y = addSubHeader(doc, "Skill Gaps to Address", margin, y);
+    need(16);
+    y = subHead(doc, "Skill Gaps to Address", m, y);
     for (const gap of report.riskAssessment.skillGaps) {
-      checkPage(8);
-      y = addBullet(doc, gap, margin, y, contentWidth);
+      need(8);
+      y = bullet(doc, gap, m, y, cw);
     }
-    y += 3;
+    y += 4;
   }
 
   if (report.riskAssessment.changeManagementNotes) {
-    checkPage(20);
-    y = addSubHeader(doc, "Change Management", margin, y);
-    y = addBodyText(doc, report.riskAssessment.changeManagementNotes, margin, y, contentWidth);
+    need(16);
+    y = subHead(doc, "Change Management", m, y);
+    y = bodyText(doc, report.riskAssessment.changeManagementNotes, m, y, cw);
+    y += 4;
+  }
+
+  if (report.riskAssessment.dataPrivacyConsiderations && report.riskAssessment.dataPrivacyConsiderations.length > 0) {
+    need(16);
+    y = subHead(doc, "Data Privacy", m, y);
+    for (const item of report.riskAssessment.dataPrivacyConsiderations) {
+      need(8);
+      y = bullet(doc, item, m, y, cw);
+    }
   }
 
   // ===== ROI PROJECTIONS =====
   if (report.roiProjections.length > 0) {
-    doc.addPage();
-    y = 20;
-    addPageBackground(doc);
-    addFooter(doc, pageWidth);
-
-    y = addSectionHeader(doc, "Time & Value You Could Save", margin, y, contentWidth);
-    y += 4;
+    y += 10;
+    need(40);
+    y = sectionTitle(doc, "Projected Time & Cost Savings", m, y);
 
     for (const roi of report.roiProjections) {
-      checkPage(25);
-      doc.setFillColor(...COLORS.sectionBg);
-      doc.roundedRect(margin, y, contentWidth, 20, 2, 2, "F");
+      doc.setFontSize(8);
+      const basisLines = doc.splitTextToSize(roi.basis, cw - 10);
+      const shownBasis = basisLines.slice(0, 2);
+      const ch = 20 + shownBasis.length * 3.2;
 
+      need(ch + 3);
+
+      doc.setFillColor(...C.gray100);
+      doc.roundedRect(m, y, cw, ch, 2, 2, "F");
+
+      // Area name
       doc.setFont("helvetica", "bold");
       doc.setFontSize(9);
-      doc.setTextColor(...COLORS.white);
-      doc.text(roi.area, margin + 4, y + 6);
+      doc.setTextColor(...C.heading);
+      doc.text(roi.area, m + 5, y + 6);
 
+      // Confidence badge
+      const confColor = roi.confidence === "high" ? C.green : roi.confidence === "moderate" ? C.amber : C.muted;
+      doc.setFontSize(7);
+      doc.setTextColor(...confColor);
+      doc.text(roi.confidence.toUpperCase(), m + cw - 5, y + 6, { align: "right" });
+
+      // Savings + time to value on one line
       doc.setFont("helvetica", "normal");
       doc.setFontSize(8);
-      doc.setTextColor(...COLORS.text);
-      doc.text(`Savings: ${roi.projectedSavings} | Time to value: ${roi.timeToValue} | Confidence: ${roi.confidence}`, margin + 4, y + 12);
+      doc.setTextColor(...C.body);
+      doc.text(`Savings: ${roi.projectedSavings}  |  Time to value: ${roi.timeToValue}`, m + 5, y + 11.5);
 
-      doc.setTextColor(...COLORS.muted);
-      const basisLines = doc.splitTextToSize(`Basis: ${roi.basis}`, contentWidth - 8);
-      doc.text(basisLines.slice(0, 1), margin + 4, y + 17);
+      // Basis
+      doc.setFontSize(7);
+      doc.setTextColor(...C.light);
+      doc.text(shownBasis, m + 5, y + 16);
 
-      y += 24;
+      y += ch + 3;
     }
   }
 
   // ===== FURTHER EVALUATION =====
   if (report.furtherEvaluation.length > 0) {
-    y += 10;
-    checkPage(30);
-    y = addSectionHeader(doc, "What to Do Next", margin, y, contentWidth);
-    y += 4;
-
+    y += 8;
+    need(30);
+    y = sectionTitle(doc, "Next Steps", m, y);
     for (const item of report.furtherEvaluation) {
-      checkPage(10);
-      y = addBullet(doc, item, margin, y, contentWidth);
+      need(10);
+      y = bullet(doc, item, m, y, cw);
     }
   }
 
-  // ===== AI POLICY (if add-on purchased) =====
+  // ===== AI POLICY =====
   if (report.aiPolicy && report.aiPolicy.sections.length > 0) {
-    doc.addPage();
-    y = 20;
-    addPageBackground(doc);
-    addFooter(doc, pageWidth);
-
-    y = addSectionHeader(doc, "Your AI Guidelines", margin, y, contentWidth);
-    y += 4;
-
+    y += 10;
+    need(40);
+    y = sectionTitle(doc, "AI Usage Guidelines", m, y);
     for (const section of report.aiPolicy.sections) {
-      checkPage(20);
-      y = addSubHeader(doc, section.title, margin, y);
-      y = addBodyText(doc, section.content, margin, y, contentWidth);
-      y += 5;
+      need(16);
+      y = subHead(doc, section.title, m, y);
+      y = bodyText(doc, section.content, m, y, cw);
+      y += 6;
     }
   }
 
-  // ===== PROMPT LIBRARY (if add-on purchased) =====
+  // ===== PROMPT LIBRARY =====
   if (report.promptLibrary && report.promptLibrary.length > 0) {
-    doc.addPage();
-    y = 20;
-    addPageBackground(doc);
-    addFooter(doc, pageWidth);
-
-    y = addSectionHeader(doc, "Prompt Library", margin, y, contentWidth);
-    y += 4;
+    y += 10;
+    need(40);
+    y = sectionTitle(doc, "Prompt Library", m, y);
 
     for (const prompt of report.promptLibrary) {
-      checkPage(40);
+      doc.setFontSize(8);
+      const promptLines = doc.splitTextToSize(prompt.prompt, cw - 12);
+      const shownPrompt = promptLines.slice(0, 8);
+      const ch = 18 + shownPrompt.length * 3.5 + prompt.tips.length * 4 + 4;
 
-      doc.setFillColor(...COLORS.sectionBg);
-      doc.roundedRect(margin, y, contentWidth, 6, 2, 2, "F");
+      need(ch + 5);
+
+      // Header bar
+      doc.setFillColor(...C.accentLight);
+      doc.roundedRect(m, y, cw, 8, 2, 2, "F");
       doc.setFont("helvetica", "bold");
       doc.setFontSize(9);
-      doc.setTextColor(...COLORS.white);
-      doc.text(`${prompt.title} (${prompt.department})`, margin + 4, y + 4.5);
-      y += 10;
-
+      doc.setTextColor(...C.accent);
+      doc.text(`${prompt.title}`, m + 5, y + 5.5);
       doc.setFont("helvetica", "normal");
+      doc.setTextColor(...C.muted);
+      doc.text(prompt.department, m + cw - 5, y + 5.5, { align: "right" });
+      y += 12;
+
+      // Use case
       doc.setFontSize(8);
-      doc.setTextColor(...COLORS.muted);
-      doc.text(`Use case: ${prompt.useCase}`, margin, y);
+      doc.setTextColor(...C.muted);
+      doc.text(`Use case: ${prompt.useCase}`, m, y);
       y += 5;
 
-      doc.setTextColor(...COLORS.text);
-      const promptLines = doc.splitTextToSize(prompt.prompt, contentWidth);
-      doc.text(promptLines.slice(0, 6), margin, y);
-      y += promptLines.slice(0, 6).length * 3.5 + 4;
+      // Prompt text
+      doc.setTextColor(...C.body);
+      doc.text(shownPrompt, m, y);
+      y += shownPrompt.length * 3.5 + 3;
 
+      // Tips
       if (prompt.tips.length > 0) {
-        doc.setTextColor(...COLORS.muted);
         doc.setFontSize(7);
+        doc.setTextColor(...C.muted);
         for (const tip of prompt.tips) {
-          checkPage(6);
-          doc.text(`Tip: ${tip}`, margin + 4, y);
+          need(5);
+          doc.text(`Tip: ${tip}`, m + 4, y);
           y += 4;
         }
       }
@@ -417,87 +598,86 @@ export function generatePdf(
     }
   }
 
-  // If not paid, add paywall notice at the end
+  // ===== PAYWALL (free preview) =====
   if (!isPaid) {
-    doc.addPage();
+    newPage();
     y = 80;
-    addPageBackground(doc);
 
     doc.setFont("helvetica", "bold");
-    doc.setFontSize(18);
-    doc.setTextColor(...COLORS.white);
-    doc.text("Unlock Your Full Plan", pageWidth / 2, y, { align: "center" });
+    doc.setFontSize(20);
+    doc.setTextColor(...C.heading);
+    doc.text("Unlock Your Full Plan", pw / 2, y, { align: "center" });
 
-    y += 12;
+    y += 14;
     doc.setFont("helvetica", "normal");
-    doc.setFontSize(11);
-    doc.setTextColor(...COLORS.muted);
-    const ctaText = doc.splitTextToSize(
+    doc.setFontSize(10);
+    doc.setTextColor(...C.body);
+    const ctaLines = doc.splitTextToSize(
       "This preview shows a glimpse of what your full plan covers. The complete version includes a detailed task-by-task analysis, specific tool recommendations, a step-by-step action plan, time savings estimates, and skills to build.",
-      contentWidth - 20
+      cw - 20
     );
-    doc.text(ctaText, pageWidth / 2, y, { align: "center" });
+    doc.text(ctaLines, pw / 2, y, { align: "center" });
 
-    y += ctaText.length * 5 + 15;
-    doc.setFontSize(14);
-    doc.setTextColor(...COLORS.primary);
-    doc.text("Visit jobsdata.ai/assessment to get your full plan", pageWidth / 2, y, { align: "center" });
+    y += ctaLines.length * 4.5 + 16;
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(12);
+    doc.setTextColor(...C.accent);
+    doc.text("jobsdata.ai/assessment", pw / 2, y, { align: "center" });
   }
 
   return doc.output("arraybuffer");
 }
 
-// ===== Helper functions =====
+// ===== Helpers =====
 
-function addPageBackground(doc: jsPDF) {
-  doc.setFillColor(...COLORS.dark);
-  doc.rect(0, 0, doc.internal.pageSize.getWidth(), doc.internal.pageSize.getHeight(), "F");
-}
-
-function addFooter(doc: jsPDF, pageWidth: number) {
-  const h = doc.internal.pageSize.getHeight();
+function footer(doc: jsPDF, pw: number, ph: number, page: number) {
   doc.setFontSize(7);
-  doc.setTextColor(...COLORS.muted);
-  doc.text("jobsdata.ai | Your AI Action Plan", 20, h - 8);
-  doc.text("Confidential", pageWidth - 20, h - 8, { align: "right" });
+  doc.setFont("helvetica", "normal");
+  doc.setTextColor(160, 170, 180);
+  doc.text("jobsdata.ai", 22, ph - 10);
+  doc.text(`${page}`, pw - 22, ph - 10, { align: "right" });
+  // Thin line above footer
+  doc.setDrawColor(229, 231, 235);
+  doc.setLineWidth(0.2);
+  doc.line(22, ph - 14, pw - 22, ph - 14);
 }
 
-function addSectionHeader(doc: jsPDF, title: string, x: number, y: number, width: number): number {
-  doc.setDrawColor(...COLORS.primary);
-  doc.setLineWidth(0.5);
-  doc.line(x, y, x + width, y);
-  y += 8;
+function sectionTitle(doc: jsPDF, title: string, x: number, y: number): number {
   doc.setFont("helvetica", "bold");
-  doc.setFontSize(16);
-  doc.setTextColor(...COLORS.white);
+  doc.setFontSize(18);
+  doc.setTextColor(30, 30, 30);
   doc.text(title, x, y);
-  return y + 6;
+  y += 4;
+  doc.setDrawColor(79, 70, 229);
+  doc.setLineWidth(0.6);
+  doc.line(x, y, x + 30, y);
+  return y + 8;
 }
 
-function addSubHeader(doc: jsPDF, title: string, x: number, y: number): number {
+function subHead(doc: jsPDF, title: string, x: number, y: number): number {
   doc.setFont("helvetica", "bold");
   doc.setFontSize(10);
-  doc.setTextColor(...COLORS.primary);
+  doc.setTextColor(79, 70, 229);
   doc.text(title, x, y);
   return y + 5;
 }
 
-function addBodyText(doc: jsPDF, text: string, x: number, y: number, width: number): number {
-  doc.setFont("helvetica", "normal");
-  doc.setFontSize(9);
-  doc.setTextColor(...COLORS.text);
-  const lines = doc.splitTextToSize(text, width);
-  doc.text(lines, x, y);
-  return y + lines.length * 3.8;
-}
-
-function addBullet(doc: jsPDF, text: string, x: number, y: number, width: number): number {
+function bodyText(doc: jsPDF, text: string, x: number, y: number, width: number): number {
   doc.setFont("helvetica", "normal");
   doc.setFontSize(8);
-  doc.setTextColor(...COLORS.primary);
+  doc.setTextColor(55, 65, 75);
+  const lines = doc.splitTextToSize(text, width);
+  doc.text(lines, x, y);
+  return y + lines.length * 3.4;
+}
+
+function bullet(doc: jsPDF, text: string, x: number, y: number, width: number): number {
+  doc.setFont("helvetica", "normal");
+  doc.setFontSize(8);
+  doc.setTextColor(79, 70, 229);
   doc.text("\u2022", x + 2, y);
-  doc.setTextColor(...COLORS.text);
+  doc.setTextColor(55, 65, 75);
   const lines = doc.splitTextToSize(text, width - 8);
   doc.text(lines, x + 7, y);
-  return y + lines.length * 3.5 + 1.5;
+  return y + lines.length * 3.2 + 1;
 }
