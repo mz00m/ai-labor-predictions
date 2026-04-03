@@ -1223,6 +1223,15 @@
       ],
       "evidenceTier": 1,
       "label": "FRI: 69 economists forecast labor indicators near historical trends through 2030"
+    },
+    {
+      "date": "2026-04-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "stanford-del-enterprise-ai-playbook-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Stanford DEL: 45% of 51 AI deployments resulted in headcount reduction"
     }
   ],
   "sources": [
@@ -2202,6 +2211,16 @@
       "evidenceTier": 1,
       "datePublished": "2026-03-31",
       "excerpt": "In a rapid AI progress scenario, economists forecast a drop in labor force participation from its 2025 baseline of 62.6% to 59.1% in 2030 and 55% in 2050, with roughly half of this decline—equivalent to 10 million jobs—attributable to AI."
+    },
+    {
+      "id": "stanford-del-enterprise-ai-playbook-2026",
+      "title": "The Enterprise AI Playbook: Lessons from 51 Successful Deployments",
+      "url": "https://digitaleconomy.stanford.edu/app/uploads/2026/03/EnterpriseAIPlaybook_PereiraGraylinBrynjolfsson.pdf",
+      "publisher": "Stanford Digital Economy Lab (Pereira, Graylin, Brynjolfsson)",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-01",
+      "excerpt": "Headcount reduction was the largest outcome in 45% of the deployments, but alternatives (hiring avoided, redeployment, no reduction) accounted for 55%.",
+      "dateAdded": "2026-04-03"
     }
   ]
 }

@@ -380,6 +380,24 @@
       ],
       "evidenceTier": 1,
       "label": "FRI: Rapid scenario → AI surpasses all human customer service agents by 2030"
+    },
+    {
+      "date": "2026-04-01",
+      "direction": "up",
+      "sourceIds": [
+        "stanford-del-enterprise-ai-playbook-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Stanford DEL: 90-95% of food delivery CS interactions fully automated by AI agent"
+    },
+    {
+      "date": "2026-04-01",
+      "direction": "up",
+      "sourceIds": [
+        "stanford-del-enterprise-ai-playbook-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Stanford DEL: 82% ticket deflection at tech co via AI-first customer support"
     }
   ],
   "sources": [
@@ -708,6 +726,16 @@
       "datePublished": "2026-03-31",
       "excerpt": "In the rapid AI scenario (14% probability), AI systems surpass all freelance customer service agents, handling inquiries as inexpensively and reliably as humans.",
       "dateAdded": "2026-04-02"
+    },
+    {
+      "id": "stanford-del-enterprise-ai-playbook-2026",
+      "title": "The Enterprise AI Playbook: Lessons from 51 Successful Deployments",
+      "url": "https://digitaleconomy.stanford.edu/app/uploads/2026/03/EnterpriseAIPlaybook_PereiraGraylinBrynjolfsson.pdf",
+      "publisher": "Stanford Digital Economy Lab (Pereira, Graylin, Brynjolfsson)",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-01",
+      "excerpt": "90 or 95% are now fully automated by an agent. If someone says their food didn't arrive or something went wrong with their order, 90 to 95% of those are completely automated. In customer support, a technology company achieved 82% ticket deflection by redesigning workflows around AI first resolution.",
+      "dateAdded": "2026-04-03"
     }
   ]
 }
