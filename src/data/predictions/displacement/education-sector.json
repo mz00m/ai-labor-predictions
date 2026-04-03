@@ -194,7 +194,7 @@
         "cognizant-new-work-2026"
       ],
       "evidenceTier": 2,
-      "label": "Cognizant: education exposure jumped from 11% to 49% \u2014 a 4.5x increase"
+      "label": "Cognizant: education exposure jumped from 11% to 49% — a 4.5x increase"
     },
     {
       "date": "2026-01-28",
@@ -212,7 +212,7 @@
         "shrm-automation-education-2025"
       ],
       "evidenceTier": 2,
-      "label": "SHRM: only 7.3% of education jobs highly automated \u2014 lowest of any sector (n=20,262)"
+      "label": "SHRM: only 7.3% of education jobs highly automated — lowest of any sector (n=20,262)"
     },
     {
       "date": "2026-02-01",
@@ -222,6 +222,15 @@
       ],
       "evidenceTier": 1,
       "label": "NBER (Cruces et al.): AI closes ~75% of education-based productivity gap in RCT (n=1,174)"
+    },
+    {
+      "date": "2026-03-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "mit-futuretech-rising-tides-ai-automation-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "MIT FutureTech: 60.4% AI task success in education roles (N=1,615)"
     },
     {
       "date": "2026-03-04",
@@ -266,7 +275,7 @@
     },
     {
       "id": "chegg-enrollment-decline",
-      "title": "Chegg Q2 2024 Earnings \u2014 ChatGPT Impact on Tutoring Market",
+      "title": "Chegg Q2 2024 Earnings — ChatGPT Impact on Tutoring Market",
       "url": "https://investor.chegg.com/press-releases/news-details/2024/Chegg-Reports-Q2-2024-Financial-Results/",
       "publisher": "Chegg (Earnings Report)",
       "evidenceTier": 2,
@@ -306,7 +315,7 @@
     },
     {
       "id": "pearson-10k-2024",
-      "title": "Pearson plc 2024 Annual Report \u2014 AI Strategy",
+      "title": "Pearson plc 2024 Annual Report — AI Strategy",
       "url": "https://plc.pearson.com/en-GB/annual-report-2024",
       "publisher": "Pearson plc",
       "evidenceTier": 2,
@@ -371,7 +380,7 @@
       "publisher": "SHRM (Society for Human Resource Management)",
       "evidenceTier": 2,
       "datePublished": "2025-10-01",
-      "excerpt": "At least 50% of tasks are automated in only 7.3% of education and library occupations \u2014 the lowest of any occupational group. Survey of 20,262 U.S. workers fielded March-April 2025.",
+      "excerpt": "At least 50% of tasks are automated in only 7.3% of education and library occupations — the lowest of any occupational group. Survey of 20,262 U.S. workers fielded March-April 2025.",
       "dateAdded": "2026-03-08"
     },
     {
@@ -391,7 +400,7 @@
       "publisher": "Cognizant",
       "evidenceTier": 2,
       "datePublished": "2026-01-15",
-      "excerpt": "Education task exposure jumped from 11% to 49% \u2014 a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations.",
+      "excerpt": "Education task exposure jumped from 11% to 49% — a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -428,7 +437,7 @@
       "id": "nber-cruces-galiani-ai-productivity-gap-2026",
       "title": "Does Generative AI Narrow Education-Based Productivity Gaps? Evidence from a Randomized Experiment",
       "url": "https://www.nber.org/papers/w34851",
-      "publisher": "NBER (Cruces, Fern\u00e1ndez Meijide, Galiani, G\u00e1lvez, Lombardi)",
+      "publisher": "NBER (Cruces, Fernández Meijide, Galiani, Gálvez, Lombardi)",
       "evidenceTier": 1,
       "datePublished": "2026-02-01",
       "excerpt": "In a randomized experiment with 1,174 adults ages 25-45, AI access closed approximately three-quarters of the education-based productivity gap: higher-education participants outperform lower-education participants by 0.548 standard deviations without AI; with AI, this gap falls to 0.139 standard deviations.",
@@ -452,6 +461,16 @@
       "evidenceTier": 2,
       "datePublished": "2026-03-25",
       "excerpt": "Educational Services 8.3%"
+    },
+    {
+      "id": "mit-futuretech-rising-tides-ai-automation-2026",
+      "title": "Crashing Waves vs. Rising Tides: Preliminary Findings on AI Automation from Thousands of Worker Evaluations of Labor Market Tasks",
+      "url": "https://arxiv.org/abs/2604.01363",
+      "publisher": "MIT FutureTech (Mertens, Thompson et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-01",
+      "excerpt": "Educational Instruction and Library job family: 60.4% AI task success rate across 1,615 evaluations. Slope coefficient beta=-0.28 (marginally significant), suggesting moderate task-duration dependence in education.",
+      "dateAdded": "2026-04-03"
     }
   ]
 }
