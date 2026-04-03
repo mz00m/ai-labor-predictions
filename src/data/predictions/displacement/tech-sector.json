@@ -703,6 +703,15 @@
       ],
       "evidenceTier": 1,
       "label": "FRI: Moderate scenario → most 5-day freelance SW engineering jobs automatable by 2030"
+    },
+    {
+      "date": "2026-04-01",
+      "direction": "up",
+      "sourceIds": [
+        "stanford-del-enterprise-ai-playbook-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Stanford DEL: 88% coding productivity gain led to dev team cut from 7 to 3"
     }
   ],
   "sources": [
@@ -1331,6 +1340,16 @@
       "datePublished": "2026-03-31",
       "excerpt": "In the moderate AI scenario, almost all freelance software-engineering jobs requiring 5 days of effort from an experienced human are automatable by 2030.",
       "dateAdded": "2026-04-02"
+    },
+    {
+      "id": "stanford-del-enterprise-ai-playbook-2026",
+      "title": "The Enterprise AI Playbook: Lessons from 51 Successful Deployments",
+      "url": "https://digitaleconomy.stanford.edu/app/uploads/2026/03/EnterpriseAIPlaybook_PereiraGraylinBrynjolfsson.pdf",
+      "publisher": "Stanford Digital Economy Lab (Pereira, Graylin, Brynjolfsson)",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-01",
+      "excerpt": "At a private equity (PE)-owned company, an 88% productivity gain in coding led to reducing the development team from seven to three.",
+      "dateAdded": "2026-04-03"
     }
   ],
   "marketIds": {

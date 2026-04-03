@@ -559,6 +559,15 @@
       ],
       "evidenceTier": 2,
       "label": "KPMG: 54% of orgs deploying AI agents, Q1 2026"
+    },
+    {
+      "date": "2026-04-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "stanford-del-enterprise-ai-playbook-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Stanford DEL: Only 20% of enterprise AI cases used agentic workflows"
     }
   ],
   "sources": [
@@ -1085,6 +1094,16 @@
       "datePublished": "2026-03-01",
       "excerpt": "Today, more than half of organizations are actively deploying AI agents.",
       "dateAdded": "2026-03-31"
+    },
+    {
+      "id": "stanford-del-enterprise-ai-playbook-2026",
+      "title": "The Enterprise AI Playbook: Lessons from 51 Successful Deployments",
+      "url": "https://digitaleconomy.stanford.edu/app/uploads/2026/03/EnterpriseAIPlaybook_PereiraGraylinBrynjolfsson.pdf",
+      "publisher": "Stanford Digital Economy Lab (Pereira, Graylin, Brynjolfsson)",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-01",
+      "excerpt": "Agentic implementations are currently a minority at 20% of cases.",
+      "dateAdded": "2026-04-03"
     }
   ]
 }

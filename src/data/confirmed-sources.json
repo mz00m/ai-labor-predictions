@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-04-02",
-  "totalSources": 474,
-  "verifiedCount": 474,
+  "lastUpdated": "2026-04-03",
+  "totalSources": 475,
+  "verifiedCount": 475,
   "sources": {
     "cvl-economics-entertainment-ai-2024": {
       "id": "cvl-economics-entertainment-ai-2024",
@@ -6627,6 +6627,23 @@
         "entry-level-wage-impact",
         "white-collar-professional-displacement",
         "customer-service-automation"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "stanford-del-enterprise-ai-playbook-2026": {
+      "id": "stanford-del-enterprise-ai-playbook-2026",
+      "title": "The Enterprise AI Playbook: Lessons from 51 Successful Deployments",
+      "url": "https://digitaleconomy.stanford.edu/app/uploads/2026/03/EnterpriseAIPlaybook_PereiraGraylinBrynjolfsson.pdf",
+      "publisher": "Stanford Digital Economy Lab (Pereira, Graylin, Brynjolfsson)",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-01",
+      "excerpt": "Headcount reduction was the largest outcome in 45% of the deployments, but alternatives (hiring avoided, redeployment, no reduction) accounted for 55%. Agentic implementations showed 71% median productivity gains versus 40% for high-automation. 90-95% of food delivery customer service interactions fully automated by AI agent.",
+      "usedIn": [
+        "customer-service-automation",
+        "tech-sector-displacement",
+        "overall-us-displacement",
+        "ai-adoption-rate"
       ],
       "verified": true,
       "synthetic": false
