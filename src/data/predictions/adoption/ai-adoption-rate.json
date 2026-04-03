@@ -568,6 +568,15 @@
       ],
       "evidenceTier": 2,
       "label": "Stanford DEL: Only 20% of enterprise AI cases used agentic workflows"
+    },
+    {
+      "date": "2026-04-03",
+      "direction": "up",
+      "sourceIds": [
+        "nyt-casselman-ai-job-threat-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "NYT/Census: ~1 in 5 firms used AI in last 2 weeks; 2x in some industries"
     }
   ],
   "sources": [
@@ -1103,6 +1112,16 @@
       "evidenceTier": 2,
       "datePublished": "2026-04-01",
       "excerpt": "Agentic implementations are currently a minority at 20% of cases.",
+      "dateAdded": "2026-04-03"
+    },
+    {
+      "id": "nyt-casselman-ai-job-threat-2026",
+      "title": "Economists Once Dismissed the A.I. Job Threat, but Not Anymore",
+      "url": "https://www.nytimes.com/2026/04/03/business/economists-once-dismissed-the-ai-job-threat-but-not-anymore.html",
+      "publisher": "The New York Times (Ben Casselman)",
+      "evidenceTier": 3,
+      "datePublished": "2026-04-03",
+      "excerpt": "Already, nearly one in five companies reports having used A.I. in the last two weeks, according to data from the Census Bureau, and in some industries the rate is twice as high.",
       "dateAdded": "2026-04-03"
     }
   ]

@@ -463,6 +463,15 @@
       ],
       "evidenceTier": 1,
       "label": "FRI: 69 economists assign 61% prob to moderate/rapid AI capabilities by 2030"
+    },
+    {
+      "date": "2026-04-03",
+      "direction": "neutral",
+      "sourceIds": [
+        "nyt-casselman-ai-job-threat-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "NYT: Economists shifting from dismissive to 'it's coming'; policy unprepared"
     }
   ],
   "sources": [
@@ -854,6 +863,16 @@
       "datePublished": "2026-03-31",
       "excerpt": "69 economists assign 61.4% probability to moderate or rapid AI capability progress by 2030. In the rapid scenario, AI surpasses humans on most cognitive and physical tasks.",
       "dateAdded": "2026-04-02"
+    },
+    {
+      "id": "nyt-casselman-ai-job-threat-2026",
+      "title": "Economists Once Dismissed the A.I. Job Threat, but Not Anymore",
+      "url": "https://www.nytimes.com/2026/04/03/business/economists-once-dismissed-the-ai-job-threat-but-not-anymore.html",
+      "publisher": "The New York Times (Ben Casselman)",
+      "evidenceTier": 3,
+      "datePublished": "2026-04-03",
+      "excerpt": "Most still do not see much evidence that A.I. is disrupting the job market. But they are starting to take seriously the possibility that it could someday soon.",
+      "dateAdded": "2026-04-03"
     }
   ]
 }

@@ -1232,6 +1232,15 @@
       ],
       "evidenceTier": 2,
       "label": "Stanford DEL: 45% of 51 AI deployments resulted in headcount reduction"
+    },
+    {
+      "date": "2026-04-03",
+      "direction": "neutral",
+      "sourceIds": [
+        "nyt-casselman-ai-job-threat-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "BCG/NYT: >50% of US jobs 'reshaped' in 2-3y but far fewer replaced entirely"
     }
   ],
   "sources": [
@@ -2220,6 +2229,16 @@
       "evidenceTier": 2,
       "datePublished": "2026-04-01",
       "excerpt": "Headcount reduction was the largest outcome in 45% of the deployments, but alternatives (hiring avoided, redeployment, no reduction) accounted for 55%.",
+      "dateAdded": "2026-04-03"
+    },
+    {
+      "id": "nyt-casselman-ai-job-threat-2026",
+      "title": "Economists Once Dismissed the A.I. Job Threat, but Not Anymore",
+      "url": "https://www.nytimes.com/2026/04/03/business/economists-once-dismissed-the-ai-job-threat-but-not-anymore.html",
+      "publisher": "The New York Times (Ben Casselman)",
+      "evidenceTier": 3,
+      "datePublished": "2026-04-03",
+      "excerpt": "researchers at Boston Consulting Group estimated that more than half of the jobs in the United States would be 'reshaped' by artificial intelligence over the next two to three years but that far fewer would be replaced entirely.",
       "dateAdded": "2026-04-03"
     }
   ]
