@@ -298,7 +298,8 @@ For each task, assign a deployment model (copilot, escalation, full-automation, 
 For each tool recommendation, include 2-3 specific KPIs the user should track to measure success.
 Include 3-5 common pitfalls specific to their industry and situation. Reference the Stanford finding that 77% of challenges are invisible costs (change management, data quality, process redesign).
 Normalize experimentation: mention that 61% of successful AI projects had a prior failure.
-Make this report so actionable they could start implementing the first recommendation within 10 minutes of reading it.`;
+Make this report so actionable they could start implementing the first recommendation within 10 minutes of reading it.
+For tool recommendations, reference specific products from the tools knowledge base provided. Include both the product name AND general category so users can evaluate alternatives.`;
 }
 
 function buildUserPrompt(
