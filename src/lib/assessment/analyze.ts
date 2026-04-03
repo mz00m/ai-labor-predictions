@@ -43,7 +43,7 @@ export async function generateAssessmentReport(
   // Step 4: Run Claude analysis
   const response = await anthropic.messages.create({
     model: "claude-sonnet-4-20250514",
-    max_tokens: mode === "preview" ? 3000 : 16000,
+    max_tokens: mode === "preview" ? 6000 : 16000,
     system: systemPrompt,
     messages: [{ role: "user", content: userPrompt }],
   });
@@ -243,7 +243,59 @@ Write like a smart, experienced consultant who genuinely wants this person to su
 IMPORTANT: The data has been pre-processed to remove PII. Do not attempt to reference specific individuals by name.`;
 
   if (mode === "preview") {
-    return base + `\n\nGenerate a PREVIEW plan: a brief summary of their biggest AI opportunities, an AI readiness score, and 2-3 high-level task analyses with specific tool names. Make it useful enough to show value but clearly incomplete. Return JSON format matching the full report structure but with fewer items.`;
+    return base + `\n\nGenerate a PREVIEW plan in JSON format with these exact keys:
+{
+  "executiveSummary": "2-3 paragraphs speaking directly to the person about their biggest AI opportunities. Be specific to their work — name actual tasks and tools. Make this compelling enough that they want the full report.",
+  "organizationProfile": {
+    "summary": "2-3 sentences about their work context",
+    "industryContext": "2-3 sentences about AI trends in their industry",
+    "aiReadinessScore": 1-10,
+    "keyStrengths": ["2-3 strengths specific to their intake"],
+    "keyGaps": ["2-3 gaps framed as opportunities"]
+  },
+  "taskAnalysis": [
+    {
+      "taskName": "Name of their most impactful task to automate",
+      "department": "Area of work",
+      "currentProcess": "2-3 sentences on how they do this today, including pain points",
+      "aiOpportunity": "high|medium|low",
+      "aiApproach": "3-4 sentences with SPECIFIC explanation: name the tool, describe the workflow step by step",
+      "expectedImpact": "Specific: '3-5 hours saved per week'",
+      "complexity": "simple|moderate|complex",
+      "estimatedTimeSaved": "e.g. '3-5 hrs/week'",
+      "exampleTools": [{ "name": "Actual product name", "url": "https://real-url.com", "free": true }],
+      "gettingStarted": "One concrete sentence with specific URL",
+      "deploymentModel": "copilot|escalation|full-automation|agentic",
+      "deploymentModelRationale": "1-2 sentences why this model fits"
+    }
+  ],
+  "toolRecommendations": [
+    {
+      "toolName": "Specific product name",
+      "category": "General category",
+      "recommendationTier": "start-here",
+      "purpose": "What it does for their specific work",
+      "whatItReplaces": "The specific manual process",
+      "expectedValue": "Measurable benefit",
+      "implementationEffort": "low|medium|high",
+      "priorityTier": "immediate",
+      "estimatedMonthlyCost": "Free tier details + paid pricing",
+      "learningTime": "Honest estimate",
+      "firstTask": "Concrete first task from their work",
+      "specificProducts": [{ "name": "Product", "url": "https://url.com", "pricing": "Free / $X/mo", "free": true }]
+    }
+  ],
+  "riskAssessment": { "overallRiskLevel": "low|moderate|high", "displacementRisk": "", "skillGaps": [], "changeManagementNotes": "", "dataPrivacyConsiderations": "" },
+  "implementationRoadmap": {
+    "immediate": { "timeframe": "0-3 months", "objectives": ["1-2 objectives"], "actions": [], "expectedOutcomes": [] },
+    "mediumTerm": { "timeframe": "3-6 months", "objectives": ["Available in full report"], "actions": [], "expectedOutcomes": [] },
+    "longTerm": { "timeframe": "6-12+ months", "objectives": ["Available in full report"], "actions": [], "expectedOutcomes": [] }
+  },
+  "roiProjections": [],
+  "furtherEvaluation": ["Unlock the full report for detailed next steps and ROI projections"]
+}
+
+Generate 2-3 task analyses and 2 tool recommendations for the preview. Make the executive summary compelling and specific — this is what sells the full report. Every field must have real content, not placeholder text.`;
   }
 
   return base + `\n\nGenerate a COMPREHENSIVE personalized AI action plan in JSON format with these exact keys:
@@ -340,8 +392,20 @@ IMPORTANT: The data has been pre-processed to remove PII. Do not attempt to refe
       "expectedOutcomes": ["Specific measurable outcomes: 'Save 3-5 hours/week on email and document drafting within the first month'"],
       "estimatedInvestment": "Exact: '$0 for first month (free tiers), $20-60/mo after for [specific tools]'"
     },
-    "mediumTerm": { "timeframe": "3-6 months", ...same structure with progressively more advanced actions },
-    "longTerm": { "timeframe": "6-12+ months", ...same structure with strategic, transformative actions }
+    "mediumTerm": {
+      "timeframe": "3-6 months",
+      "objectives": ["Progressively more advanced objectives"],
+      "actions": [{ "title": "Action title", "description": "Detailed instructions", "owner": "You / Your team", "priority": "high|medium", "howTo": "Step-by-step", "resource": { "label": "Guide", "url": "https://real-url.com" } }],
+      "expectedOutcomes": ["Measurable outcomes"],
+      "estimatedInvestment": "Estimated cost range"
+    },
+    "longTerm": {
+      "timeframe": "6-12+ months",
+      "objectives": ["Strategic, transformative objectives"],
+      "actions": [{ "title": "Action title", "description": "Detailed instructions", "owner": "You / Your team", "priority": "medium", "howTo": "Step-by-step", "resource": { "label": "Guide", "url": "https://real-url.com" } }],
+      "expectedOutcomes": ["Measurable outcomes"],
+      "estimatedInvestment": "Estimated cost range"
+    }
   },
   "roiProjections": [
     {
