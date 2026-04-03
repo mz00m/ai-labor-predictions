@@ -348,6 +348,51 @@
       "label": "CMU/Stanford: Agent benchmarks target Computer/Math domain — only 7.6% of US employment"
     },
     {
+      "date": "2026-03-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "kpmg-ai-pulse-q1-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "KPMG: 87% of firms upskilling/reskilling for AI"
+    },
+    {
+      "date": "2026-03-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "kpmg-ai-pulse-q1-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "KPMG: 57% expect humans to manage/direct AI agents"
+    },
+    {
+      "date": "2026-03-01",
+      "direction": "up",
+      "sourceIds": [
+        "mit-futuretech-rising-tides-ai-automation-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "MIT FutureTech: 62.6% of O*NET tasks have >=10% LLM time-savings potential"
+    },
+    {
+      "date": "2026-03-01",
+      "direction": "up",
+      "sourceIds": [
+        "mit-futuretech-rising-tides-ai-automation-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "MIT FutureTech: AI task success up from ~50% to ~65% in one year (2024-25)"
+    },
+    {
+      "date": "2026-03-01",
+      "direction": "up",
+      "sourceIds": [
+        "mit-futuretech-rising-tides-ai-automation-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "MIT FutureTech: 80-95% AI task success projected by 2029 (N=17,205 evals)"
+    },
+    {
       "date": "2026-03-05",
       "direction": "up",
       "sourceIds": [
@@ -411,22 +456,13 @@
       "label": "Tufts Digital Planet: 4.9M 'tipping point' workers in 33 occupations swing to >40% displacement"
     },
     {
-      "date": "2026-03-01",
-      "direction": "neutral",
+      "date": "2026-03-31",
+      "direction": "up",
       "sourceIds": [
-        "kpmg-ai-pulse-q1-2026"
+        "fri-ai-economics-survey-2026"
       ],
-      "evidenceTier": 2,
-      "label": "KPMG: 87% of firms upskilling/reskilling for AI"
-    },
-    {
-      "date": "2026-03-01",
-      "direction": "neutral",
-      "sourceIds": [
-        "kpmg-ai-pulse-q1-2026"
-      ],
-      "evidenceTier": 2,
-      "label": "KPMG: 57% expect humans to manage/direct AI agents"
+      "evidenceTier": 1,
+      "label": "FRI: 69 economists assign 61% prob to moderate/rapid AI capabilities by 2030"
     },
     {
       "date": "2026-04-01",
@@ -454,15 +490,6 @@
       ],
       "evidenceTier": 2,
       "label": "Brookings: 23M non-degree workers have low AI adaptive capacity"
-    },
-    {
-      "date": "2026-03-31",
-      "direction": "up",
-      "sourceIds": [
-        "fri-ai-economics-survey-2026"
-      ],
-      "evidenceTier": 1,
-      "label": "FRI: 69 economists assign 61% prob to moderate/rapid AI capabilities by 2030"
     },
     {
       "date": "2026-04-03",
@@ -891,6 +918,16 @@
       "evidenceTier": 1,
       "datePublished": "2024-12-27",
       "excerpt": "When AI demand doubles in a job ad, demand for complementary skills rises by 5%. Complementary effects are 1.7x larger than substitution effects. Based on 12 million US job vacancies 2018-2023.",
+      "dateAdded": "2026-04-03"
+    },
+    {
+      "id": "mit-futuretech-rising-tides-ai-automation-2026",
+      "title": "Crashing Waves vs. Rising Tides: Preliminary Findings on AI Automation from Thousands of Worker Evaluations of Labor Market Tasks",
+      "url": "https://arxiv.org/abs/2604.01363",
+      "publisher": "MIT FutureTech (Mertens, Thompson et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-01",
+      "excerpt": "AI models successfully complete tasks that take humans approximately 3-4 hours with about a 50% success rate, increasing to about 65% by 2025-Q3. Most text-based tasks projected to reach 80-95% AI success by 2029. 62.6% of O*NET tasks classified as having at least 10% LLM time-savings potential. Based on 17,205 expert evaluations across 3,000+ O*NET tasks and 40+ LLMs.",
       "dateAdded": "2026-04-03"
     }
   ]

@@ -266,6 +266,15 @@
       "label": "Yale Budget Lab: Healthcare overall 4.44/10 exposure; admin roles score higher (medical records 9/10)"
     },
     {
+      "date": "2026-03-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "mit-futuretech-rising-tides-ai-automation-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "MIT FutureTech: 65.9% AI task success in healthcare (N=1,395)"
+    },
+    {
       "date": "2026-03-09",
       "direction": "down",
       "sourceIds": [
@@ -478,7 +487,7 @@
       "id": "gommers-masai-lancet-2026",
       "title": "Interval Cancer, Sensitivity, and Specificity Comparing AI-Supported Mammography Screening with Standard Double Reading without AI in the MASAI Study",
       "url": "https://doi.org/10.1016/S0140-6736(25)02464-X",
-      "publisher": "The Lancet (Gommers, Hernstr\u00f6m, Josefsson et al.)",
+      "publisher": "The Lancet (Gommers, Hernström, Josefsson et al.)",
       "evidenceTier": 1,
       "datePublished": "2026-01-15",
       "excerpt": "In the AI group, screen readings fell from 109,692 to 61,248—a 44 percent workload reduction—while screen-detected cancers rose from 262 to 338, a 29 percent increase in detection.",
@@ -572,6 +581,16 @@
       "evidenceTier": 2,
       "datePublished": "2026-03-25",
       "excerpt": "Health Care and Social Assistance... 3.6%"
+    },
+    {
+      "id": "mit-futuretech-rising-tides-ai-automation-2026",
+      "title": "Crashing Waves vs. Rising Tides: Preliminary Findings on AI Automation from Thousands of Worker Evaluations of Labor Market Tasks",
+      "url": "https://arxiv.org/abs/2604.01363",
+      "publisher": "MIT FutureTech (Mertens, Thompson et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-01",
+      "excerpt": "Healthcare Practitioners and Technical job family: 65.9% AI task success rate across 1,395 evaluations. Slope coefficient beta=-0.20 (not statistically significant), suggesting relatively uniform AI performance across task durations.",
+      "dateAdded": "2026-04-03"
     }
   ]
 }

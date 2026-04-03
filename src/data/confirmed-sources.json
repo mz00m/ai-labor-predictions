@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-04-03",
-  "totalSources": 477,
-  "verifiedCount": 477,
+  "totalSources": 478,
+  "verifiedCount": 478,
   "sources": {
     "cvl-economics-entertainment-ai-2024": {
       "id": "cvl-economics-entertainment-ai-2024",
@@ -6677,6 +6677,25 @@
       "usedIn": [
         "high-skill-wage-premium",
         "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "mit-futuretech-rising-tides-ai-automation-2026": {
+      "id": "mit-futuretech-rising-tides-ai-automation-2026",
+      "title": "Crashing Waves vs. Rising Tides: Preliminary Findings on AI Automation from Thousands of Worker Evaluations of Labor Market Tasks",
+      "url": "https://arxiv.org/abs/2604.01363",
+      "publisher": "MIT FutureTech (Mertens, Thompson et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-01",
+      "excerpt": "AI models successfully complete tasks that take humans approximately 3-4 hours with about a 50% success rate, increasing to about 65% by 2025-Q3. Most text-based tasks projected to reach 80-95% AI success by 2029. Based on 17,205 expert evaluations across 3,000+ O*NET tasks and 40+ LLMs.",
+      "usedIn": [
+        "workforce-ai-exposure",
+        "tech-sector-displacement",
+        "creative-industry-displacement",
+        "education-sector-displacement",
+        "healthcare-admin-displacement",
+        "white-collar-professional-displacement"
       ],
       "verified": true,
       "synthetic": false

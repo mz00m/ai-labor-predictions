@@ -317,6 +317,15 @@
       "label": "Dallas Fed: CS design wages up 16.7% vs 7.5% national; AI augments experienced workers"
     },
     {
+      "date": "2026-03-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "mit-futuretech-rising-tides-ai-automation-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "MIT FutureTech: 55.2% AI task success in arts/design/media (N=1,035)"
+    },
+    {
       "date": "2026-03-02",
       "direction": "up",
       "sourceIds": [
@@ -615,6 +624,16 @@
       "evidenceTier": 2,
       "datePublished": "2026-03-25",
       "excerpt": "The occupations most vulnerable to AI are Writers and Authors (57%), Computer Programmers (55%), and Web and Digital Interface Designers (55%) in terms of proportion of jobs affected"
+    },
+    {
+      "id": "mit-futuretech-rising-tides-ai-automation-2026",
+      "title": "Crashing Waves vs. Rising Tides: Preliminary Findings on AI Automation from Thousands of Worker Evaluations of Labor Market Tasks",
+      "url": "https://arxiv.org/abs/2604.01363",
+      "publisher": "MIT FutureTech (Mertens, Thompson et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-01",
+      "excerpt": "Arts, Design, Entertainment, Sports, and Media job family: 55.2% AI task success rate across 1,035 evaluations, with the steepest statistically significant negative slope among creative fields (beta=-0.41), indicating strong task-duration dependence.",
+      "dateAdded": "2026-04-03"
     }
   ]
 }
