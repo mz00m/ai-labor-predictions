@@ -168,7 +168,7 @@ export function formatToolsForPrompt(
     grouped.set(tool.category, list);
   }
 
-  for (const [category, categoryTools] of grouped) {
+  for (const [category, categoryTools] of Array.from(grouped.entries())) {
     const meta = TOOL_CATEGORY_META[category];
     lines.push(`### ${meta.label}`);
 

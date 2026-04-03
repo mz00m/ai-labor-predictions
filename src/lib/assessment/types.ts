@@ -150,6 +150,9 @@ export interface TaskAnalysis {
   expectedImpact: string;
   complexity: "simple" | "moderate" | "complex";
   onetAlignment?: string; // O*NET task code reference
+  estimatedTimeSaved?: string; // e.g. "3-5 hrs/week"
+  exampleTools?: { name: string; url?: string; free?: boolean }[];
+  gettingStarted?: string; // 1-2 sentence quick-start
 }
 
 export interface ToolRecommendation {
@@ -162,6 +165,9 @@ export interface ToolRecommendation {
   implementationEffort: "low" | "medium" | "high";
   priorityTier: "immediate" | "medium-term" | "long-term";
   estimatedMonthlyCost?: string;
+  specificProducts?: { name: string; url?: string; pricing?: string; free?: boolean }[];
+  gettingStarted?: string[]; // Step-by-step to start using
+  realWorldExample?: string; // "A nonprofit in Portland used X to..."
 }
 
 export interface RiskAssessment {
@@ -191,6 +197,8 @@ export interface RoadmapAction {
   description: string;
   owner: string;
   priority: "critical" | "high" | "medium" | "low";
+  howTo?: string;
+  resource?: { label: string; url: string };
 }
 
 export interface RoiProjection {
@@ -200,6 +208,7 @@ export interface RoiProjection {
   timeToValue: string;
   confidence: "high" | "moderate" | "low";
   basis: string;
+  calculationDetail?: string; // Show the math
 }
 
 export interface AiPolicyDocument {
