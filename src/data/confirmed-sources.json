@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-04-03",
-  "totalSources": 475,
-  "verifiedCount": 475,
+  "totalSources": 476,
+  "verifiedCount": 476,
   "sources": {
     "cvl-economics-entertainment-ai-2024": {
       "id": "cvl-economics-entertainment-ai-2024",
@@ -6644,6 +6644,24 @@
         "tech-sector-displacement",
         "overall-us-displacement",
         "ai-adoption-rate"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "nyt-casselman-ai-job-threat-2026": {
+      "id": "nyt-casselman-ai-job-threat-2026",
+      "title": "Economists Once Dismissed the A.I. Job Threat, but Not Anymore",
+      "url": "https://www.nytimes.com/2026/04/03/business/economists-once-dismissed-the-ai-job-threat-but-not-anymore.html",
+      "publisher": "The New York Times (Ben Casselman)",
+      "evidenceTier": 3,
+      "datePublished": "2026-04-03",
+      "excerpt": "Most still do not see much evidence that A.I. is disrupting the job market. But they are starting to take seriously the possibility that it could someday soon. If it does, they are worried that policymakers are not ready to respond.",
+      "usedIn": [
+        "overall-us-displacement",
+        "white-collar-professional-displacement",
+        "entry-level-wage-impact",
+        "ai-adoption-rate",
+        "workforce-ai-exposure"
       ],
       "verified": true,
       "synthetic": false

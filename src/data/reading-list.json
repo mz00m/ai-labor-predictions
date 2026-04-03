@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "Economists Once Dismissed the A.I. Job Threat, but Not Anymore",
+      "author": "Ben Casselman",
+      "publisher": "The New York Times",
+      "date": "2026-04-03",
+      "url": "https://www.nytimes.com/2026/04/03/business/economists-once-dismissed-the-ai-job-threat-but-not-anymore.html",
+      "takeaway": "Narrative shift: economists moving from dismissive to seriously concerned about AI labor impact. BCG estimates >50% of US jobs reshaped in 2-3 years. Kinder (Brookings) says entry-level research hires replaced by Claude. Gimbel (Yale Budget Lab): speed and breadth determine how painful the transition. Rock (UPenn): 'I don't think AI has hit the labor market yet, but I think it's coming.' Imas (UChicago): reasoning models were 'paradigm shift.' Korinek (UVA) leaving academia to join Anthropic. Cites FRI survey, Census BTOS adoption data, Brynjolfsson/Stanford entry-level findings.",
+      "weekFeatured": "2026-04-03",
+      "tier": 3
+    },
+    {
       "title": "Forecasting the Economic Effects of AI",
       "author": "Ezra Karger, Otto Kuusela, Jason Abaluck, Kevin Bryan, Basil Halperin, Phil Trammell, Philip Tetlock et al.",
       "publisher": "Forecasting Research Institute (w/ Fed Chicago, Yale, Stanford, UPenn)",

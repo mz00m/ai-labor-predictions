@@ -700,6 +700,15 @@
       ],
       "evidenceTier": 1,
       "label": "FRI: Rapid scenario → white-collar sector share stalls at 20-21% by 2050"
+    },
+    {
+      "date": "2026-04-03",
+      "direction": "down",
+      "sourceIds": [
+        "nyt-casselman-ai-job-threat-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "NYT: Amodei warns AI could eliminate 50% of entry-level white-collar jobs"
     }
   ],
   "sources": [
@@ -1368,6 +1377,16 @@
       "datePublished": "2026-03-31",
       "excerpt": "In a rapid AI scenario, economists forecast white-collar sector employment share stalling at 20-21% by 2050, down from recent growth trends.",
       "dateAdded": "2026-04-02"
+    },
+    {
+      "id": "nyt-casselman-ai-job-threat-2026",
+      "title": "Economists Once Dismissed the A.I. Job Threat, but Not Anymore",
+      "url": "https://www.nytimes.com/2026/04/03/business/economists-once-dismissed-the-ai-job-threat-but-not-anymore.html",
+      "publisher": "The New York Times (Ben Casselman)",
+      "evidenceTier": 3,
+      "datePublished": "2026-04-03",
+      "excerpt": "Dario Amodei, the head of Anthropic, has warned that A.I. could eliminate 50 percent of entry-level white-collar jobs within years.",
+      "dateAdded": "2026-04-03"
     }
   ]
 }
