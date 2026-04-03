@@ -25,7 +25,7 @@ interface TaskWithCategory {
  * any of the task categories in the occupation.
  */
 export function getRelevantTools(tasks: TaskWithCategory[]): Tool[] {
-  const categories = new Set(tasks.map((t) => t.category));
+  const categories = Array.from(new Set(tasks.map((t) => t.category)));
   const seen = new Set<string>();
   const relevant: Tool[] = [];
 
@@ -43,7 +43,7 @@ export function getRelevantTools(tasks: TaskWithCategory[]): Tool[] {
   for (const cat of Object.keys(toolKB.categories) as TaskCategory[]) {
     for (const tool of toolKB.categories[cat]) {
       if (seen.has(tool.name)) continue;
-      if (tool.alsoUsefulFor.some((c) => categories.has(c))) {
+      if (tool.alsoUsefulFor.some((c) => categories.includes(c))) {
         seen.add(tool.name);
         relevant.push(tool);
       }
