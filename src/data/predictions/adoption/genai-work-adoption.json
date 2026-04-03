@@ -285,6 +285,15 @@
       ],
       "evidenceTier": 1,
       "label": "FRI: Rapid scenario → 62% of work hours GenAI-assisted by 2050"
+    },
+    {
+      "date": "2025-12-01",
+      "direction": "down",
+      "sourceIds": [
+        "oecd-ai-sme-adoption-g7-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "OECD: 50% of SMEs say employees lack skills for genAI"
     }
   ],
   "sources": [
@@ -525,6 +534,16 @@
       "datePublished": "2026-03-31",
       "excerpt": "69 economists' median unconditional forecast: 10.1% of work hours GenAI-assisted by 2030. Rapid scenario (14% prob): 62% of work hours by 2050.",
       "dateAdded": "2026-04-02"
+    },
+    {
+      "id": "oecd-ai-sme-adoption-g7-2025",
+      "title": "AI Adoption by Small and Medium-Sized Enterprises",
+      "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/12/ai-adoption-by-small-and-medium-sized-enterprises_9c48eae6/426399c1-en.pdf",
+      "publisher": "OECD (Calvino, Bianchini, Lane, Montegu, Verger, Ancheva)",
+      "evidenceTier": 2,
+      "datePublished": "2025-12-01",
+      "excerpt": "50% of SMEs report that their employees lack the skills to use generative AI.",
+      "dateAdded": "2026-04-03"
     }
   ]
 }
