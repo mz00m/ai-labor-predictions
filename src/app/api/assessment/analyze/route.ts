@@ -4,6 +4,9 @@ import { generateAssessmentReport } from "@/lib/assessment/analyze";
 import { getOrCreateUser, createAssessment, saveAssessmentReport, updateAssessmentStatus } from "@/lib/assessment/db";
 import Stripe from "stripe";
 
+// Allow up to 120 seconds for Claude API call + processing
+export const maxDuration = 120;
+
 // In-memory rate limiting
 const rateLimiter = new Map<string, { count: number; resetAt: number }>();
 const RATE_LIMIT = 3; // 3 assessments per IP per hour
@@ -139,8 +142,9 @@ export async function POST(req: NextRequest) {
     });
   } catch (error) {
     console.error("Assessment analysis error:", error);
+    const message = error instanceof Error ? error.message : "Unknown error";
     return NextResponse.json(
-      { error: "Failed to process assessment. Please try again." },
+      { error: `Failed to process assessment: ${message}` },
       { status: 500 }
     );
   }
