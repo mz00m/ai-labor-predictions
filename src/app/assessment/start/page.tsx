@@ -116,9 +116,9 @@ export default function AssessmentStartPage() {
     }
   };
 
-  const handleSubmit = async (mode: "preview" | "full") => {
+  const handleSubmit = async () => {
     setSubmitting(true);
-    setSubmittingMode(mode);
+    setSubmittingMode("full");
     setError(null);
 
     try {
@@ -142,7 +142,7 @@ export default function AssessmentStartPage() {
         uploadedFiles: files.map((f) => f.meta),
       }));
       formPayload.append("email", form.email);
-      formPayload.append("mode", mode);
+      formPayload.append("mode", "full");
 
       for (const entry of files) {
         formPayload.append("files", entry.file);
@@ -159,16 +159,7 @@ export default function AssessmentStartPage() {
       }
 
       const data = await res.json();
-
-      if (mode === "preview") {
-        router.push(`/assessment/report?id=${data.assessmentId}&preview=true`);
-      } else {
-        if (data.checkoutUrl) {
-          window.location.href = data.checkoutUrl;
-        } else {
-          router.push(`/assessment/report?id=${data.assessmentId}`);
-        }
-      }
+      router.push(`/assessment/report?id=${data.assessmentId}`);
     } catch (err) {
       setError(err instanceof Error ? err.message : "An error occurred");
     } finally {
@@ -588,35 +579,26 @@ export default function AssessmentStartPage() {
               <div className="w-full bg-gray-100 rounded-full h-1.5 overflow-hidden">
                 <div
                   className="bg-[#5C61F6] h-1.5 rounded-full transition-all duration-1000 ease-out"
-                  style={{ width: `${Math.min(95, (elapsedSeconds / (submittingMode === "full" ? 70 : 40)) * 100)}%` }}
+                  style={{ width: `${Math.min(95, (elapsedSeconds / 70) * 100)}%` }}
                 />
               </div>
               <div className="flex items-center justify-between text-[12px] text-gray-400">
                 <span>{Math.floor(elapsedSeconds / 60)}:{(elapsedSeconds % 60).toString().padStart(2, "0")} elapsed</span>
-                <span>Typically {submittingMode === "full" ? "45-90" : "20-40"} seconds</span>
+                <span>Typically 45-90 seconds</span>
               </div>
             </div>
           ) : (
             <>
-              <div className="grid sm:grid-cols-2 gap-4">
-                <button
-                  onClick={() => handleSubmit("preview")}
-                  disabled={submitting}
-                  className="w-full border border-gray-200 text-gray-500 hover:text-gray-900 hover:border-gray-300 font-medium text-[14px] py-3 rounded-lg transition-colors disabled:opacity-50"
-                >
-                  Get Free Preview
-                </button>
-                <button
-                  onClick={() => handleSubmit("full")}
-                  disabled={submitting}
-                  className="w-full bg-[#5C61F6] hover:bg-[#4F52D4] text-white font-semibold text-[14px] py-3 rounded-lg transition-colors disabled:opacity-50"
-                >
-                  Get Full Plan for $100
-                </button>
-              </div>
+              <button
+                onClick={() => handleSubmit()}
+                disabled={submitting}
+                className="w-full bg-[#5C61F6] hover:bg-[#4F52D4] text-white font-semibold text-[14px] py-3 rounded-lg transition-colors disabled:opacity-50"
+              >
+                Generate Your Free AI Action Plan
+              </button>
 
               <p className="text-[12px] text-gray-400 text-center">
-                Secure payment via Stripe. Your files are processed in-memory only, nothing stored.
+                Your files are processed in-memory only, nothing stored.
               </p>
             </>
           )}
