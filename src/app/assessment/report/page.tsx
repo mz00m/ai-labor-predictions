@@ -5,9 +5,13 @@ import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import type { Assessment, AssessmentReport } from "@/lib/assessment/types";
 
+// Sections that start expanded by default
+const DEFAULT_EXPANDED = new Set(["summary", "readiness"]);
+
 export default function ReportPage() {
   const params = useSearchParams();
   const id = params.get("id");
+  const isShared = params.get("shared") === "true";
 
   const [assessment, setAssessment] = useState<Assessment | null>(null);
   const [loading, setLoading] = useState(true);
@@ -17,6 +21,28 @@ export default function ReportPage() {
   const [feedbackText, setFeedbackText] = useState("");
   const [feedbackSubmitted, setFeedbackSubmitted] = useState(false);
   const [feedbackSubmitting, setFeedbackSubmitting] = useState(false);
+  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(DEFAULT_EXPANDED));
+  const [copied, setCopied] = useState(false);
+
+  const toggleSection = (sectionId: string) => {
+    setExpandedSections((prev) => {
+      const next = new Set(prev);
+      if (next.has(sectionId)) {
+        next.delete(sectionId);
+      } else {
+        next.add(sectionId);
+      }
+      return next;
+    });
+  };
+
+  const expandAll = () => {
+    setExpandedSections(new Set(TOC_SECTIONS.map((s) => s.id)));
+  };
+
+  const collapseAll = () => {
+    setExpandedSections(new Set());
+  };
 
   useEffect(() => {
     if (!id) return;
@@ -74,6 +100,25 @@ export default function ReportPage() {
     }
   };
 
+  const handleShare = async () => {
+    const shareUrl = `${window.location.origin}/assessment/report?id=${id}&shared=true`;
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      // Fallback for older browsers
+      const input = document.createElement("input");
+      input.value = shareUrl;
+      document.body.appendChild(input);
+      input.select();
+      document.execCommand("copy");
+      document.body.removeChild(input);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    }
+  };
+
   if (loading) {
     return (
       <div className="max-w-3xl mx-auto px-6 sm:px-10 py-20 text-center">
@@ -126,7 +171,17 @@ export default function ReportPage() {
           Prepared {new Date(assessment.createdAt).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
           {" "}&middot; jobsdata.ai
         </p>
-        <div className="flex gap-3 mt-5">
+
+        {/* Evidence connection */}
+        <p className="text-[12px] text-gray-400 mt-1.5">
+          Analysis informed by{" "}
+          <Link href="/" className="text-[#5C61F6] hover:underline">
+            478 verified research sources
+          </Link>
+          {" "}tracked on jobsdata.ai
+        </p>
+
+        <div className="flex flex-wrap gap-3 mt-5">
           <button
             onClick={handleDownloadPdf}
             disabled={downloadingPdf}
@@ -137,16 +192,35 @@ export default function ReportPage() {
             </svg>
             {downloadingPdf ? "Generating..." : "Download PDF"}
           </button>
+          <button
+            onClick={handleShare}
+            className="flex items-center gap-2 border border-gray-200 hover:border-gray-300 text-gray-600 text-[13px] font-medium px-4 py-2 rounded-lg transition-colors"
+          >
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m9.86-2.06a4.5 4.5 0 00-1.242-7.244l-4.5-4.5a4.5 4.5 0 00-6.364 6.364L4.34 8.374" />
+            </svg>
+            {copied ? "Link copied!" : "Share Report"}
+          </button>
         </div>
       </header>
 
       {/* Table of Contents */}
       <nav className="bg-gray-50 border border-gray-200 rounded-lg p-5 mb-10">
-        <h2 className="text-[12px] font-bold uppercase tracking-wider text-gray-400 mb-3">Contents</h2>
+        <div className="flex items-center justify-between mb-3">
+          <h2 className="text-[12px] font-bold uppercase tracking-wider text-gray-400">Contents</h2>
+          <div className="flex gap-3">
+            <button onClick={expandAll} className="text-[11px] text-gray-400 hover:text-[#5C61F6] transition-colors">
+              Expand all
+            </button>
+            <button onClick={collapseAll} className="text-[11px] text-gray-400 hover:text-[#5C61F6] transition-colors">
+              Collapse all
+            </button>
+          </div>
+        </div>
         <ol className="space-y-1.5">
           {TOC_SECTIONS.map((s, i) => (
             <li key={s.id}>
-              <a href={`#${s.id}`} className="text-[13px] text-gray-600 hover:text-[#5C61F6] transition-colors flex gap-2">
+              <a href={`#${s.id}`} onClick={() => setExpandedSections((prev) => { const next = new Set(prev); next.add(s.id); return next; })} className="text-[13px] text-gray-600 hover:text-[#5C61F6] transition-colors flex gap-2">
                 <span className="text-gray-300 w-4 text-right">{i + 1}.</span>
                 {s.label}
               </a>
@@ -156,30 +230,30 @@ export default function ReportPage() {
       </nav>
 
       {/* 1. Executive Summary */}
-      <Section num={1} id="summary" title="Executive Summary">
-        <div className="text-[14px] text-gray-600 leading-[1.7] whitespace-pre-line">
+      <Section num={1} id="summary" title="Executive Summary" expanded={expandedSections.has("summary")} onToggle={() => toggleSection("summary")}>
+        <div className="text-[14px] text-gray-600 leading-[1.7] whitespace-pre-line" style={{ fontFamily: "'Source Serif 4', 'Source Serif Pro', Georgia, serif" }}>
           {report.executiveSummary}
         </div>
         {/* Industry context */}
         {report.organizationProfile.industryContext && (
           <div className="mt-5 bg-blue-50 border border-blue-100 rounded-lg p-4">
             <h4 className="text-[12px] font-bold uppercase tracking-wider text-blue-400 mb-2">Industry Context</h4>
-            <p className="text-[13px] text-blue-800 leading-relaxed">{report.organizationProfile.industryContext}</p>
+            <p className="text-[13px] text-blue-800 leading-relaxed" style={{ fontFamily: "'Source Serif 4', 'Source Serif Pro', Georgia, serif" }}>{report.organizationProfile.industryContext}</p>
           </div>
         )}
       </Section>
 
       {/* 2. AI Readiness */}
-      <Section num={2} id="readiness" title="AI Readiness Assessment">
+      <Section num={2} id="readiness" title="AI Readiness Assessment" expanded={expandedSections.has("readiness")} onToggle={() => toggleSection("readiness")}>
         {report.organizationProfile.aiReadinessScore > 0 && (
           <div className="mb-6">
             <div className="flex items-end gap-4 mb-3">
-              <div className="text-[48px] font-black text-[#5C61F6] leading-none">
+              <div className="text-[64px] font-black text-[#5C61F6] leading-none" style={{ fontFamily: "'DM Mono', monospace" }}>
                 {report.organizationProfile.aiReadinessScore}
               </div>
-              <div className="pb-1">
-                <div className="text-[14px] font-semibold text-gray-900">out of 10</div>
-                <div className="text-[12px] text-gray-400">{report.organizationProfile.summary}</div>
+              <div className="pb-2">
+                <div className="text-[16px] font-semibold text-gray-900">out of 10</div>
+                <div className="text-[13px] text-gray-400">{report.organizationProfile.summary}</div>
               </div>
             </div>
             <div className="w-full bg-gray-200 rounded-full h-3">
@@ -222,7 +296,7 @@ export default function ReportPage() {
 
       {/* 3. Task-by-Task Analysis */}
       {report.taskAnalysis.length > 0 && (
-        <Section num={3} id="tasks" title="Task-by-Task Analysis">
+        <Section num={3} id="tasks" title="Task-by-Task Analysis" expanded={expandedSections.has("tasks")} onToggle={() => toggleSection("tasks")}>
           <p className="text-[13px] text-gray-400 mb-4">
             {report.taskAnalysis.length} tasks analyzed. Sorted by AI opportunity level.
           </p>
@@ -250,12 +324,12 @@ export default function ReportPage() {
                   {task.currentProcess && (
                     <div>
                       <Label>How you do it today</Label>
-                      <p className="text-[13px] text-gray-500">{task.currentProcess}</p>
+                      <p className="text-[13px] text-gray-500" style={{ fontFamily: "'Source Serif 4', 'Source Serif Pro', Georgia, serif" }}>{task.currentProcess}</p>
                     </div>
                   )}
                   <div>
                     <Label>How AI can help</Label>
-                    <p className="text-[13px] text-gray-700 leading-relaxed">{task.aiApproach}</p>
+                    <p className="text-[13px] text-gray-700 leading-relaxed" style={{ fontFamily: "'Source Serif 4', 'Source Serif Pro', Georgia, serif" }}>{task.aiApproach}</p>
                   </div>
                   <div className="flex flex-wrap gap-x-6 gap-y-1 text-[12px] text-gray-400">
                     <span>Impact: <b className="text-gray-600">{task.expectedImpact}</b></span>
@@ -266,7 +340,7 @@ export default function ReportPage() {
                     {task.onetAlignment && <span>O*NET: {task.onetAlignment}</span>}
                   </div>
                   {task.deploymentModelRationale && (
-                    <p className="text-[12px] text-gray-400 italic">{task.deploymentModelRationale}</p>
+                    <p className="text-[12px] text-gray-400 italic" style={{ fontFamily: "'Source Serif 4', 'Source Serif Pro', Georgia, serif" }}>{task.deploymentModelRationale}</p>
                   )}
                   {/* Example tools */}
                   {task.exampleTools && task.exampleTools.length > 0 && (
@@ -297,7 +371,7 @@ export default function ReportPage() {
       {/* Full report sections */}
           {/* 4. Recommended Tools & Services */}
           {report.toolRecommendations.length > 0 && (
-            <Section num={4} id="tools" title="Recommended Tools & Services">
+            <Section num={4} id="tools" title="Recommended Tools & Services" expanded={expandedSections.has("tools")} onToggle={() => toggleSection("tools")}>
               <p className="text-[13px] text-gray-400 mb-4">
                 {report.toolRecommendations.length} tools evaluated for your workflow. Sorted by priority.
               </p>
@@ -325,7 +399,7 @@ export default function ReportPage() {
                     </div>
                     {/* Tool body */}
                     <div className="px-4 py-3 space-y-3">
-                      <p className="text-[13px] text-gray-700">{tool.purpose}</p>
+                      <p className="text-[13px] text-gray-700" style={{ fontFamily: "'Source Serif 4', 'Source Serif Pro', Georgia, serif" }}>{tool.purpose}</p>
                       <div className="bg-green-50 border border-green-100 rounded px-3 py-2">
                         <p className="text-[12px] text-green-700"><b>Expected value:</b> {tool.expectedValue}</p>
                       </div>
@@ -357,7 +431,7 @@ export default function ReportPage() {
                       {/* Real world example */}
                       {tool.realWorldExample && (
                         <div className="bg-blue-50 border border-blue-100 rounded px-3 py-2">
-                          <p className="text-[12px] text-blue-700"><b>Real-world example:</b> {tool.realWorldExample}</p>
+                          <p className="text-[12px] text-blue-700" style={{ fontFamily: "'Source Serif 4', 'Source Serif Pro', Georgia, serif" }}><b>Real-world example:</b> {tool.realWorldExample}</p>
                         </div>
                       )}
                       {/* Getting started steps */}
@@ -400,9 +474,9 @@ export default function ReportPage() {
           )}
 
           {/* 5. Implementation Roadmap */}
-          <Section num={5} id="roadmap" title="Implementation Roadmap">
+          <Section num={5} id="roadmap" title="Implementation Roadmap" expanded={expandedSections.has("roadmap")} onToggle={() => toggleSection("roadmap")}>
             <div className="space-y-8">
-              {(["immediate", "mediumTerm", "longTerm"] as const).map((phase, phaseIdx) => {
+              {(["immediate", "mediumTerm", "longTerm"] as const).map((phase) => {
                 const data = report.implementationRoadmap[phase];
                 const config = {
                   immediate: { label: "Phase 1: Quick Wins", time: "0-3 months", color: "border-green-400", bg: "bg-green-50", text: "text-green-700" },
@@ -441,7 +515,7 @@ export default function ReportPage() {
                               <span className="text-[13px] font-semibold text-gray-900">{action.title}</span>
                               <span className="text-[10px] uppercase font-bold text-gray-300 ml-auto">{action.priority}</span>
                             </div>
-                            <p className="text-[12px] text-gray-500 ml-4 leading-relaxed">{action.description}</p>
+                            <p className="text-[12px] text-gray-500 ml-4 leading-relaxed" style={{ fontFamily: "'Source Serif 4', 'Source Serif Pro', Georgia, serif" }}>{action.description}</p>
                             {action.howTo && (
                               <p className="text-[12px] text-[#5C61F6] ml-4 mt-1">{action.howTo}</p>
                             )}
@@ -473,7 +547,7 @@ export default function ReportPage() {
           </Section>
 
           {/* 6. Risk Assessment */}
-          <Section num={6} id="risks" title="Risks, Pitfalls & Change Management">
+          <Section num={6} id="risks" title="Risks, Pitfalls & Change Management" expanded={expandedSections.has("risks")} onToggle={() => toggleSection("risks")}>
             <div className="space-y-4">
               {/* Overall risk level */}
               <div className="flex items-center gap-3 mb-2">
@@ -490,7 +564,7 @@ export default function ReportPage() {
               {report.riskAssessment.displacementRisk && (
                 <div className="border border-gray-200 rounded-lg p-4">
                   <Label>Role Evolution</Label>
-                  <p className="text-[13px] text-gray-600 leading-relaxed">{report.riskAssessment.displacementRisk}</p>
+                  <p className="text-[13px] text-gray-600 leading-relaxed" style={{ fontFamily: "'Source Serif 4', 'Source Serif Pro', Georgia, serif" }}>{report.riskAssessment.displacementRisk}</p>
                 </div>
               )}
 
@@ -510,18 +584,18 @@ export default function ReportPage() {
               {report.riskAssessment.dataPrivacyConsiderations && (
                 <div className="bg-amber-50 border border-amber-100 rounded-lg p-4">
                   <Label>Data Privacy Considerations</Label>
-                  <p className="text-[13px] text-amber-800 leading-relaxed">{report.riskAssessment.dataPrivacyConsiderations}</p>
+                  <p className="text-[13px] text-amber-800 leading-relaxed" style={{ fontFamily: "'Source Serif 4', 'Source Serif Pro', Georgia, serif" }}>{report.riskAssessment.dataPrivacyConsiderations}</p>
                 </div>
               )}
 
               {report.riskAssessment.changeManagementNotes && (
                 <div className="border border-gray-200 rounded-lg p-4">
                   <Label>Making the Transition Smooth</Label>
-                  <p className="text-[13px] text-gray-600 leading-relaxed">{report.riskAssessment.changeManagementNotes}</p>
+                  <p className="text-[13px] text-gray-600 leading-relaxed" style={{ fontFamily: "'Source Serif 4', 'Source Serif Pro', Georgia, serif" }}>{report.riskAssessment.changeManagementNotes}</p>
                 </div>
               )}
 
-              {/* Common Pitfalls — Stanford Playbook finding: 77% of hardest challenges are invisible */}
+              {/* Common Pitfalls */}
               {report.riskAssessment.commonPitfalls && report.riskAssessment.commonPitfalls.length > 0 && (
                 <div className="bg-red-50 border border-red-100 rounded-lg p-4">
                   <Label>Common Pitfalls to Avoid</Label>
@@ -556,7 +630,7 @@ export default function ReportPage() {
               {report.riskAssessment.dataReadinessNote && (
                 <div className="bg-blue-50 border border-blue-100 rounded-lg p-4">
                   <Label>Your Data Readiness</Label>
-                  <p className="text-[13px] text-blue-800 leading-relaxed">{report.riskAssessment.dataReadinessNote}</p>
+                  <p className="text-[13px] text-blue-800 leading-relaxed" style={{ fontFamily: "'Source Serif 4', 'Source Serif Pro', Georgia, serif" }}>{report.riskAssessment.dataReadinessNote}</p>
                 </div>
               )}
             </div>
@@ -564,7 +638,7 @@ export default function ReportPage() {
 
           {/* 7. ROI Projections */}
           {report.roiProjections.length > 0 && (
-            <Section num={7} id="roi" title="ROI Projections">
+            <Section num={7} id="roi" title="ROI Projections" expanded={expandedSections.has("roi")} onToggle={() => toggleSection("roi")}>
               <div className="space-y-4">
                 {report.roiProjections.map((roi, i) => (
                   <div key={i} className="border border-gray-200 rounded-lg overflow-hidden">
@@ -572,19 +646,19 @@ export default function ReportPage() {
                       <h4 className="text-[14px] font-semibold text-gray-900">{roi.area}</h4>
                     </div>
                     <div className="p-4">
-                      {/* Key metrics */}
+                      {/* Key metrics — hero numbers */}
                       <div className="grid grid-cols-3 gap-4 mb-3">
                         <div className="text-center">
                           <div className="text-[11px] text-gray-400 mb-1">Current Cost</div>
-                          <div className="text-[13px] font-semibold text-gray-900">{roi.currentCost}</div>
+                          <div className="text-[18px] font-bold text-gray-900" style={{ fontFamily: "'DM Mono', monospace" }}>{roi.currentCost}</div>
                         </div>
                         <div className="text-center">
                           <div className="text-[11px] text-gray-400 mb-1">Projected Savings</div>
-                          <div className="text-[13px] font-semibold text-green-700">{roi.projectedSavings}</div>
+                          <div className="text-[18px] font-bold text-green-700" style={{ fontFamily: "'DM Mono', monospace" }}>{roi.projectedSavings}</div>
                         </div>
                         <div className="text-center">
                           <div className="text-[11px] text-gray-400 mb-1">Time to Value</div>
-                          <div className="text-[13px] font-semibold text-gray-900">{roi.timeToValue}</div>
+                          <div className="text-[18px] font-bold text-gray-900" style={{ fontFamily: "'DM Mono', monospace" }}>{roi.timeToValue}</div>
                         </div>
                       </div>
                       {/* Confidence */}
@@ -597,7 +671,7 @@ export default function ReportPage() {
                       </div>
                       {/* Basis */}
                       {roi.basis && (
-                        <p className="text-[12px] text-gray-500 leading-relaxed">{roi.basis}</p>
+                        <p className="text-[12px] text-gray-500 leading-relaxed" style={{ fontFamily: "'Source Serif 4', 'Source Serif Pro', Georgia, serif" }}>{roi.basis}</p>
                       )}
                       {/* Calculation detail */}
                       {roi.calculationDetail && (
@@ -614,75 +688,93 @@ export default function ReportPage() {
 
           {/* 8. Next Steps */}
           {report.furtherEvaluation.length > 0 && (
-            <Section num={8} id="next" title="Next Steps">
+            <Section num={8} id="next" title="Next Steps" expanded={expandedSections.has("next")} onToggle={() => toggleSection("next")}>
               <div className="space-y-2">
                 {report.furtherEvaluation.map((item, i) => (
                   <div key={i} className="flex gap-3 bg-gray-50 border border-gray-100 rounded-lg px-4 py-3">
                     <span className="text-[14px] font-bold text-[#5C61F6] flex-shrink-0 w-6 text-right">{i + 1}.</span>
-                    <p className="text-[13px] text-gray-700 leading-relaxed">{item}</p>
+                    <p className="text-[13px] text-gray-700 leading-relaxed" style={{ fontFamily: "'Source Serif 4', 'Source Serif Pro', Georgia, serif" }}>{item}</p>
                   </div>
                 ))}
               </div>
             </Section>
           )}
 
-      {/* Feedback */}
-      <section className="mt-12 pt-8 border-t border-gray-200">
-        <h2 className="text-[18px] font-bold text-gray-900 mb-2">How was your plan?</h2>
-        <p className="text-[13px] text-gray-400 mb-5">Your feedback helps us improve these reports.</p>
+      {/* Feedback — hide on shared view */}
+      {!isShared && (
+        <section className="mt-12 pt-8 border-t border-gray-200">
+          <h2 className="text-[18px] font-bold text-gray-900 mb-2">How was your plan?</h2>
+          <p className="text-[13px] text-gray-400 mb-5">Your feedback helps us improve these reports.</p>
 
-        {feedbackSubmitted ? (
-          <div className="bg-green-50 border border-green-200 rounded-lg p-4 text-[14px] text-green-700">
-            Thank you for your feedback.
-          </div>
-        ) : (
-          <div className="space-y-4">
-            {/* Star rating */}
-            <div className="flex gap-2">
-              {[1, 2, 3, 4, 5].map((star) => (
-                <button
-                  key={star}
-                  onClick={() => setFeedbackRating(star)}
-                  className={`w-10 h-10 rounded-lg border-2 text-[16px] font-bold transition-colors ${
-                    feedbackRating !== null && star <= feedbackRating
-                      ? "border-[#5C61F6] bg-[#5C61F6]/10 text-[#5C61F6]"
-                      : "border-gray-200 text-gray-300 hover:border-gray-300"
-                  }`}
-                >
-                  {star}
-                </button>
-              ))}
-              <span className="text-[12px] text-gray-400 self-center ml-2">
-                {feedbackRating === 1 && "Not helpful"}
-                {feedbackRating === 2 && "Needs work"}
-                {feedbackRating === 3 && "Decent"}
-                {feedbackRating === 4 && "Helpful"}
-                {feedbackRating === 5 && "Very helpful"}
-              </span>
+          {feedbackSubmitted ? (
+            <div className="bg-green-50 border border-green-200 rounded-lg p-4 text-[14px] text-green-700">
+              Thank you for your feedback.
             </div>
+          ) : (
+            <div className="space-y-4">
+              {/* Star rating — accent colored */}
+              <div className="flex gap-2">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <button
+                    key={star}
+                    onClick={() => setFeedbackRating(star)}
+                    className="w-10 h-10 rounded-lg border-2 transition-all duration-150"
+                    style={{
+                      borderColor: feedbackRating !== null && star <= feedbackRating ? "#5C61F6" : undefined,
+                      backgroundColor: feedbackRating !== null && star <= feedbackRating ? "rgba(92, 97, 246, 0.1)" : undefined,
+                      color: feedbackRating !== null && star <= feedbackRating ? "#5C61F6" : undefined,
+                    }}
+                  >
+                    <svg
+                      className="w-5 h-5 mx-auto"
+                      fill={feedbackRating !== null && star <= feedbackRating ? "#5C61F6" : "none"}
+                      viewBox="0 0 24 24"
+                      stroke={feedbackRating !== null && star <= feedbackRating ? "#5C61F6" : "#D1D5DB"}
+                      strokeWidth={1.5}
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.562.562 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.562.562 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                    </svg>
+                  </button>
+                ))}
+                <span className="text-[12px] text-gray-400 self-center ml-2">
+                  {feedbackRating === 1 && "Not helpful"}
+                  {feedbackRating === 2 && "Needs work"}
+                  {feedbackRating === 3 && "Decent"}
+                  {feedbackRating === 4 && "Helpful"}
+                  {feedbackRating === 5 && "Very helpful"}
+                </span>
+              </div>
 
-            {/* Text feedback */}
-            <textarea
-              value={feedbackText}
-              onChange={(e) => setFeedbackText(e.target.value)}
-              placeholder="What could be better? What was most useful?"
-              rows={3}
-              className="w-full border border-gray-200 rounded-lg px-4 py-3 text-[13px] text-gray-700 placeholder-gray-300 focus:outline-none focus:border-[#5C61F6] focus:ring-1 focus:ring-[#5C61F6]/20 resize-none"
-            />
+              {/* Text feedback */}
+              <textarea
+                value={feedbackText}
+                onChange={(e) => setFeedbackText(e.target.value)}
+                placeholder="What could be better? What was most useful?"
+                rows={3}
+                className="w-full border border-gray-200 rounded-lg px-4 py-3 text-[13px] text-gray-700 placeholder-gray-300 focus:outline-none focus:border-[#5C61F6] focus:ring-1 focus:ring-[#5C61F6]/20 resize-none"
+              />
 
-            <button
-              onClick={handleFeedbackSubmit}
-              disabled={feedbackRating === null || feedbackSubmitting}
-              className="bg-gray-900 hover:bg-gray-800 text-white text-[13px] font-medium px-5 py-2 rounded-lg transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
-            >
-              {feedbackSubmitting ? "Sending..." : "Submit Feedback"}
-            </button>
-          </div>
-        )}
-      </section>
+              <button
+                onClick={handleFeedbackSubmit}
+                disabled={feedbackRating === null || feedbackSubmitting}
+                className="bg-gray-900 hover:bg-gray-800 text-white text-[13px] font-medium px-5 py-2 rounded-lg transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+              >
+                {feedbackSubmitting ? "Sending..." : "Submit Feedback"}
+              </button>
+            </div>
+          )}
+        </section>
+      )}
+
+      {/* Disclaimer */}
+      <div className="mt-12 bg-gray-50 border border-gray-200 rounded-lg px-5 py-4">
+        <p className="text-[11px] leading-[1.7] text-gray-400">
+          <span className="font-semibold text-gray-500">Disclaimer:</span> This report is generated using AI and is intended for informational purposes only. It does not constitute professional, legal, financial, or technical advice. The tools, strategies, and recommendations described here are suggestions based on the information you provided and publicly available research. Before implementing any changes to your workflows, adopting new tools, or making organizational decisions based on this report, we strongly encourage you to consult with your internal leadership, IT, legal, compliance, and procurement teams to ensure alignment with your organization&apos;s policies, security requirements, and regulatory obligations. You assume full responsibility for evaluating and acting on any information contained in this report. jobsdata.ai and its affiliates disclaim all liability for any outcomes resulting from the use of this material.
+        </p>
+      </div>
 
       {/* Footer */}
-      <footer className="mt-12 pt-6 border-t border-gray-200 flex justify-between text-[13px]">
+      <footer className="mt-6 pt-6 border-t border-gray-200 flex justify-between text-[13px]">
         <Link href="/assessment/dashboard" className="text-gray-400 hover:text-gray-900 transition-colors">
           My Plans
         </Link>
@@ -696,14 +788,30 @@ export default function ReportPage() {
 
 /* ---- Helper Components ---- */
 
-function Section({ num, id, title, children }: { num: number; id: string; title: string; children: React.ReactNode }) {
+function Section({ num, id, title, expanded, onToggle, children }: { num: number; id: string; title: string; expanded: boolean; onToggle: () => void; children: React.ReactNode }) {
   return (
     <section id={id} className="mb-10 scroll-mt-20">
-      <div className="flex items-baseline gap-3 mb-4 pb-2 border-b border-gray-100">
+      <button
+        onClick={onToggle}
+        className="w-full flex items-center gap-3 mb-4 pb-2 border-b border-gray-100 group cursor-pointer text-left"
+      >
         <span className="text-[13px] font-mono text-[#5C61F6]">{num}.</span>
-        <h2 className="text-[18px] font-bold text-gray-900">{title}</h2>
+        <h2 className="text-[18px] font-bold text-gray-900 flex-1">{title}</h2>
+        <svg
+          className={`w-5 h-5 text-gray-400 group-hover:text-gray-600 transition-transform duration-200 ${expanded ? "rotate-180" : ""}`}
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={2}
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <div
+        className={`transition-all duration-300 ease-in-out overflow-hidden ${expanded ? "max-h-[10000px] opacity-100" : "max-h-0 opacity-0"}`}
+      >
+        {children}
       </div>
-      {children}
     </section>
   );
 }

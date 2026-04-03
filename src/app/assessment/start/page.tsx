@@ -16,11 +16,21 @@ import { INDUSTRY_TEMPLATES } from "@/lib/assessment/taxonomy";
 type Step = "you" | "scope" | "tasks" | "upload" | "review";
 
 const STEPS: { key: Step; label: string }[] = [
-  { key: "you", label: "About You" },
+  { key: "you", label: "Your Organization" },
   { key: "scope", label: "Your Role" },
-  { key: "tasks", label: "Your Work" },
-  { key: "upload", label: "Context" },
-  { key: "review", label: "Review" },
+  { key: "tasks", label: "Tasks AI Could Touch" },
+  { key: "upload", label: "Add Context" },
+  { key: "review", label: "Confirm & Generate" },
+];
+
+const LOADING_MESSAGES = [
+  { maxSeconds: 8, text: "Reading your uploaded documents and website..." },
+  { maxSeconds: 18, text: "Mapping your tasks against our AI capability database..." },
+  { maxSeconds: 30, text: "Analyzing automation potential for each task..." },
+  { maxSeconds: 42, text: "Matching tools and services to your workflow..." },
+  { maxSeconds: 55, text: "Building your implementation roadmap..." },
+  { maxSeconds: 70, text: "Generating ROI projections and risk assessment..." },
+  { maxSeconds: Infinity, text: "Finalizing your personalized action plan..." },
 ];
 
 interface FormData {
@@ -67,7 +77,6 @@ export default function AssessmentStartPage() {
   const [form, setForm] = useState<FormData>(initialFormData);
   const [files, setFiles] = useState<FileEntry[]>([]);
   const [submitting, setSubmitting] = useState(false);
-  const [submittingMode, setSubmittingMode] = useState<"preview" | "full" | null>(null);
   const [elapsedSeconds, setElapsedSeconds] = useState(0);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -78,7 +87,6 @@ export default function AssessmentStartPage() {
       timerRef.current = setInterval(() => setElapsedSeconds((s) => s + 1), 1000);
     } else {
       if (timerRef.current) clearInterval(timerRef.current);
-      setSubmittingMode(null);
     }
     return () => { if (timerRef.current) clearInterval(timerRef.current); };
   }, [submitting]);
@@ -118,7 +126,6 @@ export default function AssessmentStartPage() {
 
   const handleSubmit = async () => {
     setSubmitting(true);
-    setSubmittingMode("full");
     setError(null);
 
     try {
@@ -168,9 +175,26 @@ export default function AssessmentStartPage() {
   };
 
   const industryTemplate = form.industry ? INDUSTRY_TEMPLATES[form.industry] : null;
+  const loadingMessage = LOADING_MESSAGES.find((m) => elapsedSeconds < m.maxSeconds)?.text || LOADING_MESSAGES[LOADING_MESSAGES.length - 1].text;
 
   return (
     <div className="max-w-3xl mx-auto px-6 sm:px-10 py-12">
+      {/* Privacy badge */}
+      <div className="flex items-center gap-2 mb-8">
+        <span className="inline-flex items-center gap-1.5 text-[11px] font-medium text-gray-400 bg-gray-50 border border-gray-200 rounded-full px-3 py-1">
+          <svg className="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+            <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
+          </svg>
+          Your data processed in-memory only. Nothing stored.
+        </span>
+      </div>
+
+      {/* Hero headline */}
+      <h1 className="text-[32px] sm:text-[40px] font-bold text-gray-900 leading-tight mb-10 tracking-tight">
+        AI is already changing your industry.{" "}
+        <span className="text-gray-400">Find out where it can help you.</span>
+      </h1>
+
       {/* Progress */}
       <div className="mb-10">
         <div className="flex items-center gap-1 mb-4">
@@ -526,7 +550,7 @@ export default function AssessmentStartPage() {
           <div>
             <h2 className="text-[24px] font-bold text-gray-900 mb-2">Ready to go</h2>
             <p className="text-[14px] text-gray-500">
-              Here&apos;s what we know. Get a free preview first, or jump straight to your full plan.
+              Here&apos;s what we know. Ready to generate your plan?
             </p>
           </div>
 
@@ -563,16 +587,10 @@ export default function AssessmentStartPage() {
                 </svg>
                 <div>
                   <p className="text-[14px] font-medium text-gray-900">
-                    Building your {submittingMode === "full" ? "full AI action plan" : "preview"}...
+                    Building your AI action plan...
                   </p>
-                  <p className="text-[12px] text-gray-400 mt-0.5">
-                    {elapsedSeconds < 10
-                      ? "Analyzing your organization and matching AI opportunities"
-                      : elapsedSeconds < 25
-                        ? "Evaluating tasks and matching tools from our knowledge base"
-                        : elapsedSeconds < 45
-                          ? "Generating personalized recommendations and roadmap"
-                          : "Almost done, finalizing your report"}
+                  <p className="text-[12px] text-gray-400 mt-0.5 transition-opacity duration-500">
+                    {loadingMessage}
                   </p>
                 </div>
               </div>
