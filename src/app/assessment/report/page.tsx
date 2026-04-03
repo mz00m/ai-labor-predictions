@@ -107,7 +107,7 @@ export default function ReportPage() {
     ...(showPaywall ? [] : [
       { id: "tools", label: "Recommended Tools & Services" },
       { id: "roadmap", label: "Implementation Roadmap" },
-      { id: "risks", label: "Risk Assessment & Considerations" },
+      { id: "risks", label: "Risks, Pitfalls & Change Management" },
       { id: "roi", label: "ROI Projections" },
       { id: "next", label: "Next Steps" },
     ]),
@@ -273,8 +273,14 @@ export default function ReportPage() {
                   <div className="flex flex-wrap gap-x-6 gap-y-1 text-[12px] text-gray-400">
                     <span>Impact: <b className="text-gray-600">{task.expectedImpact}</b></span>
                     <span>Complexity: <b className="text-gray-600">{task.complexity}</b></span>
+                    {task.deploymentModel && (
+                      <span>Model: <DeploymentModelBadge model={task.deploymentModel} /></span>
+                    )}
                     {task.onetAlignment && <span>O*NET: {task.onetAlignment}</span>}
                   </div>
+                  {task.deploymentModelRationale && (
+                    <p className="text-[12px] text-gray-400 italic">{task.deploymentModelRationale}</p>
+                  )}
                   {/* Example tools */}
                   {task.exampleTools && task.exampleTools.length > 0 && (
                     <div className="flex flex-wrap gap-2 pt-1">
@@ -407,6 +413,20 @@ export default function ReportPage() {
                           </ol>
                         </div>
                       )}
+                      {/* Success KPIs */}
+                      {tool.successKpis && tool.successKpis.length > 0 && (
+                        <div>
+                          <Label>How to measure success</Label>
+                          <div className="flex flex-wrap gap-2 mt-1">
+                            {tool.successKpis.map((kpi, j) => (
+                              <span key={j} className="inline-flex items-center gap-1 text-[12px] bg-purple-50 text-purple-700 border border-purple-100 rounded px-2 py-0.5">
+                                <svg className="w-3 h-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+                                {kpi}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      )}
                       {/* Meta row */}
                       <div className="flex flex-wrap gap-x-6 gap-y-1 text-[12px] text-gray-400 pt-1 border-t border-gray-100">
                         <span>Effort: <b className="text-gray-600">{tool.implementationEffort}</b></span>
@@ -492,7 +512,7 @@ export default function ReportPage() {
           </Section>
 
           {/* 6. Risk Assessment */}
-          <Section num={6} id="risks" title="Risk Assessment & Considerations">
+          <Section num={6} id="risks" title="Risks, Pitfalls & Change Management">
             <div className="space-y-4">
               {/* Overall risk level */}
               <div className="flex items-center gap-3 mb-2">
@@ -537,6 +557,45 @@ export default function ReportPage() {
                 <div className="border border-gray-200 rounded-lg p-4">
                   <Label>Making the Transition Smooth</Label>
                   <p className="text-[13px] text-gray-600 leading-relaxed">{report.riskAssessment.changeManagementNotes}</p>
+                </div>
+              )}
+
+              {/* Common Pitfalls — Stanford Playbook finding: 77% of hardest challenges are invisible */}
+              {report.riskAssessment.commonPitfalls && report.riskAssessment.commonPitfalls.length > 0 && (
+                <div className="bg-red-50 border border-red-100 rounded-lg p-4">
+                  <Label>Common Pitfalls to Avoid</Label>
+                  <p className="text-[11px] text-gray-400 mb-2">Based on research into why AI projects fail (Stanford Digital Economy Lab, 2026)</p>
+                  <ul className="space-y-2">
+                    {report.riskAssessment.commonPitfalls.map((pitfall, i) => (
+                      <li key={i} className="text-[13px] text-red-800 flex gap-2">
+                        <span className="text-red-400 mt-0.5 flex-shrink-0">!</span>
+                        {pitfall}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {/* Resistance Sources */}
+              {report.riskAssessment.resistanceSources && report.riskAssessment.resistanceSources.length > 0 && (
+                <div className="border border-gray-200 rounded-lg p-4">
+                  <Label>Where to Expect Pushback</Label>
+                  <ul className="space-y-1.5">
+                    {report.riskAssessment.resistanceSources.map((source, i) => (
+                      <li key={i} className="text-[13px] text-gray-600 flex gap-2">
+                        <span className="text-amber-400 mt-0.5 flex-shrink-0">&rarr;</span>
+                        {source}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {/* Data Readiness */}
+              {report.riskAssessment.dataReadinessNote && (
+                <div className="bg-blue-50 border border-blue-100 rounded-lg p-4">
+                  <Label>Your Data Readiness</Label>
+                  <p className="text-[13px] text-blue-800 leading-relaxed">{report.riskAssessment.dataReadinessNote}</p>
                 </div>
               )}
             </div>
@@ -696,6 +755,22 @@ function PriorityBadge({ tier }: { tier: string }) {
   return (
     <span className={`text-[10px] font-bold uppercase px-2 py-0.5 rounded border whitespace-nowrap ${colors[tier as keyof typeof colors] || colors["long-term"]}`}>
       {tier}
+    </span>
+  );
+}
+
+function DeploymentModelBadge({ model }: { model: string }) {
+  const config: Record<string, { label: string; color: string }> = {
+    copilot: { label: "Copilot", color: "bg-blue-50 text-blue-700" },
+    escalation: { label: "Escalation", color: "bg-green-50 text-green-700" },
+    "full-automation": { label: "Full Auto", color: "bg-purple-50 text-purple-700" },
+    agentic: { label: "Agentic", color: "bg-orange-50 text-orange-700" },
+  };
+  const c = config[model] || { label: model, color: "bg-gray-50 text-gray-600" };
+
+  return (
+    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${c.color}`}>
+      {c.label}
     </span>
   );
 }
