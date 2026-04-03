@@ -43,7 +43,7 @@ export async function generateAssessmentReport(
   // Step 4: Run Claude analysis
   const response = await anthropic.messages.create({
     model: "claude-sonnet-4-20250514",
-    max_tokens: mode === "preview" ? 2000 : 8000,
+    max_tokens: mode === "preview" ? 3000 : 16000,
     system: systemPrompt,
     messages: [{ role: "user", content: userPrompt }],
   });
@@ -143,85 +143,117 @@ function buildSystemPrompt(mode: "preview" | "full"): string {
 - Time savings and productivity gains from AI adoption based on research
 - What works for people who are busy and not deeply technical
 
-Your tone is warm, direct, and encouraging — like a knowledgeable colleague who genuinely wants to help someone work smarter. No corporate jargon, no hype. Focus on practical, specific things they can do.
+Your tone is warm, direct, and encouraging, like a knowledgeable colleague who genuinely wants to help someone work smarter. No corporate jargon, no hype. Focus on practical, specific things they can do.
 
-Frame everything around EMPOWERMENT: AI helps them get time back for the work that matters most — the creative, strategic, human parts of their job. AI handles the repetitive, tedious, time-consuming tasks so they can focus on what they're best at.
+Frame everything around EMPOWERMENT: AI helps them get time back for the work that matters most, the creative, strategic, human parts of their job. AI handles the repetitive, tedious, time-consuming tasks so they can focus on what they're best at.
+
+CRITICAL INSTRUCTION: Be SPECIFIC with real-world product and service recommendations. Name actual tools (ChatGPT, Claude, Notion AI, Zapier, Grammarly, Otter.ai, Canva, etc.) with their real URLs. Include real pricing. Give real-world examples of how similar businesses or roles use these tools. This is a paid report; generic advice like "use an AI writing assistant" is not acceptable. The user is paying for specific, actionable guidance they can act on today.
 
 IMPORTANT: The data has been pre-processed to remove PII. Do not attempt to reference specific individuals by name.`;
 
   if (mode === "preview") {
-    return base + `\n\nGenerate a PREVIEW plan: a brief summary of their biggest AI opportunities, an AI readiness score, and 2-3 high-level recommendations. Make it useful enough to show value but clearly incomplete — they should see that the full plan goes much deeper. Return JSON format.`;
+    return base + `\n\nGenerate a PREVIEW plan: a brief summary of their biggest AI opportunities, an AI readiness score, and 2-3 high-level task analyses with specific tool names. Make it useful enough to show value but clearly incomplete. Return JSON format matching the full report structure but with fewer items.`;
   }
 
   return base + `\n\nGenerate a COMPREHENSIVE personalized AI action plan in JSON format with these exact keys:
 {
-  "executiveSummary": "2-3 paragraphs speaking directly to the person. Summarize their biggest opportunities and what they stand to gain. Be specific about their work.",
+  "executiveSummary": "3-4 paragraphs speaking directly to the person. Summarize their biggest opportunities, what they stand to gain, and the specific approach you recommend. Be specific about their work. Include a concrete example: 'For instance, your weekly [task] could be reduced from X hours to Y minutes using [specific tool].' End with an encouraging call to action.",
   "organizationProfile": {
-    "summary": "Brief overview of their work context",
-    "industryContext": "How AI is being adopted in their industry right now — ground it in real trends",
+    "summary": "2-3 sentence overview of their work context and what makes their situation unique",
+    "industryContext": "3-4 sentences grounded in real trends. Reference specific stats where possible, e.g., 'According to McKinsey, X% of tasks in [industry] are automatable.' Mention what peer companies or competitors are doing with AI.",
     "aiReadinessScore": 1-10,
-    "keyStrengths": ["What they already have going for them"],
-    "keyGaps": ["Where they can grow — frame as opportunities, not deficiencies"]
+    "keyStrengths": ["What they already have going for them - be specific to their intake"],
+    "keyGaps": ["Where they can grow, framed as opportunities with specific solutions"]
   },
   "taskAnalysis": [
     {
-      "taskName": "...",
-      "department": "...",
-      "currentProcess": "How they likely do this today",
+      "taskName": "Name of the specific task",
+      "department": "Area of their work",
+      "currentProcess": "2-3 sentences describing how they likely do this today, including pain points and time spent",
       "aiOpportunity": "high|medium|low",
-      "aiApproach": "Specifically how AI can help with this task — be concrete",
-      "expectedImpact": "Time saved or quality improvement they can expect",
+      "aiApproach": "3-4 sentences with a SPECIFIC explanation of how to use AI for this. Name the tool, describe the workflow: 'Open [Tool], paste your [input], use the [feature] to generate [output]. Review and edit the result, which typically takes 5-10 minutes instead of the usual hour.'",
+      "expectedImpact": "Specific: '3-5 hours saved per week' or '60% faster turnaround on client reports'",
       "complexity": "simple|moderate|complex",
-      "onetAlignment": "Optional O*NET task reference"
+      "onetAlignment": "O*NET task reference if applicable",
+      "estimatedTimeSaved": "e.g. '3-5 hrs/week' or '45 min per occurrence'",
+      "exampleTools": [
+        { "name": "Actual product name", "url": "https://real-url.com", "free": true/false }
+      ],
+      "gettingStarted": "One concrete sentence: 'Start by signing up for [tool] free tier and trying it on your next [task].' Include the specific URL."
     }
   ],
   "toolRecommendations": [
     {
       "toolName": "Specific product name from the tools reference (e.g., 'Grammarly', 'QuickBooks Online')",
       "category": "General category (e.g., 'AI writing assistant', 'cloud accounting')",
-      "purpose": "What it does in plain language",
-      "expectedValue": "Specific benefit for their work",
+      "purpose": "What it does in plain language for their specific work",
+      "expectedValue": "Specific measurable benefit: '~4 hours saved weekly on email drafting' not just 'saves time'",
       "implementationEffort": "low|medium|high",
       "priorityTier": "immediate|medium-term|long-term",
-      "estimatedMonthlyCost": "$ range from the tools reference (include free options where they exist)"
+      "estimatedMonthlyCost": "Exact pricing from tools reference: 'Free tier available, Pro at $20/mo' not just '$'",
+      "specificProducts": [
+        {
+          "name": "Real product name from tools KB",
+          "url": "https://actual-url.com",
+          "pricing": "Free / $12/mo Pro / $25/mo Business",
+          "free": true
+        }
+      ],
+      "gettingStarted": [
+        "Step 1: Go to [url] and create a free account",
+        "Step 2: Install the browser extension / connect to your existing [tool]",
+        "Step 3: Try it on [specific task from their intake] this week",
+        "Step 4: After a week, evaluate if the paid plan is worth it for [feature]"
+      ],
+      "realWorldExample": "A [similar role] at a [similar-sized company] in [industry] used [tool] to [specific result]. For example, an office manager at a 15-person law firm used Zapier to automate client intake forms, saving 6 hours per week on data entry."
     }
   ],
   "riskAssessment": {
     "overallRiskLevel": "low|moderate|high",
-    "displacementRisk": "Honest but reassuring — frame as 'how your role evolves' not 'risk of replacement'",
-    "skillGaps": ["Skills to build — frame as growth opportunities"],
-    "changeManagementNotes": "Practical advice for making the transition smooth",
-    "dataPrivacyConsiderations": "What to watch out for with their specific data"
+    "displacementRisk": "Honest but reassuring. Frame as 'how your role evolves' not 'risk of replacement'. Reference industry data where possible.",
+    "skillGaps": ["Specific skills to build with a recommended free resource for each, e.g., 'Prompt engineering basics - free course at learnprompting.org'"],
+    "changeManagementNotes": "Practical, step-by-step advice for making the transition smooth. Include a suggested timeline.",
+    "dataPrivacyConsiderations": "Specific to their industry. Name what data should NOT be put into AI tools and why. Reference relevant regulations if applicable (HIPAA, FERPA, etc.)."
   },
   "implementationRoadmap": {
     "immediate": {
       "timeframe": "This week to 3 months",
-      "objectives": ["..."],
-      "actions": [{ "title": "...", "description": "Specific, concrete step", "owner": "You / Your team", "priority": "critical|high|medium|low" }],
-      "expectedOutcomes": ["..."],
-      "estimatedInvestment": "$ range (emphasize free and low-cost options first)"
+      "objectives": ["Specific, measurable objectives"],
+      "actions": [{
+        "title": "Clear action title",
+        "description": "2-3 sentences with specific instructions. Not 'explore AI tools' but 'Sign up for ChatGPT free at chat.openai.com. Use it to draft your weekly client update emails for 2 weeks. Track time saved vs. your current process.'",
+        "owner": "You / Your team",
+        "priority": "critical|high|medium|low",
+        "howTo": "Brief explainer: 'Go to [URL], click Sign Up, choose the free plan. On the main screen, type your request. Start with: [example prompt for their work].'",
+        "resource": { "label": "Getting Started Guide", "url": "https://real-resource-url.com" }
+      }],
+      "expectedOutcomes": ["Specific measurable outcomes: 'Save 3-5 hours/week on email and document drafting within the first month'"],
+      "estimatedInvestment": "Exact: '$0 for first month (free tiers), $20-60/mo after for [specific tools]'"
     },
-    "mediumTerm": { same structure, "timeframe": "3-6 months" },
-    "longTerm": { same structure, "timeframe": "6-12+ months" }
+    "mediumTerm": { "timeframe": "3-6 months", ...same structure with progressively more advanced actions },
+    "longTerm": { "timeframe": "6-12+ months", ...same structure with strategic, transformative actions }
   },
   "roiProjections": [
     {
-      "area": "...",
-      "currentCost": "Estimated time or money they spend today",
-      "projectedSavings": "Hours per week or dollars saved",
-      "timeToValue": "How quickly they'll see results",
+      "area": "Specific area of work",
+      "currentCost": "Detailed: '~8 hours/week at estimated $X/hr = $Y/month' or 'Currently outsourcing to [service] at $Z/month'",
+      "projectedSavings": "Specific: '5-6 hours/week recovered, equivalent to ~$X/month in labor value'",
+      "timeToValue": "Specific: '2-3 weeks to see initial time savings, full ROI within 2 months'",
       "confidence": "high|moderate|low",
-      "basis": "What this estimate is based on"
+      "basis": "Cite the reasoning: 'Based on typical productivity gains of 30-40% for [task type] with AI assistance (McKinsey 2024 research) applied to your estimated [X] hours/week'",
+      "calculationDetail": "Show the math: 'Current: 8 hrs/week x $35/hr = $280/week. With AI: 3 hrs/week x $35/hr = $105/week + $20/mo tool cost. Net savings: ~$680/month.'"
     }
   ],
-  "furtherEvaluation": ["Specific, concrete next steps they can take to keep building momentum"]
+  "furtherEvaluation": ["Specific, actionable next steps with URLs where possible. Not 'explore more tools' but 'Join the free AI for [Industry] community at [URL] to learn from peers. Post your first question about [specific challenge from their intake].'"]
 }
 
 Generate 8-12 task analyses, 6-10 tool recommendations, 3-5 ROI projections, and 5-8 next steps.
-Make every recommendation SPECIFIC to their actual work. Reference their tasks, their challenges, their tools.
-For tool recommendations, reference specific products from the tools knowledge base provided. Include both the product name AND general category (e.g., "Grammarly (AI writing assistant)") so users can evaluate alternatives too.
-ALWAYS emphasize: AI is here to handle the tedious parts so they can focus on the work that needs a human — the creative, relational, strategic parts of their job.
-Prioritize free and low-cost tools first, especially for individuals and very small teams.`;
+Every recommendation must be SPECIFIC to their work with NAMED PRODUCTS from the tools knowledge base, REAL URLs, REAL PRICING, and STEP-BY-STEP instructions.
+Include both the product name AND general category (e.g., "Grammarly (AI writing assistant)") so users can evaluate alternatives too.
+Include real-world examples of how similar businesses/roles benefited.
+Show the math on ROI projections.
+For each tool, always mention if a free tier exists and lead with free options.
+Make this report so actionable they could start implementing the first recommendation within 10 minutes of reading it.`;
 }
 
 function buildUserPrompt(
