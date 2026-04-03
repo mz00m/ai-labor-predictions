@@ -499,6 +499,15 @@
       ],
       "evidenceTier": 1,
       "label": "FRI: Rapid scenario → labor income share drops from ~58% to 45% by 2050"
+    },
+    {
+      "date": "2025-12-01",
+      "direction": "up",
+      "sourceIds": [
+        "oecd-ai-sme-adoption-g7-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "OECD/Filippucci: US AI labor productivity gains 0.4-1.3pp/yr"
     }
   ],
   "sources": [
@@ -965,6 +974,16 @@
       "datePublished": "2026-03-31",
       "excerpt": "In a rapid AI scenario, economists forecast labor income share dropping from ~58% to 45% by 2050, implying significant downward pressure on median wages even if aggregate GDP grows.",
       "dateAdded": "2026-04-02"
+    },
+    {
+      "id": "oecd-ai-sme-adoption-g7-2025",
+      "title": "AI Adoption by Small and Medium-Sized Enterprises",
+      "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/12/ai-adoption-by-small-and-medium-sized-enterprises_9c48eae6/426399c1-en.pdf",
+      "publisher": "OECD (Calvino, Bianchini, Lane, Montegu, Verger, Ancheva)",
+      "evidenceTier": 2,
+      "datePublished": "2025-12-01",
+      "excerpt": "The United Kingdom and the United States may experience higher gains, ranging from 0.4 to 1.3 percentage points annually for the next 10 years.",
+      "dateAdded": "2026-04-03"
     }
   ]
 }

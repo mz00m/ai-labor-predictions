@@ -577,6 +577,24 @@
       ],
       "evidenceTier": 3,
       "label": "NYT/Census: ~1 in 5 firms used AI in last 2 weeks; 2x in some industries"
+    },
+    {
+      "date": "2025-12-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "oecd-ai-sme-adoption-g7-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "OECD: US firms 6.1% AI adoption in core business functions (2024)"
+    },
+    {
+      "date": "2025-12-01",
+      "direction": "down",
+      "sourceIds": [
+        "oecd-ai-sme-adoption-g7-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "OECD: Only 29% of SMEs use genAI in core activities"
     }
   ],
   "sources": [
@@ -1122,6 +1140,16 @@
       "evidenceTier": 3,
       "datePublished": "2026-04-03",
       "excerpt": "Already, nearly one in five companies reports having used A.I. in the last two weeks, according to data from the Census Bureau, and in some industries the rate is twice as high.",
+      "dateAdded": "2026-04-03"
+    },
+    {
+      "id": "oecd-ai-sme-adoption-g7-2025",
+      "title": "AI Adoption by Small and Medium-Sized Enterprises",
+      "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/12/ai-adoption-by-small-and-medium-sized-enterprises_9c48eae6/426399c1-en.pdf",
+      "publisher": "OECD (Calvino, Bianchini, Lane, Montegu, Verger, Ancheva)",
+      "evidenceTier": 2,
+      "datePublished": "2025-12-01",
+      "excerpt": "AI adoption in core business functions – related to the production of goods and services – ranges from 1.9% in Japan to 6.1% in the United States in 2024. Among SMEs using generative AI, only 29% report using it in their core activities.",
       "dateAdded": "2026-04-03"
     }
   ]

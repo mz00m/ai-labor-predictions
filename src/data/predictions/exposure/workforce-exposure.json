@@ -508,6 +508,15 @@
       ],
       "evidenceTier": 1,
       "label": "Oxford/OII: Complementary effects 1.7x larger than substitution; AI demand doubling → 5% rise in complementary skill demand"
+    },
+    {
+      "date": "2025-12-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "oecd-ai-sme-adoption-g7-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "OECD: ~25% of OECD workers exposed to generative AI"
     }
   ],
   "sources": [
@@ -928,6 +937,16 @@
       "evidenceTier": 1,
       "datePublished": "2026-03-01",
       "excerpt": "AI models successfully complete tasks that take humans approximately 3-4 hours with about a 50% success rate, increasing to about 65% by 2025-Q3. Most text-based tasks projected to reach 80-95% AI success by 2029. 62.6% of O*NET tasks classified as having at least 10% LLM time-savings potential. Based on 17,205 expert evaluations across 3,000+ O*NET tasks and 40+ LLMs.",
+      "dateAdded": "2026-04-03"
+    },
+    {
+      "id": "oecd-ai-sme-adoption-g7-2025",
+      "title": "AI Adoption by Small and Medium-Sized Enterprises",
+      "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/12/ai-adoption-by-small-and-medium-sized-enterprises_9c48eae6/426399c1-en.pdf",
+      "publisher": "OECD (Calvino, Bianchini, Lane, Montegu, Verger, Ancheva)",
+      "evidenceTier": 2,
+      "datePublished": "2025-12-01",
+      "excerpt": "Around a quarter of workers in OECD Member countries are exposed to generative AI, meaning 20% of their job tasks could be done at least 50% faster with the help of generative AI.",
       "dateAdded": "2026-04-03"
     }
   ]

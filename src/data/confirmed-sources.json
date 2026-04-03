@@ -1,9 +1,26 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-04-03",
-  "totalSources": 478,
-  "verifiedCount": 478,
+  "totalSources": 479,
+  "verifiedCount": 479,
   "sources": {
+    "oecd-ai-sme-adoption-g7-2025": {
+      "id": "oecd-ai-sme-adoption-g7-2025",
+      "title": "AI Adoption by Small and Medium-Sized Enterprises",
+      "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/12/ai-adoption-by-small-and-medium-sized-enterprises_9c48eae6/426399c1-en.pdf",
+      "publisher": "OECD (Calvino, Bianchini, Lane, Montegu, Verger, Ancheva)",
+      "evidenceTier": 2,
+      "datePublished": "2025-12-01",
+      "excerpt": "AI adoption in core business functions ranges from 1.9% in Japan to 6.1% in the United States in 2024. Among SMEs using generative AI, only 29% report using it in their core activities. Annual labour productivity growth stemming from AI could range from 0.4 to 1.3 percentage points for the US over the next decade. Around a quarter of OECD workers are exposed to generative AI. 50% of SMEs report employees lack the skills to use generative AI.",
+      "usedIn": [
+        "ai-adoption-rate",
+        "median-wage-impact",
+        "genai-work-adoption",
+        "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
     "cvl-economics-entertainment-ai-2024": {
       "id": "cvl-economics-entertainment-ai-2024",
       "title": "Future Unscripted: The Impact of Generative AI on Entertainment Industry Jobs",
