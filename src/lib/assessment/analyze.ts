@@ -7,6 +7,9 @@ import { stripPii } from "./pii-strip";
 import { getIndustryTemplate } from "./taxonomy";
 import { getOnetSummaryForPrompt } from "./onet-tasks";
 import { formatToolsForPrompt } from "@/data/tools";
+import { formatResearchContextForPrompt } from "./research-context";
+import { formatCapabilitiesForPrompt } from "./capabilities-context";
+import { formatEvidenceCitationsForPrompt } from "./evidence-citations";
 
 const anthropic = new Anthropic();
 
@@ -223,6 +226,8 @@ Write like a smart, experienced consultant who genuinely wants this person to su
 - NEVER invent URLs. Only use URLs from the tools knowledge base.
 - NEVER fabricate case studies or anecdotes. Use "Teams using [tool] for [task type] typically report significant time savings" instead.
 - For ROI projections, show your reasoning from the task analysis. Do NOT attribute calculations to external research.
+- When research statistics are provided (displacement rates, wage impacts, adoption data), cite them with the publisher name and date. These are REAL data points from verified sources.
+- When evidence citations are provided, reference them by publisher name and specific finding. Do NOT paraphrase in a way that changes the meaning.
 
 ## AI Deployment Framework
 
@@ -364,8 +369,8 @@ Generate 2-3 task analyses and 2 tool recommendations for the preview. Make the 
   ],
   "riskAssessment": {
     "overallRiskLevel": "low|moderate|high",
-    "displacementRisk": "Honest but reassuring. Frame as 'how your role evolves' not 'risk of replacement'. Base your analysis on the O*NET task data and tools KB provided, not on external statistics.",
-    "skillGaps": ["Specific skills to build, e.g., 'Prompt engineering basics — search for free introductory courses on YouTube or Coursera.' Do NOT invent URLs for learning resources."],
+    "displacementRisk": "Honest but reassuring. Frame as 'how your role evolves' not 'risk of replacement'. Ground your analysis in the research statistics and evidence citations provided (displacement rates, adoption data, wage trends). Cite the publisher and finding. Also recommend specific human capabilities from the appreciation framework that become MORE valuable with AI.",
+    "skillGaps": ["Specific skills to build. When human capabilities data is provided, name specific appreciating capabilities (e.g., 'Stakeholder negotiation — this skill becomes more valuable as AI handles routine analysis'). Also include practical skills like 'Prompt engineering basics — search for free introductory courses on YouTube or Coursera.' Do NOT invent URLs for learning resources."],
     "changeManagementNotes": "Practical, step-by-step advice for making the transition smooth. Include a suggested timeline.",
     "dataPrivacyConsiderations": "Specific to their industry. Name what data should NOT be put into AI tools and why. Reference relevant regulations if applicable (HIPAA, FERPA, etc.).",
     "commonPitfalls": [
@@ -440,12 +445,19 @@ CONTEXTUALIZATION RULES:
 - If scope is "team" (individual), frame everything as personal productivity. If "department", frame as team workflow. If "full-organization", frame as organizational transformation.
 - Match the complexity of your recommendations to their company size: 1-10 employees get simpler tools than 200+ employee organizations.
 
-Do NOT fabricate case studies, statistics, URLs, community names, or research citations.
+Do NOT fabricate case studies, statistics, URLs, community names, or research citations. Only cite statistics and sources that appear in the research data and evidence citations sections provided.
 Show the math on ROI projections.
 For each task, assign a deployment model (copilot, escalation, full-automation, or agentic).
 Include 3-5 common pitfalls specific to their industry and situation.
 Normalize experimentation: 61% of successful AI projects had a prior failure.
-Make this report so actionable they could start implementing the first recommendation within 10 minutes of reading it.`;
+Make this report so actionable they could start implementing the first recommendation within 10 minutes of reading it.
+
+RESEARCH DATA INTEGRATION:
+- Use the research statistics provided to ground your industry context, displacement risk, and executive summary in real data. Cite by publisher and date.
+- Reference evidence citations by publisher name and specific finding (e.g., "According to McKinsey, [finding]").
+- In the risk assessment, recommend 3-5 specific human capabilities from the appreciation framework that the organization should invest in. Explain WHY each capability appreciates in their context.
+- In the implementation roadmap, include capability development actions (e.g., "Month 2: Begin developing [capability] through [specific action]").
+- Frame appreciating capabilities as competitive advantages, not just risk mitigation.`;
 }
 
 function buildUserPrompt(
@@ -549,6 +561,27 @@ Typical industry challenges: ${template.commonChallenges.join(", ")}`;
   const toolsRef = formatToolsForPrompt(intake.industry, intake.companySize);
   if (toolsRef) {
     prompt += `\n\n${toolsRef}`;
+  }
+
+  // Add research data (displacement, wage, adoption stats for this industry)
+  const researchContext = formatResearchContextForPrompt(intake.industry);
+  if (researchContext) {
+    prompt += `\n\n${researchContext}`;
+  }
+
+  // Add human capabilities that appreciate with AI adoption
+  const capabilitiesContext = formatCapabilitiesForPrompt(
+    intake.industry,
+    intake.primaryFunctions
+  );
+  if (capabilitiesContext) {
+    prompt += `\n\n${capabilitiesContext}`;
+  }
+
+  // Add evidence citations from verified research database
+  const evidenceContext = formatEvidenceCitationsForPrompt(intake.industry);
+  if (evidenceContext) {
+    prompt += `\n\n${evidenceContext}`;
   }
 
   return prompt;

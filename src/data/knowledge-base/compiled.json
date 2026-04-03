@@ -1,6 +1,6 @@
 {
-  "compiledAt": "2026-04-03T16:33:07.667Z",
-  "totalTools": 41,
+  "compiledAt": "2026-04-03T22:40:12.994Z",
+  "totalTools": 64,
   "totalCapabilities": 62,
   "staleCount": 0,
   "tools": {
@@ -531,8 +531,185 @@
         "stale": false
       }
     ],
-    "people-management": [],
-    "customer-service": [],
+    "people-management": [
+      {
+        "name": "Lattice",
+        "function": "people-management",
+        "alsoUsefulFor": [
+          "operations",
+          "administrative"
+        ],
+        "pricing": "Paid (~$11/person/mo)",
+        "url": "https://www.lattice.com",
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "pitch": "Performance management platform with AI-assisted reviews, OKR tracking, engagement surveys, and compensation benchmarking.",
+        "bestFor": "Mid-size and large teams that need a unified system for performance cycles, goal alignment, and employee engagement. The AI features help managers draft review summaries and surface engagement trends across teams. Strong integration with HRIS and Slack.",
+        "limitations": "Pricing adds up fast at scale since it's per-person. Smaller teams may find the feature set overkill. AI-generated review language still needs manager editing to avoid generic phrasing.",
+        "stale": false
+      },
+      {
+        "name": "Leapsome",
+        "function": "people-management",
+        "alsoUsefulFor": [
+          "operations",
+          "education"
+        ],
+        "pricing": "Paid (~$8/person/mo)",
+        "url": "https://www.leapsome.com",
+        "verified": "2026-04-03",
+        "confidence": "medium",
+        "pitch": "People enablement platform combining performance reviews, goal management, engagement surveys, learning paths, and 360-degree feedback.",
+        "bestFor": "Organizations that want reviews, goals, engagement, and learning in a single platform rather than stitching together point solutions. European-headquartered with strong GDPR compliance, which matters for international teams. The learning module ties development plans directly to review outcomes.",
+        "limitations": "Less name recognition than Lattice or Culture Amp in the US market, which can slow internal buy-in. Reporting and analytics are functional but not as deep as dedicated analytics platforms. Smaller integration ecosystem than competitors.",
+        "stale": false
+      },
+      {
+        "name": "Textio",
+        "function": "people-management",
+        "alsoUsefulFor": [
+          "communications",
+          "administrative"
+        ],
+        "pricing": "Paid (varies by company size, typically enterprise contracts)",
+        "url": "https://www.textio.com",
+        "verified": "2026-04-03",
+        "confidence": "medium",
+        "pitch": "AI writing platform that analyzes and improves job postings, performance feedback, and workplace communications for clarity, inclusivity, and bias reduction.",
+        "bestFor": "HR teams and hiring managers who want to reduce bias in job descriptions and performance reviews. Textio scores language in real time and suggests alternatives that broaden candidate pools and improve feedback quality. Particularly useful for organizations with DEI commitments that want measurable language improvements.",
+        "limitations": "Enterprise pricing puts it out of reach for small companies. Effectiveness depends on consistent adoption across managers — one team using it doesn't move org-wide metrics. The bias detection is pattern-based and won't catch all forms of exclusionary language.",
+        "stale": false
+      },
+      {
+        "name": "BambooHR",
+        "function": "people-management",
+        "alsoUsefulFor": [
+          "administrative",
+          "operations"
+        ],
+        "pricing": "Freemium (pricing varies by company size and modules selected)",
+        "url": "https://www.bamboohr.com",
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "pitch": "HR management platform covering employee records, hiring, onboarding, time-off tracking, and reporting with AI-powered workforce analytics.",
+        "bestFor": "Small to mid-size businesses that need a core HRIS with built-in hiring and onboarding workflows. Clean interface that non-technical HR staff can manage without training. AI analytics surface turnover risk and headcount trends without requiring a dedicated people analytics team.",
+        "limitations": "Grows less capable at enterprise scale — companies over 500 employees often outgrow it. Payroll is an add-on and not as robust as dedicated payroll providers. Advanced reporting requires higher-tier plans.",
+        "stale": false
+      },
+      {
+        "name": "Paradox (Olivia)",
+        "function": "people-management",
+        "alsoUsefulFor": [
+          "customer-service",
+          "administrative"
+        ],
+        "pricing": "Paid (enterprise pricing, typically custom contracts)",
+        "url": "https://www.paradox.ai",
+        "verified": "2026-04-03",
+        "confidence": "medium",
+        "pitch": "Conversational AI assistant for recruiting that handles candidate screening, interview scheduling, FAQ responses, and application workflows via text and chat.",
+        "bestFor": "High-volume hiring environments — retail, hospitality, healthcare, logistics — where scheduling and screening hundreds of candidates manually is a bottleneck. Olivia handles the back-and-forth of interview coordination and basic qualification checks via SMS or web chat, freeing recruiters for higher-value conversations.",
+        "limitations": "Enterprise-only pricing makes it inaccessible for smaller employers. Works best for structured, high-volume roles; less effective for specialized or executive searches where nuance matters. Candidates occasionally find chatbot interactions impersonal, which can affect employer brand for roles where candidate experience is a differentiator.",
+        "stale": false
+      },
+      {
+        "name": "Culture Amp",
+        "function": "people-management",
+        "alsoUsefulFor": [
+          "operations",
+          "administrative"
+        ],
+        "pricing": "Paid (~$5-11/person/mo depending on modules)",
+        "url": "https://www.cultureamp.com",
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "pitch": "Employee experience platform with AI-driven engagement surveys, performance management, and development analytics backed by organizational psychology research.",
+        "bestFor": "Organizations that take engagement measurement seriously and want science-backed survey design with strong benchmarking data. The analytics layer surfaces drivers of engagement and attrition risk with enough statistical rigor to present to leadership. Performance module ties engagement insights to individual development.",
+        "limitations": "The platform's strength in analytics means it's heavier to administer than simpler survey tools. Getting value requires someone who can interpret the data and act on it — the tool surfaces insights but doesn't implement change. Survey fatigue is a real risk if the organization doesn't close the loop on results.",
+        "stale": false
+      }
+    ],
+    "customer-service": [
+      {
+        "name": "Intercom Fin",
+        "function": "customer-service",
+        "alsoUsefulFor": [
+          "sales",
+          "marketing"
+        ],
+        "pricing": "Paid ($0.99/resolution)",
+        "url": "https://www.intercom.com",
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "pitch": "AI customer service agent that resolves support queries autonomously using your help center content, past conversations, and knowledge base.",
+        "bestFor": "Teams already on Intercom who want to deflect repetitive support tickets. Fin reads your help center and resolves straightforward queries without human involvement. Pay-per-resolution pricing means you only pay when it actually handles a conversation end-to-end.",
+        "limitations": "Requires a well-maintained knowledge base to perform well — garbage in, garbage out. The $0.99/resolution cost adds up quickly at high volume and may exceed flat-rate alternatives. Complex or emotionally sensitive issues still need human handoff, and Fin can sometimes confidently give incomplete answers.",
+        "stale": false
+      },
+      {
+        "name": "Zendesk AI",
+        "function": "customer-service",
+        "alsoUsefulFor": [
+          "operations",
+          "administrative"
+        ],
+        "pricing": "Paid (starts ~$55/agent/mo for Suite Professional)",
+        "url": "https://www.zendesk.com",
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "pitch": "AI-powered ticket routing, response suggestions, and customer intent detection built natively into the Zendesk support platform.",
+        "bestFor": "Mid-size to enterprise support teams already using Zendesk. AI features include automatic ticket classification, agent response suggestions, and intent detection that routes issues to the right team. Strongest when you have years of ticket history for the models to learn from.",
+        "limitations": "Expensive — the AI features require higher-tier plans, and per-agent pricing scales steeply. Smaller teams may not generate enough ticket volume to justify the cost. AI suggestions require agent review and can be off-base for niche or technical products. Migration away from Zendesk is painful once you're locked in.",
+        "stale": false
+      },
+      {
+        "name": "Freshdesk (Freddy AI)",
+        "function": "customer-service",
+        "alsoUsefulFor": [
+          "operations",
+          "administrative"
+        ],
+        "pricing": "Freemium (free tier for up to 2 agents, paid plans from $15/agent/mo)",
+        "url": "https://www.freshdesk.com",
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "pitch": "Helpdesk platform with AI chatbot (Freddy), auto-triage, suggested responses, and canned reply recommendations.",
+        "bestFor": "Small to mid-size teams that need a capable helpdesk without enterprise pricing. The free tier supports up to 2 agents with basic ticketing and email support — a real option for early-stage companies. Freddy AI handles auto-triage and suggests responses based on past resolutions.",
+        "limitations": "AI features are limited on lower tiers — Freddy's full capabilities require Growth or Pro plans. Chatbot quality is a step below Intercom Fin for autonomous resolution. Reporting and customization feel constrained compared to Zendesk at the enterprise level.",
+        "stale": false
+      },
+      {
+        "name": "Tidio",
+        "function": "customer-service",
+        "alsoUsefulFor": [
+          "sales",
+          "marketing"
+        ],
+        "pricing": "Freemium (free tier available, $29/mo for Communicator plan)",
+        "url": "https://www.tidio.com",
+        "verified": "2026-04-03",
+        "confidence": "medium",
+        "pitch": "Live chat and AI chatbot platform designed for small business websites, with visual chatbot builder and visitor tracking.",
+        "bestFor": "Small businesses and e-commerce sites that want a chat widget with basic AI without a complex setup. Free tier includes live chat and a limited number of chatbot conversations. Visual drag-and-drop bot builder makes it accessible for non-technical users. Good for lead capture and simple FAQ automation.",
+        "limitations": "AI chatbot (Lyro) has a conversation cap on lower tiers and charges for additional interactions. Less sophisticated than purpose-built support platforms for complex ticket workflows. Primarily useful for website chat — not a full omnichannel support solution. Can feel widget-heavy on smaller sites.",
+        "stale": false
+      },
+      {
+        "name": "Ada",
+        "function": "customer-service",
+        "alsoUsefulFor": [
+          "operations"
+        ],
+        "pricing": "Paid (enterprise pricing, not publicly listed)",
+        "url": "https://www.ada.cx",
+        "verified": "2026-04-03",
+        "confidence": "medium",
+        "pitch": "No-code AI customer service automation platform that builds conversational agents trained on your company's knowledge and systems.",
+        "bestFor": "Enterprise teams handling high-volume, repetitive support across multiple channels. Ada's no-code builder lets non-engineers create and maintain AI agents that connect to CRMs, order systems, and knowledge bases. Strong in e-commerce and fintech where customers need account-specific answers (order status, billing, returns).",
+        "limitations": "Enterprise-only pricing puts it out of reach for small teams — no self-serve plan or public pricing. Implementation requires meaningful setup time to integrate with backend systems. Performance depends heavily on the quality of your training data and knowledge base. Less community and third-party ecosystem compared to Zendesk or Intercom.",
+        "stale": false
+      }
+    ],
     "technology": [
       {
         "name": "GitHub Copilot",
@@ -596,7 +773,101 @@
         "stale": false
       }
     ],
-    "healthcare": [],
+    "healthcare": [
+      {
+        "name": "Nuance DAX Copilot",
+        "function": "healthcare",
+        "alsoUsefulFor": [
+          "administrative"
+        ],
+        "pricing": "Paid (enterprise/per-provider pricing, typically negotiated per health system)",
+        "url": "https://www.microsoft.com/en-us/nuance/dax-copilot",
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "pitch": "Ambient clinical documentation that listens to patient-clinician conversations in real time and generates structured clinical notes automatically.",
+        "bestFor": "Health systems and large practices looking to reduce clinician documentation burden. DAX Copilot captures the natural patient-provider conversation and drafts encounter notes directly into the EHR, letting physicians review and sign off rather than type from scratch. Particularly strong in primary care and specialty visits with high note volume.",
+        "limitations": "Requires Microsoft/Nuance enterprise agreement — no self-serve signup for individual providers. Integration depends on EHR compatibility (strongest with Epic and HIPAA-compliant Microsoft cloud infrastructure). Clinicians still must review every generated note for accuracy before signing, which means time savings vary by specialty and documentation complexity.",
+        "stale": false
+      },
+      {
+        "name": "Nabla",
+        "function": "healthcare",
+        "alsoUsefulFor": [
+          "administrative",
+          "communications"
+        ],
+        "pricing": "Paid (~$150/provider/mo)",
+        "url": "https://www.nabla.com",
+        "verified": "2026-04-03",
+        "confidence": "medium",
+        "pitch": "AI copilot for clinicians that auto-generates visit notes, patient summaries, and follow-up communications from recorded conversations.",
+        "bestFor": "Small to mid-size practices and telehealth providers who need ambient documentation without committing to an enterprise platform. Nabla handles visit note generation, after-visit summaries for patients, and drafts of patient messages — reducing administrative time per encounter. Works well for providers doing a mix of in-person and virtual visits.",
+        "limitations": "Smaller vendor with less EHR integration depth than Nuance or Elation. Note quality can vary for highly specialized medical terminology outside common primary care and behavioral health contexts. HIPAA-compliant, but providers should verify BAA coverage and data handling policies match their compliance requirements.",
+        "stale": false
+      },
+      {
+        "name": "Freed",
+        "function": "healthcare",
+        "alsoUsefulFor": [
+          "administrative"
+        ],
+        "pricing": "Paid ($99/mo per clinician)",
+        "url": "https://www.getfreed.ai",
+        "verified": "2026-04-03",
+        "confidence": "medium",
+        "pitch": "AI medical scribe designed for independent practitioners and small practices, generating SOAP notes from patient conversations.",
+        "bestFor": "Solo practitioners and small practices that cannot afford a human scribe or an enterprise ambient documentation system. Freed listens to encounters and produces structured SOAP notes that clinicians can edit and finalize. The lower price point and straightforward onboarding make it accessible for practices without dedicated IT staff.",
+        "limitations": "Less customizable than enterprise solutions — note templates and specialty-specific formatting may not match every workflow. Integration with EHR systems is more limited than Nuance or Elation; many users copy-paste notes rather than having them flow directly into the chart. As with all clinical AI scribes, every note requires physician review to catch errors, and accuracy drops in noisy environments or with heavy medical jargon.",
+        "stale": false
+      },
+      {
+        "name": "Elation Health",
+        "function": "healthcare",
+        "alsoUsefulFor": [
+          "administrative",
+          "operations"
+        ],
+        "pricing": "Paid (~$300-500/provider/mo)",
+        "url": "https://www.elationhealth.com",
+        "verified": "2026-04-03",
+        "confidence": "medium",
+        "pitch": "EHR platform with built-in AI clinical assistant for documentation, coding suggestions, and patient messaging.",
+        "bestFor": "Primary care and direct primary care practices that want AI capabilities embedded natively in their electronic health record rather than bolted on. Elation's AI assists with clinical note drafting, suggests appropriate billing codes based on documentation, and helps generate patient-facing messages — all within the same system clinicians use for charting and ordering.",
+        "limitations": "Primarily serves primary care; specialists with complex workflow requirements may find it limiting compared to specialty-specific EHRs. The all-in-one approach means switching to Elation requires an EHR migration, which is a significant lift for established practices. AI coding suggestions are assistive only — providers must verify code accuracy to avoid compliance and billing risks.",
+        "stale": false
+      },
+      {
+        "name": "Regard",
+        "function": "healthcare",
+        "alsoUsefulFor": [
+          "operations"
+        ],
+        "pricing": "Paid (enterprise/per-provider pricing)",
+        "url": "https://www.regard.com",
+        "verified": "2026-04-03",
+        "confidence": "medium",
+        "pitch": "AI diagnostic assistant that automatically reviews patient charts and surfaces potential diagnoses clinicians may have overlooked.",
+        "bestFor": "Hospital medicine and inpatient settings where diagnostic completeness directly affects patient outcomes and accurate clinical documentation. Regard runs in the background, analyzing labs, vitals, medications, and notes to flag conditions that may be present but undocumented — helping hospitalists catch diagnoses that might otherwise be missed during high-volume shifts.",
+        "limitations": "Focused on inpatient and hospital medicine use cases; not designed for outpatient primary care or specialty workflows. Acts as a clinical decision support tool, not a replacement for clinical judgment — all suggestions require physician evaluation. Enterprise-only sales process means it is not accessible to small practices or individual providers. Effectiveness depends on the quality and completeness of existing chart data.",
+        "stale": false
+      },
+      {
+        "name": "Phreesia",
+        "function": "healthcare",
+        "alsoUsefulFor": [
+          "administrative",
+          "customer-service"
+        ],
+        "pricing": "Paid (per-visit pricing, typically negotiated by practice volume)",
+        "url": "https://www.phreesia.com",
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "pitch": "Patient intake automation platform with AI-powered scheduling, digital check-in, insurance verification, and pre-visit workflows.",
+        "bestFor": "Medical practices and health systems looking to reduce front-desk administrative burden and improve the patient arrival experience. Phreesia handles digital check-in, consent forms, copay collection, real-time insurance eligibility verification, and appointment scheduling — replacing manual intake processes that typically consume significant staff time per patient visit.",
+        "limitations": "Primarily addresses the administrative and operational side of healthcare, not clinical workflows. Per-visit pricing can add up for high-volume practices, and the ROI depends on how much manual intake work it actually displaces. Customization of intake forms and workflows requires upfront configuration effort, and patient adoption varies — some demographics still prefer paper-based check-in.",
+        "stale": false
+      }
+    ],
     "legal": [
       {
         "name": "Casetext (CoCounsel)",
@@ -629,7 +900,102 @@
         "stale": false
       }
     ],
-    "education": [],
+    "education": [
+      {
+        "name": "Khan Academy Khanmigo",
+        "function": "education",
+        "alsoUsefulFor": [
+          "people-management"
+        ],
+        "pricing": "Freemium ($44/year for individuals; free for students in participating districts)",
+        "url": "https://www.khanacademy.org/khan-labs",
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "pitch": "GPT-4-powered AI tutor and teaching assistant that guides students through problems with Socratic questioning rather than giving answers directly.",
+        "bestFor": "K-12 and early college students who need on-demand tutoring in math, science, and humanities. Teachers can use it to generate lesson plans, differentiate instruction, and get real-time insight into where students are struggling. The Socratic approach means students build understanding rather than copying answers.",
+        "limitations": "Effectiveness depends on students engaging honestly rather than trying to extract answers. Coverage is strongest in math and science — humanities tutoring is less developed. District-wide free access requires institutional partnerships, so individual teachers may need to pay or advocate for adoption.",
+        "stale": false
+      },
+      {
+        "name": "MagicSchool AI",
+        "function": "education",
+        "alsoUsefulFor": [
+          "administrative",
+          "communications"
+        ],
+        "pricing": "Freemium (free tier available, $9.99/mo for Plus)",
+        "url": "https://www.magicschool.ai",
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "pitch": "AI platform built specifically for teachers with 60+ tools: lesson plan generator, rubric creator, IEP assistant, email drafter, accommodation suggester, and more.",
+        "bestFor": "K-12 teachers drowning in planning and paperwork. Generates standards-aligned lesson plans in minutes, drafts IEP goals and accommodations, creates differentiated materials for multiple reading levels, and writes parent communication emails. The tool library is organized around actual teacher workflows rather than generic AI prompting.",
+        "limitations": "Generated lesson plans still need teacher review and customization — they're solid starting points, not finished products. IEP suggestions must be reviewed by qualified special education staff; relying on AI-generated goals without professional judgment creates compliance and ethical risks. Quality varies across subject areas and grade levels.",
+        "stale": false
+      },
+      {
+        "name": "Gradescope",
+        "function": "education",
+        "alsoUsefulFor": [
+          "administrative"
+        ],
+        "pricing": "Paid (institutional pricing, contact for quote)",
+        "url": "https://www.gradescope.com",
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "pitch": "AI-assisted grading platform (owned by Turnitin) that handles assignments, exams, and homework — including handwritten work and code submissions.",
+        "bestFor": "Higher education instructors and TAs grading at scale. Upload scanned exams or homework, and AI groups similar answers together so you grade one rubric item across all students at once rather than grading each paper start-to-finish. Handles handwritten math, code autograding (Python, Java, C++, R), and bubble sheets. Cuts grading time by 50-70% in large lecture courses.",
+        "limitations": "Requires institutional subscription — not available to individual teachers. Handwriting recognition struggles with very messy writing. Initial rubric setup takes effort; the time savings come on subsequent assignments once rubrics are dialed in. Code autograding requires instructor-written test cases.",
+        "stale": false
+      },
+      {
+        "name": "Brisk Teaching",
+        "function": "education",
+        "alsoUsefulFor": [
+          "administrative",
+          "communications"
+        ],
+        "pricing": "Freemium (free tier, $9.99/mo for Pro)",
+        "url": "https://www.briskteaching.com",
+        "verified": "2026-04-03",
+        "confidence": "medium",
+        "pitch": "Chrome extension AI assistant that works inside the tools teachers already use — Google Docs, Slides, YouTube, and LMS platforms — to provide feedback, create materials, and adjust reading levels.",
+        "bestFor": "Teachers who want AI assistance without switching to a separate platform. Highlight student text in Google Docs and get instant feedback suggestions. Generate quiz questions from a YouTube video. Adjust the reading level of a passage while keeping the content intact. The Chrome extension approach means it meets teachers where they already work.",
+        "limitations": "Chrome-only, so educators on other browsers or school-issued devices with extension restrictions are out of luck. The free tier is limited in daily uses. As a newer entrant, the tool set is narrower than MagicSchool's and the company's long-term trajectory is less established.",
+        "stale": false
+      },
+      {
+        "name": "Quillbot",
+        "function": "education",
+        "alsoUsefulFor": [
+          "communications",
+          "administrative"
+        ],
+        "pricing": "Freemium (free tier, $9.95/mo for Premium)",
+        "url": "https://www.quillbot.com",
+        "verified": "2026-04-03",
+        "confidence": "high",
+        "pitch": "AI writing assistant specializing in paraphrasing, grammar checking, summarizing, and citation generation — widely used by both students and educators.",
+        "bestFor": "Students improving academic writing and non-native English speakers refining their work. The paraphraser helps rephrase sentences while preserving meaning. The citation generator supports APA, MLA, and Chicago formats. Summarizer can condense long readings for study prep. Faculty use it to clean up grant applications, course descriptions, and committee reports.",
+        "limitations": "The paraphrasing tool is frequently used by students to evade plagiarism detection, which creates academic integrity concerns. The free tier limits paraphrasing to 125 words at a time. Citation generation sometimes produces formatting errors in edge cases — always verify against the style guide. Does not help with the substance of writing, only the surface.",
+        "stale": false
+      },
+      {
+        "name": "Synthesia",
+        "function": "education",
+        "alsoUsefulFor": [
+          "marketing",
+          "communications"
+        ],
+        "pricing": "Paid ($22/mo for Starter)",
+        "url": "https://www.synthesia.io",
+        "verified": "2026-04-03",
+        "confidence": "medium",
+        "pitch": "AI video generation platform that creates professional training and educational videos using AI avatars — no camera, studio, or video editing skills required.",
+        "bestFor": "Higher ed instructional designers and corporate training teams who need to produce video content at scale. Create lecture snippets, orientation videos, compliance training, or multilingual course materials by typing a script and selecting an avatar. Supports 120+ languages, making it useful for institutions serving diverse student populations. Updates are instant — change the script and regenerate rather than re-filming.",
+        "limitations": "AI avatars are visibly synthetic, which can feel impersonal for relationship-dependent teaching contexts. Not a replacement for an engaging instructor on camera — works better for informational content than pedagogical interaction. The Starter plan limits video length and avatar choices. Students may disengage from avatar-presented content faster than from real instructor video.",
+        "stale": false
+      }
+    ],
     "creative-design": [
       {
         "name": "Midjourney",
