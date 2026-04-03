@@ -85,8 +85,10 @@ export async function POST(req: NextRequest) {
       }
     }
 
-    // Generate the report — file contents are used here and then discarded
-    const report = await generateAssessmentReport(intake, fileContents, websiteContent, mode as "preview" | "full");
+    // Always generate the FULL report — the frontend paywall controls what's visible.
+    // This ensures the DB always has complete data, so the preview→upgrade path works
+    // without needing to regenerate (files/website content aren't persisted after this request).
+    const report = await generateAssessmentReport(intake, fileContents, websiteContent, "full");
 
     // File contents are now garbage collected — never persisted
 

@@ -8,13 +8,15 @@ import type { Assessment, AssessmentReport } from "@/lib/assessment/types";
 export default function ReportPage() {
   const params = useSearchParams();
   const id = params.get("id");
-  const isPreview = params.get("preview") === "true";
-  const paymentSuccess = params.get("payment") === "success";
 
   const [assessment, setAssessment] = useState<Assessment | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [downloadingPdf, setDownloadingPdf] = useState(false);
+  const [feedbackRating, setFeedbackRating] = useState<number | null>(null);
+  const [feedbackText, setFeedbackText] = useState("");
+  const [feedbackSubmitted, setFeedbackSubmitted] = useState(false);
+  const [feedbackSubmitting, setFeedbackSubmitting] = useState(false);
 
   useEffect(() => {
     if (!id) return;
@@ -35,7 +37,7 @@ export default function ReportPage() {
 
     try {
       const { generatePdf } = await import("@/lib/assessment/pdf-generator");
-      const buffer = generatePdf(assessment.intake, assessment.report, assessment.paid);
+      const buffer = generatePdf(assessment.intake, assessment.report, true);
       const blob = new Blob([buffer], { type: "application/pdf" });
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
@@ -50,25 +52,25 @@ export default function ReportPage() {
     }
   }, [assessment]);
 
-  const handleUnlock = async () => {
-    if (!id || !assessment) return;
+  const handleFeedbackSubmit = async () => {
+    if (!id || feedbackRating === null) return;
+    setFeedbackSubmitting(true);
 
     try {
-      const res = await fetch("/api/assessment/checkout", {
+      await fetch("/api/assessment/feedback", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           assessmentId: id,
-          email: assessment.userId,
-          addOn: false,
+          rating: feedbackRating,
+          comment: feedbackText.trim() || undefined,
         }),
       });
-      const data = await res.json();
-      if (data.checkoutUrl) {
-        window.location.href = data.checkoutUrl;
-      }
+      setFeedbackSubmitted(true);
     } catch {
-      // Handle error
+      // Silently handle — feedback is best-effort
+    } finally {
+      setFeedbackSubmitting(false);
     }
   };
 
@@ -98,30 +100,20 @@ export default function ReportPage() {
   }
 
   const report = assessment.report;
-  const showPaywall = isPreview && !assessment.paid;
 
   const TOC_SECTIONS = [
     { id: "summary", label: "Executive Summary" },
     { id: "readiness", label: "AI Readiness Assessment" },
     { id: "tasks", label: "Task-by-Task Analysis" },
-    ...(showPaywall ? [] : [
-      { id: "tools", label: "Recommended Tools & Services" },
-      { id: "roadmap", label: "Implementation Roadmap" },
-      { id: "risks", label: "Risks, Pitfalls & Change Management" },
-      { id: "roi", label: "ROI Projections" },
-      { id: "next", label: "Next Steps" },
-    ]),
+    { id: "tools", label: "Recommended Tools & Services" },
+    { id: "roadmap", label: "Implementation Roadmap" },
+    { id: "risks", label: "Risks, Pitfalls & Change Management" },
+    { id: "roi", label: "ROI Projections" },
+    { id: "next", label: "Next Steps" },
   ];
 
   return (
     <div className="max-w-3xl mx-auto px-6 sm:px-10 py-12">
-      {/* Payment success banner */}
-      {paymentSuccess && (
-        <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-8 text-[14px] text-green-700">
-          Payment successful. Your full plan is ready below.
-        </div>
-      )}
-
       {/* Cover header */}
       <header className="border-b border-gray-200 pb-8 mb-8">
         <p className="text-[11px] font-semibold uppercase tracking-widest text-[#5C61F6] mb-2">
@@ -133,11 +125,6 @@ export default function ReportPage() {
         <p className="text-[14px] text-gray-400 mt-2">
           Prepared {new Date(assessment.createdAt).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
           {" "}&middot; jobsdata.ai
-          {showPaywall && (
-            <span className="ml-2 text-[11px] font-bold text-amber-600 bg-amber-50 px-2 py-0.5 rounded">
-              PREVIEW
-            </span>
-          )}
         </p>
         <div className="flex gap-3 mt-5">
           <button
@@ -307,33 +294,7 @@ export default function ReportPage() {
         </Section>
       )}
 
-      {/* Paywall */}
-      {showPaywall && (
-        <div className="relative my-12">
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white z-10" />
-          <div className="relative z-20 text-center py-14 bg-gray-50 border-2 border-[#5C61F6]/20 rounded-xl">
-            <div className="text-[40px] font-black text-[#5C61F6] mb-2">5 more sections</div>
-            <h3 className="text-[18px] font-bold text-gray-900 mb-3">
-              Unlock Your Full Plan
-            </h3>
-            <p className="text-[14px] text-gray-500 mb-6 max-w-md mx-auto">
-              Get specific tool recommendations with pricing and setup guides,
-              your step-by-step action plan, ROI projections with the math shown,
-              and concrete next steps.
-            </p>
-            <button
-              onClick={handleUnlock}
-              className="bg-[#5C61F6] hover:bg-[#4F52D4] text-white font-semibold text-[15px] px-8 py-3 rounded-lg transition-colors"
-            >
-              Unlock Full Plan for $100
-            </button>
-          </div>
-        </div>
-      )}
-
       {/* Full report sections */}
-      {!showPaywall && (
-        <>
           {/* 4. Recommended Tools & Services */}
           {report.toolRecommendations.length > 0 && (
             <Section num={4} id="tools" title="Recommended Tools & Services">
@@ -665,40 +626,60 @@ export default function ReportPage() {
             </Section>
           )}
 
-          {/* Add-on upsell */}
-          {!assessment.addOns.policyAndPrompts && (
-            <div className="mt-10 border-2 border-dashed border-gray-200 rounded-xl p-8 text-center">
-              <h3 className="text-[18px] font-bold text-gray-900 mb-2">
-                Want ready-to-use prompts and guidelines?
-              </h3>
-              <p className="text-[14px] text-gray-500 mb-5 max-w-lg mx-auto">
-                Get AI usage guidelines tailored to your work, plus 10-20 copy-paste prompts
-                built around your actual tasks and workflows.
-              </p>
-              <button
-                onClick={async () => {
-                  try {
-                    const res = await fetch("/api/assessment/checkout", {
-                      method: "POST",
-                      headers: { "Content-Type": "application/json" },
-                      body: JSON.stringify({
-                        assessmentId: assessment.id,
-                        email: assessment.userId,
-                        addOn: "policy-prompts",
-                      }),
-                    });
-                    const data = await res.json();
-                    if (data.checkoutUrl) window.location.href = data.checkoutUrl;
-                  } catch { /* handle error */ }
-                }}
-                className="bg-[#5C61F6] hover:bg-[#4F52D4] text-white font-semibold text-[14px] px-6 py-2.5 rounded-lg transition-colors"
-              >
-                Add Prompts & Guidelines for $100
-              </button>
+      {/* Feedback */}
+      <section className="mt-12 pt-8 border-t border-gray-200">
+        <h2 className="text-[18px] font-bold text-gray-900 mb-2">How was your plan?</h2>
+        <p className="text-[13px] text-gray-400 mb-5">Your feedback helps us improve these reports.</p>
+
+        {feedbackSubmitted ? (
+          <div className="bg-green-50 border border-green-200 rounded-lg p-4 text-[14px] text-green-700">
+            Thank you for your feedback.
+          </div>
+        ) : (
+          <div className="space-y-4">
+            {/* Star rating */}
+            <div className="flex gap-2">
+              {[1, 2, 3, 4, 5].map((star) => (
+                <button
+                  key={star}
+                  onClick={() => setFeedbackRating(star)}
+                  className={`w-10 h-10 rounded-lg border-2 text-[16px] font-bold transition-colors ${
+                    feedbackRating !== null && star <= feedbackRating
+                      ? "border-[#5C61F6] bg-[#5C61F6]/10 text-[#5C61F6]"
+                      : "border-gray-200 text-gray-300 hover:border-gray-300"
+                  }`}
+                >
+                  {star}
+                </button>
+              ))}
+              <span className="text-[12px] text-gray-400 self-center ml-2">
+                {feedbackRating === 1 && "Not helpful"}
+                {feedbackRating === 2 && "Needs work"}
+                {feedbackRating === 3 && "Decent"}
+                {feedbackRating === 4 && "Helpful"}
+                {feedbackRating === 5 && "Very helpful"}
+              </span>
             </div>
-          )}
-        </>
-      )}
+
+            {/* Text feedback */}
+            <textarea
+              value={feedbackText}
+              onChange={(e) => setFeedbackText(e.target.value)}
+              placeholder="What could be better? What was most useful?"
+              rows={3}
+              className="w-full border border-gray-200 rounded-lg px-4 py-3 text-[13px] text-gray-700 placeholder-gray-300 focus:outline-none focus:border-[#5C61F6] focus:ring-1 focus:ring-[#5C61F6]/20 resize-none"
+            />
+
+            <button
+              onClick={handleFeedbackSubmit}
+              disabled={feedbackRating === null || feedbackSubmitting}
+              className="bg-gray-900 hover:bg-gray-800 text-white text-[13px] font-medium px-5 py-2 rounded-lg transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+            >
+              {feedbackSubmitting ? "Sending..." : "Submit Feedback"}
+            </button>
+          </div>
+        )}
+      </section>
 
       {/* Footer */}
       <footer className="mt-12 pt-6 border-t border-gray-200 flex justify-between text-[13px]">

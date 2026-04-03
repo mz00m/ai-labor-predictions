@@ -194,6 +194,30 @@ export async function getUserAssessments(userId: string): Promise<Assessment[]> 
 }
 
 /**
+ * Save user feedback for an assessment
+ */
+export async function saveFeedback(assessmentId: string, rating: number, comment?: string): Promise<void> {
+  const sql = getDb();
+  if (!sql) return;
+
+  await sql`
+    CREATE TABLE IF NOT EXISTS assessment_feedback (
+      id TEXT PRIMARY KEY,
+      assessment_id TEXT NOT NULL REFERENCES assessments(id),
+      rating INTEGER NOT NULL CHECK (rating >= 1 AND rating <= 5),
+      comment TEXT,
+      created_at TIMESTAMP DEFAULT NOW()
+    )
+  `;
+
+  const id = generateId();
+  await sql`
+    INSERT INTO assessment_feedback (id, assessment_id, rating, comment)
+    VALUES (${id}, ${assessmentId}, ${rating}, ${comment || null})
+  `;
+}
+
+/**
  * Update assessment status
  */
 export async function updateAssessmentStatus(assessmentId: string, status: Assessment["status"]): Promise<void> {
