@@ -24,24 +24,7 @@ import Stripe from "stripe";
 // Vercel Pro plan supports up to 300s
 export const maxDuration = 300;
 
-// In-memory rate limiting
-const rateLimiter = new Map<string, { count: number; resetAt: number }>();
-const RATE_LIMIT = 3; // 3 assessments per IP per hour
-const RATE_WINDOW = 60 * 60 * 1000;
-
 export async function POST(req: NextRequest) {
-  // Rate limit
-  const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
-  const now = Date.now();
-  const limiter = rateLimiter.get(ip);
-  if (limiter && limiter.resetAt > now && limiter.count >= RATE_LIMIT) {
-    return NextResponse.json({ error: "Rate limit exceeded. Please try again later." }, { status: 429 });
-  }
-  if (!limiter || limiter.resetAt <= now) {
-    rateLimiter.set(ip, { count: 1, resetAt: now + RATE_WINDOW });
-  } else {
-    limiter.count++;
-  }
 
   try {
     const formData = await req.formData();
