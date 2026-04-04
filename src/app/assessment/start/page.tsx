@@ -129,8 +129,7 @@ export default function AssessmentStartPage() {
     setError(null);
 
     try {
-      const formPayload = new FormData();
-      formPayload.append("intake", JSON.stringify({
+      const intakeData = {
         organizationName: form.organizationName,
         industry: form.industry,
         industryDetail: form.industryDetail,
@@ -147,9 +146,13 @@ export default function AssessmentStartPage() {
         websiteUrl: form.websiteUrl,
         additionalContext: form.additionalContext,
         uploadedFiles: files.map((f) => f.meta),
-      }));
+      };
+
+      const formPayload = new FormData();
+      formPayload.append("intake", JSON.stringify(intakeData));
       formPayload.append("email", form.email);
       formPayload.append("mode", "full");
+      formPayload.append("step", "profile"); // Multi-step: start with step 1
 
       for (const entry of files) {
         formPayload.append("files", entry.file);
@@ -166,7 +169,8 @@ export default function AssessmentStartPage() {
       }
 
       const data = await res.json();
-      router.push(`/assessment/report?id=${data.assessmentId}`);
+      // Redirect to progress page for multi-step review
+      router.push(`/assessment/progress?id=${data.assessmentId}`);
     } catch (err) {
       setError(err instanceof Error ? err.message : "An error occurred");
     } finally {
