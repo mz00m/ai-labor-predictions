@@ -52,11 +52,6 @@ export default function ProgressPage() {
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const [loadingMsgIndex, setLoadingMsgIndex] = useState(0);
 
-  // Feedback between steps
-  const [feedbackComments, setFeedbackComments] = useState("");
-  const [prioritize, setPrioritize] = useState("");
-  const [deprioritize, setDeprioritize] = useState("");
-
   // Track which steps are complete
   const [completedSteps, setCompletedSteps] = useState<Set<AssessmentStep>>(new Set());
 
@@ -127,17 +122,6 @@ export default function ProgressPage() {
       formPayload.append("assessmentId", id);
       formPayload.append("step", step);
 
-      // Include feedback if user provided any
-      if (feedbackComments || prioritize || deprioritize) {
-        formPayload.append("feedback", JSON.stringify({
-          comments: feedbackComments || undefined,
-          adjustments: (prioritize || deprioritize) ? {
-            prioritize: prioritize ? prioritize.split(",").map((s) => s.trim()).filter(Boolean) : undefined,
-            deprioritize: deprioritize ? deprioritize.split(",").map((s) => s.trim()).filter(Boolean) : undefined,
-          } : undefined,
-        }));
-      }
-
       const res = await fetch("/api/assessment/analyze", {
         method: "POST",
         body: formPayload,
@@ -161,11 +145,6 @@ export default function ProgressPage() {
 
       setCompletedSteps((prev) => new Set([...Array.from(prev), step]));
 
-      // Reset feedback
-      setFeedbackComments("");
-      setPrioritize("");
-      setDeprioritize("");
-
       // Move to next step
       const stepIndex = ASSESSMENT_STEPS.indexOf(step);
       if (stepIndex < ASSESSMENT_STEPS.length - 1) {
@@ -179,7 +158,7 @@ export default function ProgressPage() {
     } finally {
       setGenerating(false);
     }
-  }, [id, assessment, feedbackComments, prioritize, deprioritize, router]);
+  }, [id, assessment, router]);
 
   if (loading) {
     return (
@@ -394,58 +373,7 @@ export default function ProgressPage() {
             </p>
           </div>
 
-          {/* Feedback form (shown for steps 2-4, after previous step completed) */}
-          {activeStepIndex > 0 && !generating && (
-            <div className="bg-gray-50 border border-gray-200 rounded-xl p-5 mb-6 space-y-4">
-              <div>
-                <h3 className="text-[14px] font-semibold text-gray-900 mb-1">
-                  Steer the next section (optional)
-                </h3>
-                <p className="text-[12px] text-gray-400">
-                  Based on what you saw above, tell us what to focus on or skip.
-                </p>
-              </div>
-
-              <div>
-                <label className="block text-[12px] font-medium text-gray-600 mb-1">
-                  Any guidance or corrections?
-                </label>
-                <textarea
-                  value={feedbackComments}
-                  onChange={(e) => setFeedbackComments(e.target.value)}
-                  placeholder="e.g., Focus more on client communication tasks. The invoicing analysis was spot-on."
-                  className="w-full bg-white border border-gray-200 rounded-lg px-3 py-2 text-[13px] text-gray-700 placeholder:text-gray-300 min-h-[60px] resize-y focus:outline-none focus:border-[#5C61F6]"
-                />
-              </div>
-
-              <div className="grid sm:grid-cols-2 gap-3">
-                <div>
-                  <label className="block text-[12px] font-medium text-gray-600 mb-1">
-                    Prioritize (comma-separated)
-                  </label>
-                  <input
-                    type="text"
-                    value={prioritize}
-                    onChange={(e) => setPrioritize(e.target.value)}
-                    placeholder="e.g., email automation, scheduling"
-                    className="w-full bg-white border border-gray-200 rounded-lg px-3 py-2 text-[13px] text-gray-700 placeholder:text-gray-300 focus:outline-none focus:border-[#5C61F6]"
-                  />
-                </div>
-                <div>
-                  <label className="block text-[12px] font-medium text-gray-600 mb-1">
-                    Deprioritize (comma-separated)
-                  </label>
-                  <input
-                    type="text"
-                    value={deprioritize}
-                    onChange={(e) => setDeprioritize(e.target.value)}
-                    placeholder="e.g., social media, design work"
-                    className="w-full bg-white border border-gray-200 rounded-lg px-3 py-2 text-[13px] text-gray-700 placeholder:text-gray-300 focus:outline-none focus:border-[#5C61F6]"
-                  />
-                </div>
-              </div>
-            </div>
-          )}
+          {/* Feedback form removed from between steps — now only on final report page */}
 
           {/* Generate / Loading state */}
           {generating ? (
