@@ -4,9 +4,9 @@ import { generateAssessmentReport } from "@/lib/assessment/analyze";
 import { getOrCreateUser, createAssessment, saveAssessmentReport, updateAssessmentStatus } from "@/lib/assessment/db";
 import Stripe from "stripe";
 
-// Allow up to 120 seconds for Claude API call + processing
+// Allow up to 300 seconds for Claude API call + processing
 // Vercel Pro plan supports up to 300s
-export const maxDuration = 120;
+export const maxDuration = 300;
 
 // In-memory rate limiting
 const rateLimiter = new Map<string, { count: number; resetAt: number }>();
