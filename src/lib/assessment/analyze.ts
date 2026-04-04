@@ -588,8 +588,8 @@ Return valid JSON:
 }
 
 /**
- * Step 4: Risk Assessment & Policy
- * Uses full report context + feedback to produce risks, policy, prompts
+ * Step 4: Risk Assessment
+ * Uses full report context + feedback to produce risks and next steps
  */
 export async function generateStep4Risks(
   intake: AssessmentIntake,
@@ -603,7 +603,7 @@ export async function generateStep4Risks(
 
   const systemPrompt = `${CONSULTING_PHILOSOPHY}
 
-You are running Step 4 (final) of a 4-step assessment. Steps 1-3 produced a profile, task analysis, tool recommendations, and roadmap. Your job: assess risks, recommend skills to invest in, create an AI policy, and build a prompt library.
+You are running Step 4 (final) of a 4-step assessment. Steps 1-3 produced a profile, task analysis, tool recommendations, and roadmap. Your job: assess risks, identify skill gaps, and provide actionable next steps.
 
 Return valid JSON:
 {
@@ -617,27 +617,12 @@ Return valid JSON:
     "resistanceSources": ["Where pushback comes from and how to address it"],
     "dataReadinessNote": "Honest assessment. Messy data is NOT a blocker."
   },
-  "furtherEvaluation": ["Specific, actionable next steps. No fabricated URLs."],
-  "aiPolicy": {
-    "sections": [
-      { "title": "Section title", "content": "Practical guidelines" }
-    ]
-  },
-  "promptLibrary": [
-    {
-      "title": "Prompt name",
-      "department": "Work area",
-      "useCase": "What this helps with",
-      "prompt": "Full copy-paste prompt with [BRACKETS] for variables",
-      "tips": ["Tip 1", "Tip 2"]
-    }
-  ]
+  "furtherEvaluation": ["Specific, actionable next steps. No fabricated URLs."]
 }
 
 For the risk assessment, cite research data provided.
 For skills, reference the human capabilities framework.
-For the prompt library, generate 8-12 prompts tailored to their actual tasks.
-Make the AI policy practical, not legalistic. Write in second person ("you").`;
+Be thorough on change management, common pitfalls, and resistance sources. These are high-value sections.`;
 
   let userPrompt = buildIntakeContext(intake);
   userPrompt += buildStepContextSection(stepContext);
@@ -661,7 +646,7 @@ Make the AI policy practical, not legalistic. Write in second person ("you").`;
   if (capabilitiesContext) userPrompt += `\n\n${capabilitiesContext}`;
 
   try {
-    const parsed = await callClaude(systemPrompt, userPrompt, { maxTokens: 8000, timeout: 180000 });
+    const parsed = await callClaude(systemPrompt, userPrompt, { maxTokens: 4000, timeout: 120000 });
 
     const validated = Step4RisksSchema.safeParse(parsed);
     if (!validated.success) {
@@ -672,8 +657,6 @@ Make the AI policy practical, not legalistic. Write in second person ("you").`;
     return {
       riskAssessment: step4.riskAssessment,
       furtherEvaluation: step4.furtherEvaluation,
-      aiPolicy: step4.aiPolicy,
-      promptLibrary: step4.promptLibrary,
     };
   } catch (err: unknown) {
     const errMsg = err instanceof Error ? err.message : String(err);
@@ -683,8 +666,6 @@ Make the AI policy practical, not legalistic. Write in second person ("you").`;
     return {
       riskAssessment: defaults.riskAssessment,
       furtherEvaluation: defaults.furtherEvaluation,
-      aiPolicy: defaults.aiPolicy,
-      promptLibrary: defaults.promptLibrary,
     };
   }
 }
