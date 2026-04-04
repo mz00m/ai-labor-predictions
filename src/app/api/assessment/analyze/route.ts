@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { AssessmentIntake, AssessmentStep, ASSESSMENT_STEPS } from "@/lib/assessment/types";
+import { AssessmentIntakeSchema } from "@/lib/assessment/schemas";
 import {
-  generateAssessmentReport,
   generateStep1Profile,
   generateStep2Tasks,
   generateStep3Tools,
@@ -11,15 +11,12 @@ import {
   getOrCreateUser,
   createAssessment,
   getAssessment,
-  saveAssessmentReport,
   updateAssessmentStatus,
   updateCurrentStep,
   saveStepContext,
   saveStepFeedback,
   mergePartialReport,
 } from "@/lib/assessment/db";
-import Stripe from "stripe";
-
 // Allow up to 300 seconds for Claude API call + processing
 // Vercel Pro plan supports up to 300s
 export const maxDuration = 300;
@@ -28,78 +25,108 @@ export async function POST(req: NextRequest) {
 
   try {
     const formData = await req.formData();
-    const intakeRaw = formData.get("intake") as string;
+    const intakeRaw = formData.get("intake") as string | null;
     const email = formData.get("email") as string;
     const mode = (formData.get("mode") as string) || "preview";
-
-    // Email is required for initial calls; continuation calls (with assessmentId) don't need it
     const assessmentIdParam = formData.get("assessmentId") as string | null;
-    if (!intakeRaw || (!email && !assessmentIdParam)) {
+    const step = formData.get("step") as AssessmentStep | null;
+    const feedbackRaw = formData.get("feedback") as string | null;
+
+    // Continuation calls (steps 2-4) only need assessmentId + step.
+    // Initial calls need intake + email (or assessmentId for step 1 re-runs).
+    const isContinuation = assessmentIdParam && step && step !== "profile";
+
+    if (!isContinuation && !intakeRaw) {
+      return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
+    }
+    if (!isContinuation && !email && !assessmentIdParam) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
     }
 
-    const intakeParsed = JSON.parse(intakeRaw);
-
-    // Normalize all array fields — FormData can deliver these as comma-separated strings
-    const arrayFields = ["keyRoles", "primaryFunctions", "biggestChallenges", "goals", "currentTools"] as const;
-    for (const field of arrayFields) {
-      if (typeof intakeParsed[field] === "string") {
-        intakeParsed[field] = intakeParsed[field].split(",").map((s: string) => s.trim()).filter(Boolean);
-      }
-    }
-
-    const intake: AssessmentIntake = intakeParsed;
-
-    // Process uploaded files IN MEMORY ONLY
-    const fileContents: { name: string; category: string; text: string }[] = [];
-    const fileEntries = formData.getAll("files");
-
-    for (const entry of fileEntries) {
-      if (entry instanceof File) {
-        try {
-          const text = await extractFileText(entry);
-          const fileMeta = intake.uploadedFiles.find((f) => f.name === entry.name);
-          fileContents.push({
-            name: entry.name,
-            category: fileMeta?.category || "other",
-            text,
-          });
-        } catch (e) {
-          console.error(`Failed to extract text from ${entry.name}:`, e);
-        }
-      }
-    }
-
-    // Website content extraction (Puppeteer with fetch fallback)
+    // For continuation calls, load intake from DB instead of re-parsing from client
+    let intake: AssessmentIntake;
+    let fileContents: { name: string; category: string; text: string }[] = [];
     let websiteContent: string | null = null;
-    if (intake.websiteUrl) {
-      try {
-        const { scrapeWebsite, formatScrapedContent } = await import("@/lib/assessment/scrape-website");
-        const scraped = await scrapeWebsite(intake.websiteUrl);
-        if (scraped.success) {
-          websiteContent = formatScrapedContent(scraped);
+    let assessmentId: string | null = assessmentIdParam;
+
+    if (isContinuation) {
+      // Steps 2-4: load intake from existing assessment, skip file/website processing
+      const existing = await getAssessment(assessmentIdParam);
+      if (!existing) {
+        return NextResponse.json({ error: "Assessment not found" }, { status: 404 });
+      }
+      intake = existing.intake;
+    } else {
+      // Initial call or step 1: parse intake and process files/website
+      const intakeParsed = JSON.parse(intakeRaw!);
+
+      // Normalize all array fields — FormData can deliver these as comma-separated strings
+      const arrayFields = ["keyRoles", "primaryFunctions", "biggestChallenges", "goals", "currentTools"] as const;
+      for (const field of arrayFields) {
+        if (typeof intakeParsed[field] === "string") {
+          intakeParsed[field] = intakeParsed[field].split(",").map((s: string) => s.trim()).filter(Boolean);
         }
-      } catch (e) {
-        console.error("Failed to fetch website:", e);
-        // Fallback to basic fetch
-        try { websiteContent = await fetchWebsiteText(intake.websiteUrl); } catch { /* ignore */ }
+      }
+
+      // Validate intake against schema
+      const parseResult = AssessmentIntakeSchema.safeParse(intakeParsed);
+      if (!parseResult.success) {
+        const errors = parseResult.error.flatten();
+        return NextResponse.json(
+          { error: "Invalid intake data", details: errors.fieldErrors },
+          { status: 400 }
+        );
+      }
+      intake = parseResult.data;
+
+      // Process uploaded files IN MEMORY ONLY
+      const fileEntries = formData.getAll("files");
+      const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB
+      for (const entry of fileEntries) {
+        if (entry instanceof File) {
+          if (entry.size > MAX_FILE_SIZE) {
+            console.warn(`Skipping ${entry.name}: ${(entry.size / 1024 / 1024).toFixed(1)}MB exceeds 10MB limit`);
+            continue;
+          }
+          try {
+            const text = await extractFileText(entry);
+            const fileMeta = intake.uploadedFiles.find((f) => f.name === entry.name);
+            fileContents.push({
+              name: entry.name,
+              category: fileMeta?.category || "other",
+              text,
+            });
+          } catch (e) {
+            console.error(`Failed to extract text from ${entry.name}:`, e);
+          }
+        }
+      }
+
+      // Website content extraction (Puppeteer with fetch fallback)
+      if (intake.websiteUrl) {
+        try {
+          const { scrapeWebsite, formatScrapedContent } = await import("@/lib/assessment/scrape-website");
+          const scraped = await scrapeWebsite(intake.websiteUrl);
+          if (scraped.success) {
+            websiteContent = formatScrapedContent(scraped);
+          }
+        } catch (e) {
+          console.error("Failed to fetch website:", e);
+          try { websiteContent = await fetchWebsiteText(intake.websiteUrl); } catch { /* ignore */ }
+        }
+      }
+
+      // Create user and assessment record (only for initial calls without existing ID)
+      if (!assessmentIdParam) {
+        const user = await getOrCreateUser(email);
+        if (user) {
+          assessmentId = await createAssessment(user.id, intake);
+          if (assessmentId) {
+            await updateAssessmentStatus(assessmentId, "analyzing");
+          }
+        }
       }
     }
-
-    // Create user and assessment record
-    const user = await getOrCreateUser(email);
-    let assessmentId: string | null = null;
-
-    if (user) {
-      assessmentId = await createAssessment(user.id, intake);
-      if (assessmentId) {
-        await updateAssessmentStatus(assessmentId, "analyzing");
-      }
-    }
-
-    // Multi-step pipeline: if `step` parameter is present, run that step only
-    const step = formData.get("step") as AssessmentStep | null;
-    const feedbackRaw = formData.get("feedback") as string | null;
 
     if (step && ASSESSMENT_STEPS.includes(step)) {
       // Multi-step mode — run a single step and return partial results
@@ -174,62 +201,11 @@ export async function POST(req: NextRequest) {
       });
     }
 
-    // Legacy single-call mode (no step parameter)
-    // Always generate the FULL report — the frontend paywall controls what's visible.
-    const report = await generateAssessmentReport(intake, fileContents, websiteContent, "full");
-
-    // File contents are now garbage collected — never persisted
-
-    // Save sanitized report output only
-    if (assessmentId) {
-      await saveAssessmentReport(assessmentId, report);
-    }
-
-    // For full mode, create Stripe checkout (or bypass in dev mode)
-    let checkoutUrl: string | undefined;
-    if (mode === "full" && assessmentId) {
-      if (process.env.ASSESSMENT_DEV_MODE === "true") {
-        // Dev mode: skip Stripe, auto-mark as paid
-        const { markAssessmentPaid } = await import("@/lib/assessment/db");
-        await markAssessmentPaid(assessmentId, "dev_mode_bypass");
-        checkoutUrl = `${process.env.NEXT_PUBLIC_BASE_URL || "https://jobsdata.ai"}/assessment/report?id=${assessmentId}&payment=success`;
-      } else if (process.env.STRIPE_SECRET_KEY) {
-        const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
-          apiVersion: "2025-03-31.basil" as Stripe.LatestApiVersion,
-        });
-
-        const session = await stripe.checkout.sessions.create({
-          payment_method_types: ["card"],
-          customer_email: email,
-          line_items: [
-            {
-              price_data: {
-                currency: "usd",
-                product_data: {
-                  name: "Your AI Action Plan - Full Report",
-                  description:
-                    "Personalized AI action plan with task-by-task analysis, tool recommendations, and step-by-step roadmap",
-                },
-                unit_amount: 10000,
-              },
-              quantity: 1,
-            },
-          ],
-          mode: "payment",
-          success_url: `${process.env.NEXT_PUBLIC_BASE_URL || "https://jobsdata.ai"}/assessment/report?id=${assessmentId}&payment=success`,
-          cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL || "https://jobsdata.ai"}/assessment/report?id=${assessmentId}&preview=true`,
-          metadata: { assessmentId, type: "assessment" },
-        });
-
-        checkoutUrl = session.url || undefined;
-      }
-    }
-
-    return NextResponse.json({
-      assessmentId: assessmentId || `local_${Date.now()}`,
-      report: mode === "preview" ? report : undefined, // Only return report inline for preview
-      checkoutUrl,
-    });
+    // No step parameter — reject. The 4-step pipeline is the only supported path.
+    return NextResponse.json(
+      { error: "Missing required 'step' parameter. Use the multi-step pipeline." },
+      { status: 400 }
+    );
   } catch (error) {
     console.error("Assessment analysis error:", error);
     const message = error instanceof Error ? error.message : "Unknown error";
@@ -266,12 +242,9 @@ async function extractFileText(file: File): Promise<string> {
     file.type === "application/vnd.openxmlformats-officedocument.wordprocessingml.document" ||
     file.name.endsWith(".docx")
   ) {
-    // Basic DOCX extraction — pull text from XML content
-    // For production, consider using mammoth or docx libraries
-    const text = buffer.toString("utf-8");
-    // Extract text between XML tags (rough but functional)
-    const stripped = text.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
-    return stripped || "(Could not extract text from this document format)";
+    const mammoth = require("mammoth");
+    const result = await mammoth.extractRawText({ buffer });
+    return result.value || "(Could not extract text from this document format)";
   }
 
   return "(Unsupported file format — text could not be extracted)";

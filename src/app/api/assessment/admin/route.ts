@@ -23,17 +23,6 @@ export async function GET(req: NextRequest) {
 
   await initAssessmentTables();
 
-  // Ensure feedback table exists
-  await sql`
-    CREATE TABLE IF NOT EXISTS assessment_feedback (
-      id TEXT PRIMARY KEY,
-      assessment_id TEXT NOT NULL REFERENCES assessments(id),
-      rating INTEGER NOT NULL CHECK (rating >= 1 AND rating <= 5),
-      comment TEXT,
-      created_at TIMESTAMP DEFAULT NOW()
-    )
-  `;
-
   // All assessments with user email
   const assessments = await sql`
     SELECT
