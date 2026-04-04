@@ -57,7 +57,7 @@ const TRUST_POINTS = [
       </svg>
     ),
     title: "Research-backed recommendations",
-    description: "Built on 300+ sources tracking AI's real impact on jobs, wages, and productivity across industries.",
+    description: "Built on 300+ sources including a 2026 field experiment with 515 firms showing that knowing where to use AI matters more than having the tools.",
   },
 ];
 
@@ -76,6 +76,11 @@ const TESTIMONIAL_SCENARIOS = [
     role: "Owner / Operator",
     industry: "Restaurant",
     quote: "I didn't know where to start with AI. The action plan broke it down into things I could do this week vs. this quarter.",
+  },
+  {
+    role: "Operations Lead",
+    industry: "Logistics company",
+    quote: "I'm not technical at all. This didn't ask me to learn to code -- it just showed me the five things in my week where AI could save real time.",
   },
 ];
 
@@ -114,7 +119,7 @@ export default function AssessmentLanding() {
               href="/assessment/start"
               className="inline-flex items-center justify-center gap-2 bg-[#5C61F6] hover:bg-[#4F52D4] text-white font-semibold text-[15px] px-7 py-3 rounded-lg transition-colors"
             >
-              Find My AI Opportunities
+              Get Your AI Plan of Action
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
               </svg>
@@ -130,17 +135,20 @@ export default function AssessmentLanding() {
           {/* Quick stats */}
           <div className="mt-12 flex flex-wrap gap-8 text-[13px]">
             <div>
-              <div className="text-[28px] font-black text-gray-900">300+</div>
-              <div className="text-gray-400">Research sources behind it</div>
+              <div className="text-[28px] font-black text-gray-900">1.9x</div>
+              <div className="text-gray-400">More revenue when firms knew where to apply AI</div>
             </div>
             <div>
-              <div className="text-[28px] font-black text-gray-900">16</div>
-              <div className="text-gray-400">Industries covered</div>
+              <div className="text-[28px] font-black text-gray-900">44%</div>
+              <div className="text-gray-400">More AI uses discovered with the right guidance</div>
             </div>
             <div>
-              <div className="text-[28px] font-black text-gray-900">PDF</div>
-              <div className="text-gray-400">Yours to keep and share</div>
+              <div className="text-[28px] font-black text-gray-900">~40%</div>
+              <div className="text-gray-400">Less funding needed -- same team, more output</div>
             </div>
+          </div>
+          <div className="mt-3 text-[11px] text-gray-300">
+            Source: Kim, Kim &amp; Koning (2026), INSEAD &amp; Harvard Business School. Field experiment, 515 firms.
           </div>
         </div>
       </section>
@@ -159,7 +167,7 @@ export default function AssessmentLanding() {
           gives you a clear, practical plan based on what you actually do every day.
         </p>
 
-        <div className="grid md:grid-cols-3 gap-4">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
           {TESTIMONIAL_SCENARIOS.map((t) => (
             <div
               key={t.role}
@@ -173,6 +181,62 @@ export default function AssessmentLanding() {
             </div>
           ))}
         </div>
+      </section>
+
+      {/* Why a plan matters */}
+      <section className="max-w-6xl mx-auto px-6 sm:px-10 py-16">
+        <h2 className="text-[13px] font-bold uppercase tracking-widest text-[#5C61F6] mb-3">
+          The research is clear
+        </h2>
+        <p className="text-[24px] sm:text-[32px] font-bold text-gray-900 mb-6 max-w-3xl">
+          The #1 thing holding people back from AI isn&apos;t the technology. It&apos;s knowing where to use it.
+        </p>
+        <div className="text-[15px] text-gray-500 leading-relaxed max-w-3xl space-y-4 mb-10">
+          <p>
+            A 2026 study from INSEAD and Harvard Business School followed 515 companies. Every single one
+            had the same AI tools, the same training, the same budget. The only difference? Some got help
+            figuring out <span className="text-gray-700 font-medium">where</span> AI fit into their actual work.
+          </p>
+        </div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+          <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+            <div className="text-[28px] font-black text-[#5C61F6]">1.9x</div>
+            <div className="text-[14px] font-semibold text-gray-900 mt-1">More revenue</div>
+            <p className="text-[13px] text-gray-400 mt-1">
+              Not because they had better tools. Because they knew where to point them.
+            </p>
+          </div>
+          <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+            <div className="text-[28px] font-black text-[#5C61F6]">44%</div>
+            <div className="text-[14px] font-semibold text-gray-900 mt-1">More ways to use AI</div>
+            <p className="text-[13px] text-gray-400 mt-1">
+              Most people stop at the obvious stuff. The real gains are in the tasks you haven&apos;t thought of yet.
+            </p>
+          </div>
+          <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+            <div className="text-[28px] font-black text-[#5C61F6]">18%</div>
+            <div className="text-[14px] font-semibold text-gray-900 mt-1">More likely to land customers</div>
+            <p className="text-[13px] text-gray-400 mt-1">
+              Knowing where AI helps means you move faster on the things that matter.
+            </p>
+          </div>
+          <div className="bg-gray-50 border border-gray-100 rounded-xl p-5">
+            <div className="text-[28px] font-black text-[#5C61F6]">~40%</div>
+            <div className="text-[14px] font-semibold text-gray-900 mt-1">Less money needed to grow</div>
+            <p className="text-[13px] text-gray-400 mt-1">
+              When AI handles the right tasks, you do more with what you already have.
+            </p>
+          </div>
+        </div>
+
+        <p className="text-[14px] text-gray-400 leading-relaxed max-w-3xl">
+          The researchers called this the &quot;mapping problem&quot; -- the challenge of figuring out where AI
+          actually helps <span className="italic">your</span> specific work. That&apos;s exactly what this assessment does for you.
+        </p>
+        <p className="text-[11px] text-gray-300 mt-3">
+          Kim, Kim &amp; Koning (2026). &quot;Mapping AI into Production.&quot; INSEAD Working Paper. Field experiment, 515 firms.
+        </p>
       </section>
 
       {/* How it works */}
@@ -289,21 +353,60 @@ export default function AssessmentLanding() {
         </div>
       </section>
 
+      {/* Research stat strip */}
+      <section className="max-w-6xl mx-auto px-6 sm:px-10 py-10">
+        <div className="flex flex-col sm:flex-row justify-center gap-8 sm:gap-16 text-center">
+          <div>
+            <div className="text-[13px] text-[#5C61F6] mb-1">
+              <svg className="w-4 h-4 inline-block mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18" />
+              </svg>
+              Productivity
+            </div>
+            <div className="text-[28px] font-black text-gray-900">12%</div>
+            <div className="text-[12px] text-gray-400">more work gets done when you know where AI fits</div>
+          </div>
+          <div>
+            <div className="text-[13px] text-[#5C61F6] mb-1">
+              <svg className="w-4 h-4 inline-block mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              Revenue
+            </div>
+            <div className="text-[28px] font-black text-gray-900">1.9x</div>
+            <div className="text-[12px] text-gray-400">revenue growth from using AI in the right places</div>
+          </div>
+          <div>
+            <div className="text-[13px] text-[#5C61F6] mb-1">
+              <svg className="w-4 h-4 inline-block mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
+              </svg>
+              Efficiency
+            </div>
+            <div className="text-[28px] font-black text-gray-900">~40%</div>
+            <div className="text-[12px] text-gray-400">less money needed to grow -- same team, more output</div>
+          </div>
+        </div>
+        <p className="text-center text-[11px] text-gray-300 mt-4">
+          Kim, Kim &amp; Koning (2026), INSEAD &amp; Harvard Business School. Field experiment, 515 firms.
+        </p>
+      </section>
+
       {/* Final CTA */}
       <section className="max-w-6xl mx-auto px-6 sm:px-10 py-16 text-center">
         <h2 className="text-[28px] sm:text-[36px] font-bold text-gray-900 mb-4">
-          AI is already changing your industry.
+          Companies that figured out where to use AI
           <br />
-          <span className="text-[#5C61F6]">Find out where it can help you.</span>
+          <span className="text-[#5C61F6]">made nearly twice the revenue.</span>
         </h2>
         <p className="text-[15px] text-gray-500 mb-8 max-w-xl mx-auto">
-          Get your personalized action plan in under 5 minutes. Completely free.
+          The ones that didn&apos;t had the exact same tools. Find out where AI fits in your work. It takes 5 minutes. It&apos;s free.
         </p>
         <Link
           href="/assessment/start"
           className="inline-flex items-center justify-center gap-2 bg-[#5C61F6] hover:bg-[#4F52D4] text-white font-semibold text-[15px] px-8 py-3 rounded-lg transition-colors"
         >
-          Get Your Free AI Action Plan
+          Get Your AI Plan of Action
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
           </svg>
