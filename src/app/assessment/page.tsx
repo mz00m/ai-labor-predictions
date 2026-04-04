@@ -99,7 +99,15 @@ export default function AssessmentLanding() {
         <div className="relative max-w-6xl mx-auto px-6 sm:px-10 pt-20 pb-16">
           <div className="inline-flex items-center gap-2 text-[12px] font-medium text-[#5C61F6] bg-[#5C61F6]/[0.08] rounded-full px-3 py-1 mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-[#5C61F6] animate-pulse" />
-            Built on jobsdata.ai research
+            Built on jobsdata.ai research &middot;{" "}
+            <a
+              href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6513481"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-[#4F52D4]"
+            >
+              Kim, Kim &amp; Koning (2026)
+            </a>
           </div>
 
           <h1 className="text-[40px] sm:text-[56px] font-black tracking-tight text-gray-900 leading-[1.05] max-w-3xl">

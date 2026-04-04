@@ -157,8 +157,6 @@ export default function Navbar() {
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const menuRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
-  const isAssessment = pathname.startsWith("/assessment");
-
   // Close mobile menu on route change
   useEffect(() => {
     setMobileOpen(false);
@@ -177,11 +175,6 @@ export default function Navbar() {
       return () => document.removeEventListener("mousedown", handleClickOutside);
     }
   }, [mobileOpen]);
-
-  // Hide main navbar on assessment pages (they have their own nav)
-  if (isAssessment) {
-    return null;
-  }
 
   return (
     <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-black/[0.04]">
