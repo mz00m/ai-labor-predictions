@@ -452,7 +452,7 @@ Use the user's feedback to adjust priorities. Reference their uploaded documents
   if (capabilitiesContext) userPrompt += `\n\n${capabilitiesContext}`;
 
   try {
-    const parsed = await callClaude(systemPrompt, userPrompt);
+    const parsed = await callClaude(systemPrompt, userPrompt, { maxTokens: 8000, timeout: 180000 });
 
     const validated = Step2TasksSchema.safeParse(parsed);
     if (!validated.success) {
@@ -661,7 +661,7 @@ Make the AI policy practical, not legalistic. Write in second person ("you").`;
   if (capabilitiesContext) userPrompt += `\n\n${capabilitiesContext}`;
 
   try {
-    const parsed = await callClaude(systemPrompt, userPrompt);
+    const parsed = await callClaude(systemPrompt, userPrompt, { maxTokens: 8000, timeout: 180000 });
 
     const validated = Step4RisksSchema.safeParse(parsed);
     if (!validated.success) {
