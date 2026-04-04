@@ -217,23 +217,6 @@ const RiskAssessmentSchema = z.object({
   dataReadinessNote: z.string().optional(),
 });
 
-const AiPolicySectionSchema = z.object({
-  title: z.string(),
-  content: z.string(),
-});
-
-const AiPolicyDocumentSchema = z.object({
-  sections: z.array(AiPolicySectionSchema),
-});
-
-const PromptLibraryEntrySchema = z.object({
-  title: z.string(),
-  department: z.string(),
-  useCase: z.string(),
-  prompt: z.string(),
-  tips: z.array(z.string()),
-});
-
 export const Step4RisksSchema = z.object({
   riskAssessment: RiskAssessmentSchema.default({
     overallRiskLevel: "moderate",
@@ -243,6 +226,4 @@ export const Step4RisksSchema = z.object({
     dataPrivacyConsiderations: "",
   }),
   furtherEvaluation: z.array(z.string()).default([]),
-  aiPolicy: AiPolicyDocumentSchema.optional(),
-  promptLibrary: z.array(PromptLibraryEntrySchema).optional(),
 });
