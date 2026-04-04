@@ -117,10 +117,15 @@ export default function ProgressPage() {
 
     try {
       const formPayload = new FormData();
-      formPayload.append("intake", JSON.stringify(assessment.intake));
-      formPayload.append("email", ""); // Already created
       formPayload.append("assessmentId", id);
       formPayload.append("step", step);
+
+      // Only send full intake + files for the first step (profile).
+      // Steps 2-4 load intake from DB, skip file/website reprocessing.
+      if (step === "profile") {
+        formPayload.append("intake", JSON.stringify(assessment.intake));
+        formPayload.append("email", "");
+      }
 
       const res = await fetch("/api/assessment/analyze", {
         method: "POST",

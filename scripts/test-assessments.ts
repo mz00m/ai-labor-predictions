@@ -8,7 +8,12 @@
 //   bun run test-assessments -- --only community-foundation,dental-practice
 //   bun run test-assessments -- --preview  # Run in preview mode instead of full
 
-import { generateAssessmentReport } from "../src/lib/assessment/analyze";
+import {
+  generateStep1Profile,
+  generateStep2Tasks,
+  generateStep3Tools,
+  generateStep4Risks,
+} from "../src/lib/assessment/analyze";
 import { TEST_PROFILES, type TestProfile } from "./fixtures/assessment-profiles";
 import type { AssessmentReport } from "../src/lib/assessment/types";
 import * as fs from "fs";
@@ -180,15 +185,27 @@ async function runProfile(profile: TestProfile): Promise<void> {
   console.log(`\n  Running: ${profile.name} (${profile.intake.industry}, ${profile.intake.companySize})...`);
 
   try {
-    const report = await generateAssessmentReport(
+    // Run the 4-step sequential pipeline
+    console.log(`    Step 1/4: Profile...`);
+    const { report: step1, stepContext } = await generateStep1Profile(
       profile.intake,
       profile.fileContents || [],
-      profile.websiteContent || null,
-      mode
+      profile.websiteContent || null
     );
 
+    console.log(`    Step 2/4: Tasks...`);
+    const step2 = await generateStep2Tasks(profile.intake, step1 as any, stepContext);
+
+    console.log(`    Step 3/4: Tools...`);
+    const step3 = await generateStep3Tools(profile.intake, { ...step1, ...step2 } as any, stepContext);
+
+    console.log(`    Step 4/4: Risks...`);
+    const step4 = await generateStep4Risks(profile.intake, { ...step1, ...step2, ...step3 } as any, stepContext);
+
+    const report = { ...step1, ...step2, ...step3, ...step4 } as AssessmentReport;
+
     const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
-    console.log(`  Done in ${elapsed}s — readiness score: ${report.organizationProfile.aiReadinessScore}/10, ${report.taskAnalysis.length} tasks, ${report.toolRecommendations.length} tools`);
+    console.log(`  Done in ${elapsed}s — readiness score: ${report.organizationProfile?.aiReadinessScore ?? "N/A"}/10, ${report.taskAnalysis?.length ?? 0} tasks, ${report.toolRecommendations?.length ?? 0} tools`);
 
     // Write readable markdown
     const mdContent = formatReport(profile, report);

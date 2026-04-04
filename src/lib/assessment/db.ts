@@ -41,6 +41,16 @@ export async function initAssessmentTables(): Promise<void> {
     )
   `;
 
+  await sql`
+    CREATE TABLE IF NOT EXISTS assessment_feedback (
+      id TEXT PRIMARY KEY,
+      assessment_id TEXT NOT NULL REFERENCES assessments(id),
+      rating INTEGER NOT NULL CHECK (rating >= 1 AND rating <= 5),
+      comment TEXT,
+      created_at TIMESTAMP DEFAULT NOW()
+    )
+  `;
+
   // Add columns for existing tables (safe to run multiple times)
   await sql`
     DO $$ BEGIN
@@ -219,16 +229,6 @@ export async function saveFeedback(assessmentId: string, rating: number, comment
   const sql = getDb();
   if (!sql) return;
 
-  await sql`
-    CREATE TABLE IF NOT EXISTS assessment_feedback (
-      id TEXT PRIMARY KEY,
-      assessment_id TEXT NOT NULL REFERENCES assessments(id),
-      rating INTEGER NOT NULL CHECK (rating >= 1 AND rating <= 5),
-      comment TEXT,
-      created_at TIMESTAMP DEFAULT NOW()
-    )
-  `;
-
   const id = generateId();
   await sql`
     INSERT INTO assessment_feedback (id, assessment_id, rating, comment)
@@ -288,22 +288,16 @@ export async function saveStepFeedback(assessmentId: string, feedback: StepFeedb
 
 /**
  * Merge partial report data into existing report_json.
- * Used by multi-step pipeline to build the report incrementally.
+ * Uses PostgreSQL jsonb_concat to atomically merge without read-modify-write race.
  */
 export async function mergePartialReport(assessmentId: string, partial: Partial<AssessmentReport>): Promise<void> {
   const sql = getDb();
   if (!sql) return;
 
-  // Fetch existing report, merge, save
-  const rows = await sql`
-    SELECT report_json FROM assessments WHERE id = ${assessmentId}
-  ` as Row[];
-
-  const existing = (rows[0]?.report_json as AssessmentReport) || {};
-  const merged = { ...existing, ...partial };
-
   await sql`
-    UPDATE assessments SET report_json = ${JSON.stringify(merged)} WHERE id = ${assessmentId}
+    UPDATE assessments
+    SET report_json = COALESCE(report_json, '{}'::jsonb) || ${JSON.stringify(partial)}::jsonb
+    WHERE id = ${assessmentId}
   `;
 }
 
