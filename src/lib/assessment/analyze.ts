@@ -17,7 +17,7 @@ import {
   RiskAssessment,
 } from "./types";
 import { stripPii } from "./pii-strip";
-import { getIndustryTemplate } from "./taxonomy";
+import { getIndustryTemplate, DepartmentTemplate } from "./taxonomy";
 import { getOnetSummaryForPrompt } from "./onet-tasks";
 import { formatToolsForPrompt } from "@/data/tools";
 import { formatResearchContextForPrompt } from "./research-context";
@@ -122,6 +122,101 @@ Write like a smart, experienced consultant who genuinely wants this person to su
 
 FACTUAL ACCURACY: NEVER fabricate statistics, URLs, case studies, or research findings. Only cite data provided to you.`;
 
+function filterDepartmentsToRole(
+  departments: DepartmentTemplate[],
+  intake: AssessmentIntake
+): DepartmentTemplate[] {
+  // Collect all signals about the person's role into lowercase terms for matching
+  const roleTerms = new Set<string>();
+
+  for (const fn of intake.primaryFunctions) {
+    roleTerms.add(fn.toLowerCase());
+  }
+  for (const role of intake.keyRoles) {
+    roleTerms.add(role.toLowerCase());
+  }
+  if (intake.departmentName) {
+    roleTerms.add(intake.departmentName.toLowerCase());
+  }
+  if (intake.teamDescription) {
+    roleTerms.add(intake.teamDescription.toLowerCase());
+  }
+
+  if (roleTerms.size === 0) return departments;
+
+  const matched = departments.filter((dept) => {
+    const deptName = dept.name.toLowerCase();
+    const deptFunctions = dept.keyFunctions.map(f => f.toLowerCase());
+    const deptRoles = dept.typicalRoles.map(r => r.toLowerCase());
+
+    for (const term of Array.from(roleTerms)) {
+      // Check if any role term appears in the department name, functions, or roles
+      if (deptName.includes(term) || term.includes(deptName)) return true;
+      for (const fn of deptFunctions) {
+        if (fn.includes(term) || term.includes(fn)) return true;
+      }
+      for (const role of deptRoles) {
+        if (role.includes(term) || term.includes(role)) return true;
+      }
+      // Check for common abbreviations and synonyms
+      const synonyms: Record<string, string[]> = {
+        "hr": ["human resources", "people", "people ops", "people operations", "talent"],
+        "human resources": ["hr", "people", "people ops", "people operations", "talent"],
+        "people ops": ["hr", "human resources", "people operations", "talent"],
+        "finance": ["accounting", "financial", "bookkeeping", "ap/ar"],
+        "accounting": ["finance", "financial", "bookkeeping"],
+        "marketing": ["communications", "content", "social media", "brand"],
+        "it": ["technology", "engineering", "devops", "infrastructure"],
+        "technology": ["it", "engineering", "devops", "software"],
+        "sales": ["business development", "revenue", "account management"],
+        "operations": ["ops", "admin", "administrative"],
+        "legal": ["compliance", "regulatory", "contracts"],
+      };
+
+      const termSynonyms = synonyms[term] || [];
+      for (const syn of termSynonyms) {
+        if (deptName.includes(syn)) return true;
+        for (const fn of deptFunctions) {
+          if (fn.includes(syn)) return true;
+        }
+      }
+    }
+    return false;
+  });
+
+  return matched;
+}
+
+function inferRoleFocus(intake: AssessmentIntake): string {
+  // Build a clear description of what this person actually does
+  const signals: string[] = [];
+
+  if (intake.departmentName) {
+    signals.push(`Department: ${intake.departmentName}`);
+  }
+  if (intake.teamDescription) {
+    signals.push(`Role/Team: ${intake.teamDescription}`);
+  }
+  if (intake.primaryFunctions.length > 0) {
+    signals.push(`Functions: ${intake.primaryFunctions.join(", ")}`);
+  }
+  if (intake.keyRoles.length > 0) {
+    signals.push(`Roles: ${intake.keyRoles.join(", ")}`);
+  }
+
+  if (signals.length === 0) return "";
+
+  return `
+## CRITICAL: This Person's Actual Role
+The person taking this assessment works in the following capacity:
+${signals.map(s => `- ${s}`).join("\n")}
+
+**IMPORTANT: Tailor ALL recommendations to this person's actual job function, NOT the company's industry.**
+For example, a People Ops person at a tech company needs HR/people management tasks (onboarding, performance reviews, benefits administration, employee engagement), NOT software engineering or DevOps tasks. A finance person at a healthcare company needs accounting and financial planning tasks, NOT clinical or medical tasks.
+
+The company's industry (${intake.industry}) provides context for the DOMAIN they work in, but their function (${intake.primaryFunctions.join(", ")}) determines WHAT TASKS to recommend.`;
+}
+
 function buildIntakeContext(intake: AssessmentIntake): string {
   const maturityDescriptions: Record<string, string> = {
     "none": "Has NOT used AI tools yet. Start with the absolute basics.",
@@ -130,6 +225,8 @@ function buildIntakeContext(intake: AssessmentIntake): string {
     "some-adoption": "AI is part of regular workflow. Focus on optimizing existing tools + 1-2 additions.",
     "widespread": "Uses AI tools daily. Ready for advanced use cases and automation.",
   };
+
+  const roleFocus = inferRoleFocus(intake);
 
   return `## Who This Is For
 **Organization:** ${intake.organizationName}
@@ -145,7 +242,8 @@ ${intake.teamDescription ? `**Team/Role:** ${intake.teamDescription}` : ""}
 **Key Roles:** ${intake.keyRoles.join(", ")}
 **Challenges:** ${intake.biggestChallenges.join("; ")}
 **Goals:** ${intake.goals.join("; ")}
-${intake.additionalContext ? `**Additional Context:** ${intake.additionalContext}` : ""}`;
+${intake.additionalContext ? `**Additional Context:** ${intake.additionalContext}` : ""}
+${roleFocus}`;
 }
 
 function buildFeedbackContext(feedback?: StepFeedback[]): string {
@@ -411,6 +509,12 @@ export async function generateStep2Tasks(
 
 You are running Step 2 of a 4-step assessment. Step 1 already produced an organization profile and quick wins. Your job: deep-dive into their specific tasks and roles.
 
+CRITICAL RULE — Role-Based Tailoring:
+The person's actual role and functions MUST drive your task recommendations. Do NOT default to the company's industry for task ideas.
+- A People Ops person at a tech company needs HR tasks (onboarding workflows, performance review cycles, benefits administration, employee engagement surveys, PTO tracking, compliance documentation) — NOT software engineering or DevOps tasks.
+- A finance person at a healthcare company needs accounting tasks (AP/AR, financial reporting, budget forecasting, expense management) — NOT clinical or patient care tasks.
+- Look at the "Key Functions" and "Key Roles" fields in the intake. These tell you what the person actually does day-to-day. The "Industry" field tells you the domain context, not the job function.
+
 AI Maturity Gating — The person's maturity level determines task complexity:
 - "none"/"exploring": Focus on simple, single-tool tasks
 - "piloting": Can handle moderate multi-step workflows
@@ -436,7 +540,7 @@ Return valid JSON:
   ]
 }
 
-Generate 8-12 task analyses sorted by time impact (highest savings first).
+Generate 8-12 task analyses sorted by time impact (highest savings first). At least 80% of tasks MUST be directly relevant to the person's stated functions and roles — not generic industry tasks.
 Use the user's feedback to adjust priorities. Reference their uploaded documents context.`;
 
   let userPrompt = buildIntakeContext(intake);
@@ -448,7 +552,14 @@ Use the user's feedback to adjust priorities. Reference their uploaded documents
   }
 
   userPrompt += `\n\n${onetSummary}`;
-  userPrompt += `\n\n## Industry Context\n${template.departments.map((d) => `- ${d.name}: ${d.aiOpportunityAreas.join(", ")}`).join("\n")}`;
+  // Filter departments to those matching the person's actual role/functions
+  const relevantDepts = filterDepartmentsToRole(template.departments, intake);
+  if (relevantDepts.length > 0) {
+    userPrompt += `\n\n## Relevant Department Context (matched to this person's role)\n${relevantDepts.map((d) => `- ${d.name}: ${d.aiOpportunityAreas.join(", ")}`).join("\n")}`;
+  } else {
+    // Fallback: show all departments but mark which ones match
+    userPrompt += `\n\n## Industry Context\n${template.departments.map((d) => `- ${d.name}: ${d.aiOpportunityAreas.join(", ")}`).join("\n")}`;
+  }
   if (capabilitiesContext) userPrompt += `\n\n${capabilitiesContext}`;
 
   try {
