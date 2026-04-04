@@ -39,18 +39,12 @@ export async function POST(req: NextRequest) {
 
     const intakeParsed = JSON.parse(intakeRaw);
 
-    // Normalize fields that arrive as strings from FormData but are typed as arrays
-    if (typeof intakeParsed.keyRoles === "string") {
-      intakeParsed.keyRoles = intakeParsed.keyRoles.split(",").map((s: string) => s.trim()).filter(Boolean);
-    }
-    if (typeof intakeParsed.primaryFunctions === "string") {
-      intakeParsed.primaryFunctions = intakeParsed.primaryFunctions.split(",").map((s: string) => s.trim()).filter(Boolean);
-    }
-    if (typeof intakeParsed.biggestChallenges === "string") {
-      intakeParsed.biggestChallenges = intakeParsed.biggestChallenges.split(",").map((s: string) => s.trim()).filter(Boolean);
-    }
-    if (typeof intakeParsed.goals === "string") {
-      intakeParsed.goals = intakeParsed.goals.split(",").map((s: string) => s.trim()).filter(Boolean);
+    // Normalize all array fields — FormData can deliver these as comma-separated strings
+    const arrayFields = ["keyRoles", "primaryFunctions", "biggestChallenges", "goals", "currentTools"] as const;
+    for (const field of arrayFields) {
+      if (typeof intakeParsed[field] === "string") {
+        intakeParsed[field] = intakeParsed[field].split(",").map((s: string) => s.trim()).filter(Boolean);
+      }
     }
 
     const intake: AssessmentIntake = intakeParsed;
