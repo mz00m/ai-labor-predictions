@@ -1248,6 +1248,15 @@
       "sourceIds": ["kim-koning-mapping-ai-firms-2026"],
       "evidenceTier": 1,
       "label": "INSEAD/HBS RCT: AI-using firms grew 1.9x revenue, labor demand unchanged"
+    },
+    {
+      "date": "2026-03-27",
+      "direction": "down",
+      "sourceIds": [
+        "cai-yeckehzaare-mit-ontology-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "MIT/CCI: 75% of AI market value in software/info tasks; physical work largely unaffected"
     }
   ],
   "sources": [
@@ -2256,6 +2265,16 @@
       "evidenceTier": 1,
       "datePublished": "2026-03-30",
       "excerpt": "Despite faster growth, treated firms do not scale inputs proportionally. Their demand for external capital investment falls by 39.5% relative to the control group, while their demand for labor remains unchanged.",
+      "dateAdded": "2026-04-04"
+    },
+    {
+      "id": "cai-yeckehzaare-mit-ontology-2026",
+      "title": "Where can AI be used? Insights from a deep ontology of work activities",
+      "url": "https://arxiv.org/abs/2603.20619",
+      "publisher": "MIT Center for Collective Intelligence (Cai, YeckehZaare, Sun et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-27",
+      "excerpt": "75% of AI application market value concentrated in software and information tasks. Physical work activities remain largely unaffected. Think/Do/Interact ontology of 39,603 activities based on O*NET 29.1.",
       "dateAdded": "2026-04-04"
     }
   ]

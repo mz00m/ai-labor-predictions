@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "Where can AI be used? Insights from a deep ontology of work activities",
+      "author": "Cai, YeckehZaare, Sun et al.",
+      "publisher": "MIT Center for Collective Intelligence (arXiv)",
+      "date": "2026-03-27",
+      "url": "https://arxiv.org/abs/2603.20619",
+      "takeaway": "Introduces Think/Do/Interact ontology of 39,603 work activities from O*NET 29.1. 92% of AI applications (TAAFT dataset) map to only 6.8% of activities. AI apps grew 6x from 2022-2024 but activity coverage expanded only 1.2x — adoption is deep, not broad. 75% of AI market value concentrated in software/information tasks. 58% of apps target 'Create information' activities. Physical work largely unaffected. EPOCH framework (Empathy, Presence, Opinion, Creativity, Hope) identifies durable human advantages. Inheritance principle: parent-level AI applicability passes to child activities.",
+      "weekFeatured": "2026-04-04",
+      "tier": 1
+    },
+    {
       "title": "Economists Once Dismissed the A.I. Job Threat, but Not Anymore",
       "author": "Ben Casselman",
       "publisher": "The New York Times",

@@ -294,6 +294,15 @@
       ],
       "evidenceTier": 2,
       "label": "OECD: 50% of SMEs say employees lack skills for genAI"
+    },
+    {
+      "date": "2026-03-27",
+      "direction": "neutral",
+      "sourceIds": [
+        "cai-yeckehzaare-mit-ontology-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "MIT/CCI: AI apps grew 6x (2022-2024) but activity coverage only 1.2x; adoption deep not broad"
     }
   ],
   "sources": [
@@ -544,6 +553,16 @@
       "datePublished": "2025-12-01",
       "excerpt": "50% of SMEs report that their employees lack the skills to use generative AI.",
       "dateAdded": "2026-04-03"
+    },
+    {
+      "id": "cai-yeckehzaare-mit-ontology-2026",
+      "title": "Where can AI be used? Insights from a deep ontology of work activities",
+      "url": "https://arxiv.org/abs/2603.20619",
+      "publisher": "MIT Center for Collective Intelligence (Cai, YeckehZaare, Sun et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-27",
+      "excerpt": "Number of AI applications grew 6x from 2022-2024 (TAAFT dataset), but the set of work activities they cover expanded only 1.2x. Adoption is intensifying within a narrow band of activities rather than broadening.",
+      "dateAdded": "2026-04-04"
     }
   ]
 }
