@@ -149,7 +149,7 @@ function filterDepartmentsToRole(
     const deptFunctions = dept.keyFunctions.map(f => f.toLowerCase());
     const deptRoles = dept.typicalRoles.map(r => r.toLowerCase());
 
-    for (const term of roleTerms) {
+    for (const term of Array.from(roleTerms)) {
       // Check if any role term appears in the department name, functions, or roles
       if (deptName.includes(term) || term.includes(deptName)) return true;
       for (const fn of deptFunctions) {
