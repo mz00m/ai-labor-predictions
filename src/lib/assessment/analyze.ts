@@ -198,13 +198,15 @@ async function callClaude(
   userPrompt: string,
   options?: { model?: string; maxTokens?: number }
 ): Promise<Record<string, unknown> | null> {
-  const response = await anthropic.messages.create({
-    model: options?.model || "claude-sonnet-4-20250514",
-    max_tokens: options?.maxTokens || 4000,
-    timeout: 60000,
-    system: systemPrompt,
-    messages: [{ role: "user", content: userPrompt }],
-  });
+  const response = await anthropic.messages.create(
+    {
+      model: options?.model || "claude-sonnet-4-20250514",
+      max_tokens: options?.maxTokens || 4000,
+      system: systemPrompt,
+      messages: [{ role: "user", content: userPrompt }],
+    },
+    { timeout: 60000 }
+  );
 
   const text = extractTextFromResponse(response);
   return parseJsonFromText(text);
