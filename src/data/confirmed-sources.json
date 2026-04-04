@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-04-03",
-  "totalSources": 479,
-  "verifiedCount": 479,
+  "lastUpdated": "2026-04-04",
+  "totalSources": 480,
+  "verifiedCount": 480,
   "sources": {
     "oecd-ai-sme-adoption-g7-2025": {
       "id": "oecd-ai-sme-adoption-g7-2025",
@@ -6713,6 +6713,22 @@
         "education-sector-displacement",
         "healthcare-admin-displacement",
         "white-collar-professional-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "kim-koning-mapping-ai-firms-2026": {
+      "id": "kim-koning-mapping-ai-firms-2026",
+      "title": "Mapping AI into Production: A Field Experiment on Firm Performance",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6513481",
+      "publisher": "INSEAD / Harvard Business School (Kim, Kim, Koning)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-30",
+      "excerpt": "Despite faster growth, treated firms do not scale inputs proportionally. Their demand for external capital investment falls by 39.5% relative to the control group, while their demand for labor remains unchanged.",
+      "usedIn": [
+        "overall-us-displacement",
+        "ai-adoption-rate",
+        "freelancer-rate-impact"
       ],
       "verified": true,
       "synthetic": false

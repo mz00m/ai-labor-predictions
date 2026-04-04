@@ -1241,6 +1241,13 @@
       ],
       "evidenceTier": 3,
       "label": "BCG/NYT: >50% of US jobs 'reshaped' in 2-3y but far fewer replaced entirely"
+    },
+    {
+      "date": "2026-03-30",
+      "direction": "down",
+      "sourceIds": ["kim-koning-mapping-ai-firms-2026"],
+      "evidenceTier": 1,
+      "label": "INSEAD/HBS RCT: AI-using firms grew 1.9x revenue, labor demand unchanged"
     }
   ],
   "sources": [
@@ -2240,6 +2247,16 @@
       "datePublished": "2026-04-03",
       "excerpt": "researchers at Boston Consulting Group estimated that more than half of the jobs in the United States would be 'reshaped' by artificial intelligence over the next two to three years but that far fewer would be replaced entirely.",
       "dateAdded": "2026-04-03"
+    },
+    {
+      "id": "kim-koning-mapping-ai-firms-2026",
+      "title": "Mapping AI into Production: A Field Experiment on Firm Performance",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6513481",
+      "publisher": "INSEAD / Harvard Business School (Kim, Kim, Koning)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-30",
+      "excerpt": "Despite faster growth, treated firms do not scale inputs proportionally. Their demand for external capital investment falls by 39.5% relative to the control group, while their demand for labor remains unchanged.",
+      "dateAdded": "2026-04-04"
     }
   ]
 }

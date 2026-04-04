@@ -595,6 +595,13 @@
       ],
       "evidenceTier": 2,
       "label": "OECD: Only 29% of SMEs use genAI in core activities"
+    },
+    {
+      "date": "2026-03-30",
+      "direction": "up",
+      "sourceIds": ["kim-koning-mapping-ai-firms-2026"],
+      "evidenceTier": 1,
+      "label": "INSEAD/HBS RCT: mapping problem solved, AI use cases +44% (n=515)"
     }
   ],
   "sources": [
@@ -1151,6 +1158,16 @@
       "datePublished": "2025-12-01",
       "excerpt": "AI adoption in core business functions – related to the production of goods and services – ranges from 1.9% in Japan to 6.1% in the United States in 2024. Among SMEs using generative AI, only 29% report using it in their core activities.",
       "dateAdded": "2026-04-03"
+    },
+    {
+      "id": "kim-koning-mapping-ai-firms-2026",
+      "title": "Mapping AI into Production: A Field Experiment on Firm Performance",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6513481",
+      "publisher": "INSEAD / Harvard Business School (Kim, Kim, Koning)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-30",
+      "excerpt": "Treated firms discover 2.7 additional AI use cases (a 44% increase), concentrated in product development and strategy. The binding constraint is not access to the technology but the ability to discover where they create value and how to reorganize the firm accordingly.",
+      "dateAdded": "2026-04-04"
     }
   ]
 }

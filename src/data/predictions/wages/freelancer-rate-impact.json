@@ -175,6 +175,13 @@
       ],
       "evidenceTier": 1,
       "label": "FRI: Moderate scenario → almost all 5-day freelance SW jobs automatable by 2030"
+    },
+    {
+      "date": "2026-03-30",
+      "direction": "down",
+      "sourceIds": ["kim-koning-mapping-ai-firms-2026"],
+      "evidenceTier": 1,
+      "label": "INSEAD/HBS RCT: startups in-house work previously outsourced"
     }
   ],
   "sources": [
@@ -327,6 +334,16 @@
       "datePublished": "2026-03-31",
       "excerpt": "In the moderate AI scenario, almost all freelance software-engineering jobs requiring 5 days of effort from an experienced human are automatable by 2030. In the rapid scenario, AI surpasses all freelance software engineers.",
       "dateAdded": "2026-04-02"
+    },
+    {
+      "id": "kim-koning-mapping-ai-firms-2026",
+      "title": "Mapping AI into Production: A Field Experiment on Firm Performance",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6513481",
+      "publisher": "INSEAD / Harvard Business School (Kim, Kim, Koning)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-30",
+      "excerpt": "In just a few hours I was able to produce what previously cost $1,000 from an outsourced dev team ... We realized we will need even fewer staff than we initially thought, because AI allows us to do in house what we assumed required outsourcing.",
+      "dateAdded": "2026-04-04"
     }
   ]
 }
