@@ -106,7 +106,7 @@ export default function AssessmentLanding() {
           <p className="mt-5 text-[17px] text-gray-500 leading-relaxed max-w-2xl">
             Find out exactly which parts of your work AI can handle so you can
             spend more time on the things that actually need you. A personalized,
-            task-by-task action plan for individual workers and small business teams.
+            task-by-task action plan for individual workers, nonprofits, and small business teams.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
@@ -123,7 +123,7 @@ export default function AssessmentLanding() {
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
               </svg>
-              Free during early access
+              Free!
             </span>
           </div>
 
@@ -297,7 +297,7 @@ export default function AssessmentLanding() {
           <span className="text-[#5C61F6]">Find out where it can help you.</span>
         </h2>
         <p className="text-[15px] text-gray-500 mb-8 max-w-xl mx-auto">
-          Free during early access. Get your personalized action plan in under 5 minutes.
+          Get your personalized action plan in under 5 minutes. Completely free.
         </p>
         <Link
           href="/assessment/start"
