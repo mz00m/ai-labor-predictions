@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-04-04",
-  "totalSources": 480,
-  "verifiedCount": 480,
+  "totalSources": 481,
+  "verifiedCount": 481,
   "sources": {
     "oecd-ai-sme-adoption-g7-2025": {
       "id": "oecd-ai-sme-adoption-g7-2025",
@@ -6729,6 +6729,23 @@
         "overall-us-displacement",
         "ai-adoption-rate",
         "freelancer-rate-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "cai-yeckehzaare-mit-ontology-2026": {
+      "id": "cai-yeckehzaare-mit-ontology-2026",
+      "title": "Where can AI be used? Insights from a deep ontology of work activities",
+      "url": "https://arxiv.org/abs/2603.20619",
+      "publisher": "MIT Center for Collective Intelligence (Cai, YeckehZaare, Sun et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-27",
+      "excerpt": "92% of AI applications map to only 6.8% of 39,603 classified work activities. AI apps grew 6x from 2022-2024 but activity coverage expanded only 1.2x. 75% of AI market value concentrated in software/information tasks. 58% of AI apps target 'Create information' activities.",
+      "usedIn": [
+        "workforce-ai-exposure",
+        "genai-work-adoption",
+        "overall-us-displacement",
+        "white-collar-professional-displacement"
       ],
       "verified": true,
       "synthetic": false

@@ -517,6 +517,15 @@
       ],
       "evidenceTier": 2,
       "label": "OECD: ~25% of OECD workers exposed to generative AI"
+    },
+    {
+      "date": "2026-03-27",
+      "direction": "neutral",
+      "sourceIds": [
+        "cai-yeckehzaare-mit-ontology-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "MIT/CCI: 92% of AI apps map to only 6.8% of 39,603 work activities; exposure deep but narrow"
     }
   ],
   "sources": [
@@ -948,6 +957,16 @@
       "datePublished": "2025-12-01",
       "excerpt": "Around a quarter of workers in OECD Member countries are exposed to generative AI, meaning 20% of their job tasks could be done at least 50% faster with the help of generative AI.",
       "dateAdded": "2026-04-03"
+    },
+    {
+      "id": "cai-yeckehzaare-mit-ontology-2026",
+      "title": "Where can AI be used? Insights from a deep ontology of work activities",
+      "url": "https://arxiv.org/abs/2603.20619",
+      "publisher": "MIT Center for Collective Intelligence (Cai, YeckehZaare, Sun et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-27",
+      "excerpt": "92% of AI applications map to only 6.8% of 39,603 classified work activities. AI apps grew 6x from 2022-2024 but activity coverage expanded only 1.2x. 75% of AI market value concentrated in software/information tasks. Based on O*NET 29.1 and TAAFT dataset.",
+      "dateAdded": "2026-04-04"
     }
   ]
 }
