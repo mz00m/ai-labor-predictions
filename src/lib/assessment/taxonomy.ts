@@ -295,6 +295,18 @@ export const INDUSTRY_TEMPLATES: Record<string, IndustryTaskTemplate> = {
         typicalRoles: ["Sales Rep", "Marketing Manager", "CSM", "Support Engineer"],
         aiOpportunityAreas: ["Sales email personalization", "Content creation", "Customer health scoring", "Support ticket triage"],
       },
+      {
+        name: "People / HR",
+        keyFunctions: ["Recruiting", "Onboarding", "Performance management", "Employee engagement", "Compensation planning", "People analytics", "Policy development", "L&D / training"],
+        typicalRoles: ["Head of People", "HR Manager", "Recruiter", "People Operations Manager", "L&D Manager", "HRBP"],
+        aiOpportunityAreas: ["Job description drafting", "Resume screening", "Onboarding content generation", "Employee survey analysis", "Policy documentation", "Training material creation"],
+      },
+      {
+        name: "Finance / Operations",
+        keyFunctions: ["Financial planning", "Budgeting", "Vendor management", "Procurement", "Legal / compliance", "Office management"],
+        typicalRoles: ["CFO", "Finance Manager", "Controller", "Office Manager", "Legal Counsel"],
+        aiOpportunityAreas: ["Financial reporting automation", "Contract review", "Expense categorization", "Vendor comparison", "Compliance monitoring"],
+      },
     ],
     commonChallenges: ["Talent competition", "Technical debt", "Scaling support", "Documentation lag"],
     suggestedUploads: ["Engineering wiki / docs", "Product specs", "Role descriptions", "Onboarding guides", "Process documentation"],

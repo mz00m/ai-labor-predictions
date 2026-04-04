@@ -107,6 +107,55 @@ export default function AssessmentStartPage() {
     });
   }, []);
 
+  const industryTemplate = form.industry ? INDUSTRY_TEMPLATES[form.industry] : null;
+
+  // Score each department by relevance to the user's role description + department name + job title
+  const getDeptRelevance = useCallback((deptName: string, deptRoles: string[]): number => {
+    const desc = (form.teamDescription + " " + form.departmentName).toLowerCase();
+    if (!desc.trim()) return 0;
+    const deptLower = deptName.toLowerCase();
+    const words = desc.split(/[\s,;./]+/).filter((w) => w.length > 2);
+    let score = 0;
+    // Department name match
+    for (const part of deptLower.split(/[\s/]+/)) {
+      if (part.length > 2 && desc.includes(part)) score += 3;
+    }
+    // Role match
+    for (const role of deptRoles) {
+      const roleLower = role.toLowerCase();
+      for (const part of roleLower.split(/[\s/]+/)) {
+        if (part.length > 2 && words.some((w) => w.includes(part) || part.includes(w))) score += 2;
+      }
+    }
+    return score;
+  }, [form.teamDescription, form.departmentName]);
+
+  // When moving from scope to tasks, pre-select roles and functions based on description
+  const prefillFromDescription = useCallback(() => {
+    if (!industryTemplate) return;
+    const desc = (form.teamDescription + " " + form.departmentName).toLowerCase();
+    if (!desc.trim()) return;
+
+    // Find the most relevant department(s)
+    const scored = industryTemplate.departments.map((dept) => ({
+      dept,
+      score: getDeptRelevance(dept.name, dept.typicalRoles),
+    }));
+    const topScore = Math.max(...scored.map((s) => s.score));
+    if (topScore === 0) return;
+
+    const relevantDepts = scored.filter((s) => s.score > 0).map((s) => s.dept);
+
+    const matchedFunctions = relevantDepts.flatMap((d) => d.keyFunctions);
+    const matchedRoles = relevantDepts.flatMap((d) => d.typicalRoles);
+
+    setForm((prev) => ({
+      ...prev,
+      primaryFunctions: prev.primaryFunctions.length > 0 ? prev.primaryFunctions : matchedFunctions,
+      keyRoles: prev.keyRoles.length > 0 ? prev.keyRoles : matchedRoles,
+    }));
+  }, [form.teamDescription, form.departmentName, industryTemplate, getDeptRelevance]);
+
   const canAdvance = (): boolean => {
     switch (step) {
       case "you":
@@ -178,7 +227,6 @@ export default function AssessmentStartPage() {
     }
   };
 
-  const industryTemplate = form.industry ? INDUSTRY_TEMPLATES[form.industry] : null;
   const loadingMessage = LOADING_MESSAGES.find((m) => elapsedSeconds < m.maxSeconds)?.text || LOADING_MESSAGES[LOADING_MESSAGES.length - 1].text;
 
   return (
@@ -383,47 +431,207 @@ export default function AssessmentStartPage() {
             </p>
           </div>
 
-          {industryTemplate && (
-            <div>
-              <label className="block text-[13px] font-medium text-gray-700 mb-3">Tasks I spend time on</label>
-              <div className="flex flex-wrap gap-2">
-                {industryTemplate.departments.flatMap((d) => d.keyFunctions).map((fn) => (
-                  <button
-                    key={fn}
-                    onClick={() => toggleArrayItem("primaryFunctions", fn)}
-                    className={`text-[13px] px-3 py-1.5 rounded-full border transition-colors ${
-                      form.primaryFunctions.includes(fn)
-                        ? "border-[#5C61F6] bg-[#5C61F6]/[0.1] text-[#5C61F6]"
-                        : "border-gray-200 text-gray-500 hover:border-gray-300"
-                    }`}
-                  >
-                    {fn}
-                  </button>
-                ))}
-              </div>
-            </div>
-          )}
+          <div>
+            <label className="block text-[13px] font-medium text-gray-700 mb-3">Tasks I spend time on</label>
+            {industryTemplate && (() => {
+              const sorted = [...industryTemplate.departments]
+                .map((d) => ({ ...d, relevance: getDeptRelevance(d.name, d.typicalRoles) }))
+                .sort((a, b) => b.relevance - a.relevance);
+              const relevant = sorted.filter((d) => d.relevance > 0);
+              const other = sorted.filter((d) => d.relevance === 0);
+              const showGrouped = relevant.length > 0;
+              return (
+                <div className="space-y-4 mb-3">
+                  {showGrouped ? (
+                    <>
+                      {relevant.map((dept) => (
+                        <div key={dept.name}>
+                          <p className="text-[12px] font-medium text-[#5C61F6] mb-2">{dept.name}</p>
+                          <div className="flex flex-wrap gap-2">
+                            {dept.keyFunctions.map((fn) => (
+                              <button
+                                key={fn}
+                                onClick={() => toggleArrayItem("primaryFunctions", fn)}
+                                className={`text-[13px] px-3 py-1.5 rounded-full border transition-colors ${
+                                  form.primaryFunctions.includes(fn)
+                                    ? "border-[#5C61F6] bg-[#5C61F6]/[0.1] text-[#5C61F6]"
+                                    : "border-gray-200 text-gray-500 hover:border-gray-300"
+                                }`}
+                              >
+                                {fn}
+                              </button>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                      {other.length > 0 && (
+                        <details className="group">
+                          <summary className="text-[12px] font-medium text-gray-400 cursor-pointer hover:text-gray-600 transition-colors">
+                            Other departments ({other.length})
+                          </summary>
+                          <div className="mt-3 space-y-4">
+                            {other.map((dept) => (
+                              <div key={dept.name}>
+                                <p className="text-[12px] font-medium text-gray-400 mb-2">{dept.name}</p>
+                                <div className="flex flex-wrap gap-2">
+                                  {dept.keyFunctions.map((fn) => (
+                                    <button
+                                      key={fn}
+                                      onClick={() => toggleArrayItem("primaryFunctions", fn)}
+                                      className={`text-[13px] px-3 py-1.5 rounded-full border transition-colors ${
+                                        form.primaryFunctions.includes(fn)
+                                          ? "border-[#5C61F6] bg-[#5C61F6]/[0.1] text-[#5C61F6]"
+                                          : "border-gray-200 text-gray-500 hover:border-gray-300"
+                                      }`}
+                                    >
+                                      {fn}
+                                    </button>
+                                  ))}
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        </details>
+                      )}
+                    </>
+                  ) : (
+                    <div className="flex flex-wrap gap-2">
+                      {sorted.flatMap((d) => d.keyFunctions).map((fn) => (
+                        <button
+                          key={fn}
+                          onClick={() => toggleArrayItem("primaryFunctions", fn)}
+                          className={`text-[13px] px-3 py-1.5 rounded-full border transition-colors ${
+                            form.primaryFunctions.includes(fn)
+                              ? "border-[#5C61F6] bg-[#5C61F6]/[0.1] text-[#5C61F6]"
+                              : "border-gray-200 text-gray-500 hover:border-gray-300"
+                          }`}
+                        >
+                          {fn}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              );
+            })()}
+            <AddCustomItem
+              placeholder="Add a task not listed above"
+              onAdd={(val) => {
+                if (!form.primaryFunctions.includes(val)) {
+                  setForm((prev) => ({ ...prev, primaryFunctions: [...prev.primaryFunctions, val] }));
+                }
+              }}
+            />
+            {form.primaryFunctions
+              .filter((fn) => !industryTemplate?.departments.flatMap((d) => d.keyFunctions).includes(fn))
+              .map((fn) => (
+                <span key={fn} className="inline-flex items-center gap-1 text-[13px] px-3 py-1.5 rounded-full border border-[#5C61F6] bg-[#5C61F6]/[0.1] text-[#5C61F6] mr-2 mt-2">
+                  {fn}
+                  <button onClick={() => toggleArrayItem("primaryFunctions", fn)} className="ml-1 hover:text-red-500">&times;</button>
+                </span>
+              ))}
+          </div>
 
-          {industryTemplate && (
-            <div>
-              <label className="block text-[13px] font-medium text-gray-700 mb-3">My role (or roles I work with)</label>
-              <div className="flex flex-wrap gap-2">
-                {industryTemplate.departments.flatMap((d) => d.typicalRoles).map((role) => (
-                  <button
-                    key={role}
-                    onClick={() => toggleArrayItem("keyRoles", role)}
-                    className={`text-[13px] px-3 py-1.5 rounded-full border transition-colors ${
-                      form.keyRoles.includes(role)
-                        ? "border-[#5C61F6] bg-[#5C61F6]/[0.1] text-[#5C61F6]"
-                        : "border-gray-200 text-gray-500 hover:border-gray-300"
-                    }`}
-                  >
-                    {role}
-                  </button>
-                ))}
-              </div>
-            </div>
-          )}
+          <div>
+            <label className="block text-[13px] font-medium text-gray-700 mb-3">My role (or roles I work with)</label>
+            {industryTemplate && (() => {
+              const sorted = [...industryTemplate.departments]
+                .map((d) => ({ ...d, relevance: getDeptRelevance(d.name, d.typicalRoles) }))
+                .sort((a, b) => b.relevance - a.relevance);
+              const relevant = sorted.filter((d) => d.relevance > 0);
+              const other = sorted.filter((d) => d.relevance === 0);
+              const showGrouped = relevant.length > 0;
+              return (
+                <div className="space-y-4 mb-3">
+                  {showGrouped ? (
+                    <>
+                      {relevant.map((dept) => (
+                        <div key={dept.name}>
+                          <p className="text-[12px] font-medium text-[#5C61F6] mb-2">{dept.name}</p>
+                          <div className="flex flex-wrap gap-2">
+                            {dept.typicalRoles.map((role) => (
+                              <button
+                                key={role}
+                                onClick={() => toggleArrayItem("keyRoles", role)}
+                                className={`text-[13px] px-3 py-1.5 rounded-full border transition-colors ${
+                                  form.keyRoles.includes(role)
+                                    ? "border-[#5C61F6] bg-[#5C61F6]/[0.1] text-[#5C61F6]"
+                                    : "border-gray-200 text-gray-500 hover:border-gray-300"
+                                }`}
+                              >
+                                {role}
+                              </button>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                      {other.length > 0 && (
+                        <details className="group">
+                          <summary className="text-[12px] font-medium text-gray-400 cursor-pointer hover:text-gray-600 transition-colors">
+                            Other departments ({other.length})
+                          </summary>
+                          <div className="mt-3 space-y-4">
+                            {other.map((dept) => (
+                              <div key={dept.name}>
+                                <p className="text-[12px] font-medium text-gray-400 mb-2">{dept.name}</p>
+                                <div className="flex flex-wrap gap-2">
+                                  {dept.typicalRoles.map((role) => (
+                                    <button
+                                      key={role}
+                                      onClick={() => toggleArrayItem("keyRoles", role)}
+                                      className={`text-[13px] px-3 py-1.5 rounded-full border transition-colors ${
+                                        form.keyRoles.includes(role)
+                                          ? "border-[#5C61F6] bg-[#5C61F6]/[0.1] text-[#5C61F6]"
+                                          : "border-gray-200 text-gray-500 hover:border-gray-300"
+                                      }`}
+                                    >
+                                      {role}
+                                    </button>
+                                  ))}
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        </details>
+                      )}
+                    </>
+                  ) : (
+                    <div className="flex flex-wrap gap-2">
+                      {sorted.flatMap((d) => d.typicalRoles).map((role) => (
+                        <button
+                          key={role}
+                          onClick={() => toggleArrayItem("keyRoles", role)}
+                          className={`text-[13px] px-3 py-1.5 rounded-full border transition-colors ${
+                            form.keyRoles.includes(role)
+                              ? "border-[#5C61F6] bg-[#5C61F6]/[0.1] text-[#5C61F6]"
+                              : "border-gray-200 text-gray-500 hover:border-gray-300"
+                          }`}
+                        >
+                          {role}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              );
+            })()}
+            <AddCustomItem
+              placeholder="Add a role not listed above"
+              onAdd={(val) => {
+                if (!form.keyRoles.includes(val)) {
+                  setForm((prev) => ({ ...prev, keyRoles: [...prev.keyRoles, val] }));
+                }
+              }}
+            />
+            {form.keyRoles
+              .filter((r) => !industryTemplate?.departments.flatMap((d) => d.typicalRoles).includes(r))
+              .map((role) => (
+                <span key={role} className="inline-flex items-center gap-1 text-[13px] px-3 py-1.5 rounded-full border border-[#5C61F6] bg-[#5C61F6]/[0.1] text-[#5C61F6] mr-2 mt-2">
+                  {role}
+                  <button onClick={() => toggleArrayItem("keyRoles", role)} className="ml-1 hover:text-red-500">&times;</button>
+                </span>
+              ))}
+          </div>
 
           <div>
             <label className="block text-[13px] font-medium text-gray-700 mb-3">Where I feel the most friction</label>
@@ -638,7 +846,11 @@ export default function AssessmentStartPage() {
             Back
           </button>
           <button
-            onClick={() => setStep(STEPS[currentStepIndex + 1]?.key || "review")}
+            onClick={() => {
+              const nextStep = STEPS[currentStepIndex + 1]?.key || "review";
+              if (step === "scope" && nextStep === "tasks") prefillFromDescription();
+              setStep(nextStep);
+            }}
             disabled={!canAdvance()}
             className="text-[13px] font-medium bg-[#5C61F6] hover:bg-[#4F52D4] disabled:opacity-30 disabled:cursor-default text-white px-6 py-2 rounded-lg transition-colors"
           >
@@ -704,6 +916,39 @@ function ReviewRow({ label, value }: { label: string; value: string }) {
     <div className="flex gap-4">
       <span className="text-[13px] text-gray-400 w-28 flex-shrink-0">{label}</span>
       <span className="text-[13px] text-gray-700">{value}</span>
+    </div>
+  );
+}
+
+function AddCustomItem({ placeholder, onAdd }: { placeholder: string; onAdd: (value: string) => void }) {
+  const [value, setValue] = useState("");
+
+  const handleAdd = () => {
+    const trimmed = value.trim();
+    if (trimmed) {
+      onAdd(trimmed);
+      setValue("");
+    }
+  };
+
+  return (
+    <div className="flex gap-2">
+      <input
+        type="text"
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+        onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); handleAdd(); } }}
+        placeholder={placeholder}
+        className="flex-1 bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-[13px] text-gray-900 placeholder:text-gray-400 outline-none focus:border-[#5C61F6]"
+      />
+      <button
+        type="button"
+        onClick={handleAdd}
+        disabled={!value.trim()}
+        className="text-[13px] font-medium px-3 py-1.5 rounded-lg border border-gray-200 text-gray-500 hover:border-[#5C61F6] hover:text-[#5C61F6] transition-colors disabled:opacity-30 disabled:cursor-default"
+      >
+        Add
+      </button>
     </div>
   );
 }
