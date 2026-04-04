@@ -315,6 +315,19 @@ export default function AssessmentLanding() {
             </div>
           ))}
         </div>
+
+        <p className="text-[12px] text-gray-400 mt-6">
+          Featured research:{" "}
+          <a
+            href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6513481"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#5C61F6] hover:underline"
+          >
+            Kim, Kim &amp; Koning (2026), INSEAD &amp; Harvard Business School
+          </a>
+          {" "}&middot; Field experiment, 515 firms
+        </p>
       </section>
 
       {/* Industries */}
