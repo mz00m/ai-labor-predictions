@@ -2,7 +2,7 @@
 // Only stores sanitized report output and user metadata — never raw uploaded content
 
 import { getDb } from "@/lib/db";
-import { Assessment, AssessmentIntake, AssessmentReport } from "./types";
+import { Assessment, AssessmentIntake, AssessmentReport, AssessmentStep, StepContext, StepFeedback } from "./types";
 
 type Row = Record<string, any>; // DB rows have dynamic columns
 
@@ -29,6 +29,9 @@ export async function initAssessmentTables(): Promise<void> {
       status TEXT NOT NULL DEFAULT 'intake',
       intake_json JSONB,
       report_json JSONB,
+      current_step TEXT,
+      step_context JSONB,
+      step_feedback JSONB DEFAULT '[]'::jsonb,
       add_on_policy BOOLEAN DEFAULT FALSE,
       stripe_payment_id TEXT,
       paid BOOLEAN DEFAULT FALSE,
@@ -36,6 +39,16 @@ export async function initAssessmentTables(): Promise<void> {
       created_at TIMESTAMP DEFAULT NOW(),
       completed_at TIMESTAMP
     )
+  `;
+
+  // Add columns for existing tables (safe to run multiple times)
+  await sql`
+    DO $$ BEGIN
+      ALTER TABLE assessments ADD COLUMN IF NOT EXISTS current_step TEXT;
+      ALTER TABLE assessments ADD COLUMN IF NOT EXISTS step_context JSONB;
+      ALTER TABLE assessments ADD COLUMN IF NOT EXISTS step_feedback JSONB DEFAULT '[]'::jsonb;
+    EXCEPTION WHEN others THEN NULL;
+    END $$;
   `;
 }
 
@@ -156,6 +169,9 @@ export async function getAssessment(assessmentId: string): Promise<Assessment | 
     completedAt: row.completed_at ? (row.completed_at as Date).toISOString() : undefined,
     intake: row.intake_json as AssessmentIntake,
     report: row.report_json as AssessmentReport | undefined,
+    currentStep: row.current_step as AssessmentStep | undefined,
+    stepContext: row.step_context as StepContext | undefined,
+    stepFeedback: row.step_feedback as StepFeedback[] | undefined,
     addOns: {
       policyAndPrompts: row.add_on_policy as boolean,
     },
@@ -184,6 +200,9 @@ export async function getUserAssessments(userId: string): Promise<Assessment[]> 
     completedAt: row.completed_at ? (row.completed_at as Date).toISOString() : undefined,
     intake: row.intake_json as AssessmentIntake,
     report: row.report_json as AssessmentReport | undefined,
+    currentStep: row.current_step as AssessmentStep | undefined,
+    stepContext: row.step_context as StepContext | undefined,
+    stepFeedback: row.step_feedback as StepFeedback[] | undefined,
     addOns: {
       policyAndPrompts: row.add_on_policy as boolean,
     },
@@ -226,6 +245,65 @@ export async function updateAssessmentStatus(assessmentId: string, status: Asses
 
   await sql`
     UPDATE assessments SET status = ${status} WHERE id = ${assessmentId}
+  `;
+}
+
+/**
+ * Update the current step for an assessment
+ */
+export async function updateCurrentStep(assessmentId: string, step: AssessmentStep): Promise<void> {
+  const sql = getDb();
+  if (!sql) return;
+
+  await sql`
+    UPDATE assessments SET current_step = ${step} WHERE id = ${assessmentId}
+  `;
+}
+
+/**
+ * Save step context (extracted from files/website in step 1, carried to later steps)
+ */
+export async function saveStepContext(assessmentId: string, context: StepContext): Promise<void> {
+  const sql = getDb();
+  if (!sql) return;
+
+  await sql`
+    UPDATE assessments SET step_context = ${JSON.stringify(context)} WHERE id = ${assessmentId}
+  `;
+}
+
+/**
+ * Save user feedback for a step (appends to the feedback array)
+ */
+export async function saveStepFeedback(assessmentId: string, feedback: StepFeedback): Promise<void> {
+  const sql = getDb();
+  if (!sql) return;
+
+  await sql`
+    UPDATE assessments
+    SET step_feedback = COALESCE(step_feedback, '[]'::jsonb) || ${JSON.stringify(feedback)}::jsonb
+    WHERE id = ${assessmentId}
+  `;
+}
+
+/**
+ * Merge partial report data into existing report_json.
+ * Used by multi-step pipeline to build the report incrementally.
+ */
+export async function mergePartialReport(assessmentId: string, partial: Partial<AssessmentReport>): Promise<void> {
+  const sql = getDb();
+  if (!sql) return;
+
+  // Fetch existing report, merge, save
+  const rows = await sql`
+    SELECT report_json FROM assessments WHERE id = ${assessmentId}
+  ` as Row[];
+
+  const existing = (rows[0]?.report_json as AssessmentReport) || {};
+  const merged = { ...existing, ...partial };
+
+  await sql`
+    UPDATE assessments SET report_json = ${JSON.stringify(merged)} WHERE id = ${assessmentId}
   `;
 }
 

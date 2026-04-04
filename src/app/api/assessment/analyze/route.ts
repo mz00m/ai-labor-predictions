@@ -1,7 +1,23 @@
 import { NextRequest, NextResponse } from "next/server";
-import { AssessmentIntake } from "@/lib/assessment/types";
-import { generateAssessmentReport } from "@/lib/assessment/analyze";
-import { getOrCreateUser, createAssessment, saveAssessmentReport, updateAssessmentStatus } from "@/lib/assessment/db";
+import { AssessmentIntake, AssessmentStep, ASSESSMENT_STEPS } from "@/lib/assessment/types";
+import {
+  generateAssessmentReport,
+  generateStep1Profile,
+  generateStep2Tasks,
+  generateStep3Tools,
+  generateStep4Risks,
+} from "@/lib/assessment/analyze";
+import {
+  getOrCreateUser,
+  createAssessment,
+  getAssessment,
+  saveAssessmentReport,
+  updateAssessmentStatus,
+  updateCurrentStep,
+  saveStepContext,
+  saveStepFeedback,
+  mergePartialReport,
+} from "@/lib/assessment/db";
 import Stripe from "stripe";
 
 // Allow up to 300 seconds for Claude API call + processing
@@ -96,9 +112,86 @@ export async function POST(req: NextRequest) {
       }
     }
 
+    // Multi-step pipeline: if `step` parameter is present, run that step only
+    const step = formData.get("step") as AssessmentStep | null;
+    const assessmentIdParam = formData.get("assessmentId") as string | null;
+    const feedbackRaw = formData.get("feedback") as string | null;
+
+    if (step && ASSESSMENT_STEPS.includes(step)) {
+      // Multi-step mode — run a single step and return partial results
+      const targetId = assessmentIdParam || assessmentId;
+      if (!targetId) {
+        return NextResponse.json({ error: "Assessment ID required for multi-step mode" }, { status: 400 });
+      }
+
+      // For steps 2-4, load existing assessment state from DB
+      const existing = await getAssessment(targetId);
+      const previousReport = existing?.report || {};
+      const stepContext = existing?.stepContext;
+
+      // Parse user feedback if provided
+      const feedback = feedbackRaw ? JSON.parse(feedbackRaw) : undefined;
+      if (feedback) {
+        await saveStepFeedback(targetId, { ...feedback, step, submittedAt: new Date().toISOString() });
+      }
+
+      // Update current step
+      await updateCurrentStep(targetId, step);
+      await updateAssessmentStatus(targetId, "analyzing");
+
+      let stepResult: Record<string, unknown>;
+
+      switch (step) {
+        case "profile": {
+          const { report: profileReport, stepContext: extractedContext } = await generateStep1Profile(
+            intake, fileContents, websiteContent
+          );
+          // Save extracted context for subsequent steps
+          await saveStepContext(targetId, extractedContext);
+          // Merge partial report
+          await mergePartialReport(targetId, profileReport);
+          stepResult = { report: profileReport, extractedContext };
+          break;
+        }
+        case "tasks": {
+          const taskReport = await generateStep2Tasks(
+            intake, previousReport as any, stepContext || undefined, feedback ? [feedback] : undefined
+          );
+          await mergePartialReport(targetId, taskReport);
+          stepResult = { report: taskReport };
+          break;
+        }
+        case "tools": {
+          const toolReport = await generateStep3Tools(
+            intake, previousReport as any, stepContext || undefined, feedback ? [feedback] : undefined
+          );
+          await mergePartialReport(targetId, toolReport);
+          stepResult = { report: toolReport };
+          break;
+        }
+        case "risks": {
+          const riskReport = await generateStep4Risks(
+            intake, previousReport as any, stepContext || undefined, feedback ? [feedback] : undefined
+          );
+          await mergePartialReport(targetId, riskReport);
+          // Final step — mark complete
+          await updateAssessmentStatus(targetId, "complete");
+          stepResult = { report: riskReport };
+          break;
+        }
+        default:
+          return NextResponse.json({ error: `Unknown step: ${step}` }, { status: 400 });
+      }
+
+      return NextResponse.json({
+        assessmentId: targetId,
+        step,
+        ...stepResult,
+      });
+    }
+
+    // Legacy single-call mode (no step parameter)
     // Always generate the FULL report — the frontend paywall controls what's visible.
-    // This ensures the DB always has complete data, so the preview→upgrade path works
-    // without needing to regenerate (files/website content aren't persisted after this request).
     const report = await generateAssessmentReport(intake, fileContents, websiteContent, "full");
 
     // File contents are now garbage collected — never persisted

@@ -7,6 +7,54 @@ export interface AssessmentUser {
   stripeCustomerId?: string;
 }
 
+// Multi-step pipeline types
+
+export type AssessmentStep = "profile" | "tasks" | "tools" | "risks";
+
+export const ASSESSMENT_STEPS: AssessmentStep[] = ["profile", "tasks", "tools", "risks"];
+
+export const STEP_LABELS: Record<AssessmentStep, string> = {
+  profile: "Organization Profile & Quick Wins",
+  tasks: "Task-by-Task Analysis",
+  tools: "Tool Recommendations & Roadmap",
+  risks: "Risk Assessment & Policy",
+};
+
+export const STEP_DESCRIPTIONS: Record<AssessmentStep, string> = {
+  profile: "We'll analyze your organization, industry context, and identify immediate AI opportunities.",
+  tasks: "Deep dive into your specific tasks and roles to find the highest-impact AI applications.",
+  tools: "Concrete tool recommendations, implementation roadmap, and ROI projections.",
+  risks: "Risk assessment, change management guidance, AI policy, and prompt library.",
+};
+
+/** Feedback the user provides between steps */
+export interface StepFeedback {
+  step: AssessmentStep;
+  /** Free-text guidance for the next step */
+  comments?: string;
+  /** Specific items to prioritize or deprioritize */
+  adjustments?: {
+    prioritize?: string[];
+    deprioritize?: string[];
+  };
+  /** Timestamp */
+  submittedAt: string;
+}
+
+/** Context extracted from uploaded files and website, carried across steps */
+export interface StepContext {
+  /** Key findings from uploaded documents */
+  documentInsights: string[];
+  /** Website content summary */
+  websiteSummary?: string;
+  /** Extracted role/task information from documents */
+  extractedRoles?: string[];
+  /** Extracted process/workflow information */
+  extractedProcesses?: string[];
+  /** Any other contextual data from step 1 */
+  additionalContext?: string;
+}
+
 export interface Assessment {
   id: string;
   userId: string;
@@ -17,6 +65,10 @@ export interface Assessment {
   intake: AssessmentIntake;
   // Analysis output (sanitized — no PII)
   report?: AssessmentReport;
+  // Multi-step pipeline state
+  currentStep?: AssessmentStep;
+  stepContext?: StepContext;
+  stepFeedback?: StepFeedback[];
   // Add-ons purchased
   addOns: {
     policyAndPrompts: boolean;
@@ -122,6 +174,8 @@ export type AiMaturityLevel =
 export interface AssessmentReport {
   executiveSummary: string;
   organizationProfile: OrganizationProfile;
+  /** Quick wins identified in step 1 — things to try this week */
+  quickWins?: QuickWin[];
   taskAnalysis: TaskAnalysis[];
   toolRecommendations: ToolRecommendation[];
   riskAssessment: RiskAssessment;
@@ -131,6 +185,14 @@ export interface AssessmentReport {
   // Add-on content (only populated if purchased)
   aiPolicy?: AiPolicyDocument;
   promptLibrary?: PromptLibraryEntry[];
+}
+
+export interface QuickWin {
+  title: string;
+  description: string;
+  timeToImplement: string; // e.g. "30 minutes", "1 hour", "this afternoon"
+  impact: "high" | "medium" | "low";
+  toolSuggestion?: string;
 }
 
 export interface OrganizationProfile {
