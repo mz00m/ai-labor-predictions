@@ -68,6 +68,18 @@ export async function POST(req: NextRequest) {
         }
       }
 
+      // Normalize websiteUrl — auto-prepend https:// and trim
+      if (typeof intakeParsed.websiteUrl === "string") {
+        const url = intakeParsed.websiteUrl.trim();
+        if (!url) {
+          intakeParsed.websiteUrl = "";
+        } else if (!/^https?:\/\//i.test(url)) {
+          intakeParsed.websiteUrl = `https://${url}`;
+        } else {
+          intakeParsed.websiteUrl = url;
+        }
+      }
+
       // Validate intake against schema
       const parseResult = AssessmentIntakeSchema.safeParse(intakeParsed);
       if (!parseResult.success) {

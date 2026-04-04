@@ -192,7 +192,12 @@ export default function AssessmentStartPage() {
         currentAiUsage: form.currentAiUsage,
         biggestChallenges: form.biggestChallenges,
         goals: form.goals,
-        websiteUrl: form.websiteUrl,
+        websiteUrl: (() => {
+          const url = form.websiteUrl.trim();
+          if (!url) return "";
+          if (!/^https?:\/\//i.test(url)) return `https://${url}`;
+          return url;
+        })(),
         additionalContext: form.additionalContext,
         uploadedFiles: files.map((f) => f.meta),
       };
