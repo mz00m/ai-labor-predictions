@@ -4,11 +4,12 @@
  * Pulls relevant human capabilities from the knowledge base and formats
  * them for injection into assessment prompts. This enables the "skills to
  * invest in" section backed by the appreciation framework.
+ *
+ * Uses ES module import (not fs.readFileSync) so it works on Vercel serverless.
  */
 
-import fs from "fs";
-import path from "path";
-import type { IndustryCategory, AssessmentIntake } from "./types";
+import compiledKB from "@/data/knowledge-base/compiled.json";
+import type { IndustryCategory } from "./types";
 
 interface KBCapability {
   name: string;
@@ -21,10 +22,6 @@ interface KBCapability {
   appreciationScore: number;
   verified: string;
   confidence: string;
-}
-
-interface KBData {
-  capabilities: Record<string, KBCapability[]>;
 }
 
 // Map assessment industries to relevant function categories
@@ -48,18 +45,22 @@ const INDUSTRY_FUNCTION_MAP: Record<string, string[]> = {
   "other": ["administrative", "operations", "communications", "finance", "technology"],
 };
 
-/**
- * Load the compiled knowledge base from disk.
- */
-function loadKnowledgeBase(): KBData | null {
-  try {
-    const kbPath = path.join(process.cwd(), "src/data/knowledge-base/compiled.json");
-    const raw = fs.readFileSync(kbPath, "utf-8");
-    return JSON.parse(raw) as KBData;
-  } catch {
-    return null;
-  }
-}
+// Map intake function names to KB function categories
+const FUNCTION_NAME_MAP: Record<string, string> = {
+  "Finance & Accounting": "finance",
+  "Human Resources": "people-management",
+  "Marketing": "marketing",
+  "Sales": "sales",
+  "Customer Service": "customer-service",
+  "Operations": "operations",
+  "IT / Technology": "technology",
+  "Legal": "legal",
+  "Administrative": "administrative",
+  "Communications": "communications",
+  "Education / Training": "education",
+  "Healthcare / Clinical": "healthcare",
+  "Creative / Design": "creative-design",
+};
 
 /**
  * Get capabilities relevant to a specific assessment context.
@@ -69,64 +70,47 @@ function getRelevantCapabilities(
   industry: IndustryCategory,
   primaryFunctions: string[]
 ): KBCapability[] {
-  const kb = loadKnowledgeBase();
-  if (!kb?.capabilities) return [];
+  const capabilities = (compiledKB as { capabilities?: Record<string, KBCapability[]> }).capabilities;
+  if (!capabilities) return [];
 
   // Combine industry-mapped functions with user's stated functions
   const relevantFunctions = new Set<string>(
     INDUSTRY_FUNCTION_MAP[industry] || INDUSTRY_FUNCTION_MAP["other"]
   );
 
-  // Map intake function names to KB function categories
-  const functionMapping: Record<string, string> = {
-    "Finance & Accounting": "finance",
-    "Human Resources": "people-management",
-    "Marketing": "marketing",
-    "Sales": "sales",
-    "Customer Service": "customer-service",
-    "Operations": "operations",
-    "IT / Technology": "technology",
-    "Legal": "legal",
-    "Administrative": "administrative",
-    "Communications": "communications",
-    "Education / Training": "education",
-    "Healthcare / Clinical": "healthcare",
-    "Creative / Design": "creative-design",
-  };
-
   for (const fn of primaryFunctions) {
-    const mapped = functionMapping[fn];
+    const mapped = FUNCTION_NAME_MAP[fn];
     if (mapped) relevantFunctions.add(mapped);
   }
 
   // Collect capabilities from relevant functions
-  const capabilities: KBCapability[] = [];
+  const result: KBCapability[] = [];
   const seen = new Set<string>();
 
   for (const funcName of Array.from(relevantFunctions)) {
-    const funcCapabilities = kb.capabilities[funcName] || [];
+    const funcCapabilities = capabilities[funcName] || [];
     for (const cap of funcCapabilities) {
       if (!seen.has(cap.name)) {
         seen.add(cap.name);
-        capabilities.push(cap);
+        result.push(cap);
       }
     }
   }
 
   // Also add capabilities from other functions that list our functions in alsoRelevantTo
-  for (const [, funcCapabilities] of Object.entries(kb.capabilities)) {
+  for (const [, funcCapabilities] of Object.entries(capabilities)) {
     for (const cap of funcCapabilities) {
       if (seen.has(cap.name)) continue;
       const isRelevant = cap.alsoRelevantTo?.some((f) => relevantFunctions.has(f));
       if (isRelevant) {
         seen.add(cap.name);
-        capabilities.push(cap);
+        result.push(cap);
       }
     }
   }
 
   // Sort by appreciation score (highest first)
-  return capabilities.sort((a, b) => b.appreciationScore - a.appreciationScore);
+  return result.sort((a, b) => b.appreciationScore - a.appreciationScore);
 }
 
 /**
@@ -143,31 +127,30 @@ export function formatCapabilitiesForPrompt(
     return "";
   }
 
-  // Take top 15 most relevant capabilities to keep prompt size manageable
-  const topCapabilities = capabilities.slice(0, 15);
+  // Take top 8 most relevant (reduced from 15 to cut prompt size)
+  const topCapabilities = capabilities.slice(0, 8);
 
   const lines: string[] = [
     "## Human Capabilities That Appreciate With AI (Skills to Invest In)",
-    "USE THIS DATA to recommend specific skills the organization should develop.",
-    "These are capabilities that become MORE valuable as AI handles routine work.",
-    "Include 3-5 of the most relevant capabilities in your report's risk assessment and roadmap.",
+    "USE THIS DATA to recommend specific skills to develop.",
+    "These capabilities become MORE valuable as AI handles routine work.",
+    "Include 3-5 of the most relevant in your report.",
     "",
   ];
 
   for (const cap of topCapabilities) {
     lines.push(`### ${cap.name} (Score: ${cap.appreciationScore}/10)`);
     lines.push(`Function: ${cap.function} | Resistance: ${cap.automationResistance.join(", ")}`);
-    lines.push(`Why appreciating: ${cap.whyAppreciating.slice(0, 300)}${cap.whyAppreciating.length > 300 ? "..." : ""}`);
-    lines.push(`How to develop: ${cap.howToDevelop.slice(0, 200)}${cap.howToDevelop.length > 200 ? "..." : ""}`);
+    lines.push(`Why appreciating: ${cap.whyAppreciating.slice(0, 200)}${cap.whyAppreciating.length > 200 ? "..." : ""}`);
+    lines.push(`How to develop: ${cap.howToDevelop.slice(0, 150)}${cap.howToDevelop.length > 150 ? "..." : ""}`);
     lines.push("");
   }
 
   lines.push(
-    "When making risk assessment and roadmap recommendations:",
-    "- Name specific capabilities from this list that the organization should invest in",
-    "- Explain WHY each capability appreciates in their specific context",
-    "- Include development actions in the implementation roadmap (e.g., 'Month 2: Begin developing [capability] through [specific action]')",
-    "- Frame these as competitive advantages, not just risk mitigation"
+    "When recommending skills:",
+    "- Name specific capabilities from this list",
+    "- Explain WHY each appreciates in their context",
+    "- Include development actions in the roadmap"
   );
 
   return lines.join("\n");

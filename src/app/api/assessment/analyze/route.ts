@@ -5,6 +5,7 @@ import { getOrCreateUser, createAssessment, saveAssessmentReport, updateAssessme
 import Stripe from "stripe";
 
 // Allow up to 120 seconds for Claude API call + processing
+// Vercel Pro plan supports up to 300s
 export const maxDuration = 120;
 
 // In-memory rate limiting
@@ -36,7 +37,23 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
     }
 
-    const intake: AssessmentIntake = JSON.parse(intakeRaw);
+    const intakeParsed = JSON.parse(intakeRaw);
+
+    // Normalize fields that arrive as strings from FormData but are typed as arrays
+    if (typeof intakeParsed.keyRoles === "string") {
+      intakeParsed.keyRoles = intakeParsed.keyRoles.split(",").map((s: string) => s.trim()).filter(Boolean);
+    }
+    if (typeof intakeParsed.primaryFunctions === "string") {
+      intakeParsed.primaryFunctions = intakeParsed.primaryFunctions.split(",").map((s: string) => s.trim()).filter(Boolean);
+    }
+    if (typeof intakeParsed.biggestChallenges === "string") {
+      intakeParsed.biggestChallenges = intakeParsed.biggestChallenges.split(",").map((s: string) => s.trim()).filter(Boolean);
+    }
+    if (typeof intakeParsed.goals === "string") {
+      intakeParsed.goals = intakeParsed.goals.split(",").map((s: string) => s.trim()).filter(Boolean);
+    }
+
+    const intake: AssessmentIntake = intakeParsed;
 
     // Process uploaded files IN MEMORY ONLY
     const fileContents: { name: string; category: string; text: string }[] = [];
