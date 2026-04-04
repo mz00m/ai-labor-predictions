@@ -32,7 +32,9 @@ export async function POST(req: NextRequest) {
     const email = formData.get("email") as string;
     const mode = (formData.get("mode") as string) || "preview";
 
-    if (!intakeRaw || !email) {
+    // Email is required for initial calls; continuation calls (with assessmentId) don't need it
+    const assessmentIdParam = formData.get("assessmentId") as string | null;
+    if (!intakeRaw || (!email && !assessmentIdParam)) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
     }
 
@@ -97,7 +99,6 @@ export async function POST(req: NextRequest) {
 
     // Multi-step pipeline: if `step` parameter is present, run that step only
     const step = formData.get("step") as AssessmentStep | null;
-    const assessmentIdParam = formData.get("assessmentId") as string | null;
     const feedbackRaw = formData.get("feedback") as string | null;
 
     if (step && ASSESSMENT_STEPS.includes(step)) {
