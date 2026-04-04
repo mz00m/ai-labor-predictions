@@ -189,9 +189,11 @@ export function formatToolsForPrompt(
   }
 
   lines.push(
-    "When recommending tools, reference specific products from this list where relevant.",
+    "Use these products as EXAMPLES within use-case-driven recommendations.",
+    "Frame each recommendation around the problem it solves, then mention specific products as options to explore.",
     "Include both the product name and general category so users can evaluate alternatives.",
-    "Prioritize free and freemium options for solo workers and very small teams."
+    "Prioritize free and freemium options for solo workers and very small teams.",
+    "The implementation roadmap should be product-agnostic — focus on capabilities, not tool names."
   );
 
   return lines.join("\n");

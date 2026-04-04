@@ -80,6 +80,12 @@ export interface Assessment {
   previewGenerated: boolean;
 }
 
+export type ToolPreference =
+  | "use-existing"
+  | "find-new"
+  | "build-own"
+  | "no-preference";
+
 export interface AssessmentIntake {
   // Organization basics
   organizationName: string;
@@ -91,15 +97,21 @@ export interface AssessmentIntake {
   assessmentScope: "full-organization" | "department" | "team";
   departmentName?: string;
   teamDescription?: string;
+  // The person's specific role / job title
+  jobTitle?: string;
   // Key functions and roles
   primaryFunctions: string[];
   keyRoles: string[];
   // Current tech landscape
   currentTools: string[];
   currentAiUsage: AiMaturityLevel;
+  // Tool approach preference
+  toolPreference?: ToolPreference;
   // Pain points and goals
   biggestChallenges: string[];
   goals: string[];
+  // Optional: a specific problem they want AI to solve
+  specificProblem?: string;
   // Uploaded content (metadata only — files processed in-memory)
   uploadedFiles: UploadedFileMeta[];
   websiteUrl?: string;
@@ -341,6 +353,13 @@ export const AI_MATURITY_LABELS: Record<AiMaturityLevel, string> = {
   "piloting": "I use AI occasionally for specific tasks",
   "some-adoption": "AI is part of my regular workflow",
   "widespread": "I use AI tools daily across most of my work",
+};
+
+export const TOOL_PREFERENCE_LABELS: Record<ToolPreference, string> = {
+  "use-existing": "Add AI to tools I already use",
+  "find-new": "Find new AI-native tools",
+  "build-own": "Build custom AI solutions",
+  "no-preference": "Not sure yet — show me options",
 };
 
 export const FILE_CATEGORY_LABELS: Record<FileCategory, string> = {
