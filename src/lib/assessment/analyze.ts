@@ -23,6 +23,13 @@ import { formatToolsForPrompt } from "@/data/tools";
 import { formatResearchContextForPrompt } from "./research-context";
 import { formatCapabilitiesForPrompt } from "./capabilities-context";
 import { formatEvidenceCitationsForPrompt } from "./evidence-citations";
+import {
+  StepContextSchema,
+  Step1ProfileSchema,
+  Step2TasksSchema,
+  Step3ToolsSchema,
+  Step4RisksSchema,
+} from "./schemas";
 
 const anthropic = new Anthropic();
 
@@ -75,7 +82,7 @@ ${existingReport.toolRecommendations.map((r) => `- ${r.category}: ${r.purpose}`)
     max_tokens: 6000,
     system: systemPrompt,
     messages: [{ role: "user", content: userPrompt }],
-  });
+  }, { timeout: 60000 });
 
   const text = response.content
     .filter((block): block is Anthropic.TextBlock => block.type === "text")
@@ -191,25 +198,80 @@ export function parseJsonFromText(text: string): Record<string, unknown> | null 
 }
 
 /**
- * Shared Claude API call helper. Centralizes client call, text extraction, and JSON parsing.
+ * Shared Claude API call helper with retry logic.
+ * 3 total attempts with exponential backoff (1s, 3s).
+ * Detects empty/null responses as retriable failures.
  */
 async function callClaude(
   systemPrompt: string,
   userPrompt: string,
-  options?: { model?: string; maxTokens?: number }
+  options?: { model?: string; maxTokens?: number; timeout?: number }
 ): Promise<Record<string, unknown> | null> {
-  const response = await anthropic.messages.create(
-    {
-      model: options?.model || "claude-sonnet-4-20250514",
-      max_tokens: options?.maxTokens || 4000,
-      system: systemPrompt,
-      messages: [{ role: "user", content: userPrompt }],
-    },
-    { timeout: 60000 }
-  );
+  const maxAttempts = 3;
+  const backoffMs = [1000, 3000];
+  const timeoutMs = options?.timeout || 60000;
 
-  const text = extractTextFromResponse(response);
-  return parseJsonFromText(text);
+  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+    try {
+      const response = await anthropic.messages.create(
+        {
+          model: options?.model || "claude-sonnet-4-20250514",
+          max_tokens: options?.maxTokens || 4000,
+          system: systemPrompt,
+          messages: [{ role: "user", content: userPrompt }],
+        },
+        { timeout: timeoutMs }
+      );
+
+      const text = extractTextFromResponse(response);
+      if (!text || text.trim().length === 0) {
+        console.warn(`[callClaude] Empty response on attempt ${attempt}/${maxAttempts}`);
+        if (attempt < maxAttempts) {
+          await new Promise((r) => setTimeout(r, backoffMs[attempt - 1]));
+          continue;
+        }
+        return null;
+      }
+
+      const parsed = parseJsonFromText(text);
+      if (parsed === null && attempt < maxAttempts) {
+        console.warn(`[callClaude] JSON parse failed on attempt ${attempt}/${maxAttempts}, retrying...`);
+        await new Promise((r) => setTimeout(r, backoffMs[attempt - 1]));
+        continue;
+      }
+
+      return parsed;
+    } catch (err: unknown) {
+      const isTimeout =
+        err instanceof Error &&
+        (err.name === "APIConnectionTimeoutError" ||
+          err.message?.includes("timeout"));
+
+      const isRetriable =
+        !isTimeout &&
+        err instanceof Error &&
+        (err.name === "APIConnectionError" ||
+          err.message?.includes("ECONNRESET") ||
+          (err as { status?: number }).status === 429 ||
+          (err as { status?: number }).status === 529 ||
+          ((err as { status?: number }).status ?? 0) >= 500);
+
+      if (isTimeout) {
+        console.error(`[callClaude] Timeout on attempt ${attempt}/${maxAttempts} (${timeoutMs}ms) — not retrying`);
+        throw err;
+      }
+
+      if (isRetriable && attempt < maxAttempts) {
+        console.warn(`[callClaude] Retriable error on attempt ${attempt}/${maxAttempts}: ${err instanceof Error ? err.message : err}`);
+        await new Promise((r) => setTimeout(r, backoffMs[attempt - 1]));
+        continue;
+      }
+
+      throw err;
+    }
+  }
+
+  return null;
 }
 
 /**
@@ -288,30 +350,47 @@ The extractedContext will be carried to subsequent steps, so extract everything 
 
   userPrompt += `\n\n## Industry Reference\n${template.departments.map((d) => `- ${d.name}: ${d.aiOpportunityAreas.join(", ")}`).join("\n")}`;
 
-  const parsed = await callClaude(systemPrompt, userPrompt, {
-    model: "claude-haiku-4-5-20251001", // Haiku for speed — step 1 is extraction, not deep analysis
-    maxTokens: 3000,
-  });
+  try {
+    const parsed = await callClaude(systemPrompt, userPrompt, {
+      model: "claude-haiku-4-5-20251001", // Haiku for speed — step 1 is extraction, not deep analysis
+      maxTokens: 3000,
+    });
 
-  const extractedCtx = (parsed?.extractedContext as Record<string, unknown>) || {};
-  const stepContext: StepContext = {
-    documentInsights: (extractedCtx.documentInsights as string[]) || [],
-    websiteSummary: (extractedCtx.websiteSummary as string) || undefined,
-    extractedRoles: (extractedCtx.extractedRoles as string[]) || undefined,
-    extractedProcesses: (extractedCtx.extractedProcesses as string[]) || undefined,
-    additionalContext: (extractedCtx.additionalContext as string) || undefined,
-  };
+    const validated = Step1ProfileSchema.safeParse(parsed);
+    if (!validated.success) {
+      console.warn("Step 1 schema validation failed, using defaults:", validated.error.flatten().fieldErrors);
+    }
+    const step1 = validated.success ? validated.data : Step1ProfileSchema.parse({});
 
-  return {
-    report: {
-      executiveSummary: (parsed?.executiveSummary as string) || "",
-      organizationProfile: (parsed?.organizationProfile as OrganizationProfile) || {
-        summary: "", industryContext: "", aiReadinessScore: 5, keyStrengths: [], keyGaps: [],
+    const ctxValidated = StepContextSchema.safeParse(
+      parsed?.extractedContext || step1.extractedContext || {}
+    );
+    const stepContext: StepContext = ctxValidated.success
+      ? ctxValidated.data
+      : StepContextSchema.parse({});
+
+    return {
+      report: {
+        executiveSummary: step1.executiveSummary,
+        organizationProfile: step1.organizationProfile,
+        quickWins: step1.quickWins,
       },
-      quickWins: (parsed?.quickWins as QuickWin[]) || [],
-    },
-    stepContext,
-  };
+      stepContext,
+    };
+  } catch (err: unknown) {
+    const errMsg = err instanceof Error ? err.message : String(err);
+    const errName = err instanceof Error ? err.name : "UnknownError";
+    console.error(`[Step 1 Profile] Fatal error (${errName}): ${errMsg}`);
+    const defaults = Step1ProfileSchema.parse({});
+    return {
+      report: {
+        executiveSummary: defaults.executiveSummary,
+        organizationProfile: defaults.organizationProfile,
+        quickWins: defaults.quickWins,
+      },
+      stepContext: StepContextSchema.parse({}),
+    };
+  }
 }
 
 /**
@@ -372,11 +451,26 @@ Use the user's feedback to adjust priorities. Reference their uploaded documents
   userPrompt += `\n\n## Industry Context\n${template.departments.map((d) => `- ${d.name}: ${d.aiOpportunityAreas.join(", ")}`).join("\n")}`;
   if (capabilitiesContext) userPrompt += `\n\n${capabilitiesContext}`;
 
-  const parsed = await callClaude(systemPrompt, userPrompt);
+  try {
+    const parsed = await callClaude(systemPrompt, userPrompt);
 
-  return {
-    taskAnalysis: (parsed?.taskAnalysis as TaskAnalysis[]) || [],
-  };
+    const validated = Step2TasksSchema.safeParse(parsed);
+    if (!validated.success) {
+      console.warn("Step 2 schema validation failed, using defaults:", validated.error.flatten().fieldErrors);
+    }
+    const step2 = validated.success ? validated.data : Step2TasksSchema.parse({});
+
+    return {
+      taskAnalysis: step2.taskAnalysis,
+    };
+  } catch (err: unknown) {
+    const errMsg = err instanceof Error ? err.message : String(err);
+    const errName = err instanceof Error ? err.name : "UnknownError";
+    console.error(`[Step 2 Tasks] Fatal error (${errName}): ${errMsg}`);
+    return {
+      taskAnalysis: Step2TasksSchema.parse({}).taskAnalysis,
+    };
+  }
 }
 
 /**
@@ -466,17 +560,31 @@ Return valid JSON:
   userPrompt += `\n\n${onetSummary}`;
   if (researchContext) userPrompt += `\n\n${researchContext}`;
 
-  const parsed = await callClaude(systemPrompt, userPrompt);
+  try {
+    const parsed = await callClaude(systemPrompt, userPrompt, { maxTokens: 8000, timeout: 180000 });
 
-  return {
-    toolRecommendations: (parsed?.toolRecommendations as ToolRecommendation[]) || [],
-    implementationRoadmap: (parsed?.implementationRoadmap as ImplementationRoadmap) || {
-      immediate: { timeframe: "0-3 months", objectives: [], actions: [], expectedOutcomes: [] },
-      mediumTerm: { timeframe: "3-6 months", objectives: [], actions: [], expectedOutcomes: [] },
-      longTerm: { timeframe: "6-12+ months", objectives: [], actions: [], expectedOutcomes: [] },
-    },
-    roiProjections: (parsed?.roiProjections as RoiProjection[]) || [],
-  };
+    const validated = Step3ToolsSchema.safeParse(parsed);
+    if (!validated.success) {
+      console.warn("Step 3 schema validation failed, using defaults:", validated.error.flatten().fieldErrors);
+    }
+    const step3 = validated.success ? validated.data : Step3ToolsSchema.parse({});
+
+    return {
+      toolRecommendations: step3.toolRecommendations,
+      implementationRoadmap: step3.implementationRoadmap,
+      roiProjections: step3.roiProjections,
+    };
+  } catch (err: unknown) {
+    const errMsg = err instanceof Error ? err.message : String(err);
+    const errName = err instanceof Error ? err.name : "UnknownError";
+    console.error(`[Step 3 Tools] Fatal error (${errName}): ${errMsg}`);
+    const defaults = Step3ToolsSchema.parse({});
+    return {
+      toolRecommendations: defaults.toolRecommendations,
+      implementationRoadmap: defaults.implementationRoadmap,
+      roiProjections: defaults.roiProjections,
+    };
+  }
 }
 
 /**
@@ -552,20 +660,33 @@ Make the AI policy practical, not legalistic. Write in second person ("you").`;
   if (evidenceContext) userPrompt += `\n\n${evidenceContext}`;
   if (capabilitiesContext) userPrompt += `\n\n${capabilitiesContext}`;
 
-  const parsed = await callClaude(systemPrompt, userPrompt);
+  try {
+    const parsed = await callClaude(systemPrompt, userPrompt);
 
-  return {
-    riskAssessment: (parsed?.riskAssessment as RiskAssessment) || {
-      overallRiskLevel: "moderate",
-      displacementRisk: "",
-      skillGaps: [],
-      changeManagementNotes: "",
-      dataPrivacyConsiderations: "",
-    },
-    furtherEvaluation: (parsed?.furtherEvaluation as string[]) || [],
-    aiPolicy: parsed?.aiPolicy as AssessmentReport["aiPolicy"],
-    promptLibrary: parsed?.promptLibrary as AssessmentReport["promptLibrary"],
-  };
+    const validated = Step4RisksSchema.safeParse(parsed);
+    if (!validated.success) {
+      console.warn("Step 4 schema validation failed, using defaults:", validated.error.flatten().fieldErrors);
+    }
+    const step4 = validated.success ? validated.data : Step4RisksSchema.parse({});
+
+    return {
+      riskAssessment: step4.riskAssessment,
+      furtherEvaluation: step4.furtherEvaluation,
+      aiPolicy: step4.aiPolicy,
+      promptLibrary: step4.promptLibrary,
+    };
+  } catch (err: unknown) {
+    const errMsg = err instanceof Error ? err.message : String(err);
+    const errName = err instanceof Error ? err.name : "UnknownError";
+    console.error(`[Step 4 Risks] Fatal error (${errName}): ${errMsg}`);
+    const defaults = Step4RisksSchema.parse({});
+    return {
+      riskAssessment: defaults.riskAssessment,
+      furtherEvaluation: defaults.furtherEvaluation,
+      aiPolicy: defaults.aiPolicy,
+      promptLibrary: defaults.promptLibrary,
+    };
+  }
 }
 
 // Legacy single-call pipeline removed in Phase 1 hardening.
