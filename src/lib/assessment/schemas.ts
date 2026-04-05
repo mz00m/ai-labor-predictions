@@ -254,18 +254,12 @@ const RiskAssessmentSchema = z.object({
 
 const HumanCapabilitySchema = z.object({
   name: z.string(),
-  appreciationScore: z.number().min(1).max(10).default(5),
-  whyAppreciating: z.string(),
-  howToDevelop: z.string(),
-  automationResistance: z.array(z.string()).default([]),
-  relevantTasks: z.array(z.string()).default([]),
-});
-
-const HumanCapabilitySchema = z.object({
-  name: z.string(),
-  whyItMatters: z.string(),
+  whyItMatters: z.string().optional(),
+  whyAppreciating: z.string().optional(),
   howToDevelop: z.string(),
   appreciationScore: z.number().min(1).max(10).default(8),
+  automationResistance: z.array(z.string()).default([]),
+  relevantTasks: z.array(z.string()).default([]),
 });
 
 export const Step4RisksSchema = z.object({
@@ -278,5 +272,4 @@ export const Step4RisksSchema = z.object({
   }),
   humanCapabilities: z.array(HumanCapabilitySchema).default([]),
   furtherEvaluation: z.array(z.string()).default([]),
-  humanCapabilities: z.array(HumanCapabilitySchema).default([]),
 });

@@ -196,8 +196,6 @@ export interface AssessmentReport {
   /** Human capabilities that appreciate with AI — skills to invest in */
   humanCapabilities?: HumanCapability[];
   furtherEvaluation: string[];
-  /** Human capabilities that appreciate with AI adoption */
-  humanCapabilities?: HumanCapability[];
   // Add-on content (only populated if purchased)
   aiPolicy?: AiPolicyDocument;
   promptLibrary?: PromptLibraryEntry[];
@@ -274,10 +272,11 @@ export interface DimensionScores {
 export interface HumanCapability {
   name: string;
   appreciationScore: number;    // 1-10, how much more valuable with AI
-  whyAppreciating: string;      // Why this skill grows in value
+  whyItMatters?: string;        // Why this capability matters
+  whyAppreciating?: string;     // Why this skill grows in value
   howToDevelop: string;         // Practical development advice
-  automationResistance: string[]; // What makes this hard to automate
-  relevantTasks: string[];      // Which of their analyzed tasks this applies to
+  automationResistance?: string[]; // What makes this hard to automate
+  relevantTasks?: string[];      // Which of their analyzed tasks this applies to
 }
 
 export interface RiskAssessment {
@@ -323,13 +322,6 @@ export interface RoiProjection {
   confidence: "high" | "moderate" | "low";
   basis: string;
   calculationDetail?: string; // Show the math
-}
-
-export interface HumanCapability {
-  name: string;
-  whyItMatters: string;
-  howToDevelop: string;
-  appreciationScore: number; // 7-10 scale
 }
 
 export interface AiPolicyDocument {

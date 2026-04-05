@@ -773,7 +773,7 @@ export function generatePdf(
     y = sectionTitle(doc, "Skills That Appreciate With AI", m, y);
 
     for (const cap of report.humanCapabilities) {
-      const whyLines = doc.splitTextToSize(cap.whyAppreciating, cw - 10);
+      const whyLines = doc.splitTextToSize(cap.whyAppreciating ?? cap.whyItMatters ?? "", cw - 10);
       const howLines = doc.splitTextToSize(cap.howToDevelop, cw - 10);
       const ch = 18 + (whyLines.length + howLines.length) * 3.2;
       need(ch + 4);
@@ -875,7 +875,7 @@ export function generatePdf(
 
     for (const cap of report.humanCapabilities) {
       doc.setFontSize(8);
-      const whyLines = doc.splitTextToSize(cap.whyItMatters, cw - 10);
+      const whyLines = doc.splitTextToSize(cap.whyItMatters ?? cap.whyAppreciating ?? "", cw - 10);
       const shownWhy = whyLines.slice(0, 3);
       const devLines = doc.splitTextToSize(`How to develop: ${cap.howToDevelop}`, cw - 10);
       const shownDev = devLines.slice(0, 2);
