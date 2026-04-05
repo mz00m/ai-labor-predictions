@@ -277,22 +277,40 @@ export function generatePdf(
     doc.text("First Tool to Try", m, y);
     y += 5;
     const tool = startHereTools[0];
+    const toolName = tool.toolName || tool.category;
+
+    // Measure content to size box dynamically
+    doc.setFont("helvetica", "normal");
+    doc.setFontSize(7);
+    const purposeLines = doc.splitTextToSize(tool.purpose, cw - 12);
+    const toolBoxH = 14 + Math.min(purposeLines.length, 2) * 3;
+
     doc.setFillColor(...C.gray100);
-    doc.roundedRect(m, y, cw, 12, 2, 2, "F");
+    doc.roundedRect(m, y, cw, toolBoxH, 2, 2, "F");
+
+    // Tool name (left, constrained width so it doesn't overlap cost)
     doc.setFont("helvetica", "bold");
     doc.setFontSize(8);
     doc.setTextColor(...C.heading);
-    const toolName = tool.toolName || tool.category;
-    doc.text(toolName, m + 5, y + 5);
+    const nameMaxW = tool.estimatedMonthlyCost ? cw - 60 : cw - 12;
+    const nameLines = doc.splitTextToSize(toolName, nameMaxW);
+    doc.text(nameLines[0], m + 5, y + 5);
+
+    // Cost (right-aligned, on its own)
+    if (tool.estimatedMonthlyCost) {
+      doc.setFont("helvetica", "normal");
+      doc.setFontSize(7);
+      doc.setTextColor(...C.muted);
+      const costText = tool.estimatedMonthlyCost.split("—")[0]?.trim() || "";
+      doc.text(costText, m + cw - 5, y + 5, { align: "right" });
+    }
+
+    // Purpose below name
     doc.setFont("helvetica", "normal");
     doc.setFontSize(7);
-    doc.setTextColor(...C.muted);
-    const purposeLines = doc.splitTextToSize(tool.purpose, cw - 50);
-    doc.text(purposeLines[0] || "", m + 5, y + 9);
-    if (tool.estimatedMonthlyCost) {
-      doc.text(tool.estimatedMonthlyCost.split("—")[0]?.trim() || "", m + cw - 5, y + 5, { align: "right" });
-    }
-    y += 16;
+    doc.setTextColor(...C.body);
+    doc.text(purposeLines.slice(0, 2), m + 5, y + 10);
+    y += toolBoxH + 4;
   }
 
   // Stats bar at bottom
@@ -707,7 +725,10 @@ export function generatePdf(
       doc.setFontSize(8);
       const basisLines = doc.splitTextToSize(roi.basis, cw - 10);
       const shownBasis = basisLines.slice(0, 2);
-      const ch = 20 + shownBasis.length * 3.2;
+      const savingsPreview = `Savings: ${roi.projectedSavings}  |  Time to value: ${roi.timeToValue}`;
+      const savingsPreviewLines = doc.splitTextToSize(savingsPreview, cw - 12);
+      const extraSavingsH = savingsPreviewLines.length > 1 ? 3.5 : 0;
+      const ch = 20 + extraSavingsH + shownBasis.length * 3.2;
 
       need(ch + 3);
 
@@ -726,16 +747,21 @@ export function generatePdf(
       doc.setTextColor(...confColor);
       doc.text(roi.confidence.toUpperCase(), m + cw - 5, y + 6, { align: "right" });
 
-      // Savings + time to value on one line
+      // Savings + time to value on one line (width-constrained)
       doc.setFont("helvetica", "normal");
       doc.setFontSize(8);
       doc.setTextColor(...C.body);
-      doc.text(`Savings: ${roi.projectedSavings}  |  Time to value: ${roi.timeToValue}`, m + 5, y + 11.5);
+      const savingsLine = `Savings: ${roi.projectedSavings}  |  Time to value: ${roi.timeToValue}`;
+      const savingsLines = doc.splitTextToSize(savingsLine, cw - 12);
+      doc.text(savingsLines[0], m + 5, y + 11.5);
+      if (savingsLines.length > 1) {
+        doc.text(savingsLines[1], m + 5, y + 14.5);
+      }
 
       // Basis
       doc.setFontSize(7);
       doc.setTextColor(...C.light);
-      doc.text(shownBasis, m + 5, y + 16);
+      doc.text(shownBasis, m + 5, y + 16 + extraSavingsH);
 
       y += ch + 3;
     }
@@ -976,8 +1002,10 @@ function bodyText(
 ): number {
   doc.setFont("helvetica", "normal");
   doc.setFontSize(8);
+  doc.setCharSpace(0);
   doc.setTextColor(55, 65, 75);
-  const lines: string[] = doc.splitTextToSize(text, width);
+  const clean = text.replace(/[\u00A0\u200B\u200C\u200D\uFEFF]/g, " ");
+  const lines: string[] = doc.splitTextToSize(clean, width);
   for (const line of lines) {
     if (needFn) y = needFn(4, y);
     doc.text(line, x, y);
@@ -990,9 +1018,13 @@ function bullet(
   doc: jsPDF, text: string, x: number, y: number, width: number,
   needFn?: (h: number, callerY?: number) => number
 ): number {
+  // Reset font state fully to prevent letter-spacing bleed from prior calls
   doc.setFont("helvetica", "normal");
   doc.setFontSize(8);
-  const lines: string[] = doc.splitTextToSize(text, width - 8);
+  doc.setCharSpace(0);
+  // Sanitize text: replace non-breaking spaces and other invisible chars
+  const clean = text.replace(/[\u00A0\u200B\u200C\u200D\uFEFF]/g, " ");
+  const lines: string[] = doc.splitTextToSize(clean, width - 8);
   // Reserve space for first line + bullet
   if (needFn) y = needFn(4, y);
   doc.setTextColor(79, 70, 229);
