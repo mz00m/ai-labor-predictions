@@ -472,9 +472,13 @@ export function generatePdf(
   if (report.riskAssessment.dataPrivacyConsiderations && report.riskAssessment.dataPrivacyConsiderations.length > 0) {
     need(16);
     y = subHead(doc, "Data Privacy", m, y);
-    for (const item of report.riskAssessment.dataPrivacyConsiderations) {
-      need(8);
-      y = bullet(doc, item, m, y, cw);
+    if (Array.isArray(report.riskAssessment.dataPrivacyConsiderations)) {
+      for (const item of report.riskAssessment.dataPrivacyConsiderations) {
+        need(8);
+        y = bullet(doc, item, m, y, cw);
+      }
+    } else {
+      y = bodyText(doc, report.riskAssessment.dataPrivacyConsiderations, m, y, cw);
     }
   }
 
