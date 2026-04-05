@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import type { Assessment, AssessmentReport } from "@/lib/assessment/types";
+import { INDUSTRY_LABELS, COMPANY_SIZE_LABELS, AI_MATURITY_LABELS } from "@/lib/assessment/types";
 
 // Sections that start expanded by default
 const DEFAULT_EXPANDED = new Set(["summary", "readiness"]);
@@ -155,6 +156,7 @@ export default function ReportPage() {
     { id: "risks", label: "Risks, Pitfalls & Change Management" },
     { id: "roi", label: "ROI Projections" },
     { id: "next", label: "Next Steps" },
+    { id: "inputs", label: "Your Inputs" },
   ];
 
   return (
@@ -264,7 +266,25 @@ export default function ReportPage() {
             </div>
           </div>
         )}
-        <div className="grid sm:grid-cols-2 gap-4">
+        {report.organizationProfile.aiReadinessRationale && (
+          <p className="text-[14px] text-[var(--foreground)]/70 leading-relaxed mt-3" style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}>
+            {report.organizationProfile.aiReadinessRationale}
+          </p>
+        )}
+        {report.organizationProfile.aiReadinessNextSteps && report.organizationProfile.aiReadinessNextSteps.length > 0 && (
+          <div className="mt-3 bg-indigo-50 border border-indigo-100 rounded-lg p-3">
+            <h4 className="text-[12px] font-bold uppercase tracking-wider text-indigo-600 mb-2">To improve your score</h4>
+            <ul className="space-y-1">
+              {report.organizationProfile.aiReadinessNextSteps.map((step, i) => (
+                <li key={i} className="text-[13px] text-indigo-800 flex gap-2">
+                  <span className="text-indigo-400 mt-0.5 flex-shrink-0">{i + 1}.</span>
+                  {step}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+        <div className="grid sm:grid-cols-2 gap-4 mt-4">
           {report.organizationProfile.keyStrengths.length > 0 && (
             <div className="bg-green-50 border border-green-100 rounded-lg p-4">
               <h4 className="text-[12px] font-bold uppercase tracking-wider text-green-600 mb-2">Strengths</h4>
@@ -699,6 +719,32 @@ export default function ReportPage() {
               </div>
             </Section>
           )}
+
+          {/* 9. Your Inputs */}
+          <Section num={9} id="inputs" title="Your Inputs" expanded={expandedSections.has("inputs")} onToggle={() => toggleSection("inputs")}>
+            <p className="text-[12px] text-gray-400 mb-4">What you told us — for reference.</p>
+            <div className="space-y-2">
+              {[
+                ["Organization", assessment.intake.organizationName],
+                ["Industry", INDUSTRY_LABELS[assessment.intake.industry] || assessment.intake.industry],
+                ["Size", COMPANY_SIZE_LABELS[assessment.intake.companySize] || assessment.intake.companySize],
+                ["Scope", assessment.intake.assessmentScope.replace(/-/g, " ")],
+                ...(assessment.intake.departmentName ? [["Department", assessment.intake.departmentName]] : []),
+                ...(assessment.intake.jobTitle ? [["Your Role", assessment.intake.jobTitle]] : []),
+                ["AI Experience", AI_MATURITY_LABELS[assessment.intake.currentAiUsage] || assessment.intake.currentAiUsage],
+                ...(assessment.intake.primaryFunctions.length > 0 ? [["Key Functions", assessment.intake.primaryFunctions.join(", ")]] : []),
+                ...(assessment.intake.keyRoles.length > 0 ? [["Key Roles", assessment.intake.keyRoles.join(", ")]] : []),
+                ...(assessment.intake.currentTools.length > 0 ? [["Current Tools", assessment.intake.currentTools.join(", ")]] : []),
+                ...(assessment.intake.biggestChallenges.length > 0 ? [["Challenges", assessment.intake.biggestChallenges.join("; ")]] : []),
+                ...(assessment.intake.goals.length > 0 ? [["Goals", assessment.intake.goals.join("; ")]] : []),
+              ].map(([label, value], i) => (
+                <div key={i} className="flex gap-3 text-[13px]">
+                  <span className="font-semibold text-gray-500 w-28 flex-shrink-0 text-right">{label}</span>
+                  <span className="text-gray-700">{value}</span>
+                </div>
+              ))}
+            </div>
+          </Section>
 
       {/* Feedback — hide on shared view */}
       {!isShared && (
