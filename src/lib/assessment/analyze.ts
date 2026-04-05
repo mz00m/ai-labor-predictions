@@ -437,6 +437,7 @@ Return valid JSON with these keys:
 }
 
 Generate 3-5 quick wins. These should be things they can try THIS WEEK.
+For toolSuggestion in quick wins: many quick wins are best done with a general-purpose AI assistant (ChatGPT, Google Gemini, or Claude) rather than specialized software. For example, "Use ChatGPT or Gemini to draft your next meeting agenda" is a perfectly good quick win. Only suggest specialized tools when the task genuinely needs one.
 The extractedContext will be carried to subsequent steps, so extract everything useful.`;
 
   let userPrompt = buildIntakeContext(intake);
@@ -529,6 +530,13 @@ AI Maturity Gating — The person's maturity level determines task complexity:
 - "piloting": Can handle moderate multi-step workflows
 - "some-adoption"/"widespread": Ready for complex, integrated approaches
 
+Example Tools — Be Practical:
+For each task, suggest 1-3 example tools that could help. Include a MIX of:
+1. **General-purpose AI assistants** (ChatGPT, Google Gemini, Claude) for tasks that don't need a specialized tool — things like drafting agendas, taking meeting notes, creating forms, brainstorming, summarizing documents, writing emails. Many tasks are best solved by simply prompting a general AI assistant, not buying dedicated software.
+2. **Specialized/dedicated tools** from the tools KB when the task genuinely benefits from purpose-built software (e.g., CRM, accounting, project management).
+3. **AI features in tools they already use** (e.g., Google Workspace has Gemini built in, Microsoft 365 has Copilot) — call these out when relevant.
+Not every task needs a structured tool. For occasional or ad-hoc tasks (creating an agenda, drafting a one-off form, taking notes in a meeting), a general-purpose AI assistant IS the right recommendation.
+
 Return valid JSON:
 {
   "taskAnalysis": [
@@ -537,7 +545,7 @@ Return valid JSON:
       "department": "Area of work",
       "currentProcess": "How they do this today",
       "aiOpportunity": "high|medium|low",
-      "aiApproach": "Step-by-step explanation naming specific tools",
+      "aiApproach": "Step-by-step explanation. Name specific tools where helpful, but for ad-hoc tasks just say 'use any AI assistant (ChatGPT, Gemini, Claude)'",
       "expectedImpact": "e.g. '3-5 hours saved per week'",
       "complexity": "simple|moderate|complex",
       "estimatedTimeSaved": "e.g. '3-5 hrs/week'",
@@ -627,6 +635,11 @@ Tool Recommendations — Product Examples:
 - "consider-later" (max 2): Priority Score ≥ 2.5, requires foundation
 Max 6 tool categories total. Free before paid. Simple before powerful.
 When tools from the knowledge base match, include them as concrete examples with real names, URLs, and pricing. But frame each recommendation around the USE CASE it solves, not the product itself.
+
+General-Purpose AI Assistants (ChatGPT, Google Gemini, Claude):
+Many use cases DON'T need a specialized tool. For ad-hoc and occasional tasks — writing meeting agendas, drafting forms, taking notes, brainstorming, summarizing documents, creating templates — recommend a general-purpose AI assistant as the tool. Include ChatGPT (free tier available), Google Gemini (especially if they use Google Workspace), and Claude as options. These are often the best "start-here" recommendation for people at lower AI maturity levels.
+If someone already uses Google Workspace, call out that Gemini is built into Docs, Sheets, Gmail, etc.
+If someone already uses Microsoft 365, call out that Copilot is built into Word, Excel, Outlook, etc.
 
 CRITICAL — Implementation Roadmap Must Be Product-Agnostic:
 The implementation roadmap and next steps must focus on USE CASES and CAPABILITIES, not specific products. Actions should describe WHAT to accomplish and WHY, not which tool to buy.
