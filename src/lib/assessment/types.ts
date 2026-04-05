@@ -196,6 +196,8 @@ export interface AssessmentReport {
   /** Human capabilities that appreciate with AI — skills to invest in */
   humanCapabilities?: HumanCapability[];
   furtherEvaluation: string[];
+  /** Human capabilities that appreciate with AI adoption */
+  humanCapabilities?: HumanCapability[];
   // Add-on content (only populated if purchased)
   aiPolicy?: AiPolicyDocument;
   promptLibrary?: PromptLibraryEntry[];
@@ -324,6 +326,13 @@ export interface RoiProjection {
   confidence: "high" | "moderate" | "low";
   basis: string;
   calculationDetail?: string; // Show the math
+}
+
+export interface HumanCapability {
+  name: string;
+  whyItMatters: string;
+  howToDevelop: string;
+  appreciationScore: number; // 7-10 scale
 }
 
 export interface AiPolicyDocument {
