@@ -669,6 +669,32 @@ export function generatePdf(
     } else {
       y = bodyText(doc, report.riskAssessment.dataPrivacyConsiderations, m, y, cw, need);
     }
+    y += 4;
+  }
+
+  if (report.riskAssessment.commonPitfalls && report.riskAssessment.commonPitfalls.length > 0) {
+    need(16);
+    y = subHead(doc, "Common Pitfalls to Avoid", m, y);
+    for (const pitfall of report.riskAssessment.commonPitfalls) {
+      y = bullet(doc, pitfall, m, y, cw, need);
+    }
+    y += 4;
+  }
+
+  if (report.riskAssessment.resistanceSources && report.riskAssessment.resistanceSources.length > 0) {
+    need(16);
+    y = subHead(doc, "Where to Expect Pushback", m, y);
+    for (const source of report.riskAssessment.resistanceSources) {
+      y = bullet(doc, source, m, y, cw, need);
+    }
+    y += 4;
+  }
+
+  if (report.riskAssessment.dataReadinessNote) {
+    need(16);
+    y = subHead(doc, "Your Data Readiness", m, y);
+    y = bodyText(doc, report.riskAssessment.dataReadinessNote, m, y, cw, need);
+    y += 4;
   }
 
   // ===== ROI PROJECTIONS =====
@@ -710,6 +736,58 @@ export function generatePdf(
       doc.setFontSize(7);
       doc.setTextColor(...C.light);
       doc.text(shownBasis, m + 5, y + 16);
+
+      y += ch + 3;
+    }
+  }
+
+  // ===== HUMAN CAPABILITIES =====
+  if (report.humanCapabilities && report.humanCapabilities.length > 0) {
+    y += 10;
+    need(24);
+    y = sectionTitle(doc, "Skills That Grow With AI", m, y);
+
+    doc.setFontSize(7);
+    doc.setTextColor(...C.muted);
+    doc.text("These capabilities become more valuable — not less — as AI handles routine work.", m, y);
+    y += 6;
+
+    for (const cap of report.humanCapabilities) {
+      doc.setFontSize(8);
+      const whyLines = doc.splitTextToSize(cap.whyItMatters, cw - 10);
+      const shownWhy = whyLines.slice(0, 3);
+      const devLines = doc.splitTextToSize(`How to develop: ${cap.howToDevelop}`, cw - 10);
+      const shownDev = devLines.slice(0, 2);
+      const ch = 14 + shownWhy.length * 3.2 + shownDev.length * 3.2;
+
+      need(ch + 3);
+
+      doc.setFillColor(...C.gray100);
+      doc.roundedRect(m, y, cw, ch, 2, 2, "F");
+
+      // Capability name
+      doc.setFont("helvetica", "bold");
+      doc.setFontSize(9);
+      doc.setTextColor(...C.heading);
+      doc.text(cap.name, m + 5, y + 6);
+
+      // Score badge
+      doc.setFontSize(7);
+      doc.setTextColor(...C.accent);
+      doc.text(`${cap.appreciationScore}/10`, m + cw - 5, y + 6, { align: "right" });
+
+      // Why it matters
+      let capY = y + 11;
+      doc.setFont("helvetica", "normal");
+      doc.setFontSize(8);
+      doc.setTextColor(...C.body);
+      doc.text(shownWhy, m + 5, capY);
+      capY += shownWhy.length * 3.2 + 1;
+
+      // How to develop
+      doc.setFontSize(7);
+      doc.setTextColor(...C.muted);
+      doc.text(shownDev, m + 5, capY);
 
       y += ch + 3;
     }
