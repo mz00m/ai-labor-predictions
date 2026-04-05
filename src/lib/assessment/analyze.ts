@@ -582,9 +582,22 @@ Use the user's feedback to adjust priorities. Reference their uploaded documents
   try {
     const parsed = await callClaude(systemPrompt, userPrompt, { maxTokens: 8000, timeout: 300000 });
 
-    const validated = Step2TasksSchema.safeParse(parsed);
+    let validated = Step2TasksSchema.safeParse(parsed);
     if (!validated.success) {
-      console.warn("Step 2 schema validation failed, using defaults:", validated.error.flatten().fieldErrors);
+      console.warn("Step 2 schema validation failed:", validated.error.flatten().fieldErrors);
+      // Try to salvage individual tasks from the raw response
+      const rawTasks = (parsed as Record<string, unknown>)?.taskAnalysis;
+      if (Array.isArray(rawTasks) && rawTasks.length > 0) {
+        const TaskSchema = Step2TasksSchema.shape.taskAnalysis.element;
+        const salvaged = rawTasks
+          .map((t) => TaskSchema.safeParse(t))
+          .filter((r) => r.success)
+          .map((r) => (r as { success: true; data: unknown }).data);
+        if (salvaged.length > 0) {
+          console.log(`  Salvaged ${salvaged.length}/${rawTasks.length} tasks from partial response`);
+          validated = { success: true, data: { taskAnalysis: salvaged } } as typeof validated;
+        }
+      }
     }
     const step2 = validated.success ? validated.data : Step2TasksSchema.parse({});
 

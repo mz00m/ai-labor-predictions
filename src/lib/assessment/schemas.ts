@@ -110,18 +110,35 @@ const ExampleToolSchema = z.object({
 });
 
 const TaskAnalysisSchema = z.object({
-  taskName: z.string(),
-  department: z.string(),
-  currentProcess: z.string(),
-  aiOpportunity: z.enum(["high", "medium", "low"]),
-  aiApproach: z.string(),
-  expectedImpact: z.string(),
-  complexity: z.enum(["simple", "moderate", "complex"]),
+  taskName: z.string().default("Untitled task"),
+  department: z.string().default("General"),
+  currentProcess: z.string().default(""),
+  aiOpportunity: z.string().transform((v) => {
+    const lower = v.toLowerCase().trim();
+    if (["high", "medium", "low"].includes(lower)) return lower as "high" | "medium" | "low";
+    // Map common AI-generated variants
+    if (lower.includes("high") || lower === "very high") return "high" as const;
+    if (lower.includes("low") || lower === "minimal") return "low" as const;
+    return "medium" as const;
+  }),
+  aiApproach: z.string().default(""),
+  expectedImpact: z.string().default(""),
+  complexity: z.string().transform((v) => {
+    const lower = v.toLowerCase().trim();
+    if (["simple", "moderate", "complex"].includes(lower)) return lower as "simple" | "moderate" | "complex";
+    if (lower === "easy" || lower === "low") return "simple" as const;
+    if (lower === "hard" || lower === "difficult" || lower === "high") return "complex" as const;
+    return "moderate" as const;
+  }),
   onetAlignment: z.string().optional(),
   estimatedTimeSaved: z.string().optional(),
   exampleTools: z.array(ExampleToolSchema).optional(),
   gettingStarted: z.string().optional(),
-  deploymentModel: z.enum(["copilot", "escalation", "full-automation", "agentic"]).optional(),
+  deploymentModel: z.string().transform((v) => {
+    const lower = v.toLowerCase().trim();
+    if (["copilot", "escalation", "full-automation", "agentic"].includes(lower)) return lower;
+    return "copilot";
+  }).optional(),
   deploymentModelRationale: z.string().optional(),
 });
 
