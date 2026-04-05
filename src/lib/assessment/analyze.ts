@@ -630,7 +630,12 @@ export async function generateStep3Tools(
   stepContext?: StepContext,
   feedback?: StepFeedback[]
 ): Promise<Partial<AssessmentReport>> {
-  const toolsRef = formatToolsForPrompt(intake.industry, intake.companySize);
+  // Pre-filter tools KB using Step 2 task signals to reduce prompt size
+  const taskSignals = previousReport.taskAnalysis?.map((t) => ({
+    department: t.department,
+    taskName: t.taskName,
+  }));
+  const toolsRef = formatToolsForPrompt(intake.industry, intake.companySize, taskSignals);
   const onetSummary = getOnetSummaryForPrompt(intake.primaryFunctions, intake.industry);
   const researchContext = formatResearchContextForPrompt(intake.industry);
 
