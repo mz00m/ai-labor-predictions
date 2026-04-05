@@ -159,8 +159,21 @@ export function generatePdf(
 
   // AI Readiness Score — large display
   if (report.organizationProfile.aiReadinessScore) {
+    // Calculate box height based on rationale length
+    let ratLines: string[] = [];
+    const ratWidth = cw - 50;
+    if (report.organizationProfile.aiReadinessRationale) {
+      doc.setFont("helvetica", "normal");
+      doc.setFontSize(7);
+      ratLines = doc.splitTextToSize(report.organizationProfile.aiReadinessRationale, ratWidth);
+    }
+    const ratLineH = 2.8;
+    const boxPadding = 8; // top + bottom padding
+    const minBoxH = 14;
+    const boxH = Math.max(minBoxH, boxPadding + ratLines.length * ratLineH + 2);
+
     doc.setFillColor(...C.accentLight);
-    doc.roundedRect(m, y, cw, 14, 3, 3, "F");
+    doc.roundedRect(m, y, cw, boxH, 3, 3, "F");
     doc.setFont("helvetica", "bold");
     doc.setFontSize(9);
     doc.setTextColor(...C.heading);
@@ -169,15 +182,14 @@ export function generatePdf(
     doc.setTextColor(...C.accent);
     doc.text(`${report.organizationProfile.aiReadinessScore}/10`, m + 6, y + 12);
 
-    // Rationale on the right side
-    if (report.organizationProfile.aiReadinessRationale) {
+    // Rationale on the right side — show all lines
+    if (ratLines.length > 0) {
       doc.setFont("helvetica", "normal");
       doc.setFontSize(7);
       doc.setTextColor(...C.body);
-      const ratLines = doc.splitTextToSize(report.organizationProfile.aiReadinessRationale, cw - 50);
-      doc.text(ratLines.slice(0, 3), m + 42, y + 5);
+      doc.text(ratLines, m + 42, y + 5);
     }
-    y += 18;
+    y += boxH + 4;
   }
 
   // Top 3 Actions from immediate roadmap

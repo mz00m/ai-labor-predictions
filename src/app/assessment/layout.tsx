@@ -39,6 +39,12 @@ export default function AssessmentLayout({
           </div>
           <div className="flex items-center gap-4">
             <Link
+              href="/assessment/methodology"
+              className="text-[13px] text-gray-400 hover:text-gray-900 transition-colors"
+            >
+              Methodology
+            </Link>
+            <Link
               href="/assessment/dashboard"
               className="text-[13px] text-gray-400 hover:text-gray-900 transition-colors"
             >
