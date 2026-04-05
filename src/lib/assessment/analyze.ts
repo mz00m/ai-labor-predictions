@@ -415,6 +415,8 @@ Return valid JSON with these keys:
     "summary": "2-3 sentences about their work context",
     "industryContext": "2-3 sentences about AI trends in their industry. Cite research data if provided.",
     "aiReadinessScore": 1-10,
+    "aiReadinessRationale": "2-3 sentences explaining WHY this specific score — what factors earned the points they got, and what's keeping them from a higher score. Be concrete: 'You scored 7 because X and Y, but you're not at 9 because Z.'",
+    "aiReadinessNextSteps": ["2-3 specific actions to improve their readiness score — what would move them from current score toward 10"],
     "keyStrengths": ["2-3 strengths specific to their intake"],
     "keyGaps": ["2-3 gaps framed as opportunities"]
   },

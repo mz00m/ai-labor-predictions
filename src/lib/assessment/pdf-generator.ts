@@ -3,7 +3,7 @@
 
 import { jsPDF } from "jspdf";
 import { AssessmentReport, AssessmentIntake } from "./types";
-import { INDUSTRY_LABELS, COMPANY_SIZE_LABELS } from "./types";
+import { INDUSTRY_LABELS, COMPANY_SIZE_LABELS, AI_MATURITY_LABELS } from "./types";
 
 type RGB = [number, number, number];
 
@@ -144,7 +144,163 @@ export function generatePdf(
 
   footer(doc, pw, ph, pageNum);
 
-  // ===== EXECUTIVE SUMMARY =====
+  // ===== ONE-PAGE SUMMARY =====
+  newPage();
+
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(16);
+  doc.setTextColor(...C.black);
+  doc.text("At a Glance", m, y);
+  y += 3;
+  doc.setDrawColor(...C.accent);
+  doc.setLineWidth(0.6);
+  doc.line(m, y, m + 24, y);
+  y += 10;
+
+  // AI Readiness Score — large display
+  if (report.organizationProfile.aiReadinessScore) {
+    doc.setFillColor(...C.accentLight);
+    doc.roundedRect(m, y, cw, 14, 3, 3, "F");
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(9);
+    doc.setTextColor(...C.heading);
+    doc.text("AI Readiness", m + 6, y + 6);
+    doc.setFontSize(20);
+    doc.setTextColor(...C.accent);
+    doc.text(`${report.organizationProfile.aiReadinessScore}/10`, m + 6, y + 12);
+
+    // Rationale on the right side
+    if (report.organizationProfile.aiReadinessRationale) {
+      doc.setFont("helvetica", "normal");
+      doc.setFontSize(7);
+      doc.setTextColor(...C.body);
+      const ratLines = doc.splitTextToSize(report.organizationProfile.aiReadinessRationale, cw - 50);
+      doc.text(ratLines.slice(0, 3), m + 42, y + 5);
+    }
+    y += 18;
+  }
+
+  // Top 3 Actions from immediate roadmap
+  const immediateActions = report.implementationRoadmap?.immediate?.actions || [];
+  if (immediateActions.length > 0) {
+    y += 4;
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(10);
+    doc.setTextColor(...C.heading);
+    doc.text("Start Here", m, y);
+    y += 5;
+    const topActions = immediateActions.slice(0, 3);
+    for (let i = 0; i < topActions.length; i++) {
+      doc.setFont("helvetica", "bold");
+      doc.setFontSize(8);
+      doc.setTextColor(...C.accent);
+      doc.text(`${i + 1}.`, m + 2, y);
+      doc.setFont("helvetica", "normal");
+      doc.setTextColor(...C.body);
+      const actionText = topActions[i].title;
+      const actionLines = doc.splitTextToSize(actionText, cw - 12);
+      doc.text(actionLines[0], m + 8, y);
+      y += 4;
+      if (topActions[i].description) {
+        doc.setFontSize(7);
+        doc.setTextColor(...C.muted);
+        const descLines = doc.splitTextToSize(topActions[i].description, cw - 12);
+        doc.text(descLines.slice(0, 2), m + 8, y);
+        y += descLines.slice(0, 2).length * 3 + 1;
+      }
+    }
+  }
+
+  // ROI highlights
+  if (report.roiProjections.length > 0) {
+    y += 6;
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(10);
+    doc.setTextColor(...C.heading);
+    doc.text("Projected Impact", m, y);
+    y += 6;
+
+    // Summary bar
+    doc.setFillColor(...C.gray100);
+    const roiBarH = Math.min(report.roiProjections.length * 5 + 6, 30);
+    doc.roundedRect(m, y, cw, roiBarH, 2, 2, "F");
+    let roiY = y + 4;
+    for (const roi of report.roiProjections.slice(0, 4)) {
+      doc.setFont("helvetica", "normal");
+      doc.setFontSize(7);
+      doc.setTextColor(...C.body);
+      doc.text(roi.area, m + 5, roiY);
+      doc.setFont("helvetica", "bold");
+      doc.setTextColor(...C.accent);
+      const savingsText = roi.projectedSavings || "";
+      doc.text(savingsText, m + cw - 5, roiY, { align: "right" });
+      roiY += 5;
+    }
+    y += roiBarH + 4;
+  }
+
+  // Key risk
+  if (report.riskAssessment?.displacementRisk) {
+    y += 4;
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(10);
+    doc.setTextColor(...C.heading);
+    doc.text("Key Risk to Watch", m, y);
+    y += 5;
+    doc.setFont("helvetica", "normal");
+    doc.setFontSize(7);
+    doc.setTextColor(...C.body);
+    const riskLines = doc.splitTextToSize(report.riskAssessment.displacementRisk, cw);
+    doc.text(riskLines.slice(0, 3), m, y);
+    y += riskLines.slice(0, 3).length * 3 + 2;
+  }
+
+  // Start-here tool
+  const startHereTools = report.toolRecommendations.filter(t => t.recommendationTier === "start-here");
+  if (startHereTools.length > 0) {
+    y += 4;
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(10);
+    doc.setTextColor(...C.heading);
+    doc.text("First Tool to Try", m, y);
+    y += 5;
+    const tool = startHereTools[0];
+    doc.setFillColor(...C.gray100);
+    doc.roundedRect(m, y, cw, 12, 2, 2, "F");
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(8);
+    doc.setTextColor(...C.heading);
+    const toolName = tool.toolName || tool.category;
+    doc.text(toolName, m + 5, y + 5);
+    doc.setFont("helvetica", "normal");
+    doc.setFontSize(7);
+    doc.setTextColor(...C.muted);
+    const purposeLines = doc.splitTextToSize(tool.purpose, cw - 50);
+    doc.text(purposeLines[0] || "", m + 5, y + 9);
+    if (tool.estimatedMonthlyCost) {
+      doc.text(tool.estimatedMonthlyCost.split("—")[0]?.trim() || "", m + cw - 5, y + 5, { align: "right" });
+    }
+    y += 16;
+  }
+
+  // Stats bar at bottom
+  y += 6;
+  doc.setDrawColor(...C.gray200);
+  doc.setLineWidth(0.3);
+  doc.line(m, y, m + cw, y);
+  y += 6;
+  doc.setFont("helvetica", "normal");
+  doc.setFontSize(7);
+  doc.setTextColor(...C.muted);
+  const statsItems = [
+    `${report.taskAnalysis.length} tasks analyzed`,
+    `${report.toolRecommendations.length} tools recommended`,
+    `${report.roiProjections.length} ROI projections`,
+    `3-phase roadmap`,
+  ];
+  doc.text(statsItems.join("  |  "), m, y);
+
+  // ===== EXECUTIVE SUMMARY (detailed) =====
   newPage();
   y = sectionTitle(doc, "AI Opportunity Summary", m, y);
 
@@ -164,6 +320,25 @@ export function generatePdf(
     doc.setTextColor(...C.accent);
     doc.text(`${report.organizationProfile.aiReadinessScore}/10`, m + cw - 28, y + 10);
     y += 22;
+
+    // Readiness rationale
+    if (report.organizationProfile.aiReadinessRationale) {
+      y = bodyText(doc, report.organizationProfile.aiReadinessRationale, m, y, cw, need);
+      y += 2;
+    }
+
+    // Next steps to improve score
+    if (report.organizationProfile.aiReadinessNextSteps && report.organizationProfile.aiReadinessNextSteps.length > 0) {
+      need(12);
+      doc.setFont("helvetica", "bold");
+      doc.setFontSize(8);
+      doc.setTextColor(...C.accent);
+      doc.text("To improve your score:", m, y);
+      y += 4;
+      for (const step of report.organizationProfile.aiReadinessNextSteps) {
+        y = bullet(doc, step, m, y, cw, need);
+      }
+    }
   }
 
   if (report.organizationProfile.industryContext) {
@@ -536,6 +711,44 @@ export function generatePdf(
     for (const item of report.furtherEvaluation) {
       y = bullet(doc, item, m, y, cw, need);
     }
+  }
+
+  // ===== YOUR INPUTS =====
+  y += 10;
+  need(24);
+  y = sectionTitle(doc, "Your Inputs", m, y);
+
+  doc.setFontSize(7);
+  doc.setTextColor(...C.muted);
+  doc.text("What you told us — for reference.", m, y);
+  y += 6;
+
+  const inputRows: [string, string][] = [
+    ["Organization", intake.organizationName],
+    ["Industry", INDUSTRY_LABELS[intake.industry] || intake.industry],
+    ["Size", COMPANY_SIZE_LABELS[intake.companySize] || intake.companySize],
+    ["Scope", intake.assessmentScope.replace(/-/g, " ")],
+  ];
+  if (intake.departmentName) inputRows.push(["Department", intake.departmentName]);
+  if (intake.jobTitle) inputRows.push(["Your Role", intake.jobTitle]);
+  inputRows.push(["AI Experience", AI_MATURITY_LABELS[intake.currentAiUsage] || intake.currentAiUsage]);
+  if (intake.primaryFunctions.length > 0) inputRows.push(["Key Functions", intake.primaryFunctions.join(", ")]);
+  if (intake.keyRoles.length > 0) inputRows.push(["Key Roles", intake.keyRoles.join(", ")]);
+  if (intake.currentTools.length > 0) inputRows.push(["Current Tools", intake.currentTools.join(", ")]);
+  if (intake.biggestChallenges.length > 0) inputRows.push(["Challenges", intake.biggestChallenges.join("; ")]);
+  if (intake.goals.length > 0) inputRows.push(["Goals", intake.goals.join("; ")]);
+
+  for (const [label, value] of inputRows) {
+    need(6, y);
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(7);
+    doc.setTextColor(...C.heading);
+    doc.text(label, m, y);
+    doc.setFont("helvetica", "normal");
+    doc.setTextColor(...C.body);
+    const valLines = doc.splitTextToSize(value, cw - 35);
+    doc.text(valLines.slice(0, 2), m + 32, y);
+    y += Math.max(valLines.slice(0, 2).length * 3, 4.5);
   }
 
   // ===== AI POLICY =====

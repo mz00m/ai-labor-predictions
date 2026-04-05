@@ -211,6 +211,8 @@ export interface OrganizationProfile {
   summary: string;
   industryContext: string;
   aiReadinessScore: number; // 1-10
+  aiReadinessRationale?: string; // Why this score, not higher or lower
+  aiReadinessNextSteps?: string[]; // 2-3 actions to improve the score
   keyStrengths: string[];
   keyGaps: string[];
 }

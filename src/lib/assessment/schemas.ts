@@ -80,6 +80,8 @@ const OrganizationProfileSchema = z.object({
   summary: z.string().default(""),
   industryContext: z.string().default(""),
   aiReadinessScore: z.number().min(1).max(10).default(5),
+  aiReadinessRationale: z.string().optional(),
+  aiReadinessNextSteps: z.array(z.string()).optional(),
   keyStrengths: z.array(z.string()).default([]),
   keyGaps: z.array(z.string()).default([]),
 });
