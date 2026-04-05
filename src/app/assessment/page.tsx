@@ -114,7 +114,7 @@ export default function AssessmentLanding() {
             task-by-task action plan for individual workers, nonprofits, and small business teams.
           </p>
 
-          <div className="mt-8 flex flex-col sm:flex-row gap-4">
+          <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4">
             <Link
               href="/assessment/start"
               className="inline-flex items-center justify-center gap-2 bg-[#5C61F6] hover:bg-[#4F52D4] text-white font-semibold text-[15px] px-7 py-3 rounded-lg transition-colors"
@@ -130,6 +130,14 @@ export default function AssessmentLanding() {
               </svg>
               Free!
             </span>
+          </div>
+          <div className="mt-4">
+            <Link
+              href="/assessment/methodology"
+              className="text-[13px] text-gray-400 hover:text-[#5C61F6] transition-colors"
+            >
+              How it works: 481 sources, 64 tools, 4-step AI pipeline &rarr;
+            </Link>
           </div>
 
           {/* Quick stats */}
