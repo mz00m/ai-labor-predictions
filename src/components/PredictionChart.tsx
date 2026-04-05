@@ -480,8 +480,18 @@ export default function PredictionChart({
     dateStrToUnique.set(pt.date, pt.dateStr);
   }
 
-  const yMin = yAxisMin;
-  const yMax = yAxisMax;
+  // Compute Y-axis domain: expand beyond hardcoded bounds if data would be clipped
+  const dataValues = filtered.flatMap((h) => {
+    const vals: number[] = [h.value];
+    if (h.confidenceLow != null) vals.push(h.confidenceLow);
+    if (h.confidenceHigh != null) vals.push(h.confidenceHigh);
+    return vals;
+  });
+  const dataMin = dataValues.length > 0 ? Math.min(...dataValues) : yAxisMin;
+  const dataMax = dataValues.length > 0 ? Math.max(...dataValues) : yAxisMax;
+  const padding = Math.max((dataMax - dataMin) * 0.1, 2);
+  const yMin = Math.min(yAxisMin, Math.floor(dataMin - padding));
+  const yMax = Math.max(yAxisMax, Math.ceil(dataMax + padding));
 
   // Process overlay bands (qualitative directional studies)
   const allFilteredOverlays = (overlays ?? []).filter((o) =>
