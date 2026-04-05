@@ -12,7 +12,69 @@ export interface TestProfile {
   websiteContent?: string;
 }
 
+/** Default test profile — Matt's actual role at GitLab Foundation */
+export const MATT_PROFILE: TestProfile = {
+  name: "matt-gitlab-foundation",
+  description: "Matt Zieger — Chief Program & Partnerships Officer, GitLab Foundation",
+  intake: {
+    organizationName: "GitLab Foundation",
+    industry: "nonprofit",
+    industryDetail:
+      "Private foundation focused on economic opportunity, workforce development, and AI policy. Manages $50M+ grantmaking portfolio including the AI for Economic Opportunity Fund ($30M+ collaborative with OpenAI and Ballmer Group).",
+    companySize: "11-50",
+    annualRevenue: "25m-100m",
+    assessmentScope: "department",
+    departmentName: "Programs & Partnerships",
+    primaryFunctions: [
+      "Grantmaking strategy and portfolio management",
+      "Partnership development with funders and tech companies",
+      "Research synthesis and policy communications",
+      "Data analysis and labor market monitoring",
+      "Network facilitation (Opportunity AI — 165+ philanthropy leaders)",
+      "Executive communications and stakeholder reporting",
+    ],
+    keyRoles: [
+      "Chief Program & Partnerships Officer",
+      "Program Officers",
+      "Research Analysts",
+      "Grants Managers",
+      "Communications Lead",
+      "Partnership Coordinators",
+    ],
+    currentTools: [
+      "Google Workspace",
+      "Slack",
+      "Notion",
+      "Salesforce",
+      "Claude",
+      "Vercel",
+      "GitHub",
+      "Figma",
+    ],
+    currentAiUsage: "widespread",
+    biggestChallenges: [
+      "Synthesizing 300+ research sources into actionable funder briefings",
+      "Grant proposal review and due diligence across 50+ active grants",
+      "Coordinating across 165+ network members with varied AI literacy",
+      "Keeping jobsdata.ai predictions current with fast-moving research",
+      "Context-switching across grantmaking, data viz, writing, and partnership strategy",
+    ],
+    goals: [
+      "Automate research monitoring and source scoring for jobsdata.ai",
+      "Streamline grant review with AI-assisted due diligence",
+      "Scale network communications without adding headcount",
+      "Produce higher-quality policy memos and funder reports faster",
+      "Free up time from operational work for strategic relationship-building",
+    ],
+    websiteUrl: "https://about.gitlab.com/company/gitlab-foundation/",
+    uploadedFiles: [],
+    additionalContext:
+      "I co-founded the AI for Economic Opportunity Fund and lead Opportunity AI, a network of 165+ philanthropy leaders focused on AI and workforce. I also personally build and maintain jobsdata.ai — a labor market signals dashboard. I'm a senior non-engineer who codes, with strong design sensibilities (Stripe/Tufte aesthetic). My work spans executive communications for major funders, quantitative data analysis, and hands-on web development.",
+  },
+};
+
 export const TEST_PROFILES: TestProfile[] = [
+  MATT_PROFILE,
   {
     name: "community-foundation",
     description: "Mid-size nonprofit, exploring AI, full org assessment",

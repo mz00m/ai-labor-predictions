@@ -4,9 +4,11 @@
 //
 // Usage:
 //   bun run test-assessments              # Run all profiles
-//   bun run test-assessments -- --only community-foundation
+//   bun run test-assessments -- --only matt-gitlab-foundation  # Just Matt's profile
 //   bun run test-assessments -- --only community-foundation,dental-practice
 //   bun run test-assessments -- --preview  # Run in preview mode instead of full
+//   bun run test-assessments -- --pdf      # Also generate PDF output
+//   bun run test-assessments -- --matt     # Shortcut: run only Matt's profile with PDF
 
 import {
   generateStep1Profile,
@@ -14,8 +16,9 @@ import {
   generateStep3Tools,
   generateStep4Risks,
 } from "../src/lib/assessment/analyze";
-import { TEST_PROFILES, type TestProfile } from "./fixtures/assessment-profiles";
+import { TEST_PROFILES, MATT_PROFILE, type TestProfile } from "./fixtures/assessment-profiles";
 import type { AssessmentReport } from "../src/lib/assessment/types";
+import { generatePDF } from "../src/lib/assessment/pdf-generator";
 import * as fs from "fs";
 import * as path from "path";
 
@@ -23,11 +26,15 @@ const OUTPUT_DIR = "/tmp/assessment-tests";
 
 // Parse CLI args
 const args = process.argv.slice(2);
+const mattMode = args.includes("--matt");
 const onlyFlag = args.find((a) => a.startsWith("--only"));
-const onlyNames = onlyFlag
-  ? args[args.indexOf(onlyFlag) + 1]?.split(",").map((s) => s.trim())
-  : null;
+const onlyNames = mattMode
+  ? ["matt-gitlab-foundation"]
+  : onlyFlag
+    ? args[args.indexOf(onlyFlag) + 1]?.split(",").map((s) => s.trim())
+    : null;
 const previewMode = args.includes("--preview");
+const generatePdf = args.includes("--pdf") || mattMode;
 const mode = previewMode ? "preview" : "full";
 
 function formatReport(profile: TestProfile, report: AssessmentReport): string {
@@ -215,6 +222,15 @@ async function runProfile(profile: TestProfile): Promise<void> {
     // Also write raw JSON for debugging
     const jsonPath = path.join(OUTPUT_DIR, `${profile.name}.json`);
     fs.writeFileSync(jsonPath, JSON.stringify(report, null, 2));
+
+    // Generate PDF if requested
+    if (generatePdf) {
+      console.log(`  Generating PDF...`);
+      const pdfBuffer = await generatePDF(profile.intake, report, true);
+      const pdfPath = path.join(OUTPUT_DIR, `${profile.name}.pdf`);
+      fs.writeFileSync(pdfPath, Buffer.from(pdfBuffer));
+      console.log(`  PDF: ${pdfPath}`);
+    }
 
     console.log(`  Output: ${mdPath}`);
   } catch (err) {
