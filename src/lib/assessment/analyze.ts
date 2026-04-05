@@ -557,6 +557,8 @@ Return valid JSON:
   ]
 }
 
+PROPORTIONALITY RULE: Match the distribution of recommendations to the distribution of the user's stated functions. If they listed 8 functions and mentioned grants once, do NOT make grants the focus of multiple tasks. Spread recommendations across their actual workload. If >30% of your tasks cluster on a function that represents <15% of their stated work, rebalance.
+
 Generate 8-12 task analyses sorted by time impact (highest savings first). At least 80% of tasks MUST be directly relevant to the person's stated functions and roles — not generic industry tasks.
 Use the user's feedback to adjust priorities. Reference their uploaded documents context.`;
 
@@ -649,6 +651,7 @@ Tool Recommendations — Product Examples:
 - "add-next" (max 3): Priority Score ≥ 3.0, builds on start-here tools
 - "consider-later" (max 2): Priority Score ≥ 2.5, requires foundation
 Max 6 tool categories total. Free before paid. Simple before powerful.
+PROPORTIONALITY RULE: Tool recommendations must reflect the breadth of the user's actual work, not cluster on one function. If the task analysis covers 8 areas, tools should serve the highest-impact areas proportionally — not 3 tools for one niche function.
 When tools from the knowledge base match, include them as concrete examples with real names, URLs, and pricing. But frame each recommendation around the USE CASE it solves, not the product itself.
 
 General-Purpose AI Assistants (ChatGPT, Google Gemini, Claude):
@@ -677,7 +680,6 @@ Return valid JSON:
       "implementationEffort": "low|medium|high",
       "priorityTier": "immediate|medium-term|long-term",
       "estimatedMonthlyCost": "Free tier + paid details + cost/hr math",
-      "learningTime": "Honest estimate",
       "firstTask": "Concrete first task from their work",
       "upgradeSignal": "When to upgrade from free",
       "specificProducts": [{ "name": "Product", "url": "https://url", "pricing": "Free / $X/mo", "free": true }],

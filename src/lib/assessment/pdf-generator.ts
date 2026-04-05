@@ -186,7 +186,7 @@ export function generatePdf(
   if (report.organizationProfile.keyGaps.length > 0) {
     y += 6;
     need(16);
-    y = subHead(doc, "Key Gaps", m, y);
+    y = subHead(doc, "Opportunities", m, y);
     for (const item of report.organizationProfile.keyGaps) {
       y = bullet(doc, item, m, y, cw, need);
     }
@@ -311,12 +311,11 @@ export function generatePdf(
         const shownPurpose = purposeLines.slice(0, 2);
         const hasCost = !!tool.estimatedMonthlyCost;
         const hasReplaces = !!tool.whatItReplaces;
-        const hasLearning = !!tool.learningTime;
         const hasFirstTask = !!tool.firstTask;
         let ch = 16 + shownPurpose.length * 3.2;
         if (hasCost) ch += 4;
         if (hasReplaces) ch += 4;
-        if (hasLearning || hasFirstTask) ch += 4;
+        if (hasFirstTask) ch += 4;
 
         need(ch + 3);
 
@@ -371,19 +370,13 @@ export function generatePdf(
           contentY += 4;
         }
 
-        // Learning time + first task
-        if (hasLearning || hasFirstTask) {
+        // First task to try
+        if (hasFirstTask) {
           doc.setFontSize(7);
           doc.setTextColor(...C.muted);
-          const meta: string[] = [];
-          if (hasLearning) meta.push(`Learn: ${tool.learningTime}`);
-          if (hasFirstTask) {
-            const taskLines = doc.splitTextToSize(tool.firstTask!, cw - 40);
-            meta.push(`Try: ${taskLines[0]}`);
-          }
-          const metaText = meta.join("  |  ");
-          const metaLines = doc.splitTextToSize(metaText, cw - 12);
-          doc.text(metaLines[0], m + 5, contentY);
+          const tryText = `Try first: ${tool.firstTask}`;
+          const tryLines = doc.splitTextToSize(tryText, cw - 12);
+          doc.text(tryLines[0], m + 5, contentY);
         }
 
         y += ch + 3;

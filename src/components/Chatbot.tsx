@@ -102,43 +102,102 @@ function ThumbsDownIcon({ filled }: { filled?: boolean }) {
 }
 
 /** Render text with clickable links (markdown and raw URLs) */
-function Linkify({ text }: { text: string }) {
-  // Match markdown links [text](url) or raw URLs
-  const linkRegex = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)|(https?:\/\/[^\s),]+)/g;
+/** Render markdown-like text as JSX: bold, italic, inline code, headings, bullets, links */
+function FormattedMessage({ text }: { text: string }) {
+  const lines = text.split("\n");
   const elements: React.ReactNode[] = [];
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+
+    // Heading (## or #)
+    const headingMatch = line.match(/^(#{1,3})\s+(.+)$/);
+    if (headingMatch) {
+      elements.push(
+        <div key={i} className="font-semibold text-[var(--foreground)] mt-2 mb-0.5">
+          {renderInline(headingMatch[2])}
+        </div>
+      );
+      continue;
+    }
+
+    // Bullet (- or *)
+    const bulletMatch = line.match(/^[\s]*[-*]\s+(.+)$/);
+    if (bulletMatch) {
+      elements.push(
+        <div key={i} className="flex gap-1.5 ml-1">
+          <span className="text-[var(--muted)] select-none shrink-0">&#8226;</span>
+          <span>{renderInline(bulletMatch[1])}</span>
+        </div>
+      );
+      continue;
+    }
+
+    // Numbered list (1. 2. etc)
+    const numberedMatch = line.match(/^[\s]*(\d+)[.)]\s+(.+)$/);
+    if (numberedMatch) {
+      elements.push(
+        <div key={i} className="flex gap-1.5 ml-1">
+          <span className="text-[var(--muted)] select-none shrink-0">{numberedMatch[1]}.</span>
+          <span>{renderInline(numberedMatch[2])}</span>
+        </div>
+      );
+      continue;
+    }
+
+    // Empty line → small spacer
+    if (line.trim() === "") {
+      elements.push(<div key={i} className="h-1.5" />);
+      continue;
+    }
+
+    // Normal text
+    elements.push(<div key={i}>{renderInline(line)}</div>);
+  }
+
+  return <>{elements}</>;
+}
+
+/** Render inline markdown: bold, italic, code, links */
+function renderInline(text: string): React.ReactNode {
+  // Process inline patterns: **bold**, *italic*, `code`, [link](url), raw URLs
+  const regex = /\*\*(.+?)\*\*|\*(.+?)\*|`([^`]+)`|\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)|(https?:\/\/[^\s),]+)/g;
+  const parts: React.ReactNode[] = [];
   let lastIndex = 0;
   let match: RegExpExecArray | null;
 
-  while ((match = linkRegex.exec(text)) !== null) {
-    // Add text before this match
+  while ((match = regex.exec(text)) !== null) {
     if (match.index > lastIndex) {
-      elements.push(<span key={`t-${lastIndex}`}>{text.slice(lastIndex, match.index)}</span>);
+      parts.push(<span key={`t-${lastIndex}`}>{text.slice(lastIndex, match.index)}</span>);
     }
 
-    if (match[1] && match[2]) {
-      // Markdown link: [text](url)
-      elements.push(
-        <a
-          key={`l-${match.index}`}
-          href={match[2]}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-[var(--accent)] underline underline-offset-2 hover:text-[#4b50e5]"
-        >
-          {match[1]}
+    if (match[1]) {
+      // **bold**
+      parts.push(<strong key={`b-${match.index}`} className="font-semibold">{match[1]}</strong>);
+    } else if (match[2]) {
+      // *italic*
+      parts.push(<em key={`i-${match.index}`}>{match[2]}</em>);
+    } else if (match[3]) {
+      // `code`
+      parts.push(
+        <code key={`c-${match.index}`} className="bg-black/[0.06] px-1 py-0.5 rounded text-[12px] font-mono">
+          {match[3]}
+        </code>
+      );
+    } else if (match[4] && match[5]) {
+      // [text](url)
+      parts.push(
+        <a key={`l-${match.index}`} href={match[5]} target="_blank" rel="noopener noreferrer"
+          className="text-[var(--accent)] underline underline-offset-2 hover:text-[#4b50e5]">
+          {match[4]}
         </a>
       );
-    } else if (match[3]) {
+    } else if (match[6]) {
       // Raw URL
-      elements.push(
-        <a
-          key={`l-${match.index}`}
-          href={match[3]}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-[var(--accent)] underline underline-offset-2 hover:text-[#4b50e5] break-all"
-        >
-          {match[3]}
+      parts.push(
+        <a key={`l-${match.index}`} href={match[6]} target="_blank" rel="noopener noreferrer"
+          className="text-[var(--accent)] underline underline-offset-2 hover:text-[#4b50e5] break-all">
+          {match[6]}
         </a>
       );
     }
@@ -146,12 +205,11 @@ function Linkify({ text }: { text: string }) {
     lastIndex = match.index + match[0].length;
   }
 
-  // Add remaining text
   if (lastIndex < text.length) {
-    elements.push(<span key={`t-${lastIndex}`}>{text.slice(lastIndex)}</span>);
+    parts.push(<span key={`t-${lastIndex}`}>{text.slice(lastIndex)}</span>);
   }
 
-  return <>{elements}</>;
+  return parts.length === 1 ? parts[0] : <>{parts}</>;
 }
 
 /** Inline trigger button for the navbar */
@@ -465,9 +523,9 @@ export default function Chatbot({ sourceCount }: ChatbotProps) {
                   }`}
                 >
                   {msg.role === "assistant" ? (
-                    <div className="whitespace-pre-wrap">
+                    <div>
                       {msg.content ? (
-                        <Linkify text={msg.content} />
+                        <FormattedMessage text={msg.content} />
                       ) : (
                         <span className="inline-block w-1.5 h-4 bg-[var(--muted)] rounded-sm animate-pulse" />
                       )}
