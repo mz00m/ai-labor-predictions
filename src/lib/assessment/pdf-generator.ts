@@ -720,7 +720,7 @@ export function generatePdf(
 
   doc.setFontSize(7);
   doc.setTextColor(...C.muted);
-  doc.text("What you told us — for reference.", m, y);
+  doc.text("What you told us — for reference. The more detail you provide, the more tailored your report.", m, y);
   y += 6;
 
   const inputRows: [string, string][] = [

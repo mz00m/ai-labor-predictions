@@ -298,7 +298,8 @@ export default function AssessmentStartPage() {
             <h2 className="text-[24px] font-bold text-gray-900 mb-2">Let&apos;s start with the basics</h2>
             <p className="text-[14px] text-gray-500">
               Tell us where you work and what you do. This helps us tailor everything
-              to your specific situation.
+              to your specific situation. The more detail you provide across these steps,
+              the more specific and actionable your report will be.
             </p>
           </div>
 
@@ -452,8 +453,8 @@ export default function AssessmentStartPage() {
             <h2 className="text-[24px] font-bold text-gray-900 mb-2">What does your work look like?</h2>
             <p className="text-[14px] text-gray-500">
               {industryTemplate
-                ? `Here are common tasks in your industry. Select everything that's part of your work.`
-                : `Select the tasks and functions that are part of your work.`}
+                ? `Here are common tasks in your industry. Select everything that's part of your work — the more you select, the more thorough your analysis.`
+                : `Select the tasks and functions that are part of your work — the more you select, the more thorough your analysis.`}
             </p>
           </div>
 
