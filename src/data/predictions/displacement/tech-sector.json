@@ -118,6 +118,18 @@
       }
     },
     {
+      "date": "2025-08-01",
+      "value": 13,
+      "confidenceLow": 8,
+      "confidenceHigh": 20,
+      "sourceIds": [
+        "brynjolfsson-chandar-chen-2025"
+      ],
+      "evidenceTier": 1,
+      "dataType": "observed",
+      "metricType": "employment"
+    },
+    {
       "date": "2025-11-13",
       "value": 1.3,
       "confidenceLow": -1.5,
@@ -721,17 +733,26 @@
       ],
       "evidenceTier": 2,
       "label": "Stanford DEL: 88% coding productivity gain led to dev team cut from 7 to 3"
+    },
+    {
+      "date": "2026-04-05",
+      "direction": "neutral",
+      "sourceIds": [
+        "bls-information-sector-mar-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "BLS Mar 2026: Information sector 2,772K (+3K MoM), flat"
     }
   ],
   "sources": [
     {
-      "id": "mckinsey-2023",
-      "title": "The economic potential of generative AI",
-      "url": "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier",
-      "publisher": "McKinsey Global Institute",
-      "evidenceTier": 2,
-      "datePublished": "2023-06-14",
-      "excerpt": "Generative AI could enable automation of up to 70% of business activities across occupations.",
+      "id": "peng-copilot-2023",
+      "title": "The Impact of AI on Developer Productivity: Evidence from GitHub Copilot",
+      "url": "https://arxiv.org/abs/2302.06590",
+      "publisher": "arXiv (Peng, Kalliamvakou, Cihon, Demirer)",
+      "evidenceTier": 1,
+      "datePublished": "2023-02-01",
+      "excerpt": "RCT: developers completed a coding task 55.8% faster with GitHub Copilot assistance.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -745,14 +766,14 @@
       "dateAdded": "2026-03-01"
     },
     {
-      "id": "acemoglu-macro-2024",
-      "title": "The Simple Macroeconomics of AI",
-      "url": "https://www.nber.org/papers/w32487",
-      "publisher": "NBER (Acemoglu)",
-      "evidenceTier": 1,
-      "datePublished": "2024-04-01",
-      "excerpt": "AI will increase productivity but impact on jobs more modest than often claimed; estimates ~5% of tasks fully automatable.",
-      "dateAdded": "2026-03-07"
+      "id": "mckinsey-2023",
+      "title": "The economic potential of generative AI",
+      "url": "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier",
+      "publisher": "McKinsey Global Institute",
+      "evidenceTier": 2,
+      "datePublished": "2023-06-14",
+      "excerpt": "Generative AI could enable automation of up to 70% of business activities across occupations.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "goldman-300m",
@@ -765,16 +786,6 @@
       "dateAdded": "2026-03-07"
     },
     {
-      "id": "brookings-2024",
-      "title": "New data show no AI jobs apocalypse — for now",
-      "url": "https://www.brookings.edu/articles/new-data-show-no-ai-jobs-apocalypse-for-now/",
-      "publisher": "Brookings Institution",
-      "evidenceTier": 2,
-      "datePublished": "2024-03-15",
-      "excerpt": "Current employment data do not yet show large-scale AI-driven displacement.",
-      "dateAdded": "2026-03-01"
-    },
-    {
       "id": "mit-task-2024",
       "title": "Beyond AI Exposure: Which Tasks are Cost-Effective to Automate with Computer Vision?",
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4700751",
@@ -782,134 +793,6 @@
       "evidenceTier": 1,
       "datePublished": "2024-01-22",
       "excerpt": "Only 23% of worker wages for vision tasks would be cost-effective to automate with AI today.",
-      "dateAdded": "2026-03-01"
-    },
-    {
-      "id": "forrester-2025",
-      "title": "AI And Automation Will Take 6% Of US Jobs By 2030",
-      "url": "https://www.forrester.com/blogs/ai-and-automation-will-take-6-of-us-jobs-by-2030/",
-      "publisher": "Forrester",
-      "evidenceTier": 2,
-      "datePublished": "2025-01-06",
-      "dateAdded": "2026-03-01"
-    },
-    {
-      "id": "oecd-employment-2025",
-      "title": "OECD Employment Outlook 2025: AI and the Labour Market",
-      "url": "https://www.oecd.org/en/publications/oecd-employment-outlook_19991266.html",
-      "publisher": "OECD",
-      "evidenceTier": 1,
-      "datePublished": "2025-07-01",
-      "dateAdded": "2026-03-01"
-    },
-    {
-      "id": "google-10k-2024",
-      "title": "Alphabet Inc. 2024 10-K — Workforce & AI Automation Disclosures",
-      "url": "https://www.sec.gov/edgar/browse/?CIK=0001652044",
-      "publisher": "Alphabet (SEC Filing)",
-      "evidenceTier": 1,
-      "datePublished": "2025-02-03",
-      "excerpt": "Alphabet disclosed ongoing workforce restructuring, noting AI tools have reduced need for certain engineering and support roles while increasing demand for AI/ML specialists.",
-      "dateAdded": "2026-03-01"
-    },
-    {
-      "id": "meta-10k-2024",
-      "title": "Meta Platforms 2024 10-K — AI Efficiency & Headcount",
-      "url": "https://www.sec.gov/edgar/browse/?CIK=0001326801",
-      "publisher": "Meta Platforms (SEC Filing)",
-      "evidenceTier": 1,
-      "datePublished": "2025-02-01",
-      "excerpt": "Meta's 'Year of Efficiency' resulted in ~21,000 job cuts across 2023. Company cited AI-driven productivity gains enabling smaller teams to maintain output.",
-      "dateAdded": "2026-03-01"
-    },
-    {
-      "id": "lightcast-tech-postings-2025",
-      "title": "How AI is Disrupting the Tech Job Market: Data from 20M Job Postings",
-      "url": "https://bloomberry.com/blog/how-ai-is-disrupting-the-tech-job-market-data-from-20m-job-postings/",
-      "publisher": "Bloomberry (analysis of Lightcast data)",
-      "evidenceTier": 2,
-      "datePublished": "2024-12-01",
-      "excerpt": "Job openings grew 80% for AI scientists and 70% for ML engineers, while backend engineer postings declined 14%, frontend 24%, and data engineers 20%+.",
-      "dateAdded": "2026-03-01"
-    },
-    {
-      "id": "challenger-tech-layoffs-2025",
-      "title": "78,000 Tech Jobs Lost to AI in H1 2025",
-      "url": "https://www.challengergray.com/blog/2025-year-end-challenger-report-highest-q4-layoffs-since-2008-lowest-ytd-hiring-since-2010/",
-      "publisher": "Challenger, Gray & Christmas",
-      "evidenceTier": 2,
-      "datePublished": "2025-10-01",
-      "excerpt": "78,000 tech sector job losses attributed to AI in the first half of 2025, with QA testing, junior development, and IT support roles most affected.",
-      "dateAdded": "2026-03-01"
-    },
-    {
-      "id": "bls-tech-projections-2026",
-      "title": "AI impacts in BLS employment projections",
-      "url": "https://www.bls.gov/opub/ted/2025/ai-impacts-in-bls-employment-projections.htm",
-      "publisher": "Bureau of Labor Statistics (The Economics Daily)",
-      "evidenceTier": 1,
-      "datePublished": "2025-09-01",
-      "excerpt": "Software developer employment projected to grow 17.9% (2023-2033). Despite AI exposure, this occupation is unlikely to experience employment decline because robust software needs are expected to support continued demand.",
-      "dateAdded": "2026-03-01"
-    },
-    {
-      "id": "brynjolfsson-chandar-chen-2025",
-      "title": "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of AI",
-      "url": "https://digitaleconomy.stanford.edu/publications/canaries-in-the-coal-mine/",
-      "publisher": "Stanford Digital Economy Lab (Brynjolfsson, Chandar, Chen)",
-      "evidenceTier": 1,
-      "datePublished": "2025-11-13",
-      "excerpt": "Early-career workers (ages 22-25) in AI-exposed occupations experienced 16% relative employment declines, controlling for firm-level shocks. By September 2025, employment for software developers aged 22-25 declined nearly 20% compared to its peak in late 2022.",
-      "dateAdded": "2026-03-01"
-    },
-    {
-      "id": "chen-hbs-displacement-2025",
-      "title": "Displacement or Complementarity? The Labor Market Impact of Generative AI",
-      "url": "https://www.hbs.edu/ris/Publication%20Files/25-039_05fbec84-1f23-459b-8410-e3cd7ab6c88a.pdf",
-      "publisher": "Harvard Business School",
-      "evidenceTier": 1,
-      "datePublished": "2025-01-15",
-      "excerpt": "17% decrease in job postings for occupations in top quartile of automation potential, alongside 22% increase in postings for augmentation-prone occupations.",
-      "dateAdded": "2026-03-01"
-    },
-    {
-      "id": "anthropic-econ-primitives-2026",
-      "title": "The Anthropic Economic Index: Economic Primitives",
-      "url": "https://www.anthropic.com/research/anthropic-economic-index-january-2026-report",
-      "publisher": "Anthropic",
-      "evidenceTier": 1,
-      "datePublished": "2026-01-15",
-      "excerpt": "Computer/mathematical tasks account for ~33% of all Claude.ai conversations and ~50% of API traffic, indicating concentrated AI impact on tech-adjacent roles.",
-      "dateAdded": "2026-03-01"
-    },
-    {
-      "id": "dallas-fed-young-workers-2026",
-      "title": "Young workers' employment drops in occupations with high AI exposure",
-      "url": "https://www.dallasfed.org/research/economics/2026/0106",
-      "publisher": "Federal Reserve Bank of Dallas",
-      "evidenceTier": 1,
-      "datePublished": "2026-01-06",
-      "excerpt": "Employment share of young workers (20-24) in most AI-exposed occupations fell from 16.4% to 15.5% between November 2022 and September 2025.",
-      "dateAdded": "2026-03-01"
-    },
-    {
-      "id": "goldman-ai-workforce-2025",
-      "title": "How Will AI Affect the Global Workforce?",
-      "url": "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce",
-      "publisher": "Goldman Sachs Research",
-      "evidenceTier": 2,
-      "datePublished": "2025-08-01",
-      "excerpt": "Young tech workers (20-30) unemployment risen ~3pp since start of 2025; tech employment share fallen below pre-pandemic trend.",
-      "dateAdded": "2026-03-01"
-    },
-    {
-      "id": "jpmorgan-ai-job-growth-2025",
-      "title": "AI's Impact on Job Growth",
-      "url": "https://www.jpmorgan.com/insights/global-research/artificial-intelligence/ai-impact-job-growth",
-      "publisher": "J.P. Morgan Global Research",
-      "evidenceTier": 2,
-      "datePublished": "2025-06-01",
-      "excerpt": "Tech/info/media employment stopped growing at end of 2022, coinciding with ChatGPT release; less than 10% of firms using AI regularly as of mid-2025.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -923,24 +806,74 @@
       "dateAdded": "2026-03-07"
     },
     {
-      "id": "indeed-sw-dev-postings-2025",
-      "title": "Software Development Postings Remain in the Doldrums",
-      "url": "https://www.hiringlab.org/2025/02/06/software-development-postings-remain-in-the-doldrums/",
-      "publisher": "Indeed Hiring Lab",
+      "id": "brookings-2024",
+      "title": "New data show no AI jobs apocalypse — for now",
+      "url": "https://www.brookings.edu/articles/new-data-show-no-ai-jobs-apocalypse-for-now/",
+      "publisher": "Brookings Institution",
       "evidenceTier": 2,
-      "datePublished": "2025-02-06",
-      "excerpt": "Software developer job postings 33% below pre-pandemic baseline as of November 2024. Annualized over ~2 years since ChatGPT launch: ~16.5%/yr decline rate.",
+      "datePublished": "2024-03-15",
+      "excerpt": "Current employment data do not yet show large-scale AI-driven displacement.",
       "dateAdded": "2026-03-01"
     },
     {
-      "id": "indeed-tech-hiring-freeze-2025",
-      "title": "The US Tech Hiring Freeze Continues",
-      "url": "https://www.hiringlab.org/2025/07/30/the-us-tech-hiring-freeze-continues/",
-      "publisher": "Indeed Hiring Lab",
-      "evidenceTier": 2,
-      "datePublished": "2025-07-30",
-      "excerpt": "Overall tech postings 36% below pre-pandemic baseline as of July 2025. Software engineer postings down 49%. Annualized over ~2.7 years: ~13.5%/yr decline rate.",
+      "id": "acemoglu-macro-2024",
+      "title": "The Simple Macroeconomics of AI",
+      "url": "https://www.nber.org/papers/w32487",
+      "publisher": "NBER (Acemoglu)",
+      "evidenceTier": 1,
+      "datePublished": "2024-04-01",
+      "excerpt": "AI will increase productivity but impact on jobs more modest than often claimed; estimates ~5% of tasks fully automatable.",
       "dateAdded": "2026-03-07"
+    },
+    {
+      "id": "gambacorta-codefuse-2024",
+      "title": "AI and Productivity: Evidence from CodeFuse",
+      "url": "https://www.bis.org/publ/work1208.htm",
+      "publisher": "BIS Working Paper (Gambacorta, Qiu, Shan, Rees)",
+      "evidenceTier": 1,
+      "datePublished": "2024-06-01",
+      "excerpt": "They show that 20 percent of the 55 percent total increase was directly attributable to AI-generated lines, suggesting genuine productivity effects beyond simple code generation.",
+      "dateAdded": "2026-03-07"
+    },
+    {
+      "id": "baird-linkedin-copilot-2024",
+      "title": "GitHub Copilot and Developer Productivity",
+      "url": "https://economicgraph.linkedin.com/content/dam/me/economicgraph/en-us/PDF/github-copilot-working-paper.pdf",
+      "publisher": "LinkedIn Economic Graph (Baird et al.)",
+      "evidenceTier": 2,
+      "datePublished": "2024-06-01",
+      "excerpt": "GitHub Copilot users show increased code output but no evidence of displacement in hiring patterns.",
+      "dateAdded": "2026-03-12"
+    },
+    {
+      "id": "yeverechyahu-copilot-languages-2024",
+      "title": "The Impact of Large Language Models on Open-source Innovation: Evidence from GitHub Copilot",
+      "url": "https://arxiv.org/abs/2409.08379",
+      "publisher": "arXiv (Yeverechyahu, Mayya, Oestreicher-Singer)",
+      "evidenceTier": 1,
+      "datePublished": "2024-09-01",
+      "excerpt": "They found a 37-55 percent increase in commits, mainly through contributions building on others' work like debugging or small edits.",
+      "dateAdded": "2026-03-07"
+    },
+    {
+      "id": "paradis-google-ai-coding-2024",
+      "title": "How much does AI impact development speed? An enterprise-based randomized controlled trial",
+      "url": "https://arxiv.org/abs/2410.12944",
+      "publisher": "Google (Paradis, Grey, Madison et al.)",
+      "evidenceTier": 2,
+      "datePublished": "2024-10-01",
+      "excerpt": "They found a 21 percent reduction in time spent per task. Interestingly, more experienced developers saw bigger effects, possibly because AI requires substantial verification and judgment rather than simply accepting generated code.",
+      "dateAdded": "2026-03-07"
+    },
+    {
+      "id": "hoffmann-ai-code-security-2024",
+      "title": "AI-Generated Code Security Risks",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5007084",
+      "publisher": "Harvard Business School (Hoffmann et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2024-10-01",
+      "excerpt": "AI-generated code has 41% more vulnerabilities than human-written code. Developers overestimate the security of AI-generated code.",
+      "dateAdded": "2026-03-12"
     },
     {
       "id": "bls-programmer-employment-observed",
@@ -953,124 +886,63 @@
       "dateAdded": "2026-03-01"
     },
     {
-      "id": "bls-programmer-projections-2034",
-      "title": "BLS Employment Projections: Computer Programmers 2024–2034",
-      "url": "https://www.bls.gov/ooh/computer-and-information-technology/computer-programmers.htm",
-      "publisher": "Bureau of Labor Statistics",
-      "evidenceTier": 1,
-      "datePublished": "2026-01-10",
-      "excerpt": "BLS projects a further 6% decline in programmer roles through 2034. Computer programmer employment (routine coding roles) fell ~27.5% in roughly two years following ChatGPT's release — one of the largest two-year drops in any occupation tracked by BLS. Software developer employment remained flat.",
-      "dateAdded": "2026-03-01"
-    },
-    {
-      "id": "challenger-ai-job-cuts-2025",
-      "title": "2025 Year-End Challenger Report: AI-Related Job Cuts",
-      "url": "https://www.challengergray.com/blog/2025-year-end-challenger-report-highest-q4-layoffs-since-2008-lowest-ytd-hiring-since-2010/",
-      "publisher": "Challenger, Gray & Christmas",
+      "id": "lightcast-tech-postings-2025",
+      "title": "How AI is Disrupting the Tech Job Market: Data from 20M Job Postings",
+      "url": "https://bloomberry.com/blog/how-ai-is-disrupting-the-tech-job-market-data-from-20m-job-postings/",
+      "publisher": "Bloomberry (analysis of Lightcast data)",
       "evidenceTier": 2,
-      "datePublished": "2025-12-01",
-      "excerpt": "54,694 job cuts cited AI as a reason in 2025, concentrated in tech, finance, and customer service sectors.",
+      "datePublished": "2024-12-01",
+      "excerpt": "Job openings grew 80% for AI scientists and 70% for ML engineers, while backend engineer postings declined 14%, frontend 24%, and data engineers 20%+.",
       "dateAdded": "2026-03-01"
     },
     {
-      "id": "comptia-it-unemployment-2025",
-      "title": "CompTIA Tech Jobs Report: IT Unemployment Trends",
-      "url": "https://www.comptia.org/content/tech-jobs-report",
-      "publisher": "CompTIA",
+      "id": "forrester-2025",
+      "title": "AI And Automation Will Take 6% Of US Jobs By 2030",
+      "url": "https://www.forrester.com/blogs/ai-and-automation-will-take-6-of-us-jobs-by-2030/",
+      "publisher": "Forrester",
       "evidenceTier": 2,
-      "datePublished": "2025-09-01",
-      "excerpt": "IT unemployment rate rose from 3.9% to 5.7% between late 2024 and mid-2025, the highest level since 2021, driven by AI-related restructuring.",
+      "datePublished": "2025-01-06",
       "dateAdded": "2026-03-01"
     },
     {
-      "id": "cui-microsoft-copilot-2025",
-      "title": "The Effects of Generative AI on Computing Workers' Productivity",
-      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5106604",
-      "publisher": "Microsoft/Accenture (Cui, Demirer, Jaffe, Musolff, Peng, Salz)",
+      "id": "chen-hbs-displacement-2025",
+      "title": "Displacement or Complementarity? The Labor Market Impact of Generative AI",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/25-039_05fbec84-1f23-459b-8410-e3cd7ab6c88a.pdf",
+      "publisher": "Harvard Business School",
       "evidenceTier": 1,
-      "datePublished": "2025-06-01",
-      "excerpt": "26% increase in completed pull requests, 13.55% increase in commits, 38.38% increase in builds — but build success rate fell by 5.53 percentage points.",
+      "datePublished": "2025-01-15",
+      "excerpt": "17% decrease in job postings for occupations in top quartile of automation potential, alongside 22% increase in postings for augmentation-prone occupations.",
       "dateAdded": "2026-03-01"
     },
     {
-      "id": "peng-copilot-2023",
-      "title": "The Impact of AI on Developer Productivity: Evidence from GitHub Copilot",
-      "url": "https://arxiv.org/abs/2302.06590",
-      "publisher": "arXiv (Peng, Kalliamvakou, Cihon, Demirer)",
+      "id": "meta-10k-2024",
+      "title": "Meta Platforms 2024 10-K — AI Efficiency & Headcount",
+      "url": "https://www.sec.gov/edgar/browse/?CIK=0001326801",
+      "publisher": "Meta Platforms (SEC Filing)",
       "evidenceTier": 1,
-      "datePublished": "2023-02-01",
-      "excerpt": "RCT: developers completed a coding task 55.8% faster with GitHub Copilot assistance.",
+      "datePublished": "2025-02-01",
+      "excerpt": "Meta's 'Year of Efficiency' resulted in ~21,000 job cuts across 2023. Company cited AI-driven productivity gains enabling smaller teams to maintain output.",
       "dateAdded": "2026-03-01"
     },
     {
-      "id": "cognizant-new-work-2026",
-      "title": "New Work, New World 2026: How AI is Reshaping Work",
-      "url": "https://www.cognizant.com/us/en/aem-i/ai-and-the-future-of-work-report",
-      "publisher": "Cognizant",
-      "evidenceTier": 2,
-      "datePublished": "2026-01-15",
-      "excerpt": "Education task exposure jumped from 11% to 49% — a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations.",
-      "dateAdded": "2026-03-01"
-    },
-    {
-      "id": "goldman-mei-ai-labor-2026",
-      "title": "AI and the US Labor Market: Current Impact and Outlook",
-      "url": "https://finance.yahoo.com/news/goldman-sachs-warns-ai-fueled-layoffs-could-raise-the-unemployment-rate-this-year-chart-154251740.html",
-      "publisher": "Goldman Sachs Research (Pierfrancesco Mei)",
-      "evidenceTier": 2,
-      "datePublished": "2026-02-24",
-      "excerpt": "AI's labor market impact still small — only 5-10K/month drag on net job growth. Only 2½% of jobs exposed to automation today. Baseline forecast: 6-7% of workers displaced (range 3-14%), lowering annual hiring by 1M jobs and raising unemployment ~½pp. US creates 30M gross new jobs/year; does not anticipate job apocalypse. Impact so far largely confined to tech sector but expects it to grow materially.",
-      "dateAdded": "2026-03-01"
-    },
-    {
-      "id": "cais-scale-remote-labor-index-2025",
-      "title": "Remote Labor Index: Measuring AI Automation of Remote Work",
-      "url": "https://arxiv.org/abs/2510.26787",
-      "publisher": "Center for AI Safety / Scale AI (Mazeika et al.)",
+      "id": "google-10k-2024",
+      "title": "Alphabet Inc. 2024 10-K — Workforce & AI Automation Disclosures",
+      "url": "https://www.sec.gov/edgar/browse/?CIK=0001652044",
+      "publisher": "Alphabet (SEC Filing)",
       "evidenceTier": 1,
-      "datePublished": "2025-10-30",
-      "excerpt": "Failures predominantly stem from file errors (18%), incompleteness (36%), sub-professional quality (46%), and inconsistencies (15%). Best agent (Manus) achieved only 2.5% automation rate across 240 real freelance projects.",
+      "datePublished": "2025-02-03",
+      "excerpt": "Alphabet disclosed ongoing workforce restructuring, noting AI tools have reduced need for certain engineering and support roles while increasing demand for AI/ML specialists.",
       "dateAdded": "2026-03-01"
     },
     {
-      "id": "indeed-hiringlab-ai-jobs-labor-2026",
-      "title": "January 2026 US Labor Market Update: Jobs Mentioning AI Are Growing Amid Broader Hiring Weakness",
-      "url": "https://www.hiringlab.org/2026/01/22/january-labor-market-update-jobs-mentioning-ai-are-growing-amid-broader-hiring-weakness/",
+      "id": "indeed-sw-dev-postings-2025",
+      "title": "Software Development Postings Remain in the Doldrums",
+      "url": "https://www.hiringlab.org/2025/02/06/software-development-postings-remain-in-the-doldrums/",
       "publisher": "Indeed Hiring Lab",
       "evidenceTier": 2,
-      "datePublished": "2026-01-22",
-      "excerpt": "the number of tech postings that mentioned AI was about 45% higher than in February 2020, while total tech postings were 34% below pre-pandemic levels",
+      "datePublished": "2025-02-06",
+      "excerpt": "Software developer job postings 33% below pre-pandemic baseline as of November 2024. Annualized over ~2 years since ChatGPT launch: ~16.5%/yr decline rate.",
       "dateAdded": "2026-03-01"
-    },
-    {
-      "id": "dallas-fed-davis-ai-wages-2026",
-      "title": "AI is simultaneously aiding and replacing workers, wage data suggest",
-      "url": "https://www.dallasfed.org/research/economics/2026/0224",
-      "publisher": "Federal Reserve Bank of Dallas (J. Scott Davis)",
-      "evidenceTier": 1,
-      "datePublished": "2026-02-24",
-      "excerpt": "Employment in the computer systems design and related services sector has declined 5 percent.",
-      "dateAdded": "2026-03-01"
-    },
-    {
-      "id": "wang-neubig-agent-benchmarks-2026",
-      "title": "How Well Does Agent Development Reflect Real-World Work?",
-      "url": "https://arxiv.org/abs/2603.01203",
-      "publisher": "Carnegie Mellon / Stanford (Wang, Neubig, Fried, Yang et al.)",
-      "evidenceTier": 1,
-      "datePublished": "2026-03-01",
-      "excerpt": "software engineering abilities has the potential to accelerate other varieties of work. However, this concentrated focus significantly overrepresents a domain that accounts for only 7.6% of total employment.",
-      "dateAdded": "2026-03-07"
-    },
-    {
-      "id": "cio-it-jobs-ai-skills-2026",
-      "title": "State of IT jobs: AI sparks rapidly changing market for skills",
-      "url": "https://www.cio.com/article/4134254/state-of-it-jobs-ai-sparks-rapidly-changing-market-for-skills.html",
-      "publisher": "CIO.com",
-      "evidenceTier": 3,
-      "datePublished": "2026-02-18",
-      "excerpt": "37% of tech professionals say their role has been 'redefined or restructured due to gen AI in the past two years.' 61% of IT leaders say they plan to increase permanent headcount in the first half of 2026.",
-      "dateAdded": "2026-03-07"
     },
     {
       "id": "bls-mlr-ai-employment-projections-2025",
@@ -1091,6 +963,324 @@
       "datePublished": "2025-02-10",
       "excerpt": "Overall employment of computer programmers is projected to decline 9.6 percent from 2023 to 2033.",
       "dateAdded": "2026-03-07"
+    },
+    {
+      "id": "jpmorgan-ai-job-growth-2025",
+      "title": "AI's Impact on Job Growth",
+      "url": "https://www.jpmorgan.com/insights/global-research/artificial-intelligence/ai-impact-job-growth",
+      "publisher": "J.P. Morgan Global Research",
+      "evidenceTier": 2,
+      "datePublished": "2025-06-01",
+      "excerpt": "Tech/info/media employment stopped growing at end of 2022, coinciding with ChatGPT release; less than 10% of firms using AI regularly as of mid-2025.",
+      "dateAdded": "2026-03-01"
+    },
+    {
+      "id": "cui-microsoft-copilot-2025",
+      "title": "The Effects of Generative AI on Computing Workers' Productivity",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5106604",
+      "publisher": "Microsoft/Accenture (Cui, Demirer, Jaffe, Musolff, Peng, Salz)",
+      "evidenceTier": 1,
+      "datePublished": "2025-06-01",
+      "excerpt": "26% increase in completed pull requests, 13.55% increase in commits, 38.38% increase in builds — but build success rate fell by 5.53 percentage points.",
+      "dateAdded": "2026-03-01"
+    },
+    {
+      "id": "daniotti-ai-code-diffusion-2025",
+      "title": "Who is using AI to code? Global diffusion and impact of generative AI",
+      "url": "https://www.science.org/doi/10.1126/science.adz9311",
+      "publisher": "Science (Daniotti, Wachs, Feng, Neffke)",
+      "evidenceTier": 1,
+      "datePublished": "2025-06-01",
+      "excerpt": "AI-assisted coding jumped from around 5% in 2022 to nearly 30% in the last quarter of 2024. Quarterly output has increased by 3.6%. Experienced programmers benefit more; beginners hardly benefit at all.",
+      "dateAdded": "2026-03-12"
+    },
+    {
+      "id": "oecd-employment-2025",
+      "title": "OECD Employment Outlook 2025: AI and the Labour Market",
+      "url": "https://www.oecd.org/en/publications/oecd-employment-outlook_19991266.html",
+      "publisher": "OECD",
+      "evidenceTier": 1,
+      "datePublished": "2025-07-01",
+      "dateAdded": "2026-03-01"
+    },
+    {
+      "id": "indeed-tech-hiring-freeze-2025",
+      "title": "The US Tech Hiring Freeze Continues",
+      "url": "https://www.hiringlab.org/2025/07/30/the-us-tech-hiring-freeze-continues/",
+      "publisher": "Indeed Hiring Lab",
+      "evidenceTier": 2,
+      "datePublished": "2025-07-30",
+      "excerpt": "Overall tech postings 36% below pre-pandemic baseline as of July 2025. Software engineer postings down 49%. Annualized over ~2.7 years: ~13.5%/yr decline rate.",
+      "dateAdded": "2026-03-07"
+    },
+    {
+      "id": "goldman-ai-workforce-2025",
+      "title": "How Will AI Affect the Global Workforce?",
+      "url": "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-global-workforce",
+      "publisher": "Goldman Sachs Research",
+      "evidenceTier": 2,
+      "datePublished": "2025-08-01",
+      "excerpt": "Young tech workers (20-30) unemployment risen ~3pp since start of 2025; tech employment share fallen below pre-pandemic trend.",
+      "dateAdded": "2026-03-01"
+    },
+    {
+      "id": "stlouisfed-ai-unemployment-2025",
+      "title": "Is AI Contributing to Rising Unemployment? Evidence from Occupational Variation",
+      "url": "https://www.stlouisfed.org/on-the-economy/2025/aug/is-ai-contributing-unemployment-evidence-occupational-variation",
+      "publisher": "Federal Reserve Bank of St. Louis",
+      "evidenceTier": 1,
+      "datePublished": "2025-08-01",
+      "excerpt": "Occupations with higher AI exposure experienced larger unemployment rate increases between 2022 and 2025 (r=0.47). Computer/math occupations (exposure ~80%) saw steepest rises. GenAI-intensive occupations: r=0.57."
+    },
+    {
+      "id": "bls-tech-projections-2026",
+      "title": "AI impacts in BLS employment projections",
+      "url": "https://www.bls.gov/opub/ted/2025/ai-impacts-in-bls-employment-projections.htm",
+      "publisher": "Bureau of Labor Statistics (The Economics Daily)",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-01",
+      "excerpt": "Software developer employment projected to grow 17.9% (2023-2033). Despite AI exposure, this occupation is unlikely to experience employment decline because robust software needs are expected to support continued demand.",
+      "dateAdded": "2026-03-01"
+    },
+    {
+      "id": "comptia-it-unemployment-2025",
+      "title": "CompTIA Tech Jobs Report: IT Unemployment Trends",
+      "url": "https://www.comptia.org/content/tech-jobs-report",
+      "publisher": "CompTIA",
+      "evidenceTier": 2,
+      "datePublished": "2025-09-01",
+      "excerpt": "IT unemployment rate rose from 3.9% to 5.7% between late 2024 and mid-2025, the highest level since 2021, driven by AI-related restructuring.",
+      "dateAdded": "2026-03-01"
+    },
+    {
+      "id": "anthropic-economic-index-softdev-2025",
+      "title": "Anthropic Economic Index: Software Development",
+      "url": "https://www.anthropic.com/research/impact-software-development",
+      "publisher": "Anthropic",
+      "evidenceTier": 2,
+      "datePublished": "2025-09-01",
+      "excerpt": "37% of software development tasks show AI involvement. Writing code is 18% of actual AI usage in software development; most use is for understanding, debugging, and reviewing code.",
+      "dateAdded": "2026-03-12"
+    },
+    {
+      "id": "challenger-tech-layoffs-2025",
+      "title": "78,000 Tech Jobs Lost to AI in H1 2025",
+      "url": "https://www.challengergray.com/blog/2025-year-end-challenger-report-highest-q4-layoffs-since-2008-lowest-ytd-hiring-since-2010/",
+      "publisher": "Challenger, Gray & Christmas",
+      "evidenceTier": 2,
+      "datePublished": "2025-10-01",
+      "excerpt": "78,000 tech sector job losses attributed to AI in the first half of 2025, with QA testing, junior development, and IT support roles most affected.",
+      "dateAdded": "2026-03-01"
+    },
+    {
+      "id": "cais-scale-remote-labor-index-2025",
+      "title": "Remote Labor Index: Measuring AI Automation of Remote Work",
+      "url": "https://arxiv.org/abs/2510.26787",
+      "publisher": "Center for AI Safety / Scale AI (Mazeika et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2025-10-30",
+      "excerpt": "Failures predominantly stem from file errors (18%), incompleteness (36%), sub-professional quality (46%), and inconsistencies (15%). Best agent (Manus) achieved only 2.5% automation rate across 240 real freelance projects.",
+      "dateAdded": "2026-03-01"
+    },
+    {
+      "id": "sarkar-cursor-agents-2025",
+      "title": "AI Agents, Productivity, and Higher-Order Thinking: Early Evidence From Software Development",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5713646",
+      "publisher": "SSRN (Suproteem K. Sarkar, University of Chicago)",
+      "evidenceTier": 1,
+      "datePublished": "2025-11-06",
+      "excerpt": "Software output increased by 39% after the AI agent became the platform's default code generation mode. Quality did not deteriorate. Senior developers benefit most from agents; junior developers benefit most from autocomplete.",
+      "dateAdded": "2026-03-12"
+    },
+    {
+      "id": "brynjolfsson-chandar-chen-2025",
+      "title": "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of AI",
+      "url": "https://digitaleconomy.stanford.edu/publications/canaries-in-the-coal-mine/",
+      "publisher": "Stanford Digital Economy Lab (Brynjolfsson, Chandar, Chen)",
+      "evidenceTier": 1,
+      "datePublished": "2025-11-13",
+      "excerpt": "Early-career workers (ages 22-25) in AI-exposed occupations experienced 16% relative employment declines, controlling for firm-level shocks. By September 2025, employment for software developers aged 22-25 declined nearly 20% compared to its peak in late 2022.",
+      "dateAdded": "2026-03-01"
+    },
+    {
+      "id": "mit-iceberg-index-2025",
+      "title": "The Iceberg Index: Measuring Skills-centered Exposure in the AI Economy",
+      "url": "https://arxiv.org/abs/2510.25137",
+      "publisher": "MIT / Oak Ridge National Laboratory (Project Iceberg)",
+      "evidenceTier": 1,
+      "datePublished": "2025-11-26",
+      "excerpt": "Nationally, the Surface Index stands at 2.2%, representing approximately $211 billion in wage value across 1.9 million workers in technology occupations.",
+      "dateAdded": "2026-03-15"
+    },
+    {
+      "id": "challenger-ai-job-cuts-2025",
+      "title": "2025 Year-End Challenger Report: AI-Related Job Cuts",
+      "url": "https://www.challengergray.com/blog/2025-year-end-challenger-report-highest-q4-layoffs-since-2008-lowest-ytd-hiring-since-2010/",
+      "publisher": "Challenger, Gray & Christmas",
+      "evidenceTier": 2,
+      "datePublished": "2025-12-01",
+      "excerpt": "54,694 job cuts cited AI as a reason in 2025, concentrated in tech, finance, and customer service sectors.",
+      "dateAdded": "2026-03-01"
+    },
+    {
+      "id": "chen-stratton-ai-in-firm-2026",
+      "title": "Artificial Intelligence in the Firm",
+      "url": "https://fion.ac/jellyfish.pdf",
+      "publisher": "Chen & Stratton (Jellyfish data)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-01",
+      "excerpt": "AI adoption led to moderate productivity increases — an 8.5 percent increase in coding activity and 8.7 percent faster task completion — with no measurable quality declines. These productivity gains did not translate into increased output, changes in task composition, or effects on employment.",
+      "dateAdded": "2026-03-10"
+    },
+    {
+      "id": "dallas-fed-young-workers-2026",
+      "title": "Young workers' employment drops in occupations with high AI exposure",
+      "url": "https://www.dallasfed.org/research/economics/2026/0106",
+      "publisher": "Federal Reserve Bank of Dallas",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-06",
+      "excerpt": "Employment share of young workers (20-24) in most AI-exposed occupations fell from 16.4% to 15.5% between November 2022 and September 2025.",
+      "dateAdded": "2026-03-01"
+    },
+    {
+      "id": "bls-programmer-projections-2034",
+      "title": "BLS Employment Projections: Computer Programmers 2024–2034",
+      "url": "https://www.bls.gov/ooh/computer-and-information-technology/computer-programmers.htm",
+      "publisher": "Bureau of Labor Statistics",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-10",
+      "excerpt": "BLS projects a further 6% decline in programmer roles through 2034. Computer programmer employment (routine coding roles) fell ~27.5% in roughly two years following ChatGPT's release — one of the largest two-year drops in any occupation tracked by BLS. Software developer employment remained flat.",
+      "dateAdded": "2026-03-01"
+    },
+    {
+      "id": "anthropic-econ-primitives-2026",
+      "title": "The Anthropic Economic Index: Economic Primitives",
+      "url": "https://www.anthropic.com/research/anthropic-economic-index-january-2026-report",
+      "publisher": "Anthropic",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-15",
+      "excerpt": "Computer/mathematical tasks account for ~33% of all Claude.ai conversations and ~50% of API traffic, indicating concentrated AI impact on tech-adjacent roles.",
+      "dateAdded": "2026-03-01"
+    },
+    {
+      "id": "cognizant-new-work-2026",
+      "title": "New Work, New World 2026: How AI is Reshaping Work",
+      "url": "https://www.cognizant.com/us/en/aem-i/ai-and-the-future-of-work-report",
+      "publisher": "Cognizant",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-15",
+      "excerpt": "Education task exposure jumped from 11% to 49% — a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations.",
+      "dateAdded": "2026-03-01"
+    },
+    {
+      "id": "imf-skill-gaps-it-2026",
+      "title": "Bridging Skill Gaps for the Future: New Jobs Creation in the AI Age",
+      "url": "https://www.imf.org/-/media/files/publications/sdn/2026/english/sdnea2026001.pdf",
+      "publisher": "IMF (Jaumotte et al.)",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-15",
+      "excerpt": "The high demand for new IT skills may not necessarily translate into a one-for-one rise in demand for IT and AI specialists, especially as many IT tasks may progressively be automated by AI.",
+      "dateAdded": "2026-03-21"
+    },
+    {
+      "id": "indeed-hiringlab-ai-jobs-labor-2026",
+      "title": "January 2026 US Labor Market Update: Jobs Mentioning AI Are Growing Amid Broader Hiring Weakness",
+      "url": "https://www.hiringlab.org/2026/01/22/january-labor-market-update-jobs-mentioning-ai-are-growing-amid-broader-hiring-weakness/",
+      "publisher": "Indeed Hiring Lab",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-22",
+      "excerpt": "the number of tech postings that mentioned AI was about 45% higher than in February 2020, while total tech postings were 34% below pre-pandemic levels",
+      "dateAdded": "2026-03-01"
+    },
+    {
+      "id": "esb-dutch-youth-genai-employment-2026",
+      "title": "Dalende werkgelegenheid onder Nederlandse jongeren die concurreren met GenAI",
+      "url": "https://esb.nu/dalende-werkgelegenheid-onder-nederlandse-jongeren-die-concurreren-met-genai/",
+      "publisher": "ESB / Rabobank (Groenewegen, van Limbergen, Vrieselaar)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-22",
+      "excerpt": "De ICT groeide in dezelfde periode met 6,5 procent, maar zag een daling van de werkgelegenheid van zo'n 11 procent onder 15- tot 24-jarigen.",
+      "dateAdded": "2026-03-12"
+    },
+    {
+      "id": "deutsche-bank-ai-predictions-2026",
+      "title": "What AI Says About AI Eating Itself and the World",
+      "url": "https://fortune.com/2026/02/18/will-ai-destroy-jobs-deutsche-bank-asks-ai-to-predict/",
+      "publisher": "Deutsche Bank Research (dbLumina)",
+      "evidenceTier": 2,
+      "datePublished": "2026-02-16",
+      "excerpt": "Over 85% of software developers now use AI coding assistants, delivering productivity gains of up to 60%. This shift raises questions about traditional software engineering roles and licensing models.",
+      "dateAdded": "2026-03-13"
+    },
+    {
+      "id": "cio-it-jobs-ai-skills-2026",
+      "title": "State of IT jobs: AI sparks rapidly changing market for skills",
+      "url": "https://www.cio.com/article/4134254/state-of-it-jobs-ai-sparks-rapidly-changing-market-for-skills.html",
+      "publisher": "CIO.com",
+      "evidenceTier": 3,
+      "datePublished": "2026-02-18",
+      "excerpt": "37% of tech professionals say their role has been 'redefined or restructured due to gen AI in the past two years.' 61% of IT leaders say they plan to increase permanent headcount in the first half of 2026.",
+      "dateAdded": "2026-03-07"
+    },
+    {
+      "id": "yale-budgetlab-occupation-exposure-2026",
+      "title": "Labor Market AI Exposure: What Do We Know? (Data Repository)",
+      "url": "https://github.com/rmmomin/jobs-ai-exposure",
+      "publisher": "The Budget Lab at Yale (Gimbel, Kendall, Kulsakdinun)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-19",
+      "dateAdded": "2026-03-16",
+      "excerpt": "Computer and Mathematical occupations have the highest average PCA-weighted exposure score (4.2) and highest variance (0.739). GPT-scored exposure for SOC 15-0000: mean 8.4/10, range 8-9 across 10 occupations."
+    },
+    {
+      "id": "goldman-mei-ai-labor-2026",
+      "title": "AI and the US Labor Market: Current Impact and Outlook",
+      "url": "https://finance.yahoo.com/news/goldman-sachs-warns-ai-fueled-layoffs-could-raise-the-unemployment-rate-this-year-chart-154251740.html",
+      "publisher": "Goldman Sachs Research (Pierfrancesco Mei)",
+      "evidenceTier": 2,
+      "datePublished": "2026-02-24",
+      "excerpt": "AI's labor market impact still small — only 5-10K/month drag on net job growth. Only 2½% of jobs exposed to automation today. Baseline forecast: 6-7% of workers displaced (range 3-14%), lowering annual hiring by 1M jobs and raising unemployment ~½pp. US creates 30M gross new jobs/year; does not anticipate job apocalypse. Impact so far largely confined to tech sector but expects it to grow materially.",
+      "dateAdded": "2026-03-01"
+    },
+    {
+      "id": "dallas-fed-davis-ai-wages-2026",
+      "title": "AI is simultaneously aiding and replacing workers, wage data suggest",
+      "url": "https://www.dallasfed.org/research/economics/2026/0224",
+      "publisher": "Federal Reserve Bank of Dallas (J. Scott Davis)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-24",
+      "excerpt": "Employment in the computer systems design and related services sector has declined 5 percent.",
+      "dateAdded": "2026-03-01"
+    },
+    {
+      "id": "metr-2026",
+      "title": "We are Changing our Developer Productivity Experiment Design",
+      "url": "https://metr.org/blog/2026-02-24-uplift-update/",
+      "publisher": "METR (Becker, Rush, Cunningham, Rein, Mahamud)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-24",
+      "excerpt": "METR's follow-up study finds original 19% slowdown unreliable due to selection effects. New data shows -18% speedup (CI: -38% to +9%) for original developers and -4% speedup (CI: -15% to +9%) for new recruits. Study redesigned due to severe selection bias.",
+      "dateAdded": "2026-03-15"
+    },
+    {
+      "id": "wang-neubig-agent-benchmarks-2026",
+      "title": "How Well Does Agent Development Reflect Real-World Work?",
+      "url": "https://arxiv.org/abs/2603.01203",
+      "publisher": "Carnegie Mellon / Stanford (Wang, Neubig, Fried, Yang et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-01",
+      "excerpt": "software engineering abilities has the potential to accelerate other varieties of work. However, this concentrated focus significantly overrepresents a domain that accounts for only 7.6% of total employment.",
+      "dateAdded": "2026-03-07"
+    },
+    {
+      "id": "mit-futuretech-rising-tides-ai-automation-2026",
+      "title": "Crashing Waves vs. Rising Tides: Preliminary Findings on AI Automation from Thousands of Worker Evaluations of Labor Market Tasks",
+      "url": "https://arxiv.org/abs/2604.01363",
+      "publisher": "MIT FutureTech (Mertens, Thompson et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-01",
+      "excerpt": "Computer and Mathematical job family: 55.9% AI task success rate across 1,955 evaluations, with statistically significant negative slope (beta=-0.25) indicating longer tasks are harder for AI. Based on worker evaluations of LLM outputs on real O*NET tasks.",
+      "dateAdded": "2026-04-03"
     },
     {
       "id": "creatoreconomy-ai-native-ops-2026",
@@ -1143,146 +1333,6 @@
       "dateAdded": "2026-03-07"
     },
     {
-      "id": "yeverechyahu-copilot-languages-2024",
-      "title": "The Impact of Large Language Models on Open-source Innovation: Evidence from GitHub Copilot",
-      "url": "https://arxiv.org/abs/2409.08379",
-      "publisher": "arXiv (Yeverechyahu, Mayya, Oestreicher-Singer)",
-      "evidenceTier": 1,
-      "datePublished": "2024-09-01",
-      "excerpt": "They found a 37-55 percent increase in commits, mainly through contributions building on others' work like debugging or small edits.",
-      "dateAdded": "2026-03-07"
-    },
-    {
-      "id": "gambacorta-codefuse-2024",
-      "title": "AI and Productivity: Evidence from CodeFuse",
-      "url": "https://www.bis.org/publ/work1208.htm",
-      "publisher": "BIS Working Paper (Gambacorta, Qiu, Shan, Rees)",
-      "evidenceTier": 1,
-      "datePublished": "2024-06-01",
-      "excerpt": "They show that 20 percent of the 55 percent total increase was directly attributable to AI-generated lines, suggesting genuine productivity effects beyond simple code generation.",
-      "dateAdded": "2026-03-07"
-    },
-    {
-      "id": "metr-2026",
-      "title": "We are Changing our Developer Productivity Experiment Design",
-      "url": "https://metr.org/blog/2026-02-24-uplift-update/",
-      "publisher": "METR (Becker, Rush, Cunningham, Rein, Mahamud)",
-      "evidenceTier": 1,
-      "datePublished": "2026-02-24",
-      "excerpt": "METR's follow-up study finds original 19% slowdown unreliable due to selection effects. New data shows -18% speedup (CI: -38% to +9%) for original developers and -4% speedup (CI: -15% to +9%) for new recruits. Study redesigned due to severe selection bias.",
-      "dateAdded": "2026-03-15"
-    },
-    {
-      "id": "chen-stratton-ai-in-firm-2026",
-      "title": "Artificial Intelligence in the Firm",
-      "url": "https://fion.ac/jellyfish.pdf",
-      "publisher": "Chen & Stratton (Jellyfish data)",
-      "evidenceTier": 1,
-      "datePublished": "2026-01-01",
-      "excerpt": "AI adoption led to moderate productivity increases — an 8.5 percent increase in coding activity and 8.7 percent faster task completion — with no measurable quality declines. These productivity gains did not translate into increased output, changes in task composition, or effects on employment.",
-      "dateAdded": "2026-03-10"
-    },
-    {
-      "id": "paradis-google-ai-coding-2024",
-      "title": "How much does AI impact development speed? An enterprise-based randomized controlled trial",
-      "url": "https://arxiv.org/abs/2410.12944",
-      "publisher": "Google (Paradis, Grey, Madison et al.)",
-      "evidenceTier": 2,
-      "datePublished": "2024-10-01",
-      "excerpt": "They found a 21 percent reduction in time spent per task. Interestingly, more experienced developers saw bigger effects, possibly because AI requires substantial verification and judgment rather than simply accepting generated code.",
-      "dateAdded": "2026-03-07"
-    },
-    {
-      "id": "esb-dutch-youth-genai-employment-2026",
-      "title": "Dalende werkgelegenheid onder Nederlandse jongeren die concurreren met GenAI",
-      "url": "https://esb.nu/dalende-werkgelegenheid-onder-nederlandse-jongeren-die-concurreren-met-genai/",
-      "publisher": "ESB / Rabobank (Groenewegen, van Limbergen, Vrieselaar)",
-      "evidenceTier": 1,
-      "datePublished": "2026-01-22",
-      "excerpt": "De ICT groeide in dezelfde periode met 6,5 procent, maar zag een daling van de werkgelegenheid van zo'n 11 procent onder 15- tot 24-jarigen.",
-      "dateAdded": "2026-03-12"
-    },
-    {
-      "id": "daniotti-ai-code-diffusion-2025",
-      "title": "Who is using AI to code? Global diffusion and impact of generative AI",
-      "url": "https://www.science.org/doi/10.1126/science.adz9311",
-      "publisher": "Science (Daniotti, Wachs, Feng, Neffke)",
-      "evidenceTier": 1,
-      "datePublished": "2025-06-01",
-      "excerpt": "AI-assisted coding jumped from around 5% in 2022 to nearly 30% in the last quarter of 2024. Quarterly output has increased by 3.6%. Experienced programmers benefit more; beginners hardly benefit at all.",
-      "dateAdded": "2026-03-12"
-    },
-    {
-      "id": "sarkar-cursor-agents-2025",
-      "title": "AI Agents, Productivity, and Higher-Order Thinking: Early Evidence From Software Development",
-      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5713646",
-      "publisher": "SSRN (Suproteem K. Sarkar, University of Chicago)",
-      "evidenceTier": 1,
-      "datePublished": "2025-11-06",
-      "excerpt": "Software output increased by 39% after the AI agent became the platform's default code generation mode. Quality did not deteriorate. Senior developers benefit most from agents; junior developers benefit most from autocomplete.",
-      "dateAdded": "2026-03-12"
-    },
-    {
-      "id": "baird-linkedin-copilot-2024",
-      "title": "GitHub Copilot and Developer Productivity",
-      "url": "https://economicgraph.linkedin.com/content/dam/me/economicgraph/en-us/PDF/github-copilot-working-paper.pdf",
-      "publisher": "LinkedIn Economic Graph (Baird et al.)",
-      "evidenceTier": 2,
-      "datePublished": "2024-06-01",
-      "excerpt": "GitHub Copilot users show increased code output but no evidence of displacement in hiring patterns.",
-      "dateAdded": "2026-03-12"
-    },
-    {
-      "id": "hoffmann-ai-code-security-2024",
-      "title": "AI-Generated Code Security Risks",
-      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5007084",
-      "publisher": "Harvard Business School (Hoffmann et al.)",
-      "evidenceTier": 1,
-      "datePublished": "2024-10-01",
-      "excerpt": "AI-generated code has 41% more vulnerabilities than human-written code. Developers overestimate the security of AI-generated code.",
-      "dateAdded": "2026-03-12"
-    },
-    {
-      "id": "anthropic-economic-index-softdev-2025",
-      "title": "Anthropic Economic Index: Software Development",
-      "url": "https://www.anthropic.com/research/impact-software-development",
-      "publisher": "Anthropic",
-      "evidenceTier": 2,
-      "datePublished": "2025-09-01",
-      "excerpt": "37% of software development tasks show AI involvement. Writing code is 18% of actual AI usage in software development; most use is for understanding, debugging, and reviewing code.",
-      "dateAdded": "2026-03-12"
-    },
-    {
-      "id": "deutsche-bank-ai-predictions-2026",
-      "title": "What AI Says About AI Eating Itself and the World",
-      "url": "https://fortune.com/2026/02/18/will-ai-destroy-jobs-deutsche-bank-asks-ai-to-predict/",
-      "publisher": "Deutsche Bank Research (dbLumina)",
-      "evidenceTier": 2,
-      "datePublished": "2026-02-16",
-      "excerpt": "Over 85% of software developers now use AI coding assistants, delivering productivity gains of up to 60%. This shift raises questions about traditional software engineering roles and licensing models.",
-      "dateAdded": "2026-03-13"
-    },
-    {
-      "id": "mit-iceberg-index-2025",
-      "title": "The Iceberg Index: Measuring Skills-centered Exposure in the AI Economy",
-      "url": "https://arxiv.org/abs/2510.25137",
-      "publisher": "MIT / Oak Ridge National Laboratory (Project Iceberg)",
-      "evidenceTier": 1,
-      "datePublished": "2025-11-26",
-      "excerpt": "Nationally, the Surface Index stands at 2.2%, representing approximately $211 billion in wage value across 1.9 million workers in technology occupations.",
-      "dateAdded": "2026-03-15"
-    },
-    {
-      "id": "yale-budgetlab-occupation-exposure-2026",
-      "title": "Labor Market AI Exposure: What Do We Know? (Data Repository)",
-      "url": "https://github.com/rmmomin/jobs-ai-exposure",
-      "publisher": "The Budget Lab at Yale (Gimbel, Kendall, Kulsakdinun)",
-      "evidenceTier": 1,
-      "datePublished": "2026-02-19",
-      "dateAdded": "2026-03-16",
-      "excerpt": "Computer and Mathematical occupations have the highest average PCA-weighted exposure score (4.2) and highest variance (0.739). GPT-scored exposure for SOC 15-0000: mean 8.4/10, range 8-9 across 10 occupations."
-    },
-    {
       "id": "lodefalk-age-gradient-hiring-2026",
       "title": "Same Storm, Different Boats: Generative AI and the Age Gradient in Hiring",
       "url": "https://cms.ratio.se/app/uploads/2026/03/lodefalk_march16_paper_v2-kombinerades.pdf",
@@ -1293,15 +1343,6 @@
       "dateAdded": "2026-03-17"
     },
     {
-      "id": "stlouisfed-ai-unemployment-2025",
-      "title": "Is AI Contributing to Rising Unemployment? Evidence from Occupational Variation",
-      "url": "https://www.stlouisfed.org/on-the-economy/2025/aug/is-ai-contributing-unemployment-evidence-occupational-variation",
-      "publisher": "Federal Reserve Bank of St. Louis",
-      "evidenceTier": 1,
-      "datePublished": "2025-08-01",
-      "excerpt": "Occupations with higher AI exposure experienced larger unemployment rate increases between 2022 and 2025 (r=0.47). Computer/math occupations (exposure ~80%) saw steepest rises. GenAI-intensive occupations: r=0.57."
-    },
-    {
       "id": "goldman-briggs-us-labor-2026",
       "title": "How Will AI Affect the US Labor Market?",
       "url": "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-us-labor-market",
@@ -1310,16 +1351,6 @@
       "datePublished": "2026-03-18",
       "excerpt": "You can see AI's impact in the tech sector, where the employment share as a proportion of the whole economy has gone below the long term trend.",
       "dateAdded": "2026-03-19"
-    },
-    {
-      "id": "imf-skill-gaps-it-2026",
-      "title": "Bridging Skill Gaps for the Future: New Jobs Creation in the AI Age",
-      "url": "https://www.imf.org/-/media/files/publications/sdn/2026/english/sdnea2026001.pdf",
-      "publisher": "IMF (Jaumotte et al.)",
-      "evidenceTier": 2,
-      "datePublished": "2026-01-15",
-      "excerpt": "The high demand for new IT skills may not necessarily translate into a one-for-one rise in demand for IT and AI specialists, especially as many IT tasks may progressively be automated by AI.",
-      "dateAdded": "2026-03-21"
     },
     {
       "id": "anthropic-economic-index-learning-curves-2026",
@@ -1361,14 +1392,13 @@
       "dateAdded": "2026-04-03"
     },
     {
-      "id": "mit-futuretech-rising-tides-ai-automation-2026",
-      "title": "Crashing Waves vs. Rising Tides: Preliminary Findings on AI Automation from Thousands of Worker Evaluations of Labor Market Tasks",
-      "url": "https://arxiv.org/abs/2604.01363",
-      "publisher": "MIT FutureTech (Mertens, Thompson et al.)",
+      "id": "bls-information-sector-mar-2026",
+      "title": "BLS Employment Situation: Information Sector — March 2026",
+      "url": "https://data.bls.gov/timeseries/CEU5000000001",
+      "publisher": "data.bls.gov",
       "evidenceTier": 1,
-      "datePublished": "2026-03-01",
-      "excerpt": "Computer and Mathematical job family: 55.9% AI task success rate across 1,955 evaluations, with statistically significant negative slope (beta=-0.25) indicating longer tasks are harder for AI. Based on worker evaluations of LLM outputs on real O*NET tasks.",
-      "dateAdded": "2026-04-03"
+      "datePublished": "2026-04-05",
+      "excerpt": "Information sector employment at 2,772K, +3K month-over-month."
     }
   ],
   "marketIds": {

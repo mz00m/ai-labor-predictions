@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-04-04",
-  "totalSources": 481,
-  "verifiedCount": 481,
+  "lastUpdated": "2026-04-05",
+  "totalSources": 505,
+  "verifiedCount": 495,
   "sources": {
     "oecd-ai-sme-adoption-g7-2025": {
       "id": "oecd-ai-sme-adoption-g7-2025",
@@ -6746,6 +6746,356 @@
         "genai-work-adoption",
         "overall-us-displacement",
         "white-collar-professional-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "adobe-creative-survey-2024": {
+      "id": "adobe-creative-survey-2024",
+      "title": "Adobe Future of Creativity Survey 2024",
+      "url": "https://www.adobe.com/content/dam/cc/us/en/ai-assistant/pdfs/adobe-future-of-creativity-study.pdf",
+      "publisher": "Adobe",
+      "evidenceTier": 2,
+      "datePublished": "2024-02-01",
+      "excerpt": "74% of creative professionals report using AI tools. 30% say AI has reduced the scope of work they're hired for.",
+      "usedIn": [
+        "creative-industry-displacement"
+      ],
+      "verified": false,
+      "synthetic": true,
+      "_action": "REMOVE"
+    },
+    "anthropic-geographic-2025": {
+      "id": "anthropic-geographic-2025",
+      "title": "Uneven geographic and demographic patterns of AI adoption",
+      "url": "https://www.anthropic.com/research/anthropic-economic-index-september-2025-report",
+      "publisher": "Anthropic",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-15",
+      "excerpt": "AI usage heavily concentrated by income and geography globally; within US, workforce composition matters more than income for adoption patterns.",
+      "usedIn": [
+        "geographic-wage-divergence"
+      ],
+      "verified": true
+    },
+    "bls-contingent-2025": {
+      "id": "bls-contingent-2025",
+      "title": "Contingent and Alternative Employment Arrangements — 2025",
+      "url": "https://www.bls.gov/news.release/conemp.nr0.htm",
+      "publisher": "Bureau of Labor Statistics",
+      "evidenceTier": 1,
+      "datePublished": "2025-07-15",
+      "excerpt": "Median weekly earnings for freelance writers and designers declined 18% in real terms from 2022-2025.",
+      "usedIn": [
+        "freelancer-rate-impact"
+      ],
+      "verified": false,
+      "synthetic": true,
+      "_action": "REMOVE"
+    },
+    "bls-metro-wages-2025": {
+      "id": "bls-metro-wages-2025",
+      "title": "Occupational Employment and Wage Statistics — Metropolitan Areas 2025",
+      "url": "https://www.bls.gov/oes/current/oessrcma.htm",
+      "publisher": "Bureau of Labor Statistics",
+      "evidenceTier": 1,
+      "datePublished": "2025-07-01",
+      "excerpt": "Computer and mathematical occupations in San Jose-SF-Oakland MSA: $178K median. National median: $108K. Gap up from 48% to 65% since 2022.",
+      "usedIn": [
+        "geographic-wage-divergence"
+      ],
+      "verified": true
+    },
+    "bls-tech-vs-nontechmetro-2025": {
+      "id": "bls-tech-vs-nontechmetro-2025",
+      "title": "BLS Tech vs. Non-Tech Metro Wage Analysis Q3 2025",
+      "url": "https://www.bls.gov/oes/current/oessrcma.htm",
+      "publisher": "Bureau of Labor Statistics",
+      "evidenceTier": 2,
+      "datePublished": "2025-11-01",
+      "excerpt": "AI roles median salary $157K in hub metros vs. $49,500 median for all occupations nationally. Geographic premium for AI talent continues to widen.",
+      "usedIn": [
+        "geographic-wage-divergence"
+      ],
+      "verified": false,
+      "synthetic": true,
+      "_action": "REMOVE"
+    },
+    "brookings-metro-ai-2024": {
+      "id": "brookings-metro-ai-2024",
+      "title": "AI and the Geography of Opportunity",
+      "url": "https://www.brookings.edu/articles/the-geography-of-generative-ais-workforce-impacts-will-likely-differ-from-those-of-previous-technologies/",
+      "publisher": "Brookings Institution",
+      "evidenceTier": 2,
+      "datePublished": "2024-01-20",
+      "excerpt": "AI adoption is concentrating economic gains in a handful of superstar cities, widening the already large metro-level wage divergence.",
+      "usedIn": [
+        "geographic-wage-divergence"
+      ],
+      "verified": true
+    },
+    "brynjolfsson-bls-productivity-2026": {
+      "id": "brynjolfsson-bls-productivity-2026",
+      "title": "US Productivity Growth and AI",
+      "url": "https://www.ft.com/content/brynjolfsson-ai-productivity-2026",
+      "publisher": "FT / Brynjolfsson (BLS data)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-01",
+      "excerpt": "US productivity grew roughly 2.7% in 2025, nearly double the 1.4% annual average of the past decade — a decoupling of output from labor input that is the hallmark of productivity growth.",
+      "usedIn": [
+        "median-wage-impact"
+      ],
+      "verified": false,
+      "synthetic": true,
+      "_action": "REMOVE"
+    },
+    "claude-code-github-2026": {
+      "id": "claude-code-github-2026",
+      "title": "Claude Code GitHub Commits Over Time",
+      "url": "https://github.com/search?q=co-authored-by+claude&type=commits",
+      "publisher": "GitHub Search API / Anthropic",
+      "evidenceTier": 2,
+      "datePublished": "2026-02-02",
+      "excerpt": "Claude Code reached 135K+ daily commits on public GitHub (~4% of all public commits). Growth of 42,896x in 13 months from launch. At current trajectory, projected to reach 20%+ of daily commits by end of 2026.",
+      "usedIn": [
+        "ai-adoption-rate"
+      ],
+      "verified": false,
+      "synthetic": true,
+      "_action": "REMOVE"
+    },
+    "ft-gig-economy-squeeze": {
+      "id": "ft-gig-economy-squeeze",
+      "title": "The AI squeeze on gig economy workers",
+      "url": "https://www.ft.com/content/gig-economy-ai-squeeze",
+      "publisher": "Financial Times",
+      "evidenceTier": 3,
+      "datePublished": "2024-10-15",
+      "usedIn": [
+        "freelancer-rate-impact"
+      ],
+      "verified": false,
+      "synthetic": true,
+      "_action": "REMOVE"
+    },
+    "gartner-edtech-2025": {
+      "id": "gartner-edtech-2025",
+      "title": "Gartner Unveils Top Predictions for IT Organizations and Users in 2025 and Beyond",
+      "url": "https://www.gartner.com/en/newsroom/press-releases/2024-10-22-gartner-unveils-top-predictions-for-it-organizations-and-users-in-2025-and-beyond",
+      "publisher": "Gartner",
+      "evidenceTier": 2,
+      "datePublished": "2024-10-22",
+      "excerpt": "Predicts 20% of organizations will use AI to flatten organizational structure by 2026, eliminating more than half of middle management positions. General workforce prediction, not EdTech-specific.",
+      "usedIn": [
+        "education-sector-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "harvard-health-policy-2024": {
+      "id": "harvard-health-policy-2024",
+      "title": "The Impact of AI on Healthcare Employment",
+      "url": "https://www.hsph.harvard.edu/news/features/artificial-intelligence-ai-healthcare-employment/",
+      "publisher": "Harvard T.H. Chan School of Public Health",
+      "evidenceTier": 1,
+      "datePublished": "2024-09-15",
+      "excerpt": "Healthcare admin roles account for 30% of US healthcare employment. AI could eliminate 1.5-2M of these positions while creating 200-400K new tech-adjacent roles.",
+      "usedIn": [
+        "healthcare-admin-displacement"
+      ],
+      "verified": false,
+      "synthetic": true,
+      "_action": "REMOVE"
+    },
+    "lightcast-geo-wages-2023": {
+      "id": "lightcast-geo-wages-2023",
+      "title": "The Lightcast Global AI Skills Outlook",
+      "url": "https://lightcast.io/resources/research/the-lightcast-global-ai-skills-outlook",
+      "publisher": "Lightcast",
+      "evidenceTier": 2,
+      "datePublished": "2023-08-15",
+      "excerpt": "AI skills are becoming a universal priority beyond Silicon Valley. The U.S. leads in AI skills demand, with San Francisco commanding the highest average tech salary at $177,636.",
+      "usedIn": [
+        "geographic-wage-divergence"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "moneypenny-regional-ai-2025": {
+      "id": "moneypenny-regional-ai-2025",
+      "title": "The State of AI Adoption in U.S. Businesses | 2025 Trends",
+      "url": "https://www.moneypenny.com/us/resources/blog/the-state-of-ai-adoption-in-u-s-businesses/",
+      "publisher": "Moneypenny",
+      "evidenceTier": 3,
+      "datePublished": "2025-12-10",
+      "excerpt": "Mountain region leads US AI adoption at 42%, followed by Pacific at 39%. Southeast lags at 22%. Regional adoption gaps correlate with widening wage divergence.",
+      "usedIn": [
+        "geographic-wage-divergence"
+      ],
+      "verified": true
+    },
+    "muro-kinder-geography-2025": {
+      "id": "muro-kinder-geography-2025",
+      "title": "The geography of generative AI's workforce impacts will likely differ from those of previous technologies",
+      "url": "https://www.brookings.edu/articles/the-geography-of-generative-ais-workforce-impacts-will-likely-differ-from-those-of-previous-technologies/",
+      "publisher": "Brookings Metro (Muro, Methkupally, Kinder)",
+      "evidenceTier": 1,
+      "datePublished": "2025-02-01",
+      "excerpt": "43% of workers in San Jose could see AI shift half or more of tasks, vs only 31% in Las Vegas. High-skill metro areas most exposed — reversing prior automation patterns.",
+      "usedIn": [
+        "geographic-wage-divergence"
+      ],
+      "verified": true
+    },
+    "nber-ai-wages-2023": {
+      "id": "nber-ai-wages-2023",
+      "title": "The Impact of AI on Labor Markets: A Survey",
+      "url": "https://www.nber.org/papers",
+      "publisher": "NBER",
+      "evidenceTier": 1,
+      "datePublished": "2023-07-01",
+      "excerpt": "Workers who complement AI see significant wage gains; those whose tasks are substituted face wage pressure.",
+      "usedIn": [
+        "high-skill-wage-premium"
+      ],
+      "verified": false,
+      "synthetic": true,
+      "_action": "REMOVE"
+    },
+    "nber-spatial-ai-2024": {
+      "id": "nber-spatial-ai-2024",
+      "title": "The Spatial Distribution of AI's Labor Market Effects",
+      "url": "https://www.nber.org/papers/w32899",
+      "publisher": "NBER (Moretti, Faggio)",
+      "evidenceTier": 1,
+      "datePublished": "2024-05-15",
+      "excerpt": "Each AI job in a hub city creates 3-5 local service jobs. Non-hub cities see net job losses. The spatial multiplier amplifies geographic wage divergence.",
+      "usedIn": [
+        "geographic-wage-divergence"
+      ],
+      "verified": true
+    },
+    "pearson-smarthinking-2025": {
+      "id": "pearson-smarthinking-2025",
+      "title": "Pearson Retires Smarthinking Human Tutoring Service",
+      "url": "https://plc.pearson.com/en-GB/news/pearson-retires-smarthinking-service",
+      "publisher": "Pearson plc",
+      "evidenceTier": 1,
+      "datePublished": "2025-06-01",
+      "excerpt": "Pearson fully retired its Smarthinking human tutoring service, replacing it with AI-powered chatbot tutors. Marks complete displacement of a human tutoring workforce by AI in a major education company.",
+      "usedIn": [
+        "education-sector-displacement"
+      ],
+      "verified": false,
+      "synthetic": true,
+      "_action": "REMOVE"
+    },
+    "x-ai-salaries-thread": {
+      "id": "x-ai-salaries-thread",
+      "title": "AI engineer salaries are insane right now",
+      "url": "https://x.com/search?q=AI+engineer+salaries",
+      "publisher": "X (Twitter)",
+      "evidenceTier": 4,
+      "datePublished": "2025-05-01",
+      "usedIn": [
+        "high-skill-wage-premium"
+      ],
+      "verified": false,
+      "synthetic": true,
+      "_action": "REMOVE"
+    },
+    "bls-employment-situation-mar-2026": {
+      "id": "bls-employment-situation-mar-2026",
+      "title": "BLS Employment Situation: Total Nonfarm Payrolls — March 2026",
+      "url": "https://data.bls.gov/timeseries/CEU0000000001",
+      "publisher": "data.bls.gov",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-05",
+      "excerpt": "Total nonfarm payrolls rose by 571K in March 2026 to 157,775K.",
+      "usedIn": [
+        "overall-us-displacement",
+        "white-collar-professional-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "bls-information-sector-mar-2026": {
+      "id": "bls-information-sector-mar-2026",
+      "title": "BLS Employment Situation: Information Sector — March 2026",
+      "url": "https://data.bls.gov/timeseries/CEU5000000001",
+      "publisher": "data.bls.gov",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-05",
+      "excerpt": "Information sector employment at 2,772K, +3K month-over-month.",
+      "usedIn": [
+        "overall-us-displacement",
+        "white-collar-professional-displacement",
+        "tech-sector-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "bls-unemployment-rate-mar-2026": {
+      "id": "bls-unemployment-rate-mar-2026",
+      "title": "BLS Unemployment Rate — March 2026",
+      "url": "https://data.bls.gov/timeseries/LNS14000000",
+      "publisher": "data.bls.gov",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-05",
+      "excerpt": "Unemployment rate 4.3% in March 2026, down 0.1 percentage points.",
+      "usedIn": [
+        "overall-us-displacement",
+        "white-collar-professional-displacement",
+        "tech-sector-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "fred-jolts-feb-2026": {
+      "id": "fred-jolts-feb-2026",
+      "title": "FRED JOLTS: Job Openings Total Nonfarm — February 2026",
+      "url": "https://fred.stlouisfed.org/series/JTSJOL",
+      "publisher": "fred.stlouisfed.org",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-01",
+      "excerpt": "Job openings at 6,882K in February 2026, gradual decline from 2024 peaks.",
+      "usedIn": [
+        "overall-us-displacement",
+        "white-collar-professional-displacement",
+        "tech-sector-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "fred-unemploy-mar-2026": {
+      "id": "fred-unemploy-mar-2026",
+      "title": "FRED Unemployment Level — March 2026",
+      "url": "https://fred.stlouisfed.org/series/UNEMPLOY",
+      "publisher": "fred.stlouisfed.org",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-01",
+      "excerpt": "Unemployment level 7,239K in March 2026.",
+      "usedIn": [
+        "overall-us-displacement",
+        "white-collar-professional-displacement",
+        "tech-sector-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "korinek-stiglitz-steering-2026": {
+      "id": "korinek-stiglitz-steering-2026",
+      "title": "Steering Technological Progress",
+      "url": "https://www.nber.org/papers/w34994",
+      "publisher": "nber.org",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-01",
+      "excerpt": "As technology devalues labor, optimal policy shifts from steering innovation toward redistribution.",
+      "usedIn": [
+        "overall-us-displacement",
+        "white-collar-professional-displacement",
+        "tech-sector-displacement",
+        "median-wage-impact"
       ],
       "verified": true,
       "synthetic": false
