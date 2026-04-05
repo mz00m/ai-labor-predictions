@@ -580,7 +580,7 @@ Use the user's feedback to adjust priorities. Reference their uploaded documents
   if (capabilitiesContext) userPrompt += `\n\n${capabilitiesContext}`;
 
   try {
-    const parsed = await callClaude(systemPrompt, userPrompt, { maxTokens: 8000, timeout: 180000 });
+    const parsed = await callClaude(systemPrompt, userPrompt, { maxTokens: 8000, timeout: 300000 });
 
     const validated = Step2TasksSchema.safeParse(parsed);
     if (!validated.success) {
@@ -711,7 +711,7 @@ Return valid JSON:
   if (researchContext) userPrompt += `\n\n${researchContext}`;
 
   try {
-    const parsed = await callClaude(systemPrompt, userPrompt, { maxTokens: 8000, timeout: 180000 });
+    const parsed = await callClaude(systemPrompt, userPrompt, { maxTokens: 8000, timeout: 300000 });
 
     const validated = Step3ToolsSchema.safeParse(parsed);
     if (!validated.success) {
@@ -796,7 +796,7 @@ Be thorough on change management, common pitfalls, and resistance sources. These
   if (capabilitiesContext) userPrompt += `\n\n${capabilitiesContext}`;
 
   try {
-    const parsed = await callClaude(systemPrompt, userPrompt, { maxTokens: 4000, timeout: 120000 });
+    const parsed = await callClaude(systemPrompt, userPrompt, { maxTokens: 4000, timeout: 300000 });
 
     const validated = Step4RisksSchema.safeParse(parsed);
     if (!validated.success) {

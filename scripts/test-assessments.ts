@@ -18,7 +18,7 @@ import {
 } from "../src/lib/assessment/analyze";
 import { TEST_PROFILES, MATT_PROFILE, type TestProfile } from "./fixtures/assessment-profiles";
 import type { AssessmentReport } from "../src/lib/assessment/types";
-import { generatePDF } from "../src/lib/assessment/pdf-generator";
+import { generatePdf } from "../src/lib/assessment/pdf-generator";
 import * as fs from "fs";
 import * as path from "path";
 
@@ -34,7 +34,7 @@ const onlyNames = mattMode
     ? args[args.indexOf(onlyFlag) + 1]?.split(",").map((s) => s.trim())
     : null;
 const previewMode = args.includes("--preview");
-const generatePdf = args.includes("--pdf") || mattMode;
+const shouldGeneratePdf = args.includes("--pdf") || mattMode;
 const mode = previewMode ? "preview" : "full";
 
 function formatReport(profile: TestProfile, report: AssessmentReport): string {
@@ -224,9 +224,9 @@ async function runProfile(profile: TestProfile): Promise<void> {
     fs.writeFileSync(jsonPath, JSON.stringify(report, null, 2));
 
     // Generate PDF if requested
-    if (generatePdf) {
+    if (shouldGeneratePdf) {
       console.log(`  Generating PDF...`);
-      const pdfBuffer = await generatePDF(profile.intake, report, true);
+      const pdfBuffer = await generatePdf(profile.intake, report, true);
       const pdfPath = path.join(OUTPUT_DIR, `${profile.name}.pdf`);
       fs.writeFileSync(pdfPath, Buffer.from(pdfBuffer));
       console.log(`  PDF: ${pdfPath}`);
