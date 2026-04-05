@@ -722,7 +722,7 @@ export default function ReportPage() {
 
           {/* 9. Your Inputs */}
           <Section num={9} id="inputs" title="Your Inputs" expanded={expandedSections.has("inputs")} onToggle={() => toggleSection("inputs")}>
-            <p className="text-[12px] text-gray-400 mb-4">What you told us — for reference.</p>
+            <p className="text-[12px] text-gray-400 mb-4">What you told us — for reference. The more detail you provide, the more tailored your report.</p>
             <div className="space-y-2">
               {[
                 ["Organization", assessment.intake.organizationName],
