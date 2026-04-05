@@ -588,28 +588,30 @@ Use the user's feedback to adjust priorities. Reference their uploaded documents
       // Try to salvage individual tasks from the raw response
       const rawTasks = (parsed as Record<string, unknown>)?.taskAnalysis;
       if (Array.isArray(rawTasks) && rawTasks.length > 0) {
-        const TaskSchema = Step2TasksSchema.shape.taskAnalysis.element;
+        // Unwrap ZodDefault → ZodArray → element
+        const taskArraySchema = Step2TasksSchema.shape.taskAnalysis._def.innerType;
+        const TaskSchema = taskArraySchema.element;
         const salvaged = rawTasks
           .map((t) => TaskSchema.safeParse(t))
           .filter((r) => r.success)
           .map((r) => (r as { success: true; data: unknown }).data);
         if (salvaged.length > 0) {
           console.log(`  Salvaged ${salvaged.length}/${rawTasks.length} tasks from partial response`);
-          validated = { success: true, data: { taskAnalysis: salvaged } } as typeof validated;
+          validated = { success: true, data: { taskAnalysis: salvaged } } as unknown as typeof validated;
         }
       }
     }
     const step2 = validated.success ? validated.data : Step2TasksSchema.parse({});
 
     return {
-      taskAnalysis: step2.taskAnalysis,
+      taskAnalysis: step2.taskAnalysis as TaskAnalysis[],
     };
   } catch (err: unknown) {
     const errMsg = err instanceof Error ? err.message : String(err);
     const errName = err instanceof Error ? err.name : "UnknownError";
     console.error(`[Step 2 Tasks] Fatal error (${errName}): ${errMsg}`);
     return {
-      taskAnalysis: Step2TasksSchema.parse({}).taskAnalysis,
+      taskAnalysis: [] as TaskAnalysis[],
     };
   }
 }

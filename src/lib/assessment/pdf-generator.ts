@@ -43,10 +43,19 @@ export function generatePdf(
     footer(doc, pw, ph, pageNum);
   };
 
-  const need = (h: number) => {
-    if (y + h > ph - 20) {
+  /**
+   * Check if h mm fits on the current page; if not, start a new page.
+   * When called from helpers (bodyText/bullet), pass the local y so
+   * the check uses the real cursor position instead of the (stale) outer y.
+   * Returns the y to continue rendering at.
+   */
+  const need = (h: number, callerY?: number): number => {
+    const testY = callerY !== undefined ? callerY : y;
+    if (testY + h > ph - 20) {
       newPage();
+      return y; // 28 after page break
     }
+    return testY; // unchanged
   };
 
   // ===== COVER =====
@@ -139,7 +148,7 @@ export function generatePdf(
   newPage();
   y = sectionTitle(doc, "AI Opportunity Summary", m, y);
 
-  y = bodyText(doc, report.executiveSummary, m, y, cw);
+  y = bodyText(doc, report.executiveSummary, m, y, cw, need);
 
   // AI Readiness Score
   if (report.organizationProfile.aiReadinessScore) {
@@ -161,7 +170,7 @@ export function generatePdf(
     y += 4;
     need(20);
     y = subHead(doc, "Industry Context", m, y);
-    y = bodyText(doc, report.organizationProfile.industryContext, m, y, cw);
+    y = bodyText(doc, report.organizationProfile.industryContext, m, y, cw, need);
   }
 
   if (report.organizationProfile.keyStrengths.length > 0) {
@@ -170,7 +179,7 @@ export function generatePdf(
     y = subHead(doc, "Key Strengths", m, y);
     for (const item of report.organizationProfile.keyStrengths) {
       need(8);
-      y = bullet(doc, item, m, y, cw);
+      y = bullet(doc, item, m, y, cw, need);
     }
   }
 
@@ -179,14 +188,14 @@ export function generatePdf(
     need(16);
     y = subHead(doc, "Key Gaps", m, y);
     for (const item of report.organizationProfile.keyGaps) {
-      need(8);
-      y = bullet(doc, item, m, y, cw);
+      y = bullet(doc, item, m, y, cw, need);
     }
   }
 
   // ===== TASK ANALYSIS =====
   if (report.taskAnalysis.length > 0) {
-    newPage();
+    y += 10;
+    need(30);
     y = sectionTitle(doc, "Where AI Can Help Most", m, y);
 
     for (const task of report.taskAnalysis) {
@@ -238,7 +247,8 @@ export function generatePdf(
 
   // ===== TOOL RECOMMENDATIONS (3-tier system) =====
   if (report.toolRecommendations.length > 0) {
-    newPage();
+    y += 10;
+    need(30);
     y = sectionTitle(doc, "Your Tool Stack", m, y);
 
     // Group tools by recommendation tier
@@ -371,7 +381,9 @@ export function generatePdf(
             const taskLines = doc.splitTextToSize(tool.firstTask!, cw - 40);
             meta.push(`Try: ${taskLines[0]}`);
           }
-          doc.text(meta.join("  |  "), m + 5, contentY);
+          const metaText = meta.join("  |  ");
+          const metaLines = doc.splitTextToSize(metaText, cw - 12);
+          doc.text(metaLines[0], m + 5, contentY);
         }
 
         y += ch + 3;
@@ -382,13 +394,13 @@ export function generatePdf(
 
   // ===== IMPLEMENTATION ROADMAP =====
   y += 10;
-  need(40);
+  need(24);
   y = sectionTitle(doc, "Implementation Roadmap", m, y);
 
   const phases = Object.entries(report.implementationRoadmap) as [string, typeof report.implementationRoadmap.immediate][];
   for (const [phase, data] of phases) {
     y += 2;
-    need(30);
+    need(18);
 
     const phaseLabel = phase === "immediate"
       ? "Start This Week (0\u20133 months)"
@@ -412,8 +424,7 @@ export function generatePdf(
       doc.text("Objectives", m, y);
       y += 5;
       for (const obj of data.objectives) {
-        need(8);
-        y = bullet(doc, obj, m, y, cw);
+        y = bullet(doc, obj, m, y, cw, need);
       }
     }
 
@@ -425,8 +436,7 @@ export function generatePdf(
       doc.text("Actions", m, y);
       y += 5;
       for (const action of data.actions) {
-        need(10);
-        y = bullet(doc, `${action.title}: ${action.description}`, m, y, cw);
+        y = bullet(doc, `${action.title}: ${action.description}`, m, y, cw, need);
       }
     }
 
@@ -443,12 +453,12 @@ export function generatePdf(
 
   // ===== RISK ASSESSMENT =====
   y += 8;
-  need(40);
+  need(24);
   y = sectionTitle(doc, "Risk Assessment", m, y);
 
   if (report.riskAssessment.displacementRisk) {
     y = subHead(doc, "Displacement Risk", m, y);
-    y = bodyText(doc, report.riskAssessment.displacementRisk, m, y, cw);
+    y = bodyText(doc, report.riskAssessment.displacementRisk, m, y, cw, need);
     y += 4;
   }
 
@@ -456,8 +466,7 @@ export function generatePdf(
     need(16);
     y = subHead(doc, "Skill Gaps to Address", m, y);
     for (const gap of report.riskAssessment.skillGaps) {
-      need(8);
-      y = bullet(doc, gap, m, y, cw);
+      y = bullet(doc, gap, m, y, cw, need);
     }
     y += 4;
   }
@@ -465,7 +474,7 @@ export function generatePdf(
   if (report.riskAssessment.changeManagementNotes) {
     need(16);
     y = subHead(doc, "Change Management", m, y);
-    y = bodyText(doc, report.riskAssessment.changeManagementNotes, m, y, cw);
+    y = bodyText(doc, report.riskAssessment.changeManagementNotes, m, y, cw, need);
     y += 4;
   }
 
@@ -475,17 +484,17 @@ export function generatePdf(
     if (Array.isArray(report.riskAssessment.dataPrivacyConsiderations)) {
       for (const item of report.riskAssessment.dataPrivacyConsiderations) {
         need(8);
-        y = bullet(doc, item, m, y, cw);
+        y = bullet(doc, item, m, y, cw, need);
       }
     } else {
-      y = bodyText(doc, report.riskAssessment.dataPrivacyConsiderations, m, y, cw);
+      y = bodyText(doc, report.riskAssessment.dataPrivacyConsiderations, m, y, cw, need);
     }
   }
 
   // ===== ROI PROJECTIONS =====
   if (report.roiProjections.length > 0) {
     y += 10;
-    need(40);
+    need(24);
     y = sectionTitle(doc, "Projected Time & Cost Savings", m, y);
 
     for (const roi of report.roiProjections) {
@@ -529,23 +538,22 @@ export function generatePdf(
   // ===== FURTHER EVALUATION =====
   if (report.furtherEvaluation.length > 0) {
     y += 8;
-    need(30);
+    need(20);
     y = sectionTitle(doc, "Next Steps", m, y);
     for (const item of report.furtherEvaluation) {
-      need(10);
-      y = bullet(doc, item, m, y, cw);
+      y = bullet(doc, item, m, y, cw, need);
     }
   }
 
   // ===== AI POLICY =====
   if (report.aiPolicy && report.aiPolicy.sections.length > 0) {
     y += 10;
-    need(40);
+    need(24);
     y = sectionTitle(doc, "AI Usage Guidelines", m, y);
     for (const section of report.aiPolicy.sections) {
       need(16);
       y = subHead(doc, section.title, m, y);
-      y = bodyText(doc, section.content, m, y, cw);
+      y = bodyText(doc, section.content, m, y, cw, need);
       y += 6;
     }
   }
@@ -553,7 +561,7 @@ export function generatePdf(
   // ===== PROMPT LIBRARY =====
   if (report.promptLibrary && report.promptLibrary.length > 0) {
     y += 10;
-    need(40);
+    need(24);
     y = sectionTitle(doc, "Prompt Library", m, y);
 
     for (const prompt of report.promptLibrary) {
@@ -666,22 +674,41 @@ function subHead(doc: jsPDF, title: string, x: number, y: number): number {
   return y + 5;
 }
 
-function bodyText(doc: jsPDF, text: string, x: number, y: number, width: number): number {
+function bodyText(
+  doc: jsPDF, text: string, x: number, y: number, width: number,
+  needFn?: (h: number, callerY?: number) => number
+): number {
   doc.setFont("helvetica", "normal");
   doc.setFontSize(8);
   doc.setTextColor(55, 65, 75);
-  const lines = doc.splitTextToSize(text, width);
-  doc.text(lines, x, y);
-  return y + lines.length * 3.4;
+  const lines: string[] = doc.splitTextToSize(text, width);
+  for (const line of lines) {
+    if (needFn) y = needFn(4, y);
+    doc.text(line, x, y);
+    y += 3.4;
+  }
+  return y;
 }
 
-function bullet(doc: jsPDF, text: string, x: number, y: number, width: number): number {
+function bullet(
+  doc: jsPDF, text: string, x: number, y: number, width: number,
+  needFn?: (h: number, callerY?: number) => number
+): number {
   doc.setFont("helvetica", "normal");
   doc.setFontSize(8);
+  const lines: string[] = doc.splitTextToSize(text, width - 8);
+  // Reserve space for first line + bullet
+  if (needFn) y = needFn(4, y);
   doc.setTextColor(79, 70, 229);
   doc.text("\u2022", x + 2, y);
   doc.setTextColor(55, 65, 75);
-  const lines = doc.splitTextToSize(text, width - 8);
-  doc.text(lines, x + 7, y);
-  return y + lines.length * 3.2 + 1;
+  doc.text(lines[0], x + 7, y);
+  y += 3.2;
+  // Render remaining lines with page-break awareness
+  for (let i = 1; i < lines.length; i++) {
+    if (needFn) y = needFn(4, y);
+    doc.text(lines[i], x + 7, y);
+    y += 3.2;
+  }
+  return y + 1;
 }
