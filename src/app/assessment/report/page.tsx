@@ -155,6 +155,7 @@ export default function ReportPage() {
     { id: "roadmap", label: "Implementation Roadmap" },
     { id: "risks", label: "Risks, Pitfalls & Change Management" },
     { id: "roi", label: "ROI Projections" },
+    { id: "capabilities", label: "Skills That Grow With AI" },
     { id: "next", label: "Next Steps" },
     { id: "inputs", label: "Your Inputs" },
   ];
@@ -706,9 +707,38 @@ export default function ReportPage() {
             </Section>
           )}
 
-          {/* 8. Next Steps */}
+          {/* 8. Human Capabilities */}
+          {report.humanCapabilities && report.humanCapabilities.length > 0 && (
+            <Section num={8} id="capabilities" title="Skills That Grow With AI" expanded={expandedSections.has("capabilities")} onToggle={() => toggleSection("capabilities")}>
+              <p className="text-[12px] text-gray-400 mb-4">
+                As AI handles more routine work, these capabilities become <em>more</em> valuable — not less.
+                Drawn from our framework of 62 human capabilities scored for AI-era appreciation.
+              </p>
+              <div className="space-y-3">
+                {report.humanCapabilities.map((cap, i) => (
+                  <div key={i} className="border border-gray-200 rounded-lg p-4">
+                    <div className="flex items-start justify-between gap-3 mb-2">
+                      <h4 className="text-[14px] font-semibold text-gray-900">{cap.name}</h4>
+                      <span className="flex-shrink-0 text-[11px] font-bold text-[#5C61F6] bg-[#5C61F6]/10 px-2 py-0.5 rounded-full">
+                        {cap.appreciationScore}/10
+                      </span>
+                    </div>
+                    <p className="text-[13px] text-gray-600 leading-relaxed mb-2" style={{ fontFamily: "'Source Serif 4', 'Source Serif Pro', Georgia, serif" }}>
+                      {cap.whyItMatters}
+                    </p>
+                    <div className="bg-gray-50 rounded-md px-3 py-2">
+                      <span className="text-[11px] font-semibold text-gray-500 uppercase tracking-wider">How to develop</span>
+                      <p className="text-[13px] text-gray-700 mt-0.5">{cap.howToDevelop}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </Section>
+          )}
+
+          {/* 9. Next Steps */}
           {report.furtherEvaluation.length > 0 && (
-            <Section num={8} id="next" title="Next Steps" expanded={expandedSections.has("next")} onToggle={() => toggleSection("next")}>
+            <Section num={9} id="next" title="Next Steps" expanded={expandedSections.has("next")} onToggle={() => toggleSection("next")}>
               <div className="space-y-2">
                 {report.furtherEvaluation.map((item, i) => (
                   <div key={i} className="flex gap-3 bg-gray-50 border border-gray-100 rounded-lg px-4 py-3">
@@ -720,8 +750,8 @@ export default function ReportPage() {
             </Section>
           )}
 
-          {/* 9. Your Inputs */}
-          <Section num={9} id="inputs" title="Your Inputs" expanded={expandedSections.has("inputs")} onToggle={() => toggleSection("inputs")}>
+          {/* 10. Your Inputs */}
+          <Section num={10} id="inputs" title="Your Inputs" expanded={expandedSections.has("inputs")} onToggle={() => toggleSection("inputs")}>
             <p className="text-[12px] text-gray-400 mb-4">What you told us — for reference. The more detail you provide, the more tailored your report.</p>
             <div className="space-y-2">
               {[

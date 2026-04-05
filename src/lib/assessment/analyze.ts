@@ -630,7 +630,12 @@ export async function generateStep3Tools(
   stepContext?: StepContext,
   feedback?: StepFeedback[]
 ): Promise<Partial<AssessmentReport>> {
-  const toolsRef = formatToolsForPrompt(intake.industry, intake.companySize);
+  // Pre-filter tools KB using Step 2 task signals to reduce prompt size
+  const taskSignals = previousReport.taskAnalysis?.map((t) => ({
+    department: t.department,
+    taskName: t.taskName,
+  }));
+  const toolsRef = formatToolsForPrompt(intake.industry, intake.companySize, taskSignals);
   const onetSummary = getOnetSummaryForPrompt(intake.primaryFunctions, intake.industry);
   const researchContext = formatResearchContextForPrompt(intake.industry);
 
@@ -786,12 +791,27 @@ Return valid JSON:
     "resistanceSources": ["Where pushback comes from and how to address it"],
     "dataReadinessNote": "Honest assessment. Messy data is NOT a blocker."
   },
+  "humanCapabilities": [
+    {
+      "name": "Capability name",
+      "whyItMatters": "Why this specific capability becomes MORE valuable as AI handles routine work in their field. 2-3 sentences grounded in the capabilities data provided.",
+      "howToDevelop": "1-2 concrete actions to strengthen this capability. Specific to their role.",
+      "appreciationScore": 8
+    }
+  ],
   "furtherEvaluation": ["Specific, actionable next steps focused on USE CASES not products. No fabricated URLs. Frame as capabilities to build, not tools to buy."]
 }
 
 For the risk assessment, cite research data provided.
 For skills, reference the human capabilities framework.
-Be thorough on change management, common pitfalls, and resistance sources. These are high-value sections.`;
+Be thorough on change management, common pitfalls, and resistance sources. These are high-value sections.
+
+HUMAN CAPABILITIES — Generate 4-6 capabilities that APPRECIATE (grow in value) as AI automates routine tasks in this person's work. These are NOT generic soft skills. Each must be:
+1. Specific to their actual functions and role
+2. Backed by the capabilities framework data provided
+3. Scored 7-10 on appreciation (how much MORE valuable this becomes with AI adoption)
+4. Framed positively — "this is what makes you irreplaceable" not "this is what AI can't do"
+Sort by appreciation score, highest first.`;
 
   let userPrompt = buildIntakeContext(intake);
   userPrompt += buildStepContextSection(stepContext);
@@ -826,6 +846,7 @@ Be thorough on change management, common pitfalls, and resistance sources. These
     return {
       riskAssessment: step4.riskAssessment,
       furtherEvaluation: step4.furtherEvaluation,
+      humanCapabilities: step4.humanCapabilities,
     };
   } catch (err: unknown) {
     const errMsg = err instanceof Error ? err.message : String(err);
@@ -835,6 +856,7 @@ Be thorough on change management, common pitfalls, and resistance sources. These
     return {
       riskAssessment: defaults.riskAssessment,
       furtherEvaluation: defaults.furtherEvaluation,
+      humanCapabilities: defaults.humanCapabilities,
     };
   }
 }

@@ -140,15 +140,108 @@ export function getToolsForAssessment(
 }
 
 /**
+ * Map task signals (department + task names from Step 2) to relevant tool categories.
+ * Uses keyword matching — intentionally loose to avoid missing relevant tools.
+ */
+function matchTasksToToolCategories(
+  tasks: { department: string; taskName: string }[]
+): Set<ToolCategory> {
+  const categories = new Set<ToolCategory>();
+
+  const KEYWORD_MAP: Record<string, ToolCategory[]> = {
+    // Department/function keywords → tool categories
+    "finance": ["billing"],
+    "accounting": ["billing"],
+    "budget": ["billing"],
+    "invoice": ["billing"],
+    "expense": ["billing"],
+    "payroll": ["billing"],
+    "marketing": ["marketing"],
+    "content": ["marketing"],
+    "social media": ["marketing"],
+    "email campaign": ["marketing"],
+    "seo": ["marketing"],
+    "design": ["marketing"],
+    "sales": ["sales-enablement"],
+    "proposal": ["sales-enablement"],
+    "pipeline": ["sales-enablement"],
+    "outreach": ["sales-enablement"],
+    "crm": ["customer-management", "sales-enablement"],
+    "customer": ["customer-management"],
+    "support": ["customer-management"],
+    "client": ["customer-management"],
+    "donor": ["customer-management"],
+    "hr": ["hr-recruiting"],
+    "hiring": ["hr-recruiting"],
+    "recruit": ["hr-recruiting"],
+    "onboard": ["hr-recruiting"],
+    "people": ["hr-recruiting"],
+    "performance review": ["hr-recruiting"],
+    "data": ["data-analytics"],
+    "report": ["data-analytics"],
+    "analytics": ["data-analytics"],
+    "dashboard": ["data-analytics"],
+    "compliance": ["compliance-legal"],
+    "legal": ["compliance-legal"],
+    "contract": ["compliance-legal"],
+    "policy": ["compliance-legal"],
+    "grant": ["compliance-legal", "administrative"],
+    "security": ["it-security"],
+    "password": ["it-security"],
+    "inventory": ["inventory-supply-chain"],
+    "supply chain": ["inventory-supply-chain"],
+    "procurement": ["inventory-supply-chain"],
+    "scheduling": ["administrative"],
+    "project manage": ["administrative"],
+    "workflow": ["administrative"],
+    "automat": ["administrative"],
+    "document": ["administrative"],
+    "writing": ["office"],
+    "email": ["office"],
+    "meeting": ["office"],
+    "communic": ["office"],
+    "research": ["office", "data-analytics"],
+  };
+
+  for (const task of tasks) {
+    const signal = `${task.department} ${task.taskName}`.toLowerCase();
+    for (const [keyword, cats] of Object.entries(KEYWORD_MAP)) {
+      if (signal.includes(keyword)) {
+        for (const cat of cats) categories.add(cat);
+      }
+    }
+  }
+
+  return categories;
+}
+
+/**
  * Format the tools KB as a prompt-ready string for the assessment pipeline.
  * Compact format designed to inform Claude's tool recommendations with
  * real product data without consuming excessive tokens.
+ *
+ * When taskSignals are provided (from Step 2 output), only tool categories
+ * relevant to the identified tasks are included — typically cutting the
+ * prompt from ~4K tokens to ~1.5K tokens.
  */
 export function formatToolsForPrompt(
   industry: string,
-  companySize: string
+  companySize: string,
+  taskSignals?: { department: string; taskName: string }[]
 ): string {
-  const tools = getToolsForAssessment(industry, companySize);
+  let tools = getToolsForAssessment(industry, companySize);
+
+  // Pre-filter to relevant categories if we have task signals from Step 2
+  if (taskSignals && taskSignals.length > 0) {
+    const relevantCategories = matchTasksToToolCategories(taskSignals);
+    // Always include office (general productivity) as a baseline
+    relevantCategories.add("office");
+    const filtered = tools.filter((t) => relevantCategories.has(t.category));
+    // Only use filtered set if it's meaningfully smaller but still useful
+    if (filtered.length >= 8 && filtered.length < tools.length * 0.85) {
+      tools = filtered;
+    }
+  }
 
   if (tools.length === 0) {
     return "";

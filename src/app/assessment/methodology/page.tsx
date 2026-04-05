@@ -529,13 +529,6 @@ export default function MethodologyPage() {
 
       {/* ─── Divider ─── */}
       <div className="border-t border-gray-100 pt-10 mb-10">
-        <p className="text-[14px] text-gray-500 leading-relaxed mb-6">
-          This assessment was built by <a href="https://www.linkedin.com/in/mattzieger" target="_blank" rel="noopener noreferrer" className="text-[#5C61F6] hover:underline">Matt Zieger</a>,
-          who leads a $50M+ grantmaking portfolio at GitLab Foundation and co-founded the AI for Economic
-          Opportunity Fund ($30M+ collaborative with OpenAI and Ballmer Group). The knowledge base is informed
-          by his work building jobsdata.ai and coordinating Opportunity AI, a network of 165+ philanthropy
-          leaders focused on AI and workforce.
-        </p>
         <p className="text-[14px] text-gray-500 leading-relaxed mb-8">
           The research shows that knowing where to use AI matters more than having the tools. This assessment
           gives you that knowledge.
