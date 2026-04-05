@@ -193,6 +193,8 @@ export interface AssessmentReport {
   riskAssessment: RiskAssessment;
   implementationRoadmap: ImplementationRoadmap;
   roiProjections: RoiProjection[];
+  /** Human capabilities that appreciate with AI — skills to invest in */
+  humanCapabilities?: HumanCapability[];
   furtherEvaluation: string[];
   /** Human capabilities that appreciate with AI adoption */
   humanCapabilities?: HumanCapability[];
@@ -261,6 +263,23 @@ export interface ToolRecommendation {
   firstTask?: string;
 }
 
+export interface DimensionScores {
+  technicalExposure: number;    // 0-10: how many tasks can AI handle?
+  adoptionSpeed: number;        // 0-10: how fast is AI being adopted?
+  adaptability: number;         // 0-10: how transferable are skills?
+  demandElasticity: number;     // 0-10: does efficiency create more demand?
+  complementarity: number;      // 0-10: does AI replace or enhance?
+}
+
+export interface HumanCapability {
+  name: string;
+  appreciationScore: number;    // 1-10, how much more valuable with AI
+  whyAppreciating: string;      // Why this skill grows in value
+  howToDevelop: string;         // Practical development advice
+  automationResistance: string[]; // What makes this hard to automate
+  relevantTasks: string[];      // Which of their analyzed tasks this applies to
+}
+
 export interface RiskAssessment {
   overallRiskLevel: "low" | "moderate" | "high";
   displacementRisk: string;
@@ -270,6 +289,7 @@ export interface RiskAssessment {
   commonPitfalls?: string[]; // Industry-specific failure modes to avoid
   resistanceSources?: string[]; // Where organizational pushback typically comes from
   dataReadinessNote?: string; // Advice on working with imperfect data
+  dimensionScores?: DimensionScores; // 5-dimensional risk framework scores
 }
 
 export interface ImplementationRoadmap {

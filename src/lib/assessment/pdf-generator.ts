@@ -715,6 +715,101 @@ export function generatePdf(
     y += 4;
   }
 
+  // ===== 5-DIMENSIONAL RISK SCORES =====
+  if (report.riskAssessment.dimensionScores) {
+    y += 6;
+    need(55);
+    y = subHead(doc, "5-Dimension Risk Profile", m, y);
+
+    const dims = [
+      { key: "technicalExposure" as const, label: "Can AI do your tasks?", type: "pressure" },
+      { key: "adoptionSpeed" as const, label: "How fast is your industry adopting?", type: "pressure" },
+      { key: "adaptability" as const, label: "How transferable are your skills?", type: "absorption" },
+      { key: "demandElasticity" as const, label: "Does efficiency create more demand?", type: "absorption" },
+      { key: "complementarity" as const, label: "Does AI enhance your work?", type: "absorption" },
+    ];
+
+    for (const dim of dims) {
+      need(10);
+      const score = report.riskAssessment.dimensionScores[dim.key];
+      const isPressure = dim.type === "pressure";
+
+      // Label
+      doc.setFont("helvetica", "normal");
+      doc.setFontSize(7.5);
+      doc.setTextColor(...C.body);
+      doc.text(dim.label, m, y + 3);
+
+      // Score
+      doc.setFont("helvetica", "bold");
+      doc.setFontSize(7.5);
+      doc.text(`${score}/10`, m + cw - 2, y + 3, { align: "right" });
+
+      // Bar background
+      const barX = m;
+      const barW = cw - 20;
+      const barY = y + 5;
+      doc.setFillColor(...C.gray200);
+      doc.roundedRect(barX, barY, barW, 2.5, 1, 1, "F");
+
+      // Bar fill
+      doc.setFillColor(...(isPressure ? [251, 191, 36] as RGB : [74, 222, 128] as RGB));
+      doc.roundedRect(barX, barY, barW * (score / 10), 2.5, 1, 1, "F");
+
+      // Type badge
+      doc.setFontSize(5.5);
+      doc.setTextColor(...(isPressure ? C.amber : C.green));
+      doc.text(isPressure ? "PRESSURE" : "ABSORPTION", m + cw - 18, y + 3);
+
+      y += 10;
+    }
+    y += 2;
+  }
+
+  // ===== HUMAN CAPABILITIES =====
+  if (report.humanCapabilities && report.humanCapabilities.length > 0) {
+    y += 10;
+    need(40);
+    y = sectionTitle(doc, "Skills That Appreciate With AI", m, y);
+
+    for (const cap of report.humanCapabilities) {
+      const whyLines = doc.splitTextToSize(cap.whyAppreciating, cw - 10);
+      const howLines = doc.splitTextToSize(cap.howToDevelop, cw - 10);
+      const ch = 18 + (whyLines.length + howLines.length) * 3.2;
+      need(ch + 4);
+
+      doc.setFillColor(...C.gray100);
+      doc.roundedRect(m, y, cw, ch, 2, 2, "F");
+
+      // Name + score
+      doc.setFont("helvetica", "bold");
+      doc.setFontSize(9);
+      doc.setTextColor(...C.heading);
+      doc.text(cap.name, m + 5, y + 6);
+
+      doc.setFontSize(7);
+      doc.setTextColor(...C.accent);
+      doc.text(`${cap.appreciationScore}/10`, m + cw - 5, y + 6, { align: "right" });
+
+      // Why appreciating
+      doc.setFont("helvetica", "normal");
+      doc.setFontSize(7.5);
+      doc.setTextColor(...C.body);
+      doc.text(whyLines.slice(0, 3), m + 5, y + 11);
+
+      // How to develop
+      const howY = y + 11 + Math.min(whyLines.length, 3) * 3.2 + 2;
+      doc.setFont("helvetica", "italic");
+      doc.setFontSize(7);
+      doc.setTextColor(...C.muted);
+      doc.text("How to develop:", m + 5, howY);
+      doc.setFont("helvetica", "normal");
+      doc.text(howLines.slice(0, 2), m + 5, howY + 3.5);
+
+      y += ch + 3;
+    }
+  }
+
   // ===== ROI PROJECTIONS =====
   if (report.roiProjections.length > 0) {
     y += 10;

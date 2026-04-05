@@ -232,6 +232,14 @@ export const Step3ToolsSchema = z.object({
 
 // ─── Step 4: Risks output ───────────────────────────────────────
 
+const DimensionScoresSchema = z.object({
+  technicalExposure: z.number().min(0).max(10).default(5),
+  adoptionSpeed: z.number().min(0).max(10).default(5),
+  adaptability: z.number().min(0).max(10).default(5),
+  demandElasticity: z.number().min(0).max(10).default(5),
+  complementarity: z.number().min(0).max(10).default(5),
+});
+
 const RiskAssessmentSchema = z.object({
   overallRiskLevel: z.enum(["low", "moderate", "high"]).default("moderate"),
   displacementRisk: z.string().default(""),
@@ -241,6 +249,16 @@ const RiskAssessmentSchema = z.object({
   commonPitfalls: z.array(z.string()).optional(),
   resistanceSources: z.array(z.string()).optional(),
   dataReadinessNote: z.string().optional(),
+  dimensionScores: DimensionScoresSchema.optional(),
+});
+
+const HumanCapabilitySchema = z.object({
+  name: z.string(),
+  appreciationScore: z.number().min(1).max(10).default(5),
+  whyAppreciating: z.string(),
+  howToDevelop: z.string(),
+  automationResistance: z.array(z.string()).default([]),
+  relevantTasks: z.array(z.string()).default([]),
 });
 
 const HumanCapabilitySchema = z.object({
@@ -258,6 +276,7 @@ export const Step4RisksSchema = z.object({
     changeManagementNotes: "",
     dataPrivacyConsiderations: "",
   }),
+  humanCapabilities: z.array(HumanCapabilitySchema).default([]),
   furtherEvaluation: z.array(z.string()).default([]),
   humanCapabilities: z.array(HumanCapabilitySchema).default([]),
 });
