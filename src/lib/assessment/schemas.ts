@@ -262,6 +262,13 @@ const HumanCapabilitySchema = z.object({
   relevantTasks: z.array(z.string()).default([]),
 });
 
+const HumanCapabilitySchema = z.object({
+  name: z.string(),
+  whyItMatters: z.string(),
+  howToDevelop: z.string(),
+  appreciationScore: z.number().min(1).max(10).default(8),
+});
+
 export const Step4RisksSchema = z.object({
   riskAssessment: RiskAssessmentSchema.default({
     overallRiskLevel: "moderate",
@@ -272,4 +279,5 @@ export const Step4RisksSchema = z.object({
   }),
   humanCapabilities: z.array(HumanCapabilitySchema).default([]),
   furtherEvaluation: z.array(z.string()).default([]),
+  humanCapabilities: z.array(HumanCapabilitySchema).default([]),
 });
