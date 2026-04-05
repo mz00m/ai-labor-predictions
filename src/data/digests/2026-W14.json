@@ -1,98 +1,92 @@
 {
   "week": "2026-W14",
-  "generatedAt": "2026-03-30T09:12:10.647Z",
-  "lookbackDays": 14,
+  "generatedAt": "2026-04-05T19:04:58.034Z",
+  "lookbackDays": 28,
   "highlights": [
     {
-      "title": "The AI Layoff Trap: Automation Arms Race Erodes Consumer Demand",
-      "summary": "Falk and Tsoukalas model a competitive 'automation arms race' in which rational firms displace workers faster than the economy can reabsorb them, creating a demand externality that ultimately harms the firms themselves. The paper shows that awareness of this trap is insufficient to stop it under competitive market conditions, implying structural policy intervention may be required. This is one of the most directly relevant pieces to aggregate displacement dynamics published in the lookback window.",
-      "source": "http://arxiv.org/abs/2603.20617",
+      "title": "The Impact of Generative AI on the Future of Employment: Opportunities and Challenges",
+      "summary": "Study examines how GenAI tools like ChatGPT and Gemini are transforming the global technological landscape, with particular focus on concerns regarding job displacement and wage reduction since ChatGPT's November 2022 release. The research analyzes labor market implications of large language models across various sectors.",
+      "source": "https://www.semanticscholar.org/paper/c293adb7a8488bcbf198aa9d7fd12c4934cecd5b",
       "authors": [
-        "Brett Hemenway Falk",
-        "Gerry Tsoukalas"
+        "Devansh"
       ],
-      "publishedAt": "2026-03-21",
-      "score": 0.269,
-      "sourceAdapter": "openAlex",
+      "publishedAt": "2026-03-31T00:00:00.000Z",
+      "doi": "10.22214/ijraset.2026.78078",
+      "score": 0.675,
+      "sourceAdapter": "semanticScholar",
+      "graphSlug": "genai-work-adoption"
+    },
+    {
+      "title": "AI Civilization and the Transformation of Work",
+      "summary": "Research analyzes how artificial intelligence and robotics are catalyzing profound transformation in human labor, examining the contentious debate about employment's future. While some studies predict substantial job displacement due to automation, the study considers historical precedents from past technological revolutions.",
+      "source": "https://www.semanticscholar.org/paper/a0e2a5b2ba6715f7b6b78a51c57991bee11ed0cc",
+      "authors": [
+        "Dong-Gew Han"
+      ],
+      "publishedAt": "2026-03-29T00:00:00.000Z",
+      "score": 0.637,
+      "sourceAdapter": "semanticScholar",
       "graphSlug": "overall-us-displacement"
     },
     {
-      "title": "Labor Theory of Value Revisited: AI and Digital Platforms Challenge Classical Wage Models",
-      "summary": "Zhang (2026) applies a Marxian framework to examine how AI and digital platform economies decouple labor input from value creation, arguing that traditional wage-setting mechanisms break down when algorithmic systems replace human cognitive work at scale. The paper calls for new theoretical extensions to account for AI-generated surplus and its distributional consequences. These findings bear directly on projections for median and entry-level wage trajectories.",
-      "source": "https://doi.org/10.1057/s41599-026-07030-4",
+      "title": "Rising stakes: how higher wages and unions shape technology adoption",
+      "summary": "Study examines effects of rising wages, organizational power, and task nature on automation adoption and firm performance in the US fast-food industry. Research tests the concept of 'bounded automation' by investigating whether wage increases incentivize firms to automate and how unions regulate this process.",
+      "source": "https://www.semanticscholar.org/paper/874214cc189d11372260b99741a3b9bbd7f8f410",
       "authors": [
-        "Fenglin Zhang"
+        "Shahab Sharfaei",
+        "K. Setthakorn"
       ],
-      "publishedAt": "2026-03-28",
-      "doi": "10.1057/s41599-026-07030-4",
-      "score": 0.327,
-      "sourceAdapter": "openAlex",
+      "publishedAt": "2026-03-09T00:00:00.000Z",
+      "doi": "10.1108/md-12-2024-2975",
+      "score": 0.568,
+      "sourceAdapter": "semanticScholar",
       "graphSlug": "median-wage-impact"
     },
     {
-      "title": "Automation in Industry 4.0: Socio-Economic Trade-offs Beyond Efficiency Gains",
-      "summary": "Qi (2026) investigates the socio-economic consequences of autonomous systems in industrial production, arguing that efficiency narratives obscure significant labor displacement and ethical risks as algorithmic autonomy replaces labor-intensive processes. The study stresses that workforce transition costs fall disproportionately on lower-skilled workers, exacerbating inequality. These findings are highly relevant to understanding displacement patterns in manufacturing and adjacent white-collar support roles.",
-      "source": "https://doi.org/10.54254/2755-2721/2026.ba32390",
+      "title": "Routine-Biased Technological Change and the Gender Wage Gap Among Formal Workers in Indonesia",
+      "summary": "Research examines how Routine-Biased Technological Change (RBTC) is reshaping labor markets and its implications for gender inequality in developing economies, specifically among formal wage workers in Indonesia from 2001 to 2019. Study uses stacked first-difference estimation methods to analyze wage gap dynamics.",
+      "source": "https://doi.org/10.3390/economies14040112",
       "authors": [
-        "Lanpeng Qi"
+        "Wulan Isfah Jamil",
+        "Bambang Brodjonegoro",
+        "Diah Widyawati"
       ],
-      "publishedAt": "2026-03-24",
-      "doi": "10.54254/2755-2721/2026.ba32390",
-      "score": 0.218,
+      "publishedAt": "2026-03-31T00:00:00.000Z",
+      "doi": "10.3390/economies14040112",
+      "score": 0.309,
       "sourceAdapter": "openAlex",
-      "graphSlug": "white-collar-professional-displacement"
+      "graphSlug": "geographic-wage-divergence"
     },
     {
-      "title": "Replacement vs. Augmentation: Romanian Academic Survey Maps AI Labor Market Perceptions",
-      "summary": "Aivaz et al. (2026) survey Romanian students and faculty to assess whether AI is perceived primarily as a replacement or augmentation technology, finding significant divergence by discipline and seniority. Faculty in technical fields lean toward augmentation narratives while students in social sciences express higher displacement anxiety, suggesting AI literacy gaps shape risk perception. The results provide a leading-indicator lens on workforce AI exposure sentiment in an emerging European economy.",
-      "source": "https://doi.org/10.3390/systems14030323",
+      "title": "Generative AI Spotlights the Human Core of Data Science: Implications for Education",
+      "summary": "Analysis reveals that GAI advancement should sharpen rather than diminish focus on human reasoning in data science education, as GAI can now execute many routine data science workflows including cleaning, summarizing, and visualizing. The research argues for an irreducible human core at the center of data science practice.",
+      "source": "https://arxiv.org/abs/2604.02238v1",
       "authors": [
-        "Kamer-Ainur Aivaz",
-        "Daniel Teodorescu",
-        "Oana Roxana Radu"
+        "Nathan Taback"
       ],
-      "publishedAt": "2026-03-18",
-      "doi": "10.3390/systems14030323",
-      "score": 0.215,
-      "sourceAdapter": "openAlex",
-      "graphSlug": "workforce-ai-exposure"
-    },
-    {
-      "title": "IoT, AI, and Robotics Strain Social Security Contributory Principles",
-      "summary": "Cabeçais de Carvalho (2026) examines how the convergence of IoT, AI, cloud computing, and robotics disrupts the contributory basis of social security systems, as automation reduces the payroll tax base that funds pension and unemployment programs. The paper argues that current social protection architectures are structurally misaligned with an economy increasingly characterized by non-labor value creation. This has direct implications for the sustainability of safety nets during accelerated displacement.",
-      "source": "https://doi.org/10.1007/s43681-026-01045-y",
-      "authors": [
-        "Marco António Cabeçais de Carvalho"
-      ],
-      "publishedAt": "2026-03-25",
-      "doi": "10.1007/s43681-026-01045-y",
-      "score": 0.201,
-      "sourceAdapter": "openAlex",
-      "graphSlug": "overall-us-displacement"
+      "publishedAt": "2026-04-02T16:31:32.000Z",
+      "score": 0.402,
+      "sourceAdapter": "arxiv",
+      "graphSlug": "education-sector-displacement"
     }
   ],
   "themes": [
-    "Structural displacement risk: Multiple papers converge on the view that AI-driven automation displaces workers faster than labor markets can reabsorb them, with competitive dynamics preventing voluntary firm-level restraint.",
-    "Wage theory under strain: Classical and Marxian wage models are being revisited as AI decouples labor input from value creation, threatening median and entry-level wage floors.",
-    "Perception gaps in AI exposure: Surveys reveal significant divergence in how workers and students perceive replacement vs. augmentation risk, with AI literacy strongly moderating displacement anxiety.",
-    "Social protection system vulnerability: The erosion of payroll-based contributory systems by automation is emerging as a macro-level policy risk, linking displacement directly to fiscal sustainability.",
-    "GenAI integration in education and software engineering: Multiple arxiv papers document rapid LLM adoption in higher education and software testing curricula, foreshadowing near-term shifts in entry-level tech and education labor demand."
+    "GenAI adoption accelerating across industries with significant workforce transformation implications",
+    "Historical patterns of technological change providing context for current AI displacement concerns",
+    "Wage dynamics increasingly influenced by automation adoption decisions and union responses",
+    "Geographic and demographic disparities in AI impact becoming more pronounced",
+    "Educational sector adapting to emphasize uniquely human skills as AI automates routine tasks"
   ],
   "watching": [
     {
-      "title": "The Automation-Migration Interface and Migrants' Labour Market Integration",
-      "source": "https://doi.org/10.21203/rs.3.rs-9053484/v1",
-      "reason": "Explores how automation compounds integration barriers for migrant workers—an undertracked displacement channel with implications for entry-level wage and overall displacement graphs."
+      "title": "Bridging Distant Ideas: the Impact of AI on R&D and Recombinant Innovation",
+      "source": "https://arxiv.org/abs/2604.02189v1",
+      "reason": "Explores how AI affects innovation patterns and knowledge recombination in R&D, which could signal shifts in high-skill work and creative industry roles"
     },
     {
-      "title": "LLMs for Software Testing Education: Experience Report",
-      "source": "https://arxiv.org/abs/2603.26329v1",
-      "reason": "Documents LLM substitution for entry-level testing tasks in education; early signal for tech-sector displacement and entry-level wage compression if curriculum shifts accelerate."
-    },
-    {
-      "title": "ManagerWorker: Can AI Models Direct Each Other?",
-      "source": "https://arxiv.org/abs/2603.26458v1",
-      "reason": "Multi-agent AI pipelines that replace human task delegation hierarchies could accelerate white-collar and tech-sector displacement beyond single-task automation benchmarks."
+      "title": "BLS Total Employment Data March 2026",
+      "source": "https://data.bls.gov/timeseries/CEU0000000001",
+      "reason": "Latest employment figures show modest month-over-month growth (+571k), providing baseline for measuring AI-related displacement effects"
     }
   ],
   "sources": {
@@ -110,7 +104,7 @@
     "failed": [
       "nber"
     ],
-    "totalCandidates": 59,
-    "afterDedup": 59
+    "totalCandidates": 76,
+    "afterDedup": 75
   }
 }

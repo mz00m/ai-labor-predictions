@@ -330,6 +330,15 @@
       "label": "Revelio Labs: top-quartile salaries +30% vs bottom-quartile +10% since Jan 2023"
     },
     {
+      "date": "2025-12-01",
+      "direction": "up",
+      "sourceIds": [
+        "oecd-ai-sme-adoption-g7-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "OECD/Filippucci: US AI labor productivity gains 0.4-1.3pp/yr"
+    },
+    {
       "date": "2025-12-24",
       "direction": "up",
       "sourceIds": [
@@ -438,6 +447,15 @@
       "label": "Dallas Fed: AI wages not uniformly declining; augmentation offsets automation pressure"
     },
     {
+      "date": "2026-03-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "korinek-stiglitz-steering-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Korinek & Stiglitz: Welfare gains from steering tech depend on labor's factor share"
+    },
+    {
       "date": "2026-03-05",
       "direction": "up",
       "sourceIds": [
@@ -483,15 +501,6 @@
       "label": "Lichtinger & Hosseini: Net AI inequality effect genuinely open question"
     },
     {
-      "date": "2026-04-01",
-      "direction": "up",
-      "sourceIds": [
-        "maasoum-lichtinger-entry-barriers-2026"
-      ],
-      "evidenceTier": 1,
-      "label": "Hosseini/Lichtinger: Avg 17% productivity gain partially offset by entry-barrier erosion"
-    },
-    {
       "date": "2026-03-31",
       "direction": "down",
       "sourceIds": [
@@ -501,26 +510,16 @@
       "label": "FRI: Rapid scenario → labor income share drops from ~58% to 45% by 2050"
     },
     {
-      "date": "2025-12-01",
+      "date": "2026-04-01",
       "direction": "up",
       "sourceIds": [
-        "oecd-ai-sme-adoption-g7-2025"
+        "maasoum-lichtinger-entry-barriers-2026"
       ],
-      "evidenceTier": 2,
-      "label": "OECD/Filippucci: US AI labor productivity gains 0.4-1.3pp/yr"
+      "evidenceTier": 1,
+      "label": "Hosseini/Lichtinger: Avg 17% productivity gain partially offset by entry-barrier erosion"
     }
   ],
   "sources": [
-    {
-      "id": "eisfeldt-genai-firm-values-2026",
-      "title": "Generative AI and Firm Values",
-      "url": "https://www.nber.org/papers/w31222",
-      "publisher": "NBER (Eisfeldt, Schubert, Zhang)",
-      "evidenceTier": 1,
-      "datePublished": "2026-01-21",
-      "excerpt": "A one-standard-deviation increase in Generative AI exposure is associated with a 0.6% decline in the hourly wage rate. For occupations with exposure derived solely from core tasks, a one-standard-deviation higher Generative AI exposure corresponds to a significantly greater decline in relative wage rates by 1.4%.",
-      "dateAdded": "2026-03-16"
-    },
     {
       "id": "goldman-ai-workforce-2025",
       "title": "AI and the US Labor Market",
@@ -529,6 +528,16 @@
       "evidenceTier": 1,
       "datePublished": "2023-04-01",
       "dateAdded": "2026-03-07"
+    },
+    {
+      "id": "acemoglu-johnson-power-progress-2023",
+      "title": "Power and Progress: Our Thousand-Year Struggle Over Technology and Prosperity",
+      "url": "https://www.publicaffairsbooks.com/titles/daron-acemoglu/power-and-progress/9781541702530",
+      "publisher": "PublicAffairs (Acemoglu, Johnson)",
+      "evidenceTier": 2,
+      "datePublished": "2023-05-16",
+      "excerpt": "Technology does not automatically benefit workers; shared prosperity requires deliberate policy choices. AI could follow historical pattern of concentrating gains among capital owners.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "ilo-wages-2023",
@@ -540,6 +549,16 @@
       "dateAdded": "2026-03-01"
     },
     {
+      "id": "otis-kenyan-entrepreneurs-2023",
+      "title": "The Uneven Impact of Generative AI on Entrepreneurial Performance",
+      "url": "https://www.hbs.edu/ris/Publication%20Files/24-042_05d87e28-7543-4644-b5a4-cba80e69c3e9.pdf",
+      "publisher": "HBS Working Paper (Otis, Clarke, Delecourt, Holtz, Koning)",
+      "evidenceTier": 1,
+      "datePublished": "2023-12-01",
+      "excerpt": "The paper reports no statistically significant average effect on revenues or profits. But effects are highly heterogeneous: high‑performing businesses at baseline appear to improve (roughly 15 percent), while low performers do worse (roughly 8-10 percent worse)",
+      "dateAdded": "2026-03-07"
+    },
+    {
       "id": "imf-inequality-2024",
       "title": "AI Will Transform the Global Economy. Let's Make Sure It Benefits Humanity",
       "url": "https://www.imf.org/en/Blogs/Articles/2024/01/14/ai-will-transform-the-global-economy-lets-make-sure-it-benefits-humanity",
@@ -547,6 +566,26 @@
       "evidenceTier": 2,
       "datePublished": "2024-01-14",
       "excerpt": "In most scenarios, AI will likely worsen overall inequality. Higher-income workers may see disproportionate wage gains.",
+      "dateAdded": "2026-03-01"
+    },
+    {
+      "id": "ups-8k-2024",
+      "title": "UPS cuts 12,000 jobs, citing softer demand and higher union labor costs",
+      "url": "https://www.nbcnews.com/business/business-news/ups-cutting-12000-jobs-citing-softer-demand-higher-union-labor-costs-rcna136350",
+      "publisher": "NBC News",
+      "evidenceTier": 1,
+      "datePublished": "2024-01-30",
+      "excerpt": "UPS announced 12,000 job cuts, primarily management and salaried positions, as part of a $1 billion cost-reduction effort. Full-time driver pay raised to $49/hr top rate under 2023 Teamsters contract.",
+      "dateAdded": "2026-03-01"
+    },
+    {
+      "id": "epi-wages-2025",
+      "title": "Unbalanced labor market power is what makes technology — including AI — threatening to workers",
+      "url": "https://www.epi.org/publication/ai-unbalanced-labor-markets/",
+      "publisher": "Economic Policy Institute (Bivens, Zipperer)",
+      "evidenceTier": 2,
+      "datePublished": "2024-03-28",
+      "excerpt": "AI is unlikely to be a direct threat to wages; the root causes of sluggish wage growth are policy decisions that led to imbalanced employer power. Productivity growth has not historically caused higher unemployment or inequality.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -569,6 +608,25 @@
       "dateAdded": "2026-03-01"
     },
     {
+      "id": "walmart-10k-2024",
+      "title": "Walmart Lowers Starting Pay for New Hires",
+      "url": "https://worldatwork.org/workspan/articles/walmart-lowers-starting-pay-for-new-hires",
+      "publisher": "WorldatWork",
+      "evidenceTier": 2,
+      "datePublished": "2024-10-01",
+      "excerpt": "Walmart's minimum starting wage is $14/hr while average U.S. associate wage reached $18.25 by 2025. The company invested in checkout and inventory automation but has not disclosed specific per-location staffing reduction figures.",
+      "dateAdded": "2026-03-01"
+    },
+    {
+      "id": "jiang-extended-workday-2025",
+      "title": "AI and the Extended Workday",
+      "url": "https://www.nber.org/papers/w33536",
+      "publisher": "NBER (Jiang, Park, Xiao, Zhang)",
+      "evidenceTier": 1,
+      "datePublished": "2025-01-29",
+      "excerpt": "When someone transitions to a job with high exposure to AI, they work 3.5 hours longer per week. Productivity gains captured by firms, not wages."
+    },
+    {
       "id": "bls-wage-data-2025",
       "title": "Employment Cost Index — 2025 Q1",
       "url": "https://www.bls.gov/eci/",
@@ -578,33 +636,13 @@
       "dateAdded": "2026-03-01"
     },
     {
-      "id": "substack-wages-doom",
-      "title": "The Wage Compression that Persisted",
-      "url": "https://arindube.substack.com/p/the-wage-compression-that-persisted",
-      "publisher": "Arin Dube (Substack)",
-      "evidenceTier": 4,
-      "datePublished": "2025-05-01",
-      "dateAdded": "2026-03-01"
-    },
-    {
-      "id": "epi-wages-2025",
-      "title": "Unbalanced labor market power is what makes technology — including AI — threatening to workers",
-      "url": "https://www.epi.org/publication/ai-unbalanced-labor-markets/",
-      "publisher": "Economic Policy Institute (Bivens, Zipperer)",
-      "evidenceTier": 2,
-      "datePublished": "2024-03-28",
-      "excerpt": "AI is unlikely to be a direct threat to wages; the root causes of sluggish wage growth are policy decisions that led to imbalanced employer power. Productivity growth has not historically caused higher unemployment or inequality.",
-      "dateAdded": "2026-03-01"
-    },
-    {
-      "id": "walmart-10k-2024",
-      "title": "Walmart Lowers Starting Pay for New Hires",
-      "url": "https://worldatwork.org/workspan/articles/walmart-lowers-starting-pay-for-new-hires",
-      "publisher": "WorldatWork",
-      "evidenceTier": 2,
-      "datePublished": "2024-10-01",
-      "excerpt": "Walmart's minimum starting wage is $14/hr while average U.S. associate wage reached $18.25 by 2025. The company invested in checkout and inventory automation but has not disclosed specific per-location staffing reduction figures.",
-      "dateAdded": "2026-03-01"
+      "id": "bessen-automatic-reaction-2025",
+      "title": "Automatic Reaction — What Happens to Workers at Firms that Automate?",
+      "url": "https://doi.org/10.1162/rest_a_01284",
+      "publisher": "Review of Economics and Statistics (Bessen, Goos, Salomons, van den Berge)",
+      "evidenceTier": 1,
+      "datePublished": "2025-02-01",
+      "excerpt": "Tenured workers cumulatively lose about 3,800 Euros in wage and salary earnings over five years on average (about 9% of one year's income). We find little change in wage rates."
     },
     {
       "id": "indeed-wage-tracker-2025",
@@ -617,63 +655,21 @@
       "dateAdded": "2026-03-01"
     },
     {
-      "id": "ups-8k-2024",
-      "title": "UPS cuts 12,000 jobs, citing softer demand and higher union labor costs",
-      "url": "https://www.nbcnews.com/business/business-news/ups-cutting-12000-jobs-citing-softer-demand-higher-union-labor-costs-rcna136350",
-      "publisher": "NBC News",
+      "id": "marguerit-augmenting-automating-2025",
+      "title": "Augmenting or Automating Labor?",
+      "url": "https://arxiv.org/abs/2503.19159",
+      "publisher": "LISER / arXiv (Marguerit)",
       "evidenceTier": 1,
-      "datePublished": "2024-01-30",
-      "excerpt": "UPS announced 12,000 job cuts, primarily management and salaried positions, as part of a $1 billion cost-reduction effort. Full-time driver pay raised to $49/hr top rate under 2023 Teamsters contract.",
-      "dateAdded": "2026-03-01"
+      "datePublished": "2025-03-24",
+      "excerpt": "Automation AI negatively impacts low-skilled wages; augmentation AI raises high-skilled wages."
     },
     {
-      "id": "pwc-ai-jobs-barometer-2025",
-      "title": "PwC Global AI Jobs Barometer 2025",
-      "url": "https://www.pwc.com/gx/en/issues/artificial-intelligence/ai-jobs-barometer.html",
-      "publisher": "PwC",
-      "evidenceTier": 1,
-      "datePublished": "2025-10-15",
-      "excerpt": "AI-skilled workers command a 56% wage premium, up from 25% in prior year. AI roles median compensation at $157K vs. $49,500 all-occupation median.",
-      "dateAdded": "2026-03-01"
-    },
-    {
-      "id": "bls-may-2024-wage-data",
-      "title": "BLS Occupational Employment and Wage Statistics, May 2024",
-      "url": "https://www.bls.gov/oes/current/oes_nat.htm",
-      "publisher": "Bureau of Labor Statistics",
-      "evidenceTier": 2,
-      "datePublished": "2025-11-15",
-      "excerpt": "Median annual wage for all occupations: $49,500. AI-exposed administrative and clerical wages grew 1.1% vs. 3.8% for non-AI-exposed occupations.",
-      "dateAdded": "2026-03-01"
-    },
-    {
-      "id": "korinek-trammell-growth-2025",
-      "title": "Economic Growth under Transformative AI",
-      "url": "https://www.nber.org/papers/w31815",
-      "publisher": "Annual Review of Economics / NBER (Korinek, Trammell)",
-      "evidenceTier": 1,
-      "datePublished": "2025-09-01",
-      "excerpt": "Sufficiently advanced AI could dramatically raise growth rates and lower labor share, breaking Kaldor Facts. Wages may rise or fall depending on returns to scale and direction of technical change.",
-      "dateAdded": "2026-03-01"
-    },
-    {
-      "id": "acemoglu-johnson-power-progress-2023",
-      "title": "Power and Progress: Our Thousand-Year Struggle Over Technology and Prosperity",
-      "url": "https://www.publicaffairsbooks.com/titles/daron-acemoglu/power-and-progress/9781541702530",
-      "publisher": "PublicAffairs (Acemoglu, Johnson)",
-      "evidenceTier": 2,
-      "datePublished": "2023-05-16",
-      "excerpt": "Technology does not automatically benefit workers; shared prosperity requires deliberate policy choices. AI could follow historical pattern of concentrating gains among capital owners.",
-      "dateAdded": "2026-03-01"
-    },
-    {
-      "id": "stiglitz-korinek-steering-2025",
-      "title": "Steering Technological Progress",
-      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5279584",
-      "publisher": "INET (Korinek, Stiglitz)",
-      "evidenceTier": 1,
-      "datePublished": "2025-05-05",
-      "excerpt": "For the empirically plausible case that capital and labor are gross complements, raising wages requires capital-augmenting innovation rather than labor-augmenting.",
+      "id": "substack-wages-doom",
+      "title": "The Wage Compression that Persisted",
+      "url": "https://arindube.substack.com/p/the-wage-compression-that-persisted",
+      "publisher": "Arin Dube (Substack)",
+      "evidenceTier": 4,
+      "datePublished": "2025-05-01",
       "dateAdded": "2026-03-01"
     },
     {
@@ -687,14 +683,188 @@
       "dateAdded": "2026-03-01"
     },
     {
-      "id": "icle-median-wage-2026",
-      "title": "AI, Productivity, and Labor Markets: A Review of the Empirical Evidence",
-      "url": "https://laweconcenter.org/resources/ai-productivity-and-labor-markets-a-review-of-the-empirical-evidence/",
-      "publisher": "International Center for Law & Economics",
-      "evidenceTier": 2,
-      "datePublished": "2026-02-01",
-      "excerpt": "Small but statistically significant positive wage effects found across AI-exposed occupations; 35.9% of US workers used generative AI by December 2025.",
+      "id": "stiglitz-korinek-steering-2025",
+      "title": "Steering Technological Progress",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5279584",
+      "publisher": "INET (Korinek, Stiglitz)",
+      "evidenceTier": 1,
+      "datePublished": "2025-05-05",
+      "excerpt": "For the empirically plausible case that capital and labor are gross complements, raising wages requires capital-augmenting innovation rather than labor-augmenting.",
       "dateAdded": "2026-03-01"
+    },
+    {
+      "id": "nber-llm-small-effects-2025",
+      "title": "Large Language Models, Small Labor Market Effects",
+      "url": "https://www.nber.org/papers/w33777",
+      "publisher": "NBER",
+      "evidenceTier": 1,
+      "datePublished": "2025-06-01",
+      "excerpt": "Workplaces that adopted AI chatbots showed no significant difference in employment, early-career jobs, job churn, or worker mix. Difference-in-differences estimates for earnings and wages are all precisely estimated zeros, ruling out effects larger than 2%."
+    },
+    {
+      "id": "autor-thompson-expertise-2025",
+      "title": "Expertise",
+      "url": "https://www.nber.org/papers/w33941",
+      "publisher": "NBER (David Autor, Neil Thompson)",
+      "evidenceTier": 1,
+      "datePublished": "2025-06-20",
+      "excerpt": "automation can simultaneously replace experts in some occupations while augmenting expertise in others.",
+      "dateAdded": "2026-03-26"
+    },
+    {
+      "id": "dubal-negron-surveillance-pay-2025",
+      "title": "How AI uncouples hard work from fair wages through surveillance pay",
+      "url": "https://equitablegrowth.org/how-artificial-intelligence-uncouples-hard-work-from-fair-wages-through-surveillance-pay-practices-and-how-to-fix-it/",
+      "publisher": "Washington Center for Equitable Growth (Dubal, Negron)",
+      "evidenceTier": 2,
+      "datePublished": "2025-08-21",
+      "excerpt": "Audit of 500 AI vendors finds surveillance pay spreading across healthcare, customer service, and logistics."
+    },
+    {
+      "id": "korinek-trammell-growth-2025",
+      "title": "Economic Growth under Transformative AI",
+      "url": "https://www.nber.org/papers/w31815",
+      "publisher": "Annual Review of Economics / NBER (Korinek, Trammell)",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-01",
+      "excerpt": "Sufficiently advanced AI could dramatically raise growth rates and lower labor share, breaking Kaldor Facts. Wages may rise or fall depending on returns to scale and direction of technical change.",
+      "dateAdded": "2026-03-01"
+    },
+    {
+      "id": "klump-robots-wages-meta-2025",
+      "title": "Robots and Wages: A Meta-Analysis",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0954349X2500150X",
+      "publisher": "Structural Change and Economic Dynamics (Klump, Schneider, Jurkat)",
+      "evidenceTier": 1,
+      "datePublished": "2025-10-08",
+      "excerpt": "The overall effect of industrial robots on wages is close to zero and insignificant. 53 papers, 2,143 estimations."
+    },
+    {
+      "id": "pwc-ai-jobs-barometer-2025",
+      "title": "PwC Global AI Jobs Barometer 2025",
+      "url": "https://www.pwc.com/gx/en/issues/artificial-intelligence/ai-jobs-barometer.html",
+      "publisher": "PwC",
+      "evidenceTier": 1,
+      "datePublished": "2025-10-15",
+      "excerpt": "AI-skilled workers command a 56% wage premium, up from 25% in prior year. AI roles median compensation at $157K vs. $49,500 all-occupation median.",
+      "dateAdded": "2026-03-01"
+    },
+    {
+      "id": "fang-genai-retail-productivity-2025",
+      "title": "Generative AI and Firm Productivity: Field Experiments in Online Retail",
+      "url": "https://arxiv.org/abs/2510.12049",
+      "publisher": "CESifo / Columbia (Fang et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2025-10-15",
+      "excerpt": "Large-scale field experiments find treatment effects 0-16.3% on sales, mapping directly into TFP improvements."
+    },
+    {
+      "id": "tamkin-mccrory-claude-productivity-2025",
+      "title": "Estimating AI Productivity Gains from Claude Conversations",
+      "url": "https://www.anthropic.com/research/estimating-productivity-gains",
+      "publisher": "Anthropic (Tamkin, McCrory)",
+      "evidenceTier": 2,
+      "datePublished": "2025-11-05",
+      "excerpt": "Claude speeds up individual tasks by about 80%. Extrapolating suggests 1.8% annual US productivity growth over the next decade."
+    },
+    {
+      "id": "bls-may-2024-wage-data",
+      "title": "BLS Occupational Employment and Wage Statistics, May 2024",
+      "url": "https://www.bls.gov/oes/current/oes_nat.htm",
+      "publisher": "Bureau of Labor Statistics",
+      "evidenceTier": 2,
+      "datePublished": "2025-11-15",
+      "excerpt": "Median annual wage for all occupations: $49,500. AI-exposed administrative and clerical wages grew 1.1% vs. 3.8% for non-AI-exposed occupations.",
+      "dateAdded": "2026-03-01"
+    },
+    {
+      "id": "revelio-labs-wage-divide-2025",
+      "title": "The Wage Divide is Widening Again and AI May Be to Blame",
+      "url": "https://www.reveliolabs.com/news/macro/the-wage-divide-is-widening-again-and-ai-may-be-to-blame/",
+      "publisher": "Revelio Labs",
+      "evidenceTier": 2,
+      "datePublished": "2025-12-01",
+      "excerpt": "Since January 2023, salaries at the top quartile of the wage distribution have grown by more than 30%. Over the same period, salaries at the bottom quartile have risen by only around 10%.",
+      "dateAdded": "2026-03-08"
+    },
+    {
+      "id": "oecd-ai-sme-adoption-g7-2025",
+      "title": "AI Adoption by Small and Medium-Sized Enterprises",
+      "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/12/ai-adoption-by-small-and-medium-sized-enterprises_9c48eae6/426399c1-en.pdf",
+      "publisher": "OECD (Calvino, Bianchini, Lane, Montegu, Verger, Ancheva)",
+      "evidenceTier": 2,
+      "datePublished": "2025-12-01",
+      "excerpt": "The United Kingdom and the United States may experience higher gains, ranging from 0.4 to 1.3 percentage points annually for the next 10 years.",
+      "dateAdded": "2026-04-03"
+    },
+    {
+      "id": "merali-scaling-laws-productivity-2025",
+      "title": "Scaling Laws for Economic Productivity",
+      "url": "https://arxiv.org/abs/2512.21316",
+      "publisher": "Yale / arXiv (Merali)",
+      "evidenceTier": 1,
+      "datePublished": "2025-12-24",
+      "excerpt": "Each year of AI model progress reduced task time by 8%. Access to any AI model increased Earnings Per Minute by 81.3%. Continued scaling could boost US productivity by ~20% over the next decade."
+    },
+    {
+      "id": "autor-kausik-automation-paradox-2026",
+      "title": "Resolving the Automation Paradox: Falling Labor Share, Rising Wages",
+      "url": "https://arxiv.org/abs/2601.06343",
+      "publisher": "NBER / arXiv (Autor, Kausik)",
+      "evidenceTier": 1,
+      "datePublished": "2025-12-30",
+      "excerpt": "falling labor share accounted for 16% of U.S. real wage growth between 1954 and 2019",
+      "dateAdded": "2026-03-07"
+    },
+    {
+      "id": "hartley-genai-labor-2026",
+      "title": "Labor Market Effects of Generative AI",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5136877",
+      "publisher": "Stanford / World Bank",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-01",
+      "excerpt": "Small positive wage effects identified for workers in AI-exposed occupations; adoption concentrated among younger, college-educated, higher-earning employees.",
+      "dateAdded": "2026-03-07"
+    },
+    {
+      "id": "gans-goldfarb-oring-automation-2026",
+      "title": "O-Ring Automation",
+      "url": "https://www.nber.org/papers/w34639",
+      "publisher": "NBER (Joshua S. Gans, Avi Goldfarb)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-01",
+      "excerpt": "Labour income can rise under partial automation because automation scales the value of remaining bottleneck tasks.",
+      "dateAdded": "2026-03-23"
+    },
+    {
+      "id": "imas-demand-collapse-ai-2026",
+      "title": "Can advanced AI lead to negative economic growth?",
+      "url": "https://aleximas.substack.com/p/will-advanced-ai-lead-to-negative",
+      "publisher": "Ghosts of Electricity (Alex Imas, Substack)",
+      "evidenceTier": 4,
+      "datePublished": "2026-01-07",
+      "excerpt": "wages fall by 25%, and long-run welfare drops by 16.5%",
+      "dateAdded": "2026-03-17"
+    },
+    {
+      "id": "jones-tonetti-weak-links-2026",
+      "title": "Past Automation and Future A.I.: How Weak Links Tame the Growth Explosion",
+      "url": "https://web.stanford.edu/~chadj/JonesTonetti_Automation.pdf",
+      "publisher": "Stanford GSB / NBER (Jones, Tonetti)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-15",
+      "excerpt": "Despite the accelerating growth, the effects of A.I. on GDP per person are remarkably small for the next 20 to 40 years.",
+      "dateAdded": "2026-03-07"
+    },
+    {
+      "id": "eisfeldt-genai-firm-values-2026",
+      "title": "Generative AI and Firm Values",
+      "url": "https://www.nber.org/papers/w31222",
+      "publisher": "NBER (Eisfeldt, Schubert, Zhang)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-21",
+      "excerpt": "A one-standard-deviation increase in Generative AI exposure is associated with a 0.6% decline in the hourly wage rate. For occupations with exposure derived solely from core tasks, a one-standard-deviation higher Generative AI exposure corresponds to a significantly greater decline in relative wage rates by 1.4%.",
+      "dateAdded": "2026-03-16"
     },
     {
       "id": "althoff-reichardt-task-specific-technical-2026",
@@ -707,14 +877,14 @@
       "dateAdded": "2026-03-01"
     },
     {
-      "id": "hartley-genai-labor-2026",
-      "title": "Labor Market Effects of Generative AI",
-      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5136877",
-      "publisher": "Stanford / World Bank",
-      "evidenceTier": 1,
-      "datePublished": "2026-01-01",
-      "excerpt": "Small positive wage effects identified for workers in AI-exposed occupations; adoption concentrated among younger, college-educated, higher-earning employees.",
-      "dateAdded": "2026-03-07"
+      "id": "icle-median-wage-2026",
+      "title": "AI, Productivity, and Labor Markets: A Review of the Empirical Evidence",
+      "url": "https://laweconcenter.org/resources/ai-productivity-and-labor-markets-a-review-of-the-empirical-evidence/",
+      "publisher": "International Center for Law & Economics",
+      "evidenceTier": 2,
+      "datePublished": "2026-02-01",
+      "excerpt": "Small but statistically significant positive wage effects found across AI-exposed occupations; 35.9% of US workers used generative AI by December 2025.",
+      "dateAdded": "2026-03-01"
     },
     {
       "id": "cepr-ai-productivity-jobs-europe-2026",
@@ -737,14 +907,22 @@
       "dateAdded": "2026-03-01"
     },
     {
-      "id": "jones-tonetti-weak-links-2026",
-      "title": "Past Automation and Future A.I.: How Weak Links Tame the Growth Explosion",
-      "url": "https://web.stanford.edu/~chadj/JonesTonetti_Automation.pdf",
-      "publisher": "Stanford GSB / NBER (Jones, Tonetti)",
+      "id": "dallasfed-ai-aiding-replacing-2026",
+      "title": "AI is simultaneously aiding and replacing workers, wage data suggest",
+      "url": "https://www.dallasfed.org/research/economics/2026/0224",
+      "publisher": "Federal Reserve Bank of Dallas",
       "evidenceTier": 1,
-      "datePublished": "2026-01-15",
-      "excerpt": "Despite the accelerating growth, the effects of A.I. on GDP per person are remarkably small for the next 20 to 40 years.",
-      "dateAdded": "2026-03-07"
+      "datePublished": "2026-02-24",
+      "excerpt": "AI's impact depends on whether it automates or augments. For zero-experience-premium occupations, increased AI exposure is associated with -0.28pp reduction in wage growth. Wages in AI-exposed jobs not uniformly declining."
+    },
+    {
+      "id": "korinek-stiglitz-steering-2026",
+      "title": "Steering Technological Progress",
+      "url": "https://www.nber.org/papers/w34994",
+      "publisher": "nber.org",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-01",
+      "excerpt": "Benefits of steering technology depend on complementarity to labor, relative income, and labor factor share."
     },
     {
       "id": "furman-bls-productivity-above-forecast-2026",
@@ -757,108 +935,6 @@
       "dateAdded": "2026-03-07"
     },
     {
-      "id": "revelio-labs-wage-divide-2025",
-      "title": "The Wage Divide is Widening Again and AI May Be to Blame",
-      "url": "https://www.reveliolabs.com/news/macro/the-wage-divide-is-widening-again-and-ai-may-be-to-blame/",
-      "publisher": "Revelio Labs",
-      "evidenceTier": 2,
-      "datePublished": "2025-12-01",
-      "excerpt": "Since January 2023, salaries at the top quartile of the wage distribution have grown by more than 30%. Over the same period, salaries at the bottom quartile have risen by only around 10%.",
-      "dateAdded": "2026-03-08"
-    },
-    {
-      "id": "otis-kenyan-entrepreneurs-2023",
-      "title": "The Uneven Impact of Generative AI on Entrepreneurial Performance",
-      "url": "https://www.hbs.edu/ris/Publication%20Files/24-042_05d87e28-7543-4644-b5a4-cba80e69c3e9.pdf",
-      "publisher": "HBS Working Paper (Otis, Clarke, Delecourt, Holtz, Koning)",
-      "evidenceTier": 1,
-      "datePublished": "2023-12-01",
-      "excerpt": "The paper reports no statistically significant average effect on revenues or profits. But effects are highly heterogeneous: high‑performing businesses at baseline appear to improve (roughly 15 percent), while low performers do worse (roughly 8-10 percent worse)",
-      "dateAdded": "2026-03-07"
-    },
-    {
-      "id": "autor-kausik-automation-paradox-2026",
-      "title": "Resolving the Automation Paradox: Falling Labor Share, Rising Wages",
-      "url": "https://arxiv.org/abs/2601.06343",
-      "publisher": "NBER / arXiv (Autor, Kausik)",
-      "evidenceTier": 1,
-      "datePublished": "2025-12-30",
-      "excerpt": "falling labor share accounted for 16% of U.S. real wage growth between 1954 and 2019",
-      "dateAdded": "2026-03-07"
-    },
-    {
-      "id": "jiang-extended-workday-2025",
-      "title": "AI and the Extended Workday",
-      "url": "https://www.nber.org/papers/w33536",
-      "publisher": "NBER (Jiang, Park, Xiao, Zhang)",
-      "evidenceTier": 1,
-      "datePublished": "2025-01-29",
-      "excerpt": "When someone transitions to a job with high exposure to AI, they work 3.5 hours longer per week. Productivity gains captured by firms, not wages."
-    },
-    {
-      "id": "klump-robots-wages-meta-2025",
-      "title": "Robots and Wages: A Meta-Analysis",
-      "url": "https://www.sciencedirect.com/science/article/pii/S0954349X2500150X",
-      "publisher": "Structural Change and Economic Dynamics (Klump, Schneider, Jurkat)",
-      "evidenceTier": 1,
-      "datePublished": "2025-10-08",
-      "excerpt": "The overall effect of industrial robots on wages is close to zero and insignificant. 53 papers, 2,143 estimations."
-    },
-    {
-      "id": "merali-scaling-laws-productivity-2025",
-      "title": "Scaling Laws for Economic Productivity",
-      "url": "https://arxiv.org/abs/2512.21316",
-      "publisher": "Yale / arXiv (Merali)",
-      "evidenceTier": 1,
-      "datePublished": "2025-12-24",
-      "excerpt": "Each year of AI model progress reduced task time by 8%. Access to any AI model increased Earnings Per Minute by 81.3%. Continued scaling could boost US productivity by ~20% over the next decade."
-    },
-    {
-      "id": "tamkin-mccrory-claude-productivity-2025",
-      "title": "Estimating AI Productivity Gains from Claude Conversations",
-      "url": "https://www.anthropic.com/research/estimating-productivity-gains",
-      "publisher": "Anthropic (Tamkin, McCrory)",
-      "evidenceTier": 2,
-      "datePublished": "2025-11-05",
-      "excerpt": "Claude speeds up individual tasks by about 80%. Extrapolating suggests 1.8% annual US productivity growth over the next decade."
-    },
-    {
-      "id": "marguerit-augmenting-automating-2025",
-      "title": "Augmenting or Automating Labor?",
-      "url": "https://arxiv.org/abs/2503.19159",
-      "publisher": "LISER / arXiv (Marguerit)",
-      "evidenceTier": 1,
-      "datePublished": "2025-03-24",
-      "excerpt": "Automation AI negatively impacts low-skilled wages; augmentation AI raises high-skilled wages."
-    },
-    {
-      "id": "dubal-negron-surveillance-pay-2025",
-      "title": "How AI uncouples hard work from fair wages through surveillance pay",
-      "url": "https://equitablegrowth.org/how-artificial-intelligence-uncouples-hard-work-from-fair-wages-through-surveillance-pay-practices-and-how-to-fix-it/",
-      "publisher": "Washington Center for Equitable Growth (Dubal, Negron)",
-      "evidenceTier": 2,
-      "datePublished": "2025-08-21",
-      "excerpt": "Audit of 500 AI vendors finds surveillance pay spreading across healthcare, customer service, and logistics."
-    },
-    {
-      "id": "fang-genai-retail-productivity-2025",
-      "title": "Generative AI and Firm Productivity: Field Experiments in Online Retail",
-      "url": "https://arxiv.org/abs/2510.12049",
-      "publisher": "CESifo / Columbia (Fang et al.)",
-      "evidenceTier": 1,
-      "datePublished": "2025-10-15",
-      "excerpt": "Large-scale field experiments find treatment effects 0-16.3% on sales, mapping directly into TFP improvements."
-    },
-    {
-      "id": "bessen-automatic-reaction-2025",
-      "title": "Automatic Reaction — What Happens to Workers at Firms that Automate?",
-      "url": "https://doi.org/10.1162/rest_a_01284",
-      "publisher": "Review of Economics and Statistics (Bessen, Goos, Salomons, van den Berge)",
-      "evidenceTier": 1,
-      "datePublished": "2025-02-01",
-      "excerpt": "Tenured workers cumulatively lose about 3,800 Euros in wage and salary earnings over five years on average (about 9% of one year's income). We find little change in wage rates."
-    },
-    {
       "id": "yale-restrepo-ai-automation-future-work-2026",
       "title": "Pascual Restrepo on AI, Automation, and the Future of Work",
       "url": "https://economics.yale.edu/news/260317/pascual-restrepo-ai-automation-and-future-work",
@@ -869,34 +945,6 @@
       "dateAdded": "2026-03-17"
     },
     {
-      "id": "imas-demand-collapse-ai-2026",
-      "title": "Can advanced AI lead to negative economic growth?",
-      "url": "https://aleximas.substack.com/p/will-advanced-ai-lead-to-negative",
-      "publisher": "Ghosts of Electricity (Alex Imas, Substack)",
-      "evidenceTier": 4,
-      "datePublished": "2026-01-07",
-      "excerpt": "wages fall by 25%, and long-run welfare drops by 16.5%",
-      "dateAdded": "2026-03-17"
-    },
-    {
-      "id": "nber-llm-small-effects-2025",
-      "title": "Large Language Models, Small Labor Market Effects",
-      "url": "https://www.nber.org/papers/w33777",
-      "publisher": "NBER",
-      "evidenceTier": 1,
-      "datePublished": "2025-06-01",
-      "excerpt": "Workplaces that adopted AI chatbots showed no significant difference in employment, early-career jobs, job churn, or worker mix. Difference-in-differences estimates for earnings and wages are all precisely estimated zeros, ruling out effects larger than 2%."
-    },
-    {
-      "id": "dallasfed-ai-aiding-replacing-2026",
-      "title": "AI is simultaneously aiding and replacing workers, wage data suggest",
-      "url": "https://www.dallasfed.org/research/economics/2026/0224",
-      "publisher": "Federal Reserve Bank of Dallas",
-      "evidenceTier": 1,
-      "datePublished": "2026-02-24",
-      "excerpt": "AI's impact depends on whether it automates or augments. For zero-experience-premium occupations, increased AI exposure is associated with -0.28pp reduction in wage growth. Wages in AI-exposed jobs not uniformly declining."
-    },
-    {
       "id": "freund-mann-job-transformation-2026",
       "title": "Job Transformation, Specialization, and the Labor Market Effects of AI",
       "url": "https://lukasbfreund.github.io/files/FM_AI.pdf",
@@ -905,16 +953,6 @@
       "datePublished": "2026-03-18",
       "excerpt": "average individual wages are roughly unchanged for incumbents of occupations with no AI exposure, rise by around 4% at moderate exposure, and drop by as much as 35% for workers in the most exposed occupations",
       "dateAdded": "2026-03-19"
-    },
-    {
-      "id": "gans-goldfarb-oring-automation-2026",
-      "title": "O-Ring Automation",
-      "url": "https://www.nber.org/papers/w34639",
-      "publisher": "NBER (Joshua S. Gans, Avi Goldfarb)",
-      "evidenceTier": 1,
-      "datePublished": "2026-01-01",
-      "excerpt": "Labour income can rise under partial automation because automation scales the value of remaining bottleneck tasks.",
-      "dateAdded": "2026-03-23"
     },
     {
       "id": "anthropic-economic-index-learning-curves-2026",
@@ -946,26 +984,6 @@
       "dateAdded": "2026-03-26"
     },
     {
-      "id": "autor-thompson-expertise-2025",
-      "title": "Expertise",
-      "url": "https://www.nber.org/papers/w33941",
-      "publisher": "NBER (David Autor, Neil Thompson)",
-      "evidenceTier": 1,
-      "datePublished": "2025-06-20",
-      "excerpt": "automation can simultaneously replace experts in some occupations while augmenting expertise in others.",
-      "dateAdded": "2026-03-26"
-    },
-    {
-      "id": "maasoum-lichtinger-entry-barriers-2026",
-      "title": "Generative AI and Occupational Entry Barriers: The Labor-Supply Channel of Technological Change",
-      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6059674",
-      "publisher": "SSRN (Hosseini, Lichtinger — Harvard)",
-      "evidenceTier": 1,
-      "datePublished": "2026-04-01",
-      "excerpt": "The mean is 0.17 (SD 0.11), implying that for the average occupation, GenAI could reduce total work time by roughly 17 percent under this conservative calibration.",
-      "dateAdded": "2026-04-01"
-    },
-    {
       "id": "fri-ai-economics-survey-2026",
       "title": "Forecasting the Economic Effects of AI",
       "url": "https://open.substack.com/pub/forecastingresearch/p/forecasting-the-economic-effects-of-ai",
@@ -976,14 +994,14 @@
       "dateAdded": "2026-04-02"
     },
     {
-      "id": "oecd-ai-sme-adoption-g7-2025",
-      "title": "AI Adoption by Small and Medium-Sized Enterprises",
-      "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/12/ai-adoption-by-small-and-medium-sized-enterprises_9c48eae6/426399c1-en.pdf",
-      "publisher": "OECD (Calvino, Bianchini, Lane, Montegu, Verger, Ancheva)",
-      "evidenceTier": 2,
-      "datePublished": "2025-12-01",
-      "excerpt": "The United Kingdom and the United States may experience higher gains, ranging from 0.4 to 1.3 percentage points annually for the next 10 years.",
-      "dateAdded": "2026-04-03"
+      "id": "maasoum-lichtinger-entry-barriers-2026",
+      "title": "Generative AI and Occupational Entry Barriers: The Labor-Supply Channel of Technological Change",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6059674",
+      "publisher": "SSRN (Hosseini, Lichtinger — Harvard)",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-01",
+      "excerpt": "The mean is 0.17 (SD 0.11), implying that for the average occupation, GenAI could reduce total work time by roughly 17 percent under this conservative calibration.",
+      "dateAdded": "2026-04-01"
     }
   ]
 }
