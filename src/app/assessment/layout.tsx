@@ -20,7 +20,7 @@ export default function AssessmentLayout({
   return (
     <div className="assessment-wrapper min-h-screen bg-white text-gray-900">
       {/* Nav */}
-      <nav className="border-b border-gray-200 bg-white/80 backdrop-blur-md sticky top-0 z-50">
+      <nav className="border-b border-gray-200 bg-white/80 backdrop-blur-md sticky top-0 z-40">
         <div className="max-w-6xl mx-auto px-6 sm:px-10 h-14 flex items-center justify-between">
           <div className="flex items-center gap-6">
             <Link
@@ -46,7 +46,7 @@ export default function AssessmentLayout({
             </Link>
             <Link
               href="/assessment/start"
-              className="text-[13px] font-medium bg-[#5C61F6] hover:bg-[#4F52D4] text-white px-4 py-1.5 rounded-md transition-colors"
+              className="text-[13px] font-medium text-gray-500 hover:text-gray-900 border border-gray-300 hover:border-gray-400 px-4 py-1.5 rounded-md transition-colors"
             >
               Get Started
             </Link>
