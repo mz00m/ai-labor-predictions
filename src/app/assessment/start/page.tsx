@@ -7,9 +7,11 @@ import {
   IndustryCategory,
   CompanySize,
   AiMaturityLevel,
+  ToolPreference,
   INDUSTRY_LABELS,
   COMPANY_SIZE_LABELS,
   AI_MATURITY_LABELS,
+  TOOL_PREFERENCE_LABELS,
 } from "@/lib/assessment/types";
 import { INDUSTRY_TEMPLATES } from "@/lib/assessment/taxonomy";
 
@@ -42,12 +44,15 @@ interface FormData {
   assessmentScope: "full-organization" | "department" | "team";
   departmentName: string;
   teamDescription: string;
+  jobTitle: string;
   primaryFunctions: string[];
   keyRoles: string[];
   currentTools: string;
   currentAiUsage: AiMaturityLevel;
+  toolPreference: ToolPreference | "";
   biggestChallenges: string[];
   goals: string[];
+  specificProblem: string;
   websiteUrl: string;
   additionalContext: string;
 }
@@ -61,12 +66,15 @@ const initialFormData: FormData = {
   assessmentScope: "team",
   departmentName: "",
   teamDescription: "",
+  jobTitle: "",
   primaryFunctions: [],
   keyRoles: [],
   currentTools: "",
   currentAiUsage: "none",
+  toolPreference: "",
   biggestChallenges: [],
   goals: [],
+  specificProblem: "",
   websiteUrl: "",
   additionalContext: "",
 };
@@ -186,12 +194,15 @@ export default function AssessmentStartPage() {
         assessmentScope: form.assessmentScope,
         departmentName: form.departmentName,
         teamDescription: form.teamDescription,
+        jobTitle: form.jobTitle || undefined,
         primaryFunctions: form.primaryFunctions,
         keyRoles: form.keyRoles,
         currentTools: form.currentTools.split(",").map((t) => t.trim()).filter(Boolean),
         currentAiUsage: form.currentAiUsage,
+        toolPreference: form.toolPreference || undefined,
         biggestChallenges: form.biggestChallenges,
         goals: form.goals,
+        specificProblem: form.specificProblem || undefined,
         websiteUrl: (() => {
           const url = form.websiteUrl.trim();
           if (!url) return "";
@@ -386,6 +397,16 @@ export default function AssessmentStartPage() {
               </button>
             ))}
           </div>
+
+          <Field label="Your job title or role">
+            <input
+              type="text"
+              value={form.jobTitle}
+              onChange={(e) => updateField("jobTitle", e.target.value)}
+              placeholder="e.g., Office Manager, Marketing Director, Founder, Paralegal"
+              className="input-field"
+            />
+          </Field>
 
           {form.assessmentScope === "department" && (
             <Field label="What team or department?">
@@ -695,6 +716,35 @@ export default function AssessmentStartPage() {
             </div>
           </div>
 
+          <Field label="Is there a specific problem you want AI to help solve? (optional)">
+            <textarea
+              value={form.specificProblem}
+              onChange={(e) => updateField("specificProblem", e.target.value)}
+              placeholder="e.g., I spend 10+ hours a week writing proposals and each one is slightly different. I need a way to generate first drafts faster."
+              className="input-field min-h-[80px] resize-y"
+              maxLength={2000}
+            />
+          </Field>
+
+          <div>
+            <label className="block text-[13px] font-medium text-gray-700 mb-3">How do you want to approach AI tools?</label>
+            <div className="grid sm:grid-cols-2 gap-3">
+              {(Object.entries(TOOL_PREFERENCE_LABELS) as [ToolPreference, string][]).map(([value, label]) => (
+                <button
+                  key={value}
+                  onClick={() => updateField("toolPreference", value)}
+                  className={`text-left p-3 rounded-xl border-2 transition-colors ${
+                    form.toolPreference === value
+                      ? "border-[#5C61F6] bg-[#5C61F6]/[0.04]"
+                      : "border-gray-200 hover:border-gray-300 bg-gray-50"
+                  }`}
+                >
+                  <div className="text-[13px] font-medium text-gray-900">{label}</div>
+                </button>
+              ))}
+            </div>
+          </div>
+
           <Field label="Tools I use regularly (comma-separated)">
             <input
               type="text"
@@ -776,15 +826,18 @@ export default function AssessmentStartPage() {
             <ReviewRow label="Company" value={form.organizationName} />
             <ReviewRow label="Industry" value={form.industry ? INDUSTRY_LABELS[form.industry] : "-"} />
             <ReviewRow label="Size" value={form.companySize ? COMPANY_SIZE_LABELS[form.companySize] : "-"} />
+            {form.jobTitle && <ReviewRow label="Role" value={form.jobTitle} />}
             <ReviewRow label="Focus" value={
               form.assessmentScope === "team" ? "My work" :
               form.assessmentScope === "department" ? `My team (${form.departmentName || "not specified"})` :
               "The whole business"
             } />
             <ReviewRow label="AI experience" value={AI_MATURITY_LABELS[form.currentAiUsage]} />
+            {form.toolPreference && <ReviewRow label="Tool approach" value={TOOL_PREFERENCE_LABELS[form.toolPreference]} />}
             <ReviewRow label="Tasks" value={form.primaryFunctions.join(", ") || "None selected"} />
             <ReviewRow label="Friction" value={form.biggestChallenges.join(", ") || "None selected"} />
             <ReviewRow label="Goals" value={form.goals.join(", ") || "None selected"} />
+            {form.specificProblem && <ReviewRow label="Problem to solve" value={form.specificProblem} />}
             <ReviewRow label="Documents" value={files.length > 0 ? `${files.length} file(s)` : "None"} />
             {form.websiteUrl && <ReviewRow label="Website" value={form.websiteUrl} />}
           </div>

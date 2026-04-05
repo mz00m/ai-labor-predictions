@@ -135,6 +135,9 @@ function filterDepartmentsToRole(
   for (const role of intake.keyRoles) {
     roleTerms.add(role.toLowerCase());
   }
+  if (intake.jobTitle) {
+    roleTerms.add(intake.jobTitle.toLowerCase());
+  }
   if (intake.departmentName) {
     roleTerms.add(intake.departmentName.toLowerCase());
   }
@@ -191,6 +194,9 @@ function inferRoleFocus(intake: AssessmentIntake): string {
   // Build a clear description of what this person actually does
   const signals: string[] = [];
 
+  if (intake.jobTitle) {
+    signals.push(`Job Title: ${intake.jobTitle}`);
+  }
   if (intake.departmentName) {
     signals.push(`Department: ${intake.departmentName}`);
   }
@@ -233,15 +239,18 @@ function buildIntakeContext(intake: AssessmentIntake): string {
 **Industry:** ${intake.industry}${intake.industryDetail ? ` (${intake.industryDetail})` : ""}
 **Size:** ${intake.companySize} people
 **Scope:** ${intake.assessmentScope}
+${intake.jobTitle ? `**Job Title:** ${intake.jobTitle}` : ""}
 ${intake.departmentName ? `**Department:** ${intake.departmentName}` : ""}
 ${intake.teamDescription ? `**Team/Role:** ${intake.teamDescription}` : ""}
 
 **AI Maturity:** ${intake.currentAiUsage} — ${maturityDescriptions[intake.currentAiUsage] || "Assess from context."}
 **Current Tools:** ${intake.currentTools.length > 0 ? intake.currentTools.join(", ") : "None specified"}
+${intake.toolPreference ? `**Tool Approach:** ${intake.toolPreference}` : ""}
 **Key Functions:** ${intake.primaryFunctions.join(", ")}
 **Key Roles:** ${intake.keyRoles.join(", ")}
 **Challenges:** ${intake.biggestChallenges.join("; ")}
 **Goals:** ${intake.goals.join("; ")}
+${intake.specificProblem ? `**Specific Problem to Solve:** ${intake.specificProblem}` : ""}
 ${intake.additionalContext ? `**Additional Context:** ${intake.additionalContext}` : ""}
 ${roleFocus}`;
 }
@@ -428,6 +437,7 @@ Return valid JSON with these keys:
 }
 
 Generate 3-5 quick wins. These should be things they can try THIS WEEK.
+For toolSuggestion in quick wins: many quick wins are best done with a general-purpose AI assistant (ChatGPT, Google Gemini, or Claude) rather than specialized software. For example, "Use ChatGPT or Gemini to draft your next meeting agenda" is a perfectly good quick win. Only suggest specialized tools when the task genuinely needs one.
 The extractedContext will be carried to subsequent steps, so extract everything useful.`;
 
   let userPrompt = buildIntakeContext(intake);
@@ -520,6 +530,13 @@ AI Maturity Gating — The person's maturity level determines task complexity:
 - "piloting": Can handle moderate multi-step workflows
 - "some-adoption"/"widespread": Ready for complex, integrated approaches
 
+Example Tools — Be Practical:
+For each task, suggest 1-3 example tools that could help. Include a MIX of:
+1. **General-purpose AI assistants** (ChatGPT, Google Gemini, Claude) for tasks that don't need a specialized tool — things like drafting agendas, taking meeting notes, creating forms, brainstorming, summarizing documents, writing emails. Many tasks are best solved by simply prompting a general AI assistant, not buying dedicated software.
+2. **Specialized/dedicated tools** from the tools KB when the task genuinely benefits from purpose-built software (e.g., CRM, accounting, project management).
+3. **AI features in tools they already use** (e.g., Google Workspace has Gemini built in, Microsoft 365 has Copilot) — call these out when relevant.
+Not every task needs a structured tool. For occasional or ad-hoc tasks (creating an agenda, drafting a one-off form, taking notes in a meeting), a general-purpose AI assistant IS the right recommendation.
+
 Return valid JSON:
 {
   "taskAnalysis": [
@@ -528,7 +545,7 @@ Return valid JSON:
       "department": "Area of work",
       "currentProcess": "How they do this today",
       "aiOpportunity": "high|medium|low",
-      "aiApproach": "Step-by-step explanation naming specific tools",
+      "aiApproach": "Step-by-step explanation. Name specific tools where helpful, but for ad-hoc tasks just say 'use any AI assistant (ChatGPT, Gemini, Claude)'",
       "expectedImpact": "e.g. '3-5 hours saved per week'",
       "complexity": "simple|moderate|complex",
       "estimatedTimeSaved": "e.g. '3-5 hrs/week'",
@@ -598,26 +615,48 @@ export async function generateStep3Tools(
   const onetSummary = getOnetSummaryForPrompt(intake.primaryFunctions, intake.industry);
   const researchContext = formatResearchContextForPrompt(intake.industry);
 
+  const toolPrefInstructions: Record<string, string> = {
+    "use-existing": `TOOL PREFERENCE: This person wants to ADD AI to tools they already use (${intake.currentTools.join(", ")}). Prioritize AI features within their existing stack. Only suggest new tools if their current stack truly can't do it.`,
+    "find-new": "TOOL PREFERENCE: This person is open to finding new AI-native tools. Recommend the best-fit tools regardless of their current stack.",
+    "build-own": "TOOL PREFERENCE: This person wants to build custom AI solutions. Focus recommendations on APIs, frameworks, and platforms for building (e.g., API access, no-code AI builders, custom GPTs). Include off-the-shelf options as alternatives where appropriate.",
+    "no-preference": "TOOL PREFERENCE: No strong preference. Show a mix of options — both AI features in tools they may already use and new purpose-built AI tools.",
+  };
+  const toolPrefNote = intake.toolPreference ? toolPrefInstructions[intake.toolPreference] : toolPrefInstructions["no-preference"];
+
   const systemPrompt = `${CONSULTING_PHILOSOPHY}
 
-You are running Step 3 of a 4-step assessment. Steps 1-2 produced a profile and task analysis. Your job: recommend specific tools, build an implementation roadmap, and project ROI.
+You are running Step 3 of a 4-step assessment. Steps 1-2 produced a profile and task analysis. Your job: recommend tools for specific use cases, build a product-agnostic implementation roadmap, and project ROI.
 
-Tool Prioritization:
+${toolPrefNote}
+
+Tool Recommendations — Product Examples:
 - "start-here" (max 2): Priority Score ≥ 4.0, very easy to adopt
 - "add-next" (max 3): Priority Score ≥ 3.0, builds on start-here tools
 - "consider-later" (max 2): Priority Score ≥ 2.5, requires foundation
-Max 6 tools total. Free before paid. Simple before powerful.
+Max 6 tool categories total. Free before paid. Simple before powerful.
+When tools from the knowledge base match, include them as concrete examples with real names, URLs, and pricing. But frame each recommendation around the USE CASE it solves, not the product itself.
 
-ONLY recommend tools from the tools knowledge base provided. Use exact names, URLs, pricing.
+General-Purpose AI Assistants (ChatGPT, Google Gemini, Claude):
+Many use cases DON'T need a specialized tool. For ad-hoc and occasional tasks — writing meeting agendas, drafting forms, taking notes, brainstorming, summarizing documents, creating templates — recommend a general-purpose AI assistant as the tool. Include ChatGPT (free tier available), Google Gemini (especially if they use Google Workspace), and Claude as options. These are often the best "start-here" recommendation for people at lower AI maturity levels.
+If someone already uses Google Workspace, call out that Gemini is built into Docs, Sheets, Gmail, etc.
+If someone already uses Microsoft 365, call out that Copilot is built into Word, Excel, Outlook, etc.
+
+CRITICAL — Implementation Roadmap Must Be Product-Agnostic:
+The implementation roadmap and next steps must focus on USE CASES and CAPABILITIES, not specific products. Actions should describe WHAT to accomplish and WHY, not which tool to buy.
+- Good: "Automate first-draft proposal generation — test with 5 real proposals this month"
+- Bad: "Sign up for Jasper AI and connect it to your Google Docs"
+- Good: "Set up automated client follow-up sequences triggered by intake form completion"
+- Bad: "Install HubSpot and configure the sequences feature"
+The tool recommendations section is where products live. The roadmap is where strategy lives.
 
 Return valid JSON:
 {
   "toolRecommendations": [
     {
-      "toolName": "Specific product name",
-      "category": "General category",
+      "category": "Use case category (e.g., 'Proposal & document drafting')",
+      "toolName": "Specific product name from KB (optional — omit if no good match)",
       "recommendationTier": "start-here|add-next|consider-later",
-      "purpose": "What it does for their work",
+      "purpose": "What use case this solves in their work",
       "whatItReplaces": "Specific manual process",
       "expectedValue": "Measurable benefit",
       "implementationEffort": "low|medium|high",
@@ -634,8 +673,8 @@ Return valid JSON:
   "implementationRoadmap": {
     "immediate": {
       "timeframe": "This week to 3 months",
-      "objectives": [],
-      "actions": [{ "title": "", "description": "", "owner": "You / Your team", "priority": "critical|high|medium|low", "howTo": "" }],
+      "objectives": ["Use-case-focused objectives — what capabilities to build"],
+      "actions": [{ "title": "Action focused on the outcome, not the tool", "description": "What to do and why — product-agnostic", "owner": "You / Your team", "priority": "critical|high|medium|low", "howTo": "Step-by-step approach (not tool-specific setup steps)" }],
       "expectedOutcomes": [],
       "estimatedInvestment": ""
     },
@@ -728,7 +767,7 @@ Return valid JSON:
     "resistanceSources": ["Where pushback comes from and how to address it"],
     "dataReadinessNote": "Honest assessment. Messy data is NOT a blocker."
   },
-  "furtherEvaluation": ["Specific, actionable next steps. No fabricated URLs."]
+  "furtherEvaluation": ["Specific, actionable next steps focused on USE CASES not products. No fabricated URLs. Frame as capabilities to build, not tools to buy."]
 }
 
 For the risk assessment, cite research data provided.
