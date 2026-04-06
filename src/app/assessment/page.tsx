@@ -178,6 +178,7 @@ export default function AssessmentLanding() {
           gives you a clear, practical plan based on what you actually do every day.
         </p>
 
+        <p className="text-[12px] text-gray-400 mb-4">Real testimonials from users.</p>
         <div className="grid md:grid-cols-2 gap-4">
           {TESTIMONIAL_SCENARIOS.map((t) => (
             <div
