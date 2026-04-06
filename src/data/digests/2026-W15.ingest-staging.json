@@ -1,0 +1,126 @@
+{
+  "week": "2026-W15",
+  "generatedAt": "2026-04-06T09:09:18.668Z",
+  "candidates": [
+    {
+      "highlight": {
+        "title": "Generative AI's Impact on Employment: Opportunities and Displacement Risks",
+        "summary": "A new study examining tools like ChatGPT and Gemini finds that since the public release of ChatGPT in November 2022, concerns over job displacement, wage reduction, and labor market disruption have intensified globally. The paper maps both the opportunities GenAI creates and the structural challenges it poses to workers across skill levels. It underscores the uneven distribution of risk, with routine cognitive roles facing the greatest exposure (Devansh, 2026, DOI: 10.22214/ijraset.2026.78078).",
+        "source": "https://www.semanticscholar.org/paper/c293adb7a8488bcbf198aa9d7fd12c4934cecd5b",
+        "authors": [
+          "Devansh"
+        ],
+        "publishedAt": "2026-03-31",
+        "doi": "10.22214/ijraset.2026.78078",
+        "score": 0.663,
+        "sourceAdapter": "semanticScholar",
+        "graphSlug": "overall-us-displacement"
+      },
+      "sourceId": "semanticscholar-generative-ais-impact-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "AI Civilization and the Transformation of Work: Historical Parallels and Future Trajectories",
+        "summary": "Han (2026) situates the current AI-and-robotics wave within historical precedents of technological displacement, arguing that while prior transitions ultimately created new employment categories, the speed and breadth of current automation presents qualitatively different risks. The paper emphasizes that white-collar and knowledge-work roles are now squarely in the displacement frame, departing from earlier automation waves that primarily affected manual labor. Policy interventions around reskilling and social protection are flagged as urgent.",
+        "source": "https://www.semanticscholar.org/paper/a0e2a5b2ba6715f7b6b78a51c57991bee11ed0cc",
+        "authors": [
+          "Dong-Gew Han"
+        ],
+        "publishedAt": "2026-03-29",
+        "score": 0.628,
+        "sourceAdapter": "semanticScholar",
+        "graphSlug": "white-collar-professional-displacement"
+      },
+      "sourceId": "semanticscholar-ai-civilization-and-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "AI's Systemic Impact on Labor Relations and Employment Structures",
+        "summary": "Otgonsuren and Jinjiimaa (2026) present a cross-national analysis of how AI's acceleration—driven by automation, big data, and algorithmic decision-making—is reshaping labor market dynamics and employment relationships at a systemic level. The study finds that digital transformation is compressing the timeline between AI capability emergence and workforce disruption, leaving regulatory and social frameworks lagging. Industries with high volumes of structured, repetitive tasks face the sharpest near-term employment contractions (DOI: 10.35854/2219-6242-2026-1-132-141).",
+        "source": "https://www.semanticscholar.org/paper/5db988edbfb7f31348f1c12b8430c228bd2cf29a",
+        "authors": [
+          "D. Otgonsuren",
+          "N. Jinjiimaa"
+        ],
+        "publishedAt": "2026-03-26",
+        "doi": "10.35854/2219-6242-2026-1-132-141",
+        "score": 0.441,
+        "sourceAdapter": "semanticScholar",
+        "graphSlug": "workforce-ai-exposure"
+      },
+      "sourceId": "semanticscholar-ais-systemic-impact-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Shaping Human Capital and Work Practices in a Changing Labor Market",
+        "summary": "Wittich (2026) examines how organizations and workers are adapting human capital formation strategies in response to AI-driven labor market shifts, with particular attention to how firms are redesigning job roles and training pipelines. The research highlights a growing divergence between workers who can complement AI tools and those whose skills are substituted by them, amplifying within-occupation wage inequality. The study calls for proactive workforce development policies tied to AI adoption curves.",
+        "source": "https://cris.maastrichtuniversity.nl/en/publications/33cda117-bac2-4be0-afce-39703634d55a",
+        "authors": [
+          "Anna-Lena Wittich"
+        ],
+        "publishedAt": "2026-04-24",
+        "score": 1,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "high-skill-wage-premium"
+      },
+      "sourceId": "cris-shaping-human-capital-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Autonomous Coding Agents Generate 400,000+ Pull Requests: Real-World Software Workflow Implications",
+        "summary": "An empirical study of code review agents in production pull-request workflows finds that OpenAI Codex alone created over 400,000 PRs within two months, signaling rapid AI penetration into core software engineering tasks (Chowdhury et al., 2026). The research evaluates whether industry claims about agent quality hold up against empirical reality, finding notable gaps in correctness and contextual understanding. These findings have direct implications for employment trajectories in software development and the pace of tech-sector displacement.",
+        "source": "https://arxiv.org/abs/2604.03196v1",
+        "authors": [
+          "Kowshik Chowdhury",
+          "Dipayan Banik",
+          "K M Ferdous",
+          "Shazibul Islam Shamim"
+        ],
+        "publishedAt": "2026-04-03",
+        "score": 0.378,
+        "sourceAdapter": "arxiv",
+        "graphSlug": "tech-sector-displacement"
+      },
+      "sourceId": "arxiv-autonomous-coding-agents-2026",
+      "evidenceTier": 1,
+      "extractedStats": [
+        {
+          "graphSlug": "tech-sector-displacement",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "OpenAI Codex alone created 400,000+ PRs in two months via autonomous agents",
+          "quote": "Autonomous coding agents are generating code at an unprecedented scale, with OpenAI Codex alone creating over 400,000 pull requests (PRs) in two months."
+        },
+        {
+          "graphSlug": "tech-sector-displacement",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "Industry claims CRAs can manage 80% of OSS PRs without human involvement",
+          "quote": "Industry reports claim that CRAs can manage 80% of PRs in open source repositories without human involvement."
+        },
+        {
+          "graphSlug": "tech-sector-displacement",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "CRA-only PRs merge at 45.20% vs 68.37% for human-only, 23pp gap",
+          "quote": "CRA-only PRs achieve a 45.20% merge rate, 23.17 percentage points lower than human-only PRs (68.37%), with significantly higher abandonment."
+        },
+        {
+          "graphSlug": "tech-sector-displacement",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "60.2% of closed CRA-only PRs have 0-30% signal ratio indicating low quality",
+          "quote": "60.2% of closed CRA-only PRs fall into the 0-30% signal range, and 12 of 13 CRAs exhibit average signal ratios below 60%, indicating substantial noise in automated review feedback."
+        }
+      ]
+    }
+  ]
+}

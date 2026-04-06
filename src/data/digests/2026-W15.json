@@ -1,0 +1,114 @@
+{
+  "week": "2026-W15",
+  "generatedAt": "2026-04-06T09:08:25.077Z",
+  "lookbackDays": 14,
+  "highlights": [
+    {
+      "title": "Generative AI's Impact on Employment: Opportunities and Displacement Risks",
+      "summary": "A new study examining tools like ChatGPT and Gemini finds that since the public release of ChatGPT in November 2022, concerns over job displacement, wage reduction, and labor market disruption have intensified globally. The paper maps both the opportunities GenAI creates and the structural challenges it poses to workers across skill levels. It underscores the uneven distribution of risk, with routine cognitive roles facing the greatest exposure (Devansh, 2026, DOI: 10.22214/ijraset.2026.78078).",
+      "source": "https://www.semanticscholar.org/paper/c293adb7a8488bcbf198aa9d7fd12c4934cecd5b",
+      "authors": [
+        "Devansh"
+      ],
+      "publishedAt": "2026-03-31",
+      "doi": "10.22214/ijraset.2026.78078",
+      "score": 0.663,
+      "sourceAdapter": "semanticScholar",
+      "graphSlug": "overall-us-displacement"
+    },
+    {
+      "title": "AI Civilization and the Transformation of Work: Historical Parallels and Future Trajectories",
+      "summary": "Han (2026) situates the current AI-and-robotics wave within historical precedents of technological displacement, arguing that while prior transitions ultimately created new employment categories, the speed and breadth of current automation presents qualitatively different risks. The paper emphasizes that white-collar and knowledge-work roles are now squarely in the displacement frame, departing from earlier automation waves that primarily affected manual labor. Policy interventions around reskilling and social protection are flagged as urgent.",
+      "source": "https://www.semanticscholar.org/paper/a0e2a5b2ba6715f7b6b78a51c57991bee11ed0cc",
+      "authors": [
+        "Dong-Gew Han"
+      ],
+      "publishedAt": "2026-03-29",
+      "score": 0.628,
+      "sourceAdapter": "semanticScholar",
+      "graphSlug": "white-collar-professional-displacement"
+    },
+    {
+      "title": "AI's Systemic Impact on Labor Relations and Employment Structures",
+      "summary": "Otgonsuren and Jinjiimaa (2026) present a cross-national analysis of how AI's acceleration—driven by automation, big data, and algorithmic decision-making—is reshaping labor market dynamics and employment relationships at a systemic level. The study finds that digital transformation is compressing the timeline between AI capability emergence and workforce disruption, leaving regulatory and social frameworks lagging. Industries with high volumes of structured, repetitive tasks face the sharpest near-term employment contractions (DOI: 10.35854/2219-6242-2026-1-132-141).",
+      "source": "https://www.semanticscholar.org/paper/5db988edbfb7f31348f1c12b8430c228bd2cf29a",
+      "authors": [
+        "D. Otgonsuren",
+        "N. Jinjiimaa"
+      ],
+      "publishedAt": "2026-03-26",
+      "doi": "10.35854/2219-6242-2026-1-132-141",
+      "score": 0.441,
+      "sourceAdapter": "semanticScholar",
+      "graphSlug": "workforce-ai-exposure"
+    },
+    {
+      "title": "Shaping Human Capital and Work Practices in a Changing Labor Market",
+      "summary": "Wittich (2026) examines how organizations and workers are adapting human capital formation strategies in response to AI-driven labor market shifts, with particular attention to how firms are redesigning job roles and training pipelines. The research highlights a growing divergence between workers who can complement AI tools and those whose skills are substituted by them, amplifying within-occupation wage inequality. The study calls for proactive workforce development policies tied to AI adoption curves.",
+      "source": "https://cris.maastrichtuniversity.nl/en/publications/33cda117-bac2-4be0-afce-39703634d55a",
+      "authors": [
+        "Anna-Lena Wittich"
+      ],
+      "publishedAt": "2026-04-24",
+      "score": 1,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "high-skill-wage-premium"
+    },
+    {
+      "title": "Autonomous Coding Agents Generate 400,000+ Pull Requests: Real-World Software Workflow Implications",
+      "summary": "An empirical study of code review agents in production pull-request workflows finds that OpenAI Codex alone created over 400,000 PRs within two months, signaling rapid AI penetration into core software engineering tasks (Chowdhury et al., 2026). The research evaluates whether industry claims about agent quality hold up against empirical reality, finding notable gaps in correctness and contextual understanding. These findings have direct implications for employment trajectories in software development and the pace of tech-sector displacement.",
+      "source": "https://arxiv.org/abs/2604.03196v1",
+      "authors": [
+        "Kowshik Chowdhury",
+        "Dipayan Banik",
+        "K M Ferdous",
+        "Shazibul Islam Shamim"
+      ],
+      "publishedAt": "2026-04-03",
+      "score": 0.378,
+      "sourceAdapter": "arxiv",
+      "graphSlug": "tech-sector-displacement"
+    }
+  ],
+  "themes": [
+    "GenAI tools are accelerating white-collar and knowledge-work displacement, moving beyond earlier automation waves that targeted manual labor",
+    "Human capital adaptation is becoming a central organizational challenge as AI adoption outpaces reskilling infrastructure",
+    "Within-occupation wage polarization is intensifying, with high-skill AI-complementary workers pulling away from substitutable peers",
+    "Autonomous coding agents are reaching production scale (400k+ PRs in weeks), signaling rapid tech-sector workflow transformation",
+    "Regulatory and social protection frameworks remain structurally lagged behind the speed of AI-driven labor market disruption"
+  ],
+  "watching": [
+    {
+      "title": "Automatic Textbook Formalization (Lean/AI proof systems)",
+      "source": "https://arxiv.org/abs/2604.03071v1",
+      "reason": "AI formalizing graduate-level mathematics textbooks signals emerging displacement risk for academic and knowledge-production roles in education sector."
+    },
+    {
+      "title": "AI-Assisted Unit Test Writing and Test-Driven Code Refactoring",
+      "source": "https://arxiv.org/abs/2604.03135v1",
+      "reason": "Case study evidence of AI handling end-to-end code refactoring cycles; watch for labor demand effects on junior software QA and dev roles."
+    },
+    {
+      "title": "Americans Working Less Relative to Non-Americans: Convergence Analysis",
+      "source": "https://www.nber.org/papers/w35020",
+      "reason": "Structural shift in US labor supply hours may interact with AI adoption trends; worth tracking as a baseline for displacement magnitude estimates."
+    }
+  ],
+  "sources": {
+    "succeeded": [
+      "semanticScholar",
+      "arxiv",
+      "ssrn",
+      "pubmed",
+      "openAlex",
+      "nber",
+      "bls",
+      "fred",
+      "googleCse",
+      "hnAlgolia"
+    ],
+    "failed": [],
+    "totalCandidates": 70,
+    "afterDedup": 70
+  }
+}
