@@ -1,13 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getDb } from "@/lib/db";
 import { initAssessmentTables } from "@/lib/assessment/db";
+import { getVerifiedEmail } from "@/lib/assessment/auth";
 import type { Assessment } from "@/lib/assessment/types";
 
 export async function GET(req: NextRequest) {
-  const email = req.nextUrl.searchParams.get("email");
+  const email = await getVerifiedEmail(req);
 
   if (!email) {
-    return NextResponse.json({ error: "Email required" }, { status: 400 });
+    return NextResponse.json({ error: "Verification required" }, { status: 401 });
   }
 
   const sql = getDb();
@@ -51,5 +52,5 @@ export async function GET(req: NextRequest) {
     previewGenerated: row.preview_generated as boolean,
   }));
 
-  return NextResponse.json({ assessments });
+  return NextResponse.json({ assessments, email });
 }

@@ -51,6 +51,18 @@ export async function initAssessmentTables(): Promise<void> {
     )
   `;
 
+  await sql`
+    CREATE TABLE IF NOT EXISTS email_verification_codes (
+      id TEXT PRIMARY KEY,
+      email TEXT NOT NULL,
+      code TEXT NOT NULL,
+      expires_at TIMESTAMP NOT NULL,
+      used BOOLEAN DEFAULT FALSE,
+      attempts INTEGER DEFAULT 0,
+      created_at TIMESTAMP DEFAULT NOW()
+    )
+  `;
+
   // Add columns for existing tables (safe to run multiple times)
   await sql`
     DO $$ BEGIN
@@ -299,6 +311,88 @@ export async function mergePartialReport(assessmentId: string, partial: Partial<
     SET report_json = COALESCE(report_json, '{}'::jsonb) || ${JSON.stringify(partial)}::jsonb
     WHERE id = ${assessmentId}
   `;
+}
+
+/**
+ * Create a verification code for an email. Invalidates prior unused codes.
+ */
+export async function createVerificationCode(email: string, code: string): Promise<boolean> {
+  const sql = getDb();
+  if (!sql) return false;
+
+  await initAssessmentTables();
+
+  // Invalidate prior unused codes for this email
+  await sql`
+    UPDATE email_verification_codes SET used = TRUE
+    WHERE email = ${email} AND used = FALSE
+  `;
+
+  // Rate limit: max 3 codes per email per hour
+  type CountRow = { count: string };
+  const rateLimitRows = await sql`
+    SELECT COUNT(*) as count FROM email_verification_codes
+    WHERE email = ${email} AND created_at > NOW() - INTERVAL '1 hour'
+  ` as CountRow[];
+  if (parseInt(rateLimitRows[0]?.count || "0") >= 3) return false;
+
+  const id = generateId();
+  await sql`
+    INSERT INTO email_verification_codes (id, email, code, expires_at)
+    VALUES (${id}, ${email}, ${code}, NOW() + INTERVAL '10 minutes')
+  `;
+  return true;
+}
+
+/**
+ * Validate a verification code. Returns true if valid, false otherwise.
+ */
+export async function validateVerificationCode(email: string, code: string): Promise<boolean> {
+  const sql = getDb();
+  if (!sql) return false;
+
+  type Row = Record<string, any>;
+  const rows = await sql`
+    SELECT id, code, attempts FROM email_verification_codes
+    WHERE email = ${email} AND used = FALSE AND expires_at > NOW()
+    ORDER BY created_at DESC LIMIT 1
+  ` as Row[];
+
+  if (rows.length === 0) return false;
+
+  const row = rows[0];
+
+  // Too many attempts
+  if ((row.attempts as number) >= 5) return false;
+
+  // Increment attempts
+  await sql`
+    UPDATE email_verification_codes SET attempts = attempts + 1 WHERE id = ${row.id}
+  `;
+
+  if (row.code !== code) return false;
+
+  // Mark as used
+  await sql`
+    UPDATE email_verification_codes SET used = TRUE WHERE id = ${row.id}
+  `;
+  return true;
+}
+
+/**
+ * Get user ID for an email (without creating one)
+ */
+export async function getUserByEmail(email: string): Promise<{ id: string; email: string } | null> {
+  const sql = getDb();
+  if (!sql) return null;
+
+  type Row = Record<string, any>;
+  const rows = await sql`
+    SELECT id, email FROM assessment_users WHERE email = ${email}
+  ` as Row[];
+
+  if (rows.length === 0) return null;
+  return { id: rows[0].id as string, email: rows[0].email as string };
 }
 
 function generateId(): string {

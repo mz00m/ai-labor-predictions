@@ -1,18 +1,44 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import type { Assessment } from "@/lib/assessment/types";
 import { INDUSTRY_LABELS } from "@/lib/assessment/types";
 
+type AuthState = "email" | "code" | "authenticated";
+
 export default function DashboardPage() {
+  const [authState, setAuthState] = useState<AuthState>("email");
   const [email, setEmail] = useState("");
+  const [verifiedEmail, setVerifiedEmail] = useState("");
+  const [code, setCode] = useState("");
   const [assessments, setAssessments] = useState<Assessment[]>([]);
   const [loading, setLoading] = useState(false);
-  const [searched, setSearched] = useState(false);
+  const [checking, setChecking] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const codeInputRef = useRef<HTMLInputElement>(null);
 
-  const handleLookup = async (e: React.FormEvent) => {
+  // On mount, check if we already have a valid session
+  useEffect(() => {
+    async function checkSession() {
+      try {
+        const res = await fetch("/api/assessment/dashboard");
+        if (res.ok) {
+          const data = await res.json();
+          setAssessments(data.assessments || []);
+          setVerifiedEmail(data.email || "");
+          setAuthState("authenticated");
+        }
+      } catch {
+        // No valid session, show email form
+      } finally {
+        setChecking(false);
+      }
+    }
+    checkSession();
+  }, []);
+
+  const handleSendCode = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
 
@@ -20,117 +46,263 @@ export default function DashboardPage() {
     setError(null);
 
     try {
-      const res = await fetch(`/api/assessment/dashboard?email=${encodeURIComponent(email)}`);
+      const res = await fetch("/api/assessment/auth/send-code", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
       const data = await res.json();
 
-      if (data.error) throw new Error(data.error);
-      setAssessments(data.assessments || []);
-      setSearched(true);
+      if (!res.ok) throw new Error(data.error);
+
+      setAuthState("code");
+      setTimeout(() => codeInputRef.current?.focus(), 100);
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Failed to load assessments");
+      setError(err instanceof Error ? err.message : "Failed to send code");
     } finally {
       setLoading(false);
     }
   };
 
+  const handleVerifyCode = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!code) return;
+
+    setLoading(true);
+    setError(null);
+
+    try {
+      const res = await fetch("/api/assessment/auth/verify-code", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, code }),
+      });
+      const data = await res.json();
+
+      if (!res.ok) throw new Error(data.error);
+
+      // Fetch assessments with the new session
+      const dashRes = await fetch("/api/assessment/dashboard");
+      const dashData = await dashRes.json();
+      setAssessments(dashData.assessments || []);
+      setVerifiedEmail(email);
+      setAuthState("authenticated");
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Invalid code");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleLogout = async () => {
+    await fetch("/api/assessment/auth/logout", { method: "POST" });
+    setAuthState("email");
+    setEmail("");
+    setCode("");
+    setVerifiedEmail("");
+    setAssessments([]);
+    setError(null);
+  };
+
+  const handleResendCode = async () => {
+    setError(null);
+    setCode("");
+    setLoading(true);
+    try {
+      const res = await fetch("/api/assessment/auth/send-code", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error);
+      setError(null);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Failed to resend code");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  if (checking) {
+    return (
+      <div className="max-w-4xl mx-auto px-6 sm:px-10 py-12">
+        <div className="text-[14px] text-gray-400">Loading...</div>
+      </div>
+    );
+  }
+
   return (
     <div className="max-w-4xl mx-auto px-6 sm:px-10 py-12">
-      <h1 className="text-[28px] font-bold text-gray-900 mb-2">My Plans</h1>
+      <h1 className="font-serif text-[28px] font-semibold text-gray-900 mb-2">My Plans</h1>
       <p className="text-[14px] text-gray-500 mb-8">
-        View your AI action plans and add-ons.
+        View your AI action plans. Verify your email to access your reports.
       </p>
 
-      {/* Email lookup */}
-      <form onSubmit={handleLookup} className="flex gap-3 mb-10">
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="Enter the email you used"
-          className="flex-1 bg-gray-50 border border-gray-200 rounded-lg px-4 py-2.5 text-[14px] text-gray-900 placeholder:text-gray-400 outline-none focus:border-[#5C61F6]"
-          required
-        />
-        <button
-          type="submit"
-          disabled={loading}
-          className="bg-[#5C61F6] hover:bg-[#4F52D4] text-white text-[13px] font-medium px-6 py-2.5 rounded-lg transition-colors disabled:opacity-50"
-        >
-          {loading ? "Looking up..." : "Find My Plans"}
-        </button>
-      </form>
+      {/* Email entry */}
+      {authState === "email" && (
+        <form onSubmit={handleSendCode} className="max-w-md">
+          <label className="block text-[13px] font-medium text-gray-700 mb-2">
+            Enter the email you used for your assessment
+          </label>
+          <div className="flex gap-3">
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="you@example.com"
+              className="flex-1 bg-gray-50 border border-gray-200 rounded-lg px-4 py-2.5 text-[14px] text-gray-900 placeholder:text-gray-400 outline-none focus:border-[#5C61F6]"
+              required
+            />
+            <button
+              type="submit"
+              disabled={loading}
+              className="bg-[#5C61F6] hover:bg-[#4F52D4] text-white text-[13px] font-medium px-6 py-2.5 rounded-lg transition-colors disabled:opacity-50"
+            >
+              {loading ? "Sending..." : "Send Code"}
+            </button>
+          </div>
+          <p className="text-[12px] text-gray-400 mt-2">
+            We&apos;ll send a 6-digit verification code to your email.
+          </p>
+        </form>
+      )}
+
+      {/* Code entry */}
+      {authState === "code" && (
+        <form onSubmit={handleVerifyCode} className="max-w-md">
+          <p className="text-[14px] text-gray-600 mb-4">
+            We sent a 6-digit code to <span className="font-medium text-gray-900">{email}</span>
+          </p>
+          <div className="flex gap-3 mb-3">
+            <input
+              ref={codeInputRef}
+              type="text"
+              inputMode="numeric"
+              pattern="[0-9]*"
+              maxLength={6}
+              value={code}
+              onChange={(e) => setCode(e.target.value.replace(/\D/g, ""))}
+              placeholder="000000"
+              className="w-40 bg-gray-50 border border-gray-200 rounded-lg px-4 py-2.5 text-[18px] font-mono text-center text-gray-900 tracking-widest placeholder:text-gray-300 outline-none focus:border-[#5C61F6]"
+              required
+            />
+            <button
+              type="submit"
+              disabled={loading || code.length !== 6}
+              className="bg-[#5C61F6] hover:bg-[#4F52D4] text-white text-[13px] font-medium px-6 py-2.5 rounded-lg transition-colors disabled:opacity-50"
+            >
+              {loading ? "Verifying..." : "Verify"}
+            </button>
+          </div>
+          <div className="flex gap-4 text-[12px]">
+            <button
+              type="button"
+              onClick={handleResendCode}
+              disabled={loading}
+              className="text-[#5C61F6] hover:underline disabled:opacity-50"
+            >
+              Resend code
+            </button>
+            <button
+              type="button"
+              onClick={() => { setAuthState("email"); setCode(""); setError(null); }}
+              className="text-gray-400 hover:text-gray-600"
+            >
+              Use a different email
+            </button>
+          </div>
+        </form>
+      )}
+
+      {/* Authenticated */}
+      {authState === "authenticated" && (
+        <>
+          <div className="flex items-center gap-3 mb-8 text-[13px]">
+            <span className="text-gray-500">
+              Verified as <span className="font-medium text-gray-900">{verifiedEmail}</span>
+            </span>
+            <button
+              onClick={handleLogout}
+              className="text-gray-400 hover:text-gray-600 transition-colors"
+            >
+              Sign out
+            </button>
+          </div>
+
+          {assessments.length === 0 && (
+            <div className="text-center py-16">
+              <p className="text-gray-400 text-[14px] mb-4">No plans found for this email.</p>
+              <Link
+                href="/assessment/start"
+                className="text-[#5C61F6] hover:underline text-[14px]"
+              >
+                Get your first AI action plan
+              </Link>
+            </div>
+          )}
+
+          {assessments.length > 0 && (
+            <div className="space-y-4">
+              {assessments.map((assessment) => (
+                <div
+                  key={assessment.id}
+                  className="bg-gray-50 border border-gray-200 rounded-xl p-6 hover:border-gray-300 transition-colors"
+                >
+                  <div className="flex items-start justify-between">
+                    <div>
+                      <h3 className="text-[16px] font-semibold text-gray-900">
+                        {assessment.intake?.organizationName || "Assessment"}
+                      </h3>
+                      <p className="text-[13px] text-gray-400 mt-1">
+                        {assessment.intake?.industry ? INDUSTRY_LABELS[assessment.intake.industry] : ""} |{" "}
+                        {new Date(assessment.createdAt).toLocaleDateString("en-US", {
+                          year: "numeric",
+                          month: "short",
+                          day: "numeric",
+                        })}
+                      </p>
+                    </div>
+                    <StatusBadge status={assessment.status} />
+                  </div>
+
+                  {/* AI Readiness Score */}
+                  {assessment.report?.organizationProfile.aiReadinessScore && (
+                    <div className="mt-4 flex items-center gap-3">
+                      <span className="text-[12px] text-gray-400">AI Readiness:</span>
+                      <div className="flex-1 bg-gray-200 rounded-full h-1.5">
+                        <div
+                          className="bg-[#5C61F6] h-1.5 rounded-full"
+                          style={{ width: `${assessment.report.organizationProfile.aiReadinessScore * 10}%` }}
+                        />
+                      </div>
+                      <span className="text-[13px] font-bold text-[#5C61F6]">
+                        {assessment.report.organizationProfile.aiReadinessScore}/10
+                      </span>
+                    </div>
+                  )}
+
+                  {/* Actions */}
+                  <div className="mt-4 flex gap-3">
+                    {assessment.status === "complete" && (
+                      <Link
+                        href={`/assessment/report?id=${assessment.id}`}
+                        className="text-[12px] font-medium text-[#5C61F6] hover:underline"
+                      >
+                        View Report
+                      </Link>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </>
+      )}
 
       {error && (
-        <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6 text-[13px] text-red-600">
+        <div className="bg-red-50 border border-red-200 rounded-lg p-4 mt-6 text-[13px] text-red-600">
           {error}
-        </div>
-      )}
-
-      {/* Results */}
-      {searched && assessments.length === 0 && (
-        <div className="text-center py-16">
-          <p className="text-gray-400 text-[14px] mb-4">No plans found for this email.</p>
-          <Link
-            href="/assessment/start"
-            className="text-[#5C61F6] hover:underline text-[14px]"
-          >
-            Get your first AI action plan
-          </Link>
-        </div>
-      )}
-
-      {assessments.length > 0 && (
-        <div className="space-y-4">
-          {assessments.map((assessment) => (
-            <div
-              key={assessment.id}
-              className="bg-gray-50 border border-gray-200 rounded-xl p-6 hover:border-gray-300 transition-colors"
-            >
-              <div className="flex items-start justify-between">
-                <div>
-                  <h3 className="text-[16px] font-semibold text-gray-900">
-                    {assessment.intake?.organizationName || "Assessment"}
-                  </h3>
-                  <p className="text-[13px] text-gray-400 mt-1">
-                    {assessment.intake?.industry ? INDUSTRY_LABELS[assessment.intake.industry] : ""} |{" "}
-                    {new Date(assessment.createdAt).toLocaleDateString("en-US", {
-                      year: "numeric",
-                      month: "short",
-                      day: "numeric",
-                    })}
-                  </p>
-                </div>
-                <StatusBadge status={assessment.status} />
-              </div>
-
-              {/* AI Readiness Score */}
-              {assessment.report?.organizationProfile.aiReadinessScore && (
-                <div className="mt-4 flex items-center gap-3">
-                  <span className="text-[12px] text-gray-400">AI Readiness:</span>
-                  <div className="flex-1 bg-gray-200 rounded-full h-1.5">
-                    <div
-                      className="bg-[#5C61F6] h-1.5 rounded-full"
-                      style={{ width: `${assessment.report.organizationProfile.aiReadinessScore * 10}%` }}
-                    />
-                  </div>
-                  <span className="text-[13px] font-bold text-[#5C61F6]">
-                    {assessment.report.organizationProfile.aiReadinessScore}/10
-                  </span>
-                </div>
-              )}
-
-              {/* Actions */}
-              <div className="mt-4 flex gap-3">
-                {assessment.status === "complete" && (
-                  <Link
-                    href={`/assessment/report?id=${assessment.id}`}
-                    className="text-[12px] font-medium text-[#5C61F6] hover:underline"
-                  >
-                    View Report
-                  </Link>
-                )}
-              </div>
-            </div>
-          ))}
         </div>
       )}
 
@@ -140,7 +312,7 @@ export default function DashboardPage() {
         <div className="grid sm:grid-cols-2 gap-6 text-[13px] text-gray-500">
           <div>
             <h3 className="font-medium text-gray-900 mb-1">What we store</h3>
-            <p>Only your email, questionnaire answers, and the AI-generated plan. No uploaded file content is ever stored.</p>
+            <p>Your email, questionnaire answers, and the AI-generated plan. No uploaded file content is ever stored. Reports are accessible only after email verification.</p>
           </div>
           <div>
             <h3 className="font-medium text-gray-900 mb-1">Updating your plan</h3>

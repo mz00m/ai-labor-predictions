@@ -77,7 +77,7 @@ export default function AssessmentLayout({
               Methodology
             </Link>
             <span className="cursor-default">
-              Your data processed in-memory only &middot; Nothing stored
+              Uploaded files processed in-memory only &middot; Reports verified by email
             </span>
           </div>
         </div>
