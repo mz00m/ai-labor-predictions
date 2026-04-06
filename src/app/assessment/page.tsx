@@ -74,7 +74,7 @@ const TESTIMONIAL_SCENARIOS = [
   {
     role: "Chief Operating Officer",
     industry: "Workforce Development Organization",
-    quote: "It hits points we have already discussed and are acting on but gives my team some new information to cross reference against. It also provides structure to our approach which will help my OPs team leader who doesn't have a lot of change management experience. Very helpful!",
+    quote: "It hits points we have already discussed and are acting on but gives my team some new information to cross reference against. It also provides structure to our approach which will help our management experience. Very helpful!",
   },
   {
     role: "Program Staff",
