@@ -17,6 +17,7 @@ import {
   saveStepFeedback,
   mergePartialReport,
 } from "@/lib/assessment/db";
+import { signToken, makeSessionCookie } from "@/lib/assessment/auth";
 // Allow up to 300 seconds for Claude API call + processing
 // Vercel Pro plan supports up to 300s
 export const maxDuration = 300;
@@ -48,6 +49,7 @@ export async function POST(req: NextRequest) {
     let fileContents: { name: string; category: string; text: string }[] = [];
     let websiteContent: string | null = null;
     let assessmentId: string | null = assessmentIdParam;
+    let sessionEmail: string | null = null; // Set when we need to issue a session cookie
 
     if (isContinuation) {
       // Steps 2-4: load intake from existing assessment, skip file/website processing
@@ -136,6 +138,9 @@ export async function POST(req: NextRequest) {
           if (assessmentId) {
             await updateAssessmentStatus(assessmentId, "analyzing");
           }
+          // Mark that we need to set the session cookie so the progress/report
+          // pages can authenticate without requiring a separate login step
+          sessionEmail = email.toLowerCase().trim();
         }
       }
     }
@@ -206,11 +211,19 @@ export async function POST(req: NextRequest) {
           return NextResponse.json({ error: `Unknown step: ${step}` }, { status: 400 });
       }
 
-      return NextResponse.json({
+      const response = NextResponse.json({
         assessmentId: targetId,
         step,
         ...stepResult,
       });
+
+      // Set session cookie on initial submission so progress/report pages work
+      if (sessionEmail) {
+        const token = await signToken(sessionEmail);
+        response.cookies.set(makeSessionCookie(token));
+      }
+
+      return response;
     }
 
     // No step parameter — reject. The 4-step pipeline is the only supported path.
