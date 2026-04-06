@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-04-06",
-  "totalSources": 511,
-  "verifiedCount": 501,
+  "totalSources": 512,
+  "verifiedCount": 502,
   "sources": {
     "oecd-ai-sme-adoption-g7-2025": {
       "id": "oecd-ai-sme-adoption-g7-2025",
@@ -7182,6 +7182,21 @@
         "overall-us-displacement",
         "entry-level-wage-impact",
         "median-wage-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "dimon-jpmorgan-ceo-letter-2026": {
+      "id": "dimon-jpmorgan-ceo-letter-2026",
+      "title": "JPMorgan Chase 2025 Annual Report — CEO Letter (Jamie Dimon)",
+      "url": "https://www.jpmorganchase.com/ir/annual-report/2025/ar-ceo-letters",
+      "publisher": "JPMorgan Chase (Jamie Dimon)",
+      "evidenceTier": 3,
+      "datePublished": "2026-04-06",
+      "excerpt": "AI will definitely eliminate some jobs, while it enhances others. Huge increase in AI-driven capital spending and construction by the five hyperscalers. In 2025, this number was $450 billion, and in 2026, it will be approximately $725 billion. There is a possibility that AI deployment will move faster than workforce adaptation to new job creation.",
+      "usedIn": [
+        "ai-adoption-rate",
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false

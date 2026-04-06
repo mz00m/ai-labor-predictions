@@ -1340,6 +1340,24 @@
       ],
       "evidenceTier": 2,
       "label": "GS: tech-displaced workers take ~1 month longer to find new job"
+    },
+    {
+      "date": "2026-04-06",
+      "direction": "neutral",
+      "sourceIds": [
+        "dimon-jpmorgan-ceo-letter-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Dimon: AI will eliminate some jobs while enhancing others"
+    },
+    {
+      "date": "2026-04-06",
+      "direction": "up",
+      "sourceIds": [
+        "dimon-jpmorgan-ceo-letter-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Dimon: AI adoption may outpace workforce adaptation speed"
     }
   ],
   "sources": [
@@ -2422,6 +2440,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-04-06",
       "excerpt": "Our analysis implies that AI substitution has reduced monthly payroll growth by roughly 25k and raised the unemployment rate by 0.16 percentage points over the past year, while augmentation has added about 9k to monthly payroll growth and lowered the unemployment rate by 0.06pp. This implies a net drag of 16k per month on payroll growth and a 0.1pp boost to the unemployment rate."
+    },
+    {
+      "id": "dimon-jpmorgan-ceo-letter-2026",
+      "title": "JPMorgan Chase 2025 Annual Report — CEO Letter (Jamie Dimon)",
+      "url": "https://www.jpmorganchase.com/ir/annual-report/2025/ar-ceo-letters",
+      "publisher": "JPMorgan Chase (Jamie Dimon)",
+      "evidenceTier": 3,
+      "datePublished": "2026-04-06",
+      "excerpt": "AI will definitely eliminate some jobs, while it enhances others. There is a possibility that AI deployment will move faster than workforce adaptation to new job creation. In prior technological transformations, labor had time to adjust and retrain."
     }
   ]
 }
