@@ -102,6 +102,16 @@
       "evidenceTier": 1,
       "metricType": "projection",
       "dataType": "projected"
+    },
+    {
+      "date": "2026-04-06",
+      "value": -1.3,
+      "sourceIds": [
+        "goldman-ai-agents-labor-impact-2026"
+      ],
+      "evidenceTier": 2,
+      "metricType": "survey",
+      "dataType": "observed"
     }
   ],
   "overlays": [
@@ -437,6 +447,15 @@
       ],
       "evidenceTier": 3,
       "label": "NYT: Kinder (Brookings) no longer needs entry-level research hires"
+    },
+    {
+      "date": "2026-04-06",
+      "direction": "down",
+      "sourceIds": [
+        "goldman-ai-agents-labor-impact-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "GS: AI widened entry-vs-experienced unemployment gap by 0.6pp"
     }
   ],
   "sources": [
@@ -824,6 +843,15 @@
       "datePublished": "2026-04-03",
       "excerpt": "I really don't know anything a college student can bring to my team that Claude can't do.",
       "dateAdded": "2026-04-03"
+    },
+    {
+      "id": "goldman-ai-agents-labor-impact-2026",
+      "title": "Goldman Sachs on AI Agents and Labor Market Impact",
+      "url": "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-us-labor-market",
+      "publisher": "Goldman Sachs Global Investment Research",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-06",
+      "excerpt": "These negative effects fall largely on less experienced workers, widening the entry-level-to-experienced wage gap by 1.3% and the unemployment rate gap by 0.6pp from their pre-pandemic averages."
     }
   ]
 }

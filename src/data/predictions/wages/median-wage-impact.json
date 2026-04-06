@@ -517,6 +517,24 @@
       ],
       "evidenceTier": 1,
       "label": "Hosseini/Lichtinger: Avg 17% productivity gain partially offset by entry-barrier erosion"
+    },
+    {
+      "date": "2026-04-06",
+      "direction": "down",
+      "sourceIds": [
+        "goldman-ai-agents-labor-impact-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "GS: tech-displaced workers suffer >3% real earnings loss"
+    },
+    {
+      "date": "2026-04-06",
+      "direction": "down",
+      "sourceIds": [
+        "goldman-ai-agents-labor-impact-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "GS: displaced workers downgrade to more routine, lower-skill jobs"
     }
   ],
   "sources": [
@@ -1002,6 +1020,15 @@
       "datePublished": "2026-04-01",
       "excerpt": "The mean is 0.17 (SD 0.11), implying that for the average occupation, GenAI could reduce total work time by roughly 17 percent under this conservative calibration.",
       "dateAdded": "2026-04-01"
+    },
+    {
+      "id": "goldman-ai-agents-labor-impact-2026",
+      "title": "Goldman Sachs on AI Agents and Labor Market Impact",
+      "url": "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-us-labor-market",
+      "publisher": "Goldman Sachs Global Investment Research",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-06",
+      "excerpt": "Workers displaced from technology-disrupted occupations face more difficult short-run transitions back into employment. They take approximately one month longer to find a new job and suffer real earnings losses of more than 3% upon reemployment, compared with negligible losses for workers displaced from more stable occupations."
     }
   ]
 }
