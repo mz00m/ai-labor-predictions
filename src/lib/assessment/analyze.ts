@@ -675,7 +675,7 @@ The implementation roadmap and next steps must focus on USE CASES and CAPABILITI
 - Bad: "Install HubSpot and configure the sequences feature"
 The tool recommendations section is where products live. The roadmap is where strategy lives.
 
-Return valid JSON:
+Return valid JSON with ONLY toolRecommendations (roadmap and ROI are handled separately):
 {
   "toolRecommendations": [
     {
@@ -693,28 +693,6 @@ Return valid JSON:
       "specificProducts": [{ "name": "Product", "url": "https://url", "pricing": "Free / $X/mo", "free": true }],
       "gettingStarted": ["Step 1", "Step 2", "Step 3"],
       "successKpis": ["Measurable KPI"]
-    }
-  ],
-  "implementationRoadmap": {
-    "immediate": {
-      "timeframe": "This week to 3 months",
-      "objectives": ["Use-case-focused objectives — what capabilities to build"],
-      "actions": [{ "title": "Action focused on the outcome, not the tool", "description": "What to do and why — product-agnostic", "owner": "You / Your team", "priority": "critical|high|medium|low", "howTo": "Step-by-step approach (not tool-specific setup steps)" }],
-      "expectedOutcomes": [],
-      "estimatedInvestment": ""
-    },
-    "mediumTerm": { "timeframe": "3-6 months", "objectives": [], "actions": [], "expectedOutcomes": [], "estimatedInvestment": "" },
-    "longTerm": { "timeframe": "6-12+ months", "objectives": [], "actions": [], "expectedOutcomes": [], "estimatedInvestment": "" }
-  },
-  "roiProjections": [
-    {
-      "area": "Area",
-      "currentCost": "Show the math",
-      "projectedSavings": "Specific",
-      "timeToValue": "Specific",
-      "confidence": "high|moderate|low",
-      "basis": "Reasoning",
-      "calculationDetail": "Full math"
     }
   ]
 }`;
@@ -735,10 +713,72 @@ Return valid JSON:
   userPrompt += `\n\n${onetSummary}`;
   if (researchContext) userPrompt += `\n\n${researchContext}`;
 
-  try {
-    const parsed = await callClaude(systemPrompt, userPrompt, { maxTokens: 8000, timeout: 300000 });
+  // Split into two parallel calls to cut wall-clock time roughly in half:
+  // Call A: tool recommendations (the bulk of the output)
+  // Call B: implementation roadmap + ROI projections (depends on task analysis, not tools)
 
-    const validated = Step3ToolsSchema.safeParse(parsed);
+  const roadmapSystemPrompt = `${CONSULTING_PHILOSOPHY}
+
+You are running Step 3B of an assessment. Steps 1-2 produced a profile and task analysis. Your job: build a product-agnostic implementation roadmap and project ROI.
+
+CRITICAL — Implementation Roadmap Must Be Product-Agnostic:
+The roadmap focuses on USE CASES and CAPABILITIES, not specific products. Actions describe WHAT to accomplish and WHY, not which tool to buy.
+- Good: "Automate first-draft proposal generation — test with 5 real proposals this month"
+- Bad: "Sign up for Jasper AI and connect it to your Google Docs"
+
+Return valid JSON:
+{
+  "implementationRoadmap": {
+    "immediate": {
+      "timeframe": "This week to 3 months",
+      "objectives": ["Use-case-focused objectives"],
+      "actions": [{ "title": "Action", "description": "What and why", "owner": "You / Your team", "priority": "critical|high|medium|low", "howTo": "Step-by-step approach" }],
+      "expectedOutcomes": [],
+      "estimatedInvestment": ""
+    },
+    "mediumTerm": { "timeframe": "3-6 months", "objectives": [], "actions": [], "expectedOutcomes": [], "estimatedInvestment": "" },
+    "longTerm": { "timeframe": "6-12+ months", "objectives": [], "actions": [], "expectedOutcomes": [], "estimatedInvestment": "" }
+  },
+  "roiProjections": [
+    {
+      "area": "Area",
+      "currentCost": "Show the math",
+      "projectedSavings": "Specific",
+      "timeToValue": "Specific",
+      "confidence": "high|moderate|low",
+      "basis": "Reasoning",
+      "calculationDetail": "Full math"
+    }
+  ]
+}`;
+
+  // Build a lighter user prompt for roadmap (no tools KB needed)
+  let roadmapUserPrompt = buildIntakeContext(intake);
+  roadmapUserPrompt += buildStepContextSection(stepContext);
+  roadmapUserPrompt += buildFeedbackContext(feedback);
+  if (previousReport.taskAnalysis?.length) {
+    roadmapUserPrompt += `\n\n## Confirmed Task Analysis (from Step 2)\n`;
+    for (const task of previousReport.taskAnalysis) {
+      roadmapUserPrompt += `- **${task.taskName}** (${task.department}): ${task.aiOpportunity} opportunity, ${task.complexity} complexity, ~${task.estimatedTimeSaved || "unknown"} saved\n`;
+    }
+  }
+  if (researchContext) roadmapUserPrompt += `\n\n${researchContext}`;
+
+  try {
+    // Run both calls in parallel
+    const [toolsParsed, roadmapParsed] = await Promise.all([
+      callClaude(systemPrompt, userPrompt, { maxTokens: 5000, timeout: 300000 }),
+      callClaude(roadmapSystemPrompt, roadmapUserPrompt, { maxTokens: 4000, timeout: 300000 }),
+    ]);
+
+    // Merge results from both calls
+    const merged = {
+      toolRecommendations: (toolsParsed as any)?.toolRecommendations || [],
+      implementationRoadmap: (roadmapParsed as any)?.implementationRoadmap || (toolsParsed as any)?.implementationRoadmap,
+      roiProjections: (roadmapParsed as any)?.roiProjections || (toolsParsed as any)?.roiProjections || [],
+    };
+
+    const validated = Step3ToolsSchema.safeParse(merged);
     if (!validated.success) {
       console.warn("Step 3 schema validation failed, using defaults:", validated.error.flatten().fieldErrors);
     }
