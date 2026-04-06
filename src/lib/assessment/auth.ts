@@ -3,7 +3,7 @@ import { NextRequest } from "next/server";
 import crypto from "crypto";
 
 const COOKIE_NAME = "assessment_session";
-const COOKIE_MAX_AGE = 60 * 60 * 24 * 7; // 7 days
+const COOKIE_MAX_AGE = 60 * 60 * 24 * 30; // 30 days
 
 function getSecret() {
   const secret = process.env.ASSESSMENT_JWT_SECRET;
@@ -19,7 +19,7 @@ export async function signToken(email: string): Promise<string> {
   return new SignJWT({ email })
     .setProtectedHeader({ alg: "HS256" })
     .setIssuedAt()
-    .setExpirationTime("7d")
+    .setExpirationTime("30d")
     .sign(getSecret());
 }
 
