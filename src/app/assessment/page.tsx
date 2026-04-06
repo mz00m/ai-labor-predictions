@@ -28,7 +28,6 @@ const REPORT_SECTIONS = [
   { title: "Your Action Plan", description: "What to start today, this quarter, and this year" },
   { title: "Skills to Build", description: "The capabilities that will make you more effective with AI" },
   { title: "Time & Value Projections", description: "Realistic estimates of hours saved per week" },
-  { title: "What to Try Next", description: "Concrete next steps to keep building momentum" },
 ];
 
 const TRUST_POINTS = [
@@ -66,21 +65,25 @@ const TESTIMONIAL_SCENARIOS = [
     role: "Office Manager",
     industry: "Small law firm",
     quote: "I spend 15 hours a week on scheduling, client intake, and document filing. This showed me exactly which of those tasks AI can handle.",
+    accent: "border-l-[#5C61F6]",
   },
   {
     role: "Executive Director",
     industry: "Nonprofit",
     quote: "Grant writing and donor reporting were eating my entire week. Now I have a clear plan for which AI tools to try first.",
+    accent: "border-l-emerald-400",
   },
   {
     role: "Owner / Operator",
     industry: "Restaurant",
     quote: "I didn't know where to start with AI. The action plan broke it down into things I could do this week vs. this quarter.",
+    accent: "border-l-amber-400",
   },
   {
     role: "Operations Lead",
     industry: "Logistics company",
     quote: "I'm not technical at all. This didn't ask me to learn to code -- it just showed me the five things in my week where AI could save real time.",
+    accent: "border-l-sky-400",
   },
 ];
 
@@ -102,7 +105,7 @@ export default function AssessmentLanding() {
             Built on jobsdata.ai research
           </div>
 
-          <h1 className="text-[40px] sm:text-[56px] font-black tracking-tight text-gray-900 leading-[1.05] max-w-3xl">
+          <h1 className="font-serif text-[40px] sm:text-[56px] font-bold tracking-tight text-gray-900 leading-[1.05] max-w-3xl">
             Get your time back
             <br />
             <span className="text-[#5C61F6]">with a clear AI plan</span>
@@ -163,29 +166,29 @@ export default function AssessmentLanding() {
 
       {/* Who this is for */}
       <section className="max-w-6xl mx-auto px-6 sm:px-10 py-16">
-        <h2 className="text-[13px] font-bold uppercase tracking-widest text-[#5C61F6] mb-3">
+        <span className="text-[12px] font-medium uppercase tracking-widest text-[#5C61F6]/60 mb-4 block">
           Who this is for
-        </h2>
-        <p className="text-[24px] sm:text-[32px] font-bold text-gray-900 mb-6 max-w-2xl">
+        </span>
+        <h2 className="font-serif text-[24px] sm:text-[32px] font-semibold text-gray-900 mb-4 max-w-2xl">
           You know AI is changing work. You just need a starting point.
-        </p>
+        </h2>
         <p className="text-[15px] text-gray-500 leading-relaxed max-w-3xl mb-10">
           Whether you&apos;re an individual contributor looking to level up, a manager trying to
           help your team work smarter, or a small business owner who wears ten hats, this
           gives you a clear, practical plan based on what you actually do every day.
         </p>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid md:grid-cols-2 gap-4">
           {TESTIMONIAL_SCENARIOS.map((t) => (
             <div
               key={t.role}
-              className="bg-gray-50 border border-gray-100 rounded-xl p-5"
+              className={`bg-gray-50 border border-gray-100 border-l-[3px] ${t.accent} rounded-xl p-5`}
             >
-              <p className="text-[13px] text-gray-600 leading-relaxed italic mb-3">
+              <p className="text-[14px] text-gray-600 leading-relaxed italic mb-4">
                 &quot;{t.quote}&quot;
               </p>
-              <p className="text-[12px] text-[#5C61F6] font-semibold">{t.role}</p>
-              <p className="text-[11px] text-gray-400">{t.industry}</p>
+              <p className="text-[13px] font-semibold text-gray-900">{t.role}</p>
+              <p className="text-[12px] text-gray-400">{t.industry}</p>
             </div>
           ))}
         </div>
@@ -193,12 +196,12 @@ export default function AssessmentLanding() {
 
       {/* Why a plan matters */}
       <section className="max-w-6xl mx-auto px-6 sm:px-10 py-16">
-        <h2 className="text-[13px] font-bold uppercase tracking-widest text-[#5C61F6] mb-3">
-          The research is clear
-        </h2>
-        <p className="text-[24px] sm:text-[32px] font-bold text-gray-900 mb-6 max-w-3xl">
+        <span className="text-[12px] font-medium uppercase tracking-widest text-[#5C61F6]/60 mb-4 block">
+          The research
+        </span>
+        <h2 className="font-serif text-[24px] sm:text-[32px] font-semibold text-gray-900 mb-4 max-w-3xl">
           The #1 thing holding people back from AI isn&apos;t the technology. It&apos;s knowing where to use it.
-        </p>
+        </h2>
         <div className="text-[15px] text-gray-500 leading-relaxed max-w-3xl space-y-4 mb-10">
           <p>
             A 2026 study from INSEAD and Harvard Business School followed 515 companies. Every single one
@@ -249,12 +252,12 @@ export default function AssessmentLanding() {
 
       {/* How it works */}
       <section className="max-w-6xl mx-auto px-6 sm:px-10 py-16">
-        <h2 className="text-[13px] font-bold uppercase tracking-widest text-[#5C61F6] mb-3">
+        <span className="text-[12px] font-medium uppercase tracking-widest text-[#5C61F6]/60 mb-4 block">
           How it works
-        </h2>
-        <p className="text-[24px] sm:text-[32px] font-bold text-gray-900 mb-10 max-w-2xl">
+        </span>
+        <h2 className="font-serif text-[24px] sm:text-[32px] font-semibold text-gray-900 mb-10 max-w-2xl">
           Three steps to knowing exactly where to start
-        </p>
+        </h2>
 
         <div className="grid md:grid-cols-3 gap-6">
           {PROCESS_STEPS.map((step) => (
@@ -276,12 +279,12 @@ export default function AssessmentLanding() {
 
       {/* What you get */}
       <section className="max-w-6xl mx-auto px-6 sm:px-10 py-16">
-        <h2 className="text-[13px] font-bold uppercase tracking-widest text-[#5C61F6] mb-3">
+        <span className="text-[12px] font-medium uppercase tracking-widest text-[#5C61F6]/60 mb-4 block">
           What you get
-        </h2>
-        <p className="text-[24px] sm:text-[32px] font-bold text-gray-900 mb-10 max-w-2xl">
+        </span>
+        <h2 className="font-serif text-[24px] sm:text-[32px] font-semibold text-gray-900 mb-10 max-w-2xl">
           A plan built around your actual work
-        </p>
+        </h2>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {REPORT_SECTIONS.map((section) => (
@@ -305,12 +308,12 @@ export default function AssessmentLanding() {
 
       {/* Trust / Security */}
       <section className="max-w-6xl mx-auto px-6 sm:px-10 py-16">
-        <h2 className="text-[13px] font-bold uppercase tracking-widest text-[#5C61F6] mb-3">
+        <span className="text-[12px] font-medium uppercase tracking-widest text-[#5C61F6]/60 mb-4 block">
           Data security
-        </h2>
-        <p className="text-[24px] sm:text-[32px] font-bold text-gray-900 mb-10 max-w-2xl">
+        </span>
+        <h2 className="font-serif text-[24px] sm:text-[32px] font-semibold text-gray-900 mb-10 max-w-2xl">
           Your data stays yours
-        </p>
+        </h2>
 
         <div className="grid md:grid-cols-3 gap-6">
           {TRUST_POINTS.map((point) => (
@@ -340,12 +343,12 @@ export default function AssessmentLanding() {
 
       {/* Industries */}
       <section className="max-w-6xl mx-auto px-6 sm:px-10 py-16">
-        <h2 className="text-[13px] font-bold uppercase tracking-widest text-[#5C61F6] mb-3">
+        <span className="text-[12px] font-medium uppercase tracking-widest text-[#5C61F6]/60 mb-4 block">
           Works across industries
-        </h2>
-        <p className="text-[24px] sm:text-[32px] font-bold text-gray-900 mb-10 max-w-2xl">
+        </span>
+        <h2 className="font-serif text-[24px] sm:text-[32px] font-semibold text-gray-900 mb-10 max-w-2xl">
           Tailored to how work actually gets done in your field
-        </p>
+        </h2>
 
         <div className="flex flex-wrap gap-2">
           {[
@@ -366,7 +369,7 @@ export default function AssessmentLanding() {
           ].map((industry) => (
             <span
               key={industry}
-              className="text-[13px] text-gray-500 bg-gray-50 border border-gray-200 rounded-full px-4 py-1.5"
+              className="text-[12px] text-gray-400 bg-gray-50 rounded px-3 py-1"
             >
               {industry}
             </span>
@@ -374,54 +377,15 @@ export default function AssessmentLanding() {
         </div>
       </section>
 
-      {/* Research stat strip */}
-      <section className="max-w-6xl mx-auto px-6 sm:px-10 py-10">
-        <div className="flex flex-col sm:flex-row justify-center gap-8 sm:gap-16 text-center">
-          <div>
-            <div className="text-[13px] text-[#5C61F6] mb-1">
-              <svg className="w-4 h-4 inline-block mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18" />
-              </svg>
-              Productivity
-            </div>
-            <div className="text-[28px] font-black text-gray-900">12%</div>
-            <div className="text-[12px] text-gray-400">more work gets done when you know where AI fits</div>
-          </div>
-          <div>
-            <div className="text-[13px] text-[#5C61F6] mb-1">
-              <svg className="w-4 h-4 inline-block mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              Revenue
-            </div>
-            <div className="text-[28px] font-black text-gray-900">1.9x</div>
-            <div className="text-[12px] text-gray-400">revenue growth from using AI in the right places</div>
-          </div>
-          <div>
-            <div className="text-[13px] text-[#5C61F6] mb-1">
-              <svg className="w-4 h-4 inline-block mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
-              </svg>
-              Efficiency
-            </div>
-            <div className="text-[28px] font-black text-gray-900">~40%</div>
-            <div className="text-[12px] text-gray-400">less money needed to grow -- same team, more output</div>
-          </div>
-        </div>
-        <p className="text-center text-[11px] text-gray-300 mt-4">
-          Kim, Kim &amp; Koning (2026), INSEAD &amp; Harvard Business School. Field experiment, 515 firms.
-        </p>
-      </section>
-
       {/* Final CTA */}
       <section className="max-w-6xl mx-auto px-6 sm:px-10 py-16 text-center">
-        <h2 className="text-[28px] sm:text-[36px] font-bold text-gray-900 mb-4">
-          Stop wasting time on repetitive tasks
+        <h2 className="font-serif text-[28px] sm:text-[36px] font-semibold text-gray-900 mb-4">
+          Companies that figured out where to use AI
           <br />
-          <span className="text-[#5C61F6]">AI can do for you.</span>
+          <span className="text-[#5C61F6]">made nearly twice the revenue.</span>
         </h2>
         <p className="text-[15px] text-gray-500 mb-8 max-w-xl mx-auto">
-          Find out where AI can help you be more human at work. It takes 5 minutes, and it&apos;s free!
+          The ones that didn&apos;t had the exact same tools. Find out where AI fits in your work. It takes 5 minutes. It&apos;s free.
         </p>
         <Link
           href="/assessment/start"
