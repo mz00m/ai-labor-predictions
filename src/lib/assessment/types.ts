@@ -193,9 +193,9 @@ export interface AssessmentReport {
   riskAssessment: RiskAssessment;
   implementationRoadmap: ImplementationRoadmap;
   roiProjections: RoiProjection[];
-  furtherEvaluation: string[];
-  /** Human capabilities that appreciate with AI adoption */
+  /** Human capabilities that appreciate with AI — skills to invest in */
   humanCapabilities?: HumanCapability[];
+  furtherEvaluation: string[];
   // Add-on content (only populated if purchased)
   aiPolicy?: AiPolicyDocument;
   promptLibrary?: PromptLibraryEntry[];
@@ -261,6 +261,24 @@ export interface ToolRecommendation {
   firstTask?: string;
 }
 
+export interface DimensionScores {
+  technicalExposure: number;    // 0-10: how many tasks can AI handle?
+  adoptionSpeed: number;        // 0-10: how fast is AI being adopted?
+  adaptability: number;         // 0-10: how transferable are skills?
+  demandElasticity: number;     // 0-10: does efficiency create more demand?
+  complementarity: number;      // 0-10: does AI replace or enhance?
+}
+
+export interface HumanCapability {
+  name: string;
+  appreciationScore: number;    // 1-10, how much more valuable with AI
+  whyItMatters?: string;        // Why this capability matters
+  whyAppreciating?: string;     // Why this skill grows in value
+  howToDevelop: string;         // Practical development advice
+  automationResistance?: string[]; // What makes this hard to automate
+  relevantTasks?: string[];      // Which of their analyzed tasks this applies to
+}
+
 export interface RiskAssessment {
   overallRiskLevel: "low" | "moderate" | "high";
   displacementRisk: string;
@@ -270,6 +288,7 @@ export interface RiskAssessment {
   commonPitfalls?: string[]; // Industry-specific failure modes to avoid
   resistanceSources?: string[]; // Where organizational pushback typically comes from
   dataReadinessNote?: string; // Advice on working with imperfect data
+  dimensionScores?: DimensionScores; // 5-dimensional risk framework scores
 }
 
 export interface ImplementationRoadmap {
@@ -303,13 +322,6 @@ export interface RoiProjection {
   confidence: "high" | "moderate" | "low";
   basis: string;
   calculationDetail?: string; // Show the math
-}
-
-export interface HumanCapability {
-  name: string;
-  whyItMatters: string;
-  howToDevelop: string;
-  appreciationScore: number; // 7-10 scale
 }
 
 export interface AiPolicyDocument {

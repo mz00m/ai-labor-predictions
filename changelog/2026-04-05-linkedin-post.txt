@@ -1,0 +1,51 @@
+The biggest week yet for jobsdata.ai -- and a question the data keeps raising.
+
+We shipped 9 new research sources this week, including a finding that keeps nagging at me:
+
+A randomized field experiment from INSEAD and Harvard Business School followed 515 startups. Every firm had the same AI tools, same training, same budget. The only variable? Some got help figuring out where AI fit into their actual work.
+
+The result: 1.9x revenue growth. 44% more AI use cases discovered. ~40% less funding needed.
+
+Not better tools. Better mapping.
+
+That insight is now the backbone of a new free tool we built this week: an AI Action Plan that analyzes your specific tasks -- grounded in O*NET occupational data, 62 verified human capabilities, and 87+ curated AI tools -- and tells you exactly where to start.
+
+Here's what else changed on the site this week:
+
+
+New research ingested
+
+- Forecasting Research Institute (Karger, Kuusela et al.) -- expert survey on AI's economic effects, 1 data point + 9 signals across 10 prediction graphs. The most broadly distributed single source we've added.
+- MIT FutureTech "Rising Tides" -- 17,205 expert evaluations of LLM performance on 3,000+ tasks. 8 signals across 6 graphs.
+- Stanford Digital Economy Lab "Enterprise AI Playbook" (Brynjolfsson et al.) -- lessons from 51 successful AI deployments, now integrated into the assessment pipeline.
+- BLS March 2026 data -- +571K nonfarm payrolls, but professional services down 45.3K. JOLTS continuing to cool at 6,882K.
+- OECD G7 discussion paper on AI adoption among small businesses.
+- NYT: "Economists Once Dismissed the A.I. Job Threat, but Not Anymore." The mainstream is catching up to what the data has been showing.
+- Brookings: "How AI may reshape career pathways to better jobs."
+- MIT/CCI deep ontology of 18,000+ work activities mapped to AI capabilities.
+
+That's 42+ new overlay signals across 12+ prediction graphs.
+
+
+The AI Action Plan tool
+
+Built in one week from MVP to near-complete:
+- 4-step analysis pipeline (profile, tasks, tools, risks)
+- 87+ verified tools with real pricing and URLs
+- 62 human capabilities scored for AI appreciation
+- O*NET task-level mapping for 30+ work activities
+- 5-dimensional risk framework (not just "exposure" -- also adoption speed, adaptability, demand elasticity, and complementarity)
+- PDF export with one-page summary, ROI projections, and step-by-step getting-started guides
+
+It's free right now while we collect feedback. Takes about 5 minutes.
+
+
+The question the data keeps raising
+
+Every week we add more research, and the pattern is consistent: the gap between "AI can do this task" and "firms actually using AI for this task" is enormous. The mapping problem -- knowing where AI fits your specific work -- is the real bottleneck. Not the technology.
+
+100 commits this week. 9 new sources. 1 new tool to help close that gap.
+
+jobsdata.ai -- tracking AI's real impact on work and wages.
+
+#AIandWork #FutureOfWork #LaborMarket #WorkforceDevelopment #EconomicMobility #OpportunityAI
