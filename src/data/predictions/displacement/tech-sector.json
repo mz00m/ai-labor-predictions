@@ -742,6 +742,42 @@
       ],
       "evidenceTier": 1,
       "label": "BLS Mar 2026: Information sector 2,772K (+3K MoM), flat"
+    },
+    {
+      "date": "2026-04-03",
+      "direction": "up",
+      "sourceIds": [
+        "chowdhury-coding-agents-prs-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Chowdhury: OpenAI Codex created 400K+ PRs in two months"
+    },
+    {
+      "date": "2026-04-03",
+      "direction": "up",
+      "sourceIds": [
+        "chowdhury-coding-agents-prs-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Chowdhury: industry claims CRAs can manage 80% of OSS PRs"
+    },
+    {
+      "date": "2026-04-03",
+      "direction": "down",
+      "sourceIds": [
+        "chowdhury-coding-agents-prs-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Chowdhury: CRA-only PRs merge at 45% vs 68% for humans"
+    },
+    {
+      "date": "2026-04-03",
+      "direction": "down",
+      "sourceIds": [
+        "chowdhury-coding-agents-prs-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Chowdhury: 60% of closed CRA PRs have low signal quality"
     }
   ],
   "sources": [
@@ -1399,6 +1435,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-04-05",
       "excerpt": "Information sector employment at 2,772K, +3K month-over-month."
+    },
+    {
+      "id": "chowdhury-coding-agents-prs-2026",
+      "title": "Autonomous Coding Agents Generate 400,000+ Pull Requests: Real-World Software Workflow Implications",
+      "url": "https://arxiv.org/abs/2604.03196v1",
+      "publisher": "arXiv (Chowdhury, Banik, Ferdous, Shamim)",
+      "evidenceTier": 3,
+      "datePublished": "2026-04-03",
+      "excerpt": "Autonomous coding agents are generating code at an unprecedented scale, with OpenAI Codex alone creating over 400,000 pull requests (PRs) in two months. CRA-only PRs achieve a 45.20% merge rate, 23.17 percentage points lower than human-only PRs (68.37%), with significantly higher abandonment. 60.2% of closed CRA-only PRs fall into the 0-30% signal range."
     }
   ],
   "marketIds": {

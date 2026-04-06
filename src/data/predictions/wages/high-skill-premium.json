@@ -410,6 +410,15 @@
       ],
       "evidenceTier": 1,
       "label": "Oxford/OII: AI roles 2x more likely to require resilience/agility; 5-10% premium for complementary skills (12M vacancies)"
+    },
+    {
+      "date": "2026-04-24",
+      "direction": "up",
+      "sourceIds": [
+        "wittich-human-capital-ai-labor-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Wittich: AI-complementary workers pulling away in wage inequality"
     }
   ],
   "sources": [
@@ -777,6 +786,15 @@
       "datePublished": "2024-12-27",
       "excerpt": "AI-focused roles are twice as likely to require resilience, agility, and analytical thinking. Data scientists with complementary skills (resilience, ethics) earn a 5-10% salary premium. Complementary effects are 1.7x larger than substitution effects across 12 million US job vacancies 2018-2023.",
       "dateAdded": "2026-04-03"
+    },
+    {
+      "id": "wittich-human-capital-ai-labor-2026",
+      "title": "Shaping Human Capital and Work Practices in a Changing Labor Market",
+      "url": "https://cris.maastrichtuniversity.nl/en/publications/33cda117-bac2-4be0-afce-39703634d55a",
+      "publisher": "Maastricht University (Anna-Lena Wittich)",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-24",
+      "excerpt": "The research highlights a growing divergence between workers who can complement AI tools and those whose skills are substituted by them, amplifying within-occupation wage inequality."
     }
   ]
 }

@@ -602,6 +602,15 @@
       "sourceIds": ["kim-koning-mapping-ai-firms-2026"],
       "evidenceTier": 1,
       "label": "INSEAD/HBS RCT: mapping problem solved, AI use cases +44% (n=515)"
+    },
+    {
+      "date": "2026-04-06",
+      "direction": "up",
+      "sourceIds": [
+        "dimon-jpmorgan-ceo-letter-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Dimon: hyperscaler AI capex $725B in 2026, up from $450B in 2025"
     }
   ],
   "sources": [
@@ -1168,6 +1177,15 @@
       "datePublished": "2026-03-30",
       "excerpt": "Treated firms discover 2.7 additional AI use cases (a 44% increase), concentrated in product development and strategy. The binding constraint is not access to the technology but the ability to discover where they create value and how to reorganize the firm accordingly.",
       "dateAdded": "2026-04-04"
+    },
+    {
+      "id": "dimon-jpmorgan-ceo-letter-2026",
+      "title": "JPMorgan Chase 2025 Annual Report — CEO Letter (Jamie Dimon)",
+      "url": "https://www.jpmorganchase.com/ir/annual-report/2025/ar-ceo-letters",
+      "publisher": "JPMorgan Chase (Jamie Dimon)",
+      "evidenceTier": 3,
+      "datePublished": "2026-04-06",
+      "excerpt": "Huge increase in AI-driven capital spending and construction by the five hyperscalers. In 2025, this number was $450 billion, and in 2026, it will be approximately $725 billion."
     }
   ]
 }

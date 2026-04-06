@@ -526,6 +526,15 @@
       ],
       "evidenceTier": 1,
       "label": "MIT/CCI: 92% of AI apps map to only 6.8% of 39,603 work activities; exposure deep but narrow"
+    },
+    {
+      "date": "2026-03-26",
+      "direction": "up",
+      "sourceIds": [
+        "otgonsuren-ai-labor-relations-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Otgonsuren: structured-task industries face sharpest AI employment cuts"
     }
   ],
   "sources": [
@@ -967,6 +976,15 @@
       "datePublished": "2026-03-27",
       "excerpt": "92% of AI applications map to only 6.8% of 39,603 classified work activities. AI apps grew 6x from 2022-2024 but activity coverage expanded only 1.2x. 75% of AI market value concentrated in software/information tasks. Based on O*NET 29.1 and TAAFT dataset.",
       "dateAdded": "2026-04-04"
+    },
+    {
+      "id": "otgonsuren-ai-labor-relations-2026",
+      "title": "AI's Systemic Impact on Labor Relations and Employment Structures",
+      "url": "https://www.semanticscholar.org/paper/5db988edbfb7f31348f1c12b8430c228bd2cf29a",
+      "publisher": "Otgonsuren, Jinjiimaa",
+      "evidenceTier": 3,
+      "datePublished": "2026-03-26",
+      "excerpt": "Industries with high volumes of structured, repetitive tasks face the sharpest near-term employment contractions."
     }
   ]
 }
