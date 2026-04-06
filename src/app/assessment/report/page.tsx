@@ -145,6 +145,26 @@ export default function ReportPage() {
     );
   }
 
+  if (error === "Verification required") {
+    const returnUrl = `/assessment/report?id=${id}`;
+    return (
+      <div className="max-w-3xl mx-auto px-6 sm:px-10 py-20 text-center">
+        <h1 className="text-[24px] font-bold text-gray-900 mb-4">
+          Sign in to view your report
+        </h1>
+        <p className="text-[14px] text-gray-500 mb-6">
+          Verify your email to access this AI action plan.
+        </p>
+        <Link
+          href={`/assessment/dashboard?returnTo=${encodeURIComponent(returnUrl)}`}
+          className="inline-block bg-[#5C61F6] hover:bg-[#4F52D4] text-white text-[14px] font-medium px-6 py-2.5 rounded-lg transition-colors"
+        >
+          Sign in
+        </Link>
+      </div>
+    );
+  }
+
   if (error || !assessment?.report) {
     return (
       <div className="max-w-3xl mx-auto px-6 sm:px-10 py-20 text-center">

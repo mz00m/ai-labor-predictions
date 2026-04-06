@@ -2,12 +2,16 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import { useSearchParams, useRouter } from "next/navigation";
 import type { Assessment } from "@/lib/assessment/types";
 import { INDUSTRY_LABELS } from "@/lib/assessment/types";
 
 type AuthState = "email" | "code" | "authenticated";
 
 export default function DashboardPage() {
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const returnTo = searchParams.get("returnTo");
   const [authState, setAuthState] = useState<AuthState>("email");
   const [email, setEmail] = useState("");
   const [verifiedEmail, setVerifiedEmail] = useState("");
@@ -25,6 +29,11 @@ export default function DashboardPage() {
         const res = await fetch("/api/assessment/dashboard");
         if (res.ok) {
           const data = await res.json();
+          // If already authenticated and there's a returnTo, redirect immediately
+          if (returnTo) {
+            router.push(returnTo);
+            return;
+          }
           setAssessments(data.assessments || []);
           setVerifiedEmail(data.email || "");
           setAuthState("authenticated");
@@ -36,7 +45,7 @@ export default function DashboardPage() {
       }
     }
     checkSession();
-  }, []);
+  }, [returnTo, router]);
 
   const handleSendCode = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -80,6 +89,12 @@ export default function DashboardPage() {
       const data = await res.json();
 
       if (!res.ok) throw new Error(data.error);
+
+      // If there's a returnTo URL, redirect there after successful verification
+      if (returnTo) {
+        router.push(returnTo);
+        return;
+      }
 
       // Fetch assessments with the new session
       const dashRes = await fetch("/api/assessment/dashboard");
