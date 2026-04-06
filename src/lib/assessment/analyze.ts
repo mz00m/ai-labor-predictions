@@ -547,12 +547,13 @@ Return valid JSON:
       "department": "Area of work",
       "currentProcess": "How they do this today",
       "aiOpportunity": "high|medium|low",
-      "aiApproach": "Step-by-step explanation. Name specific tools where helpful, but for ad-hoc tasks just say 'use any AI assistant (ChatGPT, Gemini, Claude)'",
+      "aiApproach": "Step-by-step explanation. Name specific tools where helpful, but for ad-hoc tasks just say 'use any AI assistant (ChatGPT, Gemini, Claude)'. If the person listed tools they already use (see Current Tools), reference how those specific tools can help with this task.",
       "expectedImpact": "e.g. '3-5 hours saved per week'",
       "complexity": "simple|moderate|complex",
       "estimatedTimeSaved": "e.g. '3-5 hrs/week'",
       "exampleTools": [{ "name": "Tool name", "url": "https://url", "free": true }],
-      "gettingStarted": "One concrete sentence",
+      "gettingStarted": "One concrete first step that can be done RIGHT NOW with a chatbot — no setup, no signups. E.g., 'Open ChatGPT and paste your last 3 meeting agendas to get a template.' Not 'Set up automated dashboards in Asana.' The first step should feel easy and immediate.",
+      "starterPrompt": "A ready-to-paste prompt the user can drop into ChatGPT, Claude, or Gemini to prototype this task immediately. Use [BRACKETS] for variables they fill in. E.g., 'I manage [TEAM SIZE] people. Here are my current project statuses: [PASTE STATUSES]. Create a concise weekly status update email for my leadership.'",
       "deploymentModel": "copilot|escalation|full-automation|agentic",
       "deploymentModelRationale": "Why this model fits"
     }
@@ -640,10 +641,10 @@ export async function generateStep3Tools(
   const researchContext = formatResearchContextForPrompt(intake.industry);
 
   const toolPrefInstructions: Record<string, string> = {
-    "use-existing": `TOOL PREFERENCE: This person wants to ADD AI to tools they already use (${intake.currentTools.join(", ")}). Prioritize AI features within their existing stack. Only suggest new tools if their current stack truly can't do it.`,
+    "use-existing": `TOOL PREFERENCE: This person wants to ADD AI to tools they already use (${intake.currentTools.join(", ")}). Prioritize AI features within their existing stack — for each tool they listed, explain what AI capabilities it already has that they may not be using. Only suggest new tools if their current stack truly can't do it.`,
     "find-new": "TOOL PREFERENCE: This person is open to finding new AI-native tools. Recommend the best-fit tools regardless of their current stack.",
     "build-own": "TOOL PREFERENCE: This person wants to build custom AI solutions. Focus recommendations on APIs, frameworks, and platforms for building (e.g., API access, no-code AI builders, custom GPTs). Include off-the-shelf options as alternatives where appropriate.",
-    "no-preference": "TOOL PREFERENCE: No strong preference. Show a mix of options — both AI features in tools they may already use and new purpose-built AI tools.",
+    "no-preference": `TOOL PREFERENCE: No strong preference. Show a mix of options — both AI features in tools they may already use and new purpose-built AI tools.${intake.currentTools.length > 0 ? ` They currently use: ${intake.currentTools.join(", ")}. For each tool they already have, note any AI features they may not be leveraging.` : ""}`,
   };
   const toolPrefNote = intake.toolPreference ? toolPrefInstructions[intake.toolPreference] : toolPrefInstructions["no-preference"];
 
@@ -783,8 +784,9 @@ Return valid JSON:
 {
   "riskAssessment": {
     "overallRiskLevel": "low|moderate|high",
-    "displacementRisk": "Honest but reassuring, grounded in research data. Recommend human capabilities that appreciate.",
-    "skillGaps": ["Specific skills to build, referencing capabilities data"],
+    "riskContextNote": "1 sentence explaining what this risk level means. E.g., 'This assesses how likely AI is to significantly change or displace the core tasks in your role over the next 3-5 years.' Make clear this is about role displacement risk, NOT implementation risk.",
+    "displacementRisk": "Honest but reassuring, grounded in research data. Recommend human capabilities that appreciate. Reference the 'Skills That Grow With AI' section for specific capabilities to develop — e.g., 'See the Skills That Grow With AI section below for detailed guidance on developing [capability name].'",
+    "skillGaps": ["Specific skills to build. For each, reference the corresponding human capability from the capabilities section if one exists — e.g., 'Develop strategic communication skills (see Skills That Grow With AI: Stakeholder Communication for specific guidance)'. This creates a clear path from gap to action."],
     "changeManagementNotes": "Step-by-step advice with timeline",
     "dataPrivacyConsiderations": "Industry-specific, name regulations",
     "commonPitfalls": ["Industry-specific failure modes"],
@@ -799,12 +801,13 @@ Return valid JSON:
       "appreciationScore": 8
     }
   ],
-  "furtherEvaluation": ["Specific, actionable next steps focused on USE CASES not products. No fabricated URLs. Frame as capabilities to build, not tools to buy."]
+  "furtherEvaluation": ["Generate 4-6 actionable, energizing next steps. These should be DIFFERENT from the implementation roadmap — focused on building on the context from this assessment. Include a mix of: (1) A 'Step 0' action to diagnose time sinks and grunt work in their current workflow, (2) A quick-win prototype — pick ONE task from the analysis and try it with a chatbot right now, (3) A conversation starter — spend 20 minutes discussing these results with a colleague, (4) A tool exploration — test a specific feature of an AI tool they already have access to, (5) A sample prompt they can paste into their LLM of choice along with this report to dig deeper into implementation. Make each step feel achievable in 20-30 minutes, not a multi-week project."]
 }
 
 For the risk assessment, cite research data provided.
-For skills, reference the human capabilities framework.
+For skills, reference the human capabilities framework AND cross-reference to the humanCapabilities section.
 Be thorough on change management, common pitfalls, and resistance sources. These are high-value sections.
+The riskContextNote MUST clarify that the risk level refers to AI displacement risk for this role, not implementation risk.
 
 HUMAN CAPABILITIES — Generate 4-6 capabilities that APPRECIATE (grow in value) as AI automates routine tasks in this person's work. These are NOT generic soft skills. Each must be:
 1. Specific to their actual functions and role

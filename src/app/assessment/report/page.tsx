@@ -79,6 +79,19 @@ export default function ReportPage() {
     }
   }, [assessment]);
 
+  const handleDownloadText = useCallback(() => {
+    if (!assessment?.report || !assessment?.intake) return;
+    const { generateTextExport } = require("@/lib/assessment/text-export");
+    const text = generateTextExport(assessment.intake, assessment.report);
+    const blob = new Blob([text], { type: "text/plain;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `AI-Action-Plan-${assessment.intake.organizationName.replace(/[^a-zA-Z0-9]/g, "-")}.txt`;
+    a.click();
+    URL.revokeObjectURL(url);
+  }, [assessment]);
+
   const handleFeedbackSubmit = async () => {
     if (!id || feedbackRating === null) return;
     setFeedbackSubmitting(true);
@@ -194,6 +207,15 @@ export default function ReportPage() {
               <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
             </svg>
             {downloadingPdf ? "Generating..." : "Download PDF"}
+          </button>
+          <button
+            onClick={handleDownloadText}
+            className="flex items-center gap-2 border border-gray-200 hover:border-gray-300 text-gray-600 text-[13px] font-medium px-4 py-2 rounded-lg transition-colors"
+          >
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+            </svg>
+            Export Text
           </button>
           <button
             onClick={handleShare}
@@ -380,6 +402,23 @@ export default function ReportPage() {
                   {task.gettingStarted && (
                     <div className="bg-[#5C61F6]/[0.04] border border-[#5C61F6]/10 rounded px-3 py-2">
                       <p className="text-[12px] text-[#5C61F6] font-medium">Quick start: <span className="font-normal text-gray-600">{task.gettingStarted}</span></p>
+                    </div>
+                  )}
+                  {/* Starter prompt */}
+                  {task.starterPrompt && (
+                    <div className="bg-gray-50 border border-gray-200 rounded px-3 py-2">
+                      <div className="flex items-center justify-between mb-1">
+                        <span className="text-[11px] font-bold uppercase tracking-wider text-gray-400">Try it now — paste this into any AI chatbot</span>
+                        <button
+                          onClick={() => {
+                            navigator.clipboard.writeText(task.starterPrompt!);
+                          }}
+                          className="text-[11px] text-[#5C61F6] hover:underline font-medium"
+                        >
+                          Copy prompt
+                        </button>
+                      </div>
+                      <p className="text-[12px] text-gray-600 font-mono leading-relaxed whitespace-pre-wrap">{task.starterPrompt}</p>
                     </div>
                   )}
                 </div>
@@ -570,16 +609,28 @@ export default function ReportPage() {
           {/* 6. Risk Assessment */}
           <Section num={6} id="risks" title="Risks, Pitfalls & Change Management" expanded={expandedSections.has("risks")} onToggle={() => toggleSection("risks")}>
             <div className="space-y-4">
-              {/* Overall risk level */}
-              <div className="flex items-center gap-3 mb-2">
-                <span className="text-[13px] text-gray-500">Overall Risk Level:</span>
-                <span className={`text-[13px] font-bold uppercase px-3 py-1 rounded-full ${
-                  report.riskAssessment.overallRiskLevel === "low" ? "bg-green-50 text-green-700 border border-green-200" :
-                  report.riskAssessment.overallRiskLevel === "moderate" ? "bg-amber-50 text-amber-700 border border-amber-200" :
-                  "bg-red-50 text-red-700 border border-red-200"
-                }`}>
-                  {report.riskAssessment.overallRiskLevel}
-                </span>
+              {/* Risk context + overall level */}
+              <div className="mb-2">
+                {report.riskAssessment.riskContextNote && (
+                  <p className="text-[13px] text-gray-500 mb-2 leading-relaxed" style={{ fontFamily: "'Source Serif 4', 'Source Serif Pro', Georgia, serif" }}>
+                    {report.riskAssessment.riskContextNote}
+                  </p>
+                )}
+                <div className="flex items-center gap-3">
+                  <span className="text-[13px] text-gray-500">Overall Risk Level:</span>
+                  <span className={`text-[13px] font-bold uppercase px-3 py-1 rounded-full ${
+                    report.riskAssessment.overallRiskLevel === "low" ? "bg-green-50 text-green-700 border border-green-200" :
+                    report.riskAssessment.overallRiskLevel === "moderate" ? "bg-amber-50 text-amber-700 border border-amber-200" :
+                    "bg-red-50 text-red-700 border border-red-200"
+                  }`}>
+                    {report.riskAssessment.overallRiskLevel}
+                  </span>
+                </div>
+                {report.riskAssessment.overallRiskLevel !== "low" && report.humanCapabilities && report.humanCapabilities.length > 0 && (
+                  <p className="text-[12px] text-gray-400 mt-2">
+                    See <a href="#capabilities" onClick={() => setExpandedSections((prev) => { const next = new Set(prev); next.add("capabilities"); return next; })} className="text-[#5C61F6] hover:underline">Skills That Grow With AI</a> below for detailed guidance on developing capabilities that make your role more resilient.
+                  </p>
+                )}
               </div>
 
               {report.riskAssessment.displacementRisk && (
@@ -773,6 +824,25 @@ export default function ReportPage() {
                   <span className="text-gray-700">{value}</span>
                 </div>
               ))}
+              {/* Open responses */}
+              {assessment.intake.teamDescription && (
+                <div className="mt-4 pt-3 border-t border-gray-100">
+                  <p className="text-[12px] font-bold uppercase tracking-wider text-gray-400 mb-1">Day-to-day description</p>
+                  <p className="text-[13px] text-gray-600 leading-relaxed" style={{ fontFamily: "'Source Serif 4', 'Source Serif Pro', Georgia, serif" }}>{assessment.intake.teamDescription}</p>
+                </div>
+              )}
+              {assessment.intake.specificProblem && (
+                <div className="mt-3 pt-3 border-t border-gray-100">
+                  <p className="text-[12px] font-bold uppercase tracking-wider text-gray-400 mb-1">Specific problem to solve</p>
+                  <p className="text-[13px] text-gray-600 leading-relaxed" style={{ fontFamily: "'Source Serif 4', 'Source Serif Pro', Georgia, serif" }}>{assessment.intake.specificProblem}</p>
+                </div>
+              )}
+              {assessment.intake.additionalContext && (
+                <div className="mt-3 pt-3 border-t border-gray-100">
+                  <p className="text-[12px] font-bold uppercase tracking-wider text-gray-400 mb-1">Additional context</p>
+                  <p className="text-[13px] text-gray-600 leading-relaxed" style={{ fontFamily: "'Source Serif 4', 'Source Serif Pro', Georgia, serif" }}>{assessment.intake.additionalContext}</p>
+                </div>
+              )}
             </div>
           </Section>
 
