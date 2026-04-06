@@ -237,15 +237,19 @@ export function generatePdf(
     const roiBarH = Math.min(report.roiProjections.length * 5 + 6, 30);
     doc.roundedRect(m, y, cw, roiBarH, 2, 2, "F");
     let roiY = y + 4;
+    const areaMaxW = cw * 0.55; // left column for area name
     for (const roi of report.roiProjections.slice(0, 4)) {
       doc.setFont("helvetica", "normal");
       doc.setFontSize(7);
       doc.setTextColor(...C.body);
-      doc.text(roi.area, m + 5, roiY);
+      const areaLines = doc.splitTextToSize(roi.area, areaMaxW);
+      doc.text(areaLines[0], m + 5, roiY);
       doc.setFont("helvetica", "bold");
       doc.setTextColor(...C.accent);
-      const savingsText = roi.projectedSavings || "";
-      doc.text(savingsText, m + cw - 5, roiY, { align: "right" });
+      // Extract just the dollar figure (before parenthetical or "minus")
+      const rawSavings = roi.projectedSavings || "";
+      const shortSavings = rawSavings.split(/\s*[\(—–\-]|\s+minus\s+/i)[0].trim();
+      doc.text(shortSavings, m + cw - 5, roiY, { align: "right" });
       roiY += 5;
     }
     y += roiBarH + 4;
@@ -283,33 +287,39 @@ export function generatePdf(
     doc.setFont("helvetica", "normal");
     doc.setFontSize(7);
     const purposeLines = doc.splitTextToSize(tool.purpose, cw - 12);
-    const toolBoxH = 14 + Math.min(purposeLines.length, 2) * 3;
+    const hasCost = !!tool.estimatedMonthlyCost;
+    const toolBoxH = 12 + (hasCost ? 4 : 0) + Math.min(purposeLines.length, 2) * 3;
 
     doc.setFillColor(...C.gray100);
     doc.roundedRect(m, y, cw, toolBoxH, 2, 2, "F");
 
-    // Tool name (left, constrained width so it doesn't overlap cost)
+    // Tool name (full width)
     doc.setFont("helvetica", "bold");
     doc.setFontSize(8);
     doc.setTextColor(...C.heading);
-    const nameMaxW = tool.estimatedMonthlyCost ? cw - 60 : cw - 12;
-    const nameLines = doc.splitTextToSize(toolName, nameMaxW);
+    const nameLines = doc.splitTextToSize(toolName, cw - 12);
     doc.text(nameLines[0], m + 5, y + 5);
 
-    // Cost (right-aligned, on its own)
-    if (tool.estimatedMonthlyCost) {
+    let toolContentY = y + 9;
+
+    // Cost on its own line below name
+    if (hasCost) {
       doc.setFont("helvetica", "normal");
       doc.setFontSize(7);
       doc.setTextColor(...C.muted);
-      const costText = tool.estimatedMonthlyCost.split("—")[0]?.trim() || "";
-      doc.text(costText, m + cw - 5, y + 5, { align: "right" });
+      // Truncate to just the price part
+      const costRaw = tool.estimatedMonthlyCost!;
+      const costShort = costRaw.length > 60 ? costRaw.slice(0, 57) + "..." : costRaw;
+      const costLines = doc.splitTextToSize(costShort, cw - 12);
+      doc.text(costLines[0], m + 5, toolContentY);
+      toolContentY += 4;
     }
 
-    // Purpose below name
+    // Purpose below
     doc.setFont("helvetica", "normal");
     doc.setFontSize(7);
     doc.setTextColor(...C.body);
-    doc.text(purposeLines.slice(0, 2), m + 5, y + 10);
+    doc.text(purposeLines.slice(0, 2), m + 5, toolContentY);
     y += toolBoxH + 4;
   }
 
@@ -654,8 +664,14 @@ export function generatePdf(
   need(24);
   y = sectionTitle(doc, "Risk Assessment", m, y);
 
+  // Risk context note
+  if (report.riskAssessment.riskContextNote) {
+    y = bodyText(doc, report.riskAssessment.riskContextNote, m, y, cw, need);
+    y += 3;
+  }
+
   if (report.riskAssessment.displacementRisk) {
-    y = subHead(doc, "Displacement Risk", m, y);
+    y = subHead(doc, "Role Evolution", m, y);
     y = bodyText(doc, report.riskAssessment.displacementRisk, m, y, cw, need);
     y += 4;
   }
@@ -1012,6 +1028,28 @@ export function generatePdf(
     const valLines = doc.splitTextToSize(value, cw - 35);
     doc.text(valLines.slice(0, 2), m + 32, y);
     y += Math.max(valLines.slice(0, 2).length * 3, 4.5);
+  }
+
+  // Open responses
+  const openResponses: [string, string][] = [];
+  if (intake.teamDescription) openResponses.push(["Day-to-day description", intake.teamDescription]);
+  if (intake.specificProblem) openResponses.push(["Specific problem to solve", intake.specificProblem]);
+  if (intake.additionalContext) openResponses.push(["Additional context", intake.additionalContext]);
+
+  for (const [label, value] of openResponses) {
+    y += 4;
+    need(12);
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(7);
+    doc.setTextColor(...C.heading);
+    doc.text(label, m, y);
+    y += 3.5;
+    doc.setFont("helvetica", "normal");
+    doc.setTextColor(...C.body);
+    const responseLines = doc.splitTextToSize(value, cw);
+    const shownLines = responseLines.slice(0, 6);
+    doc.text(shownLines, m, y);
+    y += shownLines.length * 3;
   }
 
   // ===== AI POLICY =====

@@ -428,7 +428,9 @@ export default function AssessmentStartPage() {
                 onChange={(e) => updateField("teamDescription", e.target.value)}
                 placeholder="e.g., I handle client intake, scheduling, invoicing, and follow-up communications. I also manage our social media and monthly newsletter."
                 className="input-field min-h-[80px] resize-y"
+                maxLength={3000}
               />
+              <p className="text-[11px] text-gray-300 mt-1 text-right">{form.teamDescription.length}/3,000</p>
             </Field>
           )}
 
@@ -723,8 +725,9 @@ export default function AssessmentStartPage() {
               onChange={(e) => updateField("specificProblem", e.target.value)}
               placeholder="e.g., I spend 10+ hours a week writing proposals and each one is slightly different. I need a way to generate first drafts faster."
               className="input-field min-h-[80px] resize-y"
-              maxLength={2000}
+              maxLength={5000}
             />
+            <p className="text-[11px] text-gray-300 mt-1 text-right">{form.specificProblem.length}/5,000</p>
           </Field>
 
           <div>
@@ -746,14 +749,17 @@ export default function AssessmentStartPage() {
             </div>
           </div>
 
-          <Field label="Tools I use regularly (comma-separated)">
+          <Field label="Tools and software I use regularly (comma-separated)">
             <input
               type="text"
               value={form.currentTools}
               onChange={(e) => updateField("currentTools", e.target.value)}
-              placeholder="e.g., Google Docs, QuickBooks, Slack, Excel, Canva"
+              placeholder="e.g., Google Docs, QuickBooks, Slack, Excel, Canva, GitHub Copilot"
               className="input-field"
             />
+            <p className="text-[11px] text-gray-400 mt-1">
+              Include AI tools you already have access to — we&apos;ll show you how to get more from them.
+            </p>
           </Field>
         </div>
       )}
@@ -806,8 +812,9 @@ export default function AssessmentStartPage() {
               onChange={(e) => updateField("additionalContext", e.target.value)}
               placeholder="e.g., I spend most of my time on invoicing and follow-ups. I've tried ChatGPT a few times but don't know how to make it work for my specific tasks."
               className="input-field min-h-[100px] resize-y"
-              maxLength={2000}
+              maxLength={5000}
             />
+            <p className="text-[11px] text-gray-300 mt-1 text-right">{form.additionalContext.length}/5,000</p>
           </Field>
         </div>
       )}

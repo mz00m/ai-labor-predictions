@@ -233,6 +233,7 @@ export interface TaskAnalysis {
   estimatedTimeSaved?: string; // e.g. "3-5 hrs/week"
   exampleTools?: { name: string; url?: string; free?: boolean }[];
   gettingStarted?: string; // 1-2 sentence quick-start
+  starterPrompt?: string; // Copy-paste prompt to prototype this task with a chatbot
   deploymentModel?: "copilot" | "escalation" | "full-automation" | "agentic";
   deploymentModelRationale?: string; // Why this model fits
 }
@@ -283,6 +284,7 @@ export interface HumanCapability {
 
 export interface RiskAssessment {
   overallRiskLevel: "low" | "moderate" | "high";
+  riskContextNote?: string; // 1-sentence context: "This assesses displacement risk for your role..."
   displacementRisk: string;
   skillGaps: string[];
   changeManagementNotes: string;

@@ -49,16 +49,16 @@ export const AssessmentIntakeSchema = z.object({
   annualRevenue: RevenueRangeSchema.optional(),
   assessmentScope: z.enum(["full-organization", "department", "team"]),
   departmentName: z.string().max(200).optional(),
-  teamDescription: z.string().max(1000).optional(),
+  teamDescription: z.string().max(3000).optional(),
   jobTitle: z.string().max(200).optional(),
   primaryFunctions: z.array(z.string().max(200)).min(1).max(20),
   keyRoles: z.array(z.string().max(200)).min(1).max(30),
   currentTools: z.array(z.string().max(200)).max(50),
   currentAiUsage: AiMaturityLevelSchema,
   toolPreference: ToolPreferenceSchema.optional(),
-  biggestChallenges: z.array(z.string().max(500)).min(1).max(10),
-  goals: z.array(z.string().max(500)).min(1).max(10),
-  specificProblem: z.string().max(2000).optional(),
+  biggestChallenges: z.array(z.string().max(1000)).min(1).max(10),
+  goals: z.array(z.string().max(1000)).min(1).max(10),
+  specificProblem: z.string().max(5000).optional(),
   uploadedFiles: z.array(UploadedFileMetaSchema).max(20).default([]),
   websiteUrl: z.string().url().max(500).optional().or(z.literal("")),
   additionalContext: z.string().max(5000).optional(),
@@ -136,6 +136,7 @@ const TaskAnalysisSchema = z.object({
   estimatedTimeSaved: z.string().optional(),
   exampleTools: z.array(ExampleToolSchema).optional(),
   gettingStarted: z.string().optional(),
+  starterPrompt: z.string().optional(),
   deploymentModel: z.string().transform((v) => {
     const lower = v.toLowerCase().trim();
     if (["copilot", "escalation", "full-automation", "agentic"].includes(lower)) return lower;
@@ -242,6 +243,7 @@ const DimensionScoresSchema = z.object({
 
 const RiskAssessmentSchema = z.object({
   overallRiskLevel: z.enum(["low", "moderate", "high"]).default("moderate"),
+  riskContextNote: z.string().optional(),
   displacementRisk: z.string().default(""),
   skillGaps: z.array(z.string()).default([]),
   changeManagementNotes: z.string().default(""),
