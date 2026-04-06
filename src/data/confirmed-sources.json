@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-04-05",
-  "totalSources": 505,
-  "verifiedCount": 495,
+  "lastUpdated": "2026-04-06",
+  "totalSources": 510,
+  "verifiedCount": 500,
   "sources": {
     "oecd-ai-sme-adoption-g7-2025": {
       "id": "oecd-ai-sme-adoption-g7-2025",
@@ -7096,6 +7096,76 @@
         "white-collar-professional-displacement",
         "tech-sector-displacement",
         "median-wage-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "devansh-genai-employment-displacement-2026": {
+      "id": "devansh-genai-employment-displacement-2026",
+      "title": "Generative AI's Impact on Employment: Opportunities and Displacement Risks",
+      "url": "https://www.semanticscholar.org/paper/c293adb7a8488bcbf198aa9d7fd12c4934cecd5b",
+      "publisher": "IJRASET (Devansh)",
+      "evidenceTier": 4,
+      "datePublished": "2026-03-31",
+      "excerpt": "The paper maps both the opportunities GenAI creates and the structural challenges it poses to workers across skill levels. It underscores the uneven distribution of risk, with routine cognitive roles facing the greatest exposure.",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "han-ai-civilization-work-transformation-2026": {
+      "id": "han-ai-civilization-work-transformation-2026",
+      "title": "AI Civilization and the Transformation of Work: Historical Parallels and Future Trajectories",
+      "url": "https://www.semanticscholar.org/paper/a0e2a5b2ba6715f7b6b78a51c57991bee11ed0cc",
+      "publisher": "Dong-Gew Han",
+      "evidenceTier": 4,
+      "datePublished": "2026-03-29",
+      "excerpt": "The paper emphasizes that white-collar and knowledge-work roles are now squarely in the displacement frame, departing from earlier automation waves that primarily affected manual labor.",
+      "usedIn": [
+        "white-collar-professional-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "otgonsuren-ai-labor-relations-2026": {
+      "id": "otgonsuren-ai-labor-relations-2026",
+      "title": "AI's Systemic Impact on Labor Relations and Employment Structures",
+      "url": "https://www.semanticscholar.org/paper/5db988edbfb7f31348f1c12b8430c228bd2cf29a",
+      "publisher": "Otgonsuren, Jinjiimaa",
+      "evidenceTier": 3,
+      "datePublished": "2026-03-26",
+      "excerpt": "Industries with high volumes of structured, repetitive tasks face the sharpest near-term employment contractions.",
+      "usedIn": [
+        "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "wittich-human-capital-ai-labor-2026": {
+      "id": "wittich-human-capital-ai-labor-2026",
+      "title": "Shaping Human Capital and Work Practices in a Changing Labor Market",
+      "url": "https://cris.maastrichtuniversity.nl/en/publications/33cda117-bac2-4be0-afce-39703634d55a",
+      "publisher": "Maastricht University (Anna-Lena Wittich)",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-24",
+      "excerpt": "The research highlights a growing divergence between workers who can complement AI tools and those whose skills are substituted by them, amplifying within-occupation wage inequality.",
+      "usedIn": [
+        "high-skill-wage-premium"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "chowdhury-coding-agents-prs-2026": {
+      "id": "chowdhury-coding-agents-prs-2026",
+      "title": "Autonomous Coding Agents Generate 400,000+ Pull Requests: Real-World Software Workflow Implications",
+      "url": "https://arxiv.org/abs/2604.03196v1",
+      "publisher": "arXiv (Chowdhury, Banik, Ferdous, Shamim)",
+      "evidenceTier": 3,
+      "datePublished": "2026-04-03",
+      "excerpt": "Autonomous coding agents are generating code at an unprecedented scale, with OpenAI Codex alone creating over 400,000 pull requests (PRs) in two months. CRA-only PRs achieve a 45.20% merge rate, 23.17 percentage points lower than human-only PRs (68.37%).",
+      "usedIn": [
+        "tech-sector-displacement"
       ],
       "verified": true,
       "synthetic": false

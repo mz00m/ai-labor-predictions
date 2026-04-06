@@ -1304,6 +1304,15 @@
       ],
       "evidenceTier": 1,
       "label": "BLS Mar 2026: Unemployment 4.3% (-0.1pp MoM)"
+    },
+    {
+      "date": "2026-03-31",
+      "direction": "up",
+      "sourceIds": [
+        "devansh-genai-employment-displacement-2026"
+      ],
+      "evidenceTier": 4,
+      "label": "IJRASET: routine cognitive roles face greatest AI displacement exposure"
     }
   ],
   "sources": [
@@ -2368,6 +2377,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-04-05",
       "excerpt": "Unemployment rate 4.3% in March 2026, down 0.1 percentage points."
+    },
+    {
+      "id": "devansh-genai-employment-displacement-2026",
+      "title": "Generative AI's Impact on Employment: Opportunities and Displacement Risks",
+      "url": "https://www.semanticscholar.org/paper/c293adb7a8488bcbf198aa9d7fd12c4934cecd5b",
+      "publisher": "IJRASET (Devansh)",
+      "evidenceTier": 4,
+      "datePublished": "2026-03-31",
+      "excerpt": "The paper maps both the opportunities GenAI creates and the structural challenges it poses to workers across skill levels. It underscores the uneven distribution of risk, with routine cognitive roles facing the greatest exposure."
     }
   ]
 }

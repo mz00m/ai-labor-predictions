@@ -829,6 +829,15 @@
       ],
       "evidenceTier": 1,
       "label": "BLS Mar 2026: Professional/business services -45.3K MoM"
+    },
+    {
+      "date": "2026-03-29",
+      "direction": "up",
+      "sourceIds": [
+        "han-ai-civilization-work-transformation-2026"
+      ],
+      "evidenceTier": 4,
+      "label": "Han: white-collar roles now squarely in AI displacement frame"
     }
   ],
   "sources": [
@@ -1536,6 +1545,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-04-05",
       "excerpt": "Professional and business services employment declined by 45,300 in March 2026."
+    },
+    {
+      "id": "han-ai-civilization-work-transformation-2026",
+      "title": "AI Civilization and the Transformation of Work: Historical Parallels and Future Trajectories",
+      "url": "https://www.semanticscholar.org/paper/a0e2a5b2ba6715f7b6b78a51c57991bee11ed0cc",
+      "publisher": "Dong-Gew Han",
+      "evidenceTier": 4,
+      "datePublished": "2026-03-29",
+      "excerpt": "The paper emphasizes that white-collar and knowledge-work roles are now squarely in the displacement frame, departing from earlier automation waves that primarily affected manual labor."
     }
   ]
 }
