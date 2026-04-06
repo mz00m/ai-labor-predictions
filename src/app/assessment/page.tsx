@@ -416,12 +416,12 @@ export default function AssessmentLanding() {
       {/* Final CTA */}
       <section className="max-w-6xl mx-auto px-6 sm:px-10 py-16 text-center">
         <h2 className="text-[28px] sm:text-[36px] font-bold text-gray-900 mb-4">
-          Companies that figured out where to use AI
+          Stop wasting time on repetitive tasks
           <br />
-          <span className="text-[#5C61F6]">made nearly twice the revenue.</span>
+          <span className="text-[#5C61F6]">AI can do for you.</span>
         </h2>
         <p className="text-[15px] text-gray-500 mb-8 max-w-xl mx-auto">
-          The ones that didn&apos;t had the exact same tools. Find out where AI fits in your work. It takes 5 minutes. It&apos;s free.
+          Find out where AI can help you be more human at work. It takes 5 minutes, and it&apos;s free!
         </p>
         <Link
           href="/assessment/start"
