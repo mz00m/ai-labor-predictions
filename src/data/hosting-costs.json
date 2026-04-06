@@ -55,6 +55,16 @@
           "endDate": null,
           "status": "active",
           "notes": "Claude Haiku for digest synthesis and chat"
+        },
+        {
+          "name": "Claude Developer Console",
+          "monthlyCost": 0,
+          "oneTimeCost": 34.70,
+          "costType": "cumulative",
+          "startDate": "2026-02-22",
+          "endDate": null,
+          "status": "active",
+          "notes": "Total token cost for assessment pipeline and API usage"
         }
       ]
     },
