@@ -63,19 +63,19 @@ const TRUST_POINTS = [
 const TESTIMONIAL_SCENARIOS = [
   {
     role: "Data Analyst",
-    industry: "Education Nonprofit",
+    industry: "Educational Institution",
     quote: "The task analysis was the most helpful for me! Risks and change management had a ton of gold in there too. I really like the flow and the inclusion of next steps to make it actionable.",
     accent: "border-l-[#5C61F6]",
   },
   {
     role: "Program Lead",
-    industry: "International Nonprofit",
+    industry: "Technical Advisory Firm",
     quote: "This could be a huge asset to NGO leaders -- I can picture using the report as a catalyst for getting going, for the many that are stuck trying to figure out how to start.",
     accent: "border-l-emerald-400",
   },
   {
     role: "Chief Operating Officer",
-    industry: "Workforce Development Nonprofit",
+    industry: "Workforce Development Organization",
     quote: "It hits points we have already discussed and are acting on but gives my team some new information to cross reference against. It also provides structure to our approach which will help my OPs team leader who doesn't have a lot of change management experience. Very helpful!",
     accent: "border-l-amber-400",
   },
