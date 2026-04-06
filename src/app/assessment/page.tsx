@@ -62,27 +62,27 @@ const TRUST_POINTS = [
 
 const TESTIMONIAL_SCENARIOS = [
   {
-    role: "Office Manager",
-    industry: "Small law firm",
-    quote: "I spend 15 hours a week on scheduling, client intake, and document filing. This showed me exactly which of those tasks AI can handle.",
+    role: "Data Analyst",
+    industry: "Education Nonprofit",
+    quote: "The task analysis was the most helpful for me! Risks and change management had a ton of gold in there too. I really like the flow and the inclusion of next steps to make it actionable.",
     accent: "border-l-[#5C61F6]",
   },
   {
-    role: "Executive Director",
-    industry: "Nonprofit",
-    quote: "Grant writing and donor reporting were eating my entire week. Now I have a clear plan for which AI tools to try first.",
+    role: "Program Lead",
+    industry: "International Nonprofit",
+    quote: "This could be a huge asset to NGO leaders -- I can picture using the report as a catalyst for getting going, for the many that are stuck trying to figure out how to start.",
     accent: "border-l-emerald-400",
   },
   {
-    role: "Owner / Operator",
-    industry: "Restaurant",
-    quote: "I didn't know where to start with AI. The action plan broke it down into things I could do this week vs. this quarter.",
+    role: "Chief Operating Officer",
+    industry: "Workforce Development Nonprofit",
+    quote: "It hits points we have already discussed and are acting on but gives my team some new information to cross reference against. It also provides structure to our approach which will help my OPs team leader who doesn't have a lot of change management experience. Very helpful!",
     accent: "border-l-amber-400",
   },
   {
-    role: "Operations Lead",
-    industry: "Logistics company",
-    quote: "I'm not technical at all. This didn't ask me to learn to code -- it just showed me the five things in my week where AI could save real time.",
+    role: "Program Staff",
+    industry: "Museum",
+    quote: "This is really great. I haven't known where to start and have been a little skeptical, but this makes it really easy!",
     accent: "border-l-sky-400",
   },
 ];
