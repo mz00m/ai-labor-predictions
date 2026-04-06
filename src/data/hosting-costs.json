@@ -1,6 +1,6 @@
 {
   "projectStartDate": "2026-02-22",
-  "lastUpdated": "2026-03-18",
+  "lastUpdated": "2026-04-06",
   "currency": "USD",
   "categories": [
     {
@@ -19,7 +19,7 @@
         {
           "name": "Vercel Pro",
           "monthlyCost": 0,
-          "oneTimeCost": 62.46,
+          "oneTimeCost": 127.39,
           "costType": "cumulative",
           "startDate": "2026-02-22",
           "endDate": null,
@@ -33,13 +33,13 @@
       "services": [
         {
           "name": "Claude Code",
-          "monthlyCost": 25,
+          "monthlyCost": 70,
           "oneTimeCost": 0,
           "costType": "recurring",
           "startDate": "2026-02-22",
           "endDate": null,
           "status": "active",
-          "notes": "$100/mo subscription, ~25% allocated to this project"
+          "notes": "$100/mo subscription, ~70% allocated to this project"
         }
       ]
     },
@@ -240,6 +240,21 @@
           "endDate": null,
           "status": "active",
           "notes": "Free API"
+        }
+      ]
+    },
+    {
+      "name": "Marketing",
+      "services": [
+        {
+          "name": "LinkedIn Ad",
+          "monthlyCost": 0,
+          "oneTimeCost": 50,
+          "costType": "one-time",
+          "startDate": "2026-04-06",
+          "endDate": null,
+          "status": "active",
+          "notes": "Single promoted post"
         }
       ]
     },
