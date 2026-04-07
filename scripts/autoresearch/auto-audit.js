@@ -40,6 +40,10 @@ function sampleSizeWeight(point) {
   return Math.min(1 + (logN - 2) / 3, 2);
 }
 
+function proxyWeight(point) {
+  return point.isProxy ? 0.5 : 1;
+}
+
 function computeWeightedAvg(prediction) {
   const points = prediction.history
     .filter((d) => [1, 2, 3, 4].includes(d.evidenceTier))
@@ -61,7 +65,8 @@ function computeWeightedAvg(prediction) {
     const w =
       TIER_WEIGHT[points[i].evidenceTier] *
       recencyWeight(timestamps[i], minMs, maxMs) *
-      sampleSizeWeight(points[i]);
+      sampleSizeWeight(points[i]) *
+      proxyWeight(points[i]);
     weightedSum += points[i].value * w;
     totalWeight += w;
   }

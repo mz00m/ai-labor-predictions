@@ -322,6 +322,15 @@
       "label": "Dallas Fed: AI exposure → +0.2pp wage growth for high-experience-premium occupations"
     },
     {
+      "date": "2026-03-01",
+      "direction": "up",
+      "sourceIds": [
+        "kpmg-ai-pulse-q1-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "KPMG: 68% recruiting new AI roles (architects, etc.)"
+    },
+    {
       "date": "2026-03-04",
       "direction": "up",
       "sourceIds": [
@@ -376,13 +385,13 @@
       "label": "Lichtinger & Hosseini: Between-occupation inequality may widen from AI"
     },
     {
-      "date": "2026-03-01",
+      "date": "2026-03-31",
       "direction": "up",
       "sourceIds": [
-        "kpmg-ai-pulse-q1-2026"
+        "fri-ai-economics-survey-2026"
       ],
-      "evidenceTier": 2,
-      "label": "KPMG: 68% recruiting new AI roles (architects, etc.)"
+      "evidenceTier": 1,
+      "label": "FRI: Rapid scenario → top 10% wealth share rises to 80% by 2050 (from ~72%)"
     },
     {
       "date": "2026-04-01",
@@ -392,15 +401,6 @@
       ],
       "evidenceTier": 1,
       "label": "Hosseini/Lichtinger: p90-p50 wage gap rises from 0.733 to 0.789 in combined GE model"
-    },
-    {
-      "date": "2026-03-31",
-      "direction": "up",
-      "sourceIds": [
-        "fri-ai-economics-survey-2026"
-      ],
-      "evidenceTier": 1,
-      "label": "FRI: Rapid scenario → top 10% wealth share rises to 80% by 2050 (from ~72%)"
     },
     {
       "date": "2026-04-03",

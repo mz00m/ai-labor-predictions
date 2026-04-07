@@ -258,6 +258,15 @@
       "label": "MIT Iceberg Index: 11.7% of US wage value exposed to AI across admin, finance, professional services"
     },
     {
+      "date": "2025-12-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "oecd-ai-sme-adoption-g7-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "OECD: ~25% of OECD workers exposed to generative AI"
+    },
+    {
       "date": "2026-01-01",
       "direction": "neutral",
       "sourceIds": [
@@ -456,6 +465,24 @@
       "label": "Tufts Digital Planet: 4.9M 'tipping point' workers in 33 occupations swing to >40% displacement"
     },
     {
+      "date": "2026-03-26",
+      "direction": "up",
+      "sourceIds": [
+        "otgonsuren-ai-labor-relations-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Otgonsuren: structured-task industries face sharpest AI employment cuts"
+    },
+    {
+      "date": "2026-03-27",
+      "direction": "neutral",
+      "sourceIds": [
+        "cai-yeckehzaare-mit-ontology-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "MIT/CCI: 92% of AI apps map to only 6.8% of 39,603 work activities; exposure deep but narrow"
+    },
+    {
       "date": "2026-03-31",
       "direction": "up",
       "sourceIds": [
@@ -508,33 +535,6 @@
       ],
       "evidenceTier": 1,
       "label": "Oxford/OII: Complementary effects 1.7x larger than substitution; AI demand doubling → 5% rise in complementary skill demand"
-    },
-    {
-      "date": "2025-12-01",
-      "direction": "neutral",
-      "sourceIds": [
-        "oecd-ai-sme-adoption-g7-2025"
-      ],
-      "evidenceTier": 2,
-      "label": "OECD: ~25% of OECD workers exposed to generative AI"
-    },
-    {
-      "date": "2026-03-27",
-      "direction": "neutral",
-      "sourceIds": [
-        "cai-yeckehzaare-mit-ontology-2026"
-      ],
-      "evidenceTier": 1,
-      "label": "MIT/CCI: 92% of AI apps map to only 6.8% of 39,603 work activities; exposure deep but narrow"
-    },
-    {
-      "date": "2026-03-26",
-      "direction": "up",
-      "sourceIds": [
-        "otgonsuren-ai-labor-relations-2026"
-      ],
-      "evidenceTier": 3,
-      "label": "Otgonsuren: structured-task industries face sharpest AI employment cuts"
     }
   ],
   "sources": [
