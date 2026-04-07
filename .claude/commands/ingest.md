@@ -189,10 +189,12 @@ Read the full source content and identify every quantitative claim about AI's im
 * **data_point**: The statistic's unit directly and unambiguously matches the graph's unit. It will be plotted on the chart line. Use this only when you are confident in unit compatibility.
 * **overlay**: The statistic provides relevant directional evidence but uses different units, covers a different geography, or measures something adjacent. It will appear as a contextual signal alongside the chart. When in doubt, choose overlay — it's the conservative default.
 
-**3e. Direction (for overlays only)** — Classify the directional signal:
-* **up** — suggests the graph's metric will be higher than current consensus
-* **down** — suggests it will be lower
+**3e. Direction (for overlays only)** — Classify the directional signal relative to the graph's metric:
+* **up** — suggests the graph's metric will be higher than current consensus (for displacement: more displacement; for wages: higher wages; for adoption: more adoption)
+* **down** — suggests the graph's metric will be lower (for displacement: less displacement; for wages: lower wages)
 * **neutral** — informational without clear directional implication
+
+On **displacement charts**, "up" means more displacement (bad for workers) and is colored red. Evidence of job losses, increased automation, hiring freezes → **up**. Evidence of job growth, no displacement found, resilience → **down**.
 
 **3f. Overlay label (for overlays only)** — Write a short label (80 characters max) in the format: "[Publisher]: [concise finding]" — e.g., "McKinsey: 30% of work hours automatable by 2030"
 
@@ -361,7 +363,10 @@ These rules are non-negotiable. They protect data integrity and reader trust.
 1. **Never invent data.** Only extract statistics that are explicitly stated in the source text. If a number isn't in the source, it doesn't get added.
 2. **Always use exact quotes.** Every data point and overlay must trace back to a verbatim quote. No paraphrasing, no summarizing, no rewording. Copy-paste from the source.
 3. **Ranges become midpoints.** When a source says "20–30%", the plotted value is 25 with confidenceLow: 20 and confidenceHigh: 30.
-4. **Negative values for losses.** Wage declines, rate drops, and job losses should be negative numbers (e.g., "10% wage decline" → value: -10). Displacement percentages remain positive because the graph's unit is "% displaced" (i.e., the displacement itself is the metric).
+4. **Sign conventions differ by category.**
+   - **Displacement graphs** use positive values for displacement (higher = worse). A "6% job decline" → value: 6. A "1.2% employment growth" (counter-displacement) → value: -1.2. The chart reads "% of roles displaced" so positive = more roles displaced.
+   - **Wage graphs** use negative values for declines. A "10% wage decline" → value: -10.
+   - **Adoption/exposure graphs** use positive values (higher = more adoption/exposure).
 5. **Default to overlay when uncertain.** If you're not sure whether a stat's unit matches the graph's unit, classify it as an overlay rather than a data_point. Overlays are low-risk; bad data points distort the chart.
 6. **Default to higher tier number when uncertain.** A Tier 3 source misclassified as Tier 2 erodes trust. The reverse is merely conservative.
 7. **One source entry per prediction file.** If a source contributes multiple statistics to the same graph, add the source once to `sources` but add each statistic as a separate `history` or `overlay` entry.
