@@ -1358,6 +1358,15 @@
       ],
       "evidenceTier": 3,
       "label": "Dimon: AI adoption may outpace workforce adaptation speed"
+    },
+    {
+      "date": "2026-04-01",
+      "direction": "up",
+      "sourceIds": [
+        "openai-industrial-policy-superintelligence-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "OpenAI: expects AI to handle month-long projects, fundamentally reshape work"
     }
   ],
   "sources": [
@@ -2449,6 +2458,15 @@
       "evidenceTier": 3,
       "datePublished": "2026-04-06",
       "excerpt": "AI will definitely eliminate some jobs, while it enhances others. There is a possibility that AI deployment will move faster than workforce adaptation to new job creation. In prior technological transformations, labor had time to adjust and retrain."
+    },
+    {
+      "id": "openai-industrial-policy-superintelligence-2026",
+      "title": "Industrial Policy for the Intelligence Age: Ideas to Keep People First",
+      "url": "https://cdn.openai.com/pdf/561e7512-253e-424b-9734-ef4098440601/Industrial%20Policy%20for%20the%20Intelligence%20Age.pdf",
+      "publisher": "OpenAI",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-01",
+      "excerpt": "If progress continues, we can expect systems to be capable of carrying out projects that currently take people months. This shift will reshape how organizations run, how knowledge is created, and how people find meaning and opportunity."
     }
   ]
 }

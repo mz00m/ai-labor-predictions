@@ -10,13 +10,22 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "OpenAI",
+    title: "Industrial Policy for the Intelligence Age: Ideas to Keep People First",
+    summary:
+      "OpenAI's policy blueprint for superintelligence transition. Proposes public wealth fund, 32-hour workweek pilots, portable benefits, adaptive safety nets. Warns productivity gains may not reach workers without deliberate policy.",
+    date: "Apr 1",
+    url: "https://cdn.openai.com/pdf/561e7512-253e-424b-9734-ef4098440601/Industrial%20Policy%20for%20the%20Intelligence%20Age.pdf",
+    accent: "border-l-emerald-500",
+  },
+  {
     author: "MIT Center for Collective Intelligence",
     title: "Where Can AI Be Used? Insights from a Deep Ontology of Work Activities",
     summary:
       "92% of AI apps map to only 6.8% of work activities. AI grew 6x but coverage only 1.2x. 75% of AI value in software/info tasks. Think/Do/Interact ontology of 39,603 activities from O*NET.",
     date: "Mar 27",
     url: "https://arxiv.org/abs/2603.20619",
-    accent: "border-l-emerald-500",
+    accent: "border-l-cyan-500",
   },
   {
     author: "NYT (Ben Casselman)",
@@ -25,7 +34,7 @@ const articles: Article[] = [
       "Economists shifting from skeptical to 'it's coming.' BCG: >50% of jobs reshaped in 2-3y. Kinder: entry-level research hires replaced by Claude. Gimbel: speed and breadth determine pain.",
     date: "Apr 3",
     url: "https://www.nytimes.com/2026/04/03/business/economists-once-dismissed-the-ai-job-threat-but-not-anymore.html",
-    accent: "border-l-cyan-500",
+    accent: "border-l-amber-500",
   },
   {
     author: "Forecasting Research Institute",
@@ -34,7 +43,7 @@ const articles: Article[] = [
       "69 economists, 52 AI experts, 38 superforecasters surveyed. Rapid scenario (14% prob): GDP ~4%, LFPR drops to 55% by 2050, ~10M AI job losses, top 10% holds 80% of wealth. Unconditional forecasts cluster near trends.",
     date: "Mar 31",
     url: "https://open.substack.com/pub/forecastingresearch/p/forecasting-the-economic-effects-of-ai",
-    accent: "border-l-amber-500",
+    accent: "border-l-rose-500",
   },
   {
     author: "Stefan Schubert (The Update Brief)",
@@ -43,15 +52,6 @@ const articles: Article[] = [
       "Expert debate on FRI survey findings. Rapid AI scenario yields only +45% GDP over 25 years. Economists vs AI experts diverge on diffusion speed. Social backlash may constrain adoption more than technology.",
     date: "Apr 2",
     url: "https://open.substack.com/pub/theupdatebrief/p/how-much-will-ai-increase-economic",
-    accent: "border-l-rose-500",
-  },
-  {
-    author: "Brookings Metro",
-    title: "How AI May Reshape Career Pathways to Better Jobs",
-    summary:
-      "15.6M non-degree workers in top AI exposure quartile. ~49% of Gateway-to-Destination career pathways highly AI-exposed. 3.5M workers face both high exposure and low adaptive capacity.",
-    date: "Apr 2",
-    url: "https://www.brookings.edu/articles/how-ai-may-reshape-career-pathways-to-better-jobs/",
     accent: "border-l-violet-500",
   },
 ];
