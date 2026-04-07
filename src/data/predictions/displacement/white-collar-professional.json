@@ -16,7 +16,8 @@
         "bls-mlr-ai-employment-projections-2025"
       ],
       "evidenceTier": 1,
-      "metricType": "employment"
+      "metricType": "employment",
+      "dataType": "projected"
     },
     {
       "date": "2025-07-01",
@@ -27,7 +28,8 @@
         "oecd-white-collar-2025"
       ],
       "evidenceTier": 1,
-      "metricType": "projection"
+      "metricType": "projection",
+      "dataType": "projected"
     },
     {
       "date": "2025-08-01",
@@ -38,7 +40,8 @@
         "goldman-ai-workforce-2025"
       ],
       "evidenceTier": 2,
-      "metricType": "projection"
+      "metricType": "projection",
+      "dataType": "projected"
     },
     {
       "date": "2025-09-08",
@@ -63,7 +66,8 @@
         "gartner-ai-layoffs-2025"
       ],
       "evidenceTier": 3,
-      "metricType": "survey"
+      "metricType": "survey",
+      "dataType": "observed"
     },
     {
       "date": "2025-11-01",
@@ -74,7 +78,8 @@
         "worldbank-liu-wang-yu-2025"
       ],
       "evidenceTier": 1,
-      "metricType": "projection"
+      "metricType": "projection",
+      "dataType": "projected"
     },
     {
       "date": "2025-11-13",
@@ -99,7 +104,8 @@
         "nber-ai-legal-impact-2025"
       ],
       "evidenceTier": 1,
-      "metricType": "employment"
+      "metricType": "employment",
+      "dataType": "observed"
     },
     {
       "date": "2026-01-15",
@@ -123,7 +129,8 @@
         "hbr-ai-potential-layoffs-2026"
       ],
       "evidenceTier": 1,
-      "metricType": "survey"
+      "metricType": "survey",
+      "dataType": "observed"
     },
     {
       "date": "2026-01-22",
