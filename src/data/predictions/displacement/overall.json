@@ -5,7 +5,7 @@
   "description": "Projected net percentage of US jobs displaced by AI and automation by 2030, synthesizing displacement estimates, observed employment data, and net-of-job-creation projections.",
   "category": "displacement",
   "unit": "% of US jobs",
-  "currentValue": 2,
+  "currentValue": 3.1,
   "timeHorizon": "By 2030",
   "aggregationMethod": "weighted",
   "history": [
@@ -1270,6 +1270,15 @@
       "label": "FRI: 69 economists forecast labor indicators near historical trends through 2030"
     },
     {
+      "date": "2026-03-31",
+      "direction": "up",
+      "sourceIds": [
+        "devansh-genai-employment-displacement-2026"
+      ],
+      "evidenceTier": 4,
+      "label": "IJRASET: routine cognitive roles face greatest AI displacement exposure"
+    },
+    {
       "date": "2026-04-01",
       "direction": "neutral",
       "sourceIds": [
@@ -1304,15 +1313,6 @@
       ],
       "evidenceTier": 1,
       "label": "BLS Mar 2026: Unemployment 4.3% (-0.1pp MoM)"
-    },
-    {
-      "date": "2026-03-31",
-      "direction": "up",
-      "sourceIds": [
-        "devansh-genai-employment-displacement-2026"
-      ],
-      "evidenceTier": 4,
-      "label": "IJRASET: routine cognitive roles face greatest AI displacement exposure"
     },
     {
       "date": "2026-04-06",

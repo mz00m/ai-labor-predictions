@@ -19,6 +19,53 @@ import {
   hasSourceContent,
 } from "./lib/ingest/content-extractor";
 
+// ─── Weighted Average (mirrors src/lib/prediction-stats.ts) ───────────
+
+const TIER_WEIGHT: Record<number, number> = { 1: 4, 2: 2, 3: 1, 4: 0.5 };
+
+function recomputeCurrentValue(prediction: any): number {
+  const points = (prediction.history ?? [])
+    .filter((d: any) => [1, 2, 3, 4].includes(d.evidenceTier))
+    .sort(
+      (a: any, b: any) =>
+        new Date(a.date).getTime() - new Date(b.date).getTime()
+    );
+
+  if (points.length === 0) return prediction.currentValue ?? 0;
+
+  // "latest" aggregation: just use the most recent data point
+  if (prediction.aggregationMethod === "latest") {
+    return Math.round(points[points.length - 1].value * 10) / 10;
+  }
+
+  const timestamps = points.map((p: any) => new Date(p.date).getTime());
+  const minMs = timestamps[0];
+  const maxMs = timestamps[timestamps.length - 1];
+
+  let weightedSum = 0;
+  let totalWeight = 0;
+  for (let i = 0; i < points.length; i++) {
+    const p = points[i];
+    // Recency: linear 1.0 (oldest) → 1.5 (newest)
+    const recency =
+      maxMs === minMs ? 1 : 1 + ((timestamps[i] - minMs) / (maxMs - minMs)) * 0.5;
+    // Sample size: log-scaled 1.0 (n≤100) → 2.0 (n≥100K)
+    let sampleW = 1;
+    if (p.sampleSize && p.sampleSize > 0) {
+      const logN = Math.log10(Math.max(p.sampleSize, 100));
+      sampleW = Math.min(1 + (logN - 2) / 3, 2);
+    }
+    // Proxy discount: indirect measurements get 0.5×
+    const proxyW = p.isProxy ? 0.5 : 1;
+
+    const w = TIER_WEIGHT[p.evidenceTier] * recency * sampleW * proxyW;
+    weightedSum += p.value * w;
+    totalWeight += w;
+  }
+
+  return Math.round((weightedSum / totalWeight) * 10) / 10;
+}
+
 // ─── Main ─────────────────────────────────────────────────────────────
 
 async function applyIngestion(
@@ -118,6 +165,11 @@ async function applyIngestion(
           (a: any, b: any) =>
             new Date(a.date).getTime() - new Date(b.date).getTime()
         );
+      }
+
+      // Recompute currentValue from history so it stays in sync
+      if (predictionFile.history?.length > 0) {
+        predictionFile.currentValue = recomputeCurrentValue(predictionFile);
       }
 
       // Validate and write

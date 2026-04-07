@@ -735,15 +735,6 @@
       "label": "Stanford DEL: 88% coding productivity gain led to dev team cut from 7 to 3"
     },
     {
-      "date": "2026-04-05",
-      "direction": "neutral",
-      "sourceIds": [
-        "bls-information-sector-mar-2026"
-      ],
-      "evidenceTier": 1,
-      "label": "BLS Mar 2026: Information sector 2,772K (+3K MoM), flat"
-    },
-    {
       "date": "2026-04-03",
       "direction": "up",
       "sourceIds": [
@@ -778,6 +769,15 @@
       ],
       "evidenceTier": 3,
       "label": "Chowdhury: 60% of closed CRA PRs have low signal quality"
+    },
+    {
+      "date": "2026-04-05",
+      "direction": "neutral",
+      "sourceIds": [
+        "bls-information-sector-mar-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "BLS Mar 2026: Information sector 2,772K (+3K MoM), flat"
     }
   ],
   "sources": [

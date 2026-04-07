@@ -5,7 +5,7 @@
   "description": "Measured employment change in occupations classified as highly AI-exposed (top quartile by AI exposure indices). Most studies find near-zero aggregate displacement but a sharp age gradient: young workers (22-30) in AI-exposed roles show -5% to -13% declines across the US, Sweden, and the Netherlands, while older workers are stable or growing. Finland and Denmark report null results. Data points span both age-specific and all-worker measurements.",
   "category": "displacement",
   "unit": "% employment change",
-  "currentValue": -5.2,
+  "currentValue": -0.9,
   "timeHorizon": "By 2030",
   "aggregationMethod": "weighted",
   "history": [
@@ -795,6 +795,15 @@
       "label": "MIT/CCI: 58% of AI apps target 'Create information' tasks; software/info most concentrated"
     },
     {
+      "date": "2026-03-29",
+      "direction": "up",
+      "sourceIds": [
+        "han-ai-civilization-work-transformation-2026"
+      ],
+      "evidenceTier": 4,
+      "label": "Han: white-collar roles now squarely in AI displacement frame"
+    },
+    {
       "date": "2026-03-31",
       "direction": "down",
       "sourceIds": [
@@ -829,15 +838,6 @@
       ],
       "evidenceTier": 1,
       "label": "BLS Mar 2026: Professional/business services -45.3K MoM"
-    },
-    {
-      "date": "2026-03-29",
-      "direction": "up",
-      "sourceIds": [
-        "han-ai-civilization-work-transformation-2026"
-      ],
-      "evidenceTier": 4,
-      "label": "Han: white-collar roles now squarely in AI displacement frame"
     }
   ],
   "sources": [

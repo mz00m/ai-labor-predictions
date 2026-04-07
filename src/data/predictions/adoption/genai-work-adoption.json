@@ -129,25 +129,6 @@
       "evidenceTier": 1,
       "metricType": "survey",
       "dataType": "observed"
-    },
-    {
-      "date": "2026-03-31",
-      "value": 10.1,
-      "sourceIds": [
-        "fri-ai-economics-survey-2026"
-      ],
-      "evidenceTier": 1,
-      "metricType": "survey",
-      "sampleSize": 69,
-      "dataType": "projected",
-      "isProxy": true,
-      "proxyContext": {
-        "actualUnit": "% of work hours assisted by GenAI (unconditional forecast for 2030)",
-        "conversionFactor": 1,
-        "conversionLow": 0.5,
-        "conversionHigh": 2.0,
-        "rationale": "Measures adoption intensity (share of work hours) rather than breadth (share of workers). 69 economists' median unconditional forecast for 2030. Current observed: 5.2% of work hours (Bick/Deming 2026). Graph tracks % of adults using AI at work (~41-43%), which is higher because many workers use AI for only a fraction of their hours."
-      }
     }
   ],
   "overlays": [
@@ -215,6 +196,15 @@
       "label": "St. Louis Fed: 23% weekly GenAI use at work; work hours with GenAI up to 5.7%"
     },
     {
+      "date": "2025-12-01",
+      "direction": "down",
+      "sourceIds": [
+        "oecd-ai-sme-adoption-g7-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "OECD: 50% of SMEs say employees lack skills for genAI"
+    },
+    {
       "date": "2026-01-01",
       "direction": "neutral",
       "sourceIds": [
@@ -231,24 +221,6 @@
       ],
       "evidenceTier": 2,
       "label": "Deloitte: ~60% of workers at AI-using firms now have sanctioned AI access"
-    },
-    {
-      "date": "2026-03-02",
-      "direction": "up",
-      "sourceIds": [
-        "apoorv03-consumer-ai-usage-2026"
-      ],
-      "evidenceTier": 4,
-      "label": "@apoorv03: AI apps cross 1B WAU; ChatGPT at 900M (Sensortower)"
-    },
-    {
-      "date": "2026-03-24",
-      "direction": "up",
-      "sourceIds": [
-        "anthropic-economic-index-learning-curves-2026"
-      ],
-      "evidenceTier": 2,
-      "label": "Anthropic: High-tenure users 10% higher success rate with Claude"
     },
     {
       "date": "2026-03-01",
@@ -278,22 +250,22 @@
       "label": "KPMG: 55% of employees adopting/integrating AI agents"
     },
     {
-      "date": "2026-03-31",
+      "date": "2026-03-02",
       "direction": "up",
       "sourceIds": [
-        "fri-ai-economics-survey-2026"
+        "apoorv03-consumer-ai-usage-2026"
       ],
-      "evidenceTier": 1,
-      "label": "FRI: Rapid scenario → 62% of work hours GenAI-assisted by 2050"
+      "evidenceTier": 4,
+      "label": "@apoorv03: AI apps cross 1B WAU; ChatGPT at 900M (Sensortower)"
     },
     {
-      "date": "2025-12-01",
-      "direction": "down",
+      "date": "2026-03-24",
+      "direction": "up",
       "sourceIds": [
-        "oecd-ai-sme-adoption-g7-2025"
+        "anthropic-economic-index-learning-curves-2026"
       ],
       "evidenceTier": 2,
-      "label": "OECD: 50% of SMEs say employees lack skills for genAI"
+      "label": "Anthropic: High-tenure users 10% higher success rate with Claude"
     },
     {
       "date": "2026-03-27",
@@ -303,6 +275,24 @@
       ],
       "evidenceTier": 1,
       "label": "MIT/CCI: AI apps grew 6x (2022-2024) but activity coverage only 1.2x; adoption deep not broad"
+    },
+    {
+      "date": "2026-03-31",
+      "direction": "up",
+      "sourceIds": [
+        "fri-ai-economics-survey-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "FRI: Rapid scenario → 62% of work hours GenAI-assisted by 2050"
+    },
+    {
+      "date": "2026-03-31",
+      "direction": "up",
+      "sourceIds": [
+        "fri-ai-economics-survey-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "FRI: Economists forecast 10.1% of work hours GenAI-assisted by 2030 (n=69, unconditional)"
     }
   ],
   "sources": [

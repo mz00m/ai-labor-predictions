@@ -319,6 +319,15 @@
       "label": "Yale Budget Lab: Business support services score 8.55/10 exposure (highest industry); CS reps score 9/10"
     },
     {
+      "date": "2026-03-01",
+      "direction": "up",
+      "sourceIds": [
+        "kpmg-ai-pulse-q1-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "KPMG: 73% automating workflows spanning functions"
+    },
+    {
       "date": "2026-03-05",
       "direction": "up",
       "sourceIds": [
@@ -355,24 +364,6 @@
       "label": "Anthropic: CS rep tasks prevalent in automated API workflows"
     },
     {
-      "date": "2026-03-01",
-      "direction": "up",
-      "sourceIds": [
-        "kpmg-ai-pulse-q1-2026"
-      ],
-      "evidenceTier": 2,
-      "label": "KPMG: 73% automating workflows spanning functions"
-    },
-    {
-      "date": "2026-04-02",
-      "direction": "up",
-      "sourceIds": [
-        "brookings-ai-career-pathways-2026"
-      ],
-      "evidenceTier": 2,
-      "label": "Brookings: CS rep a key Gateway role; AI disruption cascades"
-    },
-    {
       "date": "2026-03-31",
       "direction": "up",
       "sourceIds": [
@@ -398,6 +389,15 @@
       ],
       "evidenceTier": 2,
       "label": "Stanford DEL: 82% ticket deflection at tech co via AI-first customer support"
+    },
+    {
+      "date": "2026-04-02",
+      "direction": "up",
+      "sourceIds": [
+        "brookings-ai-career-pathways-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Brookings: CS rep a key Gateway role; AI disruption cascades"
     }
   ],
   "sources": [

@@ -327,6 +327,24 @@
       "label": "Stanford AI Index: 78% using AI; enterprise AI spending +45% YoY"
     },
     {
+      "date": "2025-12-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "oecd-ai-sme-adoption-g7-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "OECD: US firms 6.1% AI adoption in core business functions (2024)"
+    },
+    {
+      "date": "2025-12-01",
+      "direction": "down",
+      "sourceIds": [
+        "oecd-ai-sme-adoption-g7-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "OECD: Only 29% of SMEs use genAI in core activities"
+    },
+    {
       "date": "2025-12-15",
       "direction": "up",
       "sourceIds": [
@@ -489,6 +507,24 @@
       "label": "CIO/LinkedIn: AI literacy job postings growing 70%+ year over year"
     },
     {
+      "date": "2026-03-01",
+      "direction": "up",
+      "sourceIds": [
+        "bick-deming-mind-the-gap-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER/Bick et al.: Firm encouragement explains 80% of US-EU adoption gap"
+    },
+    {
+      "date": "2026-03-01",
+      "direction": "up",
+      "sourceIds": [
+        "kpmg-ai-pulse-q1-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "KPMG: 54% of orgs deploying AI agents, Q1 2026"
+    },
+    {
       "date": "2026-03-02",
       "direction": "up",
       "sourceIds": [
@@ -543,22 +579,13 @@
       "label": "Yale (Restrepo): AI firm adoption still relatively low; firms experimenting"
     },
     {
-      "date": "2026-03-01",
+      "date": "2026-03-30",
       "direction": "up",
       "sourceIds": [
-        "bick-deming-mind-the-gap-2026"
+        "kim-koning-mapping-ai-firms-2026"
       ],
       "evidenceTier": 1,
-      "label": "NBER/Bick et al.: Firm encouragement explains 80% of US-EU adoption gap"
-    },
-    {
-      "date": "2026-03-01",
-      "direction": "up",
-      "sourceIds": [
-        "kpmg-ai-pulse-q1-2026"
-      ],
-      "evidenceTier": 2,
-      "label": "KPMG: 54% of orgs deploying AI agents, Q1 2026"
+      "label": "INSEAD/HBS RCT: mapping problem solved, AI use cases +44% (n=515)"
     },
     {
       "date": "2026-04-01",
@@ -577,31 +604,6 @@
       ],
       "evidenceTier": 3,
       "label": "NYT/Census: ~1 in 5 firms used AI in last 2 weeks; 2x in some industries"
-    },
-    {
-      "date": "2025-12-01",
-      "direction": "neutral",
-      "sourceIds": [
-        "oecd-ai-sme-adoption-g7-2025"
-      ],
-      "evidenceTier": 2,
-      "label": "OECD: US firms 6.1% AI adoption in core business functions (2024)"
-    },
-    {
-      "date": "2025-12-01",
-      "direction": "down",
-      "sourceIds": [
-        "oecd-ai-sme-adoption-g7-2025"
-      ],
-      "evidenceTier": 2,
-      "label": "OECD: Only 29% of SMEs use genAI in core activities"
-    },
-    {
-      "date": "2026-03-30",
-      "direction": "up",
-      "sourceIds": ["kim-koning-mapping-ai-firms-2026"],
-      "evidenceTier": 1,
-      "label": "INSEAD/HBS RCT: mapping problem solved, AI use cases +44% (n=515)"
     },
     {
       "date": "2026-04-06",

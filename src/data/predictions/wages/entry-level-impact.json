@@ -377,6 +377,15 @@
       "label": "Dallas Fed: Zero-experience occupations see -0.28pp wage growth from AI exposure"
     },
     {
+      "date": "2026-03-01",
+      "direction": "down",
+      "sourceIds": [
+        "kpmg-ai-pulse-q1-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "KPMG: 64% say AI agents changed entry-level hiring"
+    },
+    {
       "date": "2026-03-05",
       "direction": "down",
       "sourceIds": [
@@ -411,15 +420,6 @@
       ],
       "evidenceTier": 4,
       "label": "Lichtinger & Hosseini: Junior tasks most susceptible to AI displacement"
-    },
-    {
-      "date": "2026-03-01",
-      "direction": "down",
-      "sourceIds": [
-        "kpmg-ai-pulse-q1-2026"
-      ],
-      "evidenceTier": 2,
-      "label": "KPMG: 64% say AI agents changed entry-level hiring"
     },
     {
       "date": "2026-04-02",
