@@ -21,9 +21,9 @@
     },
     {
       "date": "2025-07-01",
-      "value": 21.5,
-      "confidenceLow": 18,
-      "confidenceHigh": 25,
+      "value": -21.5,
+      "confidenceLow": -25,
+      "confidenceHigh": -18,
       "sourceIds": [
         "oecd-white-collar-2025"
       ],
@@ -33,9 +33,9 @@
     },
     {
       "date": "2025-08-01",
-      "value": 2.5,
-      "confidenceLow": 1,
-      "confidenceHigh": 5,
+      "value": -2.5,
+      "confidenceLow": -5,
+      "confidenceHigh": -1,
       "sourceIds": [
         "goldman-ai-workforce-2025"
       ],
@@ -59,9 +59,9 @@
     },
     {
       "date": "2025-10-22",
-      "value": 1,
-      "confidenceLow": 0,
-      "confidenceHigh": 3,
+      "value": -1,
+      "confidenceLow": -3,
+      "confidenceHigh": 0,
       "sourceIds": [
         "gartner-ai-layoffs-2025"
       ],
@@ -71,9 +71,9 @@
     },
     {
       "date": "2025-11-01",
-      "value": 18,
-      "confidenceLow": 6,
-      "confidenceHigh": 30,
+      "value": -18,
+      "confidenceLow": -30,
+      "confidenceHigh": -6,
       "sourceIds": [
         "worldbank-liu-wang-yu-2025"
       ],
@@ -407,7 +407,7 @@
     },
     {
       "date": "2025-09-01",
-      "direction": "up",
+      "direction": "down",
       "sourceIds": [
         "brynjolfsson-hitzig-ai-knowledge-centralization-2025"
       ],
@@ -722,7 +722,7 @@
     },
     {
       "date": "2026-03-10",
-      "direction": "up",
+      "direction": "down",
       "sourceIds": [
         "bizjournals-ai-layoffs-divide-2026"
       ],
@@ -767,7 +767,7 @@
     },
     {
       "date": "2026-03-18",
-      "direction": "up",
+      "direction": "down",
       "sourceIds": [
         "freund-mann-job-transformation-2026"
       ],
@@ -776,7 +776,7 @@
     },
     {
       "date": "2026-03-26",
-      "direction": "up",
+      "direction": "down",
       "sourceIds": [
         "levanon-education-penalty-2026"
       ],
@@ -785,7 +785,7 @@
     },
     {
       "date": "2026-03-26",
-      "direction": "up",
+      "direction": "down",
       "sourceIds": [
         "levanon-education-penalty-2026"
       ],
@@ -803,7 +803,7 @@
     },
     {
       "date": "2026-03-29",
-      "direction": "up",
+      "direction": "down",
       "sourceIds": [
         "han-ai-civilization-work-transformation-2026"
       ],
@@ -839,7 +839,7 @@
     },
     {
       "date": "2026-04-05",
-      "direction": "up",
+      "direction": "down",
       "sourceIds": [
         "bls-employment-situation-mar-2026"
       ],
