@@ -1,22 +1,23 @@
 {
   "id": "displacement-white-collar",
   "slug": "white-collar-professional-displacement",
-  "title": "Employment in High-AI-Exposure Occupations",
-  "description": "Measured employment change in occupations classified as highly AI-exposed (top quartile by AI exposure indices). Most studies find near-zero aggregate displacement but a sharp age gradient: young workers (22-30) in AI-exposed roles show -5% to -13% declines across the US, Sweden, and the Netherlands, while older workers are stable or growing. Finland and Denmark report null results. Data points span both age-specific and all-worker measurements.",
+  "title": "White-Collar Professional Displacement by 2030",
+  "description": "Estimated share of white-collar professional roles facing displacement from AI (higher = more displacement). Most studies find near-zero aggregate displacement but a sharp age gradient: young workers (22-30) in AI-exposed roles show 5-13% displacement across the US, Sweden, and the Netherlands, while older workers are stable or growing. Finland and Denmark report null results. Data points span both age-specific and all-worker measurements.",
   "category": "displacement",
-  "unit": "% employment change",
-  "currentValue": -0.9,
+  "unit": "% of roles displaced",
+  "currentValue": 0.9,
   "timeHorizon": "By 2030",
   "aggregationMethod": "weighted",
   "history": [
     {
       "date": "2025-02-10",
-      "value": 1.2,
+      "value": -1.2,
       "sourceIds": [
         "bls-mlr-ai-employment-projections-2025"
       ],
       "evidenceTier": 1,
       "metricType": "employment",
+      "note": "Paralegal employment projected to grow 1.2% (counter-displacement)",
       "dataType": "projected"
     },
     {
@@ -45,9 +46,9 @@
     },
     {
       "date": "2025-09-08",
-      "value": -0.75,
-      "confidenceLow": -1.5,
-      "confidenceHigh": 0,
+      "value": 0.75,
+      "confidenceLow": 0,
+      "confidenceHigh": 1.5,
       "sourceIds": [
         "pwbm-ai-productivity-2025"
       ],
@@ -83,9 +84,9 @@
     },
     {
       "date": "2025-11-13",
-      "value": -6,
-      "confidenceLow": -9,
-      "confidenceHigh": -3,
+      "value": 6,
+      "confidenceLow": 3,
+      "confidenceHigh": 9,
       "sourceIds": [
         "brynjolfsson-chandar-chen-wc-2025"
       ],
@@ -98,8 +99,8 @@
     {
       "date": "2025-12-15",
       "value": 0,
-      "confidenceLow": 0,
-      "confidenceHigh": 2,
+      "confidenceLow": -2,
+      "confidenceHigh": 0,
       "sourceIds": [
         "nber-ai-legal-impact-2025"
       ],
@@ -109,9 +110,9 @@
     },
     {
       "date": "2026-01-15",
-      "value": -3.6,
-      "confidenceLow": -5,
-      "confidenceHigh": -2,
+      "value": 3.6,
+      "confidenceLow": 2,
+      "confidenceHigh": 5,
       "sourceIds": [
         "imf-skill-gaps-geo-2026"
       ],
@@ -123,8 +124,8 @@
     {
       "date": "2026-01-15",
       "value": 0,
-      "confidenceLow": 0,
-      "confidenceHigh": 2,
+      "confidenceLow": -2,
+      "confidenceHigh": 0,
       "sourceIds": [
         "hbr-ai-potential-layoffs-2026"
       ],
@@ -134,9 +135,9 @@
     },
     {
       "date": "2026-01-22",
-      "value": -13,
-      "confidenceLow": -16,
-      "confidenceHigh": -10,
+      "value": 13,
+      "confidenceLow": 10,
+      "confidenceHigh": 16,
       "sourceIds": [
         "esb-dutch-youth-genai-employment-2026"
       ],
@@ -160,9 +161,9 @@
     },
     {
       "date": "2026-03-13",
-      "value": -2.2,
-      "confidenceLow": -3,
-      "confidenceHigh": -1,
+      "value": 2.2,
+      "confidenceLow": 1,
+      "confidenceHigh": 3,
       "sourceIds": [
         "fed-atl-duke-cfo-ai-productivity-2026"
       ],
@@ -174,9 +175,9 @@
     },
     {
       "date": "2026-03-16",
-      "value": -5.5,
-      "confidenceLow": -7,
-      "confidenceHigh": -4,
+      "value": 5.5,
+      "confidenceLow": 4,
+      "confidenceHigh": 7,
       "sourceIds": [
         "lodefalk-age-gradient-hiring-2026"
       ],
@@ -188,7 +189,7 @@
     },
     {
       "date": "2026-03-25",
-      "value": -15.6,
+      "value": 15.6,
       "sourceIds": [
         "tufts-digital-planet-ai-jobs-risk-2026"
       ],
@@ -200,7 +201,7 @@
   "overlays": [
     {
       "date": "2023-03-26",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "goldman-300m"
       ],
@@ -209,7 +210,7 @@
     },
     {
       "date": "2023-06-14",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "mckinsey-genai-occupations"
       ],
@@ -218,7 +219,7 @@
     },
     {
       "date": "2023-07-14",
-      "direction": "up",
+      "direction": "down",
       "sourceIds": [
         "noy-zhang-science-2023"
       ],
@@ -227,7 +228,7 @@
     },
     {
       "date": "2023-09-01",
-      "direction": "up",
+      "direction": "down",
       "sourceIds": [
         "dellacqua-jagged-frontier-2023"
       ],
@@ -236,7 +237,7 @@
     },
     {
       "date": "2024-01-15",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "eloundou-openai-2024"
       ],
@@ -254,7 +255,7 @@
     },
     {
       "date": "2024-10-05",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "wsj-white-collar-layoffs"
       ],
@@ -263,7 +264,7 @@
     },
     {
       "date": "2024-10-05",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "wsj-white-collar-layoffs"
       ],
@@ -272,7 +273,7 @@
     },
     {
       "date": "2024-11-30",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "boke-gallemore-glaeser-accounting-ai-2024"
       ],
@@ -281,7 +282,7 @@
     },
     {
       "date": "2025-01-01",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "maasoum-lichtinger-seniority-2025"
       ],
@@ -290,7 +291,7 @@
     },
     {
       "date": "2025-01-08",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "workday-ai-skills-revolution-2025"
       ],
@@ -299,7 +300,7 @@
     },
     {
       "date": "2025-01-15",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "chen-hbs-white-collar-2025"
       ],
@@ -308,7 +309,7 @@
     },
     {
       "date": "2025-02-01",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "papanikolaou-schmidt-ai-labor-2025"
       ],
@@ -317,7 +318,7 @@
     },
     {
       "date": "2025-02-01",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "nber-hampole-ai-labor-2025"
       ],
@@ -326,7 +327,7 @@
     },
     {
       "date": "2025-02-10",
-      "direction": "up",
+      "direction": "down",
       "sourceIds": [
         "bls-mlr-ai-employment-projections-2025"
       ],
@@ -335,7 +336,7 @@
     },
     {
       "date": "2025-02-15",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "jpmorgan-10k-ai-2024"
       ],
@@ -344,7 +345,7 @@
     },
     {
       "date": "2025-03-01",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "ey-10k-ai-2024"
       ],
@@ -353,7 +354,7 @@
     },
     {
       "date": "2025-03-01",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "hbs-displacement-complementarity-2025"
       ],
@@ -362,7 +363,7 @@
     },
     {
       "date": "2025-03-15",
-      "direction": "up",
+      "direction": "down",
       "sourceIds": [
         "dellacqua-cybernetic-teammate-2025"
       ],
@@ -371,7 +372,7 @@
     },
     {
       "date": "2025-04-15",
-      "direction": "up",
+      "direction": "down",
       "sourceIds": [
         "dillon-shifting-work-patterns-2025"
       ],
@@ -380,7 +381,7 @@
     },
     {
       "date": "2025-05-20",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "ilo-nask-genai-exposure-2025"
       ],
@@ -389,7 +390,7 @@
     },
     {
       "date": "2025-06-01",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "jpmorgan-white-collar-2025"
       ],
@@ -398,7 +399,7 @@
     },
     {
       "date": "2025-07-01",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "hosseini-brookings-freelancer-2025"
       ],
@@ -425,7 +426,7 @@
     },
     {
       "date": "2025-09-15",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "egon-zehnder-cfo-ai-2025"
       ],
@@ -443,7 +444,7 @@
     },
     {
       "date": "2025-09-15",
-      "direction": "up",
+      "direction": "down",
       "sourceIds": [
         "chatterji-chatgpt-usage-2025"
       ],
@@ -452,7 +453,7 @@
     },
     {
       "date": "2025-09-26",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "papanikolaou-bpea-historical-2025"
       ],
@@ -461,7 +462,7 @@
     },
     {
       "date": "2025-10-10",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "indeed-cnbc-radical-transform"
       ],
@@ -470,7 +471,7 @@
     },
     {
       "date": "2025-11-01",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "fri-white-collar-expert-survey-2025"
       ],
@@ -479,7 +480,7 @@
     },
     {
       "date": "2025-11-13",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "brynjolfsson-chandar-chen-wc-2025"
       ],
@@ -488,7 +489,7 @@
     },
     {
       "date": "2025-11-20",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "gartner-middle-mgmt-2025"
       ],
@@ -497,7 +498,7 @@
     },
     {
       "date": "2025-11-20",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "gartner-middle-mgmt-2025"
       ],
@@ -506,7 +507,7 @@
     },
     {
       "date": "2025-11-25",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "mckinsey-agents-robots-us-2025"
       ],
@@ -515,7 +516,7 @@
     },
     {
       "date": "2025-11-26",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "mit-iceberg-index-2025"
       ],
@@ -524,7 +525,7 @@
     },
     {
       "date": "2025-12-15",
-      "direction": "up",
+      "direction": "down",
       "sourceIds": [
         "stanford-codex-legal-ai"
       ],
@@ -542,7 +543,7 @@
     },
     {
       "date": "2026-01-14",
-      "direction": "up",
+      "direction": "down",
       "sourceIds": [
         "eig-entry-level-ai-displacement-2026"
       ],
@@ -551,7 +552,7 @@
     },
     {
       "date": "2026-01-14",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "workday-ai-productivity-rework-2026"
       ],
@@ -560,7 +561,7 @@
     },
     {
       "date": "2026-01-15",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "cognizant-new-work-2026"
       ],
@@ -569,7 +570,7 @@
     },
     {
       "date": "2026-01-15",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "frank-ai-unemployment-overall-2026"
       ],
@@ -587,7 +588,7 @@
     },
     {
       "date": "2026-01-21",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "althoff-reichardt-task-specific-technical-2026"
       ],
@@ -605,7 +606,7 @@
     },
     {
       "date": "2026-01-22",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "esb-dutch-youth-genai-employment-2026"
       ],
@@ -614,7 +615,7 @@
     },
     {
       "date": "2026-02-01",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "lightcast-fault-lines-2026"
       ],
@@ -623,7 +624,7 @@
     },
     {
       "date": "2026-02-05",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "bls-jolts-december-2025"
       ],
@@ -632,7 +633,7 @@
     },
     {
       "date": "2026-02-05",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "bls-jolts-december-2025"
       ],
@@ -641,7 +642,7 @@
     },
     {
       "date": "2026-02-18",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "cio-it-jobs-ai-skills-2026"
       ],
@@ -650,12 +651,12 @@
     },
     {
       "date": "2026-03-01",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "wang-neubig-agent-benchmarks-2026"
       ],
       "evidenceTier": 1,
-      "label": "Wang et al.: Legal 70%, Management 88% digital work — high automation potential"
+      "label": "Wang et al.: Legal 70%, Management 88% digital work \u2014 high automation potential"
     },
     {
       "date": "2026-03-01",
@@ -677,7 +678,7 @@
     },
     {
       "date": "2026-03-02",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "causalinf-research-publishing-ai-2026"
       ],
@@ -686,7 +687,7 @@
     },
     {
       "date": "2026-03-02",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "causalinf-research-publishing-ai-2026"
       ],
@@ -695,7 +696,7 @@
     },
     {
       "date": "2026-03-02",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "causalinf-research-publishing-ai-2026"
       ],
@@ -709,11 +710,11 @@
         "anthropic-labor-market-impacts-2026"
       ],
       "evidenceTier": 2,
-      "label": "Anthropic: Most AI-exposed workers are educated, higher-paid — no unemployment rise found"
+      "label": "Anthropic: Most AI-exposed workers are educated, higher-paid \u2014 no unemployment rise found"
     },
     {
       "date": "2026-03-07",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "wsj-ai-military-iran-2026"
       ],
@@ -731,7 +732,7 @@
     },
     {
       "date": "2026-03-13",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "fed-atl-duke-cfo-ai-productivity-2026"
       ],
@@ -758,7 +759,7 @@
     },
     {
       "date": "2026-03-16",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "lodefalk-age-gradient-hiring-2026"
       ],
@@ -794,7 +795,7 @@
     },
     {
       "date": "2026-03-27",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "cai-yeckehzaare-mit-ontology-2026"
       ],
@@ -812,12 +813,12 @@
     },
     {
       "date": "2026-03-31",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "fri-ai-economics-survey-2026"
       ],
       "evidenceTier": 1,
-      "label": "FRI: Rapid scenario → white-collar sector share stalls at 20-21% by 2050"
+      "label": "FRI: Rapid scenario \u2192 white-collar sector share stalls at 20-21% by 2050"
     },
     {
       "date": "2026-04-02",
@@ -830,7 +831,7 @@
     },
     {
       "date": "2026-04-03",
-      "direction": "down",
+      "direction": "up",
       "sourceIds": [
         "nyt-casselman-ai-job-threat-2026"
       ],
@@ -979,7 +980,7 @@
     },
     {
       "id": "jpmorgan-10k-ai-2024",
-      "title": "JPMorgan Chase 2024 10-K — AI and Workforce",
+      "title": "JPMorgan Chase 2024 10-K \u2014 AI and Workforce",
       "url": "https://www.sec.gov/edgar/browse/?CIK=0000019617",
       "publisher": "JPMorgan Chase (SEC Filing)",
       "evidenceTier": 1,
@@ -989,7 +990,7 @@
     },
     {
       "id": "ey-10k-ai-2024",
-      "title": "EY Global — AI Transformation in Professional Services",
+      "title": "EY Global \u2014 AI Transformation in Professional Services",
       "url": "https://www.ey.com/en_gl/insights/ai/case-study-how-ey-transformed-with-ai",
       "publisher": "Ernst & Young",
       "evidenceTier": 2,
@@ -1063,7 +1064,7 @@
       "publisher": "Brookings Institution",
       "evidenceTier": 1,
       "datePublished": "2025-07-01",
-      "excerpt": "High-skill freelancers disproportionately affected by AI — top performers were impacted most, contradicting conventional wisdom that expertise insulates workers.",
+      "excerpt": "High-skill freelancers disproportionately affected by AI \u2014 top performers were impacted most, contradicting conventional wisdom that expertise insulates workers.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -1222,7 +1223,7 @@
       "publisher": "MIT / Oak Ridge National Laboratory (Project Iceberg)",
       "evidenceTier": 1,
       "datePublished": "2025-11-26",
-      "excerpt": "Administrative and financial tasks where AI demonstrates capability span five times more wage value than visible tech disruption—and are geographically distributed across all states, not just coastal.",
+      "excerpt": "Administrative and financial tasks where AI demonstrates capability span five times more wage value than visible tech disruption\u2014and are geographically distributed across all states, not just coastal.",
       "dateAdded": "2026-03-15"
     },
     {
@@ -1232,7 +1233,7 @@
       "publisher": "MIT Technology Review",
       "evidenceTier": 1,
       "datePublished": "2025-12-15",
-      "excerpt": "Despite early signs that AI is beginning to affect entry-level workers, labor statistics have yet to show lawyers being displaced. Law graduate employment in 2024 reached 93.4% — the highest rate on record.",
+      "excerpt": "Despite early signs that AI is beginning to affect entry-level workers, labor statistics have yet to show lawyers being displaced. Law graduate employment in 2024 reached 93.4% \u2014 the highest rate on record.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -1242,7 +1243,7 @@
       "publisher": "NBER",
       "evidenceTier": 1,
       "datePublished": "2025-12-15",
-      "excerpt": "AI chatbots had no statistically significant impact on hours worked or wages earned for lawyers. Law graduate employment in 2024 reached 93.4% — the highest rate on record.",
+      "excerpt": "AI chatbots had no statistically significant impact on hours worked or wages earned for lawyers. Law graduate employment in 2024 reached 93.4% \u2014 the highest rate on record.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -1292,7 +1293,7 @@
       "publisher": "Cognizant",
       "evidenceTier": 2,
       "datePublished": "2026-01-15",
-      "excerpt": "Education task exposure jumped from 11% to 49% — a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations.",
+      "excerpt": "Education task exposure jumped from 11% to 49% \u2014 a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -1363,11 +1364,11 @@
       "evidenceTier": 2,
       "datePublished": "2026-02-01",
       "dateAdded": "2026-03-02",
-      "excerpt": "the jobs most vulnerable to AI are elsewhere—including executive assistants, editors, and interpreters/translators (where over 70% of their skills are exposed to AI)."
+      "excerpt": "the jobs most vulnerable to AI are elsewhere\u2014including executive assistants, editors, and interpreters/translators (where over 70% of their skills are exposed to AI)."
     },
     {
       "id": "bls-jolts-december-2025",
-      "title": "Job Openings and Labor Turnover — December 2025",
+      "title": "Job Openings and Labor Turnover \u2014 December 2025",
       "url": "https://www.bls.gov/news.release/jolts.nr0.htm",
       "publisher": "U.S. Bureau of Labor Statistics",
       "evidenceTier": 1,
@@ -1422,7 +1423,7 @@
       "publisher": "CausalInf Substack (Scott Cunningham)",
       "evidenceTier": 4,
       "datePublished": "2026-03-02",
-      "excerpt": "Project APE — Autonomous Policy Evaluation... has produced 204 papers — with 60 added in a single week... These are fully automated papers, like a version 1.0, with no human iteration whatsoever.",
+      "excerpt": "Project APE \u2014 Autonomous Policy Evaluation... has produced 204 papers \u2014 with 60 added in a single week... These are fully automated papers, like a version 1.0, with no human iteration whatsoever.",
       "dateAdded": "2026-03-07"
     },
     {
@@ -1469,10 +1470,10 @@
       "id": "lodefalk-age-gradient-hiring-2026",
       "title": "Same Storm, Different Boats: Generative AI and the Age Gradient in Hiring",
       "url": "https://cms.ratio.se/app/uploads/2026/03/lodefalk_march16_paper_v2-kombinerades.pdf",
-      "publisher": "RATIO Institute / Örebro University (Lodefalk, Löthman, Koch, Engberg)",
+      "publisher": "RATIO Institute / \u00d6rebro University (Lodefalk, L\u00f6thman, Koch, Engberg)",
       "evidenceTier": 1,
       "datePublished": "2026-03-16",
-      "excerpt": "An event study documents an accelerating decline in employment of 22–25-year-olds in high-AI-exposure occupations, reaching 5.5 per cent by early 2025 relative to less exposed occupations within the same employers, while employment of workers over 50 rose by 1.3 per cent.",
+      "excerpt": "An event study documents an accelerating decline in employment of 22\u201325-year-olds in high-AI-exposure occupations, reaching 5.5 per cent by early 2025 relative to less exposed occupations within the same employers, while employment of workers over 50 rose by 1.3 per cent.",
       "dateAdded": "2026-03-17"
     },
     {
@@ -1501,7 +1502,7 @@
       "publisher": "The Burning Glass Institute (Gad Levanon)",
       "evidenceTier": 3,
       "datePublished": "2026-03-26",
-      "excerpt": "In 2022, there was essentially no relationship between a metro area's share of college graduates and where its unemployment rate stood relative to its own history. The correlation was -0.01. Three years later, that correlation is 0.26 — modest but meaningful across more than 300 metropolitan areas.",
+      "excerpt": "In 2022, there was essentially no relationship between a metro area's share of college graduates and where its unemployment rate stood relative to its own history. The correlation was -0.01. Three years later, that correlation is 0.26 \u2014 modest but meaningful across more than 300 metropolitan areas.",
       "dateAdded": "2026-03-27"
     },
     {
@@ -1531,7 +1532,7 @@
       "publisher": "Brookings Metro / Opportunity@Work",
       "evidenceTier": 2,
       "datePublished": "2026-04-02",
-      "excerpt": "Across Destination occupations, 12.9 million workers—or around one-third of all workers in those occupations—may now be highly exposed to AI",
+      "excerpt": "Across Destination occupations, 12.9 million workers\u2014or around one-third of all workers in those occupations\u2014may now be highly exposed to AI",
       "dateAdded": "2026-04-02"
     },
     {
@@ -1546,7 +1547,7 @@
     },
     {
       "id": "bls-employment-situation-mar-2026",
-      "title": "BLS Employment Situation: Total Nonfarm Payrolls — March 2026",
+      "title": "BLS Employment Situation: Total Nonfarm Payrolls \u2014 March 2026",
       "url": "https://data.bls.gov/timeseries/CEU0000000001",
       "publisher": "data.bls.gov",
       "evidenceTier": 1,

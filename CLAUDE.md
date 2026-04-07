@@ -83,7 +83,11 @@ Must be updated with today's date on every ingestion. Hero reads this to display
 
 ## Data Rules
 
-- **Negative values** for job losses, wage declines, rate drops (e.g., -10 for "10% decline")
+- **Sign conventions by category:**
+  - **Displacement charts**: positive = more displacement (higher is worse). A "6% job decline" → value: 6. Employment growth (counter-displacement) → negative value.
+  - **Wage charts**: negative = wage decline (e.g., -10 for "10% decline")
+  - **Adoption/exposure charts**: positive = more adoption/exposure
+- **Overlay directions on displacement charts**: "up" = more displacement (bad), "down" = less displacement (good)
 - **Ranges → midpoints**: "20-30%" → value: 25, confidenceLow: 20, confidenceHigh: 30
 - **Exact quotes only**: every data point must trace to verbatim source text
 - **data_point vs overlay vs proxy**: if stat's unit matches graph's unit → data_point; if it's a known proxy metric with a conversion factor → data_point with `isProxy: true` (see `docs/proxy-metric-methodology.md`); otherwise → overlay. When unsure, default to overlay
