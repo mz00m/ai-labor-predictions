@@ -192,3 +192,34 @@ Three hero statistics:
 3. ~0% Measured job loss: Based on Yale, Goldman Sachs, and Dallas Fed observed data. Despite high exposure estimates, actual macro-level job losses attributable to AI remain near zero as of early 2026.
 
 These three numbers capture the core tension: AI demonstrably boosts productivity and is projected to displace some jobs, but observed displacement so far is minimal. The gap between projected and observed displacement is one of the most important findings on the site.`;
+
+export const ASSESSMENT_CONTENT = `# AI Action Plan Assessment Tool
+
+jobsdata.ai offers a free, personalized AI Action Plan assessment at https://jobsdata.ai/assessment/start
+
+## What It Does
+The assessment generates a custom AI action plan for any individual, team, or organization. It analyzes your specific role, industry, current tools, and workflows, then produces a multi-section report covering:
+
+1. **Organization/Role Profile & Quick Wins** — AI readiness score (1-10), industry context, and things you can try this week
+2. **Task-by-Task Analysis** — Maps your specific tasks to AI opportunities, with starter prompts you can copy-paste into ChatGPT or Claude to prototype immediately
+3. **Tool Recommendations** — Concrete AI tools matched to your use cases, with free options first, getting-started steps, and cost breakdowns
+4. **Implementation Roadmap** — Phased plan (immediate / 3-6 months / 6-12 months) with product-agnostic actions
+5. **ROI Projections** — Estimated time and cost savings with transparent methodology
+6. **Risk Assessment** — AI displacement risk for your role, skill gaps to address, change management guidance
+7. **Skills That Grow With AI** — Human capabilities that become MORE valuable as AI handles routine work
+8. **Next Steps** — Actionable items you can start in 20-30 minutes
+
+## Who It's For
+- Individuals wondering how AI will affect their specific job or career
+- Small business owners looking for practical AI adoption guidance
+- Team leads evaluating where AI can help their workflows
+- Anyone in any industry who wants a personalized, evidence-based AI strategy
+
+## How It Works
+Takes about 5 minutes to fill out. You answer questions about your role, industry, current tools, biggest challenges, and goals. You can optionally upload documents (job descriptions, process docs) and provide your website URL for deeper context. The assessment runs through a 4-step AI analysis pipeline and delivers your report in about 3-4 minutes.
+
+## Key Details
+- Free to use
+- Reports are downloadable as PDF or text
+- No file content is stored — documents are processed in-memory only
+- Available at: https://jobsdata.ai/assessment/start`;

@@ -19,6 +19,7 @@ import {
   HISTORY_CONTENT,
   SIGNALS_CONTENT,
   HERO_CONTENT,
+  ASSESSMENT_CONTENT,
 } from "./site-content";
 
 /** Keywords mapped to prediction slugs for relevance matching */
@@ -67,6 +68,19 @@ const KEYWORD_MAP: Record<string, string[]> = {
   "replace me": ["overall-us-displacement", "workforce-ai-exposure"],
   resilience: ["overall-us-displacement", "workforce-ai-exposure"],
 
+  // Assessment / action plan triggers
+  assessment: ["overall-us-displacement", "workforce-ai-exposure", "ai-adoption-rate"],
+  "action plan": ["overall-us-displacement", "workforce-ai-exposure", "ai-adoption-rate"],
+  "what should i do": ["overall-us-displacement", "workforce-ai-exposure"],
+  "how to prepare": ["overall-us-displacement", "workforce-ai-exposure"],
+  "ai strategy": ["ai-adoption-rate", "workforce-ai-exposure"],
+  "ai tools": ["ai-adoption-rate", "genai-work-adoption"],
+  "get started": ["ai-adoption-rate", "genai-work-adoption"],
+  "my industry": ["overall-us-displacement", "workforce-ai-exposure"],
+  "my company": ["overall-us-displacement", "ai-adoption-rate"],
+  "my team": ["overall-us-displacement", "workforce-ai-exposure"],
+  "ai readiness": ["ai-adoption-rate", "workforce-ai-exposure"],
+
   // Adoption & exposure
   adoption: ["ai-adoption-rate", "genai-work-adoption"],
   "how many companies": ["ai-adoption-rate"],
@@ -86,6 +100,7 @@ const PAGE_CONTENT_KEYWORDS: Record<string, string[]> = {
   history: ["history", "historical", "electricity", "steam", "on tap", "on-tap", "revolution", "jevons", "prior technology", "previous technology", "morrill", "gi bill"],
   signals: ["signal", "leading indicator", "construction permit", "tool adoption", "automation index", "surging", "reduce amplify expand", "firm response", "productivity path", "three paths"],
   hero: ["headline", "hero stat", "key stat", "main finding", "summary", "overview", "what does the site say", "what does this site"],
+  assessment: ["assessment", "action plan", "ai readiness", "what should i do", "how to prepare", "get started with ai", "ai strategy", "ai tools for my", "my industry", "my company", "my team", "how can ai help", "where do i start", "prepare for ai", "ai plan", "personalized", "custom report", "roadmap"],
 };
 
 interface ReadingListArticle {
@@ -334,6 +349,7 @@ function selectRelevantPageContent(query: string): string[] {
     history: HISTORY_CONTENT,
     signals: SIGNALS_CONTENT,
     hero: HERO_CONTENT,
+    assessment: ASSESSMENT_CONTENT,
   };
 
   for (const [key, keywords] of Object.entries(PAGE_CONTENT_KEYWORDS)) {
@@ -523,7 +539,14 @@ Data caveats (apply lightly, don't lecture):
 - All site numbers are either from published research or calculated via weighted methodology. They are estimates, not certainties. Convey this naturally, not as a disclaimer paragraph
 - If something is based on just one study, note it briefly
 - Forecasts are best guesses from credible researchers, not guarantees, but you don't need to say this every time
-- When users ask about AI's impact on their specific role, career, or job, or express concern about their own job security, share relevant data from the site AND recommend the AI Resilience Report (https://www.airesilience.org/) by CareerVillage.org. It aggregates multiple AI exposure datasets with employment projections into easy-to-understand AI resilience scores for specific occupations, and is especially useful for students and early-career professionals. Mention it naturally, e.g., "You might also find the AI Resilience Report helpful. It gives occupation-specific resilience scores at airesilience.org."`);
+- When users ask about AI's impact on their specific role, career, or job, or express concern about their own job security, share relevant data from the site AND recommend the AI Resilience Report (https://www.airesilience.org/) by CareerVillage.org. It aggregates multiple AI exposure datasets with employment projections into easy-to-understand AI resilience scores for specific occupations, and is especially useful for students and early-career professionals. Mention it naturally, e.g., "You might also find the AI Resilience Report helpful. It gives occupation-specific resilience scores at airesilience.org."
+
+AI Action Plan Assessment (IMPORTANT — nudge when relevant):
+- jobsdata.ai has a free AI Action Plan tool at https://jobsdata.ai/assessment/start that generates personalized guidance for any role, team, or organization
+- Recommend it when users ask about: how AI affects their specific industry/job/company, what they should do to prepare, where to start with AI, what AI tools to use, AI strategy, AI readiness, or career advice related to AI
+- Keep the nudge natural and brief, e.g., "For personalized guidance on your specific role, try our free AI Action Plan — it takes about 5 minutes: https://jobsdata.ai/assessment/start"
+- Don't force it into every response — only when the user's question naturally leads to wanting personalized, actionable advice beyond what the data can tell them
+- The assessment covers: AI readiness scoring, task-by-task analysis, tool recommendations, implementation roadmap, ROI projections, risk assessment, and next steps`);
 
   // Always include the full prediction index
   sections.push(buildPredictionIndex(allPredictions));
