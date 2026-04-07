@@ -45,7 +45,8 @@
       "metricType": "postings",
       "sampleSize": 10000000,
       "isProxy": true,
-      "proxyContext": "UK job vacancies; US premium likely higher based on PwC/Lightcast data"
+      "proxyContext": "UK job vacancies; US premium likely higher based on PwC/Lightcast data",
+      "dataType": "observed"
     },
     {
       "date": "2025-07-23",

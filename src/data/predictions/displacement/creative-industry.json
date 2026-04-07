@@ -32,7 +32,8 @@
       ],
       "evidenceTier": 2,
       "metricType": "survey",
-      "sampleSize": 300
+      "sampleSize": 300,
+      "dataType": "observed"
     },
     {
       "date": "2024-05-20",
