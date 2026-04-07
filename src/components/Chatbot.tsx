@@ -193,13 +193,22 @@ function renderInline(text: string): React.ReactNode {
         </a>
       );
     } else if (match[6]) {
-      // Raw URL
+      // Raw URL — strip trailing punctuation that's not part of the URL
+      let url = match[6];
+      let trailing = "";
+      if (/[.,:;!?]$/.test(url)) {
+        trailing = url.slice(-1);
+        url = url.slice(0, -1);
+      }
       parts.push(
-        <a key={`l-${match.index}`} href={match[6]} target="_blank" rel="noopener noreferrer"
+        <a key={`l-${match.index}`} href={url} target="_blank" rel="noopener noreferrer"
           className="text-[var(--accent)] underline underline-offset-2 hover:text-[#4b50e5] break-all">
-          {match[6]}
+          {url}
         </a>
       );
+      if (trailing) {
+        parts.push(<span key={`tp-${match.index}`}>{trailing}</span>);
+      }
     }
 
     lastIndex = match.index + match[0].length;
