@@ -1,0 +1,81 @@
+# .github/workflows/factcheck_agent.yml
+#
+# Runs the monthly fact-check agent on the 1st of each month at 9am ET.
+# Commits the report and opens a PR for review.
+
+name: Monthly Fact-Check Agent
+
+on:
+  schedule:
+    - cron: '0 13 1 * *'  # 9am ET (1pm UTC) on the 1st of each month
+  workflow_dispatch:  # manual trigger
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  factcheck:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45  # fact-checking takes longer
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install anthropic
+
+      - name: Run fact-check agent
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          JOBSDATA_REPO_URL: ${{ github.server_url }}/${{ github.repository }}.git
+        run: python agents/factcheck_agent.py
+
+      - name: Check for report
+        id: check
+        run: |
+          if [ -n "$(ls agents/reports/*.md 2>/dev/null)" ]; then
+            echo "has_report=true" >> $GITHUB_OUTPUT
+            echo "report_file=$(ls -t agents/reports/*.md | head -1)" >> $GITHUB_OUTPUT
+          else
+            echo "has_report=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create PR with report
+        if: steps.check.outputs.has_report == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          DATE=$(date +%Y-%m-%d)
+          BRANCH="factcheck-${DATE}"
+
+          git checkout -b "$BRANCH"
+          git add agents/reports/
+          git commit -m "factcheck: monthly data integrity report ${DATE}
+
+          Automated verification by the monthly fact-check agent.
+
+          Co-Authored-By: Claude Sonnet <noreply@anthropic.com>"
+
+          git push origin "$BRANCH"
+
+          gh pr create \
+            --title "Fact-check report: ${DATE}" \
+            --body "$(cat <<'EOF'
+          ## Monthly Fact-Check Report
+
+          Automated verification of all jobsdata.ai prediction data.
+
+          Review the report for:
+          - **Critical issues** — incorrect data, math errors (fix immediately)
+          - **Broken URLs** — sources that need new links
+          - **Stale data** — graphs that need fresh sources
+          - **Registry inconsistencies** — mismatched counts or orphaned entries
+
+          **Health scorecard is at the top of the report.**
+          EOF
+          )"

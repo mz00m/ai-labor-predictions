@@ -1,0 +1,80 @@
+# .github/workflows/research_agent.yml
+#
+# Runs the weekly AI labor research agent every Monday at 8am ET.
+# Commits the digest to the repo and opens a PR for review.
+
+name: Weekly Research Agent
+
+on:
+  schedule:
+    - cron: '0 12 * * 1'  # 8am ET (noon UTC) every Monday
+  workflow_dispatch:  # manual trigger
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install anthropic
+
+      - name: Run research agent
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          JOBSDATA_REPO_URL: ${{ github.server_url }}/${{ github.repository }}.git
+        run: python agents/research_agent.py
+
+      - name: Check for new digest
+        id: check
+        run: |
+          if [ -n "$(ls agents/digests/*.md 2>/dev/null)" ]; then
+            echo "has_digest=true" >> $GITHUB_OUTPUT
+            echo "digest_file=$(ls -t agents/digests/*.md | head -1)" >> $GITHUB_OUTPUT
+          else
+            echo "has_digest=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create PR with digest
+        if: steps.check.outputs.has_digest == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          DATE=$(date +%Y-%m-%d)
+          BRANCH="research-digest-${DATE}"
+
+          git checkout -b "$BRANCH"
+          git add agents/digests/
+          git commit -m "research: weekly AI labor digest ${DATE}
+
+          Automated research scan by the weekly research agent.
+
+          Co-Authored-By: Claude Sonnet <noreply@anthropic.com>"
+
+          git push origin "$BRANCH"
+
+          gh pr create \
+            --title "Research digest: ${DATE}" \
+            --body "$(cat <<'EOF'
+          ## Weekly Research Digest
+
+          Automated scan for new AI labor market research.
+
+          Review the digest file for:
+          - New sources to ingest
+          - Priority recommendations
+          - Graph mapping suggestions
+
+          **Next step:** Review findings and run source-ingestion for any approved sources.
+          EOF
+          )"
