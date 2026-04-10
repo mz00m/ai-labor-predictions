@@ -320,6 +320,9 @@ git clone https://x-access-token:{GITHUB_TOKEN}@github.com/mz00m/ai-labor-predic
                         case "agent.tool_use":
                             tool_calls.append(event.name)
                             print(".", end="", flush=True)
+                        case "session.error":
+                            error_msg = getattr(event, "error", getattr(event, "message", str(event)))
+                            print(f"\n  Session error: {error_msg}", flush=True)
                         case "session.status_idle":
                             print(" done.")
                             break
@@ -336,6 +339,9 @@ git clone https://x-access-token:{GITHUB_TOKEN}@github.com/mz00m/ai-labor-predic
                 raise
 
     print(f"  Tool calls made: {len(tool_calls)}")
+
+    if not tool_calls:
+        print("  Warning: agent made 0 tool calls — session may have errored.")
 
     # Retrieve the report
     print("  Retrieving report...")
