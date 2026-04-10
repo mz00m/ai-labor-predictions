@@ -407,15 +407,18 @@ export default function ReportPage() {
                   )}
                   {/* Example tools */}
                   {task.exampleTools && task.exampleTools.length > 0 && (
-                    <div className="flex flex-wrap gap-2 pt-1">
-                      {task.exampleTools.map((t, j) => (
-                        <span key={j} className="inline-flex items-center gap-1 text-[12px] bg-gray-100 text-gray-600 rounded px-2 py-0.5">
-                          {t.url ? (
-                            <a href={t.url} target="_blank" rel="noopener noreferrer" className="text-[#5C61F6] hover:underline">{t.name}</a>
-                          ) : t.name}
-                          {t.free && <span className="text-green-600 text-[10px] font-bold">FREE</span>}
-                        </span>
-                      ))}
+                    <div className="pt-1">
+                      <span className="text-[11px] font-bold uppercase tracking-wider text-gray-400">Tools</span>
+                      <div className="flex flex-wrap gap-2 mt-1">
+                        {task.exampleTools.map((t, j) => (
+                          <span key={j} className="inline-flex items-center gap-1.5 text-[12px] bg-gray-50 border border-gray-200 text-gray-700 rounded-md px-2.5 py-1">
+                            {t.url ? (
+                              <a href={t.url} target="_blank" rel="noopener noreferrer" className="text-[#5C61F6] font-medium hover:underline">{t.name} &rarr;</a>
+                            ) : <span className="font-medium">{t.name}</span>}
+                            {t.free && <span className="text-green-600 text-[10px] font-bold bg-green-50 border border-green-200 rounded px-1 py-px">FREE</span>}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   )}
                   {/* Getting started */}
@@ -486,23 +489,27 @@ export default function ReportPage() {
                       {/* Specific products */}
                       {tool.specificProducts && tool.specificProducts.length > 0 && (
                         <div>
-                          <Label>Products to consider</Label>
-                          <div className="space-y-2 mt-1">
+                          <Label>Tools to try</Label>
+                          <div className="grid gap-2 mt-1">
                             {tool.specificProducts.map((p, j) => (
-                              <div key={j} className="flex items-start justify-between bg-gray-50 rounded px-3 py-2">
-                                <div>
-                                  {p.url ? (
-                                    <a href={p.url} target="_blank" rel="noopener noreferrer" className="text-[13px] font-medium text-[#5C61F6] hover:underline">
-                                      {p.name} &rarr;
-                                    </a>
-                                  ) : (
-                                    <span className="text-[13px] font-medium text-gray-900">{p.name}</span>
-                                  )}
+                              <div key={j} className="bg-gray-50 border border-gray-100 rounded-lg px-4 py-3">
+                                <div className="flex items-center justify-between mb-1">
+                                  <div className="flex items-center gap-2">
+                                    {p.url ? (
+                                      <a href={p.url} target="_blank" rel="noopener noreferrer" className="text-[13px] font-semibold text-[#5C61F6] hover:underline">
+                                        {p.name} &rarr;
+                                      </a>
+                                    ) : (
+                                      <span className="text-[13px] font-semibold text-gray-900">{p.name}</span>
+                                    )}
+                                    {p.free && (
+                                      <span className="text-green-600 font-bold text-[10px] bg-green-50 border border-green-200 rounded px-1.5 py-0.5">FREE TIER</span>
+                                    )}
+                                  </div>
                                 </div>
-                                <div className="flex items-center gap-2 text-[12px]">
-                                  {p.pricing && <span className="text-gray-400">{p.pricing}</span>}
-                                  {p.free && <span className="text-green-600 font-bold text-[10px] bg-green-50 border border-green-200 rounded px-1.5 py-0.5">FREE TIER</span>}
-                                </div>
+                                {p.pricing && (
+                                  <p className="text-[12px] text-gray-500">{p.pricing}</p>
+                                )}
                               </div>
                             ))}
                           </div>
@@ -542,9 +549,33 @@ export default function ReportPage() {
                           </div>
                         </div>
                       )}
+                      {/* What it replaces + learning time + first task */}
+                      {(tool.whatItReplaces || tool.learningTime || tool.firstTask) && (
+                        <div className="bg-gray-50 border border-gray-100 rounded-lg px-3 py-2.5 space-y-1.5">
+                          {tool.whatItReplaces && (
+                            <p className="text-[12px] text-gray-600"><span className="font-semibold text-gray-700">Replaces:</span> {tool.whatItReplaces}</p>
+                          )}
+                          {tool.learningTime && (
+                            <p className="text-[12px] text-gray-600"><span className="font-semibold text-gray-700">Time to learn:</span> {tool.learningTime}</p>
+                          )}
+                          {tool.firstTask && (
+                            <p className="text-[12px] text-gray-600"><span className="font-semibold text-gray-700">Try first:</span> {tool.firstTask}</p>
+                          )}
+                        </div>
+                      )}
                       {/* Meta row */}
                       <div className="flex flex-wrap gap-x-6 gap-y-1 text-[12px] text-gray-400 pt-1 border-t border-gray-100">
                         <span>Effort: <b className="text-gray-600">{tool.implementationEffort}</b></span>
+                        {tool.recommendationTier && (
+                          <span>Tier: <b className="text-gray-600">{
+                            tool.recommendationTier === "start-here" ? "Start here" :
+                            tool.recommendationTier === "add-next" ? "Add next" :
+                            "Consider later"
+                          }</b></span>
+                        )}
+                        {tool.upgradeSignal && (
+                          <span>Upgrade when: <b className="text-gray-600">{tool.upgradeSignal}</b></span>
+                        )}
                       </div>
                     </div>
                   </div>

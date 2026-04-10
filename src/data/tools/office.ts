@@ -11,6 +11,7 @@ export const OFFICE_TOOLS: ToolEntry[] = [
   {
     id: "microsoft-copilot-365",
     name: "Microsoft 365 Copilot",
+    url: "https://www.microsoft.com/en-us/microsoft-365/copilot",
     category: "office",
     subcategory: "productivity-suite",
     description:
@@ -46,6 +47,7 @@ export const OFFICE_TOOLS: ToolEntry[] = [
   {
     id: "google-gemini-workspace",
     name: "Gemini for Google Workspace",
+    url: "https://workspace.google.com/solutions/ai",
     category: "office",
     subcategory: "productivity-suite",
     description:
@@ -80,6 +82,7 @@ export const OFFICE_TOOLS: ToolEntry[] = [
   {
     id: "notion-ai",
     name: "Notion AI",
+    url: "https://www.notion.so/product/ai",
     category: "office",
     subcategory: "knowledge-management",
     description:
@@ -114,6 +117,7 @@ export const OFFICE_TOOLS: ToolEntry[] = [
   {
     id: "chatgpt-team",
     name: "ChatGPT Team / Enterprise",
+    url: "https://openai.com/chatgpt/team",
     category: "office",
     subcategory: "general-ai-assistant",
     description:
@@ -148,6 +152,7 @@ export const OFFICE_TOOLS: ToolEntry[] = [
   {
     id: "claude-for-work",
     name: "Claude for Work",
+    url: "https://www.anthropic.com/claude/team",
     category: "office",
     subcategory: "general-ai-assistant",
     description:
@@ -183,6 +188,7 @@ export const OFFICE_TOOLS: ToolEntry[] = [
   {
     id: "grammarly",
     name: "Grammarly",
+    url: "https://www.grammarly.com",
     category: "office",
     subcategory: "writing-assistant",
     description:
@@ -223,6 +229,7 @@ export const OFFICE_TOOLS: ToolEntry[] = [
   {
     id: "otter-ai",
     name: "Otter.ai",
+    url: "https://otter.ai",
     category: "office",
     subcategory: "meeting-assistant",
     description:
@@ -257,6 +264,7 @@ export const OFFICE_TOOLS: ToolEntry[] = [
   {
     id: "calendly",
     name: "Calendly",
+    url: "https://calendly.com",
     category: "office",
     subcategory: "scheduling",
     description:
@@ -300,6 +308,7 @@ export const OFFICE_TOOLS: ToolEntry[] = [
   {
     id: "reclaim-ai",
     name: "Reclaim.ai",
+    url: "https://reclaim.ai",
     category: "office",
     subcategory: "scheduling",
     description:
@@ -343,6 +352,7 @@ export const OFFICE_TOOLS: ToolEntry[] = [
   {
     id: "superhuman",
     name: "Superhuman",
+    url: "https://superhuman.com",
     category: "office",
     subcategory: "email",
     description:

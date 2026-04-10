@@ -11,6 +11,7 @@ export const BILLING_TOOLS: ToolEntry[] = [
   {
     id: "quickbooks-online",
     name: "QuickBooks Online",
+    url: "https://quickbooks.intuit.com",
     category: "billing",
     subcategory: "accounting",
     description:
@@ -56,6 +57,7 @@ export const BILLING_TOOLS: ToolEntry[] = [
   {
     id: "xero",
     name: "Xero",
+    url: "https://www.xero.com",
     category: "billing",
     subcategory: "accounting",
     description:
@@ -100,6 +102,7 @@ export const BILLING_TOOLS: ToolEntry[] = [
   {
     id: "bill-com",
     name: "BILL (Bill.com)",
+    url: "https://www.bill.com",
     category: "billing",
     subcategory: "accounts-payable",
     description:
@@ -142,6 +145,7 @@ export const BILLING_TOOLS: ToolEntry[] = [
   {
     id: "stripe-billing",
     name: "Stripe Billing",
+    url: "https://stripe.com/billing",
     category: "billing",
     subcategory: "payment-processing",
     description:
@@ -183,6 +187,7 @@ export const BILLING_TOOLS: ToolEntry[] = [
   {
     id: "freshbooks",
     name: "FreshBooks",
+    url: "https://www.freshbooks.com",
     category: "billing",
     subcategory: "invoicing",
     description:
@@ -225,6 +230,7 @@ export const BILLING_TOOLS: ToolEntry[] = [
   {
     id: "ramp",
     name: "Ramp",
+    url: "https://ramp.com",
     category: "billing",
     subcategory: "expense-management",
     description:
@@ -267,6 +273,7 @@ export const BILLING_TOOLS: ToolEntry[] = [
   {
     id: "melio",
     name: "Melio",
+    url: "https://www.meliopayments.com",
     category: "billing",
     subcategory: "accounts-payable",
     description:
@@ -301,6 +308,7 @@ export const BILLING_TOOLS: ToolEntry[] = [
   {
     id: "brex",
     name: "Brex",
+    url: "https://www.brex.com",
     category: "billing",
     subcategory: "expense-management",
     description:

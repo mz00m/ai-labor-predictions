@@ -269,6 +269,9 @@ export function formatToolsForPrompt(
       lines.push(
         `- **${t.name}** (${t.subcategory}) — ${t.pricingDetails}`
       );
+      if (t.url) {
+        lines.push(`  URL: ${t.url}`);
+      }
       lines.push(`  ${t.description}`);
       lines.push(
         `  Automates: ${t.automationCapabilities.slice(0, 3).join("; ")}`

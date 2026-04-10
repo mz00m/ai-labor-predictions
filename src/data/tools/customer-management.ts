@@ -11,6 +11,7 @@ export const CUSTOMER_MANAGEMENT_TOOLS: ToolEntry[] = [
   {
     id: "hubspot-crm",
     name: "HubSpot CRM",
+    url: "https://www.hubspot.com/products/crm",
     category: "customer-management",
     subcategory: "crm",
     description:
@@ -55,6 +56,7 @@ export const CUSTOMER_MANAGEMENT_TOOLS: ToolEntry[] = [
   {
     id: "salesforce",
     name: "Salesforce",
+    url: "https://www.salesforce.com",
     category: "customer-management",
     subcategory: "crm",
     description:
@@ -98,6 +100,7 @@ export const CUSTOMER_MANAGEMENT_TOOLS: ToolEntry[] = [
   {
     id: "intercom",
     name: "Intercom",
+    url: "https://www.intercom.com",
     category: "customer-management",
     subcategory: "customer-messaging",
     description:
@@ -141,6 +144,7 @@ export const CUSTOMER_MANAGEMENT_TOOLS: ToolEntry[] = [
   {
     id: "zendesk",
     name: "Zendesk",
+    url: "https://www.zendesk.com",
     category: "customer-management",
     subcategory: "support-ticketing",
     description:
@@ -185,6 +189,7 @@ export const CUSTOMER_MANAGEMENT_TOOLS: ToolEntry[] = [
   {
     id: "freshdesk",
     name: "Freshdesk",
+    url: "https://www.freshworks.com/freshdesk",
     category: "customer-management",
     subcategory: "support-ticketing",
     description:
@@ -228,6 +233,7 @@ export const CUSTOMER_MANAGEMENT_TOOLS: ToolEntry[] = [
   {
     id: "pipedrive",
     name: "Pipedrive",
+    url: "https://www.pipedrive.com",
     category: "customer-management",
     subcategory: "sales-crm",
     description:
@@ -272,6 +278,7 @@ export const CUSTOMER_MANAGEMENT_TOOLS: ToolEntry[] = [
   {
     id: "tidio",
     name: "Tidio",
+    url: "https://www.tidio.com",
     category: "customer-management",
     subcategory: "chatbot-live-chat",
     description:
@@ -315,6 +322,7 @@ export const CUSTOMER_MANAGEMENT_TOOLS: ToolEntry[] = [
   {
     id: "typeform",
     name: "Typeform",
+    url: "https://www.typeform.com",
     category: "customer-management",
     subcategory: "forms-surveys",
     description:
@@ -359,6 +367,7 @@ export const CUSTOMER_MANAGEMENT_TOOLS: ToolEntry[] = [
   {
     id: "calendly-routing",
     name: "Calendly (Sales Routing)",
+    url: "https://calendly.com",
     category: "customer-management",
     subcategory: "lead-routing",
     description:

@@ -119,6 +119,8 @@ export interface ToolEntry {
   integrations?: string[];
   /** Known limitations or caveats */
   limitations?: string[];
+  /** Product URL */
+  url?: string;
   /** Date this entry was last verified (YYYY-MM-DD) */
   lastVerified: string;
 }

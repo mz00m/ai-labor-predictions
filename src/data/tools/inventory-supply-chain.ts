@@ -11,6 +11,7 @@ export const INVENTORY_SUPPLY_CHAIN_TOOLS: ToolEntry[] = [
   {
     id: "cin7",
     name: "Cin7 (Core & Omni)",
+    url: "https://www.cin7.com",
     category: "inventory-supply-chain",
     subcategory: "inventory-management",
     description:
@@ -53,6 +54,7 @@ export const INVENTORY_SUPPLY_CHAIN_TOOLS: ToolEntry[] = [
   {
     id: "fishbowl",
     name: "Fishbowl",
+    url: "https://www.fishbowlinventory.com",
     category: "inventory-supply-chain",
     subcategory: "inventory-management",
     description:
@@ -94,6 +96,7 @@ export const INVENTORY_SUPPLY_CHAIN_TOOLS: ToolEntry[] = [
   {
     id: "shipstation",
     name: "ShipStation",
+    url: "https://www.shipstation.com",
     category: "inventory-supply-chain",
     subcategory: "shipping-fulfillment",
     description:
@@ -139,6 +142,7 @@ export const INVENTORY_SUPPLY_CHAIN_TOOLS: ToolEntry[] = [
   {
     id: "sortly",
     name: "Sortly",
+    url: "https://www.sortly.com",
     category: "inventory-supply-chain",
     subcategory: "asset-inventory-tracking",
     description:
@@ -178,6 +182,7 @@ export const INVENTORY_SUPPLY_CHAIN_TOOLS: ToolEntry[] = [
   {
     id: "toast-inventory",
     name: "Toast (Inventory Module)",
+    url: "https://pos.toasttab.com",
     category: "inventory-supply-chain",
     subcategory: "restaurant-inventory",
     description:
@@ -212,6 +217,7 @@ export const INVENTORY_SUPPLY_CHAIN_TOOLS: ToolEntry[] = [
   {
     id: "katana",
     name: "Katana",
+    url: "https://katanamrp.com",
     category: "inventory-supply-chain",
     subcategory: "manufacturing-erp",
     description:
@@ -252,6 +258,7 @@ export const INVENTORY_SUPPLY_CHAIN_TOOLS: ToolEntry[] = [
   {
     id: "ordoro",
     name: "Ordoro",
+    url: "https://www.ordoro.com",
     category: "inventory-supply-chain",
     subcategory: "multichannel-fulfillment",
     description:

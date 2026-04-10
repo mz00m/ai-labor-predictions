@@ -11,6 +11,7 @@ export const DATA_ANALYTICS_TOOLS: ToolEntry[] = [
   {
     id: "microsoft-power-bi",
     name: "Microsoft Power BI",
+    url: "https://www.microsoft.com/en-us/power-platform/products/power-bi",
     category: "data-analytics",
     subcategory: "bi-dashboard",
     description:
@@ -55,6 +56,7 @@ export const DATA_ANALYTICS_TOOLS: ToolEntry[] = [
   {
     id: "tableau",
     name: "Tableau",
+    url: "https://www.tableau.com",
     category: "data-analytics",
     subcategory: "bi-dashboard",
     description:
@@ -99,6 +101,7 @@ export const DATA_ANALYTICS_TOOLS: ToolEntry[] = [
   {
     id: "looker-studio",
     name: "Looker Studio (Google)",
+    url: "https://lookerstudio.google.com",
     category: "data-analytics",
     subcategory: "reporting",
     description:
@@ -143,6 +146,7 @@ export const DATA_ANALYTICS_TOOLS: ToolEntry[] = [
   {
     id: "databox",
     name: "Databox",
+    url: "https://databox.com",
     category: "data-analytics",
     subcategory: "kpi-tracking",
     description:
@@ -187,6 +191,7 @@ export const DATA_ANALYTICS_TOOLS: ToolEntry[] = [
   {
     id: "airtable",
     name: "Airtable",
+    url: "https://www.airtable.com",
     category: "data-analytics",
     subcategory: "spreadsheet-database",
     description:
@@ -231,6 +236,7 @@ export const DATA_ANALYTICS_TOOLS: ToolEntry[] = [
   {
     id: "rows",
     name: "Rows",
+    url: "https://rows.com",
     category: "data-analytics",
     subcategory: "ai-spreadsheet",
     description:
@@ -273,6 +279,7 @@ export const DATA_ANALYTICS_TOOLS: ToolEntry[] = [
   {
     id: "julius-ai",
     name: "Julius AI",
+    url: "https://julius.ai",
     category: "data-analytics",
     subcategory: "ai-data-analysis",
     description:

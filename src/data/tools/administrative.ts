@@ -11,6 +11,7 @@ export const ADMINISTRATIVE_TOOLS: ToolEntry[] = [
   {
     id: "zapier",
     name: "Zapier",
+    url: "https://zapier.com",
     category: "administrative",
     subcategory: "workflow-automation",
     description:
@@ -54,6 +55,7 @@ export const ADMINISTRATIVE_TOOLS: ToolEntry[] = [
   {
     id: "make",
     name: "Make (formerly Integromat)",
+    url: "https://www.make.com",
     category: "administrative",
     subcategory: "workflow-automation",
     description:
@@ -96,6 +98,7 @@ export const ADMINISTRATIVE_TOOLS: ToolEntry[] = [
   {
     id: "gusto",
     name: "Gusto",
+    url: "https://gusto.com",
     category: "administrative",
     subcategory: "hr-payroll",
     description:
@@ -140,6 +143,7 @@ export const ADMINISTRATIVE_TOOLS: ToolEntry[] = [
   {
     id: "rippling",
     name: "Rippling",
+    url: "https://www.rippling.com",
     category: "administrative",
     subcategory: "hr-it-finance",
     description:
@@ -183,6 +187,7 @@ export const ADMINISTRATIVE_TOOLS: ToolEntry[] = [
   {
     id: "docusign",
     name: "DocuSign",
+    url: "https://www.docusign.com",
     category: "administrative",
     subcategory: "document-management",
     description:
@@ -226,6 +231,7 @@ export const ADMINISTRATIVE_TOOLS: ToolEntry[] = [
   {
     id: "asana",
     name: "Asana",
+    url: "https://asana.com",
     category: "administrative",
     subcategory: "project-management",
     description:
@@ -268,6 +274,7 @@ export const ADMINISTRATIVE_TOOLS: ToolEntry[] = [
   {
     id: "clickup",
     name: "ClickUp",
+    url: "https://clickup.com",
     category: "administrative",
     subcategory: "project-management",
     description:
@@ -311,6 +318,7 @@ export const ADMINISTRATIVE_TOOLS: ToolEntry[] = [
   {
     id: "pandadoc",
     name: "PandaDoc",
+    url: "https://www.pandadoc.com",
     category: "administrative",
     subcategory: "document-management",
     description:
@@ -354,6 +362,7 @@ export const ADMINISTRATIVE_TOOLS: ToolEntry[] = [
   {
     id: "trainual",
     name: "Trainual",
+    url: "https://trainual.com",
     category: "administrative",
     subcategory: "training-sops",
     description:

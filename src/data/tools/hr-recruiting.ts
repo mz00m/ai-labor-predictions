@@ -11,6 +11,7 @@ export const HR_RECRUITING_TOOLS: ToolEntry[] = [
   {
     id: "greenhouse",
     name: "Greenhouse",
+    url: "https://www.greenhouse.com",
     category: "hr-recruiting",
     subcategory: "applicant-tracking",
     description:
@@ -56,6 +57,7 @@ export const HR_RECRUITING_TOOLS: ToolEntry[] = [
   {
     id: "breezy-hr",
     name: "Breezy HR",
+    url: "https://breezy.hr",
     category: "hr-recruiting",
     subcategory: "applicant-tracking",
     description:
@@ -100,6 +102,7 @@ export const HR_RECRUITING_TOOLS: ToolEntry[] = [
   {
     id: "bamboohr",
     name: "BambooHR",
+    url: "https://www.bamboohr.com",
     category: "hr-recruiting",
     subcategory: "hris",
     description:
@@ -143,6 +146,7 @@ export const HR_RECRUITING_TOOLS: ToolEntry[] = [
   {
     id: "deel",
     name: "Deel",
+    url: "https://www.deel.com",
     category: "hr-recruiting",
     subcategory: "global-hr",
     description:
@@ -185,6 +189,7 @@ export const HR_RECRUITING_TOOLS: ToolEntry[] = [
   {
     id: "lattice",
     name: "Lattice",
+    url: "https://lattice.com",
     category: "hr-recruiting",
     subcategory: "performance-management",
     description:
@@ -228,6 +233,7 @@ export const HR_RECRUITING_TOOLS: ToolEntry[] = [
   {
     id: "homebase",
     name: "Homebase",
+    url: "https://joinhomebase.com",
     category: "hr-recruiting",
     subcategory: "scheduling-time",
     description:
@@ -270,6 +276,7 @@ export const HR_RECRUITING_TOOLS: ToolEntry[] = [
   {
     id: "lever",
     name: "Lever",
+    url: "https://www.lever.co",
     category: "hr-recruiting",
     subcategory: "applicant-tracking",
     description:

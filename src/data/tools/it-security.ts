@@ -11,6 +11,7 @@ export const IT_SECURITY_TOOLS: ToolEntry[] = [
   {
     id: "1password-business",
     name: "1Password Business",
+    url: "https://1password.com/business",
     category: "it-security",
     subcategory: "password-management",
     description:
@@ -54,6 +55,7 @@ export const IT_SECURITY_TOOLS: ToolEntry[] = [
   {
     id: "jumpcloud",
     name: "JumpCloud",
+    url: "https://jumpcloud.com",
     category: "it-security",
     subcategory: "identity-device-management",
     description:
@@ -97,6 +99,7 @@ export const IT_SECURITY_TOOLS: ToolEntry[] = [
   {
     id: "kandji",
     name: "Kandji",
+    url: "https://www.kandji.io",
     category: "it-security",
     subcategory: "device-management",
     description:
@@ -138,6 +141,7 @@ export const IT_SECURITY_TOOLS: ToolEntry[] = [
   {
     id: "crowdstrike",
     name: "CrowdStrike Falcon Go",
+    url: "https://www.crowdstrike.com",
     category: "it-security",
     subcategory: "endpoint-security",
     description:
@@ -181,6 +185,7 @@ export const IT_SECURITY_TOOLS: ToolEntry[] = [
   {
     id: "kolide",
     name: "Kolide (by 1Password)",
+    url: "https://www.kolide.com",
     category: "it-security",
     subcategory: "device-trust",
     description:
@@ -221,6 +226,7 @@ export const IT_SECURITY_TOOLS: ToolEntry[] = [
   {
     id: "freshservice",
     name: "Freshservice",
+    url: "https://www.freshworks.com/freshservice",
     category: "it-security",
     subcategory: "it-helpdesk",
     description:
@@ -266,6 +272,7 @@ export const IT_SECURITY_TOOLS: ToolEntry[] = [
   {
     id: "cloudflare-zero-trust",
     name: "Cloudflare Zero Trust",
+    url: "https://www.cloudflare.com/zero-trust",
     category: "it-security",
     subcategory: "network-security",
     description:

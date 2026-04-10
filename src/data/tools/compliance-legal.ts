@@ -11,6 +11,7 @@ export const COMPLIANCE_LEGAL_TOOLS: ToolEntry[] = [
   {
     id: "ironclad",
     name: "Ironclad",
+    url: "https://ironcladapp.com",
     category: "compliance-legal",
     subcategory: "contract-lifecycle",
     description:
@@ -53,6 +54,7 @@ export const COMPLIANCE_LEGAL_TOOLS: ToolEntry[] = [
   {
     id: "juro",
     name: "Juro",
+    url: "https://juro.com",
     category: "compliance-legal",
     subcategory: "contract-lifecycle",
     description:
@@ -94,6 +96,7 @@ export const COMPLIANCE_LEGAL_TOOLS: ToolEntry[] = [
   {
     id: "drata",
     name: "Drata",
+    url: "https://drata.com",
     category: "compliance-legal",
     subcategory: "compliance-automation",
     description:
@@ -138,6 +141,7 @@ export const COMPLIANCE_LEGAL_TOOLS: ToolEntry[] = [
   {
     id: "vanta",
     name: "Vanta",
+    url: "https://www.vanta.com",
     category: "compliance-legal",
     subcategory: "compliance-automation",
     description:
@@ -182,6 +186,7 @@ export const COMPLIANCE_LEGAL_TOOLS: ToolEntry[] = [
   {
     id: "clio",
     name: "Clio",
+    url: "https://www.clio.com",
     category: "compliance-legal",
     subcategory: "legal-practice-management",
     description:
@@ -219,6 +224,7 @@ export const COMPLIANCE_LEGAL_TOOLS: ToolEntry[] = [
   {
     id: "diligent",
     name: "Diligent (Diligent One)",
+    url: "https://www.diligent.com",
     category: "compliance-legal",
     subcategory: "governance-risk",
     description:
@@ -259,6 +265,7 @@ export const COMPLIANCE_LEGAL_TOOLS: ToolEntry[] = [
   {
     id: "notarize",
     name: "Notarize",
+    url: "https://www.notarize.com",
     category: "compliance-legal",
     subcategory: "notarization",
     description:

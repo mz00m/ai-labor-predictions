@@ -11,6 +11,7 @@ export const MARKETING_TOOLS: ToolEntry[] = [
   {
     id: "jasper",
     name: "Jasper",
+    url: "https://www.jasper.ai",
     category: "marketing",
     subcategory: "ai-content-creation",
     description:
@@ -53,6 +54,7 @@ export const MARKETING_TOOLS: ToolEntry[] = [
   {
     id: "canva",
     name: "Canva",
+    url: "https://www.canva.com",
     category: "marketing",
     subcategory: "design",
     description:
@@ -97,6 +99,7 @@ export const MARKETING_TOOLS: ToolEntry[] = [
   {
     id: "hubspot-marketing",
     name: "HubSpot Marketing Hub",
+    url: "https://www.hubspot.com/products/marketing",
     category: "marketing",
     subcategory: "marketing-automation",
     description:
@@ -140,6 +143,7 @@ export const MARKETING_TOOLS: ToolEntry[] = [
   {
     id: "mailchimp",
     name: "Mailchimp",
+    url: "https://mailchimp.com",
     category: "marketing",
     subcategory: "email-marketing",
     description:
@@ -184,6 +188,7 @@ export const MARKETING_TOOLS: ToolEntry[] = [
   {
     id: "semrush",
     name: "Semrush",
+    url: "https://www.semrush.com",
     category: "marketing",
     subcategory: "seo-analytics",
     description:
@@ -225,6 +230,7 @@ export const MARKETING_TOOLS: ToolEntry[] = [
   {
     id: "buffer",
     name: "Buffer",
+    url: "https://buffer.com",
     category: "marketing",
     subcategory: "social-media",
     description:
@@ -269,6 +275,7 @@ export const MARKETING_TOOLS: ToolEntry[] = [
   {
     id: "hootsuite",
     name: "Hootsuite",
+    url: "https://www.hootsuite.com",
     category: "marketing",
     subcategory: "social-media",
     description:
@@ -311,6 +318,7 @@ export const MARKETING_TOOLS: ToolEntry[] = [
   {
     id: "midjourney",
     name: "Midjourney",
+    url: "https://www.midjourney.com",
     category: "marketing",
     subcategory: "ai-image-generation",
     description:
@@ -346,6 +354,7 @@ export const MARKETING_TOOLS: ToolEntry[] = [
   {
     id: "descript",
     name: "Descript",
+    url: "https://www.descript.com",
     category: "marketing",
     subcategory: "video-audio",
     description:

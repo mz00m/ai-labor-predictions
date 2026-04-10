@@ -11,6 +11,7 @@ export const SALES_ENABLEMENT_TOOLS: ToolEntry[] = [
   {
     id: "gong",
     name: "Gong",
+    url: "https://www.gong.io",
     category: "sales-enablement",
     subcategory: "conversation-intelligence",
     description:
@@ -54,6 +55,7 @@ export const SALES_ENABLEMENT_TOOLS: ToolEntry[] = [
   {
     id: "apollo",
     name: "Apollo.io",
+    url: "https://www.apollo.io",
     category: "sales-enablement",
     subcategory: "outbound-prospecting",
     description:
@@ -96,6 +98,7 @@ export const SALES_ENABLEMENT_TOOLS: ToolEntry[] = [
   {
     id: "salesloft",
     name: "Salesloft",
+    url: "https://www.salesloft.com",
     category: "sales-enablement",
     subcategory: "sales-engagement",
     description:
@@ -138,6 +141,7 @@ export const SALES_ENABLEMENT_TOOLS: ToolEntry[] = [
   {
     id: "proposify",
     name: "Proposify",
+    url: "https://www.proposify.com",
     category: "sales-enablement",
     subcategory: "proposal-management",
     description:
@@ -180,6 +184,7 @@ export const SALES_ENABLEMENT_TOOLS: ToolEntry[] = [
   {
     id: "clari",
     name: "Clari",
+    url: "https://www.clari.com",
     category: "sales-enablement",
     subcategory: "revenue-intelligence",
     description:
@@ -220,6 +225,7 @@ export const SALES_ENABLEMENT_TOOLS: ToolEntry[] = [
   {
     id: "linkedin-sales-navigator",
     name: "LinkedIn Sales Navigator",
+    url: "https://business.linkedin.com/sales-solutions",
     category: "sales-enablement",
     subcategory: "social-selling",
     description:
@@ -261,6 +267,7 @@ export const SALES_ENABLEMENT_TOOLS: ToolEntry[] = [
   {
     id: "instantly",
     name: "Instantly",
+    url: "https://instantly.ai",
     category: "sales-enablement",
     subcategory: "cold-email",
     description:
