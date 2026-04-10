@@ -334,7 +334,7 @@ def retrieve_report(client, session_id):
                     "content": [
                         {
                             "type": "text",
-                            "text": "Print the complete contents of report.md using cat. Output ONLY the file contents.",
+                            "text": "Read the file report.md and respond with its COMPLETE contents. Do not summarize — output the entire file verbatim in your response text.",
                         }
                     ],
                 }
@@ -342,16 +342,26 @@ def retrieve_report(client, session_id):
         )
 
         text_parts = []
+        event_types_seen = []
         for event in stream:
+            event_types_seen.append(event.type)
             match event.type:
                 case "agent.message":
                     for block in event.content:
                         if hasattr(block, "text"):
                             text_parts.append(block.text)
+                case "agent.tool_result":
+                    if hasattr(event, "content"):
+                        for block in event.content:
+                            if hasattr(block, "text"):
+                                text_parts.append(block.text)
                 case "session.status_idle":
                     break
 
-    return "".join(text_parts)
+    result = "".join(text_parts)
+    if not result:
+        print(f"  Warning: no content captured. Event types seen: {set(event_types_seen)}")
+    return result
 
 
 def save_report(content):

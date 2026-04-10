@@ -291,7 +291,7 @@ def run_research_session(client, config):
 
 
 def retrieve_digest(client, session_id, config):
-    """Ask the agent to cat the digest file so we can capture it."""
+    """Ask the agent to output the digest file contents in its response."""
 
     with client.beta.sessions.events.stream(session_id) as stream:
         client.beta.sessions.events.send(
@@ -302,7 +302,7 @@ def retrieve_digest(client, session_id, config):
                     "content": [
                         {
                             "type": "text",
-                            "text": "Print the complete contents of digest.md to stdout using cat. Output ONLY the file contents, no commentary.",
+                            "text": "Read the file digest.md and respond with its COMPLETE contents. Do not summarize — output the entire file verbatim in your response text.",
                         }
                     ],
                 }
@@ -310,16 +310,26 @@ def retrieve_digest(client, session_id, config):
         )
 
         text_parts = []
+        event_types_seen = []
         for event in stream:
+            event_types_seen.append(event.type)
             match event.type:
                 case "agent.message":
                     for block in event.content:
                         if hasattr(block, "text"):
                             text_parts.append(block.text)
+                case "agent.tool_result":
+                    if hasattr(event, "content"):
+                        for block in event.content:
+                            if hasattr(block, "text"):
+                                text_parts.append(block.text)
                 case "session.status_idle":
                     break
 
-    return "".join(text_parts)
+    result = "".join(text_parts)
+    if not result:
+        print(f"  Warning: no content captured. Event types seen: {set(event_types_seen)}")
+    return result
 
 
 def save_digest(content):
