@@ -26,6 +26,7 @@ Requires:
 import json
 import os
 import sys
+import time
 from datetime import datetime, timedelta
 from pathlib import Path
 
@@ -249,36 +250,53 @@ def run_research_session(client, config):
     )
     print(f"  Session: {session.id}")
 
-    # Stream events
+    # Stream events with reconnection on dropped connections
     final_text = []
     tool_calls = []
+    message_sent = False
+    max_retries = 3
 
-    with client.beta.sessions.events.stream(session.id) as stream:
-        # Send the research prompt
-        client.beta.sessions.events.send(
-            session.id,
-            events=[
-                {
-                    "type": "user.message",
-                    "content": [{"type": "text", "text": prompt}],
-                }
-            ],
-        )
+    for attempt in range(max_retries):
+        try:
+            with client.beta.sessions.events.stream(session.id) as stream:
+                if not message_sent:
+                    client.beta.sessions.events.send(
+                        session.id,
+                        events=[
+                            {
+                                "type": "user.message",
+                                "content": [{"type": "text", "text": prompt}],
+                            }
+                        ],
+                    )
+                    message_sent = True
+                    print("  Agent working", end="", flush=True)
+                else:
+                    print(f"\n  Reconnected (attempt {attempt + 1})", end="", flush=True)
 
-        print("  Agent working", end="", flush=True)
-
-        for event in stream:
-            match event.type:
-                case "agent.message":
-                    for block in event.content:
-                        if hasattr(block, "text"):
-                            final_text.append(block.text)
-                case "agent.tool_use":
-                    tool_calls.append(event.name)
-                    print(".", end="", flush=True)
-                case "session.status_idle":
-                    print(" done.")
-                    break
+                for event in stream:
+                    match event.type:
+                        case "agent.message":
+                            for block in event.content:
+                                if hasattr(block, "text"):
+                                    final_text.append(block.text)
+                        case "agent.tool_use":
+                            tool_calls.append(event.name)
+                            print(".", end="", flush=True)
+                        case "session.status_idle":
+                            print(" done.")
+                            break
+                else:
+                    continue
+                break  # session.status_idle was hit
+        except Exception as e:
+            if attempt < max_retries - 1:
+                print(f"\n  Stream disconnected: {e}")
+                print(f"  Waiting 5s before reconnecting...", flush=True)
+                time.sleep(5)
+            else:
+                print(f"\n  Stream failed after {max_retries} attempts: {e}")
+                raise
 
     print(f"  Tool calls made: {len(tool_calls)}")
 
