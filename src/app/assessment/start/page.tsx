@@ -269,14 +269,23 @@ export default function AssessmentStartPage() {
           {STEPS.map((s, i) => (
             <div key={s.key} className="flex items-center gap-1">
               <button
-                onClick={() => i <= currentStepIndex && setStep(s.key)}
-                disabled={i > currentStepIndex}
+                onClick={() => {
+                  if (i <= currentStepIndex) {
+                    setStep(s.key);
+                  } else if (i === currentStepIndex + 1) {
+                    if (step === "scope") prefillFromDescription();
+                    setStep(s.key);
+                  }
+                }}
+                disabled={i > currentStepIndex + 1}
                 className={`text-[12px] font-medium px-2.5 py-1 rounded transition-colors ${
                   s.key === step
                     ? "bg-[#5C61F6] text-white"
                     : i < currentStepIndex
                       ? "bg-gray-100 text-gray-500 hover:text-gray-900 cursor-pointer"
-                      : "text-gray-300 cursor-default"
+                      : i === currentStepIndex + 1
+                        ? "text-gray-400 hover:text-gray-900 cursor-pointer"
+                        : "text-gray-300 cursor-default"
                 }`}
               >
                 {s.label}
