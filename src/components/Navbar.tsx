@@ -23,7 +23,7 @@ function isGroup(entry: NavEntry): entry is NavGroup {
 }
 
 const NAV_ENTRIES: NavEntry[] = [
-  { href: "/", label: "Dashboard" },
+  { href: "/assessment", label: "Action Plan" },
   { href: "/predictions", label: "Predictions" },
   {
     label: "Analysis",

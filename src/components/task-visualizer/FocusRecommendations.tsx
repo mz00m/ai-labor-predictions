@@ -3,6 +3,7 @@
 import { useMemo } from "react";
 import { JobTask, calculateAdoptionYear } from "@/data/job-tasks";
 import { useCountUp } from "@/hooks/useCountUp";
+import Link from "next/link";
 
 interface FocusRecommendationsProps {
   tasks: JobTask[];
@@ -197,6 +198,25 @@ export default function FocusRecommendations({
           </div>
         </div>
       )}
+
+      {/* Action Plan CTA */}
+      <div className="rounded-xl border border-[#5C61F6]/20 bg-[#5C61F6]/[0.04] p-4">
+        <h4 className="text-[13px] font-semibold text-[#5C61F6] mb-1.5">
+          Get a personalized action plan
+        </h4>
+        <p className="text-[12px] text-[var(--muted)] leading-relaxed mb-3">
+          This analysis is generic to the role. Get specific recommendations for your organization, team, and workflow.
+        </p>
+        <Link
+          href="/assessment"
+          className="inline-flex items-center gap-1.5 bg-[#5C61F6] hover:bg-[#4F52D4] text-white text-[12px] font-semibold px-4 py-2 rounded-lg transition-colors"
+        >
+          Build Your AI Action Plan
+          <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+          </svg>
+        </Link>
+      </div>
 
       {/* Adaptive Capacity context */}
       {adaptiveCapacity !== undefined && (
