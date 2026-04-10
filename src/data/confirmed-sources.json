@@ -297,7 +297,7 @@
       "publisher": "NBER (Acemoglu)",
       "evidenceTier": 1,
       "datePublished": "2024-04-01",
-      "excerpt": "AI may increase TFP by only 0.53-0.66% over 10 years, with limited job displacement effects.",
+      "excerpt": "AI may increase TFP by only 0.53-0.66% over 10 years. Only 4.6% of tasks affected, with modest cost savings (27% avg). Implied displacement well under 1% of employment.",
       "usedIn": [
         "overall-us-displacement",
         "tech-sector-displacement",
@@ -634,8 +634,8 @@
     },
     "bls-programmer-employment-observed": {
       "id": "bls-programmer-employment-observed",
-      "title": "BLS Occupational Employment Statistics: Computer Programmers — Observed Decline",
-      "url": "https://www.bls.gov/oes/current/oes151251.htm",
+      "title": "BLS Occupational Employment Statistics: Computer Programmers (SOC 15-1251)",
+      "url": "https://www.bls.gov/oes/2023/may/oes151251.htm",
       "publisher": "Bureau of Labor Statistics",
       "evidenceTier": 1,
       "datePublished": "2024-11-01",
@@ -2553,7 +2553,7 @@
     "klarna-earnings-2024": {
       "id": "klarna-earnings-2024",
       "title": "Klarna AI assistant handles two-thirds of customer service chats in first month",
-      "url": "https://www.klarna.com/international/press/klarna-ai-assistant-handles-two-thirds-of-customer-service-chats-in-its-first-month/",
+      "url": "https://www.prnewswire.com/news-releases/klarna-ai-assistant-handles-two-thirds-of-customer-service-chats-in-its-first-month-302072740.html",
       "publisher": "Klarna",
       "evidenceTier": 1,
       "datePublished": "2024-02-27",
@@ -5879,7 +5879,7 @@
     "factset-earnings-q4-2025": {
       "id": "factset-earnings-q4-2025",
       "title": "FactSet Earnings Insight Q4 2025",
-      "url": "https://insight.factset.com/highest-number-of-sp-500-earnings-calls-citing-ai-over-the-past-10-years-1",
+      "url": "https://insight.factset.com/more-than-65-of-sp-500-earnings-calls-for-q4-cited-ai",
       "publisher": "FactSet",
       "evidenceTier": 1,
       "datePublished": "2025-12-01",

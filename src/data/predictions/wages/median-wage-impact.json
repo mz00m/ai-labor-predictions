@@ -5,7 +5,7 @@
   "description": "Projected change in real median wages in the US due to AI adoption, combining productivity gains and displacement effects.",
   "category": "wages",
   "unit": "% change in real median wage",
-  "currentValue": -1.4,
+  "currentValue": -1.9,
   "timeHorizon": "By 2030",
   "aggregationMethod": "weighted",
   "history": [

@@ -5,7 +5,7 @@
   "description": "Projected change in real wages for entry-level positions (0-2 years experience) across AI-exposed industries by 2030.",
   "category": "wages",
   "unit": "% wage change",
-  "currentValue": -6.7,
+  "currentValue": -6.3,
   "timeHorizon": "By 2030",
   "aggregationMethod": "weighted",
   "history": [

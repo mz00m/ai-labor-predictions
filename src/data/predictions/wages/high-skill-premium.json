@@ -5,7 +5,7 @@
   "description": "Projected change in wages for workers with strong AI/ML skills relative to the median, measuring the emerging 'AI premium' in compensation.",
   "category": "wages",
   "unit": "% wage premium over median",
-  "currentValue": 23.8,
+  "currentValue": 23.4,
   "timeHorizon": "By 2030",
   "aggregationMethod": "weighted",
   "history": [

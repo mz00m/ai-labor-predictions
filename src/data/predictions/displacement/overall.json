@@ -31,9 +31,9 @@
     },
     {
       "date": "2024-04-01",
-      "value": 5,
-      "confidenceLow": 1,
-      "confidenceHigh": 9,
+      "value": 0.5,
+      "confidenceLow": 0.2,
+      "confidenceHigh": 2,
       "sourceIds": [
         "acemoglu-macro-2024"
       ],
@@ -1447,7 +1447,7 @@
       "publisher": "NBER (Acemoglu)",
       "evidenceTier": 1,
       "datePublished": "2024-04-01",
-      "excerpt": "AI may increase TFP by only 0.53-0.66% over 10 years. Only about 5% of all tasks are fully automatable by AI, implying limited net job displacement effects.",
+      "excerpt": "AI may increase TFP by only 0.53-0.66% over 10 years under the most aggressive assumptions. Only about 4.6% of all tasks will be affected by AI, and cost savings on these tasks are modest (averaging 27%). The implied GDP effect is 0.93-1.16% over a decade — far below popular estimates. The displacement effect on jobs is correspondingly small, well under 1% of employment.",
       "dateAdded": "2026-03-01"
     },
     {
