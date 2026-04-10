@@ -92,6 +92,24 @@
       "evidenceTier": 1,
       "metricType": "projection",
       "dataType": "projected"
+    },
+    {
+      "date": "2025-11-14",
+      "value": -5,
+      "sourceIds": [
+        "galdin-silbert-llm-signaling-2025"
+      ],
+      "evidenceTier": 2,
+      "metricType": "projection",
+      "dataType": "projected",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "% avg wage decline from signal removal on Freelancer.com coding jobs",
+        "conversionFactor": 1,
+        "conversionLow": 0.5,
+        "conversionHigh": 1.5,
+        "rationale": "Counterfactual wage decline from LLM signal degradation; single platform (Freelancer.com), coding category only; graph covers all AI-exposed freelance categories"
+      }
     }
   ],
   "overlays": [
@@ -184,6 +202,15 @@
       ],
       "evidenceTier": 1,
       "label": "FRI: Moderate scenario → almost all 5-day freelance SW jobs automatable by 2030"
+    },
+    {
+      "date": "2025-11-14",
+      "direction": "down",
+      "sourceIds": [
+        "galdin-silbert-llm-signaling-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Galdin & Silbert: employer WTP for freelancer signals fell 42% post-LLM; 1.5% hiring decline"
     }
   ],
   "sources": [
@@ -346,6 +373,16 @@
       "datePublished": "2026-03-30",
       "excerpt": "In just a few hours I was able to produce what previously cost $1,000 from an outsourced dev team ... We realized we will need even fewer staff than we initially thought, because AI allows us to do in house what we assumed required outsourcing.",
       "dateAdded": "2026-04-04"
+    },
+    {
+      "id": "galdin-silbert-llm-signaling-2025",
+      "title": "Making Talk Cheap: Generative AI and Labor Market Signaling",
+      "url": "https://jesse-silbert.github.io/website/silbert_jmp.pdf",
+      "publisher": "Dartmouth/Tuck & Princeton (Galdin, Silbert)",
+      "evidenceTier": 2,
+      "datePublished": "2025-11-14",
+      "excerpt": "LLMs disrupted labor market signaling on Freelancer.com coding jobs (2.7M applications, 61K posts). Employer WTP for 1 SD signal increase fell from $25.67 to $14.85 (42% decline). Counterfactual no-signaling equilibrium shows 5% avg wage decline, 1.5% hiring reduction, 4% worker surplus loss.",
+      "dateAdded": "2026-04-10"
     }
   ]
 }

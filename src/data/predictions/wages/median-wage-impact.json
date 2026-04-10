@@ -553,6 +553,15 @@
       ],
       "evidenceTier": 2,
       "label": "OpenAI: proposes 32-hour workweek pilots, public wealth fund"
+    },
+    {
+      "date": "2025-11-14",
+      "direction": "down",
+      "sourceIds": [
+        "galdin-silbert-llm-signaling-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Galdin & Silbert: LLM signal erosion cuts worker surplus 4%, total 1%"
     }
   ],
   "sources": [
@@ -1056,6 +1065,16 @@
       "evidenceTier": 2,
       "datePublished": "2026-04-01",
       "excerpt": "Workers using AI might well agree that it's increasing their productivity without believing they're seeing the benefits."
+    },
+    {
+      "id": "galdin-silbert-llm-signaling-2025",
+      "title": "Making Talk Cheap: Generative AI and Labor Market Signaling",
+      "url": "https://jesse-silbert.github.io/website/silbert_jmp.pdf",
+      "publisher": "Dartmouth/Tuck & Princeton (Galdin, Silbert)",
+      "evidenceTier": 2,
+      "datePublished": "2025-11-14",
+      "excerpt": "LLMs erode labor market signaling on Freelancer.com: worker surplus declines 4%, employer surplus rises <1%, total surplus falls 1%. Signal degradation is a net-negative welfare channel.",
+      "dateAdded": "2026-04-10"
     }
   ]
 }

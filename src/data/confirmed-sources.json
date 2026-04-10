@@ -1,9 +1,26 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-04-07",
-  "totalSources": 513,
-  "verifiedCount": 503,
+  "lastUpdated": "2026-04-10",
+  "totalSources": 514,
+  "verifiedCount": 504,
   "sources": {
+    "galdin-silbert-llm-signaling-2025": {
+      "id": "galdin-silbert-llm-signaling-2025",
+      "title": "Making Talk Cheap: Generative AI and Labor Market Signaling",
+      "url": "https://jesse-silbert.github.io/website/silbert_jmp.pdf",
+      "publisher": "Dartmouth/Tuck & Princeton (Galdin, Silbert)",
+      "evidenceTier": 2,
+      "datePublished": "2025-11-14",
+      "excerpt": "LLMs disrupted labor market signaling on Freelancer.com coding jobs (2.7M applications, 61K posts). Employer WTP for 1 SD signal increase fell from $25.67 to $14.85 (42% decline). Counterfactual no-signaling equilibrium: 5% avg wage decline, 1.5% hiring reduction, 4% worker surplus loss, top-quintile hired 19% less, bottom-quintile hired 14% more. 14% of post-LLM apps used AI writing tool.",
+      "usedIn": [
+        "freelancer-rate-impact",
+        "entry-level-wage-impact",
+        "genai-work-adoption",
+        "median-wage-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
     "oecd-ai-sme-adoption-g7-2025": {
       "id": "oecd-ai-sme-adoption-g7-2025",
       "title": "AI Adoption by Small and Medium-Sized Enterprises",
