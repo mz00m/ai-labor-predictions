@@ -293,6 +293,15 @@
       ],
       "evidenceTier": 1,
       "label": "FRI: Economists forecast 10.1% of work hours GenAI-assisted by 2030 (n=69, unconditional)"
+    },
+    {
+      "date": "2025-11-14",
+      "direction": "up",
+      "sourceIds": [
+        "galdin-silbert-llm-signaling-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Galdin & Silbert: 14% of Freelancer.com apps used platform AI writing tool"
     }
   ],
   "sources": [
@@ -553,6 +562,16 @@
       "datePublished": "2026-03-27",
       "excerpt": "Number of AI applications grew 6x from 2022-2024 (TAAFT dataset), but the set of work activities they cover expanded only 1.2x. Adoption is intensifying within a narrow band of activities rather than broadening.",
       "dateAdded": "2026-04-04"
+    },
+    {
+      "id": "galdin-silbert-llm-signaling-2025",
+      "title": "Making Talk Cheap: Generative AI and Labor Market Signaling",
+      "url": "https://jesse-silbert.github.io/website/silbert_jmp.pdf",
+      "publisher": "Dartmouth/Tuck & Princeton (Galdin, Silbert)",
+      "evidenceTier": 2,
+      "datePublished": "2025-11-14",
+      "excerpt": "14.03% of post-LLM applications on Freelancer.com utilized the platform's AI writing tool, indicating rapid adoption of generative AI in job application workflows.",
+      "dateAdded": "2026-04-10"
     }
   ]
 }
