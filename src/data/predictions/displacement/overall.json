@@ -1367,6 +1367,15 @@
       ],
       "evidenceTier": 2,
       "label": "OpenAI: expects AI to handle month-long projects, fundamentally reshape work"
+    },
+    {
+      "date": "2026-03-20",
+      "direction": "up",
+      "sourceIds": [
+        "fed-crane-soto-coder-employment-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Fed: ~475K jobs lost among 22-25yo in high AI-exposure (Brynjolfsson est.)"
     }
   ],
   "sources": [
@@ -2467,6 +2476,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-04-01",
       "excerpt": "If progress continues, we can expect systems to be capable of carrying out projects that currently take people months. This shift will reshape how organizations run, how knowledge is created, and how people find meaning and opportunity."
+    },
+    {
+      "id": "fed-crane-soto-coder-employment-2026",
+      "title": "AI and Coder Employment: Compiling the Evidence",
+      "url": "https://www.federalreserve.gov/econres/feds/files/2026018pap.pdf",
+      "publisher": "Federal Reserve Board (FEDS Working Paper)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-20",
+      "excerpt": "They find that among 22-25 year olds employment in the top two quartiles of AI exposure fell about 12 percent relative to employment in the bottom quartile. Starting from total private employment of 130 million, and assuming about 7.6 percent of the workforce is 22-25 years old (based on the CPS), a 12 percent job loss for two quartiles works out to about 475,000 jobs lost."
     }
   ]
 }

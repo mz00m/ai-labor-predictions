@@ -726,6 +726,42 @@
       ],
       "evidenceTier": 1,
       "label": "BLS Mar 2026: Information sector 2,772K (+3K MoM), flat"
+    },
+    {
+      "date": "2026-03-20",
+      "direction": "up",
+      "sourceIds": [
+        "fed-crane-soto-coder-employment-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Fed: Coder employment growth 3pp lower annually since ChatGPT"
+    },
+    {
+      "date": "2026-03-20",
+      "direction": "up",
+      "sourceIds": [
+        "fed-crane-soto-coder-employment-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Fed: ~500K fewer coder jobs vs. counterfactual since ChatGPT"
+    },
+    {
+      "date": "2026-03-20",
+      "direction": "up",
+      "sourceIds": [
+        "fed-crane-soto-coder-employment-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Fed: Coder-intensive industries -1.0% post-ChatGPT vs +3.8% pre-Covid"
+    },
+    {
+      "date": "2026-03-20",
+      "direction": "up",
+      "sourceIds": [
+        "fed-crane-soto-coder-employment-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Fed: Coder employment flat post-ChatGPT after 4.8% pre-trend"
     }
   ],
   "sources": [
@@ -1392,6 +1428,15 @@
       "evidenceTier": 3,
       "datePublished": "2026-04-03",
       "excerpt": "Autonomous coding agents are generating code at an unprecedented scale, with OpenAI Codex alone creating over 400,000 pull requests (PRs) in two months. CRA-only PRs achieve a 45.20% merge rate, 23.17 percentage points lower than human-only PRs (68.37%), with significantly higher abandonment. 60.2% of closed CRA-only PRs fall into the 0-30% signal range."
+    },
+    {
+      "id": "fed-crane-soto-coder-employment-2026",
+      "title": "AI and Coder Employment: Compiling the Evidence",
+      "url": "https://www.federalreserve.gov/econres/feds/files/2026018pap.pdf",
+      "publisher": "Federal Reserve Board (FEDS Working Paper)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-20",
+      "excerpt": "After controlling for industry-level shocks we find that coder employment growth has been 3 percent lower since the introduction of ChatGPT. Cumulating over the roughly 3 years since November 2022 and using 5.735 million coder jobs as the base value, the implication is that roughly 500,000 additional coder jobs would have existed in the absence of large-scale LLM use."
     }
   ],
   "marketIds": {

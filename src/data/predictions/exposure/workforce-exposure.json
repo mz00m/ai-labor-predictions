@@ -535,6 +535,15 @@
       ],
       "evidenceTier": 1,
       "label": "Oxford/OII: Complementary effects 1.7x larger than substitution; AI demand doubling → 5% rise in complementary skill demand"
+    },
+    {
+      "date": "2026-03-20",
+      "direction": "up",
+      "sourceIds": [
+        "fed-crane-soto-coder-employment-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Fed: >98% of coder employment in top AI-exposure quintile"
     }
   ],
   "sources": [
@@ -985,6 +994,15 @@
       "evidenceTier": 3,
       "datePublished": "2026-03-26",
       "excerpt": "Industries with high volumes of structured, repetitive tasks face the sharpest near-term employment contractions."
+    },
+    {
+      "id": "fed-crane-soto-coder-employment-2026",
+      "title": "AI and Coder Employment: Compiling the Evidence",
+      "url": "https://www.federalreserve.gov/econres/feds/files/2026018pap.pdf",
+      "publisher": "Federal Reserve Board (FEDS Working Paper)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-20",
+      "excerpt": "The coding occupations are overwhelmingly in the high exposure group according to both metrics, with more than 98 percent of coder employment in the highest quintiles."
     }
   ]
 }

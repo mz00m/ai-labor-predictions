@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-04-10",
-  "totalSources": 514,
-  "verifiedCount": 504,
+  "lastUpdated": "2026-04-12",
+  "totalSources": 515,
+  "verifiedCount": 505,
   "sources": {
     "galdin-silbert-llm-signaling-2025": {
       "id": "galdin-silbert-llm-signaling-2025",
@@ -7229,6 +7229,22 @@
       "usedIn": [
         "overall-us-displacement",
         "median-wage-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "fed-crane-soto-coder-employment-2026": {
+      "id": "fed-crane-soto-coder-employment-2026",
+      "title": "AI and Coder Employment: Compiling the Evidence",
+      "url": "https://www.federalreserve.gov/econres/feds/files/2026018pap.pdf",
+      "publisher": "Federal Reserve Board (FEDS Working Paper)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-20",
+      "excerpt": "After controlling for industry-level shocks we find that coder employment growth has been 3 percent lower since the introduction of ChatGPT. Cumulating over the roughly 3 years since November 2022 and using 5.735 million coder jobs as the base value, the implication is that roughly 500,000 additional coder jobs would have existed in the absence of large-scale LLM use.",
+      "usedIn": [
+        "tech-sector-displacement",
+        "overall-us-displacement",
+        "workforce-ai-exposure"
       ],
       "verified": true,
       "synthetic": false
