@@ -1,0 +1,37 @@
+We built an automated fact-checker for jobsdata.ai this week. It found errors in our own data.
+
+One example: we had 6 data points showing tech sector jobs declining — attributed to a BLS study that actually projects software developer employment to increase 17.9% through 2033. The exact opposite of what we were displaying.
+
+Another: a key displacement estimate from Acemoglu was off by 10x. We had 5%. The paper says 0.5%. His whole thesis is that AI displacement effects are limited.
+
+Both errors survived months of manual review. An automated agent caught them in one pass — auditing every URL, every data point, every weighted average across 513 sources.
+
+That's the story of this week. Not new research. Integrity.
+
+Here's what we shipped:
+
+**Data integrity:**
+- 7 critical data errors corrected
+- 17 broken URLs fixed (15 from a single source that silently truncated)
+- 6 stale dashboard values synced — one was off by 4.9 percentage points
+- White-collar displacement chart fully restructured for clarity
+
+**AI Action Plan improvements:**
+- Users can now give feedback between assessment steps — priorities, adjustments, context
+- New "Skills That Grow With AI" section in reports
+- Full risk dimensions now in PDF export
+- Nav renamed from "Dashboard" to "Action Plan" — because that's what it is
+
+**New infrastructure:**
+- Automated research agent scans for new sources weekly
+- Automated fact-check agent audits the full dataset monthly
+- Both open PRs for human review. No auto-publishing.
+
+**New research:**
+- OpenAI's industrial policy paper — notable for one line: "Workers using AI might well agree that it's increasing their productivity without believing they're seeing the benefits." We added it as a signal on the wage impact graphs.
+
+The uncomfortable lesson: if you're building a data product and you haven't automated verification, you don't know what's wrong with your data. We didn't.
+
+jobsdata.ai — tracking AI's real impact on work and wages.
+
+#AIandWork #FutureOfWork #LaborMarket #DataIntegrity #WorkforceDevelopment
