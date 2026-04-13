@@ -145,17 +145,25 @@ export default function OccupationExposurePage() {
             className="text-[36px] sm:text-[44px] font-extrabold text-[var(--foreground)] leading-[1.1] tracking-tight mb-4"
             style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
           >
-            Beyond Exposure: What Actually Predicts Displacement
+            Beyond Exposure: What Predicts Displacement Better
           </h1>
           <p
             className="text-[17px] sm:text-[19px] text-[var(--muted)] leading-relaxed mb-4"
             style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
           >
-            Karpathy&rsquo;s AI jobs treemap scores 342 occupations on a single
+            Karpathy&rsquo;s AI jobs treemap scored 342 occupations on a single
             axis: &ldquo;digital AI exposure.&rdquo; That captures which tasks AI{" "}
             <em>can</em> do &mdash; but not which jobs will actually be displaced.
-            We rebuild his exact visualization with the same 342 BLS occupations,
-            then add four additional research-backed dimensions.
+          </p>
+          <p
+            className="text-[17px] sm:text-[19px] text-[var(--muted)] leading-relaxed mb-4"
+            style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
+          >
+            We rebuilt this visualization with the same 342 BLS occupations,
+            then add four additional research-backed dimensions: adoption
+            speed, adaptability, demand, and complementarity (explained below)
+            which gives a much clearer picture of how AI may impact jobs over
+            time.
           </p>
 
           <a
