@@ -26,7 +26,7 @@ export default function FiveVariablesEssay() {
 
         <p>
           What actually determines whether AI displaces you at work looks a lot more like five specific and easy to understand factors. Two of them push toward job loss or displacement. Three push against it. And
-          the three that push against it are, actually quite a bit more interesting.
+          the three that push against it are actually quite a bit more interesting.
           Partly because they&rsquo;re less obvious, and partly because
           they&rsquo;re the ones you can actually do something about.
         </p>
@@ -251,7 +251,7 @@ export default function FiveVariablesEssay() {
 
         <p>
           Think about the difference between a call center agent and a
-          management consultant. A call center agent handles often routine conversations about returns or billing issues
+          management consultant. A call center agent often handles routine conversations about returns or billing issues
           from start to finish. An AI chatbot can often be a direct substitute for that
           whole workflow. A management consultant uses judgment, builds
           relationships, synthesizes messy inputs from many stakeholders. AI
@@ -364,7 +364,7 @@ export default function FiveVariablesEssay() {
           >
             no detectable aggregate AI displacement or job loss
           </Link>
-          . These are not forward-looking projections, they are observations on what has happened so far, and its showing basically zero substantial job loss. The
+          . These are not forward-looking projections, they are observations on what has happened so far, and it&rsquo;s showing basically zero substantial job loss. The
           displacement everyone is worried about hasn&rsquo;t shown up in the
          data yet. That doesn&rsquo;t mean it won&rsquo;t. But it&rsquo;s
           worth keeping in mind when the headlines get loud.

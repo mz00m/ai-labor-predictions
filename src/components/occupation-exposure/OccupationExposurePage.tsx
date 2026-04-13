@@ -160,7 +160,7 @@ export default function OccupationExposurePage() {
             style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
           >
             We rebuilt this visualization with the same 342 BLS occupations,
-            then add four additional research-backed dimensions: adoption
+            then added four additional research-backed dimensions: adoption
             speed, adaptability, demand, and complementarity (explained below)
             which gives a much clearer picture of how AI may impact jobs over
             time.
