@@ -231,7 +231,7 @@ export default function MethodologySection() {
           authors="Autor, Salomons"
           year="2018"
           url="https://www.brookings.edu/articles/is-automation-labor-displacing-productivity-growth-employment-and-the-labor-share/"
-          summary="Found that at the industry level, productivity growth from automation almost always increased employment in that industry, but reduced employment economy-wide through cross-industry competition effects. The within-industry expansion is the demand elasticity mechanism."
+          summary="Found that automation displaces employment in the industries where it originates, but positive spillovers to customer industries and induced increases in aggregate demand more than offset those direct losses, leaving net employment roughly unchanged. The cross-industry spillover channel, not within-industry expansion, is the aggregate demand elasticity mechanism they identify."
         />
         <Study
           title="Jevons' Paradox"
