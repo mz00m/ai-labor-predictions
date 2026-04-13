@@ -223,19 +223,51 @@ export default function AssessmentStartPage() {
         formPayload.append("files", entry.file);
       }
 
-      const res = await fetch("/api/assessment/analyze", {
-        method: "POST",
-        body: formPayload,
-      });
+      // Retry up to 2 times on network failures with a 120s timeout per attempt
+      let lastErr: Error | null = null;
+      for (let attempt = 0; attempt < 2; attempt++) {
+        try {
+          const controller = new AbortController();
+          const timeout = setTimeout(() => controller.abort(), 120_000);
 
-      if (!res.ok) {
-        const data = await res.json().catch(() => ({}));
-        throw new Error(data.error || "Failed to submit assessment");
+          const res = await fetch("/api/assessment/analyze", {
+            method: "POST",
+            body: formPayload,
+            signal: controller.signal,
+          });
+          clearTimeout(timeout);
+
+          if (!res.ok) {
+            const data = await res.json().catch(() => ({}));
+            // Don't retry on validation errors (4xx) — only on server/network errors
+            if (res.status >= 400 && res.status < 500) {
+              throw new Error(data.error || "Please check your inputs and try again.");
+            }
+            throw new Error(data.error || "Server error — please try again.");
+          }
+
+          const data = await res.json();
+          if (!data.assessmentId) {
+            throw new Error("No assessment ID returned. Please try again.");
+          }
+          // Redirect to progress page for multi-step review
+          router.push(`/assessment/progress?id=${data.assessmentId}`);
+          return; // Success — exit the function
+        } catch (err) {
+          lastErr = err instanceof Error ? err : new Error("An error occurred");
+          // Don't retry on validation/client errors
+          if (lastErr.message.includes("check your inputs")) throw lastErr;
+          // Don't retry on abort (timeout) — show error immediately
+          if (lastErr.name === "AbortError") {
+            throw new Error("The request took too long. Please try again — it usually works on the second attempt.");
+          }
+          // For network errors, retry once after a brief pause
+          if (attempt < 1) {
+            await new Promise((r) => setTimeout(r, 2000));
+          }
+        }
       }
-
-      const data = await res.json();
-      // Redirect to progress page for multi-step review
-      router.push(`/assessment/progress?id=${data.assessmentId}`);
+      throw lastErr || new Error("Failed to start assessment. Please try again.");
     } catch (err) {
       setError(err instanceof Error ? err.message : "An error occurred");
     } finally {

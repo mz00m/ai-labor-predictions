@@ -127,37 +127,61 @@ export default function ProgressPage() {
         formPayload.append("email", "");
       }
 
-      const res = await fetch("/api/assessment/analyze", {
-        method: "POST",
-        body: formPayload,
-      });
+      // Retry up to 2 times on network/server failures with 120s timeout
+      let lastErr: Error | null = null;
+      for (let attempt = 0; attempt < 2; attempt++) {
+        try {
+          const controller = new AbortController();
+          const timeout = setTimeout(() => controller.abort(), 120_000);
 
-      if (!res.ok) {
-        const data = await res.json().catch(() => ({}));
-        throw new Error(data.error || `Failed to generate ${step}`);
+          const res = await fetch("/api/assessment/analyze", {
+            method: "POST",
+            body: formPayload,
+            signal: controller.signal,
+          });
+          clearTimeout(timeout);
+
+          if (!res.ok) {
+            const data = await res.json().catch(() => ({}));
+            if (res.status >= 400 && res.status < 500) {
+              throw new Error(data.error || `Failed to generate ${step}`);
+            }
+            throw new Error(data.error || "Server error — please try again.");
+          }
+
+          const data = await res.json();
+
+          // Merge the new step results into the local assessment
+          setAssessment((prev) => {
+            if (!prev) return prev;
+            return {
+              ...prev,
+              report: { ...(prev.report || {} as AssessmentReport), ...data.report },
+            };
+          });
+
+          setCompletedSteps((prev) => new Set([...Array.from(prev), step]));
+
+          // Move to next step
+          const stepIndex = ASSESSMENT_STEPS.indexOf(step);
+          if (stepIndex < ASSESSMENT_STEPS.length - 1) {
+            setActiveStep(ASSESSMENT_STEPS[stepIndex + 1]);
+          } else {
+            // All steps done, go to report
+            router.push(`/assessment/report?id=${id}`);
+          }
+          return; // Success
+        } catch (err) {
+          lastErr = err instanceof Error ? err : new Error("An error occurred");
+          if (lastErr.name === "AbortError") {
+            throw new Error("The request took too long. Please try again.");
+          }
+          if (attempt < 1) {
+            await new Promise((r) => setTimeout(r, 2000));
+          }
+        }
       }
-
-      const data = await res.json();
-
-      // Merge the new step results into the local assessment
-      setAssessment((prev) => {
-        if (!prev) return prev;
-        return {
-          ...prev,
-          report: { ...(prev.report || {} as AssessmentReport), ...data.report },
-        };
-      });
-
-      setCompletedSteps((prev) => new Set([...Array.from(prev), step]));
-
-      // Move to next step
-      const stepIndex = ASSESSMENT_STEPS.indexOf(step);
-      if (stepIndex < ASSESSMENT_STEPS.length - 1) {
-        setActiveStep(ASSESSMENT_STEPS[stepIndex + 1]);
-      } else {
-        // All steps done, go to report
-        router.push(`/assessment/report?id=${id}`);
-      }
+      throw lastErr || new Error(`Failed to generate ${step}. Please try again.`);
     } catch (err) {
       setError(err instanceof Error ? err.message : "An error occurred");
     } finally {
