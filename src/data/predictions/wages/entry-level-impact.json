@@ -465,6 +465,15 @@
       ],
       "evidenceTier": 2,
       "label": "Galdin & Silbert: signal loss helps bottom quintile +14%, hurts top -19%"
+    },
+    {
+      "date": "2026-04-06",
+      "direction": "down",
+      "sourceIds": [
+        "goldman-sachs-displacement-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Goldman Sachs: +3.3pp entry-vs-experienced wage gap per 1SD AI exposure"
     }
   ],
   "sources": [
@@ -871,6 +880,15 @@
       "datePublished": "2025-11-14",
       "excerpt": "On Freelancer.com coding jobs, LLM-driven signal degradation redistributes hiring: bottom-quintile workers hired 14% more often, top-quintile hired 19% less often in no-signaling counterfactual.",
       "dateAdded": "2026-04-10"
+    },
+    {
+      "id": "goldman-sachs-displacement-2026",
+      "title": "AI's Tech Displacement Effect: Gen Z and the 16,000 Jobs-per-Month Drag",
+      "url": "https://fortune.com/2026/04/06/ai-tech-displacement-effect-gen-z-16000-jobs-per-month/",
+      "publisher": "Goldman Sachs (via Fortune)",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-06",
+      "excerpt": "The wage gap has similarly deteriorated, with Goldman's regression analysis estimating that a one standard-deviation increase in AI substitution exposure widens the entry-level-to-experienced wage gap by roughly 3.3 percentage points."
     }
   ]
 }

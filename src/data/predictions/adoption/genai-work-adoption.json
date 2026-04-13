@@ -302,6 +302,24 @@
       ],
       "evidenceTier": 2,
       "label": "Galdin & Silbert: 14% of Freelancer.com apps used platform AI writing tool"
+    },
+    {
+      "date": "2026-04-03",
+      "direction": "up",
+      "sourceIds": [
+        "fed-ai-adoption-monitoring-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Fed: RPS ~41% of US workforce uses GenAI at work (Nov 2025), +9.7pp YoY"
+    },
+    {
+      "date": "2026-04-13",
+      "direction": "up",
+      "sourceIds": [
+        "stanford-hai-ai-index-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Stanford HAI: GenAI 53% global population adoption in 3yrs; US 28.3%"
     }
   ],
   "sources": [
@@ -572,6 +590,24 @@
       "datePublished": "2025-11-14",
       "excerpt": "14.03% of post-LLM applications on Freelancer.com utilized the platform's AI writing tool, indicating rapid adoption of generative AI in job application workflows.",
       "dateAdded": "2026-04-10"
+    },
+    {
+      "id": "fed-ai-adoption-monitoring-2026",
+      "title": "Monitoring AI Adoption in the U.S. Economy",
+      "url": "https://www.federalreserve.gov/econres/notes/feds-notes/monitoring-ai-adoption-in-the-u-s-economy-20260403.html",
+      "publisher": "Federal Reserve Board of Governors (Jeffrey S. Allen)",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-03",
+      "excerpt": "The right panel of figure 2 shows that work-related GenAI adoption reported in the RPS stands at about 41 percent of the workforce, and non-work-related usage at about 50 percent of the population as of the latest survey in November 2025. These metrics grew by about 31 percent (9.7 percentage points) and 26 percent (10.4 percentage points), respectively, for the year ending in November."
+    },
+    {
+      "id": "stanford-hai-ai-index-2026",
+      "title": "Inside the AI Index: 12 Takeaways from the 2026 Report",
+      "url": "https://hai.stanford.edu/news/inside-the-ai-index-12-takeaways-from-the-2026-report",
+      "publisher": "Stanford HAI",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-13",
+      "excerpt": "Generative AI reached 53% population adoption within three years, faster than the personal computer or the internet, though the pace varies by country and correlates strongly with GDP per capita. Some show higher-than-expected adoption, such as Singapore (61%) and the United Arab Emirates (54%), while the U.S. ranks 24th at 28.3%."
     }
   ]
 }

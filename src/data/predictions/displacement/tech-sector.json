@@ -762,6 +762,24 @@
       ],
       "evidenceTier": 1,
       "label": "Fed: Coder employment flat post-ChatGPT after 4.8% pre-trend"
+    },
+    {
+      "date": "2026-04-07",
+      "direction": "down",
+      "sourceIds": [
+        "anthropic-mccrory-exposure-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Anthropic: coding 94% theoretical exposure but only ~30% actual task adoption"
+    },
+    {
+      "date": "2026-04-13",
+      "direction": "up",
+      "sourceIds": [
+        "stanford-hai-ai-index-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Stanford HAI: software devs aged 22-25 employment down ~20% since 2024"
     }
   ],
   "sources": [
@@ -1437,6 +1455,24 @@
       "evidenceTier": 1,
       "datePublished": "2026-03-20",
       "excerpt": "After controlling for industry-level shocks we find that coder employment growth has been 3 percent lower since the introduction of ChatGPT. Cumulating over the roughly 3 years since November 2022 and using 5.735 million coder jobs as the base value, the implication is that roughly 500,000 additional coder jobs would have existed in the absence of large-scale LLM use."
+    },
+    {
+      "id": "anthropic-mccrory-exposure-2026",
+      "title": "Anthropic's Economics Chief on Jobs Killed by AI",
+      "url": "https://fortune.com/2026/04/07/anthropic-economics-chief-peter-mccrory-jobs-killed-by-ai/",
+      "publisher": "Fortune (Peter McCrory, Anthropic)",
+      "evidenceTier": 3,
+      "datePublished": "2026-04-07",
+      "excerpt": "I was somewhat surprised that the gap between sort of coding in general, which as we point out had something like 94% theoretical exposure, but then based on actual adoption, it was closer to 30% of the tasks across all the jobs in that pocket of the economy."
+    },
+    {
+      "id": "stanford-hai-ai-index-2026",
+      "title": "Inside the AI Index: 12 Takeaways from the 2026 Report",
+      "url": "https://hai.stanford.edu/news/inside-the-ai-index-12-takeaways-from-the-2026-report",
+      "publisher": "Stanford HAI",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-13",
+      "excerpt": "Employment among software developers aged 22–25 has plummeted nearly 20% since 2024, even as their older colleagues' headcount grows. The pattern repeats in other jobs with higher levels of AI exposure, like customer service. Meanwhile, firm surveys indicate executives expect this trend to accelerate, with planned headcount reductions outpacing recent cuts."
     }
   ],
   "marketIds": {
