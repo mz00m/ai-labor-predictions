@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-04-12",
-  "totalSources": 515,
-  "verifiedCount": 505,
+  "lastUpdated": "2026-04-13",
+  "totalSources": 521,
+  "verifiedCount": 511,
   "sources": {
     "galdin-silbert-llm-signaling-2025": {
       "id": "galdin-silbert-llm-signaling-2025",
@@ -7245,6 +7245,96 @@
         "tech-sector-displacement",
         "overall-us-displacement",
         "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "goldman-sachs-displacement-2026": {
+      "id": "goldman-sachs-displacement-2026",
+      "title": "AI's Tech Displacement Effect: Gen Z and the 16,000 Jobs-per-Month Drag",
+      "url": "https://fortune.com/2026/04/06/ai-tech-displacement-effect-gen-z-16000-jobs-per-month/",
+      "publisher": "Goldman Sachs (via Fortune)",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-06",
+      "excerpt": "New research by Goldman Sachs economists finds that AI is already a measurable drag on the U.S. job market—erasing roughly 16,000 net jobs per month over the past year, with the pain falling hardest on Gen Z and entry-level workers. Goldman's breakdown shows AI substitution wiped out roughly 25,000 jobs per month in the past year, while augmentation added back about 9,000. The wage gap has similarly deteriorated, with Goldman's regression analysis estimating that a one standard-deviation increase in AI substitution exposure widens the entry-level-to-experienced wage gap by roughly 3.3 percentage points.",
+      "usedIn": [
+        "overall-us-displacement",
+        "entry-level-wage-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "goldman-sachs-scarring-2026": {
+      "id": "goldman-sachs-scarring-2026",
+      "title": "Long-Term Effects of AI Job Losses",
+      "url": "https://www.cnn.com/2026/04/07/economy/ai-job-losses-long-term-effects",
+      "publisher": "Goldman Sachs (via CNN)",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-07",
+      "excerpt": "Long-lasting impacts: 10 years after a job loss, technology-displaced workers' real earnings were 10 percentage points below that of non-displaced workers. Short-run impacts: It can take one month longer for technology-displaced workers to find a new job; and their inflation-adjusted earnings take bigger hits (more than 3%) versus other workers (negligible effect). Recessions worsen outcomes: The effects of technology-related displacements are amplified (by three weeks of additional unemployment and a 5-percentage-point likelihood of subsequent joblessness). Goldman Sachs previously estimated that 6% to 7% of US workers (about 11 million people) could have their jobs displaced by AI.",
+      "usedIn": [
+        "median-wage-impact",
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "anthropic-mccrory-exposure-2026": {
+      "id": "anthropic-mccrory-exposure-2026",
+      "title": "Anthropic's Economics Chief on Jobs Killed by AI",
+      "url": "https://fortune.com/2026/04/07/anthropic-economics-chief-peter-mccrory-jobs-killed-by-ai/",
+      "publisher": "Fortune (Peter McCrory, Anthropic)",
+      "evidenceTier": 3,
+      "datePublished": "2026-04-07",
+      "excerpt": "I was somewhat surprised that the gap between sort of coding in general, which as we point out had something like 94% theoretical exposure, but then based on actual adoption, it was closer to 30% of the tasks across all the jobs in that pocket of the economy.",
+      "usedIn": [
+        "tech-sector-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "fed-ai-adoption-monitoring-2026": {
+      "id": "fed-ai-adoption-monitoring-2026",
+      "title": "Monitoring AI Adoption in the U.S. Economy",
+      "url": "https://www.federalreserve.gov/econres/notes/feds-notes/monitoring-ai-adoption-in-the-u-s-economy-20260403.html",
+      "publisher": "Federal Reserve Board of Governors (Jeffrey S. Allen)",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-03",
+      "excerpt": "Adoption stood at about 18 percent of firms at the end of 2025. Prior to the question revision, the adoption rate had grown by 68 percent (3.9 percentage points) over the prior year but decelerated in Q2 2025. Over 20 percent of firms expect to use AI in the first half of 2026. The right panel of figure 2 shows that work-related GenAI adoption reported in the RPS stands at about 41 percent of the workforce, and non-work-related usage at about 50 percent of the population as of the latest survey in November 2025. The SBU estimates an employment-weighted firm AI adoption rate of around 78 percent and an LLM adoption rate of about 54 percent.",
+      "usedIn": [
+        "ai-adoption-rate",
+        "genai-work-adoption",
+        "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "challenger-march-layoffs-2026": {
+      "id": "challenger-march-layoffs-2026",
+      "title": "AI Blamed Heavily For March Job Cuts, Report Says",
+      "url": "https://www.forbes.com/sites/maryroeloffs/2026/04/02/ai-blamed-heavily-for-march-job-cuts-report-says/",
+      "publisher": "Forbes (Challenger, Gray & Christmas data)",
+      "evidenceTier": 3,
+      "datePublished": "2026-04-02",
+      "excerpt": "U.S.-based employers announced 60,620 job cuts in March, according to Challenger, up 25% from 48,307 cuts announced in February. AI was the leading reason for cutting jobs, cited in 25% of announcements, followed by closings, restructuring and economic conditions.",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "stanford-hai-ai-index-2026": {
+      "id": "stanford-hai-ai-index-2026",
+      "title": "Inside the AI Index: 12 Takeaways from the 2026 Report",
+      "url": "https://hai.stanford.edu/news/inside-the-ai-index-12-takeaways-from-the-2026-report",
+      "publisher": "Stanford HAI",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-13",
+      "excerpt": "Employment among software developers aged 22–25 has plummeted nearly 20% since 2024, even as their older colleagues' headcount grows. The pattern repeats in other jobs with higher levels of AI exposure, like customer service. Meanwhile, firm surveys indicate executives expect this trend to accelerate, with planned headcount reductions outpacing recent cuts. Generative AI reached 53% population adoption within three years, faster than the personal computer or the internet... the U.S. ranks 24th at 28.3%. Across multiple hospital systems, physicians reported up to 83% less time spent writing notes and significant reductions in burnout.",
+      "usedIn": [
+        "tech-sector-displacement",
+        "healthcare-admin-displacement",
+        "genai-work-adoption"
       ],
       "verified": true,
       "synthetic": false

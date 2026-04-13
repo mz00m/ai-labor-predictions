@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "Inside the AI Index: 12 Takeaways from the 2026 Report",
+      "author": "Shana Lynch",
+      "publisher": "Stanford HAI",
+      "date": "2026-04-13",
+      "url": "https://hai.stanford.edu/news/inside-the-ai-index-12-takeaways-from-the-2026-report",
+      "takeaway": "Stanford HAI's annual AI Index finds that AI's workforce disruption has 'moved from prediction to reality, hitting young workers first.' Employment among software developers aged 22-25 has plummeted nearly 20% since 2024 even as older colleagues' headcount grows; the pattern repeats in customer service and other high-AI-exposure roles. Generative AI reached 53% global population adoption within three years — faster than the PC or internet — though the US ranks 24th at 28.3%. Clinical AI note-taking tools saw widespread adoption in 2025, with physicians reporting up to 83% less time on notes and significant reductions in burnout. Model transparency is worsening: the Foundation Model Transparency Index average dropped to 40 (from 58). Grok 4 training emissions reached 72,816 tons CO2-eq; AI data center capacity hit 29.6 GW. US lead over China has nearly evaporated. US AI researcher inflow has dropped 89% since 2017. Global corporate AI investment hit $581.7B (+130% YoY).",
+      "weekFeatured": "2026-04-13",
+      "tier": 2
+    },
+    {
       "title": "Industrial Policy for the Intelligence Age: Ideas to Keep People First",
       "author": "OpenAI",
       "publisher": "OpenAI",

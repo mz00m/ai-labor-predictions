@@ -300,6 +300,15 @@
       ],
       "evidenceTier": 1,
       "label": "Fed/Duke: Healthcare NEI 0.69; AI enhances more roles than it replaces"
+    },
+    {
+      "date": "2026-04-13",
+      "direction": "up",
+      "sourceIds": [
+        "stanford-hai-ai-index-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Stanford HAI: physicians report up to 83% less time writing clinical notes"
     }
   ],
   "sources": [
@@ -591,6 +600,15 @@
       "datePublished": "2026-03-01",
       "excerpt": "Healthcare Practitioners and Technical job family: 65.9% AI task success rate across 1,395 evaluations. Slope coefficient beta=-0.20 (not statistically significant), suggesting relatively uniform AI performance across task durations.",
       "dateAdded": "2026-04-03"
+    },
+    {
+      "id": "stanford-hai-ai-index-2026",
+      "title": "Inside the AI Index: 12 Takeaways from the 2026 Report",
+      "url": "https://hai.stanford.edu/news/inside-the-ai-index-12-takeaways-from-the-2026-report",
+      "publisher": "Stanford HAI",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-13",
+      "excerpt": "Tools that automatically generate clinical notes from patient visits saw widespread adoption in 2025. Across multiple hospital systems, physicians reported up to 83% less time spent writing notes and significant reductions in burnout."
     }
   ]
 }

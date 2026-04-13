@@ -544,6 +544,15 @@
       ],
       "evidenceTier": 1,
       "label": "Fed: >98% of coder employment in top AI-exposure quintile"
+    },
+    {
+      "date": "2026-04-03",
+      "direction": "up",
+      "sourceIds": [
+        "fed-ai-adoption-monitoring-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Fed SBU: 78% of US labor force works at an AI-adopting firm (employment-weighted)"
     }
   ],
   "sources": [
@@ -1003,6 +1012,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-03-20",
       "excerpt": "The coding occupations are overwhelmingly in the high exposure group according to both metrics, with more than 98 percent of coder employment in the highest quintiles."
+    },
+    {
+      "id": "fed-ai-adoption-monitoring-2026",
+      "title": "Monitoring AI Adoption in the U.S. Economy",
+      "url": "https://www.federalreserve.gov/econres/notes/feds-notes/monitoring-ai-adoption-in-the-u-s-economy-20260403.html",
+      "publisher": "Federal Reserve Board of Governors (Jeffrey S. Allen)",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-03",
+      "excerpt": "The SBU estimates an employment-weighted firm AI adoption rate of around 78 percent and an LLM adoption rate of about 54 percent. In this context, employment weighting approximates the share of the labor force working at firms that have adopted AI."
     }
   ]
 }
