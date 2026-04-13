@@ -11,7 +11,7 @@ interface Article {
 const articles: Article[] = [
   {
     author: "Stanford HAI",
-    title: "Inside the AI Index: 12 Takeaways from the 2026 Report",
+    title: "The 2026 AI Index Report",
     summary:
       "AI workforce disruption moves from prediction to reality. Software devs aged 22-25 employment -20% since 2024. GenAI hit 53% population adoption in 3yrs (US 28.3%). Physicians report 83% less time on clinical notes. Transparency scores dropped to 40 from 58.",
     date: "Apr 13",
