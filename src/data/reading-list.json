@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "The Economy Is Growing, Jobs Aren't. Why That Might Be OK.",
+      "author": "Wall Street Journal",
+      "publisher": "Wall Street Journal",
+      "date": "2026-04-14",
+      "url": "https://www.wsj.com/economy/jobs/the-economy-is-growing-jobs-arent-why-that-might-be-ok-5c50a535",
+      "takeaway": "WSJ examines the decoupling of GDP growth from job creation as AI-driven productivity gains increasingly absorb output expansion without hiring. Frames the 'jobless growth' pattern as potentially benign if productivity flows through to wages and new kinds of work rather than concentrating at the top.",
+      "weekFeatured": "2026-04-14",
+      "tier": 3
+    },
+    {
       "title": "Inside the AI Index: 12 Takeaways from the 2026 Report",
       "author": "Shana Lynch",
       "publisher": "Stanford HAI",
