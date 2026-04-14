@@ -10,6 +10,15 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Alex Imas",
+    title: "What will be scarce? The post-commodity future of work",
+    summary:
+      "Chicago Booth economist argues AI triggers a 'post-commodity' economy: as automation cheapens goods, spending shifts to the relational sector (care, craft, hospitality) where human provenance is the value. Starbucks rolls back automation; human art commands 44% exclusivity premium vs 21% for AI art.",
+    date: "Apr 14",
+    url: "https://aleximas.substack.com/p/what-will-be-scarce",
+    accent: "border-l-fuchsia-500",
+  },
+  {
     author: "WSJ",
     title: "The Economy Is Growing, Jobs Aren't. Why That Might Be OK.",
     summary:
@@ -44,15 +53,6 @@ const articles: Article[] = [
     date: "Mar 27",
     url: "https://arxiv.org/abs/2603.20619",
     accent: "border-l-rose-500",
-  },
-  {
-    author: "NYT (Ben Casselman)",
-    title: "Economists Once Dismissed the A.I. Job Threat, but Not Anymore",
-    summary:
-      "Economists shifting from skeptical to 'it's coming.' BCG: >50% of jobs reshaped in 2-3y. Kinder: entry-level research hires replaced by Claude. Gimbel: speed and breadth determine pain.",
-    date: "Apr 3",
-    url: "https://www.nytimes.com/2026/04/03/business/economists-once-dismissed-the-ai-job-threat-but-not-anymore.html",
-    accent: "border-l-violet-500",
   },
 ];
 
