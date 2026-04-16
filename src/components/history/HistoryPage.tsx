@@ -18,17 +18,17 @@ export default function HistoryPage() {
       <ReadingProgressBar />
       {/* ───── Header ───── */}
       <header className="mb-10">
-        <p className="text-[12px] font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
+        <p className="text-sm font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
           Historical Context
         </p>
         <h1
-          className="text-[36px] sm:text-[44px] font-extrabold text-[var(--foreground)] leading-[1.1] tracking-tight mb-4"
+          className="text-5xl sm:text-6xl font-extrabold text-[var(--foreground)] leading-[1.1] tracking-tight mb-4"
           style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
         >
           On Tap Intelligence
         </h1>
         <p
-          className="text-[18px] sm:text-[20px] text-[var(--muted)] leading-relaxed mb-5"
+          className="text-2xl sm:text-[20px] text-[var(--muted)] leading-relaxed mb-5"
           style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
         >
           Every great technology has transformed work. Here&rsquo;s what
@@ -38,7 +38,7 @@ export default function HistoryPage() {
         {/* Thesis card */}
         <div className="border-l-4 border-[var(--accent)] bg-[var(--accent-light)] rounded-r-lg px-5 py-4">
           <p
-            className="text-[15px] sm:text-[16px] text-[var(--foreground)] leading-relaxed font-medium"
+            className="text-lg sm:text-xl text-[var(--foreground)] leading-relaxed font-medium"
             style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
           >
             AI is doing for cognitive capabilities what electricity did for
@@ -58,10 +58,10 @@ export default function HistoryPage() {
       <section className="mb-12">
         <div className="border-t border-black/[0.06] pt-8">
           <SectionLabel number="01" />
-          <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
             Every GPT Follows the Same Arc
           </h2>
-          <p className="text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
+          <p className="text-md text-[var(--muted)] leading-[1.75] mb-6">
             Every major{" "}
             <a
               href="https://en.wikipedia.org/wiki/General-purpose_technology"
@@ -94,10 +94,10 @@ export default function HistoryPage() {
 
           {/* "This time might be different" counterpoint */}
           <div className="mt-6 rounded-xl border border-amber-200/80 bg-amber-50/50 p-4 sm:p-5">
-            <p className="text-[13px] font-bold text-[var(--foreground)] mb-1.5">
+            <p className="text-base font-bold text-[var(--foreground)] mb-1.5">
               But what if this time is different?
             </p>
-            <p className="text-[13px] text-[var(--muted)] leading-relaxed">
+            <p className="text-base text-[var(--muted)] leading-relaxed">
               Previous technologies automated tasks, sometimes many
               tasks, but none could emulate the full range of human
               cognition. If AI progresses toward general intelligence, the
@@ -111,7 +111,7 @@ export default function HistoryPage() {
               labor involving it disappears, but it will probably
               look very different.
             </p>
-            <p className="text-[11px] text-[var(--muted)] mt-2">
+            <p className="text-xs text-[var(--muted)] mt-2">
               Adapted from{" "}
               <a
                 href="https://x.com/alexolegimas"
@@ -130,10 +130,10 @@ export default function HistoryPage() {
       <section className="mb-12">
         <div className="border-t border-black/[0.06] pt-8">
           <SectionLabel number="02" />
-          <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
             The Four Revolutions
           </h2>
-          <p className="text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
+          <p className="text-md text-[var(--muted)] leading-[1.75] mb-6">
             Four technologies. Four massive disruptions. All eventually
             created more jobs than they destroyed, but the path was
             never smooth or quick.
@@ -146,11 +146,11 @@ export default function HistoryPage() {
       <section className="mb-12">
         <div className="border-t border-black/[0.06] pt-8">
           <SectionLabel number="03" />
-          <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
             The On-Tap Intelligence Shift
           </h2>
 
-          <div className="space-y-4 text-[14px] text-[var(--muted)] leading-[1.8] mb-10">
+          <div className="space-y-4 text-md text-[var(--muted)] leading-[1.8] mb-10">
             <p>
               Prior automation technologies had a consistent structure: they
               automated <em>physical</em> capabilities (steam, combustion,
@@ -219,7 +219,7 @@ export default function HistoryPage() {
 
           {/* Comparison Matrix */}
           <div className="mb-4">
-            <p className="text-[12px] font-bold uppercase tracking-wider text-[var(--muted)] mb-4">
+            <p className="text-sm font-bold uppercase tracking-wider text-[var(--muted)] mb-4">
               From Scarce to On-Tap
             </p>
             <ComparisonMatrix />
@@ -231,10 +231,10 @@ export default function HistoryPage() {
       <section className="mb-12">
         <div className="border-t border-black/[0.06] pt-8">
           <SectionLabel number="04" />
-          <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
             What the Pattern Predicts
           </h2>
-          <p className="text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
+          <p className="text-md text-[var(--muted)] leading-[1.75] mb-6">
             History doesn&rsquo;t tell us the outcome. It tells us
             the shape. Here is what the pattern predicts, offered not as
             certainties but as the most historically-grounded expectations.
@@ -247,17 +247,17 @@ export default function HistoryPage() {
       <section className="mb-12">
         <div className="border-t border-black/[0.06] pt-8">
           <SectionLabel number="05" />
-          <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
             Occupational Vulnerability Snapshot
           </h2>
-          <p className="text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
+          <p className="text-md text-[var(--muted)] leading-[1.75] mb-6">
             Five vulnerability categories, grounded in the historical
             pattern of how general-purpose technologies reshape
             occupational structures.
           </p>
           <VulnerabilityTable />
           <div className="mt-6 p-4 rounded-lg border border-white/[0.06] bg-white/[0.02]">
-            <p className="text-[14px] text-[var(--muted)] leading-[1.75]">
+            <p className="text-md text-[var(--muted)] leading-[1.75]">
               Want to see how your specific job breaks down?{' '}
               <Link
                 href="/task-visualizer"
@@ -275,19 +275,19 @@ export default function HistoryPage() {
       <section className="mb-8">
         <div className="border-t border-black/[0.06] pt-8">
           <SectionLabel number="06" />
-          <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-6">
+          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-6">
             What History Actually Proves
           </h2>
-          <p className="text-[14px] text-[var(--muted)] leading-[1.75] mb-8 italic">
+          <p className="text-md text-[var(--muted)] leading-[1.75] mb-8 italic">
             The technology doesn&rsquo;t decide. We do.
           </p>
 
           {/* Lesson 1 */}
           <div className="mb-8">
-            <h3 className="text-[16px] font-bold text-[var(--foreground)] mb-2">
+            <h3 className="text-xl font-bold text-[var(--foreground)] mb-2">
               Lesson 1: Invest in Complements, Not Preservation
             </h3>
-            <p className="text-[14px] text-[var(--muted)] leading-[1.8]">
+            <p className="text-md text-[var(--muted)] leading-[1.8]">
               Every successful institutional response to a GPT transition
               invested in workers&rsquo; capacity to participate in the new
               economy, not in protecting the old one. The Morrill Act
@@ -308,11 +308,11 @@ export default function HistoryPage() {
 
           {/* Lesson 2 */}
           <div className="mb-8">
-            <h3 className="text-[16px] font-bold text-[var(--foreground)] mb-2">
+            <h3 className="text-xl font-bold text-[var(--foreground)] mb-2">
               Lesson 2: The Distribution Problem is Institutional, Not
               Technological
             </h3>
-            <p className="text-[14px] text-[var(--muted)] leading-[1.8]">
+            <p className="text-md text-[var(--muted)] leading-[1.8]">
               The computer era&rsquo;s inequality was not
               technologically inevitable. Goldin &amp; Katz document the
               college wage premium rising from 39% (1980) to 79% (2000),
@@ -331,11 +331,11 @@ export default function HistoryPage() {
 
           {/* Lesson 3 */}
           <div className="mb-10">
-            <h3 className="text-[16px] font-bold text-[var(--foreground)] mb-2">
+            <h3 className="text-xl font-bold text-[var(--foreground)] mb-2">
               Lesson 3: The Gains Are Real. The Timeline is Not What You
               Think.
             </h3>
-            <p className="text-[14px] text-[var(--muted)] leading-[1.8]">
+            <p className="text-md text-[var(--muted)] leading-[1.8]">
               Every GPT ultimately created more jobs than it destroyed and
               raised average wages. This is true and important. It is also
               true that the prior pattern&rsquo;s timeline (40 to 70
@@ -348,7 +348,7 @@ export default function HistoryPage() {
           {/* Closing pull-quote */}
           <blockquote className="border-l-4 border-[var(--accent)] bg-[var(--accent-light)] rounded-r-lg px-5 py-5">
             <p
-              className="text-[15px] sm:text-[16px] text-[var(--foreground)] leading-[1.75] font-medium"
+              className="text-lg sm:text-xl text-[var(--foreground)] leading-[1.75] font-medium"
               style={{
                 fontFamily: "'Source Serif 4', Georgia, serif",
               }}
@@ -377,7 +377,7 @@ export default function HistoryPage() {
       {/* ───── Key Sources ───── */}
       <section className="mb-12">
         <div className="border-t border-black/[0.06] pt-8">
-          <p className="text-[12px] font-bold uppercase tracking-widest text-[var(--muted)] mb-4">
+          <p className="text-sm font-bold uppercase tracking-widest text-[var(--muted)] mb-4">
             Key Sources
           </p>
           <div className="space-y-4">
@@ -427,7 +427,7 @@ export default function HistoryPage() {
 
 function SectionLabel({ number }: { number: string }) {
   return (
-    <span className="text-[11px] font-bold uppercase tracking-widest text-[var(--accent)] mb-3 block">
+    <span className="text-xs font-bold uppercase tracking-widest text-[var(--accent)] mb-3 block">
       {number}
     </span>
   );
@@ -453,13 +453,13 @@ function SourceCard({
       rel="noopener noreferrer"
       className="block border border-black/[0.06] rounded-lg px-5 py-4 hover:border-[var(--accent)]/30 transition-colors group"
     >
-      <p className="text-[13px] font-bold text-[var(--foreground)] leading-snug group-hover:text-[var(--accent)] transition-colors">
+      <p className="text-base font-bold text-[var(--foreground)] leading-snug group-hover:text-[var(--accent)] transition-colors">
         {title}
       </p>
-      <p className="text-[11px] text-[var(--muted)] mt-1">
+      <p className="text-xs text-[var(--muted)] mt-1">
         {authors} &middot; {journal}
       </p>
-      <p className="text-[12px] text-[var(--muted)] leading-relaxed mt-2">
+      <p className="text-sm text-[var(--muted)] leading-relaxed mt-2">
         {note}
       </p>
     </a>
@@ -472,7 +472,7 @@ function Tooltip({ label, tip }: { label: string; tip: string }) {
       <span className="underline decoration-dotted decoration-[var(--accent)]/50 underline-offset-2 cursor-help">
         {label}
       </span>
-      <span className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-[320px] rounded-lg bg-[var(--foreground)] text-white text-[11px] leading-[1.6] px-4 py-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-50 shadow-lg">
+      <span className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-[320px] rounded-lg bg-[var(--foreground)] text-white text-xs leading-[1.6] px-4 py-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-50 shadow-lg">
         {tip}
         <span className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-[var(--foreground)]" />
       </span>

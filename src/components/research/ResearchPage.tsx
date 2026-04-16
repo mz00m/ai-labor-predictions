@@ -116,13 +116,13 @@ export default function ResearchPage() {
     <div className="space-y-0">
       {/* Header */}
       <header className="mb-8">
-        <p className="text-[12px] font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
+        <p className="text-sm font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
           Research Library
         </p>
-        <h1 className="text-[36px] sm:text-[44px] font-black tracking-tight text-[var(--foreground)] leading-[1.08] mb-3">
+        <h1 className="text-5xl sm:text-6xl font-black tracking-tight text-[var(--foreground)] leading-[1.08] mb-3">
           All Sources
         </h1>
-        <p className="text-[15px] text-[var(--muted)] leading-relaxed max-w-2xl">
+        <p className="text-lg text-[var(--muted)] leading-relaxed max-w-2xl">
           {allSources.length} verified sources powering every prediction on this
           site. Search by keyword, filter by evidence tier, or browse by date.
         </p>
@@ -151,7 +151,7 @@ export default function ResearchPage() {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search sources by title, publisher, or keyword..."
-          className="w-full pl-11 pr-4 py-3 text-[14px] rounded-lg border border-black/[0.08] bg-white text-[var(--foreground)] placeholder:text-[var(--muted)]/60 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/30 focus:border-[var(--accent)]/40 transition-all"
+          className="w-full pl-11 pr-4 py-3 text-md rounded-lg border border-black/[0.08] bg-white text-[var(--foreground)] placeholder:text-[var(--muted)]/60 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/30 focus:border-[var(--accent)]/40 transition-all"
         />
         {query && (
           <button
@@ -176,7 +176,7 @@ export default function ResearchPage() {
 
       {/* Results count */}
       <div className="mt-6 mb-4 flex items-center justify-between">
-        <p className="text-[13px] text-[var(--muted)]">
+        <p className="text-base text-[var(--muted)]">
           {filtered.length === allSources.length
             ? `${filtered.length} sources`
             : `${filtered.length} of ${allSources.length} sources`}
@@ -195,7 +195,7 @@ export default function ResearchPage() {
             return (
               <span
                 key={config.tier}
-                className="flex items-center gap-1 text-[11px] text-[var(--muted)]"
+                className="flex items-center gap-1 text-xs text-[var(--muted)]"
               >
                 <span
                   className="inline-block w-1.5 h-1.5 rounded-full"
@@ -211,7 +211,7 @@ export default function ResearchPage() {
       {/* Source list grouped by month */}
       {grouped.length === 0 ? (
         <div className="py-16 text-center">
-          <p className="text-[15px] text-[var(--muted)]">
+          <p className="text-lg text-[var(--muted)]">
             No sources match your filters.
           </p>
           <button
@@ -219,7 +219,7 @@ export default function ResearchPage() {
               setQuery("");
               setSelectedTiers([1, 2, 3, 4]);
             }}
-            className="mt-3 text-[13px] font-semibold text-[var(--accent)] hover:underline"
+            className="mt-3 text-base font-semibold text-[var(--accent)] hover:underline"
           >
             Clear all filters
           </button>
@@ -230,9 +230,9 @@ export default function ResearchPage() {
             <div key={monthKey}>
               {/* Month header */}
               <div className="sticky top-[49px] z-30 bg-white/95 backdrop-blur-sm border-b border-black/[0.04] -mx-6 sm:-mx-10 px-6 sm:px-10 py-2 mt-6 first:mt-0">
-                <h2 className="text-[13px] font-bold text-[var(--foreground)]">
+                <h2 className="text-base font-bold text-[var(--foreground)]">
                   {formatMonthHeader(monthKey)}
-                  <span className="ml-2 text-[11px] font-normal text-[var(--muted)]">
+                  <span className="ml-2 text-xs font-normal text-[var(--muted)]">
                     {sources.length} source{sources.length !== 1 ? "s" : ""}
                   </span>
                 </h2>
@@ -277,12 +277,12 @@ function SourceRow({ source }: { source: SourceEntry }) {
                 href={source.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[14px] font-semibold text-[var(--foreground)] hover:text-[var(--accent)] transition-colors leading-snug"
+                className="text-md font-semibold text-[var(--foreground)] hover:text-[var(--accent)] transition-colors leading-snug"
               >
                 {source.title}
               </a>
             ) : (
-              <span className="text-[14px] font-semibold text-[var(--foreground)] leading-snug">
+              <span className="text-md font-semibold text-[var(--foreground)] leading-snug">
                 {source.title}
               </span>
             )}
@@ -290,16 +290,16 @@ function SourceRow({ source }: { source: SourceEntry }) {
 
           {/* Meta line */}
           <div className="flex items-center gap-2 mt-1 flex-wrap">
-            <span className="text-[12px] text-[var(--muted)]">
+            <span className="text-sm text-[var(--muted)]">
               {source.publisher}
             </span>
             <span className="text-black/[0.15]">&middot;</span>
-            <span className="text-[12px] text-[var(--muted)]">
+            <span className="text-sm text-[var(--muted)]">
               {formatDate(source.datePublished)}
             </span>
             <span className="text-black/[0.15]">&middot;</span>
             <span
-              className="text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded"
+              className="text-2xs font-bold uppercase tracking-wider px-1.5 py-0.5 rounded"
               style={{
                 color: tierConfig.color,
                 backgroundColor: `${tierConfig.color}15`,
@@ -311,7 +311,7 @@ function SourceRow({ source }: { source: SourceEntry }) {
 
           {/* Excerpt */}
           {source.excerpt && (
-            <p className="text-[12px] text-[var(--muted)] leading-relaxed mt-1.5 line-clamp-2">
+            <p className="text-sm text-[var(--muted)] leading-relaxed mt-1.5 line-clamp-2">
               {source.excerpt}
             </p>
           )}
@@ -323,13 +323,13 @@ function SourceRow({ source }: { source: SourceEntry }) {
                 <Link
                   key={slug}
                   href={`/predictions/${slug}`}
-                  className="text-[10px] font-medium text-[var(--muted)] bg-black/[0.03] hover:bg-black/[0.06] px-2 py-0.5 rounded transition-colors no-underline"
+                  className="text-2xs font-medium text-[var(--muted)] bg-black/[0.03] hover:bg-black/[0.06] px-2 py-0.5 rounded transition-colors no-underline"
                 >
                   {slugToTitle[slug] ?? slug}
                 </Link>
               ))}
               {source.usedIn.length > 4 && (
-                <span className="text-[10px] text-[var(--muted)] px-1 py-0.5">
+                <span className="text-2xs text-[var(--muted)] px-1 py-0.5">
                   +{source.usedIn.length - 4} more
                 </span>
               )}

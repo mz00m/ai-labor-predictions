@@ -243,18 +243,18 @@ const PATHS: PathConfig[] = [
         </p>
         <div className="mt-3 grid grid-cols-2 gap-2">
           <div className="rounded-md px-3 py-2 border border-[#5C61F6]/20 bg-[#5C61F6]/[0.04]">
-            <p className="text-[11px] font-bold text-[#5C61F6] mb-0.5">
+            <p className="text-xs font-bold text-[#5C61F6] mb-0.5">
               A: Demand elasticity
             </p>
-            <p className="text-[11px] text-[var(--muted)]">
+            <p className="text-xs text-[var(--muted)]">
               Does cheaper output create more demand?
             </p>
           </div>
           <div className="rounded-md px-3 py-2 border border-[#22c55e]/20 bg-[#22c55e]/[0.04]">
-            <p className="text-[11px] font-bold text-[#22c55e] mb-0.5">
+            <p className="text-xs font-bold text-[#22c55e] mb-0.5">
               B: High task exposure
             </p>
-            <p className="text-[11px] text-[var(--muted)]">
+            <p className="text-xs text-[var(--muted)]">
               Enough AI-augmented tasks to change the cost equation?
             </p>
           </div>
@@ -280,13 +280,13 @@ const PATHS: PathConfig[] = [
           ). Spreadsheets didn&apos;t eliminate accountants &mdash; they made
           analysis affordable, expanding the market for accounting services.
         </p>
-        <p className="mt-2 text-[11px]">
+        <p className="mt-2 text-xs">
           Note: expansion is a net effect, not frictionless. Some workers will
           be displaced at individual firms even as the sector grows overall.
         </p>
         <Link
           href="/demand-elasticity"
-          className="inline-flex items-center gap-1 mt-3 text-[12px] font-bold text-[var(--accent)] hover:underline"
+          className="inline-flex items-center gap-1 mt-3 text-sm font-bold text-[var(--accent)] hover:underline"
         >
           Explore the full demand elasticity framework
           <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -339,21 +339,21 @@ function PathCard({
 
         {/* Title + subtitle */}
         <p
-          className="text-[13px] font-bold uppercase tracking-[0.04em] mb-0.5"
+          className="text-base font-bold uppercase tracking-[0.04em] mb-0.5"
           style={{ color: path.color }}
         >
           {path.title}
         </p>
-        <p className="text-[14px] font-semibold text-[var(--foreground)] mb-2">
+        <p className="text-md font-semibold text-[var(--foreground)] mb-2">
           {path.subtitle}
         </p>
-        <p className="text-[12px] text-[var(--muted)] leading-relaxed">
+        <p className="text-sm text-[var(--muted)] leading-relaxed">
           {path.description}
         </p>
 
         {/* Expand hint */}
         <span
-          className="mt-3 flex items-center gap-1 text-[11px]"
+          className="mt-3 flex items-center gap-1 text-xs"
           style={{ color: path.color }}
         >
           {isExpanded ? "Collapse" : "See research"}
@@ -391,18 +391,18 @@ function PathCard({
           <div className="px-4 sm:px-5 pb-4 sm:pb-5">
             <div className="border-t border-black/[0.06] pt-4">
               {/* Research */}
-              <p className="text-[10px] font-bold uppercase tracking-[0.08em] text-[var(--muted)] mb-2">
+              <p className="text-2xs font-bold uppercase tracking-[0.08em] text-[var(--muted)] mb-2">
                 Research
               </p>
-              <div className="text-[13px] text-[var(--muted)] leading-relaxed">
+              <div className="text-base text-[var(--muted)] leading-relaxed">
                 {path.researchDetail}
               </div>
 
               {/* Real-world example */}
-              <p className="text-[10px] font-bold uppercase tracking-[0.08em] text-[var(--muted)] mt-4 mb-2">
+              <p className="text-2xs font-bold uppercase tracking-[0.08em] text-[var(--muted)] mt-4 mb-2">
                 Example
               </p>
-              <p className="text-[13px] text-[var(--muted)] leading-relaxed italic">
+              <p className="text-base text-[var(--muted)] leading-relaxed italic">
                 {path.example}
               </p>
             </div>
@@ -547,10 +547,10 @@ export default function ProductivityPaths() {
 
       {/* Section heading */}
       <div className="mb-6">
-        <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
+        <h2 className="text-4xl sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
           What Happens When Workers Get More Productive?
         </h2>
-        <p className="text-[15px] text-[var(--muted)] mt-2 max-w-2xl">
+        <p className="text-lg text-[var(--muted)] mt-2 max-w-2xl">
           AI-driven productivity gains lead firms down three paths &mdash; often
           simultaneously. Click each to see the research.
         </p>
@@ -562,7 +562,7 @@ export default function ProductivityPaths() {
         <div className="flex justify-center mb-4">
           <div className="node-pulse inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[var(--accent-light)] border border-[var(--accent)]/20">
             <span style={{ color: "var(--accent)" }}>{LightningIcon}</span>
-            <span className="text-[13px] font-semibold text-[var(--foreground)]">
+            <span className="text-base font-semibold text-[var(--foreground)]">
               AI makes workers more productive
             </span>
           </div>
@@ -595,10 +595,10 @@ export default function ProductivityPaths() {
             {JCurveIcon}
           </div>
           <div>
-            <p className="text-[14px] font-bold text-[var(--foreground)] mb-1">
+            <p className="text-md font-bold text-[var(--foreground)] mb-1">
               The Productivity J-Curve
             </p>
-            <p className="text-[13px] text-[var(--muted)] leading-relaxed">
+            <p className="text-base text-[var(--muted)] leading-relaxed">
               Most firms do all three at once. And it takes time &mdash;
               measured productivity often{" "}
               <em className="text-[var(--foreground)]">dips before it rises</em>{" "}
@@ -607,7 +607,7 @@ export default function ProductivityPaths() {
               electricity and computers.
             </p>
             <div className="flex items-center gap-3 mt-2 flex-wrap">
-              <p className="text-[11px] text-[var(--muted)]">
+              <p className="text-xs text-[var(--muted)]">
                 <a
                   href="https://www.nber.org/papers/w24001"
                   target="_blank"
@@ -620,7 +620,7 @@ export default function ProductivityPaths() {
               </p>
               <Link
                 href="/j-curve"
-                className="inline-flex items-center gap-1 text-[11px] font-medium text-[var(--accent)] hover:underline"
+                className="inline-flex items-center gap-1 text-xs font-medium text-[var(--accent)] hover:underline"
               >
                 Read the full explainer
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -633,7 +633,7 @@ export default function ProductivityPaths() {
       </div>
 
       {/* Footer interpretive line */}
-      <p className="mt-4 text-[12px] text-[var(--muted)] text-center leading-relaxed max-w-xl mx-auto">
+      <p className="mt-4 text-sm text-[var(--muted)] text-center leading-relaxed max-w-xl mx-auto">
         The automation tools tracked above are the leading indicator. The BLS
         data tells you which path each industry is taking.
       </p>

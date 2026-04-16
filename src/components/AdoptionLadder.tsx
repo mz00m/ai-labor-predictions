@@ -44,7 +44,7 @@ export default function AdoptionLadder() {
 
   return (
     <div className="mt-6 mb-2">
-      <p className="text-[11px] font-bold uppercase tracking-widest text-[var(--accent)] mb-3">
+      <p className="text-xs font-bold uppercase tracking-widest text-[var(--accent)] mb-3">
         Adoption spectrum: why adoption numbers vary
       </p>
 
@@ -63,16 +63,16 @@ export default function AdoptionLadder() {
                     minWidth: "80px",
                   }}
                 >
-                  <span className="absolute right-2 text-[12px] font-bold text-white stat-number">
+                  <span className="absolute right-2 text-sm font-bold text-white stat-number">
                     {rung.value}%
                   </span>
                 </div>
                 {/* Label */}
                 <div className="flex flex-col min-w-0">
-                  <span className="text-[13px] font-semibold text-[var(--foreground)] leading-tight">
+                  <span className="text-base font-semibold text-[var(--foreground)] leading-tight">
                     {rung.label}
                   </span>
-                  <span className="text-[11px] text-[var(--muted)] leading-tight">
+                  <span className="text-xs text-[var(--muted)] leading-tight">
                     {rung.source}
                   </span>
                 </div>
@@ -82,7 +82,7 @@ export default function AdoptionLadder() {
         })}
       </div>
 
-      <p className="text-[11px] text-[var(--muted)] mt-3 leading-relaxed opacity-70">
+      <p className="text-xs text-[var(--muted)] mt-3 leading-relaxed opacity-70">
         The gap between 10% and 78% is definitional, not contradictory.
         Strict &ldquo;in production&rdquo; measures capture at-scale deployment;
         survey-based measures capture any experimentation.

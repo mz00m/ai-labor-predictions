@@ -31,16 +31,16 @@ function CustomTooltip({ active, payload, label }: TooltipProps<number, string>)
 
   return (
     <div className="bg-white rounded-lg border border-black/[0.08] shadow-lg p-3">
-      <p className="text-[12px] font-semibold text-[var(--foreground)] mb-1.5">{label}</p>
-      <p className="text-[10px] text-[var(--muted)] mb-1">Baseline cost crossover by income tier:</p>
+      <p className="text-sm font-semibold text-[var(--foreground)] mb-1.5">{label}</p>
+      <p className="text-2xs text-[var(--muted)] mb-1">Baseline cost crossover by income tier:</p>
       {[...filtered].reverse().map((p) => (
-        <div key={p.dataKey} className="flex justify-between text-[11px] gap-4 mb-0.5">
+        <div key={p.dataKey} className="flex justify-between text-xs gap-4 mb-0.5">
           <span style={{ color: p.color }}>{p.name}</span>
           <span className="font-medium">{p.value}% of tasks</span>
         </div>
       ))}
       {hasRange && (
-        <p className="text-[10px] text-[var(--muted)] mt-1.5 pt-1.5 border-t border-black/[0.06]">
+        <p className="text-2xs text-[var(--muted)] mt-1.5 pt-1.5 border-t border-black/[0.06]">
           Shaded bands show slow/fast scenario range
         </p>
       )}
@@ -184,14 +184,14 @@ export default function AutomationWaveChart() {
               className="w-2.5 h-2.5 rounded-full"
               style={{ backgroundColor: INCOME_TIER_META[tier].color }}
             />
-            <span className="text-[11px] text-[var(--muted)]">
+            <span className="text-xs text-[var(--muted)]">
               {INCOME_TIER_META[tier].label}
             </span>
           </div>
         ))}
       </div>
 
-      <p className="text-[11px] text-[var(--muted)] mt-3">
+      <p className="text-xs text-[var(--muted)] mt-3">
         Solid lines show baseline cost crossover. The percentage of tasks within each income tier where
         AI compute is now cheaper than the human wage rate. Shaded bands show the slow-to-fast scenario
         range (0.5x to 1.5x cost decline rates). The widening bands reflect compounding uncertainty:

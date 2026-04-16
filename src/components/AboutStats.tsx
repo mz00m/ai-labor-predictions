@@ -25,7 +25,7 @@ export default function AboutStats({ totalCost }: AboutStatsProps) {
   }, []);
 
   return (
-    <p className="text-[14px] text-[var(--muted)] leading-relaxed">
+    <p className="text-md text-[var(--muted)] leading-relaxed">
       Matt Zieger started this as a weekend vibe coding project {daysSinceStart} days ago
       {commitCount !== null ? (
         <>

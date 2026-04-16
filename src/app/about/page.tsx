@@ -47,17 +47,17 @@ export default function AboutPage() {
       <div className="lg:flex-1 min-w-0 space-y-14">
         {/* Header */}
         <section className="mb-2">
-          <p className="text-[12px] font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
+          <p className="text-sm font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
             About This Project
           </p>
           <h1
-            className="text-[36px] sm:text-[44px] font-extrabold tracking-tight text-[var(--foreground)] leading-[1.1] mb-4"
+            className="text-5xl sm:text-6xl font-extrabold tracking-tight text-[var(--foreground)] leading-[1.1] mb-4"
             style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
           >
             Evidence Over Narrative
           </h1>
           <p
-            className="text-[18px] sm:text-[20px] text-[var(--muted)] leading-relaxed"
+            className="text-2xl sm:text-[20px] text-[var(--muted)] leading-relaxed"
             style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
           >
             Society is trying to figure out what AI means for work and the answers keep changing.
@@ -66,12 +66,12 @@ export default function AboutPage() {
 
         {/* Mission */}
         <section className="max-w-3xl space-y-4">
-          <p className="text-[14px] text-[var(--muted)] leading-relaxed">
+          <p className="text-md text-[var(--muted)] leading-relaxed">
             For years I&rsquo;ve wanted a single place that synthesizes what we actually
             know about AI&rsquo;s impact on economic opportunity: not the hype, not the doom,
             but the evidence.
           </p>
-          <p className="text-[14px] text-[var(--muted)] leading-relaxed">
+          <p className="text-md text-[var(--muted)] leading-relaxed">
             This site started as a way to track how predictions about displacement,
             wages, adoption, and corporate behavior evolve as new research, data, and real-world
             evidence emerge. It quickly grew into something more: a resource for simplifying
@@ -79,7 +79,7 @@ export default function AboutPage() {
             you&rsquo;re a workforce leader, a parent with a college-bound kid, or just someone
             trying to plan &mdash; can engage with this new and unclear future in a clear-headed way.
           </p>
-          <p className="text-[14px] text-[var(--muted)] leading-relaxed">
+          <p className="text-md text-[var(--muted)] leading-relaxed">
             Explore the visualizations
             ({" "}
             <a href="/task-visualizer" className="link-draw-underline hover:text-[var(--foreground)]">job tasks</a>,{" "}
@@ -99,10 +99,10 @@ export default function AboutPage() {
         {/* About Matt */}
         <section className="max-w-3xl">
           <div className="about-card border border-black/[0.06] rounded-lg px-5 py-5 bg-[var(--background)]">
-            <p className="text-[14px] font-bold text-[var(--foreground)] mb-2">
+            <p className="text-md font-bold text-[var(--foreground)] mb-2">
               Who&rsquo;s behind this?
             </p>
-            <p className="text-[14px] text-[var(--muted)] leading-relaxed">
+            <p className="text-md text-[var(--muted)] leading-relaxed">
               <a
                 href="https://www.linkedin.com/in/mattzieger"
                 target="_blank"
@@ -132,7 +132,7 @@ export default function AboutPage() {
               .
             </p>
             <AboutStats totalCost={totalCost} />
-            <p className="text-[14px] text-[var(--muted)] leading-relaxed mt-3">
+            <p className="text-md text-[var(--muted)] leading-relaxed mt-3">
               Have ideas? Reach out on{" "}
               <a
                 href="https://www.linkedin.com/in/mattzieger"
@@ -161,16 +161,16 @@ export default function AboutPage() {
 
         {/* Methodology link */}
         <section id="methodology" className="scroll-mt-16">
-          <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
+          <h2 className="text-4xl sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
             Methodology &amp; Sources
           </h2>
-          <p className="text-[15px] text-[var(--muted)] mt-2 max-w-3xl mb-4">
+          <p className="text-lg text-[var(--muted)] mt-2 max-w-3xl mb-4">
             Full documentation of how we collect, weight, combine, and present
             evidence across every section of the site.
           </p>
           <a
             href="/methodology"
-            className="inline-flex items-center gap-2 text-[14px] font-semibold text-[var(--accent)] hover:text-[#5C61F6] transition-colors"
+            className="inline-flex items-center gap-2 text-md font-semibold text-[var(--accent)] hover:text-[#5C61F6] transition-colors"
           >
             Read the full methodology
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">

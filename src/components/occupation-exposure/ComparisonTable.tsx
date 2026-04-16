@@ -26,7 +26,7 @@ export default function ComparisonTable({ data }: Props) {
 
   return (
     <div className="overflow-x-auto -mx-5 px-5 sm:mx-0 sm:px-0">
-      <table className="w-full text-[12px]">
+      <table className="w-full text-sm">
         <thead>
           <tr className="border-b border-black/[0.08]">
             <th className="text-left py-2 pr-3 font-semibold text-[var(--muted)]">
@@ -119,13 +119,13 @@ export default function ComparisonTable({ data }: Props) {
           })}
         </tbody>
       </table>
-      <p className="text-[10px] text-[var(--muted)] mt-2">
+      <p className="text-2xs text-[var(--muted)] mt-2">
         Shift = how many rank positions the occupation moves between
         exposure-only ranking and net-risk ranking. {"\u2193"} = net risk is
         lower than exposure suggests (absorption factors help). {"\u2191"} = net
         risk is higher (institutional factors add pressure).
       </p>
-      <p className="text-[10px] text-[var(--muted)] mt-1.5 leading-relaxed">
+      <p className="text-2xs text-[var(--muted)] mt-1.5 leading-relaxed">
         Job dimensionality explains many of the largest shifts. High-dimensional
         occupations (management, consulting) rank lower in net risk than exposure
         suggests because partial automation triggers the O-Ring &ldquo;focus

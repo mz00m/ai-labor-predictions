@@ -25,14 +25,14 @@ export default function AssessmentLayout({
           <div className="flex items-center gap-6">
             <Link
               href="/"
-              className="text-[13px] text-gray-400 hover:text-gray-900 transition-colors"
+              className="text-base text-gray-400 hover:text-gray-900 transition-colors"
             >
               jobsdata.ai
             </Link>
             <span className="text-gray-300">/</span>
             <Link
               href="/assessment"
-              className="text-[14px] font-semibold text-gray-900"
+              className="text-md font-semibold text-gray-900"
             >
               AI Action Plan
             </Link>
@@ -40,19 +40,19 @@ export default function AssessmentLayout({
           <div className="flex items-center gap-4">
             <Link
               href="/assessment/methodology"
-              className="text-[13px] text-gray-400 hover:text-gray-900 transition-colors"
+              className="text-base text-gray-400 hover:text-gray-900 transition-colors"
             >
               Methodology
             </Link>
             <Link
               href="/assessment/dashboard"
-              className="text-[13px] text-gray-400 hover:text-gray-900 transition-colors"
+              className="text-base text-gray-400 hover:text-gray-900 transition-colors"
             >
               My Plans
             </Link>
             <Link
               href="/assessment/start"
-              className="text-[13px] font-medium text-gray-500 hover:text-gray-900 border border-gray-300 hover:border-gray-400 px-4 py-1.5 rounded-md transition-colors"
+              className="text-base font-medium text-gray-500 hover:text-gray-900 border border-gray-300 hover:border-gray-400 px-4 py-1.5 rounded-md transition-colors"
             >
               Get Started
             </Link>
@@ -66,10 +66,10 @@ export default function AssessmentLayout({
       {/* Footer */}
       <footer className="border-t border-gray-200 mt-20">
         <div className="max-w-6xl mx-auto px-6 sm:px-10 py-8 flex flex-wrap justify-between items-center gap-4">
-          <p className="text-[12px] text-gray-400">
+          <p className="text-sm text-gray-400">
             Built on jobsdata.ai research &middot; {new Date().getFullYear()}
           </p>
-          <div className="flex gap-6 text-[12px] text-gray-400">
+          <div className="flex gap-6 text-sm text-gray-400">
             <Link href="/about" className="hover:text-gray-600 transition-colors">
               About
             </Link>

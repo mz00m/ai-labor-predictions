@@ -64,7 +64,7 @@ export default function TaskSliders({
   return (
     <div className="space-y-3">
       <div className="mb-2">
-        <p className="text-[12px] text-[var(--muted)]">
+        <p className="text-sm text-[var(--muted)]">
           Adjust sliders to match your actual workload. The others rebalance automatically.
           This changes your overall exposure profile, not when each task becomes automatable.
         </p>
@@ -88,18 +88,18 @@ export default function TaskSliders({
                   className={`w-2 h-2 rounded-full shrink-0 ${crossover !== null && crossover <= 2026 ? "risk-dot-pulse" : ""}`}
                   style={{ backgroundColor: risk.color }}
                 />
-                <span className="text-[13px] font-medium text-[var(--foreground)] truncate">
+                <span className="text-base font-medium text-[var(--foreground)] truncate">
                   {task.name}
                 </span>
               </div>
               <div className="flex items-center gap-2 shrink-0 ml-2">
                 <span
-                  className={`text-[10px] font-medium px-2 py-0.5 rounded-full ${isPopped ? "risk-badge-pop" : ""}`}
+                  className={`text-2xs font-medium px-2 py-0.5 rounded-full ${isPopped ? "risk-badge-pop" : ""}`}
                   style={{ color: risk.color, backgroundColor: risk.bg }}
                 >
                   {risk.label}
                 </span>
-                <span className="text-[12px] font-medium text-[var(--foreground)] w-[36px] text-right tabular-nums">
+                <span className="text-sm font-medium text-[var(--foreground)] w-[36px] text-right tabular-nums">
                   {Math.round(share * 100)}%
                 </span>
               </div>
@@ -115,7 +115,7 @@ export default function TaskSliders({
                 background: `linear-gradient(to right, ${risk.color} 0%, ${risk.color} ${share * 100}%, rgba(0,0,0,0.06) ${share * 100}%, rgba(0,0,0,0.06) 100%)`,
               }}
             />
-            <p className="text-[11px] text-[var(--muted)] mt-0.5 opacity-0 group-hover:opacity-100 transition-opacity">
+            <p className="text-xs text-[var(--muted)] mt-0.5 opacity-0 group-hover:opacity-100 transition-opacity">
               {task.description}
             </p>
           </div>

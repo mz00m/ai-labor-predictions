@@ -54,13 +54,13 @@ export default function AgeWeightedMethodology() {
         <div className="flex items-center justify-between px-4 py-3 bg-[#ef4444]/[0.06] border-b border-[var(--border)]">
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-[#ef4444]" />
-            <span className="font-mono text-[11px] font-semibold tracking-wide text-[#ef4444]">
+            <span className="font-mono text-xs font-semibold tracking-wide text-[#ef4444]">
               K-SHAPED DISPLACEMENT: THE AVERAGE HIDES THE STORY
             </span>
           </div>
           <button
             onClick={() => setExpanded(!expanded)}
-            className="text-[10px] font-mono font-medium text-[var(--accent)] bg-[var(--accent)]/[0.08] border border-[var(--accent)]/20 rounded px-2 py-0.5 hover:bg-[var(--accent)]/[0.14]"
+            className="text-2xs font-mono font-medium text-[var(--accent)] bg-[var(--accent)]/[0.08] border border-[var(--accent)]/20 rounded px-2 py-0.5 hover:bg-[var(--accent)]/[0.14]"
           >
             {expanded ? "collapse" : "expand"}
           </button>
@@ -68,10 +68,10 @@ export default function AgeWeightedMethodology() {
 
         {/* TL;DR box */}
         <div className="mx-4 mt-4 rounded-xl border border-[#6366F1]/20 bg-[#6366F1]/[0.04] p-4">
-          <h4 className="text-[13px] font-bold text-[#6366F1] uppercase tracking-wide mb-2">
+          <h4 className="text-base font-bold text-[#6366F1] uppercase tracking-wide mb-2">
             TL;DR
           </h4>
-          <p className="text-[13px] text-[var(--foreground)] leading-relaxed">
+          <p className="text-base text-[var(--foreground)] leading-relaxed">
             The sector-wide +1.3% average hides a K-shaped split: workers 22-25 face <strong>-20%
             employment decline</strong> while workers 35-49 see <strong>+9% growth</strong>. AI tools
             amplify experience, so senior workers benefit while entry-level hiring evaporates. The
@@ -81,7 +81,7 @@ export default function AgeWeightedMethodology() {
 
         {/* Summary */}
         <div className="px-4 py-4">
-          <p className="text-[13px] text-[var(--muted)] leading-relaxed">
+          <p className="text-base text-[var(--muted)] leading-relaxed">
             The sector-wide +1.3% average is real but misleading.
             When broken down by age, the tech labor market reveals a sharp
             K-shape: early-career workers face steep decline while
@@ -90,7 +90,7 @@ export default function AgeWeightedMethodology() {
 
           {/* Visual bar chart */}
           <div className="mt-5 space-y-2">
-            <div className="flex items-center text-[10px] font-mono text-[var(--muted)] mb-1">
+            <div className="flex items-center text-2xs font-mono text-[var(--muted)] mb-1">
               <span className="w-14">Age</span>
               <span className="flex-1 text-center opacity-50">Employment change since late 2022</span>
               <span className="w-10 text-right">Weight</span>
@@ -103,7 +103,7 @@ export default function AgeWeightedMethodology() {
               return (
                 <div key={row.band} className="flex items-center gap-0">
                   <span
-                    className="w-14 font-mono text-[12px] font-semibold shrink-0"
+                    className="w-14 font-mono text-sm font-semibold shrink-0"
                     style={{ color: row.color }}
                   >
                     {row.band}
@@ -120,7 +120,7 @@ export default function AgeWeightedMethodology() {
                             opacity: 0.85,
                           }}
                         >
-                          <span className="text-[10px] font-mono font-bold text-white whitespace-nowrap">
+                          <span className="text-2xs font-mono font-bold text-white whitespace-nowrap">
                             {row.label}
                           </span>
                         </div>
@@ -139,19 +139,19 @@ export default function AgeWeightedMethodology() {
                             opacity: 0.85,
                           }}
                         >
-                          <span className="text-[10px] font-mono font-bold text-white whitespace-nowrap">
+                          <span className="text-2xs font-mono font-bold text-white whitespace-nowrap">
                             {row.label}
                           </span>
                         </div>
                       )}
                       {isZero && (
-                        <span className="text-[10px] font-mono font-bold pl-1.5" style={{ color: row.color }}>
+                        <span className="text-2xs font-mono font-bold pl-1.5" style={{ color: row.color }}>
                           {row.label}
                         </span>
                       )}
                     </div>
                   </div>
-                  <span className="w-10 text-right font-mono text-[10px] text-[var(--muted)] shrink-0">
+                  <span className="w-10 text-right font-mono text-2xs text-[var(--muted)] shrink-0">
                     {row.weight}
                   </span>
                 </div>
@@ -161,12 +161,12 @@ export default function AgeWeightedMethodology() {
 
           {/* Result */}
           <div className="mt-4 flex items-center justify-between bg-[var(--accent-light)] rounded-md px-3 py-2">
-            <span className="font-mono text-[11px] text-[var(--muted)]">
+            <span className="font-mono text-xs text-[var(--muted)]">
               Weighted sector net &rarr;
             </span>
-            <span className="font-mono text-[13px] font-semibold text-[var(--accent)]">
+            <span className="font-mono text-base font-semibold text-[var(--accent)]">
               +1.3%{" "}
-              <span className="text-[10px] text-[var(--muted)] font-normal">
+              <span className="text-2xs text-[var(--muted)] font-normal">
                 (&minus;1.5% to +4.5%)
               </span>
             </span>
@@ -174,13 +174,13 @@ export default function AgeWeightedMethodology() {
 
           {/* Corroborating signals */}
           <div className="mt-4">
-            <p className="font-mono text-[10px] font-semibold tracking-widest text-[var(--muted)] mb-2">
+            <p className="font-mono text-2xs font-semibold tracking-widest text-[var(--muted)] mb-2">
               CORROBORATING SIGNALS FOR EARLY-CAREER IMPACT
             </p>
             <div className="grid grid-cols-2 gap-x-4 gap-y-1.5">
               {CORROBORATING.map((s) => (
                 <div key={s.signal} className="flex items-baseline gap-1.5">
-                  <span className="text-[11px] font-mono font-semibold text-[#ef4444]">{s.change}</span>
+                  <span className="text-xs font-mono font-semibold text-[#ef4444]">{s.change}</span>
                   <span className="text-[10.5px] text-[var(--muted)]">{s.signal}</span>
                   <span className="text-[9px] text-[var(--muted)] opacity-50">({s.source})</span>
                 </div>
@@ -197,7 +197,7 @@ export default function AgeWeightedMethodology() {
                 <p className="font-mono text-[9.5px] font-semibold tracking-widest text-[var(--accent)] mb-1">
                   {item.label}
                 </p>
-                <p className="text-[12px] text-[var(--muted)] leading-relaxed">
+                <p className="text-sm text-[var(--muted)] leading-relaxed">
                   {item.text}
                 </p>
               </div>
@@ -211,10 +211,10 @@ export default function AgeWeightedMethodology() {
               <div className="space-y-1.5">
                 {AGE_BANDS.map((row) => (
                   <div key={row.band} className="flex items-baseline gap-2">
-                    <span className="font-mono text-[11px] font-semibold w-12" style={{ color: row.color }}>
+                    <span className="font-mono text-xs font-semibold w-12" style={{ color: row.color }}>
                       {row.band}
                     </span>
-                    <span className="text-[11px] text-[var(--muted)]">{row.detail}</span>
+                    <span className="text-xs text-[var(--muted)]">{row.detail}</span>
                     <span className="text-[9px] text-[var(--muted)] opacity-40 ml-auto shrink-0">
                       {row.src}
                     </span>
@@ -224,7 +224,7 @@ export default function AgeWeightedMethodology() {
             </div>
 
             {/* Source footer */}
-            <p className="mt-5 pt-3 border-t border-[var(--border)] text-[10px] text-[var(--muted)] opacity-60 leading-relaxed">
+            <p className="mt-5 pt-3 border-t border-[var(--border)] text-2xs text-[var(--muted)] opacity-60 leading-relaxed">
               Primary: Brynjolfsson, Chandar &amp; Chen (2025) &ldquo;Canaries in the Coal Mine?&rdquo;
               Stanford DEL / ADP Research. Corroborating: Dallas Fed (2026), Goldman Sachs (2025),
               CompTIA (2025), Handshake, SignalFire, BLS OOH 2024, ACS via Preston Cooper,

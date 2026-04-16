@@ -98,11 +98,11 @@ function CustomTooltip({
       {/* Data point section (only for real points) */}
       {!data.isPhantom && data.value != null && (
         <>
-          <p className="text-[12px] font-medium text-[var(--foreground)]">
+          <p className="text-sm font-medium text-[var(--foreground)]">
             {data.dateStr}
           </p>
           {data.dataType === "projected" && (
-            <span className="inline-block text-[10px] font-medium text-white bg-[#5C61F6]/70 rounded px-1.5 py-0.5 mb-1">
+            <span className="inline-block text-2xs font-medium text-white bg-[#5C61F6]/70 rounded px-1.5 py-0.5 mb-1">
               Projected / Forecast
             </span>
           )}
@@ -111,7 +111,7 @@ function CustomTooltip({
             {unit}
           </p>
           {data.confidenceLow != null && data.confidenceHigh != null && (
-            <p className="text-[11px] text-[var(--muted)]">
+            <p className="text-xs text-[var(--muted)]">
               Range: {data.confidenceLow}
               {unit} to {data.confidenceHigh}
               {unit}
@@ -122,7 +122,7 @@ function CustomTooltip({
               className="inline-block w-2 h-2 rounded-full"
               style={{ backgroundColor: tierConfig.color }}
             />
-            <span className="text-[11px] text-[var(--muted)]">{tierConfig.label}</span>
+            <span className="text-xs text-[var(--muted)]">{tierConfig.label}</span>
           </div>
           {(data as ChartDataPoint & { metricType?: MetricType }).metricType && (
             <div className="mt-1 flex items-center gap-1.5">
@@ -130,7 +130,7 @@ function CustomTooltip({
                 className="inline-block w-2 h-2 rounded-sm"
                 style={{ backgroundColor: getMetricTypeConfig((data as ChartDataPoint & { metricType: MetricType }).metricType).color }}
               />
-              <span className="text-[11px] text-[var(--muted)]">
+              <span className="text-xs text-[var(--muted)]">
                 {getMetricTypeConfig((data as ChartDataPoint & { metricType: MetricType }).metricType).label}
               </span>
             </div>
@@ -138,7 +138,7 @@ function CustomTooltip({
           {pointSources.length > 0 && (
             <div className="mt-2 border-t border-black/[0.06] pt-1.5">
               {pointSources.map((s) => (
-                <p key={s.id} className="text-[11px] text-[var(--accent-text)]">
+                <p key={s.id} className="text-xs text-[var(--accent-text)]">
                   {s.publisher}: {s.title.slice(0, 55)}
                   {s.title.length > 55 ? "..." : ""}
                 </p>
@@ -152,7 +152,7 @@ function CustomTooltip({
       {matchingOverlays.length > 0 && (
         <div className={!data.isPhantom && data.value != null ? "mt-2 border-t border-black/[0.06] pt-2" : ""}>
           {data.isPhantom && (
-            <p className="text-[12px] font-medium text-[var(--foreground)] mb-1.5">
+            <p className="text-sm font-medium text-[var(--foreground)] mb-1.5">
               {data.dateStr}
             </p>
           )}
@@ -172,12 +172,12 @@ function CustomTooltip({
               <div key={`overlay-tip-${i}`} className={i > 0 ? "mt-2 border-t border-black/[0.06] pt-2" : ""}>
                 <div className="flex items-start gap-1.5">
                   <span
-                    className="text-[14px] font-bold leading-tight mt-px shrink-0"
+                    className="text-md font-bold leading-tight mt-px shrink-0"
                     style={{ color }}
                   >
                     {arrow}
                   </span>
-                  <p className="text-[12px] leading-snug text-[var(--foreground)]">
+                  <p className="text-sm leading-snug text-[var(--foreground)]">
                     {o.label}
                   </p>
                 </div>
@@ -186,14 +186,14 @@ function CustomTooltip({
                     className="inline-block w-2 h-2 rounded-full"
                     style={{ backgroundColor: oTierConfig.color }}
                   />
-                  <span className="text-[11px] text-[var(--muted)]">
+                  <span className="text-xs text-[var(--muted)]">
                     {oTierConfig.label}
                   </span>
                 </div>
                 {overlaySources.length > 0 && (
                   <div className="mt-1">
                     {overlaySources.map((s) => (
-                      <p key={s.id} className="text-[11px] text-[var(--accent-text)]">
+                      <p key={s.id} className="text-xs text-[var(--accent-text)]">
                         {s.publisher}: {s.title.slice(0, 55)}
                         {s.title.length > 55 ? "..." : ""}
                       </p>
@@ -206,7 +206,7 @@ function CustomTooltip({
         </div>
       )}
 
-      <p className="text-[10px] text-[var(--muted)] mt-1.5 opacity-60">
+      <p className="text-2xs text-[var(--muted)] mt-1.5 opacity-60">
         Click to view source ↓
       </p>
     </div>
@@ -405,7 +405,7 @@ export default function PredictionChart({
 
   if (filtered.length === 0) {
     return (
-      <div className="flex items-center justify-center h-48 text-[14px] text-[var(--muted)]">
+      <div className="flex items-center justify-center h-48 text-md text-[var(--muted)]">
         No data points match the selected evidence tiers.
       </div>
     );
@@ -904,7 +904,7 @@ export default function PredictionChart({
           }}
         >
           <div className="bg-[var(--background)] border border-[var(--border)] rounded-lg p-3.5 max-w-xs shadow-sm">
-            <p className="text-[12px] font-medium text-[var(--foreground)] mb-1.5">
+            <p className="text-sm font-medium text-[var(--foreground)] mb-1.5">
               {hoverOverlay.overlay.dateStr}
             </p>
             {(() => {
@@ -916,19 +916,19 @@ export default function PredictionChart({
               return (
                 <>
                   <div className="flex items-start gap-1.5">
-                    <span className="text-[14px] font-bold leading-tight mt-px shrink-0" style={{ color }}>
+                    <span className="text-md font-bold leading-tight mt-px shrink-0" style={{ color }}>
                       {arrow}
                     </span>
-                    <p className="text-[12px] leading-snug text-[var(--foreground)]">{o.label}</p>
+                    <p className="text-sm leading-snug text-[var(--foreground)]">{o.label}</p>
                   </div>
                   <div className="mt-1 flex items-center gap-1.5">
                     <span className="inline-block w-2 h-2 rounded-full" style={{ backgroundColor: oTierConfig.color }} />
-                    <span className="text-[11px] text-[var(--muted)]">{oTierConfig.label}</span>
+                    <span className="text-xs text-[var(--muted)]">{oTierConfig.label}</span>
                   </div>
                   {overlaySources.length > 0 && (
                     <div className="mt-1">
                       {overlaySources.map((s) => (
-                        <p key={s.id} className="text-[11px] text-[var(--accent-text)]">
+                        <p key={s.id} className="text-xs text-[var(--accent-text)]">
                           {s.publisher}: {s.title.slice(0, 55)}
                           {s.title.length > 55 ? "..." : ""}
                         </p>
@@ -938,7 +938,7 @@ export default function PredictionChart({
                 </>
               );
             })()}
-            <p className="text-[10px] text-[var(--muted)] mt-1.5 opacity-60">Click to view source ↓</p>
+            <p className="text-2xs text-[var(--muted)] mt-1.5 opacity-60">Click to view source ↓</p>
           </div>
         </div>
       )}
@@ -948,11 +948,11 @@ export default function PredictionChart({
           <>
             <div className="flex items-center gap-1.5">
               <svg width="24" height="2"><line x1="0" y1="1" x2="24" y2="1" stroke="#5C61F6" strokeWidth="2.5" /></svg>
-              <span className="text-[11px] text-[var(--muted)]">Observed data</span>
+              <span className="text-xs text-[var(--muted)]">Observed data</span>
             </div>
             <div className="flex items-center gap-1.5">
               <svg width="24" height="2"><line x1="0" y1="1" x2="24" y2="1" stroke="#5C61F6" strokeWidth="2.5" strokeDasharray="6 3" strokeOpacity="0.7" /></svg>
-              <span className="text-[11px] text-[var(--muted)]">Projected / Forecast (labeled with projected %)</span>
+              <span className="text-xs text-[var(--muted)]">Projected / Forecast (labeled with projected %)</span>
             </div>
           </>
         )}
@@ -961,7 +961,7 @@ export default function PredictionChart({
             <svg width="16" height="10">
               <rect x="0" y="0" width="16" height="10" fill="#5C61F6" fillOpacity="0.22" rx="2" />
             </svg>
-            <span className="text-[11px] text-[var(--muted)]">Confidence range</span>
+            <span className="text-xs text-[var(--muted)]">Confidence range</span>
           </div>
         )}
         {overlayData.length > 0 && (
@@ -970,13 +970,13 @@ export default function PredictionChart({
               <svg width="6" height="10">
                 <rect x="0" y="0" width="6" height="10" fill="#ef4444" fillOpacity="0.32" rx="1" />
               </svg>
-              <span className="text-[11px] text-[var(--muted)]">Negative signal</span>
+              <span className="text-xs text-[var(--muted)]">Negative signal</span>
             </div>
             <div className="flex items-center gap-1.5">
               <svg width="6" height="10">
                 <rect x="0" y="0" width="6" height="10" fill="#22c55e" fillOpacity="0.32" rx="1" />
               </svg>
-              <span className="text-[11px] text-[var(--muted)]">Positive signal</span>
+              <span className="text-xs text-[var(--muted)]">Positive signal</span>
             </div>
           </>
         )}
@@ -984,7 +984,7 @@ export default function PredictionChart({
       {/* Metric type legend (only when metricType tags are present) */}
       {presentMetricTypes.length > 0 && (
         <div className="flex items-center gap-3 mt-2 px-1 flex-wrap">
-          <span className="text-[10px] font-medium text-[var(--muted)] uppercase tracking-wider">
+          <span className="text-2xs font-medium text-[var(--muted)] uppercase tracking-wider">
             Data type
           </span>
           {presentMetricTypes.map((mt) => {
@@ -1015,7 +1015,7 @@ export default function PredictionChart({
                     />
                   )}
                 </svg>
-                <span className="text-[11px] text-[var(--muted)]">{cfg.shortLabel}</span>
+                <span className="text-xs text-[var(--muted)]">{cfg.shortLabel}</span>
               </div>
             );
           })}
@@ -1025,7 +1025,7 @@ export default function PredictionChart({
       {!compact && totalOverlayCount > OVERLAY_COLLAPSE_THRESHOLD && (
         <button
           onClick={() => setOverlaysExpanded(!overlaysExpanded)}
-          className="mt-2 px-1 text-[11px] font-medium text-[var(--accent)] hover:underline"
+          className="mt-2 px-1 text-xs font-medium text-[var(--accent)] hover:underline"
         >
           {overlaysExpanded
             ? `Collapse overlay signals (${totalOverlayCount} total)`

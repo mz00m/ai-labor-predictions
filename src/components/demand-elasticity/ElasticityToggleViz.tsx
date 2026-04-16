@@ -214,10 +214,10 @@ export default function ElasticityToggleViz() {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-6">
         <div>
-          <h3 className="text-[18px] font-bold text-[var(--foreground)] mb-1">
+          <h3 className="text-2xl font-bold text-[var(--foreground)] mb-1">
             The Elasticity Effect by Industry
           </h3>
-          <p className="text-[13px] text-[var(--muted)] leading-relaxed">
+          <p className="text-base text-[var(--muted)] leading-relaxed">
             See how demand elasticity changes the displacement story. Toggle to
             stretch or compress each industry&rsquo;s outlook.
           </p>
@@ -250,14 +250,14 @@ export default function ElasticityToggleViz() {
                 }}
               />
             </span>
-            <span className="text-[13px] font-semibold text-[var(--foreground)]">
+            <span className="text-base font-semibold text-[var(--foreground)]">
               Apply demand elasticity
             </span>
           </button>
 
           <Link
             href="/demand-elasticity"
-            className="text-[12px] text-[var(--accent)] font-medium hover:underline shrink-0 no-underline"
+            className="text-sm text-[var(--accent)] font-medium hover:underline shrink-0 no-underline"
             title="What is demand elasticity?"
           >
             Learn more
@@ -317,11 +317,11 @@ export default function ElasticityToggleViz() {
               {/* Label row */}
               <div className="flex items-center justify-between mb-1">
                 <div className="flex items-center gap-2">
-                  <span className="text-[12px] font-semibold text-[var(--foreground)]">
+                  <span className="text-sm font-semibold text-[var(--foreground)]">
                     {industry.label}
                   </span>
                   <span
-                    className="text-[10px] px-1.5 py-0.5 rounded-full font-medium"
+                    className="text-2xs px-1.5 py-0.5 rounded-full font-medium"
                     style={{
                       backgroundColor:
                         industry.elasticity >= 1.0
@@ -341,7 +341,7 @@ export default function ElasticityToggleViz() {
                   </span>
                 </div>
                 <span
-                  className="text-[12px] font-bold tabular-nums transition-colors"
+                  className="text-sm font-bold tabular-nums transition-colors"
                   style={{
                     color: barColor,
                     transitionDuration: reducedMotion ? "0ms" : "300ms",
@@ -428,7 +428,7 @@ export default function ElasticityToggleViz() {
               {/* Tooltip on hover */}
               {isHovered && (
                 <div className="absolute left-0 right-0 top-full mt-1 z-20 px-2">
-                  <div className="bg-[#1a1a2e] text-white rounded-lg px-4 py-3 shadow-lg text-[12px] leading-relaxed">
+                  <div className="bg-[#1a1a2e] text-white rounded-lg px-4 py-3 shadow-lg text-sm leading-relaxed">
                     <div className="flex items-center gap-3 mb-2">
                       <span className="font-bold">{industry.label}</span>
                       <span className="text-white/50">|</span>
@@ -442,7 +442,7 @@ export default function ElasticityToggleViz() {
                     </div>
                     <div className="flex gap-4 mb-2">
                       <div>
-                        <span className="text-white/50 text-[10px] uppercase tracking-wider">
+                        <span className="text-white/50 text-2xs uppercase tracking-wider">
                           Raw displacement
                         </span>
                         <p className="font-bold text-[#ef4444]">
@@ -450,7 +450,7 @@ export default function ElasticityToggleViz() {
                         </p>
                       </div>
                       <div>
-                        <span className="text-white/50 text-[10px] uppercase tracking-wider">
+                        <span className="text-white/50 text-2xs uppercase tracking-wider">
                           After elasticity
                         </span>
                         <p
@@ -464,7 +464,7 @@ export default function ElasticityToggleViz() {
                         </p>
                       </div>
                       <div>
-                        <span className="text-white/50 text-[10px] uppercase tracking-wider">
+                        <span className="text-white/50 text-2xs uppercase tracking-wider">
                           Delta
                         </span>
                         <p className="font-bold text-[#5C61F6]">
@@ -473,7 +473,7 @@ export default function ElasticityToggleViz() {
                         </p>
                       </div>
                     </div>
-                    <p className="text-white/60 text-[11px]">
+                    <p className="text-white/60 text-xs">
                       {industry.description}
                     </p>
                   </div>
@@ -486,10 +486,10 @@ export default function ElasticityToggleViz() {
 
       {/* Axis labels */}
       <div className="flex items-center justify-between mt-3 px-1">
-        <span className="text-[10px] text-[var(--muted)] font-medium">
+        <span className="text-2xs text-[var(--muted)] font-medium">
           Displacement
         </span>
-        <span className="text-[10px] text-[var(--muted)] font-medium">
+        <span className="text-2xs text-[var(--muted)] font-medium">
           Expansion
         </span>
       </div>
@@ -498,13 +498,13 @@ export default function ElasticityToggleViz() {
       <div className="flex flex-wrap items-center gap-4 mt-4 pt-3 border-t border-black/[0.06]">
         <div className="flex items-center gap-1.5">
           <span className="w-3 h-2 rounded-sm bg-[#ef4444] opacity-85" />
-          <span className="text-[11px] text-[var(--muted)]">
+          <span className="text-xs text-[var(--muted)]">
             Net displacement
           </span>
         </div>
         <div className="flex items-center gap-1.5">
           <span className="w-3 h-2 rounded-sm bg-[#22c55e] opacity-85" />
-          <span className="text-[11px] text-[var(--muted)]">
+          <span className="text-xs text-[var(--muted)]">
             Net expansion
           </span>
         </div>
@@ -517,16 +517,16 @@ export default function ElasticityToggleViz() {
                 border: "1px dashed #94a3b860",
               }}
             />
-            <span className="text-[11px] text-[var(--muted)]">
+            <span className="text-xs text-[var(--muted)]">
               Raw displacement (without elasticity)
             </span>
           </div>
         )}
         <div className="flex items-center gap-1.5">
-          <span className="text-[10px] font-medium text-[var(--muted)] bg-black/[0.04] px-1.5 py-0.5 rounded-full">
+          <span className="text-2xs font-medium text-[var(--muted)] bg-black/[0.04] px-1.5 py-0.5 rounded-full">
             e = elasticity
           </span>
-          <span className="text-[11px] text-[var(--muted)]">
+          <span className="text-xs text-[var(--muted)]">
             &gt;1.0 = elastic, &lt;1.0 = inelastic
           </span>
         </div>

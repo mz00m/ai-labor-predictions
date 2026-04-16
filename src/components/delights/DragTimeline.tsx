@@ -167,7 +167,7 @@ export default function DragTimeline({
       {/* Year tooltip - shows when dragging */}
       {isActive && (
         <div
-          className="absolute -top-10 z-30 text-[11px] font-bold text-white bg-[var(--accent)] rounded-md px-2.5 py-1 shadow-lg whitespace-nowrap"
+          className="absolute -top-10 z-30 text-xs font-bold text-white bg-[var(--accent)] rounded-md px-2.5 py-1 shadow-lg whitespace-nowrap"
           style={{
             right: -dragOffset - 12,
             animation: reducedMotion ? "none" : "milestone-pop 0.15s ease-out both",

@@ -48,7 +48,7 @@ export default function SignalHero({ metrics, lastUpdated }: SignalHeroProps) {
       </div>
 
       <div className="relative">
-        <p className="text-[13px] font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
+        <p className="text-base font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
           AI Automation Signals
           <span className="opacity-50 mx-1">&middot;</span>
           <span className="normal-case font-semibold opacity-70">
@@ -56,7 +56,7 @@ export default function SignalHero({ metrics, lastUpdated }: SignalHeroProps) {
           </span>
         </p>
 
-        <h1 className="text-[42px] sm:text-[56px] font-black tracking-tight text-[var(--foreground)] leading-[1.05] max-w-4xl">
+        <h1 className="text-[42px] sm:text-7xl font-black tracking-tight text-[var(--foreground)] leading-[1.05] max-w-4xl">
           Where is AI automation{" "}
           <span className="text-[#F66B5C] italic">heading?</span>
         </h1>

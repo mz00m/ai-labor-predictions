@@ -430,7 +430,7 @@ export default function JCurveChart() {
       >
         {activeInfo && (
           <div
-            className="rounded-lg px-4 py-3 text-[13px] leading-relaxed"
+            className="rounded-lg px-4 py-3 text-base leading-relaxed"
             style={{
               backgroundColor: activeInfo.color + "10",
               borderLeft: `3px solid ${activeInfo.color}`,
@@ -446,10 +446,10 @@ export default function JCurveChart() {
       </div>
 
       <div className="flex items-center justify-between">
-        <p className="text-[10px] text-[var(--muted)] italic opacity-60">
+        <p className="text-2xs text-[var(--muted)] italic opacity-60">
           Conceptual illustration based on Brynjolfsson, Rock &amp; Syverson (2021)
         </p>
-        <p className="text-[11px] text-[var(--muted)] italic">
+        <p className="text-xs text-[var(--muted)] italic">
           Click or hover on a phase to learn more
         </p>
       </div>

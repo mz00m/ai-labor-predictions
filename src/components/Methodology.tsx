@@ -3,10 +3,10 @@ export default function Methodology() {
     <div id="methodology">
       {/* Header */}
       <div className="mb-8">
-        <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
+        <h2 className="text-4xl sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
           Methodology &amp; Sources
         </h2>
-        <p className="text-[15px] text-[var(--muted)] mt-2 max-w-3xl">
+        <p className="text-lg text-[var(--muted)] mt-2 max-w-3xl">
           This dashboard tracks how AI-labor predictions evolve as new evidence
           emerges. Every prediction is backed by individually cited sources
           across four evidence tiers. This isn&apos;t a forecast &mdash;
@@ -17,17 +17,17 @@ export default function Methodology() {
       <div className="space-y-10">
         {/* TL;DR box */}
         <div className="rounded-xl border border-[#6366F1]/20 bg-[#6366F1]/[0.04] p-5 max-w-3xl">
-          <h4 className="text-[13px] font-bold text-[#6366F1] uppercase tracking-wide mb-2">
+          <h4 className="text-base font-bold text-[#6366F1] uppercase tracking-wide mb-2">
             TL;DR
           </h4>
-          <p className="text-[13px] text-[var(--foreground)] leading-relaxed">
+          <p className="text-base text-[var(--foreground)] leading-relaxed">
             Every prediction tile shows a <strong>weighted average</strong> of all published estimates,
             not a single source. Peer-reviewed research (Tier 1) counts 8x more than a blog post (Tier 4),
             and newer studies get up to 2x more weight than older ones. You can toggle evidence tiers on
             and off to see how the number shifts. The trend arrow shows whether newer sources are
             estimating higher or lower than older ones.
           </p>
-          <p className="text-[12px] text-[var(--muted)] mt-2">
+          <p className="text-sm text-[var(--muted)] mt-2">
             This is a <strong className="text-[var(--foreground)]">live meta-analysis</strong>, not a
             forecast. When new research drops, the numbers update automatically.
           </p>
@@ -35,10 +35,10 @@ export default function Methodology() {
 
         {/* How We Calculate the Headline Number */}
         <div id="how-we-calculate" className="max-w-3xl">
-          <h3 className="text-[18px] font-bold text-[var(--foreground)] mb-3">
+          <h3 className="text-2xl font-bold text-[var(--foreground)] mb-3">
             How We Calculate the Headline Number
           </h3>
-          <p className="text-[14px] text-[var(--muted)] leading-relaxed mb-4">
+          <p className="text-md text-[var(--muted)] leading-relaxed mb-4">
             The large number on every tile is a{" "}
             <strong className="text-[var(--foreground)]">weighted average</strong>{" "}
             of all data points from your selected evidence tiers. Two factors
@@ -49,27 +49,27 @@ export default function Methodology() {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center mb-4">
             <div className="bg-black/[0.02] border border-black/[0.06] rounded px-3 py-2">
               <span className="inline-block w-2 h-2 rounded-full bg-green-500 mb-1" />
-              <p className="text-[13px] font-semibold text-[var(--foreground)]">Tier 1</p>
-              <p className="text-[12px] text-[var(--muted)]">4&times; weight</p>
+              <p className="text-base font-semibold text-[var(--foreground)]">Tier 1</p>
+              <p className="text-sm text-[var(--muted)]">4&times; weight</p>
             </div>
             <div className="bg-black/[0.02] border border-black/[0.06] rounded px-3 py-2">
               <span className="inline-block w-2 h-2 rounded-full bg-blue-500 mb-1" />
-              <p className="text-[13px] font-semibold text-[var(--foreground)]">Tier 2</p>
-              <p className="text-[12px] text-[var(--muted)]">2&times; weight</p>
+              <p className="text-base font-semibold text-[var(--foreground)]">Tier 2</p>
+              <p className="text-sm text-[var(--muted)]">2&times; weight</p>
             </div>
             <div className="bg-black/[0.02] border border-black/[0.06] rounded px-3 py-2">
               <span className="inline-block w-2 h-2 rounded-full bg-orange-500 mb-1" />
-              <p className="text-[13px] font-semibold text-[var(--foreground)]">Tier 3</p>
-              <p className="text-[12px] text-[var(--muted)]">1&times; weight</p>
+              <p className="text-base font-semibold text-[var(--foreground)]">Tier 3</p>
+              <p className="text-sm text-[var(--muted)]">1&times; weight</p>
             </div>
             <div className="bg-black/[0.02] border border-black/[0.06] rounded px-3 py-2">
               <span className="inline-block w-2 h-2 rounded-full bg-red-500 mb-1" />
-              <p className="text-[13px] font-semibold text-[var(--foreground)]">Tier 4</p>
-              <p className="text-[12px] text-[var(--muted)]">0.5&times; weight</p>
+              <p className="text-base font-semibold text-[var(--foreground)]">Tier 4</p>
+              <p className="text-sm text-[var(--muted)]">0.5&times; weight</p>
             </div>
           </div>
 
-          <div className="text-[13px] text-[var(--muted)] leading-relaxed space-y-2">
+          <div className="text-base text-[var(--muted)] leading-relaxed space-y-2">
             <p>
               <strong className="text-[var(--foreground)]">Recency:</strong>{" "}
               Newer sources get up to 2&times; the weight of the oldest, so
@@ -77,11 +77,11 @@ export default function Methodology() {
             </p>
             <p>
               <strong className="text-[var(--foreground)]">Formula:</strong>{" "}
-              <code className="text-[12px] bg-black/[0.04] px-1.5 py-0.5 rounded font-mono">
+              <code className="text-sm bg-black/[0.04] px-1.5 py-0.5 rounded font-mono">
                 weight = tierWeight &times; recencyWeight
               </code>
               {" "}&rarr;{" "}
-              <code className="text-[12px] bg-black/[0.04] px-1.5 py-0.5 rounded font-mono">
+              <code className="text-sm bg-black/[0.04] px-1.5 py-0.5 rounded font-mono">
                 mean = &sum;(value &times; weight) / &sum;(weight)
               </code>
             </p>
@@ -95,18 +95,18 @@ export default function Methodology() {
 
         {/* Evidence Tiers */}
         <div>
-          <h3 className="text-[18px] font-bold text-[var(--foreground)] mb-3">
+          <h3 className="text-2xl font-bold text-[var(--foreground)] mb-3">
             Evidence Tiers
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl">
             <div className="border border-black/[0.06] rounded-lg px-5 py-4 bg-white">
               <div className="flex items-center gap-2 mb-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-green-500" />
-                <p className="text-[14px] font-bold text-[var(--foreground)]">
+                <p className="text-md font-bold text-[var(--foreground)]">
                   Tier 1 &mdash; Verified Research
                 </p>
               </div>
-              <p className="text-[13px] text-[var(--muted)] leading-relaxed">
+              <p className="text-base text-[var(--muted)] leading-relaxed">
                 Peer-reviewed studies (RCTs, journal articles, NBER working
                 papers), government statistical data (BLS, Census, OECD), and
                 SEC filings with legal liability for accuracy.
@@ -115,11 +115,11 @@ export default function Methodology() {
             <div className="border border-black/[0.06] rounded-lg px-5 py-4 bg-white">
               <div className="flex items-center gap-2 mb-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-blue-500" />
-                <p className="text-[14px] font-bold text-[var(--foreground)]">
+                <p className="text-md font-bold text-[var(--foreground)]">
                   Tier 2 &mdash; Institutional Analysis
                 </p>
               </div>
-              <p className="text-[13px] text-[var(--muted)] leading-relaxed">
+              <p className="text-base text-[var(--muted)] leading-relaxed">
                 Think tanks (Brookings, McKinsey), international organizations
                 (IMF, ILO, World Bank), working papers (arXiv, SSRN, IZA),
                 industry research, and job posting data.
@@ -128,11 +128,11 @@ export default function Methodology() {
             <div className="border border-black/[0.06] rounded-lg px-5 py-4 bg-white">
               <div className="flex items-center gap-2 mb-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-orange-500" />
-                <p className="text-[14px] font-bold text-[var(--foreground)]">
+                <p className="text-md font-bold text-[var(--foreground)]">
                   Tier 3 &mdash; Journalism
                 </p>
               </div>
-              <p className="text-[13px] text-[var(--muted)] leading-relaxed">
+              <p className="text-base text-[var(--muted)] leading-relaxed">
                 Major outlets (WSJ, FT, Fortune, CNBC). Cited when they report
                 original data or on-the-record disclosures. Also powers the
                 news ticker via Google News RSS.
@@ -141,11 +141,11 @@ export default function Methodology() {
             <div className="border border-black/[0.06] rounded-lg px-5 py-4 bg-white">
               <div className="flex items-center gap-2 mb-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-red-500" />
-                <p className="text-[14px] font-bold text-[var(--foreground)]">
+                <p className="text-md font-bold text-[var(--foreground)]">
                   Tier 4 &mdash; Social &amp; Informal
                 </p>
               </div>
-              <p className="text-[13px] text-[var(--muted)] leading-relaxed">
+              <p className="text-base text-[var(--muted)] leading-relaxed">
                 Twitter/X threads, Substack, blogs. Used sparingly for
                 ground-level signals. Lowest weight &mdash; the dashboard works
                 without them.
@@ -156,10 +156,10 @@ export default function Methodology() {
 
         {/* Research Pipeline */}
         <div>
-          <h3 className="text-[18px] font-bold text-[var(--foreground)] mb-3">
+          <h3 className="text-2xl font-bold text-[var(--foreground)] mb-3">
             Research Pipeline
           </h3>
-          <p className="text-[14px] text-[var(--muted)] leading-relaxed mb-4 max-w-3xl">
+          <p className="text-md text-[var(--muted)] leading-relaxed mb-4 max-w-3xl">
             An automated pipeline queries 11 sources weekly, deduplicates
             results, links papers to predictions via keyword matching, and
             ranks them by a composite score (evidence tier, relevance, citation
@@ -169,7 +169,7 @@ export default function Methodology() {
             {SOURCES.map((s, i) => (
               <span
                 key={i}
-                className="text-[12px] bg-black/[0.04] px-2.5 py-1.5 rounded text-[var(--foreground)] font-medium"
+                className="text-sm bg-black/[0.04] px-2.5 py-1.5 rounded text-[var(--foreground)] font-medium"
               >
                 {s}
               </span>
@@ -179,10 +179,10 @@ export default function Methodology() {
 
         {/* Tracked Researchers */}
         <div>
-          <h3 className="text-[18px] font-bold text-[var(--foreground)] mb-3">
+          <h3 className="text-2xl font-bold text-[var(--foreground)] mb-3">
             Tracked Researchers
           </h3>
-          <p className="text-[14px] text-[var(--muted)] leading-relaxed mb-4 max-w-3xl">
+          <p className="text-md text-[var(--muted)] leading-relaxed mb-4 max-w-3xl">
             35 leading AI-labor researchers are monitored &mdash; their new
             papers are automatically surfaced regardless of keyword match.
           </p>
@@ -190,7 +190,7 @@ export default function Methodology() {
             {AUTHORS.map((a, i) => (
               <span
                 key={i}
-                className="text-[12px] text-[var(--muted)] bg-black/[0.04] px-2.5 py-1 rounded"
+                className="text-sm text-[var(--muted)] bg-black/[0.04] px-2.5 py-1 rounded"
               >
                 <span className="font-semibold text-[var(--foreground)]">
                   {a.name}
@@ -203,10 +203,10 @@ export default function Methodology() {
 
         {/* Known Limitations */}
         <div className="max-w-3xl">
-          <h3 className="text-[18px] font-bold text-[var(--foreground)] mb-3">
+          <h3 className="text-2xl font-bold text-[var(--foreground)] mb-3">
             Known Limitations
           </h3>
-          <ul className="text-[14px] text-[var(--muted)] leading-relaxed space-y-3 list-disc pl-5">
+          <ul className="text-md text-[var(--muted)] leading-relaxed space-y-3 list-disc pl-5">
             <li>
               <strong className="text-[var(--foreground)]">Definitional heterogeneity:</strong>{" "}
               Sources within a single prediction may define the metric differently.
@@ -247,7 +247,7 @@ export default function Methodology() {
 
         {/* Suggest a Source */}
         <div className="border-t border-black/[0.06] pt-6">
-          <p className="text-[13px] text-[var(--muted)] leading-relaxed max-w-3xl">
+          <p className="text-base text-[var(--muted)] leading-relaxed max-w-3xl">
             <span className="font-semibold text-[var(--foreground)]">
               Know a study we should include?
             </span>{" "}
@@ -263,7 +263,7 @@ export default function Methodology() {
 
         {/* Update Schedule */}
         <div className="border-t border-black/[0.06] pt-6">
-          <p className="text-[13px] text-[var(--muted)] leading-relaxed max-w-3xl">
+          <p className="text-base text-[var(--muted)] leading-relaxed max-w-3xl">
             <span className="font-semibold text-[var(--foreground)]">
               Update schedule:
             </span>{" "}

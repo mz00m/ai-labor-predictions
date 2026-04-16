@@ -458,7 +458,7 @@ export default function GPTTimeline() {
 
                   {/* Label - fades in after node appears */}
                   <span
-                    className={`mt-2 text-[11px] font-semibold tracking-wide text-center transition-opacity duration-700 ${
+                    className={`mt-2 text-xs font-semibold tracking-wide text-center transition-opacity duration-700 ${
                       isActive
                         ? isEquilibrium ? "text-emerald-700" : "text-[var(--foreground)]"
                         : "text-[var(--muted)]"
@@ -475,7 +475,7 @@ export default function GPTTimeline() {
 
                   {/* Duration - fades in slightly after label */}
                   <span
-                    className="text-[10px] text-[var(--muted)] mt-0.5 transition-opacity duration-700"
+                    className="text-2xs text-[var(--muted)] mt-0.5 transition-opacity duration-700"
                     style={{
                       opacity: walkStarted ? 0 : 1,
                       animation: walkStarted
@@ -509,7 +509,7 @@ export default function GPTTimeline() {
                 {/* Vertical track */}
                 <div className="flex flex-col items-center">
                   <div
-                    className={`timeline-node w-7 h-7 rounded-full border-2 flex items-center justify-center text-[11px] font-bold shrink-0 ${
+                    className={`timeline-node w-7 h-7 rounded-full border-2 flex items-center justify-center text-xs font-bold shrink-0 ${
                       isActive
                         ? "bg-[var(--accent)] border-[var(--accent)] text-white shadow-[0_0_0_4px_rgba(92,97,246,0.15)]"
                         : "bg-white border-black/[0.15] text-[var(--muted)]"
@@ -524,13 +524,13 @@ export default function GPTTimeline() {
 
                 {/* Content */}
                 <div className="pb-2">
-                  <span className="text-[13px] font-semibold text-[var(--foreground)]">
+                  <span className="text-base font-semibold text-[var(--foreground)]">
                     {p.name}
                   </span>
-                  <span className="text-[11px] text-[var(--muted)] ml-2">
+                  <span className="text-xs text-[var(--muted)] ml-2">
                     {p.duration}
                   </span>
-                  <p className="text-[12px] text-[var(--muted)] mt-0.5">
+                  <p className="text-sm text-[var(--muted)] mt-0.5">
                     {p.workerEffect}
                   </p>
                 </div>
@@ -552,7 +552,7 @@ export default function GPTTimeline() {
                     <rect x="13" y="21.5" width="3.5" height="5" rx="1.2" fill="var(--accent)" opacity="0.75" />
                     <rect x="12.5" y="25.5" width="5" height="2.5" rx="1" fill="var(--accent)" opacity="0.6" />
                   </svg>
-                  <span className="text-[10px] font-bold text-[var(--accent)] tracking-wide">
+                  <span className="text-2xs font-bold text-[var(--accent)] tracking-wide">
                     AI IS HERE
                   </span>
                 </div>
@@ -566,36 +566,36 @@ export default function GPTTimeline() {
       {activePhase !== null && (
         <div className="revolution-content border border-black/[0.06] rounded-lg p-5 bg-[var(--accent-light)]/30">
           <div className="flex items-baseline gap-2 mb-2 flex-wrap">
-            <span className="text-[12px] font-bold text-[var(--accent)] uppercase tracking-wider">
+            <span className="text-sm font-bold text-[var(--accent)] uppercase tracking-wider">
               Phase {PHASES[activePhase].phase}
             </span>
-            <span className="text-[14px] font-semibold text-[var(--foreground)]">
+            <span className="text-md font-semibold text-[var(--foreground)]">
               {PHASES[activePhase].name}
             </span>
-            <span className="text-[12px] text-[var(--muted)]">
+            <span className="text-sm text-[var(--muted)]">
               Historical: {PHASES[activePhase].duration}
             </span>
-            <span className="text-[11px] font-semibold text-[var(--accent)] bg-[var(--accent)]/10 px-2 py-0.5 rounded-full">
+            <span className="text-xs font-semibold text-[var(--accent)] bg-[var(--accent)]/10 px-2 py-0.5 rounded-full">
               AI: {PHASES[activePhase].aiDuration}
             </span>
           </div>
-          <p className="text-[13px] text-[var(--muted)] leading-relaxed mb-3">
+          <p className="text-base text-[var(--muted)] leading-relaxed mb-3">
             {PHASES[activePhase].description}
           </p>
-          <p className="text-[12px] text-[var(--foreground)]/70 leading-relaxed italic mb-3">
+          <p className="text-sm text-[var(--foreground)]/70 leading-relaxed italic mb-3">
             <span className="font-semibold not-italic text-[var(--foreground)]">
               Historical example:
             </span>{" "}
             {PHASES[activePhase].example}
           </p>
-          <p className="text-[12px] text-[var(--accent)] leading-relaxed">
+          <p className="text-sm text-[var(--accent)] leading-relaxed">
             {PHASES[activePhase].aiNote}
           </p>
         </div>
       )}
 
       {activePhase === null && (
-        <p className="text-[12px] text-[var(--muted)] text-center">
+        <p className="text-sm text-[var(--muted)] text-center">
           Click or hover on a phase to learn more
         </p>
       )}

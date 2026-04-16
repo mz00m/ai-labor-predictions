@@ -52,8 +52,8 @@ function CustomTooltip({ active, payload }: TooltipProps<number, string>) {
   const neiData = CFO_SURVEY_NEI[d.id];
   return (
     <div className="bg-white rounded-lg border border-black/[0.08] shadow-lg p-3 max-w-[260px]">
-      <p className="text-[13px] font-semibold text-[var(--foreground)]">{d.shortTitle}</p>
-      <div className="mt-1.5 space-y-0.5 text-[12px]">
+      <p className="text-base font-semibold text-[var(--foreground)]">{d.shortTitle}</p>
+      <div className="mt-1.5 space-y-0.5 text-sm">
         <div className="flex justify-between gap-4">
           <span className="text-[var(--muted)]">AI Exposure</span>
           <span className="font-medium">{(d.aiExposure * 100).toFixed(0)}%</span>
@@ -86,7 +86,7 @@ function CustomTooltip({ active, payload }: TooltipProps<number, string>) {
         )}
       </div>
       {d.hasJobs && (
-        <p className="text-[10px] text-[var(--accent)] mt-2 pt-1.5 border-t border-black/[0.06]">
+        <p className="text-2xs text-[var(--accent)] mt-2 pt-1.5 border-t border-black/[0.06]">
           Click to explore individual jobs in this group
         </p>
       )}
@@ -145,34 +145,34 @@ export default function AdaptiveCapacity() {
       {/* Headline stats */}
       <div className="grid grid-cols-1 sm:grid-cols-4 gap-3 mb-8">
         <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-black/[0.06] p-4" style={{ animationDelay: "0s" }}>
-          <p className="text-[28px] font-bold tracking-tight text-[var(--foreground)]">
+          <p className="text-4xl font-bold tracking-tight text-[var(--foreground)]">
             r = 0.50
           </p>
-          <p className="text-[11px] text-[var(--muted)]">
+          <p className="text-xs text-[var(--muted)]">
             AI exposure and adaptive capacity are positively correlated
           </p>
         </div>
         <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-black/[0.06] p-4" style={{ animationDelay: "0.08s" }}>
-          <p className="text-[28px] font-bold tracking-tight text-[#10B981]">
+          <p className="text-4xl font-bold tracking-tight text-[#10B981]">
             71%
           </p>
-          <p className="text-[11px] text-[var(--muted)]">
+          <p className="text-xs text-[var(--muted)]">
             of highly-exposed workers have above-median adaptability
           </p>
         </div>
         <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-black/[0.06] p-4" style={{ animationDelay: "0.16s" }}>
-          <p className="text-[28px] font-bold tracking-tight text-[#EF4444]">
+          <p className="text-4xl font-bold tracking-tight text-[#EF4444]">
             6.1M
           </p>
-          <p className="text-[11px] text-[var(--muted)]">
+          <p className="text-xs text-[var(--muted)]">
             workers with high exposure + low adaptability
           </p>
         </div>
         <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-black/[0.06] p-4" style={{ animationDelay: "0.24s" }}>
-          <p className="text-[28px] font-bold tracking-tight text-[#EC4899]">
+          <p className="text-4xl font-bold tracking-tight text-[#EC4899]">
             81%
           </p>
-          <p className="text-[11px] text-[var(--muted)]">
+          <p className="text-xs text-[var(--muted)]">
             of high-vulnerability workers are women
           </p>
         </div>
@@ -180,10 +180,10 @@ export default function AdaptiveCapacity() {
 
       {/* Scatter plot */}
       <div className="mb-8">
-        <h4 className="text-[13px] font-semibold text-[var(--foreground)] mb-1">
+        <h4 className="text-base font-semibold text-[var(--foreground)] mb-1">
           AI exposure vs. adaptive capacity by occupation group
         </h4>
-        <p className="text-[11px] text-[var(--muted)] mb-4">
+        <p className="text-xs text-[var(--muted)] mb-4">
           Dot size reflects employment. Color shows income tier. The bottom-right quadrant
           (high exposure, low adaptability) contains the most vulnerable workers. Concentrated
           in clerical and administrative roles.
@@ -194,7 +194,7 @@ export default function AdaptiveCapacity() {
           {(["low", "middle", "high"] as const).map((tier) => (
             <div key={tier} className="flex items-center gap-1.5">
               <div className="w-3 h-3 rounded-full" style={{ backgroundColor: INCOME_TIER_META[tier].color }} />
-              <span className="text-[11px] text-[var(--muted)]">{INCOME_TIER_META[tier].label}</span>
+              <span className="text-xs text-[var(--muted)]">{INCOME_TIER_META[tier].label}</span>
             </div>
           ))}
         </div>
@@ -285,7 +285,7 @@ export default function AdaptiveCapacity() {
         </div>
 
         {/* Quadrant labels */}
-        <div className="grid grid-cols-2 gap-4 mt-2 text-[11px]">
+        <div className="grid grid-cols-2 gap-4 mt-2 text-xs">
           <div className="quadrant-label text-right text-[var(--muted)]">
             Low exposure, high adaptability
           </div>
@@ -304,15 +304,15 @@ export default function AdaptiveCapacity() {
       {/* Vulnerability table */}
       {vulnerableGroups.length > 0 && (
         <div className="mb-8">
-          <h4 className="text-[13px] font-semibold text-[var(--foreground)] mb-1">
+          <h4 className="text-base font-semibold text-[var(--foreground)] mb-1">
             Most vulnerable: high exposure, low adaptability
           </h4>
-          <p className="text-[11px] text-[var(--muted)] mb-3">
+          <p className="text-xs text-[var(--muted)] mb-3">
             Occupation groups in the bottom-right quadrant. These workers face the strongest
             automation pressure with the fewest resources to transition.
           </p>
           <div className="overflow-x-auto">
-            <table className="w-full text-[12px]">
+            <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-black/[0.06]">
                   <th className="text-left py-2 pr-3 text-[var(--foreground)] font-semibold">Occupation</th>
@@ -358,10 +358,10 @@ export default function AdaptiveCapacity() {
 
       {/* AC Components breakdown */}
       <div className="mb-8">
-        <h4 className="text-[13px] font-semibold text-[var(--foreground)] mb-1">
+        <h4 className="text-base font-semibold text-[var(--foreground)] mb-1">
           What drives adaptive capacity?
         </h4>
-        <p className="text-[11px] text-[var(--muted)] mb-3">
+        <p className="text-xs text-[var(--muted)] mb-3">
           Four components determine whether displaced workers can transition: net liquid wealth
           (financial runway), skill transferability (how many other jobs use similar skills),
           geographic density (access to alternative employers), and age (fraction under 55).
@@ -371,19 +371,19 @@ export default function AdaptiveCapacity() {
         <div className="flex gap-4 mb-3 flex-wrap">
           <div className="flex items-center gap-1.5">
             <div className="w-3 h-3 rounded" style={{ backgroundColor: "#6366F1" }} />
-            <span className="text-[11px] text-[var(--muted)]">Net Liquid Wealth</span>
+            <span className="text-xs text-[var(--muted)]">Net Liquid Wealth</span>
           </div>
           <div className="flex items-center gap-1.5">
             <div className="w-3 h-3 rounded" style={{ backgroundColor: "#10B981" }} />
-            <span className="text-[11px] text-[var(--muted)]">Skill Transferability</span>
+            <span className="text-xs text-[var(--muted)]">Skill Transferability</span>
           </div>
           <div className="flex items-center gap-1.5">
             <div className="w-3 h-3 rounded" style={{ backgroundColor: "#F59E0B" }} />
-            <span className="text-[11px] text-[var(--muted)]">Geographic Density</span>
+            <span className="text-xs text-[var(--muted)]">Geographic Density</span>
           </div>
           <div className="flex items-center gap-1.5">
             <div className="w-3 h-3 rounded" style={{ backgroundColor: "#EC4899" }} />
-            <span className="text-[11px] text-[var(--muted)]">Age (% under 55)</span>
+            <span className="text-xs text-[var(--muted)]">Age (% under 55)</span>
           </div>
         </div>
 
@@ -392,7 +392,7 @@ export default function AdaptiveCapacity() {
             const total = g.netLiquidWealth + g.skillTransferability + g.geographicDensity + g.ageFraction55Plus;
             return (
               <div key={g.id} className="flex items-center gap-2">
-                <span className="text-[11px] text-[var(--muted)] w-[140px] shrink-0 truncate text-right">
+                <span className="text-xs text-[var(--muted)] w-[140px] shrink-0 truncate text-right">
                   {g.shortTitle}
                 </span>
                 <div className="flex-1 h-5 flex rounded overflow-hidden bg-black/[0.02]">
@@ -413,7 +413,7 @@ export default function AdaptiveCapacity() {
                     className="h-full"
                   />
                 </div>
-                <span className="text-[11px] font-medium text-[var(--foreground)] w-[32px] text-right tabular-nums">
+                <span className="text-xs font-medium text-[var(--foreground)] w-[32px] text-right tabular-nums">
                   {(g.adaptiveCapacity * 100).toFixed(0)}
                 </span>
               </div>
@@ -423,7 +423,7 @@ export default function AdaptiveCapacity() {
       </div>
 
       {/* Source attribution */}
-      <p className="text-[11px] text-[var(--muted)] mt-6">
+      <p className="text-xs text-[var(--muted)] mt-6">
         Based on Manning &amp; Aguirre, &quot;How Adaptable Are American Workers to AI-Induced Job
         Displacement?&quot; NBER Working Paper w34705, January 2026. Adaptive capacity index covers
         356 occupations (95.9% of US workforce). The index measures occupation-level characteristics,

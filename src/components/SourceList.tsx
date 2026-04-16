@@ -33,7 +33,7 @@ export default function SourceList({
 
   if (filtered.length === 0) {
     return (
-      <p className="text-[14px] text-[var(--muted)]">
+      <p className="text-md text-[var(--muted)]">
         No sources match the selected evidence tiers.
       </p>
     );
@@ -41,7 +41,7 @@ export default function SourceList({
 
   return (
     <div>
-      <h3 className="text-[13px] font-bold uppercase tracking-widest text-[var(--muted)] mb-6">
+      <h3 className="text-base font-bold uppercase tracking-widest text-[var(--muted)] mb-6">
         Sources ({filtered.length})
       </h3>
       <div className="space-y-0">
@@ -83,7 +83,7 @@ export default function SourceList({
             >
               {arrow ? (
                 <span
-                  className="mt-1 text-[14px] font-bold shrink-0 w-3 text-center"
+                  className="mt-1 text-md font-bold shrink-0 w-3 text-center"
                   style={{ color: arrowColor! }}
                 >
                   {arrow}
@@ -99,30 +99,30 @@ export default function SourceList({
                   href={source.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="source-title text-[14px] font-semibold text-[var(--foreground)] leading-tight"
+                  className="source-title text-md font-semibold text-[var(--foreground)] leading-tight"
                   style={{ transition: "color 0.15s ease" }}
                 >
                   {source.title}
                 </a>
                 {overlay && (
-                  <p className="text-[12px] text-[var(--muted)] mt-0.5 leading-snug">
+                  <p className="text-sm text-[var(--muted)] mt-0.5 leading-snug">
                     {overlay.label}
                   </p>
                 )}
                 <div className="source-meta flex items-center gap-3 mt-1" style={{ transition: "opacity 0.15s ease" }}>
-                  <span className="text-[12px] text-[var(--muted)]">
+                  <span className="text-sm text-[var(--muted)]">
                     {source.publisher}
                   </span>
-                  <span className="text-[12px] text-[var(--muted)] opacity-50">
+                  <span className="text-sm text-[var(--muted)] opacity-50">
                     {format(parseISO(source.datePublished), "MMM d, yyyy")}
                   </span>
-                  <span className="text-[11px] font-medium" style={{ color: config.color }}>
+                  <span className="text-xs font-medium" style={{ color: config.color }}>
                     {config.shortLabel}
                   </span>
                   <SourceWeightDot tier={source.evidenceTier as 1 | 2 | 3 | 4} />
                 </div>
                 {source.excerpt && (
-                  <p className="text-[13px] text-[var(--muted)] mt-1.5 leading-relaxed">
+                  <p className="text-base text-[var(--muted)] mt-1.5 leading-relaxed">
                     {source.excerpt}
                   </p>
                 )}

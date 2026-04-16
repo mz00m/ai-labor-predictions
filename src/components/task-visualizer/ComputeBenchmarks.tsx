@@ -73,9 +73,9 @@ function CustomTooltip({ active, payload, label }: TooltipProps<number, string>)
   const data = payload[0].payload;
   return (
     <div className="bg-white rounded-lg border border-black/[0.08] shadow-lg p-3">
-      <p className="text-[12px] font-semibold mb-1">{label}</p>
-      <p className="text-[11px] text-[var(--muted)]">{data.label}</p>
-      <p className="text-[13px] font-medium text-[#5C61F6] mt-1">
+      <p className="text-sm font-semibold mb-1">{label}</p>
+      <p className="text-xs text-[var(--muted)]">{data.label}</p>
+      <p className="text-base font-medium text-[#5C61F6] mt-1">
         ${data.costPerMToken?.toFixed(data.costPerMToken < 0.1 ? 3 : 2)}/M tokens
       </p>
     </div>
@@ -86,10 +86,10 @@ export default function ComputeBenchmarks() {
   return (
     <div className="space-y-8">
       <div>
-        <h3 className="text-[15px] font-semibold text-[var(--foreground)] mb-1">
+        <h3 className="text-lg font-semibold text-[var(--foreground)] mb-1">
           AI Inference Cost Collapse
         </h3>
-        <p className="text-[12px] text-[var(--muted)] mb-4">
+        <p className="text-sm text-[var(--muted)] mb-4">
           The cost of frontier AI inference has fallen ~200x since 2020 and continues to decline
           at roughly 60% per year. This is the fundamental driver: as compute gets cheaper,
           more tasks become economically viable to automate.
@@ -133,7 +133,7 @@ export default function ComputeBenchmarks() {
             </AreaChart>
           </ResponsiveContainer>
         </div>
-        <p className="text-[11px] text-[var(--muted)] mt-2">
+        <p className="text-xs text-[var(--muted)] mt-2">
           $/million output tokens for frontier models (log scale). After 2026: projected at 60% annual decline.
         </p>
       </div>
@@ -141,25 +141,25 @@ export default function ComputeBenchmarks() {
       {/* Key stats */}
       <div className="grid grid-cols-3 gap-3">
         <div className="rounded-xl bg-black/[0.02] border border-black/[0.06] p-4">
-          <p className="text-[28px] font-bold text-[#5C61F6] tracking-tight">~200x</p>
-          <p className="text-[11px] text-[var(--muted)]">Cost reduction since GPT-3 (2020)</p>
+          <p className="text-4xl font-bold text-[#5C61F6] tracking-tight">~200x</p>
+          <p className="text-xs text-[var(--muted)]">Cost reduction since GPT-3 (2020)</p>
         </div>
         <div className="rounded-xl bg-black/[0.02] border border-black/[0.06] p-4">
-          <p className="text-[28px] font-bold text-[#5C61F6] tracking-tight">~60%</p>
-          <p className="text-[11px] text-[var(--muted)]">Annual cost decline rate (inference)</p>
+          <p className="text-4xl font-bold text-[#5C61F6] tracking-tight">~60%</p>
+          <p className="text-xs text-[var(--muted)]">Annual cost decline rate (inference)</p>
         </div>
         <div className="rounded-xl bg-black/[0.02] border border-black/[0.06] p-4">
-          <p className="text-[28px] font-bold text-[#5C61F6] tracking-tight">2x/yr</p>
-          <p className="text-[11px] text-[var(--muted)]">Algorithmic efficiency gains (Epoch AI)</p>
+          <p className="text-4xl font-bold text-[#5C61F6] tracking-tight">2x/yr</p>
+          <p className="text-xs text-[var(--muted)]">Algorithmic efficiency gains (Epoch AI)</p>
         </div>
       </div>
 
       {/* What drives the cost decline */}
       <div className="rounded-xl border border-black/[0.06] p-4">
-        <h4 className="text-[13px] font-semibold text-[var(--foreground)] mb-2">
+        <h4 className="text-base font-semibold text-[var(--foreground)] mb-2">
           Why compute costs keep falling
         </h4>
-        <div className="space-y-2 text-[12px] text-[var(--muted)]">
+        <div className="space-y-2 text-sm text-[var(--muted)]">
           <div className="flex gap-2">
             <span className="text-[var(--foreground)] font-medium shrink-0">Hardware</span>
             <span>
@@ -193,10 +193,10 @@ export default function ComputeBenchmarks() {
 
       {/* Sources */}
       <div>
-        <h4 className="text-[12px] font-semibold text-[var(--foreground)] mb-2">Sources</h4>
+        <h4 className="text-sm font-semibold text-[var(--foreground)] mb-2">Sources</h4>
         <ul className="space-y-1">
           {SOURCES.map((source, i) => (
-            <li key={i} className="text-[11px] text-[var(--muted)]">
+            <li key={i} className="text-xs text-[var(--muted)]">
               {source.url ? (
                 <a
                   href={source.url}

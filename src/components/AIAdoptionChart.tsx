@@ -50,10 +50,10 @@ function AdoptionTooltip({
 
   return (
     <div className="bg-white border border-black/[0.08] rounded-lg p-3.5 max-w-xs shadow-sm">
-      <p className="text-[12px] font-medium text-[var(--foreground)] mb-1.5">
+      <p className="text-sm font-medium text-[var(--foreground)] mb-1.5">
         {data.date}
         {data.estimated && (
-          <span className="ml-2 text-[10px] font-normal text-[var(--muted)] italic">
+          <span className="ml-2 text-2xs font-normal text-[var(--muted)] italic">
             estimated
           </span>
         )}
@@ -64,7 +64,7 @@ function AdoptionTooltip({
             className="inline-block w-2.5 h-2.5 rounded-full shrink-0"
             style={{ backgroundColor: OVERALL_COLOR }}
           />
-          <span className="text-[13px] text-[var(--foreground)]">
+          <span className="text-base text-[var(--foreground)]">
             Overall:{" "}
             <span className="font-bold stat-number">{data.overall}%</span>
           </span>
@@ -74,14 +74,14 @@ function AdoptionTooltip({
             className="inline-block w-2.5 h-2.5 rounded-full shrink-0"
             style={{ backgroundColor: WORK_COLOR }}
           />
-          <span className="text-[13px] text-[var(--foreground)]">
+          <span className="text-base text-[var(--foreground)]">
             At work:{" "}
             <span className="font-bold stat-number">{data.work}%</span>
           </span>
         </div>
       </div>
       {data.estimated && (
-        <p className="text-[10px] text-[var(--muted)] mt-2 leading-snug">
+        <p className="text-2xs text-[var(--muted)] mt-2 leading-snug">
           Values estimated from tracker chart
         </p>
       )}
@@ -165,7 +165,7 @@ export default function AIAdoptionChart() {
   return (
     <div>
       {/* Legend */}
-      <div className="flex flex-wrap items-center gap-x-5 gap-y-2 mb-4 text-[13px] text-[var(--muted)]">
+      <div className="flex flex-wrap items-center gap-x-5 gap-y-2 mb-4 text-base text-[var(--muted)]">
         <span className="flex items-center gap-1.5">
           <span
             className="inline-block w-3 h-[3px] rounded-full"
@@ -245,13 +245,13 @@ export default function AIAdoptionChart() {
       </ResponsiveContainer>
 
       {/* Footnote */}
-      <p className="text-[11px] text-[var(--muted)] mt-3 leading-relaxed opacity-70">
+      <p className="text-xs text-[var(--muted)] mt-3 leading-relaxed opacity-70">
         Feb &amp; May 2025 values estimated from tracker chart; all other
         values from published working paper.
       </p>
 
       {/* Source */}
-      <p className="text-[12px] text-[var(--muted)] mt-2">
+      <p className="text-sm text-[var(--muted)] mt-2">
         St. Louis Fed / Harvard RPS &middot; Updated quarterly &middot;{" "}
         <a
           href="https://genaiadoptiontracker.com"

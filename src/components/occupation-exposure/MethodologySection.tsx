@@ -22,14 +22,14 @@ function Study({
         href={url}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-[13px] font-medium text-[var(--accent-text)] hover:underline leading-snug"
+        className="text-base font-medium text-[var(--accent-text)] hover:underline leading-snug"
       >
         {title}
       </a>
-      <p className="text-[11px] text-[var(--muted)] mt-0.5">
+      <p className="text-xs text-[var(--muted)] mt-0.5">
         {authors} ({year})
       </p>
-      <p className="text-[12px] text-[var(--muted)] leading-[1.6] mt-1">
+      <p className="text-sm text-[var(--muted)] leading-[1.6] mt-1">
         {summary}
       </p>
     </div>
@@ -59,10 +59,10 @@ function DimensionResearch({
         className="flex items-start justify-between w-full py-4 text-left gap-3"
       >
         <div className="min-w-0">
-          <p className="text-[14px] font-semibold text-[var(--foreground)] leading-snug">
+          <p className="text-md font-semibold text-[var(--foreground)] leading-snug">
             {title}
           </p>
-          <p className="text-[12px] text-[var(--muted)] leading-[1.6] mt-1">
+          <p className="text-sm text-[var(--muted)] leading-[1.6] mt-1">
             {why}
           </p>
         </div>
@@ -214,7 +214,7 @@ export default function MethodologySection() {
         <div className="mb-4">
           <Link
             href="/demand-elasticity"
-            className="inline-flex items-center gap-1.5 text-[13px] font-medium text-[var(--accent-text)] hover:underline"
+            className="inline-flex items-center gap-1.5 text-base font-medium text-[var(--accent-text)] hover:underline"
           >
             Read the full demand elasticity explainer on jobsdata.ai &rarr;
           </Link>
@@ -254,7 +254,7 @@ export default function MethodologySection() {
           url="https://www.nber.org/papers/w30389"
           summary="Found that 60% of 2018 employment was in job titles that didn't exist in 1940, most created by prior waves of automation expanding demand. AI's ability to create new task categories (not just automate existing ones) is a major source of potential demand expansion."
         />
-        <p className="text-[11px] text-[var(--muted)] leading-[1.5] mt-3 italic">
+        <p className="text-xs text-[var(--muted)] leading-[1.5] mt-3 italic">
           Note: Our per-occupation elasticity classifications (high/moderate/low)
           are qualitative assessments informed by these frameworks, not derived
           from a specific empirical paper. No validated, occupation-specific
@@ -324,7 +324,7 @@ export default function MethodologySection() {
           url="https://aleximas.substack.com/p/how-will-ai-driven-automation-actually"
           summary="Synthesizes the O-Ring automation framework for practitioners. A management consultant with high exposure across 7-8 complementary tasks may see wages rise (focus effect). A truck driver with moderate exposure on 1 critical task faces existential risk because firms have enormous incentive to automate driving once it's feasible. Dimensionality determines whether exposure translates to complementarity or substitution."
         />
-        <p className="text-[11px] text-[var(--muted)] leading-[1.5] mt-3 italic">
+        <p className="text-xs text-[var(--muted)] leading-[1.5] mt-3 italic">
           Note: Job dimensionality (number of task clusters with &ge;10% time
           share) is used as a structural input to complementarity scoring, not
           as a separate dimension. High-dimensional jobs (&ge;5 clusters)
@@ -334,7 +334,7 @@ export default function MethodologySection() {
           (&plusmn;0.5) since executive sentiment should carry more weight than
           structural heuristics.
         </p>
-        <p className="text-[11px] text-[var(--muted)] leading-[1.5] mt-2 italic">
+        <p className="text-xs text-[var(--muted)] leading-[1.5] mt-2 italic">
           The &ldquo;Dimensionality&rdquo; toggle above the treemap lets you
           turn this adjustment on or off. When enabled, the chart steadily
           highlights occupations where dimensionality increases net risk
@@ -352,13 +352,13 @@ export default function MethodologySection() {
         title="Composite Score Calculation"
         why="How the five dimensions combine into a single net displacement risk score."
       >
-        <p className="text-[13px] text-[var(--muted)] leading-[1.75] mb-3">
+        <p className="text-base text-[var(--muted)] leading-[1.75] mb-3">
           The net displacement risk score combines the five dimensions with the
           following weights: Technical Exposure (30%), Adoption Speed (20%),
           Worker Adaptability (15%), Demand Elasticity (15%),
           Complementarity (20%).
         </p>
-        <p className="text-[13px] text-[var(--muted)] leading-[1.75] mb-3">
+        <p className="text-base text-[var(--muted)] leading-[1.75] mb-3">
           Exposure and adoption speed are
           &ldquo;pressure&rdquo; factors that drive displacement up.
           Adaptability, elasticity, and complementarity are
@@ -373,22 +373,22 @@ export default function MethodologySection() {
           demand elasticity, and complementarity scores 5.0 (neutral), not 10.
         </p>
 
-        <h4 className="text-[13px] font-semibold text-[var(--foreground)] mt-5 mb-2">
+        <h4 className="text-base font-semibold text-[var(--foreground)] mt-5 mb-2">
           How Dimensionality Enters the Composite Score
         </h4>
-        <p className="text-[13px] text-[var(--muted)] leading-[1.75] mb-3">
+        <p className="text-base text-[var(--muted)] leading-[1.75] mb-3">
           Dimensionality is not a separate dimension &mdash; it is a structural
           adjustment to the complementarity score (Dimension 5). It captures the
           insight from the O-Ring production function (Kremer 1993, Gans &amp;
           Goldfarb 2024): jobs where tasks are multiplicative and interdependent
           behave differently under automation than jobs where tasks are separable.
         </p>
-        <p className="text-[13px] text-[var(--muted)] leading-[1.75] mb-3">
+        <p className="text-base text-[var(--muted)] leading-[1.75] mb-3">
           We measure <em>effective dimensions</em> as the number of distinct task
           clusters in an occupation that each account for &ge;10% of work time
           (derived from BLS time-use data). This count determines the adjustment:
         </p>
-        <ul className="text-[13px] text-[var(--muted)] leading-[1.75] mb-3 ml-4 list-disc space-y-1">
+        <ul className="text-base text-[var(--muted)] leading-[1.75] mb-3 ml-4 list-disc space-y-1">
           <li>
             <strong>Low-dimensional (&le;3 clusters):</strong> Penalty of &minus;1.5
             to complementarity. These jobs have few, separable tasks. When AI automates
@@ -410,14 +410,14 @@ export default function MethodologySection() {
             tasks sees AI boost their productivity rather than replace them.
           </li>
         </ul>
-        <p className="text-[13px] text-[var(--muted)] leading-[1.75] mb-3">
+        <p className="text-base text-[var(--muted)] leading-[1.75] mb-3">
           For the ~8 occupation groups with CFO survey data (Baslandze et al. 2026),
           the adjustment is milder (&plusmn;0.5) because executive sentiment about
           actual deployment intent is a stronger signal than structural heuristics
           alone. For all other groups, we rely on the heuristic-based
           &plusmn;1.5/+1.0 adjustments.
         </p>
-        <p className="text-[13px] text-[var(--muted)] leading-[1.75] mb-3">
+        <p className="text-base text-[var(--muted)] leading-[1.75] mb-3">
           The adjusted complementarity score is clamped to 0&ndash;10, then feeds
           into the absorption side of the composite at its 15% weight. So the maximum
           impact of dimensionality on the final net risk score is roughly
@@ -425,7 +425,7 @@ export default function MethodologySection() {
           shift that separates occupations with identical exposure but different
           internal task structures.
         </p>
-        <p className="text-[13px] text-[var(--muted)] leading-[1.75]">
+        <p className="text-base text-[var(--muted)] leading-[1.75]">
           The weighting is intentionally simple and transparent. Reasonable
           people will disagree on weights. The tool&rsquo;s value is not in the
           precise composite number but in showing that single-dimension exposure
@@ -439,19 +439,19 @@ export default function MethodologySection() {
         title="Limitations"
         why="What this framework doesn't capture."
       >
-        <p className="text-[13px] text-[var(--muted)] leading-[1.75] mb-3">
+        <p className="text-base text-[var(--muted)] leading-[1.75] mb-3">
           This framework operates at the SOC major group level (22 groups),
           which masks significant within-group variation. A &ldquo;computer
           and mathematical&rdquo; group includes both data entry clerks and
           machine learning researchers.
         </p>
-        <p className="text-[13px] text-[var(--muted)] leading-[1.75] mb-3">
+        <p className="text-base text-[var(--muted)] leading-[1.75] mb-3">
           The composite weights are author-chosen, not econometrically
           estimated. Demand elasticity classifications are qualitative
           assessments, not measured parameters. CFO complementarity data covers
           only 8 of 22 groups.
         </p>
-        <p className="text-[13px] text-[var(--muted)] leading-[1.75] mb-3">
+        <p className="text-base text-[var(--muted)] leading-[1.75] mb-3">
           The task-composition model assumes gradual, task-by-task automation
           and does not capture <strong>binary replacement risks</strong> &mdash;
           cases where a single technological breakthrough could automate the
@@ -465,7 +465,7 @@ export default function MethodologySection() {
           other transportation roles and any occupation where one dominant
           physical task is the target of a single-purpose automation technology.
         </p>
-        <p className="text-[13px] text-[var(--muted)] leading-[1.75]">
+        <p className="text-base text-[var(--muted)] leading-[1.75]">
           These scores describe structural tendencies, not predictions for
           individual workers. A person&rsquo;s actual risk depends on their
           specific role, employer, geography, skills, and adaptability &mdash;

@@ -77,7 +77,7 @@ export default function ReadingListPage() {
             const weekArticles = grouped.get(week)!;
             return (
               <section key={week}>
-                <h2 className="text-[11px] font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
+                <h2 className="text-xs font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
                   {formatWeekLabel(week)}
                 </h2>
                 <div className="space-y-3">
@@ -93,29 +93,29 @@ export default function ReadingListPage() {
                         <div className="min-w-0 flex-1">
                           <div className="flex items-center gap-2 mb-1">
                             <span
-                              className={`text-[10px] font-semibold uppercase tracking-wide px-1.5 py-0.5 rounded ${TIER_BG_COLORS[a.tier] ?? TIER_BG_COLORS[4]}`}
+                              className={`text-2xs font-semibold uppercase tracking-wide px-1.5 py-0.5 rounded ${TIER_BG_COLORS[a.tier] ?? TIER_BG_COLORS[4]}`}
                             >
                               {getTierConfig(a.tier as EvidenceTier).shortLabel}
                             </span>
-                            <span className="text-[11px] text-[var(--muted)]">
+                            <span className="text-xs text-[var(--muted)]">
                               {a.publisher}
                             </span>
-                            <span className="text-[11px] text-[var(--muted)] opacity-50">
+                            <span className="text-xs text-[var(--muted)] opacity-50">
                               {new Date(a.date + "T00:00:00").toLocaleDateString(
                                 "en-US",
                                 { month: "short", day: "numeric", year: "numeric" }
                               )}
                             </span>
                           </div>
-                          <h3 className="text-[14px] font-bold text-[var(--foreground)] leading-snug group-hover:text-[var(--accent)] transition-colors">
+                          <h3 className="text-md font-bold text-[var(--foreground)] leading-snug group-hover:text-[var(--accent)] transition-colors">
                             {a.title}
                           </h3>
-                          <p className="text-[11px] text-[var(--muted)] mt-0.5">
+                          <p className="text-xs text-[var(--muted)] mt-0.5">
                             {a.author}
                           </p>
                         </div>
                       </div>
-                      <p className="text-[12px] text-[var(--foreground)] opacity-80 leading-relaxed mt-2">
+                      <p className="text-sm text-[var(--foreground)] opacity-80 leading-relaxed mt-2">
                         {a.takeaway}
                       </p>
                     </a>

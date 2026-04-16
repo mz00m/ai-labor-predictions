@@ -204,14 +204,14 @@ export default function NotFound() {
       </svg>
 
       {/* Message */}
-      <p className="text-[15px] text-[var(--muted)] mb-6 text-center">
+      <p className="text-lg text-[var(--muted)] mb-6 text-center">
         This page has been displaced.
       </p>
 
       {/* Back link */}
       <Link
         href="/"
-        className="inline-flex items-center gap-1.5 text-[13px] font-medium text-[var(--accent)] hover:text-[var(--accent-text)] no-underline"
+        className="inline-flex items-center gap-1.5 text-base font-medium text-[var(--accent)] hover:text-[var(--accent-text)] no-underline"
       >
         Back to the dashboard
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">

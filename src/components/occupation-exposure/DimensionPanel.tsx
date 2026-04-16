@@ -38,7 +38,7 @@ export default function DimensionPanel({
           <button
             key={key}
             onClick={() => onSelect(key)}
-            className={`text-[11px] sm:text-[12px] font-medium px-3 py-1.5 rounded-full border transition-all ${
+            className={`text-xs sm:text-sm font-medium px-3 py-1.5 rounded-full border transition-all ${
               isActive
                 ? isComposite
                   ? "border-white bg-white text-black"
@@ -63,7 +63,7 @@ export default function DimensionPanel({
           onClick={onToggleDimensionality}
           onMouseEnter={() => setShowTooltip(true)}
           onMouseLeave={() => setShowTooltip(false)}
-          className={`text-[10px] sm:text-[11px] font-medium px-2.5 py-1.5 rounded-full border transition-all flex items-center gap-1.5 ${
+          className={`text-2xs sm:text-xs font-medium px-2.5 py-1.5 rounded-full border transition-all flex items-center gap-1.5 ${
             dimensionalityEnabled
               ? "border-emerald-500/50 bg-emerald-500/15 text-emerald-400"
               : "border-white/[0.12] text-white/40 hover:border-white/[0.25] hover:text-white/60"
@@ -88,21 +88,21 @@ export default function DimensionPanel({
         {/* Tooltip */}
         {showTooltip && (
           <div className="absolute bottom-full left-0 mb-2 w-72 bg-[#1a1a24] border border-white/[0.12] rounded-lg px-3 py-2.5 shadow-xl z-30 pointer-events-auto">
-            <p className="text-[11px] text-white/70 leading-[1.6] mb-1.5">
+            <p className="text-xs text-white/70 leading-[1.6] mb-1.5">
               Adjusts complementarity scores based on job dimensionality &mdash;
               the number of distinct task clusters (&ge;10% time share). Jobs
               with fewer clusters face stronger firm incentive for full
               automation; high-dimensional jobs see augmentation via the
               &ldquo;focus effect.&rdquo;
             </p>
-            <p className="text-[11px] text-white/50 leading-[1.6] mb-1.5">
+            <p className="text-xs text-white/50 leading-[1.6] mb-1.5">
               When enabled, highlights occupations where dimensionality
               increases net risk above 4.0 &mdash; the highest-risk jobs where
               low task complexity makes automation pressure materially worse.
             </p>
             <a
               href="#methodology-complementarity"
-              className="text-[10px] text-emerald-400 hover:underline"
+              className="text-2xs text-emerald-400 hover:underline"
               onClick={() => setShowTooltip(false)}
             >
               See methodology: Dimension 5 &darr;

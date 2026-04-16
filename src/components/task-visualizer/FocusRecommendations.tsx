@@ -81,10 +81,10 @@ export default function FocusRecommendations({
       {/* Summary stat */}
       <div className="exposure-score rounded-xl bg-black/[0.02] border border-black/[0.06] p-4">
         <div className="flex items-baseline gap-2">
-          <span className="text-[28px] font-bold text-[#EF4444] tracking-tight tabular-nums">
+          <span className="text-4xl font-bold text-[#EF4444] tracking-tight tabular-nums">
             {animatedPercent}%
           </span>
-          <span className="text-[13px] text-[var(--muted)]">
+          <span className="text-base text-[var(--muted)]">
             of your time is on tasks facing near-term economic pressure from AI
           </span>
         </div>
@@ -93,10 +93,10 @@ export default function FocusRecommendations({
       {/* O-Ring Focus Effect */}
       {atRisk.length > 0 && invest.length > 0 && (
         <div className="rounded-lg border border-[#6366F1]/20 bg-[#6366F1]/[0.04] p-3.5">
-          <h4 className="text-[12px] font-semibold text-[#6366F1] mb-1.5">
+          <h4 className="text-sm font-semibold text-[#6366F1] mb-1.5">
             Focus Effect (O-Ring Theory)
           </h4>
-          <p className="text-[12px] text-[var(--muted)] leading-relaxed mb-2">
+          <p className="text-sm text-[var(--muted)] leading-relaxed mb-2">
             If AI handles{" "}
             {atRisk.map((a) => a.task.name).join(", ")},{" "}
             you can reallocate ~{Math.round(atRisk.reduce((s: number, a: AnalyzedTask) => s + a.share * 40, 0))} hrs/week
@@ -106,7 +106,7 @@ export default function FocusRecommendations({
             In complementary-task jobs, concentrated effort on fewer tasks multiplies output quality &mdash;
             you become more valuable, not less.
           </p>
-          <p className="text-[10px] text-[var(--muted)] opacity-60">
+          <p className="text-2xs text-[var(--muted)] opacity-60">
             Gans &amp; Goldfarb (2024), &ldquo;O-Ring Automation&rdquo;; Kremer (1993)
           </p>
         </div>
@@ -115,11 +115,11 @@ export default function FocusRecommendations({
       {/* At risk */}
       {atRisk.length > 0 && (
         <div>
-          <h4 className="text-[13px] font-semibold text-[#EF4444] mb-2 flex items-center gap-1.5">
+          <h4 className="text-base font-semibold text-[#EF4444] mb-2 flex items-center gap-1.5">
             <span className="w-1.5 h-1.5 rounded-full bg-[#EF4444]" />
             AI is already cost-competitive
           </h4>
-          <p className="text-[12px] text-[var(--muted)] mb-2">
+          <p className="text-sm text-[var(--muted)] mb-2">
             AI can already perform these tasks at or below human labor cost. Adoption still lags economics by years, but the cost incentive is there. Shift time away from these.
           </p>
           <div className="space-y-1.5">
@@ -130,9 +130,9 @@ export default function FocusRecommendations({
               >
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-[#EF4444]" />
-                  <span className="text-[12px] font-medium">{task.name}</span>
+                  <span className="text-sm font-medium">{task.name}</span>
                 </div>
-                <span className="text-[11px] text-[var(--muted)]">
+                <span className="text-xs text-[var(--muted)]">
                   {Math.round(share * 100)}% of your time
                 </span>
               </div>
@@ -144,11 +144,11 @@ export default function FocusRecommendations({
       {/* Augment */}
       {augment.length > 0 && (
         <div>
-          <h4 className="text-[13px] font-semibold text-[#6366F1] mb-2 flex items-center gap-1.5">
+          <h4 className="text-base font-semibold text-[#6366F1] mb-2 flex items-center gap-1.5">
             <span className="w-1.5 h-1.5 rounded-full bg-[#6366F1]" />
             Learn to work with AI
           </h4>
-          <p className="text-[12px] text-[var(--muted)] mb-2">
+          <p className="text-sm text-[var(--muted)] mb-2">
             AI is getting capable at these tasks. Become the person who directs AI tools here. Your value multiplies.
           </p>
           <div className="space-y-1.5">
@@ -159,9 +159,9 @@ export default function FocusRecommendations({
               >
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-[#6366F1]" />
-                  <span className="text-[12px] font-medium">{task.name}</span>
+                  <span className="text-sm font-medium">{task.name}</span>
                 </div>
-                <span className="text-[11px] text-[var(--muted)]">
+                <span className="text-xs text-[var(--muted)]">
                   AI: {Math.round(task.aiCapability * 100)}% capable
                 </span>
               </div>
@@ -173,11 +173,11 @@ export default function FocusRecommendations({
       {/* Invest */}
       {invest.length > 0 && (
         <div>
-          <h4 className="text-[13px] font-semibold text-[#10B981] mb-2 flex items-center gap-1.5">
+          <h4 className="text-base font-semibold text-[#10B981] mb-2 flex items-center gap-1.5">
             <span className="w-1.5 h-1.5 rounded-full bg-[#10B981]" />
             Double down here
           </h4>
-          <p className="text-[12px] text-[var(--muted)] mb-2">
+          <p className="text-sm text-[var(--muted)] mb-2">
             These tasks remain expensive and difficult for AI to replicate. Building unique expertise here is your best bet.
           </p>
           <div className="space-y-1.5">
@@ -188,9 +188,9 @@ export default function FocusRecommendations({
               >
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-[#10B981]" />
-                  <span className="text-[12px] font-medium">{task.name}</span>
+                  <span className="text-sm font-medium">{task.name}</span>
                 </div>
-                <span className="text-[11px] text-[var(--muted)]">
+                <span className="text-xs text-[var(--muted)]">
                   Compute: ${task.currentComputeCostPerHr}/hr
                 </span>
               </div>
@@ -201,15 +201,15 @@ export default function FocusRecommendations({
 
       {/* Action Plan CTA */}
       <div className="rounded-xl border border-[#5C61F6]/20 bg-[#5C61F6]/[0.04] p-4">
-        <h4 className="text-[13px] font-semibold text-[#5C61F6] mb-1.5">
+        <h4 className="text-base font-semibold text-[#5C61F6] mb-1.5">
           Get a personalized action plan
         </h4>
-        <p className="text-[12px] text-[var(--muted)] leading-relaxed mb-3">
+        <p className="text-sm text-[var(--muted)] leading-relaxed mb-3">
           This analysis is generic to the role. Get specific recommendations for your organization, team, and workflow.
         </p>
         <Link
           href="/assessment"
-          className="inline-flex items-center gap-1.5 bg-[#5C61F6] hover:bg-[#4F52D4] text-white text-[12px] font-semibold px-4 py-2 rounded-lg transition-colors"
+          className="inline-flex items-center gap-1.5 bg-[#5C61F6] hover:bg-[#4F52D4] text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors"
         >
           Build Your AI Action Plan
           <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -221,7 +221,7 @@ export default function FocusRecommendations({
       {/* Adaptive Capacity context */}
       {adaptiveCapacity !== undefined && (
         <div className="mt-6 pt-4 border-t border-black/[0.06]">
-          <h4 className="text-[13px] font-semibold text-[var(--foreground)] mb-2">
+          <h4 className="text-base font-semibold text-[var(--foreground)] mb-2">
             Adaptability context
           </h4>
           <div className="flex items-center gap-3 mb-2">
@@ -233,19 +233,19 @@ export default function FocusRecommendations({
             >
               {(adaptiveCapacity * 100).toFixed(0)}
             </div>
-            <div className="text-[12px] text-[var(--muted)]">
+            <div className="text-sm text-[var(--muted)]">
               <div>Adaptive Capacity Score (0-100)</div>
               <div>Manning &amp; Aguirre, NBER 2026</div>
             </div>
           </div>
           {highVulnerability && (
             <div className="vulnerability-warning bg-[#EF4444]/[0.06] border border-[#EF4444]/20 rounded-lg px-3 py-2 mb-2">
-              <p className="text-[11px] text-[#EF4444] font-medium">
+              <p className="text-xs text-[#EF4444] font-medium">
                 High vulnerability: this occupation combines high AI exposure with low adaptive capacity
               </p>
             </div>
           )}
-          <p className="text-[12px] text-[var(--muted)] leading-relaxed">
+          <p className="text-sm text-[var(--muted)] leading-relaxed">
             {getACInterpretation(adaptiveCapacity)}
           </p>
         </div>

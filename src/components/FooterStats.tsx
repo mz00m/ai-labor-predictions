@@ -99,7 +99,7 @@ export default function FooterStats() {
     window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   return (
-    <span className="text-[13px] text-[var(--muted)]">
+    <span className="text-base text-[var(--muted)]">
       <a
         href="https://www.linkedin.com/in/mattzieger"
         target="_blank"
@@ -138,7 +138,7 @@ export default function FooterStats() {
         <span className="block mt-2">
           <HandDrawnSparkline />
           <span
-            className="block text-[10px] text-[var(--muted)] opacity-60 mt-0.5"
+            className="block text-2xs text-[var(--muted)] opacity-60 mt-0.5"
             style={{
               opacity: showTimeline ? 0.6 : 0,
               transition: reducedMotion ? "none" : "opacity 0.5s ease 0.3s",

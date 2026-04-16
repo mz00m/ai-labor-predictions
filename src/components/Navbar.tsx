@@ -110,7 +110,7 @@ function DesktopDropdown({ group }: { group: NavGroup }) {
     >
       <button
         onClick={() => setOpen((prev) => !prev)}
-        className={`flex items-center gap-1 text-[12px] font-medium px-2.5 py-1.5 rounded-md transition-colors ${
+        className={`flex items-center gap-1 text-sm font-medium px-2.5 py-1.5 rounded-md transition-colors ${
           isActive
             ? "text-[var(--foreground)]"
             : "text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-black/[0.03]"
@@ -134,7 +134,7 @@ function DesktopDropdown({ group }: { group: NavGroup }) {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`block text-[12px] font-medium px-4 py-2 dropdown-item ${
+                className={`block text-sm font-medium px-4 py-2 dropdown-item ${
                   isSuggest
                     ? "text-[#F66B5C] hover:text-[#e55a4b] hover:bg-black/[0.03]"
                     : itemActive
@@ -223,7 +223,7 @@ export default function Navbar() {
               <Link
                 key={entry.href}
                 href={entry.href}
-                className="text-[12px] font-medium text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-black/[0.03] px-2.5 py-1.5 rounded-md"
+                className="text-sm font-medium text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-black/[0.03] px-2.5 py-1.5 rounded-md"
               >
                 {entry.label}
               </Link>
@@ -283,7 +283,7 @@ export default function Navbar() {
                           prev === entry.label ? null : entry.label
                         )
                       }
-                      className="flex items-center justify-between w-full text-[13px] font-medium text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-black/[0.03] px-4 py-2.5"
+                      className="flex items-center justify-between w-full text-base font-medium text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-black/[0.03] px-4 py-2.5"
                     >
                       {entry.label}
                       <ChevronDown
@@ -301,7 +301,7 @@ export default function Navbar() {
                               key={item.href}
                               href={item.href}
                               onClick={() => setMobileOpen(false)}
-                              className={`block text-[13px] font-medium pl-8 pr-4 py-2 ${
+                              className={`block text-base font-medium pl-8 pr-4 py-2 ${
                                 isSuggest
                                   ? "text-[#F66B5C] hover:text-[#e55a4b] hover:bg-black/[0.03]"
                                   : "text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-black/[0.03]"
@@ -319,7 +319,7 @@ export default function Navbar() {
                     key={entry.href}
                     href={entry.href}
                     onClick={() => setMobileOpen(false)}
-                    className="block text-[13px] font-medium text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-black/[0.03] px-4 py-2.5"
+                    className="block text-base font-medium text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-black/[0.03] px-4 py-2.5"
                   >
                     {entry.label}
                   </Link>

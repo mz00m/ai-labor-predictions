@@ -93,13 +93,13 @@ export default function ResearchFeed({ selectedTiers }: ResearchFeedProps) {
         <div className="absolute inset-0 bg-gradient-to-br from-[#5C61F6]/[0.02] to-transparent pointer-events-none" aria-hidden="true" />
         <div className="relative flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
           <div className="flex-1">
-            <p className="text-[13px] font-bold uppercase tracking-widest text-[var(--accent)] mb-2">
+            <p className="text-base font-bold uppercase tracking-widest text-[var(--accent)] mb-2">
               Live research feed
             </p>
-            <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)] mb-3">
+            <h2 className="text-4xl sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)] mb-3">
               Find Recent Research
             </h2>
-            <p className="text-[15px] text-[var(--muted)] leading-relaxed max-w-lg">
+            <p className="text-lg text-[var(--muted)] leading-relaxed max-w-lg">
               Search 11 academic sources &mdash; Scopus, OpenAlex, Semantic Scholar,
               arXiv, NBER, Brookings, IMF, IZA, CORE, SEC EDGAR, and job market data &mdash;
               for recent AI + labor market research. Papers are classified by evidence
@@ -109,7 +109,7 @@ export default function ResearchFeed({ selectedTiers }: ResearchFeedProps) {
           <button
             onClick={fetchPapers}
             disabled={loading}
-            className="btn-press shrink-0 px-8 py-3.5 text-[14px] font-bold text-white bg-[var(--accent)] rounded-full hover:opacity-90 disabled:opacity-50 cursor-pointer shadow-sm"
+            className="btn-press shrink-0 px-8 py-3.5 text-md font-bold text-white bg-[var(--accent)] rounded-full hover:opacity-90 disabled:opacity-50 cursor-pointer shadow-sm"
           >
             {loading ? "Searching..." : "Find Recent Research"}
           </button>
@@ -125,20 +125,20 @@ export default function ResearchFeed({ selectedTiers }: ResearchFeedProps) {
 
       <div className="relative px-8 pt-8 pb-4 sm:px-10 sm:pt-10">
         <div className="flex items-center justify-between mb-1">
-          <p className="text-[13px] font-bold uppercase tracking-widest text-[var(--accent)]">
+          <p className="text-base font-bold uppercase tracking-widest text-[var(--accent)]">
             Live research feed
           </p>
           <button
             onClick={fetchPapers}
             disabled={loading}
-            className="btn-press px-4 py-1.5 text-[12px] font-semibold text-[var(--accent)] border border-[var(--accent)]/30 rounded-full hover:bg-[var(--accent)]/[0.05] disabled:opacity-50 cursor-pointer"
+            className="btn-press px-4 py-1.5 text-sm font-semibold text-[var(--accent)] border border-[var(--accent)]/30 rounded-full hover:bg-[var(--accent)]/[0.05] disabled:opacity-50 cursor-pointer"
           >
             {loading ? "Refreshing..." : "Refresh"}
           </button>
         </div>
-        <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
+        <h2 className="text-4xl sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
           Recent Research
-          <span className="text-[var(--muted)] font-normal text-[18px] ml-2">
+          <span className="text-[var(--muted)] font-normal text-2xl ml-2">
             {papers.length} papers
           </span>
         </h2>
@@ -146,7 +146,7 @@ export default function ResearchFeed({ selectedTiers }: ResearchFeedProps) {
 
       <div className="relative px-8 pb-8 sm:px-10 sm:pb-10">
       {error && (
-        <p className="text-[13px] text-red-600 mb-4">{error}</p>
+        <p className="text-base text-red-600 mb-4">{error}</p>
       )}
 
       {loading && (
@@ -161,7 +161,7 @@ export default function ResearchFeed({ selectedTiers }: ResearchFeedProps) {
       )}
 
       {!loading && papers.length === 0 && (
-        <p className="text-[14px] text-[var(--muted)]">
+        <p className="text-md text-[var(--muted)]">
           No papers found matching the selected tiers.
         </p>
       )}
@@ -185,18 +185,18 @@ export default function ResearchFeed({ selectedTiers }: ResearchFeedProps) {
                       href={paper.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="paper-title text-[14px] font-semibold text-[var(--foreground)] leading-tight"
+                      className="paper-title text-md font-semibold text-[var(--foreground)] leading-tight"
                     >
                       {paper.title}
                     </a>
 
                     <div className="flex items-center gap-3 mt-1.5 flex-wrap">
-                      <span className="text-[12px] text-[var(--muted)]">
+                      <span className="text-sm text-[var(--muted)]">
                         {paper.authors.slice(0, 3).join(", ")}
                         {paper.authors.length > 3 ? ` +${paper.authors.length - 3}` : ""}
                       </span>
                       {paper.publishedDate ? (
-                        <span className="text-[12px] text-[var(--foreground)] font-medium opacity-60">
+                        <span className="text-sm text-[var(--foreground)] font-medium opacity-60">
                           {new Date(paper.publishedDate).toLocaleDateString("en-US", {
                             month: "short",
                             day: "numeric",
@@ -204,44 +204,44 @@ export default function ResearchFeed({ selectedTiers }: ResearchFeedProps) {
                           })}
                         </span>
                       ) : paper.year ? (
-                        <span className="text-[12px] text-[var(--muted)] opacity-50">
+                        <span className="text-sm text-[var(--muted)] opacity-50">
                           {paper.year}
                         </span>
                       ) : null}
                       {paper.citationCount > 0 && (
-                        <span className="text-[12px] text-[var(--muted)] opacity-50">
+                        <span className="text-sm text-[var(--muted)] opacity-50">
                           {paper.citationCount} cites
                         </span>
                       )}
-                      <span className="text-[11px] font-medium" style={{ color: tierConfig.color }}>
+                      <span className="text-xs font-medium" style={{ color: tierConfig.color }}>
                         Tier {paper.classifiedTier}
                       </span>
-                      <span className="text-[11px] text-[var(--muted)] bg-black/[0.04] px-1.5 py-0.5 rounded">
+                      <span className="text-xs text-[var(--muted)] bg-black/[0.04] px-1.5 py-0.5 rounded">
                         {SOURCE_LABELS[paper.source] || paper.source}
                       </span>
                       {paper.isTrackedAuthor && (
-                        <span className="text-[11px] font-semibold text-amber-700 bg-amber-50 px-1.5 py-0.5 rounded">
+                        <span className="text-xs font-semibold text-amber-700 bg-amber-50 px-1.5 py-0.5 rounded">
                           Tracked Author
                         </span>
                       )}
                     </div>
 
                     {paper.abstract && (
-                      <p className="text-[13px] text-[var(--muted)] mt-2 leading-relaxed line-clamp-2">
+                      <p className="text-base text-[var(--muted)] mt-2 leading-relaxed line-clamp-2">
                         {paper.abstract}
                       </p>
                     )}
 
                     {paper.linkedPredictions.length > 0 && (
                       <div className="flex items-center gap-2 mt-2.5 flex-wrap">
-                        <span className="text-[11px] font-bold uppercase tracking-wider text-[var(--muted)]">
+                        <span className="text-xs font-bold uppercase tracking-wider text-[var(--muted)]">
                           Linked:
                         </span>
                         {paper.linkedPredictions.map((lp) => (
                           <Link
                             key={lp.slug}
                             href={`/predictions/${lp.slug}`}
-                            className="text-[11px] font-medium text-[var(--accent)] hover:underline"
+                            className="text-xs font-medium text-[var(--accent)] hover:underline"
                           >
                             {lp.title.length > 35
                               ? lp.title.slice(0, 35) + "..."
@@ -256,7 +256,7 @@ export default function ResearchFeed({ selectedTiers }: ResearchFeedProps) {
                         href={paper.pdfUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-block mt-2 text-[12px] font-medium text-[var(--accent)] hover:underline"
+                        className="inline-block mt-2 text-sm font-medium text-[var(--accent)] hover:underline"
                       >
                         PDF
                       </a>

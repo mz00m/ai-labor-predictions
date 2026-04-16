@@ -79,13 +79,13 @@ function HeadlineItem({ headline }: { headline: TickerHeadline }) {
   return (
     <span className="inline-flex items-center gap-2 whitespace-nowrap px-4">
       <SentimentIcon sentiment={headline.sentiment} />
-      <span className="text-[11px] sm:text-[12px] font-semibold text-white/60">
+      <span className="text-xs sm:text-sm font-semibold text-white/60">
         {headline.source}
       </span>
       {timeAgo && (
         <>
           <span className="text-white/20">·</span>
-          <span className="text-[11px] sm:text-[12px] text-white/30">
+          <span className="text-xs sm:text-sm text-white/30">
             {timeAgo}
           </span>
         </>
@@ -95,7 +95,7 @@ function HeadlineItem({ headline }: { headline: TickerHeadline }) {
         href={headline.link}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-[12px] sm:text-[13px] text-white/85 hover:text-white"
+        className="text-sm sm:text-base text-white/85 hover:text-white"
       >
         {headline.title}
       </a>
@@ -170,7 +170,7 @@ export default function NewsTicker() {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" />
             <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500" />
           </span>
-          <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-white/70">
+          <span className="text-2xs sm:text-xs font-bold uppercase tracking-wider text-white/70">
             Live
           </span>
         </div>

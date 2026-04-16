@@ -135,13 +135,13 @@ function getSteps(metrics: SignalMetrics): StepConfig[] {
           }}
         >
           <span className="flex items-center gap-0.5" style={{ color: "#dc2626" }}>
-            <span className="text-[13px] leading-none" style={{ opacity: 0.6 }}>▼</span> Reduce
+            <span className="text-base leading-none" style={{ opacity: 0.6 }}>▼</span> Reduce
           </span>
           <span className="text-[var(--muted)]">/</span>
           <span style={{ color: "#5C61F6" }}>Amplify</span>
           <span className="text-[var(--muted)]">/</span>
           <span className="flex items-center gap-0.5" style={{ color: "#16a34a" }}>
-            <span className="text-[13px] leading-none" style={{ opacity: 0.6 }}>▲</span>
+            <span className="text-base leading-none" style={{ opacity: 0.6 }}>▲</span>
             Expand
           </span>
         </span>
@@ -166,17 +166,17 @@ function StepNode({ step }: { step: StepConfig }) {
         {step.icon}
       </div>
       <p
-        className="text-[11px] font-bold uppercase tracking-[0.06em] mb-1"
+        className="text-xs font-bold uppercase tracking-[0.06em] mb-1"
         style={{ color: step.color }}
       >
         {step.label}
       </p>
       {step.statLabel && (
-        <p className="text-[13px] font-mono font-medium stat-number text-[var(--foreground)] mb-1">
+        <p className="text-base font-mono font-medium stat-number text-[var(--foreground)] mb-1">
           {step.statLabel}
         </p>
       )}
-      <p className="text-[11px] text-[var(--muted)] leading-snug max-w-[180px]">
+      <p className="text-xs text-[var(--muted)] leading-snug max-w-[180px]">
         {step.description}
       </p>
     </div>
@@ -361,7 +361,7 @@ function ExpandedContent({ metrics }: { metrics: SignalMetrics }) {
 
   return (
     <div className="pt-5 space-y-5">
-      <h3 className="text-[16px] font-bold text-[var(--foreground)]">
+      <h3 className="text-xl font-bold text-[var(--foreground)]">
         How AI Automation Reaches the Labor Market
       </h3>
       {sections.map((section) => (
@@ -370,10 +370,10 @@ function ExpandedContent({ metrics }: { metrics: SignalMetrics }) {
           className="pl-4 border-l-2"
           style={{ borderColor: section.color }}
         >
-          <h4 className="text-[14px] font-semibold text-[var(--foreground)] mb-2">
+          <h4 className="text-md font-semibold text-[var(--foreground)] mb-2">
             {section.title}
           </h4>
-          <div className="text-[13px] text-[var(--muted)] leading-relaxed space-y-2 [&_code]:font-mono [&_code]:text-[12px] [&_code]:text-[var(--foreground)] [&_code]:bg-black/[0.04] [&_code]:px-1 [&_code]:py-0.5 [&_code]:rounded">
+          <div className="text-base text-[var(--muted)] leading-relaxed space-y-2 [&_code]:font-mono [&_code]:text-sm [&_code]:text-[var(--foreground)] [&_code]:bg-black/[0.04] [&_code]:px-1 [&_code]:py-0.5 [&_code]:rounded">
             {section.content}
           </div>
         </div>
@@ -434,10 +434,10 @@ export default function AutomationExplainer({
         >
           {/* Header row */}
           <div className="flex items-center justify-between mb-2">
-            <p className="text-[10px] font-bold uppercase tracking-[0.08em] text-[var(--muted)]">
+            <p className="text-2xs font-bold uppercase tracking-[0.08em] text-[var(--muted)]">
               How AI Automation Works
             </p>
-            <span className="text-[11px] text-[var(--accent)] flex items-center gap-1">
+            <span className="text-xs text-[var(--accent)] flex items-center gap-1">
               {isExpanded ? "Collapse" : "Learn more"}
               <svg
                 width="12"

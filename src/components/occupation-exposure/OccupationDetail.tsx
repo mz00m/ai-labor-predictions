@@ -45,14 +45,14 @@ function ScoreBar({
   return (
     <div className="mb-3">
       <div className="flex items-center justify-between mb-1">
-        <span className="text-[12px] font-medium text-[var(--foreground)]">
+        <span className="text-sm font-medium text-[var(--foreground)]">
           {meta.label}
-          <span className="ml-1.5 text-[10px] text-[var(--muted)]">
+          <span className="ml-1.5 text-2xs text-[var(--muted)]">
             ({meta.isPressure ? "pressure" : "absorption"})
           </span>
         </span>
         <span
-          className="text-[13px] font-bold"
+          className="text-base font-bold"
           style={{ fontFamily: "'DM Mono', monospace", color: barColor }}
         >
           {value.toFixed(1)}
@@ -64,7 +64,7 @@ function ScoreBar({
           style={{ width: `${pct}%`, background: barColor }}
         />
       </div>
-      <p className="text-[10px] text-[var(--muted)] mt-0.5 leading-snug">
+      <p className="text-2xs text-[var(--muted)] mt-0.5 leading-snug">
         {rationale}
       </p>
     </div>
@@ -91,14 +91,14 @@ function DimensionalityDetail({ dim }: { dim: DimensionalityMeta }) {
     <div className="ml-0 mb-3 pl-3 border-l-2 border-black/[0.06]">
       <div className="flex items-center gap-2 mb-1">
         <span
-          className="inline-flex items-center gap-1 text-[10px] font-bold px-1.5 py-0.5 rounded"
+          className="inline-flex items-center gap-1 text-2xs font-bold px-1.5 py-0.5 rounded"
           style={{ background: dimColor + "15", color: dimColor }}
         >
           {dim.effectiveDimensions} task dimension{dim.effectiveDimensions !== 1 ? "s" : ""}
         </span>
-        <span className="text-[10px] text-[var(--muted)]">{dimLabel}</span>
+        <span className="text-2xs text-[var(--muted)]">{dimLabel}</span>
       </div>
-      <p className="text-[10px] text-[var(--muted)] leading-snug">
+      <p className="text-2xs text-[var(--muted)] leading-snug">
         {sourceLabel} base: {dim.complementarityBase.toFixed(1)}
         {dim.dimensionalityAdj !== 0 && (
           <span style={{ color: dimColor }}>
@@ -147,7 +147,7 @@ export default function OccupationDetail({ occupation, onClose }: Props) {
 
       {/* Header */}
       <div className="mb-5">
-        <p className="text-[11px] font-bold uppercase tracking-widest text-[var(--muted)] mb-1">
+        <p className="text-xs font-bold uppercase tracking-widest text-[var(--muted)] mb-1">
           {group.socCode}
         </p>
         <h3 className="text-[20px] sm:text-[24px] font-bold text-[var(--foreground)] leading-tight mb-2">
@@ -186,7 +186,7 @@ export default function OccupationDetail({ occupation, onClose }: Props) {
           style={{ background: riskColor + "0D" }}
         >
           <span
-            className="text-[28px] font-black"
+            className="text-4xl font-black"
             style={{
               fontFamily: "'DM Mono', monospace",
               color: riskColor,
@@ -197,12 +197,12 @@ export default function OccupationDetail({ occupation, onClose }: Props) {
           </span>
           <div>
             <p
-              className="text-[13px] font-semibold"
+              className="text-base font-semibold"
               style={{ color: riskColor }}
             >
               {riskLabel}
             </p>
-            <p className="text-[11px] text-[var(--muted)]">
+            <p className="text-xs text-[var(--muted)]">
               Composite of 5 dimensions (higher = more displacement pressure)
             </p>
           </div>
@@ -211,7 +211,7 @@ export default function OccupationDetail({ occupation, onClose }: Props) {
 
       {/* Dimension scores */}
       <div className="mb-4">
-        <h4 className="text-[12px] font-bold uppercase tracking-widest text-[var(--muted)] mb-3">
+        <h4 className="text-sm font-bold uppercase tracking-widest text-[var(--muted)] mb-3">
           Dimension Breakdown
         </h4>
         {BAR_DIMENSIONS.map((dim) => (
@@ -231,7 +231,7 @@ export default function OccupationDetail({ occupation, onClose }: Props) {
       {/* Task visualizer link */}
       {jobIds.length > 0 && (
         <div className="border-t border-black/[0.06] pt-3 mt-3">
-          <p className="text-[11px] font-bold uppercase tracking-widest text-[var(--muted)] mb-2">
+          <p className="text-xs font-bold uppercase tracking-widest text-[var(--muted)] mb-2">
             Explore individual jobs in this group
           </p>
           <div className="flex flex-wrap gap-2">
@@ -239,7 +239,7 @@ export default function OccupationDetail({ occupation, onClose }: Props) {
               <Link
                 key={jobId}
                 href={`/task-visualizer?job=${jobId}`}
-                className="text-[12px] font-medium text-[var(--accent-text)] hover:underline"
+                className="text-sm font-medium text-[var(--accent-text)] hover:underline"
               >
                 {jobId.replace(/-/g, " ")}
               </Link>

@@ -140,7 +140,7 @@ export default function WhatChangedAnimation({
       </span>
       {showDiff && diff !== 0 && (
         <span
-          className="text-[13px] font-medium"
+          className="text-base font-medium"
           style={{
             color: diffColor,
             animation: reducedMotion ? "none" : "milestone-pop 0.3s cubic-bezier(0.34,1.56,0.64,1) both",

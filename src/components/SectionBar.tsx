@@ -70,19 +70,19 @@ export default function SectionBar({
         {/* Text block */}
         <div className="flex-1 min-w-0">
           <div className="flex items-baseline gap-3 mb-1">
-            <h2 className={`section-title ${featured ? "text-[20px] sm:text-[26px]" : "text-[18px] sm:text-[22px]"} font-extrabold tracking-tight text-[var(--foreground)] leading-snug`}>
+            <h2 className={`section-title ${featured ? "text-[20px] sm:text-[26px]" : "text-2xl sm:text-3xl"} font-extrabold tracking-tight text-[var(--foreground)] leading-snug`}>
               {title}
             </h2>
             {tag && (
               <span
-                className="text-[10px] font-bold uppercase tracking-widest shrink-0"
+                className="text-2xs font-bold uppercase tracking-widest shrink-0"
                 style={{ color: accentColor }}
               >
                 {tag}
               </span>
             )}
           </div>
-          <p className={`${featured ? "text-[14px] max-w-2xl" : "text-[13px] max-w-xl"} text-[var(--muted)] leading-relaxed line-clamp-2`}>
+          <p className={`${featured ? "text-md max-w-2xl" : "text-base max-w-xl"} text-[var(--muted)] leading-relaxed line-clamp-2`}>
             {description}
           </p>
         </div>
@@ -96,7 +96,7 @@ export default function SectionBar({
             <span className={`${featured ? "text-[24px]" : "text-[20px]"} font-black tracking-tight`} style={{ color: accentColor }}>
               {stat.value}
             </span>
-            <span className="text-[10px] text-[var(--muted)] uppercase tracking-wider">
+            <span className="text-2xs text-[var(--muted)] uppercase tracking-wider">
               {stat.label}
             </span>
           </div>

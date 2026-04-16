@@ -18,10 +18,10 @@ export default function ProductivityPage() {
         </div>
 
         <div className="relative max-w-3xl">
-          <p className="text-[12px] font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
+          <p className="text-sm font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
             Explainer
           </p>
-          <h1 className="text-[36px] sm:text-[50px] font-black tracking-tight text-[var(--foreground)] leading-[1.08] mb-5">
+          <h1 className="text-5xl sm:text-[50px] font-black tracking-tight text-[var(--foreground)] leading-[1.08] mb-5">
             The Productivity Question
           </h1>
           <p className="text-[17px] sm:text-[19px] text-[var(--muted)] leading-relaxed mb-6">
@@ -34,7 +34,7 @@ export default function ProductivityPage() {
           {/* Thesis card */}
           <div className="border-l-4 border-[var(--accent)] bg-[var(--accent-light)] rounded-r-lg px-5 py-4">
             <p
-              className="text-[15px] sm:text-[16px] text-[var(--foreground)] leading-relaxed font-medium"
+              className="text-lg sm:text-xl text-[var(--foreground)] leading-relaxed font-medium"
               style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
             >
               The story so far: 14&ndash;56% individual productivity gains in
@@ -50,7 +50,7 @@ export default function ProductivityPage() {
       <section id="productivity-paths" className="mt-12">
         <div className="max-w-3xl mb-2">
           <SectionLabel number="01" title="From productivity to jobs" />
-          <p className="text-[14px] text-[var(--muted)] leading-[1.75] mb-4">
+          <p className="text-md text-[var(--muted)] leading-[1.75] mb-4">
             Higher productivity doesn&rsquo;t map one-to-one to job loss.
             History shows three distinct paths that firms take, often
             simultaneously. The ratio between them determines whether AI creates
@@ -64,7 +64,7 @@ export default function ProductivityPage() {
       <section className="mt-20">
         <div className="max-w-3xl">
           <SectionLabel number="02" title="The core tension" />
-          <div className="space-y-4 text-[14px] text-[var(--muted)] leading-[1.75]">
+          <div className="space-y-4 text-md text-[var(--muted)] leading-[1.75]">
             <p>
               Three facts coexist uncomfortably. First: at the task level, AI
               tools are producing some of the largest productivity gains ever
@@ -108,7 +108,7 @@ export default function ProductivityPage() {
       <section className="mt-20">
         <div className="max-w-3xl mb-2">
           <SectionLabel number="03" title="What the research shows" />
-          <p className="text-[14px] text-[var(--muted)] leading-[1.75] mb-4">
+          <p className="text-md text-[var(--muted)] leading-[1.75] mb-4">
             The gap between micro and macro is the central puzzle. Individual
             workers are clearly more productive with AI, but the economy-wide
             numbers are just starting to move. Here are the studies, sorted by
@@ -122,10 +122,10 @@ export default function ProductivityPage() {
       <section className="mt-16">
         <div className="max-w-3xl">
           <div className="border border-black/[0.06] rounded-xl bg-white p-5 sm:p-6">
-            <h3 className="text-[18px] font-bold text-[var(--foreground)] mb-3">
+            <h3 className="text-2xl font-bold text-[var(--foreground)] mb-3">
               Why the micro-macro gap?
             </h3>
-            <div className="space-y-3 text-[13px] text-[var(--muted)] leading-relaxed">
+            <div className="space-y-3 text-base text-[var(--muted)] leading-relaxed">
               <ReasonRow
                 number="1"
                 title="Adoption is still early"
@@ -155,7 +155,7 @@ export default function ProductivityPage() {
       <section className="mt-20">
         <div className="max-w-3xl mb-2">
           <SectionLabel number="04" title="What economists expect" />
-          <p className="text-[14px] text-[var(--muted)] leading-[1.75] mb-4">
+          <p className="text-md text-[var(--muted)] leading-[1.75] mb-4">
             If the micro gains are real, how much will they eventually move the
             macro needle? This question determines everything downstream:
             displacement forecasts, wage projections, policy responses.
@@ -168,14 +168,14 @@ export default function ProductivityPage() {
       <section className="mt-20">
         <div className="max-w-3xl">
           <SectionLabel number="05" title="When productivity creates demand" />
-          <p className="text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
+          <p className="text-md text-[var(--muted)] leading-[1.75] mb-6">
             There&rsquo;s a critical counterforce to displacement that most
             forecasts underweight: when AI makes work dramatically cheaper,
             it can unlock demand that didn&rsquo;t previously exist.
           </p>
           <Link
             href="/demand-elasticity"
-            className="inline-flex items-center gap-1.5 text-[13px] font-bold text-[var(--accent)] hover:underline"
+            className="inline-flex items-center gap-1.5 text-base font-bold text-[var(--accent)] hover:underline"
           >
             Explore demand elasticity and Jevons Paradox
             <svg
@@ -199,7 +199,7 @@ export default function ProductivityPage() {
       <section className="mt-20">
         <div className="max-w-3xl">
           <SectionLabel number="06" title="The measurement problem" />
-          <p className="text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
+          <p className="text-md text-[var(--muted)] leading-[1.75] mb-6">
             There&rsquo;s a deeper issue: even when AI does boost productivity,
             our statistics may systematically undercount it. This isn&rsquo;t
             speculation &mdash; it&rsquo;s a pattern that has played out with
@@ -249,10 +249,10 @@ export default function ProductivityPage() {
               </div>
 
               <div className="flex-1">
-                <h3 className="text-[18px] font-bold text-[var(--foreground)] mb-2">
+                <h3 className="text-2xl font-bold text-[var(--foreground)] mb-2">
                   The Productivity J-Curve
                 </h3>
-                <p className="text-[13px] text-[var(--muted)] leading-relaxed mb-3">
+                <p className="text-base text-[var(--muted)] leading-relaxed mb-3">
                   When a major new technology arrives, measured productivity
                   often stagnates or declines for years &mdash; not because the
                   technology doesn&rsquo;t work, but because the massive
@@ -263,7 +263,7 @@ export default function ProductivityPage() {
                 <div className="flex flex-wrap items-center gap-3">
                   <Link
                     href="/j-curve"
-                    className="inline-flex items-center gap-1.5 text-[13px] font-bold text-[var(--accent)] hover:underline"
+                    className="inline-flex items-center gap-1.5 text-base font-bold text-[var(--accent)] hover:underline"
                   >
                     Read the full J-Curve explainer
                     <svg
@@ -280,7 +280,7 @@ export default function ProductivityPage() {
                       <path d="M5 3L9.5 7L5 11" />
                     </svg>
                   </Link>
-                  <span className="text-[11px] text-[var(--muted)]">
+                  <span className="text-xs text-[var(--muted)]">
                     Brynjolfsson, Rock &amp; Syverson (2021)
                   </span>
                 </div>
@@ -290,7 +290,7 @@ export default function ProductivityPage() {
 
           {/* Timeline strip */}
           <div className="border-t border-black/[0.06] bg-[var(--accent-light)] px-5 sm:px-6 py-3">
-            <div className="flex items-center gap-6 text-[11px]">
+            <div className="flex items-center gap-6 text-xs">
               <span className="font-bold text-[var(--accent)]">
                 Historical pattern
               </span>
@@ -324,7 +324,7 @@ export default function ProductivityPage() {
       <section className="mt-20">
         <div className="max-w-3xl">
           <SectionLabel number="07" title="What this means" />
-          <div className="space-y-4 text-[14px] text-[var(--muted)] leading-[1.75] mb-8">
+          <div className="space-y-4 text-md text-[var(--muted)] leading-[1.75] mb-8">
             <p>
               The productivity story is the engine behind every other prediction
               on this site. If AI productivity gains stay confined to narrow
@@ -370,7 +370,7 @@ export default function ProductivityPage() {
           {/* Closing quote */}
           <blockquote className="border-l-4 border-[var(--accent)] bg-[var(--accent-light)] rounded-r-lg px-5 py-5">
             <p
-              className="text-[15px] sm:text-[16px] text-[var(--foreground)] leading-[1.75] font-medium"
+              className="text-lg sm:text-xl text-[var(--foreground)] leading-[1.75] font-medium"
               style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
             >
               Productivity is the bridge between AI capabilities and labor
@@ -394,7 +394,7 @@ export default function ProductivityPage() {
       {/* ───── Footer nav ───── */}
       <section className="mt-8 mb-8">
         <div className="border-t border-black/[0.06] pt-8">
-          <p className="text-[11px] font-bold uppercase tracking-widest text-[var(--muted)] mb-4">
+          <p className="text-xs font-bold uppercase tracking-widest text-[var(--muted)] mb-4">
             Continue exploring
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
@@ -425,7 +425,7 @@ export default function ProductivityPage() {
 function SectionLabel({ number, title }: { number: string; title: string }) {
   return (
     <div className="mb-4">
-      <span className="text-[11px] font-bold uppercase tracking-widest text-[var(--accent)] block mb-1">
+      <span className="text-xs font-bold uppercase tracking-widest text-[var(--accent)] block mb-1">
         {number}
       </span>
       <h2 className="text-[24px] sm:text-[30px] font-extrabold tracking-tight text-[var(--foreground)] leading-tight">
@@ -457,10 +457,10 @@ function StatHighlight({
       <p className="text-[32px] sm:text-[38px] font-black" style={{ color }}>
         {value}
       </p>
-      <p className="text-[13px] font-bold text-[var(--foreground)] mt-1">
+      <p className="text-base font-bold text-[var(--foreground)] mt-1">
         {label}
       </p>
-      <p className="text-[11px] text-[var(--muted)] mt-0.5">{detail}</p>
+      <p className="text-xs text-[var(--muted)] mt-0.5">{detail}</p>
     </div>
   );
 }
@@ -476,14 +476,14 @@ function ReasonRow({
 }) {
   return (
     <div className="flex gap-3">
-      <span className="text-[12px] font-bold text-[var(--accent)] mt-0.5 shrink-0 w-4 text-right">
+      <span className="text-sm font-bold text-[var(--accent)] mt-0.5 shrink-0 w-4 text-right">
         {number}
       </span>
       <div>
-        <span className="text-[13px] font-bold text-[var(--foreground)]">
+        <span className="text-base font-bold text-[var(--foreground)]">
           {title}
         </span>
-        <span className="text-[13px] text-[var(--muted)]"> &mdash; {text}</span>
+        <span className="text-base text-[var(--muted)]"> &mdash; {text}</span>
       </div>
     </div>
   );
@@ -504,12 +504,12 @@ function ImplicationCard({
       style={{ borderColor: `${color}25` }}
     >
       <h4
-        className="text-[13px] font-bold mb-1"
+        className="text-base font-bold mb-1"
         style={{ color }}
       >
         {title}
       </h4>
-      <p className="text-[12px] text-[var(--muted)] leading-relaxed">{body}</p>
+      <p className="text-sm text-[var(--muted)] leading-relaxed">{body}</p>
     </div>
   );
 }
@@ -528,10 +528,10 @@ function NavCard({
       href={href}
       className="group block rounded-lg border border-black/[0.06] bg-white px-4 py-3 hover:border-black/[0.12] hover:shadow-sm transition-all no-underline"
     >
-      <p className="text-[13px] font-bold text-[var(--foreground)] group-hover:text-[var(--accent)] transition-colors">
+      <p className="text-base font-bold text-[var(--foreground)] group-hover:text-[var(--accent)] transition-colors">
         {label}
       </p>
-      <p className="text-[11px] text-[var(--muted)] mt-0.5">{description}</p>
+      <p className="text-xs text-[var(--muted)] mt-0.5">{description}</p>
     </Link>
   );
 }

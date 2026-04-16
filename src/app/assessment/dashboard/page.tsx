@@ -142,22 +142,22 @@ export default function DashboardPage() {
   if (checking) {
     return (
       <div className="max-w-4xl mx-auto px-6 sm:px-10 py-12">
-        <div className="text-[14px] text-gray-400">Loading...</div>
+        <div className="text-md text-gray-400">Loading...</div>
       </div>
     );
   }
 
   return (
     <div className="max-w-4xl mx-auto px-6 sm:px-10 py-12">
-      <h1 className="font-serif text-[28px] font-semibold text-gray-900 mb-2">My Plans</h1>
-      <p className="text-[14px] text-gray-500 mb-8">
+      <h1 className="font-serif text-4xl font-semibold text-gray-900 mb-2">My Plans</h1>
+      <p className="text-md text-gray-500 mb-8">
         View your AI action plans. Verify your email to access your reports.
       </p>
 
       {/* Email entry */}
       {authState === "email" && (
         <form onSubmit={handleSendCode} className="max-w-md">
-          <label className="block text-[13px] font-medium text-gray-700 mb-2">
+          <label className="block text-base font-medium text-gray-700 mb-2">
             Enter the email you used for your assessment
           </label>
           <div className="flex gap-3">
@@ -166,18 +166,18 @@ export default function DashboardPage() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="you@example.com"
-              className="flex-1 bg-gray-50 border border-gray-200 rounded-lg px-4 py-2.5 text-[14px] text-gray-900 placeholder:text-gray-400 outline-none focus:border-[#5C61F6]"
+              className="flex-1 bg-gray-50 border border-gray-200 rounded-lg px-4 py-2.5 text-md text-gray-900 placeholder:text-gray-400 outline-none focus:border-[#5C61F6]"
               required
             />
             <button
               type="submit"
               disabled={loading}
-              className="bg-[#5C61F6] hover:bg-[#4F52D4] text-white text-[13px] font-medium px-6 py-2.5 rounded-lg transition-colors disabled:opacity-50"
+              className="bg-[#5C61F6] hover:bg-[#4F52D4] text-white text-base font-medium px-6 py-2.5 rounded-lg transition-colors disabled:opacity-50"
             >
               {loading ? "Sending..." : "Send Code"}
             </button>
           </div>
-          <p className="text-[12px] text-gray-400 mt-2">
+          <p className="text-sm text-gray-400 mt-2">
             We&apos;ll send a 6-digit verification code to your email.
           </p>
         </form>
@@ -186,7 +186,7 @@ export default function DashboardPage() {
       {/* Code entry */}
       {authState === "code" && (
         <form onSubmit={handleVerifyCode} className="max-w-md">
-          <p className="text-[14px] text-gray-600 mb-4">
+          <p className="text-md text-gray-600 mb-4">
             We sent a 6-digit code to <span className="font-medium text-gray-900">{email}</span>
           </p>
           <div className="flex gap-3 mb-3">
@@ -199,18 +199,18 @@ export default function DashboardPage() {
               value={code}
               onChange={(e) => setCode(e.target.value.replace(/\D/g, ""))}
               placeholder="000000"
-              className="w-40 bg-gray-50 border border-gray-200 rounded-lg px-4 py-2.5 text-[18px] font-mono text-center text-gray-900 tracking-widest placeholder:text-gray-300 outline-none focus:border-[#5C61F6]"
+              className="w-40 bg-gray-50 border border-gray-200 rounded-lg px-4 py-2.5 text-2xl font-mono text-center text-gray-900 tracking-widest placeholder:text-gray-300 outline-none focus:border-[#5C61F6]"
               required
             />
             <button
               type="submit"
               disabled={loading || code.length !== 6}
-              className="bg-[#5C61F6] hover:bg-[#4F52D4] text-white text-[13px] font-medium px-6 py-2.5 rounded-lg transition-colors disabled:opacity-50"
+              className="bg-[#5C61F6] hover:bg-[#4F52D4] text-white text-base font-medium px-6 py-2.5 rounded-lg transition-colors disabled:opacity-50"
             >
               {loading ? "Verifying..." : "Verify"}
             </button>
           </div>
-          <div className="flex gap-4 text-[12px]">
+          <div className="flex gap-4 text-sm">
             <button
               type="button"
               onClick={handleResendCode}
@@ -233,7 +233,7 @@ export default function DashboardPage() {
       {/* Authenticated */}
       {authState === "authenticated" && (
         <>
-          <div className="flex items-center gap-3 mb-8 text-[13px]">
+          <div className="flex items-center gap-3 mb-8 text-base">
             <span className="text-gray-500">
               Verified as <span className="font-medium text-gray-900">{verifiedEmail}</span>
             </span>
@@ -247,10 +247,10 @@ export default function DashboardPage() {
 
           {assessments.length === 0 && (
             <div className="text-center py-16">
-              <p className="text-gray-400 text-[14px] mb-4">No plans found for this email.</p>
+              <p className="text-gray-400 text-md mb-4">No plans found for this email.</p>
               <Link
                 href="/assessment/start"
-                className="text-[#5C61F6] hover:underline text-[14px]"
+                className="text-[#5C61F6] hover:underline text-md"
               >
                 Get your first AI action plan
               </Link>
@@ -266,10 +266,10 @@ export default function DashboardPage() {
                 >
                   <div className="flex items-start justify-between">
                     <div>
-                      <h3 className="text-[16px] font-semibold text-gray-900">
+                      <h3 className="text-xl font-semibold text-gray-900">
                         {assessment.intake?.organizationName || "Assessment"}
                       </h3>
-                      <p className="text-[13px] text-gray-400 mt-1">
+                      <p className="text-base text-gray-400 mt-1">
                         {assessment.intake?.industry ? INDUSTRY_LABELS[assessment.intake.industry] : ""} |{" "}
                         {new Date(assessment.createdAt).toLocaleDateString("en-US", {
                           year: "numeric",
@@ -284,14 +284,14 @@ export default function DashboardPage() {
                   {/* AI Readiness Score */}
                   {assessment.report?.organizationProfile.aiReadinessScore && (
                     <div className="mt-4 flex items-center gap-3">
-                      <span className="text-[12px] text-gray-400">AI Readiness:</span>
+                      <span className="text-sm text-gray-400">AI Readiness:</span>
                       <div className="flex-1 bg-gray-200 rounded-full h-1.5">
                         <div
                           className="bg-[#5C61F6] h-1.5 rounded-full"
                           style={{ width: `${assessment.report.organizationProfile.aiReadinessScore * 10}%` }}
                         />
                       </div>
-                      <span className="text-[13px] font-bold text-[#5C61F6]">
+                      <span className="text-base font-bold text-[#5C61F6]">
                         {assessment.report.organizationProfile.aiReadinessScore}/10
                       </span>
                     </div>
@@ -302,7 +302,7 @@ export default function DashboardPage() {
                     {assessment.status === "complete" && (
                       <Link
                         href={`/assessment/report?id=${assessment.id}`}
-                        className="text-[12px] font-medium text-[#5C61F6] hover:underline"
+                        className="text-sm font-medium text-[#5C61F6] hover:underline"
                       >
                         View Report
                       </Link>
@@ -316,15 +316,15 @@ export default function DashboardPage() {
       )}
 
       {error && (
-        <div className="bg-red-50 border border-red-200 rounded-lg p-4 mt-6 text-[13px] text-red-600">
+        <div className="bg-red-50 border border-red-200 rounded-lg p-4 mt-6 text-base text-red-600">
           {error}
         </div>
       )}
 
       {/* Info section */}
       <div className="mt-12 border-t border-gray-200 pt-8">
-        <h2 className="text-[14px] font-semibold text-gray-900 mb-4">About your data</h2>
-        <div className="grid sm:grid-cols-2 gap-6 text-[13px] text-gray-500">
+        <h2 className="text-md font-semibold text-gray-900 mb-4">About your data</h2>
+        <div className="grid sm:grid-cols-2 gap-6 text-base text-gray-500">
           <div>
             <h3 className="font-medium text-gray-900 mb-1">What we store</h3>
             <p>Your email, questionnaire answers, and the AI-generated plan. No uploaded file content is ever stored. Reports are accessible only after email verification.</p>
@@ -342,20 +342,20 @@ export default function DashboardPage() {
 function StatusBadge({ status }: { status: string }) {
   if (status === "complete") {
     return (
-      <span className="text-[11px] font-bold text-green-700 bg-green-50 border border-green-200 px-2 py-0.5 rounded">
+      <span className="text-xs font-bold text-green-700 bg-green-50 border border-green-200 px-2 py-0.5 rounded">
         COMPLETE
       </span>
     );
   }
   if (status === "analyzing") {
     return (
-      <span className="text-[11px] font-bold text-[#5C61F6] bg-[#5C61F6]/10 border border-[#5C61F6]/20 px-2 py-0.5 rounded">
+      <span className="text-xs font-bold text-[#5C61F6] bg-[#5C61F6]/10 border border-[#5C61F6]/20 px-2 py-0.5 rounded">
         ANALYZING
       </span>
     );
   }
   return (
-    <span className="text-[11px] font-bold text-gray-500 bg-gray-50 border border-gray-200 px-2 py-0.5 rounded">
+    <span className="text-xs font-bold text-gray-500 bg-gray-50 border border-gray-200 px-2 py-0.5 rounded">
       {status.toUpperCase()}
     </span>
   );

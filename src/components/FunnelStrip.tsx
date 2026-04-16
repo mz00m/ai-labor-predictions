@@ -122,20 +122,20 @@ export default function FunnelStrip() {
     <div id="evidence-funnel">
       {/* Title */}
       <div className="mb-5">
-        <h2 className="font-serif text-[22px] sm:text-[26px] font-bold tracking-tight text-[var(--foreground)] leading-tight">
+        <h2 className="font-serif text-3xl sm:text-[26px] font-bold tracking-tight text-[var(--foreground)] leading-tight">
           AI exposure does not equal job loss
         </h2>
-        <p className="text-[15px] sm:text-[17px] text-[var(--muted)] mt-1.5 leading-relaxed">
+        <p className="text-lg sm:text-[17px] text-[var(--muted)] mt-1.5 leading-relaxed">
           AI adoption is accelerating and significantly changing work, but the impact on jobs is less clear.
         </p>
         <div className="mt-3 flex flex-wrap gap-x-5 gap-y-1.5">
-          <Link href="/task-visualizer" className="text-[13px] font-medium text-[var(--accent)] link-draw-underline">
+          <Link href="/task-visualizer" className="text-base font-medium text-[var(--accent)] link-draw-underline">
             How will AI affect your job? &rarr;
           </Link>
-          <Link href="/j-curve" className="text-[13px] font-medium text-[var(--accent)] link-draw-underline">
+          <Link href="/j-curve" className="text-base font-medium text-[var(--accent)] link-draw-underline">
             Why the gap between productivity and job loss? &rarr;
           </Link>
-          <Link href="/history" className="text-[13px] font-medium text-[var(--accent)] link-draw-underline">
+          <Link href="/history" className="text-base font-medium text-[var(--accent)] link-draw-underline">
             How technology has impacted jobs before &rarr;
           </Link>
         </div>
@@ -163,7 +163,7 @@ export default function FunnelStrip() {
                 }}
               >
                 <span
-                  className="text-[11px] font-semibold uppercase tracking-[0.06em] leading-tight"
+                  className="text-xs font-semibold uppercase tracking-[0.06em] leading-tight"
                   style={{
                     // Highlight active section label
                     color: hoveredSection === gi ? "var(--accent)" : "var(--foreground)",
@@ -332,7 +332,7 @@ export default function FunnelStrip() {
                         }}
                       >
                         <span
-                          className={`font-mono text-[10px] sm:text-[11px] font-medium whitespace-nowrap leading-none tabular-nums bg-white/80 px-0.5 rounded-sm ${
+                          className={`font-mono text-2xs sm:text-xs font-medium whitespace-nowrap leading-none tabular-nums bg-white/80 px-0.5 rounded-sm ${
                             isHovered
                               ? "text-[var(--foreground)]"
                               : "text-[var(--muted)]"
@@ -353,7 +353,7 @@ export default function FunnelStrip() {
 
                       {/* Source name - right-justified, desktop only */}
                       <span
-                        className={`hidden sm:flex absolute right-3 top-0 bottom-0 items-center text-[10px] whitespace-nowrap leading-none ${
+                        className={`hidden sm:flex absolute right-3 top-0 bottom-0 items-center text-2xs whitespace-nowrap leading-none ${
                           isHovered
                             ? "text-[var(--foreground)] opacity-60 font-medium"
                             : "text-[var(--muted)] opacity-25 font-normal"
@@ -370,7 +370,7 @@ export default function FunnelStrip() {
                     <div className="sm:hidden px-3 py-1.5 bg-black/[0.015]">
                       <Link
                         href="/signals#productivity-paths"
-                        className="text-[10px] text-[var(--accent)] hover:underline"
+                        className="text-2xs text-[var(--accent)] hover:underline"
                       >
                         How this translates to jobs &rarr;
                       </Link>
@@ -392,14 +392,14 @@ export default function FunnelStrip() {
         >
           {hoveredData?.quote && (
             <div className="px-4 sm:px-6 py-2 flex items-baseline gap-3">
-              <p className="text-[11px] sm:text-[12px] text-[var(--muted)] leading-relaxed italic flex-1">
+              <p className="text-xs sm:text-sm text-[var(--muted)] leading-relaxed italic flex-1">
                 &ldquo;{hoveredData.quote}&rdquo;
               </p>
               <a
                 href={hoveredData.sourceUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[11px] font-medium text-[var(--accent)] whitespace-nowrap link-draw-underline shrink-0"
+                className="text-xs font-medium text-[var(--accent)] whitespace-nowrap link-draw-underline shrink-0"
               >
                 View source &rarr;
               </a>
@@ -416,7 +416,7 @@ export default function FunnelStrip() {
             transition: "opacity 0.6s ease 2.2s",
           }}
         >
-          <p className="text-[11px] sm:text-[12px] text-[var(--accent-text)] leading-relaxed font-medium">
+          <p className="text-xs sm:text-sm text-[var(--accent-text)] leading-relaxed font-medium">
             40% of jobs are AI-exposed, but near-zero displacement measured so far.{" "}
             <Link href="/j-curve" className="underline decoration-[var(--accent)]/40 hover:decoration-[var(--accent)]">
               That gap is the story &rarr;
@@ -426,12 +426,12 @@ export default function FunnelStrip() {
 
         {/* Bottom note */}
         <div className="px-4 sm:px-6 py-2.5 border-t border-black/[0.06] bg-black/[0.01] flex items-center justify-between gap-4">
-          <p className="text-[11px] text-[var(--muted)] leading-relaxed">
+          <p className="text-xs text-[var(--muted)] leading-relaxed">
             16 studies &middot; Hover for quotes and links
           </p>
           <a
             href="/research"
-            className="text-[12px] font-semibold text-[var(--foreground)] link-draw-underline"
+            className="text-sm font-semibold text-[var(--foreground)] link-draw-underline"
           >
             Read more sources &rarr;
           </a>

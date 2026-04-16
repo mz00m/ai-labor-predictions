@@ -236,62 +236,62 @@ function KeyMetrics() {
     <div ref={ref} className="grid grid-cols-1 sm:grid-cols-3 gap-3">
       <div className="metric-card border border-black/[0.06] rounded-lg p-4 text-center">
         <div
-          className="text-[28px] font-extrabold text-[var(--accent)] tabular-nums"
+          className="text-4xl font-extrabold text-[var(--accent)] tabular-nums"
           style={{ fontVariantNumeric: "tabular-nums" }}
         >
           {inView ? diffLow : 0}&ndash;{inView ? diffHigh : 0}&times;
         </div>
-        <div className="text-[12px] font-semibold text-[var(--foreground)] mt-1">
+        <div className="text-sm font-semibold text-[var(--foreground)] mt-1">
           Faster Diffusion
         </div>
-        <div className="text-[11px] text-[var(--muted)] mt-1 leading-relaxed">
+        <div className="text-xs text-[var(--muted)] mt-1 leading-relaxed">
           Range depends on comparison
           <br />
           <a href="#diffusion-comparison" className="text-[var(--accent)] underline underline-offset-2">
             See methodology &darr;
           </a>
         </div>
-        <div className="text-[10px] text-[var(--muted)] mt-1 italic">
+        <div className="text-2xs text-[var(--muted)] mt-1 italic">
           Multiple sources; see table below
         </div>
       </div>
 
       <div className="metric-card border border-black/[0.06] rounded-lg p-4 text-center">
         <div
-          className="text-[28px] font-extrabold tabular-nums"
+          className="text-4xl font-extrabold tabular-nums"
           style={{ color: "#F66B5C", fontVariantNumeric: "tabular-nums" }}
         >
           {inView ? painLow : 0}&ndash;{inView ? painHigh : 0}
         </div>
-        <div className="text-[12px] font-semibold text-[var(--foreground)] mt-1">
+        <div className="text-sm font-semibold text-[var(--foreground)] mt-1">
           Years, Projected Painful Phase
         </div>
-        <div className="text-[11px] text-[var(--muted)] mt-1 leading-relaxed">
+        <div className="text-xs text-[var(--muted)] mt-1 leading-relaxed">
           Displacement + reorganization
           <br />
           vs. 20&ndash;60 yrs historically
         </div>
-        <div className="text-[10px] text-[var(--muted)] mt-1 italic">
+        <div className="text-2xs text-[var(--muted)] mt-1 italic">
           Extrapolated from adoption speed
         </div>
       </div>
 
       <div className="metric-card border border-black/[0.06] rounded-lg p-4 text-center">
         <div
-          className="text-[28px] font-extrabold text-[var(--foreground)] tabular-nums"
+          className="text-4xl font-extrabold text-[var(--foreground)] tabular-nums"
           style={{ fontVariantNumeric: "tabular-nums" }}
         >
           ~{inView ? coverage : 0}%
         </div>
-        <div className="text-[12px] font-semibold text-[var(--foreground)] mt-1">
+        <div className="text-sm font-semibold text-[var(--foreground)] mt-1">
           Workers With AI Task Coverage
         </div>
-        <div className="text-[11px] text-[var(--muted)] mt-1 leading-relaxed">
+        <div className="text-xs text-[var(--muted)] mt-1 leading-relaxed">
           Observed in first-party API traffic
           <br />
           No systematic unemployment yet
         </div>
-        <div className="text-[10px] text-[var(--muted)] mt-1 italic">
+        <div className="text-2xs text-[var(--muted)] mt-1 italic">
           Anthropic / Massenkoff &amp; McCrory (2026)
         </div>
       </div>
@@ -428,18 +428,18 @@ export default function CompressionComparison() {
         <div className="flex items-center gap-2 mb-2">
           <a
             href="#diffusion-comparison"
-            className="text-[11px] font-bold uppercase tracking-wider text-white bg-[var(--accent)] px-2.5 py-1 rounded-full hover:bg-[var(--accent)]/90 transition-colors cursor-pointer no-underline"
+            className="text-xs font-bold uppercase tracking-wider text-white bg-[var(--accent)] px-2.5 py-1 rounded-full hover:bg-[var(--accent)]/90 transition-colors cursor-pointer no-underline"
           >
             5–12× faster ↓
           </a>
-          <span className="text-[11px] font-bold uppercase tracking-widest text-[var(--accent)]">
+          <span className="text-xs font-bold uppercase tracking-widest text-[var(--accent)]">
             Historical Compression
           </span>
         </div>
-        <p className="text-[13px] text-[var(--foreground)] leading-relaxed font-semibold mb-1">
+        <p className="text-base text-[var(--foreground)] leading-relaxed font-semibold mb-1">
           Each successive technology has diffused faster than the last.
         </p>
-        <p className="text-[12px] text-[var(--muted)] leading-[1.7] max-w-[600px]">
+        <p className="text-sm text-[var(--muted)] leading-[1.7] max-w-[600px]">
           Steam took 90 years to fully reshape the labor market.
           Electrification did it in 50. Computers in 40. Each arc below spans a
           technology&rsquo;s full transition from emergence to new
@@ -886,7 +886,7 @@ export default function CompressionComparison() {
         </svg>
 
         {/* Sources */}
-        <p className="text-[10px] text-[var(--muted)] italic mt-0">
+        <p className="text-2xs text-[var(--muted)] italic mt-0">
           Sources: {TRANSITIONS.map((t) => t.source).join("; ")}
         </p>
       </div>
@@ -1166,7 +1166,7 @@ export default function CompressionComparison() {
       {/*  Caveat                                                      */}
       {/* ============================================================ */}
       <div className="border-l-2 border-black/[0.08] pl-4 py-1">
-        <p className="text-[12px] text-[var(--foreground)]/70 leading-relaxed italic">
+        <p className="text-sm text-[var(--foreground)]/70 leading-relaxed italic">
           These projections extrapolate from adoption speed. If the diffusion
           phase that historically took 10&ndash;25 years is happening in
           1&ndash;3, the displacement and reorganization phases may compress as

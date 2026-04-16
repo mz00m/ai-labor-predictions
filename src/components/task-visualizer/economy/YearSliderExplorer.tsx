@@ -37,8 +37,8 @@ function CustomTooltip({ active, payload }: TooltipProps<number, string>) {
   const elasticity = DEMAND_ELASTICITY[d.id];
   return (
     <div className="bg-white rounded-lg border border-black/[0.08] shadow-lg p-3 max-w-[280px]">
-      <p className="text-[13px] font-semibold text-[var(--foreground)]">{d.title}</p>
-      <div className="mt-1.5 space-y-0.5 text-[12px]">
+      <p className="text-base font-semibold text-[var(--foreground)]">{d.title}</p>
+      <div className="mt-1.5 space-y-0.5 text-sm">
         <div className="flex justify-between gap-4">
           <span className="text-[var(--muted)]">Cost crossover</span>
           <span className="font-medium">{d.automationPct}% of tasks</span>
@@ -77,7 +77,7 @@ function CustomTooltip({ active, payload }: TooltipProps<number, string>) {
         )}
       </div>
       {jobIds.length > 0 && (
-        <p className="text-[10px] text-[var(--accent)] mt-2 pt-1.5 border-t border-black/[0.06]">
+        <p className="text-2xs text-[var(--accent)] mt-2 pt-1.5 border-t border-black/[0.06]">
           Click to explore individual jobs in this group
         </p>
       )}
@@ -147,7 +147,7 @@ export default function YearSliderExplorer() {
       {/* Scenario toggle */}
       <div className="mb-4">
         <div className="flex items-center gap-2 mb-1.5">
-          <span className="text-[12px] font-medium text-[var(--foreground)]">Cost decline scenario:</span>
+          <span className="text-sm font-medium text-[var(--foreground)]">Cost decline scenario:</span>
           <div className="inline-flex rounded-lg border border-black/[0.08] overflow-hidden">
             {(Object.keys(DECLINE_RATE_SCENARIOS) as ScenarioKey[]).map((key) => {
               const s = DECLINE_RATE_SCENARIOS[key];
@@ -156,7 +156,7 @@ export default function YearSliderExplorer() {
                 <button
                   key={key}
                   onClick={() => setScenario(key)}
-                  className={`px-3 py-1.5 text-[11px] font-medium transition-colors ${
+                  className={`px-3 py-1.5 text-xs font-medium transition-colors ${
                     isActive
                       ? "bg-[var(--accent)] text-white"
                       : "text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-black/[0.02]"
@@ -168,7 +168,7 @@ export default function YearSliderExplorer() {
             })}
           </div>
         </div>
-        <p className="text-[11px] text-[var(--muted)]">
+        <p className="text-xs text-[var(--muted)]">
           {DECLINE_RATE_SCENARIOS[scenario].description}
         </p>
       </div>
@@ -176,10 +176,10 @@ export default function YearSliderExplorer() {
       {/* Year slider */}
       <div className="mb-6">
         <div className="flex items-center justify-between mb-2">
-          <label className="text-[13px] font-medium text-[var(--foreground)]">
-            Explore year: <span className="text-[var(--accent)] font-bold text-[18px] ml-1">{selectedYear}</span>
+          <label className="text-base font-medium text-[var(--foreground)]">
+            Explore year: <span className="text-[var(--accent)] font-bold text-2xl ml-1">{selectedYear}</span>
           </label>
-          <span className="text-[11px] text-[var(--muted)]">
+          <span className="text-xs text-[var(--muted)]">
             {selectedYear - 2026} years from now
           </span>
         </div>
@@ -194,7 +194,7 @@ export default function YearSliderExplorer() {
             background: `linear-gradient(to right, var(--accent) 0%, var(--accent) ${((selectedYear - 2026) / 14) * 100}%, rgba(0,0,0,0.06) ${((selectedYear - 2026) / 14) * 100}%, rgba(0,0,0,0.06) 100%)`,
           }}
         />
-        <div className="flex justify-between text-[10px] text-[var(--muted)] mt-1">
+        <div className="flex justify-between text-2xs text-[var(--muted)] mt-1">
           <span>2026 (today)</span>
           <span>2030</span>
           <span>2035</span>
@@ -205,13 +205,13 @@ export default function YearSliderExplorer() {
       {/* Summary stats */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
         <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-black/[0.06] p-4">
-          <p className="text-[28px] font-bold text-[var(--foreground)] tracking-tight tabular-nums">
+          <p className="text-4xl font-bold text-[var(--foreground)] tracking-tight tabular-nums">
             {summaryStats.avgPct}%
           </p>
-          <p className="text-[11px] text-[var(--muted)]">
+          <p className="text-xs text-[var(--muted)]">
             Avg cost crossover across economy
             {summaryStats.scenarioRange && (
-              <span className="ml-1 text-[10px] opacity-70">
+              <span className="ml-1 text-2xs opacity-70">
                 (range: {summaryStats.scenarioRange.slowPct}-{summaryStats.scenarioRange.fastPct}%)
               </span>
             )}
@@ -221,10 +221,10 @@ export default function YearSliderExplorer() {
           const meta = INCOME_TIER_META[tier];
           return (
             <div key={tier} className="stat-card-enter rounded-xl bg-black/[0.02] border border-black/[0.06] p-4" style={{ animationDelay: `${(i + 1) * 0.08}s` }}>
-              <p className="text-[28px] font-bold tracking-tight tabular-nums" style={{ color: meta.color }}>
+              <p className="text-4xl font-bold tracking-tight tabular-nums" style={{ color: meta.color }}>
                 {pct}%
               </p>
-              <p className="text-[11px] text-[var(--muted)]">{meta.label} cost crossover</p>
+              <p className="text-xs text-[var(--muted)]">{meta.label} cost crossover</p>
             </div>
           );
         })}
@@ -294,19 +294,19 @@ export default function YearSliderExplorer() {
         ].map((item) => (
           <div key={item.label} className="flex items-center gap-1.5">
             <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: item.color }} />
-            <span className="text-[11px] text-[var(--muted)]">{item.label}</span>
+            <span className="text-xs text-[var(--muted)]">{item.label}</span>
           </div>
         ))}
-        <span className="text-[10px] text-[var(--muted)] ml-2 opacity-60">|</span>
+        <span className="text-2xs text-[var(--muted)] ml-2 opacity-60">|</span>
         {(["high", "moderate", "low"] as const).map((e) => (
           <div key={e} className="flex items-center gap-1">
             <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: DEMAND_ELASTICITY_META[e].color }} />
-            <span className="text-[10px] text-[var(--muted)]">{DEMAND_ELASTICITY_META[e].label} demand elasticity</span>
+            <span className="text-2xs text-[var(--muted)]">{DEMAND_ELASTICITY_META[e].label} demand elasticity</span>
           </div>
         ))}
       </div>
 
-      <p className="text-[11px] text-[var(--muted)] mt-3">
+      <p className="text-xs text-[var(--muted)] mt-3">
         Bar shows the percentage of each occupation&apos;s task-hours where compute cost has crossed
         below human labor cost. The 50% line marks the threshold where more than half of an
         occupation&apos;s tasks face cost crossover. This measures economic incentive, not actual displacement.

@@ -221,7 +221,7 @@ export default function PredictionSummaryCard({
           {annotation && (
             <div className="mb-1">
               <span
-                className="inline-block text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full"
+                className="inline-block text-2xs font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full"
                 style={{
                   backgroundColor:
                     annotation.estimateType === "observed"
@@ -248,41 +248,41 @@ export default function PredictionSummaryCard({
               </span>
             </div>
           )}
-          <h3 className="text-[18px] font-bold text-[var(--foreground)] mb-6 leading-snug group-hover:text-[var(--accent)]">
+          <h3 className="text-2xl font-bold text-[var(--foreground)] mb-6 leading-snug group-hover:text-[var(--accent)]">
             {prediction.title}
           </h3>
 
           {/* Big number + source range + trend */}
           <div ref={statViewRef} className="flex items-baseline gap-3 mb-3">
-            <span className="stat-number stat-hover text-[44px] font-black text-[var(--foreground)] leading-none tabular-nums">
+            <span className="stat-number stat-hover text-6xl font-black text-[var(--foreground)] leading-none tabular-nums">
               {agg.mean > 0 && prediction.category === "wages" ? "+" : ""}
               {statInView
                 ? (Number.isInteger(agg.mean) ? Math.round(displayStat) : displayStat.toFixed(1))
                 : "0"}
-              <span className="text-[18px] font-normal text-[var(--muted)] opacity-50 ml-0.5">
+              <span className="text-2xl font-normal text-[var(--muted)] opacity-50 ml-0.5">
                 {prediction.unit.includes("%") ? "%" : ` ${prediction.unit}`}
               </span>
             </span>
             {agg.min !== agg.max && (
-              <span className="text-[14px] font-semibold text-[var(--muted)]">
+              <span className="text-md font-semibold text-[var(--muted)]">
                 {agg.min}&ndash;{agg.max}{prediction.unit.includes("%") ? "%" : ""}
               </span>
             )}
             {agg.trend !== "flat" && (
-              <span className={`text-[13px] font-medium ${trendColorClass}`} style={{ opacity: 0.7 }}>
+              <span className={`text-base font-medium ${trendColorClass}`} style={{ opacity: 0.7 }}>
                 Trending {agg.trend === "up" ? "▲" : "▼"}
               </span>
             )}
           </div>
 
           {/* Context */}
-          <p className="text-[14px] text-[var(--muted)] leading-relaxed mb-2">
+          <p className="text-md text-[var(--muted)] leading-relaxed mb-2">
             {contextLine}
           </p>
-          <p className="text-[11px] text-[var(--muted)] opacity-60 mb-4">
+          <p className="text-xs text-[var(--muted)] opacity-60 mb-4">
             {filteredHistory.length} source{filteredHistory.length !== 1 ? "s" : ""}{agg.min !== agg.max ? ` ranging ${agg.min}–${agg.max}${prediction.unit.includes("%") ? "%" : ""}` : ""}{agg.max - agg.min > 10 ? " (significant disagreement)" : ""}
             {filteredHistory.length > 0 && filteredHistory.length < 6 && (
-              <span className="ml-1.5 inline-block text-[10px] font-medium text-[#d97706] bg-[#d97706]/[0.08] rounded px-1.5 py-0.5 align-middle">
+              <span className="ml-1.5 inline-block text-2xs font-medium text-[#d97706] bg-[#d97706]/[0.08] rounded px-1.5 py-0.5 align-middle">
                 Low confidence
               </span>
             )}.{" "}
@@ -306,7 +306,7 @@ export default function PredictionSummaryCard({
                   e.stopPropagation();
                   setShowNote(!showNote);
                 }}
-                className="inline-flex items-center gap-1.5 text-[12px] font-medium text-[var(--muted)] hover:text-[var(--accent)]"
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-[var(--muted)] hover:text-[var(--accent)]"
               >
                 <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
@@ -329,7 +329,7 @@ export default function PredictionSummaryCard({
                   opacity: showNote ? 1 : 0,
                 }}
               >
-                <p className="mt-2 text-[12px] text-[var(--muted)] leading-relaxed border-l-2 border-[var(--accent)]/30 pl-3">
+                <p className="mt-2 text-sm text-[var(--muted)] leading-relaxed border-l-2 border-[var(--accent)]/30 pl-3">
                   {annotation.note}
                 </p>
               </div>
@@ -338,7 +338,7 @@ export default function PredictionSummaryCard({
 
           {/* Source count link */}
           <div className="flex items-center justify-end">
-            <span className="text-[12px] text-[var(--accent)] font-semibold group-hover:underline shrink-0">
+            <span className="text-sm text-[var(--accent)] font-semibold group-hover:underline shrink-0">
               {prediction.sources.length} sources
             </span>
           </div>

@@ -54,12 +54,12 @@ function ExposureTooltip({ children }: { children: ReactNode }) {
         {children}
       </div>
       {open && (
-        <div className="absolute z-50 bottom-full left-1/2 -translate-x-1/2 mb-2 w-[280px] p-3 rounded-lg bg-[var(--foreground)] text-[var(--background)] text-[12px] leading-relaxed shadow-xl pointer-events-auto">
+        <div className="absolute z-50 bottom-full left-1/2 -translate-x-1/2 mb-2 w-[280px] p-3 rounded-lg bg-[var(--foreground)] text-[var(--background)] text-sm leading-relaxed shadow-xl pointer-events-auto">
           <p className="font-semibold mb-1">Economic Exposure Score (0–100)</p>
           <p className="opacity-80">
             Measures how much of this role&apos;s economic value is vulnerable to AI automation, based on each task&apos;s time share, current AI capability, and how soon compute costs undercut the human wage rate.
           </p>
-          <p className="opacity-60 mt-1.5 text-[11px]">Higher = more tasks approaching cost crossover sooner.</p>
+          <p className="opacity-60 mt-1.5 text-xs">Higher = more tasks approaching cost crossover sooner.</p>
           <div className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-r-[6px] border-t-[6px] border-l-transparent border-r-transparent border-t-[var(--foreground)]" />
         </div>
       )}
@@ -288,10 +288,10 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
         {/* CTA prompt */}
         {!selectedJob && (
           <div className="mb-5 px-5 py-4 rounded-xl bg-[var(--accent)]/[0.07] border border-[var(--accent)]/[0.15] max-w-2xl">
-            <p className="text-[15px] font-semibold text-[var(--foreground)]">
+            <p className="text-lg font-semibold text-[var(--foreground)]">
               Pick a job title from the categories below, or search by name:
             </p>
-            <p className="text-[13px] text-[var(--muted)] mt-1">
+            <p className="text-base text-[var(--muted)] mt-1">
               Each job is broken into its individual tasks so you can see where AI pressure hits first.{" "}
               <a
                 href="/task-visualizer/economy"
@@ -300,7 +300,7 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
                 Or see the full US economy view &rarr;
               </a>
             </p>
-            <p className="text-[11px] text-[var(--muted)] mt-2 opacity-70">
+            <p className="text-xs text-[var(--muted)] mt-2 opacity-70">
               {JOB_PROFILES.length}+ occupations covering ~{coveragePct}% of US employment (BLS 2024)
             </p>
           </div>
@@ -317,7 +317,7 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
               if (selectedJob) setSearchQuery("");
             }}
             placeholder="Search for your job title..."
-            className="w-full max-w-lg px-4 py-3 rounded-xl border border-black/[0.08] text-[14px] text-[var(--foreground)] placeholder:text-[var(--muted)] focus:outline-none focus:border-[var(--accent)] focus:ring-1 focus:ring-[var(--accent)]"
+            className="w-full max-w-lg px-4 py-3 rounded-xl border border-black/[0.08] text-md text-[var(--foreground)] placeholder:text-[var(--muted)] focus:outline-none focus:border-[var(--accent)] focus:ring-1 focus:ring-[var(--accent)]"
           />
           {searchQuery && !selectedJob && filteredJobs.length > 0 && (
             <div className="absolute top-full left-0 right-0 max-w-lg mt-1 bg-white rounded-xl border border-black/[0.08] shadow-lg max-h-[280px] overflow-y-auto z-30">
@@ -333,10 +333,10 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
                       className="w-2 h-2 rounded-full shrink-0"
                       style={{ backgroundColor: colors.accent }}
                     />
-                    <span className="text-[13px] font-medium text-[var(--foreground)]">
+                    <span className="text-base font-medium text-[var(--foreground)]">
                       {job.title}
                     </span>
-                    <span className="text-[11px] text-[var(--muted)] ml-auto">
+                    <span className="text-xs text-[var(--muted)] ml-auto">
                       ${job.medianWagePerHr}/hr
                     </span>
                   </button>
@@ -346,7 +346,7 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
           )}
           {searchQuery && !selectedJob && filteredJobs.length === 0 && (
             <div className="absolute top-full left-0 right-0 max-w-lg mt-1 bg-white rounded-xl border border-black/[0.08] shadow-lg z-30">
-              <p className="text-[13px] text-[var(--muted)] px-4 py-3">
+              <p className="text-base text-[var(--muted)] px-4 py-3">
                 No matching jobs found.
               </p>
             </div>
@@ -381,11 +381,11 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
                     className="w-full text-left p-3 flex items-center justify-between gap-2"
                   >
                     <p
-                      className="text-[11px] font-semibold tracking-wide uppercase"
+                      className="text-xs font-semibold tracking-wide uppercase"
                       style={{ color: `hsla(${hue}, 25%, 40%, 1)` }}
                     >
                       {category}
-                      <span className="ml-1.5 text-[10px] font-normal normal-case tracking-normal opacity-60">
+                      <span className="ml-1.5 text-2xs font-normal normal-case tracking-normal opacity-60">
                         {jobs.length} {jobs.length === 1 ? "role" : "roles"}
                       </span>
                     </p>
@@ -406,7 +406,7 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
                         <button
                           key={job.id}
                           onClick={() => handleSelectJob(job)}
-                          className="job-item text-left text-[12px] py-1.5 px-2 rounded-md hover:bg-black/[0.05] text-[var(--foreground)]"
+                          className="job-item text-left text-sm py-1.5 px-2 rounded-md hover:bg-black/[0.05] text-[var(--foreground)]"
                         >
                           {job.title}
                         </button>
@@ -439,7 +439,7 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
                   url.searchParams.delete("job");
                   window.history.replaceState({}, "", url.toString());
                 }}
-                className="text-[11px] text-[var(--muted)] hover:text-[var(--foreground)] underline"
+                className="text-xs text-[var(--muted)] hover:text-[var(--foreground)] underline"
               >
                 Change job
               </button>
@@ -453,7 +453,7 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
                 <div className="exposure-score relative inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-black/[0.02] border border-black/[0.06] overflow-hidden cursor-help">
                   <ExposureParticles score={exposureScoreRaw} trigger={particleTrigger} />
                   <p
-                    className="text-[16px] font-bold tracking-tight relative z-10 leading-none"
+                    className="text-xl font-bold tracking-tight relative z-10 leading-none"
                     style={{
                       color:
                         exposureScoreRaw > 60
@@ -465,7 +465,7 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
                   >
                     {exposureScore}
                   </p>
-                  <span className="relative z-10 text-[11px] text-[var(--muted)]">
+                  <span className="relative z-10 text-xs text-[var(--muted)]">
                     exposure score
                   </span>
                 </div>
@@ -473,16 +473,16 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
 
               <button
                 onClick={() => setActiveTab("breakdown")}
-                className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-black/[0.02] border border-black/[0.06] text-[11px] text-[var(--muted)] hover:border-[var(--accent)] hover:text-[var(--foreground)] transition-colors"
+                className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-black/[0.02] border border-black/[0.06] text-xs text-[var(--muted)] hover:border-[var(--accent)] hover:text-[var(--foreground)] transition-colors"
               >
-                <span className="text-[14px] font-bold text-[var(--foreground)]" style={{ fontFamily: "'DM Mono', monospace" }}>
+                <span className="text-md font-bold text-[var(--foreground)]" style={{ fontFamily: "'DM Mono', monospace" }}>
                   {selectedJob.tasks.length}
                 </span>
                 tasks analyzed
               </button>
 
-              <span className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-black/[0.02] border border-black/[0.06] text-[11px] text-[var(--muted)]">
-                <span className="text-[14px] font-bold text-[var(--foreground)]" style={{ fontFamily: "'DM Mono', monospace" }}>
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-black/[0.02] border border-black/[0.06] text-xs text-[var(--muted)]">
+                <span className="text-md font-bold text-[var(--foreground)]" style={{ fontFamily: "'DM Mono', monospace" }}>
                   ${selectedJob.medianWagePerHr}
                 </span>
                 /hr median wage
@@ -492,7 +492,7 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
                 href={`https://www.bls.gov/ooh/${selectedJob.category.toLowerCase().replace(/[^a-z0-9]+/g, "-")}/`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-black/[0.02] border border-black/[0.06] text-[11px] text-[var(--muted)] hover:border-[var(--accent)] hover:text-[var(--foreground)] transition-colors"
+                className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-black/[0.02] border border-black/[0.06] text-xs text-[var(--muted)] hover:border-[var(--accent)] hover:text-[var(--foreground)] transition-colors"
               >
                 {selectedJob.category}
                 <svg width="10" height="10" viewBox="0 0 16 16" fill="none" className="opacity-40">
@@ -503,7 +503,7 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
               {dimensionalityInfo && (
                 <a
                   href="/occupation-exposure#methodology-complementarity"
-                  className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border text-[11px] hover:border-[var(--accent)] transition-colors"
+                  className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border text-xs hover:border-[var(--accent)] transition-colors"
                   style={{
                     borderColor:
                       dimensionalityInfo.effectiveDimensions <= 2
@@ -525,7 +525,7 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
                           : "#059669",
                   }}
                 >
-                  <span className="text-[14px] font-bold" style={{ fontFamily: "'DM Mono', monospace" }}>
+                  <span className="text-md font-bold" style={{ fontFamily: "'DM Mono', monospace" }}>
                     {dimensionalityInfo.effectiveDimensions}/{dimensionalityInfo.totalCategories}
                   </span>
                   <span className="opacity-80">task dimensions</span>
@@ -552,13 +552,13 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
                     background: rc + "06",
                   }}
                 >
-                  <p className="text-[13px] font-medium text-[var(--foreground)] leading-snug">
+                  <p className="text-base font-medium text-[var(--foreground)] leading-snug">
                     {summary.headline}
                   </p>
-                  <p className="text-[12px] text-[var(--muted)] mt-1.5 leading-relaxed">
+                  <p className="text-sm text-[var(--muted)] mt-1.5 leading-relaxed">
                     {summary.context}
                   </p>
-                  <p className="text-[12px] text-[var(--foreground)] mt-2 leading-relaxed">
+                  <p className="text-sm text-[var(--foreground)] mt-2 leading-relaxed">
                     <span className="font-semibold">{summary.action.split(".")[0]}.</span>
                     {summary.action.includes(".") && " " + summary.action.split(".").slice(1).join(".").trim()}
                   </p>
@@ -572,12 +572,12 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
             {/* Left: Sliders */}
             <div>
               <div className="flex items-center justify-between mb-3">
-                <h3 className="text-[14px] font-semibold text-[var(--foreground)]">
+                <h3 className="text-md font-semibold text-[var(--foreground)]">
                   Your task mix
                 </h3>
                 <button
                   onClick={handleReset}
-                  className="text-[11px] text-[var(--muted)] hover:text-[var(--foreground)] underline"
+                  className="text-xs text-[var(--muted)] hover:text-[var(--foreground)] underline"
                 >
                   Reset to defaults
                 </button>
@@ -610,7 +610,7 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id)}
                     data-active={activeTab === tab.id}
-                    className={`viz-tab text-[12px] font-medium px-3 py-2 border-b-2 ${
+                    className={`viz-tab text-sm font-medium px-3 py-2 border-b-2 ${
                       activeTab === tab.id
                         ? "border-[var(--accent)] text-[var(--foreground)]"
                         : "border-transparent text-[var(--muted)] hover:text-[var(--foreground)]"
@@ -622,7 +622,7 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
               </div>
 
               {/* Tab question */}
-              <p className="text-[14px] font-medium text-[var(--foreground)] mb-4 -mt-1">
+              <p className="text-md font-medium text-[var(--foreground)] mb-4 -mt-1">
                 {tabs.find((t) => t.id === activeTab)?.question}
               </p>
 
@@ -668,7 +668,7 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
 
           {/* Bottom share bar */}
           <div className="mt-6 pt-4 border-t border-black/[0.06] flex items-center justify-between">
-            <p className="text-[11px] text-[var(--muted)]">
+            <p className="text-xs text-[var(--muted)]">
               Know someone in this field? Share this breakdown with them.
             </p>
             <ShareBar jobTitle={selectedJob.title} jobId={selectedJob.id} />

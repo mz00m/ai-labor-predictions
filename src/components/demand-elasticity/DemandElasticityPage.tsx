@@ -11,17 +11,17 @@ export default function DemandElasticityPage() {
     <article className="max-w-[740px] mx-auto">
       {/* ───── Header ───── */}
       <header className="mb-10">
-        <p className="text-[12px] font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
+        <p className="text-sm font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
           Explainer
         </p>
         <h1
-          className="text-[36px] sm:text-[44px] font-extrabold text-[var(--foreground)] leading-[1.1] tracking-tight mb-4"
+          className="text-5xl sm:text-6xl font-extrabold text-[var(--foreground)] leading-[1.1] tracking-tight mb-4"
           style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
         >
           The Demand Elasticity Effect
         </h1>
         <p
-          className="text-[18px] sm:text-[20px] text-[var(--muted)] leading-relaxed mb-5"
+          className="text-2xl sm:text-[20px] text-[var(--muted)] leading-relaxed mb-5"
           style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
         >
           Why making work cheaper can create more jobs, not fewer &mdash;
@@ -31,7 +31,7 @@ export default function DemandElasticityPage() {
         {/* Thesis card */}
         <div className="border-l-4 border-[var(--accent)] bg-[var(--accent-light)] rounded-r-lg px-5 py-4">
           <p
-            className="text-[15px] sm:text-[16px] text-[var(--foreground)] leading-relaxed font-medium"
+            className="text-lg sm:text-xl text-[var(--foreground)] leading-relaxed font-medium"
             style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
           >
             When AI makes work cheaper, the question isn&rsquo;t just how many
@@ -55,10 +55,10 @@ export default function DemandElasticityPage() {
       <section className="mb-12">
         <div className="border-t border-black/[0.06] pt-8">
           <SectionLabel number="01" />
-          <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
             Jevons Paradox, Applied to Labor
           </h2>
-          <div className="space-y-4 text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
+          <div className="space-y-4 text-md text-[var(--muted)] leading-[1.75] mb-6">
             <p>
               In 1865, economist William Stanley Jevons observed something
               counterintuitive: as steam engines became more fuel-efficient,
@@ -117,10 +117,10 @@ export default function DemandElasticityPage() {
       <section className="mb-12">
         <div className="border-t border-black/[0.06] pt-8">
           <SectionLabel number="02" />
-          <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
             See the Effect Across Industries
           </h2>
-          <div className="space-y-4 text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
+          <div className="space-y-4 text-md text-[var(--muted)] leading-[1.75] mb-6">
             <p>
               Most displacement projections assume a fixed demand for output:
               AI automates tasks, fewer workers are needed, end of story. But
@@ -157,10 +157,10 @@ export default function DemandElasticityPage() {
       <section className="mb-12">
         <div className="border-t border-black/[0.06] pt-8">
           <SectionLabel number="03" />
-          <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
             The Two Conditions
           </h2>
-          <div className="space-y-4 text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
+          <div className="space-y-4 text-md text-[var(--muted)] leading-[1.75] mb-6">
             <p>
               Not every job that AI touches will see demand expansion. It
               requires two conditions to hold simultaneously:
@@ -175,16 +175,16 @@ export default function DemandElasticityPage() {
             >
               <div className="flex items-center gap-2 mb-2">
                 <span
-                  className="w-6 h-6 rounded-full flex items-center justify-center text-[12px] font-black text-white"
+                  className="w-6 h-6 rounded-full flex items-center justify-center text-sm font-black text-white"
                   style={{ backgroundColor: "#5C61F6" }}
                 >
                   A
                 </span>
-                <h3 className="text-[14px] font-bold text-[var(--foreground)]">
+                <h3 className="text-md font-bold text-[var(--foreground)]">
                   Demand elasticity
                 </h3>
               </div>
-              <p className="text-[13px] text-[var(--muted)] leading-relaxed">
+              <p className="text-base text-[var(--muted)] leading-relaxed">
                 Does cheaper output create proportionally more demand? When
                 custom software drops from $500K to $100K, many more companies
                 will build it. When toll processing drops in cost, nobody drives
@@ -197,16 +197,16 @@ export default function DemandElasticityPage() {
             >
               <div className="flex items-center gap-2 mb-2">
                 <span
-                  className="w-6 h-6 rounded-full flex items-center justify-center text-[12px] font-black text-white"
+                  className="w-6 h-6 rounded-full flex items-center justify-center text-sm font-black text-white"
                   style={{ backgroundColor: "#22c55e" }}
                 >
                   B
                 </span>
-                <h3 className="text-[14px] font-bold text-[var(--foreground)]">
+                <h3 className="text-md font-bold text-[var(--foreground)]">
                   High task exposure
                 </h3>
               </div>
-              <p className="text-[13px] text-[var(--muted)] leading-relaxed">
+              <p className="text-base text-[var(--muted)] leading-relaxed">
                 Are enough tasks in the job AI-augmentable to meaningfully
                 change the cost equation? A 5% efficiency gain won&rsquo;t move
                 the needle. A 5x productivity multiplier changes which projects
@@ -215,7 +215,7 @@ export default function DemandElasticityPage() {
             </div>
           </div>
 
-          <p className="text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
+          <p className="text-md text-[var(--muted)] leading-[1.75] mb-6">
             When both conditions hold, the Jevons effect dominates: AI exposure
             leads to <em>more</em> hiring, not less. The matrix below maps
             this framework across job categories:
@@ -229,10 +229,10 @@ export default function DemandElasticityPage() {
       <section className="mb-12">
         <div className="border-t border-black/[0.06] pt-8">
           <SectionLabel number="04" />
-          <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
             The Agentic Coding Example
           </h2>
-          <div className="space-y-4 text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
+          <div className="space-y-4 text-md text-[var(--muted)] leading-[1.75] mb-6">
             <p>
               Take a simplistic but instructive example. A mid-sized company has
               a project they want to build software for. Before AI, it takes 50
@@ -260,7 +260,7 @@ export default function DemandElasticityPage() {
           {/* Pull-quote */}
           <blockquote className="my-8 border-l-3 border-[var(--accent)] pl-5 py-1">
             <p
-              className="text-[16px] text-[var(--foreground)] leading-[1.7] font-medium"
+              className="text-xl text-[var(--foreground)] leading-[1.7] font-medium"
               style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
             >
               By making engineering cheaper, AI doesn&rsquo;t just accelerate
@@ -275,10 +275,10 @@ export default function DemandElasticityPage() {
       <section className="mb-12">
         <div className="border-t border-black/[0.06] pt-8">
           <SectionLabel number="05" />
-          <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
             See It Yourself
           </h2>
-          <p className="text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
+          <p className="text-md text-[var(--muted)] leading-[1.75] mb-6">
             Adjust the productivity multiplier and demand elasticity to see how
             workforce size changes across different sectors. Try the presets to
             see why the same AI gains produce opposite employment effects in
@@ -293,10 +293,10 @@ export default function DemandElasticityPage() {
       <section className="mb-12">
         <div className="border-t border-black/[0.06] pt-8">
           <SectionLabel number="06" />
-          <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
             Where Expansion vs. Contraction Is Likely
           </h2>
-          <div className="space-y-4 text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
+          <div className="space-y-4 text-md text-[var(--muted)] leading-[1.75] mb-6">
             <p>
               Not every sector will follow the same path. The elasticity of
               demand varies enormously, and so does the magnitude of AI-driven
@@ -356,10 +356,10 @@ export default function DemandElasticityPage() {
       <section className="mb-12">
         <div className="border-t border-black/[0.06] pt-8">
           <SectionLabel number="07" />
-          <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
             The Reallocation Caveat
           </h2>
-          <div className="space-y-4 text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
+          <div className="space-y-4 text-md text-[var(--muted)] leading-[1.75] mb-6">
             <p>
               Even where demand elasticity predicts net job growth, the
               transition will not be smooth. Expansion happens at the sector or
@@ -374,10 +374,10 @@ export default function DemandElasticityPage() {
             className="rounded-xl border px-5 py-4 mb-6"
             style={{ borderColor: "#f59e0b30", backgroundColor: "#f59e0b08" }}
           >
-            <p className="text-[13px] font-bold text-[#f59e0b] mb-2">
+            <p className="text-base font-bold text-[#f59e0b] mb-2">
               Real frictions in the transition
             </p>
-            <ul className="space-y-2 text-[13px] text-[var(--muted)] leading-relaxed">
+            <ul className="space-y-2 text-base text-[var(--muted)] leading-relaxed">
               <li className="flex gap-2">
                 <span className="text-[#f59e0b] font-bold shrink-0">&bull;</span>
                 <span>
@@ -416,7 +416,7 @@ export default function DemandElasticityPage() {
             </ul>
           </div>
 
-          <div className="space-y-4 text-[14px] text-[var(--muted)] leading-[1.75]">
+          <div className="space-y-4 text-md text-[var(--muted)] leading-[1.75]">
             <p>
               These frictions are real, and policy matters. But the core
               dynamic holds: in sectors with elastic demand, AI-driven cost
@@ -433,7 +433,7 @@ export default function DemandElasticityPage() {
         <div className="border-t border-black/[0.06] pt-8">
           <blockquote className="border-l-4 border-[var(--accent)] bg-[var(--accent-light)] rounded-r-lg px-5 py-5 mb-6">
             <p
-              className="text-[15px] sm:text-[16px] text-[var(--foreground)] leading-[1.75] font-medium"
+              className="text-lg sm:text-xl text-[var(--foreground)] leading-[1.75] font-medium"
               style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
             >
               The default assumption &mdash; that automation always means fewer
@@ -451,7 +451,7 @@ export default function DemandElasticityPage() {
           />
 
           {/* Continue exploring */}
-          <p className="text-[11px] font-bold uppercase tracking-widest text-[var(--muted)] mb-4 mt-8">
+          <p className="text-xs font-bold uppercase tracking-widest text-[var(--muted)] mb-4 mt-8">
             Continue exploring
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
@@ -481,7 +481,7 @@ export default function DemandElasticityPage() {
 
 function SectionLabel({ number }: { number: string }) {
   return (
-    <span className="text-[11px] font-bold uppercase tracking-widest text-[var(--accent)] mb-3 block">
+    <span className="text-xs font-bold uppercase tracking-widest text-[var(--accent)] mb-3 block">
       {number}
     </span>
   );
@@ -509,10 +509,10 @@ function StatCard({
       <p className="text-[20px] font-black" style={{ color }}>
         {value}
       </p>
-      <p className="text-[11px] font-bold text-[var(--foreground)] mt-0.5">
+      <p className="text-xs font-bold text-[var(--foreground)] mt-0.5">
         {label}
       </p>
-      <p className="text-[10px] text-[var(--muted)] leading-snug mt-0.5">
+      <p className="text-2xs text-[var(--muted)] leading-snug mt-0.5">
         {sublabel}
       </p>
     </div>
@@ -538,22 +538,22 @@ function SectorRow({
       style={{ borderColor: color + "25" }}
     >
       <div className="flex items-start justify-between gap-3 mb-1">
-        <h4 className="text-[13px] font-bold text-[var(--foreground)]">
+        <h4 className="text-base font-bold text-[var(--foreground)]">
           {sector}
         </h4>
         <div className="flex items-center gap-2 shrink-0">
-          <span className="text-[10px] text-[var(--muted)]">
+          <span className="text-2xs text-[var(--muted)]">
             Elasticity: {elasticity}
           </span>
           <span
-            className="text-[10px] font-bold px-2 py-0.5 rounded-full"
+            className="text-2xs font-bold px-2 py-0.5 rounded-full"
             style={{ backgroundColor: color + "18", color }}
           >
             {outlook}
           </span>
         </div>
       </div>
-      <p className="text-[12px] text-[var(--muted)] leading-relaxed">
+      <p className="text-sm text-[var(--muted)] leading-relaxed">
         {detail}
       </p>
     </div>
@@ -574,10 +574,10 @@ function NavCard({
       href={href}
       className="group block rounded-lg border border-black/[0.06] bg-white px-4 py-3 hover:border-black/[0.12] hover:shadow-sm transition-all no-underline"
     >
-      <p className="text-[13px] font-bold text-[var(--foreground)] group-hover:text-[var(--accent)] transition-colors">
+      <p className="text-base font-bold text-[var(--foreground)] group-hover:text-[var(--accent)] transition-colors">
         {label}
       </p>
-      <p className="text-[11px] text-[var(--muted)] mt-0.5">{description}</p>
+      <p className="text-xs text-[var(--muted)] mt-0.5">{description}</p>
     </Link>
   );
 }

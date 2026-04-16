@@ -3,31 +3,31 @@
 export default function MethodologyNote() {
   return (
     <section className="border-t border-black/[0.06] pt-8">
-      <h2 className="text-[22px] font-bold text-[var(--foreground)] mb-4">
+      <h2 className="text-3xl font-bold text-[var(--foreground)] mb-4">
         How to Read This Data
       </h2>
 
       {/* TL;DR box */}
       <div className="rounded-xl border border-[#6366F1]/20 bg-[#6366F1]/[0.04] p-5 max-w-3xl mb-6">
-        <h4 className="text-[13px] font-bold text-[#6366F1] uppercase tracking-wide mb-2">
+        <h4 className="text-base font-bold text-[#6366F1] uppercase tracking-wide mb-2">
           TL;DR
         </h4>
-        <p className="text-[13px] text-[var(--foreground)] leading-relaxed">
+        <p className="text-base text-[var(--foreground)] leading-relaxed">
           Think of this like construction permits for AI automation. Before AI replaces tasks in an
           industry, developers download the tools to build those systems. We track Python and JavaScript
           package downloads as a <strong>leading indicator</strong> of where AI automation is heading.
           When industry-specific tools grow faster than general AI infrastructure, it signals a shift from
           &ldquo;people using AI&rdquo; to &ldquo;AI doing the work.&rdquo;
         </p>
-        <p className="text-[12px] text-[var(--muted)] mt-2">
+        <p className="text-sm text-[var(--muted)] mt-2">
           Package downloads do not equal production use. The signal is in <strong className="text-[var(--foreground)]">relative growth rates</strong> across
           industries, not absolute numbers.
         </p>
       </div>
 
-      <div className="grid gap-6 sm:grid-cols-2 text-[13px] text-[var(--muted)] leading-relaxed">
+      <div className="grid gap-6 sm:grid-cols-2 text-base text-[var(--muted)] leading-relaxed">
         <div>
-          <h3 className="text-[14px] font-semibold text-[var(--foreground)] mb-1">
+          <h3 className="text-md font-semibold text-[var(--foreground)] mb-1">
             The construction permits analogy
           </h3>
           <p>
@@ -41,7 +41,7 @@ export default function MethodologyNote() {
         </div>
 
         <div>
-          <h3 className="text-[14px] font-semibold text-[var(--foreground)] mb-1">
+          <h3 className="text-md font-semibold text-[var(--foreground)] mb-1">
             What is the Automation Acceleration Index?
           </h3>
           <p>
@@ -55,7 +55,7 @@ export default function MethodologyNote() {
         </div>
 
         <div>
-          <h3 className="text-[14px] font-semibold text-[var(--foreground)] mb-1">
+          <h3 className="text-md font-semibold text-[var(--foreground)] mb-1">
             What counts as &ldquo;surging&rdquo;?
           </h3>
           <p>
@@ -68,7 +68,7 @@ export default function MethodologyNote() {
         </div>
 
         <div>
-          <h3 className="text-[14px] font-semibold text-[var(--foreground)] mb-1">
+          <h3 className="text-md font-semibold text-[var(--foreground)] mb-1">
             Community signals
           </h3>
           <p>
@@ -82,7 +82,7 @@ export default function MethodologyNote() {
         </div>
 
         <div>
-          <h3 className="text-[14px] font-semibold text-[var(--foreground)] mb-1">
+          <h3 className="text-md font-semibold text-[var(--foreground)] mb-1">
             Important caveats
           </h3>
           <p>
@@ -97,7 +97,7 @@ export default function MethodologyNote() {
         </div>
       </div>
 
-      <div className="mt-6 pt-4 border-t border-black/[0.04] text-[11px] text-[var(--muted)]">
+      <div className="mt-6 pt-4 border-t border-black/[0.04] text-xs text-[var(--muted)]">
         <p>
           Data sources:{" "}
           <a

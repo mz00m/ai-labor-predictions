@@ -281,7 +281,7 @@ export default function AssessmentStartPage() {
     <div className="max-w-3xl mx-auto px-6 sm:px-10 py-12">
       {/* Privacy badge */}
       <div className="flex items-center gap-2 mb-8">
-        <span className="inline-flex items-center gap-1.5 text-[11px] font-medium text-gray-400 bg-gray-50 border border-gray-200 rounded-full px-3 py-1">
+        <span className="inline-flex items-center gap-1.5 text-xs font-medium text-gray-400 bg-gray-50 border border-gray-200 rounded-full px-3 py-1">
           <svg className="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 20 20">
             <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
           </svg>
@@ -310,7 +310,7 @@ export default function AssessmentStartPage() {
                   }
                 }}
                 disabled={i > currentStepIndex + 1}
-                className={`text-[12px] font-medium px-2.5 py-1 rounded transition-colors ${
+                className={`text-sm font-medium px-2.5 py-1 rounded transition-colors ${
                   s.key === step
                     ? "bg-[#5C61F6] text-white"
                     : i < currentStepIndex
@@ -337,7 +337,7 @@ export default function AssessmentStartPage() {
         <div className="space-y-6">
           <div>
             <h2 className="text-[24px] font-bold text-gray-900 mb-2">Let&apos;s start with the basics</h2>
-            <p className="text-[14px] text-gray-500">
+            <p className="text-md text-gray-500">
               Tell us where you work and what you do. This helps us tailor everything
               to your specific situation. The more detail you provide across these steps,
               the more specific and actionable your report will be.
@@ -413,7 +413,7 @@ export default function AssessmentStartPage() {
         <div className="space-y-6">
           <div>
             <h2 className="text-[24px] font-bold text-gray-900 mb-2">What are we looking at?</h2>
-            <p className="text-[14px] text-gray-500">
+            <p className="text-md text-gray-500">
               We can focus on just your work, your team, or the whole business.
               The more focused, the more specific the recommendations.
             </p>
@@ -434,8 +434,8 @@ export default function AssessmentStartPage() {
                     : "border-gray-200 hover:border-gray-300 bg-gray-50"
                 }`}
               >
-                <div className="text-[14px] font-semibold text-gray-900 mb-1">{option.label}</div>
-                <div className="text-[12px] text-gray-400">{option.desc}</div>
+                <div className="text-md font-semibold text-gray-900 mb-1">{option.label}</div>
+                <div className="text-sm text-gray-400">{option.desc}</div>
               </button>
             ))}
           </div>
@@ -471,7 +471,7 @@ export default function AssessmentStartPage() {
                 className="input-field min-h-[80px] resize-y"
                 maxLength={3000}
               />
-              <p className="text-[11px] text-gray-300 mt-1 text-right">{form.teamDescription.length}/3,000</p>
+              <p className="text-xs text-gray-300 mt-1 text-right">{form.teamDescription.length}/3,000</p>
             </Field>
           )}
 
@@ -494,7 +494,7 @@ export default function AssessmentStartPage() {
         <div className="space-y-6">
           <div>
             <h2 className="text-[24px] font-bold text-gray-900 mb-2">What does your work look like?</h2>
-            <p className="text-[14px] text-gray-500">
+            <p className="text-md text-gray-500">
               {industryTemplate
                 ? `Here are common tasks in your industry. Select everything that's part of your work — the more you select, the more thorough your analysis.`
                 : `Select the tasks and functions that are part of your work — the more you select, the more thorough your analysis.`}
@@ -502,7 +502,7 @@ export default function AssessmentStartPage() {
           </div>
 
           <div>
-            <label className="block text-[13px] font-medium text-gray-700 mb-3">Tasks I spend time on</label>
+            <label className="block text-base font-medium text-gray-700 mb-3">Tasks I spend time on</label>
             {industryTemplate && (() => {
               const sorted = [...industryTemplate.departments]
                 .map((d) => ({ ...d, relevance: getDeptRelevance(d.name, d.typicalRoles) }))
@@ -516,13 +516,13 @@ export default function AssessmentStartPage() {
                     <>
                       {relevant.map((dept) => (
                         <div key={dept.name}>
-                          <p className="text-[12px] font-medium text-[#5C61F6] mb-2">{dept.name}</p>
+                          <p className="text-sm font-medium text-[#5C61F6] mb-2">{dept.name}</p>
                           <div className="flex flex-wrap gap-2">
                             {dept.keyFunctions.map((fn) => (
                               <button
                                 key={fn}
                                 onClick={() => toggleArrayItem("primaryFunctions", fn)}
-                                className={`text-[13px] px-3 py-1.5 rounded-full border transition-colors ${
+                                className={`text-base px-3 py-1.5 rounded-full border transition-colors ${
                                   form.primaryFunctions.includes(fn)
                                     ? "border-[#5C61F6] bg-[#5C61F6]/[0.1] text-[#5C61F6]"
                                     : "border-gray-200 text-gray-500 hover:border-gray-300"
@@ -536,19 +536,19 @@ export default function AssessmentStartPage() {
                       ))}
                       {other.length > 0 && (
                         <details className="group">
-                          <summary className="text-[12px] font-medium text-gray-400 cursor-pointer hover:text-gray-600 transition-colors">
+                          <summary className="text-sm font-medium text-gray-400 cursor-pointer hover:text-gray-600 transition-colors">
                             Other departments ({other.length})
                           </summary>
                           <div className="mt-3 space-y-4">
                             {other.map((dept) => (
                               <div key={dept.name}>
-                                <p className="text-[12px] font-medium text-gray-400 mb-2">{dept.name}</p>
+                                <p className="text-sm font-medium text-gray-400 mb-2">{dept.name}</p>
                                 <div className="flex flex-wrap gap-2">
                                   {dept.keyFunctions.map((fn) => (
                                     <button
                                       key={fn}
                                       onClick={() => toggleArrayItem("primaryFunctions", fn)}
-                                      className={`text-[13px] px-3 py-1.5 rounded-full border transition-colors ${
+                                      className={`text-base px-3 py-1.5 rounded-full border transition-colors ${
                                         form.primaryFunctions.includes(fn)
                                           ? "border-[#5C61F6] bg-[#5C61F6]/[0.1] text-[#5C61F6]"
                                           : "border-gray-200 text-gray-500 hover:border-gray-300"
@@ -570,7 +570,7 @@ export default function AssessmentStartPage() {
                         <button
                           key={fn}
                           onClick={() => toggleArrayItem("primaryFunctions", fn)}
-                          className={`text-[13px] px-3 py-1.5 rounded-full border transition-colors ${
+                          className={`text-base px-3 py-1.5 rounded-full border transition-colors ${
                             form.primaryFunctions.includes(fn)
                               ? "border-[#5C61F6] bg-[#5C61F6]/[0.1] text-[#5C61F6]"
                               : "border-gray-200 text-gray-500 hover:border-gray-300"
@@ -595,7 +595,7 @@ export default function AssessmentStartPage() {
             {form.primaryFunctions
               .filter((fn) => !industryTemplate?.departments.flatMap((d) => d.keyFunctions).includes(fn))
               .map((fn) => (
-                <span key={fn} className="inline-flex items-center gap-1 text-[13px] px-3 py-1.5 rounded-full border border-[#5C61F6] bg-[#5C61F6]/[0.1] text-[#5C61F6] mr-2 mt-2">
+                <span key={fn} className="inline-flex items-center gap-1 text-base px-3 py-1.5 rounded-full border border-[#5C61F6] bg-[#5C61F6]/[0.1] text-[#5C61F6] mr-2 mt-2">
                   {fn}
                   <button onClick={() => toggleArrayItem("primaryFunctions", fn)} className="ml-1 hover:text-red-500">&times;</button>
                 </span>
@@ -603,7 +603,7 @@ export default function AssessmentStartPage() {
           </div>
 
           <div>
-            <label className="block text-[13px] font-medium text-gray-700 mb-3">My role (or roles I work with)</label>
+            <label className="block text-base font-medium text-gray-700 mb-3">My role (or roles I work with)</label>
             {industryTemplate && (() => {
               const sorted = [...industryTemplate.departments]
                 .map((d) => ({ ...d, relevance: getDeptRelevance(d.name, d.typicalRoles) }))
@@ -617,13 +617,13 @@ export default function AssessmentStartPage() {
                     <>
                       {relevant.map((dept) => (
                         <div key={dept.name}>
-                          <p className="text-[12px] font-medium text-[#5C61F6] mb-2">{dept.name}</p>
+                          <p className="text-sm font-medium text-[#5C61F6] mb-2">{dept.name}</p>
                           <div className="flex flex-wrap gap-2">
                             {dept.typicalRoles.map((role) => (
                               <button
                                 key={role}
                                 onClick={() => toggleArrayItem("keyRoles", role)}
-                                className={`text-[13px] px-3 py-1.5 rounded-full border transition-colors ${
+                                className={`text-base px-3 py-1.5 rounded-full border transition-colors ${
                                   form.keyRoles.includes(role)
                                     ? "border-[#5C61F6] bg-[#5C61F6]/[0.1] text-[#5C61F6]"
                                     : "border-gray-200 text-gray-500 hover:border-gray-300"
@@ -637,19 +637,19 @@ export default function AssessmentStartPage() {
                       ))}
                       {other.length > 0 && (
                         <details className="group">
-                          <summary className="text-[12px] font-medium text-gray-400 cursor-pointer hover:text-gray-600 transition-colors">
+                          <summary className="text-sm font-medium text-gray-400 cursor-pointer hover:text-gray-600 transition-colors">
                             Other departments ({other.length})
                           </summary>
                           <div className="mt-3 space-y-4">
                             {other.map((dept) => (
                               <div key={dept.name}>
-                                <p className="text-[12px] font-medium text-gray-400 mb-2">{dept.name}</p>
+                                <p className="text-sm font-medium text-gray-400 mb-2">{dept.name}</p>
                                 <div className="flex flex-wrap gap-2">
                                   {dept.typicalRoles.map((role) => (
                                     <button
                                       key={role}
                                       onClick={() => toggleArrayItem("keyRoles", role)}
-                                      className={`text-[13px] px-3 py-1.5 rounded-full border transition-colors ${
+                                      className={`text-base px-3 py-1.5 rounded-full border transition-colors ${
                                         form.keyRoles.includes(role)
                                           ? "border-[#5C61F6] bg-[#5C61F6]/[0.1] text-[#5C61F6]"
                                           : "border-gray-200 text-gray-500 hover:border-gray-300"
@@ -671,7 +671,7 @@ export default function AssessmentStartPage() {
                         <button
                           key={role}
                           onClick={() => toggleArrayItem("keyRoles", role)}
-                          className={`text-[13px] px-3 py-1.5 rounded-full border transition-colors ${
+                          className={`text-base px-3 py-1.5 rounded-full border transition-colors ${
                             form.keyRoles.includes(role)
                               ? "border-[#5C61F6] bg-[#5C61F6]/[0.1] text-[#5C61F6]"
                               : "border-gray-200 text-gray-500 hover:border-gray-300"
@@ -696,7 +696,7 @@ export default function AssessmentStartPage() {
             {form.keyRoles
               .filter((r) => !industryTemplate?.departments.flatMap((d) => d.typicalRoles).includes(r))
               .map((role) => (
-                <span key={role} className="inline-flex items-center gap-1 text-[13px] px-3 py-1.5 rounded-full border border-[#5C61F6] bg-[#5C61F6]/[0.1] text-[#5C61F6] mr-2 mt-2">
+                <span key={role} className="inline-flex items-center gap-1 text-base px-3 py-1.5 rounded-full border border-[#5C61F6] bg-[#5C61F6]/[0.1] text-[#5C61F6] mr-2 mt-2">
                   {role}
                   <button onClick={() => toggleArrayItem("keyRoles", role)} className="ml-1 hover:text-red-500">&times;</button>
                 </span>
@@ -704,7 +704,7 @@ export default function AssessmentStartPage() {
           </div>
 
           <div>
-            <label className="block text-[13px] font-medium text-gray-700 mb-3">Where I feel the most friction</label>
+            <label className="block text-base font-medium text-gray-700 mb-3">Where I feel the most friction</label>
             <div className="flex flex-wrap gap-2">
               {[
                 ...(industryTemplate?.commonChallenges || []),
@@ -719,7 +719,7 @@ export default function AssessmentStartPage() {
                 <button
                   key={challenge}
                   onClick={() => toggleArrayItem("biggestChallenges", challenge)}
-                  className={`text-[13px] px-3 py-1.5 rounded-full border transition-colors ${
+                  className={`text-base px-3 py-1.5 rounded-full border transition-colors ${
                     form.biggestChallenges.includes(challenge)
                       ? "border-[#5C61F6] bg-[#5C61F6]/[0.1] text-[#5C61F6]"
                       : "border-gray-200 text-gray-500 hover:border-gray-300"
@@ -732,7 +732,7 @@ export default function AssessmentStartPage() {
           </div>
 
           <div>
-            <label className="block text-[13px] font-medium text-gray-700 mb-3">What I&apos;m hoping AI can help with</label>
+            <label className="block text-base font-medium text-gray-700 mb-3">What I&apos;m hoping AI can help with</label>
             <div className="flex flex-wrap gap-2">
               {[
                 "Get repetitive tasks off my plate",
@@ -748,7 +748,7 @@ export default function AssessmentStartPage() {
                 <button
                   key={goal}
                   onClick={() => toggleArrayItem("goals", goal)}
-                  className={`text-[13px] px-3 py-1.5 rounded-full border transition-colors ${
+                  className={`text-base px-3 py-1.5 rounded-full border transition-colors ${
                     form.goals.includes(goal)
                       ? "border-[#5C61F6] bg-[#5C61F6]/[0.1] text-[#5C61F6]"
                       : "border-gray-200 text-gray-500 hover:border-gray-300"
@@ -768,11 +768,11 @@ export default function AssessmentStartPage() {
               className="input-field min-h-[80px] resize-y"
               maxLength={5000}
             />
-            <p className="text-[11px] text-gray-300 mt-1 text-right">{form.specificProblem.length}/5,000</p>
+            <p className="text-xs text-gray-300 mt-1 text-right">{form.specificProblem.length}/5,000</p>
           </Field>
 
           <div>
-            <label className="block text-[13px] font-medium text-gray-700 mb-3">How do you want to approach AI tools?</label>
+            <label className="block text-base font-medium text-gray-700 mb-3">How do you want to approach AI tools?</label>
             <div className="grid sm:grid-cols-2 gap-3">
               {(Object.entries(TOOL_PREFERENCE_LABELS) as [ToolPreference, string][]).map(([value, label]) => (
                 <button
@@ -784,7 +784,7 @@ export default function AssessmentStartPage() {
                       : "border-gray-200 hover:border-gray-300 bg-gray-50"
                   }`}
                 >
-                  <div className="text-[13px] font-medium text-gray-900">{label}</div>
+                  <div className="text-base font-medium text-gray-900">{label}</div>
                 </button>
               ))}
             </div>
@@ -798,7 +798,7 @@ export default function AssessmentStartPage() {
               placeholder="e.g., Google Docs, QuickBooks, Slack, Excel, Canva, GitHub Copilot"
               className="input-field"
             />
-            <p className="text-[11px] text-gray-400 mt-1">
+            <p className="text-xs text-gray-400 mt-1">
               Include AI tools you already have access to — we&apos;ll show you how to get more from them.
             </p>
           </Field>
@@ -810,7 +810,7 @@ export default function AssessmentStartPage() {
         <div className="space-y-6">
           <div>
             <h2 className="text-[24px] font-bold text-gray-900 mb-2">Help us understand your work better (optional)</h2>
-            <p className="text-[14px] text-gray-500">
+            <p className="text-md text-gray-500">
               The more context you share, the more specific your plan will be.
               Upload anything that describes what you do, or just skip this step.
               Everything is processed in-memory and never stored.
@@ -819,12 +819,12 @@ export default function AssessmentStartPage() {
 
           {industryTemplate && (
             <div className="bg-gray-50 border border-gray-100 rounded-lg p-4">
-              <p className="text-[12px] font-semibold text-[#5C61F6] uppercase tracking-wider mb-2">
+              <p className="text-sm font-semibold text-[#5C61F6] uppercase tracking-wider mb-2">
                 Things that help us give better recommendations
               </p>
               <ul className="space-y-1">
                 {industryTemplate.suggestedUploads.map((item) => (
-                  <li key={item} className="text-[13px] text-gray-500 flex gap-2">
+                  <li key={item} className="text-base text-gray-500 flex gap-2">
                     <span className="text-gray-300">-</span> {item}
                   </li>
                 ))}
@@ -842,7 +842,7 @@ export default function AssessmentStartPage() {
               placeholder="https://yourcompany.com"
               className="input-field"
             />
-            <p className="text-[11px] text-gray-400 mt-1">
+            <p className="text-xs text-gray-400 mt-1">
               We&apos;ll review your website to understand what your business does and how you serve clients.
             </p>
           </Field>
@@ -855,7 +855,7 @@ export default function AssessmentStartPage() {
               className="input-field min-h-[100px] resize-y"
               maxLength={5000}
             />
-            <p className="text-[11px] text-gray-300 mt-1 text-right">{form.additionalContext.length}/5,000</p>
+            <p className="text-xs text-gray-300 mt-1 text-right">{form.additionalContext.length}/5,000</p>
           </Field>
         </div>
       )}
@@ -865,7 +865,7 @@ export default function AssessmentStartPage() {
         <div className="space-y-6">
           <div>
             <h2 className="text-[24px] font-bold text-gray-900 mb-2">Ready to go</h2>
-            <p className="text-[14px] text-gray-500">
+            <p className="text-md text-gray-500">
               Here&apos;s what we know. Ready to generate your plan?
             </p>
           </div>
@@ -892,7 +892,7 @@ export default function AssessmentStartPage() {
           </div>
 
           {error && (
-            <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-[13px] text-red-600">
+            <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-base text-red-600">
               {error}
             </div>
           )}
@@ -905,10 +905,10 @@ export default function AssessmentStartPage() {
                   <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
                 </svg>
                 <div>
-                  <p className="text-[14px] font-medium text-gray-900">
+                  <p className="text-md font-medium text-gray-900">
                     Building your AI action plan...
                   </p>
-                  <p className="text-[12px] text-gray-400 mt-0.5 transition-opacity duration-500">
+                  <p className="text-sm text-gray-400 mt-0.5 transition-opacity duration-500">
                     {loadingMessage}
                   </p>
                 </div>
@@ -919,7 +919,7 @@ export default function AssessmentStartPage() {
                   style={{ width: `${Math.min(95, (elapsedSeconds / 70) * 100)}%` }}
                 />
               </div>
-              <div className="flex items-center justify-between text-[12px] text-gray-400">
+              <div className="flex items-center justify-between text-sm text-gray-400">
                 <span>{Math.floor(elapsedSeconds / 60)}:{(elapsedSeconds % 60).toString().padStart(2, "0")} elapsed</span>
                 <span>Typically 45-90 seconds</span>
               </div>
@@ -929,12 +929,12 @@ export default function AssessmentStartPage() {
               <button
                 onClick={() => handleSubmit()}
                 disabled={submitting}
-                className="w-full bg-[#5C61F6] hover:bg-[#4F52D4] text-white font-semibold text-[14px] py-3 rounded-lg transition-colors disabled:opacity-50"
+                className="w-full bg-[#5C61F6] hover:bg-[#4F52D4] text-white font-semibold text-md py-3 rounded-lg transition-colors disabled:opacity-50"
               >
                 Generate Your Free AI Action Plan
               </button>
 
-              <p className="text-[12px] text-gray-400 text-center">
+              <p className="text-sm text-gray-400 text-center">
                 Your files are processed in-memory only, nothing stored.
               </p>
             </>
@@ -948,7 +948,7 @@ export default function AssessmentStartPage() {
           <button
             onClick={() => setStep(STEPS[currentStepIndex - 1]?.key || "you")}
             disabled={currentStepIndex === 0}
-            className="text-[13px] text-gray-400 hover:text-gray-900 disabled:opacity-30 disabled:cursor-default transition-colors"
+            className="text-base text-gray-400 hover:text-gray-900 disabled:opacity-30 disabled:cursor-default transition-colors"
           >
             Back
           </button>
@@ -959,7 +959,7 @@ export default function AssessmentStartPage() {
               setStep(nextStep);
             }}
             disabled={!canAdvance()}
-            className="text-[13px] font-medium bg-[#5C61F6] hover:bg-[#4F52D4] disabled:opacity-30 disabled:cursor-default text-white px-6 py-2 rounded-lg transition-colors"
+            className="text-base font-medium bg-[#5C61F6] hover:bg-[#4F52D4] disabled:opacity-30 disabled:cursor-default text-white px-6 py-2 rounded-lg transition-colors"
           >
             Continue
           </button>
@@ -1009,7 +1009,7 @@ function Field({
 }) {
   return (
     <div>
-      <label className="block text-[13px] font-medium text-gray-700 mb-2">
+      <label className="block text-base font-medium text-gray-700 mb-2">
         {label}
         {required && <span className="text-[#5C61F6] ml-0.5">*</span>}
       </label>
@@ -1021,8 +1021,8 @@ function Field({
 function ReviewRow({ label, value }: { label: string; value: string }) {
   return (
     <div className="flex gap-4">
-      <span className="text-[13px] text-gray-400 w-28 flex-shrink-0">{label}</span>
-      <span className="text-[13px] text-gray-700">{value}</span>
+      <span className="text-base text-gray-400 w-28 flex-shrink-0">{label}</span>
+      <span className="text-base text-gray-700">{value}</span>
     </div>
   );
 }
@@ -1046,13 +1046,13 @@ function AddCustomItem({ placeholder, onAdd }: { placeholder: string; onAdd: (va
         onChange={(e) => setValue(e.target.value)}
         onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); handleAdd(); } }}
         placeholder={placeholder}
-        className="flex-1 bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-[13px] text-gray-900 placeholder:text-gray-400 outline-none focus:border-[#5C61F6]"
+        className="flex-1 bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-base text-gray-900 placeholder:text-gray-400 outline-none focus:border-[#5C61F6]"
       />
       <button
         type="button"
         onClick={handleAdd}
         disabled={!value.trim()}
-        className="text-[13px] font-medium px-3 py-1.5 rounded-lg border border-gray-200 text-gray-500 hover:border-[#5C61F6] hover:text-[#5C61F6] transition-colors disabled:opacity-30 disabled:cursor-default"
+        className="text-base font-medium px-3 py-1.5 rounded-lg border border-gray-200 text-gray-500 hover:border-[#5C61F6] hover:text-[#5C61F6] transition-colors disabled:opacity-30 disabled:cursor-default"
       >
         Add
       </button>

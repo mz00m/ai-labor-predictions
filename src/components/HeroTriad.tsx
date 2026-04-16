@@ -48,13 +48,13 @@ export default function HeroTriad({
                 </span>
               </span>
             </span>
-            <p className="relative z-[2] text-[9px] sm:text-[10px] font-bold uppercase tracking-wide sm:tracking-widest text-[var(--muted)] mb-1.5">
+            <p className="relative z-[2] text-[9px] sm:text-2xs font-bold uppercase tracking-wide sm:tracking-widest text-[var(--muted)] mb-1.5">
               <span className="text-[9px] font-light opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 mr-0.5">
                 ~
               </span>
               Productivity boost
             </p>
-            <p className="relative z-[2] text-[10px] sm:text-[11px] text-[var(--muted)] opacity-50 leading-snug">
+            <p className="relative z-[2] text-2xs sm:text-xs text-[var(--muted)] opacity-50 leading-snug">
               Median task-level gain, 18 studies
             </p>
           </a>
@@ -79,13 +79,13 @@ export default function HeroTriad({
                 </span>
               </span>
             </span>
-            <p className="relative z-[2] text-[9px] sm:text-[10px] font-bold uppercase tracking-wide sm:tracking-widest text-[var(--muted)] mb-1.5">
+            <p className="relative z-[2] text-[9px] sm:text-2xs font-bold uppercase tracking-wide sm:tracking-widest text-[var(--muted)] mb-1.5">
               <span className="text-[9px] font-light opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 mr-0.5">
                 ~
               </span>
               Projected job loss
             </p>
-            <p className="relative z-[2] text-[10px] sm:text-[11px] text-[var(--muted)] opacity-50 leading-snug">
+            <p className="relative z-[2] text-2xs sm:text-xs text-[var(--muted)] opacity-50 leading-snug">
               Weighted avg of {projectedEstimateCount} data points
             </p>
           </a>
@@ -110,13 +110,13 @@ export default function HeroTriad({
                 </span>
               </span>
             </span>
-            <p className="relative z-[2] text-[9px] sm:text-[10px] font-bold uppercase tracking-wide sm:tracking-widest text-[var(--muted)] mb-1.5">
+            <p className="relative z-[2] text-[9px] sm:text-2xs font-bold uppercase tracking-wide sm:tracking-widest text-[var(--muted)] mb-1.5">
               <span className="text-[9px] font-light opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 mr-0.5">
                 ~
               </span>
               Measured job loss
             </p>
-            <p className="relative z-[2] text-[10px] sm:text-[11px] text-[var(--muted)] opacity-50 leading-snug">
+            <p className="relative z-[2] text-2xs sm:text-xs text-[var(--muted)] opacity-50 leading-snug">
               Yale, NBER, Dallas Fed, ECB
             </p>
           </a>

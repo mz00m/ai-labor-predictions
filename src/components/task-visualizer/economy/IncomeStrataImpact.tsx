@@ -44,7 +44,7 @@ function YearHeader({ year }: { year: number }) {
         {year}
       </span>
       {show && (
-        <div className="absolute z-20 right-0 top-full mt-1 w-52 px-3 py-2 rounded-lg bg-zinc-900 text-white text-[11px] leading-snug shadow-xl pointer-events-none text-left">
+        <div className="absolute z-20 right-0 top-full mt-1 w-52 px-3 py-2 rounded-lg bg-zinc-900 text-white text-xs leading-snug shadow-xl pointer-events-none text-left">
           <span className="font-semibold">{year} projection</span>
           <br />
           % of occupation tasks where AI compute cost is cheaper than human labor
@@ -121,19 +121,19 @@ export default function IncomeStrataImpact() {
             >
               <div className="flex items-center justify-between">
                 <div>
-                  <h4 className="text-[15px] font-bold" style={{ color: meta.color }}>
+                  <h4 className="text-lg font-bold" style={{ color: meta.color }}>
                     {meta.label}
                   </h4>
-                  <p className="text-[12px] text-[var(--muted)]">
+                  <p className="text-sm text-[var(--muted)]">
                     {meta.range}. {(detail.totalEmployment / 1000).toFixed(1)}M workers,{" "}
                     {detail.groups.length} occupation groups
                   </p>
                 </div>
                 <div className="text-right">
-                  <p className="text-[28px] font-bold tracking-tight" style={{ color: meta.color }}>
+                  <p className="text-4xl font-bold tracking-tight" style={{ color: meta.color }}>
                     {detail.avgAutomation2030}%
                   </p>
-                  <p className="text-[10px] text-[var(--muted)]">avg task automation by 2030</p>
+                  <p className="text-2xs text-[var(--muted)]">avg task automation by 2030</p>
                 </div>
               </div>
 
@@ -162,7 +162,7 @@ export default function IncomeStrataImpact() {
                     .filter(([, v]) => v >= 0.05)
                     .sort((a, b) => b[1] - a[1])
                     .map(([cat, share]) => (
-                      <span key={cat} className="text-[10px] text-[var(--muted)]">
+                      <span key={cat} className="text-2xs text-[var(--muted)]">
                         <span
                           className="inline-block w-1.5 h-1.5 rounded-full mr-0.5"
                           style={{ backgroundColor: TASK_CATEGORY_META[cat].color }}
@@ -176,7 +176,7 @@ export default function IncomeStrataImpact() {
 
             {/* Occupation table - uses CSS grid instead of <table> to avoid
                 column misalignment caused by nav-row ::before pseudo-element on <tr> */}
-            <div className="text-[12px]">
+            <div className="text-sm">
               {/* Header */}
               <div
                 className="grid border-b border-black/[0.06] font-semibold text-[var(--foreground)]"
@@ -226,10 +226,10 @@ export default function IncomeStrataImpact() {
                           {g.pct2036}%
                         </span>
                       </div>
-                      <div className="py-2 px-3 text-center text-[11px]">
+                      <div className="py-2 px-3 text-center text-xs">
                         {g.demandElasticity && (
                           <span
-                            className="inline-block px-1.5 py-0.5 rounded text-[10px] font-medium"
+                            className="inline-block px-1.5 py-0.5 rounded text-2xs font-medium"
                             style={{
                               color: DEMAND_ELASTICITY_META[g.demandElasticity as keyof typeof DEMAND_ELASTICITY_META].color,
                               backgroundColor: `${DEMAND_ELASTICITY_META[g.demandElasticity as keyof typeof DEMAND_ELASTICITY_META].color}15`,
@@ -247,7 +247,7 @@ export default function IncomeStrataImpact() {
             </div>
 
             {/* Column definitions */}
-            <div className="px-5 py-2.5 border-t border-black/[0.06] text-[10px] text-[var(--muted)] leading-relaxed">
+            <div className="px-5 py-2.5 border-t border-black/[0.06] text-2xs text-[var(--muted)] leading-relaxed">
               <strong className="text-[var(--foreground)]">2028/32/36</strong> = % of tasks where AI is cheaper than human labor.{" "}
               <strong className="text-[var(--foreground)]">Demand</strong> = will cheaper output expand this market? <span className="text-[#10B981]">High</span> = more demand, <span className="text-[#EF4444]">Low</span> = fixed demand.
             </div>

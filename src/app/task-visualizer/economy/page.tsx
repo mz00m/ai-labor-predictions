@@ -12,15 +12,15 @@ export default function EconomyPage() {
   return (
     <div>
       <header className="mb-10">
-        <p className="text-[12px] font-medium text-[var(--accent)] mb-2">
+        <p className="text-sm font-medium text-[var(--accent)] mb-2">
           <a href="/task-visualizer" className="hover:underline">Task Visualizer</a>
           {" / "}
           <span className="text-[var(--muted)]">US Economy</span>
         </p>
-        <h1 className="text-[28px] sm:text-[34px] font-bold text-[var(--foreground)] tracking-tight leading-tight">
+        <h1 className="text-4xl sm:text-[34px] font-bold text-[var(--foreground)] tracking-tight leading-tight">
           How AI automation rolls through the US economy
         </h1>
-        <p className="text-[15px] text-[var(--muted)] mt-2 max-w-2xl leading-relaxed">
+        <p className="text-lg text-[var(--muted)] mt-2 max-w-2xl leading-relaxed">
           160 million workers across 22 major occupation groups. Here is what the US workforce
           looks like today, and how declining compute costs create automation pressure across
           income levels over the next decade.

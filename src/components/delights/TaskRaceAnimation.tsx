@@ -123,7 +123,7 @@ export default function TaskRaceAnimation({
         <button
           onClick={startRace}
           disabled={racing}
-          className={`text-[11px] font-medium px-3 py-1.5 rounded-lg border transition-all ${
+          className={`text-xs font-medium px-3 py-1.5 rounded-lg border transition-all ${
             racing
               ? "text-[var(--accent)] border-[var(--accent)]/30 bg-[var(--accent-light)]"
               : "text-[var(--muted)] border-black/[0.08] hover:border-[var(--accent)]/30 hover:text-[var(--accent)] hover:bg-[var(--accent-light)]"
@@ -133,13 +133,13 @@ export default function TaskRaceAnimation({
         </button>
 
         {/* Speed selector */}
-        <div className="flex items-center gap-1 text-[10px] text-[var(--muted)]">
+        <div className="flex items-center gap-1 text-2xs text-[var(--muted)]">
           <span className="font-medium mr-1">AI speed:</span>
           {[1, 2, 5].map((s) => (
             <button
               key={s}
               onClick={() => setSpeed(s)}
-              className={`px-2 py-0.5 rounded-full border text-[10px] font-medium transition-all ${
+              className={`px-2 py-0.5 rounded-full border text-2xs font-medium transition-all ${
                 speed === s
                   ? "bg-[var(--accent)] text-white border-[var(--accent)]"
                   : "border-black/[0.08] hover:border-[var(--accent)]/30"
@@ -264,7 +264,7 @@ export default function TaskRaceAnimation({
         })}
       </svg>
 
-      <p className="text-[10px] text-[var(--muted)] italic opacity-60">
+      <p className="text-2xs text-[var(--muted)] italic opacity-60">
         Speed reflects years-to-cost-crossover: tasks closer to parity finish first
       </p>
     </div>

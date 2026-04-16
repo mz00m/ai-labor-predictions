@@ -15,17 +15,17 @@ export default function FuturePage() {
 
       {/* ───── Header ───── */}
       <header className="mb-10">
-        <p className="text-[12px] font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
+        <p className="text-sm font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
           Scenario
         </p>
         <h1
-          className="text-[36px] sm:text-[44px] font-extrabold text-[var(--foreground)] leading-[1.1] tracking-tight mb-4"
+          className="text-5xl sm:text-6xl font-extrabold text-[var(--foreground)] leading-[1.1] tracking-tight mb-4"
           style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
         >
           From Here to There
         </h1>
         <p
-          className="text-[18px] sm:text-[20px] text-[var(--muted)] leading-relaxed mb-5"
+          className="text-2xl sm:text-[20px] text-[var(--muted)] leading-relaxed mb-5"
           style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
         >
           A plausible positive scenario for the AI transition that
@@ -36,7 +36,7 @@ export default function FuturePage() {
         {/* Thesis card */}
         <div className="border-l-4 border-[var(--accent)] bg-[var(--accent-light)] rounded-r-lg px-5 py-4">
           <p
-            className="text-[15px] sm:text-[16px] text-[var(--foreground)] leading-relaxed font-medium"
+            className="text-lg sm:text-xl text-[var(--foreground)] leading-relaxed font-medium"
             style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
           >
             Most AI futures are either utopian hand-waves or dystopian
@@ -61,7 +61,7 @@ export default function FuturePage() {
       {/* ───── The Chain Visualization ───── */}
       <section className="mb-12">
         <div className="border-t border-black/[0.06] pt-8">
-          <p className="text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
+          <p className="text-md text-[var(--muted)] leading-[1.75] mb-6">
             The path from here to there has seven links. Each one is a
             causal mechanism, not a hope. Click any link to jump to the
             evidence.
@@ -80,10 +80,10 @@ export default function FuturePage() {
       <section className="mb-12" id="link-1">
         <div className="border-t border-black/[0.06] pt-8">
           <SectionLabel number="01" />
-          <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
             A recession breaks the early-career ladder
           </h2>
-          <div className="space-y-4 text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
+          <div className="space-y-4 text-md text-[var(--muted)] leading-[1.75] mb-6">
             <p>
               The scenario begins with the thing most likely to happen
               next: an economic downturn. Not necessarily caused by AI
@@ -120,7 +120,7 @@ export default function FuturePage() {
             />
           </div>
 
-          <div className="space-y-4 text-[14px] text-[var(--muted)] leading-[1.75] mt-6">
+          <div className="space-y-4 text-md text-[var(--muted)] leading-[1.75] mt-6">
             <p>
               The damage is concentrated. Of 37.1 million highly
               AI-exposed workers, 70% have strong adaptive capacity
@@ -171,10 +171,10 @@ export default function FuturePage() {
       <section className="mb-12" id="link-2">
         <div className="border-t border-black/[0.06] pt-8">
           <SectionLabel number="02" />
-          <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
             The political window opens for industrial policy
           </h2>
-          <div className="space-y-4 text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
+          <div className="space-y-4 text-md text-[var(--muted)] leading-[1.75] mb-6">
             <p>
               Recessions create political will that prosperity does not.
               The New Deal followed the Depression. Job retraining
@@ -212,7 +212,7 @@ export default function FuturePage() {
             />
           </div>
 
-          <div className="space-y-4 text-[14px] text-[var(--muted)] leading-[1.75]">
+          <div className="space-y-4 text-md text-[var(--muted)] leading-[1.75]">
             <p>
               The evidence here comes with a caveat. These 93% retention
               and $1.47 ROI figures are from traditional skilled-trade
@@ -248,10 +248,10 @@ export default function FuturePage() {
       <section className="mb-12" id="link-3">
         <div className="border-t border-black/[0.06] pt-8">
           <SectionLabel number="03" />
-          <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
             Workers reshuffle into education and healthcare
           </h2>
-          <div className="space-y-4 text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
+          <div className="space-y-4 text-md text-[var(--muted)] leading-[1.75] mb-6">
             <p>
               The 6.1 million workers with high AI exposure and low
               adaptive capacity are concentrated in clerical and
@@ -294,7 +294,7 @@ export default function FuturePage() {
             />
           </div>
 
-          <div className="space-y-4 text-[14px] text-[var(--muted)] leading-[1.75]">
+          <div className="space-y-4 text-md text-[var(--muted)] leading-[1.75]">
             <p>
               The policy mechanism: structured transition programs that
               help clerical workers move into education (especially
@@ -338,10 +338,10 @@ export default function FuturePage() {
       <section className="mb-12" id="link-4">
         <div className="border-t border-black/[0.06] pt-8">
           <SectionLabel number="04" />
-          <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
             AI unlocks construction and entrepreneurship
           </h2>
-          <div className="space-y-4 text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
+          <div className="space-y-4 text-md text-[var(--muted)] leading-[1.75] mb-6">
             <p>
               Industrial policy doesn&rsquo;t only mean workforce
               programs. It also means removing the regulatory friction
@@ -384,7 +384,7 @@ export default function FuturePage() {
             />
           </div>
 
-          <div className="space-y-4 text-[14px] text-[var(--muted)] leading-[1.75]">
+          <div className="space-y-4 text-md text-[var(--muted)] leading-[1.75]">
             <p>
               Meanwhile, those workers with a risk-taking or strategic
               bent find a different path: entrepreneurship. AI agents
@@ -423,10 +423,10 @@ export default function FuturePage() {
       <section className="mb-12" id="link-5">
         <div className="border-t border-black/[0.06] pt-8">
           <SectionLabel number="05" />
-          <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
             Goods get cheap. Spending shifts to services.
           </h2>
-          <div className="space-y-4 text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
+          <div className="space-y-4 text-md text-[var(--muted)] leading-[1.75] mb-6">
             <p>
               Robot manufacturing drives the next structural shift.
               Industrial robot costs have fallen from ~$47,000 in 2011
@@ -471,10 +471,10 @@ export default function FuturePage() {
       <section className="mb-12" id="link-6">
         <div className="border-t border-black/[0.06] pt-8">
           <SectionLabel number="06" />
-          <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
             Human services become the economy
           </h2>
-          <div className="space-y-4 text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
+          <div className="space-y-4 text-md text-[var(--muted)] leading-[1.75] mb-6">
             <p>
               Here is where Baumol&rsquo;s cost disease stops being a
               bug and becomes a feature.
@@ -538,10 +538,10 @@ export default function FuturePage() {
       <section className="mb-12" id="link-7">
         <div className="border-t border-black/[0.06] pt-8">
           <SectionLabel number="07" />
-          <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
             Everyone works 3&ndash;4 days a week
           </h2>
-          <div className="space-y-4 text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
+          <div className="space-y-4 text-md text-[var(--muted)] leading-[1.75] mb-6">
             <p>
               This is where the scenario arrives. Not at leisure &mdash;
               at a different allocation of time.
@@ -587,7 +587,7 @@ export default function FuturePage() {
             />
           </div>
 
-          <div className="space-y-4 text-[14px] text-[var(--muted)] leading-[1.75]">
+          <div className="space-y-4 text-md text-[var(--muted)] leading-[1.75]">
             <p>
               The jobs in this economy are jobs worth having. Teaching a
               child to read. Helping a patient recover. Designing a
@@ -621,10 +621,10 @@ export default function FuturePage() {
       <section className="mb-12">
         <div className="border-t border-black/[0.06] pt-8">
           <SectionLabel number="08" />
-          <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
             What has to go right
           </h2>
-          <div className="space-y-4 text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
+          <div className="space-y-4 text-md text-[var(--muted)] leading-[1.75] mb-6">
             <p>
               This is a scenario, not a prophecy. Every link in the chain
               is conditional. If enough of these conditions fail, the
@@ -671,7 +671,7 @@ export default function FuturePage() {
         <div className="border-t border-black/[0.06] pt-8">
           <blockquote className="border-l-4 border-[var(--accent)] bg-[var(--accent-light)] rounded-r-lg px-5 py-5">
             <p
-              className="text-[15px] sm:text-[16px] text-[var(--foreground)] leading-[1.75] font-medium"
+              className="text-lg sm:text-xl text-[var(--foreground)] leading-[1.75] font-medium"
               style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
             >
               Baumol&rsquo;s cost disease is a feature, not a bug. The
@@ -681,7 +681,7 @@ export default function FuturePage() {
             </p>
           </blockquote>
 
-          <div className="mt-6 space-y-4 text-[14px] text-[var(--muted)] leading-[1.75]">
+          <div className="mt-6 space-y-4 text-md text-[var(--muted)] leading-[1.75]">
             <p>
               None of this requires AGI, superintelligence, or
               technological breakthroughs beyond what already exists in
@@ -699,10 +699,10 @@ export default function FuturePage() {
 
           {/* Source note */}
           <div className="mt-8 rounded-lg border border-black/[0.06] px-5 py-4">
-            <p className="text-[11px] font-bold uppercase tracking-wider text-[var(--muted)] mb-2">
+            <p className="text-xs font-bold uppercase tracking-wider text-[var(--muted)] mb-2">
               Sources &amp; frameworks
             </p>
-            <p className="text-[12px] text-[var(--muted)] leading-relaxed">
+            <p className="text-sm text-[var(--muted)] leading-relaxed">
               This scenario draws on: Acemoglu &amp; Restrepo&rsquo;s
               task-based automation framework; Brynjolfsson, Chandar &amp;
               Chen&rsquo;s &ldquo;Canaries&rdquo; paper on entry-level displacement;
@@ -759,7 +759,7 @@ export default function FuturePage() {
 
 function SectionLabel({ number }: { number: string }) {
   return (
-    <span className="text-[11px] font-bold uppercase tracking-widest text-[var(--accent)] mb-3 block">
+    <span className="text-xs font-bold uppercase tracking-widest text-[var(--accent)] mb-3 block">
       {number}
     </span>
   );
@@ -778,13 +778,13 @@ function PhaseLabel({
     <div className="mb-6 mt-4">
       <div className="flex items-center gap-3">
         <div
-          className="w-8 h-8 rounded-full flex items-center justify-center text-[12px] font-bold text-white shrink-0"
+          className="w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold text-white shrink-0"
           style={{ backgroundColor: color }}
         >
           {phase}
         </div>
         <h3
-          className="text-[16px] sm:text-[18px] font-bold tracking-tight"
+          className="text-xl sm:text-2xl font-bold tracking-tight"
           style={{ color }}
         >
           {title}
@@ -838,13 +838,13 @@ function ChainDiagram() {
 
           {/* Label */}
           <div className="flex items-center gap-2 min-w-0">
-            <span className="text-[11px] font-bold tabular-nums" style={{ color: link.color }}>
+            <span className="text-xs font-bold tabular-nums" style={{ color: link.color }}>
               {String(link.id).padStart(2, "0")}
             </span>
-            <span className="text-[13px] text-[var(--muted)] group-hover:text-[var(--foreground)] transition-colors leading-snug">
+            <span className="text-base text-[var(--muted)] group-hover:text-[var(--foreground)] transition-colors leading-snug">
               {link.label}
             </span>
-            <span className="text-[11px] opacity-0 group-hover:opacity-60 transition-opacity ml-auto shrink-0">
+            <span className="text-xs opacity-0 group-hover:opacity-60 transition-opacity ml-auto shrink-0">
               &darr;
             </span>
           </div>
@@ -901,7 +901,7 @@ function EvidenceCard({
         >
           {stat}
         </span>
-        <span className={`text-[var(--muted)] leading-snug ${compact ? "text-[12px]" : "text-[13px]"}`}>
+        <span className={`text-[var(--muted)] leading-snug ${compact ? "text-sm" : "text-base"}`}>
           {label}
         </span>
       </div>
@@ -912,7 +912,7 @@ function EvidenceCard({
         >
           {TIER_LABELS[tier]}
         </span>
-        <span className="text-[11px] text-[var(--muted)] opacity-70">
+        <span className="text-xs text-[var(--muted)] opacity-70">
           {source}
         </span>
       </div>
@@ -978,7 +978,7 @@ function StatCard({
         </span>
       )}
       <p
-        className={emphasis ? "text-[26px] sm:text-[30px] font-black" : "text-[22px] sm:text-[24px] font-black"}
+        className={emphasis ? "text-[26px] sm:text-[30px] font-black" : "text-3xl sm:text-[24px] font-black"}
         style={{ color }}
       >
         {targetNum !== null && visible ? (
@@ -987,10 +987,10 @@ function StatCard({
           value
         )}
       </p>
-      <p className="text-[11px] font-bold text-[var(--foreground)] mt-0.5">
+      <p className="text-xs font-bold text-[var(--foreground)] mt-0.5">
         {label}
       </p>
-      <p className="text-[10px] text-[var(--muted)]">{sublabel}</p>
+      <p className="text-2xs text-[var(--muted)]">{sublabel}</p>
     </div>
   );
 }
@@ -1068,16 +1068,16 @@ function ServicePillar({
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
           <h4
-            className="text-[14px] font-bold text-[var(--foreground)] mb-1"
+            className="text-md font-bold text-[var(--foreground)] mb-1"
           >
             {title}
           </h4>
-          <p className="text-[13px] text-[var(--muted)] leading-relaxed">
+          <p className="text-base text-[var(--muted)] leading-relaxed">
             {description}
           </p>
         </div>
         <span
-          className="text-[11px] shrink-0 mt-1 transition-transform"
+          className="text-xs shrink-0 mt-1 transition-transform"
           style={{
             color: color,
             transform: open ? "rotate(180deg)" : "rotate(0deg)",
@@ -1099,10 +1099,10 @@ function ServicePillar({
           className="mt-3 pt-3 border-t"
           style={{ borderColor: color + "15" }}
         >
-          <p className="text-[13px] font-bold mb-0.5" style={{ color }}>
+          <p className="text-base font-bold mb-0.5" style={{ color }}>
             {stat}
           </p>
-          <p className="text-[11px] text-[var(--muted)] leading-relaxed">
+          <p className="text-xs text-[var(--muted)] leading-relaxed">
             {statNote}
           </p>
         </div>
@@ -1122,10 +1122,10 @@ function ConditionalCard({
 }) {
   return (
     <div className="rounded-lg border border-amber-200/80 bg-amber-50/50 px-5 py-4">
-      <h4 className="text-[13px] font-bold text-[var(--foreground)] mb-1.5">
+      <h4 className="text-base font-bold text-[var(--foreground)] mb-1.5">
         {condition}
       </h4>
-      <p className="text-[12px] text-[var(--muted)] leading-relaxed">
+      <p className="text-sm text-[var(--muted)] leading-relaxed">
         {risk}
       </p>
     </div>

@@ -58,19 +58,19 @@ export default function ForecastColumns() {
               style={{ backgroundColor: f.colorLight }}
             >
               <h4
-                className="text-[14px] font-bold"
+                className="text-md font-bold"
                 style={{ color: f.color }}
               >
                 {f.term}
               </h4>
               <div className="flex items-center gap-2 mt-0.5">
                 <span
-                  className="text-[12px] font-semibold"
+                  className="text-sm font-semibold"
                   style={{ color: f.color }}
                 >
                   {f.range}
                 </span>
-                <span className="text-[10px] text-[var(--muted)] line-through">
+                <span className="text-2xs text-[var(--muted)] line-through">
                   was {f.historicalRange}
                 </span>
               </div>
@@ -84,7 +84,7 @@ export default function ForecastColumns() {
                     className="w-1.5 h-1.5 rounded-full mt-1.5 shrink-0"
                     style={{ backgroundColor: f.color }}
                   />
-                  <span className="text-[12px] text-[var(--muted)] leading-relaxed">
+                  <span className="text-sm text-[var(--muted)] leading-relaxed">
                     {point}
                   </span>
                 </li>
@@ -96,7 +96,7 @@ export default function ForecastColumns() {
 
       {/* Historical calibration note */}
       <div className="mt-6 border-l-2 border-black/[0.08] pl-4 py-1">
-        <p className="text-[11px] text-[var(--muted)] leading-relaxed italic">
+        <p className="text-xs text-[var(--muted)] leading-relaxed italic">
           <span className="font-semibold not-italic">
             Historical calibration:
           </span>{" "}

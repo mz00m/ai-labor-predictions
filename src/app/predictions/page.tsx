@@ -27,10 +27,10 @@ export default function PredictionsPage() {
       <div className="relative -mx-6 sm:-mx-10">
         <div className="h-1 bg-gradient-to-r from-[#3ECFAE] via-[#6B7BF7] to-[#F7C96B]" />
         <div className="px-6 sm:px-10 pt-10 pb-2">
-          <h1 className="text-[28px] sm:text-[36px] font-black tracking-tight text-[var(--foreground)] leading-tight mb-3">
+          <h1 className="text-4xl sm:text-5xl font-black tracking-tight text-[var(--foreground)] leading-tight mb-3">
             Predictions Over Time
           </h1>
-          <p className="text-[15px] text-[var(--muted)] leading-relaxed max-w-2xl">
+          <p className="text-lg text-[var(--muted)] leading-relaxed max-w-2xl">
             {predictions.length} predictions across job displacement, wages, and AI adoption, each
             with its own trend chart, source list, and weighted estimate built from {totalSources}+
             sources. Every source is color-coded by evidence quality; use the tiers below to filter
@@ -54,10 +54,10 @@ export default function PredictionsPage() {
             <div className="mb-8 flex items-start gap-3">
               <div className="w-1 self-stretch rounded-full bg-red-400/60 shrink-0" />
               <div>
-                <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
+                <h2 className="text-4xl sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
                   Job Displacement &amp; Restructuring
                 </h2>
-                <p className="text-[15px] text-[var(--muted)] mt-2 max-w-2xl">
+                <p className="text-lg text-[var(--muted)] mt-2 max-w-2xl">
                   Projected share of jobs eliminated, restructured, or significantly transformed by
                   AI. Sector-specific estimates are higher than the ~3% economy-wide average because
                   they measure the most-exposed segments, not the full workforce. Most evidence points
@@ -84,10 +84,10 @@ export default function PredictionsPage() {
             <div className="mb-8 flex items-start gap-3">
               <div className="w-1 self-stretch rounded-full bg-blue-400/60 shrink-0" />
               <div>
-                <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
+                <h2 className="text-4xl sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
                   Wage Impact
                 </h2>
-                <p className="text-[15px] text-[var(--muted)] mt-2 max-w-xl">
+                <p className="text-lg text-[var(--muted)] mt-2 max-w-xl">
                   How AI adoption is projected to affect compensation across worker segments
                 </p>
               </div>
@@ -112,10 +112,10 @@ export default function PredictionsPage() {
               <div className="mb-8 flex items-start gap-3">
                 <div className="w-1 self-stretch rounded-full bg-emerald-400/60 shrink-0" />
                 <div>
-                  <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
+                  <h2 className="text-4xl sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
                     AI Adoption
                   </h2>
-                  <p className="text-[15px] text-[var(--muted)] mt-2 max-w-2xl">
+                  <p className="text-lg text-[var(--muted)] mt-2 max-w-2xl">
                     How rapidly companies are deploying AI, how much of the workforce is exposed, and
                     corporate signaling on earnings calls.{" "}
                     <strong className="text-[var(--foreground)]">

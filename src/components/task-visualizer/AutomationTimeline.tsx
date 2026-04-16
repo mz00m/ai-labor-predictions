@@ -53,7 +53,7 @@ export default function AutomationTimeline({
   return (
     <div>
       {/* Legend */}
-      <div className="flex items-center gap-5 mb-4 text-[10px] text-[var(--muted)]">
+      <div className="flex items-center gap-5 mb-4 text-2xs text-[var(--muted)]">
         <div className="flex items-center gap-1.5">
           <div className="w-3 h-0.5 bg-[#6366F1] rounded-full" />
           <span>Cost parity (AI cheaper than labor)</span>
@@ -69,7 +69,7 @@ export default function AutomationTimeline({
         {[2026, 2028, 2030, 2032, 2034, 2036, 2038, 2040].map((yr) => (
           <span
             key={yr}
-            className="absolute text-[10px] text-[var(--muted)] -translate-x-1/2"
+            className="absolute text-2xs text-[var(--muted)] -translate-x-1/2"
             style={{ left: `${((yr - minYear) / range) * 100}%` }}
           >
             {yr}
@@ -102,10 +102,10 @@ export default function AutomationTimeline({
           return (
             <div key={task.id} className="timeline-bar flex items-center gap-3 group relative" style={{ animationDelay: `${idx * 0.08}s` }}>
               <div className="w-[140px] shrink-0 text-right">
-                <span className="text-[11px] font-medium text-[var(--foreground)] truncate block">
+                <span className="text-xs font-medium text-[var(--foreground)] truncate block">
                   {task.name}
                 </span>
-                <span className="text-[10px] text-[var(--muted)]">
+                <span className="text-2xs text-[var(--muted)]">
                   {Math.round(share * 100)}% of time
                 </span>
               </div>
@@ -158,7 +158,7 @@ export default function AutomationTimeline({
                 )}
                 {/* Labels */}
                 <span
-                  className="absolute top-0.5 text-[10px] font-medium"
+                  className="absolute top-0.5 text-2xs font-medium"
                   style={{
                     left: `${Math.min((isBeyond ? crossoverPct : adoptionPct) + 1, 80)}%`,
                     color: isBeyond ? "#6b7280" : color,
@@ -176,7 +176,7 @@ export default function AutomationTimeline({
         })}
       </div>
 
-      <p className="text-[11px] text-[var(--muted)] mt-4">
+      <p className="text-xs text-[var(--muted)] mt-4">
         Solid bar = time until AI production cost (API + {DEPLOYMENT_OVERHEAD}x deployment
         overhead) drops below human labor cost. Striped extension = estimated institutional
         adoption drag (process change, training, compliance). The gap between cost parity

@@ -49,10 +49,10 @@ export default function BLSTrendStrip({ trend }: { trend: BlsTrend }) {
             <path d="M3 3v18h18" />
             <path d="M7 16l4-8 4 4 4-6" />
           </svg>
-          <span className="text-[10px] font-semibold uppercase tracking-wider text-[var(--muted)] opacity-60">
+          <span className="text-2xs font-semibold uppercase tracking-wider text-[var(--muted)] opacity-60">
             BLS Employment
           </span>
-          <span className="text-[10px] text-[var(--muted)] opacity-40">
+          <span className="text-2xs text-[var(--muted)] opacity-40">
             {trend.label}
           </span>
           <svg
@@ -68,22 +68,22 @@ export default function BLSTrendStrip({ trend }: { trend: BlsTrend }) {
 
         <div className="flex items-baseline gap-3">
           <span className="inline-flex items-baseline gap-1">
-            <span className="text-[10px] text-[var(--muted)] opacity-50">36mo</span>
-            <span className={`text-[13px] font-bold tabular-nums ${changeColor(trend.m36)}`}>
+            <span className="text-2xs text-[var(--muted)] opacity-50">36mo</span>
+            <span className={`text-base font-bold tabular-nums ${changeColor(trend.m36)}`}>
               {formatChange(trend.m36)}
             </span>
           </span>
           <span className="text-[var(--muted)] opacity-20">|</span>
           <span className="inline-flex items-baseline gap-1">
-            <span className="text-[10px] text-[var(--muted)] opacity-50">12mo</span>
-            <span className={`text-[13px] font-bold tabular-nums ${changeColor(trend.m12)}`}>
+            <span className="text-2xs text-[var(--muted)] opacity-50">12mo</span>
+            <span className={`text-base font-bold tabular-nums ${changeColor(trend.m12)}`}>
               {formatChange(trend.m12)}
             </span>
           </span>
           <span className="text-[var(--muted)] opacity-20">|</span>
           <span className="inline-flex items-baseline gap-1">
-            <span className="text-[10px] text-[var(--muted)] opacity-50">3mo</span>
-            <span className={`text-[13px] font-bold tabular-nums ${changeColor(trend.m3)}`}>
+            <span className="text-2xs text-[var(--muted)] opacity-50">3mo</span>
+            <span className={`text-base font-bold tabular-nums ${changeColor(trend.m3)}`}>
               {formatChange(trend.m3)}
             </span>
           </span>
@@ -97,7 +97,7 @@ export default function BLSTrendStrip({ trend }: { trend: BlsTrend }) {
           opacity: expanded ? 1 : 0,
         }}
       >
-        <div className="mt-2 text-[11px] text-[var(--muted)] opacity-60 leading-relaxed border-l-2 border-black/[0.06] pl-3 space-y-1">
+        <div className="mt-2 text-xs text-[var(--muted)] opacity-60 leading-relaxed border-l-2 border-black/[0.06] pl-3 space-y-1">
           <p>
             % change in nonfarm payroll employment (BLS Current Employment Statistics, seasonally adjusted).
             {trend.seriesNames.length > 1 && (

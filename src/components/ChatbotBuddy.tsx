@@ -270,7 +270,7 @@ export default function ChatbotBuddy({ sourceCount }: { sourceCount?: number }) 
     >
       {/* Speech bubble */}
       <div
-        className={`absolute whitespace-nowrap bg-white border border-black/[0.08] rounded-lg px-3 py-1.5 text-[12px] font-medium text-[#1A1A2E] shadow-lg transition-all ${
+        className={`absolute whitespace-nowrap bg-white border border-black/[0.08] rounded-lg px-3 py-1.5 text-sm font-medium text-[#1A1A2E] shadow-lg transition-all ${
           reducedMotion ? "duration-0" : "duration-300"
         } ${
           showBubble
@@ -512,7 +512,7 @@ export function ChatTrigger({ onClick }: { onClick: () => void }) {
   return (
     <button
       onClick={onClick}
-      className="flex items-center gap-1.5 text-[12px] font-semibold text-white bg-[var(--accent)] hover:bg-[#4b50e5] px-3 py-1.5 rounded-md transition-colors"
+      className="flex items-center gap-1.5 text-sm font-semibold text-white bg-[var(--accent)] hover:bg-[#4b50e5] px-3 py-1.5 rounded-md transition-colors"
     >
       <svg width="14" height="14" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
         {/* Simplified robot head silhouette */}

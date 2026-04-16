@@ -48,10 +48,10 @@ export default function IntangibleDiagram() {
       {rows.map((row, i) => (
         <div key={i}>
           <div className="flex items-center gap-2 mb-1.5">
-            <span className="text-[11px] font-bold uppercase tracking-wider text-[var(--muted)]">
+            <span className="text-xs font-bold uppercase tracking-wider text-[var(--muted)]">
               {row.label}
             </span>
-            <span className="text-[10px] text-[var(--muted)] opacity-60">
+            <span className="text-2xs text-[var(--muted)] opacity-60">
               = {row.annotation}
             </span>
           </div>
@@ -59,7 +59,7 @@ export default function IntangibleDiagram() {
             {row.items.map((item, j) => (
               <div
                 key={j}
-                className="flex items-center justify-center px-2 text-[11px] font-semibold text-white"
+                className="flex items-center justify-center px-2 text-xs font-semibold text-white"
                 style={{
                   width: item.width,
                   backgroundColor: item.color,
@@ -94,8 +94,8 @@ export default function IntangibleDiagram() {
       <div className="flex items-start gap-3 px-3 py-2.5 bg-red-50 rounded-md border border-red-100">
         <span className="text-red-500 text-lg leading-none mt-0.5">&#x2193;</span>
         <div>
-          <p className="text-[12px] font-bold text-red-600 mb-0.5">The Measurement Gap</p>
-          <p className="text-[12px] text-red-900/70 leading-relaxed">
+          <p className="text-sm font-bold text-red-600 mb-0.5">The Measurement Gap</p>
+          <p className="text-sm text-red-900/70 leading-relaxed">
             When firms invest in reorganization, training, and new workflows,
             national accounts treat these as <strong>current expenses</strong> that
             reduce measured GDP &mdash; not as <strong>investments</strong> that

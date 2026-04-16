@@ -43,8 +43,8 @@ function CustomTooltip({ active, payload }: TooltipProps<number, string>) {
   const neiData = CFO_SURVEY_NEI[d.id];
   return (
     <div className="bg-white rounded-lg border border-black/[0.08] shadow-lg p-3 max-w-[280px]">
-      <p className="text-[13px] font-semibold text-[var(--foreground)]">{d.title}</p>
-      <div className="mt-1.5 space-y-0.5 text-[12px]">
+      <p className="text-base font-semibold text-[var(--foreground)]">{d.title}</p>
+      <div className="mt-1.5 space-y-0.5 text-sm">
         <div className="flex justify-between gap-4">
           <span className="text-[var(--muted)]">Workers</span>
           <span className="font-medium">{(d.employment * 1000).toLocaleString()}</span>
@@ -109,7 +109,7 @@ function CustomTooltip({ active, payload }: TooltipProps<number, string>) {
         )}
       </div>
       {jobIds.length > 0 && (
-        <p className="text-[10px] text-[var(--accent)] mt-2 pt-1.5 border-t border-black/[0.06]">
+        <p className="text-2xs text-[var(--accent)] mt-2 pt-1.5 border-t border-black/[0.06]">
           Click to explore individual jobs in this group
         </p>
       )}
@@ -163,10 +163,10 @@ export default function WorkforceOverview() {
       {/* Big stat */}
       <div className="grid grid-cols-1 sm:grid-cols-4 gap-3 mb-8">
         <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-black/[0.06] p-4">
-          <p className="text-[28px] font-bold text-[var(--foreground)] tracking-tight">
+          <p className="text-4xl font-bold text-[var(--foreground)] tracking-tight">
             {(TOTAL_EMPLOYMENT / 1000).toFixed(1)}M
           </p>
-          <p className="text-[11px] text-[var(--muted)]">Total US civilian workforce</p>
+          <p className="text-xs text-[var(--muted)]">Total US civilian workforce</p>
         </div>
         {(["low", "middle", "high"] as const).map((tier) => {
           const meta = INCOME_TIER_META[tier];
@@ -182,10 +182,10 @@ export default function WorkforceOverview() {
                 opacity: isActive ? 1 : 0.4,
               }}
             >
-              <p className="text-[28px] font-bold tracking-tight" style={{ color: meta.color }}>
+              <p className="text-4xl font-bold tracking-tight" style={{ color: meta.color }}>
                 {(tierSummary[tier] / 1000).toFixed(1)}M
               </p>
-              <p className="text-[11px] text-[var(--muted)]">
+              <p className="text-xs text-[var(--muted)]">
                 {meta.label} ({meta.range})
               </p>
             </button>
@@ -195,10 +195,10 @@ export default function WorkforceOverview() {
 
       {/* CFO Signal: Replace vs. Enhance */}
       <div className="callout-card bg-[#10B981]/[0.06] border border-[#10B981]/20 rounded-xl p-4 mb-6">
-        <p className="text-[13px] font-semibold text-[#10B981] mb-1">
+        <p className="text-base font-semibold text-[#10B981] mb-1">
           Real-world signal: CFOs see enhancement, not replacement, for 7 of 8 groups
         </p>
-        <p className="text-[12px] text-[var(--muted)] leading-relaxed">
+        <p className="text-sm text-[var(--muted)] leading-relaxed">
           In a survey of ~750 CFOs (Baslandze et al., 2026), only Office &amp; Admin roles were described
           as being replaced more than enhanced by AI (NEI 2.0x). For the other 7 occupation groups with data,
           CFOs see AI as enhancing workers. Tech &amp; Computing (0.60x), Legal (0.47x), and Management (0.14x)
@@ -214,7 +214,7 @@ export default function WorkforceOverview() {
               return (
                 <span
                   key={id}
-                  className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-medium"
+                  className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-2xs font-medium"
                   style={{ color: signal.color, backgroundColor: `${signal.color}12` }}
                 >
                   {group.shortTitle}: {signal.nei.toFixed(2)}x
@@ -285,7 +285,7 @@ export default function WorkforceOverview() {
                 className="w-2.5 h-2.5 rounded-full"
                 style={{ backgroundColor: INCOME_TIER_META[tier].color }}
               />
-              <span className="text-[11px] text-[var(--muted)]">
+              <span className="text-xs text-[var(--muted)]">
                 {INCOME_TIER_META[tier].label} ({INCOME_TIER_META[tier].range})
               </span>
             </button>
@@ -293,7 +293,7 @@ export default function WorkforceOverview() {
         })}
       </div>
 
-      <p className="text-[11px] text-[var(--muted)] mt-3">
+      <p className="text-xs text-[var(--muted)] mt-3">
         Source: Bureau of Labor Statistics, Occupational Employment and Wage Statistics (OEWS), May 2024.
         Income tiers based on median annual wage for the occupation group.
         Exposure metric agreement from Yale Budget Lab (Gimbel et al., 2026), comparing 6 AI exposure measures across 778 occupations.

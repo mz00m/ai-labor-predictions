@@ -55,7 +55,7 @@ export default function RecentSources({ sources }: RecentSourcesProps) {
       >
         {/* Header */}
         <div className="px-4 py-3 border-b border-black/[0.04]">
-          <h3 className="text-[11px] font-semibold uppercase tracking-widest text-[var(--muted)] opacity-50">
+          <h3 className="text-xs font-semibold uppercase tracking-widest text-[var(--muted)] opacity-50">
             Recently Added
           </h3>
         </div>
@@ -102,7 +102,7 @@ export default function RecentSources({ sources }: RecentSourcesProps) {
                     style={{ backgroundColor: config.color }}
                   />
                   <div className="min-w-0 flex-1">
-                    <p className="text-[12px] text-[var(--foreground)] leading-snug line-clamp-2 opacity-80">
+                    <p className="text-sm text-[var(--foreground)] leading-snug line-clamp-2 opacity-80">
                       {source.title}
                     </p>
                     <div className="flex items-center gap-1.5 mt-0.5">
@@ -115,7 +115,7 @@ export default function RecentSources({ sources }: RecentSourcesProps) {
                       <span className="text-[9px] text-[var(--muted)] opacity-25">
                         ·
                       </span>
-                      <span className="text-[10px] text-[var(--muted)] opacity-40">
+                      <span className="text-2xs text-[var(--muted)] opacity-40">
                         {source.dateAdded
                           ? `Added ${format(parseISO(source.dateAdded), "MMM d, yyyy")}`
                           : format(parseISO(source.datePublished), "MMM d, yyyy")}

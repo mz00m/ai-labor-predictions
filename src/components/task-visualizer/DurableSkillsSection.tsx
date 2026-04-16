@@ -220,7 +220,7 @@ export default function DurableSkillsSection({
         <h3 className="text-[20px] font-bold text-[var(--foreground)] tracking-tight mb-2">
           The skills that stay valuable
         </h3>
-        <p className="text-[14px] text-[var(--muted)] max-w-2xl leading-relaxed">
+        <p className="text-md text-[var(--muted)] max-w-2xl leading-relaxed">
           Automation pressure is real, but it is unevenly distributed. The tasks that are hardest and most
           expensive to automate are often the ones that matter most, and they represent real opportunity
           for anyone willing to invest in them.
@@ -231,13 +231,13 @@ export default function DurableSkillsSection({
       {selectedJob && radarData && (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-black/[0.06] p-6">
-            <p className="text-[28px] font-bold text-[#10B981] tracking-tight leading-none tabular-nums">
+            <p className="text-4xl font-bold text-[#10B981] tracking-tight leading-none tabular-nums">
               <AnimatedPercent value={durablePercent} />%
             </p>
-            <p className="text-[14px] text-[var(--foreground)] font-medium mt-2">
+            <p className="text-md text-[var(--foreground)] font-medium mt-2">
               of your time is on tasks with strong human advantage
             </p>
-            <p className="text-[12px] text-[var(--muted)] mt-2">
+            <p className="text-sm text-[var(--muted)] mt-2">
               These tasks won&apos;t face meaningful automation pressure for 5+ years and represent
               the foundation for your long-term career resilience.
             </p>
@@ -257,8 +257,8 @@ export default function DurableSkillsSection({
                     const d = payload[0].payload;
                     return (
                       <div className="bg-white rounded-lg border border-black/[0.08] shadow-lg p-2">
-                        <p className="text-[12px] font-medium">{d.category}</p>
-                        <p className="text-[11px] text-[var(--muted)]">
+                        <p className="text-sm font-medium">{d.category}</p>
+                        <p className="text-xs text-[var(--muted)]">
                           {d.timeShare}% of your time · durability: {d.durability}/100
                         </p>
                       </div>
@@ -290,11 +290,11 @@ export default function DurableSkillsSection({
               <div className="skill-icon text-[#10B981]">
                 <SkillIcon type={skill.icon} />
               </div>
-              <h4 className="text-[13px] font-semibold text-[var(--foreground)]">
+              <h4 className="text-base font-semibold text-[var(--foreground)]">
                 {skill.name}
               </h4>
             </div>
-            <p className="text-[12px] text-[var(--muted)] leading-relaxed">
+            <p className="text-sm text-[var(--muted)] leading-relaxed">
               {skill.description}
             </p>
           </div>
@@ -303,7 +303,7 @@ export default function DurableSkillsSection({
 
       {/* Closing message */}
       <div className="closing-message mt-8 rounded-xl bg-black/[0.02] border border-black/[0.06] p-6 max-w-2xl">
-        <p className="text-[13px] text-[var(--foreground)] leading-relaxed">
+        <p className="text-base text-[var(--foreground)] leading-relaxed">
           <strong>The bottom line:</strong> AI will automate tasks, not jobs. The professionals who thrive will
           be the ones who deliberately shift their time toward the tasks that are hardest to automate
           and get better at working <em>with</em> AI on everything else. The goal isn&apos;t to compete

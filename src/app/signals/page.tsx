@@ -35,7 +35,7 @@ export default function SignalsPage() {
       {/* Jump link → productivity-paths */}
       <a
         href="#productivity-paths"
-        className="group flex items-center gap-2 text-[15px] font-semibold text-[var(--accent)] hover:text-[#5C61F6] transition-colors -mt-2"
+        className="group flex items-center gap-2 text-lg font-semibold text-[var(--accent)] hover:text-[#5C61F6] transition-colors -mt-2"
       >
         What happens when workers get more productive?
         <svg
@@ -60,14 +60,14 @@ export default function SignalsPage() {
       {/* Anthropic: Theoretical vs Observed AI Coverage */}
       <section className="border border-black/[0.06] rounded-xl p-6 sm:p-8 bg-white/50">
         <div className="mb-4">
-          <span className="text-[11px] font-bold uppercase tracking-wider text-[var(--accent)] bg-[var(--accent-light)] px-2.5 py-1 rounded-full">
+          <span className="text-xs font-bold uppercase tracking-wider text-[var(--accent)] bg-[var(--accent-light)] px-2.5 py-1 rounded-full">
             Tier 1 &middot; Anthropic Research
           </span>
         </div>
         <h3 className="text-[20px] sm:text-[24px] font-bold text-[var(--foreground)] leading-tight mb-2">
           Theoretical Capability vs. Observed Exposure
         </h3>
-        <p className="text-[14px] text-[var(--muted)] leading-relaxed mb-6 max-w-2xl">
+        <p className="text-md text-[var(--muted)] leading-relaxed mb-6 max-w-2xl">
           The gap between what AI <em>could</em> automate and what it <em>actually</em> handles
           today is enormous. Blue shows the share of tasks LLMs could theoretically perform;
           red shows measured usage from Claude API traffic. The discrepancy suggests we are
@@ -88,7 +88,7 @@ export default function SignalsPage() {
             className="w-full max-w-[600px] rounded-lg"
           />
         </div>
-        <p className="text-[12px] text-[var(--muted)] mt-4 text-center">
+        <p className="text-sm text-[var(--muted)] mt-4 text-center">
           Source:{" "}
           <a
             href="https://www.anthropic.com/research/labor-market-impacts"
@@ -105,14 +105,14 @@ export default function SignalsPage() {
       {/* Section: Industry Cards */}
       <section>
         <div className="mb-6">
-          <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
+          <h2 className="text-4xl sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
             AI Automation by Industry
           </h2>
-          <p className="text-[15px] text-[var(--muted)] mt-2 max-w-2xl">
+          <p className="text-lg text-[var(--muted)] mt-2 max-w-2xl">
             Click any industry to see the full breakdown: tool adoption trends,
             employment data, and which specific tools are driving growth.
           </p>
-          <p className="text-[13px] text-[var(--muted)] mt-2">
+          <p className="text-base text-[var(--muted)] mt-2">
             Each industry follows one of three paths:{" "}
             <a
               href="#productivity-paths"
@@ -139,10 +139,10 @@ export default function SignalsPage() {
       {/* Section: Full Package Table */}
       <section>
         <div className="mb-6">
-          <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
+          <h2 className="text-4xl sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
             All Tracked Tools
           </h2>
-          <p className="text-[15px] text-[var(--muted)] mt-2 max-w-2xl">
+          <p className="text-lg text-[var(--muted)] mt-2 max-w-2xl">
             Click column headers to sort. Surging badges flag tools with
             sustained rapid growth.
           </p>

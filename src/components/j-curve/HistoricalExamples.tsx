@@ -107,7 +107,7 @@ export default function HistoricalExamples() {
           <button
             key={ex.id}
             onClick={() => switchTab(ex.id)}
-            className="flex-1 text-center py-2 px-3 rounded-md text-[12px] font-bold uppercase tracking-wider transition-all"
+            className="flex-1 text-center py-2 px-3 rounded-md text-sm font-bold uppercase tracking-wider transition-all"
             style={{
               backgroundColor:
                 active === ex.id ? ex.color + "15" : "transparent",
@@ -116,7 +116,7 @@ export default function HistoricalExamples() {
             }}
           >
             {ex.technology}
-            <span className="block text-[10px] font-medium opacity-60 mt-0.5 normal-case tracking-normal">
+            <span className="block text-2xs font-medium opacity-60 mt-0.5 normal-case tracking-normal">
               {ex.era}
             </span>
           </button>
@@ -133,7 +133,7 @@ export default function HistoricalExamples() {
       >
         {/* Key fact banner */}
         <div
-          className="px-4 py-2.5 text-[12px] font-medium"
+          className="px-4 py-2.5 text-sm font-medium"
           style={{
             backgroundColor: example.color + "10",
             color: example.color,
@@ -146,7 +146,7 @@ export default function HistoricalExamples() {
           {/* Timeline bar */}
           <div className="flex items-center gap-2">
             <div
-              className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider px-2 py-1 rounded"
+              className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider px-2 py-1 rounded"
               style={{ backgroundColor: example.color + "10", color: example.color }}
             >
               <svg
@@ -162,7 +162,7 @@ export default function HistoricalExamples() {
               </svg>
               {example.id === "ai" ? "Ongoing" : example.investmentYears}
             </div>
-            <span className="text-[11px] text-[var(--muted)]">
+            <span className="text-xs text-[var(--muted)]">
               {example.id === "ai"
                 ? "investment phase"
                 : "from introduction to productivity surge"}
@@ -173,20 +173,20 @@ export default function HistoricalExamples() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {/* Investment phase */}
             <div>
-              <h4 className="text-[11px] font-bold uppercase tracking-wider text-[var(--muted)] mb-1.5">
+              <h4 className="text-xs font-bold uppercase tracking-wider text-[var(--muted)] mb-1.5">
                 Investment Phase
               </h4>
-              <p className="text-[13px] text-[var(--foreground)] leading-relaxed">
+              <p className="text-base text-[var(--foreground)] leading-relaxed">
                 {example.investmentPhase}
               </p>
             </div>
 
             {/* The paradox */}
             <div>
-              <h4 className="text-[11px] font-bold uppercase tracking-wider text-[var(--muted)] mb-1.5">
+              <h4 className="text-xs font-bold uppercase tracking-wider text-[var(--muted)] mb-1.5">
                 The Paradox
               </h4>
-              <p className="text-[13px] text-[var(--foreground)] leading-relaxed italic">
+              <p className="text-base text-[var(--foreground)] leading-relaxed italic">
                 {example.paradox}
               </p>
             </div>
@@ -197,24 +197,24 @@ export default function HistoricalExamples() {
             className="rounded-md px-3 py-2.5"
             style={{ backgroundColor: example.color + "08" }}
           >
-            <h4 className="text-[11px] font-bold uppercase tracking-wider text-[var(--muted)] mb-1">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-[var(--muted)] mb-1">
               The Payoff ({example.payoffYears})
             </h4>
-            <p className="text-[13px] text-[var(--foreground)] leading-relaxed">
+            <p className="text-base text-[var(--foreground)] leading-relaxed">
               {example.payoff}
             </p>
           </div>
 
           {/* Intangible investments */}
           <div>
-            <h4 className="text-[11px] font-bold uppercase tracking-wider text-[var(--muted)] mb-2">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-[var(--muted)] mb-2">
               Hidden Intangible Investments
             </h4>
             <div className="flex flex-wrap gap-1.5">
               {example.intangibles.map((item) => (
                 <span
                   key={item}
-                  className="text-[11px] font-medium px-2 py-1 rounded-full border"
+                  className="text-xs font-medium px-2 py-1 rounded-full border"
                   style={{
                     borderColor: example.color + "30",
                     color: example.color,

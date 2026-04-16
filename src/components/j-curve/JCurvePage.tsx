@@ -14,17 +14,17 @@ export default function JCurvePage() {
       <ReadingProgressBar />
       {/* ───── Header ───── */}
       <header className="mb-10">
-        <p className="text-[12px] font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
+        <p className="text-sm font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
           Explainer
         </p>
         <h1
-          className="text-[36px] sm:text-[44px] font-extrabold text-[var(--foreground)] leading-[1.1] tracking-tight mb-4"
+          className="text-5xl sm:text-6xl font-extrabold text-[var(--foreground)] leading-[1.1] tracking-tight mb-4"
           style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
         >
           The Productivity J-Curve
         </h1>
         <p
-          className="text-[18px] sm:text-[20px] text-[var(--muted)] leading-relaxed mb-5"
+          className="text-2xl sm:text-[20px] text-[var(--muted)] leading-relaxed mb-5"
           style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
         >
           Why transformative technologies make productivity look{" "}
@@ -35,7 +35,7 @@ export default function JCurvePage() {
         {/* Thesis card */}
         <div className="border-l-4 border-[var(--accent)] bg-[var(--accent-light)] rounded-r-lg px-5 py-4">
           <p
-            className="text-[15px] sm:text-[16px] text-[var(--foreground)] leading-relaxed font-medium"
+            className="text-lg sm:text-xl text-[var(--foreground)] leading-relaxed font-medium"
             style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
           >
             When a major new technology arrives, measured productivity often
@@ -59,10 +59,10 @@ export default function JCurvePage() {
       <section className="mb-12">
         <div className="border-t border-black/[0.06] pt-8">
           <SectionLabel number="01" />
-          <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
             The Productivity Paradox
           </h2>
-          <div className="space-y-4 text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
+          <div className="space-y-4 text-md text-[var(--muted)] leading-[1.75] mb-6">
             <p>
               In 1987, economist Robert Solow made a famous observation about
               computers: you could see them everywhere except in the
@@ -114,10 +114,10 @@ export default function JCurvePage() {
       <section className="mb-12">
         <div className="border-t border-black/[0.06] pt-8">
           <SectionLabel number="02" />
-          <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
             The J-Curve Explained
           </h2>
-          <p className="text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
+          <p className="text-md text-[var(--muted)] leading-[1.75] mb-6">
             The J-Curve describes the systematic error in how we measure
             productivity when a{" "}
             <Tooltip
@@ -137,10 +137,10 @@ export default function JCurvePage() {
       <section className="mb-12">
         <div className="border-t border-black/[0.06] pt-8">
           <SectionLabel number="03" />
-          <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
             Why It Happens: The Intangible Investment Gap
           </h2>
-          <div className="space-y-4 text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
+          <div className="space-y-4 text-md text-[var(--muted)] leading-[1.75] mb-6">
             <p>
               General-purpose technologies don&rsquo;t just plug in and
               produce value. They require enormous{" "}
@@ -168,7 +168,7 @@ export default function JCurvePage() {
           {/* Pull-quote */}
           <blockquote className="my-8 border-l-3 border-[var(--accent)] pl-5 py-1">
             <p
-              className="text-[16px] text-[var(--foreground)] leading-[1.7] font-medium"
+              className="text-xl text-[var(--foreground)] leading-[1.7] font-medium"
               style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
             >
               The economy looks like it&rsquo;s stagnating when it&rsquo;s
@@ -177,7 +177,7 @@ export default function JCurvePage() {
             </p>
           </blockquote>
 
-          <div className="space-y-4 text-[14px] text-[var(--muted)] leading-[1.75]">
+          <div className="space-y-4 text-md text-[var(--muted)] leading-[1.75]">
             <p>
               <strong className="text-[var(--foreground)]">Early on</strong>,
               measured productivity is <em>understated</em> because firms
@@ -200,14 +200,14 @@ export default function JCurvePage() {
       {/* ───── Aside: The Math (Simplified) ───── */}
       <aside className="mb-12 rounded-lg border border-black/[0.08] bg-[var(--accent-light)] px-5 py-5">
         <div className="flex items-center gap-2 mb-3">
-          <span className="text-[11px] font-bold uppercase tracking-widest text-[var(--accent)]">
+          <span className="text-xs font-bold uppercase tracking-widest text-[var(--accent)]">
             The accounting identity
           </span>
-          <span className="text-[10px] text-[var(--muted)] opacity-60">
+          <span className="text-2xs text-[var(--muted)] opacity-60">
             (optional detail)
           </span>
         </div>
-        <p className="text-[13px] text-[var(--muted)] leading-[1.75] mb-4">
+        <p className="text-base text-[var(--muted)] leading-[1.75] mb-4">
           Standard productivity measurement uses only measured inputs.
           When firms adopt a general-purpose technology, they also build
           unmeasured intangible capital, creating a systematic gap:
@@ -235,7 +235,7 @@ export default function JCurvePage() {
           />
         </div>
 
-        <p className="text-[13px] text-[var(--muted)] leading-[1.75]">
+        <p className="text-base text-[var(--muted)] leading-[1.75]">
           Three factors deepen the J-curve: large adjustment costs
           (reorganization is expensive), correlated investments (many
           types happen at once), and high investment shares during
@@ -247,10 +247,10 @@ export default function JCurvePage() {
       <section className="mb-12">
         <div className="border-t border-black/[0.06] pt-8">
           <SectionLabel number="04" />
-          <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
             Three Waves, One Pattern
           </h2>
-          <p className="text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
+          <p className="text-md text-[var(--muted)] leading-[1.75] mb-6">
             The J-curve has played out at least twice before. Each time,
             observers declared the technology overhyped during the
             investment phase, only to see a productivity surge once
@@ -265,10 +265,10 @@ export default function JCurvePage() {
       <section className="mb-12">
         <div className="border-t border-black/[0.06] pt-8">
           <SectionLabel number="05" />
-          <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
             What This Means for AI Today
           </h2>
-          <div className="space-y-4 text-[14px] text-[var(--muted)] leading-[1.75] mb-6">
+          <div className="space-y-4 text-md text-[var(--muted)] leading-[1.75] mb-6">
             <p>
               If the J-curve framework is correct, the current period of
               apparently disappointing AI productivity gains is not evidence
@@ -331,7 +331,7 @@ export default function JCurvePage() {
         <div className="border-t border-black/[0.06] pt-8">
           <blockquote className="border-l-4 border-[var(--accent)] bg-[var(--accent-light)] rounded-r-lg px-5 py-5 mb-6">
             <p
-              className="text-[15px] sm:text-[16px] text-[var(--foreground)] leading-[1.75] font-medium"
+              className="text-lg sm:text-xl text-[var(--foreground)] leading-[1.75] font-medium"
               style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
             >
               The productivity J-curve resolves an apparent paradox: how can
@@ -343,10 +343,10 @@ export default function JCurvePage() {
 
           {/* Source citation */}
           <div className="border border-black/[0.06] rounded-lg px-4 py-3">
-            <p className="text-[11px] font-bold uppercase tracking-wider text-[var(--muted)] mb-2">
+            <p className="text-xs font-bold uppercase tracking-wider text-[var(--muted)] mb-2">
               Source
             </p>
-            <p className="text-[13px] text-[var(--foreground)] leading-relaxed mb-1">
+            <p className="text-base text-[var(--foreground)] leading-relaxed mb-1">
               <strong>Brynjolfsson, E., Rock, D., &amp; Syverson, C.</strong>{" "}
               (2021). The Productivity J-Curve: How Intangibles Complement
               General Purpose Technologies.{" "}
@@ -358,7 +358,7 @@ export default function JCurvePage() {
                 href="https://www.nber.org/papers/w25148"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[11px] font-medium text-[var(--accent)] hover:underline"
+                className="text-xs font-medium text-[var(--accent)] hover:underline"
               >
                 NBER Working Paper w25148 &rarr;
               </a>
@@ -366,7 +366,7 @@ export default function JCurvePage() {
                 href="https://www.aeaweb.org/articles?id=10.1257/mac.20180386"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[11px] font-medium text-[var(--accent)] hover:underline"
+                className="text-xs font-medium text-[var(--accent)] hover:underline"
               >
                 Published Version (AEJ:Macro) &rarr;
               </a>
@@ -374,7 +374,7 @@ export default function JCurvePage() {
                 href="https://ide.mit.edu/sites/default/files/publications/2019-04JCurvebrief.final2_.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[11px] font-medium text-[var(--accent)] hover:underline"
+                className="text-xs font-medium text-[var(--accent)] hover:underline"
               >
                 MIT IDE Policy Brief &rarr;
               </a>
@@ -403,7 +403,7 @@ function Tooltip({ label, tip }: { label: string; tip: string }) {
       <span className="underline decoration-dotted decoration-[var(--accent)]/50 underline-offset-2 cursor-help">
         {label}
       </span>
-      <span className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-[320px] rounded-lg bg-[var(--foreground)] text-white text-[11px] leading-[1.6] px-4 py-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-50 shadow-lg">
+      <span className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-[320px] rounded-lg bg-[var(--foreground)] text-white text-xs leading-[1.6] px-4 py-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-50 shadow-lg">
         {tip}
         <span className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-[var(--foreground)]" />
       </span>
@@ -413,7 +413,7 @@ function Tooltip({ label, tip }: { label: string; tip: string }) {
 
 function SectionLabel({ number }: { number: string }) {
   return (
-    <span className="text-[11px] font-bold uppercase tracking-widest text-[var(--accent)] mb-3 block">
+    <span className="text-xs font-bold uppercase tracking-widest text-[var(--accent)] mb-3 block">
       {number}
     </span>
   );
@@ -482,10 +482,10 @@ function StatCard({
           value
         )}
       </p>
-      <p className="text-[11px] font-bold text-[var(--foreground)] mt-0.5">
+      <p className="text-xs font-bold text-[var(--foreground)] mt-0.5">
         {label}
       </p>
-      <p className="text-[10px] text-[var(--muted)]">{sublabel}</p>
+      <p className="text-2xs text-[var(--muted)]">{sublabel}</p>
     </div>
   );
 }
@@ -538,15 +538,15 @@ function EquationCard({
         backgroundColor: color + "08",
       }}
     >
-      <p className="text-[11px] font-bold uppercase tracking-wider mb-1" style={{ color }}>
+      <p className="text-xs font-bold uppercase tracking-wider mb-1" style={{ color }}>
         {label}
       </p>
       <p
-        className="text-[14px] font-mono font-bold text-[var(--foreground)]"
+        className="text-md font-mono font-bold text-[var(--foreground)]"
       >
         {equation}
       </p>
-      <p className="text-[11px] text-[var(--muted)] mt-0.5">{note}</p>
+      <p className="text-xs text-[var(--muted)] mt-0.5">{note}</p>
     </div>
   );
 }
@@ -568,14 +568,14 @@ function ImplicationCard({
       style={{ borderColor: color + "25" }}
     >
       <div className="flex items-center gap-2 mb-1.5">
-        <span className="text-[16px]" style={{ color }}>
+        <span className="text-xl" style={{ color }}>
           {icon}
         </span>
-        <h4 className="text-[13px] font-bold text-[var(--foreground)]">
+        <h4 className="text-base font-bold text-[var(--foreground)]">
           {title}
         </h4>
       </div>
-      <p className="text-[12px] text-[var(--muted)] leading-relaxed">{body}</p>
+      <p className="text-sm text-[var(--muted)] leading-relaxed">{body}</p>
     </div>
   );
 }

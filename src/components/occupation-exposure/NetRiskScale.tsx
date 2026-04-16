@@ -35,10 +35,10 @@ const ZONES = [
 export default function NetRiskScale() {
   return (
     <div>
-      <h3 className="text-[13px] font-bold text-white/90 mb-1">
+      <h3 className="text-base font-bold text-white/90 mb-1">
         Reading the net risk score
       </h3>
-      <p className="text-[12px] text-white/50 leading-snug mb-4">
+      <p className="text-sm text-white/50 leading-snug mb-4">
         The score asks: how much of this job can AI do, and how fast are
         companies adopting it? Then it weighs that against protective factors:
         whether demand for the job is growing, whether AI makes workers
@@ -57,9 +57,9 @@ export default function NetRiskScale() {
           }}
         />
         <div className="flex justify-between mt-1">
-          <span className="text-[10px] text-white/40">1</span>
-          <span className="text-[10px] text-white/40">5</span>
-          <span className="text-[10px] text-white/40">10</span>
+          <span className="text-2xs text-white/40">1</span>
+          <span className="text-2xs text-white/40">5</span>
+          <span className="text-2xs text-white/40">10</span>
         </div>
       </div>
 
@@ -76,19 +76,19 @@ export default function NetRiskScale() {
           >
             <div className="flex items-center gap-2 mb-1.5">
               <span
-                className="text-[18px] font-bold leading-none"
+                className="text-2xl font-bold leading-none"
                 style={{ color: zone.color }}
               >
                 {zone.range}
               </span>
               <span
-                className="text-[11px] font-semibold uppercase tracking-wide"
+                className="text-xs font-semibold uppercase tracking-wide"
                 style={{ color: zone.color }}
               >
                 {zone.label}
               </span>
             </div>
-            <p className="text-[11px] text-white/50 leading-[1.6]">
+            <p className="text-xs text-white/50 leading-[1.6]">
               {zone.description}
             </p>
           </div>
@@ -97,13 +97,13 @@ export default function NetRiskScale() {
 
       {/* Task visualizer CTA */}
       <div className="mt-4 rounded-lg border border-white/[0.08] bg-white/[0.04] px-4 py-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-        <p className="text-[12px] text-white/50 leading-snug">
+        <p className="text-sm text-white/50 leading-snug">
           Want to see how AI affects the specific tasks in your job, not just the
           occupation group?
         </p>
         <Link
           href="/task-visualizer"
-          className="inline-flex items-center gap-1.5 text-[13px] font-bold text-[var(--accent)] hover:underline whitespace-nowrap flex-shrink-0"
+          className="inline-flex items-center gap-1.5 text-base font-bold text-[var(--accent)] hover:underline whitespace-nowrap flex-shrink-0"
         >
           Explore by job title
           <svg

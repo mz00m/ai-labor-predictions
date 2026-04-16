@@ -33,12 +33,12 @@ export default function ShareBar({ jobTitle, jobId }: Props) {
 
   return (
     <div className="flex items-center gap-1.5">
-      <span className="text-[10px] text-[var(--muted)] mr-1">Share</span>
+      <span className="text-2xs text-[var(--muted)] mr-1">Share</span>
 
       {/* Copy link */}
       <button
         onClick={handleCopy}
-        className="inline-flex items-center gap-1 px-2 py-1 rounded-md text-[10px] text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-black/[0.03] transition-colors"
+        className="inline-flex items-center gap-1 px-2 py-1 rounded-md text-2xs text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-black/[0.03] transition-colors"
         title="Copy link"
       >
         {copied ? (
@@ -64,7 +64,7 @@ export default function ShareBar({ jobTitle, jobId }: Props) {
         href={twitterUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center gap-1 px-2 py-1 rounded-md text-[10px] text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-black/[0.03] transition-colors"
+        className="inline-flex items-center gap-1 px-2 py-1 rounded-md text-2xs text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-black/[0.03] transition-colors"
         title="Share on X"
       >
         <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
@@ -78,7 +78,7 @@ export default function ShareBar({ jobTitle, jobId }: Props) {
         href={linkedinUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center gap-1 px-2 py-1 rounded-md text-[10px] text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-black/[0.03] transition-colors"
+        className="inline-flex items-center gap-1 px-2 py-1 rounded-md text-2xs text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-black/[0.03] transition-colors"
         title="Share on LinkedIn"
       >
         <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
@@ -90,7 +90,7 @@ export default function ShareBar({ jobTitle, jobId }: Props) {
       {/* Email */}
       <a
         href={emailUrl}
-        className="inline-flex items-center gap-1 px-2 py-1 rounded-md text-[10px] text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-black/[0.03] transition-colors"
+        className="inline-flex items-center gap-1 px-2 py-1 rounded-md text-2xs text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-black/[0.03] transition-colors"
         title="Share via email"
       >
         <svg width="12" height="12" viewBox="0 0 16 16" fill="none">

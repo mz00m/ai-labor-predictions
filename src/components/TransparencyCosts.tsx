@@ -67,10 +67,10 @@ export default function TransparencyCosts() {
   return (
     <div>
       <div className="mb-8">
-        <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
+        <h2 className="text-4xl sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
           What This Costs
         </h2>
-        <p className="text-[15px] text-[var(--muted)] mt-2 max-w-3xl">
+        <p className="text-lg text-[var(--muted)] mt-2 max-w-3xl">
           Full transparency on what it costs to build and run this site.
           Updated periodically as services change.
         </p>
@@ -79,13 +79,13 @@ export default function TransparencyCosts() {
       <div className="space-y-8">
         {/* Total callout */}
         <div className="border border-black/[0.06] rounded-lg px-5 py-5 bg-white max-w-3xl">
-          <p className="text-[13px] font-bold uppercase tracking-widest text-[var(--accent)] mb-1">
+          <p className="text-base font-bold uppercase tracking-widest text-[var(--accent)] mb-1">
             Total Cost to Date
           </p>
-          <p className="text-[36px] sm:text-[44px] font-extrabold tracking-tight text-[var(--foreground)] leading-none">
+          <p className="text-5xl sm:text-6xl font-extrabold tracking-tight text-[var(--foreground)] leading-none">
             {formatCurrency(totalCost)}
           </p>
-          <p className="text-[13px] text-[var(--muted)] mt-2">
+          <p className="text-base text-[var(--muted)] mt-2">
             Since {formatDate(data.projectStartDate)} &middot; Last updated{" "}
             {formatDate(data.lastUpdated)}
           </p>
@@ -93,20 +93,20 @@ export default function TransparencyCosts() {
 
         {/* Paid services breakdown */}
         <div className="max-w-3xl">
-          <h3 className="text-[18px] font-bold text-[var(--foreground)] mb-3">
+          <h3 className="text-2xl font-bold text-[var(--foreground)] mb-3">
             Paid Services
           </h3>
           <div className="border border-black/[0.06] rounded-lg overflow-hidden bg-white">
             <table className="w-full text-left">
               <thead>
                 <tr className="border-b border-black/[0.06] bg-black/[0.02]">
-                  <th className="text-[12px] font-semibold text-[var(--muted)] uppercase tracking-wider px-4 py-2.5">
+                  <th className="text-sm font-semibold text-[var(--muted)] uppercase tracking-wider px-4 py-2.5">
                     Service
                   </th>
-                  <th className="text-[12px] font-semibold text-[var(--muted)] uppercase tracking-wider px-4 py-2.5 text-right">
+                  <th className="text-sm font-semibold text-[var(--muted)] uppercase tracking-wider px-4 py-2.5 text-right">
                     Monthly
                   </th>
-                  <th className="text-[12px] font-semibold text-[var(--muted)] uppercase tracking-wider px-4 py-2.5 text-right">
+                  <th className="text-sm font-semibold text-[var(--muted)] uppercase tracking-wider px-4 py-2.5 text-right">
                     Total
                   </th>
                 </tr>
@@ -124,20 +124,20 @@ export default function TransparencyCosts() {
                       }
                     >
                       <td className="px-4 py-3">
-                        <p className="text-[14px] font-medium text-[var(--foreground)]">
+                        <p className="text-md font-medium text-[var(--foreground)]">
                           {service.name}
                         </p>
-                        <p className="text-[12px] text-[var(--muted)] mt-0.5">
+                        <p className="text-sm text-[var(--muted)] mt-0.5">
                           {service.notes}
                         </p>
                       </td>
                       <td className="px-4 py-3 text-right whitespace-nowrap">
                         {service.costType === "recurring" ? (
-                          <span className="text-[14px] text-[var(--foreground)]">
+                          <span className="text-md text-[var(--foreground)]">
                             {formatCurrency(service.monthlyCost)}
                           </span>
                         ) : (
-                          <span className="text-[12px] text-[var(--muted)]">
+                          <span className="text-sm text-[var(--muted)]">
                             {service.costType === "one-time"
                               ? "One-time"
                               : "Usage-based"}
@@ -145,7 +145,7 @@ export default function TransparencyCosts() {
                         )}
                       </td>
                       <td className="px-4 py-3 text-right whitespace-nowrap">
-                        <span className="text-[14px] font-semibold text-[var(--foreground)]">
+                        <span className="text-md font-semibold text-[var(--foreground)]">
                           {formatCurrency(cumulative)}
                         </span>
                       </td>
@@ -159,10 +159,10 @@ export default function TransparencyCosts() {
 
         {/* Free services */}
         <div className="max-w-3xl">
-          <h3 className="text-[18px] font-bold text-[var(--foreground)] mb-3">
+          <h3 className="text-2xl font-bold text-[var(--foreground)] mb-3">
             Free Services ({freeServices.length})
           </h3>
-          <p className="text-[14px] text-[var(--muted)] leading-relaxed mb-3">
+          <p className="text-md text-[var(--muted)] leading-relaxed mb-3">
             These APIs and tools are used at no cost via free tiers or open
             access.
           </p>
@@ -170,7 +170,7 @@ export default function TransparencyCosts() {
             {freeServices.map((service) => (
               <span
                 key={service.name}
-                className="text-[12px] bg-black/[0.04] px-2.5 py-1.5 rounded text-[var(--foreground)] font-medium"
+                className="text-sm bg-black/[0.04] px-2.5 py-1.5 rounded text-[var(--foreground)] font-medium"
               >
                 {service.name}
               </span>

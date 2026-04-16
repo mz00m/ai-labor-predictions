@@ -175,7 +175,7 @@ export default function RevolutionCards() {
           <button
             key={r.id}
             onClick={() => handleTabChange(r.id)}
-            className={`revolution-tab flex items-center gap-1.5 px-2.5 py-1.5 rounded-md text-[11px] sm:text-[12px] font-medium border whitespace-nowrap cursor-pointer ${
+            className={`revolution-tab flex items-center gap-1.5 px-2.5 py-1.5 rounded-md text-xs sm:text-sm font-medium border whitespace-nowrap cursor-pointer ${
               activeTab === r.id
                 ? "text-white border-transparent"
                 : "text-[var(--muted)] border-black/[0.08] hover:border-black/[0.15] bg-white"
@@ -219,17 +219,17 @@ export default function RevolutionCards() {
             </div>
             <div>
               <h3
-                className="text-[15px] font-bold"
+                className="text-lg font-bold"
                 style={{ color: active.color }}
               >
                 {active.title}
                 {active.closestAnalog && (
-                  <span className="ml-2 text-[11px] font-semibold bg-white/80 px-2 py-0.5 rounded-full">
+                  <span className="ml-2 text-xs font-semibold bg-white/80 px-2 py-0.5 rounded-full">
                     Closest AI Analog
                   </span>
                 )}
               </h3>
-              <span className="text-[12px] text-[var(--muted)]">
+              <span className="text-sm text-[var(--muted)]">
                 {active.period}
               </span>
             </div>
@@ -264,12 +264,12 @@ export default function RevolutionCards() {
           >
             <div className="flex items-start gap-2">
               <span
-                className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full text-white shrink-0 mt-0.5"
+                className="text-2xs font-bold uppercase tracking-wider px-2 py-0.5 rounded-full text-white shrink-0 mt-0.5"
                 style={{ backgroundColor: active.color }}
               >
                 AI Parallel
               </span>
-              <p className="text-[13px] text-[var(--foreground)] leading-relaxed font-medium">
+              <p className="text-base text-[var(--foreground)] leading-relaxed font-medium">
                 {active.aiParallel}
               </p>
             </div>
@@ -283,10 +283,10 @@ export default function RevolutionCards() {
 function Row({ label, value }: { label: string; value: string }) {
   return (
     <div>
-      <dt className="text-[11px] font-bold uppercase tracking-wider text-[var(--muted)] mb-1">
+      <dt className="text-xs font-bold uppercase tracking-wider text-[var(--muted)] mb-1">
         {label}
       </dt>
-      <dd className="text-[13px] text-[var(--foreground)] leading-relaxed">
+      <dd className="text-base text-[var(--foreground)] leading-relaxed">
         {value}
       </dd>
     </div>

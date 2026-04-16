@@ -15,12 +15,12 @@ export default function Error({
       <h2 className="text-[20px] font-bold text-[var(--foreground)] mb-2">
         Something went wrong
       </h2>
-      <p className="text-[14px] text-[var(--muted)] max-w-md mb-6">
+      <p className="text-md text-[var(--muted)] max-w-md mb-6">
         An unexpected error occurred. This has been logged.
       </p>
       <button
         onClick={() => reset()}
-        className="px-5 py-2 text-[13px] font-semibold rounded-md bg-[var(--accent)] text-white hover:opacity-90"
+        className="px-5 py-2 text-base font-semibold rounded-md bg-[var(--accent)] text-white hover:opacity-90"
       >
         Try again
       </button>

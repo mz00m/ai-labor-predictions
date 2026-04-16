@@ -53,13 +53,13 @@ export default function IndustrySpeedSlider({
   return (
     <div className="mt-5 pt-5 border-t border-black/[0.06]">
       <div className="flex items-center justify-between mb-1.5">
-        <h4 className="text-[13px] font-semibold text-[var(--foreground)]">
+        <h4 className="text-base font-semibold text-[var(--foreground)]">
           Industry adoption speed
         </h4>
         {isCustom && (
           <button
             onClick={handleReset}
-            className="text-[10px] text-[var(--muted)] hover:text-[var(--foreground)] underline"
+            className="text-2xs text-[var(--muted)] hover:text-[var(--foreground)] underline"
           >
             Reset to {category} default
           </button>
@@ -69,16 +69,16 @@ export default function IndustrySpeedSlider({
       {/* Current value display */}
       <div className="flex items-baseline gap-2 mb-2">
         <span
-          className="text-[13px] font-bold"
+          className="text-base font-bold"
           style={{ color }}
         >
           {currentLabel}
         </span>
-        <span className="text-[11px] text-[var(--muted)] tabular-nums">
+        <span className="text-xs text-[var(--muted)] tabular-nums">
           {value.toFixed(2)}x
         </span>
         {!isCustom && industryData && (
-          <span className="text-[10px] text-[var(--muted)] opacity-60">
+          <span className="text-2xs text-[var(--muted)] opacity-60">
             ({category} default)
           </span>
         )}
@@ -116,7 +116,7 @@ export default function IndustrySpeedSlider({
       </div>
 
       {/* Methodology note */}
-      <p className="text-[10px] text-[var(--muted)] mt-2 leading-relaxed">
+      <p className="text-2xs text-[var(--muted)] mt-2 leading-relaxed">
         How quickly {category.toLowerCase()} firms typically adopt new technology.
         {industryData && (
           <> {industryData.rationale}.</>

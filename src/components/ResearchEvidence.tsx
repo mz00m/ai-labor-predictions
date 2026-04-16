@@ -427,15 +427,15 @@ function StudyModal({
         <div className="px-6 pt-6 pb-5">
           <div className="flex items-start justify-between gap-4 pr-8">
             <div>
-              <h3 className="text-[18px] font-bold text-[var(--foreground)]">
+              <h3 className="text-2xl font-bold text-[var(--foreground)]">
                 {study.authors} ({study.year})
               </h3>
-              <p className="text-[13px] text-[var(--muted)] mt-0.5">
+              <p className="text-base text-[var(--muted)] mt-0.5">
                 {study.title}
               </p>
             </div>
             <span
-              className="inline-flex items-center px-3 py-1 rounded-full text-[14px] font-bold text-white shrink-0"
+              className="inline-flex items-center px-3 py-1 rounded-full text-md font-bold text-white shrink-0"
               style={{ backgroundColor: color }}
             >
               {isMicro ? micro!.effectLabel : macro!.effectLabel}
@@ -445,7 +445,7 @@ function StudyModal({
           {isMicro && (
             <div className="mt-3">
               <span
-                className="inline-block text-[11px] font-bold uppercase tracking-widest px-2 py-1 rounded"
+                className="inline-block text-xs font-bold uppercase tracking-widest px-2 py-1 rounded"
                 style={{ color: "#2e6da4", backgroundColor: "rgba(46,109,164,0.08)" }}
               >
                 {micro!.domain}
@@ -456,7 +456,7 @@ function StudyModal({
           {!isMicro && (
             <div className="mt-3">
               <span
-                className="inline-block text-[11px] font-bold uppercase tracking-widest px-2 py-1 rounded"
+                className="inline-block text-xs font-bold uppercase tracking-widest px-2 py-1 rounded"
                 style={{ color, backgroundColor: `${color}15` }}
               >
                 {macro!.metric}
@@ -465,19 +465,19 @@ function StudyModal({
           )}
 
           <div className="mt-4 pt-4 border-t border-black/[0.06]">
-            <p className="text-[13px] text-[var(--foreground)] leading-relaxed">
+            <p className="text-base text-[var(--foreground)] leading-relaxed">
               {study.finding}
             </p>
           </div>
 
           {"note" in study && study.note && (
-            <p className="text-[12px] text-[var(--muted)] mt-3 italic">
+            <p className="text-sm text-[var(--muted)] mt-3 italic">
               {study.note}
             </p>
           )}
 
           <div className="mt-4 pt-4 border-t border-black/[0.06]">
-            <p className="text-[11px] text-[var(--muted)]">
+            <p className="text-xs text-[var(--muted)]">
               {study.citation}
             </p>
           </div>
@@ -487,7 +487,7 @@ function StudyModal({
               href={study.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-[13px] font-bold text-[var(--foreground)] hover:text-[var(--accent)] underline underline-offset-2"
+              className="inline-flex items-center gap-1.5 text-base font-bold text-[var(--foreground)] hover:text-[var(--accent)] underline underline-offset-2"
             >
               View Paper &rarr;
             </a>
@@ -523,10 +523,10 @@ function MicroBar({
     >
       {/* Label */}
       <div className="w-[140px] sm:w-[180px] shrink-0 text-right">
-        <span className="text-[12px] text-[var(--foreground)] font-medium leading-tight">
+        <span className="text-sm text-[var(--foreground)] font-medium leading-tight">
           {study.authors}
         </span>
-        <span className="text-[10px] text-[var(--muted)] ml-1">
+        <span className="text-2xs text-[var(--muted)] ml-1">
           ({study.year})
         </span>
       </div>
@@ -536,7 +536,7 @@ function MicroBar({
         {isNeg ? (
           <div className="flex items-center justify-end w-full">
             <span
-              className="text-[11px] font-bold mr-1.5 opacity-60 group-hover:opacity-100 transition-opacity"
+              className="text-xs font-bold mr-1.5 opacity-60 group-hover:opacity-100 transition-opacity"
               style={{ color }}
             >
               {study.effectLabel}
@@ -562,7 +562,7 @@ function MicroBar({
               }}
             />
             <span
-              className="text-[11px] font-bold ml-1.5 opacity-60 group-hover:opacity-100 transition-opacity"
+              className="text-xs font-bold ml-1.5 opacity-60 group-hover:opacity-100 transition-opacity"
               style={{ color }}
             >
               {study.effectLabel}
@@ -572,7 +572,7 @@ function MicroBar({
       </div>
 
       {/* Domain tag */}
-      <span className="hidden sm:inline text-[10px] text-[var(--muted)] w-[80px] shrink-0 truncate">
+      <span className="hidden sm:inline text-2xs text-[var(--muted)] w-[80px] shrink-0 truncate">
         {study.domain}
       </span>
     </button>
@@ -606,7 +606,7 @@ function MacroBar({
     >
       {/* Direction icon */}
       <span
-        className="text-[16px] font-bold shrink-0 w-5 text-center"
+        className="text-xl font-bold shrink-0 w-5 text-center"
         style={{ color }}
       >
         {icon}
@@ -614,29 +614,29 @@ function MacroBar({
 
       {/* Label */}
       <div className="w-[130px] sm:w-[170px] shrink-0">
-        <span className="text-[12px] text-[var(--foreground)] font-medium leading-tight">
+        <span className="text-sm text-[var(--foreground)] font-medium leading-tight">
           {study.authors}
         </span>
-        <span className="text-[10px] text-[var(--muted)] ml-1">
+        <span className="text-2xs text-[var(--muted)] ml-1">
           ({study.year})
         </span>
       </div>
 
       {/* Effect badge */}
       <span
-        className="text-[12px] font-bold px-2 py-0.5 rounded-full shrink-0"
+        className="text-sm font-bold px-2 py-0.5 rounded-full shrink-0"
         style={{ color, backgroundColor: `${color}15` }}
       >
         {study.effectLabel}
       </span>
 
       {/* Metric tag */}
-      <span className="hidden sm:inline text-[10px] text-[var(--muted)] flex-1 truncate">
+      <span className="hidden sm:inline text-2xs text-[var(--muted)] flex-1 truncate">
         {study.metric}
       </span>
 
       {/* Short finding */}
-      <span className="hidden md:inline text-[11px] text-[var(--muted)] max-w-[200px] truncate">
+      <span className="hidden md:inline text-xs text-[var(--muted)] max-w-[200px] truncate">
         {study.finding.slice(0, 80)}{study.finding.length > 80 ? "..." : ""}
       </span>
     </button>
@@ -676,10 +676,10 @@ export default function ResearchEvidence() {
     <section id="research-evidence" className="mt-12">
       {/* Section header */}
       <div className="mb-8">
-        <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
+        <h2 className="text-4xl sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
           What the research actually shows
         </h2>
-        <p className="text-[15px] text-[var(--muted)] mt-2 max-w-2xl">
+        <p className="text-lg text-[var(--muted)] mt-2 max-w-2xl">
           {MICRO_STUDIES.length} task &amp; firm studies on productivity and{" "}
           {MACRO_STUDIES.length} macro studies on economy-wide effects. The micro
           evidence leans heavily positive; early signs of macro gains are now
@@ -693,10 +693,10 @@ export default function ResearchEvidence() {
         <div className="border border-black/[0.06] rounded-lg bg-white p-5 sm:p-6">
           {/* Tile header */}
           <div className="mb-5">
-            <h3 className="text-[18px] font-bold text-[var(--foreground)]">
+            <h3 className="text-2xl font-bold text-[var(--foreground)]">
               Task &amp; Firm Productivity
             </h3>
-            <p className="text-[13px] text-[var(--muted)] mt-1">
+            <p className="text-base text-[var(--muted)] mt-1">
               RCTs, field experiments, and firm-level surveys measuring
               individual, team, and business productivity changes with AI tools
             </p>
@@ -704,18 +704,18 @@ export default function ResearchEvidence() {
 
           {/* Summary badges */}
           <div className="flex flex-wrap gap-2 mb-4">
-            <span className="text-[11px] font-bold px-2 py-1 rounded-full bg-emerald-50 text-emerald-700">
+            <span className="text-xs font-bold px-2 py-1 rounded-full bg-emerald-50 text-emerald-700">
               {positiveCount} positive
             </span>
-            <span className="text-[11px] font-bold px-2 py-1 rounded-full bg-red-50 text-red-600">
+            <span className="text-xs font-bold px-2 py-1 rounded-full bg-red-50 text-red-600">
               {negativeCount} negative
             </span>
             {neutralCount > 0 && (
-              <span className="text-[11px] font-bold px-2 py-1 rounded-full bg-gray-100 text-gray-500">
+              <span className="text-xs font-bold px-2 py-1 rounded-full bg-gray-100 text-gray-500">
                 {neutralCount} null
               </span>
             )}
-            <span className="text-[11px] font-bold px-2 py-1 rounded-full bg-purple-50 text-purple-700">
+            <span className="text-xs font-bold px-2 py-1 rounded-full bg-purple-50 text-purple-700">
               Median: +{medianEffect}%
             </span>
           </div>
@@ -733,7 +733,7 @@ export default function ResearchEvidence() {
           </div>
 
           {/* Axis label */}
-          <div className="flex justify-between text-[10px] text-[var(--muted)] mt-2 px-2">
+          <div className="flex justify-between text-2xs text-[var(--muted)] mt-2 px-2">
             <span className="ml-[140px] sm:ml-[180px]">0%</span>
             <span>Productivity change &rarr;</span>
           </div>
@@ -743,10 +743,10 @@ export default function ResearchEvidence() {
         <div className="border border-black/[0.06] rounded-lg bg-white p-5 sm:p-6">
           {/* Tile header */}
           <div className="mb-5">
-            <h3 className="text-[18px] font-bold text-[var(--foreground)]">
+            <h3 className="text-2xl font-bold text-[var(--foreground)]">
               Macro Productivity
             </h3>
-            <p className="text-[13px] text-[var(--muted)] mt-1">
+            <p className="text-base text-[var(--muted)] mt-1">
               Economy-wide studies measuring aggregate productivity gains:
               TFP, labor productivity, and time savings
             </p>
@@ -754,10 +754,10 @@ export default function ResearchEvidence() {
 
           {/* Summary */}
           <div className="flex flex-wrap gap-2 mb-4">
-            <span className="text-[11px] font-bold px-2 py-1 rounded-full bg-emerald-50 text-emerald-700">
+            <span className="text-xs font-bold px-2 py-1 rounded-full bg-emerald-50 text-emerald-700">
               {MACRO_STUDIES.filter((s) => s.direction === "positive").length} small positive
             </span>
-            <span className="text-[11px] font-bold px-2 py-1 rounded-full bg-gray-100 text-gray-600">
+            <span className="text-xs font-bold px-2 py-1 rounded-full bg-gray-100 text-gray-600">
               {MACRO_STUDIES.filter((s) => s.direction === "neutral").length} negligible
             </span>
           </div>
@@ -775,7 +775,7 @@ export default function ResearchEvidence() {
 
           {/* Key takeaway box */}
           <div className="mt-5 p-3 rounded-md bg-amber-50/50 border border-amber-200/30">
-            <p className="text-[12px] text-amber-900 leading-relaxed">
+            <p className="text-sm text-amber-900 leading-relaxed">
               <span className="font-bold">Key gap narrowing:</span>{" "}
               Micro studies show 14–56% individual productivity gains. BLS
               data now shows labor productivity 2.2% above pre-pandemic
@@ -787,7 +787,7 @@ export default function ResearchEvidence() {
       </div>
 
       {/* Source attribution */}
-      <p className="text-[13px] text-[var(--muted)] mt-4">
+      <p className="text-base text-[var(--muted)] mt-4">
         {MICRO_STUDIES.length + MACRO_STUDIES.length} studies &middot; Studies range from
         peer-reviewed (Science, QJE) to working papers &middot; Click any row for
         source

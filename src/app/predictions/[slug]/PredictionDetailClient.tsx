@@ -94,7 +94,7 @@ export default function PredictionDetailPage() {
   if (!prediction) {
     return (
       <div className="text-center py-20">
-        <h1 className="text-[28px] font-bold text-[var(--foreground)]">
+        <h1 className="text-4xl font-bold text-[var(--foreground)]">
           Prediction not found
         </h1>
         <Link
@@ -180,7 +180,7 @@ export default function PredictionDetailPage() {
   return (
     <div className="space-y-12">
       {/* Breadcrumb */}
-      <div className="flex items-center gap-2 text-[13px] text-[var(--muted)]">
+      <div className="flex items-center gap-2 text-base text-[var(--muted)]">
         <Link href="/" className="hover:text-[var(--foreground)] font-medium">
           Dashboard
         </Link>
@@ -192,7 +192,7 @@ export default function PredictionDetailPage() {
 
       {/* Header + Summary */}
       <div className="max-w-3xl">
-        <p className="text-[13px] font-bold uppercase tracking-widest text-[var(--muted)] mb-4">
+        <p className="text-base font-bold uppercase tracking-widest text-[var(--muted)] mb-4">
           {prediction.category === "displacement" ? "Job Displacement" : prediction.category === "wages" ? "Wage Impact" : prediction.category === "adoption" ? "AI Adoption" : "Other"} | {prediction.timeHorizon}
         </p>
         <h1 className="text-[30px] sm:text-[40px] font-black tracking-tight text-[var(--foreground)] leading-[1.08] mb-6">
@@ -207,23 +207,23 @@ export default function PredictionDetailPage() {
             return (
               <div className="mb-4">
                 <div className="flex items-baseline gap-3">
-                  <span className="stat-number text-[56px] sm:text-[72px] font-black text-[var(--foreground)] leading-none">
+                  <span className="stat-number text-7xl sm:text-[72px] font-black text-[var(--foreground)] leading-none">
                     {agg.mean > 0 && prediction.category === "wages" ? "+" : ""}
                     {Number.isInteger(agg.mean) ? agg.mean : agg.mean.toFixed(1)}
                     <span className="text-[24px] font-normal text-[var(--muted)] ml-1">{unitSuffix}</span>
                   </span>
                   {agg.min !== agg.max && (
-                    <span className="text-[18px] font-medium text-[var(--muted)]" style={{ opacity: 0.7 }}>
+                    <span className="text-2xl font-medium text-[var(--muted)]" style={{ opacity: 0.7 }}>
                       {agg.min}–{agg.max}{unitSuffix}
                     </span>
                   )}
                   {agg.trend !== "flat" && (
-                    <span className={`text-[16px] font-medium ${trendColorClass}`} style={{ opacity: 0.6 }}>
+                    <span className={`text-xl font-medium ${trendColorClass}`} style={{ opacity: 0.6 }}>
                       Trending {agg.trend === "up" ? "▲" : "▼"}
                     </span>
                   )}
                 </div>
-                <p className="text-[14px] text-[var(--muted)] mt-2">
+                <p className="text-md text-[var(--muted)] mt-2">
                   Weighted average across {filteredHistory.length} sources.{" "}
                   <span className="font-semibold text-[#16a34a]">
                     Observed so far: ~{observedMean}{unitSuffix}
@@ -238,18 +238,18 @@ export default function PredictionDetailPage() {
           // Single-type display (fallback for predictions with only one data type)
           return (
             <div className="flex items-baseline gap-4 mb-4">
-              <span className="stat-number text-[56px] sm:text-[72px] font-black text-[var(--foreground)] leading-none">
+              <span className="stat-number text-7xl sm:text-[72px] font-black text-[var(--foreground)] leading-none">
                 {agg.mean > 0 && prediction.category === "wages" ? "+" : ""}
                 {Number.isInteger(agg.mean) ? agg.mean : agg.mean.toFixed(1)}
                 <span className="text-[24px] font-normal text-[var(--muted)] ml-1">{unitSuffix}</span>
               </span>
               {agg.min !== agg.max && (
-                <span className="text-[18px] font-medium text-[var(--muted)]" style={{ opacity: 0.7 }}>
+                <span className="text-2xl font-medium text-[var(--muted)]" style={{ opacity: 0.7 }}>
                   {agg.min}–{agg.max}{unitSuffix}
                 </span>
               )}
               {agg.trend !== "flat" && (
-                <span className={`text-[16px] font-medium ${trendColorClass}`} style={{ opacity: 0.6 }}>
+                <span className={`text-xl font-medium ${trendColorClass}`} style={{ opacity: 0.6 }}>
                   Trending {agg.trend === "up" ? "▲" : "▼"}
                 </span>
               )}
@@ -266,7 +266,7 @@ export default function PredictionDetailPage() {
           );
         })()}
 
-        <p className="text-[16px] text-[var(--muted)] leading-relaxed mb-3 max-w-2xl">
+        <p className="text-xl text-[var(--muted)] leading-relaxed mb-3 max-w-2xl">
           {contextText}
         </p>
         {prediction.slug === "tech-sector-displacement" && (
@@ -275,11 +275,11 @@ export default function PredictionDetailPage() {
           </div>
         )}
         {agg.tierFallback && (
-          <p className="text-[12px] text-[#d97706] bg-[#d97706]/[0.06] border border-[#d97706]/20 rounded px-3 py-2 mb-4 max-w-2xl">
+          <p className="text-sm text-[#d97706] bg-[#d97706]/[0.06] border border-[#d97706]/20 rounded px-3 py-2 mb-4 max-w-2xl">
             No sources match your selected tiers for this prediction. Showing all-tier average instead.
           </p>
         )}
-        <p className="text-[13px] text-[var(--muted)] opacity-60 mb-6 max-w-2xl">
+        <p className="text-base text-[var(--muted)] opacity-60 mb-6 max-w-2xl">
           {prediction.timeHorizon.toLowerCase().includes("current")
             ? "This is observed data from real-world surveys and measurements, not a prediction."
             : `Blended estimate across ${filteredHistory.length} sources${agg.min !== agg.max ? ` ranging ${agg.min}–${agg.max}${prediction.unit.includes("%") ? "%" : ""}` : ""}. Higher-tier evidence and more recent data are weighted more heavily.`}{" "}
@@ -296,7 +296,7 @@ export default function PredictionDetailPage() {
               className="inline-block w-2.5 h-2.5 rounded-full"
               style={{ backgroundColor: bestTierConfig.color }}
             />
-            <span className="text-[13px] text-[var(--muted)]">
+            <span className="text-base text-[var(--muted)]">
               Best estimate from{" "}
               <span className="font-semibold text-[var(--foreground)]">
                 {bestSource.publisher}
@@ -323,12 +323,12 @@ export default function PredictionDetailPage() {
       <div className="relative -mx-6 sm:-mx-10 -mt-4">
         <div className="h-1 bg-gradient-to-r from-[#5C61F6] via-[#E8A090] to-[#F66B5C]" />
         <div className="px-6 sm:px-10 pt-8 pb-2">
-          <h2 className="text-[28px] sm:text-[36px] font-black tracking-tight text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-4xl sm:text-5xl font-black tracking-tight text-[var(--foreground)] leading-tight mb-3">
             {prediction.timeHorizon.toLowerCase().includes("current")
               ? "Indicators Over Time"
               : hasBothTypes ? "Observed Data & Projections" : "Predictions Over Time"}
           </h2>
-          <p className="text-[15px] text-[var(--muted)] leading-relaxed max-w-2xl">
+          <p className="text-lg text-[var(--muted)] leading-relaxed max-w-2xl">
             {hasBothTypes
               ? "This prediction has two fundamentally different types of evidence: observed employment data (what has actually happened) and forward-looking projections (what researchers estimate will happen). They are shown separately below because they answer different questions."
               : "The chart below tracks how this estimate has shifted over time as new research and data emerge. Every source is color-coded by evidence quality; use the tiers below to filter what appears on the chart and in the weighted average above."}
@@ -348,7 +348,7 @@ export default function PredictionDetailPage() {
       {/* Disclaimer callout - shown when sources use incompatible definitions */}
       {prediction.disclaimer && (
         <div className="border border-[#d97706]/20 bg-[#d97706]/[0.04] rounded-lg px-5 py-4 max-w-2xl -mt-4">
-          <p className="text-[13px] text-[var(--muted)] leading-relaxed">
+          <p className="text-base text-[var(--muted)] leading-relaxed">
             <span className="font-semibold text-[#d97706]">Note:</span>{" "}
             {prediction.disclaimer}
           </p>
@@ -359,7 +359,7 @@ export default function PredictionDetailPage() {
       <section>
         {prediction.slug === "genai-work-adoption" ? (
           <>
-            <p className="text-[14px] text-[var(--muted)] mb-8">
+            <p className="text-md text-[var(--muted)] mb-8">
               Two trend lines from the same quarterly survey: overall generative AI use and use at work. Hollow dots indicate values estimated from the tracker chart.
             </p>
             <AIAdoptionChart />
@@ -375,7 +375,7 @@ export default function PredictionDetailPage() {
                     What has happened
                   </h3>
                 </div>
-                <p className="text-[14px] text-[var(--muted)] leading-relaxed max-w-2xl">
+                <p className="text-md text-[var(--muted)] leading-relaxed max-w-2xl">
                   Measured employment data from government statistics, large-scale surveys, and administrative records. This is ground truth: what has actually occurred in the labor market.
                 </p>
               </div>
@@ -392,7 +392,7 @@ export default function PredictionDetailPage() {
                 showTrendLine={true}
                 height={280}
               />
-              <p className="text-[12px] text-[var(--muted)] mt-3 opacity-70">
+              <p className="text-sm text-[var(--muted)] mt-3 opacity-70">
                 Each dot is a different measurement source. Click any dot to jump to its source below.
               </p>
             </div>
@@ -406,7 +406,7 @@ export default function PredictionDetailPage() {
                     What researchers project
                   </h3>
                 </div>
-                <p className="text-[14px] text-[var(--muted)] leading-relaxed max-w-2xl">
+                <p className="text-md text-[var(--muted)] leading-relaxed max-w-2xl">
                   Forward-looking estimates from structural models, institutional surveys, and expert forecasts.
                   {targetDateStr ? ` All projections target ${prediction.timeHorizon.toLowerCase()}, shown by the reference line.` : ""}
                   {" "}The wide range ({projectedMin}–{projectedMax}%) reflects different model assumptions about reinstatement effects, demand elasticity, and adoption speed, not just parameter uncertainty.
@@ -425,7 +425,7 @@ export default function PredictionDetailPage() {
                 showTrendLine={false}
                 targetDate={targetDateStr ?? undefined}
               />
-              <p className="text-[12px] text-[var(--muted)] mt-3 opacity-70">
+              <p className="text-sm text-[var(--muted)] mt-3 opacity-70">
                 Each dot is a different projection source. The x-axis shows when the projection was published. Click any dot to jump to its source.{prediction.overlays && prediction.overlays.length > 0 ? " Overlay bars show directional signals from related studies." : ""}
               </p>
             </div>
@@ -444,7 +444,7 @@ export default function PredictionDetailPage() {
               category={prediction.category}
               showTrendLine={prediction.aggregationMethod === "latest"}
             />
-            <p className="text-[12px] text-[var(--muted)] mt-4 opacity-70">
+            <p className="text-sm text-[var(--muted)] mt-4 opacity-70">
               Each data point is from a different source. Dots are color-coded by evidence tier. Click any dot to jump to its source.{prediction.overlays && prediction.overlays.length > 0 ? " Colored overlay bars represent relevant studies or data points that provide directional (but not exact) guidance. Click a bar to see its source." : ""}
             </p>
           </>
@@ -459,13 +459,13 @@ export default function PredictionDetailPage() {
           href="/task-visualizer"
           className="flex-1 group border border-black/[0.06] rounded-lg px-5 py-4 bg-[var(--background)] hover:border-[var(--accent)]/40 transition-colors"
         >
-          <p className="text-[13px] font-bold uppercase tracking-widest text-[var(--muted)] mb-1">
+          <p className="text-base font-bold uppercase tracking-widest text-[var(--muted)] mb-1">
             Task Visualizer
           </p>
-          <p className="text-[14px] text-[var(--foreground)] font-semibold group-hover:text-[var(--accent)] transition-colors">
+          <p className="text-md text-[var(--foreground)] font-semibold group-hover:text-[var(--accent)] transition-colors">
             What parts of your job will be cheaper to do with AI?
           </p>
-          <p className="text-[13px] text-[var(--muted)] mt-1">
+          <p className="text-base text-[var(--muted)] mt-1">
             See which of your tasks face cost pressure from AI first.
           </p>
         </Link>
@@ -473,13 +473,13 @@ export default function PredictionDetailPage() {
           href="/task-visualizer/economy"
           className="flex-1 group border border-black/[0.06] rounded-lg px-5 py-4 bg-[var(--background)] hover:border-[var(--accent)]/40 transition-colors"
         >
-          <p className="text-[13px] font-bold uppercase tracking-widest text-[var(--muted)] mb-1">
+          <p className="text-base font-bold uppercase tracking-widest text-[var(--muted)] mb-1">
             Full Economy Picture
           </p>
-          <p className="text-[14px] text-[var(--foreground)] font-semibold group-hover:text-[var(--accent)] transition-colors">
+          <p className="text-md text-[var(--foreground)] font-semibold group-hover:text-[var(--accent)] transition-colors">
             AI and the US Economy
           </p>
-          <p className="text-[13px] text-[var(--muted)] mt-1">
+          <p className="text-base text-[var(--muted)] mt-1">
             Automation impact by occupation and income tier.
           </p>
         </Link>
@@ -500,7 +500,7 @@ export default function PredictionDetailPage() {
 
       {/* Suggest a Source */}
       <div className="border border-black/[0.06] rounded-lg px-5 py-5 bg-[var(--background)] max-w-xl">
-        <p className="text-[14px] text-[var(--muted)] leading-relaxed">
+        <p className="text-md text-[var(--muted)] leading-relaxed">
           <span className="font-semibold text-[var(--foreground)]">
             Know a study we&rsquo;re missing?
           </span>{" "}
@@ -519,7 +519,7 @@ export default function PredictionDetailPage() {
         <>
           <div className="border-t border-black/[0.06]" />
           <section>
-            <h3 className="text-[13px] font-bold uppercase tracking-widest text-[var(--muted)] mb-4">
+            <h3 className="text-base font-bold uppercase tracking-widest text-[var(--muted)] mb-4">
               Live Prediction Markets
             </h3>
             <div className="flex gap-4 flex-wrap">
@@ -528,7 +528,7 @@ export default function PredictionDetailPage() {
                   href={`https://www.metaculus.com/questions/${prediction.marketIds.metaculus}/`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[14px] font-semibold text-[var(--accent)] hover:underline"
+                  className="text-md font-semibold text-[var(--accent)] hover:underline"
                 >
                   Metaculus
                 </a>
@@ -538,7 +538,7 @@ export default function PredictionDetailPage() {
                   href={`https://polymarket.com/event/${prediction.marketIds.polymarket}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[14px] font-semibold text-[var(--accent)] hover:underline"
+                  className="text-md font-semibold text-[var(--accent)] hover:underline"
                 >
                   Polymarket
                 </a>
@@ -548,7 +548,7 @@ export default function PredictionDetailPage() {
                   href={`https://kalshi.com/markets/${prediction.marketIds.kalshi}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[14px] font-semibold text-[var(--accent)] hover:underline"
+                  className="text-md font-semibold text-[var(--accent)] hover:underline"
                 >
                   Kalshi
                 </a>

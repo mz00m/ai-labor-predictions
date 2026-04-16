@@ -82,7 +82,7 @@ export default function EconomyVisualizerClient() {
             key={section.id}
             onClick={() => setActiveSection(section.id)}
             data-active={activeSection === section.id || undefined}
-            className={`viz-tab shrink-0 text-[12px] font-medium px-4 py-2.5 transition-colors ${
+            className={`viz-tab shrink-0 text-sm font-medium px-4 py-2.5 transition-colors ${
               activeSection === section.id
                 ? "text-[var(--foreground)]"
                 : "text-[var(--muted)] hover:text-[var(--foreground)]"
@@ -96,10 +96,10 @@ export default function EconomyVisualizerClient() {
       {/* Section question + description */}
       {currentSection && (
         <div className="mb-6 max-w-2xl">
-          <p className="text-[16px] font-semibold text-[var(--foreground)] mb-1">
+          <p className="text-xl font-semibold text-[var(--foreground)] mb-1">
             {currentSection.question}
           </p>
-          <p className="text-[13px] text-[var(--muted)] leading-relaxed">
+          <p className="text-base text-[var(--muted)] leading-relaxed">
             {currentSection.description}
           </p>
         </div>
@@ -130,10 +130,10 @@ export default function EconomyVisualizerClient() {
 
       {/* Bottom methodology note */}
       <div className="mt-12 pt-8 border-t border-black/[0.06]">
-        <h3 className="text-[14px] font-semibold text-[var(--foreground)] mb-2">
+        <h3 className="text-md font-semibold text-[var(--foreground)] mb-2">
           About this analysis
         </h3>
-        <div className="text-[12px] text-[var(--muted)] space-y-2 max-w-2xl">
+        <div className="text-sm text-[var(--muted)] space-y-2 max-w-2xl">
           <p>
             Employment data from the Bureau of Labor Statistics Occupational Employment and Wage
             Statistics (OEWS), May 2024. Income tiers based on median annual wage: lower income

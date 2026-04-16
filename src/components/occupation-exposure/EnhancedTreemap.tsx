@@ -338,10 +338,10 @@ export default function EnhancedTreemap({
             maxWidth: "260px",
           }}
         >
-          <p className="text-[13px] font-semibold text-[var(--foreground)] mb-0.5">
+          <p className="text-base font-semibold text-[var(--foreground)] mb-0.5">
             {tooltipInfo.occ.group.title}
           </p>
-          <p className="text-[11px] text-[var(--muted)] mb-1">
+          <p className="text-xs text-[var(--muted)] mb-1">
             {tooltipInfo.occ.group.employment.toLocaleString()}K workers |{" "}
             ${tooltipInfo.occ.group.medianWageAnnual.toLocaleString()}/yr
           </p>
@@ -357,12 +357,12 @@ export default function EnhancedTreemap({
                 ),
               }}
             />
-            <span className="text-[12px] font-medium text-[var(--foreground)]">
+            <span className="text-sm font-medium text-[var(--foreground)]">
               {dimMeta.shortLabel}:{" "}
               {tooltipInfo.occ.scores[activeDimension].toFixed(1)}/10
             </span>
           </div>
-          <p className="text-[10px] text-[var(--muted)] mt-1">
+          <p className="text-2xs text-[var(--muted)] mt-1">
             Net risk: {tooltipInfo.occ.scores.netRisk.toFixed(1)}/10
           </p>
         </div>

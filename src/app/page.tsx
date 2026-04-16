@@ -53,21 +53,21 @@ export default function Home() {
 
         {/* Content */}
         <div className="relative">
-          <p className="text-[13px] font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
+          <p className="text-base font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
             <Link href="/predictions" className="hover:opacity-70 transition-opacity">{predictions.length} predictions</Link> &middot; <Link href="/research" className="hover:opacity-70 transition-opacity">{totalSources} sources</Link>
             <span className="opacity-50 mx-1">&middot;</span>
             <span className="normal-case font-semibold opacity-70">{formatUpdatedDate(lastUpdated)}</span>
           </p>
-          <h1 className="text-[42px] sm:text-[56px] font-black tracking-tight text-[#2E3650] leading-[1.05] max-w-4xl">
+          <h1 className="text-[42px] sm:text-7xl font-black tracking-tight text-[#2E3650] leading-[1.05] max-w-4xl">
             How is AI <span className="text-[#F66B5C] italic">reshaping</span>
             <br className="hidden sm:block" /> the labor market?
           </h1>
-          <p className="mt-4 text-[15px] text-[var(--muted)] leading-relaxed max-w-2xl">
+          <p className="mt-4 text-lg text-[var(--muted)] leading-relaxed max-w-2xl">
             ~{totalSources} sources, one pattern. AI adoption is accelerating, productivity is climbing,
             entry-level and freelance work is compressing, and jobs are changing faster than
             they&apos;re disappearing.
           </p>
-          <p className="mt-3 text-[20px] sm:text-[22px] font-bold text-[#2E3650] leading-snug max-w-2xl">
+          <p className="mt-3 text-[20px] sm:text-3xl font-bold text-[#2E3650] leading-snug max-w-2xl">
             No measurable job displacement, <SplitFlapWord />
           </p>
 
@@ -88,7 +88,7 @@ export default function Home() {
 
         {/* Essential Reading - compact strip under ticker */}
         <div className="relative mt-4 pb-6">
-          <p className="text-[11px] font-bold uppercase tracking-widest text-[var(--accent)] mb-2">
+          <p className="text-xs font-bold uppercase tracking-widest text-[var(--accent)] mb-2">
             Important Reads This Week{" "}
             <span className="opacity-50">|</span>{" "}
             <span className="normal-case font-semibold">
@@ -146,7 +146,7 @@ export default function Home() {
       {/* Important Concepts divider */}
       <div className="mt-12 mb-2 -mx-6 sm:-mx-10 px-6 sm:px-10">
         <div className="border-t border-black/[0.08]" />
-        <p className="mt-5 text-[11px] font-bold uppercase tracking-widest text-[var(--muted)] opacity-60">
+        <p className="mt-5 text-xs font-bold uppercase tracking-widest text-[var(--muted)] opacity-60">
           Important Concepts
         </p>
       </div>

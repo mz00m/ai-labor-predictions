@@ -284,15 +284,15 @@ function EconomistModal({
           {/* Header row */}
           <div className="flex items-start justify-between gap-4 pr-8">
             <div>
-              <h3 className="text-[18px] font-bold text-[var(--foreground)]">
+              <h3 className="text-2xl font-bold text-[var(--foreground)]">
                 {respondent.name}
               </h3>
-              <p className="text-[13px] text-[var(--muted)] mt-0.5">
+              <p className="text-base text-[var(--muted)] mt-0.5">
                 {respondent.handle}
               </p>
             </div>
             <span
-              className="inline-flex items-center px-3 py-1 rounded-full text-[14px] font-bold text-white shrink-0"
+              className="inline-flex items-center px-3 py-1 rounded-full text-md font-bold text-white shrink-0"
               style={{ backgroundColor: catColor }}
             >
               {prob}%
@@ -302,7 +302,7 @@ function EconomistModal({
           {/* Category badge */}
           <div className="mt-3">
             <span
-              className="inline-block text-[11px] font-bold uppercase tracking-widest px-2 py-1 rounded"
+              className="inline-block text-xs font-bold uppercase tracking-widest px-2 py-1 rounded"
               style={{
                 color: catColor,
                 backgroundColor: `${catColor}15`,
@@ -313,20 +313,20 @@ function EconomistModal({
           </div>
 
           {/* Affiliation */}
-          <p className="text-[13px] text-[var(--muted)] mt-4 leading-relaxed">
+          <p className="text-base text-[var(--muted)] mt-4 leading-relaxed">
             {respondent.title}
           </p>
 
           {/* Note */}
           <div className="mt-4 pt-4 border-t border-black/[0.06]">
-            <p className="text-[13px] text-[var(--foreground)] italic leading-relaxed">
+            <p className="text-base text-[var(--foreground)] italic leading-relaxed">
               &ldquo;{respondent.note}&rdquo;
             </p>
           </div>
 
           {/* Sparkbar distribution */}
           <div className="mt-5">
-            <p className="text-[11px] uppercase tracking-widest text-[var(--muted)] mb-2 font-bold">
+            <p className="text-xs uppercase tracking-widest text-[var(--muted)] mb-2 font-bold">
               Full distribution
             </p>
             <SparkBar probs={respondent.probs} activeCategory={categoryId} />
@@ -334,7 +334,7 @@ function EconomistModal({
               {CATEGORIES.map((cat) => (
                 <span
                   key={cat.id}
-                  className="flex-1 text-[10px] text-center"
+                  className="flex-1 text-2xs text-center"
                   style={{ color: cat.id === categoryId ? cat.color : "var(--muted)" }}
                 >
                   {respondent.probs[cat.id]}%
@@ -349,7 +349,7 @@ function EconomistModal({
               href={respondent.xPost}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-[13px] font-bold text-[var(--foreground)] hover:text-[var(--accent)] underline underline-offset-2"
+              className="inline-flex items-center gap-1.5 text-base font-bold text-[var(--foreground)] hover:text-[var(--accent)] underline underline-offset-2"
             >
               View X Post &rarr;
             </a>
@@ -358,7 +358,7 @@ function EconomistModal({
                 href={respondent.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-[13px] font-bold text-[var(--foreground)] hover:text-[var(--accent)] underline underline-offset-2"
+                className="inline-flex items-center gap-1.5 text-base font-bold text-[var(--foreground)] hover:text-[var(--accent)] underline underline-offset-2"
               >
                 LinkedIn &rarr;
               </a>
@@ -367,7 +367,7 @@ function EconomistModal({
               href={respondent.bio}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-[13px] font-bold text-[var(--foreground)] hover:text-[var(--accent)] underline underline-offset-2"
+              className="inline-flex items-center gap-1.5 text-base font-bold text-[var(--foreground)] hover:text-[var(--accent)] underline underline-offset-2"
             >
               Full Bio &rarr;
             </a>
@@ -424,7 +424,7 @@ function Bar({
     >
       {/* Hover label */}
       <div className="absolute -top-5 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-10">
-        <span className="text-[10px] font-bold" style={{ color: catColor }}>
+        <span className="text-2xs font-bold" style={{ color: catColor }}>
           {prob}%
         </span>
       </div>
@@ -452,7 +452,7 @@ function GroupedCategoryCard({
       {/* Label */}
       <div className="mb-3">
         <span
-          className="inline-block text-[11px] font-bold uppercase tracking-widest px-2 py-0.5 rounded"
+          className="inline-block text-xs font-bold uppercase tracking-widest px-2 py-0.5 rounded"
           style={{
             color: category.color,
             backgroundColor: `${category.color}15`,
@@ -460,7 +460,7 @@ function GroupedCategoryCard({
         >
           {category.label}
         </span>
-        <span className="block text-[12px] text-[var(--muted)] mt-1">
+        <span className="block text-sm text-[var(--muted)] mt-1">
           {category.range}
         </span>
       </div>
@@ -500,7 +500,7 @@ function GroupedCategoryCard({
       </div>
 
       {/* Y-axis hint */}
-      <p className="text-[10px] text-[var(--muted)] mt-1 text-right">% probability</p>
+      <p className="text-2xs text-[var(--muted)] mt-1 text-right">% probability</p>
     </div>
   );
 }
@@ -531,7 +531,7 @@ export default function ProductivityPredictions() {
   return (
     <section id="productivity">
       {/* Bridge text */}
-      <p className="text-[15px] text-[var(--muted)] mb-6 max-w-3xl leading-relaxed">
+      <p className="text-lg text-[var(--muted)] mb-6 max-w-3xl leading-relaxed">
         The labor market effects above depend fundamentally on how much AI
         actually moves the productivity needle. Here&apos;s what leading
         economists currently think.
@@ -539,10 +539,10 @@ export default function ProductivityPredictions() {
 
       {/* Section header */}
       <div className="mb-8">
-        <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
+        <h2 className="text-4xl sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
           What economists expect from AI-driven productivity
         </h2>
-        <p className="text-[15px] text-[var(--muted)] mt-2 max-w-2xl">
+        <p className="text-lg text-[var(--muted)] mt-2 max-w-2xl">
           Probability estimates for US productivity growth 2025&ndash;35, from
           Jason Furman&apos;s February 2026 exercise on X. 12 economists, 5
           scenarios.{" "}
@@ -551,7 +551,7 @@ export default function ProductivityPredictions() {
       </div>
 
       {/* Legend */}
-      <div className="flex flex-wrap items-center gap-x-5 gap-y-2 mb-6 text-[13px] text-[var(--muted)]">
+      <div className="flex flex-wrap items-center gap-x-5 gap-y-2 mb-6 text-base text-[var(--muted)]">
         <span className="flex items-center gap-1.5">
           <span
             className="inline-block w-3 h-3 rounded-sm"
@@ -586,7 +586,7 @@ export default function ProductivityPredictions() {
       </div>
 
       {/* Source attribution */}
-      <p className="text-[13px] text-[var(--muted)] mt-4">
+      <p className="text-base text-[var(--muted)] mt-4">
         Based on 12 economists &middot; X exercise by{" "}
         <a
           href="https://x.com/jasonfurman"

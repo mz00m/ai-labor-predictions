@@ -108,12 +108,12 @@ export default function IndustryGrid({
               {/* Group label */}
               <div className="flex items-baseline gap-2.5 mb-3">
                 <span
-                  className="text-[13px] font-extrabold uppercase tracking-[0.06em]"
+                  className="text-base font-extrabold uppercase tracking-[0.06em]"
                   style={{ color: group.color }}
                 >
                   {group.label}
                 </span>
-                <span className="text-[11px] text-[var(--muted)]">
+                <span className="text-xs text-[var(--muted)]">
                   {group.description}
                 </span>
               </div>

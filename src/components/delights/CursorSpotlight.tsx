@@ -90,7 +90,7 @@ export default function CursorSpotlight({ children }: { children: React.ReactNod
           {HIDDEN_ANNOTATIONS.map((ann, i) => (
             <div
               key={i}
-              className="absolute text-[10px] font-medium px-2 py-1 rounded-md max-w-[180px] leading-tight"
+              className="absolute text-2xs font-medium px-2 py-1 rounded-md max-w-[180px] leading-tight"
               style={{
                 left: `${ann.x * 100}%`,
                 top: `${ann.y * 100}%`,
@@ -164,7 +164,7 @@ export default function CursorSpotlight({ children }: { children: React.ReactNod
             return (
               <div
                 key={i}
-                className="absolute text-[10px] font-medium px-2 py-1 rounded-md max-w-[170px] leading-tight"
+                className="absolute text-2xs font-medium px-2 py-1 rounded-md max-w-[170px] leading-tight"
                 style={{
                   left: `${ann.x * 100}%`,
                   top: `${ann.y * 100}%`,
@@ -184,7 +184,7 @@ export default function CursorSpotlight({ children }: { children: React.ReactNod
 
       {/* Hint text */}
       {!isHovering && (
-        <p className="text-[10px] text-[var(--muted)] text-center mt-2 opacity-40 italic">
+        <p className="text-2xs text-[var(--muted)] text-center mt-2 opacity-40 italic">
           Move your cursor over the timeline to discover hidden insights
         </p>
       )}

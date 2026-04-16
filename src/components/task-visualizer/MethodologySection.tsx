@@ -3,17 +3,17 @@
 export default function MethodologySection() {
   return (
     <div className="mt-12 pt-8 border-t border-black/[0.06]">
-      <h3 className="text-[18px] font-bold text-[var(--foreground)] tracking-tight mb-4">
+      <h3 className="text-2xl font-bold text-[var(--foreground)] tracking-tight mb-4">
         Methodology: How we link tasks to compute costs
       </h3>
 
       <div className="space-y-6 max-w-3xl">
         {/* TL;DR box */}
         <div className="rounded-xl border border-[#6366F1]/20 bg-[#6366F1]/[0.04] p-5">
-          <h4 className="text-[13px] font-bold text-[#6366F1] uppercase tracking-wide mb-2">
+          <h4 className="text-base font-bold text-[#6366F1] uppercase tracking-wide mb-2">
             TL;DR
           </h4>
-          <p className="text-[13px] text-[var(--foreground)] leading-relaxed">
+          <p className="text-base text-[var(--foreground)] leading-relaxed">
             We break every job into its component tasks using federal labor data (O*NET, BLS). For each
             task, we calculate what it costs in real AI API spend to replicate one hour of human work,
             then project when that cost drops below the human wage. The <strong>economic crossover
@@ -22,7 +22,7 @@ export default function MethodologySection() {
             new technology. The result: a task-by-task map of where AI has economic incentive to
             replace human labor, and when.
           </p>
-          <p className="text-[12px] text-[var(--muted)] mt-2">
+          <p className="text-sm text-[var(--muted)] mt-2">
             This is <strong className="text-[var(--foreground)]">not</strong> a prediction of job loss.
             Economic viability is necessary but not sufficient. Real adoption depends on organizational
             inertia, regulation, quality requirements, and new task creation.
@@ -31,24 +31,24 @@ export default function MethodologySection() {
 
         {/* Step 1: How we decouple tasks from jobs */}
         <div>
-          <h4 className="text-[14px] font-semibold text-[var(--foreground)] mb-2">
+          <h4 className="text-md font-semibold text-[var(--foreground)] mb-2">
             Step 1: Decoupling tasks from jobs
           </h4>
-          <p className="text-[13px] text-[var(--muted)] leading-relaxed mb-3">
+          <p className="text-base text-[var(--muted)] leading-relaxed mb-3">
             AI doesn&apos;t automate jobs. It automates tasks. A &ldquo;financial analyst&rdquo; is really
             a bundle of 5-8 distinct activities: some are highly automatable (data gathering, report
             drafting), others are not (client relationships, judgment calls). To model AI impact
             accurately, we need to decompose every job into these atomic units of work.
           </p>
-          <p className="text-[13px] text-[var(--muted)] leading-relaxed mb-4">
+          <p className="text-base text-[var(--muted)] leading-relaxed mb-4">
             We do this in three layers, each building on the last:
           </p>
 
-          <div className="space-y-3 text-[12px]">
+          <div className="space-y-3 text-sm">
             {/* Layer 1: O*NET */}
             <div className="rounded-lg border border-black/[0.06] p-4">
               <div className="flex items-start gap-3">
-                <span className="text-[var(--foreground)] font-bold text-[14px] shrink-0 w-6 h-6 rounded-full bg-black/[0.04] flex items-center justify-center">1</span>
+                <span className="text-[var(--foreground)] font-bold text-md shrink-0 w-6 h-6 rounded-full bg-black/[0.04] flex items-center justify-center">1</span>
                 <div>
                   <p className="font-semibold text-[var(--foreground)] mb-1">
                     O*NET work activities: what people actually do
@@ -93,7 +93,7 @@ export default function MethodologySection() {
             {/* Layer 2: BLS wages + employment */}
             <div className="rounded-lg border border-black/[0.06] p-4">
               <div className="flex items-start gap-3">
-                <span className="text-[var(--foreground)] font-bold text-[14px] shrink-0 w-6 h-6 rounded-full bg-black/[0.04] flex items-center justify-center">2</span>
+                <span className="text-[var(--foreground)] font-bold text-md shrink-0 w-6 h-6 rounded-full bg-black/[0.04] flex items-center justify-center">2</span>
                 <div>
                   <p className="font-semibold text-[var(--foreground)] mb-1">
                     BLS employment and wages. The human cost baseline
@@ -131,7 +131,7 @@ export default function MethodologySection() {
             {/* Layer 3: AI exposure validation */}
             <div className="rounded-lg border border-black/[0.06] p-4">
               <div className="flex items-start gap-3">
-                <span className="text-[var(--foreground)] font-bold text-[14px] shrink-0 w-6 h-6 rounded-full bg-black/[0.04] flex items-center justify-center">3</span>
+                <span className="text-[var(--foreground)] font-bold text-md shrink-0 w-6 h-6 rounded-full bg-black/[0.04] flex items-center justify-center">3</span>
                 <div>
                   <p className="font-semibold text-[var(--foreground)] mb-1">
                     AI exposure scores. External validation
@@ -195,7 +195,7 @@ export default function MethodologySection() {
             {/* Layer 4: Industry adoption speed */}
             <div className="rounded-lg border border-black/[0.06] p-4">
               <div className="flex items-start gap-3">
-                <span className="text-[var(--foreground)] font-bold text-[14px] shrink-0 w-6 h-6 rounded-full bg-black/[0.04] flex items-center justify-center">4</span>
+                <span className="text-[var(--foreground)] font-bold text-md shrink-0 w-6 h-6 rounded-full bg-black/[0.04] flex items-center justify-center">4</span>
                 <div>
                   <p className="font-semibold text-[var(--foreground)] mb-1">
                     Industry adoption speed. How fast sectors actually move
@@ -225,10 +225,10 @@ export default function MethodologySection() {
 
         {/* Observed adoption overlay */}
         <div className="rounded-xl border border-[#6366F1]/20 bg-[#6366F1]/[0.04] p-5">
-          <h4 className="text-[13px] font-bold text-[#6366F1] uppercase tracking-wide mb-2">
+          <h4 className="text-base font-bold text-[#6366F1] uppercase tracking-wide mb-2">
             Ground truth: observed AI adoption
           </h4>
-          <p className="text-[13px] text-[var(--muted)] leading-relaxed mb-2">
+          <p className="text-base text-[var(--muted)] leading-relaxed mb-2">
             The model above projects <em>when</em> AI becomes economically viable for each task. But we
             can now cross-reference those projections against <em>actual</em> usage data. The{" "}
             <a
@@ -241,7 +241,7 @@ export default function MethodologySection() {
             </a>{" "}
             (March 2026) analyzed millions of real AI conversations and found:
           </p>
-          <ul className="text-[13px] text-[var(--muted)] space-y-1 ml-4 list-disc list-outside mb-3">
+          <ul className="text-base text-[var(--muted)] space-y-1 ml-4 list-disc list-outside mb-3">
             <li>
               <strong className="text-[var(--foreground)]">49% of occupations</strong> already have 25%+
               of their tasks being performed using Claude &mdash; suggesting the cost-crossover point has
@@ -258,7 +258,7 @@ export default function MethodologySection() {
               mapping in Step 2.
             </li>
           </ul>
-          <p className="text-[12px] text-[var(--muted)]">
+          <p className="text-sm text-[var(--muted)]">
             This data is from a single provider and reflects usage patterns, not full automation. But it is
             the first large-scale empirical check on theoretical exposure models &mdash; and it broadly
             confirms the task-level ordering predicted by O*NET-based analysis.
@@ -267,17 +267,17 @@ export default function MethodologySection() {
 
         {/* Token economics model */}
         <div>
-          <h4 className="text-[14px] font-semibold text-[var(--foreground)] mb-2">
+          <h4 className="text-md font-semibold text-[var(--foreground)] mb-2">
             Step 2: Token economics. From API pricing to $/hour
           </h4>
-          <p className="text-[13px] text-[var(--muted)] leading-relaxed mb-3">
+          <p className="text-base text-[var(--muted)] leading-relaxed mb-3">
             For each task, we calculate what it costs in real AI API spend to produce one hour of
             equivalent human work. The formula:
           </p>
-          <div className="bg-black/[0.02] rounded-lg p-3 font-mono text-[12px] text-[var(--foreground)] mb-4">
+          <div className="bg-black/[0.02] rounded-lg p-3 font-mono text-sm text-[var(--foreground)] mb-4">
             Cost/hr = Calls × (InputTokens/1M × InputPrice + OutputTokens/1M × OutputPrice) × CallOverhead × DeploymentOverhead
           </div>
-          <div className="space-y-3 text-[12px]">
+          <div className="space-y-3 text-sm">
             <div className="flex gap-3 rounded-lg border border-black/[0.06] p-3">
               <span className="text-[var(--foreground)] font-semibold shrink-0 w-[120px]">
                 1. Model tier
@@ -318,7 +318,7 @@ export default function MethodologySection() {
               </span>
             </div>
           </div>
-          <div className="mt-4 text-[12px] text-[var(--muted)]">
+          <div className="mt-4 text-sm text-[var(--muted)]">
             <p className="mb-2">
               <strong className="text-[var(--foreground)]">The key economic insight:</strong>{" "}
               AI cost scales with tokens (volume), while human cost scales with time. A $60/hr analyst
@@ -340,14 +340,14 @@ export default function MethodologySection() {
 
         {/* Cost decline rates */}
         <div>
-          <h4 className="text-[14px] font-semibold text-[var(--foreground)] mb-2">
+          <h4 className="text-md font-semibold text-[var(--foreground)] mb-2">
             Step 3: How fast costs are falling
           </h4>
-          <p className="text-[13px] text-[var(--muted)] leading-relaxed mb-3">
+          <p className="text-base text-[var(--muted)] leading-relaxed mb-3">
             Each task category has an annual cost decline rate. These are derived from observed data:
           </p>
           <div className="overflow-x-auto">
-            <table className="w-full text-[12px]">
+            <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-black/[0.06]">
                   <th className="text-left py-2 pr-4 text-[var(--foreground)] font-semibold">Task type</th>
@@ -412,16 +412,16 @@ export default function MethodologySection() {
 
         {/* The crossover calculation */}
         <div>
-          <h4 className="text-[14px] font-semibold text-[var(--foreground)] mb-2">
+          <h4 className="text-md font-semibold text-[var(--foreground)] mb-2">
             Step 4: The crossover calculation
           </h4>
-          <div className="text-[13px] text-[var(--muted)] leading-relaxed space-y-2">
+          <div className="text-base text-[var(--muted)] leading-relaxed space-y-2">
             <p>
               For each task, we calculate the <strong className="text-[var(--foreground)]">crossover year</strong>:
               the year when the compute cost for AI to perform that task drops below the human labor cost for
               those hours. The formula:
             </p>
-            <div className="bg-black/[0.02] rounded-lg p-3 font-mono text-[12px]">
+            <div className="bg-black/[0.02] rounded-lg p-3 font-mono text-sm">
               crossover when: computeCost x (1 - annualDeclineRate)^years &lt; humanWage x taskTimeShare
             </div>
             <p>
@@ -438,16 +438,16 @@ export default function MethodologySection() {
 
         {/* Exposure scores & measurement uncertainty */}
         <div>
-          <h4 className="text-[14px] font-semibold text-[var(--foreground)] mb-2">
+          <h4 className="text-md font-semibold text-[var(--foreground)] mb-2">
             Reading the certainty indicators
           </h4>
-          <p className="text-[13px] text-[var(--muted)] leading-relaxed mb-3">
+          <p className="text-base text-[var(--muted)] leading-relaxed mb-3">
             The economy view displays a &ldquo;Certainty&rdquo; badge for each occupation group, derived from
             the Yale Budget Lab&apos;s cross-metric variance analysis. This tells you how much independent
             researchers agree about each group&apos;s exposure:
           </p>
           <div className="overflow-x-auto">
-            <table className="w-full text-[12px]">
+            <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-black/[0.06]">
                   <th className="text-left py-2 pr-4 text-[var(--foreground)] font-semibold">Certainty</th>
@@ -474,7 +474,7 @@ export default function MethodologySection() {
               </tbody>
             </table>
           </div>
-          <p className="text-[12px] text-[var(--muted)] mt-3">
+          <p className="text-sm text-[var(--muted)] mt-3">
             The regression coefficient (beta = 0.0617, p &lt; 0.0001) indicates that disagreement increases
             moderately but consistently with exposure. This means our cost-crossover projections for the
             most-exposed groups (Computer &amp; Math, Legal, Office &amp; Admin) carry inherently more
@@ -485,15 +485,15 @@ export default function MethodologySection() {
 
         {/* Adaptive Capacity Index */}
         <div>
-          <h4 className="text-[14px] font-semibold text-[var(--foreground)] mb-2">
+          <h4 className="text-md font-semibold text-[var(--foreground)] mb-2">
             Adaptive capacity: who can transition?
           </h4>
-          <p className="text-[13px] text-[var(--muted)] leading-relaxed mb-3">
+          <p className="text-base text-[var(--muted)] leading-relaxed mb-3">
             Economic exposure tells you which tasks are vulnerable. Adaptive capacity tells you which
             <em> workers</em> can navigate the transition. We integrate the Manning &amp; Aguirre (NBER, 2026)
             adaptive capacity index, which measures four dimensions of an occupation&apos;s resilience:
           </p>
-          <div className="space-y-2 text-[12px] mb-4">
+          <div className="space-y-2 text-sm mb-4">
             <div className="flex gap-3 rounded-lg border border-black/[0.06] p-3">
               <span className="text-[var(--foreground)] font-semibold shrink-0 w-[140px]">Net liquid wealth</span>
               <span className="text-[var(--muted)]">
@@ -523,14 +523,14 @@ export default function MethodologySection() {
               </span>
             </div>
           </div>
-          <p className="text-[13px] text-[var(--muted)] leading-relaxed mb-2">
+          <p className="text-base text-[var(--muted)] leading-relaxed mb-2">
             The key finding: AI exposure and adaptive capacity are <strong className="text-[var(--foreground)]">positively
             correlated</strong> (r = 0.502, bootstrap 95% CI: [0.353, 0.624]). Most highly-exposed workers
             (professionals, managers, technologists) have strong savings, transferable skills, and urban job access.
             The 6.1 million workers who combine high exposure with low adaptability are concentrated in clerical
             and administrative support roles.
           </p>
-          <p className="text-[12px] text-[var(--muted)]">
+          <p className="text-sm text-[var(--muted)]">
             <strong className="text-[var(--foreground)]">Key limitation:</strong> The index measures occupation-level
             characteristics, not individual workers. Within any occupation, there is substantial heterogeneity in
             savings, skills, and geography. The index uses equal component weighting for transparency, though
@@ -540,10 +540,10 @@ export default function MethodologySection() {
 
         {/* What this doesn't capture */}
         <div>
-          <h4 className="text-[14px] font-semibold text-[var(--foreground)] mb-2">
+          <h4 className="text-md font-semibold text-[var(--foreground)] mb-2">
             What this model does not capture
           </h4>
-          <ul className="text-[12px] text-[var(--muted)] space-y-1.5 list-disc list-outside ml-4">
+          <ul className="text-sm text-[var(--muted)] space-y-1.5 list-disc list-outside ml-4">
             <li>
               <strong className="text-[var(--foreground)]">Task bundling (O-ring effects)</strong>:
               In practice, tasks within a job are interconnected. Automating 6 of 7 tasks doesn&apos;t mean
@@ -584,8 +584,8 @@ export default function MethodologySection() {
 
         {/* Sources */}
         <div>
-          <h4 className="text-[14px] font-semibold text-[var(--foreground)] mb-2">Sources</h4>
-          <ul className="text-[11px] text-[var(--muted)] space-y-1">
+          <h4 className="text-md font-semibold text-[var(--foreground)] mb-2">Sources</h4>
+          <ul className="text-xs text-[var(--muted)] space-y-1">
             <li>
               <a href="https://www.onetonline.org/" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">
                 O*NET OnLine. Occupational Information Network (U.S. Department of Labor)
@@ -671,10 +671,10 @@ export default function MethodologySection() {
 
         {/* O-Ring framework caveat */}
         <div className="rounded-xl border border-[#F59E0B]/20 bg-[#F59E0B]/[0.04] p-5">
-          <h4 className="text-[13px] font-bold text-[#D97706] uppercase tracking-wide mb-2">
+          <h4 className="text-base font-bold text-[#D97706] uppercase tracking-wide mb-2">
             Important Modeling Caveat
           </h4>
-          <p className="text-[13px] text-[var(--muted)] leading-relaxed">
+          <p className="text-base text-[var(--muted)] leading-relaxed">
             This tool evaluates each task independently. When task A crosses cost parity, it has no
             effect on task B. In reality, most jobs have complementary tasks where the{" "}
             <a href="https://www.nber.org/papers/w33886" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">

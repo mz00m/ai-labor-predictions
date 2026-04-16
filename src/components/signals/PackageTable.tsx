@@ -137,12 +137,12 @@ function PackageRow({
       <td className="px-4 py-3 pl-10">
         <div>
           <div className="flex items-center gap-2 flex-wrap">
-            <span className="text-[13px] font-semibold text-[var(--foreground)]">
+            <span className="text-base font-semibold text-[var(--foreground)]">
               {pkg.package}
             </span>
             {pkg.isSurging && (
               <span
-                className="text-[10px] font-semibold uppercase tracking-wider px-1.5 py-0.5 rounded-full"
+                className="text-2xs font-semibold uppercase tracking-wider px-1.5 py-0.5 rounded-full"
                 style={{
                   backgroundColor: "rgba(245, 158, 11, 0.12)",
                   color: "#d97706",
@@ -152,38 +152,38 @@ function PackageRow({
               </span>
             )}
           </div>
-          <p className="text-[11px] text-[var(--muted)] leading-snug mt-1 max-w-md">
+          <p className="text-xs text-[var(--muted)] leading-snug mt-1 max-w-md">
             {pkg.label}
           </p>
           <div className="flex items-center gap-3 mt-1.5 flex-wrap">
             {pkg.githubStars != null && pkg.githubStars > 0 && (
-              <span className="text-[10px] text-[var(--muted)] font-mono inline-flex items-center gap-0.5" title="GitHub stars">
+              <span className="text-2xs text-[var(--muted)] font-mono inline-flex items-center gap-0.5" title="GitHub stars">
                 <span className="text-amber-500">&#9733;</span> {formatNumber(pkg.githubStars)}
               </span>
             )}
             {pkg.githubForks != null && pkg.githubForks > 0 && (
-              <span className="text-[10px] text-[var(--muted)] font-mono inline-flex items-center gap-0.5" title="GitHub forks">
+              <span className="text-2xs text-[var(--muted)] font-mono inline-flex items-center gap-0.5" title="GitHub forks">
                 <span className="text-[var(--muted)]">&#9906;</span> {formatNumber(pkg.githubForks)}
               </span>
             )}
             {pkg.githubWeeklyCommits != null && pkg.githubWeeklyCommits > 0 && (
-              <span className="text-[10px] text-[var(--muted)] font-mono inline-flex items-center gap-0.5" title="Avg weekly commits (last 4 weeks)">
+              <span className="text-2xs text-[var(--muted)] font-mono inline-flex items-center gap-0.5" title="Avg weekly commits (last 4 weeks)">
                 <span className="text-blue-500">&#9998;</span> {Math.round(pkg.githubWeeklyCommits)}/wk
               </span>
             )}
             {pkg.githubMonthlyIssues != null && pkg.githubMonthlyIssues > 0 && (
-              <span className="text-[10px] text-[var(--muted)] font-mono inline-flex items-center gap-0.5" title="Monthly GitHub issues">
+              <span className="text-2xs text-[var(--muted)] font-mono inline-flex items-center gap-0.5" title="Monthly GitHub issues">
                 <span className="text-green-600">&#9679;</span> {pkg.githubMonthlyIssues} issues/mo
               </span>
             )}
             {pkg.soMonthlyQuestions != null && pkg.soMonthlyQuestions > 0 && (
-              <span className="text-[10px] text-[var(--muted)] font-mono inline-flex items-center gap-0.5" title="Monthly StackOverflow questions">
+              <span className="text-2xs text-[var(--muted)] font-mono inline-flex items-center gap-0.5" title="Monthly StackOverflow questions">
                 <span className="text-orange-500">Q</span> {pkg.soMonthlyQuestions} questions/mo
               </span>
             )}
             {pkg.signalQuality && (
               <span
-                className={`text-[10px] font-semibold px-1.5 py-0.5 rounded-full ${
+                className={`text-2xs font-semibold px-1.5 py-0.5 rounded-full ${
                   pkg.signalQuality === "strong"
                     ? "bg-green-500/10 text-green-700"
                     : pkg.signalQuality === "moderate"
@@ -206,7 +206,7 @@ function PackageRow({
               </span>
             )}
             {otherIndustries.length > 0 && (
-              <span className="text-[10px] text-[var(--accent)]">
+              <span className="text-2xs text-[var(--accent)]">
                 Also in: {otherIndustries.join(", ")}
               </span>
             )}
@@ -217,7 +217,7 @@ function PackageRow({
       {/* Type (Python/JS) */}
       <td className="px-4 py-3">
         <span
-          className={`text-[10px] font-semibold px-1.5 py-0.5 rounded ${
+          className={`text-2xs font-semibold px-1.5 py-0.5 rounded ${
             pkg.source === "npm"
               ? "bg-[#cb3837]/10 text-[#cb3837]"
               : "bg-[#3776AB]/10 text-[#3776AB]"
@@ -228,13 +228,13 @@ function PackageRow({
       </td>
 
       {/* Monthly Usage */}
-      <td className="px-4 py-3 text-[13px] font-mono font-medium text-[var(--foreground)] stat-number">
+      <td className="px-4 py-3 text-base font-mono font-medium text-[var(--foreground)] stat-number">
         {formatNumber(pkg.latestMonthlyDownloads)}
       </td>
 
       {/* Monthly Change */}
       <td
-        className="px-4 py-3 text-[13px] font-mono font-medium stat-number"
+        className="px-4 py-3 text-base font-mono font-medium stat-number"
         style={{ color: growthColor(pkg.momGrowth) }}
       >
         {pkg.momGrowth >= 0 ? "+" : ""}
@@ -243,7 +243,7 @@ function PackageRow({
 
       {/* 3-Month Trend */}
       <td
-        className="px-4 py-3 text-[13px] font-mono font-medium stat-number"
+        className="px-4 py-3 text-base font-mono font-medium stat-number"
         style={{ color: growthColor(pkg.rollingAvg3mGrowth) }}
       >
         {pkg.rollingAvg3mGrowth >= 0 ? "+" : ""}
@@ -401,7 +401,7 @@ export default function PackageTable({
               {SORTABLE_COLUMNS.map((col) => (
                 <th
                   key={col.key}
-                  className={`text-[11px] font-bold uppercase tracking-[0.08em] text-[var(--muted)] px-4 py-3 whitespace-nowrap ${
+                  className={`text-xs font-bold uppercase tracking-[0.08em] text-[var(--muted)] px-4 py-3 whitespace-nowrap ${
                     col.sortable
                       ? "cursor-pointer hover:text-[var(--foreground)]"
                       : ""
@@ -444,15 +444,15 @@ export default function PackageTable({
                   >
                     <div className="flex items-center gap-2.5">
                       <span className="w-2.5 h-2.5 rounded-full shrink-0 bg-[#9ca3af]" />
-                      <span className="text-[15px] font-bold text-[var(--foreground)]">
+                      <span className="text-lg font-bold text-[var(--foreground)]">
                         AI Infrastructure Baseline
                       </span>
-                      <span className="text-[11px] text-[var(--muted)]">
+                      <span className="text-xs text-[var(--muted)]">
                         {tier1Sorted.length} package
                         {tier1Sorted.length !== 1 ? "s" : ""}
                       </span>
                     </div>
-                    <p className="text-[11px] text-[var(--muted)] mt-1 ml-5 max-w-lg">
+                    <p className="text-xs text-[var(--muted)] mt-1 ml-5 max-w-lg">
                       General-purpose AI SDKs and frameworks. We compare
                       industry-specific tool growth against this baseline to
                       calculate the Automation Acceleration Index.
@@ -467,12 +467,12 @@ export default function PackageTable({
                     <td className="px-4 py-3">
                       <div>
                         <div className="flex items-center gap-2 flex-wrap">
-                          <span className="text-[13px] font-semibold text-[var(--foreground)]">
+                          <span className="text-base font-semibold text-[var(--foreground)]">
                             {pkg.package}
                           </span>
                           {pkg.isSurging && (
                             <span
-                              className="text-[10px] font-semibold uppercase tracking-wider px-1.5 py-0.5 rounded-full"
+                              className="text-2xs font-semibold uppercase tracking-wider px-1.5 py-0.5 rounded-full"
                               style={{
                                 backgroundColor: "rgba(245, 158, 11, 0.12)",
                                 color: "#d97706",
@@ -482,14 +482,14 @@ export default function PackageTable({
                             </span>
                           )}
                         </div>
-                        <p className="text-[11px] text-[var(--muted)] leading-snug mt-1 max-w-md">
+                        <p className="text-xs text-[var(--muted)] leading-snug mt-1 max-w-md">
                           {pkg.label}
                         </p>
                       </div>
                     </td>
                     <td className="px-4 py-3">
                       <span
-                        className={`text-[10px] font-semibold px-1.5 py-0.5 rounded ${
+                        className={`text-2xs font-semibold px-1.5 py-0.5 rounded ${
                           pkg.source === "npm"
                             ? "bg-[#cb3837]/10 text-[#cb3837]"
                             : "bg-[#3776AB]/10 text-[#3776AB]"
@@ -498,18 +498,18 @@ export default function PackageTable({
                         {pkg.source === "npm" ? "JS" : "Python"}
                       </span>
                     </td>
-                    <td className="px-4 py-3 text-[13px] font-mono font-medium text-[var(--foreground)] stat-number">
+                    <td className="px-4 py-3 text-base font-mono font-medium text-[var(--foreground)] stat-number">
                       {formatNumber(pkg.latestMonthlyDownloads)}
                     </td>
                     <td
-                      className="px-4 py-3 text-[13px] font-mono font-medium stat-number"
+                      className="px-4 py-3 text-base font-mono font-medium stat-number"
                       style={{ color: growthColor(pkg.momGrowth) }}
                     >
                       {pkg.momGrowth >= 0 ? "+" : ""}
                       {(pkg.momGrowth * 100).toFixed(1)}%
                     </td>
                     <td
-                      className="px-4 py-3 text-[13px] font-mono font-medium stat-number"
+                      className="px-4 py-3 text-base font-mono font-medium stat-number"
                       style={{ color: growthColor(pkg.rollingAvg3mGrowth) }}
                     >
                       {pkg.rollingAvg3mGrowth >= 0 ? "+" : ""}
@@ -539,7 +539,7 @@ export default function PackageTable({
       <div className="flex items-center gap-2 mt-3">
         <button
           onClick={() => setShowTier1(!showTier1)}
-          className={`text-[11px] font-semibold px-3 py-1.5 rounded-md transition-colors ${
+          className={`text-xs font-semibold px-3 py-1.5 rounded-md transition-colors ${
             showTier1
               ? "bg-[var(--accent)] text-white"
               : "text-[var(--muted)] hover:bg-black/[0.04] border border-black/[0.08]"
@@ -547,7 +547,7 @@ export default function PackageTable({
         >
           {showTier1 ? "Hide" : "Show"} AI infrastructure baseline
         </button>
-        <span className="text-[11px] text-[var(--muted)]">
+        <span className="text-xs text-[var(--muted)]">
           ({tier1Sorted.length} packages)
         </span>
       </div>
@@ -588,16 +588,16 @@ function GroupRows({
               className="w-2.5 h-2.5 rounded-full shrink-0"
               style={{ backgroundColor: group.color }}
             />
-            <span className="text-[14px] font-bold text-[var(--foreground)]">
+            <span className="text-md font-bold text-[var(--foreground)]">
               {group.label}
             </span>
-            <span className="text-[11px] text-[var(--muted)]">
+            <span className="text-xs text-[var(--muted)]">
               {group.packages.length} tool
               {group.packages.length !== 1 ? "s" : ""}
             </span>
             {group.surgingCount > 0 && (
               <span
-                className="text-[10px] font-semibold uppercase tracking-wider px-1.5 py-0.5 rounded-full"
+                className="text-2xs font-semibold uppercase tracking-wider px-1.5 py-0.5 rounded-full"
                 style={{
                   backgroundColor: "rgba(245, 158, 11, 0.12)",
                   color: "#d97706",
@@ -613,13 +613,13 @@ function GroupRows({
         <td className="px-4 py-3" />
 
         {/* Aggregate monthly usage */}
-        <td className="px-4 py-3 text-[13px] font-mono font-bold text-[var(--foreground)] stat-number">
+        <td className="px-4 py-3 text-base font-mono font-bold text-[var(--foreground)] stat-number">
           {formatNumber(group.totalDownloads)}
         </td>
 
         {/* Aggregate monthly change (download-weighted) */}
         <td
-          className="px-4 py-3 text-[13px] font-mono font-bold stat-number"
+          className="px-4 py-3 text-base font-mono font-bold stat-number"
           style={{ color: growthColor(group.weightedMomGrowth) }}
         >
           {group.weightedMomGrowth >= 0 ? "+" : ""}
@@ -628,7 +628,7 @@ function GroupRows({
 
         {/* Aggregate 3-month trend (download-weighted) */}
         <td
-          className="px-4 py-3 text-[13px] font-mono font-bold stat-number"
+          className="px-4 py-3 text-base font-mono font-bold stat-number"
           style={{ color: growthColor(group.weightedAvg3mGrowth) }}
         >
           {group.weightedAvg3mGrowth >= 0 ? "+" : ""}

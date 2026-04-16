@@ -632,21 +632,21 @@ export default function KarpathyTreemap({
             boxShadow: "0 12px 40px rgba(0,0,0,0.5)",
           }}
         >
-          <p className="text-[14px] font-bold text-white mb-0.5">
+          <p className="text-md font-bold text-white mb-0.5">
             {tooltipInfo.occ.raw.title}
           </p>
-          <p className="text-[11px] text-white/40 mb-2">
+          <p className="text-xs text-white/40 mb-2">
             {CATEGORY_LABELS[tooltipInfo.category] || tooltipInfo.category}
           </p>
 
           {/* Active dimension highlight */}
           <div className="mb-2">
             <div className="flex items-center justify-between mb-1">
-              <span className="text-[12px] font-medium text-white">
+              <span className="text-sm font-medium text-white">
                 {dimMeta.shortLabel}
               </span>
               <span
-                className="text-[13px] font-bold text-white"
+                className="text-base font-bold text-white"
                 style={{ fontFamily: "'DM Mono', monospace" }}
               >
                 {tooltipInfo.occ.scores[activeDimension].toFixed(1)}/10
@@ -667,7 +667,7 @@ export default function KarpathyTreemap({
           </div>
 
           {/* Stats grid */}
-          <div className="grid grid-cols-2 gap-x-4 gap-y-1.5 text-[11px] text-white/60 mb-2">
+          <div className="grid grid-cols-2 gap-x-4 gap-y-1.5 text-xs text-white/60 mb-2">
             <div>
               <span className="text-white/30">Median pay</span>
               <p className="text-white/80 font-medium">
@@ -717,7 +717,7 @@ export default function KarpathyTreemap({
               return (
                 <div key={key} className="flex items-center gap-2">
                   <span
-                    className={`w-16 text-[10px] flex-shrink-0 ${isActive ? "text-white font-medium" : "text-white/40"}`}
+                    className={`w-16 text-2xs flex-shrink-0 ${isActive ? "text-white font-medium" : "text-white/40"}`}
                   >
                     {meta.shortLabel}
                   </span>
@@ -731,7 +731,7 @@ export default function KarpathyTreemap({
                     />
                   </div>
                   <span
-                    className={`text-[10px] w-6 text-right ${isActive ? "text-white" : "text-white/40"}`}
+                    className={`text-2xs w-6 text-right ${isActive ? "text-white" : "text-white/40"}`}
                     style={{ fontFamily: "'DM Mono', monospace" }}
                   >
                     {val.toFixed(1)}
@@ -755,7 +755,7 @@ export default function KarpathyTreemap({
               );
             })()}
             <div className="flex items-center gap-2 pt-1 border-t border-white/[0.06]">
-              <span className="w-16 text-[10px] flex-shrink-0 text-white font-medium">
+              <span className="w-16 text-2xs flex-shrink-0 text-white font-medium">
                 Net Risk
               </span>
               <div className="flex-1 h-1 bg-white/[0.06] rounded-full overflow-hidden">
@@ -771,7 +771,7 @@ export default function KarpathyTreemap({
                 />
               </div>
               <span
-                className="text-[10px] w-6 text-right text-white font-bold"
+                className="text-2xs w-6 text-right text-white font-bold"
                 style={{ fontFamily: "'DM Mono', monospace" }}
               >
                 {tooltipInfo.occ.scores.netRisk.toFixed(1)}
@@ -782,7 +782,7 @@ export default function KarpathyTreemap({
       )}
 
       {/* Legend bar */}
-      <div className="mt-3 flex items-center justify-between text-[11px] text-white/50">
+      <div className="mt-3 flex items-center justify-between text-xs text-white/50">
         <span className="flex items-center gap-1.5">
           <span
             className="w-3 h-3 rounded-sm"

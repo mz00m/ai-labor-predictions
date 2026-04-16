@@ -44,9 +44,9 @@ function CustomTooltip({
   const data = payload[0].payload;
   return (
     <div className="bg-white rounded-lg border border-black/[0.08] shadow-lg p-3 max-w-[260px]">
-      <p className="text-[13px] font-semibold text-[var(--foreground)] mb-1">{data.name}</p>
-      <p className="text-[12px] text-[var(--muted)] mb-2">{data.description}</p>
-      <div className="space-y-1 text-[12px]">
+      <p className="text-base font-semibold text-[var(--foreground)] mb-1">{data.name}</p>
+      <p className="text-sm text-[var(--muted)] mb-2">{data.description}</p>
+      <div className="space-y-1 text-sm">
         <div className="flex justify-between">
           <span className="text-[var(--muted)]">Time share</span>
           <span className="font-medium">{Math.round(data.adjustedShare * 100)}%</span>
@@ -66,7 +66,7 @@ function CustomTooltip({
           </span>
         </div>
       </div>
-      <p className="text-[10px] text-[var(--muted)] mt-2 pt-1.5 border-t border-black/[0.06]">
+      <p className="text-2xs text-[var(--muted)] mt-2 pt-1.5 border-t border-black/[0.06]">
         API cost = raw inference only. The Compute Costs tab adds a {DEPLOYMENT_OVERHEAD}x
         deployment overhead (integration, validation, monitoring).
       </p>
@@ -195,7 +195,7 @@ export default function TaskBreakdownChart({
               className="w-2.5 h-2.5 rounded-full"
               style={{ backgroundColor: item.color }}
             />
-            <span className="text-[11px] text-[var(--muted)]">{item.label}</span>
+            <span className="text-xs text-[var(--muted)]">{item.label}</span>
           </div>
         ))}
       </div>

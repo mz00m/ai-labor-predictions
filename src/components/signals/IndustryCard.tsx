@@ -108,12 +108,12 @@ export default function IndustryCard({
             className="industry-dot w-3 h-3 rounded-full shrink-0"
             style={{ backgroundColor: industry.color }}
           />
-          <h3 className="text-[15px] sm:text-[17px] font-bold text-[var(--foreground)]">
+          <h3 className="text-lg sm:text-[17px] font-bold text-[var(--foreground)]">
             {industry.label}
           </h3>
         </div>
         <span
-          className="industry-chevron text-[12px] text-[var(--muted)] shrink-0 mt-0.5 inline-block"
+          className="industry-chevron text-sm text-[var(--muted)] shrink-0 mt-0.5 inline-block"
           style={{ transform: isExpanded ? "rotate(180deg)" : "rotate(0deg)" }}
         >
           &#9660;
@@ -123,11 +123,11 @@ export default function IndustryCard({
       <div className="mt-3 grid grid-cols-2 gap-3">
         {/* AI tool growth */}
         <div>
-          <p className="text-[10px] font-bold uppercase tracking-[0.08em] text-[var(--muted)] mb-0.5">
+          <p className="text-2xs font-bold uppercase tracking-[0.08em] text-[var(--muted)] mb-0.5">
             AI tool growth
           </p>
           <p
-            className="text-[22px] sm:text-[26px] font-black stat-number leading-none tabular-nums"
+            className="text-3xl sm:text-[26px] font-black stat-number leading-none tabular-nums"
             style={{
               color: growth > 0 ? "#16a34a" : growth < 0 ? "#dc2626" : "var(--muted)",
             }}
@@ -135,16 +135,16 @@ export default function IndustryCard({
             {animGrowth >= 0 ? "+" : ""}
             {animGrowth.toFixed(1)}%
           </p>
-          <p className="text-[10px] text-[var(--muted)] mt-0.5">3-month avg</p>
+          <p className="text-2xs text-[var(--muted)] mt-0.5">3-month avg</p>
         </div>
 
         {/* Employment trend */}
         <div>
-          <p className="text-[10px] font-bold uppercase tracking-[0.08em] text-[var(--muted)] mb-0.5">
+          <p className="text-2xs font-bold uppercase tracking-[0.08em] text-[var(--muted)] mb-0.5">
             Employment (BLS)
           </p>
           <p
-            className="text-[22px] sm:text-[26px] font-black stat-number leading-none tabular-nums"
+            className="text-3xl sm:text-[26px] font-black stat-number leading-none tabular-nums"
             style={{
               color: employmentColor(industry.employmentChangeSinceNov2022),
             }}
@@ -153,7 +153,7 @@ export default function IndustryCard({
               ? "No data"
               : `${animEmp >= 0 ? "+" : ""}${animEmp.toFixed(1)}%`}
           </p>
-          <p className="text-[10px] text-[var(--muted)] mt-0.5">
+          <p className="text-2xs text-[var(--muted)] mt-0.5">
             vs late 2022
           </p>
         </div>
@@ -172,13 +172,13 @@ export default function IndustryCard({
         />
       </div>
 
-      <div className="mt-2.5 flex items-center justify-between text-[11px] text-[var(--muted)]">
+      <div className="mt-2.5 flex items-center justify-between text-xs text-[var(--muted)]">
         <span>
           {industry.toolCount} tool{industry.toolCount !== 1 ? "s" : ""} tracked
         </span>
         {industry.surgingCount > 0 && (
           <span
-            className="surging-badge font-semibold px-1.5 py-0.5 rounded-full text-[10px]"
+            className="surging-badge font-semibold px-1.5 py-0.5 rounded-full text-2xs"
             style={{
               backgroundColor: "rgba(245, 158, 11, 0.12)",
               color: "#d97706",

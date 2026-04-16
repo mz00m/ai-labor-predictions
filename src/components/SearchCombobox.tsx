@@ -221,7 +221,7 @@ export default function SearchCombobox({ mobile }: SearchComboboxProps) {
           }}
           className={`
             pl-7 pr-3 py-1.5
-            text-[12px] font-medium text-[var(--foreground)]
+            text-sm font-medium text-[var(--foreground)]
             bg-black/[0.03] rounded-md
             border border-transparent
             focus:border-black/[0.08] focus:bg-white focus:shadow-sm
@@ -229,7 +229,7 @@ export default function SearchCombobox({ mobile }: SearchComboboxProps) {
             outline-none
             ${
               mobile
-                ? "w-full text-[13px] py-2"
+                ? "w-full text-base py-2"
                 : "w-[180px] focus:w-[260px] transition-[width] duration-200"
             }
           `}
@@ -250,7 +250,7 @@ export default function SearchCombobox({ mobile }: SearchComboboxProps) {
           `}
         >
           {results.length === 0 ? (
-            <li className="px-3 py-4 text-[13px] text-[var(--muted)]">
+            <li className="px-3 py-4 text-base text-[var(--muted)]">
               No sources found for &ldquo;{query}&rdquo;
             </li>
           ) : (
@@ -292,7 +292,7 @@ export default function SearchCombobox({ mobile }: SearchComboboxProps) {
 
                   <div className="min-w-0 flex-1">
                     {/* Title */}
-                    <p className="text-[12px] font-medium text-[var(--foreground)] leading-snug truncate flex items-center gap-1">
+                    <p className="text-sm font-medium text-[var(--foreground)] leading-snug truncate flex items-center gap-1">
                       <span className="truncate">{highlight(result.title)}</span>
                       {result.url && (
                         <svg
@@ -315,7 +315,7 @@ export default function SearchCombobox({ mobile }: SearchComboboxProps) {
                     </p>
 
                     {/* Publisher + date */}
-                    <p className="text-[11px] text-[var(--muted)] mt-0.5 truncate">
+                    <p className="text-xs text-[var(--muted)] mt-0.5 truncate">
                       {highlight(result.publisher)}
                       <span className="mx-1 opacity-40">&middot;</span>
                       {fmtDate(result.datePublished)}

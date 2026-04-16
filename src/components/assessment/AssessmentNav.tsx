@@ -9,7 +9,7 @@ export default function AssessmentNav() {
   const isActive = (path: string) => pathname === path;
 
   return (
-    <div className="flex items-center gap-1 text-[13px]">
+    <div className="flex items-center gap-1 text-base">
       <NavLink href="/assessment" active={isActive("/assessment")}>
         Overview
       </NavLink>

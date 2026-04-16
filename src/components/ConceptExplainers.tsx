@@ -54,7 +54,7 @@ const concepts = [
 export default function ConceptExplainers() {
   return (
     <section className="mt-16 mb-4">
-      <h3 className="text-[13px] font-bold uppercase tracking-widest text-[var(--muted)] mb-5">
+      <h3 className="text-base font-bold uppercase tracking-widest text-[var(--muted)] mb-5">
         Important Concepts to Understand
       </h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -64,16 +64,16 @@ export default function ConceptExplainers() {
             href={c.href}
             className={`group concept-card block border-l-[3px] ${c.accent} rounded-r-lg px-5 py-4 no-underline`}
           >
-            <span className="text-[10px] font-bold uppercase tracking-widest text-[var(--muted)] opacity-60">
+            <span className="text-2xs font-bold uppercase tracking-widest text-[var(--muted)] opacity-60">
               {c.tag}
             </span>
-            <h4 className="text-[15px] font-bold text-[var(--foreground)] mt-1 mb-2 group-hover:text-[var(--accent)] transition-colors">
+            <h4 className="text-lg font-bold text-[var(--foreground)] mt-1 mb-2 group-hover:text-[var(--accent)] transition-colors">
               {c.title}
-              <span className="concept-arrow inline-block ml-1.5 text-[12px] opacity-0">
+              <span className="concept-arrow inline-block ml-1.5 text-sm opacity-0">
                 &rarr;
               </span>
             </h4>
-            <p className="text-[13px] text-[var(--muted)] leading-relaxed">
+            <p className="text-base text-[var(--muted)] leading-relaxed">
               {c.description}
             </p>
           </Link>

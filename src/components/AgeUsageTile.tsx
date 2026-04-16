@@ -56,7 +56,7 @@ function CustomTooltip({ active, payload, label }: TooltipProps<number, string>)
 
   return (
     <div className="bg-white border border-black/[0.08] rounded-lg p-3.5 shadow-sm min-w-[160px]">
-      <p className="text-[12px] font-medium text-[var(--foreground)] mb-2">{label}</p>
+      <p className="text-sm font-medium text-[var(--foreground)] mb-2">{label}</p>
       {payload.map((entry) => (
         <div key={entry.dataKey} className="flex items-center justify-between gap-4 py-0.5">
           <div className="flex items-center gap-1.5">
@@ -64,9 +64,9 @@ function CustomTooltip({ active, payload, label }: TooltipProps<number, string>)
               className="inline-block w-2 h-2 rounded-full"
               style={{ backgroundColor: entry.color }}
             />
-            <span className="text-[11px] text-[var(--muted)]">{entry.dataKey}</span>
+            <span className="text-xs text-[var(--muted)]">{entry.dataKey}</span>
           </div>
-          <span className="text-[12px] font-bold text-[var(--foreground)]">
+          <span className="text-sm font-bold text-[var(--foreground)]">
             {entry.value}%
           </span>
         </div>
@@ -86,10 +86,10 @@ export default function AgeUsageTile() {
   return (
     <section id="age-usage" className="mt-12">
       <div className="mb-8">
-        <h2 className="text-[28px] sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
+        <h2 className="text-4xl sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
           {ageUsageData.title}
         </h2>
-        <p className="text-[15px] text-[var(--muted)] mt-2 max-w-2xl">
+        <p className="text-lg text-[var(--muted)] mt-2 max-w-2xl">
           {ageUsageData.subtitle}. Young adults (18-25) send nearly half of all
           messages but their share is declining as adoption broadens across older
           demographics.
@@ -107,7 +107,7 @@ export default function AgeUsageTile() {
             return (
               <span
                 key={bracket}
-                className="text-[11px] font-bold px-2 py-1 rounded-full"
+                className="text-xs font-bold px-2 py-1 rounded-full"
                 style={{
                   color: AGE_COLORS[bracket],
                   backgroundColor: `${AGE_COLORS[bracket]}12`,
@@ -164,7 +164,7 @@ export default function AgeUsageTile() {
 
         {/* Key takeaway */}
         <div className="mt-5 p-3 rounded-md bg-black/[0.02] border border-black/[0.06]">
-          <p className="text-[12px] text-[var(--foreground)] leading-relaxed">
+          <p className="text-sm text-[var(--foreground)] leading-relaxed">
             <span className="font-bold">Key trend:</span>{" "}
             The 18-25 age group dominates ChatGPT usage with ~{last["18-25"]}% of
             messages, but this share has fallen from {first["18-25"]}% as older
@@ -176,7 +176,7 @@ export default function AgeUsageTile() {
 
         {/* Source attribution */}
         <div className="mt-4 pt-3 border-t border-black/[0.06]">
-          <p className="text-[11px] text-[var(--muted)] leading-relaxed">
+          <p className="text-xs text-[var(--muted)] leading-relaxed">
             Source:{" "}
             <a
               href={ageUsageData.source.url}

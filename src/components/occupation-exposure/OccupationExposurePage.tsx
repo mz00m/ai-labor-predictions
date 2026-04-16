@@ -23,7 +23,7 @@ import FiveVariablesEssay from "./FiveVariablesEssay";
 
 function SectionLabel({ number }: { number: string }) {
   return (
-    <p className="text-[11px] font-bold uppercase tracking-widest text-[var(--accent)] mb-2 opacity-60">
+    <p className="text-xs font-bold uppercase tracking-widest text-[var(--accent)] mb-2 opacity-60">
       {number}
     </p>
   );
@@ -138,11 +138,11 @@ export default function OccupationExposurePage() {
       <article className="max-w-[740px] mx-auto">
         {/* Header */}
         <header className="mb-8">
-          <p className="text-[12px] font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
+          <p className="text-sm font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
             Analysis
           </p>
           <h1
-            className="text-[36px] sm:text-[44px] font-extrabold text-[var(--foreground)] leading-[1.1] tracking-tight mb-4"
+            className="text-5xl sm:text-6xl font-extrabold text-[var(--foreground)] leading-[1.1] tracking-tight mb-4"
             style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
           >
             Beyond Exposure: What Predicts Displacement Better
@@ -168,7 +168,7 @@ export default function OccupationExposurePage() {
 
           <a
             href="#treemap"
-            className="inline-flex items-center gap-1.5 text-[13px] font-medium text-[var(--accent-text)] hover:underline mb-5"
+            className="inline-flex items-center gap-1.5 text-base font-medium text-[var(--accent-text)] hover:underline mb-5"
           >
             Jump to interactive chart &darr;
           </a>
@@ -202,7 +202,7 @@ export default function OccupationExposurePage() {
                 <div className="flex items-center gap-2 flex-shrink-0">
                   <a
                     href={`#${dim.anchor}`}
-                    className="text-[10px] text-[var(--muted)] hover:text-[var(--accent-text)] transition-colors whitespace-nowrap"
+                    className="text-2xs text-[var(--muted)] hover:text-[var(--accent-text)] transition-colors whitespace-nowrap"
                     onClick={(e) => e.stopPropagation()}
                   >
                     Research &darr;
@@ -210,7 +210,7 @@ export default function OccupationExposurePage() {
                   {dim.pageLink && (
                     <Link
                       href={dim.pageLink}
-                      className="text-[10px] text-[var(--accent-text)] hover:underline whitespace-nowrap"
+                      className="text-2xs text-[var(--accent-text)] hover:underline whitespace-nowrap"
                       onClick={(e) => e.stopPropagation()}
                     >
                       Explainer &rarr;
@@ -220,7 +220,7 @@ export default function OccupationExposurePage() {
               </button>
             ))}
           </div>
-          <p className="text-[11px] text-[var(--muted)] leading-snug">
+          <p className="text-xs text-[var(--muted)] leading-snug">
             Net Risk = weighted combination of 2 pressure factors minus 3 buffer
             factors, bounded 0-10. <a href="#methodology" className="text-[var(--accent-text)] hover:underline">Full methodology below.</a>
           </p>
@@ -267,7 +267,7 @@ export default function OccupationExposurePage() {
               <div className="flex flex-col sm:flex-row gap-4">
                 {/* Left: occupation info */}
                 <div className="flex-1 min-w-0">
-                  <h3 className="text-[18px] font-bold text-white mb-1">
+                  <h3 className="text-2xl font-bold text-white mb-1">
                     <Link
                       href={`/occupation-exposure/${selectedOcc.raw.slug}`}
                       className="hover:text-white/80 transition-colors underline decoration-white/20 underline-offset-2 hover:decoration-white/50"
@@ -275,7 +275,7 @@ export default function OccupationExposurePage() {
                       {selectedOcc.raw.title}
                     </Link>
                   </h3>
-                  <div className="flex flex-wrap gap-2 text-[11px] text-white/50 mb-3">
+                  <div className="flex flex-wrap gap-2 text-xs text-white/50 mb-3">
                     {selectedOcc.raw.jobs && (
                       <span>{(selectedOcc.raw.jobs / 1000).toFixed(0)}K workers</span>
                     )}
@@ -287,14 +287,14 @@ export default function OccupationExposurePage() {
                     )}
                     <span>| {selectedOcc.raw.education}</span>
                   </div>
-                  <p className="text-[12px] text-white/60 leading-relaxed">
+                  <p className="text-sm text-white/60 leading-relaxed">
                     {selectedOcc.raw.exposure_rationale}
                   </p>
                 </div>
 
                 {/* Right: dimension scores */}
                 <div className="w-full sm:w-72 flex-shrink-0">
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-white/40 mb-2">
+                  <p className="text-2xs font-bold uppercase tracking-widest text-white/40 mb-2">
                     5-Dimension Scores
                   </p>
                   {(
@@ -320,11 +320,11 @@ export default function OccupationExposurePage() {
                     return (
                       <div key={key} className="mb-1.5">
                         <div className="flex items-center justify-between mb-0.5">
-                          <span className="text-[11px] text-white/70">
+                          <span className="text-xs text-white/70">
                             {meta.shortLabel}
                           </span>
                           <span
-                            className="text-[11px] font-bold"
+                            className="text-xs font-bold"
                             style={{ color: barColor, fontFamily: "'DM Mono', monospace" }}
                           >
                             {val.toFixed(1)}
@@ -354,11 +354,11 @@ export default function OccupationExposurePage() {
                   })}
                   {/* Net risk */}
                   <div className="mt-2 pt-2 border-t border-white/[0.08] flex items-center justify-between">
-                    <span className="text-[12px] font-semibold text-white/80">
+                    <span className="text-sm font-semibold text-white/80">
                       Net Displacement Risk
                     </span>
                     <span
-                      className="text-[16px] font-black"
+                      className="text-xl font-black"
                       style={{
                         fontFamily: "'DM Mono', monospace",
                         color: selectedOcc.scores.netRisk > 6 ? "#DC2626" : selectedOcc.scores.netRisk > 4 ? "#F59E0B" : "#16A34A",
@@ -374,7 +374,7 @@ export default function OccupationExposurePage() {
               <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-3">
                 <Link
                   href={`/occupation-exposure/${selectedOcc.raw.slug}`}
-                  className="text-[11px] font-medium text-white/60 hover:text-white transition-colors"
+                  className="text-xs font-medium text-white/60 hover:text-white transition-colors"
                 >
                   View full analysis &rarr;
                 </Link>
@@ -383,7 +383,7 @@ export default function OccupationExposurePage() {
                     href={selectedOcc.raw.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[11px] text-white/40 hover:text-white/70 transition-colors"
+                    className="text-xs text-white/40 hover:text-white/70 transition-colors"
                   >
                     BLS Handbook &rarr;
                   </a>
@@ -412,17 +412,17 @@ export default function OccupationExposurePage() {
             <details className="group">
               <summary className="cursor-pointer list-none">
                 <div className="flex items-center justify-between">
-                  <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight">
+                  <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight">
                     When Exposure Doesn&rsquo;t Match Risk
                   </h2>
-                  <span className="text-[var(--muted)] text-[13px] group-open:hidden">
+                  <span className="text-[var(--muted)] text-base group-open:hidden">
                     Show table &darr;
                   </span>
-                  <span className="text-[var(--muted)] text-[13px] hidden group-open:inline">
+                  <span className="text-[var(--muted)] text-base hidden group-open:inline">
                     Hide table &uarr;
                   </span>
                 </div>
-                <p className="text-[14px] text-[var(--muted)] leading-[1.75] mt-3 mb-2">
+                <p className="text-md text-[var(--muted)] leading-[1.75] mt-3 mb-2">
                   Some jobs have high AI exposure but low actual risk. Because
                   protective factors (adaptable workers, growing demand, AI as a
                   helper not a replacement) absorb the pressure. Other jobs have
@@ -443,7 +443,7 @@ export default function OccupationExposurePage() {
         <section id="methodology" className="mb-12 scroll-mt-8">
           <div className="border-t border-black/[0.06] pt-8">
             <SectionLabel number="03" />
-            <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+            <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
               Methodology
             </h2>
             <MethodologySection />
@@ -453,34 +453,34 @@ export default function OccupationExposurePage() {
         {/* Related */}
         <section className="mb-4">
           <div className="border-t border-black/[0.06] pt-8">
-            <h3 className="text-[14px] font-bold text-[var(--foreground)] mb-3">
+            <h3 className="text-md font-bold text-[var(--foreground)] mb-3">
               Related explorations
             </h3>
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/task-visualizer"
-                className="text-[13px] font-medium text-[var(--accent-text)] hover:underline"
+                className="text-base font-medium text-[var(--accent-text)] hover:underline"
               >
                 Task-level visualizer
               </Link>
               <span className="text-black/[0.15]">|</span>
               <Link
                 href="/task-visualizer/economy"
-                className="text-[13px] font-medium text-[var(--accent-text)] hover:underline"
+                className="text-base font-medium text-[var(--accent-text)] hover:underline"
               >
                 Economy-wide view
               </Link>
               <span className="text-black/[0.15]">|</span>
               <Link
                 href="/demand-elasticity"
-                className="text-[13px] font-medium text-[var(--accent-text)] hover:underline"
+                className="text-base font-medium text-[var(--accent-text)] hover:underline"
               >
                 Demand elasticity explainer
               </Link>
               <span className="text-black/[0.15]">|</span>
               <Link
                 href="/predictions"
-                className="text-[13px] font-medium text-[var(--accent-text)] hover:underline"
+                className="text-base font-medium text-[var(--accent-text)] hover:underline"
               >
                 All predictions
               </Link>

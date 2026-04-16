@@ -46,18 +46,18 @@ export default function ElasticityMatrix() {
       <div className="grid grid-cols-[140px_1fr_1fr] sm:grid-cols-[160px_1fr_1fr]">
         <div className="bg-black/[0.02] p-3" />
         <div className="bg-black/[0.02] p-3 text-center border-l border-black/[0.06]">
-          <p className="text-[11px] font-bold uppercase tracking-wider text-[var(--muted)]">
+          <p className="text-xs font-bold uppercase tracking-wider text-[var(--muted)]">
             Low demand elasticity
           </p>
-          <p className="text-[10px] text-[var(--muted)] mt-0.5">
+          <p className="text-2xs text-[var(--muted)] mt-0.5">
             Cheaper doesn&rsquo;t mean more demand
           </p>
         </div>
         <div className="bg-black/[0.02] p-3 text-center border-l border-black/[0.06]">
-          <p className="text-[11px] font-bold uppercase tracking-wider text-[var(--muted)]">
+          <p className="text-xs font-bold uppercase tracking-wider text-[var(--muted)]">
             High demand elasticity
           </p>
-          <p className="text-[10px] text-[var(--muted)] mt-0.5">
+          <p className="text-2xs text-[var(--muted)] mt-0.5">
             Cheaper unlocks much more demand
           </p>
         </div>
@@ -67,10 +67,10 @@ export default function ElasticityMatrix() {
       <div className="grid grid-cols-[140px_1fr_1fr] sm:grid-cols-[160px_1fr_1fr] border-t border-black/[0.06]">
         <div className="bg-black/[0.02] p-3 flex items-center">
           <div>
-            <p className="text-[11px] font-bold uppercase tracking-wider text-[var(--muted)]">
+            <p className="text-xs font-bold uppercase tracking-wider text-[var(--muted)]">
               High AI exposure
             </p>
-            <p className="text-[10px] text-[var(--muted)] mt-0.5">
+            <p className="text-2xs text-[var(--muted)] mt-0.5">
               Many tasks automatable
             </p>
           </div>
@@ -82,15 +82,15 @@ export default function ElasticityMatrix() {
             style={{ backgroundColor: cell.color + "08" }}
           >
             <p
-              className="text-[13px] font-bold mb-1"
+              className="text-base font-bold mb-1"
               style={{ color: cell.color }}
             >
               {cell.label}
             </p>
-            <p className="text-[12px] text-[var(--muted)] leading-relaxed mb-2">
+            <p className="text-sm text-[var(--muted)] leading-relaxed mb-2">
               {cell.description}
             </p>
-            <p className="text-[11px] text-[var(--muted)] opacity-70 italic">
+            <p className="text-xs text-[var(--muted)] opacity-70 italic">
               {cell.examples}
             </p>
           </div>
@@ -101,10 +101,10 @@ export default function ElasticityMatrix() {
       <div className="grid grid-cols-[140px_1fr_1fr] sm:grid-cols-[160px_1fr_1fr] border-t border-black/[0.06]">
         <div className="bg-black/[0.02] p-3 flex items-center">
           <div>
-            <p className="text-[11px] font-bold uppercase tracking-wider text-[var(--muted)]">
+            <p className="text-xs font-bold uppercase tracking-wider text-[var(--muted)]">
               Low AI exposure
             </p>
-            <p className="text-[10px] text-[var(--muted)] mt-0.5">
+            <p className="text-2xs text-[var(--muted)] mt-0.5">
               Few tasks automatable
             </p>
           </div>
@@ -116,15 +116,15 @@ export default function ElasticityMatrix() {
             style={{ backgroundColor: cell.color + "08" }}
           >
             <p
-              className="text-[13px] font-bold mb-1"
+              className="text-base font-bold mb-1"
               style={{ color: cell.color }}
             >
               {cell.label}
             </p>
-            <p className="text-[12px] text-[var(--muted)] leading-relaxed mb-2">
+            <p className="text-sm text-[var(--muted)] leading-relaxed mb-2">
               {cell.description}
             </p>
-            <p className="text-[11px] text-[var(--muted)] opacity-70 italic">
+            <p className="text-xs text-[var(--muted)] opacity-70 italic">
               {cell.examples}
             </p>
           </div>

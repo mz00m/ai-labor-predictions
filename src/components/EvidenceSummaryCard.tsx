@@ -40,10 +40,10 @@ const EVIDENCE_STATS = [
 export default function EvidenceSummaryCard() {
   return (
     <div>
-      <h2 className="text-[22px] sm:text-[26px] font-extrabold tracking-tight text-[var(--foreground)] mb-1">
+      <h2 className="text-3xl sm:text-[26px] font-extrabold tracking-tight text-[var(--foreground)] mb-1">
         What the Evidence Actually Shows
       </h2>
-      <p className="text-[14px] text-[var(--muted)] mb-5 max-w-2xl">
+      <p className="text-md text-[var(--muted)] mb-5 max-w-2xl">
         Key empirical findings from RCTs, payroll data, job postings, and firm spending records
       </p>
 
@@ -53,17 +53,17 @@ export default function EvidenceSummaryCard() {
             key={i}
             className="evidence-card border border-black/[0.06] rounded-lg px-5 py-4 bg-white"
           >
-            <p className="stat-number text-[22px] font-black text-[var(--foreground)] leading-tight mb-1.5">
+            <p className="stat-number text-3xl font-black text-[var(--foreground)] leading-tight mb-1.5">
               {item.stat}
             </p>
-            <p className="text-[13px] text-[var(--muted)] leading-snug mb-3">
+            <p className="text-base text-[var(--muted)] leading-snug mb-3">
               {item.label}
             </p>
             <a
               href={item.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[12px] font-medium text-[var(--accent)] link-draw-underline"
+              className="text-sm font-medium text-[var(--accent)] link-draw-underline"
             >
               {item.source} &rarr;
             </a>
@@ -71,7 +71,7 @@ export default function EvidenceSummaryCard() {
         ))}
       </div>
 
-      <p className="text-[13px] text-[var(--muted)] leading-relaxed mt-4 max-w-3xl italic">
+      <p className="text-base text-[var(--muted)] leading-relaxed mt-4 max-w-3xl italic">
         The story isn&apos;t mass job loss &mdash; it&apos;s a generational shift. Entry-level and
         young workers in AI-exposed occupations face real displacement, while experienced workers
         and augmentation-oriented roles are growing.

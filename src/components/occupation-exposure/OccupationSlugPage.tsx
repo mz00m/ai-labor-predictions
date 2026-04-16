@@ -72,15 +72,15 @@ function ScoreBar({
     <div className="mb-4">
       <div className="flex items-center justify-between mb-1.5">
         <div>
-          <span className="text-[13px] font-semibold text-white/90">
+          <span className="text-base font-semibold text-white/90">
             {meta.label}
           </span>
-          <span className="ml-2 text-[10px] uppercase tracking-wider text-white/40">
+          <span className="ml-2 text-2xs uppercase tracking-wider text-white/40">
             {meta.isPressure ? "pressure" : "absorption"}
           </span>
         </div>
         <span
-          className="text-[14px] font-bold"
+          className="text-md font-bold"
           style={{ fontFamily: "'DM Mono', monospace", color }}
         >
           {value.toFixed(1)}
@@ -92,7 +92,7 @@ function ScoreBar({
           style={{ width: `${pct}%`, background: color }}
         />
       </div>
-      <p className="text-[11px] text-white/40 mt-1 leading-snug">
+      <p className="text-xs text-white/40 mt-1 leading-snug">
         {meta.description}
       </p>
     </div>
@@ -119,14 +119,14 @@ function DimensionalityDetail({ dim }: { dim: DimensionalityMeta }) {
     <div className="ml-0 mb-4 pl-3 border-l-2 border-white/[0.08]">
       <div className="flex items-center gap-2 mb-1">
         <span
-          className="inline-flex items-center gap-1 text-[10px] font-bold px-1.5 py-0.5 rounded"
+          className="inline-flex items-center gap-1 text-2xs font-bold px-1.5 py-0.5 rounded"
           style={{ background: dimColor + "20", color: dimColor }}
         >
           {dim.effectiveDimensions} task dimension{dim.effectiveDimensions !== 1 ? "s" : ""}
         </span>
-        <span className="text-[10px] text-white/40">{dimLabel}</span>
+        <span className="text-2xs text-white/40">{dimLabel}</span>
       </div>
-      <p className="text-[10px] text-white/40 leading-snug">
+      <p className="text-2xs text-white/40 leading-snug">
         {sourceLabel} base: {dim.complementarityBase.toFixed(1)}
         {dim.dimensionalityAdj !== 0 && (
           <span style={{ color: dimColor }}>
@@ -193,7 +193,7 @@ export default function OccupationSlugPage({ data }: Props) {
     <div className="max-w-3xl mx-auto">
       {/* Breadcrumb */}
       <nav className="mb-6">
-        <ol className="flex items-center gap-1.5 text-[11px] text-white/40">
+        <ol className="flex items-center gap-1.5 text-xs text-white/40">
           <li>
             <Link href="/" className="hover:text-white/60 transition-colors">Home</Link>
           </li>
@@ -210,25 +210,25 @@ export default function OccupationSlugPage({ data }: Props) {
 
       {/* Header */}
       <header className="mb-8">
-        <p className="text-[11px] font-bold uppercase tracking-widest text-white/40 mb-1">
+        <p className="text-xs font-bold uppercase tracking-widest text-white/40 mb-1">
           {enriched.onetCode}
         </p>
-        <h1 className="text-[28px] sm:text-[36px] font-bold text-white leading-tight mb-3">
+        <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight mb-3">
           {enriched.title}
         </h1>
 
         <div className="flex flex-wrap gap-2 mb-5">
           {enriched.jobs && (
-            <span className="inline-flex items-center px-2.5 py-1 rounded-md bg-white/[0.06] text-[12px] text-white/60">
+            <span className="inline-flex items-center px-2.5 py-1 rounded-md bg-white/[0.06] text-sm text-white/60">
               {enriched.jobs.toLocaleString()} workers
             </span>
           )}
           {enriched.pay && (
-            <span className="inline-flex items-center px-2.5 py-1 rounded-md bg-white/[0.06] text-[12px] text-white/60">
+            <span className="inline-flex items-center px-2.5 py-1 rounded-md bg-white/[0.06] text-sm text-white/60">
               ${enriched.pay.toLocaleString()}/yr median
             </span>
           )}
-          <span className="inline-flex items-center px-2.5 py-1 rounded-md bg-white/[0.06] text-[12px] text-white/60">
+          <span className="inline-flex items-center px-2.5 py-1 rounded-md bg-white/[0.06] text-sm text-white/60">
             {enriched.education}
           </span>
         </div>
@@ -239,7 +239,7 @@ export default function OccupationSlugPage({ data }: Props) {
           style={{ background: rc + "12" }}
         >
           <span
-            className="text-[36px] sm:text-[44px] font-black leading-none"
+            className="text-5xl sm:text-6xl font-black leading-none"
             style={{
               fontFamily: "'DM Mono', monospace",
               color: rc,
@@ -249,10 +249,10 @@ export default function OccupationSlugPage({ data }: Props) {
             {scores.netRisk.toFixed(1)}
           </span>
           <div>
-            <p className="text-[15px] font-semibold" style={{ color: rc }}>
+            <p className="text-lg font-semibold" style={{ color: rc }}>
               {rl}
             </p>
-            <p className="text-[12px] text-white/40">
+            <p className="text-sm text-white/40">
               Composite of 5 dimensions (higher = more displacement pressure)
             </p>
           </div>
@@ -261,16 +261,16 @@ export default function OccupationSlugPage({ data }: Props) {
 
       {/* AI Exposure Rationale */}
       <section className="mb-8">
-        <h2 className="text-[12px] font-bold uppercase tracking-widest text-white/40 mb-3">
+        <h2 className="text-sm font-bold uppercase tracking-widest text-white/40 mb-3">
           AI Exposure Analysis
         </h2>
         <div className="rounded-xl bg-white/[0.03] border border-white/[0.06] p-4">
           <div className="flex items-center gap-3 mb-3">
-            <span className="text-[11px] font-bold uppercase tracking-wider text-white/40">
+            <span className="text-xs font-bold uppercase tracking-wider text-white/40">
               GPT-scored exposure
             </span>
             <span
-              className="text-[16px] font-bold"
+              className="text-xl font-bold"
               style={{
                 fontFamily: "'DM Mono', monospace",
                 color: scoreColor(enriched.exposure, true),
@@ -279,7 +279,7 @@ export default function OccupationSlugPage({ data }: Props) {
               {enriched.exposure}/10
             </span>
           </div>
-          <p className="text-[13px] text-white/60 leading-relaxed">
+          <p className="text-base text-white/60 leading-relaxed">
             {enriched.exposure_rationale}
           </p>
         </div>
@@ -287,7 +287,7 @@ export default function OccupationSlugPage({ data }: Props) {
 
       {/* 5-Variable Scores */}
       <section className="mb-8">
-        <h2 className="text-[12px] font-bold uppercase tracking-widest text-white/40 mb-4">
+        <h2 className="text-sm font-bold uppercase tracking-widest text-white/40 mb-4">
           Dimension Breakdown
         </h2>
         <div className="rounded-xl bg-white/[0.03] border border-white/[0.06] p-5">
@@ -304,10 +304,10 @@ export default function OccupationSlugPage({ data }: Props) {
 
       {/* Task Composition */}
       <section className="mb-8">
-        <h2 className="text-[12px] font-bold uppercase tracking-widest text-white/40 mb-1">
+        <h2 className="text-sm font-bold uppercase tracking-widest text-white/40 mb-1">
           Task Composition
         </h2>
-        <p className="text-[12px] text-white/30 mb-4">
+        <p className="text-sm text-white/30 mb-4">
           How this occupation&apos;s work time is distributed across 8 task categories, based on O*NET work activity data.
         </p>
         <div className="rounded-xl bg-white/[0.03] border border-white/[0.06] p-5 space-y-3">
@@ -319,11 +319,11 @@ export default function OccupationSlugPage({ data }: Props) {
             return (
               <div key={key}>
                 <div className="flex items-center justify-between mb-1">
-                  <span className="text-[12px] font-medium text-white/70">
+                  <span className="text-sm font-medium text-white/70">
                     {meta.label}
                   </span>
                   <span
-                    className="text-[12px] font-bold"
+                    className="text-sm font-bold"
                     style={{ fontFamily: "'DM Mono', monospace", color: meta.color }}
                   >
                     {pct.toFixed(0)}%
@@ -344,23 +344,23 @@ export default function OccupationSlugPage({ data }: Props) {
       {/* Top Work Activities */}
       {topActivities.length > 0 && (
         <section className="mb-8">
-          <h2 className="text-[12px] font-bold uppercase tracking-widest text-white/40 mb-1">
+          <h2 className="text-sm font-bold uppercase tracking-widest text-white/40 mb-1">
             Top Work Activities
           </h2>
-          <p className="text-[12px] text-white/30 mb-4">
+          <p className="text-sm text-white/30 mb-4">
             Most important work activities from O*NET, ranked by importance score (1-5).
           </p>
           <div className="rounded-xl bg-white/[0.03] border border-white/[0.06] overflow-hidden">
             <table className="w-full">
               <thead>
                 <tr className="border-b border-white/[0.06]">
-                  <th className="text-left text-[11px] font-bold uppercase tracking-wider text-white/40 px-4 py-2.5">
+                  <th className="text-left text-xs font-bold uppercase tracking-wider text-white/40 px-4 py-2.5">
                     Activity
                   </th>
-                  <th className="text-left text-[11px] font-bold uppercase tracking-wider text-white/40 px-4 py-2.5 w-24">
+                  <th className="text-left text-xs font-bold uppercase tracking-wider text-white/40 px-4 py-2.5 w-24">
                     Category
                   </th>
-                  <th className="text-right text-[11px] font-bold uppercase tracking-wider text-white/40 px-4 py-2.5 w-20">
+                  <th className="text-right text-xs font-bold uppercase tracking-wider text-white/40 px-4 py-2.5 w-20">
                     Score
                   </th>
                 </tr>
@@ -373,13 +373,13 @@ export default function OccupationSlugPage({ data }: Props) {
                       key={task.name}
                       className={i < topActivities.length - 1 ? "border-b border-white/[0.04]" : ""}
                     >
-                      <td className="text-[12px] text-white/60 px-4 py-2.5">
+                      <td className="text-sm text-white/60 px-4 py-2.5">
                         {task.name}
                       </td>
                       <td className="px-4 py-2.5">
                         {catMeta && (
                           <span
-                            className="inline-block text-[10px] font-medium px-1.5 py-0.5 rounded"
+                            className="inline-block text-2xs font-medium px-1.5 py-0.5 rounded"
                             style={{
                               background: catMeta.color + "18",
                               color: catMeta.color,
@@ -390,7 +390,7 @@ export default function OccupationSlugPage({ data }: Props) {
                         )}
                       </td>
                       <td
-                        className="text-right text-[13px] font-bold px-4 py-2.5"
+                        className="text-right text-base font-bold px-4 py-2.5"
                         style={{ fontFamily: "'DM Mono', monospace", color: "white" }}
                       >
                         {task.importance.toFixed(2)}
@@ -406,10 +406,10 @@ export default function OccupationSlugPage({ data }: Props) {
 
       {/* Methodology note */}
       <section className="mb-8">
-        <h2 className="text-[12px] font-bold uppercase tracking-widest text-white/40 mb-3">
+        <h2 className="text-sm font-bold uppercase tracking-widest text-white/40 mb-3">
           Methodology
         </h2>
-        <div className="rounded-xl bg-white/[0.03] border border-white/[0.06] p-5 text-[12px] text-white/50 leading-relaxed space-y-3">
+        <div className="rounded-xl bg-white/[0.03] border border-white/[0.06] p-5 text-sm text-white/50 leading-relaxed space-y-3">
           <p>
             This page combines Karpathy&apos;s GPT-scored technical exposure (per-occupation)
             with four additional dimensions inherited from the parent SOC major group:
@@ -437,7 +437,7 @@ export default function OccupationSlugPage({ data }: Props) {
       <div className="flex items-center justify-between border-t border-white/[0.06] pt-6">
         <Link
           href="/occupation-exposure"
-          className="text-[13px] font-medium text-[var(--accent-text)] hover:underline"
+          className="text-base font-medium text-[var(--accent-text)] hover:underline"
         >
           View all 342 occupations
         </Link>
@@ -446,7 +446,7 @@ export default function OccupationSlugPage({ data }: Props) {
             href={enriched.blsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[12px] text-white/40 hover:text-white/60 transition-colors"
+            className="text-sm text-white/40 hover:text-white/60 transition-colors"
           >
             BLS profile
           </a>

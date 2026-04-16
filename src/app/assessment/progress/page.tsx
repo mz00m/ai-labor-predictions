@@ -203,7 +203,7 @@ export default function ProgressPage() {
   if (error && !assessment) {
     return (
       <div className="max-w-3xl mx-auto px-6 sm:px-10 py-12">
-        <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-[13px] text-red-600">
+        <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-base text-red-600">
           {error}
         </div>
       </div>
@@ -218,10 +218,10 @@ export default function ProgressPage() {
   return (
     <div className="max-w-3xl mx-auto px-6 sm:px-10 py-12">
       {/* Header */}
-      <h1 className="text-[28px] sm:text-[32px] font-bold text-gray-900 leading-tight mb-2 tracking-tight">
+      <h1 className="text-4xl sm:text-[32px] font-bold text-gray-900 leading-tight mb-2 tracking-tight">
         Your AI Action Plan
       </h1>
-      <p className="text-[14px] text-gray-400 mb-8">
+      <p className="text-md text-gray-400 mb-8">
         {assessment?.intake?.organizationName}
       </p>
 
@@ -233,7 +233,7 @@ export default function ProgressPage() {
           return (
             <div key={s} className="flex items-center gap-1">
               <div
-                className={`text-[12px] font-medium px-3 py-1.5 rounded-full transition-colors ${
+                className={`text-sm font-medium px-3 py-1.5 rounded-full transition-colors ${
                   isDone
                     ? "bg-green-50 text-green-700 border border-green-200"
                     : isActive
@@ -267,30 +267,30 @@ export default function ProgressPage() {
         >
           {report.executiveSummary && (
             <div className="mb-6">
-              <h4 className="text-[13px] font-semibold text-gray-700 mb-2">Executive Summary</h4>
-              <p className="text-[13px] text-gray-600 leading-relaxed">{report.executiveSummary}</p>
+              <h4 className="text-base font-semibold text-gray-700 mb-2">Executive Summary</h4>
+              <p className="text-base text-gray-600 leading-relaxed">{report.executiveSummary}</p>
             </div>
           )}
           {report.organizationProfile && (
             <div className="mb-6">
               <div className="flex items-center gap-3 mb-3">
-                <span className="text-[13px] font-medium text-gray-700">AI Readiness Score</span>
+                <span className="text-base font-medium text-gray-700">AI Readiness Score</span>
                 <span className="text-[20px] font-bold text-[#5C61F6]">
                   {report.organizationProfile.aiReadinessScore}/10
                 </span>
               </div>
-              <p className="text-[13px] text-gray-500">{report.organizationProfile.industryContext}</p>
+              <p className="text-base text-gray-500">{report.organizationProfile.industryContext}</p>
             </div>
           )}
           {report.quickWins && report.quickWins.length > 0 && (
             <div>
-              <h4 className="text-[13px] font-semibold text-gray-700 mb-3">Quick Wins (try this week)</h4>
+              <h4 className="text-base font-semibold text-gray-700 mb-3">Quick Wins (try this week)</h4>
               <div className="space-y-2">
                 {report.quickWins.map((qw: QuickWin, i: number) => (
                   <div key={i} className="bg-green-50 border border-green-100 rounded-lg p-3">
                     <div className="flex items-center gap-2 mb-1">
-                      <span className="text-[13px] font-medium text-gray-900">{qw.title}</span>
-                      <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-medium ${
+                      <span className="text-base font-medium text-gray-900">{qw.title}</span>
+                      <span className={`text-2xs px-1.5 py-0.5 rounded-full font-medium ${
                         qw.impact === "high" ? "bg-green-100 text-green-700" :
                         qw.impact === "medium" ? "bg-yellow-100 text-yellow-700" :
                         "bg-gray-100 text-gray-600"
@@ -298,10 +298,10 @@ export default function ProgressPage() {
                         {qw.impact} impact
                       </span>
                       {qw.timeToImplement && (
-                        <span className="text-[10px] text-gray-400">{qw.timeToImplement}</span>
+                        <span className="text-2xs text-gray-400">{qw.timeToImplement}</span>
                       )}
                     </div>
-                    <p className="text-[12px] text-gray-500">{qw.description}</p>
+                    <p className="text-sm text-gray-500">{qw.description}</p>
                   </div>
                 ))}
               </div>
@@ -320,8 +320,8 @@ export default function ProgressPage() {
             {report.taskAnalysis.slice(0, 6).map((task: TaskAnalysis, i: number) => (
               <div key={i} className="border border-gray-100 rounded-lg p-3">
                 <div className="flex items-center justify-between mb-1">
-                  <span className="text-[13px] font-medium text-gray-900">{task.taskName}</span>
-                  <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-medium ${
+                  <span className="text-base font-medium text-gray-900">{task.taskName}</span>
+                  <span className={`text-2xs px-1.5 py-0.5 rounded-full font-medium ${
                     task.aiOpportunity === "high" ? "bg-[#5C61F6]/10 text-[#5C61F6]" :
                     task.aiOpportunity === "medium" ? "bg-yellow-100 text-yellow-700" :
                     "bg-gray-100 text-gray-600"
@@ -329,16 +329,16 @@ export default function ProgressPage() {
                     {task.aiOpportunity} opportunity
                   </span>
                 </div>
-                <p className="text-[12px] text-gray-500 mb-1">{task.aiApproach}</p>
+                <p className="text-sm text-gray-500 mb-1">{task.aiApproach}</p>
                 {task.estimatedTimeSaved && (
-                  <span className="text-[11px] text-green-600 font-medium">
+                  <span className="text-xs text-green-600 font-medium">
                     Potential savings: {task.estimatedTimeSaved}
                   </span>
                 )}
               </div>
             ))}
             {report.taskAnalysis.length > 6 && (
-              <p className="text-[12px] text-gray-400 text-center">
+              <p className="text-sm text-gray-400 text-center">
                 + {report.taskAnalysis.length - 6} more tasks in full report
               </p>
             )}
@@ -356,10 +356,10 @@ export default function ProgressPage() {
             {report.toolRecommendations.slice(0, 5).map((tool: ToolRecommendation, i: number) => (
               <div key={i} className="border border-gray-100 rounded-lg p-3">
                 <div className="flex items-center justify-between mb-1">
-                  <span className="text-[13px] font-medium text-gray-900">
+                  <span className="text-base font-medium text-gray-900">
                     {tool.toolName || tool.category}
                   </span>
-                  <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-medium ${
+                  <span className={`text-2xs px-1.5 py-0.5 rounded-full font-medium ${
                     tool.recommendationTier === "start-here" ? "bg-green-100 text-green-700" :
                     tool.recommendationTier === "add-next" ? "bg-blue-100 text-blue-700" :
                     "bg-gray-100 text-gray-600"
@@ -367,19 +367,19 @@ export default function ProgressPage() {
                     {tool.recommendationTier || tool.priorityTier}
                   </span>
                 </div>
-                <p className="text-[12px] text-gray-500">{tool.purpose}</p>
+                <p className="text-sm text-gray-500">{tool.purpose}</p>
                 {tool.estimatedMonthlyCost && (
-                  <span className="text-[11px] text-gray-400">{tool.estimatedMonthlyCost}</span>
+                  <span className="text-xs text-gray-400">{tool.estimatedMonthlyCost}</span>
                 )}
               </div>
             ))}
           </div>
           {report.roiProjections && report.roiProjections.length > 0 && (
             <div className="mt-4 pt-4 border-t border-gray-100">
-              <h4 className="text-[13px] font-semibold text-gray-700 mb-2">ROI Projections</h4>
+              <h4 className="text-base font-semibold text-gray-700 mb-2">ROI Projections</h4>
               <div className="space-y-2">
                 {report.roiProjections.slice(0, 3).map((roi: RoiProjection, i: number) => (
-                  <div key={i} className="flex items-center justify-between text-[12px]">
+                  <div key={i} className="flex items-center justify-between text-sm">
                     <span className="text-gray-600">{roi.area}</span>
                     <span className="text-green-600 font-medium">{roi.projectedSavings}</span>
                   </div>
@@ -397,7 +397,7 @@ export default function ProgressPage() {
             <h2 className="text-[20px] font-bold text-gray-900 mb-1">
               Step {activeStepIndex + 1}: {STEP_LABELS[activeStep]}
             </h2>
-            <p className="text-[13px] text-gray-400">
+            <p className="text-base text-gray-400">
               {STEP_DESCRIPTIONS[activeStep]}
             </p>
           </div>
@@ -413,10 +413,10 @@ export default function ProgressPage() {
                   <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
                 </svg>
                 <div>
-                  <p className="text-[14px] font-medium text-gray-900">
+                  <p className="text-md font-medium text-gray-900">
                     {STEP_LABELS[activeStep]}...
                   </p>
-                  <p className="text-[12px] text-gray-400 mt-0.5 transition-opacity duration-500">
+                  <p className="text-sm text-gray-400 mt-0.5 transition-opacity duration-500">
                     {currentLoadingMsg}
                   </p>
                 </div>
@@ -427,7 +427,7 @@ export default function ProgressPage() {
                   style={{ width: `${Math.min(95, (elapsedSeconds / 45) * 100)}%` }}
                 />
               </div>
-              <div className="flex items-center justify-between text-[12px] text-gray-400">
+              <div className="flex items-center justify-between text-sm text-gray-400">
                 <span>{Math.floor(elapsedSeconds / 60)}:{(elapsedSeconds % 60).toString().padStart(2, "0")} elapsed</span>
                 <span>Typically 20-45 seconds</span>
               </div>
@@ -435,7 +435,7 @@ export default function ProgressPage() {
           ) : (
             <div>
               {error && (
-                <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-[13px] text-red-600 mb-4">
+                <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-base text-red-600 mb-4">
                   {error}
                   <button
                     onClick={() => { setError(null); runStep(activeStep); }}
@@ -448,13 +448,13 @@ export default function ProgressPage() {
 
               <button
                 onClick={() => runStep(activeStep)}
-                className="w-full bg-[#5C61F6] hover:bg-[#4F52D4] text-white font-semibold text-[14px] py-3 rounded-lg transition-colors"
+                className="w-full bg-[#5C61F6] hover:bg-[#4F52D4] text-white font-semibold text-md py-3 rounded-lg transition-colors"
               >
                 {activeStepIndex === 0 ? "Generate" : "Continue"}: {STEP_LABELS[activeStep]}
               </button>
 
               {activeStepIndex === 0 && (
-                <p className="text-[12px] text-gray-400 text-center mt-3">
+                <p className="text-sm text-gray-400 text-center mt-3">
                   Your files are processed in-memory only, nothing stored.
                 </p>
               )}
@@ -491,7 +491,7 @@ function StepResultSection({
           <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
           </svg>
-          <span className="text-[14px] font-semibold text-gray-900">{title}</span>
+          <span className="text-md font-semibold text-gray-900">{title}</span>
         </div>
         <svg
           className={`w-4 h-4 text-gray-400 transition-transform ${collapsed ? "" : "rotate-180"}`}

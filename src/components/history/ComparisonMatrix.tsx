@@ -39,17 +39,17 @@ export default function ComparisonMatrix() {
         <table className="w-full text-left border-collapse">
           <thead>
             <tr>
-              <th className="pb-3 pr-4 text-[11px] font-bold uppercase tracking-wider text-[var(--muted)] w-[140px]" />
+              <th className="pb-3 pr-4 text-xs font-bold uppercase tracking-wider text-[var(--muted)] w-[140px]" />
               <th
                 colSpan={2}
-                className="pb-1 text-center text-[12px] font-bold uppercase tracking-wider"
+                className="pb-1 text-center text-sm font-bold uppercase tracking-wider"
                 style={{ color: "#2563eb" }}
               >
                 Physical Power
               </th>
               <th
                 colSpan={2}
-                className="pb-1 text-center text-[12px] font-bold uppercase tracking-wider"
+                className="pb-1 text-center text-sm font-bold uppercase tracking-wider"
                 style={{ color: "#7c3aed" }}
               >
                 Cognitive Capability
@@ -57,20 +57,20 @@ export default function ComparisonMatrix() {
             </tr>
             <tr className="border-b border-black/[0.06]">
               <th className="pb-3 pr-4" />
-              <th className="pb-3 px-3 text-[11px] font-semibold text-[var(--muted)] text-center">
+              <th className="pb-3 px-3 text-xs font-semibold text-[var(--muted)] text-center">
                 Pre-Electricity
               </th>
               <th
-                className="pb-3 px-3 text-[11px] font-semibold text-center"
+                className="pb-3 px-3 text-xs font-semibold text-center"
                 style={{ color: "#2563eb" }}
               >
                 Post-Electricity
               </th>
-              <th className="pb-3 px-3 text-[11px] font-semibold text-[var(--muted)] text-center">
+              <th className="pb-3 px-3 text-xs font-semibold text-[var(--muted)] text-center">
                 Pre-AI
               </th>
               <th
-                className="pb-3 px-3 text-[11px] font-semibold text-center"
+                className="pb-3 px-3 text-xs font-semibold text-center"
                 style={{ color: "#7c3aed" }}
               >
                 Post-AI
@@ -83,14 +83,14 @@ export default function ComparisonMatrix() {
                 key={row.label}
                 className="border-b border-black/[0.04]"
               >
-                <td className="py-3 pr-4 text-[12px] font-semibold text-[var(--foreground)]">
+                <td className="py-3 pr-4 text-sm font-semibold text-[var(--foreground)]">
                   {row.label}
                 </td>
-                <td className="py-3 px-3 text-[12px] text-[var(--muted)]">
+                <td className="py-3 px-3 text-sm text-[var(--muted)]">
                   {row.preElec}
                 </td>
                 <td
-                  className="matrix-cell py-3 px-3 text-[12px] font-medium rounded-sm"
+                  className="matrix-cell py-3 px-3 text-sm font-medium rounded-sm"
                   style={{
                     backgroundColor: "#2563eb08",
                     color: "#1e40af",
@@ -98,11 +98,11 @@ export default function ComparisonMatrix() {
                 >
                   {row.postElec}
                 </td>
-                <td className="matrix-cell py-3 px-3 text-[12px] text-[var(--muted)]">
+                <td className="matrix-cell py-3 px-3 text-sm text-[var(--muted)]">
                   {row.preAI}
                 </td>
                 <td
-                  className="matrix-cell py-3 px-3 text-[12px] font-medium rounded-sm"
+                  className="matrix-cell py-3 px-3 text-sm font-medium rounded-sm"
                   style={{
                     backgroundColor: "#7c3aed08",
                     color: "#5b21b6",
@@ -121,7 +121,7 @@ export default function ComparisonMatrix() {
         {/* Electricity pair */}
         <div className="border border-black/[0.06] rounded-lg overflow-hidden">
           <div
-            className="px-4 py-2 text-[12px] font-bold uppercase tracking-wider"
+            className="px-4 py-2 text-sm font-bold uppercase tracking-wider"
             style={{ backgroundColor: "#dbeafe", color: "#2563eb" }}
           >
             Physical Power
@@ -131,15 +131,15 @@ export default function ComparisonMatrix() {
               key={`elec-${row.label}`}
               className="px-4 py-3 border-b border-black/[0.04]"
             >
-              <div className="text-[11px] font-semibold text-[var(--foreground)] mb-1.5">
+              <div className="text-xs font-semibold text-[var(--foreground)] mb-1.5">
                 {row.label}
               </div>
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <div className="text-[10px] font-medium text-[var(--muted)] mb-0.5">
+                  <div className="text-2xs font-medium text-[var(--muted)] mb-0.5">
                     Before
                   </div>
-                  <div className="text-[12px] text-[var(--muted)]">
+                  <div className="text-sm text-[var(--muted)]">
                     {row.preElec}
                   </div>
                 </div>
@@ -148,13 +148,13 @@ export default function ComparisonMatrix() {
                   style={{ backgroundColor: "#2563eb08" }}
                 >
                   <div
-                    className="text-[10px] font-medium mb-0.5"
+                    className="text-2xs font-medium mb-0.5"
                     style={{ color: "#2563eb" }}
                   >
                     After
                   </div>
                   <div
-                    className="text-[12px] font-medium"
+                    className="text-sm font-medium"
                     style={{ color: "#1e40af" }}
                   >
                     {row.postElec}
@@ -168,7 +168,7 @@ export default function ComparisonMatrix() {
         {/* AI pair */}
         <div className="border border-black/[0.06] rounded-lg overflow-hidden">
           <div
-            className="px-4 py-2 text-[12px] font-bold uppercase tracking-wider"
+            className="px-4 py-2 text-sm font-bold uppercase tracking-wider"
             style={{ backgroundColor: "#ede9fe", color: "#7c3aed" }}
           >
             Cognitive Capability
@@ -178,15 +178,15 @@ export default function ComparisonMatrix() {
               key={`ai-${row.label}`}
               className="px-4 py-3 border-b border-black/[0.04]"
             >
-              <div className="text-[11px] font-semibold text-[var(--foreground)] mb-1.5">
+              <div className="text-xs font-semibold text-[var(--foreground)] mb-1.5">
                 {row.label}
               </div>
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <div className="text-[10px] font-medium text-[var(--muted)] mb-0.5">
+                  <div className="text-2xs font-medium text-[var(--muted)] mb-0.5">
                     Before
                   </div>
-                  <div className="text-[12px] text-[var(--muted)]">
+                  <div className="text-sm text-[var(--muted)]">
                     {row.preAI}
                   </div>
                 </div>
@@ -195,13 +195,13 @@ export default function ComparisonMatrix() {
                   style={{ backgroundColor: "#7c3aed08" }}
                 >
                   <div
-                    className="text-[10px] font-medium mb-0.5"
+                    className="text-2xs font-medium mb-0.5"
                     style={{ color: "#7c3aed" }}
                   >
                     After
                   </div>
                   <div
-                    className="text-[12px] font-medium"
+                    className="text-sm font-medium"
                     style={{ color: "#5b21b6" }}
                   >
                     {row.postAI}

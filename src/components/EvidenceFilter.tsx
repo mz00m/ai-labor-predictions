@@ -64,7 +64,7 @@ export default function EvidenceFilter({
           <div className="flex items-center gap-0">
             <h3
               className={`font-bold uppercase tracking-widest text-[var(--muted)] mr-3 transition-all duration-200 ${
-                isStuck ? "text-[0px] w-0 mr-0 opacity-0 overflow-hidden" : "text-[12px]"
+                isStuck ? "text-[0px] w-0 mr-0 opacity-0 overflow-hidden" : "text-sm"
               }`}
             >
               Filter by evidence tiers
@@ -89,7 +89,7 @@ export default function EvidenceFilter({
             <button
               onClick={selectResearchOnly}
               className={`font-semibold cursor-pointer transition-colors duration-150 ${
-                isStuck ? "text-[11px]" : "text-[12px]"
+                isStuck ? "text-xs" : "text-sm"
               } ${
                 researchOnly
                   ? "text-[var(--accent)] underline underline-offset-4"
@@ -102,7 +102,7 @@ export default function EvidenceFilter({
             <button
               onClick={selectAll}
               className={`font-semibold cursor-pointer transition-colors duration-150 ${
-                isStuck ? "text-[11px]" : "text-[12px]"
+                isStuck ? "text-xs" : "text-sm"
               } ${
                 allSelected
                   ? "text-[var(--accent)] underline underline-offset-4"
@@ -145,7 +145,7 @@ function TierButton({
     >
       <button
         onClick={onClick}
-        className={`btn-press relative inline-flex items-center gap-1.5 text-[12px] font-medium cursor-pointer transition-all duration-200 ${
+        className={`btn-press relative inline-flex items-center gap-1.5 text-sm font-medium cursor-pointer transition-all duration-200 ${
           compact ? "px-3 sm:px-4 py-2.5" : "px-3 py-1.5"
         } ${
           !isLast && !compact ? "border-r border-[var(--border)]" : ""
@@ -177,25 +177,25 @@ function TierButton({
               className="inline-block w-2.5 h-2.5 rounded-full"
               style={{ backgroundColor: config.color }}
             />
-            <span className="text-[13px] font-semibold text-white">
+            <span className="text-base font-semibold text-white">
               {config.label}
             </span>
           </div>
-          <p className="text-[11px] text-[#a0a0b8] mb-2 leading-relaxed">
+          <p className="text-xs text-[#a0a0b8] mb-2 leading-relaxed">
             {config.description}
           </p>
           <ul className="space-y-0.5 mb-2">
             {config.includes.map((item) => (
               <li
                 key={item}
-                className="text-[11px] text-[#8a8aa0] leading-relaxed pl-2.5 relative before:content-[''] before:absolute before:left-0 before:top-[7px] before:w-1 before:h-1 before:rounded-full before:bg-[#4a4a5e]"
+                className="text-xs text-[#8a8aa0] leading-relaxed pl-2.5 relative before:content-[''] before:absolute before:left-0 before:top-[7px] before:w-1 before:h-1 before:rounded-full before:bg-[#4a4a5e]"
               >
                 {item}
               </li>
             ))}
           </ul>
           {count != null && (
-            <div className="text-[11px] text-[#6a6a80] pt-1.5 border-t border-[#2a2a3e]">
+            <div className="text-xs text-[#6a6a80] pt-1.5 border-t border-[#2a2a3e]">
               {count} source{count !== 1 ? "s" : ""} on site
             </div>
           )}

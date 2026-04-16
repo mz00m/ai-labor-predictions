@@ -45,15 +45,15 @@ export default function SubmissionForm() {
   if (status === "success") {
     return (
       <div className="border border-black/[0.06] rounded-lg px-6 py-8 bg-white text-center max-w-xl">
-        <p className="text-[18px] font-bold text-[var(--foreground)] mb-2">
+        <p className="text-2xl font-bold text-[var(--foreground)] mb-2">
           Thank you!
         </p>
-        <p className="text-[14px] text-[var(--muted)]">
+        <p className="text-md text-[var(--muted)]">
           Your suggestion has been received and will be reviewed for inclusion.
         </p>
         <button
           onClick={() => setStatus("idle")}
-          className="mt-4 text-[13px] font-semibold text-[var(--accent)] hover:underline"
+          className="mt-4 text-base font-semibold text-[var(--accent)] hover:underline"
         >
           Submit another
         </button>
@@ -70,7 +70,7 @@ export default function SubmissionForm() {
       <div>
         <label
           htmlFor="submission-url"
-          className="block text-[13px] font-semibold text-[var(--foreground)] mb-1.5"
+          className="block text-base font-semibold text-[var(--foreground)] mb-1.5"
         >
           URL <span className="text-[var(--accent)]">*</span>
         </label>
@@ -82,9 +82,9 @@ export default function SubmissionForm() {
           placeholder="https://arxiv.org/abs/..."
           value={url}
           onChange={(e) => setUrl(e.target.value)}
-          className="w-full text-[14px] px-3 py-2 rounded-md border border-black/[0.1] bg-[var(--background)] text-[var(--foreground)] placeholder:text-black/30 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/30 focus:border-[var(--accent)]"
+          className="w-full text-md px-3 py-2 rounded-md border border-black/[0.1] bg-[var(--background)] text-[var(--foreground)] placeholder:text-black/30 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/30 focus:border-[var(--accent)]"
         />
-        <p className="text-[12px] text-[var(--muted)] mt-1">
+        <p className="text-sm text-[var(--muted)] mt-1">
           Link to a study, article, dataset, or report relevant to AI and labor markets.
         </p>
       </div>
@@ -93,9 +93,9 @@ export default function SubmissionForm() {
       <div>
         <label
           htmlFor="submission-note"
-          className="block text-[13px] font-semibold text-[var(--foreground)] mb-1.5"
+          className="block text-base font-semibold text-[var(--foreground)] mb-1.5"
         >
-          Note <span className="text-[12px] font-normal text-[var(--muted)]">(optional)</span>
+          Note <span className="text-sm font-normal text-[var(--muted)]">(optional)</span>
         </label>
         <textarea
           id="submission-note"
@@ -104,9 +104,9 @@ export default function SubmissionForm() {
           placeholder="Why is this relevant? Which prediction graph might it apply to?"
           value={note}
           onChange={(e) => setNote(e.target.value)}
-          className="w-full text-[14px] px-3 py-2 rounded-md border border-black/[0.1] bg-[var(--background)] text-[var(--foreground)] placeholder:text-black/30 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/30 focus:border-[var(--accent)] resize-none"
+          className="w-full text-md px-3 py-2 rounded-md border border-black/[0.1] bg-[var(--background)] text-[var(--foreground)] placeholder:text-black/30 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/30 focus:border-[var(--accent)] resize-none"
         />
-        <p className="text-[12px] text-[var(--muted)] mt-1">
+        <p className="text-sm text-[var(--muted)] mt-1">
           {note.length}/500
         </p>
       </div>
@@ -115,9 +115,9 @@ export default function SubmissionForm() {
       <div>
         <label
           htmlFor="submission-email"
-          className="block text-[13px] font-semibold text-[var(--foreground)] mb-1.5"
+          className="block text-base font-semibold text-[var(--foreground)] mb-1.5"
         >
-          Email <span className="text-[12px] font-normal text-[var(--muted)]">(optional)</span>
+          Email <span className="text-sm font-normal text-[var(--muted)]">(optional)</span>
         </label>
         <input
           id="submission-email"
@@ -126,16 +126,16 @@ export default function SubmissionForm() {
           placeholder="you@example.com"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="w-full text-[14px] px-3 py-2 rounded-md border border-black/[0.1] bg-[var(--background)] text-[var(--foreground)] placeholder:text-black/30 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/30 focus:border-[var(--accent)]"
+          className="w-full text-md px-3 py-2 rounded-md border border-black/[0.1] bg-[var(--background)] text-[var(--foreground)] placeholder:text-black/30 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/30 focus:border-[var(--accent)]"
         />
-        <p className="text-[12px] text-[var(--muted)] mt-1">
+        <p className="text-sm text-[var(--muted)] mt-1">
           Only used to notify you if your source is added. Never shared.
         </p>
       </div>
 
       {/* Error */}
       {status === "error" && (
-        <p className="text-[13px] text-[#F66B5C] bg-[#F66B5C]/[0.06] border border-[#F66B5C]/20 rounded px-3 py-2">
+        <p className="text-base text-[#F66B5C] bg-[#F66B5C]/[0.06] border border-[#F66B5C]/20 rounded px-3 py-2">
           {errorMsg}
         </p>
       )}
@@ -144,7 +144,7 @@ export default function SubmissionForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="w-full sm:w-auto px-6 py-2.5 rounded-md text-[14px] font-semibold text-white bg-[var(--accent)] hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full sm:w-auto px-6 py-2.5 rounded-md text-md font-semibold text-white bg-[var(--accent)] hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {status === "submitting" ? "Submitting..." : "Suggest Source"}
       </button>

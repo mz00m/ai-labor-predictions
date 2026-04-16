@@ -42,13 +42,13 @@ function CustomTooltip({ active, payload, label }: TooltipProps<number, string>)
   if (!active || !payload?.length) return null;
   return (
     <div className="bg-white rounded-lg border border-black/[0.08] shadow-lg p-3 max-w-[260px]">
-      <p className="text-[12px] font-semibold text-[var(--foreground)] mb-2">{label}</p>
+      <p className="text-sm font-semibold text-[var(--foreground)] mb-2">{label}</p>
       {payload
         .filter((p) => p.value !== undefined && p.dataKey !== "humanCost")
         .map((p) => {
           const val = typeof p.value === "number" ? p.value : 0;
           return (
-            <div key={p.dataKey} className="flex justify-between text-[11px] mb-0.5">
+            <div key={p.dataKey} className="flex justify-between text-xs mb-0.5">
               <span style={{ color: p.color }}>{String(p.name)}</span>
               <span className="font-medium ml-3">
                 ${val < 1 ? val.toFixed(2) : val.toFixed(0)}/hr
@@ -57,7 +57,7 @@ function CustomTooltip({ active, payload, label }: TooltipProps<number, string>)
           );
         })}
       {payload.find((p) => p.dataKey === "humanCost") && (
-        <div className="flex justify-between text-[11px] mt-1 pt-1 border-t border-black/[0.06]">
+        <div className="flex justify-between text-xs mt-1 pt-1 border-t border-black/[0.06]">
           <span className="text-[var(--muted)]">Your wage</span>
           <span className="font-medium">
             ${payload.find((p) => p.dataKey === "humanCost")?.value?.toFixed(0)}/hr
@@ -95,39 +95,39 @@ function ComputeFloorSummary({
     <div className="mt-4 pt-4 border-t border-black/[0.06]">
       <div className="flex flex-wrap items-baseline gap-x-6 gap-y-2">
         <div>
-          <span className="text-[10px] text-[var(--muted)] uppercase tracking-wider">
+          <span className="text-2xs text-[var(--muted)] uppercase tracking-wider">
             AI compute floor (raw)
           </span>
-          <p className="text-[16px] font-bold text-[var(--foreground)] tabular-nums">
+          <p className="text-xl font-bold text-[var(--foreground)] tabular-nums">
             {formatCost(rawFloor)}/hr
           </p>
         </div>
         <div>
-          <span className="text-[10px] text-[var(--muted)] uppercase tracking-wider">
+          <span className="text-2xs text-[var(--muted)] uppercase tracking-wider">
             With {DEPLOYMENT_OVERHEAD}x deployment
           </span>
-          <p className="text-[16px] font-bold text-[var(--foreground)] tabular-nums">
+          <p className="text-xl font-bold text-[var(--foreground)] tabular-nums">
             {formatCost(withOverhead)}/hr
           </p>
         </div>
         <div>
-          <span className="text-[10px] text-[var(--muted)] uppercase tracking-wider">
+          <span className="text-2xs text-[var(--muted)] uppercase tracking-wider">
             Human wage
           </span>
-          <p className="text-[16px] font-bold text-[#EF4444] tabular-nums">
+          <p className="text-xl font-bold text-[#EF4444] tabular-nums">
             ${humanWagePerHr}/hr
           </p>
         </div>
         <div>
-          <span className="text-[10px] text-[var(--muted)] uppercase tracking-wider">
+          <span className="text-2xs text-[var(--muted)] uppercase tracking-wider">
             Ratio
           </span>
-          <p className={`text-[16px] font-bold tabular-nums ${ratio > 1 ? "text-[#10B981]" : "text-[#EF4444]"}`}>
+          <p className={`text-xl font-bold tabular-nums ${ratio > 1 ? "text-[#10B981]" : "text-[#EF4444]"}`}>
             {ratio > 1 ? `${ratio.toFixed(1)}x cheaper` : `${(1 / ratio).toFixed(1)}x more expensive`}
           </p>
         </div>
       </div>
-      <p className="text-[10px] text-[var(--muted)] mt-2">
+      <p className="text-2xs text-[var(--muted)] mt-2">
         Weighted by task time share. This is the minimum a firm would spend on AI compute
         to replicate one hour of this role, before any process change, training, or integration.
       </p>
@@ -203,7 +203,7 @@ export default function ComputeCostChart({
     <div>
       {/* Explanation */}
       <div className="rounded-lg bg-black/[0.02] border border-black/[0.06] p-3 mb-5">
-        <p className="text-[12px] text-[var(--foreground)] leading-relaxed">
+        <p className="text-sm text-[var(--foreground)] leading-relaxed">
           Each line shows the <strong>total production cost for AI to perform one hour</strong> of
           a task: raw API cost plus a {DEPLOYMENT_OVERHEAD}x deployment overhead
           (integration engineering, error handling, validation, human review, monitoring).
@@ -217,10 +217,10 @@ export default function ComputeCostChart({
 
       {/* The compute floor - economic insight */}
       <div className="rounded-lg border border-[#6366F1]/20 bg-[#6366F1]/[0.03] p-3 mb-5">
-        <p className="text-[12px] font-semibold text-[var(--foreground)] mb-1">
+        <p className="text-sm font-semibold text-[var(--foreground)] mb-1">
           The compute floor: minimum cost of doing business
         </p>
-        <p className="text-[11px] text-[var(--muted)] leading-relaxed">
+        <p className="text-xs text-[var(--muted)] leading-relaxed">
           Before a firm can even consider deploying AI for a task, it must pay the compute
           floor: the raw cost of running AI inference at production scale. This is the economic
           baseline: what it costs just to turn the AI on, before integration, validation,
@@ -239,7 +239,7 @@ export default function ComputeCostChart({
             <button
               key={task.id}
               onClick={() => toggleTask(task.id)}
-              className="task-pill text-[11px] font-medium px-2.5 py-1 rounded-full border"
+              className="task-pill text-xs font-medium px-2.5 py-1 rounded-full border"
               style={{
                 borderColor: isSelected ? color : "rgba(0,0,0,0.08)",
                 backgroundColor: isSelected ? `${color}12` : "transparent",
@@ -301,22 +301,22 @@ export default function ComputeCostChart({
         </ResponsiveContainer>
       </div>
 
-      <p className="text-[11px] text-[var(--muted)] mt-3">
+      <p className="text-xs text-[var(--muted)] mt-3">
         Log scale. Includes {DEPLOYMENT_OVERHEAD}x deployment overhead (integration, tooling, validation)
         on top of raw API costs. Cost decline rates: 30-48% annual based on observed AI inference trends.
       </p>
 
       {/* Token economics breakdown */}
       <div className="mt-6 pt-5 border-t border-black/[0.06]">
-        <h4 className="text-[13px] font-semibold text-[var(--foreground)] mb-1">
+        <h4 className="text-base font-semibold text-[var(--foreground)] mb-1">
           How we calculate cost per task
         </h4>
-        <p className="text-[11px] text-[var(--muted)] mb-3">
+        <p className="text-xs text-[var(--muted)] mb-3">
           Raw API cost = Calls/hr x (Input tokens x Input price + Output tokens x Output price) x Call overhead.
           Deployment overhead ({DEPLOYMENT_OVERHEAD}x) is applied separately in the crossover calculation.
         </p>
         <div className="overflow-x-auto">
-          <table className="w-full text-[11px]">
+          <table className="w-full text-xs">
             <thead>
               <tr className="border-b border-black/[0.06]">
                 <th className="text-left py-1.5 pr-2 text-[var(--foreground)] font-semibold">Task</th>
@@ -362,7 +362,7 @@ export default function ComputeCostChart({
             </tbody>
           </table>
         </div>
-        <p className="text-[10px] text-[var(--muted)] mt-2">
+        <p className="text-2xs text-[var(--muted)] mt-2">
           Model tiers: <strong className="text-[var(--foreground)]">Small</strong> ({MODEL_PRICING.small.examples}),{" "}
           <strong className="text-[var(--foreground)]">Mid</strong> ({MODEL_PRICING.mid.examples}),{" "}
           <strong className="text-[var(--foreground)]">Frontier</strong> ({MODEL_PRICING.frontier.examples}).

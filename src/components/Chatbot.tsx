@@ -180,7 +180,7 @@ function renderInline(text: string): React.ReactNode {
     } else if (match[3]) {
       // `code`
       parts.push(
-        <code key={`c-${match.index}`} className="bg-black/[0.06] px-1 py-0.5 rounded text-[12px] font-mono">
+        <code key={`c-${match.index}`} className="bg-black/[0.06] px-1 py-0.5 rounded text-sm font-mono">
           {match[3]}
         </code>
       );
@@ -226,7 +226,7 @@ export function ChatTrigger({ onClick }: { onClick: () => void }) {
   return (
     <button
       onClick={onClick}
-      className="flex items-center gap-1.5 text-[12px] font-semibold text-white bg-[var(--accent)] hover:bg-[#4b50e5] px-3 py-1.5 rounded-md transition-colors"
+      className="flex items-center gap-1.5 text-sm font-semibold text-white bg-[var(--accent)] hover:bg-[#4b50e5] px-3 py-1.5 rounded-md transition-colors"
     >
       <svg
         width="14"
@@ -480,10 +480,10 @@ export default function Chatbot({ sourceCount }: ChatbotProps) {
           <div className="flex items-center gap-2.5">
             <MiniRobot speaking={streaming} />
             <div>
-              <h3 className="text-[14px] font-semibold">
+              <h3 className="text-md font-semibold">
                 Ask Gob
               </h3>
-              <p className="text-[11px] text-white/70">
+              <p className="text-xs text-white/70">
                 {sourceCount ? `${sourceCount}+` : SOURCE_COUNT_DISPLAY} sources across 17 predictions
               </p>
             </div>
@@ -501,7 +501,7 @@ export default function Chatbot({ sourceCount }: ChatbotProps) {
         <div ref={scrollRef} className="flex-1 overflow-y-auto px-4 py-3 space-y-3">
           {messages.length === 0 && (
             <div className="space-y-3">
-              <p className="text-[13px] text-[var(--muted)] leading-relaxed">
+              <p className="text-base text-[var(--muted)] leading-relaxed">
                 Ask anything about AI&apos;s impact on jobs, wages, and adoption.
               </p>
               <div className="space-y-1.5">
@@ -509,7 +509,7 @@ export default function Chatbot({ sourceCount }: ChatbotProps) {
                   <button
                     key={q}
                     onClick={() => sendMessage(q)}
-                    className="block w-full text-left text-[12px] text-[var(--accent)] hover:text-[var(--foreground)] hover:bg-[var(--accent-light)] rounded-md px-3 py-2 border border-black/[0.05]"
+                    className="block w-full text-left text-sm text-[var(--accent)] hover:text-[var(--foreground)] hover:bg-[var(--accent-light)] rounded-md px-3 py-2 border border-black/[0.05]"
                     style={{ transition: "background-color 0.15s ease, color 0.15s ease" }}
                   >
                     {q}
@@ -525,7 +525,7 @@ export default function Chatbot({ sourceCount }: ChatbotProps) {
                 className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
               >
                 <div
-                  className={`max-w-[85%] rounded-lg px-3 py-2 text-[13px] leading-relaxed ${
+                  className={`max-w-[85%] rounded-lg px-3 py-2 text-base leading-relaxed ${
                     msg.role === "user"
                       ? "bg-[var(--accent)] text-white"
                       : "bg-black/[0.03] text-[var(--foreground)]"
@@ -572,7 +572,7 @@ export default function Chatbot({ sourceCount }: ChatbotProps) {
                     <ThumbsDownIcon filled={msg.feedback === -1} />
                   </button>
                   {msg.feedback && (
-                    <span className="text-[11px] text-black/30 ml-1">
+                    <span className="text-xs text-black/30 ml-1">
                       Thanks for the feedback
                     </span>
                   )}
@@ -582,7 +582,7 @@ export default function Chatbot({ sourceCount }: ChatbotProps) {
           ))}
 
           {error && (
-            <div className="text-[12px] text-red-600 bg-red-50 rounded-md px-3 py-2">
+            <div className="text-sm text-red-600 bg-red-50 rounded-md px-3 py-2">
               {error}
             </div>
           )}
@@ -601,7 +601,7 @@ export default function Chatbot({ sourceCount }: ChatbotProps) {
             placeholder="Ask Gob about AI labor data..."
             rows={1}
             disabled={streaming}
-            className="flex-1 resize-none text-[13px] leading-relaxed bg-transparent outline-none placeholder:text-[var(--muted)] disabled:opacity-50 max-h-24 overflow-y-auto"
+            className="flex-1 resize-none text-base leading-relaxed bg-transparent outline-none placeholder:text-[var(--muted)] disabled:opacity-50 max-h-24 overflow-y-auto"
             style={{ fieldSizing: "content" } as React.CSSProperties}
           />
           <button

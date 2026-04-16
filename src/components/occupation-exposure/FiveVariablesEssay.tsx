@@ -5,11 +5,11 @@ import Link from "next/link";
 export default function FiveVariablesEssay() {
   return (
     <article id="essay" className="max-w-[740px] mx-auto prose-custom scroll-mt-40 sm:scroll-mt-24">
-      <h2 className="text-[22px] sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-6">
+      <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-6">
         The Wrong Question About AI and Jobs
       </h2>
 
-      <div className="space-y-5 text-[14px] text-[var(--muted)] leading-[1.8]">
+      <div className="space-y-5 text-md text-[var(--muted)] leading-[1.8]">
         <p>
          Most people are starting to ask themselves a single question: will I lose my job if AI is able to do it better than me? But after spending months in the research, I can say that seems to be the wrong question. Or
           rather, it&rsquo;s one-fifth of the right question. And it&rsquo;s
@@ -422,7 +422,7 @@ export default function FiveVariablesEssay() {
         </p>
 
         <div className="border-t border-black/[0.06] pt-4 mt-8">
-          <p className="text-[12px] text-[var(--muted)] leading-[1.7]">
+          <p className="text-sm text-[var(--muted)] leading-[1.7]">
             For the full scoring methodology, including data sources, weights,
             and academic citations for each variable, see the{" "}
             <a

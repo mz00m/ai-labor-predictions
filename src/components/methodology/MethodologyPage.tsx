@@ -25,10 +25,10 @@ const TOC = [
 function TLDR({ children }: { children: React.ReactNode }) {
   return (
     <div className="rounded-xl border border-[#6366F1]/20 bg-[#6366F1]/[0.04] p-4 sm:p-5 mb-6">
-      <p className="text-[11px] font-bold text-[#6366F1] uppercase tracking-widest mb-2">
+      <p className="text-xs font-bold text-[#6366F1] uppercase tracking-widest mb-2">
         TL;DR
       </p>
-      <div className="text-[13px] text-[var(--foreground)] leading-relaxed space-y-2">
+      <div className="text-base text-[var(--foreground)] leading-relaxed space-y-2">
         {children}
       </div>
     </div>
@@ -46,7 +46,7 @@ function Section({
 }) {
   return (
     <section id={id} className="scroll-mt-20">
-      <h2 className="text-[22px] sm:text-[26px] font-extrabold tracking-tight text-[var(--foreground)] mb-4">
+      <h2 className="text-3xl sm:text-[26px] font-extrabold tracking-tight text-[var(--foreground)] mb-4">
         {title}
       </h2>
       {children}
@@ -70,7 +70,7 @@ function DeepDive({
         onClick={() => setOpen(!open)}
         className="flex items-center justify-between w-full px-4 py-3 text-left hover:bg-black/[0.02] transition-colors"
       >
-        <span className="text-[13px] font-semibold text-[var(--foreground)]">
+        <span className="text-base font-semibold text-[var(--foreground)]">
           {title}
         </span>
         <svg
@@ -86,7 +86,7 @@ function DeepDive({
         </svg>
       </button>
       {open && (
-        <div className="px-4 pb-4 text-[13px] text-[var(--muted)] leading-relaxed space-y-3 border-t border-black/[0.04]">
+        <div className="px-4 pb-4 text-base text-[var(--muted)] leading-relaxed space-y-3 border-t border-black/[0.04]">
           <div className="pt-3">{children}</div>
         </div>
       )}
@@ -96,7 +96,7 @@ function DeepDive({
 
 function P({ children }: { children: React.ReactNode }) {
   return (
-    <p className="text-[14px] text-[var(--muted)] leading-relaxed mb-3">
+    <p className="text-md text-[var(--muted)] leading-relaxed mb-3">
       {children}
     </p>
   );
@@ -110,7 +110,7 @@ function Strong({ children }: { children: React.ReactNode }) {
 
 function Code({ children }: { children: React.ReactNode }) {
   return (
-    <code className="text-[12px] bg-black/[0.04] px-1.5 py-0.5 rounded font-mono">
+    <code className="text-sm bg-black/[0.04] px-1.5 py-0.5 rounded font-mono">
       {children}
     </code>
   );
@@ -120,7 +120,7 @@ function SeeAlso({ href, label }: { href: string; label: string }) {
   return (
     <Link
       href={href}
-      className="inline-flex items-center gap-1.5 text-[13px] font-medium text-[var(--accent-text)] hover:underline"
+      className="inline-flex items-center gap-1.5 text-base font-medium text-[var(--accent-text)] hover:underline"
     >
       {label} &rarr;
     </Link>
@@ -188,11 +188,11 @@ export default function MethodologyPage() {
     <div className="space-y-14">
       {/* ── Header ── */}
       <div>
-        <p className="text-[12px] font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
+        <p className="text-sm font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
           Methodology
         </p>
         <h1
-          className="text-[36px] sm:text-[44px] font-extrabold tracking-tight text-[var(--foreground)] leading-[1.1] mb-4"
+          className="text-5xl sm:text-6xl font-extrabold tracking-tight text-[var(--foreground)] leading-[1.1] mb-4"
           style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
         >
           How This Site Works
@@ -221,7 +221,7 @@ export default function MethodologyPage() {
 
       {/* ── Table of Contents ── */}
       <nav className="border border-black/[0.06] rounded-lg px-5 py-4">
-        <p className="text-[11px] font-bold uppercase tracking-widest text-[var(--muted)] mb-3">
+        <p className="text-xs font-bold uppercase tracking-widest text-[var(--muted)] mb-3">
           On This Page
         </p>
         <ol className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-1.5">
@@ -229,9 +229,9 @@ export default function MethodologyPage() {
             <li key={item.id}>
               <a
                 href={`#${item.id}`}
-                className="text-[13px] text-[var(--muted)] hover:text-[var(--foreground)] transition-colors"
+                className="text-base text-[var(--muted)] hover:text-[var(--foreground)] transition-colors"
               >
-                <span className="text-[var(--accent)] font-mono text-[11px] mr-1.5">
+                <span className="text-[var(--accent)] font-mono text-xs mr-1.5">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 {item.label}
@@ -258,7 +258,7 @@ export default function MethodologyPage() {
           employment, wages, and work itself evolve as new evidence emerges. The
           site organizes research across three layers:
         </P>
-        <ul className="text-[14px] text-[var(--muted)] leading-relaxed space-y-2 mb-4 pl-5 list-disc">
+        <ul className="text-md text-[var(--muted)] leading-relaxed space-y-2 mb-4 pl-5 list-disc">
           <li>
             <Strong>Prediction graphs</Strong> (16 graphs across displacement,
             wages, and adoption) &mdash; each plotting every published estimate
@@ -439,14 +439,14 @@ export default function MethodologyPage() {
             >
               <div className="flex items-center gap-2 mb-1.5">
                 <span className={`w-2.5 h-2.5 rounded-full ${t.color}`} />
-                <span className="text-[13px] font-bold text-[var(--foreground)]">
+                <span className="text-base font-bold text-[var(--foreground)]">
                   Tier {t.tier} &mdash; {t.label}
                 </span>
-                <span className="ml-auto text-[11px] font-mono text-[var(--muted)]">
+                <span className="ml-auto text-xs font-mono text-[var(--muted)]">
                   {t.weight}
                 </span>
               </div>
-              <p className="text-[12px] text-[var(--muted)] leading-relaxed">
+              <p className="text-sm text-[var(--muted)] leading-relaxed">
                 {t.desc}
               </p>
             </div>
@@ -488,7 +488,7 @@ export default function MethodologyPage() {
           more:
         </P>
 
-        <div className="bg-black/[0.02] border border-black/[0.06] rounded-lg px-4 py-3 mb-4 font-mono text-[13px] text-[var(--foreground)]">
+        <div className="bg-black/[0.02] border border-black/[0.06] rounded-lg px-4 py-3 mb-4 font-mono text-base text-[var(--foreground)]">
           weight = tierWeight &times; recencyWeight &times; sampleSizeWeight
           &times; proxyWeight
           <br />
@@ -570,7 +570,7 @@ export default function MethodologyPage() {
 
         <DeepDive title="Conversion table" defaultOpen>
           <div className="overflow-x-auto -mx-4 px-4">
-            <table className="w-full text-[12px]">
+            <table className="w-full text-sm">
               <thead>
                 <tr className="text-left border-b border-black/[0.08]">
                   <th className="pb-2 font-semibold text-[var(--foreground)] pr-3">Proxy Metric</th>
@@ -905,7 +905,7 @@ export default function MethodologyPage() {
           </p>
         </DeepDive>
 
-        <div className="mt-3 text-[11px] text-[var(--muted)]">
+        <div className="mt-3 text-xs text-[var(--muted)]">
           <Strong>Data sources:</Strong>{" "}
           <a href="https://pypistats.org" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline">pypistats.org</a>,{" "}
           <a href="https://www.npmjs.com" target="_blank" rel="noopener noreferrer" className="text-[var(--accent)] hover:underline">npm</a>,{" "}
@@ -1125,7 +1125,7 @@ export default function MethodologyPage() {
             {SOURCES.map((s) => (
               <span
                 key={s}
-                className="text-[12px] bg-black/[0.04] px-2.5 py-1 rounded text-[var(--foreground)] font-medium"
+                className="text-sm bg-black/[0.04] px-2.5 py-1 rounded text-[var(--foreground)] font-medium"
               >
                 {s}
               </span>
@@ -1143,7 +1143,7 @@ export default function MethodologyPage() {
             {AUTHORS.map((a) => (
               <span
                 key={a.name}
-                className="text-[11px] text-[var(--muted)] bg-black/[0.04] px-2 py-1 rounded"
+                className="text-xs text-[var(--muted)] bg-black/[0.04] px-2 py-1 rounded"
               >
                 <span className="font-semibold text-[var(--foreground)]">
                   {a.name}
@@ -1152,7 +1152,7 @@ export default function MethodologyPage() {
               </span>
             ))}
           </div>
-          <p className="mt-3 text-[12px]">
+          <p className="mt-3 text-sm">
             Papers by these researchers are automatically surfaced regardless of
             keyword match.
           </p>
@@ -1274,7 +1274,7 @@ export default function MethodologyPage() {
 
       {/* ── Suggest a Source + Update Schedule ── */}
       <div className="border-t border-black/[0.06] pt-6 space-y-4">
-        <p className="text-[13px] text-[var(--muted)] leading-relaxed">
+        <p className="text-base text-[var(--muted)] leading-relaxed">
           <Strong>Know a study we should include?</Strong>{" "}
           <a
             href="/suggest"
@@ -1284,7 +1284,7 @@ export default function MethodologyPage() {
           </a>{" "}
           and we&rsquo;ll review it for inclusion.
         </p>
-        <p className="text-[13px] text-[var(--muted)] leading-relaxed">
+        <p className="text-base text-[var(--muted)] leading-relaxed">
           <Strong>Update schedule:</Strong> Research digest runs weekly
           (Mondays) across all 11 sources. News ticker refreshes hourly.
           Prediction data updates when new evidence materially changes an

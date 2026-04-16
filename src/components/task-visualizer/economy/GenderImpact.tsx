@@ -75,8 +75,8 @@ function CustomTooltip({ active, payload }: TooltipProps<number, string>) {
   const jobIds = d.id ? (SOC_TO_JOB_IDS[d.id] || []) : [];
   return (
     <div className="bg-white rounded-lg border border-black/[0.08] shadow-lg p-3 max-w-[260px]">
-      <p className="text-[13px] font-semibold text-[var(--foreground)]">{d.shortTitle}</p>
-      <div className="mt-1.5 space-y-0.5 text-[12px]">
+      <p className="text-base font-semibold text-[var(--foreground)]">{d.shortTitle}</p>
+      <div className="mt-1.5 space-y-0.5 text-sm">
         <div className="flex justify-between gap-4">
           <span className="text-[var(--muted)]">Women</span>
           <span className="font-medium" style={{ color: GENDER_COLORS.women }}>
@@ -95,7 +95,7 @@ function CustomTooltip({ active, payload }: TooltipProps<number, string>) {
         </div>
       </div>
       {jobIds.length > 0 && (
-        <p className="text-[10px] text-[var(--accent)] mt-2 pt-1.5 border-t border-black/[0.06]">
+        <p className="text-2xs text-[var(--accent)] mt-2 pt-1.5 border-t border-black/[0.06]">
           Click to explore individual jobs in this group
         </p>
       )}
@@ -211,10 +211,10 @@ export default function GenderImpact() {
     <div>
       {/* Manning/Aguirre vulnerability callout */}
       <div className="callout-card bg-[#EC4899]/[0.06] border border-[#EC4899]/20 rounded-xl p-4 mb-6">
-        <p className="text-[13px] font-semibold text-[#EC4899] mb-1">
+        <p className="text-base font-semibold text-[#EC4899] mb-1">
           Research highlight: Women are 81% of the most vulnerable workers
         </p>
-        <p className="text-[12px] text-[var(--muted)] leading-relaxed">
+        <p className="text-sm text-[var(--muted)] leading-relaxed">
           Manning &amp; Aguirre (NBER, 2026) find that women make up approximately 81.3% of workers
           in occupations with both high AI exposure and low adaptive capacity (ability to transition
           to other jobs). These are concentrated in clerical and administrative roles. Only 4.9% of
@@ -225,30 +225,30 @@ export default function GenderImpact() {
       {/* Big stat cards */}
       <div className="grid grid-cols-1 sm:grid-cols-4 gap-3 mb-8">
         <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-black/[0.06] p-4" style={{ animationDelay: "0s" }}>
-          <p className="text-[28px] font-bold tracking-tight" style={{ color: GENDER_COLORS.women }}>
+          <p className="text-4xl font-bold tracking-tight" style={{ color: GENDER_COLORS.women }}>
             {economyStats.womenPct}%
           </p>
-          <p className="text-[11px] text-[var(--muted)]">
+          <p className="text-xs text-[var(--muted)]">
             of workforce is women ({(economyStats.totalWomen / 1000).toFixed(1)}M)
           </p>
         </div>
         <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-black/[0.06] p-4" style={{ animationDelay: "0.08s" }}>
-          <p className="text-[28px] font-bold tracking-tight" style={{ color: GENDER_COLORS.women }}>
+          <p className="text-4xl font-bold tracking-tight" style={{ color: GENDER_COLORS.women }}>
             {economyStats.womenAvgAuto}%
           </p>
-          <p className="text-[11px] text-[var(--muted)]">Avg task automation for women by 2030</p>
+          <p className="text-xs text-[var(--muted)]">Avg task automation for women by 2030</p>
         </div>
         <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-black/[0.06] p-4" style={{ animationDelay: "0.16s" }}>
-          <p className="text-[28px] font-bold tracking-tight" style={{ color: GENDER_COLORS.men }}>
+          <p className="text-4xl font-bold tracking-tight" style={{ color: GENDER_COLORS.men }}>
             {economyStats.menAvgAuto}%
           </p>
-          <p className="text-[11px] text-[var(--muted)]">Avg task automation for men by 2030</p>
+          <p className="text-xs text-[var(--muted)]">Avg task automation for men by 2030</p>
         </div>
         <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-black/[0.06] p-4" style={{ animationDelay: "0.24s" }}>
-          <p className="text-[28px] font-bold tracking-tight text-[var(--foreground)]">
+          <p className="text-4xl font-bold tracking-tight text-[var(--foreground)]">
             {economyStats.gap > 0 ? "+" : ""}{economyStats.gap}pp
           </p>
-          <p className="text-[11px] text-[var(--muted)]">
+          <p className="text-xs text-[var(--muted)]">
             Gender automation gap (women {economyStats.gap > 0 ? "more" : "less"} exposed)
           </p>
         </div>
@@ -256,10 +256,10 @@ export default function GenderImpact() {
 
       {/* Gender composition by occupation */}
       <div className="mb-8">
-        <h4 className="text-[13px] font-semibold text-[var(--foreground)] mb-1">
+        <h4 className="text-base font-semibold text-[var(--foreground)] mb-1">
           Gender composition by occupation group
         </h4>
-        <p className="text-[11px] text-[var(--muted)] mb-4">
+        <p className="text-xs text-[var(--muted)] mb-4">
           Sorted by percentage of women. Women are concentrated in clerical, administrative, healthcare support,
           and education roles. Many of which have high information-processing and communication task loads
           that face near-term automation pressure. This gap is driven by occupational segregation, not
@@ -270,11 +270,11 @@ export default function GenderImpact() {
         <div className="flex gap-6 mb-4">
           <div className="flex items-center gap-2">
             <div className="w-4 h-4 rounded" style={{ backgroundColor: GENDER_COLORS.women }} />
-            <span className="text-[13px] font-medium text-[var(--foreground)]">Women</span>
+            <span className="text-base font-medium text-[var(--foreground)]">Women</span>
           </div>
           <div className="flex items-center gap-2">
             <div className="w-4 h-4 rounded" style={{ backgroundColor: GENDER_COLORS.men }} />
-            <span className="text-[13px] font-medium text-[var(--foreground)]">Men</span>
+            <span className="text-base font-medium text-[var(--foreground)]">Men</span>
           </div>
         </div>
 
@@ -328,14 +328,14 @@ export default function GenderImpact() {
 
       {/* Most exposed female-dominated occupations */}
       <div className="mb-8">
-        <h4 className="text-[13px] font-semibold text-[var(--foreground)] mb-1">
+        <h4 className="text-base font-semibold text-[var(--foreground)] mb-1">
           Most exposed female-dominated occupations
         </h4>
-        <p className="text-[11px] text-[var(--muted)] mb-3">
+        <p className="text-xs text-[var(--muted)] mb-3">
           Occupations where women are the majority (55%+), ranked by automation exposure at 2030.
         </p>
         <div className="overflow-x-auto">
-          <table className="w-full text-[12px]">
+          <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-black/[0.06]">
                 <th className="text-left py-2 pr-3 text-[var(--foreground)] font-semibold">Occupation</th>
@@ -388,10 +388,10 @@ export default function GenderImpact() {
 
       {/* Tier breakdown */}
       <div>
-        <h4 className="text-[13px] font-semibold text-[var(--foreground)] mb-1">
+        <h4 className="text-base font-semibold text-[var(--foreground)] mb-1">
           Gender and automation by income tier
         </h4>
-        <p className="text-[11px] text-[var(--muted)] mb-4">
+        <p className="text-xs text-[var(--muted)] mb-4">
           How the automation gap plays out differently across income levels.
         </p>
 
@@ -403,18 +403,18 @@ export default function GenderImpact() {
               <div key={td.tier} className="gender-tier-card rounded-xl border border-black/[0.06] p-4">
                 <div className="flex items-center justify-between mb-3">
                   <div>
-                    <h5 className="text-[13px] font-semibold" style={{ color: meta.color }}>
+                    <h5 className="text-base font-semibold" style={{ color: meta.color }}>
                       {meta.label}
                     </h5>
-                    <p className="text-[11px] text-[var(--muted)]">
+                    <p className="text-xs text-[var(--muted)]">
                       {meta.range}. {td.womenPercent}% women ({(td.womenWorkers / 1000).toFixed(1)}M)
                     </p>
                   </div>
                   <div className="text-right">
-                    <p className="text-[13px] font-bold text-[var(--foreground)]">
+                    <p className="text-base font-bold text-[var(--foreground)]">
                       {gapInTier > 0 ? "+" : ""}{gapInTier}pp gap
                     </p>
-                    <p className="text-[10px] text-[var(--muted)]">women vs men automation</p>
+                    <p className="text-2xs text-[var(--muted)]">women vs men automation</p>
                   </div>
                 </div>
 
@@ -422,22 +422,22 @@ export default function GenderImpact() {
                   <div className="rounded-lg bg-black/[0.02] p-3">
                     <div className="flex items-center gap-1.5 mb-1">
                       <div className="w-2 h-2 rounded-full" style={{ backgroundColor: GENDER_COLORS.women }} />
-                      <span className="text-[11px] font-medium text-[var(--foreground)]">Women</span>
+                      <span className="text-xs font-medium text-[var(--foreground)]">Women</span>
                     </div>
-                    <p className="text-[18px] font-bold tracking-tight" style={{ color: GENDER_COLORS.women }}>
+                    <p className="text-2xl font-bold tracking-tight" style={{ color: GENDER_COLORS.women }}>
                       {td.womenAvgAutomation2030}%
                     </p>
-                    <p className="text-[10px] text-[var(--muted)]">avg task automation 2030</p>
+                    <p className="text-2xs text-[var(--muted)]">avg task automation 2030</p>
                   </div>
                   <div className="rounded-lg bg-black/[0.02] p-3">
                     <div className="flex items-center gap-1.5 mb-1">
                       <div className="w-2 h-2 rounded-full" style={{ backgroundColor: GENDER_COLORS.men }} />
-                      <span className="text-[11px] font-medium text-[var(--foreground)]">Men</span>
+                      <span className="text-xs font-medium text-[var(--foreground)]">Men</span>
                     </div>
-                    <p className="text-[18px] font-bold tracking-tight" style={{ color: GENDER_COLORS.men }}>
+                    <p className="text-2xl font-bold tracking-tight" style={{ color: GENDER_COLORS.men }}>
                       {td.menAvgAutomation2030}%
                     </p>
-                    <p className="text-[10px] text-[var(--muted)]">avg task automation 2030</p>
+                    <p className="text-2xs text-[var(--muted)]">avg task automation 2030</p>
                   </div>
                 </div>
               </div>
@@ -446,7 +446,7 @@ export default function GenderImpact() {
         </div>
       </div>
 
-      <p className="text-[11px] text-[var(--muted)] mt-6">
+      <p className="text-xs text-[var(--muted)] mt-6">
         Gender composition from BLS Current Population Survey 2024 annual averages (Table 11).
         Automation projections use the same compute-cost crossover model as other sections.
         The automation gap reflects occupational segregation. Women are concentrated in clerical,

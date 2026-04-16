@@ -164,10 +164,10 @@ export default function DemandSliderViz({ compact = false }: DemandSliderVizProp
     <div className="rounded-xl border border-black/[0.06] bg-white p-4 sm:p-6">
       {!compact && (
         <div className="mb-5">
-          <h3 className="text-[18px] font-bold text-[var(--foreground)] mb-1">
+          <h3 className="text-2xl font-bold text-[var(--foreground)] mb-1">
             Demand Response Calculator
           </h3>
-          <p className="text-[13px] text-[var(--muted)] leading-relaxed">
+          <p className="text-base text-[var(--muted)] leading-relaxed">
             Adjust AI productivity gains and demand elasticity to see how
             workforce size changes. When demand is elastic, cost reductions
             create more total work.
@@ -181,7 +181,7 @@ export default function DemandSliderViz({ compact = false }: DemandSliderVizProp
           <button
             key={preset.label}
             onClick={() => applyPreset(preset)}
-            className={`px-3 py-1.5 rounded-full text-[12px] font-medium border transition-colors cursor-pointer ${
+            className={`px-3 py-1.5 rounded-full text-sm font-medium border transition-colors cursor-pointer ${
               activePreset === preset.label
                 ? "bg-[var(--accent)] text-white border-[var(--accent)]"
                 : "bg-white text-[var(--muted)] border-black/[0.08] hover:border-black/[0.15] hover:text-[var(--foreground)]"
@@ -195,7 +195,7 @@ export default function DemandSliderViz({ compact = false }: DemandSliderVizProp
       {/* Active preset description */}
       {activePresetData && (
         <div
-          className="mb-5 px-4 py-3 rounded-lg border-l-3 text-[13px] text-[var(--muted)] leading-relaxed"
+          className="mb-5 px-4 py-3 rounded-lg border-l-3 text-base text-[var(--muted)] leading-relaxed"
           style={{
             borderLeftColor: "var(--accent)",
             borderLeftWidth: 3,
@@ -211,11 +211,11 @@ export default function DemandSliderViz({ compact = false }: DemandSliderVizProp
         {/* Productivity slider */}
         <div>
           <div className="flex items-center justify-between mb-1.5">
-            <label className="text-[12px] font-semibold text-[var(--foreground)]">
+            <label className="text-sm font-semibold text-[var(--foreground)]">
               AI productivity multiplier
             </label>
             <span
-              className="text-[13px] font-bold tabular-nums"
+              className="text-base font-bold tabular-nums"
               style={{ color: "#5C61F6" }}
             >
               {productivity.toFixed(1)}x
@@ -230,7 +230,7 @@ export default function DemandSliderViz({ compact = false }: DemandSliderVizProp
             onChange={handleProductivityChange}
             className="w-full accent-[#5C61F6]"
           />
-          <div className="flex justify-between text-[10px] text-[var(--muted)] mt-0.5">
+          <div className="flex justify-between text-2xs text-[var(--muted)] mt-0.5">
             <span>1x (no gain)</span>
             <span>10x</span>
           </div>
@@ -239,11 +239,11 @@ export default function DemandSliderViz({ compact = false }: DemandSliderVizProp
         {/* Elasticity slider */}
         <div>
           <div className="flex items-center justify-between mb-1.5">
-            <label className="text-[12px] font-semibold text-[var(--foreground)]">
+            <label className="text-sm font-semibold text-[var(--foreground)]">
               Demand elasticity
             </label>
             <span
-              className="text-[13px] font-bold tabular-nums"
+              className="text-base font-bold tabular-nums"
               style={{
                 color:
                   elasticity < 0.5
@@ -265,7 +265,7 @@ export default function DemandSliderViz({ compact = false }: DemandSliderVizProp
             onChange={handleElasticityChange}
             className="w-full accent-[#5C61F6]"
           />
-          <div className="flex justify-between text-[10px] text-[var(--muted)] mt-0.5">
+          <div className="flex justify-between text-2xs text-[var(--muted)] mt-0.5">
             <span>0.1 (inelastic)</span>
             <span>2.5 (highly elastic)</span>
           </div>
@@ -340,29 +340,29 @@ export default function DemandSliderViz({ compact = false }: DemandSliderVizProp
             }}
           >
             <p
-              className="text-[28px] font-black tabular-nums"
+              className="text-4xl font-black tabular-nums"
               style={{ color: isExpansion ? "#22c55e" : "#ef4444" }}
             >
               {scenario.netChange > 0 ? "+" : ""}
               {scenario.netChange}
             </p>
-            <p className="text-[11px] font-bold text-[var(--foreground)]">
+            <p className="text-xs font-bold text-[var(--foreground)]">
               Net worker change
             </p>
-            <p className="text-[10px] text-[var(--muted)]">
+            <p className="text-2xs text-[var(--muted)]">
               per 100 original workers
             </p>
           </div>
 
           <div className="grid grid-cols-2 gap-2">
             <div className="rounded-md px-2 py-2 bg-black/[0.02] text-center">
-              <p className="text-[16px] font-bold text-[var(--foreground)] tabular-nums">
+              <p className="text-xl font-bold text-[var(--foreground)] tabular-nums">
                 {scenario.demandUnits}%
               </p>
               <p className="text-[9px] text-[var(--muted)]">Demand vs. before</p>
             </div>
             <div className="rounded-md px-2 py-2 bg-black/[0.02] text-center">
-              <p className="text-[16px] font-bold text-[var(--foreground)] tabular-nums">
+              <p className="text-xl font-bold text-[var(--foreground)] tabular-nums">
                 -{scenario.costReduction}%
               </p>
               <p className="text-[9px] text-[var(--muted)]">Cost per unit</p>
@@ -374,7 +374,7 @@ export default function DemandSliderViz({ compact = false }: DemandSliderVizProp
       {/* Equation explanation */}
       {!compact && (
         <div className="mt-5 pt-4 border-t border-black/[0.06]">
-          <p className="text-[11px] text-[var(--muted)] leading-relaxed">
+          <p className="text-xs text-[var(--muted)] leading-relaxed">
             <strong className="text-[var(--foreground)]">How this works:</strong>{" "}
             AI reduces cost per unit of output by the productivity multiplier.
             Demand responds to lower prices based on elasticity (elasticity of 1.0
