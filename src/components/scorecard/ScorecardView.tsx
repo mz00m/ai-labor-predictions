@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import type { ScorecardResult, GoalPreference } from "@/lib/assessment/scorecard";
+import QuickPlan from "./QuickPlan";
 
 interface ScorecardViewProps {
   scorecard: ScorecardResult;
@@ -297,26 +298,20 @@ export default function ScorecardView({ scorecard }: ScorecardViewProps) {
           </p>
         </div>
 
-        {/* Share + CTA */}
-        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 mb-12">
-          <a
-            href="/assessment/start"
-            className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-[#5C61F6] text-white font-semibold text-center hover:opacity-90 transition-opacity no-underline"
-          >
-            Get your personalized plan
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </a>
+        {/* Layer 2: Personalized Quick Plan */}
+        <QuickPlan
+          slug={scorecard.slug}
+          title={scorecard.title}
+          score={scorecard.score}
+          band={scorecard.band}
+          bandLabel={scorecard.bandLabel}
+          taskBreakdown={scorecard.taskBreakdown}
+          accentColor={colors.text}
+          accentBg={colors.bg}
+        />
+
+        {/* Share */}
+        <div className="flex justify-center mb-12">
           <button
             onClick={copyLink}
             className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl border border-gray-200 bg-white text-gray-700 font-medium hover:bg-gray-50 transition-colors"
