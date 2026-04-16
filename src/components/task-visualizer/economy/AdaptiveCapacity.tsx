@@ -153,7 +153,7 @@ export default function AdaptiveCapacity() {
           </p>
         </div>
         <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-black/[0.06] p-4" style={{ animationDelay: "0.08s" }}>
-          <p className="text-4xl font-bold tracking-tight text-[#10B981]">
+          <p className="text-4xl font-bold tracking-tight text-[var(--signal-positive-muted)]">
             71%
           </p>
           <p className="text-xs text-[var(--muted)]">
@@ -161,7 +161,7 @@ export default function AdaptiveCapacity() {
           </p>
         </div>
         <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-black/[0.06] p-4" style={{ animationDelay: "0.16s" }}>
-          <p className="text-4xl font-bold tracking-tight text-[#EF4444]">
+          <p className="text-4xl font-bold tracking-tight text-signal-negative">
             6.1M
           </p>
           <p className="text-xs text-[var(--muted)]">
@@ -289,13 +289,13 @@ export default function AdaptiveCapacity() {
           <div className="quadrant-label text-right text-[var(--muted)]">
             Low exposure, high adaptability
           </div>
-          <div className="quadrant-label text-left text-[#10B981] font-medium">
+          <div className="quadrant-label text-left text-[var(--signal-positive-muted)] font-medium">
             High exposure, high adaptability
           </div>
-          <div className="quadrant-label text-right text-[#F59E0B]">
+          <div className="quadrant-label text-right text-signal-warning">
             Low exposure, low adaptability
           </div>
-          <div className="quadrant-label text-left text-[#EF4444] font-medium">
+          <div className="quadrant-label text-left text-signal-negative font-medium">
             High exposure, LOW adaptability
           </div>
         </div>

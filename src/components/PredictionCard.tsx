@@ -120,10 +120,10 @@ export default function PredictionCard({
             Range: {agg.min}–{agg.max}{prediction.unit.includes("%") ? "%" : ""}
           </p>
         )}
-        <p className={`text-xs mt-1 ${hasSignificantDisagreement ? "text-[#d97706]" : "text-gray-500 dark:text-gray-400"}`}>
+        <p className={`text-xs mt-1 ${hasSignificantDisagreement ? "text-[var(--signal-warning-muted)]" : "text-gray-500 dark:text-gray-400"}`}>
           {prediction.sources.length} sources{hasSignificantDisagreement ? ". Significant disagreement" : ""}
           {isLowConfidence && (
-            <span className="ml-1.5 inline-block text-2xs font-medium text-[#d97706] bg-[#d97706]/[0.08] rounded px-1.5 py-0.5">
+            <span className="ml-1.5 inline-block text-2xs font-medium text-[var(--signal-warning-muted)] bg-[#d97706]/[0.08] rounded px-1.5 py-0.5">
               Low confidence
             </span>
           )}

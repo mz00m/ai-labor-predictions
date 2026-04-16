@@ -8,8 +8,8 @@ export default function MethodologyNote() {
       </h2>
 
       {/* TL;DR box */}
-      <div className="rounded-xl border border-[#6366F1]/20 bg-[#6366F1]/[0.04] p-5 max-w-3xl mb-6">
-        <h4 className="text-base font-bold text-[#6366F1] uppercase tracking-wide mb-2">
+      <div className="rounded-xl border border-[#6366F1]/20 bg-accent/[0.04] p-5 max-w-3xl mb-6">
+        <h4 className="text-base font-bold text-accent uppercase tracking-wide mb-2">
           TL;DR
         </h4>
         <p className="text-base text-[var(--foreground)] leading-relaxed">

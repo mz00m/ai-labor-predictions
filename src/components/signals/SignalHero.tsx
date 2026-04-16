@@ -22,8 +22,8 @@ export default function SignalHero({ metrics, lastUpdated }: SignalHeroProps) {
     <div className="relative overflow-hidden -mx-6 sm:-mx-10 px-6 sm:px-10 pt-1 pb-2 sm:pt-2 sm:pb-4">
       {/* Background gradient orbs */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-        <div className="absolute -top-24 -left-24 w-[500px] h-[500px] rounded-full bg-[#5C61F6]/[0.04] blur-3xl" />
-        <div className="absolute -bottom-32 right-0 w-[400px] h-[400px] rounded-full bg-[#5C61F6]/[0.03] blur-3xl" />
+        <div className="absolute -top-24 -left-24 w-[500px] h-[500px] rounded-full bg-accent/[0.04] blur-3xl" />
+        <div className="absolute -bottom-32 right-0 w-[400px] h-[400px] rounded-full bg-accent/[0.03] blur-3xl" />
         <svg
           className="absolute inset-0 w-full h-full opacity-[0.03]"
           aria-hidden="true"
@@ -58,7 +58,7 @@ export default function SignalHero({ metrics, lastUpdated }: SignalHeroProps) {
 
         <h1 className="text-[42px] sm:text-7xl font-black tracking-tight text-[var(--foreground)] leading-[1.05] max-w-4xl">
           Where is AI automation{" "}
-          <span className="text-[#F66B5C] italic">heading?</span>
+          <span className="text-highlight italic">heading?</span>
         </h1>
 
         <p className="mt-4 text-[17px] text-[var(--muted)] leading-relaxed max-w-2xl">

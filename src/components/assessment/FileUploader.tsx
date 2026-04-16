@@ -116,7 +116,7 @@ export default function FileUploader({
         className={`
           relative cursor-pointer rounded-xl border-2 border-dashed p-8 text-center transition-colors
           ${dragActive
-            ? "border-[#5C61F6] bg-[#5C61F6]/[0.04]"
+            ? "border-accent bg-accent/[0.04]"
             : "border-gray-200 hover:border-gray-300 bg-gray-50"
           }
         `}
@@ -135,7 +135,7 @@ export default function FileUploader({
         </svg>
 
         <p className="text-md text-gray-500 mb-1">
-          <span className="text-[#5C61F6] font-medium">Click to upload</span> or drag and drop
+          <span className="text-accent font-medium">Click to upload</span> or drag and drop
         </p>
         <p className="text-sm text-gray-400">
           PDF, DOCX, TXT, CSV, XLS up to {maxSizeMb}MB each &middot; {maxFiles} files max
@@ -188,7 +188,7 @@ export default function FileUploader({
 
       {/* Security note */}
       <div className="mt-3 flex gap-2 items-start">
-        <svg className="w-3.5 h-3.5 text-[#5C61F6] flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <svg className="w-3.5 h-3.5 text-accent flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
         </svg>
         <p className="text-xs text-gray-400">

@@ -170,7 +170,7 @@ export default function AboutPage() {
           </p>
           <a
             href="/methodology"
-            className="inline-flex items-center gap-2 text-md font-semibold text-[var(--accent)] hover:text-[#5C61F6] transition-colors"
+            className="inline-flex items-center gap-2 text-md font-semibold text-[var(--accent)] hover:text-accent transition-colors"
           >
             Read the full methodology
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">

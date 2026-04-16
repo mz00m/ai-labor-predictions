@@ -180,9 +180,9 @@ export default function CompareClient() {
             const agg = computeAggregate(prediction, allTiers);
             const unitSymbol = prediction.unit.includes("%") ? "%" : "";
             const trendColorClass = agg.trendIsBad
-              ? "text-[#F66B5C]"
+              ? "text-highlight"
               : agg.trend !== "flat"
-                ? "text-[#16a34a]"
+                ? "text-[var(--signal-positive-strong)]"
                 : "text-[var(--muted)]";
 
             return (

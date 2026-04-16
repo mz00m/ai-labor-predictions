@@ -10,13 +10,29 @@ html {
 }
 
 :root {
+  /* Neutrals */
   --foreground: #1a1a1a;
   --background: #ffffff;
   --muted: #6b7280;
+  --muted-light: #9ca3af;
+  --muted-lighter: #d1d5db;
+  --border: rgba(0, 0, 0, 0.08);
+
+  /* Brand */
   --accent: #5C61F6;
   --accent-text: #4F52D4;
   --accent-light: #eef0ff;
-  --border: rgba(0, 0, 0, 0.08);
+  --highlight: #F66B5C;
+  --heading: #2E3650;
+
+  /* Semantic */
+  --signal-positive: #22c55e;
+  --signal-negative: #ef4444;
+  --signal-warning: #f59e0b;
+  --signal-negative-strong: #dc2626;
+  --signal-positive-strong: #16a34a;
+  --signal-positive-muted: #10B981;
+  --signal-warning-muted: #d97706;
 }
 
 body {

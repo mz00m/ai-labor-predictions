@@ -139,7 +139,7 @@ export default function SplitFlapWord() {
         <span
           key={i}
           aria-hidden="true"
-          className="split-flap-char inline-block text-[#F66B5C] italic font-bold"
+          className="split-flap-char inline-block text-highlight italic font-bold"
           style={{
             minWidth: char === " " ? "0.15em" : undefined,
             animation: flipping[i] ? `splitFlapDown ${FLIP_DURATION}ms ease-in-out` : "none",

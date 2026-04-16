@@ -135,7 +135,7 @@ export default function SubmissionForm() {
 
       {/* Error */}
       {status === "error" && (
-        <p className="text-base text-[#F66B5C] bg-[#F66B5C]/[0.06] border border-[#F66B5C]/20 rounded px-3 py-2">
+        <p className="text-base text-highlight bg-[#F66B5C]/[0.06] border border-[#F66B5C]/20 rounded px-3 py-2">
           {errorMsg}
         </p>
       )}

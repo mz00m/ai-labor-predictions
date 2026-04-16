@@ -13,8 +13,8 @@ export default function ProductivityPage() {
       <header className="relative overflow-hidden -mx-6 sm:-mx-10 px-6 sm:px-10 pt-1 pb-8 sm:pt-2 sm:pb-10">
         {/* Background gradient orbs */}
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-          <div className="absolute -top-24 -left-24 w-[500px] h-[500px] rounded-full bg-[#5C61F6]/[0.04] blur-3xl" />
-          <div className="absolute -bottom-32 right-0 w-[400px] h-[400px] rounded-full bg-[#22c55e]/[0.03] blur-3xl" />
+          <div className="absolute -top-24 -left-24 w-[500px] h-[500px] rounded-full bg-accent/[0.04] blur-3xl" />
+          <div className="absolute -bottom-32 right-0 w-[400px] h-[400px] rounded-full bg-signal-positive/[0.03] blur-3xl" />
         </div>
 
         <div className="relative max-w-3xl">

@@ -151,13 +151,13 @@ export default function NotFound() {
     <div className="min-h-[60vh] flex flex-col items-center justify-center px-6 py-20">
       {/* 404 heading */}
       <div className="flex items-baseline gap-0 mb-6">
-        <span className="text-[80px] sm:text-[120px] font-black tracking-tighter text-[#2E3650] leading-none">
+        <span className="text-[80px] sm:text-[120px] font-black tracking-tighter text-heading leading-none">
           4
         </span>
-        <span className="text-[80px] sm:text-[120px] font-black tracking-tighter text-[#F66B5C] leading-none">
+        <span className="text-[80px] sm:text-[120px] font-black tracking-tighter text-highlight leading-none">
           0
         </span>
-        <span className="text-[80px] sm:text-[120px] font-black tracking-tighter text-[#2E3650] leading-none">
+        <span className="text-[80px] sm:text-[120px] font-black tracking-tighter text-heading leading-none">
           4
         </span>
       </div>

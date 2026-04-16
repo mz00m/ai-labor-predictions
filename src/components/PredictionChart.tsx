@@ -102,7 +102,7 @@ function CustomTooltip({
             {data.dateStr}
           </p>
           {data.dataType === "projected" && (
-            <span className="inline-block text-2xs font-medium text-white bg-[#5C61F6]/70 rounded px-1.5 py-0.5 mb-1">
+            <span className="inline-block text-2xs font-medium text-white bg-accent/70 rounded px-1.5 py-0.5 mb-1">
               Projected / Forecast
             </span>
           )}

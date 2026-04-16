@@ -35,7 +35,7 @@ export default function SignalsPage() {
       {/* Jump link → productivity-paths */}
       <a
         href="#productivity-paths"
-        className="group flex items-center gap-2 text-lg font-semibold text-[var(--accent)] hover:text-[#5C61F6] transition-colors -mt-2"
+        className="group flex items-center gap-2 text-lg font-semibold text-[var(--accent)] hover:text-accent transition-colors -mt-2"
       >
         What happens when workers get more productive?
         <svg

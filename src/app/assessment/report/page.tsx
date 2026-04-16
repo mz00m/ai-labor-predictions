@@ -157,7 +157,7 @@ export default function ReportPage() {
         </p>
         <Link
           href={`/assessment/dashboard?returnTo=${encodeURIComponent(returnUrl)}`}
-          className="inline-block bg-[#5C61F6] hover:bg-[#4F52D4] text-white text-md font-medium px-6 py-2.5 rounded-lg transition-colors"
+          className="inline-block bg-accent hover:bg-[#4F52D4] text-white text-md font-medium px-6 py-2.5 rounded-lg transition-colors"
         >
           Sign in
         </Link>
@@ -171,7 +171,7 @@ export default function ReportPage() {
         <h1 className="text-[24px] font-bold text-gray-900 mb-4">
           {error || "Report not found"}
         </h1>
-        <Link href="/assessment/start" className="text-[#5C61F6] hover:underline">
+        <Link href="/assessment/start" className="text-accent hover:underline">
           Start a new plan
         </Link>
       </div>
@@ -197,7 +197,7 @@ export default function ReportPage() {
     <div className="max-w-3xl mx-auto px-6 sm:px-10 py-12">
       {/* Cover header */}
       <header className="border-b border-gray-200 pb-8 mb-8">
-        <p className="text-xs font-semibold uppercase tracking-widest text-[#5C61F6] mb-2">
+        <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-2">
           AI Action Plan
         </p>
         <h1 className="text-4xl sm:text-[34px] font-bold text-gray-900 leading-tight">
@@ -211,7 +211,7 @@ export default function ReportPage() {
         {/* Evidence connection */}
         <p className="text-sm text-gray-400 mt-1.5">
           Analysis informed by{" "}
-          <Link href="/" className="text-[#5C61F6] hover:underline">
+          <Link href="/" className="text-accent hover:underline">
             478 verified research sources
           </Link>
           {" "}tracked on jobsdata.ai
@@ -221,7 +221,7 @@ export default function ReportPage() {
           <button
             onClick={handleDownloadPdf}
             disabled={downloadingPdf}
-            className="flex items-center gap-2 bg-[#5C61F6] hover:bg-[#4F52D4] text-white text-base font-medium px-4 py-2 rounded-lg transition-colors disabled:opacity-50"
+            className="flex items-center gap-2 bg-accent hover:bg-[#4F52D4] text-white text-base font-medium px-4 py-2 rounded-lg transition-colors disabled:opacity-50"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
@@ -254,10 +254,10 @@ export default function ReportPage() {
         <div className="flex items-center justify-between mb-3">
           <h2 className="text-sm font-bold uppercase tracking-wider text-gray-400">Contents</h2>
           <div className="flex gap-3">
-            <button onClick={expandAll} className="text-xs text-gray-400 hover:text-[#5C61F6] transition-colors">
+            <button onClick={expandAll} className="text-xs text-gray-400 hover:text-accent transition-colors">
               Expand all
             </button>
-            <button onClick={collapseAll} className="text-xs text-gray-400 hover:text-[#5C61F6] transition-colors">
+            <button onClick={collapseAll} className="text-xs text-gray-400 hover:text-accent transition-colors">
               Collapse all
             </button>
           </div>
@@ -265,7 +265,7 @@ export default function ReportPage() {
         <ol className="space-y-1.5">
           {TOC_SECTIONS.map((s, i) => (
             <li key={s.id}>
-              <a href={`#${s.id}`} onClick={() => setExpandedSections((prev) => { const next = new Set(prev); next.add(s.id); return next; })} className="text-base text-gray-600 hover:text-[#5C61F6] transition-colors flex gap-2">
+              <a href={`#${s.id}`} onClick={() => setExpandedSections((prev) => { const next = new Set(prev); next.add(s.id); return next; })} className="text-base text-gray-600 hover:text-accent transition-colors flex gap-2">
                 <span className="text-gray-300 w-4 text-right">{i + 1}.</span>
                 {s.label}
               </a>
@@ -293,7 +293,7 @@ export default function ReportPage() {
         {report.organizationProfile.aiReadinessScore > 0 && (
           <div className="mb-6">
             <div className="flex items-end gap-4 mb-3">
-              <div className="text-[64px] font-black text-[#5C61F6] leading-none" style={{ fontFamily: "'DM Mono', monospace" }}>
+              <div className="text-[64px] font-black text-accent leading-none" style={{ fontFamily: "'DM Mono', monospace" }}>
                 {report.organizationProfile.aiReadinessScore}
               </div>
               <div className="pb-2">
@@ -303,7 +303,7 @@ export default function ReportPage() {
             </div>
             <div className="w-full bg-gray-200 rounded-full h-3">
               <div
-                className="bg-[#5C61F6] h-3 rounded-full transition-all duration-500"
+                className="bg-accent h-3 rounded-full transition-all duration-500"
                 style={{ width: `${report.organizationProfile.aiReadinessScore * 10}%` }}
               />
             </div>
@@ -413,7 +413,7 @@ export default function ReportPage() {
                         {task.exampleTools.map((t, j) => (
                           <span key={j} className="inline-flex items-center gap-1.5 text-sm bg-gray-50 border border-gray-200 text-gray-700 rounded-md px-2.5 py-1">
                             {t.url ? (
-                              <a href={t.url} target="_blank" rel="noopener noreferrer" className="text-[#5C61F6] font-medium hover:underline">{t.name} &rarr;</a>
+                              <a href={t.url} target="_blank" rel="noopener noreferrer" className="text-accent font-medium hover:underline">{t.name} &rarr;</a>
                             ) : <span className="font-medium">{t.name}</span>}
                             {t.free && <span className="text-green-600 text-2xs font-bold bg-green-50 border border-green-200 rounded px-1 py-px">FREE</span>}
                           </span>
@@ -423,8 +423,8 @@ export default function ReportPage() {
                   )}
                   {/* Getting started */}
                   {task.gettingStarted && (
-                    <div className="bg-[#5C61F6]/[0.04] border border-[#5C61F6]/10 rounded px-3 py-2">
-                      <p className="text-sm text-[#5C61F6] font-medium">Quick start: <span className="font-normal text-gray-600">{task.gettingStarted}</span></p>
+                    <div className="bg-accent/[0.04] border border-accent/10 rounded px-3 py-2">
+                      <p className="text-sm text-accent font-medium">Quick start: <span className="font-normal text-gray-600">{task.gettingStarted}</span></p>
                     </div>
                   )}
                   {/* Starter prompt */}
@@ -436,7 +436,7 @@ export default function ReportPage() {
                           onClick={() => {
                             navigator.clipboard.writeText(task.starterPrompt!);
                           }}
-                          className="text-xs text-[#5C61F6] hover:underline font-medium"
+                          className="text-xs text-accent hover:underline font-medium"
                         >
                           Copy prompt
                         </button>
@@ -496,7 +496,7 @@ export default function ReportPage() {
                                 <div className="flex items-center justify-between mb-1">
                                   <div className="flex items-center gap-2">
                                     {p.url ? (
-                                      <a href={p.url} target="_blank" rel="noopener noreferrer" className="text-base font-semibold text-[#5C61F6] hover:underline">
+                                      <a href={p.url} target="_blank" rel="noopener noreferrer" className="text-base font-semibold text-accent hover:underline">
                                         {p.name} &rarr;
                                       </a>
                                     ) : (
@@ -528,7 +528,7 @@ export default function ReportPage() {
                           <ol className="space-y-1 mt-1">
                             {tool.gettingStarted.map((step, j) => (
                               <li key={j} className="text-sm text-gray-600 flex gap-2">
-                                <span className="text-[#5C61F6] font-bold flex-shrink-0">{j + 1}.</span>
+                                <span className="text-accent font-bold flex-shrink-0">{j + 1}.</span>
                                 <span>{step}</span>
                               </li>
                             ))}
@@ -628,10 +628,10 @@ export default function ReportPage() {
                             </div>
                             <p className="text-sm text-gray-500 ml-4 leading-relaxed" style={{ fontFamily: "'Source Serif 4', 'Source Serif Pro', Georgia, serif" }}>{action.description}</p>
                             {action.howTo && (
-                              <p className="text-sm text-[#5C61F6] ml-4 mt-1">{action.howTo}</p>
+                              <p className="text-sm text-accent ml-4 mt-1">{action.howTo}</p>
                             )}
                             {action.resource && (
-                              <a href={action.resource.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-[#5C61F6] hover:underline ml-4 mt-1">
+                              <a href={action.resource.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-accent hover:underline ml-4 mt-1">
                                 {action.resource.label} &rarr;
                               </a>
                             )}
@@ -679,7 +679,7 @@ export default function ReportPage() {
                 </div>
                 {report.riskAssessment.overallRiskLevel !== "low" && report.humanCapabilities && report.humanCapabilities.length > 0 && (
                   <p className="text-sm text-gray-400 mt-2">
-                    See <a href="#capabilities" onClick={() => setExpandedSections((prev) => { const next = new Set(prev); next.add("capabilities"); return next; })} className="text-[#5C61F6] hover:underline">Skills That Grow With AI</a> below for detailed guidance on developing capabilities that make your role more resilient.
+                    See <a href="#capabilities" onClick={() => setExpandedSections((prev) => { const next = new Set(prev); next.add("capabilities"); return next; })} className="text-accent hover:underline">Skills That Grow With AI</a> below for detailed guidance on developing capabilities that make your role more resilient.
                   </p>
                 )}
               </div>
@@ -697,7 +697,7 @@ export default function ReportPage() {
                   <ul className="space-y-1.5 mt-1">
                     {report.riskAssessment.skillGaps.map((gap, i) => (
                       <li key={i} className="text-base text-gray-600 flex gap-2">
-                        <span className="text-[#5C61F6] flex-shrink-0">{i + 1}.</span> {gap}
+                        <span className="text-accent flex-shrink-0">{i + 1}.</span> {gap}
                       </li>
                     ))}
                   </ul>
@@ -821,7 +821,7 @@ export default function ReportPage() {
                   <div key={i} className="border border-gray-200 rounded-lg p-4">
                     <div className="flex items-start justify-between gap-3 mb-2">
                       <h4 className="text-md font-semibold text-gray-900">{cap.name}</h4>
-                      <span className="flex-shrink-0 text-xs font-bold text-[#5C61F6] bg-[#5C61F6]/10 px-2 py-0.5 rounded-full">
+                      <span className="flex-shrink-0 text-xs font-bold text-accent bg-accent/10 px-2 py-0.5 rounded-full">
                         {cap.appreciationScore}/10
                       </span>
                     </div>
@@ -844,7 +844,7 @@ export default function ReportPage() {
               <div className="space-y-2">
                 {report.furtherEvaluation.map((item, i) => (
                   <div key={i} className="flex gap-3 bg-gray-50 border border-gray-100 rounded-lg px-4 py-3">
-                    <span className="text-md font-bold text-[#5C61F6] flex-shrink-0 w-6 text-right">{i + 1}.</span>
+                    <span className="text-md font-bold text-accent flex-shrink-0 w-6 text-right">{i + 1}.</span>
                     <p className="text-base text-gray-700 leading-relaxed" style={{ fontFamily: "'Source Serif 4', 'Source Serif Pro', Georgia, serif" }}>{item}</p>
                   </div>
                 ))}
@@ -948,7 +948,7 @@ export default function ReportPage() {
                 onChange={(e) => setFeedbackText(e.target.value)}
                 placeholder="What could be better? What was most useful?"
                 rows={3}
-                className="w-full border border-gray-200 rounded-lg px-4 py-3 text-base text-gray-700 placeholder-gray-300 focus:outline-none focus:border-[#5C61F6] focus:ring-1 focus:ring-[#5C61F6]/20 resize-none"
+                className="w-full border border-gray-200 rounded-lg px-4 py-3 text-base text-gray-700 placeholder-gray-300 focus:outline-none focus:border-accent focus:ring-1 focus:ring-[#5C61F6]/20 resize-none"
               />
 
               <button
@@ -975,7 +975,7 @@ export default function ReportPage() {
         <Link href="/assessment/dashboard" className="text-gray-400 hover:text-gray-900 transition-colors">
           My Plans
         </Link>
-        <Link href="/assessment/start" className="text-[#5C61F6] hover:underline">
+        <Link href="/assessment/start" className="text-accent hover:underline">
           Start a New Plan
         </Link>
       </footer>
@@ -992,7 +992,7 @@ function Section({ num, id, title, expanded, onToggle, children }: { num: number
         onClick={onToggle}
         className="w-full flex items-center gap-3 mb-4 pb-2 border-b border-gray-100 group cursor-pointer text-left"
       >
-        <span className="text-base font-mono text-[#5C61F6]">{num}.</span>
+        <span className="text-base font-mono text-accent">{num}.</span>
         <h2 className="text-2xl font-bold text-gray-900 flex-1">{title}</h2>
         <svg
           className={`w-5 h-5 text-gray-400 group-hover:text-gray-600 transition-transform duration-200 ${expanded ? "rotate-180" : ""}`}
@@ -1033,7 +1033,7 @@ function OpportunityBadge({ level }: { level: string }) {
 
 function PriorityBadge({ tier }: { tier: string }) {
   const colors = {
-    immediate: "bg-[#5C61F6]/10 text-[#5C61F6] border-[#5C61F6]/20",
+    immediate: "bg-accent/10 text-accent border-accent/20",
     "medium-term": "bg-amber-50 text-amber-600 border-amber-200",
     "long-term": "bg-gray-50 text-gray-500 border-gray-200",
   };

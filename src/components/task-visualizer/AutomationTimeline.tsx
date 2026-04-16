@@ -55,7 +55,7 @@ export default function AutomationTimeline({
       {/* Legend */}
       <div className="flex items-center gap-5 mb-4 text-2xs text-[var(--muted)]">
         <div className="flex items-center gap-1.5">
-          <div className="w-3 h-0.5 bg-[#6366F1] rounded-full" />
+          <div className="w-3 h-0.5 bg-accent rounded-full" />
           <span>Cost parity (AI cheaper than labor)</span>
         </div>
         <div className="flex items-center gap-1.5">

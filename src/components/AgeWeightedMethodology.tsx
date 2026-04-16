@@ -51,10 +51,10 @@ export default function AgeWeightedMethodology() {
     <div className="max-w-2xl">
       <div className="border border-[var(--border)] rounded-lg overflow-hidden bg-[var(--background)] shadow-sm">
         {/* Header */}
-        <div className="flex items-center justify-between px-4 py-3 bg-[#ef4444]/[0.06] border-b border-[var(--border)]">
+        <div className="flex items-center justify-between px-4 py-3 bg-signal-negative/[0.06] border-b border-[var(--border)]">
           <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-[#ef4444]" />
-            <span className="font-mono text-xs font-semibold tracking-wide text-[#ef4444]">
+            <span className="w-2 h-2 rounded-full bg-signal-negative" />
+            <span className="font-mono text-xs font-semibold tracking-wide text-signal-negative">
               K-SHAPED DISPLACEMENT: THE AVERAGE HIDES THE STORY
             </span>
           </div>
@@ -67,8 +67,8 @@ export default function AgeWeightedMethodology() {
         </div>
 
         {/* TL;DR box */}
-        <div className="mx-4 mt-4 rounded-xl border border-[#6366F1]/20 bg-[#6366F1]/[0.04] p-4">
-          <h4 className="text-base font-bold text-[#6366F1] uppercase tracking-wide mb-2">
+        <div className="mx-4 mt-4 rounded-xl border border-[#6366F1]/20 bg-accent/[0.04] p-4">
+          <h4 className="text-base font-bold text-accent uppercase tracking-wide mb-2">
             TL;DR
           </h4>
           <p className="text-base text-[var(--foreground)] leading-relaxed">
@@ -180,7 +180,7 @@ export default function AgeWeightedMethodology() {
             <div className="grid grid-cols-2 gap-x-4 gap-y-1.5">
               {CORROBORATING.map((s) => (
                 <div key={s.signal} className="flex items-baseline gap-1.5">
-                  <span className="text-xs font-mono font-semibold text-[#ef4444]">{s.change}</span>
+                  <span className="text-xs font-mono font-semibold text-signal-negative">{s.change}</span>
                   <span className="text-[10.5px] text-[var(--muted)]">{s.signal}</span>
                   <span className="text-[9px] text-[var(--muted)] opacity-50">({s.source})</span>
                 </div>

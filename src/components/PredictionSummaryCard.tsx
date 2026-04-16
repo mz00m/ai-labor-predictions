@@ -282,7 +282,7 @@ export default function PredictionSummaryCard({
           <p className="text-xs text-[var(--muted)] opacity-60 mb-4">
             {filteredHistory.length} source{filteredHistory.length !== 1 ? "s" : ""}{agg.min !== agg.max ? ` ranging ${agg.min}–${agg.max}${prediction.unit.includes("%") ? "%" : ""}` : ""}{agg.max - agg.min > 10 ? " (significant disagreement)" : ""}
             {filteredHistory.length > 0 && filteredHistory.length < 6 && (
-              <span className="ml-1.5 inline-block text-2xs font-medium text-[#d97706] bg-[#d97706]/[0.08] rounded px-1.5 py-0.5 align-middle">
+              <span className="ml-1.5 inline-block text-2xs font-medium text-[var(--signal-warning-muted)] bg-[#d97706]/[0.08] rounded px-1.5 py-0.5 align-middle">
                 Low confidence
               </span>
             )}.{" "}

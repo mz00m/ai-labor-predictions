@@ -445,7 +445,7 @@ export default function ElasticityToggleViz() {
                         <span className="text-white/50 text-2xs uppercase tracking-wider">
                           Raw displacement
                         </span>
-                        <p className="font-bold text-[#ef4444]">
+                        <p className="font-bold text-signal-negative">
                           {rawValue}%
                         </p>
                       </div>
@@ -467,7 +467,7 @@ export default function ElasticityToggleViz() {
                         <span className="text-white/50 text-2xs uppercase tracking-wider">
                           Delta
                         </span>
-                        <p className="font-bold text-[#5C61F6]">
+                        <p className="font-bold text-accent">
                           {adjustedValue - rawValue > 0 ? "+" : ""}
                           {Math.round(adjustedValue - rawValue)}pp
                         </p>
@@ -497,13 +497,13 @@ export default function ElasticityToggleViz() {
       {/* Legend */}
       <div className="flex flex-wrap items-center gap-4 mt-4 pt-3 border-t border-black/[0.06]">
         <div className="flex items-center gap-1.5">
-          <span className="w-3 h-2 rounded-sm bg-[#ef4444] opacity-85" />
+          <span className="w-3 h-2 rounded-sm bg-signal-negative opacity-85" />
           <span className="text-xs text-[var(--muted)]">
             Net displacement
           </span>
         </div>
         <div className="flex items-center gap-1.5">
-          <span className="w-3 h-2 rounded-sm bg-[#22c55e] opacity-85" />
+          <span className="w-3 h-2 rounded-sm bg-signal-positive opacity-85" />
           <span className="text-xs text-[var(--muted)]">
             Net expansion
           </span>

@@ -166,13 +166,13 @@ export default function DashboardPage() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="you@example.com"
-              className="flex-1 bg-gray-50 border border-gray-200 rounded-lg px-4 py-2.5 text-md text-gray-900 placeholder:text-gray-400 outline-none focus:border-[#5C61F6]"
+              className="flex-1 bg-gray-50 border border-gray-200 rounded-lg px-4 py-2.5 text-md text-gray-900 placeholder:text-gray-400 outline-none focus:border-accent"
               required
             />
             <button
               type="submit"
               disabled={loading}
-              className="bg-[#5C61F6] hover:bg-[#4F52D4] text-white text-base font-medium px-6 py-2.5 rounded-lg transition-colors disabled:opacity-50"
+              className="bg-accent hover:bg-[#4F52D4] text-white text-base font-medium px-6 py-2.5 rounded-lg transition-colors disabled:opacity-50"
             >
               {loading ? "Sending..." : "Send Code"}
             </button>
@@ -199,13 +199,13 @@ export default function DashboardPage() {
               value={code}
               onChange={(e) => setCode(e.target.value.replace(/\D/g, ""))}
               placeholder="000000"
-              className="w-40 bg-gray-50 border border-gray-200 rounded-lg px-4 py-2.5 text-2xl font-mono text-center text-gray-900 tracking-widest placeholder:text-gray-300 outline-none focus:border-[#5C61F6]"
+              className="w-40 bg-gray-50 border border-gray-200 rounded-lg px-4 py-2.5 text-2xl font-mono text-center text-gray-900 tracking-widest placeholder:text-gray-300 outline-none focus:border-accent"
               required
             />
             <button
               type="submit"
               disabled={loading || code.length !== 6}
-              className="bg-[#5C61F6] hover:bg-[#4F52D4] text-white text-base font-medium px-6 py-2.5 rounded-lg transition-colors disabled:opacity-50"
+              className="bg-accent hover:bg-[#4F52D4] text-white text-base font-medium px-6 py-2.5 rounded-lg transition-colors disabled:opacity-50"
             >
               {loading ? "Verifying..." : "Verify"}
             </button>
@@ -215,7 +215,7 @@ export default function DashboardPage() {
               type="button"
               onClick={handleResendCode}
               disabled={loading}
-              className="text-[#5C61F6] hover:underline disabled:opacity-50"
+              className="text-accent hover:underline disabled:opacity-50"
             >
               Resend code
             </button>
@@ -250,7 +250,7 @@ export default function DashboardPage() {
               <p className="text-gray-400 text-md mb-4">No plans found for this email.</p>
               <Link
                 href="/assessment/start"
-                className="text-[#5C61F6] hover:underline text-md"
+                className="text-accent hover:underline text-md"
               >
                 Get your first AI action plan
               </Link>
@@ -287,11 +287,11 @@ export default function DashboardPage() {
                       <span className="text-sm text-gray-400">AI Readiness:</span>
                       <div className="flex-1 bg-gray-200 rounded-full h-1.5">
                         <div
-                          className="bg-[#5C61F6] h-1.5 rounded-full"
+                          className="bg-accent h-1.5 rounded-full"
                           style={{ width: `${assessment.report.organizationProfile.aiReadinessScore * 10}%` }}
                         />
                       </div>
-                      <span className="text-base font-bold text-[#5C61F6]">
+                      <span className="text-base font-bold text-accent">
                         {assessment.report.organizationProfile.aiReadinessScore}/10
                       </span>
                     </div>
@@ -302,7 +302,7 @@ export default function DashboardPage() {
                     {assessment.status === "complete" && (
                       <Link
                         href={`/assessment/report?id=${assessment.id}`}
-                        className="text-sm font-medium text-[#5C61F6] hover:underline"
+                        className="text-sm font-medium text-accent hover:underline"
                       >
                         View Report
                       </Link>
@@ -349,7 +349,7 @@ function StatusBadge({ status }: { status: string }) {
   }
   if (status === "analyzing") {
     return (
-      <span className="text-xs font-bold text-[#5C61F6] bg-[#5C61F6]/10 border border-[#5C61F6]/20 px-2 py-0.5 rounded">
+      <span className="text-xs font-bold text-accent bg-accent/10 border border-accent/20 px-2 py-0.5 rounded">
         ANALYZING
       </span>
     );

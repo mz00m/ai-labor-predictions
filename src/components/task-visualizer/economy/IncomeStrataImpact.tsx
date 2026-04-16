@@ -249,7 +249,7 @@ export default function IncomeStrataImpact() {
             {/* Column definitions */}
             <div className="px-5 py-2.5 border-t border-black/[0.06] text-2xs text-[var(--muted)] leading-relaxed">
               <strong className="text-[var(--foreground)]">2028/32/36</strong> = % of tasks where AI is cheaper than human labor.{" "}
-              <strong className="text-[var(--foreground)]">Demand</strong> = will cheaper output expand this market? <span className="text-[#10B981]">High</span> = more demand, <span className="text-[#EF4444]">Low</span> = fixed demand.
+              <strong className="text-[var(--foreground)]">Demand</strong> = will cheaper output expand this market? <span className="text-[var(--signal-positive-muted)]">High</span> = more demand, <span className="text-signal-negative">Low</span> = fixed demand.
             </div>
           </div>
         );

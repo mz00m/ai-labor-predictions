@@ -81,7 +81,7 @@ export default function FocusRecommendations({
       {/* Summary stat */}
       <div className="exposure-score rounded-xl bg-black/[0.02] border border-black/[0.06] p-4">
         <div className="flex items-baseline gap-2">
-          <span className="text-4xl font-bold text-[#EF4444] tracking-tight tabular-nums">
+          <span className="text-4xl font-bold text-signal-negative tracking-tight tabular-nums">
             {animatedPercent}%
           </span>
           <span className="text-base text-[var(--muted)]">
@@ -92,8 +92,8 @@ export default function FocusRecommendations({
 
       {/* O-Ring Focus Effect */}
       {atRisk.length > 0 && invest.length > 0 && (
-        <div className="rounded-lg border border-[#6366F1]/20 bg-[#6366F1]/[0.04] p-3.5">
-          <h4 className="text-sm font-semibold text-[#6366F1] mb-1.5">
+        <div className="rounded-lg border border-[#6366F1]/20 bg-accent/[0.04] p-3.5">
+          <h4 className="text-sm font-semibold text-accent mb-1.5">
             Focus Effect (O-Ring Theory)
           </h4>
           <p className="text-sm text-[var(--muted)] leading-relaxed mb-2">
@@ -115,8 +115,8 @@ export default function FocusRecommendations({
       {/* At risk */}
       {atRisk.length > 0 && (
         <div>
-          <h4 className="text-base font-semibold text-[#EF4444] mb-2 flex items-center gap-1.5">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#EF4444]" />
+          <h4 className="text-base font-semibold text-signal-negative mb-2 flex items-center gap-1.5">
+            <span className="w-1.5 h-1.5 rounded-full bg-signal-negative" />
             AI is already cost-competitive
           </h4>
           <p className="text-sm text-[var(--muted)] mb-2">
@@ -129,7 +129,7 @@ export default function FocusRecommendations({
                 className="focus-row flex items-center justify-between py-1.5 px-3 rounded-lg bg-black/[0.02]"
               >
                 <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-[#EF4444]" />
+                  <div className="w-2 h-2 rounded-full bg-signal-negative" />
                   <span className="text-sm font-medium">{task.name}</span>
                 </div>
                 <span className="text-xs text-[var(--muted)]">
@@ -144,8 +144,8 @@ export default function FocusRecommendations({
       {/* Augment */}
       {augment.length > 0 && (
         <div>
-          <h4 className="text-base font-semibold text-[#6366F1] mb-2 flex items-center gap-1.5">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#6366F1]" />
+          <h4 className="text-base font-semibold text-accent mb-2 flex items-center gap-1.5">
+            <span className="w-1.5 h-1.5 rounded-full bg-accent" />
             Learn to work with AI
           </h4>
           <p className="text-sm text-[var(--muted)] mb-2">
@@ -158,7 +158,7 @@ export default function FocusRecommendations({
                 className="focus-row flex items-center justify-between py-1.5 px-3 rounded-lg bg-black/[0.02]"
               >
                 <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-[#6366F1]" />
+                  <div className="w-2 h-2 rounded-full bg-accent" />
                   <span className="text-sm font-medium">{task.name}</span>
                 </div>
                 <span className="text-xs text-[var(--muted)]">
@@ -173,8 +173,8 @@ export default function FocusRecommendations({
       {/* Invest */}
       {invest.length > 0 && (
         <div>
-          <h4 className="text-base font-semibold text-[#10B981] mb-2 flex items-center gap-1.5">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#10B981]" />
+          <h4 className="text-base font-semibold text-[var(--signal-positive-muted)] mb-2 flex items-center gap-1.5">
+            <span className="w-1.5 h-1.5 rounded-full bg-[var(--signal-positive-muted)]" />
             Double down here
           </h4>
           <p className="text-sm text-[var(--muted)] mb-2">
@@ -187,7 +187,7 @@ export default function FocusRecommendations({
                 className="focus-row flex items-center justify-between py-1.5 px-3 rounded-lg bg-black/[0.02]"
               >
                 <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-[#10B981]" />
+                  <div className="w-2 h-2 rounded-full bg-[var(--signal-positive-muted)]" />
                   <span className="text-sm font-medium">{task.name}</span>
                 </div>
                 <span className="text-xs text-[var(--muted)]">
@@ -200,8 +200,8 @@ export default function FocusRecommendations({
       )}
 
       {/* Action Plan CTA */}
-      <div className="rounded-xl border border-[#5C61F6]/20 bg-[#5C61F6]/[0.04] p-4">
-        <h4 className="text-base font-semibold text-[#5C61F6] mb-1.5">
+      <div className="rounded-xl border border-accent/20 bg-accent/[0.04] p-4">
+        <h4 className="text-base font-semibold text-accent mb-1.5">
           Get a personalized action plan
         </h4>
         <p className="text-sm text-[var(--muted)] leading-relaxed mb-3">
@@ -209,7 +209,7 @@ export default function FocusRecommendations({
         </p>
         <Link
           href="/assessment"
-          className="inline-flex items-center gap-1.5 bg-[#5C61F6] hover:bg-[#4F52D4] text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors"
+          className="inline-flex items-center gap-1.5 bg-accent hover:bg-[#4F52D4] text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors"
         >
           Build Your AI Action Plan
           <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -239,8 +239,8 @@ export default function FocusRecommendations({
             </div>
           </div>
           {highVulnerability && (
-            <div className="vulnerability-warning bg-[#EF4444]/[0.06] border border-[#EF4444]/20 rounded-lg px-3 py-2 mb-2">
-              <p className="text-xs text-[#EF4444] font-medium">
+            <div className="vulnerability-warning bg-signal-negative/[0.06] border border-[#EF4444]/20 rounded-lg px-3 py-2 mb-2">
+              <p className="text-xs text-signal-negative font-medium">
                 High vulnerability: this occupation combines high AI exposure with low adaptive capacity
               </p>
             </div>

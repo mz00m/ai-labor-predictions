@@ -312,7 +312,7 @@ export default function AssessmentStartPage() {
                 disabled={i > currentStepIndex + 1}
                 className={`text-sm font-medium px-2.5 py-1 rounded transition-colors ${
                   s.key === step
-                    ? "bg-[#5C61F6] text-white"
+                    ? "bg-accent text-white"
                     : i < currentStepIndex
                       ? "bg-gray-100 text-gray-500 hover:text-gray-900 cursor-pointer"
                       : i === currentStepIndex + 1
@@ -430,7 +430,7 @@ export default function AssessmentStartPage() {
                 onClick={() => updateField("assessmentScope", option.value)}
                 className={`text-left p-4 rounded-xl border-2 transition-colors ${
                   form.assessmentScope === option.value
-                    ? "border-[#5C61F6] bg-[#5C61F6]/[0.04]"
+                    ? "border-accent bg-accent/[0.04]"
                     : "border-gray-200 hover:border-gray-300 bg-gray-50"
                 }`}
               >
@@ -516,7 +516,7 @@ export default function AssessmentStartPage() {
                     <>
                       {relevant.map((dept) => (
                         <div key={dept.name}>
-                          <p className="text-sm font-medium text-[#5C61F6] mb-2">{dept.name}</p>
+                          <p className="text-sm font-medium text-accent mb-2">{dept.name}</p>
                           <div className="flex flex-wrap gap-2">
                             {dept.keyFunctions.map((fn) => (
                               <button
@@ -524,7 +524,7 @@ export default function AssessmentStartPage() {
                                 onClick={() => toggleArrayItem("primaryFunctions", fn)}
                                 className={`text-base px-3 py-1.5 rounded-full border transition-colors ${
                                   form.primaryFunctions.includes(fn)
-                                    ? "border-[#5C61F6] bg-[#5C61F6]/[0.1] text-[#5C61F6]"
+                                    ? "border-accent bg-accent/[0.1] text-accent"
                                     : "border-gray-200 text-gray-500 hover:border-gray-300"
                                 }`}
                               >
@@ -550,7 +550,7 @@ export default function AssessmentStartPage() {
                                       onClick={() => toggleArrayItem("primaryFunctions", fn)}
                                       className={`text-base px-3 py-1.5 rounded-full border transition-colors ${
                                         form.primaryFunctions.includes(fn)
-                                          ? "border-[#5C61F6] bg-[#5C61F6]/[0.1] text-[#5C61F6]"
+                                          ? "border-accent bg-accent/[0.1] text-accent"
                                           : "border-gray-200 text-gray-500 hover:border-gray-300"
                                       }`}
                                     >
@@ -572,7 +572,7 @@ export default function AssessmentStartPage() {
                           onClick={() => toggleArrayItem("primaryFunctions", fn)}
                           className={`text-base px-3 py-1.5 rounded-full border transition-colors ${
                             form.primaryFunctions.includes(fn)
-                              ? "border-[#5C61F6] bg-[#5C61F6]/[0.1] text-[#5C61F6]"
+                              ? "border-accent bg-accent/[0.1] text-accent"
                               : "border-gray-200 text-gray-500 hover:border-gray-300"
                           }`}
                         >
@@ -595,7 +595,7 @@ export default function AssessmentStartPage() {
             {form.primaryFunctions
               .filter((fn) => !industryTemplate?.departments.flatMap((d) => d.keyFunctions).includes(fn))
               .map((fn) => (
-                <span key={fn} className="inline-flex items-center gap-1 text-base px-3 py-1.5 rounded-full border border-[#5C61F6] bg-[#5C61F6]/[0.1] text-[#5C61F6] mr-2 mt-2">
+                <span key={fn} className="inline-flex items-center gap-1 text-base px-3 py-1.5 rounded-full border border-accent bg-accent/[0.1] text-accent mr-2 mt-2">
                   {fn}
                   <button onClick={() => toggleArrayItem("primaryFunctions", fn)} className="ml-1 hover:text-red-500">&times;</button>
                 </span>
@@ -617,7 +617,7 @@ export default function AssessmentStartPage() {
                     <>
                       {relevant.map((dept) => (
                         <div key={dept.name}>
-                          <p className="text-sm font-medium text-[#5C61F6] mb-2">{dept.name}</p>
+                          <p className="text-sm font-medium text-accent mb-2">{dept.name}</p>
                           <div className="flex flex-wrap gap-2">
                             {dept.typicalRoles.map((role) => (
                               <button
@@ -625,7 +625,7 @@ export default function AssessmentStartPage() {
                                 onClick={() => toggleArrayItem("keyRoles", role)}
                                 className={`text-base px-3 py-1.5 rounded-full border transition-colors ${
                                   form.keyRoles.includes(role)
-                                    ? "border-[#5C61F6] bg-[#5C61F6]/[0.1] text-[#5C61F6]"
+                                    ? "border-accent bg-accent/[0.1] text-accent"
                                     : "border-gray-200 text-gray-500 hover:border-gray-300"
                                 }`}
                               >
@@ -651,7 +651,7 @@ export default function AssessmentStartPage() {
                                       onClick={() => toggleArrayItem("keyRoles", role)}
                                       className={`text-base px-3 py-1.5 rounded-full border transition-colors ${
                                         form.keyRoles.includes(role)
-                                          ? "border-[#5C61F6] bg-[#5C61F6]/[0.1] text-[#5C61F6]"
+                                          ? "border-accent bg-accent/[0.1] text-accent"
                                           : "border-gray-200 text-gray-500 hover:border-gray-300"
                                       }`}
                                     >
@@ -673,7 +673,7 @@ export default function AssessmentStartPage() {
                           onClick={() => toggleArrayItem("keyRoles", role)}
                           className={`text-base px-3 py-1.5 rounded-full border transition-colors ${
                             form.keyRoles.includes(role)
-                              ? "border-[#5C61F6] bg-[#5C61F6]/[0.1] text-[#5C61F6]"
+                              ? "border-accent bg-accent/[0.1] text-accent"
                               : "border-gray-200 text-gray-500 hover:border-gray-300"
                           }`}
                         >
@@ -696,7 +696,7 @@ export default function AssessmentStartPage() {
             {form.keyRoles
               .filter((r) => !industryTemplate?.departments.flatMap((d) => d.typicalRoles).includes(r))
               .map((role) => (
-                <span key={role} className="inline-flex items-center gap-1 text-base px-3 py-1.5 rounded-full border border-[#5C61F6] bg-[#5C61F6]/[0.1] text-[#5C61F6] mr-2 mt-2">
+                <span key={role} className="inline-flex items-center gap-1 text-base px-3 py-1.5 rounded-full border border-accent bg-accent/[0.1] text-accent mr-2 mt-2">
                   {role}
                   <button onClick={() => toggleArrayItem("keyRoles", role)} className="ml-1 hover:text-red-500">&times;</button>
                 </span>
@@ -721,7 +721,7 @@ export default function AssessmentStartPage() {
                   onClick={() => toggleArrayItem("biggestChallenges", challenge)}
                   className={`text-base px-3 py-1.5 rounded-full border transition-colors ${
                     form.biggestChallenges.includes(challenge)
-                      ? "border-[#5C61F6] bg-[#5C61F6]/[0.1] text-[#5C61F6]"
+                      ? "border-accent bg-accent/[0.1] text-accent"
                       : "border-gray-200 text-gray-500 hover:border-gray-300"
                     }`}
                 >
@@ -750,7 +750,7 @@ export default function AssessmentStartPage() {
                   onClick={() => toggleArrayItem("goals", goal)}
                   className={`text-base px-3 py-1.5 rounded-full border transition-colors ${
                     form.goals.includes(goal)
-                      ? "border-[#5C61F6] bg-[#5C61F6]/[0.1] text-[#5C61F6]"
+                      ? "border-accent bg-accent/[0.1] text-accent"
                       : "border-gray-200 text-gray-500 hover:border-gray-300"
                   }`}
                 >
@@ -780,7 +780,7 @@ export default function AssessmentStartPage() {
                   onClick={() => updateField("toolPreference", value)}
                   className={`text-left p-3 rounded-xl border-2 transition-colors ${
                     form.toolPreference === value
-                      ? "border-[#5C61F6] bg-[#5C61F6]/[0.04]"
+                      ? "border-accent bg-accent/[0.04]"
                       : "border-gray-200 hover:border-gray-300 bg-gray-50"
                   }`}
                 >
@@ -819,7 +819,7 @@ export default function AssessmentStartPage() {
 
           {industryTemplate && (
             <div className="bg-gray-50 border border-gray-100 rounded-lg p-4">
-              <p className="text-sm font-semibold text-[#5C61F6] uppercase tracking-wider mb-2">
+              <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-2">
                 Things that help us give better recommendations
               </p>
               <ul className="space-y-1">
@@ -898,9 +898,9 @@ export default function AssessmentStartPage() {
           )}
 
           {submitting ? (
-            <div className="border border-[#5C61F6]/20 bg-[#5C61F6]/5 rounded-xl p-6 space-y-5">
+            <div className="border border-accent/20 bg-accent/5 rounded-xl p-6 space-y-5">
               <div className="flex items-center gap-3">
-                <svg className="animate-spin h-5 w-5 text-[#5C61F6]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <svg className="animate-spin h-5 w-5 text-accent" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                   <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                   <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
                 </svg>
@@ -915,7 +915,7 @@ export default function AssessmentStartPage() {
               </div>
               <div className="w-full bg-gray-100 rounded-full h-1.5 overflow-hidden">
                 <div
-                  className="bg-[#5C61F6] h-1.5 rounded-full transition-all duration-1000 ease-out"
+                  className="bg-accent h-1.5 rounded-full transition-all duration-1000 ease-out"
                   style={{ width: `${Math.min(95, (elapsedSeconds / 70) * 100)}%` }}
                 />
               </div>
@@ -929,7 +929,7 @@ export default function AssessmentStartPage() {
               <button
                 onClick={() => handleSubmit()}
                 disabled={submitting}
-                className="w-full bg-[#5C61F6] hover:bg-[#4F52D4] text-white font-semibold text-md py-3 rounded-lg transition-colors disabled:opacity-50"
+                className="w-full bg-accent hover:bg-[#4F52D4] text-white font-semibold text-md py-3 rounded-lg transition-colors disabled:opacity-50"
               >
                 Generate Your Free AI Action Plan
               </button>
@@ -959,7 +959,7 @@ export default function AssessmentStartPage() {
               setStep(nextStep);
             }}
             disabled={!canAdvance()}
-            className="text-base font-medium bg-[#5C61F6] hover:bg-[#4F52D4] disabled:opacity-30 disabled:cursor-default text-white px-6 py-2 rounded-lg transition-colors"
+            className="text-base font-medium bg-accent hover:bg-[#4F52D4] disabled:opacity-30 disabled:cursor-default text-white px-6 py-2 rounded-lg transition-colors"
           >
             Continue
           </button>
@@ -1011,7 +1011,7 @@ function Field({
     <div>
       <label className="block text-base font-medium text-gray-700 mb-2">
         {label}
-        {required && <span className="text-[#5C61F6] ml-0.5">*</span>}
+        {required && <span className="text-accent ml-0.5">*</span>}
       </label>
       {children}
     </div>
@@ -1046,13 +1046,13 @@ function AddCustomItem({ placeholder, onAdd }: { placeholder: string; onAdd: (va
         onChange={(e) => setValue(e.target.value)}
         onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); handleAdd(); } }}
         placeholder={placeholder}
-        className="flex-1 bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-base text-gray-900 placeholder:text-gray-400 outline-none focus:border-[#5C61F6]"
+        className="flex-1 bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5 text-base text-gray-900 placeholder:text-gray-400 outline-none focus:border-accent"
       />
       <button
         type="button"
         onClick={handleAdd}
         disabled={!value.trim()}
-        className="text-base font-medium px-3 py-1.5 rounded-lg border border-gray-200 text-gray-500 hover:border-[#5C61F6] hover:text-[#5C61F6] transition-colors disabled:opacity-30 disabled:cursor-default"
+        className="text-base font-medium px-3 py-1.5 rounded-lg border border-gray-200 text-gray-500 hover:border-accent hover:text-accent transition-colors disabled:opacity-30 disabled:cursor-default"
       >
         Add
       </button>

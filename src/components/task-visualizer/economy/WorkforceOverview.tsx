@@ -194,8 +194,8 @@ export default function WorkforceOverview() {
       </div>
 
       {/* CFO Signal: Replace vs. Enhance */}
-      <div className="callout-card bg-[#10B981]/[0.06] border border-[#10B981]/20 rounded-xl p-4 mb-6">
-        <p className="text-base font-semibold text-[#10B981] mb-1">
+      <div className="callout-card bg-[var(--signal-positive-muted)]/[0.06] border border-[#10B981]/20 rounded-xl p-4 mb-6">
+        <p className="text-base font-semibold text-[var(--signal-positive-muted)] mb-1">
           Real-world signal: CFOs see enhancement, not replacement, for 7 of 8 groups
         </p>
         <p className="text-sm text-[var(--muted)] leading-relaxed">

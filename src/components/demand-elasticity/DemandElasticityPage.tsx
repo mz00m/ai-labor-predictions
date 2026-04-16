@@ -374,12 +374,12 @@ export default function DemandElasticityPage() {
             className="rounded-xl border px-5 py-4 mb-6"
             style={{ borderColor: "#f59e0b30", backgroundColor: "#f59e0b08" }}
           >
-            <p className="text-base font-bold text-[#f59e0b] mb-2">
+            <p className="text-base font-bold text-signal-warning mb-2">
               Real frictions in the transition
             </p>
             <ul className="space-y-2 text-base text-[var(--muted)] leading-relaxed">
               <li className="flex gap-2">
-                <span className="text-[#f59e0b] font-bold shrink-0">&bull;</span>
+                <span className="text-signal-warning font-bold shrink-0">&bull;</span>
                 <span>
                   <strong className="text-[var(--foreground)]">Skill mismatch</strong>
                   {" "}&mdash; 10 AI-augmented engineers require different skills than 50
@@ -388,7 +388,7 @@ export default function DemandElasticityPage() {
                 </span>
               </li>
               <li className="flex gap-2">
-                <span className="text-[#f59e0b] font-bold shrink-0">&bull;</span>
+                <span className="text-signal-warning font-bold shrink-0">&bull;</span>
                 <span>
                   <strong className="text-[var(--foreground)]">Geographic mismatch</strong>
                   {" "}&mdash; New demand may emerge in different cities, regions, or
@@ -396,7 +396,7 @@ export default function DemandElasticityPage() {
                 </span>
               </li>
               <li className="flex gap-2">
-                <span className="text-[#f59e0b] font-bold shrink-0">&bull;</span>
+                <span className="text-signal-warning font-bold shrink-0">&bull;</span>
                 <span>
                   <strong className="text-[var(--foreground)]">Timing asymmetry</strong>
                   {" "}&mdash; Displacement is fast (firms can cut costs this quarter).
@@ -406,7 +406,7 @@ export default function DemandElasticityPage() {
                 </span>
               </li>
               <li className="flex gap-2">
-                <span className="text-[#f59e0b] font-bold shrink-0">&bull;</span>
+                <span className="text-signal-warning font-bold shrink-0">&bull;</span>
                 <span>
                   <strong className="text-[var(--foreground)]">Wage adjustment</strong>
                   {" "}&mdash; Even when more jobs exist in aggregate, some workers

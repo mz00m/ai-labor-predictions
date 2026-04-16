@@ -162,9 +162,9 @@ export default function PredictionDetailPage() {
     : undefined;
 
   const trendColorClass = agg.trendIsBad
-    ? "text-[#F66B5C]"
+    ? "text-highlight"
     : agg.trend !== "flat" && !agg.trendIsBad
-      ? "text-[#16a34a]"
+      ? "text-[var(--signal-positive-strong)]"
       : "text-[var(--muted)]";
 
   const bestSource = bestEstimate
@@ -225,7 +225,7 @@ export default function PredictionDetailPage() {
                 </div>
                 <p className="text-md text-[var(--muted)] mt-2">
                   Weighted average across {filteredHistory.length} sources.{" "}
-                  <span className="font-semibold text-[#16a34a]">
+                  <span className="font-semibold text-[var(--signal-positive-strong)]">
                     Observed so far: ~{observedMean}{unitSuffix}
                   </span>
                   {" "}({observedValues.length} measurements from Yale Budget Lab, Brookings, Dallas Fed, BLS).{" "}
@@ -275,7 +275,7 @@ export default function PredictionDetailPage() {
           </div>
         )}
         {agg.tierFallback && (
-          <p className="text-sm text-[#d97706] bg-[#d97706]/[0.06] border border-[#d97706]/20 rounded px-3 py-2 mb-4 max-w-2xl">
+          <p className="text-sm text-[var(--signal-warning-muted)] bg-[#d97706]/[0.06] border border-[#d97706]/20 rounded px-3 py-2 mb-4 max-w-2xl">
             No sources match your selected tiers for this prediction. Showing all-tier average instead.
           </p>
         )}
@@ -349,7 +349,7 @@ export default function PredictionDetailPage() {
       {prediction.disclaimer && (
         <div className="border border-[#d97706]/20 bg-[#d97706]/[0.04] rounded-lg px-5 py-4 max-w-2xl -mt-4">
           <p className="text-base text-[var(--muted)] leading-relaxed">
-            <span className="font-semibold text-[#d97706]">Note:</span>{" "}
+            <span className="font-semibold text-[var(--signal-warning-muted)]">Note:</span>{" "}
             {prediction.disclaimer}
           </p>
         </div>
@@ -401,7 +401,7 @@ export default function PredictionDetailPage() {
             <div>
               <div className="mb-4">
                 <div className="flex items-center gap-2 mb-2">
-                  <div className="w-3 h-3 rounded-full bg-[#5C61F6]" />
+                  <div className="w-3 h-3 rounded-full bg-accent" />
                   <h3 className="text-[20px] sm:text-[24px] font-bold text-[var(--foreground)]">
                     What researchers project
                   </h3>

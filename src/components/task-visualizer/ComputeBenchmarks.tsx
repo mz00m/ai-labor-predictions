@@ -75,7 +75,7 @@ function CustomTooltip({ active, payload, label }: TooltipProps<number, string>)
     <div className="bg-white rounded-lg border border-black/[0.08] shadow-lg p-3">
       <p className="text-sm font-semibold mb-1">{label}</p>
       <p className="text-xs text-[var(--muted)]">{data.label}</p>
-      <p className="text-base font-medium text-[#5C61F6] mt-1">
+      <p className="text-base font-medium text-accent mt-1">
         ${data.costPerMToken?.toFixed(data.costPerMToken < 0.1 ? 3 : 2)}/M tokens
       </p>
     </div>
@@ -141,15 +141,15 @@ export default function ComputeBenchmarks() {
       {/* Key stats */}
       <div className="grid grid-cols-3 gap-3">
         <div className="rounded-xl bg-black/[0.02] border border-black/[0.06] p-4">
-          <p className="text-4xl font-bold text-[#5C61F6] tracking-tight">~200x</p>
+          <p className="text-4xl font-bold text-accent tracking-tight">~200x</p>
           <p className="text-xs text-[var(--muted)]">Cost reduction since GPT-3 (2020)</p>
         </div>
         <div className="rounded-xl bg-black/[0.02] border border-black/[0.06] p-4">
-          <p className="text-4xl font-bold text-[#5C61F6] tracking-tight">~60%</p>
+          <p className="text-4xl font-bold text-accent tracking-tight">~60%</p>
           <p className="text-xs text-[var(--muted)]">Annual cost decline rate (inference)</p>
         </div>
         <div className="rounded-xl bg-black/[0.02] border border-black/[0.06] p-4">
-          <p className="text-4xl font-bold text-[#5C61F6] tracking-tight">2x/yr</p>
+          <p className="text-4xl font-bold text-accent tracking-tight">2x/yr</p>
           <p className="text-xs text-[var(--muted)]">Algorithmic efficiency gains (Epoch AI)</p>
         </div>
       </div>

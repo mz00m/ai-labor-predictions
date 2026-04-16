@@ -237,7 +237,7 @@ export default function ProgressPage() {
                   isDone
                     ? "bg-green-50 text-green-700 border border-green-200"
                     : isActive
-                      ? "bg-[#5C61F6] text-white"
+                      ? "bg-accent text-white"
                       : "bg-gray-50 text-gray-300 border border-gray-100"
                 }`}
               >
@@ -275,7 +275,7 @@ export default function ProgressPage() {
             <div className="mb-6">
               <div className="flex items-center gap-3 mb-3">
                 <span className="text-base font-medium text-gray-700">AI Readiness Score</span>
-                <span className="text-[20px] font-bold text-[#5C61F6]">
+                <span className="text-[20px] font-bold text-accent">
                   {report.organizationProfile.aiReadinessScore}/10
                 </span>
               </div>
@@ -322,7 +322,7 @@ export default function ProgressPage() {
                 <div className="flex items-center justify-between mb-1">
                   <span className="text-base font-medium text-gray-900">{task.taskName}</span>
                   <span className={`text-2xs px-1.5 py-0.5 rounded-full font-medium ${
-                    task.aiOpportunity === "high" ? "bg-[#5C61F6]/10 text-[#5C61F6]" :
+                    task.aiOpportunity === "high" ? "bg-accent/10 text-accent" :
                     task.aiOpportunity === "medium" ? "bg-yellow-100 text-yellow-700" :
                     "bg-gray-100 text-gray-600"
                   }`}>
@@ -406,9 +406,9 @@ export default function ProgressPage() {
 
           {/* Generate / Loading state */}
           {generating ? (
-            <div className="border border-[#5C61F6]/20 bg-[#5C61F6]/5 rounded-xl p-6 space-y-5">
+            <div className="border border-accent/20 bg-accent/5 rounded-xl p-6 space-y-5">
               <div className="flex items-center gap-3">
-                <svg className="animate-spin h-5 w-5 text-[#5C61F6]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <svg className="animate-spin h-5 w-5 text-accent" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                   <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                   <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
                 </svg>
@@ -423,7 +423,7 @@ export default function ProgressPage() {
               </div>
               <div className="w-full bg-gray-100 rounded-full h-1.5 overflow-hidden">
                 <div
-                  className="bg-[#5C61F6] h-1.5 rounded-full transition-all duration-1000 ease-out"
+                  className="bg-accent h-1.5 rounded-full transition-all duration-1000 ease-out"
                   style={{ width: `${Math.min(95, (elapsedSeconds / 45) * 100)}%` }}
                 />
               </div>
@@ -448,7 +448,7 @@ export default function ProgressPage() {
 
               <button
                 onClick={() => runStep(activeStep)}
-                className="w-full bg-[#5C61F6] hover:bg-[#4F52D4] text-white font-semibold text-md py-3 rounded-lg transition-colors"
+                className="w-full bg-accent hover:bg-[#4F52D4] text-white font-semibold text-md py-3 rounded-lg transition-colors"
               >
                 {activeStepIndex === 0 ? "Generate" : "Continue"}: {STEP_LABELS[activeStep]}
               </button>
@@ -481,7 +481,7 @@ function StepResultSection({
 
   return (
     <div className={`mb-6 border rounded-xl overflow-hidden transition-colors ${
-      isLatest ? "border-[#5C61F6]/20 bg-white" : "border-gray-100 bg-gray-50/50"
+      isLatest ? "border-accent/20 bg-white" : "border-gray-100 bg-gray-50/50"
     }`}>
       <button
         onClick={() => setCollapsed(!collapsed)}

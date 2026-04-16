@@ -37,8 +37,8 @@ export default function Home() {
       <div className="relative overflow-hidden -mx-6 sm:-mx-10 px-6 sm:px-10 pt-1 pb-0 sm:pt-2 sm:pb-0">
         {/* Background gradient orbs */}
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-          <div className="absolute -top-24 -left-24 w-[420px] h-[420px] rounded-full bg-[#5C61F6]/[0.04] blur-3xl" />
-          <div className="absolute -top-16 right-0 w-[350px] h-[350px] rounded-full bg-[#5C61F6]/[0.03] blur-3xl" />
+          <div className="absolute -top-24 -left-24 w-[420px] h-[420px] rounded-full bg-accent/[0.04] blur-3xl" />
+          <div className="absolute -top-16 right-0 w-[350px] h-[350px] rounded-full bg-accent/[0.03] blur-3xl" />
           <div className="absolute top-1/3 left-1/3 w-[280px] h-[280px] rounded-full bg-[#3b82f6]/[0.02] blur-3xl" />
           {/* Subtle grid pattern */}
           <svg className="absolute inset-0 w-full h-full opacity-[0.03]" aria-hidden="true">
@@ -58,8 +58,8 @@ export default function Home() {
             <span className="opacity-50 mx-1">&middot;</span>
             <span className="normal-case font-semibold opacity-70">{formatUpdatedDate(lastUpdated)}</span>
           </p>
-          <h1 className="text-[42px] sm:text-7xl font-black tracking-tight text-[#2E3650] leading-[1.05] max-w-4xl">
-            How is AI <span className="text-[#F66B5C] italic">reshaping</span>
+          <h1 className="text-[42px] sm:text-7xl font-black tracking-tight text-heading leading-[1.05] max-w-4xl">
+            How is AI <span className="text-highlight italic">reshaping</span>
             <br className="hidden sm:block" /> the labor market?
           </h1>
           <p className="mt-4 text-lg text-[var(--muted)] leading-relaxed max-w-2xl">
@@ -67,7 +67,7 @@ export default function Home() {
             entry-level and freelance work is compressing, and jobs are changing faster than
             they&apos;re disappearing.
           </p>
-          <p className="mt-3 text-[20px] sm:text-3xl font-bold text-[#2E3650] leading-snug max-w-2xl">
+          <p className="mt-3 text-[20px] sm:text-3xl font-bold text-heading leading-snug max-w-2xl">
             No measurable job displacement, <SplitFlapWord />
           </p>
 

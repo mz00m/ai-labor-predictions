@@ -27,7 +27,7 @@ function Expandable({ title, children }: { title: string; children: React.ReactN
 function Stat({ value, label }: { value: string; label: string }) {
   return (
     <div className="text-center">
-      <div className="text-4xl font-black text-[#5C61F6]">{value}</div>
+      <div className="text-4xl font-black text-accent">{value}</div>
       <div className="text-sm text-gray-400 mt-1">{label}</div>
     </div>
   );
@@ -35,7 +35,7 @@ function Stat({ value, label }: { value: string; label: string }) {
 
 function SectionNum({ n }: { n: number }) {
   return (
-    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#5C61F6]/10 text-[#5C61F6] text-xs font-bold mr-3 flex-shrink-0">
+    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-accent/10 text-accent text-xs font-bold mr-3 flex-shrink-0">
       {n}
     </span>
   );
@@ -79,7 +79,7 @@ export default function MethodologyPage() {
         <p className="text-md text-gray-500 leading-relaxed mb-4">
           Every assessment is grounded in a curated database of 481 verified sources spanning peer-reviewed
           research, government statistics, and institutional analysis. This is the same research base
-          that powers <a href="/" className="text-[#5C61F6] hover:underline">jobsdata.ai</a>,
+          that powers <a href="/" className="text-accent hover:underline">jobsdata.ai</a>,
           a public dashboard tracking AI&apos;s impact on jobs, wages, and adoption across 16 prediction
           categories.
         </p>
@@ -148,7 +148,7 @@ export default function MethodologyPage() {
         </h2>
         <p className="text-md text-gray-500 leading-relaxed mb-4">
           Your task analysis isn&apos;t generated from scratch. It starts with structured occupational data
-          from the U.S. Department of Labor&apos;s <a href="https://www.onetonline.org/" target="_blank" rel="noopener noreferrer" className="text-[#5C61F6] hover:underline">O*NET database</a> &mdash;
+          from the U.S. Department of Labor&apos;s <a href="https://www.onetonline.org/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">O*NET database</a> &mdash;
           the most comprehensive public taxonomy of work activities in the United States.
         </p>
         <p className="text-md text-gray-500 leading-relaxed mb-4">
@@ -179,7 +179,7 @@ export default function MethodologyPage() {
                 "Inventory & Operations",
               ].map((cat) => (
                 <div key={cat} className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#5C61F6]/40" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-accent/40" />
                   {cat}
                 </div>
               ))}
@@ -286,7 +286,7 @@ export default function MethodologyPage() {
             { title: "Your Inputs", desc: "Reference section showing what you told us, so you can verify the report is grounded in your actual situation." },
           ].map((s) => (
             <div key={s.title} className="flex gap-3 py-2 border-b border-gray-50 last:border-0">
-              <svg className="w-4 h-4 text-[#5C61F6] flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <svg className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
               </svg>
               <div>
@@ -403,7 +403,7 @@ export default function MethodologyPage() {
                 "Inventory & Supply Chain",
               ].map((cat) => (
                 <div key={cat} className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#5C61F6]/40" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-accent/40" />
                   {cat}
                 </div>
               ))}
@@ -487,7 +487,7 @@ export default function MethodologyPage() {
                 "Technology",
               ].map((f) => (
                 <div key={f} className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#5C61F6]/40" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-accent/40" />
                   {f}
                 </div>
               ))}
@@ -545,7 +545,7 @@ export default function MethodologyPage() {
         </p>
         <Link
           href="/assessment/start"
-          className="inline-flex items-center justify-center gap-2 bg-[#5C61F6] hover:bg-[#4F52D4] text-white font-semibold text-lg px-7 py-3 rounded-lg transition-colors"
+          className="inline-flex items-center justify-center gap-2 bg-accent hover:bg-[#4F52D4] text-white font-semibold text-lg px-7 py-3 rounded-lg transition-colors"
         >
           Get Your AI Plan of Action
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

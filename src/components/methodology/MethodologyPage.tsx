@@ -24,8 +24,8 @@ const TOC = [
 
 function TLDR({ children }: { children: React.ReactNode }) {
   return (
-    <div className="rounded-xl border border-[#6366F1]/20 bg-[#6366F1]/[0.04] p-4 sm:p-5 mb-6">
-      <p className="text-xs font-bold text-[#6366F1] uppercase tracking-widest mb-2">
+    <div className="rounded-xl border border-[#6366F1]/20 bg-accent/[0.04] p-4 sm:p-5 mb-6">
+      <p className="text-xs font-bold text-accent uppercase tracking-widest mb-2">
         TL;DR
       </p>
       <div className="text-base text-[var(--foreground)] leading-relaxed space-y-2">

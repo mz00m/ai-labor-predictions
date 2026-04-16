@@ -9,8 +9,8 @@ export default function MethodologySection() {
 
       <div className="space-y-6 max-w-3xl">
         {/* TL;DR box */}
-        <div className="rounded-xl border border-[#6366F1]/20 bg-[#6366F1]/[0.04] p-5">
-          <h4 className="text-base font-bold text-[#6366F1] uppercase tracking-wide mb-2">
+        <div className="rounded-xl border border-[#6366F1]/20 bg-accent/[0.04] p-5">
+          <h4 className="text-base font-bold text-accent uppercase tracking-wide mb-2">
             TL;DR
           </h4>
           <p className="text-base text-[var(--foreground)] leading-relaxed">
@@ -224,8 +224,8 @@ export default function MethodologySection() {
         </div>
 
         {/* Observed adoption overlay */}
-        <div className="rounded-xl border border-[#6366F1]/20 bg-[#6366F1]/[0.04] p-5">
-          <h4 className="text-base font-bold text-[#6366F1] uppercase tracking-wide mb-2">
+        <div className="rounded-xl border border-[#6366F1]/20 bg-accent/[0.04] p-5">
+          <h4 className="text-base font-bold text-accent uppercase tracking-wide mb-2">
             Ground truth: observed AI adoption
           </h4>
           <p className="text-base text-[var(--muted)] leading-relaxed mb-2">
@@ -670,7 +670,7 @@ export default function MethodologySection() {
         </div>
 
         {/* O-Ring framework caveat */}
-        <div className="rounded-xl border border-[#F59E0B]/20 bg-[#F59E0B]/[0.04] p-5">
+        <div className="rounded-xl border border-[#F59E0B]/20 bg-signal-warning/[0.04] p-5">
           <h4 className="text-base font-bold text-[#D97706] uppercase tracking-wide mb-2">
             Important Modeling Caveat
           </h4>

@@ -136,7 +136,7 @@ function DesktopDropdown({ group }: { group: NavGroup }) {
                 href={item.href}
                 className={`block text-sm font-medium px-4 py-2 dropdown-item ${
                   isSuggest
-                    ? "text-[#F66B5C] hover:text-[#e55a4b] hover:bg-black/[0.03]"
+                    ? "text-highlight hover:text-[#e55a4b] hover:bg-black/[0.03]"
                     : itemActive
                       ? "text-[var(--foreground)] bg-black/[0.03]"
                       : "text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-black/[0.03]"
@@ -303,7 +303,7 @@ export default function Navbar() {
                               onClick={() => setMobileOpen(false)}
                               className={`block text-base font-medium pl-8 pr-4 py-2 ${
                                 isSuggest
-                                  ? "text-[#F66B5C] hover:text-[#e55a4b] hover:bg-black/[0.03]"
+                                  ? "text-highlight hover:text-[#e55a4b] hover:bg-black/[0.03]"
                                   : "text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-black/[0.03]"
                               }`}
                             >

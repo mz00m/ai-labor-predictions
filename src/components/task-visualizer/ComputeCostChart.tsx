@@ -114,7 +114,7 @@ function ComputeFloorSummary({
           <span className="text-2xs text-[var(--muted)] uppercase tracking-wider">
             Human wage
           </span>
-          <p className="text-xl font-bold text-[#EF4444] tabular-nums">
+          <p className="text-xl font-bold text-signal-negative tabular-nums">
             ${humanWagePerHr}/hr
           </p>
         </div>
@@ -122,7 +122,7 @@ function ComputeFloorSummary({
           <span className="text-2xs text-[var(--muted)] uppercase tracking-wider">
             Ratio
           </span>
-          <p className={`text-xl font-bold tabular-nums ${ratio > 1 ? "text-[#10B981]" : "text-[#EF4444]"}`}>
+          <p className={`text-xl font-bold tabular-nums ${ratio > 1 ? "text-[var(--signal-positive-muted)]" : "text-signal-negative"}`}>
             {ratio > 1 ? `${ratio.toFixed(1)}x cheaper` : `${(1 / ratio).toFixed(1)}x more expensive`}
           </p>
         </div>
@@ -208,7 +208,7 @@ export default function ComputeCostChart({
           a task: raw API cost plus a {DEPLOYMENT_OVERHEAD}x deployment overhead
           (integration engineering, error handling, validation, human review, monitoring).
           When a line drops below the{" "}
-          <span className="text-[#EF4444] font-medium">red wage line</span>, the
+          <span className="text-signal-negative font-medium">red wage line</span>, the
           economic case for AI begins, though adoption requires far more than cost parity
           (process change, training, organizational trust). These costs are higher than the raw API
           costs shown in the Task Breakdown tab because real-world deployment adds significant overhead.
@@ -216,7 +216,7 @@ export default function ComputeCostChart({
       </div>
 
       {/* The compute floor - economic insight */}
-      <div className="rounded-lg border border-[#6366F1]/20 bg-[#6366F1]/[0.03] p-3 mb-5">
+      <div className="rounded-lg border border-[#6366F1]/20 bg-accent/[0.03] p-3 mb-5">
         <p className="text-sm font-semibold text-[var(--foreground)] mb-1">
           The compute floor: minimum cost of doing business
         </p>

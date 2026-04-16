@@ -242,16 +242,16 @@ const PATHS: PathConfig[] = [
           projects become viable. The net effect depends on two conditions:
         </p>
         <div className="mt-3 grid grid-cols-2 gap-2">
-          <div className="rounded-md px-3 py-2 border border-[#5C61F6]/20 bg-[#5C61F6]/[0.04]">
-            <p className="text-xs font-bold text-[#5C61F6] mb-0.5">
+          <div className="rounded-md px-3 py-2 border border-accent/20 bg-accent/[0.04]">
+            <p className="text-xs font-bold text-accent mb-0.5">
               A: Demand elasticity
             </p>
             <p className="text-xs text-[var(--muted)]">
               Does cheaper output create more demand?
             </p>
           </div>
-          <div className="rounded-md px-3 py-2 border border-[#22c55e]/20 bg-[#22c55e]/[0.04]">
-            <p className="text-xs font-bold text-[#22c55e] mb-0.5">
+          <div className="rounded-md px-3 py-2 border border-[#22c55e]/20 bg-signal-positive/[0.04]">
+            <p className="text-xs font-bold text-signal-positive mb-0.5">
               B: High task exposure
             </p>
             <p className="text-xs text-[var(--muted)]">

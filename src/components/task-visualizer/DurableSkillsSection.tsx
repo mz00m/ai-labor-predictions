@@ -231,7 +231,7 @@ export default function DurableSkillsSection({
       {selectedJob && radarData && (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-black/[0.06] p-6">
-            <p className="text-4xl font-bold text-[#10B981] tracking-tight leading-none tabular-nums">
+            <p className="text-4xl font-bold text-[var(--signal-positive-muted)] tracking-tight leading-none tabular-nums">
               <AnimatedPercent value={durablePercent} />%
             </p>
             <p className="text-md text-[var(--foreground)] font-medium mt-2">
@@ -287,7 +287,7 @@ export default function DurableSkillsSection({
             style={{ animationDelay: `${i * 0.08}s` }}
           >
             <div className="flex items-center gap-2 mb-2">
-              <div className="skill-icon text-[#10B981]">
+              <div className="skill-icon text-[var(--signal-positive-muted)]">
                 <SkillIcon type={skill.icon} />
               </div>
               <h4 className="text-base font-semibold text-[var(--foreground)]">
