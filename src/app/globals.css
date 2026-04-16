@@ -37,6 +37,18 @@ a, button, [role="button"], input, label {
   transition: color 0.15s ease, background-color 0.15s ease, opacity 0.15s ease;
 }
 
+/* Focus-visible: keyboard-only focus ring */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Remove default focus ring for mouse users */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
 /* Custom scrollbar — thinner, more minimal */
 ::-webkit-scrollbar {
   width: 4px;
