@@ -1,0 +1,142 @@
+[
+  {
+    "band": "getting-started",
+    "actions": [
+      {
+        "title": "Try one AI writing tool this week",
+        "description": "Pick a repetitive writing task (emails, reports, summaries) and use ChatGPT or Claude to draft it. Edit the output rather than writing from scratch.",
+        "scoreImpact": "First step toward AI fluency",
+        "tag": "productivity"
+      },
+      {
+        "title": "Automate a manual data task",
+        "description": "Identify one task where you're copying data between systems, reformatting spreadsheets, or doing repetitive lookups. Use an AI tool or simple automation to handle it.",
+        "scoreImpact": "Reclaim 1-2 hours per week",
+        "tag": "time"
+      },
+      {
+        "title": "Audit your weekly tasks for AI potential",
+        "description": "Spend 20 minutes listing everything you did last week. Mark each task: AI could do this, AI could help, or only I can do this. The pattern will surprise you.",
+        "scoreImpact": "Builds your personal AI roadmap",
+        "tag": "both"
+      },
+      {
+        "title": "Set up an AI assistant for meeting notes",
+        "description": "Use an AI meeting tool (Otter, Fireflies, or built-in Zoom/Teams AI) to auto-transcribe and summarize your next meeting. Compare the summary to your manual notes.",
+        "scoreImpact": "Saves 30-60 min per meeting",
+        "tag": "time"
+      },
+      {
+        "title": "Learn one AI prompt pattern",
+        "description": "Master the 'role + context + task + format' prompt structure. Apply it to three different work tasks this week. Quality of AI output depends on quality of input.",
+        "scoreImpact": "Doubles the usefulness of any AI tool",
+        "tag": "productivity"
+      }
+    ]
+  },
+  {
+    "band": "building-momentum",
+    "actions": [
+      {
+        "title": "Build an AI-assisted workflow for your top task",
+        "description": "Take your highest-volume recurring task and redesign it with AI in the loop. Document the before/after process so your team can follow it.",
+        "scoreImpact": "Moves you from 4 → 6",
+        "tag": "productivity"
+      },
+      {
+        "title": "Replace one manual review process with AI + human check",
+        "description": "Let AI handle the first pass on document review, data validation, or quality checks. You review AI's output instead of doing it from scratch.",
+        "scoreImpact": "Cut review time by 60%",
+        "tag": "time"
+      },
+      {
+        "title": "Set up AI templates for recurring deliverables",
+        "description": "Create reusable AI prompts for reports, proposals, or analyses you produce regularly. Save them where your team can access and adapt them.",
+        "scoreImpact": "Moves you from 5 → 7",
+        "tag": "both"
+      },
+      {
+        "title": "Integrate AI into your existing tools",
+        "description": "Enable AI features in tools you already use (Copilot in Office, AI in Notion/Slack, Gemini in Google Workspace). The tools you pay for already have AI — turn it on.",
+        "scoreImpact": "Zero new tool cost, immediate gains",
+        "tag": "productivity"
+      },
+      {
+        "title": "Track your actual time savings for 2 weeks",
+        "description": "Log how much time AI saves you each day. Real numbers, not estimates. This data justifies expanding AI use to your team and leadership.",
+        "scoreImpact": "Evidence-based case for scaling",
+        "tag": "time"
+      }
+    ]
+  },
+  {
+    "band": "ai-powered",
+    "actions": [
+      {
+        "title": "Automate your reporting pipeline",
+        "description": "Connect your data sources to AI-powered reporting. Generate weekly summaries, dashboards, or client updates automatically. Focus your time on analysis, not assembly.",
+        "scoreImpact": "Moves you from 7 → 8",
+        "tag": "time"
+      },
+      {
+        "title": "Deploy AI agents for routine decisions",
+        "description": "Identify decisions that follow clear rules (scheduling, triage, categorization) and set up AI agents to handle them. You review exceptions, not every case.",
+        "scoreImpact": "Frees 5+ hours per week",
+        "tag": "time"
+      },
+      {
+        "title": "Train your team on AI-first workflows",
+        "description": "Run a 1-hour workshop showing your team how you use AI. Share your best prompts and workflows. The compounding effect of team-wide adoption far exceeds individual use.",
+        "scoreImpact": "Multiplies your impact across the team",
+        "tag": "productivity"
+      },
+      {
+        "title": "Build custom AI tools for your domain",
+        "description": "Create GPTs, Claude projects, or simple automations tailored to your specific industry knowledge. Generic tools give generic results — domain-specific tools give competitive advantage.",
+        "scoreImpact": "Moves you from 8 → 9",
+        "tag": "both"
+      },
+      {
+        "title": "Benchmark against AI-native competitors",
+        "description": "Research how AI-native companies in your space operate. Identify the processes they've fully automated. Use this as your roadmap for what's possible.",
+        "scoreImpact": "Strategic positioning",
+        "tag": "productivity"
+      }
+    ]
+  },
+  {
+    "band": "ai-native",
+    "actions": [
+      {
+        "title": "Redesign your service offering around AI capabilities",
+        "description": "Your role has maximum AI potential. Rethink what you deliver — AI handles the production, you provide the judgment, creativity, and relationships that AI cannot.",
+        "scoreImpact": "Transforms your value proposition",
+        "tag": "productivity"
+      },
+      {
+        "title": "Build AI into your client-facing work",
+        "description": "Offer AI-enhanced deliverables to clients: faster turnaround, deeper analysis, more scenarios explored. Position AI as a feature of your service, not a secret.",
+        "scoreImpact": "Premium positioning",
+        "tag": "both"
+      },
+      {
+        "title": "Invest in the skills AI cannot replicate",
+        "description": "Double down on relationship building, strategic thinking, creative direction, and ethical judgment. As AI handles more execution, these human skills become your moat.",
+        "scoreImpact": "Future-proofs your career",
+        "tag": "productivity"
+      },
+      {
+        "title": "Mentor others on AI-native workflows",
+        "description": "Share your expertise. Write about what works, speak at events, advise peers. The transition you've made is what everyone else needs to learn.",
+        "scoreImpact": "Establishes thought leadership",
+        "tag": "both"
+      },
+      {
+        "title": "Explore agentic AI for end-to-end automation",
+        "description": "Pilot AI agents that handle entire workflows autonomously — research, drafting, review, delivery. You set the strategy and quality bar; AI executes.",
+        "scoreImpact": "10x individual output capacity",
+        "tag": "time"
+      }
+    ]
+  }
+]

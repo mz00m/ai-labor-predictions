@@ -58,6 +58,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     ...predictionRoutes,
     {
+      url: "https://jobsdata.ai/scorecard",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    ...enrichedData.occupations.map((o) => ({
+      url: `https://jobsdata.ai/scorecard/${o.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
+    {
       url: "https://jobsdata.ai/occupation-exposure",
       lastModified: new Date(),
       changeFrequency: "weekly",

@@ -433,6 +433,38 @@ export default function OccupationSlugPage({ data }: Props) {
         </div>
       </section>
 
+      {/* AI Scorecard CTA */}
+      <section className="rounded-xl border border-[#5C61F6]/20 bg-[#5C61F6]/[0.04] p-5 sm:p-6">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
+          <div className="min-w-0 flex-1">
+            <h3 className="text-base font-semibold text-white mb-1">
+              Get your AI action plan
+            </h3>
+            <p className="text-sm text-white/50">
+              See your AI score, top tools, and 3 ways to level up — free and instant.
+            </p>
+          </div>
+          <Link
+            href={`/scorecard/${enriched.slug}`}
+            className="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#5C61F6] text-white text-sm font-semibold hover:opacity-90 transition-opacity no-underline"
+          >
+            See your scorecard
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </Link>
+        </div>
+      </section>
+
       {/* Footer nav */}
       <div className="flex items-center justify-between border-t border-white/[0.06] pt-6">
         <Link
