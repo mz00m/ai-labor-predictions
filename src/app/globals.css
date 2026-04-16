@@ -855,27 +855,12 @@ input[type="range"]::-moz-range-thumb:hover {
   animation: stagger-fade-up 0.35s ease-out both;
 }
 
-/* Navigable table row: left accent bar on hover */
+/* Navigable table row hover */
 .nav-row {
   transition: background-color 0.15s ease, transform 0.1s ease;
-  position: relative;
-}
-.nav-row::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: var(--accent);
-  transform: scaleY(0);
-  transition: transform 0.2s ease;
 }
 .nav-row:hover {
   background-color: rgba(0, 0, 0, 0.02);
-}
-.nav-row:hover::before {
-  transform: scaleY(1);
 }
 /* Click feedback on nav rows */
 .nav-row:active {
@@ -1007,9 +992,6 @@ input[type="range"]::-moz-range-thumb:hover {
     animation: none;
     opacity: 1;
     transform: none;
-  }
-  .nav-row::before {
-    transition: none;
   }
   .nav-row:active {
     transform: none;
