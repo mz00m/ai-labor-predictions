@@ -64,6 +64,7 @@ function ChevronDown({ className }: { className?: string }) {
       strokeLinecap="round"
       strokeLinejoin="round"
       className={className}
+      aria-hidden="true"
     >
       <path d="M2.5 4L5 6.5L7.5 4" />
     </svg>
@@ -110,6 +111,8 @@ function DesktopDropdown({ group }: { group: NavGroup }) {
     >
       <button
         onClick={() => setOpen((prev) => !prev)}
+        aria-expanded={open}
+        aria-haspopup="true"
         className={`flex items-center gap-1 text-sm font-medium px-2.5 py-1.5 rounded-md transition-colors ${
           isActive
             ? "text-[var(--foreground)]"
@@ -123,7 +126,7 @@ function DesktopDropdown({ group }: { group: NavGroup }) {
       </button>
 
       {open && (
-        <div className="absolute top-full right-0 mt-1 min-w-[160px] bg-white rounded-lg border border-black/[0.08] shadow-lg py-1 z-50 dropdown-enter">
+        <div role="menu" aria-label={group.label} className="absolute top-full right-0 mt-1 min-w-[160px] bg-white rounded-lg border border-black/[0.08] shadow-lg py-1 z-50 dropdown-enter">
           {group.items.map((item, idx) => {
             const itemActive =
               pathname === item.href ||
@@ -134,6 +137,7 @@ function DesktopDropdown({ group }: { group: NavGroup }) {
               <Link
                 key={item.href}
                 href={item.href}
+                role="menuitem"
                 className={`block text-sm font-medium px-4 py-2 dropdown-item ${
                   isSuggest
                     ? "text-highlight hover:text-[#e55a4b] hover:bg-black/[0.03]"
@@ -178,12 +182,13 @@ export default function Navbar() {
   }, [mobileOpen]);
 
   return (
-    <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-black/[0.04]">
+    <nav aria-label="Main navigation" className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-black/[0.04]">
       <div className="max-w-6xl mx-auto px-6 sm:px-10 h-12 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <Link
             href="/"
             className="flex items-center hover:opacity-80 transition-opacity"
+            aria-label="jobsdata.ai — home"
           >
             <svg
               width="116"
@@ -192,6 +197,7 @@ export default function Navbar() {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
               className="shrink-0"
+              aria-hidden="true"
             >
               {/* Bar chart icon */}
               <rect x="74" y="83" width="10" height="46" fill="#F66B5C" />
@@ -252,6 +258,7 @@ export default function Navbar() {
               strokeWidth="1.5"
               strokeLinecap="round"
               className="text-[var(--muted)]"
+              aria-hidden="true"
             >
               {mobileOpen ? (
                 <>
@@ -283,6 +290,8 @@ export default function Navbar() {
                           prev === entry.label ? null : entry.label
                         )
                       }
+                      aria-expanded={mobileExpanded === entry.label}
+                      aria-haspopup="true"
                       className="flex items-center justify-between w-full text-base font-medium text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-black/[0.03] px-4 py-2.5"
                     >
                       {entry.label}
@@ -293,13 +302,14 @@ export default function Navbar() {
                       />
                     </button>
                     {mobileExpanded === entry.label && (
-                      <div className="bg-black/[0.02]">
+                      <div role="menu" aria-label={entry.label} className="bg-black/[0.02]">
                         {entry.items.map((item) => {
                           const isSuggest = item.href === "/suggest";
                           return (
                             <Link
                               key={item.href}
                               href={item.href}
+                              role="menuitem"
                               onClick={() => setMobileOpen(false)}
                               className={`block text-base font-medium pl-8 pr-4 py-2 ${
                                 isSuggest
