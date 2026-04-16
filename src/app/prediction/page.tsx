@@ -3,12 +3,12 @@ import { getSourceCount } from "@/lib/search-sources";
 
 import ForecastGrid from "@/components/prediction/ForecastGrid";
 import PlaceYourPrediction from "@/components/prediction/PlaceYourPrediction";
-import EconomistAssessments from "@/components/prediction/EconomistAssessments";
+
 
 export const metadata: Metadata = {
   title: "2030 Forecast: A Research-Backed Prediction",
   description:
-    "12 evidence-weighted predictions about AI's impact on jobs, wages, and adoption by 2030. Built on 500+ sources, a 5-dimensional risk framework, and six labor economist perspectives.",
+    "12 evidence-weighted predictions about AI's impact on jobs, wages, and adoption by 2030. Built on 500+ sources and a 5-dimensional risk framework.",
   alternates: {
     canonical: "/prediction",
   },
@@ -34,8 +34,7 @@ export default function PredictionPage() {
 
         <div className="relative max-w-3xl">
           <p className="text-[11px] font-bold uppercase tracking-widest text-[var(--accent)] mb-3">
-            {sourceCount}+ sources | 5-dimension framework | 6 economist
-            perspectives
+            {sourceCount}+ sources | 5-dimension framework
           </p>
           <h1 className="text-[36px] sm:text-[50px] font-black tracking-tight text-[#2E3650] leading-[1.05]">
             My 2030 Forecast
@@ -78,7 +77,6 @@ export default function PredictionPage() {
 
       <ForecastGrid />
       <PlaceYourPrediction />
-      <EconomistAssessments />
 
       {/* Methodology footer */}
       <section className="border-t border-black/[0.06] pt-8 pb-4">
@@ -94,12 +92,6 @@ export default function PredictionPage() {
           actual spread of credible estimates, not statistical confidence bands.
           The five-variable framework scores draw from employment-weighted
           averages across 22 SOC major groups covering 154.2M workers.
-        </p>
-        <p className="text-[12px] text-[var(--muted)] leading-relaxed max-w-2xl mt-2">
-          The six-economist assessment applies the analytical frameworks of
-          Acemoglu, Brynjolfsson, Gimbel, Bessen, Kolko, and Imas to this
-          specific forecast. Their perspectives are synthesized from published
-          work through April 2026.
         </p>
       </section>
     </div>
