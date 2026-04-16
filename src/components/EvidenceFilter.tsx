@@ -61,7 +61,7 @@ export default function EvidenceFilter({
         }`}
       >
         <div className="flex items-center justify-between gap-4 flex-wrap">
-          <div className="flex items-center gap-0">
+          <div role="group" aria-label="Filter by evidence tier" className="flex items-center gap-0">
             <h3
               className={`font-bold uppercase tracking-widest text-[var(--muted)] mr-3 transition-all duration-200 ${
                 isStuck ? "text-[0px] w-0 mr-0 opacity-0 overflow-hidden" : "text-sm"
@@ -145,6 +145,8 @@ function TierButton({
     >
       <button
         onClick={onClick}
+        aria-pressed={checked}
+        aria-label={`${config.label}: ${checked ? "selected" : "not selected"}`}
         className={`btn-press relative inline-flex items-center gap-1.5 text-sm font-medium cursor-pointer transition-all duration-200 ${
           compact ? "px-3 sm:px-4 py-2.5" : "px-3 py-1.5"
         } ${

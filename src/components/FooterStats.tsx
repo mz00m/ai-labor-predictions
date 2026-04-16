@@ -109,15 +109,14 @@ export default function FooterStats() {
         Matt Zieger
       </a>{" "}
       started this as a weekend vibe coding project{" "}
-      <span
+      <button
         onClick={handleDaysClick}
-        className="cursor-default select-none"
-        role="button"
-        tabIndex={-1}
-        aria-hidden="true"
+        className="cursor-default select-none inline bg-transparent border-none p-0 font-inherit text-inherit"
+        aria-expanded={showTimeline}
+        aria-label="Toggle commit timeline"
       >
         {daysSinceStart} days ago
-      </span>
+      </button>
       {commitCount !== null ? (
         <>
           , and since then has made{" "}

@@ -95,6 +95,8 @@ export default function IndustryCard({
     <button
       ref={setRefs}
       onClick={onToggle}
+      aria-expanded={isExpanded}
+      aria-label={`${industry.label} — ${isExpanded ? "collapse" : "expand"} details`}
       className={`industry-card w-full text-left rounded-xl border p-4 sm:p-5 ${
         isExpanded
           ? "border-black/[0.12] bg-white shadow-sm"
@@ -115,6 +117,7 @@ export default function IndustryCard({
         <span
           className="industry-chevron text-sm text-[var(--muted)] shrink-0 mt-0.5 inline-block"
           style={{ transform: isExpanded ? "rotate(180deg)" : "rotate(0deg)" }}
+          aria-hidden="true"
         >
           &#9660;
         </span>

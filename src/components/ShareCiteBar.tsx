@@ -120,13 +120,14 @@ export default function ShareCiteBar({
 
         <button
           onClick={() => { setShowCite(!showCite); setShowEmbed(false); }}
+          aria-expanded={showCite}
           className={`inline-flex items-center gap-2 px-4 py-2.5 text-md font-medium rounded-lg transition-colors border ${
             showCite
               ? "bg-[var(--accent)]/[0.15] text-[var(--accent)] border-[var(--accent)]/[0.3]"
               : "bg-white/[0.08] dark:bg-white/[0.1] text-[var(--foreground)] hover:bg-white/[0.15] dark:hover:bg-white/[0.18] border-white/[0.06] dark:border-white/[0.1]"
           }`}
         >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <path d="M6 17C4.89543 17 4 16.1046 4 15V11C4 9.89543 4.89543 9 6 9H8L10 5V17H6Z" />
             <path d="M15 17C13.8954 17 13 16.1046 13 15V11C13 9.89543 13.8954 9 15 9H17L19 5V17H15Z" />
           </svg>
@@ -135,13 +136,14 @@ export default function ShareCiteBar({
 
         <button
           onClick={() => { setShowEmbed(!showEmbed); setShowCite(false); }}
+          aria-expanded={showEmbed}
           className={`inline-flex items-center gap-2 px-4 py-2.5 text-md font-medium rounded-lg transition-colors border ${
             showEmbed
               ? "bg-[var(--accent)]/[0.15] text-[var(--accent)] border-[var(--accent)]/[0.3]"
               : "bg-white/[0.08] dark:bg-white/[0.1] text-[var(--foreground)] hover:bg-white/[0.15] dark:hover:bg-white/[0.18] border-white/[0.06] dark:border-white/[0.1]"
           }`}
         >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <polyline points="16 18 22 12 16 6" />
             <polyline points="8 6 2 12 8 18" />
           </svg>
