@@ -632,6 +632,15 @@
       ],
       "evidenceTier": 1,
       "label": "Fed (FEDS Note): >20% of US firms expect to use AI in H1 2026"
+    },
+    {
+      "date": "2026-04-13",
+      "direction": "up",
+      "sourceIds": [
+        "gallup-workplace-ai-feb-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Gallup: 41% of employees say their org has integrated AI tools (n=23,717)"
     }
   ],
   "sources": [
@@ -1216,6 +1225,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-04-03",
       "excerpt": "Adoption stood at about 18 percent of firms at the end of 2025. Prior to the question revision, the adoption rate had grown by 68 percent (3.9 percentage points) over the prior year but decelerated in Q2 2025. Over 20 percent of firms expect to use AI in the first half of 2026."
+    },
+    {
+      "id": "gallup-workplace-ai-feb-2026",
+      "title": "Rising AI Adoption Spurs Workforce Changes",
+      "url": "https://www.gallup.com/workplace/704225/rising-adoption-spurs-workforce-changes.aspx",
+      "publisher": "Gallup",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-13",
+      "excerpt": "41% of employees report their organization has integrated AI tools. 23% in AI-adopting orgs report workforce reductions vs. 16% in non-adopting. Survey of 23,717 employed U.S. adults, margin of error +/-0.9pp."
     }
   ]
 }

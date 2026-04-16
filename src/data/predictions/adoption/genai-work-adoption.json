@@ -332,6 +332,24 @@
       "label": "Stanford HAI: GenAI 53% global population adoption in 3yrs; US 28.3%"
     },
     {
+      "date": "2026-04-13",
+      "direction": "up",
+      "sourceIds": [
+        "gallup-workplace-ai-feb-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Gallup: 28% of employed adults use AI weekly+; 13% daily (up from 10% in 2024; n=23,717)"
+    },
+    {
+      "date": "2026-04-13",
+      "direction": "neutral",
+      "sourceIds": [
+        "gallup-workplace-ai-feb-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Gallup: Only 30% of workers say manager supports AI use; 27% in AI-adopting orgs report disruptive changes"
+    },
+    {
       "date": "2026-04-14",
       "direction": "up",
       "sourceIds": [
@@ -654,6 +672,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-04-13",
       "excerpt": "Generative AI reached 53% population adoption within three years, faster than the personal computer or the internet, though the pace varies by country and correlates strongly with GDP per capita. Some show higher-than-expected adoption, such as Singapore (61%) and the United Arab Emirates (54%), while the U.S. ranks 24th at 28.3%."
+    },
+    {
+      "id": "gallup-workplace-ai-feb-2026",
+      "title": "Rising AI Adoption Spurs Workforce Changes",
+      "url": "https://www.gallup.com/workplace/704225/rising-adoption-spurs-workforce-changes.aspx",
+      "publisher": "Gallup",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-13",
+      "excerpt": "28% of employed U.S. adults use AI a few times a week or more; 13% use daily (up from 10% in 2024). 41% of employees report their organization has integrated AI tools. 23% in AI-adopting orgs report workforce reductions vs. 16% in non-adopting. Survey of 23,717 employed adults, margin of error +/-0.9pp."
     },
     {
       "id": "nyfed-sce-ai-workplace-training-2026",

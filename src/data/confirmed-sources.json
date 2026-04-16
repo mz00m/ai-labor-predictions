@@ -1,9 +1,24 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-04-15",
-  "totalSources": 523,
-  "verifiedCount": 513,
+  "totalSources": 524,
+  "verifiedCount": 514,
   "sources": {
+    "gallup-workplace-ai-feb-2026": {
+      "id": "gallup-workplace-ai-feb-2026",
+      "title": "Rising AI Adoption Spurs Workforce Changes",
+      "url": "https://www.gallup.com/workplace/704225/rising-adoption-spurs-workforce-changes.aspx",
+      "publisher": "Gallup",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-13",
+      "excerpt": "28% of employed U.S. adults use AI a few times a week or more; 13% use daily (up from 10% in 2024). 41% of employees report their organization has integrated AI tools. 23% in AI-adopting orgs report workforce reductions vs. 16% in non-adopting. Survey of 23,717 employed U.S. adults, margin of error +/-0.9pp.",
+      "usedIn": [
+        "genai-work-adoption",
+        "ai-adoption-rate"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
     "galdin-silbert-llm-signaling-2025": {
       "id": "galdin-silbert-llm-signaling-2025",
       "title": "Making Talk Cheap: Generative AI and Labor Market Signaling",
