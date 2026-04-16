@@ -536,12 +536,9 @@ a, button, [role="button"], input, label {
   transition: max-height 0.25s ease, opacity 0.2s ease;
 }
 
-/* ---- Prediction summary card: left border glow ---- */
+/* ---- Prediction summary card ---- */
 .summary-card-border {
-  transition: border-left-width 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
-}
-.summary-card-border:hover {
-  border-left-width: 3px;
+  transition: box-shadow 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
 }
 
 /* ---- Stat number scale on hover ---- */
