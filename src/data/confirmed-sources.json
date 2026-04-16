@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-04-14",
-  "totalSources": 522,
-  "verifiedCount": 512,
+  "lastUpdated": "2026-04-15",
+  "totalSources": 523,
+  "verifiedCount": 513,
   "sources": {
     "galdin-silbert-llm-signaling-2025": {
       "id": "galdin-silbert-llm-signaling-2025",
@@ -7350,6 +7350,21 @@
       "usedIn": [
         "customer-service-automation",
         "creative-industry-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "nyfed-sce-ai-workplace-training-2026": {
+      "id": "nyfed-sce-ai-workplace-training-2026",
+      "title": "Use of Gen AI in the Workplace and the Value of Access to Training",
+      "url": "https://libertystreeteconomics.newyorkfed.org/2026/04/use-of-gen-ai-in-the-workplace-and-the-value-of-access-to-training/",
+      "publisher": "Federal Reserve Bank of New York (Liberty Street Economics)",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-14",
+      "excerpt": "Among currently employed respondents, 39 percent report that they are either using AI tools in their current job or have used AI tools in their jobs in the last twelve months. College graduates are more than twice as likely to have used AI tools at work in the past twelve months as those without a college degree (58.7 percent versus 22.9 percent). AI adoption rises from 15.9 percent among workers earning under $50,000 to 66.3 percent among those earning over $200,000 annually. Around 38 percent of employed respondents said that having training in how to use AI tools is important to them, yet only 15.9 percent report that their employer currently offers any AI training. Around 62 percent of all respondents believe the unemployment rate will increase over the next twelve months due to AI.",
+      "usedIn": [
+        "genai-work-adoption",
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false

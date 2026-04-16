@@ -10,6 +10,15 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "NY Fed (Liberty Street)",
+    title: "Use of Gen AI in the Workplace and the Value of Access to Training",
+    summary:
+      "November 2025 SCE: 39% of US workers used AI at work in the past year, but adoption is highly unequal — 58.7% of college grads vs 22.9% non-college; 15.9% (<$50K) vs 66.3% (>$200K). Only 15.9% of employers offer AI training though 38% of workers want it. 62% expect AI to raise unemployment over the next year.",
+    date: "Apr 14",
+    url: "https://libertystreeteconomics.newyorkfed.org/2026/04/use-of-gen-ai-in-the-workplace-and-the-value-of-access-to-training/",
+    accent: "border-l-sky-500",
+  },
+  {
     author: "Alex Imas",
     title: "What will be scarce? The post-commodity future of work",
     summary:
@@ -44,15 +53,6 @@ const articles: Article[] = [
     date: "Apr 1",
     url: "https://cdn.openai.com/pdf/561e7512-253e-424b-9734-ef4098440601/Industrial%20Policy%20for%20the%20Intelligence%20Age.pdf",
     accent: "border-l-amber-500",
-  },
-  {
-    author: "MIT Center for Collective Intelligence",
-    title: "Where Can AI Be Used? Insights from a Deep Ontology of Work Activities",
-    summary:
-      "92% of AI apps map to only 6.8% of work activities. AI grew 6x but coverage only 1.2x. 75% of AI value in software/info tasks. Think/Do/Interact ontology of 39,603 activities from O*NET.",
-    date: "Mar 27",
-    url: "https://arxiv.org/abs/2603.20619",
-    accent: "border-l-rose-500",
   },
 ];
 

@@ -99,6 +99,16 @@
       "dataType": "observed"
     },
     {
+      "date": "2025-11-01",
+      "value": 39,
+      "sourceIds": [
+        "nyfed-sce-ai-workplace-training-2026"
+      ],
+      "evidenceTier": 1,
+      "metricType": "survey",
+      "dataType": "observed"
+    },
+    {
       "date": "2026-01-22",
       "value": 43,
       "sourceIds": [
@@ -320,6 +330,42 @@
       ],
       "evidenceTier": 2,
       "label": "Stanford HAI: GenAI 53% global population adoption in 3yrs; US 28.3%"
+    },
+    {
+      "date": "2026-04-14",
+      "direction": "up",
+      "sourceIds": [
+        "nyfed-sce-ai-workplace-training-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NY Fed SCE: College grads 58.7% vs non-college 22.9% AI use at work"
+    },
+    {
+      "date": "2026-04-14",
+      "direction": "up",
+      "sourceIds": [
+        "nyfed-sce-ai-workplace-training-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NY Fed SCE: AI use at work 15.9% (<$50K) vs 66.3% (>$200K)"
+    },
+    {
+      "date": "2026-04-14",
+      "direction": "down",
+      "sourceIds": [
+        "nyfed-sce-ai-workplace-training-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NY Fed SCE: Only 15.9% of employers offer AI training; 38% of workers want it"
+    },
+    {
+      "date": "2026-04-14",
+      "direction": "down",
+      "sourceIds": [
+        "nyfed-sce-ai-workplace-training-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NY Fed SCE: 37% of workplaces don't offer AI tools; 11% actively prohibit"
     }
   ],
   "sources": [
@@ -608,6 +654,16 @@
       "evidenceTier": 2,
       "datePublished": "2026-04-13",
       "excerpt": "Generative AI reached 53% population adoption within three years, faster than the personal computer or the internet, though the pace varies by country and correlates strongly with GDP per capita. Some show higher-than-expected adoption, such as Singapore (61%) and the United Arab Emirates (54%), while the U.S. ranks 24th at 28.3%."
+    },
+    {
+      "id": "nyfed-sce-ai-workplace-training-2026",
+      "title": "Use of Gen AI in the Workplace and the Value of Access to Training",
+      "url": "https://libertystreeteconomics.newyorkfed.org/2026/04/use-of-gen-ai-in-the-workplace-and-the-value-of-access-to-training/",
+      "publisher": "Federal Reserve Bank of New York (Liberty Street Economics)",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-14",
+      "excerpt": "Among currently employed respondents, 39 percent report that they are either using AI tools in their current job or have used AI tools in their jobs in the last twelve months. College graduates are more than twice as likely to have used AI tools at work in the past twelve months as those without a college degree (58.7 percent versus 22.9 percent). AI adoption rises from 15.9 percent among workers earning under $50,000 to 66.3 percent among those earning over $200,000 annually. Around 38 percent of employed respondents said that having training in how to use AI tools is important to them, yet only 15.9 percent report that their employer currently offers any AI training.",
+      "dateAdded": "2026-04-15"
     }
   ]
 }

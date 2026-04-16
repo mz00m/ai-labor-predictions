@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "Use of Gen AI in the Workplace and the Value of Access to Training",
+      "author": "Ali Hashim, Gizem Kosar, and Wilbert van der Klaauw",
+      "publisher": "Federal Reserve Bank of New York (Liberty Street Economics)",
+      "date": "2026-04-14",
+      "url": "https://libertystreeteconomics.newyorkfed.org/2026/04/use-of-gen-ai-in-the-workplace-and-the-value-of-access-to-training/",
+      "takeaway": "November 2025 SCE supplemental questions document that 39% of employed Americans used AI at work in the past year, but adoption is sharply stratified: 58.7% of college grads vs 22.9% non-college; 15.9% (<$50K) to 66.3% (>$200K) by income; 42.7% full-time vs 24.7% part-time. Among users, 66% say AI boosts their productivity (40% finish tasks faster; 22% complete more). Yet 37% of workers say their employer offers no AI tools and 11% say they are actively prohibited. Training gap is the headline: 38% of workers value AI training but only 15.9% get it from employers. Workers without training would pay an average 11.4% of salary to gain it; workers with training demand 24.2% more pay to give it up (loss aversion + selection). 62% of respondents expect AI to raise unemployment in the next 12 months; only 11.6% expect a decline.",
+      "weekFeatured": "2026-04-14",
+      "tier": 1
+    },
+    {
       "title": "What will be scarce? The economics of structural change and the post-commodity future of work",
       "author": "Alex Imas",
       "publisher": "Ghosts of Electricity",

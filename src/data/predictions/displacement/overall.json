@@ -1421,6 +1421,15 @@
       ],
       "evidenceTier": 2,
       "label": "Goldman Sachs prior est.: 6-7% of US workers (~11M) could be displaced by AI"
+    },
+    {
+      "date": "2026-04-14",
+      "direction": "up",
+      "sourceIds": [
+        "nyfed-sce-ai-workplace-training-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NY Fed SCE: 62% of US workers expect unemployment to rise from AI next 12mo"
     }
   ],
   "sources": [
@@ -2557,6 +2566,16 @@
       "evidenceTier": 2,
       "datePublished": "2026-04-07",
       "excerpt": "Recessions worsen outcomes: The effects of technology-related displacements are amplified (by three weeks of additional unemployment and a 5-percentage-point likelihood of subsequent joblessness). Goldman Sachs previously estimated that 6% to 7% of US workers (about 11 million people) could have their jobs displaced by AI."
+    },
+    {
+      "id": "nyfed-sce-ai-workplace-training-2026",
+      "title": "Use of Gen AI in the Workplace and the Value of Access to Training",
+      "url": "https://libertystreeteconomics.newyorkfed.org/2026/04/use-of-gen-ai-in-the-workplace-and-the-value-of-access-to-training/",
+      "publisher": "Federal Reserve Bank of New York (Liberty Street Economics)",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-14",
+      "excerpt": "Around 62 percent of all respondents believe the unemployment rate will increase over the next twelve months due to AI, while around 11.6 percent expect it will decrease due to AI.",
+      "dateAdded": "2026-04-15"
     }
   ]
 }
