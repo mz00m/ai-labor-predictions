@@ -38,7 +38,7 @@ export default function HeroTriad({
             className="group/stat relative overflow-hidden pt-6 pb-8 sm:pb-12 px-1 sm:px-4 no-underline text-center w-full"
           >
             <span
-              className={`absolute inset-x-0 -bottom-4 flex items-end justify-center stat-number text-[72px] sm:text-[150px] font-black leading-none pointer-events-none select-none transition-opacity duration-200 ${wobbling ? "opacity-[0.25]" : "opacity-[0.15] group-hover/stat:opacity-[0.25]"}`}
+              className={`absolute inset-x-0 -bottom-4 flex items-end justify-center stat-number text-[72px] sm:text-[150px] font-black leading-none pointer-events-none select-none transition-opacity duration-200 ${wobbling ? "opacity-[0.28]" : "opacity-[0.20] group-hover/stat:opacity-[0.28]"}`}
               style={{ color: "var(--accent)", letterSpacing: "-0.09em", ...maskStyle }}
             >
               <span className="relative">
@@ -69,7 +69,7 @@ export default function HeroTriad({
             className="group/stat relative overflow-hidden pt-6 pb-8 sm:pb-12 px-1 sm:px-4 no-underline text-center w-full"
           >
             <span
-              className={`absolute inset-x-0 -bottom-4 flex items-end justify-center stat-number text-[72px] sm:text-[150px] font-black leading-none pointer-events-none select-none transition-colors duration-200 ${wobbling ? "text-black/[0.20]" : "text-black/[0.10] group-hover/stat:text-black/[0.20]"}`}
+              className={`absolute inset-x-0 -bottom-4 flex items-end justify-center stat-number text-[72px] sm:text-[150px] font-black leading-none pointer-events-none select-none transition-colors duration-200 ${wobbling ? "text-black/[0.24]" : "text-black/[0.18] group-hover/stat:text-black/[0.24]"}`}
               style={maskStyle}
             >
               <span className="relative">
@@ -100,7 +100,7 @@ export default function HeroTriad({
             className="group/stat relative overflow-hidden pt-6 pb-8 sm:pb-12 px-1 sm:px-4 no-underline text-center w-full"
           >
             <span
-              className={`absolute inset-x-0 -bottom-4 flex items-end justify-center stat-number text-[72px] sm:text-[150px] font-black leading-none pointer-events-none select-none transition-colors duration-200 ${wobbling ? "text-emerald-600/[0.25]" : "text-emerald-600/[0.12] group-hover/stat:text-emerald-600/[0.25]"}`}
+              className={`absolute inset-x-0 -bottom-4 flex items-end justify-center stat-number text-[72px] sm:text-[150px] font-black leading-none pointer-events-none select-none transition-colors duration-200 ${wobbling ? "text-emerald-600/[0.28]" : "text-emerald-600/[0.20] group-hover/stat:text-emerald-600/[0.28]"}`}
               style={maskStyle}
             >
               <span className="relative">
