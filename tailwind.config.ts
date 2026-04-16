@@ -9,10 +9,10 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"],
-        serif: ["Source Serif 4", "Georgia", "serif"],
-        mono: ["DM Mono", "ui-monospace", "monospace"],
-        dm: ["DM Sans", "Inter", "sans-serif"],
+        sans: ["var(--font-inter)", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"],
+        serif: ["var(--font-serif)", "Georgia", "serif"],
+        mono: ["var(--font-mono)", "ui-monospace", "monospace"],
+        dm: ["var(--font-dm)", "var(--font-inter)", "sans-serif"],
       },
       colors: {
         muted: "var(--muted)",

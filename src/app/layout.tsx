@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Inter, Source_Serif_4, DM_Sans, DM_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import MainWrapper, { FooterWrapper } from "@/components/MainWrapper";
@@ -9,6 +10,35 @@ import { getSourceCount } from "@/lib/search-sources";
 import { SOURCE_COUNT_DISPLAY } from "@/lib/constants";
 import { Analytics } from "@vercel/analytics/react";
 import DelightsWrapper from "@/components/delights/DelightsWrapper";
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const sourceSerif = Source_Serif_4({
+  subsets: ["latin"],
+  weight: ["400", "600", "700", "800"],
+  style: ["normal", "italic"],
+  variable: "--font-serif",
+  display: "swap",
+});
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-dm",
+  display: "swap",
+});
+
+const dmMono = DM_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-mono",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: {
@@ -46,7 +76,7 @@ export default function RootLayout({
 }) {
   const sourceCount = getSourceCount();
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.variable} ${sourceSerif.variable} ${dmSans.variable} ${dmMono.variable}`}>
       <head>
         <script
           type="application/ld+json"
