@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { getSourceCount } from "@/lib/search-sources";
-import EconomyRadarChart from "@/components/prediction/EconomyRadarChart";
+
 import ForecastGrid from "@/components/prediction/ForecastGrid";
 import PlaceYourPrediction from "@/components/prediction/PlaceYourPrediction";
 import EconomistAssessments from "@/components/prediction/EconomistAssessments";
@@ -58,12 +58,6 @@ export default function PredictionPage() {
             entry-level worker will feel it.
           </p>
           <div className="flex items-center gap-4 mt-6">
-            <div className="bg-[#5C61F6]/[0.06] rounded-lg px-4 py-2.5">
-              <p className="text-[24px] font-black text-[#5C61F6]">$1M</p>
-              <p className="text-[10px] font-bold uppercase tracking-wider text-[#5C61F6]/70">
-                Conviction
-              </p>
-            </div>
             <div className="bg-black/[0.03] rounded-lg px-4 py-2.5">
               <p className="text-[24px] font-black text-[#2E3650]">12</p>
               <p className="text-[10px] font-bold uppercase tracking-wider text-[var(--muted)]">
@@ -82,7 +76,6 @@ export default function PredictionPage() {
         </div>
       </div>
 
-      <EconomyRadarChart />
       <ForecastGrid />
       <PlaceYourPrediction />
       <EconomistAssessments />
