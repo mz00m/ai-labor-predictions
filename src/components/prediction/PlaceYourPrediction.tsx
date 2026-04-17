@@ -83,15 +83,15 @@ export default function PlaceYourPrediction() {
         onClick={() => setOpen(!open)}
         className="w-full text-left group"
       >
-        <div className="flex items-center justify-between border border-black/[0.06] rounded-xl px-6 py-5 hover:shadow-sm transition-shadow bg-gradient-to-r from-[#5C61F6]/[0.03] to-transparent">
+        <div className="flex items-center justify-between border border-card rounded-xl px-6 py-5 hover:shadow-sm transition-shadow bg-gradient-to-r from-[#5C61F6]/[0.03] to-transparent">
           <div>
-            <p className="text-[11px] font-bold uppercase tracking-widest text-[var(--accent)] mb-1">
+            <p className="text-xs font-bold uppercase tracking-widest text-[var(--accent)] mb-1">
               Interactive
             </p>
-            <h2 className="text-[22px] sm:text-[26px] font-extrabold tracking-tight text-[#2E3650]">
+            <h2 className="text-3xl sm:text-heading-lg font-extrabold tracking-tight text-[#2E3650]">
               Place Your Prediction
             </h2>
-            <p className="text-[13px] text-[var(--muted)] mt-1">
+            <p className="text-base text-[var(--muted)] mt-1">
               Set your own values for each metric. How do you see 2030?
             </p>
           </div>
@@ -113,9 +113,9 @@ export default function PlaceYourPrediction() {
       </button>
 
       {open && hydrated && (
-        <div className="border border-t-0 border-black/[0.06] rounded-b-xl px-6 py-6 space-y-6">
+        <div className="border border-t-0 border-card rounded-b-xl px-6 py-6 space-y-6">
           <div>
-            <label className="block text-[12px] font-medium text-[#2E3650] mb-1">
+            <label className="block text-sm font-medium text-[#2E3650] mb-1">
               Your name (optional)
             </label>
             <input
@@ -123,7 +123,7 @@ export default function PlaceYourPrediction() {
               value={name}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => setName(e.target.value)}
               placeholder="Anonymous"
-              className="w-full max-w-xs border border-black/[0.1] rounded-lg px-3 py-2 text-[13px] focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/30"
+              className="w-full max-w-xs border border-black/[0.1] rounded-lg px-3 py-2 text-base focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/30"
             />
           </div>
 
@@ -145,7 +145,7 @@ export default function PlaceYourPrediction() {
                         className="w-2 h-2 rounded-sm shrink-0"
                         style={{ backgroundColor: catColor }}
                       />
-                      <span className="text-[12px] font-medium text-[#2E3650] truncate">
+                      <span className="text-sm font-medium text-[#2E3650] truncate">
                         {p.shortTitle}
                       </span>
                     </div>
@@ -162,12 +162,12 @@ export default function PlaceYourPrediction() {
                     className="flex-1 accent-[#5C61F6] h-1.5"
                   />
                   <div className="w-20 text-right shrink-0">
-                    <span className="text-[14px] font-bold text-[#2E3650]">
+                    <span className="text-md font-bold text-[#2E3650]">
                       {userVal}
                       {p.unit}
                     </span>
                     <span
-                      className={`block text-[10px] ${
+                      className={`block text-2xs ${
                         diff === 0
                           ? "text-[var(--muted)]"
                           : diff > 0
@@ -184,7 +184,7 @@ export default function PlaceYourPrediction() {
           </div>
 
           <div>
-            <label className="block text-[12px] font-medium text-[#2E3650] mb-1">
+            <label className="block text-sm font-medium text-[#2E3650] mb-1">
               Confidence (1 = guess, 10 = would bet the house)
             </label>
             <div className="flex items-center gap-3">
@@ -197,14 +197,14 @@ export default function PlaceYourPrediction() {
                 onChange={(e: React.ChangeEvent<HTMLInputElement>) => setConfidence(parseInt(e.target.value))}
                 className="flex-1 accent-[#5C61F6] h-1.5"
               />
-              <span className="text-[18px] font-black text-[#2E3650] w-8 text-right">
+              <span className="text-2xl font-black text-[#2E3650] w-8 text-right">
                 {confidence}
               </span>
             </div>
           </div>
 
           <div>
-            <label className="block text-[12px] font-medium text-[#2E3650] mb-1">
+            <label className="block text-sm font-medium text-[#2E3650] mb-1">
               Reasoning (optional)
             </label>
             <textarea
@@ -212,25 +212,25 @@ export default function PlaceYourPrediction() {
               onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setReasoning(e.target.value)}
               rows={3}
               placeholder="What informs your prediction?"
-              className="w-full border border-black/[0.1] rounded-lg px-3 py-2 text-[13px] focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/30 resize-none"
+              className="w-full border border-black/[0.1] rounded-lg px-3 py-2 text-base focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/30 resize-none"
             />
           </div>
 
           <div className="flex items-center gap-3">
             <button
               onClick={handleSave}
-              className="bg-[var(--accent)] text-white text-[13px] font-medium rounded-lg px-5 py-2.5 hover:opacity-90 transition-opacity"
+              className="bg-[var(--accent)] text-white text-base font-medium rounded-lg px-5 py-2.5 hover:opacity-90 transition-opacity"
             >
               Save My Prediction
             </button>
             <button
               onClick={handleReset}
-              className="text-[12px] text-[var(--muted)] hover:text-[var(--foreground)] transition-colors"
+              className="text-sm text-[var(--muted)] hover:text-[var(--foreground)] transition-colors"
             >
               Reset
             </button>
             {saved && (
-              <span className="text-[11px] text-emerald-600 font-medium">
+              <span className="text-xs text-emerald-600 font-medium">
                 Saved {new Date(saved.timestamp).toLocaleDateString()}
               </span>
             )}

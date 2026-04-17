@@ -84,7 +84,7 @@ export default function AutomationTimeline({
           {[2028, 2030, 2032, 2034, 2036, 2038].map((yr) => (
             <div
               key={yr}
-              className="absolute top-0 bottom-0 border-l border-dashed border-black/[0.06]"
+              className="absolute top-0 bottom-0 border-l border-dashed border-card"
               style={{ left: `${((yr - minYear) / range) * 100}%` }}
             />
           ))}

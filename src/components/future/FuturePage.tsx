@@ -25,7 +25,7 @@ export default function FuturePage() {
           From Here to There
         </h1>
         <p
-          className="text-2xl sm:text-[20px] text-[var(--muted)] leading-relaxed mb-5"
+          className="text-2xl sm:text-heading-sm text-[var(--muted)] leading-relaxed mb-5"
           style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
         >
           A plausible positive scenario for the AI transition that
@@ -60,7 +60,7 @@ export default function FuturePage() {
 
       {/* ───── The Chain Visualization ───── */}
       <section className="mb-12">
-        <div className="border-t border-black/[0.06] pt-8">
+        <div className="border-t border-card pt-8">
           <p className="text-md text-[var(--muted)] leading-[1.75] mb-6">
             The path from here to there has seven links. Each one is a
             causal mechanism, not a hope. Click any link to jump to the
@@ -78,9 +78,9 @@ export default function FuturePage() {
 
       {/* ───── Link 1: Recession + Career Ladder ───── */}
       <section className="mb-12" id="link-1">
-        <div className="border-t border-black/[0.06] pt-8">
+        <div className="border-t border-card pt-8">
           <SectionLabel number="01" />
-          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-3">
             A recession breaks the early-career ladder
           </h2>
           <div className="space-y-4 text-md text-[var(--muted)] leading-[1.75] mb-6">
@@ -169,9 +169,9 @@ export default function FuturePage() {
 
       {/* ───── Link 2: Industrial Policy ───── */}
       <section className="mb-12" id="link-2">
-        <div className="border-t border-black/[0.06] pt-8">
+        <div className="border-t border-card pt-8">
           <SectionLabel number="02" />
-          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-3">
             The political window opens for industrial policy
           </h2>
           <div className="space-y-4 text-md text-[var(--muted)] leading-[1.75] mb-6">
@@ -246,9 +246,9 @@ export default function FuturePage() {
 
       {/* ───── Link 3: The Care Economy Reallocation ───── */}
       <section className="mb-12" id="link-3">
-        <div className="border-t border-black/[0.06] pt-8">
+        <div className="border-t border-card pt-8">
           <SectionLabel number="03" />
-          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-3">
             Workers reshuffle into education and healthcare
           </h2>
           <div className="space-y-4 text-md text-[var(--muted)] leading-[1.75] mb-6">
@@ -336,9 +336,9 @@ export default function FuturePage() {
 
       {/* ───── Link 4: Construction + Entrepreneurship ───── */}
       <section className="mb-12" id="link-4">
-        <div className="border-t border-black/[0.06] pt-8">
+        <div className="border-t border-card pt-8">
           <SectionLabel number="04" />
-          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-3">
             AI unlocks construction and entrepreneurship
           </h2>
           <div className="space-y-4 text-md text-[var(--muted)] leading-[1.75] mb-6">
@@ -421,9 +421,9 @@ export default function FuturePage() {
 
       {/* ───── Link 5: Material Abundance ───── */}
       <section className="mb-12" id="link-5">
-        <div className="border-t border-black/[0.06] pt-8">
+        <div className="border-t border-card pt-8">
           <SectionLabel number="05" />
-          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-3">
             Goods get cheap. Spending shifts to services.
           </h2>
           <div className="space-y-4 text-md text-[var(--muted)] leading-[1.75] mb-6">
@@ -469,9 +469,9 @@ export default function FuturePage() {
 
       {/* ───── Link 6: The Service Economy Blooms ───── */}
       <section className="mb-12" id="link-6">
-        <div className="border-t border-black/[0.06] pt-8">
+        <div className="border-t border-card pt-8">
           <SectionLabel number="06" />
-          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-3">
             Human services become the economy
           </h2>
           <div className="space-y-4 text-md text-[var(--muted)] leading-[1.75] mb-6">
@@ -536,9 +536,9 @@ export default function FuturePage() {
 
       {/* ───── Link 7: The Work Week and the Good Life ───── */}
       <section className="mb-12" id="link-7">
-        <div className="border-t border-black/[0.06] pt-8">
+        <div className="border-t border-card pt-8">
           <SectionLabel number="07" />
-          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-3">
             Everyone works 3&ndash;4 days a week
           </h2>
           <div className="space-y-4 text-md text-[var(--muted)] leading-[1.75] mb-6">
@@ -619,9 +619,9 @@ export default function FuturePage() {
           CODA: Conditionals
          ═══════════════════════════════════════ */}
       <section className="mb-12">
-        <div className="border-t border-black/[0.06] pt-8">
+        <div className="border-t border-card pt-8">
           <SectionLabel number="08" />
-          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-3">
             What has to go right
           </h2>
           <div className="space-y-4 text-md text-[var(--muted)] leading-[1.75] mb-6">
@@ -668,7 +668,7 @@ export default function FuturePage() {
 
       {/* ───── Closing ───── */}
       <section className="mb-12">
-        <div className="border-t border-black/[0.06] pt-8">
+        <div className="border-t border-card pt-8">
           <blockquote className="border-l-4 border-[var(--accent)] bg-[var(--accent-light)] rounded-r-lg px-5 py-5">
             <p
               className="text-lg sm:text-xl text-[var(--foreground)] leading-[1.75] font-medium"
@@ -698,7 +698,7 @@ export default function FuturePage() {
           </div>
 
           {/* Source note */}
-          <div className="mt-8 rounded-lg border border-black/[0.06] px-5 py-4">
+          <div className="mt-8 rounded-lg border border-card px-5 py-4">
             <p className="text-xs font-bold uppercase tracking-wider text-[var(--muted)] mb-2">
               Sources &amp; frameworks
             </p>
@@ -896,7 +896,7 @@ function EvidenceCard({
     >
       <div className="flex items-baseline gap-2 mb-1">
         <span
-          className={`font-black tabular-nums ${compact ? "text-[20px]" : "text-[24px]"}`}
+          className={`font-black tabular-nums ${compact ? "text-heading-sm" : "text-heading"}`}
           style={{ color }}
         >
           {stat}
@@ -907,7 +907,7 @@ function EvidenceCard({
       </div>
       <div className="flex items-center gap-2">
         <span
-          className="text-[9px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded-full"
+          className="text-3xs font-bold uppercase tracking-wider px-1.5 py-0.5 rounded-full"
           style={{ backgroundColor: color + "15", color }}
         >
           {TIER_LABELS[tier]}
@@ -971,14 +971,14 @@ function StatCard({
     >
       {emphasis && (
         <span
-          className="absolute top-2 right-2 text-[8px] font-bold uppercase tracking-widest px-1.5 py-0.5 rounded-full"
+          className="absolute top-2 right-2 text-3xs font-bold uppercase tracking-widest px-1.5 py-0.5 rounded-full"
           style={{ backgroundColor: color + "20", color }}
         >
           Next
         </span>
       )}
       <p
-        className={emphasis ? "text-[26px] sm:text-[30px] font-black" : "text-3xl sm:text-[24px] font-black"}
+        className={emphasis ? "text-heading-lg sm:text-heading-xl font-black" : "text-3xl sm:text-heading font-black"}
         style={{ color }}
       >
         {targetNum !== null && visible ? (

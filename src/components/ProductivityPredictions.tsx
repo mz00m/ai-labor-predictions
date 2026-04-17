@@ -318,7 +318,7 @@ function EconomistModal({
           </p>
 
           {/* Note */}
-          <div className="mt-4 pt-4 border-t border-black/[0.06]">
+          <div className="mt-4 pt-4 border-t border-card">
             <p className="text-base text-[var(--foreground)] italic leading-relaxed">
               &ldquo;{respondent.note}&rdquo;
             </p>
@@ -448,7 +448,7 @@ function GroupedCategoryCard({
   onBarClick: (respondentId: string, categoryId: CategoryId) => void;
 }) {
   return (
-    <div className="flex-1 min-w-[145px] border border-black/[0.06] rounded-lg bg-white px-3 py-4">
+    <div className="flex-1 min-w-[145px] border border-card rounded-lg bg-white px-3 py-4">
       {/* Label */}
       <div className="mb-3">
         <span
@@ -471,7 +471,7 @@ function GroupedCategoryCard({
         {[25, 50, 75].map((line) => (
           <div
             key={line}
-            className="absolute w-full border-t border-black/[0.04]"
+            className="absolute w-full border-t border-divider"
             style={{ bottom: `${line}%` }}
           />
         ))}
@@ -539,7 +539,7 @@ export default function ProductivityPredictions() {
 
       {/* Section header */}
       <div className="mb-8">
-        <h2 className="text-4xl sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
+        <h2 className="text-4xl sm:text-title-sm font-extrabold tracking-tight text-[var(--foreground)]">
           What economists expect from AI-driven productivity
         </h2>
         <p className="text-lg text-[var(--muted)] mt-2 max-w-2xl">

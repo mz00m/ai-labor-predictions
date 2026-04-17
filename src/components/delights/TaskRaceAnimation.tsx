@@ -126,7 +126,7 @@ export default function TaskRaceAnimation({
           className={`text-xs font-medium px-3 py-1.5 rounded-lg border transition-all ${
             racing
               ? "text-[var(--accent)] border-[var(--accent)]/30 bg-[var(--accent-light)]"
-              : "text-[var(--muted)] border-black/[0.08] hover:border-[var(--accent)]/30 hover:text-[var(--accent)] hover:bg-[var(--accent-light)]"
+              : "text-[var(--muted)] border-strong hover:border-[var(--accent)]/30 hover:text-[var(--accent)] hover:bg-[var(--accent-light)]"
           }`}
         >
           {racing ? "Racing..." : finished.length > 0 ? "Race again" : "Start race"}
@@ -142,7 +142,7 @@ export default function TaskRaceAnimation({
               className={`px-2 py-0.5 rounded-full border text-2xs font-medium transition-all ${
                 speed === s
                   ? "bg-[var(--accent)] text-white border-[var(--accent)]"
-                  : "border-black/[0.08] hover:border-[var(--accent)]/30"
+                  : "border-strong hover:border-[var(--accent)]/30"
               }`}
             >
               {s}x

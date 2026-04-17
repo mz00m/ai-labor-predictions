@@ -44,7 +44,7 @@ export default function SubmissionForm() {
 
   if (status === "success") {
     return (
-      <div className="border border-black/[0.06] rounded-lg px-6 py-8 bg-white text-center max-w-xl">
+      <div className="border border-card rounded-lg px-6 py-8 bg-white text-center max-w-xl">
         <p className="text-2xl font-bold text-[var(--foreground)] mb-2">
           Thank you!
         </p>
@@ -64,7 +64,7 @@ export default function SubmissionForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="border border-black/[0.06] rounded-lg px-6 py-6 bg-white max-w-xl space-y-5"
+      className="border border-card rounded-lg px-6 py-6 bg-white max-w-xl space-y-5"
     >
       {/* URL (required) */}
       <div>

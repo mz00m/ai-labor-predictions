@@ -394,10 +394,10 @@ export default function PackageTable({
 
   return (
     <div>
-      <div className="rounded-xl border border-black/[0.06] bg-white overflow-x-auto">
+      <div className="rounded-xl border border-card bg-white overflow-x-auto">
         <table className="w-full text-left">
           <thead>
-            <tr className="border-b border-black/[0.06]">
+            <tr className="border-b border-card">
               {SORTABLE_COLUMNS.map((col) => (
                 <th
                   key={col.key}
@@ -440,7 +440,7 @@ export default function PackageTable({
                 <tr key="header-baseline">
                   <td
                     colSpan={6}
-                    className="px-4 pt-6 pb-2 border-b border-black/[0.06]"
+                    className="px-4 pt-6 pb-2 border-b border-card"
                   >
                     <div className="flex items-center gap-2.5">
                       <span className="w-2.5 h-2.5 rounded-full shrink-0 bg-[#9ca3af]" />
@@ -542,7 +542,7 @@ export default function PackageTable({
           className={`text-xs font-semibold px-3 py-1.5 rounded-md transition-colors ${
             showTier1
               ? "bg-[var(--accent)] text-white"
-              : "text-[var(--muted)] hover:bg-black/[0.04] border border-black/[0.08]"
+              : "text-[var(--muted)] hover:bg-black/[0.04] border border-strong"
           }`}
         >
           {showTier1 ? "Hide" : "Show"} AI infrastructure baseline
@@ -574,7 +574,7 @@ function GroupRows({
     <>
       {/* Clickable aggregate header row */}
       <tr
-        className="border-b border-black/[0.06] cursor-pointer hover:bg-black/[0.03] select-none"
+        className="border-b border-card cursor-pointer hover:bg-black/[0.03] select-none"
         style={{
           backgroundColor: isExpanded ? "rgba(0,0,0,0.02)" : undefined,
         }}

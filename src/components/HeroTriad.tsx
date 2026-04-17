@@ -43,13 +43,13 @@ export default function HeroTriad({
             >
               <span className="relative">
                 {displayValue ?? "21"}
-                <span className="absolute left-full top-0 text-[30px] sm:text-[60px] font-normal opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 ml-0.5">
+                <span className="absolute left-full top-0 text-heading-xl sm:text-[60px] font-normal opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 ml-0.5">
                   %
                 </span>
               </span>
             </span>
-            <p className="relative z-[2] text-[9px] sm:text-2xs font-bold uppercase tracking-wide sm:tracking-widest text-[var(--muted)] mb-1.5">
-              <span className="text-[9px] font-light opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 mr-0.5">
+            <p className="relative z-[2] text-3xs sm:text-2xs font-bold uppercase tracking-wide sm:tracking-widest text-[var(--muted)] mb-1.5">
+              <span className="text-3xs font-light opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 mr-0.5">
                 ~
               </span>
               Productivity boost
@@ -74,13 +74,13 @@ export default function HeroTriad({
             >
               <span className="relative">
                 {displayValue ?? projectedJobLoss}
-                <span className="absolute left-full top-0 text-[30px] sm:text-[60px] font-normal opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 ml-0.5">
+                <span className="absolute left-full top-0 text-heading-xl sm:text-[60px] font-normal opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 ml-0.5">
                   %
                 </span>
               </span>
             </span>
-            <p className="relative z-[2] text-[9px] sm:text-2xs font-bold uppercase tracking-wide sm:tracking-widest text-[var(--muted)] mb-1.5">
-              <span className="text-[9px] font-light opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 mr-0.5">
+            <p className="relative z-[2] text-3xs sm:text-2xs font-bold uppercase tracking-wide sm:tracking-widest text-[var(--muted)] mb-1.5">
+              <span className="text-3xs font-light opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 mr-0.5">
                 ~
               </span>
               Projected job loss
@@ -105,13 +105,13 @@ export default function HeroTriad({
             >
               <span className="relative">
                 {displayValue ?? measuredJobLoss}
-                <span className="absolute left-full top-0 text-[30px] sm:text-[60px] font-normal opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 ml-0.5">
+                <span className="absolute left-full top-0 text-heading-xl sm:text-[60px] font-normal opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 ml-0.5">
                   %
                 </span>
               </span>
             </span>
-            <p className="relative z-[2] text-[9px] sm:text-2xs font-bold uppercase tracking-wide sm:tracking-widest text-[var(--muted)] mb-1.5">
-              <span className="text-[9px] font-light opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 mr-0.5">
+            <p className="relative z-[2] text-3xs sm:text-2xs font-bold uppercase tracking-wide sm:tracking-widest text-[var(--muted)] mb-1.5">
+              <span className="text-3xs font-light opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 mr-0.5">
                 ~
               </span>
               Measured job loss

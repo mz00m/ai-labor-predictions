@@ -129,7 +129,7 @@ export default function EconomyVisualizerClient() {
       )}
 
       {/* Bottom methodology note */}
-      <div className="mt-12 pt-8 border-t border-black/[0.06]">
+      <div className="mt-12 pt-8 border-t border-card">
         <h3 className="text-md font-semibold text-[var(--foreground)] mb-2">
           About this analysis
         </h3>

@@ -224,7 +224,7 @@ export default function SearchCombobox({ mobile }: SearchComboboxProps) {
             text-sm font-medium text-[var(--foreground)]
             bg-black/[0.03] rounded-md
             border border-transparent
-            focus:border-black/[0.08] focus:bg-white focus:shadow-sm
+            focus:border-strong focus:bg-white focus:shadow-sm
             placeholder:text-[var(--muted)]
             outline-none
             ${
@@ -243,7 +243,7 @@ export default function SearchCombobox({ mobile }: SearchComboboxProps) {
           role="listbox"
           className={`
             absolute top-full left-0 mt-1
-            bg-white rounded-lg border border-black/[0.08] shadow-lg
+            bg-white rounded-lg border border-strong shadow-lg
             py-1 max-h-[400px] overflow-y-auto
             z-50
             ${mobile ? "w-full" : "w-[340px]"}
@@ -327,7 +327,7 @@ export default function SearchCombobox({ mobile }: SearchComboboxProps) {
                         {result.usedIn.slice(0, 3).map((slug) => (
                           <span
                             key={slug}
-                            className="text-[9px] font-medium text-[var(--accent)] bg-[var(--accent)]/[0.08] px-1.5 py-0.5 rounded leading-tight"
+                            className="text-3xs font-medium text-[var(--accent)] bg-[var(--accent)]/[0.08] px-1.5 py-0.5 rounded leading-tight"
                           >
                             {getPredictionTitle(slug).replace(
                               / by \d{4}/,
@@ -336,7 +336,7 @@ export default function SearchCombobox({ mobile }: SearchComboboxProps) {
                           </span>
                         ))}
                         {result.usedIn.length > 3 && (
-                          <span className="text-[9px] text-[var(--muted)] px-1 py-0.5">
+                          <span className="text-3xs text-[var(--muted)] px-1 py-0.5">
                             +{result.usedIn.length - 3} more
                           </span>
                         )}

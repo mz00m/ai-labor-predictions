@@ -43,7 +43,7 @@ function CustomTooltip({
   if (!active || !payload?.[0]) return null;
   const data = payload[0].payload;
   return (
-    <div className="bg-white rounded-lg border border-black/[0.08] shadow-lg p-3 max-w-[260px]">
+    <div className="bg-white rounded-lg border border-strong shadow-lg p-3 max-w-[260px]">
       <p className="text-base font-semibold text-[var(--foreground)] mb-1">{data.name}</p>
       <p className="text-sm text-[var(--muted)] mb-2">{data.description}</p>
       <div className="space-y-1 text-sm">
@@ -66,7 +66,7 @@ function CustomTooltip({
           </span>
         </div>
       </div>
-      <p className="text-2xs text-[var(--muted)] mt-2 pt-1.5 border-t border-black/[0.06]">
+      <p className="text-2xs text-[var(--muted)] mt-2 pt-1.5 border-t border-card">
         API cost = raw inference only. The Compute Costs tab adds a {DEPLOYMENT_OVERHEAD}x
         deployment overhead (integration, validation, monitoring).
       </p>
@@ -184,7 +184,7 @@ export default function TaskBreakdownChart({
       </div>
 
       {/* Simple risk legend */}
-      <div className="flex gap-4 mt-4 pt-3 border-t border-black/[0.06]">
+      <div className="flex gap-4 mt-4 pt-3 border-t border-card">
         {[
           { label: "High risk (<3yr)", color: "#EF4444" },
           { label: "Moderate (3-5yr)", color: "#6366F1" },

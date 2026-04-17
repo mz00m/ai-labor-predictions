@@ -51,7 +51,7 @@ export default function IndustrySpeedSlider({
           : "#EF4444";
 
   return (
-    <div className="mt-5 pt-5 border-t border-black/[0.06]">
+    <div className="mt-5 pt-5 border-t border-card">
       <div className="flex items-center justify-between mb-1.5">
         <h4 className="text-base font-semibold text-[var(--foreground)]">
           Industry adoption speed
@@ -104,7 +104,7 @@ export default function IndustrySpeedSlider({
           <button
             key={preset.value}
             onClick={() => onChange(preset.value)}
-            className={`speed-preset text-[9px] transition-colors ${
+            className={`speed-preset text-3xs transition-colors ${
               Math.abs(value - preset.value) < 0.03
                 ? "text-[var(--foreground)] font-medium"
                 : "text-[var(--muted)] opacity-50 hover:opacity-100"

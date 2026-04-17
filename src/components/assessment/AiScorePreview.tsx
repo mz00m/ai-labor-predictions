@@ -200,7 +200,7 @@ export default function AiScorePreview({
               <div className="text-sm font-medium text-gray-900 truncate">
                 {selected.title}
               </div>
-              <div className="text-[11px] text-gray-400">
+              <div className="text-xs text-gray-400">
                 AI Exposure Score: {selected.exposure}/10
               </div>
             </div>
@@ -254,7 +254,7 @@ export default function AiScorePreview({
         </div>
 
         {/* Legend */}
-        <div className="flex items-center gap-3 text-[11px] text-gray-400 mb-3">
+        <div className="flex items-center gap-3 text-xs text-gray-400 mb-3">
           <span className="flex items-center gap-1">
             <span className="w-2 h-2 rounded-full bg-[#5C61F6]" />
             AI can do now

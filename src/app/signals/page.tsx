@@ -58,13 +58,13 @@ export default function SignalsPage() {
       <AutomationExplainer metrics={metrics} />
 
       {/* Anthropic: Theoretical vs Observed AI Coverage */}
-      <section className="border border-black/[0.06] rounded-xl p-6 sm:p-8 bg-white/50">
+      <section className="border border-card rounded-xl p-6 sm:p-8 bg-white/50">
         <div className="mb-4">
           <span className="text-xs font-bold uppercase tracking-wider text-[var(--accent)] bg-[var(--accent-light)] px-2.5 py-1 rounded-full">
             Tier 1 &middot; Anthropic Research
           </span>
         </div>
-        <h3 className="text-[20px] sm:text-[24px] font-bold text-[var(--foreground)] leading-tight mb-2">
+        <h3 className="text-heading-sm sm:text-heading font-bold text-[var(--foreground)] leading-tight mb-2">
           Theoretical Capability vs. Observed Exposure
         </h3>
         <p className="text-md text-[var(--muted)] leading-relaxed mb-6 max-w-2xl">
@@ -105,7 +105,7 @@ export default function SignalsPage() {
       {/* Section: Industry Cards */}
       <section>
         <div className="mb-6">
-          <h2 className="text-4xl sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
+          <h2 className="text-4xl sm:text-title-sm font-extrabold tracking-tight text-[var(--foreground)]">
             AI Automation by Industry
           </h2>
           <p className="text-lg text-[var(--muted)] mt-2 max-w-2xl">
@@ -139,7 +139,7 @@ export default function SignalsPage() {
       {/* Section: Full Package Table */}
       <section>
         <div className="mb-6">
-          <h2 className="text-4xl sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
+          <h2 className="text-4xl sm:text-title-sm font-extrabold tracking-tight text-[var(--foreground)]">
             All Tracked Tools
           </h2>
           <p className="text-lg text-[var(--muted)] mt-2 max-w-2xl">

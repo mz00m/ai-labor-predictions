@@ -30,7 +30,7 @@ export default function DiffusionComparison() {
       <p className="text-xs font-bold uppercase tracking-widest text-[var(--accent)] mb-3">
         Source Data
       </p>
-      <h3 className="text-2xl sm:text-[20px] font-bold text-[var(--foreground)] leading-tight mb-2">
+      <h3 className="text-2xl sm:text-heading-sm font-bold text-[var(--foreground)] leading-tight mb-2">
         Where Does &ldquo;5&ndash;12&times;&rdquo; Come From?
       </h3>
       <p className="text-sm text-[var(--muted)] leading-[1.7] mb-4 max-w-[600px]">
@@ -43,7 +43,7 @@ export default function DiffusionComparison() {
       <div className="hidden sm:block overflow-x-auto">
         <table className="w-full text-left text-sm border-collapse">
           <thead>
-            <tr className="border-b border-black/[0.08]">
+            <tr className="border-b border-strong">
               <th className="py-2.5 pr-4 text-2xs font-bold uppercase tracking-wider text-[var(--muted)]">
                 Comparison
               </th>
@@ -66,7 +66,7 @@ export default function DiffusionComparison() {
               <tr
                 key={r.comparison}
                 className={
-                  i < ROWS.length - 1 ? "border-b border-black/[0.04]" : ""
+                  i < ROWS.length - 1 ? "border-b border-divider" : ""
                 }
               >
                 <td className="py-3 pr-4 font-semibold text-[var(--foreground)] whitespace-nowrap">
@@ -95,7 +95,7 @@ export default function DiffusionComparison() {
         {ROWS.map((r) => (
           <div
             key={r.comparison}
-            className="border border-black/[0.06] rounded-lg p-3.5"
+            className="border border-card rounded-lg p-3.5"
           >
             <div className="flex items-baseline justify-between mb-2">
               <span className="text-sm font-semibold text-[var(--foreground)]">

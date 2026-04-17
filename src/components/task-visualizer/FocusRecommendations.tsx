@@ -79,7 +79,7 @@ export default function FocusRecommendations({
   return (
     <div className="space-y-5">
       {/* Summary stat */}
-      <div className="exposure-score rounded-xl bg-black/[0.02] border border-black/[0.06] p-4">
+      <div className="exposure-score rounded-xl bg-black/[0.02] border border-card p-4">
         <div className="flex items-baseline gap-2">
           <span className="text-4xl font-bold text-signal-negative tracking-tight tabular-nums">
             {animatedPercent}%
@@ -220,13 +220,13 @@ export default function FocusRecommendations({
 
       {/* Adaptive Capacity context */}
       {adaptiveCapacity !== undefined && (
-        <div className="mt-6 pt-4 border-t border-black/[0.06]">
+        <div className="mt-6 pt-4 border-t border-card">
           <h4 className="text-base font-semibold text-[var(--foreground)] mb-2">
             Adaptability context
           </h4>
           <div className="flex items-center gap-3 mb-2">
             <div
-              className="text-[24px] font-bold tabular-nums"
+              className="text-heading font-bold tabular-nums"
               style={{
                 color: adaptiveCapacity >= 0.65 ? "#10B981" : adaptiveCapacity >= 0.45 ? "#F59E0B" : "#EF4444",
               }}

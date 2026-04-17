@@ -36,7 +36,7 @@ function CustomTooltip({ active, payload }: TooltipProps<number, string>) {
   const cfoSignal = getCfoSignal(d.id);
   const elasticity = DEMAND_ELASTICITY[d.id];
   return (
-    <div className="bg-white rounded-lg border border-black/[0.08] shadow-lg p-3 max-w-[280px]">
+    <div className="bg-white rounded-lg border border-strong shadow-lg p-3 max-w-[280px]">
       <p className="text-base font-semibold text-[var(--foreground)]">{d.title}</p>
       <div className="mt-1.5 space-y-0.5 text-sm">
         <div className="flex justify-between gap-4">
@@ -56,7 +56,7 @@ function CustomTooltip({ active, payload }: TooltipProps<number, string>) {
           <span style={{ color: tierMeta.color }} className="font-medium">{tierMeta.label}</span>
         </div>
         {(cfoSignal || elasticity) && (
-          <div className="mt-1 pt-1 border-t border-black/[0.06] space-y-0.5">
+          <div className="mt-1 pt-1 border-t border-card space-y-0.5">
             {cfoSignal && (
               <div className="flex justify-between gap-4">
                 <span className="text-[var(--muted)]">CFO signal</span>
@@ -77,7 +77,7 @@ function CustomTooltip({ active, payload }: TooltipProps<number, string>) {
         )}
       </div>
       {jobIds.length > 0 && (
-        <p className="text-2xs text-[var(--accent)] mt-2 pt-1.5 border-t border-black/[0.06]">
+        <p className="text-2xs text-[var(--accent)] mt-2 pt-1.5 border-t border-card">
           Click to explore individual jobs in this group
         </p>
       )}
@@ -148,7 +148,7 @@ export default function YearSliderExplorer() {
       <div className="mb-4">
         <div className="flex items-center gap-2 mb-1.5">
           <span className="text-sm font-medium text-[var(--foreground)]">Cost decline scenario:</span>
-          <div className="inline-flex rounded-lg border border-black/[0.08] overflow-hidden">
+          <div className="inline-flex rounded-lg border border-strong overflow-hidden">
             {(Object.keys(DECLINE_RATE_SCENARIOS) as ScenarioKey[]).map((key) => {
               const s = DECLINE_RATE_SCENARIOS[key];
               const isActive = scenario === key;
@@ -204,7 +204,7 @@ export default function YearSliderExplorer() {
 
       {/* Summary stats */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
-        <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-black/[0.06] p-4">
+        <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-card p-4">
           <p className="text-4xl font-bold text-[var(--foreground)] tracking-tight tabular-nums">
             {summaryStats.avgPct}%
           </p>
@@ -220,7 +220,7 @@ export default function YearSliderExplorer() {
         {summaryStats.tiers.map(({ tier, pct }, i) => {
           const meta = INCOME_TIER_META[tier];
           return (
-            <div key={tier} className="stat-card-enter rounded-xl bg-black/[0.02] border border-black/[0.06] p-4" style={{ animationDelay: `${(i + 1) * 0.08}s` }}>
+            <div key={tier} className="stat-card-enter rounded-xl bg-black/[0.02] border border-card p-4" style={{ animationDelay: `${(i + 1) * 0.08}s` }}>
               <p className="text-4xl font-bold tracking-tight tabular-nums" style={{ color: meta.color }}>
                 {pct}%
               </p>
@@ -286,7 +286,7 @@ export default function YearSliderExplorer() {
       </div>
 
       {/* Color legend */}
-      <div className="flex flex-wrap gap-3 mt-3 pt-3 border-t border-black/[0.06]">
+      <div className="flex flex-wrap gap-3 mt-3 pt-3 border-t border-card">
         {[
           { label: "Low pressure (<35%)", color: "#10B981" },
           { label: "Moderate (35-60%)", color: "#6366F1" },

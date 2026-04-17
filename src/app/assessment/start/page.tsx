@@ -304,7 +304,7 @@ export default function AssessmentStartPage() {
       </div>
 
       {/* Hero headline */}
-      <h1 className="text-[32px] sm:text-[40px] font-bold text-gray-900 leading-tight mb-10 tracking-tight">
+      <h1 className="text-heading-2xl sm:text-title font-bold text-gray-900 leading-tight mb-10 tracking-tight">
         AI is already changing your industry.{" "}
         <span className="text-gray-400">Find out where it can help you.</span>
       </h1>
@@ -361,7 +361,7 @@ export default function AssessmentStartPage() {
       {step === "you" && (
         <div className="space-y-6">
           <div>
-            <h2 className="text-[24px] font-bold text-gray-900 mb-2">Let&apos;s start with the basics</h2>
+            <h2 className="text-heading font-bold text-gray-900 mb-2">Let&apos;s start with the basics</h2>
             <p className="text-md text-gray-500">
               Tell us where you work and what you do. This helps us tailor everything
               to your specific situation. The more detail you provide across these steps,
@@ -437,7 +437,7 @@ export default function AssessmentStartPage() {
       {step === "scope" && (
         <div className="space-y-6">
           <div>
-            <h2 className="text-[24px] font-bold text-gray-900 mb-2">What are we looking at?</h2>
+            <h2 className="text-heading font-bold text-gray-900 mb-2">What are we looking at?</h2>
             <p className="text-md text-gray-500">
               We can focus on just your work, your team, or the whole business.
               The more focused, the more specific the recommendations.
@@ -526,7 +526,7 @@ export default function AssessmentStartPage() {
       {step === "tasks" && (
         <div className="space-y-6">
           <div>
-            <h2 className="text-[24px] font-bold text-gray-900 mb-2">What does your work look like?</h2>
+            <h2 className="text-heading font-bold text-gray-900 mb-2">What does your work look like?</h2>
             <p className="text-md text-gray-500">
               {industryTemplate
                 ? `Here are common tasks in your industry. Select everything that's part of your work — the more you select, the more thorough your analysis.`
@@ -802,7 +802,7 @@ export default function AssessmentStartPage() {
       {step === "upload" && (
         <div className="space-y-6">
           <div>
-            <h2 className="text-[24px] font-bold text-gray-900 mb-2">Help us understand your work better (optional)</h2>
+            <h2 className="text-heading font-bold text-gray-900 mb-2">Help us understand your work better (optional)</h2>
             <p className="text-md text-gray-500">
               The more context you share, the more specific your plan will be.
               Upload anything that describes what you do, or just skip this step.
@@ -857,7 +857,7 @@ export default function AssessmentStartPage() {
       {step === "review" && (
         <div className="space-y-6">
           <div>
-            <h2 className="text-[24px] font-bold text-gray-900 mb-2">Ready to go</h2>
+            <h2 className="text-heading font-bold text-gray-900 mb-2">Ready to go</h2>
             <p className="text-md text-gray-500">
               Here&apos;s what we know. Ready to generate your plan?
             </p>

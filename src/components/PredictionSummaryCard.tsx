@@ -205,7 +205,7 @@ export default function PredictionSummaryCard({
         ref={tilt.ref}
         onMouseMove={tilt.onMouseMove}
         onMouseLeave={tilt.onMouseLeave}
-        className="card-hover summary-card-border relative pb-8 border-b border-black/[0.06] overflow-hidden rounded-lg pl-3 border-l-[2px]"
+        className="card-hover summary-card-border relative pb-8 border-b border-card overflow-hidden rounded-lg pl-3 border-l-[2px]"
         style={{ borderLeftColor: tierBorderColor, ...tilt.style }}
       >
         {/* Sparkline watermark */}

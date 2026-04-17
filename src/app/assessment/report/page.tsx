@@ -149,7 +149,7 @@ export default function ReportPage() {
     const returnUrl = `/assessment/report?id=${id}`;
     return (
       <div className="max-w-3xl mx-auto px-6 sm:px-10 py-20 text-center">
-        <h1 className="text-[24px] font-bold text-gray-900 mb-4">
+        <h1 className="text-heading font-bold text-gray-900 mb-4">
           Sign in to view your report
         </h1>
         <p className="text-md text-gray-500 mb-6">
@@ -168,7 +168,7 @@ export default function ReportPage() {
   if (error || !assessment?.report) {
     return (
       <div className="max-w-3xl mx-auto px-6 sm:px-10 py-20 text-center">
-        <h1 className="text-[24px] font-bold text-gray-900 mb-4">
+        <h1 className="text-heading font-bold text-gray-900 mb-4">
           {error || "Report not found"}
         </h1>
         <Link href="/assessment/start" className="text-accent hover:underline">
@@ -200,7 +200,7 @@ export default function ReportPage() {
         <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-2">
           AI Action Plan
         </p>
-        <h1 className="text-4xl sm:text-[34px] font-bold text-gray-900 leading-tight">
+        <h1 className="text-4xl sm:text-title-sm font-bold text-gray-900 leading-tight">
           {assessment.intake.organizationName}
         </h1>
         <p className="text-md text-gray-400 mt-2">

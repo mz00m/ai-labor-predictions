@@ -182,7 +182,7 @@ export default function AgeWeightedMethodology() {
                 <div key={s.signal} className="flex items-baseline gap-1.5">
                   <span className="text-xs font-mono font-semibold text-signal-negative">{s.change}</span>
                   <span className="text-[10.5px] text-[var(--muted)]">{s.signal}</span>
-                  <span className="text-[9px] text-[var(--muted)] opacity-50">({s.source})</span>
+                  <span className="text-3xs text-[var(--muted)] opacity-50">({s.source})</span>
                 </div>
               ))}
             </div>
@@ -215,7 +215,7 @@ export default function AgeWeightedMethodology() {
                       {row.band}
                     </span>
                     <span className="text-xs text-[var(--muted)]">{row.detail}</span>
-                    <span className="text-[9px] text-[var(--muted)] opacity-40 ml-auto shrink-0">
+                    <span className="text-3xs text-[var(--muted)] opacity-40 ml-auto shrink-0">
                       {row.src}
                     </span>
                   </div>

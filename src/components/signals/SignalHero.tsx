@@ -61,7 +61,7 @@ export default function SignalHero({ metrics, lastUpdated }: SignalHeroProps) {
           <span className="text-highlight italic">heading?</span>
         </h1>
 
-        <p className="mt-4 text-[17px] text-[var(--muted)] leading-relaxed max-w-2xl">
+        <p className="mt-4 text-prose text-[var(--muted)] leading-relaxed max-w-2xl">
           Think of this page like construction permits for AI automation.
           Before a building goes up, permits spike. Before AI replaces tasks
           in an industry, developers start downloading the tools to build

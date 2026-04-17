@@ -74,7 +74,7 @@ function CustomTooltip({ active, payload }: TooltipProps<number, string>) {
   const d = payload[0].payload;
   const jobIds = d.id ? (SOC_TO_JOB_IDS[d.id] || []) : [];
   return (
-    <div className="bg-white rounded-lg border border-black/[0.08] shadow-lg p-3 max-w-[260px]">
+    <div className="bg-white rounded-lg border border-strong shadow-lg p-3 max-w-[260px]">
       <p className="text-base font-semibold text-[var(--foreground)]">{d.shortTitle}</p>
       <div className="mt-1.5 space-y-0.5 text-sm">
         <div className="flex justify-between gap-4">
@@ -89,13 +89,13 @@ function CustomTooltip({ active, payload }: TooltipProps<number, string>) {
             {100 - d.womenPercent}% ({(d.menCount / 1000).toFixed(1)}M)
           </span>
         </div>
-        <div className="flex justify-between gap-4 mt-1 pt-1 border-t border-black/[0.06]">
+        <div className="flex justify-between gap-4 mt-1 pt-1 border-t border-card">
           <span className="text-[var(--muted)]">Task automation by 2030</span>
           <span className="font-medium">{d.automationPct2030}%</span>
         </div>
       </div>
       {jobIds.length > 0 && (
-        <p className="text-2xs text-[var(--accent)] mt-2 pt-1.5 border-t border-black/[0.06]">
+        <p className="text-2xs text-[var(--accent)] mt-2 pt-1.5 border-t border-card">
           Click to explore individual jobs in this group
         </p>
       )}
@@ -224,7 +224,7 @@ export default function GenderImpact() {
 
       {/* Big stat cards */}
       <div className="grid grid-cols-1 sm:grid-cols-4 gap-3 mb-8">
-        <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-black/[0.06] p-4" style={{ animationDelay: "0s" }}>
+        <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-card p-4" style={{ animationDelay: "0s" }}>
           <p className="text-4xl font-bold tracking-tight" style={{ color: GENDER_COLORS.women }}>
             {economyStats.womenPct}%
           </p>
@@ -232,19 +232,19 @@ export default function GenderImpact() {
             of workforce is women ({(economyStats.totalWomen / 1000).toFixed(1)}M)
           </p>
         </div>
-        <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-black/[0.06] p-4" style={{ animationDelay: "0.08s" }}>
+        <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-card p-4" style={{ animationDelay: "0.08s" }}>
           <p className="text-4xl font-bold tracking-tight" style={{ color: GENDER_COLORS.women }}>
             {economyStats.womenAvgAuto}%
           </p>
           <p className="text-xs text-[var(--muted)]">Avg task automation for women by 2030</p>
         </div>
-        <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-black/[0.06] p-4" style={{ animationDelay: "0.16s" }}>
+        <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-card p-4" style={{ animationDelay: "0.16s" }}>
           <p className="text-4xl font-bold tracking-tight" style={{ color: GENDER_COLORS.men }}>
             {economyStats.menAvgAuto}%
           </p>
           <p className="text-xs text-[var(--muted)]">Avg task automation for men by 2030</p>
         </div>
-        <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-black/[0.06] p-4" style={{ animationDelay: "0.24s" }}>
+        <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-card p-4" style={{ animationDelay: "0.24s" }}>
           <p className="text-4xl font-bold tracking-tight text-[var(--foreground)]">
             {economyStats.gap > 0 ? "+" : ""}{economyStats.gap}pp
           </p>
@@ -337,7 +337,7 @@ export default function GenderImpact() {
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
-              <tr className="border-b border-black/[0.06]">
+              <tr className="border-b border-card">
                 <th className="text-left py-2 pr-3 text-[var(--foreground)] font-semibold">Occupation</th>
                 <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold">Women %</th>
                 <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold">Women workers</th>
@@ -400,7 +400,7 @@ export default function GenderImpact() {
             const meta = INCOME_TIER_META[td.tier];
             const gapInTier = td.womenAvgAutomation2030 - td.menAvgAutomation2030;
             return (
-              <div key={td.tier} className="gender-tier-card rounded-xl border border-black/[0.06] p-4">
+              <div key={td.tier} className="gender-tier-card rounded-xl border border-card p-4">
                 <div className="flex items-center justify-between mb-3">
                   <div>
                     <h5 className="text-base font-semibold" style={{ color: meta.color }}>

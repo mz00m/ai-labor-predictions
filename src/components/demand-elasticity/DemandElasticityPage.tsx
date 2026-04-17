@@ -21,7 +21,7 @@ export default function DemandElasticityPage() {
           The Demand Elasticity Effect
         </h1>
         <p
-          className="text-2xl sm:text-[20px] text-[var(--muted)] leading-relaxed mb-5"
+          className="text-2xl sm:text-heading-sm text-[var(--muted)] leading-relaxed mb-5"
           style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
         >
           Why making work cheaper can create more jobs, not fewer &mdash;
@@ -53,9 +53,9 @@ export default function DemandElasticityPage() {
 
       {/* ───── Section 1: Jevons Paradox ───── */}
       <section className="mb-12">
-        <div className="border-t border-black/[0.06] pt-8">
+        <div className="border-t border-card pt-8">
           <SectionLabel number="01" />
-          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-3">
             Jevons Paradox, Applied to Labor
           </h2>
           <div className="space-y-4 text-md text-[var(--muted)] leading-[1.75] mb-6">
@@ -115,9 +115,9 @@ export default function DemandElasticityPage() {
 
       {/* ───── Section 2: Interactive Toggle ───── */}
       <section className="mb-12">
-        <div className="border-t border-black/[0.06] pt-8">
+        <div className="border-t border-card pt-8">
           <SectionLabel number="02" />
-          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-3">
             See the Effect Across Industries
           </h2>
           <div className="space-y-4 text-md text-[var(--muted)] leading-[1.75] mb-6">
@@ -155,9 +155,9 @@ export default function DemandElasticityPage() {
 
       {/* ───── Section 3: The Two Conditions ───── */}
       <section className="mb-12">
-        <div className="border-t border-black/[0.06] pt-8">
+        <div className="border-t border-card pt-8">
           <SectionLabel number="03" />
-          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-3">
             The Two Conditions
           </h2>
           <div className="space-y-4 text-md text-[var(--muted)] leading-[1.75] mb-6">
@@ -227,9 +227,9 @@ export default function DemandElasticityPage() {
 
       {/* ───── Section 4: The Agentic Coding Example ───── */}
       <section className="mb-12">
-        <div className="border-t border-black/[0.06] pt-8">
+        <div className="border-t border-card pt-8">
           <SectionLabel number="04" />
-          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-3">
             The Agentic Coding Example
           </h2>
           <div className="space-y-4 text-md text-[var(--muted)] leading-[1.75] mb-6">
@@ -273,9 +273,9 @@ export default function DemandElasticityPage() {
 
       {/* ───── Section 5: Interactive Calculator ───── */}
       <section className="mb-12">
-        <div className="border-t border-black/[0.06] pt-8">
+        <div className="border-t border-card pt-8">
           <SectionLabel number="05" />
-          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-3">
             See It Yourself
           </h2>
           <p className="text-md text-[var(--muted)] leading-[1.75] mb-6">
@@ -291,9 +291,9 @@ export default function DemandElasticityPage() {
 
       {/* ───── Section 6: Where It Applies ───── */}
       <section className="mb-12">
-        <div className="border-t border-black/[0.06] pt-8">
+        <div className="border-t border-card pt-8">
           <SectionLabel number="06" />
-          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-3">
             Where Expansion vs. Contraction Is Likely
           </h2>
           <div className="space-y-4 text-md text-[var(--muted)] leading-[1.75] mb-6">
@@ -354,9 +354,9 @@ export default function DemandElasticityPage() {
 
       {/* ───── Section 7: The Reallocation Caveat ───── */}
       <section className="mb-12">
-        <div className="border-t border-black/[0.06] pt-8">
+        <div className="border-t border-card pt-8">
           <SectionLabel number="07" />
-          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-3">
             The Reallocation Caveat
           </h2>
           <div className="space-y-4 text-md text-[var(--muted)] leading-[1.75] mb-6">
@@ -430,7 +430,7 @@ export default function DemandElasticityPage() {
 
       {/* ───── Closing ───── */}
       <section className="mb-8">
-        <div className="border-t border-black/[0.06] pt-8">
+        <div className="border-t border-card pt-8">
           <blockquote className="border-l-4 border-[var(--accent)] bg-[var(--accent-light)] rounded-r-lg px-5 py-5 mb-6">
             <p
               className="text-lg sm:text-xl text-[var(--foreground)] leading-[1.75] font-medium"
@@ -506,7 +506,7 @@ function StatCard({
         backgroundColor: color + "08",
       }}
     >
-      <p className="text-[20px] font-black" style={{ color }}>
+      <p className="text-heading-sm font-black" style={{ color }}>
         {value}
       </p>
       <p className="text-xs font-bold text-[var(--foreground)] mt-0.5">
@@ -572,7 +572,7 @@ function NavCard({
   return (
     <Link
       href={href}
-      className="group block rounded-lg border border-black/[0.06] bg-white px-4 py-3 hover:border-black/[0.12] hover:shadow-sm transition-all no-underline"
+      className="group block rounded-lg border border-card bg-white px-4 py-3 hover:border-black/[0.12] hover:shadow-sm transition-all no-underline"
     >
       <p className="text-base font-bold text-[var(--foreground)] group-hover:text-[var(--accent)] transition-colors">
         {label}

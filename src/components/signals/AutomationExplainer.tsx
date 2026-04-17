@@ -193,7 +193,7 @@ function Connector({ isDashed, label }: { isDashed?: boolean; label?: string }) 
         style={{ width: "48px" }}
       >
         {label && (
-          <span className="text-[9px] font-bold uppercase tracking-wider text-[var(--muted)] mb-1">
+          <span className="text-3xs font-bold uppercase tracking-wider text-[var(--muted)] mb-1">
             {label}
           </span>
         )}
@@ -221,7 +221,7 @@ function Connector({ isDashed, label }: { isDashed?: boolean; label?: string }) 
       {/* Mobile: vertical arrow */}
       <div className="flex sm:hidden flex-col items-center py-0.5">
         {label && (
-          <span className="text-[9px] font-bold uppercase tracking-wider text-[var(--muted)] mb-0.5">
+          <span className="text-3xs font-bold uppercase tracking-wider text-[var(--muted)] mb-0.5">
             {label}
           </span>
         )}
@@ -420,7 +420,7 @@ export default function AutomationExplainer({
 
       <div
         className={`rounded-xl border bg-white ${
-          isExpanded ? "border-black/[0.12]" : "border-black/[0.06]"
+          isExpanded ? "border-black/[0.12]" : "border-card"
         }`}
         style={{
           transition: reducedMotion ? "none" : "border-color 150ms ease",
@@ -487,7 +487,7 @@ export default function AutomationExplainer({
         >
           <div style={{ overflow: "hidden" }}>
             <div className="px-4 sm:px-6 pb-6">
-              <div className="border-t border-black/[0.06] pt-5">
+              <div className="border-t border-card pt-5">
                 <ExpandedContent metrics={metrics} />
               </div>
             </div>

@@ -57,7 +57,7 @@ export default function AboutPage() {
             Evidence Over Narrative
           </h1>
           <p
-            className="text-2xl sm:text-[20px] text-[var(--muted)] leading-relaxed"
+            className="text-2xl sm:text-heading-sm text-[var(--muted)] leading-relaxed"
             style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
           >
             Society is trying to figure out what AI means for work and the answers keep changing.
@@ -98,7 +98,7 @@ export default function AboutPage() {
 
         {/* About Matt */}
         <section className="max-w-3xl">
-          <div className="about-card border border-black/[0.06] rounded-lg px-5 py-5 bg-[var(--background)]">
+          <div className="about-card border border-card rounded-lg px-5 py-5 bg-[var(--background)]">
             <p className="text-md font-bold text-[var(--foreground)] mb-2">
               Who&rsquo;s behind this?
             </p>
@@ -157,11 +157,11 @@ export default function AboutPage() {
         </section>
 
         {/* Divider */}
-        <div className="border-t border-black/[0.06]" />
+        <div className="border-t border-card" />
 
         {/* Methodology link */}
         <section id="methodology" className="scroll-mt-16">
-          <h2 className="text-4xl sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
+          <h2 className="text-4xl sm:text-title-sm font-extrabold tracking-tight text-[var(--foreground)]">
             Methodology &amp; Sources
           </h2>
           <p className="text-lg text-[var(--muted)] mt-2 max-w-3xl mb-4">

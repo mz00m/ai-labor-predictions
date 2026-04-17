@@ -161,7 +161,7 @@ export default function DemandSliderViz({ compact = false }: DemandSliderVizProp
     : [...PRESETS, AGENTIC_CODING_PRESET];
 
   return (
-    <div className="rounded-xl border border-black/[0.06] bg-white p-4 sm:p-6">
+    <div className="rounded-xl border border-card bg-white p-4 sm:p-6">
       {!compact && (
         <div className="mb-5">
           <h3 className="text-2xl font-bold text-[var(--foreground)] mb-1">
@@ -184,7 +184,7 @@ export default function DemandSliderViz({ compact = false }: DemandSliderVizProp
             className={`px-3 py-1.5 rounded-full text-sm font-medium border transition-colors cursor-pointer ${
               activePreset === preset.label
                 ? "bg-[var(--accent)] text-white border-[var(--accent)]"
-                : "bg-white text-[var(--muted)] border-black/[0.08] hover:border-black/[0.15] hover:text-[var(--foreground)]"
+                : "bg-white text-[var(--muted)] border-strong hover:border-black/[0.15] hover:text-[var(--foreground)]"
             }`}
           >
             {preset.label}
@@ -359,13 +359,13 @@ export default function DemandSliderViz({ compact = false }: DemandSliderVizProp
               <p className="text-xl font-bold text-[var(--foreground)] tabular-nums">
                 {scenario.demandUnits}%
               </p>
-              <p className="text-[9px] text-[var(--muted)]">Demand vs. before</p>
+              <p className="text-3xs text-[var(--muted)]">Demand vs. before</p>
             </div>
             <div className="rounded-md px-2 py-2 bg-black/[0.02] text-center">
               <p className="text-xl font-bold text-[var(--foreground)] tabular-nums">
                 -{scenario.costReduction}%
               </p>
-              <p className="text-[9px] text-[var(--muted)]">Cost per unit</p>
+              <p className="text-3xs text-[var(--muted)]">Cost per unit</p>
             </div>
           </div>
         </div>
@@ -373,7 +373,7 @@ export default function DemandSliderViz({ compact = false }: DemandSliderVizProp
 
       {/* Equation explanation */}
       {!compact && (
-        <div className="mt-5 pt-4 border-t border-black/[0.06]">
+        <div className="mt-5 pt-4 border-t border-card">
           <p className="text-xs text-[var(--muted)] leading-relaxed">
             <strong className="text-[var(--foreground)]">How this works:</strong>{" "}
             AI reduces cost per unit of output by the productivity multiplier.

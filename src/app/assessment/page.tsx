@@ -101,13 +101,13 @@ export default function AssessmentLanding() {
             Built on jobsdata.ai research
           </div>
 
-          <h1 className="font-serif text-[40px] sm:text-7xl font-bold tracking-tight text-gray-900 leading-[1.05] max-w-3xl">
+          <h1 className="font-serif text-title sm:text-7xl font-bold tracking-tight text-gray-900 leading-[1.05] max-w-3xl">
             Get your time back
             <br />
             <span className="text-accent">with a clear AI plan</span>
           </h1>
 
-          <p className="mt-5 text-[17px] text-gray-500 leading-relaxed max-w-2xl">
+          <p className="mt-5 text-prose text-gray-500 leading-relaxed max-w-2xl">
             Find out exactly which parts of your work AI can handle so you can
             spend more time on the things that actually need you. A personalized,
             task-by-task action plan for individual workers, nonprofits, and small business teams.
@@ -165,7 +165,7 @@ export default function AssessmentLanding() {
         <span className="text-sm font-medium uppercase tracking-widest text-accent/60 mb-4 block">
           Who this is for
         </span>
-        <h2 className="font-serif text-[24px] sm:text-[32px] font-semibold text-gray-900 mb-4 max-w-2xl">
+        <h2 className="font-serif text-heading sm:text-heading-2xl font-semibold text-gray-900 mb-4 max-w-2xl">
           You know AI is changing work. You just need a starting point.
         </h2>
         <p className="text-lg text-gray-500 leading-relaxed max-w-3xl mb-10">
@@ -196,7 +196,7 @@ export default function AssessmentLanding() {
         <span className="text-sm font-medium uppercase tracking-widest text-accent/60 mb-4 block">
           The research
         </span>
-        <h2 className="font-serif text-[24px] sm:text-[32px] font-semibold text-gray-900 mb-4 max-w-3xl">
+        <h2 className="font-serif text-heading sm:text-heading-2xl font-semibold text-gray-900 mb-4 max-w-3xl">
           The #1 thing holding people back from AI isn&apos;t the technology. It&apos;s knowing where to use it.
         </h2>
         <div className="text-lg text-gray-500 leading-relaxed max-w-3xl space-y-4 mb-10">
@@ -252,7 +252,7 @@ export default function AssessmentLanding() {
         <span className="text-sm font-medium uppercase tracking-widest text-accent/60 mb-4 block">
           How it works
         </span>
-        <h2 className="font-serif text-[24px] sm:text-[32px] font-semibold text-gray-900 mb-10 max-w-2xl">
+        <h2 className="font-serif text-heading sm:text-heading-2xl font-semibold text-gray-900 mb-10 max-w-2xl">
           Three steps to knowing exactly where to start
         </h2>
 
@@ -265,7 +265,7 @@ export default function AssessmentLanding() {
               <div className="text-xs font-mono font-bold text-accent mb-3">
                 STEP {step.step}
               </div>
-              <h3 className="text-[17px] font-bold text-gray-900 mb-2">{step.title}</h3>
+              <h3 className="text-prose font-bold text-gray-900 mb-2">{step.title}</h3>
               <p className="text-md text-gray-500 leading-relaxed">
                 {step.description}
               </p>
@@ -279,7 +279,7 @@ export default function AssessmentLanding() {
         <span className="text-sm font-medium uppercase tracking-widest text-accent/60 mb-4 block">
           What you get
         </span>
-        <h2 className="font-serif text-[24px] sm:text-[32px] font-semibold text-gray-900 mb-10 max-w-2xl">
+        <h2 className="font-serif text-heading sm:text-heading-2xl font-semibold text-gray-900 mb-10 max-w-2xl">
           A plan built around your actual work
         </h2>
 
@@ -308,7 +308,7 @@ export default function AssessmentLanding() {
         <span className="text-sm font-medium uppercase tracking-widest text-accent/60 mb-4 block">
           Data security
         </span>
-        <h2 className="font-serif text-[24px] sm:text-[32px] font-semibold text-gray-900 mb-10 max-w-2xl">
+        <h2 className="font-serif text-heading sm:text-heading-2xl font-semibold text-gray-900 mb-10 max-w-2xl">
           Your data stays yours
         </h2>
 
@@ -343,7 +343,7 @@ export default function AssessmentLanding() {
         <span className="text-sm font-medium uppercase tracking-widest text-accent/60 mb-4 block">
           Works across industries
         </span>
-        <h2 className="font-serif text-[24px] sm:text-[32px] font-semibold text-gray-900 mb-10 max-w-2xl">
+        <h2 className="font-serif text-heading sm:text-heading-2xl font-semibold text-gray-900 mb-10 max-w-2xl">
           Tailored to how work actually gets done in your field
         </h2>
 

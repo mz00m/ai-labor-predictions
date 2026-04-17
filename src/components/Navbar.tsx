@@ -125,7 +125,7 @@ function DesktopDropdown({ group }: { group: NavGroup }) {
       </button>
 
       {open && (
-        <div role="menu" aria-label={group.label} className="absolute top-full right-0 mt-1 min-w-[160px] bg-white rounded-lg border border-black/[0.08] shadow-lg py-1 z-50 dropdown-enter">
+        <div role="menu" aria-label={group.label} className="absolute top-full right-0 mt-1 min-w-[160px] bg-white rounded-lg border border-strong shadow-lg py-1 z-50 dropdown-enter">
           {group.items.map((item, idx) => {
             const itemActive =
               pathname === item.href ||
@@ -181,7 +181,7 @@ export default function Navbar() {
   }, [mobileOpen]);
 
   return (
-    <nav aria-label="Main navigation" className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-black/[0.04]">
+    <nav aria-label="Main navigation" className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-divider">
       <div className="max-w-6xl mx-auto px-6 sm:px-10 h-12 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <Link
@@ -234,7 +234,7 @@ export default function Navbar() {
               </Link>
             )
           )}
-          <div className="ml-1.5 pl-1.5 border-l border-black/[0.06]">
+          <div className="ml-1.5 pl-1.5 border-l border-card">
             <ChatTrigger onClick={() => window.dispatchEvent(new Event("open-chatbot"))} />
           </div>
         </div>
@@ -276,8 +276,8 @@ export default function Navbar() {
 
           {/* Mobile dropdown */}
           {mobileOpen && (
-            <div className="absolute top-12 right-4 left-4 bg-white rounded-lg border border-black/[0.08] shadow-lg py-2 dropdown-enter">
-              <div className="px-3 py-2 border-b border-black/[0.04]">
+            <div className="absolute top-12 right-4 left-4 bg-white rounded-lg border border-strong shadow-lg py-2 dropdown-enter">
+              <div className="px-3 py-2 border-b border-divider">
                 <SearchCombobox mobile />
               </div>
               {NAV_ENTRIES.map((entry) =>

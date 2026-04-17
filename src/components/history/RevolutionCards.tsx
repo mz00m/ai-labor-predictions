@@ -178,7 +178,7 @@ export default function RevolutionCards() {
             className={`revolution-tab flex items-center gap-1.5 px-2.5 py-1.5 rounded-md text-xs sm:text-sm font-medium border whitespace-nowrap cursor-pointer ${
               activeTab === r.id
                 ? "text-white border-transparent"
-                : "text-[var(--muted)] border-black/[0.08] hover:border-black/[0.15] bg-white"
+                : "text-[var(--muted)] border-strong hover:border-black/[0.15] bg-white"
             }`}
             style={
               activeTab === r.id

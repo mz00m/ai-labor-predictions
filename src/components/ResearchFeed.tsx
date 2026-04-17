@@ -88,7 +88,7 @@ export default function ResearchFeed({ selectedTiers }: ResearchFeedProps) {
 
   if (!fetched) {
     return (
-      <div className="relative overflow-hidden border border-black/[0.08] rounded-xl px-8 py-10 sm:px-10 sm:py-12">
+      <div className="relative overflow-hidden border border-strong rounded-xl px-8 py-10 sm:px-10 sm:py-12">
         {/* Background accent */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#5C61F6]/[0.02] to-transparent pointer-events-none" aria-hidden="true" />
         <div className="relative flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
@@ -96,7 +96,7 @@ export default function ResearchFeed({ selectedTiers }: ResearchFeedProps) {
             <p className="text-base font-bold uppercase tracking-widest text-[var(--accent)] mb-2">
               Live research feed
             </p>
-            <h2 className="text-4xl sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)] mb-3">
+            <h2 className="text-4xl sm:text-title-sm font-extrabold tracking-tight text-[var(--foreground)] mb-3">
               Find Recent Research
             </h2>
             <p className="text-lg text-[var(--muted)] leading-relaxed max-w-lg">
@@ -119,7 +119,7 @@ export default function ResearchFeed({ selectedTiers }: ResearchFeedProps) {
   }
 
   return (
-    <div className="relative overflow-hidden border border-black/[0.08] rounded-xl">
+    <div className="relative overflow-hidden border border-strong rounded-xl">
       {/* Background accent */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#5C61F6]/[0.02] to-transparent pointer-events-none" aria-hidden="true" />
 
@@ -136,7 +136,7 @@ export default function ResearchFeed({ selectedTiers }: ResearchFeedProps) {
             {loading ? "Refreshing..." : "Refresh"}
           </button>
         </div>
-        <h2 className="text-4xl sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
+        <h2 className="text-4xl sm:text-title-sm font-extrabold tracking-tight text-[var(--foreground)]">
           Recent Research
           <span className="text-[var(--muted)] font-normal text-2xl ml-2">
             {papers.length} papers
@@ -173,7 +173,7 @@ export default function ResearchFeed({ selectedTiers }: ResearchFeedProps) {
             return (
               <div
                 key={paper.id}
-                className="research-paper py-4 border-b border-black/[0.04]"
+                className="research-paper py-4 border-b border-divider"
               >
                 <div className="flex items-start gap-3">
                   <span

@@ -222,7 +222,7 @@ export default function EnhancedTreemap({
     <div className="relative">
       <svg
         viewBox={`0 0 ${WIDTH} ${HEIGHT}`}
-        className="w-full h-auto rounded-lg border border-black/[0.06] bg-white"
+        className="w-full h-auto rounded-lg border border-card bg-white"
         style={{ maxHeight: "480px" }}
       >
         {rects.map((rect) => {

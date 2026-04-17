@@ -210,7 +210,7 @@ export default function DimensionSummary({ data, jobTitle }: Props) {
   return (
     <div
       id="dimension-summary"
-      className="mt-5 pt-5 border-t border-black/[0.06]"
+      className="mt-5 pt-5 border-t border-card"
     >
       <h4 className="text-base font-semibold text-[var(--foreground)] mb-3">
         Displacement risk
@@ -222,7 +222,7 @@ export default function DimensionSummary({ data, jobTitle }: Props) {
         style={{ background: rc + "0A" }}
       >
         <span
-          className="text-[26px] font-black leading-none"
+          className="text-heading-lg font-black leading-none"
           style={{
             fontFamily: "'DM Mono', monospace",
             color: rc,
@@ -284,7 +284,7 @@ export default function DimensionSummary({ data, jobTitle }: Props) {
                       />
                       <circle cx="8" cy="5" r="0.75" fill="currentColor" />
                     </svg>
-                    <span className="text-[8px] uppercase tracking-wider text-[var(--muted)] opacity-60">
+                    <span className="text-3xs uppercase tracking-wider text-[var(--muted)] opacity-60">
                       {meta.isPressure ? "pressure" : "buffer"}
                     </span>
                   </div>
@@ -309,7 +309,7 @@ export default function DimensionSummary({ data, jobTitle }: Props) {
 
       {/* Link to full analysis */}
       <div className="mt-3 flex items-center justify-between">
-        <p className="text-[9px] text-[var(--muted)] opacity-60">
+        <p className="text-3xs text-[var(--muted)] opacity-60">
           Pressure dimensions drive risk up. Buffer dimensions absorb it.
         </p>
         <a

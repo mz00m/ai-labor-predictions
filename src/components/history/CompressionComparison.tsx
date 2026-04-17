@@ -234,7 +234,7 @@ function KeyMetrics() {
 
   return (
     <div ref={ref} className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-      <div className="metric-card border border-black/[0.06] rounded-lg p-4 text-center">
+      <div className="metric-card border border-card rounded-lg p-4 text-center">
         <div
           className="text-4xl font-extrabold text-[var(--accent)] tabular-nums"
           style={{ fontVariantNumeric: "tabular-nums" }}
@@ -256,7 +256,7 @@ function KeyMetrics() {
         </div>
       </div>
 
-      <div className="metric-card border border-black/[0.06] rounded-lg p-4 text-center">
+      <div className="metric-card border border-card rounded-lg p-4 text-center">
         <div
           className="text-4xl font-extrabold tabular-nums"
           style={{ color: "#F66B5C", fontVariantNumeric: "tabular-nums" }}
@@ -276,7 +276,7 @@ function KeyMetrics() {
         </div>
       </div>
 
-      <div className="metric-card border border-black/[0.06] rounded-lg p-4 text-center">
+      <div className="metric-card border border-card rounded-lg p-4 text-center">
         <div
           className="text-4xl font-extrabold text-[var(--foreground)] tabular-nums"
           style={{ fontVariantNumeric: "tabular-nums" }}
@@ -1165,7 +1165,7 @@ export default function CompressionComparison() {
       {/* ============================================================ */}
       {/*  Caveat                                                      */}
       {/* ============================================================ */}
-      <div className="border-l-2 border-black/[0.08] pl-4 py-1">
+      <div className="border-l-2 border-strong pl-4 py-1">
         <p className="text-sm text-[var(--foreground)]/70 leading-relaxed italic">
           These projections extrapolate from adoption speed. If the diffusion
           phase that historically took 10&ndash;25 years is happening in

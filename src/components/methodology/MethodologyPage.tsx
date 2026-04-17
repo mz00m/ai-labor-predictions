@@ -46,7 +46,7 @@ function Section({
 }) {
   return (
     <section id={id} className="scroll-mt-20">
-      <h2 className="text-3xl sm:text-[26px] font-extrabold tracking-tight text-[var(--foreground)] mb-4">
+      <h2 className="text-3xl sm:text-heading-lg font-extrabold tracking-tight text-[var(--foreground)] mb-4">
         {title}
       </h2>
       {children}
@@ -65,7 +65,7 @@ function DeepDive({
 }) {
   const [open, setOpen] = useState(defaultOpen);
   return (
-    <div className="border border-black/[0.06] rounded-lg overflow-hidden mb-3">
+    <div className="border border-card rounded-lg overflow-hidden mb-3">
       <button
         onClick={() => setOpen(!open)}
         className="flex items-center justify-between w-full px-4 py-3 text-left hover:bg-black/[0.02] transition-colors"
@@ -86,7 +86,7 @@ function DeepDive({
         </svg>
       </button>
       {open && (
-        <div className="px-4 pb-4 text-base text-[var(--muted)] leading-relaxed space-y-3 border-t border-black/[0.04]">
+        <div className="px-4 pb-4 text-base text-[var(--muted)] leading-relaxed space-y-3 border-t border-divider">
           <div className="pt-3">{children}</div>
         </div>
       )}
@@ -197,7 +197,7 @@ export default function MethodologyPage() {
         >
           How This Site Works
         </h1>
-        <p className="text-[17px] text-[var(--muted)] leading-relaxed max-w-3xl">
+        <p className="text-prose text-[var(--muted)] leading-relaxed max-w-3xl">
           Every number on jobsdata.ai traces back to a cited source. This page
           explains how we collect, weight, combine, and present evidence across
           every section of the site.
@@ -220,7 +220,7 @@ export default function MethodologyPage() {
       </TLDR>
 
       {/* ── Table of Contents ── */}
-      <nav className="border border-black/[0.06] rounded-lg px-5 py-4">
+      <nav className="border border-card rounded-lg px-5 py-4">
         <p className="text-xs font-bold uppercase tracking-widest text-[var(--muted)] mb-3">
           On This Page
         </p>
@@ -435,7 +435,7 @@ export default function MethodologyPage() {
           ].map((t) => (
             <div
               key={t.tier}
-              className="border border-black/[0.06] rounded-lg px-4 py-3.5 bg-white"
+              className="border border-card rounded-lg px-4 py-3.5 bg-white"
             >
               <div className="flex items-center gap-2 mb-1.5">
                 <span className={`w-2.5 h-2.5 rounded-full ${t.color}`} />
@@ -488,7 +488,7 @@ export default function MethodologyPage() {
           more:
         </P>
 
-        <div className="bg-black/[0.02] border border-black/[0.06] rounded-lg px-4 py-3 mb-4 font-mono text-base text-[var(--foreground)]">
+        <div className="bg-black/[0.02] border border-card rounded-lg px-4 py-3 mb-4 font-mono text-base text-[var(--foreground)]">
           weight = tierWeight &times; recencyWeight &times; sampleSizeWeight
           &times; proxyWeight
           <br />
@@ -572,7 +572,7 @@ export default function MethodologyPage() {
           <div className="overflow-x-auto -mx-4 px-4">
             <table className="w-full text-sm">
               <thead>
-                <tr className="text-left border-b border-black/[0.08]">
+                <tr className="text-left border-b border-strong">
                   <th className="pb-2 font-semibold text-[var(--foreground)] pr-3">Proxy Metric</th>
                   <th className="pb-2 font-semibold text-[var(--foreground)] pr-3">Target</th>
                   <th className="pb-2 font-semibold text-[var(--foreground)] pr-3">Factor</th>
@@ -581,28 +581,28 @@ export default function MethodologyPage() {
                 </tr>
               </thead>
               <tbody className="text-[var(--muted)]">
-                <tr className="border-b border-black/[0.04]">
+                <tr className="border-b border-divider">
                   <td className="py-2 pr-3">Job posting decline (%)</td>
                   <td className="py-2 pr-3">% jobs displaced</td>
                   <td className="py-2 pr-3 font-mono">0.35</td>
                   <td className="py-2 pr-3 font-mono">0.20&ndash;0.50</td>
                   <td className="py-2">Postings drop 2&ndash;3&times; faster than actual layoffs (Cajner et al. 2020)</td>
                 </tr>
-                <tr className="border-b border-black/[0.04]">
+                <tr className="border-b border-divider">
                   <td className="py-2 pr-3">Task automation potential (%)</td>
                   <td className="py-2 pr-3">% jobs displaced</td>
                   <td className="py-2 pr-3 font-mono">0.30</td>
                   <td className="py-2 pr-3 font-mono">0.15&ndash;0.50</td>
                   <td className="py-2">Only ~30% of automatable tasks lead to job restructuring within 5 years (OECD 2023)</td>
                 </tr>
-                <tr className="border-b border-black/[0.04]">
+                <tr className="border-b border-divider">
                   <td className="py-2 pr-3">Relative posting change (%)</td>
                   <td className="py-2 pr-3">% jobs displaced</td>
                   <td className="py-2 pr-3 font-mono">0.30</td>
                   <td className="py-2 pr-3 font-mono">0.15&ndash;0.45</td>
                   <td className="py-2">Relative comparisons overstate net displacement via composition effects</td>
                 </tr>
-                <tr className="border-b border-black/[0.04]">
+                <tr className="border-b border-divider">
                   <td className="py-2 pr-3">Productivity gain (%)</td>
                   <td className="py-2 pr-3">% wage change</td>
                   <td className="py-2 pr-3 font-mono">0.40</td>
@@ -1273,7 +1273,7 @@ export default function MethodologyPage() {
       </Section>
 
       {/* ── Suggest a Source + Update Schedule ── */}
-      <div className="border-t border-black/[0.06] pt-6 space-y-4">
+      <div className="border-t border-card pt-6 space-y-4">
         <p className="text-base text-[var(--muted)] leading-relaxed">
           <Strong>Know a study we should include?</Strong>{" "}
           <a

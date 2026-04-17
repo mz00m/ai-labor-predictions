@@ -67,7 +67,7 @@ export default function Home() {
             entry-level and freelance work is compressing, and jobs are changing faster than
             they&apos;re disappearing.
           </p>
-          <p className="mt-3 text-[20px] sm:text-3xl font-bold text-heading leading-snug max-w-2xl">
+          <p className="mt-3 text-heading-sm sm:text-3xl font-bold text-heading leading-snug max-w-2xl">
             No measurable job displacement, <SplitFlapWord />
           </p>
 
@@ -145,7 +145,7 @@ export default function Home() {
 
       {/* Important Concepts divider */}
       <div className="mt-12 mb-2 -mx-6 sm:-mx-10 px-6 sm:px-10">
-        <div className="border-t border-black/[0.08]" />
+        <div className="border-t border-strong" />
         <p className="mt-5 text-xs font-bold uppercase tracking-widest text-[var(--muted)] opacity-60">
           Important Concepts
         </p>

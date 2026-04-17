@@ -276,7 +276,7 @@ export default function GPTTimeline() {
             <WalkingRobot walking={walkStarted && !walkDone} leaning={leaning} />
             {/* Label below the track line, fades in after walk */}
             <span
-              className="text-[8px] font-bold text-[var(--accent)] tracking-wider whitespace-nowrap mt-1"
+              className="text-3xs font-bold text-[var(--accent)] tracking-wider whitespace-nowrap mt-1"
               style={{
                 opacity: walkDone ? 1 : 0,
                 transition: walkDone ? "opacity 0.5s ease 0.2s" : "none",
@@ -564,7 +564,7 @@ export default function GPTTimeline() {
 
       {/* Active phase detail card */}
       {activePhase !== null && (
-        <div className="revolution-content border border-black/[0.06] rounded-lg p-5 bg-[var(--accent-light)]/30">
+        <div className="revolution-content border border-card rounded-lg p-5 bg-[var(--accent-light)]/30">
           <div className="flex items-baseline gap-2 mb-2 flex-wrap">
             <span className="text-sm font-bold text-[var(--accent)] uppercase tracking-wider">
               Phase {PHASES[activePhase].phase}

@@ -128,8 +128,8 @@ export default function CompareClient() {
                       isSelected
                         ? "border-[var(--accent)] bg-[var(--accent)]/[0.1] text-[var(--accent)]"
                         : isDisabled
-                          ? "border-black/[0.06] dark:border-white/[0.06] text-[var(--muted)] opacity-40 cursor-not-allowed"
-                          : "border-black/[0.08] dark:border-white/[0.08] text-[var(--foreground)] hover:border-[var(--accent)] hover:text-[var(--accent)]"
+                          ? "border-card dark:border-white/[0.06] text-[var(--muted)] opacity-40 cursor-not-allowed"
+                          : "border-strong dark:border-white/[0.08] text-[var(--foreground)] hover:border-[var(--accent)] hover:text-[var(--accent)]"
                     }`}
                   >
                     {isSelected && (
@@ -165,7 +165,7 @@ export default function CompareClient() {
 
       {/* Comparison cards */}
       {selectedPredictions.length === 0 ? (
-        <div className="text-center py-16 border border-dashed border-black/[0.08] dark:border-white/[0.08] rounded-lg">
+        <div className="text-center py-16 border border-dashed border-strong dark:border-white/[0.08] rounded-lg">
           <p className="text-[var(--muted)] text-lg">
             Select predictions above to start comparing.
           </p>
@@ -188,7 +188,7 @@ export default function CompareClient() {
             return (
               <div
                 key={prediction.slug}
-                className="border border-black/[0.06] dark:border-white/[0.08] rounded-lg overflow-hidden"
+                className="border border-card dark:border-white/[0.08] rounded-lg overflow-hidden"
               >
                 {/* Category accent bar */}
                 <div
@@ -226,7 +226,7 @@ export default function CompareClient() {
 
                   {/* Big number */}
                   <div className="flex items-baseline gap-2 mb-4">
-                    <span className="stat-number text-[40px] font-black text-[var(--foreground)] leading-none">
+                    <span className="stat-number text-title font-black text-[var(--foreground)] leading-none">
                       {agg.mean > 0 && prediction.category === "wages" ? "+" : ""}
                       {Number.isInteger(agg.mean) ? agg.mean : agg.mean.toFixed(1)}
                       <span className="text-2xl font-normal text-[var(--muted)] ml-0.5">
@@ -258,7 +258,7 @@ export default function CompareClient() {
                   />
 
                   {/* Meta */}
-                  <div className="flex items-center justify-between mt-3 pt-3 border-t border-black/[0.04] dark:border-white/[0.04]">
+                  <div className="flex items-center justify-between mt-3 pt-3 border-t border-divider dark:border-white/[0.04]">
                     <span className="text-sm text-[var(--muted)]">
                       {prediction.sources.length} sources
                     </span>

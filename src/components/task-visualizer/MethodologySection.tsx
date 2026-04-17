@@ -2,7 +2,7 @@
 
 export default function MethodologySection() {
   return (
-    <div className="mt-12 pt-8 border-t border-black/[0.06]">
+    <div className="mt-12 pt-8 border-t border-card">
       <h3 className="text-2xl font-bold text-[var(--foreground)] tracking-tight mb-4">
         Methodology: How we link tasks to compute costs
       </h3>
@@ -46,7 +46,7 @@ export default function MethodologySection() {
 
           <div className="space-y-3 text-sm">
             {/* Layer 1: O*NET */}
-            <div className="rounded-lg border border-black/[0.06] p-4">
+            <div className="rounded-lg border border-card p-4">
               <div className="flex items-start gap-3">
                 <span className="text-[var(--foreground)] font-bold text-md shrink-0 w-6 h-6 rounded-full bg-black/[0.04] flex items-center justify-center">1</span>
                 <div>
@@ -91,7 +91,7 @@ export default function MethodologySection() {
             </div>
 
             {/* Layer 2: BLS wages + employment */}
-            <div className="rounded-lg border border-black/[0.06] p-4">
+            <div className="rounded-lg border border-card p-4">
               <div className="flex items-start gap-3">
                 <span className="text-[var(--foreground)] font-bold text-md shrink-0 w-6 h-6 rounded-full bg-black/[0.04] flex items-center justify-center">2</span>
                 <div>
@@ -129,7 +129,7 @@ export default function MethodologySection() {
             </div>
 
             {/* Layer 3: AI exposure validation */}
-            <div className="rounded-lg border border-black/[0.06] p-4">
+            <div className="rounded-lg border border-card p-4">
               <div className="flex items-start gap-3">
                 <span className="text-[var(--foreground)] font-bold text-md shrink-0 w-6 h-6 rounded-full bg-black/[0.04] flex items-center justify-center">3</span>
                 <div>
@@ -193,7 +193,7 @@ export default function MethodologySection() {
             </div>
 
             {/* Layer 4: Industry adoption speed */}
-            <div className="rounded-lg border border-black/[0.06] p-4">
+            <div className="rounded-lg border border-card p-4">
               <div className="flex items-start gap-3">
                 <span className="text-[var(--foreground)] font-bold text-md shrink-0 w-6 h-6 rounded-full bg-black/[0.04] flex items-center justify-center">4</span>
                 <div>
@@ -278,7 +278,7 @@ export default function MethodologySection() {
             Cost/hr = Calls × (InputTokens/1M × InputPrice + OutputTokens/1M × OutputPrice) × CallOverhead × DeploymentOverhead
           </div>
           <div className="space-y-3 text-sm">
-            <div className="flex gap-3 rounded-lg border border-black/[0.06] p-3">
+            <div className="flex gap-3 rounded-lg border border-card p-3">
               <span className="text-[var(--foreground)] font-semibold shrink-0 w-[120px]">
                 1. Model tier
               </span>
@@ -292,7 +292,7 @@ export default function MethodologySection() {
                 analysis, expert judgment. Based on current API pricing from OpenAI, Anthropic, Google.
               </span>
             </div>
-            <div className="flex gap-3 rounded-lg border border-black/[0.06] p-3">
+            <div className="flex gap-3 rounded-lg border border-card p-3">
               <span className="text-[var(--foreground)] font-semibold shrink-0 w-[120px]">
                 2. Token volume
               </span>
@@ -304,7 +304,7 @@ export default function MethodologySection() {
                 simple classification might need 60 calls/hr, while deep research needs 4-8.
               </span>
             </div>
-            <div className="flex gap-3 rounded-lg border border-black/[0.06] p-3">
+            <div className="flex gap-3 rounded-lg border border-card p-3">
               <span className="text-[var(--foreground)] font-semibold shrink-0 w-[120px]">
                 3. Overhead multiplier
               </span>
@@ -349,49 +349,49 @@ export default function MethodologySection() {
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-black/[0.06]">
+                <tr className="border-b border-card">
                   <th className="text-left py-2 pr-4 text-[var(--foreground)] font-semibold">Task type</th>
                   <th className="text-left py-2 pr-4 text-[var(--foreground)] font-semibold">Annual decline</th>
                   <th className="text-left py-2 text-[var(--foreground)] font-semibold">Basis</th>
                 </tr>
               </thead>
               <tbody className="text-[var(--muted)]">
-                <tr className="border-b border-black/[0.04]">
+                <tr className="border-b border-divider">
                   <td className="py-2 pr-4">Information processing</td>
                   <td className="py-2 pr-4">42-48%</td>
                   <td className="py-2">
                     Commodity LLM pricing (GPT-3.5 level fell 280x in 18 months. Stanford HAI 2025)
                   </td>
                 </tr>
-                <tr className="border-b border-black/[0.04]">
+                <tr className="border-b border-divider">
                   <td className="py-2 pr-4">Communication & writing</td>
                   <td className="py-2 pr-4">38-45%</td>
                   <td className="py-2">
                     Writing/summarization quality at GPT-4 level dropped from $20 to ~$0.40/M tokens in 3 years (a16z)
                   </td>
                 </tr>
-                <tr className="border-b border-black/[0.04]">
+                <tr className="border-b border-divider">
                   <td className="py-2 pr-4">Analysis & reasoning</td>
                   <td className="py-2 pr-4">28-38%</td>
                   <td className="py-2">
                     Frontier reasoning models still expensive, but efficiency gains of 2x/yr (Epoch AI)
                   </td>
                 </tr>
-                <tr className="border-b border-black/[0.04]">
+                <tr className="border-b border-divider">
                   <td className="py-2 pr-4">Creative & generative</td>
                   <td className="py-2 pr-4">30-42%</td>
                   <td className="py-2">
                     Image/video generation falling fast; taste and direction remain human-priced
                   </td>
                 </tr>
-                <tr className="border-b border-black/[0.04]">
+                <tr className="border-b border-divider">
                   <td className="py-2 pr-4">Interpersonal</td>
                   <td className="py-2 pr-4">15-25%</td>
                   <td className="py-2">
                     AI conversation quality improving, but trust and physical presence are not compute-bound
                   </td>
                 </tr>
-                <tr className="border-b border-black/[0.04]">
+                <tr className="border-b border-divider">
                   <td className="py-2 pr-4">Physical & manual</td>
                   <td className="py-2 pr-4">8-15%</td>
                   <td className="py-2">
@@ -449,19 +449,19 @@ export default function MethodologySection() {
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-black/[0.06]">
+                <tr className="border-b border-card">
                   <th className="text-left py-2 pr-4 text-[var(--foreground)] font-semibold">Certainty</th>
                   <th className="text-left py-2 pr-4 text-[var(--foreground)] font-semibold">Variance</th>
                   <th className="text-left py-2 text-[var(--foreground)] font-semibold">Interpretation</th>
                 </tr>
               </thead>
               <tbody className="text-[var(--muted)]">
-                <tr className="border-b border-black/[0.04]">
+                <tr className="border-b border-divider">
                   <td className="py-2 pr-4"><span style={{ color: "#10B981" }}>Low uncertainty</span></td>
                   <td className="py-2 pr-4">&lt; 0.3</td>
                   <td className="py-2">Metrics agree. Automation projections for these groups are well-calibrated.</td>
                 </tr>
-                <tr className="border-b border-black/[0.04]">
+                <tr className="border-b border-divider">
                   <td className="py-2 pr-4"><span style={{ color: "#F59E0B" }}>Moderate uncertainty</span></td>
                   <td className="py-2 pr-4">0.3 - 0.5</td>
                   <td className="py-2">Metrics partially agree. True exposure may be higher or lower than shown.</td>
@@ -494,28 +494,28 @@ export default function MethodologySection() {
             adaptive capacity index, which measures four dimensions of an occupation&apos;s resilience:
           </p>
           <div className="space-y-2 text-sm mb-4">
-            <div className="flex gap-3 rounded-lg border border-black/[0.06] p-3">
+            <div className="flex gap-3 rounded-lg border border-card p-3">
               <span className="text-[var(--foreground)] font-semibold shrink-0 w-[140px]">Net liquid wealth</span>
               <span className="text-[var(--muted)]">
                 Occupation-level median from SIPP 2022-2024 (log-transformed). Measures financial runway
                 to weather job transitions without immediate distress.
               </span>
             </div>
-            <div className="flex gap-3 rounded-lg border border-black/[0.06] p-3">
+            <div className="flex gap-3 rounded-lg border border-card p-3">
               <span className="text-[var(--foreground)] font-semibold shrink-0 w-[140px]">Skill transferability</span>
               <span className="text-[var(--muted)]">
                 Growth-weighted cosine similarity of O*NET Skills and Work Activities across occupations,
                 weighted by BLS 2024-2034 employment projections. Higher = your skills work in more growing fields.
               </span>
             </div>
-            <div className="flex gap-3 rounded-lg border border-black/[0.06] p-3">
+            <div className="flex gap-3 rounded-lg border border-card p-3">
               <span className="text-[var(--foreground)] font-semibold shrink-0 w-[140px]">Geographic density</span>
               <span className="text-[var(--muted)]">
                 Lightcast employment-weighted average log CBSA density. Urban workers have more alternative
                 employers within commuting distance.
               </span>
             </div>
-            <div className="flex gap-3 rounded-lg border border-black/[0.06] p-3">
+            <div className="flex gap-3 rounded-lg border border-card p-3">
               <span className="text-[var(--foreground)] font-semibold shrink-0 w-[140px]">Age (fraction 55+)</span>
               <span className="text-[var(--muted)]">
                 From ACS data. Inverted: occupations with fewer older workers score higher, reflecting

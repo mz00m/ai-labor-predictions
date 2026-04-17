@@ -72,7 +72,7 @@ function CustomTooltip({ active, payload, label }: TooltipProps<number, string>)
   if (!active || !payload?.[0]) return null;
   const data = payload[0].payload;
   return (
-    <div className="bg-white rounded-lg border border-black/[0.08] shadow-lg p-3">
+    <div className="bg-white rounded-lg border border-strong shadow-lg p-3">
       <p className="text-sm font-semibold mb-1">{label}</p>
       <p className="text-xs text-[var(--muted)]">{data.label}</p>
       <p className="text-base font-medium text-accent mt-1">
@@ -140,22 +140,22 @@ export default function ComputeBenchmarks() {
 
       {/* Key stats */}
       <div className="grid grid-cols-3 gap-3">
-        <div className="rounded-xl bg-black/[0.02] border border-black/[0.06] p-4">
+        <div className="rounded-xl bg-black/[0.02] border border-card p-4">
           <p className="text-4xl font-bold text-accent tracking-tight">~200x</p>
           <p className="text-xs text-[var(--muted)]">Cost reduction since GPT-3 (2020)</p>
         </div>
-        <div className="rounded-xl bg-black/[0.02] border border-black/[0.06] p-4">
+        <div className="rounded-xl bg-black/[0.02] border border-card p-4">
           <p className="text-4xl font-bold text-accent tracking-tight">~60%</p>
           <p className="text-xs text-[var(--muted)]">Annual cost decline rate (inference)</p>
         </div>
-        <div className="rounded-xl bg-black/[0.02] border border-black/[0.06] p-4">
+        <div className="rounded-xl bg-black/[0.02] border border-card p-4">
           <p className="text-4xl font-bold text-accent tracking-tight">2x/yr</p>
           <p className="text-xs text-[var(--muted)]">Algorithmic efficiency gains (Epoch AI)</p>
         </div>
       </div>
 
       {/* What drives the cost decline */}
-      <div className="rounded-xl border border-black/[0.06] p-4">
+      <div className="rounded-xl border border-card p-4">
         <h4 className="text-base font-semibold text-[var(--foreground)] mb-2">
           Why compute costs keep falling
         </h4>

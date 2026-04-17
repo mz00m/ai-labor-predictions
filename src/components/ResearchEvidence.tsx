@@ -464,7 +464,7 @@ function StudyModal({
             </div>
           )}
 
-          <div className="mt-4 pt-4 border-t border-black/[0.06]">
+          <div className="mt-4 pt-4 border-t border-card">
             <p className="text-base text-[var(--foreground)] leading-relaxed">
               {study.finding}
             </p>
@@ -476,7 +476,7 @@ function StudyModal({
             </p>
           )}
 
-          <div className="mt-4 pt-4 border-t border-black/[0.06]">
+          <div className="mt-4 pt-4 border-t border-card">
             <p className="text-xs text-[var(--muted)]">
               {study.citation}
             </p>
@@ -676,7 +676,7 @@ export default function ResearchEvidence() {
     <section id="research-evidence" className="mt-12">
       {/* Section header */}
       <div className="mb-8">
-        <h2 className="text-4xl sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
+        <h2 className="text-4xl sm:text-title-sm font-extrabold tracking-tight text-[var(--foreground)]">
           What the research actually shows
         </h2>
         <p className="text-lg text-[var(--muted)] mt-2 max-w-2xl">
@@ -690,7 +690,7 @@ export default function ResearchEvidence() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* ── Micro Tile ── */}
-        <div className="border border-black/[0.06] rounded-lg bg-white p-5 sm:p-6">
+        <div className="border border-card rounded-lg bg-white p-5 sm:p-6">
           {/* Tile header */}
           <div className="mb-5">
             <h3 className="text-2xl font-bold text-[var(--foreground)]">
@@ -740,7 +740,7 @@ export default function ResearchEvidence() {
         </div>
 
         {/* ── Macro Tile ── */}
-        <div className="border border-black/[0.06] rounded-lg bg-white p-5 sm:p-6">
+        <div className="border border-card rounded-lg bg-white p-5 sm:p-6">
           {/* Tile header */}
           <div className="mb-5">
             <h3 className="text-2xl font-bold text-[var(--foreground)]">

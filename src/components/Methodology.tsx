@@ -3,7 +3,7 @@ export default function Methodology() {
     <div id="methodology">
       {/* Header */}
       <div className="mb-8">
-        <h2 className="text-4xl sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
+        <h2 className="text-4xl sm:text-title-sm font-extrabold tracking-tight text-[var(--foreground)]">
           Methodology &amp; Sources
         </h2>
         <p className="text-lg text-[var(--muted)] mt-2 max-w-3xl">
@@ -47,22 +47,22 @@ export default function Methodology() {
 
           {/* Tier weights - compact row */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center mb-4">
-            <div className="bg-black/[0.02] border border-black/[0.06] rounded px-3 py-2">
+            <div className="bg-black/[0.02] border border-card rounded px-3 py-2">
               <span className="inline-block w-2 h-2 rounded-full bg-green-500 mb-1" />
               <p className="text-base font-semibold text-[var(--foreground)]">Tier 1</p>
               <p className="text-sm text-[var(--muted)]">4&times; weight</p>
             </div>
-            <div className="bg-black/[0.02] border border-black/[0.06] rounded px-3 py-2">
+            <div className="bg-black/[0.02] border border-card rounded px-3 py-2">
               <span className="inline-block w-2 h-2 rounded-full bg-blue-500 mb-1" />
               <p className="text-base font-semibold text-[var(--foreground)]">Tier 2</p>
               <p className="text-sm text-[var(--muted)]">2&times; weight</p>
             </div>
-            <div className="bg-black/[0.02] border border-black/[0.06] rounded px-3 py-2">
+            <div className="bg-black/[0.02] border border-card rounded px-3 py-2">
               <span className="inline-block w-2 h-2 rounded-full bg-orange-500 mb-1" />
               <p className="text-base font-semibold text-[var(--foreground)]">Tier 3</p>
               <p className="text-sm text-[var(--muted)]">1&times; weight</p>
             </div>
-            <div className="bg-black/[0.02] border border-black/[0.06] rounded px-3 py-2">
+            <div className="bg-black/[0.02] border border-card rounded px-3 py-2">
               <span className="inline-block w-2 h-2 rounded-full bg-red-500 mb-1" />
               <p className="text-base font-semibold text-[var(--foreground)]">Tier 4</p>
               <p className="text-sm text-[var(--muted)]">0.5&times; weight</p>
@@ -99,7 +99,7 @@ export default function Methodology() {
             Evidence Tiers
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl">
-            <div className="border border-black/[0.06] rounded-lg px-5 py-4 bg-white">
+            <div className="border border-card rounded-lg px-5 py-4 bg-white">
               <div className="flex items-center gap-2 mb-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-green-500" />
                 <p className="text-md font-bold text-[var(--foreground)]">
@@ -112,7 +112,7 @@ export default function Methodology() {
                 SEC filings with legal liability for accuracy.
               </p>
             </div>
-            <div className="border border-black/[0.06] rounded-lg px-5 py-4 bg-white">
+            <div className="border border-card rounded-lg px-5 py-4 bg-white">
               <div className="flex items-center gap-2 mb-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-blue-500" />
                 <p className="text-md font-bold text-[var(--foreground)]">
@@ -125,7 +125,7 @@ export default function Methodology() {
                 industry research, and job posting data.
               </p>
             </div>
-            <div className="border border-black/[0.06] rounded-lg px-5 py-4 bg-white">
+            <div className="border border-card rounded-lg px-5 py-4 bg-white">
               <div className="flex items-center gap-2 mb-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-orange-500" />
                 <p className="text-md font-bold text-[var(--foreground)]">
@@ -138,7 +138,7 @@ export default function Methodology() {
                 news ticker via Google News RSS.
               </p>
             </div>
-            <div className="border border-black/[0.06] rounded-lg px-5 py-4 bg-white">
+            <div className="border border-card rounded-lg px-5 py-4 bg-white">
               <div className="flex items-center gap-2 mb-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-red-500" />
                 <p className="text-md font-bold text-[var(--foreground)]">
@@ -246,7 +246,7 @@ export default function Methodology() {
         </div>
 
         {/* Suggest a Source */}
-        <div className="border-t border-black/[0.06] pt-6">
+        <div className="border-t border-card pt-6">
           <p className="text-base text-[var(--muted)] leading-relaxed max-w-3xl">
             <span className="font-semibold text-[var(--foreground)]">
               Know a study we should include?
@@ -262,7 +262,7 @@ export default function Methodology() {
         </div>
 
         {/* Update Schedule */}
-        <div className="border-t border-black/[0.06] pt-6">
+        <div className="border-t border-card pt-6">
           <p className="text-base text-[var(--muted)] leading-relaxed max-w-3xl">
             <span className="font-semibold text-[var(--foreground)]">
               Update schedule:

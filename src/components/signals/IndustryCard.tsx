@@ -100,7 +100,7 @@ export default function IndustryCard({
       className={`industry-card w-full text-left rounded-xl border p-4 sm:p-5 ${
         isExpanded
           ? "border-black/[0.12] bg-white shadow-sm"
-          : "border-black/[0.06] bg-white"
+          : "border-card bg-white"
       }`}
       style={isExpanded ? undefined : tiltStyle}
     >
@@ -110,7 +110,7 @@ export default function IndustryCard({
             className="industry-dot w-3 h-3 rounded-full shrink-0"
             style={{ backgroundColor: industry.color }}
           />
-          <h3 className="text-lg sm:text-[17px] font-bold text-[var(--foreground)]">
+          <h3 className="text-lg sm:text-prose font-bold text-[var(--foreground)]">
             {industry.label}
           </h3>
         </div>
@@ -130,7 +130,7 @@ export default function IndustryCard({
             AI tool growth
           </p>
           <p
-            className="text-3xl sm:text-[26px] font-black stat-number leading-none tabular-nums"
+            className="text-3xl sm:text-heading-lg font-black stat-number leading-none tabular-nums"
             style={{
               color: growth > 0 ? "#16a34a" : growth < 0 ? "#dc2626" : "var(--muted)",
             }}
@@ -147,7 +147,7 @@ export default function IndustryCard({
             Employment (BLS)
           </p>
           <p
-            className="text-3xl sm:text-[26px] font-black stat-number leading-none tabular-nums"
+            className="text-3xl sm:text-heading-lg font-black stat-number leading-none tabular-nums"
             style={{
               color: employmentColor(industry.employmentChangeSinceNov2022),
             }}

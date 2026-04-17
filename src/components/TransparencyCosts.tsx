@@ -67,7 +67,7 @@ export default function TransparencyCosts() {
   return (
     <div>
       <div className="mb-8">
-        <h2 className="text-4xl sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
+        <h2 className="text-4xl sm:text-title-sm font-extrabold tracking-tight text-[var(--foreground)]">
           What This Costs
         </h2>
         <p className="text-lg text-[var(--muted)] mt-2 max-w-3xl">
@@ -78,7 +78,7 @@ export default function TransparencyCosts() {
 
       <div className="space-y-8">
         {/* Total callout */}
-        <div className="border border-black/[0.06] rounded-lg px-5 py-5 bg-white max-w-3xl">
+        <div className="border border-card rounded-lg px-5 py-5 bg-white max-w-3xl">
           <p className="text-base font-bold uppercase tracking-widest text-[var(--accent)] mb-1">
             Total Cost to Date
           </p>
@@ -96,10 +96,10 @@ export default function TransparencyCosts() {
           <h3 className="text-2xl font-bold text-[var(--foreground)] mb-3">
             Paid Services
           </h3>
-          <div className="border border-black/[0.06] rounded-lg overflow-hidden bg-white">
+          <div className="border border-card rounded-lg overflow-hidden bg-white">
             <table className="w-full text-left">
               <thead>
-                <tr className="border-b border-black/[0.06] bg-black/[0.02]">
+                <tr className="border-b border-card bg-black/[0.02]">
                   <th className="text-sm font-semibold text-[var(--muted)] uppercase tracking-wider px-4 py-2.5">
                     Service
                   </th>
@@ -119,7 +119,7 @@ export default function TransparencyCosts() {
                       key={service.name}
                       className={
                         i < paidServices.length - 1
-                          ? "border-b border-black/[0.04]"
+                          ? "border-b border-divider"
                           : ""
                       }
                     >
