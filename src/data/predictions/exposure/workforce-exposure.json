@@ -553,6 +553,33 @@
       ],
       "evidenceTier": 1,
       "label": "Fed SBU: 78% of US labor force works at an AI-adopting firm (employment-weighted)"
+    },
+    {
+      "date": "2026-04-16",
+      "direction": "neutral",
+      "sourceIds": [
+        "yale-budgetlab-cps-march-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Yale Budget Lab: March CPS — OpenAI exposure quintile shares stable since ChatGPT launch"
+    },
+    {
+      "date": "2026-04-16",
+      "direction": "neutral",
+      "sourceIds": [
+        "yale-budgetlab-cps-march-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Yale Budget Lab: Anthropic Feb 2026 usage more associated with automation than augmentation"
+    },
+    {
+      "date": "2026-04-16",
+      "direction": "neutral",
+      "sourceIds": [
+        "yale-budgetlab-cps-march-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Yale Budget Lab: Unemployed workers in occupations where 25-35% of tasks are AI-performable, invariant to duration"
     }
   ],
   "sources": [
@@ -865,6 +892,16 @@
       "datePublished": "2026-03-19",
       "excerpt": "The share of workers in the lowest, middle, and highest occupational exposure groups stay stable. Even when specifically examining the unemployed population, there is no clear growth in exposure to generative AI.",
       "dateAdded": "2026-03-20"
+    },
+    {
+      "id": "yale-budgetlab-cps-march-2026",
+      "title": "Tracking the Impact of AI on the Labor Market",
+      "url": "https://budgetlab.yale.edu/research/tracking-impact-ai-labor-market",
+      "publisher": "The Budget Lab at Yale (Gimbel, Kendall, Kulsakdinun)",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-16",
+      "excerpt": "The share of workers in the lowest, middle, and highest occupational exposure groups stay stable. Irrespective of the duration of unemployment, unemployed workers were in occupations where about 25 to 35 percent of tasks, on average, could be performed by generative AI. Both samples indicate that observed usage is more likely to be associated with automation than augmentation.",
+      "dateAdded": "2026-04-17"
     },
     {
       "id": "imas-shukla-oring-exposure-2026",
