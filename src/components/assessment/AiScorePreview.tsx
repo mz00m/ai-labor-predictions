@@ -141,7 +141,7 @@ export default function AiScorePreview({
       <div className="mt-3 rounded-xl border border-gray-200 bg-white overflow-hidden">
         <div className="px-4 py-2.5 bg-gray-50 border-b border-gray-100">
           <p className="text-xs font-medium text-gray-500">
-            We found matching occupations. Select yours for an instant AI score:
+            We found matching occupations. Select yours to see how AI could affect your role:
           </p>
         </div>
         <div className="divide-y divide-gray-100">
@@ -228,6 +228,10 @@ export default function AiScorePreview({
               </span>
             </div>
 
+            <p className="text-[11px] text-gray-400 mb-2">
+              AI Exposure Score: how much of this role&apos;s tasks AI can currently perform or assist with.
+            </p>
+
             {/* Task breakdown bars */}
             <div className="space-y-1.5">
               <MiniBar
@@ -256,7 +260,7 @@ export default function AiScorePreview({
                 ~{selected.timeSavingsHoursPerWeek} hrs/week
               </span>
               <span className="text-[11px] text-gray-400">
-                potential time savings
+                potential time savings with AI tools
               </span>
             </div>
           </div>
