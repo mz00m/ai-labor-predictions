@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
+import { useCountUp, DelightStyles } from "./delights";
 
 // ---------------------------------------------------------------------------
 // Types
@@ -23,10 +24,12 @@ interface AiScorePreviewProps {
   jobTitle: string;
   /** Called when user selects a matching occupation */
   onMatchSelected?: (hit: OccupationHit) => void;
+  /** Called when user clicks the continue CTA */
+  onContinue?: () => void;
 }
 
 // ---------------------------------------------------------------------------
-// Score band helpers (mirrors scorecard.ts)
+// Score band helpers
 // ---------------------------------------------------------------------------
 
 type ScoreBand = "getting-started" | "building-momentum" | "ai-powered" | "ai-native";
@@ -63,6 +66,7 @@ function pct(v: number) {
 export default function AiScorePreview({
   jobTitle,
   onMatchSelected,
+  onContinue,
 }: AiScorePreviewProps) {
   const [results, setResults] = useState<OccupationHit[]>([]);
   const [selected, setSelected] = useState<OccupationHit | null>(null);
@@ -70,6 +74,7 @@ export default function AiScorePreview({
   const [dismissed, setDismissed] = useState(false);
   const abortRef = useRef<AbortController | null>(null);
   const debounceRef = useRef<ReturnType<typeof setTimeout>>();
+  const animatedScore = useCountUp(selected?.exposure ?? 0, 600);
 
   const search = useCallback(async (q: string) => {
     abortRef.current?.abort();
@@ -84,7 +89,6 @@ export default function AiScorePreview({
       );
       const data = await res.json();
       setResults(data.results ?? []);
-      // Auto-select if there's a strong match (top result, exact or near-exact)
       if (data.results?.length === 1) {
         const hit = data.results[0];
         setSelected(hit);
@@ -93,7 +97,7 @@ export default function AiScorePreview({
         setSelected(null);
       }
     } catch {
-      // Abort or network error — ignore
+      // Abort or network error
     } finally {
       setLoading(false);
     }
@@ -125,26 +129,24 @@ export default function AiScorePreview({
     return null;
   }
 
-  // Show loading skeleton
+  // Loading — subtle inline indicator
   if (loading && !selected) {
     return (
-      <div className="mt-3 rounded-xl border border-gray-200 bg-gray-50/50 p-4 animate-pulse">
-        <div className="h-3 bg-gray-200 rounded w-48 mb-2" />
-        <div className="h-2 bg-gray-200 rounded w-32" />
+      <div className="mt-2 flex items-center gap-2 text-xs text-gray-400 animate-pulse">
+        <div className="w-3 h-3 rounded-full bg-gray-200" />
+        Matching your role...
       </div>
     );
   }
 
-  // Show disambiguation list
+  // Disambiguation — inline dropdown style
   if (!selected && results.length > 1) {
     return (
-      <div className="mt-3 rounded-xl border border-gray-200 bg-white overflow-hidden">
-        <div className="px-4 py-2.5 bg-gray-50 border-b border-gray-100">
-          <p className="text-xs font-medium text-gray-500">
-            We found matching occupations. Select yours to see how AI could affect your role:
-          </p>
-        </div>
-        <div className="divide-y divide-gray-100">
+      <div className="mt-2">
+        <p className="text-xs text-gray-500 mb-1.5">
+          Select your closest match:
+        </p>
+        <div className="space-y-1">
           {results.map((hit) => {
             const band = getScoreBand(hit.exposure);
             const colors = BAND_COLORS[band];
@@ -152,22 +154,17 @@ export default function AiScorePreview({
               <button
                 key={hit.slug}
                 onClick={() => selectHit(hit)}
-                className="w-full px-4 py-3 flex items-center justify-between text-left hover:bg-gray-50 transition-colors"
+                className="w-full px-3 py-2 flex items-center justify-between text-left rounded-lg border border-gray-150 hover:border-accent/30 hover:bg-accent/[0.02] transition-colors"
               >
-                <div className="min-w-0">
-                  <div className="text-sm font-medium text-gray-900 truncate">
-                    {hit.title}
-                  </div>
-                </div>
-                <div className="shrink-0 ml-3 flex items-center gap-1.5">
-                  <span
-                    className="text-lg font-bold tabular-nums"
-                    style={{ color: colors.text }}
-                  >
-                    {hit.exposure}
-                  </span>
-                  <span className="text-xs text-gray-400">/10</span>
-                </div>
+                <span className="text-sm text-gray-700 truncate">
+                  {hit.title}
+                </span>
+                <span
+                  className="shrink-0 ml-3 text-xs font-semibold tabular-nums"
+                  style={{ color: colors.text }}
+                >
+                  {hit.exposure}/10
+                </span>
               </button>
             );
           })}
@@ -176,102 +173,126 @@ export default function AiScorePreview({
     );
   }
 
-  // Show the score preview card for the selected occupation
+  // Selected — inline confirmation with teaser + continue CTA
   if (selected) {
     const band = getScoreBand(selected.exposure);
     const colors = BAND_COLORS[band];
+    const aiPct = Math.round(
+      (selected.taskBreakdown.aiCanDoNow + selected.taskBreakdown.aiCanAssist) * 100
+    );
 
     return (
-      <div
-        className="mt-4 rounded-xl border border-gray-200 bg-white p-5 relative"
-        style={{ borderTopColor: colors.text, borderTopWidth: 3 }}
-      >
-        {/* Dismiss */}
-        <button
-          onClick={() => {
-            setDismissed(true);
-            setSelected(null);
-          }}
-          className="absolute top-3 right-3 text-gray-300 hover:text-gray-500 transition-colors"
-          aria-label="Dismiss"
-        >
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M18 6L6 18M6 6l12 12" />
-          </svg>
-        </button>
-
-        <div className="flex items-start gap-5">
-          {/* Score number */}
-          <div className="text-center shrink-0">
-            <div
-              className="text-4xl font-black leading-none tabular-nums"
-              style={{ color: colors.text }}
+      <div className="mt-3 rounded-xl bg-gray-50 border border-gray-100 p-4">
+        <DelightStyles />
+        {/* Header row: matched title + score + dismiss */}
+        <div className="flex items-center gap-3 mb-3">
+          <div className="flex items-center gap-2 min-w-0 flex-1">
+            <span
+              className="inline-flex items-center justify-center w-8 h-8 rounded-lg text-sm font-bold text-white shrink-0"
+              style={{
+                backgroundColor: colors.text,
+                animation: "score-glow 1s ease-out",
+              }}
             >
-              {selected.exposure}
-            </div>
-            <div className="text-[10px] font-medium text-gray-400 mt-0.5">
-              out of 10
-            </div>
-          </div>
-
-          {/* Details */}
-          <div className="min-w-0 flex-1">
-            <div className="flex items-center gap-2 mb-1.5">
-              <span className="text-sm font-semibold text-gray-900 truncate">
+              {animatedScore}
+            </span>
+            <div className="min-w-0">
+              <div className="text-sm font-medium text-gray-900 truncate">
                 {selected.title}
-              </span>
-              <span
-                className="shrink-0 text-[10px] font-semibold px-2 py-0.5 rounded-full"
-                style={{ backgroundColor: colors.bg, color: colors.text }}
-              >
-                {BAND_LABELS[band]}
-              </span>
-            </div>
-
-            <p className="text-[11px] text-gray-400 mb-2">
-              AI Exposure Score: how much of this role&apos;s tasks AI can currently perform or assist with.
-            </p>
-
-            {/* Task breakdown bars */}
-            <div className="space-y-1.5">
-              <MiniBar
-                label="AI can do now"
-                value={selected.taskBreakdown.aiCanDoNow}
-                color="#5C61F6"
-              />
-              <MiniBar
-                label="AI can assist"
-                value={selected.taskBreakdown.aiCanAssist}
-                color="#a78bfa"
-              />
-              <MiniBar
-                label="Human domain"
-                value={selected.taskBreakdown.humanDomain}
-                color="#cbd5e1"
-              />
-            </div>
-
-            {/* Time savings teaser */}
-            <div className="flex items-baseline gap-1.5 mt-2.5">
-              <span
-                className="text-sm font-bold tabular-nums"
-                style={{ color: colors.text }}
-              >
-                ~{selected.timeSavingsHoursPerWeek} hrs/week
-              </span>
-              <span className="text-[11px] text-gray-400">
-                potential time savings with AI tools
-              </span>
+              </div>
+              <div className="text-[11px] text-gray-400">
+                AI Exposure Score: {selected.exposure}/10
+              </div>
             </div>
           </div>
+          <button
+            onClick={() => {
+              setDismissed(true);
+              setSelected(null);
+            }}
+            className="text-gray-300 hover:text-gray-500 transition-colors shrink-0"
+            aria-label="Dismiss"
+          >
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M18 6L6 18M6 6l12 12" />
+            </svg>
+          </button>
         </div>
 
-        {/* Motivation line */}
-        <div className="mt-3.5 pt-3 border-t border-gray-100">
-          <p className="text-xs text-gray-400">
-            Complete the assessment for a personalized action plan with specific tools and next steps for your role.
-          </p>
+        {/* Compact task breakdown */}
+        <div
+          className="flex gap-1 h-2 rounded-full overflow-hidden mb-3"
+          style={{
+            transformOrigin: "left",
+            animation: "bar-grow 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)",
+          }}
+        >
+          <div
+            className="rounded-l-full transition-all duration-500"
+            style={{
+              width: pct(selected.taskBreakdown.aiCanDoNow),
+              backgroundColor: "#5C61F6",
+            }}
+            title={`AI can do now: ${pct(selected.taskBreakdown.aiCanDoNow)}`}
+          />
+          <div
+            className="transition-all duration-500"
+            style={{
+              width: pct(selected.taskBreakdown.aiCanAssist),
+              backgroundColor: "#a78bfa",
+            }}
+            title={`AI can assist: ${pct(selected.taskBreakdown.aiCanAssist)}`}
+          />
+          <div
+            className="rounded-r-full transition-all duration-500"
+            style={{
+              width: pct(selected.taskBreakdown.humanDomain),
+              backgroundColor: "#e2e8f0",
+            }}
+            title={`Human domain: ${pct(selected.taskBreakdown.humanDomain)}`}
+          />
         </div>
+
+        {/* Legend */}
+        <div className="flex items-center gap-3 text-[11px] text-gray-400 mb-3">
+          <span className="flex items-center gap-1">
+            <span className="w-2 h-2 rounded-full bg-[#5C61F6]" />
+            AI can do now
+          </span>
+          <span className="flex items-center gap-1">
+            <span className="w-2 h-2 rounded-full bg-[#a78bfa]" />
+            AI can assist
+          </span>
+          <span className="flex items-center gap-1">
+            <span className="w-2 h-2 rounded-full bg-[#e2e8f0]" />
+            Human domain
+          </span>
+        </div>
+
+        {/* Teaser stat */}
+        <p className="text-sm text-gray-600 mb-3">
+          <span className="font-semibold" style={{ color: colors.text }}>
+            {aiPct}% of tasks
+          </span>
+          {" "}in this role can be performed or assisted by AI, saving an estimated{" "}
+          <span className="font-semibold" style={{ color: colors.text }}>
+            ~{selected.timeSavingsHoursPerWeek} hrs/week
+          </span>.
+          Complete the assessment for your personalized action plan.
+        </p>
+
+        {/* Continue CTA */}
+        {onContinue && (
+          <button
+            onClick={onContinue}
+            className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-accent text-white text-sm font-semibold hover:opacity-90 transition-opacity"
+          >
+            Continue to next step
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </button>
+        )}
 
         {/* Change selection */}
         {results.length > 1 && (
@@ -287,33 +308,4 @@ export default function AiScorePreview({
   }
 
   return null;
-}
-
-// ---------------------------------------------------------------------------
-// Mini task breakdown bar
-// ---------------------------------------------------------------------------
-
-function MiniBar({
-  label,
-  value,
-  color,
-}: {
-  label: string;
-  value: number;
-  color: string;
-}) {
-  return (
-    <div className="flex items-center gap-2">
-      <span className="text-[11px] text-gray-500 w-24 shrink-0">{label}</span>
-      <div className="flex-1 h-1.5 rounded-full bg-gray-100 overflow-hidden">
-        <div
-          className="h-full rounded-full transition-all duration-500"
-          style={{ width: pct(value), backgroundColor: color }}
-        />
-      </div>
-      <span className="text-[11px] font-medium text-gray-500 tabular-nums w-8 text-right">
-        {pct(value)}
-      </span>
-    </div>
-  );
 }
