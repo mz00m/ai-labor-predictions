@@ -10,6 +10,15 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "OpenAI Economic Research",
+    title: "The AI Jobs Transition Framework",
+    summary:
+      "Richmond (OpenAI) sorts all 921 occupations (147.9M jobs) into four archetypes: 18% at high automation risk, 24% will reorganize, 12% grow with AI, 46% less immediate change. ChatGPT used ~3x more in the most at-risk jobs, yet capability overhang is huge (90% theoretical vs 23.8% realized exposure in high-risk jobs). Since 2024Q1, unemployment rose MORE in less-exposed jobs (+0.6pp) than in high-risk ones (+0.3pp) — exposure alone is a weak predictor of near-term pressure.",
+    date: "Apr 17",
+    url: "https://cdn.openai.com/pdf/the-ai-jobs-transition-framework_report.pdf",
+    accent: "border-l-amber-500",
+  },
+  {
     author: "Yale Budget Lab",
     title: "Tracking the Impact of AI on the Labor Market",
     summary:
@@ -44,15 +53,6 @@ const articles: Article[] = [
     date: "Apr 14",
     url: "https://www.wsj.com/economy/jobs/the-economy-is-growing-jobs-arent-why-that-might-be-ok-5c50a535",
     accent: "border-l-emerald-500",
-  },
-  {
-    author: "Stanford HAI",
-    title: "The 2026 AI Index Report",
-    summary:
-      "AI workforce disruption moves from prediction to reality. Software devs aged 22-25 employment -20% since 2024. GenAI hit 53% population adoption in 3yrs (US 28.3%). Physicians report 83% less time on clinical notes. Transparency scores dropped to 40 from 58.",
-    date: "Apr 13",
-    url: "https://hai.stanford.edu/news/inside-the-ai-index-12-takeaways-from-the-2026-report",
-    accent: "border-l-cyan-500",
   },
 ];
 

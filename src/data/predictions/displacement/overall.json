@@ -321,6 +321,42 @@
         "conversionHigh": 1.5,
         "rationale": "Economists forecast LFPR drop from 62.6% to 59.1% by 2030 in rapid AI scenario, with ~half (~1.75pp, ~10M jobs) attributable to AI. 10M/166M labor force ≈ 6%. CONDITIONAL on rapid scenario which economists assign only 14% probability. Probability-weighted expected displacement ≈ 0.8%."
       }
+    },
+    {
+      "date": "2026-04-17",
+      "value": 18,
+      "sourceIds": [
+        "openai-jobs-transition-framework-2026"
+      ],
+      "evidenceTier": 2,
+      "metricType": "projection",
+      "dataType": "projected",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "% of US jobs at higher short-term automation risk (framework category)",
+        "conversionFactor": 1,
+        "conversionLow": 0.5,
+        "conversionHigh": 1,
+        "rationale": "OpenAI's framework classifies 18% of 921 occupations (147.9M jobs) as facing higher short-term automation risk — high exposure, weak human necessity, limited demand offset. Authors explicitly caveat that categories are NOT forecasts of direct job loss; this is an upper-bound risk share, hence proxy discount."
+      }
+    },
+    {
+      "date": "2026-04-17",
+      "value": 0.3,
+      "sourceIds": [
+        "openai-jobs-transition-framework-2026"
+      ],
+      "evidenceTier": 2,
+      "metricType": "employment",
+      "dataType": "observed",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "percentage point increase in unemployment rate among workers in high-automation-risk occupations (CPS, 2024Q1 → 2026Q1)",
+        "conversionFactor": 1,
+        "conversionLow": 0.5,
+        "conversionHigh": 1.5,
+        "rationale": "CPS-derived unemployment rose from 3.3% to 3.6% (+0.3pp) among workers in OpenAI's 'high automation risk' archetype, a modest signal of observed labor-market pressure — but notably workers in 'less immediate change' jobs saw a larger +0.6pp rise, suggesting AI is not the primary driver."
+      }
     }
   ],
   "overlays": [
@@ -1448,6 +1484,42 @@
       ],
       "evidenceTier": 1,
       "label": "Yale Budget Lab: No relationship between AI exposure/usage and employment or unemployment changes"
+    },
+    {
+      "date": "2026-04-17",
+      "direction": "down",
+      "sourceIds": [
+        "openai-jobs-transition-framework-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "OpenAI: 46% of jobs less likely to see near-term change"
+    },
+    {
+      "date": "2026-04-17",
+      "direction": "down",
+      "sourceIds": [
+        "openai-jobs-transition-framework-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "OpenAI: 12% of jobs could grow because of AI"
+    },
+    {
+      "date": "2026-04-17",
+      "direction": "neutral",
+      "sourceIds": [
+        "openai-jobs-transition-framework-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "OpenAI: 24% of jobs will reorganize as task mix shifts"
+    },
+    {
+      "date": "2026-04-17",
+      "direction": "down",
+      "sourceIds": [
+        "openai-jobs-transition-framework-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "OpenAI: Unemployment rose more in low-exposure jobs (+0.6pp) than high-automation-risk (+0.3pp) since 2024Q1"
     }
   ],
   "sources": [
@@ -2604,6 +2676,16 @@
       "datePublished": "2026-04-14",
       "excerpt": "Around 62 percent of all respondents believe the unemployment rate will increase over the next twelve months due to AI, while around 11.6 percent expect it will decrease due to AI.",
       "dateAdded": "2026-04-15"
+    },
+    {
+      "id": "openai-jobs-transition-framework-2026",
+      "title": "The AI Jobs Transition Framework: Mapping AI's Near-Term Impact on Jobs",
+      "url": "https://cdn.openai.com/pdf/the-ai-jobs-transition-framework_report.pdf",
+      "publisher": "OpenAI Economic Research (Alex Martin Richmond)",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-17",
+      "excerpt": "All 921 occupations (147.9M jobs): 18% of jobs are at a higher short-term automation risk; 46% of jobs are less likely to experience near-term change; 12% of jobs could grow because of AI; 24% of jobs may see declining employment as their task composition shifts, but the remaining jobs will still need workers. People that are or were employed in jobs we predict to have less immediate change have actually seen the largest increase in unemployment at +0.6 p.p. For comparison, people employed in jobs at higher automation risk or jobs that will reorganize have seen +0.3 p.p. and +0.3 p.p. increases in the unemployment rate over the same period.",
+      "dateAdded": "2026-04-17"
     }
   ]
 }
