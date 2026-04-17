@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-04-15",
-  "totalSources": 524,
-  "verifiedCount": 514,
+  "lastUpdated": "2026-04-17",
+  "totalSources": 525,
+  "verifiedCount": 515,
   "sources": {
     "gallup-workplace-ai-feb-2026": {
       "id": "gallup-workplace-ai-feb-2026",
@@ -6423,6 +6423,21 @@
       "evidenceTier": 1,
       "datePublished": "2026-03-19",
       "excerpt": "The addition of the January and February 2026 CPS and the introduction of Anthropic's 'Observed Exposure' metrics do not suggest any substantial changes. Occupational dissimilarity, industry dissimilarity, and exposure and usage metrics all remain flat, lie within historical ranges, or continue along pre-existing trends.",
+      "usedIn": [
+        "overall-us-displacement",
+        "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "yale-budgetlab-cps-march-2026": {
+      "id": "yale-budgetlab-cps-march-2026",
+      "title": "Tracking the Impact of AI on the Labor Market",
+      "url": "https://budgetlab.yale.edu/research/tracking-impact-ai-labor-market",
+      "publisher": "The Budget Lab at Yale (Gimbel, Kendall, Kulsakdinun)",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-16",
+      "excerpt": "The addition of the March 2026 CPS and the introduction of Anthropic's February usage metrics do not suggest any substantial changes. Occupational dissimilarity, industry dissimilarity, and our exposure and usage metrics all remain flat, lie within historical ranges, or continue along the trends they were already exhibiting. Currently, measures of exposure, automation, and augmentation show no sign of being related to changes in employment or unemployment.",
       "usedIn": [
         "overall-us-displacement",
         "workforce-ai-exposure"

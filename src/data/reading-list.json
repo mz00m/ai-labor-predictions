@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "Tracking the Impact of AI on the Labor Market",
+      "author": "Martha Gimbel, Molly Kendall, Natasha Kulsakdinun",
+      "publisher": "The Budget Lab at Yale",
+      "date": "2026-04-16",
+      "url": "https://budgetlab.yale.edu/research/tracking-impact-ai-labor-market",
+      "takeaway": "April 2026 monthly update adds March 2026 CPS and Anthropic's February usage metrics. Headline: no substantial change from March release. Occupational dissimilarity, industry dissimilarity, and exposure/usage metrics remain flat, within historical ranges, or on pre-existing trends. OpenAI exposure quintile shares stable since ChatGPT launch. Unemployed workers in occupations where 25-35% of tasks are AI-performable, invariant to duration. Anthropic Feb 2026 usage data continues to show automation more prevalent than augmentation. Only notable tick-up: dissimilarity between older and younger college grads rose to the high end of its historical range. Measures of exposure, automation, and augmentation show no sign of being related to changes in employment or unemployment.",
+      "weekFeatured": "2026-04-16",
+      "tier": 1
+    },
+    {
       "title": "Use of Gen AI in the Workplace and the Value of Access to Training",
       "author": "Ali Hashim, Gizem Kosar, and Wilbert van der Klaauw",
       "publisher": "Federal Reserve Bank of New York (Liberty Street Economics)",

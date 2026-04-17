@@ -10,6 +10,15 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Yale Budget Lab",
+    title: "Tracking the Impact of AI on the Labor Market",
+    summary:
+      "April 2026 monthly update: March CPS + Anthropic Feb usage data show no substantial change. Occupational/industry dissimilarity and exposure/usage metrics remain flat or within historical ranges. Exposure, automation, and augmentation measures show no relationship with employment or unemployment changes. Anthropic usage data continues to skew automation over augmentation.",
+    date: "Apr 16",
+    url: "https://budgetlab.yale.edu/research/tracking-impact-ai-labor-market",
+    accent: "border-l-indigo-500",
+  },
+  {
     author: "NY Fed (Liberty Street)",
     title: "Use of Gen AI in the Workplace and the Value of Access to Training",
     summary:
@@ -44,15 +53,6 @@ const articles: Article[] = [
     date: "Apr 13",
     url: "https://hai.stanford.edu/news/inside-the-ai-index-12-takeaways-from-the-2026-report",
     accent: "border-l-cyan-500",
-  },
-  {
-    author: "OpenAI",
-    title: "Industrial Policy for the Intelligence Age: Ideas to Keep People First",
-    summary:
-      "OpenAI's policy blueprint for superintelligence transition. Proposes public wealth fund, 32-hour workweek pilots, portable benefits, adaptive safety nets. Warns productivity gains may not reach workers without deliberate policy.",
-    date: "Apr 1",
-    url: "https://cdn.openai.com/pdf/561e7512-253e-424b-9734-ef4098440601/Industrial%20Policy%20for%20the%20Intelligence%20Age.pdf",
-    accent: "border-l-amber-500",
   },
 ];
 
