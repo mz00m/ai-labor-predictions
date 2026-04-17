@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "The AI Jobs Transition Framework: Mapping AI's Near-Term Impact on Jobs",
+      "author": "Alex Martin Richmond",
+      "publisher": "OpenAI Economic Research",
+      "date": "2026-04-17",
+      "url": "https://cdn.openai.com/pdf/the-ai-jobs-transition-framework_report.pdf",
+      "takeaway": "OpenAI's framework sorts all 921 US occupations (147.9M jobs) into four transition archetypes using AI exposure, human necessity, and demand elasticity. Findings: 18% of jobs face higher short-term automation risk; 24% will reorganize as task mix shifts but still need workers; 12% could grow because of AI; 46% see less immediate change. ChatGPT is used ~3x more in jobs identified as most at risk of automation, yet a large 'capability overhang' persists: for high-risk jobs, theoretical exposure is 90% but realized exposure is only 23.8% (66.2pp gap). Critically, CPS data since 2024Q1 shows unemployment rose MORE in the 'less immediate change' archetype (+0.6pp, to 5.1%) than in high-automation-risk (+0.3pp, to 3.6%), reorganize (+0.3pp), or grow-with-AI (+0.3pp) archetypes — undermining a simple exposure-drives-displacement narrative. Authors emphasize these shares are transition-risk maps, not displacement forecasts.",
+      "weekFeatured": "2026-04-17",
+      "tier": 2
+    },
+    {
       "title": "Tracking the Impact of AI on the Labor Market",
       "author": "Martha Gimbel, Molly Kendall, Natasha Kulsakdinun",
       "publisher": "The Budget Lab at Yale",

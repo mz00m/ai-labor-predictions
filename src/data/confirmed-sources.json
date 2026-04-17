@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-04-17",
-  "totalSources": 525,
-  "verifiedCount": 515,
+  "totalSources": 526,
+  "verifiedCount": 516,
   "sources": {
     "gallup-workplace-ai-feb-2026": {
       "id": "gallup-workplace-ai-feb-2026",
@@ -7395,6 +7395,22 @@
       "usedIn": [
         "genai-work-adoption",
         "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "openai-jobs-transition-framework-2026": {
+      "id": "openai-jobs-transition-framework-2026",
+      "title": "The AI Jobs Transition Framework: Mapping AI's Near-Term Impact on Jobs",
+      "url": "https://cdn.openai.com/pdf/the-ai-jobs-transition-framework_report.pdf",
+      "publisher": "OpenAI Economic Research (Alex Martin Richmond)",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-17",
+      "excerpt": "All 921 occupations (147.9M jobs) sort into four categories: 18% are at a higher short-term automation risk, 46% are less likely to experience near-term change, 12% could grow because of AI, and 24% may see declining employment as their task composition shifts but remaining jobs will still need workers. ChatGPT is used about 3x more in the kinds of jobs our framework identifies as most at risk of automation. Capability overhang by archetype: high-automation-risk jobs show 23.8% realized vs 90.0% theoretical exposure (66.2pp gap); jobs that grow with AI 22.7% vs 72.4% (49.7pp); reorganize 14.9% vs 67.1% (52.3pp); less immediate change 6.4% vs 27.4% (21.0pp). Since 2024Q1, unemployment rose most in jobs we predict to have less immediate change (+0.6pp) vs +0.3pp in higher-automation-risk, reorganize, and grow-with-AI groups — underscoring that exposure alone is a weak predictor of immediate labor market pressure.",
+      "usedIn": [
+        "overall-us-displacement",
+        "workforce-ai-exposure",
+        "genai-work-adoption"
       ],
       "verified": true,
       "synthetic": false

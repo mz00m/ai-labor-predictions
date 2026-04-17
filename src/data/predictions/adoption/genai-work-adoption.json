@@ -384,6 +384,15 @@
       ],
       "evidenceTier": 1,
       "label": "NY Fed SCE: 37% of workplaces don't offer AI tools; 11% actively prohibit"
+    },
+    {
+      "date": "2026-04-17",
+      "direction": "up",
+      "sourceIds": [
+        "openai-jobs-transition-framework-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "OpenAI: ChatGPT used ~3x more in jobs most at risk of automation"
     }
   ],
   "sources": [
@@ -691,6 +700,16 @@
       "datePublished": "2026-04-14",
       "excerpt": "Among currently employed respondents, 39 percent report that they are either using AI tools in their current job or have used AI tools in their jobs in the last twelve months. College graduates are more than twice as likely to have used AI tools at work in the past twelve months as those without a college degree (58.7 percent versus 22.9 percent). AI adoption rises from 15.9 percent among workers earning under $50,000 to 66.3 percent among those earning over $200,000 annually. Around 38 percent of employed respondents said that having training in how to use AI tools is important to them, yet only 15.9 percent report that their employer currently offers any AI training.",
       "dateAdded": "2026-04-15"
+    },
+    {
+      "id": "openai-jobs-transition-framework-2026",
+      "title": "The AI Jobs Transition Framework: Mapping AI's Near-Term Impact on Jobs",
+      "url": "https://cdn.openai.com/pdf/the-ai-jobs-transition-framework_report.pdf",
+      "publisher": "OpenAI Economic Research (Alex Martin Richmond)",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-17",
+      "excerpt": "We find that ChatGPT is used about 3x more in the kinds of jobs our framework identifies as most at risk of automation. This is true even when AI can perform similar tasks in less affected jobs. That gap between capabilities and usage makes the limitation of exposure-only measures clear: capability alone doesn't tell us where change in the labor market is actually happening.",
+      "dateAdded": "2026-04-17"
     }
   ]
 }
