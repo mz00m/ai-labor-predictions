@@ -29,7 +29,7 @@ export default function DemandElasticityPage() {
         </p>
 
         {/* Thesis card */}
-        <div className="border-l-4 border-[var(--accent)] bg-[var(--accent-light)] rounded-r-lg px-5 py-4">
+        <div className="border-l-4 border-[var(--accent)] bg-[var(--accent-light)] rounded-r-lg p-4 sm:p-5">
           <p
             className="text-lg sm:text-xl text-[var(--foreground)] leading-relaxed font-medium"
             style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
@@ -170,7 +170,7 @@ export default function DemandElasticityPage() {
           {/* Condition cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
             <div
-              className="rounded-xl border px-5 py-4"
+              className="rounded-xl border p-4 sm:p-5"
               style={{ borderColor: "#5C61F625" }}
             >
               <div className="flex items-center gap-2 mb-2">
@@ -192,7 +192,7 @@ export default function DemandElasticityPage() {
               </p>
             </div>
             <div
-              className="rounded-xl border px-5 py-4"
+              className="rounded-xl border p-4 sm:p-5"
               style={{ borderColor: "#22c55e25" }}
             >
               <div className="flex items-center gap-2 mb-2">
@@ -371,7 +371,7 @@ export default function DemandElasticityPage() {
 
           {/* Warning card */}
           <div
-            className="rounded-xl border px-5 py-4 mb-6"
+            className="rounded-xl border p-4 sm:p-5 mb-6"
             style={{ borderColor: "#f59e0b30", backgroundColor: "#f59e0b08" }}
           >
             <p className="text-base font-bold text-signal-warning mb-2">
@@ -431,7 +431,7 @@ export default function DemandElasticityPage() {
       {/* ───── Closing ───── */}
       <section className="mb-8">
         <div className="border-t border-card pt-8">
-          <blockquote className="border-l-4 border-[var(--accent)] bg-[var(--accent-light)] rounded-r-lg px-5 py-5 mb-6">
+          <blockquote className="border-l-4 border-[var(--accent)] bg-[var(--accent-light)] rounded-r-lg p-4 sm:p-5 mb-6">
             <p
               className="text-lg sm:text-xl text-[var(--foreground)] leading-[1.75] font-medium"
               style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}

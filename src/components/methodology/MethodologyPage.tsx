@@ -220,7 +220,7 @@ export default function MethodologyPage() {
       </TLDR>
 
       {/* ── Table of Contents ── */}
-      <nav className="border border-card rounded-lg px-5 py-4">
+      <nav className="border border-card rounded-lg p-4 sm:p-5">
         <p className="text-xs font-bold uppercase tracking-widest text-[var(--muted)] mb-3">
           On This Page
         </p>

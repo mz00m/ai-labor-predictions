@@ -78,7 +78,7 @@ export default function TransparencyCosts() {
 
       <div className="space-y-8">
         {/* Total callout */}
-        <div className="border border-card rounded-lg px-5 py-5 bg-white max-w-3xl">
+        <div className="border border-card rounded-lg p-4 sm:p-6 bg-white max-w-3xl">
           <p className="text-base font-bold uppercase tracking-widest text-[var(--accent)] mb-1">
             Total Cost to Date
           </p>

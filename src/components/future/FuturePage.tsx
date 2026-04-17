@@ -34,7 +34,7 @@ export default function FuturePage() {
         </p>
 
         {/* Thesis card */}
-        <div className="border-l-4 border-[var(--accent)] bg-[var(--accent-light)] rounded-r-lg px-5 py-4">
+        <div className="border-l-4 border-[var(--accent)] bg-[var(--accent-light)] rounded-r-lg p-4 sm:p-5">
           <p
             className="text-lg sm:text-xl text-[var(--foreground)] leading-relaxed font-medium"
             style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
@@ -669,7 +669,7 @@ export default function FuturePage() {
       {/* ───── Closing ───── */}
       <section className="mb-12">
         <div className="border-t border-card pt-8">
-          <blockquote className="border-l-4 border-[var(--accent)] bg-[var(--accent-light)] rounded-r-lg px-5 py-5">
+          <blockquote className="border-l-4 border-[var(--accent)] bg-[var(--accent-light)] rounded-r-lg p-4 sm:p-5">
             <p
               className="text-lg sm:text-xl text-[var(--foreground)] leading-[1.75] font-medium"
               style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
@@ -698,7 +698,7 @@ export default function FuturePage() {
           </div>
 
           {/* Source note */}
-          <div className="mt-8 rounded-lg border border-card px-5 py-4">
+          <div className="mt-8 rounded-lg border border-card p-4 sm:p-6">
             <p className="text-xs font-bold uppercase tracking-wider text-[var(--muted)] mb-2">
               Sources &amp; frameworks
             </p>
@@ -887,7 +887,7 @@ function EvidenceCard({
 
   return (
     <div
-      className={`rounded-lg border-l-3 ${compact ? "px-4 py-3" : "px-5 py-4"}`}
+      className={`rounded-lg border-l-3 ${compact ? "px-3 py-2.5" : "p-4 sm:p-5"}`}
       style={{
         borderLeftColor: color,
         borderLeftWidth: 3,
@@ -1061,7 +1061,7 @@ function ServicePillar({
 
   return (
     <div
-      className="rounded-lg border px-5 py-4 cursor-pointer hover:bg-black/[0.01] transition-colors"
+      className="rounded-lg border p-4 sm:p-5 cursor-pointer hover:bg-black/[0.01] transition-colors"
       style={{ borderColor: color + "25" }}
       onClick={() => setOpen(!open)}
     >
@@ -1121,7 +1121,7 @@ function ConditionalCard({
   risk: string;
 }) {
   return (
-    <div className="rounded-lg border border-amber-200/80 bg-amber-50/50 px-5 py-4">
+    <div className="rounded-lg border border-amber-200/80 bg-amber-50/50 p-4 sm:p-6">
       <h4 className="text-base font-bold text-[var(--foreground)] mb-1.5">
         {condition}
       </h4>
