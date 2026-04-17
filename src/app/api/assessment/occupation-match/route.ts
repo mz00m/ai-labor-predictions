@@ -39,27 +39,43 @@ const occupations = enrichedData.occupations.map((o) => ({
 const ALIASES: Record<string, string[]> = {
   // Business ownership / leadership
   owner: [
-    "general-and-operations-managers",
+    "top-executives",
     "food-service-managers",
     "property-real-estate-and-community-association-managers",
     "sales-managers",
     "construction-managers",
   ],
-  founder: ["general-and-operations-managers", "chief-executives"],
-  ceo: ["chief-executives"],
-  entrepreneur: ["general-and-operations-managers", "chief-executives"],
-  "small business": ["general-and-operations-managers", "food-service-managers"],
+  founder: ["top-executives"],
+  ceo: ["top-executives"],
+  entrepreneur: ["top-executives"],
+  "small business": ["top-executives", "food-service-managers"],
   freelancer: ["graphic-designers", "web-developers", "writers-and-authors", "editors"],
   freelance: ["graphic-designers", "web-developers", "writers-and-authors", "editors"],
-  contractor: ["construction-managers", "general-and-operations-managers"],
-  consultant: ["management-analysts", "general-and-operations-managers"],
-  solopreneur: ["general-and-operations-managers"],
+  contractor: ["construction-managers", "top-executives"],
+  consultant: ["management-analysts", "top-executives"],
+  solopreneur: ["top-executives"],
+  "executive director": ["top-executives", "social-and-community-service-managers"],
+  director: ["top-executives"],
+  vp: ["top-executives"],
+  "vice president": ["top-executives"],
+  cfo: ["financial-managers", "top-executives"],
+  cto: ["computer-and-information-systems-managers", "top-executives"],
+  coo: ["top-executives"],
+  "chief officer": ["top-executives"],
+  "program officer": ["top-executives", "social-and-community-service-managers"],
+  "program manager": ["top-executives", "social-and-community-service-managers"],
+  "program director": ["top-executives", "social-and-community-service-managers"],
+  administrator: ["administrative-services-managers", "top-executives"],
+  coordinator: ["social-and-community-service-managers", "top-executives"],
+  superintendent: ["elementary-middle-and-high-school-principals"],
+  principal: ["elementary-middle-and-high-school-principals"],
+  dean: ["postsecondary-education-administrators"],
 
   // Food / hospitality
   bakery: ["bakers", "food-service-managers"],
-  restaurant: ["food-service-managers", "cooks-restaurant", "waiters-and-waitresses"],
-  chef: ["chefs-and-head-cooks", "cooks-restaurant"],
-  barista: ["food-and-beverage-serving-workers"],
+  restaurant: ["food-service-managers", "cooks", "waiters-and-waitresses"],
+  chef: ["chefs-and-head-cooks", "cooks"],
+  barista: ["food-and-beverage-serving-and-related-workers"],
   bartender: ["bartenders"],
   waiter: ["waiters-and-waitresses"],
   waitress: ["waiters-and-waitresses"],
@@ -81,27 +97,27 @@ const ALIASES: Record<string, string[]> = {
   writer: ["writers-and-authors", "editors"],
   photographer: ["photographers"],
   videographer: ["film-and-video-editors-and-camera-operators"],
-  artist: ["fine-artists-including-painters-sculptors-and-illustrators"],
-  illustrator: ["fine-artists-including-painters-sculptors-and-illustrators"],
+  artist: ["craft-and-fine-artists"],
+  illustrator: ["craft-and-fine-artists"],
   musician: ["musicians-and-singers"],
-  journalist: ["reporters-and-correspondents", "editors"],
+  journalist: ["reporters-correspondents-and-broadcast-news-analysts", "editors"],
   blogger: ["writers-and-authors"],
-  copywriter: ["writers-and-authors", "advertising-and-promotions-managers"],
+  copywriter: ["writers-and-authors", "advertising-promotions-and-marketing-managers"],
 
   // Healthcare
   doctor: ["physicians-and-surgeons"],
   physician: ["physicians-and-surgeons"],
   nurse: ["registered-nurses"],
-  dentist: ["dentists-general"],
-  therapist: ["mental-health-counselors", "physical-therapists"],
+  dentist: ["dentists"],
+  therapist: ["substance-abuse-behavioral-disorder-and-mental-health-counselors", "physical-therapists"],
   pharmacist: ["pharmacists"],
   vet: ["veterinarians"],
   veterinarian: ["veterinarians"],
 
   // Education
-  teacher: ["elementary-school-teachers-except-special-education", "secondary-school-teachers-except-special-and-career-technical-education"],
+  teacher: ["kindergarten-and-elementary-school-teachers", "high-school-teachers"],
   professor: ["postsecondary-teachers"],
-  tutor: ["elementary-school-teachers-except-special-education"],
+  tutor: ["kindergarten-and-elementary-school-teachers"],
   instructor: ["postsecondary-teachers"],
 
   // Legal
@@ -119,19 +135,19 @@ const ALIASES: Record<string, string[]> = {
   auditor: ["accountants-and-auditors"],
 
   // Sales / marketing
-  salesperson: ["sales-representatives-wholesale-and-manufacturing"],
-  "sales rep": ["sales-representatives-wholesale-and-manufacturing"],
-  marketer: ["marketing-managers", "market-research-analysts-and-marketing-specialists"],
+  salesperson: ["wholesale-and-manufacturing-sales-representatives"],
+  "sales rep": ["wholesale-and-manufacturing-sales-representatives"],
+  marketer: ["advertising-promotions-and-marketing-managers", "market-research-analysts"],
   realtor: ["real-estate-brokers-and-sales-agents"],
   "real estate agent": ["real-estate-brokers-and-sales-agents"],
   recruiter: ["human-resources-specialists"],
 
   // Admin / office
-  receptionist: ["receptionists-and-information-clerks"],
-  secretary: ["secretaries-and-administrative-assistants-except-legal-medical-and-executive"],
+  receptionist: ["receptionists"],
+  secretary: ["secretaries-and-administrative-assistants"],
   "office manager": ["administrative-services-managers"],
-  assistant: ["secretaries-and-administrative-assistants-except-legal-medical-and-executive"],
-  "executive assistant": ["secretaries-and-administrative-assistants-except-legal-medical-and-executive"],
+  assistant: ["secretaries-and-administrative-assistants"],
+  "executive assistant": ["secretaries-and-administrative-assistants"],
 
   // Trades / labor
   plumber: ["plumbers-pipefitters-and-steamfitters"],
@@ -145,16 +161,144 @@ const ALIASES: Record<string, string[]> = {
 
   // Other common terms
   engineer: ["industrial-engineers", "civil-engineers", "mechanical-engineers"],
-  scientist: ["data-scientists", "biological-scientists"],
+  scientist: ["data-scientists", "natural-sciences-managers"],
   researcher: ["data-scientists", "survey-researchers"],
   hr: ["human-resources-specialists", "human-resources-managers"],
-  "project manager": ["management-analysts", "general-and-operations-managers"],
-  "product manager": ["management-analysts", "general-and-operations-managers"],
-  analyst: ["management-analysts", "financial-analysts", "market-research-analysts-and-marketing-specialists"],
+  "project manager": ["management-analysts", "top-executives"],
+  "product manager": ["management-analysts", "top-executives"],
+  analyst: ["management-analysts", "financial-analysts", "market-research-analysts"],
 };
 
 // Build a slug→occupation lookup for fast alias resolution
 const occupationBySlug = new Map(occupations.map((o) => [o.slug, o]));
+
+// ---------------------------------------------------------------------------
+// Category keyword map: informal sector/industry terms → enriched categories
+// ---------------------------------------------------------------------------
+
+const CATEGORY_KEYWORDS: Record<string, string[]> = {
+  nonprofit: ["community-and-social-service", "management"],
+  "non-profit": ["community-and-social-service", "management"],
+  charity: ["community-and-social-service"],
+  foundation: ["community-and-social-service", "management"],
+  ngo: ["community-and-social-service"],
+  "social services": ["community-and-social-service"],
+  tech: ["computer-and-information-technology"],
+  technology: ["computer-and-information-technology"],
+  software: ["computer-and-information-technology"],
+  it: ["computer-and-information-technology"],
+  healthcare: ["healthcare"],
+  medical: ["healthcare"],
+  hospital: ["healthcare"],
+  clinical: ["healthcare"],
+  finance: ["business-and-financial"],
+  banking: ["business-and-financial"],
+  accounting: ["business-and-financial"],
+  insurance: ["business-and-financial"],
+  education: ["education-training-and-library"],
+  school: ["education-training-and-library"],
+  university: ["education-training-and-library"],
+  academic: ["education-training-and-library"],
+  legal: ["legal"],
+  law: ["legal"],
+  media: ["media-and-communication"],
+  journalism: ["media-and-communication"],
+  publishing: ["media-and-communication"],
+  marketing: ["sales", "media-and-communication"],
+  advertising: ["sales", "media-and-communication"],
+  retail: ["sales"],
+  restaurant: ["food-preparation-and-serving"],
+  hospitality: ["food-preparation-and-serving", "personal-care-and-service"],
+  food: ["food-preparation-and-serving"],
+  construction: ["construction-and-extraction"],
+  manufacturing: ["production"],
+  logistics: ["transportation-and-material-moving"],
+  transportation: ["transportation-and-material-moving"],
+  government: ["management", "community-and-social-service"],
+  military: ["military"],
+  "real estate": ["sales", "business-and-financial"],
+  agriculture: ["farming-fishing-and-forestry"],
+  farming: ["farming-fishing-and-forestry"],
+  design: ["arts-and-design"],
+  creative: ["arts-and-design", "media-and-communication"],
+  science: ["life-physical-and-social-science"],
+  research: ["life-physical-and-social-science"],
+  engineering: ["architecture-and-engineering"],
+  security: ["protective-service"],
+  administration: ["office-and-administrative-support"],
+  office: ["office-and-administrative-support"],
+  clerical: ["office-and-administrative-support"],
+  maintenance: ["installation-maintenance-and-repair"],
+  entertainment: ["entertainment-and-sports"],
+  sports: ["entertainment-and-sports"],
+};
+
+// ---------------------------------------------------------------------------
+// Broad token fallback: match query words against occupation title words,
+// optionally scoped to categories inferred from sector keywords.
+// ---------------------------------------------------------------------------
+
+// Common words to ignore when token-matching
+const STOP_WORDS = new Set([
+  "a", "an", "the", "in", "of", "and", "for", "to", "at", "on", "by",
+  "my", "i", "am", "is", "are", "with", "from", "or", "as", "sector",
+  "industry", "field", "area", "work", "job", "role", "position",
+]);
+
+function broadTokenSearch(queryLower: string): typeof occupations {
+  const tokens = queryLower.split(/\s+/).filter((t) => t.length >= 2 && !STOP_WORDS.has(t));
+  if (tokens.length === 0) return [];
+
+  // Detect category hints from the query
+  const categorySet = new Set<string>();
+  for (const token of tokens) {
+    const cats = CATEGORY_KEYWORDS[token];
+    if (cats) for (const c of cats) categorySet.add(c);
+  }
+  // Also check multi-word category keywords
+  for (const [kw, cats] of Object.entries(CATEGORY_KEYWORDS)) {
+    if (kw.includes(" ") && queryLower.includes(kw)) {
+      for (const c of cats) categorySet.add(c);
+    }
+  }
+
+  const pool = categorySet.size > 0
+    ? occupations.filter((o) => categorySet.has(o.category))
+    : occupations;
+
+  // Title-word tokens that aren't category/stop words
+  const matchTokens = tokens.filter((t) => !CATEGORY_KEYWORDS[t]);
+  if (matchTokens.length === 0 && categorySet.size > 0) {
+    // Only sector keywords, no role words — return top occupations from matched categories
+    return pool
+      .sort((a, b) => b.exposure - a.exposure)
+      .slice(0, 5);
+  }
+
+  // Score each occupation by how many query tokens appear in its title words
+  const scored = pool.map((o) => {
+    const titleWords = o.titleLower.split(/[\s,&()-]+/).filter(Boolean);
+    let hits = 0;
+    for (const token of matchTokens) {
+      if (titleWords.some((w) => w.startsWith(token) || token.startsWith(w))) {
+        hits++;
+      }
+    }
+    return { occ: o, hits };
+  }).filter((x) => x.hits > 0);
+
+  if (scored.length === 0 && categorySet.size > 0) {
+    // No title matches but we have category context — return top category occupations
+    return pool
+      .sort((a, b) => b.exposure - a.exposure)
+      .slice(0, 5);
+  }
+
+  return scored
+    .sort((a, b) => b.hits - a.hits || b.occ.exposure - a.occ.exposure)
+    .slice(0, 5)
+    .map((x) => x.occ);
+}
 
 function aliasSearch(queryLower: string): typeof occupations {
   // Check exact alias match first
@@ -249,7 +393,7 @@ export async function GET(request: NextRequest) {
     .sort((a, b) => b.score - a.score || b.occ.exposure - a.occ.exposure)
     .slice(0, 5);
 
-  // Fallback: if no direct matches, try synonym/alias lookup
+  // Fallback 1: if no direct matches, try synonym/alias lookup
   let finalScored = scored;
   if (scored.length === 0) {
     const aliasHits = aliasSearch(queryLower);
@@ -257,6 +401,12 @@ export async function GET(request: NextRequest) {
       .map((occ) => ({ occ, score: 30 })) // alias match = moderate relevance
       .sort((a, b) => b.occ.exposure - a.occ.exposure)
       .slice(0, 5);
+  }
+
+  // Fallback 2: if still nothing, try broad token + category matching
+  if (finalScored.length === 0) {
+    const broadHits = broadTokenSearch(queryLower);
+    finalScored = broadHits.map((occ) => ({ occ, score: 15 }));
   }
 
   const results: OccupationHit[] = finalScored.map(({ occ }) => ({
