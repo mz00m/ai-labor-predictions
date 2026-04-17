@@ -72,6 +72,54 @@ export async function initAssessmentTables(): Promise<void> {
     EXCEPTION WHEN others THEN NULL;
     END $$;
   `;
+
+  // Unified activity view — joins users, assessments, and feedback into one queryable table
+  await sql`
+    CREATE OR REPLACE VIEW assessment_activity AS
+    SELECT
+      u.email,
+      a.id AS assessment_id,
+      a.status,
+      a.paid,
+      a.add_on_policy,
+      a.intake_json->>'organizationName' AS organization,
+      a.intake_json->>'industry' AS industry,
+      a.intake_json->>'companySize' AS company_size,
+      a.intake_json->>'jobTitle' AS job_title,
+      a.intake_json->>'assessmentScope' AS scope,
+      a.intake_json->>'currentAiUsage' AS ai_maturity,
+      a.current_step,
+      a.preview_generated,
+      a.created_at AS started_at,
+      a.completed_at,
+      EXTRACT(EPOCH FROM (a.completed_at - a.created_at)) / 60 AS duration_minutes,
+      f.rating AS feedback_rating,
+      f.comment AS feedback_comment,
+      f.created_at AS feedback_at
+    FROM assessments a
+    JOIN assessment_users u ON u.id = a.user_id
+    LEFT JOIN assessment_feedback f ON f.assessment_id = a.id
+    ORDER BY a.created_at DESC
+  `;
+
+  // Summary stats view — throughput at a glance
+  await sql`
+    CREATE OR REPLACE VIEW assessment_stats AS
+    SELECT
+      COUNT(*) AS total_assessments,
+      COUNT(*) FILTER (WHERE status = 'complete') AS completed,
+      COUNT(*) FILTER (WHERE status = 'intake') AS in_intake,
+      COUNT(*) FILTER (WHERE status = 'analyzing') AS in_progress,
+      COUNT(*) FILTER (WHERE status = 'error') AS errored,
+      COUNT(*) FILTER (WHERE paid = TRUE) AS paid,
+      COUNT(DISTINCT user_id) AS unique_users,
+      ROUND(AVG(EXTRACT(EPOCH FROM (completed_at - created_at)) / 60)::numeric, 1) AS avg_duration_min,
+      (SELECT ROUND(AVG(rating)::numeric, 1) FROM assessment_feedback) AS avg_rating,
+      (SELECT COUNT(*) FROM assessment_feedback) AS total_feedback,
+      MIN(created_at) AS first_assessment,
+      MAX(created_at) AS latest_assessment
+    FROM assessments
+  `;
 }
 
 /**
