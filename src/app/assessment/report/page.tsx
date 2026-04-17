@@ -964,7 +964,7 @@ export default function ReportPage() {
       )}
 
       {/* Disclaimer */}
-      <div className="mt-12 bg-gray-50 border border-gray-200 rounded-lg px-5 py-4">
+      <div className="mt-12 bg-gray-50 border border-gray-200 rounded-lg p-4 sm:p-6">
         <p className="text-xs leading-[1.7] text-gray-400">
           <span className="font-semibold text-gray-500">Disclaimer:</span> This report is generated using AI and is intended for informational purposes only. It does not constitute professional, legal, financial, or technical advice. The tools, strategies, and recommendations described here are suggestions based on the information you provided and publicly available research. Before implementing any changes to your workflows, adopting new tools, or making organizational decisions based on this report, we strongly encourage you to consult with your internal leadership, IT, legal, compliance, and procurement teams to ensure alignment with your organization&apos;s policies, security requirements, and regulatory obligations. You assume full responsibility for evaluating and acting on any information contained in this report. jobsdata.ai and its affiliates disclaim all liability for any outcomes resulting from the use of this material.
         </p>

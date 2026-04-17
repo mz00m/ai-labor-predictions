@@ -33,7 +33,7 @@ export default function JCurvePage() {
         </p>
 
         {/* Thesis card */}
-        <div className="border-l-4 border-[var(--accent)] bg-[var(--accent-light)] rounded-r-lg px-5 py-4">
+        <div className="border-l-4 border-[var(--accent)] bg-[var(--accent-light)] rounded-r-lg p-4 sm:p-5">
           <p
             className="text-lg sm:text-xl text-[var(--foreground)] leading-relaxed font-medium"
             style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
@@ -198,7 +198,7 @@ export default function JCurvePage() {
       </section>
 
       {/* ───── Aside: The Math (Simplified) ───── */}
-      <aside className="mb-12 rounded-lg border border-strong bg-[var(--accent-light)] px-5 py-5">
+      <aside className="mb-12 rounded-lg border border-strong bg-[var(--accent-light)] p-4 sm:p-5">
         <div className="flex items-center gap-2 mb-3">
           <span className="text-xs font-bold uppercase tracking-widest text-[var(--accent)]">
             The accounting identity
@@ -329,7 +329,7 @@ export default function JCurvePage() {
       {/* ───── Closing ───── */}
       <section className="mb-8">
         <div className="border-t border-card pt-8">
-          <blockquote className="border-l-4 border-[var(--accent)] bg-[var(--accent-light)] rounded-r-lg px-5 py-5 mb-6">
+          <blockquote className="border-l-4 border-[var(--accent)] bg-[var(--accent-light)] rounded-r-lg p-4 sm:p-5 mb-6">
             <p
               className="text-lg sm:text-xl text-[var(--foreground)] leading-[1.75] font-medium"
               style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}

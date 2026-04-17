@@ -99,7 +99,7 @@ export default function CompareClient() {
       </div>
 
       <div className="max-w-3xl">
-        <h1 className="text-5xl sm:text-[48px] font-black tracking-tight text-[var(--foreground)] leading-[1.05] mb-4">
+        <h1 className="text-5xl sm:text-6xl font-extrabold tracking-tight text-[var(--foreground)] leading-[1.05] mb-4">
           Compare Predictions
         </h1>
         <p className="text-lg text-[var(--muted)] leading-relaxed">

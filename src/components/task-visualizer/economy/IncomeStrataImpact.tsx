@@ -116,7 +116,7 @@ export default function IncomeStrataImpact() {
           <div key={detail.tier} className="stagger-enter rounded-xl border border-card overflow-hidden" style={{ animationDelay: `${["high","middle","low"].indexOf(detail.tier) * 0.12}s` }}>
             {/* Tier header */}
             <div
-              className="tier-header-enter px-5 py-4 border-b border-card"
+              className="tier-header-enter p-4 sm:p-5 border-b border-card"
               style={{ backgroundColor: `${meta.color}08` }}
             >
               <div className="flex items-center justify-between">

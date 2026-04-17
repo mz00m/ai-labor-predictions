@@ -46,7 +46,7 @@ function Section({
 }) {
   return (
     <section id={id} className="scroll-mt-20">
-      <h2 className="text-3xl sm:text-heading-lg font-extrabold tracking-tight text-[var(--foreground)] mb-4">
+      <h2 className="text-3xl sm:text-heading-lg font-bold tracking-tight text-[var(--foreground)] mb-4">
         {title}
       </h2>
       {children}
@@ -220,7 +220,7 @@ export default function MethodologyPage() {
       </TLDR>
 
       {/* ── Table of Contents ── */}
-      <nav className="border border-card rounded-lg px-5 py-4">
+      <nav className="border border-card rounded-lg p-4 sm:p-5">
         <p className="text-xs font-bold uppercase tracking-widest text-[var(--muted)] mb-3">
           On This Page
         </p>

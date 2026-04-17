@@ -49,7 +49,7 @@ export default function MethodologyPage() {
         <Link href="/assessment" className="text-sm text-gray-400 hover:text-gray-600 transition-colors">
           &larr; Back to AI Action Plan
         </Link>
-        <h1 className="mt-4 text-heading-2xl sm:text-title font-black tracking-tight text-gray-900 leading-tight">
+        <h1 className="mt-4 text-heading-2xl sm:text-title font-extrabold tracking-tight text-gray-900 leading-tight">
           How Your AI Action Plan<br />Gets Built
         </h1>
         <p className="mt-4 text-xl text-gray-500 leading-relaxed max-w-2xl">

@@ -98,7 +98,7 @@ export default function AboutPage() {
 
         {/* About Matt */}
         <section className="max-w-3xl">
-          <div className="about-card border border-card rounded-lg px-5 py-5 bg-[var(--background)]">
+          <div className="about-card border border-card rounded-lg p-4 sm:p-6 bg-[var(--background)]">
             <p className="text-md font-bold text-[var(--foreground)] mb-2">
               Who&rsquo;s behind this?
             </p>

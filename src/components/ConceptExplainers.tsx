@@ -62,7 +62,7 @@ export default function ConceptExplainers() {
           <Link
             key={c.href}
             href={c.href}
-            className={`group concept-card block border-l-[3px] ${c.accent} rounded-r-lg px-5 py-4 no-underline`}
+            className={`group concept-card block border-l-[3px] ${c.accent} rounded-r-lg p-4 sm:p-5 no-underline`}
           >
             <span className="text-2xs font-bold uppercase tracking-widest text-[var(--muted)] opacity-60">
               {c.tag}

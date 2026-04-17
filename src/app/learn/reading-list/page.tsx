@@ -60,10 +60,10 @@ export default function ReadingListPage() {
   return (
     <main className="max-w-7xl mx-auto px-6 sm:px-10 py-12">
       <header className="mb-10">
-        <h1 className="text-2xl font-bold text-[var(--foreground)] tracking-tight">
+        <h1 className="text-4xl sm:text-5xl font-extrabold text-[var(--foreground)] tracking-tight">
           Reading List
         </h1>
-        <p className="text-sm text-[var(--muted)] mt-2 max-w-2xl leading-relaxed">
+        <p className="text-lg text-[var(--muted)] mt-3 max-w-2xl leading-relaxed">
           A rolling roster of must-read articles on AI and labor markets.
           Curated weekly with key takeaways from each source. Ordered by
           recency, grouped by the week they were featured.
@@ -87,7 +87,7 @@ export default function ReadingListPage() {
                       href={a.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="reading-card group block rounded-lg border border-card bg-black/[0.01] dark:bg-white/[0.02] px-5 py-4 hover:border-black/[0.12] hover:bg-black/[0.03] dark:hover:bg-white/[0.04]"
+                      className="reading-card group block rounded-lg border border-card bg-black/[0.01] dark:bg-white/[0.02] p-4 sm:p-5 hover:border-black/[0.12] hover:bg-black/[0.03] dark:hover:bg-white/[0.04]"
                     >
                       <div className="flex items-start justify-between gap-4">
                         <div className="min-w-0 flex-1">

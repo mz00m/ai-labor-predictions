@@ -119,7 +119,7 @@ export default function ResearchPage() {
         <p className="text-sm font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
           Research Library
         </p>
-        <h1 className="text-5xl sm:text-6xl font-black tracking-tight text-[var(--foreground)] leading-[1.08] mb-3">
+        <h1 className="text-5xl sm:text-6xl font-extrabold tracking-tight text-[var(--foreground)] leading-[1.08] mb-3">
           All Sources
         </h1>
         <p className="text-lg text-[var(--muted)] leading-relaxed max-w-2xl">

@@ -195,7 +195,7 @@ export default function PredictionDetailPage() {
         <p className="text-base font-bold uppercase tracking-widest text-[var(--muted)] mb-4">
           {prediction.category === "displacement" ? "Job Displacement" : prediction.category === "wages" ? "Wage Impact" : prediction.category === "adoption" ? "AI Adoption" : "Other"} | {prediction.timeHorizon}
         </p>
-        <h1 className="text-heading-xl sm:text-title font-black tracking-tight text-[var(--foreground)] leading-[1.08] mb-6">
+        <h1 className="text-heading-xl sm:text-title font-extrabold tracking-tight text-[var(--foreground)] leading-[1.08] mb-6">
           {prediction.title}
         </h1>
 
@@ -323,7 +323,7 @@ export default function PredictionDetailPage() {
       <div className="relative -mx-6 sm:-mx-10 -mt-4">
         <div className="h-1 bg-gradient-to-r from-[#5C61F6] via-[#E8A090] to-[#F66B5C]" />
         <div className="px-6 sm:px-10 pt-8 pb-2">
-          <h2 className="text-4xl sm:text-5xl font-black tracking-tight text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-[var(--foreground)] leading-tight mb-3">
             {prediction.timeHorizon.toLowerCase().includes("current")
               ? "Indicators Over Time"
               : hasBothTypes ? "Observed Data & Projections" : "Predictions Over Time"}
@@ -347,7 +347,7 @@ export default function PredictionDetailPage() {
 
       {/* Disclaimer callout - shown when sources use incompatible definitions */}
       {prediction.disclaimer && (
-        <div className="border border-[#d97706]/20 bg-[#d97706]/[0.04] rounded-lg px-5 py-4 max-w-2xl -mt-4">
+        <div className="border border-[#d97706]/20 bg-[#d97706]/[0.04] rounded-lg p-4 sm:p-6 max-w-2xl -mt-4">
           <p className="text-base text-[var(--muted)] leading-relaxed">
             <span className="font-semibold text-[var(--signal-warning-muted)]">Note:</span>{" "}
             {prediction.disclaimer}
@@ -457,7 +457,7 @@ export default function PredictionDetailPage() {
       <div className="flex flex-col sm:flex-row gap-4 max-w-2xl">
         <Link
           href="/task-visualizer"
-          className="flex-1 group border border-card rounded-lg px-5 py-4 bg-[var(--background)] hover:border-[var(--accent)]/40 transition-colors"
+          className="flex-1 group border border-card rounded-lg p-4 sm:p-5 bg-[var(--background)] hover:border-[var(--accent)]/40 transition-colors"
         >
           <p className="text-base font-bold uppercase tracking-widest text-[var(--muted)] mb-1">
             Task Visualizer
@@ -471,7 +471,7 @@ export default function PredictionDetailPage() {
         </Link>
         <Link
           href="/task-visualizer/economy"
-          className="flex-1 group border border-card rounded-lg px-5 py-4 bg-[var(--background)] hover:border-[var(--accent)]/40 transition-colors"
+          className="flex-1 group border border-card rounded-lg p-4 sm:p-5 bg-[var(--background)] hover:border-[var(--accent)]/40 transition-colors"
         >
           <p className="text-base font-bold uppercase tracking-widest text-[var(--muted)] mb-1">
             Full Economy Picture
@@ -499,7 +499,7 @@ export default function PredictionDetailPage() {
       </section>
 
       {/* Suggest a Source */}
-      <div className="border border-card rounded-lg px-5 py-5 bg-[var(--background)] max-w-xl">
+      <div className="border border-card rounded-lg p-4 sm:p-6 bg-[var(--background)] max-w-xl">
         <p className="text-md text-[var(--muted)] leading-relaxed">
           <span className="font-semibold text-[var(--foreground)]">
             Know a study we&rsquo;re missing?
