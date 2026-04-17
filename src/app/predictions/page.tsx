@@ -27,7 +27,7 @@ export default function PredictionsPage() {
       <div className="relative -mx-6 sm:-mx-10">
         <div className="h-1 bg-gradient-to-r from-[#3ECFAE] via-[#6B7BF7] to-[#F7C96B]" />
         <div className="px-6 sm:px-10 pt-10 pb-2">
-          <h1 className="text-4xl sm:text-5xl font-black tracking-tight text-[var(--foreground)] leading-tight mb-3">
+          <h1 className="text-4xl sm:text-5xl font-black tracking-tight text-[var(--foreground)] leading-tight mb-4">
             Predictions Over Time
           </h1>
           <p className="text-lg text-[var(--muted)] leading-relaxed max-w-2xl">
@@ -79,7 +79,7 @@ export default function PredictionsPage() {
         </section>
 
         {/* Wage Impact */}
-        <section id="wages" className="mt-12">
+        <section id="wages" className="mt-16">
           <ScrollReveal>
             <div className="mb-8 flex items-start gap-3">
               <div className="w-1 self-stretch rounded-full bg-blue-400/60 shrink-0" />
@@ -107,7 +107,7 @@ export default function PredictionsPage() {
 
         {/* AI Adoption */}
         {adoption.length > 0 && (
-          <section className="mt-12">
+          <section className="mt-16">
             <ScrollReveal>
               <div className="mb-8 flex items-start gap-3">
                 <div className="w-1 self-stretch rounded-full bg-emerald-400/60 shrink-0" />
@@ -139,7 +139,7 @@ export default function PredictionsPage() {
         )}
 
         {/* Research Feed */}
-        <section id="research-feed" className="mt-10">
+        <section id="research-feed" className="mt-16">
           <ResearchFeed selectedTiers={selectedTiers} />
         </section>
       </div>
