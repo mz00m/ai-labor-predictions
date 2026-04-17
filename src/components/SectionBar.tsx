@@ -29,7 +29,7 @@ export default function SectionBar({
   return (
     <Link
       href={href}
-      className={`group relative block -mx-6 sm:-mx-10 px-6 sm:px-10 border-t border-black/[0.06] no-underline ${featured ? "py-7 sm:py-9" : "py-5 sm:py-6"} ${className ?? ""}`}
+      className={`group relative block -mx-6 sm:-mx-10 px-6 sm:px-10 border-t border-card no-underline ${featured ? "py-7 sm:py-9" : "py-5 sm:py-6"} ${className ?? ""}`}
       style={{ transition: "background-color 0.2s ease" }}
       onMouseEnter={(e) => {
         e.currentTarget.style.backgroundColor = `${accentColor}${featured ? "0F" : "0A"}`;
@@ -70,7 +70,7 @@ export default function SectionBar({
         {/* Text block */}
         <div className="flex-1 min-w-0">
           <div className="flex items-baseline gap-3 mb-1">
-            <h2 className={`section-title ${featured ? "text-[20px] sm:text-[26px]" : "text-2xl sm:text-3xl"} font-extrabold tracking-tight text-[var(--foreground)] leading-snug`}>
+            <h2 className={`section-title ${featured ? "text-heading-sm sm:text-heading-lg" : "text-2xl sm:text-3xl"} font-extrabold tracking-tight text-[var(--foreground)] leading-snug`}>
               {title}
             </h2>
             {tag && (
@@ -93,7 +93,7 @@ export default function SectionBar({
             className={`hidden sm:flex items-baseline gap-1.5 shrink-0 ${featured ? "opacity-60 group-hover:opacity-100 translate-x-0" : "opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0"}`}
             style={{ transition: "opacity 0.2s ease, transform 0.2s ease" }}
           >
-            <span className={`${featured ? "text-[24px]" : "text-[20px]"} font-black tracking-tight`} style={{ color: accentColor }}>
+            <span className={`${featured ? "text-heading" : "text-heading-sm"} font-black tracking-tight`} style={{ color: accentColor }}>
               {stat.value}
             </span>
             <span className="text-2xs text-[var(--muted)] uppercase tracking-wider">

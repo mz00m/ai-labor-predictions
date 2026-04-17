@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function FiveVariablesEssay() {
   return (
     <article id="essay" className="max-w-[740px] mx-auto prose-custom scroll-mt-40 sm:scroll-mt-24">
-      <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-6">
+      <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-6">
         The Wrong Question About AI and Jobs
       </h2>
 
@@ -421,7 +421,7 @@ export default function FiveVariablesEssay() {
           understanding means asking five questions instead of one.
         </p>
 
-        <div className="border-t border-black/[0.06] pt-4 mt-8">
+        <div className="border-t border-card pt-4 mt-8">
           <p className="text-sm text-[var(--muted)] leading-[1.7]">
             For the full scoring methodology, including data sources, weights,
             and academic citations for each variable, see the{" "}

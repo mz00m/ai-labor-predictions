@@ -87,7 +87,7 @@ function ToolAdoptionTooltip({
   if (!active || !payload || payload.length === 0) return null;
   const val = payload[0]?.value as number;
   return (
-    <div className="bg-white border border-black/[0.08] rounded-lg px-3 py-2 shadow-sm text-sm">
+    <div className="bg-white border border-strong rounded-lg px-3 py-2 shadow-sm text-sm">
       <p className="text-[var(--muted)] mb-0.5">{label}</p>
       <p className="font-mono font-medium text-[var(--foreground)]">
         {formatDownloads(val)} downloads
@@ -104,7 +104,7 @@ function EmploymentTooltip({
   if (!active || !payload || payload.length === 0) return null;
   const val = payload[0]?.value as number;
   return (
-    <div className="bg-white border border-black/[0.08] rounded-lg px-3 py-2 shadow-sm text-sm">
+    <div className="bg-white border border-strong rounded-lg px-3 py-2 shadow-sm text-sm">
       <p className="text-[var(--muted)] mb-0.5">{label}</p>
       <p className="font-mono font-medium text-[var(--foreground)]">
         {val.toLocaleString(undefined, { maximumFractionDigits: 1 })}K jobs
@@ -214,9 +214,9 @@ export default function IndustryDetail({
   }, [bls, industryConfig]);
 
   return (
-    <div className="mt-3 rounded-xl border border-black/[0.06] bg-white p-4 sm:p-6">
+    <div className="mt-3 rounded-xl border border-card bg-white p-4 sm:p-6">
       {/* Explainer */}
-      <div className="mb-6 p-4 rounded-lg bg-black/[0.02] border border-black/[0.04]">
+      <div className="mb-6 p-4 rounded-lg bg-black/[0.02] border border-divider">
         <p className="text-base font-semibold text-[var(--foreground)] mb-1">
           What this means
         </p>
@@ -228,7 +228,7 @@ export default function IndustryDetail({
       {/* Sparkline cards: Tool Adoption + Employment */}
       <div className="mb-6 grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* Card 1: Tool Adoption */}
-        <div className="rounded-lg border border-black/[0.04] p-4">
+        <div className="rounded-lg border border-divider p-4">
           <p className="text-2xs font-bold uppercase tracking-[0.08em] text-[var(--muted)] mb-2">
             AI Tool Adoption
           </p>
@@ -324,7 +324,7 @@ export default function IndustryDetail({
 
         {/* Card 2: Employment per BLS series */}
         {employmentSeriesData.length > 0 && (
-          <div className="rounded-lg border border-black/[0.04] p-4">
+          <div className="rounded-lg border border-divider p-4">
             <p className="text-2xs font-bold uppercase tracking-[0.08em] text-[var(--muted)] mb-3">
               Employment in AI-Exposed Sectors
             </p>
@@ -443,7 +443,7 @@ export default function IndustryDetail({
               .map((cat) => (
                 <div
                   key={cat.pipelineTag}
-                  className="rounded-lg border border-black/[0.04] p-4"
+                  className="rounded-lg border border-divider p-4"
                 >
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-sm font-semibold text-[var(--foreground)]">
@@ -453,7 +453,7 @@ export default function IndustryDetail({
                       {cat.modelCount} models tracked
                     </span>
                   </div>
-                  <div className="text-[20px] font-bold font-mono text-[var(--foreground)] stat-number">
+                  <div className="text-heading-sm font-bold font-mono text-[var(--foreground)] stat-number">
                     {formatDownloads(cat.totalDownloads)}
                     <span className="text-xs font-normal text-[var(--muted)] ml-1">
                       downloads
@@ -490,7 +490,7 @@ export default function IndustryDetail({
         <div className="overflow-x-auto">
           <table className="w-full text-left">
             <thead>
-              <tr className="border-b border-black/[0.06]">
+              <tr className="border-b border-card">
                 <th className="text-2xs font-bold uppercase tracking-[0.08em] text-[var(--muted)] px-3 py-2">
                   Tool
                 </th>
@@ -537,7 +537,7 @@ export default function IndustryDetail({
                           </span>
                           {pkg.isSurging && (
                             <span
-                              className="ml-1.5 text-[9px] font-semibold uppercase tracking-wider px-1.5 py-0.5 rounded-full"
+                              className="ml-1.5 text-3xs font-semibold uppercase tracking-wider px-1.5 py-0.5 rounded-full"
                               style={{
                                 backgroundColor: "rgba(245, 158, 11, 0.12)",
                                 color: "#d97706",
@@ -550,7 +550,7 @@ export default function IndustryDetail({
                             {pkg.label}
                           </p>
                           {otherIndustries.length > 0 && (
-                            <p className="text-[9px] text-[var(--accent)] mt-0.5">
+                            <p className="text-3xs text-[var(--accent)] mt-0.5">
                               Also in: {otherIndustries.join(", ")}
                             </p>
                           )}

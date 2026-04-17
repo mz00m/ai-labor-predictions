@@ -218,7 +218,7 @@ export default function ProgressPage() {
   return (
     <div className="max-w-3xl mx-auto px-6 sm:px-10 py-12">
       {/* Header */}
-      <h1 className="text-4xl sm:text-[32px] font-bold text-gray-900 leading-tight mb-2 tracking-tight">
+      <h1 className="text-4xl sm:text-heading-2xl font-bold text-gray-900 leading-tight mb-2 tracking-tight">
         Your AI Action Plan
       </h1>
       <p className="text-md text-gray-400 mb-8">
@@ -275,7 +275,7 @@ export default function ProgressPage() {
             <div className="mb-6">
               <div className="flex items-center gap-3 mb-3">
                 <span className="text-base font-medium text-gray-700">AI Readiness Score</span>
-                <span className="text-[20px] font-bold text-accent">
+                <span className="text-heading-sm font-bold text-accent">
                   {report.organizationProfile.aiReadinessScore}/10
                 </span>
               </div>
@@ -394,7 +394,7 @@ export default function ProgressPage() {
       {!completedSteps.has(activeStep) && (
         <div className="mt-8">
           <div className="mb-6">
-            <h2 className="text-[20px] font-bold text-gray-900 mb-1">
+            <h2 className="text-heading-sm font-bold text-gray-900 mb-1">
               Step {activeStepIndex + 1}: {STEP_LABELS[activeStep]}
             </h2>
             <p className="text-base text-gray-400">

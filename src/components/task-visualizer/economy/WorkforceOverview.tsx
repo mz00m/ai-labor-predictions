@@ -42,7 +42,7 @@ function CustomTooltip({ active, payload }: TooltipProps<number, string>) {
   const uncertainty = EXPOSURE_UNCERTAINTY[d.id];
   const neiData = CFO_SURVEY_NEI[d.id];
   return (
-    <div className="bg-white rounded-lg border border-black/[0.08] shadow-lg p-3 max-w-[280px]">
+    <div className="bg-white rounded-lg border border-strong shadow-lg p-3 max-w-[280px]">
       <p className="text-base font-semibold text-[var(--foreground)]">{d.title}</p>
       <div className="mt-1.5 space-y-0.5 text-sm">
         <div className="flex justify-between gap-4">
@@ -66,7 +66,7 @@ function CustomTooltip({ active, payload }: TooltipProps<number, string>) {
           </span>
         </div>
         {(uncertainty || SOC_EXPOSURE_SCORES[d.id]) && (
-          <div className="mt-1 pt-1 border-t border-black/[0.06] space-y-0.5">
+          <div className="mt-1 pt-1 border-t border-card space-y-0.5">
             {SOC_EXPOSURE_SCORES[d.id] && (
               <div className="flex justify-between gap-4">
                 <span className="text-[var(--muted)]">AI exposure score</span>
@@ -109,7 +109,7 @@ function CustomTooltip({ active, payload }: TooltipProps<number, string>) {
         )}
       </div>
       {jobIds.length > 0 && (
-        <p className="text-2xs text-[var(--accent)] mt-2 pt-1.5 border-t border-black/[0.06]">
+        <p className="text-2xs text-[var(--accent)] mt-2 pt-1.5 border-t border-card">
           Click to explore individual jobs in this group
         </p>
       )}
@@ -162,7 +162,7 @@ export default function WorkforceOverview() {
     <div>
       {/* Big stat */}
       <div className="grid grid-cols-1 sm:grid-cols-4 gap-3 mb-8">
-        <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-black/[0.06] p-4">
+        <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-card p-4">
           <p className="text-4xl font-bold text-[var(--foreground)] tracking-tight">
             {(TOTAL_EMPLOYMENT / 1000).toFixed(1)}M
           </p>
@@ -271,7 +271,7 @@ export default function WorkforceOverview() {
       </div>
 
       {/* Legend */}
-      <div className="flex gap-4 mt-3 pt-3 border-t border-black/[0.06]">
+      <div className="flex gap-4 mt-3 pt-3 border-t border-card">
         {(["low", "middle", "high"] as const).map((tier) => {
           const isActive = selectedTiers.has(tier);
           return (

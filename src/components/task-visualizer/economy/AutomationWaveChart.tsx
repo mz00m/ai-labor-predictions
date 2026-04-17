@@ -30,7 +30,7 @@ function CustomTooltip({ active, payload, label }: TooltipProps<number, string>)
   const hasRange = dataPoint?.lowSlow !== undefined;
 
   return (
-    <div className="bg-white rounded-lg border border-black/[0.08] shadow-lg p-3">
+    <div className="bg-white rounded-lg border border-strong shadow-lg p-3">
       <p className="text-sm font-semibold text-[var(--foreground)] mb-1.5">{label}</p>
       <p className="text-2xs text-[var(--muted)] mb-1">Baseline cost crossover by income tier:</p>
       {[...filtered].reverse().map((p) => (
@@ -40,7 +40,7 @@ function CustomTooltip({ active, payload, label }: TooltipProps<number, string>)
         </div>
       ))}
       {hasRange && (
-        <p className="text-2xs text-[var(--muted)] mt-1.5 pt-1.5 border-t border-black/[0.06]">
+        <p className="text-2xs text-[var(--muted)] mt-1.5 pt-1.5 border-t border-card">
           Shaded bands show slow/fast scenario range
         </p>
       )}
@@ -177,7 +177,7 @@ export default function AutomationWaveChart() {
       </div>
 
       {/* Legend */}
-      <div className="flex gap-4 mt-3 pt-3 border-t border-black/[0.06]">
+      <div className="flex gap-4 mt-3 pt-3 border-t border-card">
         {(["low", "middle", "high"] as const).map((tier) => (
           <div key={tier} className="flex items-center gap-1.5">
             <div

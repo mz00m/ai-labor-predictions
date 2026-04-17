@@ -51,7 +51,7 @@ function CustomTooltip({ active, payload }: TooltipProps<number, string>) {
   const d = payload[0].payload as ScatterPoint;
   const neiData = CFO_SURVEY_NEI[d.id];
   return (
-    <div className="bg-white rounded-lg border border-black/[0.08] shadow-lg p-3 max-w-[260px]">
+    <div className="bg-white rounded-lg border border-strong shadow-lg p-3 max-w-[260px]">
       <p className="text-base font-semibold text-[var(--foreground)]">{d.shortTitle}</p>
       <div className="mt-1.5 space-y-0.5 text-sm">
         <div className="flex justify-between gap-4">
@@ -70,7 +70,7 @@ function CustomTooltip({ active, payload }: TooltipProps<number, string>) {
           <span className="text-[var(--muted)]">Women</span>
           <span className="font-medium">{d.womenPercent}%</span>
         </div>
-        <div className="flex justify-between gap-4 mt-1 pt-1 border-t border-black/[0.06]">
+        <div className="flex justify-between gap-4 mt-1 pt-1 border-t border-card">
           <span className="text-[var(--muted)]">Income tier</span>
           <span className="font-medium" style={{ color: INCOME_TIER_META[d.incomeTier].color }}>
             {INCOME_TIER_META[d.incomeTier].label}
@@ -86,7 +86,7 @@ function CustomTooltip({ active, payload }: TooltipProps<number, string>) {
         )}
       </div>
       {d.hasJobs && (
-        <p className="text-2xs text-[var(--accent)] mt-2 pt-1.5 border-t border-black/[0.06]">
+        <p className="text-2xs text-[var(--accent)] mt-2 pt-1.5 border-t border-card">
           Click to explore individual jobs in this group
         </p>
       )}
@@ -144,7 +144,7 @@ export default function AdaptiveCapacity() {
     <div>
       {/* Headline stats */}
       <div className="grid grid-cols-1 sm:grid-cols-4 gap-3 mb-8">
-        <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-black/[0.06] p-4" style={{ animationDelay: "0s" }}>
+        <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-card p-4" style={{ animationDelay: "0s" }}>
           <p className="text-4xl font-bold tracking-tight text-[var(--foreground)]">
             r = 0.50
           </p>
@@ -152,7 +152,7 @@ export default function AdaptiveCapacity() {
             AI exposure and adaptive capacity are positively correlated
           </p>
         </div>
-        <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-black/[0.06] p-4" style={{ animationDelay: "0.08s" }}>
+        <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-card p-4" style={{ animationDelay: "0.08s" }}>
           <p className="text-4xl font-bold tracking-tight text-[var(--signal-positive-muted)]">
             71%
           </p>
@@ -160,7 +160,7 @@ export default function AdaptiveCapacity() {
             of highly-exposed workers have above-median adaptability
           </p>
         </div>
-        <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-black/[0.06] p-4" style={{ animationDelay: "0.16s" }}>
+        <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-card p-4" style={{ animationDelay: "0.16s" }}>
           <p className="text-4xl font-bold tracking-tight text-signal-negative">
             6.1M
           </p>
@@ -168,7 +168,7 @@ export default function AdaptiveCapacity() {
             workers with high exposure + low adaptability
           </p>
         </div>
-        <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-black/[0.06] p-4" style={{ animationDelay: "0.24s" }}>
+        <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-card p-4" style={{ animationDelay: "0.24s" }}>
           <p className="text-4xl font-bold tracking-tight text-[#EC4899]">
             81%
           </p>
@@ -314,7 +314,7 @@ export default function AdaptiveCapacity() {
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-black/[0.06]">
+                <tr className="border-b border-card">
                   <th className="text-left py-2 pr-3 text-[var(--foreground)] font-semibold">Occupation</th>
                   <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold">Workers</th>
                   <th className="text-right py-2 px-3 text-[var(--foreground)] font-semibold">AI Exposure</th>

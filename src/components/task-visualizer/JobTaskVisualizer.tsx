@@ -317,10 +317,10 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
               if (selectedJob) setSearchQuery("");
             }}
             placeholder="Search for your job title..."
-            className="w-full max-w-lg px-4 py-3 rounded-xl border border-black/[0.08] text-md text-[var(--foreground)] placeholder:text-[var(--muted)] focus:outline-none focus:border-[var(--accent)] focus:ring-1 focus:ring-[var(--accent)]"
+            className="w-full max-w-lg px-4 py-3 rounded-xl border border-strong text-md text-[var(--foreground)] placeholder:text-[var(--muted)] focus:outline-none focus:border-[var(--accent)] focus:ring-1 focus:ring-[var(--accent)]"
           />
           {searchQuery && !selectedJob && filteredJobs.length > 0 && (
-            <div className="absolute top-full left-0 right-0 max-w-lg mt-1 bg-white rounded-xl border border-black/[0.08] shadow-lg max-h-[280px] overflow-y-auto z-30">
+            <div className="absolute top-full left-0 right-0 max-w-lg mt-1 bg-white rounded-xl border border-strong shadow-lg max-h-[280px] overflow-y-auto z-30">
               {filteredJobs.map((job: JobProfile) => {
                 const colors = DEFAULT_CATEGORY_STYLE;
                 return (
@@ -345,7 +345,7 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
             </div>
           )}
           {searchQuery && !selectedJob && filteredJobs.length === 0 && (
-            <div className="absolute top-full left-0 right-0 max-w-lg mt-1 bg-white rounded-xl border border-black/[0.08] shadow-lg z-30">
+            <div className="absolute top-full left-0 right-0 max-w-lg mt-1 bg-white rounded-xl border border-strong shadow-lg z-30">
               <p className="text-base text-[var(--muted)] px-4 py-3">
                 No matching jobs found.
               </p>
@@ -424,10 +424,10 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
       {selectedJob && (
         <>
           {/* Header with job info */}
-          <div className="mb-6 pb-6 border-b border-black/[0.06]">
+          <div className="mb-6 pb-6 border-b border-card">
             <div className="flex flex-wrap items-center justify-between gap-y-2 mb-3">
               <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-                <h2 className="text-[20px] font-bold text-[var(--foreground)] tracking-tight">
+                <h2 className="text-heading-sm font-bold text-[var(--foreground)] tracking-tight">
                   {selectedJob.title}
                 </h2>
                 <button
@@ -450,7 +450,7 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
             {/* Scannable stat pills - each links to its explainer */}
             <div className="flex flex-wrap gap-2 mb-4">
               <ExposureTooltip>
-                <div className="exposure-score relative inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-black/[0.02] border border-black/[0.06] overflow-hidden cursor-help">
+                <div className="exposure-score relative inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-black/[0.02] border border-card overflow-hidden cursor-help">
                   <ExposureParticles score={exposureScoreRaw} trigger={particleTrigger} />
                   <p
                     className="text-xl font-bold tracking-tight relative z-10 leading-none"
@@ -473,7 +473,7 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
 
               <button
                 onClick={() => setActiveTab("breakdown")}
-                className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-black/[0.02] border border-black/[0.06] text-xs text-[var(--muted)] hover:border-[var(--accent)] hover:text-[var(--foreground)] transition-colors"
+                className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-black/[0.02] border border-card text-xs text-[var(--muted)] hover:border-[var(--accent)] hover:text-[var(--foreground)] transition-colors"
               >
                 <span className="text-md font-bold text-[var(--foreground)]" style={{ fontFamily: "'DM Mono', monospace" }}>
                   {selectedJob.tasks.length}
@@ -481,7 +481,7 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
                 tasks analyzed
               </button>
 
-              <span className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-black/[0.02] border border-black/[0.06] text-xs text-[var(--muted)]">
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-black/[0.02] border border-card text-xs text-[var(--muted)]">
                 <span className="text-md font-bold text-[var(--foreground)]" style={{ fontFamily: "'DM Mono', monospace" }}>
                   ${selectedJob.medianWagePerHr}
                 </span>
@@ -492,7 +492,7 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
                 href={`https://www.bls.gov/ooh/${selectedJob.category.toLowerCase().replace(/[^a-z0-9]+/g, "-")}/`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-black/[0.02] border border-black/[0.06] text-xs text-[var(--muted)] hover:border-[var(--accent)] hover:text-[var(--foreground)] transition-colors"
+                className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-black/[0.02] border border-card text-xs text-[var(--muted)] hover:border-[var(--accent)] hover:text-[var(--foreground)] transition-colors"
               >
                 {selectedJob.category}
                 <svg width="10" height="10" viewBox="0 0 16 16" fill="none" className="opacity-40">
@@ -604,7 +604,7 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
             {/* Right: Visualizations */}
             <div>
               {/* Tab bar */}
-              <div className="flex gap-1 mb-5 border-b border-black/[0.06]">
+              <div className="flex gap-1 mb-5 border-b border-card">
                 {tabs.map((tab) => (
                   <button
                     key={tab.id}
@@ -667,7 +667,7 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
           </div>
 
           {/* Bottom share bar */}
-          <div className="mt-6 pt-4 border-t border-black/[0.06] flex items-center justify-between">
+          <div className="mt-6 pt-4 border-t border-card flex items-center justify-between">
             <p className="text-xs text-[var(--muted)]">
               Know someone in this field? Share this breakdown with them.
             </p>

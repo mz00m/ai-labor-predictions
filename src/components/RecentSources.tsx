@@ -54,7 +54,7 @@ export default function RecentSources({ sources }: RecentSourcesProps) {
         }}
       >
         {/* Header */}
-        <div className="px-4 py-3 border-b border-black/[0.04]">
+        <div className="px-4 py-3 border-b border-divider">
           <h3 className="text-xs font-semibold uppercase tracking-widest text-[var(--muted)] opacity-50">
             Recently Added
           </h3>
@@ -107,12 +107,12 @@ export default function RecentSources({ sources }: RecentSourcesProps) {
                     </p>
                     <div className="flex items-center gap-1.5 mt-0.5">
                       <span
-                        className="text-[9px] font-medium opacity-60"
+                        className="text-3xs font-medium opacity-60"
                         style={{ color: config.color }}
                       >
                         {config.shortLabel}
                       </span>
-                      <span className="text-[9px] text-[var(--muted)] opacity-25">
+                      <span className="text-3xs text-[var(--muted)] opacity-25">
                         ·
                       </span>
                       <span className="text-2xs text-[var(--muted)] opacity-40">

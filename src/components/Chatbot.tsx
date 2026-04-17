@@ -473,10 +473,10 @@ export default function Chatbot({ sourceCount }: ChatbotProps) {
       {/* Chat panel - anchored top-right, below navbar */}
       <div
         ref={panelRef}
-        className="fixed top-14 right-4 sm:right-8 z-[70] w-[400px] max-w-[calc(100vw-2rem)] h-[min(560px,calc(100vh-5rem))] bg-white rounded-xl border border-black/[0.08] shadow-2xl flex flex-col overflow-hidden animate-in fade-in slide-in-from-top-2 duration-200"
+        className="fixed top-14 right-4 sm:right-8 z-[70] w-[400px] max-w-[calc(100vw-2rem)] h-[min(560px,calc(100vh-5rem))] bg-white rounded-xl border border-strong shadow-2xl flex flex-col overflow-hidden animate-in fade-in slide-in-from-top-2 duration-200"
       >
         {/* Header */}
-        <div className="flex items-center justify-between px-4 py-3 border-b border-black/[0.06] bg-[var(--accent)] text-white shrink-0">
+        <div className="flex items-center justify-between px-4 py-3 border-b border-card bg-[var(--accent)] text-white shrink-0">
           <div className="flex items-center gap-2.5">
             <MiniRobot speaking={streaming} />
             <div>
@@ -591,7 +591,7 @@ export default function Chatbot({ sourceCount }: ChatbotProps) {
         {/* Input area */}
         <form
           onSubmit={handleSubmit}
-          className="shrink-0 border-t border-black/[0.06] px-3 py-2 flex items-end gap-2"
+          className="shrink-0 border-t border-card px-3 py-2 flex items-end gap-2"
         >
           <textarea
             ref={inputRef}

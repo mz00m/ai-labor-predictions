@@ -55,7 +55,7 @@ function CustomTooltip({ active, payload, label }: TooltipProps<number, string>)
   if (!active || !payload || payload.length === 0) return null;
 
   return (
-    <div className="bg-white border border-black/[0.08] rounded-lg p-3.5 shadow-sm min-w-[160px]">
+    <div className="bg-white border border-strong rounded-lg p-3.5 shadow-sm min-w-[160px]">
       <p className="text-sm font-medium text-[var(--foreground)] mb-2">{label}</p>
       {payload.map((entry) => (
         <div key={entry.dataKey} className="flex items-center justify-between gap-4 py-0.5">
@@ -86,7 +86,7 @@ export default function AgeUsageTile() {
   return (
     <section id="age-usage" className="mt-12">
       <div className="mb-8">
-        <h2 className="text-4xl sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
+        <h2 className="text-4xl sm:text-title-sm font-extrabold tracking-tight text-[var(--foreground)]">
           {ageUsageData.title}
         </h2>
         <p className="text-lg text-[var(--muted)] mt-2 max-w-2xl">
@@ -96,7 +96,7 @@ export default function AgeUsageTile() {
         </p>
       </div>
 
-      <div className="border border-black/[0.06] rounded-lg bg-white p-5 sm:p-6">
+      <div className="border border-card rounded-lg bg-white p-5 sm:p-6">
         {/* Summary badges */}
         <div className="flex flex-wrap gap-2 mb-5">
           {ageUsageData.ageBrackets.map((bracket) => {
@@ -163,7 +163,7 @@ export default function AgeUsageTile() {
         </div>
 
         {/* Key takeaway */}
-        <div className="mt-5 p-3 rounded-md bg-black/[0.02] border border-black/[0.06]">
+        <div className="mt-5 p-3 rounded-md bg-black/[0.02] border border-card">
           <p className="text-sm text-[var(--foreground)] leading-relaxed">
             <span className="font-bold">Key trend:</span>{" "}
             The 18-25 age group dominates ChatGPT usage with ~{last["18-25"]}% of
@@ -175,7 +175,7 @@ export default function AgeUsageTile() {
         </div>
 
         {/* Source attribution */}
-        <div className="mt-4 pt-3 border-t border-black/[0.06]">
+        <div className="mt-4 pt-3 border-t border-card">
           <p className="text-xs text-[var(--muted)] leading-relaxed">
             Source:{" "}
             <a

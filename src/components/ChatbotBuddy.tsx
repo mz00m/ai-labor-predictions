@@ -270,7 +270,7 @@ export default function ChatbotBuddy({ sourceCount }: { sourceCount?: number }) 
     >
       {/* Speech bubble */}
       <div
-        className={`absolute whitespace-nowrap bg-white border border-black/[0.08] rounded-lg px-3 py-1.5 text-sm font-medium text-[#1A1A2E] shadow-lg transition-all ${
+        className={`absolute whitespace-nowrap bg-white border border-strong rounded-lg px-3 py-1.5 text-sm font-medium text-[#1A1A2E] shadow-lg transition-all ${
           reducedMotion ? "duration-0" : "duration-300"
         } ${
           showBubble

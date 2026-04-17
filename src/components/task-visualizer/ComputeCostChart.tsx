@@ -41,7 +41,7 @@ const LINE_COLORS = [
 function CustomTooltip({ active, payload, label }: TooltipProps<number, string>) {
   if (!active || !payload?.length) return null;
   return (
-    <div className="bg-white rounded-lg border border-black/[0.08] shadow-lg p-3 max-w-[260px]">
+    <div className="bg-white rounded-lg border border-strong shadow-lg p-3 max-w-[260px]">
       <p className="text-sm font-semibold text-[var(--foreground)] mb-2">{label}</p>
       {payload
         .filter((p) => p.value !== undefined && p.dataKey !== "humanCost")
@@ -57,7 +57,7 @@ function CustomTooltip({ active, payload, label }: TooltipProps<number, string>)
           );
         })}
       {payload.find((p) => p.dataKey === "humanCost") && (
-        <div className="flex justify-between text-xs mt-1 pt-1 border-t border-black/[0.06]">
+        <div className="flex justify-between text-xs mt-1 pt-1 border-t border-card">
           <span className="text-[var(--muted)]">Your wage</span>
           <span className="font-medium">
             ${payload.find((p) => p.dataKey === "humanCost")?.value?.toFixed(0)}/hr
@@ -92,7 +92,7 @@ function ComputeFloorSummary({
   const formatCost = (v: number) => v < 1 ? `$${v.toFixed(3)}` : `$${v.toFixed(2)}`;
 
   return (
-    <div className="mt-4 pt-4 border-t border-black/[0.06]">
+    <div className="mt-4 pt-4 border-t border-card">
       <div className="flex flex-wrap items-baseline gap-x-6 gap-y-2">
         <div>
           <span className="text-2xs text-[var(--muted)] uppercase tracking-wider">
@@ -202,7 +202,7 @@ export default function ComputeCostChart({
   return (
     <div>
       {/* Explanation */}
-      <div className="rounded-lg bg-black/[0.02] border border-black/[0.06] p-3 mb-5">
+      <div className="rounded-lg bg-black/[0.02] border border-card p-3 mb-5">
         <p className="text-sm text-[var(--foreground)] leading-relaxed">
           Each line shows the <strong>total production cost for AI to perform one hour</strong> of
           a task: raw API cost plus a {DEPLOYMENT_OVERHEAD}x deployment overhead
@@ -307,7 +307,7 @@ export default function ComputeCostChart({
       </p>
 
       {/* Token economics breakdown */}
-      <div className="mt-6 pt-5 border-t border-black/[0.06]">
+      <div className="mt-6 pt-5 border-t border-card">
         <h4 className="text-base font-semibold text-[var(--foreground)] mb-1">
           How we calculate cost per task
         </h4>
@@ -318,7 +318,7 @@ export default function ComputeCostChart({
         <div className="overflow-x-auto">
           <table className="w-full text-xs">
             <thead>
-              <tr className="border-b border-black/[0.06]">
+              <tr className="border-b border-card">
                 <th className="text-left py-1.5 pr-2 text-[var(--foreground)] font-semibold">Task</th>
                 <th className="text-right py-1.5 px-2 text-[var(--foreground)] font-semibold">Model tier</th>
                 <th className="text-right py-1.5 px-2 text-[var(--foreground)] font-semibold">In tokens</th>

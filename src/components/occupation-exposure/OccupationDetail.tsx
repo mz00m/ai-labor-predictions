@@ -88,7 +88,7 @@ function DimensionalityDetail({ dim }: { dim: DimensionalityMeta }) {
   const sourceLabel = dim.source === "cfo" ? "CFO survey" : "Task heuristic";
 
   return (
-    <div className="ml-0 mb-3 pl-3 border-l-2 border-black/[0.06]">
+    <div className="ml-0 mb-3 pl-3 border-l-2 border-card">
       <div className="flex items-center gap-2 mb-1">
         <span
           className="inline-flex items-center gap-1 text-2xs font-bold px-1.5 py-0.5 rounded"
@@ -133,7 +133,7 @@ export default function OccupationDetail({ occupation, onClose }: Props) {
         : "Lower displacement risk";
 
   return (
-    <div className="border border-black/[0.08] rounded-xl bg-white p-5 sm:p-6 relative">
+    <div className="border border-strong rounded-xl bg-white p-5 sm:p-6 relative">
       <button
         onClick={onClose}
         className="absolute top-4 right-4 text-[var(--muted)] hover:text-[var(--foreground)] transition-colors"
@@ -150,7 +150,7 @@ export default function OccupationDetail({ occupation, onClose }: Props) {
         <p className="text-xs font-bold uppercase tracking-widest text-[var(--muted)] mb-1">
           {group.socCode}
         </p>
-        <h3 className="text-[20px] sm:text-[24px] font-bold text-[var(--foreground)] leading-tight mb-2">
+        <h3 className="text-heading-sm sm:text-heading font-bold text-[var(--foreground)] leading-tight mb-2">
           {group.title}
         </h3>
 
@@ -230,7 +230,7 @@ export default function OccupationDetail({ occupation, onClose }: Props) {
 
       {/* Task visualizer link */}
       {jobIds.length > 0 && (
-        <div className="border-t border-black/[0.06] pt-3 mt-3">
+        <div className="border-t border-card pt-3 mt-3">
           <p className="text-xs font-bold uppercase tracking-widest text-[var(--muted)] mb-2">
             Explore individual jobs in this group
           </p>

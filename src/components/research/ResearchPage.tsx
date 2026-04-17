@@ -151,7 +151,7 @@ export default function ResearchPage() {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search sources by title, publisher, or keyword..."
-          className="w-full pl-11 pr-4 py-3 text-md rounded-lg border border-black/[0.08] bg-white text-[var(--foreground)] placeholder:text-[var(--muted)]/60 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/30 focus:border-[var(--accent)]/40 transition-all"
+          className="w-full pl-11 pr-4 py-3 text-md rounded-lg border border-strong bg-white text-[var(--foreground)] placeholder:text-[var(--muted)]/60 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/30 focus:border-[var(--accent)]/40 transition-all"
         />
         {query && (
           <button
@@ -229,7 +229,7 @@ export default function ResearchPage() {
           {grouped.map(([monthKey, sources]) => (
             <div key={monthKey}>
               {/* Month header */}
-              <div className="sticky top-[49px] z-30 bg-white/95 backdrop-blur-sm border-b border-black/[0.04] -mx-6 sm:-mx-10 px-6 sm:px-10 py-2 mt-6 first:mt-0">
+              <div className="sticky top-[49px] z-30 bg-white/95 backdrop-blur-sm border-b border-divider -mx-6 sm:-mx-10 px-6 sm:px-10 py-2 mt-6 first:mt-0">
                 <h2 className="text-base font-bold text-[var(--foreground)]">
                   {formatMonthHeader(monthKey)}
                   <span className="ml-2 text-xs font-normal text-[var(--muted)]">

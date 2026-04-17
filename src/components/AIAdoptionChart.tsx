@@ -49,7 +49,7 @@ function AdoptionTooltip({
   if (!data) return null;
 
   return (
-    <div className="bg-white border border-black/[0.08] rounded-lg p-3.5 max-w-xs shadow-sm">
+    <div className="bg-white border border-strong rounded-lg p-3.5 max-w-xs shadow-sm">
       <p className="text-sm font-medium text-[var(--foreground)] mb-1.5">
         {data.date}
         {data.estimated && (

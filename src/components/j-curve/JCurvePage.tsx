@@ -24,7 +24,7 @@ export default function JCurvePage() {
           The Productivity J-Curve
         </h1>
         <p
-          className="text-2xl sm:text-[20px] text-[var(--muted)] leading-relaxed mb-5"
+          className="text-2xl sm:text-heading-sm text-[var(--muted)] leading-relaxed mb-5"
           style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
         >
           Why transformative technologies make productivity look{" "}
@@ -57,9 +57,9 @@ export default function JCurvePage() {
       </header>
       {/* ───── Section 1: The Paradox ───── */}
       <section className="mb-12">
-        <div className="border-t border-black/[0.06] pt-8">
+        <div className="border-t border-card pt-8">
           <SectionLabel number="01" />
-          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-3">
             The Productivity Paradox
           </h2>
           <div className="space-y-4 text-md text-[var(--muted)] leading-[1.75] mb-6">
@@ -112,9 +112,9 @@ export default function JCurvePage() {
 
       {/* ───── Section 2: The J-Curve ───── */}
       <section className="mb-12">
-        <div className="border-t border-black/[0.06] pt-8">
+        <div className="border-t border-card pt-8">
           <SectionLabel number="02" />
-          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-3">
             The J-Curve Explained
           </h2>
           <p className="text-md text-[var(--muted)] leading-[1.75] mb-6">
@@ -135,9 +135,9 @@ export default function JCurvePage() {
 
       {/* ───── Section 3: Why It Happens ───── */}
       <section className="mb-12">
-        <div className="border-t border-black/[0.06] pt-8">
+        <div className="border-t border-card pt-8">
           <SectionLabel number="03" />
-          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-3">
             Why It Happens: The Intangible Investment Gap
           </h2>
           <div className="space-y-4 text-md text-[var(--muted)] leading-[1.75] mb-6">
@@ -198,7 +198,7 @@ export default function JCurvePage() {
       </section>
 
       {/* ───── Aside: The Math (Simplified) ───── */}
-      <aside className="mb-12 rounded-lg border border-black/[0.08] bg-[var(--accent-light)] px-5 py-5">
+      <aside className="mb-12 rounded-lg border border-strong bg-[var(--accent-light)] px-5 py-5">
         <div className="flex items-center gap-2 mb-3">
           <span className="text-xs font-bold uppercase tracking-widest text-[var(--accent)]">
             The accounting identity
@@ -245,9 +245,9 @@ export default function JCurvePage() {
 
       {/* ───── Section 5: Historical Evidence ───── */}
       <section className="mb-12">
-        <div className="border-t border-black/[0.06] pt-8">
+        <div className="border-t border-card pt-8">
           <SectionLabel number="04" />
-          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-3">
             Three Waves, One Pattern
           </h2>
           <p className="text-md text-[var(--muted)] leading-[1.75] mb-6">
@@ -263,9 +263,9 @@ export default function JCurvePage() {
 
       {/* ───── Section 6: What This Means for AI ───── */}
       <section className="mb-12">
-        <div className="border-t border-black/[0.06] pt-8">
+        <div className="border-t border-card pt-8">
           <SectionLabel number="05" />
-          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-3">
             What This Means for AI Today
           </h2>
           <div className="space-y-4 text-md text-[var(--muted)] leading-[1.75] mb-6">
@@ -328,7 +328,7 @@ export default function JCurvePage() {
 
       {/* ───── Closing ───── */}
       <section className="mb-8">
-        <div className="border-t border-black/[0.06] pt-8">
+        <div className="border-t border-card pt-8">
           <blockquote className="border-l-4 border-[var(--accent)] bg-[var(--accent-light)] rounded-r-lg px-5 py-5 mb-6">
             <p
               className="text-lg sm:text-xl text-[var(--foreground)] leading-[1.75] font-medium"
@@ -342,7 +342,7 @@ export default function JCurvePage() {
           </blockquote>
 
           {/* Source citation */}
-          <div className="border border-black/[0.06] rounded-lg px-4 py-3">
+          <div className="border border-card rounded-lg px-4 py-3">
             <p className="text-xs font-bold uppercase tracking-wider text-[var(--muted)] mb-2">
               Source
             </p>
@@ -464,14 +464,14 @@ function StatCard({
     >
       {emphasis && (
         <span
-          className="absolute top-2 right-2 text-[8px] font-bold uppercase tracking-widest px-1.5 py-0.5 rounded-full"
+          className="absolute top-2 right-2 text-3xs font-bold uppercase tracking-widest px-1.5 py-0.5 rounded-full"
           style={{ backgroundColor: color + "20", color }}
         >
           Now
         </span>
       )}
       <p
-        className={emphasis ? "text-[30px] font-black" : "text-[24px] font-black"}
+        className={emphasis ? "text-heading-xl font-black" : "text-heading font-black"}
         style={{ color }}
       >
         {targetNum !== null && visible ? (

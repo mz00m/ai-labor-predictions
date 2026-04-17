@@ -318,7 +318,7 @@ function PathCard({
   return (
     <div
       className={`rounded-xl border ${
-        isExpanded ? "border-black/[0.12] shadow-sm" : "border-black/[0.06]"
+        isExpanded ? "border-black/[0.12] shadow-sm" : "border-card"
       } bg-white`}
       style={{
         transition: reducedMotion ? "none" : "border-color 150ms ease, box-shadow 150ms ease",
@@ -389,7 +389,7 @@ function PathCard({
       >
         <div style={{ overflow: "hidden" }}>
           <div className="px-4 sm:px-5 pb-4 sm:pb-5">
-            <div className="border-t border-black/[0.06] pt-4">
+            <div className="border-t border-card pt-4">
               {/* Research */}
               <p className="text-2xs font-bold uppercase tracking-[0.08em] text-[var(--muted)] mb-2">
                 Research
@@ -547,7 +547,7 @@ export default function ProductivityPaths() {
 
       {/* Section heading */}
       <div className="mb-6">
-        <h2 className="text-4xl sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
+        <h2 className="text-4xl sm:text-title-sm font-extrabold tracking-tight text-[var(--foreground)]">
           What Happens When Workers Get More Productive?
         </h2>
         <p className="text-lg text-[var(--muted)] mt-2 max-w-2xl">
@@ -557,7 +557,7 @@ export default function ProductivityPaths() {
       </div>
 
       {/* Main card with starting node + branching paths */}
-      <div className="rounded-xl border border-black/[0.06] bg-white p-4 sm:p-6">
+      <div className="rounded-xl border border-card bg-white p-4 sm:p-6">
         {/* Starting node */}
         <div className="flex justify-center mb-4">
           <div className="node-pulse inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[var(--accent-light)] border border-[var(--accent)]/20">
@@ -586,7 +586,7 @@ export default function ProductivityPaths() {
       </div>
 
       {/* J-Curve note */}
-      <div className="mt-4 rounded-xl border border-black/[0.06] bg-white p-4 sm:p-6">
+      <div className="mt-4 rounded-xl border border-card bg-white p-4 sm:p-6">
         <div className="flex items-start gap-3">
           <div
             className="w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-0.5"

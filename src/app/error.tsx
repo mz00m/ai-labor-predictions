@@ -12,7 +12,7 @@ export default function Error({
       <div className="w-10 h-10 rounded-full border-2 border-[var(--border)] flex items-center justify-center mb-6">
         <span className="text-[var(--muted)] text-lg font-semibold">!</span>
       </div>
-      <h2 className="text-[20px] font-bold text-[var(--foreground)] mb-2">
+      <h2 className="text-heading-sm font-bold text-[var(--foreground)] mb-2">
         Something went wrong
       </h2>
       <p className="text-md text-[var(--muted)] max-w-md mb-6">

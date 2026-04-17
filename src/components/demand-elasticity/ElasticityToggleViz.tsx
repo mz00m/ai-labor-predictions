@@ -210,7 +210,7 @@ export default function ElasticityToggleViz() {
   const zeroPercent = valueToPercent(0);
 
   return (
-    <div className="rounded-xl border border-black/[0.06] bg-white p-4 sm:p-6">
+    <div className="rounded-xl border border-card bg-white p-4 sm:p-6">
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-6">
         <div>
@@ -495,7 +495,7 @@ export default function ElasticityToggleViz() {
       </div>
 
       {/* Legend */}
-      <div className="flex flex-wrap items-center gap-4 mt-4 pt-3 border-t border-black/[0.06]">
+      <div className="flex flex-wrap items-center gap-4 mt-4 pt-3 border-t border-card">
         <div className="flex items-center gap-1.5">
           <span className="w-3 h-2 rounded-sm bg-signal-negative opacity-85" />
           <span className="text-xs text-[var(--muted)]">

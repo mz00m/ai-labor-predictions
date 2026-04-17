@@ -55,7 +55,7 @@ export default function ComparisonMatrix() {
                 Cognitive Capability
               </th>
             </tr>
-            <tr className="border-b border-black/[0.06]">
+            <tr className="border-b border-card">
               <th className="pb-3 pr-4" />
               <th className="pb-3 px-3 text-xs font-semibold text-[var(--muted)] text-center">
                 Pre-Electricity
@@ -81,7 +81,7 @@ export default function ComparisonMatrix() {
             {ROWS.map((row) => (
               <tr
                 key={row.label}
-                className="border-b border-black/[0.04]"
+                className="border-b border-divider"
               >
                 <td className="py-3 pr-4 text-sm font-semibold text-[var(--foreground)]">
                   {row.label}
@@ -119,7 +119,7 @@ export default function ComparisonMatrix() {
       {/* Mobile: stacked cards */}
       <div className="lg:hidden space-y-4">
         {/* Electricity pair */}
-        <div className="border border-black/[0.06] rounded-lg overflow-hidden">
+        <div className="border border-card rounded-lg overflow-hidden">
           <div
             className="px-4 py-2 text-sm font-bold uppercase tracking-wider"
             style={{ backgroundColor: "#dbeafe", color: "#2563eb" }}
@@ -129,7 +129,7 @@ export default function ComparisonMatrix() {
           {ROWS.map((row) => (
             <div
               key={`elec-${row.label}`}
-              className="px-4 py-3 border-b border-black/[0.04]"
+              className="px-4 py-3 border-b border-divider"
             >
               <div className="text-xs font-semibold text-[var(--foreground)] mb-1.5">
                 {row.label}
@@ -166,7 +166,7 @@ export default function ComparisonMatrix() {
         </div>
 
         {/* AI pair */}
-        <div className="border border-black/[0.06] rounded-lg overflow-hidden">
+        <div className="border border-card rounded-lg overflow-hidden">
           <div
             className="px-4 py-2 text-sm font-bold uppercase tracking-wider"
             style={{ backgroundColor: "#ede9fe", color: "#7c3aed" }}
@@ -176,7 +176,7 @@ export default function ComparisonMatrix() {
           {ROWS.map((row) => (
             <div
               key={`ai-${row.label}`}
-              className="px-4 py-3 border-b border-black/[0.04]"
+              className="px-4 py-3 border-b border-divider"
             >
               <div className="text-xs font-semibold text-[var(--foreground)] mb-1.5">
                 {row.label}

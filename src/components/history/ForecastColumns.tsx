@@ -50,7 +50,7 @@ export default function ForecastColumns() {
         {FORECASTS.map((f) => (
           <div
             key={f.term}
-            className="border border-black/[0.06] rounded-lg overflow-hidden"
+            className="border border-card rounded-lg overflow-hidden"
           >
             {/* Header */}
             <div
@@ -95,7 +95,7 @@ export default function ForecastColumns() {
       </div>
 
       {/* Historical calibration note */}
-      <div className="mt-6 border-l-2 border-black/[0.08] pl-4 py-1">
+      <div className="mt-6 border-l-2 border-strong pl-4 py-1">
         <p className="text-xs text-[var(--muted)] leading-relaxed italic">
           <span className="font-semibold not-italic">
             Historical calibration:

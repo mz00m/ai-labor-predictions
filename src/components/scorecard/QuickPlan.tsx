@@ -88,7 +88,7 @@ export default function QuickPlan({
   const [goal, setGoal] = useState("");
   const [loading, setLoading] = useState(false);
   const [plan, setPlan] = useState<QuickPlanResult | null>(null);
-  const [source, setSource] = useState<"haiku" | "fallback" | null>(null);
+  const [, setSource] = useState<"haiku" | "fallback" | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   const canSubmit = teamSize && industry && goal.trim().length > 0;
@@ -133,27 +133,178 @@ export default function QuickPlan({
     }
   }
 
-  // Not started yet: show CTA button
+  // ---------------------------------------------------------------------------
+  // CTA state — matches "3 ways to level up" card pattern
+  // ---------------------------------------------------------------------------
+
   if (!showForm && !plan) {
     return (
       <div className="rounded-2xl border border-gray-200 bg-white p-6 sm:p-8 mb-6">
-        <div className="text-center">
-          <h2 className="text-lg font-bold text-gray-900 mb-2">
-            Want a personalized action plan?
-          </h2>
-          <p className="text-sm text-gray-500 mb-5 max-w-md mx-auto">
-            Answer 3 quick questions and get a tailored plan with specific tools,
-            timelines, and actions for your role. Free, takes 30 seconds.
-          </p>
-          <button
-            onClick={() => setShowForm(true)}
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-white font-semibold hover:opacity-90 transition-opacity"
-            style={{ backgroundColor: accentColor }}
+        <h2 className="text-sm font-bold uppercase tracking-wide text-gray-400 mb-3">
+          Personalized plan
+        </h2>
+        <p className="text-sm text-gray-600 leading-relaxed mb-5">
+          Answer 3 quick questions and get a tailored action plan with specific
+          tools, timelines, and next steps for your role.
+        </p>
+        <button
+          onClick={() => setShowForm(true)}
+          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-white text-sm font-semibold hover:opacity-90 transition-opacity"
+          style={{ backgroundColor: accentColor }}
+        >
+          Get your plan
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           >
-            Get your personalized plan
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+    );
+  }
+
+  // ---------------------------------------------------------------------------
+  // Plan result — single card with subsections
+  // ---------------------------------------------------------------------------
+
+  if (plan) {
+    return (
+      <div className="rounded-2xl border border-gray-200 bg-white p-6 sm:p-8 mb-6">
+        <h2 className="text-sm font-bold uppercase tracking-wide text-gray-400 mb-4">
+          Your personalized plan
+        </h2>
+
+        {/* Summary */}
+        <p className="text-sm text-gray-600 leading-relaxed mb-5">
+          {plan.summary}
+        </p>
+
+        {/* First week focus — uses accent bg like score band pill */}
+        <div
+          className="rounded-xl p-4 mb-6"
+          style={{ backgroundColor: accentBg }}
+        >
+          <span
+            className="text-xs font-bold uppercase tracking-wide"
+            style={{ color: accentColor }}
+          >
+            Start here
+          </span>
+          <p className="text-sm text-gray-700 mt-1 leading-relaxed">
+            {plan.firstWeekFocus}
+          </p>
+        </div>
+
+        {/* Action items — matches "3 ways to level up" inner cards */}
+        <div className="space-y-3 mb-6">
+          {plan.actions.map((action, i) => (
+            <div
+              key={i}
+              className="border border-gray-100 rounded-xl p-4"
+            >
+              <div className="flex items-start gap-3">
+                <span
+                  className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white shrink-0 mt-0.5"
+                  style={{ backgroundColor: accentColor }}
+                >
+                  {i + 1}
+                </span>
+                <div className="min-w-0 flex-1">
+                  <div className="flex items-start justify-between gap-3">
+                    <h3 className="font-semibold text-gray-900">
+                      {action.title}
+                    </h3>
+                    <span
+                      className="shrink-0 text-xs font-medium px-2 py-0.5 rounded-full"
+                      style={{
+                        backgroundColor: accentBg,
+                        color: accentColor,
+                      }}
+                    >
+                      {action.timeline}
+                    </span>
+                  </div>
+                  <p className="text-sm text-gray-600 leading-relaxed mt-1">
+                    {action.description}
+                  </p>
+                  {action.toolName && (
+                    <div className="mt-2">
+                      {action.toolUrl ? (
+                        <a
+                          href={action.toolUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 text-xs font-medium no-underline hover:underline"
+                          style={{ color: accentColor }}
+                        >
+                          {action.toolName}
+                          <svg
+                            width="10"
+                            height="10"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          >
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                            <polyline points="15 3 21 3 21 9" />
+                            <line x1="10" y1="14" x2="21" y2="3" />
+                          </svg>
+                        </a>
+                      ) : (
+                        <span className="text-xs font-medium text-gray-400">
+                          Tool: {action.toolName}
+                        </span>
+                      )}
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Time savings — matches "Estimated time savings" section */}
+        <div className="border-t border-gray-100 pt-5 mb-5">
+          <h3 className="text-sm font-bold uppercase tracking-wide text-gray-400 mb-2">
+            Estimated savings
+          </h3>
+          <div className="flex items-baseline gap-2">
+            <span
+              className="text-2xl font-black tabular-nums"
+              style={{ color: accentColor }}
+            >
+              {plan.weeklyTimeSaved}
+            </span>
+          </div>
+          <p className="text-xs text-gray-400 mt-1">
+            With full implementation of this plan.
+          </p>
+        </div>
+
+        {/* Deep dive CTA — quiet secondary action */}
+        <div className="border-t border-gray-100 pt-5">
+          <p className="text-sm text-gray-500 mb-3">
+            Want a deeper analysis with file uploads and a multi-step
+            assessment?
+          </p>
+          <a
+            href={`/assessment/start?occupation=${encodeURIComponent(slug)}&industry=${encodeURIComponent(industry)}&teamSize=${encodeURIComponent(teamSize)}`}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-200 text-sm font-medium text-gray-600 hover:bg-gray-50 transition-colors no-underline"
+          >
+            Full deep dive
             <svg
-              width="16"
-              height="16"
+              width="12"
+              height="12"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -163,177 +314,16 @@ export default function QuickPlan({
             >
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
-          </button>
+          </a>
         </div>
       </div>
     );
   }
 
-  // Show the plan result
-  if (plan) {
-    return (
-      <div className="space-y-6 mb-6">
-        {/* Summary */}
-        <div className="rounded-2xl border border-gray-200 bg-white p-6 sm:p-8">
-          <div className="flex items-center gap-2 mb-3">
-            <h2 className="text-sm font-bold uppercase tracking-wide text-gray-400">
-              Your personalized plan
-            </h2>
-            {source === "haiku" && (
-              <span className="text-[10px] font-medium px-1.5 py-0.5 rounded-full bg-gray-100 text-gray-400">
-                AI-generated
-              </span>
-            )}
-          </div>
-          <p className="text-gray-700 leading-relaxed">{plan.summary}</p>
+  // ---------------------------------------------------------------------------
+  // Form state — single card, matching section header pattern
+  // ---------------------------------------------------------------------------
 
-          {/* First week focus callout */}
-          <div
-            className="mt-4 rounded-lg p-4"
-            style={{ backgroundColor: accentBg }}
-          >
-            <div className="flex items-start gap-2">
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke={accentColor}
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="shrink-0 mt-0.5"
-              >
-                <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z" />
-              </svg>
-              <div>
-                <span
-                  className="text-xs font-bold uppercase tracking-wide"
-                  style={{ color: accentColor }}
-                >
-                  Start here
-                </span>
-                <p className="text-sm text-gray-700 mt-0.5">
-                  {plan.firstWeekFocus}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Action items */}
-        <div className="rounded-2xl border border-gray-200 bg-white p-6 sm:p-8">
-          <h2 className="text-sm font-bold uppercase tracking-wide text-gray-400 mb-4">
-            Your action items
-          </h2>
-          <div className="space-y-4">
-            {plan.actions.map((action, i) => (
-              <div
-                key={i}
-                className="border border-gray-100 rounded-xl p-4"
-              >
-                <div className="flex items-start gap-3">
-                  <span
-                    className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white shrink-0 mt-0.5"
-                    style={{ backgroundColor: accentColor }}
-                  >
-                    {i + 1}
-                  </span>
-                  <div className="min-w-0 flex-1">
-                    <div className="flex items-start justify-between gap-3">
-                      <h3 className="font-semibold text-gray-900">
-                        {action.title}
-                      </h3>
-                      <span className="shrink-0 text-xs font-medium px-2 py-0.5 rounded-full bg-gray-100 text-gray-500">
-                        {action.timeline}
-                      </span>
-                    </div>
-                    <p className="text-sm text-gray-600 leading-relaxed mt-1">
-                      {action.description}
-                    </p>
-                    {action.toolName && (
-                      <div className="mt-2">
-                        {action.toolUrl ? (
-                          <a
-                            href={action.toolUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1 text-xs font-medium no-underline hover:underline"
-                            style={{ color: accentColor }}
-                          >
-                            {action.toolName}
-                            <svg
-                              width="10"
-                              height="10"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            >
-                              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                              <polyline points="15 3 21 3 21 9" />
-                              <line x1="10" y1="14" x2="21" y2="3" />
-                            </svg>
-                          </a>
-                        ) : (
-                          <span className="text-xs font-medium text-gray-400">
-                            Tool: {action.toolName}
-                          </span>
-                        )}
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Time savings + deep dive CTA */}
-        <div className="rounded-2xl border border-gray-200 bg-white p-6 sm:p-8">
-          <div className="flex items-baseline gap-2 mb-3">
-            <span
-              className="text-2xl font-black tabular-nums"
-              style={{ color: accentColor }}
-            >
-              {plan.weeklyTimeSaved}
-            </span>
-          </div>
-          <p className="text-xs text-gray-400 mb-5">
-            Estimated savings with full implementation of this plan.
-          </p>
-          <div className="border-t border-gray-100 pt-5">
-            <p className="text-sm text-gray-600 mb-3">
-              Want a deeper analysis with file uploads, website review, and a
-              multi-step AI assessment?
-            </p>
-            <a
-              href={`/assessment/start?occupation=${encodeURIComponent(slug)}&industry=${encodeURIComponent(industry)}&teamSize=${encodeURIComponent(teamSize)}`}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-gray-200 text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors no-underline"
-            >
-              Get the full deep dive
-              <svg
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  // Show the form (loading or input state)
   return (
     <div className="rounded-2xl border border-gray-200 bg-white p-6 sm:p-8 mb-6">
       <h2 className="text-sm font-bold uppercase tracking-wide text-gray-400 mb-4">
@@ -345,7 +335,7 @@ export default function QuickPlan({
         <div>
           <label
             htmlFor="qp-team"
-            className="block text-sm font-medium text-gray-700 mb-1"
+            className="block text-sm font-medium text-gray-700 mb-1.5"
           >
             Team size
           </label>
@@ -354,7 +344,12 @@ export default function QuickPlan({
             value={teamSize}
             onChange={(e) => setTeamSize(e.target.value)}
             disabled={loading}
-            className="w-full px-3 py-2.5 rounded-lg border border-gray-200 bg-white text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-[#5C61F6] focus:border-transparent disabled:opacity-50"
+            className="w-full px-3 py-2.5 rounded-xl border border-gray-200 bg-white text-gray-900 text-sm focus:outline-none focus:ring-2 focus:border-transparent disabled:opacity-50"
+            style={
+              {
+                "--tw-ring-color": accentColor,
+              } as React.CSSProperties
+            }
           >
             <option value="">Select team size</option>
             {TEAM_SIZES.map((s) => (
@@ -369,7 +364,7 @@ export default function QuickPlan({
         <div>
           <label
             htmlFor="qp-industry"
-            className="block text-sm font-medium text-gray-700 mb-1"
+            className="block text-sm font-medium text-gray-700 mb-1.5"
           >
             Industry
           </label>
@@ -378,7 +373,12 @@ export default function QuickPlan({
             value={industry}
             onChange={(e) => setIndustry(e.target.value)}
             disabled={loading}
-            className="w-full px-3 py-2.5 rounded-lg border border-gray-200 bg-white text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-[#5C61F6] focus:border-transparent disabled:opacity-50"
+            className="w-full px-3 py-2.5 rounded-xl border border-gray-200 bg-white text-gray-900 text-sm focus:outline-none focus:ring-2 focus:border-transparent disabled:opacity-50"
+            style={
+              {
+                "--tw-ring-color": accentColor,
+              } as React.CSSProperties
+            }
           >
             <option value="">Select industry</option>
             {INDUSTRIES.map((ind) => (
@@ -393,7 +393,7 @@ export default function QuickPlan({
         <div>
           <label
             htmlFor="qp-goal"
-            className="block text-sm font-medium text-gray-700 mb-1"
+            className="block text-sm font-medium text-gray-700 mb-1.5"
           >
             What&apos;s your main goal with AI?
           </label>
@@ -405,19 +405,19 @@ export default function QuickPlan({
             placeholder="e.g., I spend too much time on weekly reports and want to automate the data gathering..."
             rows={3}
             maxLength={500}
-            className="w-full px-3 py-2.5 rounded-lg border border-gray-200 bg-white text-gray-900 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#5C61F6] focus:border-transparent resize-none disabled:opacity-50"
+            className="w-full px-3 py-2.5 rounded-xl border border-gray-200 bg-white text-gray-900 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:border-transparent resize-none disabled:opacity-50"
+            style={
+              {
+                "--tw-ring-color": accentColor,
+              } as React.CSSProperties
+            }
           />
-          <div className="text-right">
-            <span className="text-xs text-gray-400">
-              {goal.length}/500
-            </span>
-          </div>
         </div>
 
         {/* Error */}
         {error && (
-          <div className="rounded-lg bg-red-50 border border-red-200 px-4 py-3">
-            <p className="text-sm text-red-700">{error}</p>
+          <div className="rounded-xl bg-red-50 border border-red-100 px-4 py-3">
+            <p className="text-sm text-red-600">{error}</p>
           </div>
         )}
 
@@ -425,13 +425,13 @@ export default function QuickPlan({
         <button
           type="submit"
           disabled={!canSubmit || loading}
-          className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-white font-semibold transition-opacity disabled:opacity-50"
+          className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg text-white text-sm font-semibold transition-opacity disabled:opacity-40"
           style={{ backgroundColor: accentColor }}
         >
           {loading ? (
             <>
               <svg
-                className="animate-spin h-4 w-4"
+                className="animate-spin h-3.5 w-3.5"
                 viewBox="0 0 24 24"
                 fill="none"
               >
@@ -449,14 +449,14 @@ export default function QuickPlan({
                   className="opacity-75"
                 />
               </svg>
-              Generating your plan...
+              Generating...
             </>
           ) : (
             <>
-              Generate my plan
+              Generate plan
               <svg
-                width="16"
-                height="16"
+                width="14"
+                height="14"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -470,8 +470,8 @@ export default function QuickPlan({
           )}
         </button>
 
-        <p className="text-xs text-gray-400 text-center">
-          Uses AI to generate a personalized plan. Free, no account required.
+        <p className="text-xs text-gray-400">
+          Free, no account required.
         </p>
       </form>
     </div>

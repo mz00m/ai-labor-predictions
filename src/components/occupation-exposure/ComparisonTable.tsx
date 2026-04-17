@@ -28,7 +28,7 @@ export default function ComparisonTable({ data }: Props) {
     <div className="overflow-x-auto -mx-5 px-5 sm:mx-0 sm:px-0">
       <table className="w-full text-sm">
         <thead>
-          <tr className="border-b border-black/[0.08]">
+          <tr className="border-b border-strong">
             <th className="text-left py-2 pr-3 font-semibold text-[var(--muted)]">
               Occupation
             </th>

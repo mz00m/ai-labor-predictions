@@ -215,9 +215,9 @@ export default function DurableSkillsSection({
   }, [selectedJob, adjustedShares]);
 
   return (
-    <div className="mt-12 pt-8 border-t border-black/[0.06]">
+    <div className="mt-12 pt-8 border-t border-card">
       <div className="mb-8">
-        <h3 className="text-[20px] font-bold text-[var(--foreground)] tracking-tight mb-2">
+        <h3 className="text-heading-sm font-bold text-[var(--foreground)] tracking-tight mb-2">
           The skills that stay valuable
         </h3>
         <p className="text-md text-[var(--muted)] max-w-2xl leading-relaxed">
@@ -230,7 +230,7 @@ export default function DurableSkillsSection({
       {/* Hero stat + radar chart side by side when job selected */}
       {selectedJob && radarData && (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-          <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-black/[0.06] p-6">
+          <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-card p-6">
             <p className="text-4xl font-bold text-[var(--signal-positive-muted)] tracking-tight leading-none tabular-nums">
               <AnimatedPercent value={durablePercent} />%
             </p>
@@ -256,7 +256,7 @@ export default function DurableSkillsSection({
                     if (!payload?.[0]) return null;
                     const d = payload[0].payload;
                     return (
-                      <div className="bg-white rounded-lg border border-black/[0.08] shadow-lg p-2">
+                      <div className="bg-white rounded-lg border border-strong shadow-lg p-2">
                         <p className="text-sm font-medium">{d.category}</p>
                         <p className="text-xs text-[var(--muted)]">
                           {d.timeShare}% of your time · durability: {d.durability}/100
@@ -283,7 +283,7 @@ export default function DurableSkillsSection({
         {relevantSkills.map((skill, i) => (
           <div
             key={skill.id}
-            className="skill-card stagger-enter rounded-xl border border-black/[0.06] p-4"
+            className="skill-card stagger-enter rounded-xl border border-card p-4"
             style={{ animationDelay: `${i * 0.08}s` }}
           >
             <div className="flex items-center gap-2 mb-2">
@@ -302,7 +302,7 @@ export default function DurableSkillsSection({
       </div>
 
       {/* Closing message */}
-      <div className="closing-message mt-8 rounded-xl bg-black/[0.02] border border-black/[0.06] p-6 max-w-2xl">
+      <div className="closing-message mt-8 rounded-xl bg-black/[0.02] border border-card p-6 max-w-2xl">
         <p className="text-base text-[var(--foreground)] leading-relaxed">
           <strong>The bottom line:</strong> AI will automate tasks, not jobs. The professionals who thrive will
           be the ones who deliberately shift their time toward the tasks that are hardest to automate

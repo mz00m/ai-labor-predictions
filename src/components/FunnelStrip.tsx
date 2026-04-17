@@ -122,10 +122,10 @@ export default function FunnelStrip() {
     <div id="evidence-funnel">
       {/* Title */}
       <div className="mb-5">
-        <h2 className="font-serif text-3xl sm:text-[26px] font-bold tracking-tight text-[var(--foreground)] leading-tight">
+        <h2 className="font-serif text-3xl sm:text-heading-lg font-bold tracking-tight text-[var(--foreground)] leading-tight">
           AI exposure does not equal job loss
         </h2>
-        <p className="text-lg sm:text-[17px] text-[var(--muted)] mt-1.5 leading-relaxed">
+        <p className="text-lg sm:text-prose text-[var(--muted)] mt-1.5 leading-relaxed">
           AI adoption is accelerating and significantly changing work, but the impact on jobs is less clear.
         </p>
         <div className="mt-3 flex flex-wrap gap-x-5 gap-y-1.5">
@@ -142,11 +142,11 @@ export default function FunnelStrip() {
       </div>
 
       {/* Two-column chart */}
-      <div ref={containerRef} className="border border-black/[0.06] rounded-lg overflow-hidden">
+      <div ref={containerRef} className="border border-card rounded-lg overflow-hidden">
         <div className="flex">
           {/* Left column - desktop only */}
           <div
-            className="hidden sm:block w-[200px] shrink-0 border-r border-black/[0.06] relative"
+            className="hidden sm:block w-[200px] shrink-0 border-r border-card relative"
             style={{ height: allBars.length * ROW_H }}
           >
             {leftGroups.map((group, gi) => (
@@ -172,18 +172,18 @@ export default function FunnelStrip() {
                 >
                   {group.label}
                 </span>
-                <span className="text-[9px] text-[var(--muted)] mt-0.5 leading-snug">
+                <span className="text-3xs text-[var(--muted)] mt-0.5 leading-snug">
                   {group.context}
                 </span>
                 {group.detail && (
-                  <span className="text-[9px] text-[var(--muted)] opacity-50 mt-0.5 leading-snug">
+                  <span className="text-3xs text-[var(--muted)] opacity-50 mt-0.5 leading-snug">
                     {group.detail}
                   </span>
                 )}
                 {group.link && (
                   <Link
                     href="/signals#productivity-paths"
-                    className="text-[9px] text-[var(--accent)] link-draw-underline mt-0.5 leading-snug"
+                    className="text-3xs text-[var(--accent)] link-draw-underline mt-0.5 leading-snug"
                   >
                     How this translates to jobs &rarr;
                   </Link>
@@ -235,10 +235,10 @@ export default function FunnelStrip() {
                   {/* Mobile inline label */}
                   {showMobileLabel && (
                     <div className="sm:hidden flex items-center gap-2 px-3 py-1 bg-black/[0.015]">
-                      <span className="text-[9px] font-semibold uppercase tracking-[0.08em] text-[var(--muted)]">
+                      <span className="text-3xs font-semibold uppercase tracking-[0.08em] text-[var(--muted)]">
                         {mobileLabel.label}
                       </span>
-                      <span className="text-[8px] text-[var(--muted)] opacity-50">
+                      <span className="text-3xs text-[var(--muted)] opacity-50">
                         {mobileLabel.context}
                       </span>
                     </div>
@@ -384,7 +384,7 @@ export default function FunnelStrip() {
 
         {/* Detail panel - smooth max-height transition */}
         <div
-          className="funnel-detail-panel border-t border-black/[0.06] overflow-hidden"
+          className="funnel-detail-panel border-t border-card overflow-hidden"
           style={{
             maxHeight: hoveredData?.quote ? 120 : 0,
             opacity: hoveredData?.quote ? 1 : 0,
@@ -409,7 +409,7 @@ export default function FunnelStrip() {
 
         {/* Gap annotation */}
         <div
-          className="px-4 sm:px-6 py-2 border-t border-black/[0.06]"
+          className="px-4 sm:px-6 py-2 border-t border-card"
           style={{
             backgroundColor: "rgba(92, 97, 246, 0.05)",
             opacity: visible ? 1 : 0,
@@ -425,7 +425,7 @@ export default function FunnelStrip() {
         </div>
 
         {/* Bottom note */}
-        <div className="px-4 sm:px-6 py-2.5 border-t border-black/[0.06] bg-black/[0.01] flex items-center justify-between gap-4">
+        <div className="px-4 sm:px-6 py-2.5 border-t border-card bg-black/[0.01] flex items-center justify-between gap-4">
           <p className="text-xs text-[var(--muted)] leading-relaxed">
             16 studies &middot; Hover for quotes and links
           </p>

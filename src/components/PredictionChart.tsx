@@ -106,7 +106,7 @@ function CustomTooltip({
               Projected / Forecast
             </span>
           )}
-          <p className="text-[20px] font-bold text-[var(--foreground)] stat-number">
+          <p className="text-heading-sm font-bold text-[var(--foreground)] stat-number">
             {data.value}
             {unit}
           </p>
@@ -136,7 +136,7 @@ function CustomTooltip({
             </div>
           )}
           {pointSources.length > 0 && (
-            <div className="mt-2 border-t border-black/[0.06] pt-1.5">
+            <div className="mt-2 border-t border-card pt-1.5">
               {pointSources.map((s) => (
                 <p key={s.id} className="text-xs text-[var(--accent-text)]">
                   {s.publisher}: {s.title.slice(0, 55)}
@@ -150,7 +150,7 @@ function CustomTooltip({
 
       {/* Overlay section */}
       {matchingOverlays.length > 0 && (
-        <div className={!data.isPhantom && data.value != null ? "mt-2 border-t border-black/[0.06] pt-2" : ""}>
+        <div className={!data.isPhantom && data.value != null ? "mt-2 border-t border-card pt-2" : ""}>
           {data.isPhantom && (
             <p className="text-sm font-medium text-[var(--foreground)] mb-1.5">
               {data.dateStr}
@@ -169,7 +169,7 @@ function CustomTooltip({
               o.sourceIds.includes(s.id)
             );
             return (
-              <div key={`overlay-tip-${i}`} className={i > 0 ? "mt-2 border-t border-black/[0.06] pt-2" : ""}>
+              <div key={`overlay-tip-${i}`} className={i > 0 ? "mt-2 border-t border-card pt-2" : ""}>
                 <div className="flex items-start gap-1.5">
                   <span
                     className="text-md font-bold leading-tight mt-px shrink-0"

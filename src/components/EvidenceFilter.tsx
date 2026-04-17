@@ -54,7 +54,7 @@ export default function EvidenceFilter({
           sticky
             ? `sticky top-[49px] z-40 -mx-6 sm:-mx-10 px-6 sm:px-10 ${
                 isStuck
-                  ? "bg-white/95 backdrop-blur-sm border-b border-black/[0.06] py-1.5"
+                  ? "bg-white/95 backdrop-blur-sm border-b border-card py-1.5"
                   : "rounded-xl bg-gradient-to-r from-transparent via-black/[0.02] to-transparent dark:via-white/[0.03] px-4 py-3"
               }`
             : "rounded-xl bg-gradient-to-r from-transparent via-black/[0.02] to-transparent dark:via-white/[0.03] px-4 py-3"

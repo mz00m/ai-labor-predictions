@@ -12,7 +12,7 @@ function ConvictionLabel({ level }: { level: string }) {
   const label = level.replace("-", " ");
   return (
     <span
-      className="text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded"
+      className="text-2xs font-bold uppercase tracking-wider px-1.5 py-0.5 rounded"
       style={{ color, backgroundColor: `${color}15` }}
     >
       {label}
@@ -58,10 +58,10 @@ export default function ForecastCard({ p }: { p: ForecastPrediction }) {
   const sign = p.prediction > 0 && p.category !== "displacement" ? "+" : "";
 
   return (
-    <div className="rounded-xl border border-black/[0.06] p-5 hover:shadow-sm transition-shadow flex flex-col">
+    <div className="rounded-xl border border-card p-5 hover:shadow-sm transition-shadow flex flex-col">
       <div className="flex items-center gap-2 mb-3">
         <span
-          className="text-[10px] font-bold uppercase tracking-wider text-white px-2 py-0.5 rounded"
+          className="text-2xs font-bold uppercase tracking-wider text-white px-2 py-0.5 rounded"
           style={{ backgroundColor: catColor }}
         >
           {p.category}
@@ -69,15 +69,15 @@ export default function ForecastCard({ p }: { p: ForecastPrediction }) {
         <ConvictionLabel level={p.conviction} />
       </div>
 
-      <h3 className="text-[14px] font-bold text-[#2E3650] leading-snug mb-2">
+      <h3 className="text-md font-bold text-[#2E3650] leading-snug mb-2">
         {p.title}
       </h3>
 
       <div className="flex items-baseline gap-2">
-        <span className="text-[28px] font-black text-[#2E3650]">
+        <span className="text-4xl font-black text-[#2E3650]">
           {sign}{p.prediction}{p.unit}
         </span>
-        <span className="text-[12px] text-[var(--muted)]">
+        <span className="text-sm text-[var(--muted)]">
           ({p.confidenceLow} to {p.confidenceHigh})
         </span>
       </div>
@@ -91,7 +91,7 @@ export default function ForecastCard({ p }: { p: ForecastPrediction }) {
       />
 
       {p.currentObserved !== null && (
-        <p className="text-[11px] text-[var(--muted)] mb-2">
+        <p className="text-xs text-[var(--muted)] mb-2">
           Currently observed:{" "}
           <span className="font-bold text-[#2E3650]">
             {p.currentObserved}{p.unit}
@@ -99,26 +99,26 @@ export default function ForecastCard({ p }: { p: ForecastPrediction }) {
         </p>
       )}
 
-      <p className="text-[12px] text-[var(--muted)] leading-relaxed mb-3 flex-1">
+      <p className="text-sm text-[var(--muted)] leading-relaxed mb-3 flex-1">
         {p.rationale}
       </p>
 
-      <div className="space-y-1 border-t border-black/[0.04] pt-3">
+      <div className="space-y-1 border-t border-divider pt-3">
         {p.keyCitations.map((c, i) => (
-          <p key={i} className="text-[10px] text-[var(--muted)] opacity-70 leading-snug">
+          <p key={i} className="text-2xs text-[var(--muted)] opacity-70 leading-snug">
             {c}
           </p>
         ))}
       </div>
 
-      <div className="flex items-center justify-between mt-3 pt-2 border-t border-black/[0.04]">
-        <span className="text-[10px] text-[var(--muted)]">
+      <div className="flex items-center justify-between mt-3 pt-2 border-t border-divider">
+        <span className="text-2xs text-[var(--muted)]">
           {p.sourceCount} sources
         </span>
         {p.relatedSlug && (
           <Link
             href={`/predictions/${p.relatedSlug}`}
-            className="text-[10px] font-medium text-[var(--accent)] hover:opacity-70 transition-opacity"
+            className="text-2xs font-medium text-[var(--accent)] hover:opacity-70 transition-opacity"
           >
             View full data &rarr;
           </Link>

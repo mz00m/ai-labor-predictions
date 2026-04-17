@@ -41,11 +41,11 @@ const CELLS = [
 
 export default function ElasticityMatrix() {
   return (
-    <div className="overflow-hidden rounded-xl border border-black/[0.06] bg-white">
+    <div className="overflow-hidden rounded-xl border border-card bg-white">
       {/* Column headers */}
       <div className="grid grid-cols-[140px_1fr_1fr] sm:grid-cols-[160px_1fr_1fr]">
         <div className="bg-black/[0.02] p-3" />
-        <div className="bg-black/[0.02] p-3 text-center border-l border-black/[0.06]">
+        <div className="bg-black/[0.02] p-3 text-center border-l border-card">
           <p className="text-xs font-bold uppercase tracking-wider text-[var(--muted)]">
             Low demand elasticity
           </p>
@@ -53,7 +53,7 @@ export default function ElasticityMatrix() {
             Cheaper doesn&rsquo;t mean more demand
           </p>
         </div>
-        <div className="bg-black/[0.02] p-3 text-center border-l border-black/[0.06]">
+        <div className="bg-black/[0.02] p-3 text-center border-l border-card">
           <p className="text-xs font-bold uppercase tracking-wider text-[var(--muted)]">
             High demand elasticity
           </p>
@@ -64,7 +64,7 @@ export default function ElasticityMatrix() {
       </div>
 
       {/* High exposure row */}
-      <div className="grid grid-cols-[140px_1fr_1fr] sm:grid-cols-[160px_1fr_1fr] border-t border-black/[0.06]">
+      <div className="grid grid-cols-[140px_1fr_1fr] sm:grid-cols-[160px_1fr_1fr] border-t border-card">
         <div className="bg-black/[0.02] p-3 flex items-center">
           <div>
             <p className="text-xs font-bold uppercase tracking-wider text-[var(--muted)]">
@@ -78,7 +78,7 @@ export default function ElasticityMatrix() {
         {CELLS.filter((c) => c.row === "high-exposure").map((cell) => (
           <div
             key={cell.col}
-            className="p-4 border-l border-black/[0.06]"
+            className="p-4 border-l border-card"
             style={{ backgroundColor: cell.color + "08" }}
           >
             <p
@@ -98,7 +98,7 @@ export default function ElasticityMatrix() {
       </div>
 
       {/* Low exposure row */}
-      <div className="grid grid-cols-[140px_1fr_1fr] sm:grid-cols-[160px_1fr_1fr] border-t border-black/[0.06]">
+      <div className="grid grid-cols-[140px_1fr_1fr] sm:grid-cols-[160px_1fr_1fr] border-t border-card">
         <div className="bg-black/[0.02] p-3 flex items-center">
           <div>
             <p className="text-xs font-bold uppercase tracking-wider text-[var(--muted)]">
@@ -112,7 +112,7 @@ export default function ElasticityMatrix() {
         {CELLS.filter((c) => c.row === "low-exposure").map((cell) => (
           <div
             key={cell.col}
-            className="p-4 border-l border-black/[0.06]"
+            className="p-4 border-l border-card"
             style={{ backgroundColor: cell.color + "08" }}
           >
             <p

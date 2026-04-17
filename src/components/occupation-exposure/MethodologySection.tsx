@@ -17,7 +17,7 @@ function Study({
   summary: string;
 }) {
   return (
-    <div className="pl-3 border-l-2 border-black/[0.06] mb-3 last:mb-0">
+    <div className="pl-3 border-l-2 border-card mb-3 last:mb-0">
       <a
         href={url}
         target="_blank"
@@ -52,7 +52,7 @@ function DimensionResearch({
   return (
     <div
       id={id}
-      className="border-b border-black/[0.04] last:border-0 scroll-mt-24"
+      className="border-b border-divider last:border-0 scroll-mt-24"
     >
       <button
         onClick={() => setOpen(!open)}
@@ -89,7 +89,7 @@ function DimensionResearch({
 
 export default function MethodologySection() {
   return (
-    <div className="border border-black/[0.06] rounded-lg overflow-hidden px-5">
+    <div className="border border-card rounded-lg overflow-hidden px-5">
       {/* ── Dimension 1: Technical Exposure ── */}
       <DimensionResearch
         id="methodology-exposure"

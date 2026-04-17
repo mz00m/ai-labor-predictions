@@ -28,7 +28,7 @@ export default function HistoryPage() {
           On Tap Intelligence
         </h1>
         <p
-          className="text-2xl sm:text-[20px] text-[var(--muted)] leading-relaxed mb-5"
+          className="text-2xl sm:text-heading-sm text-[var(--muted)] leading-relaxed mb-5"
           style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
         >
           Every great technology has transformed work. Here&rsquo;s what
@@ -56,9 +56,9 @@ export default function HistoryPage() {
       </header>
       {/* ───── Section 2: The Pattern ───── */}
       <section className="mb-12">
-        <div className="border-t border-black/[0.06] pt-8">
+        <div className="border-t border-card pt-8">
           <SectionLabel number="01" />
-          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-3">
             Every GPT Follows the Same Arc
           </h2>
           <p className="text-md text-[var(--muted)] leading-[1.75] mb-6">
@@ -128,9 +128,9 @@ export default function HistoryPage() {
 
       {/* ───── Section 3: The Four Revolutions ───── */}
       <section className="mb-12">
-        <div className="border-t border-black/[0.06] pt-8">
+        <div className="border-t border-card pt-8">
           <SectionLabel number="02" />
-          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-3">
             The Four Revolutions
           </h2>
           <p className="text-md text-[var(--muted)] leading-[1.75] mb-6">
@@ -144,9 +144,9 @@ export default function HistoryPage() {
 
       {/* ───── Section 4: The Central Insight ───── */}
       <section className="mb-12">
-        <div className="border-t border-black/[0.06] pt-8">
+        <div className="border-t border-card pt-8">
           <SectionLabel number="03" />
-          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-3">
             The On-Tap Intelligence Shift
           </h2>
 
@@ -229,9 +229,9 @@ export default function HistoryPage() {
 
       {/* ───── Section 5: The Honest Forecast ───── */}
       <section className="mb-12">
-        <div className="border-t border-black/[0.06] pt-8">
+        <div className="border-t border-card pt-8">
           <SectionLabel number="04" />
-          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-3">
             What the Pattern Predicts
           </h2>
           <p className="text-md text-[var(--muted)] leading-[1.75] mb-6">
@@ -245,9 +245,9 @@ export default function HistoryPage() {
 
       {/* ───── Section 6: Vulnerability Snapshot ───── */}
       <section className="mb-12">
-        <div className="border-t border-black/[0.06] pt-8">
+        <div className="border-t border-card pt-8">
           <SectionLabel number="05" />
-          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-3">
             Occupational Vulnerability Snapshot
           </h2>
           <p className="text-md text-[var(--muted)] leading-[1.75] mb-6">
@@ -273,9 +273,9 @@ export default function HistoryPage() {
 
       {/* ───── Section 7: The Policy Question ───── */}
       <section className="mb-8">
-        <div className="border-t border-black/[0.06] pt-8">
+        <div className="border-t border-card pt-8">
           <SectionLabel number="06" />
-          <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-6">
+          <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-6">
             What History Actually Proves
           </h2>
           <p className="text-md text-[var(--muted)] leading-[1.75] mb-8 italic">
@@ -369,14 +369,14 @@ export default function HistoryPage() {
 
       {/* ───── Section: Diffusion Comparison Source ───── */}
       <section className="mb-12">
-        <div className="border-t border-black/[0.06] pt-8">
+        <div className="border-t border-card pt-8">
           <DiffusionComparison />
         </div>
       </section>
 
       {/* ───── Key Sources ───── */}
       <section className="mb-12">
-        <div className="border-t border-black/[0.06] pt-8">
+        <div className="border-t border-card pt-8">
           <p className="text-sm font-bold uppercase tracking-widest text-[var(--muted)] mb-4">
             Key Sources
           </p>
@@ -451,7 +451,7 @@ function SourceCard({
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="block border border-black/[0.06] rounded-lg px-5 py-4 hover:border-[var(--accent)]/30 transition-colors group"
+      className="block border border-card rounded-lg px-5 py-4 hover:border-[var(--accent)]/30 transition-colors group"
     >
       <p className="text-base font-bold text-[var(--foreground)] leading-snug group-hover:text-[var(--accent)] transition-colors">
         {title}

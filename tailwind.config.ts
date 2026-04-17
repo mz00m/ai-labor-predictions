@@ -8,6 +8,8 @@ const config: Config = {
   ],
   theme: {
     fontSize: {
+      // Micro & body scale
+      "3xs": ["9px", { lineHeight: "1.4" }],
       "2xs": ["10px", { lineHeight: "1.4" }],
       "xs": ["11px", { lineHeight: "1.45" }],
       "sm": ["12px", { lineHeight: "1.5" }],
@@ -15,10 +17,19 @@ const config: Config = {
       "md": ["14px", { lineHeight: "1.6" }],
       "lg": ["15px", { lineHeight: "1.6" }],
       "xl": ["16px", { lineHeight: "1.5" }],
+      "prose": ["17px", { lineHeight: "1.6" }],
       "2xl": ["18px", { lineHeight: "1.4" }],
+      // Heading & display scale
+      "heading-sm": ["20px", { lineHeight: "1.45" }],
       "3xl": ["22px", { lineHeight: "1.3" }],
+      "heading": ["24px", { lineHeight: "1.35" }],
+      "heading-lg": ["26px", { lineHeight: "1.3" }],
       "4xl": ["28px", { lineHeight: "1.2" }],
+      "heading-xl": ["30px", { lineHeight: "1.25" }],
+      "heading-2xl": ["32px", { lineHeight: "1.2" }],
+      "title-sm": ["34px", { lineHeight: "1.2" }],
       "5xl": ["36px", { lineHeight: "1.15" }],
+      "title": ["40px", { lineHeight: "1.15" }],
       "6xl": ["44px", { lineHeight: "1.1" }],
       "7xl": ["56px", { lineHeight: "1.05" }],
     },
@@ -41,6 +52,11 @@ const config: Config = {
         "signal-positive": "var(--signal-positive)",
         "signal-negative": "var(--signal-negative)",
         "signal-warning": "var(--signal-warning)",
+      },
+      borderColor: {
+        divider: "rgba(0, 0, 0, 0.04)",
+        card: "rgba(0, 0, 0, 0.06)",
+        strong: "rgba(0, 0, 0, 0.08)",
       },
     },
   },

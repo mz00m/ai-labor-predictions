@@ -33,13 +33,13 @@ export default function PredictionPage() {
         </div>
 
         <div className="relative max-w-3xl">
-          <p className="text-[11px] font-bold uppercase tracking-widest text-[var(--accent)] mb-3">
+          <p className="text-xs font-bold uppercase tracking-widest text-[var(--accent)] mb-3">
             {sourceCount}+ sources | 5-dimension framework
           </p>
-          <h1 className="text-[36px] sm:text-[50px] font-black tracking-tight text-[#2E3650] leading-[1.05]">
+          <h1 className="text-5xl sm:text-[50px] font-black tracking-tight text-[#2E3650] leading-[1.05]">
             My 2030 Forecast
           </h1>
-          <p className="mt-4 text-[15px] text-[var(--muted)] leading-relaxed max-w-2xl">
+          <p className="mt-4 text-lg text-[var(--muted)] leading-relaxed max-w-2xl">
             AI will transform the labor market through{" "}
             <span className="font-semibold text-[#2E3650]">
               task recomposition
@@ -49,7 +49,7 @@ export default function PredictionPage() {
             and routine cognitive work compressing, high-skill premiums
             expanding, freelance markets restructuring fundamentally.
           </p>
-          <p className="mt-3 text-[15px] text-[var(--muted)] leading-relaxed max-w-2xl">
+          <p className="mt-3 text-lg text-[var(--muted)] leading-relaxed max-w-2xl">
             The primary channel is{" "}
             <span className="font-semibold text-[#2E3650]">non-hiring</span>{" "}
             -- positions that go unfilled as AI handles incremental demand --
@@ -58,16 +58,16 @@ export default function PredictionPage() {
           </p>
           <div className="flex items-center gap-4 mt-6">
             <div className="bg-black/[0.03] rounded-lg px-4 py-2.5">
-              <p className="text-[24px] font-black text-[#2E3650]">12</p>
-              <p className="text-[10px] font-bold uppercase tracking-wider text-[var(--muted)]">
+              <p className="text-heading font-black text-[#2E3650]">12</p>
+              <p className="text-2xs font-bold uppercase tracking-wider text-[var(--muted)]">
                 Predictions
               </p>
             </div>
             <div className="bg-black/[0.03] rounded-lg px-4 py-2.5">
-              <p className="text-[24px] font-black text-[#2E3650]">
+              <p className="text-heading font-black text-[#2E3650]">
                 {sourceCount}+
               </p>
-              <p className="text-[10px] font-bold uppercase tracking-wider text-[var(--muted)]">
+              <p className="text-2xs font-bold uppercase tracking-wider text-[var(--muted)]">
                 Sources
               </p>
             </div>
@@ -79,11 +79,11 @@ export default function PredictionPage() {
       <PlaceYourPrediction />
 
       {/* Methodology footer */}
-      <section className="border-t border-black/[0.06] pt-8 pb-4">
-        <h2 className="text-[16px] font-bold text-[#2E3650] mb-2">
+      <section className="border-t border-card pt-8 pb-4">
+        <h2 className="text-xl font-bold text-[#2E3650] mb-2">
           Methodology
         </h2>
-        <p className="text-[12px] text-[var(--muted)] leading-relaxed max-w-2xl">
+        <p className="text-sm text-[var(--muted)] leading-relaxed max-w-2xl">
           Each prediction synthesizes all available evidence from the jobsdata.ai
           database using the site&apos;s weighted aggregation: Tier 1 sources
           (peer-reviewed, government) weighted 4x, Tier 2 (institutional) 2x,

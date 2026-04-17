@@ -153,7 +153,7 @@ export default function ShareCiteBar({
 
       {/* Citation panel */}
       {showCite && (
-        <div ref={citeRef} className="border-t border-black/[0.06] dark:border-white/[0.08] px-4 py-4">
+        <div ref={citeRef} className="border-t border-card dark:border-white/[0.08] px-4 py-4">
           <div className="flex items-center gap-2 mb-3">
             {(["plain", "apa", "bibtex"] as CiteFormat[]).map((fmt) => (
               <button
@@ -185,7 +185,7 @@ export default function ShareCiteBar({
 
       {/* Embed panel */}
       {showEmbed && (
-        <div className="border-t border-black/[0.06] dark:border-white/[0.08] px-4 py-4">
+        <div className="border-t border-card dark:border-white/[0.08] px-4 py-4">
           <p className="text-sm text-[var(--muted)] mb-2">
             Paste this HTML to embed the chart on your site:
           </p>

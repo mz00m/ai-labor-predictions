@@ -745,10 +745,10 @@ export default function KarpathyTreemap({
               const dc = dim.effectiveDimensions <= 2 ? "#DC2626" : dim.effectiveDimensions >= 5 ? "#16A34A" : "#F59E0B";
               return (
                 <div className="flex items-center gap-1.5 pl-[72px]">
-                  <span className="text-[9px] font-bold px-1 rounded" style={{ background: dc + "20", color: dc }}>
+                  <span className="text-3xs font-bold px-1 rounded" style={{ background: dc + "20", color: dc }}>
                     {dim.effectiveDimensions} dims
                   </span>
-                  <span className="text-[9px] text-white/30">
+                  <span className="text-3xs text-white/30">
                     {dim.dimensionalityAdj > 0 ? "+" : ""}{dim.dimensionalityAdj.toFixed(1)} complementarity
                   </span>
                 </div>

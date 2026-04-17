@@ -148,7 +148,7 @@ export default function OccupationExposurePage() {
             Beyond Exposure: What Predicts Displacement Better
           </h1>
           <p
-            className="text-[17px] sm:text-[19px] text-[var(--muted)] leading-relaxed mb-4"
+            className="text-prose sm:text-prose text-[var(--muted)] leading-relaxed mb-4"
             style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
           >
             Karpathy&rsquo;s AI jobs treemap scored 342 occupations on a single
@@ -156,7 +156,7 @@ export default function OccupationExposurePage() {
             <em>can</em> do &mdash; but not which jobs will actually be displaced.
           </p>
           <p
-            className="text-[17px] sm:text-[19px] text-[var(--muted)] leading-relaxed mb-4"
+            className="text-prose sm:text-prose text-[var(--muted)] leading-relaxed mb-4"
             style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
           >
             We rebuilt this visualization with the same 342 BLS occupations,
@@ -174,7 +174,7 @@ export default function OccupationExposurePage() {
           </a>
 
           {/* 5 dimensions - compact list */}
-          <div className="border border-black/[0.06] rounded-lg divide-y divide-black/[0.06] mb-2">
+          <div className="border border-card rounded-lg divide-y divide-black/[0.06] mb-2">
             {DIMENSION_EXPLAINERS.map((dim) => (
               <button
                 key={dim.key}
@@ -186,7 +186,7 @@ export default function OccupationExposurePage() {
                 }`}
               >
                 <span
-                  className="text-[9px] font-bold uppercase tracking-wider w-[52px] flex-shrink-0 text-center"
+                  className="text-3xs font-bold uppercase tracking-wider w-[52px] flex-shrink-0 text-center"
                   style={{ color: dim.roleColor }}
                 >
                   {dim.role}
@@ -339,12 +339,12 @@ export default function OccupationExposurePage() {
                         {key === "complementarity" && dim.dimensionalityAdj !== 0 && (
                           <div className="flex items-center gap-1.5 mt-0.5">
                             <span
-                              className="text-[9px] font-bold px-1 py-px rounded"
+                              className="text-3xs font-bold px-1 py-px rounded"
                               style={{ background: dimColor + "20", color: dimColor }}
                             >
                               {dim.effectiveDimensions} dims
                             </span>
-                            <span className="text-[9px] text-white/40">
+                            <span className="text-3xs text-white/40">
                               {dim.dimensionalityAdj > 0 ? "+" : ""}{dim.dimensionalityAdj.toFixed(1)} dimensionality adj
                             </span>
                           </div>
@@ -407,12 +407,12 @@ export default function OccupationExposurePage() {
       <article className="max-w-[740px] mx-auto">
         {/* Comparison Table - collapsible */}
         <section className="mb-12">
-          <div className="border-t border-black/[0.06] pt-8">
+          <div className="border-t border-card pt-8">
             <SectionLabel number="02" />
             <details className="group">
               <summary className="cursor-pointer list-none">
                 <div className="flex items-center justify-between">
-                  <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight">
+                  <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight">
                     When Exposure Doesn&rsquo;t Match Risk
                   </h2>
                   <span className="text-[var(--muted)] text-base group-open:hidden">
@@ -441,9 +441,9 @@ export default function OccupationExposurePage() {
 
         {/* Methodology */}
         <section id="methodology" className="mb-12 scroll-mt-8">
-          <div className="border-t border-black/[0.06] pt-8">
+          <div className="border-t border-card pt-8">
             <SectionLabel number="03" />
-            <h2 className="text-3xl sm:text-[26px] font-bold text-[var(--foreground)] leading-tight mb-3">
+            <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-3">
               Methodology
             </h2>
             <MethodologySection />
@@ -452,7 +452,7 @@ export default function OccupationExposurePage() {
 
         {/* Related */}
         <section className="mb-4">
-          <div className="border-t border-black/[0.06] pt-8">
+          <div className="border-t border-card pt-8">
             <h3 className="text-md font-bold text-[var(--foreground)] mb-3">
               Related explorations
             </h3>

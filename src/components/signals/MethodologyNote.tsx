@@ -2,7 +2,7 @@
 
 export default function MethodologyNote() {
   return (
-    <section className="border-t border-black/[0.06] pt-8">
+    <section className="border-t border-card pt-8">
       <h2 className="text-3xl font-bold text-[var(--foreground)] mb-4">
         How to Read This Data
       </h2>
@@ -97,7 +97,7 @@ export default function MethodologyNote() {
         </div>
       </div>
 
-      <div className="mt-6 pt-4 border-t border-black/[0.04] text-xs text-[var(--muted)]">
+      <div className="mt-6 pt-4 border-t border-divider text-xs text-[var(--muted)]">
         <p>
           Data sources:{" "}
           <a

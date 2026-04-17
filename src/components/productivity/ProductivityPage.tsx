@@ -24,7 +24,7 @@ export default function ProductivityPage() {
           <h1 className="text-5xl sm:text-[50px] font-black tracking-tight text-[var(--foreground)] leading-[1.08] mb-5">
             The Productivity Question
           </h1>
-          <p className="text-[17px] sm:text-[19px] text-[var(--muted)] leading-relaxed mb-6">
+          <p className="text-prose sm:text-prose text-[var(--muted)] leading-relaxed mb-6">
             AI tools are making individual workers dramatically more productive.
             But that productivity isn&rsquo;t showing up in the macro data yet, and
             it hasn&rsquo;t translated into job losses. Understanding this gap is
@@ -121,7 +121,7 @@ export default function ProductivityPage() {
       {/* ───── Bridge: Micro vs Macro ───── */}
       <section className="mt-16">
         <div className="max-w-3xl">
-          <div className="border border-black/[0.06] rounded-xl bg-white p-5 sm:p-6">
+          <div className="border border-card rounded-xl bg-white p-5 sm:p-6">
             <h3 className="text-2xl font-bold text-[var(--foreground)] mb-3">
               Why the micro-macro gap?
             </h3>
@@ -208,7 +208,7 @@ export default function ProductivityPage() {
         </div>
 
         {/* J-Curve teaser card */}
-        <div className="border border-black/[0.06] rounded-xl bg-white overflow-hidden">
+        <div className="border border-card rounded-xl bg-white overflow-hidden">
           <div className="p-5 sm:p-6">
             <div className="flex items-start gap-4">
               {/* Mini J-Curve visual */}
@@ -289,7 +289,7 @@ export default function ProductivityPage() {
           </div>
 
           {/* Timeline strip */}
-          <div className="border-t border-black/[0.06] bg-[var(--accent-light)] px-5 sm:px-6 py-3">
+          <div className="border-t border-card bg-[var(--accent-light)] px-5 sm:px-6 py-3">
             <div className="flex items-center gap-6 text-xs">
               <span className="font-bold text-[var(--accent)]">
                 Historical pattern
@@ -393,7 +393,7 @@ export default function ProductivityPage() {
 
       {/* ───── Footer nav ───── */}
       <section className="mt-8 mb-8">
-        <div className="border-t border-black/[0.06] pt-8">
+        <div className="border-t border-card pt-8">
           <p className="text-xs font-bold uppercase tracking-widest text-[var(--muted)] mb-4">
             Continue exploring
           </p>
@@ -428,7 +428,7 @@ function SectionLabel({ number, title }: { number: string; title: string }) {
       <span className="text-xs font-bold uppercase tracking-widest text-[var(--accent)] block mb-1">
         {number}
       </span>
-      <h2 className="text-[24px] sm:text-[30px] font-extrabold tracking-tight text-[var(--foreground)] leading-tight">
+      <h2 className="text-heading sm:text-heading-xl font-extrabold tracking-tight text-[var(--foreground)] leading-tight">
         {title}
       </h2>
     </div>
@@ -454,7 +454,7 @@ function StatHighlight({
         backgroundColor: `${color}08`,
       }}
     >
-      <p className="text-[32px] sm:text-[38px] font-black" style={{ color }}>
+      <p className="text-heading-2xl sm:text-[38px] font-black" style={{ color }}>
         {value}
       </p>
       <p className="text-base font-bold text-[var(--foreground)] mt-1">
@@ -526,7 +526,7 @@ function NavCard({
   return (
     <Link
       href={href}
-      className="group block rounded-lg border border-black/[0.06] bg-white px-4 py-3 hover:border-black/[0.12] hover:shadow-sm transition-all no-underline"
+      className="group block rounded-lg border border-card bg-white px-4 py-3 hover:border-black/[0.12] hover:shadow-sm transition-all no-underline"
     >
       <p className="text-base font-bold text-[var(--foreground)] group-hover:text-[var(--accent)] transition-colors">
         {label}

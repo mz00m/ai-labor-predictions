@@ -174,7 +174,7 @@ export default function DragTimeline({
           }}
         >
           by {displayYear}
-          <span className="text-[9px] opacity-70 ml-1.5">
+          <span className="text-3xs opacity-70 ml-1.5">
             ({adjustedMin.toFixed(0)}–{adjustedMax.toFixed(0)}{unit} range)
           </span>
           {/* Arrow */}

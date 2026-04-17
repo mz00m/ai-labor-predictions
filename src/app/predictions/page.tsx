@@ -54,7 +54,7 @@ export default function PredictionsPage() {
             <div className="mb-8 flex items-start gap-3">
               <div className="w-1 self-stretch rounded-full bg-red-400/60 shrink-0" />
               <div>
-                <h2 className="text-4xl sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
+                <h2 className="text-4xl sm:text-title-sm font-extrabold tracking-tight text-[var(--foreground)]">
                   Job Displacement &amp; Restructuring
                 </h2>
                 <p className="text-lg text-[var(--muted)] mt-2 max-w-2xl">
@@ -84,7 +84,7 @@ export default function PredictionsPage() {
             <div className="mb-8 flex items-start gap-3">
               <div className="w-1 self-stretch rounded-full bg-blue-400/60 shrink-0" />
               <div>
-                <h2 className="text-4xl sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
+                <h2 className="text-4xl sm:text-title-sm font-extrabold tracking-tight text-[var(--foreground)]">
                   Wage Impact
                 </h2>
                 <p className="text-lg text-[var(--muted)] mt-2 max-w-xl">
@@ -112,7 +112,7 @@ export default function PredictionsPage() {
               <div className="mb-8 flex items-start gap-3">
                 <div className="w-1 self-stretch rounded-full bg-emerald-400/60 shrink-0" />
                 <div>
-                  <h2 className="text-4xl sm:text-[34px] font-extrabold tracking-tight text-[var(--foreground)]">
+                  <h2 className="text-4xl sm:text-title-sm font-extrabold tracking-tight text-[var(--foreground)]">
                     AI Adoption
                   </h2>
                   <p className="text-lg text-[var(--muted)] mt-2 max-w-2xl">

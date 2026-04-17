@@ -67,7 +67,7 @@ export default function SourceList({
             <div
               key={source.id}
               id={`source-${source.id}`}
-              className="source-item flex items-start gap-3 py-4 border-b border-black/[0.04] transition-all duration-700 rounded-lg"
+              className="source-item flex items-start gap-3 py-4 border-b border-divider transition-all duration-700 rounded-lg"
               style={
                 isHighlighted
                   ? {

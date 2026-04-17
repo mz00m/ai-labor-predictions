@@ -40,7 +40,7 @@ const EVIDENCE_STATS = [
 export default function EvidenceSummaryCard() {
   return (
     <div>
-      <h2 className="text-3xl sm:text-[26px] font-extrabold tracking-tight text-[var(--foreground)] mb-1">
+      <h2 className="text-3xl sm:text-heading-lg font-extrabold tracking-tight text-[var(--foreground)] mb-1">
         What the Evidence Actually Shows
       </h2>
       <p className="text-md text-[var(--muted)] mb-5 max-w-2xl">
@@ -51,7 +51,7 @@ export default function EvidenceSummaryCard() {
         {EVIDENCE_STATS.map((item, i) => (
           <div
             key={i}
-            className="evidence-card border border-black/[0.06] rounded-lg px-5 py-4 bg-white"
+            className="evidence-card border border-card rounded-lg px-5 py-4 bg-white"
           >
             <p className="stat-number text-3xl font-black text-[var(--foreground)] leading-tight mb-1.5">
               {item.stat}

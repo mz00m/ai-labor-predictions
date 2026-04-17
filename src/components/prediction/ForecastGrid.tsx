@@ -24,13 +24,13 @@ export default function ForecastGrid() {
 
   return (
     <section className="mb-12">
-      <p className="text-[11px] font-bold uppercase tracking-widest text-[var(--accent)] mb-2">
+      <p className="text-xs font-bold uppercase tracking-widest text-[var(--accent)] mb-2">
         Evidence-Weighted Predictions
       </p>
-      <h2 className="text-[24px] sm:text-[30px] font-extrabold tracking-tight text-[#2E3650] mb-1">
+      <h2 className="text-heading sm:text-heading-xl font-extrabold tracking-tight text-[#2E3650] mb-1">
         12 Predictions for 2030
       </h2>
-      <p className="text-[14px] text-[var(--muted)] mb-8 max-w-xl leading-relaxed">
+      <p className="text-md text-[var(--muted)] mb-8 max-w-xl leading-relaxed">
         Each prediction synthesizes all available evidence weighted by tier,
         recency, and sample size. Confidence intervals reflect genuine
         uncertainty, not false precision.
@@ -43,10 +43,10 @@ export default function ForecastGrid() {
               className="w-3 h-3 rounded-sm"
               style={{ backgroundColor: section.color }}
             />
-            <h3 className="text-[16px] font-bold text-[#2E3650]">
+            <h3 className="text-xl font-bold text-[#2E3650]">
               {section.label}
             </h3>
-            <span className="text-[12px] text-[var(--muted)]">
+            <span className="text-sm text-[var(--muted)]">
               ({section.items.length})
             </span>
           </div>

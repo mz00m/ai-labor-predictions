@@ -195,7 +195,7 @@ export default function PredictionDetailPage() {
         <p className="text-base font-bold uppercase tracking-widest text-[var(--muted)] mb-4">
           {prediction.category === "displacement" ? "Job Displacement" : prediction.category === "wages" ? "Wage Impact" : prediction.category === "adoption" ? "AI Adoption" : "Other"} | {prediction.timeHorizon}
         </p>
-        <h1 className="text-[30px] sm:text-[40px] font-black tracking-tight text-[var(--foreground)] leading-[1.08] mb-6">
+        <h1 className="text-heading-xl sm:text-title font-black tracking-tight text-[var(--foreground)] leading-[1.08] mb-6">
           {prediction.title}
         </h1>
 
@@ -210,7 +210,7 @@ export default function PredictionDetailPage() {
                   <span className="stat-number text-7xl sm:text-[72px] font-black text-[var(--foreground)] leading-none">
                     {agg.mean > 0 && prediction.category === "wages" ? "+" : ""}
                     {Number.isInteger(agg.mean) ? agg.mean : agg.mean.toFixed(1)}
-                    <span className="text-[24px] font-normal text-[var(--muted)] ml-1">{unitSuffix}</span>
+                    <span className="text-heading font-normal text-[var(--muted)] ml-1">{unitSuffix}</span>
                   </span>
                   {agg.min !== agg.max && (
                     <span className="text-2xl font-medium text-[var(--muted)]" style={{ opacity: 0.7 }}>
@@ -241,7 +241,7 @@ export default function PredictionDetailPage() {
               <span className="stat-number text-7xl sm:text-[72px] font-black text-[var(--foreground)] leading-none">
                 {agg.mean > 0 && prediction.category === "wages" ? "+" : ""}
                 {Number.isInteger(agg.mean) ? agg.mean : agg.mean.toFixed(1)}
-                <span className="text-[24px] font-normal text-[var(--muted)] ml-1">{unitSuffix}</span>
+                <span className="text-heading font-normal text-[var(--muted)] ml-1">{unitSuffix}</span>
               </span>
               {agg.min !== agg.max && (
                 <span className="text-2xl font-medium text-[var(--muted)]" style={{ opacity: 0.7 }}>
@@ -371,7 +371,7 @@ export default function PredictionDetailPage() {
               <div className="mb-4">
                 <div className="flex items-center gap-2 mb-2">
                   <div className="w-3 h-3 rounded-full bg-[#16a34a]" />
-                  <h3 className="text-[20px] sm:text-[24px] font-bold text-[var(--foreground)]">
+                  <h3 className="text-heading-sm sm:text-heading font-bold text-[var(--foreground)]">
                     What has happened
                   </h3>
                 </div>
@@ -402,7 +402,7 @@ export default function PredictionDetailPage() {
               <div className="mb-4">
                 <div className="flex items-center gap-2 mb-2">
                   <div className="w-3 h-3 rounded-full bg-accent" />
-                  <h3 className="text-[20px] sm:text-[24px] font-bold text-[var(--foreground)]">
+                  <h3 className="text-heading-sm sm:text-heading font-bold text-[var(--foreground)]">
                     What researchers project
                   </h3>
                 </div>
@@ -457,7 +457,7 @@ export default function PredictionDetailPage() {
       <div className="flex flex-col sm:flex-row gap-4 max-w-2xl">
         <Link
           href="/task-visualizer"
-          className="flex-1 group border border-black/[0.06] rounded-lg px-5 py-4 bg-[var(--background)] hover:border-[var(--accent)]/40 transition-colors"
+          className="flex-1 group border border-card rounded-lg px-5 py-4 bg-[var(--background)] hover:border-[var(--accent)]/40 transition-colors"
         >
           <p className="text-base font-bold uppercase tracking-widest text-[var(--muted)] mb-1">
             Task Visualizer
@@ -471,7 +471,7 @@ export default function PredictionDetailPage() {
         </Link>
         <Link
           href="/task-visualizer/economy"
-          className="flex-1 group border border-black/[0.06] rounded-lg px-5 py-4 bg-[var(--background)] hover:border-[var(--accent)]/40 transition-colors"
+          className="flex-1 group border border-card rounded-lg px-5 py-4 bg-[var(--background)] hover:border-[var(--accent)]/40 transition-colors"
         >
           <p className="text-base font-bold uppercase tracking-widest text-[var(--muted)] mb-1">
             Full Economy Picture
@@ -486,7 +486,7 @@ export default function PredictionDetailPage() {
       </div>
 
       {/* Divider */}
-      <div className="border-t border-black/[0.06]" />
+      <div className="border-t border-card" />
 
       {/* Sources */}
       <section>
@@ -499,7 +499,7 @@ export default function PredictionDetailPage() {
       </section>
 
       {/* Suggest a Source */}
-      <div className="border border-black/[0.06] rounded-lg px-5 py-5 bg-[var(--background)] max-w-xl">
+      <div className="border border-card rounded-lg px-5 py-5 bg-[var(--background)] max-w-xl">
         <p className="text-md text-[var(--muted)] leading-relaxed">
           <span className="font-semibold text-[var(--foreground)]">
             Know a study we&rsquo;re missing?
@@ -517,7 +517,7 @@ export default function PredictionDetailPage() {
       {/* Market Links */}
       {prediction.marketIds && (
         <>
-          <div className="border-t border-black/[0.06]" />
+          <div className="border-t border-card" />
           <section>
             <h3 className="text-base font-bold uppercase tracking-widest text-[var(--muted)] mb-4">
               Live Prediction Markets

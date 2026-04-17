@@ -113,10 +113,10 @@ export default function IncomeStrataImpact() {
       {tierDetails.map((detail) => {
         const meta = INCOME_TIER_META[detail.tier];
         return (
-          <div key={detail.tier} className="stagger-enter rounded-xl border border-black/[0.06] overflow-hidden" style={{ animationDelay: `${["high","middle","low"].indexOf(detail.tier) * 0.12}s` }}>
+          <div key={detail.tier} className="stagger-enter rounded-xl border border-card overflow-hidden" style={{ animationDelay: `${["high","middle","low"].indexOf(detail.tier) * 0.12}s` }}>
             {/* Tier header */}
             <div
-              className="tier-header-enter px-5 py-4 border-b border-black/[0.06]"
+              className="tier-header-enter px-5 py-4 border-b border-card"
               style={{ backgroundColor: `${meta.color}08` }}
             >
               <div className="flex items-center justify-between">
@@ -179,7 +179,7 @@ export default function IncomeStrataImpact() {
             <div className="text-sm">
               {/* Header */}
               <div
-                className="grid border-b border-black/[0.06] font-semibold text-[var(--foreground)]"
+                className="grid border-b border-card font-semibold text-[var(--foreground)]"
                 style={{ gridTemplateColumns: "2.5fr 1fr 1fr 0.8fr 0.8fr 0.8fr 1fr" }}
               >
                 <div className="py-2 pl-4 pr-3 text-left">Occupation</div>
@@ -247,7 +247,7 @@ export default function IncomeStrataImpact() {
             </div>
 
             {/* Column definitions */}
-            <div className="px-5 py-2.5 border-t border-black/[0.06] text-2xs text-[var(--muted)] leading-relaxed">
+            <div className="px-5 py-2.5 border-t border-card text-2xs text-[var(--muted)] leading-relaxed">
               <strong className="text-[var(--foreground)]">2028/32/36</strong> = % of tasks where AI is cheaper than human labor.{" "}
               <strong className="text-[var(--foreground)]">Demand</strong> = will cheaper output expand this market? <span className="text-[var(--signal-positive-muted)]">High</span> = more demand, <span className="text-signal-negative">Low</span> = fixed demand.
             </div>

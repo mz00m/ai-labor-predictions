@@ -87,7 +87,7 @@ export default function ReadingListPage() {
                       href={a.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="reading-card group block rounded-lg border border-black/[0.06] bg-black/[0.01] dark:bg-white/[0.02] px-5 py-4 hover:border-black/[0.12] hover:bg-black/[0.03] dark:hover:bg-white/[0.04]"
+                      className="reading-card group block rounded-lg border border-card bg-black/[0.01] dark:bg-white/[0.02] px-5 py-4 hover:border-black/[0.12] hover:bg-black/[0.03] dark:hover:bg-white/[0.04]"
                     >
                       <div className="flex items-start justify-between gap-4">
                         <div className="min-w-0 flex-1">
