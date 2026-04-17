@@ -195,7 +195,7 @@ export default function PredictionDetailPage() {
         <p className="text-base font-bold uppercase tracking-widest text-[var(--muted)] mb-4">
           {prediction.category === "displacement" ? "Job Displacement" : prediction.category === "wages" ? "Wage Impact" : prediction.category === "adoption" ? "AI Adoption" : "Other"} | {prediction.timeHorizon}
         </p>
-        <h1 className="text-heading-xl sm:text-title font-black tracking-tight text-[var(--foreground)] leading-[1.08] mb-6">
+        <h1 className="text-heading-xl sm:text-title font-extrabold tracking-tight text-[var(--foreground)] leading-[1.08] mb-6">
           {prediction.title}
         </h1>
 
@@ -323,7 +323,7 @@ export default function PredictionDetailPage() {
       <div className="relative -mx-6 sm:-mx-10 -mt-4">
         <div className="h-1 bg-gradient-to-r from-[#5C61F6] via-[#E8A090] to-[#F66B5C]" />
         <div className="px-6 sm:px-10 pt-8 pb-2">
-          <h2 className="text-4xl sm:text-5xl font-black tracking-tight text-[var(--foreground)] leading-tight mb-3">
+          <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-[var(--foreground)] leading-tight mb-3">
             {prediction.timeHorizon.toLowerCase().includes("current")
               ? "Indicators Over Time"
               : hasBothTypes ? "Observed Data & Projections" : "Predictions Over Time"}

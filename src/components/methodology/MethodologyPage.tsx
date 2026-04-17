@@ -46,7 +46,7 @@ function Section({
 }) {
   return (
     <section id={id} className="scroll-mt-20">
-      <h2 className="text-3xl sm:text-heading-lg font-extrabold tracking-tight text-[var(--foreground)] mb-4">
+      <h2 className="text-3xl sm:text-heading-lg font-bold tracking-tight text-[var(--foreground)] mb-4">
         {title}
       </h2>
       {children}

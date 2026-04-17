@@ -58,7 +58,7 @@ export default function Home() {
             <span className="opacity-50 mx-1">&middot;</span>
             <span className="normal-case font-semibold opacity-70">{formatUpdatedDate(lastUpdated)}</span>
           </p>
-          <h1 className="text-[42px] sm:text-7xl font-black tracking-tight text-heading leading-[1.05] max-w-4xl">
+          <h1 className="text-[42px] sm:text-7xl font-extrabold tracking-tight text-heading leading-[1.05] max-w-4xl">
             How is AI <span className="text-highlight italic">reshaping</span>
             <br className="hidden sm:block" /> the labor market?
           </h1>

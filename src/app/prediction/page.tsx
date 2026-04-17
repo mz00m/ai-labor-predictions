@@ -36,7 +36,7 @@ export default function PredictionPage() {
           <p className="text-xs font-bold uppercase tracking-widest text-[var(--accent)] mb-3">
             {sourceCount}+ sources | 5-dimension framework
           </p>
-          <h1 className="text-5xl sm:text-[50px] font-black tracking-tight text-[#2E3650] leading-[1.05]">
+          <h1 className="text-5xl sm:text-6xl font-extrabold tracking-tight text-[#2E3650] leading-[1.05]">
             My 2030 Forecast
           </h1>
           <p className="mt-4 text-lg text-[var(--muted)] leading-relaxed max-w-2xl">

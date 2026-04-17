@@ -60,10 +60,10 @@ export default function ReadingListPage() {
   return (
     <main className="max-w-7xl mx-auto px-6 sm:px-10 py-12">
       <header className="mb-10">
-        <h1 className="text-2xl font-bold text-[var(--foreground)] tracking-tight">
+        <h1 className="text-4xl sm:text-5xl font-extrabold text-[var(--foreground)] tracking-tight">
           Reading List
         </h1>
-        <p className="text-sm text-[var(--muted)] mt-2 max-w-2xl leading-relaxed">
+        <p className="text-lg text-[var(--muted)] mt-3 max-w-2xl leading-relaxed">
           A rolling roster of must-read articles on AI and labor markets.
           Curated weekly with key takeaways from each source. Ordered by
           recency, grouped by the week they were featured.
