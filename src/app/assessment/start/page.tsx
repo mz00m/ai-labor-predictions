@@ -15,6 +15,12 @@ import {
 } from "@/lib/assessment/types";
 import { INDUSTRY_TEMPLATES } from "@/lib/assessment/taxonomy";
 import AiScorePreview from "@/components/assessment/AiScorePreview";
+import {
+  useSpringPress,
+  usePillPop,
+  useParticleBurst,
+  DelightStyles,
+} from "@/components/assessment/delights";
 
 type Step = "you" | "scope" | "tasks" | "upload" | "review";
 
@@ -89,6 +95,11 @@ export default function AssessmentStartPage() {
   const [elapsedSeconds, setElapsedSeconds] = useState(0);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const [error, setError] = useState<string | null>(null);
+
+  // Delight hooks
+  const continueSpring = useSpringPress();
+  const submitSpring = useSpringPress();
+  const { burst, portal } = useParticleBurst();
 
   useEffect(() => {
     if (submitting) {
@@ -280,6 +291,8 @@ export default function AssessmentStartPage() {
 
   return (
     <div className="max-w-3xl mx-auto px-6 sm:px-10 py-12">
+      <DelightStyles />
+      {portal}
       {/* Privacy badge */}
       <div className="flex items-center gap-2 mb-8">
         <span className="inline-flex items-center gap-1.5 text-xs font-medium text-gray-400 bg-gray-50 border border-gray-200 rounded-full px-3 py-1">
@@ -296,13 +309,18 @@ export default function AssessmentStartPage() {
         <span className="text-gray-400">Find out where it can help you.</span>
       </h1>
 
-      {/* Progress */}
+      {/* Progress bar with arrow segments */}
       <div className="mb-10">
-        <div className="flex items-center gap-1 mb-4">
-          {STEPS.map((s, i) => (
-            <div key={s.key} className="flex items-center gap-1">
+        <div className="flex items-center h-9">
+          {STEPS.map((s, i) => {
+            const isActive = s.key === step;
+            const isCompleted = i < currentStepIndex;
+            const isClickable = i <= currentStepIndex || i === currentStepIndex + 1;
+            return (
               <button
+                key={s.key}
                 onClick={() => {
+                  if (!isClickable) return;
                   if (i <= currentStepIndex) {
                     setStep(s.key);
                   } else if (i === currentStepIndex + 1) {
@@ -310,26 +328,32 @@ export default function AssessmentStartPage() {
                     setStep(s.key);
                   }
                 }}
-                disabled={i > currentStepIndex + 1}
-                className={`text-sm font-medium px-2.5 py-1 rounded transition-colors ${
-                  s.key === step
+                disabled={!isClickable}
+                className={`relative flex items-center justify-center text-xs font-medium h-full flex-1 transition-colors ${
+                  i === 0 ? "rounded-l-lg" : ""
+                } ${i === STEPS.length - 1 ? "rounded-r-lg" : ""} ${
+                  isActive
                     ? "bg-accent text-white"
-                    : i < currentStepIndex
-                      ? "bg-gray-100 text-gray-500 hover:text-gray-900 cursor-pointer"
-                      : i === currentStepIndex + 1
-                        ? "text-gray-400 hover:text-gray-900 cursor-pointer"
-                        : "text-gray-300 cursor-default"
-                }`}
+                    : isCompleted
+                      ? "bg-accent/10 text-accent"
+                      : "bg-gray-100 text-gray-400"
+                } ${isClickable && !isActive ? "cursor-pointer hover:bg-accent/15" : ""} ${!isClickable ? "cursor-default" : ""}`}
+                style={{ clipPath: i < STEPS.length - 1
+                  ? "polygon(0 0, calc(100% - 10px) 0, 100% 50%, calc(100% - 10px) 100%, 0 100%, 10px 50%)"
+                  : "polygon(0 0, 100% 0, 100% 100%, 0 100%, 10px 50%)"
+                }}
               >
-                {s.label}
+                <span className={`${i > 0 ? "pl-2" : ""} ${i < STEPS.length - 1 ? "pr-2" : ""} truncate`}>
+                  {isCompleted && (
+                    <svg className="inline w-3 h-3 mr-1 -mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                    </svg>
+                  )}
+                  {s.label}
+                </span>
               </button>
-              {i < STEPS.length - 1 && (
-                <svg className="w-3 h-3 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                </svg>
-              )}
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 
@@ -451,7 +475,13 @@ export default function AssessmentStartPage() {
             />
           </Field>
 
-          <AiScorePreview jobTitle={form.jobTitle} />
+          <AiScorePreview
+            jobTitle={form.jobTitle}
+            onContinue={() => {
+              if (step === "scope") prefillFromDescription();
+              setStep("tasks");
+            }}
+          />
 
           {form.assessmentScope === "department" && (
             <Field label="What team or department?">
@@ -522,17 +552,12 @@ export default function AssessmentStartPage() {
                           <p className="text-sm font-medium text-accent mb-2">{dept.name}</p>
                           <div className="flex flex-wrap gap-2">
                             {dept.keyFunctions.map((fn) => (
-                              <button
+                              <PillButton
                                 key={fn}
+                                label={fn}
+                                isSelected={form.primaryFunctions.includes(fn)}
                                 onClick={() => toggleArrayItem("primaryFunctions", fn)}
-                                className={`text-base px-3 py-1.5 rounded-full border transition-colors ${
-                                  form.primaryFunctions.includes(fn)
-                                    ? "border-accent bg-accent/[0.1] text-accent"
-                                    : "border-gray-200 text-gray-500 hover:border-gray-300"
-                                }`}
-                              >
-                                {fn}
-                              </button>
+                              />
                             ))}
                           </div>
                         </div>
@@ -548,17 +573,12 @@ export default function AssessmentStartPage() {
                                 <p className="text-sm font-medium text-gray-400 mb-2">{dept.name}</p>
                                 <div className="flex flex-wrap gap-2">
                                   {dept.keyFunctions.map((fn) => (
-                                    <button
+                                    <PillButton
                                       key={fn}
+                                      label={fn}
+                                      isSelected={form.primaryFunctions.includes(fn)}
                                       onClick={() => toggleArrayItem("primaryFunctions", fn)}
-                                      className={`text-base px-3 py-1.5 rounded-full border transition-colors ${
-                                        form.primaryFunctions.includes(fn)
-                                          ? "border-accent bg-accent/[0.1] text-accent"
-                                          : "border-gray-200 text-gray-500 hover:border-gray-300"
-                                      }`}
-                                    >
-                                      {fn}
-                                    </button>
+                                    />
                                   ))}
                                 </div>
                               </div>
@@ -570,17 +590,12 @@ export default function AssessmentStartPage() {
                   ) : (
                     <div className="flex flex-wrap gap-2">
                       {sorted.flatMap((d) => d.keyFunctions).map((fn) => (
-                        <button
+                        <PillButton
                           key={fn}
+                          label={fn}
+                          isSelected={form.primaryFunctions.includes(fn)}
                           onClick={() => toggleArrayItem("primaryFunctions", fn)}
-                          className={`text-base px-3 py-1.5 rounded-full border transition-colors ${
-                            form.primaryFunctions.includes(fn)
-                              ? "border-accent bg-accent/[0.1] text-accent"
-                              : "border-gray-200 text-gray-500 hover:border-gray-300"
-                          }`}
-                        >
-                          {fn}
-                        </button>
+                        />
                       ))}
                     </div>
                   )}
@@ -623,17 +638,12 @@ export default function AssessmentStartPage() {
                           <p className="text-sm font-medium text-accent mb-2">{dept.name}</p>
                           <div className="flex flex-wrap gap-2">
                             {dept.typicalRoles.map((role) => (
-                              <button
+                              <PillButton
                                 key={role}
+                                label={role}
+                                isSelected={form.keyRoles.includes(role)}
                                 onClick={() => toggleArrayItem("keyRoles", role)}
-                                className={`text-base px-3 py-1.5 rounded-full border transition-colors ${
-                                  form.keyRoles.includes(role)
-                                    ? "border-accent bg-accent/[0.1] text-accent"
-                                    : "border-gray-200 text-gray-500 hover:border-gray-300"
-                                }`}
-                              >
-                                {role}
-                              </button>
+                              />
                             ))}
                           </div>
                         </div>
@@ -649,17 +659,12 @@ export default function AssessmentStartPage() {
                                 <p className="text-sm font-medium text-gray-400 mb-2">{dept.name}</p>
                                 <div className="flex flex-wrap gap-2">
                                   {dept.typicalRoles.map((role) => (
-                                    <button
+                                    <PillButton
                                       key={role}
+                                      label={role}
+                                      isSelected={form.keyRoles.includes(role)}
                                       onClick={() => toggleArrayItem("keyRoles", role)}
-                                      className={`text-base px-3 py-1.5 rounded-full border transition-colors ${
-                                        form.keyRoles.includes(role)
-                                          ? "border-accent bg-accent/[0.1] text-accent"
-                                          : "border-gray-200 text-gray-500 hover:border-gray-300"
-                                      }`}
-                                    >
-                                      {role}
-                                    </button>
+                                    />
                                   ))}
                                 </div>
                               </div>
@@ -671,17 +676,12 @@ export default function AssessmentStartPage() {
                   ) : (
                     <div className="flex flex-wrap gap-2">
                       {sorted.flatMap((d) => d.typicalRoles).map((role) => (
-                        <button
+                        <PillButton
                           key={role}
+                          label={role}
+                          isSelected={form.keyRoles.includes(role)}
                           onClick={() => toggleArrayItem("keyRoles", role)}
-                          className={`text-base px-3 py-1.5 rounded-full border transition-colors ${
-                            form.keyRoles.includes(role)
-                              ? "border-accent bg-accent/[0.1] text-accent"
-                              : "border-gray-200 text-gray-500 hover:border-gray-300"
-                          }`}
-                        >
-                          {role}
-                        </button>
+                        />
                       ))}
                     </div>
                   )}
@@ -719,17 +719,12 @@ export default function AssessmentStartPage() {
                 "Writing takes too long",
                 "Searching for information",
               ].filter((v, i, a) => a.indexOf(v) === i).map((challenge) => (
-                <button
+                <PillButton
                   key={challenge}
+                  label={challenge}
+                  isSelected={form.biggestChallenges.includes(challenge)}
                   onClick={() => toggleArrayItem("biggestChallenges", challenge)}
-                  className={`text-base px-3 py-1.5 rounded-full border transition-colors ${
-                    form.biggestChallenges.includes(challenge)
-                      ? "border-accent bg-accent/[0.1] text-accent"
-                      : "border-gray-200 text-gray-500 hover:border-gray-300"
-                    }`}
-                >
-                  {challenge}
-                </button>
+                />
               ))}
             </div>
           </div>
@@ -748,17 +743,12 @@ export default function AssessmentStartPage() {
                 "Stop doing things that don't need a human",
                 "Help my team work more efficiently",
               ].map((goal) => (
-                <button
+                <PillButton
                   key={goal}
+                  label={goal}
+                  isSelected={form.goals.includes(goal)}
                   onClick={() => toggleArrayItem("goals", goal)}
-                  className={`text-base px-3 py-1.5 rounded-full border transition-colors ${
-                    form.goals.includes(goal)
-                      ? "border-accent bg-accent/[0.1] text-accent"
-                      : "border-gray-200 text-gray-500 hover:border-gray-300"
-                  }`}
-                >
-                  {goal}
-                </button>
+                />
               ))}
             </div>
           </div>
@@ -930,9 +920,14 @@ export default function AssessmentStartPage() {
           ) : (
             <>
               <button
-                onClick={() => handleSubmit()}
+                onClick={(e) => {
+                  burst(e.clientX, e.clientY, 16);
+                  handleSubmit();
+                }}
                 disabled={submitting}
                 className="w-full bg-accent hover:bg-[#4F52D4] text-white font-semibold text-md py-3 rounded-lg transition-colors disabled:opacity-50"
+                style={submitSpring.style}
+                {...submitSpring.handlers}
               >
                 Generate Your Free AI Action Plan
               </button>
@@ -956,13 +951,16 @@ export default function AssessmentStartPage() {
             Back
           </button>
           <button
-            onClick={() => {
+            onClick={(e) => {
+              burst(e.clientX, e.clientY, 10);
               const nextStep = STEPS[currentStepIndex + 1]?.key || "review";
               if (step === "scope" && nextStep === "tasks") prefillFromDescription();
               setStep(nextStep);
             }}
             disabled={!canAdvance()}
             className="text-base font-medium bg-accent hover:bg-[#4F52D4] disabled:opacity-30 disabled:cursor-default text-white px-6 py-2 rounded-lg transition-colors"
+            style={continueSpring.style}
+            {...continueSpring.handlers}
           >
             Continue
           </button>
@@ -1060,5 +1058,30 @@ function AddCustomItem({ placeholder, onAdd }: { placeholder: string; onAdd: (va
         Add
       </button>
     </div>
+  );
+}
+
+function PillButton({
+  label,
+  isSelected,
+  onClick,
+}: {
+  label: string;
+  isSelected: boolean;
+  onClick: () => void;
+}) {
+  const { style } = usePillPop(isSelected);
+  return (
+    <button
+      onClick={onClick}
+      className={`text-base px-3 py-1.5 rounded-full border transition-colors ${
+        isSelected
+          ? "border-accent bg-accent/[0.1] text-accent"
+          : "border-gray-200 text-gray-500 hover:border-gray-300"
+      }`}
+      style={style}
+    >
+      {label}
+    </button>
   );
 }
