@@ -61,6 +61,11 @@ Generate two outputs in JSON format:
 
 Make every prompt immediately usable. Include the full text they can paste into any AI tool.
 Tailor everything to this person's specific industry, role, and workflows.
+
+IMPORTANT RULES:
+- Only reference current AI products: ChatGPT (by OpenAI), Claude (by Anthropic), Google Gemini (by Google). NEVER reference "Google Bard", "Bard", or "OpenAI Codex" — these are discontinued.
+- Do NOT invent or reference any geographic location (city, state, region). The intake does not include location data.
+
 Return valid JSON with keys "aiPolicy" (with "sections" array) and "promptLibrary" (array).`;
 
   const userPrompt = `Organization: ${intake.organizationName}
@@ -120,7 +125,11 @@ Write like a smart, experienced consultant who genuinely wants this person to su
 - "This will save you about 4 hours a week" not "Potential efficiency gains"
 - "Skip this for now" not "This may be premature"
 
-FACTUAL ACCURACY: NEVER fabricate statistics, URLs, case studies, or research findings. Only cite data provided to you.`;
+FACTUAL ACCURACY: NEVER fabricate statistics, URLs, case studies, or research findings. Only cite data provided to you.
+
+GEOGRAPHIC GROUNDING: The intake does NOT include the user's city, state, or region. Do NOT invent, guess, or reference any specific geographic location (cities, states, counties, regions, neighborhoods) anywhere in the report. If you need to reference location, say "your area" or "your local market." Never mention a state or city name unless the user explicitly provided it in their intake text (e.g., in their organization name, additional context, or uploaded documents). If a location appears in their organization name (e.g., "Pittsburgh Nursery"), you may reference that specific location but do not extrapolate to surrounding areas.
+
+TOOL NAMES: Only reference current, active AI products. Use these names: ChatGPT (by OpenAI), Claude (by Anthropic), Google Gemini (by Google). NEVER reference discontinued or rebranded products such as "Google Bard", "Bard", or "OpenAI Codex". Google's AI assistant is called Gemini, not Bard.`;
 
 function filterDepartmentsToRole(
   departments: DepartmentTemplate[],
