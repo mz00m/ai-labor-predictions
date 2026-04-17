@@ -14,6 +14,7 @@ import {
   TOOL_PREFERENCE_LABELS,
 } from "@/lib/assessment/types";
 import { INDUSTRY_TEMPLATES } from "@/lib/assessment/taxonomy";
+import AiScorePreview from "@/components/assessment/AiScorePreview";
 
 type Step = "you" | "scope" | "tasks" | "upload" | "review";
 
@@ -449,6 +450,8 @@ export default function AssessmentStartPage() {
               className="input-field"
             />
           </Field>
+
+          <AiScorePreview jobTitle={form.jobTitle} />
 
           {form.assessmentScope === "department" && (
             <Field label="What team or department?">
