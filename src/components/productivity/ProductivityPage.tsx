@@ -21,7 +21,7 @@ export default function ProductivityPage() {
           <p className="text-sm font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
             Explainer
           </p>
-          <h1 className="text-5xl sm:text-[50px] font-black tracking-tight text-[var(--foreground)] leading-[1.08] mb-5">
+          <h1 className="text-5xl sm:text-[50px] font-black tracking-tight text-[var(--foreground)] leading-[1.08] mb-4">
             The Productivity Question
           </h1>
           <p className="text-prose sm:text-prose text-[var(--muted)] leading-relaxed mb-6">
@@ -32,7 +32,7 @@ export default function ProductivityPage() {
           </p>
 
           {/* Thesis card */}
-          <div className="border-l-4 border-[var(--accent)] bg-[var(--accent-light)] rounded-r-lg px-5 py-4">
+          <div className="border-l-4 border-[var(--accent)] bg-[var(--accent-light)] rounded-r-lg p-4 sm:p-5">
             <p
               className="text-lg sm:text-xl text-[var(--foreground)] leading-relaxed font-medium"
               style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
@@ -47,7 +47,7 @@ export default function ProductivityPage() {
       </header>
 
       {/* ───── Section 1: From Productivity to Jobs ───── */}
-      <section id="productivity-paths" className="mt-12">
+      <section id="productivity-paths" className="mt-16">
         <div className="max-w-3xl mb-2">
           <SectionLabel number="01" title="From productivity to jobs" />
           <p className="text-md text-[var(--muted)] leading-[1.75] mb-4">
@@ -119,7 +119,7 @@ export default function ProductivityPage() {
       </section>
 
       {/* ───── Bridge: Micro vs Macro ───── */}
-      <section className="mt-16">
+      <section className="mt-20">
         <div className="max-w-3xl">
           <div className="border border-card rounded-xl bg-white p-5 sm:p-6">
             <h3 className="text-2xl font-bold text-[var(--foreground)] mb-3">
@@ -368,7 +368,7 @@ export default function ProductivityPage() {
           </div>
 
           {/* Closing quote */}
-          <blockquote className="border-l-4 border-[var(--accent)] bg-[var(--accent-light)] rounded-r-lg px-5 py-5">
+          <blockquote className="border-l-4 border-[var(--accent)] bg-[var(--accent-light)] rounded-r-lg p-4 sm:p-5">
             <p
               className="text-lg sm:text-xl text-[var(--foreground)] leading-[1.75] font-medium"
               style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
@@ -448,7 +448,7 @@ function StatHighlight({
 }) {
   return (
     <div
-      className="rounded-xl border px-5 py-5 text-center"
+      className="rounded-xl border p-4 sm:p-5 text-center"
       style={{
         borderColor: `${color}30`,
         backgroundColor: `${color}08`,

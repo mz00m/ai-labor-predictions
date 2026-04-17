@@ -51,7 +51,7 @@ export default function EvidenceSummaryCard() {
         {EVIDENCE_STATS.map((item, i) => (
           <div
             key={i}
-            className="evidence-card border border-card rounded-lg px-5 py-4 bg-white"
+            className="evidence-card border border-card rounded-lg p-4 sm:p-6 bg-white"
           >
             <p className="stat-number text-3xl font-black text-[var(--foreground)] leading-tight mb-1.5">
               {item.stat}

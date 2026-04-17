@@ -36,7 +36,7 @@ export default function HistoryPage() {
         </p>
 
         {/* Thesis card */}
-        <div className="border-l-4 border-[var(--accent)] bg-[var(--accent-light)] rounded-r-lg px-5 py-4">
+        <div className="border-l-4 border-[var(--accent)] bg-[var(--accent-light)] rounded-r-lg p-4 sm:p-5">
           <p
             className="text-lg sm:text-xl text-[var(--foreground)] leading-relaxed font-medium"
             style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
@@ -346,7 +346,7 @@ export default function HistoryPage() {
           </div>
 
           {/* Closing pull-quote */}
-          <blockquote className="border-l-4 border-[var(--accent)] bg-[var(--accent-light)] rounded-r-lg px-5 py-5">
+          <blockquote className="border-l-4 border-[var(--accent)] bg-[var(--accent-light)] rounded-r-lg p-4 sm:p-5">
             <p
               className="text-lg sm:text-xl text-[var(--foreground)] leading-[1.75] font-medium"
               style={{
@@ -451,7 +451,7 @@ function SourceCard({
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="block border border-card rounded-lg px-5 py-4 hover:border-[var(--accent)]/30 transition-colors group"
+      className="block border border-card rounded-lg p-4 sm:p-5 hover:border-[var(--accent)]/30 transition-colors group"
     >
       <p className="text-base font-bold text-[var(--foreground)] leading-snug group-hover:text-[var(--accent)] transition-colors">
         {title}
