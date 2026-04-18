@@ -208,8 +208,8 @@ export default function MethodologyPage() {
       <TLDR>
         <p>
           jobsdata.ai is a <Strong>live meta-analysis</Strong> of AI&rsquo;s
-          impact on jobs, not a forecast. We track 470+ individually cited
-          sources across 16 prediction graphs, a 5-dimensional occupation risk
+          impact on jobs, not a forecast. We track 525+ individually cited
+          sources across 18 prediction graphs, a 5-dimensional occupation risk
           framework, and real-time automation signals. Peer-reviewed research
           (Tier 1) counts 8&times; more than blog posts (Tier 4). Newer studies
           get up to 1.5&times; more weight. The headline number on every graph
