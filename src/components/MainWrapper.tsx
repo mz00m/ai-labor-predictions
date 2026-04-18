@@ -11,7 +11,7 @@ export default function MainWrapper({ children }: { children: React.ReactNode })
   }
 
   return (
-    <main className="max-w-6xl mx-auto px-6 sm:px-10 py-16">
+    <main className="max-w-5xl mx-auto px-6 sm:px-10 py-16">
       {children}
     </main>
   );

@@ -183,7 +183,7 @@ const AUTHORS = [
 
 /* ─── Page ─────────────────────────────────────────────────────────── */
 
-export default function MethodologyPage() {
+export default function MethodologyPage({ sourceCount }: { sourceCount: number }) {
   return (
     <div className="space-y-14">
       {/* ── Header ── */}
@@ -208,7 +208,7 @@ export default function MethodologyPage() {
       <TLDR>
         <p>
           jobsdata.ai is a <Strong>live meta-analysis</Strong> of AI&rsquo;s
-          impact on jobs, not a forecast. We track 525+ individually cited
+          impact on jobs, not a forecast. We track {sourceCount}+ individually cited
           sources across 18 prediction graphs, a 5-dimensional occupation risk
           framework, and real-time automation signals. Peer-reviewed research
           (Tier 1) counts 8&times; more than blog posts (Tier 4). Newer studies

@@ -56,7 +56,10 @@ export default function SignalHero({ metrics, lastUpdated }: SignalHeroProps) {
           </span>
         </p>
 
-        <h1 className="text-[42px] sm:text-7xl font-extrabold tracking-tight text-[var(--foreground)] leading-[1.05] max-w-4xl">
+        <h1
+          className="text-5xl sm:text-6xl font-extrabold tracking-tight text-[var(--foreground)] leading-[1.1] max-w-4xl"
+          style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
+        >
           Where is AI automation{" "}
           <span className="text-highlight italic">heading?</span>
         </h1>

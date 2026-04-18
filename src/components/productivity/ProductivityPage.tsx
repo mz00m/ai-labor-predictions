@@ -21,7 +21,10 @@ export default function ProductivityPage() {
           <p className="text-sm font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
             Explainer
           </p>
-          <h1 className="text-5xl sm:text-6xl font-extrabold tracking-tight text-[var(--foreground)] leading-[1.08] mb-4">
+          <h1
+            className="text-5xl sm:text-6xl font-extrabold tracking-tight text-[var(--foreground)] leading-[1.1] mb-4"
+            style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
+          >
             The Productivity Question
           </h1>
           <p className="text-prose sm:text-prose text-[var(--muted)] leading-relaxed mb-6">

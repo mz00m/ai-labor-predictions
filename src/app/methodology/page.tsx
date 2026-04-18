@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import MethodologyPage from "@/components/methodology/MethodologyPage";
+import { getSourceCount } from "@/lib/search-sources";
 
 export const metadata: Metadata = {
   title: "Methodology | How jobsdata.ai Works",
@@ -24,9 +25,5 @@ export const metadata: Metadata = {
 };
 
 export default function MethodologyRoute() {
-  return (
-    <main className="px-6 sm:px-10 py-8 sm:py-12 max-w-4xl mx-auto">
-      <MethodologyPage />
-    </main>
-  );
+  return <MethodologyPage sourceCount={getSourceCount()} />;
 }

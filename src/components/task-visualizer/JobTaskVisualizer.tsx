@@ -284,7 +284,7 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
   return (
     <div>
       {/* Job selector */}
-      <div className="mb-6">
+      <div className="mb-8">
         {/* CTA prompt */}
         {!selectedJob && (
           <div className="mb-5 px-5 py-4 rounded-xl bg-[var(--accent)]/[0.07] border border-[var(--accent)]/[0.15] max-w-2xl">
@@ -355,7 +355,7 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
 
         {/* Sector grid - clickable category cards */}
         {!selectedJob && (
-          <div className="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-5 gap-2">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2.5">
             {Object.entries(
               JOB_PROFILES.reduce<Record<string, typeof JOB_PROFILES>>((acc, job) => {
                 if (!HIDDEN_CATEGORIES.includes(job.category)) {
@@ -370,7 +370,7 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
               return (
                 <div
                   key={category}
-                  className={`category-card rounded-lg border ${isExpanded ? "col-span-3 sm:col-span-3 lg:col-span-5" : ""}`}
+                  className={`category-card rounded-lg border ${isExpanded ? "col-span-2 sm:col-span-3 lg:col-span-4" : ""}`}
                   style={{
                     backgroundColor: `hsla(${hue}, 40%, 97%, 1)`,
                     borderColor: isExpanded ? `hsla(${hue}, 30%, 75%, 1)` : `hsla(${hue}, 30%, 88%, 1)`,
@@ -401,7 +401,7 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
                     </svg>
                   </button>
                   {isExpanded && (
-                    <div className="px-3 pb-3 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-1">
+                    <div className="px-3 pb-3 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-1.5">
                       {jobs.map((job) => (
                         <button
                           key={job.id}
@@ -424,8 +424,8 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
       {selectedJob && (
         <>
           {/* Header with job info */}
-          <div className="mb-6 pb-6 border-b border-card">
-            <div className="flex flex-wrap items-center justify-between gap-y-2 mb-3">
+          <div className="mb-8">
+            <div className="flex flex-wrap items-center justify-between gap-y-2 mb-2">
               <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
                 <h2 className="text-heading-sm font-bold text-[var(--foreground)] tracking-tight">
                   {selectedJob.title}
@@ -447,13 +447,14 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
               <ShareBar jobTitle={selectedJob.title} jobId={selectedJob.id} />
             </div>
 
-            {/* Scannable stat pills - each links to its explainer */}
-            <div className="flex flex-wrap gap-2 mb-4">
+            {/* Key stats: exposure score hero + supporting details */}
+            <div className="flex flex-wrap items-start gap-6 mt-4 mb-6">
+              {/* Exposure score — the hero number */}
               <ExposureTooltip>
-                <div className="exposure-score relative inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-black/[0.02] border border-card overflow-hidden cursor-help">
+                <div className="exposure-score relative inline-flex items-center gap-2.5 px-4 py-3 rounded-xl bg-black/[0.02] border border-card overflow-hidden cursor-help">
                   <ExposureParticles score={exposureScoreRaw} trigger={particleTrigger} />
                   <p
-                    className="text-xl font-bold tracking-tight relative z-10 leading-none"
+                    className="text-3xl font-bold tracking-tight relative z-10 leading-none"
                     style={{
                       color:
                         exposureScoreRaw > 60
@@ -465,72 +466,60 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
                   >
                     {exposureScore}
                   </p>
-                  <span className="relative z-10 text-xs text-[var(--muted)]">
+                  <span className="relative z-10 text-sm text-[var(--muted)]">
                     exposure score
                   </span>
                 </div>
               </ExposureTooltip>
 
-              <button
-                onClick={() => setActiveTab("breakdown")}
-                className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-black/[0.02] border border-card text-xs text-[var(--muted)] hover:border-[var(--accent)] hover:text-[var(--foreground)] transition-colors"
-              >
-                <span className="text-md font-bold text-[var(--foreground)]" style={{ fontFamily: "'DM Mono', monospace" }}>
-                  {selectedJob.tasks.length}
-                </span>
-                tasks analyzed
-              </button>
-
-              <span className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-black/[0.02] border border-card text-xs text-[var(--muted)]">
-                <span className="text-md font-bold text-[var(--foreground)]" style={{ fontFamily: "'DM Mono', monospace" }}>
-                  ${selectedJob.medianWagePerHr}
-                </span>
-                /hr median wage
-              </span>
-
-              <a
-                href={`https://www.bls.gov/ooh/${selectedJob.category.toLowerCase().replace(/[^a-z0-9]+/g, "-")}/`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-black/[0.02] border border-card text-xs text-[var(--muted)] hover:border-[var(--accent)] hover:text-[var(--foreground)] transition-colors"
-              >
-                {selectedJob.category}
-                <svg width="10" height="10" viewBox="0 0 16 16" fill="none" className="opacity-40">
-                  <path d="M6 3h7v7M13 3L6 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </a>
-
-              {dimensionalityInfo && (
-                <a
-                  href="/occupation-exposure#methodology-complementarity"
-                  className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border text-xs hover:border-[var(--accent)] transition-colors"
-                  style={{
-                    borderColor:
-                      dimensionalityInfo.effectiveDimensions <= 2
-                        ? "rgba(239,68,68,0.25)"
-                        : dimensionalityInfo.effectiveDimensions <= 4
-                          ? "rgba(245,158,11,0.25)"
-                          : "rgba(16,185,129,0.25)",
-                    backgroundColor:
-                      dimensionalityInfo.effectiveDimensions <= 2
-                        ? "rgba(239,68,68,0.04)"
-                        : dimensionalityInfo.effectiveDimensions <= 4
-                          ? "rgba(245,158,11,0.04)"
-                          : "rgba(16,185,129,0.04)",
-                    color:
-                      dimensionalityInfo.effectiveDimensions <= 2
-                        ? "#DC2626"
-                        : dimensionalityInfo.effectiveDimensions <= 4
-                          ? "#D97706"
-                          : "#059669",
-                  }}
+              {/* Supporting details — quieter, secondary */}
+              <div className="flex flex-wrap items-center gap-x-5 gap-y-1 text-sm text-[var(--muted)] pt-2">
+                <button
+                  onClick={() => setActiveTab("breakdown")}
+                  className="hover:text-[var(--foreground)] transition-colors"
                 >
-                  <span className="text-md font-bold" style={{ fontFamily: "'DM Mono', monospace" }}>
-                    {dimensionalityInfo.effectiveDimensions}/{dimensionalityInfo.totalCategories}
+                  <span className="font-semibold text-[var(--foreground)]" style={{ fontFamily: "'DM Mono', monospace" }}>
+                    {selectedJob.tasks.length}
                   </span>
-                  <span className="opacity-80">task dimensions</span>
+                  {" "}tasks
+                </button>
+                <span>
+                  <span className="font-semibold text-[var(--foreground)]" style={{ fontFamily: "'DM Mono', monospace" }}>
+                    ${selectedJob.medianWagePerHr}
+                  </span>
+                  /hr
+                </span>
+                <a
+                  href={`https://www.bls.gov/ooh/${selectedJob.category.toLowerCase().replace(/[^a-z0-9]+/g, "-")}/`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[var(--foreground)] transition-colors inline-flex items-center gap-1"
+                >
+                  {selectedJob.category}
+                  <svg width="10" height="10" viewBox="0 0 16 16" fill="none" className="opacity-40">
+                    <path d="M6 3h7v7M13 3L6 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
                 </a>
-              )}
+                {dimensionalityInfo && (
+                  <a
+                    href="/occupation-exposure#methodology-complementarity"
+                    className="hover:text-[var(--foreground)] transition-colors"
+                    style={{
+                      color:
+                        dimensionalityInfo.effectiveDimensions <= 2
+                          ? "#DC2626"
+                          : dimensionalityInfo.effectiveDimensions <= 4
+                            ? "#D97706"
+                            : "#059669",
+                    }}
+                  >
+                    <span className="font-semibold" style={{ fontFamily: "'DM Mono', monospace" }}>
+                      {dimensionalityInfo.effectiveDimensions}/{dimensionalityInfo.totalCategories}
+                    </span>
+                    {" "}dimensions
+                  </a>
+                )}
+              </div>
             </div>
 
             {/* Plain-language AI impact summary */}
@@ -546,7 +535,7 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
                   : "#059669";
               return (
                 <div
-                  className="px-4 py-3 rounded-lg border"
+                  className="px-5 py-4 rounded-xl border max-w-2xl"
                   style={{
                     borderColor: rc + "18",
                     background: rc + "06",
@@ -555,10 +544,10 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
                   <p className="text-base font-medium text-[var(--foreground)] leading-snug">
                     {summary.headline}
                   </p>
-                  <p className="text-sm text-[var(--muted)] mt-1.5 leading-relaxed">
+                  <p className="text-sm text-[var(--muted)] mt-2 leading-relaxed">
                     {summary.context}
                   </p>
-                  <p className="text-sm text-[var(--foreground)] mt-2 leading-relaxed">
+                  <p className="text-sm text-[var(--foreground)] mt-2.5 leading-relaxed">
                     <span className="font-semibold">{summary.action.split(".")[0]}.</span>
                     {summary.action.includes(".") && " " + summary.action.split(".").slice(1).join(".").trim()}
                   </p>
@@ -567,8 +556,11 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
             })()}
           </div>
 
+          {/* Visual separator */}
+          <div className="border-t border-card mb-8" />
+
           {/* Two-column layout: sliders + main content */}
-          <div className="grid grid-cols-1 lg:grid-cols-[340px_1fr] gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-[340px_1fr] gap-10">
             {/* Left: Sliders */}
             <div>
               <div className="flex items-center justify-between mb-3">
@@ -604,7 +596,7 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
             {/* Right: Visualizations */}
             <div>
               {/* Tab bar */}
-              <div className="flex gap-1 mb-5 border-b border-card">
+              <div className="flex gap-1.5 mb-6 border-b border-card">
                 {tabs.map((tab) => (
                   <button
                     key={tab.id}
@@ -667,9 +659,9 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
           </div>
 
           {/* Bottom share bar */}
-          <div className="mt-6 pt-4 border-t border-card flex items-center justify-between">
-            <p className="text-xs text-[var(--muted)]">
-              Know someone in this field? Share this breakdown with them.
+          <div className="mt-8 pt-5 border-t border-card flex items-center justify-between">
+            <p className="text-sm text-[var(--muted)]">
+              Know someone in this field? Share this breakdown.
             </p>
             <ShareBar jobTitle={selectedJob.title} jobId={selectedJob.id} />
           </div>

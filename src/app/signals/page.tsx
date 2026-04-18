@@ -57,51 +57,6 @@ export default function SignalsPage() {
       {/* How AI Automation Works - interactive explainer */}
       <AutomationExplainer metrics={metrics} />
 
-      {/* Anthropic: Theoretical vs Observed AI Coverage */}
-      <section className="border border-card rounded-xl p-6 sm:p-8 bg-white/50">
-        <div className="mb-4">
-          <span className="text-xs font-bold uppercase tracking-wider text-[var(--accent)] bg-[var(--accent-light)] px-2.5 py-1 rounded-full">
-            Tier 1 &middot; Anthropic Research
-          </span>
-        </div>
-        <h3 className="text-heading-sm sm:text-heading font-bold text-[var(--foreground)] leading-tight mb-2">
-          Theoretical Capability vs. Observed Exposure
-        </h3>
-        <p className="text-md text-[var(--muted)] leading-relaxed mb-6 max-w-2xl">
-          The gap between what AI <em>could</em> automate and what it <em>actually</em> handles
-          today is enormous. Blue shows the share of tasks LLMs could theoretically perform;
-          red shows measured usage from Claude API traffic. The discrepancy suggests we are
-          still early in the diffusion phase, even in high-exposure categories like
-          Office &amp; Admin and Computer &amp; Math. Importantly, high exposure does not
-          automatically predict displacement. In sectors with{" "}
-          <a href="/demand-elasticity" className="text-[var(--accent)] hover:underline">
-            elastic demand
-          </a>, high AI exposure may predict <em>expansion</em> &mdash; more hiring at
-          higher wages &mdash; as productivity gains make previously unviable work
-          economically feasible.
-        </p>
-        <div className="flex justify-center">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/images/anthropic-ai-coverage-radar.png"
-            alt="Radar chart showing theoretical AI capability (blue) vs observed AI coverage (red) across 22 occupational categories. Computer & math shows the widest gap with ~94% theoretical vs ~33% observed."
-            className="w-full max-w-[600px] rounded-lg"
-          />
-        </div>
-        <p className="text-sm text-[var(--muted)] mt-4 text-center">
-          Source:{" "}
-          <a
-            href="https://www.anthropic.com/research/labor-market-impacts"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline decoration-[var(--accent)]/40 hover:decoration-[var(--accent)] transition-colors"
-          >
-            Massenkoff &amp; McCrory (2026)
-          </a>
-          , &ldquo;Labor market impacts of AI: A new measure and early evidence&rdquo;
-        </p>
-      </section>
-
       {/* Section: Industry Cards */}
       <section>
         <div className="mb-6">
@@ -165,6 +120,51 @@ export default function SignalsPage() {
 
       {/* What happens when workers get more productive - 3-path framework */}
       <ProductivityPaths />
+
+      {/* Anthropic: Theoretical vs Observed AI Coverage */}
+      <section className="border border-card rounded-xl p-6 sm:p-8 bg-white/50">
+        <div className="mb-4">
+          <span className="text-xs font-bold uppercase tracking-wider text-[var(--accent)] bg-[var(--accent-light)] px-2.5 py-1 rounded-full">
+            Tier 1 &middot; Anthropic Research
+          </span>
+        </div>
+        <h3 className="text-heading-sm sm:text-heading font-bold text-[var(--foreground)] leading-tight mb-2">
+          Theoretical Capability vs. Observed Exposure
+        </h3>
+        <p className="text-md text-[var(--muted)] leading-relaxed mb-6 max-w-2xl">
+          The gap between what AI <em>could</em> automate and what it <em>actually</em> handles
+          today is enormous. Blue shows the share of tasks LLMs could theoretically perform;
+          red shows measured usage from Claude API traffic. The discrepancy suggests we are
+          still early in the diffusion phase, even in high-exposure categories like
+          Office &amp; Admin and Computer &amp; Math. Importantly, high exposure does not
+          automatically predict displacement. In sectors with{" "}
+          <a href="/demand-elasticity" className="text-[var(--accent)] hover:underline">
+            elastic demand
+          </a>, high AI exposure may predict <em>expansion</em> &mdash; more hiring at
+          higher wages &mdash; as productivity gains make previously unviable work
+          economically feasible.
+        </p>
+        <div className="flex justify-center">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/anthropic-ai-coverage-radar.png"
+            alt="Radar chart showing theoretical AI capability (blue) vs observed AI coverage (red) across 22 occupational categories. Computer & math shows the widest gap with ~94% theoretical vs ~33% observed."
+            className="w-full max-w-[600px] rounded-lg"
+          />
+        </div>
+        <p className="text-sm text-[var(--muted)] mt-4 text-center">
+          Source:{" "}
+          <a
+            href="https://www.anthropic.com/research/labor-market-impacts"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline decoration-[var(--accent)]/40 hover:decoration-[var(--accent)] transition-colors"
+          >
+            Massenkoff &amp; McCrory (2026)
+          </a>
+          , &ldquo;Labor market impacts of AI: A new measure and early evidence&rdquo;
+        </p>
+      </section>
 
       {/* Methodology */}
       <MethodologyNote />

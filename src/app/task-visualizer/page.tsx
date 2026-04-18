@@ -55,15 +55,14 @@ for (const [jobId, enrichedSlug] of Object.entries(TASK_VIS_TO_ENRICHED)) {
 export default function TaskVisualizerPage() {
   return (
     <div>
-      <header className="mb-6">
+      <header className="mb-8">
         <h1 className="text-4xl sm:text-title-sm font-bold text-[var(--foreground)] tracking-tight leading-tight">
           How will AI impact your job?
         </h1>
-        <p className="text-md text-[var(--muted)] mt-1.5 max-w-2xl leading-relaxed">
-          Every job is really a bundle of tasks. As AI gets cheaper and more capable,
-          some of those tasks will cost less to do with AI than with a person. This tool
-          breaks your job into its tasks and shows you which ones face that pressure first,
-          which ones stay human for a long time, and how the economics are shifting.
+        <p className="text-md text-[var(--muted)] mt-2 max-w-2xl leading-relaxed">
+          Every job is a bundle of tasks. This tool breaks yours apart and shows
+          which ones face AI cost pressure first, which stay human, and how the
+          economics are shifting.
         </p>
       </header>
 
