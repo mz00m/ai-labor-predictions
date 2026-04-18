@@ -22,8 +22,7 @@ export default function ProductivityPage() {
             Explainer
           </p>
           <h1
-            className="text-5xl sm:text-6xl font-extrabold tracking-tight text-[var(--foreground)] leading-[1.1] mb-4"
-            style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
+            className="text-5xl sm:text-6xl font-extrabold tracking-tight text-[var(--foreground)] leading-[1.1] mb-4 font-serif"
           >
             The Productivity Question
           </h1>
@@ -37,8 +36,7 @@ export default function ProductivityPage() {
           {/* Thesis card */}
           <div className="border-l-4 border-[var(--accent)] bg-[var(--accent-light)] rounded-r-lg p-4 sm:p-5">
             <p
-              className="text-lg sm:text-xl text-[var(--foreground)] leading-relaxed font-medium"
-              style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
+              className="text-lg sm:text-xl text-[var(--foreground)] leading-relaxed font-medium font-serif"
             >
               The story so far: 14&ndash;56% individual productivity gains in
               controlled studies, early signs of macro impact in BLS data,
@@ -373,8 +371,7 @@ export default function ProductivityPage() {
           {/* Closing quote */}
           <blockquote className="border-l-4 border-[var(--accent)] bg-[var(--accent-light)] rounded-r-lg p-4 sm:p-5">
             <p
-              className="text-lg sm:text-xl text-[var(--foreground)] leading-[1.75] font-medium"
-              style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
+              className="text-lg sm:text-xl text-[var(--foreground)] leading-[1.75] font-medium font-serif"
             >
               Productivity is the bridge between AI capabilities and labor
               market outcomes. Until we understand how that bridge works &mdash;
@@ -431,7 +428,7 @@ function SectionLabel({ number, title }: { number: string; title: string }) {
       <span className="text-xs font-bold uppercase tracking-widest text-[var(--accent)] block mb-1">
         {number}
       </span>
-      <h2 className="text-heading sm:text-heading-xl font-extrabold tracking-tight text-[var(--foreground)] leading-tight">
+      <h2 className="text-heading sm:text-heading-xl font-bold tracking-tight text-[var(--foreground)] leading-tight">
         {title}
       </h2>
     </div>
@@ -453,8 +450,8 @@ function StatHighlight({
     <div
       className="rounded-xl border p-4 sm:p-5 text-center"
       style={{
-        borderColor: `${color}30`,
-        backgroundColor: `${color}08`,
+        borderColor: `color-mix(in srgb, ${color} 19%, transparent)`,
+        backgroundColor: `color-mix(in srgb, ${color} 3%, transparent)`,
       }}
     >
       <p className="text-heading-2xl sm:text-[38px] font-black" style={{ color }}>
@@ -504,7 +501,7 @@ function ImplicationCard({
   return (
     <div
       className="rounded-lg px-4 py-3 border"
-      style={{ borderColor: `${color}25` }}
+      style={{ borderColor: `color-mix(in srgb, ${color} 15%, transparent)` }}
     >
       <h4
         className="text-base font-bold mb-1"

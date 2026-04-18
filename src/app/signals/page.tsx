@@ -60,7 +60,7 @@ export default function SignalsPage() {
       {/* Section: Industry Cards */}
       <section>
         <div className="mb-6">
-          <h2 className="text-4xl sm:text-title-sm font-extrabold tracking-tight text-[var(--foreground)]">
+          <h2 className="text-4xl sm:text-title-sm font-bold tracking-tight text-[var(--foreground)]">
             AI Automation by Industry
           </h2>
           <p className="text-lg text-[var(--muted)] mt-2 max-w-2xl">
@@ -94,7 +94,7 @@ export default function SignalsPage() {
       {/* Section: Full Package Table */}
       <section>
         <div className="mb-6">
-          <h2 className="text-4xl sm:text-title-sm font-extrabold tracking-tight text-[var(--foreground)]">
+          <h2 className="text-4xl sm:text-title-sm font-bold tracking-tight text-[var(--foreground)]">
             All Tracked Tools
           </h2>
           <p className="text-lg text-[var(--muted)] mt-2 max-w-2xl">

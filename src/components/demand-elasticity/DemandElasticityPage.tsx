@@ -10,19 +10,17 @@ export default function DemandElasticityPage() {
   return (
     <article className="max-w-[740px] mx-auto">
       {/* ───── Header ───── */}
-      <header className="mb-10">
+      <header className="mt-10">
         <p className="text-sm font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
           Explainer
         </p>
         <h1
-          className="text-5xl sm:text-6xl font-extrabold text-[var(--foreground)] leading-[1.1] tracking-tight mb-4"
-          style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
+          className="text-5xl sm:text-6xl font-extrabold text-[var(--foreground)] leading-[1.1] tracking-tight mb-4 font-serif"
         >
           The Demand Elasticity Effect
         </h1>
         <p
-          className="text-2xl sm:text-heading-sm text-[var(--muted)] leading-relaxed mb-5"
-          style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
+          className="text-2xl sm:text-heading-sm text-[var(--muted)] leading-relaxed mb-5 font-serif"
         >
           Why making work cheaper can create more jobs, not fewer &mdash;
           and where this does and doesn&rsquo;t apply.
@@ -31,8 +29,7 @@ export default function DemandElasticityPage() {
         {/* Thesis card */}
         <div className="border-l-4 border-[var(--accent)] bg-[var(--accent-light)] rounded-r-lg p-4 sm:p-5">
           <p
-            className="text-lg sm:text-xl text-[var(--foreground)] leading-relaxed font-medium"
-            style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
+            className="text-lg sm:text-xl text-[var(--foreground)] leading-relaxed font-medium font-serif"
           >
             When AI makes work cheaper, the question isn&rsquo;t just how many
             jobs disappear &mdash; it&rsquo;s how many new ones become worth
@@ -52,7 +49,7 @@ export default function DemandElasticityPage() {
       </header>
 
       {/* ───── Section 1: Jevons Paradox ───── */}
-      <section className="mb-12">
+      <section className="mt-12">
         <div className="border-t border-card pt-8">
           <SectionLabel number="01" />
           <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-3">
@@ -114,7 +111,7 @@ export default function DemandElasticityPage() {
       </section>
 
       {/* ───── Section 2: Interactive Toggle ───── */}
-      <section className="mb-12">
+      <section className="mt-12">
         <div className="border-t border-card pt-8">
           <SectionLabel number="02" />
           <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-3">
@@ -154,7 +151,7 @@ export default function DemandElasticityPage() {
       </section>
 
       {/* ───── Section 3: The Two Conditions ───── */}
-      <section className="mb-12">
+      <section className="mt-12">
         <div className="border-t border-card pt-8">
           <SectionLabel number="03" />
           <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-3">
@@ -171,7 +168,7 @@ export default function DemandElasticityPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
             <div
               className="rounded-xl border p-4 sm:p-5"
-              style={{ borderColor: "#5C61F625" }}
+              style={{ borderColor: "color-mix(in srgb, #5C61F6 15%, transparent)" }}
             >
               <div className="flex items-center gap-2 mb-2">
                 <span
@@ -193,7 +190,7 @@ export default function DemandElasticityPage() {
             </div>
             <div
               className="rounded-xl border p-4 sm:p-5"
-              style={{ borderColor: "#22c55e25" }}
+              style={{ borderColor: "color-mix(in srgb, #22c55e 15%, transparent)" }}
             >
               <div className="flex items-center gap-2 mb-2">
                 <span
@@ -226,7 +223,7 @@ export default function DemandElasticityPage() {
       </section>
 
       {/* ───── Section 4: The Agentic Coding Example ───── */}
-      <section className="mb-12">
+      <section className="mt-12">
         <div className="border-t border-card pt-8">
           <SectionLabel number="04" />
           <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-3">
@@ -260,8 +257,7 @@ export default function DemandElasticityPage() {
           {/* Pull-quote */}
           <blockquote className="my-8 border-l-3 border-[var(--accent)] pl-5 py-1">
             <p
-              className="text-xl text-[var(--foreground)] leading-[1.7] font-medium"
-              style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
+              className="text-xl text-[var(--foreground)] leading-[1.7] font-medium font-serif"
             >
               By making engineering cheaper, AI doesn&rsquo;t just accelerate
               existing projects. It makes entirely new categories of projects
@@ -272,7 +268,7 @@ export default function DemandElasticityPage() {
       </section>
 
       {/* ───── Section 5: Interactive Calculator ───── */}
-      <section className="mb-12">
+      <section className="mt-12">
         <div className="border-t border-card pt-8">
           <SectionLabel number="05" />
           <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-3">
@@ -290,7 +286,7 @@ export default function DemandElasticityPage() {
       </section>
 
       {/* ───── Section 6: Where It Applies ───── */}
-      <section className="mb-12">
+      <section className="mt-12">
         <div className="border-t border-card pt-8">
           <SectionLabel number="06" />
           <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-3">
@@ -353,7 +349,7 @@ export default function DemandElasticityPage() {
       </section>
 
       {/* ───── Section 7: The Reallocation Caveat ───── */}
-      <section className="mb-12">
+      <section className="mt-12">
         <div className="border-t border-card pt-8">
           <SectionLabel number="07" />
           <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-3">
@@ -372,7 +368,7 @@ export default function DemandElasticityPage() {
           {/* Warning card */}
           <div
             className="rounded-xl border p-4 sm:p-5 mb-6"
-            style={{ borderColor: "#f59e0b30", backgroundColor: "#f59e0b08" }}
+            style={{ borderColor: "color-mix(in srgb, #f59e0b 19%, transparent)", backgroundColor: "color-mix(in srgb, #f59e0b 3%, transparent)" }}
           >
             <p className="text-base font-bold text-signal-warning mb-2">
               Real frictions in the transition
@@ -429,12 +425,11 @@ export default function DemandElasticityPage() {
       </section>
 
       {/* ───── Closing ───── */}
-      <section className="mb-8">
+      <section className="mt-8">
         <div className="border-t border-card pt-8">
           <blockquote className="border-l-4 border-[var(--accent)] bg-[var(--accent-light)] rounded-r-lg p-4 sm:p-5 mb-6">
             <p
-              className="text-lg sm:text-xl text-[var(--foreground)] leading-[1.75] font-medium"
-              style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
+              className="text-lg sm:text-xl text-[var(--foreground)] leading-[1.75] font-medium font-serif"
             >
               The default assumption &mdash; that automation always means fewer
               jobs &mdash; is wrong in any market where demand is elastic. The
@@ -502,8 +497,8 @@ function StatCard({
     <div
       className="text-center rounded-lg px-3 py-3 border"
       style={{
-        borderColor: color + "30",
-        backgroundColor: color + "08",
+        borderColor: `color-mix(in srgb, ${color} 19%, transparent)`,
+        backgroundColor: `color-mix(in srgb, ${color} 3%, transparent)`,
       }}
     >
       <p className="text-heading-sm font-black" style={{ color }}>
@@ -535,7 +530,7 @@ function SectorRow({
   return (
     <div
       className="rounded-lg border px-4 py-3"
-      style={{ borderColor: color + "25" }}
+      style={{ borderColor: `color-mix(in srgb, ${color} 15%, transparent)` }}
     >
       <div className="flex items-start justify-between gap-3 mb-1">
         <h4 className="text-base font-bold text-[var(--foreground)]">
@@ -547,7 +542,7 @@ function SectorRow({
           </span>
           <span
             className="text-2xs font-bold px-2 py-0.5 rounded-full"
-            style={{ backgroundColor: color + "18", color }}
+            style={{ backgroundColor: `color-mix(in srgb, ${color} 9%, transparent)`, color }}
           >
             {outlook}
           </span>
