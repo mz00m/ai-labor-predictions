@@ -70,6 +70,37 @@ export default function AdminPage() {
   const [error, setError] = useState<string | null>(null);
   const [authed, setAuthed] = useState(false);
   const [tab, setTab] = useState<Tab>("overview");
+  const [newPassword, setNewPassword] = useState("");
+  const [passwordMsg, setPasswordMsg] = useState<string | null>(null);
+  const [changingPassword, setChangingPassword] = useState(false);
+
+  const changePassword = async () => {
+    if (newPassword.length < 6) {
+      setPasswordMsg("Must be at least 6 characters");
+      return;
+    }
+    setChangingPassword(true);
+    setPasswordMsg(null);
+    try {
+      const res = await fetch(`/api/assessment/admin?token=${encodeURIComponent(token)}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ newPassword }),
+      });
+      if (!res.ok) throw new Error("Failed to change password");
+      setToken(newPassword);
+      setNewPassword("");
+      setPasswordMsg("Password changed. Use the new password next time.");
+      // Update URL so refresh works
+      const url = new URL(window.location.href);
+      url.searchParams.set("token", newPassword);
+      window.history.replaceState({}, "", url.toString());
+    } catch {
+      setPasswordMsg("Failed to change password");
+    } finally {
+      setChangingPassword(false);
+    }
+  };
 
   const fetchData = async (t: string) => {
     setLoading(true);
@@ -137,13 +168,36 @@ export default function AdminPage() {
     <div className="min-h-screen bg-zinc-950 text-zinc-100 p-6 max-w-7xl mx-auto">
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-2xl font-semibold">Assessment Admin</h1>
-        <button
-          onClick={() => fetchData(token)}
-          disabled={loading}
-          className="px-3 py-1.5 text-sm bg-zinc-800 hover:bg-zinc-700 rounded disabled:opacity-50"
-        >
-          {loading ? "Refreshing..." : "Refresh"}
-        </button>
+        <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2">
+            <input
+              type="password"
+              value={newPassword}
+              onChange={(e) => setNewPassword(e.target.value)}
+              placeholder="New password"
+              className="w-36 px-2 py-1.5 bg-zinc-900 border border-zinc-700 rounded text-xs"
+            />
+            <button
+              onClick={changePassword}
+              disabled={changingPassword || !newPassword}
+              className="px-3 py-1.5 text-xs bg-zinc-800 hover:bg-zinc-700 rounded disabled:opacity-50"
+            >
+              {changingPassword ? "..." : "Change"}
+            </button>
+            {passwordMsg && (
+              <span className={`text-xs ${passwordMsg.includes("Failed") || passwordMsg.includes("Must") ? "text-red-400" : "text-green-400"}`}>
+                {passwordMsg}
+              </span>
+            )}
+          </div>
+          <button
+            onClick={() => fetchData(token)}
+            disabled={loading}
+            className="px-3 py-1.5 text-sm bg-zinc-800 hover:bg-zinc-700 rounded disabled:opacity-50"
+          >
+            {loading ? "Refreshing..." : "Refresh"}
+          </button>
+        </div>
       </div>
 
       {/* Stat cards — 2 rows */}
