@@ -1,17 +1,13 @@
 {
-  "fetchedAt": "2026-03-03T13:42:04Z",
+  "fetchedAt": "2026-04-18T01:58:58Z",
   "packages": [
     {
       "package": "openai",
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 102949522
-        },
-        {
           "month": "2025-10",
-          "downloads": 129619290
+          "downloads": 56806761
         },
         {
           "month": "2025-11",
@@ -28,6 +24,10 @@
         {
           "month": "2026-02",
           "downloads": 168184674
+        },
+        {
+          "month": "2026-03",
+          "downloads": 232690932
         }
       ]
     },
@@ -36,12 +36,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 25208696
-        },
-        {
           "month": "2025-10",
-          "downloads": 30526670
+          "downloads": 13832118
         },
         {
           "month": "2025-11",
@@ -58,6 +54,10 @@
         {
           "month": "2026-02",
           "downloads": 52518902
+        },
+        {
+          "month": "2026-03",
+          "downloads": 82930134
         }
       ]
     },
@@ -66,12 +66,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 74362093
-        },
-        {
           "month": "2025-10",
-          "downloads": 86330829
+          "downloads": 39418653
         },
         {
           "month": "2025-11",
@@ -88,6 +84,10 @@
         {
           "month": "2026-02",
           "downloads": 207375245
+        },
+        {
+          "month": "2026-03",
+          "downloads": 231888738
         }
       ]
     },
@@ -96,12 +96,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 59962713
-        },
-        {
           "month": "2025-10",
-          "downloads": 71964526
+          "downloads": 31995899
         },
         {
           "month": "2025-11",
@@ -118,6 +114,10 @@
         {
           "month": "2026-02",
           "downloads": 84374597
+        },
+        {
+          "month": "2026-03",
+          "downloads": 103610062
         }
       ]
     },
@@ -126,12 +126,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 91924391
-        },
-        {
           "month": "2025-10",
-          "downloads": 98566222
+          "downloads": 42483967
         },
         {
           "month": "2025-11",
@@ -148,6 +144,10 @@
         {
           "month": "2026-02",
           "downloads": 106402430
+        },
+        {
+          "month": "2026-03",
+          "downloads": 128599997
         }
       ]
     },
@@ -156,12 +156,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 210744
-        },
-        {
           "month": "2025-10",
-          "downloads": 225815
+          "downloads": 91406
         },
         {
           "month": "2025-11",
@@ -178,6 +174,10 @@
         {
           "month": "2026-02",
           "downloads": 607342
+        },
+        {
+          "month": "2026-03",
+          "downloads": 854006
         }
       ]
     },
@@ -186,12 +186,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 1227564
-        },
-        {
           "month": "2025-10",
-          "downloads": 1319816
+          "downloads": 543973
         },
         {
           "month": "2025-11",
@@ -208,6 +204,10 @@
         {
           "month": "2026-02",
           "downloads": 3027849
+        },
+        {
+          "month": "2026-03",
+          "downloads": 6794403
         }
       ]
     },
@@ -216,12 +216,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 1644728
-        },
-        {
           "month": "2025-10",
-          "downloads": 2079763
+          "downloads": 875401
         },
         {
           "month": "2025-11",
@@ -238,6 +234,10 @@
         {
           "month": "2026-02",
           "downloads": 4794228
+        },
+        {
+          "month": "2026-03",
+          "downloads": 6597676
         }
       ]
     },
@@ -246,12 +246,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 147126
-        },
-        {
           "month": "2025-10",
-          "downloads": 169971
+          "downloads": 68881
         },
         {
           "month": "2025-11",
@@ -268,6 +264,10 @@
         {
           "month": "2026-02",
           "downloads": 153718
+        },
+        {
+          "month": "2026-03",
+          "downloads": 180613
         }
       ]
     },
@@ -276,12 +276,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 364666
-        },
-        {
           "month": "2025-10",
-          "downloads": 355779
+          "downloads": 159590
         },
         {
           "month": "2025-11",
@@ -298,6 +294,10 @@
         {
           "month": "2026-02",
           "downloads": 347843
+        },
+        {
+          "month": "2026-03",
+          "downloads": 433753
         }
       ]
     },
@@ -306,12 +306,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 267750
-        },
-        {
           "month": "2025-10",
-          "downloads": 286604
+          "downloads": 119459
         },
         {
           "month": "2025-11",
@@ -328,6 +324,10 @@
         {
           "month": "2026-02",
           "downloads": 392793
+        },
+        {
+          "month": "2026-03",
+          "downloads": 507327
         }
       ]
     },
@@ -336,12 +336,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 1324738
-        },
-        {
           "month": "2025-10",
-          "downloads": 1615515
+          "downloads": 740407
         },
         {
           "month": "2025-11",
@@ -358,6 +354,10 @@
         {
           "month": "2026-02",
           "downloads": 4135817
+        },
+        {
+          "month": "2026-03",
+          "downloads": 5875673
         }
       ]
     },
@@ -366,12 +366,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 137868
-        },
-        {
           "month": "2025-10",
-          "downloads": 171698
+          "downloads": 69462
         },
         {
           "month": "2025-11",
@@ -388,6 +384,10 @@
         {
           "month": "2026-02",
           "downloads": 239217
+        },
+        {
+          "month": "2026-03",
+          "downloads": 372807
         }
       ]
     },
@@ -396,12 +396,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 3755403
-        },
-        {
           "month": "2025-10",
-          "downloads": 4170583
+          "downloads": 1764479
         },
         {
           "month": "2025-11",
@@ -418,6 +414,10 @@
         {
           "month": "2026-02",
           "downloads": 4292919
+        },
+        {
+          "month": "2026-03",
+          "downloads": 5295200
         }
       ]
     },
@@ -426,12 +426,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 19149441
-        },
-        {
           "month": "2025-10",
-          "downloads": 24276106
+          "downloads": 11367374
         },
         {
           "month": "2025-11",
@@ -448,6 +444,10 @@
         {
           "month": "2026-02",
           "downloads": 32568064
+        },
+        {
+          "month": "2026-03",
+          "downloads": 48585481
         }
       ]
     },
@@ -456,12 +456,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 337246
-        },
-        {
           "month": "2025-10",
-          "downloads": 298142
+          "downloads": 124908
         },
         {
           "month": "2025-11",
@@ -478,6 +474,10 @@
         {
           "month": "2026-02",
           "downloads": 286752
+        },
+        {
+          "month": "2026-03",
+          "downloads": 186527
         }
       ]
     },
@@ -486,12 +486,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 20575
-        },
-        {
           "month": "2025-10",
-          "downloads": 15164
+          "downloads": 6238
         },
         {
           "month": "2025-11",
@@ -508,6 +504,10 @@
         {
           "month": "2026-02",
           "downloads": 12438
+        },
+        {
+          "month": "2026-03",
+          "downloads": 9118
         }
       ]
     },
@@ -516,12 +516,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 5011219
-        },
-        {
           "month": "2025-10",
-          "downloads": 7454768
+          "downloads": 3493848
         },
         {
           "month": "2025-11",
@@ -538,6 +534,10 @@
         {
           "month": "2026-02",
           "downloads": 8592754
+        },
+        {
+          "month": "2026-03",
+          "downloads": 10496800
         }
       ]
     },
@@ -546,12 +546,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 7048554
-        },
-        {
           "month": "2025-10",
-          "downloads": 7556618
+          "downloads": 3592008
         },
         {
           "month": "2025-11",
@@ -568,6 +564,10 @@
         {
           "month": "2026-02",
           "downloads": 11188322
+        },
+        {
+          "month": "2026-03",
+          "downloads": 14152837
         }
       ]
     },
@@ -576,12 +576,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 6408
-        },
-        {
           "month": "2025-10",
-          "downloads": 6085
+          "downloads": 2506
         },
         {
           "month": "2025-11",
@@ -598,6 +594,10 @@
         {
           "month": "2026-02",
           "downloads": 6725
+        },
+        {
+          "month": "2026-03",
+          "downloads": 13531
         }
       ]
     },
@@ -606,12 +606,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 42806
-        },
-        {
           "month": "2025-10",
-          "downloads": 44099
+          "downloads": 16962
         },
         {
           "month": "2025-11",
@@ -628,6 +624,10 @@
         {
           "month": "2026-02",
           "downloads": 52541
+        },
+        {
+          "month": "2026-03",
+          "downloads": 57347
         }
       ]
     },
@@ -636,12 +636,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 4404923
-        },
-        {
           "month": "2025-10",
-          "downloads": 7739319
+          "downloads": 3134260
         },
         {
           "month": "2025-11",
@@ -658,6 +654,10 @@
         {
           "month": "2026-02",
           "downloads": 6399540
+        },
+        {
+          "month": "2026-03",
+          "downloads": 6903671
         }
       ]
     },
@@ -666,12 +666,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 856319
-        },
-        {
           "month": "2025-10",
-          "downloads": 861415
+          "downloads": 374457
         },
         {
           "month": "2025-11",
@@ -688,6 +684,10 @@
         {
           "month": "2026-02",
           "downloads": 904230
+        },
+        {
+          "month": "2026-03",
+          "downloads": 1261190
         }
       ]
     },
@@ -696,12 +696,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 79499
-        },
-        {
           "month": "2025-10",
-          "downloads": 101408
+          "downloads": 40205
         },
         {
           "month": "2025-11",
@@ -718,6 +714,10 @@
         {
           "month": "2026-02",
           "downloads": 26037
+        },
+        {
+          "month": "2026-03",
+          "downloads": 24927
         }
       ]
     },
@@ -726,12 +726,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 1579575
-        },
-        {
           "month": "2025-10",
-          "downloads": 2237352
+          "downloads": 878512
         },
         {
           "month": "2025-11",
@@ -748,6 +744,10 @@
         {
           "month": "2026-02",
           "downloads": 2780975
+        },
+        {
+          "month": "2026-03",
+          "downloads": 6138732
         }
       ]
     },
@@ -756,12 +756,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 1127207
-        },
-        {
           "month": "2025-10",
-          "downloads": 1298736
+          "downloads": 486475
         },
         {
           "month": "2025-11",
@@ -778,6 +774,10 @@
         {
           "month": "2026-02",
           "downloads": 1438235
+        },
+        {
+          "month": "2026-03",
+          "downloads": 1916830
         }
       ]
     },
@@ -786,12 +786,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 1419
-        },
-        {
           "month": "2025-10",
-          "downloads": 1477
+          "downloads": 657
         },
         {
           "month": "2025-11",
@@ -808,6 +804,10 @@
         {
           "month": "2026-02",
           "downloads": 2257
+        },
+        {
+          "month": "2026-03",
+          "downloads": 1285
         }
       ]
     },
@@ -816,12 +816,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 679372
-        },
-        {
           "month": "2025-10",
-          "downloads": 855487
+          "downloads": 353734
         },
         {
           "month": "2025-11",
@@ -838,6 +834,10 @@
         {
           "month": "2026-02",
           "downloads": 1131177
+        },
+        {
+          "month": "2026-03",
+          "downloads": 1645333
         }
       ]
     },
@@ -846,12 +846,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 13166
-        },
-        {
           "month": "2025-10",
-          "downloads": 23991
+          "downloads": 12660
         },
         {
           "month": "2025-11",
@@ -868,6 +864,10 @@
         {
           "month": "2026-02",
           "downloads": 145126
+        },
+        {
+          "month": "2026-03",
+          "downloads": 149402
         }
       ]
     },
@@ -876,12 +876,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 5305078
-        },
-        {
           "month": "2025-10",
-          "downloads": 8576703
+          "downloads": 4278847
         },
         {
           "month": "2025-11",
@@ -898,6 +894,10 @@
         {
           "month": "2026-02",
           "downloads": 10162679
+        },
+        {
+          "month": "2026-03",
+          "downloads": 15010716
         }
       ]
     },
@@ -906,12 +906,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 382901
-        },
-        {
           "month": "2025-10",
-          "downloads": 351866
+          "downloads": 155470
         },
         {
           "month": "2025-11",
@@ -928,6 +924,10 @@
         {
           "month": "2026-02",
           "downloads": 305270
+        },
+        {
+          "month": "2026-03",
+          "downloads": 322995
         }
       ]
     },
@@ -936,12 +936,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 5891325
-        },
-        {
           "month": "2025-10",
-          "downloads": 8711486
+          "downloads": 3606085
         },
         {
           "month": "2025-11",
@@ -958,6 +954,10 @@
         {
           "month": "2026-02",
           "downloads": 7488243
+        },
+        {
+          "month": "2026-03",
+          "downloads": 9203633
         }
       ]
     },
@@ -966,12 +966,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 471779
-        },
-        {
           "month": "2025-10",
-          "downloads": 554390
+          "downloads": 249479
         },
         {
           "month": "2025-11",
@@ -988,6 +984,10 @@
         {
           "month": "2026-02",
           "downloads": 618160
+        },
+        {
+          "month": "2026-03",
+          "downloads": 675928
         }
       ]
     },
@@ -996,12 +996,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 5584403
-        },
-        {
           "month": "2025-10",
-          "downloads": 6135110
+          "downloads": 2754639
         },
         {
           "month": "2025-11",
@@ -1018,6 +1014,10 @@
         {
           "month": "2026-02",
           "downloads": 11754510
+        },
+        {
+          "month": "2026-03",
+          "downloads": 16958378
         }
       ]
     },
@@ -1026,12 +1026,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 771778
-        },
-        {
           "month": "2025-10",
-          "downloads": 878555
+          "downloads": 381462
         },
         {
           "month": "2025-11",
@@ -1048,6 +1044,10 @@
         {
           "month": "2026-02",
           "downloads": 1055792
+        },
+        {
+          "month": "2026-03",
+          "downloads": 1642722
         }
       ]
     },
@@ -1056,12 +1056,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 106788
-        },
-        {
           "month": "2025-10",
-          "downloads": 107744
+          "downloads": 41280
         },
         {
           "month": "2025-11",
@@ -1078,6 +1074,10 @@
         {
           "month": "2026-02",
           "downloads": 112493
+        },
+        {
+          "month": "2026-03",
+          "downloads": 203528
         }
       ]
     },
@@ -1086,12 +1086,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 6325
-        },
-        {
           "month": "2025-10",
-          "downloads": 2554
+          "downloads": 780
         },
         {
           "month": "2025-11",
@@ -1108,6 +1104,10 @@
         {
           "month": "2026-02",
           "downloads": 2992
+        },
+        {
+          "month": "2026-03",
+          "downloads": 1676
         }
       ]
     },
@@ -1116,12 +1116,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 539362
-        },
-        {
           "month": "2025-10",
-          "downloads": 795038
+          "downloads": 357478
         },
         {
           "month": "2025-11",
@@ -1138,6 +1134,10 @@
         {
           "month": "2026-02",
           "downloads": 791400
+        },
+        {
+          "month": "2026-03",
+          "downloads": 744335
         }
       ]
     },
@@ -1146,12 +1146,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 8667888
-        },
-        {
           "month": "2025-10",
-          "downloads": 11550182
+          "downloads": 5448018
         },
         {
           "month": "2025-11",
@@ -1168,6 +1164,10 @@
         {
           "month": "2026-02",
           "downloads": 11489621
+        },
+        {
+          "month": "2026-03",
+          "downloads": 14334392
         }
       ]
     },
@@ -1176,12 +1176,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 15243106
-        },
-        {
           "month": "2025-10",
-          "downloads": 20432426
+          "downloads": 9483987
         },
         {
           "month": "2025-11",
@@ -1198,6 +1194,10 @@
         {
           "month": "2026-02",
           "downloads": 28842087
+        },
+        {
+          "month": "2026-03",
+          "downloads": 32721101
         }
       ]
     },
@@ -1206,12 +1206,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 16167
-        },
-        {
           "month": "2025-10",
-          "downloads": 16862
+          "downloads": 7747
         },
         {
           "month": "2025-11",
@@ -1228,6 +1224,10 @@
         {
           "month": "2026-02",
           "downloads": 20353
+        },
+        {
+          "month": "2026-03",
+          "downloads": 23262
         }
       ]
     },
@@ -1236,12 +1236,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 15202086
-        },
-        {
           "month": "2025-10",
-          "downloads": 17655867
+          "downloads": 7274404
         },
         {
           "month": "2025-11",
@@ -1258,6 +1254,10 @@
         {
           "month": "2026-02",
           "downloads": 17793525
+        },
+        {
+          "month": "2026-03",
+          "downloads": 27108829
         }
       ]
     },
@@ -1266,12 +1266,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 6511392
-        },
-        {
           "month": "2025-10",
-          "downloads": 8154503
+          "downloads": 3380856
         },
         {
           "month": "2025-11",
@@ -1288,6 +1284,10 @@
         {
           "month": "2026-02",
           "downloads": 6648470
+        },
+        {
+          "month": "2026-03",
+          "downloads": 9870363
         }
       ]
     },
@@ -1296,12 +1296,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 25062132
-        },
-        {
           "month": "2025-10",
-          "downloads": 30855908
+          "downloads": 13861250
         },
         {
           "month": "2025-11",
@@ -1318,6 +1314,10 @@
         {
           "month": "2026-02",
           "downloads": 39712763
+        },
+        {
+          "month": "2026-03",
+          "downloads": 49260313
         }
       ]
     },
@@ -1326,12 +1326,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 1000645
-        },
-        {
           "month": "2025-10",
-          "downloads": 982409
+          "downloads": 430999
         },
         {
           "month": "2025-11",
@@ -1348,6 +1344,10 @@
         {
           "month": "2026-02",
           "downloads": 1000798
+        },
+        {
+          "month": "2026-03",
+          "downloads": 1117671
         }
       ]
     },
@@ -1356,12 +1356,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 1363776
-        },
-        {
           "month": "2025-10",
-          "downloads": 1326482
+          "downloads": 607634
         },
         {
           "month": "2025-11",
@@ -1378,6 +1374,40 @@
         {
           "month": "2026-02",
           "downloads": 1209589
+        },
+        {
+          "month": "2026-03",
+          "downloads": 1856099
+        }
+      ]
+    },
+    {
+      "package": "robotframework",
+      "source": "pypi",
+      "data": [
+        {
+          "month": "2025-10",
+          "downloads": 1708468
+        },
+        {
+          "month": "2025-11",
+          "downloads": 3867169
+        },
+        {
+          "month": "2025-12",
+          "downloads": 3870742
+        },
+        {
+          "month": "2026-01",
+          "downloads": 4050830
+        },
+        {
+          "month": "2026-02",
+          "downloads": 4263270
+        },
+        {
+          "month": "2026-03",
+          "downloads": 4844344
         }
       ]
     },
@@ -1386,12 +1416,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 3823767
-        },
-        {
           "month": "2025-10",
-          "downloads": 5410687
+          "downloads": 2547672
         },
         {
           "month": "2025-11",
@@ -1408,6 +1434,10 @@
         {
           "month": "2026-02",
           "downloads": 8068291
+        },
+        {
+          "month": "2026-03",
+          "downloads": 9020895
         }
       ]
     },
@@ -1416,12 +1446,8 @@
       "source": "pypi",
       "data": [
         {
-          "month": "2025-09",
-          "downloads": 1758467
-        },
-        {
           "month": "2025-10",
-          "downloads": 3666320
+          "downloads": 1185568
         },
         {
           "month": "2025-11",
@@ -1438,6 +1464,10 @@
         {
           "month": "2026-02",
           "downloads": 1177092
+        },
+        {
+          "month": "2026-03",
+          "downloads": 1546121
         }
       ]
     },
@@ -1445,10 +1475,6 @@
       "package": "openai-npm",
       "source": "npm",
       "data": [
-        {
-          "month": "2024-10",
-          "downloads": 10234118
-        },
         {
           "month": "2024-11",
           "downloads": 9797902
@@ -1512,6 +1538,10 @@
         {
           "month": "2026-02",
           "downloads": 50093720
+        },
+        {
+          "month": "2026-03",
+          "downloads": 71409136
         }
       ]
     },
@@ -1519,10 +1549,6 @@
       "package": "@anthropic-ai/sdk",
       "source": "npm",
       "data": [
-        {
-          "month": "2024-10",
-          "downloads": 2629335
-        },
         {
           "month": "2024-11",
           "downloads": 2540809
@@ -1586,6 +1612,10 @@
         {
           "month": "2026-02",
           "downloads": 24055363
+        },
+        {
+          "month": "2026-03",
+          "downloads": 40746913
         }
       ]
     },
@@ -1593,10 +1623,6 @@
       "package": "ai",
       "source": "npm",
       "data": [
-        {
-          "month": "2024-10",
-          "downloads": 1903057
-        },
         {
           "month": "2024-11",
           "downloads": 2091549
@@ -1660,6 +1686,10 @@
         {
           "month": "2026-02",
           "downloads": 31880725
+        },
+        {
+          "month": "2026-03",
+          "downloads": 44430907
         }
       ]
     },
@@ -1667,10 +1697,6 @@
       "package": "@ai-sdk/openai",
       "source": "npm",
       "data": [
-        {
-          "month": "2024-10",
-          "downloads": 1156964
-        },
         {
           "month": "2024-11",
           "downloads": 1387771
@@ -1734,6 +1760,10 @@
         {
           "month": "2026-02",
           "downloads": 16003574
+        },
+        {
+          "month": "2026-03",
+          "downloads": 20699908
         }
       ]
     },
@@ -1741,10 +1771,6 @@
       "package": "@ai-sdk/anthropic",
       "source": "npm",
       "data": [
-        {
-          "month": "2024-10",
-          "downloads": 423417
-        },
         {
           "month": "2024-11",
           "downloads": 480174
@@ -1808,6 +1834,10 @@
         {
           "month": "2026-02",
           "downloads": 12927302
+        },
+        {
+          "month": "2026-03",
+          "downloads": 17692032
         }
       ]
     },
@@ -1815,10 +1845,6 @@
       "package": "@modelcontextprotocol/sdk",
       "source": "npm",
       "data": [
-        {
-          "month": "2024-10",
-          "downloads": 0
-        },
         {
           "month": "2024-11",
           "downloads": 13822
@@ -1882,6 +1908,10 @@
         {
           "month": "2026-02",
           "downloads": 71656771
+        },
+        {
+          "month": "2026-03",
+          "downloads": 141911796
         }
       ]
     },
@@ -1889,10 +1919,6 @@
       "package": "playwright-npm",
       "source": "npm",
       "data": [
-        {
-          "month": "2024-10",
-          "downloads": 36766340
-        },
         {
           "month": "2024-11",
           "downloads": 43671104
@@ -1956,6 +1982,10 @@
         {
           "month": "2026-02",
           "downloads": 129038302
+        },
+        {
+          "month": "2026-03",
+          "downloads": 175819792
         }
       ]
     },
@@ -1963,10 +1993,6 @@
       "package": "puppeteer-npm",
       "source": "npm",
       "data": [
-        {
-          "month": "2024-10",
-          "downloads": 17386060
-        },
         {
           "month": "2024-11",
           "downloads": 16455331
@@ -2030,6 +2056,10 @@
         {
           "month": "2026-02",
           "downloads": 30053620
+        },
+        {
+          "month": "2026-03",
+          "downloads": 38879851
         }
       ]
     },
@@ -2037,10 +2067,6 @@
       "package": "llamaindex",
       "source": "npm",
       "data": [
-        {
-          "month": "2024-10",
-          "downloads": 108855
-        },
         {
           "month": "2024-11",
           "downloads": 111974
@@ -2104,6 +2130,10 @@
         {
           "month": "2026-02",
           "downloads": 373339
+        },
+        {
+          "month": "2026-03",
+          "downloads": 536306
         }
       ]
     },
@@ -2111,10 +2141,6 @@
       "package": "@langchain/core",
       "source": "npm",
       "data": [
-        {
-          "month": "2024-10",
-          "downloads": 2586499
-        },
         {
           "month": "2024-11",
           "downloads": 2672137
@@ -2178,6 +2204,10 @@
         {
           "month": "2026-02",
           "downloads": 11307512
+        },
+        {
+          "month": "2026-03",
+          "downloads": 15583163
         }
       ]
     },
@@ -2185,10 +2215,6 @@
       "package": "@langchain/openai",
       "source": "npm",
       "data": [
-        {
-          "month": "2024-10",
-          "downloads": 2062462
-        },
         {
           "month": "2024-11",
           "downloads": 2214990
@@ -2252,6 +2278,10 @@
         {
           "month": "2026-02",
           "downloads": 8596302
+        },
+        {
+          "month": "2026-03",
+          "downloads": 12055333
         }
       ]
     },
@@ -2259,10 +2289,6 @@
       "package": "replicate-npm",
       "source": "npm",
       "data": [
-        {
-          "month": "2024-10",
-          "downloads": 772912
-        },
         {
           "month": "2024-11",
           "downloads": 780201
@@ -2326,6 +2352,10 @@
         {
           "month": "2026-02",
           "downloads": 1315839
+        },
+        {
+          "month": "2026-03",
+          "downloads": 1746419
         }
       ]
     },
@@ -2333,10 +2363,6 @@
       "package": "botpress",
       "source": "npm",
       "data": [
-        {
-          "month": "2024-10",
-          "downloads": 7772
-        },
         {
           "month": "2024-11",
           "downloads": 3163
@@ -2400,6 +2426,10 @@
         {
           "month": "2026-02",
           "downloads": 3452
+        },
+        {
+          "month": "2026-03",
+          "downloads": 2500
         }
       ]
     },
@@ -2407,10 +2437,6 @@
       "package": "posthog-js",
       "source": "npm",
       "data": [
-        {
-          "month": "2024-10",
-          "downloads": 2811435
-        },
         {
           "month": "2024-11",
           "downloads": 2744194
@@ -2474,6 +2500,10 @@
         {
           "month": "2026-02",
           "downloads": 12851662
+        },
+        {
+          "month": "2026-03",
+          "downloads": 18748153
         }
       ]
     },
@@ -2481,10 +2511,6 @@
       "package": "@hubspot/api-client",
       "source": "npm",
       "data": [
-        {
-          "month": "2024-10",
-          "downloads": 1522855
-        },
         {
           "month": "2024-11",
           "downloads": 1422994
@@ -2548,36 +2574,10 @@
         {
           "month": "2026-02",
           "downloads": 3015150
-        }
-      ]
-    },
-    {
-      "package": "robotframework",
-      "source": "pypi",
-      "data": [
-        {
-          "month": "2025-09",
-          "downloads": 3519628
         },
         {
-          "month": "2025-10",
-          "downloads": 3987493
-        },
-        {
-          "month": "2025-11",
-          "downloads": 3867169
-        },
-        {
-          "month": "2025-12",
-          "downloads": 3870742
-        },
-        {
-          "month": "2026-01",
-          "downloads": 4050830
-        },
-        {
-          "month": "2026-02",
-          "downloads": 4263270
+          "month": "2026-03",
+          "downloads": 4001771
         }
       ]
     }
