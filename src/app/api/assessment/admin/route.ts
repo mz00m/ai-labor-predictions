@@ -1,18 +1,37 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getDb } from "@/lib/db";
-import { initAssessmentTables } from "@/lib/assessment/db";
+import { initAssessmentTables, getAdminPasswordHash, setAdminPasswordHash } from "@/lib/assessment/db";
 
 type Row = Record<string, unknown>;
 
-function checkAuth(req: NextRequest): boolean {
-  const token = req.nextUrl.searchParams.get("token");
+async function hashToken(token: string): Promise<string> {
+  const encoder = new TextEncoder();
+  const data = encoder.encode(token);
+  const hashBuffer = await crypto.subtle.digest("SHA-256", data);
+  return Array.from(new Uint8Array(hashBuffer))
+    .map((b) => b.toString(16).padStart(2, "0"))
+    .join("");
+}
+
+async function checkAuth(req: NextRequest): Promise<boolean> {
+  const token = req.nextUrl.searchParams.get("token") || req.headers.get("x-admin-token");
+  if (!token) return false;
+
+  // Check DB password first
+  const dbHash = await getAdminPasswordHash();
+  if (dbHash) {
+    const tokenHash = await hashToken(token);
+    return tokenHash === dbHash;
+  }
+
+  // Fall back to env var
   const secret = process.env.ADMIN_SECRET;
   if (!secret) return false;
   return token === secret;
 }
 
 export async function GET(req: NextRequest) {
-  if (!checkAuth(req)) {
+  if (!(await checkAuth(req))) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
@@ -127,4 +146,22 @@ export async function GET(req: NextRequest) {
     feedback,
     dailyCounts,
   });
+}
+
+export async function PUT(req: NextRequest) {
+  if (!(await checkAuth(req))) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
+  const body = await req.json();
+  const { newPassword } = body;
+
+  if (!newPassword || typeof newPassword !== "string" || newPassword.length < 6) {
+    return NextResponse.json({ error: "Password must be at least 6 characters" }, { status: 400 });
+  }
+
+  const hash = await hashToken(newPassword);
+  await setAdminPasswordHash(hash);
+
+  return NextResponse.json({ ok: true });
 }

@@ -63,6 +63,14 @@ export async function initAssessmentTables(): Promise<void> {
     )
   `;
 
+  await sql`
+    CREATE TABLE IF NOT EXISTS admin_settings (
+      key TEXT PRIMARY KEY,
+      value TEXT NOT NULL,
+      updated_at TIMESTAMP DEFAULT NOW()
+    )
+  `;
+
   // Add columns for existing tables (safe to run multiple times)
   await sql`
     DO $$ BEGIN
@@ -441,6 +449,37 @@ export async function getUserByEmail(email: string): Promise<{ id: string; email
 
   if (rows.length === 0) return null;
   return { id: rows[0].id as string, email: rows[0].email as string };
+}
+
+/**
+ * Get the admin password hash from DB, if one has been set
+ */
+export async function getAdminPasswordHash(): Promise<string | null> {
+  const sql = getDb();
+  if (!sql) return null;
+
+  await initAssessmentTables();
+  type SettingsRow = { value: string };
+  const rows = await sql`
+    SELECT value FROM admin_settings WHERE key = 'admin_password_hash'
+  ` as SettingsRow[];
+
+  return rows.length > 0 ? rows[0].value : null;
+}
+
+/**
+ * Set admin password hash in DB
+ */
+export async function setAdminPasswordHash(hash: string): Promise<void> {
+  const sql = getDb();
+  if (!sql) return;
+
+  await initAssessmentTables();
+  await sql`
+    INSERT INTO admin_settings (key, value, updated_at)
+    VALUES ('admin_password_hash', ${hash}, NOW())
+    ON CONFLICT (key) DO UPDATE SET value = ${hash}, updated_at = NOW()
+  `;
 }
 
 function generateId(): string {
