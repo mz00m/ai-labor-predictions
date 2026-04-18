@@ -24,9 +24,5 @@ export const metadata: Metadata = {
 };
 
 export default function JCurveRoute() {
-  return (
-    <main className="px-6 sm:px-10 py-8 sm:py-12 max-w-5xl mx-auto">
-      <JCurvePage />
-    </main>
-  );
+  return <JCurvePage />;
 }
