@@ -83,9 +83,9 @@ function CustomTooltip({
   const data = (payload.find((p) => p.payload)?.payload ?? payload[0]?.payload) as ChartDataPoint;
   if (!data) return null;
 
-  // Find overlays matching this x-axis position
+  // Find overlays matching this data point (same month/year)
   const matchingOverlays = (overlays ?? []).filter(
-    (o) => o.dateStr === data.dateStr
+    (o) => o.dateStr === data.displayDate
   );
 
   // If phantom point with no overlays, nothing to show
@@ -460,28 +460,8 @@ export default function PredictionChart({
     }
   }
 
-  // Disambiguate duplicate dateStr values so the categorical x-axis has
-  // unique categories.  Recharts' band scale silently drops duplicate keys,
-  // which can cause ReferenceLine x-lookups to fail.
-  const usedLabels = new Set<string>();
-  const dateStrToUnique = new Map<number, string>(); // timestamp → unique label
-  for (const pt of realPoints) {
-    if (usedLabels.has(pt.dateStr)) {
-      const day = format(parseISO(filtered.find(
-        (d) => parseISO(d.date).getTime() === pt.date
-      )!.date), "d");
-      let candidate = `${pt.dateStr} (${day})`;
-      // If still not unique (same-date different-source), add letter suffix
-      let suffix = 2;
-      while (usedLabels.has(candidate)) {
-        candidate = `${pt.dateStr} (${day}.${suffix})`;
-        suffix++;
-      }
-      pt.dateStr = candidate;
-    }
-    usedLabels.add(pt.dateStr);
-    dateStrToUnique.set(pt.date, pt.dateStr);
-  }
+  // No need to disambiguate dateStr — we use numeric timestamps for the
+  // x-axis, so duplicate labels don't cause issues.
 
   // Compute Y-axis domain: expand beyond hardcoded bounds if data would be clipped
   const dataValues = filtered.flatMap((h) => {
@@ -511,15 +491,9 @@ export default function PredictionChart({
   const directionOrder: Record<string, number> = { down: 0, neutral: 1, up: 2 };
   const overlayData = filteredOverlays.map((o) => {
     const ts = parseISO(o.date).getTime();
-    const baseStr = format(parseISO(o.date), "MMM yyyy");
-    // If a real data point already occupies this month, reuse its unique key
-    // so the ReferenceLine x value matches the axis category exactly.
-    const matchingReal = realPoints.find(
-      (rp) => rp.dateStr === baseStr || rp.dateStr.startsWith(baseStr + " (")
-    );
     return {
       date: ts,
-      dateStr: dateStrToUnique.get(ts) ?? matchingReal?.dateStr ?? baseStr,
+      dateStr: format(parseISO(o.date), "MMM yyyy"),
       direction: o.direction,
       label: o.label,
       sourceIds: o.sourceIds,
@@ -527,78 +501,24 @@ export default function PredictionChart({
     };
   }).sort((a, b) => (directionOrder[a.direction] ?? 1) - (directionOrder[b.direction] ?? 1));
 
-  // Create phantom data points for overlay dates that don't already exist
-  // in the chart data, so the categorical x-axis recognizes them.
-  // Deduplicate by dateStr to avoid duplicate x-axis categories.
-  const usedDateStrs = new Set(realPoints.map((d) => d.dateStr));
-  const phantomPoints: ChartDataPoint[] = [];
-  for (const o of overlayData) {
-    if (!usedDateStrs.has(o.dateStr)) {
-      usedDateStrs.add(o.dateStr);
-      phantomPoints.push({
-        date: o.date,
-        dateStr: o.dateStr,
-        displayDate: format(new Date(o.date), "MMM yyyy"),
-        value: undefined,
-        dataType: "observed",
-        evidenceTier: o.evidenceTier,
-        sourceIds: o.sourceIds,
-        isPhantom: true,
-      });
+  // With a numeric time axis, no phantom points are needed — data points
+  // are positioned by their actual timestamp.
+  const chartData = [...realPoints].sort((a, b) => a.date - b.date);
+
+  // Compute evenly-spaced quarterly tick timestamps for the X axis.
+  const dataTimestamps = realPoints.filter((p) => p.value != null).map((p) => p.date);
+  const dataMinTs = dataTimestamps.length > 0 ? Math.min(...dataTimestamps) : Date.now();
+  const dataMaxTs = dataTimestamps.length > 0 ? Math.max(...dataTimestamps) : Date.now();
+  const quarterTickTimestamps: number[] = [];
+  {
+    const startDate = new Date(dataMinTs);
+    const startQ = Math.floor(startDate.getMonth() / 3) * 3;
+    const cursor = new Date(startDate.getFullYear(), startQ, 1);
+    while (cursor.getTime() <= dataMaxTs + 45 * 24 * 60 * 60 * 1000) {
+      quarterTickTimestamps.push(cursor.getTime());
+      cursor.setMonth(cursor.getMonth() + 3);
     }
   }
-
-  // Skip target date phantom point — extending the axis to a far-future
-  // target (e.g. 2030) creates a massive empty gap that distorts the chart.
-
-  // Insert phantom quarter-boundary points to create an evenly-spaced
-  // timeline axis. Only span the range of real data points (not the
-  // target date, which would stretch the chart with years of empty space).
-  const allPoints = [...realPoints, ...phantomPoints];
-  const realDates = realPoints.filter((p) => p.value != null).map((p) => p.date);
-  const dataMinTs = realDates.length > 0 ? Math.min(...realDates) : Math.min(...allPoints.map((p) => p.date));
-  const dataMaxTs = realDates.length > 0 ? Math.max(...realDates) : Math.max(...allPoints.map((p) => p.date));
-  const existingDateStrs = new Set(allPoints.map((p) => p.dateStr));
-
-  const quarterBoundaries: ChartDataPoint[] = [];
-  const quarterTickLabels: string[] = [];
-  const startDate = new Date(dataMinTs);
-  // Round down to quarter start
-  const startQ = Math.floor(startDate.getMonth() / 3) * 3;
-  const cursor = new Date(startDate.getFullYear(), startQ, 1);
-  // Generate quarters only through one quarter past the last real data point
-  const endTs = dataMaxTs + 90 * 24 * 60 * 60 * 1000;
-  while (cursor.getTime() <= endTs) {
-    const ts = cursor.getTime();
-    const label = format(cursor, "MMM yyyy");
-    quarterTickLabels.push(label);
-    if (!existingDateStrs.has(label)) {
-      existingDateStrs.add(label);
-      quarterBoundaries.push({
-        date: ts,
-        dateStr: label,
-        displayDate: label,
-        value: undefined,
-        dataType: "observed",
-        evidenceTier: 1 as EvidenceTier,
-        sourceIds: [],
-        isPhantom: true,
-      });
-    } else {
-      // Use the existing dateStr (might be disambiguated) for tick lookup
-      const existing = allPoints.find(
-        (p) => p.dateStr === label || p.dateStr.startsWith(label + " (")
-      );
-      if (existing) {
-        quarterTickLabels[quarterTickLabels.length - 1] = existing.dateStr;
-      }
-    }
-    cursor.setMonth(cursor.getMonth() + 3);
-  }
-
-  const chartData = [...allPoints, ...quarterBoundaries].sort(
-    (a, b) => a.date - b.date
-  );
 
   // Linear regression trend line (least-squares on observed points only)
   const pointsWithValues = realPoints.filter((d) => d.value != null && d.dataType === "observed");
@@ -629,19 +549,19 @@ export default function PredictionChart({
     return (
       <ResponsiveContainer width="100%" height={80}>
         <ComposedChart data={chartData}>
-          {/* Hidden categorical axis so ReferenceLine can resolve x values */}
-          <XAxis dataKey="dateStr" hide />
+          {/* Hidden numeric time axis so ReferenceLine can resolve x values */}
+          <XAxis dataKey="date" type="number" scale="time" domain={[dataMinTs, dataMaxTs]} hide />
           {(() => {
-            const byDate = new Map<string, typeof overlayData>();
+            const byDate = new Map<number, typeof overlayData>();
             for (const o of overlayData) {
-              const group = byDate.get(o.dateStr) ?? [];
+              const group = byDate.get(o.date) ?? [];
               group.push(o);
-              byDate.set(o.dateStr, group);
+              byDate.set(o.date, group);
             }
-            return Array.from(byDate.entries()).map(([dateStr, group]) => (
+            return Array.from(byDate.entries()).map(([date, group]) => (
               <ReferenceLine
-                key={`overlay-compact-${dateStr}`}
-                x={dateStr}
+                key={`overlay-compact-${date}`}
+                x={date}
                 stroke={groupedOverlayColor(group.map((g) => g.direction))}
                 strokeWidth={6}
                 strokeOpacity={0.15}
@@ -706,26 +626,20 @@ export default function PredictionChart({
         >
           <CartesianGrid strokeDasharray="3 3" opacity={0.06} />
           <XAxis
-            dataKey="dateStr"
+            dataKey="date"
+            type="number"
+            scale="time"
+            domain={[dataMinTs, dataMaxTs]}
             tick={{ fontSize: 12, fill: "#6b7280" }}
             tickLine={false}
             axisLine={false}
             padding={{ left: 30, right: 30 }}
-            ticks={quarterTickLabels}
-            tickFormatter={(dateStr: string) => {
-              const base = dateStr.replace(/ \(.*\)$/, "");
-              const parts = base.split(" ");
-              if (parts.length < 2) return dateStr;
-              const month = parts[0];
-              const year = parts[1];
-              const shortYear = year.slice(-2);
-              const quarterMap: Record<string, string> = {
-                Jan: "Q1", Feb: "Q1", Mar: "Q1",
-                Apr: "Q2", May: "Q2", Jun: "Q2",
-                Jul: "Q3", Aug: "Q3", Sep: "Q3",
-                Oct: "Q4", Nov: "Q4", Dec: "Q4",
-              };
-              return `${quarterMap[month] ?? month} '${shortYear}`;
+            ticks={quarterTickTimestamps}
+            tickFormatter={(ts: number) => {
+              const d = new Date(ts);
+              const q = Math.floor(d.getMonth() / 3) + 1;
+              const shortYear = String(d.getFullYear()).slice(-2);
+              return `Q${q} '${shortYear}`;
             }}
           />
           <YAxis
@@ -796,17 +710,16 @@ export default function PredictionChart({
           )}
           {/* Overlay vertical bars - one per date, color from grouped direction */}
           {(() => {
-            // Group overlays by dateStr so overlapping bars don't blend to brown
-            const byDate = new Map<string, typeof overlayData>();
+            const byDate = new Map<number, typeof overlayData>();
             for (const o of overlayData) {
-              const group = byDate.get(o.dateStr) ?? [];
+              const group = byDate.get(o.date) ?? [];
               group.push(o);
-              byDate.set(o.dateStr, group);
+              byDate.set(o.date, group);
             }
-            return Array.from(byDate.entries()).map(([dateStr, group]) => (
+            return Array.from(byDate.entries()).map(([date, group]) => (
               <ReferenceLine
-                key={`overlay-bar-${dateStr}`}
-                x={dateStr}
+                key={`overlay-bar-${date}`}
+                x={date}
                 stroke={groupedOverlayColor(group.map((g) => g.direction))}
                 strokeWidth={10}
                 strokeOpacity={0.18}
