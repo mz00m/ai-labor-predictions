@@ -13,19 +13,17 @@ export default function JCurvePage() {
     <article className="max-w-[740px] mx-auto">
       <ReadingProgressBar />
       {/* ───── Header ───── */}
-      <header className="mb-10">
+      <header className="mt-10">
         <p className="text-sm font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
           Explainer
         </p>
         <h1
-          className="text-5xl sm:text-6xl font-extrabold text-[var(--foreground)] leading-[1.1] tracking-tight mb-4"
-          style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
+          className="text-5xl sm:text-6xl font-extrabold text-[var(--foreground)] leading-[1.1] tracking-tight mb-4 font-serif"
         >
           The Productivity J-Curve
         </h1>
         <p
-          className="text-2xl sm:text-heading-sm text-[var(--muted)] leading-relaxed mb-5"
-          style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
+          className="text-2xl sm:text-heading-sm text-[var(--muted)] leading-relaxed mb-5 font-serif"
         >
           Why transformative technologies make productivity look{" "}
           <em>worse</em> before making it better, and what this
@@ -35,8 +33,7 @@ export default function JCurvePage() {
         {/* Thesis card */}
         <div className="border-l-4 border-[var(--accent)] bg-[var(--accent-light)] rounded-r-lg p-4 sm:p-5">
           <p
-            className="text-lg sm:text-xl text-[var(--foreground)] leading-relaxed font-medium"
-            style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
+            className="text-lg sm:text-xl text-[var(--foreground)] leading-relaxed font-medium font-serif"
           >
             When a major new technology arrives, measured productivity often
             stagnates or declines for years, not because the
@@ -56,7 +53,7 @@ export default function JCurvePage() {
         </div>
       </header>
       {/* ───── Section 1: The Paradox ───── */}
-      <section className="mb-12">
+      <section className="mt-12">
         <div className="border-t border-card pt-8">
           <SectionLabel number="01" />
           <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-3">
@@ -111,7 +108,7 @@ export default function JCurvePage() {
       </section>
 
       {/* ───── Section 2: The J-Curve ───── */}
-      <section className="mb-12">
+      <section className="mt-12">
         <div className="border-t border-card pt-8">
           <SectionLabel number="02" />
           <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-3">
@@ -134,7 +131,7 @@ export default function JCurvePage() {
       </section>
 
       {/* ───── Section 3: Why It Happens ───── */}
-      <section className="mb-12">
+      <section className="mt-12">
         <div className="border-t border-card pt-8">
           <SectionLabel number="03" />
           <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-3">
@@ -168,8 +165,7 @@ export default function JCurvePage() {
           {/* Pull-quote */}
           <blockquote className="my-8 border-l-3 border-[var(--accent)] pl-5 py-1">
             <p
-              className="text-xl text-[var(--foreground)] leading-[1.7] font-medium"
-              style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
+              className="text-xl text-[var(--foreground)] leading-[1.7] font-medium font-serif"
             >
               The economy looks like it&rsquo;s stagnating when it&rsquo;s
               actually building up an enormous stock of unmeasured intangible
@@ -198,7 +194,7 @@ export default function JCurvePage() {
       </section>
 
       {/* ───── Aside: The Math (Simplified) ───── */}
-      <aside className="mb-12 rounded-lg border border-strong bg-[var(--accent-light)] p-4 sm:p-5">
+      <aside className="mt-12 rounded-lg border border-strong bg-[var(--accent-light)] p-4 sm:p-5">
         <div className="flex items-center gap-2 mb-3">
           <span className="text-xs font-bold uppercase tracking-widest text-[var(--accent)]">
             The accounting identity
@@ -244,7 +240,7 @@ export default function JCurvePage() {
       </aside>
 
       {/* ───── Section 5: Historical Evidence ───── */}
-      <section className="mb-12">
+      <section className="mt-12">
         <div className="border-t border-card pt-8">
           <SectionLabel number="04" />
           <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-3">
@@ -262,7 +258,7 @@ export default function JCurvePage() {
       </section>
 
       {/* ───── Section 6: What This Means for AI ───── */}
-      <section className="mb-12">
+      <section className="mt-12">
         <div className="border-t border-card pt-8">
           <SectionLabel number="05" />
           <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-3">
@@ -327,12 +323,11 @@ export default function JCurvePage() {
       </section>
 
       {/* ───── Closing ───── */}
-      <section className="mb-8">
+      <section className="mt-8">
         <div className="border-t border-card pt-8">
           <blockquote className="border-l-4 border-[var(--accent)] bg-[var(--accent-light)] rounded-r-lg p-4 sm:p-5 mb-6">
             <p
-              className="text-lg sm:text-xl text-[var(--foreground)] leading-[1.75] font-medium"
-              style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
+              className="text-lg sm:text-xl text-[var(--foreground)] leading-[1.75] font-medium font-serif"
             >
               The productivity J-curve resolves an apparent paradox: how can
               a technology be transformative yet invisible in the data? The
@@ -457,15 +452,15 @@ function StatCard({
       ref={ref}
       className={`stat-card-enter text-center rounded-lg px-3 border${emphasis ? " py-4 relative" : " py-3"}`}
       style={{
-        borderColor: emphasis ? color + "50" : color + "30",
-        backgroundColor: emphasis ? color + "12" : color + "08",
-        ...(emphasis ? { boxShadow: `0 0 16px ${color}15` } : {}),
+        borderColor: emphasis ? `color-mix(in srgb, ${color} 31%, transparent)` : `color-mix(in srgb, ${color} 19%, transparent)`,
+        backgroundColor: emphasis ? `color-mix(in srgb, ${color} 7%, transparent)` : `color-mix(in srgb, ${color} 3%, transparent)`,
+        ...(emphasis ? { boxShadow: `0 0 16px color-mix(in srgb, ${color} 8%, transparent)` } : {}),
       }}
     >
       {emphasis && (
         <span
           className="absolute top-2 right-2 text-3xs font-bold uppercase tracking-widest px-1.5 py-0.5 rounded-full"
-          style={{ backgroundColor: color + "20", color }}
+          style={{ backgroundColor: `color-mix(in srgb, ${color} 13%, transparent)`, color }}
         >
           Now
         </span>
@@ -535,7 +530,7 @@ function EquationCard({
       style={{
         borderLeftColor: color,
         borderLeftWidth: 3,
-        backgroundColor: color + "08",
+        backgroundColor: `color-mix(in srgb, ${color} 3%, transparent)`,
       }}
     >
       <p className="text-xs font-bold uppercase tracking-wider mb-1" style={{ color }}>
@@ -565,7 +560,7 @@ function ImplicationCard({
   return (
     <div
       className="rounded-lg px-4 py-3 border"
-      style={{ borderColor: color + "25" }}
+      style={{ borderColor: `color-mix(in srgb, ${color} 15%, transparent)` }}
     >
       <div className="flex items-center gap-2 mb-1.5">
         <span className="text-xl" style={{ color }}>

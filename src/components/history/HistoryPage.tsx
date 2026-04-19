@@ -14,22 +14,20 @@ import CursorSpotlight from "@/components/delights/CursorSpotlight";
 
 export default function HistoryPage() {
   return (
-    <article className="max-w-[960px] mx-auto">
+    <article className="max-w-[740px] mx-auto">
       <ReadingProgressBar />
       {/* ───── Header ───── */}
-      <header className="mb-10">
+      <header className="mt-10">
         <p className="text-sm font-bold uppercase tracking-widest text-[var(--accent)] mb-4">
           Historical Context
         </p>
         <h1
-          className="text-5xl sm:text-6xl font-extrabold text-[var(--foreground)] leading-[1.1] tracking-tight mb-4"
-          style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
+          className="text-5xl sm:text-6xl font-extrabold text-[var(--foreground)] leading-[1.1] tracking-tight mb-4 font-serif"
         >
           On Tap Intelligence
         </h1>
         <p
-          className="text-2xl sm:text-heading-sm text-[var(--muted)] leading-relaxed mb-5"
-          style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
+          className="text-2xl sm:text-heading-sm text-[var(--muted)] leading-relaxed mb-5 font-serif"
         >
           Every great technology has transformed work. Here&rsquo;s what
           history tells us about what comes next.
@@ -38,8 +36,7 @@ export default function HistoryPage() {
         {/* Thesis card */}
         <div className="border-l-4 border-[var(--accent)] bg-[var(--accent-light)] rounded-r-lg p-4 sm:p-5">
           <p
-            className="text-lg sm:text-xl text-[var(--foreground)] leading-relaxed font-medium"
-            style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
+            className="text-lg sm:text-xl text-[var(--foreground)] leading-relaxed font-medium font-serif"
           >
             AI is doing for cognitive capabilities what electricity did for
             physical power: turning a scarce, expensive resource
@@ -55,7 +52,7 @@ export default function HistoryPage() {
         </div>
       </header>
       {/* ───── Section 2: The Pattern ───── */}
-      <section className="mb-12">
+      <section className="mt-12">
         <div className="border-t border-card pt-8">
           <SectionLabel number="01" />
           <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-3">
@@ -127,7 +124,7 @@ export default function HistoryPage() {
       </section>
 
       {/* ───── Section 3: The Four Revolutions ───── */}
-      <section className="mb-12">
+      <section className="mt-12">
         <div className="border-t border-card pt-8">
           <SectionLabel number="02" />
           <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-3">
@@ -143,7 +140,7 @@ export default function HistoryPage() {
       </section>
 
       {/* ───── Section 4: The Central Insight ───── */}
-      <section className="mb-12">
+      <section className="mt-12">
         <div className="border-t border-card pt-8">
           <SectionLabel number="03" />
           <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-3">
@@ -228,7 +225,7 @@ export default function HistoryPage() {
       </section>
 
       {/* ───── Section 5: The Honest Forecast ───── */}
-      <section className="mb-12">
+      <section className="mt-12">
         <div className="border-t border-card pt-8">
           <SectionLabel number="04" />
           <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-3">
@@ -244,7 +241,7 @@ export default function HistoryPage() {
       </section>
 
       {/* ───── Section 6: Vulnerability Snapshot ───── */}
-      <section className="mb-12">
+      <section className="mt-12">
         <div className="border-t border-card pt-8">
           <SectionLabel number="05" />
           <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-3">
@@ -272,7 +269,7 @@ export default function HistoryPage() {
       </section>
 
       {/* ───── Section 7: The Policy Question ───── */}
-      <section className="mb-8">
+      <section className="mt-8">
         <div className="border-t border-card pt-8">
           <SectionLabel number="06" />
           <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-6">
@@ -283,7 +280,7 @@ export default function HistoryPage() {
           </p>
 
           {/* Lesson 1 */}
-          <div className="mb-8">
+          <div className="mt-8">
             <h3 className="text-xl font-bold text-[var(--foreground)] mb-2">
               Lesson 1: Invest in Complements, Not Preservation
             </h3>
@@ -307,7 +304,7 @@ export default function HistoryPage() {
           </div>
 
           {/* Lesson 2 */}
-          <div className="mb-8">
+          <div className="mt-8">
             <h3 className="text-xl font-bold text-[var(--foreground)] mb-2">
               Lesson 2: The Distribution Problem is Institutional, Not
               Technological
@@ -330,7 +327,7 @@ export default function HistoryPage() {
           </div>
 
           {/* Lesson 3 */}
-          <div className="mb-10">
+          <div className="mt-10">
             <h3 className="text-xl font-bold text-[var(--foreground)] mb-2">
               Lesson 3: The Gains Are Real. The Timeline is Not What You
               Think.
@@ -348,10 +345,7 @@ export default function HistoryPage() {
           {/* Closing pull-quote */}
           <blockquote className="border-l-4 border-[var(--accent)] bg-[var(--accent-light)] rounded-r-lg p-4 sm:p-5">
             <p
-              className="text-lg sm:text-xl text-[var(--foreground)] leading-[1.75] font-medium"
-              style={{
-                fontFamily: "'Source Serif 4', Georgia, serif",
-              }}
+              className="text-lg sm:text-xl text-[var(--foreground)] leading-[1.75] font-medium font-serif"
             >
               If on-tap intelligence enables the democratization of
               expertise, putting the equivalent of world-class
@@ -368,14 +362,14 @@ export default function HistoryPage() {
       </section>
 
       {/* ───── Section: Diffusion Comparison Source ───── */}
-      <section className="mb-12">
+      <section className="mt-12">
         <div className="border-t border-card pt-8">
           <DiffusionComparison />
         </div>
       </section>
 
       {/* ───── Key Sources ───── */}
-      <section className="mb-12">
+      <section className="mt-12">
         <div className="border-t border-card pt-8">
           <p className="text-sm font-bold uppercase tracking-widest text-[var(--muted)] mb-4">
             Key Sources
@@ -414,7 +408,7 @@ export default function HistoryPage() {
       </section>
 
       {/* ───── Share ───── */}
-      <section className="mb-8">
+      <section className="mt-8">
         <ShareSectionBar
           url="https://jobsdata.ai/history"
           title="Historical Technology Comparison"

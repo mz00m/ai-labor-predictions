@@ -195,7 +195,7 @@ export default function PredictionDetailPage() {
         <p className="text-base font-bold uppercase tracking-widest text-[var(--muted)] mb-4">
           {prediction.category === "displacement" ? "Job Displacement" : prediction.category === "wages" ? "Wage Impact" : prediction.category === "adoption" ? "AI Adoption" : "Other"} | {prediction.timeHorizon}
         </p>
-        <h1 className="text-heading-xl sm:text-title font-extrabold tracking-tight text-[var(--foreground)] leading-[1.08] mb-6">
+        <h1 className="text-5xl sm:text-6xl font-extrabold tracking-tight text-[var(--foreground)] leading-[1.1] mb-6 font-serif">
           {prediction.title}
         </h1>
 

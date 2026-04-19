@@ -60,7 +60,7 @@ export default function ReadingListPage() {
   return (
     <main className="max-w-7xl mx-auto px-6 sm:px-10 py-12">
       <header className="mb-10">
-        <h1 className="text-4xl sm:text-5xl font-extrabold text-[var(--foreground)] tracking-tight">
+        <h1 className="text-5xl sm:text-6xl font-extrabold text-[var(--foreground)] tracking-tight leading-[1.1] font-serif">
           Reading List
         </h1>
         <p className="text-lg text-[var(--muted)] mt-3 max-w-2xl leading-relaxed">

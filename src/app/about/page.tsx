@@ -51,14 +51,12 @@ export default function AboutPage() {
             About This Project
           </p>
           <h1
-            className="text-5xl sm:text-6xl font-extrabold tracking-tight text-[var(--foreground)] leading-[1.1] mb-4"
-            style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
+            className="text-5xl sm:text-6xl font-extrabold tracking-tight text-[var(--foreground)] leading-[1.1] mb-4 font-serif"
           >
             Evidence Over Narrative
           </h1>
           <p
-            className="text-2xl sm:text-heading-sm text-[var(--muted)] leading-relaxed"
-            style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
+            className="text-2xl sm:text-heading-sm text-[var(--muted)] leading-relaxed font-serif"
           >
             Society is trying to figure out what AI means for work and the answers keep changing.
           </p>
@@ -161,7 +159,7 @@ export default function AboutPage() {
 
         {/* Methodology link */}
         <section id="methodology" className="scroll-mt-16">
-          <h2 className="text-4xl sm:text-title-sm font-extrabold tracking-tight text-[var(--foreground)]">
+          <h2 className="text-4xl sm:text-title-sm font-bold tracking-tight text-[var(--foreground)]">
             Methodology &amp; Sources
           </h2>
           <p className="text-lg text-[var(--muted)] mt-2 max-w-3xl mb-4">

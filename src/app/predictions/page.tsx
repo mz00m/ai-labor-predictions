@@ -27,7 +27,7 @@ export default function PredictionsPage() {
       <div className="relative -mx-6 sm:-mx-10">
         <div className="h-1 bg-gradient-to-r from-[#3ECFAE] via-[#6B7BF7] to-[#F7C96B]" />
         <div className="px-6 sm:px-10 pt-10 pb-2">
-          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-[var(--foreground)] leading-tight mb-4">
+          <h1 className="text-5xl sm:text-6xl font-extrabold tracking-tight text-[var(--foreground)] leading-[1.1] mb-4 font-serif">
             Predictions Over Time
           </h1>
           <p className="text-lg text-[var(--muted)] leading-relaxed max-w-2xl">

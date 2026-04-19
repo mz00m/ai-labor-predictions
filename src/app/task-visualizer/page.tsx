@@ -56,7 +56,7 @@ export default function TaskVisualizerPage() {
   return (
     <div>
       <header className="mb-8">
-        <h1 className="text-4xl sm:text-title-sm font-bold text-[var(--foreground)] tracking-tight leading-tight">
+        <h1 className="text-5xl sm:text-6xl font-extrabold text-[var(--foreground)] tracking-tight leading-[1.1] font-serif">
           How will AI impact your job?
         </h1>
         <p className="text-md text-[var(--muted)] mt-2 max-w-2xl leading-relaxed">
