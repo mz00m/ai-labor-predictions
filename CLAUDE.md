@@ -29,7 +29,7 @@ Optional: `ADZUNA_APP_ID`, `ADZUNA_APP_KEY`, `TWITTER_BEARER_TOKEN`, `GOOGLE_CSE
 ## Tech Stack
 
 - **Framework:** Next.js 14, React 18, TypeScript
-- **Styling:** Tailwind CSS, dark theme primary
+- **Styling:** Tailwind CSS, light theme, Stripe aesthetic
 - **Charts:** Recharts (all visualizations)
 - **Validation:** Zod
 - **AI Integration:** Anthropic SDK + Claude Agent SDK (digest synthesis, research agents)
@@ -236,7 +236,7 @@ Hardcoded array of 5 articles displayed left-to-right on the homepage. On ingest
 
 ## Style Preferences
 
-- Dark theme, professional/clean aesthetic
+- Light theme, Stripe/Tufte aesthetic
 - No emojis in data or UI content
 - Practitioner-first tone: concise, evidence-based, no speculation
 - All charts use Recharts with consistent color palette

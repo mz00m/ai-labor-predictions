@@ -17,7 +17,7 @@ export default function EconomyPage() {
           {" / "}
           <span className="text-[var(--muted)]">US Economy</span>
         </p>
-        <h1 className="text-4xl sm:text-title-sm font-bold text-[var(--foreground)] tracking-tight leading-tight">
+        <h1 className="text-5xl sm:text-6xl font-extrabold text-[var(--foreground)] tracking-tight leading-[1.1] font-serif">
           How AI automation rolls through the US economy
         </h1>
         <p className="text-lg text-[var(--muted)] mt-2 max-w-2xl leading-relaxed">

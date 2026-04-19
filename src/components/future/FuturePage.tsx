@@ -19,14 +19,12 @@ export default function FuturePage() {
           Scenario
         </p>
         <h1
-          className="text-5xl sm:text-6xl font-extrabold text-[var(--foreground)] leading-[1.1] tracking-tight mb-4"
-          style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
+          className="text-5xl sm:text-6xl font-extrabold text-[var(--foreground)] leading-[1.1] tracking-tight mb-4 font-serif"
         >
           From Here to There
         </h1>
         <p
-          className="text-2xl sm:text-heading-sm text-[var(--muted)] leading-relaxed mb-5"
-          style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
+          className="text-2xl sm:text-heading-sm text-[var(--muted)] leading-relaxed mb-5 font-serif"
         >
           A plausible positive scenario for the AI transition that
           doesn&rsquo;t require many further technological breakthroughs
