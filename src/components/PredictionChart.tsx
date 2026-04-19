@@ -548,37 +548,27 @@ export default function PredictionChart({
     }
   }
 
-  // Add a phantom point at the target date to extend the x-axis
-  if (targetDateTs && targetDateStr && !usedDateStrs.has(targetDateStr)) {
-    usedDateStrs.add(targetDateStr);
-    phantomPoints.push({
-      date: targetDateTs,
-      dateStr: targetDateStr,
-      displayDate: targetDateStr,
-      value: undefined,
-      dataType: "projected",
-      evidenceTier: 1 as EvidenceTier,
-      sourceIds: [],
-      isPhantom: true,
-    });
-  }
+  // Skip target date phantom point — extending the axis to a far-future
+  // target (e.g. 2030) creates a massive empty gap that distorts the chart.
 
   // Insert phantom quarter-boundary points to create an evenly-spaced
-  // timeline axis. Without these, the categorical axis compresses gaps
-  // and stretches data-dense periods.
+  // timeline axis. Only span the range of real data points (not the
+  // target date, which would stretch the chart with years of empty space).
   const allPoints = [...realPoints, ...phantomPoints];
-  const allDates = allPoints.map((p) => p.date);
-  const minTs = Math.min(...allDates);
-  const maxTs = Math.max(...allDates);
+  const realDates = realPoints.filter((p) => p.value != null).map((p) => p.date);
+  const dataMinTs = realDates.length > 0 ? Math.min(...realDates) : Math.min(...allPoints.map((p) => p.date));
+  const dataMaxTs = realDates.length > 0 ? Math.max(...realDates) : Math.max(...allPoints.map((p) => p.date));
   const existingDateStrs = new Set(allPoints.map((p) => p.dateStr));
 
   const quarterBoundaries: ChartDataPoint[] = [];
   const quarterTickLabels: string[] = [];
-  const startDate = new Date(minTs);
+  const startDate = new Date(dataMinTs);
   // Round down to quarter start
   const startQ = Math.floor(startDate.getMonth() / 3) * 3;
   const cursor = new Date(startDate.getFullYear(), startQ, 1);
-  while (cursor.getTime() <= maxTs + 90 * 24 * 60 * 60 * 1000) {
+  // Generate quarters only through one quarter past the last real data point
+  const endTs = dataMaxTs + 90 * 24 * 60 * 60 * 1000;
+  while (cursor.getTime() <= endTs) {
     const ts = cursor.getTime();
     const label = format(cursor, "MMM yyyy");
     quarterTickLabels.push(label);
@@ -759,22 +749,9 @@ export default function PredictionChart({
           />
           {/* Zero baseline */}
           <ReferenceLine y={0} stroke="#d1d5db" strokeWidth={1} />
-          {/* Target date reference line */}
-          {targetDateStr && (
-            <ReferenceLine
-              x={targetDateStr}
-              stroke="#d97706"
-              strokeWidth={2}
-              strokeDasharray="8 4"
-              label={{
-                value: `Target: ${targetDateStr}`,
-                position: "top",
-                fill: "#d97706",
-                fontSize: 12,
-                fontWeight: 600,
-              }}
-            />
-          )}
+          {/* Target date: shown as annotation text in top-right when set,
+              rather than a reference line that stretches the axis */}
+
           {/* Confidence band (stacked area trick: transparent base + visible width) */}
           {chartData.some((d) => d.confidenceBandBase != null && d.confidenceBandWidth != null) && (
             <>
