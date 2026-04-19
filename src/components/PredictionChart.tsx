@@ -563,27 +563,52 @@ export default function PredictionChart({
     });
   }
 
-  const chartData = [...realPoints, ...phantomPoints].sort(
+  // Insert phantom quarter-boundary points to create an evenly-spaced
+  // timeline axis. Without these, the categorical axis compresses gaps
+  // and stretches data-dense periods.
+  const allPoints = [...realPoints, ...phantomPoints];
+  const allDates = allPoints.map((p) => p.date);
+  const minTs = Math.min(...allDates);
+  const maxTs = Math.max(...allDates);
+  const existingDateStrs = new Set(allPoints.map((p) => p.dateStr));
+
+  const quarterBoundaries: ChartDataPoint[] = [];
+  const quarterTickLabels: string[] = [];
+  const startDate = new Date(minTs);
+  // Round down to quarter start
+  const startQ = Math.floor(startDate.getMonth() / 3) * 3;
+  const cursor = new Date(startDate.getFullYear(), startQ, 1);
+  while (cursor.getTime() <= maxTs + 90 * 24 * 60 * 60 * 1000) {
+    const ts = cursor.getTime();
+    const label = format(cursor, "MMM yyyy");
+    quarterTickLabels.push(label);
+    if (!existingDateStrs.has(label)) {
+      existingDateStrs.add(label);
+      quarterBoundaries.push({
+        date: ts,
+        dateStr: label,
+        displayDate: label,
+        value: undefined,
+        dataType: "observed",
+        evidenceTier: 1 as EvidenceTier,
+        sourceIds: [],
+        isPhantom: true,
+      });
+    } else {
+      // Use the existing dateStr (might be disambiguated) for tick lookup
+      const existing = allPoints.find(
+        (p) => p.dateStr === label || p.dateStr.startsWith(label + " (")
+      );
+      if (existing) {
+        quarterTickLabels[quarterTickLabels.length - 1] = existing.dateStr;
+      }
+    }
+    cursor.setMonth(cursor.getMonth() + 3);
+  }
+
+  const chartData = [...allPoints, ...quarterBoundaries].sort(
     (a, b) => a.date - b.date
   );
-
-  // Compute clean quarterly tick labels for the X axis.
-  // Pick one dateStr per quarter boundary, evenly spaced.
-  const quarterTicks: string[] = [];
-  const seenQuarters = new Set<string>();
-  for (const pt of chartData) {
-    const d = new Date(pt.date);
-    const month = d.getMonth(); // 0-indexed
-    const year = d.getFullYear();
-    const q = Math.floor(month / 3);
-    const key = `${year}-Q${q + 1}`;
-    if (!seenQuarters.has(key)) {
-      seenQuarters.add(key);
-      quarterTicks.push(pt.dateStr);
-    }
-  }
-  // If fewer than 3 ticks, fall back to showing all unique months
-  const xAxisTicks = quarterTicks.length >= 3 ? quarterTicks : undefined;
 
   // Linear regression trend line (least-squares on observed points only)
   const pointsWithValues = realPoints.filter((d) => d.value != null && d.dataType === "observed");
@@ -696,9 +721,8 @@ export default function PredictionChart({
             tickLine={false}
             axisLine={false}
             padding={{ left: 30, right: 30 }}
-            ticks={xAxisTicks}
+            ticks={quarterTickLabels}
             tickFormatter={(dateStr: string) => {
-              // Show clean labels: Q1 '24, Q2 '24, etc.
               const base = dateStr.replace(/ \(.*\)$/, "");
               const parts = base.split(" ");
               if (parts.length < 2) return dateStr;
