@@ -41,6 +41,7 @@ interface PredictionChartProps {
 interface ChartDataPoint {
   date: number;
   dateStr: string;
+  displayDate: string;
   value?: number;
   observedValue?: number;
   projectedValue?: number;
@@ -99,7 +100,7 @@ function CustomTooltip({
       {!data.isPhantom && data.value != null && (
         <>
           <p className="text-sm font-medium text-[var(--foreground)]">
-            {data.dateStr}
+            {data.displayDate}
           </p>
           {data.dataType === "projected" && (
             <span className="inline-block text-2xs font-medium text-white bg-accent/70 rounded px-1.5 py-0.5 mb-1">
@@ -153,7 +154,7 @@ function CustomTooltip({
         <div className={!data.isPhantom && data.value != null ? "mt-2 border-t border-card pt-2" : ""}>
           {data.isPhantom && (
             <p className="text-sm font-medium text-[var(--foreground)] mb-1.5">
-              {data.dateStr}
+              {data.displayDate}
             </p>
           )}
           {matchingOverlays.map((o, i) => {
@@ -417,9 +418,11 @@ export default function PredictionChart({
     .map((d) => {
       const dt = d.dataType ?? "observed";
       const val = d.value;
+      const dateLabel = format(parseISO(d.date), "MMM yyyy");
       return {
         date: parseISO(d.date).getTime(),
-        dateStr: format(parseISO(d.date), "MMM yyyy"),
+        dateStr: dateLabel,
+        displayDate: dateLabel,
         value: val,
         observedValue: dt === "observed" ? val : undefined,
         projectedValue: dt === "projected" ? val : undefined,
@@ -535,6 +538,7 @@ export default function PredictionChart({
       phantomPoints.push({
         date: o.date,
         dateStr: o.dateStr,
+        displayDate: format(new Date(o.date), "MMM yyyy"),
         value: undefined,
         dataType: "observed",
         evidenceTier: o.evidenceTier,
@@ -550,6 +554,7 @@ export default function PredictionChart({
     phantomPoints.push({
       date: targetDateTs,
       dateStr: targetDateStr,
+      displayDate: targetDateStr,
       value: undefined,
       dataType: "projected",
       evidenceTier: 1 as EvidenceTier,
@@ -561,6 +566,24 @@ export default function PredictionChart({
   const chartData = [...realPoints, ...phantomPoints].sort(
     (a, b) => a.date - b.date
   );
+
+  // Compute clean quarterly tick labels for the X axis.
+  // Pick one dateStr per quarter boundary, evenly spaced.
+  const quarterTicks: string[] = [];
+  const seenQuarters = new Set<string>();
+  for (const pt of chartData) {
+    const d = new Date(pt.date);
+    const month = d.getMonth(); // 0-indexed
+    const year = d.getFullYear();
+    const q = Math.floor(month / 3);
+    const key = `${year}-Q${q + 1}`;
+    if (!seenQuarters.has(key)) {
+      seenQuarters.add(key);
+      quarterTicks.push(pt.dateStr);
+    }
+  }
+  // If fewer than 3 ticks, fall back to showing all unique months
+  const xAxisTicks = quarterTicks.length >= 3 ? quarterTicks : undefined;
 
   // Linear regression trend line (least-squares on observed points only)
   const pointsWithValues = realPoints.filter((d) => d.value != null && d.dataType === "observed");
@@ -673,6 +696,23 @@ export default function PredictionChart({
             tickLine={false}
             axisLine={false}
             padding={{ left: 30, right: 30 }}
+            ticks={xAxisTicks}
+            tickFormatter={(dateStr: string) => {
+              // Show clean labels: Q1 '24, Q2 '24, etc.
+              const base = dateStr.replace(/ \(.*\)$/, "");
+              const parts = base.split(" ");
+              if (parts.length < 2) return dateStr;
+              const month = parts[0];
+              const year = parts[1];
+              const shortYear = year.slice(-2);
+              const quarterMap: Record<string, string> = {
+                Jan: "Q1", Feb: "Q1", Mar: "Q1",
+                Apr: "Q2", May: "Q2", Jun: "Q2",
+                Jul: "Q3", Aug: "Q3", Sep: "Q3",
+                Oct: "Q4", Nov: "Q4", Dec: "Q4",
+              };
+              return `${quarterMap[month] ?? month} '${shortYear}`;
+            }}
           />
           <YAxis
             domain={[yMin, yMax]}
