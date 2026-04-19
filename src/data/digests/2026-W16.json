@@ -1,0 +1,118 @@
+{
+  "week": "2026-W16",
+  "generatedAt": "2026-04-19T14:05:49.068Z",
+  "lookbackDays": 14,
+  "highlights": [
+    {
+      "title": "NBER Forecast Survey: Economists, AI Employees, and Superforecasters Align on Substantial AI Economic Impact",
+      "summary": "A new NBER working paper (Karger et al.) elicits AI economic forecasts from five groups — academic economists, AI company employees, policy researchers, superforecasters, and the general public — finding that the median respondent across all groups expects substantial advances in AI capabilities and meaningful macroeconomic effects. The breadth of expert consensus on near-term AI impact is notable given the still-thin empirical literature. This cross-group alignment suggests rising confidence that AI adoption will translate into measurable labor market and productivity shifts within the forecast horizon.",
+      "source": "https://www.nber.org/papers/w35046",
+      "authors": [
+        "Ezra Karger",
+        "Otto Kuusela",
+        "Jason Abaluck",
+        "Kevin A. Bryan",
+        "Basil Halperin",
+        "Todd R. Jones",
+        "Philip Tetlock"
+      ],
+      "publishedAt": "2026-04-19",
+      "score": 0.425,
+      "sourceAdapter": "nber",
+      "graphSlug": "ai-adoption-rate"
+    },
+    {
+      "title": "Bick, Blandin & Deming 2026 Update: 43% of US Workers Now Use AI at Work, Widening Gap Over Europe",
+      "summary": "Brookings-published research by Bick, Blandin, and Deming finds that 43% of US workers report using AI at work versus 32% in Europe, with aggregate time savings of 2.3% of hours in the US compared to 1.4% in Europe. Despite this rapid diffusion, the authors find no clear employment effects in either region from recent AI adoption, reinforcing the 'macro-invisible' thesis. The US–EU divergence points to regulatory and cultural differences shaping the pace of workforce AI integration.",
+      "source": "https://www.brookings.edu/articles/mind-the-gap-ai-adoption-in-europe-and-the-us/",
+      "authors": [
+        "Alexander Bick",
+        "Adam Blandin",
+        "David Deming"
+      ],
+      "publishedAt": "2026-03-12",
+      "score": 0.622,
+      "sourceAdapter": "brookings",
+      "graphSlug": "genai-work-adoption"
+    },
+    {
+      "title": "Acemoglu–Autor–Johnson: 'Pure Automation' Commodifies Human Expertise During Painful Transition Period",
+      "summary": "A Substack synthesis of the Acemoglu–Autor–Johnson argument warns that 'pure automation technologies' commodify rather than complement human expertise, creating a potentially brutal middle period even if long-run outcomes prove positive. The framing distinguishes transition-period displacement costs from eventual equilibrium gains, a distinction often lost in optimistic productivity narratives. This perspective directly informs displacement projections for white-collar and professional roles most exposed to generative AI substitution.",
+      "source": "https://futureforwarded.substack.com/p/the-ai-labor-report-friday-april",
+      "authors": [
+        "Future Forwarded"
+      ],
+      "publishedAt": "2026-04-17",
+      "score": 0.941,
+      "sourceAdapter": "substack",
+      "graphSlug": "white-collar-professional-displacement"
+    },
+    {
+      "title": "Chicago Booth's Alex Imas: AI Commodity Production Redirects Employment Toward High-Value 'Relational Sector'",
+      "summary": "Fortune profiles Alex Imas (Chicago Booth), whose Ghosts of Electricity Substack argues that cheap AI-driven commodity production will not eliminate jobs net-net but will redirect spending and employment toward a 'relational sector' where the human element is itself a value driver. Imas frames scarcity as shifting to embodied, trust-intensive, and relational work as AI saturates routine cognitive output. This represents a notable pivot from his earlier, more pessimistic stance and offers a demand-side counterweight to displacement concerns.",
+      "source": "https://fortune.com/2026/04/19/alex-imas-human-jobs-ai-economy-chicago-economist-substack-doomsday-scenario/",
+      "authors": [
+        "Alex Imas"
+      ],
+      "publishedAt": "2026-04-19",
+      "score": 0.936,
+      "sourceAdapter": "fortune",
+      "graphSlug": "overall-us-displacement"
+    },
+    {
+      "title": "Molly Kinder: GenAI Exposure Skews Female — Administrative and Customer Service Roles Face Deindustrialization-Scale Risk",
+      "summary": "Brookings researcher Molly Kinder argues that generative AI could replicate for high-school-educated women what deindustrialization did to high-school-educated men, given that AI exposure is heavily concentrated in administrative, customer service, and routine cognitive roles that skew female. Unlike prior automation waves that hit manufacturing, this wave targets the office economy's lower rungs. Kinder separately proposes an AI workforce reinvestment fund modeled on medical residencies to underwrite cross-industry transition programs for displaced entry-level workers.",
+      "source": "https://humanistxyz.substack.com/p/what-deindustrialization-did-to-men",
+      "authors": [
+        "Molly Kinder"
+      ],
+      "publishedAt": "2026-02-10",
+      "score": 0.603,
+      "sourceAdapter": "substack",
+      "graphSlug": "customer-service-automation"
+    }
+  ],
+  "themes": [
+    "US generative AI workplace adoption has crossed 43%, nearly double the productivity-decade baseline, yet macro employment effects remain statistically invisible — the 'measurement gap' is the defining puzzle of 2026 labor economics",
+    "A emerging 'relational scarcity' thesis (Imas, Kinder) is challenging pure displacement narratives, arguing AI redirects rather than destroys labor demand toward human-intensive, trust-based roles",
+    "The Acemoglu–Autor–Johnson 'painful transition' framework is gaining traction: even optimistic long-run equilibria may involve severe medium-term wage and displacement costs for exposed workers",
+    "Gender asymmetry in AI exposure is a rising concern — the concentration of GenAI disruption in female-skewing administrative and customer service roles mirrors the gendered toll of deindustrialization on male manufacturing workers",
+    "Cross-disciplinary expert consensus (economists, AI insiders, superforecasters) is converging on substantial near-term AI economic impact, raising the stakes for policymakers to act before macro signals become unmistakable"
+  ],
+  "watching": [
+    {
+      "title": "Brynjolfsson's 'Harvest Phase' Productivity Thesis — Will 2026 Data Confirm the J-Curve Turn?",
+      "source": "https://fortune.com/2026/02/15/ai-productivity-liftoff-doubling-2025-jobs-report-transition-harvest-phase-j-curve/",
+      "reason": "2025 US productivity jumped ~2.7%. If 2026 BLS releases confirm acceleration, this validates the harvest-phase model and will reshape displacement and wage forecasts."
+    },
+    {
+      "title": "Yale Budget Lab: 'AI-Washing' of Layoffs — Separating Genuine Automation from Macro Cyclicality",
+      "source": "https://budgetlab.yale.edu/research/evaluating-impact-ai-labor-market-current-state-affairs",
+      "reason": "Gimbel's AI-washing concern means displacement signals may be contaminated by tariff/immigration headwinds; disentangling causes is critical for accurate graph calibration."
+    },
+    {
+      "title": "Acemoglu & Restrepo — Automation and Rent Dissipation: Implications for Wages, Inequality, and Productivity",
+      "source": "https://doi.org/10.7910/dvn/snk8t6",
+      "reason": "Replication data now public; forthcoming journal version could reframe wage-impact projections across skill levels if rent dissipation estimates are updated for GenAI era."
+    }
+  ],
+  "sources": {
+    "succeeded": [
+      "semanticScholar",
+      "arxiv",
+      "ssrn",
+      "pubmed",
+      "openAlex",
+      "nber",
+      "bls",
+      "fred",
+      "googleCse",
+      "hnAlgolia",
+      "tracked-authors-openalex",
+      "curated-web-search"
+    ],
+    "failed": [],
+    "totalCandidates": 108,
+    "afterDedup": 104
+  }
+}
