@@ -656,7 +656,7 @@
         "wang-neubig-agent-benchmarks-2026"
       ],
       "evidenceTier": 1,
-      "label": "Wang et al.: Legal 70%, Management 88% digital work \u2014 high automation potential"
+      "label": "Wang et al.: Legal 70%, Management 88% digital work — high automation potential"
     },
     {
       "date": "2026-03-01",
@@ -710,7 +710,7 @@
         "anthropic-labor-market-impacts-2026"
       ],
       "evidenceTier": 2,
-      "label": "Anthropic: Most AI-exposed workers are educated, higher-paid \u2014 no unemployment rise found"
+      "label": "Anthropic: Most AI-exposed workers are educated, higher-paid — no unemployment rise found"
     },
     {
       "date": "2026-03-07",
@@ -818,7 +818,7 @@
         "fri-ai-economics-survey-2026"
       ],
       "evidenceTier": 1,
-      "label": "FRI: Rapid scenario \u2192 white-collar sector share stalls at 20-21% by 2050"
+      "label": "FRI: Rapid scenario → white-collar sector share stalls at 20-21% by 2050"
     },
     {
       "date": "2026-04-02",
@@ -846,6 +846,15 @@
       ],
       "evidenceTier": 1,
       "label": "BLS Mar 2026: Professional/business services -45.3K MoM"
+    },
+    {
+      "date": "2026-04-20",
+      "direction": "up",
+      "sourceIds": [
+        "barth-hoen-kerr-declining-occupations-nber-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER: Norway declining-occupation workers lose 0.4 years of work (2007–2024)"
     }
   ],
   "sources": [
@@ -980,7 +989,7 @@
     },
     {
       "id": "jpmorgan-10k-ai-2024",
-      "title": "JPMorgan Chase 2024 10-K \u2014 AI and Workforce",
+      "title": "JPMorgan Chase 2024 10-K — AI and Workforce",
       "url": "https://www.sec.gov/edgar/browse/?CIK=0000019617",
       "publisher": "JPMorgan Chase (SEC Filing)",
       "evidenceTier": 1,
@@ -990,7 +999,7 @@
     },
     {
       "id": "ey-10k-ai-2024",
-      "title": "EY Global \u2014 AI Transformation in Professional Services",
+      "title": "EY Global — AI Transformation in Professional Services",
       "url": "https://www.ey.com/en_gl/insights/ai/case-study-how-ey-transformed-with-ai",
       "publisher": "Ernst & Young",
       "evidenceTier": 2,
@@ -1064,7 +1073,7 @@
       "publisher": "Brookings Institution",
       "evidenceTier": 1,
       "datePublished": "2025-07-01",
-      "excerpt": "High-skill freelancers disproportionately affected by AI \u2014 top performers were impacted most, contradicting conventional wisdom that expertise insulates workers.",
+      "excerpt": "High-skill freelancers disproportionately affected by AI — top performers were impacted most, contradicting conventional wisdom that expertise insulates workers.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -1223,7 +1232,7 @@
       "publisher": "MIT / Oak Ridge National Laboratory (Project Iceberg)",
       "evidenceTier": 1,
       "datePublished": "2025-11-26",
-      "excerpt": "Administrative and financial tasks where AI demonstrates capability span five times more wage value than visible tech disruption\u2014and are geographically distributed across all states, not just coastal.",
+      "excerpt": "Administrative and financial tasks where AI demonstrates capability span five times more wage value than visible tech disruption—and are geographically distributed across all states, not just coastal.",
       "dateAdded": "2026-03-15"
     },
     {
@@ -1233,7 +1242,7 @@
       "publisher": "MIT Technology Review",
       "evidenceTier": 1,
       "datePublished": "2025-12-15",
-      "excerpt": "Despite early signs that AI is beginning to affect entry-level workers, labor statistics have yet to show lawyers being displaced. Law graduate employment in 2024 reached 93.4% \u2014 the highest rate on record.",
+      "excerpt": "Despite early signs that AI is beginning to affect entry-level workers, labor statistics have yet to show lawyers being displaced. Law graduate employment in 2024 reached 93.4% — the highest rate on record.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -1243,7 +1252,7 @@
       "publisher": "NBER",
       "evidenceTier": 1,
       "datePublished": "2025-12-15",
-      "excerpt": "AI chatbots had no statistically significant impact on hours worked or wages earned for lawyers. Law graduate employment in 2024 reached 93.4% \u2014 the highest rate on record.",
+      "excerpt": "AI chatbots had no statistically significant impact on hours worked or wages earned for lawyers. Law graduate employment in 2024 reached 93.4% — the highest rate on record.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -1293,7 +1302,7 @@
       "publisher": "Cognizant",
       "evidenceTier": 2,
       "datePublished": "2026-01-15",
-      "excerpt": "Education task exposure jumped from 11% to 49% \u2014 a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations.",
+      "excerpt": "Education task exposure jumped from 11% to 49% — a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -1364,11 +1373,11 @@
       "evidenceTier": 2,
       "datePublished": "2026-02-01",
       "dateAdded": "2026-03-02",
-      "excerpt": "the jobs most vulnerable to AI are elsewhere\u2014including executive assistants, editors, and interpreters/translators (where over 70% of their skills are exposed to AI)."
+      "excerpt": "the jobs most vulnerable to AI are elsewhere—including executive assistants, editors, and interpreters/translators (where over 70% of their skills are exposed to AI)."
     },
     {
       "id": "bls-jolts-december-2025",
-      "title": "Job Openings and Labor Turnover \u2014 December 2025",
+      "title": "Job Openings and Labor Turnover — December 2025",
       "url": "https://www.bls.gov/news.release/jolts.nr0.htm",
       "publisher": "U.S. Bureau of Labor Statistics",
       "evidenceTier": 1,
@@ -1423,7 +1432,7 @@
       "publisher": "CausalInf Substack (Scott Cunningham)",
       "evidenceTier": 4,
       "datePublished": "2026-03-02",
-      "excerpt": "Project APE \u2014 Autonomous Policy Evaluation... has produced 204 papers \u2014 with 60 added in a single week... These are fully automated papers, like a version 1.0, with no human iteration whatsoever.",
+      "excerpt": "Project APE — Autonomous Policy Evaluation... has produced 204 papers — with 60 added in a single week... These are fully automated papers, like a version 1.0, with no human iteration whatsoever.",
       "dateAdded": "2026-03-07"
     },
     {
@@ -1470,10 +1479,10 @@
       "id": "lodefalk-age-gradient-hiring-2026",
       "title": "Same Storm, Different Boats: Generative AI and the Age Gradient in Hiring",
       "url": "https://cms.ratio.se/app/uploads/2026/03/lodefalk_march16_paper_v2-kombinerades.pdf",
-      "publisher": "RATIO Institute / \u00d6rebro University (Lodefalk, L\u00f6thman, Koch, Engberg)",
+      "publisher": "RATIO Institute / Örebro University (Lodefalk, Löthman, Koch, Engberg)",
       "evidenceTier": 1,
       "datePublished": "2026-03-16",
-      "excerpt": "An event study documents an accelerating decline in employment of 22\u201325-year-olds in high-AI-exposure occupations, reaching 5.5 per cent by early 2025 relative to less exposed occupations within the same employers, while employment of workers over 50 rose by 1.3 per cent.",
+      "excerpt": "An event study documents an accelerating decline in employment of 22–25-year-olds in high-AI-exposure occupations, reaching 5.5 per cent by early 2025 relative to less exposed occupations within the same employers, while employment of workers over 50 rose by 1.3 per cent.",
       "dateAdded": "2026-03-17"
     },
     {
@@ -1502,7 +1511,7 @@
       "publisher": "The Burning Glass Institute (Gad Levanon)",
       "evidenceTier": 3,
       "datePublished": "2026-03-26",
-      "excerpt": "In 2022, there was essentially no relationship between a metro area's share of college graduates and where its unemployment rate stood relative to its own history. The correlation was -0.01. Three years later, that correlation is 0.26 \u2014 modest but meaningful across more than 300 metropolitan areas.",
+      "excerpt": "In 2022, there was essentially no relationship between a metro area's share of college graduates and where its unemployment rate stood relative to its own history. The correlation was -0.01. Three years later, that correlation is 0.26 — modest but meaningful across more than 300 metropolitan areas.",
       "dateAdded": "2026-03-27"
     },
     {
@@ -1532,7 +1541,7 @@
       "publisher": "Brookings Metro / Opportunity@Work",
       "evidenceTier": 2,
       "datePublished": "2026-04-02",
-      "excerpt": "Across Destination occupations, 12.9 million workers\u2014or around one-third of all workers in those occupations\u2014may now be highly exposed to AI",
+      "excerpt": "Across Destination occupations, 12.9 million workers—or around one-third of all workers in those occupations—may now be highly exposed to AI",
       "dateAdded": "2026-04-02"
     },
     {
@@ -1547,7 +1556,7 @@
     },
     {
       "id": "bls-employment-situation-mar-2026",
-      "title": "BLS Employment Situation: Total Nonfarm Payrolls \u2014 March 2026",
+      "title": "BLS Employment Situation: Total Nonfarm Payrolls — March 2026",
       "url": "https://data.bls.gov/timeseries/CEU0000000001",
       "publisher": "data.bls.gov",
       "evidenceTier": 1,
@@ -1562,6 +1571,15 @@
       "evidenceTier": 4,
       "datePublished": "2026-03-29",
       "excerpt": "The paper emphasizes that white-collar and knowledge-work roles are now squarely in the displacement frame, departing from earlier automation waves that primarily affected manual labor."
+    },
+    {
+      "id": "barth-hoen-kerr-declining-occupations-nber-2026",
+      "title": "Declining Occupations and Career Outcomes in Norway",
+      "url": "https://www.nber.org/papers/w35096",
+      "publisher": "NBER (Barth, Hoen, Kerr, Kerr)",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-20",
+      "excerpt": "Workers initially employed in occupations that later decline by at least 25% demonstrate 0.4 lower future years of work, although this employment difference is mostly explained by other individual traits. These workers, conditional on controls, experience a 4.7% reduction in future cumulative earnings relative to starting earnings, akin to losing one year's worth of earnings over 2007–2024."
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-04-19",
-  "totalSources": 528,
-  "verifiedCount": 518,
+  "lastUpdated": "2026-04-20",
+  "totalSources": 529,
+  "verifiedCount": 519,
   "sources": {
     "gallup-workplace-ai-feb-2026": {
       "id": "gallup-workplace-ai-feb-2026",
@@ -7439,6 +7439,21 @@
       "excerpt": "What A.I. company executives are saying about their products — that they might lead to human extinction and almost certainly will lead to large-scale permanent disemployment — is so obviously 'bad messaging' that I would really urge people to consider that it's not a 'message' at all.",
       "usedIn": [
         "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "barth-hoen-kerr-declining-occupations-nber-2026": {
+      "id": "barth-hoen-kerr-declining-occupations-nber-2026",
+      "title": "Declining Occupations and Career Outcomes in Norway",
+      "url": "https://www.nber.org/papers/w35096",
+      "publisher": "NBER (Barth, Hoen, Kerr, Kerr)",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-20",
+      "excerpt": "Workers initially employed in occupations that later decline by at least 25% demonstrate 0.4 lower future years of work, although this employment difference is mostly explained by other individual traits. These workers, conditional on controls, experience a 4.7% reduction in future cumulative earnings relative to starting earnings, akin to losing one year's worth of earnings over 2007–2024.",
+      "usedIn": [
+        "white-collar-professional-displacement",
+        "median-wage-impact"
       ],
       "verified": true,
       "synthetic": false
