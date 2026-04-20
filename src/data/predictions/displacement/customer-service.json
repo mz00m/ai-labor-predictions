@@ -416,6 +416,15 @@
       ],
       "evidenceTier": 2,
       "label": "Metaculus: customer-service sales rep employment -11% by 2030"
+    },
+    {
+      "date": "2026-04-20",
+      "direction": "up",
+      "label": "Metaculus: customer-service sales rep employment -14% by 2035",
+      "sourceIds": [
+        "metaculus-labor-hub-2026"
+      ],
+      "evidenceTier": 2
     }
   ],
   "sources": [

@@ -5,7 +5,7 @@
   "description": "Projected percentage of education roles (tutoring, grading, content creation, administration) restructured or reduced by AI by 2030. AI adoption is high (92% of students, 60% of teachers use AI tools) but studies consistently frame AI as augmenting educators, not displacing them. The 33,000 higher ed jobs cut in 2025 (BLS) were driven by federal funding policy, not AI. SHRM found education has the lowest automation rate of any sector at 7.3%. Direct AI-specific displacement estimates remain unusually sparse.",
   "category": "displacement",
   "unit": "% of roles displaced",
-  "currentValue": 11.2,
+  "currentValue": 9,
   "timeHorizon": "By 2030",
   "aggregationMethod": "weighted",
   "disclaimer": "Insufficient evidence for confident projection. Only 4 data points, two of which are corporate proxies (Chegg, Pearson) rather than sector-wide measurements. BLS projects just 3% displacement in education support roles, and SHRM found education has the lowest automation rate of any sector at 7.3%. Treat this estimate with more caution than others on this site.",
@@ -71,6 +71,16 @@
     {
       "date": "2026-04-20",
       "value": -1.3,
+      "sourceIds": [
+        "metaculus-labor-hub-2026"
+      ],
+      "evidenceTier": 2,
+      "dataType": "projected",
+      "metricType": "projection"
+    },
+    {
+      "date": "2026-04-20",
+      "value": 1.3,
       "sourceIds": [
         "metaculus-labor-hub-2026"
       ],

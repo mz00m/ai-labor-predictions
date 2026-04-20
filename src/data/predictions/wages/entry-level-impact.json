@@ -492,6 +492,15 @@
       ],
       "evidenceTier": 2,
       "label": "Metaculus: new-grad unemployment doubles to ~12% by 2035"
+    },
+    {
+      "date": "2026-04-20",
+      "direction": "down",
+      "label": "Metaculus: new-grad underemployment rises to 58.6% by 2035",
+      "sourceIds": [
+        "metaculus-labor-hub-2026"
+      ],
+      "evidenceTier": 2
     }
   ],
   "sources": [
