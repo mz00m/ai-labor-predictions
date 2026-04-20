@@ -1,0 +1,35 @@
+jobsdata.ai Weekly Update — Week of April 13-20, 2026
+
+Four Tier 1 sources added this week reinforce a widening gap between AI's measured labor impact and the scale of projections. Yale Budget Lab's April CPS update (Gimbel, Kendall, Kulsakdinun) finds dissimilarity, exposure, and usage metrics through March 2026 remain flat or within historical ranges, with no relationship between exposure/automation/augmentation measures and employment or unemployment changes.
+
+What's new this week:
+
+Research and data
+- 13 new sources added (6 peer-reviewed/government, 5 institutional analysis, 2 commentary)
+- NBER Barth et al. (w35096): workers in occupations declining 25%+ lose 0.4 future years of work and 4.7% cumulative earnings over 2007-2024 — historical baseline for declining-occupation cohorts
+- NY Fed Survey of Consumer Expectations: 39% of US workers used GenAI at work in Nov 2025 (new data point), with 62% expecting AI-driven unemployment rise over the next 12 months
+- Federal Reserve FEDS Note: BTOS firm-level AI adoption at 18% end-2025, Ridge Partners Survey 41% workforce GenAI Nov 2025, 78% employment-weighted firm adoption
+- Stanford HAI AI Index 2026, OpenAI Jobs Transition Framework (Richmond), Gallup Feb 2026 workplace AI survey (n=23,717), Goldman Sachs displacement/scarring analysis, Molly Kinder's Brookings residency-model proposal
+- 30+ new overlay signals and 2 new data points across 9 prediction graphs
+
+Data movements
+- Overall US displacement: multiple overlays converging on near-zero measured effect through March 2026, even as adoption data points climb
+- GenAI work adoption: 39% data point (NY Fed SCE) confirms continued adoption acceleration
+- White-collar and median wage: NBER Norway findings add historical precedent for declining-occupation earnings loss
+
+Site updates
+- Launched /prediction page: 12 evidence-backed 2030 forecasts with interactive "Place Your Prediction" form and six-economist assessment (Acemoglu, Brynjolfsson, Gimbel, Bessen, Kolko, Imas)
+- Launched /scorecard: instant AI exposure score across 342 occupations (static pages, zero API cost) with four score bands and task breakdown
+- Added Layer 2 Quick Plan: personalized AI action plan generated via Claude Haiku
+- Added inline AI score preview in the assessment form
+- Added researcher watchlist (15 tracked economists) and /researcher-check skill for systematic publication scanning
+- Migrated 305 border opacity values to semantic tokens, standardized type scale across 116 files, added ARIA and focus-visible accessibility across interactive components
+- Fixed prediction chart X-axis: numeric time axis with evenly-spaced quarterly ticks, removed phantom 2030 target point
+
+By the numbers: 48 commits - 427 files changed - 13 new sources - 30+ new data points and signals
+
+The data added this week tightens the empirical case that measured labor effects continue to lag projected ones by a wide margin. Practitioners tracking displacement should watch whether the gap narrows over the next two CPS releases — the Yale Budget Lab tracker is now the cleanest near-real-time signal we have. The Barth NBER paper also gives us a historical yardstick: 4.7% cumulative earnings loss over 17 years for declining-occupation cohorts is meaningful but far from catastrophic.
+
+jobsdata.ai — tracking AI's real impact on work and wages
+
+#AIandWork #FutureOfWork #LaborMarket #EconomicMobility #WorkforceDevelopment #OpportunityAI
