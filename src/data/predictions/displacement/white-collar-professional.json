@@ -196,6 +196,16 @@
       "evidenceTier": 2,
       "metricType": "projection",
       "dataType": "projected"
+    },
+    {
+      "date": "2026-04-20",
+      "value": 17.2,
+      "sourceIds": [
+        "metaculus-labor-hub-2026"
+      ],
+      "evidenceTier": 2,
+      "dataType": "projected",
+      "metricType": "projection"
     }
   ],
   "overlays": [
@@ -1580,6 +1590,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-04-20",
       "excerpt": "Workers initially employed in occupations that later decline by at least 25% demonstrate 0.4 lower future years of work, although this employment difference is mostly explained by other individual traits. These workers, conditional on controls, experience a 4.7% reduction in future cumulative earnings relative to starting earnings, akin to losing one year's worth of earnings over 2007–2024."
+    },
+    {
+      "id": "metaculus-labor-hub-2026",
+      "title": "Labor Automation Forecasting Hub",
+      "url": "https://www.metaculus.com/labor-hub/",
+      "publisher": "Metaculus / Renaissance Philanthropy / Schultz Family Foundation",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-20",
+      "excerpt": "The most vulnerable AI-exposed occupations are expected to shrink 17.2% by 2035. Overall US employment is projected to fall 1.9% by 2030 and 3.4% by 2035."
     }
   ]
 }

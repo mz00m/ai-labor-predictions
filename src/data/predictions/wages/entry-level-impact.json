@@ -483,6 +483,15 @@
       ],
       "evidenceTier": 2,
       "label": "Brookings (Kinder): DeepMind Hassabis says AI hits junior jobs in 2026"
+    },
+    {
+      "date": "2026-04-20",
+      "direction": "down",
+      "sourceIds": [
+        "metaculus-labor-hub-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Metaculus: new-grad unemployment doubles to ~12% by 2035"
     }
   ],
   "sources": [
@@ -907,6 +916,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-01-23",
       "excerpt": "I've been warning about this risk for over a year; now, the people building the technology are putting timelines on it."
+    },
+    {
+      "id": "metaculus-labor-hub-2026",
+      "title": "Labor Automation Forecasting Hub",
+      "url": "https://www.metaculus.com/labor-hub/",
+      "publisher": "Metaculus / Renaissance Philanthropy / Schultz Family Foundation",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-20",
+      "excerpt": "Overall employment is projected to fall 1.9% by 2030 and fall 3.4% by 2035 due to AI-driven displacement. Unemployment for new 4-year college graduates is projected to more than double to 12% by 2035."
     }
   ]
 }

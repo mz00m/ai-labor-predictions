@@ -357,6 +357,26 @@
         "conversionHigh": 1.5,
         "rationale": "CPS-derived unemployment rose from 3.3% to 3.6% (+0.3pp) among workers in OpenAI's 'high automation risk' archetype, a modest signal of observed labor-market pressure — but notably workers in 'less immediate change' jobs saw a larger +0.6pp rise, suggesting AI is not the primary driver."
       }
+    },
+    {
+      "date": "2026-04-20",
+      "value": 1.9,
+      "sourceIds": [
+        "metaculus-labor-hub-2026"
+      ],
+      "evidenceTier": 2,
+      "dataType": "projected",
+      "metricType": "projection"
+    },
+    {
+      "date": "2026-04-20",
+      "value": 3.4,
+      "sourceIds": [
+        "metaculus-labor-hub-2026"
+      ],
+      "evidenceTier": 2,
+      "dataType": "projected",
+      "metricType": "projection"
     }
   ],
   "overlays": [
@@ -2704,6 +2724,15 @@
       "evidenceTier": 4,
       "datePublished": "2026-04-17",
       "excerpt": "What A.I. company executives are saying about their products — that they might lead to human extinction and almost certainly will lead to large-scale permanent disemployment — is so obviously 'bad messaging' that I would really urge people to consider that it's not a 'message' at all."
+    },
+    {
+      "id": "metaculus-labor-hub-2026",
+      "title": "Labor Automation Forecasting Hub",
+      "url": "https://www.metaculus.com/labor-hub/",
+      "publisher": "Metaculus / Renaissance Philanthropy / Schultz Family Foundation",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-20",
+      "excerpt": "Overall employment is projected to fall 1.9% by 2030 and fall 3.4% by 2035 due to AI-driven displacement. Unemployment for new 4-year college graduates is projected to more than double to 12% by 2035."
     }
   ]
 }
