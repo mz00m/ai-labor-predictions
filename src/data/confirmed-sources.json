@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-04-19",
-  "totalSources": 527,
-  "verifiedCount": 517,
+  "totalSources": 528,
+  "verifiedCount": 518,
   "sources": {
     "gallup-workplace-ai-feb-2026": {
       "id": "gallup-workplace-ai-feb-2026",
@@ -7425,6 +7425,20 @@
       "excerpt": "I've been warning about this risk for over a year; now, the people building the technology are putting timelines on it.",
       "usedIn": [
         "entry-level-wage-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "yglesias-slowboring-ai-messaging-2026": {
+      "id": "yglesias-slowboring-ai-messaging-2026",
+      "title": "It's not 'bad marketing' from A.I. companies",
+      "url": "https://www.slowboring.com/p/its-not-bad-marketing-from-ai-companies",
+      "publisher": "Slow Boring (Matthew Yglesias)",
+      "evidenceTier": 4,
+      "datePublished": "2026-04-17",
+      "excerpt": "What A.I. company executives are saying about their products — that they might lead to human extinction and almost certainly will lead to large-scale permanent disemployment — is so obviously 'bad messaging' that I would really urge people to consider that it's not a 'message' at all.",
+      "usedIn": [
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false

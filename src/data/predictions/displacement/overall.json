@@ -1520,6 +1520,15 @@
       ],
       "evidenceTier": 2,
       "label": "OpenAI: Unemployment rose more in low-exposure jobs (+0.6pp) than high-automation-risk (+0.3pp) since 2024Q1"
+    },
+    {
+      "date": "2026-04-17",
+      "direction": "up",
+      "sourceIds": [
+        "yglesias-slowboring-ai-messaging-2026"
+      ],
+      "evidenceTier": 4,
+      "label": "Slow Boring (Yglesias): AI execs sincerely believe in permanent disemployment"
     }
   ],
   "sources": [
@@ -2686,6 +2695,15 @@
       "datePublished": "2026-04-17",
       "excerpt": "All 921 occupations (147.9M jobs): 18% of jobs are at a higher short-term automation risk; 46% of jobs are less likely to experience near-term change; 12% of jobs could grow because of AI; 24% of jobs may see declining employment as their task composition shifts, but the remaining jobs will still need workers. People that are or were employed in jobs we predict to have less immediate change have actually seen the largest increase in unemployment at +0.6 p.p. For comparison, people employed in jobs at higher automation risk or jobs that will reorganize have seen +0.3 p.p. and +0.3 p.p. increases in the unemployment rate over the same period.",
       "dateAdded": "2026-04-17"
+    },
+    {
+      "id": "yglesias-slowboring-ai-messaging-2026",
+      "title": "It's not 'bad marketing' from A.I. companies",
+      "url": "https://www.slowboring.com/p/its-not-bad-marketing-from-ai-companies",
+      "publisher": "Slow Boring (Matthew Yglesias)",
+      "evidenceTier": 4,
+      "datePublished": "2026-04-17",
+      "excerpt": "What A.I. company executives are saying about their products — that they might lead to human extinction and almost certainly will lead to large-scale permanent disemployment — is so obviously 'bad messaging' that I would really urge people to consider that it's not a 'message' at all."
     }
   ]
 }
