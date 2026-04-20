@@ -2,10 +2,10 @@
   "id": "displacement-tech",
   "slug": "tech-sector-displacement",
   "title": "Tech Sector Displacement by 2030: Uneven by Experience Level",
-  "description": "The weighted average (10.4%) reflects a mix of direct employment measures and job-posting proxy data. One peer-reviewed study (Brynjolfsson et al. 2025) finds net tech employment grew +1.3%, but this masks a K-shaped split: developers aged 22-25 saw ~20% employment decline since late 2022, while those 35-49 grew +9%. Job posting data from Indeed, Lightcast, and BLS show 13-22% declines in tech hiring volume. The primary channel is not mass layoffs but evaporated entry points — firms stopped creating junior roles as senior devs absorb that work with AI tools.",
+  "description": "The weighted average (11%) reflects a mix of direct employment measures and job-posting proxy data. One peer-reviewed study (Brynjolfsson et al. 2025) finds net tech employment grew +1.3%, but this masks a K-shaped split: developers aged 22-25 saw ~20% employment decline since late 2022, while those 35-49 grew +9%. Job posting data from Indeed, Lightcast, and BLS show 13-22% declines in tech hiring volume. The primary channel is not mass layoffs but evaporated entry points — firms stopped creating junior roles as senior devs absorb that work with AI tools.",
   "category": "displacement",
   "unit": "% of jobs displaced",
-  "currentValue": 10.4,
+  "currentValue": 11,
   "timeHorizon": "By 2030",
   "aggregationMethod": "weighted",
   "history": [
@@ -152,6 +152,16 @@
     {
       "date": "2026-04-20",
       "value": 15.1,
+      "sourceIds": [
+        "metaculus-labor-hub-2026"
+      ],
+      "evidenceTier": 2,
+      "dataType": "projected",
+      "metricType": "projection"
+    },
+    {
+      "date": "2026-04-20",
+      "value": 22.3,
       "sourceIds": [
         "metaculus-labor-hub-2026"
       ],

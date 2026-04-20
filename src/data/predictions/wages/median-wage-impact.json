@@ -164,6 +164,26 @@
       "dataType": "projected",
       "confidenceLow": -15,
       "confidenceHigh": -2
+    },
+    {
+      "date": "2026-04-20",
+      "value": -0.6,
+      "sourceIds": [
+        "metaculus-labor-hub-2026"
+      ],
+      "evidenceTier": 2,
+      "dataType": "projected",
+      "metricType": "projection"
+    },
+    {
+      "date": "2026-04-20",
+      "value": 1.4,
+      "sourceIds": [
+        "metaculus-labor-hub-2026"
+      ],
+      "evidenceTier": 2,
+      "dataType": "projected",
+      "metricType": "projection"
     }
   ],
   "overlays": [
@@ -1102,6 +1122,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-04-07",
       "excerpt": "Long-lasting impacts: 10 years after a job loss, technology-displaced workers' real earnings were 10 percentage points below that of non-displaced workers. Short-run impacts: It can take one month longer for technology-displaced workers to find a new job; and their inflation-adjusted earnings take bigger hits (more than 3%) versus other workers (negligible effect)."
+    },
+    {
+      "id": "metaculus-labor-hub-2026",
+      "title": "Labor Automation Forecasting Hub",
+      "url": "https://www.metaculus.com/labor-hub/",
+      "publisher": "Metaculus / Renaissance Philanthropy / Schultz Family Foundation",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-20",
+      "excerpt": "Metaculus community forecasts for 2030 and 2035: overall US employment -1.9%/-3.4%; most vulnerable AI-exposed occupations -11.4%/-17.2%; software developers -15.1%/-22.3%; financial specialists -8.1%/-15.3%; services sales -11%/-14%; lawyers -5.4%/-9.6%; designers -4%/-8.4%; K-12 teachers -1.3%/+1.3%; overall median wage -0.6%/+1.4%; percent workers using AI daily 52.5%/70.9%; new-grad unemployment ~10%/12%."
     }
   ]
 }

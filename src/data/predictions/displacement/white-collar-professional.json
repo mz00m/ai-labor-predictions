@@ -5,7 +5,7 @@
   "description": "Estimated share of white-collar professional roles facing displacement from AI (higher = more displacement). Most studies find near-zero aggregate displacement but a sharp age gradient: young workers (22-30) in AI-exposed roles show 5-13% displacement across the US, Sweden, and the Netherlands, while older workers are stable or growing. Finland and Denmark report null results. Data points span both age-specific and all-worker measurements.",
   "category": "displacement",
   "unit": "% of roles displaced",
-  "currentValue": 5.8,
+  "currentValue": 6.2,
   "timeHorizon": "By 2030",
   "aggregationMethod": "weighted",
   "history": [
@@ -210,6 +210,26 @@
     {
       "date": "2026-04-20",
       "value": 5.4,
+      "sourceIds": [
+        "metaculus-labor-hub-2026"
+      ],
+      "evidenceTier": 2,
+      "dataType": "projected",
+      "metricType": "projection"
+    },
+    {
+      "date": "2026-04-20",
+      "value": 9.6,
+      "sourceIds": [
+        "metaculus-labor-hub-2026"
+      ],
+      "evidenceTier": 2,
+      "dataType": "projected",
+      "metricType": "projection"
+    },
+    {
+      "date": "2026-04-20",
+      "value": 11.4,
       "sourceIds": [
         "metaculus-labor-hub-2026"
       ],

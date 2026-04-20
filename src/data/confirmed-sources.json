@@ -7450,7 +7450,7 @@
       "publisher": "Metaculus / Renaissance Philanthropy / Schultz Family Foundation",
       "evidenceTier": 2,
       "datePublished": "2026-04-20",
-      "excerpt": "Software developers -15.1%, customer-service sales reps -11%, financial specialists -8.1%, lawyers and law clerks -5.4%, designers -4%, K-12 teachers +1.3% employment change by 2030 (Metaculus community forecast).",
+      "excerpt": "Metaculus community forecasts for 2030 and 2035: overall US employment -1.9%/-3.4%; most vulnerable AI-exposed occupations -11.4%/-17.2%; software developers -15.1%/-22.3%; financial specialists -8.1%/-15.3%; services sales -11%/-14%; lawyers -5.4%/-9.6%; designers -4%/-8.4%; K-12 teachers -1.3%/+1.3%; overall median wage -0.6%/+1.4%; percent workers using AI daily 52.5%/70.9%; new-grad unemployment ~10%/12%.",
       "usedIn": [
         "overall-us-displacement",
         "entry-level-wage-impact",
@@ -7459,7 +7459,9 @@
         "financial-services-displacement",
         "creative-industry-displacement",
         "education-sector-displacement",
-        "customer-service-automation"
+        "customer-service-automation",
+        "median-wage-impact",
+        "genai-work-adoption"
       ],
       "verified": true,
       "synthetic": false
