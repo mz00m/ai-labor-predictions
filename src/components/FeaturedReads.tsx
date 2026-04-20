@@ -10,6 +10,15 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Economic Security Project",
+    title: "Ideas for Shared Economic Prosperity in the AI Transition",
+    summary:
+      "Becky Chao's policy brief synthesizes the evidence base for AI-driven labor disruption — citing Brynjolfsson's 16% entry-level employment drop, Brookings' 6.1M displaced clerical workers, and Azar et al.'s 4.5% wage decline at AI-substitutable firms — and lays out a four-pillar agenda: modernize the social contract (UI uptake, public healthcare, income floor, four-day week), protect workers from algorithmic wage-setting and surveillance, deploy antimonopoly tools across the AI stack, and shift data-center energy costs back to the firms driving them rather than households.",
+    date: "Apr 1",
+    url: "https://economicsecurityproject.org/wp-content/uploads/Ideas-for-Shared-Economic-Prosperity-in-the-AI-Transition.pdf",
+    accent: "border-l-rose-500",
+  },
+  {
     author: "OpenAI Economic Research",
     title: "The AI Jobs Transition Framework",
     summary:
@@ -44,15 +53,6 @@ const articles: Article[] = [
     date: "Apr 14",
     url: "https://aleximas.substack.com/p/what-will-be-scarce",
     accent: "border-l-fuchsia-500",
-  },
-  {
-    author: "WSJ",
-    title: "The Economy Is Growing, Jobs Aren't. Why That Might Be OK.",
-    summary:
-      "Wall Street Journal examines the decoupling of GDP growth from job creation as AI-driven productivity gains absorb output expansion without hiring. Frames the 'jobless growth' pattern as potentially benign if productivity flows through to wages and new work.",
-    date: "Apr 14",
-    url: "https://www.wsj.com/economy/jobs/the-economy-is-growing-jobs-arent-why-that-might-be-ok-5c50a535",
-    accent: "border-l-emerald-500",
   },
 ];
 

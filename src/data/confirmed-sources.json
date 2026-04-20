@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-04-20",
-  "totalSources": 529,
-  "verifiedCount": 519,
+  "totalSources": 530,
+  "verifiedCount": 520,
   "sources": {
     "gallup-workplace-ai-feb-2026": {
       "id": "gallup-workplace-ai-feb-2026",
@@ -7453,6 +7453,20 @@
       "excerpt": "Workers initially employed in occupations that later decline by at least 25% demonstrate 0.4 lower future years of work, although this employment difference is mostly explained by other individual traits. These workers, conditional on controls, experience a 4.7% reduction in future cumulative earnings relative to starting earnings, akin to losing one year's worth of earnings over 2007–2024.",
       "usedIn": [
         "white-collar-professional-displacement",
+        "median-wage-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "esp-chao-shared-prosperity-2026": {
+      "id": "esp-chao-shared-prosperity-2026",
+      "title": "Ideas for Shared Economic Prosperity in the AI Transition",
+      "url": "https://economicsecurityproject.org/wp-content/uploads/Ideas-for-Shared-Economic-Prosperity-in-the-AI-Transition.pdf",
+      "publisher": "Economic Security Project (Becky Chao)",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-01",
+      "excerpt": "Using realized worker-firm matches data for 138 million U.S. workers, Azar et al find the arrival of ChatGPT reduced average wages of employees at firms that can substitute AI for labor by 4.5% relative to firms that cannot.",
+      "usedIn": [
         "median-wage-impact"
       ],
       "verified": true,

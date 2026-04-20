@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "Ideas for Shared Economic Prosperity in the AI Transition",
+      "author": "Becky Chao",
+      "publisher": "Economic Security Project",
+      "date": "2026-04-01",
+      "url": "https://economicsecurityproject.org/wp-content/uploads/Ideas-for-Shared-Economic-Prosperity-in-the-AI-Transition.pdf",
+      "takeaway": "Policy brief synthesizing the empirical case for AI labor disruption — citing Brynjolfsson's 16% relative employment decline for 22-25 year olds in AI-exposed occupations, Brookings' estimate of 6.1M U.S. clerical/admin workers in high-AI-exposure roles who will struggle to adapt, and Azar et al.'s finding (138M worker-firm matches) that ChatGPT cut wages 4.5% at AI-substitutable firms. Lays out a four-pillar policy agenda: (1) modernize the social contract via UI uptake, decoupled public healthcare, an income floor for displaced workers, and four-day-week experimentation; (2) protect workers through transparency rules on AI surveillance, prohibitions on biometric monitoring, and regulation of algorithmic wage-setting/scheduling on gig and on-demand nursing platforms; (3) shape competitive AI markets via NAIRR/CalCompute-style public investment, non-discrimination rules at the infrastructure layer, and data portability mandates; (4) mitigate AI's role in the affordability crisis by banning AI-enabled price discrimination/collusion (RealPage cost renters 4% on average) and shifting data-center electricity costs (residential prices up 10% vs 3% commercial 2022-2024; +6% household increase forecast through 2027) back to the firms driving demand.",
+      "weekFeatured": "2026-04-20",
+      "tier": 2
+    },
+    {
       "title": "The AI Jobs Transition Framework: Mapping AI's Near-Term Impact on Jobs",
       "author": "Alex Martin Richmond",
       "publisher": "OpenAI Economic Research",
