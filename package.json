@@ -15,7 +15,7 @@
     "digest:dry-run": "tsx scripts/fetch-sources.ts && tsx scripts/synthesize-digest.ts --dry-run",
     "ingest": "tsx scripts/ingest-source.ts",
     "ingest:from-digest": "tsx scripts/ingest-from-digest.ts",
-    "ingest:apply": "tsx scripts/apply-ingestion.ts",
+    "ingest:apply": "tsx scripts/apply-ingestion.ts && npm run compile-wiki",
     "backfill:content": "tsx scripts/backfill-source-content.ts --skip-existing",
     "build:search": "tsx scripts/build-search-index.ts",
     "backfill:content:dry-run": "tsx scripts/backfill-source-content.ts --dry-run",
@@ -27,6 +27,7 @@
     "agent:research": "tsx scripts/agent-research.ts",
     "agent:review": "tsx scripts/agent-review.ts",
     "compile-kb": "tsx scripts/compile-knowledge-base.ts",
+    "compile-wiki": "tsx scripts/compile-wiki.ts",
     "test-assessments": "set -a && . ./.env.local && set +a && tsx scripts/test-assessments.ts"
   },
   "dependencies": {
