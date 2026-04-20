@@ -580,6 +580,15 @@
       ],
       "evidenceTier": 2,
       "label": "Goldman Sachs: tech-displaced workers take >3% short-run real earnings hit"
+    },
+    {
+      "date": "2026-04-20",
+      "direction": "down",
+      "sourceIds": [
+        "barth-hoen-kerr-declining-occupations-nber-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER: Declining-occupation workers face 4.7% cumulative earnings loss (Norway)"
     }
   ],
   "sources": [
@@ -1102,6 +1111,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-04-07",
       "excerpt": "Long-lasting impacts: 10 years after a job loss, technology-displaced workers' real earnings were 10 percentage points below that of non-displaced workers. Short-run impacts: It can take one month longer for technology-displaced workers to find a new job; and their inflation-adjusted earnings take bigger hits (more than 3%) versus other workers (negligible effect)."
+    },
+    {
+      "id": "barth-hoen-kerr-declining-occupations-nber-2026",
+      "title": "Declining Occupations and Career Outcomes in Norway",
+      "url": "https://www.nber.org/papers/w35096",
+      "publisher": "NBER (Barth, Hoen, Kerr, Kerr)",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-20",
+      "excerpt": "Workers initially employed in occupations that later decline by at least 25% demonstrate 0.4 lower future years of work, although this employment difference is mostly explained by other individual traits. These workers, conditional on controls, experience a 4.7% reduction in future cumulative earnings relative to starting earnings, akin to losing one year's worth of earnings over 2007–2024."
     }
   ]
 }
