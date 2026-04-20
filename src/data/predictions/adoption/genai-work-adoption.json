@@ -139,29 +139,18 @@
       "evidenceTier": 1,
       "metricType": "survey",
       "dataType": "observed"
-    },
-    {
-      "date": "2026-04-20",
-      "value": 52.5,
-      "sourceIds": [
-        "metaculus-labor-hub-2026"
-      ],
-      "evidenceTier": 2,
-      "dataType": "projected",
-      "metricType": "projection"
-    },
-    {
-      "date": "2026-04-20",
-      "value": 70.9,
-      "sourceIds": [
-        "metaculus-labor-hub-2026"
-      ],
-      "evidenceTier": 2,
-      "dataType": "projected",
-      "metricType": "projection"
     }
   ],
   "overlays": [
+    {
+      "date": "2026-04-20",
+      "direction": "up",
+      "sourceIds": [
+        "metaculus-labor-hub-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Metaculus: 52.5% workers using AI daily by 2030; 70.9% by 2035 (community forecast)"
+    },
     {
       "date": "2024-02-01",
       "direction": "up",
