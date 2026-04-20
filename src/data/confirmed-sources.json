@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-04-20",
-  "totalSources": 530,
-  "verifiedCount": 520,
+  "totalSources": 531,
+  "verifiedCount": 521,
   "sources": {
     "gallup-workplace-ai-feb-2026": {
       "id": "gallup-workplace-ai-feb-2026",
@@ -7491,6 +7491,25 @@
         "customer-service-automation",
         "median-wage-impact",
         "genai-work-adoption"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "tucker-qwi-early-career-hires-2026": {
+      "id": "tucker-qwi-early-career-hires-2026",
+      "title": "You're (not) hired: Artificial intelligence and early career hiring in the Quarterly Workforce Indicators",
+      "url": "http://leetucker.net/docs/Youre_not_hired_Tucker_20260417.pdf",
+      "publisher": "US Census Bureau (Lee C. Tucker)",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-17",
+      "excerpt": "Regression-adjusted employment of early career workers in the most AI-exposed quintile of industry-state cells declined by 12% over the 10 quarters following the introduction of ChatGPT, even as employment in less-exposed industries has remained stable. I find that hires of these early career workers declined immediately by 9% in comparison with those in less exposed industries, and that they have not recovered over time.",
+      "usedIn": [
+        "white-collar-professional-displacement",
+        "tech-sector-displacement",
+        "overall-us-displacement",
+        "entry-level-wage-impact",
+        "ai-adoption-rate",
+        "workforce-ai-exposure"
       ],
       "verified": true,
       "synthetic": false

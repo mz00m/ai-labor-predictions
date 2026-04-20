@@ -641,6 +641,15 @@
       ],
       "evidenceTier": 2,
       "label": "Gallup: 41% of employees say their org has integrated AI tools (n=23,717)"
+    },
+    {
+      "date": "2026-04-17",
+      "direction": "neutral",
+      "sourceIds": [
+        "tucker-qwi-early-career-hires-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Census/QWI: 1 SD higher AI exposure → +6.7pp BTOS adoption (R²=47%)"
     }
   ],
   "sources": [
@@ -1234,6 +1243,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-04-13",
       "excerpt": "41% of employees report their organization has integrated AI tools. 23% in AI-adopting orgs report workforce reductions vs. 16% in non-adopting. Survey of 23,717 employed U.S. adults, margin of error +/-0.9pp."
+    },
+    {
+      "id": "tucker-qwi-early-career-hires-2026",
+      "title": "You're (not) hired: Artificial intelligence and early career hiring in the Quarterly Workforce Indicators",
+      "url": "http://leetucker.net/docs/Youre_not_hired_Tucker_20260417.pdf",
+      "publisher": "US Census Bureau (Lee C. Tucker)",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-17",
+      "excerpt": "A one standard-deviation increase in subsector AI exposure is associated with a 6.7 percentage point increase in AI adoption. And, approximately 47% of the observed variation in adoption as of April 2026 can be predicted using the GPT-4 beta measure alone"
     }
   ]
 }

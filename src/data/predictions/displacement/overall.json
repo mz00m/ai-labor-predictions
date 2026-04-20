@@ -1549,6 +1549,15 @@
       ],
       "evidenceTier": 4,
       "label": "Slow Boring (Yglesias): AI execs sincerely believe in permanent disemployment"
+    },
+    {
+      "date": "2026-04-17",
+      "direction": "up",
+      "sourceIds": [
+        "tucker-qwi-early-career-hires-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Census/QWI: 150K+ early-career jobs lost in most AI-exposed industries since ChatGPT"
     }
   ],
   "sources": [
@@ -2733,6 +2742,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-04-20",
       "excerpt": "Overall employment is projected to fall 1.9% by 2030 and fall 3.4% by 2035 due to AI-driven displacement. Unemployment for new 4-year college graduates is projected to more than double to 12% by 2035."
+    },
+    {
+      "id": "tucker-qwi-early-career-hires-2026",
+      "title": "You're (not) hired: Artificial intelligence and early career hiring in the Quarterly Workforce Indicators",
+      "url": "http://leetucker.net/docs/Youre_not_hired_Tucker_20260417.pdf",
+      "publisher": "US Census Bureau (Lee C. Tucker)",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-17",
+      "excerpt": "The overall reduction in hires fully explains a 15% decline in employment in the most AI-exposed industries since large language models became available, representing a loss of over 150,000 early career jobs."
     }
   ]
 }

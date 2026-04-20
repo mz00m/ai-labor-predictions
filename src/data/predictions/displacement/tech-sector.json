@@ -270,6 +270,17 @@
       "dataType": "projected"
     },
     {
+      "date": "2026-04-17",
+      "value": 30,
+      "sourceIds": [
+        "tucker-qwi-early-career-hires-2026"
+      ],
+      "evidenceTier": 1,
+      "metricType": "employment",
+      "note": "Ages 22-24 employment decline in Information sector (NAICS 51), QWI 2022q4-2025q2, unadjusted tabulation",
+      "dataType": "observed"
+    },
+    {
       "date": "2026-04-20",
       "value": 15.1,
       "sourceIds": [
@@ -1522,6 +1533,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-04-20",
       "excerpt": "Software developers -15.1%, customer-service sales reps -11%, financial specialists -8.1%, lawyers and law clerks -5.4%, designers -4%, K-12 teachers +1.3% employment change by 2030 (Metaculus community forecast)."
+    },
+    {
+      "id": "tucker-qwi-early-career-hires-2026",
+      "title": "You're (not) hired: Artificial intelligence and early career hiring in the Quarterly Workforce Indicators",
+      "url": "http://leetucker.net/docs/Youre_not_hired_Tucker_20260417.pdf",
+      "publisher": "US Census Bureau (Lee C. Tucker)",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-17",
+      "excerpt": "Early career employment in Information declined by 30%, but Finance and Insurance and Professional, Scientific, and Technical Services saw double-digit percentage declines as well (-11% and -15%, respectively)."
     }
   ],
   "marketIds": {
