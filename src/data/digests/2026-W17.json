@@ -1,0 +1,117 @@
+{
+  "week": "2026-W17",
+  "generatedAt": "2026-04-20T09:58:10.920Z",
+  "lookbackDays": 14,
+  "highlights": [
+    {
+      "title": "Declining Occupations and Career Outcomes in Norway",
+      "summary": "NBER working paper by Barth, Hoen, Kerr, and Kerr examines career consequences for workers initially employed in occupations that subsequently decline by at least 25% during 2007–2024 in Norway. Workers in declining occupations face measurable long-term wage and employment penalties, offering cross-national evidence on the structural costs of occupational displacement. The findings are broadly applicable to understanding white-collar and professional displacement dynamics driven by automation and AI.",
+      "source": "https://www.nber.org/papers/w35096",
+      "authors": [
+        "Erling Barth",
+        "Maria Forthun Hoen",
+        "Sari Pekkala Kerr",
+        "William R. Kerr"
+      ],
+      "publishedAt": "2026-04-20",
+      "score": 0.567,
+      "sourceAdapter": "nber",
+      "graphSlug": "white-collar-professional-displacement"
+    },
+    {
+      "title": "Shaping Human Capital and Work Practices in a Changing Labor Market",
+      "summary": "Wittich (2026) explores how human capital formation and workplace practices are adapting amid rapid labor market transformation driven by technological change, including AI adoption. The paper considers how workers and firms update skills and routines in response to automation pressures. It provides a conceptual framework relevant to forecasting overall US displacement trajectories.",
+      "source": "https://cris.maastrichtuniversity.nl/en/publications/33cda117-bac2-4be0-afce-39703634d55a",
+      "authors": [
+        "Anna-Lena Wittich"
+      ],
+      "publishedAt": "2026-04-24",
+      "score": 0.662,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "overall-us-displacement"
+    },
+    {
+      "title": "The Relic Condition: When Published Scholarship Becomes Material for Its Own Replacement",
+      "summary": "Deng and Liu (2026) demonstrate that LLMs can replicate the scholarly reasoning systems of prominent humanities and social science researchers by extracting structured inference constraints from their published corpora alone, then deploying these as 'scholar-bots.' The study raises urgent questions about AI substitution of high-skill knowledge workers in academic and creative domains. This work has direct implications for creative and knowledge-industry displacement forecasts.",
+      "source": "https://arxiv.org/abs/2604.16116v1",
+      "authors": [
+        "Lin Deng",
+        "Chang-bo Liu"
+      ],
+      "publishedAt": "2026-04-17",
+      "score": 0.413,
+      "sourceAdapter": "arxiv",
+      "graphSlug": "creative-industry-displacement"
+    },
+    {
+      "title": "Reckoning with the Political Economy of AI: Avoiding Decoys in Pursuit of Accountability",
+      "summary": "Vertesi, boyd, Taylor, and Shestakofsky (2026) argue that AI development is a world-building endeavor through which funders and developers entrench networks of power and wealth, often deploying accountability 'decoys' that deflect meaningful oversight. The paper situates AI's labor market impacts within a broader political economy, warning that structural workforce transformations may be obscured by superficial governance gestures. This framing is highly relevant to tracking AI adoption rates and their workforce exposure effects.",
+      "source": "https://arxiv.org/abs/2604.16106v1",
+      "authors": [
+        "Janet Vertesi",
+        "danah boyd",
+        "Alex Taylor",
+        "Benjamin Shestakofsky"
+      ],
+      "publishedAt": "2026-04-17",
+      "score": 0.373,
+      "sourceAdapter": "arxiv",
+      "graphSlug": "workforce-ai-exposure"
+    },
+    {
+      "title": "Why Open Source? A Game-Theoretic Analysis of the AI Race",
+      "summary": "Mladenovic, Courville, and Gidel (2026) model open-sourcing versus closed-sourcing decisions among frontier AI developers using an R&D race framework, finding that competitive dynamics systematically shape which capabilities become widely available. Broad diffusion of open-source AI models accelerates enterprise adoption and, by extension, workforce exposure to AI-driven automation. The paper's findings are directly relevant to projecting the pace of AI adoption across the economy.",
+      "source": "https://arxiv.org/abs/2604.16227v1",
+      "authors": [
+        "Andjela Mladenovic",
+        "Aaron Courville",
+        "Gauthier Gidel"
+      ],
+      "publishedAt": "2026-04-17",
+      "score": 0.376,
+      "sourceAdapter": "arxiv",
+      "graphSlug": "ai-adoption-rate"
+    }
+  ],
+  "themes": [
+    "Occupational decline imposes persistent wage and career penalties on affected workers, with longitudinal evidence now spanning nearly two decades across multiple economies.",
+    "LLMs are demonstrating capacity to replicate expert knowledge workers—including researchers and scholars—raising the threshold of skills considered automation-proof.",
+    "The political economy of AI development may systematically obscure the scale and pace of workforce displacement through governance theater and accountability decoys.",
+    "Open-source AI competitive dynamics are accelerating broad model diffusion, compressing the timeline for enterprise-level workforce AI exposure.",
+    "Human capital adaptation strategies and firm-level work practice changes are emerging as central mechanisms through which labor markets attempt to absorb automation shocks."
+  ],
+  "watching": [
+    {
+      "title": "MARCH: Multi-Agent Radiology Clinical Hierarchy for CT Report Generation",
+      "source": "https://arxiv.org/abs/2604.16175v1",
+      "reason": "Multi-agent LLM systems automating radiology reporting signal accelerating healthcare admin and clinical workflow displacement; worth tracking for healthcare-admin-displacement trends."
+    },
+    {
+      "title": "SCRIPT: Implementing an Intelligent Tutoring System for Programming in a German University Context",
+      "source": "https://arxiv.org/abs/2604.16117v1",
+      "reason": "AI tutoring systems substituting human instructors in university settings are a leading indicator for education-sector-displacement; European deployments broaden the evidence base."
+    },
+    {
+      "title": "VEFX-Bench: A Holistic Benchmark for Generic Video Editing and Visual Effects",
+      "source": "https://arxiv.org/abs/2604.16272v1",
+      "reason": "Benchmarking AI-assisted video editing at professional quality levels tracks the capability frontier for creative industry displacement in post-production roles."
+    }
+  ],
+  "sources": {
+    "succeeded": [
+      "semanticScholar",
+      "arxiv",
+      "ssrn",
+      "pubmed",
+      "openAlex",
+      "nber",
+      "bls",
+      "fred",
+      "googleCse",
+      "hnAlgolia"
+    ],
+    "failed": [],
+    "totalCandidates": 64,
+    "afterDedup": 64
+  }
+}
