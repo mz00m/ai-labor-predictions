@@ -2,13 +2,13 @@
   "id": "displacement-creative",
   "slug": "creative-industry-displacement",
   "title": "Creative Industry Displacement by 2030",
-  "description": "Estimated share of creative work (design, writing, marketing, illustration) significantly affected by generative AI by 2030. Sources measure different things \u2014 freelance platform declines, job posting changes, executive surveys, and model projections \u2014 making direct comparison difficult. Effects are concentrated in commoditized, entry-level tasks; experienced creative professionals show wage growth and productivity gains from AI augmentation.",
+  "description": "Estimated share of creative work (design, writing, marketing, illustration) significantly affected by generative AI by 2030. Sources measure different things — freelance platform declines, job posting changes, executive surveys, and model projections — making direct comparison difficult. Effects are concentrated in commoditized, entry-level tasks; experienced creative professionals show wage growth and productivity gains from AI augmentation.",
   "category": "displacement",
   "unit": "% of roles displaced",
   "currentValue": 27.2,
   "timeHorizon": "By 2030",
   "aggregationMethod": "weighted",
-  "disclaimer": "Heterogeneous evidence \u2014 interpret with caution. This estimate aggregates 8 data points that measure fundamentally different things: freelance platform revenue declines, job posting volume changes, illustration upload trends, executive surveys, and model-based projections. These are not interchangeable metrics. The 14\u201333% range reflects both genuine uncertainty and definitional incompatibility across sources. Observed platform-level effects (Upwork, Pixiv) capture commoditized creative tasks \u2014 entry-level, template-driven work \u2014 not the full creative sector. Overlays show experienced designers saw +16.7% wage growth (Dallas Fed), and human-AI teams showed 73% higher productivity (Ju & Aral). The weighted average is a mathematical summary of mixed evidence, not a consensus estimate of sector-wide role elimination.",
+  "disclaimer": "Heterogeneous evidence — interpret with caution. This estimate aggregates 8 data points that measure fundamentally different things: freelance platform revenue declines, job posting volume changes, illustration upload trends, executive surveys, and model-based projections. These are not interchangeable metrics. The 14–33% range reflects both genuine uncertainty and definitional incompatibility across sources. Observed platform-level effects (Upwork, Pixiv) capture commoditized creative tasks — entry-level, template-driven work — not the full creative sector. Overlays show experienced designers saw +16.7% wage growth (Dallas Fed), and human-AI teams showed 73% higher productivity (Ju & Aral). The weighted average is a mathematical summary of mixed evidence, not a consensus estimate of sector-wide role elimination.",
   "history": [
     {
       "date": "2023-06-14",
@@ -125,6 +125,16 @@
       "dataType": "projected",
       "confidenceLow": 54.4,
       "confidenceHigh": 57
+    },
+    {
+      "date": "2026-04-20",
+      "value": 4,
+      "sourceIds": [
+        "metaculus-labor-hub-2026"
+      ],
+      "evidenceTier": 2,
+      "dataType": "projected",
+      "metricType": "projection"
     }
   ],
   "overlays": [
@@ -243,7 +253,7 @@
         "ramp-freelance-velocity-2025"
       ],
       "evidenceTier": 1,
-      "label": "Ramp: $1 reduced freelance \u2192 $0.03 AI spend"
+      "label": "Ramp: $1 reduced freelance → $0.03 AI spend"
     },
     {
       "date": "2025-10-30",
@@ -348,7 +358,7 @@
   "sources": [
     {
       "id": "wef-creative-2023",
-      "title": "Future of Jobs Report 2023 \u2014 Creative and Media Professions",
+      "title": "Future of Jobs Report 2023 — Creative and Media Professions",
       "url": "https://www.weforum.org/publications/the-future-of-jobs-report-2023/",
       "publisher": "World Economic Forum",
       "evidenceTier": 2,
@@ -358,7 +368,7 @@
     },
     {
       "id": "mckinsey-creative-automation",
-      "title": "The economic potential of generative AI \u2014 Creative work",
+      "title": "The economic potential of generative AI — Creative work",
       "url": "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier",
       "publisher": "McKinsey Global Institute",
       "evidenceTier": 2,
@@ -368,7 +378,7 @@
     },
     {
       "id": "upwork-freelancer-impact",
-      "title": "Upwork Q2 2024 Earnings \u2014 Freelancer Market Trends",
+      "title": "Upwork Q2 2024 Earnings — Freelancer Market Trends",
       "url": "https://investors.upwork.com/news-releases/news-release-details/upwork-reports-second-quarter-2024-financial-results",
       "publisher": "Upwork (Earnings Report)",
       "evidenceTier": 1,
@@ -388,7 +398,7 @@
     },
     {
       "id": "techcrunch-creative-layoffs",
-      "title": "As layoffs deepen, AI's role in the cuts is murky \u2014 but it definitely has one",
+      "title": "As layoffs deepen, AI's role in the cuts is murky — but it definitely has one",
       "url": "https://techcrunch.com/2024/01/29/as-layoffs-deepen-ais-role-in-the-cuts-is-murky-but-it-definitely-has-one/",
       "publisher": "TechCrunch",
       "evidenceTier": 3,
@@ -448,7 +458,7 @@
     },
     {
       "id": "autor-new-frontiers-qje-2024",
-      "title": "New Frontiers: The Origins and Content of New Work, 1940\u20132018",
+      "title": "New Frontiers: The Origins and Content of New Work, 1940–2018",
       "url": "https://academic.oup.com/qje/article-abstract/139/3/1399/7630187",
       "publisher": "QJE (Autor, Chin, Salomons, Seegmiller)",
       "evidenceTier": 1,
@@ -553,7 +563,7 @@
       "publisher": "NBER (Reimers, Waldfogel)",
       "evidenceTier": 1,
       "datePublished": "2026-01-15",
-      "excerpt": "New book releases tripled over this period, but average quality declined... the authors estimate a potential steady-state consumer surplus gain of 25\u201350 percent from market expansion.",
+      "excerpt": "New book releases tripled over this period, but average quality declined... the authors estimate a potential steady-state consumer surplus gain of 25–50 percent from market expansion.",
       "dateAdded": "2026-03-07"
     },
     {
@@ -654,6 +664,15 @@
       "datePublished": "2026-04-14",
       "excerpt": "People bid for physical art prints that varied in described AI involvement. Human-made artwork gained 44% in value from exclusivity (one copy vs. many), but AI-generated artwork gained less than half that, only 21%. The mere involvement of AI made the work feel inherently non-exclusive, as if it could always be reproduced, regardless of how many copies were said to exist.",
       "dateAdded": "2026-04-14"
+    },
+    {
+      "id": "metaculus-labor-hub-2026",
+      "title": "Labor Automation Forecasting Hub",
+      "url": "https://www.metaculus.com/labor-hub/",
+      "publisher": "Metaculus / Renaissance Philanthropy / Schultz Family Foundation",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-20",
+      "excerpt": "Software developers -15.1%, customer-service sales reps -11%, financial specialists -8.1%, lawyers and law clerks -5.4%, designers -4%, K-12 teachers +1.3% employment change by 2030 (Metaculus community forecast)."
     }
   ]
 }
