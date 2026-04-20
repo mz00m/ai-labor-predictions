@@ -5,7 +5,7 @@
   "description": "Projected net percentage of financial services and banking roles displaced by AI by 2030. Finance has the highest sector-specific AI automation potential (54% per Citigroup), yet observed displacement remains modest so far.",
   "category": "displacement",
   "unit": "% of roles displaced",
-  "currentValue": 5.5,
+  "currentValue": 6.3,
   "timeHorizon": "By 2030",
   "aggregationMethod": "weighted",
   "history": [

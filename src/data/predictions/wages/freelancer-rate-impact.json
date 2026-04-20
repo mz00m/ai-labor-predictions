@@ -5,7 +5,7 @@
   "description": "Projected change in average freelancer hourly rates for AI-exposed categories (writing, design, translation, data work) by 2028.",
   "category": "wages",
   "unit": "% rate change",
-  "currentValue": -19.5,
+  "currentValue": -18.9,
   "timeHorizon": "By 2028",
   "aggregationMethod": "weighted",
   "history": [
