@@ -102,6 +102,16 @@
       "evidenceTier": 2,
       "metricType": "projection",
       "dataType": "projected"
+    },
+    {
+      "date": "2026-04-20",
+      "value": 8.1,
+      "sourceIds": [
+        "metaculus-labor-hub-2026"
+      ],
+      "evidenceTier": 2,
+      "dataType": "projected",
+      "metricType": "projection"
     }
   ],
   "overlays": [
@@ -572,6 +582,15 @@
       "datePublished": "2026-03-31",
       "excerpt": "In the rapid AI scenario (14% probability), AI systems surpass all paralegals and clerical workers, handling tasks as inexpensively and reliably as humans.",
       "dateAdded": "2026-04-02"
+    },
+    {
+      "id": "metaculus-labor-hub-2026",
+      "title": "Labor Automation Forecasting Hub",
+      "url": "https://www.metaculus.com/labor-hub/",
+      "publisher": "Metaculus / Renaissance Philanthropy / Schultz Family Foundation",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-20",
+      "excerpt": "Software developers -15.1%, customer-service sales reps -11%, financial specialists -8.1%, lawyers and law clerks -5.4%, designers -4%, K-12 teachers +1.3% employment change by 2030 (Metaculus community forecast)."
     }
   ]
 }

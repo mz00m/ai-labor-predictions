@@ -2,10 +2,10 @@
   "id": "displacement-tech",
   "slug": "tech-sector-displacement",
   "title": "Tech Sector Displacement by 2030: Uneven by Experience Level",
-  "description": "The sector-wide average (+1.3%) masks a K-shaped split: software developers aged 22-25 saw ~20% employment decline since late 2022, while those 35-49 grew +9%. The primary channel is not mass layoffs but evaporated entry points — firms stopped creating junior roles as senior devs absorb that work with AI tools. Net sector displacement is modest; the distributional impact is not.",
+  "description": "The weighted average (10.4%) reflects a mix of direct employment measures and job-posting proxy data. One peer-reviewed study (Brynjolfsson et al. 2025) finds net tech employment grew +1.3%, but this masks a K-shaped split: developers aged 22-25 saw ~20% employment decline since late 2022, while those 35-49 grew +9%. Job posting data from Indeed, Lightcast, and BLS show 13-22% declines in tech hiring volume. The primary channel is not mass layoffs but evaporated entry points — firms stopped creating junior roles as senior devs absorb that work with AI tools.",
   "category": "displacement",
   "unit": "% of jobs displaced",
-  "currentValue": 1.6,
+  "currentValue": 10.4,
   "timeHorizon": "By 2030",
   "aggregationMethod": "weighted",
   "history": [
@@ -148,6 +148,16 @@
       "evidenceTier": 2,
       "metricType": "projection",
       "dataType": "projected"
+    },
+    {
+      "date": "2026-04-20",
+      "value": 15.1,
+      "sourceIds": [
+        "metaculus-labor-hub-2026"
+      ],
+      "evidenceTier": 2,
+      "dataType": "projected",
+      "metricType": "projection"
     }
   ],
   "overlays": [
@@ -1473,6 +1483,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-04-13",
       "excerpt": "Employment among software developers aged 22–25 has plummeted nearly 20% since 2024, even as their older colleagues' headcount grows. The pattern repeats in other jobs with higher levels of AI exposure, like customer service. Meanwhile, firm surveys indicate executives expect this trend to accelerate, with planned headcount reductions outpacing recent cuts."
+    },
+    {
+      "id": "metaculus-labor-hub-2026",
+      "title": "Labor Automation Forecasting Hub",
+      "url": "https://www.metaculus.com/labor-hub/",
+      "publisher": "Metaculus / Renaissance Philanthropy / Schultz Family Foundation",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-20",
+      "excerpt": "Software developers -15.1%, customer-service sales reps -11%, financial specialists -8.1%, lawyers and law clerks -5.4%, designers -4%, K-12 teachers +1.3% employment change by 2030 (Metaculus community forecast)."
     }
   ],
   "marketIds": {

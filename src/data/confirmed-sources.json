@@ -7479,11 +7479,16 @@
       "publisher": "Metaculus / Renaissance Philanthropy / Schultz Family Foundation",
       "evidenceTier": 2,
       "datePublished": "2026-04-20",
-      "excerpt": "The most vulnerable AI-exposed occupations are expected to shrink 17.2% by 2035. Overall US employment is projected to fall 1.9% by 2030 and 3.4% by 2035. Unemployment for new 4-year college graduates is projected to more than double to 12% by 2035.",
+      "excerpt": "Software developers -15.1%, customer-service sales reps -11%, financial specialists -8.1%, lawyers and law clerks -5.4%, designers -4%, K-12 teachers +1.3% employment change by 2030 (Metaculus community forecast).",
       "usedIn": [
         "overall-us-displacement",
         "entry-level-wage-impact",
-        "white-collar-professional-displacement"
+        "white-collar-professional-displacement",
+        "tech-sector-displacement",
+        "financial-services-displacement",
+        "creative-industry-displacement",
+        "education-sector-displacement",
+        "customer-service-automation"
       ],
       "verified": true,
       "synthetic": false
