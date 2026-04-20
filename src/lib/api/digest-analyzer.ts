@@ -141,7 +141,13 @@ Now analyze all the papers above and extract any quantitative data points. Retur
       messages: [
         { role: "user", content: userPrompt },
       ],
-      system: SYSTEM_PROMPT,
+      system: [
+        {
+          type: "text",
+          text: SYSTEM_PROMPT,
+          cache_control: { type: "ephemeral" },
+        },
+      ],
     });
 
     // Extract text from response

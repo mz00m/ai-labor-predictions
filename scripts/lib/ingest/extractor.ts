@@ -243,12 +243,12 @@ export async function extractStatistics(
 
   if (verbose) {
     console.log(
-      `  Sending ${userMessage.length} chars to Claude (model: ${model || "claude-sonnet-4-20250514"})...`
+      `  Sending ${userMessage.length} chars to Claude (model: ${model || "claude-sonnet-4-6"})...`
     );
   }
 
   const response = await client.messages.create({
-    model: model || "claude-sonnet-4-20250514",
+    model: model || "claude-sonnet-4-6",
     max_tokens: 8192,
     system: SYSTEM_PROMPT,
     tools: [EXTRACTION_TOOL],

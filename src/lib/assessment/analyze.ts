@@ -83,9 +83,15 @@ Key recommendations from report:
 ${existingReport.toolRecommendations.map((r) => `- ${r.category}: ${r.purpose}`).join("\n")}`;
 
   const response = await anthropic.messages.create({
-    model: "claude-sonnet-4-20250514",
+    model: "claude-sonnet-4-6",
     max_tokens: 6000,
-    system: systemPrompt,
+    system: [
+      {
+        type: "text",
+        text: systemPrompt,
+        cache_control: { type: "ephemeral" },
+      },
+    ],
     messages: [{ role: "user", content: userPrompt }],
   }, { timeout: 60000 });
 
@@ -331,9 +337,15 @@ async function callClaude(
     try {
       const response = await anthropic.messages.create(
         {
-          model: options?.model || "claude-sonnet-4-20250514",
+          model: options?.model || "claude-sonnet-4-6",
           max_tokens: options?.maxTokens || 4000,
-          system: systemPrompt,
+          system: [
+            {
+              type: "text",
+              text: systemPrompt,
+              cache_control: { type: "ephemeral" },
+            },
+          ],
           messages: [{ role: "user", content: userPrompt }],
         },
         { timeout: timeoutMs }
@@ -358,24 +370,16 @@ async function callClaude(
 
       return parsed;
     } catch (err: unknown) {
-      const isTimeout =
-        err instanceof Error &&
-        (err.name === "APIConnectionTimeoutError" ||
-          err.message?.includes("timeout"));
-
-      const isRetriable =
-        !isTimeout &&
-        err instanceof Error &&
-        (err.name === "APIConnectionError" ||
-          err.message?.includes("ECONNRESET") ||
-          (err as { status?: number }).status === 429 ||
-          (err as { status?: number }).status === 529 ||
-          ((err as { status?: number }).status ?? 0) >= 500);
-
-      if (isTimeout) {
+      if (err instanceof Anthropic.APIConnectionTimeoutError) {
         console.error(`[callClaude] Timeout on attempt ${attempt}/${maxAttempts} (${timeoutMs}ms) — not retrying`);
         throw err;
       }
+
+      const isRetriable =
+        err instanceof Anthropic.APIConnectionError ||
+        err instanceof Anthropic.RateLimitError ||
+        err instanceof Anthropic.InternalServerError ||
+        (err instanceof Anthropic.APIError && err.status === 529);
 
       if (isRetriable && attempt < maxAttempts) {
         console.warn(`[callClaude] Retriable error on attempt ${attempt}/${maxAttempts}: ${err instanceof Error ? err.message : err}`);
