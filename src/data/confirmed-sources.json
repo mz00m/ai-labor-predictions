@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-04-19",
-  "totalSources": 528,
-  "verifiedCount": 518,
+  "lastUpdated": "2026-04-20",
+  "totalSources": 529,
+  "verifiedCount": 519,
   "sources": {
     "gallup-workplace-ai-feb-2026": {
       "id": "gallup-workplace-ai-feb-2026",
@@ -7439,6 +7439,22 @@
       "excerpt": "What A.I. company executives are saying about their products — that they might lead to human extinction and almost certainly will lead to large-scale permanent disemployment — is so obviously 'bad messaging' that I would really urge people to consider that it's not a 'message' at all.",
       "usedIn": [
         "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "metaculus-labor-hub-2026": {
+      "id": "metaculus-labor-hub-2026",
+      "title": "Labor Automation Forecasting Hub",
+      "url": "https://www.metaculus.com/labor-hub/",
+      "publisher": "Metaculus / Renaissance Philanthropy / Schultz Family Foundation",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-20",
+      "excerpt": "The most vulnerable AI-exposed occupations are expected to shrink 17.2% by 2035. Overall US employment is projected to fall 1.9% by 2030 and 3.4% by 2035. Unemployment for new 4-year college graduates is projected to more than double to 12% by 2035.",
+      "usedIn": [
+        "overall-us-displacement",
+        "entry-level-wage-impact",
+        "white-collar-professional-displacement"
       ],
       "verified": true,
       "synthetic": false
