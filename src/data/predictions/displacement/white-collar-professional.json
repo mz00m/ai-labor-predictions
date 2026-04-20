@@ -198,6 +198,17 @@
       "dataType": "projected"
     },
     {
+      "date": "2026-04-17",
+      "value": 12.4,
+      "sourceIds": [
+        "tucker-qwi-early-career-hires-2026"
+      ],
+      "evidenceTier": 1,
+      "metricType": "employment",
+      "note": "Ages 22-24 in most AI-exposed industry-state quintile, QWI 2022q4-2025q2, regression-adjusted vs less-exposed industries",
+      "dataType": "observed"
+    },
+    {
       "date": "2026-04-20",
       "value": 17.2,
       "sourceIds": [
@@ -886,6 +897,15 @@
       ],
       "evidenceTier": 1,
       "label": "BLS Mar 2026: Professional/business services -45.3K MoM"
+    },
+    {
+      "date": "2026-04-17",
+      "direction": "up",
+      "sourceIds": [
+        "tucker-qwi-early-career-hires-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Census/QWI: 9% immediate drop in early-career hires at ChatGPT's release"
     },
     {
       "date": "2026-04-20",
@@ -1629,6 +1649,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-04-20",
       "excerpt": "The most vulnerable AI-exposed occupations are expected to shrink 17.2% by 2035. Overall US employment is projected to fall 1.9% by 2030 and 3.4% by 2035."
+    },
+    {
+      "id": "tucker-qwi-early-career-hires-2026",
+      "title": "You're (not) hired: Artificial intelligence and early career hiring in the Quarterly Workforce Indicators",
+      "url": "http://leetucker.net/docs/Youre_not_hired_Tucker_20260417.pdf",
+      "publisher": "US Census Bureau (Lee C. Tucker)",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-17",
+      "excerpt": "Regression-adjusted employment of early career workers in the most AI-exposed quintile of industry-state cells declined by 12% over the 10 quarters following the introduction of ChatGPT, even as employment in less-exposed industries has remained stable. I find that hires of these early career workers declined immediately by 9% in comparison with those in less exposed industries, and that they have not recovered over time."
     }
   ]
 }

@@ -485,6 +485,15 @@
       "label": "Brookings (Kinder): DeepMind Hassabis says AI hits junior jobs in 2026"
     },
     {
+      "date": "2026-04-17",
+      "direction": "down",
+      "sourceIds": [
+        "tucker-qwi-early-career-hires-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Census/QWI: Early-career earnings growth slowed modestly in AI-exposed industries"
+    },
+    {
       "date": "2026-04-20",
       "direction": "down",
       "sourceIds": [
@@ -934,6 +943,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-04-20",
       "excerpt": "Overall employment is projected to fall 1.9% by 2030 and fall 3.4% by 2035 due to AI-driven displacement. Unemployment for new 4-year college graduates is projected to more than double to 12% by 2035."
+    },
+    {
+      "id": "tucker-qwi-early-career-hires-2026",
+      "title": "You're (not) hired: Artificial intelligence and early career hiring in the Quarterly Workforce Indicators",
+      "url": "http://leetucker.net/docs/Youre_not_hired_Tucker_20260417.pdf",
+      "publisher": "US Census Bureau (Lee C. Tucker)",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-17",
+      "excerpt": "Since ChatGPT's release, it appears that earnings growth has slowed modestly among early career workers in comparison to their peers. However, the decline is small relative to cyclical patterns."
     }
   ]
 }
