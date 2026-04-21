@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect, useCallback } from "react";
 import type {
   SignalMetrics,
   SignalTaxonomy,
@@ -74,10 +74,44 @@ export default function IndustryGrid({
   huggingface,
 }: IndustryGridProps) {
   const [expandedIndustry, setExpandedIndustry] = useState<string | null>(null);
+  const [copiedSector, setCopiedSector] = useState<string | null>(null);
 
-  const toggle = (industry: string) => {
-    setExpandedIndustry((prev) => (prev === industry ? null : industry));
-  };
+  // Initialize from ?sector= URL param on mount
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const sector = params.get("sector");
+    if (sector) {
+      setExpandedIndustry(sector);
+      // Scroll to the signals section after a tick
+      setTimeout(() => {
+        const el = document.getElementById("industry-grid");
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 300);
+    }
+  }, []);
+
+  const toggle = useCallback((industry: string) => {
+    setExpandedIndustry((prev) => {
+      const next = prev === industry ? null : industry;
+      const url = new URL(window.location.href);
+      if (next) {
+        url.searchParams.set("sector", next);
+      } else {
+        url.searchParams.delete("sector");
+      }
+      window.history.replaceState(null, "", url.toString());
+      return next;
+    });
+  }, []);
+
+  const handleShare = useCallback((industryKey: string) => {
+    const url = new URL(window.location.href);
+    url.searchParams.set("sector", industryKey);
+    navigator.clipboard.writeText(url.toString()).then(() => {
+      setCopiedSector(industryKey);
+      setTimeout(() => setCopiedSector(null), 2000);
+    });
+  }, []);
 
   // Industries are already sorted by tool growth in metrics
   const industries = metrics.industries;
@@ -100,7 +134,7 @@ export default function IndustryGrid({
   }, [industries]);
 
   return (
-    <div className="space-y-8">
+    <div id="industry-grid" className="space-y-8">
       {grouped.map(
         (group) =>
           group.industries.length > 0 && (
@@ -135,14 +169,35 @@ export default function IndustryGrid({
                       onToggle={() => toggle(ind.industry)}
                     />
                     {expandedIndustry === ind.industry && (
-                      <IndustryDetail
-                        industry={ind}
-                        taxonomy={taxonomy}
-                        metrics={metrics}
-                        downloads={downloads}
-                        bls={bls}
-                        huggingface={huggingface}
-                      />
+                      <>
+                        <div className="flex items-center justify-end mt-2 mb-1 px-1">
+                          <button
+                            onClick={() => handleShare(ind.industry)}
+                            className="flex items-center gap-1.5 text-xs text-[var(--muted)] hover:text-[var(--accent)] transition-colors"
+                            aria-label={`Copy share link for ${ind.label}`}
+                          >
+                            {copiedSector === ind.industry ? (
+                              <>
+                                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M2 7l3 3 6-6"/></svg>
+                                Copied
+                              </>
+                            ) : (
+                              <>
+                                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M8 1H5a1 1 0 00-1 1v7a1 1 0 001 1h5a1 1 0 001-1V4L8 1z"/><path d="M8 1v3h3"/><path d="M4 4H3a1 1 0 00-1 1v5a1 1 0 001 1h5a1 1 0 001-1v-1"/></svg>
+                                Share {ind.label}
+                              </>
+                            )}
+                          </button>
+                        </div>
+                        <IndustryDetail
+                          industry={ind}
+                          taxonomy={taxonomy}
+                          metrics={metrics}
+                          downloads={downloads}
+                          bls={bls}
+                          huggingface={huggingface}
+                        />
+                      </>
                     )}
                   </div>
                 ))}
