@@ -361,9 +361,9 @@ export default function PredictionChart({
     x: number;
     y: number;
   } | null>(null);
-  // Collapse overlays on dense charts: show only 10 most recent by default
-  const OVERLAY_COLLAPSE_THRESHOLD = 20;
-  const OVERLAY_VISIBLE_COUNT = 10;
+  // Collapse overlays on dense charts: show only 25 most recent by default
+  const OVERLAY_COLLAPSE_THRESHOLD = 25;
+  const OVERLAY_VISIBLE_COUNT = 25;
   const totalOverlayCount = (overlays ?? []).length;
   const [overlaysExpanded, setOverlaysExpanded] = useState(totalOverlayCount <= OVERLAY_COLLAPSE_THRESHOLD);
 
