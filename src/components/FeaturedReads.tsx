@@ -10,6 +10,15 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Gad Levanon (Burning Glass)",
+    title: "A Technology-Driven Productivity Regime Shift",
+    summary:
+      "US labor productivity growth jumped from 1.3%/yr (2013-2019) to 2.2%/yr (2019-2025) as hours growth collapsed from 1.9% to 0.7%. The gains are narrow: white-collar services, retail trade, and advanced manufacturing post 3.2-3.9% annualized productivity; the rest of the private economy sits at 0.1%. FIIPB's contribution to aggregate productivity doubled (0.78→1.50pp/yr); Information sector hours are down 6% from their 2022 peak while GDP +8.4%/yr. Early 2026 job growth is flat outside healthcare — the economy is learning to produce more with fewer workers, and the pressure lands first on entry-level white-collar roles.",
+    date: "Apr 21",
+    url: "https://www.linkedin.com/pulse/technology-driven-productivity-regime-shift-gad-levanon-mqyge/",
+    accent: "border-l-emerald-500",
+  },
+  {
     author: "Economic Security Project",
     title: "Ideas for Shared Economic Prosperity in the AI Transition",
     summary:
@@ -35,15 +44,6 @@ const articles: Article[] = [
     date: "Apr 16",
     url: "https://budgetlab.yale.edu/research/tracking-impact-ai-labor-market",
     accent: "border-l-indigo-500",
-  },
-  {
-    author: "NY Fed (Liberty Street)",
-    title: "Use of Gen AI in the Workplace and the Value of Access to Training",
-    summary:
-      "November 2025 SCE: 39% of US workers used AI at work in the past year, but adoption is highly unequal — 58.7% of college grads vs 22.9% non-college; 15.9% (<$50K) vs 66.3% (>$200K). Only 15.9% of employers offer AI training though 38% of workers want it. 62% expect AI to raise unemployment over the next year.",
-    date: "Apr 14",
-    url: "https://libertystreeteconomics.newyorkfed.org/2026/04/use-of-gen-ai-in-the-workplace-and-the-value-of-access-to-training/",
-    accent: "border-l-sky-500",
   },
   {
     author: "Alex Imas",

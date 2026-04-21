@@ -831,6 +831,15 @@
       ],
       "evidenceTier": 3,
       "label": "Anthropic: coding 94% theoretical exposure but only ~30% actual task adoption"
+    },
+    {
+      "date": "2026-04-21",
+      "direction": "up",
+      "sourceIds": [
+        "levanon-productivity-regime-shift-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Burning Glass: Information sector hours -6% from 2022 peak as GDP +8.4%/yr"
     }
   ],
   "sources": [
@@ -1542,6 +1551,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-04-17",
       "excerpt": "Early career employment in Information declined by 30%, but Finance and Insurance and Professional, Scientific, and Technical Services saw double-digit percentage declines as well (-11% and -15%, respectively)."
+    },
+    {
+      "id": "levanon-productivity-regime-shift-2026",
+      "title": "A Technology-Driven Productivity Regime Shift",
+      "url": "https://www.linkedin.com/pulse/technology-driven-productivity-regime-shift-gad-levanon-mqyge/",
+      "publisher": "The Burning Glass Institute (Gad Levanon)",
+      "evidenceTier": 3,
+      "datePublished": "2026-04-21",
+      "excerpt": "real GDP (blue) accelerates upward from 2020 while hours (orange) peak in 2022 and decline. The magnitudes are large — real GDP has more than tripled since 2006, while hours are roughly flat for the full period and down 6% from the 2022 peak. Post-2022 annualized: GDP +8.4%, hours −1.9%."
     }
   ],
   "marketIds": {

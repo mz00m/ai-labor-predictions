@@ -510,6 +510,15 @@
         "metaculus-labor-hub-2026"
       ],
       "evidenceTier": 2
+    },
+    {
+      "date": "2026-04-21",
+      "direction": "down",
+      "sourceIds": [
+        "levanon-productivity-regime-shift-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Burning Glass: High-productivity sectors show weaker demand for junior labor"
     }
   ],
   "sources": [
@@ -952,6 +961,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-04-17",
       "excerpt": "Since ChatGPT's release, it appears that earnings growth has slowed modestly among early career workers in comparison to their peers. However, the decline is small relative to cyclical patterns."
+    },
+    {
+      "id": "levanon-productivity-regime-shift-2026",
+      "title": "A Technology-Driven Productivity Regime Shift",
+      "url": "https://www.linkedin.com/pulse/technology-driven-productivity-regime-shift-gad-levanon-mqyge/",
+      "publisher": "The Burning Glass Institute (Gad Levanon)",
+      "evidenceTier": 3,
+      "datePublished": "2026-04-21",
+      "excerpt": "The pressure is likely to emerge first in entry-level white-collar work, where the same industries posting the strongest productivity gains are also showing weaker demand for junior labor."
     }
   ]
 }

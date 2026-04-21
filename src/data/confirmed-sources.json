@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-04-20",
-  "totalSources": 531,
-  "verifiedCount": 521,
+  "lastUpdated": "2026-04-21",
+  "totalSources": 532,
+  "verifiedCount": 522,
   "sources": {
     "gallup-workplace-ai-feb-2026": {
       "id": "gallup-workplace-ai-feb-2026",
@@ -7510,6 +7510,23 @@
         "entry-level-wage-impact",
         "ai-adoption-rate",
         "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "levanon-productivity-regime-shift-2026": {
+      "id": "levanon-productivity-regime-shift-2026",
+      "title": "A Technology-Driven Productivity Regime Shift",
+      "url": "https://www.linkedin.com/pulse/technology-driven-productivity-regime-shift-gad-levanon-mqyge/",
+      "publisher": "The Burning Glass Institute (Gad Levanon)",
+      "evidenceTier": 3,
+      "datePublished": "2026-04-21",
+      "excerpt": "U.S. labor productivity growth has accelerated, rising from 1.3% per year in the pre-pandemic expansion (2013–2019) to 2.2% in the post-pandemic period (2019–2025). Three technology-exposed groups — white-collar services, retail trade, and advanced manufacturing — are posting 3.2% to 3.9% annualized productivity growth. The rest of the private economy is at 0.1%. The pressure is likely to emerge first in entry-level white-collar work, where the same industries posting the strongest productivity gains are also showing weaker demand for junior labor.",
+      "usedIn": [
+        "overall-us-displacement",
+        "white-collar-professional-displacement",
+        "tech-sector-displacement",
+        "entry-level-wage-impact"
       ],
       "verified": true,
       "synthetic": false
