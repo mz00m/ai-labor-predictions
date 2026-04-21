@@ -365,7 +365,7 @@ export default function PredictionChart({
   const OVERLAY_COLLAPSE_THRESHOLD = 25;
   const OVERLAY_VISIBLE_COUNT = 25;
   const totalOverlayCount = (overlays ?? []).length;
-  const [overlaysExpanded, setOverlaysExpanded] = useState(totalOverlayCount <= OVERLAY_COLLAPSE_THRESHOLD);
+  const [overlaysExpanded, setOverlaysExpanded] = useState(true);
 
   const handleOverlayMouseEnter = useCallback(
     (overlay: OverlayTooltipData, e: React.MouseEvent) => {

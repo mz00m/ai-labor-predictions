@@ -1,6 +1,6 @@
 {
   "projectStartDate": "2026-02-22",
-  "lastUpdated": "2026-04-06",
+  "lastUpdated": "2026-04-21",
   "currency": "USD",
   "categories": [
     {
@@ -33,13 +33,13 @@
       "services": [
         {
           "name": "Claude Code",
-          "monthlyCost": 70,
-          "oneTimeCost": 0,
-          "costType": "recurring",
+          "monthlyCost": 0,
+          "oneTimeCost": 1048.60,
+          "costType": "cumulative",
           "startDate": "2026-02-22",
           "endDate": null,
           "status": "active",
-          "notes": "$100/mo subscription, ~70% allocated to this project"
+          "notes": "Claude Max subscription, cumulative spend"
         }
       ]
     },
