@@ -1558,6 +1558,15 @@
       ],
       "evidenceTier": 1,
       "label": "Census/QWI: 150K+ early-career jobs lost in most AI-exposed industries since ChatGPT"
+    },
+    {
+      "date": "2026-04-21",
+      "direction": "up",
+      "sourceIds": [
+        "levanon-productivity-regime-shift-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Burning Glass: Productivity growth 1.3%→2.2% as hours growth slowed 1.9%→0.7%"
     }
   ],
   "sources": [
@@ -2751,6 +2760,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-04-17",
       "excerpt": "The overall reduction in hires fully explains a 15% decline in employment in the most AI-exposed industries since large language models became available, representing a loss of over 150,000 early career jobs."
+    },
+    {
+      "id": "levanon-productivity-regime-shift-2026",
+      "title": "A Technology-Driven Productivity Regime Shift",
+      "url": "https://www.linkedin.com/pulse/technology-driven-productivity-regime-shift-gad-levanon-mqyge/",
+      "publisher": "The Burning Glass Institute (Gad Levanon)",
+      "evidenceTier": 3,
+      "datePublished": "2026-04-21",
+      "excerpt": "Output growth slowed from 3.1% to 2.6% per year. But hours growth fell from 1.9% to just 0.7%. The result: productivity growth rose from 1.3% to 2.2%. There are no signs of a slowdown in 2025, and early 2026 job growth points to continued flat employment outside healthcare and social services."
     }
   ]
 }
