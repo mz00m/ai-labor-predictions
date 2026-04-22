@@ -189,7 +189,6 @@ export default function ReportPage() {
     { id: "risks", label: "Risks, Pitfalls & Change Management" },
     { id: "roi", label: "ROI Projections" },
     { id: "capabilities", label: "Skills That Grow With AI" },
-    { id: "next", label: "Next Steps" },
     { id: "inputs", label: "Your Inputs" },
   ];
 
@@ -711,12 +710,10 @@ export default function ReportPage() {
                 </div>
               )}
 
-              {report.riskAssessment.changeManagementNotes && (
-                <div className="border border-gray-200 rounded-lg p-4">
-                  <Label>Making the Transition Smooth</Label>
-                  <p className="text-base text-gray-600 leading-relaxed" style={{ fontFamily: "'Source Serif 4', 'Source Serif Pro', Georgia, serif" }}>{report.riskAssessment.changeManagementNotes}</p>
-                </div>
-              )}
+              {/* "Making the Transition Smooth" block removed: duplicated the
+                  Implementation Roadmap. Change-management guidance now lives
+                  inside roadmap actions. Preserves changeManagementNotes on
+                  the schema for backward compat with old stored reports. */}
 
               {/* Common Pitfalls */}
               {report.riskAssessment.commonPitfalls && report.riskAssessment.commonPitfalls.length > 0 && (
@@ -838,22 +835,12 @@ export default function ReportPage() {
             </Section>
           )}
 
-          {/* 9. Next Steps */}
-          {report.furtherEvaluation.length > 0 && (
-            <Section num={9} id="next" title="Next Steps" expanded={expandedSections.has("next")} onToggle={() => toggleSection("next")}>
-              <div className="space-y-2">
-                {report.furtherEvaluation.map((item, i) => (
-                  <div key={i} className="flex gap-3 bg-gray-50 border border-gray-100 rounded-lg px-4 py-3">
-                    <span className="text-md font-bold text-accent flex-shrink-0 w-6 text-right">{i + 1}.</span>
-                    <p className="text-base text-gray-700 leading-relaxed" style={{ fontFamily: "'Source Serif 4', 'Source Serif Pro', Georgia, serif" }}>{item}</p>
-                  </div>
-                ))}
-              </div>
-            </Section>
-          )}
+          {/* "Next Steps" (section #9) removed: it duplicated the Implementation
+              Roadmap's immediate phase. The roadmap's action list now carries
+              that content. See fix/simplify-steps commit for rationale. */}
 
-          {/* 10. Your Inputs */}
-          <Section num={10} id="inputs" title="Your Inputs" expanded={expandedSections.has("inputs")} onToggle={() => toggleSection("inputs")}>
+          {/* 9. Your Inputs */}
+          <Section num={9} id="inputs" title="Your Inputs" expanded={expandedSections.has("inputs")} onToggle={() => toggleSection("inputs")}>
             <p className="text-sm text-gray-400 mb-4">What you told us — for reference. The more detail you provide, the more tailored your report.</p>
             <div className="space-y-2">
               {[

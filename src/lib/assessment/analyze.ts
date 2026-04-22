@@ -552,30 +552,38 @@ For each task, suggest 1-3 example tools that could help. Include a MIX of:
 3. **AI features in tools they already use** (e.g., Google Workspace has Gemini built in, Microsoft 365 has Copilot) — call these out when relevant.
 Not every task needs a structured tool. For occasional or ad-hoc tasks (creating an agenda, drafting a one-off form, taking notes in a meeting), a general-purpose AI assistant IS the right recommendation.
 
+WORD BUDGETS — keep each field tight. Longer is NOT better. Readers are skimming.
+- currentProcess: one sentence, max ~20 words
+- aiApproach: 1-2 sentences, max ~40 words
+- expectedImpact: one short phrase, e.g. "3-5 hours saved per week"
+- gettingStarted: one sentence, max ~25 words
+- starterPrompt: 2-3 sentences max
+- deploymentModelRationale: one short sentence
+
 Return valid JSON:
 {
   "taskAnalysis": [
     {
       "taskName": "Specific task name",
       "department": "Area of work",
-      "currentProcess": "How they do this today",
+      "currentProcess": "One sentence on how they do this today",
       "aiOpportunity": "high|medium|low",
-      "aiApproach": "Step-by-step explanation. Name specific tools where helpful, but for ad-hoc tasks just say 'use any AI assistant (ChatGPT, Gemini, Claude)'. If the person listed tools they already use (see Current Tools), reference how those specific tools can help with this task.",
+      "aiApproach": "1-2 sentences. Name specific tools where helpful, but for ad-hoc tasks just say 'use any AI assistant (ChatGPT, Gemini, Claude)'. If the person listed tools they already use, reference those.",
       "expectedImpact": "e.g. '3-5 hours saved per week'",
       "complexity": "simple|moderate|complex",
       "estimatedTimeSaved": "e.g. '3-5 hrs/week'",
       "exampleTools": [{ "name": "Tool name", "url": "https://url", "free": true }],
-      "gettingStarted": "One concrete first step that can be done RIGHT NOW with a chatbot — no setup, no signups. E.g., 'Open ChatGPT and paste your last 3 meeting agendas to get a template.' Not 'Set up automated dashboards in Asana.' The first step should feel easy and immediate.",
-      "starterPrompt": "A ready-to-paste prompt the user can drop into ChatGPT, Claude, or Gemini to prototype this task immediately. Use [BRACKETS] for variables they fill in. E.g., 'I manage [TEAM SIZE] people. Here are my current project statuses: [PASTE STATUSES]. Create a concise weekly status update email for my leadership.'",
+      "gettingStarted": "One concrete first step that can be done RIGHT NOW with a chatbot — no setup, no signups. E.g., 'Open ChatGPT and paste your last 3 meeting agendas to get a template.'",
+      "starterPrompt": "A ready-to-paste prompt (2-3 sentences max) the user can drop into ChatGPT, Claude, or Gemini. Use [BRACKETS] for variables.",
       "deploymentModel": "copilot|escalation|full-automation|agentic",
-      "deploymentModelRationale": "Why this model fits"
+      "deploymentModelRationale": "One short sentence on why this model fits"
     }
   ]
 }
 
 PROPORTIONALITY RULE: Match the distribution of recommendations to the distribution of the user's stated functions. If they listed 8 functions and mentioned grants once, do NOT make grants the focus of multiple tasks. Spread recommendations across their actual workload. If >30% of your tasks cluster on a function that represents <15% of their stated work, rebalance.
 
-At least 80% of tasks MUST be directly relevant to the person's stated functions and roles — not generic industry tasks.
+At least 80% of tasks MUST be directly relevant to the person's stated functions and roles — not generic industry tasks. Quality and tight framing beats quantity — readers were getting overwhelmed by 10+ tasks and skimming. The per-call focus instructions below set the exact count.
 Use the user's feedback to adjust priorities. Reference their uploaded documents context.`;
 
   let baseUserPrompt = buildIntakeContext(intake);
@@ -597,13 +605,14 @@ Use the user's feedback to adjust priorities. Reference their uploaded documents
   }
   if (capabilitiesContext) baseUserPrompt += `\n\n${capabilitiesContext}`;
 
-  // Parallelize into two complementary calls to halve wall-clock and stay well
-  // under Vercel's 300s function limit. A single 8000-token non-streaming call
-  // on Sonnet could run 3-5 minutes for the full 8-12 task set; splitting by
-  // focus axis gives ~5 tasks per call at 4500 max_tokens, which comes back in
-  // 60-120s each and runs in parallel.
-  const timeSavingsFocus = `\n\n## YOUR FOCUS FOR THIS CALL\nGenerate 5 tasks focused on **TIME-SAVING AUTOMATION** — repetitive, high-hour-volume work where AI saves the most hours per week. Sort by hours saved, highest first. A parallel call is handling quality-uplift and new-capability tasks; do NOT duplicate those. Avoid tasks like "improve report quality" or "enable new analysis" — focus purely on speed/automation of existing work.`;
-  const capabilityFocus = `\n\n## YOUR FOCUS FOR THIS CALL\nGenerate 5 tasks focused on **QUALITY UPLIFT AND NEW CAPABILITIES** — how AI can make outputs materially better, enable analysis/work that wasn't feasible before, or let the team take on more strategic responsibilities. A parallel call is handling time-saving automation; do NOT duplicate pure speed/efficiency tasks. Focus on: better decision quality, deeper analysis, faster iteration cycles, cross-team workflows, work that was previously too expensive to do.`;
+  // Parallelize into two complementary calls to halve wall-clock and stay
+  // well under Vercel's 300s function limit. Each leg asks for 3-4 tasks so
+  // the merged, deduped output lands in the 6-8 range readers find scannable
+  // (tester feedback flagged 10+ as overwhelming). max_tokens trimmed from
+  // the old 4500 per leg to 3000 now that output is smaller and word budgets
+  // apply — roughly 30% faster per leg.
+  const timeSavingsFocus = `\n\n## YOUR FOCUS FOR THIS CALL\nGenerate 3-4 tasks focused on **TIME-SAVING AUTOMATION** — repetitive, high-hour-volume work where AI saves the most hours per week. Sort by hours saved, highest first. A parallel call is handling quality-uplift and new-capability tasks; do NOT duplicate those. Avoid tasks like "improve report quality" or "enable new analysis" — focus purely on speed/automation of existing work.`;
+  const capabilityFocus = `\n\n## YOUR FOCUS FOR THIS CALL\nGenerate 3-4 tasks focused on **QUALITY UPLIFT AND NEW CAPABILITIES** — how AI can make outputs materially better, enable analysis/work that wasn't feasible before, or let the team take on more strategic responsibilities. A parallel call is handling time-saving automation; do NOT duplicate pure speed/efficiency tasks. Focus on: better decision quality, deeper analysis, faster iteration cycles, cross-team workflows, work that was previously too expensive to do.`;
 
   const parseAndSalvage = (parsed: unknown, callLabel: string): TaskAnalysis[] => {
     const validated = Step2TasksSchema.safeParse(parsed);
@@ -628,8 +637,8 @@ Use the user's feedback to adjust priorities. Reference their uploaded documents
 
   try {
     const [timeCall, capabilityCall] = await Promise.allSettled([
-      callClaude(systemPrompt, baseUserPrompt + timeSavingsFocus, { maxTokens: 4500, timeout: 240000 }),
-      callClaude(systemPrompt, baseUserPrompt + capabilityFocus, { maxTokens: 4500, timeout: 240000 }),
+      callClaude(systemPrompt, baseUserPrompt + timeSavingsFocus, { maxTokens: 3000, timeout: 180000 }),
+      callClaude(systemPrompt, baseUserPrompt + capabilityFocus, { maxTokens: 3000, timeout: 180000 }),
     ]);
 
     const timeTasks = timeCall.status === "fulfilled"
@@ -769,15 +778,21 @@ The roadmap focuses on USE CASES and CAPABILITIES, not specific products. Action
 - Good: "Automate first-draft proposal generation — test with 5 real proposals this month"
 - Bad: "Sign up for Jasper AI and connect it to your Google Docs"
 
+WORD BUDGETS — readers were getting overwhelmed by long roadmaps. Keep it tight.
+- Per phase: 2-4 objectives, 3-5 actions, 2-3 expectedOutcomes. Do NOT exceed these caps.
+- action.description: one sentence, max ~20 words
+- action.howTo: 1-2 short sentences, max ~35 words
+- objectives and expectedOutcomes: one short phrase each, not full sentences
+
 Return valid JSON:
 {
   "implementationRoadmap": {
     "immediate": {
       "timeframe": "This week to 3 months",
-      "objectives": ["Use-case-focused objectives"],
-      "actions": [{ "title": "Action", "description": "What and why", "owner": "You / Your team", "priority": "critical|high|medium|low", "howTo": "Step-by-step approach" }],
-      "expectedOutcomes": [],
-      "estimatedInvestment": ""
+      "objectives": ["Short phrase"],
+      "actions": [{ "title": "Action", "description": "One sentence: what and why", "owner": "You / Your team", "priority": "critical|high|medium|low", "howTo": "1-2 short sentences" }],
+      "expectedOutcomes": ["Short phrase"],
+      "estimatedInvestment": "Short phrase"
     },
     "mediumTerm": { "timeframe": "3-6 months", "objectives": [], "actions": [], "expectedOutcomes": [], "estimatedInvestment": "" },
     "longTerm": { "timeframe": "6-12+ months", "objectives": [], "actions": [], "expectedOutcomes": [], "estimatedInvestment": "" }
@@ -875,14 +890,14 @@ export async function generateStep4Risks(
 
 You are running Step 4 (final) of a 4-step assessment. Steps 1-3 produced a profile, task analysis, tool recommendations, and roadmap. Your job: assess risks, identify skill gaps, and provide actionable next steps.
 
-Return valid JSON:
+Return valid JSON. Do NOT include a "furtherEvaluation" array or a "changeManagementNotes" field — those sections were removed because they duplicated the implementation roadmap. Any change-management guidance belongs inside the roadmap's action list (handled by Step 3), not here.
+
 {
   "riskAssessment": {
     "overallRiskLevel": "low|moderate|high",
     "riskContextNote": "1 sentence explaining what this risk level means. E.g., 'This assesses how likely AI is to significantly change or displace the core tasks in your role over the next 3-5 years.' Make clear this is about role displacement risk, NOT implementation risk.",
     "displacementRisk": "Honest but reassuring, grounded in research data. Recommend human capabilities that appreciate. Reference the 'Skills That Grow With AI' section for specific capabilities to develop — e.g., 'See the Skills That Grow With AI section below for detailed guidance on developing [capability name].'",
     "skillGaps": ["Specific skills to build. For each, reference the corresponding human capability from the capabilities section if one exists — e.g., 'Develop strategic communication skills (see Skills That Grow With AI: Stakeholder Communication for specific guidance)'. This creates a clear path from gap to action."],
-    "changeManagementNotes": "Step-by-step advice with timeline",
     "dataPrivacyConsiderations": "Industry-specific, name regulations",
     "commonPitfalls": ["Industry-specific failure modes"],
     "resistanceSources": ["Where pushback comes from and how to address it"],
@@ -895,13 +910,12 @@ Return valid JSON:
       "howToDevelop": "1-2 concrete actions to strengthen this capability. Specific to their role.",
       "appreciationScore": 8
     }
-  ],
-  "furtherEvaluation": ["Generate 4-6 actionable, energizing next steps. These should be DIFFERENT from the implementation roadmap — focused on building on the context from this assessment. Include a mix of: (1) A 'Step 0' action to diagnose time sinks and grunt work in their current workflow, (2) A quick-win prototype — pick ONE task from the analysis and try it with a chatbot right now, (3) A conversation starter — spend 20 minutes discussing these results with a colleague, (4) A tool exploration — test a specific feature of an AI tool they already have access to, (5) A sample prompt they can paste into their LLM of choice along with this report to dig deeper into implementation. Make each step feel achievable in 20-30 minutes, not a multi-week project."]
+  ]
 }
 
 For the risk assessment, cite research data provided.
 For skills, reference the human capabilities framework AND cross-reference to the humanCapabilities section.
-Be thorough on change management, common pitfalls, and resistance sources. These are high-value sections.
+Be thorough on common pitfalls and resistance sources. These are high-value sections that readers use to stress-test their rollout.
 The riskContextNote MUST clarify that the risk level refers to AI displacement risk for this role, not implementation risk.
 
 HUMAN CAPABILITIES — Generate 4-6 capabilities that APPRECIATE (grow in value) as AI automates routine tasks in this person's work. These are NOT generic soft skills. Each must be:
