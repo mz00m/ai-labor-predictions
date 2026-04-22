@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useCallback } from "react";
+import { useRef } from "react";
 import {
   ComposedChart,
   Line,
@@ -17,6 +17,7 @@ import { format, parseISO } from "date-fns";
 import { EvidenceTier, MetricType, HistoricalDataPoint, DirectionalOverlay, Source } from "@/lib/types";
 import { getTierConfig } from "@/lib/evidence-tiers";
 import { getMetricTypeConfig, METRIC_TYPE_CONFIGS } from "@/lib/metric-types";
+import SignalStrip from "@/components/SignalStrip";
 
 interface PredictionChartProps {
   history: HistoricalDataPoint[];
@@ -57,24 +58,14 @@ interface ChartDataPoint {
   trendValue?: number;
 }
 
-interface OverlayTooltipData {
-  dateStr: string;
-  direction: string;
-  label: string;
-  sourceIds: string[];
-  evidenceTier: EvidenceTier;
-}
-
 function CustomTooltip({
   active,
   payload,
   sources,
   unit,
-  overlays,
 }: TooltipProps<number, string> & {
   sources: Source[];
   unit: string;
-  overlays?: OverlayTooltipData[];
 }) {
   if (!active || !payload || payload.length === 0) return null;
 
@@ -83,13 +74,7 @@ function CustomTooltip({
   const data = (payload.find((p) => p.payload)?.payload ?? payload[0]?.payload) as ChartDataPoint;
   if (!data) return null;
 
-  // Find overlays matching this data point (same month/year)
-  const matchingOverlays = (overlays ?? []).filter(
-    (o) => o.dateStr === data.displayDate
-  );
-
-  // If phantom point with no overlays, nothing to show
-  if (data.isPhantom && matchingOverlays.length === 0) return null;
+  if (data.isPhantom) return null;
 
   const tierConfig = getTierConfig(data.evidenceTier);
   const pointSources = sources.filter((s) => data.sourceIds.includes(s.id));
@@ -151,93 +136,15 @@ function CustomTooltip({
         </>
       )}
 
-      {/* Overlay section */}
-      {matchingOverlays.length > 0 && (
-        <div className={!data.isPhantom && data.value != null ? "mt-2.5 border-t border-black/[0.07] pt-2.5" : ""}>
-          {data.isPhantom && (
-            <p className="text-xs font-semibold uppercase tracking-wider text-[var(--muted)] mb-1.5">
-              {data.displayDate}
-            </p>
-          )}
-          {matchingOverlays.map((o, i) => {
-            const color = overlayColor(o.direction);
-            const arrow =
-              o.direction === "down"
-                ? "\u2193"
-                : o.direction === "up"
-                  ? "\u2191"
-                  : "\u2194";
-            const oTierConfig = getTierConfig(o.evidenceTier);
-            const overlaySources = sources.filter((s) =>
-              o.sourceIds.includes(s.id)
-            );
-            return (
-              <div key={`overlay-tip-${i}`} className={i > 0 ? "mt-2 border-t border-black/[0.07] pt-2" : ""}>
-                <div className="flex items-start gap-1.5 mb-1.5">
-                  <span
-                    className="text-md font-bold leading-tight mt-px shrink-0"
-                    style={{ color }}
-                  >
-                    {arrow}
-                  </span>
-                  <p className="text-sm leading-snug text-[var(--foreground)]">
-                    {o.label}
-                  </p>
-                </div>
-                <div className="flex items-center gap-1.5">
-                  <span
-                    className="inline-block w-2 h-2 rounded-full shrink-0"
-                    style={{ backgroundColor: oTierConfig.color }}
-                  />
-                  <span className="text-xs text-[var(--muted)]">
-                    {oTierConfig.label}
-                  </span>
-                </div>
-                {overlaySources.length > 0 && (
-                  <div className="mt-1.5 space-y-1">
-                    {overlaySources.map((s) => (
-                      <div key={s.id}>
-                        <p className="text-xs font-semibold text-[var(--foreground)]">{s.publisher}</p>
-                        <p className="text-xs text-[var(--muted)] leading-snug mt-0.5">
-                          {s.title.slice(0, 72)}{s.title.length > 72 ? "…" : ""}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-            );
-          })}
-        </div>
+      {data.value != null && (
+        <p className="text-xs text-[var(--muted)] mt-2 opacity-50">
+          Click to jump to source ↓
+        </p>
       )}
-
-      <p className="text-xs text-[var(--muted)] mt-2 opacity-50">
-        Click to jump to source ↓
-      </p>
     </div>
   );
 }
 
-/** Pick a single color for a group of overlays sharing the same date. */
-function groupedOverlayColor(directions: string[]): string {
-  const ups = directions.filter((d) => d === "up").length;
-  const downs = directions.filter((d) => d === "down").length;
-  // Pure positive / negative - use green / red
-  if (ups > 0 && downs === 0) return "#22c55e";
-  if (downs > 0 && ups === 0) return "#ef4444";
-  // Mixed - dominant direction wins, neutral if tied
-  if (ups > downs) return "#22c55e";
-  if (downs > ups) return "#ef4444";
-  return "#94a3b8"; // tied or all neutral
-}
-
-function overlayColor(direction: string) {
-  return direction === "down"
-    ? "#ef4444"   // red-500. Negative / risk signal
-    : direction === "up"
-      ? "#22c55e" // green-500. Positive / growth signal
-      : "#94a3b8"; // slate-400. Neutral / mixed signal
-}
 
 interface DotShapeProps {
   cx: number;
@@ -360,49 +267,6 @@ export default function PredictionChart({
   // Parse targetDate into a timestamp for the reference line
   const targetDateTs = targetDate ? parseISO(targetDate).getTime() : null;
   const targetDateStr = targetDate ? format(parseISO(targetDate), "MMM yyyy") : null;
-  const [hoverOverlay, setHoverOverlay] = useState<{
-    overlay: OverlayTooltipData;
-    x: number;
-    y: number;
-  } | null>(null);
-  // Collapse overlays on dense charts: show only 25 most recent by default
-  const OVERLAY_COLLAPSE_THRESHOLD = 25;
-  const OVERLAY_VISIBLE_COUNT = 25;
-  const totalOverlayCount = (overlays ?? []).length;
-  const [overlaysExpanded, setOverlaysExpanded] = useState(true);
-
-  const handleOverlayMouseEnter = useCallback(
-    (overlay: OverlayTooltipData, e: React.MouseEvent) => {
-      const rect = chartWrapperRef.current?.getBoundingClientRect();
-      if (rect) {
-        setHoverOverlay({
-          overlay,
-          x: e.clientX - rect.left,
-          y: e.clientY - rect.top,
-        });
-      }
-    },
-    []
-  );
-
-  const handleOverlayMouseMove = useCallback(
-    (e: React.MouseEvent) => {
-      if (!hoverOverlay) return;
-      const rect = chartWrapperRef.current?.getBoundingClientRect();
-      if (rect) {
-        setHoverOverlay((prev) =>
-          prev
-            ? { ...prev, x: e.clientX - rect.left, y: e.clientY - rect.top }
-            : null
-        );
-      }
-    },
-    [hoverOverlay]
-  );
-
-  const handleOverlayMouseLeave = useCallback(() => {
-    setHoverOverlay(null);
-  }, []);
 
   const filtered = history.filter((d) =>
     selectedTiers.includes(d.evidenceTier)
@@ -480,30 +344,10 @@ export default function PredictionChart({
   const yMin = Math.min(yAxisMin, Math.floor(dataMin - padding));
   const yMax = Math.max(yAxisMax, Math.ceil(dataMax + padding));
 
-  // Process overlay bands (qualitative directional studies)
+  // Overlays filtered by selected tiers — passed to SignalStrip below the chart
   const allFilteredOverlays = (overlays ?? []).filter((o) =>
     selectedTiers.includes(o.evidenceTier)
   );
-  // When collapsed, show only the N most recent overlays
-  const filteredOverlays = overlaysExpanded
-    ? allFilteredOverlays
-    : allFilteredOverlays
-        .slice()
-        .sort((a, b) => b.date.localeCompare(a.date))
-        .slice(0, OVERLAY_VISIBLE_COUNT)
-        .sort((a, b) => a.date.localeCompare(b.date));
-  const directionOrder: Record<string, number> = { down: 0, neutral: 1, up: 2 };
-  const overlayData = filteredOverlays.map((o) => {
-    const ts = parseISO(o.date).getTime();
-    return {
-      date: ts,
-      dateStr: format(parseISO(o.date), "MMM yyyy"),
-      direction: o.direction,
-      label: o.label,
-      sourceIds: o.sourceIds,
-      evidenceTier: o.evidenceTier,
-    };
-  }).sort((a, b) => (directionOrder[a.direction] ?? 1) - (directionOrder[b.direction] ?? 1));
 
   // With a numeric time axis, no phantom points are needed — data points
   // are positioned by their actual timestamp.
@@ -555,24 +399,6 @@ export default function PredictionChart({
         <ComposedChart data={chartData}>
           {/* Hidden numeric time axis so ReferenceLine can resolve x values */}
           <XAxis dataKey="date" type="number" scale="time" domain={[dataMinTs, dataMaxTs]} hide />
-          {(() => {
-            const byDate = new Map<number, typeof overlayData>();
-            for (const o of overlayData) {
-              const group = byDate.get(o.date) ?? [];
-              group.push(o);
-              byDate.set(o.date, group);
-            }
-            return Array.from(byDate.entries()).map(([date, group]) => (
-              <ReferenceLine
-                key={`overlay-compact-${date}`}
-                x={date}
-                stroke={groupedOverlayColor(group.map((g) => g.direction))}
-                strokeWidth={6}
-                strokeOpacity={0.15}
-                ifOverflow="visible"
-              />
-            ));
-          })()}
           <Line
             type="monotone"
             dataKey="observedValue"
@@ -661,7 +487,6 @@ export default function PredictionChart({
               <CustomTooltip
                 sources={sources}
                 unit={unit}
-                overlays={overlayData}
               />
             }
           />
@@ -712,30 +537,6 @@ export default function PredictionChart({
               isAnimationActive={false}
             />
           )}
-          {/* Overlay vertical bars - one per date, color from grouped direction */}
-          {(() => {
-            const byDate = new Map<number, typeof overlayData>();
-            for (const o of overlayData) {
-              const group = byDate.get(o.date) ?? [];
-              group.push(o);
-              byDate.set(o.date, group);
-            }
-            return Array.from(byDate.entries()).map(([date, group]) => (
-              <ReferenceLine
-                key={`overlay-bar-${date}`}
-                x={date}
-                stroke={groupedOverlayColor(group.map((g) => g.direction))}
-                strokeWidth={10}
-                strokeOpacity={0.24}
-                ifOverflow="visible"
-                onClick={() => onDotClick?.(group.flatMap((g) => g.sourceIds))}
-                onMouseEnter={(e: React.MouseEvent) => handleOverlayMouseEnter(group[0], e)}
-                onMouseMove={handleOverlayMouseMove}
-                onMouseLeave={handleOverlayMouseLeave}
-                style={{ cursor: onDotClick ? "pointer" : undefined }}
-              />
-            ));
-          })()}
           {/* Observed data line (solid) */}
           <Line
             type="monotone"
@@ -850,61 +651,6 @@ export default function PredictionChart({
         </ComposedChart>
       </ResponsiveContainer>
       </div>
-      {/* Custom overlay tooltip - works at chart edges where Recharts tooltip doesn't activate */}
-      {hoverOverlay && (
-        <div
-          style={{
-            position: "absolute",
-            left: Math.min(hoverOverlay.x + 12, (chartWrapperRef.current?.offsetWidth ?? 600) - 280),
-            top: Math.max(hoverOverlay.y - 20, 0),
-            zIndex: 50,
-            pointerEvents: "none",
-          }}
-        >
-          <div
-            className="bg-white rounded-xl p-4 max-w-[280px]"
-            style={{ border: "1px solid rgba(0,0,0,0.10)", boxShadow: "0 8px 28px rgba(0,0,0,0.13), 0 2px 8px rgba(0,0,0,0.07)" }}
-          >
-            <p className="text-xs font-semibold uppercase tracking-wider text-[var(--muted)] mb-1.5">
-              {hoverOverlay.overlay.dateStr}
-            </p>
-            {(() => {
-              const o = hoverOverlay.overlay;
-              const color = overlayColor(o.direction);
-              const arrow = o.direction === "down" ? "\u2193" : o.direction === "up" ? "\u2191" : "\u2194";
-              const oTierConfig = getTierConfig(o.evidenceTier);
-              const overlaySources = sources.filter((s) => o.sourceIds.includes(s.id));
-              return (
-                <>
-                  <div className="flex items-start gap-1.5 mb-1.5">
-                    <span className="text-md font-bold leading-tight mt-px shrink-0" style={{ color }}>
-                      {arrow}
-                    </span>
-                    <p className="text-sm leading-snug text-[var(--foreground)]">{o.label}</p>
-                  </div>
-                  <div className="flex items-center gap-1.5">
-                    <span className="inline-block w-2 h-2 rounded-full shrink-0" style={{ backgroundColor: oTierConfig.color }} />
-                    <span className="text-xs text-[var(--muted)]">{oTierConfig.label}</span>
-                  </div>
-                  {overlaySources.length > 0 && (
-                    <div className="mt-2 space-y-1.5">
-                      {overlaySources.map((s) => (
-                        <div key={s.id}>
-                          <p className="text-xs font-semibold text-[var(--foreground)]">{s.publisher}</p>
-                          <p className="text-xs text-[var(--muted)] leading-snug mt-0.5">
-                            {s.title.slice(0, 72)}{s.title.length > 72 ? "…" : ""}
-                          </p>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </>
-              );
-            })()}
-            <p className="text-xs text-[var(--muted)] mt-2 opacity-50">Click to jump to source ↓</p>
-          </div>
-        </div>
-      )}
       {/* Chart legend - below chart */}
       <div className="flex items-center gap-4 mt-4 px-1 flex-wrap">
         {hasProjectedData && (
@@ -926,22 +672,6 @@ export default function PredictionChart({
             </svg>
             <span className="text-xs text-[var(--muted)]">Confidence range</span>
           </div>
-        )}
-        {overlayData.length > 0 && (
-          <>
-            <div className="flex items-center gap-1.5">
-              <svg width="6" height="10">
-                <rect x="0" y="0" width="6" height="10" fill="#ef4444" fillOpacity="0.32" rx="1" />
-              </svg>
-              <span className="text-xs text-[var(--muted)]">Negative signal</span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              <svg width="6" height="10">
-                <rect x="0" y="0" width="6" height="10" fill="#22c55e" fillOpacity="0.32" rx="1" />
-              </svg>
-              <span className="text-xs text-[var(--muted)]">Positive signal</span>
-            </div>
-          </>
         )}
       </div>
       {/* Metric type legend (only when metricType tags are present) */}
@@ -984,16 +714,19 @@ export default function PredictionChart({
           })}
         </div>
       )}
-      {/* Overlay expand/collapse toggle for dense charts */}
-      {!compact && totalOverlayCount > OVERLAY_COLLAPSE_THRESHOLD && (
-        <button
-          onClick={() => setOverlaysExpanded(!overlaysExpanded)}
-          className="mt-2 px-1 text-xs font-medium text-[var(--accent)] hover:underline"
-        >
-          {overlaysExpanded
-            ? `Collapse overlay signals (${totalOverlayCount} total)`
-            : `Show all ${totalOverlayCount} overlay signals (${OVERLAY_VISIBLE_COUNT} most recent shown)`}
-        </button>
+      {/* Signal strip — pixel-block timeline of directional signals below the chart */}
+      {allFilteredOverlays.length > 0 && (
+        <div className="mt-3 px-1">
+          <SignalStrip
+            overlays={allFilteredOverlays}
+            sources={sources}
+            minTs={dataMinTs}
+            maxTs={dataMaxTs}
+            paddingLeft={54}
+            paddingRight={30}
+            onGroupClick={(ids) => onDotClick?.(ids)}
+          />
+        </div>
       )}
     </div>
   );
