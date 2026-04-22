@@ -2,16 +2,6 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
-      "title": "AI Assistance Reduces Persistence and Hurts Independent Performance",
-      "author": "Grace Liu, Brian Christian, Tsvetomira Dumbalska, Michiel A. Bakker, Rachit Dubey",
-      "publisher": "arXiv (CMU / Oxford / MIT / UCLA)",
-      "date": "2026-04-07",
-      "url": "https://arxiv.org/abs/2604.04721",
-      "takeaway": "Three large-scale RCTs (N=1,222) provide the first causal evidence that AI assistance erodes independent performance and persistence after just 10-15 minutes of use. In math (Exp. 1, N=307): AI-assisted participants had a 22pp lower solve rate at test (0.57 vs 0.73, p<0.001, Cohen's d=-0.42) and 82% higher task-skip rate (0.20 vs 0.11, p=0.031) once AI was removed. A pre-registered replication (Exp. 2, N=585) confirmed the performance decline (0.71 vs 0.77, p=0.020); notably, 61% of AI users sought direct answers rather than hints, and that subgroup showed the steepest decline (solve rate 0.65 vs control 0.77, p<0.001) and deteriorated relative to their own pre-experiment baseline (-0.10pp vs +0.01 for controls). Experiment 3 (N=168, reading comprehension) replicated both effects with nearly identical effect sizes (solve rate 0.76 vs 0.89, p=0.007; skip rate 0.08 vs 0.01, p=0.008), ruling out math-specific confounds. Proposed mechanism: AI conditions users to expect instant answers, raising the perceived effort cost of independent work — a self-reinforcing cognitive offloading loop. Policy implication: AI systems optimized for short-term helpfulness may be systematically eroding the persistence and metacognitive calibration that drive long-term learning and workforce adaptability.",
-      "weekFeatured": "2026-04-22",
-      "tier": 1
-    },
-    {
       "title": "A Technology-Driven Productivity Regime Shift",
       "author": "Gad Levanon",
       "publisher": "The Burning Glass Institute",
@@ -328,6 +318,16 @@
       "date": "2026-03-05",
       "url": "https://www.anthropic.com/research/labor-market-impacts",
       "takeaway": "New 'observed exposure' metric combining LLM capability with real usage. No systematic unemployment rise, but young worker hiring slowing in exposed occupations.",
+      "weekFeatured": "2026-03-10",
+      "tier": 2
+    },
+    {
+      "title": "AI Doesn't Reduce Work -- It Intensifies It",
+      "author": "Ranganathan, Ye",
+      "publisher": "Harvard Business Review",
+      "date": "2026-02-09",
+      "url": "https://hbr.org/2026/02/ai-doesnt-reduce-work-it-intensifies-it",
+      "takeaway": "Eight-month study of 200 employees found 83% said AI increased their workload through greater pace, scope, and hours -- leading to burnout and cognitive fatigue.",
       "weekFeatured": "2026-03-10",
       "tier": 2
     },
