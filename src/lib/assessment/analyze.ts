@@ -778,13 +778,25 @@ Return valid JSON:
   if (researchContext) roadmapUserPrompt += `\n\n${researchContext}`;
 
   try {
-    // Run both calls in parallel
-    const [toolsParsed, roadmapParsed] = await Promise.all([
-      callClaude(systemPrompt, userPrompt, { maxTokens: 5000, timeout: 300000 }),
-      callClaude(roadmapSystemPrompt, roadmapUserPrompt, { maxTokens: 4000, timeout: 300000 }),
+    // Run both calls in parallel. Use allSettled so one slow/hung call
+    // doesn't block the other — step 3 was timing out under the old Promise.all
+    // setup because a single stalled call consumed the full Vercel 300s budget.
+    // Per-call timeouts trimmed to 180s to leave ~120s of headroom under the
+    // Vercel 300s function limit for DB writes and response serialization.
+    const [toolsResult, roadmapResult] = await Promise.allSettled([
+      callClaude(systemPrompt, userPrompt, { maxTokens: 5000, timeout: 180000 }),
+      callClaude(roadmapSystemPrompt, roadmapUserPrompt, { maxTokens: 4000, timeout: 180000 }),
     ]);
 
-    // Merge results from both calls
+    const toolsParsed = toolsResult.status === "fulfilled"
+      ? toolsResult.value
+      : (console.error(`[Step 3 Tools] tools call failed: ${toolsResult.reason}`), null);
+    const roadmapParsed = roadmapResult.status === "fulfilled"
+      ? roadmapResult.value
+      : (console.error(`[Step 3 Tools] roadmap call failed: ${roadmapResult.reason}`), null);
+
+    // Merge results from both calls — each side falls back to the other's
+    // optional fields if one call failed entirely.
     const merged = {
       toolRecommendations: (toolsParsed as any)?.toolRecommendations || [],
       implementationRoadmap: (roadmapParsed as any)?.implementationRoadmap || (toolsParsed as any)?.implementationRoadmap,
