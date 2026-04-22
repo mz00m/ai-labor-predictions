@@ -18,6 +18,7 @@ import Anthropic from "@anthropic-ai/sdk";
 import { z } from "zod";
 import { fetchWithRetry } from "./utils/retry";
 import { DigestSchema, type Highlight } from "./synthesize-digest";
+import { CLAUDE_SONNET } from "../src/lib/claude-models";
 
 // ─── Types ────────────────────────────────────────────────────────────
 
@@ -194,7 +195,7 @@ Schema: [{ "graphSlug": string, "type": "data_point"|"overlay", "value"?: number
 If no stats found, return [].`;
 
     const response = await client.messages.create({
-      model: "claude-sonnet-4-6",
+      model: CLAUDE_SONNET,
       max_tokens: 1000,
       messages: [{ role: "user", content: extractionPrompt }],
     });

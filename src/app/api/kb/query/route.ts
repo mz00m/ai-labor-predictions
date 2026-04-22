@@ -3,6 +3,7 @@ import Anthropic from "@anthropic-ai/sdk";
 import fs from "fs";
 import path from "path";
 import { checkAdminToken } from "@/lib/admin-auth";
+import { CLAUDE_SONNET } from "@/lib/claude-models";
 
 export const dynamic = "force-dynamic";
 
@@ -78,33 +79,57 @@ export async function POST(req: NextRequest) {
 
   const client = new Anthropic({ apiKey });
 
-  const stream = await client.messages.create({
-    model: "claude-mythos-0417",
-    max_tokens: 2048,
-    stream: true,
-    system: `You are a research assistant for jobsdata.ai, a labor market signals dashboard tracking AI's impact on employment. You have access to the project's knowledge base — 18 prediction graphs, 530+ verified sources, and methodology documentation.
+  // Open the stream inside a try/catch so a 404/429/auth error from Anthropic
+  // surfaces as a useful JSON error instead of the framework's silent 500.
+  // This is what burned us on the claude-mythos-0417 model typo — the
+  // error just manifested as "500" with no hint of the 404 under the hood.
+  let stream: Awaited<ReturnType<typeof client.messages.create>>;
+  try {
+    stream = await client.messages.create({
+      model: CLAUDE_SONNET,
+      max_tokens: 2048,
+      stream: true,
+      system: `You are a research assistant for jobsdata.ai, a labor market signals dashboard tracking AI's impact on employment. You have access to the project's knowledge base — 18 prediction graphs, 530+ verified sources, and methodology documentation.
 
 Answer questions directly and precisely. Cite specific sources, prediction slugs, and data points when relevant. Be honest about uncertainty. Don't pad.`,
-    messages: [
-      {
-        role: "user",
-        content: `Knowledge base:\n\n${context}\n\n---\n\nQuestion: ${query}`,
-      },
-    ],
-  });
+      messages: [
+        {
+          role: "user",
+          content: `Knowledge base:\n\n${context}\n\n---\n\nQuestion: ${query}`,
+        },
+      ],
+    });
+  } catch (err) {
+    const message = err instanceof Error ? err.message : String(err);
+    const status = (err as { status?: number })?.status;
+    console.error(`[kb-query] Anthropic call failed (status=${status}): ${message}`);
+    return NextResponse.json(
+      { error: `AI service error: ${message}`, status: status ?? null },
+      { status: 502 },
+    );
+  }
 
   const encoder = new TextEncoder();
   const readable = new ReadableStream({
     async start(controller) {
-      for await (const event of stream) {
-        if (
-          event.type === "content_block_delta" &&
-          event.delta.type === "text_delta"
-        ) {
-          controller.enqueue(encoder.encode(event.delta.text));
+      // Stream errors happen after headers are already sent, so we can't
+      // switch to a JSON error response. Best we can do is log and close
+      // the stream with an error signal the client can detect.
+      try {
+        for await (const event of stream) {
+          if (
+            event.type === "content_block_delta" &&
+            event.delta.type === "text_delta"
+          ) {
+            controller.enqueue(encoder.encode(event.delta.text));
+          }
         }
+        controller.close();
+      } catch (err) {
+        const message = err instanceof Error ? err.message : String(err);
+        console.error(`[kb-query] stream failure: ${message}`);
+        controller.error(err);
       }
-      controller.close();
     },
   });
 

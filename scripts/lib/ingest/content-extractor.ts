@@ -11,6 +11,7 @@ import Anthropic from "@anthropic-ai/sdk";
 import { toDateString } from "../date-utils";
 import fs from "fs";
 import path from "path";
+import { CLAUDE_HAIKU } from "../../../src/lib/claude-models";
 
 export interface SourceContentEntry {
   id: string;
@@ -71,7 +72,7 @@ Existing excerpt: "${meta.excerpt || "none"}"
 ${truncated}`;
 
   const response = await client.messages.create({
-    model: "claude-haiku-4-5-20251001",
+    model: CLAUDE_HAIKU,
     max_tokens: 2048,
     system: EXTRACTION_PROMPT,
     messages: [{ role: "user", content: userMessage }],

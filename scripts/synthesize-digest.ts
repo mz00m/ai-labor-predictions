@@ -20,6 +20,7 @@ import { loadEnv } from "./lib/load-env";
 loadEnv();
 
 import Anthropic from "@anthropic-ai/sdk";
+import { CLAUDE_SONNET } from "../src/lib/claude-models";
 
 // ─── Digest Schema ────────────────────────────────────────────────────
 
@@ -194,7 +195,7 @@ ${itemsText}`;
   console.log("Synthesizing via Claude API...");
   const client = new Anthropic();
   const response = await client.messages.create({
-    model: "claude-sonnet-4-6",
+    model: CLAUDE_SONNET,
     max_tokens: 4096,
     messages: [{ role: "user", content: synthesisPrompt }],
   });

@@ -8,6 +8,7 @@
 
 import Anthropic from "@anthropic-ai/sdk";
 import { EvidenceTier, Prediction } from "../types";
+import { CLAUDE_HAIKU } from "@/lib/claude-models";
 import { DigestPaper, SuggestedDataPoint } from "../types/digest";
 import { computeAggregate } from "../prediction-stats";
 
@@ -136,7 +137,7 @@ Now analyze all the papers above and extract any quantitative data points. Retur
     const client = new Anthropic({ apiKey });
 
     const response = await client.messages.create({
-      model: "claude-haiku-4-5-20251001",
+      model: CLAUDE_HAIKU,
       max_tokens: 4096,
       messages: [
         { role: "user", content: userPrompt },
