@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "AI Assistance Reduces Persistence and Hurts Independent Performance",
+      "author": "Grace Liu, Brian Christian, Tsvetomira Dumbalska, Michiel A. Bakker, Rachit Dubey",
+      "publisher": "arXiv (CMU / Oxford / MIT / UCLA)",
+      "date": "2026-04-07",
+      "url": "https://arxiv.org/abs/2604.04721",
+      "takeaway": "Three large-scale RCTs (N=1,222) provide the first causal evidence that AI assistance erodes independent performance and persistence after just 10-15 minutes of use. In math (Exp. 1, N=307): AI-assisted participants had a 22pp lower solve rate at test (0.57 vs 0.73, p<0.001, Cohen's d=-0.42) and 82% higher task-skip rate (0.20 vs 0.11, p=0.031) once AI was removed. A pre-registered replication (Exp. 2, N=585) confirmed the performance decline (0.71 vs 0.77, p=0.020); notably, 61% of AI users sought direct answers rather than hints, and that subgroup showed the steepest decline (solve rate 0.65 vs control 0.77, p<0.001) and deteriorated relative to their own pre-experiment baseline (-0.10pp vs +0.01 for controls). Experiment 3 (N=168, reading comprehension) replicated both effects with nearly identical effect sizes (solve rate 0.76 vs 0.89, p=0.007; skip rate 0.08 vs 0.01, p=0.008), ruling out math-specific confounds. Proposed mechanism: AI conditions users to expect instant answers, raising the perceived effort cost of independent work — a self-reinforcing cognitive offloading loop. Policy implication: AI systems optimized for short-term helpfulness may be systematically eroding the persistence and metacognitive calibration that drive long-term learning and workforce adaptability.",
+      "weekFeatured": "2026-04-22",
+      "tier": 1
+    },
+    {
       "title": "A Technology-Driven Productivity Regime Shift",
       "author": "Gad Levanon",
       "publisher": "The Burning Glass Institute",
@@ -57,7 +67,7 @@
       "publisher": "Ghosts of Electricity",
       "date": "2026-04-14",
       "url": "https://aleximas.substack.com/p/what-will-be-scarce",
-      "takeaway": "Imas argues AI won't erase labor \u2014 it will trigger a 'post-commodity' economy where spending and jobs shift toward the relational sector (care, hospitality, craft, education) because mimetic/status preferences give human-made goods high income elasticity. Evidence: Starbucks rolling back store automation; human art commands a 44% exclusivity premium vs only 21% for AI art.",
+      "takeaway": "Imas argues AI won't erase labor — it will trigger a 'post-commodity' economy where spending and jobs shift toward the relational sector (care, hospitality, craft, education) because mimetic/status preferences give human-made goods high income elasticity. Evidence: Starbucks rolling back store automation; human art commands a 44% exclusivity premium vs only 21% for AI art.",
       "weekFeatured": "2026-04-14",
       "tier": 4
     },
@@ -77,7 +87,7 @@
       "publisher": "Stanford HAI",
       "date": "2026-04-13",
       "url": "https://hai.stanford.edu/news/inside-the-ai-index-12-takeaways-from-the-2026-report",
-      "takeaway": "Stanford HAI's annual AI Index finds that AI's workforce disruption has 'moved from prediction to reality, hitting young workers first.' Employment among software developers aged 22-25 has plummeted nearly 20% since 2024 even as older colleagues' headcount grows; the pattern repeats in customer service and other high-AI-exposure roles. Generative AI reached 53% global population adoption within three years \u2014 faster than the PC or internet \u2014 though the US ranks 24th at 28.3%. Clinical AI note-taking tools saw widespread adoption in 2025, with physicians reporting up to 83% less time on notes and significant reductions in burnout. Model transparency is worsening: the Foundation Model Transparency Index average dropped to 40 (from 58). Grok 4 training emissions reached 72,816 tons CO2-eq; AI data center capacity hit 29.6 GW. US lead over China has nearly evaporated. US AI researcher inflow has dropped 89% since 2017. Global corporate AI investment hit $581.7B (+130% YoY).",
+      "takeaway": "Stanford HAI's annual AI Index finds that AI's workforce disruption has 'moved from prediction to reality, hitting young workers first.' Employment among software developers aged 22-25 has plummeted nearly 20% since 2024 even as older colleagues' headcount grows; the pattern repeats in customer service and other high-AI-exposure roles. Generative AI reached 53% global population adoption within three years — faster than the PC or internet — though the US ranks 24th at 28.3%. Clinical AI note-taking tools saw widespread adoption in 2025, with physicians reporting up to 83% less time on notes and significant reductions in burnout. Model transparency is worsening: the Foundation Model Transparency Index average dropped to 40 (from 58). Grok 4 training emissions reached 72,816 tons CO2-eq; AI data center capacity hit 29.6 GW. US lead over China has nearly evaporated. US AI researcher inflow has dropped 89% since 2017. Global corporate AI investment hit $581.7B (+130% YoY).",
       "weekFeatured": "2026-04-13",
       "tier": 2
     },
@@ -97,7 +107,7 @@
       "publisher": "MIT Center for Collective Intelligence (arXiv)",
       "date": "2026-03-27",
       "url": "https://arxiv.org/abs/2603.20619",
-      "takeaway": "Introduces Think/Do/Interact ontology of 39,603 work activities from O*NET 29.1. 92% of AI applications (TAAFT dataset) map to only 6.8% of activities. AI apps grew 6x from 2022-2024 but activity coverage expanded only 1.2x \u2014 adoption is deep, not broad. 75% of AI market value concentrated in software/information tasks. 58% of apps target 'Create information' activities. Physical work largely unaffected. EPOCH framework (Empathy, Presence, Opinion, Creativity, Hope) identifies durable human advantages. Inheritance principle: parent-level AI applicability passes to child activities.",
+      "takeaway": "Introduces Think/Do/Interact ontology of 39,603 work activities from O*NET 29.1. 92% of AI applications (TAAFT dataset) map to only 6.8% of activities. AI apps grew 6x from 2022-2024 but activity coverage expanded only 1.2x — adoption is deep, not broad. 75% of AI market value concentrated in software/information tasks. 58% of apps target 'Create information' activities. Physical work largely unaffected. EPOCH framework (Empathy, Presence, Opinion, Creativity, Hope) identifies durable human advantages. Inheritance principle: parent-level AI applicability passes to child activities.",
       "weekFeatured": "2026-04-04",
       "tier": 1
     },
@@ -237,13 +247,13 @@
       "publisher": "Anthropic",
       "date": "2026-03-18",
       "url": "https://www.anthropic.com/features/81k-interviews",
-      "takeaway": "Anthropic invited Claude users to share how they use AI, what they dream it could make possible, and what they fear it might do. Nearly 81,000 people responded in one week \u2014 the largest qualitative study of its kind.",
+      "takeaway": "Anthropic invited Claude users to share how they use AI, what they dream it could make possible, and what they fear it might do. Nearly 81,000 people responded in one week — the largest qualitative study of its kind.",
       "weekFeatured": "2026-03-18",
       "tier": 3
     },
     {
       "title": "Artificial Intelligence, Productivity, and the Workforce: Evidence from Corporate Executives",
-      "author": "Salom\u00e9 Baslandze, Brent Meyer, John Robertson, Emil Verner, Erick Zwick",
+      "author": "Salomé Baslandze, Brent Meyer, John Robertson, Emil Verner, Erick Zwick",
       "publisher": "Federal Reserve Bank of Atlanta / Duke University",
       "date": "2026-03-13",
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6410338",
@@ -253,8 +263,8 @@
     },
     {
       "title": "Same Storm, Different Boats: Generative AI and the Age Gradient in Hiring",
-      "author": "Magnus Lodefalk, Lydia L\u00f6thman, Michael Koch, Erik Engberg",
-      "publisher": "RATIO Institute / \u00d6rebro University",
+      "author": "Magnus Lodefalk, Lydia Löthman, Michael Koch, Erik Engberg",
+      "publisher": "RATIO Institute / Örebro University",
       "date": "2026-03-16",
       "url": "https://cms.ratio.se/app/uploads/2026/03/lodefalk_march16_paper_v2-kombinerades.pdf",
       "takeaway": "Swedish population register data (4.6M job ads, full-population employer-employee records): 22-25yr employment in high-AI occupations fell 5.5% by 2025H1 vs low-exposure occupations within same employers. 50+ workers rose 1.3%. Broad posting decline driven by Riksbank rate hike, not AI. Effect ~2x larger for young women. Replicates US 'canaries' finding (Brynjolfsson et al.) in Nordic register data; contrasts with Finnish null.",
@@ -267,7 +277,7 @@
       "publisher": "Washington Post",
       "date": "2026-03-16",
       "url": "https://www.washingtonpost.com/technology/interactive/2026/jobs-most-affected-ai-automation/",
-      "takeaway": "Interactive mapping of 350+ occupations by AI exposure and adaptability using GovAI/Brookings research. 6.1M clerical/admin workers most vulnerable (86% women). Consensus: no measurable aggregate displacement yet, but white-collar jobs first in line. Economists stress humility \u2014 predictions have historically been poor.",
+      "takeaway": "Interactive mapping of 350+ occupations by AI exposure and adaptability using GovAI/Brookings research. 6.1M clerical/admin workers most vulnerable (86% women). Consensus: no measurable aggregate displacement yet, but white-collar jobs first in line. Economists stress humility — predictions have historically been poor.",
       "weekFeatured": "2026-03-16",
       "tier": 3
     },
@@ -482,7 +492,7 @@
       "tier": 1
     },
     {
-      "title": "AI Won't Just Automate Jobs \u2014 It Will Challenge the Meaning of Work",
+      "title": "AI Won't Just Automate Jobs — It Will Challenge the Meaning of Work",
       "author": "Vox Future Perfect",
       "publisher": "Vox",
       "date": "2026-03-16",
