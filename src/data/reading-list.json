@@ -7,7 +7,7 @@
       "publisher": "The Burning Glass Institute",
       "date": "2026-04-21",
       "url": "https://www.linkedin.com/pulse/technology-driven-productivity-regime-shift-gad-levanon-mqyge/",
-      "takeaway": "Levanon documents a structural acceleration in US labor productivity from 1.3%/yr (2013-2019) to 2.2%/yr (2019-2025), driven almost entirely by three technology-exposed sectors — white-collar services (FIIPB), retail trade, and advanced manufacturing — each posting 3.2-3.9% annualized productivity growth while the rest of the private economy sits at 0.1%. Using BEA real GDP by industry through Q4 2025 (since BLS industry productivity ends in 2024) and BLS CES hours, he finds Information sector hours down 6% from their 2022 peak (GDP +8.4%/yr, hours −1.9%/yr post-2022); Professional & business services GDP +3.0%/yr with hours −0.4%/yr; FIIPB's within-industry contribution to aggregate productivity roughly doubled (0.78→1.50pp/yr); advanced manufacturing's contribution quadrupled from a low base. Part is one-time pandemic-era level shifts (firm exit, digital diffusion, e-commerce share), but the compounding forces — generative AI deployment, organizational redesign, platform expansion, and cloud/AI infrastructure buildout — are still early. Implication: weak job growth no longer signals weak output; the pressure lands first on entry-level white-collar work where high-productivity sectors also show weaker demand for junior labor.",
+      "takeaway": "US labor productivity surged from 1.3% annually (2013–2019) to 2.2% (2019–2025), concentrated in three tech-exposed sectors posting 3.2–3.9% growth while the rest of the economy grew at 0.1%, driven by AI deployment and digital transformation that is hollowing out entry-level white-collar jobs even as output accelerates.",
       "weekFeatured": "2026-04-21",
       "tier": 3
     },
@@ -17,7 +17,7 @@
       "publisher": "Economic Security Project",
       "date": "2026-04-01",
       "url": "https://economicsecurityproject.org/wp-content/uploads/Ideas-for-Shared-Economic-Prosperity-in-the-AI-Transition.pdf",
-      "takeaway": "Policy brief synthesizing the empirical case for AI labor disruption — citing Brynjolfsson's 16% relative employment decline for 22-25 year olds in AI-exposed occupations, Brookings' estimate of 6.1M U.S. clerical/admin workers in high-AI-exposure roles who will struggle to adapt, and Azar et al.'s finding (138M worker-firm matches) that ChatGPT cut wages 4.5% at AI-substitutable firms. Lays out a four-pillar policy agenda: (1) modernize the social contract via UI uptake, decoupled public healthcare, an income floor for displaced workers, and four-day-week experimentation; (2) protect workers through transparency rules on AI surveillance, prohibitions on biometric monitoring, and regulation of algorithmic wage-setting/scheduling on gig and on-demand nursing platforms; (3) shape competitive AI markets via NAIRR/CalCompute-style public investment, non-discrimination rules at the infrastructure layer, and data portability mandates; (4) mitigate AI's role in the affordability crisis by banning AI-enabled price discrimination/collusion (RealPage cost renters 4% on average) and shifting data-center electricity costs (residential prices up 10% vs 3% commercial 2022-2024; +6% household increase forecast through 2027) back to the firms driving demand.",
+      "takeaway": "AI exposure has already reduced wages 4.5% at substitutable firms and threatens 6.1M U.S. clerical workers, demanding a four-pillar policy response: strengthening social safety nets and worker protections, regulating AI surveillance and algorithmic wage-setting, investing in competitive public AI infrastructure, and banning AI-enabled price discrimination while shifting data-center electricity costs to firms.",
       "weekFeatured": "2026-04-20",
       "tier": 2
     },
@@ -27,7 +27,7 @@
       "publisher": "OpenAI Economic Research",
       "date": "2026-04-17",
       "url": "https://cdn.openai.com/pdf/the-ai-jobs-transition-framework_report.pdf",
-      "takeaway": "OpenAI's framework sorts all 921 US occupations (147.9M jobs) into four transition archetypes using AI exposure, human necessity, and demand elasticity. Findings: 18% of jobs face higher short-term automation risk; 24% will reorganize as task mix shifts but still need workers; 12% could grow because of AI; 46% see less immediate change. ChatGPT is used ~3x more in jobs identified as most at risk of automation, yet a large 'capability overhang' persists: for high-risk jobs, theoretical exposure is 90% but realized exposure is only 23.8% (66.2pp gap). Critically, CPS data since 2024Q1 shows unemployment rose MORE in the 'less immediate change' archetype (+0.6pp, to 5.1%) than in high-automation-risk (+0.3pp, to 3.6%), reorganize (+0.3pp), or grow-with-AI (+0.3pp) archetypes — undermining a simple exposure-drives-displacement narrative. Authors emphasize these shares are transition-risk maps, not displacement forecasts.",
+      "takeaway": "OpenAI's framework categorizes 147.9M US jobs into four AI-transition archetypes, finding 18% face near-term automation risk, yet a 66.2 percentage-point gap exists between theoretical AI exposure (90%) and realized exposure (23.8%) in high-risk jobs. Counterintuitively, unemployment rose more in the \"less immediate change\" archetype than in high-automation-risk jobs since 2024Q1, suggesting AI exposure alone doesn't drive displacement.",
       "weekFeatured": "2026-04-17",
       "tier": 2
     },
@@ -37,7 +37,7 @@
       "publisher": "The Budget Lab at Yale",
       "date": "2026-04-16",
       "url": "https://budgetlab.yale.edu/research/tracking-impact-ai-labor-market",
-      "takeaway": "April 2026 monthly update adds March 2026 CPS and Anthropic's February usage metrics. Headline: no substantial change from March release. Occupational dissimilarity, industry dissimilarity, and exposure/usage metrics remain flat, within historical ranges, or on pre-existing trends. OpenAI exposure quintile shares stable since ChatGPT launch. Unemployed workers in occupations where 25-35% of tasks are AI-performable, invariant to duration. Anthropic Feb 2026 usage data continues to show automation more prevalent than augmentation. Only notable tick-up: dissimilarity between older and younger college grads rose to the high end of its historical range. Measures of exposure, automation, and augmentation show no sign of being related to changes in employment or unemployment.",
+      "takeaway": "No substantial labor market impact from AI detected as of March 2026, with all key metrics remaining flat or on pre-existing trends; only notable finding is widening dissimilarity between older and younger college graduates' AI exposure.",
       "weekFeatured": "2026-04-16",
       "tier": 1
     },
@@ -47,7 +47,7 @@
       "publisher": "Federal Reserve Bank of New York (Liberty Street Economics)",
       "date": "2026-04-14",
       "url": "https://libertystreeteconomics.newyorkfed.org/2026/04/use-of-gen-ai-in-the-workplace-and-the-value-of-access-to-training/",
-      "takeaway": "November 2025 SCE supplemental questions document that 39% of employed Americans used AI at work in the past year, but adoption is sharply stratified: 58.7% of college grads vs 22.9% non-college; 15.9% (<$50K) to 66.3% (>$200K) by income; 42.7% full-time vs 24.7% part-time. Among users, 66% say AI boosts their productivity (40% finish tasks faster; 22% complete more). Yet 37% of workers say their employer offers no AI tools and 11% say they are actively prohibited. Training gap is the headline: 38% of workers value AI training but only 15.9% get it from employers. Workers without training would pay an average 11.4% of salary to gain it; workers with training demand 24.2% more pay to give it up (loss aversion + selection). 62% of respondents expect AI to raise unemployment in the next 12 months; only 11.6% expect a decline.",
+      "takeaway": "Only 39% of employed Americans use AI at work, with stark disparities by education (58.7% college vs. 22.9% non-college) and income ($15.9% under $50K vs. 66.3% over $200K); among users, 66% report productivity gains, yet a critical training gap exists—38% of workers value AI training but only 15.9% receive it from employers, with untrained workers willing to pay 11.4% of salary for access.",
       "weekFeatured": "2026-04-14",
       "tier": 1
     },
@@ -57,7 +57,7 @@
       "publisher": "Ghosts of Electricity",
       "date": "2026-04-14",
       "url": "https://aleximas.substack.com/p/what-will-be-scarce",
-      "takeaway": "Imas argues AI won't erase labor — it will trigger a 'post-commodity' economy where spending and jobs shift toward the relational sector (care, hospitality, craft, education) because mimetic/status preferences give human-made goods high income elasticity. Evidence: Starbucks rolling back store automation; human art commands a 44% exclusivity premium vs only 21% for AI art.",
+      "takeaway": "AI will shift jobs toward relational sectors (care, hospitality, craft, education) as consumer preferences favor human-made goods, exemplified by human art commanding a 44% exclusivity premium over AI-generated art and Starbucks reversing store automation.",
       "weekFeatured": "2026-04-14",
       "tier": 4
     },
@@ -67,7 +67,7 @@
       "publisher": "Wall Street Journal",
       "date": "2026-04-14",
       "url": "https://www.wsj.com/economy/jobs/the-economy-is-growing-jobs-arent-why-that-might-be-ok-5c50a535",
-      "takeaway": "WSJ examines the decoupling of GDP growth from job creation as AI-driven productivity gains increasingly absorb output expansion without hiring. Frames the 'jobless growth' pattern as potentially benign if productivity flows through to wages and new kinds of work rather than concentrating at the top.",
+      "takeaway": "GDP growth is increasingly decoupled from job creation as AI-driven productivity gains expand output without hiring, a pattern potentially benign if productivity gains translate to higher wages rather than concentrated wealth.",
       "weekFeatured": "2026-04-14",
       "tier": 3
     },
@@ -77,7 +77,7 @@
       "publisher": "Stanford HAI",
       "date": "2026-04-13",
       "url": "https://hai.stanford.edu/news/inside-the-ai-index-12-takeaways-from-the-2026-report",
-      "takeaway": "Stanford HAI's annual AI Index finds that AI's workforce disruption has 'moved from prediction to reality, hitting young workers first.' Employment among software developers aged 22-25 has plummeted nearly 20% since 2024 even as older colleagues' headcount grows; the pattern repeats in customer service and other high-AI-exposure roles. Generative AI reached 53% global population adoption within three years — faster than the PC or internet — though the US ranks 24th at 28.3%. Clinical AI note-taking tools saw widespread adoption in 2025, with physicians reporting up to 83% less time on notes and significant reductions in burnout. Model transparency is worsening: the Foundation Model Transparency Index average dropped to 40 (from 58). Grok 4 training emissions reached 72,816 tons CO2-eq; AI data center capacity hit 29.6 GW. US lead over China has nearly evaporated. US AI researcher inflow has dropped 89% since 2017. Global corporate AI investment hit $581.7B (+130% YoY).",
+      "takeaway": "Employment among young software developers has plummeted nearly 20% since 2024 as AI disruption moves from prediction to reality, while generative AI adoption has reached 53% globally in just three years. US AI researcher inflow has collapsed 89% since 2017, and the country's competitive lead over China has nearly disappeared.",
       "weekFeatured": "2026-04-13",
       "tier": 2
     },
@@ -87,7 +87,7 @@
       "publisher": "OpenAI",
       "date": "2026-04-01",
       "url": "https://cdn.openai.com/pdf/561e7512-253e-424b-9734-ef4098440601/Industrial%20Policy%20for%20the%20Intelligence%20Age.pdf",
-      "takeaway": "OpenAI's policy blueprint for the transition to superintelligence. Proposes public wealth fund seeded by AI companies, 32-hour/four-day workweek pilots with no pay loss, portable benefits decoupled from employers, adaptive safety nets with automatic triggers, 'Right to AI' as foundational access, and modernized tax base shifting from payroll to capital-based revenues. Warns that productivity gains may not reach workers without deliberate policy: 'Workers using AI might well agree that it's increasing their productivity without believing they're seeing the benefits.' Calls for worker voice in AI deployment decisions, pathways into care economy for displaced workers, and public-private energy infrastructure partnerships. On the resilience side: auditing regimes for frontier models, incident reporting systems, model-containment playbooks, and international coordination frameworks. Frames the challenge as requiring a new Progressive Era / New Deal for the Intelligence Age.",
+      "takeaway": "OpenAI proposes a comprehensive policy framework for the AI transition including a public wealth fund, 32-hour workweeks, portable benefits, and tax shifts from payroll to capital—warning that productivity gains won't automatically benefit workers without deliberate intervention. The blueprint also calls for AI safety auditing, international coordination, and worker voice in deployment decisions.",
       "weekFeatured": "2026-04-07",
       "tier": 2
     },
@@ -97,7 +97,7 @@
       "publisher": "MIT Center for Collective Intelligence (arXiv)",
       "date": "2026-03-27",
       "url": "https://arxiv.org/abs/2603.20619",
-      "takeaway": "Introduces Think/Do/Interact ontology of 39,603 work activities from O*NET 29.1. 92% of AI applications (TAAFT dataset) map to only 6.8% of activities. AI apps grew 6x from 2022-2024 but activity coverage expanded only 1.2x — adoption is deep, not broad. 75% of AI market value concentrated in software/information tasks. 58% of apps target 'Create information' activities. Physical work largely unaffected. EPOCH framework (Empathy, Presence, Opinion, Creativity, Hope) identifies durable human advantages. Inheritance principle: parent-level AI applicability passes to child activities.",
+      "takeaway": "AI applications concentrate deeply in narrow task categories, with 92% of AI apps targeting just 6.8% of work activities—primarily information creation and software tasks—while physical and interactive work remain largely unaffected despite 6x growth in AI tools from 2022-2024.",
       "weekFeatured": "2026-04-04",
       "tier": 1
     },
@@ -107,7 +107,7 @@
       "publisher": "The New York Times",
       "date": "2026-04-03",
       "url": "https://www.nytimes.com/2026/04/03/business/economists-once-dismissed-the-ai-job-threat-but-not-anymore.html",
-      "takeaway": "Narrative shift: economists moving from dismissive to seriously concerned about AI labor impact. BCG estimates >50% of US jobs reshaped in 2-3 years. Kinder (Brookings) says entry-level research hires replaced by Claude. Gimbel (Yale Budget Lab): speed and breadth determine how painful the transition. Rock (UPenn): 'I don't think AI has hit the labor market yet, but I think it's coming.' Imas (UChicago): reasoning models were 'paradigm shift.' Korinek (UVA) leaving academia to join Anthropic. Cites FRI survey, Census BTOS adoption data, Brynjolfsson/Stanford entry-level findings.",
+      "takeaway": "Economists have reversed their dismissal of AI's labor threat, with BCG estimating over 50% of US jobs will be reshaped within 2-3 years as advanced reasoning models begin displacing workers across entry-level and professional roles.",
       "weekFeatured": "2026-04-03",
       "tier": 3
     },
@@ -117,7 +117,7 @@
       "publisher": "Forecasting Research Institute (w/ Fed Chicago, Yale, Stanford, UPenn)",
       "date": "2026-03-31",
       "url": "https://open.substack.com/pub/forecastingresearch/p/forecasting-the-economic-effects-of-ai",
-      "takeaway": "Most comprehensive expert survey on AI's economic impact. 69 economists, 52 AI experts, 38 superforecasters, 401 public respondents. Unconditional: GDP 2.5% (vs 2.0% baseline), LFPR 61.0% by 2030. Rapid scenario (14% prob): GDP ~4%, LFPR drops to 55% by 2050 (~10M AI job losses), top 10% holds 80% of wealth, labor share falls to 45%. GenAI assists 10.1% of work hours by 2030 unconditionally, 62% by 2050 in rapid scenario. White-collar sector share stalls at 20-21% under rapid. Expert disagreement driven more by beliefs about economic effects than AI capability pace. 71.8% of economists support job retraining; only 13.7% support job guarantees.",
+      "takeaway": "A survey of 159 experts and 401 public respondents projects AI will boost GDP by 0.5 percentage points above baseline by 2030, but a 14% probability rapid-deployment scenario shows GDP reaching ~4% alongside 10 million job losses and wealth concentration to the top 10% by 2050. Expert disagreement on AI's economic impact stems primarily from differing beliefs about economic effects rather than AI capability timelines, with 71.8% of economists favoring job retraining over job guarantees.",
       "weekFeatured": "2026-04-02",
       "tier": 1
     },
@@ -127,7 +127,7 @@
       "publisher": "The Update Brief (Substack)",
       "date": "2026-04-02",
       "url": "https://open.substack.com/pub/theupdatebrief/p/how-much-will-ai-increase-economic",
-      "takeaway": "Commentary synthesizing expert debate around the FRI survey. Rapid AI scenario yields only +1.5pp annual GDP growth above slow scenario (+45% cumulative over 25 years). Economists far more conservative than AI experts on growth impact. Highlights social backlash as key constraint (Narayanan), historical diffusion precedent (Novosad), and possibility of Coasean Singularity disrupting adoption models (Imas). Key puzzle: why don't experts expect higher growth even under rapid progress?",
+      "takeaway": "A rapid AI scenario generates only +1.5 percentage points additional annual GDP growth versus a slow scenario (+45% cumulative over 25 years), with economists significantly more pessimistic than AI experts, citing social backlash and historical diffusion constraints as key limiting factors.",
       "weekFeatured": "2026-04-02",
       "tier": 4
     },
@@ -137,7 +137,7 @@
       "publisher": "Brookings Metro / Opportunity@Work",
       "date": "2026-04-02",
       "url": "https://www.brookings.edu/articles/how-ai-may-reshape-career-pathways-to-better-jobs/",
-      "takeaway": "15.6M non-degree workers (STARs) in top AI exposure quartile, comprising 43% of all highly exposed US workers. Nearly 11M STARs in highly AI-exposed Gateway occupations. ~49% of career pathways from Gateway to higher-wage Destination occupations are highly AI-exposed. 3.5M STARs have both high AI exposure and low adaptive capacity (67% of dual-risk workers). Uses Anthropic observed exposure data. Sun Belt and Northeast metros most affected due to admin/clerical/CS Gateway concentration.",
+      "takeaway": "15.6 million non-degree workers face high AI exposure, with 3.5 million lacking adaptive capacity to transition to better jobs. Nearly half of career pathways from entry-level Gateway occupations to higher-wage positions are highly AI-exposed, concentrated in Sun Belt and Northeast metros.",
       "weekFeatured": "2026-04-02",
       "tier": 2
     },
@@ -147,7 +147,7 @@
       "publisher": "Noahpinion (Substack)",
       "date": "2026-03-28",
       "url": "https://www.noahpinion.blog/p/plentiful-high-paying-jobs-in-the-ff9",
-      "takeaway": "Repost of influential 2024 essay with new framing. Argues compute is a producer-specific constraint on AI that preserves comparative advantage for human labor, even if AI surpasses humans at every task. Opportunity cost of AI scales with its productivity, so cheaper compute doesn't eliminate the case for human workers. Key risks: energy competition (the 'horse' scenario), inequality from capital concentration, and adjustment frictions. References Korinek & Suh (2024) model showing wages drop but don't collapse at full automation.",
+      "takeaway": "AI's comparative advantage constraint means cheaper compute won't eliminate human jobs—opportunity costs keep human labor valuable even if AI outperforms humans at every task. However, wages will decline at full automation, with major risks from energy scarcity, wealth concentration, and transition disruptions.",
       "weekFeatured": "2026-03-28",
       "tier": 4
     },
@@ -157,7 +157,7 @@
       "publisher": "Digital Planet, The Fletcher School, Tufts University",
       "date": "2026-03-25",
       "url": "https://digitalplanet.tufts.edu/ai-and-the-emerging-geography-of-american-job-risk-page/",
-      "takeaway": "Introduces the American AI Jobs Risk Index. 9.3M US jobs vulnerable under median adoption (range 2.7-19.5M), ~6% industry-wide displacement. Information (18.3%), Finance and Insurance (16.5%), Professional Services (15.6%) face steepest risks. Writers/Authors (57%), Computer Programmers (55%), Web Designers (55%) are most vulnerable occupations. Innovation hubs (San Jose 9.9%, DC 9.1%) face highest geographic risk. $757B in annual income at risk (2-15% of total wage income). 4.9M 'tipping point' workers in 33 occupations swing from <10% to >40% displacement.",
+      "takeaway": "The American AI Jobs Risk Index identifies 9.3M US jobs (6% of workforce) as vulnerable to AI displacement, with information, finance, and professional services sectors facing the steepest risks and innovation hubs like San Jose experiencing 9.9% job loss potential. Writers, programmers, and web designers are most at risk, with $757B in annual income threatened across the economy.",
       "weekFeatured": "2026-03-25",
       "tier": 2
     },
@@ -167,7 +167,7 @@
       "publisher": "Anthropic",
       "date": "2026-03-24",
       "url": "https://www.anthropic.com/research/economic-index-march-2026-report",
-      "takeaway": "49% of jobs have at least a quarter of their tasks performed using Claude. High-tenure users show 10% higher success rates, evidence consistent with learning-by-doing. Coding tasks migrating from Claude.ai to automated API workflows (+14% since Aug 2025). Early adopters with high-skill tasks have more successful interactions, identifying a skill-biased adoption channel that may deepen labor market inequality. Average task value on Claude.ai declined from $49.3 to $47.9/hr as adoption broadened to lower-wage tasks.",
+      "takeaway": "Nearly half of jobs now use Claude for at least a quarter of their tasks, with high-tenure users achieving 10% higher success rates, while broader adoption has shifted task composition toward lower-wage work ($49.3 to $47.9/hr) and concentrated early success among high-skill users.",
       "weekFeatured": "2026-03-24",
       "tier": 2
     },
@@ -177,7 +177,7 @@
       "publisher": "NBER",
       "date": "2026-01-01",
       "url": "https://www.nber.org/papers/w34639",
-      "takeaway": "Formal model showing that when tasks are quality complements (O-ring production), partial automation triggers a 'focus' mechanism that can raise worker income. Task-by-task substitution logic is incomplete because automating one task changes the return to automating others. Automation decisions can require bundled adoption even when quality improves smoothly. Linear exposure indices overstate displacement when tasks are complements. The relevant object is not average task exposure but the structure of bottlenecks.",
+      "takeaway": "When tasks are quality complements, automating one task increases returns to automating others, creating bundles where partial automation can raise worker incomes by forcing focus on remaining tasks. Standard displacement measures fail because they ignore task complementarities and bottleneck structures.",
       "weekFeatured": "2026-03-23",
       "tier": 1
     },
@@ -187,7 +187,7 @@
       "publisher": "Substack (U of Chicago Booth)",
       "date": "2026-03-23",
       "url": "https://aleximas.substack.com/p/how-will-ai-driven-automation-actually",
-      "takeaway": "Applies Gans & Goldfarb's O-ring model of automation to show that AI exposure measures are routinely misinterpreted as displacement forecasts. In jobs with many complementary tasks (consulting, medicine, academia), partial automation triggers a 'focus effect' that raises worker productivity and wages. Low-dimensional jobs (trucking, warehousing) face the real displacement risk because firms have stronger financial incentive to fully automate when few non-automated tasks remain. Whether exposure leads to better or worse outcomes depends on demand elasticity, job dimensionality, and firm incentives -- not average task exposure alone.",
+      "takeaway": "AI displacement risk depends on job structure: high-dimensional jobs (consulting, medicine) see wage gains from partial automation due to productivity focus effects, while low-dimensional jobs (trucking, warehousing) face genuine displacement because firms have stronger incentives to fully automate when few complementary tasks remain.",
       "weekFeatured": "2026-03-23",
       "tier": 4
     },
@@ -197,7 +197,7 @@
       "publisher": "Journal of Economic Perspectives",
       "date": "2015-07-01",
       "url": "https://pubs.aeaweb.org/doi/pdfplus/10.1257/jep.29.3.31",
-      "takeaway": "Surveys 250 years of technological anxiety across three recurring themes: displacement fears, work dehumanization, and stagnation pessimism. Finds predictions of widespread technological unemployment were 'by and large, wrong' but cautions against trivializing costs to the displaced. Ricardo reversed his own position on machinery in 1821. The Luddite riots were driven more by wages than anti-machinery sentiment. Annual hours worked halved from 2,950 (1870) to 1,500 (1998). Concludes with Amara's Law: we overestimate technology's short-run effect and underestimate its long-run effect.",
+      "takeaway": "Despite 250 years of predictions that technological advancement would cause mass unemployment, those forecasts proved largely wrong—though the study acknowledges real costs to displaced workers. Annual working hours fell from 2,950 in 1870 to 1,500 in 1998, demonstrating that technology's long-run economic benefits outweigh short-term disruption.",
       "weekFeatured": "2026-03-20",
       "tier": 1
     },
@@ -207,7 +207,7 @@
       "publisher": "The Budget Lab at Yale",
       "date": "2026-03-19",
       "url": "https://budgetlab.yale.edu/research/evaluating-impact-ai-labor-market-januaryfebruary-cps-update",
-      "takeaway": "Jan/Feb 2026 CPS data and Anthropic's new 'Observed Exposure' metric do not suggest any substantial AI labor market impact. Occupational dissimilarity, industry dissimilarity, and all exposure/usage metrics remain flat, within historical ranges, or on pre-existing trends. OpenAI exposure quintiles stable. No relationship between automation/augmentation measures and employment or unemployment changes.",
+      "takeaway": "January-February 2026 CPS data shows no measurable AI impact on labor markets, with all exposure metrics, occupational shifts, and employment changes remaining within historical ranges.",
       "weekFeatured": "2026-03-20",
       "tier": 1
     },
@@ -217,7 +217,7 @@
       "publisher": "Bloomberg",
       "date": "2026-03-20",
       "url": "https://www.bloomberg.com/news/articles/2026-03-20/to-understand-ai-s-future-read-dickens-bronte-industrial-revolution-novels",
-      "takeaway": "Industrial Revolution novels illuminate what living through epochal technological change feels like. Handloom weavers -- the white-collar workers of their day -- saw real wages fall by half between 1806 and 1820. Recommends Shirley (Bronte), North and South (Gaskell), and A Christmas Carol (Dickens) as guides to understanding technological disruption, labor unrest, and society's response to those who lost out. AI transition may be faster and bigger, but the human dynamics are strikingly familiar.",
+      "takeaway": "Victorian industrial novels offer insight into technological disruption: handloom weavers experienced 50% real wage declines (1806-1820), and the resulting labor unrest and social upheaval parallels dynamics we may face during AI's transition, though potentially at a faster scale.",
       "weekFeatured": "2026-03-20",
       "tier": 3
     },
@@ -227,7 +227,7 @@
       "publisher": "Personal Blog (Wispr CTO)",
       "date": "2026-03-18",
       "url": "https://sahajgarg.github.io/blog/cognitive-labor/",
-      "takeaway": "Stanford grad turned AI startup CTO argues cognitive labor automation is months away, not decades. Reports 4-week engineering tasks completed in 45 minutes with AI. Physical labor automation follows on 5-10 year timeline as AI-compressed R&D accelerates robotics. The identity crisis for displaced knowledge workers may be worse than the economic loss, paralleling Rust Belt deindustrialization at larger scale. Post-abundance world splits into zero-marginal-cost cognitive goods and still-scarce physical/experiential goods.",
+      "takeaway": "AI will automate cognitive labor within months, with a Stanford CTO reporting 4-week engineering tasks completed in 45 minutes, followed by physical labor automation in 5-10 years as accelerated R&D advances robotics. The resulting displacement may cause deeper identity crises for knowledge workers than economic harm, creating a bifurcated economy of zero-cost cognitive goods and scarce physical/experiential goods.",
       "weekFeatured": "2026-03-19",
       "tier": 4
     },
@@ -237,7 +237,7 @@
       "publisher": "Anthropic",
       "date": "2026-03-18",
       "url": "https://www.anthropic.com/features/81k-interviews",
-      "takeaway": "Anthropic invited Claude users to share how they use AI, what they dream it could make possible, and what they fear it might do. Nearly 81,000 people responded in one week — the largest qualitative study of its kind.",
+      "takeaway": "Anthropic surveyed 81,000 Claude users about their AI usage, aspirations, and concerns in the largest qualitative study of its kind, completed in one week.",
       "weekFeatured": "2026-03-18",
       "tier": 3
     },
@@ -247,7 +247,7 @@
       "publisher": "Federal Reserve Bank of Atlanta / Duke University",
       "date": "2026-03-13",
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6410338",
-      "takeaway": "Survey of ~750 CFOs: <0.4% aggregate job loss expected, productivity paradox (reported gains 3x implied), finance leads at >2% productivity growth. Routine clerical roles declining 0.76pp/yr offset by skilled-technical gains. 85.4% of firms expect to invest in AI in 2026.",
+      "takeaway": "CFOs surveyed expect minimal aggregate job loss (<0.4%) but report productivity gains three times higher than their workforce changes imply, with finance roles seeing >2% productivity growth while routine clerical roles decline 0.76 percentage points annually. 85.4% of firms plan to invest in AI in 2026.",
       "weekFeatured": "2026-03-17",
       "tier": 1
     },
@@ -257,7 +257,7 @@
       "publisher": "RATIO Institute / Örebro University",
       "date": "2026-03-16",
       "url": "https://cms.ratio.se/app/uploads/2026/03/lodefalk_march16_paper_v2-kombinerades.pdf",
-      "takeaway": "Swedish population register data (4.6M job ads, full-population employer-employee records): 22-25yr employment in high-AI occupations fell 5.5% by 2025H1 vs low-exposure occupations within same employers. 50+ workers rose 1.3%. Broad posting decline driven by Riksbank rate hike, not AI. Effect ~2x larger for young women. Replicates US 'canaries' finding (Brynjolfsson et al.) in Nordic register data; contrasts with Finnish null.",
+      "takeaway": "Swedish employer data show that employment of 22-25-year-olds in high-AI occupations declined 5.5% relative to low-AI occupations by 2025H1, while workers 50+ saw 1.3% gains, with effects twice as large for young women. This replicates prior US findings of AI disproportionately affecting young workers' hiring prospects.",
       "weekFeatured": "2026-03-17",
       "tier": 1
     },
@@ -267,7 +267,7 @@
       "publisher": "Washington Post",
       "date": "2026-03-16",
       "url": "https://www.washingtonpost.com/technology/interactive/2026/jobs-most-affected-ai-automation/",
-      "takeaway": "Interactive mapping of 350+ occupations by AI exposure and adaptability using GovAI/Brookings research. 6.1M clerical/admin workers most vulnerable (86% women). Consensus: no measurable aggregate displacement yet, but white-collar jobs first in line. Economists stress humility — predictions have historically been poor.",
+      "takeaway": "6.1 million clerical and administrative workers—86% women—face the highest AI threat due to low adaptability, while white-collar jobs are positioned to be disrupted first despite no measurable job displacement occurring yet.",
       "weekFeatured": "2026-03-16",
       "tier": 3
     },
@@ -277,7 +277,7 @@
       "publisher": "ESB / Rabobank",
       "date": "2026-01-22",
       "url": "https://esb.nu/dalende-werkgelegenheid-onder-nederlandse-jongeren-die-concurreren-met-genai/",
-      "takeaway": "Dutch youth employment in GenAI-vulnerable occupations fell 13% from Q4 2022 to Q3 2025, while other occupations rose 3%. Job postings in vulnerable occupations down 25% vs <10% elsewhere. ICT sector grew 6.5% but youth employment fell 11%. Mirrors US findings from Brynjolfsson et al. (2025).",
+      "takeaway": "Dutch youth employment in GenAI-vulnerable occupations declined 13% from Q4 2022 to Q3 2025, while employment in other sectors grew 3%, with job postings in vulnerable occupations dropping 25%.",
       "weekFeatured": "2026-03-12",
       "tier": 1
     },
@@ -287,7 +287,7 @@
       "publisher": "Twitter/X (Hebbia)",
       "date": "2026-03-11",
       "url": "https://x.com/gsivulka/status/2031797989908627849",
-      "takeaway": "Individual AI productivity gains (10x) aren't translating to firm-level value. Historical parallel: electrified textile mills saw no output gains for 30 years until factories were redesigned. Proposes 'Institutional Intelligence' framework with 7 pillars for organizational AI adoption.",
+      "takeaway": "Individual AI productivity gains of 10x are not translating to firm-level value, mirroring how electrified textile mills saw no output gains for 30 years until organizational redesign. The research proposes an 'Institutional Intelligence' framework with 7 pillars to bridge this gap.",
       "weekFeatured": "2026-03-10",
       "tier": 4
     },
@@ -297,7 +297,7 @@
       "publisher": "Substack",
       "date": "2026-03-10",
       "url": "https://davidoks.blog/p/why-the-atm-didnt-kill-bank-teller",
-      "takeaway": "ATMs didn't reduce bank teller employment due to complementarity, but iPhones/mobile banking caused a 51% collapse (332K to 164K, 2010-2022). Task automation within existing paradigms rarely displaces; paradigm replacement does. AI is still in the 'slotting in' phase.",
+      "takeaway": "ATMs didn't reduce bank teller jobs due to complementarity, but iPhones caused a 51% collapse in teller employment (332K to 164K, 2010-2022). Paradigm replacement displaces jobs while task automation within existing systems does not.",
       "weekFeatured": "2026-03-10",
       "tier": 4
     },
@@ -497,7 +497,7 @@
       "publisher": "Ghosts of Electricity (Substack)",
       "date": "2026-01-07",
       "url": "https://aleximas.substack.com/p/will-advanced-ai-lead-to-negative",
-      "takeaway": "Formal models show AGI-driven demand collapse is theoretically possible if labor share collapses and capital owners are satiated, but conditions are extreme. Benzell et al.'s OLG model shows 'immiserating growth' via capital decumulation when wages fall and savings decline. Imas concludes negative growth is unlikely but demand-side forces will moderate AGI growth expectations. Recommends sovereign wealth funds for broad capital ownership.",
+      "takeaway": "Formal economic models show that advanced AI could theoretically cause negative economic growth if labor income collapses and capital owners stop consuming, though this requires extreme conditions. Most economists consider this unlikely but expect demand-side constraints to moderate AI's growth impact.",
       "weekFeatured": "2026-01-07",
       "tier": 4
     }
