@@ -36,11 +36,11 @@ interface MonthGroup {
 // Constants
 // ---------------------------------------------------------------------------
 
-const BLOCK = 8;
-const GAP = 2;
+const BLOCK = 12;
+const GAP = 3;
 const STEP = BLOCK + GAP;
 const MAX_BLOCKS = 5;
-const BASELINE_Y = 58;
+const BASELINE_Y = 82; // 5 blocks * 15px + 4px headroom
 const SVG_HEIGHT = BASELINE_Y + 18; // 18px for year labels below baseline
 
 const C_UP = "#16a34a";
@@ -109,6 +109,27 @@ export default function SignalStrip({
   const chartW = width - paddingLeft - paddingRight;
   const toX = (ts: number) =>
     paddingLeft + ((ts - minTs) / (maxTs - minTs)) * chartW;
+
+  // Merge groups whose pixel positions are within STEP px of each other to
+  // avoid the "wide block" artifact caused by adjacent months overlapping.
+  const displayGroups = useMemo<MonthGroup[]>(() => {
+    const result: MonthGroup[] = [];
+    for (const g of groups) {
+      const x = paddingLeft + ((g.timestamp - minTs) / (maxTs - minTs)) * (width - paddingLeft - paddingRight);
+      if (x < paddingLeft - BLOCK || x > width - paddingRight + BLOCK) continue;
+      const last = result[result.length - 1];
+      const lastX = last ? paddingLeft + ((last.timestamp - minTs) / (maxTs - minTs)) * (width - paddingLeft - paddingRight) : -Infinity;
+      if (last && x - lastX < STEP) {
+        last.ups = [...last.ups, ...g.ups];
+        last.downs = [...last.downs, ...g.downs];
+        last.neutrals = [...last.neutrals, ...g.neutrals];
+        last.all = [...last.all, ...g.all];
+      } else {
+        result.push({ ...g, ups: [...g.ups], downs: [...g.downs], neutrals: [...g.neutrals], all: [...g.all] });
+      }
+    }
+    return result;
+  }, [groups, width, paddingLeft, paddingRight, minTs, maxTs]);
 
   // Year tick marks
   const yearTicks = useMemo(() => {
@@ -197,9 +218,9 @@ export default function SignalStrip({
         })()}
 
         {/* Signal columns */}
-        {groups.map((g) => {
+        {displayGroups.map((g) => {
           const x = toX(g.timestamp);
-          if (x < paddingLeft - 8 || x > width - paddingRight + 8) return null;
+          if (x < paddingLeft - BLOCK || x > width - paddingRight + BLOCK) return null;
 
           // Net cancellation logic
           const net = g.ups.length - g.downs.length;
