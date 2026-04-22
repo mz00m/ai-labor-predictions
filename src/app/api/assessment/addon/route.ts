@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getAssessment, saveAssessmentReport } from "@/lib/assessment/db";
+import { saveAssessmentReport } from "@/lib/assessment/db";
 import { generatePolicyAndPrompts } from "@/lib/assessment/analyze";
+import { requireAssessmentOwner } from "@/lib/assessment/authz";
 
 /**
  * Generate the policy + prompt library add-on content for a paid assessment.
@@ -14,11 +15,11 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Missing assessment ID" }, { status: 400 });
     }
 
-    const assessment = await getAssessment(assessmentId);
-
-    if (!assessment) {
-      return NextResponse.json({ error: "Assessment not found" }, { status: 404 });
+    const authz = await requireAssessmentOwner(req, assessmentId);
+    if (!authz.ok) {
+      return NextResponse.json({ error: authz.error }, { status: authz.status });
     }
+    const { assessment } = authz;
 
     if (!assessment.addOns.policyAndPrompts) {
       return NextResponse.json({ error: "Add-on not purchased" }, { status: 403 });

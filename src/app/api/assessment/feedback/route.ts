@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { saveFeedback } from "@/lib/assessment/db";
+import { requireAssessmentOwner } from "@/lib/assessment/authz";
 
 export async function POST(req: NextRequest) {
   try {
@@ -7,6 +8,11 @@ export async function POST(req: NextRequest) {
 
     if (!assessmentId || typeof rating !== "number" || rating < 1 || rating > 5) {
       return NextResponse.json({ error: "Invalid feedback data" }, { status: 400 });
+    }
+
+    const authz = await requireAssessmentOwner(req, assessmentId);
+    if (!authz.ok) {
+      return NextResponse.json({ error: authz.error }, { status: authz.status });
     }
 
     await saveFeedback(assessmentId, rating, comment);
