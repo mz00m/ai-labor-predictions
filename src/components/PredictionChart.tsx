@@ -95,40 +95,40 @@ function CustomTooltip({
   const pointSources = sources.filter((s) => data.sourceIds.includes(s.id));
 
   return (
-    <div className="bg-[var(--background)] border border-[var(--border)] rounded-lg p-3.5 max-w-xs shadow-sm">
+    <div
+      className="bg-white rounded-xl p-4 max-w-[280px]"
+      style={{ border: "1px solid rgba(0,0,0,0.10)", boxShadow: "0 8px 28px rgba(0,0,0,0.13), 0 2px 8px rgba(0,0,0,0.07)" }}
+    >
       {/* Data point section (only for real points) */}
       {!data.isPhantom && data.value != null && (
         <>
-          <p className="text-sm font-medium text-[var(--foreground)]">
+          <p className="text-xs font-semibold uppercase tracking-wider text-[var(--muted)] mb-1">
             {data.displayDate}
           </p>
           {data.dataType === "projected" && (
-            <span className="inline-block text-2xs font-medium text-white bg-accent/70 rounded px-1.5 py-0.5 mb-1">
-              Projected / Forecast
+            <span className="inline-block text-xs font-medium text-white bg-accent/70 rounded px-1.5 py-0.5 mb-1.5">
+              Projected
             </span>
           )}
-          <p className="text-heading-sm font-bold text-[var(--foreground)] stat-number">
-            {data.value}
-            {unit}
+          <p className="text-heading-sm font-black text-[var(--foreground)] stat-number leading-none mb-2">
+            {data.value}{unit}
           </p>
           {data.confidenceLow != null && data.confidenceHigh != null && (
-            <p className="text-xs text-[var(--muted)]">
-              Range: {data.confidenceLow}
-              {unit} to {data.confidenceHigh}
-              {unit}
+            <p className="text-xs text-[var(--muted)] mb-1.5">
+              Range: {data.confidenceLow}{unit}–{data.confidenceHigh}{unit}
             </p>
           )}
-          <div className="mt-1.5 flex items-center gap-1.5">
+          <div className="flex items-center gap-1.5 mb-2">
             <span
-              className="inline-block w-2 h-2 rounded-full"
+              className="inline-block w-2 h-2 rounded-full shrink-0"
               style={{ backgroundColor: tierConfig.color }}
             />
             <span className="text-xs text-[var(--muted)]">{tierConfig.label}</span>
           </div>
           {(data as ChartDataPoint & { metricType?: MetricType }).metricType && (
-            <div className="mt-1 flex items-center gap-1.5">
+            <div className="flex items-center gap-1.5 mb-2">
               <span
-                className="inline-block w-2 h-2 rounded-sm"
+                className="inline-block w-2 h-2 rounded-sm shrink-0"
                 style={{ backgroundColor: getMetricTypeConfig((data as ChartDataPoint & { metricType: MetricType }).metricType).color }}
               />
               <span className="text-xs text-[var(--muted)]">
@@ -137,12 +137,14 @@ function CustomTooltip({
             </div>
           )}
           {pointSources.length > 0 && (
-            <div className="mt-2 border-t border-card pt-1.5">
+            <div className="border-t border-black/[0.07] pt-2 space-y-1.5">
               {pointSources.map((s) => (
-                <p key={s.id} className="text-xs text-[var(--accent-text)]">
-                  {s.publisher}: {s.title.slice(0, 55)}
-                  {s.title.length > 55 ? "..." : ""}
-                </p>
+                <div key={s.id}>
+                  <p className="text-xs font-semibold text-[var(--foreground)]">{s.publisher}</p>
+                  <p className="text-xs text-[var(--muted)] leading-snug mt-0.5">
+                    {s.title.slice(0, 72)}{s.title.length > 72 ? "…" : ""}
+                  </p>
+                </div>
               ))}
             </div>
           )}
@@ -151,9 +153,9 @@ function CustomTooltip({
 
       {/* Overlay section */}
       {matchingOverlays.length > 0 && (
-        <div className={!data.isPhantom && data.value != null ? "mt-2 border-t border-card pt-2" : ""}>
+        <div className={!data.isPhantom && data.value != null ? "mt-2.5 border-t border-black/[0.07] pt-2.5" : ""}>
           {data.isPhantom && (
-            <p className="text-sm font-medium text-[var(--foreground)] mb-1.5">
+            <p className="text-xs font-semibold uppercase tracking-wider text-[var(--muted)] mb-1.5">
               {data.displayDate}
             </p>
           )}
@@ -170,8 +172,8 @@ function CustomTooltip({
               o.sourceIds.includes(s.id)
             );
             return (
-              <div key={`overlay-tip-${i}`} className={i > 0 ? "mt-2 border-t border-card pt-2" : ""}>
-                <div className="flex items-start gap-1.5">
+              <div key={`overlay-tip-${i}`} className={i > 0 ? "mt-2 border-t border-black/[0.07] pt-2" : ""}>
+                <div className="flex items-start gap-1.5 mb-1.5">
                   <span
                     className="text-md font-bold leading-tight mt-px shrink-0"
                     style={{ color }}
@@ -182,9 +184,9 @@ function CustomTooltip({
                     {o.label}
                   </p>
                 </div>
-                <div className="mt-1 flex items-center gap-1.5">
+                <div className="flex items-center gap-1.5">
                   <span
-                    className="inline-block w-2 h-2 rounded-full"
+                    className="inline-block w-2 h-2 rounded-full shrink-0"
                     style={{ backgroundColor: oTierConfig.color }}
                   />
                   <span className="text-xs text-[var(--muted)]">
@@ -192,12 +194,14 @@ function CustomTooltip({
                   </span>
                 </div>
                 {overlaySources.length > 0 && (
-                  <div className="mt-1">
+                  <div className="mt-1.5 space-y-1">
                     {overlaySources.map((s) => (
-                      <p key={s.id} className="text-xs text-[var(--accent-text)]">
-                        {s.publisher}: {s.title.slice(0, 55)}
-                        {s.title.length > 55 ? "..." : ""}
-                      </p>
+                      <div key={s.id}>
+                        <p className="text-xs font-semibold text-[var(--foreground)]">{s.publisher}</p>
+                        <p className="text-xs text-[var(--muted)] leading-snug mt-0.5">
+                          {s.title.slice(0, 72)}{s.title.length > 72 ? "…" : ""}
+                        </p>
+                      </div>
                     ))}
                   </div>
                 )}
@@ -207,8 +211,8 @@ function CustomTooltip({
         </div>
       )}
 
-      <p className="text-2xs text-[var(--muted)] mt-1.5 opacity-60">
-        Click to view source ↓
+      <p className="text-xs text-[var(--muted)] mt-2 opacity-50">
+        Click to jump to source ↓
       </p>
     </div>
   );
@@ -722,7 +726,7 @@ export default function PredictionChart({
                 x={date}
                 stroke={groupedOverlayColor(group.map((g) => g.direction))}
                 strokeWidth={10}
-                strokeOpacity={0.18}
+                strokeOpacity={0.24}
                 ifOverflow="visible"
                 onClick={() => onDotClick?.(group.flatMap((g) => g.sourceIds))}
                 onMouseEnter={(e: React.MouseEvent) => handleOverlayMouseEnter(group[0], e)}
@@ -857,8 +861,11 @@ export default function PredictionChart({
             pointerEvents: "none",
           }}
         >
-          <div className="bg-[var(--background)] border border-[var(--border)] rounded-lg p-3.5 max-w-xs shadow-sm">
-            <p className="text-sm font-medium text-[var(--foreground)] mb-1.5">
+          <div
+            className="bg-white rounded-xl p-4 max-w-[280px]"
+            style={{ border: "1px solid rgba(0,0,0,0.10)", boxShadow: "0 8px 28px rgba(0,0,0,0.13), 0 2px 8px rgba(0,0,0,0.07)" }}
+          >
+            <p className="text-xs font-semibold uppercase tracking-wider text-[var(--muted)] mb-1.5">
               {hoverOverlay.overlay.dateStr}
             </p>
             {(() => {
@@ -869,30 +876,32 @@ export default function PredictionChart({
               const overlaySources = sources.filter((s) => o.sourceIds.includes(s.id));
               return (
                 <>
-                  <div className="flex items-start gap-1.5">
+                  <div className="flex items-start gap-1.5 mb-1.5">
                     <span className="text-md font-bold leading-tight mt-px shrink-0" style={{ color }}>
                       {arrow}
                     </span>
                     <p className="text-sm leading-snug text-[var(--foreground)]">{o.label}</p>
                   </div>
-                  <div className="mt-1 flex items-center gap-1.5">
-                    <span className="inline-block w-2 h-2 rounded-full" style={{ backgroundColor: oTierConfig.color }} />
+                  <div className="flex items-center gap-1.5">
+                    <span className="inline-block w-2 h-2 rounded-full shrink-0" style={{ backgroundColor: oTierConfig.color }} />
                     <span className="text-xs text-[var(--muted)]">{oTierConfig.label}</span>
                   </div>
                   {overlaySources.length > 0 && (
-                    <div className="mt-1">
+                    <div className="mt-2 space-y-1.5">
                       {overlaySources.map((s) => (
-                        <p key={s.id} className="text-xs text-[var(--accent-text)]">
-                          {s.publisher}: {s.title.slice(0, 55)}
-                          {s.title.length > 55 ? "..." : ""}
-                        </p>
+                        <div key={s.id}>
+                          <p className="text-xs font-semibold text-[var(--foreground)]">{s.publisher}</p>
+                          <p className="text-xs text-[var(--muted)] leading-snug mt-0.5">
+                            {s.title.slice(0, 72)}{s.title.length > 72 ? "…" : ""}
+                          </p>
+                        </div>
                       ))}
                     </div>
                   )}
                 </>
               );
             })()}
-            <p className="text-2xs text-[var(--muted)] mt-1.5 opacity-60">Click to view source ↓</p>
+            <p className="text-xs text-[var(--muted)] mt-2 opacity-50">Click to jump to source ↓</p>
           </div>
         </div>
       )}
