@@ -79,7 +79,7 @@ export async function POST(req: NextRequest) {
   const client = new Anthropic({ apiKey });
 
   const stream = await client.messages.create({
-    model: "claude-sonnet-4-6",
+    model: "claude-mythos-0417",
     max_tokens: 2048,
     stream: true,
     system: `You are a research assistant for jobsdata.ai, a labor market signals dashboard tracking AI's impact on employment. You have access to the project's knowledge base — 18 prediction graphs, 530+ verified sources, and methodology documentation.
