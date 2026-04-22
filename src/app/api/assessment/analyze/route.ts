@@ -18,6 +18,7 @@ import {
   mergePartialReport,
 } from "@/lib/assessment/db";
 import { signToken, makeSessionCookie } from "@/lib/assessment/auth";
+import { requireAssessmentOwner } from "@/lib/assessment/authz";
 // Allow up to 300 seconds for Claude API call + processing
 // Vercel Pro plan supports up to 300s
 export const maxDuration = 300;
@@ -50,6 +51,17 @@ export async function POST(req: NextRequest) {
     let websiteContent: string | null = null;
     let assessmentId: string | null = assessmentIdParam;
     let sessionEmail: string | null = null; // Set when we need to issue a session cookie
+
+    // Any request that targets an existing assessment (continuation OR step-1
+    // rerun) must prove ownership via the session cookie. New submissions skip
+    // this — the `email` field in the form is the declared identity and the
+    // session cookie is minted on first submit.
+    if (assessmentIdParam) {
+      const authz = await requireAssessmentOwner(req, assessmentIdParam);
+      if (!authz.ok) {
+        return NextResponse.json({ error: authz.error }, { status: authz.status });
+      }
+    }
 
     if (isContinuation) {
       // Steps 2-4: load intake from existing assessment, skip file/website processing
