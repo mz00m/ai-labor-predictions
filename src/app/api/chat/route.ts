@@ -1,6 +1,7 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { buildChatContext } from "@/lib/chat/context-builder";
 import { getDb } from "@/lib/db";
+import { CLAUDE_HAIKU } from "@/lib/claude-models";
 
 export const dynamic = "force-dynamic";
 
@@ -128,7 +129,7 @@ export async function POST(request: Request) {
   let stream;
   try {
     stream = await client.messages.stream({
-      model: "claude-haiku-4-5-20251001",
+      model: CLAUDE_HAIKU,
       max_tokens: 400,
       system: systemPrompt,
       messages: trimmedMessages,

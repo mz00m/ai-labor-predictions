@@ -8,6 +8,7 @@ import type {
   GraphInfo,
 } from "./types";
 import type { EvidenceTier } from "../../../src/lib/types";
+import { CLAUDE_SONNET } from "../../../src/lib/claude-models";
 
 const SYSTEM_PROMPT = `You are a precision research data extraction assistant for an AI labor market prediction tracker. Your job is to extract ALL quantitative statistics from a source that relate to AI's impact on the labor market, and map each to the correct prediction graph.
 
@@ -243,12 +244,12 @@ export async function extractStatistics(
 
   if (verbose) {
     console.log(
-      `  Sending ${userMessage.length} chars to Claude (model: ${model || "claude-sonnet-4-6"})...`
+      `  Sending ${userMessage.length} chars to Claude (model: ${model || CLAUDE_SONNET})...`
     );
   }
 
   const response = await client.messages.create({
-    model: model || "claude-sonnet-4-6",
+    model: model || CLAUDE_SONNET,
     max_tokens: 8192,
     system: SYSTEM_PROMPT,
     tools: [EXTRACTION_TOOL],

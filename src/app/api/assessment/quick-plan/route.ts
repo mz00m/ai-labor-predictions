@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import Anthropic from "@anthropic-ai/sdk";
 import { z } from "zod";
+import { CLAUDE_HAIKU } from "@/lib/claude-models";
 
 export const maxDuration = 300;
 
@@ -167,7 +168,7 @@ export async function POST(req: NextRequest) {
 
     try {
       const message = await client.messages.create({
-        model: "claude-haiku-4-5-20251001",
+        model: CLAUDE_HAIKU,
         max_tokens: 1024,
         messages: [
           {

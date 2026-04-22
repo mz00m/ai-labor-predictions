@@ -45,3 +45,8 @@ next-env.d.ts
 !.claude/commands/
 .gstack/
 wiki/
+
+
+# Python bytecode
+__pycache__/
+*.pyc

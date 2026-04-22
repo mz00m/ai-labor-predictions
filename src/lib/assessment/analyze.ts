@@ -30,6 +30,7 @@ import {
   Step3ToolsSchema,
   Step4RisksSchema,
 } from "./schemas";
+import { CLAUDE_SONNET, CLAUDE_HAIKU } from "@/lib/claude-models";
 
 const anthropic = new Anthropic();
 
@@ -83,7 +84,7 @@ Key recommendations from report:
 ${existingReport.toolRecommendations.map((r) => `- ${r.category}: ${r.purpose}`).join("\n")}`;
 
   const response = await anthropic.messages.create({
-    model: "claude-sonnet-4-6",
+    model: CLAUDE_SONNET,
     max_tokens: 6000,
     system: [
       {
@@ -337,7 +338,7 @@ async function callClaude(
     try {
       const response = await anthropic.messages.create(
         {
-          model: options?.model || "claude-sonnet-4-6",
+          model: options?.model || CLAUDE_SONNET,
           max_tokens: options?.maxTokens || 4000,
           system: [
             {
@@ -475,7 +476,7 @@ The extractedContext will be carried to subsequent steps, so extract everything 
 
   try {
     const parsed = await callClaude(systemPrompt, userPrompt, {
-      model: "claude-haiku-4-5-20251001", // Haiku for speed — step 1 is extraction, not deep analysis
+      model: CLAUDE_HAIKU, // Haiku for speed — step 1 is extraction, not deep analysis
       maxTokens: 3000,
     });
 
