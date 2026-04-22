@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run compile-wiki && npm run compile-kb && next build",
     "start": "next start",
     "lint": "next lint",
     "digest": "tsx scripts/generate-digest.ts",
@@ -15,7 +15,7 @@
     "digest:dry-run": "tsx scripts/fetch-sources.ts && tsx scripts/synthesize-digest.ts --dry-run",
     "ingest": "tsx scripts/ingest-source.ts",
     "ingest:from-digest": "tsx scripts/ingest-from-digest.ts",
-    "ingest:apply": "tsx scripts/apply-ingestion.ts && npm run compile-wiki",
+    "ingest:apply": "tsx scripts/apply-ingestion.ts && npm run compile-wiki && npm run compile-kb",
     "backfill:content": "tsx scripts/backfill-source-content.ts --skip-existing",
     "build:search": "tsx scripts/build-search-index.ts",
     "backfill:content:dry-run": "tsx scripts/backfill-source-content.ts --dry-run",
