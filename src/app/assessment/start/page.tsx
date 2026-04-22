@@ -235,12 +235,17 @@ export default function AssessmentStartPage() {
         formPayload.append("files", entry.file);
       }
 
-      // Retry up to 2 times on network failures with a 120s timeout per attempt
+      // Retry up to 2 times on network failures. The timeout is aligned with
+      // the server's maxDuration (300s) minus a ~30s buffer for serialization
+      // and network; Sonnet 4.6 on step 1 is usually fast (Haiku model, ~30s)
+      // but we keep parity with the progress page so slow initial calls don't
+      // abort prematurely.
+      const INITIAL_STEP_TIMEOUT_MS = 270_000;
       let lastErr: Error | null = null;
       for (let attempt = 0; attempt < 2; attempt++) {
         try {
           const controller = new AbortController();
-          const timeout = setTimeout(() => controller.abort(), 120_000);
+          const timeout = setTimeout(() => controller.abort(), INITIAL_STEP_TIMEOUT_MS);
 
           const res = await fetch("/api/assessment/analyze", {
             method: "POST",

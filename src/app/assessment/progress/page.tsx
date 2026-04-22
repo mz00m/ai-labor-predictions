@@ -12,6 +12,7 @@ import type {
   RoiProjection,
 } from "@/lib/assessment/types";
 import { ASSESSMENT_STEPS, STEP_LABELS, STEP_DESCRIPTIONS } from "@/lib/assessment/types";
+import { STEP_TIMEOUT_MS, tryRecoverStepFromDb } from "./recovery";
 
 const STEP_LOADING_MESSAGES: Record<AssessmentStep, string[]> = {
   profile: [
@@ -127,12 +128,37 @@ export default function ProgressPage() {
         formPayload.append("email", "");
       }
 
-      // Retry up to 2 times on network/server failures with 120s timeout
+      // Advance local state after the step is confirmed complete (either via
+      // the direct fetch response or via a DB recovery poll). Extracted so
+      // both the happy path and the recovery path go through the same logic.
+      const completeStep = (nextReportPatch?: Partial<AssessmentReport>, fullAssessment?: Assessment) => {
+        setAssessment((prev) => {
+          if (fullAssessment) return fullAssessment;
+          if (!prev) return prev;
+          return {
+            ...prev,
+            report: { ...(prev.report || {} as AssessmentReport), ...(nextReportPatch || {}) },
+          };
+        });
+        setCompletedSteps((prev) => new Set([...Array.from(prev), step]));
+        const stepIndex = ASSESSMENT_STEPS.indexOf(step);
+        if (stepIndex < ASSESSMENT_STEPS.length - 1) {
+          setActiveStep(ASSESSMENT_STEPS[stepIndex + 1]);
+        } else {
+          router.push(`/assessment/report?id=${id}`);
+        }
+      };
+
+      // Retry up to 2 times on network/server failures with a long timeout
+      // aligned to the server's maxDuration. On abort or 5xx, fall through
+      // to the DB recovery poll before surfacing an error to the user —
+      // the server often finishes the Claude call even when the fetch is
+      // terminated client-side.
       let lastErr: Error | null = null;
       for (let attempt = 0; attempt < 2; attempt++) {
         try {
           const controller = new AbortController();
-          const timeout = setTimeout(() => controller.abort(), 120_000);
+          const timeout = setTimeout(() => controller.abort(), STEP_TIMEOUT_MS);
 
           const res = await fetch("/api/assessment/analyze", {
             method: "POST",
@@ -150,35 +176,31 @@ export default function ProgressPage() {
           }
 
           const data = await res.json();
-
-          // Merge the new step results into the local assessment
-          setAssessment((prev) => {
-            if (!prev) return prev;
-            return {
-              ...prev,
-              report: { ...(prev.report || {} as AssessmentReport), ...data.report },
-            };
-          });
-
-          setCompletedSteps((prev) => new Set([...Array.from(prev), step]));
-
-          // Move to next step
-          const stepIndex = ASSESSMENT_STEPS.indexOf(step);
-          if (stepIndex < ASSESSMENT_STEPS.length - 1) {
-            setActiveStep(ASSESSMENT_STEPS[stepIndex + 1]);
-          } else {
-            // All steps done, go to report
-            router.push(`/assessment/report?id=${id}`);
-          }
+          completeStep(data.report);
           return; // Success
         } catch (err) {
           lastErr = err instanceof Error ? err : new Error("An error occurred");
-          if (lastErr.name === "AbortError") {
-            throw new Error("The request took too long. Please try again.");
+          // 4xx client errors: no point retrying and no point polling — the
+          // request was malformed; surface immediately.
+          if (lastErr.message.startsWith("Failed to generate")) {
+            throw lastErr;
           }
-          if (attempt < 1) {
+          if (lastErr.name !== "AbortError" && attempt < 1) {
+            // Retryable 5xx: brief pause then try again.
             await new Promise((r) => setTimeout(r, 2000));
+            continue;
           }
+          // Either we aborted, or we've exhausted retries on 5xx. Before
+          // surfacing an error, check whether the server actually finished.
+          const recovered = await tryRecoverStepFromDb(id, step);
+          if (recovered) {
+            completeStep(undefined, recovered);
+            return;
+          }
+          if (lastErr.name === "AbortError") {
+            throw new Error("This step took longer than expected and we couldn't recover it. Please try again.");
+          }
+          break;
         }
       }
       throw lastErr || new Error(`Failed to generate ${step}. Please try again.`);
@@ -424,13 +446,18 @@ export default function ProgressPage() {
               <div className="w-full bg-gray-100 rounded-full h-1.5 overflow-hidden">
                 <div
                   className="bg-accent h-1.5 rounded-full transition-all duration-1000 ease-out"
-                  style={{ width: `${Math.min(95, (elapsedSeconds / 45) * 100)}%` }}
+                  style={{ width: `${Math.min(95, (elapsedSeconds / 120) * 100)}%` }}
                 />
               </div>
               <div className="flex items-center justify-between text-sm text-gray-400">
                 <span>{Math.floor(elapsedSeconds / 60)}:{(elapsedSeconds % 60).toString().padStart(2, "0")} elapsed</span>
-                <span>Typically 20-45 seconds</span>
+                <span>Typically 1–3 minutes</span>
               </div>
+              {elapsedSeconds > 90 && (
+                <p className="text-sm text-gray-400 italic">
+                  Still working — longer steps can take up to 4 minutes. Please keep this tab open.
+                </p>
+              )}
             </div>
           ) : (
             <div>
