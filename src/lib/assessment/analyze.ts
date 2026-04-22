@@ -575,55 +575,85 @@ Return valid JSON:
 
 PROPORTIONALITY RULE: Match the distribution of recommendations to the distribution of the user's stated functions. If they listed 8 functions and mentioned grants once, do NOT make grants the focus of multiple tasks. Spread recommendations across their actual workload. If >30% of your tasks cluster on a function that represents <15% of their stated work, rebalance.
 
-Generate 8-12 task analyses sorted by time impact (highest savings first). At least 80% of tasks MUST be directly relevant to the person's stated functions and roles — not generic industry tasks.
+At least 80% of tasks MUST be directly relevant to the person's stated functions and roles — not generic industry tasks.
 Use the user's feedback to adjust priorities. Reference their uploaded documents context.`;
 
-  let userPrompt = buildIntakeContext(intake);
-  userPrompt += buildStepContextSection(stepContext);
-  userPrompt += buildFeedbackContext(feedback);
+  let baseUserPrompt = buildIntakeContext(intake);
+  baseUserPrompt += buildStepContextSection(stepContext);
+  baseUserPrompt += buildFeedbackContext(feedback);
 
   if (previousReport.organizationProfile) {
-    userPrompt += `\n\n## Step 1 Results\n**AI Readiness:** ${previousReport.organizationProfile.aiReadinessScore}/10\n**Key Strengths:** ${previousReport.organizationProfile.keyStrengths.join(", ")}\n**Key Gaps:** ${previousReport.organizationProfile.keyGaps.join(", ")}`;
+    baseUserPrompt += `\n\n## Step 1 Results\n**AI Readiness:** ${previousReport.organizationProfile.aiReadinessScore}/10\n**Key Strengths:** ${previousReport.organizationProfile.keyStrengths.join(", ")}\n**Key Gaps:** ${previousReport.organizationProfile.keyGaps.join(", ")}`;
   }
 
-  userPrompt += `\n\n${onetSummary}`;
+  baseUserPrompt += `\n\n${onetSummary}`;
   // Filter departments to those matching the person's actual role/functions
   const relevantDepts = filterDepartmentsToRole(template.departments, intake);
   if (relevantDepts.length > 0) {
-    userPrompt += `\n\n## Relevant Department Context (matched to this person's role)\n${relevantDepts.map((d) => `- ${d.name}: ${d.aiOpportunityAreas.join(", ")}`).join("\n")}`;
+    baseUserPrompt += `\n\n## Relevant Department Context (matched to this person's role)\n${relevantDepts.map((d) => `- ${d.name}: ${d.aiOpportunityAreas.join(", ")}`).join("\n")}`;
   } else {
     // Fallback: show all departments but mark which ones match
-    userPrompt += `\n\n## Industry Context\n${template.departments.map((d) => `- ${d.name}: ${d.aiOpportunityAreas.join(", ")}`).join("\n")}`;
+    baseUserPrompt += `\n\n## Industry Context\n${template.departments.map((d) => `- ${d.name}: ${d.aiOpportunityAreas.join(", ")}`).join("\n")}`;
   }
-  if (capabilitiesContext) userPrompt += `\n\n${capabilitiesContext}`;
+  if (capabilitiesContext) baseUserPrompt += `\n\n${capabilitiesContext}`;
 
-  try {
-    const parsed = await callClaude(systemPrompt, userPrompt, { maxTokens: 8000, timeout: 300000 });
+  // Parallelize into two complementary calls to halve wall-clock and stay well
+  // under Vercel's 300s function limit. A single 8000-token non-streaming call
+  // on Sonnet could run 3-5 minutes for the full 8-12 task set; splitting by
+  // focus axis gives ~5 tasks per call at 4500 max_tokens, which comes back in
+  // 60-120s each and runs in parallel.
+  const timeSavingsFocus = `\n\n## YOUR FOCUS FOR THIS CALL\nGenerate 5 tasks focused on **TIME-SAVING AUTOMATION** — repetitive, high-hour-volume work where AI saves the most hours per week. Sort by hours saved, highest first. A parallel call is handling quality-uplift and new-capability tasks; do NOT duplicate those. Avoid tasks like "improve report quality" or "enable new analysis" — focus purely on speed/automation of existing work.`;
+  const capabilityFocus = `\n\n## YOUR FOCUS FOR THIS CALL\nGenerate 5 tasks focused on **QUALITY UPLIFT AND NEW CAPABILITIES** — how AI can make outputs materially better, enable analysis/work that wasn't feasible before, or let the team take on more strategic responsibilities. A parallel call is handling time-saving automation; do NOT duplicate pure speed/efficiency tasks. Focus on: better decision quality, deeper analysis, faster iteration cycles, cross-team workflows, work that was previously too expensive to do.`;
 
-    let validated = Step2TasksSchema.safeParse(parsed);
-    if (!validated.success) {
-      console.warn("Step 2 schema validation failed:", validated.error.flatten().fieldErrors);
-      // Try to salvage individual tasks from the raw response
-      const rawTasks = (parsed as Record<string, unknown>)?.taskAnalysis;
-      if (Array.isArray(rawTasks) && rawTasks.length > 0) {
-        // Unwrap ZodDefault → ZodArray → element
-        const taskArraySchema = Step2TasksSchema.shape.taskAnalysis._def.innerType;
-        const TaskSchema = taskArraySchema.element;
-        const salvaged = rawTasks
-          .map((t) => TaskSchema.safeParse(t))
-          .filter((r) => r.success)
-          .map((r) => (r as { success: true; data: unknown }).data);
-        if (salvaged.length > 0) {
-          console.log(`  Salvaged ${salvaged.length}/${rawTasks.length} tasks from partial response`);
-          validated = { success: true, data: { taskAnalysis: salvaged } } as unknown as typeof validated;
-        }
+  const parseAndSalvage = (parsed: unknown, callLabel: string): TaskAnalysis[] => {
+    const validated = Step2TasksSchema.safeParse(parsed);
+    if (validated.success) return validated.data.taskAnalysis as TaskAnalysis[];
+
+    console.warn(`Step 2 ${callLabel} schema validation failed:`, validated.error.flatten().fieldErrors);
+    const rawTasks = (parsed as Record<string, unknown>)?.taskAnalysis;
+    if (Array.isArray(rawTasks) && rawTasks.length > 0) {
+      const taskArraySchema = Step2TasksSchema.shape.taskAnalysis._def.innerType;
+      const TaskSchema = taskArraySchema.element;
+      const salvaged = rawTasks
+        .map((t) => TaskSchema.safeParse(t))
+        .filter((r) => r.success)
+        .map((r) => (r as { success: true; data: unknown }).data) as TaskAnalysis[];
+      if (salvaged.length > 0) {
+        console.log(`  Salvaged ${salvaged.length}/${rawTasks.length} tasks from ${callLabel}`);
+        return salvaged;
       }
     }
-    const step2 = validated.success ? validated.data : Step2TasksSchema.parse({});
+    return [];
+  };
 
-    return {
-      taskAnalysis: step2.taskAnalysis as TaskAnalysis[],
-    };
+  try {
+    const [timeCall, capabilityCall] = await Promise.allSettled([
+      callClaude(systemPrompt, baseUserPrompt + timeSavingsFocus, { maxTokens: 4500, timeout: 240000 }),
+      callClaude(systemPrompt, baseUserPrompt + capabilityFocus, { maxTokens: 4500, timeout: 240000 }),
+    ]);
+
+    const timeTasks = timeCall.status === "fulfilled"
+      ? parseAndSalvage(timeCall.value, "time-savings call")
+      : (console.error(`[Step 2 Tasks] time-savings call failed: ${timeCall.reason}`), []);
+    const capabilityTasks = capabilityCall.status === "fulfilled"
+      ? parseAndSalvage(capabilityCall.value, "capability call")
+      : (console.error(`[Step 2 Tasks] capability call failed: ${capabilityCall.reason}`), []);
+
+    // Dedupe by taskName (case-insensitive) in case the two calls overlap
+    const seen = new Set<string>();
+    const merged: TaskAnalysis[] = [];
+    for (const t of [...timeTasks, ...capabilityTasks]) {
+      const key = (t.taskName || "").toLowerCase().trim();
+      if (!key || seen.has(key)) continue;
+      seen.add(key);
+      merged.push(t);
+    }
+
+    if (merged.length === 0) {
+      console.error("[Step 2 Tasks] Both calls produced zero usable tasks");
+    }
+
+    return { taskAnalysis: merged };
   } catch (err: unknown) {
     const errMsg = err instanceof Error ? err.message : String(err);
     const errName = err instanceof Error ? err.name : "UnknownError";
