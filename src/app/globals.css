@@ -43,6 +43,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1, h2 {
+  text-wrap: balance;
+}
+
 /* Disable blanket transitions — only animate what we mean to */
 * {
   transition: none;

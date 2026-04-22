@@ -112,7 +112,7 @@ function DesktopDropdown({ group }: { group: NavGroup }) {
         onClick={() => setOpen((prev) => !prev)}
         aria-expanded={open}
         aria-haspopup="true"
-        className={`flex items-center gap-1 text-sm font-medium px-2.5 py-1.5 rounded-md transition-colors ${
+        className={`flex items-center gap-1 text-sm font-medium px-2.5 py-2.5 rounded-md transition-colors ${
           isActive
             ? "text-[var(--foreground)]"
             : "text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-black/[0.03]"
@@ -186,7 +186,7 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           <Link
             href="/"
-            className="flex items-center hover:opacity-80 transition-opacity"
+            className="flex items-center py-3 hover:opacity-80 transition-opacity"
             aria-label="jobsdata.ai — home"
           >
             <svg
@@ -228,7 +228,7 @@ export default function Navbar() {
               <Link
                 key={entry.href}
                 href={entry.href}
-                className="text-sm font-medium text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-black/[0.03] px-2.5 py-1.5 rounded-md"
+                className="text-sm font-medium text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-black/[0.03] px-2.5 py-2.5 rounded-md"
               >
                 {entry.label}
               </Link>
