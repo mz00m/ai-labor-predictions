@@ -719,7 +719,13 @@ export default function PredictionChart({
       )}
       {/* Signal strip — pixel-block timeline of directional signals below the chart */}
       {allFilteredOverlays.length > 0 && (
-        <div className="mt-3 px-1">
+        <div className="mt-5 px-1 pt-4 border-t border-black/[0.06]">
+          <p className="text-2xs font-bold uppercase tracking-widest text-[var(--muted)] mb-0.5">
+            Directional research signals
+          </p>
+          <p className="text-xs text-[var(--muted)] opacity-70 mb-2 leading-relaxed">
+            Studies with a clear directional finding but no single plottable value — e.g. &ldquo;entry-level hiring fell&rdquo; or &ldquo;no measurable displacement detected.&rdquo; Stacked blocks show net evidence per month; positive and negative signals cancel. Hover any column to see the studies.
+          </p>
           <SignalStrip
             overlays={allFilteredOverlays}
             sources={sources}
@@ -730,9 +736,6 @@ export default function PredictionChart({
             paddingRight={30}
             onGroupClick={(ids) => onDotClick?.(ids)}
           />
-          <p className="text-2xs text-[var(--muted)] opacity-50 mt-1 leading-relaxed">
-            Qualitative directional signals — studies that are directionally meaningful but don&apos;t map to a single data point. Each column is one month; blocks cancel (2↑ + 3↓ = 1↓, capped at 5). Hover for sources.
-          </p>
         </div>
       )}
     </div>
