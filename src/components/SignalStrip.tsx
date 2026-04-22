@@ -56,6 +56,7 @@ export default function SignalStrip({
   sources = [],
   minTs,
   maxTs,
+  splitTs,
   paddingLeft = 0,
   paddingRight = 0,
   onGroupClick,
@@ -64,6 +65,8 @@ export default function SignalStrip({
   sources?: SignalSource[];
   minTs: number;
   maxTs: number;
+  /** Timestamp at which observed data ends and projected begins */
+  splitTs?: number;
   paddingLeft?: number;
   paddingRight?: number;
   onGroupClick?: (sourceIds: string[]) => void;
@@ -156,6 +159,42 @@ export default function SignalStrip({
             </g>
           );
         })}
+
+        {/* Observed / Projected divider */}
+        {splitTs != null && (() => {
+          const sx = toX(splitTs);
+          if (sx <= paddingLeft + 10 || sx >= width - paddingRight - 10) return null;
+          return (
+            <g key="split">
+              <line
+                x1={sx} y1={4} x2={sx} y2={BASELINE_Y}
+                stroke="#d1d5db"
+                strokeWidth={1}
+                strokeDasharray="3 3"
+              />
+              <text
+                x={sx - 6} y={8}
+                textAnchor="end"
+                fill="#9ca3af"
+                fontSize={8}
+                fontFamily="system-ui, sans-serif"
+                letterSpacing="0.04em"
+              >
+                Observed
+              </text>
+              <text
+                x={sx + 6} y={8}
+                textAnchor="start"
+                fill="#9ca3af"
+                fontSize={8}
+                fontFamily="system-ui, sans-serif"
+                letterSpacing="0.04em"
+              >
+                Projected
+              </text>
+            </g>
+          );
+        })()}
 
         {/* Signal columns */}
         {groups.map((g) => {

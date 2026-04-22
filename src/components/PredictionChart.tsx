@@ -357,6 +357,9 @@ export default function PredictionChart({
   const dataTimestamps = realPoints.filter((p) => p.value != null).map((p) => p.date);
   const dataMinTs = dataTimestamps.length > 0 ? Math.min(...dataTimestamps) : Date.now();
   const dataMaxTs = dataTimestamps.length > 0 ? Math.max(...dataTimestamps) : Date.now();
+  const lastObservedTs = realPoints
+    .filter((p) => p.dataType === "observed" && p.value != null)
+    .reduce((max, p) => Math.max(max, p.date), dataMinTs);
   const quarterTickTimestamps: number[] = [];
   {
     const startDate = new Date(dataMinTs);
@@ -722,10 +725,14 @@ export default function PredictionChart({
             sources={sources}
             minTs={dataMinTs}
             maxTs={dataMaxTs}
+            splitTs={hasProjectedData ? lastObservedTs : undefined}
             paddingLeft={54}
             paddingRight={30}
             onGroupClick={(ids) => onDotClick?.(ids)}
           />
+          <p className="text-2xs text-[var(--muted)] opacity-50 mt-1 leading-relaxed">
+            Qualitative directional signals — studies that are directionally meaningful but don&apos;t map to a single data point. Each column is one month; blocks cancel (2↑ + 3↓ = 1↓, capped at 5). Hover for sources.
+          </p>
         </div>
       )}
     </div>
