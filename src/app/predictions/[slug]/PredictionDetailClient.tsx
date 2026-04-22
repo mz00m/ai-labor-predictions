@@ -147,15 +147,6 @@ export default function PredictionDetailPage() {
   const targetYearMatch = prediction.timeHorizon.match(/\b(20\d{2})\b/);
   const targetDateStr = targetYearMatch ? `${targetYearMatch[1]}-01-01` : null;
 
-  // Separate overlays into observed-relevant and projection-relevant
-  // Overlays referencing observed/measured data go on observed chart;
-  // forward-looking ones go on projection chart
-  const observedOverlayKeywords = ["CPS", "Budget Lab", "BLS", "employment data", "no effect", "no displacement", "zero effect", "no evidence", "flat", "stability"];
-  const observedOverlays = prediction.overlays?.filter((o) =>
-    o.direction === "neutral" || o.direction === "up" ||
-    observedOverlayKeywords.some((kw) => o.label.toLowerCase().includes(kw.toLowerCase()))
-  );
-  const projectedOverlays = prediction.overlays;
 
   const bestEstimate = filteredHistory.length > 0
     ? (filteredHistory.findLast((d) => d.evidenceTier === 1) ?? filteredHistory[filteredHistory.length - 1])
@@ -384,7 +375,7 @@ export default function PredictionDetailPage() {
                 sources={prediction.sources}
                 selectedTiers={selectedTiers}
                 unit={prediction.unit.includes("%") ? "%" : ""}
-                overlays={observedOverlays}
+                overlays={prediction.overlays}
                 onDotClick={handleDotClick}
                 yAxisMax={prediction.slug === "overall-us-displacement" || prediction.slug === "white-collar-professional-displacement" ? 10 : prediction.slug === "tech-sector-displacement" ? 20 : undefined}
                 yAxisMin={prediction.slug === "overall-us-displacement" || prediction.slug === "white-collar-professional-displacement" ? -5 : prediction.slug === "tech-sector-displacement" ? -15 : undefined}
@@ -417,7 +408,7 @@ export default function PredictionDetailPage() {
                 sources={prediction.sources}
                 selectedTiers={selectedTiers}
                 unit={prediction.unit.includes("%") ? "%" : ""}
-                overlays={projectedOverlays}
+                overlays={prediction.overlays}
                 onDotClick={handleDotClick}
                 yAxisMax={prediction.slug === "overall-us-displacement" || prediction.slug === "white-collar-professional-displacement" || prediction.slug === "tech-sector-displacement" ? 25 : undefined}
                 yAxisMin={prediction.slug === "overall-us-displacement" || prediction.slug === "white-collar-professional-displacement" || prediction.slug === "tech-sector-displacement" ? -25 : undefined}
@@ -426,7 +417,7 @@ export default function PredictionDetailPage() {
                 targetDate={targetDateStr ?? undefined}
               />
               <p className="text-sm text-[var(--muted)] mt-3 opacity-70">
-                Each dot is a different projection source. The x-axis shows when the projection was published. Click any dot to jump to its source.{prediction.overlays && prediction.overlays.length > 0 ? " Overlay bars show directional signals from related studies." : ""}
+                Each dot is a different projection source. The x-axis shows when the projection was published. Click any dot to jump to its source.
               </p>
             </div>
           </>
@@ -445,7 +436,7 @@ export default function PredictionDetailPage() {
               showTrendLine={prediction.aggregationMethod === "latest"}
             />
             <p className="text-sm text-[var(--muted)] mt-4 opacity-70">
-              Each data point is from a different source. Dots are color-coded by evidence tier. Click any dot to jump to its source.{prediction.overlays && prediction.overlays.length > 0 ? " Colored overlay bars represent relevant studies or data points that provide directional (but not exact) guidance. Click a bar to see its source." : ""}
+              Each data point is from a different source. Dots are color-coded by evidence tier. Click any dot to jump to its source.
             </p>
           </>
         )}
