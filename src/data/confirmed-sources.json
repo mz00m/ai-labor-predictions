@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-04-22",
-  "totalSources": 534,
-  "verifiedCount": 524,
+  "totalSources": 535,
+  "verifiedCount": 525,
   "sources": {
     "gallup-workplace-ai-feb-2026": {
       "id": "gallup-workplace-ai-feb-2026",
@@ -7555,6 +7555,18 @@
       "evidenceTier": 1,
       "datePublished": "2026-04-07",
       "excerpt": "Here, through a series of randomized controlled trials on human-AI interactions (N = 1, 222), we provide causal evidence for two key consequences of AI assistance: reduced persistence and impairment of unassisted performance. Although AI assistance improves performance in the short-term, people perform significantly worse without AI and are more likely to give up.",
+      "usedIn": [],
+      "verified": true,
+      "synthetic": false
+    },
+    "british-progress-uk-labour-market-2026": {
+      "id": "british-progress-uk-labour-market-2026",
+      "title": "AI and the UK Labour Market: The Evidence So Far",
+      "url": "https://britishprogress.org/reports/ai-and-the-uk-labour-market-the-evidence-so-far",
+      "publisher": "Centre for British Progress (Dr Pedro Serôdio)",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-22",
+      "excerpt": "Three years after generative AI reached the market, there is no detectable employment effect for the most exposed occupations on UK data, regardless of which exposure metric is used. The estimates are noisy, the confidence intervals are wide, and neither measure produces a statistically distinguishable effect on aggregate employment.",
       "usedIn": [],
       "verified": true,
       "synthetic": false

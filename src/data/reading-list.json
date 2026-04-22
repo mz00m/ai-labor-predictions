@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "AI and the UK Labour Market: The Evidence So Far",
+      "author": "Dr Pedro Serôdio",
+      "publisher": "Centre for British Progress",
+      "date": "2026-04-22",
+      "url": "https://britishprogress.org/reports/ai-and-the-uk-labour-market-the-evidence-so-far",
+      "takeaway": "Comprehensive UK survey of 412 occupations (24.8M workers): no detectable displacement signal three years post-ChatGPT, though occupation-level divergence is sharp — IT analysts up 38%, call centre workers down 19% since 2021. Software sector is the strongest early signal: employment fell 4.5% in H2 2025 as AI coding tools arrived, productivity growth accelerated from 0.8%/yr to 3.8%/yr post-ChatGPT, and expert exposure models systematically overstate actual adoption.",
+      "weekFeatured": "2026-04-22",
+      "tier": 2
+    },
+    {
       "title": "A Technology-Driven Productivity Regime Shift",
       "author": "Gad Levanon",
       "publisher": "The Burning Glass Institute",
