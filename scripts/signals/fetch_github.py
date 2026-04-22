@@ -29,12 +29,29 @@ except ImportError:
 ROOT = Path(__file__).resolve().parent.parent.parent
 TAXONOMY_PATH = ROOT / "src" / "data" / "signals" / "taxonomy.json"
 OUTPUT_PATH = ROOT / "src" / "data" / "signals" / "github_activity.json"
+ENV_PATH = ROOT / ".env"
 
 GITHUB_API = "https://api.github.com"
 
 
-def get_headers():
+def load_github_token() -> str:
+    """Load GITHUB_TOKEN from environment or .env file. Empty string if absent."""
     token = os.environ.get("GITHUB_TOKEN", "")
+    if token:
+        return token
+
+    if ENV_PATH.exists():
+        with open(ENV_PATH) as f:
+            for line in f:
+                line = line.strip()
+                if line.startswith("GITHUB_TOKEN="):
+                    return line.split("=", 1)[1].strip()
+
+    return ""
+
+
+def get_headers():
+    token = load_github_token()
     headers = {
         "Accept": "application/vnd.github+json",
         "X-GitHub-Api-Version": "2022-11-28",
@@ -207,10 +224,10 @@ def build_repo_map(taxonomy):
 
 
 def main():
-    token = os.environ.get("GITHUB_TOKEN", "")
+    token = load_github_token()
     if not token:
         print("WARNING: No GITHUB_TOKEN set. Rate limit will be 60 req/hr (vs 5,000 with token).")
-        print("  Set: export GITHUB_TOKEN=ghp_your_token_here\n")
+        print("  Set: export GITHUB_TOKEN=ghp_your_token_here or add to .env\n")
 
     with open(TAXONOMY_PATH) as f:
         taxonomy = json.load(f)
