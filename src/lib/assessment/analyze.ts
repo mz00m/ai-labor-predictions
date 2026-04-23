@@ -690,7 +690,6 @@ export async function generateStep3Tools(
     taskName: t.taskName,
   }));
   const toolsRef = formatToolsForPrompt(intake.industry, intake.companySize, taskSignals);
-  const onetSummary = getOnetSummaryForPrompt(intake.primaryFunctions, intake.industry);
   const researchContext = formatResearchContextForPrompt(intake.industry);
 
   const toolPrefInstructions: Record<string, string> = {
@@ -754,16 +753,19 @@ Return valid JSON with ONLY toolRecommendations (roadmap and ROI are handled sep
   userPrompt += buildStepContextSection(stepContext);
   userPrompt += buildFeedbackContext(feedback);
 
-  // Include task analysis from step 2
+  // Include task analysis from step 2 — cap at 10 tasks to bound prompt size
   if (previousReport.taskAnalysis?.length) {
+    const topTasks = [...previousReport.taskAnalysis]
+      .sort((a, b) => (b.aiOpportunity === "high" ? 1 : 0) - (a.aiOpportunity === "high" ? 1 : 0))
+      .slice(0, 10);
     userPrompt += `\n\n## Confirmed Task Analysis (from Step 2)\n`;
-    for (const task of previousReport.taskAnalysis) {
+    for (const task of topTasks) {
       userPrompt += `- **${task.taskName}** (${task.department}): ${task.aiOpportunity} opportunity, ${task.complexity} complexity, ~${task.estimatedTimeSaved || "unknown"} saved\n`;
     }
   }
 
   if (toolsRef) userPrompt += `\n\n${toolsRef}`;
-  userPrompt += `\n\n${onetSummary}`;
+  // Skip onetSummary from tools call — it's large and tools don't need it
   if (researchContext) userPrompt += `\n\n${researchContext}`;
 
   // Split into two parallel calls to cut wall-clock time roughly in half:
@@ -816,22 +818,24 @@ Return valid JSON:
   roadmapUserPrompt += buildStepContextSection(stepContext);
   roadmapUserPrompt += buildFeedbackContext(feedback);
   if (previousReport.taskAnalysis?.length) {
+    const topTasks = [...previousReport.taskAnalysis]
+      .sort((a, b) => (b.aiOpportunity === "high" ? 1 : 0) - (a.aiOpportunity === "high" ? 1 : 0))
+      .slice(0, 10);
     roadmapUserPrompt += `\n\n## Confirmed Task Analysis (from Step 2)\n`;
-    for (const task of previousReport.taskAnalysis) {
-      roadmapUserPrompt += `- **${task.taskName}** (${task.department}): ${task.aiOpportunity} opportunity, ${task.complexity} complexity, ~${task.estimatedTimeSaved || "unknown"} saved\n`;
+    for (const task of topTasks) {
+      roadmapUserPrompt += `- **${task.taskName}** (${task.department}): ${task.aiOpportunity} opportunity, ~${task.estimatedTimeSaved || "unknown"} saved\n`;
     }
   }
-  if (researchContext) roadmapUserPrompt += `\n\n${researchContext}`;
 
   try {
     // Run both calls in parallel. Use allSettled so one slow/hung call
     // doesn't block the other — step 3 was timing out under the old Promise.all
     // setup because a single stalled call consumed the full Vercel 300s budget.
-    // Per-call timeouts trimmed to 180s to leave ~120s of headroom under the
+    // Per-call timeouts set to 240s, leaving ~60s of headroom under the
     // Vercel 300s function limit for DB writes and response serialization.
     const [toolsResult, roadmapResult] = await Promise.allSettled([
-      callClaude(systemPrompt, userPrompt, { maxTokens: 5000, timeout: 180000 }),
-      callClaude(roadmapSystemPrompt, roadmapUserPrompt, { maxTokens: 4000, timeout: 180000 }),
+      callClaude(systemPrompt, userPrompt, { maxTokens: 3000, timeout: 240000 }),
+      callClaude(roadmapSystemPrompt, roadmapUserPrompt, { maxTokens: 2500, timeout: 240000 }),
     ]);
 
     const toolsParsed = toolsResult.status === "fulfilled"

@@ -261,24 +261,30 @@ export function formatToolsForPrompt(
     grouped.set(tool.category, list);
   }
 
+  // Cap at 3 tools per category and 18 tools total to keep prompt size manageable
+  const MAX_TOOLS_TOTAL = 18;
+  const MAX_PER_CATEGORY = 3;
+  let toolCount = 0;
+
   for (const [category, categoryTools] of Array.from(grouped.entries())) {
+    if (toolCount >= MAX_TOOLS_TOTAL) break;
     const meta = TOOL_CATEGORY_META[category];
     lines.push(`### ${meta.label}`);
 
-    for (const t of categoryTools) {
+    for (const t of categoryTools.slice(0, MAX_PER_CATEGORY)) {
+      if (toolCount >= MAX_TOOLS_TOTAL) break;
+      toolCount++;
       lines.push(
         `- **${t.name}** (${t.subcategory}) — ${t.pricingDetails}`
       );
       if (t.url) {
         lines.push(`  URL: ${t.url}`);
       }
-      lines.push(`  ${t.description}`);
+      const shortDesc = t.description.length > 140 ? t.description.slice(0, 140).trimEnd() + "…" : t.description;
+      lines.push(`  ${shortDesc}`);
       lines.push(
-        `  Automates: ${t.automationCapabilities.slice(0, 3).join("; ")}`
+        `  Automates: ${t.automationCapabilities.slice(0, 2).join("; ")}`
       );
-      if (t.limitations && t.limitations.length > 0) {
-        lines.push(`  Note: ${t.limitations[0]}`);
-      }
     }
 
     lines.push("");

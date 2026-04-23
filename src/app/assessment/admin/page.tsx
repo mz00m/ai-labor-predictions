@@ -63,6 +63,11 @@ interface AdminData {
 
 type Tab = "overview" | "assessments" | "feedback";
 
+const TEST_PERSONAS = [
+  { id: "roofing", label: "Marcus Rivera", sub: "Rivera Roofing LLC · 12-person contractor" },
+  { id: "housing", label: "Sarah Chen", sub: "Bridge Housing Initiative · 25-person nonprofit" },
+];
+
 export default function AdminPage() {
   const [token, setToken] = useState("");
   const [data, setData] = useState<AdminData | null>(null);
@@ -73,6 +78,29 @@ export default function AdminPage() {
   const [newPassword, setNewPassword] = useState("");
   const [passwordMsg, setPasswordMsg] = useState<string | null>(null);
   const [changingPassword, setChangingPassword] = useState(false);
+  const [testRunning, setTestRunning] = useState<string | null>(null);
+  const [testError, setTestError] = useState<string | null>(null);
+
+  const runTestPersona = async (personaId: string) => {
+    setTestRunning(personaId);
+    setTestError(null);
+    try {
+      const res = await fetch("/api/assessment/admin/test-run", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ persona: personaId, token }),
+      });
+      if (!res.ok) throw new Error(await res.text());
+      const { assessmentId, jwt } = await res.json();
+      // Open new tab — the test-auth route sets the session cookie then redirects to progress
+      const url = `/api/assessment/test-auth?jwt=${encodeURIComponent(jwt)}&id=${assessmentId}&adminToken=${encodeURIComponent(token)}`;
+      window.open(url, "_blank");
+    } catch (e) {
+      setTestError(e instanceof Error ? e.message : "Failed to start test run");
+    } finally {
+      setTestRunning(null);
+    }
+  };
 
   const changePassword = async () => {
     if (newPassword.length < 6) {
@@ -275,6 +303,33 @@ export default function AdminPage() {
             <FunnelBar label="Started" value={stats.total} max={stats.total} color="bg-zinc-600" />
             <FunnelBar label="Completed" value={stats.complete} max={stats.total} color="bg-green-600" />
             <FunnelBar label="Paid" value={stats.paid} max={stats.total} color="bg-amber-600" />
+          </section>
+
+          {/* Test personas */}
+          <section className="mb-10">
+            <h2 className="text-lg font-medium mb-1">Test Runs</h2>
+            <p className="text-zinc-500 text-sm mb-4">
+              Launch a full assessment as a pre-built persona. Opens in a new tab, sets a session cookie, and drops straight into the generation pipeline — no email verification required.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              {TEST_PERSONAS.map((p) => (
+                <button
+                  key={p.id}
+                  onClick={() => runTestPersona(p.id)}
+                  disabled={testRunning !== null}
+                  className="flex items-start gap-3 px-4 py-3 bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 rounded-lg text-left disabled:opacity-50 transition-colors"
+                >
+                  <span className="text-lg mt-0.5">{p.id === "roofing" ? "🏗️" : "🏠"}</span>
+                  <span>
+                    <span className="block text-sm font-semibold text-zinc-100">
+                      {testRunning === p.id ? "Starting…" : p.label}
+                    </span>
+                    <span className="block text-xs text-zinc-400 mt-0.5">{p.sub}</span>
+                  </span>
+                </button>
+              ))}
+            </div>
+            {testError && <p className="text-red-400 text-xs mt-2">{testError}</p>}
           </section>
 
           {/* Recent assessments */}
