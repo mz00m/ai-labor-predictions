@@ -559,7 +559,7 @@ export default function PredictionChart({
                 ? getMetricTypeConfig(payload.metricType).color
                 : getTierConfig(payload.evidenceTier).color;
               return renderDotShape({
-                cx, cy, r: 5, fill: fillColor, metricType: payload.metricType,
+                cx, cy, r: 7, fill: fillColor, metricType: payload.metricType,
                 style: { cursor: onDotClick ? "pointer" : undefined },
                 onClick: () => onDotClick?.(payload.sourceIds),
                 keyPrefix: "dot-obs", date: payload.date,
@@ -576,7 +576,7 @@ export default function PredictionChart({
                 ? getMetricTypeConfig(payload.metricType).color
                 : getTierConfig(payload.evidenceTier).color;
               return renderDotShape({
-                cx, cy, r: 7, fill: fillColor, metricType: payload.metricType,
+                cx, cy, r: 9, fill: fillColor, metricType: payload.metricType,
                 style: { cursor: onDotClick ? "pointer" : undefined },
                 onClick: () => onDotClick?.(payload.sourceIds),
                 keyPrefix: "active-obs", date: payload.date,
@@ -606,7 +606,7 @@ export default function PredictionChart({
                   ? getMetricTypeConfig(payload.metricType).color
                   : getTierConfig(payload.evidenceTier).color;
                 const dotEl = renderDotShape({
-                  cx, cy, r: 4, fill: fillColor, metricType: payload.metricType,
+                  cx, cy, r: 6, fill: fillColor, metricType: payload.metricType,
                   style: { cursor: onDotClick ? "pointer" : undefined },
                   onClick: () => onDotClick?.(payload.sourceIds),
                   keyPrefix: "dot-proj", date: payload.date,
@@ -643,7 +643,7 @@ export default function PredictionChart({
                   ? getMetricTypeConfig(payload.metricType).color
                   : getTierConfig(payload.evidenceTier).color;
                 return renderDotShape({
-                  cx, cy, r: 6, fill: fillColor, metricType: payload.metricType,
+                  cx, cy, r: 8, fill: fillColor, metricType: payload.metricType,
                   style: { cursor: onDotClick ? "pointer" : undefined },
                   onClick: () => onDotClick?.(payload.sourceIds),
                   keyPrefix: "active-proj", date: payload.date,

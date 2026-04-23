@@ -36,11 +36,11 @@ interface MonthGroup {
 // Constants
 // ---------------------------------------------------------------------------
 
-const BLOCK = 12;
-const GAP = 3;
+const BLOCK = 18;
+const GAP = 4;
 const STEP = BLOCK + GAP;
 const MAX_BLOCKS = 5;
-const BASELINE_Y = 82; // 5 blocks * 15px + 4px headroom
+const BASELINE_Y = 118; // 5 blocks * 22px + 8px headroom
 const SVG_HEIGHT = BASELINE_Y + 18; // 18px for year labels below baseline
 
 const C_UP = "#16a34a";
