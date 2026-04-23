@@ -33,6 +33,16 @@ export default function KbClient() {
         body: JSON.stringify({ query }),
       });
 
+      // Session expired or revoked — the page-level gate may still think we're
+      // authed (e.g. cached SSR), but the API disagrees. Route through
+      // /api/kb/logout so the stale cookie is cleared server-side before the
+      // sign-in form renders; otherwise the page could keep accepting the
+      // cookie and loop us straight back into this broken state.
+      if (res.status === 401) {
+        window.location.href = "/api/kb/logout";
+        return;
+      }
+
       if (!res.ok || !res.body) {
         const errText = await res.text();
         setMessages((prev) => [
@@ -66,14 +76,22 @@ export default function KbClient() {
   return (
     <div className="min-h-screen bg-white">
       <div className="max-w-3xl mx-auto px-6 py-12">
-        <div className="mb-10">
-          <div className="text-xs font-mono text-neutral-400 mb-1">jobsdata.ai</div>
-          <h1 className="text-2xl font-semibold text-neutral-900 tracking-tight">
-            Knowledge Base
-          </h1>
-          <p className="mt-1 text-sm text-neutral-500">
-            530+ verified sources, 18 predictions, full methodology
-          </p>
+        <div className="mb-10 flex items-start justify-between gap-4">
+          <div>
+            <div className="text-xs font-mono text-neutral-400 mb-1">jobsdata.ai</div>
+            <h1 className="text-2xl font-semibold text-neutral-900 tracking-tight">
+              Knowledge Base
+            </h1>
+            <p className="mt-1 text-sm text-neutral-500">
+              530+ verified sources, 18 predictions, full methodology
+            </p>
+          </div>
+          <a
+            href="/api/kb/logout"
+            className="text-xs text-neutral-400 hover:text-neutral-700 transition-colors mt-1"
+          >
+            Sign out
+          </a>
         </div>
 
         {messages.length === 0 && (
