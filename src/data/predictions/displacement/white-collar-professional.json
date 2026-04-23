@@ -933,6 +933,15 @@
       ],
       "evidenceTier": 2,
       "label": "Carlyle survey: 22% of management teams offset AI spend by cutting IT services/consultants"
+    },
+    {
+      "date": "2026-03-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "shah-levy-pro-se-ai-courts-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "MIT/USC: Lawyer case counts flat but pro se filings +79% as AI enables self-representation"
     }
   ],
   "sources": [
@@ -1694,6 +1703,16 @@
       "evidenceTier": 2,
       "datePublished": "2026-04-21",
       "excerpt": "Our proprietary survey of AI integration efforts finds that only 11% of management teams expect AI to replace existing software subscriptions. Far more expect the move to AI-centric architectures to reduce maintenance spending on legacy infrastructure, save on consulting fees, and increase the productivity of existing workers, reducing future headcount needs. Figure 4 (Carlyle Proprietary Survey, April 2026): Internal headcount cited as AI spending offset by 26% of respondents \u2014 the largest single category."
+    },
+    {
+      "id": "shah-levy-pro-se-ai-courts-2026",
+      "title": "Access to Justice in the Age of AI: Evidence from U.S. Federal Courts",
+      "url": "https://avshah1.github.io/assets/pdf/papers/pro-se/Pro_Se_Automation.pdf",
+      "publisher": "MIT / USC (Shah, Levy)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-01",
+      "excerpt": "Represented filings are essentially constant over this period. Second, pro se filing counts have broken out of their long-run range. Pro se filings counts average 23,210 cases per year from FY2005 to FY2022. Beginning in FY2023, pro se filings jump: 27,370 in FY2023, 31,478 in FY2024, and 41,490 in FY2025. The FY2025 count is almost double the pre-AI mean. ... new pro se filings account for 59% of the growth in civil filings.",
+      "dateAdded": "2026-04-23"
     }
   ]
 }

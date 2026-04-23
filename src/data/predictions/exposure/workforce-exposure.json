@@ -598,6 +598,15 @@
       ],
       "evidenceTier": 1,
       "label": "Census/QWI: Monetary policy explains ≤¼ of early-career employment gap; AI effect persists"
+    },
+    {
+      "date": "2026-03-01",
+      "direction": "up",
+      "sourceIds": [
+        "shah-levy-pro-se-ai-courts-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "MIT/USC: Pro se federal filings 11%→16.8%; AI-text in 18% of complaints by 2026"
     }
   ],
   "sources": [
@@ -1094,6 +1103,16 @@
       "evidenceTier": 1,
       "datePublished": "2026-04-17",
       "excerpt": "At best, differences in monetary policy sensitivity can explain about one fourth of the regression-adjusted gap in employment, but monetary policy sensitivity does not appear to predict that AI-exposed firms would reduce their early career hiring activity more than others."
+    },
+    {
+      "id": "shah-levy-pro-se-ai-courts-2026",
+      "title": "Access to Justice in the Age of AI: Evidence from U.S. Federal Courts",
+      "url": "https://avshah1.github.io/assets/pdf/papers/pro-se/Pro_Se_Automation.pdf",
+      "publisher": "MIT / USC (Shah, Levy)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-01",
+      "excerpt": "the national non-prisoner pro se filing share rose sharply from its approximately 11% historical steady state to 16.8% in fiscal year 2025, a gain that has no precedent in 25 years of administrative records. ... the share of complaints containing AI-generated text has been rising monotonically from 1.0% in 2023 to 18.0% in early 2026.",
+      "dateAdded": "2026-04-23"
     }
   ]
 }

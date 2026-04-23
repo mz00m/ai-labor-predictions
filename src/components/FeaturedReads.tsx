@@ -9,6 +9,14 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Shah & Levy (MIT/USC)",
+    title: "Access to Justice in the Age of AI",
+    summary:
+      "Analysis of 4.5M+ federal civil cases and 46M PACER docket entries shows pro se (self-represented) filings broke a 20-year steady state of ~11% to hit 16.8% in FY2025, with case counts nearly doubling from a pre-AI avg of 23,210 to 41,490. The rise is concentrated in 'simple' NOS categories (civil rights, consumer credit, foreclosure) and absent in patent/securities. Pangram AI-text detection on 1,600 random complaints finds AI-generated text rising monotonically: 1.0% (2023) → 3.5% (2024) → 10.5% (2025) → 18.0% (early 2026), against a 0.1% pre-AI false-positive baseline. Case durations and disposition mix are unchanged, but docket entries per court from pro se cases are up 158% vs pre-AI — judges face more filings they can't refuse, from plaintiffs who a year ago couldn't afford to bring them.",
+    date: "Mar",
+    url: "https://avshah1.github.io/assets/pdf/papers/pro-se/Pro_Se_Automation.pdf",
+  },
+  {
     author: "Gad Levanon (Burning Glass)",
     title: "A Technology-Driven Productivity Regime Shift",
     summary:
@@ -39,14 +47,6 @@ const articles: Article[] = [
       "April 2026 monthly update: March CPS + Anthropic Feb usage data show no substantial change. Occupational/industry dissimilarity and exposure/usage metrics remain flat or within historical ranges. Exposure, automation, and augmentation measures show no relationship with employment or unemployment changes. Anthropic usage data continues to skew automation over augmentation.",
     date: "Apr 16",
     url: "https://budgetlab.yale.edu/research/tracking-impact-ai-labor-market",
-  },
-  {
-    author: "Alex Imas",
-    title: "What will be scarce? The post-commodity future of work",
-    summary:
-      "Chicago Booth economist argues AI triggers a 'post-commodity' economy: as automation cheapens goods, spending shifts to the relational sector (care, craft, hospitality) where human provenance is the value. Starbucks rolls back automation; human art commands 44% exclusivity premium vs 21% for AI art.",
-    date: "Apr 14",
-    url: "https://aleximas.substack.com/p/what-will-be-scarce",
   },
 ];
 
