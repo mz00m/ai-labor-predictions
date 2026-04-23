@@ -1,9 +1,25 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-04-23",
-  "totalSources": 536,
-  "verifiedCount": 526,
+  "totalSources": 537,
+  "verifiedCount": 527,
   "sources": {
+    "karger-kuusela-nber-ai-forecasts-2026": {
+      "id": "karger-kuusela-nber-ai-forecasts-2026",
+      "title": "Forecasting the Economic Effects of AI",
+      "url": "https://www.nber.org/papers/w35046",
+      "publisher": "NBER (Karger, Kuusela, Abaluck, Bryan, Halperin, Jones, Murphy, Trammell, et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-01",
+      "excerpt": "NBER Working Paper 35046. Survey of 69 economists, 52 AI industry/policy professionals, 38 superforecasters, and 401 general public on AI's economic effects. Unconditional median economist forecasts: GDP growth 2.5% for 2025–2029, LFPR 61.0% for 2030 (vs 62.6% Jan 2025), 58.3% for 2050. Only 14.0% mean probability assigned to a 'rapid' AI progress scenario by 2030. Conditional on rapid scenario: GDP growth 3.5%, LFPR falling to 55.0% by 2050 (~10M lost jobs attributable to AI), wealth inequality reaching 80.0% held by top 10% by 2050, work hours AI-assisted rising from 3.35% (2024) to 10.1% (2030 unconditional) or 24.2% (2030 rapid). Variance decomposition finds expert disagreement driven primarily by different beliefs about economic effects of highly capable AI systems, not by disagreement about AI capability progress. Economists support retraining (71.8%) over job guarantees (13.7%) or UBI (37.4%); general public supports both.",
+      "usedIn": [
+        "overall-us-displacement",
+        "white-collar-professional-displacement",
+        "genai-work-adoption"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
     "shah-levy-pro-se-ai-courts-2026": {
       "id": "shah-levy-pro-se-ai-courts-2026",
       "title": "Access to Justice in the Age of AI: Evidence from U.S. Federal Courts",

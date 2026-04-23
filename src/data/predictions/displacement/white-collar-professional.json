@@ -942,6 +942,15 @@
       ],
       "evidenceTier": 1,
       "label": "MIT/USC: Lawyer case counts flat but pro se filings +79% as AI enables self-representation"
+    },
+    {
+      "date": "2026-04-01",
+      "direction": "up",
+      "sourceIds": [
+        "karger-kuusela-nber-ai-forecasts-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER: white-collar share stalls at ~20% under rapid AI (vs 22% unconditional)"
     }
   ],
   "sources": [
@@ -1713,6 +1722,15 @@
       "datePublished": "2026-03-01",
       "excerpt": "Represented filings are essentially constant over this period. Second, pro se filing counts have broken out of their long-run range. Pro se filings counts average 23,210 cases per year from FY2005 to FY2022. Beginning in FY2023, pro se filings jump: 27,370 in FY2023, 31,478 in FY2024, and 41,490 in FY2025. The FY2025 count is almost double the pre-AI mean. ... new pro se filings account for 59% of the growth in civil filings.",
       "dateAdded": "2026-04-23"
+    },
+    {
+      "id": "karger-kuusela-nber-ai-forecasts-2026",
+      "title": "Forecasting the Economic Effects of AI",
+      "url": "https://www.nber.org/papers/w35046",
+      "publisher": "NBER (Karger, Kuusela, Abaluck, Bryan, Halperin, Jones, Murphy, Trammell, et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-01",
+      "excerpt": "In the unconditional scenario, economists expect the share of business and analytical ('white-collar') roles to continue to rise slowly, reaching 21.0% in 2030 and 22.0% in 2050 compared to a 2025 baseline of 20.4%... In the rapid scenario, the growth in white-collar occupations would stall, with their share remaining flat at around 20.0%–21.0% in 2030 and 2050."
     }
   ]
 }

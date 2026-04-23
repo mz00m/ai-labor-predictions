@@ -1576,6 +1576,24 @@
       ],
       "evidenceTier": 2,
       "label": "Carlyle survey: 26% of management teams offset AI spend via internal headcount reduction"
+    },
+    {
+      "date": "2026-04-01",
+      "direction": "up",
+      "sourceIds": [
+        "karger-kuusela-nber-ai-forecasts-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER expert survey: ~10M jobs attributable to AI by 2050 under rapid scenario"
+    },
+    {
+      "date": "2026-04-01",
+      "direction": "down",
+      "sourceIds": [
+        "karger-kuusela-nber-ai-forecasts-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER: economists assign only 14% avg probability to rapid AI progress by 2030"
     }
   ],
   "sources": [
@@ -2787,6 +2805,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-04-21",
       "excerpt": "Our proprietary survey of AI integration efforts finds that only 11% of management teams expect AI to replace existing software subscriptions. Far more expect the move to AI-centric architectures to reduce maintenance spending on legacy infrastructure, save on consulting fees, and increase the productivity of existing workers, reducing future headcount needs. Figure 4 (Carlyle Proprietary Survey, April 2026): Internal headcount cited as AI spending offset by 26% of respondents \u2014 the largest single category."
+    },
+    {
+      "id": "karger-kuusela-nber-ai-forecasts-2026",
+      "title": "Forecasting the Economic Effects of AI",
+      "url": "https://www.nber.org/papers/w35046",
+      "publisher": "NBER (Karger, Kuusela, Abaluck, Bryan, Halperin, Jones, Murphy, Trammell, et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-01",
+      "excerpt": "Conditional on a 'rapid' AI progress scenario, in which AI systems surpass human performance on many cognitive and physical tasks, experts forecast substantial, though not historically unprecedented, economic shifts: annualized GDP growth rising to around 4% and the labor force participation rate falling from its current level of 62% to 55% by 2050, with roughly half of that decline\u2014equivalent to around 10 million lost jobs\u2014attributable to AI. The average economist assigned a 61.4% probability to moderate or rapid progress, but only 14.0% to the rapid scenario. Unconditional economic forecasts are close to historical trends: median GDP growth 2.5% for 2030, LFPR 61.0% for 2030 vs 62.6% in 2025."
     }
   ]
 }

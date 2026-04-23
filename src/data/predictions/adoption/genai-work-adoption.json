@@ -411,6 +411,15 @@
       ],
       "evidenceTier": 1,
       "label": "MIT/USC: 18% of federal court complaints contain AI-text by 2026 (n=1,600)"
+    },
+    {
+      "date": "2026-04-01",
+      "direction": "up",
+      "sourceIds": [
+        "karger-kuusela-nber-ai-forecasts-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER: 3.35% work hours AI-assisted (2024); economists forecast 10.1% by 2030"
     }
   ],
   "sources": [
@@ -747,6 +756,15 @@
       "datePublished": "2026-03-01",
       "excerpt": "Applying the Pangram AI-text detector to a random sample of 1,600 federal civil complaints (200/year, 2019-2026): the share of complaints classified as AI-generated rose monotonically from 1.0% in 2023 to 3.5% in 2024, 10.5% in 2025, and 18.0% in early 2026, against a pre-AI false-positive rate of 0.1% (1 of 800).",
       "dateAdded": "2026-04-23"
+    },
+    {
+      "id": "karger-kuusela-nber-ai-forecasts-2026",
+      "title": "Forecasting the Economic Effects of AI",
+      "url": "https://www.nber.org/papers/w35046",
+      "publisher": "NBER (Karger, Kuusela, Abaluck, Bryan, Halperin, Jones, Murphy, Trammell, et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-01",
+      "excerpt": "Work Hours Assisted by Generative AI. In 2030, they estimate the percentage of assisted work hours will be 10.1% for the unconditional scenario, 8.0% for the slow, 12.9% for the moderate, and 24.2% for the rapid, compared to a 2024 estimate of 3.35%. By 2050, they expect this to surge to 40.0% (unconditional), 25.0% (slow), 44.7% (moderate), and 62.0% (rapid)."
     }
   ]
 }
