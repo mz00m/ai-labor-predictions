@@ -951,6 +951,15 @@
       ],
       "evidenceTier": 1,
       "label": "NBER: white-collar share stalls at ~20% under rapid AI (vs 22% unconditional)"
+    },
+    {
+      "date": "2026-04-22",
+      "direction": "up",
+      "sourceIds": [
+        "anthropic-81k-economics-survey-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Anthropic: early-career benefit 60% vs 80% seniors; more displacement worry"
     }
   ],
   "sources": [
@@ -1731,6 +1740,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-04-01",
       "excerpt": "In the unconditional scenario, economists expect the share of business and analytical ('white-collar') roles to continue to rise slowly, reaching 21.0% in 2030 and 22.0% in 2050 compared to a 2025 baseline of 20.4%... In the rapid scenario, the growth in white-collar occupations would stall, with their share remaining flat at around 20.0%–21.0% in 2030 and 2050."
+    },
+    {
+      "id": "anthropic-81k-economics-survey-2026",
+      "title": "What 81,000 people told us about the economics of AI",
+      "url": "https://www.anthropic.com/research/81k-economics",
+      "publisher": "Anthropic (Massenkoff, Huang)",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-22",
+      "excerpt": "only 60% of early-career workers indicated that they personally benefited from AI, compared to 80% of senior professionals... early-career respondents were much more likely to express concern about job displacement than senior workers."
     }
   ]
 }

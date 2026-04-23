@@ -420,6 +420,15 @@
       ],
       "evidenceTier": 1,
       "label": "NBER: 3.35% work hours AI-assisted (2024); economists forecast 10.1% by 2030"
+    },
+    {
+      "date": "2026-04-22",
+      "direction": "up",
+      "sourceIds": [
+        "anthropic-81k-economics-survey-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Anthropic (n=80,508): mean productivity rating 5.1/7; 48% cite scope, 40% speed"
     }
   ],
   "sources": [
@@ -765,6 +774,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-04-01",
       "excerpt": "Work Hours Assisted by Generative AI. In 2030, they estimate the percentage of assisted work hours will be 10.1% for the unconditional scenario, 8.0% for the slow, 12.9% for the moderate, and 24.2% for the rapid, compared to a 2024 estimate of 3.35%. By 2050, they expect this to surge to 40.0% (unconditional), 25.0% (slow), 44.7% (moderate), and 62.0% (rapid)."
+    },
+    {
+      "id": "anthropic-81k-economics-survey-2026",
+      "title": "What 81,000 people told us about the economics of AI",
+      "url": "https://www.anthropic.com/research/81k-economics",
+      "publisher": "Anthropic (Massenkoff, Huang)",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-22",
+      "excerpt": "The mean productivity rating was 5.1, corresponding to 'substantially more productive'... the most common productivity enhancement is in scope, which was cited by 48% of users who explicitly mentioned productivity effects. 40% of users who mentioned productivity emphasized speed."
     }
   ]
 }
