@@ -402,6 +402,15 @@
       ],
       "evidenceTier": 2,
       "label": "OpenAI: ChatGPT used ~3x more in jobs most at risk of automation"
+    },
+    {
+      "date": "2026-03-01",
+      "direction": "up",
+      "sourceIds": [
+        "shah-levy-pro-se-ai-courts-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "MIT/USC: 18% of federal court complaints contain AI-text by 2026 (n=1,600)"
     }
   ],
   "sources": [
@@ -728,6 +737,16 @@
       "evidenceTier": 2,
       "datePublished": "2026-04-20",
       "excerpt": "Metaculus community forecasts for 2030 and 2035: overall US employment -1.9%/-3.4%; most vulnerable AI-exposed occupations -11.4%/-17.2%; software developers -15.1%/-22.3%; financial specialists -8.1%/-15.3%; services sales -11%/-14%; lawyers -5.4%/-9.6%; designers -4%/-8.4%; K-12 teachers -1.3%/+1.3%; overall median wage -0.6%/+1.4%; percent workers using AI daily 52.5%/70.9%; new-grad unemployment ~10%/12%."
+    },
+    {
+      "id": "shah-levy-pro-se-ai-courts-2026",
+      "title": "Access to Justice in the Age of AI: Evidence from U.S. Federal Courts",
+      "url": "https://avshah1.github.io/assets/pdf/papers/pro-se/Pro_Se_Automation.pdf",
+      "publisher": "MIT / USC (Shah, Levy)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-01",
+      "excerpt": "Applying the Pangram AI-text detector to a random sample of 1,600 federal civil complaints (200/year, 2019-2026): the share of complaints classified as AI-generated rose monotonically from 1.0% in 2023 to 3.5% in 2024, 10.5% in 2025, and 18.0% in early 2026, against a pre-AI false-positive rate of 0.1% (1 of 800).",
+      "dateAdded": "2026-04-23"
     }
   ]
 }

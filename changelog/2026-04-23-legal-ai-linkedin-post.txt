@@ -1,0 +1,23 @@
+For years we've been funding a number of AI-native legal counseling nonprofits to help average people afford to fight eviction, medical debt, wage theft, file bankruptcy, etc.
+
+I am optimistic that AI can level the playing field by providing low-cost access to services only the wealthiest could afford before — but know that it means our justice systems will be further strained.
+
+We will urgently need to rethink the administrative structures of our civil society (like courts) to adapt to the AI era.
+
+A new MIT/USC paper by Anand Shah and Joshua Levy puts hard numbers on the first half of that equation. Drawing on 4.5M+ federal civil cases and 46M PACER docket entries, they find:
+
+- Self-represented (pro se) filings broke a 20-year steady state of ~11% to hit 16.8% in FY2025 — pro se case counts nearly doubled from 23,210/yr pre-AI to 41,490 in FY2025
+- The surge is concentrated in "simple" case types where drafting is the main barrier (civil rights, consumer credit, foreclosure) and essentially absent in patent and securities fraud
+- Applying an AI-text detector to a random sample of 1,600 complaints: AI-generated text rose from 1.0% (2023) to 18.0% (early 2026), against a 0.1% pre-AI false-positive baseline
+- Case durations and disposition mix are unchanged — pro se cases aren't lower quality, there are just more of them
+- Docket entries per court from pro se cases are up 158% vs the pre-AI mean — a direct measure of new court burden
+
+The second half of the equation is where it gets hard. Article III judges take years to train and require Senate confirmation. Current Judicial Conference guidance prohibits federal judges from using AI to draft opinions. The supply of adjudicative capacity is fixed on nearly every margin that matters, while demand has just stepped up to levels never seen in 25 years of administrative records.
+
+This is exactly the trade-off we've been betting on: cheaper access to legal help is a real gain for people who were previously priced out of justice. But if we don't also invest in the throughput of courts — magistrate triage, specialized panels, AI assistance on the adjudication side, maybe even new lower courts — the same technology that opens the courthouse door creates a queue behind it.
+
+The civil rights, immigration, and benefits-appeal categories where pro se is rising fastest are disproportionately cases against federal agencies. When the marginal cost of filing falls for plaintiffs but not for institutional defendants, the asymmetry compounds.
+
+Worth reading in full: https://avshah1.github.io/assets/pdf/papers/pro-se/Pro_Se_Automation.pdf
+
+#AccessToJustice #AIandWork #LegalTech #CivilSociety #Philanthropy

@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "Access to Justice in the Age of AI: Evidence from U.S. Federal Courts",
+      "author": "Anand V. Shah, Joshua Y. Levy",
+      "publisher": "MIT / USC",
+      "date": "2026-03-01",
+      "url": "https://avshah1.github.io/assets/pdf/papers/pro-se/Pro_Se_Automation.pdf",
+      "takeaway": "Analysis of 4.5M+ federal civil cases and 46M PACER docket entries shows self-represented (pro se) filings broke a 20-year steady state of ~11% to reach 16.8% in FY2025, with pro se case counts nearly doubling from a pre-AI average of 23,210 to 41,490. The rise is concentrated in 'simple' case types (civil rights, consumer credit, foreclosure) and essentially absent in patent or securities fraud. An AI-text detector applied to 1,600 random complaints finds AI-generated text rising from 1.0% (2023) to 18.0% (early 2026). Case durations and disposition mix are unchanged, but docket entries per court from pro se cases are up 158% vs pre-AI — the supply of judicial capacity is fixed while demand has surged.",
+      "weekFeatured": "2026-04-23",
+      "tier": 1
+    },
+    {
       "title": "AI and the UK Labour Market: The Evidence So Far",
       "author": "Dr Pedro Serôdio",
       "publisher": "Centre for British Progress",

@@ -1,9 +1,25 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-04-22",
-  "totalSources": 535,
-  "verifiedCount": 525,
+  "lastUpdated": "2026-04-23",
+  "totalSources": 536,
+  "verifiedCount": 526,
   "sources": {
+    "shah-levy-pro-se-ai-courts-2026": {
+      "id": "shah-levy-pro-se-ai-courts-2026",
+      "title": "Access to Justice in the Age of AI: Evidence from U.S. Federal Courts",
+      "url": "https://avshah1.github.io/assets/pdf/papers/pro-se/Pro_Se_Automation.pdf",
+      "publisher": "MIT / USC (Shah, Levy)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-01",
+      "excerpt": "Analysis of 4.5M+ non-prisoner federal civil cases (FY2005-FY2026) and 46M PACER docket entries. Pro se filing share rose from ~11% steady-state (FY2005-FY2022) to 16.8% in FY2025, with pro se case counts nearly doubling (23,210 pre-AI avg → 41,490 in FY2025). Rise concentrated in 'simple' NOS categories (civil rights, consumer credit, foreclosure); absent in patent/securities. Plaintiff-side only — defendant pro se counts fell. Pro se docket entries per court up 158% vs pre-AI mean by 2025Q2; per case up 38% (16.9 → 23.3). Represented entries per case also up 23% (18.2 → 22.5). Case durations and disposition mix unchanged. Pangram AI-text detector applied to 1,600 random complaints (200/yr, 2019-2026): AI-text share rose monotonically from 0.1% pre-AI (1 of 800 false-positive baseline) to 1.0% (2023), 3.5% (2024), 10.5% (2025), 18.0% (early 2026).",
+      "usedIn": [
+        "genai-work-adoption",
+        "white-collar-professional-displacement",
+        "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
     "gallup-workplace-ai-feb-2026": {
       "id": "gallup-workplace-ai-feb-2026",
       "title": "Rising AI Adoption Spurs Workforce Changes",
