@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "What 81,000 people told us about the economics of AI",
+      "author": "Maxim Massenkoff, Saffron Huang",
+      "publisher": "Anthropic",
+      "date": "2026-04-22",
+      "url": "https://www.anthropic.com/research/81k-economics",
+      "takeaway": "Survey of 80,508 Claude.ai users connects qualitative worker sentiment to Anthropic's Economic Index usage data. One fifth voiced concern about AI-driven displacement, and worry tracks exposure: every 10pp of observed exposure adds 1.3pp of perceived threat, and top-quartile exposure workers mention it three times as often as the bottom quartile. Early-career respondents are much more concerned than seniors, and only 60% of early-career users said they personally benefited from AI versus 80% of senior professionals. Mean productivity rating was 5.1/7 ('substantially more productive'); 48% cite scope (new tasks), 40% speed. Management (mostly entrepreneurs) and computer/math show the biggest gains; lawyers and scientists the mildest. Speedup and threat form a U-shape: the workers AI slowed and the workers it sped up most are both more anxious.",
+      "weekFeatured": "2026-04-23",
+      "tier": 2
+    },
+    {
       "title": "Access to Justice in the Age of AI: Evidence from U.S. Federal Courts",
       "author": "Anand V. Shah, Joshua Y. Levy",
       "publisher": "MIT / USC",

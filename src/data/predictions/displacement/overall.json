@@ -1594,6 +1594,15 @@
       ],
       "evidenceTier": 1,
       "label": "NBER: economists assign only 14% avg probability to rapid AI progress by 2030"
+    },
+    {
+      "date": "2026-04-22",
+      "direction": "up",
+      "sourceIds": [
+        "anthropic-81k-economics-survey-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Anthropic (n=80,508): 1 in 5 Claude users voiced concern about AI displacement"
     }
   ],
   "sources": [
@@ -2814,6 +2823,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-04-01",
       "excerpt": "Conditional on a 'rapid' AI progress scenario, in which AI systems surpass human performance on many cognitive and physical tasks, experts forecast substantial, though not historically unprecedented, economic shifts: annualized GDP growth rising to around 4% and the labor force participation rate falling from its current level of 62% to 55% by 2050, with roughly half of that decline\u2014equivalent to around 10 million lost jobs\u2014attributable to AI. The average economist assigned a 61.4% probability to moderate or rapid progress, but only 14.0% to the rapid scenario. Unconditional economic forecasts are close to historical trends: median GDP growth 2.5% for 2030, LFPR 61.0% for 2030 vs 62.6% in 2025."
+    },
+    {
+      "id": "anthropic-81k-economics-survey-2026",
+      "title": "What 81,000 people told us about the economics of AI",
+      "url": "https://www.anthropic.com/research/81k-economics",
+      "publisher": "Anthropic (Massenkoff, Huang)",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-22",
+      "excerpt": "One fifth of the respondents in our survey voiced concern about economic displacement. Respondents' perceived threat from AI was correlated with our own measure of observed exposure, which reflects the percentage of a job's tasks for which Claude is used."
     }
   ]
 }

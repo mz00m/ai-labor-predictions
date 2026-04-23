@@ -1,9 +1,26 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-04-23",
-  "totalSources": 537,
-  "verifiedCount": 527,
+  "totalSources": 538,
+  "verifiedCount": 528,
   "sources": {
+    "anthropic-81k-economics-survey-2026": {
+      "id": "anthropic-81k-economics-survey-2026",
+      "title": "What 81,000 people told us about the economics of AI",
+      "url": "https://www.anthropic.com/research/81k-economics",
+      "publisher": "Anthropic (Massenkoff, Huang)",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-22",
+      "excerpt": "Survey of 80,508 Claude.ai users (personal accounts). One fifth voiced concern about economic displacement. Perceived job threat correlated with observed exposure: for every 10pp increase in exposure, perceived threat increased by 1.3pp; top-quartile exposure workers mentioned worry 3x as often as bottom-quartile. Early-career respondents much more likely to express concern than senior workers. Mean productivity rating 5.1/7 ('substantially more productive'); 3% reported negative or neutral impacts, 42% no clear indication. 48% of users mentioning productivity cited scope (new tasks), 40% speed. Management occupations (mostly entrepreneurs) and computer/math groups showed largest gains; scientific and legal professions the mildest. 10% of respondents naming a beneficiary said employers/clients capture the surplus; only 60% of early-career workers said they personally benefited vs 80% of senior professionals. U-shaped relationship between reported speedup and perceived job threat: both those slowed and those sped up most are more anxious.",
+      "usedIn": [
+        "overall-us-displacement",
+        "workforce-ai-exposure",
+        "white-collar-professional-displacement",
+        "genai-work-adoption"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
     "karger-kuusela-nber-ai-forecasts-2026": {
       "id": "karger-kuusela-nber-ai-forecasts-2026",
       "title": "Forecasting the Economic Effects of AI",

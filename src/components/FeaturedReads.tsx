@@ -9,6 +9,14 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Anthropic (Massenkoff, Huang)",
+    title: "What 81,000 people told us about the economics of AI",
+    summary:
+      "Survey of 80,508 Claude.ai users connects qualitative worker sentiment to Anthropic's Economic Index usage data. One fifth voiced concern about AI-driven displacement, and worry tracks exposure: every 10pp of observed exposure adds 1.3pp of perceived threat, and top-quartile exposure workers mention it 3x as often as the bottom quartile. Early-career respondents are much more concerned than seniors, and only 60% of early-career users said they personally benefited from AI versus 80% of senior professionals. Mean productivity rating: 5.1/7 ('substantially more productive'); 48% cite scope (new tasks), 40% speed. Management (mostly entrepreneurs) and computer/math show the biggest gains; lawyers and scientists the mildest. Speedup and threat form a U-shape: the workers AI slowed and the workers it sped up most are both more anxious.",
+    date: "Apr 22",
+    url: "https://www.anthropic.com/research/81k-economics",
+  },
+  {
     author: "Shah & Levy (MIT/USC)",
     title: "Access to Justice in the Age of AI",
     summary:
@@ -39,14 +47,6 @@ const articles: Article[] = [
       "Richmond (OpenAI) sorts all 921 occupations (147.9M jobs) into four archetypes: 18% at high automation risk, 24% will reorganize, 12% grow with AI, 46% less immediate change. ChatGPT used ~3x more in the most at-risk jobs, yet capability overhang is huge (90% theoretical vs 23.8% realized exposure in high-risk jobs). Since 2024Q1, unemployment rose MORE in less-exposed jobs (+0.6pp) than in high-risk ones (+0.3pp) — exposure alone is a weak predictor of near-term pressure.",
     date: "Apr 17",
     url: "https://cdn.openai.com/pdf/the-ai-jobs-transition-framework_report.pdf",
-  },
-  {
-    author: "Yale Budget Lab",
-    title: "Tracking the Impact of AI on the Labor Market",
-    summary:
-      "April 2026 monthly update: March CPS + Anthropic Feb usage data show no substantial change. Occupational/industry dissimilarity and exposure/usage metrics remain flat or within historical ranges. Exposure, automation, and augmentation measures show no relationship with employment or unemployment changes. Anthropic usage data continues to skew automation over augmentation.",
-    date: "Apr 16",
-    url: "https://budgetlab.yale.edu/research/tracking-impact-ai-labor-market",
   },
 ];
 
