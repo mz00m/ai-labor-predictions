@@ -73,7 +73,8 @@
       "date": "2025-12-31",
       "value": 18,
       "sourceIds": [
-        "fed-ai-adoption-monitoring-2026"
+        "fed-ai-adoption-monitoring-2026",
+        "census-btos-ai-diffusion-2026"
       ],
       "evidenceTier": 1,
       "metricType": "survey",
@@ -659,6 +660,24 @@
       ],
       "evidenceTier": 2,
       "label": "Carlyle: 11% of management teams cite SaaS licenses as AI spending offset; 17% cite no meaningful reallocation"
+    },
+    {
+      "date": "2026-04-01",
+      "direction": "up",
+      "sourceIds": [
+        "census-btos-ai-diffusion-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Census BTOS: 32% of employment at AI-using firms; rises to 60-70% for very large firms in Info/Prof Svcs/Finance"
+    },
+    {
+      "date": "2026-04-01",
+      "direction": "up",
+      "sourceIds": [
+        "census-btos-ai-diffusion-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Census BTOS: firm AI use expected to rise to 22% within 6 months (from 18% in Nov 2025-Jan 2026)"
     }
   ],
   "sources": [
@@ -1270,6 +1289,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-04-21",
       "excerpt": "Our proprietary survey of AI integration efforts finds that only 11% of management teams expect AI to replace existing software subscriptions. Far more expect the move to AI-centric architectures to reduce maintenance spending on legacy infrastructure, save on consulting fees, and increase the productivity of existing workers, reducing future headcount needs. Figure 4 (Carlyle Proprietary Survey, April 2026): Internal headcount cited as AI spending offset by 26% of respondents \u2014 the largest single category."
+    },
+    {
+      "id": "census-btos-ai-diffusion-2026",
+      "title": "The Microstructure of AI Diffusion: Evidence from Firms, Business Functions, and Worker Tasks",
+      "url": "https://www.census.gov/library/working-papers/2026/adrm/CES-WP-26-25.html",
+      "publisher": "U.S. Census Bureau (Bonney, Breaux, Dinlersoz, Foster, Haltiwanger, Pande \u2014 CES WP 26-25)",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-01",
+      "excerpt": "During the supplement reference period (Nov 2025-Jan 2026), 18% of firms used AI in a business function, rising to 32% on an employment-weighted basis; adoption is expected to reach 22% within six months. AI use is substantially higher in large firms and knowledge-intensive sectors, with use rates reaching 50%-60% (60%-70%, employment-weighted) for very large firms in the Information, Professional Services, and Finance sectors."
     }
   ]
 }

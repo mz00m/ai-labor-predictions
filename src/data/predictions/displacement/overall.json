@@ -1594,6 +1594,24 @@
       ],
       "evidenceTier": 1,
       "label": "NBER: economists assign only 14% avg probability to rapid AI progress by 2030"
+    },
+    {
+      "date": "2026-04-01",
+      "direction": "down",
+      "sourceIds": [
+        "census-btos-ai-diffusion-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Census BTOS: only 2.0% of AI-using firms report AI-driven headcount decreases (2.4% employment-weighted)"
+    },
+    {
+      "date": "2026-04-01",
+      "direction": "down",
+      "sourceIds": [
+        "census-btos-ai-diffusion-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Census BTOS: 66% of firms with task effects report augmentation only; pure substitution in just 5%"
     }
   ],
   "sources": [
@@ -2814,6 +2832,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-04-01",
       "excerpt": "Conditional on a 'rapid' AI progress scenario, in which AI systems surpass human performance on many cognitive and physical tasks, experts forecast substantial, though not historically unprecedented, economic shifts: annualized GDP growth rising to around 4% and the labor force participation rate falling from its current level of 62% to 55% by 2050, with roughly half of that decline\u2014equivalent to around 10 million lost jobs\u2014attributable to AI. The average economist assigned a 61.4% probability to moderate or rapid progress, but only 14.0% to the rapid scenario. Unconditional economic forecasts are close to historical trends: median GDP growth 2.5% for 2030, LFPR 61.0% for 2030 vs 62.6% in 2025."
+    },
+    {
+      "id": "census-btos-ai-diffusion-2026",
+      "title": "The Microstructure of AI Diffusion: Evidence from Firms, Business Functions, and Worker Tasks",
+      "url": "https://www.census.gov/library/working-papers/2026/adrm/CES-WP-26-25.html",
+      "publisher": "U.S. Census Bureau (Bonney, Breaux, Dinlersoz, Foster, Haltiwanger, Pande \u2014 CES WP 26-25)",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-01",
+      "excerpt": "AI-driven employment change instances remain modest, with only about 5% of AI-using firms reporting any headcount impact \u2013 distributed nearly equally between increases (2.3% firm-weighted and 3.7% employment-weighted) and decreases (2.0% firm-weighted and 2.4% employment-weighted). Augmentation is the primary effect: 44% of AI-using firms report augmenting worker tasks, and 66% of firms experiencing task effects do so exclusively. In contrast, pure task substitution and creation are rare, each occurring in only 5% of firms."
     }
   ]
 }

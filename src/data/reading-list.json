@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "The Microstructure of AI Diffusion: Evidence from Firms, Business Functions, and Worker Tasks",
+      "author": "Kathryn Bonney, Cory Breaux, Emin Dinlersoz, Lucia Foster, John Haltiwanger, Aditya Pande",
+      "publisher": "U.S. Census Bureau (CES Working Paper 26-25)",
+      "date": "2026-04-01",
+      "url": "https://www.census.gov/library/working-papers/2026/adrm/CES-WP-26-25.html",
+      "takeaway": "Second BTOS AI supplement (Nov 2025-Jan 2026): 18% of firms used AI in a business function (32% employment-weighted), rising to 60-70% for very large firms in Information, Professional Services, and Finance. Adoption is broad but shallow \u2014 57% of users deploy AI in \u22643 functions; 65% limit worker use to \u22643 tasks. 66% of task effects are augmentation-only; AI-driven headcount decreases occur in just 2% of firms. Functional breadth and operational investment correlate with employment declines; worker-task use does not \u2014 evidence of separate top-down (substitution) and bottom-up (augmentation) diffusion channels.",
+      "weekFeatured": "2026-04-23",
+      "tier": 1
+    },
+    {
       "title": "Access to Justice in the Age of AI: Evidence from U.S. Federal Courts",
       "author": "Anand V. Shah, Joshua Y. Levy",
       "publisher": "MIT / USC",

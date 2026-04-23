@@ -9,6 +9,14 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "U.S. Census Bureau (Bonney et al.)",
+    title: "The Microstructure of AI Diffusion",
+    summary:
+      "Second BTOS AI supplement (Nov 2025-Jan 2026): 18% of firms used AI in a business function, 32% employment-weighted, rising to 60-70% for very large firms in Information, Professional Services, and Finance. Adoption is broad but shallow — 57% of users deploy AI in ≤3 functions; 65% limit worker use to ≤3 tasks. 66% of task effects are augmentation-only; AI-driven headcount decreases occur in just 2% of firms. Functional breadth and operational investment correlate with employment declines; worker-task use does not — evidence of separate top-down (substitution) and bottom-up (augmentation) diffusion channels.",
+    date: "Apr 1",
+    url: "https://www.census.gov/library/working-papers/2026/adrm/CES-WP-26-25.html",
+  },
+  {
     author: "Shah & Levy (MIT/USC)",
     title: "Access to Justice in the Age of AI",
     summary:
@@ -39,14 +47,6 @@ const articles: Article[] = [
       "Richmond (OpenAI) sorts all 921 occupations (147.9M jobs) into four archetypes: 18% at high automation risk, 24% will reorganize, 12% grow with AI, 46% less immediate change. ChatGPT used ~3x more in the most at-risk jobs, yet capability overhang is huge (90% theoretical vs 23.8% realized exposure in high-risk jobs). Since 2024Q1, unemployment rose MORE in less-exposed jobs (+0.6pp) than in high-risk ones (+0.3pp) — exposure alone is a weak predictor of near-term pressure.",
     date: "Apr 17",
     url: "https://cdn.openai.com/pdf/the-ai-jobs-transition-framework_report.pdf",
-  },
-  {
-    author: "Yale Budget Lab",
-    title: "Tracking the Impact of AI on the Labor Market",
-    summary:
-      "April 2026 monthly update: March CPS + Anthropic Feb usage data show no substantial change. Occupational/industry dissimilarity and exposure/usage metrics remain flat or within historical ranges. Exposure, automation, and augmentation measures show no relationship with employment or unemployment changes. Anthropic usage data continues to skew automation over augmentation.",
-    date: "Apr 16",
-    url: "https://budgetlab.yale.edu/research/tracking-impact-ai-labor-market",
   },
 ];
 

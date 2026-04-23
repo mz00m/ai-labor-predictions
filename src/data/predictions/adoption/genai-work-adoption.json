@@ -420,6 +420,15 @@
       ],
       "evidenceTier": 1,
       "label": "NBER: 3.35% work hours AI-assisted (2024); economists forecast 10.1% by 2030"
+    },
+    {
+      "date": "2026-04-01",
+      "direction": "up",
+      "sourceIds": [
+        "census-btos-ai-diffusion-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Census BTOS: 23% of firms (41% employment-weighted) report workers using AI in work tasks"
     }
   ],
   "sources": [
@@ -765,6 +774,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-04-01",
       "excerpt": "Work Hours Assisted by Generative AI. In 2030, they estimate the percentage of assisted work hours will be 10.1% for the unconditional scenario, 8.0% for the slow, 12.9% for the moderate, and 24.2% for the rapid, compared to a 2024 estimate of 3.35%. By 2050, they expect this to surge to 40.0% (unconditional), 25.0% (slow), 44.7% (moderate), and 62.0% (rapid)."
+    },
+    {
+      "id": "census-btos-ai-diffusion-2026",
+      "title": "The Microstructure of AI Diffusion: Evidence from Firms, Business Functions, and Worker Tasks",
+      "url": "https://www.census.gov/library/working-papers/2026/adrm/CES-WP-26-25.html",
+      "publisher": "U.S. Census Bureau (Bonney, Breaux, Dinlersoz, Foster, Haltiwanger, Pande \u2014 CES WP 26-25)",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-01",
+      "excerpt": "In 23% (41%, employment-weighted) of firms, workers use AI in work-related tasks. Writing, document analysis, and information search are the leading Generative AI use in tasks, though 65% of firms limit use to three or fewer tasks. In 36% of firms where workers utilize AI, there is no indication of formal firm-level adoption, a pattern suggesting a bottom-up or grassroots trajectory."
     }
   ]
 }

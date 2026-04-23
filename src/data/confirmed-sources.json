@@ -1,9 +1,25 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-04-23",
-  "totalSources": 537,
-  "verifiedCount": 527,
+  "totalSources": 538,
+  "verifiedCount": 528,
   "sources": {
+    "census-btos-ai-diffusion-2026": {
+      "id": "census-btos-ai-diffusion-2026",
+      "title": "The Microstructure of AI Diffusion: Evidence from Firms, Business Functions, and Worker Tasks",
+      "url": "https://www.census.gov/library/working-papers/2026/adrm/CES-WP-26-25.html",
+      "publisher": "U.S. Census Bureau (Bonney, Breaux, Dinlersoz, Foster, Haltiwanger, Pande \u2014 CES WP 26-25)",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-01",
+      "excerpt": "During the supplement reference period (Nov 2025-Jan 2026), 18% of firms used AI in a business function, rising to 32% on an employment-weighted basis; adoption is expected to reach 22% within six months. AI-driven employment decreases are rare, occurring in only 2% of firms. Most users (66%) rely on AI solely to augment tasks, while pure substitution and creation each occur in only 5% of firms. In 23% (41%, employment-weighted) of firms, workers use AI in work-related tasks.",
+      "usedIn": [
+        "ai-adoption-rate",
+        "overall-us-displacement",
+        "genai-work-adoption"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
     "karger-kuusela-nber-ai-forecasts-2026": {
       "id": "karger-kuusela-nber-ai-forecasts-2026",
       "title": "Forecasting the Economic Effects of AI",
