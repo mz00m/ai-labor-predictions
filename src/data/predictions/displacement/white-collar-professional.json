@@ -960,6 +960,15 @@
       ],
       "evidenceTier": 2,
       "label": "Anthropic: early-career benefit 60% vs 80% seniors; more displacement worry"
+    },
+    {
+      "date": "2026-04-24",
+      "direction": "down",
+      "sourceIds": [
+        "garicano-task-not-job-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Silicon Continent: BLS projects accountants +5% by 2034, clerks -6%"
     }
   ],
   "sources": [
@@ -1749,6 +1758,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-04-22",
       "excerpt": "only 60% of early-career workers indicated that they personally benefited from AI, compared to 80% of senior professionals... early-career respondents were much more likely to express concern about job displacement than senior workers."
+    },
+    {
+      "id": "garicano-task-not-job-2026",
+      "title": "The task is not the job: A supply-side answer to Amodei and Imas",
+      "url": "https://www.siliconcontinent.com/p/why-desk-jobs-survive-and-amodei",
+      "publisher": "Silicon Continent (Luis Garicano)",
+      "evidenceTier": 3,
+      "datePublished": "2026-04-24",
+      "excerpt": "In 2013, a study by Carl Frey and Michael Osborne put the probability that accountants and auditors would be automated at 94 percent. A decade later, the US Bureau of Labor Statistics counts 1.6 million accountants and auditors employed, median pay of $81,680, and projects the occupation to grow another 5 percent through 2034, faster than the average for all jobs. By contrast, the BLS category 'bookkeeping, accounting, and auditing clerks' is falling, a projected 6 percent over the same decade. The clerical task... is a weak bundle. The accountant's job is a strong bundle."
     }
   ]
 }

@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "The task is not the job: A supply-side answer to Amodei and Imas",
+      "author": "Luis Garicano",
+      "publisher": "Silicon Continent",
+      "date": "2026-04-24",
+      "url": "https://www.siliconcontinent.com/p/why-desk-jobs-survive-and-amodei",
+      "takeaway": "A supply-side rebuttal to Amodei's claim that AI will eliminate half of entry-level white-collar jobs in 1-5 years. Labour markets price jobs, not tasks: when components of a bundle are expensive to separate from the rest, AI helps with parts while humans keep the work. Frey/Osborne in 2013 put 94% automation probability on accountants; a decade later BLS counts 1.6M accountants and auditors at $81,680 median pay and projects +5% growth through 2034, while bookkeeping clerks (a 'weak bundle') are projected -6%. Travel agent employment is 60% below its dot-com peak, yet surviving agents' weekly earnings rose from 87% to 99% of the private-sector average (2000-2025). Also: organizations need residual decision rights — a human who can be sued, fired, and held accountable — that AI agents don't yet have.",
+      "weekFeatured": "2026-04-24",
+      "tier": 3
+    },
+    {
       "title": "What 81,000 people told us about the economics of AI",
       "author": "Maxim Massenkoff, Saffron Huang",
       "publisher": "Anthropic",

@@ -1603,6 +1603,15 @@
       ],
       "evidenceTier": 2,
       "label": "Anthropic (n=80,508): 1 in 5 Claude users voiced concern about AI displacement"
+    },
+    {
+      "date": "2026-04-24",
+      "direction": "up",
+      "sourceIds": [
+        "garicano-task-not-job-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Amodei (quoted): AI may eliminate up to 50% of entry-level white-collar in 1-5yr"
     }
   ],
   "sources": [
@@ -2832,6 +2841,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-04-22",
       "excerpt": "One fifth of the respondents in our survey voiced concern about economic displacement. Respondents' perceived threat from AI was correlated with our own measure of observed exposure, which reflects the percentage of a job's tasks for which Claude is used."
+    },
+    {
+      "id": "garicano-task-not-job-2026",
+      "title": "The task is not the job: A supply-side answer to Amodei and Imas",
+      "url": "https://www.siliconcontinent.com/p/why-desk-jobs-survive-and-amodei",
+      "publisher": "Silicon Continent (Luis Garicano)",
+      "evidenceTier": 3,
+      "datePublished": "2026-04-24",
+      "excerpt": "Dario Amodei, CEO of Anthropic, went on Fox News and said that AI will eliminate up to half of all entry-level white-collar jobs within one to five years. He named finance, consulting, law, and tech... the argument that 'half of entry-level white-collar jobs be gone in five years' confuses task automation with the extinction of jobs."
     }
   ]
 }
