@@ -519,6 +519,15 @@
       ],
       "evidenceTier": 3,
       "label": "Burning Glass: High-productivity sectors show weaker demand for junior labor"
+    },
+    {
+      "date": "2026-04-24",
+      "direction": "neutral",
+      "sourceIds": [
+        "garicano-task-not-job-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Silicon Continent: Travel agent wages rose 87%->99% of private-sector avg (2000-2025)"
     }
   ],
   "sources": [
@@ -970,6 +979,15 @@
       "evidenceTier": 3,
       "datePublished": "2026-04-21",
       "excerpt": "The pressure is likely to emerge first in entry-level white-collar work, where the same industries posting the strongest productivity gains are also showing weaker demand for junior labor."
+    },
+    {
+      "id": "garicano-task-not-job-2026",
+      "title": "The task is not the job: A supply-side answer to Amodei and Imas",
+      "url": "https://www.siliconcontinent.com/p/why-desk-jobs-survive-and-amodei",
+      "publisher": "Silicon Continent (Luis Garicano)",
+      "evidenceTier": 3,
+      "datePublished": "2026-04-24",
+      "excerpt": "In 2000, average weekly earnings at travel agencies were 87% of the private-sector average. By 2025, they had reached 99%. The surviving agents earn more per hour than they used to, precisely because the machine took the weak part and left them the strong one."
     }
   ]
 }

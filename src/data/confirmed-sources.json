@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-04-23",
-  "totalSources": 538,
-  "verifiedCount": 528,
+  "lastUpdated": "2026-04-24",
+  "totalSources": 539,
+  "verifiedCount": 529,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -7617,6 +7617,23 @@
       "datePublished": "2026-04-22",
       "excerpt": "Three years after generative AI reached the market, there is no detectable employment effect for the most exposed occupations on UK data, regardless of which exposure metric is used. The estimates are noisy, the confidence intervals are wide, and neither measure produces a statistically distinguishable effect on aggregate employment.",
       "usedIn": [],
+      "verified": true,
+      "synthetic": false
+    },
+    "garicano-task-not-job-2026": {
+      "id": "garicano-task-not-job-2026",
+      "title": "The task is not the job: A supply-side answer to Amodei and Imas",
+      "url": "https://www.siliconcontinent.com/p/why-desk-jobs-survive-and-amodei",
+      "publisher": "Silicon Continent (Luis Garicano)",
+      "evidenceTier": 3,
+      "datePublished": "2026-04-24",
+      "excerpt": "A job is a bundle of tasks. The real question is not whether AI can perform one component of the bundle. It is whether that component can be separated from the rest at low cost... In 2013, a study by Carl Frey and Michael Osborne put the probability that accountants and auditors would be automated at 94 percent. A decade later, the US Bureau of Labor Statistics counts 1.6 million accountants and auditors employed, median pay of $81,680, and projects the occupation to grow another 5 percent through 2034... the argument that 'half of entry-level white-collar jobs be gone in five years' confuses task automation with the extinction of jobs.",
+      "usedIn": [
+        "white-collar-professional-displacement",
+        "financial-services-displacement",
+        "overall-us-displacement",
+        "entry-level-wage-impact"
+      ],
       "verified": true,
       "synthetic": false
     }

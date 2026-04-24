@@ -9,6 +9,14 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Luis Garicano (Silicon Continent)",
+    title: "The task is not the job",
+    summary:
+      "A supply-side rebuttal to Amodei's claim that AI will eliminate half of entry-level white-collar jobs in 1-5 years. Labour markets price jobs, not tasks: when components of a bundle are expensive to separate from the rest, AI helps with parts while humans keep the work. Exhibit A: Frey/Osborne 2013 put 94% automation probability on accountants; a decade later BLS counts 1.6M of them at $81,680 median pay and projects +5% growth through 2034, while the 'weak bundle' of bookkeeping clerks falls 6%. Travel agent employment is 60% below its dot-com peak, yet surviving agents' weekly earnings rose from 87% to 99% of the private-sector average (2000-2025) because the machine took the weak part and left them the strong one. Also: organizations need residual decision rights — a human who can be sued, fired, and held accountable — that AI agents don't yet have.",
+    date: "Apr 24",
+    url: "https://www.siliconcontinent.com/p/why-desk-jobs-survive-and-amodei",
+  },
+  {
     author: "Anthropic (Massenkoff, Huang)",
     title: "What 81,000 people told us about the economics of AI",
     summary:
@@ -39,14 +47,6 @@ const articles: Article[] = [
       "Becky Chao's policy brief synthesizes the evidence base for AI-driven labor disruption — citing Brynjolfsson's 16% entry-level employment drop, Brookings' 6.1M displaced clerical workers, and Azar et al.'s 4.5% wage decline at AI-substitutable firms — and lays out a four-pillar agenda: modernize the social contract (UI uptake, public healthcare, income floor, four-day week), protect workers from algorithmic wage-setting and surveillance, deploy antimonopoly tools across the AI stack, and shift data-center energy costs back to the firms driving them rather than households.",
     date: "Apr 1",
     url: "https://economicsecurityproject.org/wp-content/uploads/Ideas-for-Shared-Economic-Prosperity-in-the-AI-Transition.pdf",
-  },
-  {
-    author: "OpenAI Economic Research",
-    title: "The AI Jobs Transition Framework",
-    summary:
-      "Richmond (OpenAI) sorts all 921 occupations (147.9M jobs) into four archetypes: 18% at high automation risk, 24% will reorganize, 12% grow with AI, 46% less immediate change. ChatGPT used ~3x more in the most at-risk jobs, yet capability overhang is huge (90% theoretical vs 23.8% realized exposure in high-risk jobs). Since 2024Q1, unemployment rose MORE in less-exposed jobs (+0.6pp) than in high-risk ones (+0.3pp) — exposure alone is a weak predictor of near-term pressure.",
-    date: "Apr 17",
-    url: "https://cdn.openai.com/pdf/the-ai-jobs-transition-framework_report.pdf",
   },
 ];
 
