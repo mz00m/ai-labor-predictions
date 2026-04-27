@@ -9,6 +9,22 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Elizabeth Gibney (Nature)",
+    title: "AI doom warnings are getting louder. Are they realistic?",
+    summary:
+      "Nature surveys the existential-risk debate: only 3% of ~4,000 AI researchers name extinction as their top worry, yet 53% give it ≥10% probability — up from 47% in 2023. Dario Amodei puts P(doom) at 25%. Critics including Gary Marcus and Casey Mock argue doom narratives distract from documented current harms and hand firms a regulatory shield. Maps a genuine split between near-term misuse concerns and longer-horizon misalignment fears.",
+    date: "2026",
+    url: "https://www.nature.com/articles/d41586-026-01257-6",
+  },
+  {
+    author: "Autor, Chin, Salomons, Seegmiller (NBER)",
+    title: "What Makes New Work Different from More Work?",
+    summary:
+      "NBER WP 34986 (forthcoming Annual Review of Economics): 18% of US workers hold jobs introduced since 1970. New work commands a wage premium — 4× larger for tech-linked new work — reflecting scarcity of novel expertise. Advanced-degree workers are 2.9pp more likely to land new work. Labor share has fallen 10% since early 2000s, but new work is the core mechanism counteracting displacement.",
+    date: "Apr 24",
+    url: "https://mitstonecenter.substack.com/p/what-makes-new-work-different-from",
+  },
+  {
     author: "Luis Garicano (Silicon Continent)",
     title: "The task is not the job",
     summary:
@@ -31,22 +47,6 @@ const articles: Article[] = [
       "Analysis of 4.5M+ federal civil cases and 46M PACER docket entries shows pro se (self-represented) filings broke a 20-year steady state of ~11% to hit 16.8% in FY2025, with case counts nearly doubling from a pre-AI avg of 23,210 to 41,490. The rise is concentrated in 'simple' NOS categories (civil rights, consumer credit, foreclosure) and absent in patent/securities. Pangram AI-text detection on 1,600 random complaints finds AI-generated text rising monotonically: 1.0% (2023) → 3.5% (2024) → 10.5% (2025) → 18.0% (early 2026), against a 0.1% pre-AI false-positive baseline. Case durations and disposition mix are unchanged, but docket entries per court from pro se cases are up 158% vs pre-AI — judges face more filings they can't refuse, from plaintiffs who a year ago couldn't afford to bring them.",
     date: "Mar",
     url: "https://avshah1.github.io/assets/pdf/papers/pro-se/Pro_Se_Automation.pdf",
-  },
-  {
-    author: "Gad Levanon (Burning Glass)",
-    title: "A Technology-Driven Productivity Regime Shift",
-    summary:
-      "US labor productivity growth jumped from 1.3%/yr (2013-2019) to 2.2%/yr (2019-2025) as hours growth collapsed from 1.9% to 0.7%. The gains are narrow: white-collar services, retail trade, and advanced manufacturing post 3.2-3.9% annualized productivity; the rest of the private economy sits at 0.1%. FIIPB's contribution to aggregate productivity doubled (0.78→1.50pp/yr); Information sector hours are down 6% from their 2022 peak while GDP +8.4%/yr. Early 2026 job growth is flat outside healthcare — the economy is learning to produce more with fewer workers, and the pressure lands first on entry-level white-collar roles.",
-    date: "Apr 21",
-    url: "https://www.linkedin.com/pulse/technology-driven-productivity-regime-shift-gad-levanon-mqyge/",
-  },
-  {
-    author: "Economic Security Project",
-    title: "Ideas for Shared Economic Prosperity in the AI Transition",
-    summary:
-      "Becky Chao's policy brief synthesizes the evidence base for AI-driven labor disruption — citing Brynjolfsson's 16% entry-level employment drop, Brookings' 6.1M displaced clerical workers, and Azar et al.'s 4.5% wage decline at AI-substitutable firms — and lays out a four-pillar agenda: modernize the social contract (UI uptake, public healthcare, income floor, four-day week), protect workers from algorithmic wage-setting and surveillance, deploy antimonopoly tools across the AI stack, and shift data-center energy costs back to the firms driving them rather than households.",
-    date: "Apr 1",
-    url: "https://economicsecurityproject.org/wp-content/uploads/Ideas-for-Shared-Economic-Prosperity-in-the-AI-Transition.pdf",
   },
 ];
 

@@ -2,12 +2,32 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "What Makes New Work Different from More Work?",
+      "author": "David Autor, Caroline Chin, Anna Salomons, Bryan Seegmiller",
+      "publisher": "MIT Stone Center / NBER",
+      "date": "2026-04-24",
+      "url": "https://mitstonecenter.substack.com/p/what-makes-new-work-different-from",
+      "takeaway": "NBER WP 34986 (forthcoming Annual Review of Economics): 18% of US workers hold jobs introduced since 1970. New work commands a wage premium 4\u00d7 larger for tech-linked roles. Advanced-degree workers are 2.9pp more likely to land new work. Public policy can drive new work creation. New work is the central mechanism counteracting automation-driven displacement.",
+      "weekFeatured": "2026-04-27",
+      "tier": 1
+    },
+    {
+      "title": "AI doom warnings are getting louder. Are they realistic?",
+      "author": "Elizabeth Gibney",
+      "publisher": "Nature",
+      "date": "2026-01-01",
+      "url": "https://www.nature.com/articles/d41586-026-01257-6",
+      "takeaway": "Nature surveys the existential-risk debate: only 3% of ~4,000 AI researchers name extinction as their top worry (UCL preprint), yet 53% give it \u226510% probability \u2014 up from 47% in 2023 (AI Impacts). Dario Amodei puts P(doom) at 25%. Critics including Gary Marcus and Casey Mock argue doom narratives distract from documented current harms and give firms a regulatory shield.",
+      "weekFeatured": "2026-04-27",
+      "tier": 3
+    },
+    {
       "title": "The task is not the job: A supply-side answer to Amodei and Imas",
       "author": "Luis Garicano",
       "publisher": "Silicon Continent",
       "date": "2026-04-24",
       "url": "https://www.siliconcontinent.com/p/why-desk-jobs-survive-and-amodei",
-      "takeaway": "A supply-side rebuttal to Amodei's claim that AI will eliminate half of entry-level white-collar jobs in 1-5 years. Labour markets price jobs, not tasks: when components of a bundle are expensive to separate from the rest, AI helps with parts while humans keep the work. Frey/Osborne in 2013 put 94% automation probability on accountants; a decade later BLS counts 1.6M accountants and auditors at $81,680 median pay and projects +5% growth through 2034, while bookkeeping clerks (a 'weak bundle') are projected -6%. Travel agent employment is 60% below its dot-com peak, yet surviving agents' weekly earnings rose from 87% to 99% of the private-sector average (2000-2025). Also: organizations need residual decision rights — a human who can be sued, fired, and held accountable — that AI agents don't yet have.",
+      "takeaway": "A supply-side rebuttal to Amodei's claim that AI will eliminate half of entry-level white-collar jobs in 1-5 years. Labour markets price jobs, not tasks: when components of a bundle are expensive to separate from the rest, AI helps with parts while humans keep the work. Frey/Osborne in 2013 put 94% automation probability on accountants; a decade later BLS counts 1.6M accountants and auditors at $81,680 median pay and projects +5% growth through 2034, while bookkeeping clerks (a 'weak bundle') are projected -6%. Travel agent employment is 60% below its dot-com peak, yet surviving agents' weekly earnings rose from 87% to 99% of the private-sector average (2000-2025). Also: organizations need residual decision rights \u2014 a human who can be sued, fired, and held accountable \u2014 that AI agents don't yet have.",
       "weekFeatured": "2026-04-24",
       "tier": 3
     },
@@ -27,17 +47,17 @@
       "publisher": "MIT / USC",
       "date": "2026-03-01",
       "url": "https://avshah1.github.io/assets/pdf/papers/pro-se/Pro_Se_Automation.pdf",
-      "takeaway": "Analysis of 4.5M+ federal civil cases and 46M PACER docket entries shows self-represented (pro se) filings broke a 20-year steady state of ~11% to reach 16.8% in FY2025, with pro se case counts nearly doubling from a pre-AI average of 23,210 to 41,490. The rise is concentrated in 'simple' case types (civil rights, consumer credit, foreclosure) and essentially absent in patent or securities fraud. An AI-text detector applied to 1,600 random complaints finds AI-generated text rising from 1.0% (2023) to 18.0% (early 2026). Case durations and disposition mix are unchanged, but docket entries per court from pro se cases are up 158% vs pre-AI — the supply of judicial capacity is fixed while demand has surged.",
+      "takeaway": "Analysis of 4.5M+ federal civil cases and 46M PACER docket entries shows self-represented (pro se) filings broke a 20-year steady state of ~11% to reach 16.8% in FY2025, with pro se case counts nearly doubling from a pre-AI average of 23,210 to 41,490. The rise is concentrated in 'simple' case types (civil rights, consumer credit, foreclosure) and essentially absent in patent or securities fraud. An AI-text detector applied to 1,600 random complaints finds AI-generated text rising from 1.0% (2023) to 18.0% (early 2026). Case durations and disposition mix are unchanged, but docket entries per court from pro se cases are up 158% vs pre-AI \u2014 the supply of judicial capacity is fixed while demand has surged.",
       "weekFeatured": "2026-04-23",
       "tier": 1
     },
     {
       "title": "AI and the UK Labour Market: The Evidence So Far",
-      "author": "Dr Pedro Serôdio",
+      "author": "Dr Pedro Ser\u00f4dio",
       "publisher": "Centre for British Progress",
       "date": "2026-04-22",
       "url": "https://britishprogress.org/reports/ai-and-the-uk-labour-market-the-evidence-so-far",
-      "takeaway": "Comprehensive UK survey of 412 occupations (24.8M workers): no detectable displacement signal three years post-ChatGPT, though occupation-level divergence is sharp — IT analysts up 38%, call centre workers down 19% since 2021. Software sector is the strongest early signal: employment fell 4.5% in H2 2025 as AI coding tools arrived, productivity growth accelerated from 0.8%/yr to 3.8%/yr post-ChatGPT, and expert exposure models systematically overstate actual adoption.",
+      "takeaway": "Comprehensive UK survey of 412 occupations (24.8M workers): no detectable displacement signal three years post-ChatGPT, though occupation-level divergence is sharp \u2014 IT analysts up 38%, call centre workers down 19% since 2021. Software sector is the strongest early signal: employment fell 4.5% in H2 2025 as AI coding tools arrived, productivity growth accelerated from 0.8%/yr to 3.8%/yr post-ChatGPT, and expert exposure models systematically overstate actual adoption.",
       "weekFeatured": "2026-04-22",
       "tier": 2
     },
@@ -47,7 +67,7 @@
       "publisher": "The Burning Glass Institute",
       "date": "2026-04-21",
       "url": "https://www.linkedin.com/pulse/technology-driven-productivity-regime-shift-gad-levanon-mqyge/",
-      "takeaway": "US labor productivity surged from 1.3% annually (2013–2019) to 2.2% (2019–2025), concentrated in three tech-exposed sectors posting 3.2–3.9% growth while the rest of the economy grew at 0.1%, driven by AI deployment and digital transformation that is hollowing out entry-level white-collar jobs even as output accelerates.",
+      "takeaway": "US labor productivity surged from 1.3% annually (2013\u20132019) to 2.2% (2019\u20132025), concentrated in three tech-exposed sectors posting 3.2\u20133.9% growth while the rest of the economy grew at 0.1%, driven by AI deployment and digital transformation that is hollowing out entry-level white-collar jobs even as output accelerates.",
       "weekFeatured": "2026-04-21",
       "tier": 3
     },
@@ -87,7 +107,7 @@
       "publisher": "Federal Reserve Bank of New York (Liberty Street Economics)",
       "date": "2026-04-14",
       "url": "https://libertystreeteconomics.newyorkfed.org/2026/04/use-of-gen-ai-in-the-workplace-and-the-value-of-access-to-training/",
-      "takeaway": "Only 39% of employed Americans use AI at work, with stark disparities by education (58.7% college vs. 22.9% non-college) and income ($15.9% under $50K vs. 66.3% over $200K); among users, 66% report productivity gains, yet a critical training gap exists—38% of workers value AI training but only 15.9% receive it from employers, with untrained workers willing to pay 11.4% of salary for access.",
+      "takeaway": "Only 39% of employed Americans use AI at work, with stark disparities by education (58.7% college vs. 22.9% non-college) and income ($15.9% under $50K vs. 66.3% over $200K); among users, 66% report productivity gains, yet a critical training gap exists\u201438% of workers value AI training but only 15.9% receive it from employers, with untrained workers willing to pay 11.4% of salary for access.",
       "weekFeatured": "2026-04-14",
       "tier": 1
     },
@@ -127,7 +147,7 @@
       "publisher": "OpenAI",
       "date": "2026-04-01",
       "url": "https://cdn.openai.com/pdf/561e7512-253e-424b-9734-ef4098440601/Industrial%20Policy%20for%20the%20Intelligence%20Age.pdf",
-      "takeaway": "OpenAI proposes a comprehensive policy framework for the AI transition including a public wealth fund, 32-hour workweeks, portable benefits, and tax shifts from payroll to capital—warning that productivity gains won't automatically benefit workers without deliberate intervention. The blueprint also calls for AI safety auditing, international coordination, and worker voice in deployment decisions.",
+      "takeaway": "OpenAI proposes a comprehensive policy framework for the AI transition including a public wealth fund, 32-hour workweeks, portable benefits, and tax shifts from payroll to capital\u2014warning that productivity gains won't automatically benefit workers without deliberate intervention. The blueprint also calls for AI safety auditing, international coordination, and worker voice in deployment decisions.",
       "weekFeatured": "2026-04-07",
       "tier": 2
     },
@@ -137,7 +157,7 @@
       "publisher": "MIT Center for Collective Intelligence (arXiv)",
       "date": "2026-03-27",
       "url": "https://arxiv.org/abs/2603.20619",
-      "takeaway": "AI applications concentrate deeply in narrow task categories, with 92% of AI apps targeting just 6.8% of work activities—primarily information creation and software tasks—while physical and interactive work remain largely unaffected despite 6x growth in AI tools from 2022-2024.",
+      "takeaway": "AI applications concentrate deeply in narrow task categories, with 92% of AI apps targeting just 6.8% of work activities\u2014primarily information creation and software tasks\u2014while physical and interactive work remain largely unaffected despite 6x growth in AI tools from 2022-2024.",
       "weekFeatured": "2026-04-04",
       "tier": 1
     },
@@ -187,7 +207,7 @@
       "publisher": "Noahpinion (Substack)",
       "date": "2026-03-28",
       "url": "https://www.noahpinion.blog/p/plentiful-high-paying-jobs-in-the-ff9",
-      "takeaway": "AI's comparative advantage constraint means cheaper compute won't eliminate human jobs—opportunity costs keep human labor valuable even if AI outperforms humans at every task. However, wages will decline at full automation, with major risks from energy scarcity, wealth concentration, and transition disruptions.",
+      "takeaway": "AI's comparative advantage constraint means cheaper compute won't eliminate human jobs\u2014opportunity costs keep human labor valuable even if AI outperforms humans at every task. However, wages will decline at full automation, with major risks from energy scarcity, wealth concentration, and transition disruptions.",
       "weekFeatured": "2026-03-28",
       "tier": 4
     },
@@ -237,7 +257,7 @@
       "publisher": "Journal of Economic Perspectives",
       "date": "2015-07-01",
       "url": "https://pubs.aeaweb.org/doi/pdfplus/10.1257/jep.29.3.31",
-      "takeaway": "Despite 250 years of predictions that technological advancement would cause mass unemployment, those forecasts proved largely wrong—though the study acknowledges real costs to displaced workers. Annual working hours fell from 2,950 in 1870 to 1,500 in 1998, demonstrating that technology's long-run economic benefits outweigh short-term disruption.",
+      "takeaway": "Despite 250 years of predictions that technological advancement would cause mass unemployment, those forecasts proved largely wrong\u2014though the study acknowledges real costs to displaced workers. Annual working hours fell from 2,950 in 1870 to 1,500 in 1998, demonstrating that technology's long-run economic benefits outweigh short-term disruption.",
       "weekFeatured": "2026-03-20",
       "tier": 1
     },
@@ -283,7 +303,7 @@
     },
     {
       "title": "Artificial Intelligence, Productivity, and the Workforce: Evidence from Corporate Executives",
-      "author": "Salomé Baslandze, Brent Meyer, John Robertson, Emil Verner, Erick Zwick",
+      "author": "Salom\u00e9 Baslandze, Brent Meyer, John Robertson, Emil Verner, Erick Zwick",
       "publisher": "Federal Reserve Bank of Atlanta / Duke University",
       "date": "2026-03-13",
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6410338",
@@ -293,8 +313,8 @@
     },
     {
       "title": "Same Storm, Different Boats: Generative AI and the Age Gradient in Hiring",
-      "author": "Magnus Lodefalk, Lydia Löthman, Michael Koch, Erik Engberg",
-      "publisher": "RATIO Institute / Örebro University",
+      "author": "Magnus Lodefalk, Lydia L\u00f6thman, Michael Koch, Erik Engberg",
+      "publisher": "RATIO Institute / \u00d6rebro University",
       "date": "2026-03-16",
       "url": "https://cms.ratio.se/app/uploads/2026/03/lodefalk_march16_paper_v2-kombinerades.pdf",
       "takeaway": "Swedish employer data show that employment of 22-25-year-olds in high-AI occupations declined 5.5% relative to low-AI occupations by 2025H1, while workers 50+ saw 1.3% gains, with effects twice as large for young women. This replicates prior US findings of AI disproportionately affecting young workers' hiring prospects.",
@@ -307,7 +327,7 @@
       "publisher": "Washington Post",
       "date": "2026-03-16",
       "url": "https://www.washingtonpost.com/technology/interactive/2026/jobs-most-affected-ai-automation/",
-      "takeaway": "6.1 million clerical and administrative workers—86% women—face the highest AI threat due to low adaptability, while white-collar jobs are positioned to be disrupted first despite no measurable job displacement occurring yet.",
+      "takeaway": "6.1 million clerical and administrative workers\u201486% women\u2014face the highest AI threat due to low adaptability, while white-collar jobs are positioned to be disrupted first despite no measurable job displacement occurring yet.",
       "weekFeatured": "2026-03-16",
       "tier": 3
     },
@@ -522,7 +542,7 @@
       "tier": 1
     },
     {
-      "title": "AI Won't Just Automate Jobs — It Will Challenge the Meaning of Work",
+      "title": "AI Won't Just Automate Jobs \u2014 It Will Challenge the Meaning of Work",
       "author": "Vox Future Perfect",
       "publisher": "Vox",
       "date": "2026-03-16",

@@ -1612,6 +1612,15 @@
       ],
       "evidenceTier": 3,
       "label": "Amodei (quoted): AI may eliminate up to 50% of entry-level white-collar in 1-5yr"
+    },
+    {
+      "date": "2026-04-24",
+      "direction": "down",
+      "sourceIds": [
+        "autor-new-work-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Autor et al.: 18% of US workers in jobs introduced since 1970 (2011-2023)"
     }
   ],
   "sources": [
@@ -2850,6 +2859,15 @@
       "evidenceTier": 3,
       "datePublished": "2026-04-24",
       "excerpt": "Dario Amodei, CEO of Anthropic, went on Fox News and said that AI will eliminate up to half of all entry-level white-collar jobs within one to five years. He named finance, consulting, law, and tech... the argument that 'half of entry-level white-collar jobs be gone in five years' confuses task automation with the extinction of jobs."
+    },
+    {
+      "id": "autor-new-work-2026",
+      "title": "What Makes New Work Different from More Work?",
+      "url": "https://mitstonecenter.substack.com/p/what-makes-new-work-different-from",
+      "publisher": "MIT Stone Center / NBER (Autor, Chin, Salomons, Seegmiller)",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-24",
+      "excerpt": "Between 2011-2023, 18% of US workers were employed in jobs introduced since 1970. New work differs from more jobs in existing occupations because it requires novel, scarce expertise, and therefore pays higher wages."
     }
   ]
 }

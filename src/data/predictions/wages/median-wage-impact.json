@@ -419,7 +419,7 @@
         "jones-tonetti-weak-links-2026"
       ],
       "evidenceTier": 1,
-      "label": "Jones & Tonetti (Stanford/NBER): AI output gains modest near-term — only 4% above trend by 2040"
+      "label": "Jones & Tonetti (Stanford/NBER): AI output gains modest near-term \u2014 only 4% above trend by 2040"
     },
     {
       "date": "2026-01-21",
@@ -527,7 +527,7 @@
         "fri-ai-economics-survey-2026"
       ],
       "evidenceTier": 1,
-      "label": "FRI: Rapid scenario → labor income share drops from ~58% to 45% by 2050"
+      "label": "FRI: Rapid scenario \u2192 labor income share drops from ~58% to 45% by 2050"
     },
     {
       "date": "2026-04-01",
@@ -599,7 +599,7 @@
         "goldman-sachs-scarring-2026"
       ],
       "evidenceTier": 2,
-      "label": "Goldman Sachs: tech-displaced workers −10pp real earnings 10 years later"
+      "label": "Goldman Sachs: tech-displaced workers \u221210pp real earnings 10 years later"
     },
     {
       "date": "2026-04-07",
@@ -618,6 +618,15 @@
       ],
       "evidenceTier": 1,
       "label": "NBER: Declining-occupation workers face 4.7% cumulative earnings loss (Norway)"
+    },
+    {
+      "date": "2026-04-24",
+      "direction": "down",
+      "sourceIds": [
+        "autor-new-work-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "MIT Stone Center: US labor share down 10% since early 2000s"
     }
   ],
   "sources": [
@@ -656,7 +665,7 @@
       "publisher": "HBS Working Paper (Otis, Clarke, Delecourt, Holtz, Koning)",
       "evidenceTier": 1,
       "datePublished": "2023-12-01",
-      "excerpt": "The paper reports no statistically significant average effect on revenues or profits. But effects are highly heterogeneous: high‑performing businesses at baseline appear to improve (roughly 15 percent), while low performers do worse (roughly 8-10 percent worse)",
+      "excerpt": "The paper reports no statistically significant average effect on revenues or profits. But effects are highly heterogeneous: high\u2011performing businesses at baseline appear to improve (roughly 15 percent), while low performers do worse (roughly 8-10 percent worse)",
       "dateAdded": "2026-03-07"
     },
     {
@@ -681,7 +690,7 @@
     },
     {
       "id": "epi-wages-2025",
-      "title": "Unbalanced labor market power is what makes technology — including AI — threatening to workers",
+      "title": "Unbalanced labor market power is what makes technology \u2014 including AI \u2014 threatening to workers",
       "url": "https://www.epi.org/publication/ai-unbalanced-labor-markets/",
       "publisher": "Economic Policy Institute (Bivens, Zipperer)",
       "evidenceTier": 2,
@@ -729,7 +738,7 @@
     },
     {
       "id": "bls-wage-data-2025",
-      "title": "Employment Cost Index — 2025 Q1",
+      "title": "Employment Cost Index \u2014 2025 Q1",
       "url": "https://www.bls.gov/eci/",
       "publisher": "Bureau of Labor Statistics",
       "evidenceTier": 1,
@@ -738,7 +747,7 @@
     },
     {
       "id": "bessen-automatic-reaction-2025",
-      "title": "Automatic Reaction — What Happens to Workers at Firms that Automate?",
+      "title": "Automatic Reaction \u2014 What Happens to Workers at Firms that Automate?",
       "url": "https://doi.org/10.1162/rest_a_01284",
       "publisher": "Review of Economics and Statistics (Bessen, Goos, Salomons, van den Berge)",
       "evidenceTier": 1,
@@ -747,7 +756,7 @@
     },
     {
       "id": "indeed-wage-tracker-2025",
-      "title": "US Wage Tracker — Posted Wage Trends by Occupation",
+      "title": "US Wage Tracker \u2014 Posted Wage Trends by Occupation",
       "url": "https://www.hiringlab.org/2025/02/10/us-wage-tracker/",
       "publisher": "Indeed Hiring Lab",
       "evidenceTier": 2,
@@ -991,7 +1000,7 @@
       "id": "cepr-ai-productivity-jobs-europe-2026",
       "title": "How AI is affecting productivity and jobs in Europe",
       "url": "https://cepr.org/voxeu/columns/how-ai-affecting-productivity-and-jobs-europe",
-      "publisher": "CEPR VoxEU (Aldasoro, Gambacorta, Pál, Revoltella, Weiss, Wolski)",
+      "publisher": "CEPR VoxEU (Aldasoro, Gambacorta, P\u00e1l, Revoltella, Weiss, Wolski)",
       "evidenceTier": 1,
       "datePublished": "2026-02-17",
       "excerpt": "AI adoption causally increases labour productivity levels by 4% on average. Employees in AI-using companies benefit through higher wages, both in total and per employee.",
@@ -1076,12 +1085,12 @@
     },
     {
       "id": "lichtinger-hosseini-inequality-equalizer-2026",
-      "title": "AI Narrows Performance Gaps — But Does That Mean It Reduces Inequality?",
+      "title": "AI Narrows Performance Gaps \u2014 But Does That Mean It Reduces Inequality?",
       "url": "https://guylichtinger.substack.com/p/ai-narrows-performance-gaps-but-does",
       "publisher": "Substack (Guy Lichtinger, Seyed M Hosseini)",
       "evidenceTier": 4,
       "datePublished": "2026-03-26",
-      "excerpt": "whether it is, on net, an equalizing force remains a genuinely open question—one that the current evidence, important as it is, does not yet answer.",
+      "excerpt": "whether it is, on net, an equalizing force remains a genuinely open question\u2014one that the current evidence, important as it is, does not yet answer.",
       "dateAdded": "2026-03-26"
     },
     {
@@ -1098,7 +1107,7 @@
       "id": "maasoum-lichtinger-entry-barriers-2026",
       "title": "Generative AI and Occupational Entry Barriers: The Labor-Supply Channel of Technological Change",
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6059674",
-      "publisher": "SSRN (Hosseini, Lichtinger — Harvard)",
+      "publisher": "SSRN (Hosseini, Lichtinger \u2014 Harvard)",
       "evidenceTier": 1,
       "datePublished": "2026-04-01",
       "excerpt": "The mean is 0.17 (SD 0.11), implying that for the average occupation, GenAI could reduce total work time by roughly 17 percent under this conservative calibration.",
@@ -1148,7 +1157,7 @@
       "publisher": "NBER (Barth, Hoen, Kerr, Kerr)",
       "evidenceTier": 1,
       "datePublished": "2026-04-20",
-      "excerpt": "Workers initially employed in occupations that later decline by at least 25% demonstrate 0.4 lower future years of work, although this employment difference is mostly explained by other individual traits. These workers, conditional on controls, experience a 4.7% reduction in future cumulative earnings relative to starting earnings, akin to losing one year's worth of earnings over 2007–2024."
+      "excerpt": "Workers initially employed in occupations that later decline by at least 25% demonstrate 0.4 lower future years of work, although this employment difference is mostly explained by other individual traits. These workers, conditional on controls, experience a 4.7% reduction in future cumulative earnings relative to starting earnings, akin to losing one year's worth of earnings over 2007\u20132024."
     },
     {
       "id": "esp-chao-shared-prosperity-2026",
@@ -1167,6 +1176,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-04-20",
       "excerpt": "Metaculus community forecasts for 2030 and 2035: overall US employment -1.9%/-3.4%; most vulnerable AI-exposed occupations -11.4%/-17.2%; software developers -15.1%/-22.3%; financial specialists -8.1%/-15.3%; services sales -11%/-14%; lawyers -5.4%/-9.6%; designers -4%/-8.4%; K-12 teachers -1.3%/+1.3%; overall median wage -0.6%/+1.4%; percent workers using AI daily 52.5%/70.9%; new-grad unemployment ~10%/12%."
+    },
+    {
+      "id": "autor-new-work-2026",
+      "title": "What Makes New Work Different from More Work?",
+      "url": "https://mitstonecenter.substack.com/p/what-makes-new-work-different-from",
+      "publisher": "MIT Stone Center / NBER (Autor, Chin, Salomons, Seegmiller)",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-24",
+      "excerpt": "Since the early 2000s, the 'labor share' \u2013 the share of a country's national income that goes to workers, rather than to owners of machines and capital \u2013 has declined 10% in the US."
     }
   ]
 }
