@@ -1,0 +1,170 @@
+{
+  "week": "2026-W18",
+  "generatedAt": "2026-04-27T10:15:17.141Z",
+  "candidates": [
+    {
+      "highlight": {
+        "title": "Understanding Firms' AI Efforts and Their Economic Impact",
+        "summary": "A new NBER working paper by Tania Babina reviews firm-level data on AI and emerging evidence on AI's economic effects, arguing that measurement is central to understanding AI's labor-market impact. The paper distinguishes between AI invention versus use, internal capability building versus outsourcing, and realized versus anticipated adoption. These distinctions matter substantially for interpreting how AI affects wages, employment, and productivity at the firm level.",
+        "source": "https://www.nber.org/papers/w35123",
+        "authors": [
+          "Tania Babina"
+        ],
+        "publishedAt": "2026-04-27",
+        "score": 0.528,
+        "sourceAdapter": "nber",
+        "graphSlug": "ai-adoption-rate"
+      },
+      "sourceId": "nber-understanding-firms-ai-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "How (un)Stable Are LLM Occupational Exposure Scores? Evidence from Multi-Model Replication",
+        "summary": "Yin, Vu, and Persico (NBER) demonstrate that LLM-based occupational AI exposure scores are highly fragile, finding a 3.6-fold divergence across three frontier models replicating the same dominant rubric on identical tasks. This calls into question a rapidly growing literature that uses LLMs to self-assess which occupations are most at risk from AI. The findings have direct implications for the reliability of displacement forecasts built on such measures.",
+        "source": "https://www.nber.org/papers/w35110",
+        "authors": [
+          "Michelle Yin",
+          "Hoa Vu",
+          "Claudia Persico"
+        ],
+        "publishedAt": "2026-04-27",
+        "score": 0.567,
+        "sourceAdapter": "nber",
+        "graphSlug": "workforce-ai-exposure"
+      },
+      "sourceId": "nber-how-unstable-are-2026",
+      "evidenceTier": 1,
+      "extractedStats": [
+        {
+          "graphSlug": "workforce-ai-exposure",
+          "type": "overlay",
+          "direction": "neutral",
+          "overlayLabel": "3.6-fold divergence in mean LLM occupational exposure scores across models",
+          "quote": "Replicating the dominant rubric with three frontier models on identical tasks, we find a 3.6-fold divergence in mean exposure with agreement as low as 57%."
+        },
+        {
+          "graphSlug": "workforce-ai-exposure",
+          "type": "overlay",
+          "direction": "neutral",
+          "overlayLabel": "LLM model agreement on occupational AI exposure as low as 57%",
+          "quote": "we find a 3.6-fold divergence in mean exposure with agreement as low as 57%"
+        },
+        {
+          "graphSlug": "overall-us-displacement",
+          "type": "overlay",
+          "direction": "neutral",
+          "overlayLabel": "Individual-level DiD coefficient magnitudes vary 2.4-fold across LLM annotators",
+          "quote": "in a difference-in-differences framework, individual-level coefficient magnitudes vary 2.4-fold across annotators, and county level estimates flip from a significant negative to an insignificant positive depending on annotators."
+        }
+      ]
+    },
+    {
+      "highlight": {
+        "title": "How Supply Chain Dependencies Complicate Bias Measurement and Accountability in AI Hiring",
+        "summary": "Sharma and Molamohammadi (arXiv) examine how layered AI supply chains—where hiring tools incorporate third-party models and data—obscure bias attribution and regulatory accountability, complicating compliance with the EU AI Act and NYC Local Law 144. Their analysis shows that technical and regulatory lenses alone are insufficient when bias can originate at any node of a complex AI pipeline. The paper has direct implications for entry-level and white-collar hiring outcomes driven by algorithmic screening.",
+        "source": "https://arxiv.org/abs/2604.22679v1",
+        "authors": [
+          "Gauri Sharma",
+          "Maryam Molamohammadi"
+        ],
+        "publishedAt": "2026-04-24",
+        "score": 0.375,
+        "sourceAdapter": "arxiv",
+        "graphSlug": "white-collar-professional-displacement"
+      },
+      "sourceId": "arxiv-how-supply-chain-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Measuring and Mitigating Persona Distortions from AI Writing Assistance",
+        "summary": "Röttger et al. (arXiv) ran three large-scale experiments with 2,939 writers and found that AI writing assistance measurably distorts the perceived beliefs, personality, and identity of authors. As hundreds of millions of workers now use AI for professional writing tasks, homogenization of voice and persona poses risks for creative and knowledge workers whose differentiated output is their core value. The findings are particularly salient for freelancers and creative-industry professionals competing on distinctive voice.",
+        "source": "https://arxiv.org/abs/2604.22503v1",
+        "authors": [
+          "Paul Röttger",
+          "Kobi Hackenburg",
+          "Hannah Rose Kirk",
+          "Christopher Summerfield"
+        ],
+        "publishedAt": "2026-04-24",
+        "score": 0.52,
+        "sourceAdapter": "arxiv",
+        "graphSlug": "creative-industry-displacement"
+      },
+      "sourceId": "arxiv-measuring-and-mitigating-2026",
+      "evidenceTier": 1,
+      "extractedStats": [
+        {
+          "graphSlug": "genai-work-adoption",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "Hundreds of millions use AI for writing assistance",
+          "quote": "Hundreds of millions of people use artificial intelligence (AI) for writing assistance."
+        },
+        {
+          "graphSlug": "creative-industry-displacement",
+          "type": "overlay",
+          "direction": "neutral",
+          "overlayLabel": "AI writing assistance distorts writer personas across 29 dimensions",
+          "quote": "AI writing assistance produced persona distortions across all dimensions: with AI, writers seemed more opinionated, competent, and positive, and their perceived demographic profile shifted towards more privileged groups."
+        }
+      ]
+    },
+    {
+      "highlight": {
+        "title": "How AI Agents Spend Your Money: Token Consumption in Agentic Coding Tasks",
+        "summary": "Bai et al. (arXiv, co-authored with Erik Brynjolfsson) analyze token consumption patterns as AI agents are deployed in complex real-world coding workflows, identifying where cost concentrates and which models are most efficient. The study is an early empirical window into the economics of agentic AI replacing software development labor at scale. As token costs fall and agent reliability rises, the paper illuminates the substitution frontier for tech-sector programming roles.",
+        "source": "https://arxiv.org/abs/2604.22750v1",
+        "authors": [
+          "Longju Bai",
+          "Zhemin Huang",
+          "Xingyao Wang",
+          "Jiao Sun",
+          "Rada Mihalcea",
+          "Erik Brynjolfsson",
+          "Alex Pentland",
+          "Jiaxin Pei"
+        ],
+        "publishedAt": "2026-04-24",
+        "score": 0.378,
+        "sourceAdapter": "arxiv",
+        "graphSlug": "tech-sector-displacement"
+      },
+      "sourceId": "arxiv-how-ai-agents-2026",
+      "evidenceTier": 1,
+      "extractedStats": [
+        {
+          "graphSlug": "tech-sector-displacement",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "Agentic coding tasks consume 1000x more tokens than code reasoning/chat",
+          "quote": "agentic tasks are uniquely expensive, consuming 1000x more tokens than code reasoning and code chat, with input tokens rather than output tokens driving the overall cost"
+        },
+        {
+          "graphSlug": "tech-sector-displacement",
+          "type": "overlay",
+          "direction": "neutral",
+          "overlayLabel": "Same task runs vary up to 30x in token usage; higher cost ≠ higher accuracy",
+          "quote": "token usage is highly variable and inherently stochastic: runs on the same task can differ by up to 30x in total tokens, and higher token usage does not translate into higher accuracy; instead, accuracy often peaks at intermediate cost and saturates at higher costs"
+        },
+        {
+          "graphSlug": "tech-sector-displacement",
+          "type": "overlay",
+          "direction": "neutral",
+          "overlayLabel": "Kimi-K2 & Claude-Sonnet-4.5 use 1.5M+ more tokens than GPT-5 on same tasks",
+          "quote": "models vary substantially in token efficiency: on the same tasks, Kimi-K2 and Claude-Sonnet-4.5, on average, consume over 1.5 million more tokens than GPT-5"
+        },
+        {
+          "graphSlug": "tech-sector-displacement",
+          "type": "overlay",
+          "direction": "neutral",
+          "overlayLabel": "Frontier models predict own token usage with only weak-to-moderate correlation (≤0.39)",
+          "quote": "frontier models fail to accurately predict their own token usage (with weak-to-moderate correlations, up to 0.39) and systematically underestimate real token costs"
+        }
+      ]
+    }
+  ]
+}

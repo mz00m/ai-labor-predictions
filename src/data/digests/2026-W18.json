@@ -1,0 +1,121 @@
+{
+  "week": "2026-W18",
+  "generatedAt": "2026-04-27T10:14:23.053Z",
+  "lookbackDays": 14,
+  "highlights": [
+    {
+      "title": "Understanding Firms' AI Efforts and Their Economic Impact",
+      "summary": "A new NBER working paper by Tania Babina reviews firm-level data on AI and emerging evidence on AI's economic effects, arguing that measurement is central to understanding AI's labor-market impact. The paper distinguishes between AI invention versus use, internal capability building versus outsourcing, and realized versus anticipated adoption. These distinctions matter substantially for interpreting how AI affects wages, employment, and productivity at the firm level.",
+      "source": "https://www.nber.org/papers/w35123",
+      "authors": [
+        "Tania Babina"
+      ],
+      "publishedAt": "2026-04-27",
+      "score": 0.528,
+      "sourceAdapter": "nber",
+      "graphSlug": "ai-adoption-rate"
+    },
+    {
+      "title": "How (un)Stable Are LLM Occupational Exposure Scores? Evidence from Multi-Model Replication",
+      "summary": "Yin, Vu, and Persico (NBER) demonstrate that LLM-based occupational AI exposure scores are highly fragile, finding a 3.6-fold divergence across three frontier models replicating the same dominant rubric on identical tasks. This calls into question a rapidly growing literature that uses LLMs to self-assess which occupations are most at risk from AI. The findings have direct implications for the reliability of displacement forecasts built on such measures.",
+      "source": "https://www.nber.org/papers/w35110",
+      "authors": [
+        "Michelle Yin",
+        "Hoa Vu",
+        "Claudia Persico"
+      ],
+      "publishedAt": "2026-04-27",
+      "score": 0.567,
+      "sourceAdapter": "nber",
+      "graphSlug": "workforce-ai-exposure"
+    },
+    {
+      "title": "How Supply Chain Dependencies Complicate Bias Measurement and Accountability in AI Hiring",
+      "summary": "Sharma and Molamohammadi (arXiv) examine how layered AI supply chains—where hiring tools incorporate third-party models and data—obscure bias attribution and regulatory accountability, complicating compliance with the EU AI Act and NYC Local Law 144. Their analysis shows that technical and regulatory lenses alone are insufficient when bias can originate at any node of a complex AI pipeline. The paper has direct implications for entry-level and white-collar hiring outcomes driven by algorithmic screening.",
+      "source": "https://arxiv.org/abs/2604.22679v1",
+      "authors": [
+        "Gauri Sharma",
+        "Maryam Molamohammadi"
+      ],
+      "publishedAt": "2026-04-24",
+      "score": 0.375,
+      "sourceAdapter": "arxiv",
+      "graphSlug": "white-collar-professional-displacement"
+    },
+    {
+      "title": "Measuring and Mitigating Persona Distortions from AI Writing Assistance",
+      "summary": "Röttger et al. (arXiv) ran three large-scale experiments with 2,939 writers and found that AI writing assistance measurably distorts the perceived beliefs, personality, and identity of authors. As hundreds of millions of workers now use AI for professional writing tasks, homogenization of voice and persona poses risks for creative and knowledge workers whose differentiated output is their core value. The findings are particularly salient for freelancers and creative-industry professionals competing on distinctive voice.",
+      "source": "https://arxiv.org/abs/2604.22503v1",
+      "authors": [
+        "Paul Röttger",
+        "Kobi Hackenburg",
+        "Hannah Rose Kirk",
+        "Christopher Summerfield"
+      ],
+      "publishedAt": "2026-04-24",
+      "score": 0.52,
+      "sourceAdapter": "arxiv",
+      "graphSlug": "creative-industry-displacement"
+    },
+    {
+      "title": "How AI Agents Spend Your Money: Token Consumption in Agentic Coding Tasks",
+      "summary": "Bai et al. (arXiv, co-authored with Erik Brynjolfsson) analyze token consumption patterns as AI agents are deployed in complex real-world coding workflows, identifying where cost concentrates and which models are most efficient. The study is an early empirical window into the economics of agentic AI replacing software development labor at scale. As token costs fall and agent reliability rises, the paper illuminates the substitution frontier for tech-sector programming roles.",
+      "source": "https://arxiv.org/abs/2604.22750v1",
+      "authors": [
+        "Longju Bai",
+        "Zhemin Huang",
+        "Xingyao Wang",
+        "Jiao Sun",
+        "Rada Mihalcea",
+        "Erik Brynjolfsson",
+        "Alex Pentland",
+        "Jiaxin Pei"
+      ],
+      "publishedAt": "2026-04-24",
+      "score": 0.378,
+      "sourceAdapter": "arxiv",
+      "graphSlug": "tech-sector-displacement"
+    }
+  ],
+  "themes": [
+    "Measurement fragility in LLM-based occupational exposure scores undermines confidence in AI displacement forecasts and calls for methodological standardization.",
+    "Firm-level AI adoption data reveal wide heterogeneity between AI invention and actual use, complicating macro-level labor-market impact estimates.",
+    "Agentic AI systems are moving from text generation to autonomous task execution in software and scientific workflows, accelerating substitution risk for technical roles.",
+    "AI writing assistance homogenizes author voice at scale, posing a structural threat to creative and knowledge workers whose differentiation is their primary labor-market asset.",
+    "Algorithmic hiring tools embedded in opaque AI supply chains create accountability gaps that complicate regulatory enforcement and may systematically disadvantage entry-level job seekers."
+  ],
+  "watching": [
+    {
+      "title": "Does Employment Slow Cognitive Decline? Evidence from Labor Market Shocks",
+      "source": "https://www.nber.org/papers/w35117",
+      "reason": "If AI-driven displacement accelerates early workforce exit among older workers, cognitive-health externalities could amplify social costs beyond wage and employment losses."
+    },
+    {
+      "title": "Shaping Human Capital and Work Practices in a Changing Labor Market",
+      "source": "https://cris.maastrichtuniversity.nl/en/publications/33cda117-bac2-4be0-afce-39703634d55a",
+      "reason": "Broad survey of human capital formation and work-practice adaptation; relevant to understanding upskilling responses to AI-driven labor market transformation."
+    },
+    {
+      "title": "What People See (and Miss) About Generative AI Risks",
+      "source": "https://arxiv.org/abs/2604.22654v1",
+      "reason": "Public risk perception gaps around GenAI may shape policy and adoption timelines, indirectly affecting how quickly displacement and wage effects materialize."
+    }
+  ],
+  "sources": {
+    "succeeded": [
+      "semanticScholar",
+      "arxiv",
+      "ssrn",
+      "pubmed",
+      "openAlex",
+      "nber",
+      "bls",
+      "fred",
+      "googleCse",
+      "hnAlgolia"
+    ],
+    "failed": [],
+    "totalCandidates": 61,
+    "afterDedup": 61
+  }
+}
