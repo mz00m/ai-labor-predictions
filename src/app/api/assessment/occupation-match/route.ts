@@ -173,6 +173,39 @@ const ALIASES: Record<string, string[]> = {
 const occupationBySlug = new Map(occupations.map((o) => [o.slug, o]));
 
 // ---------------------------------------------------------------------------
+// Industry → occupation-category map. The intake form collects `industry`
+// as an IndustryCategory enum; we use it to bias matching toward the
+// occupation categories that actually exist in that sector.
+// ---------------------------------------------------------------------------
+
+const INDUSTRY_TO_CATEGORIES: Record<string, string[]> = {
+  "nonprofit": ["community-and-social-service", "management", "office-and-administrative-support"],
+  "restaurant-hospitality": ["food-preparation-and-serving", "personal-care-and-service", "management"],
+  "manufacturing": ["production", "installation-maintenance-and-repair", "architecture-and-engineering", "transportation-and-material-moving"],
+  "healthcare": ["healthcare", "office-and-administrative-support", "community-and-social-service"],
+  "retail": ["sales", "office-and-administrative-support", "management"],
+  "professional-services": ["business-and-financial", "management", "office-and-administrative-support", "computer-and-information-technology"],
+  "accounting-finance": ["business-and-financial", "office-and-administrative-support", "management"],
+  "legal": ["legal", "office-and-administrative-support"],
+  "education": ["education-training-and-library", "management", "community-and-social-service", "office-and-administrative-support"],
+  "construction": ["construction-and-extraction", "architecture-and-engineering", "installation-maintenance-and-repair"],
+  "real-estate": ["sales", "business-and-financial", "management"],
+  "technology": ["computer-and-information-technology", "math", "management", "architecture-and-engineering"],
+  "media-marketing": ["media-and-communication", "arts-and-design", "sales"],
+  "logistics-transportation": ["transportation-and-material-moving", "management", "office-and-administrative-support"],
+  "agriculture": ["farming-fishing-and-forestry", "production", "management"],
+  "government": ["management", "community-and-social-service", "protective-service", "legal", "office-and-administrative-support"],
+  "other": [],
+};
+
+function sectorCategorySet(sector: string | null): Set<string> | null {
+  if (!sector) return null;
+  const cats = INDUSTRY_TO_CATEGORIES[sector];
+  if (!cats || cats.length === 0) return null;
+  return new Set(cats);
+}
+
+// ---------------------------------------------------------------------------
 // Category keyword map: informal sector/industry terms → enriched categories
 // ---------------------------------------------------------------------------
 
@@ -245,7 +278,7 @@ const STOP_WORDS = new Set([
   "industry", "field", "area", "work", "job", "role", "position",
 ]);
 
-function broadTokenSearch(queryLower: string): typeof occupations {
+function broadTokenSearch(queryLower: string, sectorCats: Set<string> | null): typeof occupations {
   const tokens = queryLower.split(/\s+/).filter((t) => t.length >= 2 && !STOP_WORDS.has(t));
   if (tokens.length === 0) return [];
 
@@ -260,6 +293,12 @@ function broadTokenSearch(queryLower: string): typeof occupations {
     if (kw.includes(" ") && queryLower.includes(kw)) {
       for (const c of cats) categorySet.add(c);
     }
+  }
+
+  // Merge sector-derived categories so the user's selected industry
+  // narrows the candidate pool even when the query has no sector keyword.
+  if (sectorCats) {
+    sectorCats.forEach((c) => categorySet.add(c));
   }
 
   const pool = categorySet.size > 0
@@ -379,16 +418,27 @@ function scoreMatch(titleLower: string, queryLower: string): number {
 
 export async function GET(request: NextRequest) {
   const q = request.nextUrl.searchParams.get("q")?.trim();
+  const sector = request.nextUrl.searchParams.get("sector")?.trim() || null;
 
   if (!q || q.length < 2) {
     return NextResponse.json({ results: [] });
   }
 
   const queryLower = q.toLowerCase();
+  const sectorCats = sectorCategorySet(sector);
+
+  // Sector-aware boost: nudge in-sector occupations up when the user has
+  // already told us their industry. Generic titles like "manager" or
+  // "director" otherwise collapse to top-executives across every sector.
+  const sectorBoost = (cat: string) => (sectorCats && sectorCats.has(cat) ? 15 : 0);
 
   // First: try direct title matching
   const scored = occupations
-    .map((o) => ({ occ: o, score: scoreMatch(o.titleLower, queryLower) }))
+    .map((o) => {
+      const base = scoreMatch(o.titleLower, queryLower);
+      if (base <= 0) return { occ: o, score: -1 };
+      return { occ: o, score: base + sectorBoost(o.category) };
+    })
     .filter((x) => x.score > 0)
     .sort((a, b) => b.score - a.score || b.occ.exposure - a.occ.exposure)
     .slice(0, 5);
@@ -398,15 +448,26 @@ export async function GET(request: NextRequest) {
   if (scored.length === 0) {
     const aliasHits = aliasSearch(queryLower);
     finalScored = aliasHits
-      .map((occ) => ({ occ, score: 30 })) // alias match = moderate relevance
-      .sort((a, b) => b.occ.exposure - a.occ.exposure)
+      .map((occ) => ({ occ, score: 30 + sectorBoost(occ.category) }))
+      .sort((a, b) => b.score - a.score || b.occ.exposure - a.occ.exposure)
       .slice(0, 5);
   }
 
   // Fallback 2: if still nothing, try broad token + category matching
   if (finalScored.length === 0) {
-    const broadHits = broadTokenSearch(queryLower);
-    finalScored = broadHits.map((occ) => ({ occ, score: 15 }));
+    const broadHits = broadTokenSearch(queryLower, sectorCats);
+    finalScored = broadHits.map((occ) => ({ occ, score: 15 + sectorBoost(occ.category) }));
+  }
+
+  // Fallback 3: still nothing but we know the sector — return the top
+  // occupations in that sector by exposure so the user can pick the
+  // closest analogue rather than seeing an empty result.
+  if (finalScored.length === 0 && sectorCats) {
+    finalScored = occupations
+      .filter((o) => sectorCats.has(o.category))
+      .sort((a, b) => b.exposure - a.exposure)
+      .slice(0, 5)
+      .map((occ) => ({ occ, score: 5 }));
   }
 
   const results: OccupationHit[] = finalScored.map(({ occ }) => ({

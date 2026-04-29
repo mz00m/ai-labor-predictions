@@ -22,6 +22,8 @@ interface OccupationHit {
 
 interface AiScorePreviewProps {
   jobTitle: string;
+  /** Industry the user picked on the prior step — biases occupation matching */
+  industry?: string;
   /** Called when user selects a matching occupation */
   onMatchSelected?: (hit: OccupationHit) => void;
   /** Called when user clicks the continue CTA */
@@ -65,6 +67,7 @@ function pct(v: number) {
 
 export default function AiScorePreview({
   jobTitle,
+  industry,
   onMatchSelected,
   onContinue,
 }: AiScorePreviewProps) {
@@ -76,15 +79,17 @@ export default function AiScorePreview({
   const debounceRef = useRef<ReturnType<typeof setTimeout>>();
   const animatedScore = useCountUp(selected?.exposure ?? 0, 600);
 
-  const search = useCallback(async (q: string) => {
+  const search = useCallback(async (q: string, sector: string | undefined) => {
     abortRef.current?.abort();
     const controller = new AbortController();
     abortRef.current = controller;
 
     setLoading(true);
     try {
+      const params = new URLSearchParams({ q });
+      if (sector) params.set("sector", sector);
       const res = await fetch(
-        `/api/assessment/occupation-match?q=${encodeURIComponent(q)}`,
+        `/api/assessment/occupation-match?${params.toString()}`,
         { signal: controller.signal }
       );
       const data = await res.json();
@@ -113,10 +118,10 @@ export default function AiScorePreview({
     }
 
     clearTimeout(debounceRef.current);
-    debounceRef.current = setTimeout(() => search(trimmed), 400);
+    debounceRef.current = setTimeout(() => search(trimmed, industry), 400);
 
     return () => clearTimeout(debounceRef.current);
-  }, [jobTitle, search]);
+  }, [jobTitle, industry, search]);
 
   function selectHit(hit: OccupationHit) {
     setSelected(hit);

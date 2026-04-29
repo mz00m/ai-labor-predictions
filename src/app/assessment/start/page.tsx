@@ -482,6 +482,7 @@ export default function AssessmentStartPage() {
 
           <AiScorePreview
             jobTitle={form.jobTitle}
+            industry={form.industry || undefined}
             onContinue={() => {
               if (step === "scope") prefillFromDescription();
               setStep("tasks");
