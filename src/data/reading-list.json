@@ -2,6 +2,26 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "The future of work in an age of AI: My chat with economist Daniel Rock",
+      "author": "James Pethokoukis",
+      "publisher": "Faster, Please! (AEI Substack)",
+      "date": "2026-04-28",
+      "url": "https://fasterplease.substack.com/p/the-future-of-work-in-an-age-of-ai",
+      "takeaway": "Pethokoukis interviews Wharton's Daniel Rock on AI and work. Key framing: exposure \u2260 automation. Rock covers the productivity J-curve (slow early gains as firms reorganize workflows), adoption bottlenecks, and a measured growth outlook that pushes back on Silicon Valley claims of imminent white-collar doom.",
+      "weekFeatured": "2026-04-29",
+      "tier": 4
+    },
+    {
+      "title": "The intelligence is plenty but the workers are few",
+      "author": "Daniel Bj\u00f6rkegren",
+      "publisher": "dan.bjorkegren.com (Brown University)",
+      "date": "2026-04-28",
+      "url": "https://dan.bjorkegren.com/blog/2026/04/the-intelligence-is-plenty-but-the-workers-are-few/",
+      "takeaway": "LMICs employ <10% of workers in skilled knowledge work vs. 41% in high-income countries, limiting the 'grafting' strategy rich countries use for AI adoption. But cheap intelligence could leapfrog: full automation may benefit LMICs differently than augmentation strategies. Key open question: will AI augment scarce knowledge workers or automate knowledge work entirely? LMICs face less political resistance and fewer legacy institutions \u2014 a different optimization landscape.",
+      "weekFeatured": "2026-04-29",
+      "tier": 4
+    },
+    {
       "title": "What Makes New Work Different from More Work?",
       "author": "David Autor, Caroline Chin, Anna Salomons, Bryan Seegmiller",
       "publisher": "MIT Stone Center / NBER",
