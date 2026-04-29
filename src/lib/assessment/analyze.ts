@@ -833,9 +833,14 @@ Return valid JSON:
     // setup because a single stalled call consumed the full Vercel 300s budget.
     // Per-call timeouts set to 240s, leaving ~60s of headroom under the
     // Vercel 300s function limit for DB writes and response serialization.
+    // max_tokens raised back up after observing live truncation: a roofer
+    // persona run had the roadmap response cut at ~8.7K chars (≈2500 tokens),
+    // which broke JSON.parse and silently emptied the roadmap + ROI sections.
+    // Sonnet typically responds well under these budgets — they're a safety
+    // ceiling, not a target.
     const [toolsResult, roadmapResult] = await Promise.allSettled([
-      callClaude(systemPrompt, userPrompt, { maxTokens: 3000, timeout: 240000 }),
-      callClaude(roadmapSystemPrompt, roadmapUserPrompt, { maxTokens: 2500, timeout: 240000 }),
+      callClaude(systemPrompt, userPrompt, { maxTokens: 4500, timeout: 240000 }),
+      callClaude(roadmapSystemPrompt, roadmapUserPrompt, { maxTokens: 4000, timeout: 240000 }),
     ]);
 
     const toolsParsed = toolsResult.status === "fulfilled"
