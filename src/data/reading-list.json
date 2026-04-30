@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "The A.I. Fear Keeping Silicon Valley Up at Night",
+      "author": "Jasmine Sun",
+      "publisher": "The New York Times (Opinion)",
+      "date": "2026-04-30",
+      "url": "https://www.nytimes.com/2026/04/30/opinion/ai-labor-work-force-silicon-valley.html",
+      "takeaway": "A reported essay from inside the SF AI bubble: the 'San Francisco consensus' is that the median worker is screwed, and even doomers, accelerationists, and labs differ mostly on what to do about it. Amodei's '50% of entry-level white-collar by 2030' anchors the discourse; Block CEO Jack Dorsey laid off ~half his staff in March citing coding agents; OpenAI's GDPVal benchmark went from sub-human to >80% win rate vs human professionals in months; Anthropic enterprise-agent revenue jumped from $9B to $30B annualized. OpenAI's new white paper floats a 32-hour week, public wealth fund, and capital-gains hikes; Anthropic has set up an institute but not yet endorsed specific policy. David Shor finds 72% of voters fear AI will drive down wages — the rare populist message that polls across the political spectrum.",
+      "weekFeatured": "2026-04-30",
+      "tier": 3
+    },
+    {
       "title": "The future of work in an age of AI: My chat with economist Daniel Rock",
       "author": "James Pethokoukis",
       "publisher": "Faster, Please! (AEI Substack)",

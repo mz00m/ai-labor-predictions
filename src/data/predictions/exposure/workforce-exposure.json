@@ -616,6 +616,15 @@
       ],
       "evidenceTier": 2,
       "label": "Anthropic: top-quartile exposure workers 3x more likely to fear job loss"
+    },
+    {
+      "date": "2026-04-30",
+      "direction": "up",
+      "sourceIds": [
+        "nyt-sun-silicon-valley-ai-fear-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "NYT/OpenAI: GDPVal models reach 80%+ win rate vs human pros"
     }
   ],
   "sources": [
@@ -1131,6 +1140,16 @@
       "evidenceTier": 2,
       "datePublished": "2026-04-22",
       "excerpt": "For every 10-percentage-point increase in exposure, perceived job threat increased by 1.3 percentage points. People in the top 25% of exposure mentioned the worry three times as often as those in the bottom 25%."
+    },
+    {
+      "id": "nyt-sun-silicon-valley-ai-fear-2026",
+      "title": "The A.I. Fear Keeping Silicon Valley Up at Night",
+      "url": "https://www.nytimes.com/2026/04/30/opinion/ai-labor-work-force-silicon-valley.html",
+      "publisher": "The New York Times (Jasmine Sun, Opinion)",
+      "evidenceTier": 3,
+      "datePublished": "2026-04-30",
+      "excerpt": "When we originally released GDPVal, which was just a few months ago, none of the models were yet on par with human experts. Months later, we have over an 80 percent win rate compared to human professionals.",
+      "dateAdded": "2026-04-30"
     }
   ]
 }

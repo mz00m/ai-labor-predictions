@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-04-27",
-  "totalSources": 540,
-  "verifiedCount": 530,
+  "lastUpdated": "2026-04-30",
+  "totalSources": 541,
+  "verifiedCount": 531,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -7649,6 +7649,20 @@
         "overall-us-displacement",
         "median-wage-impact",
         "high-skill-wage-premium"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "nyt-sun-silicon-valley-ai-fear-2026": {
+      "id": "nyt-sun-silicon-valley-ai-fear-2026",
+      "title": "The A.I. Fear Keeping Silicon Valley Up at Night",
+      "url": "https://www.nytimes.com/2026/04/30/opinion/ai-labor-work-force-silicon-valley.html",
+      "publisher": "The New York Times (Jasmine Sun, Opinion)",
+      "evidenceTier": 3,
+      "datePublished": "2026-04-30",
+      "excerpt": "When we originally released GDPVal, which was just a few months ago, none of the models were yet on par with human experts. Months later, we have over an 80 percent win rate compared to human professionals.",
+      "usedIn": [
+        "workforce-ai-exposure"
       ],
       "verified": true,
       "synthetic": false
