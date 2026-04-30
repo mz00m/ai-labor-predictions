@@ -17,32 +17,69 @@ function readWikiFile(relPath: string): string | null {
   }
 }
 
+function scanDir(dir: string, prefix: string, words: string[], minWordLen: number, max: number): string[] {
+  const out: string[] = [];
+  if (!fs.existsSync(dir)) return out;
+  for (const f of fs.readdirSync(dir)) {
+    if (!f.endsWith(".md")) continue;
+    if (words.some((w) => w.length > minWordLen && f.includes(w))) {
+      out.push(`${prefix}/${f}`);
+      if (out.length >= max) break;
+    }
+  }
+  return out;
+}
+
 function findRelevantFiles(query: string): string[] {
   const q = query.toLowerCase();
+  const words = q.split(/\s+/);
   const files: string[] = [];
 
-  // Check prediction files
-  const predictionsDir = path.join(WIKI_ROOT, "predictions");
-  if (fs.existsSync(predictionsDir)) {
-    for (const f of fs.readdirSync(predictionsDir)) {
-      if (f.endsWith(".md") && q.split(/\s+/).some((w) => w.length > 3 && f.includes(w))) {
-        files.push(`predictions/${f}`);
+  // Predictions
+  files.push(...scanDir(path.join(WIKI_ROOT, "predictions"), "predictions", words, 3, 5));
+
+  // Task visualizer top-level pages (always cheap to include for industry/economy questions)
+  const tvRoot = path.join(WIKI_ROOT, "task-visualizer");
+  if (fs.existsSync(tvRoot)) {
+    for (const f of fs.readdirSync(tvRoot)) {
+      if (!f.endsWith(".md")) continue;
+      // Always include forecasts.md and the index for prediction-style questions
+      if (
+        f === "forecasts.md" ||
+        f === "index.md" ||
+        f === "task-categories.md" ||
+        f === "industry-speeds.md" ||
+        f === "methodology.md" ||
+        words.some((w) => w.length > 3 && f.includes(w))
+      ) {
+        files.push(`task-visualizer/${f}`);
       }
     }
   }
 
-  // Check source files via grep-style scan of index
-  const sourcesDir = path.join(WIKI_ROOT, "sources");
-  if (fs.existsSync(sourcesDir) && files.length < 3) {
-    for (const f of fs.readdirSync(sourcesDir)) {
-      if (f.endsWith(".md") && q.split(/\s+/).some((w) => w.length > 4 && f.includes(w))) {
-        files.push(`sources/${f}`);
-        if (files.length >= 5) break;
-      }
-    }
+  // Per-job task visualizer pages
+  files.push(
+    ...scanDir(path.join(WIKI_ROOT, "task-visualizer/jobs"), "task-visualizer/jobs", words, 3, 5),
+  );
+
+  // Per-occupation-group task visualizer pages
+  files.push(
+    ...scanDir(
+      path.join(WIKI_ROOT, "task-visualizer/occupation-groups"),
+      "task-visualizer/occupation-groups",
+      words,
+      3,
+      5,
+    ),
+  );
+
+  // Sources (kept last so they don't crowd out structured data)
+  if (files.length < 8) {
+    files.push(...scanDir(path.join(WIKI_ROOT, "sources"), "sources", words, 4, 5));
   }
 
-  return files.slice(0, 5);
+  // Dedupe and cap so we don't blow the context window
+  return Array.from(new Set(files)).slice(0, 12);
 }
 
 export async function POST(req: NextRequest) {
