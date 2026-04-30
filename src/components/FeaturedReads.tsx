@@ -9,6 +9,14 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Jasmine Sun (NYT Opinion)",
+    title: "The A.I. Fear Keeping Silicon Valley Up at Night",
+    summary:
+      "Reported from inside the SF AI bubble: the 'San Francisco consensus' is that the median worker is screwed and labs differ mostly on what to do about it. OpenAI's GDPVal benchmark went from sub-human to 80%+ win rate vs human pros in months; Block CEO Jack Dorsey cut ~half his staff in March citing coding agents; Anthropic enterprise-agent revenue jumped from $9B to $30B annualized. OpenAI's new white paper floats a 32-hour week and a public wealth fund; Shor polling finds 72% of voters fear AI drives down wages.",
+    date: "Apr 30",
+    url: "https://www.nytimes.com/2026/04/30/opinion/ai-labor-work-force-silicon-valley.html",
+  },
+  {
     author: "Daniel Björkegren (Brown)",
     title: "The intelligence is plenty but the workers are few",
     summary:
@@ -39,14 +47,6 @@ const articles: Article[] = [
       "NBER WP 34986 (forthcoming Annual Review of Economics): 18% of US workers hold jobs introduced since 1970. New work commands a wage premium — 4× larger for tech-linked new work — reflecting scarcity of novel expertise. Advanced-degree workers are 2.9pp more likely to land new work. Labor share has fallen 10% since early 2000s, but new work is the core mechanism counteracting displacement.",
     date: "Apr 24",
     url: "https://mitstonecenter.substack.com/p/what-makes-new-work-different-from",
-  },
-  {
-    author: "Luis Garicano (Silicon Continent)",
-    title: "The task is not the job",
-    summary:
-      "A supply-side rebuttal to Amodei's claim that AI will eliminate half of entry-level white-collar jobs in 1-5 years. Labour markets price jobs, not tasks: when components of a bundle are expensive to separate from the rest, AI helps with parts while humans keep the work. Exhibit A: Frey/Osborne 2013 put 94% automation probability on accountants; a decade later BLS counts 1.6M of them at $81,680 median pay and projects +5% growth through 2034, while the 'weak bundle' of bookkeeping clerks falls 6%. Travel agent employment is 60% below its dot-com peak, yet surviving agents' weekly earnings rose from 87% to 99% of the private-sector average (2000-2025) because the machine took the weak part and left them the strong one. Also: organizations need residual decision rights — a human who can be sued, fired, and held accountable — that AI agents don't yet have.",
-    date: "Apr 24",
-    url: "https://www.siliconcontinent.com/p/why-desk-jobs-survive-and-amodei",
   },
 ];
 
