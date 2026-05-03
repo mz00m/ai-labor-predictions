@@ -143,15 +143,6 @@
   ],
   "overlays": [
     {
-      "date": "2026-04-20",
-      "direction": "up",
-      "sourceIds": [
-        "metaculus-labor-hub-2026"
-      ],
-      "evidenceTier": 2,
-      "label": "Metaculus: 52.5% workers using AI daily by 2030; 70.9% by 2035 (community forecast)"
-    },
-    {
       "date": "2024-02-01",
       "direction": "up",
       "sourceIds": [
@@ -215,6 +206,15 @@
       "label": "St. Louis Fed: 23% weekly GenAI use at work; work hours with GenAI up to 5.7%"
     },
     {
+      "date": "2025-11-14",
+      "direction": "up",
+      "sourceIds": [
+        "galdin-silbert-llm-signaling-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Galdin & Silbert: 14% of Freelancer.com apps used platform AI writing tool"
+    },
+    {
       "date": "2025-12-01",
       "direction": "down",
       "sourceIds": [
@@ -269,6 +269,15 @@
       "label": "KPMG: 55% of employees adopting/integrating AI agents"
     },
     {
+      "date": "2026-03-01",
+      "direction": "up",
+      "sourceIds": [
+        "shah-levy-pro-se-ai-courts-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "MIT/USC: 18% of federal court complaints contain AI-text by 2026 (n=1,600)"
+    },
+    {
       "date": "2026-03-02",
       "direction": "up",
       "sourceIds": [
@@ -314,13 +323,13 @@
       "label": "FRI: Economists forecast 10.1% of work hours GenAI-assisted by 2030 (n=69, unconditional)"
     },
     {
-      "date": "2025-11-14",
+      "date": "2026-04-01",
       "direction": "up",
       "sourceIds": [
-        "galdin-silbert-llm-signaling-2025"
+        "karger-kuusela-nber-ai-forecasts-2026"
       ],
-      "evidenceTier": 2,
-      "label": "Galdin & Silbert: 14% of Freelancer.com apps used platform AI writing tool"
+      "evidenceTier": 1,
+      "label": "NBER: 3.35% work hours AI-assisted (2024); economists forecast 10.1% by 2030"
     },
     {
       "date": "2026-04-03",
@@ -404,22 +413,13 @@
       "label": "OpenAI: ChatGPT used ~3x more in jobs most at risk of automation"
     },
     {
-      "date": "2026-03-01",
+      "date": "2026-04-20",
       "direction": "up",
       "sourceIds": [
-        "shah-levy-pro-se-ai-courts-2026"
+        "metaculus-labor-hub-2026"
       ],
-      "evidenceTier": 1,
-      "label": "MIT/USC: 18% of federal court complaints contain AI-text by 2026 (n=1,600)"
-    },
-    {
-      "date": "2026-04-01",
-      "direction": "up",
-      "sourceIds": [
-        "karger-kuusela-nber-ai-forecasts-2026"
-      ],
-      "evidenceTier": 1,
-      "label": "NBER: 3.35% work hours AI-assisted (2024); economists forecast 10.1% by 2030"
+      "evidenceTier": 2,
+      "label": "Metaculus: 52.5% workers using AI daily by 2030; 70.9% by 2035 (community forecast)"
     },
     {
       "date": "2026-04-22",
@@ -429,6 +429,15 @@
       ],
       "evidenceTier": 2,
       "label": "Anthropic (n=80,508): mean productivity rating 5.1/7; 48% cite scope, 40% speed"
+    },
+    {
+      "date": "2026-04-24",
+      "direction": "up",
+      "sourceIds": [
+        "arxiv-measuring-and-mitigating-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Hundreds of millions use AI for writing assistance"
     }
   ],
   "sources": [
@@ -783,6 +792,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-04-22",
       "excerpt": "The mean productivity rating was 5.1, corresponding to 'substantially more productive'... the most common productivity enhancement is in scope, which was cited by 48% of users who explicitly mentioned productivity effects. 40% of users who mentioned productivity emphasized speed."
+    },
+    {
+      "id": "arxiv-measuring-and-mitigating-2026",
+      "title": "Measuring and Mitigating Persona Distortions from AI Writing Assistance",
+      "url": "https://arxiv.org/abs/2604.22503v1",
+      "publisher": "arxiv.org",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-24",
+      "excerpt": "Hundreds of millions of people use artificial intelligence (AI) for writing assistance."
     }
   ]
 }

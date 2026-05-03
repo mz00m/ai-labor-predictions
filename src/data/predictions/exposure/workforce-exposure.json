@@ -402,6 +402,15 @@
       "label": "MIT FutureTech: 80-95% AI task success projected by 2029 (N=17,205 evals)"
     },
     {
+      "date": "2026-03-01",
+      "direction": "up",
+      "sourceIds": [
+        "shah-levy-pro-se-ai-courts-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "MIT/USC: Pro se federal filings 11%→16.8%; AI-text in 18% of complaints by 2026"
+    },
+    {
       "date": "2026-03-05",
       "direction": "up",
       "sourceIds": [
@@ -436,6 +445,15 @@
       ],
       "evidenceTier": 1,
       "label": "Yale Budget Lab: OpenAI exposure quintiles stable; no shift in worker distribution since ChatGPT"
+    },
+    {
+      "date": "2026-03-20",
+      "direction": "up",
+      "sourceIds": [
+        "fed-crane-soto-coder-employment-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Fed: >98% of coder employment in top AI-exposure quintile"
     },
     {
       "date": "2026-03-23",
@@ -537,15 +555,6 @@
       "label": "Oxford/OII: Complementary effects 1.7x larger than substitution; AI demand doubling → 5% rise in complementary skill demand"
     },
     {
-      "date": "2026-03-20",
-      "direction": "up",
-      "sourceIds": [
-        "fed-crane-soto-coder-employment-2026"
-      ],
-      "evidenceTier": 1,
-      "label": "Fed: >98% of coder employment in top AI-exposure quintile"
-    },
-    {
       "date": "2026-04-03",
       "direction": "up",
       "sourceIds": [
@@ -600,15 +609,6 @@
       "label": "Census/QWI: Monetary policy explains ≤¼ of early-career employment gap; AI effect persists"
     },
     {
-      "date": "2026-03-01",
-      "direction": "up",
-      "sourceIds": [
-        "shah-levy-pro-se-ai-courts-2026"
-      ],
-      "evidenceTier": 1,
-      "label": "MIT/USC: Pro se federal filings 11%→16.8%; AI-text in 18% of complaints by 2026"
-    },
-    {
       "date": "2026-04-22",
       "direction": "up",
       "sourceIds": [
@@ -616,6 +616,24 @@
       ],
       "evidenceTier": 2,
       "label": "Anthropic: top-quartile exposure workers 3x more likely to fear job loss"
+    },
+    {
+      "date": "2026-04-27",
+      "direction": "neutral",
+      "sourceIds": [
+        "nber-how-unstable-are-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "3.6-fold divergence in mean LLM occupational exposure scores across models"
+    },
+    {
+      "date": "2026-04-27",
+      "direction": "neutral",
+      "sourceIds": [
+        "nber-how-unstable-are-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "LLM model agreement on occupational AI exposure as low as 57%"
     },
     {
       "date": "2026-04-30",
@@ -1150,6 +1168,15 @@
       "datePublished": "2026-04-30",
       "excerpt": "When we originally released GDPVal, which was just a few months ago, none of the models were yet on par with human experts. Months later, we have over an 80 percent win rate compared to human professionals.",
       "dateAdded": "2026-04-30"
+    },
+    {
+      "id": "nber-how-unstable-are-2026",
+      "title": "How (un)Stable Are LLM Occupational Exposure Scores? Evidence from Multi-Model Replication",
+      "url": "https://www.nber.org/papers/w35110",
+      "publisher": "nber.org",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-27",
+      "excerpt": "Replicating the dominant rubric with three frontier models on identical tasks, we find a 3.6-fold divergence in mean exposure with agreement as low as 57%."
     }
   ]
 }

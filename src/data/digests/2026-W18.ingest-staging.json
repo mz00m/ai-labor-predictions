@@ -1,6 +1,6 @@
 {
   "week": "2026-W18",
-  "generatedAt": "2026-04-27T10:15:17.141Z",
+  "generatedAt": "2026-05-03T14:00:58.954Z",
   "candidates": [
     {
       "highlight": {
@@ -55,8 +55,8 @@
           "graphSlug": "overall-us-displacement",
           "type": "overlay",
           "direction": "neutral",
-          "overlayLabel": "Individual-level DiD coefficient magnitudes vary 2.4-fold across LLM annotators",
-          "quote": "in a difference-in-differences framework, individual-level coefficient magnitudes vary 2.4-fold across annotators, and county level estimates flip from a significant negative to an insignificant positive depending on annotators."
+          "overlayLabel": "Individual-level DiD coefficients vary 2.4-fold across LLM annotators",
+          "quote": "in a difference-in-differences framework, individual-level coefficient magnitudes vary 2.4-fold across annotators, and county level estimates flip from a significant negative to an insignificant positive depending on annotators"
         }
       ]
     },
@@ -103,13 +103,6 @@
           "direction": "up",
           "overlayLabel": "Hundreds of millions use AI for writing assistance",
           "quote": "Hundreds of millions of people use artificial intelligence (AI) for writing assistance."
-        },
-        {
-          "graphSlug": "creative-industry-displacement",
-          "type": "overlay",
-          "direction": "neutral",
-          "overlayLabel": "AI writing assistance distorts writer personas across 29 dimensions",
-          "quote": "AI writing assistance produced persona distortions across all dimensions: with AI, writers seemed more opinionated, competent, and positive, and their perceived demographic profile shifted towards more privileged groups."
         }
       ]
     },
@@ -135,36 +128,7 @@
       },
       "sourceId": "arxiv-how-ai-agents-2026",
       "evidenceTier": 1,
-      "extractedStats": [
-        {
-          "graphSlug": "tech-sector-displacement",
-          "type": "overlay",
-          "direction": "up",
-          "overlayLabel": "Agentic coding tasks consume 1000x more tokens than code reasoning/chat",
-          "quote": "agentic tasks are uniquely expensive, consuming 1000x more tokens than code reasoning and code chat, with input tokens rather than output tokens driving the overall cost"
-        },
-        {
-          "graphSlug": "tech-sector-displacement",
-          "type": "overlay",
-          "direction": "neutral",
-          "overlayLabel": "Same task runs vary up to 30x in token usage; higher cost ≠ higher accuracy",
-          "quote": "token usage is highly variable and inherently stochastic: runs on the same task can differ by up to 30x in total tokens, and higher token usage does not translate into higher accuracy; instead, accuracy often peaks at intermediate cost and saturates at higher costs"
-        },
-        {
-          "graphSlug": "tech-sector-displacement",
-          "type": "overlay",
-          "direction": "neutral",
-          "overlayLabel": "Kimi-K2 & Claude-Sonnet-4.5 use 1.5M+ more tokens than GPT-5 on same tasks",
-          "quote": "models vary substantially in token efficiency: on the same tasks, Kimi-K2 and Claude-Sonnet-4.5, on average, consume over 1.5 million more tokens than GPT-5"
-        },
-        {
-          "graphSlug": "tech-sector-displacement",
-          "type": "overlay",
-          "direction": "neutral",
-          "overlayLabel": "Frontier models predict own token usage with only weak-to-moderate correlation (≤0.39)",
-          "quote": "frontier models fail to accurately predict their own token usage (with weak-to-moderate correlations, up to 0.39) and systematically underestimate real token costs"
-        }
-      ]
+      "extractedStats": []
     }
   ]
 }
