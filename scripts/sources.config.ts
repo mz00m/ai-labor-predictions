@@ -238,15 +238,13 @@ async function fetchFRED(query: string, since: Date): Promise<RawItem[]> {
     { id: "LES1252881600Q", label: "Employment Cost Index: Wages" },
   ];
 
-  const observationStart = since.toISOString().split("T")[0];
-
   const results = await Promise.allSettled(
     FRED_SERIES.map(async (series) => {
       const res = await fetchWithRetry(
         () =>
           fetch(
             `https://api.stlouisfed.org/fred/series/observations?` +
-              `series_id=${series.id}&observation_start=${observationStart}&` +
+              `series_id=${series.id}&` +
               `sort_order=desc&limit=1&api_key=${apiKey}&file_type=json`
           ).then((r) => r.json()),
         { label: `fred-${series.id}`, retries: 2, baseDelayMs: 500 }
@@ -281,11 +279,17 @@ async function fetchHNAlgolia(
   since: Date
 ): Promise<RawItem[]> {
   const sinceUnix = Math.floor(since.getTime() / 1000);
+  const tokens = query
+    .split(/\s+/)
+    .filter((t) => t.length >= 3)
+    .slice(0, 12)
+    .join(",");
   const url =
     `https://hn.algolia.com/api/v1/search?` +
     `query=${encodeURIComponent(query)}&` +
+    `optionalWords=${encodeURIComponent(tokens)}&` +
     `tags=story&` +
-    `numericFilters=created_at_i>${sinceUnix},points>25&` +
+    `numericFilters=created_at_i>${sinceUnix},points>15&` +
     `hitsPerPage=20`;
 
   const res = await fetchWithRetry(
