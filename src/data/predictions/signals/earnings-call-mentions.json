@@ -34,18 +34,6 @@
       "dataType": "observed"
     },
     {
-      "date": "2023-04-15",
-      "value": 27,
-      "confidenceLow": 22,
-      "confidenceHigh": 32,
-      "sourceIds": [
-        "eisfeldt-genai-firm-values-2026"
-      ],
-      "evidenceTier": 1,
-      "metricType": "corporate",
-      "dataType": "observed"
-    },
-    {
       "date": "2023-07-15",
       "value": 32,
       "confidenceLow": 26,

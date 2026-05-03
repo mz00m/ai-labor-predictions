@@ -79,7 +79,7 @@
       "metricType": "projection"
     },
     {
-      "date": "2030-01-01",
+      "date": "2025-06-01",
       "value": 15,
       "confidenceLow": 5,
       "confidenceHigh": 25,
