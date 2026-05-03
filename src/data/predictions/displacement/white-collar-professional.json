@@ -210,43 +210,13 @@
     },
     {
       "date": "2026-04-20",
-      "value": 17.2,
-      "sourceIds": [
-        "metaculus-labor-hub-2026"
-      ],
-      "evidenceTier": 2,
-      "dataType": "projected",
-      "metricType": "projection"
-    },
-    {
-      "date": "2026-04-20",
-      "value": 5.4,
-      "sourceIds": [
-        "metaculus-labor-hub-2026"
-      ],
-      "evidenceTier": 2,
-      "dataType": "projected",
-      "metricType": "projection"
-    },
-    {
-      "date": "2026-04-20",
-      "value": 9.6,
-      "sourceIds": [
-        "metaculus-labor-hub-2026"
-      ],
-      "evidenceTier": 2,
-      "dataType": "projected",
-      "metricType": "projection"
-    },
-    {
-      "date": "2026-04-20",
       "value": 11.4,
       "sourceIds": [
         "metaculus-labor-hub-2026"
       ],
       "evidenceTier": 2,
       "dataType": "projected",
-      "metricType": "projection"
+      "metricType": "forecast"
     }
   ],
   "overlays": [

@@ -173,17 +173,7 @@
       ],
       "evidenceTier": 2,
       "dataType": "projected",
-      "metricType": "projection"
-    },
-    {
-      "date": "2026-04-20",
-      "value": 1.4,
-      "sourceIds": [
-        "metaculus-labor-hub-2026"
-      ],
-      "evidenceTier": 2,
-      "dataType": "projected",
-      "metricType": "projection"
+      "metricType": "forecast"
     }
   ],
   "overlays": [
