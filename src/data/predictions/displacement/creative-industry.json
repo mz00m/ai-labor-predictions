@@ -116,15 +116,15 @@
     },
     {
       "date": "2026-03-25",
-      "value": 55.3,
+      "value": 4.7,
       "sourceIds": [
         "tufts-digital-planet-ai-jobs-risk-2026"
       ],
       "evidenceTier": 2,
       "metricType": "projection",
       "dataType": "projected",
-      "confidenceLow": 54.4,
-      "confidenceHigh": 57
+      "confidenceLow": 4.7,
+      "confidenceHigh": 4.7
     },
     {
       "date": "2026-04-20",
@@ -134,17 +134,7 @@
       ],
       "evidenceTier": 2,
       "dataType": "projected",
-      "metricType": "projection"
-    },
-    {
-      "date": "2026-04-20",
-      "value": 8.4,
-      "sourceIds": [
-        "metaculus-labor-hub-2026"
-      ],
-      "evidenceTier": 2,
-      "dataType": "projected",
-      "metricType": "projection"
+      "metricType": "forecast"
     }
   ],
   "overlays": [
@@ -499,7 +489,7 @@
     {
       "id": "indeed-graphic-artist-postings-2025",
       "title": "Indeed Hiring Lab: Creative & Design Job Postings Tracker",
-      "url": "https://www.hiringlab.org/2025/01/28/us-job-postings-trends/",
+      "url": "https://web.archive.org/web/*/hiringlab.org/2025/01/28/us-job-postings-trends/",
       "publisher": "Indeed Hiring Lab",
       "evidenceTier": 2,
       "datePublished": "2025-07-15",
