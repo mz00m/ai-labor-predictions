@@ -27,6 +27,20 @@ The user provides a source in one of these forms:
 
 The input is passed via: $ARGUMENTS
 
+## Intent Detection (Step 0)
+
+Before starting the workflow, scan the user's prompt for **destination intent**. The skill supports three modes:
+
+| Mode | Trigger phrases | Behavior |
+|---|---|---|
+| `predictions` (default) | no destination phrase | Steps 1–10 as written. Map to graphs, write to `predictions/*.json` and `confirmed-sources.json`. Do NOT touch `FeaturedReads.tsx` or `reading-list.json` unless the user adds a destination phrase. |
+| `featured` | "add to important reads", "add to featured reads", "add to top 5", "important reads only", "just important reads", "featured only" | Skip Steps 2–8 (no graph mapping, no `confirmed-sources.json` write). Run Step F (Featured Reads) and add to `reading-list.json`. |
+| `both` | "ingest and add to important reads", "all the way", "everything", "predictions and important reads" | Run Steps 1–10 PLUS Step F. The article goes to graphs AND to the homepage strip. |
+
+If the user's intent is ambiguous, ask: *"Predictions only, important reads only, or both?"* Do not guess.
+
+When mode is `featured` or `both`, you still need title + author + publisher + date + URL — fetch the source (Step 1) and infer those, but skip the quantitative-stat extraction unless mode is `both`.
+
 ## Ingestion Workflow
 
 Work through these steps in order. Do not skip steps or combine them without the user's explicit permission.
@@ -348,12 +362,46 @@ After all file changes are applied:
 1. **Set** the `lastUpdated` field in `src/data/confirmed-sources.json` to today's date (`YYYY-MM-DD`).
 2. **Set** `src/data/last-updated.json` to `{ "lastUpdated": "YYYY-MM-DD" }` — this is what the site hero component reads.
 
+### Step F: Featured Reads (mode = `featured` or `both`)
+
+When the user wants the article on the homepage "Important Reads This Week" strip, follow this exactly. The strip is a hardcoded array of **exactly 5** entries in `src/components/FeaturedReads.tsx`. The grid is `lg:grid-cols-5` — adding a 6th breaks the layout.
+
+**F.1 — Draft the entry.** The `Article` interface is `{ author, title, summary, date, url, internal? }`. Constraints:
+
+* `author` — `"Person Name (Publisher)"` or `"Publisher"` if no byline. Match the existing pattern (e.g., `"Ezra Klein (NYT)"`, `"Yale Budget Lab"`).
+* `title` — exact source title, no editorializing.
+* `summary` — 2–4 dense sentences, ~80–120 words. Lead with the most concrete numbers from the source. Use em-dashes for clauses, not commas. Match the register of existing entries — terse, evidence-first, no hedging.
+* `date` — short form like `"May 3"` or `"Apr 21"` (NOT YYYY-MM-DD — this matches the existing display format).
+* `url` — canonical URL.
+* `internal` — omit unless the link is to a jobsdata.ai internal page.
+
+**F.2 — Apply the rotation.** Per `CLAUDE.md`:
+
+1. Insert the new article at **position 0** (leftmost / index 0).
+2. Shift all existing articles one position right.
+3. Remove the **last** article (rightmost / oldest by editorial recency, NOT necessarily oldest by `date`). The dropped article remains in `src/data/reading-list.json`.
+4. Verify the array still has **exactly 5 entries** after the edit.
+
+**F.3 — Add to `reading-list.json`.** Append a corresponding entry to `src/data/reading-list.json` at the **top** of the `articles` array (newest first). The schema differs from FeaturedReads — it uses `{ title, author, publisher, date, url, takeaway, weekFeatured, tier }`:
+
+* `date` and `weekFeatured` use `YYYY-MM-DD` (not the short form used in FeaturedReads).
+* `takeaway` should be longer/denser than the FeaturedReads `summary` — full sentences, more evidence detail. They are written for different surfaces; do not copy one into the other.
+* `tier` follows the evidence-tier rubric in Step 4.
+
+**F.4 — Validate.** Read the file back. Confirm:
+* `FeaturedReads.tsx` has exactly 5 entries (count `url:` occurrences in the array).
+* `reading-list.json` parses as valid JSON.
+
+**F.5 — Always update timestamps** (Step 9) when mode is `featured` or `both`, since the homepage strip is a user-visible change.
+
 ### Step 10: Confirm Completion
 
 Summarize what was done:
 
-* How many statistics were added (and how many were skipped)
-* Which graph files were modified
+* Mode used (`predictions` / `featured` / `both`)
+* How many statistics were added (and how many were skipped) — predictions/both mode
+* Which graph files were modified — predictions/both mode
+* Which article was bumped from FeaturedReads — featured/both mode
 * Remind the user to commit and deploy if working in a git repo
 
 ## Rules
