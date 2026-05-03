@@ -9,6 +9,14 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Ezra Klein (NYT)",
+    title: "Why the A.I. Job Apocalypse (Probably) Won't Happen",
+    summary:
+      "Klein's macro-vs-anecdata case: unemployment 4.3% in Mar 2026 vs 4.4% in Mar 2020, hourly earnings stable, software engineer demand booming despite Claude Code. Drawing on Imas's 'what becomes scarce' framework, predicts labor shifts to the relational sector — Nespresso didn't kill baristas; coffee shops kept multiplying. Cites VisiCalc (1979) which quadrupled accountant employment over 40 years rather than displacing them. The harder scenario isn't 80M displaced but 8M: the U.S. responds poorly to localized shocks (cf. China shock's ~2M jobs), so partial AI displacement may go untreated.",
+    date: "May 3",
+    url: "https://www.nytimes.com/2026/05/03/opinion/ai-jobs-unemployment-silicon-valley.html",
+  },
+  {
     author: "Jasmine Sun (NYT Opinion)",
     title: "The A.I. Fear Keeping Silicon Valley Up at Night",
     summary:
@@ -39,14 +47,6 @@ const articles: Article[] = [
       "Nature surveys the existential-risk debate: only 3% of ~4,000 AI researchers name extinction as their top worry, yet 53% give it ≥10% probability — up from 47% in 2023. Dario Amodei puts P(doom) at 25%. Critics including Gary Marcus and Casey Mock argue doom narratives distract from documented current harms and hand firms a regulatory shield. Maps a genuine split between near-term misuse concerns and longer-horizon misalignment fears.",
     date: "2026",
     url: "https://www.nature.com/articles/d41586-026-01257-6",
-  },
-  {
-    author: "Autor, Chin, Salomons, Seegmiller (NBER)",
-    title: "What Makes New Work Different from More Work?",
-    summary:
-      "NBER WP 34986 (forthcoming Annual Review of Economics): 18% of US workers hold jobs introduced since 1970. New work commands a wage premium — 4× larger for tech-linked new work — reflecting scarcity of novel expertise. Advanced-degree workers are 2.9pp more likely to land new work. Labor share has fallen 10% since early 2000s, but new work is the core mechanism counteracting displacement.",
-    date: "Apr 24",
-    url: "https://mitstonecenter.substack.com/p/what-makes-new-work-different-from",
   },
 ];
 

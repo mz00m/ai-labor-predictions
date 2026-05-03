@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "Why the A.I. Job Apocalypse (Probably) Won't Happen",
+      "author": "Ezra Klein",
+      "publisher": "The New York Times",
+      "date": "2026-05-03",
+      "url": "https://www.nytimes.com/2026/05/03/opinion/ai-jobs-unemployment-silicon-valley.html",
+      "takeaway": "Klein argues mass unemployment is unlikely because the macrodata isn't matching the anecdata — unemployment was 4.3% in March 2026 vs 4.4% in March 2020, average hourly earnings are stable, and demand for software engineers is booming despite Claude Code. Drawing on Alex Imas's 'what becomes scarce' framework, he predicts labor will shift toward the 'relational sector' as wealthier consumers pay premiums for human-made goods and services. The harder scenario, he warns, is partial displacement of ~8M workers — the U.S. responds poorly to localized shocks (cf. the China shock's 2M jobs).",
+      "weekFeatured": "2026-05-03",
+      "tier": 3
+    },
+    {
       "title": "The A.I. Fear Keeping Silicon Valley Up at Night",
       "author": "Jasmine Sun",
       "publisher": "The New York Times (Opinion)",
