@@ -134,7 +134,7 @@
       ],
       "evidenceTier": 2,
       "dataType": "projected",
-      "metricType": "forecast"
+      "metricType": "projection"
     }
   ],
   "overlays": [
