@@ -2,7 +2,7 @@
   "id": "displacement-tech",
   "slug": "tech-sector-displacement",
   "title": "Tech Sector Displacement by 2030: Uneven by Experience Level",
-  "description": "The weighted average (12.1%) reflects a mix of direct employment measures and job-posting proxy data. One peer-reviewed study (Brynjolfsson et al. 2025) finds net tech employment grew +1.3%, but this masks a K-shaped split: developers aged 22-25 saw ~20% employment decline since late 2022, while those 35-49 grew +9%. Job posting data from Indeed, Lightcast, and BLS show 13-22% declines in tech hiring volume. The primary channel is not mass layoffs but evaporated entry points — firms stopped creating junior roles as senior devs absorb that work with AI tools.",
+  "description": "The weighted average (12.1%) reflects a mix of direct employment measures and job-posting proxy data. One peer-reviewed study (Brynjolfsson et al. 2025) finds net tech employment grew +1.3%, but this masks a K-shaped split: developers aged 22-25 saw ~20% employment decline since late 2022, while those 35-49 grew +9%. Job posting data from Indeed, Lightcast, and BLS show 13-22% declines in tech hiring volume. The primary channel is not mass layoffs but evaporated entry points \u2014 firms stopped creating junior roles as senior devs absorb that work with AI tools.",
   "category": "displacement",
   "unit": "% of jobs displaced",
   "currentValue": 9.7,
@@ -234,7 +234,7 @@
       "metricType": "employment",
       "isProxy": true,
       "proxyContext": {
-        "actualUnit": "% fewer coder jobs vs counterfactual (3pp lower annual growth × ~3 years)",
+        "actualUnit": "% fewer coder jobs vs counterfactual (3pp lower annual growth \u00d7 ~3 years)",
         "conversionFactor": 0.7,
         "conversionLow": 0.5,
         "conversionHigh": 0.9,
@@ -353,7 +353,7 @@
         "gambacorta-codefuse-2024"
       ],
       "evidenceTier": 1,
-      "label": "Gambacorta et al.: CodeFuse → 55% increase in code output at Ant Group"
+      "label": "Gambacorta et al.: CodeFuse \u2192 55% increase in code output at Ant Group"
     },
     {
       "date": "2024-06-01",
@@ -380,7 +380,7 @@
         "yeverechyahu-copilot-languages-2024"
       ],
       "evidenceTier": 1,
-      "label": "Yeverechyahu et al.: GitHub Copilot → 37-55% increase in commits"
+      "label": "Yeverechyahu et al.: GitHub Copilot \u2192 37-55% increase in commits"
     },
     {
       "date": "2024-10-01",
@@ -587,7 +587,7 @@
         "cognizant-new-work-2026"
       ],
       "evidenceTier": 2,
-      "label": "Cognizant: computer/math roles 67% task exposure — second highest of all categories"
+      "label": "Cognizant: computer/math roles 67% task exposure \u2014 second highest of all categories"
     },
     {
       "date": "2026-01-15",
@@ -686,7 +686,7 @@
         "wang-neubig-agent-benchmarks-2026"
       ],
       "evidenceTier": 1,
-      "label": "Wang et al.: AI development heavily concentrated on CS/Math — 7.6% of employment"
+      "label": "Wang et al.: AI development heavily concentrated on CS/Math \u2014 7.6% of employment"
     },
     {
       "date": "2026-03-01",
@@ -731,7 +731,7 @@
         "challenger-ai-layoffs-feb-2026"
       ],
       "evidenceTier": 2,
-      "label": "Challenger: Tech layoffs up 51% YoY in Jan–Feb 2026; AI cited as primary driver"
+      "label": "Challenger: Tech layoffs up 51% YoY in Jan\u2013Feb 2026; AI cited as primary driver"
     },
     {
       "date": "2026-03-05",
@@ -767,7 +767,7 @@
         "fri-ai-economics-survey-2026"
       ],
       "evidenceTier": 1,
-      "label": "FRI: Moderate scenario → most 5-day freelance SW engineering jobs automatable by 2030"
+      "label": "FRI: Moderate scenario \u2192 most 5-day freelance SW engineering jobs automatable by 2030"
     },
     {
       "date": "2026-04-01",
@@ -840,6 +840,15 @@
       ],
       "evidenceTier": 3,
       "label": "Burning Glass: Information sector hours -6% from 2022 peak as GDP +8.4%/yr"
+    },
+    {
+      "date": "2026-05-06",
+      "direction": "down",
+      "sourceIds": [
+        "a16z-ai-job-apocalypse-fantasy-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "a16z: software dev jobs rising as % of market since early 2025"
     }
   ],
   "sources": [
@@ -905,7 +914,7 @@
     },
     {
       "id": "brookings-2024",
-      "title": "New data show no AI jobs apocalypse — for now",
+      "title": "New data show no AI jobs apocalypse \u2014 for now",
       "url": "https://www.brookings.edu/articles/new-data-show-no-ai-jobs-apocalypse-for-now/",
       "publisher": "Brookings Institution",
       "evidenceTier": 2,
@@ -980,7 +989,7 @@
       "publisher": "Bureau of Labor Statistics",
       "evidenceTier": 1,
       "datePublished": "2024-11-01",
-      "excerpt": "Computer programmer employment (routine coding roles) fell ~27.5% in roughly two years following ChatGPT's release (~13.8%/year annualized) — one of the largest two-year drops in any occupation tracked by BLS. Software developer employment remained flat.",
+      "excerpt": "Computer programmer employment (routine coding roles) fell ~27.5% in roughly two years following ChatGPT's release (~13.8%/year annualized) \u2014 one of the largest two-year drops in any occupation tracked by BLS. Software developer employment remained flat.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -1014,7 +1023,7 @@
     },
     {
       "id": "meta-10k-2024",
-      "title": "Meta Platforms 2024 10-K — AI Efficiency & Headcount",
+      "title": "Meta Platforms 2024 10-K \u2014 AI Efficiency & Headcount",
       "url": "https://www.sec.gov/edgar/browse/?CIK=0001326801",
       "publisher": "Meta Platforms (SEC Filing)",
       "evidenceTier": 1,
@@ -1024,7 +1033,7 @@
     },
     {
       "id": "google-10k-2024",
-      "title": "Alphabet Inc. 2024 10-K — Workforce & AI Automation Disclosures",
+      "title": "Alphabet Inc. 2024 10-K \u2014 Workforce & AI Automation Disclosures",
       "url": "https://www.sec.gov/edgar/browse/?CIK=0001652044",
       "publisher": "Alphabet (SEC Filing)",
       "evidenceTier": 1,
@@ -1079,7 +1088,7 @@
       "publisher": "Microsoft/Accenture (Cui, Demirer, Jaffe, Musolff, Peng, Salz)",
       "evidenceTier": 1,
       "datePublished": "2025-06-01",
-      "excerpt": "26% increase in completed pull requests, 13.55% increase in commits, 38.38% increase in builds — but build success rate fell by 5.53 percentage points.",
+      "excerpt": "26% increase in completed pull requests, 13.55% increase in commits, 38.38% increase in builds \u2014 but build success rate fell by 5.53 percentage points.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -1227,7 +1236,7 @@
       "publisher": "Chen & Stratton (Jellyfish data)",
       "evidenceTier": 1,
       "datePublished": "2026-01-01",
-      "excerpt": "AI adoption led to moderate productivity increases — an 8.5 percent increase in coding activity and 8.7 percent faster task completion — with no measurable quality declines. These productivity gains did not translate into increased output, changes in task composition, or effects on employment.",
+      "excerpt": "AI adoption led to moderate productivity increases \u2014 an 8.5 percent increase in coding activity and 8.7 percent faster task completion \u2014 with no measurable quality declines. These productivity gains did not translate into increased output, changes in task composition, or effects on employment.",
       "dateAdded": "2026-03-10"
     },
     {
@@ -1242,12 +1251,12 @@
     },
     {
       "id": "bls-programmer-projections-2034",
-      "title": "BLS Employment Projections: Computer Programmers 2024–2034",
+      "title": "BLS Employment Projections: Computer Programmers 2024\u20132034",
       "url": "https://www.bls.gov/ooh/computer-and-information-technology/computer-programmers.htm",
       "publisher": "Bureau of Labor Statistics",
       "evidenceTier": 1,
       "datePublished": "2026-01-10",
-      "excerpt": "BLS projects a further 6% decline in programmer roles through 2034. Computer programmer employment (routine coding roles) fell ~27.5% in roughly two years following ChatGPT's release — one of the largest two-year drops in any occupation tracked by BLS. Software developer employment remained flat.",
+      "excerpt": "BLS projects a further 6% decline in programmer roles through 2034. Computer programmer employment (routine coding roles) fell ~27.5% in roughly two years following ChatGPT's release \u2014 one of the largest two-year drops in any occupation tracked by BLS. Software developer employment remained flat.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -1267,7 +1276,7 @@
       "publisher": "Cognizant",
       "evidenceTier": 2,
       "datePublished": "2026-01-15",
-      "excerpt": "Education task exposure jumped from 11% to 49% — a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations.",
+      "excerpt": "Education task exposure jumped from 11% to 49% \u2014 a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -1337,7 +1346,7 @@
       "publisher": "Goldman Sachs Research (Pierfrancesco Mei)",
       "evidenceTier": 2,
       "datePublished": "2026-02-24",
-      "excerpt": "AI's labor market impact still small — only 5-10K/month drag on net job growth. Only 2½% of jobs exposed to automation today. Baseline forecast: 6-7% of workers displaced (range 3-14%), lowering annual hiring by 1M jobs and raising unemployment ~½pp. US creates 30M gross new jobs/year; does not anticipate job apocalypse. Impact so far largely confined to tech sector but expects it to grow materially.",
+      "excerpt": "AI's labor market impact still small \u2014 only 5-10K/month drag on net job growth. Only 2\u00bd% of jobs exposed to automation today. Baseline forecast: 6-7% of workers displaced (range 3-14%), lowering annual hiring by 1M jobs and raising unemployment ~\u00bdpp. US creates 30M gross new jobs/year; does not anticipate job apocalypse. Impact so far largely confined to tech sector but expects it to grow materially.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -1397,7 +1406,7 @@
       "publisher": "Citadel Securities (Frank Flight)",
       "evidenceTier": 2,
       "datePublished": "2026-03-04",
-      "excerpt": "In spite of the current displacement narrative – job postings for software engineers are rising rapidly, up 11% YoY.",
+      "excerpt": "In spite of the current displacement narrative \u2013 job postings for software engineers are rising rapidly, up 11% YoY.",
       "dateAdded": "2026-03-07"
     },
     {
@@ -1407,7 +1416,7 @@
       "publisher": "Preston Cooper (Substack)",
       "evidenceTier": 4,
       "datePublished": "2026-03-04",
-      "excerpt": "According to the American Community Survey, 7.2 percent of early-career college graduates who majored in CS were unemployed in 2024—well above the 4.5 percent rate for all early-career graduates.",
+      "excerpt": "According to the American Community Survey, 7.2 percent of early-career college graduates who majored in CS were unemployed in 2024\u2014well above the 4.5 percent rate for all early-career graduates.",
       "dateAdded": "2026-03-07"
     },
     {
@@ -1434,10 +1443,10 @@
       "id": "lodefalk-age-gradient-hiring-2026",
       "title": "Same Storm, Different Boats: Generative AI and the Age Gradient in Hiring",
       "url": "https://cms.ratio.se/app/uploads/2026/03/lodefalk_march16_paper_v2-kombinerades.pdf",
-      "publisher": "RATIO Institute / Örebro University (Lodefalk, Löthman, Koch, Engberg)",
+      "publisher": "RATIO Institute / \u00d6rebro University (Lodefalk, L\u00f6thman, Koch, Engberg)",
       "evidenceTier": 1,
       "datePublished": "2026-03-16",
-      "excerpt": "The youngest cohort (22–25) shows the steepest decline in software developer employment, consistent with the economy-wide canaries effect. Software developers (SSYK 2512) represent a setting where AI primarily augments experienced workers.",
+      "excerpt": "The youngest cohort (22\u201325) shows the steepest decline in software developer employment, consistent with the economy-wide canaries effect. Software developers (SSYK 2512) represent a setting where AI primarily augments experienced workers.",
       "dateAdded": "2026-03-17"
     },
     {
@@ -1491,7 +1500,7 @@
     },
     {
       "id": "bls-information-sector-mar-2026",
-      "title": "BLS Employment Situation: Information Sector — March 2026",
+      "title": "BLS Employment Situation: Information Sector \u2014 March 2026",
       "url": "https://data.bls.gov/timeseries/CEU5000000001",
       "publisher": "data.bls.gov",
       "evidenceTier": 1,
@@ -1532,7 +1541,7 @@
       "publisher": "Stanford HAI",
       "evidenceTier": 2,
       "datePublished": "2026-04-13",
-      "excerpt": "Employment among software developers aged 22–25 has plummeted nearly 20% since 2024, even as their older colleagues' headcount grows. The pattern repeats in other jobs with higher levels of AI exposure, like customer service. Meanwhile, firm surveys indicate executives expect this trend to accelerate, with planned headcount reductions outpacing recent cuts."
+      "excerpt": "Employment among software developers aged 22\u201325 has plummeted nearly 20% since 2024, even as their older colleagues' headcount grows. The pattern repeats in other jobs with higher levels of AI exposure, like customer service. Meanwhile, firm surveys indicate executives expect this trend to accelerate, with planned headcount reductions outpacing recent cuts."
     },
     {
       "id": "metaculus-labor-hub-2026",
@@ -1559,7 +1568,16 @@
       "publisher": "The Burning Glass Institute (Gad Levanon)",
       "evidenceTier": 3,
       "datePublished": "2026-04-21",
-      "excerpt": "real GDP (blue) accelerates upward from 2020 while hours (orange) peak in 2022 and decline. The magnitudes are large — real GDP has more than tripled since 2006, while hours are roughly flat for the full period and down 6% from the 2022 peak. Post-2022 annualized: GDP +8.4%, hours −1.9%."
+      "excerpt": "real GDP (blue) accelerates upward from 2020 while hours (orange) peak in 2022 and decline. The magnitudes are large \u2014 real GDP has more than tripled since 2006, while hours are roughly flat for the full period and down 6% from the 2022 peak. Post-2022 annualized: GDP +8.4%, hours \u22121.9%."
+    },
+    {
+      "id": "a16z-ai-job-apocalypse-fantasy-2026",
+      "title": "The \"AI Job Apocalypse\" Is a Complete Fantasy",
+      "url": "https://www.a16z.news/p/the-ai-job-apocalypse-is-a-complete",
+      "publisher": "a16z (David George)",
+      "evidenceTier": 3,
+      "datePublished": "2026-05-06",
+      "excerpt": "AI-as-augmentation out-mentions AI-as-substitution on earnings calls by ~8:1. Software Development jobs (both by count, and a percent of the overall job market) have been increasing since the beginning of 2025. The aggregate effects of AI on employment are \"basically null\" per recent academic research, with some evidence of reallocation between jobs and tasks."
     }
   ],
   "marketIds": {

@@ -7,7 +7,7 @@
       "publisher": "The New York Times",
       "date": "2026-05-03",
       "url": "https://www.nytimes.com/2026/05/03/opinion/ai-jobs-unemployment-silicon-valley.html",
-      "takeaway": "Klein argues mass unemployment is unlikely because the macrodata isn't matching the anecdata — unemployment was 4.3% in March 2026 vs 4.4% in March 2020, average hourly earnings are stable, and demand for software engineers is booming despite Claude Code. Drawing on Alex Imas's 'what becomes scarce' framework, he predicts labor will shift toward the 'relational sector' as wealthier consumers pay premiums for human-made goods and services. The harder scenario, he warns, is partial displacement of ~8M workers — the U.S. responds poorly to localized shocks (cf. the China shock's 2M jobs).",
+      "takeaway": "Klein argues mass unemployment is unlikely because the macrodata isn't matching the anecdata \u2014 unemployment was 4.3% in March 2026 vs 4.4% in March 2020, average hourly earnings are stable, and demand for software engineers is booming despite Claude Code. Drawing on Alex Imas's 'what becomes scarce' framework, he predicts labor will shift toward the 'relational sector' as wealthier consumers pay premiums for human-made goods and services. The harder scenario, he warns, is partial displacement of ~8M workers \u2014 the U.S. responds poorly to localized shocks (cf. the China shock's 2M jobs).",
       "weekFeatured": "2026-05-03",
       "tier": 3
     },
@@ -17,7 +17,7 @@
       "publisher": "The New York Times (Opinion)",
       "date": "2026-04-30",
       "url": "https://www.nytimes.com/2026/04/30/opinion/ai-labor-work-force-silicon-valley.html",
-      "takeaway": "A reported essay from inside the SF AI bubble: the 'San Francisco consensus' is that the median worker is screwed, and even doomers, accelerationists, and labs differ mostly on what to do about it. Amodei's '50% of entry-level white-collar by 2030' anchors the discourse; Block CEO Jack Dorsey laid off ~half his staff in March citing coding agents; OpenAI's GDPVal benchmark went from sub-human to >80% win rate vs human professionals in months; Anthropic enterprise-agent revenue jumped from $9B to $30B annualized. OpenAI's new white paper floats a 32-hour week, public wealth fund, and capital-gains hikes; Anthropic has set up an institute but not yet endorsed specific policy. David Shor finds 72% of voters fear AI will drive down wages — the rare populist message that polls across the political spectrum.",
+      "takeaway": "A reported essay from inside the SF AI bubble: the 'San Francisco consensus' is that the median worker is screwed, and even doomers, accelerationists, and labs differ mostly on what to do about it. Amodei's '50% of entry-level white-collar by 2030' anchors the discourse; Block CEO Jack Dorsey laid off ~half his staff in March citing coding agents; OpenAI's GDPVal benchmark went from sub-human to >80% win rate vs human professionals in months; Anthropic enterprise-agent revenue jumped from $9B to $30B annualized. OpenAI's new white paper floats a 32-hour week, public wealth fund, and capital-gains hikes; Anthropic has set up an institute but not yet endorsed specific policy. David Shor finds 72% of voters fear AI will drive down wages \u2014 the rare populist message that polls across the political spectrum.",
       "weekFeatured": "2026-04-30",
       "tier": 3
     },
@@ -600,6 +600,26 @@
       "takeaway": "Formal economic models show that advanced AI could theoretically cause negative economic growth if labor income collapses and capital owners stop consuming, though this requires extreme conditions. Most economists consider this unlikely but expect demand-side constraints to moderate AI's growth impact.",
       "weekFeatured": "2026-01-07",
       "tier": 4
+    },
+    {
+      "title": "The \"AI Job Apocalypse\" Is a Complete Fantasy",
+      "author": "David George",
+      "publisher": "a16z",
+      "date": "2026-05-06",
+      "url": "https://www.a16z.news/p/the-ai-job-apocalypse-is-a-complete",
+      "takeaway": "a16z's bullish counter to the displacement narrative: historical precedent (agriculture, electrification, spreadsheets) shows productivity gains expand labor markets rather than shrink them. Current data backs this \u2014 90%+ of firms report no AI employment impact, software dev jobs are rising, and augmentation out-mentions substitution 8:1 on earnings calls. The aggregate picture is neutral-to-positive, with task reallocation underway but no economy-wide job destruction.",
+      "weekFeatured": "2026-05-06",
+      "tier": 3
+    },
+    {
+      "title": "AI's big messaging pivot",
+      "author": "Noah Smith",
+      "publisher": "Noahpinion",
+      "date": "2026-05-05",
+      "url": "https://www.noahpinion.blog/p/ais-big-messaging-pivot",
+      "takeaway": "Noah Smith traces the AI industry's pivot from 'AI will make humans obsolete' to 'AI will augment workers and expand jobs' \u2014 driven by deteriorating public opinion, political risk, and competitive positioning (OpenAI vs Anthropic). The new pitch rests on task creation and Jevons Paradox (induced demand), plus the 'relational sector' thesis (humans paid just to be human). Smith endorses it as better PR and possibly self-fulfilling for AI research direction, though notes the pivot is partly strategic.",
+      "weekFeatured": "2026-05-05",
+      "tier": 3
     }
   ]
 }
