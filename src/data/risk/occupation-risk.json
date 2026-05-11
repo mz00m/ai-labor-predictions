@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-11T19:18:19.435Z",
+  "generatedAt": "2026-05-11T22:59:03.465Z",
   "methodology": "Per-occupation risk uses the 5-dimension framework from src/lib/scoring-shared.ts. technicalExposure: Karpathy/GPT exposure score carried through. adoptionSpeed: taskComposition-weighted CATEGORY_ADOPTION_LAG mapped to 0-10. adaptability: pay percentile (within 342) + education tier, equal-weighted. demandElasticity: rule-based defaults by BLS major category (3/5/7). complementarity: estimateComplementarityFromTasks + dimensionality adjustment. Task riskScore = clamp(exposure*10 * adoptionFactor * declineFactor * importanceFactor, 0, 100). Bucket thresholds: low < 33, medium 33-66, high > 66. Time-share rollup is O*NET-importance-weighted.",
   "count": 342,
   "occupations": [
@@ -129,7 +129,9 @@
       "pctMediumRiskTime": 13.652539631187317,
       "pctLowRiskTime": 27.175671303785183,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 80.5,
+      "capabilityOverhang": -0.5
     },
     {
       "slug": "actors",
@@ -257,7 +259,9 @@
       "pctMediumRiskTime": 42.077922077922075,
       "pctLowRiskTime": 57.92207792207793,
       "effectiveDimensions": 5,
-      "archetype": "grow"
+      "archetype": "grow",
+      "realizedExposure100": 73.8,
+      "capabilityOverhang": -3.8
     },
     {
       "slug": "actuaries",
@@ -385,7 +389,9 @@
       "pctMediumRiskTime": 13.514387326220497,
       "pctLowRiskTime": 25.218234723569356,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 66.9,
+      "capabilityOverhang": 13.1
     },
     {
       "slug": "administrative-services-managers",
@@ -513,7 +519,9 @@
       "pctMediumRiskTime": 45.6514657980456,
       "pctLowRiskTime": 46.82410423452768,
       "effectiveDimensions": 6,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 69.2,
+      "capabilityOverhang": -19.2
     },
     {
       "slug": "adult-literacy-and-ged-teachers",
@@ -641,7 +649,9 @@
       "pctMediumRiskTime": 21.53231663035585,
       "pctLowRiskTime": 53.24981844589689,
       "effectiveDimensions": 5,
-      "archetype": "reorganize"
+      "archetype": "reorganize",
+      "realizedExposure100": 91,
+      "capabilityOverhang": -21
     },
     {
       "slug": "advertising-sales-agents",
@@ -769,7 +779,9 @@
       "pctMediumRiskTime": 20.286085825747723,
       "pctLowRiskTime": 41.04356306892067,
       "effectiveDimensions": 5,
-      "archetype": "grow"
+      "archetype": "grow",
+      "realizedExposure100": 63.8,
+      "capabilityOverhang": 6.2
     },
     {
       "slug": "advertising-promotions-and-marketing-managers",
@@ -897,7 +909,9 @@
       "pctMediumRiskTime": 25.712324064538272,
       "pctLowRiskTime": 25.472021970477172,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 68.6,
+      "capabilityOverhang": 11.4
     },
     {
       "slug": "aerospace-engineering-and-operations-technicians",
@@ -1025,7 +1039,9 @@
       "pctMediumRiskTime": 41.16044237858631,
       "pctLowRiskTime": 51.40246834428596,
       "effectiveDimensions": 6,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 76.5,
+      "capabilityOverhang": -26.5
     },
     {
       "slug": "aerospace-engineers",
@@ -1153,7 +1169,9 @@
       "pctMediumRiskTime": 19.746320075164427,
       "pctLowRiskTime": 25.728155339805824,
       "effectiveDimensions": 6,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 97.1,
+      "capabilityOverhang": -27.1
     },
     {
       "slug": "agricultural-and-food-science-technicians",
@@ -1281,7 +1299,9 @@
       "pctMediumRiskTime": 41.64237956454655,
       "pctLowRiskTime": 58.35762043545346,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 69.5,
+      "capabilityOverhang": -29.5
     },
     {
       "slug": "agricultural-and-food-scientists",
@@ -1409,7 +1429,9 @@
       "pctMediumRiskTime": 27.27565133483435,
       "pctLowRiskTime": 33.322611772274044,
       "effectiveDimensions": 6,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 94,
+      "capabilityOverhang": -34
     },
     {
       "slug": "agricultural-engineers",
@@ -1537,7 +1559,9 @@
       "pctMediumRiskTime": 26.244765006979993,
       "pctLowRiskTime": 39.70839149992245,
       "effectiveDimensions": 6,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 88,
+      "capabilityOverhang": -28
     },
     {
       "slug": "agricultural-workers",
@@ -1687,7 +1711,9 @@
       "pctMediumRiskTime": 12.779500571242043,
       "pctLowRiskTime": 39.33409498939122,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 66,
+      "capabilityOverhang": 4
     },
     {
       "slug": "aircraft-and-avionics-equipment-mechanics-and-technicians",
@@ -1815,7 +1841,9 @@
       "pctMediumRiskTime": 32.83281733746129,
       "pctLowRiskTime": 67.16718266253869,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 64.2,
+      "capabilityOverhang": -34.2
     },
     {
       "slug": "airline-and-commercial-pilots",
@@ -1943,7 +1971,9 @@
       "pctMediumRiskTime": 26.62498182346954,
       "pctLowRiskTime": 59.77897338955941,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 60.6,
+      "capabilityOverhang": -10.6
     },
     {
       "slug": "animal-care-and-service-workers",
@@ -2093,7 +2123,9 @@
       "pctMediumRiskTime": 20.701924632055636,
       "pctLowRiskTime": 26.39495390587094,
       "effectiveDimensions": 5,
-      "archetype": "grow"
+      "archetype": "grow",
+      "realizedExposure100": 85.4,
+      "capabilityOverhang": -15.4
     },
     {
       "slug": "anthropologists-and-archeologists",
@@ -2221,7 +2253,9 @@
       "pctMediumRiskTime": 53.176213516466376,
       "pctLowRiskTime": 39.331980646168255,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 97.1,
+      "capabilityOverhang": -47.1
     },
     {
       "slug": "arbitrators-mediators-and-conciliators",
@@ -2349,7 +2383,9 @@
       "pctMediumRiskTime": 6.021897810218977,
       "pctLowRiskTime": 53.71599203715991,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 88.8,
+      "capabilityOverhang": -18.8
     },
     {
       "slug": "architects",
@@ -2477,7 +2513,9 @@
       "pctMediumRiskTime": 25.134952766531715,
       "pctLowRiskTime": 32.3549257759784,
       "effectiveDimensions": 6,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 77.9,
+      "capabilityOverhang": -7.9
     },
     {
       "slug": "architectural-and-engineering-managers",
@@ -2605,7 +2643,9 @@
       "pctMediumRiskTime": 26.30048959608323,
       "pctLowRiskTime": 19.828641370869033,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 62.6,
+      "capabilityOverhang": 7.4
     },
     {
       "slug": "curators-museum-technicians-and-conservators",
@@ -2733,7 +2773,9 @@
       "pctMediumRiskTime": 27.095329494561742,
       "pctLowRiskTime": 37.92386436340371,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 81.2,
+      "capabilityOverhang": -21.2
     },
     {
       "slug": "art-directors",
@@ -2861,7 +2903,9 @@
       "pctMediumRiskTime": 12.844036697247708,
       "pctLowRiskTime": 30.79232693911593,
       "effectiveDimensions": 5,
-      "archetype": "grow"
+      "archetype": "grow",
+      "realizedExposure100": 84.2,
+      "capabilityOverhang": -4.2
     },
     {
       "slug": "assemblers-and-fabricators",
@@ -3011,7 +3055,9 @@
       "pctMediumRiskTime": 0,
       "pctLowRiskTime": 100,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 45.3,
+      "capabilityOverhang": -35.3
     },
     {
       "slug": "athletic-trainers",
@@ -3139,7 +3185,9 @@
       "pctMediumRiskTime": 13.606010016694489,
       "pctLowRiskTime": 86.3939899833055,
       "effectiveDimensions": 6,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 83.5,
+      "capabilityOverhang": -53.5
     },
     {
       "slug": "atmospheric-scientists-including-meteorologists",
@@ -3267,7 +3315,9 @@
       "pctMediumRiskTime": 26.142927875887107,
       "pctLowRiskTime": 18.3198547615118,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 93.3,
+      "capabilityOverhang": -13.3
     },
     {
       "slug": "audiologists",
@@ -3395,7 +3445,9 @@
       "pctMediumRiskTime": 52.79642058165548,
       "pctLowRiskTime": 47.203579418344525,
       "effectiveDimensions": 6,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 76.9,
+      "capabilityOverhang": -36.9
     },
     {
       "slug": "automotive-body-and-glass-repairers",
@@ -3523,7 +3575,9 @@
       "pctMediumRiskTime": 0,
       "pctLowRiskTime": 100,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 53.7,
+      "capabilityOverhang": -33.7
     },
     {
       "slug": "automotive-service-technicians-and-mechanics",
@@ -3651,7 +3705,9 @@
       "pctMediumRiskTime": 21.834956432598663,
       "pctLowRiskTime": 78.16504356740131,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 41.5,
+      "capabilityOverhang": -11.5
     },
     {
       "slug": "bakers",
@@ -3779,7 +3835,9 @@
       "pctMediumRiskTime": 0,
       "pctLowRiskTime": 100,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 56.3,
+      "capabilityOverhang": -36.3
     },
     {
       "slug": "barbers-hairstylists-and-cosmetologists",
@@ -3907,7 +3965,9 @@
       "pctMediumRiskTime": 0,
       "pctLowRiskTime": 100,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 52.8,
+      "capabilityOverhang": -32.8
     },
     {
       "slug": "bartenders",
@@ -4035,7 +4095,9 @@
       "pctMediumRiskTime": 0,
       "pctLowRiskTime": 100,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 40.8,
+      "capabilityOverhang": -20.8
     },
     {
       "slug": "bill-and-account-collectors",
@@ -4163,7 +4225,9 @@
       "pctMediumRiskTime": 15.004766444232603,
       "pctLowRiskTime": 26.005719733079125,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 73.2,
+      "capabilityOverhang": 16.8
     },
     {
       "slug": "biochemists-and-biophysicists",
@@ -4291,7 +4355,9 @@
       "pctMediumRiskTime": 20.178128193896917,
       "pctLowRiskTime": 26.427215651919987,
       "effectiveDimensions": 6,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 96,
+      "capabilityOverhang": -26
     },
     {
       "slug": "biomedical-engineers",
@@ -4419,7 +4485,9 @@
       "pctMediumRiskTime": 31.270983213429254,
       "pctLowRiskTime": 21.087130295763394,
       "effectiveDimensions": 6,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 94.5,
+      "capabilityOverhang": -24.5
     },
     {
       "slug": "biological-technicians",
@@ -4547,7 +4615,9 @@
       "pctMediumRiskTime": 46.18991793669404,
       "pctLowRiskTime": 46.08943225590354,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 80.7,
+      "capabilityOverhang": -30.7
     },
     {
       "slug": "boilermakers",
@@ -4675,7 +4745,9 @@
       "pctMediumRiskTime": 0,
       "pctLowRiskTime": 100,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 41.9,
+      "capabilityOverhang": -21.9
     },
     {
       "slug": "bookkeeping-accounting-and-auditing-clerks",
@@ -4803,7 +4875,9 @@
       "pctMediumRiskTime": 13.941789435860585,
       "pctLowRiskTime": 25.00898311174991,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 74.5,
+      "capabilityOverhang": 15.5
     },
     {
       "slug": "broadcast-and-sound-engineering-technicians",
@@ -4931,7 +5005,9 @@
       "pctMediumRiskTime": 25.9366485013624,
       "pctLowRiskTime": 45.095367847411445,
       "effectiveDimensions": 6,
-      "archetype": "grow"
+      "archetype": "grow",
+      "realizedExposure100": 68,
+      "capabilityOverhang": -8
     },
     {
       "slug": "budget-analysts",
@@ -5059,7 +5135,9 @@
       "pctMediumRiskTime": 24.818778046254746,
       "pctLowRiskTime": 26.026924404556436,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 85,
+      "capabilityOverhang": -5
     },
     {
       "slug": "bus-drivers",
@@ -5187,7 +5265,9 @@
       "pctMediumRiskTime": 34.22116091109479,
       "pctLowRiskTime": 65.7788390889052,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 61.1,
+      "capabilityOverhang": -21.1
     },
     {
       "slug": "butchers-and-meat-cutters",
@@ -5315,7 +5395,9 @@
       "pctMediumRiskTime": 0,
       "pctLowRiskTime": 100,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 38,
+      "capabilityOverhang": -18
     },
     {
       "slug": "calibration-technologists-and-technicians",
@@ -5465,7 +5547,9 @@
       "pctMediumRiskTime": 40.18955769870303,
       "pctLowRiskTime": 59.81044230129699,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 54.4,
+      "capabilityOverhang": -14.4
     },
     {
       "slug": "career-and-technical-education-teachers",
@@ -5593,7 +5677,9 @@
       "pctMediumRiskTime": 46.244131455399064,
       "pctLowRiskTime": 53.75586854460095,
       "effectiveDimensions": 6,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 74.6,
+      "capabilityOverhang": -34.6
     },
     {
       "slug": "carpenters",
@@ -5721,7 +5807,9 @@
       "pctMediumRiskTime": 0,
       "pctLowRiskTime": 100,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 51.5,
+      "capabilityOverhang": -31.5
     },
     {
       "slug": "cartographers-and-photogrammetrists",
@@ -5849,7 +5937,9 @@
       "pctMediumRiskTime": 18.96718146718147,
       "pctLowRiskTime": 32.368082368082376,
       "effectiveDimensions": 6,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 88.8,
+      "capabilityOverhang": -8.8
     },
     {
       "slug": "cashiers",
@@ -5977,7 +6067,9 @@
       "pctMediumRiskTime": 44.81597845601437,
       "pctLowRiskTime": 45.780969479353686,
       "effectiveDimensions": 5,
-      "archetype": "grow"
+      "archetype": "grow",
+      "realizedExposure100": 48.5,
+      "capabilityOverhang": 21.5
     },
     {
       "slug": "chefs-and-head-cooks",
@@ -6105,7 +6197,9 @@
       "pctMediumRiskTime": 6.7471958584987055,
       "pctLowRiskTime": 93.2528041415013,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 52.9,
+      "capabilityOverhang": -22.9
     },
     {
       "slug": "chemical-engineers",
@@ -6233,7 +6327,9 @@
       "pctMediumRiskTime": 31.58672798948751,
       "pctLowRiskTime": 33.771353482260174,
       "effectiveDimensions": 6,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 84.3,
+      "capabilityOverhang": -24.3
     },
     {
       "slug": "chemical-technicians",
@@ -6361,7 +6457,9 @@
       "pctMediumRiskTime": 46.74836601307189,
       "pctLowRiskTime": 53.25163398692809,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 74.3,
+      "capabilityOverhang": -24.3
     },
     {
       "slug": "chemists-and-materials-scientists",
@@ -6489,7 +6587,9 @@
       "pctMediumRiskTime": 26.736699423924094,
       "pctLowRiskTime": 33.158251440189765,
       "effectiveDimensions": 6,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 80.6,
+      "capabilityOverhang": -10.6
     },
     {
       "slug": "childcare-workers",
@@ -6617,7 +6717,9 @@
       "pctMediumRiskTime": 0,
       "pctLowRiskTime": 100,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 77.4,
+      "capabilityOverhang": -57.4
     },
     {
       "slug": "chiropractors",
@@ -6745,7 +6847,9 @@
       "pctMediumRiskTime": 33.306188925081436,
       "pctLowRiskTime": 66.69381107491856,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 76.4,
+      "capabilityOverhang": -46.4
     },
     {
       "slug": "civil-engineering-technicians",
@@ -6873,7 +6977,9 @@
       "pctMediumRiskTime": 31.993947545393418,
       "pctLowRiskTime": 38.83658372562206,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 69.7,
+      "capabilityOverhang": -9.7
     },
     {
       "slug": "civil-engineers",
@@ -7001,7 +7107,9 @@
       "pctMediumRiskTime": 20.084292429891395,
       "pctLowRiskTime": 45.8745339601232,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 50.3,
+      "capabilityOverhang": 9.7
     },
     {
       "slug": "claims-adjusters-appraisers-examiners-and-investigators",
@@ -7129,7 +7237,9 @@
       "pctMediumRiskTime": 19.32496075353218,
       "pctLowRiskTime": 32.48037676609105,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 79.8,
+      "capabilityOverhang": -9.8
     },
     {
       "slug": "clinical-laboratory-technologists-and-technicians",
@@ -7257,7 +7367,9 @@
       "pctMediumRiskTime": 46.3776811159442,
       "pctLowRiskTime": 53.6223188840558,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 70.7,
+      "capabilityOverhang": -20.7
     },
     {
       "slug": "coaches-and-scouts",
@@ -7385,7 +7497,9 @@
       "pctMediumRiskTime": 32.303921568627445,
       "pctLowRiskTime": 67.69607843137254,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 58.9,
+      "capabilityOverhang": -18.9
     },
     {
       "slug": "community-health-workers",
@@ -7513,7 +7627,9 @@
       "pctMediumRiskTime": 32.98382264829238,
       "pctLowRiskTime": 67.01617735170761,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 59.6,
+      "capabilityOverhang": -29.6
     },
     {
       "slug": "compensation-and-benefits-managers",
@@ -7641,7 +7757,9 @@
       "pctMediumRiskTime": 25.146771037182,
       "pctLowRiskTime": 33.62687540769732,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 78.2,
+      "capabilityOverhang": -8.2
     },
     {
       "slug": "compensation-benefits-and-job-analysis-specialists",
@@ -7769,7 +7887,9 @@
       "pctMediumRiskTime": 24.61747704862292,
       "pctLowRiskTime": 27.932675960557635,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 84.5,
+      "capabilityOverhang": -4.5
     },
     {
       "slug": "compliance-officers",
@@ -7897,7 +8017,9 @@
       "pctMediumRiskTime": 13.268921095008054,
       "pctLowRiskTime": 26.90821256038648,
       "effectiveDimensions": 6,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 73.3,
+      "capabilityOverhang": 6.7
     },
     {
       "slug": "computer-and-information-research-scientists",
@@ -8025,7 +8147,9 @@
       "pctMediumRiskTime": 32.884468247895946,
       "pctLowRiskTime": 5.738332058148432,
       "effectiveDimensions": 6,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 97.6,
+      "capabilityOverhang": -7.6
     },
     {
       "slug": "computer-and-information-systems-managers",
@@ -8153,7 +8277,9 @@
       "pctMediumRiskTime": 32.402234636871505,
       "pctLowRiskTime": 26.36871508379889,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 52.8,
+      "capabilityOverhang": 17.2
     },
     {
       "slug": "computer-hardware-engineers",
@@ -8281,7 +8407,9 @@
       "pctMediumRiskTime": 32.47984826932196,
       "pctLowRiskTime": 19.946262051525213,
       "effectiveDimensions": 6,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 88.6,
+      "capabilityOverhang": -8.6
     },
     {
       "slug": "computer-network-architects",
@@ -8409,7 +8537,9 @@
       "pctMediumRiskTime": 30.330634278002698,
       "pctLowRiskTime": 20.411605937921724,
       "effectiveDimensions": 6,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 77.9,
+      "capabilityOverhang": 2.1
     },
     {
       "slug": "computer-programmers",
@@ -8537,7 +8667,9 @@
       "pctMediumRiskTime": 38.031356069177306,
       "pctLowRiskTime": 12.00905123646355,
       "effectiveDimensions": 5,
-      "archetype": "grow"
+      "archetype": "grow",
+      "realizedExposure100": 88.9,
+      "capabilityOverhang": 1.1
     },
     {
       "slug": "computer-support-specialists",
@@ -8665,7 +8797,9 @@
       "pctMediumRiskTime": 12.516869095816466,
       "pctLowRiskTime": 25.75910931174089,
       "effectiveDimensions": 6,
-      "archetype": "grow"
+      "archetype": "grow",
+      "realizedExposure100": 94.5,
+      "capabilityOverhang": -14.5
     },
     {
       "slug": "computer-systems-analysts",
@@ -8793,7 +8927,9 @@
       "pctMediumRiskTime": 17.800360596623502,
       "pctLowRiskTime": 26.32355351581708,
       "effectiveDimensions": 6,
-      "archetype": "grow"
+      "archetype": "grow",
+      "realizedExposure100": 94.8,
+      "capabilityOverhang": -14.8
     },
     {
       "slug": "concierges",
@@ -8921,7 +9057,9 @@
       "pctMediumRiskTime": 39.60797566745522,
       "pctLowRiskTime": 52.63602568435283,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 87.2,
+      "capabilityOverhang": -37.2
     },
     {
       "slug": "conservation-scientists",
@@ -9049,7 +9187,9 @@
       "pctMediumRiskTime": 53.28135152696556,
       "pctLowRiskTime": 46.71864847303444,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 79.6,
+      "capabilityOverhang": -39.6
     },
     {
       "slug": "construction-and-building-inspectors",
@@ -9177,7 +9317,9 @@
       "pctMediumRiskTime": 41.02225886232482,
       "pctLowRiskTime": 58.977741137675174,
       "effectiveDimensions": 6,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 78.2,
+      "capabilityOverhang": -28.2
     },
     {
       "slug": "construction-equipment-operators",
@@ -9305,7 +9447,9 @@
       "pctMediumRiskTime": 21.147124245313,
       "pctLowRiskTime": 78.85287575468702,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 38.9,
+      "capabilityOverhang": -8.9
     },
     {
       "slug": "construction-laborers-and-helpers",
@@ -9433,7 +9577,9 @@
       "pctMediumRiskTime": 0,
       "pctLowRiskTime": 100,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 42.9,
+      "capabilityOverhang": -32.9
     },
     {
       "slug": "construction-managers",
@@ -9561,7 +9707,9 @@
       "pctMediumRiskTime": 39.77909396510325,
       "pctLowRiskTime": 60.22090603489675,
       "effectiveDimensions": 6,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 60.5,
+      "capabilityOverhang": -10.5
     },
     {
       "slug": "cooks",
@@ -9689,7 +9837,9 @@
       "pctMediumRiskTime": 6.7471958584987055,
       "pctLowRiskTime": 93.2528041415013,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 52.9,
+      "capabilityOverhang": -22.9
     },
     {
       "slug": "correctional-officers",
@@ -9817,7 +9967,9 @@
       "pctMediumRiskTime": 27.358793324775355,
       "pctLowRiskTime": 72.64120667522465,
       "effectiveDimensions": 6,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 64.4,
+      "capabilityOverhang": -34.4
     },
     {
       "slug": "cost-estimators",
@@ -9945,7 +10097,9 @@
       "pctMediumRiskTime": 18.504128217581346,
       "pctLowRiskTime": 27.82904322486644,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 80.7,
+      "capabilityOverhang": -0.7
     },
     {
       "slug": "court-reporters",
@@ -10073,7 +10227,9 @@
       "pctMediumRiskTime": 27.056436739210625,
       "pctLowRiskTime": 16.48838067133899,
       "effectiveDimensions": 6,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 75.2,
+      "capabilityOverhang": 14.8
     },
     {
       "slug": "craft-and-fine-artists",
@@ -10201,7 +10357,9 @@
       "pctMediumRiskTime": 34.81383481383482,
       "pctLowRiskTime": 65.18616518616518,
       "effectiveDimensions": 5,
-      "archetype": "grow"
+      "archetype": "grow",
+      "realizedExposure100": 58.2,
+      "capabilityOverhang": 1.8
     },
     {
       "slug": "credit-counselors",
@@ -10329,7 +10487,9 @@
       "pctMediumRiskTime": 20.521062425985452,
       "pctLowRiskTime": 38.013872441211305,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 76.2,
+      "capabilityOverhang": -6.2
     },
     {
       "slug": "customer-service-representatives",
@@ -10457,7 +10617,9 @@
       "pctMediumRiskTime": 18.945846054957418,
       "pctLowRiskTime": 26.32170978627672,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 74.9,
+      "capabilityOverhang": 15.1
     },
     {
       "slug": "dancers-and-choreographers",
@@ -10585,7 +10747,9 @@
       "pctMediumRiskTime": 0,
       "pctLowRiskTime": 100,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 45.4,
+      "capabilityOverhang": -25.4
     },
     {
       "slug": "data-scientists",
@@ -10735,7 +10899,9 @@
       "pctMediumRiskTime": 26.0405916752666,
       "pctLowRiskTime": 19.96904024767802,
       "effectiveDimensions": 5,
-      "archetype": "grow"
+      "archetype": "grow",
+      "realizedExposure100": 92.5,
+      "capabilityOverhang": -2.5
     },
     {
       "slug": "delivery-truck-drivers-and-driver-sales-workers",
@@ -10863,7 +11029,9 @@
       "pctMediumRiskTime": 7.269372693726937,
       "pctLowRiskTime": 92.73062730627305,
       "effectiveDimensions": 7,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 44.5,
+      "capabilityOverhang": -14.5
     },
     {
       "slug": "dental-and-ophthalmic-laboratory-technicians-and-medical-appliance-technicians",
@@ -10991,7 +11159,9 @@
       "pctMediumRiskTime": 40.458869613878015,
       "pctLowRiskTime": 59.541130386122006,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 61,
+      "capabilityOverhang": -11
     },
     {
       "slug": "dental-assistants",
@@ -11119,7 +11289,9 @@
       "pctMediumRiskTime": 34.48611787627862,
       "pctLowRiskTime": 65.51388212372137,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 68.8,
+      "capabilityOverhang": -38.8
     },
     {
       "slug": "dental-hygienists",
@@ -11247,7 +11419,9 @@
       "pctMediumRiskTime": 0,
       "pctLowRiskTime": 100,
       "effectiveDimensions": 6,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 75.9,
+      "capabilityOverhang": -55.9
     },
     {
       "slug": "dentists",
@@ -11375,7 +11549,9 @@
       "pctMediumRiskTime": 26.96646341463414,
       "pctLowRiskTime": 73.03353658536585,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 59.8,
+      "capabilityOverhang": -29.8
     },
     {
       "slug": "desktop-publishers",
@@ -11503,7 +11679,9 @@
       "pctMediumRiskTime": 24.99111269107715,
       "pctLowRiskTime": 12.922147173835763,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 92.9,
+      "capabilityOverhang": -2.9
     },
     {
       "slug": "diagnostic-medical-sonographers",
@@ -11631,7 +11809,9 @@
       "pctMediumRiskTime": 47.13506139154161,
       "pctLowRiskTime": 52.86493860845839,
       "effectiveDimensions": 6,
-      "archetype": "reorganize"
+      "archetype": "reorganize",
+      "realizedExposure100": 73.6,
+      "capabilityOverhang": -23.6
     },
     {
       "slug": "diesel-service-technicians-and-mechanics",
@@ -11759,7 +11939,9 @@
       "pctMediumRiskTime": 21.834956432598663,
       "pctLowRiskTime": 78.16504356740131,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 41.5,
+      "capabilityOverhang": -11.5
     },
     {
       "slug": "dietitians-and-nutritionists",
@@ -11887,7 +12069,9 @@
       "pctMediumRiskTime": 38.579181055747405,
       "pctLowRiskTime": 39.97697747081072,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 87.1,
+      "capabilityOverhang": -27.1
     },
     {
       "slug": "drafters",
@@ -12015,7 +12199,9 @@
       "pctMediumRiskTime": 26.626609442060083,
       "pctLowRiskTime": 18.472103004291846,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 87.8,
+      "capabilityOverhang": 2.2
     },
     {
       "slug": "drywall-and-ceiling-tile-installers-and-tapers",
@@ -12143,7 +12329,9 @@
       "pctMediumRiskTime": 0,
       "pctLowRiskTime": 100,
       "effectiveDimensions": 6,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 37.7,
+      "capabilityOverhang": -27.7
     },
     {
       "slug": "economists",
@@ -12271,7 +12459,9 @@
       "pctMediumRiskTime": 13.759291475565394,
       "pctLowRiskTime": 18.440613632769253,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 81.6,
+      "capabilityOverhang": 8.4
     },
     {
       "slug": "editors",
@@ -12399,7 +12589,9 @@
       "pctMediumRiskTime": 12.219924164081352,
       "pctLowRiskTime": 25.180972078593587,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 78.2,
+      "capabilityOverhang": 11.8
     },
     {
       "slug": "electrical-and-electronics-engineering-technicians",
@@ -12527,7 +12719,9 @@
       "pctMediumRiskTime": 47.46166950596252,
       "pctLowRiskTime": 52.53833049403747,
       "effectiveDimensions": 6,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 85.2,
+      "capabilityOverhang": -35.2
     },
     {
       "slug": "electrical-and-electronics-engineers",
@@ -12655,7 +12849,9 @@
       "pctMediumRiskTime": 27.117863720073665,
       "pctLowRiskTime": 20.610804174340085,
       "effectiveDimensions": 6,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 87.5,
+      "capabilityOverhang": -17.5
     },
     {
       "slug": "electrical-and-electronics-installers-and-repairers",
@@ -12783,7 +12979,9 @@
       "pctMediumRiskTime": 0,
       "pctLowRiskTime": 100,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 46.6,
+      "capabilityOverhang": -16.6
     },
     {
       "slug": "line-installers-and-repairers",
@@ -12911,7 +13109,9 @@
       "pctMediumRiskTime": 0,
       "pctLowRiskTime": 100,
       "effectiveDimensions": 6,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 38.2,
+      "capabilityOverhang": -18.2
     },
     {
       "slug": "electricians",
@@ -13039,7 +13239,9 @@
       "pctMediumRiskTime": 0,
       "pctLowRiskTime": 100,
       "effectiveDimensions": 6,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 40.6,
+      "capabilityOverhang": -20.6
     },
     {
       "slug": "electro-mechanical-technicians",
@@ -13167,7 +13369,9 @@
       "pctMediumRiskTime": 46.49346238750212,
       "pctLowRiskTime": 53.50653761249789,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 69.1,
+      "capabilityOverhang": -29.1
     },
     {
       "slug": "elementary-middle-and-high-school-principals",
@@ -13295,7 +13499,9 @@
       "pctMediumRiskTime": 39.60749330954504,
       "pctLowRiskTime": 41.24293785310734,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 67.6,
+      "capabilityOverhang": -7.6
     },
     {
       "slug": "elevator-installers-and-repairers",
@@ -13423,7 +13629,9 @@
       "pctMediumRiskTime": 13.832315003394429,
       "pctLowRiskTime": 86.16768499660556,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 31.9,
+      "capabilityOverhang": -1.9
     },
     {
       "slug": "emergency-management-directors",
@@ -13551,7 +13759,9 @@
       "pctMediumRiskTime": 20.17367033648628,
       "pctLowRiskTime": 66.18080322530625,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 67.3,
+      "capabilityOverhang": -7.3
     },
     {
       "slug": "emts-and-paramedics",
@@ -13701,7 +13911,9 @@
       "pctMediumRiskTime": 40.647810218978094,
       "pctLowRiskTime": 59.35218978102189,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 70.1,
+      "capabilityOverhang": -20.1
     },
     {
       "slug": "environmental-engineering-technicians",
@@ -13829,7 +14041,9 @@
       "pctMediumRiskTime": 47.42210682492582,
       "pctLowRiskTime": 52.57789317507419,
       "effectiveDimensions": 6,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 72.3,
+      "capabilityOverhang": -22.3
     },
     {
       "slug": "environmental-engineers",
@@ -13957,7 +14171,9 @@
       "pctMediumRiskTime": 19.450800915331808,
       "pctLowRiskTime": 33.850931677018636,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 62.9,
+      "capabilityOverhang": -2.9
     },
     {
       "slug": "environmental-science-and-protection-technicians",
@@ -14085,7 +14301,9 @@
       "pctMediumRiskTime": 46.911636045494305,
       "pctLowRiskTime": 53.08836395450568,
       "effectiveDimensions": 6,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 72.4,
+      "capabilityOverhang": -32.4
     },
     {
       "slug": "environmental-scientists-and-specialists",
@@ -14213,7 +14431,9 @@
       "pctMediumRiskTime": 19.936908517350158,
       "pctLowRiskTime": 39.5583596214511,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 77.3,
+      "capabilityOverhang": -17.3
     },
     {
       "slug": "epidemiologists",
@@ -14341,7 +14561,9 @@
       "pctMediumRiskTime": 24.689655172413794,
       "pctLowRiskTime": 20.812260536398465,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 93.5,
+      "capabilityOverhang": -23.5
     },
     {
       "slug": "exercise-physiologists",
@@ -14469,7 +14691,9 @@
       "pctMediumRiskTime": 33.78134732011146,
       "pctLowRiskTime": 66.21865267988855,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 78,
+      "capabilityOverhang": -38
     },
     {
       "slug": "farmers-ranchers-and-other-agricultural-managers",
@@ -14597,7 +14821,9 @@
       "pctMediumRiskTime": 32.95065113091158,
       "pctLowRiskTime": 67.04934886908842,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 59.7,
+      "capabilityOverhang": -19.7
     },
     {
       "slug": "fashion-designers",
@@ -14725,7 +14951,9 @@
       "pctMediumRiskTime": 21.880741606814766,
       "pctLowRiskTime": 38.583597795222985,
       "effectiveDimensions": 5,
-      "archetype": "grow"
+      "archetype": "grow",
+      "realizedExposure100": 65.3,
+      "capabilityOverhang": 4.7
     },
     {
       "slug": "film-and-video-editors-and-camera-operators",
@@ -14853,7 +15081,9 @@
       "pctMediumRiskTime": 19.958634953464323,
       "pctLowRiskTime": 37.40089624267494,
       "effectiveDimensions": 5,
-      "archetype": "grow"
+      "archetype": "grow",
+      "realizedExposure100": 78.2,
+      "capabilityOverhang": -8.2
     },
     {
       "slug": "financial-analysts",
@@ -15025,7 +15255,9 @@
       "pctMediumRiskTime": 18.994234465086482,
       "pctLowRiskTime": 28.010890454836645,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 78,
+      "capabilityOverhang": 2
     },
     {
       "slug": "financial-managers",
@@ -15153,7 +15385,9 @@
       "pctMediumRiskTime": 19.820700896495513,
       "pctLowRiskTime": 46.112469437652805,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 51,
+      "capabilityOverhang": 19
     },
     {
       "slug": "fire-inspectors-and-investigators",
@@ -15281,7 +15515,9 @@
       "pctMediumRiskTime": 52.676493405740885,
       "pctLowRiskTime": 47.323506594259115,
       "effectiveDimensions": 6,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 74.3,
+      "capabilityOverhang": -34.3
     },
     {
       "slug": "firefighters",
@@ -15409,7 +15645,9 @@
       "pctMediumRiskTime": 26.363063346990227,
       "pctLowRiskTime": 73.63693665300977,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 58,
+      "capabilityOverhang": -28
     },
     {
       "slug": "fishers-and-related-fishing-workers",
@@ -15537,7 +15775,9 @@
       "pctMediumRiskTime": 0,
       "pctLowRiskTime": 100,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 47.6,
+      "capabilityOverhang": -27.6
     },
     {
       "slug": "fitness-trainers-and-instructors",
@@ -15665,7 +15905,9 @@
       "pctMediumRiskTime": 14.038395611930065,
       "pctLowRiskTime": 85.96160438806993,
       "effectiveDimensions": 4,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 54,
+      "capabilityOverhang": -24
     },
     {
       "slug": "flight-attendants",
@@ -15793,7 +16035,9 @@
       "pctMediumRiskTime": 20.705213903743317,
       "pctLowRiskTime": 79.29478609625669,
       "effectiveDimensions": 4,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 37.1,
+      "capabilityOverhang": -7.1
     },
     {
       "slug": "tile-and-marble-setters",
@@ -15921,7 +16165,9 @@
       "pctMediumRiskTime": 0,
       "pctLowRiskTime": 100,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 59,
+      "capabilityOverhang": -49
     },
     {
       "slug": "floral-designers",
@@ -16049,7 +16295,9 @@
       "pctMediumRiskTime": 7.829112700560604,
       "pctLowRiskTime": 92.1708872994394,
       "effectiveDimensions": 4,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 62.8,
+      "capabilityOverhang": -32.8
     },
     {
       "slug": "food-and-beverage-serving-and-related-workers",
@@ -16199,7 +16447,9 @@
       "pctMediumRiskTime": 0,
       "pctLowRiskTime": 100,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 42.1,
+      "capabilityOverhang": -22.1
     },
     {
       "slug": "food-and-tobacco-processing-workers",
@@ -16349,7 +16599,9 @@
       "pctMediumRiskTime": 27.307185234014504,
       "pctLowRiskTime": 72.69281476598549,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 39.2,
+      "capabilityOverhang": 0.8
     },
     {
       "slug": "forensic-science-technicians",
@@ -16477,7 +16729,9 @@
       "pctMediumRiskTime": 54.6059195211174,
       "pctLowRiskTime": 45.39408047888261,
       "effectiveDimensions": 6,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 79.3,
+      "capabilityOverhang": -29.3
     },
     {
       "slug": "forest-and-conservation-workers",
@@ -16605,7 +16859,9 @@
       "pctMediumRiskTime": 0,
       "pctLowRiskTime": 100,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 58,
+      "capabilityOverhang": -38
     },
     {
       "slug": "fundraisers",
@@ -16733,7 +16989,9 @@
       "pctMediumRiskTime": 32.74515927545284,
       "pctLowRiskTime": 33.276077451592755,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 72.4,
+      "capabilityOverhang": -2.4
     },
     {
       "slug": "funeral-service-occupations",
@@ -16861,7 +17119,9 @@
       "pctMediumRiskTime": 19.62674961119751,
       "pctLowRiskTime": 80.37325038880246,
       "effectiveDimensions": 6,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 70.9,
+      "capabilityOverhang": -40.9
     },
     {
       "slug": "gaming-services-occupations",
@@ -16989,7 +17249,9 @@
       "pctMediumRiskTime": 33.34605840809314,
       "pctLowRiskTime": 66.65394159190686,
       "effectiveDimensions": 6,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 64.9,
+      "capabilityOverhang": -24.9
     },
     {
       "slug": "general-maintenance-and-repair-workers",
@@ -17117,7 +17379,9 @@
       "pctMediumRiskTime": 0,
       "pctLowRiskTime": 100,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 52.6,
+      "capabilityOverhang": -32.6
     },
     {
       "slug": "general-office-clerks",
@@ -17245,7 +17509,9 @@
       "pctMediumRiskTime": 19.227090109049165,
       "pctLowRiskTime": 18.825330017218285,
       "effectiveDimensions": 6,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 70.5,
+      "capabilityOverhang": 19.5
     },
     {
       "slug": "genetic-counselors",
@@ -17373,7 +17639,9 @@
       "pctMediumRiskTime": 20.161545771301867,
       "pctLowRiskTime": 44.47260057016153,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 81.4,
+      "capabilityOverhang": -21.4
     },
     {
       "slug": "geographers",
@@ -17501,7 +17769,9 @@
       "pctMediumRiskTime": 25.321190437469504,
       "pctLowRiskTime": 26.05301675069117,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 93.9,
+      "capabilityOverhang": -13.9
     },
     {
       "slug": "geological-and-petroleum-technicians",
@@ -17651,7 +17921,9 @@
       "pctMediumRiskTime": 53.75413190618605,
       "pctLowRiskTime": 38.86352904139776,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 94.2,
+      "capabilityOverhang": -44.2
     },
     {
       "slug": "glaziers",
@@ -17779,7 +18051,9 @@
       "pctMediumRiskTime": 0,
       "pctLowRiskTime": 100,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 52.5,
+      "capabilityOverhang": -32.5
     },
     {
       "slug": "graphic-designers",
@@ -17907,7 +18181,9 @@
       "pctMediumRiskTime": 25.468413198474543,
       "pctLowRiskTime": 6.964019233957884,
       "effectiveDimensions": 5,
-      "archetype": "grow"
+      "archetype": "grow",
+      "realizedExposure100": 81.5,
+      "capabilityOverhang": 8.5
     },
     {
       "slug": "grounds-maintenance-workers",
@@ -18057,7 +18333,9 @@
       "pctMediumRiskTime": 0,
       "pctLowRiskTime": 100,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 30.3,
+      "capabilityOverhang": -10.3
     },
     {
       "slug": "hazardous-materials-removal-workers",
@@ -18185,7 +18463,9 @@
       "pctMediumRiskTime": 0,
       "pctLowRiskTime": 100,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 46.1,
+      "capabilityOverhang": -26.1
     },
     {
       "slug": "health-and-safety-engineers",
@@ -18313,7 +18593,9 @@
       "pctMediumRiskTime": 52.83417248660063,
       "pctLowRiskTime": 47.1658275133994,
       "effectiveDimensions": 6,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 84.1,
+      "capabilityOverhang": -34.1
     },
     {
       "slug": "health-educators",
@@ -18441,7 +18723,9 @@
       "pctMediumRiskTime": 13.52649752289446,
       "pctLowRiskTime": 52.754841615373074,
       "effectiveDimensions": 5,
-      "archetype": "reorganize"
+      "archetype": "reorganize",
+      "realizedExposure100": 56.5,
+      "capabilityOverhang": 3.5
     },
     {
       "slug": "health-information-technologists-and-medical-registrars",
@@ -18591,7 +18875,9 @@
       "pctMediumRiskTime": 0,
       "pctLowRiskTime": 100,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 37.5,
+      "capabilityOverhang": -17.5
     },
     {
       "slug": "heavy-and-tractor-trailer-truck-drivers",
@@ -18719,7 +19005,9 @@
       "pctMediumRiskTime": 40.716131413805826,
       "pctLowRiskTime": 59.283868586194174,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 57.6,
+      "capabilityOverhang": -7.6
     },
     {
       "slug": "heavy-vehicle-and-mobile-equipment-service-technicians",
@@ -18847,7 +19135,9 @@
       "pctMediumRiskTime": 15.347544022242813,
       "pctLowRiskTime": 84.65245597775719,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 38.3,
+      "capabilityOverhang": -8.3
     },
     {
       "slug": "high-school-teachers",
@@ -18975,7 +19265,9 @@
       "pctMediumRiskTime": 20.083884497499593,
       "pctLowRiskTime": 53.298919180512996,
       "effectiveDimensions": 5,
-      "archetype": "reorganize"
+      "archetype": "reorganize",
+      "realizedExposure100": 62.2,
+      "capabilityOverhang": 7.8
     },
     {
       "slug": "historians",
@@ -19103,7 +19395,9 @@
       "pctMediumRiskTime": 25.94687232219366,
       "pctLowRiskTime": 31.088260497000856,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 82.5,
+      "capabilityOverhang": -12.5
     },
     {
       "slug": "home-health-aides-and-personal-care-aides",
@@ -19231,7 +19525,9 @@
       "pctMediumRiskTime": 0,
       "pctLowRiskTime": 100,
       "effectiveDimensions": 6,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 68.1,
+      "capabilityOverhang": -48.1
     },
     {
       "slug": "human-resources-managers",
@@ -19359,7 +19655,9 @@
       "pctMediumRiskTime": 26.254180602006688,
       "pctLowRiskTime": 47.27880814837337,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 54.1,
+      "capabilityOverhang": 15.9
     },
     {
       "slug": "human-resources-specialists",
@@ -19487,7 +19785,9 @@
       "pctMediumRiskTime": 25.772029102667748,
       "pctLowRiskTime": 32.98302344381568,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 78.3,
+      "capabilityOverhang": -8.3
     },
     {
       "slug": "hydrologists",
@@ -19615,7 +19915,9 @@
       "pctMediumRiskTime": 32.26114649681528,
       "pctLowRiskTime": 26.687898089171973,
       "effectiveDimensions": 6,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 96.9,
+      "capabilityOverhang": -36.9
     },
     {
       "slug": "industrial-designers",
@@ -19743,7 +20045,9 @@
       "pctMediumRiskTime": 19.141803553469664,
       "pctLowRiskTime": 20.365403955749244,
       "effectiveDimensions": 6,
-      "archetype": "grow"
+      "archetype": "grow",
+      "realizedExposure100": 84.1,
+      "capabilityOverhang": -4.1
     },
     {
       "slug": "industrial-engineering-technicians",
@@ -19871,7 +20175,9 @@
       "pctMediumRiskTime": 26.990913949759488,
       "pctLowRiskTime": 45.14519864600037,
       "effectiveDimensions": 6,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 85.4,
+      "capabilityOverhang": -25.4
     },
     {
       "slug": "industrial-engineers",
@@ -19999,7 +20305,9 @@
       "pctMediumRiskTime": 6.835572181601767,
       "pctLowRiskTime": 38.989967692569294,
       "effectiveDimensions": 6,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 67.8,
+      "capabilityOverhang": 2.2
     },
     {
       "slug": "industrial-machinery-mechanics-and-maintenance-workers-and-millwrights",
@@ -20127,7 +20435,9 @@
       "pctMediumRiskTime": 27.939383382685946,
       "pctLowRiskTime": 72.06061661731404,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 76.9,
+      "capabilityOverhang": -46.9
     },
     {
       "slug": "industrial-production-managers",
@@ -20255,7 +20565,9 @@
       "pctMediumRiskTime": 13.335567096666107,
       "pctLowRiskTime": 58.351482660412124,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 66.5,
+      "capabilityOverhang": -6.5
     },
     {
       "slug": "information-clerks",
@@ -20383,7 +20695,9 @@
       "pctMediumRiskTime": 6.4212024190679475,
       "pctLowRiskTime": 51.81430096051227,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 71.3,
+      "capabilityOverhang": -1.3
     },
     {
       "slug": "information-security-analysts",
@@ -20511,7 +20825,9 @@
       "pctMediumRiskTime": 18.72297971400066,
       "pctLowRiskTime": 25.922846691054204,
       "effectiveDimensions": 6,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 91.8,
+      "capabilityOverhang": -11.8
     },
     {
       "slug": "instructional-coordinators",
@@ -20639,7 +20955,9 @@
       "pctMediumRiskTime": 26.2586532410321,
       "pctLowRiskTime": 40.434235368156074,
       "effectiveDimensions": 5,
-      "archetype": "reorganize"
+      "archetype": "reorganize",
+      "realizedExposure100": 49.9,
+      "capabilityOverhang": 20.1
     },
     {
       "slug": "insulation-workers",
@@ -20767,7 +21085,9 @@
       "pctMediumRiskTime": 0,
       "pctLowRiskTime": 100,
       "effectiveDimensions": 6,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 37,
+      "capabilityOverhang": -17
     },
     {
       "slug": "insurance-sales-agents",
@@ -20895,7 +21215,9 @@
       "pctMediumRiskTime": 12.281690140845072,
       "pctLowRiskTime": 54.159624413145536,
       "effectiveDimensions": 5,
-      "archetype": "grow"
+      "archetype": "grow",
+      "realizedExposure100": 51.4,
+      "capabilityOverhang": 18.6
     },
     {
       "slug": "insurance-underwriters",
@@ -21023,7 +21345,9 @@
       "pctMediumRiskTime": 27.59295499021527,
       "pctLowRiskTime": 19.471624266144815,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 79.9,
+      "capabilityOverhang": 10.1
     },
     {
       "slug": "interior-designers",
@@ -21151,7 +21475,9 @@
       "pctMediumRiskTime": 20.477762061920483,
       "pctLowRiskTime": 26.826968411126828,
       "effectiveDimensions": 5,
-      "archetype": "grow"
+      "archetype": "grow",
+      "realizedExposure100": 65.3,
+      "capabilityOverhang": 4.7
     },
     {
       "slug": "interpreters-and-translators",
@@ -21279,7 +21605,9 @@
       "pctMediumRiskTime": 18.51217003770998,
       "pctLowRiskTime": 32.790538224202955,
       "effectiveDimensions": 5,
-      "archetype": "grow"
+      "archetype": "grow",
+      "realizedExposure100": 84.1,
+      "capabilityOverhang": 5.9
     },
     {
       "slug": "structural-iron-and-steel-workers",
@@ -21407,7 +21735,9 @@
       "pctMediumRiskTime": 0,
       "pctLowRiskTime": 100,
       "effectiveDimensions": 6,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 37.5,
+      "capabilityOverhang": -27.5
     },
     {
       "slug": "janitors-and-building-cleaners",
@@ -21535,7 +21865,9 @@
       "pctMediumRiskTime": 0,
       "pctLowRiskTime": 100,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 53.7,
+      "capabilityOverhang": -43.7
     },
     {
       "slug": "jewelers-and-precious-stone-and-metal-workers",
@@ -21663,7 +21995,9 @@
       "pctMediumRiskTime": 26.911203922280734,
       "pctLowRiskTime": 73.08879607771925,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 61.8,
+      "capabilityOverhang": -21.8
     },
     {
       "slug": "judges-and-hearing-officers",
@@ -21791,7 +22125,9 @@
       "pctMediumRiskTime": 25.14058881905392,
       "pctLowRiskTime": 46.47700959311942,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 76.2,
+      "capabilityOverhang": -6.2
     },
     {
       "slug": "kindergarten-and-elementary-school-teachers",
@@ -21919,7 +22255,9 @@
       "pctMediumRiskTime": 33.08084966244031,
       "pctLowRiskTime": 39.568582249300164,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 78.5,
+      "capabilityOverhang": -18.5
     },
     {
       "slug": "labor-relations-specialists",
@@ -22047,7 +22385,9 @@
       "pctMediumRiskTime": 12.073128665056917,
       "pctLowRiskTime": 54.07036909279063,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 58.8,
+      "capabilityOverhang": 11.2
     },
     {
       "slug": "landscape-architects",
@@ -22175,7 +22515,9 @@
       "pctMediumRiskTime": 13.877347515373106,
       "pctLowRiskTime": 37.992354994183145,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 65.9,
+      "capabilityOverhang": 4.1
     },
     {
       "slug": "lawyers",
@@ -22303,7 +22645,9 @@
       "pctMediumRiskTime": 12.570180910792264,
       "pctLowRiskTime": 27.947598253275107,
       "effectiveDimensions": 5,
-      "archetype": "reorganize"
+      "archetype": "reorganize",
+      "realizedExposure100": 82.1,
+      "capabilityOverhang": -2.1
     },
     {
       "slug": "librarians",
@@ -22431,7 +22775,9 @@
       "pctMediumRiskTime": 25.203389830508478,
       "pctLowRiskTime": 32.8135593220339,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 90.6,
+      "capabilityOverhang": -20.6
     },
     {
       "slug": "library-technicians-and-assistants",
@@ -22559,7 +22905,9 @@
       "pctMediumRiskTime": 20.048579970104633,
       "pctLowRiskTime": 38.80792227204783,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 67.8,
+      "capabilityOverhang": 2.2
     },
     {
       "slug": "licensed-practical-and-licensed-vocational-nurses",
@@ -22687,7 +23035,9 @@
       "pctMediumRiskTime": 46.80745751526151,
       "pctLowRiskTime": 53.19254248473849,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 72.5,
+      "capabilityOverhang": -32.5
     },
     {
       "slug": "loan-officers",
@@ -22815,7 +23165,9 @@
       "pctMediumRiskTime": 12.672131147540986,
       "pctLowRiskTime": 40.13114754098361,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 73.3,
+      "capabilityOverhang": 6.7
     },
     {
       "slug": "lodging-managers",
@@ -22943,7 +23295,9 @@
       "pctMediumRiskTime": 47.01195219123506,
       "pctLowRiskTime": 52.98804780876494,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 62.3,
+      "capabilityOverhang": -12.3
     },
     {
       "slug": "logging-workers",
@@ -23093,7 +23447,9 @@
       "pctMediumRiskTime": 32.63968540062264,
       "pctLowRiskTime": 26.544322464361787,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 78.5,
+      "capabilityOverhang": -8.5
     },
     {
       "slug": "machinists-and-tool-and-die-makers",
@@ -23221,7 +23577,9 @@
       "pctMediumRiskTime": 52.1484375,
       "pctLowRiskTime": 47.85156250000001,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 43.3,
+      "capabilityOverhang": -3.3
     },
     {
       "slug": "management-analysts",
@@ -23349,7 +23707,9 @@
       "pctMediumRiskTime": 25.654290931223372,
       "pctLowRiskTime": 20.800365185636032,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 100,
+      "capabilityOverhang": -30
     },
     {
       "slug": "manicurists-and-pedicurists",
@@ -23477,7 +23837,9 @@
       "pctMediumRiskTime": 0,
       "pctLowRiskTime": 100,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 42.9,
+      "capabilityOverhang": -22.9
     },
     {
       "slug": "marine-engineers-and-naval-architects",
@@ -23605,7 +23967,9 @@
       "pctMediumRiskTime": 32.436600411240576,
       "pctLowRiskTime": 33.60178204249486,
       "effectiveDimensions": 6,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 89.3,
+      "capabilityOverhang": -19.3
     },
     {
       "slug": "market-research-analysts",
@@ -23733,7 +24097,9 @@
       "pctMediumRiskTime": 27.224008574490888,
       "pctLowRiskTime": 6.461491348951156,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 80,
+      "capabilityOverhang": 10
     },
     {
       "slug": "marriage-and-family-therapists",
@@ -23861,7 +24227,9 @@
       "pctMediumRiskTime": 39.27545483562081,
       "pctLowRiskTime": 60.724545164379194,
       "effectiveDimensions": 5,
-      "archetype": "reorganize"
+      "archetype": "reorganize",
+      "realizedExposure100": 73.5,
+      "capabilityOverhang": -23.5
     },
     {
       "slug": "brickmasons-blockmasons-and-stonemasons",
@@ -23989,7 +24357,9 @@
       "pctMediumRiskTime": 0,
       "pctLowRiskTime": 100,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 77.4,
+      "capabilityOverhang": -57.4
     },
     {
       "slug": "massage-therapists",
@@ -24117,7 +24487,9 @@
       "pctMediumRiskTime": 0,
       "pctLowRiskTime": 100,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 59.8,
+      "capabilityOverhang": -39.8
     },
     {
       "slug": "material-moving-machine-operators",
@@ -24245,7 +24617,9 @@
       "pctMediumRiskTime": 20.820320632937747,
       "pctLowRiskTime": 79.17967936706225,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 60.1,
+      "capabilityOverhang": -20.1
     },
     {
       "slug": "material-recording-clerks",
@@ -24373,7 +24747,9 @@
       "pctMediumRiskTime": 13.353060847050118,
       "pctLowRiskTime": 51.67375624190863,
       "effectiveDimensions": 6,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 55.8,
+      "capabilityOverhang": 14.2
     },
     {
       "slug": "materials-engineers",
@@ -24501,7 +24877,9 @@
       "pctMediumRiskTime": 38.5633575464084,
       "pctLowRiskTime": 20.53268765133172,
       "effectiveDimensions": 6,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 93.7,
+      "capabilityOverhang": -23.7
     },
     {
       "slug": "mathematicians-and-statisticians",
@@ -24629,7 +25007,9 @@
       "pctMediumRiskTime": 31.90767141887304,
       "pctLowRiskTime": 18.533604887983703,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 96.6,
+      "capabilityOverhang": -6.6
     },
     {
       "slug": "mechanical-engineering-technicians",
@@ -24757,7 +25137,9 @@
       "pctMediumRiskTime": 53.401754676378076,
       "pctLowRiskTime": 46.59824532362191,
       "effectiveDimensions": 6,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 77.6,
+      "capabilityOverhang": -27.6
     },
     {
       "slug": "mechanical-engineers",
@@ -24885,7 +25267,9 @@
       "pctMediumRiskTime": 31.549786290960895,
       "pctLowRiskTime": 20.16780117144214,
       "effectiveDimensions": 6,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 91.9,
+      "capabilityOverhang": -21.9
     },
     {
       "slug": "medical-and-health-services-managers",
@@ -25013,7 +25397,9 @@
       "pctMediumRiskTime": 7.026862953407194,
       "pctLowRiskTime": 66.18606768857185,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 48,
+      "capabilityOverhang": 12
     },
     {
       "slug": "medical-assistants",
@@ -25141,7 +25527,9 @@
       "pctMediumRiskTime": 47.83201940570042,
       "pctLowRiskTime": 52.167980594299564,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 75.1,
+      "capabilityOverhang": -35.1
     },
     {
       "slug": "medical-dosimetrists",
@@ -25269,7 +25657,9 @@
       "pctMediumRiskTime": 20.43218835671666,
       "pctLowRiskTime": 26.108692146427998,
       "effectiveDimensions": 6,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 94.8,
+      "capabilityOverhang": -14.8
     },
     {
       "slug": "medical-equipment-repairers",
@@ -25397,7 +25787,9 @@
       "pctMediumRiskTime": 20.26759167492567,
       "pctLowRiskTime": 79.73240832507432,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 65.5,
+      "capabilityOverhang": -35.5
     },
     {
       "slug": "medical-records-and-health-information-technicians",
@@ -25547,7 +25939,9 @@
       "pctMediumRiskTime": 26.10103626943005,
       "pctLowRiskTime": 32.28626943005181,
       "effectiveDimensions": 6,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 95.3,
+      "capabilityOverhang": -25.3
     },
     {
       "slug": "medical-transcriptionists",
@@ -25675,7 +26069,9 @@
       "pctMediumRiskTime": 26.26901384378739,
       "pctLowRiskTime": 24.30353785677662,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 73.6,
+      "capabilityOverhang": 26.4
     },
     {
       "slug": "meeting-convention-and-event-planners",
@@ -25803,7 +26199,9 @@
       "pctMediumRiskTime": 21.239076154806497,
       "pctLowRiskTime": 46.51997503121099,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 50.7,
+      "capabilityOverhang": 9.3
     },
     {
       "slug": "metal-and-plastic-machine-workers",
@@ -25953,7 +26351,9 @@
       "pctMediumRiskTime": 20.15277100601332,
       "pctLowRiskTime": 39.52543474727774,
       "effectiveDimensions": 6,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 77.8,
+      "capabilityOverhang": -17.8
     },
     {
       "slug": "middle-school-teachers",
@@ -26081,7 +26481,9 @@
       "pctMediumRiskTime": 26.202709014479215,
       "pctLowRiskTime": 54.740775338626804,
       "effectiveDimensions": 5,
-      "archetype": "reorganize"
+      "archetype": "reorganize",
+      "realizedExposure100": 83.3,
+      "capabilityOverhang": -23.3
     },
     {
       "slug": "military-careers",
@@ -26231,7 +26633,9 @@
       "pctMediumRiskTime": 26.275188916876573,
       "pctLowRiskTime": 39.70403022670025,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 84.4,
+      "capabilityOverhang": -24.4
     },
     {
       "slug": "models",
@@ -26359,7 +26763,9 @@
       "pctMediumRiskTime": 33.1708568496665,
       "pctLowRiskTime": 66.82914315033351,
       "effectiveDimensions": 5,
-      "archetype": "grow"
+      "archetype": "grow",
+      "realizedExposure100": 74.8,
+      "capabilityOverhang": 5.2
     },
     {
       "slug": "music-directors-and-composers",
@@ -26487,7 +26893,9 @@
       "pctMediumRiskTime": 28.222261297696495,
       "pctLowRiskTime": 51.94302795850183,
       "effectiveDimensions": 5,
-      "archetype": "grow"
+      "archetype": "grow",
+      "realizedExposure100": 67.1,
+      "capabilityOverhang": 2.9
     },
     {
       "slug": "musicians-and-singers",
@@ -26615,7 +27023,9 @@
       "pctMediumRiskTime": 33.62831858407079,
       "pctLowRiskTime": 66.3716814159292,
       "effectiveDimensions": 4,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 60.2,
+      "capabilityOverhang": -20.2
     },
     {
       "slug": "natural-sciences-managers",
@@ -26743,7 +27153,9 @@
       "pctMediumRiskTime": 32.77652370203161,
       "pctLowRiskTime": 20.361173814898425,
       "effectiveDimensions": 6,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 76,
+      "capabilityOverhang": -6
     },
     {
       "slug": "network-and-computer-systems-administrators",
@@ -26871,7 +27283,9 @@
       "pctMediumRiskTime": 25.815921257123126,
       "pctLowRiskTime": 19.21947850112243,
       "effectiveDimensions": 6,
-      "archetype": "grow"
+      "archetype": "grow",
+      "realizedExposure100": 92.7,
+      "capabilityOverhang": -12.7
     },
     {
       "slug": "reporters-correspondents-and-broadcast-news-analysts",
@@ -26999,7 +27413,9 @@
       "pctMediumRiskTime": 19.25,
       "pctLowRiskTime": 25.516666666666666,
       "effectiveDimensions": 5,
-      "archetype": "grow"
+      "archetype": "grow",
+      "realizedExposure100": 92.4,
+      "capabilityOverhang": -22.4
     },
     {
       "slug": "nuclear-engineers",
@@ -27127,7 +27543,9 @@
       "pctMediumRiskTime": 24.58279845956354,
       "pctLowRiskTime": 27.87227214377407,
       "effectiveDimensions": 6,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 97.6,
+      "capabilityOverhang": -27.6
     },
     {
       "slug": "nuclear-medicine-technologists",
@@ -27255,7 +27673,9 @@
       "pctMediumRiskTime": 46.58169177288528,
       "pctLowRiskTime": 53.41830822711472,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 65.9,
+      "capabilityOverhang": -25.9
     },
     {
       "slug": "nuclear-technicians",
@@ -27383,7 +27803,9 @@
       "pctMediumRiskTime": 40.21241830065359,
       "pctLowRiskTime": 52.15686274509803,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 69,
+      "capabilityOverhang": -19
     },
     {
       "slug": "nurse-anesthetists-nurse-midwives-and-nurse-practitioners",
@@ -27511,7 +27933,9 @@
       "pctMediumRiskTime": 46.524888272461084,
       "pctLowRiskTime": 53.4751117275389,
       "effectiveDimensions": 5,
-      "archetype": "reorganize"
+      "archetype": "reorganize",
+      "realizedExposure100": 79.9,
+      "capabilityOverhang": -29.9
     },
     {
       "slug": "nursing-assistants",
@@ -27639,7 +28063,9 @@
       "pctMediumRiskTime": 0,
       "pctLowRiskTime": 100,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 60.9,
+      "capabilityOverhang": -40.9
     },
     {
       "slug": "occupational-health-and-safety-specialists-and-technicians",
@@ -27767,7 +28193,9 @@
       "pctMediumRiskTime": 59.54198473282442,
       "pctLowRiskTime": 40.45801526717556,
       "effectiveDimensions": 6,
-      "archetype": "reorganize"
+      "archetype": "reorganize",
+      "realizedExposure100": 84.1,
+      "capabilityOverhang": -34.1
     },
     {
       "slug": "occupational-therapists",
@@ -27895,7 +28323,9 @@
       "pctMediumRiskTime": 26.66771802554802,
       "pctLowRiskTime": 73.33228197445199,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 86.5,
+      "capabilityOverhang": -56.5
     },
     {
       "slug": "occupational-therapy-assistants-and-aides",
@@ -28023,7 +28453,9 @@
       "pctMediumRiskTime": 39.48511166253101,
       "pctLowRiskTime": 60.514888337468975,
       "effectiveDimensions": 6,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 91,
+      "capabilityOverhang": -61
     },
     {
       "slug": "oil-and-gas-workers",
@@ -28151,7 +28583,9 @@
       "pctMediumRiskTime": 19.825535289452816,
       "pctLowRiskTime": 80.17446471054718,
       "effectiveDimensions": 6,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 38,
+      "capabilityOverhang": -8
     },
     {
       "slug": "operations-research-analysts",
@@ -28279,7 +28713,9 @@
       "pctMediumRiskTime": 32.801390425027655,
       "pctLowRiskTime": 5.940906936324854,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 82,
+      "capabilityOverhang": 8
     },
     {
       "slug": "opticians-dispensing",
@@ -28407,7 +28843,9 @@
       "pctMediumRiskTime": 51.561051004636795,
       "pctLowRiskTime": 48.438948995363226,
       "effectiveDimensions": 6,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 78.3,
+      "capabilityOverhang": -38.3
     },
     {
       "slug": "optometrists",
@@ -28535,7 +28973,9 @@
       "pctMediumRiskTime": 52.802404207362876,
       "pctLowRiskTime": 47.1975957926371,
       "effectiveDimensions": 6,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 78.7,
+      "capabilityOverhang": -38.7
     },
     {
       "slug": "orthotists-and-prosthetists",
@@ -28663,7 +29103,9 @@
       "pctMediumRiskTime": 39.179224110291756,
       "pctLowRiskTime": 60.820775889708244,
       "effectiveDimensions": 6,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 91.1,
+      "capabilityOverhang": -51.1
     },
     {
       "slug": "painters-construction-and-maintenance",
@@ -28791,7 +29233,9 @@
       "pctMediumRiskTime": 0,
       "pctLowRiskTime": 100,
       "effectiveDimensions": 6,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 39.4,
+      "capabilityOverhang": -29.4
     },
     {
       "slug": "painting-and-coating-workers",
@@ -28919,7 +29363,9 @@
       "pctMediumRiskTime": 7.994579945799457,
       "pctLowRiskTime": 92.00542005420054,
       "effectiveDimensions": 6,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 40,
+      "capabilityOverhang": -10
     },
     {
       "slug": "paralegals-and-legal-assistants",
@@ -29047,7 +29493,9 @@
       "pctMediumRiskTime": 14.465517241379311,
       "pctLowRiskTime": 24.103448275862068,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 80.8,
+      "capabilityOverhang": 9.2
     },
     {
       "slug": "personal-financial-advisors",
@@ -29175,7 +29623,9 @@
       "pctMediumRiskTime": 30.73694029850746,
       "pctLowRiskTime": 27.674129353233823,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 85.5,
+      "capabilityOverhang": -15.5
     },
     {
       "slug": "pest-control-workers",
@@ -29303,7 +29753,9 @@
       "pctMediumRiskTime": 0,
       "pctLowRiskTime": 100,
       "effectiveDimensions": 6,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 60.2,
+      "capabilityOverhang": -40.2
     },
     {
       "slug": "petroleum-engineers",
@@ -29431,7 +29883,9 @@
       "pctMediumRiskTime": 19.67710997442455,
       "pctLowRiskTime": 46.19565217391303,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 68.4,
+      "capabilityOverhang": -8.4
     },
     {
       "slug": "pharmacists",
@@ -29559,7 +30013,9 @@
       "pctMediumRiskTime": 53.92400862784137,
       "pctLowRiskTime": 46.075991372158605,
       "effectiveDimensions": 6,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 76.7,
+      "capabilityOverhang": -26.7
     },
     {
       "slug": "pharmacy-technicians",
@@ -29687,7 +30143,9 @@
       "pctMediumRiskTime": 47.603560424512146,
       "pctLowRiskTime": 52.39643957548784,
       "effectiveDimensions": 6,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 70.3,
+      "capabilityOverhang": -30.3
     },
     {
       "slug": "phlebotomists",
@@ -29815,7 +30273,9 @@
       "pctMediumRiskTime": 0,
       "pctLowRiskTime": 100,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 68.1,
+      "capabilityOverhang": -48.1
     },
     {
       "slug": "photographers",
@@ -29943,7 +30403,9 @@
       "pctMediumRiskTime": 26.42487046632124,
       "pctLowRiskTime": 33.84067357512953,
       "effectiveDimensions": 5,
-      "archetype": "grow"
+      "archetype": "grow",
+      "realizedExposure100": 59.6,
+      "capabilityOverhang": 10.4
     },
     {
       "slug": "physical-therapist-assistants-and-aides",
@@ -30071,7 +30533,9 @@
       "pctMediumRiskTime": 34.075894914733446,
       "pctLowRiskTime": 65.92410508526655,
       "effectiveDimensions": 6,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 66.6,
+      "capabilityOverhang": -36.6
     },
     {
       "slug": "physical-therapists",
@@ -30199,7 +30663,9 @@
       "pctMediumRiskTime": 32.461977186311785,
       "pctLowRiskTime": 67.5380228136882,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 78.9,
+      "capabilityOverhang": -48.9
     },
     {
       "slug": "physician-assistants",
@@ -30327,7 +30793,9 @@
       "pctMediumRiskTime": 38.851151801535735,
       "pctLowRiskTime": 46.82516243354991,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 85.6,
+      "capabilityOverhang": -35.6
     },
     {
       "slug": "physicians-and-surgeons",
@@ -30477,7 +30945,9 @@
       "pctMediumRiskTime": 30.825165981662973,
       "pctLowRiskTime": 32.611444830856776,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 96.3,
+      "capabilityOverhang": -26.3
     },
     {
       "slug": "plumbers-pipefitters-and-steamfitters",
@@ -30605,7 +31075,9 @@
       "pctMediumRiskTime": 0,
       "pctLowRiskTime": 100,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 38.8,
+      "capabilityOverhang": -18.8
     },
     {
       "slug": "podiatrists",
@@ -30733,7 +31205,9 @@
       "pctMediumRiskTime": 46.92445749714473,
       "pctLowRiskTime": 53.07554250285528,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 92.1,
+      "capabilityOverhang": -52.1
     },
     {
       "slug": "police-and-detectives",
@@ -30861,7 +31335,9 @@
       "pctMediumRiskTime": 46.60087719298245,
       "pctLowRiskTime": 53.39912280701755,
       "effectiveDimensions": 6,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 69.5,
+      "capabilityOverhang": -29.5
     },
     {
       "slug": "political-scientists",
@@ -30989,7 +31465,9 @@
       "pctMediumRiskTime": 25.858585858585858,
       "pctLowRiskTime": 19.269619269619266,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 94.1,
+      "capabilityOverhang": -14.1
     },
     {
       "slug": "postal-service-workers",
@@ -31117,7 +31595,9 @@
       "pctMediumRiskTime": 14.407703488372094,
       "pctLowRiskTime": 85.59229651162792,
       "effectiveDimensions": 6,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 71.7,
+      "capabilityOverhang": -41.7
     },
     {
       "slug": "postsecondary-education-administrators",
@@ -31245,7 +31725,9 @@
       "pctMediumRiskTime": 38.91909178125999,
       "pctLowRiskTime": 27.64630636392708,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 71.4,
+      "capabilityOverhang": -1.4
     },
     {
       "slug": "postsecondary-teachers",
@@ -31395,7 +31877,9 @@
       "pctMediumRiskTime": 33.30310175947759,
       "pctLowRiskTime": 52.62107745329221,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 72.6,
+      "capabilityOverhang": -12.6
     },
     {
       "slug": "preschool-and-childcare-center-directors",
@@ -31523,7 +32007,9 @@
       "pctMediumRiskTime": 26.424281772439535,
       "pctLowRiskTime": 73.57571822756044,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 39.4,
+      "capabilityOverhang": 10.6
     },
     {
       "slug": "preschool-teachers",
@@ -31651,7 +32137,9 @@
       "pctMediumRiskTime": 7.564922845314262,
       "pctLowRiskTime": 92.43507715468573,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 55.6,
+      "capabilityOverhang": -25.6
     },
     {
       "slug": "private-detectives-and-investigators",
@@ -31779,7 +32267,9 @@
       "pctMediumRiskTime": 20.27331189710611,
       "pctLowRiskTime": 38.72990353697749,
       "effectiveDimensions": 6,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 78.4,
+      "capabilityOverhang": -18.4
     },
     {
       "slug": "probation-officers-and-correctional-treatment-specialists",
@@ -31907,7 +32397,9 @@
       "pctMediumRiskTime": 20.531285005600896,
       "pctLowRiskTime": 45.89534325492079,
       "effectiveDimensions": 5,
-      "archetype": "reorganize"
+      "archetype": "reorganize",
+      "realizedExposure100": 74.4,
+      "capabilityOverhang": -14.4
     },
     {
       "slug": "producers-and-directors",
@@ -32035,7 +32527,9 @@
       "pctMediumRiskTime": 25.960438123263035,
       "pctLowRiskTime": 25.470001634788293,
       "effectiveDimensions": 5,
-      "archetype": "grow"
+      "archetype": "grow",
+      "realizedExposure100": 88.2,
+      "capabilityOverhang": -18.2
     },
     {
       "slug": "project-management-specialists",
@@ -32185,7 +32679,9 @@
       "pctMediumRiskTime": 26.527494908350302,
       "pctLowRiskTime": 32.0264765784114,
       "effectiveDimensions": 6,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 80.9,
+      "capabilityOverhang": -10.9
     },
     {
       "slug": "property-real-estate-and-community-association-managers",
@@ -32313,7 +32809,9 @@
       "pctMediumRiskTime": 19.826314927085043,
       "pctLowRiskTime": 59.52810093396691,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 48.8,
+      "capabilityOverhang": 11.2
     },
     {
       "slug": "psychiatric-technicians-and-aides",
@@ -32441,7 +32939,9 @@
       "pctMediumRiskTime": 21.03608076795763,
       "pctLowRiskTime": 78.96391923204237,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 61.6,
+      "capabilityOverhang": -31.6
     },
     {
       "slug": "psychologists",
@@ -32569,7 +33069,9 @@
       "pctMediumRiskTime": 19.71031805285949,
       "pctLowRiskTime": 46.11019859638645,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 66.3,
+      "capabilityOverhang": -6.3
     },
     {
       "slug": "public-relations-managers",
@@ -32697,7 +33199,9 @@
       "pctMediumRiskTime": 32.584652033350345,
       "pctLowRiskTime": 25.608303556236173,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 85,
+      "capabilityOverhang": -15
     },
     {
       "slug": "public-relations-specialists",
@@ -32825,7 +33329,9 @@
       "pctMediumRiskTime": 26.467889908256875,
       "pctLowRiskTime": 20.152905198776754,
       "effectiveDimensions": 5,
-      "archetype": "grow"
+      "archetype": "grow",
+      "realizedExposure100": 75.8,
+      "capabilityOverhang": 4.2
     },
     {
       "slug": "police-fire-and-ambulance-dispatchers",
@@ -32953,7 +33459,9 @@
       "pctMediumRiskTime": 13.33842627960275,
       "pctLowRiskTime": 25.821237585943464,
       "effectiveDimensions": 6,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 79.1,
+      "capabilityOverhang": -9.1
     },
     {
       "slug": "purchasing-managers-buyers-and-purchasing-agents",
@@ -33081,7 +33589,9 @@
       "pctMediumRiskTime": 19.546165884194057,
       "pctLowRiskTime": 39.65571205007826,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 51.2,
+      "capabilityOverhang": 18.8
     },
     {
       "slug": "quality-control-inspectors",
@@ -33209,7 +33719,9 @@
       "pctMediumRiskTime": 48.0049217788715,
       "pctLowRiskTime": 51.9950782211285,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 73.9,
+      "capabilityOverhang": -23.9
     },
     {
       "slug": "radiation-therapists",
@@ -33337,7 +33849,9 @@
       "pctMediumRiskTime": 40.230237912509594,
       "pctLowRiskTime": 59.769762087490406,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 65.5,
+      "capabilityOverhang": -25.5
     },
     {
       "slug": "radiologic-technologists",
@@ -33465,7 +33979,9 @@
       "pctMediumRiskTime": 39.834235453315294,
       "pctLowRiskTime": 60.165764546684706,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 49.5,
+      "capabilityOverhang": -9.5
     },
     {
       "slug": "railroad-occupations",
@@ -33593,7 +34109,9 @@
       "pctMediumRiskTime": 26.647342995169076,
       "pctLowRiskTime": 73.35265700483092,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 77.4,
+      "capabilityOverhang": -37.4
     },
     {
       "slug": "real-estate-brokers-and-sales-agents",
@@ -33721,7 +34239,9 @@
       "pctMediumRiskTime": 32.2680412371134,
       "pctLowRiskTime": 46.15120274914089,
       "effectiveDimensions": 5,
-      "archetype": "grow"
+      "archetype": "grow",
+      "realizedExposure100": 81.8,
+      "capabilityOverhang": -21.8
     },
     {
       "slug": "receptionists",
@@ -33849,7 +34369,9 @@
       "pctMediumRiskTime": 6.4212024190679475,
       "pctLowRiskTime": 51.81430096051227,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 71.3,
+      "capabilityOverhang": -1.3
     },
     {
       "slug": "recreation-workers",
@@ -33977,7 +34499,9 @@
       "pctMediumRiskTime": 26.904532304725166,
       "pctLowRiskTime": 73.09546769527483,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 77.8,
+      "capabilityOverhang": -47.8
     },
     {
       "slug": "recreational-therapists",
@@ -34105,7 +34629,9 @@
       "pctMediumRiskTime": 13.250484183344097,
       "pctLowRiskTime": 86.7495158166559,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 78.9,
+      "capabilityOverhang": -48.9
     },
     {
       "slug": "registered-nurses",
@@ -34233,7 +34759,9 @@
       "pctMediumRiskTime": 46.172036653857525,
       "pctLowRiskTime": 53.82796334614248,
       "effectiveDimensions": 6,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 74.8,
+      "capabilityOverhang": -34.8
     },
     {
       "slug": "rehabilitation-counselors",
@@ -34361,7 +34889,9 @@
       "pctMediumRiskTime": 46.349828515433614,
       "pctLowRiskTime": 53.65017148456638,
       "effectiveDimensions": 5,
-      "archetype": "reorganize"
+      "archetype": "reorganize",
+      "realizedExposure100": 81.7,
+      "capabilityOverhang": -31.7
     },
     {
       "slug": "respiratory-therapists",
@@ -34489,7 +35019,9 @@
       "pctMediumRiskTime": 39.564516129032256,
       "pctLowRiskTime": 60.43548387096773,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 65.7,
+      "capabilityOverhang": -25.7
     },
     {
       "slug": "retail-sales-workers",
@@ -34617,7 +35149,9 @@
       "pctMediumRiskTime": 26.452976400140894,
       "pctLowRiskTime": 73.54702359985909,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 39.7,
+      "capabilityOverhang": 0.3
     },
     {
       "slug": "roofers",
@@ -34745,7 +35279,9 @@
       "pctMediumRiskTime": 0,
       "pctLowRiskTime": 100,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 38.4,
+      "capabilityOverhang": -28.4
     },
     {
       "slug": "sales-engineers",
@@ -34873,7 +35409,9 @@
       "pctMediumRiskTime": 19.18429003021148,
       "pctLowRiskTime": 45.38435716683451,
       "effectiveDimensions": 5,
-      "archetype": "grow"
+      "archetype": "grow",
+      "realizedExposure100": 72.7,
+      "capabilityOverhang": -2.7
     },
     {
       "slug": "sales-managers",
@@ -35001,7 +35539,9 @@
       "pctMediumRiskTime": 26.329946204423194,
       "pctLowRiskTime": 40.61566049013748,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 54.9,
+      "capabilityOverhang": 15.1
     },
     {
       "slug": "school-and-career-counselors",
@@ -35129,7 +35669,9 @@
       "pctMediumRiskTime": 19.42591155934833,
       "pctLowRiskTime": 39.36384794414274,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 78.7,
+      "capabilityOverhang": -18.7
     },
     {
       "slug": "secretaries-and-administrative-assistants",
@@ -35257,7 +35799,9 @@
       "pctMediumRiskTime": 19.87402618929223,
       "pctLowRiskTime": 19.492789656887126,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 70.9,
+      "capabilityOverhang": 9.1
     },
     {
       "slug": "securities-commodities-and-financial-services-sales-agents",
@@ -35385,7 +35929,9 @@
       "pctMediumRiskTime": 12.62821590718009,
       "pctLowRiskTime": 33.46224987388599,
       "effectiveDimensions": 5,
-      "archetype": "grow"
+      "archetype": "grow",
+      "realizedExposure100": 77.9,
+      "capabilityOverhang": 2.1
     },
     {
       "slug": "security-guards",
@@ -35513,7 +36059,9 @@
       "pctMediumRiskTime": 20.504926108374384,
       "pctLowRiskTime": 72.16748768472905,
       "effectiveDimensions": 6,
-      "archetype": "reorganize"
+      "archetype": "reorganize",
+      "realizedExposure100": 62.2,
+      "capabilityOverhang": -12.2
     },
     {
       "slug": "semiconductor-processing-technicians",
@@ -35641,7 +36189,9 @@
       "pctMediumRiskTime": 40.21302601711192,
       "pctLowRiskTime": 59.78697398288808,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 31,
+      "capabilityOverhang": 9
     },
     {
       "slug": "set-and-exhibit-designers",
@@ -35769,7 +36319,9 @@
       "pctMediumRiskTime": 21.0580204778157,
       "pctLowRiskTime": 42.45733788395904,
       "effectiveDimensions": 5,
-      "archetype": "grow"
+      "archetype": "grow",
+      "realizedExposure100": 67,
+      "capabilityOverhang": 3
     },
     {
       "slug": "sheet-metal-workers",
@@ -35897,7 +36449,9 @@
       "pctMediumRiskTime": 21.3237639553429,
       "pctLowRiskTime": 78.67623604465709,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 42.9,
+      "capabilityOverhang": -12.9
     },
     {
       "slug": "skincare-specialists",
@@ -36025,7 +36579,9 @@
       "pctMediumRiskTime": 19.92619926199262,
       "pctLowRiskTime": 80.07380073800738,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 23.9,
+      "capabilityOverhang": 6.1
     },
     {
       "slug": "small-engine-mechanics",
@@ -36153,7 +36709,9 @@
       "pctMediumRiskTime": 0,
       "pctLowRiskTime": 100,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 61,
+      "capabilityOverhang": -41
     },
     {
       "slug": "social-and-community-service-managers",
@@ -36281,7 +36839,9 @@
       "pctMediumRiskTime": 20.33816425120774,
       "pctLowRiskTime": 45.86151368760065,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 62.4,
+      "capabilityOverhang": -2.4
     },
     {
       "slug": "social-and-human-service-assistants",
@@ -36409,7 +36969,9 @@
       "pctMediumRiskTime": 53.370501773948305,
       "pctLowRiskTime": 46.629498226051695,
       "effectiveDimensions": 5,
-      "archetype": "reorganize"
+      "archetype": "reorganize",
+      "realizedExposure100": 86.9,
+      "capabilityOverhang": -36.9
     },
     {
       "slug": "social-workers",
@@ -36537,7 +37099,9 @@
       "pctMediumRiskTime": 34.43195625759417,
       "pctLowRiskTime": 65.56804374240583,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 82.7,
+      "capabilityOverhang": -42.7
     },
     {
       "slug": "sociologists",
@@ -36665,7 +37229,9 @@
       "pctMediumRiskTime": 31.546969933011372,
       "pctLowRiskTime": 26.39040348964013,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 93.9,
+      "capabilityOverhang": -23.9
     },
     {
       "slug": "software-developers",
@@ -36793,7 +37359,9 @@
       "pctMediumRiskTime": 33.157721435627266,
       "pctLowRiskTime": 6.486664471517946,
       "effectiveDimensions": 5,
-      "archetype": "grow"
+      "archetype": "grow",
+      "realizedExposure100": 93.3,
+      "capabilityOverhang": -3.3
     },
     {
       "slug": "solar-photovoltaic-installers",
@@ -36921,7 +37489,9 @@
       "pctMediumRiskTime": 0,
       "pctLowRiskTime": 100,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 38.1,
+      "capabilityOverhang": -18.1
     },
     {
       "slug": "special-education-teachers",
@@ -37049,7 +37619,9 @@
       "pctMediumRiskTime": 46.03678929765886,
       "pctLowRiskTime": 53.96321070234114,
       "effectiveDimensions": 5,
-      "archetype": "reorganize"
+      "archetype": "reorganize",
+      "realizedExposure100": 60.8,
+      "capabilityOverhang": -10.8
     },
     {
       "slug": "multimedia-artists-and-animators",
@@ -37177,7 +37749,9 @@
       "pctMediumRiskTime": 22.65572672471534,
       "pctLowRiskTime": 24.78231748158071,
       "effectiveDimensions": 5,
-      "archetype": "grow"
+      "archetype": "grow",
+      "realizedExposure100": 70,
+      "capabilityOverhang": 20
     },
     {
       "slug": "speech-language-pathologists",
@@ -37305,7 +37879,9 @@
       "pctMediumRiskTime": 39.36960145476587,
       "pctLowRiskTime": 53.34141536596454,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 74.3,
+      "capabilityOverhang": -24.3
     },
     {
       "slug": "stationary-engineers-and-boiler-operators",
@@ -37433,7 +38009,9 @@
       "pctMediumRiskTime": 33.26141078838174,
       "pctLowRiskTime": 66.73858921161825,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 61.8,
+      "capabilityOverhang": -31.8
     },
     {
       "slug": "substance-abuse-behavioral-disorder-and-mental-health-counselors",
@@ -37561,7 +38139,9 @@
       "pctMediumRiskTime": 32.20470006184293,
       "pctLowRiskTime": 60.62152133580706,
       "effectiveDimensions": 5,
-      "archetype": "reorganize"
+      "archetype": "reorganize",
+      "realizedExposure100": 86.7,
+      "capabilityOverhang": -36.7
     },
     {
       "slug": "surgical-technologists",
@@ -37689,7 +38269,9 @@
       "pctMediumRiskTime": 27.56014805675509,
       "pctLowRiskTime": 72.43985194324493,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 38.4,
+      "capabilityOverhang": -8.4
     },
     {
       "slug": "survey-researchers",
@@ -37817,7 +38399,9 @@
       "pctMediumRiskTime": 39.53892310121586,
       "pctLowRiskTime": 12.31643770724775,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 95.1,
+      "capabilityOverhang": -5.1
     },
     {
       "slug": "surveying-and-mapping-technicians",
@@ -37945,7 +38529,9 @@
       "pctMediumRiskTime": 60.44803525523318,
       "pctLowRiskTime": 39.5519647447668,
       "effectiveDimensions": 6,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 83.1,
+      "capabilityOverhang": -33.1
     },
     {
       "slug": "surveyors",
@@ -38073,7 +38659,9 @@
       "pctMediumRiskTime": 46.777849740932645,
       "pctLowRiskTime": 53.22215025906737,
       "effectiveDimensions": 6,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 74.5,
+      "capabilityOverhang": -24.5
     },
     {
       "slug": "tax-examiners-and-collectors-and-revenue-agents",
@@ -38201,7 +38789,9 @@
       "pctMediumRiskTime": 12.850835698517821,
       "pctLowRiskTime": 32.671081677704194,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 76.4,
+      "capabilityOverhang": 3.6
     },
     {
       "slug": "taxi-drivers-and-chauffeurs",
@@ -38329,7 +38919,9 @@
       "pctMediumRiskTime": 34.360189573459714,
       "pctLowRiskTime": 65.6398104265403,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 59.2,
+      "capabilityOverhang": -9.2
     },
     {
       "slug": "teacher-assistants",
@@ -38457,7 +39049,9 @@
       "pctMediumRiskTime": 41.1430427017373,
       "pctLowRiskTime": 58.856957298262714,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 68.8,
+      "capabilityOverhang": -28.8
     },
     {
       "slug": "technical-writers",
@@ -38585,7 +39179,9 @@
       "pctMediumRiskTime": 19.6459264352011,
       "pctLowRiskTime": 24.767961498796836,
       "effectiveDimensions": 5,
-      "archetype": "grow"
+      "archetype": "grow",
+      "realizedExposure100": 91.5,
+      "capabilityOverhang": -1.5
     },
     {
       "slug": "telecommunications-equipment-installers-and-repairers-except-line-installers",
@@ -38713,7 +39309,9 @@
       "pctMediumRiskTime": 42.79077218840116,
       "pctLowRiskTime": 57.209227811598836,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 97.1,
+      "capabilityOverhang": -67.1
     },
     {
       "slug": "tellers",
@@ -38841,7 +39439,9 @@
       "pctMediumRiskTime": 6.160337552742616,
       "pctLowRiskTime": 47.088607594936704,
       "effectiveDimensions": 6,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 68,
+      "capabilityOverhang": 2
     },
     {
       "slug": "top-executives",
@@ -38969,7 +39569,9 @@
       "pctMediumRiskTime": 39.732597006249094,
       "pctLowRiskTime": 40.2557767766313,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 57.9,
+      "capabilityOverhang": 2.1
     },
     {
       "slug": "tour-and-travel-guides",
@@ -39097,7 +39699,9 @@
       "pctMediumRiskTime": 35.641891891891895,
       "pctLowRiskTime": 64.35810810810811,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 75.2,
+      "capabilityOverhang": -35.2
     },
     {
       "slug": "training-and-development-managers",
@@ -39225,7 +39829,9 @@
       "pctMediumRiskTime": 32.10872162485066,
       "pctLowRiskTime": 27.89725209080047,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 73.6,
+      "capabilityOverhang": -3.6
     },
     {
       "slug": "training-and-development-specialists",
@@ -39353,7 +39959,9 @@
       "pctMediumRiskTime": 19.18819188191882,
       "pctLowRiskTime": 33.72372854163324,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 77.8,
+      "capabilityOverhang": -7.8
     },
     {
       "slug": "transportation-storage-and-distribution-managers",
@@ -39481,7 +40089,9 @@
       "pctMediumRiskTime": 20.09681188449341,
       "pctLowRiskTime": 59.62276748456018,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 47.4,
+      "capabilityOverhang": 12.6
     },
     {
       "slug": "travel-agents",
@@ -39609,7 +40219,9 @@
       "pctMediumRiskTime": 12.450490786981232,
       "pctLowRiskTime": 38.26416394007233,
       "effectiveDimensions": 5,
-      "archetype": "grow"
+      "archetype": "grow",
+      "realizedExposure100": 75.4,
+      "capabilityOverhang": 14.6
     },
     {
       "slug": "tutors",
@@ -39737,7 +40349,9 @@
       "pctMediumRiskTime": 25.410110478741206,
       "pctLowRiskTime": 47.63977234683628,
       "effectiveDimensions": 5,
-      "archetype": "reorganize"
+      "archetype": "reorganize",
+      "realizedExposure100": 90.6,
+      "capabilityOverhang": -20.6
     },
     {
       "slug": "umpires-referees-and-other-sports-officials",
@@ -39865,7 +40479,9 @@
       "pctMediumRiskTime": 35.26077097505668,
       "pctLowRiskTime": 64.7392290249433,
       "effectiveDimensions": 5,
-      "archetype": "grow"
+      "archetype": "grow",
+      "realizedExposure100": 71.3,
+      "capabilityOverhang": -21.3
     },
     {
       "slug": "urban-and-regional-planners",
@@ -39993,7 +40609,9 @@
       "pctMediumRiskTime": 19.753274444105994,
       "pctLowRiskTime": 39.78068839476089,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 67.1,
+      "capabilityOverhang": 2.9
     },
     {
       "slug": "veterinarians",
@@ -40121,7 +40739,9 @@
       "pctMediumRiskTime": 47.85998672859987,
       "pctLowRiskTime": 52.14001327140013,
       "effectiveDimensions": 6,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 77,
+      "capabilityOverhang": -37
     },
     {
       "slug": "veterinary-assistants-and-laboratory-animal-caretakers",
@@ -40249,7 +40869,9 @@
       "pctMediumRiskTime": 0,
       "pctLowRiskTime": 100,
       "effectiveDimensions": 6,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 75.4,
+      "capabilityOverhang": -55.4
     },
     {
       "slug": "veterinary-technologists-and-technicians",
@@ -40377,7 +40999,9 @@
       "pctMediumRiskTime": 46.563157043506386,
       "pctLowRiskTime": 53.4368429564936,
       "effectiveDimensions": 6,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 68.1,
+      "capabilityOverhang": -28.1
     },
     {
       "slug": "waiters-and-waitresses",
@@ -40505,7 +41129,9 @@
       "pctMediumRiskTime": 7.719856744926385,
       "pctLowRiskTime": 92.28014325507363,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 30.4,
+      "capabilityOverhang": -0.4
     },
     {
       "slug": "water-and-wastewater-treatment-plant-and-system-operators",
@@ -40633,7 +41259,9 @@
       "pctMediumRiskTime": 39.75824893825548,
       "pctLowRiskTime": 60.24175106174452,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 62.8,
+      "capabilityOverhang": -12.8
     },
     {
       "slug": "water-transportation-occupations",
@@ -40783,7 +41411,9 @@
       "pctMediumRiskTime": 25.76456518024945,
       "pctLowRiskTime": 23.475140953357254,
       "effectiveDimensions": 5,
-      "archetype": "grow"
+      "archetype": "grow",
+      "realizedExposure100": 90.1,
+      "capabilityOverhang": -0.1
     },
     {
       "slug": "welders-cutters-solderers-and-brazers",
@@ -40911,7 +41541,9 @@
       "pctMediumRiskTime": 0,
       "pctLowRiskTime": 100,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 52.7,
+      "capabilityOverhang": -32.7
     },
     {
       "slug": "wholesale-and-manufacturing-sales-representatives",
@@ -41039,7 +41671,9 @@
       "pctMediumRiskTime": 37.80025284450063,
       "pctLowRiskTime": 54.487989886219964,
       "effectiveDimensions": 5,
-      "archetype": "grow"
+      "archetype": "grow",
+      "realizedExposure100": 51.3,
+      "capabilityOverhang": 18.7
     },
     {
       "slug": "wind-turbine-technicians",
@@ -41167,7 +41801,9 @@
       "pctMediumRiskTime": 0,
       "pctLowRiskTime": 100,
       "effectiveDimensions": 5,
-      "archetype": "less-change"
+      "archetype": "less-change",
+      "realizedExposure100": 35.5,
+      "capabilityOverhang": -15.5
     },
     {
       "slug": "woodworkers",
@@ -41317,7 +41953,9 @@
       "pctMediumRiskTime": 43.95285584768812,
       "pctLowRiskTime": 20.47144152311877,
       "effectiveDimensions": 5,
-      "archetype": "grow"
+      "archetype": "grow",
+      "realizedExposure100": 64.1,
+      "capabilityOverhang": 25.9
     },
     {
       "slug": "zoologists-and-wildlife-biologists",
@@ -41445,7 +42083,9 @@
       "pctMediumRiskTime": 60.23036314189729,
       "pctLowRiskTime": 39.7696368581027,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk"
+      "archetype": "automation-risk",
+      "realizedExposure100": 64.9,
+      "capabilityOverhang": -14.9
     }
   ]
 }

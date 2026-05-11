@@ -210,6 +210,45 @@ export default function MapMethodology() {
               </p>
             </div>
 
+            <div>
+              <h3 className="text-sm font-bold text-[var(--foreground)] mb-2">
+                OpenAI Signals integration (realized ChatGPT use)
+              </h3>
+              <p className="text-sm text-[var(--muted)] leading-relaxed">
+                Two pieces of OpenAI Signals (CC BY 4.0,
+                differential-privacy-protected aggregate ChatGPT usage) are now
+                wired in:
+              </p>
+              <ul className="list-disc list-outside pl-5 mt-2 space-y-1.5 text-sm text-[var(--muted)] leading-relaxed">
+                <li>
+                  <strong className="text-[var(--foreground)]">Per-state ChatGPT use rank.</strong>{" "}
+                  Available as the &ldquo;ChatGPT use&rdquo; map metric in
+                  Country view. The state sidebar shows rank + top message
+                  topics. DC tops at #1; Wyoming, West Virginia, and Mississippi
+                  bottom out.
+                </li>
+                <li>
+                  <strong className="text-[var(--foreground)]">Per-occupation usage intensity.</strong>{" "}
+                  We aggregate the 165 work-related O*NET IWA usage shares up to
+                  41 Generalized Work Activities, then weight by each
+                  occupation&rsquo;s task importance. Stored as
+                  <span className="font-mono"> realizedExposure100 </span>
+                  on each occupation in <span className="font-mono">occupation-risk.json</span>.
+                  The metric is rank-normalized 0&ndash;100 across the 342
+                  occupations; <strong>not directly comparable to the paper&rsquo;s
+                  realized exposure</strong> (which is bounded by theoretical
+                  capability). Top: management analysts, computer scientists,
+                  aerospace engineers. Bottom: physical / manual occupations.
+                </li>
+              </ul>
+              <p className="text-sm text-[var(--muted)] leading-relaxed mt-2 italic">
+                A field-level interpretation note ships in <code>occupation-risk.json</code>:
+                where realized &gt; theoretical, the Karpathy/GPT exposure score may have
+                under-estimated AI applicability for that occupation. Where theoretical &gt; realized,
+                AI capability is technically there but operationally not yet deployed.
+              </p>
+            </div>
+
             <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
               <Link
                 href="/occupation-exposure"

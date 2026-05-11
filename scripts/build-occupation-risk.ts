@@ -114,6 +114,32 @@ function main() {
 
   const risks = scoreAllOccupations(occupations);
 
+  // Merge in realized exposure + capability overhang from OpenAI Signals
+  // pipeline if the file is available. Computed by build:realized-exposure.
+  const realizedPath = path.join(REPO_ROOT, "src", "data", "risk", "occupation-realized-exposure.json");
+  let realizedBySlug = new Map<string, { realizedExposure100: number; theoreticalExposure100?: number; capabilityOverhang?: number }>();
+  if (fs.existsSync(realizedPath)) {
+    try {
+      const realized = JSON.parse(fs.readFileSync(realizedPath, "utf8")) as {
+        occupations: Array<{ slug: string; realizedExposure100: number; theoreticalExposure100?: number; capabilityOverhang?: number }>;
+      };
+      realizedBySlug = new Map(realized.occupations.map((o) => [o.slug, o]));
+      console.log(`[build:risk] Merged realized exposure for ${realizedBySlug.size} occupations.`);
+    } catch (e) {
+      console.warn(`[build:risk] Could not read realized exposure file: ${e}`);
+    }
+  }
+
+  const risksWithRealized = risks.map((r) => {
+    const realized = realizedBySlug.get(r.slug);
+    if (!realized) return r;
+    return {
+      ...r,
+      realizedExposure100: realized.realizedExposure100,
+      capabilityOverhang: realized.capabilityOverhang,
+    };
+  });
+
   fs.mkdirSync(OUTPUT_DIR, { recursive: true });
 
   const generatedAt = new Date().toISOString();
@@ -121,8 +147,8 @@ function main() {
   const occPayload = {
     generatedAt,
     methodology: METHODOLOGY,
-    count: risks.length,
-    occupations: risks,
+    count: risksWithRealized.length,
+    occupations: risksWithRealized,
   };
   fs.writeFileSync(OUTPUT_OCC, JSON.stringify(occPayload, null, 2));
   console.log(
