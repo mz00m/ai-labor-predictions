@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 
 import occupationRiskData from "@/data/risk/occupation-risk.json";
 import sectorRiskData from "@/data/risk/sector-risk.json";
+import stateRiskData from "@/data/risk/state-risk.json";
+import statePathsData from "@/data/regional/us-states-svg-paths.json";
 
 import MapHero from "@/components/map/MapHero";
 import SectorHeatmap from "@/components/map/SectorHeatmap";
 import OccupationRiskTable from "@/components/map/OccupationRiskTable";
-import RegionalPlaceholder from "@/components/map/RegionalPlaceholder";
+import StateChoropleth from "@/components/map/StateChoropleth";
 import MapMethodology from "@/components/map/MapMethodology";
 import {
   OccupationRisk,
@@ -129,7 +131,25 @@ export default function MapPage() {
 
         <OccupationRiskTable occupations={occupations} />
 
-        <RegionalPlaceholder />
+        <section className="mt-16 sm:mt-20">
+          <div className="mb-5">
+            <p className="text-xs font-bold uppercase tracking-widest text-[var(--accent)] mb-2">
+              Section 03 &middot; Regional view
+            </p>
+            <h2 className="text-2xl sm:text-3xl font-bold text-heading leading-tight">
+              Where the risk lands on the map
+            </h2>
+            <p className="text-base text-[var(--muted)] leading-relaxed mt-2 max-w-[680px]">
+              Per-state risk is the employment-weighted average of occupation
+              risk across BLS OEWS May 2024 employment. MSA and county overlays
+              are next.
+            </p>
+          </div>
+          <StateChoropleth
+            stateRisk={stateRiskData as any}
+            statePaths={statePathsData as any}
+          />
+        </section>
 
         <MapMethodology />
       </div>
