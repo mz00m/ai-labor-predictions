@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "What We Do and Don't Know About How AI is Affecting the Labor Market",
+      "author": "Martha Gimbel, Joshua Kendall & Ryan Nunn",
+      "publisher": "The Budget Lab at Yale",
+      "date": "2026-05-07",
+      "url": "https://budgetlab.yale.edu/research/what-we-do-and-dont-know-about-how-ai-affecting-labor-market",
+      "takeaway": "The strongest null-result paper to date. Using synthetic differences-in-differences to compare AI-exposed (top tercile) vs. a synthetic-control group built from unexposed occupations, the authors find no statistically significant AI effect on employment shares or real hourly wages through 2026Q1. Unemployment rose ~0.5pp in the latest quarter for the AI-exposed group (more for 16\u201334 year olds) but remains statistically insignificant. Honest about the limits: LLMs are still improving, exposure metrics may misclassify, CPS is underpowered for the 22\u201327 cohort. Required reading for anyone calibrating confidence about what the data already shows.",
+      "weekFeatured": "2026-05-11",
+      "tier": 1
+    },
+    {
       "title": "Algorithmic Credentialism: Civil Rights Risk in AI Hiring Screens",
       "author": "Peter Q. Blair & Rui Guo",
       "publisher": "NBER Working Paper w35192",

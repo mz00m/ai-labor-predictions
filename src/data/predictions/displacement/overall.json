@@ -1602,6 +1602,15 @@
       ],
       "evidenceTier": 1,
       "label": "Individual-level DiD coefficients vary 2.4-fold across LLM annotators"
+    },
+    {
+      "date": "2026-05-07",
+      "direction": "down",
+      "sourceIds": [
+        "budgetlab-ai-no-effects-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Yale Budget Lab SDID: no clear AI effects on employment or wages through 2026Q1"
     }
   ],
   "sources": [
@@ -2858,6 +2867,16 @@
       "evidenceTier": 1,
       "datePublished": "2026-04-27",
       "excerpt": "in a difference-in-differences framework, individual-level coefficient magnitudes vary 2.4-fold across annotators, and county level estimates flip from a significant negative to an insignificant positive depending on annotators"
+    },
+    {
+      "id": "budgetlab-ai-no-effects-2026",
+      "title": "What We Do and Don't Know About How AI is Affecting the Labor Market",
+      "url": "https://budgetlab.yale.edu/research/what-we-do-and-dont-know-about-how-ai-affecting-labor-market",
+      "publisher": "The Budget Lab at Yale (Gimbel, Kendall, Nunn)",
+      "evidenceTier": 1,
+      "datePublished": "2026-05-07",
+      "excerpt": "Using synthetic differences-in-differences (SDID) to compare AI-exposed (top tercile) to a synthetic-control group built from unexposed (bottom tercile) occupations through 2026Q1: 'this approach provides no clear evidence of AI effects on the labor market, but this could change quickly.' Wages: 'we see no statistically or economically significant impact.' Unemployment rose ~0.5pp in latest quarter for the AI-exposed group (more for 16-34 subsample), but statistically insignificant. Treatment date: 2022Q4 (ChatGPT release). Demographic note: AI-exposed occupations are 55.1% women and 57.3% BA+ vs. unexposed 32.7% and 10.3% — making naive comparisons unreliable.",
+      "dateAdded": "2026-05-11"
     }
   ]
 }

@@ -331,6 +331,15 @@
       "label": "Anthropic: Claude speeds tasks ~80%; projects 1.8% annual US productivity growth/decade"
     },
     {
+      "date": "2025-11-14",
+      "direction": "down",
+      "sourceIds": [
+        "galdin-silbert-llm-signaling-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Galdin & Silbert: LLM signal erosion cuts worker surplus 4%, total 1%"
+    },
+    {
       "date": "2025-12-01",
       "direction": "down",
       "sourceIds": [
@@ -529,24 +538,6 @@
       "label": "Hosseini/Lichtinger: Avg 17% productivity gain partially offset by entry-barrier erosion"
     },
     {
-      "date": "2026-04-06",
-      "direction": "down",
-      "sourceIds": [
-        "goldman-ai-agents-labor-impact-2026"
-      ],
-      "evidenceTier": 2,
-      "label": "GS: tech-displaced workers suffer >3% real earnings loss"
-    },
-    {
-      "date": "2026-04-06",
-      "direction": "down",
-      "sourceIds": [
-        "goldman-ai-agents-labor-impact-2026"
-      ],
-      "evidenceTier": 2,
-      "label": "GS: displaced workers downgrade to more routine, lower-skill jobs"
-    },
-    {
       "date": "2026-04-01",
       "direction": "down",
       "sourceIds": [
@@ -574,13 +565,22 @@
       "label": "OpenAI: proposes 32-hour workweek pilots, public wealth fund"
     },
     {
-      "date": "2025-11-14",
+      "date": "2026-04-06",
       "direction": "down",
       "sourceIds": [
-        "galdin-silbert-llm-signaling-2025"
+        "goldman-ai-agents-labor-impact-2026"
       ],
       "evidenceTier": 2,
-      "label": "Galdin & Silbert: LLM signal erosion cuts worker surplus 4%, total 1%"
+      "label": "GS: tech-displaced workers suffer >3% real earnings loss"
+    },
+    {
+      "date": "2026-04-06",
+      "direction": "down",
+      "sourceIds": [
+        "goldman-ai-agents-labor-impact-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "GS: displaced workers downgrade to more routine, lower-skill jobs"
     },
     {
       "date": "2026-04-07",
@@ -617,6 +617,24 @@
       ],
       "evidenceTier": 1,
       "label": "MIT Stone Center: US labor share down 10% since early 2000s"
+    },
+    {
+      "date": "2026-05-05",
+      "direction": "up",
+      "sourceIds": [
+        "goldman-productivity-growth-forecast-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Goldman Sachs: US labor productivity to avg ~2.3%/yr 2026\u20132030, above ~2% consensus"
+    },
+    {
+      "date": "2026-05-07",
+      "direction": "neutral",
+      "sourceIds": [
+        "budgetlab-ai-no-effects-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Yale Budget Lab: no statistically significant AI wage effect through 2026Q1 (SDID)"
     }
   ],
   "sources": [
@@ -1175,6 +1193,25 @@
       "evidenceTier": 1,
       "datePublished": "2026-04-24",
       "excerpt": "Since the early 2000s, the 'labor share' \u2013 the share of a country's national income that goes to workers, rather than to owners of machines and capital \u2013 has declined 10% in the US."
+    },
+    {
+      "id": "goldman-productivity-growth-forecast-2026",
+      "title": "US Daily: Forecasting Productivity Growth: Slow to Adjust, Quick to Overshoot",
+      "url": "",
+      "publisher": "Goldman Sachs",
+      "evidenceTier": 2,
+      "datePublished": "2026-05-05",
+      "excerpt": "While we expect US nonfarm business labor productivity growth to average around 2.3% over 2026-2030, most alternative forecasts currently cluster at or slightly below the 10-year trailing average of roughly 2%\u2014consistent with the historical pattern we document. The gap partly reflects our more positive view on AI's likely contribution to future productivity growth."
+    },
+    {
+      "id": "budgetlab-ai-no-effects-2026",
+      "title": "What We Do and Don't Know About How AI is Affecting the Labor Market",
+      "url": "https://budgetlab.yale.edu/research/what-we-do-and-dont-know-about-how-ai-affecting-labor-market",
+      "publisher": "The Budget Lab at Yale (Gimbel, Kendall, Nunn)",
+      "evidenceTier": 1,
+      "datePublished": "2026-05-07",
+      "excerpt": "We also examine the log real hourly wages of AI-exposed and unexposed workers... we see no statistically or economically significant impact through 2026Q1.",
+      "dateAdded": "2026-05-11"
     }
   ]
 }

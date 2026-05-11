@@ -528,6 +528,15 @@
       ],
       "evidenceTier": 3,
       "label": "Silicon Continent: Travel agent wages rose 87%->99% of private-sector avg (2000-2025)"
+    },
+    {
+      "date": "2026-05-07",
+      "direction": "neutral",
+      "sourceIds": [
+        "budgetlab-ai-no-effects-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Yale Budget Lab: 16-34 cohort unemployment ~+0.5pp but statistically insignificant"
     }
   ],
   "sources": [
@@ -988,6 +997,16 @@
       "evidenceTier": 3,
       "datePublished": "2026-04-24",
       "excerpt": "In 2000, average weekly earnings at travel agencies were 87% of the private-sector average. By 2025, they had reached 99%. The surviving agents earn more per hour than they used to, precisely because the machine took the weak part and left them the strong one."
+    },
+    {
+      "id": "budgetlab-ai-no-effects-2026",
+      "title": "What We Do and Don't Know About How AI is Affecting the Labor Market",
+      "url": "https://budgetlab.yale.edu/research/what-we-do-and-dont-know-about-how-ai-affecting-labor-market",
+      "publisher": "The Budget Lab at Yale (Gimbel, Kendall, Nunn)",
+      "evidenceTier": 1,
+      "datePublished": "2026-05-07",
+      "excerpt": "We therefore investigated effects for workers 34 and younger, finding mixed evidence of AI effects for this group... roughly half a percentage point increase in the entire sample, and more for the 16-34 year old subsample - but both are statistically insignificant as of the first quarter of 2026.",
+      "dateAdded": "2026-05-11"
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-05-11",
-  "totalSources": 548,
-  "verifiedCount": 538,
+  "totalSources": 549,
+  "verifiedCount": 539,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -7737,6 +7737,22 @@
       "excerpt": "Analysis of 29,585 PR lifecycles across 5 major AI coding tools using an Initiator x Approver taxonomy. Collaborator workflows are >=96% agent-initiated, yet terminal merge authority remains almost exclusively human, with agent-classified approvers confined to a small fraction of PRs.",
       "usedIn": [
         "tech-sector-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "budgetlab-ai-no-effects-2026": {
+      "id": "budgetlab-ai-no-effects-2026",
+      "title": "What We Do and Don't Know About How AI is Affecting the Labor Market",
+      "url": "https://budgetlab.yale.edu/research/what-we-do-and-dont-know-about-how-ai-affecting-labor-market",
+      "publisher": "The Budget Lab at Yale (Gimbel, Kendall, Nunn)",
+      "evidenceTier": 1,
+      "datePublished": "2026-05-07",
+      "excerpt": "Synthetic differences-in-differences (SDID) comparing AI-exposed (top tercile) vs. a synthetic comparison group of unexposed (bottom tercile) occupations through 2026Q1. Finds 'no clear evidence of AI effects on the labor market' for employment shares or real hourly wages. Unemployment in latest quarter ~0.5pp higher for AI-exposed (more for 16-34 subsample) but statistically insignificant. Demographic differences make naive comparisons unreliable: AI-exposed occupations are 55.1% women and 57.3% BA+ vs. unexposed 32.7% and 10.3%. Treatment date 2022Q4 (ChatGPT release). Caveats noted: LLMs improve over time, exposure metrics may misclassify, CPS underpowered for 22-27 cohort.",
+      "usedIn": [
+        "overall-us-displacement",
+        "median-wage-impact",
+        "entry-level-wage-impact"
       ],
       "verified": true,
       "synthetic": false

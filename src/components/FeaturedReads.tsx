@@ -9,6 +9,14 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Gimbel, Kendall & Nunn (Yale Budget Lab)",
+    title: "What We Do and Don't Know About How AI is Affecting the Labor Market",
+    summary:
+      "The strongest null-result paper to date. Using synthetic differences-in-differences to compare AI-exposed (top tercile) vs. a synthetic-control group built from unexposed occupations, the authors find no statistically significant AI effect on employment shares or real hourly wages through 2026Q1. Unemployment rose ~0.5pp in the latest quarter for the AI-exposed group (more for 16–34 year olds) but remains statistically insignificant. Honest about the limits: LLMs are still improving, exposure metrics may misclassify, CPS is underpowered for the 22–27 cohort. Required reading for anyone calibrating their confidence about what the data already shows.",
+    date: "May 7",
+    url: "https://budgetlab.yale.edu/research/what-we-do-and-dont-know-about-how-ai-affecting-labor-market",
+  },
+  {
     author: "Ezra Klein (NYT)",
     title: "Why the A.I. Job Apocalypse (Probably) Won't Happen",
     summary:
@@ -39,14 +47,6 @@ const articles: Article[] = [
       "AEI's James Pethokoukis interviews Wharton's Daniel Rock (author of the Productivity J-Curve paper) on AI and work. Key framing: exposure vs. automation are not the same thing. Rock covers why firms see slow early productivity gains as they reorganize workflows, the bottlenecks limiting adoption, and why a more measured growth outlook is warranted — pushing back on Silicon Valley claims that white-collar work is imminently doomed.",
     date: "Apr 28",
     url: "https://fasterplease.substack.com/p/the-future-of-work-in-an-age-of-ai",
-  },
-  {
-    author: "Elizabeth Gibney (Nature)",
-    title: "AI doom warnings are getting louder. Are they realistic?",
-    summary:
-      "Nature surveys the existential-risk debate: only 3% of ~4,000 AI researchers name extinction as their top worry, yet 53% give it ≥10% probability — up from 47% in 2023. Dario Amodei puts P(doom) at 25%. Critics including Gary Marcus and Casey Mock argue doom narratives distract from documented current harms and hand firms a regulatory shield. Maps a genuine split between near-term misuse concerns and longer-horizon misalignment fears.",
-    date: "2026",
-    url: "https://www.nature.com/articles/d41586-026-01257-6",
   },
 ];
 
