@@ -5,6 +5,8 @@ import {
   generateStep1Profile,
   generateStep2Tasks,
   generateStep3Tools,
+  generateStep3Roadmap,
+  generateStep3Roi,
   generateStep4Risks,
 } from "@/lib/assessment/analyze";
 import {
@@ -181,11 +183,35 @@ export async function POST(req: NextRequest) {
 
       let stepResult: Record<string, unknown>;
 
+      // Observability guard: log when a step writes empty critical fields.
+      // After the brittle-fallback fix, the steps throw rather than write
+      // empty defaults — but if .catch() handlers ever salvage to the empty
+      // string, this is the canary that catches it in Vercel logs.
+      const flagHollow = (label: string, report: Record<string, any>) => {
+        const issues: string[] = [];
+        if ("executiveSummary" in report && (!report.executiveSummary || String(report.executiveSummary).trim().length === 0)) {
+          issues.push("executiveSummary is empty");
+        }
+        if ("taskAnalysis" in report && Array.isArray(report.taskAnalysis) && report.taskAnalysis.length === 0) {
+          issues.push("taskAnalysis is empty");
+        }
+        if ("toolRecommendations" in report && Array.isArray(report.toolRecommendations) && report.toolRecommendations.length === 0) {
+          issues.push("toolRecommendations is empty");
+        }
+        if ("riskAssessment" in report && (!report.riskAssessment?.displacementRisk || String(report.riskAssessment.displacementRisk).trim().length === 0)) {
+          issues.push("riskAssessment.displacementRisk is empty");
+        }
+        if (issues.length > 0) {
+          console.error(`[assessment/analyze:${label}] Hollow report detected for ${targetId}: ${issues.join("; ")}`);
+        }
+      };
+
       switch (step) {
         case "profile": {
           const { report: profileReport, stepContext: extractedContext } = await generateStep1Profile(
             intake, fileContents, websiteContent
           );
+          flagHollow("profile", profileReport as Record<string, any>);
           // Save extracted context for subsequent steps
           await saveStepContext(targetId, extractedContext);
           // Merge partial report
@@ -197,6 +223,7 @@ export async function POST(req: NextRequest) {
           const taskReport = await generateStep2Tasks(
             intake, previousReport as any, stepContext || undefined, feedback ? [feedback] : undefined
           );
+          flagHollow("tasks", taskReport as Record<string, any>);
           await mergePartialReport(targetId, taskReport);
           stepResult = { report: taskReport };
           break;
@@ -205,17 +232,38 @@ export async function POST(req: NextRequest) {
           const toolReport = await generateStep3Tools(
             intake, previousReport as any, stepContext || undefined, feedback ? [feedback] : undefined
           );
+          flagHollow("tools", toolReport as Record<string, any>);
           await mergePartialReport(targetId, toolReport);
+          // Tools is the last AUTO step — once it lands, the user has the
+          // most practical, decision-ready output. Mark the assessment
+          // complete so the report page renders. Roadmap, ROI, and risks
+          // are now opt-in additions on top of a complete report.
+          await updateAssessmentStatus(targetId, "complete");
           stepResult = { report: toolReport };
+          break;
+        }
+        case "roadmap": {
+          const roadmapReport = await generateStep3Roadmap(
+            intake, previousReport as any, stepContext || undefined, feedback ? [feedback] : undefined
+          );
+          await mergePartialReport(targetId, roadmapReport);
+          stepResult = { report: roadmapReport };
+          break;
+        }
+        case "roi": {
+          const roiReport = await generateStep3Roi(
+            intake, previousReport as any, stepContext || undefined, feedback ? [feedback] : undefined
+          );
+          await mergePartialReport(targetId, roiReport);
+          stepResult = { report: roiReport };
           break;
         }
         case "risks": {
           const riskReport = await generateStep4Risks(
             intake, previousReport as any, stepContext || undefined, feedback ? [feedback] : undefined
           );
+          flagHollow("risks", riskReport as Record<string, any>);
           await mergePartialReport(targetId, riskReport);
-          // Final step — mark complete
-          await updateAssessmentStatus(targetId, "complete");
           stepResult = { report: riskReport };
           break;
         }

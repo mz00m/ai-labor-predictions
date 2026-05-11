@@ -77,29 +77,29 @@ export const StepContextSchema = z.object({
 // ─── Step 1: Profile output ─────────────────────────────────────
 
 const OrganizationProfileSchema = z.object({
-  summary: z.string().default(""),
-  industryContext: z.string().default(""),
-  aiReadinessScore: z.number().min(1).max(10).default(5),
-  aiReadinessRationale: z.string().optional(),
-  aiReadinessNextSteps: z.array(z.string()).optional(),
-  keyStrengths: z.array(z.string()).default([]),
-  keyGaps: z.array(z.string()).default([]),
+  summary: z.string().catch("").default(""),
+  industryContext: z.string().catch("").default(""),
+  aiReadinessScore: z.number().min(1).max(10).catch(5).default(5),
+  aiReadinessRationale: z.string().optional().catch(undefined),
+  aiReadinessNextSteps: z.array(z.string()).optional().catch(undefined),
+  keyStrengths: z.array(z.string()).catch([]).default([]),
+  keyGaps: z.array(z.string()).catch([]).default([]),
 });
 
 const QuickWinSchema = z.object({
-  title: z.string(),
-  description: z.string(),
-  timeToImplement: z.string(),
-  impact: z.enum(["high", "medium", "low"]),
-  toolSuggestion: z.string().optional(),
+  title: z.string().catch("Untitled quick win"),
+  description: z.string().catch(""),
+  timeToImplement: z.string().catch(""),
+  impact: z.enum(["high", "medium", "low"]).catch("medium"),
+  toolSuggestion: z.string().optional().catch(undefined),
 });
 
 export const Step1ProfileSchema = z.object({
-  executiveSummary: z.string().default(""),
+  executiveSummary: z.string().catch("").default(""),
   organizationProfile: OrganizationProfileSchema.default({
     summary: "", industryContext: "", aiReadinessScore: 5, keyStrengths: [], keyGaps: [],
   }),
-  quickWins: z.array(QuickWinSchema).default([]),
+  quickWins: z.array(QuickWinSchema).catch([]).default([]),
   extractedContext: StepContextSchema.optional(),
 });
 
@@ -159,22 +159,22 @@ const SpecificProductSchema = z.object({
 });
 
 const ToolRecommendationSchema = z.object({
-  category: z.string(),
-  toolName: z.string().optional(),
-  purpose: z.string(),
-  expectedValue: z.string(),
-  implementationEffort: z.enum(["low", "medium", "high"]),
-  priorityTier: z.enum(["immediate", "medium-term", "long-term"]),
-  recommendationTier: z.enum(["start-here", "add-next", "consider-later"]).optional(),
-  estimatedMonthlyCost: z.string().optional(),
-  specificProducts: z.array(SpecificProductSchema).optional(),
-  gettingStarted: z.array(z.string()).optional(),
-  realWorldExample: z.string().optional(),
-  successKpis: z.array(z.string()).optional(),
-  whatItReplaces: z.string().optional(),
-  learningTime: z.string().optional(),
-  upgradeSignal: z.string().optional(),
-  firstTask: z.string().optional(),
+  category: z.string().catch("Uncategorized"),
+  toolName: z.string().optional().catch(undefined),
+  purpose: z.string().catch(""),
+  expectedValue: z.string().catch(""),
+  implementationEffort: z.enum(["low", "medium", "high"]).catch("medium"),
+  priorityTier: z.enum(["immediate", "medium-term", "long-term"]).catch("medium-term"),
+  recommendationTier: z.enum(["start-here", "add-next", "consider-later"]).optional().catch(undefined),
+  estimatedMonthlyCost: z.string().optional().catch(undefined),
+  specificProducts: z.array(SpecificProductSchema).optional().catch(undefined),
+  gettingStarted: z.array(z.string()).optional().catch(undefined),
+  realWorldExample: z.string().optional().catch(undefined),
+  successKpis: z.array(z.string()).optional().catch(undefined),
+  whatItReplaces: z.string().optional().catch(undefined),
+  learningTime: z.string().optional().catch(undefined),
+  upgradeSignal: z.string().optional().catch(undefined),
+  firstTask: z.string().optional().catch(undefined),
 });
 
 const ResourceSchema = z.object({
@@ -183,12 +183,12 @@ const ResourceSchema = z.object({
 });
 
 const RoadmapActionSchema = z.object({
-  title: z.string(),
-  description: z.string(),
-  owner: z.string(),
-  priority: z.enum(["critical", "high", "medium", "low"]),
-  howTo: z.string().optional(),
-  resource: ResourceSchema.optional(),
+  title: z.string().catch(""),
+  description: z.string().catch(""),
+  owner: z.string().catch("You"),
+  priority: z.enum(["critical", "high", "medium", "low"]).catch("medium"),
+  howTo: z.string().optional().catch(undefined),
+  resource: ResourceSchema.optional().catch(undefined),
 });
 
 const RoadmapPhaseSchema = z.object({
@@ -212,23 +212,41 @@ const ImplementationRoadmapSchema = z.object({
 });
 
 const RoiProjectionSchema = z.object({
-  area: z.string(),
-  currentCost: z.string(),
-  projectedSavings: z.string(),
-  timeToValue: z.string(),
-  confidence: z.enum(["high", "moderate", "low"]),
-  basis: z.string(),
-  calculationDetail: z.string().optional(),
+  area: z.string().catch(""),
+  currentCost: z.string().catch(""),
+  projectedSavings: z.string().catch(""),
+  timeToValue: z.string().catch(""),
+  confidence: z.enum(["high", "moderate", "low"]).catch("moderate"),
+  basis: z.string().catch(""),
+  calculationDetail: z.string().optional().catch(undefined),
 });
 
 export const Step3ToolsSchema = z.object({
-  toolRecommendations: z.array(ToolRecommendationSchema).default([]),
+  toolRecommendations: z.array(ToolRecommendationSchema).catch([]).default([]),
   implementationRoadmap: ImplementationRoadmapSchema.default({
     immediate: { timeframe: "0-3 months", objectives: [], actions: [], expectedOutcomes: [] },
     mediumTerm: { timeframe: "3-6 months", objectives: [], actions: [], expectedOutcomes: [] },
     longTerm: { timeframe: "6-12+ months", objectives: [], actions: [], expectedOutcomes: [] },
   }),
-  roiProjections: z.array(RoiProjectionSchema).default([]),
+  roiProjections: z.array(RoiProjectionSchema).catch([]).default([]),
+});
+
+// Narrow schemas for the split-out, opt-in pipeline. Each focuses on a single
+// section so its Claude call can stay small and finish fast.
+export const Step3ToolsOnlySchema = z.object({
+  toolRecommendations: z.array(ToolRecommendationSchema).catch([]).default([]),
+});
+
+export const Step3RoadmapSchema = z.object({
+  implementationRoadmap: ImplementationRoadmapSchema.default({
+    immediate: { timeframe: "0-3 months", objectives: [], actions: [], expectedOutcomes: [] },
+    mediumTerm: { timeframe: "3-6 months", objectives: [], actions: [], expectedOutcomes: [] },
+    longTerm: { timeframe: "6-12+ months", objectives: [], actions: [], expectedOutcomes: [] },
+  }),
+});
+
+export const Step3RoiSchema = z.object({
+  roiProjections: z.array(RoiProjectionSchema).catch([]).default([]),
 });
 
 // ─── Step 4: Risks output ───────────────────────────────────────
@@ -242,26 +260,26 @@ const DimensionScoresSchema = z.object({
 });
 
 const RiskAssessmentSchema = z.object({
-  overallRiskLevel: z.enum(["low", "moderate", "high"]).default("moderate"),
-  riskContextNote: z.string().optional(),
-  displacementRisk: z.string().default(""),
-  skillGaps: z.array(z.string()).default([]),
-  changeManagementNotes: z.string().default(""),
-  dataPrivacyConsiderations: z.string().default(""),
-  commonPitfalls: z.array(z.string()).optional(),
-  resistanceSources: z.array(z.string()).optional(),
-  dataReadinessNote: z.string().optional(),
-  dimensionScores: DimensionScoresSchema.optional(),
+  overallRiskLevel: z.enum(["low", "moderate", "high"]).catch("moderate").default("moderate"),
+  riskContextNote: z.string().optional().catch(undefined),
+  displacementRisk: z.string().catch("").default(""),
+  skillGaps: z.array(z.string()).catch([]).default([]),
+  changeManagementNotes: z.string().catch("").default(""),
+  dataPrivacyConsiderations: z.string().catch("").default(""),
+  commonPitfalls: z.array(z.string()).optional().catch(undefined),
+  resistanceSources: z.array(z.string()).optional().catch(undefined),
+  dataReadinessNote: z.string().optional().catch(undefined),
+  dimensionScores: DimensionScoresSchema.optional().catch(undefined),
 });
 
 const HumanCapabilitySchema = z.object({
-  name: z.string(),
-  whyItMatters: z.string().optional(),
-  whyAppreciating: z.string().optional(),
-  howToDevelop: z.string(),
-  appreciationScore: z.number().min(1).max(10).default(8),
-  automationResistance: z.array(z.string()).default([]),
-  relevantTasks: z.array(z.string()).default([]),
+  name: z.string().catch("Capability"),
+  whyItMatters: z.string().optional().catch(undefined),
+  whyAppreciating: z.string().optional().catch(undefined),
+  howToDevelop: z.string().catch(""),
+  appreciationScore: z.number().min(1).max(10).catch(8).default(8),
+  automationResistance: z.array(z.string()).catch([]).default([]),
+  relevantTasks: z.array(z.string()).catch([]).default([]),
 });
 
 export const Step4RisksSchema = z.object({

@@ -147,14 +147,16 @@ describe("generateStep2Tasks — parallelization + dedupe", () => {
     expect(result.taskAnalysis?.map((t) => t.taskName)).toEqual(["A", "B"]);
   });
 
-  it("returns empty array when both calls fail (does not throw)", async () => {
+  it("throws when both calls fail (no silent empty taskAnalysis)", async () => {
+    // Step 2 was changed to throw rather than silently write an empty
+    // taskAnalysis to the DB — empty tasks downstream produce an empty tools
+    // section and a hollow report. Surfacing 5xx lets the client recovery
+    // path engage instead.
     createMock
       .mockRejectedValueOnce(new Error("network blip A"))
       .mockRejectedValueOnce(new Error("network blip B"));
 
-    const result = await generateStep2Tasks(intake, {}, undefined, undefined);
-
-    expect(result.taskAnalysis).toEqual([]);
+    await expect(generateStep2Tasks(intake, {}, undefined, undefined)).rejects.toThrow();
   });
 
   it("uses smaller per-call max_tokens than the old single-call 8000", async () => {

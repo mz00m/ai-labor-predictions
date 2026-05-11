@@ -45,14 +45,44 @@ describe("hasStepOutput", () => {
     expect(hasStepOutput(a, "tools")).toBe(true);
   });
 
-  it("detects risks completion via status=complete", () => {
+  it("detects tools completion via status=complete (auto-pipeline finished)", () => {
+    // Tools is the final AUTO step — status=complete is set after it lands.
     const a = baseAssessment({ status: "complete" });
+    expect(hasStepOutput(a, "tools")).toBe(true);
+  });
+
+  it("detects risks completion via riskAssessment.displacementRisk", () => {
+    const a = baseAssessment({
+      report: { riskAssessment: { displacementRisk: "Low risk for this role." } } as never,
+    });
     expect(hasStepOutput(a, "risks")).toBe(true);
   });
 
-  it("also detects risks via riskAssessment field", () => {
+  it("treats empty riskAssessment shell as incomplete", () => {
+    // A schema-default risk assessment (empty displacementRisk) is not a
+    // real result — recovery should keep polling.
     const a = baseAssessment({ report: { riskAssessment: { overallRiskLevel: "low" } } as never });
-    expect(hasStepOutput(a, "risks")).toBe(true);
+    expect(hasStepOutput(a, "risks")).toBe(false);
+  });
+
+  it("detects roadmap completion via roadmap actions present", () => {
+    const a = baseAssessment({
+      report: {
+        implementationRoadmap: {
+          immediate: { actions: [{ title: "X" }] },
+          mediumTerm: { actions: [] },
+          longTerm: { actions: [] },
+        },
+      } as never,
+    });
+    expect(hasStepOutput(a, "roadmap")).toBe(true);
+  });
+
+  it("detects roi completion via non-empty roiProjections", () => {
+    const a = baseAssessment({
+      report: { roiProjections: [{ area: "X" }] } as never,
+    });
+    expect(hasStepOutput(a, "roi")).toBe(true);
   });
 });
 
@@ -128,6 +158,7 @@ describe("tryRecoverStepFromDb", () => {
   });
 
   it("tolerates transient fetch errors and non-200 responses during polling", async () => {
+    // Tools is the final AUTO step — status=complete is the recovery signal.
     const fresh = baseAssessment({ status: "complete" });
     setFetchSequence([
       () => Promise.reject(new Error("network blip")),
@@ -135,7 +166,7 @@ describe("tryRecoverStepFromDb", () => {
       () => Promise.resolve(jsonResponse({ assessment: fresh })),
     ]);
 
-    const result = await runWithTimersAdvanced(tryRecoverStepFromDb("asmt_1", "risks"));
+    const result = await runWithTimersAdvanced(tryRecoverStepFromDb("asmt_1", "tools"));
     expect(result?.status).toBe("complete");
   });
 });

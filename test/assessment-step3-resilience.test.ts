@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
-import type { AssessmentIntake } from "@/lib/assessment/types";
+import type { AssessmentIntake, AssessmentReport } from "@/lib/assessment/types";
 
 // Mock Anthropic SDK before importing. See step2-parallel test for hoisting notes.
 const { createMock } = vi.hoisted(() => ({ createMock: vi.fn() }));
@@ -28,7 +28,11 @@ vi.mock("@/lib/assessment/research-context", () => ({
   formatResearchContextForPrompt: () => "",
 }));
 
-import { generateStep3Tools } from "@/lib/assessment/analyze";
+import {
+  generateStep3Tools,
+  generateStep3Roadmap,
+  generateStep3Roi,
+} from "@/lib/assessment/analyze";
 
 const intake: AssessmentIntake = {
   organizationName: "Test Org",
@@ -86,78 +90,123 @@ const fakeResponse = (payload: unknown) => ({
   content: [{ type: "text", text: JSON.stringify(payload) }],
 });
 
-describe("generateStep3Tools — resilience to slow/failed calls", () => {
+describe("generateStep3Tools — single-call tools-only step", () => {
   beforeEach(() => {
     createMock.mockReset();
   });
 
-  it("returns tools when the roadmap call fails", async () => {
-    createMock
-      .mockResolvedValueOnce(fakeResponse({ toolRecommendations: [validTool("A"), validTool("B")] }))
-      .mockRejectedValueOnce(new Error("upstream hang"));
+  it("returns only the toolRecommendations payload (roadmap and ROI are separate)", async () => {
+    createMock.mockResolvedValueOnce(
+      fakeResponse({ toolRecommendations: [validTool("Docs"), validTool("CRM")] }),
+    );
 
     const result = await generateStep3Tools(intake, {}, undefined, undefined);
 
     expect(result.toolRecommendations).toHaveLength(2);
-    // Roadmap and ROI fall back to schema defaults — not null/undefined errors.
-    expect(result.implementationRoadmap).toBeDefined();
-    expect(result.roiProjections).toEqual([]);
+    // Roadmap and ROI are now opt-in steps — they must NOT be returned by
+    // the tools call. The previous combined behavior is what made step 3
+    // slow and surfaced the "ROI without tools" partial-failure mode.
+    expect(result.implementationRoadmap).toBeUndefined();
+    expect(result.roiProjections).toBeUndefined();
   });
 
-  it("returns roadmap + ROI when the tools call fails", async () => {
-    createMock
-      .mockRejectedValueOnce(new Error("upstream hang"))
-      .mockResolvedValueOnce(
-        fakeResponse({ implementationRoadmap: validRoadmap(), roiProjections: validROI() }),
-      );
-
-    const result = await generateStep3Tools(intake, {}, undefined, undefined);
-
-    expect(result.toolRecommendations).toEqual([]);
-    expect(result.implementationRoadmap?.immediate?.objectives).toEqual(["do things"]);
-    expect(result.roiProjections).toHaveLength(1);
-  });
-
-  it("returns defaults when both calls fail — does not throw", async () => {
-    createMock
-      .mockRejectedValueOnce(new Error("A failed"))
-      .mockRejectedValueOnce(new Error("B failed"));
-
-    const result = await generateStep3Tools(intake, {}, undefined, undefined);
-
-    expect(result.toolRecommendations).toEqual([]);
-    expect(result.roiProjections).toEqual([]);
-  });
-
-  it("uses per-call timeout below the Vercel 300s function budget", async () => {
-    createMock
-      .mockResolvedValueOnce(fakeResponse({ toolRecommendations: [validTool("A")] }))
-      .mockResolvedValueOnce(fakeResponse({ implementationRoadmap: validRoadmap(), roiProjections: validROI() }));
+  it("makes exactly one Claude call (no parallel fan-out)", async () => {
+    createMock.mockResolvedValueOnce(
+      fakeResponse({ toolRecommendations: [validTool("Docs")] }),
+    );
 
     await generateStep3Tools(intake, {}, undefined, undefined);
 
-    // Timeout is the second arg to anthropic.messages.create.
-    const opts0 = createMock.mock.calls[0][1];
-    const opts1 = createMock.mock.calls[1][1];
-    expect(opts0.timeout).toBeLessThan(300000);
-    expect(opts1.timeout).toBeLessThan(300000);
-    expect(opts0.timeout).toBeGreaterThanOrEqual(120000);
-    expect(opts1.timeout).toBeGreaterThanOrEqual(120000);
+    expect(createMock).toHaveBeenCalledTimes(1);
   });
 
-  it("happy path merges both calls into a complete step 3 result", async () => {
-    createMock
-      .mockResolvedValueOnce(
-        fakeResponse({ toolRecommendations: [validTool("Docs"), validTool("CRM"), validTool("Reporting")] }),
-      )
-      .mockResolvedValueOnce(
-        fakeResponse({ implementationRoadmap: validRoadmap(), roiProjections: validROI() }),
-      );
+  it("throws when the tools call fails (no silent empty tools section)", async () => {
+    createMock.mockRejectedValueOnce(new Error("upstream hang"));
 
-    const result = await generateStep3Tools(intake, {}, undefined, undefined);
+    await expect(generateStep3Tools(intake, {}, undefined, undefined)).rejects.toThrow();
+  });
 
-    expect(result.toolRecommendations).toHaveLength(3);
+  it("throws when the response parses but produces zero tools", async () => {
+    createMock.mockResolvedValueOnce(fakeResponse({ toolRecommendations: [] }));
+
+    await expect(generateStep3Tools(intake, {}, undefined, undefined)).rejects.toThrow();
+  });
+
+  it("uses a per-call timeout below the Vercel 300s function budget", async () => {
+    createMock.mockResolvedValueOnce(fakeResponse({ toolRecommendations: [validTool("A")] }));
+
+    await generateStep3Tools(intake, {}, undefined, undefined);
+
+    const opts = createMock.mock.calls[0][1];
+    expect(opts.timeout).toBeLessThan(300000);
+    expect(opts.timeout).toBeGreaterThanOrEqual(120000);
+  });
+});
+
+describe("generateStep3Roadmap — opt-in roadmap step", () => {
+  beforeEach(() => {
+    createMock.mockReset();
+  });
+
+  it("returns only the implementationRoadmap payload", async () => {
+    createMock.mockResolvedValueOnce(
+      fakeResponse({ implementationRoadmap: validRoadmap() }),
+    );
+
+    const result = await generateStep3Roadmap(intake, {}, undefined, undefined);
+
     expect(result.implementationRoadmap?.immediate?.actions).toHaveLength(1);
+    expect(result.toolRecommendations).toBeUndefined();
+    expect(result.roiProjections).toBeUndefined();
+  });
+
+  it("throws when the call fails", async () => {
+    createMock.mockRejectedValueOnce(new Error("hang"));
+
+    await expect(generateStep3Roadmap(intake, {}, undefined, undefined)).rejects.toThrow();
+  });
+
+  it("references already-generated tool recommendations in the prompt", async () => {
+    const previousReport: Partial<AssessmentReport> = {
+      toolRecommendations: [
+        {
+          category: "Docs",
+          toolName: "Notion AI",
+          purpose: "drafting",
+          expectedValue: "save time",
+          implementationEffort: "low",
+          priorityTier: "immediate",
+          recommendationTier: "start-here",
+        },
+      ],
+    };
+    createMock.mockResolvedValueOnce(fakeResponse({ implementationRoadmap: validRoadmap() }));
+
+    await generateStep3Roadmap(intake, previousReport, undefined, undefined);
+
+    const userPrompt = createMock.mock.calls[0][0].messages[0].content as string;
+    expect(userPrompt).toContain("Notion AI");
+  });
+});
+
+describe("generateStep3Roi — opt-in ROI step", () => {
+  beforeEach(() => {
+    createMock.mockReset();
+  });
+
+  it("returns only the roiProjections payload", async () => {
+    createMock.mockResolvedValueOnce(fakeResponse({ roiProjections: validROI() }));
+
+    const result = await generateStep3Roi(intake, {}, undefined, undefined);
+
     expect(result.roiProjections).toHaveLength(1);
+    expect(result.toolRecommendations).toBeUndefined();
+    expect(result.implementationRoadmap).toBeUndefined();
+  });
+
+  it("throws when the call fails", async () => {
+    createMock.mockRejectedValueOnce(new Error("hang"));
+
+    await expect(generateStep3Roi(intake, {}, undefined, undefined)).rejects.toThrow();
   });
 });

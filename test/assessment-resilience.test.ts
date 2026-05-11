@@ -97,7 +97,13 @@ describe("Zod schema safe defaults", () => {
   });
 });
 
-// ─── Step generators return defaults on fatal error ──────────────
+// ─── Step generators surface failures honestly ───────────────────
+//
+// Prior behavior: on a fatal Claude API error, each step returned empty
+// defaults. That silently produced reports with blank executive summaries
+// and empty tools sections. New contract: rethrow so the route returns 5xx
+// and the client recovery path can engage instead of writing empty defaults
+// to the DB.
 
 // Mock the Anthropic SDK so callClaude throws on every attempt
 vi.mock("@anthropic-ai/sdk", () => {
@@ -110,7 +116,7 @@ vi.mock("@anthropic-ai/sdk", () => {
   };
 });
 
-describe("Step generators graceful degradation", () => {
+describe("Step generators surface failures on API error", () => {
   const minimalIntake = {
     organizationName: "Test Org",
     industry: "technology" as const,
@@ -139,28 +145,19 @@ describe("Step generators graceful degradation", () => {
     generateStep4Risks = mod.generateStep4Risks;
   });
 
-  it("generateStep1Profile returns defaults on API failure", async () => {
-    const result = await generateStep1Profile(minimalIntake, [], null);
-    expect(result.report.executiveSummary).toBe("");
-    expect(result.report.organizationProfile?.aiReadinessScore).toBe(5);
-    expect(result.stepContext.documentInsights).toEqual([]);
+  it("generateStep1Profile throws on API failure (no silent empty report)", async () => {
+    await expect(generateStep1Profile(minimalIntake, [], null)).rejects.toThrow();
   });
 
-  it("generateStep2Tasks returns defaults on API failure", async () => {
-    const result = await generateStep2Tasks(minimalIntake, {} as any);
-    expect(result.taskAnalysis).toEqual([]);
+  it("generateStep2Tasks throws on API failure (no silent empty taskAnalysis)", async () => {
+    await expect(generateStep2Tasks(minimalIntake, {} as any)).rejects.toThrow();
   });
 
-  it("generateStep3Tools returns defaults on API failure", async () => {
-    const result = await generateStep3Tools(minimalIntake, {} as any);
-    expect(result.toolRecommendations).toEqual([]);
-    expect(result.implementationRoadmap).toBeDefined();
-    expect(result.roiProjections).toEqual([]);
+  it("generateStep3Tools throws on API failure (no silent empty tools section)", async () => {
+    await expect(generateStep3Tools(minimalIntake, {} as any)).rejects.toThrow();
   });
 
-  it("generateStep4Risks returns defaults on API failure", async () => {
-    const result = await generateStep4Risks(minimalIntake, {} as any);
-    expect(result.riskAssessment?.overallRiskLevel).toBe("moderate");
-    expect(result.furtherEvaluation).toEqual([]);
+  it("generateStep4Risks throws on API failure (no silent empty risk assessment)", async () => {
+    await expect(generateStep4Risks(minimalIntake, {} as any)).rejects.toThrow();
   });
 });

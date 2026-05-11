@@ -28,6 +28,9 @@ import {
   Step1ProfileSchema,
   Step2TasksSchema,
   Step3ToolsSchema,
+  Step3ToolsOnlySchema,
+  Step3RoadmapSchema,
+  Step3RoiSchema,
   Step4RisksSchema,
 } from "./schemas";
 import { CLAUDE_SONNET, CLAUDE_HAIKU } from "@/lib/claude-models";
@@ -322,7 +325,10 @@ export function parseJsonFromText(text: string): Record<string, unknown> | null 
 
 /**
  * Shared Claude API call helper with retry logic.
- * 3 total attempts with exponential backoff (1s, 3s).
+ * Up to 3 attempts with exponential backoff (1s, 3s), but the wall-clock
+ * across all attempts is capped at `timeout` ms — if a retry would push
+ * us past the budget, we stop and throw the last error. This prevents a
+ * rate-limit blip from blowing past Vercel's 300s function ceiling.
  * Detects empty/null responses as retriable failures.
  */
 async function callClaude(
@@ -332,9 +338,22 @@ async function callClaude(
 ): Promise<Record<string, unknown> | null> {
   const maxAttempts = 3;
   const backoffMs = [1000, 3000];
-  const timeoutMs = options?.timeout || 60000;
+  const totalBudgetMs = options?.timeout || 60000;
+  const startedAt = Date.now();
 
+  // Per-attempt timeout shrinks as we burn through the total budget so
+  // a slow first attempt doesn't leave a retry no time to run.
+  const remainingBudget = () => Math.max(0, totalBudgetMs - (Date.now() - startedAt));
+
+  let lastErr: unknown = null;
   for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+    const attemptTimeout = remainingBudget();
+    if (attemptTimeout <= 0) {
+      console.error(`[callClaude] Budget exhausted before attempt ${attempt}/${maxAttempts}`);
+      if (lastErr) throw lastErr;
+      return null;
+    }
+
     try {
       const response = await anthropic.messages.create(
         {
@@ -349,15 +368,19 @@ async function callClaude(
           ],
           messages: [{ role: "user", content: userPrompt }],
         },
-        { timeout: timeoutMs }
+        { timeout: attemptTimeout }
       );
 
       const text = extractTextFromResponse(response);
       if (!text || text.trim().length === 0) {
         console.warn(`[callClaude] Empty response on attempt ${attempt}/${maxAttempts}`);
         if (attempt < maxAttempts) {
-          await new Promise((r) => setTimeout(r, backoffMs[attempt - 1]));
-          continue;
+          const wait = backoffMs[attempt - 1];
+          if (wait + 5_000 < remainingBudget()) {
+            await new Promise((r) => setTimeout(r, wait));
+            continue;
+          }
+          console.error(`[callClaude] Skipping retry — insufficient budget remaining (${remainingBudget()}ms)`);
         }
         return null;
       }
@@ -365,14 +388,20 @@ async function callClaude(
       const parsed = parseJsonFromText(text);
       if (parsed === null && attempt < maxAttempts) {
         console.warn(`[callClaude] JSON parse failed on attempt ${attempt}/${maxAttempts}, retrying...`);
-        await new Promise((r) => setTimeout(r, backoffMs[attempt - 1]));
-        continue;
+        const wait = backoffMs[attempt - 1];
+        if (wait + 5_000 < remainingBudget()) {
+          await new Promise((r) => setTimeout(r, wait));
+          continue;
+        }
+        console.error(`[callClaude] Skipping retry — insufficient budget remaining (${remainingBudget()}ms)`);
+        return null;
       }
 
       return parsed;
     } catch (err: unknown) {
+      lastErr = err;
       if (err instanceof Anthropic.APIConnectionTimeoutError) {
-        console.error(`[callClaude] Timeout on attempt ${attempt}/${maxAttempts} (${timeoutMs}ms) — not retrying`);
+        console.error(`[callClaude] Timeout on attempt ${attempt}/${maxAttempts} (${attemptTimeout}ms) — not retrying`);
         throw err;
       }
 
@@ -383,8 +412,13 @@ async function callClaude(
         (err instanceof Anthropic.APIError && err.status === 529);
 
       if (isRetriable && attempt < maxAttempts) {
+        const wait = backoffMs[attempt - 1];
+        if (wait + 5_000 >= remainingBudget()) {
+          console.error(`[callClaude] Retriable error but budget would be exceeded — giving up: ${err instanceof Error ? err.message : err}`);
+          throw err;
+        }
         console.warn(`[callClaude] Retriable error on attempt ${attempt}/${maxAttempts}: ${err instanceof Error ? err.message : err}`);
-        await new Promise((r) => setTimeout(r, backoffMs[attempt - 1]));
+        await new Promise((r) => setTimeout(r, wait));
         continue;
       }
 
@@ -480,11 +514,31 @@ The extractedContext will be carried to subsequent steps, so extract everything 
       maxTokens: 3000,
     });
 
+    if (parsed === null) {
+      throw new Error("Step 1 (profile) returned no parseable response from Claude");
+    }
+
     const validated = Step1ProfileSchema.safeParse(parsed);
     if (!validated.success) {
       console.warn("Step 1 schema validation failed, using defaults:", validated.error.flatten().fieldErrors);
     }
     const step1 = validated.success ? validated.data : Step1ProfileSchema.parse({});
+
+    // Per-field salvage: if the full schema parse fell back to defaults but
+    // Claude actually returned a non-empty executive summary, keep it.
+    // The .catch() helpers cover most cases, but a totally malformed object
+    // (e.g. parsed === [] or non-object) still drops to defaults.
+    if (!validated.success && parsed && typeof parsed === "object") {
+      const raw = parsed as Record<string, unknown>;
+      if (typeof raw.executiveSummary === "string" && raw.executiveSummary.trim().length > 0) {
+        step1.executiveSummary = raw.executiveSummary;
+      }
+    }
+
+    if (!step1.executiveSummary || step1.executiveSummary.trim().length === 0) {
+      console.error("[Step 1 Profile] Executive summary empty after parse — surfacing to client for retry");
+      throw new Error("Step 1 produced an empty executive summary");
+    }
 
     const ctxValidated = StepContextSchema.safeParse(
       parsed?.extractedContext || step1.extractedContext || {}
@@ -505,15 +559,10 @@ The extractedContext will be carried to subsequent steps, so extract everything 
     const errMsg = err instanceof Error ? err.message : String(err);
     const errName = err instanceof Error ? err.name : "UnknownError";
     console.error(`[Step 1 Profile] Fatal error (${errName}): ${errMsg}`);
-    const defaults = Step1ProfileSchema.parse({});
-    return {
-      report: {
-        executiveSummary: defaults.executiveSummary,
-        organizationProfile: defaults.organizationProfile,
-        quickWins: defaults.quickWins,
-      },
-      stepContext: StepContextSchema.parse({}),
-    };
+    // Rethrow so the route returns 5xx and the client recovery path engages,
+    // instead of silently writing empty defaults to the DB and producing a
+    // blank executive summary in the final report.
+    throw err instanceof Error ? err : new Error(errMsg);
   }
 }
 
@@ -660,7 +709,8 @@ Use the user's feedback to adjust priorities. Reference their uploaded documents
     }
 
     if (merged.length === 0) {
-      console.error("[Step 2 Tasks] Both calls produced zero usable tasks");
+      console.error("[Step 2 Tasks] Both calls produced zero usable tasks — surfacing to client for retry");
+      throw new Error("Step 2 produced no usable tasks");
     }
 
     return { taskAnalysis: merged };
@@ -668,15 +718,23 @@ Use the user's feedback to adjust priorities. Reference their uploaded documents
     const errMsg = err instanceof Error ? err.message : String(err);
     const errName = err instanceof Error ? err.name : "UnknownError";
     console.error(`[Step 2 Tasks] Fatal error (${errName}): ${errMsg}`);
-    return {
-      taskAnalysis: [] as TaskAnalysis[],
-    };
+    throw err instanceof Error ? err : new Error(errMsg);
   }
 }
 
 /**
  * Step 3: Tool Recommendations & Roadmap
  * Uses confirmed tasks + feedback to produce tools, roadmap, ROI
+ */
+/**
+ * Step 3 (Tools): generate ONLY the tool recommendations.
+ *
+ * Split out from the original combined tools+roadmap+ROI step so that the
+ * auto-pipeline can stop here and hand the user actionable tool picks fast.
+ * Roadmap and ROI are now their own opt-in generators (`generateStep3Roadmap`,
+ * `generateStep3Roi`) and run only when the user asks for them on the report
+ * page. The previous combined call regularly took 2-3 minutes; this one
+ * should land in 30-60s on a single Sonnet call.
  */
 export async function generateStep3Tools(
   intake: AssessmentIntake,
@@ -702,7 +760,7 @@ export async function generateStep3Tools(
 
   const systemPrompt = `${CONSULTING_PHILOSOPHY}
 
-You are running Step 3 of a 4-step assessment. Steps 1-2 produced a profile and task analysis. Your job: recommend tools for specific use cases, build a product-agnostic implementation roadmap, and project ROI.
+You are running the Tools step of a multi-part assessment. Earlier steps produced a profile and a task analysis. Your job — and ONLY your job — is to recommend specific AI tools for the highest-impact tasks. Roadmap and ROI are produced by separate, opt-in steps later, so do not include them here.
 
 ${toolPrefNote}
 
@@ -719,15 +777,7 @@ Many use cases DON'T need a specialized tool. For ad-hoc and occasional tasks �
 If someone already uses Google Workspace, call out that Gemini is built into Docs, Sheets, Gmail, etc.
 If someone already uses Microsoft 365, call out that Copilot is built into Word, Excel, Outlook, etc.
 
-CRITICAL — Implementation Roadmap Must Be Product-Agnostic:
-The implementation roadmap and next steps must focus on USE CASES and CAPABILITIES, not specific products. Actions should describe WHAT to accomplish and WHY, not which tool to buy.
-- Good: "Automate first-draft proposal generation — test with 5 real proposals this month"
-- Bad: "Sign up for Jasper AI and connect it to your Google Docs"
-- Good: "Set up automated client follow-up sequences triggered by intake form completion"
-- Bad: "Install HubSpot and configure the sequences feature"
-The tool recommendations section is where products live. The roadmap is where strategy lives.
-
-Return valid JSON with ONLY toolRecommendations (roadmap and ROI are handled separately):
+Return valid JSON with ONLY a toolRecommendations array (no roadmap, no ROI):
 {
   "toolRecommendations": [
     {
@@ -768,15 +818,57 @@ Return valid JSON with ONLY toolRecommendations (roadmap and ROI are handled sep
   // Skip onetSummary from tools call — it's large and tools don't need it
   if (researchContext) userPrompt += `\n\n${researchContext}`;
 
-  // Split into two parallel calls to cut wall-clock time roughly in half:
-  // Call A: tool recommendations (the bulk of the output)
-  // Call B: implementation roadmap + ROI projections (depends on task analysis, not tools)
+  try {
+    // Single-purpose call: tools only. 240s wall-clock cap leaves ~60s of
+    // headroom under Vercel's 300s function ceiling for DB writes and
+    // response serialization. max_tokens scaled to ~6 detailed tools.
+    const parsed = await callClaude(systemPrompt, userPrompt, {
+      maxTokens: 4500,
+      timeout: 240000,
+    });
 
-  const roadmapSystemPrompt = `${CONSULTING_PHILOSOPHY}
+    if (parsed === null) {
+      throw new Error("Step 3 (tools) returned no parseable response from Claude");
+    }
 
-You are running Step 3B of an assessment. Steps 1-2 produced a profile and task analysis. Your job: build a product-agnostic implementation roadmap and project ROI.
+    const validated = Step3ToolsOnlySchema.safeParse(parsed);
+    if (!validated.success) {
+      console.warn("Step 3 (tools) schema validation failed, using defaults:", validated.error.flatten().fieldErrors);
+    }
+    const step3 = validated.success ? validated.data : Step3ToolsOnlySchema.parse({});
 
-CRITICAL — Implementation Roadmap Must Be Product-Agnostic:
+    if (step3.toolRecommendations.length === 0) {
+      console.error("[Step 3 Tools] No tool recommendations after parse — surfacing to client for retry");
+      throw new Error("Step 3 produced no tool recommendations");
+    }
+
+    return { toolRecommendations: step3.toolRecommendations };
+  } catch (err: unknown) {
+    const errMsg = err instanceof Error ? err.message : String(err);
+    const errName = err instanceof Error ? err.name : "UnknownError";
+    console.error(`[Step 3 Tools] Fatal error (${errName}): ${errMsg}`);
+    throw err instanceof Error ? err : new Error(errMsg);
+  }
+}
+
+/**
+ * Step 3 (Roadmap): generate ONLY the implementation roadmap. Opt-in.
+ *
+ * Runs after the user has reviewed tools and clicks "Generate roadmap" on
+ * the report page. Single Sonnet call, no tools KB — depends only on the
+ * intake + task analysis + already-generated tool recommendations.
+ */
+export async function generateStep3Roadmap(
+  intake: AssessmentIntake,
+  previousReport: Partial<AssessmentReport>,
+  stepContext?: StepContext,
+  feedback?: StepFeedback[]
+): Promise<Partial<AssessmentReport>> {
+  const systemPrompt = `${CONSULTING_PHILOSOPHY}
+
+You are generating the Implementation Roadmap section of an assessment. Earlier steps produced a profile, task analysis, and a list of recommended tools. Your job — and ONLY your job — is to build a product-agnostic 12-month roadmap.
+
+CRITICAL — Roadmap Must Be Product-Agnostic:
 The roadmap focuses on USE CASES and CAPABILITIES, not specific products. Actions describe WHAT to accomplish and WHY, not which tool to buy.
 - Good: "Automate first-draft proposal generation — test with 5 real proposals this month"
 - Bad: "Sign up for Jasper AI and connect it to your Google Docs"
@@ -787,7 +879,7 @@ WORD BUDGETS — readers were getting overwhelmed by long roadmaps. Keep it tigh
 - action.howTo: 1-2 short sentences, max ~35 words
 - objectives and expectedOutcomes: one short phrase each, not full sentences
 
-Return valid JSON:
+Return valid JSON with ONLY an implementationRoadmap object:
 {
   "implementationRoadmap": {
     "immediate": {
@@ -799,86 +891,131 @@ Return valid JSON:
     },
     "mediumTerm": { "timeframe": "3-6 months", "objectives": [], "actions": [], "expectedOutcomes": [], "estimatedInvestment": "" },
     "longTerm": { "timeframe": "6-12+ months", "objectives": [], "actions": [], "expectedOutcomes": [], "estimatedInvestment": "" }
-  },
-  "roiProjections": [
-    {
-      "area": "Area",
-      "currentCost": "Show the math",
-      "projectedSavings": "Specific",
-      "timeToValue": "Specific",
-      "confidence": "high|moderate|low",
-      "basis": "Reasoning",
-      "calculationDetail": "Full math"
-    }
-  ]
+  }
 }`;
 
-  // Build a lighter user prompt for roadmap (no tools KB needed)
-  let roadmapUserPrompt = buildIntakeContext(intake);
-  roadmapUserPrompt += buildStepContextSection(stepContext);
-  roadmapUserPrompt += buildFeedbackContext(feedback);
+  let userPrompt = buildIntakeContext(intake);
+  userPrompt += buildStepContextSection(stepContext);
+  userPrompt += buildFeedbackContext(feedback);
+
   if (previousReport.taskAnalysis?.length) {
     const topTasks = [...previousReport.taskAnalysis]
       .sort((a, b) => (b.aiOpportunity === "high" ? 1 : 0) - (a.aiOpportunity === "high" ? 1 : 0))
       .slice(0, 10);
-    roadmapUserPrompt += `\n\n## Confirmed Task Analysis (from Step 2)\n`;
+    userPrompt += `\n\n## Confirmed Task Analysis\n`;
     for (const task of topTasks) {
-      roadmapUserPrompt += `- **${task.taskName}** (${task.department}): ${task.aiOpportunity} opportunity, ~${task.estimatedTimeSaved || "unknown"} saved\n`;
+      userPrompt += `- **${task.taskName}** (${task.department}): ${task.aiOpportunity} opportunity, ~${task.estimatedTimeSaved || "unknown"} saved\n`;
+    }
+  }
+
+  if (previousReport.toolRecommendations?.length) {
+    userPrompt += `\n\n## Tools Already Recommended\n`;
+    for (const t of previousReport.toolRecommendations) {
+      userPrompt += `- ${t.toolName || t.category} (${t.recommendationTier || t.priorityTier}): ${t.purpose}\n`;
     }
   }
 
   try {
-    // Run both calls in parallel. Use allSettled so one slow/hung call
-    // doesn't block the other — step 3 was timing out under the old Promise.all
-    // setup because a single stalled call consumed the full Vercel 300s budget.
-    // Per-call timeouts set to 240s, leaving ~60s of headroom under the
-    // Vercel 300s function limit for DB writes and response serialization.
-    // max_tokens raised back up after observing live truncation: a roofer
-    // persona run had the roadmap response cut at ~8.7K chars (≈2500 tokens),
-    // which broke JSON.parse and silently emptied the roadmap + ROI sections.
-    // Sonnet typically responds well under these budgets — they're a safety
-    // ceiling, not a target.
-    const [toolsResult, roadmapResult] = await Promise.allSettled([
-      callClaude(systemPrompt, userPrompt, { maxTokens: 4500, timeout: 240000 }),
-      callClaude(roadmapSystemPrompt, roadmapUserPrompt, { maxTokens: 4000, timeout: 240000 }),
-    ]);
+    const parsed = await callClaude(systemPrompt, userPrompt, {
+      maxTokens: 4000,
+      timeout: 240000,
+    });
 
-    const toolsParsed = toolsResult.status === "fulfilled"
-      ? toolsResult.value
-      : (console.error(`[Step 3 Tools] tools call failed: ${toolsResult.reason}`), null);
-    const roadmapParsed = roadmapResult.status === "fulfilled"
-      ? roadmapResult.value
-      : (console.error(`[Step 3 Tools] roadmap call failed: ${roadmapResult.reason}`), null);
-
-    // Merge results from both calls — each side falls back to the other's
-    // optional fields if one call failed entirely.
-    const merged = {
-      toolRecommendations: (toolsParsed as any)?.toolRecommendations || [],
-      implementationRoadmap: (roadmapParsed as any)?.implementationRoadmap || (toolsParsed as any)?.implementationRoadmap,
-      roiProjections: (roadmapParsed as any)?.roiProjections || (toolsParsed as any)?.roiProjections || [],
-    };
-
-    const validated = Step3ToolsSchema.safeParse(merged);
-    if (!validated.success) {
-      console.warn("Step 3 schema validation failed, using defaults:", validated.error.flatten().fieldErrors);
+    if (parsed === null) {
+      throw new Error("Step 3 (roadmap) returned no parseable response from Claude");
     }
-    const step3 = validated.success ? validated.data : Step3ToolsSchema.parse({});
 
-    return {
-      toolRecommendations: step3.toolRecommendations,
-      implementationRoadmap: step3.implementationRoadmap,
-      roiProjections: step3.roiProjections,
-    };
+    const validated = Step3RoadmapSchema.safeParse(parsed);
+    if (!validated.success) {
+      console.warn("Step 3 (roadmap) schema validation failed, using defaults:", validated.error.flatten().fieldErrors);
+    }
+    const step3 = validated.success ? validated.data : Step3RoadmapSchema.parse({});
+
+    return { implementationRoadmap: step3.implementationRoadmap };
   } catch (err: unknown) {
     const errMsg = err instanceof Error ? err.message : String(err);
     const errName = err instanceof Error ? err.name : "UnknownError";
-    console.error(`[Step 3 Tools] Fatal error (${errName}): ${errMsg}`);
-    const defaults = Step3ToolsSchema.parse({});
-    return {
-      toolRecommendations: defaults.toolRecommendations,
-      implementationRoadmap: defaults.implementationRoadmap,
-      roiProjections: defaults.roiProjections,
-    };
+    console.error(`[Step 3 Roadmap] Fatal error (${errName}): ${errMsg}`);
+    throw err instanceof Error ? err : new Error(errMsg);
+  }
+}
+
+/**
+ * Step 3 (ROI): generate ONLY the ROI projections. Opt-in.
+ *
+ * Single Sonnet call. Uses task analysis + tool recommendations to produce
+ * cost/savings/time-to-value estimates with shown math.
+ */
+export async function generateStep3Roi(
+  intake: AssessmentIntake,
+  previousReport: Partial<AssessmentReport>,
+  stepContext?: StepContext,
+  feedback?: StepFeedback[]
+): Promise<Partial<AssessmentReport>> {
+  const systemPrompt = `${CONSULTING_PHILOSOPHY}
+
+You are generating the ROI Projections section of an assessment. Earlier steps produced a profile, task analysis, and tool recommendations. Your job — and ONLY your job — is to project the ROI of the highest-impact areas. Show the math.
+
+Return valid JSON with ONLY a roiProjections array:
+{
+  "roiProjections": [
+    {
+      "area": "Specific area of work, not generic",
+      "currentCost": "Show the math: hours/week × $/hr or $/month",
+      "projectedSavings": "Concrete dollar or hour figure",
+      "timeToValue": "How quickly this pays back: weeks, 1 month, 3 months",
+      "confidence": "high|moderate|low",
+      "basis": "Why you can project this — what assumption or evidence",
+      "calculationDetail": "Full math: e.g., '3 hrs/wk × $50/hr × 50 wks = $7,500/yr saved'"
+    }
+  ]
+}
+
+Generate 3-5 ROI projections. Pick areas with the largest impact. Be specific with numbers — never vague.`;
+
+  let userPrompt = buildIntakeContext(intake);
+  userPrompt += buildStepContextSection(stepContext);
+  userPrompt += buildFeedbackContext(feedback);
+
+  if (previousReport.taskAnalysis?.length) {
+    const topTasks = [...previousReport.taskAnalysis]
+      .sort((a, b) => (b.aiOpportunity === "high" ? 1 : 0) - (a.aiOpportunity === "high" ? 1 : 0))
+      .slice(0, 10);
+    userPrompt += `\n\n## Confirmed Task Analysis\n`;
+    for (const task of topTasks) {
+      userPrompt += `- **${task.taskName}** (${task.department}): ${task.aiOpportunity} opportunity, ~${task.estimatedTimeSaved || "unknown"} saved\n`;
+    }
+  }
+
+  if (previousReport.toolRecommendations?.length) {
+    userPrompt += `\n\n## Tools Already Recommended\n`;
+    for (const t of previousReport.toolRecommendations) {
+      userPrompt += `- ${t.toolName || t.category}: ${t.purpose}${t.estimatedMonthlyCost ? ` (cost: ${t.estimatedMonthlyCost})` : ""}\n`;
+    }
+  }
+
+  try {
+    const parsed = await callClaude(systemPrompt, userPrompt, {
+      maxTokens: 3000,
+      timeout: 240000,
+    });
+
+    if (parsed === null) {
+      throw new Error("Step 3 (ROI) returned no parseable response from Claude");
+    }
+
+    const validated = Step3RoiSchema.safeParse(parsed);
+    if (!validated.success) {
+      console.warn("Step 3 (ROI) schema validation failed, using defaults:", validated.error.flatten().fieldErrors);
+    }
+    const step3 = validated.success ? validated.data : Step3RoiSchema.parse({});
+
+    return { roiProjections: step3.roiProjections };
+  } catch (err: unknown) {
+    const errMsg = err instanceof Error ? err.message : String(err);
+    const errName = err instanceof Error ? err.name : "UnknownError";
+    console.error(`[Step 3 ROI] Fatal error (${errName}): ${errMsg}`);
+    throw err instanceof Error ? err : new Error(errMsg);
   }
 }
 
@@ -957,13 +1094,26 @@ Sort by appreciation score, highest first.`;
   if (capabilitiesContext) userPrompt += `\n\n${capabilitiesContext}`;
 
   try {
-    const parsed = await callClaude(systemPrompt, userPrompt, { maxTokens: 4000, timeout: 300000 });
+    // Total wall-clock cap of 240s leaves ~60s of headroom under Vercel's 300s
+    // function ceiling for DB writes and response serialization. The prior
+    // 300s timeout could collide with maxDuration and cause the function to
+    // abort mid-write.
+    const parsed = await callClaude(systemPrompt, userPrompt, { maxTokens: 4000, timeout: 240000 });
+
+    if (parsed === null) {
+      throw new Error("Step 4 (risks) returned no parseable response from Claude");
+    }
 
     const validated = Step4RisksSchema.safeParse(parsed);
     if (!validated.success) {
       console.warn("Step 4 schema validation failed, using defaults:", validated.error.flatten().fieldErrors);
     }
     const step4 = validated.success ? validated.data : Step4RisksSchema.parse({});
+
+    if (!step4.riskAssessment.displacementRisk || step4.riskAssessment.displacementRisk.trim().length === 0) {
+      console.error("[Step 4 Risks] Empty displacement risk — surfacing to client for retry");
+      throw new Error("Step 4 produced an empty risk assessment");
+    }
 
     return {
       riskAssessment: step4.riskAssessment,
@@ -974,12 +1124,7 @@ Sort by appreciation score, highest first.`;
     const errMsg = err instanceof Error ? err.message : String(err);
     const errName = err instanceof Error ? err.name : "UnknownError";
     console.error(`[Step 4 Risks] Fatal error (${errName}): ${errMsg}`);
-    const defaults = Step4RisksSchema.parse({});
-    return {
-      riskAssessment: defaults.riskAssessment,
-      furtherEvaluation: defaults.furtherEvaluation,
-      humanCapabilities: defaults.humanCapabilities,
-    };
+    throw err instanceof Error ? err : new Error(errMsg);
   }
 }
 

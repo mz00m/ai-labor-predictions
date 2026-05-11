@@ -9,12 +9,13 @@ import type {
   QuickWin,
   TaskAnalysis,
   ToolRecommendation,
-  RoiProjection,
 } from "@/lib/assessment/types";
-import { ASSESSMENT_STEPS, STEP_LABELS, STEP_DESCRIPTIONS } from "@/lib/assessment/types";
+import { AUTO_STEPS, STEP_LABELS, STEP_DESCRIPTIONS } from "@/lib/assessment/types";
 import { STEP_TIMEOUT_MS, tryRecoverStepFromDb } from "./recovery";
 
-const STEP_LOADING_MESSAGES: Record<AssessmentStep, string[]> = {
+// The progress page only drives the AUTO pipeline (profile → tasks → tools).
+// Roadmap, ROI, and risks are opt-in — generated from the report page.
+const AUTO_STEP_LOADING_MESSAGES: Partial<Record<AssessmentStep, string[]>> = {
   profile: [
     "Reading your uploaded documents and website...",
     "Analyzing your industry context...",
@@ -27,13 +28,8 @@ const STEP_LOADING_MESSAGES: Record<AssessmentStep, string[]> = {
   ],
   tools: [
     "Matching AI tools to your specific workflows...",
-    "Building your implementation roadmap...",
-    "Calculating ROI projections...",
-  ],
-  risks: [
-    "Assessing organizational risks and change management...",
-    "Generating your AI policy framework...",
-    "Building your custom prompt library...",
+    "Ranking tools by where to start, what to add next, and what to consider later...",
+    "Pulling pricing and getting-started details...",
   ],
 };
 
@@ -66,20 +62,21 @@ export default function ProgressPage() {
         const a = data.assessment as Assessment;
         setAssessment(a);
 
-        // Determine which steps are already done based on report content
+        // Determine which AUTO steps are already done based on report content.
+        // Optional steps (roadmap, roi, risks) are not driven from this page.
         const done = new Set<AssessmentStep>();
         if (a.report?.organizationProfile) done.add("profile");
         if (a.report?.taskAnalysis?.length) done.add("tasks");
         if (a.report?.toolRecommendations?.length) done.add("tools");
-        if (a.report?.riskAssessment) done.add("risks");
         setCompletedSteps(done);
 
-        // Set active step to first incomplete
-        const nextStep = ASSESSMENT_STEPS.find((s) => !done.has(s));
+        // Set active step to first incomplete in the AUTO pipeline. Once
+        // the auto-pipeline is done, drop the user on the report page —
+        // they'll opt in to additional sections from there.
+        const nextStep = AUTO_STEPS.find((s) => !done.has(s));
         if (nextStep) {
           setActiveStep(nextStep);
         } else {
-          // All done, redirect to report
           router.push(`/assessment/report?id=${id}`);
         }
       })
@@ -104,7 +101,8 @@ export default function ProgressPage() {
   // Rotate loading messages
   useEffect(() => {
     if (!generating) return;
-    const msgs = STEP_LOADING_MESSAGES[activeStep];
+    const msgs = AUTO_STEP_LOADING_MESSAGES[activeStep];
+    if (!msgs || msgs.length === 0) return;
     const interval = setInterval(() => {
       setLoadingMsgIndex((i) => (i + 1) % msgs.length);
     }, 8000);
@@ -141,10 +139,12 @@ export default function ProgressPage() {
           };
         });
         setCompletedSteps((prev) => new Set([...Array.from(prev), step]));
-        const stepIndex = ASSESSMENT_STEPS.indexOf(step);
-        if (stepIndex < ASSESSMENT_STEPS.length - 1) {
-          setActiveStep(ASSESSMENT_STEPS[stepIndex + 1]);
+        const stepIndex = AUTO_STEPS.indexOf(step);
+        if (stepIndex >= 0 && stepIndex < AUTO_STEPS.length - 1) {
+          setActiveStep(AUTO_STEPS[stepIndex + 1]);
         } else {
+          // Auto pipeline finished — let the user opt in to roadmap, ROI,
+          // and risks from the report page.
           router.push(`/assessment/report?id=${id}`);
         }
       };
@@ -233,9 +233,11 @@ export default function ProgressPage() {
   }
 
   const report = assessment?.report;
-  const activeStepIndex = ASSESSMENT_STEPS.indexOf(activeStep);
-  const loadingMessages = STEP_LOADING_MESSAGES[activeStep];
-  const currentLoadingMsg = loadingMessages[loadingMsgIndex % loadingMessages.length];
+  const activeStepIndex = AUTO_STEPS.indexOf(activeStep);
+  const loadingMessages = AUTO_STEP_LOADING_MESSAGES[activeStep] || [];
+  const currentLoadingMsg = loadingMessages.length > 0
+    ? loadingMessages[loadingMsgIndex % loadingMessages.length]
+    : "";
 
   return (
     <div className="max-w-3xl mx-auto px-6 sm:px-10 py-12">
@@ -247,9 +249,9 @@ export default function ProgressPage() {
         {assessment?.intake?.organizationName}
       </p>
 
-      {/* Step progress bar */}
+      {/* Step progress bar — only shows the AUTO pipeline */}
       <div className="flex items-center gap-1 mb-10">
-        {ASSESSMENT_STEPS.map((s, i) => {
+        {AUTO_STEPS.map((s, i) => {
           const isDone = completedSteps.has(s);
           const isActive = s === activeStep;
           return (
@@ -270,7 +272,7 @@ export default function ProgressPage() {
                 )}
                 {STEP_LABELS[s].split(" ")[0]}
               </div>
-              {i < ASSESSMENT_STEPS.length - 1 && (
+              {i < AUTO_STEPS.length - 1 && (
                 <svg className="w-3 h-3 text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                 </svg>
@@ -370,9 +372,9 @@ export default function ProgressPage() {
 
       {completedSteps.has("tools") && report?.toolRecommendations && (
         <StepResultSection
-          title="Tool Recommendations & Roadmap"
+          title="Tool Recommendations"
           stepKey="tools"
-          isLatest={activeStep === "risks"}
+          isLatest={false}
         >
           <div className="space-y-3">
             {report.toolRecommendations.slice(0, 5).map((tool: ToolRecommendation, i: number) => (
@@ -396,19 +398,6 @@ export default function ProgressPage() {
               </div>
             ))}
           </div>
-          {report.roiProjections && report.roiProjections.length > 0 && (
-            <div className="mt-4 pt-4 border-t border-gray-100">
-              <h4 className="text-base font-semibold text-gray-700 mb-2">ROI Projections</h4>
-              <div className="space-y-2">
-                {report.roiProjections.slice(0, 3).map((roi: RoiProjection, i: number) => (
-                  <div key={i} className="flex items-center justify-between text-sm">
-                    <span className="text-gray-600">{roi.area}</span>
-                    <span className="text-green-600 font-medium">{roi.projectedSavings}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
         </StepResultSection>
       )}
 

@@ -3,11 +3,23 @@
 import { useState, useEffect, useCallback } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
-import type { Assessment, AssessmentReport } from "@/lib/assessment/types";
+import type { Assessment, AssessmentReport, AssessmentStep, ImplementationRoadmap } from "@/lib/assessment/types";
 import { INDUSTRY_LABELS, COMPANY_SIZE_LABELS, AI_MATURITY_LABELS } from "@/lib/assessment/types";
 
 // Sections that start expanded by default
 const DEFAULT_EXPANDED = new Set(["summary", "readiness"]);
+
+// Has the roadmap actually been generated, vs. just a default-shaped object
+// from the schema? An empty-actions phase is the schema default, not a real
+// roadmap.
+function hasRoadmap(roadmap?: ImplementationRoadmap): boolean {
+  if (!roadmap) return false;
+  return Boolean(
+    roadmap.immediate?.actions?.length ||
+    roadmap.mediumTerm?.actions?.length ||
+    roadmap.longTerm?.actions?.length
+  );
+}
 
 export default function ReportPage() {
   const params = useSearchParams();
@@ -24,6 +36,63 @@ export default function ReportPage() {
   const [feedbackSubmitting, setFeedbackSubmitting] = useState(false);
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(DEFAULT_EXPANDED));
   const [copied, setCopied] = useState(false);
+  // Optional-section generation state. Each opt-in step (roadmap, roi, risks)
+  // tracks its own loading + error state so users can kick off multiple
+  // sections in parallel without one blocking the others.
+  const [generatingStep, setGeneratingStep] = useState<Record<string, boolean>>({});
+  const [stepError, setStepError] = useState<Record<string, string | null>>({});
+
+  const generateOptionalSection = useCallback(async (step: AssessmentStep) => {
+    if (!id) return;
+    setGeneratingStep((prev) => ({ ...prev, [step]: true }));
+    setStepError((prev) => ({ ...prev, [step]: null }));
+
+    try {
+      const formPayload = new FormData();
+      formPayload.append("assessmentId", id);
+      formPayload.append("step", step);
+
+      const controller = new AbortController();
+      // 270s — sits below the server's 300s maxDuration with headroom for
+      // serialization, mirrors the progress page's STEP_TIMEOUT_MS.
+      const timeout = setTimeout(() => controller.abort(), 270_000);
+
+      let res: Response;
+      try {
+        res = await fetch("/api/assessment/analyze", {
+          method: "POST",
+          body: formPayload,
+          signal: controller.signal,
+        });
+      } finally {
+        clearTimeout(timeout);
+      }
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.error || `Failed to generate ${step}`);
+      }
+
+      // Refetch the full assessment so the newly written section appears.
+      const refresh = await fetch(`/api/assessment/report?id=${id}`);
+      const refreshed = await refresh.json();
+      if (refreshed.assessment) {
+        setAssessment(refreshed.assessment);
+        // Auto-expand the new section so the user sees their result.
+        const sectionId = step === "roi" ? "roi" : step === "roadmap" ? "roadmap" : "risks";
+        setExpandedSections((prev) => {
+          const next = new Set(prev);
+          next.add(sectionId);
+          return next;
+        });
+      }
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : "An error occurred";
+      setStepError((prev) => ({ ...prev, [step]: msg }));
+    } finally {
+      setGeneratingStep((prev) => ({ ...prev, [step]: false }));
+    }
+  }, [id]);
 
   const toggleSection = (sectionId: string) => {
     setExpandedSections((prev) => {
@@ -583,8 +652,18 @@ export default function ReportPage() {
             </Section>
           )}
 
-          {/* 5. Implementation Roadmap */}
+          {/* 5. Implementation Roadmap (opt-in) */}
           <Section num={5} id="roadmap" title="Implementation Roadmap" expanded={expandedSections.has("roadmap")} onToggle={() => toggleSection("roadmap")}>
+            {!hasRoadmap(report.implementationRoadmap) ? (
+              <OptionalSectionCta
+                title="Generate your roadmap"
+                description="A product-agnostic 12-month plan: what to do this quarter, this half, this year. Based on your tasks and tools — typically takes 30–60 seconds."
+                buttonLabel="Generate roadmap"
+                generating={Boolean(generatingStep.roadmap)}
+                error={stepError.roadmap || null}
+                onGenerate={() => generateOptionalSection("roadmap")}
+              />
+            ) : (
             <div className="space-y-8">
               {(["immediate", "mediumTerm", "longTerm"] as const).map((phase) => {
                 const data = report.implementationRoadmap[phase];
@@ -654,10 +733,21 @@ export default function ReportPage() {
                 );
               })}
             </div>
+            )}
           </Section>
 
-          {/* 6. Risk Assessment */}
+          {/* 6. Risk Assessment (opt-in) */}
           <Section num={6} id="risks" title="Risks, Pitfalls & Change Management" expanded={expandedSections.has("risks")} onToggle={() => toggleSection("risks")}>
+            {!report.riskAssessment?.displacementRisk ? (
+              <OptionalSectionCta
+                title="Generate your risk assessment"
+                description="Displacement risk for your role, skill gaps to close, and the human capabilities that grow more valuable alongside AI. Typically takes 30–60 seconds."
+                buttonLabel="Generate risk assessment"
+                generating={Boolean(generatingStep.risks)}
+                error={stepError.risks || null}
+                onGenerate={() => generateOptionalSection("risks")}
+              />
+            ) : (
             <div className="space-y-4">
               {/* Risk context + overall level */}
               <div className="mb-2">
@@ -754,11 +844,21 @@ export default function ReportPage() {
                 </div>
               )}
             </div>
+            )}
           </Section>
 
-          {/* 7. ROI Projections */}
-          {report.roiProjections.length > 0 && (
-            <Section num={7} id="roi" title="ROI Projections" expanded={expandedSections.has("roi")} onToggle={() => toggleSection("roi")}>
+          {/* 7. ROI Projections (opt-in) */}
+          <Section num={7} id="roi" title="ROI Projections" expanded={expandedSections.has("roi")} onToggle={() => toggleSection("roi")}>
+            {report.roiProjections.length === 0 ? (
+              <OptionalSectionCta
+                title="Project the ROI"
+                description="Cost, savings, and time-to-value for the highest-impact areas — with the math shown. Typically takes 20–40 seconds."
+                buttonLabel="Generate ROI projections"
+                generating={Boolean(generatingStep.roi)}
+                error={stepError.roi || null}
+                onGenerate={() => generateOptionalSection("roi")}
+              />
+            ) : (
               <div className="space-y-4">
                 {report.roiProjections.map((roi, i) => (
                   <div key={i} className="border border-gray-200 rounded-lg overflow-hidden">
@@ -803,10 +903,10 @@ export default function ReportPage() {
                   </div>
                 ))}
               </div>
-            </Section>
-          )}
+            )}
+          </Section>
 
-          {/* 8. Human Capabilities */}
+          {/* 8. Human Capabilities — generated as part of the Risks step */}
           {report.humanCapabilities && report.humanCapabilities.length > 0 && (
             <Section num={8} id="capabilities" title="Skills That Grow With AI" expanded={expandedSections.has("capabilities")} onToggle={() => toggleSection("capabilities")}>
               <p className="text-sm text-gray-400 mb-4">
@@ -1002,6 +1102,54 @@ function Section({ num, id, title, expanded, onToggle, children }: { num: number
 
 function Label({ children }: { children: React.ReactNode }) {
   return <p className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-1">{children}</p>;
+}
+
+function OptionalSectionCta({
+  title,
+  description,
+  buttonLabel,
+  generating,
+  error,
+  onGenerate,
+}: {
+  title: string;
+  description: string;
+  buttonLabel: string;
+  generating: boolean;
+  error: string | null;
+  onGenerate: () => void;
+}) {
+  return (
+    <div className="border border-dashed border-gray-200 bg-gray-50/40 rounded-xl px-5 py-6">
+      <div className="flex flex-col sm:flex-row sm:items-start gap-4">
+        <div className="flex-1">
+          <h4 className="text-md font-semibold text-gray-900 mb-1">{title}</h4>
+          <p className="text-sm text-gray-500 leading-relaxed">{description}</p>
+          {error && (
+            <p className="text-sm text-red-600 mt-2">
+              {error}{" "}
+              <button onClick={onGenerate} className="underline hover:no-underline">
+                Try again
+              </button>
+            </p>
+          )}
+        </div>
+        <button
+          onClick={onGenerate}
+          disabled={generating}
+          className="bg-accent hover:bg-[#4F52D4] text-white font-medium text-base px-4 py-2 rounded-lg transition-colors disabled:opacity-60 disabled:cursor-not-allowed flex items-center gap-2 sm:flex-shrink-0"
+        >
+          {generating && (
+            <svg className="animate-spin h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+            </svg>
+          )}
+          {generating ? "Generating..." : buttonLabel}
+        </button>
+      </div>
+    </div>
+  );
 }
 
 function OpportunityBadge({ level }: { level: string }) {

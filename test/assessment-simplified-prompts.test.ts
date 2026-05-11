@@ -38,7 +38,12 @@ vi.mock("@/data/tools", () => ({
   formatToolsForPrompt: () => "",
 }));
 
-import { generateStep2Tasks, generateStep3Tools, generateStep4Risks } from "@/lib/assessment/analyze";
+import {
+  generateStep2Tasks,
+  generateStep3Tools,
+  generateStep3Roadmap,
+  generateStep4Risks,
+} from "@/lib/assessment/analyze";
 
 const fakeResponse = (payload: unknown) => ({
   content: [{ type: "text", text: JSON.stringify(payload) }],
@@ -67,7 +72,21 @@ describe("Step 2 prompt — simplified", () => {
   beforeEach(() => createMock.mockReset());
 
   it("asks for 3-4 tasks per leg (parallel structure from #604) and removes the old 8-12 cap", async () => {
-    createMock.mockResolvedValue(fakeResponse({ taskAnalysis: [] }));
+    createMock.mockResolvedValue(
+      fakeResponse({
+        taskAnalysis: [
+          {
+            taskName: "Sample task",
+            department: "ops",
+            currentProcess: "manual",
+            aiOpportunity: "high",
+            aiApproach: "use AI",
+            expectedImpact: "save time",
+            complexity: "moderate",
+          },
+        ],
+      }),
+    );
     await generateStep2Tasks(intake, emptyReport);
     // System prompt no longer sets a count; each parallel leg's user prompt
     // carries the focus instruction including the per-leg count.
@@ -84,7 +103,21 @@ describe("Step 2 prompt — simplified", () => {
   });
 
   it("includes per-field word budgets in the system prompt", async () => {
-    createMock.mockResolvedValue(fakeResponse({ taskAnalysis: [] }));
+    createMock.mockResolvedValue(
+      fakeResponse({
+        taskAnalysis: [
+          {
+            taskName: "Sample task",
+            department: "ops",
+            currentProcess: "manual",
+            aiOpportunity: "high",
+            aiApproach: "use AI",
+            expectedImpact: "save time",
+            complexity: "moderate",
+          },
+        ],
+      }),
+    );
     await generateStep2Tasks(intake, emptyReport);
     const systemPrompt = createMock.mock.calls[0][0].system[0].text as string;
     expect(systemPrompt).toContain("WORD BUDGETS");
@@ -94,7 +127,21 @@ describe("Step 2 prompt — simplified", () => {
   });
 
   it("uses smaller per-leg max_tokens now that output is smaller and word-budgeted", async () => {
-    createMock.mockResolvedValue(fakeResponse({ taskAnalysis: [] }));
+    createMock.mockResolvedValue(
+      fakeResponse({
+        taskAnalysis: [
+          {
+            taskName: "Sample task",
+            department: "ops",
+            currentProcess: "manual",
+            aiOpportunity: "high",
+            aiApproach: "use AI",
+            expectedImpact: "save time",
+            complexity: "moderate",
+          },
+        ],
+      }),
+    );
     await generateStep2Tasks(intake, emptyReport);
     // Both legs run with the same max_tokens; fewer tasks + budgets means
     // we can fit comfortably under the previous 4500.
@@ -110,12 +157,21 @@ describe("Step 3 roadmap prompt — capped", () => {
   beforeEach(() => createMock.mockReset());
 
   it("caps phase actions and includes word budgets", async () => {
-    createMock.mockResolvedValue(fakeResponse({ toolRecommendations: [] }));
-    await generateStep3Tools(intake, emptyReport);
+    // After the Step 3 split, roadmap is its own opt-in generator with a
+    // single Claude call — its system prompt is the only one we need to inspect.
+    createMock.mockResolvedValue(
+      fakeResponse({
+        implementationRoadmap: {
+          immediate: { timeframe: "0-3 months", objectives: [], actions: [], expectedOutcomes: [] },
+          mediumTerm: { timeframe: "3-6 months", objectives: [], actions: [], expectedOutcomes: [] },
+          longTerm: { timeframe: "6-12+ months", objectives: [], actions: [], expectedOutcomes: [] },
+        },
+      }),
+    );
+    await generateStep3Roadmap(intake, emptyReport);
 
-    // Step 3 fans out to two calls; the roadmap is the second system prompt.
-    expect(createMock.mock.calls.length).toBeGreaterThanOrEqual(2);
-    const roadmapSystem = createMock.mock.calls[1][0].system[0].text as string;
+    expect(createMock.mock.calls.length).toBeGreaterThanOrEqual(1);
+    const roadmapSystem = createMock.mock.calls[0][0].system[0].text as string;
     expect(roadmapSystem).toContain("WORD BUDGETS");
     expect(roadmapSystem).toMatch(/3-5 actions/);
     expect(roadmapSystem).toMatch(/action\.description:.*one sentence/i);
@@ -127,7 +183,15 @@ describe("Step 4 prompt — drops furtherEvaluation + changeManagementNotes", ()
   beforeEach(() => createMock.mockReset());
 
   it("does not ask for furtherEvaluation in the JSON template", async () => {
-    createMock.mockResolvedValue(fakeResponse({ riskAssessment: {}, humanCapabilities: [] }));
+    createMock.mockResolvedValue(
+      fakeResponse({
+        riskAssessment: {
+          overallRiskLevel: "moderate",
+          displacementRisk: "Some risk text — non-empty so the throw guard passes.",
+        },
+        humanCapabilities: [],
+      }),
+    );
     await generateStep4Risks(intake, emptyReport);
     const systemPrompt = createMock.mock.calls[0][0].system[0].text as string;
     // The system prompt should explicitly instruct Claude NOT to produce
@@ -141,7 +205,15 @@ describe("Step 4 prompt — drops furtherEvaluation + changeManagementNotes", ()
   });
 
   it("does not reference changeManagementNotes as a required field anywhere in the prompt", async () => {
-    createMock.mockResolvedValue(fakeResponse({ riskAssessment: {}, humanCapabilities: [] }));
+    createMock.mockResolvedValue(
+      fakeResponse({
+        riskAssessment: {
+          overallRiskLevel: "moderate",
+          displacementRisk: "Some risk text — non-empty so the throw guard passes.",
+        },
+        humanCapabilities: [],
+      }),
+    );
     await generateStep4Risks(intake, emptyReport);
     const systemPrompt = createMock.mock.calls[0][0].system[0].text as string;
     // The field is not a required key in the JSON template, and it's not asked
@@ -156,7 +228,10 @@ describe("Step 4 prompt — drops furtherEvaluation + changeManagementNotes", ()
     // expected shape even if Claude does (incorrectly) still include it.
     createMock.mockResolvedValue(
       fakeResponse({
-        riskAssessment: { overallRiskLevel: "low" },
+        riskAssessment: {
+          overallRiskLevel: "low",
+          displacementRisk: "Low displacement risk for this role.",
+        },
         humanCapabilities: [],
         furtherEvaluation: ["stray content from old prompt version"],
       }),

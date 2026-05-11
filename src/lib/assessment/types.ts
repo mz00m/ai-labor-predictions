@@ -9,22 +9,43 @@ export interface AssessmentUser {
 
 // Multi-step pipeline types
 
-export type AssessmentStep = "profile" | "tasks" | "tools" | "risks";
+export type AssessmentStep =
+  | "profile"
+  | "tasks"
+  | "tools"
+  | "roadmap"
+  | "roi"
+  | "risks";
 
-export const ASSESSMENT_STEPS: AssessmentStep[] = ["profile", "tasks", "tools", "risks"];
+// Steps that run automatically end-to-end as soon as intake is submitted.
+// Designed to deliver the most practical, decision-ready data first (tools
+// to try this week) and keep wall-clock under ~90s end-to-end.
+export const AUTO_STEPS: AssessmentStep[] = ["profile", "tasks", "tools"];
+
+// Optional sections the user can generate on demand from the report page.
+// Each is its own Sonnet call, scoped narrowly so the user only pays the
+// latency for sections they want.
+export const OPTIONAL_STEPS: AssessmentStep[] = ["roadmap", "roi", "risks"];
+
+// Full ordered list of every supported step — used by the route validator.
+export const ASSESSMENT_STEPS: AssessmentStep[] = [...AUTO_STEPS, ...OPTIONAL_STEPS];
 
 export const STEP_LABELS: Record<AssessmentStep, string> = {
   profile: "Organization Profile & Quick Wins",
   tasks: "Task-by-Task Analysis",
-  tools: "Tool Recommendations & Roadmap",
-  risks: "Risk Assessment & Policy",
+  tools: "Tool Recommendations",
+  roadmap: "Implementation Roadmap",
+  roi: "ROI Projections",
+  risks: "Risk Assessment & Skills",
 };
 
 export const STEP_DESCRIPTIONS: Record<AssessmentStep, string> = {
   profile: "We'll analyze your organization, industry context, and identify immediate AI opportunities.",
   tasks: "Deep dive into your specific tasks and roles to find the highest-impact AI applications.",
-  tools: "Concrete tool recommendations, implementation roadmap, and ROI projections.",
-  risks: "Risk assessment, change management guidance, AI policy, and prompt library.",
+  tools: "Concrete AI tools to try, ranked by where to start, what to add next, and what to consider later.",
+  roadmap: "A product-agnostic 12-month plan: what to do this quarter, this half, this year.",
+  roi: "Estimated cost, savings, and time-to-value for the highest-impact areas — with the math shown.",
+  risks: "Displacement risk, skill gaps, and the human capabilities that grow more valuable alongside AI.",
 };
 
 /** Feedback the user provides between steps */

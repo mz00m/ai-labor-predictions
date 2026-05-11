@@ -27,11 +27,20 @@ export function hasStepOutput(assessment: Assessment | null, step: AssessmentSte
     case "tasks":
       return Boolean(report?.taskAnalysis && report.taskAnalysis.length > 0);
     case "tools":
-      return Boolean(report?.toolRecommendations && report.toolRecommendations.length > 0);
+      // Tools is the last AUTO step — server sets status to "complete" after
+      // the tool report lands. Either signal counts as recovery success.
+      return assessment.status === "complete" || Boolean(report?.toolRecommendations && report.toolRecommendations.length > 0);
+    case "roadmap":
+      return Boolean(
+        report?.implementationRoadmap &&
+        (report.implementationRoadmap.immediate?.actions?.length ||
+          report.implementationRoadmap.mediumTerm?.actions?.length ||
+          report.implementationRoadmap.longTerm?.actions?.length)
+      );
+    case "roi":
+      return Boolean(report?.roiProjections && report.roiProjections.length > 0);
     case "risks":
-      // Step 4 is the last step — server sets status to "complete" after
-      // the risk report lands (route.ts:206).
-      return assessment.status === "complete" || Boolean(report?.riskAssessment);
+      return Boolean(report?.riskAssessment?.displacementRisk);
     default:
       return false;
   }
