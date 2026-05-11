@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-11T16:46:50.516Z",
+  "generatedAt": "2026-05-11T18:02:28.835Z",
   "methodology": "Per-occupation risk uses the 5-dimension framework from src/lib/scoring-shared.ts. technicalExposure: Karpathy/GPT exposure score carried through. adoptionSpeed: taskComposition-weighted CATEGORY_ADOPTION_LAG mapped to 0-10. adaptability: pay percentile (within 342) + education tier, equal-weighted. demandElasticity: rule-based defaults by BLS major category (3/5/7). complementarity: estimateComplementarityFromTasks + dimensionality adjustment. Task riskScore = clamp(exposure*10 * adoptionFactor * declineFactor * importanceFactor, 0, 100). Bucket thresholds: low < 33, medium 33-66, high > 66. Time-share rollup is O*NET-importance-weighted.",
   "count": 342,
   "occupations": [
@@ -395,10 +395,10 @@
       "technicalExposure": 5,
       "adoptionSpeed": 5.1883333333333335,
       "adaptability": 7.7941176470588225,
-      "demandElasticity": 5,
+      "demandElasticity": 4,
       "complementarity": 5.260115606936416,
-      "netRisk": 4.56652589822056,
-      "netRisk100": 46,
+      "netRisk": 4.71652589822056,
+      "netRisk100": 47,
       "tasks": [
         {
           "taskName": "Getting Information",
@@ -776,10 +776,10 @@
       "technicalExposure": 8,
       "adoptionSpeed": 5.291666666666668,
       "adaptability": 8.367647058823529,
-      "demandElasticity": 5,
+      "demandElasticity": 3,
       "complementarity": 4.916187050359712,
-      "netRisk": 5.469948864437862,
-      "netRisk100": 55,
+      "netRisk": 5.769948864437861,
+      "netRisk100": 58,
       "tasks": [
         {
           "taskName": "Working with Computers",
@@ -903,10 +903,10 @@
       "technicalExposure": 5,
       "adoptionSpeed": 5.491666666666666,
       "adaptability": 6.058823529411765,
-      "demandElasticity": 5,
+      "demandElasticity": 6,
       "complementarity": 4.2730103806228374,
-      "netRisk": 5.084907727797001,
-      "netRisk100": 51,
+      "netRisk": 4.934907727797001,
+      "netRisk100": 49,
       "tasks": [
         {
           "taskName": "Getting Information",
@@ -1411,10 +1411,10 @@
       "technicalExposure": 6,
       "adoptionSpeed": 5.415000000000001,
       "adaptability": 6.985294117647058,
-      "demandElasticity": 5,
+      "demandElasticity": 6,
       "complementarity": 4.5652802893309214,
-      "netRisk": 5.172149824486757,
-      "netRisk100": 52,
+      "netRisk": 5.022149824486757,
+      "netRisk100": 50,
       "tasks": [
         {
           "taskName": "Working with Computers",
@@ -1538,10 +1538,10 @@
       "technicalExposure": 3,
       "adoptionSpeed": 5,
       "adaptability": 1.2352941176470589,
-      "demandElasticity": 5,
+      "demandElasticity": 4,
       "complementarity": 6.6,
-      "netRisk": 4.644705882352941,
-      "netRisk100": 46,
+      "netRisk": 4.794705882352941,
+      "netRisk100": 48,
       "tasks": [],
       "pctHighRiskTime": 0,
       "pctMediumRiskTime": 0,
@@ -1559,10 +1559,10 @@
       "technicalExposure": 7,
       "adoptionSpeed": 5.346666666666667,
       "adaptability": 7.5588235294117645,
-      "demandElasticity": 5,
+      "demandElasticity": 4,
       "complementarity": 4.554166666666667,
-      "netRisk": 5.374676470588235,
-      "netRisk100": 54,
+      "netRisk": 5.5246764705882345,
+      "netRisk100": 55,
       "tasks": [
         {
           "taskName": "Making Decisions and Solving Problems",
@@ -1813,10 +1813,10 @@
       "technicalExposure": 5,
       "adoptionSpeed": 5.136666666666666,
       "adaptability": 5.970588235294118,
-      "demandElasticity": 5,
+      "demandElasticity": 4,
       "complementarity": 5.324180327868852,
-      "netRisk": 4.816909032465444,
-      "netRisk100": 48,
+      "netRisk": 4.966909032465445,
+      "netRisk100": 50,
       "tasks": [
         {
           "taskName": "Operating Vehicles, Mechanized Devices, or Equipment",
@@ -1940,10 +1940,10 @@
       "technicalExposure": 2,
       "adoptionSpeed": 5,
       "adaptability": 1.073529411764706,
-      "demandElasticity": 7,
+      "demandElasticity": 5,
       "complementarity": 6.6,
-      "netRisk": 4.068970588235294,
-      "netRisk100": 41,
+      "netRisk": 4.368970588235294,
+      "netRisk100": 44,
       "tasks": [],
       "pctHighRiskTime": 0,
       "pctMediumRiskTime": 0,
@@ -2215,10 +2215,10 @@
       "technicalExposure": 7,
       "adoptionSpeed": 5.286666666666669,
       "adaptability": 6.1911764705882355,
-      "demandElasticity": 3,
+      "demandElasticity": 2,
       "complementarity": 4.571923743500866,
-      "netRisk": 5.864272114044925,
-      "netRisk100": 59,
+      "netRisk": 6.014272114044925,
+      "netRisk100": 60,
       "tasks": [
         {
           "taskName": "Getting Information",
@@ -2342,10 +2342,10 @@
       "technicalExposure": 7,
       "adoptionSpeed": 5.46212879546213,
       "adaptability": 7.294117647058823,
-      "demandElasticity": 5,
+      "demandElasticity": 6,
       "complementarity": 4.411130434782608,
-      "netRisk": 5.466082025077081,
-      "netRisk100": 55,
+      "netRisk": 5.3160820250770815,
+      "netRisk100": 53,
       "tasks": [
         {
           "taskName": "Working with Computers",
@@ -2469,10 +2469,10 @@
       "technicalExposure": 7,
       "adoptionSpeed": 5.3900000000000015,
       "adaptability": 8.426470588235293,
-      "demandElasticity": 5,
+      "demandElasticity": 3,
       "complementarity": 4.627708703374777,
-      "netRisk": 5.238487671089751,
-      "netRisk100": 52,
+      "netRisk": 5.538487671089751,
+      "netRisk100": 55,
       "tasks": [
         {
           "taskName": "Getting Information",
@@ -2723,10 +2723,10 @@
       "technicalExposure": 8,
       "adoptionSpeed": 5.379999999999999,
       "adaptability": 7.867647058823529,
-      "demandElasticity": 7,
+      "demandElasticity": 8,
       "complementarity": 4.68888888888889,
-      "netRisk": 5.3080751633986925,
-      "netRisk100": 53,
+      "netRisk": 5.158075163398693,
+      "netRisk100": 52,
       "tasks": [
         {
           "taskName": "Thinking Creatively",
@@ -2998,10 +2998,10 @@
       "technicalExposure": 3,
       "adoptionSpeed": 5.093333333333335,
       "adaptability": 6.132352941176471,
-      "demandElasticity": 3,
+      "demandElasticity": 2,
       "complementarity": 5.366081871345029,
-      "netRisk": 4.47559735122119,
-      "netRisk100": 45,
+      "netRisk": 4.62559735122119,
+      "netRisk100": 46,
       "tasks": [
         {
           "taskName": "Assisting and Caring for Others",
@@ -3252,10 +3252,10 @@
       "technicalExposure": 4,
       "adoptionSpeed": 5.11177844511178,
       "adaptability": 8.676470588235293,
-      "demandElasticity": 3,
+      "demandElasticity": 2,
       "complementarity": 5.172623574144486,
-      "netRisk": 4.436360385958165,
-      "netRisk100": 44,
+      "netRisk": 4.586360385958164,
+      "netRisk100": 46,
       "tasks": [
         {
           "taskName": "Assisting and Caring for Others",
@@ -3760,10 +3760,10 @@
       "technicalExposure": 2,
       "adoptionSpeed": 4.763569763569762,
       "adaptability": 2.676470588235294,
-      "demandElasticity": 7,
+      "demandElasticity": 5,
       "complementarity": 6.521379310344828,
-      "netRisk": 3.7969675024096925,
-      "netRisk100": 38,
+      "netRisk": 4.096967502409693,
+      "netRisk100": 41,
       "tasks": [
         {
           "taskName": "Performing for or Working Directly with the Public",
@@ -3887,10 +3887,10 @@
       "technicalExposure": 2,
       "adoptionSpeed": 4.826666666666669,
       "adaptability": 0.044117647058823525,
-      "demandElasticity": 7,
+      "demandElasticity": 6,
       "complementarity": 6.320087336244542,
-      "netRisk": 4.244698219025601,
-      "netRisk100": 42,
+      "netRisk": 4.394698219025601,
+      "netRisk100": 44,
       "tasks": [
         {
           "taskName": "Performing for or Working Directly with the Public",
@@ -4268,10 +4268,10 @@
       "technicalExposure": 7,
       "adoptionSpeed": 5.478333333333336,
       "adaptability": 7.8088235294117645,
-      "demandElasticity": 5,
+      "demandElasticity": 6,
       "complementarity": 4.403886925795053,
-      "netRisk": 5.393565752095892,
-      "netRisk100": 54,
+      "netRisk": 5.243565752095892,
+      "netRisk100": 52,
       "tasks": [
         {
           "taskName": "Working with Computers",
@@ -5305,10 +5305,10 @@
       "technicalExposure": 4,
       "adoptionSpeed": 5.156666666666665,
       "adaptability": 5.382352941176471,
-      "demandElasticity": 3,
+      "demandElasticity": 2,
       "complementarity": 5.031144465290807,
-      "netRisk": 4.967751499098702,
-      "netRisk100": 50,
+      "netRisk": 5.1177514990987,
+      "netRisk100": 51,
       "tasks": [
         {
           "taskName": "Assisting and Caring for Others",
@@ -5686,10 +5686,10 @@
       "technicalExposure": 8,
       "adoptionSpeed": 5.496666666666666,
       "adaptability": 6.6764705882352935,
-      "demandElasticity": 5,
+      "demandElasticity": 6,
       "complementarity": 4.258151260504201,
-      "netRisk": 5.896232492997199,
-      "netRisk100": 59,
+      "netRisk": 5.7462324929971995,
+      "netRisk100": 57,
       "tasks": [
         {
           "taskName": "Getting Information",
@@ -5940,10 +5940,10 @@
       "technicalExposure": 3,
       "adoptionSpeed": 4.963333333333333,
       "adaptability": 2.9705882352941178,
-      "demandElasticity": 7,
+      "demandElasticity": 6,
       "complementarity": 6.05,
-      "netRisk": 4.187078431372549,
-      "netRisk100": 42,
+      "netRisk": 4.337078431372548,
+      "netRisk100": 43,
       "tasks": [
         {
           "taskName": "Training and Teaching Others",
@@ -6067,10 +6067,10 @@
       "technicalExposure": 6,
       "adoptionSpeed": 5.488822155488823,
       "adaptability": 7.970588235294118,
-      "demandElasticity": 5,
+      "demandElasticity": 6,
       "complementarity": 4.326896551724138,
-      "netRisk": 5.086796885458819,
-      "netRisk100": 51,
+      "netRisk": 4.9367968854588185,
+      "netRisk100": 49,
       "tasks": [
         {
           "taskName": "Making Decisions and Solving Problems",
@@ -6448,10 +6448,10 @@
       "technicalExposure": 2,
       "adoptionSpeed": 4.951666666666665,
       "adaptability": 1.0294117647058825,
-      "demandElasticity": 7,
+      "demandElasticity": 5,
       "complementarity": 5.927234927234927,
-      "netRisk": 4.2004745831804655,
-      "netRisk100": 42,
+      "netRisk": 4.500474583180465,
+      "netRisk100": 45,
       "tasks": [
         {
           "taskName": "Assisting and Caring for Others",
@@ -6575,10 +6575,10 @@
       "technicalExposure": 3,
       "adoptionSpeed": 5.0683333333333325,
       "adaptability": 8.25,
-      "demandElasticity": 3,
+      "demandElasticity": 2,
       "complementarity": 5.508771929824561,
-      "netRisk": 4.124412280701755,
-      "netRisk100": 41,
+      "netRisk": 4.274412280701754,
+      "netRisk100": 43,
       "tasks": [
         {
           "taskName": "Assisting and Caring for Others",
@@ -6702,10 +6702,10 @@
       "technicalExposure": 6,
       "adoptionSpeed": 5.545000000000003,
       "adaptability": 5.088235294117647,
-      "demandElasticity": 5,
+      "demandElasticity": 6,
       "complementarity": 4.159935379644588,
-      "netRisk": 5.563777629953436,
-      "netRisk100": 56,
+      "netRisk": 5.413777629953437,
+      "netRisk100": 54,
       "tasks": [
         {
           "taskName": "Getting Information",
@@ -6829,10 +6829,10 @@
       "technicalExposure": 6,
       "adoptionSpeed": 5.413333333333333,
       "adaptability": 7.426470588235294,
-      "demandElasticity": 5,
+      "demandElasticity": 6,
       "complementarity": 4.628723404255318,
-      "netRisk": 5.0929513975803085,
-      "netRisk100": 51,
+      "netRisk": 4.942951397580309,
+      "netRisk100": 49,
       "tasks": [
         {
           "taskName": "Getting Information",
@@ -7083,10 +7083,10 @@
       "technicalExposure": 5,
       "adoptionSpeed": 5.233333333333334,
       "adaptability": 5.5588235294117645,
-      "demandElasticity": 3,
+      "demandElasticity": 2,
       "complementarity": 4.8999999999999995,
-      "netRisk": 5.282843137254902,
-      "netRisk100": 53,
+      "netRisk": 5.432843137254903,
+      "netRisk100": 54,
       "tasks": [
         {
           "taskName": "Making Decisions and Solving Problems",
@@ -7464,10 +7464,10 @@
       "technicalExposure": 7,
       "adoptionSpeed": 5.33133533133533,
       "adaptability": 8.26470588235294,
-      "demandElasticity": 5,
+      "demandElasticity": 3,
       "complementarity": 4.863783783783784,
-      "netRisk": 5.203804427157368,
-      "netRisk100": 52,
+      "netRisk": 5.503804427157368,
+      "netRisk100": 55,
       "tasks": [
         {
           "taskName": "Communicating with Supervisors, Peers, or Subordinates",
@@ -7845,10 +7845,10 @@
       "technicalExposure": 9,
       "adoptionSpeed": 5.533333333333335,
       "adaptability": 9.029411764705882,
-      "demandElasticity": 5,
+      "demandElasticity": 6,
       "complementarity": 4.23876500857633,
-      "netRisk": 5.854501900245518,
-      "netRisk100": 59,
+      "netRisk": 5.704501900245519,
+      "netRisk100": 57,
       "tasks": [
         {
           "taskName": "Working with Computers",
@@ -7972,10 +7972,10 @@
       "technicalExposure": 7,
       "adoptionSpeed": 5.341666666666667,
       "adaptability": 8.441176470588236,
-      "demandElasticity": 5,
+      "demandElasticity": 3,
       "complementarity": 4.860917431192661,
-      "netRisk": 5.179973376506566,
-      "netRisk100": 52,
+      "netRisk": 5.479973376506566,
+      "netRisk100": 55,
       "tasks": [
         {
           "taskName": "Working with Computers",
@@ -8226,10 +8226,10 @@
       "technicalExposure": 8,
       "adoptionSpeed": 5.46212879546213,
       "adaptability": 8.073529411764707,
-      "demandElasticity": 5,
+      "demandElasticity": 6,
       "complementarity": 4.411130434782608,
-      "netRisk": 5.649170260371198,
-      "netRisk100": 56,
+      "netRisk": 5.499170260371198,
+      "netRisk100": 55,
       "tasks": [
         {
           "taskName": "Working with Computers",
@@ -8353,10 +8353,10 @@
       "technicalExposure": 9,
       "adoptionSpeed": 5.576666666666666,
       "adaptability": 7.382352941176471,
-      "demandElasticity": 5,
+      "demandElasticity": 7,
       "complementarity": 4.148494983277592,
-      "netRisk": 6.128281395501344,
-      "netRisk100": 61,
+      "netRisk": 5.828281395501344,
+      "netRisk100": 58,
       "tasks": [
         {
           "taskName": "Working with Computers",
@@ -8480,10 +8480,10 @@
       "technicalExposure": 8,
       "adoptionSpeed": 5.426666666666667,
       "adaptability": 3.044117647058824,
-      "demandElasticity": 5,
+      "demandElasticity": 7,
       "complementarity": 4.433043478260869,
-      "netRisk": 6.392106990622336,
-      "netRisk100": 64,
+      "netRisk": 6.0921069906223355,
+      "netRisk100": 61,
       "tasks": [
         {
           "taskName": "Working with Computers",
@@ -8607,10 +8607,10 @@
       "technicalExposure": 8,
       "adoptionSpeed": 5.458333333333334,
       "adaptability": 7.661764705882352,
-      "demandElasticity": 5,
+      "demandElasticity": 7,
       "complementarity": 4.347750865051903,
-      "netRisk": 5.7228517877739336,
-      "netRisk100": 57,
+      "netRisk": 5.422851787773933,
+      "netRisk100": 54,
       "tasks": [
         {
           "taskName": "Working with Computers",
@@ -8734,10 +8734,10 @@
       "technicalExposure": 5,
       "adoptionSpeed": 5.096666666666668,
       "adaptability": 1.338235294117647,
-      "demandElasticity": 7,
+      "demandElasticity": 5,
       "complementarity": 5.348571428571429,
-      "netRisk": 5.198883753501401,
-      "netRisk100": 52,
+      "netRisk": 5.498883753501401,
+      "netRisk100": 55,
       "tasks": [
         {
           "taskName": "Getting Information",
@@ -9369,10 +9369,10 @@
       "technicalExposure": 5,
       "adoptionSpeed": 5.1433333333333335,
       "adaptability": 7.823529411764706,
-      "demandElasticity": 5,
+      "demandElasticity": 4,
       "complementarity": 5.38698224852071,
-      "netRisk": 4.527740805197819,
-      "netRisk100": 45,
+      "netRisk": 4.6777408051978195,
+      "netRisk100": 47,
       "tasks": [
         {
           "taskName": "Communicating with Supervisors, Peers, or Subordinates",
@@ -9496,10 +9496,10 @@
       "technicalExposure": 3,
       "adoptionSpeed": 4.963333333333333,
       "adaptability": 1.2058823529411764,
-      "demandElasticity": 7,
+      "demandElasticity": 6,
       "complementarity": 6.05,
-      "netRisk": 4.45178431372549,
-      "netRisk100": 45,
+      "netRisk": 4.60178431372549,
+      "netRisk100": 46,
       "tasks": [
         {
           "taskName": "Training and Teaching Others",
@@ -9623,10 +9623,10 @@
       "technicalExposure": 3,
       "adoptionSpeed": 5.028333333333332,
       "adaptability": 2.6176470588235294,
-      "demandElasticity": 3,
+      "demandElasticity": 1,
       "complementarity": 5.447801147227534,
-      "netRisk": 4.97345937839763,
-      "netRisk100": 50,
+      "netRisk": 5.2734593783976305,
+      "netRisk100": 53,
       "tasks": [
         {
           "taskName": "Resolving Conflicts and Negotiating with Others",
@@ -9877,10 +9877,10 @@
       "technicalExposure": 9,
       "adoptionSpeed": 5.595595595595595,
       "adaptability": 5.147058823529411,
-      "demandElasticity": 3,
+      "demandElasticity": 2,
       "complementarity": 4.031378763866877,
-      "netRisk": 6.790784542816332,
-      "netRisk100": 68,
+      "netRisk": 6.940784542816331,
+      "netRisk100": 69,
       "tasks": [
         {
           "taskName": "Documenting/Recording Information",
@@ -10004,10 +10004,10 @@
       "technicalExposure": 6,
       "adoptionSpeed": 5.113220113220112,
       "adaptability": 2.485294117647059,
-      "demandElasticity": 7,
+      "demandElasticity": 8,
       "complementarity": 5.276171874999999,
-      "netRisk": 5.344615529996963,
-      "netRisk100": 53,
+      "netRisk": 5.194615529996963,
+      "netRisk100": 52,
       "tasks": [
         {
           "taskName": "Thinking Creatively",
@@ -10512,10 +10512,10 @@
       "technicalExposure": 9,
       "adoptionSpeed": 5,
       "adaptability": 7.88235294117647,
-      "demandElasticity": 5,
+      "demandElasticity": 6,
       "complementarity": 6.6,
-      "netRisk": 5.447647058823529,
-      "netRisk100": 54,
+      "netRisk": 5.297647058823529,
+      "netRisk100": 53,
       "tasks": [],
       "pctHighRiskTime": 0,
       "pctMediumRiskTime": 0,
@@ -10533,10 +10533,10 @@
       "technicalExposure": 9,
       "adoptionSpeed": 5.443333333333333,
       "adaptability": 7.98529411764706,
-      "demandElasticity": 5,
+      "demandElasticity": 7,
       "complementarity": 4.455208333333333,
-      "netRisk": 5.949830882352941,
-      "netRisk100": 59,
+      "netRisk": 5.649830882352941,
+      "netRisk100": 56,
       "tasks": [
         {
           "taskName": "Working with Computers",
@@ -10914,10 +10914,10 @@
       "technicalExposure": 3,
       "adoptionSpeed": 5.088333333333333,
       "adaptability": 3.4411764705882355,
-      "demandElasticity": 3,
+      "demandElasticity": 2,
       "complementarity": 5.316538461538461,
-      "netRisk": 4.888182503770739,
-      "netRisk100": 49,
+      "netRisk": 5.038182503770739,
+      "netRisk100": 50,
       "tasks": [
         {
           "taskName": "Getting Information",
@@ -11041,10 +11041,10 @@
       "technicalExposure": 2,
       "adoptionSpeed": 4.988333333333332,
       "adaptability": 6.485294117647059,
-      "demandElasticity": 3,
+      "demandElasticity": 5,
       "complementarity": 5.591146881287726,
-      "netRisk": 4.056643172762062,
-      "netRisk100": 41,
+      "netRisk": 3.7566431727620624,
+      "netRisk100": 38,
       "tasks": [
         {
           "taskName": "Establishing and Maintaining Interpersonal Relationships",
@@ -11168,10 +11168,10 @@
       "technicalExposure": 3,
       "adoptionSpeed": 5.088333333333333,
       "adaptability": 9.955882352941178,
-      "demandElasticity": 3,
+      "demandElasticity": 1,
       "complementarity": 5.459557344064385,
-      "netRisk": 3.882372844912613,
-      "netRisk100": 39,
+      "netRisk": 4.182372844912613,
+      "netRisk100": 42,
       "tasks": [
         {
           "taskName": "Getting Information",
@@ -11422,10 +11422,10 @@
       "technicalExposure": 5,
       "adoptionSpeed": 5.106560106560106,
       "adaptability": 6.338235294117647,
-      "demandElasticity": 3,
+      "demandElasticity": 2,
       "complementarity": 5.2011450381679385,
-      "netRisk": 5.080347719560787,
-      "netRisk100": 51,
+      "netRisk": 5.230347719560786,
+      "netRisk100": 52,
       "tasks": [
         {
           "taskName": "Assisting and Caring for Others",
@@ -11676,10 +11676,10 @@
       "technicalExposure": 6,
       "adoptionSpeed": 5.206666666666666,
       "adaptability": 6.397058823529411,
-      "demandElasticity": 3,
+      "demandElasticity": 2,
       "complementarity": 4.956350626118069,
-      "netRisk": 5.440504384580308,
-      "netRisk100": 54,
+      "netRisk": 5.590504384580307,
+      "netRisk100": 56,
       "tasks": [
         {
           "taskName": "Assisting and Caring for Others",
@@ -11803,10 +11803,10 @@
       "technicalExposure": 9,
       "adoptionSpeed": 5.6000000000000005,
       "adaptability": 5.25,
-      "demandElasticity": 5,
+      "demandElasticity": 6,
       "complementarity": 4.077294685990338,
-      "netRisk": 6.467041062801933,
-      "netRisk100": 65,
+      "netRisk": 6.317041062801932,
+      "netRisk100": 63,
       "tasks": [
         {
           "taskName": "Working with Computers",
@@ -12184,10 +12184,10 @@
       "technicalExposure": 9,
       "adoptionSpeed": 5.438333333333334,
       "adaptability": 6.485294117647058,
-      "demandElasticity": 7,
+      "demandElasticity": 6,
       "complementarity": 4.507692307692308,
-      "netRisk": 5.863334087481146,
-      "netRisk100": 59,
+      "netRisk": 6.013334087481146,
+      "netRisk100": 60,
       "tasks": [
         {
           "taskName": "Working with Computers",
@@ -12311,10 +12311,10 @@
       "technicalExposure": 5,
       "adoptionSpeed": 5.371666666666666,
       "adaptability": 5.838235294117648,
-      "demandElasticity": 5,
+      "demandElasticity": 6,
       "complementarity": 4.578339350180505,
-      "netRisk": 5.032930169179585,
-      "netRisk100": 50,
+      "netRisk": 4.882930169179586,
+      "netRisk100": 49,
       "tasks": [
         {
           "taskName": "Working with Computers",
@@ -12438,10 +12438,10 @@
       "technicalExposure": 7,
       "adoptionSpeed": 5.499999999999999,
       "adaptability": 7.9264705882352935,
-      "demandElasticity": 5,
+      "demandElasticity": 6,
       "complementarity": 4.400348432055749,
-      "netRisk": 5.380959725353557,
-      "netRisk100": 54,
+      "netRisk": 5.230959725353556,
+      "netRisk100": 52,
       "tasks": [
         {
           "taskName": "Working with Computers",
@@ -12946,10 +12946,10 @@
       "technicalExposure": 4,
       "adoptionSpeed": 5.333333333333332,
       "adaptability": 5.529411764705882,
-      "demandElasticity": 5,
+      "demandElasticity": 6,
       "complementarity": 4.663216266173752,
-      "netRisk": 4.7546116487260335,
-      "netRisk100": 48,
+      "netRisk": 4.604611648726034,
+      "netRisk100": 46,
       "tasks": [
         {
           "taskName": "Working with Computers",
@@ -13073,10 +13073,10 @@
       "technicalExposure": 6,
       "adoptionSpeed": 5.088333333333335,
       "adaptability": 8.441176470588236,
-      "demandElasticity": 5,
+      "demandElasticity": 4,
       "complementarity": 5.491796875,
-      "netRisk": 4.703130821078432,
-      "netRisk100": 47,
+      "netRisk": 4.853130821078431,
+      "netRisk100": 49,
       "tasks": [
         {
           "taskName": "Establishing and Maintaining Interpersonal Relationships",
@@ -13327,10 +13327,10 @@
       "technicalExposure": 6,
       "adoptionSpeed": 5.096666666666668,
       "adaptability": 7,
-      "demandElasticity": 5,
+      "demandElasticity": 4,
       "complementarity": 5.522529644268774,
-      "netRisk": 4.9148274044795786,
-      "netRisk100": 49,
+      "netRisk": 5.064827404479579,
+      "netRisk100": 51,
       "tasks": [
         {
           "taskName": "Communicating with Supervisors, Peers, or Subordinates",
@@ -13454,10 +13454,10 @@
       "technicalExposure": 3,
       "adoptionSpeed": 5,
       "adaptability": 3.382352941176471,
-      "demandElasticity": 3,
+      "demandElasticity": 2,
       "complementarity": 6.6,
-      "netRisk": 4.62264705882353,
-      "netRisk100": 46,
+      "netRisk": 4.772647058823529,
+      "netRisk100": 48,
       "tasks": [],
       "pctHighRiskTime": 0,
       "pctMediumRiskTime": 0,
@@ -13475,10 +13475,10 @@
       "technicalExposure": 5,
       "adoptionSpeed": 5.054999999999997,
       "adaptability": 6.588235294117647,
-      "demandElasticity": 5,
+      "demandElasticity": 4,
       "complementarity": 5.717034068136272,
-      "netRisk": 4.629357892255098,
-      "netRisk100": 46,
+      "netRisk": 4.779357892255097,
+      "netRisk100": 48,
       "tasks": [
         {
           "taskName": "Communicating with Supervisors, Peers, or Subordinates",
@@ -13602,10 +13602,10 @@
       "technicalExposure": 5,
       "adoptionSpeed": 5.27,
       "adaptability": 4.455882352941177,
-      "demandElasticity": 5,
+      "demandElasticity": 6,
       "complementarity": 4.823616236162361,
-      "netRisk": 5.170894399826351,
-      "netRisk100": 52,
+      "netRisk": 5.020894399826352,
+      "netRisk100": 50,
       "tasks": [
         {
           "taskName": "Communicating with Supervisors, Peers, or Subordinates",
@@ -13729,10 +13729,10 @@
       "technicalExposure": 6,
       "adoptionSpeed": 5.311666666666668,
       "adaptability": 7.705882352941176,
-      "demandElasticity": 5,
+      "demandElasticity": 6,
       "complementarity": 4.871926605504587,
-      "netRisk": 4.98206565929124,
-      "netRisk100": 50,
+      "netRisk": 4.83206565929124,
+      "netRisk100": 48,
       "tasks": [
         {
           "taskName": "Getting Information",
@@ -14237,10 +14237,10 @@
       "technicalExposure": 4,
       "adoptionSpeed": 5.023356690023357,
       "adaptability": 5.147058823529411,
-      "demandElasticity": 3,
+      "demandElasticity": 2,
       "complementarity": 5.5093023255813955,
-      "netRisk": 4.880752049358981,
-      "netRisk100": 49,
+      "netRisk": 5.030752049358981,
+      "netRisk100": 50,
       "tasks": [
         {
           "taskName": "Assisting and Caring for Others",
@@ -14364,10 +14364,10 @@
       "technicalExposure": 4,
       "adoptionSpeed": 5.053333333333333,
       "adaptability": 4.558823529411765,
-      "demandElasticity": 5,
+      "demandElasticity": 4,
       "complementarity": 5.735714285714286,
-      "netRisk": 4.629700280112044,
-      "netRisk100": 46,
+      "netRisk": 4.779700280112045,
+      "netRisk100": 48,
       "tasks": [
         {
           "taskName": "Making Decisions and Solving Problems",
@@ -14491,10 +14491,10 @@
       "technicalExposure": 7,
       "adoptionSpeed": 5.238333333333332,
       "adaptability": 6.882352941176471,
-      "demandElasticity": 7,
+      "demandElasticity": 8,
       "complementarity": 5.178202676864245,
-      "netRisk": 5.029673190117347,
-      "netRisk100": 50,
+      "netRisk": 4.879673190117347,
+      "netRisk100": 49,
       "tasks": [
         {
           "taskName": "Thinking Creatively",
@@ -14914,10 +14914,10 @@
       "technicalExposure": 7,
       "adoptionSpeed": 5.196666666666665,
       "adaptability": 8.397058823529411,
-      "demandElasticity": 5,
+      "demandElasticity": 3,
       "complementarity": 5.177443609022556,
-      "netRisk": 5.09428578799941,
-      "netRisk100": 51,
+      "netRisk": 5.39428578799941,
+      "netRisk100": 54,
       "tasks": [
         {
           "taskName": "Working with Computers",
@@ -15041,10 +15041,10 @@
       "technicalExposure": 4,
       "adoptionSpeed": 5.1433333333333335,
       "adaptability": 4,
-      "demandElasticity": 3,
+      "demandElasticity": 1,
       "complementarity": 5.201136363636364,
-      "netRisk": 5.138439393939395,
-      "netRisk100": 51,
+      "netRisk": 5.438439393939394,
+      "netRisk100": 54,
       "tasks": [
         {
           "taskName": "Evaluating Information to Determine Compliance with Standards",
@@ -15168,10 +15168,10 @@
       "technicalExposure": 3,
       "adoptionSpeed": 4.966666666666664,
       "adaptability": 4.3088235294117645,
-      "demandElasticity": 3,
+      "demandElasticity": 1,
       "complementarity": 5.772670807453416,
-      "netRisk": 4.642475642430885,
-      "netRisk100": 46,
+      "netRisk": 4.942475642430885,
+      "netRisk100": 49,
       "tasks": [
         {
           "taskName": "Inspecting Equipment, Structures, or Materials",
@@ -15295,10 +15295,10 @@
       "technicalExposure": 2,
       "adoptionSpeed": 4.996666666666667,
       "adaptability": 0,
-      "demandElasticity": 5,
+      "demandElasticity": 4,
       "complementarity": 5.772268907563026,
-      "netRisk": 4.694879551820728,
-      "netRisk100": 47,
+      "netRisk": 4.844879551820728,
+      "netRisk100": 48,
       "tasks": [
         {
           "taskName": "Inspecting Equipment, Structures, or Materials",
@@ -15422,10 +15422,10 @@
       "technicalExposure": 3,
       "adoptionSpeed": 4.866666666666666,
       "adaptability": 1.8676470588235294,
-      "demandElasticity": 7,
+      "demandElasticity": 5,
       "complementarity": 5.041237113402062,
-      "netRisk": 4.534938851829391,
-      "netRisk100": 45,
+      "netRisk": 4.834938851829391,
+      "netRisk100": 48,
       "tasks": [
         {
           "taskName": "Performing General Physical Activities",
@@ -15803,10 +15803,10 @@
       "technicalExposure": 3,
       "adoptionSpeed": 5.148333333333331,
       "adaptability": 1.25,
-      "demandElasticity": 7,
+      "demandElasticity": 8,
       "complementarity": 4.182287822878228,
-      "netRisk": 4.85570910209102,
-      "netRisk100": 49,
+      "netRisk": 4.705709102091021,
+      "netRisk100": 47,
       "tasks": [
         {
           "taskName": "Getting Information",
@@ -15930,10 +15930,10 @@
       "technicalExposure": 3,
       "adoptionSpeed": 5,
       "adaptability": 0,
-      "demandElasticity": 7,
+      "demandElasticity": 6,
       "complementarity": 6.6,
-      "netRisk": 4.529999999999999,
-      "netRisk100": 45,
+      "netRisk": 4.68,
+      "netRisk100": 47,
       "tasks": [],
       "pctHighRiskTime": 0,
       "pctMediumRiskTime": 0,
@@ -15951,10 +15951,10 @@
       "technicalExposure": 2,
       "adoptionSpeed": 4.8850000000000025,
       "adaptability": 0.08823529411764705,
-      "demandElasticity": 7,
+      "demandElasticity": 6,
       "complementarity": 6.091063829787233,
-      "netRisk": 4.295551939924907,
-      "netRisk100": 43,
+      "netRisk": 4.445551939924907,
+      "netRisk100": 44,
       "tasks": [
         {
           "taskName": "Getting Information",
@@ -16099,10 +16099,10 @@
       "technicalExposure": 4,
       "adoptionSpeed": 5.011666666666668,
       "adaptability": 3.485294117647059,
-      "demandElasticity": 5,
+      "demandElasticity": 4,
       "complementarity": 5.7460122699386496,
-      "netRisk": 4.780336761698544,
-      "netRisk100": 48,
+      "netRisk": 4.930336761698545,
+      "netRisk100": 49,
       "tasks": [
         {
           "taskName": "Identifying Objects, Actions, and Events",
@@ -16353,10 +16353,10 @@
       "technicalExposure": 2,
       "adoptionSpeed": 5.128333333333333,
       "adaptability": 1.6617647058823533,
-      "demandElasticity": 5,
+      "demandElasticity": 4,
       "complementarity": 5.372781065088757,
-      "netRisk": 4.551845747766562,
-      "netRisk100": 46,
+      "netRisk": 4.701845747766562,
+      "netRisk100": 47,
       "tasks": [
         {
           "taskName": "Operating Vehicles, Mechanized Devices, or Equipment",
@@ -16607,10 +16607,10 @@
       "technicalExposure": 3,
       "adoptionSpeed": 4.996666666666665,
       "adaptability": 4.514705882352942,
-      "demandElasticity": 7,
+      "demandElasticity": 5,
       "complementarity": 5.772064777327936,
-      "netRisk": 4.017714495514804,
-      "netRisk100": 40,
+      "netRisk": 4.317714495514805,
+      "netRisk100": 43,
       "tasks": [
         {
           "taskName": "Performing for or Working Directly with the Public",
@@ -16734,10 +16734,10 @@
       "technicalExposure": 4,
       "adoptionSpeed": 5.00833333333333,
       "adaptability": 1.1911764705882353,
-      "demandElasticity": 7,
+      "demandElasticity": 5,
       "complementarity": 5.559765625,
-      "netRisk": 4.861037071078431,
-      "netRisk100": 49,
+      "netRisk": 5.161037071078431,
+      "netRisk100": 52,
       "tasks": [
         {
           "taskName": "Performing for or Working Directly with the Public",
@@ -17115,10 +17115,10 @@
       "technicalExposure": 6,
       "adoptionSpeed": 5.369999999999999,
       "adaptability": 8.147058823529411,
-      "demandElasticity": 3,
+      "demandElasticity": 2,
       "complementarity": 4.458649093904448,
-      "netRisk": 5.310211357689699,
-      "netRisk100": 53,
+      "netRisk": 5.4602113576896985,
+      "netRisk100": 55,
       "tasks": [
         {
           "taskName": "Updating and Using Relevant Knowledge",
@@ -17644,10 +17644,10 @@
       "technicalExposure": 9,
       "adoptionSpeed": 5.409999999999999,
       "adaptability": 5.5,
-      "demandElasticity": 7,
+      "demandElasticity": 9,
       "complementarity": 4.609407665505227,
-      "netRisk": 5.985118466898954,
-      "netRisk100": 60,
+      "netRisk": 5.685118466898954,
+      "netRisk100": 57,
       "tasks": [
         {
           "taskName": "Thinking Creatively",
@@ -18046,10 +18046,10 @@
       "technicalExposure": 5,
       "adoptionSpeed": 5.238571905238572,
       "adaptability": 7.852941176470588,
-      "demandElasticity": 5,
+      "demandElasticity": 6,
       "complementarity": 4.968715083798882,
-      "netRisk": 4.626030187817349,
-      "netRisk100": 46,
+      "netRisk": 4.47603018781735,
+      "netRisk100": 45,
       "tasks": [
         {
           "taskName": "Evaluating Information to Determine Compliance with Standards",
@@ -18300,10 +18300,10 @@
       "technicalExposure": 8,
       "adoptionSpeed": 5,
       "adaptability": 5.397058823529413,
-      "demandElasticity": 3,
+      "demandElasticity": 2,
       "complementarity": 6.6,
-      "netRisk": 5.820441176470588,
-      "netRisk100": 58,
+      "netRisk": 5.9704411764705885,
+      "netRisk100": 60,
       "tasks": [],
       "pctHighRiskTime": 0,
       "pctMediumRiskTime": 0,
@@ -18956,10 +18956,10 @@
       "technicalExposure": 2,
       "adoptionSpeed": 4.938333333333332,
       "adaptability": 1.1323529411764706,
-      "demandElasticity": 3,
+      "demandElasticity": 2,
       "complementarity": 5.839103869653768,
-      "netRisk": 4.799992951559442,
-      "netRisk100": 48,
+      "netRisk": 4.949992951559442,
+      "netRisk100": 49,
       "tasks": [
         {
           "taskName": "Assisting and Caring for Others",
@@ -19083,10 +19083,10 @@
       "technicalExposure": 7,
       "adoptionSpeed": 5.086666666666666,
       "adaptability": 8.25,
-      "demandElasticity": 5,
+      "demandElasticity": 3,
       "complementarity": 5.543873517786562,
-      "netRisk": 5.021058629776022,
-      "netRisk100": 50,
+      "netRisk": 5.3210586297760205,
+      "netRisk100": 53,
       "tasks": [
         {
           "taskName": "Communicating with Supervisors, Peers, or Subordinates",
@@ -19464,10 +19464,10 @@
       "technicalExposure": 8,
       "adoptionSpeed": 5.510000000000002,
       "adaptability": 6.779411764705882,
-      "demandElasticity": 7,
+      "demandElasticity": 8,
       "complementarity": 4.23361064891847,
-      "netRisk": 5.588366105510424,
-      "netRisk100": 56,
+      "netRisk": 5.438366105510424,
+      "netRisk100": 54,
       "tasks": [
         {
           "taskName": "Drafting, Laying Out, and Specifying Technical Devices, Parts, and Equipment",
@@ -19591,10 +19591,10 @@
       "technicalExposure": 6,
       "adoptionSpeed": 5.354999999999999,
       "adaptability": 5.176470588235294,
-      "demandElasticity": 5,
+      "demandElasticity": 6,
       "complementarity": 4.700367647058823,
-      "netRisk": 5.404455882352941,
-      "netRisk100": 54,
+      "netRisk": 5.254455882352941,
+      "netRisk100": 53,
       "tasks": [
         {
           "taskName": "Making Decisions and Solving Problems",
@@ -19718,10 +19718,10 @@
       "technicalExposure": 7,
       "adoptionSpeed": 5.4766666666666675,
       "adaptability": 7.514705882352941,
-      "demandElasticity": 5,
+      "demandElasticity": 6,
       "complementarity": 4.3477508650519034,
-      "netRisk": 5.448577277970012,
-      "netRisk100": 54,
+      "netRisk": 5.298577277970011,
+      "netRisk100": 53,
       "tasks": [
         {
           "taskName": "Making Decisions and Solving Problems",
@@ -19972,10 +19972,10 @@
       "technicalExposure": 6,
       "adoptionSpeed": 5.216666666666666,
       "adaptability": 7.941176470588235,
-      "demandElasticity": 5,
+      "demandElasticity": 4,
       "complementarity": 5.138610038610039,
-      "netRisk": 4.87443485502309,
-      "netRisk100": 49,
+      "netRisk": 5.02443485502309,
+      "netRisk100": 50,
       "tasks": [
         {
           "taskName": "Getting Information",
@@ -20226,10 +20226,10 @@
       "technicalExposure": 8,
       "adoptionSpeed": 5.6000000000000005,
       "adaptability": 8,
-      "demandElasticity": 5,
+      "demandElasticity": 6,
       "complementarity": 4.075613747954174,
-      "netRisk": 5.754877250409166,
-      "netRisk100": 58,
+      "netRisk": 5.6048772504091655,
+      "netRisk100": 56,
       "tasks": [
         {
           "taskName": "Working with Computers",
@@ -20861,10 +20861,10 @@
       "technicalExposure": 7,
       "adoptionSpeed": 5.301666666666665,
       "adaptability": 5.779411764705882,
-      "demandElasticity": 7,
+      "demandElasticity": 8,
       "complementarity": 4.8661896243291585,
-      "netRisk": 5.270183643761619,
-      "netRisk100": 53,
+      "netRisk": 5.120183643761619,
+      "netRisk100": 51,
       "tasks": [
         {
           "taskName": "Thinking Creatively",
@@ -21496,10 +21496,10 @@
       "technicalExposure": 7,
       "adoptionSpeed": 5.375000000000002,
       "adaptability": 9.676470588235293,
-      "demandElasticity": 3,
+      "demandElasticity": 1,
       "complementarity": 4.389700996677741,
-      "netRisk": 5.395589212429158,
-      "netRisk100": 54,
+      "netRisk": 5.695589212429159,
+      "netRisk100": 57,
       "tasks": [
         {
           "taskName": "Making Decisions and Solving Problems",
@@ -21877,10 +21877,10 @@
       "technicalExposure": 7,
       "adoptionSpeed": 5.33,
       "adaptability": 6.794117647058824,
-      "demandElasticity": 5,
+      "demandElasticity": 6,
       "complementarity": 4.782142857142857,
-      "netRisk": 5.4404537815126055,
-      "netRisk100": 54,
+      "netRisk": 5.290453781512605,
+      "netRisk100": 53,
       "tasks": [
         {
           "taskName": "Drafting, Laying Out, and Specifying Technical Devices, Parts, and Equipment",
@@ -22004,10 +22004,10 @@
       "technicalExposure": 8,
       "adoptionSpeed": 5.228333333333333,
       "adaptability": 9.823529411764707,
-      "demandElasticity": 3,
+      "demandElasticity": 1,
       "complementarity": 5.045841035120149,
-      "netRisk": 5.512969047877931,
-      "netRisk100": 55,
+      "netRisk": 5.812969047877931,
+      "netRisk100": 58,
       "tasks": [
         {
           "taskName": "Getting Information",
@@ -22385,10 +22385,10 @@
       "technicalExposure": 4,
       "adoptionSpeed": 5.138333333333334,
       "adaptability": 4.602941176470589,
-      "demandElasticity": 3,
+      "demandElasticity": 2,
       "complementarity": 5.248183556405353,
-      "netRisk": 5.037588778915008,
-      "netRisk100": 50,
+      "netRisk": 5.187588778915008,
+      "netRisk100": 52,
       "tasks": [
         {
           "taskName": "Assisting and Caring for Others",
@@ -22639,10 +22639,10 @@
       "technicalExposure": 5,
       "adoptionSpeed": 5.0566666666666675,
       "adaptability": 3.7058823529411766,
-      "demandElasticity": 5,
+      "demandElasticity": 4,
       "complementarity": 5.598816568047337,
-      "netRisk": 5.08568766678269,
-      "netRisk100": 51,
+      "netRisk": 5.23568766678269,
+      "netRisk100": 52,
       "tasks": [
         {
           "taskName": "Communicating with Supervisors, Peers, or Subordinates",
@@ -22766,10 +22766,10 @@
       "technicalExposure": 2,
       "adoptionSpeed": 5,
       "adaptability": 2.1764705882352944,
-      "demandElasticity": 5,
+      "demandElasticity": 4,
       "complementarity": 6.6,
-      "netRisk": 4.2035294117647055,
-      "netRisk100": 42,
+      "netRisk": 4.353529411764706,
+      "netRisk100": 44,
       "tasks": [],
       "pctHighRiskTime": 0,
       "pctMediumRiskTime": 0,
@@ -23168,10 +23168,10 @@
       "technicalExposure": 2,
       "adoptionSpeed": 4.8166666666666655,
       "adaptability": 2.6029411764705883,
-      "demandElasticity": 7,
+      "demandElasticity": 5,
       "complementarity": 6.240000000000001,
-      "netRisk": 3.8748921568627446,
-      "netRisk100": 39,
+      "netRisk": 4.174892156862745,
+      "netRisk100": 42,
       "tasks": [
         {
           "taskName": "Performing for or Working Directly with the Public",
@@ -23295,10 +23295,10 @@
       "technicalExposure": 7,
       "adoptionSpeed": 5.333333333333333,
       "adaptability": 7.76470588235294,
-      "demandElasticity": 5,
+      "demandElasticity": 6,
       "complementarity": 4.7217550274223035,
-      "netRisk": 5.307609778829265,
-      "netRisk100": 53,
+      "netRisk": 5.157609778829265,
+      "netRisk100": 52,
       "tasks": [
         {
           "taskName": "Getting Information",
@@ -23803,10 +23803,10 @@
       "technicalExposure": 2,
       "adoptionSpeed": 4.928333333333333,
       "adaptability": 4.117647058823529,
-      "demandElasticity": 3,
+      "demandElasticity": 2,
       "complementarity": 5.804809619238477,
-      "netRisk": 4.357057683995442,
-      "netRisk100": 44,
+      "netRisk": 4.507057683995442,
+      "netRisk100": 45,
       "tasks": [
         {
           "taskName": "Assisting and Caring for Others",
@@ -24184,10 +24184,10 @@
       "technicalExposure": 7,
       "adoptionSpeed": 5.360360360360361,
       "adaptability": 7.838235294117647,
-      "demandElasticity": 5,
+      "demandElasticity": 6,
       "complementarity": 4.695779816513761,
-      "netRisk": 5.307180814651673,
-      "netRisk100": 53,
+      "netRisk": 5.1571808146516736,
+      "netRisk100": 52,
       "tasks": [
         {
           "taskName": "Analyzing Data or Information",
@@ -24311,10 +24311,10 @@
       "technicalExposure": 9,
       "adoptionSpeed": 5.421666666666668,
       "adaptability": 8.485294117647058,
-      "demandElasticity": 5,
+      "demandElasticity": 6,
       "complementarity": 4.5385159010600695,
-      "netRisk": 5.853836035474261,
-      "netRisk100": 59,
+      "netRisk": 5.703836035474261,
+      "netRisk100": 57,
       "tasks": [
         {
           "taskName": "Thinking Creatively",
@@ -24438,10 +24438,10 @@
       "technicalExposure": 5,
       "adoptionSpeed": 5.345000000000001,
       "adaptability": 5.470588235294118,
-      "demandElasticity": 5,
+      "demandElasticity": 6,
       "complementarity": 4.671428571428571,
-      "netRisk": 5.064126050420168,
-      "netRisk100": 51,
+      "netRisk": 4.914126050420168,
+      "netRisk100": 49,
       "tasks": [
         {
           "taskName": "Getting Information",
@@ -24565,10 +24565,10 @@
       "technicalExposure": 7,
       "adoptionSpeed": 5.529999999999999,
       "adaptability": 7.617647058823529,
-      "demandElasticity": 5,
+      "demandElasticity": 6,
       "complementarity": 4.215593220338984,
-      "netRisk": 5.470234297108673,
-      "netRisk100": 55,
+      "netRisk": 5.320234297108674,
+      "netRisk100": 53,
       "tasks": [
         {
           "taskName": "Drafting, Laying Out, and Specifying Technical Devices, Parts, and Equipment",
@@ -24692,10 +24692,10 @@
       "technicalExposure": 6,
       "adoptionSpeed": 5.191666666666668,
       "adaptability": 7.911764705882352,
-      "demandElasticity": 5,
+      "demandElasticity": 4,
       "complementarity": 5.226235741444866,
-      "netRisk": 4.856321479162007,
-      "netRisk100": 49,
+      "netRisk": 5.006321479162008,
+      "netRisk100": 50,
       "tasks": [
         {
           "taskName": "Communicating with Supervisors, Peers, or Subordinates",
@@ -24819,10 +24819,10 @@
       "technicalExposure": 4,
       "adoptionSpeed": 5.266666666666667,
       "adaptability": 3.205882352941176,
-      "demandElasticity": 3,
+      "demandElasticity": 2,
       "complementarity": 4.831941923774954,
-      "netRisk": 5.356062595637166,
-      "netRisk100": 54,
+      "netRisk": 5.506062595637166,
+      "netRisk100": 55,
       "tasks": [
         {
           "taskName": "Getting Information",
@@ -24946,10 +24946,10 @@
       "technicalExposure": 8,
       "adoptionSpeed": 5.500000000000001,
       "adaptability": 8.220588235294118,
-      "demandElasticity": 3,
+      "demandElasticity": 1,
       "complementarity": 4.3020689655172415,
-      "netRisk": 5.956497971602434,
-      "netRisk100": 60,
+      "netRisk": 6.256497971602434,
+      "netRisk100": 63,
       "tasks": [
         {
           "taskName": "Working with Computers",
@@ -25200,10 +25200,10 @@
       "technicalExposure": 9,
       "adoptionSpeed": 5,
       "adaptability": 3.7058823529411766,
-      "demandElasticity": 3,
+      "demandElasticity": 2,
       "complementarity": 6.6,
-      "netRisk": 6.3741176470588226,
-      "netRisk100": 64,
+      "netRisk": 6.524117647058823,
+      "netRisk100": 65,
       "tasks": [],
       "pctHighRiskTime": 0,
       "pctMediumRiskTime": 0,
@@ -25348,10 +25348,10 @@
       "technicalExposure": 10,
       "adoptionSpeed": 5.465000000000001,
       "adaptability": 2.88235294117647,
-      "demandElasticity": 3,
+      "demandElasticity": 2,
       "complementarity": 4.2654952076677315,
-      "netRisk": 7.357548017289983,
-      "netRisk100": 74,
+      "netRisk": 7.507548017289983,
+      "netRisk100": 75,
       "tasks": [
         {
           "taskName": "Working with Computers",
@@ -25877,10 +25877,10 @@
       "technicalExposure": 4,
       "adoptionSpeed": 5,
       "adaptability": 1,
-      "demandElasticity": 3,
+      "demandElasticity": 1,
       "complementarity": 6.6,
-      "netRisk": 5.28,
-      "netRisk100": 53,
+      "netRisk": 5.58,
+      "netRisk100": 56,
       "tasks": [],
       "pctHighRiskTime": 0,
       "pctMediumRiskTime": 0,
@@ -25898,10 +25898,10 @@
       "technicalExposure": 6,
       "adoptionSpeed": 5.408333333333333,
       "adaptability": 7.485294117647059,
-      "demandElasticity": 5,
+      "demandElasticity": 6,
       "complementarity": 4.559304347826087,
-      "netRisk": 5.097011679454391,
-      "netRisk100": 51,
+      "netRisk": 4.947011679454391,
+      "netRisk100": 49,
       "tasks": [
         {
           "taskName": "Working with Computers",
@@ -26406,10 +26406,10 @@
       "technicalExposure": 7,
       "adoptionSpeed": 5.328333333333336,
       "adaptability": 8.38235294117647,
-      "demandElasticity": 5,
+      "demandElasticity": 3,
       "complementarity": 4.92593984962406,
-      "netRisk": 5.173125755565385,
-      "netRisk100": 52,
+      "netRisk": 5.473125755565386,
+      "netRisk100": 55,
       "tasks": [
         {
           "taskName": "Monitoring Processes, Materials, or Surroundings",
@@ -26533,10 +26533,10 @@
       "technicalExposure": 8,
       "adoptionSpeed": 5.498333333333334,
       "adaptability": 7.3088235294117645,
-      "demandElasticity": 5,
+      "demandElasticity": 7,
       "complementarity": 4.292783505154639,
-      "netRisk": 5.7947864362239745,
-      "netRisk100": 58,
+      "netRisk": 5.494786436223974,
+      "netRisk100": 55,
       "tasks": [
         {
           "taskName": "Working with Computers",
@@ -26914,10 +26914,10 @@
       "technicalExposure": 4,
       "adoptionSpeed": 5.128333333333333,
       "adaptability": 6.573529411764706,
-      "demandElasticity": 3,
+      "demandElasticity": 2,
       "complementarity": 5.182889733840304,
-      "netRisk": 4.753059308133899,
-      "netRisk100": 48,
+      "netRisk": 4.9030593081339,
+      "netRisk100": 49,
       "tasks": [
         {
           "taskName": "Assisting and Caring for Others",
@@ -27168,10 +27168,10 @@
       "technicalExposure": 5,
       "adoptionSpeed": 5.128333333333331,
       "adaptability": 8.852941176470587,
-      "demandElasticity": 3,
+      "demandElasticity": 1,
       "complementarity": 5.176404494382022,
-      "netRisk": 4.712444591319674,
-      "netRisk100": 47,
+      "netRisk": 5.012444591319674,
+      "netRisk100": 50,
       "tasks": [
         {
           "taskName": "Documenting/Recording Information",
@@ -27295,10 +27295,10 @@
       "technicalExposure": 2,
       "adoptionSpeed": 5.009999999999999,
       "adaptability": 1.4852941176470589,
-      "demandElasticity": 3,
+      "demandElasticity": 2,
       "complementarity": 5.575,
-      "netRisk": 4.814205882352941,
-      "netRisk100": 48,
+      "netRisk": 4.964205882352941,
+      "netRisk100": 50,
       "tasks": [
         {
           "taskName": "Assisting and Caring for Others",
@@ -27422,10 +27422,10 @@
       "technicalExposure": 5,
       "adoptionSpeed": 5.210000000000002,
       "adaptability": 4.220588235294118,
-      "demandElasticity": 3,
+      "demandElasticity": 2,
       "complementarity": 5.015555555555555,
-      "netRisk": 5.455800653594772,
-      "netRisk100": 55,
+      "netRisk": 5.6058006535947715,
+      "netRisk100": 56,
       "tasks": [
         {
           "taskName": "Getting Information",
@@ -27549,10 +27549,10 @@
       "technicalExposure": 3,
       "adoptionSpeed": 5.090000000000002,
       "adaptability": 8.117647058823529,
-      "demandElasticity": 3,
+      "demandElasticity": 2,
       "complementarity": 5.390384615384615,
-      "netRisk": 4.172276018099548,
-      "netRisk100": 42,
+      "netRisk": 4.322276018099548,
+      "netRisk100": 43,
       "tasks": [
         {
           "taskName": "Documenting/Recording Information",
@@ -27676,10 +27676,10 @@
       "technicalExposure": 3,
       "adoptionSpeed": 5.089910089910089,
       "adaptability": 3.5441176470588234,
-      "demandElasticity": 3,
+      "demandElasticity": 2,
       "complementarity": 5.417864077669903,
-      "netRisk": 4.852791555389214,
-      "netRisk100": 49,
+      "netRisk": 5.002791555389214,
+      "netRisk100": 50,
       "tasks": [
         {
           "taskName": "Documenting/Recording Information",
@@ -27930,10 +27930,10 @@
       "technicalExposure": 9,
       "adoptionSpeed": 5.505000000000003,
       "adaptability": 7.132352941176469,
-      "demandElasticity": 5,
+      "demandElasticity": 6,
       "complementarity": 4.351269035532995,
-      "netRisk": 6.110893251716931,
-      "netRisk100": 61,
+      "netRisk": 5.96089325171693,
+      "netRisk100": 60,
       "tasks": [
         {
           "taskName": "Getting Information",
@@ -28057,10 +28057,10 @@
       "technicalExposure": 4,
       "adoptionSpeed": 5.058333333333334,
       "adaptability": 1.8970588235294117,
-      "demandElasticity": 3,
+      "demandElasticity": 2,
       "complementarity": 5.352918287937742,
-      "netRisk": 5.406524185549706,
-      "netRisk100": 54,
+      "netRisk": 5.556524185549707,
+      "netRisk100": 56,
       "tasks": [
         {
           "taskName": "Performing for or Working Directly with the Public",
@@ -28184,10 +28184,10 @@
       "technicalExposure": 4,
       "adoptionSpeed": 5.161666666666665,
       "adaptability": 9.647058823529411,
-      "demandElasticity": 3,
+      "demandElasticity": 1,
       "complementarity": 5.107692307692307,
-      "netRisk": 4.31373604826546,
-      "netRisk100": 43,
+      "netRisk": 4.61373604826546,
+      "netRisk100": 46,
       "tasks": [
         {
           "taskName": "Assisting and Caring for Others",
@@ -28311,10 +28311,10 @@
       "technicalExposure": 4,
       "adoptionSpeed": 5.145,
       "adaptability": 7.411764705882353,
-      "demandElasticity": 3,
+      "demandElasticity": 2,
       "complementarity": 5.2069632495164395,
-      "netRisk": 4.625842644214359,
-      "netRisk100": 46,
+      "netRisk": 4.775842644214359,
+      "netRisk100": 48,
       "tasks": [
         {
           "taskName": "Documenting/Recording Information",
@@ -28692,10 +28692,10 @@
       "technicalExposure": 9,
       "adoptionSpeed": 5.548333333333334,
       "adaptability": 4.735294117647059,
-      "demandElasticity": 3,
+      "demandElasticity": 2,
       "complementarity": 4.170322580645162,
-      "netRisk": 6.8153080328905755,
-      "netRisk100": 68,
+      "netRisk": 6.965308032890576,
+      "netRisk100": 70,
       "tasks": [
         {
           "taskName": "Documenting/Recording Information",
@@ -29200,10 +29200,10 @@
       "technicalExposure": 5,
       "adoptionSpeed": 5.233333333333334,
       "adaptability": 9.691176470588236,
-      "demandElasticity": 3,
+      "demandElasticity": 1,
       "complementarity": 4.905474452554744,
-      "netRisk": 4.661895305567483,
-      "netRisk100": 47,
+      "netRisk": 4.961895305567483,
+      "netRisk100": 50,
       "tasks": [
         {
           "taskName": "Documenting/Recording Information",
@@ -29327,10 +29327,10 @@
       "technicalExposure": 4,
       "adoptionSpeed": 5.133333333333333,
       "adaptability": 1.6029411764705883,
-      "demandElasticity": 3,
+      "demandElasticity": 2,
       "complementarity": 5.115241635687732,
-      "netRisk": 5.513177163058532,
-      "netRisk100": 55,
+      "netRisk": 5.663177163058532,
+      "netRisk100": 57,
       "tasks": [
         {
           "taskName": "Getting Information",
@@ -29454,10 +29454,10 @@
       "technicalExposure": 2,
       "adoptionSpeed": 5.085,
       "adaptability": 3.1470588235294117,
-      "demandElasticity": 3,
+      "demandElasticity": 2,
       "complementarity": 5.345697896749521,
-      "netRisk": 4.6258015971206845,
-      "netRisk100": 46,
+      "netRisk": 4.775801597120684,
+      "netRisk100": 48,
       "tasks": [
         {
           "taskName": "Assisting and Caring for Others",
@@ -29708,10 +29708,10 @@
       "technicalExposure": 3,
       "adoptionSpeed": 5.0532800532800515,
       "adaptability": 2.867647058823529,
-      "demandElasticity": 3,
+      "demandElasticity": 2,
       "complementarity": 5.365,
-      "netRisk": 4.95750895183248,
-      "netRisk100": 50,
+      "netRisk": 5.1075089518324805,
+      "netRisk100": 51,
       "tasks": [
         {
           "taskName": "Assisting and Caring for Others",
@@ -29835,10 +29835,10 @@
       "technicalExposure": 3,
       "adoptionSpeed": 5.041666666666669,
       "adaptability": 8.98529411764706,
-      "demandElasticity": 3,
+      "demandElasticity": 5,
       "complementarity": 5.487766990291262,
-      "netRisk": 4.012985817628023,
-      "netRisk100": 40,
+      "netRisk": 3.7129858176280224,
+      "netRisk100": 37,
       "tasks": [
         {
           "taskName": "Assisting and Caring for Others",
@@ -29962,10 +29962,10 @@
       "technicalExposure": 5,
       "adoptionSpeed": 5.198333333333334,
       "adaptability": 8.882352941176471,
-      "demandElasticity": 3,
+      "demandElasticity": 1,
       "complementarity": 4.93763440860215,
-      "netRisk": 4.769786843769767,
-      "netRisk100": 48,
+      "netRisk": 5.069786843769767,
+      "netRisk100": 51,
       "tasks": [
         {
           "taskName": "Assisting and Caring for Others",
@@ -30089,10 +30089,10 @@
       "technicalExposure": 5,
       "adoptionSpeed": 5,
       "adaptability": 9.985294117647058,
-      "demandElasticity": 3,
+      "demandElasticity": 1,
       "complementarity": 6.6,
-      "netRisk": 4.232205882352941,
-      "netRisk100": 42,
+      "netRisk": 4.532205882352941,
+      "netRisk100": 45,
       "tasks": [],
       "pctHighRiskTime": 0,
       "pctMediumRiskTime": 0,
@@ -30110,10 +30110,10 @@
       "technicalExposure": 7,
       "adoptionSpeed": 5.470000000000002,
       "adaptability": 9.911764705882353,
-      "demandElasticity": 5,
+      "demandElasticity": 4,
       "complementarity": 4.377319587628866,
-      "netRisk": 5.081771376591874,
-      "netRisk100": 51,
+      "netRisk": 5.231771376591874,
+      "netRisk100": 52,
       "tasks": [
         {
           "taskName": "Working with Computers",
@@ -30364,10 +30364,10 @@
       "technicalExposure": 4,
       "adoptionSpeed": 5.188333333333331,
       "adaptability": 9.838235294117649,
-      "demandElasticity": 3,
+      "demandElasticity": 1,
       "complementarity": 5.13921200750469,
-      "netRisk": 4.284088971048082,
-      "netRisk100": 43,
+      "netRisk": 4.5840889710480806,
+      "netRisk100": 46,
       "tasks": [
         {
           "taskName": "Assisting and Caring for Others",
@@ -30491,10 +30491,10 @@
       "technicalExposure": 4,
       "adoptionSpeed": 5.058391725058393,
       "adaptability": 4.117647058823529,
-      "demandElasticity": 3,
+      "demandElasticity": 1,
       "complementarity": 5.541846758349704,
-      "netRisk": 5.035661934518209,
-      "netRisk100": 50,
+      "netRisk": 5.335661934518209,
+      "netRisk100": 53,
       "tasks": [
         {
           "taskName": "Getting Information",
@@ -30618,10 +30618,10 @@
       "technicalExposure": 8,
       "adoptionSpeed": 5.495495495495495,
       "adaptability": 8.985294117647058,
-      "demandElasticity": 5,
+      "demandElasticity": 4,
       "complementarity": 4.2910299003322265,
-      "netRisk": 5.543099001385595,
-      "netRisk100": 55,
+      "netRisk": 5.693099001385595,
+      "netRisk100": 57,
       "tasks": [
         {
           "taskName": "Analyzing Data or Information",
@@ -30872,10 +30872,10 @@
       "technicalExposure": 7,
       "adoptionSpeed": 5.261666666666667,
       "adaptability": 8.426470588235293,
-      "demandElasticity": 5,
+      "demandElasticity": 4,
       "complementarity": 5.049721706864564,
-      "netRisk": 5.128418403725126,
-      "netRisk100": 51,
+      "netRisk": 5.2784184037251265,
+      "netRisk100": 53,
       "tasks": [
         {
           "taskName": "Making Decisions and Solving Problems",
@@ -31147,10 +31147,10 @@
       "technicalExposure": 5,
       "adoptionSpeed": 4.956666666666665,
       "adaptability": 5,
-      "demandElasticity": 5,
+      "demandElasticity": 4,
       "complementarity": 5.937319587628866,
-      "netRisk": 4.80386941580756,
-      "netRisk100": 48,
+      "netRisk": 4.95386941580756,
+      "netRisk100": 50,
       "tasks": [
         {
           "taskName": "Training and Teaching Others",
@@ -31401,10 +31401,10 @@
       "technicalExposure": 6,
       "adoptionSpeed": 5.37203870537204,
       "adaptability": 2.426470588235294,
-      "demandElasticity": 3,
+      "demandElasticity": 1,
       "complementarity": 4.586339754816112,
-      "netRisk": 6.143169201875891,
-      "netRisk100": 61,
+      "netRisk": 6.443169201875891,
+      "netRisk100": 64,
       "tasks": [
         {
           "taskName": "Getting Information",
@@ -31930,10 +31930,10 @@
       "technicalExposure": 6,
       "adoptionSpeed": 5.155000000000001,
       "adaptability": 3.6029411764705888,
-      "demandElasticity": 5,
+      "demandElasticity": 4,
       "complementarity": 5.359611650485437,
-      "netRisk": 5.468636493432324,
-      "netRisk100": 55,
+      "netRisk": 5.618636493432325,
+      "netRisk100": 56,
       "tasks": [
         {
           "taskName": "Making Decisions and Solving Problems",
@@ -32057,10 +32057,10 @@
       "technicalExposure": 3,
       "adoptionSpeed": 5.0616666666666665,
       "adaptability": 1.5441176470588236,
-      "demandElasticity": 3,
+      "demandElasticity": 2,
       "complementarity": 5.358070500927644,
-      "netRisk": 5.159101586088981,
-      "netRisk100": 52,
+      "netRisk": 5.309101586088981,
+      "netRisk100": 53,
       "tasks": [
         {
           "taskName": "Assisting and Caring for Others",
@@ -32311,10 +32311,10 @@
       "technicalExposure": 7,
       "adoptionSpeed": 5.2600000000000025,
       "adaptability": 8.117647058823529,
-      "demandElasticity": 5,
+      "demandElasticity": 3,
       "complementarity": 4.947142857142856,
-      "netRisk": 5.1949243697479,
-      "netRisk100": 52,
+      "netRisk": 5.4949243697479,
+      "netRisk100": 55,
       "tasks": [
         {
           "taskName": "Establishing and Maintaining Interpersonal Relationships",
@@ -32946,10 +32946,10 @@
       "technicalExposure": 4,
       "adoptionSpeed": 5.153333333333334,
       "adaptability": 6.8235294117647065,
-      "demandElasticity": 3,
+      "demandElasticity": 2,
       "complementarity": 5.086148007590133,
-      "netRisk": 4.739907653383934,
-      "netRisk100": 47,
+      "netRisk": 4.8899076533839345,
+      "netRisk100": 49,
       "tasks": [
         {
           "taskName": "Assisting and Caring for Others",
@@ -33073,10 +33073,10 @@
       "technicalExposure": 4,
       "adoptionSpeed": 5.008333333333331,
       "adaptability": 5.98529411764706,
-      "demandElasticity": 3,
+      "demandElasticity": 2,
       "complementarity": 5.491764705882353,
-      "netRisk": 4.755519607843136,
-      "netRisk100": 48,
+      "netRisk": 4.905519607843137,
+      "netRisk100": 49,
       "tasks": [
         {
           "taskName": "Assisting and Caring for Others",
@@ -33581,10 +33581,10 @@
       "technicalExposure": 3,
       "adoptionSpeed": 5.086666666666666,
       "adaptability": 1.161764705882353,
-      "demandElasticity": 7,
+      "demandElasticity": 5,
       "complementarity": 5.553999999999999,
-      "netRisk": 4.58226862745098,
-      "netRisk100": 46,
+      "netRisk": 4.88226862745098,
+      "netRisk100": 49,
       "tasks": [
         {
           "taskName": "Getting Information",
@@ -33708,10 +33708,10 @@
       "technicalExposure": 3,
       "adoptionSpeed": 4.956666666666665,
       "adaptability": 5.397058823529411,
-      "demandElasticity": 3,
+      "demandElasticity": 2,
       "complementarity": 5.975155279503105,
-      "netRisk": 4.436743453903301,
-      "netRisk100": 44,
+      "netRisk": 4.5867434539033,
+      "netRisk100": 46,
       "tasks": [
         {
           "taskName": "Assisting and Caring for Others",
@@ -33835,10 +33835,10 @@
       "technicalExposure": 4,
       "adoptionSpeed": 5.083333333333334,
       "adaptability": 7.220588235294118,
-      "demandElasticity": 3,
+      "demandElasticity": 2,
       "complementarity": 5.403861003861004,
-      "netRisk": 4.602806230600349,
-      "netRisk100": 46,
+      "netRisk": 4.752806230600348,
+      "netRisk100": 48,
       "tasks": [
         {
           "taskName": "Assisting and Caring for Others",
@@ -34089,10 +34089,10 @@
       "technicalExposure": 4,
       "adoptionSpeed": 5.106666666666665,
       "adaptability": 6.11764705882353,
-      "demandElasticity": 3,
+      "demandElasticity": 2,
       "complementarity": 5.276023391812866,
-      "netRisk": 4.79848159614723,
-      "netRisk100": 48,
+      "netRisk": 4.94848159614723,
+      "netRisk100": 49,
       "tasks": [
         {
           "taskName": "Documenting/Recording Information",
@@ -34597,10 +34597,10 @@
       "technicalExposure": 7,
       "adoptionSpeed": 5.078333333333332,
       "adaptability": 8.205882352941176,
-      "demandElasticity": 5,
+      "demandElasticity": 3,
       "complementarity": 5.550588235294118,
-      "netRisk": 5.024666666666667,
-      "netRisk100": 50,
+      "netRisk": 5.324666666666667,
+      "netRisk100": 53,
       "tasks": [
         {
           "taskName": "Selling or Influencing Others",
@@ -35105,10 +35105,10 @@
       "technicalExposure": 5,
       "adoptionSpeed": 5.056666666666669,
       "adaptability": 1.4117647058823528,
-      "demandElasticity": 3,
+      "demandElasticity": 1,
       "complementarity": 5.548616600790514,
-      "netRisk": 5.739845307292878,
-      "netRisk100": 57,
+      "netRisk": 6.039845307292878,
+      "netRisk100": 60,
       "tasks": [
         {
           "taskName": "Identifying Objects, Actions, and Events",
@@ -35359,10 +35359,10 @@
       "technicalExposure": 7,
       "adoptionSpeed": 5.448333333333335,
       "adaptability": 6.0588235294117645,
-      "demandElasticity": 7,
+      "demandElasticity": 8,
       "complementarity": 4.593793103448276,
-      "netRisk": 5.312084516565247,
-      "netRisk100": 53,
+      "netRisk": 5.162084516565248,
+      "netRisk100": 52,
       "tasks": [
         {
           "taskName": "Thinking Creatively",
@@ -35613,10 +35613,10 @@
       "technicalExposure": 3,
       "adoptionSpeed": 4.96996996996997,
       "adaptability": 3.0294117647058822,
-      "demandElasticity": 7,
+      "demandElasticity": 5,
       "complementarity": 5.6890656063618295,
-      "netRisk": 4.251769108015745,
-      "netRisk100": 43,
+      "netRisk": 4.551769108015746,
+      "netRisk100": 46,
       "tasks": [
         {
           "taskName": "Assisting and Caring for Others",
@@ -35867,10 +35867,10 @@
       "technicalExposure": 6,
       "adoptionSpeed": 5.238333333333336,
       "adaptability": 6.647058823529411,
-      "demandElasticity": 5,
+      "demandElasticity": 4,
       "complementarity": 5.063387978142075,
-      "netRisk": 5.08793024750884,
-      "netRisk100": 51,
+      "netRisk": 5.2379302475088405,
+      "netRisk100": 52,
       "tasks": [
         {
           "taskName": "Communicating with Supervisors, Peers, or Subordinates",
@@ -36375,10 +36375,10 @@
       "technicalExposure": 9,
       "adoptionSpeed": 5.605605605605606,
       "adaptability": 8.088235294117647,
-      "demandElasticity": 5,
+      "demandElasticity": 8,
       "complementarity": 4.070181219110379,
-      "netRisk": 6.043849583181398,
-      "netRisk100": 60,
+      "netRisk": 5.593849583181399,
+      "netRisk100": 56,
       "tasks": [
         {
           "taskName": "Working with Computers",
@@ -36756,10 +36756,10 @@
       "technicalExposure": 9,
       "adoptionSpeed": 5.4716666666666685,
       "adaptability": 7.4411764705882355,
-      "demandElasticity": 7,
+      "demandElasticity": 8,
       "complementarity": 4.3901023890785,
-      "netRisk": 5.750136384929398,
-      "netRisk100": 58,
+      "netRisk": 5.600136384929398,
+      "netRisk100": 56,
       "tasks": [
         {
           "taskName": "Working with Computers",
@@ -36883,10 +36883,10 @@
       "technicalExposure": 5,
       "adoptionSpeed": 5.176843510176843,
       "adaptability": 8.029411764705882,
-      "demandElasticity": 3,
+      "demandElasticity": 2,
       "complementarity": 4.955035971223021,
-      "netRisk": 4.889949743084882,
-      "netRisk100": 49,
+      "netRisk": 5.0399497430848825,
+      "netRisk100": 50,
       "tasks": [
         {
           "taskName": "Documenting/Recording Information",
@@ -37264,10 +37264,10 @@
       "technicalExposure": 3,
       "adoptionSpeed": 5.038333333333332,
       "adaptability": 4.647058823529412,
-      "demandElasticity": 3,
+      "demandElasticity": 2,
       "complementarity": 5.408543689320388,
-      "netRisk": 4.678899105273177,
-      "netRisk100": 47,
+      "netRisk": 4.828899105273177,
+      "netRisk100": 48,
       "tasks": [
         {
           "taskName": "Assisting and Caring for Others",
@@ -37518,10 +37518,10 @@
       "technicalExposure": 5,
       "adoptionSpeed": 5.439999999999999,
       "adaptability": 2.3823529411764706,
-      "demandElasticity": 5,
+      "demandElasticity": 6,
       "complementarity": 4.434196891191711,
-      "netRisk": 5.593807680585187,
-      "netRisk100": 56,
+      "netRisk": 5.443807680585188,
+      "netRisk100": 54,
       "tasks": [
         {
           "taskName": "Working with Computers",
@@ -37645,10 +37645,10 @@
       "technicalExposure": 5,
       "adoptionSpeed": 5.225225225225226,
       "adaptability": 6.338235294117647,
-      "demandElasticity": 5,
+      "demandElasticity": 6,
       "complementarity": 5.088345864661654,
-      "netRisk": 4.826640577995067,
-      "netRisk100": 48,
+      "netRisk": 4.676640577995068,
+      "netRisk100": 47,
       "tasks": [
         {
           "taskName": "Documenting/Recording Information",
@@ -38534,10 +38534,10 @@
       "technicalExposure": 6,
       "adoptionSpeed": 5.1383333333333345,
       "adaptability": 7.749999999999999,
-      "demandElasticity": 5,
+      "demandElasticity": 4,
       "complementarity": 5.388076923076923,
-      "netRisk": 4.837551282051282,
-      "netRisk100": 48,
+      "netRisk": 4.987551282051282,
+      "netRisk100": 50,
       "tasks": [
         {
           "taskName": "Making Decisions and Solving Problems",
@@ -38661,10 +38661,10 @@
       "technicalExposure": 4,
       "adoptionSpeed": 4.991666666666665,
       "adaptability": 1.2794117647058825,
-      "demandElasticity": 7,
+      "demandElasticity": 5,
       "complementarity": 5.590944881889764,
-      "netRisk": 4.838232592249498,
-      "netRisk100": 48,
+      "netRisk": 5.138232592249498,
+      "netRisk100": 51,
       "tasks": [
         {
           "taskName": "Performing for or Working Directly with the Public",
@@ -38788,10 +38788,10 @@
       "technicalExposure": 7,
       "adoptionSpeed": 5.256666666666665,
       "adaptability": 8.044117647058824,
-      "demandElasticity": 5,
+      "demandElasticity": 3,
       "complementarity": 5.0777777777777775,
-      "netRisk": 5.179160130718953,
-      "netRisk100": 52,
+      "netRisk": 5.479160130718954,
+      "netRisk100": 55,
       "tasks": [
         {
           "taskName": "Training and Teaching Others",
@@ -39042,10 +39042,10 @@
       "technicalExposure": 6,
       "adoptionSpeed": 5.175000000000002,
       "adaptability": 5.088235294117647,
-      "demandElasticity": 5,
+      "demandElasticity": 4,
       "complementarity": 5.313229571984436,
-      "netRisk": 5.259118791485466,
-      "netRisk100": 53,
+      "netRisk": 5.409118791485466,
+      "netRisk100": 54,
       "tasks": [
         {
           "taskName": "Making Decisions and Solving Problems",
@@ -39677,10 +39677,10 @@
       "technicalExposure": 4,
       "adoptionSpeed": 5.125000000000002,
       "adaptability": 9.51470588235294,
-      "demandElasticity": 3,
+      "demandElasticity": 1,
       "complementarity": 5.098154981549815,
-      "netRisk": 4.328163121337097,
-      "netRisk100": 43,
+      "netRisk": 4.628163121337097,
+      "netRisk100": 46,
       "tasks": [
         {
           "taskName": "Making Decisions and Solving Problems",
@@ -39804,10 +39804,10 @@
       "technicalExposure": 2,
       "adoptionSpeed": 5.018333333333332,
       "adaptability": 1.338235294117647,
-      "demandElasticity": 3,
+      "demandElasticity": 2,
       "complementarity": 5.4688845401174175,
-      "netRisk": 4.859154464525536,
-      "netRisk100": 49,
+      "netRisk": 5.009154464525536,
+      "netRisk100": 50,
       "tasks": [
         {
           "taskName": "Documenting/Recording Information",
@@ -39931,10 +39931,10 @@
       "technicalExposure": 4,
       "adoptionSpeed": 5.078333333333332,
       "adaptability": 3.544117647058824,
-      "demandElasticity": 3,
+      "demandElasticity": 2,
       "complementarity": 5.310251450676983,
-      "netRisk": 5.171998729472446,
-      "netRisk100": 52,
+      "netRisk": 5.321998729472447,
+      "netRisk100": 53,
       "tasks": [
         {
           "taskName": "Identifying Objects, Actions, and Events",
@@ -40058,10 +40058,10 @@
       "technicalExposure": 3,
       "adoptionSpeed": 4.884999999999997,
       "adaptability": 0.058823529411764705,
-      "demandElasticity": 7,
+      "demandElasticity": 6,
       "complementarity": 5.892585170340681,
-      "netRisk": 4.639659436520098,
-      "netRisk100": 46,
+      "netRisk": 4.789659436520099,
+      "netRisk100": 48,
       "tasks": [
         {
           "taskName": "Performing for or Working Directly with the Public",
@@ -40333,10 +40333,10 @@
       "technicalExposure": 9,
       "adoptionSpeed": 5.536666666666668,
       "adaptability": 7.264705882352941,
-      "demandElasticity": 5,
+      "demandElasticity": 7,
       "complementarity": 4.288285229202038,
-      "netRisk": 6.109970405139984,
-      "netRisk100": 61,
+      "netRisk": 5.8099704051399845,
+      "netRisk100": 58,
       "tasks": [
         {
           "taskName": "Working with Computers",

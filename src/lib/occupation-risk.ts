@@ -162,48 +162,110 @@ function educationTier(education: string): number {
 }
 
 // ---------------------------------------------------------------------------
-// Demand elasticity defaults by BLS major category
+// Demand elasticity — informed by the OpenAI Jobs Transition Framework
+// (Richmond 2026), which used GPT-5.4 to estimate per-occupation own-price
+// elasticities. The paper publishes specific values for several occupations
+// and describes a structural framework for the rest:
+//   |e| ~ 0.0  : firefighters, chief executives (hard-capped demand)
+//   |e| ~ 0.3-0.5: teachers (constrained by school district budgets)
+//   |e| ~ 0.7-0.8: home health aides, childcare, maids
+//   |e| ~ 1.2-1.5: software developers
+//   |e| ~ 1.5-1.8: graphic designers (max in the paper's distribution)
+// We map |e| to a 0-10 buffer score where higher = more elastic = more
+// absorption of AI-driven productivity gains via demand expansion.
 // ---------------------------------------------------------------------------
 
 /**
- * Maps the enriched-data `category` strings to elasticity scores (0-10).
- * Spec aliases are honored where the raw data uses slightly different slugs
- * (e.g. spec "food-prep-and-serving" -> data "food-preparation-and-serving").
+ * Base elasticity (0-10) by BLS major category. More granular than the
+ * prior 3/5/7 ternary; calibrated against the paper's stated examples.
  */
-const HIGH_ELASTICITY_CATEGORIES = new Set([
-  // spec slugs
-  "sales-and-related",
-  "arts-design-entertainment-sports-and-media",
-  "food-prep-and-serving",
-  "personal-care-and-service",
-  // enriched-occupations.json slugs
-  "sales",
-  "arts-and-design",
-  "media-and-communication",
-  "entertainment-and-sports",
-  "food-preparation-and-serving",
-]);
+const ELASTICITY_BASE: Record<string, number> = {
+  // High — discretionary or information-product (cost decline can expand market)
+  "arts-and-design": 8,
+  "media-and-communication": 7,
+  "entertainment-and-sports": 7,
+  "sales": 7,
+  "computer-and-information-technology": 7,
+  "architecture-and-engineering": 6,
+  "math": 6,
 
-const LOW_ELASTICITY_CATEGORIES = new Set([
-  // spec slugs
-  "healthcare-practitioners-and-technical",
-  "healthcare-support",
-  "protective-service",
-  "education-instruction-and-library",
-  "community-and-social-service",
-  "legal",
-  // enriched-occupations.json slugs
-  "healthcare",
-  "education-training-and-library",
-  "community-and-social-service",
-  "protective-service",
-  "military",
-]);
+  // Moderate — partial discretionary, partial constrained
+  "business-and-financial": 5,
+  "food-preparation-and-serving": 6,
+  "personal-care-and-service": 5,
+  "management": 4, // demand for executives is hard-capped per organization
+  "life-physical-and-social-science": 5,
 
-function categoryElasticityScore(category: string): number {
-  if (HIGH_ELASTICITY_CATEGORIES.has(category)) return 7;
-  if (LOW_ELASTICITY_CATEGORIES.has(category)) return 3;
-  return 5;
+  // Mixed physical work — output expansion possible but bounded
+  "production": 5,
+  "transportation-and-material-moving": 5,
+  "construction-and-extraction": 5,
+  "installation-maintenance-and-repair": 5,
+  "building-and-grounds-cleaning": 5,
+  "farming-fishing-and-forestry": 4,
+
+  // Low — public service, budget-constrained, fixed scheduling
+  "community-and-social-service": 3,
+  "education-training-and-library": 3,
+
+  // Very low — regulated, essential, reimbursement-bound, hard demand cap
+  "legal": 2,
+  "healthcare": 2,
+  "protective-service": 1,
+  "military": 1,
+};
+
+/**
+ * Per-occupation overrides drawn from values cited in the OpenAI Jobs
+ * Transition Framework paper (Richmond 2026). Slug match is exact against
+ * enriched-occupations.json.
+ */
+const ELASTICITY_OVERRIDES: Record<string, number> = {
+  // |e| ~ 0.0 in the paper's Figure 2
+  "firefighters": 1,
+  "chief-executives": 1,
+  // |e| ~ 0.5-0.7 — paper places physical therapists in the middle band
+  "physical-therapists": 5,
+  // |e| ~ 0.7-0.8 — cited values
+  "home-health-aides": 6,
+  "childcare-workers": 5,
+  "maids-and-housekeeping-cleaners": 6,
+  // |e| ~ 0.3-0.45 — paper's estimate for teachers
+  "preschool-teachers-except-special-education": 3,
+  "kindergarten-teachers-except-special-education": 3,
+  "elementary-school-teachers-except-special-education": 3,
+  "middle-school-teachers-except-special-and-careertechnical-education": 3,
+  "secondary-school-teachers-except-special-and-careertechnical-education": 3,
+  "career-and-technical-education-teachers-middle-school": 3,
+  "special-education-teachers": 3,
+  // |e| ~ 1.2-1.5
+  "software-developers": 8,
+  // |e| ~ 1.5-1.8 — top of distribution
+  "graphic-designers": 9,
+  // Editors — moderately elastic per the paper
+  "editors": 6,
+  // Dental hygienists — moderately elastic
+  "dental-hygienists": 5,
+};
+
+function occupationElasticityScore(
+  slug: string,
+  category: string,
+  payPercentile: number
+): number {
+  // 1. Exact occupation override from the paper
+  const override = ELASTICITY_OVERRIDES[slug];
+  if (override !== undefined) return clamp010(override);
+
+  // 2. Category base
+  const base = ELASTICITY_BASE[category] ?? 5;
+
+  // 3. Top-decile pay adjustment: very high earners have hard demand caps
+  //    (one CEO per firm, partner-track in law, etc.) so even cheaper output
+  //    doesn't unlock proportional new demand. Shave 1 point.
+  const adj = payPercentile >= 0.9 ? -1 : 0;
+
+  return clamp010(base + adj);
 }
 
 // ---------------------------------------------------------------------------
@@ -323,8 +385,14 @@ export function scoreOccupation(
   const eduTier = educationTier(occ.education);
   const adaptability = clamp010((payPct * 0.5 + eduTier * 0.5) * 10);
 
-  // 4. Demand elasticity: rule-based by BLS major category.
-  const demandElasticity = categoryElasticityScore(occ.category);
+  // 4. Demand elasticity: per-occupation, informed by OpenAI Jobs
+  //    Transition Framework (Richmond 2026). Specific cited values are
+  //    hard-coded; otherwise category base + pay-percentile adjustment.
+  const demandElasticity = occupationElasticityScore(
+    occ.slug,
+    occ.category,
+    payPct
+  );
 
   // 5. Complementarity: task-composition estimate + dimensionality adjustment.
   const effectiveDims = getEffectiveDimensions(occ.taskComposition);

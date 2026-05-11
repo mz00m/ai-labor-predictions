@@ -181,6 +181,13 @@ function StatePane({
         />
       </div>
 
+      <div className="mt-2.5 text-2xs text-[var(--muted)] leading-snug">
+        Score covers <span className="font-mono text-[var(--foreground)]">{(data.coverage * 100).toFixed(0)}%</span> of
+        state employment — BLS OEWS publishes ~800 SOC codes, our framework
+        scores 342 of them. Unscored occupations are excluded (likely
+        upward-biases the score by 1–3 points).
+      </div>
+
       {data.topMetrosInState.length > 0 && (
         <Section title="Top metros in this state">
           <ul className="space-y-1.5">
@@ -260,6 +267,13 @@ function MsaPane({
           unit="scored"
           color="#111"
         />
+      </div>
+
+      <div className="mt-2.5 text-2xs text-[var(--muted)] leading-snug">
+        Detailed-SOC data from BLS OEWS. The {data.occupationCount} scored
+        occupations cover roughly half of metro employment; the rest are
+        excluded (the score likely runs 1–3 points higher than full coverage
+        would yield).
       </div>
 
       <Section title="Occupations by employment share">
@@ -354,9 +368,17 @@ function CountyPane({ data, loading }: { data: CountySidebarData; loading?: bool
         }
       />
 
+      {/* Honest framing: county score is composition-driven, not within-county. */}
+      <div className="mt-3 rounded-md bg-amber-50 border border-amber-100 px-3 py-2 text-2xs text-amber-900 leading-snug">
+        <span className="font-semibold">Composition-weighted, not county-specific.</span>{" "}
+        This score reflects the share of jobs in occupation groups our model flags
+        as more AI-exposed nationally. Within-group variation isn&rsquo;t visible at
+        this level — ACS doesn&rsquo;t publish detailed SOC by county.
+      </div>
+
       <div className="mt-4 grid grid-cols-1 gap-3">
         <Metric
-          label="Net risk"
+          label="Composition-weighted risk"
           value={data.weightedNetRisk100.toFixed(1)}
           unit="/100"
           color={riskColor100(data.weightedNetRisk100)}

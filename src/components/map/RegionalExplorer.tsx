@@ -229,6 +229,7 @@ export default function RegionalExplorer({
   const [view, setView] = useState<ViewMode>("county");
   const [selection, setSelection] = useState<Selection>({ view: "county", id: null });
   const [metric, setMetric] = useState<Metric>("netRisk");
+  const [scaleMode, setScaleMode] = useState<"absolute" | "stretched">("absolute");
   const [hoverId, setHoverId] = useState<string | null>(null);
   const [tooltip, setTooltip] = useState<{ x: number; y: number } | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -381,7 +382,17 @@ export default function RegionalExplorer({
     metric,
   ]);
 
-  /* Color scale stretched to observed range so contrast pops. */
+  /* Color scale — absolute or stretched depending on user toggle.
+   *
+   * Absolute (default, honest): every region colored against an absolute
+   * 0-100 scale. Most regions sit in the 50-54 band and read amber, which
+   * is the true model output — a county's risk is mostly a function of
+   * its national-average occupational mix, which doesn't vary wildly.
+   *
+   * Stretched: legend range is pinned to observed min/max, so a 3-point
+   * spread fills the green-to-red gradient. Useful for ranking, but
+   * visually misleading if mistaken for absolute magnitude. The legend
+   * surfaces the actual range so the user can correct for it. */
   const colorBy = useMemo(() => {
     let min = Infinity;
     let max = -Infinity;
@@ -395,10 +406,13 @@ export default function RegionalExplorer({
     return (id: string) => {
       const v = layer.valueOf(id);
       if (v == null) return "#F3F4F6";
-      const stretched = ((v - min) / span) * 100;
-      return riskColor100(stretched);
+      if (scaleMode === "stretched") {
+        const stretched = ((v - min) / span) * 100;
+        return riskColor100(stretched);
+      }
+      return riskColor100(v);
     };
-  }, [layer]);
+  }, [layer, scaleMode]);
 
   /* Selected feature bbox -> transform */
   const transform = useMemo(() => {
@@ -735,6 +749,35 @@ export default function RegionalExplorer({
                 </button>
               </div>
 
+              {/* Scale toggle — honest about the narrow spread */}
+              <div
+                role="group"
+                aria-label="Color scale"
+                className="inline-flex border border-card rounded-md overflow-hidden text-2xs"
+                title="Absolute uses a fixed 0-100 scale (honest about magnitude). Stretched pins the gradient to the observed min-max so small differences are visible (useful for ranking, but contrast can mislead)."
+              >
+                <button
+                  onClick={() => setScaleMode("absolute")}
+                  className={`px-3 py-1.5 transition-colors ${
+                    scaleMode === "absolute"
+                      ? "bg-[var(--accent)] text-white"
+                      : "bg-white text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-black/[0.02]"
+                  }`}
+                >
+                  Absolute scale
+                </button>
+                <button
+                  onClick={() => setScaleMode("stretched")}
+                  className={`px-3 py-1.5 transition-colors ${
+                    scaleMode === "stretched"
+                      ? "bg-[var(--accent)] text-white"
+                      : "bg-white text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-black/[0.02]"
+                  }`}
+                >
+                  Stretched
+                </button>
+              </div>
+
               <div className="ml-auto flex items-center gap-3">
                 {selection.id && (
                   <button
@@ -809,15 +852,20 @@ export default function RegionalExplorer({
               )}
 
               {/* Legend overlay */}
-              <div className="absolute left-3 bottom-3 bg-white/95 backdrop-blur border border-card rounded-md px-3 py-2 text-2xs leading-tight pointer-events-none">
-                <div className="text-[10px] uppercase tracking-wider text-[var(--muted)] mb-1.5">
-                  {view === "country" && metric === "pctHigh"
-                    ? "% high-risk task time"
-                    : "Net risk (0–100)"}
+              <div className="absolute left-3 bottom-3 bg-white/95 backdrop-blur border border-card rounded-md px-3 py-2 text-2xs leading-tight pointer-events-none max-w-[280px]">
+                <div className="text-[10px] uppercase tracking-wider text-[var(--muted)] mb-1.5 flex items-baseline justify-between gap-2">
+                  <span>
+                    {view === "country" && metric === "pctHigh"
+                      ? "% high-risk task time"
+                      : "Net risk (0–100)"}
+                  </span>
+                  <span className="font-mono normal-case tracking-normal opacity-60">
+                    {scaleMode}
+                  </span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <span className="text-[var(--muted)] font-mono">
-                    {legendRange.min.toFixed(view === "country" && metric === "pctHigh" ? 1 : 0)}
+                    {scaleMode === "stretched" ? legendRange.min.toFixed(view === "country" && metric === "pctHigh" ? 1 : 0) : "0"}
                   </span>
                   <div
                     className="h-2 w-28 rounded-sm"
@@ -826,8 +874,18 @@ export default function RegionalExplorer({
                     }}
                   />
                   <span className="text-[var(--muted)] font-mono">
+                    {scaleMode === "stretched" ? legendRange.max.toFixed(view === "country" && metric === "pctHigh" ? 1 : 0) : "100"}
+                  </span>
+                </div>
+                <div className="mt-1.5 text-[10px] text-[var(--muted)] leading-snug">
+                  Range across regions:{" "}
+                  <span className="font-mono">
+                    {legendRange.min.toFixed(view === "country" && metric === "pctHigh" ? 1 : 0)}–
                     {legendRange.max.toFixed(view === "country" && metric === "pctHigh" ? 1 : 0)}
                   </span>
+                  {scaleMode === "absolute" && legendRange.max - legendRange.min < 8 && (
+                    <span className="opacity-70">. Small spread — toggle Stretched for contrast.</span>
+                  )}
                 </div>
               </div>
             </div>
