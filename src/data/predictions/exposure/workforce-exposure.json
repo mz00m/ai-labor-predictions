@@ -670,6 +670,24 @@
       ],
       "evidenceTier": 3,
       "label": "NYT/OpenAI: GDPVal models reach 80%+ win rate vs human pros"
+    },
+    {
+      "date": "2025-06-20",
+      "direction": "up",
+      "sourceIds": [
+        "autor-thompson-expertise-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "MIT (Autor/Thompson): Routine share of US job tasks fell 50.4%→32.2% (1977-2018); abstract share rose 33.2%→53.6%. 66% of removed tasks were routine; 77% of added were abstract"
+    },
+    {
+      "date": "2025-06-20",
+      "direction": "neutral",
+      "sourceIds": [
+        "autor-thompson-expertise-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "MIT (Autor/Thompson): Cross-occupation expertise premium NEARLY DOUBLED 1980-2018: 1\u03c3 expertise = +16 log pts wages in 1980, +31 log pts in 2018"
     }
   ],
   "sources": [
@@ -1204,6 +1222,16 @@
       "evidenceTier": 1,
       "datePublished": "2026-04-27",
       "excerpt": "Replicating the dominant rubric with three frontier models on identical tasks, we find a 3.6-fold divergence in mean exposure with agreement as low as 57%."
+    },
+    {
+      "id": "autor-thompson-expertise-2025",
+      "title": "Expertise",
+      "url": "https://economics.mit.edu/sites/default/files/2025-06/Autor-Thompson-Expertise-22050620.pdf",
+      "publisher": "MIT / NBER (David Autor, Neil Thompson) \u2014 Schumpeter Lecture",
+      "evidenceTier": 1,
+      "datePublished": "2025-06-20",
+      "excerpt": "Introduces a content-agnostic expertise measure based on the Efficient Coding Hypothesis applied to 1977 DOT and 2018 O*NET task descriptions; uses OpenAI text-embedding-3-small with 0.95 caliper to identify which tasks were removed, retained, or added across 303 Census occupations. Findings on US task composition 1977-2018: routine share of tasks fell from 50.4% to 32.2%, abstract share rose from 33.2% to 53.6%, manual share fell from 16.4% to 14.2%. 66% of removed tasks were routine; 77% of added tasks were abstract. Cross-occupation expertise wage premium nearly doubled: 1\u03c3 expertise = +16 log pts wages in 1980, +31 log pts in 2018 (R\u00b2 0.32 \u2192 0.49). Alternative framework to Anthropic/OpenAI/Webb exposure measures \u2014 measures expertise required by tasks rather than AI capability to perform them.",
+      "dateAdded": "2026-05-11"
     }
   ]
 }

@@ -1611,6 +1611,24 @@
       ],
       "evidenceTier": 1,
       "label": "Yale Budget Lab SDID: no clear AI effects on employment or wages through 2026Q1"
+    },
+    {
+      "date": "2025-06-20",
+      "direction": "neutral",
+      "sourceIds": [
+        "autor-thompson-expertise-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "MIT (Autor/Thompson): 0.1\u03c3 rise in occupational task expertise predicts 5-7 log pt fall in employment per decade (303 occs, 1980-2018) — opposite to task-quantity prediction"
+    },
+    {
+      "date": "2025-06-20",
+      "direction": "neutral",
+      "sourceIds": [
+        "autor-thompson-expertise-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "MIT (Autor/Thompson): Accounting clerks 1980-2018 — employment 1.62M→1.11M (-31%), wages $13.07→$18.17 (+39%); Inventory clerks — emp 0.54M→1.48M (+175%), wages $14.30→$12.43 (-13%)"
     }
   ],
   "sources": [
@@ -2876,6 +2894,16 @@
       "evidenceTier": 1,
       "datePublished": "2026-05-07",
       "excerpt": "Using synthetic differences-in-differences (SDID) to compare AI-exposed (top tercile) to a synthetic-control group built from unexposed (bottom tercile) occupations through 2026Q1: 'this approach provides no clear evidence of AI effects on the labor market, but this could change quickly.' Wages: 'we see no statistically or economically significant impact.' Unemployment rose ~0.5pp in latest quarter for the AI-exposed group (more for 16-34 subsample), but statistically insignificant. Treatment date: 2022Q4 (ChatGPT release). Demographic note: AI-exposed occupations are 55.1% women and 57.3% BA+ vs. unexposed 32.7% and 10.3% — making naive comparisons unreliable.",
+      "dateAdded": "2026-05-11"
+    },
+    {
+      "id": "autor-thompson-expertise-2025",
+      "title": "Expertise",
+      "url": "https://economics.mit.edu/sites/default/files/2025-06/Autor-Thompson-Expertise-22050620.pdf",
+      "publisher": "MIT / NBER (David Autor, Neil Thompson) — Schumpeter Lecture",
+      "evidenceTier": 1,
+      "datePublished": "2025-06-20",
+      "excerpt": "Resolves the long-standing puzzle of why routine task automation lowered employment but often raised wages in routine task-intensive occupations. Builds 'expertise framework' on 3 pillars: hierarchical expertise, occupational task bundling, automation. Key counterintuitive prediction: changes in occupational expertise requirements have OPPOSITE-signed effects on wages and employment — rising expertise raises wages but reduces qualified workers (employment falls), falling expertise lowers wages but expands the eligible labor pool (employment rises). Empirically (303 harmonized Census occs, 1980-2018): 0.1\u03c3 rise in occupational task expertise predicts a 5-7 log point fall in employment per decade, while a 10% expansion in task quantity predicts a 14% employment rise — opposite directions. Concrete case: Accounting clerks 1980-2018 saw employment fall 1.62M→1.11M (-31%) while wages rose $13.07→$18.17 (+39%); Stock/Inventory clerks saw employment rise 0.54M→1.48M (+175%) while wages fell $14.30→$12.43 (-13%). Routine task share fell 50.4%→32.2%; abstract share rose 33.2%→53.6%. Cross-occupation expertise wage premium nearly doubled: 1\u03c3 expertise = +16 log pts in 1980 vs. +31 log pts in 2018. Methodology: content-agnostic expertise measure via Efficient Coding Hypothesis on Standard Frequency Index; OpenAI embedding-based task matching (caliper 0.95) to identify removed/retained/added tasks between 1977 DOT and 2018 O*NET.",
       "dateAdded": "2026-05-11"
     }
   ]

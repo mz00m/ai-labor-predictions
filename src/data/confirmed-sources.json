@@ -6627,12 +6627,14 @@
     "autor-thompson-expertise-2025": {
       "id": "autor-thompson-expertise-2025",
       "title": "Expertise",
-      "url": "https://www.nber.org/papers/w33941",
-      "publisher": "NBER (David Autor, Neil Thompson)",
+      "url": "https://economics.mit.edu/sites/default/files/2025-06/Autor-Thompson-Expertise-22050620.pdf",
+      "publisher": "MIT / NBER (David Autor, Neil Thompson) \u2014 Schumpeter Lecture",
       "evidenceTier": 1,
       "datePublished": "2025-06-20",
-      "excerpt": "automation has raised wages and reduced employment in occupations where it eliminated inexpert tasks, but lowered wages and increased employment in occupations where it eliminated expert tasks. These effects are distinct from\u2014and in the case of employment, opposite to\u2014the effects of changing task quantities.",
+      "excerpt": "Resolves the long-standing puzzle of why routine task automation lowered employment but often raised wages in routine task-intensive occupations. Builds an 'expertise framework' on three pillars: hierarchical expertise, occupational task bundling, and automation. Key counterintuitive prediction: changes in occupational expertise requirements have OPPOSITE-signed effects on wages and employment \u2014 rising expertise raises wages but reduces the set of qualified workers (employment falls), falling expertise lowers wages but expands the eligible labor pool (employment rises). Empirically (303 harmonized Census occupations, 1980-2018): 0.1\u03c3 rise in occupational task expertise predicts a 5-7 log point fall in employment per decade, while a 10% expansion in task quantity predicts a 14% employment rise \u2014 opposite directions. Concrete case: Accounting clerks 1980-2018 saw employment fall 1.62M\u21921.11M (-31%) while wages rose $13.07\u2192$18.17 (+39%); Stock/Inventory clerks saw employment rise 0.54M\u21921.48M (+175%) while wages fell $14.30\u2192$12.43 (-13%). Routine task share fell 50.4%\u219232.2%; abstract share rose 33.2%\u219253.6%; 66% of removed tasks were routine, 77% of added tasks were abstract. Cross-occupation expertise wage premium nearly doubled: 1\u03c3 expertise = +16 log pts wages in 1980 vs. +31 log pts in 2018 (R\u00b2 0.32\u21920.49). Methodology: content-agnostic expertise measure via Efficient Coding Hypothesis on Standard Frequency Index; OpenAI text-embedding-3-small with 0.95 caliper to identify tasks removed/retained/added between 1977 DOT and 2018 O*NET.",
       "usedIn": [
+        "overall-us-displacement",
+        "workforce-ai-exposure",
         "high-skill-wage-premium",
         "entry-level-wage-impact",
         "median-wage-impact"
