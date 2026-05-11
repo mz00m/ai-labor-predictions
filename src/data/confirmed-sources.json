@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-05-11",
-  "totalSources": 549,
-  "verifiedCount": 539,
+  "totalSources": 550,
+  "verifiedCount": 540,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -7766,6 +7766,20 @@
       "datePublished": "2026-05-05",
       "excerpt": "Major AI industry figures (Altman, Jensen Huang, Andreessen) are pivoting from displacement-focused messaging to augmentation-focused messaging amid deteriorating public opinion on AI. The new pitch: AI will create new tasks in the short term (task creation, Jevons Paradox), and in the long term humans will be paid for the 'relational sector' where the human element is the product itself. Noah Smith cautiously endorses the new pitch as better PR and potentially self-fulfilling for research direction, while noting it may be partly competitive positioning by OpenAI against Anthropic.",
       "usedIn": [],
+      "verified": true,
+      "synthetic": false
+    },
+    "eurostat-ai-enterprises-2025": {
+      "id": "eurostat-ai-enterprises-2025",
+      "title": "Use of artificial intelligence in enterprises (isoc_eb_ai)",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/isoc_eb_ai/default/table?lang=en",
+      "publisher": "Eurostat",
+      "evidenceTier": 1,
+      "datePublished": "2025-12-01",
+      "excerpt": "In 2025, 19.95% of EU enterprises with 10 or more employees used at least one of the eight AI technologies covered (text mining, speech recognition, natural language generation, image recognition, machine learning, AI-based workflow automation, autonomous machines/vehicles, and AI-based decision systems). Data extracted December 2025 from Eurostat dataset isoc_eb_ai. The Brookings FCAI dialogue briefing cites this figure as the EU diffusion benchmark.",
+      "usedIn": [
+        "ai-adoption-rate"
+      ],
       "verified": true,
       "synthetic": false
     }

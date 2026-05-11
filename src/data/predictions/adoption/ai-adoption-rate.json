@@ -659,6 +659,15 @@
       ],
       "evidenceTier": 2,
       "label": "Carlyle: 11% of management teams cite SaaS licenses as AI spending offset; 17% cite no meaningful reallocation"
+    },
+    {
+      "date": "2025-12-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "eurostat-ai-enterprises-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Eurostat: 19.95% of EU enterprises (10+ employees) used at least one AI technology in 2025 (isoc_eb_ai)"
     }
   ],
   "sources": [
@@ -1270,6 +1279,16 @@
       "evidenceTier": 2,
       "datePublished": "2026-04-21",
       "excerpt": "Our proprietary survey of AI integration efforts finds that only 11% of management teams expect AI to replace existing software subscriptions. Far more expect the move to AI-centric architectures to reduce maintenance spending on legacy infrastructure, save on consulting fees, and increase the productivity of existing workers, reducing future headcount needs. Figure 4 (Carlyle Proprietary Survey, April 2026): Internal headcount cited as AI spending offset by 26% of respondents \u2014 the largest single category."
+    },
+    {
+      "id": "eurostat-ai-enterprises-2025",
+      "title": "Use of artificial intelligence in enterprises (isoc_eb_ai)",
+      "url": "https://ec.europa.eu/eurostat/databrowser/view/isoc_eb_ai/default/table?lang=en",
+      "publisher": "Eurostat",
+      "evidenceTier": 1,
+      "datePublished": "2025-12-01",
+      "excerpt": "In 2025, 19.95% of EU enterprises with 10 or more employees used at least one of the eight AI technologies covered (text mining, speech recognition, natural language generation, image recognition, machine learning, AI-based workflow automation, autonomous machines/vehicles, and AI-based decision systems). Data extracted December 2025 from Eurostat dataset isoc_eb_ai. The Brookings FCAI dialogue briefing cites this figure as the EU diffusion benchmark.",
+      "dateAdded": "2026-05-11"
     }
   ]
 }
