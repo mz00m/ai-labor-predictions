@@ -1,11 +1,25 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import {
   formatJobs,
   prettyCategory,
   riskColor100,
 } from "./types";
+
+/**
+ * Top occupations per BLS major-group slug. Server-rendered once from
+ * occupation-risk.json so the county pane can offer drill-through links
+ * even though ACS itself doesn't publish detailed-SOC by county.
+ */
+export interface TopOccupationByCategory {
+  slug: string;
+  title: string;
+  netRisk100: number;
+  jobs: number;
+}
+export type TopOccupationsByCategory = Record<string, TopOccupationByCategory[]>;
 
 // Lightweight row types — shaped to whatever the explorer hands down.
 
@@ -104,6 +118,8 @@ interface MsaProps extends CommonProps {
 interface CountyProps extends CommonProps {
   kind: "county";
   data: CountySidebarData;
+  /** Per-category top occupations for the drill-down expand. */
+  topOccupationsByCategory: TopOccupationsByCategory;
 }
 
 export type ExplorerSidebarProps =
@@ -118,7 +134,13 @@ export default function ExplorerSidebar(props: ExplorerSidebarProps) {
     return <StatePane data={props.data} onFocusMsa={props.onFocusMsa} loading={props.loading} />;
   if (props.kind === "msa")
     return <MsaPane data={props.data} onFocusCounty={props.onFocusCounty} loading={props.loading} />;
-  return <CountyPane data={props.data} loading={props.loading} />;
+  return (
+    <CountyPane
+      data={props.data}
+      loading={props.loading}
+      topOccupationsByCategory={props.topOccupationsByCategory}
+    />
+  );
 }
 
 /* ---------- Default ---------- */
@@ -344,7 +366,17 @@ function MsaPane({
 
 /* ---------- County ---------- */
 
-function CountyPane({ data, loading }: { data: CountySidebarData; loading?: boolean }) {
+function CountyPane({
+  data,
+  loading,
+  topOccupationsByCategory,
+}: {
+  data: CountySidebarData;
+  loading?: boolean;
+  topOccupationsByCategory: TopOccupationsByCategory;
+}) {
+  const [expanded, setExpanded] = useState<string | null>(null);
+
   const groups = data.occupationGroups ?? data.topGroupsFallback.map((g) => ({
     slug: g.slug,
     employment: 0,
@@ -414,27 +446,68 @@ function CountyPane({ data, loading }: { data: CountySidebarData; loading?: bool
               )}
             </div>
 
-            <ul className="space-y-1.5">
-              {top.map((g) => (
-                <li key={g.slug}>
-                  {/* County drill rows are SOC major-group totals, not individual
-                      occupations — they aren't linkable to /occupation-exposure/[slug].
-                      Plain row keeps the visual but avoids the dead link. */}
-                  <div className="flex items-baseline justify-between gap-2 text-2xs">
-                    <span className="inline-flex items-baseline gap-2 truncate">
-                      <span
-                        className="inline-block w-1.5 h-1.5 rounded-sm shrink-0"
-                        style={{ background: riskColor100(g.netRisk100) }}
-                        aria-hidden="true"
-                      />
-                      <span className="truncate">{prettyCategory(g.slug)}</span>
-                    </span>
-                    <span className="font-mono text-[var(--muted)] shrink-0">
-                      {g.share.toFixed(1)}% · {g.netRisk100}
-                    </span>
-                  </div>
-                </li>
-              ))}
+            <ul className="space-y-1">
+              {top.map((g) => {
+                const isOpen = expanded === g.slug;
+                const topOccs = topOccupationsByCategory[g.slug] ?? [];
+                const hasChildren = topOccs.length > 0;
+                return (
+                  <li key={g.slug}>
+                    <button
+                      type="button"
+                      onClick={() => hasChildren && setExpanded(isOpen ? null : g.slug)}
+                      disabled={!hasChildren}
+                      className={`w-full flex items-baseline justify-between gap-2 text-2xs py-1 px-1.5 -mx-1.5 rounded transition-colors ${
+                        hasChildren
+                          ? "cursor-pointer hover:bg-black/[0.03]"
+                          : "cursor-default"
+                      } ${isOpen ? "bg-black/[0.04]" : ""}`}
+                      aria-expanded={isOpen}
+                    >
+                      <span className="inline-flex items-baseline gap-2 truncate min-w-0">
+                        <span
+                          className="inline-block w-1.5 h-1.5 rounded-sm shrink-0"
+                          style={{ background: riskColor100(g.netRisk100) }}
+                          aria-hidden="true"
+                        />
+                        <span className="truncate text-left">{prettyCategory(g.slug)}</span>
+                        {hasChildren && (
+                          <span
+                            className="text-[var(--muted)] opacity-50 shrink-0 transition-transform"
+                            style={{ transform: isOpen ? "rotate(90deg)" : "rotate(0deg)" }}
+                            aria-hidden="true"
+                          >
+                            ›
+                          </span>
+                        )}
+                      </span>
+                      <span className="font-mono text-[var(--muted)] shrink-0">
+                        {g.share.toFixed(1)}% · {g.netRisk100}
+                      </span>
+                    </button>
+                    {isOpen && hasChildren && (
+                      <ul className="ml-4 mt-1 mb-1.5 space-y-0.5 border-l border-card pl-2.5">
+                        <li className="text-[10px] uppercase tracking-wider text-[var(--muted)] pb-0.5">
+                          Top occupations in group (national)
+                        </li>
+                        {topOccs.map((o) => (
+                          <li key={o.slug}>
+                            <Link
+                              href={`/occupation-exposure/${o.slug}`}
+                              className="flex items-baseline justify-between gap-2 text-2xs py-0.5 hover:text-[var(--accent-text)] transition-colors group"
+                            >
+                              <span className="truncate flex-1 group-hover:underline">{o.title}</span>
+                              <span className="font-mono text-[var(--muted)] shrink-0">
+                                {formatJobs(o.jobs)} · {o.netRisk100}
+                              </span>
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </li>
+                );
+              })}
               {otherShare > 0.5 && (
                 <li className="text-2xs">
                   <div className="flex items-baseline justify-between gap-2 text-[var(--muted)]">

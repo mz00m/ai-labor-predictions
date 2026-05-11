@@ -14,6 +14,7 @@ import ExplorerSidebar, {
   MsaSidebarData,
   NationalSummary,
   StateSidebarData,
+  TopOccupationsByCategory,
 } from "./ExplorerSidebar";
 import { formatJobs, riskColor100 } from "./types";
 
@@ -149,6 +150,9 @@ interface Props {
   countyRisk: CountyRiskFile;
   crosswalk: CrosswalkFile;
   occupations: OccupationLite[];
+  /** Top representative occupations per BLS major-group slug — used by the
+   *  county sidebar's expandable drill-through. */
+  topOccupationsByCategory: TopOccupationsByCategory;
 }
 
 type ViewMode = "country" | "metro" | "county";
@@ -163,6 +167,7 @@ interface Selection {
 
 const MAP_WIDTH = 975;
 const MAP_HEIGHT = 610;
+const QUANTILE_COLORS = ["#16A34A", "#84CC16", "#FBBF24", "#F59E0B", "#DC2626"] as const;
 
 function computeTransform(
   bbox: [number, number, number, number],
@@ -241,6 +246,7 @@ export default function RegionalExplorer({
   countyRisk,
   crosswalk,
   occupations,
+  topOccupationsByCategory,
 }: Props) {
   const [view, setView] = useState<ViewMode>("county");
   const [selection, setSelection] = useState<Selection>({ view: "county", id: null });
@@ -422,8 +428,6 @@ export default function RegionalExplorer({
    *   the gradient. Useful for fine-grained ranking, but contrast can mislead.
    * - absolute: 0-100 scale. Tells the literal model output (most regions
    *   are amber), but visually uniform when ranges are narrow. */
-  const QUANTILE_COLORS = ["#16A34A", "#84CC16", "#FBBF24", "#F59E0B", "#DC2626"];
-
   const colorBy = useMemo(() => {
     const values: { id: string; v: number }[] = [];
     let min = Infinity;
@@ -928,7 +932,7 @@ export default function RegionalExplorer({
                 {scaleMode === "quantile" ? (
                   <>
                     <div className="flex h-2 w-32 rounded-sm overflow-hidden">
-                      {["#16A34A", "#84CC16", "#FBBF24", "#F59E0B", "#DC2626"].map((c) => (
+                      {QUANTILE_COLORS.map((c) => (
                         <div key={c} className="flex-1" style={{ background: c }} />
                       ))}
                     </div>
@@ -1010,6 +1014,7 @@ export default function RegionalExplorer({
                 kind="county"
                 data={sidebar.data}
                 loading={sidebar.loading}
+                topOccupationsByCategory={topOccupationsByCategory}
               />
             )}
           </div>

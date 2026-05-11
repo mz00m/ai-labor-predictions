@@ -119,6 +119,31 @@ export default function MapPage() {
   // full risk JSON to the client).
   const occupationsLite = occupations.map((o) => ({ slug: o.slug, title: o.title }));
 
+  // Top-5 representative occupations per BLS major-group slug, by national
+  // employment. Used by the county sidebar's expandable drill-through:
+  // since ACS doesn't publish detailed-SOC by county, expanding a major
+  // group shows the dominant national occupations in that group, each
+  // linkable to its /occupation-exposure/[slug] page.
+  const topOccupationsByCategory: Record<
+    string,
+    { slug: string; title: string; netRisk100: number; jobs: number }[]
+  > = {};
+  for (const occ of occupations) {
+    if (!occ.jobs) continue;
+    if (!topOccupationsByCategory[occ.category]) topOccupationsByCategory[occ.category] = [];
+    topOccupationsByCategory[occ.category].push({
+      slug: occ.slug,
+      title: occ.title,
+      netRisk100: occ.netRisk100,
+      jobs: occ.jobs,
+    });
+  }
+  for (const cat of Object.keys(topOccupationsByCategory)) {
+    topOccupationsByCategory[cat] = topOccupationsByCategory[cat]
+      .sort((a, b) => b.jobs - a.jobs)
+      .slice(0, 5);
+  }
+
   return (
     <main className="pt-6 sm:pt-8 pb-16">
       {/* Full-width hero strip + explorer */}
@@ -149,6 +174,7 @@ export default function MapPage() {
             countyRisk={countyRiskData as any}
             crosswalk={crosswalkData as any}
             occupations={occupationsLite}
+            topOccupationsByCategory={topOccupationsByCategory}
           />
         </div>
       </section>
