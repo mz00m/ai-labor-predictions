@@ -993,9 +993,11 @@ export default function RegionalExplorer({
           Where the risk lands on the map
         </h2>
         <p className="text-base text-[var(--muted)] leading-relaxed mt-2 max-w-[680px]">
-          Click any region to see who works there, how much of that work AI can do
-          today, and which of four near-term paths &mdash; automation, reorganization,
-          growth, or stability &mdash; the local labor market is bending toward.
+          Every regional economy is built on a different mix of work, and AI will
+          reshape each one differently. Click any county or metro to see the
+          occupations that anchor the local labor market, the share of their tasks
+          AI can already do, and where the region falls across four near-term
+          trajectories: automation, reorganization, growth, or stability.
         </p>
       </div>
 
