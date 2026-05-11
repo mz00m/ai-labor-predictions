@@ -25,9 +25,16 @@ interface StateRiskRow {
   title: string;
   totalEmployment: number;
   matchedEmployment: number;
+  /** Sum of employment scored either directly or via SOC major-group fallback. */
+  fullEmployment?: number;
   coverage: number;
+  /** Coverage after major-group fallback (~97-100%). */
+  fullCoverage?: number;
+  /** Matched-only employment-weighted risk (legacy). */
   weightedNetRisk100: number;
   weightedNetRisk: number;
+  /** Honest headline: matched + SOC major-group fallback for unscored ~half of state employment. */
+  weightedNetRisk100Full?: number;
   weightedPctHighRiskTime: number;
   topRiskOccupations: { slug: string; title: string; employment: number; netRisk100: number }[];
   occupationCount: number;
@@ -312,7 +319,10 @@ export default function RegionalExplorer({
         valueOf: (id) => {
           const s = stateByFips.get(id);
           if (!s) return null;
-          return metric === "pctHigh" ? s.weightedPctHighRiskTime : s.weightedNetRisk100;
+          if (metric === "pctHigh") return s.weightedPctHighRiskTime;
+          // Prefer the SOC-major-group fallback-augmented score (~97-100% coverage);
+          // fall back to the matched-only score if the field isn't present.
+          return s.weightedNetRisk100Full ?? s.weightedNetRisk100;
         },
         nameOf: (id) => stateByFips.get(id)?.title ?? id,
         employmentOf: (id) => stateByFips.get(id)?.totalEmployment ?? 0,
@@ -520,9 +530,9 @@ export default function RegionalExplorer({
         abbr: s.abbr,
         title: s.title,
         totalEmployment: s.totalEmployment,
-        weightedNetRisk100: s.weightedNetRisk100,
+        weightedNetRisk100: s.weightedNetRisk100Full ?? s.weightedNetRisk100,
         weightedPctHighRiskTime: s.weightedPctHighRiskTime,
-        coverage: s.coverage,
+        coverage: s.fullCoverage ?? s.coverage,
         topRiskOccupations: s.topRiskOccupations,
         topMetrosInState: metros,
       };

@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-05-11T18:02:44.644Z",
+  "generatedAt": "2026-05-11T18:11:00.406Z",
   "source": "BLS OEWS May 2024 state-level (oesm24st)",
-  "methodology": "Per-state risk = employment-weighted average of occupation netRisk100 across the ~325 SOC codes shared between BLS OEWS state data and our occupation-risk dataset. Suppressed cells (employment = null) are excluded. Coverage field reports the share of state employment covered by matched occupations.",
+  "methodology": "Per-state risk has two flavors. weightedNetRisk100 is the employment-weighted average across the ~325 SOC codes that have direct entries in our occupation-risk framework (covers ~50% of state employment). weightedNetRisk100Full additionally applies SOC major-group fallback risk to unscored SOCs, lifting coverage to ~95% — this is the honest headline number. The two are usually within 1-2 points of each other, but Full removes the upward bias from selectively scoring office-heavy occupations.",
   "stateCount": 51,
   "states": [
     {
@@ -10,9 +10,12 @@
       "title": "District of Columbia",
       "totalEmployment": 708790,
       "matchedEmployment": 380880,
+      "fullEmployment": 684690,
       "coverage": 0.5373664978343374,
+      "fullCoverage": 0.965998391625164,
       "weightedNetRisk100": 54,
       "weightedNetRisk": 5.44,
+      "weightedNetRisk100Full": 54,
       "weightedPctHighRiskTime": 32.2,
       "topRiskOccupations": [
         {
@@ -49,190 +52,17 @@
       "occupationCount": 230
     },
     {
-      "fips": "04",
-      "abbr": "AZ",
-      "title": "Arizona",
-      "totalEmployment": 3196750,
-      "matchedEmployment": 1744270,
-      "coverage": 0.5456385391413154,
-      "weightedNetRisk100": 53,
-      "weightedNetRisk": 5.32,
-      "weightedPctHighRiskTime": 21.4,
-      "topRiskOccupations": [
-        {
-          "slug": "medical-transcriptionists",
-          "title": "Medical transcriptionists",
-          "employment": 920,
-          "netRisk100": 75
-        },
-        {
-          "slug": "paralegals-and-legal-assistants",
-          "title": "Paralegals and legal assistants",
-          "employment": 6780,
-          "netRisk100": 70
-        },
-        {
-          "slug": "court-reporters",
-          "title": "Court reporters and simultaneous captioners",
-          "employment": 140,
-          "netRisk100": 69
-        },
-        {
-          "slug": "general-office-clerks",
-          "title": "General office clerks",
-          "employment": 53120,
-          "netRisk100": 69
-        },
-        {
-          "slug": "bill-and-account-collectors",
-          "title": "Bill and account collectors",
-          "employment": 6360,
-          "netRisk100": 68
-        }
-      ],
-      "occupationCount": 287
-    },
-    {
-      "fips": "05",
-      "abbr": "AR",
-      "title": "Arkansas",
-      "totalEmployment": 1288810,
-      "matchedEmployment": 649610,
-      "coverage": 0.5040386092597047,
-      "weightedNetRisk100": 53,
-      "weightedNetRisk": 5.29,
-      "weightedPctHighRiskTime": 18.4,
-      "topRiskOccupations": [
-        {
-          "slug": "medical-transcriptionists",
-          "title": "Medical transcriptionists",
-          "employment": 340,
-          "netRisk100": 75
-        },
-        {
-          "slug": "paralegals-and-legal-assistants",
-          "title": "Paralegals and legal assistants",
-          "employment": 1400,
-          "netRisk100": 70
-        },
-        {
-          "slug": "court-reporters",
-          "title": "Court reporters and simultaneous captioners",
-          "employment": 170,
-          "netRisk100": 69
-        },
-        {
-          "slug": "general-office-clerks",
-          "title": "General office clerks",
-          "employment": 30390,
-          "netRisk100": 69
-        },
-        {
-          "slug": "bill-and-account-collectors",
-          "title": "Bill and account collectors",
-          "employment": 880,
-          "netRisk100": 68
-        }
-      ],
-      "occupationCount": 276
-    },
-    {
-      "fips": "06",
-      "abbr": "CA",
-      "title": "California",
-      "totalEmployment": 18057850,
-      "matchedEmployment": 9130110,
-      "coverage": 0.5056033802473716,
-      "weightedNetRisk100": 53,
-      "weightedNetRisk": 5.3,
-      "weightedPctHighRiskTime": 21.8,
-      "topRiskOccupations": [
-        {
-          "slug": "medical-transcriptionists",
-          "title": "Medical transcriptionists",
-          "employment": 5630,
-          "netRisk100": 75
-        },
-        {
-          "slug": "paralegals-and-legal-assistants",
-          "title": "Paralegals and legal assistants",
-          "employment": 45740,
-          "netRisk100": 70
-        },
-        {
-          "slug": "court-reporters",
-          "title": "Court reporters and simultaneous captioners",
-          "employment": 1590,
-          "netRisk100": 69
-        },
-        {
-          "slug": "general-office-clerks",
-          "title": "General office clerks",
-          "employment": 306000,
-          "netRisk100": 69
-        },
-        {
-          "slug": "bill-and-account-collectors",
-          "title": "Bill and account collectors",
-          "employment": 15100,
-          "netRisk100": 68
-        }
-      ],
-      "occupationCount": 314
-    },
-    {
-      "fips": "08",
-      "abbr": "CO",
-      "title": "Colorado",
-      "totalEmployment": 2891210,
-      "matchedEmployment": 1486630,
-      "coverage": 0.5141895607721335,
-      "weightedNetRisk100": 53,
-      "weightedNetRisk": 5.28,
-      "weightedPctHighRiskTime": 22.5,
-      "topRiskOccupations": [
-        {
-          "slug": "medical-transcriptionists",
-          "title": "Medical transcriptionists",
-          "employment": 780,
-          "netRisk100": 75
-        },
-        {
-          "slug": "paralegals-and-legal-assistants",
-          "title": "Paralegals and legal assistants",
-          "employment": 5430,
-          "netRisk100": 70
-        },
-        {
-          "slug": "general-office-clerks",
-          "title": "General office clerks",
-          "employment": 30280,
-          "netRisk100": 69
-        },
-        {
-          "slug": "bill-and-account-collectors",
-          "title": "Bill and account collectors",
-          "employment": 1770,
-          "netRisk100": 68
-        },
-        {
-          "slug": "customer-service-representatives",
-          "title": "Customer service representatives",
-          "employment": 45890,
-          "netRisk100": 68
-        }
-      ],
-      "occupationCount": 290
-    },
-    {
       "fips": "09",
       "abbr": "CT",
       "title": "Connecticut",
       "totalEmployment": 1682000,
       "matchedEmployment": 905640,
+      "fullEmployment": 1658110,
       "coverage": 0.5384304399524376,
+      "fullCoverage": 0.9857966706302022,
       "weightedNetRisk100": 53,
       "weightedNetRisk": 5.3,
+      "weightedNetRisk100Full": 53,
       "weightedPctHighRiskTime": 21.4,
       "topRiskOccupations": [
         {
@@ -274,9 +104,12 @@
       "title": "Delaware",
       "totalEmployment": 476450,
       "matchedEmployment": 249960,
+      "fullEmployment": 461260,
       "coverage": 0.5246300766082485,
+      "fullCoverage": 0.9681183754853605,
       "weightedNetRisk100": 53,
       "weightedNetRisk": 5.34,
+      "weightedNetRisk100Full": 53,
       "weightedPctHighRiskTime": 22.1,
       "topRiskOccupations": [
         {
@@ -318,9 +151,12 @@
       "title": "Florida",
       "totalEmployment": 9820120,
       "matchedEmployment": 5261860,
+      "fullEmployment": 9755660,
       "coverage": 0.5358244094776846,
+      "fullCoverage": 0.9934359254265732,
       "weightedNetRisk100": 53,
       "weightedNetRisk": 5.33,
+      "weightedNetRisk100Full": 53,
       "weightedPctHighRiskTime": 21.5,
       "topRiskOccupations": [
         {
@@ -357,410 +193,17 @@
       "occupationCount": 305
     },
     {
-      "fips": "13",
-      "abbr": "GA",
-      "title": "Georgia",
-      "totalEmployment": 4856190,
-      "matchedEmployment": 2463330,
-      "coverage": 0.5072556881011657,
-      "weightedNetRisk100": 53,
-      "weightedNetRisk": 5.33,
-      "weightedPctHighRiskTime": 21.5,
-      "topRiskOccupations": [
-        {
-          "slug": "medical-transcriptionists",
-          "title": "Medical transcriptionists",
-          "employment": 1830,
-          "netRisk100": 75
-        },
-        {
-          "slug": "paralegals-and-legal-assistants",
-          "title": "Paralegals and legal assistants",
-          "employment": 14480,
-          "netRisk100": 70
-        },
-        {
-          "slug": "court-reporters",
-          "title": "Court reporters and simultaneous captioners",
-          "employment": 460,
-          "netRisk100": 69
-        },
-        {
-          "slug": "general-office-clerks",
-          "title": "General office clerks",
-          "employment": 79450,
-          "netRisk100": 69
-        },
-        {
-          "slug": "bill-and-account-collectors",
-          "title": "Bill and account collectors",
-          "employment": 6610,
-          "netRisk100": 68
-        }
-      ],
-      "occupationCount": 298
-    },
-    {
-      "fips": "15",
-      "abbr": "HI",
-      "title": "Hawaii",
-      "totalEmployment": 620930,
-      "matchedEmployment": 307130,
-      "coverage": 0.49462902420562704,
-      "weightedNetRisk100": 53,
-      "weightedNetRisk": 5.26,
-      "weightedPctHighRiskTime": 18.5,
-      "topRiskOccupations": [
-        {
-          "slug": "medical-transcriptionists",
-          "title": "Medical transcriptionists",
-          "employment": 40,
-          "netRisk100": 75
-        },
-        {
-          "slug": "paralegals-and-legal-assistants",
-          "title": "Paralegals and legal assistants",
-          "employment": 1170,
-          "netRisk100": 70
-        },
-        {
-          "slug": "general-office-clerks",
-          "title": "General office clerks",
-          "employment": 13720,
-          "netRisk100": 69
-        },
-        {
-          "slug": "bill-and-account-collectors",
-          "title": "Bill and account collectors",
-          "employment": 250,
-          "netRisk100": 68
-        },
-        {
-          "slug": "customer-service-representatives",
-          "title": "Customer service representatives",
-          "employment": 7460,
-          "netRisk100": 68
-        }
-      ],
-      "occupationCount": 242
-    },
-    {
-      "fips": "16",
-      "abbr": "ID",
-      "title": "Idaho",
-      "totalEmployment": 844910,
-      "matchedEmployment": 442550,
-      "coverage": 0.5237835982530684,
-      "weightedNetRisk100": 53,
-      "weightedNetRisk": 5.31,
-      "weightedPctHighRiskTime": 19.9,
-      "topRiskOccupations": [
-        {
-          "slug": "medical-transcriptionists",
-          "title": "Medical transcriptionists",
-          "employment": 380,
-          "netRisk100": 75
-        },
-        {
-          "slug": "paralegals-and-legal-assistants",
-          "title": "Paralegals and legal assistants",
-          "employment": 2250,
-          "netRisk100": 70
-        },
-        {
-          "slug": "court-reporters",
-          "title": "Court reporters and simultaneous captioners",
-          "employment": 40,
-          "netRisk100": 69
-        },
-        {
-          "slug": "general-office-clerks",
-          "title": "General office clerks",
-          "employment": 22460,
-          "netRisk100": 69
-        },
-        {
-          "slug": "bill-and-account-collectors",
-          "title": "Bill and account collectors",
-          "employment": 870,
-          "netRisk100": 68
-        }
-      ],
-      "occupationCount": 264
-    },
-    {
-      "fips": "17",
-      "abbr": "IL",
-      "title": "Illinois",
-      "totalEmployment": 6065230,
-      "matchedEmployment": 3219330,
-      "coverage": 0.5307844879748995,
-      "weightedNetRisk100": 53,
-      "weightedNetRisk": 5.28,
-      "weightedPctHighRiskTime": 20.5,
-      "topRiskOccupations": [
-        {
-          "slug": "medical-transcriptionists",
-          "title": "Medical transcriptionists",
-          "employment": 1500,
-          "netRisk100": 75
-        },
-        {
-          "slug": "paralegals-and-legal-assistants",
-          "title": "Paralegals and legal assistants",
-          "employment": 12430,
-          "netRisk100": 70
-        },
-        {
-          "slug": "court-reporters",
-          "title": "Court reporters and simultaneous captioners",
-          "employment": 590,
-          "netRisk100": 69
-        },
-        {
-          "slug": "general-office-clerks",
-          "title": "General office clerks",
-          "employment": 103580,
-          "netRisk100": 69
-        },
-        {
-          "slug": "bill-and-account-collectors",
-          "title": "Bill and account collectors",
-          "employment": 4310,
-          "netRisk100": 68
-        }
-      ],
-      "occupationCount": 302
-    },
-    {
-      "fips": "18",
-      "abbr": "IN",
-      "title": "Indiana",
-      "totalEmployment": 3186690,
-      "matchedEmployment": 1624620,
-      "coverage": 0.5098142586822063,
-      "weightedNetRisk100": 53,
-      "weightedNetRisk": 5.26,
-      "weightedPctHighRiskTime": 18.5,
-      "topRiskOccupations": [
-        {
-          "slug": "medical-transcriptionists",
-          "title": "Medical transcriptionists",
-          "employment": 1100,
-          "netRisk100": 75
-        },
-        {
-          "slug": "paralegals-and-legal-assistants",
-          "title": "Paralegals and legal assistants",
-          "employment": 5970,
-          "netRisk100": 70
-        },
-        {
-          "slug": "court-reporters",
-          "title": "Court reporters and simultaneous captioners",
-          "employment": 840,
-          "netRisk100": 69
-        },
-        {
-          "slug": "general-office-clerks",
-          "title": "General office clerks",
-          "employment": 66160,
-          "netRisk100": 69
-        },
-        {
-          "slug": "bill-and-account-collectors",
-          "title": "Bill and account collectors",
-          "employment": 3250,
-          "netRisk100": 68
-        }
-      ],
-      "occupationCount": 300
-    },
-    {
-      "fips": "19",
-      "abbr": "IA",
-      "title": "Iowa",
-      "totalEmployment": 1561660,
-      "matchedEmployment": 810930,
-      "coverage": 0.5192743618969557,
-      "weightedNetRisk100": 53,
-      "weightedNetRisk": 5.26,
-      "weightedPctHighRiskTime": 18.7,
-      "topRiskOccupations": [
-        {
-          "slug": "medical-transcriptionists",
-          "title": "Medical transcriptionists",
-          "employment": 200,
-          "netRisk100": 75
-        },
-        {
-          "slug": "paralegals-and-legal-assistants",
-          "title": "Paralegals and legal assistants",
-          "employment": 2530,
-          "netRisk100": 70
-        },
-        {
-          "slug": "court-reporters",
-          "title": "Court reporters and simultaneous captioners",
-          "employment": 190,
-          "netRisk100": 69
-        },
-        {
-          "slug": "general-office-clerks",
-          "title": "General office clerks",
-          "employment": 24280,
-          "netRisk100": 69
-        },
-        {
-          "slug": "bill-and-account-collectors",
-          "title": "Bill and account collectors",
-          "employment": 1020,
-          "netRisk100": 68
-        }
-      ],
-      "occupationCount": 287
-    },
-    {
-      "fips": "20",
-      "abbr": "KS",
-      "title": "Kansas",
-      "totalEmployment": 1431180,
-      "matchedEmployment": 733370,
-      "coverage": 0.5124233150267611,
-      "weightedNetRisk100": 53,
-      "weightedNetRisk": 5.28,
-      "weightedPctHighRiskTime": 19.7,
-      "topRiskOccupations": [
-        {
-          "slug": "medical-transcriptionists",
-          "title": "Medical transcriptionists",
-          "employment": 510,
-          "netRisk100": 75
-        },
-        {
-          "slug": "paralegals-and-legal-assistants",
-          "title": "Paralegals and legal assistants",
-          "employment": 2330,
-          "netRisk100": 70
-        },
-        {
-          "slug": "court-reporters",
-          "title": "Court reporters and simultaneous captioners",
-          "employment": 110,
-          "netRisk100": 69
-        },
-        {
-          "slug": "general-office-clerks",
-          "title": "General office clerks",
-          "employment": 2570,
-          "netRisk100": 69
-        },
-        {
-          "slug": "bill-and-account-collectors",
-          "title": "Bill and account collectors",
-          "employment": 1290,
-          "netRisk100": 68
-        }
-      ],
-      "occupationCount": 279
-    },
-    {
-      "fips": "21",
-      "abbr": "KY",
-      "title": "Kentucky",
-      "totalEmployment": 1993680,
-      "matchedEmployment": 1016050,
-      "coverage": 0.5096354480157297,
-      "weightedNetRisk100": 53,
-      "weightedNetRisk": 5.28,
-      "weightedPctHighRiskTime": 17.9,
-      "topRiskOccupations": [
-        {
-          "slug": "medical-transcriptionists",
-          "title": "Medical transcriptionists",
-          "employment": 580,
-          "netRisk100": 75
-        },
-        {
-          "slug": "paralegals-and-legal-assistants",
-          "title": "Paralegals and legal assistants",
-          "employment": 3080,
-          "netRisk100": 70
-        },
-        {
-          "slug": "general-office-clerks",
-          "title": "General office clerks",
-          "employment": 29400,
-          "netRisk100": 69
-        },
-        {
-          "slug": "bill-and-account-collectors",
-          "title": "Bill and account collectors",
-          "employment": 2590,
-          "netRisk100": 68
-        },
-        {
-          "slug": "customer-service-representatives",
-          "title": "Customer service representatives",
-          "employment": 43970,
-          "netRisk100": 68
-        }
-      ],
-      "occupationCount": 286
-    },
-    {
-      "fips": "23",
-      "abbr": "ME",
-      "title": "Maine",
-      "totalEmployment": 635460,
-      "matchedEmployment": 327470,
-      "coverage": 0.5153274793063293,
-      "weightedNetRisk100": 53,
-      "weightedNetRisk": 5.26,
-      "weightedPctHighRiskTime": 18.4,
-      "topRiskOccupations": [
-        {
-          "slug": "medical-transcriptionists",
-          "title": "Medical transcriptionists",
-          "employment": 140,
-          "netRisk100": 75
-        },
-        {
-          "slug": "paralegals-and-legal-assistants",
-          "title": "Paralegals and legal assistants",
-          "employment": 1260,
-          "netRisk100": 70
-        },
-        {
-          "slug": "general-office-clerks",
-          "title": "General office clerks",
-          "employment": 11670,
-          "netRisk100": 69
-        },
-        {
-          "slug": "bill-and-account-collectors",
-          "title": "Bill and account collectors",
-          "employment": 450,
-          "netRisk100": 68
-        },
-        {
-          "slug": "customer-service-representatives",
-          "title": "Customer service representatives",
-          "employment": 7500,
-          "netRisk100": 68
-        }
-      ],
-      "occupationCount": 261
-    },
-    {
       "fips": "24",
       "abbr": "MD",
       "title": "Maryland",
       "totalEmployment": 2746300,
       "matchedEmployment": 1423520,
+      "fullEmployment": 2718650,
       "coverage": 0.5183410406729053,
+      "fullCoverage": 0.9899319083858282,
       "weightedNetRisk100": 53,
       "weightedNetRisk": 5.28,
+      "weightedNetRisk100Full": 53,
       "weightedPctHighRiskTime": 21.4,
       "topRiskOccupations": [
         {
@@ -802,9 +245,12 @@
       "title": "Massachusetts",
       "totalEmployment": 3642650,
       "matchedEmployment": 2009330,
+      "fullEmployment": 3595610,
       "coverage": 0.551612150494832,
+      "fullCoverage": 0.9870863245164921,
       "weightedNetRisk100": 53,
       "weightedNetRisk": 5.31,
+      "weightedNetRisk100Full": 53,
       "weightedPctHighRiskTime": 23.5,
       "topRiskOccupations": [
         {
@@ -841,278 +287,17 @@
       "occupationCount": 288
     },
     {
-      "fips": "26",
-      "abbr": "MI",
-      "title": "Michigan",
-      "totalEmployment": 4390620,
-      "matchedEmployment": 2267150,
-      "coverage": 0.5163621538643746,
-      "weightedNetRisk100": 53,
-      "weightedNetRisk": 5.3,
-      "weightedPctHighRiskTime": 21.3,
-      "topRiskOccupations": [
-        {
-          "slug": "medical-transcriptionists",
-          "title": "Medical transcriptionists",
-          "employment": 1070,
-          "netRisk100": 75
-        },
-        {
-          "slug": "paralegals-and-legal-assistants",
-          "title": "Paralegals and legal assistants",
-          "employment": 7240,
-          "netRisk100": 70
-        },
-        {
-          "slug": "court-reporters",
-          "title": "Court reporters and simultaneous captioners",
-          "employment": 290,
-          "netRisk100": 69
-        },
-        {
-          "slug": "general-office-clerks",
-          "title": "General office clerks",
-          "employment": 89290,
-          "netRisk100": 69
-        },
-        {
-          "slug": "bill-and-account-collectors",
-          "title": "Bill and account collectors",
-          "employment": 3330,
-          "netRisk100": 68
-        }
-      ],
-      "occupationCount": 308
-    },
-    {
-      "fips": "27",
-      "abbr": "MN",
-      "title": "Minnesota",
-      "totalEmployment": 2920470,
-      "matchedEmployment": 1562000,
-      "coverage": 0.5348454187168503,
-      "weightedNetRisk100": 53,
-      "weightedNetRisk": 5.3,
-      "weightedPctHighRiskTime": 21.8,
-      "topRiskOccupations": [
-        {
-          "slug": "medical-transcriptionists",
-          "title": "Medical transcriptionists",
-          "employment": 370,
-          "netRisk100": 75
-        },
-        {
-          "slug": "paralegals-and-legal-assistants",
-          "title": "Paralegals and legal assistants",
-          "employment": 6640,
-          "netRisk100": 70
-        },
-        {
-          "slug": "court-reporters",
-          "title": "Court reporters and simultaneous captioners",
-          "employment": 280,
-          "netRisk100": 69
-        },
-        {
-          "slug": "general-office-clerks",
-          "title": "General office clerks",
-          "employment": 55710,
-          "netRisk100": 69
-        },
-        {
-          "slug": "bill-and-account-collectors",
-          "title": "Bill and account collectors",
-          "employment": 3800,
-          "netRisk100": 68
-        }
-      ],
-      "occupationCount": 293
-    },
-    {
-      "fips": "28",
-      "abbr": "MS",
-      "title": "Mississippi",
-      "totalEmployment": 1159710,
-      "matchedEmployment": 581400,
-      "coverage": 0.5013322296091264,
-      "weightedNetRisk100": 53,
-      "weightedNetRisk": 5.26,
-      "weightedPctHighRiskTime": 16.5,
-      "topRiskOccupations": [
-        {
-          "slug": "medical-transcriptionists",
-          "title": "Medical transcriptionists",
-          "employment": 230,
-          "netRisk100": 75
-        },
-        {
-          "slug": "paralegals-and-legal-assistants",
-          "title": "Paralegals and legal assistants",
-          "employment": 2080,
-          "netRisk100": 70
-        },
-        {
-          "slug": "court-reporters",
-          "title": "Court reporters and simultaneous captioners",
-          "employment": 40,
-          "netRisk100": 69
-        },
-        {
-          "slug": "general-office-clerks",
-          "title": "General office clerks",
-          "employment": 18290,
-          "netRisk100": 69
-        },
-        {
-          "slug": "bill-and-account-collectors",
-          "title": "Bill and account collectors",
-          "employment": 850,
-          "netRisk100": 68
-        }
-      ],
-      "occupationCount": 273
-    },
-    {
-      "fips": "29",
-      "abbr": "MO",
-      "title": "Missouri",
-      "totalEmployment": 2918050,
-      "matchedEmployment": 1470930,
-      "coverage": 0.5040797793046726,
-      "weightedNetRisk100": 53,
-      "weightedNetRisk": 5.31,
-      "weightedPctHighRiskTime": 19.9,
-      "topRiskOccupations": [
-        {
-          "slug": "medical-transcriptionists",
-          "title": "Medical transcriptionists",
-          "employment": 720,
-          "netRisk100": 75
-        },
-        {
-          "slug": "paralegals-and-legal-assistants",
-          "title": "Paralegals and legal assistants",
-          "employment": 6410,
-          "netRisk100": 70
-        },
-        {
-          "slug": "court-reporters",
-          "title": "Court reporters and simultaneous captioners",
-          "employment": 260,
-          "netRisk100": 69
-        },
-        {
-          "slug": "general-office-clerks",
-          "title": "General office clerks",
-          "employment": 57870,
-          "netRisk100": 69
-        },
-        {
-          "slug": "bill-and-account-collectors",
-          "title": "Bill and account collectors",
-          "employment": 3820,
-          "netRisk100": 68
-        }
-      ],
-      "occupationCount": 297
-    },
-    {
-      "fips": "30",
-      "abbr": "MT",
-      "title": "Montana",
-      "totalEmployment": 510020,
-      "matchedEmployment": 258640,
-      "coverage": 0.5071173679463551,
-      "weightedNetRisk100": 53,
-      "weightedNetRisk": 5.25,
-      "weightedPctHighRiskTime": 18.6,
-      "topRiskOccupations": [
-        {
-          "slug": "medical-transcriptionists",
-          "title": "Medical transcriptionists",
-          "employment": 80,
-          "netRisk100": 75
-        },
-        {
-          "slug": "paralegals-and-legal-assistants",
-          "title": "Paralegals and legal assistants",
-          "employment": 1060,
-          "netRisk100": 70
-        },
-        {
-          "slug": "court-reporters",
-          "title": "Court reporters and simultaneous captioners",
-          "employment": 60,
-          "netRisk100": 69
-        },
-        {
-          "slug": "general-office-clerks",
-          "title": "General office clerks",
-          "employment": 11350,
-          "netRisk100": 69
-        },
-        {
-          "slug": "bill-and-account-collectors",
-          "title": "Bill and account collectors",
-          "employment": 410,
-          "netRisk100": 68
-        }
-      ],
-      "occupationCount": 258
-    },
-    {
-      "fips": "33",
-      "abbr": "NH",
-      "title": "New Hampshire",
-      "totalEmployment": 683160,
-      "matchedEmployment": 356150,
-      "coverage": 0.5213273610867146,
-      "weightedNetRisk100": 53,
-      "weightedNetRisk": 5.32,
-      "weightedPctHighRiskTime": 21.2,
-      "topRiskOccupations": [
-        {
-          "slug": "medical-transcriptionists",
-          "title": "Medical transcriptionists",
-          "employment": 50,
-          "netRisk100": 75
-        },
-        {
-          "slug": "paralegals-and-legal-assistants",
-          "title": "Paralegals and legal assistants",
-          "employment": 1580,
-          "netRisk100": 70
-        },
-        {
-          "slug": "general-office-clerks",
-          "title": "General office clerks",
-          "employment": 13710,
-          "netRisk100": 69
-        },
-        {
-          "slug": "bill-and-account-collectors",
-          "title": "Bill and account collectors",
-          "employment": 820,
-          "netRisk100": 68
-        },
-        {
-          "slug": "customer-service-representatives",
-          "title": "Customer service representatives",
-          "employment": 12560,
-          "netRisk100": 68
-        }
-      ],
-      "occupationCount": 260
-    },
-    {
       "fips": "34",
       "abbr": "NJ",
       "title": "New Jersey",
       "totalEmployment": 4250430,
       "matchedEmployment": 2245000,
+      "fullEmployment": 4225780,
       "coverage": 0.5281818545417758,
+      "fullCoverage": 0.9942005867641627,
       "weightedNetRisk100": 53,
       "weightedNetRisk": 5.32,
+      "weightedNetRisk100Full": 53,
       "weightedPctHighRiskTime": 21.7,
       "topRiskOccupations": [
         {
@@ -1149,58 +334,17 @@
       "occupationCount": 299
     },
     {
-      "fips": "35",
-      "abbr": "NM",
-      "title": "New Mexico",
-      "totalEmployment": 860880,
-      "matchedEmployment": 431780,
-      "coverage": 0.5015565467893318,
-      "weightedNetRisk100": 53,
-      "weightedNetRisk": 5.29,
-      "weightedPctHighRiskTime": 19.2,
-      "topRiskOccupations": [
-        {
-          "slug": "medical-transcriptionists",
-          "title": "Medical transcriptionists",
-          "employment": 170,
-          "netRisk100": 75
-        },
-        {
-          "slug": "paralegals-and-legal-assistants",
-          "title": "Paralegals and legal assistants",
-          "employment": 1660,
-          "netRisk100": 70
-        },
-        {
-          "slug": "general-office-clerks",
-          "title": "General office clerks",
-          "employment": 14270,
-          "netRisk100": 69
-        },
-        {
-          "slug": "bill-and-account-collectors",
-          "title": "Bill and account collectors",
-          "employment": 430,
-          "netRisk100": 68
-        },
-        {
-          "slug": "customer-service-representatives",
-          "title": "Customer service representatives",
-          "employment": 18520,
-          "netRisk100": 68
-        }
-      ],
-      "occupationCount": 265
-    },
-    {
       "fips": "36",
       "abbr": "NY",
       "title": "New York",
       "totalEmployment": 9541880,
       "matchedEmployment": 4912710,
+      "fullEmployment": 9458860,
       "coverage": 0.514857659077666,
+      "fullCoverage": 0.9912994085023077,
       "weightedNetRisk100": 53,
       "weightedNetRisk": 5.33,
+      "weightedNetRisk100Full": 53,
       "weightedPctHighRiskTime": 22.6,
       "topRiskOccupations": [
         {
@@ -1237,542 +381,17 @@
       "occupationCount": 307
     },
     {
-      "fips": "37",
-      "abbr": "NC",
-      "title": "North Carolina",
-      "totalEmployment": 4898270,
-      "matchedEmployment": 2592440,
-      "coverage": 0.5292562476139535,
-      "weightedNetRisk100": 53,
-      "weightedNetRisk": 5.29,
-      "weightedPctHighRiskTime": 20.8,
-      "topRiskOccupations": [
-        {
-          "slug": "medical-transcriptionists",
-          "title": "Medical transcriptionists",
-          "employment": 1630,
-          "netRisk100": 75
-        },
-        {
-          "slug": "paralegals-and-legal-assistants",
-          "title": "Paralegals and legal assistants",
-          "employment": 12270,
-          "netRisk100": 70
-        },
-        {
-          "slug": "court-reporters",
-          "title": "Court reporters and simultaneous captioners",
-          "employment": 130,
-          "netRisk100": 69
-        },
-        {
-          "slug": "general-office-clerks",
-          "title": "General office clerks",
-          "employment": 70600,
-          "netRisk100": 69
-        },
-        {
-          "slug": "bill-and-account-collectors",
-          "title": "Bill and account collectors",
-          "employment": 5300,
-          "netRisk100": 68
-        }
-      ],
-      "occupationCount": 304
-    },
-    {
-      "fips": "39",
-      "abbr": "OH",
-      "title": "Ohio",
-      "totalEmployment": 5526300,
-      "matchedEmployment": 2854310,
-      "coverage": 0.5164956661780938,
-      "weightedNetRisk100": 53,
-      "weightedNetRisk": 5.28,
-      "weightedPctHighRiskTime": 19.7,
-      "topRiskOccupations": [
-        {
-          "slug": "medical-transcriptionists",
-          "title": "Medical transcriptionists",
-          "employment": 1270,
-          "netRisk100": 75
-        },
-        {
-          "slug": "paralegals-and-legal-assistants",
-          "title": "Paralegals and legal assistants",
-          "employment": 8160,
-          "netRisk100": 70
-        },
-        {
-          "slug": "court-reporters",
-          "title": "Court reporters and simultaneous captioners",
-          "employment": 520,
-          "netRisk100": 69
-        },
-        {
-          "slug": "general-office-clerks",
-          "title": "General office clerks",
-          "employment": 88120,
-          "netRisk100": 69
-        },
-        {
-          "slug": "bill-and-account-collectors",
-          "title": "Bill and account collectors",
-          "employment": 8660,
-          "netRisk100": 68
-        }
-      ],
-      "occupationCount": 303
-    },
-    {
-      "fips": "40",
-      "abbr": "OK",
-      "title": "Oklahoma",
-      "totalEmployment": 1691930,
-      "matchedEmployment": 893890,
-      "coverage": 0.5283256399496433,
-      "weightedNetRisk100": 53,
-      "weightedNetRisk": 5.28,
-      "weightedPctHighRiskTime": 18.7,
-      "topRiskOccupations": [
-        {
-          "slug": "medical-transcriptionists",
-          "title": "Medical transcriptionists",
-          "employment": 570,
-          "netRisk100": 75
-        },
-        {
-          "slug": "paralegals-and-legal-assistants",
-          "title": "Paralegals and legal assistants",
-          "employment": 2500,
-          "netRisk100": 70
-        },
-        {
-          "slug": "court-reporters",
-          "title": "Court reporters and simultaneous captioners",
-          "employment": 150,
-          "netRisk100": 69
-        },
-        {
-          "slug": "general-office-clerks",
-          "title": "General office clerks",
-          "employment": 31750,
-          "netRisk100": 69
-        },
-        {
-          "slug": "bill-and-account-collectors",
-          "title": "Bill and account collectors",
-          "employment": 2450,
-          "netRisk100": 68
-        }
-      ],
-      "occupationCount": 285
-    },
-    {
-      "fips": "41",
-      "abbr": "OR",
-      "title": "Oregon",
-      "totalEmployment": 1965700,
-      "matchedEmployment": 1008880,
-      "coverage": 0.5132421020501603,
-      "weightedNetRisk100": 53,
-      "weightedNetRisk": 5.25,
-      "weightedPctHighRiskTime": 19.6,
-      "topRiskOccupations": [
-        {
-          "slug": "medical-transcriptionists",
-          "title": "Medical transcriptionists",
-          "employment": 690,
-          "netRisk100": 75
-        },
-        {
-          "slug": "paralegals-and-legal-assistants",
-          "title": "Paralegals and legal assistants",
-          "employment": 4910,
-          "netRisk100": 70
-        },
-        {
-          "slug": "general-office-clerks",
-          "title": "General office clerks",
-          "employment": 28240,
-          "netRisk100": 69
-        },
-        {
-          "slug": "bill-and-account-collectors",
-          "title": "Bill and account collectors",
-          "employment": 840,
-          "netRisk100": 68
-        },
-        {
-          "slug": "customer-service-representatives",
-          "title": "Customer service representatives",
-          "employment": 22940,
-          "netRisk100": 68
-        }
-      ],
-      "occupationCount": 298
-    },
-    {
-      "fips": "42",
-      "abbr": "PA",
-      "title": "Pennsylvania",
-      "totalEmployment": 6014180,
-      "matchedEmployment": 3118030,
-      "coverage": 0.5184464049961923,
-      "weightedNetRisk100": 53,
-      "weightedNetRisk": 5.3,
-      "weightedPctHighRiskTime": 20.5,
-      "topRiskOccupations": [
-        {
-          "slug": "medical-transcriptionists",
-          "title": "Medical transcriptionists",
-          "employment": 1380,
-          "netRisk100": 75
-        },
-        {
-          "slug": "paralegals-and-legal-assistants",
-          "title": "Paralegals and legal assistants",
-          "employment": 14130,
-          "netRisk100": 70
-        },
-        {
-          "slug": "court-reporters",
-          "title": "Court reporters and simultaneous captioners",
-          "employment": 610,
-          "netRisk100": 69
-        },
-        {
-          "slug": "general-office-clerks",
-          "title": "General office clerks",
-          "employment": 118680,
-          "netRisk100": 69
-        },
-        {
-          "slug": "bill-and-account-collectors",
-          "title": "Bill and account collectors",
-          "employment": 6290,
-          "netRisk100": 68
-        }
-      ],
-      "occupationCount": 313
-    },
-    {
-      "fips": "44",
-      "abbr": "RI",
-      "title": "Rhode Island",
-      "totalEmployment": 493800,
-      "matchedEmployment": 268680,
-      "coverage": 0.5441069258809235,
-      "weightedNetRisk100": 53,
-      "weightedNetRisk": 5.31,
-      "weightedPctHighRiskTime": 21.3,
-      "topRiskOccupations": [
-        {
-          "slug": "medical-transcriptionists",
-          "title": "Medical transcriptionists",
-          "employment": 90,
-          "netRisk100": 75
-        },
-        {
-          "slug": "paralegals-and-legal-assistants",
-          "title": "Paralegals and legal assistants",
-          "employment": 1830,
-          "netRisk100": 70
-        },
-        {
-          "slug": "general-office-clerks",
-          "title": "General office clerks",
-          "employment": 8360,
-          "netRisk100": 69
-        },
-        {
-          "slug": "bill-and-account-collectors",
-          "title": "Bill and account collectors",
-          "employment": 420,
-          "netRisk100": 68
-        },
-        {
-          "slug": "customer-service-representatives",
-          "title": "Customer service representatives",
-          "employment": 8260,
-          "netRisk100": 68
-        }
-      ],
-      "occupationCount": 226
-    },
-    {
-      "fips": "45",
-      "abbr": "SC",
-      "title": "South Carolina",
-      "totalEmployment": 2271770,
-      "matchedEmployment": 1186250,
-      "coverage": 0.5221699379778763,
-      "weightedNetRisk100": 53,
-      "weightedNetRisk": 5.3,
-      "weightedPctHighRiskTime": 19.6,
-      "topRiskOccupations": [
-        {
-          "slug": "medical-transcriptionists",
-          "title": "Medical transcriptionists",
-          "employment": 710,
-          "netRisk100": 75
-        },
-        {
-          "slug": "paralegals-and-legal-assistants",
-          "title": "Paralegals and legal assistants",
-          "employment": 7260,
-          "netRisk100": 70
-        },
-        {
-          "slug": "court-reporters",
-          "title": "Court reporters and simultaneous captioners",
-          "employment": 190,
-          "netRisk100": 69
-        },
-        {
-          "slug": "general-office-clerks",
-          "title": "General office clerks",
-          "employment": 45700,
-          "netRisk100": 69
-        },
-        {
-          "slug": "bill-and-account-collectors",
-          "title": "Bill and account collectors",
-          "employment": 4060,
-          "netRisk100": 68
-        }
-      ],
-      "occupationCount": 292
-    },
-    {
-      "fips": "46",
-      "abbr": "SD",
-      "title": "South Dakota",
-      "totalEmployment": 452940,
-      "matchedEmployment": 239100,
-      "coverage": 0.5278844880116572,
-      "weightedNetRisk100": 53,
-      "weightedNetRisk": 5.26,
-      "weightedPctHighRiskTime": 18.6,
-      "topRiskOccupations": [
-        {
-          "slug": "medical-transcriptionists",
-          "title": "Medical transcriptionists",
-          "employment": 350,
-          "netRisk100": 75
-        },
-        {
-          "slug": "paralegals-and-legal-assistants",
-          "title": "Paralegals and legal assistants",
-          "employment": 660,
-          "netRisk100": 70
-        },
-        {
-          "slug": "court-reporters",
-          "title": "Court reporters and simultaneous captioners",
-          "employment": 40,
-          "netRisk100": 69
-        },
-        {
-          "slug": "general-office-clerks",
-          "title": "General office clerks",
-          "employment": 1980,
-          "netRisk100": 69
-        },
-        {
-          "slug": "bill-and-account-collectors",
-          "title": "Bill and account collectors",
-          "employment": 1290,
-          "netRisk100": 68
-        }
-      ],
-      "occupationCount": 245
-    },
-    {
-      "fips": "47",
-      "abbr": "TN",
-      "title": "Tennessee",
-      "totalEmployment": 3274390,
-      "matchedEmployment": 1691440,
-      "coverage": 0.5165664444369791,
-      "weightedNetRisk100": 53,
-      "weightedNetRisk": 5.27,
-      "weightedPctHighRiskTime": 18.8,
-      "topRiskOccupations": [
-        {
-          "slug": "medical-transcriptionists",
-          "title": "Medical transcriptionists",
-          "employment": 1420,
-          "netRisk100": 75
-        },
-        {
-          "slug": "paralegals-and-legal-assistants",
-          "title": "Paralegals and legal assistants",
-          "employment": 5890,
-          "netRisk100": 70
-        },
-        {
-          "slug": "general-office-clerks",
-          "title": "General office clerks",
-          "employment": 52550,
-          "netRisk100": 69
-        },
-        {
-          "slug": "bill-and-account-collectors",
-          "title": "Bill and account collectors",
-          "employment": 3690,
-          "netRisk100": 68
-        },
-        {
-          "slug": "customer-service-representatives",
-          "title": "Customer service representatives",
-          "employment": 64880,
-          "netRisk100": 68
-        }
-      ],
-      "occupationCount": 294
-    },
-    {
-      "fips": "48",
-      "abbr": "TX",
-      "title": "Texas",
-      "totalEmployment": 13846880,
-      "matchedEmployment": 7082420,
-      "coverage": 0.5114812867591833,
-      "weightedNetRisk100": 53,
-      "weightedNetRisk": 5.31,
-      "weightedPctHighRiskTime": 20.9,
-      "topRiskOccupations": [
-        {
-          "slug": "medical-transcriptionists",
-          "title": "Medical transcriptionists",
-          "employment": 4480,
-          "netRisk100": 75
-        },
-        {
-          "slug": "paralegals-and-legal-assistants",
-          "title": "Paralegals and legal assistants",
-          "employment": 28770,
-          "netRisk100": 70
-        },
-        {
-          "slug": "court-reporters",
-          "title": "Court reporters and simultaneous captioners",
-          "employment": 970,
-          "netRisk100": 69
-        },
-        {
-          "slug": "general-office-clerks",
-          "title": "General office clerks",
-          "employment": 200960,
-          "netRisk100": 69
-        },
-        {
-          "slug": "bill-and-account-collectors",
-          "title": "Bill and account collectors",
-          "employment": 20800,
-          "netRisk100": 68
-        }
-      ],
-      "occupationCount": 310
-    },
-    {
-      "fips": "49",
-      "abbr": "UT",
-      "title": "Utah",
-      "totalEmployment": 1709790,
-      "matchedEmployment": 916130,
-      "coverage": 0.5358143397727206,
-      "weightedNetRisk100": 53,
-      "weightedNetRisk": 5.33,
-      "weightedPctHighRiskTime": 22.9,
-      "topRiskOccupations": [
-        {
-          "slug": "medical-transcriptionists",
-          "title": "Medical transcriptionists",
-          "employment": 240,
-          "netRisk100": 75
-        },
-        {
-          "slug": "paralegals-and-legal-assistants",
-          "title": "Paralegals and legal assistants",
-          "employment": 2890,
-          "netRisk100": 70
-        },
-        {
-          "slug": "general-office-clerks",
-          "title": "General office clerks",
-          "employment": 36950,
-          "netRisk100": 69
-        },
-        {
-          "slug": "bill-and-account-collectors",
-          "title": "Bill and account collectors",
-          "employment": 3160,
-          "netRisk100": 68
-        },
-        {
-          "slug": "customer-service-representatives",
-          "title": "Customer service representatives",
-          "employment": 48770,
-          "netRisk100": 68
-        }
-      ],
-      "occupationCount": 293
-    },
-    {
-      "fips": "50",
-      "abbr": "VT",
-      "title": "Vermont",
-      "totalEmployment": 304170,
-      "matchedEmployment": 148210,
-      "coverage": 0.48726041358450867,
-      "weightedNetRisk100": 53,
-      "weightedNetRisk": 5.26,
-      "weightedPctHighRiskTime": 19.2,
-      "topRiskOccupations": [
-        {
-          "slug": "paralegals-and-legal-assistants",
-          "title": "Paralegals and legal assistants",
-          "employment": 730,
-          "netRisk100": 70
-        },
-        {
-          "slug": "general-office-clerks",
-          "title": "General office clerks",
-          "employment": 5120,
-          "netRisk100": 69
-        },
-        {
-          "slug": "bill-and-account-collectors",
-          "title": "Bill and account collectors",
-          "employment": 50,
-          "netRisk100": 68
-        },
-        {
-          "slug": "customer-service-representatives",
-          "title": "Customer service representatives",
-          "employment": 2910,
-          "netRisk100": 68
-        },
-        {
-          "slug": "bookkeeping-accounting-and-auditing-clerks",
-          "title": "Bookkeeping, accounting, and auditing clerks",
-          "employment": 3260,
-          "netRisk100": 67
-        }
-      ],
-      "occupationCount": 238
-    },
-    {
       "fips": "51",
       "abbr": "VA",
       "title": "Virginia",
       "totalEmployment": 4064640,
       "matchedEmployment": 2194100,
+      "fullEmployment": 4027310,
       "coverage": 0.5398018028656905,
+      "fullCoverage": 0.9908159148165643,
       "weightedNetRisk100": 53,
       "weightedNetRisk": 5.32,
+      "weightedNetRisk100Full": 53,
       "weightedPctHighRiskTime": 23.4,
       "topRiskOccupations": [
         {
@@ -1809,146 +428,17 @@
       "occupationCount": 302
     },
     {
-      "fips": "53",
-      "abbr": "WA",
-      "title": "Washington",
-      "totalEmployment": 3539650,
-      "matchedEmployment": 1865230,
-      "coverage": 0.5269532298391084,
-      "weightedNetRisk100": 53,
-      "weightedNetRisk": 5.29,
-      "weightedPctHighRiskTime": 23.2,
-      "topRiskOccupations": [
-        {
-          "slug": "medical-transcriptionists",
-          "title": "Medical transcriptionists",
-          "employment": 880,
-          "netRisk100": 75
-        },
-        {
-          "slug": "paralegals-and-legal-assistants",
-          "title": "Paralegals and legal assistants",
-          "employment": 9070,
-          "netRisk100": 70
-        },
-        {
-          "slug": "court-reporters",
-          "title": "Court reporters and simultaneous captioners",
-          "employment": 80,
-          "netRisk100": 69
-        },
-        {
-          "slug": "general-office-clerks",
-          "title": "General office clerks",
-          "employment": 48360,
-          "netRisk100": 69
-        },
-        {
-          "slug": "bill-and-account-collectors",
-          "title": "Bill and account collectors",
-          "employment": 3020,
-          "netRisk100": 68
-        }
-      ],
-      "occupationCount": 308
-    },
-    {
-      "fips": "54",
-      "abbr": "WV",
-      "title": "West Virginia",
-      "totalEmployment": 701470,
-      "matchedEmployment": 358620,
-      "coverage": 0.5112406802856858,
-      "weightedNetRisk100": 53,
-      "weightedNetRisk": 5.25,
-      "weightedPctHighRiskTime": 16.3,
-      "topRiskOccupations": [
-        {
-          "slug": "medical-transcriptionists",
-          "title": "Medical transcriptionists",
-          "employment": 180,
-          "netRisk100": 75
-        },
-        {
-          "slug": "paralegals-and-legal-assistants",
-          "title": "Paralegals and legal assistants",
-          "employment": 1680,
-          "netRisk100": 70
-        },
-        {
-          "slug": "court-reporters",
-          "title": "Court reporters and simultaneous captioners",
-          "employment": 160,
-          "netRisk100": 69
-        },
-        {
-          "slug": "general-office-clerks",
-          "title": "General office clerks",
-          "employment": 10950,
-          "netRisk100": 69
-        },
-        {
-          "slug": "bill-and-account-collectors",
-          "title": "Bill and account collectors",
-          "employment": 460,
-          "netRisk100": 68
-        }
-      ],
-      "occupationCount": 268
-    },
-    {
-      "fips": "55",
-      "abbr": "WI",
-      "title": "Wisconsin",
-      "totalEmployment": 2923420,
-      "matchedEmployment": 1532590,
-      "coverage": 0.5242455753877308,
-      "weightedNetRisk100": 53,
-      "weightedNetRisk": 5.28,
-      "weightedPctHighRiskTime": 20,
-      "topRiskOccupations": [
-        {
-          "slug": "medical-transcriptionists",
-          "title": "Medical transcriptionists",
-          "employment": 750,
-          "netRisk100": 75
-        },
-        {
-          "slug": "paralegals-and-legal-assistants",
-          "title": "Paralegals and legal assistants",
-          "employment": 4930,
-          "netRisk100": 70
-        },
-        {
-          "slug": "court-reporters",
-          "title": "Court reporters and simultaneous captioners",
-          "employment": 30,
-          "netRisk100": 69
-        },
-        {
-          "slug": "general-office-clerks",
-          "title": "General office clerks",
-          "employment": 52520,
-          "netRisk100": 69
-        },
-        {
-          "slug": "bill-and-account-collectors",
-          "title": "Bill and account collectors",
-          "employment": 2300,
-          "netRisk100": 68
-        }
-      ],
-      "occupationCount": 304
-    },
-    {
       "fips": "01",
       "abbr": "AL",
       "title": "Alabama",
       "totalEmployment": 2091480,
       "matchedEmployment": 1061530,
+      "fullEmployment": 2058930,
       "coverage": 0.5075496777401649,
+      "fullCoverage": 0.9844368581100464,
       "weightedNetRisk100": 52,
       "weightedNetRisk": 5.25,
+      "weightedNetRisk100Full": 52,
       "weightedPctHighRiskTime": 18.7,
       "topRiskOccupations": [
         {
@@ -1990,9 +480,12 @@
       "title": "Alaska",
       "totalEmployment": 321040,
       "matchedEmployment": 163470,
+      "fullEmployment": 312770,
       "coverage": 0.5091888861201096,
+      "fullCoverage": 0.9742399700971841,
       "weightedNetRisk100": 52,
       "weightedNetRisk": 5.2,
+      "weightedNetRisk100Full": 52,
       "weightedPctHighRiskTime": 16.6,
       "topRiskOccupations": [
         {
@@ -2029,14 +522,581 @@
       "occupationCount": 235
     },
     {
+      "fips": "04",
+      "abbr": "AZ",
+      "title": "Arizona",
+      "totalEmployment": 3196750,
+      "matchedEmployment": 1744270,
+      "fullEmployment": 3171420,
+      "coverage": 0.5456385391413154,
+      "fullCoverage": 0.9920763275201376,
+      "weightedNetRisk100": 53,
+      "weightedNetRisk": 5.32,
+      "weightedNetRisk100Full": 52,
+      "weightedPctHighRiskTime": 21.4,
+      "topRiskOccupations": [
+        {
+          "slug": "medical-transcriptionists",
+          "title": "Medical transcriptionists",
+          "employment": 920,
+          "netRisk100": 75
+        },
+        {
+          "slug": "paralegals-and-legal-assistants",
+          "title": "Paralegals and legal assistants",
+          "employment": 6780,
+          "netRisk100": 70
+        },
+        {
+          "slug": "court-reporters",
+          "title": "Court reporters and simultaneous captioners",
+          "employment": 140,
+          "netRisk100": 69
+        },
+        {
+          "slug": "general-office-clerks",
+          "title": "General office clerks",
+          "employment": 53120,
+          "netRisk100": 69
+        },
+        {
+          "slug": "bill-and-account-collectors",
+          "title": "Bill and account collectors",
+          "employment": 6360,
+          "netRisk100": 68
+        }
+      ],
+      "occupationCount": 287
+    },
+    {
+      "fips": "05",
+      "abbr": "AR",
+      "title": "Arkansas",
+      "totalEmployment": 1288810,
+      "matchedEmployment": 649610,
+      "fullEmployment": 1275340,
+      "coverage": 0.5040386092597047,
+      "fullCoverage": 0.9895484982270466,
+      "weightedNetRisk100": 53,
+      "weightedNetRisk": 5.29,
+      "weightedNetRisk100Full": 52,
+      "weightedPctHighRiskTime": 18.4,
+      "topRiskOccupations": [
+        {
+          "slug": "medical-transcriptionists",
+          "title": "Medical transcriptionists",
+          "employment": 340,
+          "netRisk100": 75
+        },
+        {
+          "slug": "paralegals-and-legal-assistants",
+          "title": "Paralegals and legal assistants",
+          "employment": 1400,
+          "netRisk100": 70
+        },
+        {
+          "slug": "court-reporters",
+          "title": "Court reporters and simultaneous captioners",
+          "employment": 170,
+          "netRisk100": 69
+        },
+        {
+          "slug": "general-office-clerks",
+          "title": "General office clerks",
+          "employment": 30390,
+          "netRisk100": 69
+        },
+        {
+          "slug": "bill-and-account-collectors",
+          "title": "Bill and account collectors",
+          "employment": 880,
+          "netRisk100": 68
+        }
+      ],
+      "occupationCount": 276
+    },
+    {
+      "fips": "06",
+      "abbr": "CA",
+      "title": "California",
+      "totalEmployment": 18057850,
+      "matchedEmployment": 9130110,
+      "fullEmployment": 17975210,
+      "coverage": 0.5056033802473716,
+      "fullCoverage": 0.9954235969398351,
+      "weightedNetRisk100": 53,
+      "weightedNetRisk": 5.3,
+      "weightedNetRisk100Full": 52,
+      "weightedPctHighRiskTime": 21.8,
+      "topRiskOccupations": [
+        {
+          "slug": "medical-transcriptionists",
+          "title": "Medical transcriptionists",
+          "employment": 5630,
+          "netRisk100": 75
+        },
+        {
+          "slug": "paralegals-and-legal-assistants",
+          "title": "Paralegals and legal assistants",
+          "employment": 45740,
+          "netRisk100": 70
+        },
+        {
+          "slug": "court-reporters",
+          "title": "Court reporters and simultaneous captioners",
+          "employment": 1590,
+          "netRisk100": 69
+        },
+        {
+          "slug": "general-office-clerks",
+          "title": "General office clerks",
+          "employment": 306000,
+          "netRisk100": 69
+        },
+        {
+          "slug": "bill-and-account-collectors",
+          "title": "Bill and account collectors",
+          "employment": 15100,
+          "netRisk100": 68
+        }
+      ],
+      "occupationCount": 314
+    },
+    {
+      "fips": "08",
+      "abbr": "CO",
+      "title": "Colorado",
+      "totalEmployment": 2891210,
+      "matchedEmployment": 1486630,
+      "fullEmployment": 2852680,
+      "coverage": 0.5141895607721335,
+      "fullCoverage": 0.986673399718457,
+      "weightedNetRisk100": 53,
+      "weightedNetRisk": 5.28,
+      "weightedNetRisk100Full": 52,
+      "weightedPctHighRiskTime": 22.5,
+      "topRiskOccupations": [
+        {
+          "slug": "medical-transcriptionists",
+          "title": "Medical transcriptionists",
+          "employment": 780,
+          "netRisk100": 75
+        },
+        {
+          "slug": "paralegals-and-legal-assistants",
+          "title": "Paralegals and legal assistants",
+          "employment": 5430,
+          "netRisk100": 70
+        },
+        {
+          "slug": "general-office-clerks",
+          "title": "General office clerks",
+          "employment": 30280,
+          "netRisk100": 69
+        },
+        {
+          "slug": "bill-and-account-collectors",
+          "title": "Bill and account collectors",
+          "employment": 1770,
+          "netRisk100": 68
+        },
+        {
+          "slug": "customer-service-representatives",
+          "title": "Customer service representatives",
+          "employment": 45890,
+          "netRisk100": 68
+        }
+      ],
+      "occupationCount": 290
+    },
+    {
+      "fips": "13",
+      "abbr": "GA",
+      "title": "Georgia",
+      "totalEmployment": 4856190,
+      "matchedEmployment": 2463330,
+      "fullEmployment": 4826740,
+      "coverage": 0.5072556881011657,
+      "fullCoverage": 0.9939355750083914,
+      "weightedNetRisk100": 53,
+      "weightedNetRisk": 5.33,
+      "weightedNetRisk100Full": 52,
+      "weightedPctHighRiskTime": 21.5,
+      "topRiskOccupations": [
+        {
+          "slug": "medical-transcriptionists",
+          "title": "Medical transcriptionists",
+          "employment": 1830,
+          "netRisk100": 75
+        },
+        {
+          "slug": "paralegals-and-legal-assistants",
+          "title": "Paralegals and legal assistants",
+          "employment": 14480,
+          "netRisk100": 70
+        },
+        {
+          "slug": "court-reporters",
+          "title": "Court reporters and simultaneous captioners",
+          "employment": 460,
+          "netRisk100": 69
+        },
+        {
+          "slug": "general-office-clerks",
+          "title": "General office clerks",
+          "employment": 79450,
+          "netRisk100": 69
+        },
+        {
+          "slug": "bill-and-account-collectors",
+          "title": "Bill and account collectors",
+          "employment": 6610,
+          "netRisk100": 68
+        }
+      ],
+      "occupationCount": 298
+    },
+    {
+      "fips": "15",
+      "abbr": "HI",
+      "title": "Hawaii",
+      "totalEmployment": 620930,
+      "matchedEmployment": 307130,
+      "fullEmployment": 605220,
+      "coverage": 0.49462902420562704,
+      "fullCoverage": 0.9746992414603901,
+      "weightedNetRisk100": 53,
+      "weightedNetRisk": 5.26,
+      "weightedNetRisk100Full": 52,
+      "weightedPctHighRiskTime": 18.5,
+      "topRiskOccupations": [
+        {
+          "slug": "medical-transcriptionists",
+          "title": "Medical transcriptionists",
+          "employment": 40,
+          "netRisk100": 75
+        },
+        {
+          "slug": "paralegals-and-legal-assistants",
+          "title": "Paralegals and legal assistants",
+          "employment": 1170,
+          "netRisk100": 70
+        },
+        {
+          "slug": "general-office-clerks",
+          "title": "General office clerks",
+          "employment": 13720,
+          "netRisk100": 69
+        },
+        {
+          "slug": "bill-and-account-collectors",
+          "title": "Bill and account collectors",
+          "employment": 250,
+          "netRisk100": 68
+        },
+        {
+          "slug": "customer-service-representatives",
+          "title": "Customer service representatives",
+          "employment": 7460,
+          "netRisk100": 68
+        }
+      ],
+      "occupationCount": 242
+    },
+    {
+      "fips": "16",
+      "abbr": "ID",
+      "title": "Idaho",
+      "totalEmployment": 844910,
+      "matchedEmployment": 442550,
+      "fullEmployment": 828370,
+      "coverage": 0.5237835982530684,
+      "fullCoverage": 0.9804239504799328,
+      "weightedNetRisk100": 53,
+      "weightedNetRisk": 5.31,
+      "weightedNetRisk100Full": 52,
+      "weightedPctHighRiskTime": 19.9,
+      "topRiskOccupations": [
+        {
+          "slug": "medical-transcriptionists",
+          "title": "Medical transcriptionists",
+          "employment": 380,
+          "netRisk100": 75
+        },
+        {
+          "slug": "paralegals-and-legal-assistants",
+          "title": "Paralegals and legal assistants",
+          "employment": 2250,
+          "netRisk100": 70
+        },
+        {
+          "slug": "court-reporters",
+          "title": "Court reporters and simultaneous captioners",
+          "employment": 40,
+          "netRisk100": 69
+        },
+        {
+          "slug": "general-office-clerks",
+          "title": "General office clerks",
+          "employment": 22460,
+          "netRisk100": 69
+        },
+        {
+          "slug": "bill-and-account-collectors",
+          "title": "Bill and account collectors",
+          "employment": 870,
+          "netRisk100": 68
+        }
+      ],
+      "occupationCount": 264
+    },
+    {
+      "fips": "17",
+      "abbr": "IL",
+      "title": "Illinois",
+      "totalEmployment": 6065230,
+      "matchedEmployment": 3219330,
+      "fullEmployment": 5991530,
+      "coverage": 0.5307844879748995,
+      "fullCoverage": 0.9878487707803332,
+      "weightedNetRisk100": 53,
+      "weightedNetRisk": 5.28,
+      "weightedNetRisk100Full": 52,
+      "weightedPctHighRiskTime": 20.5,
+      "topRiskOccupations": [
+        {
+          "slug": "medical-transcriptionists",
+          "title": "Medical transcriptionists",
+          "employment": 1500,
+          "netRisk100": 75
+        },
+        {
+          "slug": "paralegals-and-legal-assistants",
+          "title": "Paralegals and legal assistants",
+          "employment": 12430,
+          "netRisk100": 70
+        },
+        {
+          "slug": "court-reporters",
+          "title": "Court reporters and simultaneous captioners",
+          "employment": 590,
+          "netRisk100": 69
+        },
+        {
+          "slug": "general-office-clerks",
+          "title": "General office clerks",
+          "employment": 103580,
+          "netRisk100": 69
+        },
+        {
+          "slug": "bill-and-account-collectors",
+          "title": "Bill and account collectors",
+          "employment": 4310,
+          "netRisk100": 68
+        }
+      ],
+      "occupationCount": 302
+    },
+    {
+      "fips": "18",
+      "abbr": "IN",
+      "title": "Indiana",
+      "totalEmployment": 3186690,
+      "matchedEmployment": 1624620,
+      "fullEmployment": 3176960,
+      "coverage": 0.5098142586822063,
+      "fullCoverage": 0.9969466750766469,
+      "weightedNetRisk100": 53,
+      "weightedNetRisk": 5.26,
+      "weightedNetRisk100Full": 52,
+      "weightedPctHighRiskTime": 18.5,
+      "topRiskOccupations": [
+        {
+          "slug": "medical-transcriptionists",
+          "title": "Medical transcriptionists",
+          "employment": 1100,
+          "netRisk100": 75
+        },
+        {
+          "slug": "paralegals-and-legal-assistants",
+          "title": "Paralegals and legal assistants",
+          "employment": 5970,
+          "netRisk100": 70
+        },
+        {
+          "slug": "court-reporters",
+          "title": "Court reporters and simultaneous captioners",
+          "employment": 840,
+          "netRisk100": 69
+        },
+        {
+          "slug": "general-office-clerks",
+          "title": "General office clerks",
+          "employment": 66160,
+          "netRisk100": 69
+        },
+        {
+          "slug": "bill-and-account-collectors",
+          "title": "Bill and account collectors",
+          "employment": 3250,
+          "netRisk100": 68
+        }
+      ],
+      "occupationCount": 300
+    },
+    {
+      "fips": "19",
+      "abbr": "IA",
+      "title": "Iowa",
+      "totalEmployment": 1561660,
+      "matchedEmployment": 810930,
+      "fullEmployment": 1555970,
+      "coverage": 0.5192743618969557,
+      "fullCoverage": 0.9963564412228014,
+      "weightedNetRisk100": 53,
+      "weightedNetRisk": 5.26,
+      "weightedNetRisk100Full": 52,
+      "weightedPctHighRiskTime": 18.7,
+      "topRiskOccupations": [
+        {
+          "slug": "medical-transcriptionists",
+          "title": "Medical transcriptionists",
+          "employment": 200,
+          "netRisk100": 75
+        },
+        {
+          "slug": "paralegals-and-legal-assistants",
+          "title": "Paralegals and legal assistants",
+          "employment": 2530,
+          "netRisk100": 70
+        },
+        {
+          "slug": "court-reporters",
+          "title": "Court reporters and simultaneous captioners",
+          "employment": 190,
+          "netRisk100": 69
+        },
+        {
+          "slug": "general-office-clerks",
+          "title": "General office clerks",
+          "employment": 24280,
+          "netRisk100": 69
+        },
+        {
+          "slug": "bill-and-account-collectors",
+          "title": "Bill and account collectors",
+          "employment": 1020,
+          "netRisk100": 68
+        }
+      ],
+      "occupationCount": 287
+    },
+    {
+      "fips": "20",
+      "abbr": "KS",
+      "title": "Kansas",
+      "totalEmployment": 1431180,
+      "matchedEmployment": 733370,
+      "fullEmployment": 1425610,
+      "coverage": 0.5124233150267611,
+      "fullCoverage": 0.9961081065973533,
+      "weightedNetRisk100": 53,
+      "weightedNetRisk": 5.28,
+      "weightedNetRisk100Full": 52,
+      "weightedPctHighRiskTime": 19.7,
+      "topRiskOccupations": [
+        {
+          "slug": "medical-transcriptionists",
+          "title": "Medical transcriptionists",
+          "employment": 510,
+          "netRisk100": 75
+        },
+        {
+          "slug": "paralegals-and-legal-assistants",
+          "title": "Paralegals and legal assistants",
+          "employment": 2330,
+          "netRisk100": 70
+        },
+        {
+          "slug": "court-reporters",
+          "title": "Court reporters and simultaneous captioners",
+          "employment": 110,
+          "netRisk100": 69
+        },
+        {
+          "slug": "general-office-clerks",
+          "title": "General office clerks",
+          "employment": 2570,
+          "netRisk100": 69
+        },
+        {
+          "slug": "bill-and-account-collectors",
+          "title": "Bill and account collectors",
+          "employment": 1290,
+          "netRisk100": 68
+        }
+      ],
+      "occupationCount": 279
+    },
+    {
+      "fips": "21",
+      "abbr": "KY",
+      "title": "Kentucky",
+      "totalEmployment": 1993680,
+      "matchedEmployment": 1016050,
+      "fullEmployment": 1981770,
+      "coverage": 0.5096354480157297,
+      "fullCoverage": 0.9940261225472493,
+      "weightedNetRisk100": 53,
+      "weightedNetRisk": 5.28,
+      "weightedNetRisk100Full": 52,
+      "weightedPctHighRiskTime": 17.9,
+      "topRiskOccupations": [
+        {
+          "slug": "medical-transcriptionists",
+          "title": "Medical transcriptionists",
+          "employment": 580,
+          "netRisk100": 75
+        },
+        {
+          "slug": "paralegals-and-legal-assistants",
+          "title": "Paralegals and legal assistants",
+          "employment": 3080,
+          "netRisk100": 70
+        },
+        {
+          "slug": "general-office-clerks",
+          "title": "General office clerks",
+          "employment": 29400,
+          "netRisk100": 69
+        },
+        {
+          "slug": "bill-and-account-collectors",
+          "title": "Bill and account collectors",
+          "employment": 2590,
+          "netRisk100": 68
+        },
+        {
+          "slug": "customer-service-representatives",
+          "title": "Customer service representatives",
+          "employment": 43970,
+          "netRisk100": 68
+        }
+      ],
+      "occupationCount": 286
+    },
+    {
       "fips": "22",
       "abbr": "LA",
       "title": "Louisiana",
       "totalEmployment": 1911530,
       "matchedEmployment": 985290,
+      "fullEmployment": 1902140,
       "coverage": 0.5154457424157612,
+      "fullCoverage": 0.9950877046135818,
       "weightedNetRisk100": 52,
       "weightedNetRisk": 5.21,
+      "weightedNetRisk100Full": 52,
       "weightedPctHighRiskTime": 15.6,
       "topRiskOccupations": [
         {
@@ -2073,14 +1133,299 @@
       "occupationCount": 283
     },
     {
+      "fips": "23",
+      "abbr": "ME",
+      "title": "Maine",
+      "totalEmployment": 635460,
+      "matchedEmployment": 327470,
+      "fullEmployment": 626980,
+      "coverage": 0.5153274793063293,
+      "fullCoverage": 0.9866553362918201,
+      "weightedNetRisk100": 53,
+      "weightedNetRisk": 5.26,
+      "weightedNetRisk100Full": 52,
+      "weightedPctHighRiskTime": 18.4,
+      "topRiskOccupations": [
+        {
+          "slug": "medical-transcriptionists",
+          "title": "Medical transcriptionists",
+          "employment": 140,
+          "netRisk100": 75
+        },
+        {
+          "slug": "paralegals-and-legal-assistants",
+          "title": "Paralegals and legal assistants",
+          "employment": 1260,
+          "netRisk100": 70
+        },
+        {
+          "slug": "general-office-clerks",
+          "title": "General office clerks",
+          "employment": 11670,
+          "netRisk100": 69
+        },
+        {
+          "slug": "bill-and-account-collectors",
+          "title": "Bill and account collectors",
+          "employment": 450,
+          "netRisk100": 68
+        },
+        {
+          "slug": "customer-service-representatives",
+          "title": "Customer service representatives",
+          "employment": 7500,
+          "netRisk100": 68
+        }
+      ],
+      "occupationCount": 261
+    },
+    {
+      "fips": "26",
+      "abbr": "MI",
+      "title": "Michigan",
+      "totalEmployment": 4390620,
+      "matchedEmployment": 2267150,
+      "fullEmployment": 4378790,
+      "coverage": 0.5163621538643746,
+      "fullCoverage": 0.9973056197074672,
+      "weightedNetRisk100": 53,
+      "weightedNetRisk": 5.3,
+      "weightedNetRisk100Full": 52,
+      "weightedPctHighRiskTime": 21.3,
+      "topRiskOccupations": [
+        {
+          "slug": "medical-transcriptionists",
+          "title": "Medical transcriptionists",
+          "employment": 1070,
+          "netRisk100": 75
+        },
+        {
+          "slug": "paralegals-and-legal-assistants",
+          "title": "Paralegals and legal assistants",
+          "employment": 7240,
+          "netRisk100": 70
+        },
+        {
+          "slug": "court-reporters",
+          "title": "Court reporters and simultaneous captioners",
+          "employment": 290,
+          "netRisk100": 69
+        },
+        {
+          "slug": "general-office-clerks",
+          "title": "General office clerks",
+          "employment": 89290,
+          "netRisk100": 69
+        },
+        {
+          "slug": "bill-and-account-collectors",
+          "title": "Bill and account collectors",
+          "employment": 3330,
+          "netRisk100": 68
+        }
+      ],
+      "occupationCount": 308
+    },
+    {
+      "fips": "27",
+      "abbr": "MN",
+      "title": "Minnesota",
+      "totalEmployment": 2920470,
+      "matchedEmployment": 1562000,
+      "fullEmployment": 2910530,
+      "coverage": 0.5348454187168503,
+      "fullCoverage": 0.9965964382445291,
+      "weightedNetRisk100": 53,
+      "weightedNetRisk": 5.3,
+      "weightedNetRisk100Full": 52,
+      "weightedPctHighRiskTime": 21.8,
+      "topRiskOccupations": [
+        {
+          "slug": "medical-transcriptionists",
+          "title": "Medical transcriptionists",
+          "employment": 370,
+          "netRisk100": 75
+        },
+        {
+          "slug": "paralegals-and-legal-assistants",
+          "title": "Paralegals and legal assistants",
+          "employment": 6640,
+          "netRisk100": 70
+        },
+        {
+          "slug": "court-reporters",
+          "title": "Court reporters and simultaneous captioners",
+          "employment": 280,
+          "netRisk100": 69
+        },
+        {
+          "slug": "general-office-clerks",
+          "title": "General office clerks",
+          "employment": 55710,
+          "netRisk100": 69
+        },
+        {
+          "slug": "bill-and-account-collectors",
+          "title": "Bill and account collectors",
+          "employment": 3800,
+          "netRisk100": 68
+        }
+      ],
+      "occupationCount": 293
+    },
+    {
+      "fips": "28",
+      "abbr": "MS",
+      "title": "Mississippi",
+      "totalEmployment": 1159710,
+      "matchedEmployment": 581400,
+      "fullEmployment": 1148200,
+      "coverage": 0.5013322296091264,
+      "fullCoverage": 0.9900751049831423,
+      "weightedNetRisk100": 53,
+      "weightedNetRisk": 5.26,
+      "weightedNetRisk100Full": 52,
+      "weightedPctHighRiskTime": 16.5,
+      "topRiskOccupations": [
+        {
+          "slug": "medical-transcriptionists",
+          "title": "Medical transcriptionists",
+          "employment": 230,
+          "netRisk100": 75
+        },
+        {
+          "slug": "paralegals-and-legal-assistants",
+          "title": "Paralegals and legal assistants",
+          "employment": 2080,
+          "netRisk100": 70
+        },
+        {
+          "slug": "court-reporters",
+          "title": "Court reporters and simultaneous captioners",
+          "employment": 40,
+          "netRisk100": 69
+        },
+        {
+          "slug": "general-office-clerks",
+          "title": "General office clerks",
+          "employment": 18290,
+          "netRisk100": 69
+        },
+        {
+          "slug": "bill-and-account-collectors",
+          "title": "Bill and account collectors",
+          "employment": 850,
+          "netRisk100": 68
+        }
+      ],
+      "occupationCount": 273
+    },
+    {
+      "fips": "29",
+      "abbr": "MO",
+      "title": "Missouri",
+      "totalEmployment": 2918050,
+      "matchedEmployment": 1470930,
+      "fullEmployment": 2895030,
+      "coverage": 0.5040797793046726,
+      "fullCoverage": 0.992111170130738,
+      "weightedNetRisk100": 53,
+      "weightedNetRisk": 5.31,
+      "weightedNetRisk100Full": 52,
+      "weightedPctHighRiskTime": 19.9,
+      "topRiskOccupations": [
+        {
+          "slug": "medical-transcriptionists",
+          "title": "Medical transcriptionists",
+          "employment": 720,
+          "netRisk100": 75
+        },
+        {
+          "slug": "paralegals-and-legal-assistants",
+          "title": "Paralegals and legal assistants",
+          "employment": 6410,
+          "netRisk100": 70
+        },
+        {
+          "slug": "court-reporters",
+          "title": "Court reporters and simultaneous captioners",
+          "employment": 260,
+          "netRisk100": 69
+        },
+        {
+          "slug": "general-office-clerks",
+          "title": "General office clerks",
+          "employment": 57870,
+          "netRisk100": 69
+        },
+        {
+          "slug": "bill-and-account-collectors",
+          "title": "Bill and account collectors",
+          "employment": 3820,
+          "netRisk100": 68
+        }
+      ],
+      "occupationCount": 297
+    },
+    {
+      "fips": "30",
+      "abbr": "MT",
+      "title": "Montana",
+      "totalEmployment": 510020,
+      "matchedEmployment": 258640,
+      "fullEmployment": 501120,
+      "coverage": 0.5071173679463551,
+      "fullCoverage": 0.9825497039331791,
+      "weightedNetRisk100": 53,
+      "weightedNetRisk": 5.25,
+      "weightedNetRisk100Full": 52,
+      "weightedPctHighRiskTime": 18.6,
+      "topRiskOccupations": [
+        {
+          "slug": "medical-transcriptionists",
+          "title": "Medical transcriptionists",
+          "employment": 80,
+          "netRisk100": 75
+        },
+        {
+          "slug": "paralegals-and-legal-assistants",
+          "title": "Paralegals and legal assistants",
+          "employment": 1060,
+          "netRisk100": 70
+        },
+        {
+          "slug": "court-reporters",
+          "title": "Court reporters and simultaneous captioners",
+          "employment": 60,
+          "netRisk100": 69
+        },
+        {
+          "slug": "general-office-clerks",
+          "title": "General office clerks",
+          "employment": 11350,
+          "netRisk100": 69
+        },
+        {
+          "slug": "bill-and-account-collectors",
+          "title": "Bill and account collectors",
+          "employment": 410,
+          "netRisk100": 68
+        }
+      ],
+      "occupationCount": 258
+    },
+    {
       "fips": "31",
       "abbr": "NE",
       "title": "Nebraska",
       "totalEmployment": 1016070,
       "matchedEmployment": 535520,
+      "fullEmployment": 1008520,
       "coverage": 0.5270503016524452,
+      "fullCoverage": 0.9925694095879221,
       "weightedNetRisk100": 52,
       "weightedNetRisk": 5.24,
+      "weightedNetRisk100Full": 52,
       "weightedPctHighRiskTime": 19.2,
       "topRiskOccupations": [
         {
@@ -2117,14 +1462,816 @@
       "occupationCount": 281
     },
     {
+      "fips": "33",
+      "abbr": "NH",
+      "title": "New Hampshire",
+      "totalEmployment": 683160,
+      "matchedEmployment": 356150,
+      "fullEmployment": 666030,
+      "coverage": 0.5213273610867146,
+      "fullCoverage": 0.9749253469172668,
+      "weightedNetRisk100": 53,
+      "weightedNetRisk": 5.32,
+      "weightedNetRisk100Full": 52,
+      "weightedPctHighRiskTime": 21.2,
+      "topRiskOccupations": [
+        {
+          "slug": "medical-transcriptionists",
+          "title": "Medical transcriptionists",
+          "employment": 50,
+          "netRisk100": 75
+        },
+        {
+          "slug": "paralegals-and-legal-assistants",
+          "title": "Paralegals and legal assistants",
+          "employment": 1580,
+          "netRisk100": 70
+        },
+        {
+          "slug": "general-office-clerks",
+          "title": "General office clerks",
+          "employment": 13710,
+          "netRisk100": 69
+        },
+        {
+          "slug": "bill-and-account-collectors",
+          "title": "Bill and account collectors",
+          "employment": 820,
+          "netRisk100": 68
+        },
+        {
+          "slug": "customer-service-representatives",
+          "title": "Customer service representatives",
+          "employment": 12560,
+          "netRisk100": 68
+        }
+      ],
+      "occupationCount": 260
+    },
+    {
+      "fips": "35",
+      "abbr": "NM",
+      "title": "New Mexico",
+      "totalEmployment": 860880,
+      "matchedEmployment": 431780,
+      "fullEmployment": 842260,
+      "coverage": 0.5015565467893318,
+      "fullCoverage": 0.9783709692407769,
+      "weightedNetRisk100": 53,
+      "weightedNetRisk": 5.29,
+      "weightedNetRisk100Full": 52,
+      "weightedPctHighRiskTime": 19.2,
+      "topRiskOccupations": [
+        {
+          "slug": "medical-transcriptionists",
+          "title": "Medical transcriptionists",
+          "employment": 170,
+          "netRisk100": 75
+        },
+        {
+          "slug": "paralegals-and-legal-assistants",
+          "title": "Paralegals and legal assistants",
+          "employment": 1660,
+          "netRisk100": 70
+        },
+        {
+          "slug": "general-office-clerks",
+          "title": "General office clerks",
+          "employment": 14270,
+          "netRisk100": 69
+        },
+        {
+          "slug": "bill-and-account-collectors",
+          "title": "Bill and account collectors",
+          "employment": 430,
+          "netRisk100": 68
+        },
+        {
+          "slug": "customer-service-representatives",
+          "title": "Customer service representatives",
+          "employment": 18520,
+          "netRisk100": 68
+        }
+      ],
+      "occupationCount": 265
+    },
+    {
+      "fips": "37",
+      "abbr": "NC",
+      "title": "North Carolina",
+      "totalEmployment": 4898270,
+      "matchedEmployment": 2592440,
+      "fullEmployment": 4889330,
+      "coverage": 0.5292562476139535,
+      "fullCoverage": 0.9981748658199732,
+      "weightedNetRisk100": 53,
+      "weightedNetRisk": 5.29,
+      "weightedNetRisk100Full": 52,
+      "weightedPctHighRiskTime": 20.8,
+      "topRiskOccupations": [
+        {
+          "slug": "medical-transcriptionists",
+          "title": "Medical transcriptionists",
+          "employment": 1630,
+          "netRisk100": 75
+        },
+        {
+          "slug": "paralegals-and-legal-assistants",
+          "title": "Paralegals and legal assistants",
+          "employment": 12270,
+          "netRisk100": 70
+        },
+        {
+          "slug": "court-reporters",
+          "title": "Court reporters and simultaneous captioners",
+          "employment": 130,
+          "netRisk100": 69
+        },
+        {
+          "slug": "general-office-clerks",
+          "title": "General office clerks",
+          "employment": 70600,
+          "netRisk100": 69
+        },
+        {
+          "slug": "bill-and-account-collectors",
+          "title": "Bill and account collectors",
+          "employment": 5300,
+          "netRisk100": 68
+        }
+      ],
+      "occupationCount": 304
+    },
+    {
+      "fips": "39",
+      "abbr": "OH",
+      "title": "Ohio",
+      "totalEmployment": 5526300,
+      "matchedEmployment": 2854310,
+      "fullEmployment": 5499140,
+      "coverage": 0.5164956661780938,
+      "fullCoverage": 0.9950853192913884,
+      "weightedNetRisk100": 53,
+      "weightedNetRisk": 5.28,
+      "weightedNetRisk100Full": 52,
+      "weightedPctHighRiskTime": 19.7,
+      "topRiskOccupations": [
+        {
+          "slug": "medical-transcriptionists",
+          "title": "Medical transcriptionists",
+          "employment": 1270,
+          "netRisk100": 75
+        },
+        {
+          "slug": "paralegals-and-legal-assistants",
+          "title": "Paralegals and legal assistants",
+          "employment": 8160,
+          "netRisk100": 70
+        },
+        {
+          "slug": "court-reporters",
+          "title": "Court reporters and simultaneous captioners",
+          "employment": 520,
+          "netRisk100": 69
+        },
+        {
+          "slug": "general-office-clerks",
+          "title": "General office clerks",
+          "employment": 88120,
+          "netRisk100": 69
+        },
+        {
+          "slug": "bill-and-account-collectors",
+          "title": "Bill and account collectors",
+          "employment": 8660,
+          "netRisk100": 68
+        }
+      ],
+      "occupationCount": 303
+    },
+    {
+      "fips": "40",
+      "abbr": "OK",
+      "title": "Oklahoma",
+      "totalEmployment": 1691930,
+      "matchedEmployment": 893890,
+      "fullEmployment": 1684190,
+      "coverage": 0.5283256399496433,
+      "fullCoverage": 0.99542534265602,
+      "weightedNetRisk100": 53,
+      "weightedNetRisk": 5.28,
+      "weightedNetRisk100Full": 52,
+      "weightedPctHighRiskTime": 18.7,
+      "topRiskOccupations": [
+        {
+          "slug": "medical-transcriptionists",
+          "title": "Medical transcriptionists",
+          "employment": 570,
+          "netRisk100": 75
+        },
+        {
+          "slug": "paralegals-and-legal-assistants",
+          "title": "Paralegals and legal assistants",
+          "employment": 2500,
+          "netRisk100": 70
+        },
+        {
+          "slug": "court-reporters",
+          "title": "Court reporters and simultaneous captioners",
+          "employment": 150,
+          "netRisk100": 69
+        },
+        {
+          "slug": "general-office-clerks",
+          "title": "General office clerks",
+          "employment": 31750,
+          "netRisk100": 69
+        },
+        {
+          "slug": "bill-and-account-collectors",
+          "title": "Bill and account collectors",
+          "employment": 2450,
+          "netRisk100": 68
+        }
+      ],
+      "occupationCount": 285
+    },
+    {
+      "fips": "41",
+      "abbr": "OR",
+      "title": "Oregon",
+      "totalEmployment": 1965700,
+      "matchedEmployment": 1008880,
+      "fullEmployment": 1949230,
+      "coverage": 0.5132421020501603,
+      "fullCoverage": 0.9916213053873938,
+      "weightedNetRisk100": 53,
+      "weightedNetRisk": 5.25,
+      "weightedNetRisk100Full": 52,
+      "weightedPctHighRiskTime": 19.6,
+      "topRiskOccupations": [
+        {
+          "slug": "medical-transcriptionists",
+          "title": "Medical transcriptionists",
+          "employment": 690,
+          "netRisk100": 75
+        },
+        {
+          "slug": "paralegals-and-legal-assistants",
+          "title": "Paralegals and legal assistants",
+          "employment": 4910,
+          "netRisk100": 70
+        },
+        {
+          "slug": "general-office-clerks",
+          "title": "General office clerks",
+          "employment": 28240,
+          "netRisk100": 69
+        },
+        {
+          "slug": "bill-and-account-collectors",
+          "title": "Bill and account collectors",
+          "employment": 840,
+          "netRisk100": 68
+        },
+        {
+          "slug": "customer-service-representatives",
+          "title": "Customer service representatives",
+          "employment": 22940,
+          "netRisk100": 68
+        }
+      ],
+      "occupationCount": 298
+    },
+    {
+      "fips": "42",
+      "abbr": "PA",
+      "title": "Pennsylvania",
+      "totalEmployment": 6014180,
+      "matchedEmployment": 3118030,
+      "fullEmployment": 6003020,
+      "coverage": 0.5184464049961923,
+      "fullCoverage": 0.9981443854357535,
+      "weightedNetRisk100": 53,
+      "weightedNetRisk": 5.3,
+      "weightedNetRisk100Full": 52,
+      "weightedPctHighRiskTime": 20.5,
+      "topRiskOccupations": [
+        {
+          "slug": "medical-transcriptionists",
+          "title": "Medical transcriptionists",
+          "employment": 1380,
+          "netRisk100": 75
+        },
+        {
+          "slug": "paralegals-and-legal-assistants",
+          "title": "Paralegals and legal assistants",
+          "employment": 14130,
+          "netRisk100": 70
+        },
+        {
+          "slug": "court-reporters",
+          "title": "Court reporters and simultaneous captioners",
+          "employment": 610,
+          "netRisk100": 69
+        },
+        {
+          "slug": "general-office-clerks",
+          "title": "General office clerks",
+          "employment": 118680,
+          "netRisk100": 69
+        },
+        {
+          "slug": "bill-and-account-collectors",
+          "title": "Bill and account collectors",
+          "employment": 6290,
+          "netRisk100": 68
+        }
+      ],
+      "occupationCount": 313
+    },
+    {
+      "fips": "44",
+      "abbr": "RI",
+      "title": "Rhode Island",
+      "totalEmployment": 493800,
+      "matchedEmployment": 268680,
+      "fullEmployment": 473130,
+      "coverage": 0.5441069258809235,
+      "fullCoverage": 0.9581409477521263,
+      "weightedNetRisk100": 53,
+      "weightedNetRisk": 5.31,
+      "weightedNetRisk100Full": 52,
+      "weightedPctHighRiskTime": 21.3,
+      "topRiskOccupations": [
+        {
+          "slug": "medical-transcriptionists",
+          "title": "Medical transcriptionists",
+          "employment": 90,
+          "netRisk100": 75
+        },
+        {
+          "slug": "paralegals-and-legal-assistants",
+          "title": "Paralegals and legal assistants",
+          "employment": 1830,
+          "netRisk100": 70
+        },
+        {
+          "slug": "general-office-clerks",
+          "title": "General office clerks",
+          "employment": 8360,
+          "netRisk100": 69
+        },
+        {
+          "slug": "bill-and-account-collectors",
+          "title": "Bill and account collectors",
+          "employment": 420,
+          "netRisk100": 68
+        },
+        {
+          "slug": "customer-service-representatives",
+          "title": "Customer service representatives",
+          "employment": 8260,
+          "netRisk100": 68
+        }
+      ],
+      "occupationCount": 226
+    },
+    {
+      "fips": "45",
+      "abbr": "SC",
+      "title": "South Carolina",
+      "totalEmployment": 2271770,
+      "matchedEmployment": 1186250,
+      "fullEmployment": 2256030,
+      "coverage": 0.5221699379778763,
+      "fullCoverage": 0.9930714817080954,
+      "weightedNetRisk100": 53,
+      "weightedNetRisk": 5.3,
+      "weightedNetRisk100Full": 52,
+      "weightedPctHighRiskTime": 19.6,
+      "topRiskOccupations": [
+        {
+          "slug": "medical-transcriptionists",
+          "title": "Medical transcriptionists",
+          "employment": 710,
+          "netRisk100": 75
+        },
+        {
+          "slug": "paralegals-and-legal-assistants",
+          "title": "Paralegals and legal assistants",
+          "employment": 7260,
+          "netRisk100": 70
+        },
+        {
+          "slug": "court-reporters",
+          "title": "Court reporters and simultaneous captioners",
+          "employment": 190,
+          "netRisk100": 69
+        },
+        {
+          "slug": "general-office-clerks",
+          "title": "General office clerks",
+          "employment": 45700,
+          "netRisk100": 69
+        },
+        {
+          "slug": "bill-and-account-collectors",
+          "title": "Bill and account collectors",
+          "employment": 4060,
+          "netRisk100": 68
+        }
+      ],
+      "occupationCount": 292
+    },
+    {
+      "fips": "46",
+      "abbr": "SD",
+      "title": "South Dakota",
+      "totalEmployment": 452940,
+      "matchedEmployment": 239100,
+      "fullEmployment": 447290,
+      "coverage": 0.5278844880116572,
+      "fullCoverage": 0.9875259416258224,
+      "weightedNetRisk100": 53,
+      "weightedNetRisk": 5.26,
+      "weightedNetRisk100Full": 52,
+      "weightedPctHighRiskTime": 18.6,
+      "topRiskOccupations": [
+        {
+          "slug": "medical-transcriptionists",
+          "title": "Medical transcriptionists",
+          "employment": 350,
+          "netRisk100": 75
+        },
+        {
+          "slug": "paralegals-and-legal-assistants",
+          "title": "Paralegals and legal assistants",
+          "employment": 660,
+          "netRisk100": 70
+        },
+        {
+          "slug": "court-reporters",
+          "title": "Court reporters and simultaneous captioners",
+          "employment": 40,
+          "netRisk100": 69
+        },
+        {
+          "slug": "general-office-clerks",
+          "title": "General office clerks",
+          "employment": 1980,
+          "netRisk100": 69
+        },
+        {
+          "slug": "bill-and-account-collectors",
+          "title": "Bill and account collectors",
+          "employment": 1290,
+          "netRisk100": 68
+        }
+      ],
+      "occupationCount": 245
+    },
+    {
+      "fips": "47",
+      "abbr": "TN",
+      "title": "Tennessee",
+      "totalEmployment": 3274390,
+      "matchedEmployment": 1691440,
+      "fullEmployment": 3265290,
+      "coverage": 0.5165664444369791,
+      "fullCoverage": 0.9972208564037882,
+      "weightedNetRisk100": 53,
+      "weightedNetRisk": 5.27,
+      "weightedNetRisk100Full": 52,
+      "weightedPctHighRiskTime": 18.8,
+      "topRiskOccupations": [
+        {
+          "slug": "medical-transcriptionists",
+          "title": "Medical transcriptionists",
+          "employment": 1420,
+          "netRisk100": 75
+        },
+        {
+          "slug": "paralegals-and-legal-assistants",
+          "title": "Paralegals and legal assistants",
+          "employment": 5890,
+          "netRisk100": 70
+        },
+        {
+          "slug": "general-office-clerks",
+          "title": "General office clerks",
+          "employment": 52550,
+          "netRisk100": 69
+        },
+        {
+          "slug": "bill-and-account-collectors",
+          "title": "Bill and account collectors",
+          "employment": 3690,
+          "netRisk100": 68
+        },
+        {
+          "slug": "customer-service-representatives",
+          "title": "Customer service representatives",
+          "employment": 64880,
+          "netRisk100": 68
+        }
+      ],
+      "occupationCount": 294
+    },
+    {
+      "fips": "48",
+      "abbr": "TX",
+      "title": "Texas",
+      "totalEmployment": 13846880,
+      "matchedEmployment": 7082420,
+      "fullEmployment": 13747630,
+      "coverage": 0.5114812867591833,
+      "fullCoverage": 0.9928323203494217,
+      "weightedNetRisk100": 53,
+      "weightedNetRisk": 5.31,
+      "weightedNetRisk100Full": 52,
+      "weightedPctHighRiskTime": 20.9,
+      "topRiskOccupations": [
+        {
+          "slug": "medical-transcriptionists",
+          "title": "Medical transcriptionists",
+          "employment": 4480,
+          "netRisk100": 75
+        },
+        {
+          "slug": "paralegals-and-legal-assistants",
+          "title": "Paralegals and legal assistants",
+          "employment": 28770,
+          "netRisk100": 70
+        },
+        {
+          "slug": "court-reporters",
+          "title": "Court reporters and simultaneous captioners",
+          "employment": 970,
+          "netRisk100": 69
+        },
+        {
+          "slug": "general-office-clerks",
+          "title": "General office clerks",
+          "employment": 200960,
+          "netRisk100": 69
+        },
+        {
+          "slug": "bill-and-account-collectors",
+          "title": "Bill and account collectors",
+          "employment": 20800,
+          "netRisk100": 68
+        }
+      ],
+      "occupationCount": 310
+    },
+    {
+      "fips": "49",
+      "abbr": "UT",
+      "title": "Utah",
+      "totalEmployment": 1709790,
+      "matchedEmployment": 916130,
+      "fullEmployment": 1699940,
+      "coverage": 0.5358143397727206,
+      "fullCoverage": 0.9942390585978395,
+      "weightedNetRisk100": 53,
+      "weightedNetRisk": 5.33,
+      "weightedNetRisk100Full": 52,
+      "weightedPctHighRiskTime": 22.9,
+      "topRiskOccupations": [
+        {
+          "slug": "medical-transcriptionists",
+          "title": "Medical transcriptionists",
+          "employment": 240,
+          "netRisk100": 75
+        },
+        {
+          "slug": "paralegals-and-legal-assistants",
+          "title": "Paralegals and legal assistants",
+          "employment": 2890,
+          "netRisk100": 70
+        },
+        {
+          "slug": "general-office-clerks",
+          "title": "General office clerks",
+          "employment": 36950,
+          "netRisk100": 69
+        },
+        {
+          "slug": "bill-and-account-collectors",
+          "title": "Bill and account collectors",
+          "employment": 3160,
+          "netRisk100": 68
+        },
+        {
+          "slug": "customer-service-representatives",
+          "title": "Customer service representatives",
+          "employment": 48770,
+          "netRisk100": 68
+        }
+      ],
+      "occupationCount": 293
+    },
+    {
+      "fips": "50",
+      "abbr": "VT",
+      "title": "Vermont",
+      "totalEmployment": 304170,
+      "matchedEmployment": 148210,
+      "fullEmployment": 293350,
+      "coverage": 0.48726041358450867,
+      "fullCoverage": 0.9644277870927442,
+      "weightedNetRisk100": 53,
+      "weightedNetRisk": 5.26,
+      "weightedNetRisk100Full": 52,
+      "weightedPctHighRiskTime": 19.2,
+      "topRiskOccupations": [
+        {
+          "slug": "paralegals-and-legal-assistants",
+          "title": "Paralegals and legal assistants",
+          "employment": 730,
+          "netRisk100": 70
+        },
+        {
+          "slug": "general-office-clerks",
+          "title": "General office clerks",
+          "employment": 5120,
+          "netRisk100": 69
+        },
+        {
+          "slug": "bill-and-account-collectors",
+          "title": "Bill and account collectors",
+          "employment": 50,
+          "netRisk100": 68
+        },
+        {
+          "slug": "customer-service-representatives",
+          "title": "Customer service representatives",
+          "employment": 2910,
+          "netRisk100": 68
+        },
+        {
+          "slug": "bookkeeping-accounting-and-auditing-clerks",
+          "title": "Bookkeeping, accounting, and auditing clerks",
+          "employment": 3260,
+          "netRisk100": 67
+        }
+      ],
+      "occupationCount": 238
+    },
+    {
+      "fips": "53",
+      "abbr": "WA",
+      "title": "Washington",
+      "totalEmployment": 3539650,
+      "matchedEmployment": 1865230,
+      "fullEmployment": 3525710,
+      "coverage": 0.5269532298391084,
+      "fullCoverage": 0.9960617575183988,
+      "weightedNetRisk100": 53,
+      "weightedNetRisk": 5.29,
+      "weightedNetRisk100Full": 52,
+      "weightedPctHighRiskTime": 23.2,
+      "topRiskOccupations": [
+        {
+          "slug": "medical-transcriptionists",
+          "title": "Medical transcriptionists",
+          "employment": 880,
+          "netRisk100": 75
+        },
+        {
+          "slug": "paralegals-and-legal-assistants",
+          "title": "Paralegals and legal assistants",
+          "employment": 9070,
+          "netRisk100": 70
+        },
+        {
+          "slug": "court-reporters",
+          "title": "Court reporters and simultaneous captioners",
+          "employment": 80,
+          "netRisk100": 69
+        },
+        {
+          "slug": "general-office-clerks",
+          "title": "General office clerks",
+          "employment": 48360,
+          "netRisk100": 69
+        },
+        {
+          "slug": "bill-and-account-collectors",
+          "title": "Bill and account collectors",
+          "employment": 3020,
+          "netRisk100": 68
+        }
+      ],
+      "occupationCount": 308
+    },
+    {
+      "fips": "54",
+      "abbr": "WV",
+      "title": "West Virginia",
+      "totalEmployment": 701470,
+      "matchedEmployment": 358620,
+      "fullEmployment": 694810,
+      "coverage": 0.5112406802856858,
+      "fullCoverage": 0.9905056524156415,
+      "weightedNetRisk100": 53,
+      "weightedNetRisk": 5.25,
+      "weightedNetRisk100Full": 52,
+      "weightedPctHighRiskTime": 16.3,
+      "topRiskOccupations": [
+        {
+          "slug": "medical-transcriptionists",
+          "title": "Medical transcriptionists",
+          "employment": 180,
+          "netRisk100": 75
+        },
+        {
+          "slug": "paralegals-and-legal-assistants",
+          "title": "Paralegals and legal assistants",
+          "employment": 1680,
+          "netRisk100": 70
+        },
+        {
+          "slug": "court-reporters",
+          "title": "Court reporters and simultaneous captioners",
+          "employment": 160,
+          "netRisk100": 69
+        },
+        {
+          "slug": "general-office-clerks",
+          "title": "General office clerks",
+          "employment": 10950,
+          "netRisk100": 69
+        },
+        {
+          "slug": "bill-and-account-collectors",
+          "title": "Bill and account collectors",
+          "employment": 460,
+          "netRisk100": 68
+        }
+      ],
+      "occupationCount": 268
+    },
+    {
+      "fips": "55",
+      "abbr": "WI",
+      "title": "Wisconsin",
+      "totalEmployment": 2923420,
+      "matchedEmployment": 1532590,
+      "fullEmployment": 2919470,
+      "coverage": 0.5242455753877308,
+      "fullCoverage": 0.9986488427937142,
+      "weightedNetRisk100": 53,
+      "weightedNetRisk": 5.28,
+      "weightedNetRisk100Full": 52,
+      "weightedPctHighRiskTime": 20,
+      "topRiskOccupations": [
+        {
+          "slug": "medical-transcriptionists",
+          "title": "Medical transcriptionists",
+          "employment": 750,
+          "netRisk100": 75
+        },
+        {
+          "slug": "paralegals-and-legal-assistants",
+          "title": "Paralegals and legal assistants",
+          "employment": 4930,
+          "netRisk100": 70
+        },
+        {
+          "slug": "court-reporters",
+          "title": "Court reporters and simultaneous captioners",
+          "employment": 30,
+          "netRisk100": 69
+        },
+        {
+          "slug": "general-office-clerks",
+          "title": "General office clerks",
+          "employment": 52520,
+          "netRisk100": 69
+        },
+        {
+          "slug": "bill-and-account-collectors",
+          "title": "Bill and account collectors",
+          "employment": 2300,
+          "netRisk100": 68
+        }
+      ],
+      "occupationCount": 304
+    },
+    {
       "fips": "32",
       "abbr": "NV",
       "title": "Nevada",
       "totalEmployment": 1529480,
       "matchedEmployment": 779260,
+      "fullEmployment": 1513600,
       "coverage": 0.5094934226011455,
+      "fullCoverage": 0.9896173863012265,
       "weightedNetRisk100": 52,
       "weightedNetRisk": 5.2,
+      "weightedNetRisk100Full": 51,
       "weightedPctHighRiskTime": 16.2,
       "topRiskOccupations": [
         {
@@ -2166,9 +2313,12 @@
       "title": "North Dakota",
       "totalEmployment": 424030,
       "matchedEmployment": 221620,
+      "fullEmployment": 417310,
       "coverage": 0.5226516991722284,
+      "fullCoverage": 0.9841520647124025,
       "weightedNetRisk100": 52,
       "weightedNetRisk": 5.2,
+      "weightedNetRisk100Full": 51,
       "weightedPctHighRiskTime": 16.5,
       "topRiskOccupations": [
         {
@@ -2210,9 +2360,12 @@
       "title": "Wyoming",
       "totalEmployment": 278500,
       "matchedEmployment": 142200,
+      "fullEmployment": 273500,
       "coverage": 0.510592459605027,
+      "fullCoverage": 0.9820466786355476,
       "weightedNetRisk100": 52,
       "weightedNetRisk": 5.19,
+      "weightedNetRisk100Full": 51,
       "weightedPctHighRiskTime": 16.2,
       "topRiskOccupations": [
         {

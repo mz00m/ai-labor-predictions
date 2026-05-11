@@ -183,9 +183,9 @@ function StatePane({
 
       <div className="mt-2.5 text-2xs text-[var(--muted)] leading-snug">
         Score covers <span className="font-mono text-[var(--foreground)]">{(data.coverage * 100).toFixed(0)}%</span> of
-        state employment — BLS OEWS publishes ~800 SOC codes, our framework
-        scores 342 of them. Unscored occupations are excluded (likely
-        upward-biases the score by 1–3 points).
+        state employment. Occupations directly in our framework are scored at
+        the detailed-SOC level; the rest are assigned their SOC major-group
+        average (lifts state coverage from ~50% to near-full).
       </div>
 
       {data.topMetrosInState.length > 0 && (

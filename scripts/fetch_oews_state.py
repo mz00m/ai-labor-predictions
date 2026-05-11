@@ -154,8 +154,7 @@ def parse() -> dict:
             continue
 
         soc = row[col["OCC_CODE"]]
-        if soc not in soc_to_slug:
-            continue
+        slug = soc_to_slug.get(soc)  # may be None for unscored SOCs
 
         fips = str(row[col["AREA"]]).zfill(2)
         st = states.setdefault(fips, {
@@ -168,17 +167,19 @@ def parse() -> dict:
 
         emp = _to_int(row[col["TOT_EMP"]])
         # OEWS suppresses small cells with "**" — emp is None.
-        # Keep the row anyway with employment: null so the consumer can
-        # decide how to treat suppressed values.
+        # We keep every detailed SOC row, including unscored ones, so the
+        # state risk roll-up can apply SOC-major-group fallback risk to
+        # the unscored ~half of state employment and report full coverage.
         st["occupations"].append({
-            "slug": soc_to_slug[soc],
+            "slug": slug,           # null when the SOC isn't in our framework
             "soc": soc,
             "employment": emp,
             "meanWage": _to_float(row[col["A_MEAN"]]),
             "medianWage": _to_float(row[col["A_MEDIAN"]]),
         })
         matched += 1
-        seen_socs.add(soc)
+        if slug:
+            seen_socs.add(soc)
 
     # Drop Puerto Rico, Guam, Virgin Islands — out of scope for US-50+DC map
     drop_fips = {"72", "78", "60", "66", "69"}
