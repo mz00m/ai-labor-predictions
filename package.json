@@ -24,6 +24,7 @@
     "build:oews-msa": "python3 scripts/fetch_oews_msa.py",
     "build:acs-county": "python3 scripts/fetch_acs_county.py",
     "build:cbsa-crosswalk": "python3 scripts/fetch_cbsa_crosswalk.py",
+    "build:cbsa-summary": "python3 scripts/build_micro_summary.py",
     "build:state-risk": "tsx scripts/build-state-risk.ts",
     "build:state-svg": "tsx scripts/build-state-svg-paths.ts",
     "build:county-msa-svg": "tsx scripts/build-county-msa-svg-paths.ts",

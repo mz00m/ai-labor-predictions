@@ -5,8 +5,11 @@ import { usePathname } from "next/navigation";
 export default function MainWrapper({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const isAssessment = pathname.startsWith("/assessment");
+  // /map ships its own full-width layout so the regional explorer can render
+  // edge-to-edge. The page's downstream sections are constrained internally.
+  const isMap = pathname.startsWith("/map");
 
-  if (isAssessment) {
+  if (isAssessment || isMap) {
     return <>{children}</>;
   }
 

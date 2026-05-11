@@ -68,6 +68,20 @@ interface MsaSummaryRow {
 }
 interface MsaSummaryFile { areas: MsaSummaryRow[] }
 
+interface CbsaSummaryRow {
+  cbsa: string;
+  title: string;
+  type: string;
+  category: "metro" | "micro";
+  primState: string;
+  countyCount: number;
+  totalEmployment: number;
+  weightedNetRisk100: number;
+  topGroups: { slug: string; employment: number; share: number; netRisk100: number }[];
+  source: string;
+}
+interface CbsaSummaryFile { cbsas: CbsaSummaryRow[] }
+
 interface CountyRiskRow {
   fips: string;
   name: string;
@@ -114,6 +128,8 @@ interface Props {
   statePaths: StatePathsFile;
   msaPaths: MsaPathsFile;
   msaSummary: MsaSummaryFile;
+  /** ACS county-aggregated CBSA summary covering metros + micros (935 total). */
+  cbsaSummary?: CbsaSummaryFile;
   countyRisk: CountyRiskFile;
   crosswalk: CrosswalkFile;
   occupations: OccupationLite[];
@@ -205,12 +221,13 @@ export default function RegionalExplorer({
   statePaths,
   msaPaths,
   msaSummary,
+  cbsaSummary: _cbsaSummary, // accepted for future metro/micro merge; not yet rendered
   countyRisk,
   crosswalk,
   occupations,
 }: Props) {
-  const [view, setView] = useState<ViewMode>("country");
-  const [selection, setSelection] = useState<Selection>({ view: "country", id: null });
+  const [view, setView] = useState<ViewMode>("county");
+  const [selection, setSelection] = useState<Selection>({ view: "county", id: null });
   const [metric, setMetric] = useState<Metric>("netRisk");
   const [hoverId, setHoverId] = useState<string | null>(null);
   const [tooltip, setTooltip] = useState<{ x: number; y: number } | null>(null);

@@ -9,7 +9,6 @@ import msaPathsData from "@/data/regional/us-msas-svg-paths.json";
 import msaSummaryData from "@/data/regional/msa-summary.json";
 import crosswalkData from "@/data/regional/cbsa-county-crosswalk.json";
 
-import MapHero from "@/components/map/MapHero";
 import SectorHeatmap from "@/components/map/SectorHeatmap";
 import OccupationRiskTable from "@/components/map/OccupationRiskTable";
 import RegionalExplorer from "@/components/map/RegionalExplorer";
@@ -110,11 +109,6 @@ export default function MapPage() {
 
   const occupations: OccupationRisk[] = occupationFile.occupations;
 
-  // Distinct task categories observed in the data (for the hero stat).
-  const taskCategoryCount = new Set(
-    occupations.flatMap((o) => o.tasks.map((t) => t.category))
-  ).size;
-
   const sectors = aggregateSectors(occupationFile, sectorFile).sort(
     (a, b) => b.weightedNetRisk - a.weightedNetRisk
   );
@@ -126,57 +120,75 @@ export default function MapPage() {
   const occupationsLite = occupations.map((o) => ({ slug: o.slug, title: o.title }));
 
   return (
-    <main className="px-6 sm:px-10 py-8 sm:py-12">
-      <div className="max-w-[1100px] mx-auto">
-        <MapHero
-          occupationCount={occupations.length}
-          taskCategoryCount={taskCategoryCount}
-          sectorCount={sectors.length}
-          generatedAt={occupationFile.generatedAt ?? sectorFile.generatedAt}
-        />
-
-        <SectorHeatmap sectors={sectors} totalJobs={totalJobs} />
-
-        <RegionalExplorer
-          stateRisk={stateRiskData as any}
-          statePaths={statePathsData as any}
-          msaPaths={msaPathsData as any}
-          msaSummary={msaSummaryData as any}
-          countyRisk={countyRiskData as any}
-          crosswalk={crosswalkData as any}
-          occupations={occupationsLite}
-        />
-
-        <section className="mt-16 sm:mt-20 mb-16">
-          <details className="group">
-            <summary className="cursor-pointer list-none">
-              <div className="flex items-baseline justify-between gap-4 border-t border-strong pt-6">
-                <div>
-                  <p className="text-xs font-bold uppercase tracking-widest text-[var(--accent)] opacity-60 mb-1">
-                    Appendix
-                  </p>
-                  <h2 className="text-xl sm:text-2xl font-bold text-heading leading-tight">
-                    Browse all {occupations.length.toLocaleString("en-US")} occupations
-                  </h2>
-                  <p className="text-sm text-[var(--muted)] mt-1 max-w-[640px]">
-                    The full sortable, filterable table behind the regional roll-ups.
-                  </p>
-                </div>
-                <span className="text-2xs text-[var(--muted)] group-open:hidden shrink-0 pt-2">
-                  Show table &darr;
-                </span>
-                <span className="text-2xs text-[var(--muted)] hidden group-open:inline shrink-0 pt-2">
-                  Hide table &uarr;
-                </span>
-              </div>
-            </summary>
-            <div className="mt-6">
-              <OccupationRiskTable occupations={occupations} />
+    <main className="pt-6 sm:pt-8 pb-16">
+      {/* Full-width hero strip + explorer */}
+      <section className="px-4 sm:px-6 lg:px-10">
+        <div className="max-w-[1600px] mx-auto">
+          {/* Compact eyebrow + headline above the map */}
+          <div className="mb-5 sm:mb-6">
+            <p className="text-xs font-bold uppercase tracking-widest text-[var(--accent)] mb-2">
+              Risk map &middot; tasks &rarr; jobs &rarr; sectors &rarr; regions
+            </p>
+            <div className="flex items-end justify-between gap-6 flex-wrap">
+              <h1 className="text-3xl sm:text-5xl font-bold text-heading leading-[1.05] tracking-tight">
+                Where AI risk lands<br className="hidden sm:block" /> on the US economy
+              </h1>
+              <p className="text-sm text-[var(--muted)] max-w-[460px] leading-relaxed">
+                {occupations.length.toLocaleString("en-US")} occupations scored on a 5-variable framework,
+                rolled up to {sectors.length} sectors and projected onto every US county, metro,
+                and state.
+              </p>
             </div>
-          </details>
-        </section>
+          </div>
 
-        <MapMethodology />
+          <RegionalExplorer
+            stateRisk={stateRiskData as any}
+            statePaths={statePathsData as any}
+            msaPaths={msaPathsData as any}
+            msaSummary={msaSummaryData as any}
+            countyRisk={countyRiskData as any}
+            crosswalk={crosswalkData as any}
+            occupations={occupationsLite}
+          />
+        </div>
+      </section>
+
+      {/* Downstream constrained sections */}
+      <div className="px-6 sm:px-10">
+        <div className="max-w-[1100px] mx-auto">
+          <SectorHeatmap sectors={sectors} totalJobs={totalJobs} />
+
+          <section className="mt-16 sm:mt-20 mb-16">
+            <details className="group">
+              <summary className="cursor-pointer list-none">
+                <div className="flex items-baseline justify-between gap-4 border-t border-strong pt-6">
+                  <div>
+                    <p className="text-xs font-bold uppercase tracking-widest text-[var(--accent)] opacity-60 mb-1">
+                      Appendix
+                    </p>
+                    <h2 className="text-xl sm:text-2xl font-bold text-heading leading-tight">
+                      Browse all {occupations.length.toLocaleString("en-US")} occupations
+                    </h2>
+                    <p className="text-sm text-[var(--muted)] mt-1 max-w-[640px]">
+                      The full sortable, filterable table behind the regional roll-ups.
+                    </p>
+                  </div>
+                  <span className="text-2xs text-[var(--muted)] group-open:hidden shrink-0 pt-2">
+                    Show table &darr;
+                  </span>
+                  <span className="text-2xs text-[var(--muted)] hidden group-open:inline shrink-0 pt-2">
+                    Hide table &uarr;
+                  </span>
+                </div>
+              </summary>
+              <div className="mt-6">
+                <OccupationRiskTable occupations={occupations} />
+              </div>
+            </details>
+          </section>
+
+          <MapMethodology />
+        </div>
       </div>
     </main>
   );
