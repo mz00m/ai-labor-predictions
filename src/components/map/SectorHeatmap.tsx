@@ -47,6 +47,15 @@ export default function SectorHeatmap({
         <span>Total covered: {formatJobs(totalJobs)} workers</span>
       </div>
 
+      {/* What "time-share" means, since the column header is terse */}
+      <p className="text-2xs text-[var(--muted)] leading-relaxed max-w-2xl mb-3 -mt-2">
+        <strong className="text-[var(--foreground)] font-semibold">Time-share by risk bucket</strong> means:
+        for an average worker in this sector, what share of their working hours
+        is spent on tasks our model rates high (red), medium (amber), or low
+        (green) risk. A sector where most hours are red is a sector where AI
+        already overlaps with most of the day&rsquo;s work.
+      </p>
+
       {/* Header row */}
       <div className="hidden sm:grid grid-cols-[1.8fr_0.7fr_0.6fr_1.6fr] gap-4 px-3 pb-2 text-2xs font-bold uppercase tracking-widest text-[var(--muted)] opacity-70 border-b border-strong">
         <div>Sector</div>

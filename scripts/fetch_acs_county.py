@@ -100,6 +100,113 @@ def load_sector_risk() -> dict[str, dict]:
     }
 
 
+OCC_RISK_PATH = REPO / "src" / "data" / "risk" / "occupation-risk.json"
+
+
+def load_sector_archetype_mix() -> dict[str, dict]:
+    """For each BLS major-group slug, the national archetype employment-share
+    distribution. Used to derive a county's archetypeMix from its sector
+    composition (since ACS doesn't give us per-county occupations)."""
+    data = json.loads(OCC_RISK_PATH.read_text())
+    by_cat: dict[str, dict] = {}
+    for o in data["occupations"]:
+        cat = o.get("category")
+        if not cat:
+            continue
+        bucket = by_cat.setdefault(cat, {
+            "automation-risk": 0.0,
+            "reorganize": 0.0,
+            "grow": 0.0,
+            "less-change": 0.0,
+            "total": 0.0,
+        })
+        arc = o.get("archetype", "less-change")
+        jobs = o.get("jobs") or 0
+        bucket[arc] = bucket.get(arc, 0.0) + jobs
+        bucket["total"] += jobs
+    out: dict[str, dict] = {}
+    for cat, b in by_cat.items():
+        t = b["total"] or 1
+        out[cat] = {
+            "automation-risk": b["automation-risk"] / t,
+            "reorganize": b["reorganize"] / t,
+            "grow": b["grow"] / t,
+            "less-change": b["less-change"] / t,
+        }
+    return out
+
+
+PRETTY_CATEGORY = {
+    "office-and-administrative-support": "Office & Administrative Support",
+    "business-and-financial": "Business & Financial Operations",
+    "computer-and-information-technology": "Computer & IT",
+    "math": "Mathematical",
+    "architecture-and-engineering": "Architecture & Engineering",
+    "life-physical-and-social-science": "Life, Physical & Social Science",
+    "community-and-social-service": "Community & Social Service",
+    "legal": "Legal",
+    "education-training-and-library": "Education & Library",
+    "arts-and-design": "Arts & Design",
+    "media-and-communication": "Media & Communication",
+    "entertainment-and-sports": "Entertainment & Sports",
+    "healthcare": "Healthcare",
+    "protective-service": "Protective Service",
+    "food-preparation-and-serving": "Food Preparation & Serving",
+    "building-and-grounds-cleaning": "Building & Grounds Cleaning",
+    "personal-care-and-service": "Personal Care & Service",
+    "sales": "Sales",
+    "farming-fishing-and-forestry": "Farming, Fishing & Forestry",
+    "construction-and-extraction": "Construction & Extraction",
+    "installation-maintenance-and-repair": "Installation, Maintenance & Repair",
+    "production": "Production",
+    "transportation-and-material-moving": "Transportation & Material Moving",
+    "management": "Management",
+    "military": "Military",
+}
+
+ARCHETYPE_LABEL = {
+    "automation-risk": "automation-pressure",
+    "reorganize": "reorganization",
+    "grow": "growth",
+    "less-change": "stability",
+}
+
+ARCHETYPE_STORY = {
+    "automation-risk": "automation pressure on routine cognitive work as AI handles more of what these jobs do day-to-day",
+    "reorganize": "reorganization more than displacement — workers stay essential, but the task mix and staffing levels shift around AI",
+    "grow": "expanding access and output as cheaper AI-assisted services unlock new demand",
+    "less-change": "limited near-term disruption, with work tied to AI-resistant tasks",
+}
+
+
+def generate_narrative(region_label: str, net_risk_100: float,
+                       archetype_mix: dict, top_sectors: list) -> str:
+    dominant = max(archetype_mix.items(), key=lambda kv: kv[1])[0]
+    top1 = top_sectors[0] if len(top_sectors) > 0 else None
+    top2 = top_sectors[1] if len(top_sectors) > 1 else None
+    r = round(net_risk_100)
+
+    if r >= 54:
+        lead = f"**{region_label}** sits at the higher end of AI labor pressure among US counties (score {r}/100)."
+    elif r >= 52:
+        lead = f"**{region_label}** tracks roughly average AI labor pressure for a US county ({r}/100)."
+    else:
+        lead = f"**{region_label}** sits below the average US county on AI labor pressure ({r}/100)."
+
+    if top1 and top2:
+        t1n = PRETTY_CATEGORY.get(top1["slug"], top1["slug"])
+        t2n = PRETTY_CATEGORY.get(top2["slug"], top2["slug"])
+        composition = f" Its workforce is concentrated in {t1n} ({top1['share']:.0f}% of jobs) and {t2n} ({top2['share']:.0f}%)."
+    elif top1:
+        t1n = PRETTY_CATEGORY.get(top1["slug"], top1["slug"])
+        composition = f" Its largest cluster is {t1n} at {top1['share']:.0f}% of jobs."
+    else:
+        composition = ""
+
+    story = f" The dominant story is {ARCHETYPE_LABEL[dominant]}: {ARCHETYPE_STORY[dominant]}."
+    return lead + composition + story
+
+
 def lookup_risk_for_acs_var(acs_var: str, sector_risk: dict[str, dict]) -> float:
     """Effective risk100 for an ACS variable = employment-weighted average of
     the risk100 of the jobsdata sector slugs that ACS variable maps to."""
@@ -134,7 +241,9 @@ def fetch_counties() -> list[list[str]]:
 
 def main() -> None:
     sector_risk = load_sector_risk()
+    sector_arch_mix = load_sector_archetype_mix()
     print(f"Loaded sector risk for {len(sector_risk)} jobsdata slugs", file=sys.stderr)
+    print(f"Loaded sector archetype mix for {len(sector_arch_mix)} slugs", file=sys.stderr)
 
     # Precompute effective risk100 per ACS variable
     acs_risk = {v: lookup_risk_for_acs_var(v, sector_risk) for v in ACS_VARS}
@@ -200,6 +309,26 @@ def main() -> None:
             reverse=True,
         )
 
+        # Archetype mix: for each sector slug in the county, blend by the
+        # sector's national archetype distribution × county employment share.
+        archetype_emp = {"automation-risk": 0.0, "reorganize": 0.0, "grow": 0.0, "less-change": 0.0}
+        for slug, emp in slug_emp.items():
+            dist = sector_arch_mix.get(slug)
+            if not dist:
+                continue
+            for arc in archetype_emp:
+                archetype_emp[arc] += emp * dist.get(arc, 0)
+        arc_total = sum(archetype_emp.values()) or 1
+        archetype_mix = {k: round(v / arc_total, 4) for k, v in archetype_emp.items()}
+
+        top_sectors_for_narrative = groups[:3]
+        narrative = generate_narrative(
+            region_label=name,
+            net_risk_100=risk100,
+            archetype_mix=archetype_mix,
+            top_sectors=top_sectors_for_narrative,
+        )
+
         counties.append({
             "fips": fips,
             "name": name,
@@ -209,6 +338,8 @@ def main() -> None:
             "coverage": round(wsum / total, 3) if total else 0,
             "weightedNetRisk100": round(risk100, 1),
             "occupationGroups": groups,
+            "archetypeMix": archetype_mix,
+            "narrative": narrative,
         })
 
     counties.sort(key=lambda r: r["weightedNetRisk100"], reverse=True)
@@ -238,7 +369,8 @@ def main() -> None:
     }
 
     # Slim summary for the choropleth (no occupation arrays) — small enough
-    # to import inline in the /map page.
+    # to import inline in the /map page. Carries archetypeMix so the map's
+    # "% at automation risk" colormode can render counties without lazy load.
     summary = {
         **meta,
         "counties": [
@@ -248,6 +380,7 @@ def main() -> None:
                 "stateFips": c["stateFips"],
                 "totalEmployment": c["totalEmployment"],
                 "weightedNetRisk100": c["weightedNetRisk100"],
+                "archetypeMix": c["archetypeMix"],
                 "topGroups": [
                     {"slug": g["slug"], "share": g["share"], "netRisk100": g["netRisk100"]}
                     for g in c["occupationGroups"][:3]

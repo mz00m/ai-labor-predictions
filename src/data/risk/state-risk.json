@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-11T18:48:34.397Z",
+  "generatedAt": "2026-05-11T20:00:57.261Z",
   "source": "BLS OEWS May 2024 state-level (oesm24st)",
   "methodology": "Per-state risk has two flavors. weightedNetRisk100 is the employment-weighted average across the ~325 SOC codes that have direct entries in our occupation-risk framework (covers ~50% of state employment). weightedNetRisk100Full additionally applies SOC major-group fallback risk to unscored SOCs, lifting coverage to ~95% — this is the honest headline number. The two are usually within 1-2 points of each other, but Full removes the upward bias from selectively scoring office-heavy occupations.",
   "stateCount": 51,
@@ -281,7 +281,14 @@
           "pctLowRiskTime": 96.6,
           "occupationCount": 11
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.4548939298466709,
+        "reorganize": 0.1591314849821466,
+        "grow": 0.1456626759084226,
+        "less-change": 0.24031190926275992
+      },
+      "narrative": "**District of Columbia** sits at the higher end of AI labor pressure among US states (score 54/100). Its workforce is concentrated in Business & Financial Operations (19% of jobs) and Legal (10%). The dominant story is automation-pressure: automation pressure on routine cognitive work as AI handles more of what these jobs do day-to-day."
     },
     {
       "fips": "09",
@@ -570,7 +577,14 @@
           "pctLowRiskTime": 96.5,
           "occupationCount": 16
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.39808312353694625,
+        "reorganize": 0.07780133386334526,
+        "grow": 0.10881807340665164,
+        "less-change": 0.4152974691930568
+      },
+      "narrative": "**Connecticut** tracks roughly average AI labor pressure for a US state (53/100). Its workforce is concentrated in Healthcare (15% of jobs) and Office & Administrative Support (11%). The dominant story is stability: limited near-term disruption, with work tied to AI-resistant tasks."
     },
     {
       "fips": "10",
@@ -849,7 +863,14 @@
           "pctLowRiskTime": 94.8,
           "occupationCount": 12
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.39586333813410146,
+        "reorganize": 0.08641382621219396,
+        "grow": 0.12033925428068491,
+        "less-change": 0.39738358137301966
+      },
+      "narrative": "**Delaware** tracks roughly average AI labor pressure for a US state (53/100). Its workforce is concentrated in Healthcare (15% of jobs) and Business & Financial Operations (13%). The dominant story is stability: limited near-term disruption, with work tied to AI-resistant tasks."
     },
     {
       "fips": "12",
@@ -1138,7 +1159,14 @@
           "pctLowRiskTime": 95.8,
           "occupationCount": 17
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.39000847609020384,
+        "reorganize": 0.06825343129615763,
+        "grow": 0.11579175424659721,
+        "less-change": 0.4259463383670413
+      },
+      "narrative": "**Florida** tracks roughly average AI labor pressure for a US state (53/100). Its workforce is concentrated in Healthcare (14% of jobs) and Office & Administrative Support (13%). The dominant story is stability: limited near-term disruption, with work tied to AI-resistant tasks."
     },
     {
       "fips": "24",
@@ -1427,7 +1455,14 @@
           "pctLowRiskTime": 95.9,
           "occupationCount": 17
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.40585309654939866,
+        "reorganize": 0.08063111161065528,
+        "grow": 0.11686523547263122,
+        "less-change": 0.39665055636731483
+      },
+      "narrative": "**Maryland** tracks roughly average AI labor pressure for a US state (53/100). Its workforce is concentrated in Healthcare (13% of jobs) and Business & Financial Operations (12%). The dominant story is automation-pressure: automation pressure on routine cognitive work as AI handles more of what these jobs do day-to-day."
     },
     {
       "fips": "25",
@@ -1706,7 +1741,14 @@
           "pctLowRiskTime": 96,
           "occupationCount": 14
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.43609063717756663,
+        "reorganize": 0.07320350564616065,
+        "grow": 0.1186913050618863,
+        "less-change": 0.3720145521143864
+      },
+      "narrative": "**Massachusetts** tracks roughly average AI labor pressure for a US state (53/100). Its workforce is concentrated in Healthcare (14% of jobs) and Business & Financial Operations (13%). The dominant story is automation-pressure: automation pressure on routine cognitive work as AI handles more of what these jobs do day-to-day."
     },
     {
       "fips": "34",
@@ -1995,7 +2037,14 @@
           "pctLowRiskTime": 94.7,
           "occupationCount": 18
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.40079732739420937,
+        "reorganize": 0.08055679287305123,
+        "grow": 0.12187527839643653,
+        "less-change": 0.3967706013363029
+      },
+      "narrative": "**New Jersey** tracks roughly average AI labor pressure for a US state (53/100). Its workforce is concentrated in Healthcare (13% of jobs) and Office & Administrative Support (12%). The dominant story is automation-pressure: automation pressure on routine cognitive work as AI handles more of what these jobs do day-to-day."
     },
     {
       "fips": "36",
@@ -2274,7 +2323,14 @@
           "pctLowRiskTime": 96,
           "occupationCount": 17
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.387144773454977,
+        "reorganize": 0.09583101791068474,
+        "grow": 0.12434684725945558,
+        "less-change": 0.3926773613748827
+      },
+      "narrative": "**New York** tracks roughly average AI labor pressure for a US state (53/100). Its workforce is concentrated in Healthcare (13% of jobs) and Business & Financial Operations (13%). The dominant story is stability: limited near-term disruption, with work tied to AI-resistant tasks."
     },
     {
       "fips": "51",
@@ -2553,7 +2609,14 @@
           "pctLowRiskTime": 95.3,
           "occupationCount": 17
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.4099083906841074,
+        "reorganize": 0.06557586254044939,
+        "grow": 0.14067271318536073,
+        "less-change": 0.3838430335900825
+      },
+      "narrative": "**Virginia** tracks roughly average AI labor pressure for a US state (53/100). Its workforce is concentrated in Business & Financial Operations (15% of jobs) and Healthcare (13%). The dominant story is automation-pressure: automation pressure on routine cognitive work as AI handles more of what these jobs do day-to-day."
     },
     {
       "fips": "01",
@@ -2842,7 +2905,14 @@
           "pctLowRiskTime": 95.1,
           "occupationCount": 17
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.3564571891515077,
+        "reorganize": 0.06421862782964212,
+        "grow": 0.10883347620886834,
+        "less-change": 0.47049070680998184
+      },
+      "narrative": "**Alabama** tracks roughly average AI labor pressure for a US state (52/100). Its workforce is concentrated in Healthcare (16% of jobs) and Office & Administrative Support (10%). The dominant story is stability: limited near-term disruption, with work tied to AI-resistant tasks."
     },
     {
       "fips": "02",
@@ -3121,7 +3191,14 @@
           "pctLowRiskTime": 92.7,
           "occupationCount": 14
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.37646051263228725,
+        "reorganize": 0.08062641463265431,
+        "grow": 0.07634428335474398,
+        "less-change": 0.46656878938031443
+      },
+      "narrative": "**Alaska** tracks roughly average AI labor pressure for a US state (52/100). Its workforce is concentrated in Healthcare (14% of jobs) and Office & Administrative Support (10%). The dominant story is stability: limited near-term disruption, with work tied to AI-resistant tasks."
     },
     {
       "fips": "04",
@@ -3400,7 +3477,14 @@
           "pctLowRiskTime": 96,
           "occupationCount": 16
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.39761619474049315,
+        "reorganize": 0.06473768395947875,
+        "grow": 0.12009035298434302,
+        "less-change": 0.4175557683156851
+      },
+      "narrative": "**Arizona** tracks roughly average AI labor pressure for a US state (52/100). Its workforce is concentrated in Office & Administrative Support (13% of jobs) and Healthcare (13%). The dominant story is stability: limited near-term disruption, with work tied to AI-resistant tasks."
     },
     {
       "fips": "05",
@@ -3689,7 +3773,14 @@
           "pctLowRiskTime": 95.3,
           "occupationCount": 18
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.3859700435646003,
+        "reorganize": 0.06660919628700297,
+        "grow": 0.09727374886470344,
+        "less-change": 0.4501470112836933
+      },
+      "narrative": "**Arkansas** tracks roughly average AI labor pressure for a US state (52/100). Its workforce is concentrated in Healthcare (16% of jobs) and Office & Administrative Support (14%). The dominant story is stability: limited near-term disruption, with work tied to AI-resistant tasks."
     },
     {
       "fips": "06",
@@ -3978,7 +4069,14 @@
           "pctLowRiskTime": 96.6,
           "occupationCount": 19
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.39589117765284315,
+        "reorganize": 0.08086430503027893,
+        "grow": 0.12862933743405064,
+        "less-change": 0.39461517988282724
+      },
+      "narrative": "**California** tracks roughly average AI labor pressure for a US state (52/100). Its workforce is concentrated in Healthcare (12% of jobs) and Business & Financial Operations (11%). The dominant story is automation-pressure: automation pressure on routine cognitive work as AI handles more of what these jobs do day-to-day."
     },
     {
       "fips": "08",
@@ -4267,7 +4365,14 @@
           "pctLowRiskTime": 94.8,
           "occupationCount": 18
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.40664455849807957,
+        "reorganize": 0.06333788501510126,
+        "grow": 0.13211088165851625,
+        "less-change": 0.39790667482830294
+      },
+      "narrative": "**Colorado** tracks roughly average AI labor pressure for a US state (52/100). Its workforce is concentrated in Business & Financial Operations (14% of jobs) and Healthcare (12%). The dominant story is automation-pressure: automation pressure on routine cognitive work as AI handles more of what these jobs do day-to-day."
     },
     {
       "fips": "13",
@@ -4556,7 +4661,14 @@
           "pctLowRiskTime": 93.9,
           "occupationCount": 15
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.40030365399682544,
+        "reorganize": 0.06839928064855298,
+        "grow": 0.11516524379599972,
+        "less-change": 0.4161318215586219
+      },
+      "narrative": "**Georgia** tracks roughly average AI labor pressure for a US state (52/100). Its workforce is concentrated in Healthcare (14% of jobs) and Office & Administrative Support (13%). The dominant story is stability: limited near-term disruption, with work tied to AI-resistant tasks."
     },
     {
       "fips": "15",
@@ -4835,7 +4947,14 @@
           "pctLowRiskTime": 96.9,
           "occupationCount": 15
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.3518705434180966,
+        "reorganize": 0.10204148080617328,
+        "grow": 0.08875720378992609,
+        "less-change": 0.4573307719858041
+      },
+      "narrative": "**Hawaii** tracks roughly average AI labor pressure for a US state (52/100). Its workforce is concentrated in Healthcare (13% of jobs) and Office & Administrative Support (11%). The dominant story is stability: limited near-term disruption, with work tied to AI-resistant tasks."
     },
     {
       "fips": "16",
@@ -5124,7 +5243,14 @@
           "pctLowRiskTime": 96.8,
           "occupationCount": 16
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.39520958083832336,
+        "reorganize": 0.06308891650660942,
+        "grow": 0.09056603773584905,
+        "less-change": 0.4511354649192182
+      },
+      "narrative": "**Idaho** tracks roughly average AI labor pressure for a US state (52/100). Its workforce is concentrated in Office & Administrative Support (16% of jobs) and Healthcare (13%). The dominant story is stability: limited near-term disruption, with work tied to AI-resistant tasks."
     },
     {
       "fips": "17",
@@ -5413,7 +5539,14 @@
           "pctLowRiskTime": 96.5,
           "occupationCount": 19
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.3850055756943215,
+        "reorganize": 0.07102409507568345,
+        "grow": 0.10548157535884796,
+        "less-change": 0.4384887538711471
+      },
+      "narrative": "**Illinois** tracks roughly average AI labor pressure for a US state (52/100). Its workforce is concentrated in Healthcare (13% of jobs) and Office & Administrative Support (12%). The dominant story is stability: limited near-term disruption, with work tied to AI-resistant tasks."
     },
     {
       "fips": "18",
@@ -5702,7 +5835,14 @@
           "pctLowRiskTime": 96,
           "occupationCount": 19
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.3674520811020423,
+        "reorganize": 0.06174366928881831,
+        "grow": 0.0978936612869471,
+        "less-change": 0.4729105883221923
+      },
+      "narrative": "**Indiana** tracks roughly average AI labor pressure for a US state (52/100). Its workforce is concentrated in Healthcare (15% of jobs) and Office & Administrative Support (13%). The dominant story is stability: limited near-term disruption, with work tied to AI-resistant tasks."
     },
     {
       "fips": "19",
@@ -5981,7 +6121,14 @@
           "pctLowRiskTime": 95.8,
           "occupationCount": 16
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.3783310520020224,
+        "reorganize": 0.06374162998039289,
+        "grow": 0.11409122858939735,
+        "less-change": 0.44383608942818736
+      },
+      "narrative": "**Iowa** tracks roughly average AI labor pressure for a US state (52/100). Its workforce is concentrated in Healthcare (14% of jobs) and Office & Administrative Support (11%). The dominant story is stability: limited near-term disruption, with work tied to AI-resistant tasks."
     },
     {
       "fips": "20",
@@ -6270,7 +6417,14 @@
           "pctLowRiskTime": 93.9,
           "occupationCount": 16
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.36805432455649945,
+        "reorganize": 0.0695965201739913,
+        "grow": 0.12088031962038262,
+        "less-change": 0.44146883564912665
+      },
+      "narrative": "**Kansas** tracks roughly average AI labor pressure for a US state (52/100). Its workforce is concentrated in Healthcare (16% of jobs) and Office & Administrative Support (11%). The dominant story is stability: limited near-term disruption, with work tied to AI-resistant tasks."
     },
     {
       "fips": "21",
@@ -6549,7 +6703,14 @@
           "pctLowRiskTime": 95.9,
           "occupationCount": 16
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.3609172776930269,
+        "reorganize": 0.06889424733034792,
+        "grow": 0.09421780424191722,
+        "less-change": 0.47597067073470795
+      },
+      "narrative": "**Kentucky** tracks roughly average AI labor pressure for a US state (52/100). Its workforce is concentrated in Healthcare (16% of jobs) and Office & Administrative Support (14%). The dominant story is stability: limited near-term disruption, with work tied to AI-resistant tasks."
     },
     {
       "fips": "22",
@@ -6838,7 +6999,14 @@
           "pctLowRiskTime": 96.3,
           "occupationCount": 16
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.3201290990469811,
+        "reorganize": 0.07284149844208304,
+        "grow": 0.08649230175887303,
+        "less-change": 0.5205371007520628
+      },
+      "narrative": "**Louisiana** tracks roughly average AI labor pressure for a US state (52/100). Its workforce is concentrated in Healthcare (17% of jobs) and Office & Administrative Support (12%). The dominant story is stability: limited near-term disruption, with work tied to AI-resistant tasks."
     },
     {
       "fips": "23",
@@ -7117,7 +7285,14 @@
           "pctLowRiskTime": 95.8,
           "occupationCount": 15
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.36669007848047147,
+        "reorganize": 0.07234250465691514,
+        "grow": 0.10187192719943812,
+        "less-change": 0.45909548966317526
+      },
+      "narrative": "**Maine** tracks roughly average AI labor pressure for a US state (52/100). Its workforce is concentrated in Healthcare (16% of jobs) and Office & Administrative Support (12%). The dominant story is stability: limited near-term disruption, with work tied to AI-resistant tasks."
     },
     {
       "fips": "26",
@@ -7406,7 +7581,14 @@
           "pctLowRiskTime": 96.3,
           "occupationCount": 19
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.4095670776084511,
+        "reorganize": 0.06001808437906623,
+        "grow": 0.1084621661557462,
+        "less-change": 0.4219526718567364
+      },
+      "narrative": "**Michigan** tracks roughly average AI labor pressure for a US state (52/100). Its workforce is concentrated in Healthcare (14% of jobs) and Office & Administrative Support (12%). The dominant story is stability: limited near-term disruption, with work tied to AI-resistant tasks."
     },
     {
       "fips": "27",
@@ -7685,7 +7867,14 @@
           "pctLowRiskTime": 96.7,
           "occupationCount": 16
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.3994878361075544,
+        "reorganize": 0.06654289372599231,
+        "grow": 0.11567221510883482,
+        "less-change": 0.41829705505761844
+      },
+      "narrative": "**Minnesota** tracks roughly average AI labor pressure for a US state (52/100). Its workforce is concentrated in Healthcare (13% of jobs) and Office & Administrative Support (12%). The dominant story is stability: limited near-term disruption, with work tied to AI-resistant tasks."
     },
     {
       "fips": "28",
@@ -7964,7 +8153,14 @@
           "pctLowRiskTime": 94.7,
           "occupationCount": 17
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.3456312349501204,
+        "reorganize": 0.07999656002751979,
+        "grow": 0.09231166150670794,
+        "less-change": 0.48206054351565186
+      },
+      "narrative": "**Mississippi** tracks roughly average AI labor pressure for a US state (52/100). Its workforce is concentrated in Healthcare (16% of jobs) and Office & Administrative Support (13%). The dominant story is stability: limited near-term disruption, with work tied to AI-resistant tasks."
     },
     {
       "fips": "29",
@@ -8243,7 +8439,14 @@
           "pctLowRiskTime": 95.8,
           "occupationCount": 16
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.382927807577519,
+        "reorganize": 0.06476174936944654,
+        "grow": 0.11361519582848946,
+        "less-change": 0.438695247224545
+      },
+      "narrative": "**Missouri** tracks roughly average AI labor pressure for a US state (52/100). Its workforce is concentrated in Healthcare (15% of jobs) and Office & Administrative Support (13%). The dominant story is stability: limited near-term disruption, with work tied to AI-resistant tasks."
     },
     {
       "fips": "30",
@@ -8532,7 +8735,14 @@
           "pctLowRiskTime": 94.8,
           "occupationCount": 16
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.35984379832972474,
+        "reorganize": 0.06777760593875658,
+        "grow": 0.10617073925146922,
+        "less-change": 0.4662078564800495
+      },
+      "narrative": "**Montana** tracks roughly average AI labor pressure for a US state (52/100). Its workforce is concentrated in Healthcare (14% of jobs) and Office & Administrative Support (12%). The dominant story is stability: limited near-term disruption, with work tied to AI-resistant tasks."
     },
     {
       "fips": "31",
@@ -8811,7 +9021,14 @@
           "pctLowRiskTime": 97,
           "occupationCount": 15
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.38767926501344485,
+        "reorganize": 0.05727143710785778,
+        "grow": 0.11129369584702718,
+        "less-change": 0.44375560203167014
+      },
+      "narrative": "**Nebraska** tracks roughly average AI labor pressure for a US state (52/100). Its workforce is concentrated in Healthcare (15% of jobs) and Office & Administrative Support (11%). The dominant story is stability: limited near-term disruption, with work tied to AI-resistant tasks."
     },
     {
       "fips": "33",
@@ -9090,7 +9307,14 @@
           "pctLowRiskTime": 96.3,
           "occupationCount": 14
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.3853713323038046,
+        "reorganize": 0.05885160746876316,
+        "grow": 0.13132107258177733,
+        "less-change": 0.4244559876456549
+      },
+      "narrative": "**New Hampshire** tracks roughly average AI labor pressure for a US state (52/100). Its workforce is concentrated in Healthcare (15% of jobs) and Office & Administrative Support (13%). The dominant story is stability: limited near-term disruption, with work tied to AI-resistant tasks."
     },
     {
       "fips": "35",
@@ -9369,7 +9593,14 @@
           "pctLowRiskTime": 94.6,
           "occupationCount": 18
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.3729677150400667,
+        "reorganize": 0.07835008569178749,
+        "grow": 0.10164898791050998,
+        "less-change": 0.44703321135763585
+      },
+      "narrative": "**New Mexico** tracks roughly average AI labor pressure for a US state (52/100). Its workforce is concentrated in Office & Administrative Support (13% of jobs) and Healthcare (13%). The dominant story is stability: limited near-term disruption, with work tied to AI-resistant tasks."
     },
     {
       "fips": "37",
@@ -9658,7 +9889,14 @@
           "pctLowRiskTime": 95,
           "occupationCount": 17
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.38574084646124884,
+        "reorganize": 0.06034855194334295,
+        "grow": 0.1294764777584052,
+        "less-change": 0.42443412383700296
+      },
+      "narrative": "**North Carolina** tracks roughly average AI labor pressure for a US state (52/100). Its workforce is concentrated in Healthcare (14% of jobs) and Office & Administrative Support (11%). The dominant story is stability: limited near-term disruption, with work tied to AI-resistant tasks."
     },
     {
       "fips": "39",
@@ -9947,7 +10185,14 @@
           "pctLowRiskTime": 95.4,
           "occupationCount": 18
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.390970146900652,
+        "reorganize": 0.07299137094429127,
+        "grow": 0.10232595618555798,
+        "less-change": 0.4337125259694988
+      },
+      "narrative": "**Ohio** tracks roughly average AI labor pressure for a US state (52/100). Its workforce is concentrated in Healthcare (16% of jobs) and Office & Administrative Support (12%). The dominant story is stability: limited near-term disruption, with work tied to AI-resistant tasks."
     },
     {
       "fips": "40",
@@ -10236,7 +10481,14 @@
           "pctLowRiskTime": 93.7,
           "occupationCount": 16
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.366667039568627,
+        "reorganize": 0.07271588226739308,
+        "grow": 0.09852442694291244,
+        "less-change": 0.46209265122106746
+      },
+      "narrative": "**Oklahoma** tracks roughly average AI labor pressure for a US state (52/100). Its workforce is concentrated in Healthcare (15% of jobs) and Office & Administrative Support (13%). The dominant story is stability: limited near-term disruption, with work tied to AI-resistant tasks."
     },
     {
       "fips": "41",
@@ -10525,7 +10777,14 @@
           "pctLowRiskTime": 96.4,
           "occupationCount": 16
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.3758524304178891,
+        "reorganize": 0.06809531361509794,
+        "grow": 0.11333359765284276,
+        "less-change": 0.4427186583141702
+      },
+      "narrative": "**Oregon** tracks roughly average AI labor pressure for a US state (52/100). Its workforce is concentrated in Healthcare (13% of jobs) and Office & Administrative Support (11%). The dominant story is stability: limited near-term disruption, with work tied to AI-resistant tasks."
     },
     {
       "fips": "42",
@@ -10814,7 +11073,14 @@
           "pctLowRiskTime": 95,
           "occupationCount": 19
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.3969301129238654,
+        "reorganize": 0.07401788950074245,
+        "grow": 0.09971680836938708,
+        "less-change": 0.42933518920600505
+      },
+      "narrative": "**Pennsylvania** tracks roughly average AI labor pressure for a US state (52/100). Its workforce is concentrated in Healthcare (15% of jobs) and Office & Administrative Support (12%). The dominant story is stability: limited near-term disruption, with work tied to AI-resistant tasks."
     },
     {
       "fips": "44",
@@ -11093,7 +11359,14 @@
           "pctLowRiskTime": 96.7,
           "occupationCount": 9
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.3755768944469257,
+        "reorganize": 0.0739169271996427,
+        "grow": 0.11616048831323507,
+        "less-change": 0.4343456900401965
+      },
+      "narrative": "**Rhode Island** tracks roughly average AI labor pressure for a US state (52/100). Its workforce is concentrated in Healthcare (15% of jobs) and Business & Financial Operations (12%). The dominant story is stability: limited near-term disruption, with work tied to AI-resistant tasks."
     },
     {
       "fips": "45",
@@ -11382,7 +11655,14 @@
           "pctLowRiskTime": 94.8,
           "occupationCount": 16
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.38319072708113805,
+        "reorganize": 0.06410115911485774,
+        "grow": 0.10861116965226554,
+        "less-change": 0.44409694415173867
+      },
+      "narrative": "**South Carolina** tracks roughly average AI labor pressure for a US state (52/100). Its workforce is concentrated in Healthcare (14% of jobs) and Office & Administrative Support (14%). The dominant story is stability: limited near-term disruption, with work tied to AI-resistant tasks."
     },
     {
       "fips": "46",
@@ -11671,7 +11951,14 @@
           "pctLowRiskTime": 95.9,
           "occupationCount": 14
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.3613969050606441,
+        "reorganize": 0.055165202843998326,
+        "grow": 0.11254705144291091,
+        "less-change": 0.4708908406524467
+      },
+      "narrative": "**South Dakota** tracks roughly average AI labor pressure for a US state (52/100). Its workforce is concentrated in Healthcare (17% of jobs) and Office & Administrative Support (13%). The dominant story is stability: limited near-term disruption, with work tied to AI-resistant tasks."
     },
     {
       "fips": "47",
@@ -11960,7 +12247,14 @@
           "pctLowRiskTime": 96.1,
           "occupationCount": 17
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.38225417395828404,
+        "reorganize": 0.06901811474246795,
+        "grow": 0.0983540651752353,
+        "less-change": 0.45037364612401265
+      },
+      "narrative": "**Tennessee** tracks roughly average AI labor pressure for a US state (52/100). Its workforce is concentrated in Healthcare (14% of jobs) and Office & Administrative Support (13%). The dominant story is stability: limited near-term disruption, with work tied to AI-resistant tasks."
     },
     {
       "fips": "48",
@@ -12249,7 +12543,14 @@
           "pctLowRiskTime": 94.4,
           "occupationCount": 19
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.4018061623004566,
+        "reorganize": 0.06990830817714849,
+        "grow": 0.11653926200366542,
+        "less-change": 0.41174626751872945
+      },
+      "narrative": "**Texas** tracks roughly average AI labor pressure for a US state (52/100). Its workforce is concentrated in Office & Administrative Support (13% of jobs) and Healthcare (13%). The dominant story is stability: limited near-term disruption, with work tied to AI-resistant tasks."
     },
     {
       "fips": "49",
@@ -12528,7 +12829,14 @@
           "pctLowRiskTime": 96.7,
           "occupationCount": 18
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.4347199633239824,
+        "reorganize": 0.058878106818901245,
+        "grow": 0.1150164277995481,
+        "less-change": 0.3913855020575682
+      },
+      "narrative": "**Utah** tracks roughly average AI labor pressure for a US state (52/100). Its workforce is concentrated in Office & Administrative Support (15% of jobs) and Business & Financial Operations (11%). The dominant story is automation-pressure: automation pressure on routine cognitive work as AI handles more of what these jobs do day-to-day."
     },
     {
       "fips": "50",
@@ -12807,7 +13115,14 @@
           "pctLowRiskTime": 96,
           "occupationCount": 14
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.37608798326698606,
+        "reorganize": 0.07664799946022535,
+        "grow": 0.1049861682747453,
+        "less-change": 0.44227784899804334
+      },
+      "narrative": "**Vermont** tracks roughly average AI labor pressure for a US state (52/100). Its workforce is concentrated in Healthcare (15% of jobs) and Office & Administrative Support (11%). The dominant story is stability: limited near-term disruption, with work tied to AI-resistant tasks."
     },
     {
       "fips": "53",
@@ -13096,7 +13411,14 @@
           "pctLowRiskTime": 96.7,
           "occupationCount": 17
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.3980903159395892,
+        "reorganize": 0.0566900596709253,
+        "grow": 0.14795494389431865,
+        "less-change": 0.39726468049516683
+      },
+      "narrative": "**Washington** tracks roughly average AI labor pressure for a US state (52/100). Its workforce is concentrated in Business & Financial Operations (12% of jobs) and Healthcare (12%). The dominant story is automation-pressure: automation pressure on routine cognitive work as AI handles more of what these jobs do day-to-day."
     },
     {
       "fips": "54",
@@ -13385,7 +13707,14 @@
           "pctLowRiskTime": 92.4,
           "occupationCount": 16
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.3367631476214377,
+        "reorganize": 0.07707322514081758,
+        "grow": 0.0854943951815292,
+        "less-change": 0.5006692320562155
+      },
+      "narrative": "**West Virginia** tracks roughly average AI labor pressure for a US state (52/100). Its workforce is concentrated in Healthcare (20% of jobs) and Office & Administrative Support (12%). The dominant story is stability: limited near-term disruption, with work tied to AI-resistant tasks."
     },
     {
       "fips": "55",
@@ -13674,7 +14003,14 @@
           "pctLowRiskTime": 96.2,
           "occupationCount": 18
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.39386920180870294,
+        "reorganize": 0.052858233447954116,
+        "grow": 0.11002942730932604,
+        "less-change": 0.44324313743401694
+      },
+      "narrative": "**Wisconsin** tracks roughly average AI labor pressure for a US state (52/100). Its workforce is concentrated in Healthcare (13% of jobs) and Office & Administrative Support (13%). The dominant story is stability: limited near-term disruption, with work tied to AI-resistant tasks."
     },
     {
       "fips": "32",
@@ -13953,7 +14289,14 @@
           "pctLowRiskTime": 96.7,
           "occupationCount": 17
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.32660472756204606,
+        "reorganize": 0.07468624079254678,
+        "grow": 0.08469573698123861,
+        "less-change": 0.5140132946641686
+      },
+      "narrative": "**Nevada** sits below the average US state on AI labor pressure (51/100). Its workforce is concentrated in Office & Administrative Support (12% of jobs) and Healthcare (11%). The dominant story is stability: limited near-term disruption, with work tied to AI-resistant tasks."
     },
     {
       "fips": "38",
@@ -14232,7 +14575,14 @@
           "pctLowRiskTime": 100,
           "occupationCount": 2
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.35416478657160905,
+        "reorganize": 0.05509430556808952,
+        "grow": 0.08437866618536233,
+        "less-change": 0.506362241674939
+      },
+      "narrative": "**North Dakota** sits below the average US state on AI labor pressure (51/100). Its workforce is concentrated in Healthcare (15% of jobs) and Office & Administrative Support (12%). The dominant story is stability: limited near-term disruption, with work tied to AI-resistant tasks."
     },
     {
       "fips": "56",
@@ -14501,7 +14851,14 @@
           "pctLowRiskTime": 92.9,
           "occupationCount": 14
         }
-      ]
+      ],
+      "archetypeMix": {
+        "automation-risk": 0.36160337552742616,
+        "reorganize": 0.06047819971870605,
+        "grow": 0.07327707454289732,
+        "less-change": 0.5046413502109705
+      },
+      "narrative": "**Wyoming** sits below the average US state on AI labor pressure (51/100). Its workforce is concentrated in Healthcare (13% of jobs) and Office & Administrative Support (12%). The dominant story is stability: limited near-term disruption, with work tied to AI-resistant tasks."
     }
   ]
 }

@@ -32,6 +32,9 @@ interface SectorBreakdownRow {
   occupationCount?: number;
 }
 
+export type ArchetypeKey = "automation-risk" | "reorganize" | "grow" | "less-change";
+export type ArchetypeMix = Record<ArchetypeKey, number>;
+
 interface StateRiskRow {
   fips: string;
   abbr: string;
@@ -53,6 +56,10 @@ interface StateRiskRow {
   occupationCount: number;
   /** Per-BLS-major-group sector breakdown for the heatmap. */
   sectors?: SectorBreakdownRow[];
+  /** OpenAI Jobs Transition Framework employment-share by archetype. */
+  archetypeMix?: ArchetypeMix;
+  /** Pre-rendered narrative sentence. */
+  narrative?: string;
 }
 interface StateRiskFile { states: StateRiskRow[] }
 
@@ -97,6 +104,8 @@ interface MsaSummaryRow {
   occupationCount: number;
   topRiskOccupations: { slug: string; title: string; employment: number; netRisk100: number }[];
   sectors?: SectorBreakdownRow[];
+  archetypeMix?: ArchetypeMix;
+  narrative?: string;
 }
 interface MsaSummaryFile { areas: MsaSummaryRow[] }
 
@@ -121,6 +130,7 @@ interface CountyRiskRow {
   totalEmployment: number;
   weightedNetRisk100: number;
   topGroups: { slug: string; share: number; netRisk100: number }[];
+  archetypeMix?: ArchetypeMix;
 }
 interface CountyRiskFile { counties: CountyRiskRow[] }
 
@@ -152,6 +162,8 @@ interface CountyOccRow {
   totalEmployment: number;
   weightedNetRisk100: number;
   occupationGroups: { slug: string; employment: number; share: number; netRisk100: number }[];
+  archetypeMix?: ArchetypeMix;
+  narrative?: string;
 }
 interface CountyOccFile { counties: CountyOccRow[] }
 
@@ -174,7 +186,7 @@ interface Props {
 }
 
 type ViewMode = "country" | "metro" | "county";
-type Metric = "netRisk" | "pctHigh";
+type Metric = "netRisk" | "pctHigh" | "atRiskShare";
 
 interface Selection {
   view: ViewMode;
@@ -273,7 +285,10 @@ export default function RegionalExplorer({
   // Country view defaults to %pctHighRiskTime — it has 5× the dynamic range
   // of weighted net risk (16-32% vs. 51-54), so it's the more useful default
   // metric. Metro/county fall back to netRisk since pctHigh isn't computed there.
-  const [metric, setMetric] = useState<Metric>("pctHigh");
+  // Default to atRiskShare — it's the highest-signal metric (14-77% range
+  // across counties vs the 47-54 of net risk). Users can switch to net risk
+  // or pctHigh from the toggle.
+  const [metric, setMetric] = useState<Metric>("atRiskShare");
   // Quantile is the honest default for the narrow range — bins regions into 5
   // groups by rank, which gives clear contrast without overstating absolute
   // magnitude (the way stretched min-max does).
@@ -360,6 +375,11 @@ export default function RegionalExplorer({
         valueOf: (id) => {
           const s = stateByFips.get(id);
           if (!s) return null;
+          if (metric === "atRiskShare") {
+            return s.archetypeMix
+              ? Math.round(s.archetypeMix["automation-risk"] * 1000) / 10
+              : null;
+          }
           if (metric === "pctHigh") return s.weightedPctHighRiskTime;
           // Prefer the SOC-major-group fallback-augmented score (~97-100% coverage);
           // fall back to the matched-only score if the field isn't present.
@@ -395,6 +415,11 @@ export default function RegionalExplorer({
         valueOf: (id) => {
           const m = msaSummaryByCbsa.get(id);
           if (!m) return null;
+          if (metric === "atRiskShare") {
+            return m.archetypeMix
+              ? Math.round(m.archetypeMix["automation-risk"] * 1000) / 10
+              : null;
+          }
           // Prefer the SOC-major-group fallback-augmented score (~88-99% coverage);
           // fall back to matched-only if the field isn't present.
           return m.weightedNetRisk100Full ?? m.weightedNetRisk100;
@@ -423,7 +448,16 @@ export default function RegionalExplorer({
     return {
       features,
       background,
-      valueOf: (id) => countyRiskByFips.get(id)?.weightedNetRisk100 ?? null,
+      valueOf: (id) => {
+        const c = countyRiskByFips.get(id);
+        if (!c) return null;
+        if (metric === "atRiskShare") {
+          return c.archetypeMix
+            ? Math.round(c.archetypeMix["automation-risk"] * 1000) / 10
+            : null;
+        }
+        return c.weightedNetRisk100;
+      },
       nameOf: (id) => countyRiskByFips.get(id)?.name ?? id,
       employmentOf: (id) => countyRiskByFips.get(id)?.totalEmployment ?? 0,
     };
@@ -693,6 +727,8 @@ export default function RegionalExplorer({
         weightedNetRisk100: s.weightedNetRisk100Full ?? s.weightedNetRisk100,
         weightedPctHighRiskTime: s.weightedPctHighRiskTime,
         coverage: s.fullCoverage ?? s.coverage,
+        narrative: s.narrative,
+        archetypeMix: s.archetypeMix,
         topRiskOccupations: s.topRiskOccupations,
         topMetrosInState: metros,
       };
@@ -712,6 +748,8 @@ export default function RegionalExplorer({
         totalEmployment: summ?.totalEmployment ?? 0,
         weightedNetRisk100: summ?.weightedNetRisk100Full ?? summ?.weightedNetRisk100 ?? 0,
         occupationCount: summ?.occupationCount ?? 0,
+        narrative: summ?.narrative,
+        archetypeMix: summ?.archetypeMix,
         topOccupations: detail?.topOccupations,
         members: xinfo?.counties ?? (path?.counties.map((fips) => ({
           fips,
@@ -731,6 +769,8 @@ export default function RegionalExplorer({
       stateFips: c.stateFips,
       totalEmployment: c.totalEmployment,
       weightedNetRisk100: c.weightedNetRisk100,
+      narrative: detail?.narrative,
+      archetypeMix: detail?.archetypeMix ?? c.archetypeMix,
       occupationGroups: detail?.occupationGroups,
       topGroupsFallback: c.topGroups,
     };
@@ -894,7 +934,18 @@ export default function RegionalExplorer({
                 role="group"
                 aria-label="Metric"
                 className="inline-flex border border-card rounded-md overflow-hidden text-2xs"
+                title="Net risk: 5-variable composite score 0-100 (narrow range across regions). % high-risk time: share of work-hours in high-risk tasks (state view only). % at auto risk: share of jobs in occupations classified as automation-risk archetype (highest dynamic range, 14-77% across counties)."
               >
+                <button
+                  onClick={() => setMetric("atRiskShare")}
+                  className={`px-3 py-1.5 transition-colors ${
+                    metric === "atRiskShare"
+                      ? "bg-[var(--accent)] text-white"
+                      : "bg-white text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-black/[0.02]"
+                  }`}
+                >
+                  % at auto-risk
+                </button>
                 <button
                   onClick={() => setMetric("netRisk")}
                   className={`px-3 py-1.5 transition-colors ${
@@ -1018,8 +1069,11 @@ export default function RegionalExplorer({
                   <div className="text-[var(--muted)] font-mono">
                     {tooltipData.value != null ? (
                       <>
-                        Risk {tooltipData.value.toFixed(metric === "pctHigh" && view === "country" ? 1 : 0)}
-                        {metric === "pctHigh" && view === "country" ? "%" : "/100"}
+                        {metric === "atRiskShare"
+                          ? `${tooltipData.value.toFixed(1)}% at auto-risk`
+                          : metric === "pctHigh" && view === "country"
+                          ? `${tooltipData.value.toFixed(1)}% high-risk time`
+                          : `Risk ${tooltipData.value.toFixed(0)}/100`}
                         {tooltipData.employment > 0 && (
                           <> · {formatJobs(tooltipData.employment)}</>
                         )}
@@ -1035,7 +1089,9 @@ export default function RegionalExplorer({
               <div className="absolute left-3 bottom-3 bg-white/95 backdrop-blur border border-card rounded-md px-3 py-2 text-2xs leading-tight pointer-events-none max-w-[280px]">
                 <div className="text-[10px] uppercase tracking-wider text-[var(--muted)] mb-1.5 flex items-baseline justify-between gap-2">
                   <span>
-                    {view === "country" && metric === "pctHigh"
+                    {metric === "atRiskShare"
+                      ? "% jobs at auto-risk"
+                      : view === "country" && metric === "pctHigh"
                       ? "% high-risk task time"
                       : "Net risk (0–100)"}
                   </span>

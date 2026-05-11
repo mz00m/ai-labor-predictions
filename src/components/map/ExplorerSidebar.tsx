@@ -1,12 +1,88 @@
 "use client";
 
-import { useState } from "react";
+import { useState, Fragment } from "react";
 import Link from "next/link";
 import {
   formatJobs,
   prettyCategory,
   riskColor100,
 } from "./types";
+
+/** Render a markdown-lite string (only **bold** is honored). */
+function renderBoldMarkdown(text: string): React.ReactNode {
+  const parts = text.split(/(\*\*[^*]+\*\*)/g);
+  return parts.map((p, i) =>
+    p.startsWith("**") && p.endsWith("**") ? (
+      <strong key={i} className="font-semibold text-[var(--foreground)]">
+        {p.slice(2, -2)}
+      </strong>
+    ) : (
+      <Fragment key={i}>{p}</Fragment>
+    ),
+  );
+}
+
+const ARCHETYPE_COLOR: Record<string, string> = {
+  "automation-risk": "#DC2626",
+  "reorganize": "#F59E0B",
+  "grow": "#16A34A",
+  "less-change": "#94A3B8",
+};
+
+const ARCHETYPE_LABEL: Record<string, string> = {
+  "automation-risk": "Automation risk",
+  "reorganize": "Reorganize",
+  "grow": "Grow",
+  "less-change": "Less change",
+};
+
+function NarrativeBanner({
+  narrative,
+  archetypeMix,
+}: {
+  narrative?: string;
+  archetypeMix?: Record<string, number>;
+}) {
+  if (!narrative && !archetypeMix) return null;
+  return (
+    <div className="mt-3 mb-2 rounded-md bg-[var(--accent-light)]/40 border border-[var(--accent)]/15 px-3 py-2.5">
+      {narrative && (
+        <p className="text-2xs leading-relaxed text-[var(--foreground)]">
+          {renderBoldMarkdown(narrative)}
+        </p>
+      )}
+      {archetypeMix && (
+        <div className="mt-2.5">
+          <div className="text-[10px] uppercase tracking-wider text-[var(--muted)] mb-1">
+            Archetype mix (employment share)
+          </div>
+          <div className="flex h-2 w-full rounded-sm overflow-hidden bg-black/[0.04]">
+            {(["automation-risk", "reorganize", "grow", "less-change"] as const).map((k) => (
+              <div
+                key={k}
+                style={{ width: `${(archetypeMix[k] ?? 0) * 100}%`, background: ARCHETYPE_COLOR[k] }}
+                title={`${ARCHETYPE_LABEL[k]}: ${((archetypeMix[k] ?? 0) * 100).toFixed(0)}%`}
+              />
+            ))}
+          </div>
+          <div className="flex gap-2 mt-1 text-[10px] text-[var(--muted)] flex-wrap">
+            {(["automation-risk", "reorganize", "grow", "less-change"] as const).map((k) => (
+              <span key={k} className="inline-flex items-center gap-1">
+                <span
+                  className="inline-block w-1.5 h-1.5 rounded-sm"
+                  style={{ background: ARCHETYPE_COLOR[k] }}
+                  aria-hidden="true"
+                />
+                {ARCHETYPE_LABEL[k]}{" "}
+                <span className="font-mono">{((archetypeMix[k] ?? 0) * 100).toFixed(0)}%</span>
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
 
 /**
  * Top occupations per BLS major-group slug. Server-rendered once from
@@ -31,6 +107,10 @@ export interface StateSidebarData {
   weightedNetRisk100: number;
   weightedPctHighRiskTime: number;
   coverage: number;
+  /** Pre-rendered region narrative (markdown-lite — supports **bold**). */
+  narrative?: string;
+  /** Share of employment in each OpenAI archetype (0..1). */
+  archetypeMix?: Record<"automation-risk" | "reorganize" | "grow" | "less-change", number>;
   topRiskOccupations: {
     slug: string;
     title: string;
@@ -53,6 +133,8 @@ export interface MsaSidebarData {
   totalEmployment: number;
   weightedNetRisk100: number;
   occupationCount: number;
+  narrative?: string;
+  archetypeMix?: Record<"automation-risk" | "reorganize" | "grow" | "less-change", number>;
   /** Optional detailed list loaded from msa-occupation-employment.json. */
   topOccupations?: {
     slug: string;
@@ -73,6 +155,8 @@ export interface CountySidebarData {
   stateFips: string;
   totalEmployment: number;
   weightedNetRisk100: number;
+  narrative?: string;
+  archetypeMix?: Record<"automation-risk" | "reorganize" | "grow" | "less-change", number>;
   /** Loaded from county-occupation-employment.json on demand. */
   occupationGroups?: {
     slug: string;
@@ -188,6 +272,8 @@ function StatePane({
         aside={data.abbr}
       />
 
+      <NarrativeBanner narrative={data.narrative} archetypeMix={data.archetypeMix} />
+
       <div className="mt-4 grid grid-cols-2 gap-3">
         <Metric
           label="Net risk"
@@ -275,6 +361,8 @@ function MsaPane({
         subtitle={`${formatJobs(data.totalEmployment)} jobs · ${data.members.length} ${data.members.length === 1 ? "county" : "counties"}`}
         aside={data.primState}
       />
+
+      <NarrativeBanner narrative={data.narrative} archetypeMix={data.archetypeMix} />
 
       <div className="mt-4 grid grid-cols-2 gap-3">
         <Metric
@@ -399,6 +487,8 @@ function CountyPane({
             : "ACS occupation breakdown"
         }
       />
+
+      <NarrativeBanner narrative={data.narrative} archetypeMix={data.archetypeMix} />
 
       {/* Honest framing: shares are real, risk-per-group is national average. */}
       <div className="mt-3 rounded-md bg-amber-50 border border-amber-100 px-3 py-2 text-2xs text-amber-900 leading-snug">

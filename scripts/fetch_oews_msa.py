@@ -94,7 +94,7 @@ def load_soc_to_slug() -> dict[str, str]:
 
 
 def load_occ_risk() -> dict[str, dict]:
-    """slug -> {title, netRisk100, pctHighRiskTime}."""
+    """slug -> {title, netRisk100, pctHighRiskTime, archetype}."""
     data = json.loads(OCC_RISK_PATH.read_text())
     return {
         o["slug"]: {
@@ -103,9 +103,80 @@ def load_occ_risk() -> dict[str, dict]:
             "netRisk": o["netRisk"],
             "pctHighRiskTime": o["pctHighRiskTime"],
             "category": o["category"],
+            "archetype": o.get("archetype", "less-change"),
         }
         for o in data["occupations"]
     }
+
+
+PRETTY_CATEGORY = {
+    "office-and-administrative-support": "Office & Administrative Support",
+    "business-and-financial": "Business & Financial Operations",
+    "computer-and-information-technology": "Computer & IT",
+    "math": "Mathematical",
+    "architecture-and-engineering": "Architecture & Engineering",
+    "life-physical-and-social-science": "Life, Physical & Social Science",
+    "community-and-social-service": "Community & Social Service",
+    "legal": "Legal",
+    "education-training-and-library": "Education & Library",
+    "arts-and-design": "Arts & Design",
+    "media-and-communication": "Media & Communication",
+    "entertainment-and-sports": "Entertainment & Sports",
+    "healthcare": "Healthcare",
+    "protective-service": "Protective Service",
+    "food-preparation-and-serving": "Food Preparation & Serving",
+    "building-and-grounds-cleaning": "Building & Grounds Cleaning",
+    "personal-care-and-service": "Personal Care & Service",
+    "sales": "Sales",
+    "farming-fishing-and-forestry": "Farming, Fishing & Forestry",
+    "construction-and-extraction": "Construction & Extraction",
+    "installation-maintenance-and-repair": "Installation, Maintenance & Repair",
+    "production": "Production",
+    "transportation-and-material-moving": "Transportation & Material Moving",
+    "management": "Management",
+    "military": "Military",
+}
+
+ARCHETYPE_LABEL = {
+    "automation-risk": "automation-pressure",
+    "reorganize": "reorganization",
+    "grow": "growth",
+    "less-change": "stability",
+}
+
+ARCHETYPE_STORY = {
+    "automation-risk": "automation pressure on routine cognitive work as AI handles more of what these jobs do day-to-day",
+    "reorganize": "reorganization more than displacement — workers stay essential, but the task mix and staffing levels shift around AI",
+    "grow": "expanding access and output as cheaper AI-assisted services unlock new demand",
+    "less-change": "limited near-term disruption, with work tied to AI-resistant tasks",
+}
+
+
+def generate_narrative(region_label: str, scope: str, net_risk_100: int,
+                       archetype_mix: dict, top_sectors: list) -> str:
+    dominant = max(archetype_mix.items(), key=lambda kv: kv[1])[0]
+    top1 = top_sectors[0] if len(top_sectors) > 0 else None
+    top2 = top_sectors[1] if len(top_sectors) > 1 else None
+
+    if net_risk_100 >= 54:
+        lead = f"**{region_label}** sits at the higher end of AI labor pressure among US {scope}s (score {net_risk_100}/100)."
+    elif net_risk_100 >= 52:
+        lead = f"**{region_label}** tracks roughly average AI labor pressure for a US {scope} ({net_risk_100}/100)."
+    else:
+        lead = f"**{region_label}** sits below the average US {scope} on AI labor pressure ({net_risk_100}/100)."
+
+    if top1 and top2:
+        t1n = PRETTY_CATEGORY.get(top1["category"], top1["category"])
+        t2n = PRETTY_CATEGORY.get(top2["category"], top2["category"])
+        composition = f" Its workforce is concentrated in {t1n} ({top1['share']:.0f}% of jobs) and {t2n} ({top2['share']:.0f}%)."
+    elif top1:
+        t1n = PRETTY_CATEGORY.get(top1["category"], top1["category"])
+        composition = f" Its largest cluster is {t1n} at {top1['share']:.0f}% of jobs."
+    else:
+        composition = ""
+
+    story = f" The dominant story is {ARCHETYPE_LABEL[dominant]}: {ARCHETYPE_STORY[dominant]}."
+    return lead + composition + story
 
 
 def load_sector_fallback() -> dict[str, float]:
@@ -201,6 +272,7 @@ def parse() -> dict:
                 "medianWage": _to_float(row[col["A_MEDIAN"]]),
                 "netRisk100": risk["netRisk100"],
                 "category": risk["category"],
+                "archetype": risk["archetype"],
             })
         elif emp:
             # Unscored SOC — accumulate fallback only (no detail row needed)
@@ -252,6 +324,24 @@ def parse() -> dict:
             })
         sectors_out.sort(key=lambda r: r["weightedNetRisk100"], reverse=True)
 
+        # Archetype mix per MSA, employment-weighted
+        archetype_jobs = {"automation-risk": 0, "reorganize": 0, "grow": 0, "less-change": 0}
+        for o in occs:
+            arc = o.get("archetype")
+            if arc in archetype_jobs:
+                archetype_jobs[arc] += o["employment"]
+        arc_total = sum(archetype_jobs.values()) or 1
+        archetype_mix = {k: v / arc_total for k, v in archetype_jobs.items()}
+
+        top_sectors_by_share = sorted(sectors_out, key=lambda r: r["share"], reverse=True)[:3]
+        narrative = generate_narrative(
+            region_label=a["title"],
+            scope="metro",
+            net_risk_100=round(full_risk),
+            archetype_mix=archetype_mix,
+            top_sectors=top_sectors_by_share,
+        )
+
         occs.sort(key=lambda o: o["employment"], reverse=True)
         top_by_emp = occs[:30]
 
@@ -277,6 +367,8 @@ def parse() -> dict:
             ],
             "occupationCount": len(occs),
             "sectors": sectors_out,
+            "archetypeMix": archetype_mix,
+            "narrative": narrative,
         })
 
         # Add employment shares to the detailed top-30

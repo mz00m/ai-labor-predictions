@@ -101,6 +101,15 @@ export interface TaskRiskBreakdown {
   riskBucket: RiskBucket;
 }
 
+/**
+ * OpenAI Jobs Transition Framework archetypes (Richmond 2026):
+ *   - automation-risk: high exposure, weak human necessity, low elasticity
+ *   - reorganize:      high exposure, strong human necessity, low elasticity
+ *   - grow:            high exposure, high demand elasticity
+ *   - less-change:     low/moderate exposure
+ */
+export type OpenAIArchetype = "automation-risk" | "reorganize" | "grow" | "less-change";
+
 export interface DetailedOccupationRisk {
   slug: string;
   title: string;
@@ -127,6 +136,9 @@ export interface DetailedOccupationRisk {
   pctMediumRiskTime: number;
   pctLowRiskTime: number;
   effectiveDimensions: number;
+
+  /** OpenAI Jobs Transition Framework archetype, derived from the 5-dim scores. */
+  archetype: OpenAIArchetype;
 }
 
 // ---------------------------------------------------------------------------
@@ -459,7 +471,84 @@ export function scoreOccupation(
     pctMediumRiskTime,
     pctLowRiskTime,
     effectiveDimensions: effectiveDims,
+    archetype: classifyArchetype({
+      technicalExposure,
+      demandElasticity,
+      complementarity,
+      taskComposition: occ.taskComposition,
+      category: occ.category,
+    }),
   };
+}
+
+/**
+ * Classify an occupation into one of the OpenAI Jobs Transition Framework's
+ * four archetypes (Richmond 2026):
+ *
+ *   - automation-risk: high exposure (>=6), low elasticity (<5),
+ *                      weak human necessity (complementarity <5 AND low
+ *                      physical+interpersonal task share)
+ *   - reorganize:      high exposure, low elasticity, BUT strong human
+ *                      necessity (high complementarity OR high physical/
+ *                      interpersonal share)
+ *   - grow:            high exposure, high elasticity (>=7)
+ *   - less-change:     everything else (low/moderate exposure)
+ *
+ * Thresholds calibrated so the resulting share splits roughly match the
+ * paper's national numbers (18% / 24% / 12% / 46%).
+ */
+/** Categorical "regulated/licensed/relational" necessity, drawn from the
+ *  paper's stated cases (lawyers, nurses, teachers, doctors, police, etc.).
+ *  These categories carry necessity from REGULATION, not from task mix —
+ *  the task-share proxy misses them otherwise. */
+const REGULATED_NECESSITY_CATEGORIES = new Set([
+  "healthcare",
+  "legal",
+  "education-training-and-library",
+  "protective-service",
+  "community-and-social-service",
+]);
+
+function classifyArchetype(args: {
+  technicalExposure: number;
+  demandElasticity: number;
+  complementarity: number;
+  taskComposition: Record<string, number>;
+  category: string;
+}): OpenAIArchetype {
+  const {
+    technicalExposure,
+    demandElasticity,
+    complementarity,
+    taskComposition,
+    category,
+  } = args;
+
+  // Task-share proxy for physical / interpersonal necessity. Coordination
+  // is dropped — cognitive coordination is exactly what AI is now doing, so
+  // it shouldn't count as "person required for delivery."
+  const humanNecessityShare =
+    (taskComposition["physical-manual"] ?? 0) +
+    (taskComposition["interpersonal"] ?? 0);
+
+  // Necessity hits when ANY is true:
+  //  - Substantial physical/interpersonal time (>=30%), OR
+  //  - Regulatory/licensure/relational category AND a non-trivial complementarity
+  //    (so secretaries in healthcare admin don't get the protection).
+  const highNecessity =
+    humanNecessityShare >= 0.30 ||
+    (REGULATED_NECESSITY_CATEGORIES.has(category) && complementarity >= 5);
+
+  if (technicalExposure < 5) {
+    return "less-change";
+  }
+  if (demandElasticity >= 7) {
+    return "grow";
+  }
+  if (highNecessity) {
+    return "reorganize";
+  }
+  return "automation-risk";
 }
 
 /**

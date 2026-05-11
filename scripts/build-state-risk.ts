@@ -12,6 +12,8 @@
 import { promises as fs } from "fs";
 import path from "path";
 
+type Archetype = "automation-risk" | "reorganize" | "grow" | "less-change";
+
 interface OccRisk {
   slug: string;
   title: string;
@@ -21,6 +23,7 @@ interface OccRisk {
   pctHighRiskTime: number;
   pctMediumRiskTime: number;
   pctLowRiskTime: number;
+  archetype?: Archetype;
 }
 
 interface SectorBreakdown {
@@ -46,6 +49,87 @@ interface SectorRiskRow {
 }
 interface SectorRiskFile {
   sectors: SectorRiskRow[];
+}
+
+const PRETTY_CATEGORY: Record<string, string> = {
+  "office-and-administrative-support": "Office & Administrative Support",
+  "business-and-financial": "Business & Financial Operations",
+  "computer-and-information-technology": "Computer & IT",
+  "math": "Mathematical",
+  "architecture-and-engineering": "Architecture & Engineering",
+  "life-physical-and-social-science": "Life, Physical & Social Science",
+  "community-and-social-service": "Community & Social Service",
+  "legal": "Legal",
+  "education-training-and-library": "Education & Library",
+  "arts-and-design": "Arts & Design",
+  "media-and-communication": "Media & Communication",
+  "entertainment-and-sports": "Entertainment & Sports",
+  "healthcare": "Healthcare",
+  "protective-service": "Protective Service",
+  "food-preparation-and-serving": "Food Preparation & Serving",
+  "building-and-grounds-cleaning": "Building & Grounds Cleaning",
+  "personal-care-and-service": "Personal Care & Service",
+  "sales": "Sales",
+  "farming-fishing-and-forestry": "Farming, Fishing & Forestry",
+  "construction-and-extraction": "Construction & Extraction",
+  "installation-maintenance-and-repair": "Installation, Maintenance & Repair",
+  "production": "Production",
+  "transportation-and-material-moving": "Transportation & Material Moving",
+  "management": "Management",
+  "military": "Military",
+};
+
+const ARCHETYPE_LABEL: Record<Archetype, string> = {
+  "automation-risk": "automation-pressure",
+  "reorganize": "reorganization",
+  "grow": "growth",
+  "less-change": "stability",
+};
+
+const ARCHETYPE_STORY: Record<Archetype, string> = {
+  "automation-risk": "automation pressure on routine cognitive work as AI handles more of what these jobs do day-to-day",
+  "reorganize": "reorganization more than displacement — workers stay essential, but the task mix and staffing levels shift around AI",
+  "grow": "expanding access and output as cheaper AI-assisted services unlock new demand",
+  "less-change": "limited near-term disruption, with work tied to AI-resistant tasks",
+};
+
+function generateNarrative(args: {
+  regionLabel: string;     // e.g. "Texas" or "Travis County, TX"
+  scope: "state" | "metro" | "county";
+  netRisk100: number;
+  archetypeMix: Record<Archetype, number>;
+  topSectors: { category: string; share: number }[];
+}): string {
+  const { regionLabel, scope, netRisk100, archetypeMix, topSectors } = args;
+
+  const dominant = (Object.entries(archetypeMix) as [Archetype, number][])
+    .sort((a, b) => b[1] - a[1])[0]?.[0] ?? "less-change";
+
+  const top1 = topSectors[0];
+  const top2 = topSectors[1];
+
+  const top1Name = top1 ? PRETTY_CATEGORY[top1.category] ?? top1.category : null;
+  const top2Name = top2 ? PRETTY_CATEGORY[top2.category] ?? top2.category : null;
+
+  const scopeNoun = scope === "state" ? "state" : scope === "metro" ? "metro" : "county";
+
+  const lead =
+    netRisk100 >= 54
+      ? `**${regionLabel}** sits at the higher end of AI labor pressure among US ${scopeNoun}s (score ${netRisk100}/100).`
+      : netRisk100 >= 52
+      ? `**${regionLabel}** tracks roughly average AI labor pressure for a US ${scopeNoun} (${netRisk100}/100).`
+      : `**${regionLabel}** sits below the average US ${scopeNoun} on AI labor pressure (${netRisk100}/100).`;
+
+  const composition =
+    top1 && top2
+      ? ` Its workforce is concentrated in ${top1Name} (${top1.share.toFixed(0)}% of jobs) and ${top2Name} (${top2.share.toFixed(0)}%).`
+      : top1
+      ? ` Its largest cluster is ${top1Name} at ${top1.share.toFixed(0)}% of jobs.`
+      : "";
+
+  const story = ` The dominant story is ${ARCHETYPE_LABEL[dominant]}: ${ARCHETYPE_STORY[dominant]}.`;
+
+  return lead + composition + story;
 }
 
 /**
@@ -117,6 +201,10 @@ interface StateRiskOut {
   occupationCount: number;
   /** Per-BLS-major-group breakdown for the sector heatmap. */
   sectors: SectorBreakdown[];
+  /** Employment share of each OpenAI Jobs Transition archetype (sum to 1.0). */
+  archetypeMix: Record<Archetype, number>;
+  /** Pre-rendered narrative sentence for the region. */
+  narrative: string;
 }
 
 async function main() {
@@ -162,6 +250,13 @@ async function main() {
     /** Per-category accumulator for the sector breakdown. */
     const sectorAcc = new Map<string, { jobs: number; risk100: number; hi: number; md: number; lo: number; n: number }>();
 
+    const archetypeJobs: Record<Archetype, number> = {
+      "automation-risk": 0,
+      "reorganize": 0,
+      "grow": 0,
+      "less-change": 0,
+    };
+
     for (const sOcc of s.occupations) {
       if (sOcc.employment == null) continue;
       const w = sOcc.employment;
@@ -185,6 +280,10 @@ async function main() {
         acc.lo += o.pctLowRiskTime * w;
         acc.n += 1;
         sectorAcc.set(o.category, acc);
+
+        if (o.archetype) {
+          archetypeJobs[o.archetype] += w;
+        }
       } else {
         // Unscored SOC — apply SOC major-group fallback if possible
         const fb = fallbackRiskForSoc(sOcc.soc);
@@ -215,6 +314,24 @@ async function main() {
       }))
       .sort((a, b) => b.weightedNetRisk100 - a.weightedNetRisk100);
 
+    // Normalize archetype mix to shares
+    const arcTotal = (Object.values(archetypeJobs) as number[]).reduce((s, x) => s + x, 0);
+    const archetypeMix: Record<Archetype, number> = {
+      "automation-risk": arcTotal > 0 ? archetypeJobs["automation-risk"] / arcTotal : 0,
+      "reorganize": arcTotal > 0 ? archetypeJobs["reorganize"] / arcTotal : 0,
+      "grow": arcTotal > 0 ? archetypeJobs["grow"] / arcTotal : 0,
+      "less-change": arcTotal > 0 ? archetypeJobs["less-change"] / arcTotal : 0,
+    };
+
+    const topSectorsByShare = [...sectors].sort((a, b) => b.share - a.share).slice(0, 3);
+    const narrative = generateNarrative({
+      regionLabel: s.title,
+      scope: "state",
+      netRisk100: Math.round(sumFullRisk100 / sumFullWeight),
+      archetypeMix,
+      topSectors: topSectorsByShare,
+    });
+
     states.push({
       fips: s.fips,
       abbr: s.abbr,
@@ -231,6 +348,8 @@ async function main() {
       topRiskOccupations: rowsWithRisk.slice(0, 5),
       occupationCount: rowsWithRisk.length,
       sectors,
+      archetypeMix,
+      narrative,
     });
   }
 
