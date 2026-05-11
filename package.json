@@ -18,6 +18,7 @@
     "ingest:apply": "tsx scripts/apply-ingestion.ts && npm run compile-wiki && npm run compile-kb",
     "backfill:content": "tsx scripts/backfill-source-content.ts --skip-existing",
     "build:search": "tsx scripts/build-search-index.ts",
+    "build:risk": "tsx scripts/build-occupation-risk.ts",
     "backfill:content:dry-run": "tsx scripts/backfill-source-content.ts --dry-run",
     "fetch:article": "tsx scripts/fetch-article.ts",
     "fetch:pdf": "tsx scripts/fetch-article.ts --pdf",
