@@ -69,7 +69,16 @@ interface MsaSummaryRow {
   primState: string;
   type: string;
   totalEmployment: number;
+  matchedEmployment?: number;
+  fullEmployment?: number;
+  /** Matched-only coverage (legacy ~50%). */
+  coverage?: number;
+  /** Coverage after SOC major-group fallback (~88-99%). */
+  fullCoverage?: number;
+  /** Matched-only employment-weighted risk. */
   weightedNetRisk100: number;
+  /** Honest headline: matched + SOC major-group fallback risk. */
+  weightedNetRisk100Full?: number;
   occupationCount: number;
   topRiskOccupations: { slug: string; title: string; employment: number; netRisk100: number }[];
 }
@@ -357,7 +366,13 @@ export default function RegionalExplorer({
       return {
         features,
         background,
-        valueOf: (id) => msaSummaryByCbsa.get(id)?.weightedNetRisk100 ?? null,
+        valueOf: (id) => {
+          const m = msaSummaryByCbsa.get(id);
+          if (!m) return null;
+          // Prefer the SOC-major-group fallback-augmented score (~88-99% coverage);
+          // fall back to matched-only if the field isn't present.
+          return m.weightedNetRisk100Full ?? m.weightedNetRisk100;
+        },
         nameOf: (id) => msaSummaryByCbsa.get(id)?.title ?? msaPathByCbsa.get(id)?.name ?? id,
         employmentOf: (id) => msaSummaryByCbsa.get(id)?.totalEmployment ?? 0,
       };
@@ -577,7 +592,7 @@ export default function RegionalExplorer({
         primState: summ?.primState ?? path?.primState ?? "",
         type: summ?.type ?? path?.type,
         totalEmployment: summ?.totalEmployment ?? 0,
-        weightedNetRisk100: summ?.weightedNetRisk100 ?? 0,
+        weightedNetRisk100: summ?.weightedNetRisk100Full ?? summ?.weightedNetRisk100 ?? 0,
         occupationCount: summ?.occupationCount ?? 0,
         topOccupations: detail?.topOccupations,
         members: xinfo?.counties ?? (path?.counties.map((fips) => ({

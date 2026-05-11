@@ -31,6 +31,35 @@ OUT_SUM = REPO / "src" / "data" / "regional" / "msa-summary.json"
 
 ENRICHED_PATH = REPO / "src" / "data" / "enriched-occupations.json"
 OCC_RISK_PATH = REPO / "src" / "data" / "risk" / "occupation-risk.json"
+SECTOR_RISK_PATH = REPO / "src" / "data" / "risk" / "sector-risk.json"
+
+# SOC 2-digit prefix -> jobsdata sector slug, for major-group fallback risk
+# on unscored OEWS rows. Same table as build-state-risk.ts.
+SOC_MAJOR_TO_CATEGORY: dict[str, str] = {
+    "11": "management",
+    "13": "business-and-financial",
+    "15": "computer-and-information-technology",
+    "17": "architecture-and-engineering",
+    "19": "life-physical-and-social-science",
+    "21": "community-and-social-service",
+    "23": "legal",
+    "25": "education-training-and-library",
+    "27": "arts-and-design",
+    "29": "healthcare",
+    "31": "healthcare",
+    "33": "protective-service",
+    "35": "food-preparation-and-serving",
+    "37": "building-and-grounds-cleaning",
+    "39": "personal-care-and-service",
+    "41": "sales",
+    "43": "office-and-administrative-support",
+    "45": "farming-fishing-and-forestry",
+    "47": "construction-and-extraction",
+    "49": "installation-maintenance-and-repair",
+    "51": "production",
+    "53": "transportation-and-material-moving",
+    "55": "military",
+}
 
 
 def download_if_missing() -> None:
@@ -79,6 +108,18 @@ def load_occ_risk() -> dict[str, dict]:
     }
 
 
+def load_sector_fallback() -> dict[str, float]:
+    """SOC major-group 2-digit prefix -> national-average netRisk100 from
+    sector-risk.json. Used to give unscored OEWS rows a fair risk number."""
+    data = json.loads(SECTOR_RISK_PATH.read_text())
+    by_category = {s["category"]: s["weightedNetRisk100"] for s in data["sectors"]}
+    out: dict[str, float] = {}
+    for prefix, cat in SOC_MAJOR_TO_CATEGORY.items():
+        if cat in by_category:
+            out[prefix] = by_category[cat]
+    return out
+
+
 def _to_int(v) -> int | None:
     if v in (None, "", "*", "**"):
         return None
@@ -103,6 +144,7 @@ def _to_float(v) -> float | None:
 def parse() -> dict:
     soc_to_slug = load_soc_to_slug()
     occ_risk = load_occ_risk()
+    sector_fallback = load_sector_fallback()
 
     wb = openpyxl.load_workbook(XLSX_PATH, read_only=True, data_only=True)
     ws = wb.active
@@ -132,6 +174,8 @@ def parse() -> dict:
             "type": "metro" if str(area_type) == "4" else "nonmetro",
             "totalEmployment": None,
             "occupations": [],
+            "fallbackEmp": 0,   # sum of unscored employment with SOC-major fallback
+            "fallbackRisk": 0,  # weighted sum of fallback risk × employment
         })
 
         if row[col["OCC_CODE"]] == "00-0000":
@@ -142,23 +186,28 @@ def parse() -> dict:
             continue
 
         soc = row[col["OCC_CODE"]]
-        slug = soc_to_slug.get(soc)
-        if not slug:
-            continue
-        risk = occ_risk.get(slug)
-        if not risk:
-            continue
-
         emp = _to_int(row[col["TOT_EMP"]])
-        a["occupations"].append({
-            "slug": slug,
-            "soc": soc,
-            "title": risk["title"],
-            "employment": emp,
-            "medianWage": _to_float(row[col["A_MEDIAN"]]),
-            "netRisk100": risk["netRisk100"],
-            "category": risk["category"],
-        })
+
+        slug = soc_to_slug.get(soc)
+        risk = occ_risk.get(slug) if slug else None
+
+        if risk:
+            # Scored occupation — keep full detail row
+            a["occupations"].append({
+                "slug": slug,
+                "soc": soc,
+                "title": risk["title"],
+                "employment": emp,
+                "medianWage": _to_float(row[col["A_MEDIAN"]]),
+                "netRisk100": risk["netRisk100"],
+                "category": risk["category"],
+            })
+        elif emp:
+            # Unscored SOC — accumulate fallback only (no detail row needed)
+            fb = sector_fallback.get(soc[:2])
+            if fb is not None:
+                a["fallbackEmp"] += emp
+                a["fallbackRisk"] += emp * fb
 
     # Build summary + truncated detail
     summary = []
@@ -171,6 +220,14 @@ def parse() -> dict:
 
         sum_emp = sum(o["employment"] for o in occs)
         weighted_risk = sum(o["netRisk100"] * o["employment"] for o in occs) / sum_emp
+
+        # Full-coverage risk: matched + SOC-major-group fallback for unscored
+        fb_emp = a["fallbackEmp"]
+        fb_risk = a["fallbackRisk"]
+        full_emp = sum_emp + fb_emp
+        full_risk = (
+            (weighted_risk * sum_emp + fb_risk) / full_emp if full_emp else weighted_risk
+        )
 
         occs.sort(key=lambda o: o["employment"], reverse=True)
         top_by_emp = occs[:30]
@@ -185,8 +242,11 @@ def parse() -> dict:
             "type": a["type"],
             "totalEmployment": total_emp,
             "matchedEmployment": sum_emp,
+            "fullEmployment": full_emp,
             "coverage": sum_emp / total_emp if total_emp else 0,
+            "fullCoverage": full_emp / total_emp if total_emp else 0,
             "weightedNetRisk100": round(weighted_risk),
+            "weightedNetRisk100Full": round(full_risk),
             "topRiskOccupations": [
                 {"slug": o["slug"], "title": o["title"], "employment": o["employment"],
                  "netRisk100": o["netRisk100"]}
@@ -207,11 +267,23 @@ def parse() -> dict:
             "topOccupations": top_by_emp,
         })
 
-    summary.sort(key=lambda r: r["weightedNetRisk100"], reverse=True)
+    summary.sort(key=lambda r: r["weightedNetRisk100Full"], reverse=True)
 
     print(f"Areas processed: {len(summary)}", file=sys.stderr)
     print(f"  Metro:    {sum(1 for s in summary if s['type'] == 'metro')}", file=sys.stderr)
     print(f"  Nonmetro: {sum(1 for s in summary if s['type'] == 'nonmetro')}", file=sys.stderr)
+    print("Top 5 by full-coverage risk:", file=sys.stderr)
+    for s in summary[:5]:
+        print(
+            f"  {s['cbsa']} {s['title']:<55} full={s['weightedNetRisk100Full']} matched={s['weightedNetRisk100']} fullCov={s['fullCoverage']*100:.0f}%",
+            file=sys.stderr,
+        )
+    print("Bottom 5:", file=sys.stderr)
+    for s in summary[-5:]:
+        print(
+            f"  {s['cbsa']} {s['title']:<55} full={s['weightedNetRisk100Full']} matched={s['weightedNetRisk100']} fullCov={s['fullCoverage']*100:.0f}%",
+            file=sys.stderr,
+        )
 
     return {
         "summary": {

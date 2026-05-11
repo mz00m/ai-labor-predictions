@@ -271,9 +271,9 @@ function MsaPane({
 
       <div className="mt-2.5 text-2xs text-[var(--muted)] leading-snug">
         Detailed-SOC data from BLS OEWS. The {data.occupationCount} scored
-        occupations cover roughly half of metro employment; the rest are
-        excluded (the score likely runs 1–3 points higher than full coverage
-        would yield).
+        occupations are shown below at full detail; remaining ~half of metro
+        employment is assigned its SOC major-group average for the headline
+        risk score (lifts coverage from ~50% to ~90%).
       </div>
 
       <Section title="Occupations by employment share">
