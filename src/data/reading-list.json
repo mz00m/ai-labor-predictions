@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "AI Growth Acceleration Versus Distributional Fairness",
+      "author": "Brooke Tanner, Nicoleta Kyosovska, Derek Belle, Cameron F. Kerry, Andrea Renda, Elham Tabassi & Andrew W. Wyckoff",
+      "publisher": "Brookings (Forum for Cooperation on AI)",
+      "date": "2026-05-05",
+      "url": "https://www.brookings.edu/articles/ai-growth-acceleration-versus-distributional-fairness/",
+      "takeaway": "Brookings FCAI briefing synthesizing the productivity–diffusion–distribution trilemma. Frontier capability is racing ahead (Stanford AI Index: training compute doubling every 5 months; private industry produced ~90% of notable 2024 models), but real-world productivity is lagging. The headline finding: an NBER Feb 2026 survey of ~6,000 executives (US/UK/DE/AU) reports ~70% of firms 'actively use AI,' yet executives spend only ~1.5 hrs/wk on it and ~90% of firms report no impact on employment or productivity over the past three years. Micro-evidence remains bimodal: a customer-support GenAI study showed +15% productivity (concentrated in novices), while METR's randomized trial found experienced open-source developers using early-2025 AI tools were 19% SLOWER on their own repos. Adoption stats: US BTOS Feb 2026 shows 17.5% of US businesses used AI in at least one function in the last two weeks; Eurostat 2025 shows 19.95% of EU firms with 10+ employees. Distributional risk concentrates at entry-level (Stanford Digital Economy Lab); ~88% of language-tagged models on Hugging Face are English-only, widening Global North/South divides. Task-based macro estimates put AI's TFP contribution at <0.66% over 10 years.",
+      "weekFeatured": "2026-05-11",
+      "tier": 2
+    },
+    {
       "title": "What We Do and Don't Know About How AI is Affecting the Labor Market",
       "author": "Martha Gimbel, Joshua Kendall & Ryan Nunn",
       "publisher": "The Budget Lab at Yale",

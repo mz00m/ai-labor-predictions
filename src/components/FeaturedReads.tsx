@@ -9,6 +9,14 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Tanner, Kyosovska, Belle, Kerry, Renda, Tabassi & Wyckoff (Brookings FCAI)",
+    title: "AI Growth Acceleration Versus Distributional Fairness",
+    summary:
+      "Brookings briefing on the productivity–diffusion–distribution trilemma. NBER Feb 2026 survey of ~6,000 US/UK/DE/AU executives: 70% of firms 'actively use AI,' yet executives spend only ~1.5 hrs/wk on it and ~90% report no impact on employment or productivity over the past three years. METR's randomized trial found experienced open-source developers using early-2025 AI tools were 19% SLOWER on their own repos — counter to the well-cited customer-support finding of +15% productivity (mostly for novices). US BTOS (Feb 2026): 17.5% of US businesses used AI in at least one function in the last two weeks; Eurostat (2025): 19.95% of EU firms with 10+ employees. The macro upshot: frontier capability is racing ahead (training compute doubling every 5 months), but diffusion is uneven, complement-bound, and lagging.",
+    date: "May 5",
+    url: "https://www.brookings.edu/articles/ai-growth-acceleration-versus-distributional-fairness/",
+  },
+  {
     author: "Gimbel, Kendall & Nunn (Yale Budget Lab)",
     title: "What We Do and Don't Know About How AI is Affecting the Labor Market",
     summary:
@@ -39,14 +47,6 @@ const articles: Article[] = [
       "LMICs employ <10% of workers in skilled knowledge work vs. 41% in high-income countries — so there's little to graft AI onto. Rich-country adoption runs through existing knowledge workers; LMICs lack that base. But cheap intelligence could also leapfrog: small manufacturers could access capabilities previously requiring large teams, and LMICs face less political resistance to AI adoption. A crucial question for development economics: does AI augment scarce knowledge workers, or does it automate knowledge work entirely?",
     date: "Apr 28",
     url: "https://dan.bjorkegren.com/blog/2026/04/the-intelligence-is-plenty-but-the-workers-are-few/",
-  },
-  {
-    author: "Pethokoukis × Rock (Faster, Please!)",
-    title: "The future of work in an age of AI",
-    summary:
-      "AEI's James Pethokoukis interviews Wharton's Daniel Rock (author of the Productivity J-Curve paper) on AI and work. Key framing: exposure vs. automation are not the same thing. Rock covers why firms see slow early productivity gains as they reorganize workflows, the bottlenecks limiting adoption, and why a more measured growth outlook is warranted — pushing back on Silicon Valley claims that white-collar work is imminently doomed.",
-    date: "Apr 28",
-    url: "https://fasterplease.substack.com/p/the-future-of-work-in-an-age-of-ai",
   },
 ];
 
