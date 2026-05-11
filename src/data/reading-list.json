@@ -2,6 +2,36 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "Algorithmic Credentialism: Civil Rights Risk in AI Hiring Screens",
+      "author": "Peter Q. Blair & Rui Guo",
+      "publisher": "NBER Working Paper w35192",
+      "date": "2026-05-11",
+      "url": "https://www.nber.org/papers/w35192",
+      "takeaway": "Blair and Guo introduce the concept of 'algorithmic credentialism' \u2014 AI-powered hiring screens trained on historical data encode bachelor's-degree requirements as skill proxies, potentially violating civil rights law under disparate-impact doctrine. The framework matters as AI screening proliferates: it implies entry-level access could narrow not because AI replaces workers but because algorithmic filters silently re-impose credential bias that human screens were being pushed to drop.",
+      "weekFeatured": "2026-05-11",
+      "tier": 1
+    },
+    {
+      "title": "California's $20 Fast-Food Minimum Wage: A Pre-AI Benchmark",
+      "author": "Arindrajit Dube",
+      "publisher": "NBER Working Paper w35171",
+      "date": "2026-05-11",
+      "url": "https://www.nber.org/papers/w35171",
+      "takeaway": "Not an AI paper \u2014 but a critical baseline for thinking about customer-service automation. Dube finds California's AB 1228 (April 2024) raised fast-food wages ~7% with a tight employment own-wage elasticity bracket (\u22120.29 to +0.26, median \u22120.02 across 32 specs) despite the floor reaching ~77% of state median hourly wages. The result: even an aggressive wage floor in a sector facing kiosk and ordering automation produced near-zero employment effects through 2025Q3. Useful prior for separating regulation-driven from AI-driven wage and employment changes.",
+      "weekFeatured": "2026-05-11",
+      "tier": 1
+    },
+    {
+      "title": "The Expert Data Gig Economy: How AI Labs Reshape White-Collar Expertise",
+      "author": "Robert Wolfe & Aayushi Dangol",
+      "publisher": "FAccT 2025 (arXiv)",
+      "date": "2026-05-05",
+      "url": "https://arxiv.org/abs/2605.03295",
+      "takeaway": "Wolfe and Dangol analyze public communications from five leading AI companies and argue that the demand for high-skill data annotation has created an 'expert gig economy' \u2014 commodifying professional expertise into scalable, lower-paid task work. The piece is qualitative, but it names a mechanism that quantitative studies miss: AI labs increasingly source expert judgment via gig platforms, which compresses the professional wage premium even when overall white-collar employment looks stable.",
+      "weekFeatured": "2026-05-11",
+      "tier": 2
+    },
+    {
       "title": "Why the A.I. Job Apocalypse (Probably) Won't Happen",
       "author": "Ezra Klein",
       "publisher": "The New York Times",

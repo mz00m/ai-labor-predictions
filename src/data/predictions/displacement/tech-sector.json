@@ -849,6 +849,15 @@
       ],
       "evidenceTier": 3,
       "label": "a16z: software dev jobs rising as % of market since early 2025"
+    },
+    {
+      "date": "2026-05-08",
+      "direction": "up",
+      "sourceIds": [
+        "jo-coding-agents-pr-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Jo et al.: 96%+ of collaborator-tool PRs are agent-initiated (n=29,585)"
     }
   ],
   "sources": [
@@ -1578,6 +1587,16 @@
       "evidenceTier": 3,
       "datePublished": "2026-05-06",
       "excerpt": "AI-as-augmentation out-mentions AI-as-substitution on earnings calls by ~8:1. Software Development jobs (both by count, and a percent of the overall job market) have been increasing since the beginning of 2025. The aggregate effects of AI on employment are \"basically null\" per recent academic research, with some evidence of reallocation between jobs and tasks."
+    },
+    {
+      "id": "jo-coding-agents-pr-2026",
+      "title": "AI Coding Agents Redistribute Work Across Pull Request Lifecycles",
+      "url": "https://arxiv.org/abs/2605.08017",
+      "publisher": "arXiv (Jo, Chung, Hassan)",
+      "evidenceTier": 2,
+      "datePublished": "2026-05-08",
+      "excerpt": "Analysis of 29,585 PR lifecycles across 5 major AI coding tools using an Initiator x Approver taxonomy. Collaborator workflows are >=96% agent-initiated, yet terminal merge authority remains almost exclusively human, with agent-classified approvers confined to a small fraction of PRs.",
+      "dateAdded": "2026-05-11"
     }
   ],
   "marketIds": {
