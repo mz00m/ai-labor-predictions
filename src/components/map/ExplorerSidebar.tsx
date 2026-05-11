@@ -171,7 +171,9 @@ export interface CountySidebarData {
   }[];
   /** Parent MSA name when the county is inside one. */
   parentMetroName?: string | null;
-  /** MSA-imputed detailed-SOC occupations (top 15) for metro counties. */
+  /** Where the imputation came from. */
+  imputedDetailedSource?: "metro" | "nonmetro-state" | null;
+  /** Imputed detailed-SOC occupations (top 15). */
   imputedDetailedOccupations?: {
     slug: string;
     title: string;
@@ -633,10 +635,21 @@ function CountyPane({
       {data.imputedDetailedOccupations && data.imputedDetailedOccupations.length > 0 && (
         <Section title="Detailed occupations (estimated)">
           <p className="text-2xs text-[var(--muted)] leading-snug mb-2">
-            Estimates assume {data.name}&rsquo;s workforce mirrors the
-            {data.parentMetroName ? <> <span className="font-semibold text-[var(--foreground)]">{data.parentMetroName}</span> metro&rsquo;s</> : " parent metro&rsquo;s"} detailed-SOC mix
-            (BLS OEWS) scaled by county share of metro employment. Helpful for
-            ranking; less reliable for highly specialized outlying counties.
+            {data.imputedDetailedSource === "metro" ? (
+              <>
+                Estimates assume {data.name}&rsquo;s workforce mirrors the
+                {data.parentMetroName ? <> <span className="font-semibold text-[var(--foreground)]">{data.parentMetroName}</span> metro&rsquo;s</> : " parent metro&rsquo;s"} detailed-SOC mix
+                (BLS OEWS) scaled by county share of metro employment.
+              </>
+            ) : (
+              <>
+                Estimates scale the state&rsquo;s <span className="font-semibold text-[var(--foreground)]">non-metro</span>{" "}
+                detailed-SOC mix (BLS OEWS Balance of State) by this county&rsquo;s
+                share of state non-metro employment.
+              </>
+            )}{" "}
+            Helpful for ranking; less reliable for specialized outlying counties
+            (think university towns, national-lab towns, resource-extraction enclaves).
           </p>
           <div className="overflow-hidden">
             <ul className="space-y-1">
@@ -666,21 +679,12 @@ function CountyPane({
       )}
 
       <p className="text-2xs text-[var(--muted)] leading-relaxed border-t border-card pt-3 mt-4">
-        {data.imputedDetailedOccupations && data.imputedDetailedOccupations.length > 0 ? (
-          <>
-            Detailed-SOC estimates are{" "}
-            <span className="font-semibold text-[var(--foreground)]">imputed from parent-metro OEWS</span>;
-            the major-group shares above are real Census ACS data for this county. Non-metro
-            counties stay at major-group only (~22 leaves) because no public detailed-SOC
-            dataset exists at the county level.{" "}
-          </>
-        ) : (
-          <>
-            This county isn&rsquo;t inside a metro, so occupations are limited to ACS
-            major-group granularity. Detailed-SOC imputation is available for ~1,250 metro
-            counties.{" "}
-          </>
-        )}
+        Major-group shares are real Census ACS data. Detailed-SOC estimates are{" "}
+        <span className="font-semibold text-[var(--foreground)]">
+          imputed from {data.imputedDetailedSource === "metro" ? "parent-metro" : "state non-metro"} BLS OEWS
+        </span>
+        {" "}data — true per-county detailed-SOC employment isn&rsquo;t publicly
+        published.{" "}
         <Link href="#methodology" className="text-[var(--accent-text)] hover:underline">
           Methodology
         </Link>

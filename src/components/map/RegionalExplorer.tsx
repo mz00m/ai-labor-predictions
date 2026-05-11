@@ -168,8 +168,11 @@ interface CountyOccRow {
   narrative?: string;
   /** Parent CBSA code if the county is inside a metro. */
   parentCbsa?: string | null;
-  /** Imputed detailed-SOC top occupations for metro counties — derived from
-   *  the parent MSA's OEWS distribution × this county's share of metro emp. */
+  /** Where the imputation came from: "metro" = parent MSA OEWS;
+   *  "nonmetro-state" = state's BOS (Balance of State) OEWS. */
+  imputedDetailedSource?: "metro" | "nonmetro-state" | null;
+  /** Imputed detailed-SOC top occupations — derived from MSA OEWS for metro
+   *  counties, or state non-metro BOS OEWS for non-metro counties. */
   imputedDetailedOccupations?: {
     slug: string;
     title: string;
@@ -894,6 +897,7 @@ export default function RegionalExplorer({
       occupationGroups: detail?.occupationGroups,
       topGroupsFallback: c.topGroups,
       parentMetroName: parentMetro,
+      imputedDetailedSource: detail?.imputedDetailedSource ?? null,
       imputedDetailedOccupations: detail?.imputedDetailedOccupations,
     };
     return { kind: "county" as const, data, loading: countyOccLoading && !detail };
