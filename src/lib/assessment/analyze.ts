@@ -766,9 +766,9 @@ ${toolPrefNote}
 
 Tool Recommendations — Product Examples:
 - "start-here" (max 2): Priority Score ≥ 4.0, very easy to adopt
-- "add-next" (max 3): Priority Score ≥ 3.0, builds on start-here tools
-- "consider-later" (max 2): Priority Score ≥ 2.5, requires foundation
-Max 6 tool categories total. Free before paid. Simple before powerful.
+- "add-next" (max 2): Priority Score ≥ 3.0, builds on start-here tools
+- "consider-later" (max 1): Priority Score ≥ 2.5, requires foundation
+Max 4-5 tool categories total. Free before paid. Simple before powerful. Tight beats thorough.
 PROPORTIONALITY RULE: Tool recommendations must reflect the breadth of the user's actual work, not cluster on one function. If the task analysis covers 8 areas, tools should serve the highest-impact areas proportionally — not 3 tools for one niche function.
 When tools from the knowledge base match, include them as concrete examples with real names, URLs, and pricing. But frame each recommendation around the USE CASE it solves, not the product itself.
 
@@ -819,12 +819,16 @@ Return valid JSON with ONLY a toolRecommendations array (no roadmap, no ROI):
   if (researchContext) userPrompt += `\n\n${researchContext}`;
 
   try {
-    // Single-purpose call: tools only. 240s wall-clock cap leaves ~60s of
-    // headroom under Vercel's 300s function ceiling for DB writes and
-    // response serialization. max_tokens scaled to ~6 detailed tools.
+    // Single-purpose call: tools only. Switched to Haiku — Sonnet was
+    // regularly hitting the 240s timeout even on the trimmed prompt. Tool
+    // recommendations are structured/extractive generation (categories,
+    // tiers, pricing, getting-started steps), well within Haiku's capability
+    // band, and Haiku is roughly 3-5× faster. max_tokens tightened to 3000
+    // alongside a reduced 4-5 tool cap (was 6).
     const parsed = await callClaude(systemPrompt, userPrompt, {
-      maxTokens: 4500,
-      timeout: 240000,
+      model: CLAUDE_HAIKU,
+      maxTokens: 3000,
+      timeout: 180000,
     });
 
     if (parsed === null) {
