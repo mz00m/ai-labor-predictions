@@ -306,20 +306,73 @@ function extractTextFromResponse(response: Anthropic.Message): string {
     .join("\n");
 }
 
+/**
+ * Attempt to repair truncated JSON by closing any unclosed strings, arrays,
+ * and objects. Used as a fallback when Claude hits max_tokens mid-output.
+ * @internal
+ */
+function repairTruncatedJson(text: string): string {
+  let inString = false;
+  let escaped = false;
+  const stack: string[] = []; // tracks open { and [
+  for (let i = 0; i < text.length; i++) {
+    const ch = text[i];
+    if (escaped) { escaped = false; continue; }
+    if (ch === "\\" && inString) { escaped = true; continue; }
+    if (ch === '"') { inString = !inString; continue; }
+    if (inString) continue;
+    if (ch === "{" || ch === "[") stack.push(ch);
+    else if (ch === "}" && stack[stack.length - 1] === "{") stack.pop();
+    else if (ch === "]" && stack[stack.length - 1] === "[") stack.pop();
+  }
+
+  let repaired = text;
+  // Close any unterminated string. Truncation often lands mid-value.
+  if (inString) repaired += '"';
+  // Strip a trailing comma or partial key like ,"name" with no value
+  repaired = repaired.replace(/,\s*"[^"]*"\s*:?\s*$/, "").replace(/,\s*$/, "");
+  // Close open arrays/objects in reverse order
+  while (stack.length) {
+    const open = stack.pop();
+    repaired += open === "{" ? "}" : "]";
+  }
+  return repaired;
+}
+
 /** @internal Exported for testing */
 export function parseJsonFromText(text: string): Record<string, unknown> | null {
-  try {
-    // Try markdown-fenced JSON first (```json ... ```)
-    const fenced = text.match(/```(?:json)?\s*\n?([\s\S]*?)\n?```/);
-    if (fenced) {
-      return JSON.parse(fenced[1].trim());
-    }
-    // Fall back to first { ... last }
-    const jsonMatch = text.match(/\{[\s\S]*\}/);
-    if (jsonMatch) return JSON.parse(jsonMatch[0]);
-  } catch (e) {
-    console.error("Failed to parse step JSON:", e);
+  // 1. Try markdown-fenced JSON first (```json ... ```)
+  const fenced = text.match(/```(?:json)?\s*\n?([\s\S]*?)\n?```/);
+  if (fenced) {
+    try { return JSON.parse(fenced[1].trim()); } catch { /* fall through */ }
   }
+
+  // 2. Try first { ... last }
+  const jsonMatch = text.match(/\{[\s\S]*\}/);
+  if (jsonMatch) {
+    try { return JSON.parse(jsonMatch[0]); } catch { /* fall through */ }
+  }
+
+  // 3. Truncation salvage: take from first { to end of string, attempt repair
+  const firstBrace = text.indexOf("{");
+  if (firstBrace >= 0) {
+    const tail = text.slice(firstBrace);
+    try {
+      const repaired = repairTruncatedJson(tail);
+      const parsed = JSON.parse(repaired);
+      console.warn("[parseJsonFromText] Recovered from truncated JSON via repair");
+      return parsed;
+    } catch (e) {
+      console.error("Failed to parse step JSON (including truncation salvage):", e instanceof Error ? e.message : e);
+    }
+  }
+
+  // 4. Log a diagnostic snippet so we can see what Claude actually emitted
+  console.error(
+    "[parseJsonFromText] No parseable JSON found. " +
+    `Length=${text.length}, head=${JSON.stringify(text.slice(0, 300))}, ` +
+    `tail=${JSON.stringify(text.slice(-200))}`
+  );
   return null;
 }
 
@@ -777,6 +830,8 @@ Many use cases DON'T need a specialized tool. For ad-hoc and occasional tasks �
 If someone already uses Google Workspace, call out that Gemini is built into Docs, Sheets, Gmail, etc.
 If someone already uses Microsoft 365, call out that Copilot is built into Word, Excel, Outlook, etc.
 
+CRITICAL OUTPUT FORMAT: Your entire response must be a single valid JSON object and nothing else. No prose before, no prose after, no markdown fences. Start your response with the opening { character. Keep field values concise — long prose fields risk hitting the output limit mid-string and breaking JSON parsing.
+
 Return valid JSON with ONLY a toolRecommendations array (no roadmap, no ROI):
 {
   "toolRecommendations": [
@@ -823,11 +878,13 @@ Return valid JSON with ONLY a toolRecommendations array (no roadmap, no ROI):
     // regularly hitting the 240s timeout even on the trimmed prompt. Tool
     // recommendations are structured/extractive generation (categories,
     // tiers, pricing, getting-started steps), well within Haiku's capability
-    // band, and Haiku is roughly 3-5× faster. max_tokens tightened to 3000
-    // alongside a reduced 4-5 tool cap (was 6).
+    // band, and Haiku is roughly 3-5× faster. max_tokens raised to 4500
+    // after observing truncation failures at 3000 — Haiku is fast enough
+    // that the headroom is essentially free latency-wise, and unclosed
+    // JSON failures are far worse than slightly slower responses.
     const parsed = await callClaude(systemPrompt, userPrompt, {
       model: CLAUDE_HAIKU,
-      maxTokens: 3000,
+      maxTokens: 4500,
       timeout: 180000,
     });
 

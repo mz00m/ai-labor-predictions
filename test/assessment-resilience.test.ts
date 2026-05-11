@@ -56,6 +56,29 @@ describe("parseJsonFromText", () => {
     const result = parseJsonFromText(text);
     expect(result).toEqual({ fenced: true });
   });
+
+  it("salvages truncated JSON cut off inside an array element", () => {
+    // Simulates Haiku hitting max_tokens mid-tool-recommendation.
+    const text = '{"toolRecommendations":[{"category":"writing","tier":"start-here"},{"category":"meetings","tier":"add-next';
+    const result = parseJsonFromText(text);
+    expect(result).not.toBeNull();
+    expect(Array.isArray((result as any).toolRecommendations)).toBe(true);
+    expect((result as any).toolRecommendations[0]).toEqual({ category: "writing", tier: "start-here" });
+  });
+
+  it("salvages truncated JSON cut off mid-string", () => {
+    const text = '{"toolRecommendations":[{"category":"writing","purpose":"draft documents and emails wi';
+    const result = parseJsonFromText(text);
+    expect(result).not.toBeNull();
+    expect(Array.isArray((result as any).toolRecommendations)).toBe(true);
+  });
+
+  it("salvages truncated JSON ending with a trailing comma", () => {
+    const text = '{"toolRecommendations":[{"category":"writing"},{"category":"meetings"},';
+    const result = parseJsonFromText(text);
+    expect(result).not.toBeNull();
+    expect((result as any).toolRecommendations).toHaveLength(2);
+  });
 });
 
 // ─── Zod schema safe defaults ────────────────────────────────────
