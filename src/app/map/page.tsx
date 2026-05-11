@@ -9,7 +9,6 @@ import msaPathsData from "@/data/regional/us-msas-svg-paths.json";
 import msaSummaryData from "@/data/regional/msa-summary.json";
 import crosswalkData from "@/data/regional/cbsa-county-crosswalk.json";
 
-import SectorHeatmap from "@/components/map/SectorHeatmap";
 import OccupationRiskTable from "@/components/map/OccupationRiskTable";
 import RegionalExplorer from "@/components/map/RegionalExplorer";
 import MapMethodology from "@/components/map/MapMethodology";
@@ -175,6 +174,8 @@ export default function MapPage() {
             crosswalk={crosswalkData as any}
             occupations={occupationsLite}
             topOccupationsByCategory={topOccupationsByCategory}
+            nationalSectors={sectors}
+            nationalTotalJobs={totalJobs}
           />
         </div>
       </section>
@@ -182,8 +183,6 @@ export default function MapPage() {
       {/* Downstream constrained sections */}
       <div className="px-6 sm:px-10">
         <div className="max-w-[1100px] mx-auto">
-          <SectorHeatmap sectors={sectors} totalJobs={totalJobs} />
-
           <section className="mt-16 sm:mt-20 mb-16">
             <details className="group">
               <summary className="cursor-pointer list-none">

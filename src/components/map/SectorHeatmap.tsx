@@ -8,9 +8,18 @@ import {
 interface Props {
   sectors: SectorAggregate[];
   totalJobs: number;
+  /** Optional override — defaults to "Where the exposed employment sits". */
+  scopeTitle?: string;
+  /** Optional override for the descriptive subtitle. */
+  scopeSubtitle?: string;
 }
 
-export default function SectorHeatmap({ sectors, totalJobs }: Props) {
+export default function SectorHeatmap({
+  sectors,
+  totalJobs,
+  scopeTitle,
+  scopeSubtitle,
+}: Props) {
   // Sectors are expected sorted by weightedNetRisk desc by the page.
   const maxJobs = sectors.reduce((m, s) => Math.max(m, s.totalJobs), 0);
 
@@ -18,15 +27,14 @@ export default function SectorHeatmap({ sectors, totalJobs }: Props) {
     <section className="mb-20">
       <div className="mb-6">
         <p className="text-xs font-bold uppercase tracking-widest text-[var(--accent)] opacity-60 mb-2">
-          01 &middot; Sector view
+          Sector makeup
         </p>
         <h2 className="text-3xl sm:text-heading-lg font-bold text-[var(--foreground)] leading-tight mb-2">
-          Where the exposed employment sits
+          {scopeTitle ?? "Where the exposed employment sits"}
         </h2>
         <p className="text-md text-[var(--muted)] leading-relaxed max-w-2xl">
-          Each row is one BLS major occupational group, sorted by employment-weighted
-          net risk. The stacked bar shows the share of working time inside that
-          sector spent on tasks scored high, medium, or low risk.
+          {scopeSubtitle ??
+            "Each row is one BLS major occupational group, sorted by employment-weighted net risk. The stacked bar shows the share of working time inside that sector spent on tasks scored high, medium, or low risk."}
         </p>
       </div>
 

@@ -16,9 +16,21 @@ import ExplorerSidebar, {
   StateSidebarData,
   TopOccupationsByCategory,
 } from "./ExplorerSidebar";
-import { formatJobs, riskColor100 } from "./types";
+import SectorHeatmap from "./SectorHeatmap";
+import { formatJobs, prettyCategory, riskColor100, SectorAggregate } from "./types";
 
 /* ---------- Input data shapes ---------- */
+
+interface SectorBreakdownRow {
+  category: string;
+  totalEmployment: number;
+  share: number;
+  weightedNetRisk100: number;
+  pctHighRiskTime?: number;
+  pctMediumRiskTime?: number;
+  pctLowRiskTime?: number;
+  occupationCount?: number;
+}
 
 interface StateRiskRow {
   fips: string;
@@ -39,6 +51,8 @@ interface StateRiskRow {
   weightedPctHighRiskTime: number;
   topRiskOccupations: { slug: string; title: string; employment: number; netRisk100: number }[];
   occupationCount: number;
+  /** Per-BLS-major-group sector breakdown for the heatmap. */
+  sectors?: SectorBreakdownRow[];
 }
 interface StateRiskFile { states: StateRiskRow[] }
 
@@ -82,6 +96,7 @@ interface MsaSummaryRow {
   weightedNetRisk100Full?: number;
   occupationCount: number;
   topRiskOccupations: { slug: string; title: string; employment: number; netRisk100: number }[];
+  sectors?: SectorBreakdownRow[];
 }
 interface MsaSummaryFile { areas: MsaSummaryRow[] }
 
@@ -153,6 +168,9 @@ interface Props {
   /** Top representative occupations per BLS major-group slug — used by the
    *  county sidebar's expandable drill-through. */
   topOccupationsByCategory: TopOccupationsByCategory;
+  /** National sector breakdown, used as the default scope of the heatmap. */
+  nationalSectors: SectorAggregate[];
+  nationalTotalJobs: number;
 }
 
 type ViewMode = "country" | "metro" | "county";
@@ -247,6 +265,8 @@ export default function RegionalExplorer({
   crosswalk,
   occupations,
   topOccupationsByCategory,
+  nationalSectors,
+  nationalTotalJobs,
 }: Props) {
   const [view, setView] = useState<ViewMode>("county");
   const [selection, setSelection] = useState<Selection>({ view: "county", id: null });
@@ -540,6 +560,100 @@ export default function RegionalExplorer({
     },
     [],
   );
+
+  /* Sector breakdown for the heatmap below the map. Switches scope with the
+     current selection — national / state / MSA / county. */
+  const scopedSectors = useMemo((): {
+    sectors: SectorAggregate[];
+    totalJobs: number;
+    title: string;
+    subtitle: string;
+  } => {
+    // Helper: convert a per-region SectorBreakdownRow[] into the SectorAggregate
+    // shape expected by SectorHeatmap. National-default totals/pcts that aren't
+    // present on the row fall back to the national sector record by category.
+    const toAggregates = (rows: SectorBreakdownRow[]): SectorAggregate[] => {
+      const nationalByCat = new Map(nationalSectors.map((s) => [s.category, s]));
+      return rows.map((r) => {
+        const nat = nationalByCat.get(r.category);
+        return {
+          category: r.category,
+          label: prettyCategory(r.category),
+          totalJobs: r.totalEmployment,
+          occupationCount: r.occupationCount ?? nat?.occupationCount ?? 0,
+          weightedNetRisk: r.weightedNetRisk100 / 10,
+          weightedNetRisk100: r.weightedNetRisk100,
+          meanNetRisk: nat?.meanNetRisk ?? r.weightedNetRisk100 / 10,
+          topRisk: nat?.topRisk ?? [],
+          pctHighRiskTime: r.pctHighRiskTime ?? nat?.pctHighRiskTime ?? 0,
+          pctMediumRiskTime: r.pctMediumRiskTime ?? nat?.pctMediumRiskTime ?? 0,
+          pctLowRiskTime: r.pctLowRiskTime ?? nat?.pctLowRiskTime ?? 0,
+        };
+      });
+    };
+
+    // No selection -> national
+    if (!selection.id) {
+      return {
+        sectors: nationalSectors,
+        totalJobs: nationalTotalJobs,
+        title: "Where the exposed employment sits",
+        subtitle:
+          "National view — each row is one BLS major occupational group, sorted by employment-weighted net risk.",
+      };
+    }
+
+    if (selection.view === "country") {
+      const s = stateByFips.get(selection.id);
+      if (s?.sectors && s.sectors.length > 0) {
+        return {
+          sectors: toAggregates(s.sectors),
+          totalJobs: s.totalEmployment,
+          title: `${s.title} — sector makeup`,
+          subtitle: `Per-BLS-major-group breakdown of ${formatJobs(s.totalEmployment)} state jobs, employment-weighted from BLS OEWS May 2024.`,
+        };
+      }
+    }
+
+    if (selection.view === "metro") {
+      const summ = msaSummaryByCbsa.get(selection.id);
+      if (summ?.sectors && summ.sectors.length > 0) {
+        return {
+          sectors: toAggregates(summ.sectors),
+          totalJobs: summ.totalEmployment,
+          title: `${summ.title} — sector makeup`,
+          subtitle: `Per-BLS-major-group breakdown of ${formatJobs(summ.totalEmployment)} metro jobs, employment-weighted from BLS OEWS May 2024.`,
+        };
+      }
+    }
+
+    if (selection.view === "county") {
+      const c = countyOccByFips.get(selection.id);
+      if (c && c.occupationGroups && c.occupationGroups.length > 0) {
+        const rows: SectorBreakdownRow[] = c.occupationGroups.map((g) => ({
+          category: g.slug,
+          totalEmployment: g.employment,
+          share: g.share,
+          weightedNetRisk100: g.netRisk100,
+        }));
+        return {
+          sectors: toAggregates(rows),
+          totalJobs: c.totalEmployment,
+          title: `${c.name} — sector makeup`,
+          subtitle: `Per-BLS-major-group breakdown of ${formatJobs(c.totalEmployment)} county jobs from Census ACS 2019–2023. Shares are real ACS data; risk per group is the national average.`,
+        };
+      }
+    }
+
+    // Fallback if we don't have region-specific data yet (e.g., lazy-load pending)
+    return {
+      sectors: nationalSectors,
+      totalJobs: nationalTotalJobs,
+      title: "Where the exposed employment sits",
+      subtitle:
+        "Loading region-specific breakdown… showing national view as fallback.",
+    };
+  }, [selection, stateByFips, msaSummaryByCbsa, countyOccByFips, nationalSectors, nationalTotalJobs]);
 
   /* Build sidebar payload */
   const sidebar = useMemo(() => {
@@ -1022,10 +1136,20 @@ export default function RegionalExplorer({
 
         {/* Caveat strip */}
         <div className="border-t border-card px-4 sm:px-5 py-2.5 text-2xs text-[var(--muted)] bg-[#FAFAFA]">
-          State and metro scores: BLS OEWS May 2024 (~325 SOC codes per area). County scores:
-          Census ACS 2019–2023 at SOC major-group granularity. Color is stretched across the
-          observed min–max so contrast pops.
+          State and metro scores: BLS OEWS May 2024. County scores:
+          Census ACS 2019–2023 at SOC major-group granularity. Color binning
+          adapts to the current view.
         </div>
+      </div>
+
+      {/* Sector heatmap — reacts to the current selection */}
+      <div className="mt-12">
+        <SectorHeatmap
+          sectors={scopedSectors.sectors}
+          totalJobs={scopedSectors.totalJobs}
+          scopeTitle={scopedSectors.title}
+          scopeSubtitle={scopedSectors.subtitle}
+        />
       </div>
     </section>
   );

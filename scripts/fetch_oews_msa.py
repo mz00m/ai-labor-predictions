@@ -229,6 +229,29 @@ def parse() -> dict:
             (weighted_risk * sum_emp + fb_risk) / full_emp if full_emp else weighted_risk
         )
 
+        # Per-category sector breakdown for the heatmap
+        sector_acc: dict[str, dict] = {}
+        for o in occs:
+            cat = o.get("category")
+            if not cat:
+                continue
+            acc = sector_acc.setdefault(cat, {"jobs": 0, "risk100": 0.0, "n": 0})
+            acc["jobs"] += o["employment"]
+            acc["risk100"] += o["netRisk100"] * o["employment"]
+            acc["n"] += 1
+        sectors_out = []
+        for cat, acc in sector_acc.items():
+            if acc["jobs"] <= 0:
+                continue
+            sectors_out.append({
+                "category": cat,
+                "totalEmployment": acc["jobs"],
+                "share": round(acc["jobs"] / sum_emp * 100, 2),
+                "weightedNetRisk100": round(acc["risk100"] / acc["jobs"]),
+                "occupationCount": acc["n"],
+            })
+        sectors_out.sort(key=lambda r: r["weightedNetRisk100"], reverse=True)
+
         occs.sort(key=lambda o: o["employment"], reverse=True)
         top_by_emp = occs[:30]
 
@@ -253,6 +276,7 @@ def parse() -> dict:
                 for o in by_risk
             ],
             "occupationCount": len(occs),
+            "sectors": sectors_out,
         })
 
         # Add employment shares to the detailed top-30

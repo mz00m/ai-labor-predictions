@@ -400,12 +400,14 @@ function CountyPane({
         }
       />
 
-      {/* Honest framing: county score is composition-driven, not within-county. */}
+      {/* Honest framing: shares are real, risk-per-group is national average. */}
       <div className="mt-3 rounded-md bg-amber-50 border border-amber-100 px-3 py-2 text-2xs text-amber-900 leading-snug">
-        <span className="font-semibold">Composition-weighted, not county-specific.</span>{" "}
-        This score reflects the share of jobs in occupation groups our model flags
-        as more AI-exposed nationally. Within-group variation isn&rsquo;t visible at
-        this level — ACS doesn&rsquo;t publish detailed SOC by county.
+        <span className="font-semibold">How to read this:</span>{" "}
+        The <em>shares</em> below are real Census ACS data for this county. The
+        <em> risk</em> number on each group is the <em>national</em> average risk
+        of that group — not specific to this county. Census doesn&rsquo;t publish
+        occupations finer than ~22 major groups at the county level, so we can&rsquo;t
+        see, say, which kind of &ldquo;Management&rdquo; jobs are here.
       </div>
 
       <div className="mt-4 grid grid-cols-1 gap-3">

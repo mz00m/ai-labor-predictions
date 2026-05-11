@@ -23,6 +23,17 @@ interface OccRisk {
   pctLowRiskTime: number;
 }
 
+interface SectorBreakdown {
+  category: string;
+  totalEmployment: number;
+  share: number;            // % of state employment (matched only)
+  weightedNetRisk100: number;
+  pctHighRiskTime: number;
+  pctMediumRiskTime: number;
+  pctLowRiskTime: number;
+  occupationCount: number;
+}
+
 interface OccRiskFile {
   occupations: OccRisk[];
 }
@@ -104,6 +115,8 @@ interface StateRiskOut {
   weightedPctHighRiskTime: number;
   topRiskOccupations: { slug: string; title: string; employment: number; netRisk100: number }[];
   occupationCount: number;
+  /** Per-BLS-major-group breakdown for the sector heatmap. */
+  sectors: SectorBreakdown[];
 }
 
 async function main() {
@@ -146,6 +159,8 @@ async function main() {
     let sumFullWeight = 0;
     let sumFullRisk100 = 0;
     const rowsWithRisk: { slug: string; title: string; employment: number; netRisk100: number }[] = [];
+    /** Per-category accumulator for the sector breakdown. */
+    const sectorAcc = new Map<string, { jobs: number; risk100: number; hi: number; md: number; lo: number; n: number }>();
 
     for (const sOcc of s.occupations) {
       if (sOcc.employment == null) continue;
@@ -160,6 +175,16 @@ async function main() {
         sumFullWeight += w;
         sumFullRisk100 += o.netRisk100 * w;
         rowsWithRisk.push({ slug: sOcc.slug!, title: o.title, employment: w, netRisk100: o.netRisk100 });
+
+        // Accumulate per-category — both for sector breakdown
+        const acc = sectorAcc.get(o.category) ?? { jobs: 0, risk100: 0, hi: 0, md: 0, lo: 0, n: 0 };
+        acc.jobs += w;
+        acc.risk100 += o.netRisk100 * w;
+        acc.hi += o.pctHighRiskTime * w;
+        acc.md += o.pctMediumRiskTime * w;
+        acc.lo += o.pctLowRiskTime * w;
+        acc.n += 1;
+        sectorAcc.set(o.category, acc);
       } else {
         // Unscored SOC — apply SOC major-group fallback if possible
         const fb = fallbackRiskForSoc(sOcc.soc);
@@ -176,6 +201,20 @@ async function main() {
 
     const totalEmp = s.totalEmployment ?? sumFullWeight;
 
+    // Materialize per-category sector breakdown, sorted by weighted risk
+    const sectors: SectorBreakdown[] = Array.from(sectorAcc.entries())
+      .map(([category, acc]) => ({
+        category,
+        totalEmployment: acc.jobs,
+        share: sumWeight > 0 ? Number(((acc.jobs / sumWeight) * 100).toFixed(2)) : 0,
+        weightedNetRisk100: Math.round(acc.risk100 / acc.jobs),
+        pctHighRiskTime: Number((acc.hi / acc.jobs).toFixed(1)),
+        pctMediumRiskTime: Number((acc.md / acc.jobs).toFixed(1)),
+        pctLowRiskTime: Number((acc.lo / acc.jobs).toFixed(1)),
+        occupationCount: acc.n,
+      }))
+      .sort((a, b) => b.weightedNetRisk100 - a.weightedNetRisk100);
+
     states.push({
       fips: s.fips,
       abbr: s.abbr,
@@ -191,6 +230,7 @@ async function main() {
       weightedPctHighRiskTime: Number((sumPctHigh / sumWeight).toFixed(1)),
       topRiskOccupations: rowsWithRisk.slice(0, 5),
       occupationCount: rowsWithRisk.length,
+      sectors,
     });
   }
 
