@@ -417,10 +417,10 @@ function CountyPane({ data, loading }: { data: CountySidebarData; loading?: bool
             <ul className="space-y-1.5">
               {top.map((g) => (
                 <li key={g.slug}>
-                  <Link
-                    href={`/occupation-exposure/${g.slug}`}
-                    className="flex items-baseline justify-between gap-2 text-2xs hover:text-[var(--accent-text)] transition-colors"
-                  >
+                  {/* County drill rows are SOC major-group totals, not individual
+                      occupations — they aren't linkable to /occupation-exposure/[slug].
+                      Plain row keeps the visual but avoids the dead link. */}
+                  <div className="flex items-baseline justify-between gap-2 text-2xs">
                     <span className="inline-flex items-baseline gap-2 truncate">
                       <span
                         className="inline-block w-1.5 h-1.5 rounded-sm shrink-0"
@@ -432,7 +432,7 @@ function CountyPane({ data, loading }: { data: CountySidebarData; loading?: bool
                     <span className="font-mono text-[var(--muted)] shrink-0">
                       {g.share.toFixed(1)}% · {g.netRisk100}
                     </span>
-                  </Link>
+                  </div>
                 </li>
               ))}
               {otherShare > 0.5 && (
@@ -457,7 +457,8 @@ function CountyPane({ data, loading }: { data: CountySidebarData; loading?: bool
 
       <p className="text-2xs text-[var(--muted)] leading-relaxed border-t border-card pt-3 mt-4">
         Below MSA level, occupations are at SOC major-group granularity (Census ACS
-        doesn&rsquo;t publish detailed SOC by county).{" "}
+        doesn&rsquo;t publish detailed SOC by county). For detailed occupations,
+        switch to Metro view above.{" "}
         <Link href="#methodology" className="text-[var(--accent-text)] hover:underline">
           Methodology
         </Link>

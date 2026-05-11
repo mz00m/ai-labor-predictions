@@ -235,8 +235,14 @@ export default function RegionalExplorer({
 }: Props) {
   const [view, setView] = useState<ViewMode>("county");
   const [selection, setSelection] = useState<Selection>({ view: "county", id: null });
-  const [metric, setMetric] = useState<Metric>("netRisk");
-  const [scaleMode, setScaleMode] = useState<"absolute" | "stretched">("absolute");
+  // Country view defaults to %pctHighRiskTime — it has 5× the dynamic range
+  // of weighted net risk (16-32% vs. 51-54), so it's the more useful default
+  // metric. Metro/county fall back to netRisk since pctHigh isn't computed there.
+  const [metric, setMetric] = useState<Metric>("pctHigh");
+  // Quantile is the honest default for the narrow range — bins regions into 5
+  // groups by rank, which gives clear contrast without overstating absolute
+  // magnitude (the way stretched min-max does).
+  const [scaleMode, setScaleMode] = useState<"quantile" | "absolute" | "stretched">("quantile");
   const [hoverId, setHoverId] = useState<string | null>(null);
   const [tooltip, setTooltip] = useState<{ x: number; y: number } | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -392,33 +398,54 @@ export default function RegionalExplorer({
     metric,
   ]);
 
-  /* Color scale — absolute or stretched depending on user toggle.
+  /* Color scale modes:
    *
-   * Absolute (default, honest): every region colored against an absolute
-   * 0-100 scale. Most regions sit in the 50-54 band and read amber, which
-   * is the true model output — a county's risk is mostly a function of
-   * its national-average occupational mix, which doesn't vary wildly.
-   *
-   * Stretched: legend range is pinned to observed min/max, so a 3-point
-   * spread fills the green-to-red gradient. Useful for ranking, but
-   * visually misleading if mistaken for absolute magnitude. The legend
-   * surfaces the actual range so the user can correct for it. */
+   * - quantile (default): bin regions into 5 rank groups; each bin gets one
+   *   color from the green→red palette. Honest about ordinal differences
+   *   without falsely implying large absolute magnitude differences.
+   * - stretched: legend pinned to observed min/max so a 3-point spread fills
+   *   the gradient. Useful for fine-grained ranking, but contrast can mislead.
+   * - absolute: 0-100 scale. Tells the literal model output (most regions
+   *   are amber), but visually uniform when ranges are narrow. */
+  const QUANTILE_COLORS = ["#16A34A", "#84CC16", "#FBBF24", "#F59E0B", "#DC2626"];
+
   const colorBy = useMemo(() => {
+    const values: { id: string; v: number }[] = [];
     let min = Infinity;
     let max = -Infinity;
     for (const f of layer.features) {
       const v = layer.valueOf(f.id);
       if (v == null || !Number.isFinite(v)) continue;
+      values.push({ id: f.id, v });
       if (v < min) min = v;
       if (v > max) max = v;
     }
+
+    if (scaleMode === "quantile") {
+      // Compute quintile thresholds from the actual distribution
+      const sorted = values.map((x) => x.v).sort((a, b) => a - b);
+      const n = sorted.length;
+      const q = (p: number) => sorted[Math.max(0, Math.min(n - 1, Math.floor(p * n)))];
+      const thresholds = [q(0.2), q(0.4), q(0.6), q(0.8)];
+      const colorIndex = (v: number) => {
+        for (let i = 0; i < thresholds.length; i++) {
+          if (v < thresholds[i]) return i;
+        }
+        return thresholds.length;
+      };
+      return (id: string) => {
+        const v = layer.valueOf(id);
+        if (v == null) return "#F3F4F6";
+        return QUANTILE_COLORS[colorIndex(v)];
+      };
+    }
+
     const span = Math.max(0.001, max - min);
     return (id: string) => {
       const v = layer.valueOf(id);
       if (v == null) return "#F3F4F6";
       if (scaleMode === "stretched") {
-        const stretched = ((v - min) / span) * 100;
-        return riskColor100(stretched);
+        return riskColor100(((v - min) / span) * 100);
       }
       return riskColor100(v);
     };
@@ -759,22 +786,22 @@ export default function RegionalExplorer({
                 </button>
               </div>
 
-              {/* Scale toggle — honest about the narrow spread */}
+              {/* Scale toggle */}
               <div
                 role="group"
                 aria-label="Color scale"
                 className="inline-flex border border-card rounded-md overflow-hidden text-2xs"
-                title="Absolute uses a fixed 0-100 scale (honest about magnitude). Stretched pins the gradient to the observed min-max so small differences are visible (useful for ranking, but contrast can mislead)."
+                title="Quintile bins regions into 5 equally-sized groups by rank — clear contrast without overstating magnitude. Stretched fills the gradient across observed min-max. Absolute uses a fixed 0-100 scale."
               >
                 <button
-                  onClick={() => setScaleMode("absolute")}
+                  onClick={() => setScaleMode("quantile")}
                   className={`px-3 py-1.5 transition-colors ${
-                    scaleMode === "absolute"
+                    scaleMode === "quantile"
                       ? "bg-[var(--accent)] text-white"
                       : "bg-white text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-black/[0.02]"
                   }`}
                 >
-                  Absolute scale
+                  Quintile
                 </button>
                 <button
                   onClick={() => setScaleMode("stretched")}
@@ -785,6 +812,16 @@ export default function RegionalExplorer({
                   }`}
                 >
                   Stretched
+                </button>
+                <button
+                  onClick={() => setScaleMode("absolute")}
+                  className={`px-3 py-1.5 transition-colors ${
+                    scaleMode === "absolute"
+                      ? "bg-[var(--accent)] text-white"
+                      : "bg-white text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-black/[0.02]"
+                  }`}
+                >
+                  Absolute
                 </button>
               </div>
 
@@ -873,28 +910,45 @@ export default function RegionalExplorer({
                     {scaleMode}
                   </span>
                 </div>
-                <div className="flex items-center gap-1.5">
-                  <span className="text-[var(--muted)] font-mono">
-                    {scaleMode === "stretched" ? legendRange.min.toFixed(view === "country" && metric === "pctHigh" ? 1 : 0) : "0"}
-                  </span>
-                  <div
-                    className="h-2 w-28 rounded-sm"
-                    style={{
-                      background: "linear-gradient(to right, #16A34A, #FBBF24, #F59E0B, #DC2626)",
-                    }}
-                  />
-                  <span className="text-[var(--muted)] font-mono">
-                    {scaleMode === "stretched" ? legendRange.max.toFixed(view === "country" && metric === "pctHigh" ? 1 : 0) : "100"}
-                  </span>
-                </div>
+                {scaleMode === "quantile" ? (
+                  <>
+                    <div className="flex h-2 w-32 rounded-sm overflow-hidden">
+                      {["#16A34A", "#84CC16", "#FBBF24", "#F59E0B", "#DC2626"].map((c) => (
+                        <div key={c} className="flex-1" style={{ background: c }} />
+                      ))}
+                    </div>
+                    <div className="flex justify-between text-[var(--muted)] font-mono mt-0.5" style={{ width: "8rem" }}>
+                      <span>Q1</span>
+                      <span>Q5</span>
+                    </div>
+                  </>
+                ) : (
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-[var(--muted)] font-mono">
+                      {scaleMode === "stretched" ? legendRange.min.toFixed(view === "country" && metric === "pctHigh" ? 1 : 0) : "0"}
+                    </span>
+                    <div
+                      className="h-2 w-28 rounded-sm"
+                      style={{
+                        background: "linear-gradient(to right, #16A34A, #FBBF24, #F59E0B, #DC2626)",
+                      }}
+                    />
+                    <span className="text-[var(--muted)] font-mono">
+                      {scaleMode === "stretched" ? legendRange.max.toFixed(view === "country" && metric === "pctHigh" ? 1 : 0) : "100"}
+                    </span>
+                  </div>
+                )}
                 <div className="mt-1.5 text-[10px] text-[var(--muted)] leading-snug">
-                  Range across regions:{" "}
+                  Range:{" "}
                   <span className="font-mono">
                     {legendRange.min.toFixed(view === "country" && metric === "pctHigh" ? 1 : 0)}–
                     {legendRange.max.toFixed(view === "country" && metric === "pctHigh" ? 1 : 0)}
                   </span>
+                  {scaleMode === "quantile" && (
+                    <span className="opacity-70"> · binned by rank</span>
+                  )}
                   {scaleMode === "absolute" && legendRange.max - legendRange.min < 8 && (
-                    <span className="opacity-70">. Small spread — toggle Stretched for contrast.</span>
+                    <span className="opacity-70">. Try Quintile/Stretched.</span>
                   )}
                 </div>
               </div>
