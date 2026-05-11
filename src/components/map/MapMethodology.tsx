@@ -111,6 +111,105 @@ export default function MapMethodology() {
               </ol>
             </div>
 
+            <div>
+              <h3 className="text-sm font-bold text-[var(--foreground)] mb-2">
+                On the OpenAI Jobs Transition Framework
+              </h3>
+              <p className="text-sm text-[var(--muted)] leading-relaxed">
+                The four archetypes on this page (Automation Risk, Reorganize,
+                Grow, Less Change) and the decision-tree structure come from
+                Richmond&rsquo;s{" "}
+                <a
+                  href="https://cdn.openai.com/pdf/the-ai-jobs-transition-framework_report.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[var(--accent-text)] hover:underline"
+                >
+                  AI Jobs Transition Framework
+                </a>{" "}
+                (OpenAI, April 2026). We apply the framework using <em>our</em>{" "}
+                5-variable scores rather than the paper&rsquo;s per-occupation
+                outputs, which haven&rsquo;t been published as a downloadable
+                table yet. National splits from our classifier (auto-risk
+                ~34% / reorganize ~7% / grow ~9% / less-change ~50%) differ
+                from the paper&rsquo;s (18% / 24% / 12% / 46%), mostly because
+                our human-necessity proxy is task-share-based rather than the
+                paper&rsquo;s GPT-5.4-scored regulatory/relational/physical
+                taxonomy. Qualitative groupings agree: lawyers and physicians
+                land in <em>reorganize</em>, software developers in{" "}
+                <em>grow</em>, customer-service reps and general clerks in{" "}
+                <em>automation-risk</em>. We expect to refine the classifier
+                once the paper&rsquo;s technical appendix is released.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-sm font-bold text-[var(--foreground)] mb-2">
+                Counterpoint from the paper (Table 1)
+              </h3>
+              <p className="text-sm text-[var(--muted)] leading-relaxed mb-3">
+                The paper validates archetypes against CPS unemployment data
+                and finds a counterintuitive result: it is{" "}
+                <em>less-change</em> jobs that have seen the largest
+                unemployment increase since 2024 Q1, not auto-risk jobs.
+              </p>
+              <div className="border border-strong rounded-md text-xs">
+                <div className="grid grid-cols-[1.6fr_0.6fr_0.6fr_0.5fr] gap-3 px-3 py-2 font-bold uppercase tracking-widest text-2xs text-[var(--muted)] opacity-70 border-b border-strong">
+                  <div>Archetype</div>
+                  <div className="text-right">2024 Q1</div>
+                  <div className="text-right">2026 Q1</div>
+                  <div className="text-right">&Delta;</div>
+                </div>
+                <div className="divide-y divide-black/[0.04]">
+                  <div className="grid grid-cols-[1.6fr_0.6fr_0.6fr_0.5fr] gap-3 px-3 py-1.5">
+                    <div>Auto-risk</div>
+                    <div className="text-right font-mono">3.1%</div>
+                    <div className="text-right font-mono">3.3%</div>
+                    <div className="text-right font-mono">+0.2pp</div>
+                  </div>
+                  <div className="grid grid-cols-[1.6fr_0.6fr_0.6fr_0.5fr] gap-3 px-3 py-1.5">
+                    <div>Reorganize</div>
+                    <div className="text-right font-mono">2.9%</div>
+                    <div className="text-right font-mono">3.2%</div>
+                    <div className="text-right font-mono">+0.3pp</div>
+                  </div>
+                  <div className="grid grid-cols-[1.6fr_0.6fr_0.6fr_0.5fr] gap-3 px-3 py-1.5">
+                    <div>Grow with AI</div>
+                    <div className="text-right font-mono">2.9%</div>
+                    <div className="text-right font-mono">3.4%</div>
+                    <div className="text-right font-mono">+0.5pp</div>
+                  </div>
+                  <div className="grid grid-cols-[1.6fr_0.6fr_0.6fr_0.5fr] gap-3 px-3 py-1.5 bg-amber-50/40">
+                    <div className="font-semibold">Less change</div>
+                    <div className="text-right font-mono">4.8%</div>
+                    <div className="text-right font-mono">5.4%</div>
+                    <div className="text-right font-mono font-semibold">+0.6pp</div>
+                  </div>
+                </div>
+              </div>
+              <p className="text-xs text-[var(--muted)] leading-relaxed mt-2 italic">
+                Source: OpenAI Jobs Transition Framework Table 1 (CPS Basic
+                Monthly, occupation bridged to SOC/O*NET). The paper&rsquo;s
+                own conclusion: &ldquo;it remains difficult to clearly link
+                AI and the aggregate labor market.&rdquo;
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-sm font-bold text-[var(--foreground)] mb-2">
+                Capability overhang (Fig. 5)
+              </h3>
+              <p className="text-sm text-[var(--muted)] leading-relaxed">
+                Even where the framework flags an occupation as high-automation-risk,
+                actual ChatGPT usage in those jobs runs ~23% of theoretical
+                capability. Realized exposure: 24.6% (grow), 22.8% (auto-risk),
+                18.4% (reorganize), 3.6% (less-change). The gap between
+                theoretical and realized is what the paper calls the
+                &ldquo;capability overhang&rdquo; — AI&rsquo;s reach is
+                technically possible everywhere but operationally lagging.
+              </p>
+            </div>
+
             <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
               <Link
                 href="/occupation-exposure"
