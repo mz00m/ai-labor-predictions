@@ -9,6 +9,14 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Heck, Muro, Methkupally & Siegmund (Brookings Metro / Opportunity@Work)",
+    title: "How AI May Reshape Career Pathways to Better Jobs",
+    summary:
+      "The most rigorous look yet at how AI threatens climbing-the-ladder mobility for workers without four-year degrees. Of America's ~70M STARs (skilled through alternative routes), 15.6M work in roles in the top quartile of AI exposure; 11M of those are in 'Gateway' occupations — the stepping-stone roles that historically lead to higher-wage 'Destination' jobs. 3.5M STARs face high AI exposure AND low adaptive capacity. Only 51% of Gateway-to-Destination career pathways avoid high AI exposure, meaning nearly half of the mobility ladders this cohort relies on are at risk. With 73% of US workers living/working in the same county, the disruption will be place-specific — and remediation has to be too.",
+    date: "Apr 2",
+    url: "https://www.brookings.edu/articles/how-ai-may-reshape-career-pathways-to-better-jobs/",
+  },
+  {
     author: "Tanner, Kyosovska, Belle, Kerry, Renda, Tabassi & Wyckoff (Brookings FCAI)",
     title: "AI Growth Acceleration Versus Distributional Fairness",
     summary:
@@ -39,14 +47,6 @@ const articles: Article[] = [
       "Reported from inside the SF AI bubble: the 'San Francisco consensus' is that the median worker is screwed and labs differ mostly on what to do about it. OpenAI's GDPVal benchmark went from sub-human to 80%+ win rate vs human pros in months; Block CEO Jack Dorsey cut ~half his staff in March citing coding agents; Anthropic enterprise-agent revenue jumped from $9B to $30B annualized. OpenAI's new white paper floats a 32-hour week and a public wealth fund; Shor polling finds 72% of voters fear AI drives down wages.",
     date: "Apr 30",
     url: "https://www.nytimes.com/2026/04/30/opinion/ai-labor-work-force-silicon-valley.html",
-  },
-  {
-    author: "Daniel Björkegren (Brown)",
-    title: "The intelligence is plenty but the workers are few",
-    summary:
-      "LMICs employ <10% of workers in skilled knowledge work vs. 41% in high-income countries — so there's little to graft AI onto. Rich-country adoption runs through existing knowledge workers; LMICs lack that base. But cheap intelligence could also leapfrog: small manufacturers could access capabilities previously requiring large teams, and LMICs face less political resistance to AI adoption. A crucial question for development economics: does AI augment scarce knowledge workers, or does it automate knowledge work entirely?",
-    date: "Apr 28",
-    url: "https://dan.bjorkegren.com/blog/2026/04/the-intelligence-is-plenty-but-the-workers-are-few/",
   },
 ];
 
