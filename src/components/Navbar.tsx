@@ -28,6 +28,7 @@ const NAV_ENTRIES: NavEntry[] = [
   {
     label: "Analysis",
     items: [
+      { href: "/map", label: "Risk Map" },
       { href: "/compare", label: "Compare" },
       { href: "/signals", label: "Signals" },
       { href: "/productivity", label: "Productivity" },

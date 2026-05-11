@@ -7,6 +7,7 @@ import {
   useRef,
   useState,
 } from "react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import MapCanvas, { GeoFeature } from "./MapCanvas";
 import MapSearch, { SearchResult } from "./MapSearch";
 import ExplorerSidebar, {
@@ -17,6 +18,7 @@ import ExplorerSidebar, {
   TopOccupationsByCategory,
 } from "./ExplorerSidebar";
 import SectorHeatmap from "./SectorHeatmap";
+import ShareMenu, { ShareContext } from "./ShareMenu";
 import { formatJobs, prettyCategory, riskColor100, SectorAggregate } from "./types";
 
 /* ---------- Input data shapes ---------- */
@@ -280,8 +282,21 @@ export default function RegionalExplorer({
   nationalSectors,
   nationalTotalJobs,
 }: Props) {
-  const [view, setView] = useState<ViewMode>("county");
-  const [selection, setSelection] = useState<Selection>({ view: "county", id: null });
+  // URL state — read the initial view/selection from query params if present
+  // (so shared deep-links resolve correctly).
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const initialView = (() => {
+    const v = searchParams.get("view");
+    return v === "country" || v === "metro" || v === "county" ? (v as ViewMode) : "county";
+  })();
+  const initialSelectionId = searchParams.get("id");
+  const [view, setView] = useState<ViewMode>(initialView);
+  const [selection, setSelection] = useState<Selection>({
+    view: initialView,
+    id: initialSelectionId,
+  });
   // Country view defaults to %pctHighRiskTime — it has 5× the dynamic range
   // of weighted net risk (16-32% vs. 51-54), so it's the more useful default
   // metric. Metro/county fall back to netRisk since pctHigh isn't computed there.
@@ -594,6 +609,94 @@ export default function RegionalExplorer({
     },
     [],
   );
+
+  /* Share context — pulls the current label + key stat from whatever is
+     selected, and builds an absolute URL pointing at this exact view.
+     Pre-computed so the ShareMenu doesn't need to know any data shapes. */
+  const shareContext = useMemo<ShareContext>(() => {
+    const origin =
+      typeof window !== "undefined" && window.location?.origin
+        ? window.location.origin
+        : "https://jobsdata.ai";
+    const params = new URLSearchParams();
+    params.set("view", selection.view);
+    if (selection.id) params.set("id", selection.id);
+    const url = `${origin}${pathname}?${params.toString()}`;
+
+    // Resolve the selected region into a label + key stat
+    let label = "AI Labor Risk Map";
+    let stat: string | undefined;
+
+    if (selection.id) {
+      if (selection.view === "country") {
+        const s = stateByFips.get(selection.id);
+        if (s) {
+          label = s.title;
+          const atRisk =
+            s.archetypeMix?.["automation-risk"] != null
+              ? (s.archetypeMix["automation-risk"] * 100).toFixed(0)
+              : null;
+          stat = atRisk
+            ? `${atRisk}% of jobs in automation-risk occupations`
+            : `Net risk ${s.weightedNetRisk100Full ?? s.weightedNetRisk100}/100`;
+        }
+      } else if (selection.view === "metro") {
+        const m = msaSummaryByCbsa.get(selection.id);
+        if (m) {
+          label = m.title;
+          const atRisk =
+            m.archetypeMix?.["automation-risk"] != null
+              ? (m.archetypeMix["automation-risk"] * 100).toFixed(0)
+              : null;
+          stat = atRisk
+            ? `${atRisk}% of jobs in automation-risk occupations`
+            : `Net risk ${m.weightedNetRisk100Full ?? m.weightedNetRisk100}/100`;
+        }
+      } else if (selection.view === "county") {
+        const c = countyRiskByFips.get(selection.id);
+        if (c) {
+          label = c.name;
+          const atRisk =
+            c.archetypeMix?.["automation-risk"] != null
+              ? (c.archetypeMix["automation-risk"] * 100).toFixed(0)
+              : null;
+          stat = atRisk
+            ? `${atRisk}% of jobs in automation-risk occupations`
+            : `Net risk ${c.weightedNetRisk100}/100`;
+        }
+      }
+    }
+
+    const fullText = stat
+      ? `${label}: ${stat} (AI Jobs Transition Framework, jobsdata.ai/map)`
+      : `AI labor risk map: every US county, metro, and state scored on a 5-variable framework — jobsdata.ai/map`;
+
+    return { label, stat, fullText, url };
+  }, [
+    selection,
+    pathname,
+    stateByFips,
+    msaSummaryByCbsa,
+    countyRiskByFips,
+  ]);
+
+  /* Reflect selection in the URL so deep-links work for sharing. We use
+     replaceState (not push) to avoid history pollution as the user clicks
+     around. Sync runs after first paint to avoid clobbering during SSR. */
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const params = new URLSearchParams(searchParams.toString());
+    params.set("view", selection.view);
+    if (selection.id) {
+      params.set("id", selection.id);
+    } else {
+      params.delete("id");
+    }
+    const qs = params.toString();
+    const next = qs ? `${pathname}?${qs}` : pathname;
+    router.replace(next, { scroll: false });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selection.view, selection.id]);
 
   /* Sector breakdown for the heatmap below the map. Switches scope with the
      current selection — national / state / MSA / county. */
@@ -1009,7 +1112,7 @@ export default function RegionalExplorer({
                 </button>
               </div>
 
-              <div className="ml-auto flex items-center gap-3">
+              <div className="ml-auto flex items-center gap-2">
                 {selection.id && (
                   <button
                     onClick={reset}
@@ -1018,6 +1121,7 @@ export default function RegionalExplorer({
                     Reset view
                   </button>
                 )}
+                <ShareMenu context={shareContext} />
               </div>
             </div>
 
