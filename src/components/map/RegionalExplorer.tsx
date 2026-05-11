@@ -993,11 +993,13 @@ export default function RegionalExplorer({
           Where the risk lands on the map
         </h2>
         <p className="text-base text-[var(--muted)] leading-relaxed mt-2 max-w-[680px]">
-          Every regional economy is built on a different mix of work, and AI will
-          reshape each one differently. Click any county or metro to see the
-          occupations that anchor the local labor market, the share of their tasks
-          AI can already do, and where the region falls across four near-term
-          trajectories: automation, reorganization, growth, or stability.
+          Click any county or metro area to explore how AI is reshaping its labor
+          market. You&rsquo;ll see the occupations that employ the most people
+          locally, the share of their daily tasks that AI can already perform, and
+          which of four near-term paths the region is bending toward &mdash;
+          automation (jobs displaced by AI), reorganization (roles restructured
+          around it), growth (sectors expanding because of it), or stability (work
+          largely unchanged).
         </p>
       </div>
 
