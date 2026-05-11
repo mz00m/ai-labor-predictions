@@ -100,8 +100,53 @@ export async function POST(req: NextRequest) {
       const parseResult = AssessmentIntakeSchema.safeParse(intakeParsed);
       if (!parseResult.success) {
         const errors = parseResult.error.flatten();
+        // Build a human-readable message naming the offending fields.
+        // The schema's tightest caps (teamDescription 3000, specificProblem
+        // 5000, additionalContext 5000, etc.) are easy for users to blow
+        // through when pasting a job description or org chart. Returning
+        // "Invalid intake data" with no field names leaves them stuck.
+        const FIELD_LABELS: Record<string, string> = {
+          organizationName: "Organization name",
+          industry: "Industry",
+          companySize: "Company size",
+          assessmentScope: "Scope",
+          jobTitle: "Job title",
+          departmentName: "Department",
+          teamDescription: "What you do day-to-day",
+          primaryFunctions: "Primary functions",
+          keyRoles: "Key roles",
+          currentTools: "Current tools",
+          currentAiUsage: "AI maturity",
+          biggestChallenges: "Biggest challenges",
+          goals: "Goals",
+          specificProblem: "Specific problem to solve",
+          additionalContext: "Additional context",
+          websiteUrl: "Website URL",
+          industryDetail: "Industry detail",
+        };
+        const fieldErrors = errors.fieldErrors as Record<string, string[] | undefined>;
+        const issues: string[] = [];
+        for (const [field, msgs] of Object.entries(fieldErrors)) {
+          if (!msgs || msgs.length === 0) continue;
+          const label = FIELD_LABELS[field] || field;
+          // zod's default messages aren't end-user friendly; translate the common ones.
+          const raw = msgs[0];
+          let friendly = raw;
+          const tooBigMatch = /at most (\d+) character/i.exec(raw);
+          if (tooBigMatch) friendly = `is too long (max ${tooBigMatch[1]} characters) — please shorten it`;
+          else if (/Required/i.test(raw)) friendly = "is required";
+          else if (/Invalid url/i.test(raw)) friendly = "must be a valid URL (e.g. https://example.com)";
+          else if (/at least (\d+)/i.test(raw)) friendly = raw.toLowerCase();
+          else if (/Invalid enum/i.test(raw)) friendly = "needs to be selected";
+          issues.push(`${label} ${friendly}`);
+        }
+        const formError = errors.formErrors?.[0];
+        if (formError) issues.unshift(formError);
+        const message = issues.length > 0
+          ? `Please fix the following: ${issues.slice(0, 3).join("; ")}${issues.length > 3 ? "; and more" : ""}.`
+          : "Some of your intake answers didn't validate — please review and try again.";
         return NextResponse.json(
-          { error: "Invalid intake data", details: errors.fieldErrors },
+          { error: message, details: errors.fieldErrors },
           { status: 400 }
         );
       }
@@ -109,15 +154,32 @@ export async function POST(req: NextRequest) {
 
       // Process uploaded files IN MEMORY ONLY
       const fileEntries = formData.getAll("files");
-      const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB
+      const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB — keep aligned with FileUploader.maxSizeMb
+      const MAX_TOTAL_SIZE = 30 * 1024 * 1024; // 30MB combined — protects Lambda memory
+      let runningTotal = 0;
+      const skipped: { name: string; reason: string }[] = [];
       for (const entry of fileEntries) {
         if (entry instanceof File) {
           if (entry.size > MAX_FILE_SIZE) {
-            console.warn(`Skipping ${entry.name}: ${(entry.size / 1024 / 1024).toFixed(1)}MB exceeds 10MB limit`);
+            const reason = `${(entry.size / 1024 / 1024).toFixed(1)}MB exceeds 10MB per-file limit`;
+            console.warn(`Skipping ${entry.name}: ${reason}`);
+            skipped.push({ name: entry.name, reason });
+            continue;
+          }
+          if (runningTotal + entry.size > MAX_TOTAL_SIZE) {
+            const reason = "combined upload size would exceed 30MB cap";
+            console.warn(`Skipping ${entry.name}: ${reason}`);
+            skipped.push({ name: entry.name, reason });
             continue;
           }
           try {
             const text = await extractFileText(entry);
+            if (!text || text.trim().length < 20) {
+              skipped.push({ name: entry.name, reason: "no extractable text (scanned PDF, image-only, or empty)" });
+              console.warn(`Skipped ${entry.name}: extracted text was empty or too short`);
+              continue;
+            }
+            runningTotal += entry.size;
             const fileMeta = intake.uploadedFiles.find((f) => f.name === entry.name);
             fileContents.push({
               name: entry.name,
@@ -125,10 +187,21 @@ export async function POST(req: NextRequest) {
               text,
             });
           } catch (e) {
+            const reason = `extraction failed (${e instanceof Error ? e.message.slice(0, 80) : "unknown error"})`;
             console.error(`Failed to extract text from ${entry.name}:`, e);
+            skipped.push({ name: entry.name, reason });
           }
         }
       }
+      // Surface skipped files in the response so the client can warn the user
+      // that they may want to retry with smaller / different files.
+      if (skipped.length > 0) {
+        console.warn(`[assessment] ${skipped.length} file(s) skipped:`, skipped);
+      }
+      // Note: `skipped` is logged for observability; we don't propagate it to
+      // the client mid-pipeline because step 1's response shape is already
+      // load-bearing for the progress page. A future enhancement could
+      // surface this as a "documents skipped" panel in the report.
 
       // Website content extraction (Puppeteer with fetch fallback)
       if (intake.websiteUrl) {

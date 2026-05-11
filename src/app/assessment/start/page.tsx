@@ -197,6 +197,25 @@ export default function AssessmentStartPage() {
     setSubmitting(true);
     setError(null);
 
+    // Mirror the server-side caps in src/lib/assessment/schemas.ts so a user
+    // pasting a long bio doesn't sail through the form only to be rejected
+    // server-side with "Invalid intake data".
+    const localIssues: string[] = [];
+    if (form.teamDescription.length > 3000) localIssues.push("What you do day-to-day is too long (max 3000 characters)");
+    if (form.specificProblem.length > 5000) localIssues.push("Specific problem to solve is too long (max 5000 characters)");
+    if (form.additionalContext.length > 5000) localIssues.push("Additional context is too long (max 5000 characters)");
+    if (form.industryDetail.length > 500) localIssues.push("Industry detail is too long (max 500 characters)");
+    if (form.organizationName.length > 200) localIssues.push("Organization name is too long (max 200 characters)");
+    if (form.jobTitle.length > 200) localIssues.push("Job title is too long (max 200 characters)");
+    if (form.departmentName.length > 200) localIssues.push("Department is too long (max 200 characters)");
+    if (form.keyRoles.length > 30) localIssues.push("Too many key roles (max 30) — please consolidate");
+    if (form.primaryFunctions.length > 20) localIssues.push("Too many primary functions (max 20) — please consolidate");
+    if (localIssues.length > 0) {
+      setError(`Please fix the following before continuing: ${localIssues.slice(0, 3).join("; ")}.`);
+      setSubmitting(false);
+      return;
+    }
+
     try {
       const intakeData = {
         organizationName: form.organizationName,

@@ -13,6 +13,7 @@ interface FileUploaderProps {
   onFilesChange: (files: FileEntry[]) => void;
   maxFiles?: number;
   maxSizeMb?: number;
+  maxTotalSizeMb?: number;
 }
 
 const ACCEPTED_TYPES = [
@@ -31,7 +32,14 @@ export default function FileUploader({
   files,
   onFilesChange,
   maxFiles = 10,
-  maxSizeMb = 25,
+  // 10MB matches the server-side MAX_FILE_SIZE in /api/assessment/analyze.
+  // The previous 25MB default let users upload files that the server
+  // silently dropped — they'd never know their PDF wasn't used.
+  maxSizeMb = 10,
+  // Total combined size across all attached files. Vercel Lambda memory
+  // is bounded, and pdf-parse on the server processes files sequentially,
+  // so 30MB is a safe ceiling that fits ~6 typical handbooks.
+  maxTotalSizeMb = 30,
 }: FileUploaderProps) {
   const [dragActive, setDragActive] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -41,6 +49,8 @@ export default function FileUploader({
     (newFiles: FileList) => {
       setError(null);
       const entries: FileEntry[] = [];
+      let runningTotal = files.reduce((sum, f) => sum + f.meta.size, 0);
+      const totalCap = maxTotalSizeMb * 1024 * 1024;
 
       for (let i = 0; i < newFiles.length; i++) {
         const file = newFiles[i];
@@ -51,7 +61,12 @@ export default function FileUploader({
         }
 
         if (file.size > maxSizeMb * 1024 * 1024) {
-          setError(`"${file.name}" exceeds the ${maxSizeMb}MB limit.`);
+          setError(`"${file.name}" is ${(file.size / 1024 / 1024).toFixed(1)}MB — exceeds the ${maxSizeMb}MB per-file limit.`);
+          continue;
+        }
+
+        if (runningTotal + file.size > totalCap) {
+          setError(`Adding "${file.name}" would exceed the ${maxTotalSizeMb}MB combined upload limit. Remove some files first or upload your most important documents only.`);
           continue;
         }
 
@@ -60,6 +75,7 @@ export default function FileUploader({
           break;
         }
 
+        runningTotal += file.size;
         entries.push({
           file,
           meta: {
@@ -76,7 +92,7 @@ export default function FileUploader({
         onFilesChange([...files, ...entries]);
       }
     },
-    [files, onFilesChange, maxFiles, maxSizeMb]
+    [files, onFilesChange, maxFiles, maxSizeMb, maxTotalSizeMb]
   );
 
   const handleDrop = useCallback(
