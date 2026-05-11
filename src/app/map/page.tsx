@@ -21,23 +21,90 @@ import {
   prettyCategory,
 } from "@/components/map/types";
 
-export const metadata: Metadata = {
-  title: "Risk Map | jobsdata.ai",
-  description:
-    "AI displacement risk mapped from task to occupation to sector across the US economy. 342 BLS occupations scored on a 5-variable framework, then employment-weighted into sector roll-ups.",
-  openGraph: {
-    title: "Risk Map | jobsdata.ai",
-    description:
-      "Where AI risk concentrates in the US economy. 342 occupations and 25 sectors, scored bottom-up from task to job to sector.",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Risk Map | jobsdata.ai",
-    description:
-      "Where AI risk concentrates in the US economy — task to occupation to sector, across 342 BLS occupations.",
-  },
-};
+/** Per-share-URL metadata. When a share URL carries ?view=metro&id=12420,
+ *  the OG image route renders a per-region card so Twitter/LinkedIn/etc.
+ *  show the specific selection rather than the generic site card. */
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: { view?: string; id?: string };
+}): Promise<Metadata> {
+  const view =
+    searchParams.view === "country" ||
+    searchParams.view === "metro" ||
+    searchParams.view === "county"
+      ? searchParams.view
+      : null;
+  const id = typeof searchParams.id === "string" ? searchParams.id : null;
+
+  // Resolve the selection to a label + key stat for title/description
+  let label = "Risk Map";
+  let stat: string | null = null;
+
+  if (view && id) {
+    if (view === "country") {
+      const s = (stateRiskData as any).states.find((x: any) => x.fips === id);
+      if (s) {
+        label = s.title;
+        const pct =
+          s.archetypeMix?.["automation-risk"] != null
+            ? Math.round(s.archetypeMix["automation-risk"] * 100)
+            : null;
+        stat = pct != null ? `${pct}% of jobs in automation-risk occupations` : null;
+      }
+    } else if (view === "metro") {
+      const m = (msaSummaryData as any).areas.find((x: any) => x.cbsa === id);
+      if (m) {
+        label = m.title;
+        const pct =
+          m.archetypeMix?.["automation-risk"] != null
+            ? Math.round(m.archetypeMix["automation-risk"] * 100)
+            : null;
+        stat = pct != null ? `${pct}% of jobs in automation-risk occupations` : null;
+      }
+    } else if (view === "county") {
+      const c = (countyRiskData as any).counties.find((x: any) => x.fips === id);
+      if (c) {
+        label = c.name;
+        const pct =
+          c.archetypeMix?.["automation-risk"] != null
+            ? Math.round(c.archetypeMix["automation-risk"] * 100)
+            : null;
+        stat = pct != null ? `${pct}% of jobs in automation-risk occupations` : null;
+      }
+    }
+  }
+
+  const title =
+    label === "Risk Map"
+      ? "Risk Map | jobsdata.ai"
+      : `${label}: AI Labor Risk | jobsdata.ai`;
+  const description =
+    stat ?? "AI displacement risk mapped from task to occupation to sector across the US economy.";
+
+  const ogParams = new URLSearchParams();
+  if (view) ogParams.set("view", view);
+  if (id) ogParams.set("id", id);
+  const ogImage = ogParams.toString() ? `/map/og?${ogParams.toString()}` : "/map/og";
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      type: "website",
+      url: "https://jobsdata.ai/map",
+      images: [{ url: ogImage, width: 1200, height: 630, alt: title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [ogImage],
+    },
+  };
+}
 
 // Build-time aggregation: derive per-sector time-share buckets by
 // employment-weighting the occupation-level pctHighRiskTime etc. The sector
