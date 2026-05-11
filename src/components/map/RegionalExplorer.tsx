@@ -993,9 +993,9 @@ export default function RegionalExplorer({
           Where the risk lands on the map
         </h2>
         <p className="text-base text-[var(--muted)] leading-relaxed mt-2 max-w-[680px]">
-          One map, three lenses. Switch between state, metro, and county view; click any
-          polygon to see the occupations driving its score and drill down to the labor-market
-          detail.
+          Click any region to see who works there, how much of that work AI can do
+          today, and which of four near-term paths &mdash; automation, reorganization,
+          growth, or stability &mdash; the local labor market is bending toward.
         </p>
       </div>
 
