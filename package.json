@@ -20,6 +20,7 @@
     "build:search": "tsx scripts/build-search-index.ts",
     "build:risk": "tsx scripts/build-occupation-risk.ts",
     "build:oews-state": "python3 scripts/fetch_oews_state.py",
+    "build:oews-msa": "python3 scripts/fetch_oews_msa.py",
     "build:state-risk": "tsx scripts/build-state-risk.ts",
     "build:state-svg": "tsx scripts/build-state-svg-paths.ts",
     "backfill:content:dry-run": "tsx scripts/backfill-source-content.ts --dry-run",
