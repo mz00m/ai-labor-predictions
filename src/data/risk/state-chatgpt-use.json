@@ -1,0 +1,1029 @@
+{
+  "generatedAt": "2026-05-11T22:48:02.720471+00:00",
+  "source": "OpenAI Signals (CC BY 4.0)",
+  "year": 2025,
+  "version": "1.1",
+  "stateCount": 51,
+  "states": [
+    {
+      "stateCode": "DC",
+      "stateName": "District of Columbia",
+      "rank": 1,
+      "useIntensity": 1.0,
+      "topTopics": [
+        {
+          "topic": "Writing",
+          "share": 0.311
+        },
+        {
+          "topic": "Practical Guidance",
+          "share": 0.263
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.188
+        }
+      ]
+    },
+    {
+      "stateCode": "VA",
+      "stateName": "Virginia",
+      "rank": 2,
+      "useIntensity": 0.9804,
+      "topTopics": [
+        {
+          "topic": "Practical Guidance",
+          "share": 0.282
+        },
+        {
+          "topic": "Writing",
+          "share": 0.27
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.181
+        }
+      ]
+    },
+    {
+      "stateCode": "NY",
+      "stateName": "New York",
+      "rank": 3,
+      "useIntensity": 0.9608,
+      "topTopics": [
+        {
+          "topic": "Practical Guidance",
+          "share": 0.284
+        },
+        {
+          "topic": "Writing",
+          "share": 0.273
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.201
+        }
+      ]
+    },
+    {
+      "stateCode": "CA",
+      "stateName": "California",
+      "rank": 4,
+      "useIntensity": 0.9412,
+      "topTopics": [
+        {
+          "topic": "Writing",
+          "share": 0.289
+        },
+        {
+          "topic": "Practical Guidance",
+          "share": 0.287
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.19
+        }
+      ]
+    },
+    {
+      "stateCode": "FL",
+      "stateName": "Florida",
+      "rank": 5,
+      "useIntensity": 0.9216,
+      "topTopics": [
+        {
+          "topic": "Practical Guidance",
+          "share": 0.277
+        },
+        {
+          "topic": "Writing",
+          "share": 0.252
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.245
+        }
+      ]
+    },
+    {
+      "stateCode": "WA",
+      "stateName": "Washington",
+      "rank": 6,
+      "useIntensity": 0.902,
+      "topTopics": [
+        {
+          "topic": "Writing",
+          "share": 0.28
+        },
+        {
+          "topic": "Practical Guidance",
+          "share": 0.275
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.191
+        }
+      ]
+    },
+    {
+      "stateCode": "UT",
+      "stateName": "Utah",
+      "rank": 7,
+      "useIntensity": 0.8824,
+      "topTopics": [
+        {
+          "topic": "Practical Guidance",
+          "share": 0.298
+        },
+        {
+          "topic": "Writing",
+          "share": 0.261
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.196
+        }
+      ]
+    },
+    {
+      "stateCode": "NV",
+      "stateName": "Nevada",
+      "rank": 8,
+      "useIntensity": 0.8627,
+      "topTopics": [
+        {
+          "topic": "Seeking information",
+          "share": 0.325
+        },
+        {
+          "topic": "Writing",
+          "share": 0.233
+        },
+        {
+          "topic": "Practical Guidance",
+          "share": 0.23
+        }
+      ]
+    },
+    {
+      "stateCode": "GA",
+      "stateName": "Georgia",
+      "rank": 9,
+      "useIntensity": 0.8431,
+      "topTopics": [
+        {
+          "topic": "Practical Guidance",
+          "share": 0.292
+        },
+        {
+          "topic": "Writing",
+          "share": 0.275
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.186
+        }
+      ]
+    },
+    {
+      "stateCode": "MA",
+      "stateName": "Massachusetts",
+      "rank": 10,
+      "useIntensity": 0.8235,
+      "topTopics": [
+        {
+          "topic": "Practical Guidance",
+          "share": 0.283
+        },
+        {
+          "topic": "Writing",
+          "share": 0.281
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.192
+        }
+      ]
+    },
+    {
+      "stateCode": "CO",
+      "stateName": "Colorado",
+      "rank": 11,
+      "useIntensity": 0.8039,
+      "topTopics": [
+        {
+          "topic": "Practical Guidance",
+          "share": 0.295
+        },
+        {
+          "topic": "Writing",
+          "share": 0.262
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.193
+        }
+      ]
+    },
+    {
+      "stateCode": "OR",
+      "stateName": "Oregon",
+      "rank": 12,
+      "useIntensity": 0.7843,
+      "topTopics": [
+        {
+          "topic": "Practical Guidance",
+          "share": 0.273
+        },
+        {
+          "topic": "Writing",
+          "share": 0.261
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.186
+        }
+      ]
+    },
+    {
+      "stateCode": "TX",
+      "stateName": "Texas",
+      "rank": 13,
+      "useIntensity": 0.7647,
+      "topTopics": [
+        {
+          "topic": "Practical Guidance",
+          "share": 0.296
+        },
+        {
+          "topic": "Writing",
+          "share": 0.264
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.196
+        }
+      ]
+    },
+    {
+      "stateCode": "AZ",
+      "stateName": "Arizona",
+      "rank": 14,
+      "useIntensity": 0.7451,
+      "topTopics": [
+        {
+          "topic": "Practical Guidance",
+          "share": 0.298
+        },
+        {
+          "topic": "Writing",
+          "share": 0.266
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.198
+        }
+      ]
+    },
+    {
+      "stateCode": "IL",
+      "stateName": "Illinois",
+      "rank": 15,
+      "useIntensity": 0.7255,
+      "topTopics": [
+        {
+          "topic": "Practical Guidance",
+          "share": 0.287
+        },
+        {
+          "topic": "Writing",
+          "share": 0.274
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.189
+        }
+      ]
+    },
+    {
+      "stateCode": "MD",
+      "stateName": "Maryland",
+      "rank": 16,
+      "useIntensity": 0.7059,
+      "topTopics": [
+        {
+          "topic": "Practical Guidance",
+          "share": 0.298
+        },
+        {
+          "topic": "Writing",
+          "share": 0.287
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.172
+        }
+      ]
+    },
+    {
+      "stateCode": "CT",
+      "stateName": "Connecticut",
+      "rank": 17,
+      "useIntensity": 0.6863,
+      "topTopics": [
+        {
+          "topic": "Practical Guidance",
+          "share": 0.281
+        },
+        {
+          "topic": "Writing",
+          "share": 0.278
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.19
+        }
+      ]
+    },
+    {
+      "stateCode": "RI",
+      "stateName": "Rhode Island",
+      "rank": 18,
+      "useIntensity": 0.6667,
+      "topTopics": [
+        {
+          "topic": "Practical Guidance",
+          "share": 0.301
+        },
+        {
+          "topic": "Writing",
+          "share": 0.258
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.183
+        }
+      ]
+    },
+    {
+      "stateCode": "NJ",
+      "stateName": "New Jersey",
+      "rank": 19,
+      "useIntensity": 0.6471,
+      "topTopics": [
+        {
+          "topic": "Practical Guidance",
+          "share": 0.287
+        },
+        {
+          "topic": "Writing",
+          "share": 0.28
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.184
+        }
+      ]
+    },
+    {
+      "stateCode": "NC",
+      "stateName": "North Carolina",
+      "rank": 20,
+      "useIntensity": 0.6275,
+      "topTopics": [
+        {
+          "topic": "Practical Guidance",
+          "share": 0.303
+        },
+        {
+          "topic": "Writing",
+          "share": 0.27
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.186
+        }
+      ]
+    },
+    {
+      "stateCode": "HI",
+      "stateName": "Hawaii",
+      "rank": 21,
+      "useIntensity": 0.6078,
+      "topTopics": [
+        {
+          "topic": "Writing",
+          "share": 0.308
+        },
+        {
+          "topic": "Practical Guidance",
+          "share": 0.283
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.207
+        }
+      ]
+    },
+    {
+      "stateCode": "DE",
+      "stateName": "Delaware",
+      "rank": 22,
+      "useIntensity": 0.5882,
+      "topTopics": [
+        {
+          "topic": "Practical Guidance",
+          "share": 0.32
+        },
+        {
+          "topic": "Writing",
+          "share": 0.241
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.207
+        }
+      ]
+    },
+    {
+      "stateCode": "PA",
+      "stateName": "Pennsylvania",
+      "rank": 23,
+      "useIntensity": 0.5686,
+      "topTopics": [
+        {
+          "topic": "Practical Guidance",
+          "share": 0.309
+        },
+        {
+          "topic": "Writing",
+          "share": 0.261
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.19
+        }
+      ]
+    },
+    {
+      "stateCode": "MO",
+      "stateName": "Missouri",
+      "rank": 24,
+      "useIntensity": 0.549,
+      "topTopics": [
+        {
+          "topic": "Practical Guidance",
+          "share": 0.306
+        },
+        {
+          "topic": "Writing",
+          "share": 0.252
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.181
+        }
+      ]
+    },
+    {
+      "stateCode": "MN",
+      "stateName": "Minnesota",
+      "rank": 25,
+      "useIntensity": 0.5294,
+      "topTopics": [
+        {
+          "topic": "Practical Guidance",
+          "share": 0.298
+        },
+        {
+          "topic": "Writing",
+          "share": 0.26
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.198
+        }
+      ]
+    },
+    {
+      "stateCode": "TN",
+      "stateName": "Tennessee",
+      "rank": 26,
+      "useIntensity": 0.5098,
+      "topTopics": [
+        {
+          "topic": "Practical Guidance",
+          "share": 0.296
+        },
+        {
+          "topic": "Writing",
+          "share": 0.257
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.193
+        }
+      ]
+    },
+    {
+      "stateCode": "MI",
+      "stateName": "Michigan",
+      "rank": 27,
+      "useIntensity": 0.4902,
+      "topTopics": [
+        {
+          "topic": "Practical Guidance",
+          "share": 0.314
+        },
+        {
+          "topic": "Writing",
+          "share": 0.248
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.187
+        }
+      ]
+    },
+    {
+      "stateCode": "NE",
+      "stateName": "Nebraska",
+      "rank": 28,
+      "useIntensity": 0.4706,
+      "topTopics": [
+        {
+          "topic": "Practical Guidance",
+          "share": 0.292
+        },
+        {
+          "topic": "Writing",
+          "share": 0.27
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.196
+        }
+      ]
+    },
+    {
+      "stateCode": "KS",
+      "stateName": "Kansas",
+      "rank": 29,
+      "useIntensity": 0.451,
+      "topTopics": [
+        {
+          "topic": "Practical Guidance",
+          "share": 0.296
+        },
+        {
+          "topic": "Writing",
+          "share": 0.237
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.2
+        }
+      ]
+    },
+    {
+      "stateCode": "OH",
+      "stateName": "Ohio",
+      "rank": 30,
+      "useIntensity": 0.4314,
+      "topTopics": [
+        {
+          "topic": "Practical Guidance",
+          "share": 0.3
+        },
+        {
+          "topic": "Writing",
+          "share": 0.253
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.188
+        }
+      ]
+    },
+    {
+      "stateCode": "VT",
+      "stateName": "Vermont",
+      "rank": 31,
+      "useIntensity": 0.4118,
+      "topTopics": [
+        {
+          "topic": "Practical Guidance",
+          "share": 0.287
+        },
+        {
+          "topic": "Writing",
+          "share": 0.272
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.216
+        }
+      ]
+    },
+    {
+      "stateCode": "OK",
+      "stateName": "Oklahoma",
+      "rank": 32,
+      "useIntensity": 0.3922,
+      "topTopics": [
+        {
+          "topic": "Practical Guidance",
+          "share": 0.309
+        },
+        {
+          "topic": "Writing",
+          "share": 0.25
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.184
+        }
+      ]
+    },
+    {
+      "stateCode": "IN",
+      "stateName": "Indiana",
+      "rank": 33,
+      "useIntensity": 0.3725,
+      "topTopics": [
+        {
+          "topic": "Practical Guidance",
+          "share": 0.317
+        },
+        {
+          "topic": "Writing",
+          "share": 0.248
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.185
+        }
+      ]
+    },
+    {
+      "stateCode": "AL",
+      "stateName": "Alabama",
+      "rank": 34,
+      "useIntensity": 0.3529,
+      "topTopics": [
+        {
+          "topic": "Practical Guidance",
+          "share": 0.311
+        },
+        {
+          "topic": "Writing",
+          "share": 0.24
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.185
+        }
+      ]
+    },
+    {
+      "stateCode": "LA",
+      "stateName": "Louisiana",
+      "rank": 35,
+      "useIntensity": 0.3333,
+      "topTopics": [
+        {
+          "topic": "Practical Guidance",
+          "share": 0.305
+        },
+        {
+          "topic": "Writing",
+          "share": 0.255
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.194
+        }
+      ]
+    },
+    {
+      "stateCode": "NH",
+      "stateName": "New Hampshire",
+      "rank": 36,
+      "useIntensity": 0.3137,
+      "topTopics": [
+        {
+          "topic": "Practical Guidance",
+          "share": 0.291
+        },
+        {
+          "topic": "Writing",
+          "share": 0.287
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.182
+        }
+      ]
+    },
+    {
+      "stateCode": "ID",
+      "stateName": "Idaho",
+      "rank": 37,
+      "useIntensity": 0.2941,
+      "topTopics": [
+        {
+          "topic": "Practical Guidance",
+          "share": 0.306
+        },
+        {
+          "topic": "Writing",
+          "share": 0.255
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.2
+        }
+      ]
+    },
+    {
+      "stateCode": "SC",
+      "stateName": "South Carolina",
+      "rank": 38,
+      "useIntensity": 0.2745,
+      "topTopics": [
+        {
+          "topic": "Practical Guidance",
+          "share": 0.308
+        },
+        {
+          "topic": "Writing",
+          "share": 0.256
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.191
+        }
+      ]
+    },
+    {
+      "stateCode": "ND",
+      "stateName": "North Dakota",
+      "rank": 39,
+      "useIntensity": 0.2549,
+      "topTopics": [
+        {
+          "topic": "Practical Guidance",
+          "share": 0.339
+        },
+        {
+          "topic": "Writing",
+          "share": 0.25
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.209
+        }
+      ]
+    },
+    {
+      "stateCode": "KY",
+      "stateName": "Kentucky",
+      "rank": 40,
+      "useIntensity": 0.2353,
+      "topTopics": [
+        {
+          "topic": "Practical Guidance",
+          "share": 0.302
+        },
+        {
+          "topic": "Writing",
+          "share": 0.262
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.19
+        }
+      ]
+    },
+    {
+      "stateCode": "NM",
+      "stateName": "New Mexico",
+      "rank": 41,
+      "useIntensity": 0.2157,
+      "topTopics": [
+        {
+          "topic": "Practical Guidance",
+          "share": 0.297
+        },
+        {
+          "topic": "Writing",
+          "share": 0.27
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.192
+        }
+      ]
+    },
+    {
+      "stateCode": "WI",
+      "stateName": "Wisconsin",
+      "rank": 42,
+      "useIntensity": 0.1961,
+      "topTopics": [
+        {
+          "topic": "Practical Guidance",
+          "share": 0.306
+        },
+        {
+          "topic": "Writing",
+          "share": 0.26
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.181
+        }
+      ]
+    },
+    {
+      "stateCode": "IA",
+      "stateName": "Iowa",
+      "rank": 43,
+      "useIntensity": 0.1765,
+      "topTopics": [
+        {
+          "topic": "Practical Guidance",
+          "share": 0.321
+        },
+        {
+          "topic": "Writing",
+          "share": 0.261
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.174
+        }
+      ]
+    },
+    {
+      "stateCode": "AR",
+      "stateName": "Arkansas",
+      "rank": 44,
+      "useIntensity": 0.1569,
+      "topTopics": [
+        {
+          "topic": "Practical Guidance",
+          "share": 0.314
+        },
+        {
+          "topic": "Writing",
+          "share": 0.249
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.179
+        }
+      ]
+    },
+    {
+      "stateCode": "ME",
+      "stateName": "Maine",
+      "rank": 45,
+      "useIntensity": 0.1373,
+      "topTopics": [
+        {
+          "topic": "Writing",
+          "share": 0.287
+        },
+        {
+          "topic": "Practical Guidance",
+          "share": 0.254
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.205
+        }
+      ]
+    },
+    {
+      "stateCode": "MS",
+      "stateName": "Mississippi",
+      "rank": 46,
+      "useIntensity": 0.1176,
+      "topTopics": [
+        {
+          "topic": "Practical Guidance",
+          "share": 0.333
+        },
+        {
+          "topic": "Writing",
+          "share": 0.251
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.196
+        }
+      ]
+    },
+    {
+      "stateCode": "AK",
+      "stateName": "Alaska",
+      "rank": 47,
+      "useIntensity": 0.098,
+      "topTopics": [
+        {
+          "topic": "Practical Guidance",
+          "share": 0.312
+        },
+        {
+          "topic": "Writing",
+          "share": 0.256
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.202
+        }
+      ]
+    },
+    {
+      "stateCode": "SD",
+      "stateName": "South Dakota",
+      "rank": 48,
+      "useIntensity": 0.0784,
+      "topTopics": [
+        {
+          "topic": "Practical Guidance",
+          "share": 0.293
+        },
+        {
+          "topic": "Writing",
+          "share": 0.253
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.214
+        }
+      ]
+    },
+    {
+      "stateCode": "WY",
+      "stateName": "Wyoming",
+      "rank": 49,
+      "useIntensity": 0.0588,
+      "topTopics": [
+        {
+          "topic": "Practical Guidance",
+          "share": 0.304
+        },
+        {
+          "topic": "Writing",
+          "share": 0.24
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.162
+        }
+      ]
+    },
+    {
+      "stateCode": "MT",
+      "stateName": "Montana",
+      "rank": 50,
+      "useIntensity": 0.0392,
+      "topTopics": [
+        {
+          "topic": "Practical Guidance",
+          "share": 0.308
+        },
+        {
+          "topic": "Writing",
+          "share": 0.247
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.168
+        }
+      ]
+    },
+    {
+      "stateCode": "WV",
+      "stateName": "West Virginia",
+      "rank": 51,
+      "useIntensity": 0.0196,
+      "topTopics": [
+        {
+          "topic": "Practical Guidance",
+          "share": 0.307
+        },
+        {
+          "topic": "Writing",
+          "share": 0.278
+        },
+        {
+          "topic": "Seeking information",
+          "share": 0.174
+        }
+      ]
+    }
+  ]
+}

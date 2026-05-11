@@ -123,6 +123,12 @@ export interface StateSidebarData {
     totalEmployment: number;
     weightedNetRisk100: number;
   }[];
+  /** Realized ChatGPT use intensity from OpenAI Signals 2025. */
+  chatgptUse?: {
+    rank: number;
+    intensity: number; // 0..1, 1 = top-rank
+    topTopics?: { topic: string; share: number }[];
+  };
 }
 
 export interface MsaSidebarData {
@@ -326,6 +332,41 @@ function StatePane({
               </li>
             ))}
           </ul>
+        </Section>
+      )}
+
+      {data.chatgptUse && (
+        <Section title="Realized ChatGPT use (2025)">
+          <div className="text-2xs leading-relaxed">
+            <div className="flex items-baseline gap-2">
+              <span className="font-mono text-lg font-bold text-[var(--foreground)]">
+                #{data.chatgptUse.rank}
+              </span>
+              <span className="text-[var(--muted)]">of 51 states</span>
+            </div>
+            <p className="text-[var(--muted)] mt-1 leading-snug">
+              From OpenAI Signals (aggregated, differential-privacy-protected). A
+              high rank means more ChatGPT use per capita — a direct measure of
+              realized adoption.
+            </p>
+            {data.chatgptUse.topTopics && data.chatgptUse.topTopics.length > 0 && (
+              <div className="mt-2">
+                <div className="text-[10px] uppercase tracking-wider text-[var(--muted)] mb-1">
+                  Top topics in state
+                </div>
+                <ul className="space-y-0.5">
+                  {data.chatgptUse.topTopics.map((t) => (
+                    <li key={t.topic} className="flex justify-between gap-2">
+                      <span>{t.topic}</span>
+                      <span className="font-mono text-[var(--muted)]">
+                        {(t.share * 100).toFixed(1)}%
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
         </Section>
       )}
 

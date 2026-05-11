@@ -195,6 +195,8 @@ interface Props {
   cbsaSummary?: CbsaSummaryFile;
   countyRisk: CountyRiskFile;
   crosswalk: CrosswalkFile;
+  /** Realized ChatGPT-use intensity per state (OpenAI Signals 2025). */
+  chatgptUse?: ChatgptUseFile;
   occupations: OccupationLite[];
   /** Top representative occupations per BLS major-group slug — used by the
    *  county sidebar's expandable drill-through. */
@@ -205,7 +207,21 @@ interface Props {
 }
 
 type ViewMode = "country" | "metro" | "county";
-type Metric = "netRisk" | "pctHigh" | "atRiskShare";
+type Metric = "netRisk" | "pctHigh" | "atRiskShare" | "chatgptUse";
+
+interface ChatgptUseState {
+  stateCode: string;
+  stateName: string;
+  rank: number;
+  useIntensity: number;
+  topTopics?: { topic: string; share: number }[];
+}
+interface ChatgptUseFile {
+  generatedAt: string;
+  source: string;
+  year: number;
+  states: ChatgptUseState[];
+}
 
 interface Selection {
   view: ViewMode;
@@ -294,6 +310,7 @@ export default function RegionalExplorer({
   cbsaSummary: _cbsaSummary, // accepted for future metro/micro merge; not yet rendered
   countyRisk,
   crosswalk,
+  chatgptUse,
   occupations,
   topOccupationsByCategory,
   nationalSectors,
@@ -341,6 +358,15 @@ export default function RegionalExplorer({
     for (const s of statePaths.states) m.set(s.id, s);
     return m;
   }, [statePaths]);
+
+  // Index ChatGPT-use by state abbreviation, then resolve from FIPS via stateByFips.abbr.
+  const chatgptByAbbr = useMemo(() => {
+    const m = new Map<string, ChatgptUseState>();
+    if (chatgptUse) {
+      for (const s of chatgptUse.states) m.set(s.stateCode, s);
+    }
+    return m;
+  }, [chatgptUse]);
 
   const msaSummaryByCbsa = useMemo(() => {
     const m = new Map<string, MsaSummaryRow>();
@@ -407,6 +433,13 @@ export default function RegionalExplorer({
         valueOf: (id) => {
           const s = stateByFips.get(id);
           if (!s) return null;
+          if (metric === "chatgptUse") {
+            const u = chatgptByAbbr.get(s.abbr);
+            if (!u) return null;
+            // Rank-normalized: 100 = #1, 0 = lowest. Maps cleanly onto our
+            // green->red palette (high use = high "realized" exposure to AI).
+            return Math.round(u.useIntensity * 100);
+          }
           if (metric === "atRiskShare") {
             return s.archetypeMix
               ? Math.round(s.archetypeMix["automation-risk"] * 1000) / 10
@@ -839,6 +872,7 @@ export default function RegionalExplorer({
           totalEmployment: m.totalEmployment,
           weightedNetRisk100: m.weightedNetRisk100,
         }));
+      const cgpt = chatgptByAbbr.get(s.abbr);
       const data: StateSidebarData = {
         fips: s.fips,
         abbr: s.abbr,
@@ -851,6 +885,13 @@ export default function RegionalExplorer({
         archetypeMix: s.archetypeMix,
         topRiskOccupations: s.topRiskOccupations,
         topMetrosInState: metros,
+        chatgptUse: cgpt
+          ? {
+              rank: cgpt.rank,
+              intensity: cgpt.useIntensity,
+              topTopics: cgpt.topTopics,
+            }
+          : undefined,
       };
       return { kind: "state" as const, data };
     }
@@ -1098,6 +1139,22 @@ export default function RegionalExplorer({
                 >
                   % high-risk time
                 </button>
+                <button
+                  onClick={() => view === "country" && setMetric("chatgptUse")}
+                  disabled={view !== "country"}
+                  title={
+                    view === "country"
+                      ? "OpenAI Signals 2025 — realized ChatGPT use intensity per state (rank-normalized)"
+                      : "Available in Country view only"
+                  }
+                  className={`px-3 py-1.5 transition-colors ${
+                    metric === "chatgptUse" && view === "country"
+                      ? "bg-[var(--accent)] text-white"
+                      : "bg-white text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-black/[0.02]"
+                  } ${view !== "country" ? "opacity-40 cursor-not-allowed" : ""}`}
+                >
+                  ChatGPT use
+                </button>
               </div>
 
               {/* Scale toggle */}
@@ -1200,7 +1257,9 @@ export default function RegionalExplorer({
                   <div className="text-[var(--muted)] font-mono">
                     {tooltipData.value != null ? (
                       <>
-                        {metric === "atRiskShare"
+                        {metric === "chatgptUse" && view === "country"
+                          ? `ChatGPT use ${tooltipData.value.toFixed(0)}/100`
+                          : metric === "atRiskShare"
                           ? `${tooltipData.value.toFixed(1)}% at auto-risk`
                           : metric === "pctHigh" && view === "country"
                           ? `${tooltipData.value.toFixed(1)}% high-risk time`
@@ -1220,7 +1279,9 @@ export default function RegionalExplorer({
               <div className="absolute left-3 bottom-3 bg-white/95 backdrop-blur border border-card rounded-md px-3 py-2 text-2xs leading-tight pointer-events-none max-w-[280px]">
                 <div className="text-[10px] uppercase tracking-wider text-[var(--muted)] mb-1.5 flex items-baseline justify-between gap-2">
                   <span>
-                    {metric === "atRiskShare"
+                    {metric === "chatgptUse"
+                      ? "ChatGPT use intensity (state rank)"
+                      : metric === "atRiskShare"
                       ? "% jobs at auto-risk"
                       : view === "country" && metric === "pctHigh"
                       ? "% high-risk task time"

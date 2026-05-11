@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import occupationRiskData from "@/data/risk/occupation-risk.json";
 import sectorRiskData from "@/data/risk/sector-risk.json";
 import stateRiskData from "@/data/risk/state-risk.json";
+import chatgptUseData from "@/data/risk/state-chatgpt-use.json";
 import countyRiskData from "@/data/risk/county-risk.json";
 import statePathsData from "@/data/regional/us-states-svg-paths.json";
 import msaPathsData from "@/data/regional/us-msas-svg-paths.json";
@@ -239,6 +240,7 @@ export default function MapPage() {
             msaSummary={msaSummaryData as any}
             countyRisk={countyRiskData as any}
             crosswalk={crosswalkData as any}
+            chatgptUse={chatgptUseData as any}
             occupations={occupationsLite}
             topOccupationsByCategory={topOccupationsByCategory}
             nationalSectors={sectors}

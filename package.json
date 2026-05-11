@@ -23,6 +23,7 @@
     "build:oews-state": "python3 scripts/fetch_oews_state.py",
     "build:oews-msa": "python3 scripts/fetch_oews_msa.py",
     "build:oews-bos": "python3 scripts/fetch_oews_bos.py",
+    "build:openai-signals": "python3 scripts/build_openai_signals.py",
     "build:acs-county": "python3 scripts/fetch_acs_county.py",
     "build:cbsa-crosswalk": "python3 scripts/fetch_cbsa_crosswalk.py",
     "build:cbsa-summary": "python3 scripts/build_micro_summary.py",
