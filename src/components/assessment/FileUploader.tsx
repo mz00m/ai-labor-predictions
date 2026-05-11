@@ -154,7 +154,10 @@ export default function FileUploader({
           <span className="text-accent font-medium">Click to upload</span> or drag and drop
         </p>
         <p className="text-sm text-gray-400">
-          PDF, DOCX, TXT, CSV, XLS up to {maxSizeMb}MB each &middot; {maxFiles} files max
+          PDF, DOCX, TXT, CSV, XLS &middot; up to {maxSizeMb}MB per file &middot; {maxTotalSizeMb}MB total &middot; {maxFiles} files max
+        </p>
+        <p className="text-xs text-gray-400 mt-2">
+          We read the text from each document. Scanned PDFs and image-only files won&apos;t work well.
         </p>
       </div>
 

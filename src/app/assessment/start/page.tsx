@@ -835,10 +835,41 @@ export default function AssessmentStartPage() {
             </p>
           </div>
 
-          {industryTemplate && (
+          {/* Always-visible upload guidance — explains what works and what
+              doesn't, regardless of industry. Renders before the industry-
+              specific panel below so users see the universals first. */}
+          <div className="grid sm:grid-cols-2 gap-3">
+            <div className="bg-green-50/50 border border-green-100 rounded-lg p-4">
+              <p className="text-xs font-bold uppercase tracking-wider text-green-700 mb-2">What works well</p>
+              <ul className="space-y-1.5 text-sm text-gray-700">
+                <li className="flex gap-2"><span className="text-green-500 flex-shrink-0">+</span> Job descriptions and role definitions</li>
+                <li className="flex gap-2"><span className="text-green-500 flex-shrink-0">+</span> Employee handbooks, SOPs, process docs</li>
+                <li className="flex gap-2"><span className="text-green-500 flex-shrink-0">+</span> Onboarding or training guides</li>
+                <li className="flex gap-2"><span className="text-green-500 flex-shrink-0">+</span> Org charts (text-based, not images)</li>
+                <li className="flex gap-2"><span className="text-green-500 flex-shrink-0">+</span> About / services pages exported to PDF</li>
+              </ul>
+            </div>
+            <div className="bg-amber-50/50 border border-amber-100 rounded-lg p-4">
+              <p className="text-xs font-bold uppercase tracking-wider text-amber-700 mb-2">Won&apos;t help (or won&apos;t work)</p>
+              <ul className="space-y-1.5 text-sm text-gray-700">
+                <li className="flex gap-2"><span className="text-amber-500 flex-shrink-0">!</span> Scanned PDFs without a text layer</li>
+                <li className="flex gap-2"><span className="text-amber-500 flex-shrink-0">!</span> Image-only documents (PNG/JPG screenshots)</li>
+                <li className="flex gap-2"><span className="text-amber-500 flex-shrink-0">!</span> Password-protected or encrypted files</li>
+                <li className="flex gap-2"><span className="text-amber-500 flex-shrink-0">!</span> Long financials or contracts (signal-to-noise too low)</li>
+                <li className="flex gap-2"><span className="text-amber-500 flex-shrink-0">!</span> Anything containing sensitive client data &mdash; PII is stripped, but skip it if in doubt</li>
+              </ul>
+            </div>
+          </div>
+
+          <p className="text-sm text-gray-400 -mt-2">
+            <span className="font-semibold text-gray-500">Quality over quantity.</span>{" "}
+            2&ndash;5 well-chosen documents produce a better plan than 10 mediocre ones &mdash; we read the first few pages of each.
+          </p>
+
+          {industryTemplate && industryTemplate.suggestedUploads && industryTemplate.suggestedUploads.length > 0 && (
             <div className="bg-gray-50 border border-gray-100 rounded-lg p-4">
               <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-2">
-                Things that help us give better recommendations
+                Especially helpful for {INDUSTRY_LABELS[form.industry as IndustryCategory] || "your industry"}
               </p>
               <ul className="space-y-1">
                 {industryTemplate.suggestedUploads.map((item) => (
