@@ -3,12 +3,16 @@ import type { Metadata } from "next";
 import occupationRiskData from "@/data/risk/occupation-risk.json";
 import sectorRiskData from "@/data/risk/sector-risk.json";
 import stateRiskData from "@/data/risk/state-risk.json";
+import countyRiskData from "@/data/risk/county-risk.json";
 import statePathsData from "@/data/regional/us-states-svg-paths.json";
+import msaPathsData from "@/data/regional/us-msas-svg-paths.json";
+import msaSummaryData from "@/data/regional/msa-summary.json";
+import crosswalkData from "@/data/regional/cbsa-county-crosswalk.json";
 
 import MapHero from "@/components/map/MapHero";
 import SectorHeatmap from "@/components/map/SectorHeatmap";
 import OccupationRiskTable from "@/components/map/OccupationRiskTable";
-import StateChoropleth from "@/components/map/StateChoropleth";
+import RegionalExplorer from "@/components/map/RegionalExplorer";
 import MapMethodology from "@/components/map/MapMethodology";
 import {
   OccupationRisk,
@@ -117,6 +121,10 @@ export default function MapPage() {
 
   const totalJobs = sectors.reduce((sum, s) => sum + (s.totalJobs || 0), 0);
 
+  // Lightweight occupation list for search autocomplete (avoid shipping the
+  // full risk JSON to the client).
+  const occupationsLite = occupations.map((o) => ({ slug: o.slug, title: o.title }));
+
   return (
     <main className="px-6 sm:px-10 py-8 sm:py-12">
       <div className="max-w-[1100px] mx-auto">
@@ -129,26 +137,43 @@ export default function MapPage() {
 
         <SectorHeatmap sectors={sectors} totalJobs={totalJobs} />
 
-        <OccupationRiskTable occupations={occupations} />
+        <RegionalExplorer
+          stateRisk={stateRiskData as any}
+          statePaths={statePathsData as any}
+          msaPaths={msaPathsData as any}
+          msaSummary={msaSummaryData as any}
+          countyRisk={countyRiskData as any}
+          crosswalk={crosswalkData as any}
+          occupations={occupationsLite}
+        />
 
-        <section className="mt-16 sm:mt-20">
-          <div className="mb-5">
-            <p className="text-xs font-bold uppercase tracking-widest text-[var(--accent)] mb-2">
-              Section 03 &middot; Regional view
-            </p>
-            <h2 className="text-2xl sm:text-3xl font-bold text-heading leading-tight">
-              Where the risk lands on the map
-            </h2>
-            <p className="text-base text-[var(--muted)] leading-relaxed mt-2 max-w-[680px]">
-              Per-state risk is the employment-weighted average of occupation
-              risk across BLS OEWS May 2024 employment. MSA and county overlays
-              are next.
-            </p>
-          </div>
-          <StateChoropleth
-            stateRisk={stateRiskData as any}
-            statePaths={statePathsData as any}
-          />
+        <section className="mt-16 sm:mt-20 mb-16">
+          <details className="group">
+            <summary className="cursor-pointer list-none">
+              <div className="flex items-baseline justify-between gap-4 border-t border-strong pt-6">
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-widest text-[var(--accent)] opacity-60 mb-1">
+                    Appendix
+                  </p>
+                  <h2 className="text-xl sm:text-2xl font-bold text-heading leading-tight">
+                    Browse all {occupations.length.toLocaleString("en-US")} occupations
+                  </h2>
+                  <p className="text-sm text-[var(--muted)] mt-1 max-w-[640px]">
+                    The full sortable, filterable table behind the regional roll-ups.
+                  </p>
+                </div>
+                <span className="text-2xs text-[var(--muted)] group-open:hidden shrink-0 pt-2">
+                  Show table &darr;
+                </span>
+                <span className="text-2xs text-[var(--muted)] hidden group-open:inline shrink-0 pt-2">
+                  Hide table &uarr;
+                </span>
+              </div>
+            </summary>
+            <div className="mt-6">
+              <OccupationRiskTable occupations={occupations} />
+            </div>
+          </details>
         </section>
 
         <MapMethodology />

@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run compile-wiki && npm run compile-kb && next build",
+    "prebuild:public-data": "tsx scripts/copy-public-data.ts",
+    "build": "npm run prebuild:public-data && npm run compile-wiki && npm run compile-kb && next build",
     "start": "next start",
     "lint": "next lint",
     "digest": "tsx scripts/generate-digest.ts",
