@@ -101,6 +101,77 @@ def load_sector_risk() -> dict[str, dict]:
 
 
 OCC_RISK_PATH = REPO / "src" / "data" / "risk" / "occupation-risk.json"
+MSA_OCC_PATH = REPO / "src" / "data" / "regional" / "msa-occupation-employment.json"
+MSA_SUMMARY_PATH = REPO / "src" / "data" / "regional" / "msa-summary.json"
+CROSSWALK_PATH = REPO / "src" / "data" / "regional" / "cbsa-county-crosswalk.json"
+
+
+def load_msa_imputation_inputs():
+    """Returns (county_to_cbsa, msa_summary_by_cbsa, msa_detail_by_cbsa).
+
+    Used to impute county-level detailed-SOC occupation employment from
+    the parent metro's BLS OEWS distribution. ACS only publishes ~22
+    major-group occupations at the county level; for counties inside an
+    MSA, we can do much better by scaling the metro's detailed-SOC
+    distribution by the county's share of total metro employment.
+    """
+    crosswalk = json.loads(CROSSWALK_PATH.read_text())
+    county_to_cbsa: dict[str, str] = crosswalk.get("countyToCbsa", {})
+
+    msa_summary = json.loads(MSA_SUMMARY_PATH.read_text())
+    msa_summary_by_cbsa: dict[str, dict] = {a["cbsa"]: a for a in msa_summary["areas"]}
+
+    msa_detail = json.loads(MSA_OCC_PATH.read_text())
+    msa_detail_by_cbsa: dict[str, dict] = {a["cbsa"]: a for a in msa_detail["areas"]}
+
+    return county_to_cbsa, msa_summary_by_cbsa, msa_detail_by_cbsa
+
+
+def impute_county_detailed_occupations(
+    county_total: int,
+    cbsa: str | None,
+    msa_summary_by_cbsa: dict,
+    msa_detail_by_cbsa: dict,
+) -> list[dict] | None:
+    """Scale the metro's top detailed-SOC occupations down to the county.
+
+    Method: for each top-occupation row in the MSA detail, assume the
+    county hosts the same proportion of that occupation as it does of
+    overall metro employment. So:
+        county_emp_for_soc = msa_emp_for_soc * (county_total / msa_total)
+
+    Returns None if the county isn't in any CBSA (~1,200 non-metro
+    counties hit this path and stay at major-group only)."""
+    if not cbsa:
+        return None
+    summ = msa_summary_by_cbsa.get(cbsa)
+    detail = msa_detail_by_cbsa.get(cbsa)
+    if not summ or not detail:
+        return None
+    msa_total = summ.get("totalEmployment") or 0
+    if msa_total <= 0 or county_total <= 0:
+        return None
+
+    scale = county_total / msa_total
+    out: list[dict] = []
+    for o in detail.get("topOccupations", []):
+        msa_emp = o.get("employment") or 0
+        county_emp = round(msa_emp * scale)
+        if county_emp <= 0:
+            continue
+        out.append({
+            "slug": o["slug"],
+            "title": o["title"],
+            "category": o.get("category"),
+            "soc": o.get("soc"),
+            "msaShare": o.get("share"),  # share inside the parent metro (context)
+            "estimatedEmployment": county_emp,
+            "estimatedShare": round(county_emp / county_total * 100, 2),
+            "netRisk100": o.get("netRisk100"),
+        })
+    # Top 15 by employment (the MSA detail is already top-30)
+    out.sort(key=lambda r: r["estimatedEmployment"], reverse=True)
+    return out[:15]
 
 
 def load_sector_archetype_mix() -> dict[str, dict]:
@@ -242,8 +313,10 @@ def fetch_counties() -> list[list[str]]:
 def main() -> None:
     sector_risk = load_sector_risk()
     sector_arch_mix = load_sector_archetype_mix()
+    county_to_cbsa, msa_summary_by_cbsa, msa_detail_by_cbsa = load_msa_imputation_inputs()
     print(f"Loaded sector risk for {len(sector_risk)} jobsdata slugs", file=sys.stderr)
     print(f"Loaded sector archetype mix for {len(sector_arch_mix)} slugs", file=sys.stderr)
+    print(f"Loaded CBSA mapping for {len(county_to_cbsa)} counties + {len(msa_detail_by_cbsa)} MSA details", file=sys.stderr)
 
     # Precompute effective risk100 per ACS variable
     acs_risk = {v: lookup_risk_for_acs_var(v, sector_risk) for v in ACS_VARS}
@@ -329,6 +402,15 @@ def main() -> None:
             top_sectors=top_sectors_for_narrative,
         )
 
+        # MSA-imputed detailed occupations for counties inside a CBSA
+        cbsa_for_county = county_to_cbsa.get(fips)
+        imputed_detailed = impute_county_detailed_occupations(
+            county_total=total,
+            cbsa=cbsa_for_county,
+            msa_summary_by_cbsa=msa_summary_by_cbsa,
+            msa_detail_by_cbsa=msa_detail_by_cbsa,
+        )
+
         counties.append({
             "fips": fips,
             "name": name,
@@ -340,6 +422,8 @@ def main() -> None:
             "occupationGroups": groups,
             "archetypeMix": archetype_mix,
             "narrative": narrative,
+            "parentCbsa": cbsa_for_county,
+            "imputedDetailedOccupations": imputed_detailed,
         })
 
     counties.sort(key=lambda r: r["weightedNetRisk100"], reverse=True)

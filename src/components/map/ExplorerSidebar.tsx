@@ -169,6 +169,16 @@ export interface CountySidebarData {
     share: number;
     netRisk100: number;
   }[];
+  /** Parent MSA name when the county is inside one. */
+  parentMetroName?: string | null;
+  /** MSA-imputed detailed-SOC occupations (top 15) for metro counties. */
+  imputedDetailedOccupations?: {
+    slug: string;
+    title: string;
+    estimatedEmployment: number;
+    estimatedShare: number;
+    netRisk100: number;
+  }[] | null;
 }
 
 export type NationalSummary = {
@@ -620,10 +630,57 @@ function CountyPane({
         )}
       </Section>
 
+      {data.imputedDetailedOccupations && data.imputedDetailedOccupations.length > 0 && (
+        <Section title="Detailed occupations (estimated)">
+          <p className="text-2xs text-[var(--muted)] leading-snug mb-2">
+            Estimates assume {data.name}&rsquo;s workforce mirrors the
+            {data.parentMetroName ? <> <span className="font-semibold text-[var(--foreground)]">{data.parentMetroName}</span> metro&rsquo;s</> : " parent metro&rsquo;s"} detailed-SOC mix
+            (BLS OEWS) scaled by county share of metro employment. Helpful for
+            ranking; less reliable for highly specialized outlying counties.
+          </p>
+          <div className="overflow-hidden">
+            <ul className="space-y-1">
+              {data.imputedDetailedOccupations.slice(0, 12).map((o) => (
+                <li key={o.slug}>
+                  <Link
+                    href={`/occupation-exposure/${o.slug}`}
+                    className="flex items-baseline justify-between gap-2 text-2xs py-0.5 hover:text-[var(--accent-text)] transition-colors group"
+                  >
+                    <span className="inline-flex items-baseline gap-2 truncate min-w-0">
+                      <span
+                        className="inline-block w-1.5 h-1.5 rounded-sm shrink-0"
+                        style={{ background: riskColor100(o.netRisk100) }}
+                        aria-hidden="true"
+                      />
+                      <span className="truncate group-hover:underline">{o.title}</span>
+                    </span>
+                    <span className="font-mono text-[var(--muted)] shrink-0 text-right">
+                      ~{formatJobs(o.estimatedEmployment)} · {o.estimatedShare.toFixed(1)}% · {o.netRisk100}
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Section>
+      )}
+
       <p className="text-2xs text-[var(--muted)] leading-relaxed border-t border-card pt-3 mt-4">
-        Below MSA level, occupations are at SOC major-group granularity (Census ACS
-        doesn&rsquo;t publish detailed SOC by county). For detailed occupations,
-        switch to Metro view above.{" "}
+        {data.imputedDetailedOccupations && data.imputedDetailedOccupations.length > 0 ? (
+          <>
+            Detailed-SOC estimates are{" "}
+            <span className="font-semibold text-[var(--foreground)]">imputed from parent-metro OEWS</span>;
+            the major-group shares above are real Census ACS data for this county. Non-metro
+            counties stay at major-group only (~22 leaves) because no public detailed-SOC
+            dataset exists at the county level.{" "}
+          </>
+        ) : (
+          <>
+            This county isn&rsquo;t inside a metro, so occupations are limited to ACS
+            major-group granularity. Detailed-SOC imputation is available for ~1,250 metro
+            counties.{" "}
+          </>
+        )}
         <Link href="#methodology" className="text-[var(--accent-text)] hover:underline">
           Methodology
         </Link>

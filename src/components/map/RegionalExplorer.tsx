@@ -166,6 +166,20 @@ interface CountyOccRow {
   occupationGroups: { slug: string; employment: number; share: number; netRisk100: number }[];
   archetypeMix?: ArchetypeMix;
   narrative?: string;
+  /** Parent CBSA code if the county is inside a metro. */
+  parentCbsa?: string | null;
+  /** Imputed detailed-SOC top occupations for metro counties — derived from
+   *  the parent MSA's OEWS distribution × this county's share of metro emp. */
+  imputedDetailedOccupations?: {
+    slug: string;
+    title: string;
+    category?: string;
+    soc?: string;
+    msaShare?: number;
+    estimatedEmployment: number;
+    estimatedShare: number;
+    netRisk100: number;
+  }[] | null;
 }
 interface CountyOccFile { counties: CountyOccRow[] }
 
@@ -866,6 +880,9 @@ export default function RegionalExplorer({
     const c = countyRiskByFips.get(selection.id);
     if (!c) return null;
     const detail = countyOccByFips.get(selection.id);
+    const parentMetro = detail?.parentCbsa
+      ? msaSummaryByCbsa.get(detail.parentCbsa)?.title ?? null
+      : null;
     const data: CountySidebarData = {
       fips: c.fips,
       name: c.name,
@@ -876,6 +893,8 @@ export default function RegionalExplorer({
       archetypeMix: detail?.archetypeMix ?? c.archetypeMix,
       occupationGroups: detail?.occupationGroups,
       topGroupsFallback: c.topGroups,
+      parentMetroName: parentMetro,
+      imputedDetailedOccupations: detail?.imputedDetailedOccupations,
     };
     return { kind: "county" as const, data, loading: countyOccLoading && !detail };
   }, [
