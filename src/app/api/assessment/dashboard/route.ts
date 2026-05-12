@@ -20,9 +20,11 @@ export async function GET(req: NextRequest) {
 
   type Row = Record<string, any>; // DB rows have dynamic columns
 
-  // Find user
+  // Find user. Case-insensitive lookup so a session cookie carrying
+  // lowercase email still resolves to a legacy mixed-case user row.
+  const canon = email.trim().toLowerCase();
   const users = await sql`
-    SELECT id FROM assessment_users WHERE email = ${email}
+    SELECT id FROM assessment_users WHERE LOWER(email) = ${canon}
   ` as Row[];
 
   if (users.length === 0) {
@@ -40,6 +42,7 @@ export async function GET(req: NextRequest) {
     id: row.id as string,
     userId: row.user_id as string,
     status: row.status as Assessment["status"],
+    currentStep: row.current_step as Assessment["currentStep"],
     createdAt: (row.created_at as Date).toISOString(),
     completedAt: row.completed_at ? (row.completed_at as Date).toISOString() : undefined,
     intake: row.intake_json as Assessment["intake"],

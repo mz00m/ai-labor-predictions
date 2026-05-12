@@ -22,6 +22,27 @@ export default function DashboardPage() {
   const [error, setError] = useState<string | null>(null);
   const codeInputRef = useRef<HTMLInputElement>(null);
 
+  // Poll the dashboard every 15s when an assessment is mid-flight so the
+  // user doesn't have to reload to see "ANALYZING" tick to "COMPLETE".
+  useEffect(() => {
+    if (authState !== "authenticated") return;
+    const inFlight = assessments.some(
+      (a) => a.status === "analyzing" || a.status === "intake",
+    );
+    if (!inFlight) return;
+    const t = setInterval(async () => {
+      try {
+        const res = await fetch("/api/assessment/dashboard");
+        if (!res.ok) return;
+        const data = await res.json();
+        setAssessments(data.assessments || []);
+      } catch {
+        // swallow — next tick will retry
+      }
+    }, 15_000);
+    return () => clearInterval(t);
+  }, [authState, assessments]);
+
   // On mount, check if we already have a valid session
   useEffect(() => {
     async function checkSession() {
@@ -297,17 +318,36 @@ export default function DashboardPage() {
                     </div>
                   )}
 
-                  {/* Actions */}
-                  <div className="mt-4 flex gap-3">
-                    {assessment.status === "complete" && (
-                      <Link
-                        href={`/assessment/report?id=${assessment.id}`}
-                        className="text-sm font-medium text-accent hover:underline"
-                      >
-                        View Report
-                      </Link>
-                    )}
+                  {/* Actions + age + stuck hint */}
+                  <div className="mt-4 flex items-center justify-between gap-3 flex-wrap">
+                    <div className="flex gap-3">
+                      {assessment.status === "complete" && (
+                        <Link
+                          href={`/assessment/report?id=${assessment.id}`}
+                          className="text-sm font-medium text-accent hover:underline"
+                        >
+                          View report &rarr;
+                        </Link>
+                      )}
+                      {assessment.status !== "complete" && (
+                        <Link
+                          href={`/assessment/progress?id=${assessment.id}`}
+                          className="text-sm font-medium text-accent hover:underline"
+                        >
+                          Resume &rarr;
+                        </Link>
+                      )}
+                    </div>
+                    <span className="text-xs text-gray-400">
+                      {relativeAge(assessment.createdAt)}
+                    </span>
                   </div>
+                  {stuckHint(assessment) && (
+                    <p className="mt-2 text-xs text-amber-700 bg-amber-50 border border-amber-100 rounded-md px-3 py-1.5 leading-snug">
+                      Looks stuck. Click <strong>Resume</strong> to retry the current step,
+                      or start a new plan if you&rsquo;d like to begin fresh.
+                    </p>
+                  )}
                 </div>
               ))}
             </div>
@@ -337,6 +377,32 @@ export default function DashboardPage() {
       </div>
     </div>
   );
+}
+
+function relativeAge(iso: string): string {
+  const then = new Date(iso).getTime();
+  if (Number.isNaN(then)) return "";
+  const seconds = Math.max(0, (Date.now() - then) / 1000);
+  if (seconds < 60) return "Just now";
+  if (seconds < 3600) {
+    const m = Math.floor(seconds / 60);
+    return `${m} minute${m === 1 ? "" : "s"} ago`;
+  }
+  if (seconds < 86400) {
+    const h = Math.floor(seconds / 3600);
+    return `${h} hour${h === 1 ? "" : "s"} ago`;
+  }
+  const d = Math.floor(seconds / 86400);
+  return `${d} day${d === 1 ? "" : "s"} ago`;
+}
+
+function stuckHint(a: Assessment): boolean {
+  if (a.status === "complete") return false;
+  const then = new Date(a.createdAt).getTime();
+  if (Number.isNaN(then)) return false;
+  // If it's been "analyzing" or "intake" for >10 minutes, almost certainly
+  // not actively generating. The pipeline typically finishes in 2-4 min.
+  return Date.now() - then > 10 * 60 * 1000;
 }
 
 function StatusBadge({ status }: { status: string }) {
