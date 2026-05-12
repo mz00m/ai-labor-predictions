@@ -302,8 +302,12 @@ export default function DashboardPage() {
                     <StatusBadge status={assessment.status} />
                   </div>
 
-                  {/* AI Readiness Score */}
-                  {assessment.report?.organizationProfile.aiReadinessScore && (
+                  {/* AI Readiness Score — gate every property access. An
+                      in-progress assessment can have `report` set but no
+                      `organizationProfile` yet, which crashed render here
+                      after the "Resume" feature started surfacing
+                      non-complete rows on this page. */}
+                  {assessment.report?.organizationProfile?.aiReadinessScore ? (
                     <div className="mt-4 flex items-center gap-3">
                       <span className="text-sm text-gray-400">AI Readiness:</span>
                       <div className="flex-1 bg-gray-200 rounded-full h-1.5">
@@ -316,7 +320,7 @@ export default function DashboardPage() {
                         {assessment.report.organizationProfile.aiReadinessScore}/10
                       </span>
                     </div>
-                  )}
+                  ) : null}
 
                   {/* Actions + age + stuck hint */}
                   <div className="mt-4 flex items-center justify-between gap-3 flex-wrap">
