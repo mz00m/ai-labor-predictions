@@ -130,7 +130,13 @@ export async function POST(request: Request) {
   try {
     stream = await client.messages.stream({
       model: CLAUDE_HAIKU,
-      max_tokens: 400,
+      // 60% of historical chat responses were getting truncated at 400 tokens
+      // (median response was ~377 tokens, right against the cap), driving
+      // ~8% of user messages to be literal "continue" requests. Bumping to
+      // 800 gives Haiku room to finish thoughts without changing the
+      // "be brief" instruction in the system prompt. Cost roughly doubles
+      // per response, but no more cut-off responses.
+      max_tokens: 800,
       system: systemPrompt,
       messages: trimmedMessages,
     });
