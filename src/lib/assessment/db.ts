@@ -130,8 +130,18 @@ export async function initAssessmentTables(): Promise<void> {
   `;
 }
 
+/** Canonicalize email for storage + lookup. PostgreSQL string equality is
+ *  case-sensitive; without this, "MattZieger@..." at intake and
+ *  "mattzieger@..." at later verification become two separate user rows,
+ *  one owning the assessment and one held by the session cookie — which
+ *  surfaces as a confusing 403 "Access denied" later. */
+function canonicalizeEmail(email: string): string {
+  return email.trim().toLowerCase();
+}
+
 /**
- * Create or get a user by email
+ * Create or get a user by email. Email is canonicalized (trim + lowercase)
+ * before lookup AND before insert so we never spawn case-twin rows.
  */
 export async function getOrCreateUser(email: string): Promise<{ id: string; email: string } | null> {
   const sql = getDb();
@@ -139,9 +149,12 @@ export async function getOrCreateUser(email: string): Promise<{ id: string; emai
 
   await initAssessmentTables();
 
+  const canon = canonicalizeEmail(email);
+  if (!canon) return null;
+
   const id = generateId();
   const existing = await sql`
-    SELECT id, email FROM assessment_users WHERE email = ${email}
+    SELECT id, email FROM assessment_users WHERE LOWER(email) = ${canon}
   ` as Row[];
 
   if (existing.length > 0) {
@@ -149,10 +162,10 @@ export async function getOrCreateUser(email: string): Promise<{ id: string; emai
   }
 
   await sql`
-    INSERT INTO assessment_users (id, email) VALUES (${id}, ${email})
+    INSERT INTO assessment_users (id, email) VALUES (${id}, ${canon})
   `;
 
-  return { id, email };
+  return { id, email: canon };
 }
 
 /**
@@ -378,24 +391,27 @@ export async function createVerificationCode(email: string, code: string): Promi
 
   await initAssessmentTables();
 
-  // Invalidate prior unused codes for this email
+  const canon = canonicalizeEmail(email);
+  if (!canon) return false;
+
+  // Invalidate prior unused codes for this email (case-insensitive)
   await sql`
     UPDATE email_verification_codes SET used = TRUE
-    WHERE email = ${email} AND used = FALSE
+    WHERE LOWER(email) = ${canon} AND used = FALSE
   `;
 
-  // Rate limit: max 3 codes per email per hour
+  // Rate limit: max 3 codes per email per hour (case-insensitive)
   type CountRow = { count: string };
   const rateLimitRows = await sql`
     SELECT COUNT(*) as count FROM email_verification_codes
-    WHERE email = ${email} AND created_at > NOW() - INTERVAL '1 hour'
+    WHERE LOWER(email) = ${canon} AND created_at > NOW() - INTERVAL '1 hour'
   ` as CountRow[];
   if (parseInt(rateLimitRows[0]?.count || "0") >= 3) return false;
 
   const id = generateId();
   await sql`
     INSERT INTO email_verification_codes (id, email, code, expires_at)
-    VALUES (${id}, ${email}, ${code}, NOW() + INTERVAL '10 minutes')
+    VALUES (${id}, ${canon}, ${code}, NOW() + INTERVAL '10 minutes')
   `;
   return true;
 }
@@ -407,10 +423,13 @@ export async function validateVerificationCode(email: string, code: string): Pro
   const sql = getDb();
   if (!sql) return false;
 
+  const canon = canonicalizeEmail(email);
+  if (!canon) return false;
+
   type Row = Record<string, any>;
   const rows = await sql`
     SELECT id, code, attempts FROM email_verification_codes
-    WHERE email = ${email} AND used = FALSE AND expires_at > NOW()
+    WHERE LOWER(email) = ${canon} AND used = FALSE AND expires_at > NOW()
     ORDER BY created_at DESC LIMIT 1
   ` as Row[];
 
@@ -436,15 +455,19 @@ export async function validateVerificationCode(email: string, code: string): Pro
 }
 
 /**
- * Get user ID for an email (without creating one)
+ * Get user ID for an email (without creating one). Case-insensitive lookup
+ * so legacy mixed-case rows still resolve from a lowercase session cookie.
  */
 export async function getUserByEmail(email: string): Promise<{ id: string; email: string } | null> {
   const sql = getDb();
   if (!sql) return null;
 
+  const canon = canonicalizeEmail(email);
+  if (!canon) return null;
+
   type Row = Record<string, any>;
   const rows = await sql`
-    SELECT id, email FROM assessment_users WHERE email = ${email}
+    SELECT id, email FROM assessment_users WHERE LOWER(email) = ${canon}
   ` as Row[];
 
   if (rows.length === 0) return null;
