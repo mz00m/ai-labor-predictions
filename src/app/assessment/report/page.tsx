@@ -247,7 +247,54 @@ export default function ReportPage() {
     );
   }
 
-  const report = assessment.report;
+  // Defensive normalization. A report row stored in the DB may have
+  // partial shape — Step 2 written but Step 3 not yet, an older row that
+  // predates a schema field, or an opt-in section the user hasn't
+  // generated. Without normalizing here, every downstream `.length`,
+  // `.map`, and field access becomes a potential undefined crash. We
+  // observed "Cannot read properties of undefined (reading 'length')"
+  // in production after the dashboard started routing partial reports
+  // here via Resume. Normalize once at the top instead of guarding
+  // every single access site.
+  const r = assessment.report;
+  const op = r.organizationProfile || {} as Partial<AssessmentReport["organizationProfile"]>;
+  const ra = r.riskAssessment || {} as Partial<AssessmentReport["riskAssessment"]>;
+  const report: AssessmentReport = {
+    ...r,
+    executiveSummary: r.executiveSummary || "",
+    organizationProfile: {
+      summary: op.summary || "",
+      industryContext: op.industryContext || "",
+      aiReadinessScore: typeof op.aiReadinessScore === "number" ? op.aiReadinessScore : 0,
+      aiReadinessRationale: op.aiReadinessRationale,
+      aiReadinessNextSteps: op.aiReadinessNextSteps,
+      keyStrengths: op.keyStrengths || [],
+      keyGaps: op.keyGaps || [],
+    },
+    quickWins: r.quickWins || [],
+    taskAnalysis: r.taskAnalysis || [],
+    toolRecommendations: r.toolRecommendations || [],
+    implementationRoadmap: r.implementationRoadmap || {
+      immediate: { timeframe: "0-3 months", objectives: [], actions: [], expectedOutcomes: [] },
+      mediumTerm: { timeframe: "3-6 months", objectives: [], actions: [], expectedOutcomes: [] },
+      longTerm: { timeframe: "6-12+ months", objectives: [], actions: [], expectedOutcomes: [] },
+    },
+    riskAssessment: {
+      overallRiskLevel: ra.overallRiskLevel || "moderate",
+      riskContextNote: ra.riskContextNote,
+      displacementRisk: ra.displacementRisk || "",
+      skillGaps: ra.skillGaps || [],
+      changeManagementNotes: ra.changeManagementNotes || "",
+      dataPrivacyConsiderations: ra.dataPrivacyConsiderations || "",
+      commonPitfalls: ra.commonPitfalls,
+      resistanceSources: ra.resistanceSources,
+      dataReadinessNote: ra.dataReadinessNote,
+      dimensionScores: ra.dimensionScores,
+    },
+    roiProjections: r.roiProjections || [],
+    humanCapabilities: r.humanCapabilities,
+    furtherEvaluation: r.furtherEvaluation || [],
+  };
 
   const TOC_SECTIONS = [
     { id: "summary", label: "Executive Summary" },
