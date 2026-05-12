@@ -455,6 +455,22 @@ export async function validateVerificationCode(email: string, code: string): Pro
 }
 
 /**
+ * Get a user by ID. Used by analyze/route.ts to resolve the email for the
+ * report-ready notification (the assessment row holds user_id; not the email).
+ */
+export async function getUserById(userId: string): Promise<{ id: string; email: string } | null> {
+  const sql = getDb();
+  if (!sql) return null;
+
+  type Row = Record<string, any>;
+  const rows = await sql`
+    SELECT id, email FROM assessment_users WHERE id = ${userId}
+  ` as Row[];
+  if (rows.length === 0) return null;
+  return { id: rows[0].id as string, email: rows[0].email as string };
+}
+
+/**
  * Get user ID for an email (without creating one). Case-insensitive lookup
  * so legacy mixed-case rows still resolve from a lowercase session cookie.
  */

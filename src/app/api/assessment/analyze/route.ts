@@ -11,6 +11,7 @@ import {
 } from "@/lib/assessment/analyze";
 import {
   getOrCreateUser,
+  getUserById,
   createAssessment,
   getAssessment,
   updateAssessmentStatus,
@@ -19,6 +20,7 @@ import {
   saveStepFeedback,
   mergePartialReport,
 } from "@/lib/assessment/db";
+import { sendReportReadyEmail } from "@/lib/assessment/send-report-email";
 import { signToken, makeSessionCookie } from "@/lib/assessment/auth";
 import { requireAssessmentOwner } from "@/lib/assessment/authz";
 // Allow up to 300 seconds for Claude API call + processing
@@ -312,6 +314,36 @@ export async function POST(req: NextRequest) {
           // complete so the report page renders. Roadmap, ROI, and risks
           // are now opt-in additions on top of a complete report.
           await updateAssessmentStatus(targetId, "complete");
+          // Fire the "your report is ready" email. We do this once on the
+          // status transition from analyzing -> complete so a user who
+          // closes the tab still gets a link back. Fire-and-forget — the
+          // send-report module swallows its own failures.
+          //
+          // Look up the user's email from the assessment owner record.
+          // The session cookie has it too, but the cookie may not be
+          // attached to every continuation call, and the assessment
+          // record is the source of truth.
+          if (!existing || existing.status !== "complete") {
+            const ownerId = existing?.userId ?? "";
+            try {
+              const owner = ownerId ? await getUserById(ownerId) : null;
+              if (owner?.email) {
+                await sendReportReadyEmail({
+                  email: owner.email,
+                  assessmentId: targetId,
+                  organizationName: intake.organizationName,
+                });
+              } else {
+                console.warn(
+                  `[email/report-ready] no email — assessment=${targetId.slice(0, 8)} owner_id=${ownerId.slice(0, 8) || "—"}`,
+                );
+              }
+            } catch (e) {
+              console.error(
+                `[email/report-ready] threw  assessment=${targetId.slice(0, 8)}: ${e instanceof Error ? e.message : e}`,
+              );
+            }
+          }
           stepResult = { report: toolReport };
           break;
         }

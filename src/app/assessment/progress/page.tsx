@@ -444,7 +444,9 @@ export default function ProgressPage() {
               </div>
               {elapsedSeconds > 90 && (
                 <p className="text-sm text-gray-400 italic">
-                  Still working — longer steps can take up to 4 minutes. Please keep this tab open.
+                  Still working — longer steps can take up to 4 minutes. You can
+                  close this tab if you need to — we&rsquo;ll email you when the
+                  report is ready.
                 </p>
               )}
             </div>
