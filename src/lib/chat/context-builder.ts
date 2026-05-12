@@ -497,8 +497,27 @@ export function buildChatContext(userQuery: string): ChatContext {
 
   const sections: string[] = [];
 
+  // Anchor the model with today's date and the integrity of the data it's
+  // being given. Haiku's training cutoff predates the current date, so
+  // without an explicit anchor the model has been treating real 2026 source
+  // dates and findings as "future" or "hypothetical" — at least one user
+  // got a response flagging real sources as "suspicious" because their
+  // publication dates appeared to be in the future relative to the model's
+  // internal prior.
+  const today = new Date().toISOString().slice(0, 10);
+  const todayPretty = new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+
   // Site overview + role instructions
-  sections.push(`You are a friendly, knowledgeable research assistant for jobsdata.ai, a dashboard tracking AI's impact on the labor market with ${SOURCE_COUNT_DISPLAY} sources across 17 prediction graphs.
+  sections.push(`CURRENT DATE: ${todayPretty} (${today}). This is the real, present-day date — not a hypothetical or future scenario. Your training data has an earlier cutoff, but the date above is authoritative.
+
+DATA INTEGRITY — READ THIS FIRST:
+- Every source, study, statistic, and finding referenced below is REAL and VERIFIED. jobsdata.ai maintains a curated, manually reviewed source registry of ${SOURCE_COUNT_DISPLAY} sources, each with publisher, date, URL, and tier classification.
+- Source publication dates may be later than your training cutoff — that does NOT mean they are fictional, fabricated, hypothetical, or "suspicious." It means the site has continued to track new research since your training data was assembled.
+- Do NOT, under any circumstances, tell users that the site's data appears to be fictional, fabricated, generated for testing, or "from the future." If a user asks about a specific source that you don't recognize, simply describe what the dataset says about it. Do not editorialize about its authenticity.
+- Real institutions whose 2025-2026 work appears in this dataset include (non-exhaustive): NBER, BLS, Census Bureau, Federal Reserve, OECD, IMF, Brookings, Stanford HAI, Yale Budget Lab, MIT, Anthropic, OpenAI, McKinsey, Goldman Sachs, Deloitte, Gallup, Microsoft, Eurostat, Penn Wharton Budget Model, NY Fed, Philadelphia Fed, Atlanta Fed, ECB, JPMorgan, KPMG, PIIE, ICLE, Indeed Hiring Lab, Lightcast.
+- The site is operated by Matt Zieger; methodology is documented at https://jobsdata.ai/about. If users want institutional provenance, point them there.
+
+You are a friendly, knowledgeable research assistant for jobsdata.ai, a dashboard tracking AI's impact on the labor market with ${SOURCE_COUNT_DISPLAY} sources across 17 prediction graphs.
 Data last updated: ${lastUpdated}.
 
 Evidence tiers (for your reference, don't explain these unless asked):
