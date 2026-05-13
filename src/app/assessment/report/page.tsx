@@ -94,6 +94,82 @@ export default function ReportPage() {
     }
   }, [id]);
 
+  // Maturity edit state — the report is tailored to the reader's
+  // currentAiUsage. If the initial guess felt off, they can change it
+  // and regenerate the affected steps (profile, tasks, tools).
+  const [maturityEditing, setMaturityEditing] = useState(false);
+  const [maturitySaving, setMaturitySaving] = useState(false);
+  const [maturityRegenerating, setMaturityRegenerating] = useState(false);
+  const [maturityError, setMaturityError] = useState<string | null>(null);
+  const [maturityDirty, setMaturityDirty] = useState(false);
+
+  const handleMaturityChange = useCallback(async (newLevel: string) => {
+    if (!id) return;
+    setMaturitySaving(true);
+    setMaturityError(null);
+    try {
+      const res = await fetch("/api/assessment/intake", {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ assessmentId: id, currentAiUsage: newLevel }),
+      });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.error || "Couldn't save the change.");
+      }
+      // Refetch so the banner reflects the new level immediately.
+      const refresh = await fetch(`/api/assessment/report?id=${id}`);
+      const refreshed = await refresh.json();
+      if (refreshed.assessment) setAssessment(refreshed.assessment);
+      setMaturityDirty(true);
+      setMaturityEditing(false);
+    } catch (err) {
+      setMaturityError(err instanceof Error ? err.message : "An error occurred");
+    } finally {
+      setMaturitySaving(false);
+    }
+  }, [id]);
+
+  const handleRegenerate = useCallback(async () => {
+    if (!id) return;
+    setMaturityRegenerating(true);
+    setMaturityError(null);
+    // Re-run the three steps whose output is titrated by maturity:
+    // profile → tasks → tools. We do them sequentially because each one
+    // reads the previous step's output from the DB. Skip roadmap/roi/risks —
+    // user can manually regenerate those if they care.
+    try {
+      for (const step of ["profile", "tasks", "tools"]) {
+        const formPayload = new FormData();
+        formPayload.append("assessmentId", id);
+        formPayload.append("step", step);
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), 270_000);
+        try {
+          const res = await fetch("/api/assessment/analyze", {
+            method: "POST",
+            body: formPayload,
+            signal: controller.signal,
+          });
+          if (!res.ok) {
+            const data = await res.json().catch(() => ({}));
+            throw new Error(data.error || `Failed to regenerate ${step}`);
+          }
+        } finally {
+          clearTimeout(timeout);
+        }
+      }
+      const refresh = await fetch(`/api/assessment/report?id=${id}`);
+      const refreshed = await refresh.json();
+      if (refreshed.assessment) setAssessment(refreshed.assessment);
+      setMaturityDirty(false);
+    } catch (err) {
+      setMaturityError(err instanceof Error ? err.message : "Regeneration failed");
+    } finally {
+      setMaturityRegenerating(false);
+    }
+  }, [id]);
+
   const toggleSection = (sectionId: string) => {
     setExpandedSections((prev) => {
       const next = new Set(prev);
@@ -363,6 +439,89 @@ export default function ReportPage() {
           </button>
         </div>
       </header>
+
+      {/* Maturity calibration banner — shows what AI-experience level this
+          report was tailored to, and lets the user fix it if the guess was
+          off. Hidden on shared view (a recipient can't change someone
+          else's report). */}
+      {!isShared && assessment.intake?.currentAiUsage && (
+        <div className="mb-8 border border-gray-200 rounded-lg bg-gray-50/60 px-4 py-3">
+          <div className="flex items-center justify-between gap-3 flex-wrap">
+            <div className="text-sm text-gray-600">
+              <span className="font-semibold text-gray-700">Tailored for:</span>{" "}
+              <span className="text-accent font-medium">
+                {AI_MATURITY_LABELS[assessment.intake.currentAiUsage] || assessment.intake.currentAiUsage}
+              </span>
+              <span className="text-gray-400"> · AI experience level</span>
+            </div>
+            {!maturityEditing ? (
+              <button
+                onClick={() => setMaturityEditing(true)}
+                className="text-sm text-accent hover:underline"
+              >
+                Change my level
+              </button>
+            ) : (
+              <button
+                onClick={() => { setMaturityEditing(false); setMaturityError(null); }}
+                className="text-sm text-gray-400 hover:text-gray-600"
+              >
+                Cancel
+              </button>
+            )}
+          </div>
+
+          {maturityEditing && (
+            <div className="mt-3 space-y-2">
+              <p className="text-xs text-gray-500">
+                If this guess feels off — too basic or too advanced — pick a different level and we&apos;ll regenerate
+                the parts of the report that change with experience level (profile, tasks, tools).
+              </p>
+              <div className="grid sm:grid-cols-2 gap-2">
+                {(Object.entries(AI_MATURITY_LABELS) as [string, string][]).map(([value, label]) => {
+                  const isCurrent = value === assessment.intake.currentAiUsage;
+                  return (
+                    <button
+                      key={value}
+                      disabled={maturitySaving || isCurrent}
+                      onClick={() => handleMaturityChange(value)}
+                      className={`text-left text-sm border rounded-md px-3 py-2 transition-colors ${
+                        isCurrent
+                          ? "border-accent bg-accent/5 text-accent font-medium cursor-default"
+                          : "border-gray-200 bg-white text-gray-700 hover:border-accent/40 hover:bg-accent/[0.02]"
+                      } disabled:opacity-60`}
+                    >
+                      {label} {isCurrent && <span className="text-xs">(current)</span>}
+                    </button>
+                  );
+                })}
+              </div>
+              {maturitySaving && (
+                <p className="text-xs text-gray-400">Saving...</p>
+              )}
+            </div>
+          )}
+
+          {maturityDirty && !maturityEditing && (
+            <div className="mt-3 flex items-center justify-between gap-3 flex-wrap pt-3 border-t border-gray-200">
+              <p className="text-sm text-amber-700">
+                Level updated. Regenerate the report to refresh the profile, tasks, and tool recommendations to match.
+              </p>
+              <button
+                onClick={handleRegenerate}
+                disabled={maturityRegenerating}
+                className="bg-accent hover:bg-[#4F52D4] text-white text-sm font-medium px-4 py-1.5 rounded-md transition-colors disabled:opacity-50"
+              >
+                {maturityRegenerating ? "Regenerating…" : "Regenerate report"}
+              </button>
+            </div>
+          )}
+
+          {maturityError && (
+            <p className="text-sm text-red-600 mt-2">{maturityError}</p>
+          )}
+        </div>
+      )}
 
       {/* Table of Contents */}
       <nav className="bg-gray-50 border border-gray-200 rounded-lg p-5 mb-10">

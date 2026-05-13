@@ -509,6 +509,24 @@ export async function generateStep1Profile(
 
 You are running Step 1 of a 4-step assessment. Your job: understand the organization deeply and identify immediate AI opportunities.
 
+AUDIENCE TITRATION — READ THIS BEFORE WRITING ANY OUTPUT:
+The reader's AI maturity is given in their intake (look for "AI Maturity:"). Calibrate the voice and specificity of every field — especially executiveSummary and quickWins — to their level. Treating a daily AI user like a beginner is patronizing; treating a beginner like a power user is useless.
+
+  • BEGINNER  ← intake says "none" or "exploring"
+  • INTERMEDIATE  ← intake says "piloting" or "some-adoption"
+  • ADVANCED  ← intake says "widespread"
+
+BEGINNER readers have used ChatGPT once or twice at most. They are anxious about AI and their job. They want concrete, low-risk first steps. quickWins[].description should read like "Open chat.openai.com, paste this prompt: [verbatim prompt], and you'll get a draft you can edit." Time-to-implement should be measured in minutes, not days.
+
+INTERMEDIATE readers use AI occasionally to regularly. They know what ChatGPT is. quickWins should focus on workflow improvements they probably haven't tried — "use the GPT custom builder to standardize your weekly status report" or "set up a Claude project with your style guide for consistent voice." Voice is colleague-to-colleague, not teacher-to-student.
+
+ADVANCED readers use AI tools daily. quickWins should target what they're probably NOT doing yet — automation, multi-step pipelines, chained tool-use, evaluation. No basic prompts. The executive summary should respect their expertise; cite specific patterns rather than explaining what AI is.
+
+ABSOLUTE RULES:
+- NEVER use beginner language ("Open ChatGPT and...", "Click here to...") for INTERMEDIATE or ADVANCED readers
+- NEVER skip concrete first steps for BEGINNER readers
+- The executive summary's voice should match the reader's level — don't explain what they already know, and don't assume what they don't
+
 Return valid JSON with these keys:
 {
   "executiveSummary": "2-3 paragraphs speaking directly to the person about their biggest AI opportunities. Be specific to their work.",
@@ -643,10 +661,30 @@ The person's actual role and functions MUST drive your task recommendations. Do 
 - A finance person at a healthcare company needs accounting tasks (AP/AR, financial reporting, budget forecasting, expense management) — NOT clinical or patient care tasks.
 - Look at the "Key Functions" and "Key Roles" fields in the intake. These tell you what the person actually does day-to-day. The "Industry" field tells you the domain context, not the job function.
 
-AI Maturity Gating — The person's maturity level determines task complexity:
-- "none"/"exploring": Focus on simple, single-tool tasks
-- "piloting": Can handle moderate multi-step workflows
-- "some-adoption"/"widespread": Ready for complex, integrated approaches
+AI Maturity Gating — The person's maturity level determines BOTH task complexity AND the voice/sophistication of starterPrompt:
+
+  • BEGINNER  ← "none" or "exploring"
+  • INTERMEDIATE  ← "piloting" or "some-adoption"
+  • ADVANCED  ← "widespread"
+
+For BEGINNER readers:
+- Focus on simple, single-tool tasks
+- starterPrompt: verbatim 2-4 sentence prompt, very concrete, walks them through what to paste. E.g., "I'm a [their role] preparing for [specific situation]. Help me draft [thing]. Keep it to one page, use bullet points where helpful."
+- gettingStarted: include the URL and exactly where to paste
+
+For INTERMEDIATE readers:
+- Moderate multi-step workflows
+- starterPrompt: sharper prompt using a deliberate technique they may not know yet — role priming, structured output, multi-shot examples, chain-of-thought. Same 2-4 sentence budget, higher signal density.
+- gettingStarted: skip basic mechanics; focus on workflow integration
+
+For ADVANCED readers:
+- Complex, integrated, automated approaches
+- starterPrompt: an advanced pattern — explicit eval rubric, multi-agent prompt structure, structured tool-use, or a self-critique loop. Be concise — they value density.
+- gettingStarted: target what they're probably NOT doing yet (automation, eval, evals)
+
+ABSOLUTE RULES:
+- NEVER use beginner language ("Open ChatGPT and paste") for INTERMEDIATE or ADVANCED readers
+- NEVER skip concrete first steps for BEGINNER readers
 
 Example Tools — Be Practical:
 For each task, suggest 1-3 example tools that could help. Include a MIX of:

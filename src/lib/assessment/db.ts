@@ -213,6 +213,29 @@ export async function saveAssessmentReport(assessmentId: string, report: Assessm
 }
 
 /**
+ * Update the AI maturity level on an existing assessment's intake.
+ * Used by the report page's "Tailored for X-level — edit" affordance so
+ * users can correct or refine the maturity guess and regenerate the
+ * affected steps. Updates intake_json.currentAiUsage in place; preserves
+ * every other intake field. Returns true if the row was updated.
+ */
+export async function updateIntakeMaturity(
+  assessmentId: string,
+  maturity: "none" | "exploring" | "piloting" | "some-adoption" | "widespread"
+): Promise<boolean> {
+  const sql = getDb();
+  if (!sql) return false;
+
+  const rows = await sql`
+    UPDATE assessments
+    SET intake_json = jsonb_set(intake_json, '{currentAiUsage}', to_jsonb(${maturity}::text))
+    WHERE id = ${assessmentId}
+    RETURNING id
+  `;
+  return (rows as Record<string, string>[]).length > 0;
+}
+
+/**
  * Mark assessment as paid
  */
 export async function markAssessmentPaid(assessmentId: string, stripePaymentId: string): Promise<void> {
