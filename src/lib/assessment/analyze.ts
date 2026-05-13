@@ -817,6 +817,9 @@ You are running the Tools step of a multi-part assessment. Earlier steps produce
 
 ${toolPrefNote}
 
+AUDIENCE — READ THIS FIRST:
+The reader is a non-technical worker. They may have used ChatGPT once or twice. They are anxious about AI and their job. They want to "keep my job and appear more productive" — not master a new field. They need orientation and handholding, not a strategy memo. Every field you write should pass this test: could a 45-year-old paralegal who has never used Claude open this tool in 10 minutes and produce something useful, working only from what you wrote?
+
 Tool Recommendations — Product Examples:
 - "start-here" (max 2): Priority Score ≥ 4.0, very easy to adopt
 - "add-next" (max 2): Priority Score ≥ 3.0, builds on start-here tools
@@ -829,6 +832,16 @@ General-Purpose AI Assistants (ChatGPT, Google Gemini, Claude):
 Many use cases DON'T need a specialized tool. For ad-hoc and occasional tasks — writing meeting agendas, drafting forms, taking notes, brainstorming, summarizing documents, creating templates — recommend a general-purpose AI assistant as the tool. Include ChatGPT (free tier available), Google Gemini (especially if they use Google Workspace), and Claude as options. These are often the best "start-here" recommendation for people at lower AI maturity levels.
 If someone already uses Google Workspace, call out that Gemini is built into Docs, Sheets, Gmail, etc.
 If someone already uses Microsoft 365, call out that Copilot is built into Word, Excel, Outlook, etc.
+
+HANDHOLDING REQUIREMENTS — these are non-negotiable for "start-here" and "add-next" tools (consider-later tools can be lighter):
+
+1. \`gettingStarted\` must be 3-5 ULTRA-SPECIFIC steps. Each step is ONE action under 2 minutes. Include exact URLs (chat.openai.com, claude.ai, gemini.google.com), button names ("click 'Sign up'", "paste into the message box"), and where to find things. Assume the user has never used the tool before. NO abstractions like "explore the interface" or "build it into your workflow."
+
+2. \`firstPromptToCopy\` must be a verbatim, copy-pasteable prompt the user can immediately use, tailored to THEIR role and intake. Use real role-specific language. Use [BRACKETS] only for personal/private info the user fills in (their name, a specific document name). NEVER use brackets for generic placeholders the prompt should already specify. Aim for 60-200 words of actual prompt text. Quality bar: this is the single most valuable field on the report — readers will copy it before they read anything else.
+
+3. \`expectedOutput\` — one short sentence describing what the user should see after running the prompt. This is the "how do I know it worked" signal. E.g., "You'll see a 5-paragraph draft you can edit." or "A bulleted summary with 6-10 key points." Keep it concrete and observable.
+
+4. \`commonMistake\` (optional) — one short sentence on the most likely mistake a new user will make. E.g., "Don't paste the entire policy document — start with one paragraph and add more if the AI asks." Skip this field if there's no obvious pitfall.
 
 CRITICAL OUTPUT FORMAT: Your entire response must be a single valid JSON object and nothing else. No prose before, no prose after, no markdown fences. Start your response with the opening { character. Keep field values concise — long prose fields risk hitting the output limit mid-string and breaking JSON parsing.
 
@@ -846,9 +859,12 @@ Return valid JSON with ONLY a toolRecommendations array (no roadmap, no ROI):
       "priorityTier": "immediate|medium-term|long-term",
       "estimatedMonthlyCost": "Free tier + paid details + cost/hr math",
       "firstTask": "Concrete first task from their work",
+      "firstPromptToCopy": "Verbatim copy-paste prompt tailored to their role, 60-200 words. The single most useful field on this report.",
+      "expectedOutput": "One short sentence on what they'll see when it works",
+      "commonMistake": "One short sentence on the most common new-user mistake (optional, omit if none obvious)",
       "upgradeSignal": "When to upgrade from free",
       "specificProducts": [{ "name": "Product", "url": "https://url", "pricing": "Free / $X/mo", "free": true }],
-      "gettingStarted": ["Step 1", "Step 2", "Step 3"],
+      "gettingStarted": ["Open chat.openai.com and click 'Sign up' in the top right (use your work or personal email)", "Once logged in, click the message box at the bottom of the screen", "Paste the prompt below — DON'T edit it the first time, just see what comes back", "Read the response carefully; if anything is wrong or generic, type 'make this more specific to [your situation]' as a follow-up"],
       "successKpis": ["Measurable KPI"]
     }
   ]

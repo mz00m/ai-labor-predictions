@@ -281,6 +281,16 @@ export interface ToolRecommendation {
   upgradeSignal?: string;
   /** Single concrete first task to try from their actual work */
   firstTask?: string;
+  /**
+   * Verbatim copy-paste prompt tailored to the user's role. 60-200 words.
+   * Highest-value field on the report — readers will copy this before
+   * reading anything else.
+   */
+  firstPromptToCopy?: string;
+  /** One short sentence describing what the user should see when it works */
+  expectedOutput?: string;
+  /** One short sentence on the most common new-user mistake (optional) */
+  commonMistake?: string;
 }
 
 export interface DimensionScores {

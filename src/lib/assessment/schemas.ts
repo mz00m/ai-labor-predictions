@@ -175,6 +175,13 @@ const ToolRecommendationSchema = z.object({
   learningTime: z.string().optional().catch(undefined),
   upgradeSignal: z.string().optional().catch(undefined),
   firstTask: z.string().optional().catch(undefined),
+  // Handholding fields (added 2026-05-13) — make tool recs usable for
+  // non-technical readers without leaving the report. firstPromptToCopy
+  // is the single highest-value field per UX hypothesis: readers will
+  // copy it before reading anything else.
+  firstPromptToCopy: z.string().optional().catch(undefined),
+  expectedOutput: z.string().optional().catch(undefined),
+  commonMistake: z.string().optional().catch(undefined),
 });
 
 const ResourceSchema = z.object({

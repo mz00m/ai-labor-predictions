@@ -650,6 +650,35 @@ export default function ReportPage() {
                           </ol>
                         </div>
                       )}
+                      {/* First prompt to copy — the headline value field for
+                          non-technical readers. Mirrors the task-level
+                          starterPrompt UI so the copy interaction is familiar. */}
+                      {tool.firstPromptToCopy && (
+                        <div className="bg-gray-50 border border-gray-200 rounded px-3 py-2">
+                          <div className="flex items-center justify-between mb-1">
+                            <span className="text-xs font-bold uppercase tracking-wider text-gray-400">Paste this into the tool to start</span>
+                            <button
+                              onClick={() => {
+                                navigator.clipboard.writeText(tool.firstPromptToCopy!);
+                              }}
+                              className="text-xs text-accent hover:underline font-medium"
+                            >
+                              Copy prompt
+                            </button>
+                          </div>
+                          <p className="text-sm text-gray-600 font-mono leading-relaxed whitespace-pre-wrap">{tool.firstPromptToCopy}</p>
+                          {tool.expectedOutput && (
+                            <p className="text-xs text-green-700 mt-2 leading-snug">
+                              <span className="font-semibold">You should see:</span> {tool.expectedOutput}
+                            </p>
+                          )}
+                          {tool.commonMistake && (
+                            <p className="text-xs text-amber-700 mt-1 leading-snug">
+                              <span className="font-semibold">Heads up:</span> {tool.commonMistake}
+                            </p>
+                          )}
+                        </div>
+                      )}
                       {/* Success KPIs */}
                       {tool.successKpis && tool.successKpis.length > 0 && (
                         <div>
