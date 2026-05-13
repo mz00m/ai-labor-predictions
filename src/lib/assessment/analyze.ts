@@ -817,8 +817,18 @@ You are running the Tools step of a multi-part assessment. Earlier steps produce
 
 ${toolPrefNote}
 
-AUDIENCE — READ THIS FIRST:
-The reader is a non-technical worker. They may have used ChatGPT once or twice. They are anxious about AI and their job. They want to "keep my job and appear more productive" — not master a new field. They need orientation and handholding, not a strategy memo. Every field you write should pass this test: could a 45-year-old paralegal who has never used Claude open this tool in 10 minutes and produce something useful, working only from what you wrote?
+AUDIENCE TITRATION — READ THIS FIRST:
+The reader's AI maturity is given in their intake (look for "AI Maturity:"). Calibrate the entire output to their level. Treating a daily AI user like a beginner is patronizing; treating a beginner like a power user is useless. Three tiers, mapped from the 5 intake levels:
+
+  • BEGINNER  ← "none" or "exploring"
+  • INTERMEDIATE  ← "piloting" or "some-adoption"
+  • ADVANCED  ← "widespread"
+
+BEGINNER readers may have used ChatGPT once or twice at most. They are anxious about AI and their job. They need orientation and handholding. Every field should pass this test: could a 45-year-old paralegal who has never used Claude open this tool in 10 minutes and produce something useful, working only from what you wrote?
+
+INTERMEDIATE readers use AI occasionally to regularly. They know what ChatGPT is, can navigate a basic LLM interface, have probably tried a prompt or two. They want sharper recommendations, not onboarding.
+
+ADVANCED readers use AI tools daily across most of their work. They want sophisticated patterns, under-utilized techniques, and edge cases — not "open chat.openai.com."
 
 Tool Recommendations — Product Examples:
 - "start-here" (max 2): Priority Score ≥ 4.0, very easy to adopt
@@ -833,15 +843,42 @@ Many use cases DON'T need a specialized tool. For ad-hoc and occasional tasks �
 If someone already uses Google Workspace, call out that Gemini is built into Docs, Sheets, Gmail, etc.
 If someone already uses Microsoft 365, call out that Copilot is built into Word, Excel, Outlook, etc.
 
-HANDHOLDING REQUIREMENTS — these are non-negotiable for "start-here" and "add-next" tools (consider-later tools can be lighter):
+OUTPUT REQUIREMENTS BY TIER — these are non-negotiable. Read the AI Maturity, then write to that tier:
 
-1. \`gettingStarted\` must be 3-5 ULTRA-SPECIFIC steps. Each step is ONE action under 2 minutes. Include exact URLs (chat.openai.com, claude.ai, gemini.google.com), button names ("click 'Sign up'", "paste into the message box"), and where to find things. Assume the user has never used the tool before. NO abstractions like "explore the interface" or "build it into your workflow."
+**FOR BEGINNER readers (intake says "none" or "exploring"):**
 
-2. \`firstPromptToCopy\` must be a verbatim, copy-pasteable prompt the user can immediately use, tailored to THEIR role and intake. Use real role-specific language. Use [BRACKETS] only for personal/private info the user fills in (their name, a specific document name). NEVER use brackets for generic placeholders the prompt should already specify. Aim for 60-200 words of actual prompt text. Quality bar: this is the single most valuable field on the report — readers will copy it before they read anything else.
+1. \`gettingStarted\` — 3-5 ULTRA-SPECIFIC steps. Each step is ONE action under 2 minutes. Include exact URLs (chat.openai.com, claude.ai, gemini.google.com), button names ("click 'Sign up'", "paste into the message box"), and where to find things. Assume the reader has never used the tool. NO abstractions like "explore the interface."
 
-3. \`expectedOutput\` — one short sentence describing what the user should see after running the prompt. This is the "how do I know it worked" signal. E.g., "You'll see a 5-paragraph draft you can edit." or "A bulleted summary with 6-10 key points." Keep it concrete and observable.
+2. \`firstPromptToCopy\` — verbatim copy-paste prompt, 60-200 words, tailored to THEIR role. Use [BRACKETS] only for personal/private info the user fills in (their name, a specific document name). NEVER use brackets for generic placeholders the prompt should already specify. This is the single highest-value field on the report; readers will copy it before they read anything else.
 
-4. \`commonMistake\` (optional) — one short sentence on the most likely mistake a new user will make. E.g., "Don't paste the entire policy document — start with one paragraph and add more if the AI asks." Skip this field if there's no obvious pitfall.
+3. \`expectedOutput\` — one short sentence describing what they should see when it works. E.g., "You'll see a 5-paragraph draft you can edit." The "how do I know it worked" signal.
+
+4. \`commonMistake\` — one short sentence on the most likely beginner UX/usage mistake. Skip if none is obvious.
+
+**FOR INTERMEDIATE readers ("piloting" or "some-adoption"):**
+
+1. \`gettingStarted\` — 2-3 strategic steps focused on workflow integration, not signup mechanics. Assume they can use the tool. Focus on the moves that matter ("set up a custom GPT for this role" / "save this as a recurring weekly automation").
+
+2. \`firstPromptToCopy\` — sharper, more specialized prompt (60-150 words) showing a technique they probably haven't tried — chain-of-thought, role priming, structured output, multi-shot examples. Same role-specific tailoring, but assume some prompting fluency.
+
+3. \`expectedOutput\` — optional. Only include if the output is non-obvious or has a quality signal worth flagging.
+
+4. \`commonMistake\` — focus on workflow / strategic mistakes (not basic UX). E.g., "Don't use this for [X]; the model's strength here is [Y]."
+
+**FOR ADVANCED readers ("widespread"):**
+
+1. \`gettingStarted\` — 1-2 high-leverage workflow integrations. NO onboarding language. No "open chat.openai.com." Focus on what they probably aren't doing yet.
+
+2. \`firstPromptToCopy\` — an advanced pattern they likely don't already use: multi-step pipelines, fine-grained role separation, structured tool-use, custom evaluation prompts. 40-100 words is fine — higher signal density.
+
+3. \`expectedOutput\` — skip unless the pattern is unusual.
+
+4. \`commonMistake\` — advanced pitfalls: overfitting to one model, ignoring eval, prompt brittleness across model versions.
+
+ABSOLUTE RULES:
+- NEVER use beginner language ("Sign up", "click here") for INTERMEDIATE or ADVANCED readers
+- NEVER skip handholding for BEGINNER readers
+- The handholding fields (firstPromptToCopy, expectedOutput, commonMistake) are MOST important for "start-here" and "add-next" tier tools. For "consider-later" tools, lighter coverage is acceptable across all reader tiers.
 
 CRITICAL OUTPUT FORMAT: Your entire response must be a single valid JSON object and nothing else. No prose before, no prose after, no markdown fences. Start your response with the opening { character. Keep field values concise — long prose fields risk hitting the output limit mid-string and breaking JSON parsing.
 
