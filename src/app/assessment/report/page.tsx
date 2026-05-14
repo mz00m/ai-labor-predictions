@@ -523,6 +523,63 @@ export default function ReportPage() {
         </div>
       )}
 
+      {/* Where to start — short orientation block before the TOC. Users
+          landing on a long report need an opinionated path; without one
+          they bounce or scroll randomly. Three concrete entry points,
+          ordered by time investment. */}
+      <div className="mb-10 border-l-2 border-accent/40 pl-5 py-1">
+        <p className="text-xs font-mono uppercase tracking-[0.18em] text-accent mb-3">
+          Where to start
+        </p>
+        <ul className="space-y-2.5 text-base text-gray-700">
+          <li className="flex gap-3">
+            <span className="text-accent font-bold flex-shrink-0">3 min →</span>
+            <span>
+              Read the{" "}
+              <a
+                href="#summary"
+                onClick={() => setExpandedSections((prev) => { const next = new Set(prev); next.add("summary"); return next; })}
+                className="text-accent hover:underline"
+              >
+                Executive Summary
+              </a>{" "}
+              for the headline findings.
+            </span>
+          </li>
+          <li className="flex gap-3">
+            <span className="text-accent font-bold flex-shrink-0">10 min →</span>
+            <span>
+              Open{" "}
+              <a
+                href="#tools"
+                onClick={() => setExpandedSections((prev) => { const next = new Set(prev); next.add("tools"); return next; })}
+                className="text-accent hover:underline"
+              >
+                Recommended Tools
+              </a>{" "}
+              and try the first prompt with the &ldquo;start-here&rdquo; tool.
+            </span>
+          </li>
+          <li className="flex gap-3">
+            <span className="text-accent font-bold flex-shrink-0">30 min →</span>
+            <span>
+              Read your{" "}
+              <a
+                href="#tasks"
+                onClick={() => setExpandedSections((prev) => { const next = new Set(prev); next.add("tasks"); return next; })}
+                className="text-accent hover:underline"
+              >
+                Task Analysis
+              </a>{" "}
+              and pick one workflow to test this week.
+            </span>
+          </li>
+        </ul>
+        <p className="text-xs text-gray-400 mt-4">
+          This report is saved — bookmark it and return any time.
+        </p>
+      </div>
+
       {/* Table of Contents */}
       <nav className="bg-gray-50 border border-gray-200 rounded-lg p-5 mb-10">
         <div className="flex items-center justify-between mb-3">
@@ -549,7 +606,7 @@ export default function ReportPage() {
       </nav>
 
       {/* 1. Executive Summary */}
-      <Section num={1} id="summary" title="Executive Summary" expanded={expandedSections.has("summary")} onToggle={() => toggleSection("summary")}>
+      <Section num={1} id="summary" title="Executive Summary" lede="The headline findings, in plain English." expanded={expandedSections.has("summary")} onToggle={() => toggleSection("summary")}>
         <div className="text-md text-gray-600 leading-[1.7] whitespace-pre-line" style={{ fontFamily: "'Source Serif 4', 'Source Serif Pro', Georgia, serif" }}>
           {report.executiveSummary}
         </div>
@@ -563,7 +620,7 @@ export default function ReportPage() {
       </Section>
 
       {/* 2. AI Readiness */}
-      <Section num={2} id="readiness" title="AI Readiness Assessment" expanded={expandedSections.has("readiness")} onToggle={() => toggleSection("readiness")}>
+      <Section num={2} id="readiness" title="AI Readiness Assessment" lede="Where your organization sits today, and what's holding you back from a higher score." expanded={expandedSections.has("readiness")} onToggle={() => toggleSection("readiness")}>
         {report.organizationProfile.aiReadinessScore > 0 && (
           <div className="mb-6">
             <div className="flex items-end gap-4 mb-3">
@@ -633,7 +690,7 @@ export default function ReportPage() {
 
       {/* 3. Task-by-Task Analysis */}
       {report.taskAnalysis.length > 0 && (
-        <Section num={3} id="tasks" title="Task-by-Task Analysis" expanded={expandedSections.has("tasks")} onToggle={() => toggleSection("tasks")}>
+        <Section num={3} id="tasks" title="Task-by-Task Analysis" lede="Specific tasks AI can take off your plate — sorted by opportunity." expanded={expandedSections.has("tasks")} onToggle={() => toggleSection("tasks")}>
           <p className="text-base text-gray-400 mb-4">
             {report.taskAnalysis.length} tasks analyzed. Sorted by AI opportunity level.
           </p>
@@ -728,7 +785,7 @@ export default function ReportPage() {
       {/* Full report sections */}
           {/* 4. Recommended Tools & Services */}
           {report.toolRecommendations.length > 0 && (
-            <Section num={4} id="tools" title="Recommended Tools & Services" expanded={expandedSections.has("tools")} onToggle={() => toggleSection("tools")}>
+            <Section num={4} id="tools" title="Recommended Tools & Services" lede="AI tools to try, ranked by where to start. Each comes with a prompt you can copy and paste." expanded={expandedSections.has("tools")} onToggle={() => toggleSection("tools")}>
               <p className="text-base text-gray-400 mb-4">
                 {report.toolRecommendations.length} tools evaluated for your workflow. Sorted by priority.
               </p>
@@ -888,7 +945,7 @@ export default function ReportPage() {
           )}
 
           {/* 5. Implementation Roadmap (opt-in) */}
-          <Section num={5} id="roadmap" title="Implementation Roadmap" expanded={expandedSections.has("roadmap")} onToggle={() => toggleSection("roadmap")}>
+          <Section num={5} id="roadmap" title="Implementation Roadmap" lede="A 12-month plan in three phases — what to do this quarter, this half, and this year." expanded={expandedSections.has("roadmap")} onToggle={() => toggleSection("roadmap")}>
             {!hasRoadmap(report.implementationRoadmap) ? (
               <OptionalSectionCta
                 title="Generate your roadmap"
@@ -972,7 +1029,7 @@ export default function ReportPage() {
           </Section>
 
           {/* 6. Risk Assessment (opt-in) */}
-          <Section num={6} id="risks" title="Risks, Pitfalls & Change Management" expanded={expandedSections.has("risks")} onToggle={() => toggleSection("risks")}>
+          <Section num={6} id="risks" title="Risks, Pitfalls & Change Management" lede="Where this goes wrong and how to avoid it — including the skills that grow more valuable with AI." expanded={expandedSections.has("risks")} onToggle={() => toggleSection("risks")}>
             {!report.riskAssessment?.displacementRisk ? (
               <OptionalSectionCta
                 title="Generate your risk assessment"
@@ -1083,7 +1140,7 @@ export default function ReportPage() {
           </Section>
 
           {/* 7. ROI Projections (opt-in) */}
-          <Section num={7} id="roi" title="ROI Projections" expanded={expandedSections.has("roi")} onToggle={() => toggleSection("roi")}>
+          <Section num={7} id="roi" title="ROI Projections" lede="Estimated dollar impact for the highest-leverage areas, with the math shown." expanded={expandedSections.has("roi")} onToggle={() => toggleSection("roi")}>
             {report.roiProjections.length === 0 ? (
               <OptionalSectionCta
                 title="Project the ROI"
@@ -1143,7 +1200,7 @@ export default function ReportPage() {
 
           {/* 8. Human Capabilities — generated as part of the Risks step */}
           {report.humanCapabilities && report.humanCapabilities.length > 0 && (
-            <Section num={8} id="capabilities" title="Skills That Grow With AI" expanded={expandedSections.has("capabilities")} onToggle={() => toggleSection("capabilities")}>
+            <Section num={8} id="capabilities" title="Skills That Grow With AI" lede="Capabilities that become more valuable as AI handles more routine work." expanded={expandedSections.has("capabilities")} onToggle={() => toggleSection("capabilities")}>
               <p className="text-sm text-gray-400 mb-4">
                 As AI handles more routine work, these capabilities become <em>more</em> valuable — not less.
                 Drawn from our framework of 62 human capabilities scored for AI-era appreciation.
@@ -1175,7 +1232,7 @@ export default function ReportPage() {
               that content. See fix/simplify-steps commit for rationale. */}
 
           {/* 9. Your Inputs */}
-          <Section num={9} id="inputs" title="Your Inputs" expanded={expandedSections.has("inputs")} onToggle={() => toggleSection("inputs")}>
+          <Section num={9} id="inputs" title="Your Inputs" lede="The information you provided that shaped this report." expanded={expandedSections.has("inputs")} onToggle={() => toggleSection("inputs")}>
             <p className="text-sm text-gray-400 mb-4">What you told us — for reference. The more detail you provide, the more tailored your report.</p>
             <div className="space-y-2">
               {[
@@ -1307,17 +1364,23 @@ export default function ReportPage() {
 
 /* ---- Helper Components ---- */
 
-function Section({ num, id, title, expanded, onToggle, children }: { num: number; id: string; title: string; expanded: boolean; onToggle: () => void; children: React.ReactNode }) {
+function Section({ num, id, title, lede, expanded, onToggle, children }: { num: number; id: string; title: string; lede?: string; expanded: boolean; onToggle: () => void; children: React.ReactNode }) {
   return (
-    <section id={id} className="mb-10 scroll-mt-20">
+    <section id={id} className="mb-16 scroll-mt-20">
+      {/* Chapter eyebrow — small accent label that makes each section feel
+          like a discrete chapter rather than a heading in a wall of text. */}
+      <div className="text-xs font-mono uppercase tracking-[0.18em] text-accent mb-2">
+        Section {String(num).padStart(2, "0")}
+      </div>
       <button
         onClick={onToggle}
-        className="w-full flex items-center gap-3 mb-4 pb-2 border-b border-gray-100 group cursor-pointer text-left"
+        className="w-full flex items-start gap-3 mb-2 group cursor-pointer text-left"
       >
-        <span className="text-base font-mono text-accent">{num}.</span>
-        <h2 className="text-2xl font-bold text-gray-900 flex-1">{title}</h2>
+        <h2 className="text-3xl sm:text-[2rem] font-bold text-gray-900 flex-1 leading-[1.15] tracking-tight">
+          {title}
+        </h2>
         <svg
-          className={`w-5 h-5 text-gray-400 group-hover:text-gray-600 transition-transform duration-200 ${expanded ? "rotate-180" : ""}`}
+          className={`w-5 h-5 text-gray-400 group-hover:text-gray-600 transition-transform duration-200 mt-2 flex-shrink-0 ${expanded ? "rotate-180" : ""}`}
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -1326,10 +1389,17 @@ function Section({ num, id, title, expanded, onToggle, children }: { num: number
           <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
         </svg>
       </button>
-      <div
-        className={`transition-all duration-300 ease-in-out overflow-hidden ${expanded ? "max-h-[10000px] opacity-100" : "max-h-0 opacity-0"}`}
-      >
-        {children}
+      {lede && (
+        <p className="text-md text-gray-500 mb-5 max-w-2xl leading-relaxed">
+          {lede}
+        </p>
+      )}
+      <div className="border-t border-gray-200 pt-6">
+        <div
+          className={`transition-all duration-300 ease-in-out overflow-hidden ${expanded ? "max-h-[10000px] opacity-100" : "max-h-0 opacity-0"}`}
+        >
+          {children}
+        </div>
       </div>
     </section>
   );
