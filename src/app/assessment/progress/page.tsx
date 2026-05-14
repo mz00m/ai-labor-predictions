@@ -10,7 +10,7 @@ import type {
   TaskAnalysis,
   ToolRecommendation,
 } from "@/lib/assessment/types";
-import { AUTO_STEPS, STEP_LABELS, STEP_DESCRIPTIONS } from "@/lib/assessment/types";
+import { AUTO_STEPS, STEP_LABELS, STEP_DESCRIPTIONS, AI_MATURITY_LABELS } from "@/lib/assessment/types";
 import { STEP_TIMEOUT_MS, tryRecoverStepFromDb } from "./recovery";
 
 // The progress page only drives the AUTO pipeline (profile → tasks → tools).
@@ -245,9 +245,28 @@ export default function ProgressPage() {
       <h1 className="text-4xl sm:text-heading-2xl font-bold text-gray-900 leading-tight mb-2 tracking-tight">
         Your AI Action Plan
       </h1>
-      <p className="text-md text-gray-400 mb-8">
+      <p className="text-md text-gray-400 mb-3">
         {assessment?.intake?.organizationName}
       </p>
+
+      {/* Tailoring indicator — surfaces that we're calibrating to the
+          user's AI experience level while the pipeline runs. Editing is
+          deferred to the report page (after assessment completes) to
+          avoid the user changing mid-flight and getting half-tier'd
+          output. Read-only here. */}
+      {assessment?.intake?.currentAiUsage && (
+        <div className="mb-8 flex items-center gap-2 flex-wrap text-sm">
+          <span className="inline-flex items-center gap-1.5 bg-accent/[0.06] border border-accent/15 text-accent rounded-full px-3 py-1 font-medium">
+            <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z" />
+            </svg>
+            Tailoring for: {AI_MATURITY_LABELS[assessment.intake.currentAiUsage]}
+          </span>
+          <span className="text-xs text-gray-400">
+            Handholding and prompt specificity are calibrated to this level. You can adjust it on the finished report.
+          </span>
+        </div>
+      )}
 
       {/* Step progress bar — only shows the AUTO pipeline */}
       <div className="flex items-center gap-1 mb-10">

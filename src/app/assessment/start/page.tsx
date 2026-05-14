@@ -543,6 +543,10 @@ export default function AssessmentStartPage() {
                 <option key={value} value={value}>{label}</option>
               ))}
             </select>
+            <p className="text-xs text-gray-400 mt-1.5 leading-relaxed">
+              <span className="font-medium text-gray-500">We tailor the report to this.</span>{" "}
+              Beginners get step-by-step prompts and exact URLs; advanced users get sophisticated patterns and skip the basics. You can change this later on the final report.
+            </p>
           </Field>
         </div>
       )}
