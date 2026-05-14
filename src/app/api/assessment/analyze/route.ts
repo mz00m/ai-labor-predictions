@@ -38,9 +38,19 @@ export async function POST(req: NextRequest) {
     const step = formData.get("step") as AssessmentStep | null;
     const feedbackRaw = formData.get("feedback") as string | null;
 
-    // Continuation calls (steps 2-4) only need assessmentId + step.
-    // Initial calls need intake + email (or assessmentId for step 1 re-runs).
-    const isContinuation = assessmentIdParam && step && step !== "profile";
+    // Continuation calls (any step on an existing assessment) only need
+    // assessmentId + step. The canonical intake lives on the row already,
+    // so we load it from the DB instead of re-validating the client copy.
+    //
+    // Initial calls (from /assessment/start, no assessmentId yet) need
+    // intake + email — that's how we mint a new row.
+    //
+    // Previously this excluded step === "profile" from the continuation
+    // path, which broke the report page's "Change my AI maturity →
+    // Regenerate report" flow (re-runs the profile step on an existing
+    // row without re-passing intake). Now any step with an assessmentId
+    // is a continuation.
+    const isContinuation = !!assessmentIdParam && !!step;
 
     if (!isContinuation && !intakeRaw) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
