@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "Global Automation Atlas",
+      "author": "Garg, Crosta & Baier",
+      "publisher": "automationatlas.org",
+      "date": "2026-05-18",
+      "url": "https://automationatlas.org/",
+      "takeaway": "The first global task-level automation atlas: 18,797 O*NET tasks scored across 124 countries, producing 2.33M task-country labels. Core insight: automation risk is not fixed at the task level — the same task carries different exposure depending on local wages, technology adoption rates, workforce skills, and production environment. Covers nations representing 99%+ of global GDP and population. Provides the cross-country comparative baseline that US-centric indices (Eloundou, Felten, Tomei) cannot offer, and directly challenges the assumption that AI displaces uniformly across geographies.",
+      "weekFeatured": "2026-05-18",
+      "tier": 2
+    },
+    {
       "title": "AI Will Not Destroy the Job Market",
       "author": "Andrew Ng",
       "publisher": "DeepLearning.AI (The Batch)",
