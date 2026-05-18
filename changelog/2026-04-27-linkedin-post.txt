@@ -1,0 +1,37 @@
+jobsdata.ai Weekly Update — Week of April 20–27, 2026
+
+Two notes up top: the site crossed 30,000 cumulative views this week, and a new Census Bureau working paper using near-universe administrative data found a 12.4% regression-adjusted decline in early-career employment in the most-AI-exposed industries — replicating the Brynjolfsson "Canaries" finding at full administrative scale, and explicitly ruling out interest rates as the primary driver.
+
+Nine new sources were added across nine prediction graphs. The week's headline finding: the most rigorous early-career displacement evidence we have now comes from administrative payroll data, not surveys.
+
+What's new this week:
+
+Research and data
+→ 9 new sources added: 3 Tier 1 (peer-reviewed / RCT / Census working paper), 4 Tier 2 (think tank / forecasting hub), 1 Tier 3 (Burning Glass), 1 Tier 4 (commentary). Registry: 527 → 536.
+→ Tucker (US Census Bureau, QWI). Replicates and extends the Brynjolfsson-Chandar-Chen "Canaries" finding using near-universe administrative data: 12.4% regression-adjusted decline in early-career employment in most-AI-exposed industries, driven by a 9% immediate drop in hires at ChatGPT's release. Information sector: −30% early-career employment. A monetary-policy robustness check rules out interest rates as the driver.
+→ Metaculus Labor Automation Forecasting Hub (launched April 20 with Renaissance Philanthropy and the Schultz Family Foundation). 93 forecasting questions with 2030 and 2035 horizons. Headline projections now feeding the site: 1.9% overall US displacement by 2030 / 3.4% by 2035; 17.2% white-collar by 2035 in most-vulnerable AI-exposed roles; 22.3% software developer decline by 2035; 52.5% / 70.9% GenAI work adoption by 2030 / 2035.
+→ Liu, Christian et al. (CMU / Oxford / MIT / UCLA, N=1,222 RCT). First large-scale causal evidence of AI-induced performance decline and persistence loss after just 10–15 minutes of AI use, replicated across three experiments. A foundational methodological reference for any productivity-vs-deskilling debate.
+→ Burning Glass / Levanon. Documents a structural productivity-hours break: aggregate productivity growth 1.3% → 2.2% while hours growth slowed 1.9% → 0.7%. Information sector hours −6% from 2022 peak while GDP +8.4%/yr. Featured on the homepage.
+→ Centre for British Progress (UK). Comprehensive UK survey across 412 occupations and 24.8M workers post-ChatGPT — finds no detectable aggregate displacement; software sector H2 2025 decline is the strongest early signal. Notable counterpoint to the US administrative findings.
+→ NBER Barth et al. (Norway). Workers in occupations declining 25%+ show 0.4 fewer future years of work and 4.7% cumulative earnings loss over 2007–2024 — the long-horizon administrative complement to the US studies.
+→ Carlyle Compass AI-SaaS Survey. 26% of management teams offset AI spend via internal headcount reduction (the largest single offset category); 22% offset by cutting IT services or consultants.
+→ Plus ESP / Becky Chao policy brief (citing Azar et al.'s 4.5% wage decline at AI-substitutable firms across 138M worker-firm matches), and a Slow Boring directional read.
+
+Data movements
+→ Tech-sector currentValue corrected from 1.6% to 12.1% (methodology fix + new data) after promoting 7 prior overlays to history points and ingesting the Tucker Information-sector and Metaculus 22.3% software-developer figures.
+→ currentValue rebased across 7 predictions to align with the weighted-average methodology after the Metaculus ingestion (creative-industry 27.2 → 23.8, education-sector 11.2 → 7.8, financial-services 5.2 → 6.3, white-collar 5.8 → 6.4, freelancer-rate −19.5 → −18.9, median-wage −1.9 → −1.6).
+
+Site updates
+→ Major chart redesign: every prediction page now shows a SignalStrip pixel timeline below the chart. Replaces the overlapping overlay bars with a clean net-cancelled pixel grid that splits at the observed/projected boundary, with hover tooltips per month and a tagline explaining the cancellation logic.
+→ New private /kb page with password-gated cookie auth and a streaming Claude endpoint over a freshly compiled wiki of all 526 sources and 18 predictions. Auto-compiles on every ingest.
+→ Shareable deep links for sector cards on /signals (e.g., /signals?sector=legal opens that card pre-expanded).
+→ Tooltip readability pass across all prediction charts; touch targets bumped to 44px for accessibility; rainbow card accents replaced with a consistent slate divider.
+→ Signals taxonomy expanded with eyecite, presidio-analyzer, and pymupdf — Legal & Compliance now shows +27.2% three-month tool growth.
+
+By the numbers: 45 commits · 143 files changed · 6,001 lines added · 9 new sources · ~18 new data points · ~17 new overlay signals · 12 of 18 prediction graphs updated · 30,000 cumulative site views.
+
+The pattern this week is hard to miss: administrative payroll data from the US (Tucker / Census QWI) and Norway (Barth / NBER) is now showing the early-career and long-horizon displacement signal that surveys had been ambiguous about. The UK data (Centre for British Progress) is the live counterexample. The next question worth watching is whether the divergence is real — different labor markets responding differently to the same shock — or whether it's a measurement gap that will close as more countries publish administrative-data studies.
+
+jobsdata.ai — tracking AI's real impact on work and wages
+
+#AIandWork #FutureOfWork #LaborMarket #EconomicMobility #WorkforceDevelopment #OpportunityAI
