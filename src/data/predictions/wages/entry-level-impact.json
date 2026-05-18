@@ -251,6 +251,15 @@
       "label": "Stanford/Brynjolfsson: no significant wage changes despite 16% entry-level employment decline"
     },
     {
+      "date": "2025-11-14",
+      "direction": "neutral",
+      "sourceIds": [
+        "galdin-silbert-llm-signaling-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Galdin & Silbert: signal loss helps bottom quintile +14%, hurts top -19%"
+    },
+    {
       "date": "2025-12-01",
       "direction": "down",
       "sourceIds": [
@@ -284,7 +293,7 @@
         "dallas-fed-entry-level-2026"
       ],
       "evidenceTier": 1,
-      "label": "Dallas Fed: young worker share fell 16.4% → 15.5%"
+      "label": "Dallas Fed: young worker share fell 16.4% \u2192 15.5%"
     },
     {
       "date": "2026-01-06",
@@ -341,6 +350,15 @@
       "label": "Althoff & Reichardt: AI simplification boosts lower-skill worker productivity"
     },
     {
+      "date": "2026-01-23",
+      "direction": "down",
+      "sourceIds": [
+        "kinder-brookings-residency-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Brookings (Kinder): DeepMind Hassabis says AI hits junior jobs in 2026"
+    },
+    {
       "date": "2026-02-01",
       "direction": "down",
       "sourceIds": [
@@ -365,7 +383,7 @@
         "dallas-fed-davis-ai-wages-2026"
       ],
       "evidenceTier": 1,
-      "label": "Dallas Fed: AI exposure → 0.28pp wage growth reduction in low-experience-premium jobs"
+      "label": "Dallas Fed: AI exposure \u2192 0.28pp wage growth reduction in low-experience-premium jobs"
     },
     {
       "date": "2026-02-24",
@@ -458,15 +476,6 @@
       "label": "GS: AI widened entry-vs-experienced unemployment gap by 0.6pp"
     },
     {
-      "date": "2025-11-14",
-      "direction": "neutral",
-      "sourceIds": [
-        "galdin-silbert-llm-signaling-2025"
-      ],
-      "evidenceTier": 2,
-      "label": "Galdin & Silbert: signal loss helps bottom quintile +14%, hurts top -19%"
-    },
-    {
       "date": "2026-04-06",
       "direction": "down",
       "sourceIds": [
@@ -474,15 +483,6 @@
       ],
       "evidenceTier": 2,
       "label": "Goldman Sachs: +3.3pp entry-vs-experienced wage gap per 1SD AI exposure"
-    },
-    {
-      "date": "2026-01-23",
-      "direction": "down",
-      "sourceIds": [
-        "kinder-brookings-residency-2026"
-      ],
-      "evidenceTier": 2,
-      "label": "Brookings (Kinder): DeepMind Hassabis says AI hits junior jobs in 2026"
     },
     {
       "date": "2026-04-17",
@@ -530,6 +530,15 @@
       "label": "Silicon Continent: Travel agent wages rose 87%->99% of private-sector avg (2000-2025)"
     },
     {
+      "date": "2026-05-04",
+      "direction": "neutral",
+      "sourceIds": [
+        "tomei-klein-teeselink-rl-exposure-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "arXiv: RL exposure peaks at mid-career (lvl 2.8 of 7), not entry-level"
+    },
+    {
       "date": "2026-05-07",
       "direction": "neutral",
       "sourceIds": [
@@ -542,7 +551,7 @@
   "sources": [
     {
       "id": "indeed-entry-level-2023",
-      "title": "Entry-Level Job Market Update — Indeed Hiring Lab",
+      "title": "Entry-Level Job Market Update \u2014 Indeed Hiring Lab",
       "url": "https://www.hiringlab.org/2025/09/25/september-labor-market-squeeze-on-new-entrants/",
       "publisher": "Indeed Hiring Lab",
       "evidenceTier": 2,
@@ -602,7 +611,7 @@
     },
     {
       "id": "wsj-entry-level-squeeze",
-      "title": "Entry-Level Jobs Are Vanishing — and AI Is a Big Reason",
+      "title": "Entry-Level Jobs Are Vanishing \u2014 and AI Is a Big Reason",
       "url": "https://www.wsj.com/lifestyle/careers/ai-entry-level-jobs-career-strategy-f59d574b",
       "publisher": "The Wall Street Journal",
       "evidenceTier": 3,
@@ -621,7 +630,7 @@
     },
     {
       "id": "bls-entry-wages-2025",
-      "title": "Usual Weekly Earnings — Workers 16-24",
+      "title": "Usual Weekly Earnings \u2014 Workers 16-24",
       "url": "https://www.bls.gov/cps/",
       "publisher": "Bureau of Labor Statistics",
       "evidenceTier": 1,
@@ -726,7 +735,7 @@
       "publisher": "SSRN (Hosseini Maasoum, Lichtinger)",
       "evidenceTier": 1,
       "datePublished": "2025-09-01",
-      "excerpt": "Analysis of 62M U.S. resumes: junior employment declined sharply at AI-adopting firms while senior employment was largely unchanged — described as 'seniority-biased technological change.'",
+      "excerpt": "Analysis of 62M U.S. resumes: junior employment declined sharply at AI-adopting firms while senior employment was largely unchanged \u2014 described as 'seniority-biased technological change.'",
       "dateAdded": "2026-03-01"
     },
     {
@@ -793,10 +802,10 @@
       "id": "cruces-galiani-education-gap-2026",
       "title": "Does Generative AI Narrow Education-Based Productivity Gaps? Evidence from a Randomized Experiment",
       "url": "https://www.nber.org/papers/w34851",
-      "publisher": "NBER (Cruces, Fernández Meijide, Galiani, Gálvez, Lombardi)",
+      "publisher": "NBER (Cruces, Fern\u00e1ndez Meijide, Galiani, G\u00e1lvez, Lombardi)",
       "evidenceTier": 1,
       "datePublished": "2026-02-01",
-      "excerpt": "Without AI, higher-education participants outperformed lower-education participants by 0.548 standard deviations. With AI access, this gap fell to 0.139 standard deviations—closing about 75 percent of the baseline productivity difference.",
+      "excerpt": "Without AI, higher-education participants outperformed lower-education participants by 0.548 standard deviations. With AI access, this gap fell to 0.139 standard deviations\u2014closing about 75 percent of the baseline productivity difference.",
       "dateAdded": "2026-03-07"
     },
     {
@@ -877,12 +886,12 @@
     },
     {
       "id": "lichtinger-hosseini-inequality-equalizer-2026",
-      "title": "AI Narrows Performance Gaps — But Does That Mean It Reduces Inequality?",
+      "title": "AI Narrows Performance Gaps \u2014 But Does That Mean It Reduces Inequality?",
       "url": "https://guylichtinger.substack.com/p/ai-narrows-performance-gaps-but-does",
       "publisher": "Substack (Guy Lichtinger, Seyed M Hosseini)",
       "evidenceTier": 4,
       "datePublished": "2026-03-26",
-      "excerpt": "The tasks juniors tend to do—more routine, more codifiable, more text-based—are generally more exposed to AI than what seniors do... the tasks juniors typically perform may be the ones most susceptible to displacement.",
+      "excerpt": "The tasks juniors tend to do\u2014more routine, more codifiable, more text-based\u2014are generally more exposed to AI than what seniors do... the tasks juniors typically perform may be the ones most susceptible to displacement.",
       "dateAdded": "2026-03-26"
     },
     {
@@ -892,7 +901,7 @@
       "publisher": "NBER (David Autor, Neil Thompson)",
       "evidenceTier": 1,
       "datePublished": "2025-06-20",
-      "excerpt": "A one-standard-deviation decline in the complexity of an occupation's tasks—equivalent to the decline in expertise required by a telephone operator from 1980 to 2018—is linked to an 18% wage decline and a 40% increase in employment per decade.",
+      "excerpt": "A one-standard-deviation decline in the complexity of an occupation's tasks\u2014equivalent to the decline in expertise required by a telephone operator from 1980 to 2018\u2014is linked to an 18% wage decline and a 40% increase in employment per decade.",
       "dateAdded": "2026-03-26"
     },
     {
@@ -1007,6 +1016,15 @@
       "datePublished": "2026-05-07",
       "excerpt": "We therefore investigated effects for workers 34 and younger, finding mixed evidence of AI effects for this group... roughly half a percentage point increase in the entire sample, and more for the 16-34 year old subsample - but both are statistically insignificant as of the first quarter of 2026.",
       "dateAdded": "2026-05-11"
+    },
+    {
+      "id": "tomei-klein-teeselink-rl-exposure-2026",
+      "title": "What Jobs Can AI Learn? Measuring Exposure by Reinforcement Learning",
+      "url": "https://arxiv.org/html/2605.02598v1",
+      "publisher": "arXiv (Tomei & Klein Teeselink, AI Objectives Institute / King's College London)",
+      "evidenceTier": 1,
+      "datePublished": "2026-05-04",
+      "excerpt": "Exposure rises from entry-level (33.6) through mid-level positions (36.7), then declines to its minimum at the executive level (26.8)."
     }
   ]
 }

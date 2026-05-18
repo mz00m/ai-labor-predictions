@@ -698,6 +698,15 @@
       "label": "MIT FutureTech: 63.2% AI task success in office/admin roles (N=1,865)"
     },
     {
+      "date": "2026-03-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "shah-levy-pro-se-ai-courts-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "MIT/USC: Lawyer case counts flat but pro se filings +79% as AI enables self-representation"
+    },
+    {
       "date": "2026-03-02",
       "direction": "up",
       "sourceIds": [
@@ -842,6 +851,15 @@
       "label": "FRI: Rapid scenario \u2192 white-collar sector share stalls at 20-21% by 2050"
     },
     {
+      "date": "2026-04-01",
+      "direction": "up",
+      "sourceIds": [
+        "karger-kuusela-nber-ai-forecasts-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER: white-collar share stalls at ~20% under rapid AI (vs 22% unconditional)"
+    },
+    {
       "date": "2026-04-02",
       "direction": "neutral",
       "sourceIds": [
@@ -905,24 +923,6 @@
       "label": "Carlyle survey: 22% of management teams offset AI spend by cutting IT services/consultants"
     },
     {
-      "date": "2026-03-01",
-      "direction": "neutral",
-      "sourceIds": [
-        "shah-levy-pro-se-ai-courts-2026"
-      ],
-      "evidenceTier": 1,
-      "label": "MIT/USC: Lawyer case counts flat but pro se filings +79% as AI enables self-representation"
-    },
-    {
-      "date": "2026-04-01",
-      "direction": "up",
-      "sourceIds": [
-        "karger-kuusela-nber-ai-forecasts-2026"
-      ],
-      "evidenceTier": 1,
-      "label": "NBER: white-collar share stalls at ~20% under rapid AI (vs 22% unconditional)"
-    },
-    {
       "date": "2026-04-22",
       "direction": "up",
       "sourceIds": [
@@ -939,6 +939,15 @@
       ],
       "evidenceTier": 3,
       "label": "Silicon Continent: BLS projects accountants +5% by 2034, clerks -6%"
+    },
+    {
+      "date": "2026-05-04",
+      "direction": "up",
+      "sourceIds": [
+        "tomei-klein-teeselink-rl-exposure-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "arXiv: Clerical/admin top RL-exposure (49.2/100 vs. 27 mean)"
     }
   ],
   "sources": [
@@ -1718,7 +1727,7 @@
       "publisher": "NBER (Karger, Kuusela, Abaluck, Bryan, Halperin, Jones, Murphy, Trammell, et al.)",
       "evidenceTier": 1,
       "datePublished": "2026-04-01",
-      "excerpt": "In the unconditional scenario, economists expect the share of business and analytical ('white-collar') roles to continue to rise slowly, reaching 21.0% in 2030 and 22.0% in 2050 compared to a 2025 baseline of 20.4%... In the rapid scenario, the growth in white-collar occupations would stall, with their share remaining flat at around 20.0%–21.0% in 2030 and 2050."
+      "excerpt": "In the unconditional scenario, economists expect the share of business and analytical ('white-collar') roles to continue to rise slowly, reaching 21.0% in 2030 and 22.0% in 2050 compared to a 2025 baseline of 20.4%... In the rapid scenario, the growth in white-collar occupations would stall, with their share remaining flat at around 20.0%\u201321.0% in 2030 and 2050."
     },
     {
       "id": "anthropic-81k-economics-survey-2026",
@@ -1737,6 +1746,15 @@
       "evidenceTier": 3,
       "datePublished": "2026-04-24",
       "excerpt": "In 2013, a study by Carl Frey and Michael Osborne put the probability that accountants and auditors would be automated at 94 percent. A decade later, the US Bureau of Labor Statistics counts 1.6 million accountants and auditors employed, median pay of $81,680, and projects the occupation to grow another 5 percent through 2034, faster than the average for all jobs. By contrast, the BLS category 'bookkeeping, accounting, and auditing clerks' is falling, a projected 6 percent over the same decade. The clerical task... is a weak bundle. The accountant's job is a strong bundle."
+    },
+    {
+      "id": "tomei-klein-teeselink-rl-exposure-2026",
+      "title": "What Jobs Can AI Learn? Measuring Exposure by Reinforcement Learning",
+      "url": "https://arxiv.org/html/2605.02598v1",
+      "publisher": "arXiv (Tomei & Klein Teeselink, AI Objectives Institute / King's College London)",
+      "evidenceTier": 1,
+      "datePublished": "2026-05-04",
+      "excerpt": "Office and Administrative Support occupations (SOC 43) have the highest mean (49.2), followed by Computer and Mathematical (47.1) and Business and Financial (42.0). Data Entry Keyers [71.03], Correspondence Clerks [68.60], Proofreaders and Copy Markers [68.57] lead the index."
     }
   ]
 }
