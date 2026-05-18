@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "AI Will Not Destroy the Job Market",
+      "author": "Andrew Ng",
+      "publisher": "DeepLearning.AI (The Batch)",
+      "date": "2026-05-08",
+      "url": "https://charonhub.deeplearning.ai/ai-will-not-destroy-the-job-market/",
+      "takeaway": "Ng argues the 'AI jobpocalypse' narrative is overblown, citing U.S. unemployment at 4.3% and strong software engineer hiring despite coding agents. He identifies three drivers of the narrative: frontier AI labs incentivized to overstate capability, SaaS companies anchoring pricing to employee salaries rather than software benchmarks, and businesses attributing pandemic-era overhiring corrections to AI. Predicts an 'AI jobapalooza' — net job creation through AI engineering roles and transformed non-AI work. Complements the Ezra Klein (NYT) and Yale Budget Lab pieces from the same week with an industry-insider perspective on why incumbents amplify displacement fears.",
+      "weekFeatured": "2026-05-11",
+      "tier": 3
+    },
+    {
       "title": "AI Growth Acceleration Versus Distributional Fairness",
       "author": "Brooke Tanner, Nicoleta Kyosovska, Derek Belle, Cameron F. Kerry, Andrea Renda, Elham Tabassi & Andrew W. Wyckoff",
       "publisher": "Brookings (Forum for Cooperation on AI)",
