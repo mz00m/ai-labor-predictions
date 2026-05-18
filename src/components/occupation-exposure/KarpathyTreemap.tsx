@@ -12,6 +12,7 @@ interface Props {
   activeDimension: DimensionKey;
   onSelect: (occ: ScoredKarpathyOccupation) => void;
   highlightedSlugs?: Set<string>;
+  rlFeasibilityEnabled?: boolean;
 }
 
 interface OccRect {
@@ -313,6 +314,7 @@ export default function KarpathyTreemap({
   activeDimension,
   onSelect,
   highlightedSlugs,
+  rlFeasibilityEnabled = false,
 }: Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -643,7 +645,9 @@ export default function KarpathyTreemap({
           <div className="mb-2">
             <div className="flex items-center justify-between mb-1">
               <span className="text-sm font-medium text-white">
-                {dimMeta.shortLabel}
+                {activeDimension === "technicalExposure" && rlFeasibilityEnabled
+                  ? "RL Feasibility"
+                  : dimMeta.shortLabel}
               </span>
               <span
                 className="text-base font-bold text-white"
@@ -719,7 +723,9 @@ export default function KarpathyTreemap({
                   <span
                     className={`w-16 text-2xs flex-shrink-0 ${isActive ? "text-white font-medium" : "text-white/40"}`}
                   >
-                    {meta.shortLabel}
+                    {key === "technicalExposure" && rlFeasibilityEnabled
+                      ? "RL Feas."
+                      : meta.shortLabel}
                   </span>
                   <div className="flex-1 h-1 bg-white/[0.06] rounded-full overflow-hidden">
                     <div

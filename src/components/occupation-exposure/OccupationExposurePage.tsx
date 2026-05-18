@@ -339,6 +339,7 @@ export default function OccupationExposurePage() {
             activeDimension={activeDimension}
             onSelect={setSelectedOcc}
             highlightedSlugs={highlightedSlugs}
+            rlFeasibilityEnabled={rlFeasibilityEnabled}
           />
         </div>
 
@@ -414,7 +415,9 @@ export default function OccupationExposurePage() {
                       <div key={key} className="mb-1.5">
                         <div className="flex items-center justify-between mb-0.5">
                           <span className="text-xs text-white/70">
-                            {meta.shortLabel}
+                            {key === "technicalExposure" && rlFeasibilityEnabled
+                              ? "RL Feasibility"
+                              : meta.shortLabel}
                           </span>
                           <span
                             className="text-xs font-bold"

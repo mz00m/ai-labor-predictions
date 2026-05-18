@@ -51,7 +51,9 @@ export default function DimensionPanel({
                 : "border-white/[0.15] text-white/60 hover:border-white/[0.3] hover:text-white/90"
             }`}
           >
-            {dim.shortLabel}
+            {key === "technicalExposure" && rlFeasibilityEnabled
+              ? "RL Feas."
+              : dim.shortLabel}
             {dim.isPressure && !isComposite && (
               <span className="ml-1 opacity-50">+</span>
             )}
