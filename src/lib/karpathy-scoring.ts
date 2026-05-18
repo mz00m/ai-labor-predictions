@@ -105,13 +105,15 @@ function getSocGroupId(occ: KarpathyOccupation): string {
 
 export interface KarpathyScoringOptions {
   dimensionalityEnabled?: boolean; // default true
+  useRlFeasibility?: boolean; // swap Dimension 1 to Tomei RL Feasibility Index
+  rlScores?: Record<string, number>; // slug → RL score (0-10)
 }
 
 export function scoreKarpathyOccupations(
   rawData: KarpathyOccupation[],
   options: KarpathyScoringOptions = {}
 ): ScoredKarpathyOccupation[] {
-  const { dimensionalityEnabled = true } = options;
+  const { dimensionalityEnabled = true, useRlFeasibility = false, rlScores } = options;
   // Build lookup for SOC group data
   const socLookup = new Map(OCCUPATION_GROUPS.map((g) => [g.id, g]));
 
@@ -121,8 +123,10 @@ export function scoreKarpathyOccupations(
       const socGroupId = getSocGroupId(occ);
       const socGroup = socLookup.get(socGroupId);
 
-      // 1. Technical Exposure: use Karpathy's per-occupation score directly
-      const technicalExposure = occ.exposure;
+      // 1. Technical Exposure: Karpathy GPT score or Tomei RL Feasibility
+      const technicalExposure = (useRlFeasibility && rlScores?.[occ.slug] != null)
+        ? rlScores[occ.slug]
+        : occ.exposure;
 
       // 2. Adoption Speed: from SOC group
       const speedMultiplier = SOC_INDUSTRY_SPEED[socGroupId] ?? 1.0;

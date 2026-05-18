@@ -13,6 +13,7 @@ import {
   type ScoredKarpathyOccupation,
 } from "@/lib/karpathy-scoring";
 import karpathyData from "@/data/karpathy-jobs.json";
+import rlFeasibilityData from "@/data/rl-feasibility-scores.json";
 import KarpathyTreemap from "./KarpathyTreemap";
 import DimensionPanel from "./DimensionPanel";
 import ComparisonTable from "./ComparisonTable";
@@ -29,7 +30,7 @@ function SectionLabel({ number }: { number: string }) {
   );
 }
 
-const DIMENSION_EXPLAINERS: {
+const DIMENSION_EXPLAINERS_BASE: {
   key: DimensionKey;
   label: string;
   role: string;
@@ -88,16 +89,32 @@ const DIMENSION_EXPLAINERS: {
 
 export default function OccupationExposurePage() {
   const [dimensionalityEnabled, setDimensionalityEnabled] = useState(false);
+  const [rlFeasibilityEnabled, setRlFeasibilityEnabled] = useState(false);
   const scored = useMemo(() => scoreAllOccupations(), []);
 
-  // Pre-compute both scored sets so we can diff on toggle
+  const rlScores = (rlFeasibilityData as any).scores as Record<string, number>;
+
+  const DIMENSION_EXPLAINERS = useMemo(() => {
+    const copy = [...DIMENSION_EXPLAINERS_BASE];
+    if (rlFeasibilityEnabled) {
+      copy[0] = {
+        ...copy[0],
+        label: "RL Feasibility",
+        oneLiner:
+          "How amenable are this job's tasks to reinforcement learning automation? (Tomei & Klein Teeselink, 2026)",
+      };
+    }
+    return copy;
+  }, [rlFeasibilityEnabled]);
+
+  // Pre-compute scored sets for each combination of toggles
   const scoredWithDim = useMemo(
-    () => scoreKarpathyOccupations(karpathyData as any, { dimensionalityEnabled: true }),
-    []
+    () => scoreKarpathyOccupations(karpathyData as any, { dimensionalityEnabled: true, useRlFeasibility: rlFeasibilityEnabled, rlScores }),
+    [rlFeasibilityEnabled]
   );
   const scoredWithoutDim = useMemo(
-    () => scoreKarpathyOccupations(karpathyData as any, { dimensionalityEnabled: false }),
-    []
+    () => scoreKarpathyOccupations(karpathyData as any, { dimensionalityEnabled: false, useRlFeasibility: rlFeasibilityEnabled, rlScores }),
+    [rlFeasibilityEnabled]
   );
   const scoredKarpathy = dimensionalityEnabled ? scoredWithDim : scoredWithoutDim;
 
@@ -130,6 +147,11 @@ export default function OccupationExposurePage() {
     });
     setSelectedOcc(null);
   }, [impactedSlugs]);
+
+  const handleToggleRlFeasibility = useCallback(() => {
+    setRlFeasibilityEnabled((prev) => !prev);
+    setSelectedOcc(null);
+  }, []);
 
 
   return (
@@ -228,6 +250,31 @@ export default function OccupationExposurePage() {
       {/* ───── Full-width treemap section ───── */}
       <section id="treemap" className="mb-12 bg-[#0a0a0f] -mx-6 sm:-mx-10 px-3 sm:px-4 py-6 rounded-xl scroll-mt-4">
         <div className="max-w-[1800px] mx-auto">
+          {/* RL Feasibility mode banner */}
+          {rlFeasibilityEnabled && (
+            <div className="mb-3 px-3 py-2 rounded-lg bg-amber-500/[0.08] border border-amber-500/20 flex items-start gap-2.5">
+              <span className="text-amber-400 text-sm mt-0.5">&#9889;</span>
+              <div className="min-w-0">
+                <p className="text-xs font-semibold text-amber-400 mb-0.5">
+                  RL Feasibility mode active
+                </p>
+                <p className="text-2xs text-amber-200/60 leading-relaxed">
+                  Dimension 1 now shows Tomei &amp; Klein Teeselink&rsquo;s RL Feasibility Index
+                  instead of LLM exposure. Monitoring/control occupations shift up; creative/leadership
+                  roles shift down. Net Risk rescored accordingly.{" "}
+                  <a
+                    href="https://arxiv.org/abs/2605.02598"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-amber-400 hover:underline"
+                  >
+                    Paper &rarr;
+                  </a>
+                </p>
+              </div>
+            </div>
+          )}
+
           {/* Dimension toggle */}
           <div className="mb-4">
             <DimensionPanel
@@ -235,6 +282,8 @@ export default function OccupationExposurePage() {
               onSelect={setActiveDimension}
               dimensionalityEnabled={dimensionalityEnabled}
               onToggleDimensionality={handleToggleDimensionality}
+              rlFeasibilityEnabled={rlFeasibilityEnabled}
+              onToggleRlFeasibility={handleToggleRlFeasibility}
             />
           </div>
 
