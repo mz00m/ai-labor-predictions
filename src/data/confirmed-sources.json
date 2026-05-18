@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-05-14",
-  "totalSources": 551,
-  "verifiedCount": 541,
+  "lastUpdated": "2026-05-18",
+  "totalSources": 553,
+  "verifiedCount": 543,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -7798,6 +7798,36 @@
       ],
       "verified": true,
       "synthetic": false
+    },
+    "wolfe-dangol-expert-gig-economy-2026": {
+      "id": "wolfe-dangol-expert-gig-economy-2026",
+      "title": "Discursive Construction of the Expert Gig Economy by Leading AI Labs",
+      "url": "https://arxiv.org/abs/2605.03295",
+      "publisher": "Wolfe & Dangol (arXiv, DOI 10.1145/3808045.3808063)",
+      "evidenceTier": 1,
+      "datePublished": "2026-05-05",
+      "excerpt": "Analysis of public communications from five major AI labs finds a consistent narrative framing domain experts as interchangeable data suppliers rather than irreplaceable professionals. The reframing creates a cheap-expertise gig economy with downward pressure on credentialed knowledge-worker wage premiums and freelancer rates.",
+      "usedIn": [
+        "freelancer-rate-impact"
+      ],
+      "verified": true,
+      "synthetic": false,
+      "dateAdded": "2026-05-18"
+    },
+    "fregin-microlevel-evidence-synthesis-2026": {
+      "id": "fregin-microlevel-evidence-synthesis-2026",
+      "title": "Generative AI in Daily Business Practice: Synthesis of Micro-Level Firm Evidence",
+      "url": "https://cris.maastrichtuniversity.nl/en/publications/91e323d7-4a71-470a-aa26-50a42823b647",
+      "publisher": "Maastricht University (Fregin, Eijkenboom, Özgül-Persyn, Pardesi, Rounding — DOI 10.26481/umarpb.2026002e)",
+      "evidenceTier": 1,
+      "datePublished": "2026-05-07",
+      "excerpt": "Synthesis of micro-level firm evidence finds generative AI already embedded in everyday business practice. Productivity gains in the near term come from task reallocation and upskilling rather than headcount reduction, with high-skill workers who effectively augment their output capturing a widening wage premium. The brief cautions that this benign short-run picture may mask longer-run structural displacement.",
+      "usedIn": [
+        "high-skill-wage-premium"
+      ],
+      "verified": true,
+      "synthetic": false,
+      "dateAdded": "2026-05-18"
     }
   }
 }

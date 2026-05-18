@@ -438,6 +438,15 @@
       ],
       "evidenceTier": 1,
       "label": "Autor et al.: tech-linked new work wage premium 4\u00d7 other new work"
+    },
+    {
+      "date": "2026-05-07",
+      "direction": "up",
+      "sourceIds": [
+        "fregin-microlevel-evidence-synthesis-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Fregin et al.: high-skill AI augmenters capturing widening wage premium"
     }
   ],
   "sources": [
@@ -823,6 +832,16 @@
       "evidenceTier": 1,
       "datePublished": "2026-04-24",
       "excerpt": "The wage premium is four times larger for new work associated with technological change than for other types of new work. Workers with advanced degrees were 2.9 percentage points more likely to be employed in new work than high school graduates."
+    },
+    {
+      "id": "fregin-microlevel-evidence-synthesis-2026",
+      "title": "Generative AI in Daily Business Practice: Synthesis of Micro-Level Firm Evidence",
+      "url": "https://cris.maastrichtuniversity.nl/en/publications/91e323d7-4a71-470a-aa26-50a42823b647",
+      "publisher": "Maastricht University (Fregin, Eijkenboom, Özgül-Persyn, Pardesi, Rounding — DOI 10.26481/umarpb.2026002e)",
+      "evidenceTier": 1,
+      "datePublished": "2026-05-07",
+      "excerpt": "Synthesis of micro-level firm evidence finds generative AI already embedded in everyday business practice. Productivity gains in the near term come from task reallocation and upskilling rather than headcount reduction, with high-skill workers who effectively augment their output capturing a widening wage premium. The brief cautions that this benign short-run picture may mask longer-run structural displacement.",
+      "dateAdded": "2026-05-18"
     }
   ]
 }

@@ -1,0 +1,116 @@
+{
+  "week": "2026-W21",
+  "generatedAt": "2026-05-18T11:43:29.494Z",
+  "lookbackDays": 14,
+  "highlights": [
+    {
+      "title": "US Labor Market Showing Heavy Job Losses in AI-Exposed Roles",
+      "summary": "Bloomberg reports that the US is beginning to see substantial job losses concentrated in occupations with high AI exposure, signaling that displacement effects long predicted by researchers are now materializing in employment data. The report generated significant discussion (163 upvotes, 269 comments on Hacker News), reflecting broad concern about the pace of transition. This represents an early empirical signal that AI-driven displacement is moving from theoretical risk to measurable labor market outcome.",
+      "source": "https://www.bloomberg.com/news/articles/2026-05-15/us-is-starting-to-see-heavy-job-losses-in-roles-exposed-to-ai",
+      "publishedAt": "2026-05-16",
+      "score": 0.312,
+      "sourceAdapter": "hnAlgolia",
+      "graphSlug": "overall-us-displacement"
+    },
+    {
+      "title": "AI Is Wiping Out Entry-Level Jobs, Widening the Experience Gap",
+      "summary": "Fortune reports that AI tools are disproportionately eliminating entry-level positions, creating a structural 'experience gap' as new graduates cannot find the junior roles historically used to build career skills. This dynamic threatens to hollow out the base of professional career ladders and suppress entry-level wage formation. The piece underscores growing evidence that AI adoption is hitting early-career workers hardest, with downstream consequences for lifetime earnings trajectories.",
+      "source": "https://fortune.com/2026/05/15/ai-entry-level-jobs-higher-education-experience-gap/",
+      "publishedAt": "2026-05-15",
+      "score": 0.308,
+      "sourceAdapter": "hnAlgolia",
+      "graphSlug": "entry-level-wage-impact"
+    },
+    {
+      "title": "Endogenous Task Bundling: How Automation Reshapes Jobs and Wages Beyond Simple Substitution",
+      "summary": "NBER working paper by Joshua Gans argues that standard empirical measures of AI's wage effect are systematically biased because they hold fixed the pre-AI bundle of tasks assigned to a worker. When automation unbundles a job, firms recombine surviving activities in ways that can amplify or dampen wage effects, meaning headline displacement and wage statistics likely undercount the true transformation underway. The paper calls for new measurement frameworks that capture dynamic task rebundling rather than static occupation-level exposure scores.",
+      "source": "https://www.nber.org/papers/w35211",
+      "publishedAt": "2026-05-18",
+      "score": 0.567,
+      "sourceAdapter": "nber",
+      "graphSlug": "median-wage-impact"
+    },
+    {
+      "title": "Expert Gig Economy Study: AI Labs Reshape White-Collar Expertise Markets",
+      "summary": "A peer-reviewed study by Wolfe and Dangol (DOI: 10.1145/3808045.3808063) examines how leading AI labs' demand for expert-annotated data has created a new 'cheap expertise' gig economy with the potential to commoditize white-collar knowledge work. The authors analyze public communications from five major AI companies and find a consistent narrative framing experts as interchangeable data suppliers rather than irreplaceable professionals. This reframing has direct implications for the wage premium commanded by credentialed knowledge workers and for freelancer rate trajectories.",
+      "source": "https://arxiv.org/abs/2605.03295",
+      "authors": [
+        "Robert Wolfe",
+        "Aayushi Dangol"
+      ],
+      "publishedAt": "2026-05-05",
+      "doi": "10.1145/3808045.3808063",
+      "score": 0.34,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "freelancer-rate-impact"
+    },
+    {
+      "title": "Micro-Level Evidence Synthesis: AI Shifts Tasks and Skills, Not Widespread Immediate Job Loss",
+      "summary": "A Maastricht University policy brief synthesizing micro-level firm evidence (DOI: 10.26481/umarpb.2026002e) finds that generative AI is already embedded in everyday business practice, with productivity gains primarily driven by task reallocation and upskilling rather than headcount reduction in the near term. The authors caution that this benign short-run picture may mask longer-run structural displacement as firms optimize workflows. The brief highlights a growing high-skill wage premium for workers who effectively augment their output with AI tools.",
+      "source": "https://cris.maastrichtuniversity.nl/en/publications/91e323d7-4a71-470a-aa26-50a42823b647",
+      "authors": [
+        "Marie-Christine Fregin",
+        "Danique Eijkenboom",
+        "Pelin Özgül-Persyn",
+        "Mantej Pardesi",
+        "Nicholas Rounding"
+      ],
+      "publishedAt": "2026-05-07",
+      "doi": "10.26481/umarpb.2026002e",
+      "score": 0.107,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "high-skill-wage-premium"
+    }
+  ],
+  "themes": [
+    "AI-driven displacement is transitioning from projected risk to measured reality, with Bloomberg data showing heavy job losses in high-exposure US occupations for the first time",
+    "Entry-level and early-career workers face disproportionate disruption as AI eliminates the junior roles that historically served as on-ramps to professional careers, threatening wage formation at the base of the labor market",
+    "Task rebundling—not simple job destruction—is the primary mechanism of AI's wage effect, and current measurement frameworks systematically undercount the true scale of labor market transformation",
+    "A 'cheap expertise' gig economy is emerging around AI training data, commoditizing white-collar knowledge and exerting downward pressure on freelancer rates and professional wage premiums",
+    "Micro-level firm evidence shows generative AI already embedded in daily workflows, with productivity gains accruing disproportionately to high-skill augmenters, widening the high-skill wage premium even as total displacement remains moderate in the short run"
+  ],
+  "watching": [
+    {
+      "title": "The Economist: Prepare for an AI Jobs Apocalypse",
+      "source": "https://www.economist.com/leaders/2026/05/14/prepare-for-an-ai-jobs-apocalypse",
+      "reason": "High-profile mainstream framing of mass displacement; worth tracking for sentiment shifts and policy response triggers as data matures."
+    },
+    {
+      "title": "Gartner Study: AI Isn't Paying Off in the Way Companies Think",
+      "source": "https://fortune.com/2026/05/11/ai-automation-layoffs-gartner-study-roi/",
+      "reason": "If enterprise AI ROI disappointment persists, adoption curves and earnings-call AI mentions may plateau, dampening displacement and wage-premium forecasts."
+    },
+    {
+      "title": "WIOA Retraining and Automation Exposure Reduction Study",
+      "source": "https://arxiv.org/abs/2605.03767",
+      "reason": "23M participant records offer rare large-scale test of whether public retraining programs actually reduce workers' AI displacement risk; results will inform policy forecasts."
+    },
+    {
+      "title": "Meta's Embrace of AI Is Making Its Employees Miserable",
+      "source": "https://www.nytimes.com/2026/05/08/technology/meta-ai-employees-miserable.html",
+      "reason": "Worker sentiment inside a leading AI adopter signals hidden costs of AI work transformation not captured in productivity or displacement statistics."
+    },
+    {
+      "title": "Frederick Van Brabant: I Don't Think AI Will Make Your Processes Go Faster",
+      "source": "https://frederickvanbrabant.com/blog/2026-05-15-i-dont-think-ai-will-make-your-processes-go-faster/",
+      "reason": "High-engagement practitioner pushback (612 pts) on productivity narratives; a counterweight to adoption-rate optimism worth monitoring for enterprise sentiment trends."
+    }
+  ],
+  "sources": {
+    "succeeded": [
+      "semanticScholar",
+      "arxiv",
+      "ssrn",
+      "pubmed",
+      "openAlex",
+      "nber",
+      "bls",
+      "fred",
+      "googleCse",
+      "hnAlgolia"
+    ],
+    "failed": [],
+    "totalCandidates": 40,
+    "afterDedup": 39
+  }
+}

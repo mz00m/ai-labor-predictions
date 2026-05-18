@@ -211,6 +211,15 @@
       ],
       "evidenceTier": 2,
       "label": "Galdin & Silbert: employer WTP for freelancer signals fell 42% post-LLM; 1.5% hiring decline"
+    },
+    {
+      "date": "2026-05-05",
+      "direction": "down",
+      "sourceIds": [
+        "wolfe-dangol-expert-gig-economy-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Wolfe & Dangol: AI labs frame experts as interchangeable, pressuring freelancer rates"
     }
   ],
   "sources": [
@@ -383,6 +392,16 @@
       "datePublished": "2025-11-14",
       "excerpt": "LLMs disrupted labor market signaling on Freelancer.com coding jobs (2.7M applications, 61K posts). Employer WTP for 1 SD signal increase fell from $25.67 to $14.85 (42% decline). Counterfactual no-signaling equilibrium shows 5% avg wage decline, 1.5% hiring reduction, 4% worker surplus loss.",
       "dateAdded": "2026-04-10"
+    },
+    {
+      "id": "wolfe-dangol-expert-gig-economy-2026",
+      "title": "Discursive Construction of the Expert Gig Economy by Leading AI Labs",
+      "url": "https://arxiv.org/abs/2605.03295",
+      "publisher": "Wolfe & Dangol (arXiv, DOI 10.1145/3808045.3808063)",
+      "evidenceTier": 1,
+      "datePublished": "2026-05-05",
+      "excerpt": "Analysis of public communications from five major AI labs finds a consistent narrative framing domain experts as interchangeable data suppliers rather than irreplaceable professionals. The reframing creates a cheap-expertise gig economy with downward pressure on credentialed knowledge-worker wage premiums and freelancer rates.",
+      "dateAdded": "2026-05-18"
     }
   ]
 }

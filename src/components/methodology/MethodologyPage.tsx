@@ -1200,6 +1200,29 @@ export default function MethodologyPage({ sourceCount }: { sourceCount: number }
 
           <div>
             <P>
+              <Strong>Static task bundles undercount AI&rsquo;s wage effects.</Strong>{" "}
+              Most sources estimate AI&rsquo;s wage impact by holding fixed the
+              pre-AI bundle of tasks assigned to a worker. When automation
+              unbundles a job, firms recombine surviving activities into new
+              roles &mdash; a dynamic that headline displacement and wage
+              statistics systematically miss. Gans (NBER w35211,{" "}
+              <a
+                href="https://www.nber.org/papers/w35211"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[var(--accent)] hover:underline"
+              >
+                2026
+              </a>
+              ) argues this measurement bias likely causes occupation-level
+              exposure scores to undercount the true scale of labor market
+              transformation. Treat every wage and displacement estimate on this
+              site as a lower bound on the structural change underway.
+            </P>
+          </div>
+
+          <div>
+            <P>
               <Strong>Point estimates from wide ranges.</Strong>{" "}
               The headline number can mask significant disagreement. When the
               source range is wide (e.g., 0&ndash;12%), the range itself is often

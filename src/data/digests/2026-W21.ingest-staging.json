@@ -1,0 +1,125 @@
+{
+  "week": "2026-W21",
+  "generatedAt": "2026-05-18T11:44:21.032Z",
+  "candidates": [
+    {
+      "highlight": {
+        "title": "US Labor Market Showing Heavy Job Losses in AI-Exposed Roles",
+        "summary": "Bloomberg reports that the US is beginning to see substantial job losses concentrated in occupations with high AI exposure, signaling that displacement effects long predicted by researchers are now materializing in employment data. The report generated significant discussion (163 upvotes, 269 comments on Hacker News), reflecting broad concern about the pace of transition. This represents an early empirical signal that AI-driven displacement is moving from theoretical risk to measurable labor market outcome.",
+        "source": "https://www.bloomberg.com/news/articles/2026-05-15/us-is-starting-to-see-heavy-job-losses-in-roles-exposed-to-ai",
+        "publishedAt": "2026-05-16",
+        "score": 0.312,
+        "sourceAdapter": "hnAlgolia",
+        "graphSlug": "overall-us-displacement"
+      },
+      "sourceId": "bloomberg-us-labor-market-2026",
+      "evidenceTier": 4,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "AI Is Wiping Out Entry-Level Jobs, Widening the Experience Gap",
+        "summary": "Fortune reports that AI tools are disproportionately eliminating entry-level positions, creating a structural 'experience gap' as new graduates cannot find the junior roles historically used to build career skills. This dynamic threatens to hollow out the base of professional career ladders and suppress entry-level wage formation. The piece underscores growing evidence that AI adoption is hitting early-career workers hardest, with downstream consequences for lifetime earnings trajectories.",
+        "source": "https://fortune.com/2026/05/15/ai-entry-level-jobs-higher-education-experience-gap/",
+        "publishedAt": "2026-05-15",
+        "score": 0.308,
+        "sourceAdapter": "hnAlgolia",
+        "graphSlug": "entry-level-wage-impact"
+      },
+      "sourceId": "fortune-ai-is-wiping-2026",
+      "evidenceTier": 4,
+      "extractedStats": [
+        {
+          "graphSlug": "entry-level-wage-impact",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "66% of hiring managers say recent hires lack experience/preparation",
+          "quote": "66% of hiring managers say most recent hires are not fully prepared for their roles, mainly due to a lack of experience."
+        },
+        {
+          "graphSlug": "overall-us-displacement",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "4.6M students seeking internships could not secure one in 2023",
+          "quote": "In 2023, nearly 4.6 million students who wanted internships could not secure one."
+        },
+        {
+          "graphSlug": "entry-level-wage-impact",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "87% of employed grads say internships helped them land their job",
+          "quote": "87% of employed graduates say internships helped them land their job, while more than half of those without an internship believe it hurt their job prospects"
+        },
+        {
+          "graphSlug": "entry-level-wage-impact",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "56% of unprepared graduates say they lacked job-specific skills",
+          "quote": "More than half (56%) of graduates who feel unprepared for entry-level roles say they lacked job-specific skills"
+        },
+        {
+          "graphSlug": "entry-level-wage-impact",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "79% of Gen Z want on-the-job learning during post-secondary education",
+          "quote": "79% of Gen Z believe it's important to have on-the-job learning experience during their post-secondary education."
+        }
+      ]
+    },
+    {
+      "highlight": {
+        "title": "Endogenous Task Bundling: How Automation Reshapes Jobs and Wages Beyond Simple Substitution",
+        "summary": "NBER working paper by Joshua Gans argues that standard empirical measures of AI's wage effect are systematically biased because they hold fixed the pre-AI bundle of tasks assigned to a worker. When automation unbundles a job, firms recombine surviving activities in ways that can amplify or dampen wage effects, meaning headline displacement and wage statistics likely undercount the true transformation underway. The paper calls for new measurement frameworks that capture dynamic task rebundling rather than static occupation-level exposure scores.",
+        "source": "https://www.nber.org/papers/w35211",
+        "publishedAt": "2026-05-18",
+        "score": 0.567,
+        "sourceAdapter": "nber",
+        "graphSlug": "median-wage-impact"
+      },
+      "sourceId": "nber-endogenous-task-bundling-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Expert Gig Economy Study: AI Labs Reshape White-Collar Expertise Markets",
+        "summary": "A peer-reviewed study by Wolfe and Dangol (DOI: 10.1145/3808045.3808063) examines how leading AI labs' demand for expert-annotated data has created a new 'cheap expertise' gig economy with the potential to commoditize white-collar knowledge work. The authors analyze public communications from five major AI companies and find a consistent narrative framing experts as interchangeable data suppliers rather than irreplaceable professionals. This reframing has direct implications for the wage premium commanded by credentialed knowledge workers and for freelancer rate trajectories.",
+        "source": "https://arxiv.org/abs/2605.03295",
+        "authors": [
+          "Robert Wolfe",
+          "Aayushi Dangol"
+        ],
+        "publishedAt": "2026-05-05",
+        "doi": "10.1145/3808045.3808063",
+        "score": 0.34,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "freelancer-rate-impact"
+      },
+      "sourceId": "arxiv-expert-gig-economy-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Micro-Level Evidence Synthesis: AI Shifts Tasks and Skills, Not Widespread Immediate Job Loss",
+        "summary": "A Maastricht University policy brief synthesizing micro-level firm evidence (DOI: 10.26481/umarpb.2026002e) finds that generative AI is already embedded in everyday business practice, with productivity gains primarily driven by task reallocation and upskilling rather than headcount reduction in the near term. The authors caution that this benign short-run picture may mask longer-run structural displacement as firms optimize workflows. The brief highlights a growing high-skill wage premium for workers who effectively augment their output with AI tools.",
+        "source": "https://cris.maastrichtuniversity.nl/en/publications/91e323d7-4a71-470a-aa26-50a42823b647",
+        "authors": [
+          "Marie-Christine Fregin",
+          "Danique Eijkenboom",
+          "Pelin Özgül-Persyn",
+          "Mantej Pardesi",
+          "Nicholas Rounding"
+        ],
+        "publishedAt": "2026-05-07",
+        "doi": "10.26481/umarpb.2026002e",
+        "score": 0.107,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "high-skill-wage-premium"
+      },
+      "sourceId": "cris-microlevel-evidence-synthesis-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    }
+  ]
+}
