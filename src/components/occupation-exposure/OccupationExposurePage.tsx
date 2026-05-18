@@ -193,6 +193,66 @@ export default function OccupationExposurePage() {
             Jump to interactive chart &darr;
           </a>
 
+          {/* Exposure methodology selector */}
+          <div className="mb-4">
+            <p className="text-2xs font-bold uppercase tracking-widest text-[var(--muted)] mb-2 opacity-70">
+              Dimension 1 &mdash; Methodological choice
+            </p>
+            <div className="grid grid-cols-2 gap-2">
+              <button
+                onClick={() => setRlFeasibilityEnabled(false)}
+                className={`text-left px-3.5 py-3 rounded-lg border-2 transition-all ${
+                  !rlFeasibilityEnabled
+                    ? "border-[var(--accent)] bg-[var(--accent-light)]"
+                    : "border-black/[0.08] hover:border-black/[0.15] bg-transparent"
+                }`}
+              >
+                <span className="flex items-center gap-1.5 mb-1">
+                  <span className={`w-2 h-2 rounded-full flex-shrink-0 ${!rlFeasibilityEnabled ? "bg-[var(--accent)]" : "bg-black/20"}`} />
+                  <span className="text-xs font-semibold text-[var(--foreground)]">
+                    LLM Exposure
+                  </span>
+                </span>
+                <p className="text-[10.5px] text-[var(--muted)] leading-snug">
+                  What AI can do <strong className="text-[var(--foreground)]">today</strong>.
+                  Task overlap with current large language models.
+                </p>
+                <p className="text-2xs text-[var(--muted)] mt-1 opacity-60">
+                  Eloundou et al., 2023
+                </p>
+              </button>
+              <button
+                onClick={() => setRlFeasibilityEnabled(true)}
+                className={`text-left px-3.5 py-3 rounded-lg border-2 transition-all ${
+                  rlFeasibilityEnabled
+                    ? "border-amber-500 bg-amber-50"
+                    : "border-black/[0.08] hover:border-black/[0.15] bg-transparent"
+                }`}
+              >
+                <span className="flex items-center gap-1.5 mb-1">
+                  <span className={`w-2 h-2 rounded-full flex-shrink-0 ${rlFeasibilityEnabled ? "bg-amber-500" : "bg-black/20"}`} />
+                  <span className="text-xs font-semibold text-[var(--foreground)]">
+                    RL Feasibility
+                  </span>
+                </span>
+                <p className="text-[10.5px] text-[var(--muted)] leading-snug">
+                  What AI can learn to do <strong className="text-[var(--foreground)]">next</strong>.
+                  Reinforcement learning amenability across 8 training dimensions.
+                </p>
+                <p className="text-2xs text-[var(--muted)] mt-1 opacity-60">
+                  Tomei &amp; Klein Teeselink, 2026
+                </p>
+              </button>
+            </div>
+            {rlFeasibilityEnabled && (
+              <p className="text-2xs text-amber-700 leading-snug mt-2 pl-0.5">
+                &#9889; RL Feasibility reshuffles risk: monitoring/control jobs (power plant operators,
+                railroad conductors) shift up; creative/leadership roles shift down. The two indices
+                correlate at 0.88 overall but just 0.15 within digitally feasible tasks.
+              </p>
+            )}
+          </div>
+
           {/* 5 dimensions - compact list */}
           <div className="border border-card rounded-lg divide-y divide-black/[0.06] mb-2">
             {DIMENSION_EXPLAINERS.map((dim) => (
@@ -250,28 +310,14 @@ export default function OccupationExposurePage() {
       {/* ───── Full-width treemap section ───── */}
       <section id="treemap" className="mb-12 bg-[#0a0a0f] -mx-6 sm:-mx-10 px-3 sm:px-4 py-6 rounded-xl scroll-mt-4">
         <div className="max-w-[1800px] mx-auto">
-          {/* RL Feasibility mode banner */}
+          {/* RL Feasibility mode indicator */}
           {rlFeasibilityEnabled && (
-            <div className="mb-3 px-3 py-2 rounded-lg bg-amber-500/[0.08] border border-amber-500/20 flex items-start gap-2.5">
-              <span className="text-amber-400 text-sm mt-0.5">&#9889;</span>
-              <div className="min-w-0">
-                <p className="text-xs font-semibold text-amber-400 mb-0.5">
-                  RL Feasibility mode active
-                </p>
-                <p className="text-2xs text-amber-200/60 leading-relaxed">
-                  Dimension 1 now shows Tomei &amp; Klein Teeselink&rsquo;s RL Feasibility Index
-                  instead of LLM exposure. Monitoring/control occupations shift up; creative/leadership
-                  roles shift down. Net Risk rescored accordingly.{" "}
-                  <a
-                    href="https://arxiv.org/abs/2605.02598"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-amber-400 hover:underline"
-                  >
-                    Paper &rarr;
-                  </a>
-                </p>
-              </div>
+            <div className="mb-3 px-3 py-1.5 rounded-lg bg-amber-500/[0.08] border border-amber-500/20 flex items-center gap-2">
+              <span className="text-amber-400 text-xs">&#9889;</span>
+              <p className="text-2xs text-amber-200/60">
+                Viewing <span className="text-amber-400 font-semibold">RL Feasibility</span> scores
+                &mdash; what AI can learn to do next (Tomei &amp; Klein Teeselink, 2026)
+              </p>
             </div>
           )}
 
