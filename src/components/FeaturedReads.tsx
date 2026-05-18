@@ -9,6 +9,14 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Garg, Crosta & Baier",
+    title: "Global Automation Atlas",
+    summary:
+      "The first global task-level automation index: 18,797 O*NET tasks scored across 124 countries producing 2.33M task-country labels. Core insight: the same task carries different automation risk depending on local wages, technology adoption, workforce skills, and production environment — automation pressure isn't uniform, it's geographic. Covers nations representing 99%+ of global GDP and population, providing a cross-country comparative baseline that US-centric indices can't offer.",
+    date: "2026",
+    url: "https://automationatlas.org/",
+  },
+  {
     author: "Heck, Muro, Methkupally & Siegmund (Brookings Metro / Opportunity@Work)",
     title: "How AI May Reshape Career Pathways to Better Jobs",
     summary:
@@ -39,14 +47,6 @@ const articles: Article[] = [
       "Klein's macro-vs-anecdata case: unemployment 4.3% in Mar 2026 vs 4.4% in Mar 2020, hourly earnings stable, software engineer demand booming despite Claude Code. Drawing on Imas's 'what becomes scarce' framework, predicts labor shifts to the relational sector — Nespresso didn't kill baristas; coffee shops kept multiplying. Cites VisiCalc (1979) which quadrupled accountant employment over 40 years rather than displacing them. The harder scenario isn't 80M displaced but 8M: the U.S. responds poorly to localized shocks (cf. China shock's ~2M jobs), so partial AI displacement may go untreated.",
     date: "May 3",
     url: "https://www.nytimes.com/2026/05/03/opinion/ai-jobs-unemployment-silicon-valley.html",
-  },
-  {
-    author: "Jasmine Sun (NYT Opinion)",
-    title: "The A.I. Fear Keeping Silicon Valley Up at Night",
-    summary:
-      "Reported from inside the SF AI bubble: the 'San Francisco consensus' is that the median worker is screwed and labs differ mostly on what to do about it. OpenAI's GDPVal benchmark went from sub-human to 80%+ win rate vs human pros in months; Block CEO Jack Dorsey cut ~half his staff in March citing coding agents; Anthropic enterprise-agent revenue jumped from $9B to $30B annualized. OpenAI's new white paper floats a 32-hour week and a public wealth fund; Shor polling finds 72% of voters fear AI drives down wages.",
-    date: "Apr 30",
-    url: "https://www.nytimes.com/2026/04/30/opinion/ai-labor-work-force-silicon-valley.html",
   },
 ];
 
