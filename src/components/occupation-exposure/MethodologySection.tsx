@@ -115,16 +115,15 @@ export default function MethodologySection() {
           authors="Tomei, Klein Teeselink (AI Objectives Institute)"
           year="2026"
           url="https://arxiv.org/abs/2605.02598"
-          summary="Scores all 17,951 O*NET tasks on RL training feasibility — from reward verifiability to environment simulability — after a physical feasibility gate that eliminates 40.7% of tasks outright. The index correlates 0.88 with Eloundou et al.'s LLM exposure across all tasks, but only 0.15 once physically infeasible tasks are excluded. Both indices agree on what AI cannot reach. Where they diverge — digitally feasible work — is where exposure measurement matters most for policy. Top RL-exposed occupations are clerical (Data Entry Keyers: 71/100; Correspondence Clerks: 68.6), while creative and judgment-intensive roles (musicians, physicians, CEOs) score high on LLM exposure but low on RL feasibility. A difference-in-differences analysis of 867 US occupations finds a 2.9% relative decline in job postings for the most RL-exposed occupations following ChatGPT's introduction."
+          summary="Scores all 17,951 O*NET tasks on RL training feasibility — from reward verifiability to environment simulability — after a physical feasibility gate that eliminates 40.7% of tasks outright. The index correlates 0.88 with Eloundou et al.'s LLM exposure across all tasks, but only 0.15 once physically infeasible tasks are excluded. Both indices agree on what AI cannot reach — they diverge on the digitally feasible work where the measurement uncertainty actually matters. Top RL-exposed occupations are clerical (Data Entry Keyers: 71/100; Correspondence Clerks: 68.6), while creative and judgment-intensive roles (musicians, physicians, CEOs) score high on LLM exposure but low on RL feasibility."
         />
         <p className="text-xs text-[var(--muted)] leading-[1.5] mt-4 italic">
           The 0.88&rarr;0.15 correlation collapse (Tomei &amp; Klein Teeselink 2026) is the empirical reason
           single-dimension exposure scores are insufficient. Two independent indices can agree almost perfectly
           while measuring fundamentally different things: their near-perfect correlation reflects shared
-          identification of the physical economy, which neither AI system can reach. Where they diverge &mdash;
-          digitally feasible work &mdash; is precisely where the policy-relevant uncertainty lives. The four
-          dimensions that follow Technical Exposure &mdash; adoption speed, worker adaptability, demand
-          elasticity, and complementarity &mdash; are the analytical work that exposure scores alone cannot do.
+          identification of the physical economy, which current AI systems cannot operate in. Once that shared
+          ground is removed, the indices are nearly orthogonal &mdash; and it is in the digitally feasible
+          remainder that policy-relevant displacement risk actually concentrates.
         </p>
         <Study
           title="Occupational Heterogeneity in Exposure to Generative AI"
@@ -338,7 +337,7 @@ export default function MethodologySection() {
           authors="Pizzinelli, Rissanen, Tavares, Toscani, Torre (IMF)"
           year="2023"
           url="https://www.imf.org/en/Publications/WP/Issues/2023/09/15/Exposure-to-Artificial-Intelligence-and-Changes-in-Workers-Occupational-Trajectories-539491"
-          summary="Adjusts Eloundou et al.'s LLM exposure scores for task complementarity across 28 advanced and emerging economies. Key finding: high-skill workers in AI-exposed occupations are strongly complemented — they tend to transition into even more AI-intensive roles, not out of the labor market. Lower-skill exposed workers face displacement rather than augmentation. This skill-contingent complementarity is the empirical motivation for treating exposure and complementarity as separate, potentially opposing dimensions rather than treating high exposure as uniformly negative."
+          summary="Adjusts Eloundou et al.'s LLM exposure scores for task complementarity across 28 advanced and emerging economies. Key finding: high-skill workers in AI-exposed occupations are strongly complemented — they tend to transition into even more AI-intensive roles, not out of the labor market. Lower-skill exposed workers face displacement rather than augmentation. This skill-contingent complementarity is the empirical motivation for treating exposure and complementarity as separate dimensions that can point in opposite directions, rather than treating high exposure as uniformly negative."
         />
         <Study
           title="How Will AI-driven Automation Actually Affect Jobs?"
