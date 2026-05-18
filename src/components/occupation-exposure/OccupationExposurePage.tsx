@@ -166,24 +166,27 @@ export default function OccupationExposurePage() {
           <h1
             className="text-5xl sm:text-6xl font-extrabold text-[var(--foreground)] leading-[1.1] tracking-tight mb-4 font-serif"
           >
-            Beyond Exposure: What Predicts Displacement Better
+            Which Jobs Will AI Actually Displace?
           </h1>
           <p
             className="text-prose sm:text-prose text-[var(--muted)] leading-relaxed mb-4 font-serif"
           >
-            Karpathy&rsquo;s AI jobs treemap scored 342 occupations on a single
-            axis: &ldquo;digital AI exposure.&rdquo; That captures which tasks AI{" "}
-            <em>can</em> do &mdash; but not which jobs will actually be displaced.
+            Most AI-and-jobs analyses stop at &ldquo;exposure&rdquo; &mdash;
+            how many of a job&rsquo;s tasks AI <em>can</em> perform. But
+            exposure alone is a poor predictor of actual displacement.
+            High-exposure jobs like radiologists and paralegals have so far
+            seen augmentation, not elimination.
           </p>
           <p
             className="text-prose sm:text-prose text-[var(--muted)] leading-relaxed mb-4"
             style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}
           >
-            We rebuilt this visualization with the same 342 BLS occupations,
-            then added four additional research-backed dimensions: adoption
-            speed, adaptability, demand, and complementarity (explained below)
-            which gives a much clearer picture of how AI may impact jobs over
-            time.
+            This analysis scores 342 BLS occupations across five
+            research-backed dimensions &mdash; not just what AI can do, but
+            how fast firms will adopt it, whether displaced workers can
+            adapt, how demand responds to cheaper output, and whether AI
+            replaces or complements human work. The result is a more honest
+            picture of displacement risk.
           </p>
 
           <a
