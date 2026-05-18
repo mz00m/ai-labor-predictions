@@ -353,6 +353,15 @@
   ],
   "overlays": [
     {
+      "date": "2013-09-17",
+      "direction": "up",
+      "label": "Oxford (Frey & Osborne): 47% of US employment at-risk benchmark (2013)",
+      "sourceIds": [
+        "frey-osborne-future-employment-2017"
+      ],
+      "evidenceTier": 1
+    },
+    {
       "date": "2015-07-01",
       "direction": "neutral",
       "sourceIds": [
@@ -2941,6 +2950,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-05-04",
       "excerpt": "A one-SD increase in RL exposure is associated with a 2.9% decline in job openings after the introduction of ChatGPT. This effect is marginally significant (p=0.085)."
+    },
+    {
+      "id": "frey-osborne-future-employment-2017",
+      "title": "The Future of Employment: How Susceptible Are Jobs to Computerisation?",
+      "url": "https://www.oxfordmartin.ox.ac.uk/downloads/academic/future-of-employment.pdf",
+      "publisher": "Oxford Martin School / Technological Forecasting & Social Change (Frey & Osborne)",
+      "evidenceTier": 1,
+      "datePublished": "2013-09-17",
+      "excerpt": "We examine how susceptible jobs are to computerisation\u2026 implementing a novel methodology to estimate the probability of computerisation for 702 detailed occupations, using a Gaussian process classifier\u2026 According to our estimates, about 47 percent of total US employment is at risk."
     }
   ]
 }
