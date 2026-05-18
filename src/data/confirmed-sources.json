@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-05-18",
-  "totalSources": 554,
-  "verifiedCount": 544,
+  "totalSources": 558,
+  "verifiedCount": 548,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -7842,6 +7842,67 @@
         "overall-us-displacement",
         "white-collar-professional-displacement",
         "entry-level-wage-impact"
+      ],
+      "verified": true,
+      "synthetic": false,
+      "dateAdded": "2026-05-18"
+    },
+    "frey-osborne-future-employment-2017": {
+      "id": "frey-osborne-future-employment-2017",
+      "title": "The Future of Employment: How Susceptible Are Jobs to Computerisation?",
+      "url": "https://www.oxfordmartin.ox.ac.uk/downloads/academic/future-of-employment.pdf",
+      "publisher": "Oxford Martin School / Technological Forecasting & Social Change (Frey & Osborne)",
+      "evidenceTier": 1,
+      "datePublished": "2013-09-17",
+      "excerpt": "We examine how susceptible jobs are to computerisation\u2026 implementing a novel methodology to estimate the probability of computerisation for 702 detailed occupations, using a Gaussian process classifier\u2026 According to our estimates, about 47 percent of total US employment is at risk.",
+      "usedIn": [
+        "workforce-ai-exposure",
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false,
+      "dateAdded": "2026-05-18"
+    },
+    "pizzinelli-imf-complementarity-2023": {
+      "id": "pizzinelli-imf-complementarity-2023",
+      "title": "Labor Market Exposure to AI: Cross-country Differences and Distributional Implications",
+      "url": "https://www.imf.org/en/publications/wp/issues/2023/10/04/labor-market-exposure-to-ai-cross-country-differences-and-distributional-implications-539656",
+      "publisher": "IMF Working Paper WP/23/216 (Pizzinelli, Panton, Tavares, Cazzaniga, Li)",
+      "evidenceTier": 1,
+      "datePublished": "2023-10-04",
+      "excerpt": "AEs face higher exposure than EMs due to a higher employment share in professional and managerial occupations. However, when accounting for potential complementarity, differences in exposure across countries are more muted. Within countries\u2026 Women and highly educated workers face greater occupational exposure to AI, at both high and low complementarity. Workers in the upper tail of the earnings distribution are more likely to be in occupations with high exposure but also high potential complementarity.",
+      "usedIn": [
+        "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false,
+      "dateAdded": "2026-05-18"
+    },
+    "brynjolfsson-mitchell-rock-sml-2018": {
+      "id": "brynjolfsson-mitchell-rock-sml-2018",
+      "title": "What Can Machines Learn, and What Does It Mean for Occupations and the Economy?",
+      "url": "https://www.aeaweb.org/articles?id=10.1257/pandp.20181019",
+      "publisher": "AEA Papers and Proceedings 108 (Brynjolfsson, Mitchell, Rock)",
+      "evidenceTier": 1,
+      "datePublished": "2018-05-01",
+      "excerpt": "We apply the rubric evaluating task potential for ML\u2026 to build measures of 'Suitability for Machine Learning' (SML) and apply it to 18,156 tasks in O*NET. We find that (i) ML affects different occupations than earlier automation waves; (ii) most occupations include at least some SML tasks; (iii) few occupations are fully automatable using ML; and (iv) realizing the potential of ML usually requires redesign of job task content.",
+      "usedIn": [
+        "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false,
+      "dateAdded": "2026-05-18"
+    },
+    "felten-raj-seamans-aioe-2021": {
+      "id": "felten-raj-seamans-aioe-2021",
+      "title": "Occupational, Industry, and Geographic Exposure to Artificial Intelligence: A Novel Dataset and Its Potential Uses",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/smj.3286",
+      "publisher": "Strategic Management Journal 42(12) (Felten, Raj, Seamans)",
+      "evidenceTier": 1,
+      "datePublished": "2021-12-01",
+      "excerpt": "The authors create and validate a new measure of an occupation's exposure to AI that they call the AI Occupational Exposure (AIOE). They use the AIOE to construct a measure of AI exposure at the industry level (AIIE) and a measure of AI exposure at the county level (AIGE).",
+      "usedIn": [
+        "workforce-ai-exposure"
       ],
       "verified": true,
       "synthetic": false,

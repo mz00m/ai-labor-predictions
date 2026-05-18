@@ -408,6 +408,18 @@ export default function MethodologySection() {
               </tbody>
             </table>
           </div>
+          <p className="text-sm text-[var(--muted)] leading-relaxed mt-3">
+            These rates reflect more than compute efficiency. <strong className="text-[var(--foreground)]">RL
+            amenability</strong> &mdash; a structural property of tasks distinct from LLM text-processing
+            capability &mdash; shapes how fast cost curves compress in practice. Tasks with verifiable
+            rewards, simulable environments, and concrete output artifacts (information processing, analysis)
+            are ideal RL training targets and see the fastest capability gains. Physical tasks fall slowest
+            not only because hardware tracks manufacturing cost curves rather than inference curves, but
+            because they are excluded by an earlier gate entirely: 40.7% of O*NET tasks have no digital
+            representation to train on (Tomei &amp; Klein Teeselink 2026). The structural divide between
+            digitally feasible and physically embodied work is the same boundary the slow/fast split
+            in the table above captures.
+          </p>
         </div>
 
         {/* The crossover calculation */}
