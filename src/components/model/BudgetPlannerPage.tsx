@@ -254,6 +254,7 @@ export default function BudgetPlannerPage() {
           recommendation={recommendation}
           budgetMillions={budgetMillions}
           regionName={region.name}
+          regionEmploymentK={region.totalEmploymentK}
         />
 
         {/* A — Allocation */}
@@ -571,15 +572,21 @@ function BudgetVerdict({
   recommendation,
   budgetMillions,
   regionName,
+  regionEmploymentK,
 }: {
   recommendation: ReturnType<typeof optimizeBudgetPortfolio>;
   budgetMillions: number;
   regionName: string;
+  regionEmploymentK: number;
 }) {
   const jobs = recommendation.portfolioJobsDelta;
-  const meaningful = Math.abs(jobs) > 500;
   const positive = jobs > 500;
-  const uncoveredCats = 2 - recommendation.categoriesCovered.length; // only 2 policy-movable categories
+  const meaningful = Math.abs(jobs) > 500;
+  const uncoveredCats = 2 - recommendation.categoriesCovered.length;
+  const unspentShare =
+    budgetMillions > 0 ? recommendation.unspentMillions / budgetMillions : 0;
+  const jobsAsPctOfRegion =
+    regionEmploymentK > 0 ? (jobs / (regionEmploymentK * 1000)) * 100 : 0;
   const portfolioAdvantage =
     recommendation.bestSingleJobsDelta > 0
       ? (jobs - recommendation.bestSingleJobsDelta) / recommendation.bestSingleJobsDelta
@@ -589,20 +596,26 @@ function BudgetVerdict({
 
   let verdict: string;
   let tone: "positive" | "caution" | "neutral";
-  if (!meaningful) {
-    verdict = `$${budgetMillions}M is too small to meaningfully move ${regionName}'s post-AI workforce outcomes — at best a marginal jobs lift. Either scale the budget significantly higher (try 2-5×) or use it as targeted bridge funding for specific cohorts.`;
+
+  if (unspentShare > 0.3) {
+    // The catalog couldn't productively absorb the budget — flag the budget-vs-catalog mismatch
+    verdict = `The catalog only deployed $${recommendation.spentMillions.toFixed(0)}M of your $${budgetMillions}M budget — $${recommendation.unspentMillions.toFixed(0)}M had no cost-effective home in this library. Either fund the policies at higher per-policy scale than the modeled "typical full" amounts, or expand the catalog with larger interventions (federal-scale rollouts, multi-state pacts) to make use of this budget. The deployed portfolio moved ${formatJobs(jobs, true)} jobs (${jobsAsPctOfRegion >= 0 ? "+" : ""}${jobsAsPctOfRegion.toFixed(2)}% of ${regionName}'s employment).`;
+    tone = "caution";
+  } else if (!meaningful) {
+    // Spent the budget but moved few jobs — region or scenario is the constraint
+    verdict = `Portfolio spent $${recommendation.spentMillions.toFixed(0)}M across ${recommendation.selected.length} policies and moved ${formatJobs(jobs, true)} jobs (${jobsAsPctOfRegion >= 0 ? "+" : ""}${jobsAsPctOfRegion.toFixed(2)}% of ${regionName}'s employment). The chosen scenario is buffering ${regionName} naturally — the marginal effect of additional policy here is small. Try a more disruptive scenario, or use this budget as targeted bridge funding for specific cohorts.`;
     tone = "neutral";
   } else if (positive && uncoveredCats === 0 && portfolioAdvantage > 0.1) {
-    verdict = `Recommended: ${recommendation.selected.length} stacked policies covering both adoption and friction. Portfolio outperforms the single best policy by ${(portfolioAdvantage * 100).toFixed(0)}% (${formatJobs(jobs, true)} vs ${formatJobs(recommendation.bestSingleJobsDelta, true)} jobs) at roughly $${costPerJob.toFixed(0)} per job moved. Diversification pays here.`;
+    verdict = `Recommended: ${recommendation.selected.length} stacked policies covering both adoption and friction. Portfolio outperforms the single best policy by ${(portfolioAdvantage * 100).toFixed(0)}% (${formatJobs(jobs, true)} vs ${formatJobs(recommendation.bestSingleJobsDelta, true)} jobs) at roughly $${costPerJob.toFixed(0)} per job moved (${jobsAsPctOfRegion.toFixed(2)}% of ${regionName}'s employment). Diversification pays here.`;
     tone = "positive";
   } else if (positive && uncoveredCats === 0) {
-    verdict = `Recommended: ${recommendation.selected.length} stacked policies covering both adoption and friction in ${regionName}, moving ${formatJobs(jobs, true)} jobs at ~$${costPerJob.toFixed(0)} per net job. The single best policy alone would deliver similar results — diversification helps coverage, not raw jobs.`;
+    verdict = `Recommended: ${recommendation.selected.length} stacked policies covering both adoption and friction in ${regionName}, moving ${formatJobs(jobs, true)} jobs (${jobsAsPctOfRegion.toFixed(2)}% of regional employment) at ~$${costPerJob.toFixed(0)} per net job. The single best policy alone would deliver similar raw jobs — diversification helps coverage, not magnitude.`;
     tone = "positive";
   } else if (positive && uncoveredCats > 0) {
-    verdict = `Portfolio moves ${formatJobs(jobs, true)} jobs but leaves ${uncoveredCats} of 2 policy-movable framework categories uncovered. The catalog at this budget either doesn't include a strong intervention for the missing dimension or isn't cost-effective for ${regionName}.`;
+    verdict = `Portfolio moves ${formatJobs(jobs, true)} jobs (${jobsAsPctOfRegion.toFixed(2)}% of ${regionName}'s employment) but leaves ${uncoveredCats} of 2 policy-movable framework categories uncovered. The catalog at this budget either doesn't include a strong intervention for the missing dimension or isn't cost-effective for ${regionName}.`;
     tone = "caution";
   } else {
-    verdict = `At ${budgetMillions}M the optimizer can't find a positive-net portfolio for ${regionName} under this scenario. Try a different scenario, a larger budget, or a more growth-friendly scenario preset to see what the catalog can do.`;
+    verdict = `At $${budgetMillions}M the optimizer can't find a positive-net portfolio for ${regionName} under this scenario (currently ${formatJobs(jobs, true)} jobs). Try a different scenario, a larger budget, or a more growth-friendly scenario preset to see what the catalog can do.`;
     tone = "caution";
   }
 
