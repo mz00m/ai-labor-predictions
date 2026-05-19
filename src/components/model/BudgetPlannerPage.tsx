@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import btosData from "@/data/btos-sectors.json";
 import RegionCombobox from "@/components/model/RegionCombobox";
+import ModelToolsNav from "@/components/model/ModelToolsNav";
 import regionsData from "@/data/regions.json";
 import policiesData from "@/data/policies.json";
 import {
@@ -120,6 +121,7 @@ export default function BudgetPlannerPage() {
 
   return (
     <div className="max-w-[1100px] mx-auto">
+      <ModelToolsNav active="/model/budget" />
       {/* Header */}
       <header className="mb-8">
         <p className="text-xs uppercase tracking-[0.18em] text-[var(--muted)] mb-3">

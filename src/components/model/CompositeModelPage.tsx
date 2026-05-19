@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import btosData from "@/data/btos-sectors.json";
+import ModelToolsNav from "@/components/model/ModelToolsNav";
 import {
   Sector,
   Knobs,
@@ -201,6 +202,7 @@ export default function CompositeModelPage() {
 
   return (
     <div className="max-w-[1100px] mx-auto">
+      <ModelToolsNav active="/model" />
       {/* Header */}
       <header className="mb-8">
         <p className="text-xs uppercase tracking-[0.18em] text-[var(--muted)] mb-3">
