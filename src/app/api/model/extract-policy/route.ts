@@ -4,6 +4,7 @@ import { CLAUDE_SONNET } from "@/lib/claude-models";
 import {
   buildExtractionPrompt,
   ExtractedPolicySchema,
+  sanitizeExtractedPolicy,
   stripFences,
 } from "@/lib/policy-extractor";
 
@@ -98,7 +99,7 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    return NextResponse.json({ policy: result.data });
+    return NextResponse.json({ policy: sanitizeExtractedPolicy(result.data) });
   } catch (e) {
     const err = e instanceof Error ? e.message : String(e);
     return NextResponse.json(

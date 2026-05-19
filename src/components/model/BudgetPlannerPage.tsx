@@ -539,7 +539,7 @@ export default function BudgetPlannerPage() {
             </li>
             <li>
               <strong className="text-[var(--foreground)]">Catalog is illustrative.</strong>{" "}
-              The 7 policies are research-anchored archetypes, not the universe of
+              The 14 catalog policies are research-anchored archetypes, not the universe of
               real interventions. A region&apos;s actual best portfolio may include
               policies not yet in the catalog.
             </li>

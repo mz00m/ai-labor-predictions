@@ -46,30 +46,30 @@ const POLICY_KNOB_KEYS = [
   "securityOverheadMultiplier",
 ] as const;
 
-const SectorParamPartial = z.record(
-  z.enum(POLICY_SECTOR_PARAM_KEYS),
-  z.number()
-);
+// Lenient — accepts any record of string→number, filtered post-parse to known keys
+const SectorParamPartial = z.record(z.string(), z.number());
+const KnobShifts = z.record(z.string(), z.number());
 
-const KnobShifts = z.record(z.enum(POLICY_KNOB_KEYS), z.number());
+// Coerce string-or-number to string for NAICS codes (Claude sometimes emits 62 instead of "62")
+const NaicsCode = z.union([z.string(), z.number().transform((n) => String(n))]);
 
 export const ExtractedPolicySchema = z.object({
   name: z.string().min(3).max(120),
   category: z.string().min(2).max(60),
-  tagline: z.string().min(10).max(220),
-  description: z.string().min(40).max(2000),
+  tagline: z.string().min(10).max(280),
+  description: z.string().min(40).max(2400),
   typicalCostMillions: z.number().min(0.1).max(2000),
   durationYears: z.number().int().min(1).max(20),
-  targetSectors: z.array(z.string()).nullable(),
-  evidence: z.string().min(20).max(800),
+  targetSectors: z.array(NaicsCode).nullable(),
+  evidence: z.string().min(20).max(1200),
   addresses: z.array(z.enum(["adoption", "friction"])).min(1).max(2),
-  workforceImpacts: z.array(z.string()).min(2).max(8),
-  targetPopulations: z.array(z.string()).min(1).max(8),
+  workforceImpacts: z.array(z.string()).min(2).max(10),
+  targetPopulations: z.array(z.string()).min(1).max(10),
   sectorOverrides: z.record(z.string(), SectorParamPartial),
   knobShifts: KnobShifts,
   // Meta — not part of ModelPolicy but useful for the UI
   confidence: z.number().min(0).max(1),
-  extractionNotes: z.string().max(800),
+  extractionNotes: z.string().max(2000),
 });
 
 export type ExtractedPolicy = z.infer<typeof ExtractedPolicySchema>;
@@ -143,4 +143,46 @@ export function stripFences(raw: string): string {
     s = s.replace(/^```(?:json)?\s*/i, "").replace(/```\s*$/i, "");
   }
   return s.trim();
+}
+
+/**
+ * Post-parse cleanup: drop unknown sector-param keys and unknown knob keys,
+ * coerce sector codes to strings, drop empty override objects.
+ * Run after zod validation; types are loose enough that this just narrows.
+ */
+export function sanitizeExtractedPolicy(p: ExtractedPolicy): ExtractedPolicy {
+  const knownParams = new Set<string>(POLICY_SECTOR_PARAM_KEYS);
+  const knownKnobs = new Set<string>(POLICY_KNOB_KEYS);
+  const knownSectors = new Set<string>(KNOWN_NAICS);
+
+  const cleanedSectorOverrides: Record<string, Record<string, number>> = {};
+  for (const [naics, params] of Object.entries(p.sectorOverrides)) {
+    const naicsStr = String(naics);
+    if (!knownSectors.has(naicsStr)) continue;
+    const filteredParams: Record<string, number> = {};
+    for (const [k, v] of Object.entries(params as Record<string, number>)) {
+      if (knownParams.has(k) && typeof v === "number" && Number.isFinite(v)) {
+        filteredParams[k] = v;
+      }
+    }
+    if (Object.keys(filteredParams).length > 0) {
+      cleanedSectorOverrides[naicsStr] = filteredParams;
+    }
+  }
+
+  const cleanedKnobShifts: Record<string, number> = {};
+  for (const [k, v] of Object.entries(p.knobShifts)) {
+    if (knownKnobs.has(k) && typeof v === "number" && Number.isFinite(v)) {
+      cleanedKnobShifts[k] = v;
+    }
+  }
+
+  return {
+    ...p,
+    targetSectors: p.targetSectors
+      ? p.targetSectors.map((s) => String(s)).filter((s) => knownSectors.has(s))
+      : null,
+    sectorOverrides: cleanedSectorOverrides as ExtractedPolicy["sectorOverrides"],
+    knobShifts: cleanedKnobShifts as ExtractedPolicy["knobShifts"],
+  };
 }
