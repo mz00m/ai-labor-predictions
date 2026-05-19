@@ -12,16 +12,20 @@ import {
   Factor,
   Category,
   CAPABILITY_ANCHOR,
+  IMPACT_META,
+  sortFactorsByImpact,
 } from "@/lib/composite-model";
 
 type SortKey =
   | "name"
+  | "employmentMillions"
   | "btosCurrent"
   | "btosPlanned"
   | "realizedAdoption"
   | "taskReplacement"
   | "productivityGain"
   | "employmentDelta"
+  | "jobsImpacted"
   | "wageImpact";
 
 const sectors = btosData.sectors as Sector[];
@@ -130,7 +134,7 @@ const PRESETS: Record<string, Preset> = {
 export default function CompositeModelPage() {
   const [knobs, setKnobs] = useState<Knobs>(DEFAULT_KNOBS);
   const [activePreset, setActivePreset] = useState<string | null>(null);
-  const [sortKey, setSortKey] = useState<SortKey>("employmentDelta");
+  const [sortKey, setSortKey] = useState<SortKey>("jobsImpacted");
   const [sortDir, setSortDir] = useState<"asc" | "desc">("asc");
   const [selected, setSelected] = useState<string | null>(null);
   const [knobsOpen, setKnobsOpen] = useState(false);
@@ -155,15 +159,18 @@ export default function CompositeModelPage() {
     return arr;
   }, [results, sortKey, sortDir]);
 
-  const aggEmpDelta = useMemo(() => {
-    const sum = results.reduce((s, r) => s + r.employmentDelta, 0);
-    return sum / results.length;
-  }, [results]);
-
-  const aggReplacement = useMemo(() => {
-    const sum = results.reduce((s, r) => s + r.taskReplacement, 0);
-    return sum / results.length;
-  }, [results]);
+  const totalNetJobs = useMemo(
+    () => results.reduce((s, r) => s + r.jobsImpacted, 0),
+    [results]
+  );
+  const totalGrowthJobs = useMemo(
+    () => results.filter((r) => r.jobsImpacted > 0).reduce((s, r) => s + r.jobsImpacted, 0),
+    [results]
+  );
+  const totalDeclineJobs = useMemo(
+    () => results.filter((r) => r.jobsImpacted < 0).reduce((s, r) => s + r.jobsImpacted, 0),
+    [results]
+  );
 
   function update<K extends keyof Knobs>(key: K, value: Knobs[K]) {
     setKnobs((prev) => ({ ...prev, [key]: value }));
@@ -171,7 +178,8 @@ export default function CompositeModelPage() {
   }
 
   function applyPreset(preset: Preset) {
-    setKnobs(preset.knobs);
+    // Preserve the user's current horizon — presets shouldn't reset it
+    setKnobs((prev) => ({ ...preset.knobs, horizonYears: prev.horizonYears }));
     setActivePreset(preset.id);
   }
 
@@ -250,22 +258,22 @@ export default function CompositeModelPage() {
         </div>
       </section>
 
-      {/* Summary band */}
+      {/* Summary band — jobs impact totals */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
         <SummaryStat
-          label="Avg net employment Δ"
-          value={`${aggEmpDelta >= 0 ? "+" : ""}${aggEmpDelta.toFixed(2)}%`}
-          sub={`across ${results.length} sectors, ${knobs.horizonYears}yr horizon`}
+          label="Jobs added"
+          value={formatJobs(totalGrowthJobs, true)}
+          sub={`growth sectors at ${knobs.horizonYears}-yr horizon`}
         />
         <SummaryStat
-          label="Avg task replacement"
-          value={`${aggReplacement.toFixed(1)}%`}
-          sub="of total work hours"
+          label="Jobs lost"
+          value={formatJobs(totalDeclineJobs, true)}
+          sub={`decline sectors at ${knobs.horizonYears}-yr horizon`}
         />
         <SummaryStat
-          label="BTOS current AI use"
-          value={`${btosData.national.currentUse}%`}
-          sub={`→ ${btosData.national.plannedUse6mo}% planned in 6 months (US Census 2026)`}
+          label="Net US employment Δ"
+          value={formatJobs(totalNetJobs, true)}
+          sub={`of 144.5M private-sector baseline (BLS QCEW)`}
         />
       </div>
 
@@ -356,12 +364,13 @@ export default function CompositeModelPage() {
                 <thead>
                   <tr className="text-xs uppercase tracking-wider text-[var(--muted)] border-b border-divider">
                     <Th onClick={() => flipSort("name")} active={sortKey === "name"} dir={sortDir}>Sector</Th>
+                    <Th onClick={() => flipSort("employmentMillions")} active={sortKey === "employmentMillions"} dir={sortDir} right>Baseline (M)</Th>
                     <Th onClick={() => flipSort("btosCurrent")} active={sortKey === "btosCurrent"} dir={sortDir} right>BTOS now</Th>
-                    <Th onClick={() => flipSort("btosPlanned")} active={sortKey === "btosPlanned"} dir={sortDir} right>BTOS +6mo</Th>
                     <Th onClick={() => flipSort("realizedAdoption")} active={sortKey === "realizedAdoption"} dir={sortDir} right>Model adoption</Th>
                     <Th onClick={() => flipSort("taskReplacement")} active={sortKey === "taskReplacement"} dir={sortDir} right>Tasks replaced</Th>
                     <Th onClick={() => flipSort("productivityGain")} active={sortKey === "productivityGain"} dir={sortDir} right>Productivity Δ</Th>
-                    <Th onClick={() => flipSort("employmentDelta")} active={sortKey === "employmentDelta"} dir={sortDir} right>Employment Δ</Th>
+                    <Th onClick={() => flipSort("employmentDelta")} active={sortKey === "employmentDelta"} dir={sortDir} right>Empl. Δ %</Th>
+                    <Th onClick={() => flipSort("jobsImpacted")} active={sortKey === "jobsImpacted"} dir={sortDir} right>Jobs Δ</Th>
                     <Th onClick={() => flipSort("wageImpact")} active={sortKey === "wageImpact"} dir={sortDir} right>Wage Δ</Th>
                   </tr>
                 </thead>
@@ -382,13 +391,16 @@ export default function CompositeModelPage() {
                             <span className="text-xs text-[var(--muted)]">{r.naics}</span>
                           </div>
                         </td>
+                        <Td>{r.employmentMillions.toFixed(1)}</Td>
                         <Td>{r.btosCurrent.toFixed(1)}%</Td>
-                        <Td>{r.btosPlanned.toFixed(1)}%</Td>
                         <Td emphasis>{r.realizedAdoption.toFixed(1)}%</Td>
                         <Td>{r.taskReplacement.toFixed(1)}%</Td>
                         <Td>+{r.productivityGain.toFixed(1)}%</Td>
                         <Td color={r.employmentDelta < -0.5 ? "neg" : r.employmentDelta > 0.5 ? "pos" : undefined}>
                           {r.employmentDelta >= 0 ? "+" : ""}{r.employmentDelta.toFixed(2)}%
+                        </Td>
+                        <Td emphasis color={r.jobsImpacted < -1000 ? "neg" : r.jobsImpacted > 1000 ? "pos" : undefined}>
+                          {formatJobs(r.jobsImpacted, true)}
                         </Td>
                         <Td color={r.wageImpact > 0.5 ? "pos" : undefined}>+{r.wageImpact.toFixed(2)}%</Td>
                       </tr>
@@ -413,12 +425,33 @@ export default function CompositeModelPage() {
             <h2 className="text-2xl font-bold text-[var(--foreground)] mb-2">
               The four-category framework
             </h2>
-            <p className="text-sm text-[var(--muted)] leading-[1.7] mb-6 max-w-2xl">
+            <p className="text-sm text-[var(--muted)] leading-[1.7] mb-4 max-w-2xl">
               Every knob above corresponds to one of these factors. The
               framework is the model — knobs are just the levers that expose it.
-              Defaults are research-anchored; cites link to source where
-              available.
+              Factors are sorted within each category by how much they actually
+              move sector outputs; colored impact badges show the tier.
             </p>
+
+            {/* Impact tier legend */}
+            <div className="flex flex-wrap items-center gap-3 mb-6 bg-card border border-card rounded-lg px-4 py-3">
+              <span className="text-xs uppercase tracking-wider text-[var(--muted)]">
+                Impact tiers:
+              </span>
+              {(["high", "medium", "low", "informational"] as const).map((tier) => {
+                const meta = IMPACT_META[tier];
+                return (
+                  <span
+                    key={tier}
+                    className="text-[11px] px-2 py-1 rounded flex items-center gap-1.5"
+                    style={{ background: meta.bg, color: meta.color }}
+                    title={meta.description}
+                  >
+                    <span className="font-semibold">{meta.label}</span>
+                    <span className="opacity-80">— {meta.description.split(";")[0]}</span>
+                  </span>
+                );
+              })}
+            </div>
 
             <div className="space-y-4">
               {FRAMEWORK.map((cat) => (
@@ -636,14 +669,18 @@ function CounterfactualChart({
   results: ReturnType<typeof computeSector>[];
   horizon: number;
 }) {
-  const sorted = [...results].sort((a, b) => b.employmentDelta - a.employmentDelta);
-  const winners = sorted.filter((r) => r.employmentDelta > 0).slice(0, 6);
-  const losersDesc = sorted.filter((r) => r.employmentDelta < 0);
-  const losers = losersDesc.slice(-6).reverse();
-  const maxAbs = Math.max(...results.map((r) => Math.abs(r.employmentDelta)), 0.5);
+  // Sort by ABSOLUTE jobs impacted, not by percentage —
+  // Healthcare at +0.5% (≈110K jobs) outranks Mining at +5% (≈30K jobs).
+  const sorted = [...results].sort((a, b) => b.jobsImpacted - a.jobsImpacted);
+  const winners = sorted.filter((r) => r.jobsImpacted > 1000).slice(0, 6);
+  const losers = sorted
+    .filter((r) => r.jobsImpacted < -1000)
+    .slice(-6)
+    .reverse();
+  const maxAbs = Math.max(...results.map((r) => Math.abs(r.jobsImpacted)), 1000);
 
-  const aggGrowth = winners.reduce((s, r) => s + r.employmentDelta, 0);
-  const aggDecline = losers.reduce((s, r) => s + r.employmentDelta, 0);
+  const aggGrowth = winners.reduce((s, r) => s + r.jobsImpacted, 0);
+  const aggDecline = losers.reduce((s, r) => s + r.jobsImpacted, 0);
 
   return (
     <div className="bg-card border border-card rounded-lg p-6 mb-5">
@@ -655,8 +692,10 @@ function CounterfactualChart({
           Sector winners and losers, with AI vs. without
         </h2>
         <p className="text-sm text-[var(--muted)] leading-[1.6]">
-          Projected net employment change in each sector relative to a no-AI
-          baseline. Bars right of center = growth; bars left of center = decline.
+          Ranked by <strong>absolute jobs impacted</strong>, not percentage —
+          Healthcare&apos;s 22.7M baseline means a small % change moves more
+          people than a big % change in Mining. Bars sized to jobs; % shown
+          alongside.
         </p>
       </div>
 
@@ -665,10 +704,10 @@ function CounterfactualChart({
         <div className="mb-5">
           <div className="flex items-baseline justify-between mb-2">
             <p className="text-xs uppercase tracking-wider text-[#3a8a4f] font-semibold">
-              Top growth sectors
+              Top growth sectors (jobs added)
             </p>
             <p className="text-xs text-[var(--muted)] tabular-nums">
-              {winners.length} sectors · combined +{aggGrowth.toFixed(1)}%
+              {winners.length} sectors · combined {formatJobs(aggGrowth, true)}
             </p>
           </div>
           <div className="space-y-1.5">
@@ -683,7 +722,7 @@ function CounterfactualChart({
       <div className="my-4 flex items-center gap-3">
         <div className="flex-1 border-t border-divider"></div>
         <span className="text-[10px] uppercase tracking-wider text-[var(--muted)]">
-          No-AI baseline (0%)
+          No-AI baseline (0 jobs)
         </span>
         <div className="flex-1 border-t border-divider"></div>
       </div>
@@ -693,10 +732,10 @@ function CounterfactualChart({
         <div>
           <div className="flex items-baseline justify-between mb-2">
             <p className="text-xs uppercase tracking-wider text-[#d4493a] font-semibold">
-              Top decline sectors
+              Top decline sectors (jobs lost)
             </p>
             <p className="text-xs text-[var(--muted)] tabular-nums">
-              {losers.length} sectors · combined {aggDecline.toFixed(1)}%
+              {losers.length} sectors · combined {formatJobs(aggDecline, true)}
             </p>
           </div>
           <div className="space-y-1.5">
@@ -717,6 +756,16 @@ function CounterfactualChart({
   );
 }
 
+function formatJobs(n: number, signed = false): string {
+  const sign = n > 0 ? "+" : n < 0 ? "−" : "";
+  const abs = Math.abs(n);
+  let core: string;
+  if (abs >= 1_000_000) core = `${(abs / 1_000_000).toFixed(2)}M`;
+  else if (abs >= 1_000) core = `${(abs / 1_000).toFixed(0)}K`;
+  else core = `${Math.round(abs)}`;
+  return signed ? `${sign}${core}` : core;
+}
+
 function DivergingRow({
   result,
   maxAbs,
@@ -724,15 +773,15 @@ function DivergingRow({
   result: ReturnType<typeof computeSector>;
   maxAbs: number;
 }) {
-  const isPositive = result.employmentDelta >= 0;
-  const halfWidthPct = (Math.abs(result.employmentDelta) / maxAbs) * 50;
+  const isPositive = result.jobsImpacted >= 0;
+  const halfWidthPct = (Math.abs(result.jobsImpacted) / maxAbs) * 50;
   const color = isPositive ? "#3a8a4f" : "#d4493a";
 
   return (
-    <div className="grid grid-cols-[170px_1fr_70px] gap-3 items-center text-sm">
+    <div className="grid grid-cols-[170px_1fr_110px] gap-3 items-center text-sm">
       <span
         className="text-right text-[var(--foreground)] truncate text-xs"
-        title={result.name}
+        title={`${result.name} · ${result.employmentMillions.toFixed(1)}M baseline`}
       >
         {result.name}
       </span>
@@ -752,8 +801,11 @@ function DivergingRow({
         className="tabular-nums text-left font-medium text-xs"
         style={{ color }}
       >
-        {isPositive ? "+" : ""}
-        {result.employmentDelta.toFixed(2)}%
+        {formatJobs(result.jobsImpacted, true)}
+        <span className="text-[10px] text-[var(--muted)] ml-1">
+          ({result.employmentDelta >= 0 ? "+" : ""}
+          {result.employmentDelta.toFixed(2)}%)
+        </span>
       </span>
     </div>
   );
@@ -971,7 +1023,7 @@ function CategoryCard({ category }: { category: Category }) {
           </p>
 
           <div className="space-y-4">
-            {category.factors.map((f) => (
+            {sortFactorsByImpact(category.factors).map((f) => (
               <FactorCard key={f.id} factor={f} accent={accent} />
             ))}
           </div>
@@ -982,12 +1034,22 @@ function CategoryCard({ category }: { category: Category }) {
 }
 
 function FactorCard({ factor, accent }: { factor: Factor; accent: string }) {
+  const impact = IMPACT_META[factor.impact];
   return (
     <div className="pl-4 border-l-2" style={{ borderColor: `${accent}66` }}>
-      <div className="flex items-start justify-between gap-3 mb-1.5">
-        <h4 className="text-sm font-semibold text-[var(--foreground)] leading-tight">
-          {factor.name}
-        </h4>
+      <div className="flex items-start justify-between gap-3 mb-1.5 flex-wrap">
+        <div className="flex items-center gap-2 flex-wrap min-w-0">
+          <span
+            className="text-[10px] font-semibold uppercase tracking-wider px-1.5 py-0.5 rounded flex-shrink-0"
+            style={{ color: impact.color, background: impact.bg }}
+            title={impact.description}
+          >
+            {impact.label} impact
+          </span>
+          <h4 className="text-sm font-semibold text-[var(--foreground)] leading-tight">
+            {factor.name}
+          </h4>
+        </div>
         {factor.knob && (
           <span className="text-[10px] uppercase tracking-wider text-[var(--muted)] bg-[var(--background)] px-1.5 py-0.5 rounded flex-shrink-0">
             knob: {factor.knob}
@@ -997,6 +1059,11 @@ function FactorCard({ factor, accent }: { factor: Factor; accent: string }) {
       <p className="text-sm text-[var(--muted)] leading-[1.65] mb-1.5">
         {factor.description}
       </p>
+      {factor.impactNote && (
+        <p className="text-xs leading-[1.5] mb-1.5 px-2 py-1 rounded" style={{ background: impact.bg, color: impact.color }}>
+          <strong>Where it bites:</strong> {factor.impactNote}
+        </p>
+      )}
       <p className="text-xs text-[var(--muted)]">
         Source:{" "}
         {factor.citation.url ? (

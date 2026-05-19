@@ -57,6 +57,7 @@ export interface Sector {
   name: string;
   btos: BtosData;
   params: SectorParams;
+  employmentMillions: number;  // US private employment (BLS QCEW)
 }
 
 export interface Knobs {
@@ -107,6 +108,7 @@ export const DEFAULT_KNOBS: Knobs = {
 export interface SectorImpact {
   naics: string;
   name: string;
+  employmentMillions: number;
   btosCurrent: number;
   btosPlanned: number;
   capabilityShare: number;
@@ -115,7 +117,8 @@ export interface SectorImpact {
   realizedAdoption: number;
   taskReplacement: number;
   productivityGain: number;
-  employmentDelta: number;
+  employmentDelta: number;        // % change
+  jobsImpacted: number;           // absolute jobs (positive = growth, negative = decline)
   wageImpact: number;
   archetype: Archetype;
 }
@@ -127,14 +130,16 @@ export function computeSector(sector: Sector, k: Knobs): SectorImpact {
   const T = k.horizonYears;
 
   // ── Module 2: AI CAPABILITY ─────────────────────────────────────
-  // Capability frontier — METR/Thompson doubling. Soft-saturating.
+  // Task-share capability: what fraction of tasks the frontier can handle.
+  // This is SEPARATE from firm-level adoption — kept distinct so each knob
+  // moves something visible.
   const doublings = (T * 12) / k.capabilityDoublingMonths;
   const reach = 1 - Math.pow(0.5, doublings * 0.45);
   const capabilityShare = p.exposureShare * reach;
 
   // Verifiability acceleration (RL feasibility)
   const verifiabilityBoost =
-    1 + (p.verifiabilityShare - 0.5) * (k.verifiabilityRatio - 1) * 0.25;
+    1 + (p.verifiabilityShare - 0.5) * (k.verifiabilityRatio - 1) * 0.35;
 
   // Reliability gate — high-floor sectors lose part of capability
   const floor = p.reliabilityFloor;
@@ -150,49 +155,61 @@ export function computeSector(sector: Sector, k: Knobs): SectorImpact {
   );
 
   // ── Module 4: FRICTION (cost gate component) ────────────────────
-  // Wright's-Law-style cost decline opens a larger share of tasks
-  // to economic viability over time.
-  const costGate = 0.45 + 0.55 * (1 - Math.exp(-T * k.computeCostDeclineRate * 2));
-  const economicViableShare = deployableShare * costGate;
+  // Wright's-Law-style cost decline opens more tasks to economic viability.
+  const costGate = 0.55 + 0.45 * (1 - Math.exp(-T * k.computeCostDeclineRate * 1.5));
+  const economicViableShare = Math.min(0.95, deployableShare * costGate);
 
-  // ── Module 1: ADOPTION SPEED ────────────────────────────────────
-  // Trust + Gen Z amplification
+  // ── Module 1: ADOPTION SPEED (firm-level, separate from capability) ─
+  // Trust × Gen Z amplification
   const baselineTrust = Math.min(1.0, p.trustCoef * k.trustMultiplier);
   const genZAdjustedTrust = Math.min(
     1.0,
-    baselineTrust * (1 + (p.genZShare - 0.15) * k.genZAdoptionBoost * 0.6)
+    baselineTrust * (1 + (p.genZShare - 0.15) * k.genZAdoptionBoost * 0.8)
   );
 
-  // Composite friction (multiplicative survival)
+  // Composite friction — WEIGHTED SUM (not multiplicative compounding).
+  // The old multiplicative formula compounded five 20-50% drags into 70%+
+  // total friction, locking peak below BTOS for nearly every sector.
+  // Weighted sum better reflects that institutional drags overlap rather
+  // than stack independently.
   const regSchema = p.regSchemaDrag * k.regSchemaMultiplier;
-  const downtime  = p.downtimeRisk * k.downtimeSensitivity * 0.35;
-  const stateReg  = 0.10 * k.stateRegMultiplier;
-  const security  = p.securityOverhead * k.securityOverheadMultiplier * 0.45;
+  const downtime = p.downtimeRisk * k.downtimeSensitivity;
+  const stateReg = 0.20 * k.stateRegMultiplier;
+  const security = p.securityOverhead * k.securityOverheadMultiplier;
   const institutional = p.frictionDrag;
 
-  const totalFriction = Math.min(
-    0.95,
-    1 -
-      (1 - clamp01(regSchema)) *
-      (1 - clamp01(downtime)) *
-      (1 - clamp01(stateReg)) *
-      (1 - clamp01(security)) *
-      (1 - clamp01(institutional))
+  const totalFriction = clamp(
+    0.05,
+    0.70,
+    0.25 * regSchema +
+      0.20 * downtime +
+      0.15 * stateReg +
+      0.15 * security +
+      0.25 * institutional
   );
 
-  const peakAdoption = economicViableShare * genZAdjustedTrust * (1 - totalFriction);
+  // Firm-level adoption: anchored to BTOS planned-use (firm intent), then
+  // pushed by horizon × trust and pulled down by friction. Decoupled from
+  // capability — a construction firm can adopt for one task without 100%
+  // of work being AI-able.
+  const trustPull = (genZAdjustedTrust - 0.4) * 0.8;
+  const horizonGrowth = 0.07 * T * (1 + trustPull * 1.5);
+  const frictionDrag = totalFriction * 0.5;
 
-  // Anchor to BTOS current use; logistic ramp toward peak
+  const peakFirmAdoption = Math.min(
+    0.92,
+    sector.btos.plannedUse / 100 + horizonGrowth - frictionDrag
+  );
+
+  // Soft floor at BTOS current — adopted firms don't un-adopt
   const anchor = sector.btos.currentUse / 100;
-  const ramp = 1 - Math.exp(-0.35 * T * Math.max(0.3, genZAdjustedTrust));
-  const realizedAdoption = Math.min(
-    0.95,
-    anchor + Math.max(0, peakAdoption - anchor) * ramp
-  );
+  const realizedAdoption = Math.max(anchor, peakFirmAdoption);
 
-  // ── Task replacement ────────────────────────────────────────────
+  // ── Task replacement ─────────────────────────────────────────────
+  // adoption × task-share capability × substitution share
+  // Multiplies the firm-adoption dimension with the task-capability dimension.
   const substitutionShare = 1 - p.complementarity;
-  const taskReplacement = realizedAdoption * p.exposureShare * substitutionShare;
+  const taskReplacement = realizedAdoption * economicViableShare * substitutionShare;
 
   // ── Productivity ────────────────────────────────────────────────
   const productivityGain = taskReplacement * k.productivityUplift;
@@ -206,9 +223,13 @@ export function computeSector(sector: Sector, k: Knobs): SectorImpact {
 
   const archetype = classify(employmentDelta, taskReplacement);
 
+  // Absolute jobs impact: % change × sector employment baseline
+  const jobsImpacted = (employmentDelta / 100) * sector.employmentMillions * 1_000_000;
+
   return {
     naics: sector.naics,
     name: sector.name,
+    employmentMillions: sector.employmentMillions,
     btosCurrent: sector.btos.currentUse,
     btosPlanned: sector.btos.plannedUse,
     capabilityShare: capabilityShare * 100,
@@ -218,6 +239,7 @@ export function computeSector(sector: Sector, k: Knobs): SectorImpact {
     taskReplacement: taskReplacement * 100,
     productivityGain: productivityGain * 100,
     employmentDelta,
+    jobsImpacted,
     wageImpact,
     archetype,
   };
@@ -225,6 +247,10 @@ export function computeSector(sector: Sector, k: Knobs): SectorImpact {
 
 function clamp01(v: number) {
   return Math.max(0, Math.min(1, v));
+}
+
+function clamp(min: number, max: number, v: number) {
+  return Math.max(min, Math.min(max, v));
 }
 
 function classify(empDelta: number, taskRepl: number): Archetype {
@@ -261,13 +287,44 @@ export const ARCHETYPE_META: Record<Archetype, { label: string; color: string; d
 // FRAMEWORK — for the UI to render category cards + factor explainers
 // ────────────────────────────────────────────────────────────────────
 
+export type ImpactTier = "high" | "medium" | "low" | "informational";
+
 export interface Factor {
   id: string;
   name: string;
   description: string;
   citation: { label: string; url?: string };
   knob?: keyof Knobs;
+  impact: ImpactTier;
+  impactNote?: string;
 }
+
+export const IMPACT_META: Record<ImpactTier, { label: string; color: string; bg: string; description: string }> = {
+  high: {
+    label: "High",
+    color: "#a53024",
+    bg: "#a5302418",
+    description: "Moves sector outputs > 2pp across slider range; can flip employment sign for some sectors.",
+  },
+  medium: {
+    label: "Medium",
+    color: "#a36e1e",
+    bg: "#a36e1e18",
+    description: "Moves outputs 0.5–2pp; shifts ranking but rarely flips direction.",
+  },
+  low: {
+    label: "Low",
+    color: "#5a6770",
+    bg: "#5a677018",
+    description: "Moves outputs < 0.5pp; matters mainly at extremes or for narrow sector classes.",
+  },
+  informational: {
+    label: "Info only",
+    color: "#7a7e8b",
+    bg: "#7a7e8b18",
+    description: "Not user-adjustable; documents an underlying framework concept.",
+  },
+};
 
 export interface Category {
   id: string;
@@ -291,20 +348,8 @@ export const FRAMEWORK: Category[] = [
         name: "Census BTOS adoption",
         description: "The US Census Business Trends & Outlook Survey samples ~1M firms biweekly on AI use. Currently 17.9% of firms use AI; 21.6% plan to in the next 6 months. We anchor t=0 of every sector's adoption curve to its BTOS current-use rate.",
         citation: { label: "US Census BTOS AI Supplement 2026", url: "https://www.census.gov/data/experimental-data-products/business-trends-and-outlook-survey.html" },
-      },
-      {
-        id: "sectoral-aversions",
-        name: "Sectoral aversions",
-        description: "Cultural norms and downtime risk slow deployment differently across sectors. Healthcare practitioners score 0.20 on AI trust; software engineers 0.80 (Gallup, NY Fed SCE). Failure-asymmetric sectors (utilities, anesthesia, trading) add a downtime-risk multiplier even when trust is otherwise high.",
-        citation: { label: "Gallup Workplace + NY Fed SCE 2025–26" },
-        knob: "trustMultiplier",
-      },
-      {
-        id: "downtime-sensitivity",
-        name: "Downtime sensitivity",
-        description: "When AI failure has asymmetric cost (a wrong medical diagnosis, a stuck grid, a rogue trade), deployment is gated by failure tolerance, not just average accuracy. This compounds the reliability floor and stays binding even after capability passes.",
-        citation: { label: "Internal heuristic; per-sector defaults from regulatory norms" },
-        knob: "downtimeSensitivity",
+        impact: "high",
+        impactNote: "Sets the t=0 anchor for every sector. Drives the floor of realized adoption — and the planned-use rate seeds the horizon projection.",
       },
       {
         id: "regulatory-schema",
@@ -312,6 +357,26 @@ export const FRAMEWORK: Category[] = [
         description: "Sector-level approval pathway — licensure, liability allocation, disclosure rules, pre-approval requirements (FDA, FAA, OCC, state medical boards). Each is a real lever that workforce leaders and policymakers can attempt to move.",
         citation: { label: "Hand-coded per-sector schema from federal + sector regulators" },
         knob: "regSchemaMultiplier",
+        impact: "high",
+        impactNote: "Largest single weight in the friction sum (0.25). Moving this slider visibly shifts adoption for regulated sectors.",
+      },
+      {
+        id: "sectoral-aversions",
+        name: "Sectoral aversions (trust)",
+        description: "Cultural norms slow deployment differently across sectors. Healthcare practitioners score 0.20 on AI trust; software engineers 0.80 (Gallup, NY Fed SCE). The trust multiplier pulls realized firm adoption above or below the BTOS planned-use trend.",
+        citation: { label: "Gallup Workplace + NY Fed SCE 2025–26" },
+        knob: "trustMultiplier",
+        impact: "high",
+        impactNote: "Enters via the horizonGrowth term (trustPull × 1.5). Strongest effect for sectors with trust above ~0.5.",
+      },
+      {
+        id: "downtime-sensitivity",
+        name: "Downtime sensitivity",
+        description: "When AI failure has asymmetric cost (a wrong medical diagnosis, a stuck grid, a rogue trade), deployment is gated by failure tolerance, not just average accuracy. This compounds the reliability floor and stays binding even after capability passes.",
+        citation: { label: "Internal heuristic; per-sector defaults from regulatory norms" },
+        knob: "downtimeSensitivity",
+        impact: "medium",
+        impactNote: "Friction-weight 0.20. Matters most in utilities, healthcare, transportation; minor for retail, professional services.",
       },
     ],
   },
@@ -328,6 +393,16 @@ export const FRAMEWORK: Category[] = [
         description: "Thompson's 'Rising Tides' framing treats capability as a frontier rising through a difficulty distribution. METR's measured task-completion-time horizon currently doubles every ~7 months on agentic work. After 5 years at this rate, the frontier reaches tasks ~2,500× harder than today.",
         citation: { label: "METR 2024–2026; Thompson 'Rising Tides' (MIT FutureTech)", url: "https://metr.org/" },
         knob: "capabilityDoublingMonths",
+        impact: "high",
+        impactNote: "Drives the reach function exponentially. Moving doubling from 14 → 4 months roughly triples task-share capability at T=5.",
+      },
+      {
+        id: "model-benchmarks",
+        name: "Model benchmarks & quality index (live)",
+        description: `Artificial Analysis tracks frontier-model performance across quality (MMLU, GPQA, HumanEval, MATH), latency, throughput, and price-per-token in near-real-time. Their cross-model Intelligence Index is the closest thing to a vendor-neutral measure of where the capability frontier actually sits today. We wire it in directly: the "Capability doubling" and "Compute cost decline" defaults above are fit live to AA's frontier path. Last refresh: ${CAPABILITY_ANCHOR.fetchedAt.slice(0, 10)} — ${CAPABILITY_ANCHOR.frontierReleases} frontier-defining releases tracked; current top model: ${CAPABILITY_ANCHOR.currentFrontier[0]?.name} (Intelligence Index ${CAPABILITY_ANCHOR.currentFrontier[0]?.intelligenceIndex}). Run \`npx tsx scripts/fetch-capability.ts\` to refresh.`,
+        citation: { label: "Artificial Analysis — Independent AI model benchmarks", url: "https://artificialanalysis.ai/" },
+        impact: "high",
+        impactNote: "Sets the live defaults for capability doubling time and compute cost decline. Re-fitting these moves nearly everything downstream.",
       },
       {
         id: "rl-feasibility",
@@ -335,6 +410,8 @@ export const FRAMEWORK: Category[] = [
         description: "Tasks with explicit verifiable rewards (code, math, structured research) have advanced dramatically faster than tasks with subjective evaluation. The Tomei & Klein Teeselink RL-feasibility index correlates 0.88 with LLM exposure overall but only 0.15 once physically infeasible tasks are excluded — meaning verifiability, not raw exposure, is what predicts where displacement actually concentrates.",
         citation: { label: "Tomei & Klein Teeselink 2026, 'What Jobs Can AI Learn?'", url: "https://arxiv.org/abs/2605.02598" },
         knob: "verifiabilityRatio",
+        impact: "medium",
+        impactNote: "Scales deployableShare by up to ±30%. Larger effect on high-verifiability sectors (information, finance, prof. services).",
       },
       {
         id: "reliability-floor",
@@ -342,12 +419,8 @@ export const FRAMEWORK: Category[] = [
         description: "Capability ≠ deployment. A 90%-reliable generator passes for marketing copy; radiology and anesthesia require 99.99%. The model only counts a task as deployable when capability × verifiability ≥ the sector's floor. Healthcare's 0.9999 floor strips ~70% of theoretical capability at every horizon.",
         citation: { label: "Per-sector floors from FDA, FAA, OCC, state bar benchmarks" },
         knob: "reliabilityFloorScale",
-      },
-      {
-        id: "model-benchmarks",
-        name: "Model benchmarks & quality index (live)",
-        description: `Artificial Analysis tracks frontier-model performance across quality (MMLU, GPQA, HumanEval, MATH), latency, throughput, and price-per-token in near-real-time. Their cross-model Intelligence Index is the closest thing to a vendor-neutral measure of where the capability frontier actually sits today. We wire it in directly: the "Capability doubling" and "Compute cost decline" defaults above are fit live to AA's frontier path. Last refresh: ${CAPABILITY_ANCHOR.fetchedAt.slice(0, 10)} — ${CAPABILITY_ANCHOR.frontierReleases} frontier-defining releases tracked; current top model: ${CAPABILITY_ANCHOR.currentFrontier[0]?.name} (Intelligence Index ${CAPABILITY_ANCHOR.currentFrontier[0]?.intelligenceIndex}). Run \`npx tsx scripts/fetch-capability.ts\` to refresh.`,
-        citation: { label: "Artificial Analysis — Independent AI model benchmarks", url: "https://artificialanalysis.ai/" },
+        impact: "medium",
+        impactNote: "Only binding for high-floor sectors (healthcare 0.9999, utilities/finance 0.999). For most others, the knob has minimal effect.",
       },
     ],
   },
@@ -364,12 +437,8 @@ export const FRAMEWORK: Category[] = [
         description: "Price elasticity of derived demand. Bessen's empirical fit on textiles, steel, and autos shows ε starting at 2–7 in early industry life and falling to 0.02–0.16 at maturity. ATMs grew teller employment for 30 years (high ε on banking); payroll software shrunk it (low ε — companies have exactly as many paychecks as employees).",
         citation: { label: "Bessen 2019, 'Automation and Jobs: When Technology Boosts Employment'", url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2935003" },
         knob: "elasticityScale",
-      },
-      {
-        id: "openai-archetypes",
-        name: "OpenAI four-archetype frame",
-        description: "Every sector maps onto one of four outcomes: auto-risk (pressure overwhelms buffers), reorganize (task mix shifts, employment roughly flat), grow (elasticity dominates, productivity expands jobs), less-change (capability or friction holds displacement in check). The color coding in the table reflects this classification.",
-        citation: { label: "OpenAI Jobs Transition Framework 2026" },
+        impact: "high",
+        impactNote: "The (ε−1) factor literally flips the sign of employment change. Sectors with ε near 1 are most sensitive to this knob.",
       },
       {
         id: "productivity-uplift",
@@ -377,6 +446,15 @@ export const FRAMEWORK: Category[] = [
         description: "Per-task cost savings when AI substitutes for human labor. Acemoglu's 'Simple Macroeconomics of AI' bounds this at ~27% across automatable tasks. This is the Δln(A) term in the Bessen identity — it sets the magnitude that elasticity then translates into employment change.",
         citation: { label: "Acemoglu 2024, 'The Simple Macroeconomics of AI'", url: "https://www.nber.org/papers/w32487" },
         knob: "productivityUplift",
+        impact: "high",
+        impactNote: "Direct linear multiplier on every output. Moving from 10% to 40% changes employment Δ by 4×.",
+      },
+      {
+        id: "openai-archetypes",
+        name: "OpenAI four-archetype frame",
+        description: "Every sector maps onto one of four outcomes: auto-risk (pressure overwhelms buffers), reorganize (task mix shifts, employment roughly flat), grow (elasticity dominates, productivity expands jobs), less-change (capability or friction holds displacement in check). The color coding in the table reflects this classification.",
+        citation: { label: "OpenAI Jobs Transition Framework 2026" },
+        impact: "informational",
       },
     ],
   },
@@ -388,31 +466,22 @@ export const FRAMEWORK: Category[] = [
     whyItMatters: "Friction is where workforce-leader interventions actually have leverage. Programs largely cannot slow capability — they can shape the realization gap that friction creates. This category aggregates demographic, regulatory, cost, and security drag into one composite buffer.",
     factors: [
       {
-        id: "gen-z-share",
-        name: "Generational composition",
-        description: "Each sector carries an age mix. Gen Z workers show measurably higher AI tool adoption and lower normative resistance (Bick/Deming RPS age cuts). A Rust Belt MSA with an older incumbent workforce and a Sun Belt MSA with a younger one have different adoption velocities for the same sector — captured here via per-sector Gen Z share × a global multiplier.",
-        citation: { label: "Bick/Deming Real-time Population Survey + NY Fed SCE workplace tracker" },
-        knob: "genZAdoptionBoost",
-      },
-      {
         id: "state-regulation",
         name: "State-level regulation",
-        description: "Independent of federal/sector schema (Adoption Speed § 4), state legislatures are actively passing AI deployment rules — California SB 1047 derivatives, NYC bias audits, Colorado AI Act, state attorney general enforcement priorities. Captured as a uniform-by-default drag the user can scale up or down.",
+        description: "Independent of federal/sector schema (Adoption Speed § 2), state legislatures are actively passing AI deployment rules — California SB 1047 derivatives, NYC bias audits, Colorado AI Act, state attorney general enforcement priorities. Captured as a uniform-by-default drag the user can scale up or down.",
         citation: { label: "NCSL AI legislation tracker, 2026 session" },
         knob: "stateRegMultiplier",
+        impact: "medium",
+        impactNote: "Friction-weight 0.15. Applies uniformly across all sectors, so moves the aggregate average more than any single sector.",
       },
       {
         id: "compute-costs",
         name: "Compute, token & energy costs",
-        description: "Token costs follow a Wright's-Law decline (~15%/yr base case fit to Hoffmann scaling). Energy and supervision overhead don't fall as fast. The model treats this as a cost gate that opens economic viability for more tasks over the horizon, separately from raw capability.",
+        description: "Token costs follow a Wright's-Law decline (~15%/yr base case fit to Hoffmann scaling, 40% on live AA frontier). Energy and supervision overhead don't fall as fast. Treated as a cost gate that opens economic viability for more tasks over the horizon.",
         citation: { label: "Wright's Law fit to Hoffmann scaling + Anthropic/OpenAI pricing history" },
         knob: "computeCostDeclineRate",
-      },
-      {
-        id: "latency-risk",
-        name: "Latency & reliability premiums",
-        description: "High-stakes deployment (anesthesia, grid routing, financial trade execution) carries premiums that decline more slowly than commodity inference — latency SLA, redundancy, human-in-the-loop verification. Captured as a downtime-risk multiplier (see Adoption Speed § 3) that compounds with the reliability floor.",
-        citation: { label: "Sector-specific deployment cost studies; folded into downtime sensitivity" },
+        impact: "medium",
+        impactNote: "Cost-gate ranges 0.55 → 0.95 across the slider range. Saturates by T=5 at the higher rates — effect strongest at T=2 horizon.",
       },
       {
         id: "security-overhead",
@@ -420,7 +489,31 @@ export const FRAMEWORK: Category[] = [
         description: "SOC 2, HIPAA, FedRAMP, PCI, state data sovereignty. Compliance overhead bites hardest in healthcare (HIPAA), finance (SOC + PCI), and information sectors (data sovereignty). The model treats it as drag on adoption proportional to per-sector compliance burden × a global multiplier.",
         citation: { label: "Per-sector compliance burden estimates; HIPAA/SOC/FedRAMP frameworks" },
         knob: "securityOverheadMultiplier",
+        impact: "medium",
+        impactNote: "Friction-weight 0.15. Concentrated effect on healthcare, finance, government-adjacent; minimal elsewhere.",
+      },
+      {
+        id: "gen-z-share",
+        name: "Generational composition",
+        description: "Each sector carries an age mix. Gen Z workers show measurably higher AI tool adoption and lower normative resistance (Bick/Deming RPS age cuts). A Rust Belt MSA with an older incumbent workforce and a Sun Belt MSA with a younger one have different adoption velocities for the same sector.",
+        citation: { label: "Bick/Deming Real-time Population Survey + NY Fed SCE workplace tracker" },
+        knob: "genZAdoptionBoost",
+        impact: "low",
+        impactNote: "Effect proportional to (genZShare − 0.15). Strongest for accommodation/food (0.34) and retail (0.28); near-zero elsewhere.",
+      },
+      {
+        id: "latency-risk",
+        name: "Latency & reliability premiums",
+        description: "High-stakes deployment (anesthesia, grid routing, financial trade execution) carries premiums that decline more slowly than commodity inference — latency SLA, redundancy, human-in-the-loop verification. Folded into the downtime-sensitivity knob in Adoption Speed.",
+        citation: { label: "Sector-specific deployment cost studies; folded into downtime sensitivity" },
+        impact: "informational",
       },
     ],
   },
 ];
+
+/** Sort factors within a category so high-impact appears first. */
+export function sortFactorsByImpact(factors: Factor[]): Factor[] {
+  const order: Record<ImpactTier, number> = { high: 0, medium: 1, low: 2, informational: 3 };
+  return [...factors].sort((a, b) => order[a.impact] - order[b.impact]);
+}

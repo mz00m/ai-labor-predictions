@@ -1,5 +1,5 @@
 {
-  "source": "US Census Bureau, Business Trends and Outlook Survey (BTOS) — AI Supplement, 2026",
+  "source": "US Census Bureau, Business Trends and Outlook Survey (BTOS) \u2014 AI Supplement, 2026",
   "url": "https://www.census.gov/data/experimental-data-products/business-trends-and-outlook-survey.html",
   "national": {
     "currentUse": 17.9,
@@ -16,211 +16,477 @@
     {
       "naics": "11",
       "name": "Agriculture, Forestry, Fishing & Hunting",
-      "btos": { "currentUse": 5.1, "plannedUse": 8.4, "genaiUse": 8.3, "replacesTask": 3.7, "empNoChange": 96.7 },
+      "btos": {
+        "currentUse": 5.1,
+        "plannedUse": 8.4,
+        "genaiUse": 8.3,
+        "replacesTask": 3.7,
+        "empNoChange": 96.7
+      },
       "params": {
-        "exposureShare": 0.20, "verifiabilityShare": 0.40, "trustCoef": 0.35,
-        "reliabilityFloor": 0.95, "elasticity": 0.4, "complementarity": 0.65,
-        "frictionDrag": 0.35, "genZShare": 0.10, "regSchemaDrag": 0.20,
-        "downtimeRisk": 0.30, "securityOverhead": 0.15
-      }
+        "exposureShare": 0.2,
+        "verifiabilityShare": 0.4,
+        "trustCoef": 0.35,
+        "reliabilityFloor": 0.95,
+        "elasticity": 0.4,
+        "complementarity": 0.65,
+        "frictionDrag": 0.35,
+        "genZShare": 0.1,
+        "regSchemaDrag": 0.2,
+        "downtimeRisk": 0.3,
+        "securityOverhead": 0.15
+      },
+      "employmentMillions": 2.4
     },
     {
       "naics": "21",
       "name": "Mining, Quarrying, Oil & Gas",
-      "btos": { "currentUse": 7.7, "plannedUse": 9.9, "genaiUse": 11.2, "replacesTask": 3.9, "empNoChange": 97.7 },
+      "btos": {
+        "currentUse": 7.7,
+        "plannedUse": 9.9,
+        "genaiUse": 11.2,
+        "replacesTask": 3.9,
+        "empNoChange": 97.7
+      },
       "params": {
-        "exposureShare": 0.28, "verifiabilityShare": 0.50, "trustCoef": 0.45,
-        "reliabilityFloor": 0.99, "elasticity": 0.3, "complementarity": 0.65,
-        "frictionDrag": 0.40, "genZShare": 0.08, "regSchemaDrag": 0.55,
-        "downtimeRisk": 0.70, "securityOverhead": 0.20
-      }
+        "exposureShare": 0.28,
+        "verifiabilityShare": 0.5,
+        "trustCoef": 0.45,
+        "reliabilityFloor": 0.99,
+        "elasticity": 0.3,
+        "complementarity": 0.65,
+        "frictionDrag": 0.4,
+        "genZShare": 0.08,
+        "regSchemaDrag": 0.55,
+        "downtimeRisk": 0.7,
+        "securityOverhead": 0.2
+      },
+      "employmentMillions": 0.6
     },
     {
       "naics": "22",
       "name": "Utilities",
-      "btos": { "currentUse": 13.7, "plannedUse": 14.1, "genaiUse": 17.6, "replacesTask": 10.5, "empNoChange": 97.8 },
+      "btos": {
+        "currentUse": 13.7,
+        "plannedUse": 14.1,
+        "genaiUse": 17.6,
+        "replacesTask": 10.5,
+        "empNoChange": 97.8
+      },
       "params": {
-        "exposureShare": 0.45, "verifiabilityShare": 0.70, "trustCoef": 0.30,
-        "reliabilityFloor": 0.999, "elasticity": 0.2, "complementarity": 0.55,
-        "frictionDrag": 0.60, "genZShare": 0.08, "regSchemaDrag": 0.80,
-        "downtimeRisk": 0.95, "securityOverhead": 0.55
-      }
+        "exposureShare": 0.45,
+        "verifiabilityShare": 0.7,
+        "trustCoef": 0.3,
+        "reliabilityFloor": 0.999,
+        "elasticity": 0.2,
+        "complementarity": 0.55,
+        "frictionDrag": 0.6,
+        "genZShare": 0.08,
+        "regSchemaDrag": 0.8,
+        "downtimeRisk": 0.95,
+        "securityOverhead": 0.55
+      },
+      "employmentMillions": 0.6
     },
     {
       "naics": "23",
       "name": "Construction",
-      "btos": { "currentUse": 9.2, "plannedUse": 12.9, "genaiUse": 12.3, "replacesTask": 5.0, "empNoChange": 97.4 },
+      "btos": {
+        "currentUse": 9.2,
+        "plannedUse": 12.9,
+        "genaiUse": 12.3,
+        "replacesTask": 5.0,
+        "empNoChange": 97.4
+      },
       "params": {
-        "exposureShare": 0.22, "verifiabilityShare": 0.35, "trustCoef": 0.40,
-        "reliabilityFloor": 0.95, "elasticity": 0.7, "complementarity": 0.70,
-        "frictionDrag": 0.35, "genZShare": 0.15, "regSchemaDrag": 0.40,
-        "downtimeRisk": 0.45, "securityOverhead": 0.20
-      }
+        "exposureShare": 0.22,
+        "verifiabilityShare": 0.35,
+        "trustCoef": 0.4,
+        "reliabilityFloor": 0.95,
+        "elasticity": 0.7,
+        "complementarity": 0.7,
+        "frictionDrag": 0.35,
+        "genZShare": 0.15,
+        "regSchemaDrag": 0.4,
+        "downtimeRisk": 0.45,
+        "securityOverhead": 0.2
+      },
+      "employmentMillions": 8.0
     },
     {
       "naics": "31-33",
       "name": "Manufacturing",
-      "btos": { "currentUse": 12.5, "plannedUse": 16.0, "genaiUse": 17.0, "replacesTask": 8.5, "empNoChange": 96.5 },
+      "btos": {
+        "currentUse": 12.5,
+        "plannedUse": 16.0,
+        "genaiUse": 17.0,
+        "replacesTask": 8.5,
+        "empNoChange": 96.5
+      },
       "params": {
-        "exposureShare": 0.45, "verifiabilityShare": 0.65, "trustCoef": 0.50,
-        "reliabilityFloor": 0.99, "elasticity": 0.5, "complementarity": 0.55,
-        "frictionDrag": 0.45, "genZShare": 0.13, "regSchemaDrag": 0.45,
-        "downtimeRisk": 0.55, "securityOverhead": 0.30
-      }
+        "exposureShare": 0.45,
+        "verifiabilityShare": 0.65,
+        "trustCoef": 0.5,
+        "reliabilityFloor": 0.99,
+        "elasticity": 0.5,
+        "complementarity": 0.55,
+        "frictionDrag": 0.45,
+        "genZShare": 0.13,
+        "regSchemaDrag": 0.45,
+        "downtimeRisk": 0.55,
+        "securityOverhead": 0.3
+      },
+      "employmentMillions": 13.0
     },
     {
       "naics": "42",
       "name": "Wholesale Trade",
-      "btos": { "currentUse": 13.6, "plannedUse": 20.0, "genaiUse": 20.2, "replacesTask": 7.7, "empNoChange": 95.2 },
+      "btos": {
+        "currentUse": 13.6,
+        "plannedUse": 20.0,
+        "genaiUse": 20.2,
+        "replacesTask": 7.7,
+        "empNoChange": 95.2
+      },
       "params": {
-        "exposureShare": 0.55, "verifiabilityShare": 0.70, "trustCoef": 0.60,
-        "reliabilityFloor": 0.95, "elasticity": 0.5, "complementarity": 0.45,
-        "frictionDrag": 0.30, "genZShare": 0.13, "regSchemaDrag": 0.20,
-        "downtimeRisk": 0.30, "securityOverhead": 0.25
-      }
+        "exposureShare": 0.55,
+        "verifiabilityShare": 0.7,
+        "trustCoef": 0.6,
+        "reliabilityFloor": 0.95,
+        "elasticity": 0.5,
+        "complementarity": 0.45,
+        "frictionDrag": 0.3,
+        "genZShare": 0.13,
+        "regSchemaDrag": 0.2,
+        "downtimeRisk": 0.3,
+        "securityOverhead": 0.25
+      },
+      "employmentMillions": 6.0
     },
     {
       "naics": "44-45",
       "name": "Retail Trade",
-      "btos": { "currentUse": 11.0, "plannedUse": 15.0, "genaiUse": 16.0, "replacesTask": 7.5, "empNoChange": 95.5 },
+      "btos": {
+        "currentUse": 11.0,
+        "plannedUse": 15.0,
+        "genaiUse": 16.0,
+        "replacesTask": 7.5,
+        "empNoChange": 95.5
+      },
       "params": {
-        "exposureShare": 0.50, "verifiabilityShare": 0.65, "trustCoef": 0.55,
-        "reliabilityFloor": 0.95, "elasticity": 0.6, "complementarity": 0.45,
-        "frictionDrag": 0.30, "genZShare": 0.28, "regSchemaDrag": 0.20,
-        "downtimeRisk": 0.25, "securityOverhead": 0.30
-      }
+        "exposureShare": 0.5,
+        "verifiabilityShare": 0.65,
+        "trustCoef": 0.55,
+        "reliabilityFloor": 0.95,
+        "elasticity": 0.6,
+        "complementarity": 0.45,
+        "frictionDrag": 0.3,
+        "genZShare": 0.28,
+        "regSchemaDrag": 0.2,
+        "downtimeRisk": 0.25,
+        "securityOverhead": 0.3
+      },
+      "employmentMillions": 15.6
     },
     {
       "naics": "48-49",
       "name": "Transportation & Warehousing",
-      "btos": { "currentUse": 11.0, "plannedUse": 14.0, "genaiUse": 14.0, "replacesTask": 7.5, "empNoChange": 95.5 },
+      "btos": {
+        "currentUse": 11.0,
+        "plannedUse": 14.0,
+        "genaiUse": 14.0,
+        "replacesTask": 7.5,
+        "empNoChange": 95.5
+      },
       "params": {
-        "exposureShare": 0.40, "verifiabilityShare": 0.55, "trustCoef": 0.45,
-        "reliabilityFloor": 0.99, "elasticity": 0.6, "complementarity": 0.45,
-        "frictionDrag": 0.50, "genZShare": 0.13, "regSchemaDrag": 0.65,
-        "downtimeRisk": 0.85, "securityOverhead": 0.35
-      }
+        "exposureShare": 0.4,
+        "verifiabilityShare": 0.55,
+        "trustCoef": 0.45,
+        "reliabilityFloor": 0.99,
+        "elasticity": 0.6,
+        "complementarity": 0.45,
+        "frictionDrag": 0.5,
+        "genZShare": 0.13,
+        "regSchemaDrag": 0.65,
+        "downtimeRisk": 0.85,
+        "securityOverhead": 0.35
+      },
+      "employmentMillions": 6.7
     },
     {
       "naics": "51",
       "name": "Information",
-      "btos": { "currentUse": 37.6, "plannedUse": 43.0, "genaiUse": 40.1, "replacesTask": 16.8, "empNoChange": 91.7 },
+      "btos": {
+        "currentUse": 37.6,
+        "plannedUse": 43.0,
+        "genaiUse": 40.1,
+        "replacesTask": 16.8,
+        "empNoChange": 91.7
+      },
       "params": {
-        "exposureShare": 0.85, "verifiabilityShare": 0.80, "trustCoef": 0.80,
-        "reliabilityFloor": 0.95, "elasticity": 1.6, "complementarity": 0.65,
-        "frictionDrag": 0.15, "genZShare": 0.16, "regSchemaDrag": 0.30,
-        "downtimeRisk": 0.55, "securityOverhead": 0.55
-      }
+        "exposureShare": 0.85,
+        "verifiabilityShare": 0.8,
+        "trustCoef": 0.8,
+        "reliabilityFloor": 0.95,
+        "elasticity": 1.6,
+        "complementarity": 0.65,
+        "frictionDrag": 0.15,
+        "genZShare": 0.16,
+        "regSchemaDrag": 0.3,
+        "downtimeRisk": 0.55,
+        "securityOverhead": 0.55
+      },
+      "employmentMillions": 3.1
     },
     {
       "naics": "52",
       "name": "Finance & Insurance",
-      "btos": { "currentUse": 30.4, "plannedUse": 34.1, "genaiUse": 29.6, "replacesTask": 13.7, "empNoChange": 95.0 },
+      "btos": {
+        "currentUse": 30.4,
+        "plannedUse": 34.1,
+        "genaiUse": 29.6,
+        "replacesTask": 13.7,
+        "empNoChange": 95.0
+      },
       "params": {
-        "exposureShare": 0.75, "verifiabilityShare": 0.75, "trustCoef": 0.55,
-        "reliabilityFloor": 0.999, "elasticity": 0.8, "complementarity": 0.60,
-        "frictionDrag": 0.45, "genZShare": 0.14, "regSchemaDrag": 0.70,
-        "downtimeRisk": 0.80, "securityOverhead": 0.85
-      }
+        "exposureShare": 0.75,
+        "verifiabilityShare": 0.75,
+        "trustCoef": 0.55,
+        "reliabilityFloor": 0.999,
+        "elasticity": 0.8,
+        "complementarity": 0.6,
+        "frictionDrag": 0.45,
+        "genZShare": 0.14,
+        "regSchemaDrag": 0.7,
+        "downtimeRisk": 0.8,
+        "securityOverhead": 0.85
+      },
+      "employmentMillions": 6.6
     },
     {
       "naics": "53",
       "name": "Real Estate",
-      "btos": { "currentUse": 23.5, "plannedUse": 26.6, "genaiUse": 25.9, "replacesTask": 11.4, "empNoChange": 96.5 },
+      "btos": {
+        "currentUse": 23.5,
+        "plannedUse": 26.6,
+        "genaiUse": 25.9,
+        "replacesTask": 11.4,
+        "empNoChange": 96.5
+      },
       "params": {
-        "exposureShare": 0.55, "verifiabilityShare": 0.55, "trustCoef": 0.60,
-        "reliabilityFloor": 0.95, "elasticity": 0.7, "complementarity": 0.55,
-        "frictionDrag": 0.25, "genZShare": 0.10, "regSchemaDrag": 0.30,
-        "downtimeRisk": 0.25, "securityOverhead": 0.25
-      }
+        "exposureShare": 0.55,
+        "verifiabilityShare": 0.55,
+        "trustCoef": 0.6,
+        "reliabilityFloor": 0.95,
+        "elasticity": 0.7,
+        "complementarity": 0.55,
+        "frictionDrag": 0.25,
+        "genZShare": 0.1,
+        "regSchemaDrag": 0.3,
+        "downtimeRisk": 0.25,
+        "securityOverhead": 0.25
+      },
+      "employmentMillions": 2.4
     },
     {
       "naics": "54",
       "name": "Professional, Scientific & Technical",
-      "btos": { "currentUse": 34.2, "plannedUse": 37.5, "genaiUse": 34.9, "replacesTask": 15.5, "empNoChange": 94.3 },
+      "btos": {
+        "currentUse": 34.2,
+        "plannedUse": 37.5,
+        "genaiUse": 34.9,
+        "replacesTask": 15.5,
+        "empNoChange": 94.3
+      },
       "params": {
-        "exposureShare": 0.80, "verifiabilityShare": 0.70, "trustCoef": 0.70,
-        "reliabilityFloor": 0.95, "elasticity": 1.4, "complementarity": 0.75,
-        "frictionDrag": 0.20, "genZShare": 0.16, "regSchemaDrag": 0.30,
-        "downtimeRisk": 0.45, "securityOverhead": 0.45
-      }
+        "exposureShare": 0.8,
+        "verifiabilityShare": 0.7,
+        "trustCoef": 0.7,
+        "reliabilityFloor": 0.95,
+        "elasticity": 1.4,
+        "complementarity": 0.75,
+        "frictionDrag": 0.2,
+        "genZShare": 0.16,
+        "regSchemaDrag": 0.3,
+        "downtimeRisk": 0.45,
+        "securityOverhead": 0.45
+      },
+      "employmentMillions": 11.0
     },
     {
       "naics": "55",
       "name": "Management of Companies",
-      "btos": { "currentUse": 20.9, "plannedUse": 26.4, "genaiUse": 28.3, "replacesTask": 11.0, "empNoChange": 92.1 },
+      "btos": {
+        "currentUse": 20.9,
+        "plannedUse": 26.4,
+        "genaiUse": 28.3,
+        "replacesTask": 11.0,
+        "empNoChange": 92.1
+      },
       "params": {
-        "exposureShare": 0.65, "verifiabilityShare": 0.60, "trustCoef": 0.65,
-        "reliabilityFloor": 0.97, "elasticity": 1.0, "complementarity": 0.80,
-        "frictionDrag": 0.25, "genZShare": 0.10, "regSchemaDrag": 0.30,
-        "downtimeRisk": 0.40, "securityOverhead": 0.35
-      }
+        "exposureShare": 0.65,
+        "verifiabilityShare": 0.6,
+        "trustCoef": 0.65,
+        "reliabilityFloor": 0.97,
+        "elasticity": 1.0,
+        "complementarity": 0.8,
+        "frictionDrag": 0.25,
+        "genZShare": 0.1,
+        "regSchemaDrag": 0.3,
+        "downtimeRisk": 0.4,
+        "securityOverhead": 0.35
+      },
+      "employmentMillions": 2.4
     },
     {
       "naics": "56",
       "name": "Administrative & Support Services",
-      "btos": { "currentUse": 16.6, "plannedUse": 19.9, "genaiUse": 19.0, "replacesTask": 9.8, "empNoChange": 95.8 },
+      "btos": {
+        "currentUse": 16.6,
+        "plannedUse": 19.9,
+        "genaiUse": 19.0,
+        "replacesTask": 9.8,
+        "empNoChange": 95.8
+      },
       "params": {
-        "exposureShare": 0.75, "verifiabilityShare": 0.80, "trustCoef": 0.55,
-        "reliabilityFloor": 0.95, "elasticity": 0.3, "complementarity": 0.30,
-        "frictionDrag": 0.20, "genZShare": 0.20, "regSchemaDrag": 0.15,
-        "downtimeRisk": 0.30, "securityOverhead": 0.30
-      }
+        "exposureShare": 0.75,
+        "verifiabilityShare": 0.8,
+        "trustCoef": 0.55,
+        "reliabilityFloor": 0.95,
+        "elasticity": 0.3,
+        "complementarity": 0.3,
+        "frictionDrag": 0.2,
+        "genZShare": 0.2,
+        "regSchemaDrag": 0.15,
+        "downtimeRisk": 0.3,
+        "securityOverhead": 0.3
+      },
+      "employmentMillions": 8.6
     },
     {
       "naics": "61",
       "name": "Educational Services",
-      "btos": { "currentUse": 30.7, "plannedUse": 35.3, "genaiUse": 39.4, "replacesTask": 12.8, "empNoChange": 96.2 },
+      "btos": {
+        "currentUse": 30.7,
+        "plannedUse": 35.3,
+        "genaiUse": 39.4,
+        "replacesTask": 12.8,
+        "empNoChange": 96.2
+      },
       "params": {
-        "exposureShare": 0.60, "verifiabilityShare": 0.45, "trustCoef": 0.25,
-        "reliabilityFloor": 0.97, "elasticity": 0.9, "complementarity": 0.70,
-        "frictionDrag": 0.55, "genZShare": 0.16, "regSchemaDrag": 0.55,
-        "downtimeRisk": 0.40, "securityOverhead": 0.40
-      }
+        "exposureShare": 0.6,
+        "verifiabilityShare": 0.45,
+        "trustCoef": 0.25,
+        "reliabilityFloor": 0.97,
+        "elasticity": 0.9,
+        "complementarity": 0.7,
+        "frictionDrag": 0.55,
+        "genZShare": 0.16,
+        "regSchemaDrag": 0.55,
+        "downtimeRisk": 0.4,
+        "securityOverhead": 0.4
+      },
+      "employmentMillions": 13.6
     },
     {
       "naics": "62",
       "name": "Health Care & Social Assistance",
-      "btos": { "currentUse": 20.7, "plannedUse": 24.9, "genaiUse": 22.4, "replacesTask": 9.5, "empNoChange": 96.1 },
+      "btos": {
+        "currentUse": 20.7,
+        "plannedUse": 24.9,
+        "genaiUse": 22.4,
+        "replacesTask": 9.5,
+        "empNoChange": 96.1
+      },
       "params": {
-        "exposureShare": 0.55, "verifiabilityShare": 0.50, "trustCoef": 0.20,
-        "reliabilityFloor": 0.9999, "elasticity": 1.4, "complementarity": 0.80,
-        "frictionDrag": 0.70, "genZShare": 0.16, "regSchemaDrag": 0.85,
-        "downtimeRisk": 0.95, "securityOverhead": 0.85
-      }
+        "exposureShare": 0.55,
+        "verifiabilityShare": 0.5,
+        "trustCoef": 0.2,
+        "reliabilityFloor": 0.9999,
+        "elasticity": 1.4,
+        "complementarity": 0.8,
+        "frictionDrag": 0.7,
+        "genZShare": 0.16,
+        "regSchemaDrag": 0.85,
+        "downtimeRisk": 0.95,
+        "securityOverhead": 0.85
+      },
+      "employmentMillions": 22.7
     },
     {
       "naics": "71",
       "name": "Arts, Entertainment & Recreation",
-      "btos": { "currentUse": 17.5, "plannedUse": 21.7, "genaiUse": 24.7, "replacesTask": 8.6, "empNoChange": 97.1 },
+      "btos": {
+        "currentUse": 17.5,
+        "plannedUse": 21.7,
+        "genaiUse": 24.7,
+        "replacesTask": 8.6,
+        "empNoChange": 97.1
+      },
       "params": {
-        "exposureShare": 0.60, "verifiabilityShare": 0.40, "trustCoef": 0.45,
-        "reliabilityFloor": 0.90, "elasticity": 1.1, "complementarity": 0.65,
-        "frictionDrag": 0.20, "genZShare": 0.22, "regSchemaDrag": 0.25,
-        "downtimeRisk": 0.20, "securityOverhead": 0.20
-      }
+        "exposureShare": 0.6,
+        "verifiabilityShare": 0.4,
+        "trustCoef": 0.45,
+        "reliabilityFloor": 0.9,
+        "elasticity": 1.1,
+        "complementarity": 0.65,
+        "frictionDrag": 0.2,
+        "genZShare": 0.22,
+        "regSchemaDrag": 0.25,
+        "downtimeRisk": 0.2,
+        "securityOverhead": 0.2
+      },
+      "employmentMillions": 2.5
     },
     {
       "naics": "72",
       "name": "Accommodation & Food Services",
-      "btos": { "currentUse": 8.0, "plannedUse": 11.5, "genaiUse": 11.0, "replacesTask": 5.6, "empNoChange": 96.7 },
+      "btos": {
+        "currentUse": 8.0,
+        "plannedUse": 11.5,
+        "genaiUse": 11.0,
+        "replacesTask": 5.6,
+        "empNoChange": 96.7
+      },
       "params": {
-        "exposureShare": 0.40, "verifiabilityShare": 0.55, "trustCoef": 0.45,
-        "reliabilityFloor": 0.95, "elasticity": 0.8, "complementarity": 0.40,
-        "frictionDrag": 0.25, "genZShare": 0.34, "regSchemaDrag": 0.20,
-        "downtimeRisk": 0.25, "securityOverhead": 0.20
-      }
+        "exposureShare": 0.4,
+        "verifiabilityShare": 0.55,
+        "trustCoef": 0.45,
+        "reliabilityFloor": 0.95,
+        "elasticity": 0.8,
+        "complementarity": 0.4,
+        "frictionDrag": 0.25,
+        "genZShare": 0.34,
+        "regSchemaDrag": 0.2,
+        "downtimeRisk": 0.25,
+        "securityOverhead": 0.2
+      },
+      "employmentMillions": 13.0
     },
     {
       "naics": "81",
       "name": "Other Services",
-      "btos": { "currentUse": 9.8, "plannedUse": 12.1, "genaiUse": 12.2, "replacesTask": 6.5, "empNoChange": 97.1 },
+      "btos": {
+        "currentUse": 9.8,
+        "plannedUse": 12.1,
+        "genaiUse": 12.2,
+        "replacesTask": 6.5,
+        "empNoChange": 97.1
+      },
       "params": {
-        "exposureShare": 0.45, "verifiabilityShare": 0.50, "trustCoef": 0.50,
-        "reliabilityFloor": 0.95, "elasticity": 0.6, "complementarity": 0.50,
-        "frictionDrag": 0.30, "genZShare": 0.18, "regSchemaDrag": 0.20,
-        "downtimeRisk": 0.20, "securityOverhead": 0.20
-      }
+        "exposureShare": 0.45,
+        "verifiabilityShare": 0.5,
+        "trustCoef": 0.5,
+        "reliabilityFloor": 0.95,
+        "elasticity": 0.6,
+        "complementarity": 0.5,
+        "frictionDrag": 0.3,
+        "genZShare": 0.18,
+        "regSchemaDrag": 0.2,
+        "downtimeRisk": 0.2,
+        "securityOverhead": 0.2
+      },
+      "employmentMillions": 5.7
     }
   ]
 }
