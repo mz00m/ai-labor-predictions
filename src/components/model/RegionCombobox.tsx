@@ -98,9 +98,9 @@ export default function RegionCombobox({
   };
 
   return (
-    <div ref={wrapperRef} className="relative">
+    <div ref={wrapperRef} className="relative" style={{ isolation: "isolate" }}>
       {/* Selected region display + search input */}
-      <div className="bg-card border border-card rounded-lg overflow-hidden">
+      <div className="bg-card border border-card rounded-lg overflow-hidden relative z-10">
         {selected && !isOpen && (
           <button
             type="button"
@@ -179,7 +179,14 @@ export default function RegionCombobox({
 
       {/* Dropdown */}
       {isOpen && (
-        <div className="absolute top-full left-0 right-0 mt-1 bg-card border border-card rounded-lg shadow-lg z-20 overflow-hidden">
+        <div
+          className="absolute top-full left-0 right-0 mt-1 rounded-lg shadow-2xl overflow-hidden"
+          style={{
+            zIndex: 9999,
+            background: "var(--background)",
+            border: "1px solid rgba(0,0,0,0.12)",
+          }}
+        >
           {filtered.length === 0 ? (
             <p className="px-4 py-3 text-sm text-[var(--muted)] italic">
               No regions match &ldquo;{query}&rdquo;. Try a state code (e.g. PA) or a city name.
@@ -197,7 +204,7 @@ export default function RegionCombobox({
                     onMouseEnter={() => setActiveIndex(idx)}
                     onClick={() => pick(r)}
                     className={`px-4 py-2.5 cursor-pointer flex items-center justify-between gap-3 ${
-                      isActive ? "bg-[var(--background)]" : ""
+                      isActive ? "bg-card" : ""
                     }`}
                   >
                     <div className="min-w-0">
@@ -223,7 +230,7 @@ export default function RegionCombobox({
               })}
             </ul>
           )}
-          <div className="px-4 py-2 border-t border-divider bg-[var(--background)] text-[10px] text-[var(--muted)] tabular-nums flex justify-between">
+          <div className="px-4 py-2 border-t border-divider bg-card text-[10px] text-[var(--muted)] tabular-nums flex justify-between">
             <span>
               {query
                 ? `${filtered.length} match${filtered.length === 1 ? "" : "es"} (showing up to ${maxResults})`
