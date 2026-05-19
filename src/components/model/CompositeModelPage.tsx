@@ -133,6 +133,7 @@ export default function CompositeModelPage() {
   const [sortKey, setSortKey] = useState<SortKey>("employmentDelta");
   const [sortDir, setSortDir] = useState<"asc" | "desc">("asc");
   const [selected, setSelected] = useState<string | null>(null);
+  const [knobsOpen, setKnobsOpen] = useState(false);
 
   const results = useMemo(
     () => sectors.map((s) => computeSector(s, knobs)),
@@ -188,9 +189,9 @@ export default function CompositeModelPage() {
   }
 
   return (
-    <div className="max-w-[1400px] mx-auto">
+    <div className="max-w-[1100px] mx-auto">
       {/* Header */}
-      <header className="mb-8 max-w-3xl">
+      <header className="mb-8">
         <p className="text-xs uppercase tracking-[0.18em] text-[var(--muted)] mb-3">
           jobsdata.ai / model
         </p>
@@ -209,6 +210,9 @@ export default function CompositeModelPage() {
           priors.
         </p>
       </header>
+
+      {/* Model flow diagram — visual explanation */}
+      <ModelDiagram />
 
       {/* 2×2 Scenario presets */}
       <section className="mb-8">
@@ -265,53 +269,68 @@ export default function CompositeModelPage() {
         />
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-[340px_1fr] gap-6">
-        {/* Knob panel — organized by 4 framework categories */}
-        <aside className="bg-card border border-card rounded-lg p-5 h-fit lg:sticky lg:top-6 max-h-[calc(100vh-3rem)] overflow-y-auto">
-          <div className="mb-4">
-            <h2 className="text-base font-semibold text-[var(--foreground)] mb-1">
-              Model knobs
-            </h2>
-            <p className="text-xs text-[var(--muted)] leading-[1.5]">
-              Grouped by the four framework categories. Each knob has a
-              research-anchored default; hover the name for the source.
-            </p>
+      {/* Collapsible knob panel — horizontal, 4 columns matching framework */}
+      <section className="mb-8">
+        <button
+          onClick={() => setKnobsOpen(!knobsOpen)}
+          className="w-full bg-card border border-card rounded-lg px-5 py-3.5 flex items-center justify-between hover:bg-[var(--background)] transition-colors text-left"
+        >
+          <div className="flex items-center gap-3 flex-wrap">
+            <span className="text-base font-semibold text-[var(--foreground)]">
+              {knobsOpen ? "Hide" : "Open"} the 12 underlying knobs
+            </span>
+            <span className="text-xs text-[var(--muted)]">
+              {knobsOpen
+                ? "Adjust assumptions across the 4 framework categories"
+                : "Scenarios above are presets; expand to tune individually"}
+            </span>
           </div>
+          <div className="flex items-center gap-3 flex-shrink-0">
+            <LiveAnchorBadgeInline />
+            <span className={`text-[var(--muted)] transition-transform ${knobsOpen ? "rotate-180" : ""}`}>▾</span>
+          </div>
+        </button>
 
-          <KnobGroup category={1} title="Adoption Speed" color="#3a8a4f">
-            <SegmentedKnob
-              label="Horizon"
-              value={knobs.horizonYears}
-              options={[2, 5, 10]}
-              format={(v) => `${v}yr`}
-              onChange={(v) => update("horizonYears", v)}
-              hint="Different mechanisms dominate at different horizons."
-            />
-            <SliderKnob label="Trust multiplier" value={knobs.trustMultiplier} min={0.5} max={1.5} step={0.05} onChange={(v) => update("trustMultiplier", v)} format={(v) => `${v.toFixed(2)}×`} hint="Cultural aversions (Gallup, NY Fed SCE). Healthcare 0.20, software 0.80." />
-            <SliderKnob label="Regulatory schema" value={knobs.regSchemaMultiplier} min={0.5} max={1.5} step={0.05} onChange={(v) => update("regSchemaMultiplier", v)} format={(v) => `${v.toFixed(2)}×`} hint="Sector approval pathway burden (FDA, OCC, state boards)." />
-            <SliderKnob label="Downtime sensitivity" value={knobs.downtimeSensitivity} min={0.5} max={1.5} step={0.05} onChange={(v) => update("downtimeSensitivity", v)} format={(v) => `${v.toFixed(2)}×`} hint="Asymmetric cost of AI failure (anesthesia, grid, trading)." />
-          </KnobGroup>
+        {knobsOpen && (
+          <div className="mt-3 bg-card border border-card rounded-lg p-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-5">
+              <KnobColumn category={1} title="Adoption Speed" color="#3a8a4f" subtitle="How fast firms deploy">
+                <SegmentedKnob
+                  label="Horizon"
+                  value={knobs.horizonYears}
+                  options={[2, 5, 10]}
+                  format={(v) => `${v}yr`}
+                  onChange={(v) => update("horizonYears", v)}
+                  hint="Different mechanisms dominate at different horizons."
+                />
+                <SliderKnob label="Trust multiplier" value={knobs.trustMultiplier} min={0.5} max={1.5} step={0.05} onChange={(v) => update("trustMultiplier", v)} format={(v) => `${v.toFixed(2)}×`} hint="Cultural aversions (Gallup, NY Fed SCE). Healthcare 0.20, software 0.80." />
+                <SliderKnob label="Regulatory schema" value={knobs.regSchemaMultiplier} min={0.5} max={1.5} step={0.05} onChange={(v) => update("regSchemaMultiplier", v)} format={(v) => `${v.toFixed(2)}×`} hint="Sector approval pathway burden (FDA, OCC, state boards)." />
+                <SliderKnob label="Downtime sensitivity" value={knobs.downtimeSensitivity} min={0.5} max={1.5} step={0.05} onChange={(v) => update("downtimeSensitivity", v)} format={(v) => `${v.toFixed(2)}×`} hint="Asymmetric cost of AI failure (anesthesia, grid, trading)." />
+              </KnobColumn>
 
-          <KnobGroup category={2} title="AI Capability" color="#c89531">
-            <LiveAnchorBadge />
-            <SliderKnob label="Capability doubling (months)" value={knobs.capabilityDoublingMonths} min={4} max={18} step={0.1} onChange={(v) => update("capabilityDoublingMonths", v)} format={(v) => `${v.toFixed(1)} mo`} hint="Fit live to Artificial Analysis Intelligence Index frontier." />
-            <SliderKnob label="Verifiability divergence" value={knobs.verifiabilityRatio} min={1.2} max={4.0} step={0.1} onChange={(v) => update("verifiabilityRatio", v)} format={(v) => `${v.toFixed(1)}×`} hint="How much faster verifiable tasks advance (Tomei & Klein Teeselink)." />
-            <SliderKnob label="Reliability floor scale" value={knobs.reliabilityFloorScale} min={0.7} max={1.3} step={0.05} onChange={(v) => update("reliabilityFloorScale", v)} format={(v) => `${v.toFixed(2)}×`} hint="Tightens or loosens regulatory reliability thresholds per sector." />
-          </KnobGroup>
+              <KnobColumn category={2} title="AI Capability" color="#c89531" subtitle="What AI can actually do">
+                <SliderKnob label="Capability doubling (mo)" value={knobs.capabilityDoublingMonths} min={4} max={18} step={0.1} onChange={(v) => update("capabilityDoublingMonths", v)} format={(v) => `${v.toFixed(1)} mo`} hint="Fit live to Artificial Analysis Intelligence Index frontier." />
+                <SliderKnob label="Verifiability divergence" value={knobs.verifiabilityRatio} min={1.2} max={4.0} step={0.1} onChange={(v) => update("verifiabilityRatio", v)} format={(v) => `${v.toFixed(1)}×`} hint="How much faster verifiable tasks advance (Tomei & Klein Teeselink)." />
+                <SliderKnob label="Reliability floor scale" value={knobs.reliabilityFloorScale} min={0.7} max={1.3} step={0.05} onChange={(v) => update("reliabilityFloorScale", v)} format={(v) => `${v.toFixed(2)}×`} hint="Tightens or loosens regulatory reliability thresholds per sector." />
+              </KnobColumn>
 
-          <KnobGroup category={3} title="Demand Elasticity" color="#5b7faf">
-            <SliderKnob label="Elasticity scale" value={knobs.elasticityScale} min={0.5} max={2.0} step={0.05} onChange={(v) => update("elasticityScale", v)} format={(v) => `${v.toFixed(2)}×`} hint="Scales Bessen ε per sector. ε>1 grows jobs; ε<1 cuts them." />
-            <SliderKnob label="Productivity uplift" value={knobs.productivityUplift} min={0.1} max={0.4} step={0.01} onChange={(v) => update("productivityUplift", v)} format={(v) => `${(v * 100).toFixed(0)}%`} hint="Per-task cost savings (Acemoglu 2024 ≈ 27%)." />
-          </KnobGroup>
+              <KnobColumn category={3} title="Demand Elasticity" color="#5b7faf" subtitle="Cheaper output → more demand?">
+                <SliderKnob label="Elasticity scale (Bessen ε)" value={knobs.elasticityScale} min={0.5} max={2.0} step={0.05} onChange={(v) => update("elasticityScale", v)} format={(v) => `${v.toFixed(2)}×`} hint="Scales Bessen ε per sector. ε>1 grows jobs; ε<1 cuts them." />
+                <SliderKnob label="Productivity uplift / task" value={knobs.productivityUplift} min={0.1} max={0.4} step={0.01} onChange={(v) => update("productivityUplift", v)} format={(v) => `${(v * 100).toFixed(0)}%`} hint="Per-task cost savings (Acemoglu 2024 ≈ 27%)." />
+              </KnobColumn>
 
-          <KnobGroup category={4} title="Friction Buffer" color="#7a7e8b">
-            <SliderKnob label="Gen Z adoption boost" value={knobs.genZAdoptionBoost} min={0.5} max={1.5} step={0.05} onChange={(v) => update("genZAdoptionBoost", v)} format={(v) => `${v.toFixed(2)}×`} hint="Amplifies the Gen Z share's adoption-lifting effect per sector." />
-            <SliderKnob label="State regulation drag" value={knobs.stateRegMultiplier} min={0.5} max={1.5} step={0.05} onChange={(v) => update("stateRegMultiplier", v)} format={(v) => `${v.toFixed(2)}×`} hint="Independent of sector schema (CA SB1047 derivatives, NYC bias audits, CO AI Act)." />
-            <SliderKnob label="Compute cost decline" value={knobs.computeCostDeclineRate} min={0.05} max={0.40} step={0.01} onChange={(v) => update("computeCostDeclineRate", v)} format={(v) => `${(v * 100).toFixed(0)}%/yr`} hint="Wright's Law decline on token + energy costs." />
-            <SliderKnob label="Security overhead" value={knobs.securityOverheadMultiplier} min={0.5} max={1.5} step={0.05} onChange={(v) => update("securityOverheadMultiplier", v)} format={(v) => `${v.toFixed(2)}×`} hint="SOC 2, HIPAA, FedRAMP, state data sovereignty drag." />
-          </KnobGroup>
-        </aside>
+              <KnobColumn category={4} title="Friction Buffer" color="#7a7e8b" subtitle="What slows transitions">
+                <SliderKnob label="Gen Z adoption boost" value={knobs.genZAdoptionBoost} min={0.5} max={1.5} step={0.05} onChange={(v) => update("genZAdoptionBoost", v)} format={(v) => `${v.toFixed(2)}×`} hint="Amplifies the Gen Z share's adoption-lifting effect per sector." />
+                <SliderKnob label="State regulation drag" value={knobs.stateRegMultiplier} min={0.5} max={1.5} step={0.05} onChange={(v) => update("stateRegMultiplier", v)} format={(v) => `${v.toFixed(2)}×`} hint="Independent of sector schema (CA SB1047 derivatives, NYC bias audits, CO AI Act)." />
+                <SliderKnob label="Compute cost decline" value={knobs.computeCostDeclineRate} min={0.05} max={0.40} step={0.01} onChange={(v) => update("computeCostDeclineRate", v)} format={(v) => `${(v * 100).toFixed(0)}%/yr`} hint="Wright's Law decline on token + energy costs." />
+                <SliderKnob label="Security overhead" value={knobs.securityOverheadMultiplier} min={0.5} max={1.5} step={0.05} onChange={(v) => update("securityOverheadMultiplier", v)} format={(v) => `${v.toFixed(2)}×`} hint="SOC 2, HIPAA, FedRAMP, state data sovereignty drag." />
+              </KnobColumn>
+            </div>
+          </div>
+        )}
+      </section>
 
+      <div>
         {/* Results */}
         <section>
           {/* Counterfactual chart — top winners and losers */}
@@ -480,6 +499,136 @@ function PresetCard({
   );
 }
 
+function ModelDiagram() {
+  const cats = [
+    { num: 1, name: "Adoption Speed", color: "#3a8a4f", knobs: 4, hint: "Trust, regulation, downtime, BTOS anchor" },
+    { num: 2, name: "AI Capability", color: "#c89531", knobs: 3, hint: "METR doubling, RL feasibility, reliability floor" },
+    { num: 3, name: "Demand Elasticity", color: "#5b7faf", knobs: 2, hint: "Bessen ε, productivity uplift" },
+    { num: 4, name: "Friction Buffer", color: "#7a7e8b", knobs: 4, hint: "Gen Z, state reg, compute costs, security" },
+  ];
+  return (
+    <section className="mb-10">
+      <p className="text-xs uppercase tracking-wider text-[var(--muted)] mb-3">
+        How the model works
+      </p>
+      <div className="bg-card border border-card rounded-lg p-6">
+        {/* Four input categories */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-4">
+          {cats.map((c) => (
+            <div
+              key={c.num}
+              className="bg-[var(--background)] border-2 rounded-lg p-3.5"
+              style={{ borderColor: `${c.color}55` }}
+            >
+              <div className="flex items-center gap-2 mb-1.5">
+                <span
+                  className="text-[10px] font-semibold text-white w-5 h-5 rounded flex items-center justify-center tabular-nums flex-shrink-0"
+                  style={{ background: c.color }}
+                >
+                  {c.num}
+                </span>
+                <p className="text-sm font-semibold text-[var(--foreground)] leading-tight">
+                  {c.name}
+                </p>
+              </div>
+              <p className="text-[11px] text-[var(--muted)] leading-snug mb-1.5">
+                {c.hint}
+              </p>
+              <p className="text-[10px] uppercase tracking-wider text-[var(--muted)]">
+                {c.knobs} knob{c.knobs > 1 ? "s" : ""}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Arrow down */}
+        <div className="flex justify-center">
+          <span className="text-2xl text-[var(--muted)] leading-none">↓</span>
+        </div>
+
+        {/* Engine box */}
+        <div className="bg-[var(--background)] border-2 border-divider rounded-lg p-4 my-2 max-w-2xl mx-auto text-center">
+          <p className="text-xs uppercase tracking-wider text-[var(--muted)] mb-1.5">
+            Per-sector composite engine
+          </p>
+          <p className="text-sm text-[var(--foreground)] leading-snug font-mono">
+            capability × adoption × (1 − complementarity) → productivity
+          </p>
+          <p className="text-sm text-[var(--foreground)] leading-snug font-mono mt-1">
+            then Δemployment = (ε − 1) × Δproductivity
+          </p>
+          <p className="text-[11px] text-[var(--muted)] mt-2 italic">
+            BTOS Census 2026 anchors t=0 adoption · Bessen identity translates
+            productivity into employment
+          </p>
+        </div>
+
+        {/* Arrow down */}
+        <div className="flex justify-center">
+          <span className="text-2xl text-[var(--muted)] leading-none">↓</span>
+        </div>
+
+        {/* Output box */}
+        <div className="bg-[var(--background)] border-2 rounded-lg p-3 mt-2 max-w-2xl mx-auto text-center" style={{ borderColor: "#3a8a4f55" }}>
+          <p className="text-sm text-[var(--foreground)]">
+            <strong>Employment Δ + Wage Δ</strong>
+            <span className="text-[var(--muted)]"> · 19 NAICS sectors · 2/5/10-yr horizon</span>
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function KnobColumn({
+  category,
+  title,
+  color,
+  subtitle,
+  children,
+}: {
+  category: number;
+  title: string;
+  color: string;
+  subtitle: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div>
+      <div className="flex items-center gap-2 mb-2.5 pb-2.5 border-b-2" style={{ borderColor: `${color}55` }}>
+        <span
+          className="text-[10px] font-semibold text-white w-5 h-5 rounded flex items-center justify-center tabular-nums flex-shrink-0"
+          style={{ background: color }}
+        >
+          {category}
+        </span>
+        <div className="min-w-0">
+          <p className="text-sm font-semibold text-[var(--foreground)] leading-tight">
+            {title}
+          </p>
+          <p className="text-[10px] uppercase tracking-wider text-[var(--muted)] mt-0.5">
+            {subtitle}
+          </p>
+        </div>
+      </div>
+      <div className="space-y-3.5">{children}</div>
+    </div>
+  );
+}
+
+function LiveAnchorBadgeInline() {
+  const top = CAPABILITY_ANCHOR.currentFrontier[0];
+  return (
+    <div className="hidden sm:flex items-center gap-1.5 text-[10px] text-[var(--muted)]">
+      <span className="relative flex h-1.5 w-1.5">
+        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#3a8a4f] opacity-75" />
+        <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#3a8a4f]" />
+      </span>
+      <span>Live · {top?.name} (II {top?.intelligenceIndex}) from Artificial Analysis</span>
+    </div>
+  );
+}
+
 function CounterfactualChart({
   results,
   horizon,
@@ -610,65 +759,12 @@ function DivergingRow({
   );
 }
 
-function LiveAnchorBadge() {
-  const top = CAPABILITY_ANCHOR.currentFrontier[0];
-  const date = CAPABILITY_ANCHOR.fetchedAt.slice(0, 10);
-  return (
-    <div className="bg-[var(--background)] border border-divider rounded px-2.5 py-2 mb-1">
-      <div className="flex items-center gap-1.5 mb-1">
-        <span className="relative flex h-1.5 w-1.5">
-          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#3a8a4f] opacity-75" />
-          <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#3a8a4f]" />
-        </span>
-        <p className="text-[10px] uppercase tracking-wider text-[var(--muted)]">
-          Live — Artificial Analysis
-        </p>
-      </div>
-      <p className="text-[11px] text-[var(--foreground)] leading-tight">
-        Frontier: <strong>{top?.name}</strong> · II {top?.intelligenceIndex}
-      </p>
-      <p className="text-[10px] text-[var(--muted)] mt-0.5">
-        {CAPABILITY_ANCHOR.frontierReleases} frontier releases · refreshed {date}
-      </p>
-    </div>
-  );
-}
-
 function SummaryStat({ label, value, sub }: { label: string; value: string; sub: string }) {
   return (
     <div className="bg-card border border-card rounded-lg px-5 py-4">
       <p className="text-xs uppercase tracking-wider text-[var(--muted)] mb-1.5">{label}</p>
       <p className="text-2xl font-semibold text-[var(--foreground)] tabular-nums">{value}</p>
       <p className="text-xs text-[var(--muted)] mt-1">{sub}</p>
-    </div>
-  );
-}
-
-function KnobGroup({
-  category,
-  title,
-  color,
-  children,
-}: {
-  category: number;
-  title: string;
-  color: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <div className="mb-5 pb-5 border-b border-divider last:border-0 last:pb-0">
-      <div className="flex items-center gap-2 mb-3">
-        <span
-          className="text-[10px] font-semibold text-white px-1.5 py-0.5 rounded tabular-nums"
-          style={{ background: color }}
-        >
-          {category}
-        </span>
-        <p className="text-xs uppercase tracking-wider text-[var(--foreground)] font-semibold">
-          {title}
-        </p>
-      </div>
-      <div className="space-y-3.5">{children}</div>
     </div>
   );
 }
