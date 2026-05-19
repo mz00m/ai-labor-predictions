@@ -17,6 +17,8 @@ import {
   computeSector,
   scalePolicy,
   generateStateWioaPolicy,
+  groupPoliciesByTopic,
+  PolicyTopic,
 } from "@/lib/composite-model";
 
 const sectors = btosData.sectors as Sector[];
@@ -279,22 +281,28 @@ export default function PortfolioBuilderPage() {
           </div>
         </div>
 
-        <div className="space-y-2">
-          {fullCatalog.map((policy) => {
-            const alloc = allocations[policy.id] ?? 0;
-            const policyResult = perPolicyImpacts.find((p) => p.policy.id === policy.id);
-            return (
-              <PolicyAllocationRow
-                key={policy.id}
-                policy={policy}
-                allocation={alloc}
-                onChange={(v) =>
-                  setAllocations((prev) => ({ ...prev, [policy.id]: v }))
-                }
-                standaloneJobsDelta={policyResult?.standaloneJobsDelta ?? 0}
-              />
-            );
-          })}
+        <div className="space-y-6">
+          {groupPoliciesByTopic(fullCatalog).map(({ topic, policies: topicPolicies }) => (
+            <TopicGroup key={topic.id} topic={topic} policyCount={topicPolicies.length}>
+              <div className="space-y-2">
+                {topicPolicies.map((policy) => {
+                  const alloc = allocations[policy.id] ?? 0;
+                  const policyResult = perPolicyImpacts.find((p) => p.policy.id === policy.id);
+                  return (
+                    <PolicyAllocationRow
+                      key={policy.id}
+                      policy={policy}
+                      allocation={alloc}
+                      onChange={(v) =>
+                        setAllocations((prev) => ({ ...prev, [policy.id]: v }))
+                      }
+                      standaloneJobsDelta={policyResult?.standaloneJobsDelta ?? 0}
+                    />
+                  );
+                })}
+              </div>
+            </TopicGroup>
+          ))}
         </div>
       </Step>
 
@@ -576,6 +584,38 @@ function BigStat({
   );
 }
 
+function TopicGroup({
+  topic,
+  policyCount,
+  children,
+}: {
+  topic: PolicyTopic;
+  policyCount: number;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="rounded-lg overflow-hidden border" style={{ borderColor: `${topic.color}40` }}>
+      <div
+        className="px-4 py-3"
+        style={{ background: `${topic.color}10`, borderBottom: `1px solid ${topic.color}40` }}
+      >
+        <div className="flex items-baseline justify-between flex-wrap gap-2">
+          <p className="text-sm font-semibold" style={{ color: topic.color }}>
+            {topic.label}
+          </p>
+          <p className="text-[10px] uppercase tracking-wider text-[var(--muted)] tabular-nums">
+            {policyCount} {policyCount === 1 ? "policy" : "policies"}
+          </p>
+        </div>
+        <p className="text-xs text-[var(--muted)] leading-[1.5] mt-1">
+          {topic.description}
+        </p>
+      </div>
+      <div className="p-3 bg-card">{children}</div>
+    </div>
+  );
+}
+
 function PolicyAllocationRow({
   policy,
   allocation,
@@ -589,20 +629,27 @@ function PolicyAllocationRow({
 }) {
   const active = allocation > 0.05;
   const scale = Math.min(1.0, allocation / policy.typicalCostMillions);
+  const [open, setOpen] = useState(false);
 
   return (
     <div
       className={`rounded-lg border p-3 transition-colors ${
-        active ? "border-[var(--foreground)] bg-card" : "border-card bg-card"
+        active ? "border-[var(--foreground)] bg-[var(--background)]" : "border-divider bg-[var(--background)]"
       }`}
     >
       <div className="grid grid-cols-1 md:grid-cols-[1fr_280px_90px] gap-3 items-center">
         {/* Policy name + chips */}
         <div className="min-w-0">
           <div className="flex items-baseline gap-2 flex-wrap mb-0.5">
-            <span className="text-sm font-medium text-[var(--foreground)]">
+            <button
+              type="button"
+              onClick={() => setOpen(!open)}
+              className="text-sm font-medium text-[var(--foreground)] hover:underline text-left"
+              title="Click to see details"
+            >
               {policy.name}
-            </span>
+              <span className="ml-1 text-[var(--muted)] text-xs">{open ? "▴" : "▾"}</span>
+            </button>
             <span className="text-[10px] text-[var(--muted)]">
               · ${policy.typicalCostMillions}M typical · {policy.durationYears}yr
             </span>
@@ -672,6 +719,51 @@ function PolicyAllocationRow({
         <p className="text-[11px] text-[#a36e1e] mt-2 italic">
           ⚠ Below 25% scale — most workforce policies have a minimum effective dose; outcomes here are likely overstated.
         </p>
+      )}
+
+      {/* Expanded details */}
+      {open && (
+        <div className="mt-3 pt-3 border-t border-divider space-y-3 text-sm text-[var(--muted)]">
+          <p className="leading-[1.6]">{policy.description}</p>
+
+          {policy.targetPopulations && policy.targetPopulations.length > 0 && (
+            <div>
+              <p className="text-[10px] uppercase tracking-wider text-[var(--muted)] mb-1">Who benefits</p>
+              <div className="flex flex-wrap gap-1.5">
+                {policy.targetPopulations.map((pop) => (
+                  <span key={pop} className="text-[11px] px-2 py-0.5 rounded bg-card text-[var(--foreground)]">
+                    {pop}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {policy.workforceImpacts && policy.workforceImpacts.length > 0 && (
+            <div>
+              <p className="text-[10px] uppercase tracking-wider text-[var(--muted)] mb-1">What changes</p>
+              <ul className="list-disc ml-5 space-y-0.5 leading-[1.55]">
+                {policy.workforceImpacts.map((imp, i) => (
+                  <li key={i} className="text-xs">{imp}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          <div className="pt-1">
+            <p className="text-[11px] text-[var(--muted)] leading-[1.5]">
+              <strong className="text-[var(--foreground)]">Evidence:</strong> {policy.evidence}{" "}
+              <a
+                href={policy.evidenceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[var(--accent-text)] hover:underline"
+              >
+                → source
+              </a>
+            </p>
+          </div>
+        </div>
       )}
     </div>
   );

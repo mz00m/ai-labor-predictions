@@ -779,6 +779,90 @@ export function findSensitivityFlip(
 // ────────────────────────────────────────────────────────────────────
 
 // ────────────────────────────────────────────────────────────────────
+// POLICY TOPICS — grouping for the picker UI
+// ────────────────────────────────────────────────────────────────────
+
+export interface PolicyTopic {
+  id: string;
+  label: string;
+  color: string;
+  description: string;
+  /** Static policy IDs that belong to this topic. Dynamic policies match via matcher() */
+  policyIds: string[];
+  /** Optional matcher for dynamically-generated policies (e.g., state WIOA) */
+  matcher?: (policyId: string) => boolean;
+}
+
+export const POLICY_TOPICS: PolicyTopic[] = [
+  {
+    id: "training-skills",
+    label: "Worker Training & Skills",
+    color: "#0f766e",
+    description: "Build worker capacity to use, complement, or transition around AI — formal training, apprenticeships, and lifelong learning accounts.",
+    policyIds: ["sector-training-healthcare", "ai-literacy-statewide", "apprenticeship-manufacturing", "lifelong-learning-account"],
+  },
+  {
+    id: "income-support",
+    label: "Income Support & Transitions",
+    color: "#5b7faf",
+    description: "Buffer the financial shock of displacement so workers can accept adjacent roles or bridge to re-employment without devastating losses.",
+    policyIds: ["wage-insurance", "job-guarantee-pilot"],
+  },
+  {
+    id: "regulation-voice",
+    label: "Regulation & Worker Voice",
+    color: "#a36e1e",
+    description: "Shape how and how fast firms can deploy AI; give workers seats at the table when adoption decisions get made.",
+    policyIds: ["licensing-reform", "ai-bargaining-rights", "four-day-workweek"],
+  },
+  {
+    id: "infrastructure-data",
+    label: "Infrastructure & Data",
+    color: "#7a7e8b",
+    description: "Public goods — shared AI access, regional exposure measurement — that level the playing field beneath any single intervention.",
+    policyIds: ["public-llm-smb", "skill-gap-data-infrastructure"],
+  },
+  {
+    id: "employer-entrepreneurship",
+    label: "Employer Incentives & Entrepreneurship",
+    color: "#c89531",
+    description: "Reduce friction for firms that retrain workers in place; help displaced workers start their own ventures.",
+    policyIds: ["employer-retraining-tax-credit", "entrepreneurship-support"],
+  },
+  {
+    id: "state-systems",
+    label: "State Workforce Systems",
+    color: "#a53024",
+    description: "Federal WIOA Title I formula funding that flows through state plans — the workhorse of US workforce policy. Loaded dynamically per selected region's state.",
+    policyIds: [],
+    matcher: (id) => id.startsWith("state-wioa-"),
+  },
+];
+
+/** Get the topic for a given policy id (looks up via static list + dynamic matcher). */
+export function getTopicForPolicy(policyId: string): PolicyTopic | null {
+  for (const topic of POLICY_TOPICS) {
+    if (topic.policyIds.includes(policyId)) return topic;
+    if (topic.matcher && topic.matcher(policyId)) return topic;
+  }
+  return null;
+}
+
+/** Group policies by topic, preserving topic order. */
+export function groupPoliciesByTopic(policies: ModelPolicy[]): Array<{ topic: PolicyTopic; policies: ModelPolicy[] }> {
+  return POLICY_TOPICS
+    .map((topic) => ({
+      topic,
+      policies: policies.filter((p) => {
+        if (topic.policyIds.includes(p.id)) return true;
+        if (topic.matcher && topic.matcher(p.id)) return true;
+        return false;
+      }),
+    }))
+    .filter((g) => g.policies.length > 0);
+}
+
+// ────────────────────────────────────────────────────────────────────
 // DYNAMIC STATE WIOA PLAN
 // Generated per-region rather than hardcoded, so the catalog adapts
 // to whichever state the user picks.

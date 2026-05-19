@@ -21,6 +21,8 @@ import {
   KNOB_META,
   ARCHETYPE_META,
   generateStateWioaPolicy,
+  groupPoliciesByTopic,
+  PolicyTopic,
 } from "@/lib/composite-model";
 
 const sectors = btosData.sectors as Sector[];
@@ -222,42 +224,16 @@ export default function PolicyAnalysisPage() {
 
       {/* Step 3 — Policy */}
       <Step number={3} title="Pick a policy to review">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-          {fullCatalog.map((p) => {
-            const selected = policyId === p.id;
-            return (
-              <button
-                key={p.id}
-                onClick={() => setPolicyId(selected ? null : p.id)}
-                className={`text-left p-4 rounded-lg border-2 transition-colors hover:border-[var(--foreground)] ${
-                  selected ? "border-[var(--foreground)] bg-card" : "border-card bg-card"
-                }`}
-              >
-                <div className="flex items-baseline justify-between gap-2 mb-1 flex-wrap">
-                  <p className="text-sm font-semibold text-[var(--foreground)]">{p.name}</p>
-                  <p className="text-[10px] uppercase tracking-wider text-[var(--muted)]">
-                    {p.category}
-                  </p>
-                </div>
-                <p className="text-xs text-[var(--muted)] leading-[1.55] mb-2">{p.tagline}</p>
-                <div className="flex items-center gap-2 text-[10px] text-[var(--muted)] flex-wrap mb-1.5">
-                  <span>${p.typicalCostMillions}M · {p.durationYears}yr</span>
-                  <span>•</span>
-                  <span>{p.targetSectors ? `Sectors: ${p.targetSectors.join(", ")}` : "Cross-sector"}</span>
-                </div>
-                <div className="flex items-center gap-1.5 flex-wrap">
-                  {(p.targetPopulations ?? []).slice(0, 3).map((pop) => (
-                    <span
-                      key={pop}
-                      className="text-[10px] text-[var(--muted)] bg-[var(--background)] px-1.5 py-0.5 rounded"
-                    >
-                      {pop}
-                    </span>
-                  ))}
-                </div>
-              </button>
-            );
-          })}
+        <div className="space-y-5">
+          {groupPoliciesByTopic(fullCatalog).map(({ topic, policies: topicPolicies }) => (
+            <PolicyTopicGroup
+              key={topic.id}
+              topic={topic}
+              policies={topicPolicies}
+              selectedId={policyId}
+              onSelect={(id) => setPolicyId(id)}
+            />
+          ))}
         </div>
       </Step>
 
@@ -895,6 +871,137 @@ function PostPolicySectorBreakdown({
           </div>
         )}
       </div>
+    </div>
+  );
+}
+
+function PolicyTopicGroup({
+  topic,
+  policies,
+  selectedId,
+  onSelect,
+}: {
+  topic: PolicyTopic;
+  policies: ModelPolicy[];
+  selectedId: string | null;
+  onSelect: (id: string | null) => void;
+}) {
+  return (
+    <div className="rounded-lg overflow-hidden border" style={{ borderColor: `${topic.color}40` }}>
+      <div
+        className="px-4 py-3"
+        style={{ background: `${topic.color}10`, borderBottom: `1px solid ${topic.color}40` }}
+      >
+        <div className="flex items-baseline justify-between flex-wrap gap-2">
+          <p className="text-sm font-semibold" style={{ color: topic.color }}>
+            {topic.label}
+          </p>
+          <p className="text-[10px] uppercase tracking-wider text-[var(--muted)] tabular-nums">
+            {policies.length} {policies.length === 1 ? "policy" : "policies"}
+          </p>
+        </div>
+        <p className="text-xs text-[var(--muted)] leading-[1.5] mt-1">
+          {topic.description}
+        </p>
+      </div>
+      <div className="p-3 bg-card grid grid-cols-1 md:grid-cols-2 gap-2.5">
+        {policies.map((p) => (
+          <PolicyPickerCard
+            key={p.id}
+            policy={p}
+            selected={selectedId === p.id}
+            onSelect={() => onSelect(selectedId === p.id ? null : p.id)}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function PolicyPickerCard({
+  policy,
+  selected,
+  onSelect,
+}: {
+  policy: ModelPolicy;
+  selected: boolean;
+  onSelect: () => void;
+}) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div
+      className={`rounded-lg border-2 transition-colors ${
+        selected ? "border-[var(--foreground)] bg-[var(--background)]" : "border-divider bg-[var(--background)]"
+      }`}
+    >
+      <button
+        type="button"
+        onClick={onSelect}
+        className="text-left p-3 w-full"
+      >
+        <div className="flex items-baseline justify-between gap-2 mb-1 flex-wrap">
+          <p className="text-sm font-semibold text-[var(--foreground)]">{policy.name}</p>
+          {selected && (
+            <span className="text-[10px] uppercase tracking-wider text-[var(--accent-text)] font-semibold">
+              ✓ Selected
+            </span>
+          )}
+        </div>
+        <p className="text-xs text-[var(--muted)] leading-[1.55] mb-2">{policy.tagline}</p>
+        <div className="flex items-center gap-2 text-[10px] text-[var(--muted)] flex-wrap">
+          <span>${policy.typicalCostMillions}M · {policy.durationYears}yr</span>
+          <span>•</span>
+          <span>{policy.targetSectors ? `Sectors: ${policy.targetSectors.join(", ")}` : "Cross-sector"}</span>
+        </div>
+      </button>
+      <button
+        type="button"
+        onClick={() => setOpen(!open)}
+        className="w-full text-left px-3 py-2 border-t border-divider text-[11px] text-[var(--muted)] hover:text-[var(--foreground)] transition-colors"
+      >
+        {open ? "▴ Hide details" : "▾ Show details"}
+      </button>
+      {open && (
+        <div className="px-3 pb-3 pt-1 space-y-2.5 text-xs text-[var(--muted)] leading-[1.55] border-t border-divider">
+          <p>{policy.description}</p>
+
+          {policy.targetPopulations && policy.targetPopulations.length > 0 && (
+            <div>
+              <p className="text-[9px] uppercase tracking-wider text-[var(--muted)] mb-1">Who benefits</p>
+              <div className="flex flex-wrap gap-1">
+                {policy.targetPopulations.map((pop) => (
+                  <span key={pop} className="text-[10px] px-1.5 py-0.5 rounded bg-card text-[var(--foreground)]">
+                    {pop}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {policy.workforceImpacts && policy.workforceImpacts.length > 0 && (
+            <div>
+              <p className="text-[9px] uppercase tracking-wider text-[var(--muted)] mb-1">What changes</p>
+              <ul className="list-disc ml-4 space-y-0.5">
+                {policy.workforceImpacts.map((imp, i) => (
+                  <li key={i}>{imp}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          <p className="text-[11px] pt-1">
+            <strong className="text-[var(--foreground)]">Evidence:</strong> {policy.evidence}{" "}
+            <a
+              href={policy.evidenceUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[var(--accent-text)] hover:underline"
+            >
+              → source
+            </a>
+          </p>
+        </div>
+      )}
     </div>
   );
 }
