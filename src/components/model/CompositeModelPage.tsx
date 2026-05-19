@@ -22,6 +22,9 @@ import {
   CAPABILITY_ANCHOR,
   IMPACT_META,
   sortFactorsByImpact,
+  KNOB_META,
+  KnobMeta,
+  TIER_THRESHOLDS,
 } from "@/lib/composite-model";
 
 type SortKey =
@@ -309,38 +312,52 @@ export default function CompositeModelPage() {
 
         {knobsOpen && (
           <div className="mt-3 bg-card border border-card rounded-lg p-5">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-5">
-              <KnobColumn category={1} title="Adoption Speed" color="#3a8a4f" subtitle="How fast firms deploy">
-                <SegmentedKnob
-                  label="Horizon"
-                  value={knobs.horizonYears}
-                  options={[2, 5, 10]}
-                  format={(v) => `${v}yr`}
-                  onChange={(v) => update("horizonYears", v)}
-                  hint="Different mechanisms dominate at different horizons."
-                />
-                <SliderKnob label="Trust multiplier" value={knobs.trustMultiplier} min={0.5} max={1.5} step={0.05} onChange={(v) => update("trustMultiplier", v)} format={(v) => `${v.toFixed(2)}×`} hint="Cultural aversions (Gallup, NY Fed SCE). Healthcare 0.20, software 0.80." />
-                <SliderKnob label="Regulatory schema" value={knobs.regSchemaMultiplier} min={0.5} max={1.5} step={0.05} onChange={(v) => update("regSchemaMultiplier", v)} format={(v) => `${v.toFixed(2)}×`} hint="Sector approval pathway burden (FDA, OCC, state boards)." />
-                <SliderKnob label="Downtime sensitivity" value={knobs.downtimeSensitivity} min={0.5} max={1.5} step={0.05} onChange={(v) => update("downtimeSensitivity", v)} format={(v) => `${v.toFixed(2)}×`} hint="Asymmetric cost of AI failure (anesthesia, grid, trading)." />
-              </KnobColumn>
+            <p className="text-xs text-[var(--muted)] leading-[1.6] mb-4 max-w-2xl">
+              Knobs are organized top-to-bottom by how much they actually move
+              sector outputs. Tier 1 (red) drives the headline numbers; Tier 3
+              (gray) is fine-tuning. The colored dot beside each knob shows
+              which of the four framework categories it belongs to.
+            </p>
 
-              <KnobColumn category={2} title="AI Capability" color="#c89531" subtitle="What AI can actually do">
-                <SliderKnob label="Capability doubling (mo)" value={knobs.capabilityDoublingMonths} min={4} max={18} step={0.1} onChange={(v) => update("capabilityDoublingMonths", v)} format={(v) => `${v.toFixed(1)} mo`} hint="Fit live to Artificial Analysis Intelligence Index frontier." />
-                <SliderKnob label="Verifiability divergence" value={knobs.verifiabilityRatio} min={1.2} max={4.0} step={0.1} onChange={(v) => update("verifiabilityRatio", v)} format={(v) => `${v.toFixed(1)}×`} hint="How much faster verifiable tasks advance (Tomei & Klein Teeselink)." />
-                <SliderKnob label="Reliability floor scale" value={knobs.reliabilityFloorScale} min={0.7} max={1.3} step={0.05} onChange={(v) => update("reliabilityFloorScale", v)} format={(v) => `${v.toFixed(2)}×`} hint="Tightens or loosens regulatory reliability thresholds per sector." />
-              </KnobColumn>
+            {(["high", "medium", "low"] as const).map((tier) => {
+              const tierKnobs = KNOB_META.filter((k) => k.impact === tier);
+              if (tierKnobs.length === 0) return null;
+              const tierMeta = TIER_THRESHOLDS[tier];
+              return (
+                <TierSection key={tier} tier={tier} tierMeta={tierMeta}>
+                  {tierKnobs.map((meta) => (
+                    <TierKnobRow
+                      key={meta.knob}
+                      meta={meta}
+                      value={knobs[meta.knob]}
+                      onChange={(v) => update(meta.knob, v)}
+                    />
+                  ))}
+                </TierSection>
+              );
+            })}
 
-              <KnobColumn category={3} title="Demand Elasticity" color="#5b7faf" subtitle="Cheaper output → more demand?">
-                <SliderKnob label="Elasticity scale (Bessen ε)" value={knobs.elasticityScale} min={0.5} max={2.0} step={0.05} onChange={(v) => update("elasticityScale", v)} format={(v) => `${v.toFixed(2)}×`} hint="Scales Bessen ε per sector. ε>1 grows jobs; ε<1 cuts them." />
-                <SliderKnob label="Productivity uplift / task" value={knobs.productivityUplift} min={0.1} max={0.4} step={0.01} onChange={(v) => update("productivityUplift", v)} format={(v) => `${(v * 100).toFixed(0)}%`} hint="Per-task cost savings (Acemoglu 2024 ≈ 27%)." />
-              </KnobColumn>
-
-              <KnobColumn category={4} title="Friction Buffer" color="#7a7e8b" subtitle="What slows transitions">
-                <SliderKnob label="Gen Z adoption boost" value={knobs.genZAdoptionBoost} min={0.5} max={1.5} step={0.05} onChange={(v) => update("genZAdoptionBoost", v)} format={(v) => `${v.toFixed(2)}×`} hint="Amplifies the Gen Z share's adoption-lifting effect per sector." />
-                <SliderKnob label="State regulation drag" value={knobs.stateRegMultiplier} min={0.5} max={1.5} step={0.05} onChange={(v) => update("stateRegMultiplier", v)} format={(v) => `${v.toFixed(2)}×`} hint="Independent of sector schema (CA SB1047 derivatives, NYC bias audits, CO AI Act)." />
-                <SliderKnob label="Compute cost trajectory" value={knobs.computeCostDeclineRate} min={-0.20} max={0.50} step={0.025} onChange={(v) => update("computeCostDeclineRate", v)} format={(v) => v > 0.005 ? `↓ ${(v * 100).toFixed(1)}%/yr` : v < -0.005 ? `↑ ${(Math.abs(v) * 100).toFixed(1)}%/yr` : "flat"} hint="Bidirectional. Positive = inference costs declining (Wright's Law on tokens); negative = costs rising (energy crunch, GPU shortage, regulatory capital costs)." />
-                <SliderKnob label="Security overhead" value={knobs.securityOverheadMultiplier} min={0.5} max={1.5} step={0.05} onChange={(v) => update("securityOverheadMultiplier", v)} format={(v) => `${v.toFixed(2)}×`} hint="SOC 2, HIPAA, FedRAMP, state data sovereignty drag." />
-              </KnobColumn>
+            {/* Framework category legend */}
+            <div className="mt-5 pt-4 border-t border-divider flex items-center gap-4 flex-wrap text-[11px]">
+              <span className="uppercase tracking-wider text-[var(--muted)]">
+                Category dots:
+              </span>
+              {[
+                { num: 1, name: "Adoption Speed", color: "#3a8a4f" },
+                { num: 2, name: "AI Capability", color: "#c89531" },
+                { num: 3, name: "Demand Elasticity", color: "#5b7faf" },
+                { num: 4, name: "Friction Buffer", color: "#7a7e8b" },
+              ].map((c) => (
+                <span key={c.num} className="inline-flex items-center gap-1.5">
+                  <span
+                    className="inline-block w-2 h-2 rounded-full"
+                    style={{ background: c.color }}
+                  />
+                  <span className="text-[var(--muted)]">
+                    {c.num}. {c.name}
+                  </span>
+                </span>
+              ))}
             </div>
           </div>
         )}
@@ -751,38 +768,105 @@ function ModelDiagram() {
   );
 }
 
-function KnobColumn({
-  category,
-  title,
-  color,
-  subtitle,
+function TierSection({
+  tier,
+  tierMeta,
   children,
 }: {
-  category: number;
-  title: string;
-  color: string;
-  subtitle: string;
+  tier: "high" | "medium" | "low";
+  tierMeta: typeof TIER_THRESHOLDS["high"];
   children: React.ReactNode;
 }) {
   return (
-    <div>
-      <div className="flex items-center gap-2 mb-2.5 pb-2.5 border-b-2" style={{ borderColor: `${color}55` }}>
+    <div className="mb-4 rounded-lg overflow-hidden" style={{ background: tierMeta.bg, border: `1px solid ${tierMeta.border}` }}>
+      <div
+        className="px-4 py-2.5 flex items-baseline gap-2 flex-wrap"
+        style={{ borderBottom: `1px solid ${tierMeta.border}`, background: tier === "high" ? `${tierMeta.color}10` : "transparent" }}
+      >
         <span
-          className="text-[10px] font-semibold text-white w-5 h-5 rounded flex items-center justify-center tabular-nums flex-shrink-0"
-          style={{ background: color }}
+          className="text-[11px] uppercase tracking-wider font-bold"
+          style={{ color: tierMeta.color }}
         >
-          {category}
+          {tierMeta.label}
         </span>
-        <div className="min-w-0">
-          <p className="text-sm font-semibold text-[var(--foreground)] leading-tight">
-            {title}
-          </p>
-          <p className="text-[10px] uppercase tracking-wider text-[var(--muted)] mt-0.5">
-            {subtitle}
-          </p>
-        </div>
+        <span className="text-[11px] text-[var(--muted)]">
+          {tierMeta.tagline}
+        </span>
       </div>
-      <div className="space-y-3.5">{children}</div>
+      <div className="divide-y" style={{ borderColor: tierMeta.border }}>
+        {children}
+      </div>
+    </div>
+  );
+}
+
+function TierKnobRow({
+  meta,
+  value,
+  onChange,
+}: {
+  meta: KnobMeta;
+  value: number;
+  onChange: (v: number) => void;
+}) {
+  const isSegmented = !!meta.segmentedOptions;
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-[260px_1fr_90px] gap-3 px-4 py-3 items-center hover:bg-white/30 transition-colors">
+      {/* Label with category dot */}
+      <div className="flex items-center gap-2 min-w-0" title={meta.hint}>
+        <span
+          className="inline-block w-2 h-2 rounded-full flex-shrink-0"
+          style={{ background: meta.categoryColor }}
+          aria-label={`Category ${meta.categoryNumber}`}
+        />
+        <span className="text-[10px] text-[var(--muted)] tabular-nums flex-shrink-0">
+          {meta.categoryNumber}.
+        </span>
+        <span className="text-sm text-[var(--foreground)] truncate">
+          {meta.label}
+        </span>
+      </div>
+
+      {/* Control */}
+      <div>
+        {isSegmented ? (
+          <div className="flex gap-1.5">
+            {meta.segmentedOptions!.map((opt) => (
+              <button
+                key={opt}
+                type="button"
+                onClick={() => onChange(opt)}
+                className={`flex-1 max-w-[80px] py-1.5 text-xs rounded border transition-colors ${
+                  value === opt
+                    ? "bg-[var(--accent-text)] text-white border-[var(--accent-text)]"
+                    : "bg-[var(--background)] text-[var(--foreground)] border-card hover:border-[var(--muted)]"
+                }`}
+              >
+                {meta.formatValue(opt)}
+              </button>
+            ))}
+          </div>
+        ) : (
+          <input
+            type="range"
+            min={meta.min}
+            max={meta.max}
+            step={meta.step}
+            value={value}
+            onChange={(e) => onChange(parseFloat(e.target.value))}
+            className="w-full accent-[var(--accent-text)] cursor-pointer"
+            aria-label={meta.label}
+            title={meta.hint}
+          />
+        )}
+      </div>
+
+      {/* Value badge */}
+      <div className="text-right">
+        <span className="text-sm font-medium text-[var(--foreground)] tabular-nums">
+          {meta.formatValue(value)}
+        </span>
+      </div>
     </div>
   );
 }
@@ -955,56 +1039,6 @@ function SummaryStat({ label, value, sub }: { label: string; value: string; sub:
       <p className="text-xs uppercase tracking-wider text-[var(--muted)] mb-1.5">{label}</p>
       <p className="text-2xl font-semibold text-[var(--foreground)] tabular-nums">{value}</p>
       <p className="text-xs text-[var(--muted)] mt-1">{sub}</p>
-    </div>
-  );
-}
-
-function SliderKnob({
-  label, value, min, max, step, onChange, format, hint,
-}: {
-  label: string; value: number; min: number; max: number; step: number;
-  onChange: (v: number) => void; format: (v: number) => string; hint?: string;
-}) {
-  return (
-    <label className="block" title={hint}>
-      <div className="flex justify-between items-baseline mb-1">
-        <span className="text-xs text-[var(--foreground)]">{label}</span>
-        <span className="text-xs font-medium text-[var(--foreground)] tabular-nums">{format(value)}</span>
-      </div>
-      <input
-        type="range"
-        min={min} max={max} step={step} value={value}
-        onChange={(e) => onChange(parseFloat(e.target.value))}
-        className="w-full accent-[var(--accent-text)] cursor-pointer"
-      />
-    </label>
-  );
-}
-
-function SegmentedKnob({
-  label, value, options, onChange, format, hint,
-}: {
-  label: string; value: number; options: number[];
-  onChange: (v: number) => void; format: (v: number) => string; hint?: string;
-}) {
-  return (
-    <div title={hint}>
-      <p className="text-xs text-[var(--foreground)] mb-1.5">{label}</p>
-      <div className="flex gap-1.5">
-        {options.map((opt) => (
-          <button
-            key={opt}
-            onClick={() => onChange(opt)}
-            className={`flex-1 py-1.5 text-xs rounded border transition-colors ${
-              value === opt
-                ? "bg-[var(--accent-text)] text-white border-[var(--accent-text)]"
-                : "bg-[var(--background)] text-[var(--foreground)] border-card hover:border-[var(--muted)]"
-            }`}
-          >
-            {format(opt)}
-          </button>
-        ))}
-      </div>
     </div>
   );
 }

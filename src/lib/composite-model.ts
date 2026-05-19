@@ -521,3 +521,227 @@ export function sortFactorsByImpact(factors: Factor[]): Factor[] {
   const order: Record<ImpactTier, number> = { high: 0, medium: 1, low: 2, informational: 3 };
   return [...factors].sort((a, b) => order[a.impact] - order[b.impact]);
 }
+
+// ────────────────────────────────────────────────────────────────────
+// KNOB_META — single source of truth for slider configuration + tier
+// ────────────────────────────────────────────────────────────────────
+
+export interface KnobMeta {
+  knob: keyof Knobs;
+  label: string;
+  impact: Exclude<ImpactTier, "informational">;
+  categoryId: "adoption" | "capability" | "demand" | "friction";
+  categoryNumber: number;
+  categoryColor: string;
+  min: number;
+  max: number;
+  step: number;
+  hint: string;
+  /** For segmented controls; if undefined, render as slider */
+  segmentedOptions?: number[];
+  formatValue: (v: number) => string;
+}
+
+const formatMult = (v: number) => `${v.toFixed(2)}×`;
+
+export const KNOB_META: KnobMeta[] = [
+  // ── TIER 1: HIGH IMPACT ────────────────────────────────────────
+  {
+    knob: "horizonYears",
+    label: "Time horizon",
+    impact: "high",
+    categoryId: "adoption",
+    categoryNumber: 1,
+    categoryColor: "#3a8a4f",
+    min: 2,
+    max: 10,
+    step: 1,
+    segmentedOptions: [2, 5, 10],
+    hint: "Different mechanisms dominate at different horizons. Drives capability growth and adoption ramp.",
+    formatValue: (v) => `${v}yr`,
+  },
+  {
+    knob: "capabilityDoublingMonths",
+    label: "Capability doubling time",
+    impact: "high",
+    categoryId: "capability",
+    categoryNumber: 2,
+    categoryColor: "#c89531",
+    min: 4,
+    max: 18,
+    step: 0.1,
+    hint: "METR / Artificial Analysis frontier doubling rate. Drives the reach function exponentially.",
+    formatValue: (v) => `${v.toFixed(1)} mo`,
+  },
+  {
+    knob: "elasticityScale",
+    label: "Elasticity scale (Bessen ε)",
+    impact: "high",
+    categoryId: "demand",
+    categoryNumber: 3,
+    categoryColor: "#5b7faf",
+    min: 0.5,
+    max: 2.0,
+    step: 0.05,
+    hint: "Scales Bessen ε per sector. The (ε−1) factor literally flips the sign of employment change.",
+    formatValue: formatMult,
+  },
+  {
+    knob: "productivityUplift",
+    label: "Productivity uplift / task",
+    impact: "high",
+    categoryId: "demand",
+    categoryNumber: 3,
+    categoryColor: "#5b7faf",
+    min: 0.1,
+    max: 0.4,
+    step: 0.01,
+    hint: "Per-task cost savings (Acemoglu 2024 ≈ 27%). Direct linear multiplier on every output.",
+    formatValue: (v) => `${(v * 100).toFixed(0)}%`,
+  },
+  {
+    knob: "trustMultiplier",
+    label: "Trust multiplier (cultural)",
+    impact: "high",
+    categoryId: "adoption",
+    categoryNumber: 1,
+    categoryColor: "#3a8a4f",
+    min: 0.5,
+    max: 1.5,
+    step: 0.05,
+    hint: "Cultural aversions (Gallup, NY Fed SCE). Enters via horizonGrowth × trustPull.",
+    formatValue: formatMult,
+  },
+  {
+    knob: "regSchemaMultiplier",
+    label: "Regulatory schema (sector)",
+    impact: "high",
+    categoryId: "adoption",
+    categoryNumber: 1,
+    categoryColor: "#3a8a4f",
+    min: 0.5,
+    max: 1.5,
+    step: 0.05,
+    hint: "Sector approval pathway burden (FDA, OCC, state boards). Largest single weight in friction sum (0.25).",
+    formatValue: formatMult,
+  },
+
+  // ── TIER 2: MEDIUM IMPACT ──────────────────────────────────────
+  {
+    knob: "verifiabilityRatio",
+    label: "Verifiability divergence",
+    impact: "medium",
+    categoryId: "capability",
+    categoryNumber: 2,
+    categoryColor: "#c89531",
+    min: 1.2,
+    max: 4.0,
+    step: 0.1,
+    hint: "How much faster verifiable tasks (code, math) advance vs subjective ones (Tomei & Klein Teeselink).",
+    formatValue: (v) => `${v.toFixed(1)}×`,
+  },
+  {
+    knob: "reliabilityFloorScale",
+    label: "Reliability floor scale",
+    impact: "medium",
+    categoryId: "capability",
+    categoryNumber: 2,
+    categoryColor: "#c89531",
+    min: 0.7,
+    max: 1.3,
+    step: 0.05,
+    hint: "Tightens or loosens regulatory reliability thresholds per sector. Only binding for high-floor sectors.",
+    formatValue: formatMult,
+  },
+  {
+    knob: "downtimeSensitivity",
+    label: "Downtime sensitivity",
+    impact: "medium",
+    categoryId: "adoption",
+    categoryNumber: 1,
+    categoryColor: "#3a8a4f",
+    min: 0.5,
+    max: 1.5,
+    step: 0.05,
+    hint: "Asymmetric cost of AI failure (anesthesia, grid, trading). Friction weight 0.20.",
+    formatValue: formatMult,
+  },
+  {
+    knob: "computeCostDeclineRate",
+    label: "Compute cost trajectory",
+    impact: "medium",
+    categoryId: "friction",
+    categoryNumber: 4,
+    categoryColor: "#7a7e8b",
+    min: -0.20,
+    max: 0.50,
+    step: 0.025,
+    hint: "Bidirectional. Positive = inference costs declining (Wright's Law); negative = costs rising (energy / GPU shortage / capital costs).",
+    formatValue: (v) => (v > 0.005 ? `↓ ${(v * 100).toFixed(1)}%/yr` : v < -0.005 ? `↑ ${(Math.abs(v) * 100).toFixed(1)}%/yr` : "flat"),
+  },
+  {
+    knob: "stateRegMultiplier",
+    label: "State regulation drag",
+    impact: "medium",
+    categoryId: "friction",
+    categoryNumber: 4,
+    categoryColor: "#7a7e8b",
+    min: 0.5,
+    max: 1.5,
+    step: 0.05,
+    hint: "Independent of sector schema (CA SB1047 derivatives, NYC bias audits, CO AI Act). Uniform across sectors.",
+    formatValue: formatMult,
+  },
+  {
+    knob: "securityOverheadMultiplier",
+    label: "Security & compliance overhead",
+    impact: "medium",
+    categoryId: "friction",
+    categoryNumber: 4,
+    categoryColor: "#7a7e8b",
+    min: 0.5,
+    max: 1.5,
+    step: 0.05,
+    hint: "SOC 2, HIPAA, FedRAMP, state data sovereignty. Concentrated effect on healthcare, finance, government.",
+    formatValue: formatMult,
+  },
+
+  // ── TIER 3: LOW SENSITIVITY ────────────────────────────────────
+  {
+    knob: "genZAdoptionBoost",
+    label: "Gen Z adoption boost",
+    impact: "low",
+    categoryId: "friction",
+    categoryNumber: 4,
+    categoryColor: "#7a7e8b",
+    min: 0.5,
+    max: 1.5,
+    step: 0.05,
+    hint: "Amplifies the Gen Z share's adoption-lifting effect. Effect proportional to (genZShare − 0.15).",
+    formatValue: formatMult,
+  },
+];
+
+export const TIER_THRESHOLDS: Record<Exclude<ImpactTier, "informational">, { label: string; tagline: string; color: string; bg: string; border: string }> = {
+  high: {
+    label: "Tier 1 · High impact",
+    tagline: "Moves sector outputs > 2pp across slider range; can flip employment sign.",
+    color: "#a53024",
+    bg: "#a5302410",
+    border: "#a5302440",
+  },
+  medium: {
+    label: "Tier 2 · Moderating forces",
+    tagline: "Shifts outputs 0.5–2pp; reshapes ranking but rarely flips direction.",
+    color: "#a36e1e",
+    bg: "#a36e1e10",
+    border: "#a36e1e40",
+  },
+  low: {
+    label: "Tier 3 · Low sensitivity",
+    tagline: "Sub-0.5pp; matters mainly at extremes or for narrow sector classes.",
+    color: "#5a6770",
+    bg: "#5a677010",
+    border: "#5a677040",
+  },
+};
