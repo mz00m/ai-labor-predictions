@@ -343,7 +343,7 @@ export default function CompositeModelPage() {
                 Category dots:
               </span>
               {[
-                { num: 1, name: "Adoption Speed", color: "#3a8a4f" },
+                { num: 1, name: "Adoption Speed", color: "#0f766e" },
                 { num: 2, name: "AI Capability", color: "#c89531" },
                 { num: 3, name: "Demand Elasticity", color: "#5b7faf" },
                 { num: 4, name: "Friction Buffer", color: "#7a7e8b" },
@@ -689,7 +689,7 @@ function TaskComputeCostReference() {
 
 function ModelDiagram() {
   const cats = [
-    { num: 1, name: "Adoption Speed", color: "#3a8a4f", knobs: 4, hint: "Trust, regulation, downtime, BTOS anchor" },
+    { num: 1, name: "Adoption Speed", color: "#0f766e", knobs: 4, hint: "Trust, regulation, downtime, BTOS anchor" },
     { num: 2, name: "AI Capability", color: "#c89531", knobs: 3, hint: "METR doubling, RL feasibility, reliability floor" },
     { num: 3, name: "Demand Elasticity", color: "#5b7faf", knobs: 2, hint: "Bessen ε, productivity uplift" },
     { num: 4, name: "Friction Buffer", color: "#7a7e8b", knobs: 4, hint: "Gen Z, state reg, compute costs, security" },

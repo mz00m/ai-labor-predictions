@@ -77,7 +77,7 @@ const SCENARIOS: Record<string, { name: string; tagline: string; knobs: Knobs }>
 // Only Adoption Speed and Friction Buffer are realistically policy-movable.
 // Capability is set by the AI frontier; Demand Elasticity by market structure.
 const FRAMEWORK_LABELS = {
-  adoption: { label: "Adoption Speed", color: "#3a8a4f", num: 1, movable: true },
+  adoption: { label: "Adoption Speed", color: "#0f766e", num: 1, movable: true },
   capability: { label: "AI Capability", color: "#c89531", num: 2, movable: false },
   demand: { label: "Demand Elasticity", color: "#5b7faf", num: 3, movable: false },
   friction: { label: "Friction Buffer", color: "#7a7e8b", num: 4, movable: true },
@@ -149,12 +149,20 @@ export default function PolicyAnalysisPage() {
           workforce needs — and where the gaps are.
         </p>
         <p className="text-sm text-[var(--muted)] leading-[1.6] italic">
-          v0.1 prototype. 8 reference MSAs (BLS QCEW), 6 model policy
-          archetypes, regional rollup of the{" "}
+          v0.1 prototype. 9 reference MSAs (BLS QCEW), 14 policy archetypes
+          (incl. Windfall Trust Policy Atlas), regional rollup of the{" "}
           <Link href="/model" className="text-[var(--accent-text)] hover:underline">
             composite model
           </Link>
-          . PDF upload + custom policy builder ship in v0.2.
+          . To stack multiple policies use{" "}
+          <Link href="/model/portfolio" className="text-[var(--accent-text)] hover:underline">
+            /model/portfolio
+          </Link>
+          ; for an optimizer-driven recommendation given a budget use{" "}
+          <Link href="/model/budget" className="text-[var(--accent-text)] hover:underline">
+            /model/budget
+          </Link>
+          .
         </p>
       </header>
 
@@ -254,13 +262,21 @@ export default function PolicyAnalysisPage() {
               {" · "}Horizon: {knobs.horizonYears}yr
             </p>
           </div>
-          <h2 className="text-2xl font-bold text-[var(--foreground)] mb-6 leading-tight">
+          <h2 className="text-2xl font-bold text-[var(--foreground)] mb-3 leading-tight">
             {policy.name}
           </h2>
 
-          {/* SECTION A — Regional baseline */}
+          {/* VERDICT — one-sentence lead */}
+          <VerdictBanner
+            policy={policy}
+            region={region}
+            policyDelta={policyDelta}
+            dominantRisk={dominantRisk}
+          />
+
+          {/* Regional baseline */}
           <ReportSection
-            heading="A · Regional baseline (no policy)"
+            heading="Regional baseline — no policy"
             subhead={`Projected employment change in ${region.name} at ${knobs.horizonYears}-year horizon under the ${SCENARIOS[scenarioId].name} scenario.`}
           >
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-4">
@@ -271,12 +287,12 @@ export default function PolicyAnalysisPage() {
             <RegionalTopSectors agg={baseAggregate} max={5} />
           </ReportSection>
 
-          {/* SECTION B — With policy */}
+          {/* With policy */}
           <ReportSection
-            heading="B · With this policy"
-            subhead={`Counterfactual: ${region.name} under the same scenario, but with ${policy.name} active.`}
+            heading="With this policy in place"
+            subhead={`Counterfactual: ${region.name} under the same scenario, but with ${policy.name} active. Sector breakdown below shows where the policy moves jobs vs. the baseline above.`}
           >
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-5">
               <BigStat label="Jobs lost" value={formatJobs(policyAggregate.jobsLost, true)} color="#d4493a" />
               <BigStat label="Jobs added" value={formatJobs(policyAggregate.jobsAdded, true)} color="#3a8a4f" />
               <BigStat
@@ -285,21 +301,29 @@ export default function PolicyAnalysisPage() {
                 color={policyDelta > 1000 ? "#3a8a4f" : policyDelta < -1000 ? "#d4493a" : "#7a7e8b"}
               />
             </div>
-            <p className="text-sm text-[var(--muted)] leading-[1.65]">
+
+            {/* Sector breakdown — post-policy AND delta */}
+            <PostPolicySectorBreakdown
+              baseline={baseAggregate}
+              postPolicy={policyAggregate}
+              max={6}
+            />
+
+            <p className="text-sm text-[var(--muted)] leading-[1.65] mt-4">
               <strong className="text-[var(--foreground)]">Cost per outcome:</strong>{" "}
               {Math.abs(policyDelta) > 0
-                ? `~$${((policy.typicalCostMillions * 1_000_000) / Math.abs(policyDelta)).toFixed(0)} per job moved`
+                ? `~$${((policy.typicalCostMillions * 1_000_000) / Math.abs(policyDelta)).toFixed(0)} per net job moved`
                 : `Policy investment ($${policy.typicalCostMillions}M) showed no net regional jobs delta at the modeled horizon`}
               .{" "}
               <span className="italic">
-                Note: this is a coverage estimate. Real cost-per-job calculations require longitudinal program data.
+                Coverage estimate, not an impact-evaluation number. Real cost-per-job requires longitudinal program data.
               </span>
             </p>
           </ReportSection>
 
           {/* SECTION C — Workforce impact */}
           <ReportSection
-            heading="C · Workforce impact"
+            heading="Workforce impact"
             subhead="What this policy actually does for workers, employers, and the regional economy. Framework-coverage chips at the bottom are a secondary signal — what matters most is the lived workforce reality."
           >
             {/* Target populations */}
@@ -388,7 +412,7 @@ export default function PolicyAnalysisPage() {
           {/* SECTION D — Gap callout (TRUST: attribution) */}
           {dominantRisk && (
             <ReportSection
-              heading="D · Gap analysis"
+              heading="Gap analysis — dominant regional risk"
               subhead="The dominant local risk and whether this policy addresses it."
             >
               <div
@@ -475,7 +499,7 @@ export default function PolicyAnalysisPage() {
 
           {/* SECTION E — Trust: what would change this */}
           <ReportSection
-            heading="E · What would change this assessment"
+            heading="What would change this assessment"
             subhead="Smallest knob movements that would flip the net regional jobs sign. If the closest flip requires a > 50% change in a knob, treat the assessment as robust."
           >
             {sensitivityFlips.length === 0 ? (
@@ -525,7 +549,7 @@ export default function PolicyAnalysisPage() {
 
           {/* SECTION F — Trust: robustness band */}
           <ReportSection
-            heading="F · Robustness band"
+            heading="Robustness band"
             subhead="What if our defaults are off by 50% on the high-impact knobs? Range of regional net jobs delta under pessimistic and optimistic perturbations of capability, elasticity, productivity uplift, trust, and regulatory schema."
           >
             <RobustnessBar
@@ -542,7 +566,7 @@ export default function PolicyAnalysisPage() {
 
           {/* SECTION G — Historical analog */}
           <ReportSection
-            heading="G · Historical analog & evidence"
+            heading="Historical analog & evidence"
             subhead="What the workforce-program literature says about policies in this archetype."
           >
             <div className="rounded-lg p-4 bg-[var(--background)] border border-divider">
@@ -565,7 +589,7 @@ export default function PolicyAnalysisPage() {
 
           {/* SECTION H — Recommended actions */}
           <ReportSection
-            heading="H · Recommended actions for policymakers"
+            heading="Recommended actions for policymakers"
             subhead=""
           >
             <ol className="space-y-2.5 text-sm text-[var(--muted)] leading-[1.65] list-decimal ml-5">
@@ -665,12 +689,159 @@ function formatJobs(n: number, signed = false): string {
 // Components
 // ────────────────────────────────────────────────────────────────────
 
+function VerdictBanner({
+  policy,
+  region,
+  policyDelta,
+  dominantRisk,
+}: {
+  policy: ModelPolicy;
+  region: Region;
+  policyDelta: number;
+  dominantRisk: ReturnType<typeof findDominantRisk>;
+}) {
+  // Categorize the verdict
+  const meaningful = Math.abs(policyDelta) > 500;
+  const positive = policyDelta > 500;
+  const structural = dominantRisk && (dominantRisk.category === "capability" || dominantRisk.category === "demand");
+  const gapPresent =
+    dominantRisk && !structural && !(policy.addresses as readonly string[]).includes(dominantRisk.category);
+
+  // Build the verdict
+  let verdict: string;
+  let tone: "positive" | "caution" | "neutral";
+  if (!meaningful) {
+    verdict = `${policy.name} produces little net regional jobs movement in ${region.name} under this scenario — the policy is either small relative to regional employment or the scenario is too constraining for it to move outcomes.`;
+    tone = "neutral";
+  } else if (positive && !gapPresent && !structural) {
+    verdict = `${policy.name} moves a meaningful ${formatJobs(policyDelta, true)} jobs in ${region.name} and targets the dominant policy-movable risk. Ship it; pair with quarterly re-evaluation.`;
+    tone = "positive";
+  } else if (positive && gapPresent && dominantRisk) {
+    verdict = `${policy.name} moves ${formatJobs(policyDelta, true)} jobs in ${region.name}, but ${region.name}'s dominant policy-movable risk is ${FRAMEWORK_LABELS[dominantRisk.category as "adoption" | "friction"].label} — which this policy doesn't touch. Pair it with a ${FRAMEWORK_LABELS[dominantRisk.category as "adoption" | "friction"].label.toLowerCase()} intervention.`;
+    tone = "caution";
+  } else if (positive && structural && dominantRisk) {
+    verdict = `${policy.name} moves ${formatJobs(policyDelta, true)} jobs in ${region.name}. The region's dominant exposure runs through ${FRAMEWORK_LABELS[dominantRisk.category as keyof typeof FRAMEWORK_LABELS].label} (structural — policy can mitigate, not eliminate). This policy is the right type of intervention for this kind of exposure.`;
+    tone = "positive";
+  } else {
+    verdict = `${policy.name} produces ${formatJobs(policyDelta, true)} net jobs in ${region.name} — a degradation vs. the no-policy baseline. Check whether the policy is mis-targeted for this region or whether the scenario is suppressing its mechanism.`;
+    tone = "caution";
+  }
+
+  const color = tone === "positive" ? "#3a8a4f" : tone === "caution" ? "#a36e1e" : "#7a7e8b";
+  const bg = tone === "positive" ? "#3a8a4f10" : tone === "caution" ? "#a36e1e10" : "#7a7e8b10";
+
+  return (
+    <div
+      className="rounded-lg p-5 mb-6 border-l-4"
+      style={{ borderColor: color, background: bg }}
+    >
+      <p className="text-[10px] uppercase tracking-[0.18em] font-semibold mb-1.5" style={{ color }}>
+        Verdict
+      </p>
+      <p className="text-base sm:text-lg text-[var(--foreground)] leading-[1.55] font-medium">
+        {verdict}
+      </p>
+    </div>
+  );
+}
+
+function PostPolicySectorBreakdown({
+  baseline,
+  postPolicy,
+  max,
+}: {
+  baseline: ReturnType<typeof regionalAggregate>;
+  postPolicy: ReturnType<typeof regionalAggregate>;
+  max: number;
+}) {
+  // Build per-sector rows showing baseline jobs, post-policy jobs, and delta
+  const baseBySector = new Map(baseline.bySector.map((s) => [s.naics, s]));
+  const merged = postPolicy.bySector.map((post) => {
+    const base = baseBySector.get(post.naics);
+    const baseJobs = base?.regionalJobsImpacted ?? 0;
+    const policyDelta = post.regionalJobsImpacted - baseJobs;
+    return {
+      naics: post.naics,
+      name: post.name,
+      baseJobs,
+      postJobs: post.regionalJobsImpacted,
+      policyDelta,
+      postPct: post.employmentDeltaPct,
+    };
+  });
+
+  // Top sectors GAINING from policy vs. baseline
+  const gainers = [...merged].filter((r) => r.policyDelta > 50).sort((a, b) => b.policyDelta - a.policyDelta).slice(0, max);
+  // Top sectors STILL declining most under policy (where the policy didn't save them)
+  const stillDeclining = [...merged].filter((r) => r.postJobs < -50).sort((a, b) => a.postJobs - b.postJobs).slice(0, max);
+
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+      <div>
+        <p className="text-xs uppercase tracking-wider text-[#3a8a4f] font-semibold mb-2">
+          Sectors helped by the policy
+        </p>
+        {gainers.length === 0 ? (
+          <p className="text-[var(--muted)] italic text-sm">
+            No sectors show a meaningful jobs lift from this policy under this scenario.
+          </p>
+        ) : (
+          <div className="space-y-1.5">
+            {gainers.map((s) => (
+              <div key={s.naics} className="text-xs">
+                <div className="flex items-center justify-between border-b border-divider py-1.5 gap-2">
+                  <span className="text-[var(--foreground)] truncate flex-1" title={s.name}>{s.name}</span>
+                  <span className="tabular-nums font-medium text-[#3a8a4f]">
+                    +{formatJobs(s.policyDelta)}
+                  </span>
+                </div>
+                <p className="text-[10px] text-[var(--muted)] pl-0 mt-0.5">
+                  Baseline: {s.baseJobs >= 0 ? "+" : "−"}{formatJobs(Math.abs(s.baseJobs))} →
+                  With policy: {s.postJobs >= 0 ? "+" : "−"}{formatJobs(Math.abs(s.postJobs))}
+                </p>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+      <div>
+        <p className="text-xs uppercase tracking-wider text-[#d4493a] font-semibold mb-2">
+          Sectors still declining (policy didn&apos;t save these)
+        </p>
+        {stillDeclining.length === 0 ? (
+          <p className="text-[var(--muted)] italic text-sm">
+            No sectors show meaningful job decline under this policy. Strong coverage.
+          </p>
+        ) : (
+          <div className="space-y-1.5">
+            {stillDeclining.map((s) => (
+              <div key={s.naics} className="text-xs">
+                <div className="flex items-center justify-between border-b border-divider py-1.5 gap-2">
+                  <span className="text-[var(--foreground)] truncate flex-1" title={s.name}>{s.name}</span>
+                  <span className="tabular-nums font-medium text-[#d4493a]">
+                    {formatJobs(s.postJobs, true)}
+                  </span>
+                </div>
+                <p className="text-[10px] text-[var(--muted)] pl-0 mt-0.5">
+                  Baseline: {formatJobs(s.baseJobs, true)} →
+                  With policy: {formatJobs(s.postJobs, true)}
+                  {s.policyDelta > 50 && <span className="text-[#3a8a4f]"> (policy saved {formatJobs(s.policyDelta)})</span>}
+                </p>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
 function Step({ number, title, children }: { number: number; title: string; children: React.ReactNode }) {
   return (
     <section className="mb-8">
-      <div className="flex items-baseline gap-3 mb-3">
-        <span className="text-xs font-semibold text-white bg-[var(--foreground)] w-6 h-6 rounded flex items-center justify-center tabular-nums">
-          {number}
+      <div className="flex items-baseline gap-2.5 mb-3">
+        <span className="text-[10px] uppercase tracking-[0.18em] text-[var(--muted)] tabular-nums font-medium">
+          0{number}
         </span>
         <h2 className="text-base font-semibold text-[var(--foreground)]">{title}</h2>
       </div>

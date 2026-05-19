@@ -1,5 +1,5 @@
 {
-  "source": "Hand-curated catalog of workforce policy archetypes with research-anchored dimension-shift signatures.",
+  "source": "Hand-curated catalog of workforce policy archetypes. Expanded from the Windfall Trust Policy Atlas (Labor Market Adaptation, 2024) and research-anchored dimension-shift signatures.",
   "policies": [
     {
       "id": "sector-training-healthcare",
@@ -261,6 +261,226 @@
         "SMB owners and managers",
         "Regional economic-development authorities"
       ]
+    },
+    {
+      "id": "employer-retraining-tax-credit",
+      "name": "Employer Retraining Tax Credit",
+      "category": "Tax Incentive",
+      "tagline": "Refundable credit for firms that retrain incumbent workers displaced by AI",
+      "description": "Refundable federal/state tax credit covering 50% of training costs up to $5K/worker for firms that retrain incumbent workers for AI-augmented roles within current employment. Modeled on Georgia's longstanding Retraining Tax Credit.",
+      "typicalCostMillions": 30,
+      "durationYears": 4,
+      "targetSectors": null,
+      "evidence": "Georgia Retraining Tax Credit (since 1998) shows real uptake at modest scale; effectiveness depends on credit size and employer awareness. Limited rigorous evidence for AI-specific applications.",
+      "evidenceUrl": "https://windfalltrust.org/policy-atlas/labor-market-adaptation",
+      "addresses": [
+        "friction"
+      ],
+      "workforceImpacts": [
+        "Cuts firms' financial barrier to retraining incumbent workers in-place rather than displacing them",
+        "Keeps workers with current employer through technology transition (reduces involuntary churn)",
+        "Particularly impactful for SMBs that can't absorb training costs out of pocket",
+        "Modest absolute effect \u2014 credit must be large enough to actually change employer behavior"
+      ],
+      "targetPopulations": [
+        "Incumbent workers facing AI-driven role change",
+        "SMB workers",
+        "Workers in rapidly-adopting sectors"
+      ],
+      "sectorOverrides": {},
+      "knobShifts": {
+        "trustMultiplier": 1.05
+      }
+    },
+    {
+      "id": "job-guarantee-pilot",
+      "name": "Public Sector Job Guarantee (Pilot)",
+      "category": "Employment / Income Support",
+      "tagline": "Government as employer-of-last-resort offering public-service jobs to anyone unable to find work",
+      "description": "Regional pilot job guarantee: government offers a public-service job (community care, infrastructure, environmental services) at a living wage to any worker unable to find private employment within 6 months of displacement. Modeled on Argentina's Jefes y Jefas (2002) and various municipal guarantees in the US.",
+      "typicalCostMillions": 75,
+      "durationYears": 5,
+      "targetSectors": null,
+      "evidence": "Jefes y Jefas (Argentina, 2002): reduced extreme poverty by 25% in participating households. Federal job guarantee at national scale is fiscally heavy ($400B+/yr CBO range); pilot scale is more tractable. Limited US RCT evidence.",
+      "evidenceUrl": "https://www.levyinstitute.org/topics/employer-of-last-resort",
+      "addresses": [
+        "friction"
+      ],
+      "workforceImpacts": [
+        "Hard floor under displaced workers' incomes \u2014 eliminates the long-term unemployment trap",
+        "Builds public goods (eldercare, climate adaptation, urban repair) that markets underprovide",
+        "Removes the leverage employers gain from the threat of unemployment in wage bargaining",
+        "Politically and fiscally heavy lift \u2014 typically pilot scale and time-limited"
+      ],
+      "targetPopulations": [
+        "Long-term unemployed",
+        "Displaced workers in regions with weak private labor demand"
+      ],
+      "sectorOverrides": {},
+      "knobShifts": {}
+    },
+    {
+      "id": "four-day-workweek",
+      "name": "Four-Day Workweek (Productivity Sharing)",
+      "category": "Labor Regulation",
+      "tagline": "Reduce standard workweek to 32 hours; convert AI productivity gains into leisure rather than displacement",
+      "description": "Mandate or incentivize a 32-hour standard workweek for full-time employees, on the premise that AI productivity gains should partly accrue to workers as time rather than as layoffs or wage stagnation. Iceland and UK pilots show maintained output with significantly higher wellbeing.",
+      "typicalCostMillions": 15,
+      "durationYears": 4,
+      "targetSectors": null,
+      "evidence": "Iceland 2015\u20132019 trial (2,500 workers): productivity maintained or improved, wellbeing significantly higher. UK 2022 trial (61 firms): 92% continued the policy after the pilot. Effects vary widely by sector.",
+      "evidenceUrl": "https://autonomy.work/portfolio/icelandsww/",
+      "addresses": [
+        "friction"
+      ],
+      "workforceImpacts": [
+        "Distributes AI productivity gains as leisure across workers, reducing displacement pressure on any single role",
+        "Lower hours per worker means more workers needed for the same total output",
+        "Wellbeing and retention gains documented in multiple sectoral pilots",
+        "Hardest to implement in shift-based and 24/7 customer-facing sectors; easier in knowledge work"
+      ],
+      "targetPopulations": [
+        "Full-time salaried workers",
+        "Knowledge workers facing AI augmentation",
+        "Office-based sectors"
+      ],
+      "sectorOverrides": {},
+      "knobShifts": {
+        "trustMultiplier": 0.95
+      }
+    },
+    {
+      "id": "ai-bargaining-rights",
+      "name": "Worker Voice in AI Adoption (Sectoral Bargaining)",
+      "category": "Labor Regulation",
+      "tagline": "Codified collective bargaining over AI deployment in target sectors",
+      "description": "Codify worker rights to bargain over AI deployment decisions: advance notice of automation, retraining commitments, severance for displaced workers, and worker consent for performance monitoring. Modeled on European works councils and the SAG-AFTRA / WGA 2023 Hollywood AI agreements.",
+      "typicalCostMillions": 5,
+      "durationYears": 3,
+      "targetSectors": [
+        "62",
+        "61",
+        "51"
+      ],
+      "evidence": "SAG-AFTRA 2023 contract established AI consent and compensation requirements. German co-determination correlates with slower but more stable adoption. Effects on net employment ambiguous; effects on wage preservation and worker voice are strong.",
+      "evidenceUrl": "https://www.sagaftra.org/files/sa_documents/SAG-AFTRA_TVTheatrical_2023_MOA_07-25-2023.pdf",
+      "addresses": [
+        "adoption",
+        "friction"
+      ],
+      "workforceImpacts": [
+        "Slows adoption to a pace workers can absorb; reduces shock-displacement events",
+        "Advance notice and retraining commitments soften individual transition costs",
+        "Workers gain compensation for AI-derived productivity, not just employers",
+        "May modestly slow productivity growth \u2014 trade-off for better distribution"
+      ],
+      "targetPopulations": [
+        "Unionized workers in healthcare, education, entertainment",
+        "Knowledge workers in AI-adopting firms"
+      ],
+      "sectorOverrides": {
+        "62": {
+          "trustCoef": -0.03,
+          "frictionDrag": 0.05
+        },
+        "61": {
+          "trustCoef": -0.03,
+          "frictionDrag": 0.05
+        },
+        "51": {
+          "trustCoef": -0.03,
+          "frictionDrag": 0.05
+        }
+      },
+      "knobShifts": {}
+    },
+    {
+      "id": "skill-gap-data-infrastructure",
+      "name": "Regional Skill Gap & Exposure Infrastructure",
+      "category": "Data Infrastructure",
+      "tagline": "Continuous regional AI exposure measurement that targets workforce dollars to highest-need pockets",
+      "description": "Build state/regional capacity for ongoing AI exposure measurement at the occupation \u00d7 employer level. Outputs feed local workforce board funding decisions, employer transparency, and worker advisory services. Lightweight policy that increases the precision of all OTHER policies.",
+      "typicalCostMillions": 3,
+      "durationYears": 4,
+      "targetSectors": null,
+      "evidence": "Cost-effective enabling infrastructure. Hard to attribute jobs to directly, but multiplies the effectiveness of training and adjustment programs. Comparable to existing MSA labor market intelligence units (e.g., regional WIBs in CA, MA).",
+      "evidenceUrl": "https://windfalltrust.org/policy-atlas/labor-market-adaptation",
+      "addresses": [
+        "adoption"
+      ],
+      "workforceImpacts": [
+        "Surfaces displacement risks at occupation level before they become layoffs",
+        "Lets workforce boards target dollars where they'll actually move the needle",
+        "Gives workers data to make career decisions in advance",
+        "Multiplier on other policies \u2014 sharper data makes every intervention more effective"
+      ],
+      "targetPopulations": [
+        "Local workforce boards",
+        "Workers planning career changes",
+        "Researchers and policymakers"
+      ],
+      "sectorOverrides": {},
+      "knobShifts": {
+        "trustMultiplier": 1.05
+      }
+    },
+    {
+      "id": "lifelong-learning-account",
+      "name": "Lifelong Learning Account (LiLA)",
+      "category": "Education / Income Support",
+      "tagline": "Portable, government-matched accounts for ongoing skills training over a working lifespan",
+      "description": "Individual accounts where worker, employer, and government each contribute ~$750/yr (= $2.25K/yr total) toward training, credentialing, or career-change expenses. Worker-controlled and portable across employers. Modeled on Singapore SkillsFuture and the UK Lifelong Learning Entitlement.",
+      "typicalCostMillions": 40,
+      "durationYears": 5,
+      "targetSectors": null,
+      "evidence": "Singapore SkillsFuture (since 2015) reaches ~50% of working-age citizens annually. UK 2023 LLE pilot ongoing. US Individual Training Accounts under WIOA show smaller-scale uptake but positive effects on completion when paired with case management.",
+      "evidenceUrl": "https://www.skillsfuture.gov.sg/",
+      "addresses": [
+        "friction"
+      ],
+      "workforceImpacts": [
+        "Continuous funding flow for skills development \u2014 not just at displacement moments",
+        "Worker-controlled and portable across jobs \u2014 fits gig, contract, and short-tenure employment",
+        "Reaches workers who never engage with formal workforce programs",
+        "Outcomes depend on training quality \u2014 accounts alone don't guarantee good labor market returns"
+      ],
+      "targetPopulations": [
+        "All working-age adults",
+        "Gig and contract workers",
+        "Mid-career workers"
+      ],
+      "sectorOverrides": {},
+      "knobShifts": {
+        "trustMultiplier": 1.05
+      }
+    },
+    {
+      "id": "entrepreneurship-support",
+      "name": "Displaced-Worker Entrepreneurship Support",
+      "category": "Entrepreneurship",
+      "tagline": "Microgrants, coaching, and benefits-bridge for displaced workers starting businesses",
+      "description": "Bundled support for displaced workers transitioning to self-employment: $5-25K microgrants, 12-month UI benefits bridge via Self-Employment Assistance, business coaching, and community capital access. Federal SEA program exists but only 8 states participate.",
+      "typicalCostMillions": 12,
+      "durationYears": 4,
+      "targetSectors": null,
+      "evidence": "Self-Employment Assistance program (since 1993): 2-3x business survival rates vs. control in participating states. SBA SCORE mentoring + microloan combos show similar effects. Scale is limited by program awareness and complexity.",
+      "evidenceUrl": "https://oui.doleta.gov/unemploy/self.asp",
+      "addresses": [
+        "friction"
+      ],
+      "workforceImpacts": [
+        "Lets displaced workers create their own jobs rather than wait for re-employment",
+        "Bridges income gap during business startup phase via UI continuation",
+        "Capital + coaching combination addresses both money and know-how gaps",
+        "Self-employment isn't right for everyone \u2014 selection on motivation and capability matters"
+      ],
+      "targetPopulations": [
+        "Displaced workers with business interest",
+        "Older workers facing limited re-employment",
+        "Mid-career workers seeking autonomy"
+      ],
+      "sectorOverrides": {},
+      "knobShifts": {}
     }
   ]
 }

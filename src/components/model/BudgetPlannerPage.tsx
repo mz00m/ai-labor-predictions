@@ -69,7 +69,7 @@ const SCENARIOS: Record<string, { name: string; tagline: string; knobs: Knobs }>
 // Only Adoption Speed and Friction Buffer are realistically policy-movable.
 // Capability is set by the AI frontier; Demand Elasticity by market structure.
 const FRAMEWORK_LABELS = {
-  adoption: { label: "Adoption Speed", color: "#3a8a4f", num: 1, movable: true },
+  adoption: { label: "Adoption Speed", color: "#0f766e", num: 1, movable: true },
   capability: { label: "AI Capability", color: "#c89531", num: 2, movable: false },
   demand: { label: "Demand Elasticity", color: "#5b7faf", num: 3, movable: false },
   friction: { label: "Friction Buffer", color: "#7a7e8b", num: 4, movable: true },
@@ -125,16 +125,17 @@ export default function BudgetPlannerPage() {
           while covering all four framework categories.
         </p>
         <p className="text-sm text-[var(--muted)] leading-[1.6] italic">
-          v0.1 prototype. Greedy gap-aware optimizer over 7 policy archetypes
-          and 9 MSAs. Pair with{" "}
+          v0.1 prototype. Greedy gap-aware optimizer over 14 policy
+          archetypes (incl. Windfall Trust Policy Atlas) and 9 MSAs. To stack
+          your own portfolio, use{" "}
+          <Link href="/model/portfolio" className="text-[var(--accent-text)] hover:underline">
+            /model/portfolio
+          </Link>
+          . To diagnose a single policy, use{" "}
           <Link href="/model/policy" className="text-[var(--accent-text)] hover:underline">
             /model/policy
-          </Link>{" "}
-          to stress-test individual policies, or{" "}
-          <Link href="/model" className="text-[var(--accent-text)] hover:underline">
-            /model
-          </Link>{" "}
-          to adjust the underlying assumptions.
+          </Link>
+          .
         </p>
       </header>
 
@@ -157,25 +158,28 @@ export default function BudgetPlannerPage() {
         </p>
       </Step>
 
-      {/* Step 2 — Scenario */}
+      {/* Step 2 — Scenario (2×2 layout matching /model) */}
       <Step number={2} title="Pick a scenario">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2.5">
-          {Object.entries(SCENARIOS).map(([id, s]) => (
-            <button
-              key={id}
-              onClick={() => setScenarioId(id as keyof typeof SCENARIOS)}
-              className={`text-left p-3.5 rounded-lg border-2 transition-colors hover:border-[var(--foreground)] ${
-                scenarioId === id
-                  ? "border-[var(--foreground)] bg-card"
-                  : "border-card bg-card"
-              }`}
-            >
-              <p className="text-[10px] uppercase tracking-wider text-[var(--muted)] mb-1">
-                {s.tagline}
-              </p>
-              <p className="text-sm font-semibold text-[var(--foreground)]">{s.name}</p>
-            </button>
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-[120px_1fr_1fr] gap-2 items-stretch">
+          <div className="hidden md:block" />
+          <div className="hidden md:flex items-end justify-center text-[10px] uppercase tracking-[0.15em] text-[var(--muted)] pb-1">
+            ← High friction
+          </div>
+          <div className="hidden md:flex items-end justify-center text-[10px] uppercase tracking-[0.15em] text-[var(--muted)] pb-1">
+            Low friction →
+          </div>
+
+          <div className="hidden md:flex items-center text-[10px] uppercase tracking-[0.15em] text-[var(--muted)] text-right justify-end pr-2 leading-tight">
+            Fast capability<br />+ adoption
+          </div>
+          <ScenarioCard id="overhang" scenarioId={scenarioId} setScenarioId={setScenarioId} accent="#c89531" />
+          <ScenarioCard id="rapid" scenarioId={scenarioId} setScenarioId={setScenarioId} accent="#3a8a4f" />
+
+          <div className="hidden md:flex items-center text-[10px] uppercase tracking-[0.15em] text-[var(--muted)] text-right justify-end pr-2 leading-tight">
+            Slow capability<br />+ adoption
+          </div>
+          <ScenarioCard id="status_quo" scenarioId={scenarioId} setScenarioId={setScenarioId} accent="#7a7e8b" />
+          <ScenarioCard id="steady" scenarioId={scenarioId} setScenarioId={setScenarioId} accent="#5b7faf" />
         </div>
       </Step>
 
@@ -235,16 +239,23 @@ export default function BudgetPlannerPage() {
             {" · "}Horizon: {knobs.horizonYears}yr
           </p>
         </div>
-        <h2 className="text-2xl font-bold text-[var(--foreground)] mb-6 leading-tight">
+        <h2 className="text-2xl font-bold text-[var(--foreground)] mb-3 leading-tight">
           Allocate {Math.round((recommendation.spentMillions / budgetMillions) * 100)}% across {recommendation.selected.length} {recommendation.selected.length === 1 ? "policy" : "policies"} for{" "}
           <span style={{ color: recommendation.portfolioJobsDelta >= 0 ? "#3a8a4f" : "#d4493a" }}>
             {formatJobs(recommendation.portfolioJobsDelta, true)} jobs
           </span>
         </h2>
 
+        {/* Verdict */}
+        <BudgetVerdict
+          recommendation={recommendation}
+          budgetMillions={budgetMillions}
+          regionName={region.name}
+        />
+
         {/* A — Allocation */}
         <ReportSection
-          heading="A · Portfolio allocation"
+          heading="Portfolio allocation"
           subhead={`${recommendation.selected.length} ${recommendation.selected.length === 1 ? "policy selected" : "policies selected"}. Greedy optimizer favors gap-covering policies (those that address a framework category not yet in the portfolio).`}
         >
           {recommendation.selected.length === 0 ? (
@@ -278,7 +289,7 @@ export default function BudgetPlannerPage() {
 
         {/* B — Impact */}
         <ReportSection
-          heading="B · Net impact vs no investment"
+          heading="Net jobs impact vs no investment"
           subhead="What the chosen portfolio buys in jobs, plus comparison to spending the same money on the single best policy."
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -324,7 +335,7 @@ export default function BudgetPlannerPage() {
 
         {/* C — Workforce impact aggregated */}
         <ReportSection
-          heading="C · Workforce impact across the portfolio"
+          heading="Workforce impact across the portfolio"
           subhead="Aggregated workforce-side outcomes from the selected policies — who benefits and what changes for them, the employers, and the regional economy."
         >
           {recommendation.selected.length === 0 ? (
@@ -437,7 +448,7 @@ export default function BudgetPlannerPage() {
 
         {/* D — Budget sensitivity */}
         <ReportSection
-          heading="D · Budget sensitivity"
+          heading="Budget sensitivity"
           subhead="What changes at half and double the budget. Use this to argue for or against incremental dollars."
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
@@ -476,7 +487,7 @@ export default function BudgetPlannerPage() {
         {/* E — Skipped */}
         {recommendation.skipped.length > 0 && (
           <ReportSection
-            heading="E · Skipped policies"
+            heading="Skipped policies"
             subhead="Policies in the catalog that didn't make the portfolio, with reasons. Transparency on what the optimizer rejected."
           >
             <div className="space-y-2">
@@ -499,7 +510,7 @@ export default function BudgetPlannerPage() {
 
         {/* F — Honesty */}
         <ReportSection
-          heading="F · Honesty notes"
+          heading="Honesty notes"
           subhead=""
         >
           <ul className="text-sm text-[var(--muted)] leading-[1.65] list-disc ml-5 space-y-1.5">
@@ -553,12 +564,98 @@ export default function BudgetPlannerPage() {
 // Components
 // ────────────────────────────────────────────────────────────────────
 
+function BudgetVerdict({
+  recommendation,
+  budgetMillions,
+  regionName,
+}: {
+  recommendation: ReturnType<typeof optimizeBudgetPortfolio>;
+  budgetMillions: number;
+  regionName: string;
+}) {
+  const jobs = recommendation.portfolioJobsDelta;
+  const meaningful = Math.abs(jobs) > 500;
+  const positive = jobs > 500;
+  const uncoveredCats = 2 - recommendation.categoriesCovered.length; // only 2 policy-movable categories
+  const portfolioAdvantage =
+    recommendation.bestSingleJobsDelta > 0
+      ? (jobs - recommendation.bestSingleJobsDelta) / recommendation.bestSingleJobsDelta
+      : 0;
+  const costPerJob =
+    Math.abs(jobs) > 0 ? (recommendation.spentMillions * 1_000_000) / Math.abs(jobs) : 0;
+
+  let verdict: string;
+  let tone: "positive" | "caution" | "neutral";
+  if (!meaningful) {
+    verdict = `$${budgetMillions}M is too small to meaningfully move ${regionName}'s post-AI workforce outcomes — at best a marginal jobs lift. Either scale the budget significantly higher (try 2-5×) or use it as targeted bridge funding for specific cohorts.`;
+    tone = "neutral";
+  } else if (positive && uncoveredCats === 0 && portfolioAdvantage > 0.1) {
+    verdict = `Recommended: ${recommendation.selected.length} stacked policies covering both adoption and friction. Portfolio outperforms the single best policy by ${(portfolioAdvantage * 100).toFixed(0)}% (${formatJobs(jobs, true)} vs ${formatJobs(recommendation.bestSingleJobsDelta, true)} jobs) at roughly $${costPerJob.toFixed(0)} per job moved. Diversification pays here.`;
+    tone = "positive";
+  } else if (positive && uncoveredCats === 0) {
+    verdict = `Recommended: ${recommendation.selected.length} stacked policies covering both adoption and friction in ${regionName}, moving ${formatJobs(jobs, true)} jobs at ~$${costPerJob.toFixed(0)} per net job. The single best policy alone would deliver similar results — diversification helps coverage, not raw jobs.`;
+    tone = "positive";
+  } else if (positive && uncoveredCats > 0) {
+    verdict = `Portfolio moves ${formatJobs(jobs, true)} jobs but leaves ${uncoveredCats} of 2 policy-movable framework categories uncovered. The catalog at this budget either doesn't include a strong intervention for the missing dimension or isn't cost-effective for ${regionName}.`;
+    tone = "caution";
+  } else {
+    verdict = `At ${budgetMillions}M the optimizer can't find a positive-net portfolio for ${regionName} under this scenario. Try a different scenario, a larger budget, or a more growth-friendly scenario preset to see what the catalog can do.`;
+    tone = "caution";
+  }
+
+  const color = tone === "positive" ? "#3a8a4f" : tone === "caution" ? "#a36e1e" : "#7a7e8b";
+  const bg = tone === "positive" ? "#3a8a4f10" : tone === "caution" ? "#a36e1e10" : "#7a7e8b10";
+
+  return (
+    <div className="rounded-lg p-5 mb-6 border-l-4" style={{ borderColor: color, background: bg }}>
+      <p className="text-[10px] uppercase tracking-[0.18em] font-semibold mb-1.5" style={{ color }}>
+        Verdict
+      </p>
+      <p className="text-base sm:text-lg text-[var(--foreground)] leading-[1.55] font-medium">
+        {verdict}
+      </p>
+    </div>
+  );
+}
+
+function ScenarioCard({
+  id,
+  scenarioId,
+  setScenarioId,
+  accent,
+}: {
+  id: keyof typeof SCENARIOS;
+  scenarioId: keyof typeof SCENARIOS;
+  setScenarioId: (id: keyof typeof SCENARIOS) => void;
+  accent: string;
+}) {
+  const s = SCENARIOS[id];
+  const active = scenarioId === id;
+  return (
+    <button
+      onClick={() => setScenarioId(id)}
+      className={`text-left bg-card border-2 rounded-lg p-3.5 transition-all hover:border-[var(--foreground)] ${active ? "border-[var(--foreground)] shadow-sm" : "border-card"}`}
+      style={active ? { boxShadow: `0 0 0 2px ${accent}33` } : {}}
+    >
+      <div className="flex items-start justify-between mb-1">
+        <p className="text-sm font-semibold text-[var(--foreground)] leading-tight">
+          {s.name}
+        </p>
+        <span className="inline-block w-2 h-2 rounded-full mt-1.5 flex-shrink-0" style={{ background: accent }} />
+      </div>
+      <p className="text-[10px] uppercase tracking-wider text-[var(--muted)]">
+        {s.tagline}
+      </p>
+    </button>
+  );
+}
+
 function Step({ number, title, children }: { number: number; title: string; children: React.ReactNode }) {
   return (
     <section className="mb-8">
-      <div className="flex items-baseline gap-3 mb-3">
-        <span className="text-xs font-semibold text-white bg-[var(--foreground)] w-6 h-6 rounded flex items-center justify-center tabular-nums">
-          {number}
+      <div className="flex items-baseline gap-2.5 mb-3">
+        <span className="text-[10px] uppercase tracking-[0.18em] text-[var(--muted)] tabular-nums font-medium">
+          0{number}
         </span>
         <h2 className="text-base font-semibold text-[var(--foreground)]">{title}</h2>
       </div>
