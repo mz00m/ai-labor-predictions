@@ -5,6 +5,7 @@ import Link from "next/link";
 import btosData from "@/data/btos-sectors.json";
 import RegionCombobox from "@/components/model/RegionCombobox";
 import ModelToolsNav from "@/components/model/ModelToolsNav";
+import SectorDistributionStrip from "@/components/model/SectorDistributionStrip";
 import regionsData from "@/data/regions.json";
 import policiesData from "@/data/policies.json";
 import {
@@ -364,14 +365,14 @@ export default function PortfolioBuilderPage() {
                 sub="jobs moved by policy"
               />
               <BigStat
-                label="Cost per job"
+                label="Model cost per job"
                 value={
                   Math.abs(portfolioDelta) > 0
                     ? `~$${((totalAllocated * 1_000_000) / Math.abs(portfolioDelta)).toFixed(0)}`
                     : "—"
                 }
                 color="#7a7e8b"
-                sub={`per net job moved`}
+                sub="engine arithmetic, not impact eval"
               />
             </div>
           </ReportSection>
@@ -439,6 +440,10 @@ export default function PortfolioBuilderPage() {
               baseline={baseAggregate}
               postPolicy={portfolioAggregate}
               max={6}
+            />
+            <SectorDistributionStrip
+              aggregate={portfolioAggregate}
+              caption="Full distribution with the stacked portfolio. The top-6 lists above are the headline ranking; this strip shows what they leave out."
             />
           </ReportSection>
 
@@ -818,7 +823,7 @@ function PortfolioVerdict({
   return (
     <div className="rounded-lg p-5 mb-6 border-l-4" style={{ borderColor: color, background: bg }}>
       <p className="text-[10px] uppercase tracking-[0.18em] font-semibold mb-1.5" style={{ color }}>
-        Verdict
+        Verdict <span className="text-[var(--muted)] normal-case tracking-normal font-normal">— rule-based summary</span>
       </p>
       <p className="text-base sm:text-lg text-[var(--foreground)] leading-[1.55] font-medium">
         {verdict}

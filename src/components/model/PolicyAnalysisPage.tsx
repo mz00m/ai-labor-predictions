@@ -5,6 +5,7 @@ import Link from "next/link";
 import btosData from "@/data/btos-sectors.json";
 import RegionCombobox from "@/components/model/RegionCombobox";
 import ModelToolsNav from "@/components/model/ModelToolsNav";
+import SectorDistributionStrip from "@/components/model/SectorDistributionStrip";
 import regionsData from "@/data/regions.json";
 import policiesData from "@/data/policies.json";
 import {
@@ -274,6 +275,7 @@ export default function PolicyAnalysisPage() {
               <BigStat label="Net Δ" value={formatJobs(baseAggregate.totalJobsImpacted, true)} color={baseAggregate.totalJobsImpacted < 0 ? "#d4493a" : "#3a8a4f"} />
             </div>
             <RegionalTopSectors agg={baseAggregate} max={5} />
+            <SectorDistributionStrip aggregate={baseAggregate} />
           </ReportSection>
 
           {/* With policy */}
@@ -302,15 +304,19 @@ export default function PolicyAnalysisPage() {
               postPolicy={policyAggregate}
               max={6}
             />
+            <SectorDistributionStrip
+              aggregate={policyAggregate}
+              caption="With-policy distribution. Compare to the baseline strip above — dots shifting right = policy lifting sectors; shifting left = sectors policy didn't reach."
+            />
 
             <p className="text-sm text-[var(--muted)] leading-[1.65] mt-4">
-              <strong className="text-[var(--foreground)]">Cost per outcome:</strong>{" "}
+              <strong className="text-[var(--foreground)]">Model-implied cost per net job:</strong>{" "}
               {Math.abs(policyDelta) > 0
-                ? `~$${((policy.typicalCostMillions * 1_000_000) / Math.abs(policyDelta)).toFixed(0)} per net job moved`
+                ? `~$${((policy.typicalCostMillions * 1_000_000) / Math.abs(policyDelta)).toFixed(0)}`
                 : `Policy investment ($${policy.typicalCostMillions}M) showed no net regional jobs delta at the modeled horizon`}
               .{" "}
               <span className="italic">
-                Coverage estimate, not an impact-evaluation number. Real cost-per-job requires longitudinal program data.
+                Engine arithmetic (budget ÷ modeled jobs), not a workforce-program impact evaluation. Real cost-per-outcome metrics use defined outcomes — long-term employment, wage gain ≥ X% — and require longitudinal data.
               </span>
             </p>
           </ReportSection>
@@ -543,8 +549,8 @@ export default function PolicyAnalysisPage() {
 
           {/* SECTION F — Trust: robustness band with confidence interpretation */}
           <ReportSection
-            heading="Confidence score"
-            subhead="What if our defaults are off by 50% on the high-impact knobs? Range of regional net jobs Δ under pessimistic and optimistic perturbations."
+            heading="Knob-sensitivity confidence"
+            subhead="±50% perturbation on five high-impact global knobs (capability, elasticity, productivity, trust, regulatory schema). This tests robustness to global knob movements — per-sector parameters (exposureShare, complementarity, sector-specific ε) are held fixed. A 'High' label means the recommendation survives knob movement, not that all underlying assumptions have been audited."
           >
             <ConfidenceBanner robustness={robustness} regionName={region.name} />
             <RobustnessBar
@@ -777,7 +783,7 @@ function VerdictBanner({
       style={{ borderColor: color, background: bg }}
     >
       <p className="text-[10px] uppercase tracking-[0.18em] font-semibold mb-1.5" style={{ color }}>
-        Verdict
+        Verdict <span className="text-[var(--muted)] normal-case tracking-normal font-normal">— rule-based summary</span>
       </p>
       <p className="text-base sm:text-lg text-[var(--foreground)] leading-[1.55] font-medium">
         {verdict}

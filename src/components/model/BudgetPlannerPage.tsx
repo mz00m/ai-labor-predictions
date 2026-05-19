@@ -296,46 +296,51 @@ export default function BudgetPlannerPage() {
         {/* B — Impact */}
         <ReportSection
           heading="Net jobs impact vs no investment"
-          subhead="What the chosen portfolio buys in jobs, plus comparison to spending the same money on the single best policy."
+          subhead={`What the chosen portfolio buys in ${region.name}. Headline is jobs, but the ratio to regional employment is the more honest measure — workforce moves of < 0.5% are within the noise of normal labor market churn.`}
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <BigStat
-              label="Portfolio Δ"
+              label="Portfolio jobs Δ"
               value={formatJobs(recommendation.portfolioJobsDelta, true)}
               sub="vs no-policy baseline"
               color={recommendation.portfolioJobsDelta >= 0 ? "#3a8a4f" : "#d4493a"}
             />
             <BigStat
-              label="Best single policy Δ"
-              value={formatJobs(recommendation.bestSingleJobsDelta, true)}
-              sub={recommendation.bestSinglePolicy?.name ?? "—"}
-              color={recommendation.bestSingleJobsDelta >= 0 ? "#3a8a4f" : "#d4493a"}
+              label="% of regional employment"
+              value={
+                region.totalEmploymentK > 0
+                  ? `${recommendation.portfolioJobsDelta >= 0 ? "+" : ""}${(
+                      (recommendation.portfolioJobsDelta / (region.totalEmploymentK * 1000)) *
+                      100
+                    ).toFixed(2)}%`
+                  : "—"
+              }
+              sub={`of ${region.totalEmploymentK.toLocaleString()}K total jobs`}
+              color={recommendation.portfolioJobsDelta >= 0 ? "#3a8a4f" : "#d4493a"}
             />
             <BigStat
-              label="Portfolio advantage"
-              value={
-                recommendation.bestSingleJobsDelta > 0
-                  ? `+${(((recommendation.portfolioJobsDelta - recommendation.bestSingleJobsDelta) / recommendation.bestSingleJobsDelta) * 100).toFixed(0)}%`
-                  : "n/a"
+              label="Budget deployed"
+              value={`$${recommendation.spentMillions.toFixed(0)}M`}
+              sub={
+                recommendation.unspentMillions > 0.5
+                  ? `$${recommendation.unspentMillions.toFixed(0)}M unspent — catalog can't absorb`
+                  : `of $${budgetMillions}M (fully deployed)`
               }
-              sub="extra jobs from diversifying"
-              color={
-                recommendation.portfolioJobsDelta > recommendation.bestSingleJobsDelta
-                  ? "#3a8a4f"
-                  : "#7a7e8b"
-              }
+              color="#7a7e8b"
             />
           </div>
           <p className="text-xs text-[var(--muted)] mt-3 italic leading-[1.6]">
-            Cost per net job moved: ~$
+            Model-implied cost per net job: ~$
             {Math.abs(recommendation.portfolioJobsDelta) > 0
               ? (
                   (recommendation.spentMillions * 1_000_000) /
                   Math.abs(recommendation.portfolioJobsDelta)
                 ).toFixed(0)
               : "—"}
-            . This is a structural cost estimate, not an impact-evaluation
-            number. Real cost-per-job requires longitudinal program data.
+            . Engine arithmetic (spent ÷ modeled jobs), not workforce-program
+            economics. Real cost-per-outcome metrics use defined outcomes
+            (long-term employment, wage gain ≥ X%) and require longitudinal
+            program data.
           </p>
         </ReportSection>
 
@@ -627,7 +632,7 @@ function BudgetVerdict({
   return (
     <div className="rounded-lg p-5 mb-6 border-l-4" style={{ borderColor: color, background: bg }}>
       <p className="text-[10px] uppercase tracking-[0.18em] font-semibold mb-1.5" style={{ color }}>
-        Verdict
+        Verdict <span className="text-[var(--muted)] normal-case tracking-normal font-normal">— rule-based summary</span>
       </p>
       <p className="text-base sm:text-lg text-[var(--foreground)] leading-[1.55] font-medium">
         {verdict}

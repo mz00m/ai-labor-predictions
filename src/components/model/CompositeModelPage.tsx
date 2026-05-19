@@ -307,10 +307,13 @@ export default function CompositeModelPage() {
         {knobsOpen && (
           <div className="mt-3 bg-card border border-card rounded-lg p-5">
             <p className="text-xs text-[var(--muted)] leading-[1.6] mb-4 max-w-2xl">
-              Knobs are organized top-to-bottom by how much they actually move
-              sector outputs. Tier 1 (red) drives the headline numbers; Tier 3
-              (gray) is fine-tuning. The colored dot beside each knob shows
-              which of the four framework categories it belongs to.
+              Knobs are organized top-to-bottom by{" "}
+              <em>author-estimated</em> impact on sector outputs. Tier 1 (red)
+              drives the headline numbers; Tier 3 (gray) is fine-tuning. The
+              colored dot beside each knob shows which of the four framework
+              categories it belongs to. Tier assignments are heuristic, not
+              derived from formal sensitivity analysis — v0.2 will run Sobol
+              indices to validate the ordering empirically.
             </p>
 
             {(["high", "medium", "low"] as const).map((tier) => {
@@ -381,6 +384,16 @@ export default function CompositeModelPage() {
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
                 <thead>
+                  {/* Column group header — distinguish observed data from modeled outputs */}
+                  <tr className="text-[10px] uppercase tracking-[0.15em] text-[var(--muted)] border-b border-divider">
+                    <th className="px-5 py-2 text-left">Sector</th>
+                    <th className="px-5 py-2 text-right" colSpan={2} style={{ background: "#3a8a4f08" }}>
+                      Observed data
+                    </th>
+                    <th className="px-5 py-2 text-right" colSpan={6} style={{ background: "#c8953108" }}>
+                      Modeled outputs
+                    </th>
+                  </tr>
                   <tr className="text-xs uppercase tracking-wider text-[var(--muted)] border-b border-divider">
                     <Th onClick={() => flipSort("name")} active={sortKey === "name"} dir={sortDir} tooltip="NAICS 2-digit industry sector. Hover any row to see its underlying parameters.">Sector</Th>
                     <Th onClick={() => flipSort("employmentMillions")} active={sortKey === "employmentMillions"} dir={sortDir} right tooltip="US private-sector employment in this industry, in millions (BLS QCEW 2024). The base count that percentage changes get applied to.">Baseline (M)</Th>
@@ -389,8 +402,8 @@ export default function CompositeModelPage() {
                     <Th onClick={() => flipSort("taskReplacement")} active={sortKey === "taskReplacement"} dir={sortDir} right tooltip="Share of total work hours in this sector that AI will replace (not augment). Adoption × task-share capability × (1 − complementarity).">Tasks replaced</Th>
                     <Th onClick={() => flipSort("productivityGain")} active={sortKey === "productivityGain"} dir={sortDir} right tooltip="Productivity uplift from AI substituting for human labor on replaced tasks. Tasks replaced × cost savings per task (Acemoglu 2024 ≈ 27%).">Productivity Δ</Th>
                     <Th onClick={() => flipSort("employmentDelta")} active={sortKey === "employmentDelta"} dir={sortDir} right tooltip="Percent change in employment, via Bessen's identity Δln(L) = (ε − 1) × Δln(A). Positive ε > 1 grows jobs as productivity rises; ε < 1 cuts them.">Empl. Δ %</Th>
-                    <Th onClick={() => flipSort("jobsImpacted")} active={sortKey === "jobsImpacted"} dir={sortDir} right tooltip="Absolute number of jobs added or lost. Employment Δ % × baseline employment. The headline number.">Jobs Δ</Th>
-                    <Th onClick={() => flipSort("wageImpact")} active={sortKey === "wageImpact"} dir={sortDir} right tooltip="Wage growth from AI complementing remaining workers. Productivity gain × complementarity share (the part of AI's effect that augments rather than replaces).">Wage Δ</Th>
+                    <Th onClick={() => flipSort("jobsImpacted")} active={sortKey === "jobsImpacted"} dir={sortDir} right tooltip="Absolute number of jobs added or lost. Employment Δ % × baseline employment — a DERIVED value, not an independent measurement.">Jobs Δ</Th>
+                    <Th onClick={() => flipSort("wageImpact")} active={sortKey === "wageImpact"} dir={sortDir} right tooltip="Wage growth from AI complementing remaining workers. Productivity gain × complementarity share — a DERIVED value, not an independent measurement.">Wage Δ</Th>
                   </tr>
                 </thead>
                 <tbody>
