@@ -224,21 +224,35 @@ export default function PortfolioBuilderPage() {
 
       {/* Step 2 — Scenario */}
       <Step number={2} title="Pick a scenario">
+        <p className="text-sm text-[var(--muted)] mb-3">
+          Baseline (no policy) jobs Δ in {region.name} under each scenario.
+        </p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-2.5">
-          {Object.entries(SCENARIOS).map(([id, s]) => (
-            <button
-              key={id}
-              onClick={() => setScenarioId(id as keyof typeof SCENARIOS)}
-              className={`text-left p-3 rounded-lg border-2 transition-colors hover:border-[var(--foreground)] ${
-                scenarioId === id ? "border-[var(--foreground)] bg-card" : "border-card bg-card"
-              }`}
-            >
-              <p className="text-[10px] uppercase tracking-wider text-[var(--muted)] mb-1">
-                {s.tagline}
-              </p>
-              <p className="text-sm font-semibold text-[var(--foreground)]">{s.name}</p>
-            </button>
-          ))}
+          {Object.entries(SCENARIOS).map(([id, s]) => {
+            const preview = sectors.map((sec) => computeSector(sec, s.knobs));
+            const previewAgg = regionalAggregate(preview, region);
+            const previewJobs = previewAgg.totalJobsImpacted;
+            return (
+              <button
+                key={id}
+                onClick={() => setScenarioId(id as keyof typeof SCENARIOS)}
+                className={`text-left p-3 rounded-lg border-2 transition-colors hover:border-[var(--foreground)] ${
+                  scenarioId === id ? "border-[var(--foreground)] bg-card" : "border-card bg-card"
+                }`}
+              >
+                <p className="text-[10px] uppercase tracking-wider text-[var(--muted)] mb-1">
+                  {s.tagline}
+                </p>
+                <p className="text-sm font-semibold text-[var(--foreground)] mb-1.5">{s.name}</p>
+                <p
+                  className="text-base font-bold tabular-nums"
+                  style={{ color: previewJobs >= 0 ? "#3a8a4f" : "#d4493a" }}
+                >
+                  {formatJobs(previewJobs, true)} jobs
+                </p>
+              </button>
+            );
+          })}
         </div>
       </Step>
 
@@ -357,27 +371,38 @@ export default function PortfolioBuilderPage() {
             <div className="space-y-2">
               {perPolicyImpacts
                 .sort((a, b) => b.standaloneJobsDelta - a.standaloneJobsDelta)
-                .map((p) => (
-                  <div
-                    key={p.policy.id}
-                    className="rounded-lg px-4 py-2.5 bg-[var(--background)] border border-divider"
-                  >
-                    <div className="flex items-baseline justify-between gap-2 flex-wrap">
-                      <span className="text-sm font-medium text-[var(--foreground)]">
-                        {p.policy.name}
-                      </span>
-                      <div className="flex items-baseline gap-3 text-xs tabular-nums">
-                        <span className="text-[var(--muted)]">${p.allocation.toFixed(1)}M @ {(p.scale * 100).toFixed(0)}%</span>
-                        <span
-                          className="font-medium"
-                          style={{ color: p.standaloneJobsDelta >= 0 ? "#3a8a4f" : "#d4493a" }}
-                        >
-                          {formatJobs(p.standaloneJobsDelta, true)} jobs
+                .map((p) => {
+                  const costPerJob =
+                    Math.abs(p.standaloneJobsDelta) > 0
+                      ? (p.allocation * 1_000_000) / Math.abs(p.standaloneJobsDelta)
+                      : null;
+                  return (
+                    <div
+                      key={p.policy.id}
+                      className="rounded-lg px-4 py-2.5 bg-[var(--background)] border border-divider"
+                    >
+                      <div className="flex items-baseline justify-between gap-2 flex-wrap mb-1">
+                        <span className="text-sm font-medium text-[var(--foreground)]">
+                          {p.policy.name}
                         </span>
+                        <div className="flex items-baseline gap-3 text-xs tabular-nums">
+                          <span className="text-[var(--muted)]">${p.allocation.toFixed(1)}M @ {(p.scale * 100).toFixed(0)}%</span>
+                          <span
+                            className="font-medium"
+                            style={{ color: p.standaloneJobsDelta >= 0 ? "#3a8a4f" : "#d4493a" }}
+                          >
+                            {formatJobs(p.standaloneJobsDelta, true)} jobs
+                          </span>
+                        </div>
                       </div>
+                      <p className="text-[11px] text-[var(--muted)] tabular-nums">
+                        Cost per job: {costPerJob !== null && Math.abs(p.standaloneJobsDelta) > 50
+                          ? <strong className="text-[var(--foreground)]">~${costPerJob.toFixed(0)}</strong>
+                          : <span className="italic">policy too small to meaningfully impact regional jobs</span>}
+                      </p>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
             </div>
             <p className="text-xs text-[var(--muted)] mt-3 italic">
               Sum of standalone effects: {formatJobs(perPolicyImpacts.reduce((s, p) => s + p.standaloneJobsDelta, 0), true)} jobs.

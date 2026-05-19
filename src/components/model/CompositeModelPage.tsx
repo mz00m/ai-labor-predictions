@@ -388,15 +388,15 @@ export default function CompositeModelPage() {
               <table className="w-full text-sm">
                 <thead>
                   <tr className="text-xs uppercase tracking-wider text-[var(--muted)] border-b border-divider">
-                    <Th onClick={() => flipSort("name")} active={sortKey === "name"} dir={sortDir}>Sector</Th>
-                    <Th onClick={() => flipSort("employmentMillions")} active={sortKey === "employmentMillions"} dir={sortDir} right>Baseline (M)</Th>
-                    <Th onClick={() => flipSort("btosCurrent")} active={sortKey === "btosCurrent"} dir={sortDir} right>BTOS now</Th>
-                    <Th onClick={() => flipSort("realizedAdoption")} active={sortKey === "realizedAdoption"} dir={sortDir} right>Model adoption</Th>
-                    <Th onClick={() => flipSort("taskReplacement")} active={sortKey === "taskReplacement"} dir={sortDir} right>Tasks replaced</Th>
-                    <Th onClick={() => flipSort("productivityGain")} active={sortKey === "productivityGain"} dir={sortDir} right>Productivity Δ</Th>
-                    <Th onClick={() => flipSort("employmentDelta")} active={sortKey === "employmentDelta"} dir={sortDir} right>Empl. Δ %</Th>
-                    <Th onClick={() => flipSort("jobsImpacted")} active={sortKey === "jobsImpacted"} dir={sortDir} right>Jobs Δ</Th>
-                    <Th onClick={() => flipSort("wageImpact")} active={sortKey === "wageImpact"} dir={sortDir} right>Wage Δ</Th>
+                    <Th onClick={() => flipSort("name")} active={sortKey === "name"} dir={sortDir} tooltip="NAICS 2-digit industry sector. Hover any row to see its underlying parameters.">Sector</Th>
+                    <Th onClick={() => flipSort("employmentMillions")} active={sortKey === "employmentMillions"} dir={sortDir} right tooltip="US private-sector employment in this industry, in millions (BLS QCEW 2024). The base count that percentage changes get applied to.">Baseline (M)</Th>
+                    <Th onClick={() => flipSort("btosCurrent")} active={sortKey === "btosCurrent"} dir={sortDir} right tooltip="Share of firms in this sector currently using AI in any business function (US Census BTOS AI Supplement, 2026). This is real survey data, not a model output.">BTOS now</Th>
+                    <Th onClick={() => flipSort("realizedAdoption")} active={sortKey === "realizedAdoption"} dir={sortDir} right tooltip="What the model thinks the share of firms using AI will be at your chosen horizon. Starts from the BTOS current-use rate, ramps up based on trust, friction, and capability assumptions.">Model adoption</Th>
+                    <Th onClick={() => flipSort("taskReplacement")} active={sortKey === "taskReplacement"} dir={sortDir} right tooltip="Share of total work hours in this sector that AI will replace (not augment). Adoption × task-share capability × (1 − complementarity).">Tasks replaced</Th>
+                    <Th onClick={() => flipSort("productivityGain")} active={sortKey === "productivityGain"} dir={sortDir} right tooltip="Productivity uplift from AI substituting for human labor on replaced tasks. Tasks replaced × cost savings per task (Acemoglu 2024 ≈ 27%).">Productivity Δ</Th>
+                    <Th onClick={() => flipSort("employmentDelta")} active={sortKey === "employmentDelta"} dir={sortDir} right tooltip="Percent change in employment, via Bessen's identity Δln(L) = (ε − 1) × Δln(A). Positive ε > 1 grows jobs as productivity rises; ε < 1 cuts them.">Empl. Δ %</Th>
+                    <Th onClick={() => flipSort("jobsImpacted")} active={sortKey === "jobsImpacted"} dir={sortDir} right tooltip="Absolute number of jobs added or lost. Employment Δ % × baseline employment. The headline number.">Jobs Δ</Th>
+                    <Th onClick={() => flipSort("wageImpact")} active={sortKey === "wageImpact"} dir={sortDir} right tooltip="Wage growth from AI complementing remaining workers. Productivity gain × complementarity share (the part of AI's effect that augments rather than replaces).">Wage Δ</Th>
                   </tr>
                 </thead>
                 <tbody>
@@ -1044,16 +1044,19 @@ function SummaryStat({ label, value, sub }: { label: string; value: string; sub:
 }
 
 function Th({
-  children, onClick, active, dir, right,
+  children, onClick, active, dir, right, tooltip,
 }: {
-  children: React.ReactNode; onClick: () => void; active: boolean; dir: "asc" | "desc"; right?: boolean;
+  children: React.ReactNode; onClick: () => void; active: boolean; dir: "asc" | "desc"; right?: boolean; tooltip?: string;
 }) {
   return (
     <th
       onClick={onClick}
+      title={tooltip}
       className={`px-5 py-3 cursor-pointer select-none hover:text-[var(--foreground)] transition-colors ${right ? "text-right" : "text-left"} ${active ? "text-[var(--foreground)]" : ""}`}
     >
-      {children}
+      <span className={tooltip ? "border-b border-dotted border-[var(--muted)]" : ""}>
+        {children}
+      </span>
       {active && <span className="ml-1">{dir === "asc" ? "↑" : "↓"}</span>}
     </th>
   );

@@ -12,6 +12,8 @@ import {
   Region,
   ModelPolicy,
   optimizeBudgetPortfolio,
+  computeSector,
+  regionalAggregate,
 } from "@/lib/composite-model";
 
 const sectors = btosData.sectors as Sector[];
@@ -160,6 +162,9 @@ export default function BudgetPlannerPage() {
 
       {/* Step 2 — Scenario (2×2 layout matching /model) */}
       <Step number={2} title="Pick a scenario">
+        <p className="text-sm text-[var(--muted)] mb-3">
+          Baseline (no policy) jobs Δ in {region.name} under each scenario.
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-[120px_1fr_1fr] gap-2 items-stretch">
           <div className="hidden md:block" />
           <div className="hidden md:flex items-end justify-center text-[10px] uppercase tracking-[0.15em] text-[var(--muted)] pb-1">
@@ -172,14 +177,14 @@ export default function BudgetPlannerPage() {
           <div className="hidden md:flex items-center text-[10px] uppercase tracking-[0.15em] text-[var(--muted)] text-right justify-end pr-2 leading-tight">
             Fast capability<br />+ adoption
           </div>
-          <ScenarioCard id="overhang" scenarioId={scenarioId} setScenarioId={setScenarioId} accent="#c89531" />
-          <ScenarioCard id="rapid" scenarioId={scenarioId} setScenarioId={setScenarioId} accent="#3a8a4f" />
+          <ScenarioCard id="overhang" scenarioId={scenarioId} setScenarioId={setScenarioId} accent="#c89531" region={region} />
+          <ScenarioCard id="rapid" scenarioId={scenarioId} setScenarioId={setScenarioId} accent="#3a8a4f" region={region} />
 
           <div className="hidden md:flex items-center text-[10px] uppercase tracking-[0.15em] text-[var(--muted)] text-right justify-end pr-2 leading-tight">
             Slow capability<br />+ adoption
           </div>
-          <ScenarioCard id="status_quo" scenarioId={scenarioId} setScenarioId={setScenarioId} accent="#7a7e8b" />
-          <ScenarioCard id="steady" scenarioId={scenarioId} setScenarioId={setScenarioId} accent="#5b7faf" />
+          <ScenarioCard id="status_quo" scenarioId={scenarioId} setScenarioId={setScenarioId} accent="#7a7e8b" region={region} />
+          <ScenarioCard id="steady" scenarioId={scenarioId} setScenarioId={setScenarioId} accent="#5b7faf" region={region} />
         </div>
       </Step>
 
@@ -623,14 +628,19 @@ function ScenarioCard({
   scenarioId,
   setScenarioId,
   accent,
+  region,
 }: {
   id: keyof typeof SCENARIOS;
   scenarioId: keyof typeof SCENARIOS;
   setScenarioId: (id: keyof typeof SCENARIOS) => void;
   accent: string;
+  region: Region;
 }) {
   const s = SCENARIOS[id];
   const active = scenarioId === id;
+  const preview = sectors.map((sec) => computeSector(sec, s.knobs));
+  const previewAgg = regionalAggregate(preview, region);
+  const previewJobs = previewAgg.totalJobsImpacted;
   return (
     <button
       onClick={() => setScenarioId(id)}
@@ -643,8 +653,14 @@ function ScenarioCard({
         </p>
         <span className="inline-block w-2 h-2 rounded-full mt-1.5 flex-shrink-0" style={{ background: accent }} />
       </div>
-      <p className="text-[10px] uppercase tracking-wider text-[var(--muted)]">
+      <p className="text-[10px] uppercase tracking-wider text-[var(--muted)] mb-1.5">
         {s.tagline}
+      </p>
+      <p
+        className="text-base font-bold tabular-nums"
+        style={{ color: previewJobs >= 0 ? "#3a8a4f" : "#d4493a" }}
+      >
+        {formatJobs(previewJobs, true)} jobs
       </p>
     </button>
   );

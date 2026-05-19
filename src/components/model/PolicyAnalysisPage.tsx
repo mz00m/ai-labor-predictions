@@ -191,21 +191,35 @@ export default function PolicyAnalysisPage() {
 
       {/* Step 2 — Scenario */}
       <Step number={2} title="Pick a scenario">
+        <p className="text-sm text-[var(--muted)] mb-3">
+          Baseline (no policy) jobs Δ in {region.name} under each scenario, at {knobs.horizonYears}-year horizon.
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2.5">
-          {Object.entries(SCENARIOS).map(([id, s]) => (
-            <button
-              key={id}
-              onClick={() => setScenarioId(id as keyof typeof SCENARIOS)}
-              className={`text-left p-3.5 rounded-lg border-2 transition-colors hover:border-[var(--foreground)] ${
-                scenarioId === id ? "border-[var(--foreground)] bg-card" : "border-card bg-card"
-              }`}
-            >
-              <p className="text-[10px] uppercase tracking-wider text-[var(--muted)] mb-1">
-                {s.tagline}
-              </p>
-              <p className="text-sm font-semibold text-[var(--foreground)]">{s.name}</p>
-            </button>
-          ))}
+          {Object.entries(SCENARIOS).map(([id, s]) => {
+            const preview = sectors.map((sec) => computeSector(sec, s.knobs));
+            const previewAgg = regionalAggregate(preview, region);
+            const previewJobs = previewAgg.totalJobsImpacted;
+            return (
+              <button
+                key={id}
+                onClick={() => setScenarioId(id as keyof typeof SCENARIOS)}
+                className={`text-left p-3.5 rounded-lg border-2 transition-colors hover:border-[var(--foreground)] ${
+                  scenarioId === id ? "border-[var(--foreground)] bg-card" : "border-card bg-card"
+                }`}
+              >
+                <p className="text-[10px] uppercase tracking-wider text-[var(--muted)] mb-1">
+                  {s.tagline}
+                </p>
+                <p className="text-sm font-semibold text-[var(--foreground)] mb-1.5">{s.name}</p>
+                <p
+                  className="text-base font-bold tabular-nums"
+                  style={{ color: previewJobs >= 0 ? "#3a8a4f" : "#d4493a" }}
+                >
+                  {formatJobs(previewJobs, true)} jobs
+                </p>
+              </button>
+            );
+          })}
         </div>
       </Step>
 
@@ -290,14 +304,19 @@ export default function PolicyAnalysisPage() {
           {/* With policy */}
           <ReportSection
             heading="With this policy in place"
-            subhead={`Counterfactual: ${region.name} under the same scenario, but with ${policy.name} active. Sector breakdown below shows where the policy moves jobs vs. the baseline above.`}
+            subhead={`Counterfactual: ${region.name} under the same scenario, but with ${policy.name} active. The "Net jobs Δ" row is the absolute outcome; the policy contribution row is how much of that the policy itself moved.`}
           >
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-5">
-              <BigStat label="Jobs lost" value={formatJobs(policyAggregate.jobsLost, true)} color="#d4493a" />
-              <BigStat label="Jobs added" value={formatJobs(policyAggregate.jobsAdded, true)} color="#3a8a4f" />
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-5">
+              <BigStat label="Jobs lost (with policy)" value={formatJobs(policyAggregate.jobsLost, true)} color="#d4493a" />
+              <BigStat label="Jobs added (with policy)" value={formatJobs(policyAggregate.jobsAdded, true)} color="#3a8a4f" />
               <BigStat
-                label={`Δ vs no policy`}
-                value={`${policyDelta >= 0 ? "+" : ""}${formatJobs(policyDelta)} jobs`}
+                label="Net jobs Δ (with policy)"
+                value={formatJobs(policyAggregate.totalJobsImpacted, true)}
+                color={policyAggregate.totalJobsImpacted < 0 ? "#d4493a" : "#3a8a4f"}
+              />
+              <BigStat
+                label="Policy contribution"
+                value={`${policyDelta >= 0 ? "+" : ""}${formatJobs(policyDelta)}`}
                 color={policyDelta > 1000 ? "#3a8a4f" : policyDelta < -1000 ? "#d4493a" : "#7a7e8b"}
               />
             </div>
@@ -547,20 +566,22 @@ export default function PolicyAnalysisPage() {
             )}
           </ReportSection>
 
-          {/* SECTION F — Trust: robustness band */}
+          {/* SECTION F — Trust: robustness band with confidence interpretation */}
           <ReportSection
-            heading="Robustness band"
-            subhead="What if our defaults are off by 50% on the high-impact knobs? Range of regional net jobs delta under pessimistic and optimistic perturbations of capability, elasticity, productivity uplift, trust, and regulatory schema."
+            heading="Confidence score"
+            subhead="What if our defaults are off by 50% on the high-impact knobs? Range of regional net jobs Δ under pessimistic and optimistic perturbations."
           >
+            <ConfidenceBanner robustness={robustness} regionName={region.name} />
             <RobustnessBar
               pessimistic={robustness.pessimistic}
               baseline={robustness.baseline}
               optimistic={robustness.optimistic}
             />
             <p className="text-xs text-[var(--muted)] mt-3 italic">
-              Perturbed: {robustness.perturbedKnobs.join(", ")}. The wider the band, the more
-              the recommendation hinges on our calibration. If pessimistic and optimistic land
-              on the same side (both growth or both decline), the directional finding is robust.
+              Perturbed: {robustness.perturbedKnobs.join(", ")}. The confidence rating above
+              treats <strong className="text-[var(--foreground)]">High</strong> = pessimistic
+              and optimistic both point the same direction;{" "}
+              <strong className="text-[var(--foreground)]">Low</strong> = they straddle zero.
             </p>
           </ReportSection>
 
@@ -688,6 +709,51 @@ function formatJobs(n: number, signed = false): string {
 // ────────────────────────────────────────────────────────────────────
 // Components
 // ────────────────────────────────────────────────────────────────────
+
+function ConfidenceBanner({
+  robustness,
+  regionName,
+}: {
+  robustness: ReturnType<typeof computeRobustnessBand>;
+  regionName: string;
+}) {
+  const allPositive = robustness.pessimistic > 500 && robustness.baseline > 500 && robustness.optimistic > 500;
+  const allNegative = robustness.pessimistic < -500 && robustness.baseline < -500 && robustness.optimistic < -500;
+  const straddles = Math.sign(robustness.pessimistic) !== Math.sign(robustness.optimistic);
+
+  let label: string;
+  let color: string;
+  let interpretation: string;
+
+  if (allPositive) {
+    label = "High confidence — growth holds";
+    color = "#3a8a4f";
+    interpretation = `Even under pessimistic assumptions, ${regionName} still gains ${formatJobs(robustness.pessimistic, true)} jobs. The directional finding is robust.`;
+  } else if (allNegative) {
+    label = "High confidence — decline holds";
+    color = "#d4493a";
+    interpretation = `Even under optimistic assumptions, ${regionName} still loses ${formatJobs(Math.abs(robustness.optimistic))} jobs. The directional finding is robust.`;
+  } else if (straddles) {
+    label = "Low confidence — outcome could flip";
+    color = "#a36e1e";
+    interpretation = `Pessimistic ${formatJobs(robustness.pessimistic, true)} jobs vs. optimistic ${formatJobs(robustness.optimistic, true)} jobs — the assumptions you make about capability, elasticity, and productivity drive whether the policy helps or hurts.`;
+  } else {
+    label = "Medium confidence — magnitude uncertain";
+    color = "#7a7e8b";
+    interpretation = `Direction is consistent but magnitude swings between ${formatJobs(robustness.pessimistic, true)} (pessimistic) and ${formatJobs(robustness.optimistic, true)} (optimistic). Plan for the floor; budget for the spread.`;
+  }
+
+  return (
+    <div className="rounded-lg p-4 mb-4 border-l-4" style={{ borderColor: color, background: `${color}10` }}>
+      <p className="text-xs uppercase tracking-[0.15em] font-bold mb-1" style={{ color }}>
+        {label}
+      </p>
+      <p className="text-sm text-[var(--foreground)] leading-[1.55]">
+        {interpretation}
+      </p>
+    </div>
+  );
+}
 
 function VerdictBanner({
   policy,
