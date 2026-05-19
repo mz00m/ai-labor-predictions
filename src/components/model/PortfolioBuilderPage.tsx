@@ -15,11 +15,12 @@ import {
   regionalAggregate,
   computeSector,
   scalePolicy,
+  generateStateWioaPolicy,
 } from "@/lib/composite-model";
 
 const sectors = btosData.sectors as Sector[];
 const regions = regionsData.regions as Region[];
-const policies = policiesData.policies as ModelPolicy[];
+const staticCatalog = policiesData.policies as ModelPolicy[];
 
 const SCENARIOS: Record<string, { name: string; tagline: string; knobs: Knobs }> = {
   status_quo: {
@@ -93,9 +94,15 @@ export default function PortfolioBuilderPage() {
   const region = regions.find((r) => r.id === regionId)!;
   const knobs = SCENARIOS[scenarioId].knobs;
 
+  // Catalog = static policies + dynamic state WIOA plan for selected region
+  const fullCatalog = useMemo<ModelPolicy[]>(
+    () => [...staticCatalog, generateStateWioaPolicy(region)],
+    [region]
+  );
+
   const selectedPolicies = useMemo(
-    () => policies.filter((p) => (allocations[p.id] ?? 0) > 0.05),
-    [allocations]
+    () => fullCatalog.filter((p) => (allocations[p.id] ?? 0) > 0.05),
+    [allocations, fullCatalog]
   );
 
   const totalAllocated = useMemo(
@@ -185,7 +192,8 @@ export default function PortfolioBuilderPage() {
           Stack as many or as few as you want.
         </p>
         <p className="text-sm text-[var(--muted)] leading-[1.6] italic">
-          14 policies in the catalog, drawn from the{" "}
+          13 standard policies + the WIOA state plan for your selected
+          region. Catalog drawn from the{" "}
           <a
             href="https://windfalltrust.org/policy-atlas/labor-market-adaptation"
             target="_blank"
@@ -257,7 +265,7 @@ export default function PortfolioBuilderPage() {
       </Step>
 
       {/* Step 3 — Allocate to policies */}
-      <Step number={3} title={`Allocate funding across the catalog (${policies.length} policies)`}>
+      <Step number={3} title={`Allocate funding across the catalog (${fullCatalog.length} policies)`}>
         <div className="mb-3 flex items-baseline justify-between flex-wrap gap-2">
           <p className="text-sm text-[var(--muted)]">
             Move the slider for each policy you want to fund. Set to $0 to exclude. Each policy has a &ldquo;typical full funding&rdquo; cost; the model scales effects linearly down to 25% of that cost.
@@ -277,7 +285,7 @@ export default function PortfolioBuilderPage() {
         </div>
 
         <div className="space-y-2">
-          {policies.map((policy) => {
+          {fullCatalog.map((policy) => {
             const alloc = allocations[policy.id] ?? 0;
             const policyResult = perPolicyImpacts.find((p) => p.policy.id === policy.id);
             return (

@@ -14,11 +14,12 @@ import {
   optimizeBudgetPortfolio,
   computeSector,
   regionalAggregate,
+  generateStateWioaPolicy,
 } from "@/lib/composite-model";
 
 const sectors = btosData.sectors as Sector[];
 const regions = regionsData.regions as Region[];
-const policies = policiesData.policies as ModelPolicy[];
+const staticCatalog = policiesData.policies as ModelPolicy[];
 
 const SCENARIOS: Record<string, { name: string; tagline: string; knobs: Knobs }> = {
   status_quo: {
@@ -95,19 +96,25 @@ export default function BudgetPlannerPage() {
   const region = regions.find((r) => r.id === regionId)!;
   const knobs = SCENARIOS[scenarioId].knobs;
 
+  // Catalog = static policies + dynamic state WIOA plan for selected region
+  const fullCatalog = useMemo<ModelPolicy[]>(
+    () => [...staticCatalog, generateStateWioaPolicy(region)],
+    [region]
+  );
+
   const recommendation = useMemo(
-    () => optimizeBudgetPortfolio(sectors, knobs, region, policies, budgetMillions),
-    [knobs, region, budgetMillions]
+    () => optimizeBudgetPortfolio(sectors, knobs, region, fullCatalog, budgetMillions),
+    [knobs, region, budgetMillions, fullCatalog]
   );
 
   // Sensitivity: half-budget and double-budget comparisons
   const halfBudgetRec = useMemo(
-    () => optimizeBudgetPortfolio(sectors, knobs, region, policies, budgetMillions * 0.5),
-    [knobs, region, budgetMillions]
+    () => optimizeBudgetPortfolio(sectors, knobs, region, fullCatalog, budgetMillions * 0.5),
+    [knobs, region, budgetMillions, fullCatalog]
   );
   const doubleBudgetRec = useMemo(
-    () => optimizeBudgetPortfolio(sectors, knobs, region, policies, budgetMillions * 2),
-    [knobs, region, budgetMillions]
+    () => optimizeBudgetPortfolio(sectors, knobs, region, fullCatalog, budgetMillions * 2),
+    [knobs, region, budgetMillions, fullCatalog]
   );
 
   return (

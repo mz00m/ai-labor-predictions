@@ -775,6 +775,74 @@ export function findSensitivityFlip(
 // covering as many of the 4 framework categories as possible.
 // ────────────────────────────────────────────────────────────────────
 
+// ────────────────────────────────────────────────────────────────────
+// DYNAMIC STATE WIOA PLAN
+// Generated per-region rather than hardcoded, so the catalog adapts
+// to whichever state the user picks.
+// ────────────────────────────────────────────────────────────────────
+
+const STATE_NAMES: Record<string, string> = {
+  AL: "Alabama", AK: "Alaska", AZ: "Arizona", AR: "Arkansas", CA: "California",
+  CO: "Colorado", CT: "Connecticut", DE: "Delaware", FL: "Florida", GA: "Georgia",
+  HI: "Hawaii", ID: "Idaho", IL: "Illinois", IN: "Indiana", IA: "Iowa",
+  KS: "Kansas", KY: "Kentucky", LA: "Louisiana", ME: "Maine", MD: "Maryland",
+  MA: "Massachusetts", MI: "Michigan", MN: "Minnesota", MS: "Mississippi", MO: "Missouri",
+  MT: "Montana", NE: "Nebraska", NV: "Nevada", NH: "New Hampshire", NJ: "New Jersey",
+  NM: "New Mexico", NY: "New York", NC: "North Carolina", ND: "North Dakota", OH: "Ohio",
+  OK: "Oklahoma", OR: "Oregon", PA: "Pennsylvania", RI: "Rhode Island", SC: "South Carolina",
+  SD: "South Dakota", TN: "Tennessee", TX: "Texas", UT: "Utah", VT: "Vermont",
+  VA: "Virginia", WA: "Washington", WV: "West Virginia", WI: "Wisconsin", WY: "Wyoming",
+  DC: "District of Columbia",
+};
+
+/**
+ * Synthesize a state WIOA Title I policy entry from the selected region.
+ * Cost scales with region employment. URL deep-links to the wioaplans.dol.gov
+ * search filter for the state.
+ */
+export function generateStateWioaPolicy(region: Region): ModelPolicy {
+  const stateName = STATE_NAMES[region.state] ?? region.state;
+  // Rough estimate: state WIOA Title I formula ≈ $0.075 per worker per year
+  // × 4-year plan cycle. Rounded to nearest $5M.
+  const cost = Math.max(20, Math.round((region.totalEmploymentK * 0.075) / 5) * 5);
+
+  return {
+    id: `state-wioa-${region.state.toLowerCase()}`,
+    name: `${stateName} WIOA State Plan`,
+    category: "State Workforce System Plan",
+    tagline: `Federal WIOA Title I workforce system for ${stateName}: career pathways, apprenticeship, Rapid Response, youth services, employment services`,
+    description: `${stateName}'s state-level Workforce Innovation and Opportunity Act Title I plan. Combines career pathways, registered apprenticeships, Rapid Response services for layoffs and plant closings, Trade Adjustment Assistance, Individual Training Accounts, pre-employment transition services, and Wagner-Peyser employment services. Each state plan runs in 4-year cycles approved by USDOL. The displayed cost is the full state Title I budget; the displayed regional impact is the share attributable to ${region.name}'s sector mix (other regions in the state benefit too but aren't shown here).`,
+    typicalCostMillions: cost,
+    durationYears: 4,
+    targetSectors: ["62", "31-33", "23", "61"],
+    evidence: `WIOA Title I formula funding for ${stateName} is approximately $${cost / 4}M/year (4-year cycle ≈ $${cost}M total). National WIOA Adult/DW outcome studies show modest but real wage and re-employment gains; outcomes vary widely by local workforce board and program quality.`,
+    evidenceUrl: `https://wioaplans.dol.gov/state-plans?state=${region.state}`,
+    addresses: ["friction", "adoption"],
+    workforceImpacts: [
+      `Funds career pathways and registered apprenticeships in ${stateName}'s in-demand sectors`,
+      "Rapid Response services when major employers announce layoffs — direct outreach, retraining vouchers, job-search support",
+      "Trade Adjustment Assistance for workers displaced by trade and (increasingly) AI-driven offshoring",
+      "Youth services bridge school-to-work gap for disadvantaged populations",
+      "Wagner-Peyser employment services and Individual Training Accounts available to any unemployed worker",
+    ],
+    targetPopulations: [
+      "Dislocated workers",
+      "Youth (in-school and out-of-school)",
+      "Adult workers",
+      "Veterans",
+      "Individuals with disabilities",
+      "Low-income workers",
+    ],
+    sectorOverrides: {
+      "62": { frictionDrag: -0.06, complementarity: 0.03 },
+      "31-33": { frictionDrag: -0.05, complementarity: 0.04 },
+      "23": { frictionDrag: -0.04, complementarity: 0.02 },
+      "61": { frictionDrag: -0.03 },
+    },
+    knobShifts: { trustMultiplier: 1.05 },
+  };
+}
+
 /** Scale a policy down to a fraction of full funding (linear). */
 export function scalePolicy(policy: ModelPolicy, scale: number): ModelPolicy {
   const s = Math.max(0, Math.min(1, scale));

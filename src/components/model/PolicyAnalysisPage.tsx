@@ -19,11 +19,12 @@ import {
   ModelPolicy,
   KNOB_META,
   ARCHETYPE_META,
+  generateStateWioaPolicy,
 } from "@/lib/composite-model";
 
 const sectors = btosData.sectors as Sector[];
 const regions = regionsData.regions as Region[];
-const policies = policiesData.policies as ModelPolicy[];
+const staticCatalog = policiesData.policies as ModelPolicy[];
 
 // Scenario presets — borrowed from /model with consistent definitions
 const SCENARIOS: Record<string, { name: string; tagline: string; knobs: Knobs }> = {
@@ -90,7 +91,12 @@ export default function PolicyAnalysisPage() {
 
   const region = regions.find((r) => r.id === regionId)!;
   const knobs = SCENARIOS[scenarioId].knobs;
-  const policy = policyId ? policies.find((p) => p.id === policyId) ?? null : null;
+  // Catalog = static policies + dynamically-generated state WIOA plan for selected region
+  const fullCatalog = useMemo<ModelPolicy[]>(
+    () => [...staticCatalog, generateStateWioaPolicy(region)],
+    [region]
+  );
+  const policy = policyId ? fullCatalog.find((p) => p.id === policyId) ?? null : null;
 
   // Baseline (no policy)
   const baseImpacts = useMemo(
@@ -226,7 +232,7 @@ export default function PolicyAnalysisPage() {
       {/* Step 3 — Policy */}
       <Step number={3} title="Pick a policy to review">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-          {policies.map((p) => {
+          {fullCatalog.map((p) => {
             const selected = policyId === p.id;
             return (
               <button
@@ -498,7 +504,7 @@ export default function PolicyAnalysisPage() {
                     Consider a parallel intervention.
                   </p>
                   <p className="text-xs text-[var(--muted)] mt-2 italic">
-                    Suggested adjacent: {suggestedAdjacent(dominantRisk.category, policies, policy.id).map((p) => p.name).join(", ") || "—"}
+                    Suggested adjacent: {suggestedAdjacent(dominantRisk.category, fullCatalog, policy.id).map((p) => p.name).join(", ") || "—"}
                   </p>
                 </div>
               ) : (
