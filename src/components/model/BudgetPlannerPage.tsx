@@ -21,7 +21,7 @@ import {
 
 const sectors = btosData.sectors as Sector[];
 const regions = regionsData.regions as Region[];
-const staticCatalog = policiesData.policies as ModelPolicy[];
+const staticCatalog = policiesData.policies as unknown as ModelPolicy[];
 
 const SCENARIOS: Record<string, { name: string; tagline: string; knobs: Knobs }> = {
   status_quo: {

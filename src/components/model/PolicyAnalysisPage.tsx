@@ -29,7 +29,7 @@ import {
 
 const sectors = btosData.sectors as Sector[];
 const regions = regionsData.regions as Region[];
-const staticCatalog = policiesData.policies as ModelPolicy[];
+const staticCatalog = policiesData.policies as unknown as ModelPolicy[];
 
 // Scenario presets — borrowed from /model with consistent definitions
 const SCENARIOS: Record<string, { name: string; tagline: string; knobs: Knobs }> = {

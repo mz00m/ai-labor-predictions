@@ -19,8 +19,9 @@
       ],
       "sectorOverrides": {
         "62": {
-          "frictionDrag": -0.1,
-          "trustCoef": 0.05
+          "frictionDrag": -0.25,
+          "trustCoef": 0.12,
+          "complementarity": 0.04
         }
       },
       "knobShifts": {},
@@ -51,10 +52,21 @@
         "adoption",
         "friction"
       ],
-      "sectorOverrides": {},
+      "sectorOverrides": {
+        "54": {
+          "trustCoef": 0.08
+        },
+        "52": {
+          "trustCoef": 0.08
+        },
+        "56": {
+          "trustCoef": 0.1,
+          "complementarity": 0.06
+        }
+      },
       "knobShifts": {
-        "trustMultiplier": 1.15,
-        "genZAdoptionBoost": 1.1
+        "trustMultiplier": 1.2,
+        "genZAdoptionBoost": 1.15
       },
       "workforceImpacts": [
         "Equips incumbent office workers across all sectors with a portable AI-fluency credential",
@@ -86,8 +98,9 @@
       ],
       "sectorOverrides": {
         "31-33": {
-          "frictionDrag": -0.08,
-          "complementarity": 0.08
+          "frictionDrag": -0.2,
+          "complementarity": 0.12,
+          "trustCoef": 0.08
         }
       },
       "knobShifts": {},
@@ -117,7 +130,28 @@
       "addresses": [
         "friction"
       ],
-      "sectorOverrides": {},
+      "sectorOverrides": {
+        "56": {
+          "frictionDrag": -0.18,
+          "complementarity": 0.05
+        },
+        "31-33": {
+          "frictionDrag": -0.15,
+          "complementarity": 0.04
+        },
+        "44-45": {
+          "frictionDrag": -0.15,
+          "complementarity": 0.04
+        },
+        "48-49": {
+          "frictionDrag": -0.15,
+          "complementarity": 0.04
+        },
+        "72": {
+          "frictionDrag": -0.12,
+          "complementarity": 0.04
+        }
+      },
       "knobShifts": {},
       "workforceImpacts": [
         "Replaces 50% of wage loss for up to 24 months when displaced workers re-employ at lower pay",
@@ -150,17 +184,17 @@
       ],
       "sectorOverrides": {
         "62": {
-          "regSchemaDrag": -0.1
+          "regSchemaDrag": -0.2
         },
         "52": {
-          "regSchemaDrag": -0.08
+          "regSchemaDrag": -0.18
         },
         "23": {
-          "regSchemaDrag": -0.05
+          "regSchemaDrag": -0.12
         }
       },
       "knobShifts": {
-        "regSchemaMultiplier": 0.85
+        "regSchemaMultiplier": 0.75
       },
       "workforceImpacts": [
         "Removes redundant credential barriers in healthcare, finance, and construction trades",
@@ -188,11 +222,27 @@
         "adoption",
         "friction"
       ],
-      "sectorOverrides": {},
+      "sectorOverrides": {
+        "44-45": {
+          "trustCoef": 0.08,
+          "securityOverhead": -0.1
+        },
+        "72": {
+          "trustCoef": 0.1,
+          "securityOverhead": -0.1
+        },
+        "81": {
+          "trustCoef": 0.08,
+          "securityOverhead": -0.1
+        },
+        "23": {
+          "trustCoef": 0.06
+        }
+      },
       "knobShifts": {
-        "trustMultiplier": 1.1,
-        "securityOverheadMultiplier": 0.85,
-        "computeCostDeclineRate": 0.05
+        "trustMultiplier": 1.15,
+        "securityOverheadMultiplier": 0.75,
+        "computeCostDeclineRate": 0.08
       },
       "workforceImpacts": [
         "Lets SMBs adopt AI without absorbing security review and infrastructure costs that only large firms can afford",
@@ -231,9 +281,26 @@
         "SMB workers",
         "Workers in rapidly-adopting sectors"
       ],
-      "sectorOverrides": {},
+      "sectorOverrides": {
+        "31-33": {
+          "frictionDrag": -0.12,
+          "complementarity": 0.05
+        },
+        "54": {
+          "frictionDrag": -0.1,
+          "complementarity": 0.06
+        },
+        "52": {
+          "frictionDrag": -0.1,
+          "complementarity": 0.05
+        },
+        "56": {
+          "frictionDrag": -0.1,
+          "complementarity": 0.04
+        }
+      },
       "knobShifts": {
-        "trustMultiplier": 1.05
+        "trustMultiplier": 1.1
       }
     },
     {
@@ -260,7 +327,28 @@
         "Long-term unemployed",
         "Displaced workers in regions with weak private labor demand"
       ],
-      "sectorOverrides": {},
+      "sectorOverrides": {
+        "56": {
+          "frictionDrag": -0.25,
+          "complementarity": 0.1
+        },
+        "44-45": {
+          "frictionDrag": -0.18,
+          "complementarity": 0.06
+        },
+        "72": {
+          "frictionDrag": -0.18,
+          "complementarity": 0.06
+        },
+        "48-49": {
+          "frictionDrag": -0.15,
+          "complementarity": 0.06
+        },
+        "81": {
+          "frictionDrag": -0.12,
+          "complementarity": 0.05
+        }
+      },
       "knobShifts": {}
     },
     {
@@ -288,9 +376,25 @@
         "Knowledge workers facing AI augmentation",
         "Office-based sectors"
       ],
-      "sectorOverrides": {},
+      "sectorOverrides": {
+        "54": {
+          "complementarity": 0.06
+        },
+        "51": {
+          "complementarity": 0.06
+        },
+        "52": {
+          "complementarity": 0.05
+        },
+        "55": {
+          "complementarity": 0.05
+        },
+        "61": {
+          "complementarity": 0.04
+        }
+      },
       "knobShifts": {
-        "trustMultiplier": 0.95
+        "trustMultiplier": 1.05
       }
     },
     {
@@ -324,16 +428,19 @@
       ],
       "sectorOverrides": {
         "62": {
-          "trustCoef": -0.03,
-          "frictionDrag": 0.05
+          "trustCoef": -0.04,
+          "frictionDrag": 0.06,
+          "complementarity": 0.08
         },
         "61": {
-          "trustCoef": -0.03,
-          "frictionDrag": 0.05
+          "trustCoef": -0.04,
+          "frictionDrag": 0.06,
+          "complementarity": 0.08
         },
         "51": {
-          "trustCoef": -0.03,
-          "frictionDrag": 0.05
+          "trustCoef": -0.04,
+          "frictionDrag": 0.04,
+          "complementarity": 0.1
         }
       },
       "knobShifts": {}
@@ -363,9 +470,22 @@
         "Workers planning career changes",
         "Researchers and policymakers"
       ],
-      "sectorOverrides": {},
+      "sectorOverrides": {
+        "62": {
+          "frictionDrag": -0.05
+        },
+        "31-33": {
+          "frictionDrag": -0.05
+        },
+        "23": {
+          "frictionDrag": -0.05
+        },
+        "61": {
+          "frictionDrag": -0.04
+        }
+      },
       "knobShifts": {
-        "trustMultiplier": 1.05
+        "trustMultiplier": 1.08
       }
     },
     {
@@ -393,9 +513,34 @@
         "Gig and contract workers",
         "Mid-career workers"
       ],
-      "sectorOverrides": {},
+      "sectorOverrides": {
+        "62": {
+          "frictionDrag": -0.1,
+          "complementarity": 0.05
+        },
+        "31-33": {
+          "frictionDrag": -0.1,
+          "complementarity": 0.05
+        },
+        "54": {
+          "frictionDrag": -0.1,
+          "complementarity": 0.06
+        },
+        "56": {
+          "frictionDrag": -0.1,
+          "complementarity": 0.05
+        },
+        "61": {
+          "frictionDrag": -0.08,
+          "complementarity": 0.05
+        },
+        "52": {
+          "frictionDrag": -0.08,
+          "complementarity": 0.05
+        }
+      },
       "knobShifts": {
-        "trustMultiplier": 1.05
+        "trustMultiplier": 1.1
       }
     },
     {
@@ -423,8 +568,27 @@
         "Older workers facing limited re-employment",
         "Mid-career workers seeking autonomy"
       ],
-      "sectorOverrides": {},
-      "knobShifts": {}
+      "sectorOverrides": {
+        "44-45": {
+          "frictionDrag": -0.1,
+          "complementarity": 0.04
+        },
+        "72": {
+          "frictionDrag": -0.1,
+          "complementarity": 0.04
+        },
+        "81": {
+          "frictionDrag": -0.1,
+          "complementarity": 0.04
+        },
+        "54": {
+          "frictionDrag": -0.08,
+          "complementarity": 0.05
+        }
+      },
+      "knobShifts": {
+        "trustMultiplier": 1.08
+      }
     }
   ]
 }
