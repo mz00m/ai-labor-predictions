@@ -523,6 +523,299 @@ export function sortFactorsByImpact(factors: Factor[]): Factor[] {
 }
 
 // ────────────────────────────────────────────────────────────────────
+// POLICY DIAGNOSTIC — types + engine
+// ────────────────────────────────────────────────────────────────────
+
+export interface Region {
+  id: string;
+  name: string;
+  state: string;
+  totalEmploymentK: number;
+  concentrationNote: string;
+  sectorShares: Record<string, number>; // naics → share of regional employment (0-1)
+}
+
+export interface ModelPolicy {
+  id: string;
+  name: string;
+  category: string;
+  tagline: string;
+  description: string;
+  typicalCostMillions: number;
+  durationYears: number;
+  targetSectors: string[] | null; // null = applies to all
+  evidence: string;
+  evidenceUrl: string;
+  addresses: Array<"adoption" | "capability" | "demand" | "friction">;
+  sectorOverrides: Record<string, Partial<SectorParams>>; // additive deltas to params
+  knobShifts: Partial<Knobs>; // multiplicative for ×-suffix knobs, additive for rates
+}
+
+/** Apply a policy to a sectors array + knobs, returning modified versions. */
+export function applyPolicy(
+  sectors: Sector[],
+  baseKnobs: Knobs,
+  policy: ModelPolicy
+): { sectors: Sector[]; knobs: Knobs } {
+  const modifiedSectors = sectors.map((s) => {
+    const override = policy.sectorOverrides[s.naics];
+    if (!override) return s;
+    // sector overrides are additive deltas to params
+    const adjustedParams = { ...s.params };
+    for (const [k, delta] of Object.entries(override)) {
+      const key = k as keyof SectorParams;
+      const cur = adjustedParams[key];
+      if (typeof cur === "number" && typeof delta === "number") {
+        adjustedParams[key] = Math.max(0, Math.min(1, cur + delta));
+      }
+    }
+    return { ...s, params: adjustedParams };
+  });
+
+  // Knob shifts: for multiplicative knobs (×-suffix), policy values replace the base.
+  // For rate knobs (computeCostDeclineRate), they're additive deltas.
+  const modifiedKnobs: Knobs = { ...baseKnobs };
+  for (const [k, v] of Object.entries(policy.knobShifts)) {
+    const key = k as keyof Knobs;
+    if (key === "computeCostDeclineRate") {
+      modifiedKnobs[key] = (baseKnobs[key] as number) + (v as number);
+    } else if (typeof v === "number") {
+      modifiedKnobs[key] = v as never;
+    }
+  }
+  return { sectors: modifiedSectors, knobs: modifiedKnobs };
+}
+
+export interface RegionalAggregate {
+  regionId: string;
+  regionName: string;
+  totalEmploymentK: number;
+  totalJobsImpacted: number;
+  jobsAdded: number;
+  jobsLost: number;
+  bySector: Array<{
+    naics: string;
+    name: string;
+    regionalEmploymentK: number;
+    regionalJobsImpacted: number;
+    employmentDeltaPct: number;
+    archetype: Archetype;
+  }>;
+}
+
+/** Aggregate sector-level impacts into a regional view weighted by regional employment shares. */
+export function regionalAggregate(
+  impacts: SectorImpact[],
+  region: Region
+): RegionalAggregate {
+  let totalJobs = 0;
+  let jobsAdded = 0;
+  let jobsLost = 0;
+  const bySector = impacts.map((imp) => {
+    const share = region.sectorShares[imp.naics] ?? 0;
+    const regionalEmpK = region.totalEmploymentK * share;
+    const regionalJobs = (imp.employmentDelta / 100) * regionalEmpK * 1000;
+    totalJobs += regionalJobs;
+    if (regionalJobs > 0) jobsAdded += regionalJobs;
+    else jobsLost += regionalJobs;
+    return {
+      naics: imp.naics,
+      name: imp.name,
+      regionalEmploymentK: regionalEmpK,
+      regionalJobsImpacted: regionalJobs,
+      employmentDeltaPct: imp.employmentDelta,
+      archetype: imp.archetype,
+    };
+  });
+  return {
+    regionId: region.id,
+    regionName: region.name,
+    totalEmploymentK: region.totalEmploymentK,
+    totalJobsImpacted: totalJobs,
+    jobsAdded,
+    jobsLost,
+    bySector,
+  };
+}
+
+// ────────────────────────────────────────────────────────────────────
+// TRUST MECHANISMS
+// ────────────────────────────────────────────────────────────────────
+
+/** The sector contributing the largest regional jobs loss, with attribution to which params drove it. */
+export interface DominantRisk {
+  sector: {
+    naics: string;
+    name: string;
+    regionalJobsImpacted: number;
+    regionalEmploymentK: number;
+  };
+  driverNarrative: string;
+  drivers: Array<{ paramOrKnob: string; value: number; role: string }>;
+  category: "adoption" | "capability" | "demand" | "friction"; // the framework category most responsible
+}
+
+export function findDominantRisk(
+  agg: RegionalAggregate,
+  sectorsBySource: Sector[]
+): DominantRisk | null {
+  const losses = agg.bySector.filter((s) => s.regionalJobsImpacted < 0);
+  if (losses.length === 0) return null;
+  losses.sort((a, b) => a.regionalJobsImpacted - b.regionalJobsImpacted); // most negative first
+  const worst = losses[0];
+  const src = sectorsBySource.find((s) => s.naics === worst.naics);
+  if (!src) return null;
+  const p = src.params;
+  // For displacement-driven sectors, ε < 1 + high exposure + low complementarity dominate
+  const drivers: DominantRisk["drivers"] = [];
+  if (p.elasticity < 0.7) drivers.push({ paramOrKnob: `ε (sector)`, value: p.elasticity, role: `Low Bessen ε means productivity gains cut jobs rather than grow them` });
+  if (p.complementarity < 0.5) drivers.push({ paramOrKnob: `Complementarity`, value: p.complementarity, role: `Low complementarity means AI substitutes for, rather than augments, workers` });
+  if (p.exposureShare > 0.5) drivers.push({ paramOrKnob: `Exposure share`, value: p.exposureShare, role: `High task exposure (${(p.exposureShare * 100).toFixed(0)}% of work)` });
+  if (p.frictionDrag < 0.4) drivers.push({ paramOrKnob: `Friction drag`, value: p.frictionDrag, role: `Low institutional friction allows fast displacement` });
+
+  const category: DominantRisk["category"] = p.elasticity < 0.7 ? "demand" : p.complementarity < 0.5 ? "demand" : p.exposureShare > 0.6 ? "capability" : "adoption";
+  const narrative = `${worst.name} accounts for ${Math.abs(worst.regionalJobsImpacted / 1000).toFixed(1)}K of the projected jobs decline. Driver: ${drivers.map((d) => d.paramOrKnob).join(" + ")}.`;
+
+  return {
+    sector: {
+      naics: worst.naics,
+      name: worst.name,
+      regionalJobsImpacted: worst.regionalJobsImpacted,
+      regionalEmploymentK: worst.regionalEmploymentK,
+    },
+    driverNarrative: narrative,
+    drivers,
+    category,
+  };
+}
+
+/** "What would change this": find the smallest knob movement that flips overall regional jobs from net-loss to net-gain (or vice versa). */
+export interface SensitivityFlip {
+  knob: keyof Knobs;
+  knobLabel: string;
+  currentValue: number;
+  flipValue: number;
+  baselineNetJobs: number;
+  flippedNetJobs: number;
+  feasible: boolean;
+}
+
+export function findSensitivityFlip(
+  sectors: Sector[],
+  knobs: Knobs,
+  region: Region,
+  policy?: ModelPolicy
+): SensitivityFlip[] {
+  const apply = (extraShifts: Partial<Knobs>): number => {
+    let activeSectors = sectors;
+    let activeKnobs = { ...knobs, ...extraShifts };
+    if (policy) {
+      const out = applyPolicy(sectors, activeKnobs, policy);
+      activeSectors = out.sectors;
+      activeKnobs = out.knobs;
+    }
+    const impacts = activeSectors.map((s) => computeSector(s, activeKnobs));
+    return regionalAggregate(impacts, region).totalJobsImpacted;
+  };
+
+  const baseline = apply({});
+  const flips: SensitivityFlip[] = [];
+
+  for (const meta of KNOB_META) {
+    if (meta.impact !== "high") continue; // only check high-impact knobs
+    const curVal = knobs[meta.knob];
+    const trySweep = (direction: 1 | -1): number | null => {
+      const steps = 12;
+      const range = direction === 1 ? meta.max - curVal : curVal - meta.min;
+      for (let i = 1; i <= steps; i++) {
+        const v = curVal + direction * (range * i) / steps;
+        if (v < meta.min || v > meta.max) continue;
+        const r = apply({ [meta.knob]: v } as Partial<Knobs>);
+        if ((baseline < 0 && r > 0) || (baseline > 0 && r < 0)) return v;
+      }
+      return null;
+    };
+    const upFlip = trySweep(1);
+    const downFlip = trySweep(-1);
+    const flipVal = upFlip !== null && (downFlip === null || Math.abs(upFlip - curVal) < Math.abs(downFlip - curVal))
+      ? upFlip
+      : downFlip;
+    if (flipVal !== null) {
+      flips.push({
+        knob: meta.knob,
+        knobLabel: meta.label,
+        currentValue: curVal,
+        flipValue: flipVal,
+        baselineNetJobs: baseline,
+        flippedNetJobs: apply({ [meta.knob]: flipVal } as Partial<Knobs>),
+        feasible: Math.abs(flipVal - curVal) / Math.max(0.01, Math.abs(curVal)) < 0.5,
+      });
+    }
+  }
+  // Sort by smallest required move
+  flips.sort((a, b) => Math.abs(a.flipValue - a.currentValue) - Math.abs(b.flipValue - b.currentValue));
+  return flips.slice(0, 3);
+}
+
+/** Robustness band: perturb high-impact knobs by ±50% and report resulting jobs range. */
+export interface RobustnessBand {
+  baseline: number;
+  pessimistic: number;
+  optimistic: number;
+  perturbedKnobs: string[];
+}
+
+export function computeRobustnessBand(
+  sectors: Sector[],
+  knobs: Knobs,
+  region: Region,
+  policy?: ModelPolicy
+): RobustnessBand {
+  const highKnobs = KNOB_META.filter((m) => m.impact === "high" && m.knob !== "horizonYears");
+  const perturbedKnobs = highKnobs.map((m) => m.label);
+
+  const apply = (knobMods: Partial<Knobs>): number => {
+    let activeSectors = sectors;
+    let activeKnobs = { ...knobs, ...knobMods };
+    if (policy) {
+      const out = applyPolicy(sectors, activeKnobs, policy);
+      activeSectors = out.sectors;
+      activeKnobs = out.knobs;
+    }
+    return regionalAggregate(
+      activeSectors.map((s) => computeSector(s, activeKnobs)),
+      region
+    ).totalJobsImpacted;
+  };
+
+  const baseline = apply({});
+
+  // Pessimistic: knobs that drive growth go to 50% of current; knobs that drive displacement go to 150%
+  // For simplicity: pessimistic = lower elasticity (more displacement), faster capability, lower trust, more friction
+  const pessimisticShifts: Partial<Knobs> = {
+    elasticityScale: clamp(0.5, 2.0, knobs.elasticityScale * 0.5),
+    capabilityDoublingMonths: clamp(4, 18, knobs.capabilityDoublingMonths * 0.5),
+    productivityUplift: clamp(0.1, 0.4, knobs.productivityUplift * 1.5),
+    trustMultiplier: clamp(0.5, 1.5, knobs.trustMultiplier * 0.5),
+    regSchemaMultiplier: clamp(0.5, 1.5, knobs.regSchemaMultiplier * 1.5),
+  };
+  const optimisticShifts: Partial<Knobs> = {
+    elasticityScale: clamp(0.5, 2.0, knobs.elasticityScale * 1.5),
+    capabilityDoublingMonths: clamp(4, 18, knobs.capabilityDoublingMonths * 1.5),
+    productivityUplift: clamp(0.1, 0.4, knobs.productivityUplift * 0.5),
+    trustMultiplier: clamp(0.5, 1.5, knobs.trustMultiplier * 1.5),
+    regSchemaMultiplier: clamp(0.5, 1.5, knobs.regSchemaMultiplier * 0.5),
+  };
+
+  return {
+    baseline,
+    pessimistic: apply(pessimisticShifts),
+    optimistic: apply(optimisticShifts),
+    perturbedKnobs,
+  };
+}
+
+// ────────────────────────────────────────────────────────────────────
 // KNOB_META — single source of truth for slider configuration + tier
 // ────────────────────────────────────────────────────────────────────
 

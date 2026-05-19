@@ -1,0 +1,110 @@
+{
+  "source": "BLS QCEW 2024 — approximate MSA sector shares",
+  "note": "v0.1 uses 8 reference MSAs with rounded sector employment shares. Phase 2 will load full BLS QCEW MSA tables.",
+  "regions": [
+    {
+      "id": "pittsburgh",
+      "name": "Pittsburgh, PA",
+      "state": "PA",
+      "totalEmploymentK": 1100,
+      "concentrationNote": "Healthcare-dominant (UPMC, AHN); legacy manufacturing base; education hub (Pitt, CMU).",
+      "sectorShares": {
+        "11": 0.005, "21": 0.010, "22": 0.005, "23": 0.050, "31-33": 0.085,
+        "42": 0.040, "44-45": 0.108, "48-49": 0.035, "51": 0.020, "52": 0.055,
+        "53": 0.015, "54": 0.095, "55": 0.015, "56": 0.060, "61": 0.075,
+        "62": 0.220, "71": 0.020, "72": 0.090, "81": 0.045
+      }
+    },
+    {
+      "id": "sf-bay",
+      "name": "San Francisco–Oakland, CA",
+      "state": "CA",
+      "totalEmploymentK": 2400,
+      "concentrationNote": "Tech-heavy (Information + Prof/Sci/Tech > 22% combined); high wage; biotech and finance secondary anchors.",
+      "sectorShares": {
+        "11": 0.002, "21": 0.001, "22": 0.005, "23": 0.050, "31-33": 0.050,
+        "42": 0.030, "44-45": 0.085, "48-49": 0.045, "51": 0.095, "52": 0.072,
+        "53": 0.020, "54": 0.155, "55": 0.020, "56": 0.065, "61": 0.060,
+        "62": 0.135, "71": 0.025, "72": 0.090, "81": 0.045
+      }
+    },
+    {
+      "id": "detroit",
+      "name": "Detroit–Warren, MI",
+      "state": "MI",
+      "totalEmploymentK": 2000,
+      "concentrationNote": "Auto manufacturing anchor (~13% of jobs); single-industry exposure risk; healthcare backbone (Henry Ford, Beaumont).",
+      "sectorShares": {
+        "11": 0.002, "21": 0.002, "22": 0.005, "23": 0.045, "31-33": 0.130,
+        "42": 0.045, "44-45": 0.108, "48-49": 0.045, "51": 0.018, "52": 0.045,
+        "53": 0.015, "54": 0.075, "55": 0.025, "56": 0.060, "61": 0.080,
+        "62": 0.160, "71": 0.018, "72": 0.090, "81": 0.040
+      }
+    },
+    {
+      "id": "houston",
+      "name": "Houston, TX",
+      "state": "TX",
+      "totalEmploymentK": 3300,
+      "concentrationNote": "Energy + petrochemical anchor (Mining ~4% — high); also Healthcare hub (Texas Medical Center).",
+      "sectorShares": {
+        "11": 0.005, "21": 0.040, "22": 0.005, "23": 0.075, "31-33": 0.075,
+        "42": 0.055, "44-45": 0.108, "48-49": 0.060, "51": 0.015, "52": 0.045,
+        "53": 0.020, "54": 0.092, "55": 0.020, "56": 0.062, "61": 0.060,
+        "62": 0.125, "71": 0.015, "72": 0.095, "81": 0.038
+      }
+    },
+    {
+      "id": "nyc",
+      "name": "New York–Newark, NY–NJ",
+      "state": "NY",
+      "totalEmploymentK": 9500,
+      "concentrationNote": "Diversified large metro; Finance + Prof/Sci/Tech anchors; large healthcare and education base.",
+      "sectorShares": {
+        "11": 0.001, "21": 0.001, "22": 0.005, "23": 0.045, "31-33": 0.040,
+        "42": 0.035, "44-45": 0.090, "48-49": 0.045, "51": 0.040, "52": 0.080,
+        "53": 0.025, "54": 0.118, "55": 0.018, "56": 0.062, "61": 0.080,
+        "62": 0.168, "71": 0.025, "72": 0.090, "81": 0.040
+      }
+    },
+    {
+      "id": "la",
+      "name": "Los Angeles–Long Beach, CA",
+      "state": "CA",
+      "totalEmploymentK": 5600,
+      "concentrationNote": "Diversified; entertainment + media (Information ~4%); manufacturing legacy; healthcare anchor.",
+      "sectorShares": {
+        "11": 0.003, "21": 0.002, "22": 0.005, "23": 0.050, "31-33": 0.072,
+        "42": 0.045, "44-45": 0.108, "48-49": 0.050, "51": 0.040, "52": 0.050,
+        "53": 0.018, "54": 0.082, "55": 0.018, "56": 0.075, "61": 0.080,
+        "62": 0.160, "71": 0.025, "72": 0.110, "81": 0.040
+      }
+    },
+    {
+      "id": "chicago",
+      "name": "Chicago–Naperville, IL",
+      "state": "IL",
+      "totalEmploymentK": 4400,
+      "concentrationNote": "Diversified; finance and trading (Finance/Insurance ~7%); manufacturing legacy; healthcare anchor.",
+      "sectorShares": {
+        "11": 0.002, "21": 0.002, "22": 0.005, "23": 0.045, "31-33": 0.080,
+        "42": 0.050, "44-45": 0.100, "48-49": 0.060, "51": 0.025, "52": 0.072,
+        "53": 0.018, "54": 0.100, "55": 0.020, "56": 0.068, "61": 0.070,
+        "62": 0.140, "71": 0.018, "72": 0.090, "81": 0.040
+      }
+    },
+    {
+      "id": "phoenix",
+      "name": "Phoenix–Mesa, AZ",
+      "state": "AZ",
+      "totalEmploymentK": 2300,
+      "concentrationNote": "Service-economy growth metro; healthcare anchor; construction-heavy; growing tech/manufacturing cluster.",
+      "sectorShares": {
+        "11": 0.003, "21": 0.005, "22": 0.005, "23": 0.072, "31-33": 0.062,
+        "42": 0.038, "44-45": 0.120, "48-49": 0.040, "51": 0.018, "52": 0.075,
+        "53": 0.020, "54": 0.088, "55": 0.018, "56": 0.080, "61": 0.060,
+        "62": 0.150, "71": 0.020, "72": 0.108, "81": 0.040
+      }
+    }
+  ]
+}

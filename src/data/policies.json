@@ -1,0 +1,112 @@
+{
+  "source": "Hand-curated catalog of workforce policy archetypes with research-anchored dimension-shift signatures.",
+  "policies": [
+    {
+      "id": "sector-training-healthcare",
+      "name": "Sector-Based Training (Healthcare)",
+      "category": "Workforce Training",
+      "tagline": "Project QUEST–style sectoral training pipeline targeting healthcare occupations",
+      "description": "Multi-year cohort training programs that prepare workers for specific healthcare roles (nursing assistants, medical technicians, allied health) with wraparound services, employer partnerships, and guaranteed placement.",
+      "typicalCostMillions": 4,
+      "durationYears": 3,
+      "targetSectors": ["62"],
+      "evidence": "Project QUEST (San Antonio) RCT: +30% earnings 9 years post-program. Targets adaptability — measured to nearly eliminate the displaced-worker scarring effect in healthcare.",
+      "evidenceUrl": "https://www.mdrc.org/work/publications/project-quest",
+      "addresses": ["friction"],
+      "sectorOverrides": {
+        "62": { "frictionDrag": -0.10, "trustCoef": 0.05 }
+      },
+      "knobShifts": {}
+    },
+    {
+      "id": "ai-literacy-statewide",
+      "name": "AI Literacy / GenAI Fluency (Statewide)",
+      "category": "Workforce Training",
+      "tagline": "Universal community-college + library-based AI tool training, 6-week certificate",
+      "description": "Statewide rollout of a 6-week certificate course on practical generative AI usage in office settings — prompting, verification, workflow integration. Offered through community college network and public libraries.",
+      "typicalCostMillions": 12,
+      "durationYears": 2,
+      "targetSectors": null,
+      "evidence": "Brynjolfsson, Li, Raymond 2025 (5,172 customer-support agents): 15% productivity gain from AI tools, 30% for least-experienced. Effect concentrated in workers who actually use the tools — training closes the usage gap.",
+      "evidenceUrl": "https://academic.oup.com/qje/article/140/2/889/7990658",
+      "addresses": ["adoption", "friction"],
+      "sectorOverrides": {},
+      "knobShifts": {
+        "trustMultiplier": 1.15,
+        "genZAdoptionBoost": 1.10
+      }
+    },
+    {
+      "id": "apprenticeship-manufacturing",
+      "name": "Registered Apprenticeship (Manufacturing)",
+      "category": "Workforce Training",
+      "tagline": "Earn-and-learn programs partnered with regional employers in advanced manufacturing",
+      "description": "Federal/state registered apprenticeships placing workers with manufacturers; 18–36 months of paid on-the-job training plus classroom hours. Targets reskilling for AI-augmented manufacturing roles.",
+      "typicalCostMillions": 6,
+      "durationYears": 4,
+      "targetSectors": ["31-33"],
+      "evidence": "USDOL apprenticeship outcome studies: 91% retention, +$300K lifetime earnings vs. non-apprentices. Boosts adaptability for workers transitioning into AI-augmented production roles.",
+      "evidenceUrl": "https://www.apprenticeship.gov/about-us/research-data",
+      "addresses": ["friction"],
+      "sectorOverrides": {
+        "31-33": { "frictionDrag": -0.08, "complementarity": 0.08 }
+      },
+      "knobShifts": {}
+    },
+    {
+      "id": "wage-insurance",
+      "name": "Wage Insurance (Statewide)",
+      "category": "Income Support",
+      "tagline": "Displaced workers receive 50% of wage loss for up to 24 months when re-employed at lower pay",
+      "description": "Modeled on Trade Adjustment Assistance wage insurance. Reduces the personal cost of taking a lower-wage adjacent role, softening the transition for displaced workers and increasing re-employment speed.",
+      "typicalCostMillions": 25,
+      "durationYears": 5,
+      "targetSectors": null,
+      "evidence": "Hyman 2018 (TAA wage insurance): increased re-employment probability by 10pp for displaced workers; modest wage gains; sharp reduction in long-term unemployment.",
+      "evidenceUrl": "https://www.nber.org/papers/w24871",
+      "addresses": ["friction"],
+      "sectorOverrides": {},
+      "knobShifts": {}
+    },
+    {
+      "id": "licensing-reform",
+      "name": "Occupational Licensing Reform",
+      "category": "Regulatory",
+      "tagline": "Streamline state-level licensing barriers in healthcare, finance, and construction",
+      "description": "Targeted reform of state occupational licensing — reciprocal recognition across states, scope-of-practice expansion (e.g., nurse practitioners), and removal of redundant credentials. Lowers the regulatory drag on adoption AND on worker mobility.",
+      "typicalCostMillions": 2,
+      "durationYears": 2,
+      "targetSectors": ["62", "52", "23"],
+      "evidence": "Kleiner-Krueger studies on licensing: state licensing reduces interstate worker mobility by ~7% and slows technology diffusion in regulated sectors. Reform yields measurable adoption acceleration.",
+      "evidenceUrl": "https://www.nber.org/papers/w22810",
+      "addresses": ["adoption"],
+      "sectorOverrides": {
+        "62": { "regSchemaDrag": -0.10 },
+        "52": { "regSchemaDrag": -0.08 },
+        "23": { "regSchemaDrag": -0.05 }
+      },
+      "knobShifts": {
+        "regSchemaMultiplier": 0.85
+      }
+    },
+    {
+      "id": "public-llm-smb",
+      "name": "Public AI Compute Access (SMB)",
+      "category": "Infrastructure",
+      "tagline": "State-run AI compute infrastructure for small/medium businesses",
+      "description": "State-sponsored shared AI infrastructure (subsidized API access, training, security review) for SMBs that can't afford in-house deployment. Lowers cost and trust barriers; speeds adoption in long-tail sectors.",
+      "typicalCostMillions": 8,
+      "durationYears": 4,
+      "targetSectors": null,
+      "evidence": "BTOS data shows AI adoption concentrated in large firms (250+ employees adopt at 3× the rate of <50). McElheran et al. 2024: shared infrastructure could close half this gap.",
+      "evidenceUrl": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4673528",
+      "addresses": ["adoption", "friction"],
+      "sectorOverrides": {},
+      "knobShifts": {
+        "trustMultiplier": 1.10,
+        "securityOverheadMultiplier": 0.85,
+        "computeCostDeclineRate": 0.05
+      }
+    }
+  ]
+}

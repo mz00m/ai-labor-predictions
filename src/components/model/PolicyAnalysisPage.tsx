@@ -1,0 +1,795 @@
+"use client";
+
+import { useMemo, useState } from "react";
+import Link from "next/link";
+import btosData from "@/data/btos-sectors.json";
+import regionsData from "@/data/regions.json";
+import policiesData from "@/data/policies.json";
+import {
+  Sector,
+  Knobs,
+  DEFAULT_KNOBS,
+  computeSector,
+  applyPolicy,
+  regionalAggregate,
+  findDominantRisk,
+  findSensitivityFlip,
+  computeRobustnessBand,
+  Region,
+  ModelPolicy,
+  KNOB_META,
+  ARCHETYPE_META,
+} from "@/lib/composite-model";
+
+const sectors = btosData.sectors as Sector[];
+const regions = regionsData.regions as Region[];
+const policies = policiesData.policies as ModelPolicy[];
+
+// Scenario presets — borrowed from /model with consistent definitions
+const SCENARIOS: Record<string, { name: string; tagline: string; knobs: Knobs }> = {
+  status_quo: {
+    name: "Status Quo Persists",
+    tagline: "Slow capability · High friction",
+    knobs: {
+      ...DEFAULT_KNOBS,
+      capabilityDoublingMonths: 14,
+      trustMultiplier: 0.7,
+      regSchemaMultiplier: 1.4,
+      downtimeSensitivity: 1.3,
+      stateRegMultiplier: 1.4,
+      computeCostDeclineRate: 0.08,
+      securityOverheadMultiplier: 1.3,
+    },
+  },
+  steady: {
+    name: "Steady Diffusion",
+    tagline: "Slow capability · Low friction",
+    knobs: { ...DEFAULT_KNOBS, capabilityDoublingMonths: 14, trustMultiplier: 1.1, regSchemaMultiplier: 0.7 },
+  },
+  overhang: {
+    name: "Capability Overhang",
+    tagline: "Fast capability · High friction",
+    knobs: {
+      ...DEFAULT_KNOBS,
+      capabilityDoublingMonths: 4,
+      trustMultiplier: 0.7,
+      regSchemaMultiplier: 1.5,
+      downtimeSensitivity: 1.4,
+      stateRegMultiplier: 1.5,
+      securityOverheadMultiplier: 1.4,
+    },
+  },
+  rapid: {
+    name: "Rapid Transformation",
+    tagline: "Fast capability · Low friction",
+    knobs: {
+      ...DEFAULT_KNOBS,
+      capabilityDoublingMonths: 4,
+      trustMultiplier: 1.3,
+      regSchemaMultiplier: 0.6,
+      stateRegMultiplier: 0.6,
+      computeCostDeclineRate: 0.30,
+      securityOverheadMultiplier: 0.7,
+    },
+  },
+};
+
+const FRAMEWORK_LABELS = {
+  adoption: { label: "Adoption Speed", color: "#3a8a4f", num: 1 },
+  capability: { label: "AI Capability", color: "#c89531", num: 2 },
+  demand: { label: "Demand Elasticity", color: "#5b7faf", num: 3 },
+  friction: { label: "Friction Buffer", color: "#7a7e8b", num: 4 },
+};
+
+export default function PolicyAnalysisPage() {
+  const [regionId, setRegionId] = useState<string>("pittsburgh");
+  const [scenarioId, setScenarioId] = useState<keyof typeof SCENARIOS>("steady");
+  const [policyId, setPolicyId] = useState<string | null>(null);
+
+  const region = regions.find((r) => r.id === regionId)!;
+  const knobs = SCENARIOS[scenarioId].knobs;
+  const policy = policyId ? policies.find((p) => p.id === policyId) ?? null : null;
+
+  // Baseline (no policy)
+  const baseImpacts = useMemo(
+    () => sectors.map((s) => computeSector(s, knobs)),
+    [knobs]
+  );
+  const baseAggregate = useMemo(
+    () => regionalAggregate(baseImpacts, region),
+    [baseImpacts, region]
+  );
+
+  // With policy
+  const { sectors: postSectors, knobs: postKnobs } = useMemo(() => {
+    if (!policy) return { sectors, knobs };
+    return applyPolicy(sectors, knobs, policy);
+  }, [policy, knobs]);
+
+  const policyImpacts = useMemo(
+    () => postSectors.map((s) => computeSector(s, postKnobs)),
+    [postSectors, postKnobs]
+  );
+  const policyAggregate = useMemo(
+    () => regionalAggregate(policyImpacts, region),
+    [policyImpacts, region]
+  );
+
+  // Trust mechanisms
+  const dominantRisk = useMemo(
+    () => findDominantRisk(baseAggregate, sectors),
+    [baseAggregate]
+  );
+  const sensitivityFlips = useMemo(
+    () => findSensitivityFlip(sectors, knobs, region, policy ?? undefined),
+    [knobs, region, policy]
+  );
+  const robustness = useMemo(
+    () => computeRobustnessBand(sectors, knobs, region, policy ?? undefined),
+    [knobs, region, policy]
+  );
+
+  const policyDelta = policyAggregate.totalJobsImpacted - baseAggregate.totalJobsImpacted;
+
+  return (
+    <div className="max-w-[1100px] mx-auto">
+      {/* Header */}
+      <header className="mb-8">
+        <p className="text-xs uppercase tracking-[0.18em] text-[var(--muted)] mb-3">
+          jobsdata.ai / model / policy
+        </p>
+        <h1 className="text-4xl sm:text-5xl font-bold text-[var(--foreground)] leading-tight mb-4">
+          Workforce Policy Diagnostic
+        </h1>
+        <p className="text-lg text-[var(--muted)] leading-[1.7] mb-3">
+          Pick a region. Pick a scenario. Pick a policy. Get a guidance
+          document that flags where the policy meets the region&apos;s post-AI
+          workforce needs — and where the gaps are.
+        </p>
+        <p className="text-sm text-[var(--muted)] leading-[1.6] italic">
+          v0.1 prototype. 8 reference MSAs (BLS QCEW), 6 model policy
+          archetypes, regional rollup of the{" "}
+          <Link href="/model" className="text-[var(--accent-text)] hover:underline">
+            composite model
+          </Link>
+          . PDF upload + custom policy builder ship in v0.2.
+        </p>
+      </header>
+
+      {/* Step 1 — Region */}
+      <Step number={1} title="Pick a region">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-4">
+          <div>
+            <select
+              value={regionId}
+              onChange={(e) => setRegionId(e.target.value)}
+              className="w-full bg-card border border-card rounded-lg px-4 py-3 text-base text-[var(--foreground)]"
+            >
+              {regions.map((r) => (
+                <option key={r.id} value={r.id}>
+                  {r.name} — {r.totalEmploymentK.toLocaleString()}K jobs
+                </option>
+              ))}
+            </select>
+            <p className="text-sm text-[var(--muted)] mt-2 leading-[1.6]">
+              <strong className="text-[var(--foreground)]">{region.name}.</strong> {region.concentrationNote}
+            </p>
+          </div>
+          <RegionSectorMix region={region} />
+        </div>
+      </Step>
+
+      {/* Step 2 — Scenario */}
+      <Step number={2} title="Pick a scenario">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2.5">
+          {Object.entries(SCENARIOS).map(([id, s]) => (
+            <button
+              key={id}
+              onClick={() => setScenarioId(id as keyof typeof SCENARIOS)}
+              className={`text-left p-3.5 rounded-lg border-2 transition-colors hover:border-[var(--foreground)] ${
+                scenarioId === id ? "border-[var(--foreground)] bg-card" : "border-card bg-card"
+              }`}
+            >
+              <p className="text-[10px] uppercase tracking-wider text-[var(--muted)] mb-1">
+                {s.tagline}
+              </p>
+              <p className="text-sm font-semibold text-[var(--foreground)]">{s.name}</p>
+            </button>
+          ))}
+        </div>
+      </Step>
+
+      {/* Step 3 — Policy */}
+      <Step number={3} title="Pick a policy to review">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          {policies.map((p) => {
+            const selected = policyId === p.id;
+            return (
+              <button
+                key={p.id}
+                onClick={() => setPolicyId(selected ? null : p.id)}
+                className={`text-left p-4 rounded-lg border-2 transition-colors hover:border-[var(--foreground)] ${
+                  selected ? "border-[var(--foreground)] bg-card" : "border-card bg-card"
+                }`}
+              >
+                <div className="flex items-baseline justify-between gap-2 mb-1 flex-wrap">
+                  <p className="text-sm font-semibold text-[var(--foreground)]">{p.name}</p>
+                  <p className="text-[10px] uppercase tracking-wider text-[var(--muted)]">
+                    {p.category}
+                  </p>
+                </div>
+                <p className="text-xs text-[var(--muted)] leading-[1.55] mb-2">{p.tagline}</p>
+                <div className="flex items-center gap-3 text-[10px] text-[var(--muted)] flex-wrap">
+                  <span>${p.typicalCostMillions}M · {p.durationYears}yr</span>
+                  <span>•</span>
+                  <span>Targets: {p.targetSectors ? p.targetSectors.join(", ") : "All sectors"}</span>
+                  <span>•</span>
+                  <span>Addresses:</span>
+                  {p.addresses.map((a) => (
+                    <span
+                      key={a}
+                      className="px-1.5 py-0.5 rounded text-[9px] uppercase tracking-wider font-semibold"
+                      style={{
+                        background: `${FRAMEWORK_LABELS[a].color}25`,
+                        color: FRAMEWORK_LABELS[a].color,
+                      }}
+                    >
+                      {FRAMEWORK_LABELS[a].num}. {FRAMEWORK_LABELS[a].label}
+                    </span>
+                  ))}
+                </div>
+              </button>
+            );
+          })}
+        </div>
+      </Step>
+
+      {/* Step 4 — Diagnostic Report */}
+      {policy && (
+        <div className="mt-10 bg-card border border-card rounded-lg p-6 sm:p-8">
+          <div className="flex items-baseline justify-between mb-1 flex-wrap gap-2">
+            <p className="text-xs uppercase tracking-[0.18em] text-[var(--muted)]">
+              Diagnostic report — {region.name}
+            </p>
+            <p className="text-xs text-[var(--muted)]">
+              Scenario: <strong className="text-[var(--foreground)]">{SCENARIOS[scenarioId].name}</strong>
+              {" · "}Horizon: {knobs.horizonYears}yr
+            </p>
+          </div>
+          <h2 className="text-2xl font-bold text-[var(--foreground)] mb-6 leading-tight">
+            {policy.name}
+          </h2>
+
+          {/* SECTION A — Regional baseline */}
+          <ReportSection
+            heading="A · Regional baseline (no policy)"
+            subhead={`Projected employment change in ${region.name} at ${knobs.horizonYears}-year horizon under the ${SCENARIOS[scenarioId].name} scenario.`}
+          >
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-4">
+              <BigStat label="Jobs lost" value={formatJobs(baseAggregate.jobsLost, true)} color="#d4493a" />
+              <BigStat label="Jobs added" value={formatJobs(baseAggregate.jobsAdded, true)} color="#3a8a4f" />
+              <BigStat label="Net Δ" value={formatJobs(baseAggregate.totalJobsImpacted, true)} color={baseAggregate.totalJobsImpacted < 0 ? "#d4493a" : "#3a8a4f"} />
+            </div>
+            <RegionalTopSectors agg={baseAggregate} max={5} />
+          </ReportSection>
+
+          {/* SECTION B — With policy */}
+          <ReportSection
+            heading="B · With this policy"
+            subhead={`Counterfactual: ${region.name} under the same scenario, but with ${policy.name} active.`}
+          >
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-4">
+              <BigStat label="Jobs lost" value={formatJobs(policyAggregate.jobsLost, true)} color="#d4493a" />
+              <BigStat label="Jobs added" value={formatJobs(policyAggregate.jobsAdded, true)} color="#3a8a4f" />
+              <BigStat
+                label={`Δ vs no policy`}
+                value={`${policyDelta >= 0 ? "+" : ""}${formatJobs(policyDelta)} jobs`}
+                color={policyDelta > 1000 ? "#3a8a4f" : policyDelta < -1000 ? "#d4493a" : "#7a7e8b"}
+              />
+            </div>
+            <p className="text-sm text-[var(--muted)] leading-[1.65]">
+              <strong className="text-[var(--foreground)]">Cost per outcome:</strong>{" "}
+              {Math.abs(policyDelta) > 0
+                ? `~$${((policy.typicalCostMillions * 1_000_000) / Math.abs(policyDelta)).toFixed(0)} per job moved`
+                : `Policy investment ($${policy.typicalCostMillions}M) showed no net regional jobs delta at the modeled horizon`}
+              .{" "}
+              <span className="italic">
+                Note: this is a coverage estimate. Real cost-per-job calculations require longitudinal program data.
+              </span>
+            </p>
+          </ReportSection>
+
+          {/* SECTION C — Coverage assessment */}
+          <ReportSection
+            heading="C · Coverage assessment"
+            subhead="Which framework categories does this policy meaningfully touch?"
+          >
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              {(["adoption", "capability", "demand", "friction"] as const).map((cat) => {
+                const meta = FRAMEWORK_LABELS[cat];
+                const covered = policy.addresses.includes(cat);
+                return (
+                  <div
+                    key={cat}
+                    className="rounded-lg p-3 border-2"
+                    style={{
+                      borderColor: covered ? meta.color : "var(--card)",
+                      background: covered ? `${meta.color}15` : "transparent",
+                    }}
+                  >
+                    <div className="flex items-baseline gap-2 mb-1">
+                      <span
+                        className="text-[10px] font-semibold text-white px-1.5 py-0.5 rounded tabular-nums"
+                        style={{ background: meta.color }}
+                      >
+                        {meta.num}
+                      </span>
+                      <p className="text-sm font-medium" style={{ color: covered ? meta.color : "var(--muted)" }}>
+                        {meta.label}
+                      </p>
+                    </div>
+                    <p className="text-[11px]" style={{ color: covered ? meta.color : "var(--muted)" }}>
+                      {covered ? "✓ Addressed" : "○ Not touched"}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          </ReportSection>
+
+          {/* SECTION D — Gap callout (TRUST: attribution) */}
+          {dominantRisk && (
+            <ReportSection
+              heading="D · Gap analysis"
+              subhead="The dominant local risk and whether this policy addresses it."
+            >
+              <div
+                className="rounded-lg p-4 mb-3 border-l-4"
+                style={{
+                  borderColor: FRAMEWORK_LABELS[dominantRisk.category].color,
+                  background: `${FRAMEWORK_LABELS[dominantRisk.category].color}10`,
+                }}
+              >
+                <p className="text-xs uppercase tracking-wider text-[var(--muted)] mb-1">
+                  Dominant regional risk
+                </p>
+                <p className="text-base font-semibold text-[var(--foreground)] mb-2">
+                  {dominantRisk.sector.name}{" "}
+                  <span className="font-normal text-[var(--muted)] text-sm">
+                    · {formatJobs(dominantRisk.sector.regionalJobsImpacted, true)} jobs in {region.name}
+                  </span>
+                </p>
+                <p className="text-sm text-[var(--muted)] leading-[1.6] mb-2">
+                  {dominantRisk.driverNarrative}
+                </p>
+                {/* Driver attribution (trust) */}
+                <details className="text-xs">
+                  <summary className="cursor-pointer text-[var(--accent-text)] hover:underline">
+                    Why this risk &mdash; underlying parameters
+                  </summary>
+                  <ul className="mt-2 space-y-1 text-[var(--muted)]">
+                    {dominantRisk.drivers.map((d) => (
+                      <li key={d.paramOrKnob}>
+                        <strong className="text-[var(--foreground)]">{d.paramOrKnob} = {d.value.toFixed(2)}</strong>{" "}
+                        — {d.role}
+                      </li>
+                    ))}
+                  </ul>
+                </details>
+              </div>
+
+              {!policy.addresses.includes(dominantRisk.category) ? (
+                <div className="rounded-lg p-4 bg-[#d4493a10] border border-[#d4493a40]">
+                  <p className="text-sm font-semibold text-[#a53024] mb-1">
+                    ⚠ Gap: policy doesn&apos;t address the dominant risk
+                  </p>
+                  <p className="text-sm text-[var(--muted)] leading-[1.6]">
+                    {region.name}&apos;s biggest exposure is{" "}
+                    <strong className="text-[var(--foreground)]">{FRAMEWORK_LABELS[dominantRisk.category].label}</strong>{" "}
+                    in {dominantRisk.sector.name}. {policy.name} addresses{" "}
+                    {policy.addresses.map((a) => FRAMEWORK_LABELS[a].label).join(" + ")}, but
+                    does not move the {FRAMEWORK_LABELS[dominantRisk.category].label} dimension.
+                    Consider a parallel intervention.
+                  </p>
+                  <p className="text-xs text-[var(--muted)] mt-2 italic">
+                    Suggested adjacent: {suggestedAdjacent(dominantRisk.category, policies, policy.id).map((p) => p.name).join(", ") || "—"}
+                  </p>
+                </div>
+              ) : (
+                <div className="rounded-lg p-4 bg-[#3a8a4f10] border border-[#3a8a4f40]">
+                  <p className="text-sm font-semibold text-[#2e6e3f] mb-1">
+                    ✓ Policy targets the dominant risk
+                  </p>
+                  <p className="text-sm text-[var(--muted)] leading-[1.6]">
+                    The {FRAMEWORK_LABELS[dominantRisk.category].label} dimension is what&apos;s
+                    driving the region&apos;s exposure, and this policy moves it. Doesn&apos;t mean
+                    it&apos;s sufficient — check the sensitivity flip below.
+                  </p>
+                </div>
+              )}
+            </ReportSection>
+          )}
+
+          {/* SECTION E — Trust: what would change this */}
+          <ReportSection
+            heading="E · What would change this assessment"
+            subhead="Smallest knob movements that would flip the net regional jobs sign. If the closest flip requires a > 50% change in a knob, treat the assessment as robust."
+          >
+            {sensitivityFlips.length === 0 ? (
+              <p className="text-sm text-[var(--muted)] italic">
+                No single high-impact knob can flip the sign within its full slider range — the
+                regional projection is structurally robust to individual parameter changes.
+              </p>
+            ) : (
+              <div className="space-y-2">
+                {sensitivityFlips.map((flip) => {
+                  const pctChange = ((flip.flipValue - flip.currentValue) / Math.max(0.01, Math.abs(flip.currentValue))) * 100;
+                  return (
+                    <div key={flip.knob} className="rounded-lg p-3 bg-[var(--background)] border border-divider">
+                      <p className="text-sm text-[var(--foreground)] mb-1">
+                        <strong>{flip.knobLabel}</strong>{" "}
+                        would need to move from{" "}
+                        <code className="bg-card px-1.5 py-0.5 rounded text-xs">{flip.currentValue.toFixed(2)}</code>{" "}
+                        to{" "}
+                        <code className="bg-card px-1.5 py-0.5 rounded text-xs">{flip.flipValue.toFixed(2)}</code>{" "}
+                        ({pctChange >= 0 ? "+" : ""}{pctChange.toFixed(0)}%)
+                      </p>
+                      <p className="text-xs text-[var(--muted)]">
+                        That would shift the regional net from{" "}
+                        <span style={{ color: flip.baselineNetJobs < 0 ? "#d4493a" : "#3a8a4f" }}>
+                          {formatJobs(flip.baselineNetJobs, true)} jobs
+                        </span>{" "}
+                        to{" "}
+                        <span style={{ color: flip.flippedNetJobs < 0 ? "#d4493a" : "#3a8a4f" }}>
+                          {formatJobs(flip.flippedNetJobs, true)} jobs
+                        </span>
+                        {flip.feasible ? (
+                          <span className="ml-2 px-1.5 py-0.5 bg-[#a36e1e15] text-[#a36e1e] text-[10px] uppercase tracking-wider rounded">
+                            Feasible move
+                          </span>
+                        ) : (
+                          <span className="ml-2 px-1.5 py-0.5 bg-[#5a677015] text-[#5a6770] text-[10px] uppercase tracking-wider rounded">
+                            Large move — robust
+                          </span>
+                        )}
+                      </p>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+          </ReportSection>
+
+          {/* SECTION F — Trust: robustness band */}
+          <ReportSection
+            heading="F · Robustness band"
+            subhead="What if our defaults are off by 50% on the high-impact knobs? Range of regional net jobs delta under pessimistic and optimistic perturbations of capability, elasticity, productivity uplift, trust, and regulatory schema."
+          >
+            <RobustnessBar
+              pessimistic={robustness.pessimistic}
+              baseline={robustness.baseline}
+              optimistic={robustness.optimistic}
+            />
+            <p className="text-xs text-[var(--muted)] mt-3 italic">
+              Perturbed: {robustness.perturbedKnobs.join(", ")}. The wider the band, the more
+              the recommendation hinges on our calibration. If pessimistic and optimistic land
+              on the same side (both growth or both decline), the directional finding is robust.
+            </p>
+          </ReportSection>
+
+          {/* SECTION G — Historical analog */}
+          <ReportSection
+            heading="G · Historical analog & evidence"
+            subhead="What the workforce-program literature says about policies in this archetype."
+          >
+            <div className="rounded-lg p-4 bg-[var(--background)] border border-divider">
+              <p className="text-xs uppercase tracking-wider text-[var(--muted)] mb-1.5">
+                Evidence base for {policy.name}
+              </p>
+              <p className="text-sm text-[var(--muted)] leading-[1.65] mb-2">
+                {policy.evidence}
+              </p>
+              <a
+                href={policy.evidenceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs text-[var(--accent-text)] hover:underline"
+              >
+                → Source
+              </a>
+            </div>
+          </ReportSection>
+
+          {/* SECTION H — Recommended actions */}
+          <ReportSection
+            heading="H · Recommended actions for policymakers"
+            subhead=""
+          >
+            <ol className="space-y-2.5 text-sm text-[var(--muted)] leading-[1.65] list-decimal ml-5">
+              <li>
+                <strong className="text-[var(--foreground)]">Anchor decision on what&apos;s robust.</strong>{" "}
+                The robustness band above shows the range of outcomes when our defaults move by ±50%.
+                Treat directional findings inside that band as defensible; treat point estimates as guidance only.
+              </li>
+              {dominantRisk && !policy.addresses.includes(dominantRisk.category) && (
+                <li>
+                  <strong className="text-[var(--foreground)]">Add a complementary intervention.</strong>{" "}
+                  {region.name}&apos;s dominant exposure is {FRAMEWORK_LABELS[dominantRisk.category].label} —
+                  this policy doesn&apos;t move that dimension. Pair {policy.name} with a {FRAMEWORK_LABELS[dominantRisk.category].label}-targeting intervention to close the gap.
+                </li>
+              )}
+              {sensitivityFlips.length > 0 && sensitivityFlips[0].feasible && (
+                <li>
+                  <strong className="text-[var(--foreground)]">Watch the sensitivity flip knob.</strong>{" "}
+                  A {Math.abs(((sensitivityFlips[0].flipValue - sensitivityFlips[0].currentValue) / sensitivityFlips[0].currentValue) * 100).toFixed(0)}% movement in <em>{sensitivityFlips[0].knobLabel}</em> would change the sign of the projection.
+                  Build trigger indicators that flag if that knob moves materially in the next 12 months,
+                  and pre-commit to a course correction.
+                </li>
+              )}
+              <li>
+                <strong className="text-[var(--foreground)]">Pre-commit to re-evaluation.</strong>{" "}
+                Re-run this diagnostic quarterly. The capability anchor refreshes from{" "}
+                <a
+                  href="https://artificialanalysis.ai/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[var(--accent-text)] hover:underline"
+                >
+                  Artificial Analysis
+                </a>{" "}
+                and the BTOS adoption data ships every two weeks from Census. Material movement on either
+                triggers a refresh.
+              </li>
+              <li>
+                <strong className="text-[var(--foreground)]">Don&apos;t mistake this for an impact evaluation.</strong>{" "}
+                This is structured thinking, not RCT-grade causal evidence. Use it to flag gaps and
+                stress-test assumptions, then commission the actual program evaluation separately.
+              </li>
+            </ol>
+          </ReportSection>
+
+          {/* Footer */}
+          <div className="mt-8 pt-5 border-t border-divider">
+            <p className="text-xs text-[var(--muted)] italic leading-[1.6]">
+              Generated by jobsdata.ai composite displacement model. Region data from BLS QCEW;
+              capability anchor live from Artificial Analysis; adoption anchored to Census BTOS
+              AI Supplement (2026); demand elasticity ε from Bessen (2019). Every parameter is
+              user-adjustable on{" "}
+              <Link href="/model" className="text-[var(--accent-text)] hover:underline">
+                /model
+              </Link>
+              . Methodology and limitations documented inline. Last refresh: capability anchor
+              today.
+            </p>
+          </div>
+        </div>
+      )}
+
+      {!policy && (
+        <div className="mt-10 bg-card border border-card rounded-lg p-8 text-center">
+          <p className="text-sm text-[var(--muted)]">
+            Pick a policy above to generate the diagnostic report.
+          </p>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ────────────────────────────────────────────────────────────────────
+// Helpers
+// ────────────────────────────────────────────────────────────────────
+
+function suggestedAdjacent(
+  cat: "adoption" | "capability" | "demand" | "friction",
+  all: ModelPolicy[],
+  excludeId: string
+): ModelPolicy[] {
+  return all.filter((p) => p.id !== excludeId && p.addresses.includes(cat)).slice(0, 2);
+}
+
+function formatJobs(n: number, signed = false): string {
+  const sign = n > 0 ? "+" : n < 0 ? "−" : "";
+  const abs = Math.abs(n);
+  let core: string;
+  if (abs >= 1_000_000) core = `${(abs / 1_000_000).toFixed(2)}M`;
+  else if (abs >= 1_000) core = `${(abs / 1_000).toFixed(1)}K`;
+  else core = `${Math.round(abs)}`;
+  return signed ? `${sign}${core}` : core;
+}
+
+// ────────────────────────────────────────────────────────────────────
+// Components
+// ────────────────────────────────────────────────────────────────────
+
+function Step({ number, title, children }: { number: number; title: string; children: React.ReactNode }) {
+  return (
+    <section className="mb-8">
+      <div className="flex items-baseline gap-3 mb-3">
+        <span className="text-xs font-semibold text-white bg-[var(--foreground)] w-6 h-6 rounded flex items-center justify-center tabular-nums">
+          {number}
+        </span>
+        <h2 className="text-base font-semibold text-[var(--foreground)]">{title}</h2>
+      </div>
+      {children}
+    </section>
+  );
+}
+
+function ReportSection({
+  heading,
+  subhead,
+  children,
+}: {
+  heading: string;
+  subhead: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="mb-7 pb-6 border-b border-divider last:border-0 last:pb-0 last:mb-0">
+      <h3 className="text-base font-semibold text-[var(--foreground)] mb-1">{heading}</h3>
+      {subhead && (
+        <p className="text-sm text-[var(--muted)] leading-[1.5] mb-4">{subhead}</p>
+      )}
+      {children}
+    </div>
+  );
+}
+
+function BigStat({ label, value, color }: { label: string; value: string; color: string }) {
+  return (
+    <div>
+      <p className="text-[10px] uppercase tracking-wider text-[var(--muted)] mb-1">{label}</p>
+      <p className="text-xl font-bold tabular-nums" style={{ color }}>
+        {value}
+      </p>
+    </div>
+  );
+}
+
+function RegionSectorMix({ region }: { region: Region }) {
+  const top = Object.entries(region.sectorShares)
+    .map(([naics, share]) => {
+      const s = sectors.find((x) => x.naics === naics);
+      return { naics, name: s?.name ?? naics, share };
+    })
+    .sort((a, b) => b.share - a.share)
+    .slice(0, 5);
+
+  return (
+    <div className="bg-card border border-card rounded-lg p-3">
+      <p className="text-[10px] uppercase tracking-wider text-[var(--muted)] mb-2">
+        Top 5 sectors
+      </p>
+      <div className="space-y-1.5">
+        {top.map((t) => (
+          <div key={t.naics} className="flex items-center justify-between gap-2 text-xs">
+            <span className="text-[var(--foreground)] truncate" title={t.name}>
+              {t.name}
+            </span>
+            <span className="text-[var(--muted)] tabular-nums flex-shrink-0">
+              {(t.share * 100).toFixed(1)}%
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function RegionalTopSectors({ agg, max }: { agg: ReturnType<typeof regionalAggregate>; max: number }) {
+  const sorted = [...agg.bySector].sort((a, b) => a.regionalJobsImpacted - b.regionalJobsImpacted);
+  const losers = sorted.slice(0, Math.min(max, sorted.length)).filter((s) => s.regionalJobsImpacted < 0);
+  const winners = sorted.slice(-max).reverse().filter((s) => s.regionalJobsImpacted > 0);
+
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+      <div>
+        <p className="text-xs uppercase tracking-wider text-[#3a8a4f] font-semibold mb-2">
+          Top growth sectors
+        </p>
+        {winners.length === 0 ? (
+          <p className="text-[var(--muted)] italic text-sm">No sectors with meaningful growth.</p>
+        ) : (
+          winners.map((s) => (
+            <div key={s.naics} className="flex items-center justify-between border-b border-divider py-1.5">
+              <span className="text-[var(--foreground)] text-xs truncate" title={s.name}>{s.name}</span>
+              <span className="tabular-nums text-xs font-medium text-[#3a8a4f]">
+                +{formatJobs(s.regionalJobsImpacted)} ({s.employmentDeltaPct >= 0 ? "+" : ""}{s.employmentDeltaPct.toFixed(2)}%)
+              </span>
+            </div>
+          ))
+        )}
+      </div>
+      <div>
+        <p className="text-xs uppercase tracking-wider text-[#d4493a] font-semibold mb-2">
+          Top decline sectors
+        </p>
+        {losers.length === 0 ? (
+          <p className="text-[var(--muted)] italic text-sm">No sectors with meaningful decline.</p>
+        ) : (
+          losers.map((s) => (
+            <div key={s.naics} className="flex items-center justify-between border-b border-divider py-1.5">
+              <span className="text-[var(--foreground)] text-xs truncate" title={s.name}>{s.name}</span>
+              <span className="tabular-nums text-xs font-medium text-[#d4493a]">
+                −{formatJobs(Math.abs(s.regionalJobsImpacted))} ({s.employmentDeltaPct.toFixed(2)}%)
+              </span>
+            </div>
+          ))
+        )}
+      </div>
+    </div>
+  );
+}
+
+function RobustnessBar({
+  pessimistic,
+  baseline,
+  optimistic,
+}: {
+  pessimistic: number;
+  baseline: number;
+  optimistic: number;
+}) {
+  const min = Math.min(pessimistic, baseline, optimistic, 0);
+  const max = Math.max(pessimistic, baseline, optimistic, 0);
+  const range = max - min || 1;
+  const zeroPct = ((0 - min) / range) * 100;
+  const pessPct = ((pessimistic - min) / range) * 100;
+  const basePct = ((baseline - min) / range) * 100;
+  const optiPct = ((optimistic - min) / range) * 100;
+
+  return (
+    <div className="bg-[var(--background)] rounded-lg p-4">
+      <div className="relative h-14">
+        {/* Track */}
+        <div className="absolute top-1/2 left-0 right-0 h-1.5 bg-card rounded-full -translate-y-1/2" />
+        {/* Zero line */}
+        <div
+          className="absolute top-1 bottom-1 w-px bg-[var(--muted)]"
+          style={{ left: `${zeroPct}%` }}
+          aria-label="Zero"
+        >
+          <span className="absolute -bottom-5 left-1/2 -translate-x-1/2 text-[10px] text-[var(--muted)]">0</span>
+        </div>
+        {/* Pessimistic marker */}
+        <Marker pct={pessPct} value={pessimistic} label="Pessimistic" color="#d4493a" top />
+        {/* Baseline marker */}
+        <Marker pct={basePct} value={baseline} label="Baseline" color="#7a7e8b" />
+        {/* Optimistic marker */}
+        <Marker pct={optiPct} value={optimistic} label="Optimistic" color="#3a8a4f" top />
+      </div>
+      <div className="mt-6 flex justify-between text-[10px] text-[var(--muted)] tabular-nums">
+        <span>worst case</span>
+        <span>best case</span>
+      </div>
+    </div>
+  );
+}
+
+function Marker({
+  pct,
+  value,
+  label,
+  color,
+  top,
+}: {
+  pct: number;
+  value: number;
+  label: string;
+  color: string;
+  top?: boolean;
+}) {
+  return (
+    <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2" style={{ left: `${pct}%` }}>
+      <div className="w-3 h-3 rounded-full" style={{ background: color }} />
+      <div
+        className={`absolute left-1/2 -translate-x-1/2 ${top ? "-top-7" : "top-5"} whitespace-nowrap text-[10px]`}
+        style={{ color }}
+      >
+        <div className="font-semibold">{label}</div>
+        <div className="tabular-nums text-[var(--muted)]">{formatJobs(value, true)}</div>
+      </div>
+    </div>
+  );
+}
