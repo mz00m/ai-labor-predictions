@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "capability:refresh": "tsx scripts/fetch-capability.ts",
     "prebuild:public-data": "tsx scripts/copy-public-data.ts",
     "build": "npm run prebuild:public-data && npm run compile-wiki && npm run compile-kb && next build",
     "start": "next start",
