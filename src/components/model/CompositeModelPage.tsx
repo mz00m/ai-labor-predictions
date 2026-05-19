@@ -3,6 +3,14 @@
 import { useMemo, useState } from "react";
 import btosData from "@/data/btos-sectors.json";
 import {
+  MODEL_PRICING,
+  CATEGORY_TOKEN_PROFILES,
+  tokenCostPerHour,
+  DEPLOYMENT_OVERHEAD,
+} from "@/data/job-tasks";
+import { TASK_CATEGORY_META } from "@/data/task-categories";
+import Link from "next/link";
+import {
   Sector,
   Knobs,
   DEFAULT_KNOBS,
@@ -330,7 +338,7 @@ export default function CompositeModelPage() {
               <KnobColumn category={4} title="Friction Buffer" color="#7a7e8b" subtitle="What slows transitions">
                 <SliderKnob label="Gen Z adoption boost" value={knobs.genZAdoptionBoost} min={0.5} max={1.5} step={0.05} onChange={(v) => update("genZAdoptionBoost", v)} format={(v) => `${v.toFixed(2)}×`} hint="Amplifies the Gen Z share's adoption-lifting effect per sector." />
                 <SliderKnob label="State regulation drag" value={knobs.stateRegMultiplier} min={0.5} max={1.5} step={0.05} onChange={(v) => update("stateRegMultiplier", v)} format={(v) => `${v.toFixed(2)}×`} hint="Independent of sector schema (CA SB1047 derivatives, NYC bias audits, CO AI Act)." />
-                <SliderKnob label="Compute cost decline" value={knobs.computeCostDeclineRate} min={0.05} max={0.40} step={0.01} onChange={(v) => update("computeCostDeclineRate", v)} format={(v) => `${(v * 100).toFixed(0)}%/yr`} hint="Wright's Law decline on token + energy costs." />
+                <SliderKnob label="Compute cost trajectory" value={knobs.computeCostDeclineRate} min={-0.20} max={0.50} step={0.025} onChange={(v) => update("computeCostDeclineRate", v)} format={(v) => v > 0.005 ? `↓ ${(v * 100).toFixed(1)}%/yr` : v < -0.005 ? `↑ ${(Math.abs(v) * 100).toFixed(1)}%/yr` : "flat"} hint="Bidirectional. Positive = inference costs declining (Wright's Law on tokens); negative = costs rising (energy crunch, GPU shortage, regulatory capital costs)." />
                 <SliderKnob label="Security overhead" value={knobs.securityOverheadMultiplier} min={0.5} max={1.5} step={0.05} onChange={(v) => update("securityOverheadMultiplier", v)} format={(v) => `${v.toFixed(2)}×`} hint="SOC 2, HIPAA, FedRAMP, state data sovereignty drag." />
               </KnobColumn>
             </div>
@@ -419,6 +427,9 @@ export default function CompositeModelPage() {
               onClose={() => setSelected(null)}
             />
           )}
+
+          {/* TASK COMPUTE COST REFERENCE — anchor for the compute cost knob */}
+          <TaskComputeCostReference />
 
           {/* FRAMEWORK EXPLAINER — 4 categories with per-factor cards */}
           <div className="mt-10">
@@ -529,6 +540,133 @@ function PresetCard({
         {preset.description}
       </p>
     </button>
+  );
+}
+
+function TaskComputeCostReference() {
+  const taskCategories = Object.keys(CATEGORY_TOKEN_PROFILES) as Array<
+    keyof typeof CATEGORY_TOKEN_PROFILES
+  >;
+  const rows = taskCategories.map((cat) => {
+    const profile = CATEGORY_TOKEN_PROFILES[cat];
+    const meta = TASK_CATEGORY_META[cat];
+    const rawCost = tokenCostPerHour(profile);
+    const deployCost = rawCost * DEPLOYMENT_OVERHEAD;
+    return { cat, meta, profile, rawCost, deployCost };
+  }).sort((a, b) => a.deployCost - b.deployCost);
+
+  const cheapest = rows[0];
+  const priciest = rows[rows.length - 1];
+
+  return (
+    <div className="mt-10">
+      <div className="flex items-baseline justify-between mb-3 flex-wrap gap-2">
+        <h2 className="text-2xl font-bold text-[var(--foreground)]">
+          Compute cost reference — by task category
+        </h2>
+        <Link
+          href="/task-visualizer"
+          className="text-sm text-[var(--accent-text)] hover:underline"
+        >
+          → Full per-task model on /task-visualizer
+        </Link>
+      </div>
+      <p className="text-sm text-[var(--muted)] leading-[1.7] mb-5 max-w-3xl">
+        The compute-cost knob in the framework is fit live to{" "}
+        <a
+          href="https://artificialanalysis.ai/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[var(--accent-text)] hover:underline"
+        >
+          Artificial Analysis
+        </a>
+        &apos;s frontier price decline (~40%/yr on blended $/M-token). What that
+        looks like at the task level is below — drawn directly from the
+        per-category token profiles powering /task-visualizer. Cheapest task
+        category today is{" "}
+        <strong className="text-[var(--foreground)]">{cheapest.meta.label}</strong> at{" "}
+        <strong className="text-[var(--foreground)]">${cheapest.deployCost.toFixed(2)}/hr</strong>{" "}
+        with deployment overhead; priciest is{" "}
+        <strong className="text-[var(--foreground)]">{priciest.meta.label}</strong> at{" "}
+        <strong className="text-[var(--foreground)]">${priciest.deployCost.toFixed(2)}/hr</strong>.
+      </p>
+
+      <div className="bg-card border border-card rounded-lg overflow-hidden">
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="text-xs uppercase tracking-wider text-[var(--muted)] border-b border-divider">
+                <th className="text-left px-4 py-3">Task category</th>
+                <th className="text-left px-4 py-3">Model tier</th>
+                <th className="text-right px-4 py-3">Input tok / call</th>
+                <th className="text-right px-4 py-3">Output tok / call</th>
+                <th className="text-right px-4 py-3">Calls / hr</th>
+                <th className="text-right px-4 py-3">Raw $/hr</th>
+                <th className="text-right px-4 py-3">With overhead ({DEPLOYMENT_OVERHEAD}×)</th>
+              </tr>
+            </thead>
+            <tbody>
+              {rows.map(({ cat, meta, profile, rawCost, deployCost }) => {
+                const pricing = MODEL_PRICING[profile.modelTier];
+                return (
+                  <tr key={cat} className="border-b border-divider last:border-0">
+                    <td className="px-4 py-3">
+                      <div className="flex items-center gap-2">
+                        <span
+                          className="inline-block w-2 h-2 rounded-full flex-shrink-0"
+                          style={{ background: meta.color }}
+                        />
+                        <span className="text-[var(--foreground)]">{meta.label}</span>
+                      </div>
+                      <p className="text-xs text-[var(--muted)] mt-0.5 ml-4">
+                        {meta.description}
+                      </p>
+                    </td>
+                    <td className="px-4 py-3 text-xs text-[var(--muted)]">
+                      <span className="text-[var(--foreground)] font-medium">
+                        {pricing.label.split(" ")[0]}
+                      </span>
+                      <br />
+                      <span className="text-[10px]">${pricing.inputPer1M}/${pricing.outputPer1M}/Mtok</span>
+                    </td>
+                    <td className="px-4 py-3 text-right tabular-nums text-[var(--muted)]">
+                      {profile.inputTokensPerCall >= 1000
+                        ? `${(profile.inputTokensPerCall / 1000).toFixed(0)}K`
+                        : profile.inputTokensPerCall}
+                    </td>
+                    <td className="px-4 py-3 text-right tabular-nums text-[var(--muted)]">
+                      {profile.outputTokensPerCall >= 1000
+                        ? `${(profile.outputTokensPerCall / 1000).toFixed(0)}K`
+                        : profile.outputTokensPerCall}
+                    </td>
+                    <td className="px-4 py-3 text-right tabular-nums text-[var(--muted)]">
+                      {profile.callsPerHumanHour}
+                    </td>
+                    <td className="px-4 py-3 text-right tabular-nums text-[var(--muted)]">
+                      ${rawCost < 1 ? rawCost.toFixed(3) : rawCost.toFixed(2)}
+                    </td>
+                    <td className="px-4 py-3 text-right tabular-nums font-medium text-[var(--foreground)]">
+                      ${deployCost < 1 ? deployCost.toFixed(3) : deployCost.toFixed(2)}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <p className="text-xs text-[var(--muted)] mt-3 leading-[1.6]">
+        Raw $/hr = calls × (input × input-price + output × output-price) ×
+        per-call overhead. The {DEPLOYMENT_OVERHEAD}× deployment multiplier on
+        top accounts for integration engineering, error handling, validation,
+        human review, monitoring. Costs decline 30–48%/yr at the task level in
+        the base case (live AA fit currently ~40%/yr). The bidirectional
+        compute-cost knob lets you test what happens if energy and capital
+        costs flip the sign of that trend.
+      </p>
+    </div>
   );
 }
 

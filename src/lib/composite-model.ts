@@ -155,8 +155,12 @@ export function computeSector(sector: Sector, k: Knobs): SectorImpact {
   );
 
   // ── Module 4: FRICTION (cost gate component) ────────────────────
-  // Wright's-Law-style cost decline opens more tasks to economic viability.
-  const costGate = 0.55 + 0.45 * (1 - Math.exp(-T * k.computeCostDeclineRate * 1.5));
+  // Bidirectional cost trajectory.
+  // Positive rate = costs declining (Wright's Law on inference) → more tasks viable.
+  // Negative rate = costs rising (energy crisis, GPU shortage, capital costs) → fewer tasks viable.
+  // tanh keeps the response bounded and symmetric around the neutral (rate = 0) baseline.
+  const costFactor = Math.tanh(k.computeCostDeclineRate * T * 0.5);
+  const costGate = clamp(0.20, 0.95, 0.55 + 0.40 * costFactor);
   const economicViableShare = Math.min(0.95, deployableShare * costGate);
 
   // ── Module 1: ADOPTION SPEED (firm-level, separate from capability) ─
