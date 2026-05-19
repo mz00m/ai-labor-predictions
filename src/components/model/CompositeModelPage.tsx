@@ -230,19 +230,19 @@ export default function CompositeModelPage() {
           </button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-[80px_1fr_1fr] gap-2 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-[120px_1fr_1fr] gap-2 items-stretch">
           {/* Top row */}
           <div className="hidden md:block" />
-          <AxisLabel>Low friction →</AxisLabel>
           <AxisLabel>← High friction</AxisLabel>
+          <AxisLabel>Low friction →</AxisLabel>
 
-          <RowLabel>Fast capability + adoption</RowLabel>
-          <PresetCard preset={PRESETS.rapid} active={activePreset === "rapid"} onClick={() => applyPreset(PRESETS.rapid)} accent="#3a8a4f" />
+          <RowLabel>Fast capability<br/>+ adoption</RowLabel>
           <PresetCard preset={PRESETS.overhang} active={activePreset === "overhang"} onClick={() => applyPreset(PRESETS.overhang)} accent="#c89531" />
+          <PresetCard preset={PRESETS.rapid} active={activePreset === "rapid"} onClick={() => applyPreset(PRESETS.rapid)} accent="#3a8a4f" />
 
-          <RowLabel>Slow capability + adoption</RowLabel>
-          <PresetCard preset={PRESETS.steady} active={activePreset === "steady"} onClick={() => applyPreset(PRESETS.steady)} accent="#5b7faf" />
+          <RowLabel>Slow capability<br/>+ adoption</RowLabel>
           <PresetCard preset={PRESETS.status_quo} active={activePreset === "status_quo"} onClick={() => applyPreset(PRESETS.status_quo)} accent="#7a7e8b" />
+          <PresetCard preset={PRESETS.steady} active={activePreset === "steady"} onClick={() => applyPreset(PRESETS.steady)} accent="#5b7faf" />
         </div>
       </section>
 
@@ -314,10 +314,13 @@ export default function CompositeModelPage() {
 
         {/* Results */}
         <section>
+          {/* Counterfactual chart — top winners and losers */}
+          <CounterfactualChart results={results} horizon={knobs.horizonYears} />
+
           <div className="bg-card border border-card rounded-lg overflow-hidden">
             <div className="px-5 py-3 border-b border-divider flex items-center justify-between flex-wrap gap-2">
               <h2 className="text-base font-semibold text-[var(--foreground)]">
-                Sector impacts ({knobs.horizonYears}-year horizon)
+                Full sector table ({knobs.horizonYears}-year horizon)
               </h2>
               <div className="flex items-center gap-3 text-xs">
                 {Object.entries(ARCHETYPE_META).map(([k, v]) => (
@@ -414,7 +417,7 @@ export default function CompositeModelPage() {
               <li>No Monte Carlo. Outputs are point estimates; production version will draw 5,000 paths per sector with fan bands.</li>
               <li>No occupation-level disaggregation. v0.3 lifts the 19 sectors into ~340 SOC occupations.</li>
               <li>No geographic selector. v0.3 adds MSA-level rollups using QCEW employment shares.</li>
-              <li>No workforce program overlay (dimension-shift catalog). That's the next phase.</li>
+              <li>No workforce program overlay (dimension-shift catalog). That&apos;s the next phase.</li>
               <li>Reinstatement (new tasks created by AI) is absorbed into ε. A future module separates it out.</li>
             </ul>
           </div>
@@ -474,6 +477,136 @@ function PresetCard({
         {preset.description}
       </p>
     </button>
+  );
+}
+
+function CounterfactualChart({
+  results,
+  horizon,
+}: {
+  results: ReturnType<typeof computeSector>[];
+  horizon: number;
+}) {
+  const sorted = [...results].sort((a, b) => b.employmentDelta - a.employmentDelta);
+  const winners = sorted.filter((r) => r.employmentDelta > 0).slice(0, 6);
+  const losersDesc = sorted.filter((r) => r.employmentDelta < 0);
+  const losers = losersDesc.slice(-6).reverse();
+  const maxAbs = Math.max(...results.map((r) => Math.abs(r.employmentDelta)), 0.5);
+
+  const aggGrowth = winners.reduce((s, r) => s + r.employmentDelta, 0);
+  const aggDecline = losers.reduce((s, r) => s + r.employmentDelta, 0);
+
+  return (
+    <div className="bg-card border border-card rounded-lg p-6 mb-5">
+      <div className="mb-5">
+        <p className="text-xs uppercase tracking-wider text-[var(--muted)] mb-1.5">
+          AI counterfactual — {horizon}-year horizon
+        </p>
+        <h2 className="text-xl font-bold text-[var(--foreground)] mb-1.5 leading-tight">
+          Sector winners and losers, with AI vs. without
+        </h2>
+        <p className="text-sm text-[var(--muted)] leading-[1.6]">
+          Projected net employment change in each sector relative to a no-AI
+          baseline. Bars right of center = growth; bars left of center = decline.
+        </p>
+      </div>
+
+      {/* Winners section */}
+      {winners.length > 0 && (
+        <div className="mb-5">
+          <div className="flex items-baseline justify-between mb-2">
+            <p className="text-xs uppercase tracking-wider text-[#3a8a4f] font-semibold">
+              Top growth sectors
+            </p>
+            <p className="text-xs text-[var(--muted)] tabular-nums">
+              {winners.length} sectors · combined +{aggGrowth.toFixed(1)}%
+            </p>
+          </div>
+          <div className="space-y-1.5">
+            {winners.map((r) => (
+              <DivergingRow key={r.naics} result={r} maxAbs={maxAbs} />
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Centerline */}
+      <div className="my-4 flex items-center gap-3">
+        <div className="flex-1 border-t border-divider"></div>
+        <span className="text-[10px] uppercase tracking-wider text-[var(--muted)]">
+          No-AI baseline (0%)
+        </span>
+        <div className="flex-1 border-t border-divider"></div>
+      </div>
+
+      {/* Losers section */}
+      {losers.length > 0 && (
+        <div>
+          <div className="flex items-baseline justify-between mb-2">
+            <p className="text-xs uppercase tracking-wider text-[#d4493a] font-semibold">
+              Top decline sectors
+            </p>
+            <p className="text-xs text-[var(--muted)] tabular-nums">
+              {losers.length} sectors · combined {aggDecline.toFixed(1)}%
+            </p>
+          </div>
+          <div className="space-y-1.5">
+            {losers.map((r) => (
+              <DivergingRow key={r.naics} result={r} maxAbs={maxAbs} />
+            ))}
+          </div>
+        </div>
+      )}
+
+      {winners.length === 0 && losers.length === 0 && (
+        <p className="text-sm text-[var(--muted)] italic text-center py-8">
+          No sectors show meaningful change at current knob settings. Pick a
+          scenario preset above to see divergence.
+        </p>
+      )}
+    </div>
+  );
+}
+
+function DivergingRow({
+  result,
+  maxAbs,
+}: {
+  result: ReturnType<typeof computeSector>;
+  maxAbs: number;
+}) {
+  const isPositive = result.employmentDelta >= 0;
+  const halfWidthPct = (Math.abs(result.employmentDelta) / maxAbs) * 50;
+  const color = isPositive ? "#3a8a4f" : "#d4493a";
+
+  return (
+    <div className="grid grid-cols-[170px_1fr_70px] gap-3 items-center text-sm">
+      <span
+        className="text-right text-[var(--foreground)] truncate text-xs"
+        title={result.name}
+      >
+        {result.name}
+      </span>
+      <div className="relative h-6">
+        <div className="absolute inset-y-1 left-1/2 w-px bg-[var(--muted)] opacity-40" />
+        <div
+          className="absolute top-1 bottom-1 rounded"
+          style={{
+            [isPositive ? "left" : "right"]: "50%",
+            width: `${halfWidthPct}%`,
+            background: color,
+            opacity: 0.85,
+          }}
+        />
+      </div>
+      <span
+        className="tabular-nums text-left font-medium text-xs"
+        style={{ color }}
+      >
+        {isPositive ? "+" : ""}
+        {result.employmentDelta.toFixed(2)}%
+      </span>
+    </div>
   );
 }
 
