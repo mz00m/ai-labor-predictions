@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import btosData from "@/data/btos-sectors.json";
+import RegionCombobox from "@/components/model/RegionCombobox";
 import regionsData from "@/data/regions.json";
 import policiesData from "@/data/policies.json";
 import {
@@ -217,7 +218,7 @@ export default function PortfolioBuilderPage() {
 
       {/* Step 1 — Region */}
       <Step number={1} title="Pick a region">
-        <RegionSelect regionId={regionId} setRegionId={setRegionId} />
+        <RegionCombobox regions={regions} regionId={regionId} setRegionId={setRegionId} />
         <p className="text-sm text-[var(--muted)] mt-2 leading-[1.6]">
           <strong className="text-[var(--foreground)]">{region.name}.</strong>{" "}
           {region.concentrationNote}
@@ -522,52 +523,6 @@ export default function PortfolioBuilderPage() {
 // ────────────────────────────────────────────────────────────────────
 // Components
 // ────────────────────────────────────────────────────────────────────
-
-/** State-grouped region picker with curated MSAs at the top. */
-function RegionSelect({
-  regionId,
-  setRegionId,
-}: {
-  regionId: string;
-  setRegionId: (id: string) => void;
-}) {
-  const curated = regions.filter((r) => r.curated);
-  const others = regions.filter((r) => !r.curated);
-  const byState = new Map<string, Region[]>();
-  for (const r of others) {
-    if (!byState.has(r.state)) byState.set(r.state, []);
-    byState.get(r.state)!.push(r);
-  }
-  const sortedStates = Array.from(byState.keys()).sort();
-
-  return (
-    <select
-      value={regionId}
-      onChange={(e) => setRegionId(e.target.value)}
-      className="w-full bg-card border border-card rounded-lg px-4 py-3 text-base text-[var(--foreground)]"
-    >
-      <optgroup label="Featured MSAs (detailed sector data)">
-        {curated.map((r) => (
-          <option key={r.id} value={r.id}>
-            {r.name} — {r.totalEmploymentK.toLocaleString()}K jobs
-          </option>
-        ))}
-      </optgroup>
-      {sortedStates.map((state) => (
-        <optgroup key={state} label={`${state} (national-average shares)`}>
-          {byState
-            .get(state)!
-            .sort((a, b) => b.totalEmploymentK - a.totalEmploymentK)
-            .map((r) => (
-              <option key={r.id} value={r.id}>
-                {r.name} — {r.totalEmploymentK.toLocaleString()}K jobs
-              </option>
-            ))}
-        </optgroup>
-      ))}
-    </select>
-  );
-}
 
 function Step({ number, title, children }: { number: number; title: string; children: React.ReactNode }) {
   return (
